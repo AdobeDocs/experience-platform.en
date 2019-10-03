@@ -1,10 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Edit
-user-guide-url: /content/help/en/analytics/admin/home.html
+user-guide-title: Modeling Help
 ---
 
-# Guide {#guidename}
+# Modeling Help {#modeling}
 
 + [Home](home.md)
