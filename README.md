@@ -1,46 +1,55 @@
-# Instructions for technical documentation for the Adobe Experience Cloud Platform
+# Contribute article
 
-**Note: This page (or any readme.md page) will not publish to the customer facing documentation**
+We welcome content contributions from our community and Adobe employees outside the documentation teams. 
 
-## TOC
+## Adobe Open Source Code of Conduct
 
-+ `TOC.md` at the root of the user guide (stored in the **/help/** directory) provides the organization of the topics that are contained in the guide for this solution. 
-+ Each user guide will have it's own unique `TOC.md`, in which you can order all the pages/topics as necessary.
-+ The first page of all user guides is `overview.md`.
+This project has adopted the [Adobe Open Source Code of Conduct](code-of-conduct.md) or the [.NET Foundation Code of Conduct](https://dotnetfoundation.org/code-of-conduct). For more information, see the [Contributing](contributing.md) article.
 
-## User Guide
+## About your contributions to Adobe content
 
-+ The introduction to the user guide is called `overview.md`
-+ Each topic in the user guide has it's own distinct directory.
-    + If there is a topic in the guide called *Implementation*, the corresponding directory is `/implementation`
-+ All image assets are stored in `/assets` at the root of the user guide.
-    + All images in the `/assets` directory will be localized.
-    + Any images in the `/no-localize` directory will not be localized (there's a surprise!). This can be used to ensure in loc versions that specific assets aren't reproduced unnecessarily.
+See the [Adobe Docs Contributor Guide](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html).
 
-## User Guide Level Meta Data
+How you contribute depends on who you are and the sort of changes you'd like to contribute:
 
-+ Meta data which describes the user guide is stored in the `TOC.md`. This includes:
-    + product - name of product/capability.
-    + cloud - cloud to which this product belongs.
-    + audience - audience or archetype at whom the guide is targeted.
-    + user-guide - name of the user guide.
+### Minor changes or requests
 
-## Page Level Meta Data
+To submit a request, click the **Log an issue** link in an article, which opens an issue in GitHub. Specify a title and a description, and then click **Submit new issue**.
 
-+ Meta data required to describe a document is stored as part of each individual page. This includes:
-    + title - title of the page.
-    + description - description of page.
-    + seo-title - seo alternative title.
-    + seo-description - alternative title for SEO purposes.
-    + short-title - (optional field).
-    + index - yes / no - will the page be indexed by Adobe's search platform.
-    + translate - yes / no - will this page be localized.
-    + version - used primarily for AEM and Campaign, to denote the version of the product.
-    + private-feature-pack - used primarily for AEM.
-    + beta - is this product in beta?
-    + redirect - can be used to create a ref to a new page should that be required.
-    + doc-type: reference (default) / troubleshooting / developer / tutorial / kb / whitepaper.
-    
-## More Information
+To request minor updates, click the **Edit this page** link in an article, which opens the source article in GitHub. Use the GitHub UI to make your updates. See the general [Adobe Docs contributor guide](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html) for more information.
 
-For more publishing instructions, style guides, samples and other resources, please visit the [Collaborative Documentation Repo](https://git.corp.adobe.com/AdobeDocs/collaborative-doc-instructions).
+Minor corrections or clarifications you submit for documentation and code examples in this repo are covered by the Adobe terms of use.
+
+### Major changes or new articles from community members
+
+If you're part of the Adobe community and want to create an article or submit major changes, click the **Issues** tab in the GitHub repository to submit an issue. This submission starts a conversation with the documentation team. You will need to work with the writer (or other Adobe employee) to publish new content.
+
+<!--
+If you submit a pull request with significant changes to documentation and code examples, you'll see a message in the pull request asking you to submit an online contribution license agreement (CLA). You must complete the online form before we can review your pull request.
+-->
+
+### Major changes from Adobe Employees
+
+If you are a technical writer, program manager, or developer from the product team for an [!UICONTROL Adobe Experience Cloud] solution, and it's your job to contribute to or author technical articles, you should use the private repository at `https://git.corp.adobe.com/AdobeDocs`. See the [Internal Collaboration Guide](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html).
+
+<!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
+
+## Tools and setup
+
+Community contributors can use the GitHub UI for basic editing or fork the repo to make major contributions.
+
+See the [Adobe Docs Contributor Guide](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html) for details.
+
+## How to use markdown to format your topic
+
+All the articles in this repository use GitHub flavored markdown. If you are not familiar with markdown, see:
+
+* [Markdown basics](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
+* [Printable markdown cheatsheet](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
+
+## Labels
+
+In the public repository, automated labels are assigned to pull requests to help us manage the pull request workflow and to help let you know what's going on with your pull request:
+
+* **Change sent to author**: The author has been notified of the pending pull request.
+* **ready-to-merge**: Ready for review by our pull request review team.

@@ -1,3 +1,0 @@
-# Overview
-
-First page / intro
