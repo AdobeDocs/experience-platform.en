@@ -7,4 +7,4 @@ seo-description: term
 
 # Home
 
-Add content here
+Placeholder for Catalog
