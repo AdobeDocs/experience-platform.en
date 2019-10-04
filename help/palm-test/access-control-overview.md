@@ -64,14 +64,14 @@ Permissions that are granted through the Admin Console are sorted by category, w
 | --- | --- | --- |
 | Sandboxes | (Sandbox name) | Access to the selected sandbox environment. |
 | Data Modeling | Manage Schemas | Access to read, create, edit, and delete schemas and related resources.|
-| Data Modeling | View Schemas | Read-only access to schemas and related resources.
-| Data Pipeline | Manage Datasets | Access to read, create, edit, and delete datasets. Read-only access for schemas.
+| Data Modeling | View Schemas | Read-only access to schemas and related resources.|
+| Data Pipeline | Manage Datasets | Access to read, create, edit, and delete datasets. Read-only access for schemas.|
 | Data Pipeline | View Datasets | Read-only access for datasets and schemas.|
 | Real-time Customer Profile | Manage Profiles | Access to read, create, edit, and delete datasets that are used in | | Real-time Customer Profile. Read-only access to available profiles.|
 | Real-time Customer Profile | View Profiles | Read-only access to available profiles.|
 | Real-time Customer Profile | Export Audience for Segment | Ability to export an evaluated audience segment to a dataset.|
 | Identity | Manage Identity Namespaces | Full CRUD capabilities for identity namespaces.|
-| Identity | View Identity Namespaces | Read-only access for identity namespaces.
+| Identity | View Identity Namespaces | Read-only access for identity namespaces.|
 | Monitoring | View Monitoring Dashboard | Read-only access to monitoring datasets and streams.|
 | Sandbox Management | Manage Sandboxes | Full CRUD capabilities for sandboxes belonging to the IMS Organization.|
 | Sandbox Management | View Sandboxes | Read-only access for sandboxes belonging to the IMS Organization.|
