@@ -97,6 +97,7 @@ Permissions that are granted through the Admin Console are sorted by category, w
 | Bears | Bugs | Beavers | Birds<ul><li>Orioles</li><li>Blue Jays</li><li>Penguins</li><li>Eagles</li></ul> |
 
 <!--  (To be added once user guide is published)
+
 ## Next steps
 
 To learn more about how to use the Admin Console to create product profiles and assign permissions for Platform, see the [access control user guide](). 
