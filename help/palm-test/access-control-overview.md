@@ -38,13 +38,13 @@ Adobe Admin Console provides a central location for managing Adobe product entit
 
 By granting and withholding product permissions, you can control which operations a user can perform using Platform APIs or the user interface. API access validation is controlled through permissions, while certain UI elements will be hidden or altered depending on permissions granted to the current user.
 
-## Product profiles
+## Product profiles {#product-profiles}
 
 In the Admin Console, permissions are assigned to users through the use of **product profiles**. A product profile is a collection of permissions for specific Platform capabilities to which individual users can be assigned. Your organization can have many product profiles, and a single product profile can be assigned to one or many users.
 
 In other words, access permissions cannot be assigned to individual users directly. If a user requires a certain combination of permissions that are not defined in any existing product profile, you must create a new profile to which that particular user can be assigned.
 
-### Default product profiles {#product-profiles}
+### Default product profiles
 
 Experience Platform comes with three pre-configured default product profiles:
 
