@@ -21,7 +21,7 @@ user-guide-title: Real-Time Customer Data Platform Help
 * Sources {#sources}
     * [Sources overview](sources/filename.md)
     * [Configure sources](sources/filename.md)
-    * [Connectors](#connectors)
+    * Connectors {#connectors}
         * [Salesforce](sources/filename.md)
         * [Azure Blob](sources/filename.md)
         * [Microsoft Dynamics 365](sources/filename.md)
@@ -33,14 +33,14 @@ user-guide-title: Real-Time Customer Data Platform Help
 * Destinations {#destinations}
     * [Destinations overview](destinations/filename.md)
     * [Destination Service UI](destinations/filename.md)
-    * [Destination Service tutorials](#dest-tutorials)
+    * Destination Service tutorials {#dest-tutorials}
         * [Tutorial1](destinations/filename.md)
         * [Tutorial2](destinations/filename.md)
         * [Tutorial3](destinations/filename.md)
 * Privacy and data governance {#privacy}
     * [Privacy overview](privacy/filename.md)
     * [Data Governance overview](privacy/filename.md)
-    * [Governance tutorials](#privacy-tutorials)
+    * Governance tutorials {#privacy-tutorials}
         * [Tutorial1](privacy/filename.md)
         * [Tutorial2](privacy/filename.md)
         * [Tutorial3](privacy/filename.md)
@@ -54,7 +54,7 @@ user-guide-title: Real-Time Customer Data Platform Help
 * Segmentation {#segmentation}
     * [Segmentation overview](segmentation/filename.md)
     * [Bidirectional segment sharing](segmentation/filename.md)
-    * [Segmentation tutorials](#segmentation-tutorials)
+    * Segmentation tutorials {#segmentation-tutorials}
         * [UI configurations for continuous query evaluations](segmentation/filename.md)
         * [Datatype reference descriptors](segmentation/filename.md)
         * [Schedule segmentation jobs](segmentation/filename.md)
