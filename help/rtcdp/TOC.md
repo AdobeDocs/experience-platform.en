@@ -31,12 +31,12 @@ user-guide-title: Real-Time Customer Data Platform Help
     * [Composition canvas](sources/filename.md)
     * [Sources API reference](sources/filename.md)
 * Destinations {#destinations}
-    * [Destinations overview](destinations/filename.md)
-    * [Destination Service UI](destinations/filename.md)
+    * [Destinations overview](destinations/destinations.md)
+    * [Destination Service UI](destinations/destinations.md)
     * Destination Service tutorials {#dest-tutorials}
-        * [Tutorial1](destinations/filename.md)
-        * [Tutorial2](destinations/filename.md)
-        * [Tutorial3](destinations/filename.md)
+        * [Tutorial1](destinations/destinations.md)
+        * [Tutorial2](destinations/destinations.md)
+        * [Tutorial3](destinations/destinations.md)
 * Privacy and data governance {#privacy}
     * [Privacy overview](privacy/filename.md)
     * [Data Governance overview](privacy/filename.md)
