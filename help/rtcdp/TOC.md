@@ -11,11 +11,10 @@ user-guide-title: Real-Time Customer Data Platform Help
     * [Getting started](get-started.md)
     * [Billing overview](billing-overview.md)
 * Administration {#admin}
-* [bad parent topic](overview.md)
     * [Manage sandboxes](administration/filename.md)
     * [Role-based access control](administration/filename.md)
     * [Sandboxes and role-based access control API reference](administration/filename.md)
-* Profile viewer {#profile-viewer)
+* Profile viewer {#profile-viewer}
     * [Profile overview](profile-viewer/filename.md)
     * [Unified Profile Service search](profile-viewer/filename.md)
     * [Namespaces in profile lookup](profile-viewer/filename.md)
