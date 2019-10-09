@@ -11,10 +11,11 @@ user-guide-title: Real-Time Customer Data Platform Help
     * [Getting started](get-started.md)
     * [Billing overview](billing-overview.md)
 * Administration {#admin}
+* [bad parent topic](overview.md)
     * [Manage sandboxes](administration/filename.md)
     * [Role-based access control](administration/filename.md)
     * [Sandboxes and role-based access control API reference](administration/filename.md)
-* Profile viewer {#profile-viewer}
+* Profile viewer {#profile-viewer)
     * [Profile overview](profile-viewer/filename.md)
     * [Unified Profile Service search](profile-viewer/filename.md)
     * [Namespaces in profile lookup](profile-viewer/filename.md)
@@ -31,12 +32,12 @@ user-guide-title: Real-Time Customer Data Platform Help
     * [Composition canvas](sources/filename.md)
     * [Sources API reference](sources/filename.md)
 * Destinations {#destinations}
-    * [Destinations overview](destinations/filename.md)
-    * [Destination Service UI](destinations/filename.md)
+    * [Destinations overview](destinations/destinations.md)
+    * [Destination Service UI](destinations/destinations.md)
     * Destination Service tutorials {#dest-tutorials}
-        * [Tutorial1](destinations/filename.md)
-        * [Tutorial2](destinations/filename.md)
-        * [Tutorial3](destinations/filename.md)
+        * [Tutorial1](destinations/destinations.md)
+        * [Tutorial2](destinations/destinations.md)
+        * [Tutorial3](destinations/destinations.md)
 * Privacy and data governance {#privacy}
     * [Privacy overview](privacy/filename.md)
     * [Data Governance overview](privacy/filename.md)
