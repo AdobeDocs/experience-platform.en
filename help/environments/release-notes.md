@@ -1,4 +1,4 @@
-﻿---
+---
 title: Release notes
 seo-title: term
 description: term
