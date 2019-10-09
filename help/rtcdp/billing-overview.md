@@ -11,4 +11,14 @@ Words and things
 
 ## Subhead
 
-Things
+Extensions
+
+> [!NOTE]
+> 
+> This is line 1.
+>
+> This is line 2.
+
+> [!VIDEO](https://youtu.be/ypS_CKym5NQ)
+
+Choose Edit > [!UICONTROL Processing Rules] to do something. Use [!DNL Microsoft Visual Code].
