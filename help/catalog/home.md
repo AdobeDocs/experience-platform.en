@@ -1,10 +1,10 @@
 ---
-title: term
-seo-title: term
+title: Catalog Home
+seo-title: Catalog Home for Adobe Experience Platform
 description: term
 seo-description: term
 ---
 
 # Home
 
-Placeholder for Catalog
+Bob was here.
