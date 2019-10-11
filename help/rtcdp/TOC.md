@@ -77,5 +77,5 @@ user-guide-title: Real-Time Customer Data Platform Help
         * [Create a destination](destinations/destinations.md)
         * [Activate profiles and segments in a destination](destinations/destinations.md)
         * [Tutorial3](destinations/destinations.md)
-    * Destinations catalog
-        * Advertiser destinations
+    * Destinations catalog  {#destinations-cat}
+        * [Advertiser destinations](destinations/destinations.md)
