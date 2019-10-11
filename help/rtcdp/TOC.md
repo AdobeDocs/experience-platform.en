@@ -9,18 +9,18 @@ user-guide-title: Real-Time Customer Data Platform Help
 * Real-Time Customer Data Platform {#intro}
     * [Product overview](overview.md)
     * [Getting started](get-started.md)
+    * [Provisioning and access](provisioning.md)
+    * [Dashboards and metrics overview](dashboards-metrics/filename.md)
     * [Billing overview](billing-overview.md)
+    * [Data quality on Platform](data-quality.md)
 * Administration {#admin}
     * [Manage sandboxes](administration/filename.md)
     * [Role-based access control](administration/filename.md)
     * [Sandboxes and role-based access control API reference](administration/filename.md)
-* Profile viewer {#profile-viewer}
-    * [Profile overview](profile-viewer/filename.md)
-    * [Unified Profile Service search](profile-viewer/filename.md)
-    * [Namespaces in profile lookup](profile-viewer/filename.md)
 * Sources {#sources}
     * [Sources overview](sources/filename.md)
     * [Configure sources](sources/filename.md)
+    * [Sources best practices](sources/filename.md)
     * Connectors {#connectors}
         * [Salesforce](sources/filename.md)
         * [Azure Blob](sources/filename.md)
@@ -28,29 +28,18 @@ user-guide-title: Real-Time Customer Data Platform Help
         * [AWS S3](sources/filename.md)
         * [Analytics data connector](sources/filename.md)
         * [Adobe Audience Manager](sources/filename.md)
-    * [Composition canvas](sources/filename.md)
+    * Sources tutorials {#sources-tutorials}
+        * [Tutorial](sources/filename.md)
     * [Sources API reference](sources/filename.md)
-* Destinations {#destinations}
-    * [Destinations overview](destinations/destinations.md)
-    * [Destination Service UI](destinations/destinations.md)
-    * Destination Service tutorials {#dest-tutorials}
-        * [Tutorial1](destinations/destinations.md)
-        * [Tutorial2](destinations/destinations.md)
-        * [Tutorial3](destinations/destinations.md)
-* Privacy and data governance {#privacy}
-    * [Privacy overview](privacy/filename.md)
-    * [Data Governance overview](privacy/filename.md)
-    * Governance tutorials {#privacy-tutorials}
-        * [Tutorial1](privacy/filename.md)
-        * [Tutorial2](privacy/filename.md)
-        * [Tutorial3](privacy/filename.md)
-    * [API reference for DULE Policy](privacy/filename.md)
-* Dashboards and metrics {#dashboards}
-    * [Dashboards and metrics overview](dashboards-metrics/filename.md)
-* Datasets {#datasets}
-    * [Dataset lifespan](datasets/filename.md)
-    * [Delete dataset and batch service](datasets/filename.md)
-    * [Update merge policies](datasets/filename.md)
+* Real-time customer profile {#profile}
+    * [Profile overview](profile/filename.md)
+    * [Profile viewer](profile/filename.md)
+    * [Unified Profile Service search](profile/filename.md)
+    * [Namespaces in profile lookup](profile/filename.md)
+    * Profile tutorials {#profile-tutorials}
+        * [How to monitor health of ingestion of data into Unified Profile](profile/filename.md)
+        * [Enrich Unified Profile using CRM, Loyalty via Enterprise Connectors](profile/filename.md)
+        * [Enrich Unified Profile in real-time with Reservation data ](profile/filename.md)
 * Segmentation {#segmentation}
     * [Segmentation overview](segmentation/filename.md)
     * [Bidirectional segment sharing](segmentation/filename.md)
@@ -62,7 +51,31 @@ user-guide-title: Real-Time Customer Data Platform Help
         * [Multi-entity segmentation](segmentation/filename.md)
 * Sensei insights {#sensei}
     * [Sensei insights Alpha docs](sensei-insights/filename.md)
-
-
-
-
+* Datasets {#datasets}
+    * [Dataset lifespan](datasets/filename.md)
+    * [Delete dataset and batch service](datasets/filename.md)
+    * [Update merge policies](datasets/filename.md)
+    * Data ingestion {#data-ingestion}
+        * [How to ingest data via Streaming Ingestion APIs](datasets/filename.md)
+        * [Ingest data to existing properties using Adobe Analytics and Adobe Audience Manager](datasets/filename.md)
+        * [Create auto transfer of data from Audience Manager](datasets/filename.md)
+        * [Create auto transfer of data from Analytics](datasets/filename.md)
+        * [Setup ingestion of web and mobile data using Adobe Launch](datasets/filename.md)
+        * [How to bring online data via Adobe Launch](datasets/filename.md)
+* Privacy and data governance {#privacy}
+    * [Privacy overview](privacy/filename.md)
+    * [Data Governance overview](privacy/filename.md)
+    * Governance tutorials {#privacy-tutorials}
+        * [How to apply DULE labels](privacy/filename.md)
+        * [Tutorial2](privacy/filename.md)
+        * [Tutorial3](privacy/filename.md)
+    * [API reference for DULE Policy](privacy/filename.md)
+* Destinations {#destinations}
+    * [Destinations overview](destinations/destinations.md)
+    * [Destination Service UI](destinations/destinations.md)
+    * Destination Service tutorials {#dest-tutorials}
+        * [Create a destination](destinations/destinations.md)
+        * [Activate profiles and segments in a destination](destinations/destinations.md)
+        * [Tutorial3](destinations/destinations.md)
+    * Destinations catalog
+        * Advertiser destinations
