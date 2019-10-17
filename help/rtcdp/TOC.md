@@ -71,7 +71,7 @@ user-guide-title: Real-Time Customer Data Platform Help
         * [Tutorial3](privacy/filename.md)
     * [API reference for DULE Policy](privacy/filename.md)
 * Destinations {#destinations}
-    * [Destinations overview](destinations/destinations.md)
+    * [Destinations overview](destinations/destinations-overview.md)
     * [Destinations UI](destinations/destinations-ui.md)
     * Destinations catalog  {#destinations-cat}
         * [Destinations catalog overview](/help/rtcdp/destinations/destinations-catalog.md)
