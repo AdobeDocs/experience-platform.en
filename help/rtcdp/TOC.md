@@ -72,10 +72,12 @@ user-guide-title: Real-Time Customer Data Platform Help
     * [API reference for DULE Policy](privacy/filename.md)
 * Destinations {#destinations}
     * [Destinations overview](destinations/destinations.md)
-    * [Destination Service UI](destinations/destinations.md)
-    * Destination Service tutorials {#dest-tutorials}
+    * [Destinations UI](destinations/destinations-ui.md)
+    * Destinations catalog  {#destinations-cat}
+        * [Destinations catalog overview](/help/rtcdp/destinations/destinations-catalog.md)
+        * [Advertiser destinations](destinations/destinations.md)
+    * Destinations tutorials {#dest-tutorials}
         * [Create a destination](destinations/destinations.md)
         * [Activate profiles and segments in a destination](destinations/destinations.md)
-        * [Tutorial3](destinations/destinations.md)
-    * Destinations catalog  {#destinations-cat}
-        * [Advertiser destinations](destinations/destinations.md)
+        * [Select which XDM fields to activate in a destination](destinations/destinations.md)
+
