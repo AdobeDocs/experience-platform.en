@@ -7,7 +7,7 @@ seo-description: Data Governance allows you to manage customer data and ensure c
 
 # Data Governance overview
 
-Real-time Customer Data Platform brings data from multiple enterprise systems together, allowing marketers to better identify, understand, and engage their customers. This data may be subject to usage restrictions defined by your organization or by legal regulations. It is therefore important to ensure that Real-time CDP is compliant with usage policies when handling your data.
+Real-time Customer Data Platform (Real-time CDP) brings data from multiple enterprise systems together, allowing marketers to better identify, understand, and engage their customers. This data may be subject to usage restrictions defined by your organization or by legal regulations. Therefore, it is important to ensure that Real-time CDP is compliant with usage policies when handling your data.
 
 Adobe Experience Platform Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within Real-time CDP, allowing you to define usage policies, categorize your data based on those policies, and check for policy violations when performing certain marketing actions.
 
@@ -22,7 +22,7 @@ This document provides a high-level overview of Data Governance in Real-time CDP
 
 As a concept, data governance is neither automatic, nor does it occur in a vacuum. What began as a role for one individual, typically recognized as a **data steward**, has grown considerably as the data governance ecosystem has expanded. Today, data governance requires continual management and monitoring in order to be successful and relies on data stewards having tools with which data can be properly labeled, usage policies can be created, and compliance with those policies can be enforced.
 
-While data governance should be the responsibility of every individual in the organization, here are some of the essential roles within the data governance cycle:
+While data governance should be the responsibility of every individual in the organization, some of the essential roles within the data governance cycle can be summarized as follows:
 
 ![](assets/data-governance-roles.png)
 
@@ -64,7 +64,7 @@ For a complete list of available labels, as well as definitions for each label t
 
 ### When and how to apply usage labels
 
-Data usage labels can be applied to entire datasets, or specific fields (column headers) within those datasets. Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practice encourages labeling data as soon as it is ingested into Real-time CDP.
+Data usage labels can be applied to entire datasets, or specific fields (column headers) within those datasets. Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practices encourage labeling data as soon as it is ingested into Real-time CDP.
 
 For step-by-step instructions on how to manage DULE labels, see the sections on managing labels at the dataset level and at the dataset field level in the [DULE labels user guide](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/dule/dule_working_with_labels.md) for Adobe Experience Platform.
 
@@ -82,4 +82,4 @@ Once data usage labels have been applied, data stewards can create policies usin
 
 As a data steward, you can use the Policy Service API to manage and evaluate policies related to marketing actions being taken on data containing DULE labels. Using the API, you can create and update policies, determine the status of a policy, and work with marketing actions to evaluate whether a specific action violates a data usage policy.
 
-The Adobe Experience Platform documentation provides more information on how to work with DULE policies. For information on performing the key operations provided by the DULE Policy Service API, see the [Policy Service developer guide](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_policy_service_developer_guide.md). For step-by-step DULE policy workflow, see the tutorial on [creating and evaluating DULE policies](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/dule/create_a_dule_policy_tutorial.md). 
+The Adobe Experience Platform documentation provides more information on how to work with DULE policies. For information on performing the key operations provided by the DULE Policy Service API, see the [Policy Service developer guide](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_policy_service_developer_guide.md). For a step-by-step DULE policy workflow, see the tutorial on [creating and evaluating DULE policies](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/dule/create_a_dule_policy_tutorial.md). 
