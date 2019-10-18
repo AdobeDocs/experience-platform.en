@@ -7,7 +7,10 @@ seo-description: seo description
 
 # Destinations Overview
 
-Use **Destinations** to activate your known and unknown data for downstream marketing campaigns, site personalization, and other use cases
+Use **Destinations** in the Real-Time Customer Data Profile to activate your known and unknown data for downstream marketing campaigns, site personalization, and other use cases
+
+## Destinations and Sources
+The Real-Time CDP has Sources and Destinations. Use Sources to send data into the Real-Time CDP, and Destinations to export data.
 
 ## Use cases
 
