@@ -6,4 +6,4 @@ user-guide-title: Privacy and Data Governance Help
 
 # Privacy and Data Governance {#privacy}
 
-* [Data Governance overview](governance-overview.md)
+* [Data Governance overview](data-governance-overview.md)
