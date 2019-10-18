@@ -13,11 +13,11 @@ Adobe Experience Platform Data Governance allows you to manage customer data and
 
 This document provides a high-level overview of Governance in Real-time CDP, covering the following topics:
 
-- [Data governance roles](#data-governance-roles)
-- [DULE framework](#dule)
-- [Data usage labels](#data-usage-labels)
-- [Marketing actions](#marketing-actions)
-- [Data usage policies](#data-usage-policies)
+* [Data governance roles](#data-governance-roles)
+* [DULE framework](#dule)
+* [Data usage labels](#data-usage-labels)
+* [Marketing actions](#marketing-actions)
+* [Data usage policies](#data-usage-policies)
 
 ## Data governance roles
 
