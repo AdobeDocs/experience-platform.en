@@ -63,13 +63,7 @@ user-guide-title: Real-Time Customer Data Platform Help
         * [Setup ingestion of web and mobile data using Adobe Launch](datasets/filename.md)
         * [How to bring online data via Adobe Launch](datasets/filename.md)
 * Privacy and data governance {#privacy}
-    * [Privacy overview](privacy/filename.md)
-    * [Data Governance overview](privacy/filename.md)
-    * Governance tutorials {#privacy-tutorials}
-        * [How to apply DULE labels](privacy/filename.md)
-        * [Tutorial2](privacy/filename.md)
-        * [Tutorial3](privacy/filename.md)
-    * [API reference for DULE Policy](privacy/filename.md)
+    * [Data Governance overview](privacy/governance-overview.md)
 * Destinations {#destinations}
     * [Destinations overview](destinations/destinations.md)
     * [Destination Service UI](destinations/destinations.md)
