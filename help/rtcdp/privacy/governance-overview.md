@@ -21,7 +21,24 @@ This document provides a high-level overview of Governance in Real-time CDP, cov
 
 ## Data governance roles
 
-As a concept, data governance is neither automatic, nor does it occur in a vacuum.
+As a concept, data governance is neither automatic, nor does it occur in a vacuum. What began as a role for one individual, typically recognized as a **data steward**, has grown considerably as the data governance ecosystem has expanded. Today, data governance requires continual management and monitoring in order to be successful and relies on data stewards having tools with which data can be properly labeled, usage policies can be created, and compliance with those policies can be enforced.
+
+While data governance should be the responsibility of every individual in the organization, here are some of the essential roles within the data governance cycle:
+
+![](assets/data-governance-roles.png)
+
+### Data steward
+
+Data stewards are the heart of data governance. This role is responsible for interpreting regulations, contractual restrictions, and policies, and applying them directly to the data. Informed by their understanding of these regulations, restrictions, and policies, the role of a data steward includes:
+* Reviewing data, datasets, and data samples to apply and manage metadata usage labeling.
+* Creating data policies and applying them to a data connection, dataset, or field.
+* Communicating data policies to the organization.
+
+### Marketer
+
+Marketers are the end point of data governance. They request data from the data governance infrastructure created by data stewards, scientists, and engineers. Marketers encompass a number of different specialties under the marketing umbrella, including the following:
+* Marketing Analysts request data to enable understanding of customers, both as individuals and in groups (also known as segments).
+* Marketing Specialists and Experience Designers use data to design new customer experiences. 
 
 ## DULE framework
 
@@ -48,7 +65,7 @@ For a complete list of available labels, as well as definitions for each label t
 
 Data usage labels can be applied to entire datasets, or specific fields (column headers) within those datasets. Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practice encourages labeling data as soon as it is ingested into Real-time CDP.
 
-For step-by-step instructions on how to manage DULE labels, see the sections on managing labels [at the dataset level](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/dule/dule_working_with_labels.md#managing-data-usage-labels-at-the-dataset-level) and [at the dataset field level](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/dule/dule_working_with_labels.md#managing-data-usage-labels-at-the-dataset-field-level) in the DULE labels user guide for Adobe Experience Platform.
+For step-by-step instructions on how to manage DULE labels, see the sections on managing labels at the dataset level and at the dataset field level in the [DULE labels user guide](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/dule/dule_working_with_labels.md) for Adobe Experience Platform.
 
 > **Note:** The user guide linked above also provides instructions for applying labels to data connections. However, this feature is not available in Real-time CDP.
 
