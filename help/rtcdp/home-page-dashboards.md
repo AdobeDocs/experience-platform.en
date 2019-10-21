@@ -30,9 +30,11 @@ Some information is shown in different ways on both the leaderboard and metric c
 
 The **[!UICONTROL Total profiles]** count shows the total number of people tracked by profiles in your organization. It does not include profile fragments.
 
+The number of profiles is updated once every 24 hours.
+
 ### Segments
 
-**[!UICONTROL Segments]** shows the total number of segments created for the organization.
+**[!UICONTROL Segments]** shows the total number of segments created for the organization. This number is updated when new segments are created.
 
 For more information about segments, see {link to segments overview doc}
 
@@ -40,13 +42,17 @@ For more information about segments, see {link to segments overview doc}
 
 In the leaderboard **[!UICONTROL Successful profile records]** shows the total number of records that have been successfully processed into the profile.
 
-There is also a metric card that shows the percentage of successful records. 
+There is also a metric card that shows the percentage of successful records. Click **[!UICONTROL View datasets]** to see more details about the profile records. 
+
+The number of successful profile records is updated hourly.
 
 For more information about profiles, see {link to profiles overview doc}
 
 ### Total profile records
 
-The **[!UICONTROL Total profile records]** metric card shows the total number of data records enabled to feed into the profiles. This does not include all data in the data lake, because some data might not be enabled to feed into the profiles.
+The **[!UICONTROL Total profile records]** metric card shows the total number of data records enabled to feed into the profiles, updated once per day. This does not include all data in the data lake, because some data might not be enabled to feed into the profiles.
+
+Click **[!UICONTROL View profiles]** to see more details about the profile records.
 
 For more information about profiles, see {link to profiles overview doc}
 
@@ -56,17 +62,24 @@ For more information about a specific profile, see {link to profile viewer doc}
 
 In the leaderboard, **[!UICONTROL Failed profile records]** counts the number of records that failed to process into the profile. 
 
-The **[!UICONTROL Failed profile records]** metric card shows this count, and includes a graphical representation that helps you see how failures have trended during the time shown below the graphic.
+The **[!UICONTROL Failed profile records]** metric card shows this count, and includes a graphical representation that helps you see how failures have trended during the time shown below the graphic. This chart is updated hourly. Click **[!UICONTROL View datasets]** to see more details about the profile records.
+
+The number of failed profile records is updated hourly.
 
 ### Recent segments
 
-The **[!UICONTROL Recent segments]** metric card shows the five most recent segments created within the organization.
+The **[!UICONTROL Recent segments]** metric card shows the five most recent segments created within the organization. This list is updated when a new segment is created.
+
+Click **[!UICONTROL View all]** to see information about more segments.
 
 ### Recent sources
 
-The **[!UICONTROL Recent sources]** metric card shows the five most recent sources created within the organization.
+The **[!UICONTROL Recent sources]** metric card shows the five most recent sources created within the organization. This list is updated when a new source is created.
+
+Click **[!UICONTROL View all]** to see information about more sources.
 
 ### Recent destinations
 
-The **[!UICONTROL Recent destinations]** metric card shows the five most recent destinations created within the organization.
+The **[!UICONTROL Recent destinations]** metric card shows the five most recent destinations created within the organization. This list is updated when a new destination is created.
 
+Click **[!UICONTROL View all]** to see information about more destinations.
