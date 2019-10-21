@@ -71,11 +71,27 @@ user-guide-title: Real-Time Customer Data Platform Help
         * [Tutorial3](privacy/filename.md)
     * [API reference for DULE Policy](privacy/filename.md)
 * Destinations {#destinations}
-    * [Destinations overview](destinations/destinations.md)
-    * [Destination Service UI](destinations/destinations.md)
-    * Destination Service tutorials {#dest-tutorials}
+    * [Destinations overview](destinations/destinations-overview.md)
+    * [Destinations UI](destinations/destinations-ui.md)
+    * Destinations catalog  {#destinations-cat}
+        * [Destinations catalog overview](/help/rtcdp/destinations/destinations-catalog.md)
+        * Adobe destinations{#adobe-destinations}
+          * [Adobe destinations overview](destinations/destinations.md)
+          * [Adobe Campaign](destinations/destinations.md)
+          * [Adobe Target](destinations/destinations.md)
+          * [Adobe Audience Manager](destinations/destinations.md)
+        * Advertiser destinations{#advertiser-destinations}
+          * [Advertiser destinations overview](destinations/destinations.md)
+          * [Google DBM](destinations/destinations.md)
+        * Email Marketing destinations{#email-destinations}
+          * [Email Marketing destinations overview](destinations/destinations.md)
+          * [Oracle Eloqua](destinations/destinations.md)
+          * [Responsys](destinations/destinations.md)
+          * [Salesforce Marketing Cloud](destinations/destinations.md)
+        * Social destinations{#social-destinations}
+          * [Social destinations overview](destinations/destinations.md)
+    * Destinations tutorials {#dest-tutorials}
         * [Create a destination](destinations/destinations.md)
         * [Activate profiles and segments in a destination](destinations/destinations.md)
-        * [Tutorial3](destinations/destinations.md)
-    * Destinations catalog  {#destinations-cat}
-        * [Advertiser destinations](destinations/destinations.md)
+        * [Select which XDM fields to activate in a destination](destinations/destinations.md)
+
