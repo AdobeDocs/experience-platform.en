@@ -9,7 +9,7 @@ seo-description: Responsys is an enterprise email marketing tool for cross-chann
 
 ## Overview
 
-Responsys is an enterprise email marketing tool for cross-channel marketing campaigns offered by Oracle to personalize interactions across email, mobile, display, and social.
+[Responsys](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/) is an enterprise email marketing tool for cross-channel marketing campaigns offered by Oracle to personalize interactions across email, mobile, display, and social.
 
 ## Set up destination
 
