@@ -19,3 +19,4 @@ DoubleClick Manager is a tool used to execute retargeting and audience targeted 
 
 ### Set up destination using SFTP with SSH Key
 
+## Destination attributes

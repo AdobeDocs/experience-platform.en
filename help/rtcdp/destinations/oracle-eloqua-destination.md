@@ -19,3 +19,5 @@ seo-description: Eloqua is a software as a service (SaaS) platform for marketing
 
 ### Set up destination using SFTP with SSH Key
 
+## Destination attributes
+

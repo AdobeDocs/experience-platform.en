@@ -19,3 +19,5 @@ seo-description: Responsys is an enterprise email marketing tool for cross-chann
 
 ### Set up destination using SFTP with SSH Key
 
+## Destination attributes
+

@@ -19,3 +19,4 @@ Salesforce Marketing Cloud is a digital marketing suite formerly known as ExactT
 
 ### Set up destination using SFTP with SSH Key
 
+## Destination attributes
