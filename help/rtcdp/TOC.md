@@ -18,7 +18,7 @@ user-guide-title: Real-Time Customer Data Platform Help
     * [Role-based access control](administration/filename.md)
     * [Sandboxes and role-based access control API reference](administration/filename.md)
 * Sources {#sources}
-    * [Sources overview](sources/filename.md)
+    * [Sources overview](sources/sources-overview.md)
     * [Configure sources](sources/filename.md)
     * [Sources best practices](sources/filename.md)
     * Connectors {#connectors}
