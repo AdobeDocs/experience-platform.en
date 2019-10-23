@@ -80,14 +80,14 @@ user-guide-title: Real-Time Customer Data Platform Help
           * [Adobe Campaign](destinations/destinations.md)
           * [Adobe Target](destinations/destinations.md)
           * [Adobe Audience Manager](destinations/destinations.md)
-        * Advertiser destinations{#advertiser-destinations}
-          * [Advertiser destinations overview](destinations/destinations.md)
-          * [Google DBM](destinations/destinations.md)
+        * Advertising destinations{#advertiser-destinations}
+          * [Advertising destinations overview](destinations/destinations.md)
+          * [Google DBM](destinations/google-dbm-destination.md)
         * Email Marketing destinations{#email-destinations}
           * [Email Marketing destinations overview](destinations/destinations.md)
-          * [Oracle Eloqua](destinations/destinations.md)
-          * [Responsys](destinations/destinations.md)
-          * [Salesforce Marketing Cloud](destinations/destinations.md)
+          * [Oracle Eloqua](destinations/oracle-eloqua-destination.md)
+          * [Oracle Responsys](destinations/oracle-responsys-destination.md)
+          * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
         * Social destinations{#social-destinations}
           * [Social destinations overview](destinations/destinations.md)
     * Destinations tutorials {#dest-tutorials}
