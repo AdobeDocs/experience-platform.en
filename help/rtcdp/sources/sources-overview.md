@@ -23,7 +23,7 @@ Data comes in all shapes and sizes, and the same piece of information can be rep
 
 >   **gif/png showing sources mapper UI**
 
-For more information on XDM schemas, refer to the [basics of schema composition](). For support on creating a custom XDM schema, see the [Schema Editor tutorial]().
+For more information on XDM schemas, refer to the [basics of schema composition](https://www.adobe.io/apis/experienceplatform/home/xdm/xdmservices.html#!api-specification/markdown/narrative/technical_overview/schema_registry/schema_composition/schema_composition.md). For support on creating a custom XDM schema, see the [Schema Editor tutorial](https://www.adobe.io/apis/experienceplatform/home/xdm/xdmservices.html#!api-specification/markdown/narrative/tutorials/schema_editor_tutorial/schema_editor_tutorial.md).
 
 ## Data flows
 
