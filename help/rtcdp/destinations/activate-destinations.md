@@ -28,6 +28,6 @@ To activate data to destinations, you have successfully set up a destination. Se
     ![segments-to-destination](/help/rtcdp/destinations/assets/activate-flow.png)
 5. In the **Destination Attributes** window, press **Add new Schema field** and enter the attributes that you want to sent to the destination.
    ![destination-attributes](/help/rtcdp/destinations/assets/destination-attributes.png)
-6. Schedule the frequency with which you want to send data to the destination.
-7. Review and confirm
+6. Schedule the frequency by which you want to send data to the destination.
+7. Review and confirm.
 
