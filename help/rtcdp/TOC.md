@@ -92,6 +92,6 @@ user-guide-title: Real-Time Customer Data Platform Help
           * [Social destinations overview](destinations/destinations.md)
     * Destinations tutorials {#dest-tutorials}
         * [Create a destination](destinations/destinations.md)
-        * [Activate profiles and segments in a destination](destinations/destinations.md)
+        * [Activate profiles and segments in a destination](destinations/activate-destinations.md)
         * [Select which XDM fields to activate in a destination](destinations/destinations.md)
 

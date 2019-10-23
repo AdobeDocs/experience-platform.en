@@ -7,19 +7,16 @@ seo-description: seo description
 
 # Destinations Catalog
 
-Use **Destinations** to activate your known and unknown data for downstream marketing campaigns, site personalization, and other use cases
+The **Destinations Catalog** provides a list of available destinations that are ready to establish a connection with, including Adobe Solutions, advertising agencies, customer relation management (CRM) systems, email marketing agencies, and more.
 
 ## Use cases
 
 ## Types of destinations
 
-More information of destinations
+You can activate your data to different types of destinations in the Real-time CDP. The links below provide more information on each type of destination:
 
-### Email marketing
-
-Oracle Eloqua - does this and that. To connect, see UI flow and insert the following specifics.
-
-### Advertising 
-
-Google DBM - does this and that. To connect, see UI flow and insert the following specifics.
+* Adobe solutions
+* Advertising destinations
+* Email marketing
+* Social destinations
 
