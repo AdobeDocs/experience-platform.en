@@ -13,10 +13,4 @@ DoubleClick Manager is a tool used to execute retargeting and audience targeted 
 
 ## Set up destination
 
-### Set up destination using Amazon S3 account
-
-### Set up destination using SFTP with Password
-
-### Set up destination using SFTP with SSH Key
-
 ## Destination attributes

@@ -17,9 +17,9 @@ The **Catalog** tab displays all destinations that you can send data to, sorted 
 
 **placeholder for png showing catalog**
 
-## Flows
+## Browse
 
-The **Flows** tab displays the destinations that you have set up to receive data. See the table below for all the information you can get on each destination:
+The **Browse** tab displays the destinations that you have set up to receive data. See the table below for all the information you can get on each destination:
 
 
 Element | Description 

@@ -77,9 +77,7 @@ user-guide-title: Real-Time Customer Data Platform Help
         * [Destinations catalog overview](/help/rtcdp/destinations/destinations-catalog.md)
         * Adobe destinations{#adobe-destinations}
           * [Adobe destinations overview](destinations/destinations.md)
-          * [Adobe Campaign](destinations/destinations.md)
-          * [Adobe Target](destinations/destinations.md)
-          * [Adobe Audience Manager](destinations/destinations.md)
+          * [Adobe Campaign Classic](destinations/adobe-campaign-classic-destination.md)
         * Advertising destinations{#advertiser-destinations}
           * [Advertising destinations overview](destinations/destinations.md)
           * [Google DBM](destinations/google-dbm-destination.md)
