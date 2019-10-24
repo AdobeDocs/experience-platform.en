@@ -17,7 +17,7 @@ The UI flow to connect to an email marketing destination is similar for all dest
 
 1. In **Connections > Destinations**, select the email marketing destination that you want to connect to, and press **Connect destination**.
 
-![Connect to destination](/help/rtcdp/destinations/assets/connect-destination.png)
+    ![Connect to destination](/help/rtcdp/destinations/assets/connect-destination.png)
 
 2. In the Connect wizard, select the Connection type for your email marketing destination. You can select between **Amazon S3**, **SFTP with Password**, **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and press **Connect**.
 
