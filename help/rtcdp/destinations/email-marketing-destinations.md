@@ -7,19 +7,21 @@ seo-description: Email Service Providers (ESPs) allow you to manage your email m
 
 # Email marketing destinations {#email-marketing-destinations}
 
-Email Service Providers (ESPs) allow you to manage your email marketing, such as for sending promotional email campaigns. Adobe's Real-time Customer Data Platform integrates with ESPs.
+Email Service Providers (ESPs) allow you to manage your email marketing, such as for sending promotional email campaigns. Adobe Real-time Customer Data Platform integrates with ESPs.
 
 To send segments to email marketing destinations for your campaigns, Adobe Real-time CDP must first connect to the destination.
 
-The UI flow to connect to an email marketing destination is similar for all destinations, with only a few particularities, that are explained in the articles for individual destinations.
+The UI flow to connect to an email marketing destination is similar for all destinations.
 
-## Connect destination
+In the destination set up flow, described in the section below, you will grant Adobe Real-Time CDP access to one of your storage locations, Amazon S3 or SFTP, where Real-Time CDP will drop your destination export information. Then, from your desired email marketing platform, you can schedule a regular data import into the platform. The process to import data into email marketing platforms is specific to each platform. See the individual destinations articles for more information.
 
-1. In **Connections > Destinations**, select the email marketing destination that you want to connect to, and press **Connect destination**.
+## Connect destination {#connect-destination}
+
+1. In **[!UICONTROL Connections > Destinations]**, select the email marketing destination that you want to connect to, and press **[!UICONTROL Connect destination]**.
 
     ![Connect to destination](/help/rtcdp/destinations/assets/connect-destination.png)
 
-2. In the Connect wizard, select the Connection type for your email marketing destination. You can select between **Amazon S3**, **SFTP with Password**, **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and press **Connect**.
+2. In the Connect wizard, select the **[!UICONTROL Connection type]** for your storage location. You can select between **Amazon S3**, **SFTP with Password**, **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and press **[!UICONTROL Connect]**.
 
 For **S3 connections**, you must provide:
 * Access Key ID - 
@@ -36,6 +38,10 @@ For **SFTP with SSH Key** connections, you must provide:
 * Port
 * Username
 * SSH Key
+
+## Import data into the destination
+
+See the individual destination articles for email marketing destinations to learn how to import data into destinations.
 
 ## Activate segments to email marketing destinations
 

@@ -11,12 +11,6 @@ Adobe Campaign lets you coordinate the creation of conversational marketing camp
 
 ## Set up destination
 
-Because Adobe Campaign Classic is an email marketing destination, you must follow the connect flow described in [Email marketing destinations](/help/rtcdp/destinations/email-marketing-destinations.md).
-
-### Set up destination using Amazon S3 account
-
-### Set up destination using SFTP with Password
-
-### Set up destination using SFTP with SSH Key
+Because Adobe Campaign Classic is an email marketing destination, you must follow the connect flow described in [Email marketing destinations](/help/rtcdp/destinations/email-marketing-destinations.md). For account details, see the sections below.
 
 ## Destination attributes
