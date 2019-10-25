@@ -13,7 +13,7 @@ To go to Destinations, press **Destinations** in the Platform dashboard, as show
 
 ## Catalog
 
-The **Catalog** tab displays all destinations that you can send data to, sorted by destiation type. For more information on destination types and information on each destination, see the [Destination Catalog](/help/rtcdp/destinations/destinations-catalog.md).
+The **Catalog** tab displays all destinations that you can send data to, sorted by destination type. For more information on destination types and information on each destination, see the [Destination Catalog](/help/rtcdp/destinations/destinations-catalog.md).
 
 **placeholder for png showing catalog**
 
@@ -44,6 +44,6 @@ Element | Description
  User ID | ---
  Flows | ---
  Authorized | ---
- Expiration | Indicates when the connection to this destination will expire. If the status is **Exprired** or about to expire, do this -----
+ Expiration | Indicates when the connection to this destination will expire. If the status is **Expired** or about to expire, do this -----
 
  **placeholder for png showing accouts**
