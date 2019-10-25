@@ -13,7 +13,7 @@ seo-description: Oracle Eloqua is a software as a service (SaaS) platform for ma
 
 ## Connect to destination
 
-To connect to the Oracle Eloqua destination, follow the steps indicated in the [Connect destination](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination) article. You must grant Adobe access to your Amazon S3 or SFTP storage location.
+To connect to the Oracle Eloqua destination, follow the steps indicated in the [Connect destination](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination) article. You must grant Adobe access to your SFTP storage location.
 
 ## Destination attributes
 

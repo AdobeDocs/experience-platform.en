@@ -76,20 +76,17 @@ user-guide-title: Real-Time Customer Data Platform Help
     * Destinations catalog  {#destinations-cat}
         * [Destinations catalog overview](/help/rtcdp/destinations/destinations-catalog.md)
         * Adobe destinations{#adobe-destinations}
-          * [Adobe destinations overview](destinations/destinations.md)
+          * [Adobe destinations overview](destinations/adobe-destinations.md)
           * [Adobe Campaign Classic](destinations/adobe-campaign-classic-destination.md)
         * Advertising destinations{#advertiser-destinations}
-          * [Advertising destinations overview](destinations/destinations.md)
-          * [Google DBM](destinations/google-dbm-destination.md)
+          * [Advertising destinations overview](destinations/advertising-destinations.md)
+          * [Google DB360](destinations/google-dbm-destination.md)
         * Email Marketing destinations{#email-destinations}
-          * [Email Marketing destinations overview](destinations/destinations.md)
+          * [Email Marketing destinations overview](destinations/email-marketing-destinations.md)
           * [Oracle Eloqua](destinations/oracle-eloqua-destination.md)
           * [Oracle Responsys](destinations/oracle-responsys-destination.md)
           * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
         * Social destinations{#social-destinations}
-          * [Social destinations overview](destinations/destinations.md)
+          * [Social destinations overview](destinations/social-destinations.md)
     * Destinations tutorials {#dest-tutorials}
-        * [Create a destination](destinations/destinations.md)
         * [Activate profiles and segments in a destination](destinations/activate-destinations.md)
-        * [Select which XDM fields to activate in a destination](destinations/destinations.md)
-
