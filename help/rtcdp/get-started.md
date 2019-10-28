@@ -213,7 +213,7 @@ Here we see all of the destinations available for Luma to send this destination 
 
 ![image](assets/luma-dest.png)
 
-### Privacy
+<!-- ### Privacy
 
 Adobe Experience Platform includes privacy and security controls to ensure a segment is available to be activated to a particular destination based on its profile policy. If your activity violates policy, a warning appears. 
 
@@ -224,13 +224,14 @@ With these controls, Experience Platform helps Luma be compliant with regulation
 Luma can confidently address regional and organizational requirements for managing known and unknown customer data with unified governance tools.  
 
 These controls are flexible and can be modified to meet the requirements of Luma’s security and governance teams.
+-->
 
 ### Selecting destinations
 
-In this scenario, Luma wants to retarget this audience with personalization across three destinations:
+In this scenario, Luma wants to retarget this audience with personalization across these destinations:
 
 * Google, for display
-* Facebook
+<!--* Facebook -->
 * Adobe Campaign, for email
 
 ![image](assets/luma-sched-dest.png)
