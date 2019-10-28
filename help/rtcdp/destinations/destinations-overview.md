@@ -11,7 +11,7 @@ Use **Destinations** in the Real-Time Customer Data Platform to activate your kn
 
 ## Destinations and Sources
 
-The Real-Time CDP has **Sources** and **Destinations**. Use Sources to send data into the Real-Time CDP, and Destinations to export data.
+You can work with **Sources** and **Destinations** in the Adobe Real-Time CDP. It is important to understand how these are different. Use Sources to send data into the Real-Time CDP, and Destinations to export data from the Real-Time CDP to several supported destinations.
 
 ## Use cases
 

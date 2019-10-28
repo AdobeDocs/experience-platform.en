@@ -80,7 +80,7 @@ user-guide-title: Real-Time Customer Data Platform Help
           * [Adobe Campaign Classic](destinations/adobe-campaign-classic-destination.md)
         * Advertising destinations{#advertiser-destinations}
           * [Advertising destinations overview](destinations/advertising-destinations.md)
-          * [Google DB360](destinations/google-dbm-destination.md)
+          * [Google Display & Video 360](destinations/google-dv360-destination.md)
         * Email Marketing destinations{#email-destinations}
           * [Email Marketing destinations overview](destinations/email-marketing-destinations.md)
           * [Oracle Eloqua](destinations/oracle-eloqua-destination.md)
