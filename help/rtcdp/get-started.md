@@ -1,11 +1,11 @@
 ---
-title: Getting started with Adobe Real-Time Customer Data Platform
-seo-title: Getting started with Adobe Real-Time Customer Data Platform
-description: Sample scenario for Adobe Real-Time Customer Data Platform
-seo-description: Sample scenario for Adobe Real-Time Customer Data Platform
+title: Document title
+seo-title: Document title in Adobe Experience Platform
+description: description
+seo-description: seo description
 ---
 
-# Getting started with Adobe Real-Time Customer Data Platform
+# Document title
 
 This getting started guide leads you through a sample implementation of Adobe Real-Time Customer Data Platform (Real-time CDP). You can use it an example when setting up your own implementation. Although this guide shows specific examples, it links to additional information you can use while creating your setup.
 
@@ -279,5 +279,3 @@ Luma marketers use Adobe Experience Platform to look at the gift givers segment 
 These insights enable the marketers to take action on this signal, which was fueled by having this data available in CDP and having customers like Sarah attached to the segment.  
 
 Luma uses this CDP data to drive increased loyalty and customer satisfaction. 
-
-
