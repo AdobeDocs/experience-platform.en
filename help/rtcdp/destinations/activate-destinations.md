@@ -11,12 +11,7 @@ Follow the steps below to send your segments to destinations.
 
 ## Prerequisites
 
-To activate data to destinations, you must have successfully set up a destination. See the links below for different types of destinations:
-
-* Adobe destinations
-* Advertising destinations
-* Email marketing destinations
-* Social destinations
+To activate data to destinations, you must have successfully set up a destination. If you haven't done so already, go to the [destinations catalog](/help/rtcdp/destinations/destinations-catalog.md) and set up one or more destinations.
 
 ## Activate Data
 
@@ -31,6 +26,7 @@ To activate data to destinations, you must have successfully set up a destinatio
    ![destination-attributes](/help/rtcdp/destinations/assets/destination-attributes.png)
 6. On the **Schedule** page, you can specify a start date and and end date for sending date to the destination, as well as the frequency of sending data to the destination.
 7. On the **Review** page, you can see a summary of your selection. Press **Cancel** to break up the flow, **Back** to modify your settings, or **Finish** to confirm your selection and start sending data to the destination.
-    ![confirm-selection](/help/rtcdp/destinations/assets/confirm-selection.png)
+
+![confirm-selection](/help/rtcdp/destinations/assets/confirm-selection.png)
 
 

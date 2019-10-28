@@ -11,13 +11,42 @@ seo-description: Responsys is an enterprise email marketing tool for cross-chann
 
 [Responsys](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/) is an enterprise email marketing tool for cross-channel marketing campaigns offered by Oracle to personalize interactions across email, mobile, display, and social.
 
-## Set up destination
+To send segment data to Oracle Responsys, you must first set up the destination in Adobe Real-time CDP, and then set up a data import from your storage location into Oracle Responsys.
 
-### Set up destination using Amazon S3 account
+## Set up destination {set-up-destination}
 
-### Set up destination using SFTP with Password
+1. In **[!UICONTROL Connections > Destinations]**, select Oracle Responsys, and press **[!UICONTROL Connect destination]**.
 
-### Set up destination using SFTP with SSH Key
+    ![Connect to Responsys](/help/rtcdp/destinations/assets/connect-oracle-responsys.png)
 
-## Destination attributes
+2. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. For Oracle Responsys, you can select between **SFTP with Password** and **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and press **[!UICONTROL Connect]**.
 
+If your storage location supports **SFTP with Password** authentication, you must provide:
+* Domain
+* Port
+* Username
+* Password
+
+If your storage location supports **SFTP with SSH Key** authentication, you must provide:
+* Domain
+* Port
+* Username
+* SSH Key
+
+## Destination attributes {destination-attributes}
+
+When [activating segments](/help/rtcdp/destinations/activate-destinations.md) to the Oracle Responsys destination, we recommend that you select the following destination attributes:
+
+* **Email Address**: personalEmail
+* **First Name**: firstName
+* **Last Name**: lastName
+* **Phone**: mobilePhone
+* **Address City**: homeAddress.city
+* **Address State or Province**: homeAddress.stateProvince
+* **Address Postal Code**: homeAddress.postalCode
+* **Address Country**: homeAddress.country
+* **Profile ID** TBD: (e.g. Membership ID): Eloqua Contact ID
+
+## Set up data import into Oracle Responsys {#import-data-into-responsys}
+
+After connecting Real-time CDP to your Amazon S3 or SFTP storage, you must set up the data import from your storage location into Oracle Responsys. To learn how to accomplish this, see [Importing contacts or accounts](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm) in the Oracle Responsys Help Center.
