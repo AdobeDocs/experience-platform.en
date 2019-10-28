@@ -24,3 +24,4 @@ DV360 is a tool used to execute retargeting and audience targeted digital campai
 
 ## Destination attributes
 
+Are there any XDM mappings we recommend for the data export, like for ESPs?
