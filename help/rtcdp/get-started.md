@@ -88,7 +88,7 @@ She clicks to the home page to browse some more.
 
 ![image](assets/luma-personal.png)
 
-Sarah receives a highly personalized home page experience that is dynamically delivered, based on her real-time customer profile in Adobe Experience Platform.  
+Sarah receives a personalized home page experience that is dynamically delivered, based on her real-time customer profile in Adobe Experience Platform.  
 
 She sees relevant content, thanks to Adobe Sensei-powered personalization in Adobe Target, which takes into account her past purchases and affinity toward running apparel and gear. Luma also tailors the men’s catalog content toward running gear for men based on her most recent browse.
 
