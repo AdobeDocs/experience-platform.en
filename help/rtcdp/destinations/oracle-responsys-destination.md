@@ -11,9 +11,9 @@ seo-description: Responsys is an enterprise email marketing tool for cross-chann
 
 [Responsys](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/) is an enterprise email marketing tool for cross-channel marketing campaigns offered by Oracle to personalize interactions across email, mobile, display, and social.
 
-To send segment data to Oracle Responsys, you must first set up the destination in Adobe Real-time CDP, and then set up a data import from your storage location into Oracle Responsys.
+To send segment data to Oracle Responsys, you must first [set up the destination](#set-up-destination) in Adobe Real-time CDP, and then [set up a data import](#import-data-into-responsys) from your storage location into Oracle Responsys.
 
-## Set up destination {set-up-destination}
+## Set up destination {#set-up-destination}
 
 1. In **[!UICONTROL Connections > Destinations]**, select Oracle Responsys, and press **[!UICONTROL Connect destination]**.
 
@@ -33,7 +33,7 @@ If your storage location supports **SFTP with SSH Key** authentication, you must
 * Username
 * SSH Key
 
-## Destination attributes {destination-attributes}
+## Destination attributes {#destination-attributes}
 
 When [activating segments](/help/rtcdp/destinations/activate-destinations.md) to the Oracle Responsys destination, we recommend that you select the following destination attributes:
 
