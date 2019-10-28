@@ -17,7 +17,7 @@ This example shows the power of Adobe Real-Time Customer Data Platform, powered 
 
 ## Use case
 
-Luma, an athletic apparel company, is always trying to improve their customer experience. They have a new initiative to increase gift-related sales. They also want to reduce overexposure, such as annoying ads that follow customers around. 
+Luma, an athletic apparel company, is always trying to improve their customer experience. They have a new initiative to increase gift-related sales. They also want to reduce overexposure, such as annoying ads that follow customers around.
 
 Currently, they're spending too much on media that retargets against items that the visitor isn’t going to buy moving forward. For example, Luma doesn’t want to retarget someone with an item that was intended as a one-time purchase for someone else.
 
