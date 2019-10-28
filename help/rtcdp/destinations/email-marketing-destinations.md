@@ -13,7 +13,7 @@ To send segments to email marketing destinations for your campaigns, Adobe Real-
 
 The UI flow to connect to an email marketing destination is similar for all destinations.
 
-In the destination set up flow, described in the section below, you will grant Adobe access to one of your storage locations, Amazon S3 or SFTP, where Real-Time CDP will drop your destination export information. Then, from your desired email marketing platform, you can schedule a regular data import into the platform. The process to import data into email marketing platforms is specific to each platform. See the individual destinations articles for more information.
+In the destination set up flow, described in the section below, you will grant Adobe access to one of your storage locations, Amazon S3 or SFTP, where Real-Time CDP will drop your destination export information, as CSV or TXT files. Then, from your desired email marketing platform, you can schedule a regular data import into the platform. The process to import data into email marketing platforms is specific to each platform. See the individual destinations articles for more information.
 
 ## Connect destination {#connect-destination}
 
