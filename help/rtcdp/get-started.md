@@ -44,7 +44,6 @@ With Real-time CDP, powered by Adobe Experience Platform, Luma’s marketing org
 
 When customers first visit your site, you don't know anything about them. 
 
-
 ![image](assets/luma-site.png)
 
 As they navigate, data is captured in real-time and sent not only to a report suite in Adobe Analytics, but also sent directly to Adobe Experience Platform. As data is collected, you begin to form a single view of the consumer, based on behavioral data in Experience Platform's real-time customer profile.  
