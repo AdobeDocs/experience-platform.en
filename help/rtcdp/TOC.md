@@ -10,7 +10,8 @@ user-guide-title: Real-Time Customer Data Platform Help
     * [Product overview](overview.md)
     * [Getting started](get-started.md)
     * [Provisioning and access](provisioning.md)
-    * [Hope page and dashboards](home-page-dashboards.md)
+    * [Dashboards and metrics overview](dashboards-metrics/filename.md)
+    * [Billing overview](billing-overview.md)
     * [Data quality on Platform](data-quality.md)
 * Administration {#admin}
     * [Manage sandboxes](administration/filename.md)
