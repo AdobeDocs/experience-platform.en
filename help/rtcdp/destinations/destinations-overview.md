@@ -29,4 +29,4 @@ Use **Destinations** to:
 
 ## Types of destinations
 
-The Real-Time Customer Data Platform supports several types of destinations. For a list of destination types and information on each of them, see the [Destination Catalog](/help/rtcdp/destinations/destinations-catalog.md). 
+The Real-Time Customer Data Platform supports several types of destinations. For a list of destination types and information on each of them, see the [Destination Catalog](/help/rtcdp/destinations/destinations-catalog.md).
