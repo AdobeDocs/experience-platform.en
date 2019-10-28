@@ -11,15 +11,17 @@ seo-description: Responsys is an enterprise email marketing tool for cross-chann
 
 [Responsys](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/) is an enterprise email marketing tool for cross-channel marketing campaigns offered by Oracle to personalize interactions across email, mobile, display, and social.
 
-To send segment data to Oracle Responsys, you must first [set up the destination](#set-up-destination) in Adobe Real-time CDP, and then [set up a data import](#import-data-into-responsys) from your storage location into Oracle Responsys.
+To send segment data to Oracle Responsys, you must first [connect the destination](#connect-destination) in Adobe Real-time CDP, and then [set up a data import](#import-data-into-responsys) from your storage location into Oracle Responsys.
 
-## Set up destination {#set-up-destination}
+## Connect destination {#connect-destination}
 
 1. In **[!UICONTROL Connections > Destinations]**, select Oracle Responsys, and press **[!UICONTROL Connect destination]**.
 
     ![Connect to Responsys](/help/rtcdp/destinations/assets/connect-oracle-responsys.png)
 
 2. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. For Oracle Responsys, you can select between **SFTP with Password** and **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and press **[!UICONTROL Connect]**.
+
+    ![Set up Responsys wizard](/help/rtcdp/destinations/assets/responsys-wizard.png)
 
 If your storage location supports **SFTP with Password** authentication, you must provide:
 * Domain
@@ -32,6 +34,10 @@ If your storage location supports **SFTP with SSH Key** authentication, you must
 * Port
 * Username
 * SSH Key
+
+>[!NOTE]
+>
+>We should add a note about how Adobe takes maximum care of your credentials. What is our storage mechanism?
 
 ## Destination attributes {#destination-attributes}
 
