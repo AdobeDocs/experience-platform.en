@@ -1,11 +1,11 @@
 ---
-title: Document title
-seo-title: Document title in Adobe Experience Platform
-description: description
-seo-description: seo description
+title: Getting started with Adobe Real-Time Customer Data Platform
+seo-title: Getting started with Adobe Real-Time Customer Data Platform
+description: Sample scenario for Adobe Real-Time Customer Data Platform
+seo-description: Sample scenario for Adobe Real-Time Customer Data Platform
 ---
 
-# Document title
+# Getting started with Adobe Real-Time Customer Data Platform
 
 This getting started guide leads you through a sample implementation of Adobe Real-Time Customer Data Platform (Real-time CDP). You can use it an example when setting up your own implementation. Although this guide shows specific examples, it links to additional information you can use while creating your setup.
 
