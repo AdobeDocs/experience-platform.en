@@ -25,7 +25,7 @@ Use **Destinations** to:
 * Browse the catalog of digital properties where you can activate your data;
 * Create, edit, activate, and disable data flows to the destinations in the catalog;
 * Select which segments should be activated to destinations;
-* Select which XDM data fields to send as mapping data for each profile to destinations.
+* Select which XDM data fields to send as mapping data for each profile to destinations. 
 
 ## Types of destinations
 
