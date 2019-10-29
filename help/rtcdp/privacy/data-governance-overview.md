@@ -24,7 +24,9 @@ Data Governance allows you to apply usage labels to your data, either at the dat
 
 For detailed information on working with data usage labels, see the [data usage labels user guide](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/tutorials/dule/dule_working_with_labels.md) for Adobe Experience Platform.
 
-> **Note:** The data usage labels guide linked above includes instructions for applying labels to connections. However, **connection-level labels are not available in Real-time CDP**. Please refer only to the sections for applying labels to datasets and dataset fields.
+>[!NOTE]
+>
+>The data usage labels guide linked above includes instructions for applying labels to connections. However, **connection-level labels are not available in Real-time CDP**. Please refer only to the sections for applying labels to datasets and dataset fields.
 
 ## Set restrictions on destinations
 
