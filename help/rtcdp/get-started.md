@@ -1,15 +1,15 @@
 ---
-title: Getting started with Adobe Real-Time Customer Data Platform
-seo-title: Getting started with Adobe Real-Time Customer Data Platform
-description: Sample scenario for Adobe Real-Time Customer Data Platform
-seo-description: Sample scenario for Adobe Real-Time Customer Data Platform
+title: Getting started with Adobe Real-time Customer Data Platform
+seo-title: Getting started with Adobe Real-time Customer Data Platform
+description: Sample scenario for Adobe Real-time Customer Data Platform
+seo-description: Sample scenario for Adobe Real-time Customer Data Platform
 ---
 
-# Getting started with Adobe Real-Time Customer Data Platform
+# Getting started with Adobe Real-time Customer Data Platform
 
-This getting started guide leads you through a sample implementation of Adobe Real-Time Customer Data Platform (Real-time CDP). You can use it an example when setting up your own implementation. Although this guide shows specific examples, it links to additional information you can use while creating your setup.
+This getting started guide leads you through a sample implementation of Adobe Real-time Customer Data Platform (Real-time CDP). You can use it an example when setting up your own implementation. Although this guide shows specific examples, it links to additional information you can use while creating your setup.
 
-This example shows the power of Adobe Real-Time Customer Data Platform, powered by Adobe Experience Platform, to:
+This example shows the power of Adobe Real-time Customer Data Platform, powered by Adobe Experience Platform, to:
 
 * Ingest data from multiple sources
 * Merge them into a single real-time customer profile
@@ -99,7 +99,7 @@ This personalized content helps Sarah find relevant items quickly. This increase
 
 Sarah gets distracted and leaves the site, ending her session. Luma can use her data in Adobe Experience Platform to help bring her back to the site.
 
-Adobe Real-Time Customer Data Platform, powered by Adobe Experience Platform, is built for customer experience management. It enables organizations to:
+Adobe Real-time Customer Data Platform, powered by Adobe Experience Platform, is built for customer experience management. It enables organizations to:
 
 * Simplify data integration and activation 
 * Govern known and unknown data usage 
@@ -122,7 +122,7 @@ All this data from disparate sources is merged into a single unified customer pr
 
 ### Configuring a data source
 
-Use Real-Time Customer Data Platform to bring new sources of data into platform. Real-Time CDP includes a catalog of data sources that can be added to the profile in just a few clicks.  
+Use Real-time Customer Data Platform to bring new sources of data into platform. Real-time CDP includes a catalog of data sources that can be added to the profile in just a few clicks.  
 
 ![image](assets/luma-source-cat.png)
 
@@ -166,7 +166,7 @@ All of the profile information Luma has about Sarah displays. This includes her 
 |Identities|Shows the identities that have been linked together in Platform from Sarah's interactions with Luma across channels and devices. Her ECID from the website is displayed Her identity also includes the ECID from her mobile app, her email ID, a CRM ID from the recently added Microsoft Dynamics dataset, and a loyalty ID passed into Adobe Experience Platform from the Luma loyalty system.|  
 |Events|Shows see all of Sarah's interaction data with the Luma brand. This includes the item she just viewed, anything she's viewed in the past, the emails she's received, her interactions with the call center, and what channel and device each of those interactions happened on.|
 
-The Real-Time CDP profile reduces the Luma marketing team's workflow from weeks to minutes and unlocks possiblities for personalization based on this 360-degree customer view. The profile merges the behavioral data from when she browsed the site before she signed in, with her existing customer profile, creating a comprehensive view of Sarah. 
+The Real-time CDP profile reduces the Luma marketing team's workflow from weeks to minutes and unlocks possiblities for personalization based on this 360-degree customer view. The profile merges the behavioral data from when she browsed the site before she signed in, with her existing customer profile, creating a comprehensive view of Sarah. 
 
 The marketing team can use this enhanced, real-time customer profile to better personalize Sarah's experience and increase her brand loyalty with Luma.
 
@@ -207,7 +207,7 @@ When you've added the “Gift Giving Cart Abandoners” segment, you can see rou
 
 Click **[!UICONTROL Send to destinations]**.
 
-In Adobe Real-Time CDP, Luma can seamlessly act on their audience segments for personalization.  
+In Adobe Real-time CDP, Luma can seamlessly act on their audience segments for personalization.  
 Here we see all of the destinations available for Luma to send this destination to, both Adobe and non-Adobe solutions:
 
 ![image](assets/luma-dest.png)
@@ -273,7 +273,7 @@ Thanks to audience suppression capabilities, Sarah will not be targeted with tha
 
 ### Analyzing the profile
 
-Luma marketers use Adobe Experience Platform to look at the gift givers segment on the Real-Time CDP Dashboard. They view the results of this initiative over time and see that it's growing. Customers are responding to offers and spending more money.  
+Luma marketers use Adobe Experience Platform to look at the gift givers segment on the Real-time CDP Dashboard. They view the results of this initiative over time and see that it's growing. Customers are responding to offers and spending more money.  
 
 These insights enable the marketers to take action on this signal, which was fueled by having this data available in CDP and having customers like Sarah attached to the segment.  
 
