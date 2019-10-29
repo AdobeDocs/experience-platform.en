@@ -20,6 +20,8 @@ This tutorial explains how to implement your website tags to send data to Adobe 
 This tutorial contains the following steps:
 
 1. Install the Adobe Experience Platform Web SDK extension.
+1. Create a rule to tell Launch what data to send. 
+1. Bundle the extension and rule in a library.
 
 ## Install the Adobe Experience Platform Web SDK extension
 
@@ -27,8 +29,14 @@ First, install the Adobe Experience Platform Web SDK extension.
 
 1. In Launch, open the **[!UICONTROL Extensions]** tab.
 
+    ![image](assets/launch-overview.png)
+
 1. Select the Adobe Experience Platform Web SDK extension from the Launch Extension Catalog
     The configuration screen opens.
+
+    ![image](assets/launch-extension-install.png)
+
+    For more information, see [Extensions](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html) in the Launch documentation.
 
 1. Configure the extension.
 
@@ -38,3 +46,33 @@ First, install the Adobe Experience Platform Web SDK extension.
     * **Edge Domain:** Specify the edge domain you got from your Adobe representative.
 
 1. Click **[!UICONTROL Save]** and continue to the next step.
+
+## Create a rule to tell Launch what data to send
+
+Next, create a rule to tell Launch what data you want to send to Adobe Experience Platform and when you want to send it.
+
+1. Under the **[!UICONTROL Rules]** tab, configure an event that will trigger on each new page of the website when the Launch library loads.
+
+    ![image](assets/launch-make-a-rule.png)
+
+1. Add an action.
+
+    To configure the action, tell Launch where to find your data layer. The data layer is a JavaScript object that exists on the page, which is delivered from the same CMS that renders the webpage. Provide the JavaScript path to the data object.
+
+    ![image](assets/launch-add-aep-action.png)
+    
+1. Click **[!UICONTROL Keep Changes]**.
+
+For more information, see [Rules](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/rules.html) in the Launch documentation.
+
+## Bundle the extension and rule in a library
+
+Next, bundle the extension and your new rule together in a library and test those changes in a development environment.
+
+![image](assets/launch-add-changes-to-library.png)
+
+After you've completed your testing, promote the library through the workflow so it can be deployed onto the Production site. Data is now flowing from each individual user to Adobe Experience Platform.
+
+![image](assets/launch-promote-library.png)
+
+For more information, see [Libraries](https://docs.adobe.com/content/help/en/launch/using/reference/publish/libraries.html) in the Launch documentation.
