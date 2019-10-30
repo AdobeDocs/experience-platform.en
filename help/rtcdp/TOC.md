@@ -4,14 +4,13 @@ audience: user
 user-guide-title: Real-Time Customer Data Platform Help
 ---
 
-# Real-Time Customer Data Platform Help {#rtcdp}
+# Real-time Customer Data Platform Help {#rtcdp}
 
-* Real-Time Customer Data Platform {#intro}
+* Real-time Customer Data Platform {#intro}
     * [Product overview](overview.md)
     * [Getting started](get-started.md)
     * [Provisioning and access](provisioning.md)
     * [Dashboards and metrics overview](home-page-dashboards.md)
-    * [Data quality on Platform](data-quality.md)
 * Administration {#admin}
     * [Manage sandboxes](administration/filename.md)
     * [Role-based access control](administration/filename.md)
@@ -39,7 +38,7 @@ user-guide-title: Real-Time Customer Data Platform Help
     * Profile tutorials {#profile-tutorials}
         * [How to monitor health of ingestion of data into Unified Profile](profile/filename.md)
         * [Enrich Unified Profile using CRM, Loyalty via Enterprise Connectors](profile/filename.md)
-        * [Enrich Unified Profile in real-time with Reservation data ](profile/filename.md)
+        * [Enrich Unified Profile in real time with Reservation data ](profile/filename.md)
 * Segmentation {#segmentation}
     * [Segmentation overview](segmentation/filename.md)
     * [Bidirectional segment sharing](segmentation/filename.md)
@@ -56,6 +55,7 @@ user-guide-title: Real-Time Customer Data Platform Help
     * [Delete dataset and batch service](datasets/filename.md)
     * [Update merge policies](datasets/filename.md)
     * Data ingestion {#data-ingestion}
+        * [Data quality on Platform](datasets/filename.md)
         * [How to ingest data via Streaming Ingestion APIs](datasets/filename.md)
         * [Ingest data to existing properties using Adobe Analytics and Adobe Audience Manager](datasets/filename.md)
         * [Create auto transfer of data from Audience Manager](datasets/filename.md)

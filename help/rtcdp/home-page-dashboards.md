@@ -60,7 +60,7 @@ For more information about a specific profile, see {link to profile viewer doc}
 
 ### Failed profile records
 
-In the leaderboard, **[!UICONTROL Failed profile records]** counts the number of records that failed to process into the profile. 
+In the leaderboard, **[!UICONTROL Failed profile records]** counts the number of records that failed to process into the profile.
 
 The **[!UICONTROL Failed profile records]** metric card shows this count, and includes a graphical representation that helps you see how failures have trended during the time shown below the graphic. This chart is updated hourly. Click **[!UICONTROL View datasets]** to see more details about the profile records.
 
