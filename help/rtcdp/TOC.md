@@ -38,7 +38,7 @@ user-guide-title: Real-Time Customer Data Platform Help
     * Profile tutorials {#profile-tutorials}
         * [How to monitor health of ingestion of data into Unified Profile](profile/filename.md)
         * [Enrich Unified Profile using CRM, Loyalty via Enterprise Connectors](profile/filename.md)
-        * [Enrich Unified Profile in real-time with Reservation data ](profile/filename.md)
+        * [Enrich Unified Profile in real time with Reservation data ](profile/filename.md)
 * Segmentation {#segmentation}
     * [Segmentation overview](segmentation/filename.md)
     * [Bidirectional segment sharing](segmentation/filename.md)
