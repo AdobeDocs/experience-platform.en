@@ -20,12 +20,14 @@ There are two methods for submitting individual GDPR and CCPA data subject reque
 * Use the [Privacy Service UI](https://gdprui.cloud.adobe.io/) to create and monitor access and delete requests within a visual workspace. See the [Privacy Service UI tutorial](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md) for step-by-step instructions.
 * Use the [Privacy Service API](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html) to manage access and delete requests with RESTful API calls. See the [Privacy Service API tutorial](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_api_tutorial.md) for step-by-step instructions.
 
+<!-- (Capability will not be available for November GA) 
 ## Opt-out capabilities
 
 Real-time CDP provides two types of consumer opt-out capabilities:
 
 1. **General opt-out**: (Waiting on info)
 1. **Segment-level opt-out of sale**: Opt-out of sale requests are captured using the Profile Privacy mixin (see the section on "Handling opt-out requests" in the [Real-time Customer Profile overview](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md) for more information). Using this, you can exclude users who have opted out from a segment using boolean logic ("AND NOT") in the segment predicate.
+-->
 
 ## Next steps
 
