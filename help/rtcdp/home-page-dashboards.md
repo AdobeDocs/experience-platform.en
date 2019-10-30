@@ -1,13 +1,13 @@
 ---
-title: Real-Time Customer Data Platform Home Page and Dashboards
-seo-title: Real-Time Customer Data Platform Home Page and Dashboards
+title: Real-time Customer Data Platform Home Page and Dashboards
+seo-title: Real-time Customer Data Platform Home Page and Dashboards
 description: Dashboards, Home Page, and First-Time User Experience of Adobe Experience Platform
 seo-description: Dashboards, Home Page, and First-Time User Experience of Adobe Experience Platform
 ---
 
-# Real-Time Customer Data Platform home page and dashboards
+# Real-time Customer Data Platform home page and dashboards
 
-The Adobe Real-Time Customer Data Platform (real-time CDP) home page appears when you log in to real-time CDP.
+The Adobe Real-time Customer Data Platform (real-time CDP) home page appears when you log in to real-time CDP.
 
 {screen shot}
 
@@ -60,7 +60,7 @@ For more information about a specific profile, see {link to profile viewer doc}
 
 ### Failed profile records
 
-In the leaderboard, **[!UICONTROL Failed profile records]** counts the number of records that failed to process into the profile. 
+In the leaderboard, **[!UICONTROL Failed profile records]** counts the number of records that failed to process into the profile.
 
 The **[!UICONTROL Failed profile records]** metric card shows this count, and includes a graphical representation that helps you see how failures have trended during the time shown below the graphic. This chart is updated hourly. Click **[!UICONTROL View datasets]** to see more details about the profile records.
 
