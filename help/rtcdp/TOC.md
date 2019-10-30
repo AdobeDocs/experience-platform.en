@@ -11,7 +11,6 @@ user-guide-title: Real-Time Customer Data Platform Help
     * [Getting started](get-started.md)
     * [Provisioning and access](provisioning.md)
     * [Dashboards and metrics overview](home-page-dashboards.md)
-    * [Data quality on Platform](data-quality.md)
 * Administration {#admin}
     * [Manage sandboxes](administration/filename.md)
     * [Role-based access control](administration/filename.md)
@@ -56,6 +55,7 @@ user-guide-title: Real-Time Customer Data Platform Help
     * [Delete dataset and batch service](datasets/filename.md)
     * [Update merge policies](datasets/filename.md)
     * Data ingestion {#data-ingestion}
+        * [Data quality on Platform](datasets/filename.md)
         * [How to ingest data via Streaming Ingestion APIs](datasets/filename.md)
         * [Ingest data to existing properties using Adobe Analytics and Adobe Audience Manager](datasets/filename.md)
         * [Create auto transfer of data from Audience Manager](datasets/filename.md)
