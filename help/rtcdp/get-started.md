@@ -21,7 +21,7 @@ Luma, an athletic apparel company, is always trying to improve their customer ex
 
 Currently, they're spending too much on media that retargets against items that the visitor isn’t going to buy moving forward. For example, Luma doesn’t want to retarget someone with an item that was intended as a one-time purchase for someone else.
 
-Right now, Luma's data is dispersed across multiple sources. As a result, they face significant challenges: 
+Right now, Luma's data is dispersed across multiple sources. As a result, they face significant challenges:
 
 * The marketing organization must work with various teams that each own a data source, including a website, mobile app, loyalty systems, CRM, and so on. 
 * By the time the marketing team gets access to the data, it's often stale and is no longer relevant for their time-sensitive campaign.  
