@@ -49,7 +49,7 @@ First, install the Adobe Experience Platform Web SDK extension.
 
 ## Create a rule to tell Launch what data to send
 
-Next, create a rule to tell Launch what data you want to send to Adobe Experience Platform and when you want to send it.
+Next, create a rule to let Launch know what data you want to send to Adobe Experience Platform and when you want to send it.
 
 1. Under the **[!UICONTROL Rules]** tab, configure an event that will trigger on each new page of the website when the Launch library loads.
 
