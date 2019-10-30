@@ -4,9 +4,9 @@ audience: user
 user-guide-title: Real-Time Customer Data Platform Help
 ---
 
-# Real-Time Customer Data Platform Help {#rtcdp}
+# Real-time Customer Data Platform Help {#rtcdp}
 
-* Real-Time Customer Data Platform {#intro}
+* Real-time Customer Data Platform {#intro}
     * [Product overview](overview.md)
     * [Getting started](get-started.md)
     * [Provisioning and access](provisioning.md)
@@ -38,7 +38,7 @@ user-guide-title: Real-Time Customer Data Platform Help
     * Profile tutorials {#profile-tutorials}
         * [How to monitor health of ingestion of data into Unified Profile](profile/filename.md)
         * [Enrich Unified Profile using CRM, Loyalty via Enterprise Connectors](profile/filename.md)
-        * [Enrich Unified Profile in real-time with Reservation data ](profile/filename.md)
+        * [Enrich Unified Profile in real time with Reservation data ](profile/filename.md)
 * Segmentation {#segmentation}
     * [Segmentation overview](segmentation/filename.md)
     * [Bidirectional segment sharing](segmentation/filename.md)
