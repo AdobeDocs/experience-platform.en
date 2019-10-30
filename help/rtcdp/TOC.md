@@ -10,13 +10,13 @@ user-guide-title: Real-Time Customer Data Platform Help
     * [Product overview](overview.md)
     * [Getting started](get-started.md)
     * [Provisioning and access](provisioning.md)
-    * [Dashboards and metrics overview](dashboards-metrics/filename.md)
-    * [Billing overview](billing-overview.md)
+    * [Dashboards and metrics overview](home-page-dashboards.md)
     * [Data quality on Platform](data-quality.md)
 * Administration {#admin}
     * [Manage sandboxes](administration/filename.md)
     * [Role-based access control](administration/filename.md)
     * [Sandboxes and role-based access control API reference](administration/filename.md)
+    * [Implement website tags with Adobe Launch](administration/launch.md)
 * Sources {#sources}
     * [Sources overview](sources/filename.md)
     * [Configure sources](sources/filename.md)
