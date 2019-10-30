@@ -4,9 +4,9 @@ audience: user
 user-guide-title: Real-Time Customer Data Platform Help
 ---
 
-# Real-Time Customer Data Platform Help {#rtcdp}
+# Real-time Customer Data Platform Help {#rtcdp}
 
-* Real-Time Customer Data Platform {#intro}
+* Real-time Customer Data Platform {#intro}
     * [Product overview](overview.md)
     * [Getting started](get-started.md)
     * [Provisioning and access](provisioning.md)
