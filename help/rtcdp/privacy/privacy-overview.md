@@ -7,12 +7,26 @@ seo-description: Real-time Customer Data Profile allows you to streamline the pr
 
 # Privacy in Real-time CDP
 
-Real-time Customer Data Platform (Real-time CDP) brings data from multiple enterprise systems together, allowing marketers to better identify, understand, and engage their customers. This data often includes private customer information that is applicable to privacy regulations such as the General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA).
+Real-time Customer Data Platform (Real-time CDP) helps marketers bring data from multiple enterprise systems together, allowing them to better identify, understand, and engage their customers. Adobe holds consumer data privacy as a fundamental design principle and provides various controls to help marketers manage the data privacy of their customers.
 
-**Adobe Experience Platform Privacy Service** allows you to streamline the process of keeping your data operations compliant with privacy regulations. Privacy Service automatically processes customer requests to access or delete their private data stored on Real-time CDP, as well as opt-out of the selling and storing of their information.
+The majority of Real-time CDP capabilities are powered by Adobe Experience Platform. This document provides information about the various privacy enhancement technologies supported by Real-time CDP, with links to Experience Platform documentation for more information.
 
-Real-time CDP is built on top of Adobe Experience Platform, and therefore the majority of Privacy Service capabilities are covered in the Experience Platform documentation. The following is a list of documentation to help you learn more about Privacy Service:
+## Privacy Service
 
-* [Privacy Service overview](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/technical_overview/privacy_service_overview/privacy_service_overview.md): An introduction to Privacy Service and how it aligns with GDPR and CCPA.
-* [Privacy Service UI tutorial](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md): A step-by-step guide for creating access and delete requests for GDPR and CCPA using the Privacy Service user interface.
-* Opt-out requests in Experience Platform: See the "Handling opt-out requests" section in this overview document to learn how Real-time CDP handles general opt-out and sales/storage opt-out requests from customers.
+Adobe Experience Platform Privacy Service allows you to streamline the process of keeping your data operations compliant with privacy regulations such as the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA). See the [Privacy Service overview](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/technical_overview/privacy_service_overview/privacy_service_overview.md) document for a more detailed introduction of the service.
+
+There are two methods for submitting individual GDPR and CCPA data subject requests for accessing and deleting customer data:
+
+* Use the [Privacy Service UI](https://gdprui.cloud.adobe.io/) to create and monitor access and delete requests within a visual workspace. See the [Privacy Service UI tutorial](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md) for step-by-step instructions.
+* Use the [Privacy Service API](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html) to manage access and delete requests with RESTful API calls. See the [Privacy Service API tutorial](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_api_tutorial.md) for step-by-step instructions.
+
+## Opt-out capabilities
+
+Real-time CDP provides two types of consumer opt-out capabilities:
+
+1. **General opt-out**: (Waiting on info)
+1. **Segment-level opt-out of sale**: Opt-out of sale requests are captured using the Profile Privacy mixin (see the section on "Handling opt-out requests" in the [Real-time Customer Profile overview](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md) for more information). Using this, you can exclude users who have opted out from a segment using boolean logic ("AND NOT") in the segment predicate.
+
+## Next steps
+
+This document provided a brief introduction to the Privacy capabilities of Real-time CDP. For more detailed information on best practices and steps for submitting access/delete requests, please refer to the [Privacy Service documentation](https://www.adobe.io/apis/experiencecloud/gdpr/docs.html).
