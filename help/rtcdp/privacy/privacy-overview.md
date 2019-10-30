@@ -13,7 +13,7 @@ The majority of Real-time CDP capabilities are powered by Adobe Experience Platf
 
 ## Privacy Service
 
-Adobe Experience Platform Privacy Service allows you to streamline the process of keeping your data operations compliant with privacy regulations such as the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA). See the [Privacy Service overview](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/technical_overview/privacy_service_overview/privacy_service_overview.md) document for a more detailed introduction of the service.
+Adobe Experience Platform Privacy Service allows you to streamline the process of keeping your data operations compliant with privacy regulations such as the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA). Since Real-time CDP leverages Experience Platform capabilities for data collection and storage, the access and delete requests for GDPR and CCPA should be managed within Platform. See the [Privacy Service overview](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/technical_overview/privacy_service_overview/privacy_service_overview.md) document for a more detailed introduction of the service.
 
 There are two methods for submitting individual GDPR and CCPA data subject requests for accessing and deleting customer data:
 
