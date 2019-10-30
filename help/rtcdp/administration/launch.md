@@ -20,7 +20,7 @@ This tutorial explains how to implement your website tags to send data to Adobe 
 This tutorial contains the following steps:
 
 1. Install the Adobe Experience Platform Web SDK extension.
-1. Create a rule to tell Launch what data to send. 
+1. Create a rule to tell Launch what data to send.
 1. Bundle the extension and rule in a library.
 
 ## Install the Adobe Experience Platform Web SDK extension
