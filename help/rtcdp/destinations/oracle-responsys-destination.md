@@ -36,6 +36,14 @@ If your storage location supports **SFTP with SSH Key** authentication, you must
 * Username
 * SSH Key
 
+3. In **Basic Information**, fill in the relevant information for your destination, as shown below:
+* **Name**: Pick a relevant name for your destination.
+* **Description**: Enter a description for your destination.
+* **Folder Path**: Provide the path in your storage location where Real-time CDP will drop your export data
+* **File Format**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location.
+
+    ![Responsys basic information](/help/rtcdp/destinations/assets/responsys-basic-information.png)
+
 >[!NOTE]
 >
 >We should add a note about how Adobe takes maximum care of your credentials. What is our storage mechanism?
