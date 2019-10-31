@@ -15,8 +15,8 @@ You can work with **Sources** and **Destinations** in the Adobe Real-Time CDP. I
 
 ## Use cases
 
-* Use **Destinations** to activate and send profiles or segments to marketing automation platforms, social networks, digital advertising platforms, and more.
-* Choose from a [self-service catalog](/help/rtcdp/destinations/destinations-catalog.md) of all the destinations available in Adobe Experience Platform.
+* Use **Destinations** to [activate](/help/rtcdp/destinations/activate-destinations.md) and send profiles or segments to marketing automation platforms, social networks, digital advertising platforms, and more.
+* Choose from a [self-service catalog](/help/rtcdp/destinations/destinations-catalog.md) of all the destinations available in Real-Time CDP.
 * Schedule data exports to your preferred destinations at regular times.
 
 ## Operations
@@ -25,7 +25,7 @@ Use **Destinations** to:
 * Browse the catalog of digital properties where you can activate your data;
 * Create, edit, activate, and disable data flows to the destinations in the catalog;
 * Select which segments should be activated to destinations;
-* Select which XDM data fields to send as mapping data for each profile to destinations.
+* Select which XDM data fields to use as mapping data for each profile to email marketing destinations.
 
 ## Types of destinations
 

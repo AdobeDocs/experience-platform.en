@@ -9,11 +9,11 @@ seo-description:
 
 Activate the data you have in Adobe Real-Time Customer Data Platform by sending segments to destinations. To accomplish this, follow the steps below.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 To activate data to destinations, you must have successfully set up a destination. If you haven't done so already, go to the [destinations catalog](/help/rtcdp/destinations/destinations-catalog.md). Browse the supported destinations and set up one or more destinations.
 
-## Activate Data
+## Activate Data {#activate-data}
 
 1. In **Destinations > Browse**, select the destination where you want to activate your segments. 
 2. Click the name of the destination. This takes you to the Activate flow.
@@ -28,3 +28,20 @@ To activate data to destinations, you must have successfully set up a destinatio
 7. On the **Review** page, you can see a summary of your selection. Press **Cancel** to break up the flow, **Back** to modify your settings, or **Finish** to confirm your selection and start sending data to the destination.
 
 ![confirm-selection](/help/rtcdp/destinations/assets/confirm-selection.png)
+
+## Edit activation {#edit-activation}
+
+## Verify that activation was successful
+
+### Email marketing destinations
+
+For email marketing destinations, Adobe Real-Time CDP drops a txt or csv file into your storage location. The file format is:
+
+```
+<destination name>id<destination id><timestamp>
+```
+
+Your files could look like this:
+
+Salesforce_id3544_YYYYMMDDHHMMSS
+

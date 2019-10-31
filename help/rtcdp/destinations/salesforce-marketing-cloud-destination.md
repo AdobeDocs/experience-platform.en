@@ -9,7 +9,7 @@ seo-description: Salesforce Marketing Cloud is a digital marketing suite formerl
 
 ## Overview
 
-Salesforce Marketing Cloud is a digital marketing suite formerly known as ExactTarget that allows you to build and customize journeys for visitors and customers to personalize their experience.
+[Salesforce Marketing Cloud](https://www.salesforce.com/products/marketing-cloud/email-marketing/) is a digital marketing suite formerly known as ExactTarget that allows you to build and customize journeys for visitors and customers to personalize their experience.
 
 To send segment data to Salesforce Marketing cloud, you must first [connect the destination](#connect-destination) in Adobe Real-time CDP, and then [set up a data import](#import-data-into-responsys) from your storage location into Salesforce Marketing Cloud.
 
