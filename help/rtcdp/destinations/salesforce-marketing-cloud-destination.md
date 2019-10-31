@@ -19,24 +19,15 @@ To send segment data to Salesforce Marketing cloud, you must first [connect the 
 
     ![Connect to Salesforce](/help/rtcdp/destinations/assets/connect-salesforce.png)
 
-2. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. For Salesforce Marketing Cloud, you can select between **SFTP with Password** and **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and press **[!UICONTROL Connect]**.
+1. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. For Salesforce Marketing Cloud, you can select between **SFTP with Password** and **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and press **[!UICONTROL Connect]**.
 
     ![Set up Responsys wizard](/help/rtcdp/destinations/assets/salesforce-step1.png)
     ![Fill in Responsys information](/help/rtcdp/destinations/assets/salesforce-wizard.png)
 
-If your storage location supports **SFTP with Password** authentication, you must provide:
-* Domain
-* Port
-* Username
-* Password
+    If your storage location supports **SFTP with Password** authentication, you must provide Domain, Port, Username, and Password.
+    If your storage location supports **SFTP with SSH Key** authentication, you must provide Domain, Port, Username, and SSH Key.
 
-If your storage location supports **SFTP with SSH Key** authentication, you must provide:
-* Domain
-* Port
-* Username
-* SSH Key
-
-3. In **Basic Information**, fill in the relevant information for your destination, as shown below:
+1. In **Basic Information**, fill in the relevant information for your destination, as shown below:
 * **Name**: Pick a relevant name for your destination.
 * **Description**: Enter a description for your destination.
 * **Folder Path**: Provide the path in your storage location where Real-time CDP will drop your export data
