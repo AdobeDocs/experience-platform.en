@@ -83,10 +83,11 @@ user-guide-title: Real-Time Customer Data Platform Help
           * [Google Display & Video 360](destinations/google-dv360-destination.md)
         * Email Marketing destinations{#email-destinations}
           * [Email Marketing destinations overview](destinations/email-marketing-destinations.md)
+          * [Adobe Campaign Classic](destinations/adobe-campaign-classic-destination.md)
           * [Oracle Eloqua](destinations/oracle-eloqua-destination.md)
           * [Oracle Responsys](destinations/oracle-responsys-destination.md)
           * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
         * Social destinations{#social-destinations}
           * [Social destinations overview](destinations/social-destinations.md)
     * Destinations tutorials {#dest-tutorials}
-        * [Activate profiles and segments in a destination](destinations/activate-destinations.md)
+        * [Activate profiles and segments in a destination](destinations/activate-destinations.md) 
