@@ -31,7 +31,7 @@ user-guide-title: Real-Time Customer Data Platform Help
         * [Tutorial](sources/filename.md)
     * [Sources API reference](sources/filename.md)
 * Real-time customer profile {#profile}
-    * [Profile overview](profile/filename.md)
+    * [Profile overview](profile/profile-overview.md)
     * [Profile viewer](profile/filename.md)
     * [Unified Profile Service search](profile/filename.md)
     * [Namespaces in profile lookup](profile/filename.md)
