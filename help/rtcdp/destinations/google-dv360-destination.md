@@ -17,6 +17,7 @@ DV360 is a tool used to execute retargeting and audience targeted digital campai
     ![Connect Google destination](/help/rtcdp/destinations/assets/connect-google.png)
 
 2. In the Connect destination wizard, fill in the Basic Information for the destination.
+    ![Basic information Google](/help/rtcdp/destinations/assets/google-dv360-basic-info.png)
 *  Name: Fill in the preferred name for this destination.
 *  Description: Optional. Your description your mention which campaign you are using this destination for.
 *  Account Type: For Google DV360 integrations, select the **DFP_BY_GOOGLE** option. 
