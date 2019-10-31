@@ -13,7 +13,7 @@ To go to Destinations, press **Destinations** in the Platform dashboard, as show
 
 ## Catalog
 
-The **Catalog** tab displays all destinations that you can send data to, sorted by destination type. For more information on destination types and information on each destination, see the [Destination Catalog](/help/rtcdp/destinations/destinations-catalog.md).
+The **Catalog** tab displays all destinations that you can send data to, grouped by destination type. For more information on destination types and information on each destination, see the [Destination Catalog](/help/rtcdp/destinations/destinations-catalog.md).
 
 **placeholder for png showing catalog**
 
@@ -24,11 +24,11 @@ The **Browse** tab displays the destinations that you have set up to receive dat
 
 Element | Description 
 ---------|----------
- Name | The name you provided for your destination
- Platform | ---
+ Destination Name | The name you provided for your destination
+ Destination | ---
  Account | ---
  Created | The date and UTC time when this destination was created
- Dataset Flows | ---
+ Segments | The number of segments 
  Status | Indicates whether data is currently being activated to this destination. If the status is **Disabled**, do this -----
 
  **placeholder for png showing flows**

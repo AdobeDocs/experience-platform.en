@@ -19,22 +19,18 @@ To send segment data to Oracle Responsys, you must first [connect the destinatio
 
     ![Connect to Responsys](/help/rtcdp/destinations/assets/connect-oracle-responsys.png)
 
-2. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. For Oracle Responsys, you can select between **SFTP with Password** and **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and press **[!UICONTROL Connect]**.
+1. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. For Oracle Responsys, you can select between **SFTP with Password** and **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and press **[!UICONTROL Connect]**.
 
     ![Set up Responsys wizard](/help/rtcdp/destinations/assets/responsys-wizard.png)
     ![Fill in Responsys information](/help/rtcdp/destinations/assets/responsys-step2.png)
 
-If your storage location supports **SFTP with Password** authentication, you must provide:
-* Domain
-* Port
-* Username
-* Password
+1. In **Basic Information**, fill in the relevant information for your destination, as shown below:
+* **Name**: Pick a relevant name for your destination.
+* **Description**: Enter a description for your destination.
+* **Folder Path**: Provide the path in your storage location where Real-time CDP will drop your export data
+* **File Format**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location.
 
-If your storage location supports **SFTP with SSH Key** authentication, you must provide:
-* Domain
-* Port
-* Username
-* SSH Key
+    ![Responsys basic information](/help/rtcdp/destinations/assets/responsys-basic-information.png)
 
 >[!NOTE]
 >
