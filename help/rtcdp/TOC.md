@@ -64,34 +64,24 @@ user-guide-title: Real-Time Customer Data Platform Help
         * [How to bring online data via Adobe Launch](datasets/filename.md)
 * Privacy and data governance {#privacy}
     * [Privacy overview](privacy/privacy-overview.md)
-    * [Data Governance overview](privacy/filename.md)
-    * Governance tutorials {#privacy-tutorials}
-        * [How to apply DULE labels](privacy/filename.md)
-        * [Tutorial2](privacy/filename.md)
-        * [Tutorial3](privacy/filename.md)
-    * [API reference for DULE Policy](privacy/filename.md)
+    * [Data Governance overview](privacy/data-governance-overview.md)
 * Destinations {#destinations}
     * [Destinations overview](destinations/destinations-overview.md)
     * [Destinations UI](destinations/destinations-ui.md)
     * Destinations catalog  {#destinations-cat}
         * [Destinations catalog overview](/help/rtcdp/destinations/destinations-catalog.md)
         * Adobe destinations{#adobe-destinations}
-          * [Adobe destinations overview](destinations/destinations.md)
-          * [Adobe Campaign](destinations/destinations.md)
-          * [Adobe Target](destinations/destinations.md)
-          * [Adobe Audience Manager](destinations/destinations.md)
-        * Advertiser destinations{#advertiser-destinations}
-          * [Advertiser destinations overview](destinations/destinations.md)
-          * [Google DBM](destinations/destinations.md)
+          * [Adobe destinations overview](destinations/adobe-destinations.md)
+          * [Adobe Campaign Classic](destinations/adobe-campaign-classic-destination.md)
+        * Advertising destinations{#advertiser-destinations}
+          * [Advertising destinations overview](destinations/advertising-destinations.md)
+          * [Google Display & Video 360](destinations/google-dv360-destination.md)
         * Email Marketing destinations{#email-destinations}
-          * [Email Marketing destinations overview](destinations/destinations.md)
-          * [Oracle Eloqua](destinations/destinations.md)
-          * [Responsys](destinations/destinations.md)
-          * [Salesforce Marketing Cloud](destinations/destinations.md)
+          * [Email Marketing destinations overview](destinations/email-marketing-destinations.md)
+          * [Oracle Eloqua](destinations/oracle-eloqua-destination.md)
+          * [Oracle Responsys](destinations/oracle-responsys-destination.md)
+          * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
         * Social destinations{#social-destinations}
-          * [Social destinations overview](destinations/destinations.md)
+          * [Social destinations overview](destinations/social-destinations.md)
     * Destinations tutorials {#dest-tutorials}
-        * [Create a destination](destinations/destinations.md)
-        * [Activate profiles and segments in a destination](destinations/destinations.md)
-        * [Select which XDM fields to activate in a destination](destinations/destinations.md)
-
+        * [Activate profiles and segments in a destination](destinations/activate-destinations.md)
