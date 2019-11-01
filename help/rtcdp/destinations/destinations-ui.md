@@ -15,11 +15,9 @@ In Adobe Real-Time Customer Data Platform, you can get to the destinations UI by
 
 The **[!UICONTROL Catalog]** tab is the default view in the Destinations section. The **[!UICONTROL Catalog]** tab displays all destinations that you can send data to, grouped by destination type. For more information on destination types and information on each destination, see the [Destination Catalog](/help/rtcdp/destinations/destinations-catalog.md).
 
-**placeholder for png showing catalog**
-
 ## Browse
 
-The **Browse** tab displays the destinations with which you have established a connection and displays whether segments are actively being sent to destinations. See the table below for all the information you can get on each destination:
+The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection and displays whether segments are actively being sent to destinations. See the table below for all the information you can get on each destination:
 
 
 Element | Description 
@@ -33,7 +31,7 @@ Element | Description
 
  ![Browse Tab](/help/rtcdp/destinations/assets/browse-tab.png)
 
-Click into any destination row to bring up more information about the destination in the left-rail. 
+Click into any destination row to bring up more information about the destination in the right rail. 
 
 ![Click destination row](/help/rtcdp/destinations/assets/click-destination-row.png)
 
@@ -41,7 +39,7 @@ Press the destination name to see information about the segments that are activa
 
 ## Accounts
 
-In the **Accounts** tab, you can see information about the connections you have established with various destinations. See the table below for all the information you can get on each destination:
+In the **[!UICONTROL Accounts]** tab, you can see information about the connections you have established with various destinations. See the table below for all the information you can get on each destination:
 
 Element | Description 
 ---------|----------
@@ -53,3 +51,13 @@ Element | Description
  Expiration | Indicates when the connection to this destination will expire. If the status is **Expired** or about to expire, do this -----
 
 ![Accounts tab](/help/rtcdp/destinations/assets/accounts-tab.png)
+
+## Data flows
+
+The **[!UICONTROL Data flows]** tab displays a graphic representation of the activation flows that you have set up in the Real-Time Customer Data Platform.
+
+![Data-flows1](/help/rtcdp/destinations/assets/data-flows1.png)
+
+Click into any of the destinations displayed on the page and press **[!UICONTROL View flows]** to see get information on all the flows you have set up for each destination.
+
+![Data-flows2](/help/rtcdp/destinations/assets/data-flows2.png)
