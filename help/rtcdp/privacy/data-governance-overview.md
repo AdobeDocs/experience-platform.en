@@ -24,15 +24,11 @@ Data Governance allows you to apply usage labels to your data, either at the dat
 
 For detailed information on working with data usage labels, see the [data usage labels user guide](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/tutorials/dule/dule_working_with_labels.md) for Adobe Experience Platform.
 
->[!NOTE]
->
->The data usage labels guide linked above includes instructions for applying labels to connections. However, **connection-level labels are not available in Real-time CDP**. Please refer only to the sections for applying labels to datasets and dataset fields.
-
 ## Set restrictions on destinations
 
 You can set data usage restrictions on a destination by defining the marketing use cases for that destination. Defining use cases for destinations allows you to check for usage policy violations and ensure that any profiles or segments sent to that destination are compatible with Data Governance rules.
 
-Marketing use cases can be defined during the _Setup_ phase for the _Edit Destination_ workflow. See the [destination documentation] for more information.
+Marketing use cases can be defined during the _Setup_ phase for the _Edit Destination_ workflow. See the destination documentation for more information.
 
 <!-- Link to destination docs to be added after they are merged. -->
 
@@ -40,11 +36,11 @@ Marketing use cases can be defined during the _Setup_ phase for the _Edit Destin
 
 In order for data usage labels to effectively support data compliance, data usage policies must be defined and enabled. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Real-time CDP. See the "Data usage policies" section in the Experience Platform [Data Governance overview](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) for more information.
 
-Real-time CDP provides several **core policies** for common customer experience use cases. These policies can be viewed by making a request to the [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml), as shown in the "List all policies" section in the [Policy Service developer guide](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_policy_service_developer_guide.md). You can also create your own **custom policies** to model custom usage restrictions, as shown in the "Create a policy" section in the developer guide.
+Adobe Experience Platform provides several **core policies** for common customer experience use cases. These policies can be viewed by making a request to the [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml), as shown in the "List all policies" section in the [Policy Service developer guide](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_policy_service_developer_guide.md). You can also create your own **custom policies** to model custom usage restrictions, as shown in the "Create a policy" section in the developer guide.
 
 ## Enforce data usage compliance
 
-Once data is labeled and usage policies are defined, you can enforce data usage compliance with policies. See the "Policy evaluation" section in the [Policy Service developer guide](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_policy_service_developer_guide.md) for more information.
+Once data is labeled and usage policies are defined, you can enforce data usage compliance with policies. See the tutorial on [enforcing data usage compliance for audience segments](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/dule/data_governance_and_segmentation.md) for more information.
 
 ## Next steps
 
