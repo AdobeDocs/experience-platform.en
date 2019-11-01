@@ -27,6 +27,6 @@ When [activating segments](/help/rtcdp/destinations/activate-destinations.md) to
 * Address Country: homeAddress.country
 * Profile ID TBD: (e.g. Membership ID): Eloqua Contact ID
 
-## Set up data import into Adobe Campaign Classic
+## Set up data import into Adobe Campaign Classic {#import-data-into-campaign}
 
 After connecting Real-time CDP to your Amazon S3 or SFTP storage, you must set up the data import from your storage location into Adobe Campaign. To learn how to accomplish this, see [Importing data](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html) in the Adobe Campaign Classic Help documentation.
