@@ -22,7 +22,8 @@ To activate data to destinations, you must have successfully set up a destinatio
 3. Press **Activate**;
 4. In **Activate destination** wizard, on the **Select Segments** page, choose which segments you want to send to the destination.
     ![segments-to-destination](/help/rtcdp/destinations/assets/activate-flow.png)
-5. On the **Destination Attributes** page, press **Add new Schema field** and enter the attributes that you want to sent to the destination.
+5. On the **Destination Attributes** page, press **Add new Schema field** and enter the attributes that you want to send to the destination.
+   Note that for email marketing destinations, we recommend that one of the attributes is a [unique identifier](/help/rtcdp/destinations/email-marketing-destinations.md#identity) from your union schema.
    ![destination-attributes](/help/rtcdp/destinations/assets/destination-attributes.png)
 6. On the **Schedule** page, you can specify a start date and an end date for sending data to the destination, as well as the frequency of sending data to the destination.
 7. On the **Review** page, you can see a summary of your selection. Press **Cancel** to break up the flow, **Back** to modify your settings, or **Finish** to confirm your selection and start sending data to the destination.
@@ -32,6 +33,8 @@ To activate data to destinations, you must have successfully set up a destinatio
 ## Edit activation {#edit-activation}
 
 ## Verify that activation was successful
+
+
 
 ### Email marketing destinations
 

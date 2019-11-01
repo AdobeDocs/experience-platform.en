@@ -7,13 +7,13 @@ seo-description: Email Service Providers (ESPs) allow you to manage your email m
 
 # Email marketing destinations {#email-marketing-destinations}
 
-Email Service Providers (ESPs) allow you to manage your email marketing, such as for sending promotional email campaigns. Adobe Real-time Customer Data Platform integrates with ESPs by allowing you to activate segments to email marketing destinations.
+Email Service Providers (ESPs) enable you to manage your email marketing activities, such as sending promotional email campaigns. Adobe Real-time Customer Data Platform integrates with ESPs by allowing you to activate segments to email marketing destinations.
 
 To send segments to email marketing destinations for your campaigns, Adobe Real-time CDP must first connect to the destination.
 
-Connecting to email marketing destinations is a two step process, the first step identical for all email marketing destinations: The UI flow to connect to an email marketing destination is similar for all destinations.
+Connecting to email marketing destinations is a three-step process, the first step identical for all email marketing destinations. The three steps are described in their own sections further below on this page.
 
-In the connect destination flow, described in the section below, you will grant Adobe access your storage location, either Amazon S3 or SFTP. Real-Time CDP exports your segments as CSV or TXT files and drops them into your preferred location. Then, from your desired email marketing platform, you can schedule a regular data import from your storage location into the platform. The process to import data into email marketing platforms is specific to each platform. See the individual destinations articles for more information.
+In the connect destination flow, described in the section below, you will grant Adobe access your storage location, either Amazon S3 or SFTP. Real-Time CDP exports your segments as CSV or TXT files and drops them into your preferred location. Then, in your preferred email marketing platform, you can schedule a regular data import from your storage location into the platform. The process to import data into email marketing platforms is specific to each platform. See the individual destinations articles for more information.
 
 ## Step 1 - Connect destination {#connect-destination}
 
@@ -37,13 +37,13 @@ In this step, you are selecting which fields to export to email marketing destin
 
 ### Identity
 
-You **must** select a unique identifier from your [union schema](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md). This is the field that your users' identities are keyed off of. Most commonly, this field is the email address, but it can also be a loyalty ID or a phone number. See the table below for the most common identifiers and their schema in XDM. 
+We recommend that you select a unique identifier from your [union schema](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md). This is the field that your users' identities are keyed off of. Most commonly, this field is the email address, but it can also be a loyalty program ID or a phone number. See the table below for the most common identifiers and their XDM field in unified schema. 
 
-Schema | XDM field 
+Identifier | XDM field in Unified Schema
 ---------|----------
  Email Address | personalEmail.address 
  Phone | mobilePhone.number 
- Loyalty ID | customer-defined XDM field 
+ Loyalty program ID | Customer-defined XDM field 
 
 ### Other Destination Attributes
 
@@ -61,7 +61,7 @@ Schema | XDM field
 
 ## Step 3 - Import data from your storage location into the destination
 
-See the individual email marketing destination articles to learn how to import data into destinations:
+See the individual email marketing destination articles to learn how to import data from your storage location into destinations:
 
 * [Adobe Campaign](/help/rtcdp/destinations/adobe-campaign-classic-destination.md#import-data-into-campaign)
 * [Salesforce Marketing Cloud](/help/rtcdp/destinations/salesforce-marketing-cloud-destination.md#import-data-into-salesforce)
