@@ -29,14 +29,39 @@ For **SFTP with Password** connections, you must provide Domain, Port, Username,
 
 For **SFTP with SSH Key** connections, you must provide Domain, Port, Username, and SSH Key.
 
-## Step 2 - Import data into from your storage location into the destination
+## Step 2 - Select which schema fields to use as destination attributes in your exported files {#destination-attributes}
+
+In this step, you are selecting which information is exported to email marketing destinations.
+
+**Identity**
+
+You **must** select a unique identifier from your schema. This is the field that your users' identities are keyed off of. Most commonly, this field is the email address, but it can also be a loyalty ID or a phone number.  
+
+**Other Destination Attributes**
+
+In the Schema field selector, choose which other fields you want to export to the email destination. Some recommended options are:
+
+Schema | XDM field |
+---------|----------|
+ Email Address | personalEmail |
+ First Name | firstName 
+ Last Name | lastName |
+ Phone | mobilePhone |
+ Address City| homeAddress.city |
+ Address State | homeAddress.stateProvince |
+ Address Postal Code | homeAddress.postalCode |
+ Birthday | person.birthDayAndMonth | 
+ Profile ID | ----- | 
+
+
+## Step 3 - Import data from your storage location into the destination
 
 See the individual email marketing destination articles for email marketing destinations to learn how to import data into destinations:
 
-* Adobe Campaign
-* Salesforce Marketing Cloud
-* Oracle Eloqua
-* Oracle Responsys
+* [Adobe Campaign](/help/rtcdp/destinations/adobe-campaign-classic-destination.md#import-data-into-campaign)
+* [Salesforce Marketing Cloud](/help/rtcdp/destinations/salesforce-marketing-cloud-destination.md#import-data-into-salesforce)
+* [Oracle Eloqua](/help/rtcdp/destinations/oracle-eloqua-destination.md#import-data-into-eloqua)
+* [Oracle Responsys](/help/rtcdp/destinations/oracle-responsys-destination.md#import-data-into-responsys)
 
 ## Activate segments to email marketing destinations
 
