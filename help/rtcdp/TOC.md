@@ -68,8 +68,9 @@ user-guide-title: Real-Time Customer Data Platform Help
 * Destinations {#destinations}
     * [Destinations overview](destinations/destinations-overview.md)
     * [Destinations UI](destinations/destinations-ui.md)
+    * [Destination detail page](destinations/destination-details-page.md) 
     * Destinations catalog  {#destinations-cat}
-        * [Destinations catalog overview](/help/rtcdp/destinations/destinations-catalog.md)
+        * [Destinations catalog overview](destinations/destinations-catalog.md)
         * Adobe destinations{#adobe-destinations}
           * [Adobe destinations overview](destinations/adobe-destinations.md)
           * [Adobe Campaign Classic](destinations/adobe-campaign-classic-destination.md)
