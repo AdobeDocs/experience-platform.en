@@ -15,7 +15,11 @@ The Destinations UI consists of four main sections, **Catalog**, **Browse**, **A
 
 ## Catalog
 
-The **[!UICONTROL Catalog]** tab is the default view in the Destinations section. The **[!UICONTROL Catalog]** tab displays all destinations that you can send data to, grouped by destination type. For more information on destination types and information on each destination, see the [Destination Catalog](/help/rtcdp/destinations/destinations-catalog.md).
+The **[!UICONTROL Catalog]** tab is the default view in the Destinations section. The **[!UICONTROL Catalog]** tab displays all destinations that you can send data to, grouped by destination category. Press any destination in the catalog to open the right rail, which enables you to set up a connection to the destination, inspect the existing connections to the destination, and read documentation about the destination.
+
+![Destination catalog options](/help/rtcdp/destinations/assets/destination-ui-catalog-options.png)
+
+For more information on destination categories and information on each destination, see the [Destination Catalog](/help/rtcdp/destinations/destinations-catalog.md).
 
 ## Browse
 
