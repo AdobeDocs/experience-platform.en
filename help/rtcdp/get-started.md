@@ -58,7 +58,7 @@ For example, an unidentifed visitor navigates to the Men’s section on the Luma
 
 As the customer clicks to learn more about these products, these product views are collected in Adobe Analytics and sent to Experience Platform.  
 
-![image](assets/luma-shirt-detail.png)
+<!--![image](assets/luma-shirt-detail.png)-->
 
 Luma can map the visitor's behavior to a user profile on Adobe Experience Platform and begin to assemble a richer view of that consumer's behavior.
 
@@ -134,7 +134,7 @@ For example, to ingest Luma’s CRM data, filter the catalog by *CRM*, and all o
 
 1. Choose what you want to import from a recommended list of XDM pre-mapped tables. 
 
-    ![image](assets/luma-source-import.png)
+    <!--    ![image](assets/luma-source-import.png) -->
     
     For example, select **[!UICONTROL Contacts]**. A preview of the contacts data automatically loads so you can make sure everything looks as expected.
 
@@ -142,7 +142,7 @@ For example, to ingest Luma’s CRM data, filter the catalog by *CRM*, and all o
     
 1. Review the field mappings.
 
-    ![image](assets/luma-source-mapping.png)
+    <!--    ![image](assets/luma-source-mapping.png) -->
 
     For example, double check that the email field for contacts is mapped correctly.  
     You have the option to preview the data and perform advanced mapping.  
@@ -157,7 +157,7 @@ It's done. You just added Microsoft CRM as a data source into Experience Platfor
 
 In this scenario, search profiles for Sarah Rose. Her profile appears, with the email she used to log in. 
 
-![image](assets/luma-find-profile.png)
+<!-- ![image](assets/luma-find-profile.png) -->
 
 All of the profile information Luma has about Sarah displays. This includes her personal information like address and phone number, communication preferences, and the segments she qualifies for.
 
@@ -174,13 +174,13 @@ The marketing team can use this enhanced, real-time customer profile to better p
 
 The powerful Adobe Experience Platform segmentation capabilities enable marketers to combine attributes, events and existing segments, based on data captured in the real-time customer profile. 
 
-![image](assets/luma-segments.png)
+<!-- ![image](assets/luma-segments.png) -->
 
 In this scenario, Sarah's recent interactions on the site exhibit a different behavior than her past actions. She usually buys women's apparel. However, the item in her cart is a men’s large sweatshirt. 
 
 The Luma data science team has created models around propensity to buy. One model identifies a sudden change in apparel category (such as mens/womens) or size for the existing consumer. Sarah's change in purchasing behavior suggests she isn’t shopping for herself.  
 
-![image](assets/luma-gift.png)
+<!-- ![image](assets/luma-gift.png) -->
 
 ### Defining a segment
 
@@ -197,7 +197,7 @@ AND
 Loyalty member 
 ```
 
-![image](assets/luma-abandon.png)
+<!-- ![image](assets/luma-abandon.png)-->
 
 Because Sarah added an apparent gift item in the cart and abandoned it, Luma can target her with a free gift wrap offer.
 
@@ -210,7 +210,7 @@ Click **[!UICONTROL Send to destinations]**.
 In Adobe Real-time CDP, Luma can seamlessly act on their audience segments for personalization.  
 Here we see all of the destinations available for Luma to send this destination to, both Adobe and non-Adobe solutions:
 
-![image](assets/luma-dest.png)
+<!-- ![image](assets/luma-dest.png) -->
 
 <!-- ### Privacy
 
@@ -230,10 +230,10 @@ These controls are flexible and can be modified to meet the requirements of Luma
 In this scenario, Luma wants to retarget this audience with personalization across these destinations:
 
 * Google, for display
-<!--* Facebook -->
+    <!--* Facebook -->
 * Adobe Campaign, for email
 
-![image](assets/luma-sched-dest.png)
+<!-- ![image](assets/luma-sched-dest.png) -->
 
 ### Scheduling destinations
 
