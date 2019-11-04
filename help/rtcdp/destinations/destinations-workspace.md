@@ -1,21 +1,21 @@
 ---
 title: Destinations UI
 seo-title: Destinations UI
-description: In Adobe Real-Time Customer Data Platform, you can get to the destinations UI by pressing Destinations in the Platform dashboard.
-seo-description: In Adobe Real-Time Customer Data Platform, you can get to the destinations UI by pressing Destinations in the Platform dashboard.
+description: In Adobe Real-Time Customer Data Platform, you can get to the destinations UI by pressing Destinations in the Platform workspace.
+seo-description: In Adobe Real-Time Customer Data Platform, you can get to the destinations UI by pressing Destinations in the Platform workspace.
 ---
 
-# Destinations dashboard {#destinations-dashboard}
+# Destinations workspace {#destinations-workspace}
 
-In Adobe Real-Time Customer Data Platform, you can get to the destinations dashboard by pressing **Destinations** in the Platform dashboard, as shown below:
+In Adobe Real-Time Customer Data Platform, select **Destinations** from the left navigation bar to access the destinations workspace
 
 ![Destinations-overview](/help/rtcdp/destinations/assets/destinations-overview.png)
 
-The Destinations dashboard consists of four sections, **Catalog**, **Browse**, **Accounts**, and **Data flows**, which are described in the sections below.
+The Destinations workspace consists of four sections, **Catalog**, **Browse**, **Accounts**, and **Data flows**, which are described in the sections below.
 
 ## Catalog
 
-The **[!UICONTROL Catalog]** tab is the default view in the dashboard. The **[!UICONTROL Catalog]** tab displays all destinations that you can send data to, grouped by destination category. Press any destination in the catalog to open the right rail, which enables you to set up a connection to the destination, inspect the existing connections to the destination, and read documentation about the destination.
+The **[!UICONTROL Catalog]** tab is the default view in the workspace. The **[!UICONTROL Catalog]** tab displays all destinations that you can send data to, grouped by destination category. Press any destination in the catalog to open the right rail, which enables you to set up a connection to the destination, inspect the existing connections to the destination, and read documentation about the destination.
 
 ![Destination catalog options](/help/rtcdp/destinations/assets/destination-ui-catalog-options.png)
 
