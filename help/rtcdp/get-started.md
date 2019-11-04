@@ -277,4 +277,4 @@ Luma marketers use Adobe Experience Platform to look at the gift givers segment 
 
 These insights enable the marketers to take action on this signal, which was fueled by having this data available in CDP and having customers like Sarah attached to the segment.  
 
-Luma uses this CDP data to drive increased loyalty and customer satisfaction. 
+Luma uses this CDP data to drive increased loyalty and customer satisfaction.
