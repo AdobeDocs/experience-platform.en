@@ -11,6 +11,8 @@ In Adobe Real-Time Customer Data Platform, you can get to the destinations UI by
 
 ![Destinations-overview](/help/rtcdp/destinations/assets/destinations-overview.png)
 
+The Destinations UI consists of four main sections, **Catalog**, **Browse**, **Accounts**, and **Data flows**, which are described in the sections below.
+
 ## Catalog
 
 The **[!UICONTROL Catalog]** tab is the default view in the Destinations section. The **[!UICONTROL Catalog]** tab displays all destinations that you can send data to, grouped by destination type. For more information on destination types and information on each destination, see the [Destination Catalog](/help/rtcdp/destinations/destinations-catalog.md).
@@ -39,7 +41,7 @@ Press the destination name to see information about the segments that are activa
 
 ## Accounts
 
-In the **[!UICONTROL Accounts]** tab, you can see information about the connections you have established with various destinations. See the table below for all the information you can get on each destination:
+In the **[!UICONTROL Accounts]** tab, you can see information about the connections that you have established with various destinations. See the table below for all the information you can get on each destination:
 
 Element | Description 
 ---------|----------
