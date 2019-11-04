@@ -5,17 +5,17 @@ description: In Adobe Real-Time Customer Data Platform, you can get to the desti
 seo-description: In Adobe Real-Time Customer Data Platform, you can get to the destinations UI by pressing Destinations in the Platform dashboard.
 ---
 
-# Destinations UI {#destinations-ui}
+# Destinations dashboard {#destinations-dashboard}
 
-In Adobe Real-Time Customer Data Platform, you can get to the destinations UI by pressing **Destinations** in the Platform dashboard, as shown below:
+In Adobe Real-Time Customer Data Platform, you can get to the destinations dashboard by pressing **Destinations** in the Platform dashboard, as shown below:
 
 ![Destinations-overview](/help/rtcdp/destinations/assets/destinations-overview.png)
 
-The Destinations UI consists of four main sections, **Catalog**, **Browse**, **Accounts**, and **Data flows**, which are described in the sections below.
+The Destinations dashboard consists of four sections, **Catalog**, **Browse**, **Accounts**, and **Data flows**, which are described in the sections below.
 
 ## Catalog
 
-The **[!UICONTROL Catalog]** tab is the default view in the Destinations section. The **[!UICONTROL Catalog]** tab displays all destinations that you can send data to, grouped by destination category. Press any destination in the catalog to open the right rail, which enables you to set up a connection to the destination, inspect the existing connections to the destination, and read documentation about the destination.
+The **[!UICONTROL Catalog]** tab is the default view in the dashboard. The **[!UICONTROL Catalog]** tab displays all destinations that you can send data to, grouped by destination category. Press any destination in the catalog to open the right rail, which enables you to set up a connection to the destination, inspect the existing connections to the destination, and read documentation about the destination.
 
 ![Destination catalog options](/help/rtcdp/destinations/assets/destination-ui-catalog-options.png)
 

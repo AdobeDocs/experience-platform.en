@@ -72,8 +72,9 @@ user-guide-title: Real-Time Customer Data Platform Help
     * [API reference for DULE Policy](privacy/filename.md)
 * Destinations {#destinations}
     * [Destinations overview](destinations/destinations-overview.md)
-    * [Destinations UI](destinations/destinations-ui.md)
-    * [Destination detail page](destinations/destination-details-page.md) 
+    * Destinations interface  {#destinations-interface}
+        * [Destinations dashboard](destinations/destinations-dashboard.md)
+        * [Destination detail page](destinations/destination-details-page.md) 
     * Destinations catalog  {#destinations-cat}
         * [Destinations catalog overview](destinations/destinations-catalog.md)
         * Adobe destinations{#adobe-destinations}
