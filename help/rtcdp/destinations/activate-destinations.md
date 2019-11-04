@@ -1,13 +1,13 @@
 ---
 title: Activate Data to Destinations
 seo-title: Activate Data to Destinations
-description: 
-seo-description: 
+description: Activate the data you have in Adobe Real-Time Customer Data Platform by mapping segments to destinations. To accomplish this, follow the steps below.
+seo-description: Activate the data you have in Adobe Real-Time Customer Data Platform by mapping segments to destinations. To accomplish this, follow the steps below.
 ---
 
 # Activate Data to Destinations
 
-Activate the data you have in Adobe Real-Time Customer Data Platform by sending segments to destinations. To accomplish this, follow the steps below.
+Activate the data you have in Adobe Real-Time Customer Data Platform by mapping segments to destinations. To accomplish this, follow the steps below.
 
 ## Prerequisites {#prerequisites}
 
@@ -32,7 +32,7 @@ To activate data to destinations, you must have successfully set up a destinatio
 
 ## Edit activation {#edit-activation}
 
-You can edit existing activation flows in Real-Time CDP.  
+To edit existing activation flows in Real-Time CDP, go to **Destinations** > **Browse**, and click destination name. In the next view, select **[!UICONTROL Edit activation]** to change which segments to send to the destination.
 
 ## Verify that segment activation was successful {#verify-activation}
 
@@ -40,7 +40,7 @@ You can edit existing activation flows in Real-Time CDP.
 
 ### Email marketing destinations
 
-For email marketing destinations, Adobe Real-Time CDP drops a tab-delimited txt or csv file into your storage location. The file format is:
+For email marketing destinations, Adobe Real-Time CDP creates a tab-delimited txt or csv file in your storage location. The file format is:
 
 ```
 <destination name>id<destination id><timestamp>
@@ -54,5 +54,5 @@ The presence of this file in your storage location is confirmation of successful
 
 ### Advertising destinations
 
-
+## Disable 
 

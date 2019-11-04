@@ -1,8 +1,8 @@
 ---
 title: Destinations UI
 seo-title: Destinations UI
-description: description
-seo-description: seo description
+description: In Adobe Real-Time Customer Data Platform, you can get to the destinations UI by pressing Destinations in the Platform dashboard.
+seo-description: In Adobe Real-Time Customer Data Platform, you can get to the destinations UI by pressing Destinations in the Platform dashboard.
 ---
 
 # Destinations UI {#destinations-ui}
