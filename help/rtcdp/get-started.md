@@ -134,7 +134,7 @@ For example, to ingest Luma’s CRM data, filter the catalog by *CRM*, and all o
 
 1. Choose what you want to import from a recommended list of XDM pre-mapped tables. 
 
-<!--    ![image](assets/luma-source-import.png) -->
+    <!--    ![image](assets/luma-source-import.png) -->
     
     For example, select **[!UICONTROL Contacts]**. A preview of the contacts data automatically loads so you can make sure everything looks as expected.
 
@@ -142,7 +142,7 @@ For example, to ingest Luma’s CRM data, filter the catalog by *CRM*, and all o
     
 1. Review the field mappings.
 
-<!--    ![image](assets/luma-source-mapping.png) -->
+    <!--    ![image](assets/luma-source-mapping.png) -->
 
     For example, double check that the email field for contacts is mapped correctly.  
     You have the option to preview the data and perform advanced mapping.  
@@ -230,7 +230,7 @@ These controls are flexible and can be modified to meet the requirements of Luma
 In this scenario, Luma wants to retarget this audience with personalization across these destinations:
 
 * Google, for display
-<!--* Facebook -->
+    <!--* Facebook -->
 * Adobe Campaign, for email
 
 <!-- ![image](assets/luma-sched-dest.png) -->
@@ -277,4 +277,4 @@ Luma marketers use Adobe Experience Platform to look at the gift givers segment 
 
 These insights enable the marketers to take action on this signal, which was fueled by having this data available in CDP and having customers like Sarah attached to the segment.  
 
-Luma uses this CDP data to drive increased loyalty and customer satisfaction. 
+Luma uses this CDP data to drive increased loyalty and customer satisfaction.
