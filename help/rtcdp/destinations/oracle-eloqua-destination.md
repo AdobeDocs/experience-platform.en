@@ -9,11 +9,26 @@ seo-description: Oracle Eloqua is a software as a service (SaaS) platform for ma
 
 ## Overview
 
-[Oracle Eloqua](https://www.oracle.com/marketingcloud/products/marketing-automation/) is a software as a service (SaaS) platform for marketing automation offered by Oracle that aims to help B2B marketers and organizations manage marketing campaigns and sales lead generation. 
+[Oracle Eloqua](https://www.oracle.com/marketingcloud/products/marketing-automation/) is a software as a service (SaaS) platform for marketing automation offered by Oracle that aims to help B2B marketers and organizations manage marketing campaigns and sales lead generation.
 
 ## Connect to destination
 
-To connect to the Oracle Eloqua destination, follow the steps indicated in the [Connect destination](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination) article. You must grant Adobe access to your SFTP storage location. For Oracle Eloqua, you can select between **SFTP with Password** and **SFTP with SSH Key**.
+1. In **[!UICONTROL Connections > Destinations]**, select Oracle Eloqua, and press **[!UICONTROL Connect destination]**.
+
+    ![Connect to Eloqua](/help/rtcdp/destinations/assets/connect-oracle-eloqua.png)
+
+1. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. For Oracle Eloqua, you can select between **SFTP with Password** and **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and press **[!UICONTROL Connect]**.
+
+    ![Set up Eloqua wizard](/help/rtcdp/destinations/assets/eloqua-wizard.png)
+    ![Fill in Eloqua information](/help/rtcdp/destinations/assets/eloqua-step2.png)
+
+1. In **Basic Information**, fill in the relevant information for your destination, as shown below:
+* **Name**: Pick a relevant name for your destination.
+* **Description**: Enter a description for your destination.
+* **Folder Path**: Provide the path in your storage location where Real-time CDP will drop your export data
+* **File Format**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location.
+
+    ![Eloqua basic information](/help/rtcdp/destinations/assets/responsys-basic-information.png)
 
 >[!NOTE]
 >
@@ -21,17 +36,7 @@ To connect to the Oracle Eloqua destination, follow the steps indicated in the [
 
 ## Destination attributes
 
-When [activating segments](/help/rtcdp/destinations/activate-destinations.md) to the Oracle Eloqua destination, we recommend that you select the following destination attributes:
-
-* **Email Address**: personalEmail
-* **First Name**: firstName
-* **Last Name**: lastName
-* **Phone**: mobilePhone
-* **Address City**: homeAddress.city
-* **Address State or Province**: homeAddress.stateProvince
-* **Address Postal Code**: homeAddress.postalCode
-* **Address Country**: homeAddress.country
-* **Profile ID** TBD: (e.g. Membership ID): Eloqua Contact ID
+When [activating segments](/help/rtcdp/destinations/activate-destinations.md) to the Salesforce Marketing Cloud destination, we recommend that you select a unique identifier from your [union schema](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md). Select the unique identifier and any other XDM fields to use in the activation. For more information, see [Select which schema fields to use as destination attributes in your exported files](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) in Email Marketing Destinations.
 
 ## Set up data import into Oracle Eloqua {#import-data-into-eloqua}
 
