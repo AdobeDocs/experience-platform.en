@@ -11,7 +11,7 @@ seo-description: Responsys is an enterprise email marketing tool for cross-chann
 
 [Oracle Responsys](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/) is an enterprise email marketing tool for cross-channel marketing campaigns offered by Oracle to personalize interactions across email, mobile, display, and social.
 
-To send segment data to Oracle Responsys, you must first [connect the destination](#connect-destination) in Adobe Real-time CDP, and then [set up a data import](#import-data-into-responsys) from your storage location into Oracle Responsys.
+To send segment data to Oracle Responsys, you must first [connect the destination](#connect-destination) in Adobe Real-time Customer Data Platform, and then [set up a data import](#import-data-into-responsys) from your storage location into Oracle Responsys.
 
 ## Connect destination {#connect-destination}
 
@@ -19,12 +19,12 @@ To send segment data to Oracle Responsys, you must first [connect the destinatio
 
     ![Connect to Responsys](/help/rtcdp/destinations/assets/connect-oracle-responsys.png)
 
-1. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. For Oracle Responsys, you can select between **SFTP with Password** and **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and press **[!UICONTROL Connect]**.
+2. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. For Oracle Responsys, you can select between **SFTP with Password** and **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and press **[!UICONTROL Connect]**.
 
     ![Set up Responsys wizard](/help/rtcdp/destinations/assets/responsys-wizard.png)
     ![Fill in Responsys information](/help/rtcdp/destinations/assets/responsys-step2.png)
 
-1. In **Basic Information**, fill in the relevant information for your destination, as shown below:
+3. In **Basic Information**, fill in the relevant information for your destination, as shown below:
 * **Name**: Pick a relevant name for your destination.
 * **Description**: Enter a description for your destination.
 * **Folder Path**: Provide the path in your storage location where Real-time CDP will drop your export data
@@ -38,17 +38,7 @@ To send segment data to Oracle Responsys, you must first [connect the destinatio
 
 ## Destination attributes {#destination-attributes}
 
-When [activating segments](/help/rtcdp/destinations/activate-destinations.md) to the Oracle Responsys destination, we recommend that you select the following destination attributes:
-
-* **Email Address**: personalEmail
-* **First Name**: firstName
-* **Last Name**: lastName
-* **Phone**: mobilePhone
-* **Address City**: homeAddress.city
-* **Address State or Province**: homeAddress.stateProvince
-* **Address Postal Code**: homeAddress.postalCode
-* **Address Country**: homeAddress.country
-* **Profile ID** TBD: (e.g. Membership ID): Eloqua Contact ID
+When [activating segments](/help/rtcdp/destinations/activate-destinations.md) to the Oracle Responsys destination, we recommend that you select a unique identifier from your [union schema](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md). Select the unique identifier and any other XDM fields to use in the activation. For more information, see [Select which schema fields to use as destination attributes in your exported files](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) in Email Marketing Destinations.
 
 ## Set up data import into Oracle Responsys {#import-data-into-responsys}
 
