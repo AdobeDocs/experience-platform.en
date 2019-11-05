@@ -22,7 +22,7 @@ user-guide-title: Real-Time Customer Data Platform Help
     * [Sources best practices](sources/filename.md)
     * Connectors {#connectors}
         * [Salesforce](sources/connector-overviews/salesforce.md)
-        * [Azure Blob](sources/filename.md)
+        * [Azure Blob](sources/connector-overviews/azure-blob.md)
         * [Microsoft Dynamics 365](sources/filename.md)
         * [AWS S3](sources/filename.md)
         * [Analytics data connector](sources/filename.md)
