@@ -63,7 +63,7 @@ Schema | XDM field
 
 See the individual email marketing destination articles to learn how to import data from your storage location into destinations:
 
-* [Adobe Campaign](/help/rtcdp/destinations/adobe-campaign-classic-destination.md#import-data-into-campaign)
+* [Adobe Campaign](/help/rtcdp/destinations/adobe-campaign-destination.md#import-data-into-campaign)
 * [Salesforce Marketing Cloud](/help/rtcdp/destinations/salesforce-marketing-cloud-destination.md#import-data-into-salesforce)
 * [Oracle Eloqua](/help/rtcdp/destinations/oracle-eloqua-destination.md#import-data-into-eloqua)
 * [Oracle Responsys](/help/rtcdp/destinations/oracle-responsys-destination.md#import-data-into-responsys)
