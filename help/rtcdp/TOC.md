@@ -18,8 +18,6 @@ user-guide-title: Real-Time Customer Data Platform Help
     * [Implement website tags with Adobe Launch](administration/launch.md)
 * Sources {#sources}
     * [Sources overview](sources/sources-overview.md)
-    * [Configure sources](sources/filename.md)
-    * [Sources best practices](sources/filename.md)
     * Connectors {#connectors}
         * [Salesforce](sources/connector-overviews/salesforce.md)
         * [Azure Blob](sources/connector-overviews/azure-blob.md)
