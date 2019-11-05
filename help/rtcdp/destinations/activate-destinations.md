@@ -41,19 +41,26 @@ Follow the steps below to edit existing activation flows in Real-Time CDP:
 
 ### Email marketing destinations
 
-For email marketing destinations, Adobe Real-Time CDP creates a tab-delimited txt or csv file in your storage location. The file format is:
-
-```
-<destination name>id<destination id><timestamp>
-```
+For email marketing destinations, Adobe Real-Time CDP creates a tab-delimited `txt` or `csv` file in the storage location that you provided. Expect a new file to be created in your storage location every day. The file format is:
+`<destination name>id<destination id><timestamp-yyyymmddhhmmss>`
 
 Your files could look like this:
 
-Salesforce_id3544_YYYYMMDDHHMMSS
+```
+Salesforce_id3544_20191120110000
+Salesforce_id3544_20191121123000
+Salesforce_id3544_20191122124530
+```
 
 The presence of this file in your storage location is confirmation of successful activation.
 
 ### Advertising destinations
 
-## Disable 
+## Disable activation {#disable-activation}
+
+To disable an existing activation flow, follow the steps below:
+
+1. Select **Destinations** in the left navigation bar, then click the **Browse** tab, and click the destination name.
+2. Click the **[!UICONTROL Enabled]** control in the right rail to change the activation flow state.
+3. In the **Update data flow state** window, press **Confirm** to disable the activation flow.
 
