@@ -23,7 +23,7 @@ user-guide-title: Real-Time Customer Data Platform Help
     * Connectors {#connectors}
         * [Salesforce](sources/connector-overviews/salesforce.md)
         * [Azure Blob](sources/connector-overviews/azure-blob.md)
-        * [Microsoft Dynamics 365](sources/filename.md)
+        * [Microsoft Dynamics 365](sources/connector-overviews/microsoft-dynamics-365.md)
         * [AWS S3](sources/filename.md)
         * [Analytics data connector](sources/filename.md)
         * [Adobe Audience Manager](sources/filename.md)
