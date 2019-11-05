@@ -49,6 +49,7 @@ user-guide-title: Real-Time Customer Data Platform Help
         * [Multi-entity segmentation](segmentation/filename.md)
 * Sensei insights {#sensei}
     * [Sensei insights Alpha docs](sensei-insights/filename.md)
+    * [Customer AI (alpha) overview](sensei-insights/customer-ai.md)
 * Datasets {#datasets}
     * [Dataset lifespan](datasets/filename.md)
     * [Delete dataset and batch service](datasets/filename.md)
