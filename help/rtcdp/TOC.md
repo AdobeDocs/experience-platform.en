@@ -17,7 +17,7 @@ user-guide-title: Real-Time Customer Data Platform Help
     * [Sandboxes and role-based access control API reference](administration/filename.md)
     * [Implement website tags with Adobe Launch](administration/launch.md)
 * Sources {#sources}
-    * [Sources overview](sources/filename.md)
+    * [Sources overview](sources/sources-overview.md)
     * [Configure sources](sources/filename.md)
     * [Sources best practices](sources/filename.md)
     * Connectors {#connectors}
