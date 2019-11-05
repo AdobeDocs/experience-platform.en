@@ -17,7 +17,7 @@ The Destinations workspace consists of four sections, **Catalog**, **Browse**, *
 
 The **[!UICONTROL Catalog]** tab is the default view in the workspace. The **[!UICONTROL Catalog]** tab displays all destinations that you can send data to, grouped by destination category. Press any destination in the catalog to open the right rail, which enables you to set up a connection to the destination, inspect the existing connections to the destination, and read documentation about the destination.
 
-![Destination catalog options](/help/rtcdp/destinations/assets/destination-ui-catalog-options.png)
+![Destination catalog options](/help/rtcdp/destinations/assets/destination-ui-catalog-options-highlighted.png)
 
 For more information on destination categories and information on each destination, see [Destination Catalog](/help/rtcdp/destinations/destinations-catalog.md).
 
