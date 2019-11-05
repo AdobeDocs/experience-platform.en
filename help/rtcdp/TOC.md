@@ -17,20 +17,17 @@ user-guide-title: Real-Time Customer Data Platform Help
     * [Sandboxes and role-based access control API reference](administration/filename.md)
     * [Implement website tags with Adobe Launch](administration/launch.md)
 * Sources {#sources}
-    * [Sources overview](sources/filename.md)
-    * [Configure sources](sources/filename.md)
-    * [Sources best practices](sources/filename.md)
+    * [Sources overview](sources/sources-overview.md)
     * Connectors {#connectors}
-        * [Salesforce](sources/filename.md)
-        * [Azure Blob](sources/filename.md)
-        * [Microsoft Dynamics 365](sources/filename.md)
-        * [AWS S3](sources/filename.md)
-        * [Analytics data connector](sources/filename.md)
-        * [Adobe Audience Manager](sources/filename.md)
-    * Sources tutorials {#sources-tutorials}
-        * [Tutorial](sources/filename.md)
-    * [Sources API reference](sources/filename.md)
-* Real-time Customer Profile {#profile}
+        * [Salesforce](sources/connector-overviews/salesforce.md)
+        * [Azure Blob](sources/connector-overviews/azure-blob.md)
+        * [Microsoft Dynamics 365](sources/connector-overviews/microsoft-dynamics-365.md)
+        * [AWS S3](sources/connector-overviews/amazon-s3.md)
+        * [Analytics data connector](sources/connector-overviews/adobe-analytics.md)
+        * [Adobe Audience Manager](sources/connector-overviews/adobe-audience-manager.md)
+    * [Sources tutorials](sources/sources-ui-tutorials.md)
+    * [Sources API reference](sources/sources-api-reference.md)
+* Real-time customer profile {#profile}
     * [Profile overview](profile/profile-overview.md)
     * [Profile viewer](profile/filename.md)
     * [Unified Profile Service search](profile/profile-search.md)
@@ -49,7 +46,7 @@ user-guide-title: Real-Time Customer Data Platform Help
         * [UPS search](segmentation/filename.md)
         * [Multi-entity segmentation](segmentation/filename.md)
 * Sensei insights {#sensei}
-    * [Sensei insights Alpha docs](sensei-insights/filename.md)
+    * [Customer AI (alpha) overview](sensei-insights/customer-ai.md)
 * Datasets {#datasets}
     * [Dataset lifespan](datasets/filename.md)
     * [Delete dataset and batch service](datasets/filename.md)
