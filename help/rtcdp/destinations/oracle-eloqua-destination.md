@@ -25,7 +25,7 @@ seo-description: Oracle Eloqua is a software as a service (SaaS) platform for ma
 1. In **Basic Information**, fill in the relevant information for your destination, as shown below:
 * **Name**: Pick a relevant name for your destination.
 * **Description**: Enter a description for your destination.
-* **Folder Path**: Provide the path in your storage location where Real-time CDP will drop your export data
+* **Folder Path**: Provide the path in your storage location where Real-Time CDP will drop your export data
 * **File Format**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location.
 
     ![Eloqua basic information](/help/rtcdp/destinations/assets/responsys-basic-information.png)
@@ -40,4 +40,4 @@ When [activating segments](/help/rtcdp/destinations/activate-destinations.md) to
 
 ## Set up data import into Oracle Eloqua {#import-data-into-eloqua}
 
-After connecting Real-time CDP to your Amazon S3 or SFTP storage, you must set up the data import from your storage location into Oracle Eloqua. To learn how to accomplish this, see [Importing contacts or accounts](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm) in the Oracle Eloqua Help Center.
+After connecting Real-Time CDP to your Amazon S3 or SFTP storage, you must set up the data import from your storage location into Oracle Eloqua. To learn how to accomplish this, see [Importing contacts or accounts](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm) in the Oracle Eloqua Help Center.
