@@ -30,11 +30,11 @@ user-guide-title: Real-Time Customer Data Platform Help
     * Sources tutorials {#sources-tutorials}
         * [Tutorial](sources/filename.md)
     * [Sources API reference](sources/filename.md)
-* Real-time customer profile {#profile}
+* Real-time Customer Profile {#profile}
     * [Profile overview](profile/profile-overview.md)
     * [Profile viewer](profile/filename.md)
-    * [Unified Profile Service search](profile/filename.md)
-    * [Namespaces in profile lookup](profile/filename.md)
+    * [Unified Profile Service search](profile/profile-search.md)
+    * [Identity namespace](profile/identity-namespace.md)
     * Profile tutorials {#profile-tutorials}
         * [How to monitor health of ingestion of data into Unified Profile](profile/filename.md)
         * [Enrich Unified Profile using CRM, Loyalty via Enterprise Connectors](profile/filename.md)
