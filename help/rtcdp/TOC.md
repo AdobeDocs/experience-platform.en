@@ -21,7 +21,7 @@ user-guide-title: Real-Time Customer Data Platform Help
     * [Configure sources](sources/filename.md)
     * [Sources best practices](sources/filename.md)
     * Connectors {#connectors}
-        * [Salesforce](sources/filename.md)
+        * [Salesforce](sources/connector-overviews/salesforce.md)
         * [Azure Blob](sources/filename.md)
         * [Microsoft Dynamics 365](sources/filename.md)
         * [AWS S3](sources/filename.md)
