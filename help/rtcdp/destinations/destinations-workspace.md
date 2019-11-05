@@ -1,13 +1,13 @@
 ---
-title: Destinations UI
-seo-title: Destinations UI
-description: In Adobe Real-Time Customer Data Platform, you can get to the destinations UI by pressing Destinations in the Platform workspace.
-seo-description: In Adobe Real-Time Customer Data Platform, you can get to the destinations UI by pressing Destinations in the Platform workspace.
+title: Destinations workspace
+seo-title: Destinations workspace
+description: In Adobe Real-Time Customer Data Platform, select Destinations from the left navigation bar to access the destinations workspace.
+seo-description: In Adobe Real-Time Customer Data Platform, select Destinations from the left navigation bar to access the destinations workspace.
 ---
 
 # Destinations workspace {#destinations-workspace}
 
-In Adobe Real-Time Customer Data Platform, select **Destinations** from the left navigation bar to access the destinations workspace
+In Adobe Real-Time Customer Data Platform, select **Destinations** from the left navigation bar to access the destinations workspace.
 
 ![Destinations-overview](/help/rtcdp/destinations/assets/destinations-overview.png)
 
@@ -19,29 +19,28 @@ The **[!UICONTROL Catalog]** tab is the default view in the workspace. The **[!U
 
 ![Destination catalog options](/help/rtcdp/destinations/assets/destination-ui-catalog-options.png)
 
-For more information on destination categories and information on each destination, see the [Destination Catalog](/help/rtcdp/destinations/destinations-catalog.md).
+For more information on destination categories and information on each destination, see [Destination Catalog](/help/rtcdp/destinations/destinations-catalog.md).
 
 ## Browse
 
-The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection and displays whether segments are actively being sent to destinations. See the table below for all the information you can get on each destination:
+The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection and indicates whether segments are actively being sent to destinations. See the table below for all the information that is provided for each destination:
 
+![Browse Tab](/help/rtcdp/destinations/assets/browse-tab.png)
 
 Element | Description 
 ---------|----------
- Destination Name | The name you provided for your destination.
- Destination | ---
+ Destination Name | The name you provided for your activation flow to this destination.
+ Destination | The destination that you selected for your activation flow.
  Account | ---
- Created | The date and UTC time when this destination was created
+ Created | The date and UTC time when the activation flow to the destination was created.
  Segments | The number of segments that are being sent to this destination
- Status | Indicates whether data is currently being activated to this destination. If the status is **Disabled**, do this -----
-
- ![Browse Tab](/help/rtcdp/destinations/assets/browse-tab.png)
+ Status | `Active` or `Inactive`. Indicates whether data is currently being activated to this destination. To edit the status, see [Disable activation](/help/rtcdp/destinations/activate-destinations.md#disable-activation).
 
 Click into any destination row to bring up more information about the destination in the right rail. 
 
 ![Click destination row](/help/rtcdp/destinations/assets/click-destination-row.png)
 
-Press the destination name to see information about the segments that are activated to this destination. Press **[!UICONTROL Edit activation]** to modify which segments are being sent to this destination.
+Press destination name to see information about the segments that are activated to this destination. Press **[!UICONTROL Edit activation]** to modify which segments are being sent to this destination.
 
 ## Accounts
 
