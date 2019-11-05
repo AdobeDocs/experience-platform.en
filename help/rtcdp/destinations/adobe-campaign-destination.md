@@ -21,7 +21,7 @@ Adobe Campaign is a set of solutions that help you personalize and deliver campa
 3. In **Basic Information**, fill in the relevant information for your destination, as shown below:
 * **Name**: Pick a relevant name for your destination.
 * **Description**: Enter a description for your destination.
-* **Folder Path**: Provide the path in your storage location where Real-time CDP will drop your export data
+* **Folder Path**: Provide the path in your storage location where Real-Time CDP will drop your export data
 * **File Format**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location.
 
     ![Campaign basic information](/help/rtcdp/destinations/assets/adobe-campaign-basic-information.png)
