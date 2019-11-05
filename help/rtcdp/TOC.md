@@ -48,7 +48,6 @@ user-guide-title: Real-Time Customer Data Platform Help
         * [UPS search](segmentation/filename.md)
         * [Multi-entity segmentation](segmentation/filename.md)
 * Sensei insights {#sensei}
-    * [Sensei insights Alpha docs](sensei-insights/filename.md)
     * [Customer AI (alpha) overview](sensei-insights/customer-ai.md)
 * Datasets {#datasets}
     * [Dataset lifespan](datasets/filename.md)
