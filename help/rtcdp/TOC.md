@@ -29,13 +29,15 @@ user-guide-title: Real-Time Customer Data Platform Help
     * [Sources API reference](sources/sources-api-reference.md)
 * Real-time customer profile {#profile}
     * [Profile overview](profile/profile-overview.md)
-    * [Profile viewer](profile/filename.md)
-    * [Unified Profile Service search](profile/profile-search.md)
+    * [Profile viewer](profile/profile-viewer.md)
+    * [Profile search](profile/profile-search.md)
+    * [Identities](profile/identities-overview.md)
     * [Identity namespace](profile/identity-namespace.md)
+    * [Merge policies](profile/merge-policies.md)
     * Profile tutorials {#profile-tutorials}
-        * [How to monitor health of ingestion of data into Unified Profile](profile/filename.md)
-        * [Enrich Unified Profile using CRM, Loyalty via Enterprise Connectors](profile/filename.md)
-        * [Enrich Unified Profile in real time with Reservation data ](profile/filename.md)
+        * [Find a profile](profile/profile-access-tutorial.md)
+        * [Create identity namespace](profile/identity-namespace-tutorial.md)
+        * [Configure merge policies](profile/merge-policies-tutorial.md)
 * Segmentation {#segmentation}
     * [Segmentation overview](segmentation/filename.md)
     * [Bidirectional segment sharing](segmentation/filename.md)
