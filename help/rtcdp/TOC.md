@@ -28,7 +28,7 @@ user-guide-title: Real-Time Customer Data Platform Help
         * [Analytics data connector](sources/connector-overviews/adobe-analytics.md)
         * [Adobe Audience Manager](sources/connector-overviews/adobe-audience-manager.md)
     * [Sources tutorials](sources/sources-ui-tutorials.md)
-    * [Sources API reference](sources/filename.md)
+    * [Sources API reference](sources/sources-api-reference.md)
 * Real-time customer profile {#profile}
     * [Profile overview](profile/filename.md)
     * [Profile viewer](profile/filename.md)
