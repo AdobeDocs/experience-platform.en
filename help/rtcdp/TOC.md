@@ -27,8 +27,7 @@ user-guide-title: Real-Time Customer Data Platform Help
         * [AWS S3](sources/connector-overviews/amazon-s3.md)
         * [Analytics data connector](sources/connector-overviews/adobe-analytics.md)
         * [Adobe Audience Manager](sources/connector-overviews/adobe-audience-manager.md)
-    * Sources tutorials {#sources-tutorials}
-        * [Tutorial](sources/filename.md)
+    * [Sources tutorials](sources/sources-ui-tutorials.md)
     * [Sources API reference](sources/filename.md)
 * Real-time customer profile {#profile}
     * [Profile overview](profile/filename.md)
