@@ -26,7 +26,7 @@ user-guide-title: Real-Time Customer Data Platform Help
         * [Microsoft Dynamics 365](sources/connector-overviews/microsoft-dynamics-365.md)
         * [AWS S3](sources/connector-overviews/amazon-s3.md)
         * [Analytics data connector](sources/connector-overviews/adobe-analytics.md)
-        * [Adobe Audience Manager](sources/filename.md)
+        * [Adobe Audience Manager](sources/connector-overviews/adobe-audience-manager.md)
     * Sources tutorials {#sources-tutorials}
         * [Tutorial](sources/filename.md)
     * [Sources API reference](sources/filename.md)
