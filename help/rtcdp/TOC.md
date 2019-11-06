@@ -61,7 +61,7 @@ user-guide-title: Real-Time Customer Data Platform Help
         * [Destinations catalog overview](destinations/destinations-catalog.md)
         * Adobe destinations{#adobe-destinations}
           * [Adobe destinations overview](destinations/adobe-destinations.md)
-          * [Adobe Campaign Classic](destinations/adobe-campaign-destination.md)
+          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
         * Advertising destinations{#advertiser-destinations}
           * [Advertising destinations overview](destinations/advertising-destinations.md)
           * [Google Display & Video 360](destinations/google-dv360-destination.md)

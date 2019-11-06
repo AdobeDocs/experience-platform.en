@@ -7,7 +7,13 @@ seo-description: Adobe Campaign is a set of solutions that help you personalize 
 
 # Adobe Campaign
 
+## Overview
+
 Adobe Campaign is a set of solutions that help you personalize and deliver campaigns across all your online and offline channels. See [About Adobe Campaign Classic](https://docs.adobe.com/content/help/en/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) for more information.
+
+To send segment data to Adobe Campaign, you must first [connect the destination](#connect-destination) in Adobe Real-time Customer Data Platform, and then [set up a data import](#import-data-into-campaign) from your storage location into Adobe Campaign.
+
+## Connect destination {#connect-destination}
 
 1. In **[!UICONTROL Connections > Destinations]**, select Adobe Campaign, and press **[!UICONTROL Connect destination]**.
 
@@ -15,11 +21,12 @@ Adobe Campaign is a set of solutions that help you personalize and deliver campa
 
 2. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. For Adobe Campaign, you can select between **Amazon S3**, **SFTP with Password** and **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and press **[!UICONTROL Connect]**.
 
+    ![Set up Campaign wizard](/help/rtcdp/destinations/assets/adobe-campaign-wizard.png)
+
     For **S3** connections, you must provide your Access Key ID and Secret Access Key. 
     For **SFTP with Password** connections, you must provide Domain, Port, Username, and Password.
     For **SFTP with SSH Key** connections, you must provide Domain, Port, Username, and SSH Key.
 
-    ![Set up Campaign wizard](/help/rtcdp/destinations/assets/adobe-campaign-wizard.png)
     ![Fill in Campaign information](/help/rtcdp/destinations/assets/adobe-campaign-step2.png)
 
 3. In **Basic Information**, fill in the relevant information for your destination, as shown below:
@@ -37,7 +44,7 @@ Adobe Campaign is a set of solutions that help you personalize and deliver campa
 
 ## Destination attributes {#destination-attributes}
 
-When [activating segments](/help/rtcdp/destinations/activate-destinations.md) to the Adobe Campaign destination, we recommend that you select a unique identifier from your [union schema](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md). Select the unique identifier and any other XDM fields to use in the activation. For more information, see [Select which schema fields to use as destination attributes in your exported files](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) in Email Marketing Destinations.
+When [activating segments](/help/rtcdp/destinations/activate-destinations.md) to the Adobe Campaign destination, we recommend that you select a unique identifier from your [union schema](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md). Select the unique identifier and any other XDM fields that you want to export to the destination. For more information, see [Select which schema fields to use as destination attributes in your exported files](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) in Email Marketing Destinations. 
 
 
 ## Set up data import into Adobe Campaign {#import-data-into-campaign}

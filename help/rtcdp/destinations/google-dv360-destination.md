@@ -23,6 +23,6 @@ seo-description: Google Display & Video 360 (DV360) is a tool used to execute re
 *  **Account Type**: For Google DV360 integrations, select the **DFP_BY_GOOGLE** option. 
 *  **Account ID**: Fill in your account ID with Google DV360.
 
-## Destination attributes
+## Activate segments to Google Display & Video 360
 
-Are there any XDM mappings we recommend for the data export, like for ESPs?
+For instructions on how to activate segments to Google Display & Video 360, see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md).

@@ -22,6 +22,10 @@ To send segment data to Oracle Responsys, you must first [connect the destinatio
 2. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. For Oracle Responsys, you can select between **SFTP with Password** and **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and press **[!UICONTROL Connect]**.
 
     ![Set up Responsys wizard](/help/rtcdp/destinations/assets/responsys-wizard.png)
+
+    For **SFTP with Password** connections, you must provide Domain, Port, Username, and Password.
+    For **SFTP with SSH Key** connections, you must provide Domain, Port, Username, and SSH Key.
+
     ![Fill in Responsys information](/help/rtcdp/destinations/assets/responsys-step2.png)
 
 3. In **Basic Information**, fill in the relevant information for your destination, as shown below:
@@ -38,7 +42,7 @@ To send segment data to Oracle Responsys, you must first [connect the destinatio
 
 ## Destination attributes {#destination-attributes}
 
-When [activating segments](/help/rtcdp/destinations/activate-destinations.md) to the Oracle Responsys destination, we recommend that you select a unique identifier from your [union schema](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md). Select the unique identifier and any other XDM fields to use in the activation. For more information, see [Select which schema fields to use as destination attributes in your exported files](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) in Email Marketing Destinations.
+When [activating segments](/help/rtcdp/destinations/activate-destinations.md) to the Oracle Responsys destination, we recommend that you select a unique identifier from your [union schema](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md). Select the unique identifier and any other XDM fields that you want to export to the destination. For more information, see [Select which schema fields to use as destination attributes in your exported files](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) in Email Marketing Destinations.
 
 ## Set up data import into Oracle Responsys {#import-data-into-responsys}
 
