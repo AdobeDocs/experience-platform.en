@@ -22,12 +22,13 @@ To send segment data to Salesforce Marketing Cloud, you must first [connect the 
 1. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. For Salesforce Marketing Cloud, you can select between **SFTP with Password** and **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and press **[!UICONTROL Connect]**.
 
     ![Set up Salesforce wizard](/help/rtcdp/destinations/assets/salesforce-step1.png)
+
+    For **SFTP with Password** connections, you must provide Domain, Port, Username, and Password.
+    For **SFTP with SSH Key** connections, you must provide Domain, Port, Username, and SSH Key.
+
     ![Fill in Salesforce information](/help/rtcdp/destinations/assets/salesforce-wizard.png)
 
-    If your storage location supports **SFTP with Password** authentication, you must provide Domain, Port, Username, and Password.
-    If your storage location supports **SFTP with SSH Key** authentication, you must provide Domain, Port, Username, and SSH Key.
-
-1. In **Basic Information**, fill in the relevant information for your destination, as shown below:
+2. In **Basic Information**, fill in the relevant information for your destination, as shown below:
 * **Name**: Pick a relevant name for your destination.
 * **Description**: Enter a description for your destination.
 * **Folder Path**: Provide the path in your storage location where Real-Time CDP will drop your export data as CSV or tab-delimited files
@@ -41,7 +42,7 @@ To send segment data to Salesforce Marketing Cloud, you must first [connect the 
 
 ## Destination attributes {#destination-attributes}
 
-When [activating segments](/help/rtcdp/destinations/activate-destinations.md) to the Salesforce Marketing Cloud destination, we recommend that you select a unique identifier from your [union schema](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md). Select the unique identifier and any other XDM fields to use in the activation. For more information, see [Select which schema fields to use as destination attributes in your exported files](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) in Email Marketing Destinations.
+When [activating segments](/help/rtcdp/destinations/activate-destinations.md) to the Salesforce Marketing Cloud destination, we recommend that you select a unique identifier from your [union schema](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md). Select the unique identifier and any other XDM fields that you want to export to the destination. For more information, see [Select which schema fields to use as destination attributes in your exported files](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) in Email Marketing Destinations.
 
 ## Set up data import into Salesforce Marketing Cloud {#import-data-into-salesforce}
 

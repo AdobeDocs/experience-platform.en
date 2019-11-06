@@ -17,7 +17,7 @@ The Destinations workspace consists of four sections, **Catalog**, **Browse**, *
 
 ## Catalog {#catalog}
 
-The **[!UICONTROL Catalog]** tab is the default view in the workspace. The **[!UICONTROL Catalog]** tab displays all destinations that you can send data to, grouped by destination category. Press any destination in the catalog to open the right rail, which enables you to set up a connection to the destination, inspect the existing connections to the destination, and read documentation about the destination.
+The **[!UICONTROL Catalog]** tab is the default view in the destinations workspace. The **[!UICONTROL Catalog]** tab displays all destinations that you can send data to, grouped by destination category. Press any destination in the catalog to open the right rail, which enables you to set up a connection to the destination, inspect the existing connections to the destination, and read documentation about the destination.
 
 ![Destination catalog options](/help/rtcdp/destinations/assets/destination-ui-catalog-options-highlighted.png)
 
@@ -42,7 +42,7 @@ Click into any destination row to bring up more information about the destinatio
 
 ![Click destination row](/help/rtcdp/destinations/assets/click-destination-row.png)
 
-Press destination name to see information about the segments that are activated to this destination. Press **[!UICONTROL Edit activation]** to modify which segments are being sent to this destination.
+Press the destination name to see information about the segments that are activated to this destination. Press **[!UICONTROL Edit activation]** to modify which segments are being sent to this destination.
 
 ## Accounts {#accounts}
 
@@ -67,6 +67,6 @@ The **[!UICONTROL Data flows]** tab displays a graphic representation of the act
 
 ![Data-flows1](/help/rtcdp/destinations/assets/data-flows1-highlighted.png)
 
-Click into any of the destinations displayed on the page and press **[!UICONTROL View flows]** to see get information on all the flows you have set up for each destination.
+Select any of the destinations displayed on the page and press **[!UICONTROL View flows]** to see information on all the data flows you have set up for each destination.
 
 ![Data-flows2](/help/rtcdp/destinations/assets/data-flows2.png)
