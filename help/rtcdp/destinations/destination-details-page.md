@@ -9,14 +9,14 @@ seo-description: The details page for an individual destination provides an over
 
 The details page for an individual destination provides an overview of the destination details, such as the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow. To view these details, go to **Destinations** > **Browse** and click the name of the destination you want to work with.
 
-![Destinations page numbered](/help/rtcdp/destinations/assets/destination-page-numbered.png)
-
-We highlighted the most important parts of the page:
+The most important parts of the page are highlighted below:
 
 * 1 - Destination name and ID
 * 2 - Segments activated to destination
 * 3 - Right rail information 
 * 4 - Controls to edit activation and enable/disable data flow
+
+![Destinations page numbered](/help/rtcdp/destinations/assets/destination-page-numbered.png)
 
 For more information about each part of the page, see the sections below.
 
@@ -24,10 +24,21 @@ For more information about each part of the page, see the sections below.
 
 You can see the destination name in the page heading and the destination ID in the page URL.
 
-## 2. Right rail information
+## 2. Segments activated to destination
 
-The right rail includes information about your destination. See table below for more information:
+This section displays which segments are currently mapped to the destination, as well as further information about those segments. See table below for more information:
 
+Item | Description |
+---------|----------|
+ Segment Name| The name of your segment. |
+ Segment Description | The description of your segment. |
+ Start Date | The date as of which these segments are being activated to the destination. |
+ End Date | The date when these segments will stop being activated to the destination. |
+ Mapping ID | *Not available for email marketing destinations*. Indicates the ID by which the segment is known in the destination platform. |
+
+## 3. Right rail information
+
+The right rail includes information about your destination. See the table below for more information:
 
 Item | Description |
 ---------|----------|
@@ -39,18 +50,6 @@ Item | Description |
  Identity | ???? |
  Created by | Indicates the user who created this destination flow. |
  Created | Indicates the UTC date and time when this destination flow was created. |
-
-## 3. Segments activated to destination
-
-This section displays which segments are currently mapped to the destination, as well as further information about those segments. See table below for more information:
-
-Item | Description |
----------|----------|
- Segment Name| The name of your segment. |
- Segment Description | The description of your segment. |
- Start Date | The date as of which these segments are being activated to the destination. |
- End Date | The date when these segments will stop being activated to the destination. |
- Mapping ID | *Not available for email marketing destinations*. Indicates the ID by which the segment is known in the destination platform. |
 
 ## 4. Controls to edit activation and enable/disable data flow
 
