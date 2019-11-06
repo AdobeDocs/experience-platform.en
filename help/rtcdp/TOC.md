@@ -89,8 +89,6 @@ user-guide-title: Real-Time Customer Data Platform Help
           * [Oracle Eloqua](destinations/oracle-eloqua-destination.md)
           * [Oracle Responsys](destinations/oracle-responsys-destination.md)
           * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
-        * Social destinations{#social-destinations}
-          * [Social destinations overview](destinations/social-destinations.md)
     * Destinations tutorials {#dest-tutorials}
         * [Connect to a destination](/help/rtcdp/destinations/connect-destination.md)
         * [Activate profiles and segments in a destination](destinations/activate-destinations.md) 
