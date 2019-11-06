@@ -9,9 +9,11 @@ seo-description: In Adobe Real-Time Customer Data Platform, select Destinations 
 
 In Adobe Real-Time Customer Data Platform, select **Destinations** from the left navigation bar to access the destinations workspace.
 
+The Destinations workspace consists of four sections, **Catalog**, **Browse**, **Accounts**, and **Data flows**, which are described in the sections below.
+
 ![Destinations-overview](/help/rtcdp/destinations/assets/destinations-overview-highlighted.png)
 
-The Destinations workspace consists of four sections, **Catalog**, **Browse**, **Accounts**, and **Data flows**, which are described in the sections below.
+
 
 ## Catalog
 
