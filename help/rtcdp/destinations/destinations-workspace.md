@@ -9,7 +9,7 @@ seo-description: In Adobe Real-Time Customer Data Platform, select Destinations 
 
 In Adobe Real-Time Customer Data Platform, select **Destinations** from the left navigation bar to access the destinations workspace.
 
-![Destinations-overview](/help/rtcdp/destinations/assets/destinations-overview.png)
+![Destinations-overview](/help/rtcdp/destinations/assets/destinations-overview-highlighted.png)
 
 The Destinations workspace consists of four sections, **Catalog**, **Browse**, **Accounts**, and **Data flows**, which are described in the sections below.
 
@@ -25,7 +25,7 @@ For more information on destination categories and information on each destinati
 
 The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection and indicates whether segments are actively being sent to destinations. See the table below for all the information that is provided for each destination:
 
-![Browse Tab](/help/rtcdp/destinations/assets/browse-tab.png)
+![Browse Tab](/help/rtcdp/destinations/assets/browse-tab-highlighted.png)
 
 Element | Description 
 ---------|----------
@@ -46,6 +46,8 @@ Press destination name to see information about the segments that are activated 
 
 In the **[!UICONTROL Accounts]** tab, you can see information about the connections that you have established with various destinations. See the table below for all the information you can get on each destination:
 
+![Accounts tab](/help/rtcdp/destinations/assets/accounts-tab-highlighted.png)
+
 Element | Description 
 ---------|----------
  Name | For email marketing platforms, the name is a combination between the protocol type and the domain you selected in the [connect destination wizard](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination).
@@ -55,13 +57,13 @@ Element | Description
  Authorized | The date when the connection to this destination was authorized.
  Expiration | Indicates when the connection to this destination will expire. If the status is **Expired** or about to expire, do this -----
 
-![Accounts tab](/help/rtcdp/destinations/assets/accounts-tab.png)
+
 
 ## Data flows
 
 The **[!UICONTROL Data flows]** tab displays a graphic representation of the activation flows that you have set up in the Real-Time Customer Data Platform.
 
-![Data-flows1](/help/rtcdp/destinations/assets/data-flows1.png)
+![Data-flows1](/help/rtcdp/destinations/assets/data-flows1-highlighted.png)
 
 Click into any of the destinations displayed on the page and press **[!UICONTROL View flows]** to see get information on all the flows you have set up for each destination.
 
