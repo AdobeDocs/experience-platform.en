@@ -5,4 +5,6 @@ description: description
 seo-description: seo description
 ---
 
+# Segment Builder guide
+
 This document will link out to the Segment Builder guide on IO.
