@@ -40,8 +40,7 @@ user-guide-title: Real-Time Customer Data Platform Help
         * [Configure merge policies](profile/merge-policies-tutorial.md)
 * Segmentation {#segmentation}
     * [Segmentation overview](segmentation/segmentation-overview.md)
-    * Segmentation tutorials {#segmentation-tutorials}
-        * [Segment builder guide](segmentation/segment-builder-guide.md)
+    * [Segment builder guide](segmentation/segment-builder-guide.md)
 * Sensei insights {#sensei}
     * [Customer AI (alpha) overview](sensei-insights/customer-ai.md)
 * Datasets {#datasets}
