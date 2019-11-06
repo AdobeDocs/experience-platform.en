@@ -5,10 +5,6 @@ description: description
 seo-description: seo description
 ---
 
-# Document title
+# Segmentation
 
-Words and things
-
-## Subhead
-
-Things
+This document will describe segmentation in an RTCDP context.
