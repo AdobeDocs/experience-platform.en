@@ -86,4 +86,5 @@ user-guide-title: Real-Time Customer Data Platform Help
         * Social destinations{#social-destinations}
           * [Social destinations overview](destinations/social-destinations.md)
     * Destinations tutorials {#dest-tutorials}
+        * [Connect to a destination](/help/rtcdp/destinations/connect-destination.md)
         * [Activate profiles and segments in a destination](destinations/activate-destinations.md) 
