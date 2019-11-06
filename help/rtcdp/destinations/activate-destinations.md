@@ -5,7 +5,7 @@ description: Activate the data you have in Adobe Real-Time Customer Data Platfor
 seo-description: Activate the data you have in Adobe Real-Time Customer Data Platform by mapping segments to destinations. To accomplish this, follow the steps below.
 ---
 
-# Activate Data to Destinations
+# Activate profiles and segments in a destinations
 
 Activate the data you have in Adobe Real-Time Customer Data Platform by mapping segments to destinations. To accomplish this, follow the steps below.
 
@@ -13,9 +13,9 @@ Activate the data you have in Adobe Real-Time Customer Data Platform by mapping 
 
 To activate data to destinations, you must have successfully set up a destination. If you haven't done so already, go to the [destinations catalog](/help/rtcdp/destinations/destinations-catalog.md). Browse the supported destinations and set up one or more destinations.
 
-## Activate Data {#activate-data}
+## Activate data {#activate-data}
 
-1. In **Destinations > Browse**, select the destination where you want to activate your segments. 
+1. In **Destinations > Browse**, select the destination where you want to activate your segments.
 2. Click the name of the destination. This takes you to the Activate flow.
     ![activate-flow](/help/rtcdp/destinations/assets/activate-flow.png)
     Note that if an activation flow already exists for a destination, you can see the segments that are currently being sent to the destination. Press **Edit activation** and follow the steps below to modify the activation details.

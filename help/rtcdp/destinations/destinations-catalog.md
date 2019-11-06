@@ -16,4 +16,3 @@ You can activate your data to different destination categories in the Real-Time 
 * [Adobe solutions](/help/rtcdp/destinations/adobe-destinations.md)
 * [Advertising destinations](/help/rtcdp/destinations/advertising-destinations.md)
 * [Email marketing](/help/rtcdp/destinations/email-marketing-destinations.md)
-* [Social destinations](/help/rtcdp/destinations/social-destinations.md)
