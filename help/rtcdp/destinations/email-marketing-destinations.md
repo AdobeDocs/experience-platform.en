@@ -35,7 +35,7 @@ In this step, you are selecting which fields to export to email marketing destin
 
 ![Destination attributes](/help/rtcdp/destinations/assets/destination-attributes.png)
 
-### Identity
+### Identity {#identity}
 
 We recommend that you select a unique identifier from your [union schema](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md). This is the field that your users' identities are keyed off of. Most commonly, this field is the email address, but it can also be a loyalty program ID or a phone number. See the table below for the most common identifiers and their XDM field in unified schema. 
 

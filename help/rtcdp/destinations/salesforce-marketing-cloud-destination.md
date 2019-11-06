@@ -11,7 +11,7 @@ seo-description: Salesforce Marketing Cloud is a digital marketing suite formerl
 
 [Salesforce Marketing Cloud](https://www.salesforce.com/products/marketing-cloud/email-marketing/) is a digital marketing suite formerly known as ExactTarget that allows you to build and customize journeys for visitors and customers to personalize their experience.
 
-To send segment data to Salesforce Marketing Cloud, you must first [connect the destination](#connect-destination) in Adobe Real-time CDP, and then [set up a data import](#import-data-into-responsys) from your storage location into Salesforce Marketing Cloud.
+To send segment data to Salesforce Marketing Cloud, you must first [connect the destination](#connect-destination) in Adobe Real-time CDP, and then [set up a data import](#import-data-into-salesforce) from your storage location into Salesforce Marketing Cloud.
 
 ## Connect destination {#connect-destination}
 
@@ -21,8 +21,8 @@ To send segment data to Salesforce Marketing Cloud, you must first [connect the 
 
 1. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. For Salesforce Marketing Cloud, you can select between **SFTP with Password** and **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and press **[!UICONTROL Connect]**.
 
-    ![Set up Responsys wizard](/help/rtcdp/destinations/assets/salesforce-step1.png)
-    ![Fill in Responsys information](/help/rtcdp/destinations/assets/salesforce-wizard.png)
+    ![Set up Salesforce wizard](/help/rtcdp/destinations/assets/salesforce-step1.png)
+    ![Fill in Salesforce information](/help/rtcdp/destinations/assets/salesforce-wizard.png)
 
     If your storage location supports **SFTP with Password** authentication, you must provide Domain, Port, Username, and Password.
     If your storage location supports **SFTP with SSH Key** authentication, you must provide Domain, Port, Username, and SSH Key.
@@ -33,7 +33,7 @@ To send segment data to Salesforce Marketing Cloud, you must first [connect the 
 * **Folder Path**: Provide the path in your storage location where Real-Time CDP will drop your export data as CSV or tab-delimited files
 * **File Format**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location.
 
-    ![Responsys basic information](/help/rtcdp/destinations/assets/salesforce-basic-information.png)
+    ![Salesforce basic information](/help/rtcdp/destinations/assets/salesforce-basic-information.png)
 
 >[!NOTE]
 >
