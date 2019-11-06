@@ -11,9 +11,9 @@ Email Service Providers (ESPs) enable you to manage your email marketing activit
 
 To send segments to email marketing destinations for your campaigns, Adobe Real-Time CDP must first connect to the destination.
 
-Connecting to email marketing destinations is a three-step process, the first step identical for all email marketing destinations. The three steps are described in their own sections further below on this page.
+Connecting to email marketing destinations is a three-step process, the first step is identical for all email marketing destinations. Each of the steps is described further below on this page.
 
-In the connect destination flow, described in the section below, you will grant Adobe access your storage location, either Amazon S3 or SFTP. Real-Time CDP exports your segments as CSV or TXT files and drops them into your preferred location. Then, in your preferred email marketing platform, you can schedule a regular data import from your storage location into the platform. The process to import data into email marketing platforms is specific to each platform. See the individual destinations articles for more information.
+In the connect destination flow, described in the section below, you will grant Adobe access your storage location, either Amazon S3 or SFTP. Real-Time CDP exports your segments as `.csv` or `.txt` files and delivers them to your preferred location. Then, in your preferred email marketing platform, you can schedule a regular data import from your storage location into the platform. The process to import data into email marketing platforms is specific to each platform. See the individual destinations articles for more information.
 
 ## Step 1 - Connect destination {#connect-destination}
 
@@ -37,13 +37,13 @@ In this step, you are selecting which fields to export to email marketing destin
 
 ### Identity {#identity}
 
-We recommend that you select a unique identifier from your [union schema](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md). This is the field that your users' identities are keyed off of. Most commonly, this field is the email address, but it can also be a loyalty program ID or a phone number. See the table below for the most common identifiers and their XDM field in unified schema. 
+We recommend that you select a unique identifier from your [union schema](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md). This is the field that your users' identities are keyed off of. Most commonly, this field is the email address, but it can also be a loyalty program ID or a phone number. See the table below for the most common unique identifiers and their XDM field in unified schema. 
 
-Identifier | XDM field in Unified Schema
+Unique Identifier | XDM field in Unified Schema
 ---------|----------
- Email Address | personalEmail.address 
- Phone | mobilePhone.number 
- Loyalty program ID | Customer-defined XDM field 
+ Email Address | `personalEmail.address` 
+ Phone | `mobilePhone.number` 
+ Loyalty program ID | `Customer-defined XDM field` 
 
 ### Other Destination Attributes
 
@@ -51,13 +51,13 @@ In the Schema field selector, choose which other fields you want to export to th
 
 Schema | XDM field 
 ---------|----------
- First Name | person.name.firstName 
- Last Name | person.name.lastName 
- Phone | mobilePhone.number 
- Address City| homeAddress.city 
- Address State | homeAddress.stateProvince 
- Address Postal Code | homeAddress.postalCode 
- Birthday | person.birthDayAndMonth 
+ First Name | `person.name.firstName`
+ Last Name | `person.name.lastName`
+ Phone | `mobilePhone.number` 
+ Address City| `homeAddress.city` 
+ Address State | `homeAddress.stateProvince` 
+ Address Postal Code | `homeAddress.postalCode` 
+ Birthday | `person.birthDayAndMonth` 
 
 ## Step 3 - Import data from your storage location into the destination
 
