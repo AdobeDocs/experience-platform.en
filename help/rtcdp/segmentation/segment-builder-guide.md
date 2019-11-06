@@ -5,10 +5,6 @@ description: description
 seo-description: seo description
 ---
 
-# Document title
+# Segment Builder guide
 
-Words and things
-
-## Subhead
-
-Things
+This document will link out to the Segment Builder guide on IO.
