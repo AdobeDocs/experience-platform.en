@@ -28,7 +28,7 @@ To send segment data to Salesforce Marketing Cloud, you must first [connect the 
 
     ![Fill in Salesforce information](/help/rtcdp/destinations/assets/salesforce-wizard.png)
 
-2. In **Basic Information**, fill in the relevant information for your destination, as shown below:
+1. In **Basic Information**, fill in the relevant information for your destination, as shown below:
 * **Name**: Pick a relevant name for your destination.
 * **Description**: Enter a description for your destination.
 * **Folder Path**: Provide the path in your storage location where Real-Time CDP will drop your export data as CSV or tab-delimited files
