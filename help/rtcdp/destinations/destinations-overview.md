@@ -15,7 +15,7 @@ You can work with **Sources** and **Destinations** in the Real-Time CDP. It is i
 
 ## Use cases
 
-* Use **Destinations** to [activate](/help/rtcdp/destinations/activate-destinations.md) and send profiles or segments to marketing automation platforms, social networks, digital advertising platforms, and more.
+* Use **Destinations** to [activate](/help/rtcdp/destinations/activate-destinations.md) and send profiles or segments to marketing automation platforms, digital advertising platforms, and more.
 * Choose from a [self-service catalog](/help/rtcdp/destinations/destinations-catalog.md) of all the destinations available in Real-Time CDP.
 * Schedule data exports to your preferred destinations at regular times.
 
