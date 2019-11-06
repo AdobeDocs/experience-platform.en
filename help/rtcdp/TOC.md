@@ -39,14 +39,9 @@ user-guide-title: Real-Time Customer Data Platform Help
         * [Create identity namespace](profile/identity-namespace-tutorial.md)
         * [Configure merge policies](profile/merge-policies-tutorial.md)
 * Segmentation {#segmentation}
-    * [Segmentation overview](segmentation/filename.md)
-    * [Bidirectional segment sharing](segmentation/filename.md)
+    * [Segmentation overview](segmentation/segmentation-overview.md)
     * Segmentation tutorials {#segmentation-tutorials}
-        * [UI configurations for continuous query evaluations](segmentation/filename.md)
-        * [Datatype reference descriptors](segmentation/filename.md)
-        * [Schedule segmentation jobs](segmentation/filename.md)
-        * [UPS search](segmentation/filename.md)
-        * [Multi-entity segmentation](segmentation/filename.md)
+        * [Segment builder guide](segmentation/segment-builder-guide.md)
 * Sensei insights {#sensei}
     * [Customer AI (alpha) overview](sensei-insights/customer-ai.md)
 * Datasets {#datasets}
