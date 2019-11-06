@@ -27,17 +27,11 @@ user-guide-title: Real-Time Customer Data Platform Help
         * [Adobe Audience Manager](sources/connector-overviews/adobe-audience-manager.md)
     * [Sources tutorials](sources/sources-ui-tutorials.md)
     * [Sources API reference](sources/sources-api-reference.md)
-* Real-time customer profile {#profile}
+* Real-time Customer Profile {#profile}
     * [Profile overview](profile/profile-overview.md)
-    * [Profile viewer](profile/profile-viewer.md)
     * [Profile search](profile/profile-search.md)
-    * [Identities](profile/identities-overview.md)
-    * [Identity namespace](profile/identity-namespace.md)
+    * [Identities & Identity namespaces](profile/identities-overview.md)
     * [Merge policies](profile/merge-policies.md)
-    * Profile tutorials {#profile-tutorials}
-        * [Find a profile](profile/profile-access-tutorial.md)
-        * [Create identity namespace](profile/identity-namespace-tutorial.md)
-        * [Configure merge policies](profile/merge-policies-tutorial.md)
 * Segmentation {#segmentation}
     * [Segmentation overview](segmentation/segmentation-overview.md)
     * [Segment builder guide](segmentation/segment-builder-guide.md)
