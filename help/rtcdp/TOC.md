@@ -85,7 +85,7 @@ user-guide-title: Real-Time Customer Data Platform Help
           * [Google Display & Video 360](destinations/google-dv360-destination.md)
         * Email Marketing destinations{#email-destinations}
           * [Email Marketing destinations overview](destinations/email-marketing-destinations.md)
-          * [Adobe Campaign Classic](destinations/adobe-campaign-destination.md)
+          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
           * [Oracle Eloqua](destinations/oracle-eloqua-destination.md)
           * [Oracle Responsys](destinations/oracle-responsys-destination.md)
           * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)

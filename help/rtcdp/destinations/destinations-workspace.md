@@ -15,7 +15,7 @@ The Destinations workspace consists of four sections, **Catalog**, **Browse**, *
 
 
 
-## Catalog
+## Catalog {#catalog}
 
 The **[!UICONTROL Catalog]** tab is the default view in the workspace. The **[!UICONTROL Catalog]** tab displays all destinations that you can send data to, grouped by destination category. Press any destination in the catalog to open the right rail, which enables you to set up a connection to the destination, inspect the existing connections to the destination, and read documentation about the destination.
 
@@ -23,7 +23,7 @@ The **[!UICONTROL Catalog]** tab is the default view in the workspace. The **[!U
 
 For more information on destination categories and information on each destination, see [Destination Catalog](/help/rtcdp/destinations/destinations-catalog.md).
 
-## Browse
+## Browse {#browse}
 
 The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection and indicates whether segments are actively being sent to destinations. See the table below for all the information that is provided for each destination:
 
@@ -44,7 +44,7 @@ Click into any destination row to bring up more information about the destinatio
 
 Press destination name to see information about the segments that are activated to this destination. Press **[!UICONTROL Edit activation]** to modify which segments are being sent to this destination.
 
-## Accounts
+## Accounts {#accounts}
 
 In the **[!UICONTROL Accounts]** tab, you can see information about the connections that you have established with various destinations. See the table below for all the information you can get on each destination:
 
@@ -61,7 +61,7 @@ Element | Description
 
 
 
-## Data flows
+## Data flows {#data-flows}
 
 The **[!UICONTROL Data flows]** tab displays a graphic representation of the activation flows that you have set up in the Real-Time Customer Data Platform.
 
