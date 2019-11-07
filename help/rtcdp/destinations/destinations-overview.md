@@ -26,8 +26,8 @@ The controls in the [Destinations workspace](/help/rtcdp/destinations/destinatio
 * Browse the catalog of digital properties where you can activate your data;
 * Create, edit, activate, and disable data flows to the destinations in the catalog;
 * Select which segments should be activated to destinations;
-* Select which XDM data fields to use as mapping data for each profile to email marketing destinations.
+* Select which [XDM data fields](https://www.adobe.io/apis/experienceplatform/home/xdm/xdmservices.html#!api-specification/markdown/narrative/technical_overview/schema_registry/xdm_system/xdm_system_in_experience_platform.md) to export when activating segments to email marketing destinations.
 
 ## Types of destinations
 
-You can activate data to several types of destinations in the Real-Time Customer Data Platform. For a list of destination types and information on each of them, see the [Destination Catalog](/help/rtcdp/destinations/destinations-catalog.md).
+You can activate data to several types of destinations in the Real-Time Customer Data Platform. For a list of destination types and information on each of them, see the [Destination catalog](/help/rtcdp/destinations/destinations-catalog.md).
