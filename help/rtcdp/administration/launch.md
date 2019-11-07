@@ -11,9 +11,9 @@ This tutorial explains how to implement your website tags to send data to Adobe 
 
 ## Prerequisites
 
-* The necessary schema and dataset are created in Platform
-* The necessary configuration has been deployed in Experience Edge and has the matching Configuration ID and Edge domain
-* The company CMS has already been configured to deliver a JavaScript object on each page with the data you need to send to Platform
+* The necessary schema and dataset are created in Platform.
+* The necessary configuration has been deployed in Experience Edge and has the matching Configuration ID and Edge domain.
+* The company CMS has already been configured to deliver a JavaScript object on each page with the data you need to send to Platform.
 
 ## Steps
 
