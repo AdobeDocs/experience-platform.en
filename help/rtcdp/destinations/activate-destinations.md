@@ -1,13 +1,13 @@
 ---
 title: Activate profiles and segments in a destination
 seo-title: Activate profiles and segments in a destination
-description: Activate the data you have in Adobe Real-Time Customer Data Platform by mapping segments to destinations. To accomplish this, follow the steps below.
-seo-description: Activate the data you have in Adobe Real-Time Customer Data Platform by mapping segments to destinations. To accomplish this, follow the steps below.
+description: Activate the data you have in Adobe Real-time Customer Data Platform by mapping segments to destinations. To accomplish this, follow the steps below.
+seo-description: Activate the data you have in Adobe Real-time Customer Data Platform by mapping segments to destinations. To accomplish this, follow the steps below.
 ---
 
 # Activate profiles and segments in a destination
 
-Activate the data you have in Adobe Real-Time Customer Data Platform by mapping segments to destinations. To accomplish this, follow the steps below.
+Activate the data you have in Adobe Real-time Customer Data Platform by mapping segments to destinations. To accomplish this, follow the steps below.
 
 ## Prerequisites {#prerequisites}
 
@@ -32,7 +32,7 @@ To activate data to destinations, you must have successfully [connected a destin
 
 ## Edit activation {#edit-activation}
 
-Follow the steps below to edit existing activation flows in Real-Time CDP: 
+Follow the steps below to edit existing activation flows in Real-time CDP: 
 
 1. Select **Destinations** in the left navigation bar, then click the **Browse** tab, and click the destination name.
 2. Select **[!UICONTROL Edit activation]** in the right rail to change which segments to send to the destination.
@@ -41,7 +41,7 @@ Follow the steps below to edit existing activation flows in Real-Time CDP:
 
 ### Email marketing destinations
 
-For email marketing destinations, Adobe Real-Time CDP creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. Expect a new file to be created in your storage location every day. The file format is:
+For email marketing destinations, Adobe Real-time CDP creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. Expect a new file to be created in your storage location every day. The file format is:
 `<destination name>id<destination id><timestamp-yyyymmddhhmmss>`
 
 The files you would receive on three consecutive days could look like this:

@@ -6,7 +6,7 @@ description:
 
 # How to connect a destination 
 
-Follow the steps below to connect to a destination in Adobe Real-Time Customer Data Platform:
+Follow the steps below to connect to a destination in Adobe Real-time Customer Data Platform:
 
 1. Navigate to  **[!UICONTROL Destinations]** from the left navigation bar.
 2. In the [Catalog](/help/rtcdp/destinations/destinations-workspace.md#catalog) tab, select the destination that you want to connect to.

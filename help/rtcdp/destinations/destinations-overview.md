@@ -1,22 +1,22 @@
 ---
 title: Destinations Overview
 seo-title: Destinations Overview
-description: Use Destinations in the Real-Time Customer Data Platform to activate your known and unknown data for downstream marketing campaigns, email campaigns, site personalization, and many other use cases.
-seo-description: Use Destinations in the Real-Time Customer Data Platform to activate your known and unknown data for downstream marketing campaigns, email campaigns, site personalization, and many other use cases.
+description: Use Destinations in the Real-time Customer Data Platform to activate your known and unknown data for downstream marketing campaigns, email campaigns, site personalization, and many other use cases.
+seo-description: Use Destinations in the Real-time Customer Data Platform to activate your known and unknown data for downstream marketing campaigns, email campaigns, site personalization, and many other use cases.
 ---
 
 # Destinations Overview
 
-Use **Destinations** in the Adobe Real-Time Customer Data Platform to activate your known and unknown data for downstream marketing campaigns, email campaigns, site personalization, and many other use cases.
+Use **Destinations** in the Adobe Real-time Customer Data Platform to activate your known and unknown data for downstream marketing campaigns, email campaigns, site personalization, and many other use cases.
 
 ## Destinations and Sources
 
-You can work with **Sources** and **Destinations** in the Real-Time CDP. It is important to understand how these are different. Use Sources to send data into the Real-Time CDP, and Destinations to export data from the Real-Time CDP to several supported destinations.
+You can work with **Sources** and **Destinations** in the Real-time CDP. It is important to understand how these are different. Use Sources to send data into the Real-time CDP, and Destinations to export data from the Real-time CDP to several supported destinations.
 
 ## Use cases
 
 * Use **Destinations** to [activate](/help/rtcdp/destinations/activate-destinations.md) and send profiles or segments to marketing automation platforms, digital advertising platforms, and more.
-* Choose from a [self-service catalog](/help/rtcdp/destinations/destinations-catalog.md) of all the destinations available in Real-Time CDP.
+* Choose from a [self-service catalog](/help/rtcdp/destinations/destinations-catalog.md) of all the destinations available in Real-time CDP.
 * Schedule data exports to your preferred destinations at regular times.
 
 ## Controls
@@ -30,4 +30,4 @@ The controls in the [Destinations workspace](/help/rtcdp/destinations/destinatio
 
 ## Types of destinations
 
-You can activate data to several types of destinations in the Real-Time Customer Data Platform. For a list of destination types and information on each of them, see the [Destination catalog](/help/rtcdp/destinations/destinations-catalog.md).
+You can activate data to several types of destinations in the Real-time Customer Data Platform. For a list of destination types and information on each of them, see the [Destination catalog](/help/rtcdp/destinations/destinations-catalog.md).
