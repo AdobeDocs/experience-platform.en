@@ -1,13 +1,13 @@
 ---
 title: Destinations workspace
 seo-title: Destinations workspace
-description: In Adobe Real-Time Customer Data Platform, select Destinations from the left navigation bar to access the destinations workspace.
-seo-description: In Adobe Real-Time Customer Data Platform, select Destinations from the left navigation bar to access the destinations workspace.
+description: In Adobe Real-time Customer Data Platform, select Destinations from the left navigation bar to access the destinations workspace.
+seo-description: In Adobe Real-time Customer Data Platform, select Destinations from the left navigation bar to access the destinations workspace.
 ---
 
 # Destinations workspace {#destinations-workspace}
 
-In Adobe Real-Time Customer Data Platform, select **Destinations** from the left navigation bar to access the destinations workspace.
+In Adobe Real-time Customer Data Platform, select **Destinations** from the left navigation bar to access the destinations workspace.
 
 The Destinations workspace consists of four sections, **Catalog**, **Browse**, **Accounts**, and **Data flows**, which are described in the sections below.
 
@@ -63,7 +63,7 @@ Element | Description
 
 ## Data flows {#data-flows}
 
-The **[!UICONTROL Data flows]** tab displays a graphic representation of the activation flows that you have set up in the Real-Time Customer Data Platform.
+The **[!UICONTROL Data flows]** tab displays a graphic representation of the activation flows that you have set up in the Real-time Customer Data Platform.
 
 ![Data-flows1](/help/rtcdp/destinations/assets/data-flows1-highlighted.png)
 
