@@ -44,13 +44,13 @@ In the leaderboard **[!UICONTROL Successful profile records]** shows the total n
 
 There is also a metric card that shows the percentage of successful records. Click **[!UICONTROL View datasets]** to see more details about the profile records.
 
-The number of successful profile records is updated hourly.
+The number of successful profile records is updated hourly. COMMENT: Confirm with Anurag, Mohit, Matt Colon, John Anderson re: data freshness.
 
 For more information about profiles, see {link to profiles overview doc}
 
 ### Total profile records
 
-The **[!UICONTROL Total profile records]** metric card shows the total number of data records enabled to feed into the profiles, updated once per day. This does not include all data in the data lake, because some data might not be enabled to feed into the profiles.
+The **[!UICONTROL Total profile records]** metric card shows the total number of data records enabled to feed into the profiles, updated once per day. This does not include all data in the data lake, because some data might not be enabled to feed into the profiles. COMMENT: Appears API does not return total data in profile, the update is from the past 7 days. Please confirm with John Anderson, Mohit Garg, Anurag Dodeja.
 
 Click **[!UICONTROL View profiles]** to see more details about the profile records.
 
@@ -64,7 +64,9 @@ In the leaderboard, **[!UICONTROL Failed profile records]** counts the number of
 
 The **[!UICONTROL Failed profile records]** metric card shows this count, and includes a graphical representation that helps you see how failures have trended during the time shown below the graphic. This chart is updated hourly. Click **[!UICONTROL View datasets]** to see more details about the profile records.
 
-The number of failed profile records is updated hourly.
+The number of failed profile records is updated hourly. COMMENT: Confirm with Anurag, Mohit, Matt Colon, John Anderson re: data freshness.
+
+COMMENT: Which doc can be linked to help user troubleshoot?
 
 ### Recent segments
 
