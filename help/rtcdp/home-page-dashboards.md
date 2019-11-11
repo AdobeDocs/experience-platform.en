@@ -7,13 +7,13 @@ seo-description: Dashboards, Home Page, and First-Time User Experience of Adobe 
 
 # Real-time Customer Data Platform home page and dashboards
 
-The Adobe Real-time Customer Data Platform (real-time CDP) home page appears when you log in to real-time CDP.
+The Adobe Real-time Customer Data Platform (Real-time CDP) home page appears when you log in to Real-time CDP.
 
 {screen shot}
 
-The first time you log in to real-time CDP, no data is available yet on the dashboard. As data is collected--in other words, as sources, profiles, segments, and destinations are created and data flows into the system--the dashboard automatically updates to display information about that data in metric cards. 
+The first time you log in to real-time CDP, no data is available yet on the dashboard and the homepage provides learning materia for a first time user experience. As data is collected--in other words, as sources, profiles, segments, and destinations are created and data flows into the system--the dashboard automatically updates to display information about that data in metric cards. 
 
-## Dashboard
+## Home page dashboard view
 
 The dashboard shows information in several areas. Each category of information displays for the time range shown beneath the data.
 
