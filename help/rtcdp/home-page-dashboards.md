@@ -64,8 +64,7 @@ In the leaderboard, **[!UICONTROL Failed profile records]** counts the number of
 
 The **[!UICONTROL Failed profile records]** metric card shows this count, and includes a graphical representation that helps you see how failures have trended during the time shown below the graphic. This chart is updated hourly. Click **[!UICONTROL View datasets]** to see more details about the profile records.
 
-The number of failed profile records is updated hourly. COMMENT: Confirm with Anurag, Mohit, Matt Colon, John Anderson re: data freshness.
-
+The number of failed profile records is updated hourly. 
 ### Recent segments
 
 The **[!UICONTROL Recent segments]** metric card shows the five most recent segments created within the organization. This list is updated when a new segment is created.
