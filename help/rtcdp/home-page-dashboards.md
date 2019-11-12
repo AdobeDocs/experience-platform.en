@@ -30,7 +30,7 @@ Some information is shown in different ways on both the leaderboard and metric c
 
 The **[!UICONTROL Total profiles]** count shows the total number of people with profiles in your organization. It does not include profile fragments. This is your total addressable audience.
 
-The number of profiles is updated once every 24 hours. COMMENT: Confirm with Mohit data freshness/time with Mohit. 
+The number of profiles is updated once every 24 hours.  
 
 ### Segments
 
