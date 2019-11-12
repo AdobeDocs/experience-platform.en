@@ -48,7 +48,7 @@ There is also a metric card that shows the percentage of successful records. Cli
 
 The number of successful profile records is updated hourly.
 
-For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.html).
+For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
 
 ### Total profile records
 
@@ -60,9 +60,9 @@ The **[!UICONTROL Total profile records]** metric card shows the total number of
 
 Click **[!UICONTROL View profiles]** to see more details about the profile records.
 
-For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.html).
+For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
 
-For more information about viewing a specific profile, see [Profile viewer](profile/profile-viewer.html).
+For more information about viewing a specific profile, see [Profile viewer](profile/profile-viewer.md).
 
 ### Failed profile records
 
@@ -78,7 +78,7 @@ The **[!UICONTROL Recent sources]** metric card shows the five most recent sourc
 
 Click a source or **[!UICONTROL View all]** to see the list of sources. From there, you can click on a specific source for details.
 
-For more information about sources, see [Sources overview](sources/sources-overview.html).
+For more information about sources, see [Sources overview](sources/sources-overview.md).
 
 ### Recent segments
 
@@ -94,4 +94,4 @@ The **[!UICONTROL Recent destinations]** metric card shows the five most recent 
 
 Click **[!UICONTROL View all]** to see information about more destinations.
 
-For more information about destinations, see [Destinations overview](destinations/destinations-overview.html).
+For more information about destinations, see [Destinations overview](destinations/destinations-overview.md).
