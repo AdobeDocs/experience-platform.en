@@ -30,7 +30,7 @@ Additional metrics--for example for profiles and segments--are available in othe
 
 The **[!UICONTROL Profiles]** count shows the total number of people with profiles in your organization. It does not include profile fragments. This is your total addressable audience.
 
-The number of profiles is updated once every 24 hours.
+The number of profiles is updated once every 24 hours.  
 
 ### Segments
 
@@ -46,7 +46,7 @@ There is also a metric card that shows the percentage of successful records. Cli
 
 ![image](assets/home-profilerecords-details.PNG)
 
-The number of successful profile records is updated hourly.
+The number of successful profile records is updated hourly. 
 
 For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
 
@@ -70,7 +70,7 @@ In the leaderboard, **[!UICONTROL Failed profile records]** counts the number of
 
 The **[!UICONTROL Failed profile records]** metric card shows this count, and includes a graphical representation that helps you see how failures have trended during the time shown below the graphic. This chart is updated hourly. Click **[!UICONTROL View datasets]** to see more details about the profile records.
 
-The number of failed profile records is updated hourly.
+The number of failed profile records is updated hourly. 
 
 ### Recent sources
 
