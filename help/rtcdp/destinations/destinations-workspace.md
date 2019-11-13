@@ -7,27 +7,25 @@ seo-description: In Adobe Real-time Customer Data Platform, select Destinations 
 
 # Destinations workspace {#destinations-workspace}
 
-In Adobe Real-time Customer Data Platform, select **Destinations** from the left navigation bar to access the destinations workspace.
+In Adobe Real-time Customer Data Platform, select **Destinations** from the left navigation bar to access the Destinations workspace.
 
 The Destinations workspace consists of four sections, **Catalog**, **Browse**, **Accounts**, and **Data flows**, which are described in the sections below.
 
-![Destinations-overview](/help/rtcdp/destinations/assets/destinations-overview-highlighted.png)
-
-
+![Destinations-overview](/help/rtcdp/destinations/assets/destinations-overview.png)
 
 ## Catalog {#catalog}
 
-The **[!UICONTROL Catalog]** tab is the default view in the destinations workspace. The **[!UICONTROL Catalog]** tab displays all destinations that you can send data to, grouped by destination category. Press any destination in the catalog to open the right rail, which enables you to set up a connection to the destination, inspect the existing connections to the destination, and read documentation about the destination.
+The **[!UICONTROL Catalog]** tab displays a list of all destinations offered by Adobe, that you can send data to. Select a destination in the catalog to open the right rail. Here, you can set up a connection to the destination (**Connect destination**) or learn more detailed information about each destination by viewing the documentation (**View documentation**).
 
-![Destination catalog options](/help/rtcdp/destinations/assets/destination-ui-catalog-options-highlighted.png)
+![Destination catalog options](/help/rtcdp/destinations/assets/destination-ui-catalog-options.png)
 
 For more information on destination categories and information on each destination, see [Destination Catalog](/help/rtcdp/destinations/destinations-catalog.md).
 
 ## Browse {#browse}
 
-The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection and indicates whether segments are actively being sent to destinations. See the table below for all the information that is provided for each destination:
+The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection. Destinations with the enabled toggle turned on set the destination to active and vice-versa. You can also view the destinations where you have data flowing by selecting **Segments > Browse** and selecting a segment to inspect. See the table below for all the information that is provided for each destination in the Browse tab:
 
-![Browse Tab](/help/rtcdp/destinations/assets/browse-tab-highlighted.png)
+![Browse Tab](/help/rtcdp/destinations/assets/browse-tab.png)
 
 Element | Description 
 ---------|----------
@@ -38,17 +36,17 @@ Element | Description
  Segments | The number of segments that are being sent to this destination
  Status | `Active` or `Inactive`. Indicates whether data is currently being activated to this destination. To edit the status, see [Disable activation](/help/rtcdp/destinations/activate-destinations.md#disable-activation).
 
-Click into any destination row to bring up more information about the destination in the right rail. 
+Click on a destination row to bring up more information about the destination in the right rail.
 
 ![Click destination row](/help/rtcdp/destinations/assets/click-destination-row.png)
 
-Press the destination name to see information about the segments that are activated to this destination. Press **[!UICONTROL Edit activation]** to modify which segments are being sent to this destination.
+Select the destination name to see information about the segments activated to this destination. Click **[!UICONTROL Edit activation]** to modify or add to the segments that are being sent to this destination.
 
 ## Accounts {#accounts}
 
-In the **[!UICONTROL Accounts]** tab, you can see information about the connections that you have established with various destinations. See the table below for all the information you can get on each destination:
+In the **[!UICONTROL Accounts]** tab, you can learn more about the connections that you have established with various destinations. See the table below for all the information you can get on each destination:
 
-![Accounts tab](/help/rtcdp/destinations/assets/accounts-tab-highlighted.png)
+![Accounts tab](/help/rtcdp/destinations/assets/accounts-tab.png)
 
 Element | Description 
 ---------|----------
@@ -65,7 +63,7 @@ Element | Description
 
 The **[!UICONTROL Data flows]** tab displays a graphic representation of the activation flows that you have set up in the Real-time Customer Data Platform.
 
-![Data-flows1](/help/rtcdp/destinations/assets/data-flows1-highlighted.png)
+![Data-flows1](/help/rtcdp/destinations/assets/data-flows1.png)
 
 Select any of the destinations displayed on the page and press **[!UICONTROL View flows]** to see information on all the data flows you have set up for each destination.
 
