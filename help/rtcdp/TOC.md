@@ -8,6 +8,7 @@ user-guide-title: Real-Time Customer Data Platform Help
 
 * Real-time Customer Data Platform {#intro}
     * [Product overview](overview.md)
+    * [Release notes](https://www.adobe.io/apis/experienceplatform/home/services/release-notes.html#!end-user/markdown/release-notes/release-notes.md)
     * [Getting started](get-started.md)
     * [Provisioning and access](provisioning.md)
     * [Dashboards and metrics overview](home-page-dashboards.md)
@@ -16,40 +17,6 @@ user-guide-title: Real-Time Customer Data Platform Help
     * [Role-based access control](administration/filename.md)
     * [Sandboxes and role-based access control API reference](administration/filename.md)
     * [Implement website tags with Adobe Launch](administration/launch.md)
-* Sources {#sources}
-    * [Sources overview](sources/filename.md)
-    * [Configure sources](sources/filename.md)
-    * [Sources best practices](sources/filename.md)
-    * Connectors {#connectors}
-        * [Salesforce](sources/filename.md)
-        * [Azure Blob](sources/filename.md)
-        * [Microsoft Dynamics 365](sources/filename.md)
-        * [AWS S3](sources/filename.md)
-        * [Analytics data connector](sources/filename.md)
-        * [Adobe Audience Manager](sources/filename.md)
-    * Sources tutorials {#sources-tutorials}
-        * [Tutorial](sources/filename.md)
-    * [Sources API reference](sources/filename.md)
-* Real-time customer profile {#profile}
-    * [Profile overview](profile/filename.md)
-    * [Profile viewer](profile/filename.md)
-    * [Unified Profile Service search](profile/filename.md)
-    * [Namespaces in profile lookup](profile/filename.md)
-    * Profile tutorials {#profile-tutorials}
-        * [How to monitor health of ingestion of data into Unified Profile](profile/filename.md)
-        * [Enrich Unified Profile using CRM, Loyalty via Enterprise Connectors](profile/filename.md)
-        * [Enrich Unified Profile in real time with Reservation data ](profile/filename.md)
-* Segmentation {#segmentation}
-    * [Segmentation overview](segmentation/filename.md)
-    * [Bidirectional segment sharing](segmentation/filename.md)
-    * Segmentation tutorials {#segmentation-tutorials}
-        * [UI configurations for continuous query evaluations](segmentation/filename.md)
-        * [Datatype reference descriptors](segmentation/filename.md)
-        * [Schedule segmentation jobs](segmentation/filename.md)
-        * [UPS search](segmentation/filename.md)
-        * [Multi-entity segmentation](segmentation/filename.md)
-* Sensei insights {#sensei}
-    * [Sensei insights Alpha docs](sensei-insights/filename.md)
 * Datasets {#datasets}
     * [Dataset lifespan](datasets/filename.md)
     * [Delete dataset and batch service](datasets/filename.md)
@@ -62,14 +29,6 @@ user-guide-title: Real-Time Customer Data Platform Help
         * [Create auto transfer of data from Analytics](datasets/filename.md)
         * [Setup ingestion of web and mobile data using Adobe Launch](datasets/filename.md)
         * [How to bring online data via Adobe Launch](datasets/filename.md)
-* Privacy and data governance {#privacy}
-    * [Privacy overview](privacy/filename.md)
-    * [Data Governance overview](privacy/filename.md)
-    * Governance tutorials {#privacy-tutorials}
-        * [How to apply DULE labels](privacy/filename.md)
-        * [Tutorial2](privacy/filename.md)
-        * [Tutorial3](privacy/filename.md)
-    * [API reference for DULE Policy](privacy/filename.md)
 * Destinations {#destinations}
     * [Destinations overview](destinations/destinations-overview.md)
     * [Destinations UI](destinations/destinations-ui.md)
@@ -94,4 +53,49 @@ user-guide-title: Real-Time Customer Data Platform Help
         * [Create a destination](destinations/destinations.md)
         * [Activate profiles and segments in a destination](destinations/destinations.md)
         * [Select which XDM fields to activate in a destination](destinations/destinations.md)
+* Privacy and data governance {#privacy}
+    * [Privacy overview](privacy/filename.md)
+    * [Data Governance overview](privacy/filename.md)
+    * Governance tutorials {#privacy-tutorials}
+        * [How to apply DULE labels](privacy/filename.md)
+        * [Tutorial2](privacy/filename.md)
+        * [Tutorial3](privacy/filename.md)
+    * [API reference for DULE Policy](privacy/filename.md)
+* Real-time customer profile {#profile}
+    * [Profile overview](profile/filename.md)
+    * [Profile viewer](profile/filename.md)
+    * [Unified Profile Service search](profile/filename.md)
+    * [Namespaces in profile lookup](profile/filename.md)
+    * Profile tutorials {#profile-tutorials}
+        * [How to monitor health of ingestion of data into Unified Profile](profile/filename.md)
+        * [Enrich Unified Profile using CRM, Loyalty via Enterprise Connectors](profile/filename.md)
+        * [Enrich Unified Profile in real time with Reservation data ](profile/filename.md)
+* Segmentation {#segmentation}
+    * [Segmentation overview](segmentation/filename.md)
+    * [Bidirectional segment sharing](segmentation/filename.md)
+    * Segmentation tutorials {#segmentation-tutorials}
+        * [UI configurations for continuous query evaluations](segmentation/filename.md)
+        * [Datatype reference descriptors](segmentation/filename.md)
+        * [Schedule segmentation jobs](segmentation/filename.md)
+        * [UPS search](segmentation/filename.md)
+        * [Multi-entity segmentation](segmentation/filename.md)
+* Sensei insights {#sensei}
+    * [Sensei insights Alpha docs](sensei-insights/filename.md)
+* Sources {#sources}
+    * [Sources overview](sources/filename.md)
+    * [Configure sources](sources/filename.md)
+    * [Sources best practices](sources/filename.md)
+    * Connectors {#connectors}
+        * [Salesforce](sources/filename.md)
+        * [Azure Blob](sources/filename.md)
+        * [Microsoft Dynamics 365](sources/filename.md)
+        * [AWS S3](sources/filename.md)
+        * [Analytics data connector](sources/filename.md)
+        * [Adobe Audience Manager](sources/filename.md)
+    * Sources tutorials {#sources-tutorials}
+        * [Tutorial](sources/filename.md)
+    * [Sources API reference](sources/filename.md)
+
+
+
 
