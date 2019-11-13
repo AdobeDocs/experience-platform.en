@@ -9,8 +9,7 @@ user-guide-title: Real-Time Customer Data Platform Help
 * Real-time Customer Data Platform {#intro}
     * [Product overview](overview.md)
     * [Getting started](get-started.md)
-    * [Provisioning and access](provisioning.md)
-    * [Dashboards and metrics overview](home-page-dashboards.md)
+    * [Metrics overview](home-page-dashboards.md)
 * Administration {#admin}
     * [Manage sandboxes](administration/filename.md)
     * [Role-based access control](administration/filename.md)
