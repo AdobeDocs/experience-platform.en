@@ -11,9 +11,9 @@ Use **Destinations** in the Adobe Real-time Customer Data Platform to activate y
 
 ## Destinations and Sources
 
-You can work with **Sources** and **Destinations** in the Real-time CDP. It is important to understand how these are different. Use Sources to send data into the Real-time CDP, and Destinations to export data from the Real-time CDP to several supported destinations.
+One of the core functionalities of Real-time CDP is ingesting data from your owned properties and activating your data for your business needs. Use **[!UICONTROL Sources]** to ingest data into Real-time CDP and **[!UICONTROL Destinations]** to export data from Real-time CDP. 
 
-## Use cases
+## Destinations steps
 
 * Use **Destinations** to [activate](/help/rtcdp/destinations/activate-destinations.md) and send profiles or segments to marketing automation platforms, digital advertising platforms, and more.
 * Choose from a [self-service catalog](/help/rtcdp/destinations/destinations-catalog.md) of all the destinations available in Real-time CDP.

@@ -9,7 +9,7 @@ seo-description: The details page for an individual destination provides an over
 
 The details page for an individual destination provides an overview of the destination details, such as the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow. To view these details, go to **Destinations** > **Browse** and click the name of the destination you want to work with.
 
-The most important parts of the page are highlighted below:
+Core components of an individual destination are:
 
 * 1 - Destination name and ID
 * 2 - Segments activated to destination
@@ -18,7 +18,7 @@ The most important parts of the page are highlighted below:
 
 ![Destinations page numbered](/help/rtcdp/destinations/assets/destination-page-numbered.png)
 
-For more information about each part of the page, see the sections below.
+Navigate to an individual destination page to get an overview of the destination details, such as:
 
 ## 1. Destination name and ID
 
