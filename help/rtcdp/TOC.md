@@ -8,7 +8,6 @@ user-guide-title: Real-Time Customer Data Platform Help
 
 * Real-time Customer Data Platform {#intro}
     * [Product overview](overview.md)
-    * [Release notes](https://www.adobe.io/apis/experienceplatform/home/services/release-notes.html#!end-user/markdown/release-notes/release-notes.md)
     * [Getting started](get-started.md)
     * [Metrics overview](home-page-dashboards.md)
 * Administration {#admin}
