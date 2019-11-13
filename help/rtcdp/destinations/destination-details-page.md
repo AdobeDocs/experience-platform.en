@@ -55,3 +55,4 @@ Item | Description |
 
 The Edit activation control allows you to edit which segments are mapped to the destination. Press Edit activation to open the [segment activation workflow](/help/rtcdp/destinations/activate-destinations.md).
 
+Use the **Enable/Disable** toggle to start and pause the data export to a destination.
