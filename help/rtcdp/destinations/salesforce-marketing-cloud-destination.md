@@ -29,12 +29,14 @@ To send segment data to Salesforce Marketing Cloud, you must first [connect the 
     ![Fill in Salesforce information](/help/rtcdp/destinations/assets/salesforce-wizard.png)
 
 1. In **Basic Information**, fill in the relevant information for your destination, as shown below:
-* **Name**: Pick a relevant name for your destination.
-* **Description**: Enter a description for your destination.
-* **Folder Path**: Provide the path in your storage location where Real-time CDP will deposit your export data as CSV or tab-delimited files.
-* **File Format**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location.
+   * **Name**: Pick a relevant name for your destination.
+   * **Description**: Enter a description for your destination.
+   * **Folder Path**: Provide the path in your storage location where Real-time CDP will deposit your export data as CSV or tab-delimited files.
+   * **File Format**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location.
 
     ![Salesforce basic information](/help/rtcdp/destinations/assets/salesforce-basic-information.png)
+
+1. Click **Create** after filling in the fields in **Basic Information**. Your destination is now connected and you can [activate segments](/help/rtcdp/destinations/activate-destinations.md) to the destination.
 
 >[!NOTE]
 >
