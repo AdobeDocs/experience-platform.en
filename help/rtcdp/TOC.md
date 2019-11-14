@@ -32,7 +32,7 @@ user-guide-title: Real-Time Customer Data Platform Help
   * Destinations interface  {#destinations-interface}
     * [Destinations workspace](destinations/destinations-workspace.md)
     * [Destination details page](destinations/destination-details-page.md) 
-    * Destinations catalog  {#destinations-cat}
+  * Destinations catalog  {#destinations-cat}
       * [Destinations catalog overview](destinations/destinations-catalog.md)
       * Adobe destinations{#adobe-destinations}
         * [Adobe destinations overview](destinations/adobe-destinations.md)
@@ -46,7 +46,7 @@ user-guide-title: Real-Time Customer Data Platform Help
         * [Oracle Eloqua](destinations/oracle-eloqua-destination.md)
         * [Oracle Responsys](destinations/oracle-responsys-destination.md)
         * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
-    * Destinations tutorials {#dest-tutorials}
+  * Destinations tutorials {#dest-tutorials}
       * [Connect to a destination](/help/rtcdp/destinations/connect-destination.md)
       * [Activate profiles and segments in a destination](destinations/activate-destinations.md) 
 * Privacy and data governance {#privacy}
