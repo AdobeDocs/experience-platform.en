@@ -34,7 +34,9 @@ To send segment data to Oracle Eloqua, you must first [connect the destination](
 * **Folder Path**: Provide the path in your storage location where Real-time CDP will drop your export data
 * **File Format**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location.
 
-    ![Eloqua basic information](/help/rtcdp/destinations/assets/responsys-basic-information.png)
+    ![Eloqua basic information](/help/rtcdp/destinations/assets/eloqua-basic-information.png)
+
+4. Click **Create** after filling in the fields in Basic Information. Your destination is now connected.
 
 >[!NOTE]
 >
