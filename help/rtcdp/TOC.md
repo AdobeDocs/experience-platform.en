@@ -54,7 +54,6 @@ user-guide-title: Real-Time Customer Data Platform Help
   * [Data Governance overview](privacy/data-governance-overview.md)
 * Real-time Customer Profile {#profile}
   * [Profile overview](profile/profile-overview.md)
-  * [Profile search](profile/profile-search.md)
   * [Identities & Identity namespaces](profile/identities-overview.md)
   * [Merge policies](profile/merge-policies.md)
 * Segmentation {#segmentation}
