@@ -10,6 +10,8 @@ user-guide-title: Real-Time Customer Data Platform Help
   * [Product overview](overview.md)
   * [Getting started](get-started.md)
   * [Metrics overview](home-page-dashboards.md)
+* Administration {#admin}
+  * [Administration guide](administration/filename.md)
 * Datasets {#datasets}
   * [Datasets](datasets/dataset.md)
   * [Data quality on Platform](datasets/filename.md)  
@@ -43,10 +45,6 @@ user-guide-title: Real-Time Customer Data Platform Help
   * [Identities & Identity namespaces](profile/identities-overview.md)
   * [Merge policies](profile/merge-policies.md)
   * [Profile viewer](profile/profile-viewer.md)
-* Sandboxes {#sand}
-  * [Manage sandboxes](sandboxes/filename.md)
-  * [Role-based access control](sandboxes/filename.md)
-  * [Sandboxes and role-based access control API reference](sandboxes/filename.md)
 * Segmentation {#segmentation}
   * [Segmentation overview](segmentation/segmentation-overview.md)
   * [Segment builder guide](segmentation/segment-builder-guide.md)
