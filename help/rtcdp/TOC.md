@@ -10,23 +10,9 @@ user-guide-title: Real-Time Customer Data Platform Help
   * [Product overview](overview.md)
   * [Getting started](get-started.md)
   * [Metrics overview](home-page-dashboards.md)
-* Administration {#admin}
-  * [Manage sandboxes](administration/filename.md)
-  * [Role-based access control](administration/filename.md)
-  * [Sandboxes and role-based access control API reference](administration/filename.md)
 * Datasets {#datasets}
   * [Datasets](datasets/dataset.md)
-  * [Dataset lifespan](datasets/filename.md)
-  * [Delete dataset and batch service](datasets/filename.md)
-  * [Update merge policies](datasets/filename.md)
-  * Data ingestion {#data-ingestion}
-    * [Data quality on Platform](datasets/filename.md)
-    * [How to ingest data via Streaming Ingestion APIs](datasets/filename.md)
-    * [Ingest data to existing properties using Adobe Analytics and Adobe Audience Manager](datasets/filename.md)
-    * [Create auto transfer of data from Audience Manager](datasets/filename.md)
-    * [Create auto transfer of data from Analytics](datasets/filename.md)
-    * [Setup ingestion of web and mobile data using Adobe Launch](datasets/filename.md)
-    * [Implement website tags with Adobe Launch](datasets/launch.md)
+  * [Data quality on Platform](datasets/filename.md)  
 * Destinations {#destinations}
   * [Destinations overview](destinations/destinations-overview.md)
   * Destinations interface  {#destinations-interface}
@@ -57,6 +43,10 @@ user-guide-title: Real-Time Customer Data Platform Help
   * [Identities & Identity namespaces](profile/identities-overview.md)
   * [Merge policies](profile/merge-policies.md)
   * [Profile viewer](profile/profile-viewer.md)
+* Sandboxes {#sand}
+  * [Manage sandboxes](sandboxes/filename.md)
+  * [Role-based access control](sandboxes/filename.md)
+  * [Sandboxes and role-based access control API reference](sandboxes/filename.md)
 * Segmentation {#segmentation}
   * [Segmentation overview](segmentation/segmentation-overview.md)
   * [Segment builder guide](segmentation/segment-builder-guide.md)
@@ -64,6 +54,7 @@ user-guide-title: Real-Time Customer Data Platform Help
   * [Customer AI (alpha) overview](sensei-insights/customer-ai.md)
 * Sources {#sources}
   * [Sources overview](sources/sources-overview.md)
+  * [Implement website tags with Adobe Launch](sources/launch.md)
   * Connectors {#connectors}
     * [Salesforce](sources/connector-overviews/salesforce.md)
     * [Azure Blob](sources/connector-overviews/azure-blob.md)
