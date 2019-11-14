@@ -5,21 +5,33 @@ description: An overview of how Real-time Customer Data Platform enables you to 
 seo-description: Real-time Customer Data Platform, Profile, data, experiences, channels
 ---
 
-# A unified view of your customer in Real-time CDP
+# Real-time Customer Profile overview
 
-Real-time Customer Data Platform (Real-time CDP) enables you to drive coordinated and consistent experiences for your customers no matter where or when they interact with your brand. Delivering these personalized experiences so that they feel relevant and timely is no small feat, but it can be achieved through the use of Real-time Customer Profile, part of Adobe Experience Platform.
+Real-time Customer Profile enables you to see a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third party data. Profile allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
 
-Real-time CDP is built on top of Adobe Experience Platform and utilizes many of the Experience Platform services and functionality, including the creation of Real-time Customer Profiles, aggregated from customer data across your many marketing channels and systems storing data for your organization.
+## Profiles in Real-time Customer Data Platform
 
-## Real-time Customer Profile
+Real-time Customer Data Platform enables you to drive coordinated and consistent experiences for your customers no matter where or when they interact with your brand. Delivering these personalized experiences so that they feel relevant and timely is no small feat, but it can be achieved through the use of Real-time Customer Profile, part of Adobe Experience Platform.
 
-With Profile, you can see a holistic view of each of your individual customers by combining data from a multitude of sources, including online, offline, CRM, and third party data. Profile allows you to consolidate this disparate customer data from different channels into a unified view that offers an actionable, timestamped account of every customer interaction.
+Real-time CDP is built on top of Adobe Experience Platform and utilizes many of the Experience Platform services and functionality, including the creation of Real-time Customer Profiles. These aggregated views of an individual customer bring together data from across your many marketing channels and the diverse systems that your organization is currently using to store customer data.
 
-This is done through the use of identities, and the ability to stitch these identities together as more becomes known about your customer.
+## Identities and identity namespaces
+
+As customer data comes together it is merged into a single profile through the use of identities, and the ability to stitch these identities together as more information becomes known about each customer.
+
+To learn more about identities and identity namespaces, see the [identities overview](/help/rtcdp/profile/identities-overview.md).
+
+## Merge policies
+
+When bringing customer data together, merge policies are the rules that Platform uses to determine how data will be prioritizes and what data will be combines to create that unified view.
+
+For more information on merge policies, see the [merge policies overview](/help/rtcdp/profile/merge-policies.md).
 
 ## Profile viewer
 
-Link to UI tutorial for viewing profiles in Platform.
+Platform allows you to easily view customer profiles and search for specific profiles using various attributes. 
+
+For details regarding how to view profiles within Platform, please see the [profile viewer overview](/help/rtcdp/profile/profile-viewer.md).
 
 ## Next steps
 
