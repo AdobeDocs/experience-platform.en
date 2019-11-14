@@ -34,7 +34,7 @@ To send segment data to Adobe Campaign, you must first [connect the destination]
 * **Description**: Enter a description for your destination.
 * **Bucket Name**: *For S3 connections*. Enter the location of your S3 bucket where Real-time CDP will deposit your files. 
 * **Folder Path**: Provide the path in your storage location where Real-time CDP will deposit your files.
-* **File Format**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location.
+* **File Format**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location. 
 
     ![Campaign basic information](/help/rtcdp/destinations/assets/adobe-campaign-basic-information.png)
 

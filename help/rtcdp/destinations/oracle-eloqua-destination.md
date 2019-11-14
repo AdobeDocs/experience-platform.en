@@ -9,9 +9,9 @@ seo-description: Oracle Eloqua is a software as a service (SaaS) platform for ma
 
 ## Overview
 
-[Oracle Eloqua](https://www.oracle.com/marketingcloud/products/marketing-automation/) is a software as a service (SaaS) platform for marketing automation offered by Oracle that aims to help B2B marketers and organizations manage marketing campaigns and sales lead generation.
+[Eloqua](https://www.oracle.com/marketingcloud/products/marketing-automation/) is a software as a service (SaaS) platform for marketing automation offered by Oracle that aims to help B2B marketers and organizations manage marketing campaigns and sales lead generation.
 
-To send segment data to Oracle Eloqua, you must first [connect the destination](#connect-destination) in Adobe Real-time Customer Data Platform, and then [set up a data import](#import-data-into-eloqua) from your storage location into Oracle Responsys.
+To send segment data to Oracle Eloqua, you must first [connect the destination](#connect-destination) in Adobe Real-time Customer Data Platform, and then [set up a data import](#import-data-into-eloqua) from your storage location into Oracle Eloqua.
 
 ## Connect to destination {#connect-destination}
 
@@ -19,7 +19,7 @@ To send segment data to Oracle Eloqua, you must first [connect the destination](
 
     ![Connect to Eloqua](/help/rtcdp/destinations/assets/connect-oracle-eloqua.png)
 
-1. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. For Oracle Eloqua, you can select between **SFTP with Password** and **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and press **[!UICONTROL Connect]**.
+2. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. For Oracle Eloqua, you can select between **SFTP with Password** and **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and press **[!UICONTROL Connect]**.
 
     ![Set up Eloqua wizard](/help/rtcdp/destinations/assets/eloqua-wizard.png)
 
@@ -28,7 +28,7 @@ To send segment data to Oracle Eloqua, you must first [connect the destination](
 
     ![Fill in Eloqua information](/help/rtcdp/destinations/assets/eloqua-step2.png)
 
-1. In **Basic Information**, fill in the relevant information for your destination, as shown below:
+3. In **Basic Information**, fill in the relevant information for your destination, as shown below:
 * **Name**: Pick a relevant name for your destination.
 * **Description**: Enter a description for your destination.
 * **Folder Path**: Provide the path in your storage location where Real-time CDP will drop your export data
