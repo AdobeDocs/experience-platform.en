@@ -14,8 +14,8 @@ user-guide-title: Real-Time Customer Data Platform Help
   * [Manage sandboxes](administration/filename.md)
   * [Role-based access control](administration/filename.md)
   * [Sandboxes and role-based access control API reference](administration/filename.md)
-  * [Implement website tags with Adobe Launch](administration/launch.md)
 * Datasets {#datasets}
+  * [Datasets](datasets/dataset.md)
   * [Dataset lifespan](datasets/filename.md)
   * [Delete dataset and batch service](datasets/filename.md)
   * [Update merge policies](datasets/filename.md)
@@ -26,7 +26,7 @@ user-guide-title: Real-Time Customer Data Platform Help
     * [Create auto transfer of data from Audience Manager](datasets/filename.md)
     * [Create auto transfer of data from Analytics](datasets/filename.md)
     * [Setup ingestion of web and mobile data using Adobe Launch](datasets/filename.md)
-    * [How to bring online data via Adobe Launch](datasets/filename.md)
+    * [Implement website tags with Adobe Launch](datasets/launch.md)
 * Destinations {#destinations}
   * [Destinations overview](destinations/destinations-overview.md)
   * Destinations interface  {#destinations-interface}
