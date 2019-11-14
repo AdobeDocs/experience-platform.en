@@ -32,7 +32,7 @@ user-guide-title: Real-Time Customer Data Platform Help
   * Destinations interface  {#destinations-interface}
     * [Destinations workspace](destinations/destinations-workspace.md)
     * [Destination details page](destinations/destination-details-page.md) 
-      * Destinations catalog  {#destinations-cat}
+    * Destinations catalog  {#destinations-cat}
       * [Destinations catalog overview](destinations/destinations-catalog.md)
       * Adobe destinations{#adobe-destinations}
         * [Adobe destinations overview](destinations/adobe-destinations.md)
