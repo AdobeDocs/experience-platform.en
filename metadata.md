@@ -8,7 +8,7 @@ getting-started-title: Getting Started
 getting-started-url: https://helpx.adobe.com/support/experience-cloud.html
 tutorials-title: Tutorials
 tutorials-url: https://helpx.adobe.com/support/experience-cloud.html
-git-repo: https://git.corp.adobe.com/AdobeDocs/experience-platform.en
+git-repo: https://github.com/AdobeDocs/experience-platform.en
 index: yes
 ---
 

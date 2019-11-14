@@ -11,28 +11,16 @@ user-guide-title: Real-Time Customer Data Platform Help
   * [Getting started](get-started.md)
   * [Metrics overview](home-page-dashboards.md)
 * Administration {#admin}
-  * [Manage sandboxes](administration/filename.md)
-  * [Role-based access control](administration/filename.md)
-  * [Sandboxes and role-based access control API reference](administration/filename.md)
-  * [Implement website tags with Adobe Launch](administration/launch.md)
+  * [Administration guide](administration/filename.md)
 * Datasets {#datasets}
-  * [Dataset lifespan](datasets/filename.md)
-  * [Delete dataset and batch service](datasets/filename.md)
-  * [Update merge policies](datasets/filename.md)
-  * Data ingestion {#data-ingestion}
-    * [Data quality on Platform](datasets/filename.md)
-    * [How to ingest data via Streaming Ingestion APIs](datasets/filename.md)
-    * [Ingest data to existing properties using Adobe Analytics and Adobe Audience Manager](datasets/filename.md)
-    * [Create auto transfer of data from Audience Manager](datasets/filename.md)
-    * [Create auto transfer of data from Analytics](datasets/filename.md)
-    * [Setup ingestion of web and mobile data using Adobe Launch](datasets/filename.md)
-    * [How to bring online data via Adobe Launch](datasets/filename.md)
+  * [Datasets](datasets/dataset.md)
+  * [Data quality on Platform](datasets/filename.md)  
 * Destinations {#destinations}
   * [Destinations overview](destinations/destinations-overview.md)
   * Destinations interface  {#destinations-interface}
     * [Destinations workspace](destinations/destinations-workspace.md)
     * [Destination details page](destinations/destination-details-page.md) 
-    * Destinations catalog  {#destinations-cat}
+  * Destinations catalog  {#destinations-cat}
       * [Destinations catalog overview](destinations/destinations-catalog.md)
       * Adobe destinations{#adobe-destinations}
         * [Adobe destinations overview](destinations/adobe-destinations.md)
@@ -46,17 +34,17 @@ user-guide-title: Real-Time Customer Data Platform Help
         * [Oracle Eloqua](destinations/oracle-eloqua-destination.md)
         * [Oracle Responsys](destinations/oracle-responsys-destination.md)
         * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
-    * Destinations tutorials {#dest-tutorials}
+  * Destinations tutorials {#dest-tutorials}
       * [Connect to a destination](/help/rtcdp/destinations/connect-destination.md)
-      * [Activate profiles and segments in a destination](destinations/activate-destinations.md) 
+      * [Activate profiles and segments to a destination](destinations/activate-destinations.md) 
 * Privacy and data governance {#privacy}
   * [Privacy overview](privacy/privacy-overview.md)
   * [Data Governance overview](privacy/data-governance-overview.md)
 * Real-time Customer Profile {#profile}
   * [Profile overview](profile/profile-overview.md)
-  * [Profile search](profile/profile-search.md)
   * [Identities & Identity namespaces](profile/identities-overview.md)
   * [Merge policies](profile/merge-policies.md)
+  * [Profile viewer](profile/profile-viewer.md)
 * Segmentation {#segmentation}
   * [Segmentation overview](segmentation/segmentation-overview.md)
   * [Segment builder guide](segmentation/segment-builder-guide.md)
@@ -64,6 +52,7 @@ user-guide-title: Real-Time Customer Data Platform Help
   * [Customer AI (alpha) overview](sensei-insights/customer-ai.md)
 * Sources {#sources}
   * [Sources overview](sources/sources-overview.md)
+  * [Implement website tags with Adobe Launch](sources/launch.md)
   * Connectors {#connectors}
     * [Salesforce](sources/connector-overviews/salesforce.md)
     * [Azure Blob](sources/connector-overviews/azure-blob.md)

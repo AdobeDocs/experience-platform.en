@@ -19,7 +19,7 @@ To send segment data to Adobe Campaign, you must first [connect the destination]
 
     ![Connect to adobe campaign](/help/rtcdp/destinations/assets/connect-adobe-campaign.png)
 
-2. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. For Adobe Campaign, you can select between **Amazon S3**, **SFTP with Password** and **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and press **[!UICONTROL Connect]**.
+1. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. For Adobe Campaign, you can select between **Amazon S3**, **SFTP with Password** and **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and press **[!UICONTROL Connect]**.
 
     ![Set up Campaign wizard](/help/rtcdp/destinations/assets/adobe-campaign-wizard.png)
 
@@ -29,14 +29,16 @@ To send segment data to Adobe Campaign, you must first [connect the destination]
 
     ![Fill in Campaign information](/help/rtcdp/destinations/assets/adobe-campaign-step2.png)
 
-3. In **Basic Information**, fill in the relevant information for your destination, as shown below:
-* **Name**: Pick a relevant name for your destination.
-* **Description**: Enter a description for your destination.
-* **Bucket Name**: *For S3 connections*. Enter the location of your S3 bucket where Real-time CDP will deposit your files. 
-* **Folder Path**: Provide the path in your storage location where Real-time CDP will deposit your files.
-* **File Format**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location.
+1. In **Basic Information**, fill in the relevant information for your destination, as shown below:
+   * **Name**: Pick a relevant name for your destination.
+   * **Description**: Enter a description for your destination.
+   * **Bucket Name**: *For S3 connections*. Enter the location of your S3 bucket where Real-time CDP will deposit your export data as CSV or tab-delimited files. 
+   * **Folder Path**: Provide the path in your storage location where Real-time CDP will deposit your export data as CSV or tab-delimited files.
+   * **File Format**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location. 
 
     ![Campaign basic information](/help/rtcdp/destinations/assets/adobe-campaign-basic-information.png)
+
+1. Click **Create** after filling in the fields in **Basic Information**. Your destination is now connected and you can [activate segments](/help/rtcdp/destinations/activate-destinations.md) to the destination.
 
 >[!NOTE]
 >

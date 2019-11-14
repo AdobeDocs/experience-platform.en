@@ -9,7 +9,7 @@ seo-description: Responsys is an enterprise email marketing tool for cross-chann
 
 ## Overview
 
-[Oracle Responsys](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/) is an enterprise email marketing tool for cross-channel marketing campaigns offered by Oracle to personalize interactions across email, mobile, display, and social.
+[Responsys](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/) is an enterprise email marketing tool for cross-channel marketing campaigns offered by Oracle to personalize interactions across email, mobile, display, and social.
 
 To send segment data to Oracle Responsys, you must first [connect the destination](#connect-destination) in Adobe Real-time Customer Data Platform, and then [set up a data import](#import-data-into-responsys) from your storage location into Oracle Responsys.
 
@@ -19,7 +19,7 @@ To send segment data to Oracle Responsys, you must first [connect the destinatio
 
     ![Connect to Responsys](/help/rtcdp/destinations/assets/connect-oracle-responsys.png)
 
-2. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. For Oracle Responsys, you can select between **SFTP with Password** and **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and press **[!UICONTROL Connect]**.
+1. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. For Oracle Responsys, you can select between **SFTP with Password** and **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and press **[!UICONTROL Connect]**.
 
     ![Set up Responsys wizard](/help/rtcdp/destinations/assets/responsys-wizard.png)
 
@@ -28,13 +28,15 @@ To send segment data to Oracle Responsys, you must first [connect the destinatio
 
     ![Fill in Responsys information](/help/rtcdp/destinations/assets/responsys-step2.png)
 
-3. In **Basic Information**, fill in the relevant information for your destination, as shown below:
-* **Name**: Pick a relevant name for your destination.
-* **Description**: Enter a description for your destination.
-* **Folder Path**: Provide the path in your storage location where Real-time CDP will drop your export data
-* **File Format**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location.
+1. In **Basic Information**, fill in the relevant information for your destination, as shown below:
+   * **Name**: Pick a relevant name for your destination.
+   * **Description**: Enter a description for your destination.
+   * **Folder Path**: Provide the path in your storage location where Real-time CDP will deposit your export data as CSV or tab-delimited files.
+   * **File Format**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location.
 
     ![Responsys basic information](/help/rtcdp/destinations/assets/responsys-basic-information.png)
+
+1. Click **Create** after filling in the fields in **Basic Information**. Your destination is now connected and you can [activate segments](/help/rtcdp/destinations/activate-destinations.md) to the destination.
 
 >[!NOTE]
 >
