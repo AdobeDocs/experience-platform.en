@@ -48,7 +48,7 @@ user-guide-title: Real-Time Customer Data Platform Help
         * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
   * Destinations tutorials {#dest-tutorials}
       * [Connect to a destination](/help/rtcdp/destinations/connect-destination.md)
-      * [Activate profiles and segments in a destination](destinations/activate-destinations.md) 
+      * [Activate profiles and segments to a destination](destinations/activate-destinations.md) 
 * Privacy and data governance {#privacy}
   * [Privacy overview](privacy/privacy-overview.md)
   * [Data Governance overview](privacy/data-governance-overview.md)

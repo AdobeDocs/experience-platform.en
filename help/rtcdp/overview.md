@@ -28,5 +28,5 @@ The following documentation topics are recommended when beginning to work with A
 * How to ingest data (link to data ingestion)
 * How to access profiles (link to profile access doc)
 * How to build segments (link)
-* How to activate segments to destinations (link)
+* [How to activate segments to destinations](/help/rtcdp/destinations/activate-destinations.md)
 * How to define and enforce data governance policies (link)
