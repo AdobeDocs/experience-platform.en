@@ -1,8 +1,8 @@
 ---
-title: Document title
-seo-title: Document title in Adobe Experience Platform
-description: description
-seo-description: seo description
+title: Segmentation service overview
+seo-title: Segmentation service in Adobe Real-time Customer Data Platform
+description: An overview describing segmentation service.
+seo-description: An overview describing segmentation service and segments on Adobe Real-time Customer Data Platform.
 ---
 
 # Segmentation service in Real-time Customer Data Platform
