@@ -28,15 +28,15 @@ To send segment data to Oracle Eloqua, you must first [connect the destination](
 
     ![Fill in Eloqua information](/help/rtcdp/destinations/assets/eloqua-step2.png)
 
-1. In **Basic Information**, fill in the relevant information for your destination, as shown below:
-* **Name**: Pick a relevant name for your destination.
-* **Description**: Enter a description for your destination.
-* **Folder Path**: Provide the path in your storage location where Real-time CDP will drop your export data
-* **File Format**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location.
+1. In **Basic Information**, fill in the relevant information for your destination as shown below, then click **Create**: 
+   * **Name**: Pick a relevant name for your destination.
+   * **Description**: Enter a description for your destination.
+   * **Folder Path**: Provide the path in your storage location where Real-time CDP will deposit your export data as CSV or tab-delimited files.
+   * **File Format**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location.
 
     ![Eloqua basic information](/help/rtcdp/destinations/assets/eloqua-basic-information.png)
 
-1. Click **Create** after filling in the fields in Basic Information. Your destination is now connected.
+1. Your destination is now connected and you can [activate segments](/help/rtcdp/destinations/activate-destinations.md) to the destination.
 
 >[!NOTE]
 >
