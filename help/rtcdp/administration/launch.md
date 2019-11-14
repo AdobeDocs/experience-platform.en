@@ -11,9 +11,9 @@ This tutorial explains how to implement your website tags to send data to Adobe 
 
 ## Prerequisites
 
-* The necessary schema and dataset are created in Platform
-* The necessary configuration has been deployed in Experience Edge and has the matching Configuration ID and Edge domain
-* The company CMS has already been configured to deliver a JavaScript object on each page with the data you need to send to Platform
+* The necessary schema and dataset are created in Platform.
+* The necessary configuration has been deployed in Experience Edge and has the matching Configuration ID and Edge domain.
+* The company CMS has already been configured to deliver a JavaScript object on each page with the data you need to send to Platform.
 
 ## Steps
 
@@ -60,6 +60,8 @@ Next, create a rule to let Launch know what data you want to send to Adobe Exper
     To configure the action, tell Launch where to find your data layer. The data layer is a JavaScript object that exists on the page, which is delivered from the same CMS that renders the webpage. Provide the JavaScript path to the data object.
 
     ![image](assets/launch-add-aep-action.png)
+
+    The data object you send needs to be valid XDM that will pass validation against the schema that is used by the dataset connected to your Configuration ID.
     
 1. Click **[!UICONTROL Keep Changes]**.
 
@@ -67,7 +69,7 @@ For more information, see [Rules](https://docs.adobe.com/content/help/en/launch/
 
 ## Bundle the extension and rule in a library
 
-Next, bundle the extension and your new rule together in a library and test those changes in a development environment.
+Next, [bundle the extension](https://docs.adobe.com/content/help/en/launch/using/reference/publish/overview.html) and your new rule together in a library and test those changes in a development environment.
 
 ![image](assets/launch-add-changes-to-library.png)
 
