@@ -22,22 +22,22 @@ user-guide-title: Real-Time Customer Data Platform Help
     * [Destinations workspace](destinations/destinations-workspace.md)
     * [Destination details page](destinations/destination-details-page.md) 
   * Destinations catalog  {#destinations-cat}
-      * [Destinations catalog overview](destinations/destinations-catalog.md)
-      * Adobe destinations{#adobe-destinations}
-        * [Adobe destinations overview](destinations/adobe-destinations.md)
-        * [Adobe Campaign](destinations/adobe-campaign-destination.md)
-      * Advertising destinations{#advertiser-destinations}
-        * [Advertising destinations overview](destinations/advertising-destinations.md)
-        * [Google](destinations/google-destination.md)
-      * Email marketing destinations{#email-destinations}
-        * [Email marketing destinations overview](destinations/email-marketing-destinations.md)
-        * [Adobe Campaign](destinations/adobe-campaign-destination.md)
-        * [Oracle Eloqua](destinations/oracle-eloqua-destination.md)
-        * [Oracle Responsys](destinations/oracle-responsys-destination.md)
-        * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
+    * [Destinations catalog overview](destinations/destinations-catalog.md)
+    * Adobe destinations{#adobe-destinations}
+      * [Adobe destinations overview](destinations/adobe-destinations.md)
+      * [Adobe Campaign](destinations/adobe-campaign-destination.md)
+    * Advertising destinations{#advertiser-destinations}
+      * [Advertising destinations overview](destinations/advertising-destinations.md)
+      * [Google](destinations/google-destination.md)
+    * Email marketing destinations{#email-destinations}
+      * [Email marketing destinations overview](destinations/email-marketing-destinations.md)
+      * [Adobe Campaign](destinations/adobe-campaign-destination.md)
+      * [Oracle Eloqua](destinations/oracle-eloqua-destination.md)
+      * [Oracle Responsys](destinations/oracle-responsys-destination.md)
+      * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
   * Destinations tutorials {#dest-tutorials}
-      * [Connect to a destination](/help/rtcdp/destinations/connect-destination.md)
-      * [Activate profiles and segments to a destination](destinations/activate-destinations.md) 
+    * [Connect to a destination](/help/rtcdp/destinations/connect-destination.md)
+    * [Activate profiles and segments to a destination](destinations/activate-destinations.md) 
 * Privacy and data governance {#privacy}
   * [Privacy overview](privacy/privacy-overview.md)
   * [Data Governance overview](privacy/data-governance-overview.md)
