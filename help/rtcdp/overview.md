@@ -25,8 +25,8 @@ With Real-time CDP, you can:
 The following documentation topics are recommended when beginning to work with Adobe Real-time Customer Data Platform:
 
 * [How to get started](get-started.md)
-* How to ingest data (link to data ingestion)
-* How to access profiles (link to profile access doc)
-* How to build segments (link)
-* [How to activate segments to destinations](/help/rtcdp/destinations/activate-destinations.md)
-* How to define and enforce data governance policies (link)
+* [How to ingest data](https://www.adobe.io/apis/experienceplatform/home/data-ingestion.html)
+* [How to access profiles](profile/profile-overview.md)
+* [How to build segments](segmentation/segmentation-overview.md)
+* [How to activate segments to destinations](destinations/activate-destinations.md)
+* [How to define and enforce data governance policies](privacy/data-governance-overview.md)
