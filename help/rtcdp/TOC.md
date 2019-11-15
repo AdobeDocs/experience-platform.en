@@ -12,7 +12,7 @@ user-guide-title: Real-Time Customer Data Platform Help
   * [Metrics overview](home-page-dashboards.md)
   * [Release notes](https://www.adobe.io/apis/experienceplatform/home/services/release-notes.html#!end-user/markdown/release-notes/release-notes.md)
 * Administration {#admin}
-  * [Administration guide](administration/filename.md)
+  * [Administration overview](administration/admin-overview.md)
 * Datasets {#datasets}
   * [Datasets](datasets/dataset.md)
   * [Data quality on Platform](datasets/filename.md)  
