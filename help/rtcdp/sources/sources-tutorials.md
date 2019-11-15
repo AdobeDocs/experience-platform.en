@@ -5,11 +5,18 @@ description: Sources tutorials
 
 # Sources tutorials
 
-The following is a list of tutorials for creating source connections using the UI:
+Source connections can be created by using the Real-time Customer Data Platform user interface. The following Adobe I/O tutorials provide steps for creating connectors for available sources.
 
-* [Salesforce](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/creating_a_connector_tutorial/using_data_connector_ui_tutorial.md)
-* [Azure Blob](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/creating_a_connector_tutorial/using_data_connector_ui_tutorial.md)
-* [Microsoft Dynamics 365](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/creating_a_connector_tutorial/using_data_connector_ui_tutorial.md)
-* [Amazon S3](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/creating_a_connector_tutorial/using_data_connector_ui_tutorial.md)
-* [Adobe Analytics](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/creating_a_connector_tutorial/using_data_connector_ui_tutorial.md)
-* [Adobe Audience Manager](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/creating_a_connector_tutorial/using_data_connector_ui_tutorial.md)
+## Adobe applications
+
+-   [Adobe Audience Manager connector tutorial](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/aam-ui-tutorial.md)
+-   [Adobe Analytics connector tutorial](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/adobe-analytics-ui-tutorial.md)
+
+## Cloud Storage
+
+-   [Azure Blob and Amazon S3 connector tutorial](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/amazon-s3-ui-tutorial.md)
+-   [FTP and SFTP connector tutorial](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ftp-sftp-ui-tutorial.md)
+
+## Customer Relationship Management (CRM)
+
+-   [Microsoft Dynamics and Salesforce connector tutorial](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/dynamics-salesforce-ui-tutorial.md)
