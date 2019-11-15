@@ -49,16 +49,8 @@ user-guide-title: Real-Time Customer Data Platform Help
   * [Segmentation overview](segmentation/segmentation-overview.md)
   * [Segment builder guide](segmentation/segment-builder-guide.md)
 * Sensei insights {#sensei}
-  * [Customer AI (alpha) overview](sensei-insights/customer-ai.md)
+  * [Customer AI](sensei-insights/customer-ai.md)
 * Sources {#sources}
   * [Sources overview](sources/sources-overview.md)
+  * [Sources tutorials](sources/sources-tutorials.md)
   * [Implement website tags with Adobe Launch](sources/launch.md)
-  * Connectors {#connectors}
-    * [Salesforce](sources/connector-overviews/salesforce.md)
-    * [Azure Blob](sources/connector-overviews/azure-blob.md)
-    * [Microsoft Dynamics 365](sources/connector-overviews/microsoft-dynamics-365.md)
-    * [AWS S3](sources/connector-overviews/amazon-s3.md)
-    * [Analytics data connector](sources/connector-overviews/adobe-analytics.md)
-    * [Adobe Audience Manager](sources/connector-overviews/adobe-audience-manager.md)
-  * [Sources tutorials](sources/sources-ui-tutorials.md)
-  * [Sources API reference](sources/sources-api-reference.md)
