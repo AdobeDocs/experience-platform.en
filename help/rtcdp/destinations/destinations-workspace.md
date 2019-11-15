@@ -1,69 +1,68 @@
 ---
-title: Destinations UI
-seo-title: Destinations UI
-description: In Adobe Real-Time Customer Data Platform, you can get to the destinations UI by pressing Destinations in the Platform workspace.
-seo-description: In Adobe Real-Time Customer Data Platform, you can get to the destinations UI by pressing Destinations in the Platform workspace.
+title: Destinations workspace
+seo-title: Destinations workspace
+description: In Adobe Real-time Customer Data Platform, select Destinations from the left navigation bar to access the destinations workspace.
+seo-description: In Adobe Real-time Customer Data Platform, select Destinations from the left navigation bar to access the destinations workspace.
 ---
 
 # Destinations workspace {#destinations-workspace}
 
-In Adobe Real-Time Customer Data Platform, select **Destinations** from the left navigation bar to access the destinations workspace
-
-![Destinations-overview](/help/rtcdp/destinations/assets/destinations-overview.png)
+In Adobe Real-time Customer Data Platform, select **Destinations** from the left navigation bar to access the Destinations workspace.
 
 The Destinations workspace consists of four sections, **Catalog**, **Browse**, **Accounts**, and **Data flows**, which are described in the sections below.
 
-## Catalog
+![Destinations-overview](/help/rtcdp/destinations/assets/destinations-overview.png)
 
-The **[!UICONTROL Catalog]** tab is the default view in the workspace. The **[!UICONTROL Catalog]** tab displays all destinations that you can send data to, grouped by destination category. Press any destination in the catalog to open the right rail, which enables you to set up a connection to the destination, inspect the existing connections to the destination, and read documentation about the destination.
+## Catalog {#catalog}
+
+The **[!UICONTROL Catalog]** tab displays a list of all destinations offered by Adobe, that you can send data to. Select a destination in the catalog to open the right rail. Here, you can set up a connection to the destination (**Connect destination**) or learn more detailed information about each destination by viewing the documentation (**View documentation**).
 
 ![Destination catalog options](/help/rtcdp/destinations/assets/destination-ui-catalog-options.png)
 
-For more information on destination categories and information on each destination, see the [Destination Catalog](/help/rtcdp/destinations/destinations-catalog.md).
+For more information on destination categories and information on each destination, see [Destination Catalog](/help/rtcdp/destinations/destinations-catalog.md).
 
-## Browse
+## Browse {#browse}
 
-The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection and displays whether segments are actively being sent to destinations. See the table below for all the information you can get on each destination:
+The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection. Destinations with the enabled toggle turned on set the destination to active and vice-versa. You can also view the destinations where you have data flowing by selecting **Segments > Browse** and selecting a segment to inspect. See the table below for all the information that is provided for each destination in the Browse tab:
 
+![Browse Tab](/help/rtcdp/destinations/assets/browse-tab.png)
 
 Element | Description 
 ---------|----------
- Destination Name | The name you provided for your destination.
- Destination | ---
- Account | ---
- Created | The date and UTC time when this destination was created
- Segments | The number of segments that are being sent to this destination
- Status | Indicates whether data is currently being activated to this destination. If the status is **Disabled**, do this -----
+ Destination Name | The name you provided for your activation flow to this destination.
+ Destination | The destination platform that you selected for your activation flow.
+ Created | The date and UTC time when the activation flow to the destination was created.
+ Connection Type | *For email marketing destinations only*. Represents the connection type to your storage bucket. Can be S3 or FTP. 
+ User ID | The account credentials you selected for the destination flow.
+ Segments | The number of segments that are being activated to this destination.
+ Status | `Active` or `Inactive`. Indicates whether data is currently being activated to this destination. To edit the status, see [Disable activation](/help/rtcdp/destinations/activate-destinations.md#disable-activation).
 
- ![Browse Tab](/help/rtcdp/destinations/assets/browse-tab.png)
-
-Click into any destination row to bring up more information about the destination in the right rail. 
+Click on a destination row to bring up more information about the destination in the right rail.
 
 ![Click destination row](/help/rtcdp/destinations/assets/click-destination-row.png)
 
-Press the destination name to see information about the segments that are activated to this destination. Press **[!UICONTROL Edit activation]** to modify which segments are being sent to this destination.
+Select the destination name to see information about the segments activated to this destination. Click **[!UICONTROL Edit activation]** to modify or add to the segments that are being sent to this destination.
 
-## Accounts
+## Accounts {#accounts}
 
-In the **[!UICONTROL Accounts]** tab, you can see information about the connections that you have established with various destinations. See the table below for all the information you can get on each destination:
+In the **[!UICONTROL Accounts]** tab, you can learn more about the connections that you have established with various destinations. See the table below for all the information you can get on each destination:
 
-Element | Description 
+![Accounts tab](/help/rtcdp/destinations/assets/accounts-tab.png)
+
+Element | Description
 ---------|----------
  Name | For email marketing platforms, the name is a combination between the protocol type and the domain you selected in the [connect destination wizard](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination).
  Platform | The destination for which you have set up the connection.
  User ID | The username you selected in the [connect destination wizard](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination).
- Flows | ---
+ Flows | Represents the number of unique successful destination flows connected with basic information created for a destination.
  Authorized | The date when the connection to this destination was authorized.
- Expiration | Indicates when the connection to this destination will expire. If the status is **Expired** or about to expire, do this -----
+ 
+## Data flows {#data-flows}
 
-![Accounts tab](/help/rtcdp/destinations/assets/accounts-tab.png)
-
-## Data flows
-
-The **[!UICONTROL Data flows]** tab displays a graphic representation of the activation flows that you have set up in the Real-Time Customer Data Platform.
+The **[!UICONTROL Data flows]** tab displays a graphic representation of the activation flows that you have set up in the Real-time Customer Data Platform.
 
 ![Data-flows1](/help/rtcdp/destinations/assets/data-flows1.png)
 
-Click into any of the destinations displayed on the page and press **[!UICONTROL View flows]** to see get information on all the flows you have set up for each destination.
+Select any of the destinations displayed on the page and press **[!UICONTROL View flows]** to see information on all the data flows you have set up for each destination.
 
 ![Data-flows2](/help/rtcdp/destinations/assets/data-flows2.png)
