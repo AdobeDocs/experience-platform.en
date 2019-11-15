@@ -11,16 +11,14 @@ Source connections can be created by using the Real-time Customer Data Platform 
 
 ## Adobe applications
 
--   [Adobe Audience Manager connector](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/creating_a_connector_tutorial/using_data_connector_ui_tutorial.md)
--   [Adobe Analytics](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/creating_a_connector_tutorial/using_data_connector_ui_tutorial.md)
+-   [Adobe Audience Manager connector tutorial](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/aam-ui-tutorial.md)
+-   [Adobe Analytics connector tutorial](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/adobe-analytics-ui-tutorial.md)
 
 ## Cloud Storage
 
--   [Azure Blob](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/creating_a_connector_tutorial/using_data_connector_ui_tutorial.md)
+-   [Azure Blob and Amazon S3 connector tutorial](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/amazon-s3-ui-tutorial.md)
+-   [FTP and SFTP connector tutorial](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ftp-sftp-ui-tutorial.md)
 
--   [Salesforce](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/creating_a_connector_tutorial/using_data_connector_ui_tutorial.md)
+## Customer Relationship Management (CRM)
 
--   [Microsoft Dynamics 365](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/creating_a_connector_tutorial/using_data_connector_ui_tutorial.md)
--   [Amazon S3](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/creating_a_connector_tutorial/using_data_connector_ui_tutorial.md)
-
-
+-   [Microsoft Dynamics and Salesforce connector tutorial](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/dynamics-salesforce-ui-tutorial.md)
