@@ -7,7 +7,7 @@ seo-description: Sources tutorials
 
 # Sources tutorials
 
-The following is a list of tutorials for creating in-bound source connections in the UI:
+The following is a list of tutorials for creating source connections using the UI:
 
 -   [Salesforce](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/creating_a_connector_tutorial/using_data_connector_ui_tutorial.md)
 -   [Azure Blob](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/creating_a_connector_tutorial/using_data_connector_ui_tutorial.md)
