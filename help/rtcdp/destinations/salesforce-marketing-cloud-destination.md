@@ -15,11 +15,11 @@ To send segment data to Salesforce Marketing Cloud, you must first [connect the 
 
 ## Connect destination {#connect-destination}
 
-1. In **[!UICONTROL Connections > Destinations]**, select Salesforce Marketing Cloud, and press **[!UICONTROL Connect destination]**.
+1. In **[!UICONTROL Connections > Destinations]**, select Salesforce Marketing Cloud, then select **[!UICONTROL Connect destination]**.
 
     ![Connect to Salesforce](/help/rtcdp/destinations/assets/connect-salesforce.png)
 
-1. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. For Salesforce Marketing Cloud, you can select between **SFTP with Password** and **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and press **[!UICONTROL Connect]**.
+1. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. For Salesforce Marketing Cloud, you can select between **SFTP with Password** and **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect]**.
 
     ![Set up Salesforce wizard](/help/rtcdp/destinations/assets/salesforce-step1.png)
 
