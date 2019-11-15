@@ -1,8 +1,8 @@
 ---
 title: Email Marketing Destinations
 seo-title: Email Marketing Destinations
-description: Email Service Providers (ESPs) allow you to manage your email marketing, such as for sending promotional email campaigns.
-seo-description: Email Service Providers (ESPs) allow you to manage your email marketing, such as for sending promotional email campaigns.
+description: Email Service Providers (ESPs) allow you to manage your email marketing activities, such as for sending promotional email campaigns.
+seo-description: Email Service Providers (ESPs) allow you to manage your email marketing activities, such as for sending promotional email campaigns.
 ---
 
 # Email marketing destinations {#email-marketing-destinations}
@@ -11,17 +11,17 @@ Email Service Providers (ESPs) enable you to manage your email marketing activit
 
 To send segments to email marketing destinations for your campaigns, Adobe Real-time CDP must first connect to the destination.
 
-Connecting to email marketing destinations is a three-step process, the first step is identical for all email marketing destinations. Each of the steps is described further below on this page.
+Connecting to email marketing destinations is a three-step process. Each of the steps is described further below on this page.
 
-In the connect destination flow, described in the section below, you will grant Adobe access your storage location, either Amazon S3 or SFTP. Real-time CDP exports your segments as `.csv` or `.txt` files and delivers them to your preferred location. Then, in your preferred email marketing platform, you can schedule a regular data import from your storage location into the platform. The process to import data into email marketing platforms is specific to each platform. See the individual destinations articles for more information. 
+In the connect destination flow, described in the section below, connect to either Amazon S3 or SFTP. Real-time CDP exports your segments as `.csv` or `.txt` files and delivers them to your preferred location. Schedule your data import in your email marketing platform from the storage location enabled in Real-time CDP. The process to import data varies for each partner. See the individual destinations articles for more information. 
 
 ## Step 1 - Connect destination {#connect-destination}
 
-1. In **[!UICONTROL Connections > Destinations]**, select the email marketing destination that you want to connect to, and press **[!UICONTROL Connect destination]**.
+1. In **[!UICONTROL Connections > Destinations]**, select the email marketing destination that you want to connect to, then select **[!UICONTROL Connect destination]**.
 
     ![Connect to destination](/help/rtcdp/destinations/assets/connect-destination.png)
 
-2. In the Connect wizard, select the **[!UICONTROL Connection type]** for your storage location. You can select between **Amazon S3**, **SFTP with Password**, **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and press **[!UICONTROL Connect]**.
+2. In the Connect wizard, select the **[!UICONTROL Connection type]** for your storage location. You can select between **Amazon S3**, **SFTP with Password**, **SFTP with SSH Key**. Fill in the information below, depending on your connection type, then select **[!UICONTROL Connect]**.
 
 For **S3 connections**, you must provide your Access Key ID and Secret Access Key. 
 
