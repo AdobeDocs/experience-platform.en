@@ -40,7 +40,21 @@ With Real-time CDP, powered by Adobe Experience Platform, Luma’s marketing org
 1. Create a single, real-time view of their consumers, independent of where data originates.  
 1. Drive a consistent, relevant and personalized experience across every touchpoint.
 
-### Customer profile
+## Steps
+
+This tutorial includes the following steps:
+
+1. Build the [customer profile](#customer-profile).
+1. [Personalize](#personalizing-the-user-experience) the user experience.
+1. Use [multiple data sources](#using-multiple-data-sources).
+1. [Configure a data source](#configuring-a-data-source). 
+1. [Collect the data](#bringing-the-data-together-for-a-specific-customer) for a specific customer.
+1. Set up [segments](#segments).
+1. Set up [destinations](#destinations).
+1. [Stitch the profile across devices](#cross-device-identity-stitching).
+1. [Analyze the profile](#analyzing-the-profile).
+
+## Customer profile
 
 When customers first visit your site, you don't know anything about them. 
 
@@ -79,7 +93,7 @@ Both identies are combined into a single profile in Experience Platform. Luma no
 
 Based on the browsing behavior of the anonymous visitor in the Men's section of the site, it might have been assumed that the customer was a male. Now that she’s logged in, Luma recognizes Sarah Rose. Luma uses the power of the real-time customer profile to refine the messaging delivered to her across channels.  
 
-### Personalizing the user experience
+## Personalizing the user experience
 
 Sarah is welcomed with a loyalty message and thanked for being a Bronze member with more information on benefits and how to increase her status and points.
 
@@ -105,7 +119,7 @@ Adobe Real-time Customer Data Platform, powered by Adobe Experience Platform, is
 * Govern known and unknown data usage 
 * Accelerate marketing use cases at scale 
 
-### Using multiple data sources
+## Using multiple data sources
 
 The team at Luma has all of their behavioral and customer data in a single place. 
 
@@ -120,7 +134,7 @@ They can ingest data from all of the following sources:
 
 All this data from disparate sources is merged into a single unified customer profile.
 
-### Configuring a data source
+## Configuring a data source
 
 Use Real-time Customer Data Platform to bring new sources of data into platform. Real-time CDP includes a catalog of data sources that can be added to the profile in just a few clicks.  
 
@@ -153,7 +167,7 @@ For example, to ingest Luma’s CRM data, filter the catalog by *CRM*, and all o
 
 It's done. You just added Microsoft CRM as a data source into Experience Platform.
 
-### Bringing the data together for a specific customer
+## Bringing the data together for a specific customer
 
 In this scenario, search profiles for Sarah Rose. Her profile appears, with the email she used to log in. 
 
@@ -170,7 +184,7 @@ The Real-time CDP profile reduces the Luma marketing team's workflow from weeks 
 
 The marketing team can use this enhanced, real-time customer profile to better personalize Sarah's experience and increase her brand loyalty with Luma.
 
-### Segments
+## Segments
 
 The powerful Adobe Experience Platform segmentation capabilities enable marketers to combine attributes, events and existing segments, based on data captured in the real-time customer profile. 
 
@@ -201,7 +215,7 @@ Loyalty member
 
 Because Sarah added an apparent gift item in the cart and abandoned it, Luma can target her with a free gift wrap offer.
 
-### Destinations
+## Destinations
 
 When you've added the “Gift Giving Cart Abandoners” segment, you can see roughly how many people are part of this segment. You can take action on it and make it available for personalization across channels.  
 
@@ -254,7 +268,7 @@ When you save, a visual data flow canvas shows the segment mapped from the unifi
 
 ![image](assets/luma-flow.png)
 
-### Cross-device identity stitching
+## Cross-device identity stitching
 
 Sarah browses a social media site on her mobile device, and she sees a Luma ad. It reminds her of the item she left in her cart.
 
@@ -271,10 +285,10 @@ She buys the sweater, adds gift wrap, and writes a gift note. She also has the o
 
 Thanks to audience suppression capabilities, Sarah will not be targeted with that men"s sweater moving forward.
 
-### Analyzing the profile
+## Analyzing the profile
 
 Luma marketers use Adobe Experience Platform to look at the gift givers segment on the Real-time CDP Dashboard. They view the results of this initiative over time and see that it's growing. Customers are responding to offers and spending more money.  
 
 These insights enable the marketers to take action on this signal, which was fueled by having this data available in CDP and having customers like Sarah attached to the segment.  
 
-Luma uses this CDP data to drive increased loyalty and customer satisfaction. 
+Luma uses this CDP data to drive increased loyalty and customer satisfaction.

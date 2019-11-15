@@ -1,25 +1,18 @@
 ---
 title: Destinations Catalog
 seo-title: Destinations Catalog
-description: description
-seo-description: seo description
+description: The Destinations Catalog provides a list of available destinations that are ready to receive data. These destinations include Adobe solutions, advertising platforms, customer relation management (CRM) systems, email marketing platforms, and more.
+seo-description: The Destinations Catalog provides a list of available destinations that are ready to receive data. These destinations include Adobe solutions, advertising platforms, customer relation management (CRM) systems, email marketing platforms, and more.
 ---
 
 # Destinations Catalog
 
-Use **Destinations** to activate your known and unknown data for downstream marketing campaigns, site personalization, and other use cases
+The **Destinations Catalog** provides a list of available destination platforms that are ready to receive data. These destination platforms include Adobe solutions, advertising platforms, customer relation management (CRM) systems, email marketing platforms, and more. Browse the catalog to determine which destination platforms are best for your advertising and personalization use cases, then set up flows to activate your segments to destinations.
 
-## Use cases
+## Destination categories
 
-## Types of destinations
+You can activate your data to different destination categories in the Real-time Customer Data Platform. The links below provide more information on each destination category:
 
-More information of destinations
-
-### Email marketing
-
-Oracle Eloqua - does this and that. To connect, see UI flow and insert the following specifics.
-
-### Advertising 
-
-Google DBM - does this and that. To connect, see UI flow and insert the following specifics.
-
+* [Adobe solutions](/help/rtcdp/destinations/adobe-destinations.md)
+* [Advertising destinations](/help/rtcdp/destinations/advertising-destinations.md)
+* [Email marketing](/help/rtcdp/destinations/email-marketing-destinations.md)
