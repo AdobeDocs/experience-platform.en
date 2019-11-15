@@ -14,7 +14,6 @@ Adobe Experience Platform Data Governance allows you to manage customer data and
 Real-time CDP is built on top of Adobe Experience Platform, and therefore the majority of Data Governance capabilities are covered in the Experience Platform documentation. This document is intended to compliment the [Data Governance overview](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) for Experience Platform, and outlines the Governance features that are available in Real-time CDP. The following topics are covered:
 
 * [Apply usage labels to your data](#apply-usage-labels-to-your-data)
-* [Set restrictions on destinations](#set-restrictions-on-destinations)
 * [Manage data usage policies](#manage-data-usage-policies)
 * [Enforce data usage compliance](#enforce-data-usage-compliance)
 
@@ -24,13 +23,14 @@ Data Governance allows you to apply usage labels to your data, either at the dat
 
 For detailed information on working with data usage labels, see the [data usage labels user guide](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/tutorials/dule/dule_working_with_labels.md) for Adobe Experience Platform.
 
+<!-- (To be included after destinations support is available -- January 2020)
 ## Set restrictions on destinations
 
 You can set data usage restrictions on a destination by defining the marketing use cases for that destination. Defining use cases for destinations allows you to check for usage policy violations and ensure that any profiles or segments sent to that destination are compatible with Data Governance rules.
 
-Marketing use cases can be defined during the _Setup_ phase for the _Edit Destination_ workflow. See the destination documentation for more information.
+Marketing use cases can be defined during the _Setup_ phase for the _Edit Destination_ workflow. See the destination documentation for more information. 
+-->
 
-<!-- Link to destination docs to be added after they are merged. -->
 
 ## Manage data usage policies
 
