@@ -11,7 +11,7 @@ Use **Destinations** in the Adobe Real-time Customer Data Platform to activate y
 
 ## Destinations and Sources
 
-One of the core functionalities of Real-time CDP is ingesting data from your first-party data and activating your data for your business needs. Use **[!UICONTROL Sources]** to ingest data into Real-time CDP and **[!UICONTROL Destinations]** to export data from Real-time CDP. 
+One of the core functionalities of Real-time CDP is ingesting your first-party data and activating it for your business needs. Use **[!UICONTROL Sources]** to ingest data into Real-time CDP and **[!UICONTROL Destinations]** to export data from Real-time CDP. 
 
 ## Destinations steps
 

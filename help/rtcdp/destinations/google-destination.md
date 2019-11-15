@@ -25,7 +25,7 @@ Note the following details that are specific to Google destinations:
     ![Connect Google destination](/help/rtcdp/destinations/assets/google-destination.png)
 
 2. In the Connect destination wizard, fill in the Basic Information for the destination.
-    ![Basic information Google](/help/rtcdp/destinations/assets/google-basic-info.png)
+    ![Basic information Google](/help/rtcdp/destinations/assets/google_basic_information.png)
 *  **Name**: Fill in the preferred name for this destination.
 *  **Description**: Optional. For example, you can mention which campaign you are using this destination for.
 *  **Account Type**: Select an option, depending on your account with Google:
