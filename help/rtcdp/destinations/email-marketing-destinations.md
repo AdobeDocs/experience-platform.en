@@ -17,11 +17,11 @@ In the connect destination flow, described in the section below, you will grant 
 
 ## Step 1 - Connect destination {#connect-destination}
 
-1. In **[!UICONTROL Connections > Destinations]**, select the email marketing destination that you want to connect to, and press **[!UICONTROL Connect destination]**.
+1. In **[!UICONTROL Connections > Destinations]**, select the email marketing destination that you want to connect to, then select **[!UICONTROL Connect destination]**.
 
     ![Connect to destination](/help/rtcdp/destinations/assets/connect-destination.png)
 
-2. In the Connect wizard, select the **[!UICONTROL Connection type]** for your storage location. You can select between **Amazon S3**, **SFTP with Password**, **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and press **[!UICONTROL Connect]**.
+2. In the Connect wizard, select the **[!UICONTROL Connection type]** for your storage location. You can select between **Amazon S3**, **SFTP with Password**, **SFTP with SSH Key**. Fill in the information below, depending on your connection type, then select **[!UICONTROL Connect]**.
 
 For **S3 connections**, you must provide your Access Key ID and Secret Access Key. 
 

@@ -21,7 +21,7 @@ Note the following details that are specific to Google destinations:
 
 ## Connect destination
 
-1. In **[!UICONTROL Connections > Destinations]**, select Google, and press **[!UICONTROL Create destination]**.
+1. In **[!UICONTROL Connections > Destinations]**, select Google, and select **[!UICONTROL Create destination]**.
     ![Connect Google destination](/help/rtcdp/destinations/assets/google-destination.png)
 
 2. In the Connect destination wizard, fill in the Basic Information for the destination.
