@@ -30,10 +30,11 @@ The **[!UICONTROL Browse]** tab displays the destinations with which you have es
 Element | Description 
 ---------|----------
  Destination Name | The name you provided for your activation flow to this destination.
- Destination | The destination that you selected for your activation flow.
- Account | ---
+ Destination | The destination platform that you selected for your activation flow.
  Created | The date and UTC time when the activation flow to the destination was created.
- Segments | The number of segments that are being sent to this destination
+ Connection Type | *For email marketing destinations only*. Represents the connection type to your storage bucket. Can be S3 or FTP. 
+ User ID | The account credentials you selected for the destination flow.
+ Segments | The number of segments that are being activated to this destination.
  Status | `Active` or `Inactive`. Indicates whether data is currently being activated to this destination. To edit the status, see [Disable activation](/help/rtcdp/destinations/activate-destinations.md#disable-activation).
 
 Click on a destination row to bring up more information about the destination in the right rail.
@@ -48,17 +49,14 @@ In the **[!UICONTROL Accounts]** tab, you can learn more about the connections t
 
 ![Accounts tab](/help/rtcdp/destinations/assets/accounts-tab.png)
 
-Element | Description 
+Element | Description
 ---------|----------
  Name | For email marketing platforms, the name is a combination between the protocol type and the domain you selected in the [connect destination wizard](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination).
  Platform | The destination for which you have set up the connection.
  User ID | The username you selected in the [connect destination wizard](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination).
- Flows | ---
+ Flows | Represents the number of unique successful destination flows connected with basic information created for a destination.
  Authorized | The date when the connection to this destination was authorized.
- Expiration | Indicates when the connection to this destination will expire. If the status is **Expired** or about to expire, do this -----
-
-
-
+ 
 ## Data flows {#data-flows}
 
 The **[!UICONTROL Data flows]** tab displays a graphic representation of the activation flows that you have set up in the Real-time Customer Data Platform.
