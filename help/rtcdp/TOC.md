@@ -15,7 +15,7 @@ user-guide-title: Real-Time Customer Data Platform Help
   * [Administration overview](administration/admin-overview.md)
 * Datasets {#datasets}
   * [Datasets](datasets/dataset.md)
-  * [Data quality on Platform](datasets/filename.md)  
+  * [Data quality on Platform](datasets/data-quality.md)  
 * Destinations {#destinations}
   * [Destinations overview](destinations/destinations-overview.md)
   * Destinations interface  {#destinations-interface}
