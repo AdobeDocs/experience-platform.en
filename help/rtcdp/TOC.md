@@ -53,5 +53,5 @@ user-guide-title: Real-Time Customer Data Platform Help
   * [Customer AI](sensei-insights/customer-ai.md)
 * Sources {#sources}
   * [Sources overview](sources/sources-overview.md)
-  * [Sources tutorials](sources/sources-tutorial.md)
+  * [Sources tutorials](sources/sources-tutorials.md)
   * [Implement website tags with Adobe Launch](sources/launch.md)
