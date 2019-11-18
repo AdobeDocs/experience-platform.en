@@ -32,7 +32,7 @@ Some information is shown in different ways on both the leaderboard and metric c
 
     ![image](assets/home-recent.jpg)
 
-Additional metrics--for example for profiles and segments--are available in other parts of Real-time Customer Data Platform. 
+Additional metrics--for example for profiles and segments--are available in other parts of Real-time Customer Data Platform.
 
 ### Datasets
 
