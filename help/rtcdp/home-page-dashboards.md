@@ -9,9 +9,11 @@ seo-description: Dashboards, Home Page, and First-Time User Experience of Adobe 
 
 The Adobe Real-time Customer Data Platform (Real-time CDP) home page, which includes a metrics dashboard, appears when you log in to Real-time CDP.
 
+The home page is only one of the places where metric cards appear. Real-time CDP provides metric cards throughout your experience. These metrics inform you about the data, profile, and segment audiences in the system. 
+
 ![image](assets/home2.jpg)
 
-If there is no data in the system when you log in to Real-time CDP, the dashboard on the home page does not appear. The home page provides learning material for a first time user experience. As data is collected--in other words, as <!--sources-->datasets, profiles, segments, and destinations are created and data flows into the system--the dashboard automatically updates to display information about that data<!-- in metric cards-->. 
+If there is no data in the system when you log in to Real-time CDP, the dashboard on the home page does not appear. In this case, the home page provides learning material for a first time user experience. As data is collected--in other words, as <!--sources-->datasets, profiles, segments, and destinations are created and data flows into the system--the dashboard automatically updates to display information about that data<!-- in metric cards-->. 
 
 ## Home page dashboard view
 
@@ -20,23 +22,29 @@ If there is no data in the system when you log in to Real-time CDP, the dashboar
 The dashboard is divided into<!-- two areas.-->:
 
 * **The leaderboard** is across the top of the dashboard. The leaderboard shows the number of datasets, profiles, segments, and destinations in the system. 
+
     ![image](assets/home-leaderboard2.jpg)
+
 <!-- * **Metric cards** display beneath the leaderboard. Metric cards show additional information, such as percentages or trends. Metric cards appear as data is collected.
     ![image](assets/home-metrics.jpg)
 Some information is shown in different ways on both the leaderboard and metric cards. -->
 * **Recent items** lists the five most recent datasets, sources, segments, and destinations added to the system.
 
-Additional metrics--for example for profiles and segments--are available in other parts of Adobe Experience Platform. 
+    ![image](assets/home-recent.jpg)
+
+Additional metrics--for example for profiles and segments--are available in other parts of Real-time Customer Data Platform. 
 
 ### Datasets
 
-The **[!UICONTROL Datasets] counter shows the number of datasets in the system and the amount of storage space used. This number is updated when a dataset is created.
+The **[!UICONTROL Datasets] counter shows the number of datasets in the system and the amount of data in Platform. This counter is updated when a dataset is created.
 
 For more information about datasets, see [Ingest data into Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
 
 ### Profiles
 
-The **[!UICONTROL Profiles]** count shows the total number of people with profiles in your organization. It does not include profile fragments. This is your total addressable audience.
+The **[!UICONTROL Profiles]** count shows the total number of people with profiles in the Real-time Customer Profile. It does not include profile fragments. This is your total addressable audience.
+
+This count uses the default [merge policy](profile/merge-policies.md) as set in the merge policy configuration in Unified Profile. 
 
 The number of profiles is updated once every 24 hours.  
 
@@ -50,7 +58,7 @@ For more information about segments, see [Segmentation Service overview](https:/
 
 ### Destinations
 
-**[!UICONTROL Destinationss]** shows the total number of destinations created for the organization. This number is updated when new destinations are created.
+**[!UICONTROL Destinations]** shows the total number of destinations created for the organization. This number is updated when new destinations are created.
 
 For more information about destinations, see [Destinations overview](destinations/destinations-overview.md).
 
@@ -92,7 +100,7 @@ The number of failed profile records is updated hourly. -->
 
 The **[!UICONTROL Recent datasets]** card shows the five most recent datasets created within the organization. This list is updated when a new dataset is created.
 
-Click a dataset or **[!UICONTROL View all]** to see the list of datasets. From there, you can click on a specific source for details.
+Click a dataset to view the details for that item, or **[!UICONTROL View all]** to see the list of datasets. From there, you can click on a specific source for details.
 
 For more information about datasets, see [Ingest data into Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
 
@@ -100,7 +108,7 @@ For more information about datasets, see [Ingest data into Adobe Experience Plat
 
 The **[!UICONTROL Recent sources]** metric card shows the five most recent sources created within the organization. This list is updated when a new source is created.
 
-Click a source or **[!UICONTROL View all]** to see the list of sources. From there, you can click on a specific source for details.
+Click a source to view the details for that item, or **[!UICONTROL View all]** to see the list of sources. From there, you can click on a specific source for details.
 
 For more information about sources, see [Sources overview](sources/sources-overview.md).
 
@@ -108,7 +116,7 @@ For more information about sources, see [Sources overview](sources/sources-overv
 
 The **[!UICONTROL Recent segments]** metric card shows the five most recent segments created within the organization. This list is updated when a new segment is created.
 
-Click **[!UICONTROL View all]** to see information about more segments.
+Click a segment to view the details for that item, or **[!UICONTROL View all]** to see information about more segments.
 
 For more information about segments, see [Segmentation Service overview](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segmentation.md).
 
@@ -116,6 +124,6 @@ For more information about segments, see [Segmentation Service overview](https:/
 
 The **[!UICONTROL Recent destinations]** metric card shows the five most recent destinations created within the organization. This list is updated when a new destination is created.
 
-Click **[!UICONTROL View all]** to see information about more destinations.
+Click a destination to view the details for that item, or **[!UICONTROL View all]** to see information about more destinations.
 
 For more information about destinations, see [Destinations overview](destinations/destinations-overview.md).
