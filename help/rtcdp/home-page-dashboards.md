@@ -32,11 +32,11 @@ Some information is shown in different ways on both the leaderboard and metric c
 
     ![image](assets/home-recent.jpg)
 
-Additional metrics--for example for profiles and segments--are available in other parts of Real-time Customer Data Platform. 
+Additional metrics--for example for profiles and segments--are available in other parts of Real-time Customer Data Platform.
 
 ### Datasets
 
-The **[!UICONTROL Datasets] counter shows the number of datasets in the system and the amount of data in Platform. This counter is updated when a dataset is created.
+The **[!UICONTROL Datasets]** counter shows the number of datasets in the system and the amount of data in Platform. This counter is updated when a dataset is created.
 
 For more information about datasets, see [Ingest data into Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
 
