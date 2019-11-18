@@ -36,7 +36,7 @@ Additional metrics--for example for profiles and segments--are available in othe
 
 ### Datasets
 
-The **[!UICONTROL Datasets] counter shows the number of datasets in the system and the amount of data in Platform. This counter is updated when a dataset is created.
+The **[!UICONTROL Datasets]** counter shows the number of datasets in the system and the amount of data in Platform. This counter is updated when a dataset is created.
 
 For more information about datasets, see [Ingest data into Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
 
