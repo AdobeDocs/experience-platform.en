@@ -10,7 +10,6 @@ user-guide-title: Real-Time Customer Data Platform Help
 * Real-time Customer Data Platform {#intro}
   * [Getting started](get-started.md)
   * [Metrics overview](home-page-dashboards.md)
-  * [Release notes](https://www.adobe.io/apis/experienceplatform/home/services/release-notes.html#!end-user/markdown/release-notes/release-notes.md)
 * Administration {#admin}
   * [Administration overview](administration/admin-overview.md)
 * Datasets {#datasets}
@@ -55,3 +54,4 @@ user-guide-title: Real-Time Customer Data Platform Help
   * [Sources overview](sources/sources-overview.md)
   * [Sources tutorials](sources/sources-tutorials.md)
   * [Implement website tags with Adobe Launch](sources/launch.md)
+[Release notes](https://www.adobe.io/apis/experienceplatform/home/services/release-notes.html#!end-user/markdown/release-notes/release-notes.md)
