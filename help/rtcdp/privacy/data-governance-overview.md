@@ -11,7 +11,7 @@ Real-time Customer Data Platform (Real-time CDP) brings data from multiple enter
 
 Adobe Experience Platform Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within Real-time CDP, allowing you to define usage policies, categorize your data based on those policies, and check for policy violations when performing certain marketing actions.
 
-Real-time CDP is built on top of Adobe Experience Platform, and therefore the majority of Data Governance capabilities are covered in the Experience Platform documentation. This document is intended to compliment the [Data Governance overview](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) for Experience Platform, and outlines the Governance features that are available in Real-time CDP. The following topics are covered:
+Real-time CDP is built on top of Adobe Experience Platform, and therefore the majority of Data Governance capabilities are covered in the Experience Platform documentation. This document is intended to complement the [Data Governance overview](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) for Experience Platform, and outlines the Governance features that are available in Real-time CDP. The following topics are covered:
 
 * [Apply usage labels to your data](#apply-usage-labels-to-your-data)
 * [Manage data usage policies](#manage-data-usage-policies)
