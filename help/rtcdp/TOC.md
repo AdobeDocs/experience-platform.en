@@ -49,7 +49,8 @@ user-guide-title: Real-Time Customer Data Platform Help
   * [Segmentation overview](segmentation/segmentation-overview.md)
   * [Segment builder guide](segmentation/segment-builder-guide.md)
 * Sensei insights {#sensei}
-  * [Customer AI](sensei-insights/customer-ai.md)
+  * [Customer AI overview](sensei-insights/customer-ai-overview.md)
+  * [Predict customer propensity scores using Customer AI](sensei-insights/customer-ai-tutorial.md)
 * Sources {#sources}
   * [Sources overview](sources/sources-overview.md)
   * [Sources tutorials](sources/sources-tutorials.md)
