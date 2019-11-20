@@ -8,7 +8,8 @@ index: no
 
 # Customer AI (alpha) overview
 
->   **Note**: The Customer AI functionality outlined in this document is in alpha. The documentation and the functionality are subject to change.
+>[!NOTE]
+>The Customer AI functionality outlined in this document is in alpha. The documentation and the functionality are subject to change.
 
 Customer AI in Adobe Experience Platform provides marketers with the power to leverage Adobe Sensei to anticipate what their customers will do next through machine learning.
 
