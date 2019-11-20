@@ -8,7 +8,8 @@ index: no
 
 # Predict customer propensity scores using Customer AI (alpha)
 
->   **Note**: The Customer AI functionality outlined in this document is in alpha. The documentation and the functionality are subject to change.
+>[!NOTE]
+>The Customer AI functionality outlined in this document is in alpha. The documentation and the functionality are subject to change.
 
 Built and powered by Adobe Sensei, Customer AI in Adobe Experience Platform enables you to generate custom propensity scores without having to worry about the machine learning aspects.
 
