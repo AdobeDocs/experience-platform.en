@@ -1,7 +1,7 @@
 ---
 title: Connect to a Destination
 seo-title: Connect to a Destination
-description: 
+description: This tutorial lists the steps to connect a destination in Adobe Real-time Customer Data Platform
 ---
 
 # How to connect a destination 
