@@ -29,11 +29,11 @@ The controls in the [Destinations workspace](/help/rtcdp/destinations/destinatio
 * Select which segments should be activated to destinations;
 * Select which [Experience Data Model (XDM) fields](https://www.adobe.io/apis/experienceplatform/home/xdm/xdmservices.html#!api-specification/markdown/narrative/technical_overview/schema_registry/xdm_system/xdm_system_in_experience_platform.md) to export when activating segments to email marketing destinations.
 
-## Destination types and categories
+## Destination types and categories - video overview
 
-In Adobe Real-time CDP, there are two types of destinations, Profile Export destinations and Segment Export destinations.
+In Adobe Real-time CDP, there are two types of destinations, Profile Export destinations and Segment Export destinations.The video below describes the two types of destinations. 
 
-![Representation of Profile Export and Segment Export destinations](/help/rtcdp/destinations/assets/segment-and-profile-export.png)
+>[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
 ### Profile export destinations
 
