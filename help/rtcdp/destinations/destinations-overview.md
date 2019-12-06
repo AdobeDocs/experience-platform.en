@@ -46,3 +46,9 @@ Segment export destinations send the profiles and segments they qualified for. T
 ### Destination categories
 
 The destinations in the [Destinations catalog](/help/rtcdp/destinations/destinations-catalog.md) are grouped by destination category (Advertising or Email marketing). For more information on each of them, see the [Destinations catalog](/help/rtcdp/destinations/destinations-catalog.md).
+
+## Destinations and Access Controls
+
+The access control permissions for Adobe Experience Platform apply to **[!UICONTROL Destinations]** in Real-time CDP. Depending on your user's permission level, you can view, manage, and activate destinations.
+
+For more information, see the [Access control user guide](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-user-guide.md). 
