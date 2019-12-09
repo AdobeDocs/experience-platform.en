@@ -1,13 +1,13 @@
 ---
 title: Destinations Overview
 seo-title: Destinations Overview
-description: Use Destinations in the Adobe Real-time Customer Data Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
-seo-description: Use Destinations in the Adobe Real-time Customer Data Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+description: Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Real-time Customer Data Platform. You can use Destinations in the Adobe Real-time Customer Data Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+seo-description: Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Real-time Customer Data Platform. You can use Destinations in the Adobe Real-time Customer Data Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 ---
 
 # Destinations Overview
 
-Use **Destinations** in the Adobe Real-time Customer Data Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+**Destinations** are pre-built integrations with destination platforms that allow for the seamless activation of data from Real-time Customer Data Platform. You can use **Destinations** to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
 ## Destinations and Sources
 
@@ -29,11 +29,11 @@ The controls in the [Destinations workspace](/help/rtcdp/destinations/destinatio
 * Select which segments should be activated to destinations;
 * Select which [Experience Data Model (XDM) fields](https://www.adobe.io/apis/experienceplatform/home/xdm/xdmservices.html#!api-specification/markdown/narrative/technical_overview/schema_registry/xdm_system/xdm_system_in_experience_platform.md) to export when activating segments to email marketing destinations.
 
-## Destination types and categories
+## Destination types and categories - video overview
 
-In Adobe Real-time CDP, there are two types of destinations, Profile Export destinations and Segment Export destinations.
+In Adobe Real-time CDP, there are two types of destinations, Profile Export destinations and Segment Export destinations.The video below describes the two types of destinations. 
 
-![Representation of Profile Export and Segment Export destinations](/help/rtcdp/destinations/assets/segment-and-profile-export.png)
+>[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
 ### Profile export destinations
 
@@ -46,3 +46,9 @@ Segment export destinations send the profiles and segments they qualified for. T
 ### Destination categories
 
 The destinations in the [Destinations catalog](/help/rtcdp/destinations/destinations-catalog.md) are grouped by destination category (Advertising or Email marketing). For more information on each of them, see the [Destinations catalog](/help/rtcdp/destinations/destinations-catalog.md).
+
+## Destinations and Access Controls
+
+The **[!UICONTROL Destinations]** functionality in Real-time CDP works with Adobe Experience Platform access control permissions. Depending on your user's permission level, you can view, manage, and activate destinations. For information about the individual permissions, see Access control in [Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md).
+
+For more information about access controls, see the [Access control user guide](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-user-guide.md).

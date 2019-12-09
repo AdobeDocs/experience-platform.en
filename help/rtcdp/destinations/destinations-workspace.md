@@ -33,7 +33,7 @@ Element | Description
  Destination | The destination platform that you selected for your activation flow.
  Created | The date and UTC time when the activation flow to the destination was created.
  Connection Type | *For email marketing destinations only*. Represents the connection type to your storage bucket. Can be S3 or FTP. 
- User ID | The account credentials you selected for the destination flow.
+ Username | The account credentials you selected for the destination flow.
  Segments | The number of segments that are being activated to this destination.
  Status | `Active` or `Inactive`. Indicates whether data is currently being activated to this destination. To edit the status, see [Disable activation](/help/rtcdp/destinations/activate-destinations.md#disable-activation).
 
@@ -51,9 +51,8 @@ In the **[!UICONTROL Accounts]** tab, you can learn more about the connections t
 
 Element | Description
 ---------|----------
- Name | For email marketing platforms, the name is a combination between the protocol type and the domain you selected in the [connect destination wizard](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination).
  Platform | The destination for which you have set up the connection.
- User ID | The username you selected in the [connect destination wizard](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination).
+ Username | The username you selected in the [connect destination wizard](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination).
  Flows | Represents the number of unique successful destination flows connected with basic information created for a destination.
  Authorized | The date when the connection to this destination was authorized.
  

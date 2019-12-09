@@ -1,6 +1,8 @@
 ---
-title: Adobe Real-time CDP Sources tutorials
-description: Sources tutorials
+  title: Sources tutorials
+  seo-title: Adobe Real-time CDP Sources tutorials
+  description: Sources tutorials
+  seo-description: Sources tutorials
 ---
 
 # Sources tutorials

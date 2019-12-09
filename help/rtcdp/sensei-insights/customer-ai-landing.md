@@ -3,6 +3,7 @@ title: Customer AI (alpha) Overview
 seo-title: Customer AI (alpha) Overview
 description: This document provides an overview of Sensei Insights - Customer AI (Alpha)
 seo-description: This document provides an overview of Sensei Insights - Customer AI (Alpha)
+index: no
 ---
 
 # Customer AI (alpha)
