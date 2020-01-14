@@ -1,6 +1,6 @@
 ---
 cloud: experience-cloud
-product: experience-platform
+product: adobe experience platform
 solution-title: Learn & Support
 solution-hub-url: https://helpx.adobe.com/support/experience-cloud.html
 solution-image: assets/experience_cloud_appicon_32.png
