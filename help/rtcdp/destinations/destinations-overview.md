@@ -41,11 +41,7 @@ Profile export destinations generate a file containing profiles and/or attribute
 
 ### Segment export destinations
 
-Segment export destinations send the profiles and segments they qualified for. These destinations use segment ID or user IDs.
-
-### Destination categories
-
-The destinations in the [Destinations catalog](/help/rtcdp/destinations/destinations-catalog.md) are grouped by destination category (Advertising or Email marketing). For more information on each of them, see the [Destinations catalog](/help/rtcdp/destinations/destinations-catalog.md).
+Segment export destinations send the profiles and the segments that they qualified for. These destinations use segment ID or user IDs.
 
 ### Destination categories
 
