@@ -23,18 +23,6 @@ Review Adobe Experience Platform terminology.
 * **[Troubleshooting Guide](https://www.adobe.io/apis/experienceplatform/home/services/troubleshooting.html)**<br/>
 Learn about common errors and resolutions.
 
-## Top Pages
-
-* **[Experience Platform services documentation](https://www.adobe.io/apis/experienceplatform/home/services.html)**<br/>
-Learn about the Adobe Experience Platform services.
-
-* **[Real-time Customer Data Profile guide](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)**<br/>
-Learn about Real-time ustomer Data Profile.
-
-* **[API Reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)**<br/>
-Learn about the Adobe Experience Platform APIs.
-
-
 <!--
 ## What's New
 
