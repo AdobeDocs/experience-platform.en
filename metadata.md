@@ -1,13 +1,13 @@
 ---
 cloud: experience-cloud
 product: adobe experience platform
-solution-title: Learn & Support
-solution-hub-url: https://helpx.adobe.com/support/experience-cloud.html
+solution-title: Experience Platform Documentation
+solution-hub-url: https://www.adobe.io/apis/experienceplatform/home/services.html
 solution-image: assets/experience_cloud_appicon_32.png
 getting-started-title: Getting Started
-getting-started-url: https://helpx.adobe.com/support/experience-cloud.html
+getting-started-url: https://www.adobe.io/apis/experienceplatform/home/overview.html
 tutorials-title: Tutorials
-tutorials-url: https://helpx.adobe.com/support/experience-cloud.html
+tutorials-url: https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html
 git-repo: https://github.com/AdobeDocs/experience-platform.en
 index: yes
 ---
