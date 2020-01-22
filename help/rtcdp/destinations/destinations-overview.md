@@ -41,8 +41,14 @@ Profile export destinations generate a file containing profiles and/or attribute
 
 ### Segment export destinations
 
-Segment export destinations send the profiles and segments they qualified for. These destinations use segment ID or user IDs.
+Segment export destinations send the profiles and the segments that they qualified for. These destinations use segment ID or user IDs.
 
 ### Destination categories
 
-The destinations in the [Destinations catalog](/help/rtcdp/destinations/destinations-catalog.md) are grouped by destination category (Advertising or Email marketing). For more information on each of them, see the [Destinations catalog](/help/rtcdp/destinations/destinations-catalog.md).
+The destinations in the [Destinations catalog](/help/rtcdp/destinations/destinations-catalog.md) are grouped by destination category (**Advertising** or **Email marketing**). For more information on each of them, see the [Destinations catalog](/help/rtcdp/destinations/destinations-catalog.md).
+
+## Destinations and Access Controls
+
+The **[!UICONTROL Destinations]** functionality in Real-time CDP works with Adobe Experience Platform access control permissions. Depending on your user's permission level, you can view, manage, and activate destinations. For information about the individual permissions, see [Access control in Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md) and scroll down to the bottom of the page.
+
+For more information about access controls, see the [Access control user guide](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-user-guide.md).
