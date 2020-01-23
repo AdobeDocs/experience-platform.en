@@ -21,6 +21,9 @@ Review Adobe Experience Platform terminology.
 * **[Troubleshooting Guide](https://www.adobe.io/apis/experienceplatform/home/services/troubleshooting.html)**<br/>
 Learn about common errors and resolutions.
 
+* **[Real-time Customer Data Platform](/help/rtcdp/overview.md)**<br/>
+Real-time CDP combines multiple enterprise data sources to create unified profiles in real time that can be used to provide one-to-one personalized customer experiences across all channels and devices.
+
 <!--
 ## What's New
 
