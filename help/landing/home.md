@@ -7,7 +7,7 @@ topic: getting started
 
 # Adobe Experience Platform
 
-<!-- ![](start/using/assets/banner_acs_doc.jpg)-->
+![](/help/assets/platform-banner-1.png)
 
 * **[Adobe Experience Platform overview](https://www.adobe.io/apis/experienceplatform/home/overview.html)**<br/>
 Experience Platform enables organizations to centralize and standardize customer data and content from any system and apply data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences. 
