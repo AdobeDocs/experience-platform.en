@@ -5,7 +5,7 @@ solution-title: Documentation
 solution-hub-url: https://www.adobe.io/apis/experienceplatform/home/services.html
 solution-image: assets/experience_cloud_appicon_32.png
 getting-started-title: Getting Started
-getting-started-url: https://experienceleague.adobe.com/#recommended/solutions/experience-platform
+getting-started-url: https://docs.adobe.com/content/help/en/experience-platform/landing/get-started.html
 tutorials-title: Tutorials
 tutorials-url: https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html
 git-repo: https://github.com/AdobeDocs/experience-platform.en
