@@ -7,6 +7,7 @@ user-guide-title: Adobe Experience Platform Help
 # Adobe Experience Platform {#landing}
 
 * [Experience Platform Home](home.md)
+* [Getting started](get-started.md)
 * [Product overview](https://www.adobe.io/apis/experienceplatform/home/overview.html)
 * Experience Platform reference {#ref}
   * [Release Notes](https://www.adobe.io/apis/experienceplatform/home/services/release-notes.html#!end-user/markdown/release-notes/release-notes.md)
