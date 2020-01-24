@@ -7,7 +7,7 @@ topic: getting started
 
 # Adobe Experience Platform
 
-![](/help/assets/platform-banner-1.png)
+<!--![](/help/assets/platform-banner-1.png)-->
 
 >[!VIDEO](https://video.tv.adobe.com/v/27361?quality=12)
 
