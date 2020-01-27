@@ -19,6 +19,20 @@ Note the following details that are specific to Google destinations:
 * Activated audiences are created programmatically in the Google platform.
 * Adobe Real-time CDP does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand data drop-off.
 
+## Prerequisites
+
+### Whitelisting
+
+Before connecting the Google destination in Adobe Real-time CDP, you must contact Google asking for your account to be whitelisted. Contact Google and provide the following information:
+
+* **Account ID** : this is Adobe's account ID with Google. Contact Adobe Support to obtain this ID.
+* **Customer ID** : this is Adobe's customer account ID with Google. Contact Adobe Support to obtain this ID.
+* **Partner ID** : This is your three-digit partner ID with Google;
+* **Network ID** : this is your account with Google;
+* **Audience Link ID** : this is your account with Google;
+* Your account type. This could be **Invite advertiser**, **Invite partner**, **DFP**, **AdWords**, **AdX**.
+
+
 ## Connect destination
 
 1. In **[!UICONTROL Connections > Destinations]**, select Google, and select **[!UICONTROL Create destination]**.
