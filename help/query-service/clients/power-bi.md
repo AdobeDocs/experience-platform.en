@@ -6,7 +6,7 @@ PC users can install Power BI from [https://powerbi.microsoft.com/en-us/desktop/
 
 After you have Power BI installed, you need to set up the necessary components to support the PostgreSQL connector. Follow these steps:
 
-1. Find and install `npgsql`, a .NET driver package for PostgresSQL that is the official way for PowerBI to connect.
+1. Find and install `npgsql`, a .NET driver package for PostgreSQL that is the official way for PowerBI to connect.
 
 2. Select v4.0.10 (newer versions currently result in an error).
 
@@ -46,6 +46,7 @@ GROUP BY web.webPageDetails.name
 ORDER BY SUM(web.webPageDetails.pageviews.value) DESC 
 LIMIT 10
 ``` 
+
 > **Note:** If a SQL statement is not provided, then Power BI will preview all the tables in database. For hierarchical data, a custom SQL statement should be used. If the table schema is flat, it will work with or without a custom SQL statement. Compound types are yet not supported by Power BI - to get primitive types from compound types, you will need to write SQL statements to derive them.
 
 7. Select either **DirectQuery** or **Import** mode.
