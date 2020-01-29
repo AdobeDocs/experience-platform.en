@@ -1,30 +1,19 @@
+---
+keywords: Experience Platform;home;popular topics
+solution: Experience Platform
+title: Query Service developer guide
+topic: query templates
+---
+
 # Query Service developer guide
 
-This developer guide provides steps for performing various operations in the Adobe Experience Platform Query Service API. The guide includes sample API calls for performing the following actions:
+This developer guide provides steps for performing various operations in the Adobe Experience Platform Query Service API, including sections for working with:
 
-- Queries
-    - [Retrieve a list of queries](#retrieve-a-list-of-queries)
-    - [Create a query](#create-a-query) 
-    - [Retrieve a query by ID](#retrieve-a-query-by-id)
-    - [Cancel a query](#create-a-query)
-- Connection parameters
-    - [Request connection parameters for the interactive service](#request-connection-parameters-for-the-interactive-service)
-- Scheduled queries
-    - [Retrieve a list of scheduled queries](#retrieve-a-list-of-scheduled-queries)
-    - [Create a new scheduled query](#create-a-new-scheduled-query)
-    - [Request details of a specified scheduled query](#request-details-of-a-specified-scheduled-query)
-    - [Update details of a specified scheduled query](#update-a-specified-query-template)
-- Runs for scheduled queries
-    - [Retrieve a list of all runs for a specified scheduled query](#retrieve-a-list-of-all-runs-for-a-specified-scheduled-query)
-    - [Immediately trigger a run for a specific scheduled query](#immediately-trigger-a-run-for-a-specific-scheduled-query)
-    - [Retrieve details of a run for a specific scheduled query](#retrieve-details-of-a-run-for-a-specific-scheduled-query)
-    - [Immediately stop a run for a specific scheduled query](#immediately-stop-a-run-for-a-specific-scheduled-query)
-- Query templates
-    - [Retrieve a list of query templates](#retrieve-a-list-of-query-templates)
-    - [Create a query template](#create-a-query-template)
-    - [Retrieve a specified query template](#retrieve-a-specified-query-template)
-    - [Update a specified query template](#update-a-specified-query-template)
-    - [Delete a specified query template](#delete-a-specified-query-template)
+- [Queries](queries.md)
+- [Connection parameters](connection-parameters.md)
+- [Scheduled queries](scheduled-queries.md)
+- [Runs for scheduled queries](runs-scheduled-queries.md)
+- [Query templates](query-templates.md)
 
 ## Getting started
 
@@ -58,7 +47,7 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 Now that you understand what headers to use, you are ready to begin making calls to the Query Service API. The following sections walk through the various API calls you can make using the Query Service API. Each call includes the general API format, a sample request showing required headers, and a sample response.
 
-## Retrieve a list of queries
+### Retrieve a list of queries
 
 You can retrieve a list of all queries for your IMS Organization by making a GET request to the `/queries` endpoint. 
 
@@ -157,7 +146,7 @@ A successful response returns HTTP status 200 with a list of queries for the spe
 }
 ```
 
-## Create a query
+### Create a query
 
 You can create a new query by making a POST request to the `/queries` endpoint.
 
@@ -236,7 +225,7 @@ A successful response returns HTTP status 202 (Accepted) with details of your ne
 
 >**Note:** You can use the value of `_links.cancel` to [cancel your created query](#cancel-a-query).
 
-## Retrieve a query by ID
+### Retrieve a query by ID
 
 You can retrieve detailed information about a specific query by making a GET request to the `/queries` endpoint and providing the query's `id` value in the request path.
 
@@ -303,7 +292,7 @@ A successful response returns HTTP status 200 with detailed information about th
 
 >**Note:** You can use the value of `_links.cancel` to [cancel your created query](#cancel-a-query).
 
-## Cancel a query
+### Cancel a query
 
 You can request to delete a specified query by making a PATCH request to the `/queries` endpoint and providing the query's `id` value in the request path.
 
@@ -345,7 +334,7 @@ A successful response returns HTTP status 202 (Accepted) with the following mess
 }
 ```
 
-## Request connection parameters for the interactive service
+### Request connection parameters for the interactive service
 
 You can retrieve your connection parameters for using the [interactive service](../queries-and-ui/writing-queries.md) by making a GET request to the `/connection_parameters` endpoint. For more information about clients that use connection parameters to connect via the interactive service, please read the documentation on [Query Service clients](../clients/overview.md).
 
@@ -382,7 +371,7 @@ A successful response returns HTTP status 200 with your connection parameters.
 }
 ```
 
-## Retrieve a list of scheduled queries
+### Retrieve a list of scheduled queries
 
 You can retrieve a list of all scheduled queries for your IMS Organization by making a GET request to the `/schedules` endpoint. 
 
@@ -484,7 +473,7 @@ A successful response returns HTTP status 200 with a list of scheduled queries f
 }
 ```
 
-## Create a new scheduled query
+### Create a new scheduled query
 
 You can create a new scheduled query by making a POST request to the `/schedules` endpoint.
 
@@ -579,7 +568,7 @@ A successful response returns HTTP status 202 (Accepted) with details of your ne
 
 >**Note:** You can use the value of `_links.delete` to [delete your created scheduled query](#delete-a-specified-scheduled-query).
 
-## Request details of a specified scheduled query
+### Request details of a specified scheduled query
 
 You can retrieve information for a specific scheduled query by making a GET request to the `/schedules` endpoint and providing its ID in the request path.
 
@@ -658,7 +647,7 @@ A successful response returns HTTP status 200 with details of the specified sche
 
 >**Note:** You can use the value of `_links.delete` to [delete your created scheduled query](#delete-a-specified-scheduled-query).
 
-## Update details of a specified scheduled query
+### Update details of a specified scheduled query
 
 You can update the details for a specified scheduled query by making a PATCH request to the `/schedules` endpoint and by providing its ID in the request path. 
 
