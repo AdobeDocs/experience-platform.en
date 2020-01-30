@@ -60,5 +60,5 @@ The *Credentials* tab displays your Postgres credentials. Click the **Copy** ico
 Now that you are familiar with Query Service user interface on Platform, you can access Query Editor to start creating your own query projects to share with other users in your organization. For more information on authoring and running queries in Query Editor, see the [Query Editor user guide][query-editor].
 
 [platform-ui]: https://platform.adobe.com
-[query-editor]: ./query-editor-overview.md
-[connect-clients]: ../clients/overview.md
+[query-editor]: query-editor-overview.md
+[connect-clients]: clients/overview.md
