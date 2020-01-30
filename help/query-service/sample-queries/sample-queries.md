@@ -1,3 +1,10 @@
+---
+keywords: Experience Platform;home;popular topics
+solution: Experience Platform
+title: Sample queries
+topic: queries
+---
+
 # Sample queries
 
 Adobe Experience Cloud solution data is available natively in Experience Platform. For the first time, you are able to query Adobe Analytics, Adobe Target, Adobe Campaign, and Adobe Audience Manager Data from the same data store without having to move data around. As data is ingested from the solutions into Adobe Experience Platform it is transformed into Experience Event Experience Data Model (Experience Event XDM). This provides a layer of schema normalization. 

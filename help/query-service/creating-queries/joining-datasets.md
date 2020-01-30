@@ -1,3 +1,10 @@
+---
+keywords: Experience Platform;home;popular topics
+solution: Experience Platform
+title: Joining datasets
+topic: queries
+---
+
 # Joining datasets
 
 Joining datasets allows you to include data from other datasets in your query. This example uses a custom operating system dataset to map the `operatingsystemID` to the `operatingsystem` value.

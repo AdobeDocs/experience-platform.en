@@ -1,3 +1,10 @@
+---
+keywords: Experience Platform;home;popular topics
+solution: Experience Platform
+title: Data deduplication
+topic: queries
+---
+
 # Data deduplication in Query Service
 
 Adobe Experience Platform Query Service supports data deduplication when it may be required to remove an entire row from a calculation or ignore a specific set of fields because only part of the data in the row is a duplicate.

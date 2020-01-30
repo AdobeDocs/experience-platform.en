@@ -245,7 +245,7 @@ PATCH /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 #### Request
 
-This API request uses the JSON Patch syntax for its payload. For more information on how JSON Patch works, please read the [API fundamentals document](../../api-fundamentals/api-fundamentals.md). 
+This API request uses the JSON Patch syntax for its payload. For more information on how JSON Patch works, please read the API fundamentals document. 
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm/runs/c2NoZWR1bGVkX18yMDIwLTAxLTA4VDIwOjQ1OjAwKzAwOjAw

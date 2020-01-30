@@ -1,4 +1,11 @@
-# Quick start guide
+---
+keywords: Experience Platform;home;popular topics
+solution: Experience Platform
+title: Adobe Experience Platform Query Service quickstart guide
+topic: quickstart
+---
+
+# Quickstart guide
 
 1. To use Query Service, your organization must be provisioned for Adobe Experience Platform, and your administrator needs to grant you access to it. 
 2. If you haven't already ingested your data into Adobe Experience Platform, then that is where you should start. Refer to the data ingestion documentation.

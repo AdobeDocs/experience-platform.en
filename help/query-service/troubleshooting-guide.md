@@ -1,3 +1,10 @@
+---
+keywords: Experience Platform;home;popular topics
+solution: Experience Platform
+title: Adobe Experience Platform Query Service troubleshooting guide
+topic: troubleshooting
+---
+
 # Errors and troubleshooting
 
 ## REST API errors

@@ -1,3 +1,10 @@
+---
+keywords: Experience Platform;home;popular topics
+solution: Experience Platform
+title: Connect with RStudio
+topic: connect
+---
+
 # Connect with RStudio
 
 This document walks through the steps for connecting R Studio with Adobe Experience Platform Query Service.
@@ -71,5 +78,5 @@ df_pageviews
 For more information on how to write and run queries, please read the [running queries guide][running-queries].
 
 [credentials]: https://platform.adobe.com/query/configuration
-[running-queries]: ../queries-and-ui/running-queries.md
-[experience-event]: ../queries-and-ui/experience-event-queries.md
+[running-queries]: ../creating-queries/creating-queries.md
+[experience-event]: ../creating-queries/experience-event-queries.md

@@ -1,3 +1,10 @@
+---
+keywords: Experience Platform;home;popular topics
+solution: Experience Platform
+title: Connect with Tableau
+topic: connect
+---
+
 # Connect with Tableau
 
 1. Install Tableau, if it is not already installed.

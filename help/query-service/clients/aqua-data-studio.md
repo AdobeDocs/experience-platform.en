@@ -1,10 +1,17 @@
+---
+keywords: Experience Platform;home;popular topics
+solution: Experience Platform
+title: Connect with Aqua Data Studio
+topic: connect
+---
+
 # Connect with Aqua Data Studio
 
 This document walks through the steps for connecting Aqua Data Studio with Adobe Experience Platform Query Service.
 
 After installing Aqua Data Studio, you must first register the server. From the main menu, click **Server**, then click **Register Server**.
 
-![](images/clients/aqua-data-studio/register-server.png)
+![](../images/clients/aqua-data-studio/register-server.png)
 
 The *Register Server* dialog appears. Under the *General* tab, select **PostgreSQL** from the list on the left-hand side. In the dialog that appears, provide the following details for the server settings.
 
@@ -28,4 +35,4 @@ After inputting your connection details, click **Test Connection** to ensure you
 Now that you have connected to Query Service, you can use the *Query Analyzer* within Aqua Data Studio to execute and edit SQL statements. For more information on how to write and run queries, please read the [running queries guide][running-queries].
 
 [credentials]: https://platform.adobe.com/query/configuration
-[running-queries]: ../queries-and-ui/running-queries.md
+[running-queries]: ../creating-queries/creating-queries.md
