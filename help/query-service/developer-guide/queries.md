@@ -285,7 +285,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
  }'
  ```
 
- - `op`: In order to cancel the query, you must set the op parameter with the value `cancel `.
+- `op`: In order to cancel the query, you must set the op parameter with the value `cancel `.
 
 #### Response
 

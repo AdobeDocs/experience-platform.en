@@ -117,9 +117,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
-	"sql": "SELECT * FROM accounts;",
-	"name": "Sample query template"
-}'
+        "sql": "SELECT * FROM accounts;",
+        "name": "Sample query template"
+    }'
 ```
 
 - `sql`: The SQL query you want to create.

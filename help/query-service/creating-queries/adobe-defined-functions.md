@@ -3,6 +3,7 @@
 One of Adobe's big differentiators is that they understand experience data and what customers need to be able to do with that data. You can use this understanding to build helper functions that make your job easier.
 
 This document covers Adobe-defined functions (ADFs) to support three key Analytics activities:
+
 * [Sessionization](#sessionization)
 * [Attribution](#attribution)
 * [Pathing](#pathing)
@@ -39,6 +40,7 @@ FROM  (
       )
 LIMIT 100;
 ```
+
 ![Image](../images/queries/adobe-functions/sess-timeout.png)
 
 ### Create a new trended report with visitors, sessions, and page views
@@ -67,6 +69,7 @@ GROUP BY Day
 ORDER BY Day DESC 
 LIMIT 31;
 ```
+
 ![Image](../images/queries/adobe-functions/trended-report.png)
 
 ## Attribution
@@ -105,6 +108,7 @@ FROM your_analytics_table
 WHERE _ACP_YEAR=2018 AND _ACP_MONTH=4
 LIMIT 50;
 ```
+
 ![Image](../images/queries/adobe-functions/row-level-attribution.png)
 
 ### Create a breakdown of orders by Last Member Level (eVar10)
@@ -128,6 +132,7 @@ GROUP BY LastMemberLevel
 ORDER BY MemberLevelOrders DESC
 LIMIT 25;
 ```
+
 ![Image](../images/queries/adobe-functions/last-member-level.png)
 
 ## Pathing
@@ -160,6 +165,7 @@ FROM your_analytics_table
 WHERE _ACP_YEAR=2018 
 LIMIT 10;
 ```
+
 ![Image](../images/queries/adobe-functions/select-current-page.png)
 
 ### Create a breakdown report for the top five page names on entry of the session
@@ -216,5 +222,6 @@ LIMIT 10;
   ORDER BY PageViews DESC
   LIMIT 100;
 ```
+
 ![Image](../images/queries/adobe-functions/create-breakdown-report.png)
 

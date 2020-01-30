@@ -388,7 +388,7 @@ A successful response returns HTTP status 202 (Accepted) with the following mess
 }
 ```
 
-## Delete a specified scheduled query
+### Delete a specified scheduled query
 
 You can delete a specified scheduled query by making a DELETE request to the `/schedules` endpoint and providing the ID of the scheduled query you want to delete in the request path.
 

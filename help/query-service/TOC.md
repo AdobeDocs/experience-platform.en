@@ -10,14 +10,14 @@ user-guide-title: Adobe Experience Platform Query Service Help
 * [Quickstart guide](quickstart.md)
 * Query Service API developer guide {#dev-guide}
   * [Getting started](developer-guide/getting-started.md)
-  * Queries
-  * Connection parameters
-  * Scheduled queries
-  * Runs for scheduled queries
-  * Query templates
+  * [Queries](developer-guide/queries.md)
+  * [Connection parameters](developer-guide/connection-parameters.md)
+  * [Scheduled queries](developer-guide/scheduled-queries.md)
+  * [Runs for scheduled queries](developer-guide/runs-scheduled-queries.md)
+  * [Query templates](developer-guide/query-templates.md)
 * Query Service UI {#ui-guide}
-  * UI overview
-  * UI user guide
+  * [UI overview](ui-overview.md)
+  * [Query Editor user guide](query-editor-overview.md)
 * Creating queries {#creating-queries}
   * Creating queries overview
   * Datasets vs tables and schemas
