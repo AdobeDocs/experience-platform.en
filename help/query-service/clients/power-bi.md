@@ -1,3 +1,10 @@
+---
+keywords: Experience Platform;home;popular topics
+solution: Experience Platform
+title: Connect with Power BI
+topic: connect
+---
+
 # Connect with Power BI (PC)
 
 PC users can install Power BI from [https://powerbi.microsoft.com/en-us/desktop/](https://powerbi.microsoft.com/en-us/desktop/).

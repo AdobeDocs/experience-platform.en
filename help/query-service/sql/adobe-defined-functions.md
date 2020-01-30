@@ -1,3 +1,10 @@
+---
+keywords: Experience Platform;home;popular topics
+solution: Experience Platform
+title: Adobe-defined functions
+topic: functions
+---
+
 # Adobe-defined functions
 
 Adobe-defined functions (ADFs) are prebuilt functions in Query Service that help perform common business related tasks on ExperienceEvent data. These include functions for Sessionization and Attribution like those found in Adobe Analytics. See the [Adobe Analytics documentation][Adobe Analytics] for more information about Adobe Analytics and the concepts behind the ADFs defined on this page.

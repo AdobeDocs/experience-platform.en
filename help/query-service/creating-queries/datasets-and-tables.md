@@ -1,4 +1,11 @@
-# Datasets vs tables and schema
+---
+keywords: Experience Platform;home;popular topics
+solution: Experience Platform
+title: Datasets vs tables and schemas
+topic: queries
+---
+
+# Datasets vs tables and schemas
 
 Review the list of datasets by navigating to [Platform UI](https://platform.adobe.com/datasets). 
 

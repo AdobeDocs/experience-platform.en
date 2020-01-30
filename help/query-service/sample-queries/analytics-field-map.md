@@ -1,3 +1,10 @@
+---
+keywords: Experience Platform;home;popular topics
+solution: Experience Platform
+title: Field mapping
+topic: mapping
+---
+
 # Adobe Analytics field mapping to XDM ExperienceEvents
 
 Data from selected Adobe Analytics report suites is transformed into XDM ExperienceEvents and ingested into Adobe Experience Platform as datasets for you.

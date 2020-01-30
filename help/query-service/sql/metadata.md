@@ -1,3 +1,10 @@
+---
+keywords: Experience Platform;home;popular topics
+solution: Experience Platform
+title: Metadata commands
+topic: metadata
+---
+
 # Metadata commands
 
 For metadata on your dataset, the following PSQL commands are currently supported for querying:

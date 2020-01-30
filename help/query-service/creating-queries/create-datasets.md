@@ -1,3 +1,10 @@
+---
+keywords: Experience Platform;home;popular topics
+solution: Experience Platform
+title: Generate datasets from query results
+topic: queries
+---
+
 # Generate datasets from query results
 
 The true power of Query Service is revealed when queries are used to generate datasets in the data lake to be used as input into more queries or in other services such as Data Science Workspace, Real-time Customer Profile, or Analysis Workspace. 

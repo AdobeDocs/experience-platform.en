@@ -1,3 +1,10 @@
+---
+keywords: Experience Platform;home;popular topics
+solution: Experience Platform
+title: Connect clients to Query Service
+topic: connect
+---
+
 # Connect clients to Query Service
 
 This section explains how to connect to Query Service from a variety of desktop client applications, and how to verify those connections. Query Service uses the Postgres protocol, so the instructions in this section explain how to use Postgres tools and drivers to connect and write queries.

@@ -1,3 +1,10 @@
+---
+keywords: Experience Platform;home;popular topics
+solution: Experience Platform
+title: Connect with Looker
+topic: connect
+---
+
 # Connect with Looker
 
 To connect Looker with Adobe Query Service on Adobe Experience Platform, please follow the steps below:
