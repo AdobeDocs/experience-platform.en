@@ -3,17 +3,17 @@
 Query Editor is an interactive tool provided by Adobe Experience Platform Query Service, which allows you to write, validate, and run queries for customer experience data within the Experience Platform user interface. Query Editor supports developing queries for analysis and data exploration, and allows you to run interactive queries for development purposes as well as non-interactive queries to populate datasets in Experience Platform.
 
 Within this document you will find information on the following topics:
-  - [Query authoring using Query Editor](#query-authoring-using-query-editor)
-    - [Accessing Query Editor](#accessing-query-editor)
-    - [Writing queries](#writing-queries)
-    - [Writing tools in Query Editor](#writing-tools-in-query-editor)
-    - [Error detection](#error-detection)
-    - [Query details](#query-details)
-    - [Saving queries](#saving-queries)
-    - [How to find previous queries](#how-to-find-previous-queries)
-  - [Executing queries using Query Editor](#executing-queries-using-query-editor)
-    - [Console](#console)
-    - [Query results](#query-results)
+- [Query authoring using Query Editor](#query-authoring-using-query-editor)
+  - [Accessing Query Editor](#accessing-query-editor)
+  - [Writing queries](#writing-queries)
+  - [Writing tools in Query Editor](#writing-tools-in-query-editor)
+  - [Error detection](#error-detection)
+  - [Query details](#query-details)
+  - [Saving queries](#saving-queries)
+  - [How to find previous queries](#how-to-find-previous-queries)
+- [Executing queries using Query Editor](#executing-queries-using-query-editor)
+  - [Console](#console)
+  - [Query results](#query-results)
 
 For more information about the concepts and features of Query Service, see the [Query Service overview][query-service-overview]. To learn more about how to navigate the Query Service user interface on Platform, see the [Query Service UI overview][query-service-ui].
 
@@ -51,15 +51,15 @@ To minimize your development time, it is recommended that you develop your queri
 
 ### Writing tools in Query Editor
 
-* **Automatic syntax highlighting:** Makes reading and organizing SQL easier.
+- **Automatic syntax highlighting:** Makes reading and organizing SQL easier.
 
 ![Image](../images/queries/query-editor-overview/syntax-highlight.png)
 
-* **SQL key word auto-complete:** Start typing your query then use the arrow keys to navigate to the desired term and press **Enter**.
+- **SQL key word auto-complete:** Start typing your query then use the arrow keys to navigate to the desired term and press **Enter**.
 
 ![Image](../images/queries/query-editor-overview/syntax-auto.png)
 
-* **Table and field auto-complete:** Start typing the table name you want to `SELECT` from, then use the arrow keys to navigate to the table you are looking for, and press **Enter**. Once a table is selected, autocomplete will recognize fields in that table. 
+- **Table and field auto-complete:** Start typing the table name you want to `SELECT` from, then use the arrow keys to navigate to the table you are looking for, and press **Enter**. Once a table is selected, autocomplete will recognize fields in that table. 
 
 ![Image](../images/queries/query-editor-overview/tables-auto.png)
 

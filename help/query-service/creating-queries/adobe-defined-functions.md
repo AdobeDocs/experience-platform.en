@@ -151,19 +151,20 @@ PREVIOUS(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])
 Structure with field `(value)`
 
 ### Select the current page and next page
+
 ```sql
-SELECT 
-      endUserIds._experience.aaid.id,
-      timestamp,
-      web.webPageDetails.name,
-      NEXT(web.webPageDetails.name, 1, true)
-          OVER(PARTITION BY endUserIds._experience.aaid.id
-              ORDER BY timestamp
-              ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING).value
-          AS next_pagename
-FROM your_analytics_table
-WHERE _ACP_YEAR=2018 
-LIMIT 10;
+  SELECT 
+        endUserIds._experience.aaid.id,
+        timestamp,
+        web.webPageDetails.name,
+        NEXT(web.webPageDetails.name, 1, true)
+            OVER(PARTITION BY endUserIds._experience.aaid.id
+                ORDER BY timestamp
+                ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING).value
+            AS next_pagename
+  FROM your_analytics_table
+  WHERE _ACP_YEAR=2018 
+  LIMIT 10;
 ```
 
 ![Image](../images/queries/adobe-functions/select-current-page.png)
