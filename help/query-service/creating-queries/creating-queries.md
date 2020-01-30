@@ -17,5 +17,4 @@ The following documentation will help you to better understand core concepts wit
 * [General guidance for writing queries](./writing-queries.md)
 * [ExperienceEvent queries](./experience-event-queries.md)
 * [Joining datasets](./joining-datasets.md)
-* [Using Adobe-defined functions (ADFs)](./adobe-defined-functions.md)
 * [Deduplicating data](./deduplication.md)
