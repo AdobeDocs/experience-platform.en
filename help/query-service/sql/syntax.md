@@ -3,15 +3,15 @@
 
 Query Service provides the ability to use standard ANSI SQL for `SELECT` statements and other limited commands. This document shows SQL syntax supported by Query Service for the following commands:
 
-  - [Define a SELECT query](#define-a-select-query)
-  - [JOINS](#joins)
-  - [UNION, INTERSECT, and EXCEPT](#union-intersect-and-except)
-  - [CREATE TABLE AS SELECT](#create-table-as-select)
-  - [INSERT INTO](#insert-into)
-  - [Spark SQL commands](#spark-sql-commands)
+- [Define a SELECT query](#define-a-select-query)
+- [JOINS](#joins)
+- [UNION, INTERSECT, and EXCEPT](#union-intersect-and-except)
+- [CREATE TABLE AS SELECT](#create-table-as-select)
+- [INSERT INTO](#insert-into)
+- [Spark SQL commands](#spark-sql-commands)
     - [DROP TABLE](#drop-table)
     - [SET](#set)
-  - [PostgreSQL commands](#postgresql-commands)
+- [PostgreSQL commands](#postgresql-commands)
     - [BEGIN](#begin)
     - [CLOSE](#close)
     - [COMMIT](#commit)
@@ -132,7 +132,7 @@ where `target_schema_title` is the title of XDM schema. Use this clause only if 
 and `select_query` is a `SELECT` statement, the syntax of which is defined above in this document.
 
 
-#### Example
+### Example
 
 ```
 CREATE TABLE Chairs AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
@@ -154,7 +154,7 @@ INSERT INTO table_name select_query
 
 where `select_query` is a `SELECT` statement, the syntax of which is defined above in this document.
 
-#### Example
+### Example
 
 ```
 INSERT INTO Customers SELECT SupplierName, City, Country FROM OnlineCustomers;
@@ -173,7 +173,7 @@ Drop a table and delete the directory associated with the table from the file sy
 DROP [TEMP] TABLE [IF EXISTS] [db_name.]table_name
 ```
 
-#### Parameters
+### Parameters
 
 -  `IF EXISTS`: If the table does not exist, nothing happens
 - `TEMP`: Temporary table 
@@ -207,6 +207,7 @@ DROP VIEW [IF EXISTS] view_name
 Where `view_name` is the name of view to be deleted
 
 Example:
+
 ```
 DROP VIEW v1
 DROP VIEW IF EXISTS v1

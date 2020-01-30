@@ -7,6 +7,7 @@ Datasets:
 * custom_operating_system_lookup
 
 Create a `SELECT` statement for the top 50 operating systems by number of page views.
+
 ```sql
 SELECT 
   b.operatingsystem AS OperatingSystem,
@@ -19,4 +20,5 @@ GROUP BY OperatingSystem
 ORDER BY PageViews DESC
 LIMIT 50;
 ```
+
 ![Image](../images/queries/joining-datasets/select-operating-systems.png)
