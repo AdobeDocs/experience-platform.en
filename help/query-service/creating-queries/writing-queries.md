@@ -47,13 +47,13 @@ To access a field within an object in your query, you can use either dot notatio
 - `{ANALYTICS_TABLE_NAME}`: The name of your analytics table. 
 
 The following SQL statement uses bracket notation to traverse the `endUserIds` object down to the `mcid` object. 
- 
-  ```sql
-  SELECT endUserIds['_experience']['mcid']
-  FROM {ANALYTICS_TABLE_NAME}
-  WHERE endUserIds._experience.mcid IS NOT NULL
-  LIMIT 1
-  ```
+
+```sql
+SELECT endUserIds['_experience']['mcid']
+FROM {ANALYTICS_TABLE_NAME}
+WHERE endUserIds._experience.mcid IS NOT NULL
+LIMIT 1
+```
 
 - `{ANALYTICS_TABLE_NAME}`: The name of your analytics table. 
 

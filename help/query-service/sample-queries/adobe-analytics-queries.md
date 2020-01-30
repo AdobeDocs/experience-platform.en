@@ -180,6 +180,7 @@ The "No such struct field" error is encountered when you attempt to retrieve a f
 ```
 ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered. Reason: [No such struct field evar1 in eVar10, eVar13, eVar62, eVar88, eVar2;]
 ```
+
 ## Merchandising variables (conversion syntax)
 
 Another type of a Merchandising Variable found in Adobe Analytics is Conversion Syntax. With Product Syntax the value is collected at the same time as the product but this requires the data to be present on the same page. There are scenarios where the data occurs on a page prior to the conversion or event of interest related to the product. For example, consider the Product Finding Method reporting use case.

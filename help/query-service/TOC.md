@@ -19,21 +19,20 @@ user-guide-title: Adobe Experience Platform Query Service Help
   * [UI overview](ui-overview.md)
   * [Query Editor user guide](query-editor-overview.md)
 * Creating queries {#creating-queries}
-  * Creating queries overview
-  * Datasets vs tables and schemas
-  * General guidance for query execution
-  * ExperienceEvent queries
-  * Joining datasets
-  * Using Adobe-defined functions
-  * Data deduplication
-* Generating datasets from query results
+  * [Creating queries overview](creating-queries/creating-queries.md)
+  * [Datasets vs tables and schemas](creating-queries/datasets-and-tables.md)
+  * [General guidance for query execution](creating-queries/writing-queries.md)
+  * [ExperienceEvent queries](creating-queries/experience-event-queries.md)
+  * [Joining datasets](creating-queries/joining-datasets.md)
+  * [Using Adobe-defined functions](creating-queries/adobe-defined-functions.md)
+  * [Data deduplication](deduplication.md)
+* [Generating datasets from query results](creating-queries/create-datasets.md)
 * SQL reference {#sql-reference}
-  * SQL overview
-  * SQL syntax
-  * Adobe-defined functions
-  * Built-in Spark functions
-  * Metadata commands
-  * Prepared statements
+  * [SQL overview](sql/overview.md)
+  * [SQL syntax]((sql/syntax.md))
+  * [Adobe-defined functions](sql/adobe-defined-functions.md)
+  * [Metadata commands](sql/metadata.md)
+  * [Prepared statements](sql/prepared-statements.md)
 * Sample queries {#sample-queries}
   * [Sample queries overview](sample-queries/sample-queries.md)
   * [Adobe Analytics](sample-queries/adobe-analytics-queries.md)
