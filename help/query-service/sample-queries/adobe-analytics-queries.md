@@ -199,10 +199,10 @@ Another type of a Merchandising Variable found in Adobe Analytics is Conversion 
 
 In reporting, the orders, revenue, product views, and cart adds will be reportable against eVar6 and will align to the activity of the bound product.
 
-| eVar6 (Product Finding Method) | revenue | orders | product views | cart adds |
+|eVar6 (Product Finding Method)|revenue|orders|product views|cart adds|
 |---|---|---|---|---|
-|internal search:summer shirt	|19.99	|1|	1|	1|
-|internal search:winter hat|	12.99|	1|	1|	1|
+|internal search:summer shirt|19.99|1|1|1|
+|internal search:winter hat|12.99|1|1|1|
 
 Here are the XDM fields to produce the Conversion Syntax in your Analytics dataset:
 
