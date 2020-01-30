@@ -4,7 +4,7 @@ This document walks through the steps for connecting Aqua Data Studio with Adobe
 
 After installing Aqua Data Studio, you must first register the server. From the main menu, click **Server**, then click **Register Server**.
 
-![](images/clients/aqua-data-studio/register-server.png)
+![](../images/clients/aqua-data-studio/register-server.png)
 
 The *Register Server* dialog appears. Under the *General* tab, select **PostgreSQL** from the list on the left-hand side. In the dialog that appears, provide the following details for the server settings.
 
