@@ -17,7 +17,7 @@ Review the Dataset schema in the UI by clicking on a schema name in the dataset 
 Open the PSQL command line and use the connection details from here: [https://platform.adobe.com/query/configuration](https://platform.adobe.com/query/configuration).
 
 ![](../images/clients/psql/connect-bi.png)
-	
+
 To view the available tables on Platform with SQL, you can use either `\d` or `SHOW TABLES;`.
 
 `\d` displays the standard PostgreSQL view

@@ -15,7 +15,7 @@ Specifically, it provides examples of the following queries:
 The following example creates a trended report of events over a specified date range, grouped by date. Specifically, it sums up various analytics values as A, B, and C, and then sums up the number of times parkas has been viewed.
 
 The timestamp column found in Experience Event datasets is in UTC. The following example uses the `from_utc_timestamp()` function to transform the timestamp from UTC to EDT. It then uses the `date_format()` function to isolate the date from the rest of the timestamp.
-    
+
 ```sql
 SELECT 
 date_format( from_utc_timestamp(timestamp, 'EDT') , 'yyyy-MM-dd') as Day,

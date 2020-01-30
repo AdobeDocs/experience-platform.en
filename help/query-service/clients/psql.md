@@ -45,6 +45,7 @@ After issuing these commands, you should see the following:
     ```
     psql (PostgreSQL) 9.5.14
     ```
+    
 ## Connect PSQL and Query Service
 
 1. Return to the Platform UI on the "Connect BI Tools" page. 

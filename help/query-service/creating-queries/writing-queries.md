@@ -19,11 +19,11 @@ Queries can be executed interactively by submitting them through the Query Servi
 
 Interactive query execution has the following limitations:
 
- Parameter       | Limitation   
- --------------- |:-------------:
- Query timeout | 10 minutes 
- Maximum rows returned | 50,000 
- Maximum concurrent queries | 5 
+Parameter       | Limitation   
+--------------- |:-------------:
+Query timeout | 10 minutes 
+Maximum rows returned | 50,000 
+Maximum concurrent queries | 5 
 
 > **Note:** To override the maximum rows limitation, include `LIMIT 0` in your query. The query timeout of 10 minutes still applies. 
 
@@ -44,16 +44,16 @@ To access a field within an object in your query, you can use either dot notatio
   LIMIT 1
   ```
 
-  - `{ANALYTICS_TABLE_NAME}`: The name of your analytics table. 
+- `{ANALYTICS_TABLE_NAME}`: The name of your analytics table. 
 
 The following SQL statement uses bracket notation to traverse the `endUserIds` object down to the `mcid` object. 
- 
-  ```sql
-  SELECT endUserIds['_experience']['mcid']
-  FROM {ANALYTICS_TABLE_NAME}
-  WHERE endUserIds._experience.mcid IS NOT NULL
-  LIMIT 1
-  ```
+
+```sql
+SELECT endUserIds['_experience']['mcid']
+FROM {ANALYTICS_TABLE_NAME}
+WHERE endUserIds._experience.mcid IS NOT NULL
+LIMIT 1
+```
 
 - `{ANALYTICS_TABLE_NAME}`: The name of your analytics table. 
 
@@ -99,6 +99,7 @@ This section explains when to use single quotes, double quotes, and back quotes 
 The single quote (`'`) is used to create text strings. For example, it can be used in the `SELECT` statement to return a static text value in the result, and in the `WHERE` clause to evaluate the content of a column.
 
 The following query declares a static text value (`'datasetA'`) for a column:
+
 ```sql
 SELECT 
   'datasetA',
@@ -109,6 +110,7 @@ LIMIT 10
 ```
 
 The following query uses a single-quoted string (`'homepage'`) in its WHERE clause to return events for a specific page.
+
 ```sql
 SELECT 
   timestamp,
@@ -158,6 +160,7 @@ LIMIT 10
 ```
 
 Back quotes are **not** needed if you are using bracket-notation.
+
 ```sql
  SELECT
   commerce['order']

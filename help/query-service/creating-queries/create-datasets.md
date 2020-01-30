@@ -1,4 +1,5 @@
 # Generate datasets from query results
+
 The true power of Query Service is revealed when queries are used to generate datasets in the data lake to be used as input into more queries or in other services such as Data Science Workspace, Real-time Customer Profile, or Analysis Workspace. 
 
 Query Service allows the creation of datasets from the UI. Follow these steps:

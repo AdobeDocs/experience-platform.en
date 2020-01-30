@@ -55,6 +55,7 @@ LIMIT 1000000")
 ```
 
 A successful response returns the results of the query: 
+
 ```r
 df_pageviews
  buckets pageviews

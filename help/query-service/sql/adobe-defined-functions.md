@@ -3,21 +3,21 @@
 Adobe-defined functions (ADFs) are prebuilt functions in Query Service that help perform common business related tasks on ExperienceEvent data. These include functions for Sessionization and Attribution like those found in Adobe Analytics. See the [Adobe Analytics documentation][Adobe Analytics] for more information about Adobe Analytics and the concepts behind the ADFs defined on this page.
 
 This document provides information for the following Adobe-defined functions available in Query Service:
- - [Window functions](#window-functions)
- - [Sessionization](#sessionization)
- - [Attribution](#attribution)
-   - [First touch attribution](#first-touch-attribution)
-   - [First touch attribution with expiration condition](#first-touch-attribution-with-expiration-condition)
-   - [First touch attribution with expiration timeout](#first-touch-attribution-with-expiration-timeout)
-   - [Last touch attribution](#last-touch-attribution)
-   - [Last touch attribution with expiration condition](#last-touch-attribution-with-expiration-condition)
-   - [Last touch attribution with expiration timeout](#last-touch-attribution-with-expiration-timeout)
- - [Previous/next touch](#previousnext-touch)
-   - [Previous touch](#previous-touch)
-   - [Next touch](#next-touch)
- - [Time-between](#time-between)
-   - [Time-between previous match](#time-between-previous-match)
-   - [Time-between next match](#time-between-next-match)
+- [Window functions](#window-functions)
+- [Sessionization](#sessionization)
+- [Attribution](#attribution)
+  - [First touch attribution](#first-touch-attribution)
+  - [First touch attribution with expiration condition](#first-touch-attribution-with-expiration-condition)
+  - [First touch attribution with expiration timeout](#first-touch-attribution-with-expiration-timeout)
+  - [Last touch attribution](#last-touch-attribution)
+  - [Last touch attribution with expiration condition](#last-touch-attribution-with-expiration-condition)
+  - [Last touch attribution with expiration timeout](#last-touch-attribution-with-expiration-timeout)
+- [Previous/next touch](#previousnext-touch)
+  - [Previous touch](#previous-touch)
+  - [Next touch](#next-touch)
+- [Time-between](#time-between)
+  - [Time-between previous match](#time-between-previous-match)
+  - [Time-between next match](#time-between-next-match)
 
 ## Window functions
 
@@ -27,7 +27,7 @@ A window function updates an aggregation and returns a single item for each row 
 
 The majority of the Spark SQL helpers are window functions that update each row in your window, with the state of that row added.
 
-#### Specification
+### Specification
 
 Syntax: `OVER ([partition] [order] [frame])`
 
@@ -43,7 +43,7 @@ When you are working with ExperienceEvent data originating from a website, mobil
 
 For more information about Sessionization in Adobe Analytics, see the documentation on [context-aware sessions][Analytics Sessionization].
 
-#### Specification
+### Specification
 
 Syntax: `SESS_TIMEOUT(timestamp, expirationInSeconds) OVER ([partition] [order] [frame])`
 
@@ -76,6 +76,7 @@ LIMIT 10
 ```
 
 #### Results
+
 ```
                 id                |       timestamp       |      session       
 ----------------------------------+-----------------------+--------------------
@@ -104,7 +105,7 @@ Returns the first touch attribution value and details for a single channel in th
 
 This query is useful if you want to see what interaction led to a series of customer actions. In the example shown below, the initial tracking code (`em:946426`) in the ExperienceEvent data is attributed 100% (`1.0`) responsibility for the customer actions as it was the first interaction.
 
-#### Specification
+### Specification
 
 Syntax: `ATTRIBUTION_FIRST_TOUCH(timestamp, channelName, channelValue) OVER ([partition] [order] [frame])`
 
@@ -160,7 +161,7 @@ Returns the last touch attribution value and details for a single channel in the
 
 This query is useful if you want to see the final interaction in a series of customer actions. In the example shown below, the tracking code in the returned object is the last interaction in each ExperienceEvent record. Each code is attributed 100% (`1.0`) responsibility for the customer actions as it was the last interaction.
 
-#### Specification
+### Specification
 
 Syntax: `ATTRIBUTION_LAST_TOUCH(timestamp, channelName, channelValue) OVER ([partition] [order] [frame])`
 
@@ -179,6 +180,7 @@ Syntax: `ATTRIBUTION_LAST_TOUCH(timestamp, channelName, channelValue) OVER ([par
 | `fraction`   | The attribution of the last touch expressed as fractional credit |
 
 #### Example Query
+
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
     ATTRIBUTION_LAST_TOUCH(timestamp, 'trackingCode', marketing.trackingCode)
@@ -191,6 +193,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
 #### Results
+
 ```
                 id                 |       timestamp       | trackingcode |                   last_touch                   
 -----------------------------------+-----------------------+--------------+-------------------------------------------------
@@ -233,6 +236,7 @@ Syntax: `ATTRIBUTION_FIRST_TOUCH_EXP_IF(timestamp, channelName, channelValue, ex
 | `fraction`   | The attribution of the first touch expressed as fractional credit |
 
 #### Example Query
+
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
     ATTRIBUTION_FIRST_TOUCH_EXP_IF(timestamp, 'Paid First', marketing.trackingCode, commerce.purchases.value IS NOT NULL, false)
@@ -245,6 +249,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
 #### Results
+
 ```
                 id                 |       timestamp       | trackingCode |                   first_touch                    
 -----------------------------------+-----------------------+--------------+--------------------------------------------------
@@ -299,6 +304,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
 #### Results
+
 ```
                 id                 |       timestamp       | trackingCode |                   first_touch                    
 -----------------------------------+-----------------------+--------------+--------------------------------------------------
@@ -354,6 +360,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
 #### Results
+
 ```
                 id                 |       timestamp       | trackingcode |                   last_touch                   
 -----------------------------------+-----------------------+--------------+-------------------------------------------------
@@ -408,6 +415,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
 #### Results
+
 ```
                 id                 |       timestamp       | trackingcode |                   last_touch                   
 -----------------------------------+-----------------------+--------------+-------------------------------------------------
@@ -461,6 +469,7 @@ ORDER BY endUserIds._experience.mcid.id, _experience.analytics.session.num, time
 ```
 
 #### Results
+
 ```
                 id                 |       timestamp       |                 name                |                    previous_page                    
 -----------------------------------+-----------------------+-------------------------------------+-----------------------------------------------------
@@ -511,6 +520,7 @@ LIMIT 10
 ```
 
 #### Results
+
 ```
                 id                 |       timestamp       |                name                 |             previous_page             
 -----------------------------------+-----------------------+-------------------------------------+---------------------------------------
@@ -572,6 +582,7 @@ LIMIT 10
 ```
 
 #### Results
+
 ```
              page_name             | average_minutes_since_registration 
 -----------------------------------+------------------------------------
@@ -605,6 +616,7 @@ Syntax: `TIME_BETWEEN_NEXT_MATCH(timestamp, eventDefintion, [timeUnit]) OVER ([p
 Output: Returns a negative number representing the unit of time behind the next matching event or remains null if a matching event is not found.
 
 #### Example Query
+
 ```
 SELECT 
   page_name,
@@ -628,6 +640,7 @@ LIMIT 10
 ```
 
 #### Results
+
 ```
              page_name             | average_minutes_until_order_confirmation 
 -----------------------------------+------------------------------------------
@@ -652,6 +665,3 @@ Using the functions described here, you can write queries to access your own Exp
 [Adobe Analytics]: https://docs.adobe.com/content/help/en/analytics/landing/home.html
 [Analytics Sessionization]: https://docs.adobe.com/content/help/en/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html
 [Analytics Attribution]: https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/panels/attribution.html
-
-
-<img src="https://i.imgur.com/aIgvaQu.png" alt="back-to-top" width="50" height="50" style="position: fixed; bottom: 30px; float: right; right: 10%; left: 90%; opacity: 0.4; padding-top: 0px; padding-bottom: 0px; border-style: hidden; border-radius: 50%;" onmouseover="this.style.opacity = 0.9;" onmouseout="this.style.opacity = 0.4;" onclick="document.documentElement.scrollTop = document.getElementsByClassName('udp-header')[0].offsetHeight; document.body.scrollTop = document.getElementsByClassName('udp-header')[0].offsetHeight;">

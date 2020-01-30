@@ -7,46 +7,44 @@ user-guide-title: Adobe Experience Platform Query Service Help
 # Adobe Experience Platform Query Service {#query}
 
 * [Query Service overview](home.md)
-* Quickstart guide
+* [Quickstart guide](quickstart.md)
 * Query Service API developer guide {#dev-guide}
-  * Getting started
-  * Queries
-  * Connection parameters
-  * Scheduled queries
-  * Runs for scheduled queries
-  * Query templates
-* Query Service UI {#service-ui}
-  * UI overview
-  * UI user guide
-* Creating queries {#creating}
-  * Creating queries overview
-  * Datasets vs tables and schemas
-  * General guidance for query execution
-  * ExperienceEvent queries
-  * Joining datasets
-  * Using Adobe-defined functions
-  * Data deduplication
-* Generating datasets from query results
-* SQL reference {#reference}
-  * SQL overview
-  * SQL syntax
-  * Adobe-defined funtions
-  * Built-in Spark functions
-  * Metadata commands
-  * Prepared statements
-* Sample queries {#samples}
-  * Sample queries overview
-  * Adobe Analytics
-  * Adobe Analytics field mapping to XDM ExperienceEvents
-  * Adobe Target
+  * [Getting started](developer-guide/getting-started.md)
+  * [Queries](developer-guide/queries.md)
+  * [Connection parameters](developer-guide/connection-parameters.md)
+  * [Scheduled queries](developer-guide/scheduled-queries.md)
+  * [Runs for scheduled queries](developer-guide/runs-scheduled-queries.md)
+  * [Query templates](developer-guide/query-templates.md)
+* Query Service UI {#ui-guide}
+  * [UI overview](ui-overview.md)
+  * [Query Editor user guide](query-editor-overview.md)
+* Creating queries {#creating-queries}
+  * [Creating queries overview](creating-queries/creating-queries.md)
+  * [Datasets vs tables and schemas](creating-queries/datasets-and-tables.md)
+  * [General guidance for query execution](creating-queries/writing-queries.md)
+  * [ExperienceEvent queries](creating-queries/experience-event-queries.md)
+  * [Joining datasets](creating-queries/joining-datasets.md)
+  * [Data deduplication](creating-queries/deduplication.md)
+* [Generating datasets from query results](creating-queries/create-datasets.md)
+* SQL reference {#sql-reference}
+  * [SQL overview](sql/overview.md)
+  * [SQL syntax](sql/syntax.md)
+  * [Adobe-defined functions](sql/adobe-defined-functions.md)
+  * [Metadata commands](sql/metadata.md)
+  * [Prepared statements](sql/prepared-statements.md)
+* Sample queries {#sample-queries}
+  * [Sample queries overview](sample-queries/sample-queries.md)
+  * [Adobe Analytics](sample-queries/adobe-analytics-queries.md)
+  * [Adobe Analytics field mapping to XDM ExperienceEvents](sample-queries/analytics-field-map.md)
+  * [Adobe Target](sample-queries/adobe-target-queries.md)
 * Connect clients to Query Service {#connect-clients}
-  * Client connections overview
-  * Aqua Data Studio
-  * Looker
-  * Postico (Mac)
-  * Power BI (PC)
-  * PSQL
-  * RStudio
-  * Tableau
-* Errors and troubleshooting
+  * [Client connections overview](clients/overview.md)
+  * [Aqua Data Studio](clients/aqua-data-studio.md)
+  * [Looker](clients/looker.md)
+  * [Postico (Mac)](clients/postico.md)
+  * [Power BI (PC)](clients/power-bi.md)
+  * [PSQL](clients/psql.md)
+  * [RStudio](clients/rstudio.md)
+  * [Tableau](clients/tableau.md)
+* [Troubleshooting guide](troubleshooting-guide.md)
 * [API Reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml)

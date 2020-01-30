@@ -15,13 +15,13 @@ The use of [ ] denotes an array
 
 | Name | XDM Field | Notes |
 | ---- | --------- | ----- |
-| mboxName | _experience.target.mboxname
-| Activity ID | _experience.target.activities.activityID
-| Experience ID	| _experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID
-| Segment ID | _experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id
-| Event Scope | _experience.target.activities[].activityEvents[].eventScope | Tracks new Visitor and Visit
-| Step ID | _experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID | Custom step ID for Campaign
-| Price Total | commerce.order.priceTotal	|
+| mboxName | `_experience.target.mboxname`||
+|Activity ID | `_experience.target.activities.activityID`||
+|Experience ID|`_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID`||
+|Segment ID|`_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id`||
+|Event Scope|`_experience.target.activities[].activityEvents[].eventScope`|Tracks new Visitor and Visit|
+|Step ID| `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID`|Custom step ID for Campaign|
+|Price Total|`commerce.order.priceTotal`||
 
 ## Hourly activity counts for a given day
 
@@ -38,9 +38,9 @@ FROM
   FROM adobe_target_experience_events
   WHERE
     _ACP_YEAR = {target_year} AND 
-	_ACP_MONTH = {target_month} AND 
-	_ACP_DAY = {target_day} AND 
-	_experience.target.activities IS NOT NULL
+    _ACP_MONTH = {target_month} AND 
+    _ACP_DAY = {target_day} AND 
+    _experience.target.activities IS NOT NULL
 )
 GROUP BY Hour, ActivityID
 ORDER BY Hour DESC, Instances DESC
