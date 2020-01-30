@@ -71,5 +71,5 @@ df_pageviews
 For more information on how to write and run queries, please read the [running queries guide][running-queries].
 
 [credentials]: https://platform.adobe.com/query/configuration
-[running-queries]: ../queries-and-ui/running-queries.md
-[experience-event]: ../queries-and-ui/experience-event-queries.md
+[running-queries]: ../creating-queries/creating-queries.md
+[experience-event]: ../creating-queries/experience-event-queries.md

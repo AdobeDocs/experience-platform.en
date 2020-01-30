@@ -661,7 +661,7 @@ LIMIT 10
 
 Using the functions described here, you can write queries to access your own ExperienceEvent datasets using Query Service. For more information about authoring queries in Query Service, see the documentation on [creating queries][Creating queries].
 
-[Creating queries]: ../queries-and-ui/running-queries.md
+[Creating queries]: ../creating-queries/creating-queries.md
 [Adobe Analytics]: https://docs.adobe.com/content/help/en/analytics/landing/home.html
 [Analytics Sessionization]: https://docs.adobe.com/content/help/en/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html
 [Analytics Attribution]: https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/panels/attribution.html

@@ -1,6 +1,6 @@
 # Experience Event queries
 
-In addition to standard SQL queries, Adobe Experience Platform Query Service supports writing queries using Experience Events. An Experience Event is an Experience Data Model (XDM) class that represents an immutable non-aggregated snapshot of the system when a user interacts with a website or service, and can therefore be used for time-domain analysis. More information about XDM and Experience Events can be found in the [XDM System overview](../../schema_registry/xdm_system/xdm_system_in_experience_platform.md).
+In addition to standard SQL queries, Adobe Experience Platform Query Service supports writing queries using Experience Events. An Experience Event is an Experience Data Model (XDM) class that represents an immutable non-aggregated snapshot of the system when a user interacts with a website or service, and can therefore be used for time-domain analysis. More information about XDM and Experience Events can be found in the XDM System overview.
 
 By combining Query Service with Experience Events, you can effectively track behavioral trends amongst your users. The following document provides examples of queries involving Experience Events.
 
@@ -179,5 +179,5 @@ ORDER BY pageViews DESC;
 
 ## Next steps
 
-For more information on sample queries using Adobe Defined Functions (ADFs), please read the [Adobe Defined Functions guide](./adobe-defined-functions.md). For general guidance on query execution, please read the [guide on query execution in Query Service](./writing-queries.md).
+For more information on sample queries using Adobe Defined Functions (ADFs), please read the Adobe Defined Functions guide. For general guidance on query execution, please read the [guide on query execution in Query Service](./writing-queries.md).
 

@@ -271,7 +271,7 @@ PATCH /queries/{QUERY_ID}
 
 #### Request
 
-This API request uses the JSON Patch syntax for its payload. For more information on how JSON Patch works, please read the [API fundamentals document](../../api-fundamentals/api-fundamentals.md). 
+This API request uses the JSON Patch syntax for its payload. For more information on how JSON Patch works, please read the API fundamentals document. 
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8f-463a-a182-54bccb9954fc \

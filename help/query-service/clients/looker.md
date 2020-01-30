@@ -31,4 +31,4 @@ After inputting your connection details, click on **Test These Settings** to ens
 Now that you've connected with Query Service, you can use Looker to write queries. For more information on how to write and run queries, please read the [running queries guide][running-queries].
 
 [credentials]: https://platform.adobe.com/query/configuration
-[running-queries]: ../queries-and-ui/running-queries.md
+[running-queries]: ../creating-queries/creating-queries.md

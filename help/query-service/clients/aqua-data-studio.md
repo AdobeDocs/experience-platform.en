@@ -28,4 +28,4 @@ After inputting your connection details, click **Test Connection** to ensure you
 Now that you have connected to Query Service, you can use the *Query Analyzer* within Aqua Data Studio to execute and edit SQL statements. For more information on how to write and run queries, please read the [running queries guide][running-queries].
 
 [credentials]: https://platform.adobe.com/query/configuration
-[running-queries]: ../queries-and-ui/running-queries.md
+[running-queries]: ../creating-queries/creating-queries.md

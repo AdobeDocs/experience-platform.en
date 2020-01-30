@@ -13,19 +13,19 @@ This developer guide provides steps for performing various operations in the Ado
 
 This guide requires a working understanding of the various Adobe Experience Platform services involved with using Query Service.
 
-- [Query Service](./overview.md): Provides the ability to query datasets and capture the resulting queries as new datasets in Experience Platform.
-- [Experience Data Model (XDM) System](../../schema_registry/xdm_system/xdm_system_in_experience_platform.md): The standardized framework by which Experience Platform organizes customer experience data.
-- [Sandboxes](../../sandboxes/sandboxes-overview.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+- Query Service: Provides the ability to query datasets and capture the resulting queries as new datasets in Experience Platform.
+- Experience Data Model (XDM) System: The standardized framework by which Experience Platform organizes customer experience data.
+- Sandboxes: Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully use Query Service using the API.
 
 ### Reading sample API calls
 
-This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in this documentation for sample API calls, see the section on [how to read example API calls](../../platform_faq_and_troubleshooting/platform_faq_and_troubleshooting.md) in the Experience Platform troubleshooting guide.
+This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in this documentation for sample API calls, see the section on how to read example API calls in the Experience Platform troubleshooting guide.
 
 ### Gather values for required headers
 
-In order to make calls to Experience Platform APIs, you must first complete the [authentication tutorial](../../../tutorials/authenticate_to_acp_tutorial/authenticate_to_acp_tutorial.md). Completing the authentication tutorial provides the values for each of the required headers in all Platform API calls, as shown below:
+In order to make calls to Experience Platform APIs, you must first complete the authentication tutorial. Completing the authentication tutorial provides the values for each of the required headers in all Platform API calls, as shown below:
 
 - Authorization: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -35,7 +35,7 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
   
->**Note:** For more information on working with sandboxes in Experience Platform, see the [sandboxes overview documentation](../../sandboxes/sandboxes-overview.md).
+>**Note:** For more information on working with sandboxes in Experience Platform, see the sandboxes overview documentation.
 
 ## Sample API calls
 
