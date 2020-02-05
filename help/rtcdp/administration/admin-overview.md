@@ -7,20 +7,24 @@ seo-description: seo description
 
 # Real-Time CDP administration overview
 
-This document provides an overview of the administration capabilities of Real-Time Customer Data Profile, powered by Adobe Experience Platform. Experience Platform allows administrators to manage role-based access control for users, as well as manage virtual sandboxes for application development. 
+This document provides an overview of the administration capabilities of Real-time Customer Data Platform, powered by Adobe Experience Platform. 
+
+Experience Platform allows administrators to manage role-based access control for users, as well as manage virtual sandboxes for application development. 
 
 The following sections provide introductions to the central components of Experience Platform administration capabilities, and includes links to Experience Platform documentation where more detailed information is provided.
 
 ## Access control
 
-**Access control** is administered through the [Adobe Admin Console](http://adminconsole.adobe.com). This functionality leverages product profiles in Admin Console, allowing you to link users with permissions and sandboxes. Using this feature, administrators can grant or restrict access to specific Real-Time CDP capabilities for defined sets of users.
+Access control is administered through the [Adobe Admin Console](http://adminconsole.adobe.com). This functionality leverages product profiles in Admin Console, allowing you to link users with permissions and sandboxes. Using this feature, administrators can grant or restrict access to specific Real-time CDP capabilities for defined sets of users.
 
-For more information on access control, see the [access control overview](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md) in the Experience Platform documentation.
+To learn more about access control, see the [access control overview](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md) in the Experience Platform documentation.
+
+For a detailed guide to granting access to Real-time CDP capabilities, including enabling visibility in the UI, please follow the steps provided in the [access control user guide](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-user-guide.md), specifically those for managing details and additional services for a product profile.
 
 ## Sandboxes
 
-Adobe Experience Platform (and Real-Time CDP by extension) is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance.
+Adobe Experience Platform (and Real-time CDP by extension) is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater to the development, testing, and deployment of these applications while ensuring operational compliance.
 
-In order to address this need, Adobe Experience Platform provides **sandboxes** which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+To address this need, Adobe Experience Platform provides "sandboxes", enabling you to partition a single Platform instance into separate virtual environments that can be used to develop and evolve digital experience applications.
 
 For more information on sandboxes, see the [sandboxes overview](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/sandboxes/sandboxes-overview.md) in the Experience Platform documentation.
