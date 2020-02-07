@@ -29,9 +29,7 @@ This section demonstrates how to make an access/delete job request using the API
 **API format**
 
 ```http
-
 POST /
-
 ```
 
 **Request**
@@ -39,7 +37,6 @@ POST /
 The following request creates a new job request, configured by the attributes supplied in the payload as described below.
 
 ```shell
-
 curl -X POST \
   https://platform.adobe.io/data/core/privacy/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -94,8 +91,8 @@ curl -X POST \
     "analyticsDeleteMethod": "anonymize",
     "regulation": "ccpa"
 }'
-
 ```
+
 | Property | Description |
 | --- | --- |
 | `companyContexts`<br/>**(Required)** | An array containing authentication information for your organization. Each listed identifier includes the following attributes: <ul><li>`namespace`: The namespace of an identifier.</li><li>`value`: The value of the identifier.</li></ul>It is **required** that one of the identifiers uses `imsOrgId` as its `namespace`, with its `value` containing the unique ID for your IMS Organization. <br/><br/>Additional identifiers can be product-specific company qualifiers (for example, `Campaign`), which identify an integration with an Adobe application belonging to your organization. Potential values include account names, client codes, tenant IDs, or other application identifiers. |
@@ -111,7 +108,6 @@ curl -X POST \
 A successful response returns the details of the newly created jobs.
 
 ```json
-
 {
     "jobs": [
         {
@@ -151,8 +147,8 @@ A successful response returns the details of the newly created jobs.
     "requestStatus": 1,
     "totalRecords": 3
 }
-
 ```
+
 | Property | Description |
 | --- | --- |
 | `jobId` | A read-only, unique system-generated ID for a job. This value is used in the next step of looking up a specific job. |
@@ -166,9 +162,7 @@ This section demonstrates how to make an opt-out-of-sale job request using the A
 **API format**
 
 ```http
-
 POST /
-
 ```
 
 **Request**
@@ -176,7 +170,6 @@ POST /
 The following request creates a new job request, configured by the attributes supplied in the payload as described below.
 
 ```shell
-
 curl -X POST \
   https://platform.adobe.io/data/privacy/gdpr/ \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -231,8 +224,8 @@ curl -X POST \
     "analyticsDeleteMethod": "anonymize",
     "regulation": "ccpa"
 }'
-
 ```
+
 | Property | Description |
 | --- | --- |
 | `companyContexts`<br/>**(Required)** | An array containing authentication information for your organization. Each listed identifier includes the following attributes: <ul><li>`namespace`: The namespace of an identifier.</li><li>`value`: The value of the identifier.</li></ul>It is **required** that one of the identifiers uses `imsOrgId` as its `namespace`, with its `value` containing the unique ID for your IMS Organization. <br/><br/>Additional identifiers can be product-specific company qualifiers (for example, `Campaign`), which identify an integration with an Adobe application belonging to your organization. Potential values include account names, client codes, tenant IDs, or other application identifiers. |
@@ -249,7 +242,6 @@ curl -X POST \
 A successful response returns the details of the newly created jobs.
 
 ```json
-
 {
     "jobs": [
         {
@@ -278,8 +270,8 @@ A successful response returns the details of the newly created jobs.
     "requestStatus": 1,
     "totalRecords": 2
 }
-
 ```
+
 | Property | Description |
 | --- | --- |
 | `jobId` | A read-only, unique system-generated ID for a job. This value is used to look up a specific job in the next step. |
@@ -295,10 +287,9 @@ Using one of the `jobId` values returned in the previous step, you can retrieve 
 **API format**
 
 ```http
-
 GET /{JOB_ID}
-
 ```
+
 | Parameter | Description |
 | --- | --- |
 | `{JOB_ID}` | The ID of the job you want to look up, returned under `jobId` in the response of the [previous step](#create-a-job-request). |
@@ -308,13 +299,11 @@ GET /{JOB_ID}
 The following request retrieves the details of the job whose `jobId` is provided in the request path.
 
 ```shell
-
 curl -X GET \
   https://platform.adobe.io/data/core/privacy/jobs/6fc09b53-c24f-4a6c-9ca2-c6076b0842b6 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
-
 ```
 
 **Response**
@@ -322,7 +311,6 @@ curl -X GET \
 A successful response returns the details of the specified job.
 
 ```json
-
 {
     "jobId": "527ef92d-6cd9-45cc-9bf1-477cfa1e2ca2",
     "requestId": "15700479082313109RX-899",
@@ -371,8 +359,8 @@ A successful response returns the details of the specified job.
     "downloadURL": "http://...",
     "regulation": "ccpa"
 }
-
 ```
+
 | Property | Description |
 | --- | --- |
 | `productStatusResponse` | The current status of the job. Details about each possible status are provided in the table below. |
@@ -400,13 +388,12 @@ You can view a list of all available job requests within your organization by ma
 This request format uses a `regulation` query parameter on the root (`/`) endpoint, therefore it begins with a question mark (`?`) as shown below. The response is paginated, allowing you to use other query parameters (`page` and `size`) to filter the response. You can separate multiple parameters using ampersands (`&`).
 
 ```http
-
 GET ?regulation={REGULATION}
 GET ?regulation={REGULATION}&page={PAGE}
 GET ?regulation={REGULATION}&size={SIZE}
 GET ?regulation={REGULATION}&page={PAGE}&size={SIZE}
-
 ```
+
 | Parameter | Description |
 | --- | --- |
 | `{REGULATION}` | The regulation type to query for. Accepted values are `gdpr` and `ccpa`. |
@@ -418,13 +405,11 @@ GET ?regulation={REGULATION}&page={PAGE}&size={SIZE}
 The following request retrieves a paginated list of all jobs within an IMS Organization, starting from the third page with a page size of 50.
 
 ```shell
-
 curl -X GET \
   https://platform.adobe.io/data/core/privacy/jobs?regulation=gdpr&page=2&size=50 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
-
 ```
 
 **Response**
