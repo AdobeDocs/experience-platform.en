@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: List all jobs
+title: Jobs
 topic: developer guide
 ---
 
-# List all jobs
+# Jobs

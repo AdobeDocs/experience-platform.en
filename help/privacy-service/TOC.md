@@ -10,11 +10,7 @@ user-guide-title: Adobe Experience Platform Privacy Service Help
 * [Privacy Service and Experience Cloud applications](experience-cloud-apps.md)
 * Privacy Service API {#api}
   * [Getting started](api/getting-started.md)
-  * Jobs {#jobs}
-      * [Create an access/delete job](api/create-access-delete-job.md)
-      * [Create an opt-out-of-sale job](api/create-opt-out-of-sale-job.md)
-      * [Look up a job](api/look-up-job.md)
-      * [List all jobs](api/list-jobs.md)
+  * [Jobs](api/jobs.md)
   * [Accepted identity namespaces and qualifiers](api/namespaces-and-qualifiers.md) 
   * [Accepted product values](api/product-values.md) 
 * Privacy Service UI {#ui}  
