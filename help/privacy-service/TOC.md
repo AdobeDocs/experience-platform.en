@@ -11,8 +11,7 @@ user-guide-title: Adobe Experience Platform Privacy Service Help
 * Privacy Service API {#api}
   * [Getting started](api/getting-started.md)
   * [Jobs](api/jobs.md)
-  * [Accepted identity namespaces and qualifiers](api/namespaces-and-qualifiers.md) 
-  * [Accepted product values](api/product-values.md) 
+  * [Appendix](api/appendix.md)
 * Privacy Service UI {#ui}  
   * [Privacy Service UI overview](ui/overview.md)
   * [Privacy Service user guide](ui/user-guide.md)
