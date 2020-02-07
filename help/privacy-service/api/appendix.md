@@ -13,17 +13,17 @@ All identities that are sent to Privacy Service must be provided under a specifi
 
 The following table outlines several commonly used, pre-defined identity types made available by Experience Platform, along with their associated `namespace` values:
 
-| Identity type | `namespace` | `namespaceId`
-| --- | --- | ---
-| Email | Email | 6
-| Phone | Phone  | 7
-| Adobe Advertising Cloud ID | AdCloud | 411
-| Adobe Audience Manager UUID | CORE | 0
-| Adobe Experience Cloud ID | ECID | 4
-| Adobe Target ID | TNTID | 9
-| Apple ID for Advertisers  | IDFA | 20915
-| Google Ad ID  | GAID | 20914
-| Windows AID  | WAID  | 8
+| Identity type | `namespace` | `namespaceId` |
+| --- | --- | --- |
+| Email | Email | 6 |
+| Phone | Phone  | 7 |
+| Adobe Advertising Cloud ID | AdCloud | 411 |
+| Adobe Audience Manager UUID | CORE | 0 |
+| Adobe Experience Cloud ID | ECID | 4 |
+| Adobe Target ID | TNTID | 9 |
+| Apple ID for Advertisers  | IDFA | 20915 |
+| Google Ad ID  | GAID | 20914 |
+| Windows AID  | WAID  | 8 |
 
 > **Note:** Each identity type also has a `namespaceId` integer value, which can be used in place of the `namespace` string when setting the identity's `type` property to "namespaceId". See the section on [namespace qualifiers](#namespace-qualifiers) for more information.
 

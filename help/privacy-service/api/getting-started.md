@@ -27,13 +27,13 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 In order to make calls to Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/authenticate_to_acp_tutorial/authenticate_to_acp_tutorial.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
-- Authorization: Bearer `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+* Authorization: Bearer `{ACCESS_TOKEN}`
+* x-api-key: `{API_KEY}`
+* x-gw-ims-org-id: `{IMS_ORG}`
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
-- Content-Type: application/json
+* Content-Type: application/json
 
 ## Sample API calls
 

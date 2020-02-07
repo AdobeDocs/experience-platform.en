@@ -26,17 +26,20 @@ The Privacy Service API supports two kinds of job requests for personal data:
 
 This section demonstrates how to make an access/delete job request using the API.
 
-#### API format
+**API format**
 
 ```http
+
 POST /
+
 ```
 
-#### Request
+**Request**
 
 The following request creates a new job request, configured by the attributes supplied in the payload as described below.
 
 ```shell
+
 curl -X POST \
   https://platform.adobe.io/data/core/privacy/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -91,6 +94,7 @@ curl -X POST \
     "analyticsDeleteMethod": "anonymize",
     "regulation": "ccpa"
 }'
+
 ```
 | Property | Description |
 | --- | --- |
@@ -102,11 +106,12 @@ curl -X POST \
 | `analyticsDeleteMethod` | An optional property that specifies how Adobe Analytics should handle the personal data. Two possible values are accepted for this attribute: <ul><li>`anonymize`: All data referenced by the given collection of user IDs is made anonymous. If `analyticsDeleteMethod` is omitted, this is the default behavior.</li><li>`purge`: All data is removed completely.</li></ul> |
 | `regulation`<br/>**(Required)** | The regulation for the request (must be either "gdpr" or "ccpa"). |
 
-#### Response
+**Response**
 
 A successful response returns the details of the newly created jobs.
 
 ```json
+
 {
     "jobs": [
         {
@@ -146,6 +151,7 @@ A successful response returns the details of the newly created jobs.
     "requestStatus": 1,
     "totalRecords": 3
 }
+
 ```
 | Property | Description |
 | --- | --- |
@@ -157,17 +163,20 @@ Once you have successfully submitted the job request, you can proceed to the nex
 
 This section demonstrates how to make an opt-out-of-sale job request using the API.
 
-#### API format
+**API format**
 
 ```http
+
 POST /
+
 ```
 
-#### Request
+**Request**
 
 The following request creates a new job request, configured by the attributes supplied in the payload as described below.
 
 ```shell
+
 curl -X POST \
   https://platform.adobe.io/data/privacy/gdpr/ \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -222,6 +231,7 @@ curl -X POST \
     "analyticsDeleteMethod": "anonymize",
     "regulation": "ccpa"
 }'
+
 ```
 | Property | Description |
 | --- | --- |
@@ -234,11 +244,12 @@ curl -X POST \
 | `regulation`<br/>**(Required)** | The regulation for the request (must be either "gdpr" or "ccpa"). |
 
 
-#### Response
+**Response**
 
 A successful response returns the details of the newly created jobs.
 
 ```json
+
 {
     "jobs": [
         {
@@ -267,6 +278,7 @@ A successful response returns the details of the newly created jobs.
     "requestStatus": 1,
     "totalRecords": 2
 }
+
 ```
 | Property | Description |
 | --- | --- |
@@ -280,32 +292,37 @@ Using one of the `jobId` values returned in the previous step, you can retrieve 
 
 > **Important:** Data for previously created jobs is only available for retrieval within 30 days of the job's completion date.
 
-#### API format
+**API format**
 
 ```http
+
 GET /{JOB_ID}
+
 ```
 | Parameter | Description |
 | --- | --- |
 | `{JOB_ID}` | The ID of the job you want to look up, returned under `jobId` in the response of the [previous step](#create-a-job-request). |
 
-#### Request
+**Request**
 
 The following request retrieves the details of the job whose `jobId` is provided in the request path.
 
 ```shell
+
 curl -X GET \
   https://platform.adobe.io/data/core/privacy/jobs/6fc09b53-c24f-4a6c-9ca2-c6076b0842b6 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
+
 ```
 
-#### Response
+**Response**
 
 A successful response returns the details of the specified job.
 
 ```json
+
 {
     "jobId": "527ef92d-6cd9-45cc-9bf1-477cfa1e2ca2",
     "requestId": "15700479082313109RX-899",
@@ -354,6 +371,7 @@ A successful response returns the details of the specified job.
     "downloadURL": "http://...",
     "regulation": "ccpa"
 }
+
 ```
 | Property | Description |
 | --- | --- |
@@ -377,15 +395,17 @@ The following table lists the different possible job statuses and their correspo
 
 You can view a list of all available job requests within your organization by making a GET request to the root (`/`) endpoint.
 
-#### API format
+**API format**
 
 This request format uses a `regulation` query parameter on the root (`/`) endpoint, therefore it begins with a question mark (`?`) as shown below. The response is paginated, allowing you to use other query parameters (`page` and `size`) to filter the response. You can separate multiple parameters using ampersands (`&`).
 
 ```http
+
 GET ?regulation={REGULATION}
 GET ?regulation={REGULATION}&page={PAGE}
 GET ?regulation={REGULATION}&size={SIZE}
 GET ?regulation={REGULATION}&page={PAGE}&size={SIZE}
+
 ```
 | Parameter | Description |
 | --- | --- |
@@ -393,19 +413,21 @@ GET ?regulation={REGULATION}&page={PAGE}&size={SIZE}
 | `{PAGE}` | The page of data to be displayed, using 0-based numbering. The default is `0`. |
 | `{SIZE}` | The number of results to display on each page. The default is `1` and the maximum is `100`. Exceeding the maximum causes the API to return a 400-code error. |
 
-#### Request
+**Request**
 
 The following request retrieves a paginated list of all jobs within an IMS Organization, starting from the third page with a page size of 50.
 
 ```shell
+
 curl -X GET \
   https://platform.adobe.io/data/core/privacy/jobs?regulation=gdpr&page=2&size=50 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
+
 ```
 
-#### Response
+**Response**
 
 A successful response returns a list of jobs, with each job containing details such as its `jobId`. In this example, the response would contain a list of 50 jobs, starting on the third page of results. 
 
