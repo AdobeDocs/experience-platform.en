@@ -13,6 +13,6 @@ Real-time CDP currently supports two cloud storage destinations -  Amazon S3 and
 
 Currently, available cloud storage destinations are:
 
-* [Amazon S3](/help/rtcdp/destinations/amazon-s3.md)
-* [SFTP](/help/rtcdp/destinations/sftp.md)
+* [Amazon S3](/help/rtcdp/destinations/amazon-s3-destination.md)
+* [SFTP](/help/rtcdp/destinations/sftp-destination.md)
 

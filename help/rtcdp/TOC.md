@@ -30,8 +30,8 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Google](destinations/google-destination.md)
     * Cloud storage destinations{#cloud-storage}
       * [Cloud storage destinations overview](destinations/cloud-storage-destinations.md)
-      * [Amazon S3 destination](destinations/amazon-s3.md)
-      * [SFTP destination](destinations/sftp.md)
+      * [Amazon S3 destination](destinations/amazon-s3-destination.md)
+      * [SFTP destination](destinations/sftp-destination.md)
     * Email marketing destinations{#email-destinations}
       * [Email marketing destinations overview](destinations/email-marketing-destinations.md)
       * [Adobe Campaign](destinations/adobe-campaign-destination.md)

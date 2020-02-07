@@ -1,21 +1,21 @@
 ---
-title: SFTP destination
-seo-title: SFTP destination
-description: something
-seo-description: something
+title: Amazon S3 destination
+seo-title: Amazon S3 destination
+description: 
+seo-description: 
 ---
 
-# SFTP destination
+# Amazon S3 destination
 
 ## Overview
 
-Create a live outbound connection to your SFTP server to periodically export tab-delimited or CSV data files from Adobe Experience Platform into your own internal systems.
+Create a live outbound connection to your Amazon Web Services (AWS) S3 storage to periodically export tab-delimited or CSV data files from Adobe Experience Platform into your own S3 buckets.
 
 To export data, complete the following steps:
 
 ## Connect destination {#connect-destination}
 
-1. In **[!UICONTROL Connections > Destinations]**, select Salesforce Marketing Cloud, then select **[!UICONTROL Connect destination]**.
+1. In **[!UICONTROL Connections > Destinations]**, select Amazon S3, then select **[!UICONTROL Connect destination]**.
 
     ![Connect to Salesforce](/help/rtcdp/destinations/assets/connect-salesforce.png)
 
