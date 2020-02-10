@@ -54,7 +54,7 @@ For more information about profiles, see [A unified view of your customer in Rea
 
 **[!UICONTROL Segments]** shows the total number of segments created for the organization. This number is updated when new segments are created.
 
-For more information about segments, see [Segmentation Service overview](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segmentation.md).
+For more information about segments, see [Segmentation Service overview](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md).
 
 ### Destinations
 
@@ -118,7 +118,7 @@ The **[!UICONTROL Recent segments]** metric card shows the five most recent segm
 
 Click a segment to view the details for that item, or **[!UICONTROL View all]** to see information about more segments.
 
-For more information about segments, see [Segmentation Service overview](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segmentation.md).
+For more information about segments, see [Segmentation Service overview](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md).
 
 ### Recent destinations
 
