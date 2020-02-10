@@ -13,14 +13,14 @@ The following sections walk through calls you can make using the root endpoint (
 
 Before creating a new job request, you must first collect identifying information about the data subjects whose data you want to access, delete, or opt out of sale. Once you have the required data, it must be provided in the payload of a POST request to the root endpoint.
 
-> **Note:** Compatible Adobe Experience Cloud applications use different values for identifying data subjects. See the guide on [Privacy Service and Experience Cloud applications](../experience-cloud-apps.md) for more information on required identifiers for your application(s).
+>[!NOTE] Compatible Adobe Experience Cloud applications use different values for identifying data subjects. See the guide on [Privacy Service and Experience Cloud applications](../experience-cloud-apps.md) for more information on required identifiers for your application(s).
 
 The Privacy Service API supports two kinds of job requests for personal data:
 
 * [Access and/or delete](#create-an-access/delete-job): Access (read) or delete personal data.
 * [Opt out of sale](#create-an-opt-out-of-sale-job): Mark personal data as not to be sold.
 
-> **Important:** While access and delete requests can be combined as a single API call, opt-out requests must be made separately.
+>[!IMPORTANT] While access and delete requests can be combined as a single API call, opt-out requests must be made separately.
 
 ### Create an access/delete job
 
@@ -216,7 +216,6 @@ curl -X POST \
 }'
 ```
 
-
 **Response**
 
 A successful response returns the details of the newly created jobs.
@@ -262,7 +261,7 @@ Once you have successfully submitted the job request, you can proceed to the nex
 
 Using one of the `jobId` values returned in the previous step, you can retrieve information about that job, such as its current processing status.
 
-> **Important:** Data for previously created jobs is only available for retrieval within 30 days of the job's completion date.
+>[!IMPORTANT] Data for previously created jobs is only available for retrieval within 30 days of the job's completion date.
 
 **API format**
 
@@ -357,7 +356,7 @@ The following table lists the different possible job statuses and their correspo
 | 3 | Submitted | Job is submitted to every applicable application. |
 | 4 | Error | Something failed in the processing of the job - more specific information may be obtained by retrieving individual job details. |
 
-> **Note:** A submitted job might remain in a processing state if it has a dependent child job that is still processing.
+>[!NOTE] A submitted job might remain in a processing state if it has a dependent child job that is still processing.
 
 ## List all jobs
 
