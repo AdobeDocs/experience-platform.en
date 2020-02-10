@@ -38,7 +38,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 ## Sample API calls
 
-Now that you understand what headers to use, you are ready to begin making calls to the Privacy Service API. The document on [privacy jobs](jobs.md) walks through the various API calls you can make using the Privacy Service API. Each example call includes the general API format, a sample request showing required headers, and a sample response.
+Now that you understand what headers to use, you are ready to begin making calls to the Privacy Service API. The document on [privacy jobs](privacy-jobs.md) walks through the various API calls you can make using the Privacy Service API. Each example call includes the general API format, a sample request showing required headers, and a sample response.
 
 ## Next steps
 
