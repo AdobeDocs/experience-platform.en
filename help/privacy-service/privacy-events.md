@@ -81,7 +81,7 @@ The next screen provides options to create integrations with different events, p
 
 The *Integration Details* form appears, requiring you to provide a name and description for the integration, as well as a public key certificate.
 
-![Integration details](images/integration-details.png)
+![Integration details](images/privacy-events/integration-details.png)
 
 If you do not have a public certificate, you can generate one by using the following terminal command:
 
