@@ -127,5 +127,5 @@ Now that you know what features are available in Query Editor and how to navigat
 [query-service-overview]: ../home.md
 [query-service-ui]: overview.md
 [query-service-running-queries]: ../creating-queries/creating-queries.md
-[query-service-sample-queries]: ../sample-queries/sample-queries.md
+[query-service-sample-queries]: ../sample-queries/overview.md
 [query-service-create-datasets]: ../creating-queries/create-datasets.md

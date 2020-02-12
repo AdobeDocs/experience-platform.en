@@ -33,7 +33,7 @@ user-guide-title: Adobe Experience Platform Query Service Help
   * [Metadata commands](sql/metadata.md)
   * [Prepared statements](sql/prepared-statements.md)
 * Sample queries {#samples}
-  * [Sample queries overview](sample-queries/sample-queries.md)
+  * [Sample queries overview](sample-queries/overview.md)
   * [Adobe Analytics](sample-queries/adobe-analytics-queries.md)
   * [Adobe Analytics field mapping to XDM ExperienceEvents](sample-queries/analytics-field-map.md)
   * [Adobe Target](sample-queries/adobe-target-queries.md)
