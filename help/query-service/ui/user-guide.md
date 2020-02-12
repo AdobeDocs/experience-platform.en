@@ -32,7 +32,7 @@ Query Editor provides flexible execution of queries by connecting to Query Servi
 
 Query Editor takes a few seconds to initialize and connect to Query Service when it is opened. Console tells you when it is connected, as shown below. If you attempt to run a query before the editor has connected, it delays execution until the connection is complete. 
 
-![Image](images/queries/query-editor-overview/initializing-connection.png)
+![Image](../images/queries/query-editor-overview/initializing-connection.png)
 
 ### How queries are run from Query Editor
 
@@ -46,13 +46,13 @@ Using Query Editor, you can write, execute, and save queries for customer experi
 
 In the Experience Platform UI, click **Queries** in the left navigation menu to open the Query Service workspace. Next, click **Create Query** at the top right of the screen to start writing queries. This link is available from any of the pages in the Query Service workspace. 
 
-![Image](images/queries/query-editor-overview/create-query.png)
+![Image](../images/queries/query-editor-overview/create-query.png)
   
 ### Writing queries
 
 Query Editor is organized to make writing queries as easy as possible. The screenshot below shows how the editor appears in the UI, with the **Play** button and SQL entry field highlighted.
 
-![Image](images/queries/query-editor-overview/editor.png)
+![Image](../images/queries/query-editor-overview/editor.png)
 
 To minimize your development time, it is recommended that you develop your queries with limits on the rows returned. For example, `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. After you have verified that your query produces the expected output, remove the limits and run the query with `CREATE TABLE tablename AS SELECT` to generate a dataset with the output. 
 
@@ -60,31 +60,31 @@ To minimize your development time, it is recommended that you develop your queri
 
 - **Automatic syntax highlighting:** Makes reading and organizing SQL easier.
 
-![Image](images/queries/query-editor-overview/syntax-highlight.png)
+![Image](../images/queries/query-editor-overview/syntax-highlight.png)
 
 - **SQL key word auto-complete:** Start typing your query then use the arrow keys to navigate to the desired term and press **Enter**.
 
-![Image](images/queries/query-editor-overview/syntax-auto.png)
+![Image](../images/queries/query-editor-overview/syntax-auto.png)
 
 - **Table and field auto-complete:** Start typing the table name you want to `SELECT` from, then use the arrow keys to navigate to the table you are looking for, and press **Enter**. Once a table is selected, autocomplete will recognize fields in that table. 
 
-![Image](images/queries/query-editor-overview/tables-auto.png)
+![Image](../images/queries/query-editor-overview/tables-auto.png)
 
 ### Error detection
 
 Query Editor automatically validates a query as you write it, providing generic SQL validation and specific execution validation. If a red underline appears below the query (as shown in the image below), it represents an error within the query.
 
-![Image](images/queries/query-editor-overview/syntax-error-highlight.png)
+![Image](../images/queries/query-editor-overview/syntax-error-highlight.png)
 
 When errors are detected, you can view the specific error messages by hovering over the SQL code.
 
-![Image](images/queries/query-editor-overview/linting-error.png)
+![Image](../images/queries/query-editor-overview/linting-error.png)
 
 ### Query details
 
 While you are viewing a query in Query Editor, the *Query Details* panel provides tools to manage the selected query.
 
-![Image](images/queries/query-editor-overview/query-details.png)
+![Image](../images/queries/query-editor-overview/query-details.png)
 
 This panel allows you to generate an output dataset directly from the UI, delete or name the displayed query, and view the SQL code in an easy to copy format on the *SQL Query* tab. This panel also shows useful metadata such as the last time the query was modified and who modified it, if applicable.
 
@@ -110,7 +110,7 @@ To run a query in Query Editor, you can enter SQL in the editor or load a previo
 
 The console provides information on the status and operation of Query Service. The console displays the connection status to Query Service, query operations being executed, and any error messages that result from those queries.
 
-![Image](images/queries/query-editor-overview/console.png)
+![Image](../images/queries/query-editor-overview/console.png)
 
 > **Note:** The console only shows errors that resulted from executing a query. It does not show query validation errors before a query is executed.
 
@@ -118,14 +118,14 @@ The console provides information on the status and operation of Query Service. T
 
 After a query has completed, the results are displayed in the *Results* tab, next to the *Console* tab. This view shows the tabular output of your query, displaying up to 100 rows. This view allows you to verify that your query produces the expected output. To generate a dataset with your query, remove limits on rows returned, and run the query with `CREATE TABLE tablename AS SELECT` to generate a dataset with the output. See the [generating datasets tutorial][query-service-create-datasets] for instructions on how to generate a dataset from query results in Query Editor.
 
-![Image](images/queries/query-editor-overview/query-results.png)
+![Image](../images/queries/query-editor-overview/query-results.png)
 
 ## Next steps
 
 Now that you know what features are available in Query Editor and how to navigate the application, you can start authoring your own queries directly in Platform. For more information about running SQL queries against datasets in Data Lake, see the guide on [running queries][query-service-running-queries]. For sample SQL queries for working with Adobe Analytics and Adobe Target data, see the [sample queries reference][query-service-sample-queries].
 
-[query-service-overview]: home.md
-[query-service-ui]: ui-overview.md
-[query-service-running-queries]: ./creating-queries/creating-queries.md
-[query-service-sample-queries]: ./sample-queries/sample-queries.md
-[query-service-create-datasets]: ./creating-queries/create-datasets.md
+[query-service-overview]: ../home.md
+[query-service-ui]: overview.md
+[query-service-running-queries]: ../creating-queries/creating-queries.md
+[query-service-sample-queries]: ../sample-queries/overview.md
+[query-service-create-datasets]: ../creating-queries/create-datasets.md

@@ -21,17 +21,17 @@ The Query Editor enables you to write and execute queries without using an exter
 
 Click **Create Query** to open the Query Editor and create a new query. You can also access the Query Editor by selecting a query from the *Log* or *Browse* tabs. Selecting a previously executed or saved query will open the Query Editor and display the SQL for the selected query.
 
-![Image](images/queries/ui-overview/overview.png)
+![Image](../images/queries/ui-overview/overview.png)
 
 Query Editor provides editing space where you can begin typing a query. As you type, the editor autocompletes SQL reserved words, tables, and field names within tables. When finished writing your query, click **Play** to run the query. The *Console* tab below the editor shows what Query Service is currently doing, indicating when a query has been returned. The *Result* tab, next to the Console, displays query results. See the [Query Editor guide][query-editor] for more information on using the query editor.
 
-![Image](images/queries/ui-overview/query-editor.png)
+![Image](../images/queries/ui-overview/query-editor.png)
 
 ## Browse
 
 The *Browse* tab shows queries saved by users in your organization. It is useful to think of these as query projects, as queries saved here may still be under construction. Queries displayed on the *Browse* tab also display as run queries in the *Log* tab if they have been previously executed by Query Service.
 
-![Image](images/queries/ui-overview/browse.png)
+![Image](../images/queries/ui-overview/browse.png)
 
 | Column | Description |
 | --- | --- |
@@ -44,7 +44,7 @@ The *Browse* tab shows queries saved by users in your organization. It is useful
 
 The *Log* tab provides a list of queries that have previously been executed. By default, the log lists the queries in reverse chronology.
 
-![Image](images/queries/ui-overview/log.png)
+![Image](../images/queries/ui-overview/log.png)
 
 | Column | Description |
 | --- | --- |
@@ -60,12 +60,12 @@ The *Log* tab provides a list of queries that have previously been executed. By 
 
 The *Credentials* tab displays your Postgres credentials. Click the **Copy** icon next to any field to store its contents in your keyboard buffer. For more information on how to use these credentials to connect with external clients, please read the [connect with clients guide][connect-clients].
 
-![Image](images/queries/ui-overview/credentials.png)
+![Image](../images/queries/ui-overview/credentials.png)
 
 ## Next steps
 
 Now that you are familiar with Query Service user interface on Platform, you can access Query Editor to start creating your own query projects to share with other users in your organization. For more information on authoring and running queries in Query Editor, see the [Query Editor user guide][query-editor].
 
 [platform-ui]: https://platform.adobe.com
-[query-editor]: query-editor-overview.md
-[connect-clients]: clients/overview.md
+[query-editor]: user-guide.md
+[connect-clients]: ../clients/overview.md
