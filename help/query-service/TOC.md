@@ -8,7 +8,7 @@ user-guide-title: Adobe Experience Platform Query Service Help
 
 * [Query Service overview](home.md)
 * [Quickstart guide](quickstart.md)
-* Query Service API developer guide {#api}
+* Query Service API {#api}
   * [Getting started](api/getting-started.md)
   * [Queries](api/queries.md)
   * [Connection parameters](api/connection-parameters.md)
