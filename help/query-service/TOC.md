@@ -16,8 +16,8 @@ user-guide-title: Adobe Experience Platform Query Service Help
   * [Runs for scheduled queries](api/runs-scheduled-queries.md)
   * [Query templates](api/query-templates.md)
 * Query Service UI {#ui}
-  * [UI overview](ui-overview.md)
-  * [Query Editor user guide](query-editor-overview.md)
+  * [UI overview](ui/overview.md)
+  * [Query Editor user guide](ui/user-guide.md)
 * Creating queries {#creating-queries}
   * [Creating queries overview](creating-queries/creating-queries.md)
   * [Datasets vs tables and schemas](creating-queries/datasets-and-tables.md)
