@@ -22,7 +22,7 @@ Query Service provides a user interface and a RESTful API from which you can cre
 
 With the user interface, you can write and execute queries, view previously executed queries, and access queries saved by users within your IMS Organization. The user interface is intended to be used as a sandbox to test out your queries before executing them on your wider dataset. More information on using the interactive service within Platform can be found in the [Query Service user interface guide](ui-overview.md).
 
-The RESTful API provides a similar experience, allowing you to programatically write and execute queries, schedule queries for future use and repetition, as well as create templates for queries you wish to write. More information on using the Query Service API can be found in the [Query Service developer guide](developer-guide/getting-started.md).
+The RESTful API provides a similar experience, allowing you to programatically write and execute queries, schedule queries for future use and repetition, as well as create templates for queries you wish to write. More information on using the Query Service API can be found in the [Query Service developer guide](api/getting-started.md).
 
 ## Query Service and Experience Platform services
 
@@ -46,4 +46,4 @@ Please read the Segmentation Service overview for more information about segment
 
 ## Next steps
 
-By reading this document, you have been introduced to Query Service and how it functions within the greater scope of Experience Platform. For more information on interacting with various endpoints within the Query Service API, please read the [Query Service developer guide](developer-guide/getting-started.md). For more information on using the interactive service within Platform, please read the [Query Service user interface guide](ui-overview.md). For a comprehensive list on connecting external clients with Query Service, please read the [Query Service clients overview](clients/overview.md).
+By reading this document, you have been introduced to Query Service and how it functions within the greater scope of Experience Platform. For more information on interacting with various endpoints within the Query Service API, please read the [Query Service developer guide](api/getting-started.md). For more information on using the interactive service within Platform, please read the [Query Service user interface guide](ui-overview.md). For a comprehensive list on connecting external clients with Query Service, please read the [Query Service clients overview](clients/overview.md).
