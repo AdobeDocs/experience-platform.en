@@ -187,7 +187,7 @@ A successful response returns HTTP status 202 (Accepted) with details of your ne
 }
 ```
 
->**Note:** You can use the value of `_links.cancel` to [cancel your created query](#cancel-a-query).
+>[!NOTE] You can use the value of `_links.cancel` to [cancel your created query](#cancel-a-query).
 
 ### Retrieve a query by ID
 
@@ -254,7 +254,7 @@ A successful response returns HTTP status 200 with detailed information about th
 }
 ```
 
->**Note:** You can use the value of `_links.cancel` to [cancel your created query](#cancel-a-query).
+>[!NOTE] You can use the value of `_links.cancel` to [cancel your created query](#cancel-a-query).
 
 ### Cancel a query
 

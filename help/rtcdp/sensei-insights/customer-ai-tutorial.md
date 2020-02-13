@@ -84,7 +84,7 @@ Exclude events as needed and then click **Finish** to create the instance.
 
 If the instance is created successfully, a prediction run will be immediately triggered and subsequent ones will execute according to your defined schedule.
 
->   **Note:** Depending on the size of the input data, prediction runs can take up to 24 hours to complete.
+>[!NOTE] Depending on the size of the input data, prediction runs can take up to 24 hours to complete.
 
 By following this section, you have configured an instance of Customer AI and a prediction run was executed. Upon the run's successful completion, scored insights will automatically hydrate Profiles with predicted scores. Please wait 24 hours before continuing to the next section of this tutorial.
 

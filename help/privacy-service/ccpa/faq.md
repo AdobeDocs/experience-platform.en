@@ -13,7 +13,7 @@ This document provides answers to frequently asked questions about the Californi
 
 The California Consumer Privacy Act (CCPA) is California’s new privacy law that provides its residents with new rights regarding their personal information, and imposes data protection responsibilities on certain entities who conduct business in California.
 
-> **Note:** Although technically effective January 2020, CCPA is still being fine-tuned by law makers. In addition, important implementation and other guidance details are forthcoming in rules that have yet to be written by the California regulator.   
+>[!NOTE] Although technically effective January 2020, CCPA is still being fine-tuned by law makers. In addition, important implementation and other guidance details are forthcoming in rules that have yet to be written by the California regulator.   
 
 While CCPA does share some concepts provided under the European Union's General Data Protection Regulation (GDPR), such as an individual’s right to access and delete personal information, there are several key ways in which CCPA differs from GDPR. For example, CCPA provides consumers with an opt-out right of certain data sharing activities that qualify as “selling” personal information to a third-party, rather than requiring prior consent.      
 
@@ -68,7 +68,7 @@ Adobe services may be used to enable certain data sharing and transfers to third
 
 Once you have taken the necessary steps to authenticate CA consumers, Adobe Experience Platform Privacy Service allows you to submit consumer privacy requests to compatible Experience Cloud applications. See the [Privacy Service overview](../home.md) for more information. For information on how your particular Experience Cloud applications can honor privacy requests, please refer to the guide on [Privacy Service and Experience Cloud applications](../experience-cloud-apps.md).
 
-> **Note:** Further guidance from the California regulator is still forthcoming as to which types of data are eligible for consumer privacy requests.
+>[!NOTE] Further guidance from the California regulator is still forthcoming as to which types of data are eligible for consumer privacy requests.
 
 ## Does Adobe offer other tools that may be helpful in addressing CCPA requirements?
 

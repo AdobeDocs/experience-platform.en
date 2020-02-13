@@ -31,7 +31,7 @@ Privacy Service supports access and delete requests for the CCPA regulation, and
 
 Privacy Service provides a RESTful API and user interface that allow you to manage your customers' requests for accessing/deleting their private data or opting out of sale (also known as **privacy jobs**). The service also provides a central audit and logging mechanism that allows you to view the status and results of privacy jobs involving Experience Cloud applications.
 
-> **Note:** Opt-out requests are currently only supported by the Privacy Service API.
+>[!NOTE] Opt-out requests are currently only supported by the Privacy Service API.
 
 ### Using the API
 

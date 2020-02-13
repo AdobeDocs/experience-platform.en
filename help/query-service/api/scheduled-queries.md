@@ -5,7 +5,7 @@ title: Query Service developer guide
 topic: scheduled queries
 ---
 
-# Schedule queries
+# Scheduled queries
 
 ## Sample API calls
 
@@ -206,7 +206,7 @@ A successful response returns HTTP status 202 (Accepted) with details of your ne
 }
 ```
 
->**Note:** You can use the value of `_links.delete` to [delete your created scheduled query](#delete-a-specified-scheduled-query).
+>[!NOTE] You can use the value of `_links.delete` to [delete your created scheduled query](#delete-a-specified-scheduled-query).
 
 ### Request details of a specified scheduled query
 
@@ -285,7 +285,7 @@ A successful response returns HTTP status 200 with details of the specified sche
 }
 ```
 
->**Note:** You can use the value of `_links.delete` to [delete your created scheduled query](#delete-a-specified-scheduled-query).
+>[!NOTE] You can use the value of `_links.delete` to [delete your created scheduled query](#delete-a-specified-scheduled-query).
 
 ### Update details of a specified scheduled query
 
@@ -392,7 +392,7 @@ A successful response returns HTTP status 202 (Accepted) with the following mess
 
 You can delete a specified scheduled query by making a DELETE request to the `/schedules` endpoint and providing the ID of the scheduled query you want to delete in the request path.
 
->**Note:** The schedule **must** be disabled before being deleted.
+>[!NOTE] The schedule **must** be disabled before being deleted.
 
 #### API format
 

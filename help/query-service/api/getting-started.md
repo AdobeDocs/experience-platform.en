@@ -35,7 +35,7 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
   
->**Note:** For more information on working with sandboxes in Experience Platform, see the sandboxes overview documentation.
+>[!NOTE] For more information on working with sandboxes in Experience Platform, see the sandboxes overview documentation.
 
 ## Sample API calls
 

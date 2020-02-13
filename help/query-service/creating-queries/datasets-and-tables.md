@@ -10,7 +10,7 @@ topic: queries
 Review the list of datasets by navigating to [Platform UI](https://platform.adobe.com/datasets). 
 
 * Observe the dataset names. 
-> **Note:** Dataset names have spaces and might otherwise not be SQL safe. 
+>[!NOTE] Dataset names have spaces and might otherwise not be SQL safe. 
 
 ![](../images/queries/datasets-and-tables/dataset-names.png)
 
@@ -49,7 +49,7 @@ To view the available tables on Platform with SQL, you can use either `\d` or `S
 ```
 
 To view the root schema of a table use the `\d table_name` command.
-> **Note:** The schema presented shows the root fields, most of which are complex, referred to an Object type in the Dataset schema UI. 
+>[!NOTE] The schema presented shows the root fields, most of which are complex, referred to an Object type in the Dataset schema UI. 
 
 `\d luma_midvalues`
 

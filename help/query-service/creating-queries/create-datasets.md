@@ -23,7 +23,7 @@ Query Service allows the creation of datasets from the UI. Follow these steps:
 
 After a dataset is created, it can be accessed like any other dataset in the data lake and used for a variety of use cases. 
 
-> **Note:** In a live implementation, you must apply Data Governance labels after the dataset is created. 
+>[!NOTE] In a live implementation, you must apply Data Governance labels after the dataset is created. 
 
 ## Generate datasets with a pre-defined Experience Data Model schema
 
