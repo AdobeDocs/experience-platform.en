@@ -17,7 +17,7 @@ Navigate to the Adobe Experience Cloud sign-in page at https://experience.adobe.
 
 ![Administration tab](../images/ui-overview/admin-tab.png)
 
-> **Note:** The Administration tab only appears if you have system admin privileges within your organization.
+>[!NOTE] The Administration tab only appears if you have system admin privileges within your organization.
 
 Finally, select **Launch Privacy UI** on the next screen to open the Privacy Service UI.
 
