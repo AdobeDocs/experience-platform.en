@@ -47,4 +47,4 @@ user-guide-title: Adobe Experience Platform Query Service Help
   * [RStudio](clients/rstudio.md)
   * [Tableau](clients/tableau.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
-* [API Reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml)
+* [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml)
