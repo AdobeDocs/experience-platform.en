@@ -9,7 +9,7 @@ topic: metadata
 
 For metadata on your dataset, the following PSQL commands are currently supported for querying:
 
->**Note:** The commands listed below are case sensitive.
+>[!NOTE] The commands listed below are case sensitive.
 
 Command | Description
 ------- | ------------

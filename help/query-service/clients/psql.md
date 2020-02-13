@@ -61,7 +61,7 @@ After issuing these commands, you should see the following:
     
     ![Image](../images/clients/psql/connect-bi.png)
     
-    **Important**: If you are on a PC, use a text editor to remove the line breaks in the command string, then copy the string.
+    [!IMPORTANT]: If you are on a PC, use a text editor to remove the line breaks in the command string, then copy the string.
 
 3. Paste the command string into a terminal or command window and press Enter.
     

@@ -96,7 +96,7 @@ A successful response returns HTTP status 200 with a list of query templates for
 }
 ```
 
->**Note:** You can use the value of `_links.delete` to [delete your query template](#delete-a-specified-query-template).
+>[!NOTE] You can use the value of `_links.delete` to [delete your query template](#delete-a-specified-query-template).
 
 ### Create a query template
 
@@ -155,7 +155,7 @@ A successful response returns HTTP status 202 (Accepted) with details of your ne
 }
 ```
 
->**Note:** You can use the value of `_links.delete` to [delete your query template](#delete-a-specified-query-template).
+>[!NOTE] You can use the value of `_links.delete` to [delete your query template](#delete-a-specified-query-template).
 
 ### Retrieve a specified query template
 
@@ -209,7 +209,7 @@ A successful response returns HTTP status 200 with details of your specified que
 }
 ```
 
->**Note:** You can use the value of `_links.delete` to [delete your query template](#delete-a-specified-query-template).
+>[!NOTE] You can use the value of `_links.delete` to [delete your query template](#delete-a-specified-query-template).
 
 ### Update a specified query template
 
@@ -225,7 +225,7 @@ PUT /query-templates/{TEMPLATE_ID}
 
 #### Request
 
->**Note:** The PUT request requires both the sql and name field to be filled, and will **overwrite** the current content of that query template.
+>[!NOTE] The PUT request requires both the sql and name field to be filled, and will **overwrite** the current content of that query template.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -273,7 +273,7 @@ A successful response returns HTTP status 202 (Accepted) with the updated inform
 }
 ```
 
->**Note:** You can use the value of `_links.delete` to [delete your query template](#delete-a-specified-query-template).
+>[!NOTE] You can use the value of `_links.delete` to [delete your query template](#delete-a-specified-query-template).
 
 ### Delete a specified query template
 
