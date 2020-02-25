@@ -34,7 +34,7 @@ Before creating the Google Display & Video 360 destination in Adobe Real-time CD
 
 ## Create destination
 
-1. In **[!UICONTROL Connections > Destinations]**, select Google Ads, and select **[!UICONTROL Create destination]**.
+1. In **[!UICONTROL Connections > Destinations]**, select Google Display & video 360, and select **[!UICONTROL Create destination]**.
     ![Connect Google Display & Video 360 destination](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
 2. In the Create destination wizard, fill in the Basic Information for the destination.
@@ -48,7 +48,7 @@ Before creating the Google Display & Video 360 destination in Adobe Real-time CD
 
 >[!NOTE]
 >
->When setting up a Google Display & Video 360 destination please work with your Google Account Manager or Adobe representative to understand which product type your account falls under.
+>When setting up a Google Display & Video 360 destination please work with your Google Account Manager or Adobe representative to understand which account type you have.
 
 ## Activate segments to Google Display & Video 360
 

@@ -48,7 +48,7 @@ Before creating the Google Ad Manager destination in Adobe Real-time CDP, you mu
 
 >[!NOTE]
 >
->When setting up a Google Ad Manager destination please work with your Google Account Manager or Adobe representative to understand which product type your account falls under.
+>When setting up a Google Ad Manager destination please work with your Google Account Manager or Adobe representative to understand which account type you have.
 
 ## Activate segments to Google Ad Manager
 
