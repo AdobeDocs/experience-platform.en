@@ -6,10 +6,10 @@ user-guide-title: Experience Data Model (XDM) System Help
 
 # Experience Data Model (XDM) System {#xdm}
 
-* [XDM System overview](https://www.adobe.io/apis/experienceplatform/home/xdm/xdmservices.html#!api-specification/markdown/narrative/technical_overview/schema_registry/xdm_system/xdm_system_in_experience_platform.md)
+* [XDM System overview](home.md)
 * XDM schemas {#schema}
-  * [Basics of schema composition](https://www.adobe.io/apis/experienceplatform/home/xdm/xdmservices.html#!api-specification/markdown/narrative/technical_overview/schema_registry/schema_composition/schema_composition.md)
-  * [XDM field dictionary](https://www.adobe.io/apis/experienceplatform/home/xdm/xdmservices.html#!api-specification/markdown/narrative/technical_overview/schema_registry/schema_composition/xdm_field_dictionary.md)
+  * [Basics of schema composition](schema/composition.md)
+  * [XDM field dictionary](schema/field-dictionary.md)
 * Schema Registry API {#api}
   * [Getting started](https://www.adobe.io/apis/experienceplatform/home/xdm/xdmservices.html#!api-specification/markdown/narrative/technical_overview/schema_registry/schema_registry_developer_guide.md)
   * [List resources](https://www.adobe.io/apis/experienceplatform/home/xdm/xdmservices.html#!api-specification/markdown/narrative/technical_overview/schema_registry/schema_registry_developer_guide.md)
