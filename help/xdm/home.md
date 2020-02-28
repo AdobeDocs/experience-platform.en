@@ -56,7 +56,7 @@ Experience Events can be either explicit or implicit. Explicit events are direct
 
 While not all events are easily categorized across all data sources, it is extremely valuable to harmonize similar events into similar types where possible for processing. 
 
-![ExperienceEvent Customer Journey](images/ExperienceEvent-customer-journey.png "Experience Events show a customer journey over time")
+![ExperienceEvent Customer Journey](images/overview/experience-event-journey.png "Experience Events show a customer journey over time")
 
 ## XDM schemas and Experience Platform services
 
@@ -70,7 +70,7 @@ Catalog data is stored in the Data Lake, a highly granular data store containing
 
 To begin ingesting data into Experience Platform, a dataset is created using Catalog Service. The dataset references an XDM schema describing the structure of the data to be ingested. If a dataset is created without a schema, Experience Platform will derive an "observed schema" by inspecting the type and content of ingested data fields. Datasets are then tracked in Catalog and stored in the Data Lake alongside the schemas and observed schemas on which they are based. 
 
-For more information on Catalog, see the [Catalog Service overview](../../catalog_architectural_overview/catalog_architectural_overview.md). For more information on Adobe Experience Platform Data Ingestion, see the [batch ingestion overview](../../ingest_architectural_overview/ingest_architectural_overview.md) and [streaming ingestion overview](../../streaming_ingest/streaming_ingest_overview.md).
+For more information on Catalog, see the [Catalog Service overview]. For more information on Adobe Experience Platform Data Ingestion, see the [batch ingestion overview] and [streaming ingestion overview].
 
 ### Query Service
 
@@ -78,7 +78,7 @@ Adobe Experience Platform Query Service allows you to use standard SQL to query 
 
 After a schema has been composed and a dataset has been created which references that schema, data is then ingested and stored in the Data Lake. Using Query Service, you can join any datasets in the Data Lake and capture the query results as a new dataset for use in reporting, machine learning, or for ingestion into Real-time Customer Profile. 
 
-To learn more about Query Service, please see the [Query Service introduction](../../query-service/overview/overview.md).
+To learn more about Query Service, please see the [Query Service introduction].
 
 ### Real-time Customer Profile
 
@@ -92,7 +92,7 @@ As XDM Individual Profile and XDM ExperienceEvent data is ingested and managed b
 
 XDM Individual Profile data helps inform and empower actions across any channel or Adobe solution integration, and when paired with a rich history of behavioral and interaction data, this data is used to power machine learning. The Real-time Customer Profile API can also be used to enrich the functionality of third-party solutions, CRMs, and proprietary solutions.
 
-See the [Real-time Customer Profile overview](../../unified_profile_architectural_overview/unified_profile_architectural_overview.md) for more information.
+See the [Real-time Customer Profile overview] for more information.
 
 ### Data Science Workspace
 
@@ -100,7 +100,7 @@ Adobe Experience Platform Data Science Workspace uses machine learning and artif
 
 With Data Science Workspace, data scientists can easily create intelligent services APIs powered by machine learning. These services work with other Adobe solutions, including Adobe Target and Adobe Analytics Cloud, to help you automate personalized, targeted digital experiences.
 
-For more information on using Experience Platform data to power insights, see the [Data Science Workspace overview](../../data_science_workspace_overview/dsw_overview.md).
+For more information on using Experience Platform data to power insights, see the [Data Science Workspace overview].
 
 ### Decisioning Service
 
@@ -108,10 +108,10 @@ Decisioning Service provides the capability to configure personalized offer deci
 
 Decisioning Service leverages Real-time Customer Profile data, and is therefore only compatible with datasets based on schemas implementing the XDM Individual Profile or XDM ExperienceEvent class.
 
-See the [Decisioning Service overview](../../decisioning-overview/decisioning-service-overview.md) for more information.
+See the [Decisioning Service overview] for more information.
 
 ## Next steps
 
 Now that you better understand the role of schemas throughout Experience Platform, you are ready to start composing your own. 
 
-To learn design principles and best practices for composing schemas to be used with Experience Platform, begin by reading the [basics of schema composition](../schema_composition/schema_composition.md). For step-by-step instructions on how to create a schema, see the tutorials on creating a schema [using the API](../../../tutorials/schema_registry_api_tutorial/schema_registry_api_tutorial.md) or [using the user interface](../../../tutorials/schema_editor_tutorial/schema_editor_tutorial.md).
+To learn design principles and best practices for composing schemas to be used with Experience Platform, begin by reading the [basics of schema composition](schema/composition.md). For step-by-step instructions on how to create a schema, see the tutorials on creating a schema [using the API](tutorials/create-schema-api.md) or [using the user interface](tutorials/create-schema-ui.md).
