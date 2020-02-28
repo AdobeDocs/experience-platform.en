@@ -26,8 +26,8 @@ user-guide-title: Experience Data Model (XDM) System Help
   * [Ad-hoc schemas](api/ad-hoc.md)
   * [Appendix](api/appendix.md)
 * Schema Editor UI {#ui}  
-  * [Schema Editor overview](https://www.adobe.io/apis/experienceplatform/home/xdm/xdmservices.html#!api-specification/markdown/narrative/technical_overview/schema_registry/schema_registry_developer_guide.md)
-  * [Schema Editor user guide](https://www.adobe.io/apis/experienceplatform/home/xdm/xdmservices.html#!api-specification/markdown/narrative/technical_overview/schema_registry/schema_registry_developer_guide.md)
+  * [Schema Editor overview](ui/overview.md)
+  * [Schema Editor user guide](ui/user-guide.md)
 * Tutorials {#tutorials}
   * [Create a schema (API)](https://www.adobe.io/apis/experienceplatform/home/xdm/xdmservices.html#!api-specification/markdown/narrative/tutorials/schema_registry_api_tutorial/schema_registry_api_tutorial.md)
   * [Create a schema (UI)](https://www.adobe.io/apis/experienceplatform/home/xdm/xdmservices.html#!api-specification/markdown/narrative/tutorials/schema_editor_tutorial/schema_editor_tutorial.md)
