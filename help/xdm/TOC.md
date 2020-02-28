@@ -34,5 +34,5 @@ user-guide-title: Experience Data Model (XDM) System Help
   * [Define a relationship between two schemas (API)](tutorials/relationship-api.md)
   * [Define a relationship between two schemas (UI)](tutorials/relationship-ui.md)
   * [Create an ad-hoc schema (API)](tutorials/ad-hoc.md)
-* [Troubleshooting guide](https://www.adobe.io/apis/experienceplatform/home/xdm/xdmservices.html#!api-specification/markdown/narrative/technical_overview/schema_registry/xdm_troubleshooting/xdm_system_faq_and_troubleshooting.md)
+* [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
