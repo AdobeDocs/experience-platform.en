@@ -18,5 +18,5 @@ user-guide-title: Access Control in Adobe Experience Platform Help
   * [Getting started](api/getting-started.md)
   * [List names of permissions and resource types](api/permissions-and-resource-types.md)
   * [View effective policies](api/effective-policies.md)
-* [Troubleshooting guide](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/sandboxes/access-control-and-sandboxes-troubleshooting.md)
+* [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml)
