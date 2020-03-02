@@ -12,8 +12,8 @@ user-guide-title: Adobe Experience Platform Data Governance Help
   * [Data usage labels user guide](labels/user-guide.md)
   * [Supported data usage labels](labels/reference.md)
 * Data usage policies {#policies}
-  * [Data usage policies overview](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/tutorials/dule/create_a_dule_policy_tutorial.md)
-  * [Create a data usage policy using the Policy Service API](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/tutorials/dule/create_a_dule_policy_tutorial.md)
+  * [Data usage policies overview](policies/overview.md)
+  * [Create a data usage policy using the Policy Service API](policies/create.md)
 * Policy enforcement {#enforcement}
   * [Policy enforcement overview](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/tutorials/dule/policy-enforcement.md)
   * [Enforce data usage policies using the Policy Service API](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/tutorials/dule/create_a_dule_policy_tutorial.md)
