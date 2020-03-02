@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Sandbox user guide
-topic: user guide
+title: List all sandboxes
+topic: developer guide
 ---
 
-# Sandbox user guide
+# List all sandboxes
