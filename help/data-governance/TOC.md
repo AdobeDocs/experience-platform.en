@@ -15,8 +15,8 @@ user-guide-title: Adobe Experience Platform Data Governance Help
   * [Data usage policies overview](policies/overview.md)
   * [Create a data usage policy using the Policy Service API](policies/create.md)
 * Policy enforcement {#enforcement}
-  * [Policy enforcement overview](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/tutorials/dule/policy-enforcement.md)
-  * [Enforce data usage policies using the Policy Service API](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/tutorials/dule/create_a_dule_policy_tutorial.md)
+  * [Policy enforcement overview](enforcement/overview.md)
+  * [Enforce data usage policies using the Policy Service API](enforcement/api-enforcement.md)
 * DULE Policy Service API {#api}
   * [Getting started](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_policy_service_developer_guide.md)
   * [List available policies](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_policy_service_developer_guide.md)
