@@ -5,7 +5,7 @@ title: Adobe Experience Platform Privacy Service
 topic: overview
 ---
 
-# Privacy Service overview
+# Adobe Experience Platform Privacy Service overview
 
 In order to deliver better customer experiences, you need to collect and store your customers' personal data. When using this data, it is important to understand and respect your customers' privacy. New legal and organizational regulations are giving users the right to access or delete their personal data from your data stores upon request.
 
