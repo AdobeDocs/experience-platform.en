@@ -4,3 +4,5 @@ solution: Experience Platform
 title: Adobe Experience Platform Batch Ingestion troubleshooting guide
 topic: troubleshooting
 ---
+
+# Batch ingestion troubleshooting
