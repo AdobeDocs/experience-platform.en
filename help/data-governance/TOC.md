@@ -20,5 +20,5 @@ user-guide-title: Adobe Experience Platform Data Governance Help
 * DULE Policy Service API {#api}
   * [Getting started](api/getting-started.md)
   * [Policies](api/policies.md)
-  * [Marketing actions](marketing-actions.md)
+  * [Marketing actions](api/marketing-actions.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)
