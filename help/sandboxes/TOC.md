@@ -8,12 +8,8 @@ user-guide-title: Sandboxes in Adobe Experience Platform Help
 
 * [Sandboxes overview](home.md)
 * Sandbox UI {#ui}
-  * [Sandbox UI overview](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/sandboxes/sandbox-user-guide.md)
-  * [View sandboxes](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/sandboxes/sandbox-user-guide.md)
-  * [Switch between sandboxes](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/sandboxes/sandbox-user-guide.md)
-  * [Create a sandbox](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/sandboxes/sandbox-user-guide.md)
-  * [Reset a sandbox](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/sandboxes/sandbox-user-guide.md)
-  * [Delete a sandbox](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/sandboxes/sandbox-user-guide.md)
+  * [Sandbox UI overview](ui/overview.md)
+  * [Sandbox user guide](ui/user-guide.md)
 * Sandbox API {#api}
   * [Getting started](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/sandboxes/sandbox-user-guide.md)
   * [List supported sandbox types](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/sandboxes/sandbox-user-guide.md)
