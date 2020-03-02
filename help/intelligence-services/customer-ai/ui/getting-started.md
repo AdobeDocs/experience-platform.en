@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;getting started;customer ai;popular topics
 solution: Experience Platform
 title: Getting started in Customer AI
 topic: Getting started

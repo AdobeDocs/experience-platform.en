@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;user guide;customer ai;popular topics
 solution: Experience Platform
 title: Customer AI user guide
 topic: User guide

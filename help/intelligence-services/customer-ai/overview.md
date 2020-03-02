@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;overview;customer ai;popular topics
 solution: Experience Platform
 title: Customer AI overview
 topic: Customer AI overview
