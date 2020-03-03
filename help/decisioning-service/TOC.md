@@ -7,8 +7,8 @@ user-guide-title: Adobe Experience Platform Decisioning Service
 # Adobe Experience Platform Decisioning Service {#decisioning}
 
 - [Decisioning Service overview](home.md)
-- [Experience Decisioning Domain Model](experience-model.md)
-- [Offer Decisioning Domain Model](offer-model.md)
+- [Experience Decisioning domain model](experience-model.md)
+- [Offer Decisioning domain model](offer-model.md)
 - Tutorials {#tutorials}
   - [Getting started](tutorials/getting-started.md)
   - [Work with Decisioning Service runtime using APIs](tutorials/runtime.md)

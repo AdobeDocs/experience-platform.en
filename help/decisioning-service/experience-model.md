@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Experience Decisioning Domain Model
+title: Experience Decisioning domain model
 topic: overview
 ---
 
-# Experience Decisioning Domain Model
+# Experience Decisioning domain model

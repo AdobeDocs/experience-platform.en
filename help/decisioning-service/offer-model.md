@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Offer Decisioning Domain Model
+title: Offer Decisioning domain model
 topic: overview
 ---
 
-# Offer Decisioning Domain Model overview
+# Offer Decisioning domain model overview
