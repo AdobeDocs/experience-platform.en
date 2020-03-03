@@ -171,7 +171,9 @@ It's done. You just added Microsoft CRM as a data source into Experience Platfor
 
 Luma has many internal policies that restrict the usage of certain kinds of collected information, and must also comply with legal and privacy-related concerns regarding data usage. Using Adobe Experience Platform Data Governance, predefined data usage labels can be applied to datasets (and specific fields within those datasets), allowing Luma to categorize their data according to specific usage restrictions.
 
-Once data usage labels have been applied, Luma can then use Data Governance to create data usage policies. Data usage policies are rules that describe the kinds of marketing actions that your are allowed to perform on data that contains certain labels. When attempting to perform an action in Real-time CDP that constitutes as policy violation (such as )
+![](assets/governance-labels.png)
+
+Once data usage labels have been applied, Luma can then use Data Governance to create data usage policies. Data usage policies are rules that describe the kinds of actions that you are allowed to perform on data that contains certain labels. When attempting to perform an action in Real-time CDP that constitutes a policy violation, the action is prevented and an alert is given to show which policy was violated and why.
 
 ## Bringing the data together for a specific customer
 
@@ -186,7 +188,7 @@ All of the profile information Luma has about Sarah displays. This includes her 
 |Identities|Shows the identities that have been linked together in Platform from Sarah's interactions with Luma across channels and devices. Her ECID from the website is displayed. Her identity also includes the ECID from her mobile app, her email ID, a CRM ID from the recently added Microsoft Dynamics dataset, and a loyalty ID passed into Adobe Experience Platform from the Luma loyalty system.|  
 |Events|Shows all of Sarah's interaction data with the Luma brand. This includes the item she just viewed, anything she's viewed in the past, the emails she's received, her interactions with the call center, and what channel and device each of those interactions happened on.|
 
-The Real-time CDP profile reduces the Luma marketing team's workflow from weeks to minutes and unlocks possiblities for personalization based on this 360-degree customer view. The profile merges the behavioral data from when she browsed the site before she signed in, with her existing customer profile, creating a comprehensive view of Sarah. 
+The Real-time CDP profile reduces the Luma marketing team's workflow from weeks to minutes and unlocks possibilities for personalization based on this 360-degree customer view. The profile merges the behavioral data from when she browsed the site before she signed in, with her existing customer profile, creating a comprehensive view of Sarah. 
 
 The marketing team can use this enhanced, real-time customer profile to better personalize Sarah's experience and increase her brand loyalty with Luma.
 
@@ -236,11 +238,7 @@ Here we see all of the destinations available for Luma to send this destination 
 
 Adobe Experience Platform includes privacy and security controls to ensure a segment is available to be activated to a particular destination based on its profile policy. If your activity violates policy, a warning appears. 
 
-![image](assets/luma-dule.png)
-
-With these controls, Experience Platform helps Luma be compliant with regulations and to market responsibly.  
-
-Luma can confidently address regional and organizational requirements for managing known and unknown customer data with unified governance tools.  
+With these controls, Experience Platform helps Luma be compliant with regulations and to market responsibly. Luma can confidently address regional and organizational requirements for managing known and unknown customer data with tools.  
 
 These controls are flexible and can be modified to meet the requirements of Luma’s security and governance teams.
 
