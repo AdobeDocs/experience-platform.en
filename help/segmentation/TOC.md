@@ -7,7 +7,7 @@ user-guide-title: Adobe Experience Platform Segmentation Service
 # Adobe Experience Platform Segmentation Service {#segmentation}
 
 - [Overview](home.md)
-- Segmentation API{#api}
+- Segmentation API {#api}
     - [Getting started](api/getting-started.md)
     - [Estimates](api/estimates.md)
     - [Export jobs](api/export-jobs.md)
@@ -17,12 +17,12 @@ user-guide-title: Adobe Experience Platform Segmentation Service
     - [Segment definitions](api/segment-definition.md)
     - [Segment jobs](api/segment-jobs.md)
     - [Streaming segmentation](api/streaming-segmentation.md)
-- Segmentation UI{#ui}
+- Segmentation UI {#ui}
     - [Overview](ui/overview.md)
     - [Merge policies](ui/merge-policies.md)
     - [Scheduled segmentation](ui/scheduled-segmentation.md)
     - [Streaming segmentation](ui/streaming-segmentation.md)
-- Profile Query Language{#pql}
+- Profile Query Language {#pql}
     - [Overview](pql/overview.md)
     - [Boolean functions](pql/boolean-functions.md)
     - [Comparison functions](pql/comparison-functions.md)
@@ -36,7 +36,7 @@ user-guide-title: Adobe Experience Platform Segmentation Service
     - [Logical quantifiers](pql/logical-quantifiers.md)
     - [Miscellaneous functions](pql/misc-functions.md)
     - [Sample PQL queries](pql/sample-queries.md)
-- Tutorials{#tutorials}
+- Tutorials {#tutorials}
     - [Create a segment](tutorials/create-a-segment.md)
     - [Evaluate a segment](tutorials/evaluate-a-segment.md)
 - [Multi-entity segmentation](multi-entity-segmentation.md)
