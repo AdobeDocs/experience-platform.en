@@ -16,14 +16,22 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
 - [Data Ingestion](data-ingestion.md)
 - Source connectors API {#api}
   - [Getting started](getting-started.md)
-  - [Explore a cloud storage using the Flow Service API](explore-cloud-storage.md)
-  - [Collect cloud storage data using APIs](collect-cloud-storage.md)
-  - [Explore a CRM system using the Flow Service API](explore-crm.md)
-  - [Collect CRM data using APIs](collect-crm.md)
-  - [Explore a database using the Flow Service API](explore-database.md)
-  - [Collect data from a database using APIs](collect-database.md)
-  - [Explore a data warehouse using the Flow Service API](explore-warehouse.md)
-  - [Collect data from a data warehouse using APIs](collect-warehouse.md)
+  - Cloud Storage {#cloud-storage}
+    - [Authenticate a cloud storage source connector](authenticate-cloud-storage.md)
+    - [Explore a cloud storage using the Flow Service API](explore-cloud-storage.md)
+    - [Collect cloud storage data using APIs](collect-cloud-storage.md)
+  - CRM {#crm}
+    - [Authenticate a CRM source connector](authenticate-crm.md)
+    - [Explore a CRM system using the Flow Service API](explore-crm.md)
+    - [Collect CRM data using APIs](collect-crm.md)
+  - Database {#database}
+    - [Authenticate a database connector](authenticate-databse.md)
+    - [Explore a database using the Flow Service API](explore-database.md)
+    - [Collect data from a database using APIs](collect-database.md)
+  - Warehouse {#warehouse}
+    - [Authenticate a warehouse connector](authenticate-warehouse.md)
+    - [Explore a data warehouse using the Flow Service API](explore-warehouse.md)
+    - [Collect data from a data warehouse using APIs](collect-warehouse.md)
   - [Connect to Data Lake using the Flow Service API](data-lake.md)
 - Source connectors UI {#ui}
   - [Getting started](getting-started.md)
