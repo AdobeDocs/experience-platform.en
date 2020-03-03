@@ -167,6 +167,12 @@ For example, to ingest Luma’s CRM data, filter the catalog by *CRM*, and all o
 
 It's done. You just added Microsoft CRM as a data source into Experience Platform.
 
+## Labeling ingested data for usage policies
+
+Luma has many internal policies that restrict the usage of certain kinds of collected information, and must also comply with legal and privacy-related concerns regarding data usage. Using Adobe Experience Platform Data Governance, predefined data usage labels can be applied to datasets (and specific fields within those datasets), allowing Luma to categorize their data according to specific usage restrictions.
+
+Once data usage labels have been applied, Luma can then use Data Governance to create data usage policies. Data usage policies are rules that describe the kinds of marketing actions that your are allowed to perform on data that contains certain labels. When attempting to perform an action in Real-time CDP that constitutes as policy violation (such as )
+
 ## Bringing the data together for a specific customer
 
 In this scenario, search profiles for Sarah Rose. Her profile appears, with the email she used to log in. 
@@ -224,9 +230,9 @@ Click **[!UICONTROL Send to destinations]**.
 In Adobe Real-time CDP, Luma can seamlessly act on their audience segments for personalization.  
 Here we see all of the destinations available for Luma to send this destination to, both Adobe and non-Adobe solutions:
 
-<!-- ![image](assets/luma-dest.png) -->
+![image](assets/luma-dest.png)
 
-<!-- ### Privacy
+### Data governance
 
 Adobe Experience Platform includes privacy and security controls to ensure a segment is available to be activated to a particular destination based on its profile policy. If your activity violates policy, a warning appears. 
 
@@ -237,7 +243,6 @@ With these controls, Experience Platform helps Luma be compliant with regulation
 Luma can confidently address regional and organizational requirements for managing known and unknown customer data with unified governance tools.  
 
 These controls are flexible and can be modified to meet the requirements of Luma’s security and governance teams.
--->
 
 ### Selecting destinations
 
