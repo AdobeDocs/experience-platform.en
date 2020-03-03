@@ -30,13 +30,13 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
   - [Connect to Data Lake using the Flow Service API](api/data-lake.md)
 - Source connectors UI {#ui}
   - [Getting started](ui/getting-started.md)
-    - Adobe Applications {#adobe-applications}
-      - [Create an Adobe applications source connector in the UI](ui/adobe-applications/create.md)
-      - [Analytics data connector](ui/adobe-applications/analytics.md)
-      - [Analytics mapping fields](ui/adobe-applications/analytics-mapping.md)
-      - [Audience Manager connector](ui/adobe-applications/audience-manager.md)
-      - [Audience Manager mapping field](ui/adobe-applications/audience-manager-mapping.md)
-      - [Target mapping fields](ui/adobe-applications/target-mapping.md)
+  - Adobe Applications {#adobe-applications}
+    - [Create an Adobe applications source connector in the UI](ui/adobe-applications/create.md)
+    - [Analytics data connector](ui/adobe-applications/analytics.md)
+    - [Analytics mapping fields](ui/adobe-applications/analytics-mapping.md)
+    - [Audience Manager connector](ui/adobe-applications/audience-manager.md)
+    - [Audience Manager mapping field](ui/adobe-applications/audience-manager-mapping.md)
+    - [Target mapping fields](ui/adobe-applications/target-mapping.md)
   - [Create a cloud storage source connector in the UI](ui/cloud-storage.md)
   - [Create a CRM source connector in the UI](ui/crm.md)
   - [Create a database source connector in the UI](ui/database.md)
