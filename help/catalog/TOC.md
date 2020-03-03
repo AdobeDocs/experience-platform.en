@@ -1,0 +1,25 @@
+---
+product: experience-platform
+audience: user
+user-guide-title: Metadata and Storage Help
+---
+
+# Metadata and storage {#catalog}
+
+* [Catalog Service overview](home.md)
+* Catalog Service API {#api}
+  * [Getting started](api/getting-started.md)
+  * [Filter Catalog data using query parameters](api/filter-data.md)
+  * [List objects](api/list-objects.md)
+  * [Look up an object](api/look-up-object.md)
+  * [Create an object](api/create-object.md)
+  * [Update an object](api/update-object.md)
+  * [Replace an object](api/replace-object.md)
+  * [Delete an object](api/delete-object.md)
+  * [Appendix](api/appendix.md)
+* Datasets {#datasets}
+  * [Datasets overview](datasets/overview.md)
+  * [Datasets user guide](datasets/user-guide.md)
+  * [Create a dataset using APIs](datasets/create-dataset.md)
+* [Data protection in Experience Platform](data-protection.md)
+* [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
