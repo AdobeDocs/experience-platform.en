@@ -4,12 +4,18 @@ audience: user
 user-guide-title: Adobe Experience Platform Source Connectors Help
 ---
 
-# Source Connectors {#source-connectors}
+# Source connectors {#source-connectors}
 
-- [Source Connectors overview](home.md)
-- [Available Source Connectors](connectors.md)
+- [Source connectors overview](home.md)
+- [Available Source onnectors](connectors.md)
+- [Analytics data connector](analytics-data-connector.md)
+- [Analytics mapping fields](analytics-mapping.md)
+- [Audience Manager connector](audience-manager-connector.md)
+- [Audience Manager mapping field](audience-manager-mapping.md)
+- [Target mapping fields](target-mapping.md)
 - [Data Ingestion](data-ingestion.md)
-- Source Connectors API {#api}
+- Source connectors API {#api}
+  - [Getting started](getting-started.md)
   - [Explore a cloud storage using the Flow Service API](explore-cloud-storage.md)
   - [Collect cloud storage data using APIs](collect-cloud-storage.md)
   - [Explore a CRM system using the Flow Service API](explore-crm.md)
@@ -19,10 +25,11 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
   - [Explore a data warehouse using the Flow Service API](explore-warehouse.md)
   - [Collect data from a data warehouse using APIs](collect-warehouse.md)
   - [Connect to Data Lake using the Flow Service API](data-lake.md)
-- Source Connectors UI {#ui}
+- Source connectors UI {#ui}
+  - [Getting started](getting-started.md)
   - [Create an Adobe applications source connector in the UI](adobe-applications.md)
   - [Create a cloud storage source connector in the UI](cloud-storage.md)
   - [Create a CRM source connector in the UI](crm.md)
   - [Create a database source connector in the UI](database.md)
   - [Create a data warehouse source connector in the UI](warehouse.md)
-- [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
+- [Troubleshooting guide](troubleshooting-guide.md)
