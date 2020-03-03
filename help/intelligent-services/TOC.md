@@ -1,12 +1,12 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Intelligence Service Help
+user-guide-title: Adobe Intelligent Services Help
 ---
 
-# Intelligence Services {#intelligence}
+# Adobe Intelligent Services {#intelligent}
 
-* [Intelligence Services overview](home.md)
+* [Intelligent Services overview](home.md)
 * Customer AI {#customer-ai}
   * [Overview](customer-ai/overview.md)
   * UI guides {#ui}
