@@ -23,8 +23,8 @@ This tutorial covers steps for working with Customer AI using the Experience Pla
 This guide requires a working understanding of the various Platform services involved in using Customer AI. Before beginning this tutorial, please review the following documents:
 
 *   [Real-time Customer Profile overview](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)
-*   [Segmentation Service overview](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segmentation.md)
-*   [Segment Builder user guide](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segment-builder-guide.md)
+*   [Segmentation Service overview](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)
+*   [Segment Builder user guide](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segment-builder-guide.md)
 
 ## Configure an instance
 
@@ -84,13 +84,13 @@ Exclude events as needed and then click **Finish** to create the instance.
 
 If the instance is created successfully, a prediction run will be immediately triggered and subsequent ones will execute according to your defined schedule.
 
->   **Note:** Depending on the size of the input data, prediction runs can take up to 24 hours to complete.
+>[!NOTE] Depending on the size of the input data, prediction runs can take up to 24 hours to complete.
 
 By following this section, you have configured an instance of Customer AI and a prediction run was executed. Upon the run's successful completion, scored insights will automatically hydrate Profiles with predicted scores. Please wait 24 hours before continuing to the next section of this tutorial.
 
 ## Create customer segments with predicted scores
 
-When a prediction run completes, predicted propensity scores are automatically consumed by Profiles. Enriching Profiles with Customer AI scores allows for the creation of customer segments that are based on propensity scores. This section provides steps for creating segments using the Segment Builder. For a more robust tutorial on creating segments, please see the [Segment Builder user guide](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segment-builder-guide.md).
+When a prediction run completes, predicted propensity scores are automatically consumed by Profiles. Enriching Profiles with Customer AI scores allows for the creation of customer segments that are based on propensity scores. This section provides steps for creating segments using the Segment Builder. For a more robust tutorial on creating segments, please see the [Segment Builder user guide](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segment-builder-guide.md).
 
 In the Platform UI, click **Segments** in the left navigation, and then click **Create segment**. 
 

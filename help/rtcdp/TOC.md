@@ -1,5 +1,5 @@
 ---
-product: experience-platform
+product: adobe experience platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform Help
 ---
@@ -14,12 +14,12 @@ user-guide-title: Real-Time Customer Data Platform Help
   * [Administration overview](administration/admin-overview.md)
 * Datasets {#datasets}
   * [Datasets](datasets/dataset.md)
-  * [Data quality on Platform](datasets/data-quality.md)  
+  * [Data quality on Platform](datasets/data-quality.md)
 * Destinations {#destinations}
   * [Destinations overview](destinations/destinations-overview.md)
   * Destinations interface  {#destinations-interface}
     * [Destinations workspace](destinations/destinations-workspace.md)
-    * [Destination details page](destinations/destination-details-page.md) 
+    * [Destination details page](destinations/destination-details-page.md)
   * Destinations catalog  {#destinations-cat}
     * [Destinations catalog overview](destinations/destinations-catalog.md)
     * Adobe destinations{#adobe-destinations}
@@ -27,7 +27,9 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Adobe Campaign](destinations/adobe-campaign-destination.md)
     * Advertising destinations{#advertiser-destinations}
       * [Advertising destinations overview](destinations/advertising-destinations.md)
-      * [Google](destinations/google-destination.md)
+      * [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
+      * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
+      * [Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
     * Email marketing destinations{#email-destinations}
       * [Email marketing destinations overview](destinations/email-marketing-destinations.md)
       * [Adobe Campaign](destinations/adobe-campaign-destination.md)
@@ -36,7 +38,7 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
   * Destinations tutorials {#dest-tutorials}
     * [Connect to a destination](/help/rtcdp/destinations/connect-destination.md)
-    * [Activate profiles and segments to a destination](destinations/activate-destinations.md) 
+    * [Activate profiles and segments to a destination](destinations/activate-destinations.md)
 * Privacy and data governance {#privacy}
   * [Privacy overview](privacy/privacy-overview.md)
   * [Data Governance overview](privacy/data-governance-overview.md)
@@ -53,3 +55,4 @@ user-guide-title: Real-Time Customer Data Platform Help
   * [Sources tutorials](sources/sources-tutorials.md)
   * [Implement website tags with Adobe Launch](sources/launch.md)
 * [Release notes](https://www.adobe.io/apis/experienceplatform/home/services/release-notes.html#!end-user/markdown/release-notes/release-notes.md)
+* [Glossary](https://www.adobe.io/apis/experienceplatform/home/services/acp-glossary.html)
