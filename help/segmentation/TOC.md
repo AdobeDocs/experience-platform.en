@@ -35,7 +35,7 @@ user-guide-title: Adobe Experience Platform Segmentation Service
     - [Filter functions](pql/filter-functions.md)
     - [Logical quantifiers](pql/logical-quantifiers.md)
     - [Miscellaneous functions](pql/misc-functions.md)
-    - [Supported PQL queries](pql/supported-queries.md)
+    - [Sample PQL queries](pql/sample-queries.md)
 - Tutorials{#tutorials}
     - [Create a segment](tutorials/create-a-segment.md)
     - [Evaluate a segment](tutorials/evaluate-a-segment.md)
