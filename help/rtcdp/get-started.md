@@ -7,7 +7,7 @@ seo-description: Sample scenario for Adobe Real-time Customer Data Platform
 
 # Getting started with Adobe Real-time Customer Data Platform
 
-This getting started guide leads you through a sample implementation of Adobe Real-time Customer Data Platform (Real-time CDP). You can use it an example when setting up your own implementation. Although this guide shows specific examples, it links to additional information you can use while creating your setup.
+This getting started guide leads you through a sample implementation of Adobe Real-time Customer Data Platform (Real-time CDP). You can use it as an example when setting up your own implementation. Although this guide shows specific examples, it links to additional information you can use while creating your setup.
 
 This example shows the power of Adobe Real-time Customer Data Platform, powered by Adobe Experience Platform, to:
 
@@ -177,8 +177,8 @@ All of the profile information Luma has about Sarah displays. This includes her 
 
 |Category|Description|
 |---|---|
-|Identities|Shows the identities that have been linked together in Platform from Sarah's interactions with Luma across channels and devices. Her ECID from the website is displayed Her identity also includes the ECID from her mobile app, her email ID, a CRM ID from the recently added Microsoft Dynamics dataset, and a loyalty ID passed into Adobe Experience Platform from the Luma loyalty system.|  
-|Events|Shows see all of Sarah's interaction data with the Luma brand. This includes the item she just viewed, anything she's viewed in the past, the emails she's received, her interactions with the call center, and what channel and device each of those interactions happened on.|
+|Identities|Shows the identities that have been linked together in Platform from Sarah's interactions with Luma across channels and devices. Her ECID from the website is displayed. Her identity also includes the ECID from her mobile app, her email ID, a CRM ID from the recently added Microsoft Dynamics dataset, and a loyalty ID passed into Adobe Experience Platform from the Luma loyalty system.|  
+|Events|Shows all of Sarah's interaction data with the Luma brand. This includes the item she just viewed, anything she's viewed in the past, the emails she's received, her interactions with the call center, and what channel and device each of those interactions happened on.|
 
 The Real-time CDP profile reduces the Luma marketing team's workflow from weeks to minutes and unlocks possiblities for personalization based on this 360-degree customer view. The profile merges the behavioral data from when she browsed the site before she signed in, with her existing customer profile, creating a comprehensive view of Sarah. 
 
