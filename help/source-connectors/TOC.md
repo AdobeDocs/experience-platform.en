@@ -7,7 +7,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
 # Source connectors {#source-connectors}
 
 - [Source connectors overview](home.md)
-- [Available Source onnectors](connectors.md)
+- [Available Source connectors](connectors.md)
 - [Analytics data connector](analytics-data-connector.md)
 - [Analytics mapping fields](analytics-mapping.md)
 - [Audience Manager connector](audience-manager-connector.md)
