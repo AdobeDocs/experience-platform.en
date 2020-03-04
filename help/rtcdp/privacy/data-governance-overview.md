@@ -40,7 +40,46 @@ Adobe Experience Platform provides several **core policies** for common customer
 
 ## Enforce data usage compliance
 
-Once data is labeled and usage policies are defined, you can enforce data usage compliance with policies. See the tutorial on [enforcing data usage compliance for audience segments](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/dule/data_governance_and_segmentation.md) for more information.
+Once data is labeled and usage policies are defined, you can enforce data usage compliance with policies. Data Governance provides two methods of policy enforcement:
+
+* [API-based enforcement](#api-based-enforcement)
+* [Automated enforcement](#automated-enforcement)
+
+### API-based enforcement
+
+Data Governance provides extensible APIs for policy enforcement, allowing developers to restrict data usage in custom applications and define an enforcement flow at every step. See the tutorial on [enforcing data usage compliance for audience segments](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/dule/data_governance_and_segmentation.md) for more information.
+
+### Automated enforcement
+
+When activating audience segments to destinations in Real-time CDP, Data Governance automatically enforces usage policies should any violations occur.
+
+The following diagram illustrates how policy enforcement is integrated into the data flow of segment activation:
+
+![](assets/enforcement-flow.png)
+
+When a segment is first activated, DULE Policy Service checks for policy violations based on the following factors:
+
+* The data usage labels applied to fields and datasets within the segment to be activated.
+* The marketing purpose of the destination. 
+
+If a policy violation occurs from attempting to activate the segment, the activation is prevented and a popover appears indicating that a policy has been violated. The _Details_ tab of the popover indicates the action that triggered the violation and why the violation occurred, and provides a suggestion for how to resolve the issue.
+
+![](assets/violation-popover.png)
+
+Click **Data Lineage** to track the dataset or field whose data label(s) triggered the violation.
+
+![](assets/data-lineage.png)
+
+Once a violation has triggered, the **Save** button is disabled for the activation until the appropriate components are updated to comply with data usage policies.
+
+DULE policy enforcement still applies to segments after they have been activated, restricting any changes to a segment or its destination that would result in a policy violation. Due to the numerous components involved in activating segments to destinations, any of the following actions can potentially trigger a violation:
+
+* Updating data usage labels
+* Changing datasets for a segment
+* Changing segment predicates
+* Changing destination configurations
+
+If any of the above actions triggers a violation, that action is prevented from being saved, ensuring that your activated segments continue to comply with data usage policies when being modified.
 
 ## Next steps
 
