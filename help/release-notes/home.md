@@ -5,4 +5,4 @@ title: Adobe Experience Platform product documentation
 topic: getting started
 ---
 
-# Adobe Experience Platform glossary
+# Adobe Experience Platform release notes
