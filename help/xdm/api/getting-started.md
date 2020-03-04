@@ -185,14 +185,14 @@ When performing list and lookup (GET) operations in the Schema Registry API, an 
 The following table lists compatible Accept header values, including those with version numbers, along with descriptions of what the API will return when they are used.
 
 | Accept | Description |
-| -------|------------ |
-| application/vnd.adobe.xed-id+json | Returns a list of IDs only. This is most commonly used for listing resources. |
-| application/vnd.adobe.xed+json | Returns a list of full JSON schema with original `$ref` and `allOf` included. This is used to return a list of full resources. |
-| application/vnd.adobe.xed+json; version={MAJOR_VERSION}	| Raw XDM with `$ref` and `allOf`. Has titles and descriptions. |
-| application/vnd.adobe.xed-full+json; version={MAJOR_VERSION} | `$ref` attributes and `allOf` resolved. Has titles and descriptions. |
-| application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION} | Raw XDM with `$ref` and `allOf`. No titles or descriptions. |
-| application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}	| `$ref` attributes and `allOf` resolved. No titles or descriptions. |
-| application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}	| `$ref` attributes and `allOf` resolved. Descriptors are included. |
+| ------- | ------------ |
+| `application/vnd.adobe.xed-id+json` | Returns a list of IDs only. This is most commonly used for listing resources. |
+| `application/vnd.adobe.xed+json` | Returns a list of full JSON schema with original `$ref` and `allOf` included. This is used to return a list of full resources. |
+| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Raw XDM with `$ref` and `allOf`. Has titles and descriptions. |
+| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` attributes and `allOf` resolved. Has titles and descriptions. |
+| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Raw XDM with `$ref` and `allOf`. No titles or descriptions. |
+| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` attributes and `allOf` resolved. No titles or descriptions. |
+| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` attributes and `allOf` resolved. Descriptors are included. |
 
 > **Note:** If supplying the `major` version only (e.g. 1, 2, 3), the registry will return the latest `minor` version (e.g. .1, .2, .3) automatically.
 
