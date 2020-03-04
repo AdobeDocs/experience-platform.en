@@ -167,7 +167,7 @@ For example, to ingest Luma’s CRM data, filter the catalog by *CRM*, and all o
 
 It's done. You just added Microsoft CRM as a data source into Experience Platform.
 
-## Labeling ingested data for usage policies
+### Labeling ingested data for usage policies
 
 Luma has many internal policies that restrict the usage of certain kinds of collected information, and must also comply with legal and privacy-related concerns regarding data usage. Using Adobe Experience Platform Data Governance, predefined data usage labels can be applied to datasets (and specific fields within those datasets), allowing Luma to categorize their data according to specific usage restrictions.
 
@@ -234,14 +234,6 @@ Here we see all of the destinations available for Luma to send this destination 
 
 ![image](assets/luma-dest.png)
 
-### Data governance
-
-Adobe Experience Platform includes privacy and security controls to ensure a segment is available to be activated to a particular destination based on its profile policy. If your activity violates policy, a warning appears. 
-
-With these controls, Experience Platform helps Luma be compliant with regulations and to market responsibly. Luma can confidently address regional and organizational requirements for managing known and unknown customer data with tools.  
-
-These controls are flexible and can be modified to meet the requirements of Luma’s security and governance teams.
-
 ### Selecting destinations
 
 In this scenario, Luma wants to retarget this audience with personalization across these destinations:
@@ -264,6 +256,14 @@ Click **[!UICONTROL Save]** to go to the next page.
 When a customer in this audience makes a purchase, their membership to this audience is suppressed in real-time. They don’t qualify anymore because their status has changed. 
 
 This saves the director of the Luma media team  hundreds of thousands of dollars by not using up inventory for an audience that is not qualified.
+
+### Enforcing data usage policies for destinations
+
+Adobe Experience Platform includes privacy and security controls to determine whether a segment is available to be activated to a particular destination. Activation is enabled or restricted based on the marketing purpose(s) assigned to the destination when it was created, as well as data usage policies defined by your organization.
+
+If your activity violates policy, a warning appears. This warning contains data lineage information that can help you identify why the policy was violated, and what you can do to resolve the violation.
+
+With these controls, Experience Platform helps Luma comply with regulations and market responsibly. These controls are flexible and can be modified to meet the requirements of Luma’s security and governance teams, allowing them to confidently address regional and organizational requirements for managing known and unknown customer data.
 
 ### Data flow canvas
 
