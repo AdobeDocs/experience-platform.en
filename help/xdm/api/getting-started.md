@@ -32,13 +32,13 @@ This guide provides example API calls to demonstrate how to format your requests
 
 In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../tutorials/authenticate_to_acp_tutorial/authenticate_to_acp_tutorial.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
-- Authorization: Bearer `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+* Authorization: Bearer `{ACCESS_TOKEN}`
+* x-api-key: `{API_KEY}`
+* x-gw-ims-org-id: `{IMS_ORG}`
 
 All resources in Experience Platform, including those belonging to the Schema Registry, are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+* x-sandbox-name: `{SANDBOX_NAME}`
 
 > **Note:** For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
 
@@ -46,7 +46,7 @@ All lookup (GET) requests to the Schema Registry require an additional Accept he
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
-- Content-Type: application/json
+* Content-Type: application/json
 
 ## Know your `TENANT_ID`
 
@@ -216,8 +216,8 @@ The following sample field illustrates a properly formatted XDM field, with furt
 ```
 
 * The name of a field object may contain alphanumeric, dash, or underscore characters, but **may not** start with an underscore.  
-  - **Correct:** `fieldName`, `field_name2`, `Field-Name`, `field-name_3`  
-  - **Incorrect:** `_fieldName`
+  * **Correct:** `fieldName`, `field_name2`, `Field-Name`, `field-name_3`  
+  * **Incorrect:** `_fieldName`
 * camelCase is preferred for the name of the field object. Example: `fieldName`
 * The field should include a `title`, written in Title Case. Example: `Field Name`
 * The field requires a `type`.  
