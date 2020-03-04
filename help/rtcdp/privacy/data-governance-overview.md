@@ -23,13 +23,11 @@ Data Governance allows you to apply usage labels to your data, either at the dat
 
 For detailed information on working with data usage labels, see the [data usage labels user guide](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/tutorials/dule/dule_working_with_labels.md) for Adobe Experience Platform.
 
-<!-- (To be included after destinations support is available -- January 2020)
 ## Set restrictions on destinations
 
-You can set data usage restrictions on a destination by defining the marketing use cases for that destination. Defining use cases for destinations allows you to check for usage policy violations and ensure that any profiles or segments sent to that destination are compatible with Data Governance rules.
+You can set data usage restrictions on a destination by defining marketing use cases for that destination. Defining use cases for destinations allows you to check for usage policy violations and ensure that any profiles or segments sent to that destination are compatible with Data Governance rules.
 
 Marketing use cases can be defined during the _Setup_ phase for the _Edit Destination_ workflow. See the destination documentation for more information. 
--->
 
 
 ## Manage data usage policies
@@ -62,17 +60,21 @@ When a segment is first activated, DULE Policy Service checks for policy violati
 * The data usage labels applied to fields and datasets within the segment to be activated.
 * The marketing purpose of the destination. 
 
+#### Policy violation messages
+
 If a policy violation occurs from attempting to activate the segment, the activation is prevented and a popover appears indicating that a policy has been violated. The _Details_ tab of the popover indicates the action that triggered the violation and why the violation occurred, and provides a suggestion for how to resolve the issue.
 
-![](assets/violation-popover.png)
+<!-- ![](assets/violation-popover.png) -->
 
 Click **Data Lineage** to track the dataset or field whose data label(s) triggered the violation.
 
-![](assets/data-lineage.png)
+<!-- ![](assets/data-lineage.png) -->
 
 Once a violation has triggered, the **Save** button is disabled for the activation until the appropriate components are updated to comply with data usage policies.
 
-DULE policy enforcement still applies to segments after they have been activated, restricting any changes to a segment or its destination that would result in a policy violation. Due to the numerous components involved in activating segments to destinations, any of the following actions can potentially trigger a violation:
+#### Policy enforcement for activated segments
+
+Policy enforcement still applies to segments after they have been activated, restricting any changes to a segment or its destination that would result in a policy violation. Due to the numerous components involved in activating segments to destinations, any of the following actions can potentially trigger a violation:
 
 * Updating data usage labels
 * Changing datasets for a segment
