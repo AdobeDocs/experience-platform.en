@@ -11,7 +11,7 @@ The Schema Registry is used to access the Schema Library within Adobe Experience
 
 Using the Schema Registry API, you can perform basic CRUD operations in order to view and manage all schemas and related resources available to you within Adobe Experience Platform. This includes those defined by Adobe, Experience Platform partners, and vendors whose applications you use. You can also use API calls to create new schemas and resources for your organization, as well as view and edit resources that you have already defined.
 
-This developer guide provides steps to help you start using the Schema Registry API. The guide then provides sample API calls for performing the following actions using the Schema Registry.
+This developer guide provides steps to help you start using the Schema Registry API. The guide then provides sample API calls for performing key operations using the Schema Registry.
 
 ## Prerequisites
 
@@ -147,6 +147,7 @@ A successful response returns information regarding your organization's use of t
   }
  }
 ```
+
 * `tenantId`: The `TENANT_ID` value for your IMS Organization.
 
 ## Understand the `CONTAINER_ID`
