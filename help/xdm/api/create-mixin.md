@@ -31,7 +31,7 @@ When defining a new mixin, it must include a `meta:intendedToExtend` attribute, 
 ```SHELL
 curl -X POST \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins \
-  -H 'Authorization: Bearer {ACCESS_TOKEN' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -45,23 +45,23 @@ curl -X POST \
           "property": {
             "properties": {
               "_{TENANT_ID}": {
-            	"type":"object",
-            	"properties": {
+              "type":"object",
+              "properties": {
                   "propertyName": {
                     "type": "string",
                     "title": "Property Name",
                     "description": "Name of the property"
                   },
-	                "propertyCity": {
+                  "propertyCity": {
                     "title": "Property City",
                     "description": "City where the property is located.",
                     "type": "string"
-	                },
-	                "phoneNumber": {
+                  },
+                  "phoneNumber": {
                     "title": "Phone Number",
                     "description": "Primary phone number for the property.",
                     "type": "string"
-	                },
+                  },
                   "propertyType": {
                     "type": "string",
                     "title": "Property Type",
@@ -77,9 +77,9 @@ curl -X POST \
                         "fitness": "Fitness Center"
                     }
                   },
-	                "propertyConstruction": {
-	                  "$ref": "https://ns.adobe.com/{TENANT_ID}/datatypes/24c643f618647344606222c494bd0102"
-	                }
+                  "propertyConstruction": {
+                    "$ref": "https://ns.adobe.com/{TENANT_ID}/datatypes/24c643f618647344606222c494bd0102"
+                  }
                 }
               }
             }
