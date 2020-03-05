@@ -65,14 +65,14 @@ curl -X PUT \
             }
           },
           "constructionCompany": {
-          	"type": "string",
-          	"title": "Construction Company",
-          	"description": "Name of the construction company that completed the construction of the property."
+            "type": "string",
+            "title": "Construction Company",
+            "description": "Name of the construction company that completed the construction of the property."
           },
           "totalSquareFootage": {
-          	"type": "integer",
-          	"title": "Total Square Footage",
-          	"description": "Total square footage of the property."
+            "type": "integer",
+            "title": "Total Square Footage",
+            "description": "Total square footage of the property."
           }
         } 
       }'
