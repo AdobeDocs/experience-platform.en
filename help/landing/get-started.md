@@ -5,9 +5,7 @@ title: Adobe Experience Platform product documentation
 topic: getting started
 ---
 
-# Adobe Experience Platform
-
-<!--![](/help/assets/platform-banner-1.png)-->
+# Adobe Experience Platform getting started
 
 >[!VIDEO](https://video.tv.adobe.com/v/27361?quality=12)
 
