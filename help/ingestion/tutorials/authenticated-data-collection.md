@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Streaming an XDM profile
-topic: overview
+title: Authenticated data collection
+topic: tutorial
 ---
 
-# Streaming an XDM profile
+# Authenticated data collection

@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Merge policies
-topic: ui guide
+title: Streaming time series data
+topic: tutorial
 ---
 
-# Merge policies
+# Streaming time series data

@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform product documentation
+title: Adobe Experience Platform overview
 topic: getting started
 ---
 
-# Adobe Experience Platform
+# Adobe Experience Platform overview
 
 ![](/help/assets/platform-banner-1.png)
 
