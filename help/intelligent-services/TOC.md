@@ -17,5 +17,5 @@ user-guide-title: Adobe Intelligent Services Help
   * [Overview](customer-ai/overview.md)
   * [Getting started with Customer AI](customer-ai/getting-started.md)
   * [User Interface guide](customer-ai/user-guide.md)
-  * [Discovering insights](customer-ai/discovering-insights.md)
+  * [Discovering insights](customer-ai/discover-insights.md)
   * [Downloading scores](customer-ai/download-scores.md)
