@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;intelligence services;popular topics
+keywords: Experience Platform;home;intelligent services;popular topics
 solution: Experience Platform
-title: Intelligence Services overview
-topic: Intelligence Services overview
+title: Intelligent Services overview
+topic: Intelligent Services overview
 ---
 
-# Intelligence Services overview
+# Intelligent Services overview
