@@ -9,7 +9,7 @@ topic: developer guide
 
 This document contains additional information to help you work with the Catalog API.
 
-## View interrelated objects
+## View interrelated objects {#view-interrelated-objects}
 
 Some Catalog objects can be interrelated with other Catalog objects. Any fields that are prefixed by `@` in response payloads denote related objects. The values for these fields take the form of a URI, which can be used in a separate GET request to retrieve the related objects they represent.
 

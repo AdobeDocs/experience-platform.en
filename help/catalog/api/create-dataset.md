@@ -48,7 +48,7 @@ curl -X POST \
 | `name` | The name of the dataset to be created. |
 | `schemaRef.id` | The URI `$id` value for the XDM schema the dataset will be based on. |
 
->[!NOTE] This example uses the [parquet](https://parquet.apache.org/documentation/latest/) file format for its `containerFormat` property. An example that uses the JSON file format can be found in the [batch ingestion developer guide](../../ingestion/batch-ingestion/api/getting-started.md).
+>[!NOTE] This example uses the [parquet](https://parquet.apache.org/documentation/latest/) file format for its `containerFormat` property. An example that uses the JSON file format can be found in the [batch ingestion developer guide](../../ingestion/batch-ingestion/api.md).
 
 **Response**
 
