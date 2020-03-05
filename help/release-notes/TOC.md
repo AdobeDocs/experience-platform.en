@@ -14,7 +14,7 @@ user-guide-title: Adobe Experience Platform Release Notes
   * [July 2019](2019/july-2019.md)
   * [June 2019](2019/june-2019.md)
   * [May 2019](2019/may-2019.md)
-* [Experience Platform home](https://docs.adobe.com/content/help/en/experience-platform/landing/home.html)
+* [Experience Platform home](../landing/home.md)
 
 
   
