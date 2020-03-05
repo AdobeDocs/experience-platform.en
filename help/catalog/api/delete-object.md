@@ -7,8 +7,6 @@ topic: developer guide
 
 # Delete an object
 
-## Delete an object
-
 You can delete a Catalog object by providing its ID in the path of a DELETE request. 
 
 >[!WARNING] Take extra care when deleting objects, as this cannot be undone and may produce breaking changes elsewhere in Experience Platform.
