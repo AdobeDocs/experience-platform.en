@@ -12,6 +12,7 @@ user-guide-title: Metadata and Storage Help
   * [Filter Catalog data using query parameters](api/filter-data.md)
   * [List objects](api/list-objects.md)
   * [Look up an object](api/look-up-object.md)
+  * [Look up multiple objects](api/look-up-multiple-objects.md)
   * [Create an object](api/create-object.md)
   * [Update an object](api/update-object.md)
   * [Replace an object](api/replace-object.md)
