@@ -13,13 +13,13 @@ There are several standard classes provided by Adobe and other Experience Platfo
 
 >[!NOTE] When composing a schema based on a class that you define, you will not be able to use standard mixins. Each mixin defines the classes they are compatible with in their `meta:intendedToExtend` attribute. Once you begin defining mixins that are compatible with your new class (by using the `$id` of your new class in the `meta:intendedToExtend` field of the mixin), you will be able to reuse those mixins every time you define a schema that implements the class you defined. See the sections on [creating mixins](create-mixin.md) and [creating schemas](create.schema.md) for more information.
 
-#### API format
+**API format**
 
 ```http
 POST /tenant/classes
 ```
 
-#### Request
+**Request**
 
 The request to create (POST) a class must include an `allOf` attribute containing a `$ref` to one of two values: `https://ns.adobe.com/xdm/data/record` or `https://ns.adobe.com/xdm/data/time-series`. These values represent the behavior upon which the class is based (record or time-series, respectively). For more information on the differences between record data and time series data, see the section on behavior types within the [basics of schema composition](../schema/composition.md).
 
@@ -77,7 +77,7 @@ curl -X POST \
 | `_{TENANT_ID}` | The `TENANT_ID` namespace for your organization. All resources created by your organization must include this property to avoid collisions with other resources in the Schema Registry. |
 | `allOf` | A list of resources whose properties are to be inherited by the new class. One of the `$ref` objects within the array defines the behavior of the class. In this example, the class inherits "record" behavior. |
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 201 (Created) and a payload containing the details of the newly created class including the `$id`, `meta:altId`, and `version`. These three values are read-only and are assigned by the Schema Registry.
 
