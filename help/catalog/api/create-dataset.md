@@ -11,13 +11,13 @@ In order to create a dataset using the Catalog API, you must know the `$id` valu
 
 >[!NOTE] This document only covers how to create a dataset object in Catalog. For full steps on how to create, populate, and monitor a dataset, please refer to the following [tutorial](../datasets/create-dataset.md).
 
-#### API format
+**API format**
 
 ```HTTP
 POST /dataSets
 ```
 
-#### Request
+**Request**
 
 The following request creates a dataset that references a previously defined schema.
 
@@ -46,11 +46,11 @@ curl -X POST \
 | Property | Description |
 | --- | --- |
 | `name` | The name of the dataset to be created. |
-| `schemaRef.id` | The URI `$id` value for the XDM schema the dataset will be based on.
+| `schemaRef.id` | The URI `$id` value for the XDM schema the dataset will be based on. |
 
 >[!NOTE] This example uses the [parquet](https://parquet.apache.org/documentation/latest/) file format for its `containerFormat` property. An example that uses the JSON file format can be found in the [batch ingestion developer guide](../../ingestion/batch-ingestion/api/getting-started.md).
 
-#### Response
+**Response**
 
 A successful response returns HTTP Status 201 (Created) and a response object that consists of an array containing the ID of the newly created dataset in the format `"@/datasets/{DATASET_ID}"`. The dataset ID is a read-only, system-generated string that is used to reference the dataset in API calls.
 

@@ -32,7 +32,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 | Property | Description |
 | --- | --- |
-| `datasetId` | The `id` of the dataset the batch will be associated with.
+| `datasetId` | The `id` of the dataset the batch will be associated with. |
 
 **Response**
 
