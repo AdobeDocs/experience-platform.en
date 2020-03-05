@@ -11,7 +11,7 @@ The primary building block of a schema is a class. The class contains the minimu
 
 There are several standard classes provided by Adobe and other Experience Platform partners, but you may also define your own classes and save them to the Schema Registry. You can then compose a schema that implements the class you created, and define mixins that are compatible with your newly defined class.
 
->[!NOTE] When composing a schema based on a class that you define, you will not be able to use standard mixins. Each mixin defines the classes they are compatible with in their `meta:intendedToExtend` attribute. Once you begin defining mixins that are compatible with your new class (by using the `$id` of your new class in the `meta:intendedToExtend` field of the mixin), you will be able to reuse those mixins every time you define a schema that implements the class you defined. See the sections on [creating mixins](create-mixin.md) and [creating schemas](create.schema.md) for more information.
+>[!NOTE] When composing a schema based on a class that you define, you will not be able to use standard mixins. Each mixin defines the classes they are compatible with in their `meta:intendedToExtend` attribute. Once you begin defining mixins that are compatible with your new class (by using the `$id` of your new class in the `meta:intendedToExtend` field of the mixin), you will be able to reuse those mixins every time you define a schema that implements the class you defined. See the sections on [creating mixins](create-mixin.md) and [creating schemas](create-schema.md) for more information.
 
 **API format**
 
