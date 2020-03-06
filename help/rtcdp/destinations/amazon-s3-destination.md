@@ -1,8 +1,8 @@
 ---
 title: Amazon S3 destination
 seo-title: Amazon S3 destination
-description: 
-seo-description: 
+description: Create a live outbound connection to your Amazon Web Services (AWS) S3 storage to periodically export tab-delimited or CSV data files from Adobe Experience Platform into your own S3 buckets.
+seo-description: Create a live outbound connection to your Amazon Web Services (AWS) S3 storage to periodically export tab-delimited or CSV data files from Adobe Experience Platform into your own S3 buckets.
 ---
 
 # Amazon S3 destination
@@ -15,28 +15,11 @@ To export data, complete the following steps:
 
 ## Connect destination {#connect-destination}
 
-1. In **[!UICONTROL Connections > Destinations]**, select Amazon S3, then select **[!UICONTROL Connect destination]**.
+See Cloud storage destinations workflow for instructions on how to connect to your cloud storage destinations. 
 
-    ![Connect to Salesforce](/help/rtcdp/destinations/assets/connect-salesforce.png)
+For Amazon S3 destinations, enter the following information in the create destination workflow:
 
-1. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. For Salesforce Marketing Cloud, you can select between **SFTP with Password** and **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect]**.
 
-    ![Set up Salesforce wizard](/help/rtcdp/destinations/assets/salesforce-step1.png)
-
-    For **SFTP with Password** connections, you must provide Domain, Port, Username, and Password.
-    For **SFTP with SSH Key** connections, you must provide Domain, Port, Username, and SSH Key.
-
-    ![Fill in Salesforce information](/help/rtcdp/destinations/assets/salesforce-wizard.png)
-
-1. In **Basic Information**, fill in the relevant information for your destination, as shown below:
-   * **Name**: Pick a relevant name for your destination.
-   * **Description**: Enter a description for your destination.
-   * **Folder Path**: Provide the path in your storage location where Real-time CDP will deposit your export data as CSV or tab-delimited files.
-   * **File Format**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location.
-
-    ![Salesforce basic information](/help/rtcdp/destinations/assets/salesforce-basic-information.png)
-
-1. Click **Create** after filling in the fields in **Basic Information**. Your destination is now connected and you can [activate segments](/help/rtcdp/destinations/activate-destinations.md) to the destination.
 
 ## Destination attributes {#destination-attributes}
 
