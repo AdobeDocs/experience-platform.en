@@ -281,7 +281,7 @@ The following table provides an overview of available descriptor types, includin
 <tr>
 <td><p><strong>xdm:descriptorIdentity</strong></p>
 <p>
-Signals that the "sourceProperty" of the "sourceSchema" is an Identity field as described by the <a href="../identity_services_architectural_overview/identity_services_architectural_overview.md">Adobe Experience Platform Identity Service</a>.
+Signals that the "sourceProperty" of the "sourceSchema" is an Identity field as described by the <a href="../../identity-service/home.md">Adobe Experience Platform Identity Service</a>.
 </p></td>
 <td>
 <pre class="JSON language-JSON hljs">
@@ -302,7 +302,7 @@ Signals that the "sourceProperty" of the "sourceSchema" is an Identity field as 
 <li><strong>"xdm:sourceSchema"</strong>: The $id URI of the schema where the descriptor is being defined.</li>
 <li><strong>"xdm:sourceVersion"</strong>: The major version of the source schema.
 <li><strong>"xdm:sourceProperty"</strong>: The path to the specific property that will be the identity. Path should begin with a "/" and not end with one. Do not include "properties" in the path (e.g. use "/personalEmail/address" instead of "/properties/personalEmail/properties/address")</li>
-<li><strong>"xdm:namespace"</strong>: The "id" or "code" value of the identity namespace. A list of namespaces can be found using the <a href="../../../../../../acpdr/swagger-specs/id-service-api.yaml">Identity Namespace Service API</a>.</li>
+<li><strong>"xdm:namespace"</strong>: The "id" or "code" value of the identity namespace. A list of namespaces can be found using the <a href="https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml">IdentityService API</a>.</li>
 <li><strong>"xdm:property"</strong>: Either "xdm:id" or "xdm:code", depending on the "xdm:namespace" used.</li>
 <li><strong>"xdm:isPrimary"</strong>: An optional boolean value. When "true", indicates the field as the primary identity. Schemas may contain only one primary identity.</li>
 </ul></p>
@@ -351,7 +351,7 @@ Signals that the "sourceProperty" of the "sourceSchema" is an Identity field as 
 <tr>
 <td><p><strong>xdm:descriptorOneToOne</strong>
 </p>
-<p>Describes a relationship between two different schemas, keyed on the properties described in "sourceProperty" and "destinationProperty". See the tutorial on <a href="../../tutorials/schema_registry_api_tutorial/relationship_descriptor_tutorial.md">defining a relationship between two schemas</a> for more information.</p>
+<p>Describes a relationship between two different schemas, keyed on the properties described in "sourceProperty" and "destinationProperty". See the tutorial on <a href="../tutorials/relationship-api.md">defining a relationship between two schemas</a> for more information.</p>
 </td>
 <td>
 <pre class="JSON language-JSON hljs">
