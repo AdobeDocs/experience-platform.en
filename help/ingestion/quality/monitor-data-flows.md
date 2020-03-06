@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Create a streaming connection
-topic: ui guide
+title: Monitor data flows
+topic: overview
 ---
 
-# Create a streaming connection
+# Monitor data flows

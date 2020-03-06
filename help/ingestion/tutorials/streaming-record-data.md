@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Authenticated data collection
+title: Streaming record data
 topic: overview
 ---
 
-# Authenticated data collection
+# Streaming record data

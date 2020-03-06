@@ -6,17 +6,16 @@ user-guide-title: Adobe Experience Platform Help
 
 # Adobe Experience Platform {#landing}
 
-* [Experience Platform Home](home.md)
+* [Experience Platform overview](home.md)
 * [Getting started](get-started.md)
-* [Product overview](https://www.adobe.io/apis/experienceplatform/home/overview.html)
-* Experience Platform reference {#ref}
-  * [Release Notes](https://www.adobe.io/apis/experienceplatform/home/services/release-notes.html#!end-user/markdown/release-notes/release-notes.md)
-  * [Glossary](https://www.adobe.io/apis/experienceplatform/home/services/acp-glossary.html)
-  * [Troubleshooting Guide](https://www.adobe.io/apis/experienceplatform/home/services/troubleshooting.html)
-* [Experience Platform services documentation](https://www.adobe.io/apis/experienceplatform/home/services.html)
-* [Real-time Customer Data Profile guide](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)
+* Experience Platform documentation {#documentation}
+  * [Access control](documentation/access-control.md)
+  * [Destinations](documentation/destinations.md)
+* [Release Notes](release-notes.md)
+* [Glossary](glossary.md)
+* [Troubleshooting Guide](troubleshooting.md)
+* [API fundamentals](api-fundamentals.md)
 * [API Reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)
-* Launch {#launch}
-  * [Experience Platform Launch](https://docs.adobe.com/content/help/en/launch/using/overview.html)
-  * [Experience Platform Auditor](https://docs.adobe.com/content/help/en/auditor/using/overview.html)
-  * [Experience Cloud Debugger](https://docs.adobe.com/content/help/en/debugger/using/experience-cloud-debugger.html)
+
+
+  
