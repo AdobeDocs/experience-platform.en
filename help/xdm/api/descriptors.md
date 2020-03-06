@@ -7,29 +7,27 @@ topic: developer guide
 
 # Descriptors
 
-## Descriptors
-
 Schemas define a static view of data entities, but do not provide specific details on how data based on these schemas (datasets, for example) may relate to one another. Adobe Experience Platform allows you to describe these relationships and other interpretive metadata about a schema using descriptors. 
 
 Schema descriptors are tenant-level metadata, meaning they are unique to your IMS Organization and all descriptor operations take place in the tenant container. 
 
 Each schema can have one or more schema descriptor entities applied to it. Each schema descriptor entity includes a descriptor `@type` and the `sourceSchema` to which it applies. Once applied, these descriptors will apply to all datasets created using the schema.
 
-Sample descriptor calls are shown below. For a complete list of available descriptors and the fields required for defining each type, see the appendix section on [defining descriptors in the API](#defining-descriptors-in-the-api).
+This document provides example API calls for descriptors, as well as a complete list of available descriptors and the fields required for defining each type.
 
-> **Note:** Descriptors require unique Accept headers that replace `xed` with `xdm`, but otherwise look very similar to Accept headers used elsewhere in the Schema Registry. The proper Accept headers have been included in the sample calls below, but take extra caution to ensure the correct headers are being used.
+>[!NOTE] Descriptors require unique Accept headers that replace `xed` with `xdm`, but otherwise look very similar to Accept headers used elsewhere in the Schema Registry. The proper Accept headers have been included in the sample calls below, but take extra caution to ensure the correct headers are being used.
 
-### List descriptors
+## List descriptors
 
 A single GET request can be used to return a list of all descriptors that have been defined by your organization.
 
-#### API format
+**API format**
 
 ```http
 GET /tenant/descriptors
 ```
 
-#### Request
+**Request**
 
 ```SHELL
 curl -X GET \
@@ -41,17 +39,17 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xdm-link+json'
 ```
 
-The response format depends on the Accept header sent in the request. Notice that the `/descriptors` endpoint uses Accept headers that are different than all other endpoints. 
+The response format depends on the Accept header sent in the request. Notice that the `/descriptors` endpoint uses Accept headers that are different than all other endpoints in the Schema Registry API.
 
 Descriptor Accept headers replace `xed` with `xdm`, and offer a `link` option that is unique to descriptors.
 
-Accept | Description
--------|------------
-application/vnd.adobe.xdm-id+json | Returns an array of descriptor IDs
-application/vnd.adobe.xdm-link+json | Returns an array of descriptor API paths
-application/vnd.adobe.xdm+json | Returns an array of expanded descriptor objects
+| Accept | Description |
+| -------|------------ |
+| `application/vnd.adobe.xdm-id+json` | Returns an array of descriptor IDs |
+| `application/vnd.adobe.xdm-link+json` | Returns an array of descriptor API paths |
+| `application/vnd.adobe.xdm+json` | Returns an array of expanded descriptor objects |
 
-#### Response
+**Response**
 
 The response includes an array for each descriptor type that has defined descriptors. In other words, if there are no descriptors of a certain `@type` defined, the registry will not return an empty array for that descriptor type. 
 
@@ -66,27 +64,28 @@ When using the `link` Accept header, each descriptor is shown as an array item i
   ],
   "xdm:descriptorIdentity": [
     "/tenant/descriptors/f7a4bc25429496c4740f8f9a7a49ba96862c5379"
+  ],
+  "xdm:descriptorOneToOne": [
+    "/tenant/descriptors/cb509fd6f8ab6304e346905441a34b58a0cd481a"
   ]
 }
 ```
 
-<!-- Relationship descriptor to be added later:
- "xdm:descriptorOneToOne": [
-    "/tenant/descriptors/cb509fd6f8ab6304e346905441a34b58a0cd481a"
-  ] -->
+## Look up a descriptor
 
-### Lookup descriptor
+If you wish to view the details of a specific descriptor, you can look up (GET) an individual descriptor using its `@id`.
 
-If you wish to view the details of a specific descriptor, you can lookup (GET) an individual descriptor using its `@id`.
-
-#### API format
+**API format**
 
 ```http
 GET /tenant/descriptors/{DESCRIPTOR_ID}
 ```
-* `{DESCRIPTOR_ID}`: The `@id` of the descriptor you want to lookup.
 
-#### Request
+| Parameter | Description |
+| --- | --- |
+| `{DESCRIPTOR_ID}` | The `@id` of the descriptor you want to lookup. |
+
+**Request**
 
 Descriptors are not versioned, therefore no Accept header is required in the lookup request.
 
@@ -99,7 +98,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
 A successful response returns the details of the descriptor, including its `@type` and `sourceSchema`, as well as additional information that varies depending on the type of descriptor. The returned `@id` should match the descriptor `@id` provided in the request.
 
@@ -123,17 +122,17 @@ A successful response returns the details of the descriptor, including its `@typ
 }
 ```
 
-### Create descriptor
+## Create descriptor
 
-The Schema Registry allows you to define several different descriptor types. Each descriptor type requires its own specific fields be sent in the POST request. A complete list of descriptors, and the fields necessary to define them, is available in the appendix section on [defining descriptors in the API](#defining-descriptors-in-the-api).
+The Schema Registry allows you to define several different descriptor types. Each descriptor type requires its own specific fields to be sent in the POST request. A complete list of descriptors, and the fields necessary to define them, is available in the appendix section on [defining descriptors](#defining-descriptors).
 
-#### API format
+**API format**
 
 ```http
 POST /tenant/descriptors
 ```
 
-#### Request
+**Request**
 
 The following request defines an identity descriptor on an "email address" field in a sample schema. This tells Experience Platform to use the email address as an identifier to help stitch together information about the individual.
 
@@ -157,9 +156,7 @@ curl -X POST \
       }'
 ```
 
-> **Note:** For details regarding the fields required to define a descriptor, see the [Defining descriptors in the API](#defining-descriptors-in-the-api) table in the appendix.
-
-#### Response
+**Response**
 
 A successful response returns HTTP status 201 (Created) and the details of the newly created descriptor, including its `@id`. The `@id` is a read-only field assigned by the Schema Registry and used for referencing the descriptor in the API.
 
@@ -177,18 +174,21 @@ A successful response returns HTTP status 201 (Created) and the details of the n
 }
 ```
 
-### Update descriptor
+## Update descriptor
 
-You can update a descriptor by making a PUT request to the registry referencing the `@id` of the descriptor you wish to update.
+You can update a descriptor by making a PUT request that references the `@id` of the descriptor you wish to update in the request path.
 
-#### API format
+**API format**
 
 ```http
 PUT /tenant/descriptors/{DESCRIPTOR_ID}
 ```
-* `{DESCRIPTOR_ID}`: The `@id` of the descriptor you want to update.
 
-#### Request
+| Parameter | Description |
+| --- | --- |
+| `{DESCRIPTOR_ID}` | The `@id` of the descriptor you want to update. |
+
+**Request**
 
 This request essentially _re-writes_ the descriptor, so the request body must include all fields required for defining a descriptor of that type. In other words, the request payload to update (PUT) a descriptor is the same as the payload to create (POST) a descriptor of the same type.
 
@@ -213,9 +213,9 @@ curl -X PUT \
       }'
 ```
 
-Details regarding the properties `xdm:namespace` and `xdm:property`, including how to access them, are available in the appendix section on [defining descriptors in the API](#defining-descriptors-in-the-api).
+Details regarding the properties `xdm:namespace` and `xdm:property`, including how to access them, are available in the appendix section on [defining descriptors](#defining-descriptors).
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 201 (Created) and the `@id` of the updated descriptor (which should match the `@id` sent in the request).
 
@@ -227,18 +227,21 @@ A successful response returns HTTP status 201 (Created) and the `@id` of the upd
 
 Performing a lookup (GET) request to view the descriptor will show that the fields have now been updated to reflect the changes sent in the PUT request.
 
-### Delete descriptor
+## Delete descriptor
 
 Occasionally you may need to remove a descriptor that you have defined from the Schema Registry. This is done by making a DELETE request referencing the `@id` of the descriptor you wish to remove.
 
-#### API format
+**API format**
 
 ```http
 DELETE /tenant/descriptors/{DESCRIPTOR_ID}
 ```
-* `{DESCRIPTOR_ID}`: The `@id` of the descriptor you want to delete.
 
-#### Request
+| Parameter | Description |
+| --- | --- |
+| `{DESCRIPTOR_ID}` | The `@id` of the descriptor you want to delete. |
+
+**Request**
 
 Accept headers are not required when deleting descriptors.
 
@@ -251,8 +254,164 @@ curl -X DELETE \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 204 (No Content) and a blank body.
 
 To confirm the descriptor has been deleted, you can perform a lookup request against the descriptor `@id`. The response returns HTTP status 404 (Not Found) because the descriptor has been removed from the Schema Registry.
+
+## Appendix
+
+The following section provides additional information regarding working with descriptors in the Schema Registry API.
+
+### Defining descriptors
+
+The following table provides an overview of available descriptor types, including the required fields for defining a descriptor of each type.
+
+<table>
+<tr>
+<th>@type</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td colspan=2><strong>Identity descriptor</strong></td>
+</tr>
+
+<tr>
+<td><p><strong>xdm:descriptorIdentity</strong></p>
+<p>
+Signals that the "sourceProperty" of the "sourceSchema" is an Identity field as described by the <a href="../identity_services_architectural_overview/identity_services_architectural_overview.md">Adobe Experience Platform Identity Service</a>.
+</p></td>
+<td>
+<pre class="JSON language-JSON hljs">
+{
+  "@type": "xdm:descriptorIdentity",
+  "xdm:sourceSchema":
+    "https://ns.adobe.com/{TENANT_ID}/schemas/fbc52b243d04b5d4f41eaa72a8ba58be",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/personalEmail/address",
+  "xdm:namespace": "Email",
+  "xdm:property": "xdm:code",
+  "xdm:isPrimary": false
+}
+</pre>
+<p><strong>Required Fields:</strong>
+<ul>
+<li><strong>"@type"</strong>: The type of descriptor being defined.</li>
+<li><strong>"xdm:sourceSchema"</strong>: The $id URI of the schema where the descriptor is being defined.</li>
+<li><strong>"xdm:sourceVersion"</strong>: The major version of the source schema.
+<li><strong>"xdm:sourceProperty"</strong>: The path to the specific property that will be the identity. Path should begin with a "/" and not end with one. Do not include "properties" in the path (e.g. use "/personalEmail/address" instead of "/properties/personalEmail/properties/address")</li>
+<li><strong>"xdm:namespace"</strong>: The "id" or "code" value of the identity namespace. A list of namespaces can be found using the <a href="../../../../../../acpdr/swagger-specs/id-service-api.yaml">Identity Namespace Service API</a>.</li>
+<li><strong>"xdm:property"</strong>: Either "xdm:id" or "xdm:code", depending on the "xdm:namespace" used.</li>
+<li><strong>"xdm:isPrimary"</strong>: An optional boolean value. When "true", indicates the field as the primary identity. Schemas may contain only one primary identity.</li>
+</ul></p>
+</td>
+</tr>
+
+<tr>
+<td colspan=2><strong>Friendly name descriptor</strong></td>
+</tr>
+
+<tr>
+<td><p><strong>xdm:alternateDisplayInfo</strong></p>
+<p>Allows a user to modify the "title" and "description" values of the core library schema fields. Especially useful when working with "eVars" and other "generic" fields that you wish to label as containing information specific to your organization. The UI can use these to show a more 'friendly' name or to only show fields that have a friendly name.</p>
+</td>
+<td>
+<pre class="JSON language-JSON hljs">
+{
+  "@type": "xdm:alternateDisplayInfo",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18",
+  "xdm:sourceVersion": 1
+  "xdm:sourceProperty": "/eVars/eVar1",
+  "xdm:title": {
+    "en_us":{"Loyalty ID"}
+  },
+  "xdm:description": {
+    "en_us":{"Unique ID of loyalty program member."}
+  },
+}
+</pre>
+<p><strong>Required Fields:</strong>
+<ul>
+<li><strong>"@type"</strong>: The type of descriptor being defined.</li>
+<li><strong>"xdm:sourceSchema"</strong>: The $id URI of the schema where the descriptor is being defined.</li>
+<li><strong>"xdm:sourceVersion"</strong>: The major version of the source schema.
+<li><strong>"xdm:sourceProperty"</strong>: The path to the specific property that will be the identity. Path should begin with a "/" and not end with one. Do not include "properties" in the path (e.g. use "/personalEmail/address" instead of "/properties/personalEmail/properties/address")</li>
+<li><strong>"xdm:title"</strong>: The new title you wish to display for this field, written in Title Case.</li>
+<li><strong>"xdm:description"</strong>: An optional description can be added along with the title. </li>
+</ul></p>
+</td>
+</tr>
+
+<tr>
+<td colspan=2><strong>Relationship descriptor</strong></td>
+</tr>
+
+<tr>
+<td><p><strong>xdm:descriptorOneToOne</strong>
+</p>
+<p>Describes a relationship between two different schemas, keyed on the properties described in "sourceProperty" and "destinationProperty". See the tutorial on <a href="../../tutorials/schema_registry_api_tutorial/relationship_descriptor_tutorial.md">defining a relationship between two schemas</a> for more information.</p>
+</td>
+<td>
+<pre class="JSON language-JSON hljs">
+{
+  "@type": "xdm:descriptorOneToOne",
+  "xdm:sourceSchema":
+    "https://ns.adobe.com/{TENANT_ID}/schemas/fbc52b243d04b5d4f41eaa72a8ba58be",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/parentField/subField",
+  "xdm:destinationSchema": 
+    "https://ns.adobe.com/{TENANT_ID}/schemas/78bab6346b9c5102b60591e15e75d254",
+  "xdm:destinationVersion": 1,
+  "xdm:destinationProperty": "/parentField/subField"
+}
+</pre>
+<p>
+<strong>Required Fields:</strong>
+<ul>
+<li><strong>"@type"</strong>: The type of descriptor being defined.</li>
+<li><strong>"xdm:sourceSchema"</strong>: The $id URI of the schema where the descriptor is being defined.</li>
+<li><strong>"xdm:sourceVersion"</strong>: The major version of the source schema.
+<li><strong>"xdm:sourceProperty"</strong>: Path to the field in the source schema where the relationship is being defined. Should begin with a "/" and not end with one. Do not include "properties" in the path (for example, "/personalEmail/address" instead of "/properties/personalEmail/properties/address").</li>
+<li><strong>"xdm:destinationSchema"</strong>: The $id URI of the destination schema this descriptor is defining a relationship with.</li>
+<li><strong>"xdm:destinationVersion"</strong>: The major version of the destination schema.</li>
+<li><strong>"xdm:destinationProperty"</strong>: Optional path to a target field within the destination schema. If this property is omitted, the target field is inferred by any fields that contain a matching reference identity descriptor (see below).</li>
+</ul>
+</p>
+</td>
+</tr>
+
+<tr>
+<td colspan=2><strong>Reference identity descriptor</strong></td>
+</tr>
+
+<tr>
+<td><p><strong>xdm:descriptorReferenceIdentity</strong>
+</p>
+<p>Provides a reference context to a schema field, allowing it to be linked with the primary identity field of a destination schema.<br/><br/>
+<strong>Note: </strong>Fields must already be labeled with an identity descriptor before a reference descriptor can be applied to them.</p>
+</td>
+<td>
+<pre class="JSON language-JSON hljs">
+{
+  "@type": "xdm:descriptorReferenceIdentity",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/78bab6346b9c5102b60591e15e75d254",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/parentField/subField",
+  "xdm:identityNamespace": "Email"
+}
+</pre>
+<p>
+<strong>Required Fields:</strong>
+<ul>
+<li><strong>"@type"</strong>: The type of descriptor being defined.</li>
+<li><strong>"xdm:sourceSchema"</strong>: The $id URI of the schema where the descriptor is being defined.</li>
+<li><strong>"xdm:sourceVersion"</strong>: The major version of the source schema.
+<li><strong>"xdm:sourceProperty"</strong>: Path to the field in the source schema where the descriptor is being defined. Should begin with a "/" and not end with one. Do not include "properties" in the path (for example, "/personalEmail/address" instead of "/properties/personalEmail/properties/address").</li>
+<li><strong>"xdm:identityNamespace"</strong>: The identity namespace code for the source property.</li>
+</ul>
+</p>
+</td>
+</tr>
+</table>
