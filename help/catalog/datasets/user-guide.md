@@ -118,7 +118,7 @@ A confirmation box appears. Click **Delete** to confirm the deletion of the data
 
 ![](../images/datasets/user-guide/confirm_delete.png)
 
-For more information on deleting datasets including how to delete them using APIs, see the tutorial on [deleting a dataset](../../tutorials/datasets/delete-dataset.md).
+For more information on deleting datasets including how to delete them using APIs, see the tutorial on [deleting a dataset](delete.md).
 
 ## Delete a Profile-enabled dataset
 
