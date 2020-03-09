@@ -35,4 +35,4 @@ Customer AI works by analyzing existing Consumer Experience Event data to predic
 
 ## Next steps
 
-You can begin by following the [getting started](./getting-started.md) guide. This guide walks you through setting up all the required pre-requests for Customer AI. Once you have all your credentials and data ready, visit the [Customer AI user guide](./user-guide.md). It provides steps for using Customer AI and demonstrates the creation of customer segments using propensity scores.
+You can begin by following the [getting started](./getting-started.md) guide. This guide walks you through setting up all the required pre-requests for Customer AI. If you already have all your credentials and data ready, visit the [Customer AI user guide](./user-guide.md). It provides steps for using Customer AI and demonstrates the creation of customer segments using propensity scores.

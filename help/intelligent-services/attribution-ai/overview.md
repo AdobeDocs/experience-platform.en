@@ -61,4 +61,4 @@ Attribution AI also offers integration with other Adobe solutions like Adobe Med
   
 ## Next steps
 
-You can get started by following the [Attribution AI user guide](./user-guide.md). It provides steps for using Attribution AI and demonstrates the creation of a new instance.
+You can begin by following the [getting started](./getting-started.md) guide. This guide walks you through setting up all the required pre-requests for Attribution AI. If you already have your credentials and data ready, visit the [Attribution AI user guide](./user-guide.md). This guide walks you through creating an instance and submitting it for training and scoring.
