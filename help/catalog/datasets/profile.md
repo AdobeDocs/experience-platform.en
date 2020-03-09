@@ -202,6 +202,7 @@ PATCH /dataSets/{DATASET_ID}
 ```
 
 **Request**
+
 ```shell
 curl -X PATCH \
   https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
