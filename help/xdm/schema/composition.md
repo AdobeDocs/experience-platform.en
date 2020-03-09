@@ -6,3 +6,5 @@ topic: overview
 ---
 
 # Basics of schema composition
+
+## Union {#union}
