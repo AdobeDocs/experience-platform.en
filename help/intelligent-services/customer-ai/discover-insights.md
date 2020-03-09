@@ -81,12 +81,13 @@ The edit dialog box appears, allowing you to edit the *Description* and *Scoring
 The *More actions* button is located in the top-right navigation next to *Edit*. Clicking **More actions** opens a dropdown that allows you to select one of the following operations:
 
 - **Delete**: Deletes the instance.
-- **Access scores**: Clicking *Access scores* opens a dialog providing a link to the [downloading scores for Customer AI]() tutorial, the dialog also provides the dataset id required for making API calls.
+- **Access scores**: Clicking *Access scores* opens a dialog providing a link to the [downloading scores for Customer AI](./download-scores.md) tutorial, the dialog also provides the dataset id required for making API calls.
 - **View run history**: A dialog containing a list of all the scoring runs associated with the service instance appears.
 
 ![more actions](./images/insights/more-actions.png)
 
 ## Scoring Summary
+
 Scoring Summary displays the total number of profiles scored and categorizes them into buckets containing high, medium, and low propensity. The propensity buckets are determined based on score range, low is less than 24, medium is 25 to 74, and high is above 74. Each bucket has a color corresponding to the legend. 
 
 > **Note:** If it is a conversion propensity score, the high scores show in green and the low scores in red. If you are predicting churn propensity this is flipped, the high scores are in red and the low scores are green. The medium bucket remains yellow regardless of what propensity type you choose.
@@ -94,11 +95,13 @@ Scoring Summary displays the total number of profiles scored and categorizes the
 ![scoring summary](./images/insights/scoring-summary.png)
 
 ## Distribution of Scores
+
 The *Distribution of Scores* card gives you a visual summary of the population based on the score. The colors that you see in the *Distribution of Scores* card represent the type of propensity score generated. 
 
 ![distribution of scores](./images/insights/distribution-of-scores.png)
 
 ## Influential factors
+
 For each score bucket, a card is generated that shows the top 10 influential factors for that bucket. The influential factors give you additional details on why your customers belong to various score buckets.
 
 ![Influential factors](./images/insights/influential-factors.png)
@@ -119,6 +122,6 @@ The segment builder is used to define a segment, however, Customer AI has alread
 
  ![All your Segments](./images/insights/Segments-dashboard.png)
 
- ## Next steps
+## Next steps
 
 This document outlined the insights provided by a Customer AI service instance. You can now continue to the [downloading scores in Customer AI](./download-scores.md) tutorial or browse the other [Adobe Intelligent Services](../home.md).
