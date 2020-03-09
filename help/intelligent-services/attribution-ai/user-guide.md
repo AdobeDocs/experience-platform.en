@@ -26,22 +26,6 @@ This document serves as a guide for interacting with Attribution AI in the Adobe
   - [Training window](#training-window)
 - [Next steps](#next-steps)
 
-## Getting started
-
-This guide requires an understanding of the various Platform services involved with using Attribution AI. Before beginning this tutorial, please review the following documents:
-
-- [XDM System overview](https://www.adobe.io/apis/experienceplatform/home/xdm/xdmservices.html#!api-specification/markdown/narrative/technical_overview/schema_registry/xdm_system/xdm_system_in_experience_platform.md): XDM is the foundational framework that allows Adobe Experience Cloud, powered by Experience Platform, to deliver the right message to the right person, on the right channel, at exactly the right moment. The methodology on which Experience Platform is built, XDM System, operationalizes Experience Data Model schemas for use by Platform services.
-- [Basics of schema composition](https://www.adobe.io/apis/experienceplatform/home/xdm/xdmservices.html#!api-specification/markdown/narrative/technical_overview/schema_registry/schema_composition/schema_composition.md): This document provides an introduction to Experience Data Model (XDM) schemas and the building blocks, principles, and best practices for composing schemas to be used in Adobe Experience Platform.
-- [Building schemas](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/schema_editor_tutorial/schema_editor_tutorial.md): This tutorial covers the steps for creating a schema using the Schema Editor within Experience Platform.
-
-Attribution AI requires touchpoint and customer events data. Please contact Adobe services in order to implement or make changes to this data. If media spend data is present, you can do further analysis such as incremental revenue and ROI. If customer profile data is available, you can further attribute credits to the customer profile level.
-
-The following terminology is used in this document:
-
-- **Conversion event:** Any digital event or digital interaction that customers do to indicate a milestone towards a goal, such as abandoning a cart before making a final purchase. Additional examples include registering as a user but not yet signing up for a conference, the indication of a final goal (making a purchase or signing up for a conference), or qualifying for a trait.
-
-- **Touchpoint:** Any digital event or digital interaction that customers do in the path towards a goal. Examples include before-purchase-related marketing efforts, display advertising impressions viewed, and paid search clicks.
-
 ## Create an instance
 
 In the Adobe Experience Platform UI, click **Services** in the left navigation. The *Services* browser appears and displays available Adobe Intelligence services. In the container for Attribution AI, click **Open**.
