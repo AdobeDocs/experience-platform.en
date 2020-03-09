@@ -34,7 +34,7 @@ This document serves as a guide for interacting with service instance insights i
 
 ## Getting started
 
-In order to utilize insights for Attribution AI, you need to have a service instance with a successful run status available. To create a new service instance visit the [Attribution AI user interface guide](./attribution-ai-user-guide.md). If you recently created a service instance and it is still training and scoring, please allow 24 hours for it to finish running.
+In order to utilize insights for Attribution AI, you need to have a service instance with a successful run status available. To create a new service instance visit the [Attribution AI user interface guide](./user-guide.md). If you recently created a service instance and it is still training and scoring, please allow 24 hours for it to finish running.
 
 ## Service instance insights overview
 
@@ -58,7 +58,7 @@ To view additional details for a service instance, click **Show more** in the to
 
 ![show more](./images/insights/show-more.png)
 
-A detailed list appears. For more information on any of the properties listed, please visit the [Attribution AI user guide](./attribution-ai-user-guide.md).
+A detailed list appears. For more information on any of the properties listed, please visit the [Attribution AI user guide](./user-guide.md).
 
 ![show details](./images/insights/advanced-details.png)
 
@@ -96,7 +96,7 @@ When you create a new instance in Attribution AI, one of the required fields is 
 
 ### Attribution model
 
-Clicking *Attribution model* opens a dropdown with all of the different attribution models available. You can select multiple models to compare results. For more information on the different attribution models and how they work, visit the [attribution ai overview](./attribution-ai-overview.md) which contains a table with information on each model.
+Clicking *Attribution model* opens a dropdown with all of the different attribution models available. You can select multiple models to compare results. For more information on the different attribution models and how they work, visit the [attribution ai overview](./overview.md) which contains a table with information on each model.
 
 ![attribution model](./images/insights/attribution-model.png)
 
@@ -116,7 +116,7 @@ The *Geography* filter populates country codes based on region-based models.
 
 ### Region
 
-> **Note:** This filter is only present if you performed the optional step [region-based modeling](./attribution-ai-user-guide.md#region-based-modeling-optional) in the Attribution AI user interface guide when creating your service instance. 
+> **Note:** This filter is only present if you performed the optional step [region-based modeling](./user-guide.md#region-based-modeling-optional) in the Attribution AI user interface guide when creating your service instance. 
 
 This filter allows you select any regions you set up in the instance creation process.
 
@@ -170,4 +170,4 @@ The *Top campaigns* card displays an overview of your campaigns and how the camp
 
 ## Next steps
 
-Once you have finished filtering the data and are able to display the appropriate information, you have the option to download the scores. For an in-depth guide on how to download your scores, visit the [downloading scores in Attribution AI](./downloading-raw-scores.md) tutorial.
+Once you have finished filtering the data and are able to display the appropriate information, you have the option to download the scores. For an in-depth guide on how to download your scores, visit the [downloading scores in Attribution AI](./downloading-scores.md) tutorial.
