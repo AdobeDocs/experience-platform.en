@@ -275,15 +275,13 @@ The following table provides an overview of available descriptor types, includin
   </tr>  
   <tr>
     <td colspan=2>
-      Identity descriptor
+      <strong>Identity descriptor</strong>
     </td>
   </tr>
   <tr>
     <td>
       <p><strong>xdm:descriptorIdentity</strong></p>
-      <p>
-        Signals that the "sourceProperty" of the "sourceSchema" is an Identity field as described by the <a href="../../identity-service/home.md">Adobe Experience Platform Identity Service</a>.
-      </p>
+      <p>Signals that the "sourceProperty" of the "sourceSchema" is an Identity field as described by the <a href="../../identity-service/home.md">Adobe Experience Platform Identity Service</a>.</p>
     </td>
     <td>
       <pre class="JSON language-JSON hljs">
@@ -384,9 +382,7 @@ The following table provides an overview of available descriptor types, includin
   <tr>
     <td>
       <p><strong>xdm:descriptorReferenceIdentity</strong></p>
-      <p>
-        Provides a reference context to a schema field, allowing it to be linked with the primary identity field of a destination schema. Fields must already be labeled with an identity descriptor before a reference descriptor can be applied to them.
-      </p>
+      <p>Provides a reference context to a schema field, allowing it to be linked with the primary identity field of a destination schema. Fields must already be labeled with an identity descriptor before a reference descriptor can be applied to them.</p>
     </td>
     <td>
       <pre class="JSON language-JSON hljs">
