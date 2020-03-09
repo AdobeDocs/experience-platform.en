@@ -266,142 +266,110 @@ The following section provides additional information regarding working with des
 
 ### Defining descriptors
 
-The following table provides an overview of available descriptor types, including the required fields for defining a descriptor of each type.
+The following sections provide an overview of available descriptor types, including the required fields for defining a descriptor of each type.
 
-<table>
-  <tr>
-    <th>@type</th>
-    <th>Description</th>
-  </tr>  
-  <tr>
-    <td colspan=2>
-      <strong>Identity descriptor</strong>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <p><strong>xdm:descriptorIdentity</strong></p>
-      <p>Signals that the "sourceProperty" of the "sourceSchema" is an Identity field as described by the <a href="../../identity-service/home.md">Adobe Experience Platform Identity Service</a>.</p>
-    </td>
-    <td>
-      <pre class="JSON language-JSON hljs">
-        {
-          "@type": "xdm:descriptorIdentity",
-          "xdm:sourceSchema":
-            "https://ns.adobe.com/{TENANT_ID}/schemas/fbc52b243d04b5d4f41eaa72a8ba58be",
-          "xdm:sourceVersion": 1,
-          "xdm:sourceProperty": "/personalEmail/address",
-          "xdm:namespace": "Email",
-          "xdm:property": "xdm:code",
-          "xdm:isPrimary": false
-        }
-      </pre>
-      <p><strong>Required Fields:</strong></p>
-      <ul>
-        <li><strong>"@type"</strong>: The type of descriptor being defined.</li>
-        <li><strong>"xdm:sourceSchema"</strong>: The $id URI of the schema where the descriptor is being defined.</li>
-        <li><strong>"xdm:sourceVersion"</strong>: The major version of the source schema.
-        <li><strong>"xdm:sourceProperty"</strong>: The path to the specific property that will be the identity. Path should begin with a "/" and not end with one. Do not include "properties" in the path (e.g. use "/personalEmail/address" instead of "/properties/personalEmail/properties/address")</li>
-        <li><strong>"xdm:namespace"</strong>: The "id" or "code" value of the identity namespace. A list of namespaces can be found using the <a href="https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml">IdentityService API</a>.</li>
-        <li><strong>"xdm:property"</strong>: Either "xdm:id" or "xdm:code", depending on the "xdm:namespace" used.</li>
-        <li><strong>"xdm:isPrimary"</strong>: An optional boolean value. When "true", indicates the field as the primary identity. Schemas may contain only one primary identity.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td colspan=2><strong>Friendly name descriptor</strong></td>
-  </tr>
-  <tr>
-    <td>
-      <p><strong>xdm:alternateDisplayInfo</strong></p>
-      <p>Allows a user to modify the "title" and "description" values of the core library schema fields. Especially useful when working with "eVars" and other "generic" fields that you wish to label as containing information specific to your organization. The UI can use these to show a more 'friendly' name or to only show fields that have a friendly name.</p>
-    </td>
-    <td>
-      <pre class="JSON language-JSON hljs">
-        {
-          "@type": "xdm:alternateDisplayInfo",
-          "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18",
-          "xdm:sourceVersion": 1
-          "xdm:sourceProperty": "/eVars/eVar1",
-          "xdm:title": {
-            "en_us":{"Loyalty ID"}
-          },
-          "xdm:description": {
-            "en_us":{"Unique ID of loyalty program member."}
-          },
-        }
-      </pre>
-      <p><strong>Required Fields:</strong></p>
-      <ul>
-        <li><strong>"@type"</strong>: The type of descriptor being defined.</li>
-        <li><strong>"xdm:sourceSchema"</strong>: The $id URI of the schema where the descriptor is being defined.</li>
-        <li><strong>"xdm:sourceVersion"</strong>: The major version of the source schema.
-        <li><strong>"xdm:sourceProperty"</strong>: The path to the specific property that will be the identity. Path should begin with a "/" and not end with one. Do not include "properties" in the path (e.g. use "/personalEmail/address" instead of "/properties/personalEmail/properties/address")</li>
-        <li><strong>"xdm:title"</strong>: The new title you wish to display for this field, written in Title Case.</li>
-        <li><strong>"xdm:description"</strong>: An optional description can be added along with the title. </li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td colspan=2><strong>Relationship descriptor</strong></td>
-  </tr>
-  <tr>
-    <td>
-      <p><strong>xdm:descriptorOneToOne</strong></p>
-      <p>Describes a relationship between two different schemas, keyed on the properties described in "sourceProperty" and "destinationProperty". See the tutorial on <a href="../tutorials/relationship-api.md">defining a relationship between two schemas</a> for more information.</p>
-    </td>
-    <td>
-      <pre class="JSON language-JSON hljs">
-        {
-          "@type": "xdm:descriptorOneToOne",
-          "xdm:sourceSchema":
-            "https://ns.adobe.com/{TENANT_ID}/schemas/fbc52b243d04b5d4f41eaa72a8ba58be",
-          "xdm:sourceVersion": 1,
-          "xdm:sourceProperty": "/parentField/subField",
-          "xdm:destinationSchema": 
-            "https://ns.adobe.com/{TENANT_ID}/schemas/78bab6346b9c5102b60591e15e75d254",
-          "xdm:destinationVersion": 1,
-          "xdm:destinationProperty": "/parentField/subField"
-        }
-      </pre>
-      <p><strong>Required Fields:</strong></p>
-      <ul>
-        <li><strong>"@type"</strong>: The type of descriptor being defined.</li>
-        <li><strong>"xdm:sourceSchema"</strong>: The $id URI of the schema where the descriptor is being defined.</li>
-        <li><strong>"xdm:sourceVersion"</strong>: The major version of the source schema.
-        <li><strong>"xdm:sourceProperty"</strong>: Path to the field in the source schema where the relationship is being defined. Should begin with a "/" and not end with one. Do not include "properties" in the path (for example, "/personalEmail/address" instead of "/properties/personalEmail/properties/address").</li>
-        <li><strong>"xdm:destinationSchema"</strong>: The $id URI of the destination schema this descriptor is defining a relationship with.</li>
-        <li><strong>"xdm:destinationVersion"</strong>: The major version of the destination schema.</li>
-        <li><strong>"xdm:destinationProperty"</strong>: Optional path to a target field within the destination schema. If this property is omitted, the target field is inferred by any fields that contain a matching reference identity descriptor (see below).</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td colspan=2><strong>Reference identity descriptor</strong></td>
-  </tr>
-  <tr>
-    <td>
-      <p><strong>xdm:descriptorReferenceIdentity</strong></p>
-      <p>Provides a reference context to a schema field, allowing it to be linked with the primary identity field of a destination schema. Fields must already be labeled with an identity descriptor before a reference descriptor can be applied to them.</p>
-    </td>
-    <td>
-      <pre class="JSON language-JSON hljs">
-        {
-          "@type": "xdm:descriptorReferenceIdentity",
-          "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/78bab6346b9c5102b60591e15e75d254",
-          "xdm:sourceVersion": 1,
-          "xdm:sourceProperty": "/parentField/subField",
-          "xdm:identityNamespace": "Email"
-        }
-      </pre>
-      <p><strong>Required Fields:</strong></p>
-      <ul>
-        <li><strong>"@type"</strong>: The type of descriptor being defined.</li>
-        <li><strong>"xdm:sourceSchema"</strong>: The $id URI of the schema where the descriptor is being defined.</li>
-        <li><strong>"xdm:sourceVersion"</strong>: The major version of the source schema.
-        <li><strong>"xdm:sourceProperty"</strong>: Path to the field in the source schema where the descriptor is being defined. Should begin with a "/" and not end with one. Do not include "properties" in the path (for example, "/personalEmail/address" instead of "/properties/personalEmail/properties/address").</li>
-        <li><strong>"xdm:identityNamespace"</strong>: The identity namespace code for the source property.</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+#### Identity descriptor
+
+An identity descriptor signals that the "sourceProperty" of the "sourceSchema" is an Identity field as described by [Adobe Experience Platform Identity Service](../../identity-service/home.md).
+
+```json
+{
+  "@type": "xdm:descriptorIdentity",
+  "xdm:sourceSchema":
+    "https://ns.adobe.com/{TENANT_ID}/schemas/fbc52b243d04b5d4f41eaa72a8ba58be",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/personalEmail/address",
+  "xdm:namespace": "Email",
+  "xdm:property": "xdm:code",
+  "xdm:isPrimary": false
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `@type` | The type of descriptor being defined. |
+| `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
+| `xdm:sourceVersion` | The major version of the source schema.
+| `xdm:sourceProperty` | The path to the specific property that will be the identity. Path should begin with a "/" and not end with one. Do not include "properties" in the path (e.g. use "/personalEmail/address" instead of "/properties/personalEmail/properties/address") |
+| `xdm:namespace` | The `id` or `code` value of the identity namespace. A list of namespaces can be found using the [Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
+| `xdm:property` | Either `xdm:id` or `xdm:code`, depending on the `xdm:namespace` used. |
+| `xdm:isPrimary` | An optional boolean value. When true, indicates the field as the primary identity. Schemas may contain only one primary identity. |
+
+#### Friendly name descriptor
+
+Friendly name descriptors allow a user to modify the `title` and `description` values of the core library schema fields. Especially useful when working with "eVars" and other "generic" fields that you wish to label as containing information specific to your organization. The UI can use these to show a more friendly name or to only show fields that have a friendly name.
+
+```json
+{
+  "@type": "xdm:alternateDisplayInfo",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18",
+  "xdm:sourceVersion": 1
+  "xdm:sourceProperty": "/eVars/eVar1",
+  "xdm:title": {
+    "en_us":{"Loyalty ID"}
+  },
+  "xdm:description": {
+    "en_us":{"Unique ID of loyalty program member."}
+  },
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `@type` | The type of descriptor being defined. |
+| `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
+| `xdm:sourceVersion` | The major version of the source schema.
+| `xdm:sourceProperty` | The path to the specific property that will be the identity. Path should begin with a "/" and not end with one. Do not include "properties" in the path (e.g. use "/personalEmail/address" instead of "/properties/personalEmail/properties/address") |
+| `xdm:title` | The new title you wish to display for this field, written in Title Case. |
+| `xdm:description` | An optional description can be added along with the title. |
+
+#### Relationship descriptor
+
+Relationship descriptors describe a relationship between two different schemas, keyed on the properties described in `sourceProperty` and `destinationProperty`. See the tutorial on [defining a relationship between two schemas](../tutorials/relationship-api.md) for more information.
+
+```json
+{
+  "@type": "xdm:descriptorOneToOne",
+  "xdm:sourceSchema":
+    "https://ns.adobe.com/{TENANT_ID}/schemas/fbc52b243d04b5d4f41eaa72a8ba58be",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/parentField/subField",
+  "xdm:destinationSchema": 
+    "https://ns.adobe.com/{TENANT_ID}/schemas/78bab6346b9c5102b60591e15e75d254",
+  "xdm:destinationVersion": 1,
+  "xdm:destinationProperty": "/parentField/subField"
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `@type` | The type of descriptor being defined. |
+| `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
+| `xdm:sourceVersion` | The major version of the source schema.
+| `xdm:sourceProperty` | Path to the field in the source schema where the relationship is being defined. Should begin with a "/" and not end with one. Do not include "properties" in the path (for example, "/personalEmail/address" instead of "/properties/personalEmail/properties/address"). |
+| `xdm:destinationSchema` | The `$id` URI of the destination schema this descriptor is defining a relationship with. |
+| `xdm:destinationVersion` | The major version of the destination schema. |
+| `xdm:destinationProperty` | Optional path to a target field within the destination schema. If this property is omitted, the target field is inferred by any fields that contain a matching reference identity descriptor (see below). |
+
+
+#### Reference identity descriptor
+
+Reference identity descriptors provide a reference context to a schema field, allowing it to be linked with the primary identity field of a destination schema. Fields must already be labeled with an identity descriptor before a reference descriptor can be applied to them.
+
+```json
+{
+  "@type": "xdm:descriptorReferenceIdentity",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/78bab6346b9c5102b60591e15e75d254",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/parentField/subField",
+  "xdm:identityNamespace": "Email"
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `@type` | The type of descriptor being defined. |
+| `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
+| `xdm:sourceVersion` | The major version of the source schema.
+| `xdm:sourceProperty` | Path to the field in the source schema where the descriptor is being defined. Should begin with a "/" and not end with one. Do not include "properties" in the path (for example, "/personalEmail/address" instead of "/properties/personalEmail/properties/address"). |
+| `xdm:identityNamespace` | The identity namespace code for the source property. |
