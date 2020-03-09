@@ -6,3 +6,5 @@ topic: developer guide
 ---
 
 # Schema Registry API developer guide
+
+## Know your TENANT_ID {#know-your-tenant-id}
