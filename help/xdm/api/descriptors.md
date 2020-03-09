@@ -385,7 +385,7 @@ The following table provides an overview of available descriptor types, includin
     <td>
       <p><strong>xdm:descriptorReferenceIdentity</strong></p>
       <p>
-        Provides a reference context to a schema field, allowing it to be linked with the primary identity field of a destination schema.<br/><br/><strong>Note: </strong>Fields must already be labeled with an identity descriptor before a reference descriptor can be applied to them.
+        Provides a reference context to a schema field, allowing it to be linked with the primary identity field of a destination schema. Fields must already be labeled with an identity descriptor before a reference descriptor can be applied to them.
       </p>
     </td>
     <td>
