@@ -289,7 +289,7 @@ An identity descriptor signals that the "sourceProperty" of the "sourceSchema" i
 | --- | --- |
 | `@type` | The type of descriptor being defined. |
 | `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
-| `xdm:sourceVersion` | The major version of the source schema.
+| `xdm:sourceVersion` | The major version of the source schema. |
 | `xdm:sourceProperty` | The path to the specific property that will be the identity. Path should begin with a "/" and not end with one. Do not include "properties" in the path (e.g. use "/personalEmail/address" instead of "/properties/personalEmail/properties/address") |
 | `xdm:namespace` | The `id` or `code` value of the identity namespace. A list of namespaces can be found using the [Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
 | `xdm:property` | Either `xdm:id` or `xdm:code`, depending on the `xdm:namespace` used. |
@@ -318,7 +318,7 @@ Friendly name descriptors allow a user to modify the `title` and `description` v
 | --- | --- |
 | `@type` | The type of descriptor being defined. |
 | `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
-| `xdm:sourceVersion` | The major version of the source schema.
+| `xdm:sourceVersion` | The major version of the source schema. |
 | `xdm:sourceProperty` | The path to the specific property that will be the identity. Path should begin with a "/" and not end with one. Do not include "properties" in the path (e.g. use "/personalEmail/address" instead of "/properties/personalEmail/properties/address") |
 | `xdm:title` | The new title you wish to display for this field, written in Title Case. |
 | `xdm:description` | An optional description can be added along with the title. |
@@ -345,7 +345,7 @@ Relationship descriptors describe a relationship between two different schemas, 
 | --- | --- |
 | `@type` | The type of descriptor being defined. |
 | `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
-| `xdm:sourceVersion` | The major version of the source schema.
+| `xdm:sourceVersion` | The major version of the source schema. |
 | `xdm:sourceProperty` | Path to the field in the source schema where the relationship is being defined. Should begin with a "/" and not end with one. Do not include "properties" in the path (for example, "/personalEmail/address" instead of "/properties/personalEmail/properties/address"). |
 | `xdm:destinationSchema` | The `$id` URI of the destination schema this descriptor is defining a relationship with. |
 | `xdm:destinationVersion` | The major version of the destination schema. |
@@ -370,6 +370,6 @@ Reference identity descriptors provide a reference context to a schema field, al
 | --- | --- |
 | `@type` | The type of descriptor being defined. |
 | `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
-| `xdm:sourceVersion` | The major version of the source schema.
+| `xdm:sourceVersion` | The major version of the source schema. |
 | `xdm:sourceProperty` | Path to the field in the source schema where the descriptor is being defined. Should begin with a "/" and not end with one. Do not include "properties" in the path (for example, "/personalEmail/address" instead of "/properties/personalEmail/properties/address"). |
 | `xdm:identityNamespace` | The identity namespace code for the source property. |
