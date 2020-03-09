@@ -170,4 +170,4 @@ The *Top campaigns* card displays an overview of your campaigns and how the camp
 
 ## Next steps
 
-Once you have finished filtering the data and are able to display the appropriate information, you have the option to download the scores. For an in-depth guide on how to download your scores, visit the [downloading scores in Attribution AI](./downloading-scores.md) tutorial.
+Once you have finished filtering the data and are able to display the appropriate information, you have the option to download the scores. For an in-depth guide on how to download your scores, visit the [downloading scores in Attribution AI](./download-scores.md) tutorial.
