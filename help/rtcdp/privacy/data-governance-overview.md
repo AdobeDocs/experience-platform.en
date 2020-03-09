@@ -62,13 +62,15 @@ When a segment is first activated, DULE Policy Service checks for policy violati
 
 #### Policy violation messages
 
-If a policy violation occurs from attempting to activate the segment, the activation is prevented and a popover appears indicating that a policy has been violated. The _Details_ tab of the popover indicates the action that triggered the violation and why the violation occurred, and provides a suggestion for how to resolve the issue.
+If a policy violation occurs from attempting to activate a segment (or [making edits to an already activated segment](#policy-enforcement-for-activated-segments)) the action is prevented and a popover appears indicating that one or more policies have been violated. Select a policy violation in the popover's left column to display details for that violation.
 
-<!-- ![](assets/violation-popover.png) -->
+![](assets/violation-popover.png)
 
-Click **Data Lineage** to track the dataset or field whose data label(s) triggered the violation.
+The popover's *Details* tab indicates the action that triggered the violation the reason why the violation occurred, and provides suggestions for how to potentially resolve the issue.
 
-<!-- ![](assets/data-lineage.png) -->
+Click **Data Lineage** to track the destinations, segments, merge policies, or datasets whose data label(s) triggered the violation.
+
+![](assets/data-lineage.png)
 
 Once a violation has triggered, the **Save** button is disabled for the activation until the appropriate components are updated to comply with data usage policies.
 
@@ -81,7 +83,7 @@ Policy enforcement still applies to segments after they have been activated, res
 * Changing segment predicates
 * Changing destination configurations
 
-If any of the above actions triggers a violation, that action is prevented from being saved, ensuring that your activated segments continue to comply with data usage policies when being modified.
+If any of the above actions triggers a violation, that action is prevented from being saved and a policy violation message is displayed, ensuring that your activated segments continue to comply with data usage policies when being modified.
 
 ## Next steps
 
