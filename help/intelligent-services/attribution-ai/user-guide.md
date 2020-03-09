@@ -198,6 +198,6 @@ Once you have selected your training window, click **Finish** in the top-right c
 
 ![setup complete](./images/user-guide/instance_setup_complete.png)
 
- ## Next steps
+## Next steps
 
 By following this tutorial, you have successfully created a service instance in Attribution AI. Once the instance has finished scoring (allow up to 24 hours), you are ready to [discover  Attribution AI insights](./discover-insights.md). Additionally, if you wish to download your scoring results, visit the [downloading raw scores](./download-scores.md) documentation.
