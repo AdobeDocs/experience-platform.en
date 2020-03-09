@@ -8,9 +8,10 @@ topic: Downloading scores
 # Downloading scores in Customer AI
 
 something something something dark side... something something something complete...
+
 ## Getting started
 
-need to have a customer ai service instance that has completed its training and scoring 
+need to have a customer ai service instance that has completed its training and scoring.
 
 ## Finding your dataset ID
 
