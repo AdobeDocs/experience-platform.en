@@ -11,10 +11,10 @@ topic: Attribution AI
 
 Attribution AI in Adobe Experience Platform is a multi-channel, algorithmic attribution service that calculates influence and incremental impact of customer interactions against specified outcomes. With Attribution AI, marketers can measure and optimize their customers’ experiences by understanding the impact of every individual customer interaction in each phase of their customers’ journeys.
 
-* [Understanding Attribution AI](#understanding-attribution-ai)
-* [Attribution AI algorithmic models](#algorithmic-models)
-* [Use cases](#examples-of-business-use-cases)
-* [Next steps](#next-steps)
+- [Understanding Attribution AI](#understanding-attribution-ai)
+- [Attribution AI algorithmic models](#algorithmic-models)
+- [Use cases](#examples-of-business-use-cases)
+- [Next steps](#next-steps)
 
 ## Understanding Attribution AI
 
