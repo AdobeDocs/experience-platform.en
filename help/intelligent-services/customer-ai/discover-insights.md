@@ -60,7 +60,7 @@ To view details from within the dashboard, click on a service instance container
 
 ![failed run message](./images/insights/failed-run.png)
 
-The second way to view additional details for a service instance is located within the insights page. You can click **Show more** in the top-right to populate a drop down. Details are listed such as the score definition, when it was created, and the propensity type. For more information on any of the properties listed, please visit the [Customer AI user guide](./customer-ai-user-guide.md).
+The second way to view additional details for a service instance is located within the insights page. You can click **Show more** in the top-right to populate a drop down. Details are listed such as the score definition, when it was created, and the propensity type. For more information on any of the properties listed, please visit the [Customer AI user guide](./user-guide.md).
 
 ![show more](./images/insights/landing-show-more.png)
 
