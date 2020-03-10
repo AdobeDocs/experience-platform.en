@@ -98,6 +98,266 @@ The following table outlines the appropriate formatting to define scalar field t
 
 To begin, find the desired field type and use the sample code provided to build your API request.
 
+<table>
+  <tr>
+    <th width="200px">Desired Type<br/>(meta:xdmType)</th>
+    <th width="250px">JSON<br/>(JSON Schema)</th>
+    <th width="400px">Code Sample</th>
+  </tr>
+  <tr>
+    <td>string</td>
+    <td>type: string<br/><br/><strong>Optional properties:</strong><br/>
+      <ul>
+        <li>pattern</li>
+        <li>minLength</li>
+        <li>maxLength</li>
+      </ul>
+    </td>
+    <td>
+      <pre class="JSON language-JSON hljs">
+        "sampleField": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}$",
+            "maxLength": 2
+        }
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>uri<br/>(xdmType:string)</td>
+    <td>type: string<br/>format: uri</td>
+    <td>
+      <pre class="JSON language-JSON hljs">
+        "sampleField": {
+          "type": "string",
+          "format": "uri"
+        }
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>enum<br/>(xdmType: string)</td>
+    <td>type: string<br/><br/><strong>Optional property:</strong><br/>
+      <ul>
+        <li>default</li>
+      </ul>
+    </td>
+    <td>Specify customer-facing option labels using "meta:enum":
+
+      <pre class="JSON language-JSON hljs">
+        "sampleField": {
+          "type": "string",
+          "enum": [
+              "value1",
+              "value2",
+              "value3"
+          ],
+          "meta:enum": {
+              "value1": "Value 1",
+              "value2": "Value 2",
+              "value3": "Value 3"
+          },
+          "default": "value1"
+        }
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>number</td>
+    <td>type: number<br/>minimum: ±2.23×10^308<br/>maximum: ±1.80×10^308</td>
+    <td>
+      <pre class="JSON language-JSON hljs">
+        "sampleField": {
+          "type": "number"
+        }
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>long</td>
+    <td>type: integer<br/>maximum:2^53+1<br>minimum:-2^53+1</td>
+    <td>
+      <pre class="JSON language-JSON hljs">
+        "sampleField": {
+          "type": "integer",
+          "minimum": -9007199254740992,
+          "maximum": 9007199254740992
+        }
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>int</td>
+    <td>type: integer<br/>maximum:2^31<br>minimum:-2^31</td>
+    <td>
+      <pre class="JSON language-JSON hljs">
+        "sampleField": {
+          "type": "integer",
+          "minimum": -2147483648,
+          "maximum": 2147483648
+        }
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>short</td>
+    <td>type: integer<br/>maximum:2^15<br>minimum:-2^15</td>
+    <td>
+      <pre class="JSON language-JSON hljs">
+        "sampleField": {
+          "type": "integer",
+          "minimum": -32768,
+          "maximum": 32768
+        }
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>byte</td>
+    <td>type: integer<br/>maximum:2^7<br>minimum:-2^7</td>
+    <td>
+      <pre class="JSON language-JSON hljs">
+        "sampleField": {
+          "type": "integer",
+          "minimum": -128,
+          "maximum": 128
+          }
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>boolean</td>
+    <td><br/>type: boolean<br/>{true, false}<br/><br/><strong>Optional property:</strong><br/>
+      <ul>
+        <li>default</li>
+      </ul>
+    </td>
+    <td>
+      <pre class="JSON language-JSON hljs">
+        "sampleField": {
+          "type": "boolean",
+          "default": false
+        }
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>date</td>
+    <td>type: string<br/>format: date</td>
+    <td>
+      <pre class="JSON language-JSON hljs">
+        "sampleField": {
+          "type": "string",
+          "format": "date",
+          "examples": ["2004-10-23"]
+        }
+      </pre>
+      Date as defined by <a href="https://tools.ietf.org/html/rfc3339#section-5.6" target="_blank">RFC 3339, section 5.6</a>, where "full-date" = date-fullyear "-" date-month "-" date-mday (YYYY-MM-DD)
+    </td>
+  </tr>
+  <tr>
+    <td>date-time</td>
+    <td>type: string<br/>format: date-time</td>
+    <td>
+      <pre class="JSON language-JSON hljs">
+        "sampleField": {
+          "type": "string",
+          "format": "date-time",
+          "examples": ["2004-10-23T12:00:00-06:00"]
+        }
+      </pre>
+      Date-Time as defined by <a href="https://tools.ietf.org/html/rfc3339#section-5.6" target="_blank">RFC 3339, section 5.6</a>, where "date-time" = full-date "T" full-time:<br/>(YYYY-MM-DD'T'HH:MM:SS.SSSSX)
+    </td>
+  </tr>
+  <tr>
+    <td>array</td>
+    <td>type: array</td>
+    <td>items.type can be defined using any scalar type:
+      <pre class="JSON language-JSON hljs">
+        "sampleField": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      </pre>
+      Array of objects defined by another schema:<br/>
+      <pre class="JSON language-JSON hljs">
+        "sampleField": {
+          "type": "array",
+          "items": {
+            "$ref": "id"
+          }
+        }
+      </pre>
+      Where "id" is the {id} of the reference schema.
+    </td>
+  </tr>
+  <tr>
+    <td>object</td>
+    <td>type: object</td>
+    <td>properties.{field}.type can be defined using any scalar type:
+      <pre class="JSON language-JSON hljs">
+        "sampleField": {
+          "type": "object",
+          "properties": {
+            "field1": {
+              "type": "string"
+            },
+            "field2": {
+              "type": "number"
+            }
+          }
+        }
+      </pre>
+      Field of type "object" that is defined by a reference schema:
+      <pre class="JSON language-JSON hljs">
+        "sampleField": {
+          "type": "object",
+          "$ref": "id"
+        }
+      </pre>
+      Where "id" is the {id} of the reference schema.
+    </td>
+  </tr>
+  <tr>
+    <td>map</td>
+    <td>type: object<br/><br/><strong>Note:</strong><br/>Use of the 'map' data type is reserved for industry and vendor schema usage and is not available for use in tenant defined fields. It is used in standard schemas when data is represented as keys that map to some value, or where keys cannot reasonably be included in a static schema and must be treated as data values.</td>
+    <td>A 'map' MUST NOT define any properties. It MUST define a single "additionalProperties" schema to describe the type of values contained in the 'map'. A 'map' in XDM can contain only a single data type. Values may be any valid XDM schema definition, including an array or an object, or as a reference to another schema (via $ref).<br/><br/>Map field with values of type 'string':
+      <pre class="JSON language-JSON hljs">
+        "sampleField": {
+          "type": "object",
+          "additionalProperties":{
+            "type": "string"
+          }
+        }
+      </pre>
+    Map field with values being an array of strings:
+      <pre class="JSON language-JSON hljs">
+        "sampleField": {
+          "type": "object",
+          "additionalProperties":{
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      </pre>
+    Map field that references another schema:
+      <pre class="JSON language-JSON hljs">
+        "sampleField": {
+          "type": "object",
+          "additionalProperties":{
+            "$ref": "id"
+          }
+        }
+      </pre>
+      Where "id" is the {id} of the reference schema.
+    </td>
+  </tr>
+</table>
+
 ## Mapping XDM types to other formats
 
 The table below describes the mapping between "meta:xdmType" and other serialization formats.
