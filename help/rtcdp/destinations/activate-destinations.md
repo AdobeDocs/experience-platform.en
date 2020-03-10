@@ -39,9 +39,9 @@ Follow the steps below to edit existing activation flows in Real-time CDP:
 
 ## Verify that segment activation was successful {#verify-activation}
 
-### Email marketing destinations
+### Email marketing destinations and cloud storage destinations
 
-For email marketing destinations, Adobe Real-time CDP creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. Expect a new file to be created in your storage location every day. The file format is:
+For email marketing destinations and cloud storage destinations, Adobe Real-time CDP creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. Expect a new file to be created in your storage location every day. The file format is:
 `<destination name>id<destination id><timestamp-yyyymmddhhmmss>`
 
 The files you would receive on three consecutive days could look like this:

@@ -45,7 +45,7 @@ Segment export destinations send the profiles and the segments that they qualifi
 
 ### Destination categories
 
-The destinations in the [Destinations catalog](/help/rtcdp/destinations/destinations-catalog.md) are grouped by destination category (**Advertising** or **Email marketing**). For more information on each of them, see the [Destinations catalog](/help/rtcdp/destinations/destinations-catalog.md).
+The destinations in the [Destinations catalog](/help/rtcdp/destinations/destinations-catalog.md) are grouped by destination category (**Advertising**, **Cloud storage**, or **Email marketing**). For more information on each of them, see the [Destinations catalog](/help/rtcdp/destinations/destinations-catalog.md).
 
 ## Destinations and Access Controls
 
