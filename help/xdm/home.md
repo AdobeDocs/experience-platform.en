@@ -5,7 +5,7 @@ title: Experience Data Model (XDM) System
 topic: overview
 ---
 
-# Experience Data Model (XDM) System overview
+# XDM System overview
 
 Standardization and interoperability are key concepts behind Adobe Experience Platform. Experience Data Model (XDM), driven by Adobe, is an effort to standardize customer experience data and define schemas for customer experience management. 
 
