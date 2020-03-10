@@ -38,18 +38,7 @@ Adobe Experience Platform provides several **core policies** for common customer
 
 ## Enforce data usage compliance
 
-Once data is labeled and usage policies are defined, you can enforce data usage compliance with policies. Data Governance provides two methods of policy enforcement:
-
-* [API-based enforcement](#api-based-enforcement)
-* [Automated enforcement](#automated-enforcement)
-
-### API-based enforcement
-
-Data Governance provides extensible APIs for policy enforcement, allowing developers to restrict data usage in custom applications and define an enforcement flow at every step. See the tutorial on [enforcing data usage compliance for audience segments](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/dule/data_governance_and_segmentation.md) for more information.
-
-### Automated enforcement
-
-When activating audience segments to destinations in Real-time CDP, Data Governance automatically enforces usage policies should any violations occur.
+Once data is labeled and usage policies are defined, you can enforce data usage compliance with policies. When activating audience segments to destinations in Real-time CDP, Data Governance automatically enforces usage policies should any violations occur.
 
 The following diagram illustrates how policy enforcement is integrated into the data flow of segment activation:
 
