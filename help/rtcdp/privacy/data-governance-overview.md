@@ -49,7 +49,7 @@ When a segment is first activated, DULE Policy Service checks for policy violati
 * The data usage labels applied to fields and datasets within the segment to be activated.
 * The marketing purpose of the destination. 
 
-#### Policy violation messages
+### Policy violation messages
 
 If a policy violation occurs from attempting to activate a segment (or [making edits to an already activated segment](#policy-enforcement-for-activated-segments)) the action is prevented and a popover appears indicating that one or more policies have been violated. Select a policy violation in the popover's left column to display details for that violation.
 
@@ -63,7 +63,7 @@ Click **Data Lineage** to track the destinations, segments, merge policies, or d
 
 Once a violation has triggered, the **Save** button is disabled for the activation until the appropriate components are updated to comply with data usage policies.
 
-#### Policy enforcement for activated segments
+### Policy enforcement for activated segments
 
 Policy enforcement still applies to segments after they have been activated, restricting any changes to a segment or its destination that would result in a policy violation. Due to the numerous components involved in activating segments to destinations, any of the following actions can potentially trigger a violation:
 
