@@ -19,7 +19,7 @@ See [Cloud storage destinations workflow ](/help/rtcdp/destinations/cloud-storag
 
 For SFTP destinations, enter the following information in the create destination workflow:
 
-* Host
-* Username
-* Password
+* **Host**
+* **Username**
+* **Password**
 
