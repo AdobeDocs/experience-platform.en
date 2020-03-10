@@ -30,6 +30,7 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Google](destinations/google-destination.md)
     * Cloud storage destinations{#cloud-storage}
       * [Cloud storage destinations overview](destinations/cloud-storage-destinations.md)
+      * [Workflow to create cloud storage destinations](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
       * [Amazon S3 destination](destinations/amazon-s3-destination.md)
       * [SFTP destination](destinations/sftp-destination.md)
     * Email marketing destinations{#email-destinations}
