@@ -48,7 +48,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 * Content-Type: application/json
 
-## Know your `TENANT_ID`
+## Know your TENANT_ID {#know-your-tenant-id}
 
 Throughout this guide you will see references to a `TENANT_ID`. This ID is used to ensure that resources you create are namespaced properly and contained within your IMS Organization. If you do not know your ID, you can access it by performing the following GET request:
 
