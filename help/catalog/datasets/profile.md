@@ -43,7 +43,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 ## Create a dataset with Real-time Customer Profile and Identity Service enabled
 
-You can enable a dataset for Real-time Customer Profile and Identity Service immediately upon creation. If you would like to enable a dataset that has already been created, follow the steps for [configuring an existing dataset](#configure-an-existing-dataset-for-real-time-customer-profile-and-identity-service) found later in this document.
+You can enable a dataset for Real-time Customer Profile and Identity Service immediately upon creation. If you would like to enable a dataset that has already been created, follow the steps for [configuring an existing dataset](#configure-dataset) found later in this document.
 
 In order to create a new dataset, you must know the ID of an existing XDM schema that is enabled for Real-time Customer Profile. For more information on how to lookup or create a Profile-enabled schema, see the [Schema Registry API tutorial](../../xdm/tutorials/create-schema-api.md). 
 
@@ -100,7 +100,7 @@ A successful response shows an array containing the ID of the newly created data
 ] 
 ```
 
-## Configure an existing dataset for Real-time Customer Profile and Identity Service
+## Configure an existing dataset for Real-time Customer Profile and Identity Service {#configure-dataset}
 
 The following steps cover how to enable a previously created dataset for Real-time Customer Profile and Identity Service. If you have already created a Profile-enabled dataset, please proceed to the steps for [uploading data](#upload-data-to-the-dataset).
 
@@ -233,7 +233,7 @@ The `unifiedProfile` and `unifiedIdentity` tags have now been added and the data
 ]
 ```
 
-## Upload data to the dataset
+## Upload data to the dataset {#upload-data-to-the-dataset}
 
 Both Real-time Customer Profile and Identity Service consume XDM data as it is being ingested to a dataset. For instructions on how to upload data files to your dataset, see the sections on creating a batch and uploading files in the [dataset creation tutorial](create.md).
 

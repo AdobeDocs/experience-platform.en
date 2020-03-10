@@ -118,11 +118,11 @@ A confirmation box appears. Click **Delete** to confirm the deletion of the data
 
 ![](../images/datasets/user-guide/confirm_delete.png)
 
-For more information on deleting datasets including how to delete them using APIs, see the tutorial on [deleting a dataset](delete.md).
+For more information on deleting datasets including how to delete them using APIs, see the tutorial on [deleting a dataset]^.
 
 ## Delete a Profile-enabled dataset
 
-If a dataset is enabled for Profile, deleting it through the UI disables the dataset for ingestion, but does not automatically delete the dataset in the backend. In order to fully delete the dataset including the profile and identity data that it provides, an additional delete request must be made. For steps on how to fully delete a Profile-enabled dataset, see the tutorial on [deleting datasets and batches](delete.md).
+If a dataset is enabled for Profile, deleting it through the UI disables the dataset for ingestion, but does not automatically delete the dataset in the backend. In order to fully delete the dataset including the profile and identity data that it provides, an additional delete request must be made. For steps on how to fully delete a Profile-enabled dataset, see the tutorial on [deleting datasets and batches]^.
 
 ## Monitor data ingestion
 
@@ -145,4 +145,3 @@ This user guide provided instructions for performing common actions when working
 *   [Create a dataset using APIs](create.md)
 *   [Query dataset data using the Data Access API](../../data-access/home.md)
 *   [Configure a dataset for Real-time Customer Profile and Identity Service using APIs](profile.md)
-*   [Create a dataset for exporting an audience segment](segment-export.md)
