@@ -143,7 +143,6 @@ To begin, find the desired field type and use the sample code provided to build 
       </ul>
     </td>
     <td>Specify customer-facing option labels using "meta:enum":
-
       <pre class="JSON language-JSON hljs">
         "sampleField": {
           "type": "string",
