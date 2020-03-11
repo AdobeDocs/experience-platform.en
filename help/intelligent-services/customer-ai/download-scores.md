@@ -23,9 +23,7 @@ This document serves as a guide for downloading scores for Customer AI. The foll
 Currently, there are two ways to download Customer AI scores:
 
 1. If you want to download the scores at the individual level and/or do not have Profile enabled, start by navigating to [finding your dataset ID](#finding-your-dataset-id).
-2. If you have Profile enabled and want to download segments that you have configured using Customer AI, please navigate to [exporting audience to a target dataset](#exporting-audience-to-a-target-dataset).
-
-
+2. If you have Profile enabled and want to download segments that you have configured using Customer AI, please navigate to [exporting audience to a target dataset](#exporting-audience-to-a-target-dataset-option-2).
 
 ## Finding your dataset ID
 
@@ -48,7 +46,7 @@ curl -X GET /batches?&dataSet={DATASET_ID}&orderBy=desc:created&limit=1
 ```
 - `{DATASET_ID}`: The dataset ID available in the "Access Scores" dialog.
 
-### REQUEST
+### Request
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5cd9146b31dae914b75f654f&orderBy=desc:created&limit=1' \
@@ -58,7 +56,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-### RESPONSE
+### Response
 
 A successful response returns a payload containing a score batch ID object, in this example the object is `"5e602f67c2f39715a87f46b1"`. Within the score batch ID object is a `"relatedObjects"` array. This array contains two objects, one has `"type": "batch"`, this object also has an ID. In the example response below, the batch ID is `"035e2520-5e69-11ea-b624-51evfeba55d1"`. Copy your batch ID to use in the next API call.
 
@@ -107,7 +105,7 @@ curl -X GET batches/{BATCH_ID}/files
 ```
 * `{BATCH_ID}`: The batch ID that was retrieved in the previous step [getting your batch ID](#getting-your-batch-id).
 
-### REQUEST
+### Request
 
 Using your own batch ID, make the following request.
 
@@ -118,7 +116,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/035e2520-5
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
-### RESPONSE
+### Response
 
 A successful response returns a payload containing a `_links:` object. Within the `_links:` object is an `"href"` with a new API call as its value. Copy this value to proceed to the next step.
 
@@ -147,7 +145,7 @@ A successful response returns a payload containing a `_links:` object. Within th
 ```
 ## Retrieving your files
 
-Using the `"href"` value you got in the previous step as an API call, make a GET request.
+Using the `"href"` value you got in the previous step as an API call, make a new GET request.
 
 ### API Format
 
@@ -155,7 +153,7 @@ Using the `"href"` value you got in the previous step as an API call, make a GET
 curl -X GET files/{dataSetFileId}
 ```
 
-### REQUEST
+### Request
 
 ```shell
 curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520-5e69-11ea-b624-51ecfeba55d0-1' \
@@ -165,7 +163,7 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-### RESPONSE
+### Response
 
 The response contains a data array that may have a single entry, or a list of files belonging to that directory. The example below contains a list of files and has been condensed for readability.
 
@@ -238,11 +236,11 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 ### Response
 
-The response downloads the file you requested in the directory you are currently in.
+The response downloads the file you requested in the directory you are currently in. In this example the filename is "filename.parquet".
 
 ![Terminal](./images/download-scores/response.png)
 
-## Exporting audience to a target dataset
+## Exporting audience to a target dataset (Option 2)
 
 An alternative way to download your score data is by exporting your audience to a dataset. After a segmentation job has successfully completed (the value of the `status` attribute is "SUCCEEDED"), you can export your audience to a dataset where it can be accessed and acted upon. 
 
