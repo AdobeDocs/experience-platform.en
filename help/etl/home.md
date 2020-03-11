@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: ETL workflow
+title: Creating ETL integrations
 topic: overview
 ---
 
-# ETL workflow
+# Creating ETL integrations
