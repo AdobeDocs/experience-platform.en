@@ -78,7 +78,7 @@ As a data steward, you can use the Policy Service API to manage and evaluate pol
 
 Within the Policy Service API, all policies and marketing actions are referred to as either `core` or `custom` resources. `core` resources are defined and maintained by Adobe, whereas `custom` resources are created and maintained by individual customers. The `custom` resources are therefore unique and visible solely to the organization that created them.
 
-For more information on performing the key operations provided by the DULE Policy Service API, see the [Policy Service developer guide](../api/getting-started.md). For step-by-step instructions on working with DULE policies, see the tutorial on [creating and evaluating DULE policies](policies/create.md).
+For more information on performing the key operations provided by the DULE Policy Service API, see the [Policy Service developer guide](api/getting-started.md). For step-by-step instructions on working with DULE policies, see the tutorial on [creating and evaluating DULE policies](policies/create.md).
 
 ## Future releases
 
