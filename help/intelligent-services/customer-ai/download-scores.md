@@ -23,14 +23,14 @@ Click **Access scores**, a new dialog appears containing a link to this document
 
 ## Getting your batch ID
 
-Using your dataset ID from the previous step, you need to make a call to the following API in order to retrieve a batch ID. We use additional query parameters for this API call in order to return a single batch instead of a list of batches belonging to your organization. For more information on the types of query parameters available, visit the [API reference guide](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) for the Data Access API.
+Using your dataset ID from the previous step, you need to make a call to the following API in order to retrieve a batch ID. Additional query parameters a used for this API call in order to return a single batch instead of a list of batches belonging to your organization. For more information on the types of query parameters available, visit the [API reference guide](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) for the Data Access API.
 
 ### API Format
 
 ```http
-curl -X GET /batches?&dataSet={dataset}&orderBy=desc:created&limit=1
+curl -X GET /batches?&dataSet={DATASET_ID}&orderBy=desc:created&limit=1
 ```
-* `{DATASET_ID}`: The dataset ID available in the "Access Scores" dialog.
+- `{DATASET_ID}`: The dataset ID available in the "Access Scores" dialog.
 
 ### REQUEST
 
@@ -44,7 +44,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
 
 ### RESPONSE
 
-A successful response returns a payload containing a score batch ID object, in this example the object is `"5e602f67c2f39715a87f46b1"`. Within the score batch ID object is a `"relatedObjects"` array. This array contains two objects, one of which is labeled `"type": "batch"`, this object also has an ID. Copy the batch ID to use in the next API call.
+A successful response returns a payload containing a score batch ID object, in this example the object is `"5e602f67c2f39715a87f46b1"`. Within the score batch ID object is a `"relatedObjects"` array. This array contains two objects, one has `"type": "batch"`, this object also has an ID. In the example response below, the batch ID is `"035e2520-5e69-11ea-b624-51evfeba55d1"`. Copy your batch ID to use in the next API call.
 
 ```json
 {   
@@ -80,9 +80,9 @@ A successful response returns a payload containing a score batch ID object, in t
 }
 ```
 
-## Using your batch Id to get a download link
+## Using your batch ID
 
-Once you have your batch ID, you are able to make the next GET request to `/batches`. 
+Once you have your batch ID, you are able to make a new GET request to `/batches`. 
 
 ### API Format
 
@@ -131,7 +131,7 @@ A successful response returns a payload containing a `_links:` object. Within th
 ```
 ## Retrieving your files
 
-Using the link you got in the previous step, make a GET request to the `/files` endpoint.
+Using the `"href"` value you got in the previous step as an API call, make a GET request.
 
 ### API Format
 
@@ -151,7 +151,7 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 ### RESPONSE
 
-The response contains a data array that may have a single entry, or a list of files belonging to that directory. The example below contains multiple files and has been condensed for readability.
+The response contains a data array that may have a single entry, or a list of files belonging to that directory. The example below contains a list of files and has been condensed for readability.
 
 ```json
 {
@@ -191,14 +191,14 @@ The response contains a data array that may have a single entry, or a list of fi
 }
 ```
 
-To download a file, copy the `"href"` value for any file object in the `"data"` array, then proceed to the final step. 
+To download a file, copy the `"href"` value for any file object in the `"data"` array, then proceed to the final step.
 
-## Download your file data -o outputname.parquet
+## Download your file data
 
 To download your file data, make a GET request to the `"href"` value you copied in the previous step.
 
 >[!NOTE]
->If you are making this request directly in terminal or cmd line, you might be prompted to add an output after your request headers. The following request example uses --output {FILE}.
+>If you are making this request directly in terminal or cmd line, you might be prompted to add an output after your request headers. The following request example uses `--output {FILENAME.FILETYPE}`.
 
 ### API Format
 
@@ -209,7 +209,7 @@ curl -X GET files/{dataSetFileId}
 ### REQUEST
 
 >[!NOTE]
->Make sure you are in the correct directory or folder you want your file to saved to.
+>Make sure you are in the correct directory or folder you want your file saved to.
 
 ```shell
 curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520-5e69-11ea-b624-51ecfeba55d0-1?path=part-00000-tid-7597930103898538622-a25f1890-efa9-40eb-a2cb-1b378e93d582-528-1-c000.snappy.parquet' \
@@ -222,6 +222,6 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 ### RESPONSE
 
-The response downloads the file you requested.
+The response downloads the file you requested in the directory you are currently in.
 
 ![Terminal](./images/download-scores/response.png)
