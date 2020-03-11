@@ -7,4 +7,4 @@ seo-description: Google Ads, formerly known as Google AdWords, is an online adve
 
 # Google Ads Destination
 
-Documentation for the Google Ads destination will soon be available here. Until then, please see our general [Google destination](help/rtcdp/destinations/google-destination.md) documentation. 
+Documentation for the Google Ads destination will soon be available here. Until then, please see our general [Google destination](/help/rtcdp/destinations/google-destination.md) documentation. 

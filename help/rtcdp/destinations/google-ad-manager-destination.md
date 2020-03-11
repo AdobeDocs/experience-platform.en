@@ -7,4 +7,4 @@ seo-description: Google Ad Manager, formerly known as DoubleClick for Publishers
 
 # Google Ad Manager Destination
 
-Documentation for the Google Ad Manager destination will soon be available here. Until then, please see our general [Google destination](help/rtcdp/destinations/google-destination.md) documentation. 
+Documentation for the Google Ad Manager destination will soon be available here. Until then, please see our general [Google destination](/help/rtcdp/destinations/google-destination.md) documentation. 
