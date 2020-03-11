@@ -44,6 +44,7 @@ Using your dataset ID from the previous step, you need to make a call to the fol
 ```http
 curl -X GET /batches?&dataSet={DATASET_ID}&orderBy=desc:created&limit=1
 ```
+
 - `{DATASET_ID}`: The dataset ID available in the "Access Scores" dialog.
 
 ### Request
@@ -103,7 +104,8 @@ Once you have your batch ID, you are able to make a new GET request to `/batches
 ```http
 curl -X GET batches/{BATCH_ID}/files
 ```
-* `{BATCH_ID}`: The batch ID that was retrieved in the previous step [getting your batch ID](#getting-your-batch-id).
+
+- `{BATCH_ID}`: The batch ID that was retrieved in the previous step [getting your batch ID](#getting-your-batch-id).
 
 ### Request
 
@@ -116,6 +118,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/035e2520-5
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
 ### Response
 
 A successful response returns a payload containing a `_links:` object. Within the `_links:` object is an `"href"` with a new API call as its value. Copy this value to proceed to the next step.
@@ -143,6 +146,7 @@ A successful response returns a payload containing a `_links:` object. Within th
     }
 }
 ```
+
 ## Retrieving your files
 
 Using the `"href"` value you got in the previous step as an API call, make a new GET request.
@@ -247,7 +251,7 @@ An alternative way to download your score data is by exporting your audience to 
 >[!IMPORTANT]
 >In order to utilize this method of exporting, Profile needs to be enabled.
 
-The [evaluate a segment guide]() under the [export a segment]() section covers the steps that are required to export an audience dataset. The export a segment section outlines and provides examples for the following:
+The [evaluate a segment guide](../../segmentation/tutorials/evaluate-a-segment.md) under the export a segment section covers the steps that are required to export an audience dataset. The export a segment section outlines and provides examples for the following:
 
 - **Create a target dataset:** Create the dataset to hold audience members.
 - **Generate audience profiles in the dataset:** Populate the dataset with XDM Individual Profiles based on the results of a segment job.
