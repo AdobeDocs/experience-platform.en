@@ -122,22 +122,22 @@ Experience Platform provides a number of common data types as part of the Schema
 
 A field is the most basic building block of a schema. Fields provide constraints regarding the type of data they can contain by defining a specific data type. These basic data types define a single field, whereas the [data types](#data-type) previously mentioned allow you to define multiple sub-fields and re-use the same multi-field structure throughout various schemas. So, in addition to defining a field's "data type" as one of the data types defined in the registry, Experience Platform supports basic scalar types such as:
 
-- String
-- Integer
-- Number
-- Boolean
-- Array
-- Object
+* String
+* Integer
+* Number
+* Boolean
+* Array
+* Object
 
 The valid ranges of these scalar types can be further constrained to certain patterns, formats, minimums/maximums, or pre-defined values. Using these constraints, a wide range of more specific field types can be represented, including:
 
-- Enum
-- Long
-- Short
-- Byte
-- Date
-- Date-time
-- Map
+* Enum
+* Long
+* Short
+* Byte
+* Date
+* Date-time
+* Map
 
 >[!NOTE] The "map" field type allows for key-value pair data, including multiple values for a single key. Maps can only be defined at the system level, meaning you may encounter a map in an industry or vendor-defined schema, but it is not available for use in fields you define. The [Schema Registry API developer guide](../api/getting-started.md) contains more information on defining field types.
 
