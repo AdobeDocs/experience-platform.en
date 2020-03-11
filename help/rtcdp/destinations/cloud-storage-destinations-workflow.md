@@ -17,6 +17,10 @@ This page explains how you can connect to cloud storage locations in Adobe Real-
 
 2. In the **Authentication** step, if you had previously set up a connection to your cloud storage destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to your cloud storage destination. Fill in your account authentication credentials and select **[!UICONTROL Connect to destination]**.
 
+    >[!NOTE]
+    >
+    >Adobe Real-time CDP supports credentials validation in the authentication process and displays an error message if you input incorrect credentials to your cloud storage location. This ensures that you don't complete the workflow with incorrect credentials.
+
     ![Connect to cloud storage destination - authentication step](/help/rtcdp/destinations/assets/cloud-destinations-authentication-step.png)
 
 3. In the **[!UICONTROL Setup]** step, enter a **[!UICONTROL Name]** and a **[!UICONTROL Destination]** for your activation flow and insert the **[!UICONTROL Folder path]** in your cloud storage destination where the files will be delivered. Select **[!UICONTROL Create Destination]** after you filled in the fields above.
