@@ -22,6 +22,7 @@ user-guide-title: Metadata and Storage Help
 * Datasets {#datasets}
   * [Datasets overview](datasets/overview.md)
   * [Datasets user guide](datasets/user-guide.md)
-  * [Create and populate a dataset using APIs](datasets/create-dataset.md)
+  * [Create and populate a dataset using APIs](datasets/create.md)
+  * [Configure a dataset for Real-time Customer Profile and Identity Service using APIs](datasets/profile.md)
 * [Data protection in Experience Platform](data-protection.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
