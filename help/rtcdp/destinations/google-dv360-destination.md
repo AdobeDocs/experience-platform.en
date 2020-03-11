@@ -7,4 +7,4 @@ seo-description: Display & Video 360, formerly known as DoubleClick Bid Manager 
 
 # Google Display & Video 360 Destination
 
-Documentation for the Google Display & Video 360 destination will soon be available here. Until then, please see our general [Google destination](/help/rtcdp/destinations/google-destination.md) documentation. 
+Documentation for the Google Ad Manager destination will be available here soon. Until then, please see our general [Google destination](/help/rtcdp/destinations/google-destination.md) documentation. 
