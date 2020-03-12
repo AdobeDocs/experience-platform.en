@@ -29,7 +29,7 @@ In order to utilize insights for Customer AI, you need to have a service instanc
 
 ## Service instance overview
 
-In the Adobe Experience Platform UI, click **Services** in the left navigation. The *Services* browser appears and displays available Adobe Intelligent Services. In the container for Customer AI, click **Open**.
+In the Platform UI, click **Services** in the left navigation. The *Services* browser appears and displays available Adobe Intelligent Services. In the container for Customer AI, click **Open**.
 
 ![Accessing your instance](./images/insights/navigate-to-service.png)
 
@@ -52,11 +52,12 @@ Next, the insights page for that service instance appears, where you are provide
 
 There are two ways to view service instance details, the first is from the dashboard and the second from within the service instance. 
 
-To view details from within the dashboard, click on a service instance container avoiding the hyperlink that is attached to the name. This opens a right rail that provides additional details such as the description, scoring frequency, the prediction goal, and eligible population. Additionally, you can choose to edit and delete the instance by clicking *Edit* or *Delete*.
+To view details from within the dashboard, click on a service instance container avoiding the hyperlink that is attached to the name. This opens a right rail that provides additional details such as the description, scoring frequency, the prediction goal, and eligible population. Additionally, you can choose to edit and delete the instance by clicking **Edit** or **Delete**.
 
 ![right rail](./images/insights/success-run.png)
 
-> NOTE: In the event that a scoring run fails, an error message is provided. The error message is listed under *Last run details* in the right rail which is only visible to failed runs.
+>[!NOTE]
+>In the event that a scoring run fails, an error message is provided. The error message is listed under *Last run details* in the right rail which is only visible to failed runs.
 
 ![failed run message](./images/insights/failed-run.png)
 
@@ -72,13 +73,13 @@ To edit an instance, click **Edit** in the top-right navigation.
 
 ![click the edit button](./images/insights/edit-button.png)
 
-The edit dialog box appears, allowing you to edit the *Description* and *Scoring Frequency* of the instance. To confirm your changes and close the dialog, click *Edit* in the bottom-right corner.
+The edit dialog box appears, allowing you to edit the *Description* and *Scoring Frequency* of the instance. To confirm your changes and close the dialog, click **Edit** in the bottom-right corner.
 
 ![edit popover](./images/insights/edit-instance.png)
 
 ### More actions
 
-The *More actions* button is located in the top-right navigation next to *Edit*. Clicking **More actions** opens a dropdown that allows you to select one of the following operations:
+The **More actions** button is located in the top-right navigation next to **Edit**. Clicking **More actions** opens a dropdown that allows you to select one of the following operations:
 
 - **Delete**: Deletes the instance.
 - **Access scores**: Clicking *Access scores* opens a dialog providing a link to the [downloading scores for Customer AI](./download-scores.md) tutorial, the dialog also provides the dataset id required for making API calls.
@@ -90,7 +91,8 @@ The *More actions* button is located in the top-right navigation next to *Edit*.
 
 Scoring Summary displays the total number of profiles scored and categorizes them into buckets containing high, medium, and low propensity. The propensity buckets are determined based on score range, low is less than 24, medium is 25 to 74, and high is above 74. Each bucket has a color corresponding to the legend. 
 
-> **Note:** If it is a conversion propensity score, the high scores show in green and the low scores in red. If you are predicting churn propensity this is flipped, the high scores are in red and the low scores are green. The medium bucket remains yellow regardless of what propensity type you choose.
+>[!NOTE]
+>If it is a conversion propensity score, the high scores show in green and the low scores in red. If you are predicting churn propensity this is flipped, the high scores are in red and the low scores are green. The medium bucket remains yellow regardless of what propensity type you choose.
 
 ![scoring summary](./images/insights/scoring-summary.png)
 
@@ -118,7 +120,7 @@ The segment builder is used to define a segment, however, Customer AI has alread
 
 ![Segment fill in](./images/insights/segment-saving.png)
 
- To view your new segment in the Adobe Experience Platform UI, click **Segments** in the left navigation. The *Browse* page appears and displays all available segments. 
+ To view your new segment in the Platform UI, click **Segments** in the left navigation. The *Browse* page appears and displays all available segments. 
 
  ![All your Segments](./images/insights/Segments-dashboard.png)
 
