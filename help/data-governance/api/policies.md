@@ -195,7 +195,7 @@ The response contains the details of the policy, including key fields such as `i
 }
 ```
 
-## Create a policy
+## Create a policy {#create-policy}
 
 Creating a policy requires the inclusion of a marketing action with an expression of the DULE labels that prohibit that marketing action. Policy definitions must include a `deny` property, which is a boolean expression regarding the presence of DULE labels. 
 
