@@ -59,7 +59,7 @@ The commerce object also has a special field for collecting order details called
 ||[paymentType](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#xdmpaymenttype)|Highly Recommended|The type of payment (for example, `credit_card`, `gift_card`, `paypal`). See the list of [known values](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#xdmpaymenttype-known-values) for details.|
 ||[transactionID](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#xdmtransactionid)|Optional|A unique ID for this payment transaction.|
 |[priceTotal](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmpricetotal)||Highly Recommended|The total for this order after all discounts and taxes have been applied.|
-|[purchaseID](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmpurchaseid)||Highly Recomended|The unique identifier assigned by the seller for this purchase.
+|[purchaseID](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmpurchaseid)||Highly Recomended|The unique identifier assigned by the seller for this purchase.|
 |[purchaseOrderNumber](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmpurchaseordernumber)||Optional|A unique identifier assigned by the purchaser for this purchase.|
 
 Here is an example of a typical purchase in the SDK.
@@ -116,7 +116,6 @@ The product list indicates which products are related to the corresponding actio
 
 ## Examples
 
----
 `productView` event
 
 ```javascript
@@ -141,7 +140,6 @@ alloy("event",{
 });
 ```
 
----
 `productView` event
 
 ```javascript
@@ -172,7 +170,6 @@ alloy("event",{
 });
 ```
 
----
 `checkout` event
 
 ```javascript
@@ -201,7 +198,6 @@ alloy("event",{
 });
 ```
 
----
 `purchase` event
 
 ```javascript
