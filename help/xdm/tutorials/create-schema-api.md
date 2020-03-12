@@ -9,7 +9,7 @@ topic: tutorials
 
 The Schema Registry is used to access the Schema Library within Adobe Experience Platform. The Schema Library contains resources made available to you by Adobe, Experience Platform partners, and vendors whose applications you use. The registry provides a user interface and RESTful API from which all available library resources are accessible.
 
-This tutorial uses the Schema Registry API to walk you through the steps to [compose a schema using a standard class. If you would prefer to use the user interface in Experience Platform, the [Schema Editor Tutorial](../schema_editor_tutorial/schema_editor_tutorial.md) provides step-by-step instructions for performing similar actions in the schema editor.
+This tutorial uses the Schema Registry API to walk you through the steps to compose a schema using a standard class. If you would prefer to use the user interface in Experience Platform, the [Schema Editor Tutorial](create-schema-ui.md) provides step-by-step instructions for performing similar actions in the schema editor.
 
 ## Getting started
 
@@ -17,7 +17,7 @@ This guide requires a working understanding of the following components of Adobe
 
 * [Experience Data Model (XDM) System](../home.md): The standardized framework by which Experience Platform organizes customer experience data.
     * [Basics of schema composition](../schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-* [Real-time Customer Profile](../../technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
