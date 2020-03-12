@@ -57,4 +57,4 @@ This document covered the prerequisite knowledge required to make calls to the C
 
 Most of the examples in this guide use the `/dataSets` endpoint, but the principles can be applied to other endpoints within Catalog (such as `/batches` and `/accounts`). See the [Catalog Service API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) for a complete list of all calls and operations available for each endpoint.
 
-For a step-by-step workflow that demonstrates how the Catalog API is involved with data ingestion, see the tutorial on [creating a dataset](../datasets/create-dataset.md).
+For a step-by-step workflow that demonstrates how the Catalog API is involved with data ingestion, see the tutorial on [creating a dataset](../datasets/create.md).
