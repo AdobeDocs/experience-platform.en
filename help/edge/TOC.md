@@ -7,7 +7,7 @@ user-guide-title:  Adobe Experience Platform Edge Network Help
 # Adobe Experience Platform Edge Network {#edge}
 
 * [Edge Network overview](home.md)
-* Getting started {#get started}
+* Getting started {#get-started}
   * [Quick start with Launch](getting-started/quick-start-with-launch.md)
   * [Deploying all products](getting-started/deploying-all-products.md)
 * Fundamentals {#fundamentals}  
