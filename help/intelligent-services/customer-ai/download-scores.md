@@ -169,7 +169,7 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 ### Response
 
-The response contains a data array that may have a single entry, or a list of files belonging to that directory. The example below contains a list of files and has been condensed for readability.
+The response contains a data array that may have a single entry, or a list of files belonging to that directory. The example below contains a list of files and has been condensed for readability. In this scenario, you need to follow the URL of each file in order to access the file.
 
 ```json
 {
@@ -209,14 +209,16 @@ The response contains a data array that may have a single entry, or a list of fi
 }
 ```
 
-To download a file, copy the `"href"` value for any file object in the `"data"` array, then proceed to the next step.
+- `_links > self > href`: The URL to download the associated file.
+
+Copy the `"href"` value for any file object in the `"data"` array, then proceed to the next step.
 
 ## Downloading your file data
 
-To download your file data, make a GET request to the `"href"` value you copied in the previous step. This value is an API call.
+To download your file data, make a GET request to the `"href"` value you copied in the previous step [retrieving your files](#retrieving-your-files).
 
 >[!NOTE]
->If you are making this request directly in terminal or cmd line, you might be prompted to add an output after your request headers. The following request example uses `--output {FILENAME.FILETYPE}`.
+>If you are making this request directly in terminal or command line, you might be prompted to add an output after your request headers. The following request example uses `--output {FILENAME.FILETYPE}`.
 
 ### API Format
 
@@ -226,7 +228,7 @@ curl -X GET files/{dataSetFileId}
 
 ### Request
 
->[!NOTE]
+>[!TIP]
 >Make sure you are in the correct directory or folder you want your file saved to before you make the GET request.
 
 ```shell
@@ -240,7 +242,7 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 ### Response
 
-The response downloads the file you requested in the directory you are currently in. In this example the filename is "filename.parquet".
+The response downloads the file you requested in in your current directory. In this example the filename is "filename.parquet".
 
 ![Terminal](./images/download-scores/response.png)
 
