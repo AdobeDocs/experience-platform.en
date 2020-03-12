@@ -15,13 +15,12 @@ This tutorial uses the Schema Registry API to walk you through the steps to [com
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-* [Experience Data Model (XDM) System](../../technical_overview/schema_registry/xdm_system/xdm_system_in_experience_platform.md): The standardized framework by which Experience Platform organizes customer experience data.
-    * [Basics of schema composition](../../technical_overview/schema_registry/schema_composition/schema_composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-    * [Schema Registry developer guide](../../technical_overview/schema_registry/schema_registry_developer_guide.md): Includes important information that you need to know in order to successfully perform calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
+* [Experience Data Model (XDM) System](../home.md): The standardized framework by which Experience Platform organizes customer experience data.
+    * [Basics of schema composition](../schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
 * [Real-time Customer Profile](../../technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [Sandboxes](../../technical_overview/sandboxes/sandboxes-overview.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-Before attempting to make calls to the Schema Registry API, please review the [getting started](../api/getting-started.md) section in the Schema Registry developer guide for information on required authentication headers.
+Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
 
 This tutorial walks through the steps of composing a Loyalty Members schema that describes data related to the members of a retail loyalty program. Before beginning, you may wish to preview the [complete Loyalty Members schema](#complete-schema) in the appendix.
 
