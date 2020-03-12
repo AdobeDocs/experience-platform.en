@@ -131,6 +131,7 @@ A successful response returns the details of the new class, replacing the `prope
         "eTag": "Jggrlh4PQdZUvDUhQHXKx38iTQo="
     }
 }
+
 ```
 | Property | Description |
 | --- | --- |
