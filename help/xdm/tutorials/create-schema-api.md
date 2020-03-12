@@ -1164,7 +1164,7 @@ The full Loyalty Members schema, as created throughout this tutorial, is availab
 
 Once you have created more than one schema, you can define relationships between them through the use of relationship descriptors. See the tutorial for [defining a relationship between two schemas](relationship-api.md) for more information. For detailed examples of how to perform all operations (GET, POST, PUT, PATCH, and DELETE) in the registry, please refer to the [Schema Registry developer guide](../api/getting-started.md) while working with the API.
 
-## Appendix
+## Appendix {#appendix}
 
 The following information supplements the API tutorial.
 

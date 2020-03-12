@@ -15,7 +15,7 @@ This document provides general steps for creating an ad-hoc schema using the [Sc
 
 This tutorial requires a working understanding of Experience Data Model (XDM) System. Before starting this tutorial, please review the following XDM documentation:
 
-- [XDM System overview](../home.md.md): A high-level overview of XDM and its implementation in Experience Platform.
+- [XDM System overview](../home.md): A high-level overview of XDM and its implementation in Experience Platform.
 - [Basics of schema composition](../schema/composition.md): An overview of the basic components of XDM schemas.
 
 Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
