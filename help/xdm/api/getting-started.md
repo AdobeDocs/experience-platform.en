@@ -150,7 +150,7 @@ A successful response returns information regarding your organization's use of t
 
 * `tenantId`: The `TENANT_ID` value for your IMS Organization.
 
-## Understand the `CONTAINER_ID`
+## Understand the `CONTAINER_ID` {#container}
 
 Calls to the Schema Registry API require the use of a `CONTAINER_ID`. There are two containers against which API calls can be made: the **global container** and the **tenant container**.
 
@@ -164,7 +164,7 @@ Not to be confused with your unique `TENANT_ID`, the tenant container holds all 
 
 When you create a class, mixin, schema or data type in the tenant container, it is saved to the Schema Registry and assigned an `$id` URI that includes your `TENANT_ID`. This `$id` is used throughout the API to reference specific resources. Examples of `$id` values are provided in the next section.
 
-## Schema identification
+## Schema identification {#schema-identification}
 
 Schemas are identified with an `$id` attribute in the form of a URI, such as: 
 * `https://ns.adobe.com/xdm/context/profile` 
@@ -178,7 +178,7 @@ Calls to the Schema Registry API will support either the URL-encoded `$id` URI o
 * `https%3A%2F%2Fns.adobe.com%2Fxdm%2Fcontext%2Fprofile`
 * `https%3A%2F%2Fns.adobe.com%2F{TENANT_ID}%2Fschemas%2F7442343-abs2343-21232421`
 
-## Accept header
+## Accept header {#accept}
 
 When performing list and lookup (GET) operations in the Schema Registry API, an Accept header is required to determine the format of the data returned by the API. When looking up specific resources, a version number must also be included in the Accept header.
 
