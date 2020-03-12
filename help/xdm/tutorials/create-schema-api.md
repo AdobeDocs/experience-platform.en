@@ -589,7 +589,7 @@ curl -X GET \
 
 **Response**
 
-By using the `application/vnd.adobe.xed-full+json; version=1` Accept header, you can see the full schema showing all of the properties. These properties are the fields contributed by the class and mixins that have been used to compose the schema. In this example response, individual property attributes have been minimized for space. You can view the full schema, including all properties and their attributes, in the [Appendix](#appendix) at the end of this document.
+By using the `application/vnd.adobe.xed-full+json; version=1` Accept header, you can see the full schema showing all of the properties. These properties are the fields contributed by the class and mixins that have been used to compose the schema. In this example response, individual property attributes have been minimized for space. You can view the full schema, including all properties and their attributes, in the [appendix](#appendix) at the end of this document.
 
 Under `"properties"`, you can see the `_{TENANT_ID}` namespace that was created when you added the custom mixin. Within that namespace is the "loyalty" object and the fields that were defined when the mixin was created.
 
@@ -1161,11 +1161,11 @@ The response is a filtered list of schemas, containing only those that satisfy b
 
 By following this tutorial, you have successfully composed a schema using both standard mixins and a mixin that you defined. You can now use this schema to create a dataset and ingest record data into Adobe Experience Platform.
 
-The full Loyalty Members schema, as created throughout this tutorial, is available in the Appendix that follows. As you look at the schema, you can see how the mixins contribute to the overall structure and what fields are available for data ingestion.
+The full Loyalty Members schema, as created throughout this tutorial, is available in the appendix that follows. As you look at the schema, you can see how the mixins contribute to the overall structure and what fields are available for data ingestion.
 
 Once you have created more than one schema, you can define relationships between them through the use of relationship descriptors. See the tutorial for [defining a relationship between two schemas](relationship-api.md) for more information. For detailed examples of how to perform all operations (GET, POST, PUT, PATCH, and DELETE) in the registry, please refer to the [Schema Registry developer guide](../api/getting-started.md) while working with the API.
 
-# Appendix
+## Appendix
 
 The following information supplements the API tutorial.
 
