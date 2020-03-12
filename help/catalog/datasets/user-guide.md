@@ -16,7 +16,7 @@ This user guide requires a working understanding of the following components of 
 *   [Datasets](overview.md): The storage and management construct for data persistence in Experience Platform.
 *   [Experience Data Model (XDM) System](../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
     *   [Basics of schema composition](../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-    *   [Schema Editor](../../xdm/tutorials/create-schema-ui.md): Learn how to build your own custom XDM schemas using the Schema Editor within the Platform user interface.
+    *   [Schema Editor](../../xdm/ui/overview.md): Learn how to build your own custom XDM schemas using the Schema Editor within the Platform user interface.
 *   [Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 *   [Data Governance](../../data-governance/home.md): Ensure compliancy with regulations, restrictions, and policies regarding the usage of customer data.
 
@@ -94,7 +94,7 @@ Every dataset has the ability to enrich customer profiles with its ingested data
 *   The schema has at least one attribute specified as an identity property.
 *   The schema has an identity property defined as the primary identity.
 
-For more information on enabling a schema for Profile, see the [Schema Editor user guide](../../xdm/tutorials/create-schema-ui.md).
+For more information on enabling a schema for Profile, see the [Schema Editor user guide](../../xdm/ui/overview.md).
 
 To enable a dataset for Profile, access its *Dataset activity* screen and click the **Profile** toggle within the *Properties* column. Once enabled, data that is ingested into the dataset will also be used to populate customer profiles.
 
