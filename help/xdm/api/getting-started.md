@@ -42,7 +42,7 @@ All resources in Experience Platform, including those belonging to the Schema Re
 
 > **Note:** For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
 
-All lookup (GET) requests to the Schema Registry require an additional Accept header, whose value determines the format of information returned by the API. See the [Accept header](#accept-header) section below for more details.
+All lookup (GET) requests to the Schema Registry require an additional Accept header, whose value determines the format of information returned by the API. See the [Accept header](#accept) section below for more details.
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
