@@ -11,7 +11,7 @@ In order for data usage labels to effectively support data compliance, data usag
 
 An example of a marketing action might be the desire to export a dataset to a third-party service. If there is a policy in place saying that specific types of data, such as Personally Identifiable Information (PII), cannot be exported and an "I" label (Identity data) has been applied to the dataset, you will receive a response from the Policy Service telling you that a data usage policy has been violated.
 
-### How to create and work with data usage policies
+## How to create and work with data usage policies
 
 Once data usage labels have been applied, data stewards can create policies using the [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml).
 
