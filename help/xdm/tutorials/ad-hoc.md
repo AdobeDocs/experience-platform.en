@@ -131,8 +131,8 @@ A successful response returns the details of the new class, replacing the `prope
         "eTag": "Jggrlh4PQdZUvDUhQHXKx38iTQo="
     }
 }
-
 ```
+
 | Property | Description |
 | --- | --- |
 | `$id` | A URI that serves as the read-only, system generated unique identifier for the new ad-hoc class. This value is used in the next step of creating an ad-hoc schema. |
