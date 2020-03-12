@@ -26,8 +26,3 @@ user-guide-title:  Adobe Experience Platform Edge Network Help
 * Reference {#ref}
   * [Automatically Collected Information](reference/automatic-information.md)
   * [Retrieving Library Information](reference/retrieving-library-information.md)
-<!--
-* [Troubleshooting guide](troubleshooting-guide.md)
-* [API reference](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html)
-* [Release notes](release-notes.md)
--->
