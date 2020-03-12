@@ -40,4 +40,5 @@ user-guide-title: Adobe Experience Platform Segmentation Service Help
 - Tutorials {#tutorials}
     - [Create a segment](tutorials/create-a-segment.md)
     - [Evaluate a segment](tutorials/evaluate-a-segment.md)
+    - [Enforce data usage compliance for segments](tutorials/governance.md)
 - [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)
