@@ -369,31 +369,31 @@ curl -X POST\
                 "_{TENANT_ID}": {
                   "type":"object",
                   "properties": {
-                  	"loyalty": {
-                  		"type": "object",
-                  		"properties": {
-		                    "loyaltyId": {
-		                        "title": "Loyalty Identifier",
-		                        "type": "string",
-		                        "description": "Loyalty Identifier."
-		                    },
-		                    "loyaltyLevel": {
-		                        "title": "Loyalty Level",
-		                        "type": "string"
-		                    },
-		                    "loyaltyPoints": {
-		                        "title": "Loyalty Points",
-		                        "type": "integer",
-		                        "description": "Loyalty points total."
-		                    },
-		                    "memberSince": {
-		                        "title": "Member Since",
-		                        "type": "string",
-		                        "format": "date-time",
-		                        "description": "Date the member joined the Loyalty Program."
-		                    }
-                  		}
-                	}
+                    "loyalty": {
+                      "type": "object",
+                      "properties": {
+                        "loyaltyId": {
+                            "title": "Loyalty Identifier",
+                            "type": "string",
+                            "description": "Loyalty Identifier."
+                        },
+                        "loyaltyLevel": {
+                            "title": "Loyalty Level",
+                            "type": "string"
+                        },
+                        "loyaltyPoints": {
+                            "title": "Loyalty Points",
+                            "type": "integer",
+                            "description": "Loyalty points total."
+                        },
+                        "memberSince": {
+                            "title": "Member Since",
+                            "type": "string",
+                            "format": "date-time",
+                            "description": "Date the member joined the Loyalty Program."
+                        }
+                      }
+                    }
                   }
                 }
               }
