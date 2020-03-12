@@ -77,7 +77,7 @@ The canvas reappears. The *Class* section now contains the class you selected (X
 
 The fields appear in the format "fieldName | Data Type". Steps for defining schema fields in the UI are provided later in this tutorial.
 
->[!NOTE] You can [change the class of a schema](#change-the-class-of-a-schema) at any point during the initial composition process before the schema has been saved, but this should be done with extreme caution. Mixins are only compatible with certain classes, therefore changing the class will reset the canvas and any fields you have added. 
+>[!NOTE] You can [change the class of a schema](#change-class) at any point during the initial composition process before the schema has been saved, but this should be done with extreme caution. Mixins are only compatible with certain classes, therefore changing the class will reset the canvas and any fields you have added. 
 
 ## Add a mixin
 
@@ -242,7 +242,7 @@ Now all data ingested into the "loyaltyId" field will be used to help identify t
 
 >[!NOTE] Once a schema field has been set as the primary identity, you will receive an error message if you later attempt to set another field in the schema as the primary. Each schema may contain only one primary identity field.
 
-To learn more about working with identities, please review the [Identity Service](../../technical_overview/identity_services_architectural_overview/identity_services_architectural_overview.md) documentation.
+To learn more about working with identities, please review the [Identity Service](../../identity-service/home.md) documentation.
 
 <!-- ## Relationship
 
@@ -298,7 +298,7 @@ You can then give your new class a **Display Name** (a short, descriptive, uniqu
 
 >[!NOTE] When building a schema that implements a class defined by your organization, remember that mixins are available for use only with compatible classes. Since the class you defined is new, there are no compatible mixins listed in the *Add Mixin* dialog. Instead, you will need to select **Create New Mixin** and define a mixin for use with that class. The next time you compose a schema that implements the new class, the mixin that you defined will be listed and available for use.
 
-### Change the class of a schema
+### Change the class of a schema {#change-class}
 
 At any time during the initial schema composition process, before the schema is saved, you can change the class upon which the schema is based. 
 
