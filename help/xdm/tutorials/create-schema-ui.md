@@ -254,7 +254,7 @@ In order to define a relationship, click on the field and check the **Relationsh
 
 More information about relationships and other schema metadata can be found in the [Schema Registry API Developer Guide](../schema_registry_developer_guide.md). -->
 
-## Enable the schema for use in Real-time Customer Profile
+## Enable the schema for use in Real-time Customer Profile {#profile}
 
 The Schema Editor provides the ability to enable a schema for use with [Real-time Customer Profile](../../profile/home.md). Profile provides a holistic view of each individual customer by building a robust, 360&deg; profile of customer attributes as well as a timestamped account of every interaction that customer has had across any system integrated with Experience Platform. 
 
