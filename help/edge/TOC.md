@@ -23,6 +23,10 @@ user-guide-title:  Adobe Experience Platform Edge Network Help
   * [Supporting in-app browsers](fundamentals/supporting-in-app-browsers.md)
 * What to Implement {#implement}
   * [Products](what-to-implement/commerce.md)
+* Solution Specific Considerations {#solutions}
+  * Analytics {#analytics}
+    * [Analytics Overview](solution-specific/analytics/analytics-overview.md)
+    * [Automatically Mapped Variables](solution-specific/analytics/automatically-mapped-vars.md)
 * Reference {#ref}
   * [Automatically Collected Information](reference/automatic-information.md)
   * [Retrieving Library Information](reference/retrieving-library-information.md)
