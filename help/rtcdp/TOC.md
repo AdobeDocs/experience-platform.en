@@ -28,6 +28,14 @@ user-guide-title: Real-Time Customer Data Platform Help
     * Advertising destinations{#advertiser-destinations}
       * [Advertising destinations overview](destinations/advertising-destinations.md)
       * [Google](destinations/google-destination.md)
+      * [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
+      * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
+      * [Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
+    * Cloud storage destinations{#cloud-storage}
+      * [Cloud storage destinations overview](destinations/cloud-storage-destinations.md)
+      * [Workflow to create cloud storage destinations](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
+      * [Amazon S3 destination](destinations/amazon-s3-destination.md)
+      * [SFTP destination](destinations/sftp-destination.md)
     * Email marketing destinations{#email-destinations}
       * [Email marketing destinations overview](destinations/email-marketing-destinations.md)
       * [Adobe Campaign](destinations/adobe-campaign-destination.md)
