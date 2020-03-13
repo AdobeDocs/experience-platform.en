@@ -60,7 +60,7 @@ Fields that are commonly marked as "Identity" include: email address, phone numb
 
 It is important to think about customer identities during the schema planning phase in order to help ensure data is being brought together to build the most robust profile possible. See the [Identity Service overview](../../identity-service/home.md) to learn more about how identity information can help you deliver digital experiences to your customers.
 
-### Schema evolution principles
+### Schema evolution principles {#evolution}
 
 As the nature of digital experiences continues to evolve, so must the schemas used to represent them. A well-designed schema is therefore able to adapt and evolve as needed, without causing destructive changes to previous versions of the schema.
 
@@ -191,6 +191,6 @@ Now that you understand the basics of schema composition, you are ready to begin
 
 The Schema Registry is used to access the Schema Library within Adobe Experience Platform, and provides a user interface and RESTful API from which all available library resources are accessible. The Schema Library contains Industry resources defined by Adobe, Vendor resources defined by Experience Platform partners, and classes, mixins, data types, and schemas that have been composed by members of your organization.
 
-To begin composing schema using the UI, follow along with the [Schema Editor user guide](../ui/overview.md) to build the "Loyalty Members" schema mentioned throughout this document.
+To begin composing schema using the UI, follow along with the [Schema Editor tutorial](../tutorials/create-schema-ui.md) to build the "Loyalty Members" schema mentioned throughout this document.
 
 To begin using the Schema Registry API, start by reading the [Schema Registry API developer guide](../api/getting-started.md). After reading the developer guide, follow the steps outlined in the tutorial on [creating a schema using the Schema Registry API](../tutorials/create-schema-api.md).
