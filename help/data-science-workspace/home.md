@@ -41,13 +41,13 @@ Today's enterprise puts a high priority on mining big data for predictions and i
 As important as it is, getting from data to insights can come at a high cost. It typically requires skilled data scientists who conduct intensive and time-consuming data research to develop machine-learning models, or recipes, which power intelligent services. The process is lengthy, the technology is complex, and skilled data scientists can be hard to find.  
 
 With Data Science Workspace, Adobe Experience Platform allows you to bring experience-focused AI across the enterprise, streamlining and accelerating data-to-insights-to-code with:
-* A machine learning framework and runtime
-* Integrated access to your data stored in Adobe Experience Platform
-* A unified data schema built on Experience Data Model (XDM)
-* The computing power essential for machine learning/AI and managing big datasets
-* Prebuilt machine learning recipes to accelerate the leap into AI-driven experiences
-* Simplified authoring, reuse, and modification of recipes for data scientists of varied skill levels
-* Intelligent service publishing and sharing in just a few clicks - without a developer - and monitoring and retraining for continuous optimization of personalized customer experiences
+- A machine learning framework and runtime
+- Integrated access to your data stored in Adobe Experience Platform
+- A unified data schema built on Experience Data Model (XDM)
+- The computing power essential for machine learning/AI and managing big datasets
+- Prebuilt machine learning recipes to accelerate the leap into AI-driven experiences
+- Simplified authoring, reuse, and modification of recipes for data scientists of varied skill levels
+- Intelligent service publishing and sharing in just a few clicks - without a developer - and monitoring and retraining for continuous optimization of personalized customer experiences
 
 Data scientists of all skill levels will achieve insights faster and more effective digital experiences sooner. 
 
@@ -110,9 +110,9 @@ As part of the data exploration workflow, you can also ingest new data or use ex
 
 With Data Science Workspace, you decide how you want to author recipes. 
 
-* Save time by browsing for a prebuilt recipe that addresses your business needs, which you can use as is or configure to meet your specific requirements. 
-* Create a recipe from scratch, using the authoring runtime in Jupyter Notebook to develop and register the recipe.
-* Upload a recipe authored outside Adobe Experience Platform into Data Science Workspace or import recipe code from a repository, such as Git, using the authentication and integration available between Git and Data Science Workspace.
+- Save time by browsing for a prebuilt recipe that addresses your business needs, which you can use as is or configure to meet your specific requirements. 
+- Create a recipe from scratch, using the authoring runtime in Jupyter Notebook to develop and register the recipe.
+- Upload a recipe authored outside Adobe Experience Platform into Data Science Workspace or import recipe code from a repository, such as Git, using the authentication and integration available between Git and Data Science Workspace.
 
 ### Experimentation
 
@@ -157,8 +157,8 @@ Sandboxes are virtual partitions within a single instance of Experience Platform
 
 Currently, Data Science Workspace has a couple sandbox limitations:
 
-  - Compute resources are shared across the production sandbox and non-production sandboxes. Isolation for production sandboxes is set to be provided in the future.
-  - Scala/Spark and PySpark workloads for both notebooks and recipes are currently only supported in the production sandbox. Support for non-production sandboxes is set to be provided in the future.
+- Compute resources are shared across the production sandbox and non-production sandboxes. Isolation for production sandboxes is set to be provided in the future.
+- Scala/Spark and PySpark workloads for both notebooks and recipes are currently only supported in the production sandbox. Support for non-production sandboxes is set to be provided in the future.
 
 ## Data Science Workspace in action 
 
