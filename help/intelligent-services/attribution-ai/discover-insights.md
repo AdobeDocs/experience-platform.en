@@ -104,7 +104,7 @@ Clicking *Attribution model* opens a dropdown with all of the different attribut
 
 The *Product* filter allows you to select from any products that were initially ingested in the creation of your instance. Click the dropdown and use the search feature to quickly select all of the products you wish to compare.
 
-![products filter](./images/insights/product.png)
+![products filter](./images/insights/product-filter.png)
 
 ### Geography
 
