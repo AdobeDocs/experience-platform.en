@@ -40,7 +40,7 @@ All resources in Experience Platform, including those belonging to the Schema Re
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-> **Note:** For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+>[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All lookup (GET) requests to the Schema Registry require an additional Accept header, whose value determines the format of information returned by the API. See the [Accept header](#accept) section below for more details.
 
@@ -194,7 +194,7 @@ The following table lists compatible Accept header values, including those with 
 | `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` attributes and `allOf` resolved. No titles or descriptions. |
 | `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` attributes and `allOf` resolved. Descriptors are included. |
 
-> **Note:** If supplying the `major` version only (e.g. 1, 2, 3), the registry will return the latest `minor` version (e.g. .1, .2, .3) automatically.
+>[!NOTE] If supplying the `major` version only (e.g. 1, 2, 3), the registry will return the latest `minor` version (e.g. .1, .2, .3) automatically.
 
 ## XDM field constraints and best practices
 
