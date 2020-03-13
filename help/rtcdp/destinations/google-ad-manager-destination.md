@@ -25,13 +25,15 @@ Note the following details that are specific to Google Ad Manager destinations:
 
 Before creating the Google Ad Manager destination in Adobe Real-time CDP, you must contact Google asking for your account to be whitelisted. Contact Google and provide the following information:
 
+* **Account ID** : this is Adobe's account ID with Google. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
+* **Customer ID** : this is Adobe's customer account ID with Google. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
 * **Network ID** : this is your account with Google Ad Manager;
-* **Audience Link ID** : this is your account with Google;
+* **Audience Link ID** : this is your account with Google Ad Manager;
 * Your account type. **DFP by Google** or **AdX buyer**.
 
 ## Create destination
 
-1. In **[!UICONTROL Connections > Destinations]**, select Google  Manager, and select **[!UICONTROL Create destination]**.
+1. In **[!UICONTROL Connections > Destinations]**, select Google Ad Manager, and select **[!UICONTROL Create destination]**.
     ![Connect Google Ad Manager destination](/help/rtcdp/destinations/assets/google-ad-manager-destination1.png)
 
 2. In the Create destination wizard, fill in the Basic Information for the destination.
