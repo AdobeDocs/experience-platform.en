@@ -17,7 +17,7 @@ Note the following details that are specific to Google Display & Video 360 desti
 
 * You can send the following [identities](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md) to Google Display & Video 360 destinations: **Google cookie ID, IDFA, GAID, Roku IDs, Microsoft IDs, Amazon Fire TV IDs**.
 * Activated audiences are created programmatically in the Google platform.
-* Adobe Real-time CDP does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand data drop-off.
+* Adobe Real-time CDP does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand audience targeting size.
 
 ## Prerequisites
 
@@ -25,12 +25,9 @@ Note the following details that are specific to Google Display & Video 360 desti
 
 Before creating the Google Display & Video 360 destination in Adobe Real-time CDP, you must contact Google asking for your account to be whitelisted. Contact Google and provide the following information:
 
-* **Account ID** : this is Adobe's account ID with Google. Contact Adobe Support to obtain this ID. 
-* **Customer ID** : this is Adobe's customer account ID with Google. Contact Adobe Support to obtain this ID.
-* **Partner ID** : This is your three-digit partner ID with Google;
-* **Network ID** : this is your account with Google;
-* **Audience Link ID** : this is your account with Google;
-* **Your account type**: use **Invite advertiser** for a specific brand in your Display & Video 360 account or use **Invite partner** for all brands in your Display & Video 360 account.
+* **Account ID** : this is Adobe's account ID with Google. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
+* **Customer ID** : this is Adobe's customer account ID with Google. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
+* **Your account type**: use **[!DNL Invite advertiser]** to allow audiences to be shared only to a specific brand in your Display & Video 360 account or use **[!DNL Invite partner]** to allow audiences to be shared to all brands in your Display & Video 360 account.
 
 ## Create destination
 
@@ -42,8 +39,8 @@ Before creating the Google Display & Video 360 destination in Adobe Real-time CD
 *  **Name**: Fill in the preferred name for this destination.
 *  **Description**: Optional. For example, you can mention which campaign you are using this destination for.
 *  **Account Type**: Select an option, depending on your account with Google:
-   * Use `Invite Advertiser` for a specific brand in your Google Display & Video 360 account.
-   * Use `Invite Partner` for all brands in your Google Display & Video 360 account.
+   * Use `Invite Advertiser` to allow audiences to be shared only to a specific brand in your Display & Video 360 account.
+   * Use `Invite Partner` to allow audiences to be shared to all brands in your Display & Video 360 account.
 *  **Account ID**: Fill in your account ID with Google.
 
 >[!NOTE]
