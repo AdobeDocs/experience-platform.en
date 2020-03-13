@@ -17,7 +17,7 @@ Note the following details that are specific to Google Ad Manager destinations:
 
 * You can send the following [identities](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md) to Google Ad Manager destinations: **Google cookie ID, IDFA, GAID, Roku IDs, Microsoft IDs, Amazon Fire TV IDs**.
 * Activated audiences are created programmatically in the Google platform.
-* Adobe Real-time CDP does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand data drop-off.
+* Adobe Real-time CDP does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand audience targeting size.
 
 ## Prerequisites
 
@@ -25,10 +25,7 @@ Note the following details that are specific to Google Ad Manager destinations:
 
 Before creating the Google Ad Manager destination in Adobe Real-time CDP, you must contact Google asking for your account to be whitelisted. Contact Google and provide the following information:
 
-* **Account ID** : this is Adobe's account ID with Google. Contact Adobe Support to obtain this ID.
-* **Customer ID** : this is Adobe's customer account ID with Google. Contact Adobe Support to obtain this ID.
-* **Partner ID** : This is your three-digit partner ID with Google;
-* **Network ID** : this is your account with Google;
+* **Network ID** : this is your account with Google Ad Manager;
 * **Audience Link ID** : this is your account with Google;
 * Your account type. **DFP by Google** or **AdX buyer**.
 
@@ -44,7 +41,7 @@ Before creating the Google Ad Manager destination in Adobe Real-time CDP, you mu
 *  **Account Type**: Select an option, depending on your account with Google:
    * Use `DFP by Google` for DoubleClick for Publishers
    * Use `AdX buyer` for Google AdX
-*  **Account ID**: Fill in your account ID with Google.
+*  **Account ID**: Fill in your account ID with Google. This can be your Network ID or your Audience Link ID.
 
 >[!NOTE]
 >
