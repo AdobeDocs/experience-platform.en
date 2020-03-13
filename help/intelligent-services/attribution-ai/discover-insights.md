@@ -50,7 +50,7 @@ The Attribution AI dashboard appears. The dashboard lists service instances of A
 
 Next, the insights page for that service instance appears, where you are provided with visualizations and a number of filters to interact with your data. The visualizations and filters are explained in more detail throughout this guide.
 
-![setup page](./images/insights/platform-landing.png)
+![setup page](./images/insights/landing-page.png)
 
 ### Service instance details
 
@@ -65,7 +65,7 @@ A detailed list appears. For more information on any of the properties listed, p
 ### Edit an instance
 
 To edit an instance, click *Edit* in the top-right navigation.
-![click the edit button](./images/insights/edit_button.png)
+![click the edit button](./images/insights/edit-button.png)
 
 The edit dialog box appears, allowing you to edit the description and scoring frequency of the instance. To confirm your changes and close the dialog, click *Edit* in the bottom-right corner.
 
@@ -108,11 +108,9 @@ The *Product* filter allows you to select from any products that were initially 
 
 ### Geography
 
-The *Geography* filter populates country codes based on region-based models.
+The *Geography* filter populates country codes based on region-based models. Depending on your data this filter may or may not be present.
 
 > **Note:** Country codes are two characters long. A complete list can be found here [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
-
-![geography](./images/insights/geography.png)
 
 ### Region
 
@@ -145,8 +143,6 @@ The *Weekly trends* card breaks down your total conversion by the date rage you 
 ![trends](./images/insights/weekly-trends.png)
 
 Clicking the ellipses in the top-right of the *Weekly trends* card displays a drop down allowing you to select daily, weekly, or monthly trends.
-
-![change date](./images/insights/change-trend-table.png)
 
 Hovering over the data line of a specific attribution model creates a popover that shows the total number of conversions for that date.
 
