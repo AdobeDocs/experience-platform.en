@@ -72,17 +72,17 @@ The following table outlines the different categories of supported PQL functions
 
 | Category | Definition |
 | -------- | ---------- |
-| Boolean | Used to implement boolean algebra within PQL. More information about these functions can be found in the [boolean functions document](./pql/boolean-functions.md). |
-| Comparison | Used to compare between different PQL elements. More information about these functions can be found in the [comparison functions document](./pql/comparison-functions.md). |
-| Array, list, and set | Used to interact with arrays, lists, and sets. More information about these functions can be found in the [array, list, and set functions document](./pql/array-functions.md). |
-| Map | Used to interact with maps. More information about these functions can be found in the [map functions document](./pql/map-functions.md). |
-| String | Used to interact with strings. More information about these functions can be found in the [string functions document](./pql/string-functions.md). |
-| Arithmetic | Used to perform basic arithmetic on PQL elements. More information about these functions can be found in the [arithmetic functions document](./pql/arithmetic-functions.md) |
-| Aggregation | Used to combine results of an array into a singular result. More information about aggregation functions can be found in the [aggregation functions document](./pql/aggregation-functions.md). |
-| Date and time | Used in conjunction with date, time, and datetime objects. More information about these functions can be found in the [date/time functions document](.pql/../pql/datetime-functions.md). |
-| Filter | Ued to filter data within arrays. More information about these functions can be found in the [filter functions document](./pql/filter-functions.md). |
-| Logical quantifiers | Used to assert conditions within an array. More information can be found in the [logical quantifiers document](./pql/logical-quantifiers.md). |
-| Miscellaneous | Functions that do not fit in any of the above categories can be found in the [miscellaneous functions document](pql/misc-functions.md). |
+| Boolean | Used to implement boolean algebra within PQL. More information about these functions can be found in the [boolean functions document](./boolean-functions.md). |
+| Comparison | Used to compare between different PQL elements. More information about these functions can be found in the [comparison functions document](./comparison-functions.md). |
+| Array, list, and set | Used to interact with arrays, lists, and sets. More information about these functions can be found in the [array, list, and set functions document](./array-functions.md). |
+| Map | Used to interact with maps. More information about these functions can be found in the [map functions document](./map-functions.md). |
+| String | Used to interact with strings. More information about these functions can be found in the [string functions document](./string-functions.md). |
+| Arithmetic | Used to perform basic arithmetic on PQL elements. More information about these functions can be found in the [arithmetic functions document](./arithmetic-functions.md) |
+| Aggregation | Used to combine results of an array into a singular result. More information about aggregation functions can be found in the [aggregation functions document](./aggregation-functions.md). |
+| Date and time | Used in conjunction with date, time, and datetime objects. More information about these functions can be found in the [date/time functions document](./datetime-functions.md). |
+| Filter | Ued to filter data within arrays. More information about these functions can be found in the [filter functions document](./filter-functions.md). |
+| Logical quantifiers | Used to assert conditions within an array. More information can be found in the [logical quantifiers document](./logical-quantifiers.md). |
+| Miscellaneous | Functions that do not fit in any of the above categories can be found in the [miscellaneous functions document](./misc-functions.md). |
 
 ## Next steps
 
