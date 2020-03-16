@@ -37,7 +37,7 @@ Experience Platform ingests data from multiple sources and persists records as d
 
 When using the batch ingestion method, Catalog also tracks additional metadata for **batch** files. Batches are units of data that consist of one or more files to be ingested as a single unit. Catalog tracks the metadata for these batch files, as well as the datasets they are persisted in after ingestion. Batch metadata includes information about the number of successfully ingested records, as well as any failed records and associated error messages.
 
-See the [data ingestion overview]^ for more information.
+See the [data ingestion overview](../ingestion/home.md) for more information.
 
 ## Catalog objects
 
