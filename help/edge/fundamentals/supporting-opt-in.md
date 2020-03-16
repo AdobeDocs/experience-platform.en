@@ -5,7 +5,11 @@ description: Learn how to support Opt-in with Experience Platform Web SDK
 seo-description: Learn how to support Opt-in with Experience Platform Web SDK
 ---
 
-# Supporting Opt-in
+# (Beta) Supporting Opt-in
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
 
 To respect your user's privacy, you might want to ask for the user's consent before allowing the SDK to use user-specific data for certain purposes. Currently, the SDK only allows users to opt in to all purposes or no purposes, but in the future Adobe hopes to provide more granular control over specific purposes.
 
