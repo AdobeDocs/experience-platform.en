@@ -36,7 +36,7 @@ The `like` function is used to determine if a string matches a specified pattern
 | Argument | Description |
 | --------- | ----------- |
 | `{STRING_1}` | The string to perform the check on. |
-| `{STRING_2}` | The expression to match against the first string. There are two supported special characters for creating an expression: `%` and `_`. <ul><li>`%` is used to represent zero or more characters.<li>`_` is used to represent exactly one character.</ul> |
+| `{STRING_2}` | The expression to match against the first string. There are two supported special characters for creating an expression: `%` and `_`. <ul><li>`%` is used to represent zero or more characters.</li><li>`_` is used to represent exactly one character.</li></ul> |
 
 **Example**
 
