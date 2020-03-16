@@ -29,4 +29,4 @@ let S = (sum X.commerce.order.priceTotal over X from xEvent where X.commerce.ord
 
 ## Next steps
 
-Now that you have learned about miscellaneous functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](./overview.md).
+Now that you have learned about miscellaneous functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](./overview.md). 

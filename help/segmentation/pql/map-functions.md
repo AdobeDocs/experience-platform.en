@@ -71,4 +71,4 @@ identityMap.values()
 
 ## Next steps
 
-Now that you have learned about map functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](./overview.md).
+Now that you have learned about map functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](./overview.md).  
