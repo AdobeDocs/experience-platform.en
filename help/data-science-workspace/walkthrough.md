@@ -31,7 +31,6 @@ This document provides a walkthrough for the Data Science Workspace in Adobe Exp
         - [Visualize predictions](#visualize-predictions)
 - [Conclusion](#conclusion)
 
-
 ## Prerequisites
 
 - A registered Adobe ID account
