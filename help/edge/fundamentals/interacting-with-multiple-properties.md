@@ -5,7 +5,11 @@ description: Learn how to interact with multiple Experience Platform Web SDK pro
 seo-description: Learn how to interact with multiple Experience Platform Web SDK properties
 ---
 
-# Interacting with multiple properties
+# (Beta) Interacting with multiple properties
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
 
 There are certain cases where you might want to interact with two different properties on the same page. These include:
 

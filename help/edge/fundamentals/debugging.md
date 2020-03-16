@@ -5,7 +5,11 @@ description: Learn how to toggle Experience Platform Web SDK debugging
 seo-description: Learn how to toggle Experience Platform Web SDK debugging
 ---
 
-# Debugging
+# (Beta) Debugging
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
 
 When debugging is enabled, the SDK outputs messages to the browser console that can be helpful in debugging your implementation and understanding how the SDK is behaving. Debugging also results in a server-side synchronous validation of the data being collected against the schema you have configured.
 

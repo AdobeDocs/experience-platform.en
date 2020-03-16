@@ -5,7 +5,11 @@ description: Learn how to render personalized content with Experience Platform W
 seo-description: Learn how to render personalized content with Experience Platform Web SDK
 ---
 
-# Rendering personalized content
+# (Beta) Rendering personalized content
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
 
 The SDK automatically renders personalized content when you send an event to the server and set `viewStart` to `true` as an option on the event.
 
