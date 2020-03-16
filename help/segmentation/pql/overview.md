@@ -57,7 +57,7 @@ PQL provides support for the following literal types:
 
 | Literal | Definition | Example |
 | ------- | ---------- | ------- |
-| String | A data type comprised of characters surrounded by double quotes. | `"pizza"`, `"jobs"`, `"antidisestablishmentarianism"`
+| String | A data type comprised of characters surrounded by double quotes. | `"pizza"`, `"jobs"`, `"antidisestablishmentarianism"` |
 | Boolean | A data type that is either true or false. | `true`, `false` |
 | Integer | A data type representing a whole number. It can be positive, negative, or zero. | `-201`, `0`, `412` |
 | Double | A data type representing any real number. It can be positive, negative, or zero. | `-51.24`, `3.14`, `0.6942058` | 
