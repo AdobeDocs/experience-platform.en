@@ -5,9 +5,13 @@ description: Learn how to configure the Experience Platform Web SDK
 seo-description: Learn how to configure the Experience Platform Web SDK
 ---
 
-# Configuring the SDK
+# (Beta) Configuring the SDK
 
-Configuration for the SDK is done with the `configure` command. 
+>[!IMPORTANT]
+>
+>Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+
+Configuration for the SDK is done with the `configure` command.
 
 >[!Important]
 >`configure` should _always_ be the first command called.
@@ -102,13 +106,13 @@ Set this to configure a callback that is called for every event just before it i
 
 ## Privacy options
 
-### `optInEnabled`
+### `defaultConsent`
 
 | **Type** | **Required** | **Default Value** |
 | -------- | ------------ | ----------------- |
-| Boolean  | No           | `false`           |
+| Object   | No           | `{"general": "in"}`|
 
-Enables the opt-in feature, which allows work to be queued until the user provides opt-in preferences. After the user's preferences have been provided, work either proceeds or is aborted based on the user's preferences. See [Supporting Opt-In](supporting-opt-in.md) for more information.
+Sets the user's default consent. This is used when there is no consent preference already saved for the user. The other valid value is `{"general": "pending"}`. When this is set, work will be queued until the user provides consent preferences. After the user's preferences have been provided, work either proceeds or is aborted based on the user's preferences. See [Supporting Consent](supporting-consent.md) for more information.
 
 ## Personalization options
 
