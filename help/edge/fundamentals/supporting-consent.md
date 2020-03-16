@@ -13,7 +13,7 @@ seo-description: Learn how to support consent preferences with Experience Platfo
 
 To respect your user's privacy, you might want to ask for the user's consent before allowing the SDK to use user-specific data for certain purposes. Currently, the SDK only allows users to opt in or out of all purposes, but in the future Adobe hopes to provide more granular control over specific purposes.
 
-If the user opts into all purposes, the SDK is allowed to perform the following tasks:
+If the user opts in to all purposes, the SDK is allowed to perform the following tasks:
 
 * Send data to and from Adobe's servers.
 * Read and write cookies or web storage items (except for persisting the user's opt-in preferences).
@@ -22,7 +22,7 @@ If the user opts out of all purposes, the SDK does not perform any of these task
 
 ## Configuring Consent
 
-By default the user is opted into all purposes. To prevent the SDK from performing the above tasks until the user opts in, pass `"defaultConsent": { "general": "pending" }` during SDK configuration as follows:
+By default the user is opted in to all purposes. To prevent the SDK from performing the above tasks until the user opts in, pass `"defaultConsent": { "general": "pending" }` during SDK configuration as follows:
 
 ```javascript
 alloy("configure", {
@@ -56,11 +56,15 @@ alloy("setConsent", {
 });
 ```
 
-> **Note:** Once a user has opted out, the SDK will not allow you to set the users consent to `in`.
+>[!NOTE]
+>
+>After a user has opted out, the SDK will not allow you to set the users consent to `in`.
 
 Because the user chose to opt out, promises that were returned from previously queued commands are rejected. Future commands that depend on the user opting in will return promises that are similarly rejected. For more information on handling or suppressing errors, please refer to [Executing Commands](executing-commands.md).
 
-> **Note:** At the current time, the SDK supports only the `general` purpose. While we plan to build out a more robust set of purposes or categories that will correspond to the different Adobe capabilities and product offerings, the current implementation is an all or nothing approach to opt-in.  This only applies to the Adobe Experience Platform Web SDK and NOT other Adobe JavaScript libraries.
+>[!NOTE]
+>
+>Currently, the SDK supports only the `general` purpose. Although we plan to build out a more robust set of purposes or categories that will correspond to the different Adobe capabilities and product offerings, the current implementation is an all or nothing approach to opt-in.  This only applies to the Adobe Experience Platform Web SDK and NOT other Adobe JavaScript libraries.
 
 ## Persistence of consent preferences
 

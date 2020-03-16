@@ -1,4 +1,15 @@
-# Variables Automatically Mapped in Analytics
+---
+title: Variables Automatically Mapped in Analytics
+seo-title: Variables Automatically Mapped in Analytics with Adobe Experience Platform Web SDK
+description: Learn Which Variables are Automatically Mapped in Analytics with Experience Platform Web SDK
+seo-description: Learn Which Variables are Automatically Mapped in Analytics with Experience Platform Web SDK
+---
+
+# (Beta) Variables Automatically Mapped in Analytics
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
 
 Below is a list of variables that the Adobe Experience Platform Edge Network automatically maps into Analytics.
 
