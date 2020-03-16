@@ -20,7 +20,7 @@ This developer guide provides steps to help you start using the [Sensei Machine 
 
 ## Getting started
 
-You are required to have completed the [authentication](../../tutorials/authentication.md) tutorial in order to have access to the following request headers to make calls to the `/Engines` endpoint:
+You are required to have completed the [authentication](../../tutorials/authentication.md) tutorial in order to have access to the following request headers to make calls to the `/mlInstances` endpoint:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`

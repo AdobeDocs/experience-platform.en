@@ -16,6 +16,24 @@ This developer guide provides steps to help you start using the [Sensei Machine 
 *   [Update a Model by ID](#update-a-model-by-id)
 *   [Delete a Model by ID](#delete-a-model-by-id)
 
+## Getting started
+
+You are required to have completed the [authentication](../../tutorials/authentication.md) tutorial in order to have access to the following request headers to make calls to the `/models` endpoint:
+
+* Authorization: Bearer `{ACCESS_TOKEN}`
+* x-api-key: `{API_KEY}`
+* x-gw-ims-org-id: `{IMS_ORG}`
+
+All resources in Experience Platform are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
+
+* x-sandbox-name: `{SANDBOX_NAME}`
+
+For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+
+All requests that contain a payload (POST, PUT, PATCH) require an additional header:
+
+* Content-Type: application/json
+
 ### Retrieve a list of Models
 
 You can retrieve a list of Model details belonging to all Models by performing a single GET request to /models. By default this list will order itself from oldest created model and limit the results to 25. You may choose to filter results by specifying some query parameters. For a list of available queries, refer to the appendix section on [query parameters for asset retrieval](#query-parameters-for-asset-retrieval).
