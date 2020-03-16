@@ -7,7 +7,7 @@ topic: developer guide
 
 # Date and time functions
 
-Date and time functions are used to perform date and time operations on values within Profile Query Language (PQL). More information about other PQL functions can be found in the [Profile Query Language overview](../profile_query_language.md).
+Date and time functions are used to perform date and time operations on values within Profile Query Language (PQL). More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
 
 This document will provide more details for the following date/time functions:
 
@@ -194,4 +194,4 @@ person.birthday occurs = 3 days before today
 
 ## Next steps
 
-Now that you have learned about date and time functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](../profile_query_language.md).
+Now that you have learned about date and time functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](./overview.md).

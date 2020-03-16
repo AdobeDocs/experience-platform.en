@@ -7,7 +7,7 @@ topic: developer guide
 
 # Comparison functions
 
-Comparison functions are used to compare between different expressions and values, returning `true` or `false` accordingly. More information about other PQL functions can be found in the [Profile Query Language overview](../profile_query_language.md).
+Comparison functions are used to compare between different expressions and values, returning `true` or `false` accordingly. More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
 
 This document provides details for the following Profile Query Language (PQL) comparison functions: 
 
@@ -128,4 +128,4 @@ person.birthMonth <= 2
 
 ## Next steps
 
-Now that you have learned about comparison functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](../profile_query_language.md).
+Now that you have learned about comparison functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](./overview.md).

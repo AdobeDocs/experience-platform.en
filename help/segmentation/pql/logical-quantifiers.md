@@ -7,7 +7,7 @@ topic: developer guide
 
 # Logical quantifier functions
 
-Logical quantifiers can be used to assert conditions with arrays in Profile Query Language (PQL). More information about other PQL functions can be found in the [Profile Query Language overview](../profile_query_language.md).
+Logical quantifiers can be used to assert conditions with arrays in Profile Query Language (PQL). More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
 
 This document provides details on the following logical quantifiers:
 
@@ -66,4 +66,4 @@ forall E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 ## Next steps
 
-Now that you have learned about logical quantifiers, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](../profile_query_language.md).
+Now that you have learned about logical quantifiers, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](./overview.md).

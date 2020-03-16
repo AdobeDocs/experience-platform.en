@@ -7,7 +7,7 @@ topic: developer guide
 
 # Aggregation functions
 
-Aggregation functions are used to group together multiple values within Profile Query Language (PQL) arrays to form a single summary value. More information about other PQL functions can be found in the [Profile Query Language overview](../profile_query_language.md).
+Aggregation functions are used to group together multiple values within Profile Query Language (PQL) arrays to form a single summary value. More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
 
 This document provides more details for the following aggregation functions: 
 
@@ -109,4 +109,4 @@ orders.max(order.price)
 
 ## Next steps
 
-Now that you have learned about aggregation functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](../profile_query_language.md).
+Now that you have learned about aggregation functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](./overview.md).

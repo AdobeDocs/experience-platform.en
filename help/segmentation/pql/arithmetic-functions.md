@@ -7,7 +7,7 @@ topic: developer guide
 
 # Arithmetic functions
 
-Arithmetic functions are used to perform basic calculations on values in Profile Query Language (PQL). More information about other PQL functions can be found in the [Profile Query Language overview](../profile_query_language.md).
+Arithmetic functions are used to perform basic calculations on values in Profile Query Language (PQL). More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
 
 This document provides more details for the following arithmetic functions:
 
@@ -109,4 +109,4 @@ person.age % 5 = 0
 
 ## Next steps
 
-Now that you have learned about arithmetic functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](../profile_query_language.md).
+Now that you have learned about arithmetic functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](./overview.md).

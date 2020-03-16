@@ -7,7 +7,7 @@ topic: developer guide
 
 # Array, list, and set functions
 
-Profile Query Language (PQL) offers functions to make interaction with arrays, lists, and strings easier. More information about other PQL functions can be found in the [Profile Query Language overview](../profile_query_language.md).
+Profile Query Language (PQL) offers functions to make interaction with arrays, lists, and strings easier. More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
 
 This document provides more details for the following functions:
 
@@ -304,4 +304,4 @@ orders.topN(price, 5).head()
 
 ## Next steps
 
-Now that you have learned about array, list, and set functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](../profile_query_language.md).
+Now that you have learned about array, list, and set functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](./overview.md).
