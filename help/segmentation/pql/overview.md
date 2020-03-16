@@ -86,4 +86,4 @@ The following table outlines the different categories of supported PQL functions
 
 ## Next steps
 
-Now that you've learned how to use Profile Query Language, you can use PQL when creating and modifying segments. For more information on segmentation, please read the [segmentation overview](./segmentation-overview.md). 
+Now that you've learned how to use Profile Query Language, you can use PQL when creating and modifying segments. For more information on segmentation, please read the [segmentation overview](../home.md). 
