@@ -33,7 +33,7 @@ You can get started by following the Adobe Experience Platform Lab tutorial (see
 
 This recipe uses custom [XDM schemas](../../xdm/schema/field-dictionary.md) to model the input and output data:
 
-#### Input data schema
+### Input data schema
 
 Field Name | Type
 --- | ---
@@ -42,7 +42,7 @@ interactionType | String
 timestamp | String
 userId | String
 
-#### Output data schema
+### Output data schema
 
 Field Name | Type
 --- | ---
