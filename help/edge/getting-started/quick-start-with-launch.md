@@ -5,7 +5,11 @@ description: Quick start guide for using the Experience Platform Web SDK extensi
 seo-description: Quick start guide for using the Experience Platform Web SDK extension to collect data
 ---
 
-# Prerequisites
+# (Beta) Prerequisites
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
 
 Currently the Adobe Experience Platform Web SDK only supports sending data to Adobe Experience Platform using XDM. You must satisfy the following prerequisites.
 
