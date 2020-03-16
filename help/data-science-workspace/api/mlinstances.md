@@ -473,6 +473,7 @@ curl -X DELETE \
     "detail": "MLInstance deletion was successful"
 }
 ```
+
 ## Appendix
 
 The following sections provide reference information for various features of the Sensei Machine Learning API.
