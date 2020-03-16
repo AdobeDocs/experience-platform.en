@@ -57,6 +57,7 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
 #### Response
 
 A successful response returns a payload containing the details of your Docker registry including the Docker URL (`host`), username (`username`), and password (`password`).
@@ -273,7 +274,7 @@ A successful response returns a payload containing the details of the newly crea
 }
 ```
 
-###  Retrieve a list of Engines
+### Retrieve a list of Engines
 
 You can retrieve a list of Engines by performing a single GET request. To help filter results, you can specify query parameters in the request path. For a list of available queries, refer to the appendix section on [query parameters for asset retrieval](#appendix-query-parameters-for-asset-retrieval).
 
@@ -295,6 +296,7 @@ curl -X GET \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
 #### Response
 
 A successful response returns a list of Engines and their details.
@@ -369,6 +371,7 @@ curl -X GET \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
 #### Response
 
 A successful response returns a payload containing the details of the desired Engine.
