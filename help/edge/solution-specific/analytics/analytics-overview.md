@@ -1,20 +1,31 @@
-# Sending Data to Adobe Analytics
+---
+title: Sending Data to Adobe Analytics
+seo-title: Sending Data to Adobe Analytics with Adobe Experience Platform Web SDK
+description: Learn how to send Data to Adobe Analytics with Experience Platform Web SDK
+seo-description: Learn how to send Data to Adobe Analytics with Experience Platform Web SDK
+---
+
+# (Beta) Sending Data to Adobe Analytics
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
 
 The Adobe Experience Platform Web SDK can send data to Adobe Analytics. This works by translating `xdm` into a format the Adobe Analytics can use.
 
 ## Setup
 
-Adobe Analytics will automatically pickup the data you are sending if you have a report suite mapped in the Customer Config UI. Here you can map one or more reportings to a given config. Once a report suite is mapped the data will automatically begin flowing.
+Adobe Analytics automatically picks up the data you are sending if you have a report suite mapped in the Customer Config UI. Here you can map one or more reportings to a given config. After a report suite is mapped, the data will automatically begin flowing.
 
 ## Automatically Mapped Data
 
-The Adobe Experience Platform Edge Network will automatically map many XDM variables automatically. The complete list of automatically mapped variables is listed [here](../analytics/automatically-mapped-vars.md).
+The Adobe Experience Platform Edge Network automatically maps many XDM variables automatically. The complete list of automatically mapped variables is listed [here](../analytics/automatically-mapped-vars.md).
 
 ## Manually Mapped Data
 
 All data collected by the edge network can be accessed via processing rules. The data is flattened using dot notation and available as contextData.
 
-If I had a schema that looked like this.
+If you had a schema that looked like this.
 
 ```javascript
 {
@@ -39,7 +50,7 @@ If I had a schema that looked like this.
 }
 ```
 
-Then these would be the context data key available to me.
+Then these would be the context data keys available to you.
 
 ```javascript
 a.x.key //value
