@@ -5,7 +5,11 @@ description: Description of each piece of information that The Adobe Experience 
 seo-description: Description of each piece of information that The Adobe Experience Cloud SDK collects automatically
 ---
 
-# Information automatically collected
+# (Beta) Information automatically collected
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
 
 The Adobe Experience Cloud SDK collects a number of pieces of information automatically without any special configuration. However, this information can be disabled if needed using the `context` option in the `configure` command. [See Configuring the SDK](../fundamentals/configuring-the-sdk.md). Below is a list of those pieces of information. The name in parentheses indicates the string to use when configuring the context.
 

@@ -5,7 +5,11 @@ description: Learn how to install the Experience Platform Web SDK
 seo-description: Learn how to install the Experience Platform Web SDK
 ---
 
-# Installing the SDK
+# (Beta) Installing the SDK
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
 
 The first step in implementing the Adobe Experience Platform Web SDK is to copy and paste the following "base code" as high as possible in the `<head>` tag of your HTML:
 
