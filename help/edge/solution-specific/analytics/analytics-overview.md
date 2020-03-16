@@ -8,7 +8,7 @@ Adobe Analytics will automatically pickup the data you are sending if you have a
 
 ## Automatically Mapped Data
 
-The Adobe Experience Platform Edge Network will automatically map many XDM variables automatically. The complete list of automatically mapped variables is listed [here](../automatically-mapped-vars.md).
+The Adobe Experience Platform Edge Network will automatically map many XDM variables automatically. The complete list of automatically mapped variables is listed [here](../analytics/automatically-mapped-vars.md).
 
 ## Manually Mapped Data
 
