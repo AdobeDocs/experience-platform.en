@@ -49,6 +49,7 @@ alloy("setConsent", {
   "general": "out"
 });
 ```
+
 > **Note:** Once a user has opted out, the SDK will not allow you to set the users consent to `in`.
 
 Because the user chose to opt out, promises that were returned from previously queued commands are rejected. Future commands that depend on the user opting in will return promises that are similarly rejected. For more information on handling or suppressing errors, please refer to [Executing Commands](executing-commands.md).
