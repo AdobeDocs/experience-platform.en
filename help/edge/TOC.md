@@ -10,7 +10,7 @@ user-guide-title:  Adobe Experience Platform Edge Network Help
 * Getting started {#get-started}
   * [Quick start with Launch](getting-started/quick-start-with-launch.md)
   * [Deploying all products](getting-started/deploying-all-products.md)
-* Fundamentals {#fundamentals}  
+* Fundamentals {#fundamentals}
   * [Installing the SDK](fundamentals/installing-the-sdk.md)
   * [Executing commands](fundamentals/executing-commands.md)
   * [Configuring the SDK](fundamentals/configuring-the-sdk.md)
@@ -19,7 +19,7 @@ user-guide-title:  Adobe Experience Platform Edge Network Help
   * [Debugging](fundamentals/debugging.md)
   * [Interacting with multiple properties](fundamentals/interacting-with-multiple-properties.md)
   * [Rendering personalized content](fundamentals/rendering-personalization-content.md)
-  * [Supporting Opt-in](fundamentals/supporting-opt-in.md)
+  * [Supporting consent](fundamentals/supporting-consent.md)
   * [Supporting in-app browsers](fundamentals/supporting-in-app-browsers.md)
 * What to Implement {#implement}
   * [Products](what-to-implement/commerce.md)

@@ -26,11 +26,11 @@ The following sections provide additional information that you will need to know
 
 ## Reading sample API calls
 
-This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls]^ in the Experience Platform troubleshooting guide.
+This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the Experience Platform troubleshooting guide.
 
 ## Gather values for required headers
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial]^. Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -40,9 +40,9 @@ All resources in Experience Platform, including those belonging to the Schema Re
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-> **Note:** For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+>[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
 
-All lookup (GET) requests to the Schema Registry require an additional Accept header, whose value determines the format of information returned by the API. See the [Accept header](#accept-header) section below for more details.
+All lookup (GET) requests to the Schema Registry require an additional Accept header, whose value determines the format of information returned by the API. See the [Accept header](#accept) section below for more details.
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
@@ -150,7 +150,7 @@ A successful response returns information regarding your organization's use of t
 
 * `tenantId`: The `TENANT_ID` value for your IMS Organization.
 
-## Understand the `CONTAINER_ID`
+## Understand the `CONTAINER_ID` {#container}
 
 Calls to the Schema Registry API require the use of a `CONTAINER_ID`. There are two containers against which API calls can be made: the **global container** and the **tenant container**.
 
@@ -164,7 +164,7 @@ Not to be confused with your unique `TENANT_ID`, the tenant container holds all 
 
 When you create a class, mixin, schema or data type in the tenant container, it is saved to the Schema Registry and assigned an `$id` URI that includes your `TENANT_ID`. This `$id` is used throughout the API to reference specific resources. Examples of `$id` values are provided in the next section.
 
-## Schema identification
+## Schema identification {#schema-identification}
 
 Schemas are identified with an `$id` attribute in the form of a URI, such as: 
 * `https://ns.adobe.com/xdm/context/profile` 
@@ -178,7 +178,7 @@ Calls to the Schema Registry API will support either the URL-encoded `$id` URI o
 * `https%3A%2F%2Fns.adobe.com%2Fxdm%2Fcontext%2Fprofile`
 * `https%3A%2F%2Fns.adobe.com%2F{TENANT_ID}%2Fschemas%2F7442343-abs2343-21232421`
 
-## Accept header
+## Accept header {#accept}
 
 When performing list and lookup (GET) operations in the Schema Registry API, an Accept header is required to determine the format of the data returned by the API. When looking up specific resources, a version number must also be included in the Accept header.
 
@@ -194,7 +194,7 @@ The following table lists compatible Accept header values, including those with 
 | `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` attributes and `allOf` resolved. No titles or descriptions. |
 | `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` attributes and `allOf` resolved. Descriptors are included. |
 
-> **Note:** If supplying the `major` version only (e.g. 1, 2, 3), the registry will return the latest `minor` version (e.g. .1, .2, .3) automatically.
+>[!NOTE] If supplying the `major` version only (e.g. 1, 2, 3), the registry will return the latest `minor` version (e.g. .1, .2, .3) automatically.
 
 ## XDM field constraints and best practices
 
