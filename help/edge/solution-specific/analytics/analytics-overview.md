@@ -1,4 +1,4 @@
-# Sending Data to Adobe Analtyics
+# Sending Data to Adobe Analytics
 
 The Adobe Experience Platform Web SDK can send data to Adobe Analytics. This works by translating `xdm` into a format the Adobe Analytics can use.
 
@@ -42,16 +42,16 @@ If I had a schema that looked like this.
 Then these would be the context data key available to me.
 
 ```javascript
-a.xdm.key //value
-a.xdm.object.key1 //value1
-a.xdm.object.key2 //value2
-a.xdm.array[0] //v1
-a.xdm.array[1] //v2
-a.xdm.array[3] //v3
-a.xdm.arrayofobjects[1].obj1key //objval1
-a.xdm.arrayofobjects[2].obj2key //objval2
+a.x.key //value
+a.x.object.key1 //value1
+a.x.object.key2 //value2
+a.x.array[0] //v1
+a.x.array[1] //v2
+a.x.array[3] //v3
+a.x.arrayofobjects[1].obj1key //objval1
+a.x.arrayofobjects[2].obj2key //objval2
 ```
 
 Here is an example of a processing rule that would use this data.
 
-TODO: Screenshot of processing rule.
+![Processing Rules Interface](../../../assets/edge_analytics_processing_rules.png)
