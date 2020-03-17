@@ -10,6 +10,7 @@ topic: Overview
 JupyterLab is a web-based user interface for <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> and is tightly integrated into Adobe Experience Platform. It provides an interactive development environment for data scientists to work with Jupyter notebooks, code, and data.
 
 This document provides an overview of JupyterLab and its features as well as instructions to perform common actions:
+
 *   [JupyterLab on Adobe Experience Platform](#jupyterlab-on-adobe-experience-platform)
 *   [Integration with other Platform services](#integration-with-other-platform-services)
 *   [Key features and common operations](#key-features-and-common-operations)
@@ -648,47 +649,3 @@ Click the kernels below to show their supported libraries:
 | mkl-rt | 11.1 |
 
 </details>
-
-
-## Optional SQL flags for Query Service
-
-This table outlines the optional SQL flags that can be used for Query Service.
-
-<table>
-    <tr>
-        <th ><strong> Flag </strong></th>
-        <th ><strong> Description </strong></th>
-    </tr>
-    <tr>
-        <td >
-            <code> -h </code>, <code> --help </code>
-        </td >
-        <td >
-            Show the help message and exit.
-        </td >
-    </tr>
-    <tr>
-        <td >
-            <code> -n </code>, <code> --notify </code>
-        </td >
-        <td >
-            Toggle option for notifying query results.
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <code> -a </code>, <code> --async </code>
-        </td>
-        <td >
-            Using this flag executes the query asynchonously and can free up the kernel while the query is executing. Be cautious when assigning query results to variables as it may be undefined if the query is not complete.
-        </td>
-    </tr>
-    <tr>
-        <td >
-            <code> -d </code>, <code> --display </code>
-        </td>
-        <td >
-            Using this flag prevents results from being displayed.
-        </td>
-    </tr>
-</table>
