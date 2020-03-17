@@ -92,6 +92,6 @@ The decision logic is organized by activities, each of which specifies a filter 
 
 Each decision is made by first applying constraints to reduce the number of options and then ranking the remaining options. Although most of the logic is evaluated inside Decisioning Service, various adjunct services are used to help with these two aspects. For example, a capping service manages upper bounds for how often an option can be used in any decision, and another service may host an machine learning model that is used to calculate scores for a profile and option.
 
-To learn more about using the Repository APIs, see the tutorial [Manage Decisioning objects and rule using APIs](./tutorials/entities.md)
+To learn more about using the Repository APIs, see the tutorial [Manage Decisioning entities and rule using APIs](./tutorials/entities.md)
 
 To learn more about using the Decisioning Service runtime, see the tutorial [Work with the Decisioning Service runtime using APIs](./tutorials/runtime.md)
