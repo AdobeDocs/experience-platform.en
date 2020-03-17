@@ -649,3 +649,46 @@ Click the kernels below to show their supported libraries:
 | mkl-rt | 11.1 |
 
 </details>
+
+## Optional SQL flags for Query Service
+
+This table outlines the optional SQL flags that can be used for Query Service.
+
+<table>
+    <tr>
+        <th><strong> Flag </strong></th>
+        <th><strong> Description </strong></th>
+    </tr>
+    <tr>
+        <td>
+            <code> -h </code>, <code> --help </code>
+        </td >
+        <td >
+            Show the help message and exit.
+        </td>
+    </tr>
+    <tr>
+        <td >
+            <code> -n </code>, <code> --notify </code>
+        </td>
+        <td>
+            Toggle option for notifying query results.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <code> -a </code>, <code> --async </code>
+        </td>
+        <td>
+            Using this flag executes the query asynchonously and can free up the kernel while the query is executing. Be cautious when assigning query results to variables as it may be undefined if the query is not complete.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <code> -d </code>, <code> --display </code>
+        </td>
+        <td>
+            Using this flag prevents results from being displayed.
+        </td>
+    </tr>
+</table>
