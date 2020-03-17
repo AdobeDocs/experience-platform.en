@@ -205,6 +205,8 @@ All configurable properties are listed in the table below:
 
 ### Launcher
 
+<!-- Databricks update -->
+
 [//]: # (Talk about the different Notebooks, introduce that certain starter notebooks are limited to particular kernels)
 
 The customized *Launcher* provides you with useful notebook templates for their supported kernels to help you kickstart your task, including:
@@ -510,9 +512,6 @@ val timedf = spark.sql("""
 
 
 ## Supported libraries
-
-Click the kernels below to show their supported libraries:
-
 
 ### Python / R
 
