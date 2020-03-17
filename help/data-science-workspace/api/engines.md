@@ -9,7 +9,7 @@ topic: Developer guide
 
 Engines are the foundations for machine learning Models in Data Science Workspace. They contain machine learning algorithms that solve specific problems, feature pipelines to perform feature engineering, or both. 
 
-This developer guide provides steps to help you start using the [Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) Engines endpoint and demonstrates API calls for performing CRUD operations for the following:
+This developer guide provides steps to help you start using the [Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) `/engines` endpoint and demonstrates API calls for performing CRUD operations for the following:
 
 *   [Lookup your Docker registry](#lookup-your-docker-registry)
 *   [Create an Engine using Docker URLs](#create-an-engine-using-docker-urls)
