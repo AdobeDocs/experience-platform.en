@@ -223,63 +223,63 @@ Some notebook templates are limited to certain kernels. Template availability fo
 <table>
     <tr>
         <td></td>
-        <th scope="col"><strong>Blank</strong></th>
-        <th scope="col"><strong>Starter</strong></th>
-        <th scope="col"><strong>Retail Sales</strong></th>
-        <th scope="col"><strong>Recipe Builder</strong></th>
-        <th scope="col"><strong>Query Service</strong></th>
-        <th scope="col"><strong>XDM Events</strong></th>
-        <th scope="col"><strong>XDM Queries</strong></th>
-        <th scope="col"><strong>Aggregation</strong></th>
-        <th scope="col"><strong>Clustering</strong></th>
+        <th><strong>Blank</strong></th>
+        <th><strong>Starter</strong></th>
+        <th><strong>Retail Sales</strong></th>
+        <th><strong>Recipe Builder</strong></th>
+        <th><strong>Query Service</strong></th>
+        <th><strong>XDM Events</strong></th>
+        <th><strong>XDM Queries</strong></th>
+        <th><strong>Aggregation</strong></th>
+        <th><strong>Clustering</strong></th>
     </tr>
     <tr>
-        <th scope="row" ><strong>Python</strong></th>
-        <td style="text-align:center; background-color:#66ff66">yes</td>
-        <td style="text-align:center; background-color:#66ff66">yes</td>
-        <td style="text-align:center; background-color:#66ff66">yes</td>
-        <td style="text-align:center; background-color:#66ff66">yes</td>
-        <td style="text-align:center; background-color:#66ff66">yes</td>
-        <td style="text-align:center; background-color:#66ff66">yes</td>
-        <td style="text-align:center; background-color:#ff6666">no</td>
-        <td style="text-align:center; background-color:#ff6666">no</td>
-        <td style="text-align:center; background-color:#ff6666">no</td>
+        <th><strong>Python</strong></th>
+        <td >yes</td>
+        <td >yes</td>
+        <td >yes</td>
+        <td >yes</td>
+        <td >yes</td>
+        <td >yes</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
     </tr>
     <tr>
         <th scope="row" ><strong>R</strong></th>
-        <td style="text-align:center; background-color:#66ff66">yes</td>
-        <td style="text-align:center; background-color:#66ff66">yes</td>
-        <td style="text-align:center; background-color:#66ff66">yes</td>
-        <td style="text-align:center; background-color:#ff6666">no</td>
-        <td style="text-align:center; background-color:#ff6666">no</td>
-        <td style="text-align:center; background-color:#ff6666">no</td>
-        <td style="text-align:center; background-color:#ff6666">no</td>
-        <td style="text-align:center; background-color:#ff6666">no</td>
-        <td style="text-align:center; background-color:#ff6666">no</td>
+        <td >yes</td>
+        <td >yes</td>
+        <td >yes</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
     </tr>
     <tr>
         <th scope="row" ><strong>PySpark</strong></th>
-        <td style="text-align:center; background-color:#66ff66">yes</td>
-        <td style="text-align:center; background-color:#66ff66">yes</td>
-        <td style="text-align:center; background-color:#ff6666">no</td>
-        <td style="text-align:center; background-color:#ff6666">no</td>
-        <td style="text-align:center; background-color:#ff6666">no</td>
-        <td style="text-align:center; background-color:#ff6666">no</td>
-        <td style="text-align:center; background-color:#66ff66">yes</td>
-        <td style="text-align:center; background-color:#66ff66">yes</td>
-        <td style="text-align:center; background-color:#ff6666">no</td>
+        <td >yes</td>
+        <td >yes</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >yes</td>
+        <td >yes</td>
+        <td >no</td>
     </tr>
     <tr>
         <th scope="row" ><strong>Spark</strong></th>
-        <td style="text-align:center; background-color:#66ff66">yes</td>
-        <td style="text-align:center; background-color:#66ff66">yes</td>
-        <td style="text-align:center; background-color:#ff6666">no</td>
-        <td style="text-align:center; background-color:#ff6666">no</td>
-        <td style="text-align:center; background-color:#ff6666">no</td>
-        <td style="text-align:center; background-color:#ff6666">no</td>
-        <td style="text-align:center; background-color:#ff6666">no</td>
-        <td style="text-align:center; background-color:#ff6666">no</td>
-        <td style="text-align:center; background-color:#66ff66">yes</td>
+        <td >yes</td>
+        <td >yes</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >yes</td>
     </tr>
 </table>
 
