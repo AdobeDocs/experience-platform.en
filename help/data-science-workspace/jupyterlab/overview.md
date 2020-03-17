@@ -513,8 +513,8 @@ val timedf = spark.sql("""
 
 Click the kernels below to show their supported libraries:
 
-<details>
-<summary>Python / R</summary>
+
+### Python / R
 
 | Library | Version|
 | :------ | :------ |
@@ -612,10 +612,7 @@ Click the kernels below to show their supported libraries:
 | iso3166 | 1.0 |
 | nbimporter | 0.3.1 |
 
-</details>
-
-<details>
-<summary>PySpark</summary>
+### PySpark
 
 | Library | Version |
 | :------ | :------ |
@@ -639,8 +636,6 @@ Click the kernels below to show their supported libraries:
 | azure-storage-blob | 1.4.0 |
 | python | 3.6.7 |
 | mkl-rt | 11.1 |
-
-</details>
 
 ## Optional SQL flags for Query Service
 
