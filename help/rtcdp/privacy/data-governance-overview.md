@@ -36,7 +36,10 @@ In order for data usage labels to effectively support data compliance, data usag
 
 Adobe Experience Platform provides several **core policies** for common customer experience use cases. These policies can be viewed by making a request to the [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml), as shown in the "List all policies" section in the [Policy Service developer guide](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_policy_service_developer_guide.md). You can also create your own **custom policies** to model custom usage restrictions, as shown in the "Create a policy" section in the developer guide.
 
-## Enforce data usage compliance
+## (Beta) Enforce data usage compliance {#enforce-data-usage-compliance}
+
+>[!IMPORTANT]
+>This feature is currently in beta and is not available to all users. It can be enabled upon request. The documentation and the functionality are subject to change.
 
 Once data is labeled and usage policies are defined, you can enforce data usage compliance with policies. When activating audience segments to destinations in Real-time CDP, Data Governance automatically enforces usage policies should any violations occur.
 
