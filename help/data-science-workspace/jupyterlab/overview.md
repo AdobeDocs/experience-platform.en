@@ -654,39 +654,39 @@ mkl-rt | 11.1
 
 <table>
     <tr>
-        <th ><strong>Flag</strong></th>
-        <th ><strong>Description</strong></th>
+        <th ><strong> Flag </strong></th>
+        <th ><strong> Description </strong></th>
     </tr>
     <tr>
-        <td  nowrap>
-            <code>-h</code>, <code>--help</code>
-        </td>
+        <td >
+            <code> -h </code>, <code> --help </code>
+        </td >
         <td >
             Show the help message and exit.
-        </td>
+        </td >
     </tr>
     <tr>
-        <td  nowrap>
-            <code>-n</code>, <code>--notify</code>
-        </td>
+        <td >
+            <code> -n </code>, <code> --notify </code>
+        </td >
         <td >
             Toggle option for notifying query results.
         </td>
     </tr>
     <tr>
-        <td  nowrap>
-            <code>-a</code>, <code>--async</code>
+        <td>
+            <code> -a </code>, <code> --async </code>
         </td>
         <td >
-            Using this flag will execute the query asynchonously and can free up the kernel while the query is executing. Be cautious when assigning query results to variables as it may be undefined if the query is not complete.
+            Using this flag executes the query asynchonously and can free up the kernel while the query is executing. Be cautious when assigning query results to variables as it may be undefined if the query is not complete.
         </td>
     </tr>
     <tr>
-        <td  nowrap>
-            <code>-d</code>, <code>--display</code>
+        <td >
+            <code> -d </code>, <code> --display </code>
         </td>
         <td >
-            Using this flag will prevent results from being displayed.
+            Using this flag prevents results from being displayed.
         </td>
     </tr>
 </table>
