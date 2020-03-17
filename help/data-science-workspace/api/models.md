@@ -11,10 +11,10 @@ A model is an instance of a machine learning recipe that is trained using histor
 
 This developer guide provides steps to help you start using the [Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) `/models` endpoint and demonstrates API calls for performing CRUD operations for the following:
 
-*   [Retrieve a list of Models](#retrieve-a-list-of-models)
-*   [Retrieve a specific Model](#retrieve-a-specific-model)
-*   [Update a Model by ID](#update-a-model-by-id)
-*   [Delete a Model by ID](#delete-a-model-by-id)
+* [Retrieve a list of Models](#retrieve-a-list-of-models)
+* [Retrieve a specific Model](#retrieve-a-specific-model)
+* [Update a Model by ID](#update-a-model-by-id)
+* [Delete a Model by ID](#delete-a-model-by-id)
 
 ## Getting started
 
@@ -185,6 +185,7 @@ You can update an existing Model by overwriting its properties through a PUT req
 ```http
 PUT /models/{MODEL_ID}
 ```
+
 * `{MODEL_ID}`: The identifier of the trained or published Model.
   
 #### Request
@@ -211,6 +212,7 @@ curl -X PUT \
         "updated": "2019-01-02T00:00:00.000Z"
     }'
 ```
+
 #### Response
 
 A successful response returns a payload containing the Experiment's updated details.
@@ -240,6 +242,7 @@ You can delete a single Model by performing a DELETE request that includes the t
 ```http
 DELETE /models/{MODEL_ID}
 ```
+
 * `{MODEL_ID}`: The identifier of the trained or published Model.
 
 #### Request
