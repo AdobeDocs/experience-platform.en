@@ -285,7 +285,7 @@ Some notebook templates are limited to certain kernels. Template availability fo
 
 To open a new *Launcher*, click **File > New Launcher**. Alternatively, expand the **File browser** from the left sidebar and click the plus symbol (**+**):
 
-![](./images/new_launcher.gif)
+![](../images/jupyterlab/user-guide/new_launcher.gif)
 
 ## Access Platform data using Notebooks
 
