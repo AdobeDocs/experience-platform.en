@@ -50,7 +50,7 @@ The following list outlines some of the features that are unique to JupyterLab o
     *   In Experience Platform, JupyterLab provides pre-installed libraries for Python, R, and PySpark. See the [appendix](#supported-libraries) for a complete list of supported libraries.
 *   **Library controller**
     *   When the the pre-installed libraries are lacking for your needs, additional libraries can be installed for Python and R, and are temporarily stored in isolated containers to maintain the integrity of Platform and keep your data safe. See the [kernels](#kernels) section for more details.
-        >   **Note:** Additional libraries are only available for the session in which they were installed. You must reinstall any additional libraries you require when starting new sessions.
+        >[!NOTE] Additional libraries are only available for the session in which they were installed. You must reinstall any additional libraries you require when starting new sessions.
 
 ## Integration with other Platform services
 
@@ -234,7 +234,7 @@ Some notebook templates are limited to certain kernels. Template availability fo
         <th scope="col"><strong>Clustering</strong></th>
     </tr>
     <tr>
-        <th scope="row" style="text-align:left"><strong>Python</strong></th>
+        <th scope="row" ><strong>Python</strong></th>
         <td style="text-align:center; background-color:#66ff66">yes</td>
         <td style="text-align:center; background-color:#66ff66">yes</td>
         <td style="text-align:center; background-color:#66ff66">yes</td>
@@ -246,7 +246,7 @@ Some notebook templates are limited to certain kernels. Template availability fo
         <td style="text-align:center; background-color:#ff6666">no</td>
     </tr>
     <tr>
-        <th scope="row" style="text-align:left"><strong>R</strong></th>
+        <th scope="row" ><strong>R</strong></th>
         <td style="text-align:center; background-color:#66ff66">yes</td>
         <td style="text-align:center; background-color:#66ff66">yes</td>
         <td style="text-align:center; background-color:#66ff66">yes</td>
@@ -258,7 +258,7 @@ Some notebook templates are limited to certain kernels. Template availability fo
         <td style="text-align:center; background-color:#ff6666">no</td>
     </tr>
     <tr>
-        <th scope="row" style="text-align:left"><strong>PySpark</strong></th>
+        <th scope="row" ><strong>PySpark</strong></th>
         <td style="text-align:center; background-color:#66ff66">yes</td>
         <td style="text-align:center; background-color:#66ff66">yes</td>
         <td style="text-align:center; background-color:#ff6666">no</td>
@@ -270,7 +270,7 @@ Some notebook templates are limited to certain kernels. Template availability fo
         <td style="text-align:center; background-color:#ff6666">no</td>
     </tr>
     <tr>
-        <th scope="row" style="text-align:left"><strong>Spark</strong></th>
+        <th scope="row" ><strong>Spark</strong></th>
         <td style="text-align:center; background-color:#66ff66">yes</td>
         <td style="text-align:center; background-color:#66ff66">yes</td>
         <td style="text-align:center; background-color:#ff6666">no</td>
@@ -654,38 +654,38 @@ mkl-rt | 11.1
 
 <table>
     <tr>
-        <th style="text-align:left"><strong>Flag</strong></th>
-        <th style="text-align:left"><strong>Description</strong></th>
+        <th ><strong>Flag</strong></th>
+        <th ><strong>Description</strong></th>
     </tr>
     <tr>
-        <td style="text-align:left" nowrap>
+        <td  nowrap>
             <code>-h</code>, <code>--help</code>
         </td>
-        <td style="text-align:left">
+        <td >
             Show the help message and exit.
         </td>
     </tr>
     <tr>
-        <td style="text-align:left" nowrap>
+        <td  nowrap>
             <code>-n</code>, <code>--notify</code>
         </td>
-        <td style="text-align:left">
+        <td >
             Toggle option for notifying query results.
         </td>
     </tr>
     <tr>
-        <td style="text-align:left" nowrap>
+        <td  nowrap>
             <code>-a</code>, <code>--async</code>
         </td>
-        <td style="text-align:left">
+        <td >
             Using this flag will execute the query asynchonously and can free up the kernel while the query is executing. Be cautious when assigning query results to variables as it may be undefined if the query is not complete.
         </td>
     </tr>
     <tr>
-        <td style="text-align:left" nowrap>
+        <td  nowrap>
             <code>-d</code>, <code>--display</code>
         </td>
-        <td style="text-align:left">
+        <td >
             Using this flag will prevent results from being displayed.
         </td>
     </tr>
