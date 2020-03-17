@@ -47,7 +47,7 @@ At any given time during a customer's journey, the best option for a given activ
 
 The algorithm or function that produces the list of top-K options varies with the use case. The internal components of that algorithm is different for different use cases. The components are defined in a repository at design time and and "compiled" into instructions for the use case specific decision strategy.
 
-![decision-optimization]()
+![decision-optimization](./images/decisioning-optimization.png)
 
 ## Working with Decisioning Service
 
@@ -55,7 +55,7 @@ The Decisioning Service, like other Platform services, adopts an API first philo
 
 You can use Decisioning Service in a synchronous request-response interaction mode facilitated by a simple HTTP REST API. The API call returns the currently best option for a single profile. The “currently best option" selection will change based on the rules and constraints applied to all options that are in consideration by a given activity. The REST API allows getting the next best option for multiple activities at once. This allows the arbitration of options across channels. When responses for multiple activities are obtained together, additional rules may be applied.
 
-![decisioning-API]()
+![decisioning-API](./images/decisioning-API.png)
 
 ### Integration with other Platform workflows
 
@@ -76,15 +76,15 @@ Additionally, to use Decisioning Service, the following steps:
 - Define decision components using the Repository APIs. These are the business logic entities that make up the decision strategy. The decision components will be automatically compiled into a format used by the Decision Service Runtime. The Repository APIs are illustrated on the left side in the diagram below.
 - Invoke the Runtime API to obtain the best option as per the business logic defined in the prior step. The Decision Service Runtime APIs are illustrated on the right side in the diagram below.
 
-![decisioning-API1]()
+![decisioning-API1](./images/decisioning-API1.png)
 
 The activation of the business logic entities happens automatically and continuously. As soon as a new option is saved in the repository and it is marked as "approved", it will be a candidate for inclusion in the set of available options. As soon as a decision rule is updated, the rule set will be reassembled and prepared for runtime execution. At this automatic activation step, any constraints defined by the business logic that aren’t dependent on runtime context will be evaluated. The results of this activation step are sent to a cache where they are available to the Decisioning Service runtime. This is illustrated in the following diagram.
  
-![decisioning-API2]()
+![decisioning-API2](./images/decisioning-API2.png)
 
 Once the option sets, rule sets and constraints are activated, and have been pushed to Decisioning Service nodes, a simple API is used to post a request for a decision. The API is typically called by a delivery service that then takes the proposed option (e.g. next best action or next best offer) and assembles the experience or executes the action. If the proposition is an offer, then the content that represents that offer is looked up and is inserted in an experience delivered to the end user. This is illustrated in the following diagram.
 
-![decisioning-API3]()
+![decisioning-API3](./images/decisioning-API3.png)
 
 Delivery Service assembles data for the decision request. It determines the ID of the profile entity for which the best option is decided upon. It also assembles any context data that is not stored in Customer Profile but is potentially used by the decision logic. 
 
@@ -92,6 +92,6 @@ The decision logic is organized by activities, each of which specifies a filter 
 
 Each decision is made by first applying constraints to reduce the number of options and then ranking the remaining options. Although most of the logic is evaluated inside Decisioning Service, various adjunct services are used to help with these two aspects. For example, a capping service manages upper bounds for how often an option can be used in any decision, and another service may host an machine learning model that is used to calculate scores for a profile and option.
 
-To learn more about using the Repository APIs, see the tutorial [Manage Decisioning entities and rule using APIs](./tutorials/entities.md)
+To learn more about using the Repository APIs, see the tutorial on [Managing Decisioning entities and rule using APIs](./tutorials/entities.md)
 
-To learn more about using the Decisioning Service runtime, see the tutorial [Work with the Decisioning Service runtime using APIs](./tutorials/runtime.md)
+To learn more about using the Decisioning Service runtime, see the tutorial on [Working with the Decisioning Service runtime using APIs](./tutorials/runtime.md)
