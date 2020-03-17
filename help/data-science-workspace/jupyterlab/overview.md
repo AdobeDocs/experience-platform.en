@@ -392,17 +392,12 @@ Before you use Query Service in JupyterLab, ensure you have a working understand
 
 Querying data using Query Service requires you to provide the name of the target dataset. You can generate the necessary code cells by finding the desired dataset using the **Data explorer**. Right click on the dataset listing and click **Query Data in Notebook** to generate the following two code cells in your notebook:
 
-<ol>
-<li>
 
 In order to utilize Query Service in JupyterLab, you must first create a connection between your working Python notebook and Query Service. This can be achieved by executing the first generated cell.
 
 ```python
 qs_connect()
 ```
-
-</li>
-<li>
 
 In the second generated cell, the first line must be defined before the SQL query. By default, the generated cell defines an optional variable (`df0`) which saves the query results as a Pandas dataframe. <br>The `-c QS_CONNECTION` argument is mandatory and tells the kernel to execute the SQL query against Query Service. See the [appendix](#optional-sql-flags-for-query-service) for a list of additional arguments.
 
@@ -413,9 +408,6 @@ FROM name_of_the_dataset
 LIMIT 10
 /* Querying table "name_of_the_dataset" (datasetId: {DATASET_ID})*/
 ```
-
-</li>
-</ol>
 
 Python variables can be directly referenced within a SQL query by using string-formatted syntax and wrapping the variables in curly brackets (`{}`), as shown in the following example:
 
