@@ -15,7 +15,6 @@ The tutorial has two parts:
 
 - Applying the knowledge about the repository APIs, the [second part](#creating-and-managing-offer-decisioning-entities-using-apis) focuses on the business entities that are managed via the repository APIs. With the same APIs applied the only difference between managing two different entities such as an activity and a business rule is the request and response payload, plus the necessary header values that indicate the type of object that is managed.  
   
-
 ## Getting started
 
 This tutorial requires a working understanding of the Experience Platform services and the API conventions. The Platform repository is a service used by several other Platform services to store business objects and various types of metadata. It provides a secure and flexible way to manage and query those objects for use by several runtime services. The Decisioning Service is one of those. Before beginning this tutorial, please review the documentation for the following:
@@ -40,7 +39,7 @@ In order to make calls to Platform APIs, you must first complete the [authentica
 
 All resources in Experience Platform are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+- x-sandbox-name: `{SANDBOX_NAME}`
 
 > **Note:** For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
 
