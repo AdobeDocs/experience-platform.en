@@ -7,28 +7,26 @@ topic: User guide
 
 # Attribution AI user guide
 
->   **Note**: The Attribution AI functionality outlined in this document is in beta. The documentation and the functionality are subject to change.
+Attribution AI in Adobe Intelligent Services is a multi-channel, algorithmic attribution service that calculates the influence and incremental impact of customer interactions against specified outcomes. With Attribution AI, you can measure and optimize your customers' experiences by understanding the impact of every individual customer interaction in each phase of your customers' journeys.
 
-Attribution AI in Adobe Experience Platform Intelligence Services is a multi-channel, algorithmic attribution service that calculates the influence and incremental impact of customer interactions against specified outcomes. With Attribution AI, you can measure and optimize your customers' experiences by understanding the impact of every individual customer interaction in each phase of your customers' journeys.
-
-This document serves as a guide for interacting with Attribution AI in the Adobe Experience Platform Intelligence Services user interface. The following topics are covered:
+This document serves as a guide for interacting with Attribution AI in the  Intelligent Services user interface. The following topics are covered:
 
 - [Create an instance](#create-an-instance)
   - [Name the instance](#name-the-instance)
-  - [Select a data source](#select-a-data-source)
+  - [Select a dataset](#select-a-dataset)
 - [Defining events](#defining-events)
   - [Define conversion events](#define-conversion-events)
   - [Define the lookback window](#define-lookback-window)
   - [Define touchpoints](#define-touchpoints)
 - [Advanced training and scoring setup](#advanced-training-and-scoring-setup)
-  - [Schedule training](#schedule-training)
+  - [Schedule scoring](#schedule-scoring)
   - [Region-based modeling](#region-based-modeling-optional)
   - [Training window](#training-window)
 - [Next steps](#next-steps)
 
 ## Create an instance
 
-In the Adobe Experience Platform UI, click **Services** in the left navigation. The *Services* browser appears and displays available Adobe Intelligence services. In the container for Attribution AI, click **Open**.
+In the Adobe Experience Platform UI, click **Services** in the left navigation. The *Services* browser appears and displays available Adobe intelligent services. In the container for Attribution AI, click **Open**.
 
 ![Accessing your instance](./images/user-guide/open_Attribution_ai.png)
 
@@ -36,7 +34,7 @@ The Attribution AI dashboard appears. The dashboard lists service instances of A
 
 ![Create instance](./images/user-guide/landing_page.png)
 
-Next, the setup page for Attribution AI appears, where you can provide basic information and specify a data source for the instance.
+Next, the setup page for Attribution AI appears, where you can provide basic information and specify a dataset for the instance.
 
 ![setup page](./images/user-guide/setup_attribution.png)
 
@@ -46,9 +44,9 @@ Under *Basic information*, provide a name and optional description for your serv
 
 ![naming an instance](./images/user-guide/naming_instance.png)
 
-### Select a data source
+### Select a dataset
 
-After filling out the basic information, click the dropdown labeled **Select Data Locations** to select your data source. The data source is used to train the model and score the subsequent data it produces. Once a data source is chosen, click **Next** in the top-right corner to proceed to the define events page.
+After filling out the basic information, click the dropdown labeled **Select Dataset** to select your dataset. The dataset is used to train the model and score the subsequent data it produces. Once a dataset is chosen, click **Next** in the top-right corner to proceed to the define events page.
 
 ![setup page](./images/user-guide/initial_creation_attribution.png)
 
@@ -68,7 +66,7 @@ In order to define a conversion event, you need to give the event a name and sel
 
 Once an event is selected, a new dropdown appears to its right. The second dropdown is used to provide further context to your event through the use of operations. For this conversion event, the default operation *exists* is used.
 
-> **Note:** A string under your *conversion name* is updated as you define your event.
+>[!NOTE] A string under your *conversion name* is updated as you define your event.
 
 ![no dropdown](./images/user-guide/conversion_event_1.png)
 
@@ -106,7 +104,7 @@ For the purpose of this touchpoint, select **equals**.
 
 Once an operator for a touchpoint is selected, *Enter Field Value* is made available. The dropdown values for *Enter Field Value* populate based on the operator and touchpoint value you previously selected. If a value does not populate in the dropdown, you can type that value in manually. Click the dropdown and select **CLICK**.
 
-> **Note:** The operators "exists" and "not exists" do not have field values associated with them.
+>[!NOTE] The operators "exists" and "not exists" do not have field values associated with them.
  
 ![touchpoint dropdown](./images/user-guide/touchpoint_dropdown.png)
 
@@ -120,7 +118,7 @@ Clicking **Add group** gives you the option to create additional fields separate
 
 ![touchpoint overview](./images/user-guide/add_group_touchpoint.png)
 
-> **Note:** Use the string under *Touchpoint name* for a quick overview of your touchpoint. Notice that the string matches the name of the touchpoint.
+>[!NOTE] Use the string under *Touchpoint name* for a quick overview of your touchpoint. Notice that the string matches the name of the touchpoint.
 
 ![](./images/user-guide/touchpoint_string.png)
 
@@ -148,7 +146,7 @@ Click the dropdown under *Scoring Frequency* to select between daily, weekly, an
 
 To change the time of day you want scoring to occur, click the clock icon. In the new overlay that appears, enter the time of day you want scoring to take place. Click outside the overlay to close it.
 
-> **Note:** It can take up to 24 hours for each prediction scoring process to complete.
+>[!NOTE] It can take up to 24 hours for each scoring process to complete.
 
 ![clock icon](./images/user-guide/time_of_day.png)
 
@@ -166,15 +164,15 @@ Next, select an operator.
 
 Lastly, type in the country code in the *Enter Field Value* dropdown.
 
-> **Note:** Country codes are two characters long. A complete list can be found here [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
+>[!NOTE] Country codes are two characters long. A complete list can be found here [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
 
 ![region](./images/user-guide/region-based.png)
 
 ### Training window
 
-To ensure that you get the most accurate predictions possible, it is important to train your model with historical data that represents your business. By default, the model is trained using 2 quarters (6 months) of data. Select the dropdown to change the default. You can choose to train with one to four quarters of data (3-12 months).
+To ensure that you get the most accurate model possible, it is important to train your model with historical data that represents your business. By default, the model is trained using 2 quarters (6 months) of data. Select the dropdown to change the default. You can choose to train with one to four quarters of data (3-12 months).
 
-> **Note:** A shorter training window is more sensitive to recent trends, whereas a longer training window creates a more robust model and is less sensitive to recent trends.
+>[!NOTE] A shorter training window is more sensitive to recent trends, whereas a longer training window creates a more robust model and is less sensitive to recent trends.
 
 ![training window](./images/user-guide/training_window.png)
 
