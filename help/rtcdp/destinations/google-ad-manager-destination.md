@@ -19,19 +19,29 @@ Note the following details that are specific to Google Ad Manager destinations:
 * Activated audiences are created programmatically in the Google platform.
 * Adobe Real-time CDP does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand audience targeting size.
 
+>[!IMPORTANT]
+>
+>If you are looking to create your first destination with Google Ad Manager and have not enabled the [ID sync functionality](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up Google integrations in Audience Manager, the ID syncs you had set up carry over to Adobe Real-time CDP.
+
 ## Prerequisites
 
 ### Whitelisting
 
-Before creating the Google Ad Manager destination in Adobe Real-time CDP, you must contact Google asking for your account to be whitelisted. Contact Google and provide the following information:
+>[!NOTE]
+>
+>Whitelisting is mandatory before setting up your first Google Ad Manager destination in Adobe Real-time CDP. Please ensure the whitelisting process described below has been completed by Google before creating a destination.
 
+Before creating the Google Ad Manager destination in Adobe Real-time CDP, you must contact Google asking for Adobe to be whitelisted as a data provider and your account to be whitelisted. Contact Google and provide the following information:
+
+* **Account ID** : this is Adobe's account ID with Google. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
+* **Customer ID** : this is Adobe's customer account ID with Google. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
 * **Network ID** : this is your account with Google Ad Manager;
-* **Audience Link ID** : this is your account with Google;
+* **Audience Link ID** : this is your account with Google Ad Manager;
 * Your account type. **DFP by Google** or **AdX buyer**.
 
 ## Create destination
 
-1. In **[!UICONTROL Connections > Destinations]**, select Google  Manager, and select **[!UICONTROL Create destination]**.
+1. In **[!UICONTROL Connections > Destinations]**, select Google Ad Manager, and select **[!UICONTROL Create destination]**.
     ![Connect Google Ad Manager destination](/help/rtcdp/destinations/assets/google-ad-manager-destination1.png)
 
 2. In the Create destination wizard, fill in the Basic Information for the destination.
@@ -41,7 +51,7 @@ Before creating the Google Ad Manager destination in Adobe Real-time CDP, you mu
 *  **Account Type**: Select an option, depending on your account with Google:
    * Use `DFP by Google` for DoubleClick for Publishers
    * Use `AdX buyer` for Google AdX
-*  **Account ID**: Fill in your account ID with Google. This can be your Network ID or your Audience Link ID.
+*  **Account ID**: Fill in your account ID with Google. This can be your Network ID or your Audience Link ID. Typically, this is an eight digit ID.
 
 >[!NOTE]
 >
