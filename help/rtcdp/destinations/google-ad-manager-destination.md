@@ -23,7 +23,11 @@ Note the following details that are specific to Google Ad Manager destinations:
 
 ### Whitelisting
 
-Before creating the Google Ad Manager destination in Adobe Real-time CDP, you must contact Google asking for your account to be whitelisted. Contact Google and provide the following information:
+>[!NOTE]
+>
+>Whitelisting is mandatory before setting up your first Google Ad Manager destination in Adobe Real-time CDP. Please ensure the whiltelisting process described below has been completed by Google before creating a destination.
+
+Before creating the Google Ad Manager destination in Adobe Real-time CDP, you must contact Google asking for Adobe to be whitelisted as a data provider and your account to be whitelisted. Contact Google and provide the following information:
 
 * **Account ID** : this is Adobe's account ID with Google. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
 * **Customer ID** : this is Adobe's customer account ID with Google. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
@@ -43,7 +47,7 @@ Before creating the Google Ad Manager destination in Adobe Real-time CDP, you mu
 *  **Account Type**: Select an option, depending on your account with Google:
    * Use `DFP by Google` for DoubleClick for Publishers
    * Use `AdX buyer` for Google AdX
-*  **Account ID**: Fill in your account ID with Google. This can be your Network ID or your Audience Link ID.
+*  **Account ID**: Fill in your account ID with Google. This can be your Network ID or your Audience Link ID. Typically, this is an eight digit ID.
 
 >[!NOTE]
 >
