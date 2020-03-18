@@ -124,4 +124,4 @@ The segment builder is used to define a segment, however, Customer AI has alread
 
 ## Next steps
 
-This document outlined the insights provided by a Customer AI service instance. You can now continue to the [downloading scores in Customer AI](./download-scores.md) tutorial or browse the other [Adobe Intelligent Services](../home.md) guides that are offered.
+This document outlined the insights provided by a Customer AI service instance. You can now continue to the tutorial on [downloading scores in Customer AI](./download-scores.md) or browse the other [Adobe Intelligent Services](../home.md) guides that are offered.
