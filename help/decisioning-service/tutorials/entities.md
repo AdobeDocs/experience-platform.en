@@ -97,7 +97,7 @@ The context for the Platform Decisioning Service containers is currently `dma_of
 
 > **Note:** The context for Platform Decisioning Containers is soon to change to `acp`. Filtering is optional, but filters by only `dma_offers` will require edits upon a future release. To prepare for this change clients should use no filters or apply both product contexts as their filter.
 
-#### Request
+**Request**
 
 ```shell
 curl -X GET {ENDPOINT_PATH}/?product=dma_offers&product=acp \ 
@@ -109,7 +109,7 @@ curl -X GET {ENDPOINT_PATH}/?product=dma_offers&product=acp \
   -H 'x-request-id: {NEW_UUID}' 
 ```
 
-#### Response
+**Response**
 
 ```json
 { 
@@ -164,7 +164,7 @@ The instance properties are given in the payload wrapped in the `_instance` prop
 
 The HAL `_links` property must be present but can be empty. It means that no custom links are defined for this instance. 
 
-#### Request
+**Request**
 
 ```shell
 curl -X POST {ENDPOINT_PATH}/{CONTAINER_ID}/instances \ 
@@ -183,7 +183,7 @@ curl -X POST {ENDPOINT_PATH}/{CONTAINER_ID}/instances \
 }' 
 ```
 
-#### Response
+**Response**
 
 ```json
 { 
@@ -215,7 +215,7 @@ The remaining properties indicate which account and API key was used to create a
 
 Using the URL in the Location header returned with the Create call, an application can look up an instance.
 
-#### Request 
+**Request** 
 
 ```shell
 curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \ 
@@ -228,7 +228,7 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 
 > **Note:** Although `instanceId` is given as a path parameter, applications should, whenever possible, not construct the path themselves and instead follow links to instances contained in list and search operations. See sections ‎6.4.4 and ‎6.4.6 for details. 
 
-#### Response 
+**Response** 
 
 ```json
 { 
@@ -265,7 +265,7 @@ The current `eTag` value of the instance is returned with the response, it allow
 
 The lookup API allows a client to specify an `If-None-Match` header parameter. See the definition of this standard HTTP parameter [RFC2616]. The entity tag value a client specifies is the value it received with the latest response, either from an update, read, list or search API call. Note that the `etag` value should be opaque to the client and must be given as a string, surrounded by quotes.  
 
-#### Request
+**Request**
 
 ```shell
 curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \ 
@@ -285,7 +285,7 @@ Clients will not be able to keep track of the instances they are creating and th
 
 A more typical access pattern will be to page through the set of all instances.
 
-#### Request
+**Request**
 
 ```shell
 curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances?schema="{SCHEMA_ID}" \ 
@@ -296,26 +296,26 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances?schema="{SCHEMA_ID}" \
   -H 'x-request-id: {NEW_UUID}'  
 ```
 
-#### Response
+**Response**
 
 The response depends on the `{schemaId}` specified. For instance for "https<span></span>://ns.adobe.com/experience/offer-management/offer-activity&id=xcore:offer-activity:fa24f9e8fc15c73" the response resembles the following.
 
 ```json
 {
-	"requestTime": "2019-06-28T06:54:05.606Z",
-	"_embedded": {
-		"results": [],
-		"total": 0,
-		"count": 0
-	},
-	"_links": {
-		"self": {
-			"href": "/653da250-71b8-11e9-a3fe-9b1d0913f3ed/instances?schema=https://ns.adobe.com/experience/offer-management/offer-activity&id=xcore:offer-activity:fa24f9e8fc15c73",
-			"@type": "https://ns.adobe.com/experience/xcore/hal/results"
-		}
-	},
-	"containerId": "653da250-71b8-11e9-a3fe-9b1d0913f3ed",
-	"schemaNs": "https://ns.adobe.com/experience/offer-management/offer-activity;version=0.1"
+"requestTime": "2019-06-28T06:54:05.606Z",
+"_embedded": {
+  "results": [],
+  "total": 0,
+  "count": 0
+  },
+  "_links": {
+  "self": {
+  "href": "/653da250-71b8-11e9-a3fe-9b1d0913f3ed/instances?schema=https://ns.adobe.com/experience/offer-management/offer-activity&id=xcore:offer-activity:fa24f9e8fc15c73",
+"@type": "https://ns.adobe.com/experience/xcore/hal/results"
+  }
+  },
+  "containerId": "653da250-71b8-11e9-a3fe-9b1d0913f3ed",
+  "schemaNs": "https://ns.adobe.com/experience/offer-management/offer-activity;version=0.1"
 }
 ```
 
@@ -353,7 +353,7 @@ The `property` query parameter can be repeated so that multiple filter condition
 
 Paged results will be returned as a special mime-type `application/vnd.adobe.platform.xcore.hal+json; schema="https://ns.adobe.com/experience/xcore/hal/results"`. 
 
-#### Request
+**Request**
 
 ```shell
 curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances?schema="{SCHEMA_ID}"&orderby${ORDER_BY_PROPERTY_PATH}&property={TIMESTAMP_PROPERTY_PATH}>=2019-02-19T03:19:03.627Z&property${TIMESTAMP_PROPERTY_PATH}<=2019-06-19T03:19:03.627Z \ 
@@ -364,7 +364,7 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances?schema="{SCHEMA_ID}"&orderb
   -H 'x-request-id: {NEW_UUID}'  
 ```
 
-#### Response
+**Response**
 
 ```json
 { 
@@ -432,7 +432,7 @@ The response contains the list of result items inside the JSON property results 
 
 In cases where clients want to provide more complex filter conditions and search instances by terms contained in string properties the repository offers a more powerful search API.  
 
-#### Request
+**Request**
 
 ```shell
 curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/queries/core/search?schema="{SCHEMA_ID}"&… \ 
@@ -459,7 +459,7 @@ To update an instance, a client can either overwrite the complete list of proper
 
 In both cases the URL of the request specifies the path to the physical instance and in both cases the response will be a JSON receipt payload like the one returned from the [create operation](#create-instances). A client should preferably use the `Location` header or a HAL link it received from a prior API call for this object as the complete URL path for this API. If this is not possible the client can construct the URL from the `containerId` and the `instanceId`.
 
-#### Request (PUT)
+**Request** (PUT)
 
 ```shell
 curl -X PUT {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \ 
@@ -479,7 +479,7 @@ curl -X PUT {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 }'  
 ```
 
-#### Request (PATCH)
+**Request** (PATCH)
 
 ```shell
 curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \ 
@@ -513,7 +513,7 @@ There are conditions where multiple clients attempt to update an instance concur
 
 Instances can be deleted with a DELETE call. A client should preferably use the `Location` header or a HAL link it received from a prior API call for this this as the complete URL path. If this is not possible the client can construct the URL from the `containerId` and the physical `instanceId`. 
 
-#### Request
+**Request**
 
 ```shell
 curl -X DELETE {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \ 
@@ -524,7 +524,7 @@ curl -X DELETE {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
   -H 'x-request-id: {NEW_UUID}'  
 ```
 
-#### Response
+**Response**
 
 ```json
 { 
