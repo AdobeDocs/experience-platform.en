@@ -128,7 +128,7 @@ Activities are used to insert content into an experience. To facilitate (not to 
 
 The following figure illustrates how the business entities are related to each other:
 
-![](figure-10.png) 
+![](./images/figure-10.png)
 
 When clients create and link the object graph for decisions, there will typically be three different work streams. These are as follows:
 
