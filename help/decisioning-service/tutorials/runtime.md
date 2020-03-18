@@ -11,9 +11,9 @@ This document provides a tutorial for working with the runtime services of Decis
 
 The tutorial covers the following:
 
-- [Compilation of decision models](#compilation-of-decision-models)  
-- [REST API calls to execute decisions](#rest-api-calls-to-execute-decisions)  
-- [Dynamic context data in decisioning requests](#dynamic-context-data-in-decisioning-requests)  
+[Compilation of decision models](#compilation-of-decision-models)  
+[REST API calls to execute decisions](#rest-api-calls-to-execute-decisions)  
+[Dynamic context data in decisioning requests](#dynamic-context-data-in-decisioning-requests)  
 
 ## Getting started
 
