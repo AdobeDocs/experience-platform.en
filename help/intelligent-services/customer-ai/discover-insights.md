@@ -118,6 +118,8 @@ Clicking the **Create Segment** button in any of the buckets for Low, Medium, an
 
 The segment builder is used to define a segment, however, Customer AI has already done the work for you. To finish creating your segment, simply fill in the *Name* and *Description* containers located in the right rail of the segment builder user interface. After you have given the segment a name and description, click **Save** in the top-right.
 
+>![NOTE] Since the propensity scores are written to the individual profile, they are available in the Segment builder like any other profile attributes. When you navigate to the segment builder to create new segments you can see all the various propensity scores under your namespace Customer AI.
+
 ![Segment fill in](./images/insights/segment-saving.png)
 
  To view your new segment in the Platform UI, click **Segments** in the left navigation. The *Browse* page appears and displays all available segments. 
