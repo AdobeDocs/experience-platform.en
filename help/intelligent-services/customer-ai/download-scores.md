@@ -46,6 +46,7 @@ Using your dataset ID from the previous step, you need to make a call to the  Ca
 ```http
 GET /batches?&dataSet={DATASET_ID}&orderBy=desc:created&limit=1
 ```
+
 | Parameter | Description |
 | --------- | ----------- |
 | `{DATASET_ID}` | The dataset ID available in the "Access Scores" dialog. |
@@ -109,10 +110,10 @@ Once you have your batch ID, you are able to make a new GET request to `/batches
 ```http
 GET batches/{BATCH_ID}/files
 ```
+
 | Parameter | Description |
 | --------- | ----------- |
 | `{BATCH_ID}` | The batch ID that was retrieved in the previous step [retrieve your batch ID](#retrieve-your-batch-id). |
-
 
 **Request**
 
