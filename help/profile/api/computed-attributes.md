@@ -107,13 +107,13 @@ With your computed attribute field identified, and confirmation that the schema 
 
 Begin by making a POST request to the `/config/computedAttributes` endpoint with a request body containing the details of the computed attribute that you wish to create.
 
-#### API format
+**API format**
 
 ```http
 POST /config/computedAttributes
 ```
 
-#### Request
+**Request**
 
 ```shell
 curl -X POST \
@@ -143,13 +143,13 @@ curl -X POST \
 |Property|Description|
 |---|---|
 |name|The name of the computed attribute field, as a string.|
-|path|The path to the field containing the computed attribute. This path is found within the `properties` attribute of the schema and should NOT include the field name in the path. When writing the path, omit the multiple levels of `properties` attributes.
+|path|The path to the field containing the computed attribute. This path is found within the `properties` attribute of the schema and should NOT include the field name in the path. When writing the path, omit the multiple levels of `properties` attributes.|
 |{TENANT_ID}|If you are unfamiliar with your tenant ID, please refer to the steps for finding your tenant ID in the [Schema Registry developer guide]^(../../technical_overview/schema_registry/schema_registry_developer_guide.md#know-your-tenant_id).|
 |description|A description of the computed attribute. This is especially useful once multiple computed attributes have been defined as it will help others within your IMS Organization to determine the correct computed attribute to use.|
 |expression.value|A valid Profile Query Language (PQL) expression. For more information on PQL and links to supported queries, please read the [PQL overview]^(../../technical_overview/unified_profile_architectural_overview/unified_profile_pql.md).|
 |schema.name|The class upon which the schema containing the computed attribute field is based. For example, if the schema was based on the XDM ExperienceEvent class, the value would be *_xdm.context.experienceevent*.|
 
-#### Response
+**Response**
 
 A successfully created computed attribute returns HTTP Status 200 (OK) and a response body containing the details of the newly created computed attribute. These details include a unique, read-only, system-generated `id` that can be used for referencing the computed attribute during other API operations.
 
@@ -220,13 +220,13 @@ Steps for both listing all computed attributes and viewing a specific computed a
 
 Your IMS Organization may create multiple computed attributes, and performing a GET request to the `/config/computedAttributes` endpoint allows you list all existing computed attributes for your organization.
 
-#### API format
+**API format**
 
 ```http
 GET /config/computedAttributes
 ```
 
-#### Request
+**Request**
 
 ```shell
 curl -X GET \
@@ -237,7 +237,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-#### Response
+**Response**
 
 A successful response includes a `_page` attribute providing the total number of computed attributes (`totalCount`) and the number of computed attributes on the page (`pageSize`). 
 
@@ -358,7 +358,7 @@ The response also includes a `children` array composed of one or more objects, e
 
 You can also view a specific computed attribute by making a GET request to the `/config/computedAttributes` endpoint and including the computed attribute ID in the request path.
 
-#### API format
+**API format**
 
 ```http
 GET /config/computedAttributes/{ATTRIBUTE_ID}
@@ -368,7 +368,8 @@ GET /config/computedAttributes/{ATTRIBUTE_ID}
 |---|---|
 |`{ATTRIBUTE_ID}`|The ID of the computed attribute that you wish to view.|
 
-#### Request
+**Request**
+
 ```shell
 curl -X GET \
   https://platform.adobe.io/data/core/ups/config/computedAttributes/2afcf410-450e-4a39-984d-2de99ab58877 \
@@ -378,7 +379,8 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-#### Response
+**Response**
+
 ```json
 {
     "id": "2afcf410-450e-4a39-984d-2de99ab58877",
@@ -427,7 +429,7 @@ curl -X GET \
 
 Should you find that you need to update an existing computed attribute, this can be done by making a PATCH request to the `/config/computedAttributes` endpoint and including the ID of the computed attributed that you wish to update in the request path.
 
-#### API format
+**API format**
 
 ```http
 PATCH /config/computedAttributes/{ATTRIBUTE_ID}
@@ -437,7 +439,7 @@ PATCH /config/computedAttributes/{ATTRIBUTE_ID}
 |---|---|
 |`{ATTRIBUTE_ID}`|The ID of the computed attribute that you wish to update.|
 
-#### Request
+**Request**
 
 This request uses [JSON Patch formatting](http://jsonpatch.com/) to update the "value" of the "expression" field.
 
@@ -467,7 +469,7 @@ curl -X PATCH \
 |---|---|
 |{NEW_EXPRESSION_VALUE}|A valid Profile Query Language (PQL) expression. For more information on PQL and links to supported queries, please read the [PQL overview]^(../../technical_overview/unified_profile_architectural_overview/unified_profile_pql.md).|
 
-#### Response
+**Response**
 
 A successful update returns HTTP Status 204 (No Content) and an empty response body. If you wish to confirm the update was successful, you can perform a GET request to view the computed attribute by its ID.
 
@@ -478,7 +480,7 @@ It is also possible to delete a computed attribute using the API. This is done b
 >[!Note] 
 >Please use caution when deleting a computed attribute as it may be in use in more than one schema and the DELETE operation cannot be undone.
 
-#### API format
+**API format**
 
 ```http
 DELETE /config/computedAttributes/{ATTRIBUTE_ID}
@@ -488,7 +490,7 @@ DELETE /config/computedAttributes/{ATTRIBUTE_ID}
 |---|---|
 |{ATTRIBUTE_ID}|The ID of the computed attribute that you wish to delete.|
 
-#### Request
+**Request**
 
 ```shell
 curl -X DELETE \
@@ -499,7 +501,7 @@ curl -X DELETE \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \ 
 ```
 
-#### Response
+**Response**
 
 A successful delete request returns HTTP Status 200 (OK) and an empty response body. To confirm the deletion was successful, you can perform a GET request to lookup the computed attribute by its ID. If the attribute was deleted, you will receive an HTTP Status 404 (Not Found) error.
 
