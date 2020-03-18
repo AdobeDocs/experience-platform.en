@@ -349,7 +349,8 @@ Not only instance payload properties can be used in filter expressions. Envelope
 <br/>
 The `property` query parameter can be repeated so that multiple filter conditions are applied, e.g to return all instances that were last modified after a certain date and before a certain date. Values in those expressions must be URL encoded. If no expression is given and the property’s name is simply listed the items that qualify are those that have a property with the given name.<br/>
 <br/>
-* **`id`**: Sometimes a list needs to be filtered by the URI of the instances. The `property` query parameter can be used to filter out one instance, but to obtain more than one instance, a list of URIs can be given to the request. The `id` parameter is repeated and each occurrence specifies one URI value, `id={URI_1}&id={URI_2},…` The URI values must be URL encoded.
+
+- **`id`**: Sometimes a list needs to be filtered by the URI of the instances. The `property` query parameter can be used to filter out one instance, but to obtain more than one instance, a list of URIs can be given to the request. The `id` parameter is repeated and each occurrence specifies one URI value, `id={URI_1}&id={URI_2},…` The URI values must be URL encoded.
 
 Paged results will be returned as a special mime-type `application/vnd.adobe.platform.xcore.hal+json; schema="https://ns.adobe.com/experience/xcore/hal/results"`. 
 
@@ -719,6 +720,7 @@ Changing a calendar constraint can be accomplished with the following PATCH call
   }
 ]' 
 ```
+
 See [Updating and patching instances](#updating-and-patching-instances) for the full cURL syntax. The `schemaId` parameter must be `https://ns.adobe.com/experience/offer-management/personalized-offer`. Fallback offers do not have any constraints.
 
 ### Capping constraints
@@ -765,8 +767,9 @@ Adding and deleting a rule can be accomplished with a PATCH operation as well:
     "path": "/_instance/xdm:selectionConstraint/xdm:eligibilityRule",
     "value": "xcore:eligibility-rule:f84c6b33cc63c65" 
   }
-]' 
+]'
 ```
+
 See [Updating and patching instances](#updating-and-patching-instances) for the full cURL syntax. The `schemaId` parameter must be `https://ns.adobe.com/experience/offer-management/personalized-offer`. Fallback offers do not have any constraints.
 
 Note that the eligibility rule is embedded in the `xdm:selectionConstraint` property together with the calendar constraints. PATCH operations should not attempt remove the entire `SelectionConstraint` property.
@@ -796,6 +799,7 @@ curl -X PATCH {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
   }
 ]'
 ```
+
 See [Updating and patching instances](#updating-and-patching-instances) for the full cURL syntax. The `schemaId` parameter must be `https://ns.adobe.com/experience/offer-management/personalized-offer`. Fallback offers do not have any ranking properties.
 
 ## Managing decision rules
@@ -823,6 +827,7 @@ https://ns.adobe.com/experience/offer-management/eligibility-rule. The `_instanc
   }
 }
 ```
+
 See [Updating and patching instances](#updating-and-patching-instances) for the full cURL syntax. The `schemaId` parameter must be `https://ns.adobe.com/experience/offer-management/eligibility-rule`.
 
 The value in the rule’s condition property contains a PQL expression. The context data is referenced via the special path expression @{schemaID}.
@@ -852,6 +857,7 @@ https://ns.adobe.com/experience/offer-management/tag. The `_instance` property f
   "xdm:name": "credit card"
 } 
 ```
+
 See [Updating and patching instances](#updating-and-patching-instances) for the full cURL syntax. The `schemaId` parameter must be `https://ns.adobe.com/experience/offer-management/tag`.
 
 
@@ -878,6 +884,7 @@ Alternatively, an offer could be patched to change its list of tags:
   }
 ]' 
 ```
+
 For both cases, see [Updating and patching instances](#updating-and-patching-instances) for the full cURL syntax. The `schemaId` parameter must be `https://ns.adobe.com/experience/offer-management/personalized-offer`.
 
 Note that the `xdm:tags` property must already exist for the add operation to succeed. It no tags exist in an instance the PATCH operation can first add the array property and then add a tag reference to that array.
@@ -897,6 +904,7 @@ https://ns.adobe.com/experience/offer-management/offer-filter. The `_instance` p
   ]
 }
 ```
+
 See [Updating and patching instances](#updating-and-patching-instances) for the full cURL syntax. The `schemaId` parameter must be `https://ns.adobe.com/experience/offer-management/offer-filter`.
 
 - **`xdm:filterType`** - This property indicates whether the filter is set up using tags or directly references offers by their ids. When the filter is set up to use tags the filter type can further indicate if all tags must match the tags on a particular offer or if any of the given tags is sufficient for the offer to qualify for the filter. The valid values of this enum property are: 
@@ -943,6 +951,7 @@ The activity instances are created with schema identifier
   "xdm:fallback":  "xcore:fallback-offer:f6529b31b3c0ba6"
 }
 ```
+
 See [Updating and patching instances](#updating-and-patching-instances) for the full cURL syntax. The `schemaId` parameter must be `https://ns.adobe.com/experience/offer-management/offer-activity`.
 
 - **`xdm:name`** - This mandatory property contains activity name. The name is displayed in various user interfaces.
@@ -974,5 +983,6 @@ Before activity instances can be created a fallback offer must exist that qualif
   ]
 }  
 ```
+
 See [Updating and patching instances](#updating-and-patching-instances) for the full cURL syntax. The `schemaId` parameter must be `https://ns.adobe.com/experience/offer-management/fallback-offer`.
 
