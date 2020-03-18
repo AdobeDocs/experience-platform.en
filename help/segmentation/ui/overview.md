@@ -136,7 +136,7 @@ Once you click **Unwrap container** the child container is removed and the crite
 
 Experience Platform enables you to bring data together from multiple sources and combine it in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create a profile. 
 
-You can select a merge policy that matches your marketing purpose for this audience or use the default merge policy provided by Platform. You can create multiple merge policies unique to your organization, including creating your own default merge policy. For step-by-step instructions on creating merge policies for your organization, please see the tutorial on [working with merge policies using the UI](../../tutorials/merge_policies/create-merge-policies.md). 
+You can select a merge policy that matches your marketing purpose for this audience or use the default merge policy provided by Platform. You can create multiple merge policies unique to your organization, including creating your own default merge policy. For step-by-step instructions on creating merge policies for your organization, please see the tutorial on [working with merge policies using the UI](../../profile/ui/merge-policies.md). 
 
 To select a merge policy for your segment definition, click the gear icon on the *Fields* tab, then use the *Merge Policy dropdown menu* to select the merge policy that you wish to use.
 
