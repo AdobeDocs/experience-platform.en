@@ -7,7 +7,7 @@ topic: overview
 
 # Offer Decisioning domain model overview
 
-Offer decisioning is a use case of Decisioning Service within which you formalize and centrally manage the rules and predictions used for engaging customers with offers. Offer decisioning is considered a type of _**content decisioning**_. In this use case, the _**decision options**_ are referred to as _**offers**_, and are characterized as such by the content attached to them. For an introduction of the object model used by the Decisioning Service, please refer to [Decisioning Service Domain Model](decisioning-service-domain-model.md).
+Offer decisioning is a use case of Decisioning Service within which you formalize and centrally manage the rules and predictions used for engaging customers with offers. Offer decisioning is considered a type of _**content decisioning**_. In this use case, the _**decision options**_ are referred to as _**offers**_, and are characterized as such by the content attached to them. For an introduction of the object model used by the Decisioning Service, please refer to [Decisioning Service Domain Model](experience-model.md).
 
 The objective is to present the end user with a "Best Offer" in any channel based on targeting criteria, cost and frequency constraints, as well as prior interactions across channels including prior Offers proposed. 
 
