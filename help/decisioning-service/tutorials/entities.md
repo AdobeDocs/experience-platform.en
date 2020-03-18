@@ -47,8 +47,6 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 - Content-Type: application/json
 
-# Managing repository entities using APIs
-
 ## Repository API conventions
 
 Decisioning Service is controlled by a number of business objects that are related to each other. All business objects are stored in the Platform’s Business Object Repository. A key feature of this repository is that the APIs are orthogonal to the type of business object. Instead of using a POST, GET, PUT, PATCH or DELETE API that indicates the type of resource in its API endpoint, there are only 6 generic endpoints but they accept or return a parameter that indicates the type of the object when that disambiguation is needed. The schema must be registered with the repository, but beyond that the repository is usable for an open-ended set of object types.  
@@ -545,8 +543,6 @@ curl -X DELETE {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 Upon receiving a delete request, the repository checks for any other instances, of any schema, still reference the instance to be deleted. In a distributed, highly available system, referential integrity cannot be checked immediately. When there are foreign key relationships defined, checks will be performed asynchronously. This results in a slightly delayed response to the outcome of the delete request. When those checks are performed, the immediate response includes the status 202 Accepted and a link to check the outcome of the delete operation in the `Location` header. A client should then check that link for the outcome.
 
 If an instance is found that references the instance being deleted, the outcome will be a rejection of the delete operation. If no other foreign key references are discovered, then the delete is completed. If the outcome is not yet decided the response will indicate that by another 202 Accepted response with the same `Location` header and will ask the client to keep checking. When the outcome is determined, the response will indicate that with a 200 Ok status and the payload of the response will contain the outcome of the original delete request. Note that the 200 Ok response only means the outcome is known and the response body will contain the confirmation or rejection of the delete request. 
-
-# Creating and managing Offer Decisioning entities using APIs 
 
 ## Creating offers and their sub components 
 
