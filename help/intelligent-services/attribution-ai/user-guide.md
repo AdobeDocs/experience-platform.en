@@ -7,8 +7,6 @@ topic: User guide
 
 # Attribution AI user guide
 
->   **Note**: The Attribution AI functionality outlined in this document is in beta. The documentation and the functionality are subject to change.
-
 Attribution AI in Adobe Intelligent Services is a multi-channel, algorithmic attribution service that calculates the influence and incremental impact of customer interactions against specified outcomes. With Attribution AI, you can measure and optimize your customers' experiences by understanding the impact of every individual customer interaction in each phase of your customers' journeys.
 
 This document serves as a guide for interacting with Attribution AI in the  Intelligent Services user interface. The following topics are covered:
