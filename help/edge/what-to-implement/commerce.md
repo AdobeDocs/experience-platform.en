@@ -5,7 +5,11 @@ description: Learn how to How to add data if you have products or a shopping car
 seo-description: Learn how to How to add data if you have products or a shopping cart with Experience Platform Web SDK
 ---
 
-# Products
+# (Beta) Products
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
 
 If you have products on your site, then this is a default set of things you might want to send to enable the most capabilities from Adobe. Though this is a suggestion, it provides a very strong set of data right from the start.
 
