@@ -302,7 +302,7 @@ You can then give your new class a **Display Name** (a short, descriptive, uniqu
 
 At any time during the initial schema composition process, before the schema is saved, you can change the class upon which the schema is based. 
 
-> **Warning:** Please exercise caution before changing the class. Mixins are only compatible with certain classes, therefore changing the class resets the canvas and removes any fields you have added to that point. 
+>[!WARNING] Please exercise caution before changing the class. Mixins are only compatible with certain classes, therefore changing the class resets the canvas and removes any fields you have added to that point. 
 
 To change the class, click **Assign** next to *Class* in the *Composition* section of the editor. 
 
