@@ -9,7 +9,7 @@ topic: Attribution AI insights
 
 Attribution AI service instances provide insights which can be used to assist in making and measuring marketing decisions related to marketing performance and return on investment. Selecting a service instance provides visualizations and filters to assist you in understanding the impact of every customer interaction in each phase of the customer journey.
 
-This document serves as a guide for interacting with service instance insights in the Adobe Experience Platform Intelligent Services user interface. The following topics are covered:
+This document serves as a guide for interacting with service instance insights in the Adobe Intelligent Services user interface. The following topics are covered:
 
 - [Service instance overview](#service-instance-insights-overview)
   - [Service instance details](#service-instance-details)
@@ -50,7 +50,7 @@ The Attribution AI dashboard appears. The dashboard lists service instances of A
 
 Next, the insights page for that service instance appears, where you are provided with visualizations and a number of filters to interact with your data. The visualizations and filters are explained in more detail throughout this guide.
 
-![setup page](./images/insights/platform-landing.png)
+![setup page](./images/insights/landing-page.png)
 
 ### Service instance details
 
@@ -65,7 +65,7 @@ A detailed list appears. For more information on any of the properties listed, p
 ### Edit an instance
 
 To edit an instance, click *Edit* in the top-right navigation.
-![click the edit button](./images/insights/edit_button.png)
+![click the edit button](./images/insights/edit-button.png)
 
 The edit dialog box appears, allowing you to edit the description and scoring frequency of the instance. To confirm your changes and close the dialog, click *Edit* in the bottom-right corner.
 
@@ -77,7 +77,7 @@ The *More actions* button is located in the top-right navigation next to *Edit*.
 
 - **Delete**: Deletes the instance.
 - **Download summary data**: Downloads a CSV file containing the summary data.
-- **Access scores**: Clicking *Access scores* redirects you to the downloading scores for Attribution AI tutorial.
+- **Access scores**: Clicking *Access scores* redirects you to the [downloading scores for Attribution AI tutorial](./download-scores.md).
 - **View run history**: A popover containing a list of all the scoring runs associated with the service instance appears.
 
 ![more actions](./images/insights/more-actions.png)
@@ -86,7 +86,7 @@ The *More actions* button is located in the top-right navigation next to *Edit*.
 
 Attribution AI insights allow you to filter your data and automatically update the UI visuals based on your selected filters.
 
-> **Note:** By default, every filter is set to "All" except the *Attribution model* filter which is set to "Influenced attributed conversions".
+> **Note:** By default, every filter is set to "All" except the *Attribution model* filter which is set to "Incremental attributed conversions".
 
 ### Conversion event
 
@@ -104,15 +104,13 @@ Clicking *Attribution model* opens a dropdown with all of the different attribut
 
 The *Product* filter allows you to select from any products that were initially ingested in the creation of your instance. Click the dropdown and use the search feature to quickly select all of the products you wish to compare.
 
-![products filter](./images/insights/product.png)
+![products filter](./images/insights/product-filter.png)
 
 ### Geography
 
-The *Geography* filter populates country codes based on region-based models.
+The *Geography* filter populates country codes based on region-based models. Depending on your data this filter may or may not be present.
 
 > **Note:** Country codes are two characters long. A complete list can be found here [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
-
-![geography](./images/insights/geography.png)
 
 ### Region
 
@@ -140,13 +138,11 @@ The *Overview* card shows your total conversions by attribution model. The total
 
 ## Weekly trends
 
-The *Weekly trends* card breaks down your total conversion by the date rage you set during the filtering process. 
+The *Weekly trends* card breaks down your total conversion by the date range you set during the filtering process. 
 
 ![trends](./images/insights/weekly-trends.png)
 
 Clicking the ellipses in the top-right of the *Weekly trends* card displays a drop down allowing you to select daily, weekly, or monthly trends.
-
-![change date](./images/insights/change-trend-table.png)
 
 Hovering over the data line of a specific attribution model creates a popover that shows the total number of conversions for that date.
 
@@ -170,4 +166,4 @@ The *Top campaigns* card displays an overview of your campaigns and how the camp
 
 ## Next steps
 
-Once you have finished filtering the data and are able to display the appropriate information, you have the option to download the scores. For an in-depth guide on how to download your scores, visit the [downloading scores in Attribution AI](./download-scores.md) tutorial.
+Once you have finished filtering the data and are able to display the appropriate information, you have the option to download the scores. For an in-depth guide on how to download your scores, visit the [downloading scores in Attribution AI](./download-scores.md) tutorial. Additionally, you can also download your summary data as indicated in [more actions](#more-actions). Selecting "Download summary data" downloads the summary data aggregated by dates.

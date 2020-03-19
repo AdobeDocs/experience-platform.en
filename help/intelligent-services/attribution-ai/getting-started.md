@@ -13,7 +13,7 @@ topic: Getting started
 - [Basics of schema composition](../../xdm/schema/composition.md): This document provides an introduction to Experience Data Model (XDM) schemas and the building blocks, principles, and best practices for composing schemas to be used in Adobe Experience Platform.
 - [Building schemas](../../xdm/tutorials/create-schema-ui.md): This tutorial covers the steps for creating a schema using the Schema Editor within Experience Platform.
 
-Attribution AI requires touchpoint and customer events data. Please contact Adobe support at attributionai-support@adobe.com in order to implement or make changes to this data. If media spend data is present, you can do further analysis such as incremental revenue and ROI. If customer profile data is available, you can further attribute credits to the customer profile level.
+Attribution AI requires datasets to conform to the Consumer Experience Events (CEE) schema, which is a mixin in the [Experience Data Model](../../xdm/home.md) (XDM). Please contact Adobe support at attributionai-support@adobe.com in order to implement or make changes to this data. If media spend data is present, you can do further analysis such as incremental revenue and ROI. If customer profile data is available, you can further attribute credits to the customer profile level.
 
 Additionally, downloading scores for Attribution AI is done through Snowflake. Currently, you need to email Adobe support at attributionai-support@adobe.com in order to set up and receive the credentials to your reader account for Snowflake. 
 
@@ -25,7 +25,7 @@ Once Adobe support has processed your request, you are provided a URL for the re
 
 ## Terminology
 
-- **Conversion event:** Any digital event or digital interaction that customers do to indicate a milestone towards a goal, such as abandoning a cart before making a final purchase. Additional examples include registering as a user but not yet signing up for a conference, the indication of a final goal (making a purchase or signing up for a conference), or qualifying for a trait.
+- **Conversion event:** Any digital event or digital interaction that customers do to indicate a milestone towards a goal, such as conference registratrions. Additional examples include paid conversions, free account sign-ups, or qualifying for a trait.
 
 - **Touchpoint:** Any digital event or digital interaction that customers do in the path towards a goal. Examples include before-purchase-related marketing efforts, display advertising impressions viewed, and paid search clicks.
 
