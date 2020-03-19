@@ -7,9 +7,9 @@ topic: Customer AI overview
 
 # Customer AI overview
 
->   **Note**: The Customer AI functionality outlined in this document is in beta. The documentation and the functionality are subject to change.
+Customer AI in Adobe Intelligent Services provides marketers with the power to generate customer predictions at the individual level with explanations.
 
-Customer AI in Adobe Experience Platform provides marketers with the power to leverage Adobe Sensei to anticipate what their customers will do next through machine learning.
+With the help of influential factors, Customer AI you can tell what a customer is likely to do, and why. Additionally, marketers can benefit from Customer AI predictions and insights to personalize customer experiences by serving the most appropriate offers and messaging. Whether it is a new prospect that you would like to convert or an existing customer you would like to upsell.
 
 ## Understanding Customer AI
 
@@ -17,17 +17,20 @@ Customer AI is used to generate custom propensity scores such as churn and conve
 
 Customer AI is built to:
 
--   Enhance Real-time Customer Profile with customer propensity scores such as churn and conversion.
--   Enhance customer profiles with influential factors for propensity scores.
--   Create segments of customers based on influential factors and propensity scores.
+- Provides high accuracy customer propensity models for stronger segmentation and targeting 
+- Help with understanding the influential factors and likelihood behind certain customer behaviors.
+Customizable options for your company’s unique use cases and data
+- Enhance Real-time Customer Profile with customer propensity scores such as churn and conversion.
+- Enhance customer profiles with influential factors for propensity scores.
+- Create segments of customers based on influential factors and propensity scores.
 
 Customer is not built to:
 
--   Predict the purchasing price of products.
--   Predict which previously purchased products will be in a customer's next order.
--   Generate product recommendations at-scale.
--   Dictate the stage of the buying journey the customer is in
--   Predict a customer's next check-out total.
+- Customer AI should not be used to predict dynamic pricing, or the price point at which the customer is going to make a purchase.
+- Customer AI cannot determine whether giving an offer will make the customer more likely to purchase an item. While you might decide to send discount offers based on propensity scores, it’s not necessarily the best way to convert those customers.
+- Customer AI is not a product recommendations tool. If you have 1000’s of SKU’s, do not use Customer AI as a proxy for a real product recommendations solution like Adobe Target.
+- Customer AI can’t predict which stage of the buying Journey the customer is in, for example, if they are in “awareness”, “consideration”, “purchase”, or “retention” stages.
+- Don’t use Customer AI to determine customers who are likely buy a product launching in future. This requires certain success events to be present in the past for Customer AI to successfully train the machine learning algorithm on your data.
 
 ## How does it work?
 
