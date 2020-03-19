@@ -36,7 +36,7 @@ A high-level workflow for gaining and assigning access permissions can be summar
 - When creating or editing a product profile, the administrator adds users to the profile using the **users** tab, and grants permissions to these users (such as "Read Datasets" or "Manage Schemas") by accessing the **permissions** tab. Similarly, the administrator can assign access to sandboxes using the same permissions tab.
 - When users log in to the Experience Platform user interface, their access to Platform capabilities is driven by the permissions that have been granted to them from Step 2. For example, if a user does not have the "View Datasets" permission, the *Datasets* tab in the side menu will not be visible to that user.
 
-For more detailed steps on how to manage access control in Experience Platform, see the [access control user guide](access-control-user-guide.md). 
+For more detailed steps on how to manage access control in Experience Platform, see the [access control user guide](./ui/overview.md).
 
 All calls to Experience Platform APIs are validated for permissions, and will return errors if the appropriate permission(s) are not found in the current user context. Within the UI, elements will be hidden or altered depending on permissions granted to the current user.
 
