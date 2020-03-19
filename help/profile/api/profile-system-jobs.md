@@ -220,7 +220,7 @@ If you attempt to initiate a delete request for a Record dataset batch, you will
 }
 ```
 
-## View a delete request
+## View a specific delete request {#view-a-specific-delete-request}
 
 To view a specific delete request, including details such as its status, you can perform a lookup (GET) request to the `/system/jobs` endpoint and include the ID of the delete request in the path.
 

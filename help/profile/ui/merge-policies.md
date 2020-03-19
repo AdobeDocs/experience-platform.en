@@ -53,7 +53,7 @@ The **Create merge policy** screen appears, allowing you to provide important in
   * **Dataset precedence** : Give priority to profile fragments based on the dataset from which they came. When selecting this option, you must select the related datasets and their order of priority. See the details on [dataset precedence](#dataset-precedence) below for more information.
 * **Default merge policy**: A toggle button that allows you to select whether or not this merge policy will be the default for your organization. If the selector is toggled-on and the new policy is saved, your previous default policy is automatically updated to no longer be the default.
 
-### Dataset precedence
+### Dataset precedence {#dataset-precedence}
 
 When selecting an *Attribute merge* value, you can select *Dataset precedence* which allows you to give priority to profile fragments based on the dataset from which they came. 
 
