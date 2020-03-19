@@ -7,9 +7,7 @@ topic: User guide
 
 # Customer AI user guide
 
-> **Note**: The Customer AI functionality outlined in this document is in beta. The documentation and the functionality are subject to change.
-
-Built and powered by Adobe Sensei, Customer AI in Adobe Experience Platform Intelligent Services enables you to generate custom propensity scores without having to worry about machine learning.
+Customer AI in Adobe Experience Platform Intelligent Services enables you to generate custom propensity scores without having to worry about machine learning.
 
 This guide covers steps for working with Customer AI using the Experience Platform user interface. Steps are provided for the following topics:
 
@@ -26,11 +24,11 @@ Experience Platform provides Customer AI as a simple-to-use Adobe Sensei service
 
 In the Platform UI, click **Services** in the left navigation. The **Services** browser appears and displays all available services at your disposal. In the container for Customer AI, click **Open**.
 
-![](./images/user-guide/service.png)
+![](./images/user-guide/navigate-to-service.png)
 
 The *Customer AI* screen displays all existing Customer AI instances. Click **Create instance**.
 
-![](./images/user-guide/customer_ai.png)
+![](./images/user-guide/dashboard.png)
 
 The instance creation workflow appears, starting on the *Setup* step.
 
@@ -116,9 +114,9 @@ Customer AI generates several attributes for individual profiles that are deemed
 
 | Attribute | Description |
 | ----- | ----------- |
-| Score | The relative likelihood for a customer to achieve the predicted goal within the defined time frame. This value is not to be treated as a probability percentage but rather the likelihood of an individual compared to the overall population. |
-| Probability | This attribute is the true probability of a profile for achieving the predicted goal within the defined time frame. When comparing outputs across different goals, it is recommended that you consider probability over percentile or score. Probability should always be used when determining the average probability across the eligible population, as the probability tends to be on the lower side for events that do not occur frequently. |
-| Percentile | This value provides information regarding the performance of a profile relative to other similarly scored profiles. For example, a profile with a percentile rank of 99 for churn indicates that it is at a higher risk of churning compared to 99% of all other profiles that were scored. |
+| Score | The relative likelihood for a customer to achieve the predicted goal within the defined time frame. This value is not to be treated as a probability percentage but rather the likelihood of an individual compared to the overall population. This score ranges from 0 to 100. |
+| Probability | This attribute is the true probability of a profile for achieving the predicted goal within the defined time frame. When comparing outputs across different goals, it is recommended that you consider probability over percentile or score. Probability should always be used when determining the average probability across the eligible population, as the probability tends to be on the lower side for events that do not occur frequently. Values for probability range between 0 and 1. |
+| Percentile | This value provides information regarding the performance of a profile relative to other similarly scored profiles. For example, a profile with a percentile rank of 99 for churn indicates that it is at a higher risk of churning compared to 99% of all other profiles that were scored. Percentiles range from 1 to 100. |
 | Propensity type | The selected propensity type. |
 | Score date | The date on which scoring occurred. |
-| Influential factors | Predicted reasons on why a profile is likely to convert or churn. Factors are comprised of the following attributes:<ul><li>Code: The profile or behavioral attribute which positively influences a profile's predicted score. </li><li>Value: The value of the profile or behavioral attribute.</li><li>Importance: An integer ranging from 1 to 10 inclusively that determines the weight the profile or behavioral attribute has on the predicted score.</li></ul> |
+| Influential factors | Predicted reasons on why a profile is likely to convert or churn. Factors are comprised of the following attributes:<ul><li>Code: The profile or behavioral attribute which positively influences a profile's predicted score. </li><li>Value: The value of the profile or behavioral attribute.</li><li>Importance: Indicates the weight of the profile or behavioral attribute has on the predicted score (low, medium, high)</li></ul> |
