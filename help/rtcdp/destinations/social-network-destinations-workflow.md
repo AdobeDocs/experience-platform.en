@@ -1,13 +1,11 @@
 ---
 title: Social Network Destinations Workflow
 seo-title: Social Network Destinations Workflow
-description: Oauth instructions
-seo-description: Oauth instructions
+description: Instructions to connect to your social network ad accounts
+seo-description: Instructions to connect to your social network ad accounts
 ---
 
 # Social Network destinations authentication workflow {#social-network-destinations-workflow}
-
-The connection to Social Network destinations uses the Oauth protocol. 
 
 
 ## Workflow to create cloud storage destinations
