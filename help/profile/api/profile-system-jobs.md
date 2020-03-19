@@ -5,7 +5,7 @@ title: Real-time Customer Profile API developer guide
 topic: guide
 ---
 
-# Profile system jobs
+# Profile system jobs (Delete requests)
 
 Adobe Experience Platform enables you to ingest data from multiple sources and build robust profiles for individual customers. Data ingested into Platform is stored in the Data Lake as well as the Real-time Customer Profile data store. Occasionally it may be necessary to delete a dataset or batch from the Profile store in order to remove data that is no longer needed or was added in error. This requires using the Real-time Customer Profile API to create a Profile system job, also known as a "delete request", that can also be modified, monitored, or removed if required.
 
@@ -14,9 +14,7 @@ Adobe Experience Platform enables you to ingest data from multiple sources and b
 
 ## Getting started
 
-The API endpoints used in this guide are part of the Real-time Customer Profile API. Before continuing, please review the [Real-time Customer Profile API developer guide](getting-started.md).
-
-In particular, the [getting started section](getting-started.md#getting-started) of the Profile developer guide includes links to related topics, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform APIs.
+The API endpoints used in this guide are part of the Real-time Customer Profile API. Before continuing, please review the [Real-time Customer Profile API developer guide](getting-started.md). In particular, the [getting started section](getting-started.md#getting-started) of the Profile developer guide includes links to related topics, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform APIs.
 
 ## View delete requests
 
@@ -33,10 +31,10 @@ GET /system/jobs?{QUERY_PARAMETERS}
 
 |Parameter|Description|
 |---|---|
-|start|Offset the page of results returned, as per the create time of the request. Example: `start=4`|
-|limit|Limit the number of results returned. Example: `limit=10`|
-|page|Return a specific page of results, as per the create time of the request. Example: `page=2`|
-|sort|Sort results by a specific field in ascending (`asc`) or descending (`desc`) order. The sort parameter does not work when returning multiple pages of results. Example: `sort=batchId:asc`| 
+|`start`|Offset the page of results returned, as per the create time of the request. Example: `start=4`|
+|`limit`|Limit the number of results returned. Example: `limit=10`|
+|`page`|Return a specific page of results, as per the create time of the request. Example: `page=2`|
+|`sort`|Sort results by a specific field in ascending (`asc`) or descending (`desc`) order. The sort parameter does not work when returning multiple pages of results. Example: `sort=batchId:asc`| 
 
 **Request**
 
