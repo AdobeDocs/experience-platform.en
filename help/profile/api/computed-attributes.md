@@ -142,12 +142,12 @@ curl -X POST \
 
 |Property|Description|
 |---|---|
-|name|The name of the computed attribute field, as a string.|
-|path|The path to the field containing the computed attribute. This path is found within the `properties` attribute of the schema and should NOT include the field name in the path. When writing the path, omit the multiple levels of `properties` attributes.|
-|{TENANT_ID}|If you are unfamiliar with your tenant ID, please refer to the steps for finding your tenant ID in the [Schema Registry developer guide]^(../../technical_overview/schema_registry/schema_registry_developer_guide.md#know-your-tenant_id).|
-|description|A description of the computed attribute. This is especially useful once multiple computed attributes have been defined as it will help others within your IMS Organization to determine the correct computed attribute to use.|
-|expression.value|A valid Profile Query Language (PQL) expression. For more information on PQL and links to supported queries, please read the [PQL overview]^(../../technical_overview/unified_profile_architectural_overview/unified_profile_pql.md).|
-|schema.name|The class upon which the schema containing the computed attribute field is based. For example, if the schema was based on the XDM ExperienceEvent class, the value would be *_xdm.context.experienceevent*.|
+|`name`|The name of the computed attribute field, as a string.|
+|`path`|The path to the field containing the computed attribute. This path is found within the `properties` attribute of the schema and should NOT include the field name in the path. When writing the path, omit the multiple levels of `properties` attributes.|
+|`{TENANT_ID}`|If you are unfamiliar with your tenant ID, please refer to the steps for finding your tenant ID in the [Schema Registry developer guide]^(../../technical_overview/schema_registry/schema_registry_developer_guide.md#know-your-tenant_id).|
+|`description`|A description of the computed attribute. This is especially useful once multiple computed attributes have been defined as it will help others within your IMS Organization to determine the correct computed attribute to use.|
+|`expression.value`|A valid Profile Query Language (PQL) expression. For more information on PQL and links to supported queries, please read the [PQL overview]^(../../technical_overview/unified_profile_architectural_overview/unified_profile_pql.md).|
+|`schema.name`|The class upon which the schema containing the computed attribute field is based. Example: `_xdm.context.experienceevent` for a schema based on the XDM ExperienceEvent class.|
 
 **Response**
 
@@ -199,15 +199,15 @@ A successfully created computed attribute returns HTTP Status 200 (OK) and a res
 
 |Property|Description|
 |---|---|
-|id|A unique, read-only, system-generated ID that can be used for referencing the computed attribute during other API operations.|
-|imsOrgId| The IMS Organization related to the computed attribute, should match the value sent in the request.|
-|sandbox|The sandbox object contains details of the sandbox within which the computed attribute was configured. This information is drawn from the sandbox header sent in the request. For more information, please see the [sandboxes overview]^(../../technical_overview/sandboxes/sandboxes-overview.md).|
-|positionPath|An array containing the deconstructed `path` to the field that was sent in the request.|
-|returnSchema.meta:xdmType|The type of the field where the computed attribute will be stored.|
-|definedOn|An array showing the union schemas upon which the computed attribute has been defined. Contains one object per union schema, meaning there may be multiple objects within the array if the computed attribute has been added to multiple schemas based on different classes.|
-|active|A boolean value displaying whether or not the computed attribute is currently active. By default the value is `true`.|
-|type|The type of resource created, in this case "ComputedAttribute" is the default value.|
-|createEpoch & updateEpoch|The time at which the computed attribute was created and last updated, respectively.|
+|`id`|A unique, read-only, system-generated ID that can be used for referencing the computed attribute during other API operations.|
+|`imsOrgId`| The IMS Organization related to the computed attribute, should match the value sent in the request.|
+|`sandbox`|The sandbox object contains details of the sandbox within which the computed attribute was configured. This information is drawn from the sandbox header sent in the request. For more information, please see the [sandboxes overview]^(../../technical_overview/sandboxes/sandboxes-overview.md).|
+|`positionPath`|An array containing the deconstructed `path` to the field that was sent in the request.|
+|`returnSchema.meta:xdmType`|The type of the field where the computed attribute will be stored.|
+|`definedOn`|An array showing the union schemas upon which the computed attribute has been defined. Contains one object per union schema, meaning there may be multiple objects within the array if the computed attribute has been added to multiple schemas based on different classes.|
+|`active`|A boolean value displaying whether or not the computed attribute is currently active. By default the value is `true`.|
+|`type`|The type of resource created, in this case "ComputedAttribute" is the default value.|
+|`createEpoch` and `updateEpoch`|The time at which the computed attribute was created and last updated, respectively.|
 
 
 ## Access computed attributes
@@ -348,11 +348,11 @@ The response also includes a `children` array composed of one or more objects, e
 
 |Property|Description|
 |---|---|
-|_page.totalCount|The total number of computed attributes defined by your IMS Organization.|
-|_page.pageSize|The number of computed attributes returned on this page of results. If `pageSize` is equal to `totalCount`, this means that there is only one page of results and all computed attributes have been returned. If they are not equal, there are additional pages of results that can be accessed. See `_links.next` for details.|
-|children|An array composed of one or more objects, each containing the details of a single computed attribute. If no computed attributes have been defined, the `children` array is empty.|
-|id|A unique, read-only, system-generated value assigned automatically to a computed attribute when it is created. For more information on the components of a computed attribute object, please see the section on [creating a computed attribute](#create-a-computed-attribute) earlier in this tutorial.|
-|_links.next|If a single page of computed attributes is returned, `_links.next` is an empty object, as shown in the sample response above. If your organization has many computed attributes, they will be returned on multiple pages that you can access by make a GET request to the `_links.next` value.|
+|`_page.totalCount`|The total number of computed attributes defined by your IMS Organization.|
+|`_page.pageSize`|The number of computed attributes returned on this page of results. If `pageSize` is equal to `totalCount`, this means that there is only one page of results and all computed attributes have been returned. If they are not equal, there are additional pages of results that can be accessed. See `_links.next` for details.|
+|`children`|An array composed of one or more objects, each containing the details of a single computed attribute. If no computed attributes have been defined, the `children` array is empty.|
+|`id`|A unique, read-only, system-generated value assigned automatically to a computed attribute when it is created. For more information on the components of a computed attribute object, please see the section on [creating a computed attribute](#create-a-computed-attribute) earlier in this tutorial.|
+|`_links.next`|If a single page of computed attributes is returned, `_links.next` is an empty object, as shown in the sample response above. If your organization has many computed attributes, they will be returned on multiple pages that you can access by make a GET request to the `_links.next` value.|
 
 ### View a computed attribute {#view-a-computed-attribute}
 
@@ -467,7 +467,7 @@ curl -X PATCH \
 
 |Property|Description|
 |---|---|
-|{NEW_EXPRESSION_VALUE}|A valid Profile Query Language (PQL) expression. For more information on PQL and links to supported queries, please read the [PQL overview]^(../../technical_overview/unified_profile_architectural_overview/unified_profile_pql.md).|
+|`{NEW_EXPRESSION_VALUE}`|A valid Profile Query Language (PQL) expression. For more information on PQL and links to supported queries, please read the [PQL overview](../../segmentation/pql/overview.md).|
 
 **Response**
 
@@ -488,7 +488,7 @@ DELETE /config/computedAttributes/{ATTRIBUTE_ID}
 
 |Parameter|Description|
 |---|---|
-|{ATTRIBUTE_ID}|The ID of the computed attribute that you wish to delete.|
+|`{ATTRIBUTE_ID}`|The ID of the computed attribute that you wish to delete.|
 
 **Request**
 
