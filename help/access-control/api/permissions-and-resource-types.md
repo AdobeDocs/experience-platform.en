@@ -11,13 +11,13 @@ You can list the names of all permissions and resource types by making a GET req
 
 A **permission** is a policy that is managed through the Adobe Admin Console, and maps to zero or more resource-type policies. A **resource type** is a policy that enables read, write, and/or delete capabilities for a specific type of Platform resource (such as datasets or schemas).
 
-#### API format
+**API format**
 
 ```http
 GET /acl/reference
 ```
 
-#### Request
+**Request**
 
 ```shell
 curl -X GET \
@@ -27,7 +27,7 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-#### Response
+**Response**
 
 A successful response returns a `permissions` object and a `resource-types` object, each containing a full list of names for access permissions or resource types, respectively.
 
