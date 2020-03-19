@@ -247,8 +247,8 @@ Both Real-time Customer Profile and Identity Service consume XDM data as it is b
 
 When planning what data to send to your Profile-enabled dataset, consider the following best practices:
 
-* Include any data you want to use as audience segment criteria. 
-* Include as many identifiers as you can ascertain from your profile data to maximize your identity graph. This allows Identity Service to stitch identities across datasets more effectively.
+- Include any data you want to use as audience segment criteria. 
+- Include as many identifiers as you can ascertain from your profile data to maximize your identity graph. This allows Identity Service to stitch identities across datasets more effectively.
 
 ## Confirm data ingest by Real-time Customer Profile
 
