@@ -48,6 +48,7 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
+
 **Response**
 
 The response includes a "children" array with an object for each delete request containing the details of that request.

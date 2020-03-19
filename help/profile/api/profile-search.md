@@ -32,7 +32,7 @@ GET /search?{QUERY_PARAMETERS}
 |`schema.name`|**Required.** The name of the schema class containing the content to be searched, written in dot-notation format. Currently, only `schema.name=_xdm.context.segmentdefinition` is supported.|
 |`limit`|The number of search results to return. The default value is 50.|
 |`page`|The page number used for paginating results of the query searched.|
-|`s`|A query that conforms to Microsoft's implementation of [Lucene's search syntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). If no search term is specified, then all records associated with `schema.name` will be returned. A more detailed explanation about the search parameter can be [found below](#search-parameter).
+|`s`|A query that conforms to Microsoft's implementation of [Lucene's search syntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). If no search term is specified, then all records associated with `schema.name` will be returned. A more detailed explanation can be found in the [Search parameters](#search-parameters) section of this document.|
 |`namespace`|Identifies the actual data to search on the schema class specified in the `schema.name` parameter. |
 |`organization.type`|Determines the content of the response. The format of the content returned is dependent on the values used in `schema.name`. For `_xdm.context.segmentdefinition`, the valid values are `hierarchy` or `hierarchyinfo`.|
 |`organization.id`| **Required if `organization.type` is specified.** Gives the hierarchy of the specified organization when used with the `organization.type` of hierarchy.|
@@ -194,7 +194,7 @@ After reading this guide you now have a better understanding of how Real-time Cu
 
 ## Appendix {#appendix}
 
-### Search parameter {#search-parameter}
+### Search parameters {#search-parameters}
 
 The following table lists the specifics of how the search parameter works when using the search API. 
 

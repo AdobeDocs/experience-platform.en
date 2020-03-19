@@ -525,7 +525,7 @@ Returns the `lastName` sub-field of the `person` object in the requested resourc
 
 **addresses**
 
-Returns all elements in the `addresses` array, including all fields in each element, but no other fields.	
+Returns all elements in the `addresses` array, including all fields in each element, but no other fields.
 
 ```json
 {
@@ -552,7 +552,7 @@ Returns all elements in the `addresses` array, including all fields in each elem
 
 **person.lastName,addresses**
 
-Returns the `person.lastName` field and all elements in the `addresses` array.	
+Returns the `person.lastName` field and all elements in the `addresses` array.
 
 ```json
 {
