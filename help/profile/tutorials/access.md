@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Access Real-time Customer Profile data using the Profile API
-topic: tutorial
+title: Real-time Customer Profile API developer guide
+topic: guide
 ---
 
-# Access Real-time Customer Profile data using the Profile API
+# Profile Access (DELETE FILE)
