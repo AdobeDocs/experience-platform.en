@@ -16,7 +16,7 @@ Using the Real-time Customer Profile API, you can perform basic CRUD operations 
 Using this developer guide requires a working understanding of the various Adobe Experience Platform services involved in working with Profile data. Before beginning to work with the Real-time Customer Profile API, please review the documentation for the following services:
 
 * [Real-time Customer Profile](../home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
-* [Adobe Experience Platform Identity Service](../../identity/home.md): Gain a better view of your customer and their behavior by bridging identities across devices and systems.
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Gain a better view of your customer and their behavior by bridging identities across devices and systems.
 * [Adobe Experience Platform Segmentation Service](../../segmentation/home.md): Allows you to build audience segments from Real-time Customer Profile data.
 * [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
 * [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.

@@ -10,7 +10,7 @@ topic: guide
 Adobe Experience Platform enables you to ingest data from multiple sources and build robust profiles for individual customers. Data ingested into Platform is stored in the Data Lake as well as the Real-time Customer Profile data store. Occasionally it may be necessary to delete a dataset or batch from the Profile store in order to remove data that is no longer needed or was added in error. This requires using the Real-time Customer Profile API to create a Profile system job, also known as a "delete request", that can also be modified, monitored, or removed if required.
 
 >[!NOTE]
->If you are trying to delete datasets or batches from the Data Lake, please visit the [Catalog Service overview](../../technical_overview/catalog_architectural_overview/catalog_architectural_overview.md) for instructions.
+>If you are trying to delete datasets or batches from the Data Lake, please visit the [Catalog Service overview](../../catalog/home.md) for instructions.
 
 ## Getting started
 

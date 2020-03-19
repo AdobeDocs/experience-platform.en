@@ -11,7 +11,7 @@ Adobe Experience Platform enables you to bring data together from multiple sourc
 
 Using RESTful APIs or the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. This guide provides step-by-step instructions for working with merge policies using the Adobe Experience Platform user interface.
 
-If you would prefer to work with merge policies using the Real-time Customer Profile API, please follow the instructions outlined in the [merge policies API tutorial](/api-specification/markdown/narrative/tutorials/configuring_up_tutorial/configuring_merge_policies_tutorial.md).
+If you would prefer to work with merge policies using the Real-time Customer Profile API, please follow the instructions outlined in the [merge policies API tutorial](../api/merge-policies.md).
 
 ## Getting started
 
