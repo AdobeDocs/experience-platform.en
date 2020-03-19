@@ -26,28 +26,28 @@ The tutorial covers the following steps:
 
 This tutorial requires a working understanding of the various Adobe Experience Platform services involved in creating audience segments. Before beginning this tutorial, please review the documentation for the following services:
 
-* [Real-time Customer Profile](../../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
-* [Adobe Experience Platform Segmentation Service](../home.md): Allows you to build audience segments from Real-time Customer Profile data.
-* [Experience Data Model (XDM)](../../xdm/home.md: The standardized framework by which Platform organizes customer experience data.
-* [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+- [Real-time Customer Profile](../../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
+- [Adobe Experience Platform Segmentation Service](../home.md): Allows you to build audience segments from Real-time Customer Profile data.
+- [Experience Data Model (XDM)](../../xdm/home.md: The standardized framework by which Platform organizes customer experience data.
+- [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ### Required headers
 
 This tutorial also requires you to have completed the [authentication tutorial](../../tutorials/authentication.md) in order to successfully make calls to Platform APIs. Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+- Authorization: Bearer `{ACCESS_TOKEN}`
+- x-api-key: `{API_KEY}`
+- x-gw-ims-org-id: `{IMS_ORG}`
 
 All resources in Experience Platform are isolated to specific virtual sandboxes. Requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+- x-sandbox-name: `{SANDBOX_NAME}`
 
-> **Note:** For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+> [!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All POST, PUT, and PATCH requests require an additional header:
 
-* Content-Type: application/json
+- Content-Type: application/json
 
 ## Evaluate a segment
 
@@ -61,7 +61,7 @@ If you have not yet completed the [Create a segment using the Real-time Customer
 
 Through scheduled evaluation, your IMS Org can create a recurring schedule to automatically run export jobs.
 
-> **Note:** Scheduled evaluation can be enabled for sandboxes with a maximum of five (5) merge policies for XDM Individual Profile. If your organization has more than five merge policies for XDM Individual Profile within a single sandbox environment, you will not be able to use scheduled evaluation.
+> [!NOTE] Scheduled evaluation can be enabled for sandboxes with a maximum of five (5) merge policies for XDM Individual Profile. If your organization has more than five merge policies for XDM Individual Profile within a single sandbox environment, you will not be able to use scheduled evaluation.
 
 ### Create a schedule
 
@@ -449,7 +449,7 @@ The following example shows what the `segmentMembership` attribute looks like fo
 | Property | Description |
 | -------- | ----------- |
 | lastQualificationTime | The timestamp when the assertion of segment membership was made and the profile entered or exited the segment. |
-| status | The status of segment participation as part of the current request. Must be equal to one of the following known values: <ul><li>`existing`: Entity continues to be in the segment.</li><li>`realized`: Entity is entering the segment.</li><li>`exited`: Entity is exiting the segment.</li></ul>
+| status | The status of segment participation as part of the current request. Must be equal to one of the following known values: <ul><li>`existing`: Entity continues to be in the segment.</li><li>`realized`: Entity is entering the segment.</li><li>`exited`: Entity is exiting the segment.</li></ul> |
 
 ## Access segment results
 
@@ -503,17 +503,17 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-	"name": "Segment Export",
-	"schemaRef": {
-		"id": "https://ns.adobe.com/xdm/context/profile__union",
-		"contentType": "application/vnd.adobe.xed+json;version=1"
-	},
-	"fileDescription": {
-		"persisted": true,
-		"containerFormat": "parquet",
-		"format": "parquet"
-	},
-	"aspect": "production"
+    "name": "Segment Export",
+    "schemaRef": {
+        "id": "https://ns.adobe.com/xdm/context/profile__union",
+        "contentType": "application/vnd.adobe.xed+json;version=1"
+    },
+    "fileDescription": {
+        "persisted": true,
+        "containerFormat": "parquet",
+        "format": "parquet"
+    },
+    "aspect": "production"
 }'
 ```
 
@@ -931,6 +931,7 @@ curl -X GET \
     "creationTime": 1559674261657
 }
 ```
+
 | Property | Description |
 | -------- | ----------- |
 | batchId | The identifier of the batches created from a successful export, to be used for lookup purposes when reading audience data. |
