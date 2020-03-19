@@ -7,5 +7,6 @@ seo-description: Oauth instructions
 
 # Social Network Destinations authentication workflow {#social-network-destinations-workflow}
 
-General blurb about how we connect using Oauth
-Followed by instructions how to connect to the destination using the UI. 
+The connection to Social Network destinations uses the Oauth protocol. 
+
+This tutorial uses Facebook as an example, but the workflow in the Adobe Real-time CDP will the same for all Social Network destinations, once more are added to the product. 
