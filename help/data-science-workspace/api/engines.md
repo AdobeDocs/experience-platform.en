@@ -6,3 +6,636 @@ topic: Developer guide
 ---
 
 # Engines
+
+Engines are the foundations for machine learning Models in Data Science Workspace. They contain machine learning algorithms that solve specific problems, feature pipelines to perform feature engineering, or both. 
+
+This developer guide provides steps to help you start using the [Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) `/engines` endpoint and demonstrates API calls for performing CRUD operations for the following:
+
+*   [Lookup your Docker registry](#lookup-your-docker-registry)
+*   [Create an Engine using Docker URLs](#create-an-engine-using-docker-urls)
+*   [Create an Engine using binary artifacts](#create-an-engine-using-binary-artifacts)
+*   [Create a feature pipeline Engine using binary artifacts](#create-a-feature-pipeline-engine-using-binary-artifacts)
+*   [Retrieve a list of Engines](#retrieve-a-list-of-engines)
+*   [Retrieve a specific Engine](#retrieve-a-specific-engine)
+*   [Update an Engine](#update-an-engine)
+*   [Delete an Engine](#delete-an-engine)
+
+## Getting started
+
+You are required to have completed the [authentication](../../tutorials/authentication.md) tutorial in order to have access to the following request headers to make calls to the `/Engines` endpoint:
+
+* Authorization: Bearer `{ACCESS_TOKEN}`
+* x-api-key: `{API_KEY}`
+* x-gw-ims-org-id: `{IMS_ORG}`
+
+All resources in Experience Platform are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
+
+* x-sandbox-name: `{SANDBOX_NAME}`
+
+For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+
+All requests that contain a payload (POST, PUT, PATCH) require an additional header:
+
+* Content-Type: application/json
+
+### Lookup your Docker registry
+
+Your Docker registry credentials are required in order to upload a packaged Recipe file, including your Docker host URL, username, and password. You can look up this information by performing the following GET request:
+
+#### API Format
+
+```http
+GET /engines/dockerRegistry
+```
+
+#### Request
+
+```shell
+curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+#### Response
+
+A successful response returns a payload containing the details of your Docker registry including the Docker URL (`host`), username (`username`), and password (`password`).
+
+>[!NOTE] Your Docker password changes whenever your `{ACCESS_TOKEN}` is updated.
+
+```json
+{
+    "host": "docker_host.azurecr.io",
+    "username": "00000000-0000-0000-0000-000000000000",
+    "password": "password"
+}
+```
+
+### Create an Engine using Docker URLs
+
+You can create an Engine by performing a POST request while providing its metadata and a Docker URL that references a Docker image in multipart forms.
+
+#### API Format
+
+```http
+POST /engines
+```
+
+#### Request
+
+```shell
+curl -X POST \
+    https://platform.adobe.io/data/sensei/engines \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'content-type: multipart/form-data' \
+    -F 'engine={
+        "name": "A name for this Engine",
+        "description": "A description for this Engine",
+        "type": "Python",
+        "algorithm": "Classification",
+        "artifacts": {
+            "default": {
+                "image": {
+                    "location": "{DOCKER_URL}",
+                    "name": "An additional name for the Docker image",
+                    "executionType": "Python"
+                }
+            }
+        }
+    }' 
+```
+
+*   `name`: The desired name for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in the UI as the Recipe's name.
+*   `description`: An optional description for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in UI as the Recipe's description. This property is required. If you do not want to provide a description, set its value to be an empty string.
+*   `type`: The execution type of the Engine. This value corresponds to the language in which the Docker image is built upon and can be either "Python", "R", or "Tensorflow".
+*   `algorithm`: A string that specifies the type of machine learning algorithm. Supported algorithm types include "Classification", "Regression", or "Custom".
+*   `artifacts > default > image > location`: The location of the Docker image linked to by a Docker URL.
+*   `artifacts > default > image > executionType`: The execution type of the Engine. This value corresponds to the language in which the Docker image is built upon and can be either "Python", "R", or "Tensorflow".
+
+
+#### Response
+
+A successful response returns a payload containing the details of the newly created Engine including its unique identifier (`id`).
+
+```json
+{
+    "id": "{ENGINE_ID}",
+    "name": "A name for this Engine",
+    "description": "A description for this Engine",
+    "type": "Python",
+    "algorithm": "Classification",
+    "created": "2019-01-01T00:00:00.000Z",
+    "createdBy": {
+        "userId": "Jane_Doe@AdobeID"
+    },
+    "updated": "2019-01-01T00:00:00.000Z",
+    "artifacts": {
+        "default": {
+            "image": {
+                "location": "{DOCKER_URL}",
+                "name": "An additional name for the Docker image",
+                "executionType": "Python",
+                "packagingType": "docker"
+            }
+        }
+    }
+}
+```
+
+### Create an Engine using binary artifacts
+
+You can create an Engine using local `.jar` or `.egg` binary artifacts by performing a POST request while providing its meta data and the artifact's path in multipart forms.
+
+#### API Format
+
+```http
+POST /engines
+```
+
+#### Request
+
+```shell
+curl -X POST \
+    https://platform.adobe.io/data/sensei/engines \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'content-type: multipart/form-data' \
+    -F 'engine={
+        "name": "A name for this Engine",
+        "description": "A description for this Engine",
+        "algorithm": "Classification",
+        "type": "PySpark",
+    }' \
+    -F 'defaultArtifact=@path/to/binary/artifact/file.egg'
+```
+
+*   `name`: The desired name for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in the UI as the Recipe's name.
+*   `description`: An optional description for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in UI as the Recipe's description. This property is required. If you do not want to provide a description, set its value to be an empty string.
+*   `algorithm`: A string that specifies the type of machine learning algorithm. Supported algorithm types include "Classification", "Regression", or "Custom".
+*   `type`: The execution type of the Engine. This value corresponds to the language in which the binary artifact is built upon and can be either "PySpark" or "Spark".
+
+
+#### Response
+
+A successful response returns a payload containing the details of the newly created Engine including its unique identifier (`id`).
+
+```json
+{
+    "id": "{ENGINE_ID}",
+    "name": "A name for this Engine",
+    "description": "A description for this Engine",
+    "type": "PySpark",
+    "algorithm": "Classification",
+    "created": "2019-01-01T00:00:00.000Z",
+    "createdBy": {
+        "userId": "Jane_Doe@AdobeID"
+    },
+    "updated": "2019-01-01T00:00:00.000Z",
+    "artifacts": {
+        "default": {
+            "image": {
+                "location": "wasbs://artifact-location.blob.core.windows.net/Engine_ID/default.egg",
+                "name": "file.egg",
+                "executionType": "PySpark",
+                "packagingType": "egg"
+            }
+        }
+    }
+}
+```
+
+### Create a feature pipeline Engine using binary artifacts
+
+You can create a feature pipeline Engine using local `.jar` or `.egg` binary artifacts by performing a POST request while providing its meta data and the artifact's paths in multipart forms. A PySpark or Spark Engine has the ability to specify computation resources such as the number of cores or the amount of memory. Please refer to the appendix section on [PySpark and Spark resource configurations](#pyspark-and-spark-resource-configurations) for more information.
+
+#### API Format
+
+```http
+POST /engines
+```
+
+#### Request
+
+```shell
+curl -X POST \
+    https://platform.adobe.io/data/sensei/engines \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'content-type: multipart/form-data' \
+    -F 'engine={
+        "name": "Feature Pipeline Engine",
+        "description": "A feature pipeline Engine",
+        "algorithm":"fp",
+        "type": "PySpark"
+    }' \
+    -F 'featurePipelineOverrideArtifact=@path/to/binary/artifact/feature_pipeline.egg' \
+    -F 'defaultArtifact=@path/to/binary/artifact/feature_pipeline.egg'
+```
+
+*   `name`: The desired name for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in the UI as the Recipe's name.
+*   `description`: An optional description for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in UI as the Recipe's description. This property is required. If you do not want to provide a description, set its value to be an empty string.
+*   `algorithm`: A string that specifies the type of machine learning algorithm. Set this value as "fp" to specify this creation to be a Feature Pipeline Engine.
+*   `type`: The execution type of the Engine. This value corresponds to the language in which the binary artifacts are built upon and can be either "PySpark" or "Spark".
+
+#### Response
+
+A successful response returns a payload containing the details of the newly created Engine including its unique identifier (`id`).
+
+```json
+{
+    "id": "{ENGINE_ID}",
+    "name": "Feature Pipeline Engine",
+    "description": "A feature pipeline Engine",
+    "type": "PySpark",
+    "algorithm": "fp",
+    "created": "2019-01-01T00:00:00.000Z",
+    "createdBy": {
+        "userId": "Jane_Doe@AdobeID"
+    },
+    "updated": "2019-01-01T00:00:00.000Z",
+    "artifacts": {
+        "default": {
+            "image": {
+                "location": "wasbs://artifact-location.blob.core.windows.net/Engine_ID/default.egg",
+                "name": "file.egg",
+                "executionType": "PySpark",
+                "packagingType": "egg"
+            }
+        }
+    }
+}
+```
+
+### Retrieve a list of Engines
+
+You can retrieve a list of Engines by performing a single GET request. To help filter results, you can specify query parameters in the request path. For a list of available queries, refer to the appendix section on [query parameters for asset retrieval](#query-parameters-for-asset-retrieval).
+
+#### API Format
+
+```http
+GET /engines
+GET /engines?parameter_1=value_1
+GET /engines?parameter_1=value_1&parameter_2=value_2
+```
+
+#### Request
+
+```shell
+curl -X GET \
+    https://platform.adobe.io/data/sensei/engines \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+#### Response
+
+A successful response returns a list of Engines and their details.
+
+```json
+{
+    "children": [
+        {
+            "id": "{ENGINE_ID}",
+            "name": "A name for this Engine",
+            "description": "A description for this Engine",
+            "type": "PySpark",
+            "algorithm": "Classification",
+            "created": "2019-01-01T00:00:00.000Z",
+            "createdBy": {
+                "userId": "Jane_Doe@AdobeID"
+            },
+            "updated": "2019-01-01T00:00:00.000Z"
+        },
+        {
+            "id": "{ENGINE_ID}",
+            "name": "A name for this Engine",
+            "description": "A description for this Engine",
+            "type": "Python",
+            "algorithm": "Classification",
+            "created": "2019-01-01T00:00:00.000Z",
+            "createdBy": {
+                "userId": "Jane_Doe@AdobeID"
+            },
+            "updated": "2019-01-01T00:00:00.000Z"
+        },
+        {
+            "id": "{ENGINE_ID}",
+            "name": "Feature Pipeline Engine",
+            "description": "A feature pipeline Engine",
+            "type": "PySpark",
+            "algorithm":"fp",
+            "created": "2019-01-01T00:00:00.000Z",
+            "createdBy": {
+                "userId": "Jane_Doe@AdobeID"
+            },
+            "updated": "2019-01-01T00:00:00.000Z"
+        }
+    ],
+    "_page": {
+        "property": "deleted==false",
+        "totalCount": 100,
+        "count": 3
+    }
+}
+```
+
+### Retrieve a specific Engine
+
+You can retrieve the details of a specific Engine by performing a GET request that includes the ID of the desired Engine in the request path.
+
+#### API Format
+
+```http
+GET /engines/{ENGINE_ID}
+```
+
+*   `{ENGINE_ID}`: The ID of an existing Engine.
+
+#### Request
+
+```shell
+curl -X GET \
+    https://platform.adobe.io/data/sensei/engines/{ENGINE_ID} \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+#### Response
+
+A successful response returns a payload containing the details of the desired Engine.
+
+```json
+{
+    "id": "{ENGINE_ID}",
+    "name": "A name for this Engine",
+    "description": "A description for this Engine",
+    "type": "PySpark",
+    "algorithm": "Classification",
+    "created": "2019-01-01T00:00:00.000Z",
+    "createdBy": {
+        "userId": "Jane_Doe@AdobeID"
+    },
+    "updated": "2019-01-01T00:00:00.000Z",
+    "artifacts": {
+        "default": {
+            "image": {
+                "location": "wasbs://artifact-location.blob.core.windows.net/{ENGINE_ID}/default.egg",
+                "name": "file.egg",
+                "executionType": "PySpark",
+                "packagingType": "egg"
+            }
+        }
+    }
+}
+```
+
+### Update an Engine
+
+You can modify and update an existing Engine by overwriting its properties through a PUT request that includes the target Engine's ID in the request path and providing a JSON payload containing updated properties.
+
+>[!NOTE] In order to ensure the success of this PUT request, it is suggested that first you perform a GET request to [retrieve the Engine by ID](#retrieve-an-engine-by-id). Then, modify and update the returned JSON object and apply the entirety of the modified JSON object as the payload for the PUT request.
+
+The following sample API call will update an Engine's name and description while having these properties initially:
+
+```json
+{
+    "name": "A name for this Engine",
+    "description": "A description for this Engine",
+    "type": "Python",
+    "algorithm": "Classification",
+    "artifacts": {
+        "default": {
+            "image": {
+                "executionType": "Python",
+                "packagingType": "docker"
+            }
+        }
+    }
+}
+```
+
+#### API Format
+
+```http
+PUT /engines/{ENGINE_ID}
+```
+
+*   `{ENGINE_ID}`: The ID of an existing Engine.
+
+#### Request
+
+```shell
+curl -X PUT \
+    https://platform.adobe.io/data/sensei/engines/{ENGINE_ID} \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'content-type: application/vnd.adobe.platform.sensei+json;profile=engine.v1.json' \
+    -d '{
+        "name": "An updated name for this Engine",
+        "description": "An updated description",
+        "type": "Python",
+        "algorithm": "Classification",
+        "artifacts": {
+            "default": {
+                "image": {
+                    "executionType": "Python",
+                    "packagingType": "docker"
+                }
+            }
+        }
+    }'
+```
+
+#### Response
+
+A successful response returns a payload containing the Engine's updated details.
+
+```json
+{
+    "id": "{ENGINE_ID}",
+    "name": "An updated name for this Engine",
+    "description": "An updated description",
+    "type": "Python",
+    "algorithm": "Classification",
+    "created": "2019-01-01T00:00:00.000Z",
+    "createdBy": {
+        "displayName": "Jane Doe",
+        "userId": "Jane_Doe@AdobeID"
+    },
+    "updated": "2019-01-02T00:00:00.000Z",
+    "artifacts": {
+        "default": {
+            "image": {
+                "executionType": "Python",
+                "packagingType": "docker"
+            }
+        }
+    }
+}
+```
+
+### Delete an Engine
+
+You can delete an Engine by performing a DELETE request while specifying the target Engine's ID in the request path. Deleting an Engine will cascade delete all MLInstances which reference that Engine, including any Experiments and Experiment runs belonging to those MLInstances.
+
+#### API Format
+
+```http
+DELETE /engines/{ENGINE_ID}
+```
+
+*   `{ENGINE_ID}`: The ID of an existing Engine.
+
+#### Request
+
+```shell
+curl -X DELETE \
+    https://platform.adobe.io/data/sensei/engines/{ENGINE_ID} \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+#### Response
+
+```json
+{
+    "title": "Success",
+    "status": 200,
+    "detail": "Engine deletion was successful"
+}
+```
+
+## Appendix
+
+The following sections provide reference information for various features of the Sensei Machine Learning API.
+
+### Query parameters for asset retrieval
+
+The Sensei Machine Learning API provides support for query parameters with retrieving assets. Available query parameters and their usages are described in the following table:
+
+| Query parameter | Description | Default value |
+| --------------- | ----------- | ------- |
+| `start` | Indicates the starting index for pagination. | `start=0` |
+| `limit` | Indicates the maximum number of results to return. | `limit=25` |
+| `orderby` | Indicates the properties to use for sorting in priority order. Include a dash (**-**) before a property name to sort in descending order, otherwise results are sorted in ascending order. | `orderby=created` |
+| `property` | Indicates the comparison expression that an object must satisfy in order to be returned. | `property=deleted==false` |
+
+>[!NOTE] When combining multiple query parameters, they must be separated by ampersands (**&**).
+
+### Python CPU and GPU configurations
+
+Python Engines have the ability to choose between either a CPU or a GPU for its training or scoring purposes, and is defined on an [MLInstance](./mlinstances.md) as a task specification (`tasks > specification`).
+
+The following is an example configuration that specifies using a CPU for training and a GPU for scoring:
+
+```json
+[
+    {
+        "name": "train",
+        "parameters": [
+            {
+                "key": "training parameter",
+                "value": "parameter value"
+            }    
+        ],
+        "specification": {
+            "type": "ContainerTaskSpec",
+            "cpus": "1"
+        }
+    },
+    {
+        "name": "score",
+        "parameters": [
+            {
+                "key": "scoring parameter",
+                "value": "parameter value" 
+            }
+        ],
+        "specification": {
+            "type": "ContainerTaskSpec",
+            "gpus": "1"
+        }
+    }
+]
+```
+
+>[!NOTE] The values of `cpus` and `gpus` does not signify the number of CPUs or GPUs, but rather the number of physical machines. These values are permissibly `"1"` and will throw an exception otherwise.
+
+### PySpark and Spark resource configurations
+
+PySpark and Spark Engines have the ability to modify computational resources for training and scoring purposes, these resources are described in the following table:
+
+| Resource | Description | Type |
+| -------- | ----------- | ---- |
+| driverMemory | Memory for driver in megabytes | int |
+| driverCores | Number of cores used by driver | int |
+| executorMemory | Memory for executor in megabytes | int |
+| executorCores | Number of cores used by executor | int |
+| numExecutors | Number of executors | int |
+
+Resources can be specified on an [MLInstance](./mlinstances.md) as either (A) individual training or scoring parameters, or (B) within an additional specifications object (`specification`). For example, the following resource configurations are the same for both training and scoring:
+
+```json
+[
+    {
+        "name": "train",
+        "parameters": [
+            {
+                "key": "driverMemory",
+                "value": "2048"
+            },
+            {
+                "key": "driverCores",
+                "value": "1"
+            },
+            {
+                "key": "executorMemory",
+                "value": "2048"
+            },
+            {
+                "key": "executorCores",
+                "value": "2"
+            },
+            {
+                "key": "numExecutors",
+                "value": "3"
+            }
+        ]
+    },
+    {
+        "name": "score",
+        "parameters": [
+            {
+                "key": "scoring parameter",
+                "value": "parameter value"
+            }
+        ],
+        "specification": {
+            "type": "SparkTaskSpec",
+            "name": "Spark Task name",
+            "className": "Class name",
+            "driverMemoryInMB": 2048,
+            "driverCores": 1,
+            "executorMemoryInMB": 2048,
+            "executorCores": 2,
+            "numExecutors": 3
+        }
+    }
+]
+```
