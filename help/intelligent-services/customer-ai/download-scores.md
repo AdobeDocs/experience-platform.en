@@ -237,8 +237,13 @@ To download your file data, make a GET request to the `"href"` value you copied 
 **API format**
 
 ```http
-GET files/{dataSetFileId}
+GET files/{DATASETFILE_ID}?path={FILE_NAME}
 ```
+
+| Parameter | Description |
+| --------- | ----------- |
+| `{DATASETFILE_ID}` | The dataSetFile ID is returned in the `href` value from a [previous step](#retrieve-the-next-api-call-with-your-batch-id).|
+| `{FILE_NAME}` | The name of the file. |
 
 **Request**
 
