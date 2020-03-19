@@ -24,3 +24,7 @@ Once you have selected a user, click **Save** to add them to the product profile
 The *Users* tab for the product profile reappears, where the added user is now listed.
 
 ![user-added](../images/user-added.png)
+
+## Next steps
+
+ Now that you have learned how to control access to Platform features through the Admin Console, see the appendix section in the [access control overview](../home.md) to learn more about each individual permission and the Platform functionalities they grant access to.

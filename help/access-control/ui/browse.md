@@ -20,3 +20,7 @@ The access control workspace for Adobe Experience Platform appears, opening on t
 ![platform-access-control](../images/platform-access-control.png)
 
 This user guide focuses on how to use the Admin Console to assign access permissions for Platform. For more general information on how to navigate the Admin Console, see the [Admin Console user guide](https://helpx.adobe.com/enterprise/using/admin-console.html).
+
+## Next steps
+
+Once you have navigated the access control workspace, proceed to the next step to [create a new product profile](create-profile.md)

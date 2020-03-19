@@ -36,3 +36,7 @@ Continue going through the available categories and adding any desired permissio
 The *Permissions* tab for the product profile reappears, and shows that the selected permissions are now active.
 
 ![added-permissions](../images/added-permissions.png)
+
+## Next steps
+
+With permissions established, you can proceed to the next step to [manage details and services for a product profile](details-and-services.md)

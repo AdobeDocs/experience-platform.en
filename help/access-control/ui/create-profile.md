@@ -22,3 +22,7 @@ The next screen prompts you to choose which Platform services to include in the 
 ![new-profile-services](../images/new-profile-services.png)
 
 The new product profile is successfully created, and you are redirected to the profile's [edit permissions page](#edit-permissions). See the sections on [managing permissions](#manage-permissions-for-a-product-profile) and [managing users](#manage-users-for-a-product-profile) for more details on how to manage product profiles once they are created.
+
+## Next steps
+
+With a new product profile created, you can proceed to the next step to [manage permissions for a product profile](permissions.md)
