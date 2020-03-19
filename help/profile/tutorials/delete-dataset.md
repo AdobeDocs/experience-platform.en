@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Delete a dataset or specific batch in a dataset
-topic: tutorial
+title: Real-time Customer Profile API developer guide
+topic: guide
 ---
 
-# Delete a dataset or specific batch in a dataset
+# Delete dataset (DELETE FILE)
