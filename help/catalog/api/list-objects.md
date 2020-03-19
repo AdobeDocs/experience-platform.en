@@ -38,7 +38,7 @@ curl -X GET \
 
 A successful response returns a list of Catalog objects in the form of key-value pairs, filtered by the query parameters provided in the request. For each key-value pair, the key represents a unique identifier for the Catalog object in question, which can then be used in another call to [view that specific object](look-up-object.md) for more details.
 
-> **Note:** If a returned object does not contain one or more of the requested properties indicated by the `properties` query, the response returns only the requested properties that it does include, as shown in "Sample Dataset 3" and "Sample Dataset 4" below.
+>[!NOTE] If a returned object does not contain one or more of the requested properties indicated by the `properties` query, the response returns only the requested properties that it does include, as shown in "Sample Dataset 3" and "Sample Dataset 4" below.
 
 ```json
 {

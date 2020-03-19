@@ -25,9 +25,6 @@ user-guide-title: Experience Data Model (XDM) System Help
   * [Descriptors](api/descriptors.md)
   * [Ad-hoc schemas](api/ad-hoc.md)
   * [Appendix](api/appendix.md)
-* Schema Editor UI {#ui}  
-  * [Schema Editor overview](ui/overview.md)
-  * [Schema Editor user guide](ui/user-guide.md)
 * Tutorials {#tutorials}
   * [Create a schema (API)](tutorials/create-schema-api.md)
   * [Create a schema (UI)](tutorials/create-schema-ui.md)

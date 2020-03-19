@@ -18,7 +18,4 @@ user-guide-title: Real-time Customer Profile Help
 * Profile UI {#ui}
   * [Profile user guide](ui/user-guide.md)
   * [Merge policies user guide](ui/merge-policies.md)
-* Edge projections {#edge-projections}
-  * [Edge projections overview](edge-projections/overview.md)
-* [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)

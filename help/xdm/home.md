@@ -5,7 +5,7 @@ title: Experience Data Model (XDM) System
 topic: overview
 ---
 
-# Experience Data Model (XDM) System overview
+# XDM System overview
 
 Standardization and interoperability are key concepts behind Adobe Experience Platform. Experience Data Model (XDM), driven by Adobe, is an effort to standardize customer experience data and define schemas for customer experience management. 
 
@@ -70,7 +70,7 @@ Catalog data is stored in the Data Lake, a highly granular data store containing
 
 To begin ingesting data into Experience Platform, a dataset is created using Catalog Service. The dataset references an XDM schema describing the structure of the data to be ingested. If a dataset is created without a schema, Experience Platform will derive an "observed schema" by inspecting the type and content of ingested data fields. Datasets are then tracked in Catalog and stored in the Data Lake alongside the schemas and observed schemas on which they are based. 
 
-For more information on Catalog, see the [Catalog Service overview]^. For more information on Adobe Experience Platform Data Ingestion, see the [batch ingestion overview]^ and [streaming ingestion overview]^.
+For more information on Catalog, see the [Catalog Service overview](../catalog/home.md). For more information on Adobe Experience Platform Data Ingestion, see the [Data Ingestion overview](../ingestion/home.md).
 
 ### Query Service
 
@@ -78,7 +78,7 @@ Adobe Experience Platform Query Service allows you to use standard SQL to query 
 
 After a schema has been composed and a dataset has been created which references that schema, data is then ingested and stored in the Data Lake. Using Query Service, you can join any datasets in the Data Lake and capture the query results as a new dataset for use in reporting, machine learning, or for ingestion into Real-time Customer Profile. 
 
-To learn more about Query Service, please see the [Query Service introduction]^.
+To learn more about Query Service, please see the [Query Service introduction](../query-service/home.md).
 
 ### Real-time Customer Profile
 
@@ -92,7 +92,7 @@ As XDM Individual Profile and XDM ExperienceEvent data is ingested and managed b
 
 XDM Individual Profile data helps inform and empower actions across any channel or Adobe solution integration, and when paired with a rich history of behavioral and interaction data, this data is used to power machine learning. The Real-time Customer Profile API can also be used to enrich the functionality of third-party solutions, CRMs, and proprietary solutions.
 
-See the [Real-time Customer Profile overview]^ for more information.
+See the [Real-time Customer Profile overview](../profile/home.md) for more information.
 
 ### Data Science Workspace
 
@@ -100,7 +100,7 @@ Adobe Experience Platform Data Science Workspace uses machine learning and artif
 
 With Data Science Workspace, data scientists can easily create intelligent services APIs powered by machine learning. These services work with other Adobe solutions, including Adobe Target and Adobe Analytics Cloud, to help you automate personalized, targeted digital experiences.
 
-For more information on using Experience Platform data to power insights, see the [Data Science Workspace overview]^.
+For more information on using Experience Platform data to power insights, see the [Data Science Workspace overview](../data-science-workspace/home.md).
 
 ### Decisioning Service
 
@@ -108,7 +108,7 @@ Decisioning Service provides the capability to configure personalized offer deci
 
 Decisioning Service leverages Real-time Customer Profile data, and is therefore only compatible with datasets based on schemas implementing the XDM Individual Profile or XDM ExperienceEvent class.
 
-See the [Decisioning Service overview]^ for more information.
+See the [Decisioning Service overview](../decisioning-service/home.md) for more information.
 
 ## Next steps
 
