@@ -1,0 +1,263 @@
+---
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+solution: Adobe Experience Platform
+title: Configure a dataset for Profile and Identity Service using APIs
+topic: tutorial
+---
+
+# Configure a dataset for Profile and Identity Service using APIs
+
+This tutorial covers the process of enabling a dataset for use in Real-time Customer Profile and Identity Service. 
+
+This tutorial covers the following steps:
+
+1. Enable a dataset for use in Real-time Customer Profile, using one of two options:
+    - [Create a new dataset](#create-a-dataset-enabled-for-profile-and-identity)
+    - [Configure an existing dataset](#configure-an-existing-dataset)
+1. [Ingest data into the dataset](#ingest-data-into-the-dataset)  
+1. [Confirm data ingest by Real-time Customer Profile](#confirm-data-ingest-by-real-time-customer-profile)  
+1. [Confirm data ingest by Identity Service](#confirm-data-ingest-by-identity-service)  
+
+## Getting started
+
+This tutorial requires a working understanding of the various Adobe Experience Platform services involved in managing Profile-enabled datasets. Before beginning this tutorial, please review the documentation for the following services:
+- [Real-time Customer Profile](../home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+- [Identity Service](../../identity-service/home.md): Enables Real-time Customer Profile by bridging identities from disparate data sources being ingested into Platform.
+- [Catalog Service](../../catalog/home.md): A RESTful API that allows you to create datasets and configure them for Real-time Customer Profile and Identity Service.
+- [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
+
+The following sections provide additional information that you will need to know in order to successfully make calls to the Platform APIs.
+
+### Reading sample API calls
+
+This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the Experience Platform troubleshooting guide.
+
+### Gather values for required headers
+
+In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+
+- Authorization: Bearer `{ACCESS_TOKEN}`
+- x-api-key: `{API_KEY}`
+- x-gw-ims-org-id: `{IMS_ORG}`
+
+All requests that contain a payload (POST, PUT, PATCH) require an additional header:
+
+- Content-Type: application/json
+
+All resources in Experience Platform are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in. For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+
+- x-sandbox-name: `{SANDBOX_NAME}`
+
+## Create a dataset enabled for Profile and Identity {#create-a-dataset-enabled-for-profile-and-identity}
+
+You can enable a dataset for Real-time Customer Profile and Identity Service immediately upon creation or at any point after the dataset has been created. If you would like to enable a dataset that has already been created, follow the steps for [configuring an existing dataset](#configure-an-existing-dataset) found later in this document.
+
+To create a new dataset, you must know the ID of an existing XDM schema that is enabled for Real-time Customer Profile. For information on how to look-up or create a Profile-enabled schema, see the tutorial on [creating a schema using the Schema Registry API](../../xdm/tutorials/create-schema-api.md). 
+
+The following call to the Catalog API enables a dataset for Profile and Identity Service:
+
+**API format**
+
+```http
+POST /dataSets
+```
+
+**Request**
+
+By including `unifiedProfile` and `unifiedIdentity` under `tags` in the request body, the dataset will be immediately enabled for Profile and Identity Service, respectively. The values of these tags must be an array containing the string `"enabled:true"`.
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/foundation/catalog/dataSets \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "fileDescription" : {
+    "persisted": true,
+        "containerFormat": "parquet",
+        "format": "parquet"
+    },
+    "fields":[],
+    "schemaRef" : {
+        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
+        "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
+    },
+    "tags" : {
+       "unifiedProfile": ["enabled:true"],
+       "unifiedIdentity": ["enabled:true"]
+    }
+  }'
+```
+
+|Property|Description|
+|---|---|
+|`schemaRef.id`|The ID of the Profile-enabled schema upon which the dataset will be based.|
+|`{TENANT_ID}`|The namespace within the Schema Registry which contains resources belonging to your IMS Organization. See the [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) section of the Schema Registry developer guide for more information.|
+
+**Response**
+
+A successful response shows an array containing the ID of the newly created dataset in the form of `"@/dataSets/{DATASET_ID}"`. Once you have successfully created and enabled a dataset, please proceed to the steps for [uploading data](#upload-data-to-the-dataset).
+
+```json
+[
+    "@/dataSets/5b020a27e7040801dedbf46e"
+] 
+```
+
+## Configure an existing dataset {#configure-an-existing-dataset}
+
+The following steps cover how to enable a previously created dataset for Real-time Customer Profile and Identity Service. If you have already created a Profile-enabled dataset, please proceed to the steps for [ingesting data](#ingest-data-into-the-dataset).
+
+### Check if the dataset is enabled {#check-if-the-dataset-is-enabled}
+
+Using the Catalog API, you can inspect an existing dataset to determine whether it is enabled for use in Real-time Customer Profile and Identity Service. 
+
+The following call retrieves the details of a dataset by ID.
+
+**API format**
+
+```http
+GET /dataSets/{DATASET_ID}
+```
+
+|Parameter|Description|
+|---|---|
+|`{DATASET_ID}`|The ID of a dataset you want to inspect.|
+
+**Request**
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Response**
+
+```json
+{
+    "5b020a27e7040801dedbf46e": {
+        "name": "Commission Program Events DataSet",
+        "imsOrg": "{IMS_ORG}",
+        "tags": {
+            "adobe/pqs/table": [
+                "unifiedprofileingestiontesteventsdataset"
+            ],
+            "unifiedProfile": [
+                "enabled:true"
+            ],
+            "unifiedIdentity": [
+                "enabled:true"
+            ]
+        },
+        "lastBatchId": "6dcd9128a1c84e6aa5177641165e18e4",
+        "lastBatchStatus": "success",
+        "dule": {},
+        "statsCache": {
+            "startDate": null,
+            "endDate": null
+        },
+        "namespace": "ACP",
+        "state": "DRAFT",
+        "version": "1.0.1",
+        "created": 1536536917382,
+        "updated": 1539793978215,
+        "createdClient": "{CLIENT_CREATED}",
+        "createdUser": "{CREATED_BY}",
+        "updatedUser": "{CREATED_BY}",
+        "viewId": "5b020a27e7040801dedbf46f",
+        "aspect": "production",
+        "status": "enabled",
+        "fileDescription": {
+            "persisted": true,
+            "containerFormat": "parquet",
+            "format": "parquet"
+        },
+        "transforms": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/transforms",
+        "files": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/files",
+        "schema": "@/xdms/context/experienceevent",
+        "schemaMetadata": {
+            "primaryKey": [],
+            "delta": [],
+            "dule": [],
+            "gdpr": []
+        },
+        "schemaRef": {
+            "id": "https://ns.adobe.com/xdm/context/experienceevent",
+            "contentType": "application/vnd.adobe.xed+json"
+        }
+    }
+}
+```
+
+Under the `tags` property, you can see that `unifiedProfile` and `unifiedIdentity` are both present with the value `enabled:true`. Therefore, Real-time Customer Profile and Identity Service are enabled for this dataset, respectively.
+
+### Enable the dataset {#enable-the-dataset}
+
+If the existing dataset has not been enabled for Profile or Identity Service, you can enable it by making a PATCH request using the dataset ID.
+
+**API format**
+
+```http
+PATCH /dataSets/{DATASET_ID}
+```
+
+|Parameter|Description|
+|---|---|
+|`{DATASET_ID}`|The ID of a dataset you want to update.|
+
+**Request**
+
+```shell
+curl -X PATCH \
+  https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "tags" : {
+        "unifiedProfile": ["enabled:true"],
+        "unifiedIdentity": ["enabled:true"]
+    }
+  }'
+```
+
+The request body includes a `tags` property, which contains two sub-properties: `"unifiedProfile"` and `"unifiedIdentity"`. The values of these sub-properties are arrays containing the string `"enabled:true"`.
+
+**Response**
+A successful PATCH request returns HTTP Status 200 (OK) and an array containing the ID of the updated dataset. This ID should match the one sent in the PATCH request. The `"unifiedProfile"` and `"unifiedIdentity"` tags have now been added and the dataset is enabled for use by Profile and Identity services.
+
+```json
+[
+    "@/dataSets/5b020a27e7040801dedbf46e"
+]
+```
+
+## Ingest data into the dataset {#ingest-data-into-the-dataset}
+
+Both Real-time Customer Profile and Identity Service consume XDM data as it is being ingested into a dataset. For instructions on how to upload data into a dataset, refer to the tutorial on [creating a dataset using APIs](../../catalog/datasets/create.md).
+
+When planning what data to send to your Profile-enabled dataset, consider the following best practices:
+
+- Include any data you want to use as audience segment criteria. 
+- Include as many identifiers as you can ascertain from your profile data to maximize your identity graph. This allows Identity Service to stitch identities across datasets more effectively.
+
+## Confirm data ingest by Real-time Customer Profile {#confirm-data-ingest-by-real-time-customer-profile}
+
+When uploading data to a new dataset for the first time, or as part of a process involving a new ETL or data source, it is recommended to carefully check the data to ensure it has been uploaded as expected.
+
+Using the Real-time Customer Profile Access API, you can retrieve batch data as it gets loaded into a dataset. If you are unable to retrieve any of the entities you expect, your dataset may not be enabled for Real-time Customer Profile. After confirming that your dataset has been enabled, ensure that your source data format and identifiers support your expectations.
+
+For detailed instructions on how to use the Real-time Customer Profile API to access Profile data, please follow the [sub-guide on Entities, also known as the "Profile Access API"](../api/entities.md).
+
+## Confirm data ingest by Identity Service {#confirm-data-ingest-by-identity-service}
+
+Each data fragment ingested that contains more than one identity creates a link in your private identity graph. For more information on identity graphs and access identity data, please begin by reading the [Identity Service overview](../../identity-service/home.md).
