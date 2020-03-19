@@ -107,11 +107,11 @@ A successful response shows an array containing the ID of the newly created data
 ] 
 ```
 
-## Configure an existing dataset
+## Configure an existing dataset {#configure-an-existing-dataset}
 
 The following steps cover how to enable a previously created dataset for Real-time Customer Profile and Identity Service. If you have already created a Profile-enabled dataset, please proceed to the steps for [ingesting data](#ingest-data-into-the-dataset).
 
-### Check if the dataset is enabled
+### Check if the dataset is enabled {#check-if-the-dataset-is-enabled}
 
 Using the Catalog API, you can inspect an existing dataset to determine whether it is enabled for use in Real-time Customer Profile and Identity Service. 
 
@@ -198,7 +198,7 @@ curl -X GET \
 
 Under the `tags` property, you can see that `unifiedProfile` and `unifiedIdentity` are both present with the value `enabled:true`. Therefore, Real-time Customer Profile and Identity Service are enabled for this dataset, respectively.
 
-### Enable the dataset
+### Enable the dataset {#enable-the-dataset}
 
 If the existing dataset has not been enabled for Profile or Identity Service, you can enable it by making a PATCH request using the dataset ID.
 
@@ -250,7 +250,7 @@ When planning what data to send to your Profile-enabled dataset, consider the fo
 - Include any data you want to use as audience segment criteria. 
 - Include as many identifiers as you can ascertain from your profile data to maximize your identity graph. This allows Identity Service to stitch identities across datasets more effectively.
 
-## Confirm data ingest by Real-time Customer Profile
+## Confirm data ingest by Real-time Customer Profile {#confirm-data-ingest-by-real-time-customer-profile}
 
 When uploading data to a new dataset for the first time, or as part of a process involving a new ETL or data source, it is recommended to carefully check the data to ensure it has been uploaded as expected.
 
@@ -258,6 +258,6 @@ Using the Real-time Customer Profile Access API, you can retrieve batch data as 
 
 For detailed instructions on how to use the Real-time Customer Profile API to access Profile data, please follow the [sub-guide on Entities, also known as the "Profile Access API"](../api/entities.md).
 
-## Confirm data ingest by Identity Service
+## Confirm data ingest by Identity Service {#confirm-data-ingest-by-identity-service}
 
 Each data fragment ingested that contains more than one identity creates a link in your private identity graph. For more information on identity graphs and access identity data, please begin by reading the [Identity Service overview](../../identity-service/home.md).

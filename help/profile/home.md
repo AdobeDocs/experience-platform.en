@@ -73,7 +73,7 @@ This section introduces the components that allow Real-time Customer Profile to 
 
 Real-time input is made possible through a process called streaming ingestion. As profile and time series data is ingested, Real-time Customer Profile automatically decides to include or exclude that data from segments through an ongoing process called streaming segmentation, before merging it with existing data and updating the union view. As a result, you can instantaneously perform computations and make decisions to deliver enhanced, individualized experiences to customers as they interact with your brand.  
 
-While being ingested, the data also undergoes validation to ensure it being ingested properly and conforming to the schema upon which the dataset is based. For more information about what validation is done during ingestion, please begin by reading the [data ingestion quality overview](../ingestions/quality/overview.md).
+While being ingested, the data also undergoes validation to ensure it being ingested properly and conforming to the schema upon which the dataset is based. For more information about what validation is done during ingestion, please begin by reading the [data ingestion quality overview](../ingestion/quality/overview.md).
 
 ### Edge projections
 
@@ -115,7 +115,7 @@ The cornerstone of your marketing campaign is your audience. Real-time Customer 
 * Customers for whom the sum of the purchases is greater than $10,000.
 * Customers who have seen a set number of unique marketing campaigns from a pre-defined list, specified by their Campaign ID, and explored them within 30 minutes.
 
-To get started with segmentation, refer to the [segmentation overview](../segmentation/overview.md). 
+To get started with segmentation, refer to the [segmentation overview](../segmentation/home.md). 
 
 ## (Alpha) Configure computed attributes
 
