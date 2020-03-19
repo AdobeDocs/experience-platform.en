@@ -172,10 +172,13 @@ Results received can be sorted by specified columns of the target dataset and in
 In the following example, dataframe is sorted by "column-a" first in ascending order. Rows having the same values for "column-a" are then sorted by "column-b" in descending order.
 
 ### Python
+
 ```python
 df = dataset_reader.sort([('column-a', 'asc'), ('column-b', 'desc')])
 ```
+
 ### R
+
 ```r
 df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 ```
