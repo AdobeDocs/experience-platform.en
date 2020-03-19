@@ -38,8 +38,8 @@ Before starting this tutorial, you must have the following prerequisites:
 *   Download the three required Jupyter Notebook files from the <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">Adobe public Git repository</a>, these will be used to demonstrate the JupyterLab workflow in Data Science Workspace.
 
 *   A working understanding of the following key concepts used in this tutorial:
-    *   [Experience Data Model](../../schema_registry/xdm_system/xdm_system_in_experience_platform.md): The standardization effort led by Adobe to define standard schemas such as Profile and ExperienceEvent, for Customer Experience Management. 
-    *   Datasets: A storage and management construct for actual data. A physical instantiated instance of an [XDM Schema](../../schema_registry/schema_composition/schema_composition.md).
+    *   [Experience Data Model](../../xdm/home.md): The standardization effort led by Adobe to define standard schemas such as Profile and ExperienceEvent, for Customer Experience Management. 
+    *   Datasets: A storage and management construct for actual data. A physical instantiated instance of an [XDM Schema](../../xdm/schema/field-dictionary.md).
     *   Batches: Datasets are made up of batches. A batch is a set of data collected over a period of time and processed together as a single unit.
     *   JupyterLab: [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is an open-source web-based interface for Project Jupyter and is tightly integrated into Experience Platform.
 
