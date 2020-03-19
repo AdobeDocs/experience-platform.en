@@ -25,7 +25,7 @@ With the latest update of the Google Chrome browser to version 80.x, all 3rd par
 
 To remedy this issue use the following steps: 
 
-1. In your Chrome browser, navigate to the top-right and select **Settings** (alternatively you can copy and paste "chrome://settings/" in the address bar). Next, scroll to the bottom of the page and click the **Advanced** dropdown.
+ In your Chrome browser, navigate to the top-right and select **Settings** (alternatively you can copy and paste "chrome://settings/" in the address bar). Next, scroll to the bottom of the page and click the **Advanced** dropdown.
    
 ![chrome advanced](./images/faq/chrome-advanced.png)
 
@@ -41,11 +41,11 @@ Lastly, toggle “Block third-party cookies” to "OFF".
 
 > **Note:** Alternatively, you could disable third-party cookies and whitelist [*.]ds.adobe.net
 
-2. Navigate to “chrome://flags/” in your address bar. Search for and disable the flag titled *“SameSite by default cookies”* by using the dropdown menu on the right.
+Navigate to “chrome://flags/” in your address bar. Search for and disable the flag titled *“SameSite by default cookies”* by using the dropdown menu on the right.
    
    ![disable samesite flag](./images/faq/samesite-flag.png)
 
-3. After Step 2, you are prompted to relaunch your browser. After you relaunch, Jupyterlab should be accessible.
+After Step 2, you are prompted to relaunch your browser. After you relaunch, Jupyterlab should be accessible.
 
 ## Why am I unable to access JupyterLab in Safari?
 
