@@ -28,11 +28,11 @@ If you do not have admin privileges, contact your system administrator to gain a
 
 Once you have admin privileges, go to [Adobe Admin Console](https://adminconsole.adobe.com) and sign in using your Adobe credentials. Once logged in, the *Overview* page appears for the IMS Org you have admin privileges for. This page shows the products that your IMS Org is subscribed to, along with other controls to add users and admins to the IMS Org as a whole. Click **Adobe Experience Platform** to open the access control workspace for your Platform integration.
 
-![](images/overview-page.png)
+![overview-page](../images/overview-page.png)
 
 The access control workspace for Adobe Experience Platform appears, opening on the *Product Profiles* tab. This tab allows you to view all product profiles and manage various settings as outlined in this document.
 
-![](images/platform-access-control.png)
+![platform-access-control](../images/platform-access-control.png)
 
 This user guide focuses on how to use the Admin Console to assign access permissions for Platform. For more general information on how to navigate the Admin Console, see the [Admin Console user guide](https://helpx.adobe.com/enterprise/using/admin-console.html).
 
@@ -40,17 +40,17 @@ This user guide focuses on how to use the Admin Console to assign access permiss
 
 To start creating a new profile, navigate to the *Product Profiles* tab and click **New Profile**.
 
-![](images/new-profile-button.png)
+![new-profile-button](../images/new-profile-button.png)
 
 The _Create New Profile_ dialog appears, prompting you to enter a **Profile Name** and **Description** for the new profile. If you want the profile's display name to be different, uncheck **Same as Profile Name** and enter the display name in the text box that appears. Under *User Notifications*, you can toggle whether users will be notified by email when they are added or removed from the profile.
 
 When finished, click **Next**.
 
-<img src="images/new-profile-details.png" width="600"/><br/>
+![new-profile-details](../images/new-profile-details.png)
 
 The next screen prompts you to choose which Platform services to include in the profile. Click the toggle button next to a service to disable it. If a service is disabled, all functions associated with that service will not be available to users assigned to this product profile. When finished, click **Done**.
 
-<img src="images/new-profile-services.png" width="600"/><br/>
+![new-profile-services](../images/new-profile-services.png)
 
 The new product profile is successfully created, and you are redirected to the profile's [edit permissions page](#edit-permissions). See the sections on [managing permissions](#manage-permissions-for-a-product-profile) and [managing users](#manage-users-for-a-product-profile) for more details on how to manage product profiles once they are created.
 
@@ -58,23 +58,23 @@ The new product profile is successfully created, and you are redirected to the p
 
 Immediately after [creating a new product profile](#create-a-new-product-profile), you are prompted to configure the profile's permissions. If you are editing permissions for an existing profile, select the profile from the *Product Profiles* tab to open the profile's details page, then click **Permissions**.
 
-![](images/profile-permissions.png)
+![profile-permissions](../images/profile-permissions.png)
 
 Permissions are divided into categories and listed on this page. The list displays the category name, the number of permissions it contains (and how many are active), and its description.
 
 Click any category on the list to open the *Edit Permissions* page.
 
-![](images/edit-permissions.png)
+![edit-permissions](../images/edit-permissions.png)
 
 ### Edit permissions
 
 The *Edit Permissions* page provides a workspace to add and remove permissions from the selected product profile. The left side of the screen displays a list of permission categories. Clicking a category changes the permissions that are displayed under *Available Permissions Items*.
 
-![](images/change-permissions-category.png)
+![change-permissions-category](../images/change-permissions-category.png)
 
 To add a permission, click the **plus (+)** icon next to the permission's name. Alternatively, you can click **Add all** to add all permissions under the current category to the profile. Added permissions appear under *Included Permission Items*.
 
-![](images/add-permissions.png)
+![add-permissions](../images/add-permissions.png)
 
 > **Note**: The *Included Permissions Items* list only displays added permissions from the currently selected category.
 
@@ -82,25 +82,25 @@ To remove a permission, click the **X** icon next to the permission's name, or s
 
 Continue going through the available categories and adding any desired permissions. When finished, click **Save**.
 
-![](images/permissions-finish.png)
+![permissions-finish](../images/permissions-finish.png)
 
 The *Permissions* tab for the product profile reappears, and shows that the selected permissions are now active.
 
-![](images/added-permissions.png)
+![added-permissions](../images/added-permissions.png)
 
 ## Manage details and additional services for a product profile
 
 You can configure a profile's details and access to additional services from within the *Profile Settings* menu. To access the menu, click **Settings** from the *Product Profile* page.
 
-![](images/profile-settings.png)
+![profile-settings](../images/profile-settings.png)
 
 The *Profile Settings* menu appears, starting on the *Details* tab. This tab allows you to input and edit your **Profile Name** and **Description**. You can also modify your **Display Name** as well as the email notification settings for your account.
 
-![](images/edit-details-settings.png)
+![edit-details-settings](../images/edit-details-settings.png)
 
 Click **Services** to access the *Services* page.
 
-![](images/services-page.png)
+![services-page](../images/services-page.png)
 
 The *Services* menu allows you to modify a profile's access to additional Platform services that were initially configured when the profile was created. Depending on your Platform subscription, these services can include:
 
@@ -112,27 +112,27 @@ Click the toggle on the right side of a particular service to enable or disable 
 
 When finished, click **Save**.
 
-![](images/edit-additional-services.png)
+![edit-additional-services](../images/edit-additional-services.png)
 
 ## Manage users for a product profile
 
 To assign or remove users from a product profile, open the profile's details page and navigate to the *Users* tab. From here, click **Add User**.
 
-![](images/add-users-button.png)
+![add-users-button](../images/add-users-button.png)
 
 The *Add User* dialog appears. Using the search field, you can lookup users to add either by name or by email. As you type, matching users will appear in an autocomplete window below the textbox.
 
-<img src="images/add-user-autocomplete.png" width="600"/><br/>
+![add-user-autocomplete](../images/add-user-autocomplete.png)
 
 > **Note:** If a user does not appear in the autocomplete window, enter their complete email address in the search bar. An invite will be sent to the email with instructions on setting up an Adobe ID account.
 
 Once you have selected a user, click **Save** to add them to the product profile.
 
-<img src="images/add-user-save.png" width="600"/><br/>
+![add-user-save](../images/add-user-save.png")
 
 The *Users* tab for the product profile reappears, where the added user is now listed.
 
-![](images/user-added.png)
+![user-added](../images/user-added.png)
 
 ## Next steps
 

@@ -75,7 +75,7 @@ The "Sandbox Management" permission allows users to manage, view, or reset sandb
 
 The **permissions** tab within a product profile displays the sandboxes and permissions that are active for that profile:
 
-![](images/permissions-overview.png)
+![](./images/permissions-overview.png)
 
 Permissions that are granted through the Admin Console are sorted by category, with some permissions granting access to several low-level functionalities.
 
