@@ -7,7 +7,6 @@ topic: Tutorial
 
 # Publish a model as a service (API)
 
-
 - [Prerequisite](#prerequisite)
 - [Key Terms](#key-terms)
 - [API Workflow](#api-workflow)
@@ -19,13 +18,14 @@ topic: Tutorial
 - [Schedule training or scoring](#schedule-training-or-scoring)
 
 ## Prerequisite
-- Follow this [Tutorial](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/authenticate_to_acp_tutorial/authenticate_to_acp_tutorial.md) for authorization to start making API calls.
+
+- Follow this [Tutorial](../../tutorials/authentication.md) for authorization to start making API calls.
 From the tutorial you should now have the following information:
-  * `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.
-  * `{IMS_ORG}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.
-  * `{API_KEY}`: Your specific API key value found in your unique Adobe Experience Platform integration.
-- This tutorial requires existing ML Engine, ML Instance, and Experiment entities. Refer to this [Tutorial](../../author_a_model/import_a_packaged_recipe/import_a_packaged_recipe_using_api.md) on creating ML Engine, ML Instance, or Experiment entities.
-- For information on API endpoints and requests mentioned in this tutorial, check out the complete [Sensei Unified Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
+  - `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.
+  - `{IMS_ORG}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.
+  - `{API_KEY}`: Your specific API key value found in your unique Adobe Experience Platform integration.
+- This tutorial requires existing ML Engine, ML Instance, and Experiment entities. Refer to this [Tutorial](./import-packaged-recipe-api.md) on creating ML Engine, ML Instance, or Experiment entities.
+- For information on API endpoints and requests mentioned in this tutorial, check out the complete [Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
 
 ## Key Terms
 
@@ -39,7 +39,7 @@ Term | Definition
 **Experiment Run** | A particular instance of training or scoring Experiments. Multiple Experiment Runs from a particular Experiment may differ in dataset values used for training or scoring.
 **Trained Model** | A machine learning model created by the process of experimenting and feature engineering before arriving at a validated, evaluated, and finalized model.
 **Published Model** | A finalized and versioned model arrived at after training, validation, and evaluation.
-**Machine Learning Service (ML Service)** | A ML Instance deployed as a Service to support on demand request for training and scoring via an endpoint. Note that a ML Service can also be created using existing trained experiment runs.
+**Machine Learning Service (ML Service)** | A ML Instance deployed as a Service to support on demand request for training and scoring via an endpoint. Note that a ML Service can also be created using existing trained experiment runs. |
 
 
 ## API Workflow
@@ -59,7 +59,7 @@ When you publish a training Experiment Run as a ML Service, you can schedule sco
 
 To start, make a `POST` request to `/mlServices`. A sample curl command is shown below:
 
-#### Request <!-- omit in toc -->
+**Request**
 
 ```SHELL
 curl -X POST 
@@ -101,7 +101,7 @@ curl -X POST
 - `endTime` : definition.
 - `cron` : definition.
 
-#### Response <!-- omit in toc -->
+**Response**
 
 ```JSON
 {
@@ -141,7 +141,7 @@ Creating an ML Service by publishing a ML Instance with scheduled Experiment Run
 
 To start, make a `POST` request to `/mlServices`. A sample curl command is shown below:
 
-#### Request <!-- omit in toc -->
+**Request**
 
 ```SHELL
 curl -X POST 
@@ -183,7 +183,7 @@ curl -X POST
 |**`scoringTimeframe`** | An Integer value representing minutes for filtering data to be used for scoring Experiment Runs. For example, a value of `"10080"` means data from the past 10080 minutes or 168 hours will be used for each scheduled scoring Experiment Run. Note that a value of `"0"` will not filter data, all data within the dataset is used for scoring. |
 | **`scoringSchedule`** | Contains details regarding scheduled scoring Experiment Runs. |
 
-#### Response <!-- omit in toc -->
+**Response**
 
 ```JSON
 {
@@ -206,6 +206,7 @@ curl -X POST
   "updated": "2019-04-09T08:58:10.956Z"
 }
 ```
+
 From the `JSON` response, the keys `trainingExperimentId` and `scoringExperimentId` suggests that a new training and scoring Experiment entity was created for this ML Service. The presence of the `scoringSchedule` object refers to details on scoring Experiment Run schedule. The `id` key in the response refers to the ML Service you have just created.
 
 ### ML Service with scheduled Experiments for training and scoring
@@ -214,7 +215,7 @@ To publish an existing ML Instance as a ML Service with scheduled training and s
 
 To create the ML Service, make a `POST` request to `/mlServices` with the `{JSON_PAYLOAD}` representing the ML Service object to be added. Ensure that the `mlInstanceId`, `trainingDataSetId`, and `scoringDataSetId` exists and are valid values.
 
-#### Request <!-- omit in toc -->
+**Request**
 
 ```SHELL
 curl -X POST "https://platform-int.adobe.io/data/sensei/mlServices" 
@@ -261,7 +262,7 @@ curl -X POST "https://platform-int.adobe.io/data/sensei/mlServices"
 | **`trainingSchedule`** | Contains details regarding scheduled training Experiment Runs. |
 | **`scoringSchedule`** | Contains details regarding scheduled scoring Experiment Runs. |
 
-#### Response <!-- omit in toc -->
+**Response**
 
 ```JSON
 {
@@ -296,7 +297,7 @@ The addition of `trainingExperimentId` and `scoringExperimentId` in the response
 
 To retrieve an existing ML Service is as simple as making a `GET` request to `/mlServices` endpoint. Ensure to have the ML Service identification for the specific ML Service you are attempting to retrieve.
 
-#### Request <!-- omit in toc -->
+**Request**
 
 ```SHELL
 curl -X GET "https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}" 
@@ -309,7 +310,7 @@ curl -X GET "https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}"
 * `{IMS_ORG}` :  Your IMS organization ID can be found under the integration details in the Adobe I/O Console.  
 * `{ACCESS_TOKEN}` : Your specific bearer token value provided after authentication.  
 
-#### Response <!-- omit in toc -->
+**Response**
 
 ```JSON
 {
@@ -345,7 +346,7 @@ The JSON response represents the ML Service object. This object is equivalent to
 
 Suppose you want to schedule scoring and training on a ML Service that has already been published, you can do so by updating the existing ML Service with a `PUT` request on `/mlServices`. Ensure to have the ML Service identification you would like to update. For your reference, [retrieving the ML Service](#retrieving-ml-services) you want to update might be a useful first step.
 
-#### Request <!-- omit in toc -->
+**Request**
 
 ```SHELL
 curl -X PUT "https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}" 
@@ -389,7 +390,7 @@ Scheduling training and scoring can be done by adding the `trainingSchedule` and
 
 >[!NOTE] that `PUT` requests on `mlServices` allows you to modify Services with existing scheduled experiment runs. Please **Do not** attempt to modify the `startTime` on existing scheduled training and scoring jobs. If the `startTime` must be modified, consider publishing the same Model and rescheduling training and scoring jobs.
 
-#### Response <!-- omit in toc -->
+**Response**
 
 The response will be the `{JSON_PAYLOAD}` but with extra `id`, `created`, and `updated` keys in the object.
 
