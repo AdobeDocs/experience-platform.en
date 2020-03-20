@@ -7,9 +7,7 @@ topic: tutorial
 
 # Configure a dataset for Profile and Identity Service using APIs
 
-This tutorial covers the process of enabling a dataset for use in Real-time Customer Profile and Identity Service. 
-
-This tutorial covers the following steps:
+This tutorial covers the process of enabling a dataset for use in Real-time Customer Profile and Identity Service, broken down into the following steps:
 
 1. Enable a dataset for use in Real-time Customer Profile, using one of two options:
     - [Create a new dataset](#create-a-dataset-enabled-for-profile-and-identity)
@@ -20,7 +18,8 @@ This tutorial covers the following steps:
 
 ## Getting started
 
-This tutorial requires a working understanding of the various Adobe Experience Platform services involved in managing Profile-enabled datasets. Before beginning this tutorial, please review the documentation for the following services:
+This tutorial requires a working understanding of the various Adobe Experience Platform services involved in managing Profile-enabled datasets. Before beginning this tutorial, please review the documentation for these related Platform services:
+
 - [Real-time Customer Profile](../home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 - [Identity Service](../../identity-service/home.md): Enables Real-time Customer Profile by bridging identities from disparate data sources being ingested into Platform.
 - [Catalog Service](../../catalog/home.md): A RESTful API that allows you to create datasets and configure them for Real-time Customer Profile and Identity Service.
@@ -50,11 +49,7 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 ## Create a dataset enabled for Profile and Identity {#create-a-dataset-enabled-for-profile-and-identity}
 
-You can enable a dataset for Real-time Customer Profile and Identity Service immediately upon creation or at any point after the dataset has been created. If you would like to enable a dataset that has already been created, follow the steps for [configuring an existing dataset](#configure-an-existing-dataset) found later in this document.
-
-To create a new dataset, you must know the ID of an existing XDM schema that is enabled for Real-time Customer Profile. For information on how to look-up or create a Profile-enabled schema, see the tutorial on [creating a schema using the Schema Registry API](../../xdm/tutorials/create-schema-api.md). 
-
-The following call to the Catalog API enables a dataset for Profile and Identity Service:
+You can enable a dataset for Real-time Customer Profile and Identity Service immediately upon creation or at any point after the dataset has been created. If you would like to enable a dataset that has already been created, follow the steps for [configuring an existing dataset](#configure-an-existing-dataset) found later in this document. To create a new dataset, you must know the ID of an existing XDM schema that is enabled for Real-time Customer Profile. For information on how to look-up or create a Profile-enabled schema, see the tutorial on [creating a schema using the Schema Registry API](../../xdm/tutorials/create-schema-api.md). The following call to the Catalog API enables a dataset for Profile and Identity Service.
 
 **API format**
 
@@ -113,9 +108,7 @@ The following steps cover how to enable a previously created dataset for Real-ti
 
 ### Check if the dataset is enabled {#check-if-the-dataset-is-enabled}
 
-Using the Catalog API, you can inspect an existing dataset to determine whether it is enabled for use in Real-time Customer Profile and Identity Service. 
-
-The following call retrieves the details of a dataset by ID.
+Using the Catalog API, you can inspect an existing dataset to determine whether it is enabled for use in Real-time Customer Profile and Identity Service. The following call retrieves the details of a dataset by ID.
 
 **API format**
 
@@ -243,20 +236,14 @@ A successful PATCH request returns HTTP Status 200 (OK) and an array containing 
 
 ## Ingest data into the dataset {#ingest-data-into-the-dataset}
 
-Both Real-time Customer Profile and Identity Service consume XDM data as it is being ingested into a dataset. For instructions on how to upload data into a dataset, refer to the tutorial on [creating a dataset using APIs](../../catalog/datasets/create.md).
-
-When planning what data to send to your Profile-enabled dataset, consider the following best practices:
+Both Real-time Customer Profile and Identity Service consume XDM data as it is being ingested into a dataset. For instructions on how to upload data into a dataset, refer to the tutorial on [creating a dataset using APIs](../../catalog/datasets/create.md). When planning what data to send to your Profile-enabled dataset, consider the following best practices:
 
 - Include any data you want to use as audience segment criteria. 
 - Include as many identifiers as you can ascertain from your profile data to maximize your identity graph. This allows Identity Service to stitch identities across datasets more effectively.
 
 ## Confirm data ingest by Real-time Customer Profile {#confirm-data-ingest-by-real-time-customer-profile}
 
-When uploading data to a new dataset for the first time, or as part of a process involving a new ETL or data source, it is recommended to carefully check the data to ensure it has been uploaded as expected.
-
-Using the Real-time Customer Profile Access API, you can retrieve batch data as it gets loaded into a dataset. If you are unable to retrieve any of the entities you expect, your dataset may not be enabled for Real-time Customer Profile. After confirming that your dataset has been enabled, ensure that your source data format and identifiers support your expectations.
-
-For detailed instructions on how to use the Real-time Customer Profile API to access Profile data, please follow the [sub-guide on Entities, also known as the "Profile Access API"](../api/entities.md).
+When uploading data to a new dataset for the first time, or as part of a process involving a new ETL or data source, it is recommended to carefully check the data to ensure it has been uploaded as expected. Using the Real-time Customer Profile Access API, you can retrieve batch data as it gets loaded into a dataset. If you are unable to retrieve any of the entities you expect, your dataset may not be enabled for Real-time Customer Profile. After confirming that your dataset has been enabled, ensure that your source data format and identifiers support your expectations. For detailed instructions on how to use the Real-time Customer Profile API to access Profile data, please follow the [sub-guide on Entities, also known as the "Profile Access API"](../api/entities.md).
 
 ## Confirm data ingest by Identity Service {#confirm-data-ingest-by-identity-service}
 
