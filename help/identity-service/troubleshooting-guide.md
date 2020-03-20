@@ -223,7 +223,7 @@ This error message displays when your IMS Organization has not been provisioned 
 }
 ```
 
-In the case of this error, your access token is invalid. Access tokens expire every 24 hours and must be regenerated to continue using Platform APIs. See the [authentication tutorial](../../tutorials/authentication.md) for instructions on generating new access tokens.
+In the case of this error, your access token is invalid. Access tokens expire every 24 hours and must be regenerated to continue using Platform APIs. See the [authentication tutorial](../tutorials/authentication.md) for instructions on generating new access tokens.
 
 ### Authorization service token is not valid
 
@@ -235,7 +235,7 @@ In the case of this error, your access token is invalid. Access tokens expire ev
 }
 ```
 
-In the case of this error, your access token is invalid. Access tokens expire every 24 hours and must be regenerated to continue using Platform APIs. See the [authentication tutorial](../../tutorials/authentication.md) for instructions on generating new access tokens.
+In the case of this error, your access token is invalid. Access tokens expire every 24 hours and must be regenerated to continue using Platform APIs. See the [authentication tutorial](../tutorials/authentication.md) for instructions on generating new access tokens.
 
 ### User token does not have valid product context
 
@@ -247,7 +247,7 @@ In the case of this error, your access token is invalid. Access tokens expire ev
 }
 ```
 
-This error message displays when your access token has not been generated from an Experience Platform integration. See the [authentication tutorial](../../tutorials/authentication.md) for instructions on generating new access tokens for an Experience Platform integration.
+This error message displays when your access token has not been generated from an Experience Platform integration. See the [authentication tutorial](../tutorials/authentication.md) for instructions on generating new access tokens for an Experience Platform integration.
 
 ### Internal error when getting native XID from identity and namespace code
 
@@ -289,7 +289,7 @@ This error displays when an unexpected exception occurs in the execution of a Pl
 
 Identity Service ingests identity data from record and time series data that is uploaded to Platform using Batch Ingestion. As batch ingestion is an asynchronous process, you must view the details for a batch to view errors. Errors will accumulate as the batch progresses until the batch is complete.
 
-The following is a list of error messages related to Identity Service you may encounter when using the [Data Ingestion API]([../../../../../../acpdr/swagger-specs/ingest-api.yaml](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)).
+The following is a list of error messages related to Identity Service you may encounter when using the [Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
 
 ### Unknown XDM schema
 
