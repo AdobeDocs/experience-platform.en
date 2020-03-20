@@ -6,3 +6,634 @@ topic: guide
 ---
 
 # Merge policies
+
+Adobe Experience Platform enables you to bring data together from multiple sources and combine it in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create that unified view. 
+
+Using RESTful APIs or the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. 
+
+This guide shows steps for working with merge policies using the API. To work with merge policies using the UI, please refer to the [merge policies user guide](../ui/merge-policies.md).
+
+## Getting started
+
+The API endpoints used in this guide are part of the Real-time Customer Profile API. Before continuing, please review the [Real-time Customer Profile API developer guide](getting-started.md).
+
+In particular, the [getting started section](getting-started.md#getting-started) of the Profile developer guide includes links to related topics, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform APIs.
+
+## Components of merge policies {#components-of-merge-policies}
+
+Merge policies are private to your IMS Organization, allowing you to create different policies in order to merge schemas in the specific way that you need. Any API accessing Profile data requires a merge policy, though a default will be used if one is not explicitly provided. Platform provides a default merge policy, or you can create a merge policy for a specific schema and mark it as the default for your organization. 
+
+Each organization can potentially have multiple merge policies per schema, however each schema can have only one default merge policy. Any merge policy set as default will be used in cases where the schema name is provided and a merge policy is required but not provided.
+
+When you set a merge policy as the default, any existing merge policy that was previously set as the default will automatically be updated to no longer be used as the default.
+
+### Complete merge policy object
+
+The complete merge policy object represents a set of preferences controlling aspects of merging profile fragments. 
+
+**Merge policy object**
+
+```json
+    {
+        "id": "{MERGE_POLICY_ID}",
+        "name": "{NAME}",
+        "imsOrgId": "{IMS_ORG}",
+        "schema": {
+            "name": "{SCHEMA_NAME}"
+        },
+        "version": 1,
+        "identityGraph": {
+            "type": "{IDENTITY_GRAPH_TYPE}"
+        },
+        "attributeMerge": {
+            "type": "{ATTRIBUTE_MERGE_TYPE}"
+        },
+        "default": {BOOLEAN},
+        "updateEpoch": {UPDATE_TIME}
+    }
+```
+
+|Property|Description|
+|---|---|
+|`id`|The system generated unique identifier assigned at creation time|
+|`name`|Friendly name by which the merge policy can be identified in list views.|
+|`imsOrgId`|Organization ID to which this merge policy belongs|
+|`identityGraph`|[Identity graph](#identity-graph) object indicating the identity graph from which related identities will be obtained. Profile fragments found for all related identities will be merged.|
+|`attributeMerge`|[Attribute merge](#attribute-merge) object indicating the manner by which the merge policy will prioritize profile attribute values in the case of data conflicts.|
+|`schema`|The [schema](#schema) object on which the merge policy can be used.|
+|`default`|Boolean value indicating if this merge policy is the default for the specified schema.|
+|`version`|Platform maintained version of merge policy. This read-only value is incremented whenever a merge policy is updated.|
+|`updateEpoch`|Date of the last update to the merge policy.|
+
+**Example merge policy**
+
+```json
+    {
+        "id": "10648288-cda5-11e8-a8d5-f2801f1b9fd1",
+        "name": "profile-default",
+        "imsOrgId": "{IMS_ORG}",
+        "schema": {
+            "name": "_xdm.context.profile"
+        },
+        "version": 1,
+        "identityGraph": {
+            "type": "none"
+        },
+        "attributeMerge": {
+            "type": "timestampOrdered"
+        },
+        "default": true,
+        "updateEpoch": 1551660639
+    }
+``` 
+
+### Identity graph {#identity-graph}
+
+[Adobe Experience Platform Identity Service](../../identity-service/home.md) manages the identity graphs used globally and for each organization on Experience Platform. The `identityGraph` attribute of the merge policy defines how to determine the related identities for a user.
+
+**identityGraph object**
+
+```json
+    "identityGraph": {
+        "type": "{IDENTITY_GRAPH_TYPE}"
+    }
+```
+
+Where `{IDENTITY_GRAPH_TYPE}` is one of the following:
+
+* **"none":** Perform no identity stitching.
+* **"pdg":** Perform identity stitching based on your private identity graph.
+
+**Example `identityGraph`**
+
+```json
+    "identityGraph": {
+        "type": "pdg"
+    }
+```
+
+### Attribute merge {#attribute-merge}
+
+A profile fragment is the profile information for just one identity out of the list of identities that exist for a particular user. When the identity graph type used results in more than one identity, there is a potential for conflicting values for profile properties and priority must be specified. Using `attributeMerge`, you can specify which dataset profile values to prioritize in the event of a merge conflict.
+
+**attributeMerge object**
+
+```json
+    "attributeMerge": {
+        "type": "{ATTRIBUTE_MERGE_TYPE}"
+    }
+```
+
+Where `{ATTRIBUTE_MERGE_TYPE}` is one of the following:
+
+* **"timestampOrdered"**: (default) Give priority to the profile which was updated last in case of conflict. Using this merge type, the `data` attribute is not required.
+* **"dataSetPrecedence"** : Give priority to profile fragments based on the dataset from which they came. This could be used when information present in one dataset is preferred or trusted over data in another dataset. When using this merge type, the `order` attribute is required, as it lists the datasets in the order of priority.
+    * **"order"**: When "dataSetPrecedence" is used, an `order` array must be supplied with a list of datasets. Any datasets not included in the list will not be merged. In other words, datasets must be explicitly listed to be merged into a profile. The `order` array lists the IDs of the datasets in order of priority.
+
+**Example attributeMerge object using dataSetPrecedence type**
+
+```json
+    "attributeMerge": {
+        "type": "dataSetPrecedence",
+        "order" : [
+            "dataSetId_2", 
+            "dataSetId_3", 
+            "dataSetId_1", 
+            "dataSetId_4"
+        ]
+    }
+```
+
+**Example attributeMerge object using timestampOrdered type**
+
+```json
+    "attributeMerge": {
+        "type": "timestampOrdered"
+    }
+```
+
+### Schema {#schema}
+
+The schema object specifies the XDM schema for which this merge policy is created.
+
+**`schema` object**
+
+```json
+    "schema": {
+        "name": "{SCHEMA_NAME}"
+    }
+```
+
+Where the value of `name` is the name of the XDM class upon which the schema associated with the merge policy is based.
+
+**Example `schema`**
+
+```json
+    "schema": {
+        "name": "_xdm.context.profile"
+    }
+```
+
+## Access merge policies {#access-merge-policies}
+
+Using the Real-time Customer Profile API, the `/config/mergePolicies` endpoint allows you perform a lookup request to view a specific merge policy by its ID, or access all of the merge policies in your IMS Organization, filtered by specific criteria.
+
+### Access a single merge policy by ID
+
+You can access a single merge policy by its ID by making a GET request to the `/config/mergePolicies` endpoint and including the `mergePolicyId` in the request path.
+
+**API format**
+
+```http
+GET /config/mergePolicies/{mergePolicyId}
+```
+
+|Parameter|Description|
+|---|---|
+|`{mergePolicyId}`|The identifier of the merge policy you want to delete.|
+
+**Request**
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/core/ups/config/mergePolicies/10648288-cda5-11e8-a8d5-f2801f1b9fd1' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}
+```
+
+**Response**
+
+A successful response returns the details of the merge policy.
+
+```json
+{
+    "id": "10648288-cda5-11e8-a8d5-f2801f1b9fd1",
+    "imsOrgId": "{IMS_ORG}",
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "version": 1,
+    "identityGraph": {
+        "type": "pdg"
+    },
+    "attributeMerge": {
+        "type": "timestampOrdered"
+    },
+    "default": false,
+    "updateEpoch": 1551127597
+}
+```
+
+See the [components of merge policies](#components-of-merge-policies) section at the beginning of this document for details on each of the individual elements that make up a merge policy.
+
+### List multiple merge policies by criteria
+
+You can list multiple merge policies within your IMS Organization by issuing a GET request to the `/config/mergePolicies` endpoint and using optional query parameters to filter, order, and paginate the response.
+
+Multiple parameters can be included, separated by ampersands (&). Making a call to this endpoint with no parameters will retrieve all merge policies available for your organization.
+
+**API format**
+
+```http
+GET /config/mergePolicies?{QUERY_PARAMS}
+```
+
+|Parameter|Description|
+|---|---|
+|`default`|A boolean value that filters results by whether or not the merge policies are the default for a schema class.|
+|`limit`|Specifies the page size limit to control the number of results that are included in a page. Default value: 20|
+|`orderBy`|Specifies the field by which to order results as in `orderBy=name` or `orderBy=+name` to sort by name in ascending order, or `orderBy=-name`, to sort in descending order. Omitting this value results in the default sorting of `name` in ascending order.|
+|`schema.name`|Name of the schema for which to retrieve available merge policies.|
+|`identityGraph.type`|Filters results by the identity graph type. Possible values include "none" and "pdg" (Private graph).|
+|`attributeMerge.type`|Filters results by the attribute merge type used. Possible values include "timestampOrdered" and "dataSetPrecedence".|
+|`start`|Page offset - specify the starting ID for data to retrieve. Default value: 0|
+|`version`|Specify this if you are looking to use a specific version of the merge policy. By default, the latest version will be used.|
+
+For more information regarding `schema.name`, `identityGraph.type`, and `attributeMerge.type`, refer to the [components of merge policies](#components-of-merge-policies) section provided earlier in this guide.
+
+
+**Request**
+
+The following request lists all merge policies for a given schema:
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/core/ups/config/mergePolicies?schema.name=_xdm.context.profile' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}
+```
+
+**Response**
+
+A successful response returns a paginated list of merge policies that meet the criteria specified by the query parameters sent in the request.
+
+```json
+{
+    "_page": {
+        "totalCount": 2,
+        "pageSize": 2
+    },
+    "children": [
+        {
+            "id": "0bf16e61-90e9-4204-b8fa-ad250360957b",
+            "name": "Profile Default Merge Policy",
+            "imsOrgId": "{IMS_ORG}",
+            "sandbox": {
+                "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+                "sandboxName": "prod",
+                "type": "production",
+                "default": true
+            },
+            "schema": {
+                "name": "_xdm.context.profile"
+            },
+            "version": 1,
+            "identityGraph": {
+                "type": "none"
+            },
+            "attributeMerge": {
+                "type": "timestampOrdered"
+            },
+            "default": true,
+            "updateEpoch": 1552086578
+        },
+        {
+            "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130",
+            "name": "Dataset Precedence Merge Policy",
+            "imsOrgId": "{IMS_ORG}",
+            "sandbox": {
+                "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+                "sandboxName": "prod",
+                "type": "production",
+                "default": true
+            },
+            "schema": {
+                "name": "_xdm.context.profile"
+            },
+            "version": 1,
+            "identityGraph": {
+                "type": "pdg"
+            },
+            "attributeMerge": {
+                "type": "dataSetPrecedence",
+                "order": [
+                    "5b76f86b85d0e00000be5c8b",
+                    "5b76f8d787a6af01e2ceda18"
+                ]
+            },
+            "default": false,
+            "updateEpoch": 1576099719
+        }
+    ],
+    "_links": {
+        "next": {
+            "href": "@/mergePolicies?start=K1JJRDpFaWc5QUpZWHY1c2JBQUFBQUFBQUFBPT0jUlQ6MSNUUkM6MiNGUEM6QWdFQUFBQldBQkVBQVBnaFFQLzM4VUIvL2tKQi8rLysvMUpBLzMrMi8wRkFmLzR4UUwvL0VrRC85em4zRTBEcmNmYi92Kzh4UUwvL05rQVgzRi8rMStqNS80WHQwN2NhUUVzQUFBUUFleGpLQ1JnVXRVcEFCQUFFQVBBRA==&orderBy=&limit=2"
+        }
+    }
+}
+```
+
+|Property|Description|
+|---|---|
+|`_links.next.href`| A URI address for the next page of results. Use this URI as the request parameter for another API call to the same endpoint to view the page. If no next page exists, this value will be an empty string.|
+
+## Create a merge policy
+
+You can create a new merge policy for your organization by making a POST request to the `/config/mergePolicies` endpoint.
+
+**API format**
+
+```http
+POST /config/mergePolicies
+```
+
+**Request**
+The following request creates a new merge policy, which is configured by the attribute values provided in the payload:
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/core/ups/config/mergePolicies \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "Loyalty members ordered by ID",
+    "identityGraph" : {
+        "type": "none"
+    },
+    "attributeMerge" : {
+        "type":"dataSetPrecedence",
+        "order" : [
+            "5b76f86b85d0e00000be5c8b",
+            "5b76f8d787a6af01e2ceda18"
+        ]
+    },
+    "schema": {
+        "name":"_xdm.context.profile"
+    },
+    "default": true
+}'
+```
+
+|Property|Description|
+|---|---|
+|`name`|A human-friendly name by which the merge policy can be identified in list views.|
+|`identityGraph.type`|The identity graph type from which to obtain related identities to merge. Possible values: "none" or "pdg" (Private graph).|
+|`attributeMerge`|The manner by which to prioritize profile attribute values in the case of data conflicts.|
+| `schema`| The XDM schema class associated with the merge policy.|
+| `default`|Specifies whether this merge policy is the default for the schema.|
+
+Refer to the [components of merge policies](#components-of-merge-policies) section for more information.
+
+**Response**
+
+A successful response returns the details of the newly created merge policy.
+
+```json
+{
+    "id": "e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2",
+    "name": "Loyalty members ordered by ID",
+    "imsOrgId": "{IMS_ORG}",
+    "sandbox": {
+        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "version": 1,
+    "identityGraph": {
+        "type": "none"
+    },
+    "attributeMerge": {
+        "type": "dataSetPrecedence",
+        "order": [
+            "5b76f86b85d0e00000be5c8b",
+            "5b76f8d787a6af01e2ceda18"
+        ]
+    },
+    "default": true,
+    "updateEpoch": 1551898378
+}
+```
+
+See the [components of merge policies](#components-of-merge-policies) section at the beginning of this document for details on each of the individual elements that make up a merge policy.
+
+## Update a merge policy
+
+You can modify an existing merge policy by editing individual attributes (PATCH) or by overwriting the entire merge policy with new attributes (PUT). Examples of each are shown below.
+
+### Edit individual merge policy fields
+
+You can edit individual fields for a merge policy by making a PATCH request to the `/config/mergePolicies/{mergePolicyId}` endpoint:
+
+**API format**
+
+```http
+PATCH /config/mergePolicies/{mergePolicyId}
+```
+
+|Parameter|Description|
+|---|---|
+|`{mergePolicyId}`|The identifier of the merge policy you want to delete.|
+
+**Request**
+
+The following request updates a specified merge policy by changing the value of its `default` property to `true`:
+
+```shell
+curl -X PATCH \
+  https://platform.adobe.io/data/core/ups/config/mergePolicies/e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "op": "add",
+    "path": "/default",
+    "value": "true"
+  }'
+```
+
+|Property|Description|
+|---|---|
+|`op`|Specifies the operation to take. Examples of other PATCH operations can be found in the [JSON Patch documentation](http://jsonpatch.com)|
+|`path`|The path of the field to update. Accepted values are: "/name", "/identityGraph.type", "/attributeMerge.type", "/schema.name", "/version", "/default"|
+|`value`|The value to set the specified field to.|
+
+Refer to the [components of merge policies](#components-of-merge-policies) section for more information.
+
+
+**Response**
+
+A successful response returns the details of the newly updated merge policy.
+
+```json
+{
+    "id": "e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2",
+    "name": "Loyalty members ordered by ID",
+    "imsOrgId": "{IMS_ORG}",
+    "sandbox": {
+        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "version": 1,
+    "identityGraph": {
+        "type": "none"
+    },
+    "attributeMerge": {
+        "type": "dataSetPrecedence",
+        "order": [
+            "5b76f86b85d0e00000be5c8b",
+            "5b76f8d787a6af01e2ceda18"
+        ]
+    },
+    "default": true,
+    "updateEpoch": 1551898378
+}
+```
+
+### Overwrite a merge policy
+
+Another way to modify a merge policy is to use a PUT request, which overwrites the entire merge policy.
+
+**API format**
+
+```http
+PUT /config/mergePolicies/{mergePolicyId}
+```
+
+|Parameter|Description|
+|---|---|
+|`{mergePolicyId}`|The identifier of the merge policy you want to overwrite.|
+
+**Request**
+
+The following request overwrites the specified merge policy, replacing its attribute values with those supplied in the payload. Since this request completely replaces an existing merge policy, you are required to supply all of the same fields that were required when originally defining the merge policy. However, this time you are providing updated values for the fields you want to change.
+
+```shell
+curl -X PUT \
+  https://platform.adobe.io/data/core/ups/config/mergePolicies/e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "name": "Loyalty members ordered by ID",
+        "imsOrgId": "{IMS_ORG}",
+        "schema": {
+            "name": "_xdm.context.profile"
+        },
+        "version": 1,
+        "identityGraph": {
+            "type": "none"
+        },
+        "attributeMerge": {
+            "type": "dataSetPrecedence",
+            "order": [
+                "5b76f86b85d0e00000be5c8b",
+                "5b76f8d787a6af01e2ceda18"
+            ]
+        },
+        "default": true,
+        "updateEpoch": 1551898378
+    }'
+```
+
+|Property|Description|
+|---|---|
+|`name`|A human-friendly name by which the merge policy can be identified in list views.|
+|`identityGraph`|The identity graph from which to obtain related identities to merge.|
+|`attributeMerge`|The manner by which to prioritize profile attribute values in the case of data conflicts.|
+|`schema`| The XDM schema class associated with the merge policy.|
+| `default`| Specifies whether this merge policy is the default for the schema.|
+
+Refer to the [components of merge policies](#components-of-merge-policies) section for more information.
+
+
+**Response**
+
+A successful response returns the details of the updated merge policy.
+
+```json
+{
+    "id": "e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2",
+    "name": "Loyalty members ordered by ID",
+    "imsOrgId": "{IMS_ORG}",
+    "sandbox": {
+        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "version": 1,
+    "identityGraph": {
+        "type": "none"
+    },
+    "attributeMerge": {
+        "type": "dataSetPrecedence",
+        "order": [
+            "5b76f86b85d0e00000be5c8b",
+            "5b76f8d787a6af01e2ceda18"
+        ]
+    },
+    "default": true,
+    "updateEpoch": 1551898378
+}
+```
+
+## Delete a merge policy
+
+A merge policy can be deleted by making a DELETE request to the `/config/mergePolicies` endpoint and including the ID of the merge policy that you wish to delete in the request path.
+
+**API format**
+
+```http
+DELETE /config/mergePolicies/{mergePolicyId}
+```
+
+|Parameter|Description|
+|---|---|
+|`{mergePolicyId}`|The identifier of the merge policy you want to delete.|
+
+**Request**
+
+The following request deletes a merge policy.
+
+```shell
+curl -X DELETE \
+  https://platform.adobe.io/data/core/ups/config/mergePolicies/e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+```
+
+**Response**
+
+A successful delete request returns HTTP Status 200 (OK) and an empty response body. To confirm the deletion was successful, you can perform a GET request to view the merge policy by its ID. If the merge policy was deleted, you will receive an HTTP Status 404 (Not Found) error.
+
+## Next steps
+
+Now that you know how to create and configure merge policies for your IMS Organization, you can use them to create audience segments from your Real-time Customer Profile data. Please see the [Adobe Experience Platform Segmentation Service documentation](../../segmentation/home.md) to begin defining and working with segments.
+
+
+
