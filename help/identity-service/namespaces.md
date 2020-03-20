@@ -7,7 +7,7 @@ topic: overview
 
 # Identity namespace overview
 
-Identity namespaces are a component of [Adobe Experience Platform Identity Service](../identity_services_architectural_overview/identity_services_architectural_overview.md) that serve as indicators of the context to which an identity relates. For example, they distinguish a value of "name<span>@email.com" as an email address or "443522" as a numeric CRM ID. 
+Identity namespaces are a component of [Identity Service](../home.md) that serve as indicators of the context to which an identity relates. For example, they distinguish a value of "name<span>@email.com" as an email address or "443522" as a numeric CRM ID. 
 
 ## Getting started
 
