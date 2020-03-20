@@ -275,7 +275,7 @@ See the section on [exporting a segment](./evaluate-a-segment.md#export-a-segmen
 
 ## Evaluate data for policy violations
 
-Now that you have gathered the data usage labels associated with your audience segment, you can test these labels against marketing actions to evaluate for any data usage policy violations. For detailed steps on how to perform policy evaluations using the [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml), see the section on [policy evaluation](../../technical_overview/data_governance/dule_policy_service_developer_guide.md#policy-evaluation) in the DULE Policy Service developer guide.
+Now that you have gathered the data usage labels associated with your audience segment, you can test these labels against marketing actions to evaluate for any data usage policy violations. For detailed steps on how to perform policy evaluations using the [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml), see the document on [policy evaluation](../../data-governance/enforcement/overview.md).
 
 ## Next steps
 
