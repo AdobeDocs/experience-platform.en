@@ -22,10 +22,11 @@ This tutorial will go over two main sections. First, you will create a machine l
 - [Create a recipe](#create-recipe)
 
 ## Concepts introduced:
-- Recipes: A recipe is Adobe's term for a model specification and is a top-level container representing a specific machine learning, AI algorithm or ensemble of algorithms, processing logic, and configuration required to build and execute a trained model and hence help solve specific business problems.
-- Model: A model is an instance of a machine learning recipe that is trained using historical data and configurations to solve for a business use case.
-- Training: Training is the process of learning patterns and insights from labeled data.
-- Scoring: Scoring is the process of generating insights from data using a trained model.
+
+- **Recipes:** A recipe is Adobe's term for a model specification and is a top-level container representing a specific machine learning, AI algorithm or ensemble of algorithms, processing logic, and configuration required to build and execute a trained model and hence help solve specific business problems.
+- **Model:** A model is an instance of a machine learning recipe that is trained using historical data and configurations to solve for a business use case.
+- **Training:** Training is the process of learning patterns and insights from labeled data.
+- **Scoring:** Scoring is the process of generating insights from data using a trained model.
 
 ## Get started with the JupyterLab notebook environment
 
@@ -52,7 +53,7 @@ Start making necessary changes to the cell and when finished, simply run the cel
 
 >[!NOTE] You should run the cells manually when applicable. 
 
----
+
 
 ## Get started with the Recipe Builder notebook
 
@@ -67,7 +68,7 @@ Now that you know the basics for the JupyterLab notebook environment, you can be
 - [Data Saver file](#data-saver-file)
 
 
----
+
 
 ### Requirements file
 
@@ -83,7 +84,7 @@ data_access_sdk_python
 
 >[!NOTE] Libraries or specific versions you add may be incompatible with the above libraries.
 
----
+
 
 ### Configuration files
 
@@ -103,12 +104,13 @@ To find the dataset and schema IDs, go to the Data Tab within notebooks on the l
 The same information can be found on [Adobe Experience Platform](https://platform.adobe.com/) under the **[Schema](https://platform.adobe.com/schema)** and **[Datasets](https://platform.adobe.com/dataset/overview)** tabs.
 
 By default, the following configuration parameters are set for you when you access data:
+
  - `ML_FRAMEWORK_IMS_USER_CLIENT_ID` 
  - `ML_FRAMEWORK_IMS_TOKEN` 
  - `ML_FRAMEWORK_IMS_ML_TOKEN` 
  - `ML_FRAMEWORK_IMS_TENANT_ID` 
 
----
+
 
 ## Training data loader
 
@@ -128,6 +130,7 @@ This step uses the [pandas dataframe](https://pandas.pydata.org/pandas-docs/stab
 >[!NOTE] In the Recipe Builder notebook, data is loaded via the `platform_sdk` data loader.
 
 ### Platform SDK
+
 For an in-depth tutorial on using the `platform_sdk` data loader, please visit the [Platform SDK guide](../authoring/platform-sdk.md). This tutorial provides information on build authentication, basic reading of data, and basic writing of data.
 
 ### External sources 
@@ -150,7 +153,7 @@ df = pd.read_json(data)
 
 Now your data is in the dataframe object and can be analyzed and manipulated in the [next section](#data-preparation-and-feature-engineering).
 
----
+
 
 ### From Data Access SDK (Deprecated)
 
@@ -291,7 +294,7 @@ df.dropna(0, inplace=True)
 
 The `load()` function in your scoring data loader should complete with the scoring dataset as the output.
 
----
+
 
 ### Pipeline file
 
@@ -341,7 +344,7 @@ def train(configProperties, data):
 
 Notice that depending on your application, you will have arguments in your `GradientBoostingRegressor()` function. `xTrainingDataset` should contain your features used for training while `yTrainingDataset` should contain your labels.
 
----
+
 
 ### Scoring 
 
