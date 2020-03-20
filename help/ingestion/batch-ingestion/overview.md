@@ -26,7 +26,7 @@ See the [Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/a
 
 The following diagram outlines the batch ingestion process:
 
-![](../images/batch-ingestion/batch_ingestion.png)
+![](../images/batch-ingestion/overview/batch_ingestion.png)
 
 ## Using the API
 
