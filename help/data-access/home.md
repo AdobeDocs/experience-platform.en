@@ -9,7 +9,7 @@ topic: overview
 
 The Data Access API supports Adobe Experience Platform by providing users with a RESTful interface focused on the discoverability and accessibility of ingested datasets within Experience Platform.
 
-![Data Access on Experience Platform](Data_Access_Experience_Platform.png)
+![Data Access on Experience Platform](images/Data_Access_Experience_Platform.png)
 
 ## API specification reference
 
