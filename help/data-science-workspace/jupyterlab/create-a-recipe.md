@@ -105,10 +105,10 @@ The same information can be found on [Adobe Experience Platform](https://platfor
 
 By default, the following configuration parameters are set for you when you access data:
 
- - `ML_FRAMEWORK_IMS_USER_CLIENT_ID` 
- - `ML_FRAMEWORK_IMS_TOKEN` 
- - `ML_FRAMEWORK_IMS_ML_TOKEN` 
- - `ML_FRAMEWORK_IMS_TENANT_ID` 
+- `ML_FRAMEWORK_IMS_USER_CLIENT_ID` 
+- `ML_FRAMEWORK_IMS_TOKEN` 
+- `ML_FRAMEWORK_IMS_ML_TOKEN` 
+- `ML_FRAMEWORK_IMS_TENANT_ID` 
 
 
 
