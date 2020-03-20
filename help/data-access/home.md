@@ -149,6 +149,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
   }
 }
 ```
+
 | Property | Description |
 | -------- | ----------- |
 | data.name | Name of the file (e.g. profiles.csv). |
