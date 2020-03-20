@@ -69,6 +69,7 @@ curl -X POST
   -H 'x-gw-ims-org-id: {IMS_ORG}' 
   -d '{JSON_PAYLOAD}'
 ```
+
 - `{API_KEY}` : Your specific API key value found in your unique Adobe Experience Platform integration.  
 - `{IMS_ORG}` :  Your IMS organization ID can be found under the integration details in the Adobe I/O Console.  
 - `{ACCESS_TOKEN}` : Your specific bearer token value provided after authentication.  
