@@ -20,3 +20,4 @@ user-guide-title: Adobe Experience Platform Help
   * [Experience Platform Launch](https://docs.adobe.com/content/help/en/launch/using/overview.html)
   * [Experience Platform Auditor](https://docs.adobe.com/content/help/en/auditor/using/overview.html)
   * [Experience Cloud Debugger](https://docs.adobe.com/content/help/en/debugger/using/experience-cloud-debugger.html)
+  * [(Beta) Experience Platform Web SDK](https://docs.adobe.com/content/help/en/experience-platform/edge/home.html)
