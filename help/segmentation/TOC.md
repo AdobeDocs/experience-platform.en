@@ -8,19 +8,9 @@ user-guide-title: Adobe Experience Platform Segmentation Service Help
 
 - [Overview](home.md)
 - Segmentation API {#api}
-    - [Getting started](api/getting-started.md)
-    - [Estimates](api/estimates.md)
-    - [Export jobs](api/export-jobs.md)
-    - [Previews](api/previews.md)
-    - [PQL conversions](api/pql-conversions.md)
-    - [Schedules](api/schedules.md)
-    - [Segment definitions](api/segment-definition.md)
-    - [Segment jobs](api/segment-jobs.md)
     - [Streaming segmentation](api/streaming-segmentation.md)
 - Segmentation UI {#ui}
     - [Overview](ui/overview.md)
-    - [Scheduled segmentation](ui/scheduled-segmentation.md)
-    - [Streaming segmentation](ui/streaming-segmentation.md)
 - [Honoring opt-outs](honoring-opt-outs.md)
 - [Multi-entity segmentation](multi-entity-segmentation.md)
 - Profile Query Language {#pql}
@@ -36,7 +26,6 @@ user-guide-title: Adobe Experience Platform Segmentation Service Help
     - [Filter functions](pql/filter-functions.md)
     - [Logical quantifiers](pql/logical-quantifiers.md)
     - [Miscellaneous functions](pql/misc-functions.md)
-    - [Sample PQL queries](pql/sample-queries.md)
 - Tutorials {#tutorials}
     - [Create a segment](tutorials/create-a-segment.md)
     - [Evaluate a segment](tutorials/evaluate-a-segment.md)
