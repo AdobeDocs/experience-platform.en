@@ -39,7 +39,7 @@ Once a segment has been conceptually defined it is built in Experience Platform.
 
 Whether created using the API or using the Segment Builder, segments are ultimately defined using Profile Query Language (PQL). This is where the conceptual segment definition gets described in the language built to retrieve profiles meeting the criteria. For more information, see the [PQL overview](./pql/overview.md).  
 
-To learn how to create and use segments in the Segment Builder (the UI implementation of Segmentation Service), see the [Segment Builder guide](./ui/overview.md.md). 
+To learn how to create and use segments in the Segment Builder (the UI implementation of Segmentation Service), see the [Segment Builder guide](./ui/overview.md). 
 
 For information on building segment definitions using the API, see the tutorial on [creating audience segments using the API](./tutorials/create-a-segment.md).
 
