@@ -15,7 +15,11 @@ The Destinations workspace consists of four sections, **Catalog**, **Browse**, *
 
 ## Catalog {#catalog}
 
-The **[!UICONTROL Catalog]** tab displays a list of all destinations offered by Adobe, that you can send data to. Select a destination in the catalog to open the right rail. Here, you can set up a connection to the destination (**Connect destination**) or learn more detailed information about each destination by viewing the documentation (**View documentation**).
+The **[!UICONTROL Catalog]** tab displays a list of all destinations offered by Adobe, that you can send data to. 
+
+Use the search functionality on the page to locate a specific destination or filter destinations using the **[!UICONTROL Categories]** control. 
+
+Select a destination in the catalog to open the right rail. Here, you can set up a connection to the destination (**Connect destination**), view existing destination connections (**Browse destinations**) or learn more detailed information about each destination by viewing the documentation (**View documentation**).
 
 ![Destination catalog options](/help/rtcdp/destinations/assets/destination-ui-catalog-options.png)
 
