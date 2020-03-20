@@ -57,13 +57,13 @@ For a comprehensive list of endpoints in the Catalog API, please refer to the [A
 
 Using the Catalog API, you can return a list of batches under your organization:
 
-#### API format
+**API format**
 
 ```http
 GET /batches
 ```
 
-#### Request
+**Request**
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches/' \
@@ -73,7 +73,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches/' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
 The response includes an object that lists of all of the batches related to the IMS Organization, with each top-level value representing a batch. The individual batch objects contain the details for that specific batch. The response below has been minimized for space.
 
@@ -100,7 +100,7 @@ The response includes an object that lists of all of the batches related to the 
 
 Filters are often required to find a particular batch in order to retrieve relevant data for a particular use case. Parameters can be added to a `GET /batches` request in order to filter the returned response. The request below will return all batches created after a specified time, within a particular data set, sorted by when they were created.
 
-#### API format
+**API format**
 
 ```http
 GET /batches?createdAfter={START_TIMESTAMP}&dataSet={DATASET_ID}&sort={SORT_BY}
@@ -112,7 +112,7 @@ GET /batches?createdAfter={START_TIMESTAMP}&dataSet={DATASET_ID}&sort={SORT_BY}
 | {DATASET_ID} | The dataset identifier. |
 | {SORT_BY} | Sorts the response by the value provided. For example, `desc:created` sorts the objects by creation date in descending order. |
 
-#### Request
+**Request**
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?createdAfter=1521053542579&dataSet=5cd9146b21dae914b71f654f&orderBy=desc:created' \
@@ -122,7 +122,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?createdAf
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
 ```json
 {   "{BATCH_ID_3}": {
@@ -188,7 +188,7 @@ A full list of parameters and filters can be found in the [Catalog API reference
 
 Now that you have the ID of the batch that you want to access, you can use the Data Access API to get a list of files belonging to that batch.
 
-#### API format
+**API format**
 
 ```http
 GET /batches/{BATCH_ID}/files
@@ -198,7 +198,7 @@ GET /batches/{BATCH_ID}/files
 | -------- | ----------- |
 | {BATCH_ID} | Batch identifier of the batch that you are trying to access. |
 
-#### Request
+**Request**
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c6f332168966814cd81d3d3/files' \
@@ -208,7 +208,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c6f332168
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
 ```json
 {
@@ -245,7 +245,7 @@ The response contains a data array that lists all the files within the specified
 
 Once you have a unique file ID, you can use the Data Access API to access the specific details about the file, including its name, size in bytes, and a link to download it.
 
-#### API format
+**API format**
 
 ```http
 GET /files/{FILE_ID}
@@ -255,7 +255,7 @@ GET /files/{FILE_ID}
 | -------- | ----------- |
 | {FILE_ID} | The identifier of the file you want to access. |
 
-#### Request
+**Request**
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-4496-9a38-7b2041114b56-1' \
@@ -269,7 +269,7 @@ Depending on whether the file ID points to an individual file or a directory, th
 
 **Case 1: File ID points to a single file**
 
-#### Response
+**Response**
 
 ```json
 {
@@ -298,7 +298,7 @@ Depending on whether the file ID points to an individual file or a directory, th
 
 **Case 2: File ID points to a directory**
 
-#### Response
+**Response**
 
 ```json
 {
@@ -347,7 +347,7 @@ This response returns a directory containing two separate files, with IDs `{FILE
 
 You can retrieve the metadata of a file by making a HEAD request. This returns the file's metadata headers, including its size in bytes and file format.
 
-#### API format
+**API format**
 
 ```http
 HEAD /files/{FILE_ID}?path={FILE_NAME}
@@ -358,7 +358,7 @@ HEAD /files/{FILE_ID}?path={FILE_NAME}
 | {FILE_ID} | The file's identifier. |
 | {FILE_NAME} | The file name (for example, profiles.parquet) |
 
-#### Request
+**Request**
 
 ```shell
 curl -I 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-4496-9a38-7b2041114b56-1?path=profiles.parquet' \
@@ -368,7 +368,7 @@ curl -I 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-44
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
 The response headers contain the metadata of the queried file, including:
 - `Content-Length`: Indicates the size of the payload in bytes
@@ -378,7 +378,7 @@ The response headers contain the metadata of the queried file, including:
 
 You can also access the contents of a file using the Data Access API.
 
-#### API format
+**API format**
 
 ```shell
 GET /files/{FILE_ID}?path={FILE_NAME}
@@ -389,7 +389,7 @@ GET /files/{FILE_ID}?path={FILE_NAME}
 | {FILE_ID} | The file's identifier. |
 | {FILE_NAME} | The file name (for example, profiles.parquet). |
 
-#### Request
+**Request**
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-4496-9a38-7b2041114b56-1?path=profiles.parquet' \
@@ -399,7 +399,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
 A successful response returns the file's contents.
 
@@ -409,7 +409,7 @@ The Data Access API allows for downloading files in chunks. A range header can b
 
 The HEAD example in the [previous section](#retrieve-the-metadata-of-a-file) gives the size of a specific file in bytes.
 
-#### API format
+**API format**
 
 ```http
 GET /files/{FILE_ID}?path={FILE_NAME}
@@ -420,7 +420,7 @@ GET /files/{FILE_ID}?path={FILE_NAME}
 | {FILE_ID} | The file's identifier. |
 | {FILE_NAME} | The file name (for example, profiles.parquet) |
 
-#### Request
+**Request**
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-4496-9a38-7b2041114b56-1?path=profiles.parquet' \
@@ -435,7 +435,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 | -------- | ----------- | 
 | bytes=0-99 | Specifies the range of bytes to download. If this is not specified, the API will download the entire file. In this example, the first 100 bytes will be downloaded. |
 
-#### Response
+**Response**
 
 The response body includes the first 100 bytes of the file (as specified by the "Range" header in the request) along with HTTP Status 206 (Partial Contents). The response also includes the following headers:
 
@@ -451,7 +451,7 @@ Responses within the Data Access API are paginated. By default, the maximum numb
 - `start`: The offset can be set by the "start" query parameter. 
 - `&`: You can use an ampersand to combine multiple parameters in a single call.
 
-#### API format
+**API format**
 
 ```http
 GET /batches/{BATCH_ID}/files?start={OFFSET}
@@ -465,7 +465,7 @@ GET /batches/{BATCH_ID}/files?start={OFFSET}&limit={LIMIT}
 | {OFFSET} | The specified index to start the result array (for example, start=0) |
 | {LIMIT} | Controls how many results gets returned in the result array (for example, limit=1) |
 
-#### Request
+**Request**
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c102cac7c7ebc14cd6b098e/files?start=0&limit=1' \
@@ -475,7 +475,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c102cac7c
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response:
+**Response**:
 
 The response contains a `"data"` array with a single element, as specified by the request parameter `limit=1`. This element is an object containing the details of the first available file, as specified by the `start=0` parameter in the request (remember that in zero-based numbering, the first element is "0").
 
