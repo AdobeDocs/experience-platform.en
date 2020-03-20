@@ -44,7 +44,7 @@ In order to make calls to Platform APIs, you must first complete the [authentica
 
 All resources in Experience Platform are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+- x-sandbox-name: `{SANDBOX_NAME}`
 
 > [!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
 
