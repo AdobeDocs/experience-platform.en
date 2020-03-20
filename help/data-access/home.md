@@ -5,7 +5,7 @@ title: Data access overview
 topic: overview
 ---
 
-# Data Access Overview
+# Data Access overview
 
 The Data Access API supports Adobe Experience Platform by providing users with a RESTful interface focused on the discoverability and accessibility of ingested datasets within Experience Platform.
 
