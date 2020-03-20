@@ -190,7 +190,7 @@ The response format depends on the type of Accept header sent in the request. Lo
 | application/vnd.adobe.xed+json; version={major version} | Raw with $ref and allOf, has titles and descriptions |
 | application/vnd.adobe.xed-notext+json; version={major version} | Raw with $ref and allOf, no titles or descriptions |
 | application/vnd.adobe.xed-full-notext+json; version={major version} |$refs and allOf resolved, no titles or descriptions |
-| application/vnd.adobe.xed-full-desc+json; version={major version}	| $refs and allOf resolved, descriptors included |
+| application/vnd.adobe.xed-full-desc+json; version={major version} | $refs and allOf resolved, descriptors included |
 
 >[!NOTE] `application/vnd.adobe.xed-id+json` and `application/vnd.adobe.xed-full+json; version={major version}` are the most commonly used Accept headers. `application/vnd.adobe.xed-id+json` is preferred for listing resources in the Schema Registry as it returns only the "title", "id", and "version". `application/vnd.adobe.xed-full+json; version={major version}` is preferred for viewing a specific resource (by its "id"), as it returns all fields (nested under "properties"), as well as titles and descriptions.
 
