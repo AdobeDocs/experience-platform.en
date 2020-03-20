@@ -126,7 +126,7 @@ In the [Package source files into a Recipe](./package-source-files-recipe.md) tu
 ![](../images/models-recipes/import-package-ui/workflow_ss.png)
 2. Input an appropriate name for the Retail Sales recipe. For example, "Retail Sales recipe PySpark". Optionally include a recipe description and a documentation URL. Click **Next** when you're done.
 ![](../images/models-recipes/import-package-ui/recipe_info.png)
-1. Import the PySpark Retail Sales recipe that was created in the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial by dragging and dropping, or use the file system **Browser**. The packaged recipe should be is located in `experience-platform-dsw-reference/recipes/pyspark/dist`.
+3. Import the PySpark Retail Sales recipe that was created in the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial by dragging and dropping, or use the file system **Browser**. The packaged recipe should be is located in `experience-platform-dsw-reference/recipes/pyspark/dist`.
 Similarly, import the provided configuration file by dragging and dropping, or use the file system **Browser**. The provided configuration file can be found at `experience-platform-dsw-reference/recipes/pyspark/pipeline.json`. Click **Next** when both files have been supplied.
 ![](../images/models-recipes/import-package-ui/recipe_source.png)
 4. You may encounter errors at this point. This is normal behavior and is to be expected. Select the Retail Sales input and output schemas under the section **Manage Schemas**, they were created using the provided bootstrap script in the [Access and explore your data](../jupyterlab/access-platform-data.md) tutorial. 
@@ -183,8 +183,6 @@ Under the **Feature Manage** section, click on your tenant identification in the
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
 Congratulations, you've created the Retail Sales recipe! Move on to the [next steps](#next-steps) to find out how to create a Model in Data Science Workspace using the newly created Retail Sales recipe.
-
----
 
 ## Next steps
 
