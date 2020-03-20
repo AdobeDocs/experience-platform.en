@@ -23,7 +23,7 @@ This tutorial requires a working understanding of the following components of Ad
 - [Experience Data Model (XDM System)](../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
 - [Batch ingestion](../batch-ingestion/overview.md): The method by which Platform ingests data from user-supplied datafiles.
 
-This tutorial also requires that you have already created a dataset to ingest your CSV data into. For steps on creating a dataset in the UI, see the [data ingest tutorial](./data-ingest.md).
+This tutorial also requires that you have already created a dataset to ingest your CSV data into. For steps on creating a dataset in the UI, see the [data ingest tutorial](./ingest-batch-data.md).
 
 ## Add data
 
