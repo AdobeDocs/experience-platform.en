@@ -204,3 +204,7 @@ curl -X POST \
 ```
 
 > **Note:** The response will always have one entry for each XID provided in the request regardless of whether a request's XIDs belong to the same cluster or if one or more have any cluster associated at all.
+
+## Next steps
+
+Proceed to the next tutorial to [list identity mappings](./list-identity-mappings.md)
