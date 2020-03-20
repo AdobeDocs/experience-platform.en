@@ -681,6 +681,8 @@ The following response shows a "success":
 }
 ```
 
+
+
 **Response - Failure**
 
 In case of failure the "errors" can be extracted from the response and surfaced on the ETL tool as error messages.
