@@ -69,18 +69,18 @@ For step-by-step instructions for defining a namespace when creating an identity
 
 The following standard namespaces are provided for use by all organizations within Experience Platform:
 
-|Display Name|ID|Code|Description|
-|------------|---|---|-----------|
-|CORE|0|CORE|legacy name: "Adobe AudienceManager"|
-|ECID|4|ECID|alias: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID"|
-|Email|6|Email||
-|Email (SHA256, lowercased)|11|Emails|Standard namespace for pre-hashed email. Values provided in this namespace are converted to lowercase before hashing with SHA-256.|
-|Phone|7|Phone||
-|Windows AID|8|WAID||
-|AdCloud|411|AdCloud|alias: Ad Cloud|
-|Adobe Target|9|TNTID|Target ID|
-|Google Ad ID|20914|GAID|GAID|
-|Apple IDFA|20915|IDFA|ID for Advertisers|
+| Display Name | ID | Code | Description |
+| ------------ | --- | --- | ----------- |
+| CORE | 0 | CORE | legacy name: "Adobe AudienceManager" |
+| ECID | 4 | ECID | alias: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID" |
+| Email | 6 | Email | |
+| Email (SHA256, lowercased) | 11 | Emails | Standard namespace for pre-hashed email. Values provided in this namespace are converted to lowercase before hashing with SHA-256. |
+| Phone | 7 | Phone | |
+| Windows AID | 8 | WAID | |
+| AdCloud | 411 | AdCloud | alias: Ad Cloud |
+| Adobe Target | 9 | TNTID | Target ID |
+| Google Ad ID | 20914 | GAID | GAID |
+| Apple IDFA | 20915 | IDFA | ID for Advertisers |
 
 ## Where can I find the list of identity namespaces available for my organization?
 
@@ -246,6 +246,7 @@ In the case of this error, your access token is invalid. Access tokens expire ev
     "detail": "User token does not have valid product context"
 }
 ```
+
 This error message displays when your access token has not been generated from an Experience Platform integration. See the [authentication tutorial](../../tutorials/authentication.md) for instructions on generating new access tokens for an Experience Platform integration.
 
 ### Internal error when getting native XID from identity and namespace code
