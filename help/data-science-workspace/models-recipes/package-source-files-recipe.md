@@ -60,7 +60,7 @@ Note the values for **Docker Host**, **Username**, and **Password**. These will 
 
 Once pushed, you and other users can access the image via URL. The **Source File** field will expect this URL as an input.
 
-### Binary based model authoring ####
+### Binary based model authoring
 
 For source files written in Scala or PySpark, a binary file will be generated. Building the binary file is as simple as running the provided build script.
 >[!NOTE] Only source files written in ScalaSpark or PySpark will generate a binary file upon running the build script.
@@ -91,6 +91,7 @@ Navigate to the directory `experience-platform-dsw-reference/recipes/python/reta
 # for building Docker image
 ./build.sh
 ```
+
 Note that when executing the login script, you will need to provide the Docker host, username, and password. When building, you are required to provide the Docker host and a version tag for the build.
 
 Once the build script is complete, you are given a Docker source file URL in your console output. For this specific example, it will look something like:
@@ -119,6 +120,7 @@ Navigate to the directory `experience-platform-dsw-reference/recipes/R/Retail - 
 # for build Docker image
 ./build.sh
 ```
+
 Note that when executing the login script, you will need to provide the Docker host, username, and password. When building, you are required to provide the Docker host and a version tag for the build.
 
 Once the build script is complete, you are given a Docker source file URL in your console output. For this specific example, it will look something like:
@@ -172,5 +174,5 @@ You can now move on to the [next steps](#next-steps).
 
 This tutorial went over packaging source files into a Recipe, the prerequisite step for importing a Recipe into Data Science Workspace. You should now have a Docker image in Azure Container Registry along with the corresponding image URL or a binary file stored locally in your file system. You are now ready to begin the tutorial on **Importing a packaged Recipe into Data Science Workspace**. Select one of the tutorial links below to get started.
 
-* [Import a packaged Recipe in the UI](./import-packaged-recipe-ui.md)
-* [Import a packaged Recipe using the API](./import-packaged-recipe-api.md)
+- [Import a packaged Recipe in the UI](./import-packaged-recipe-ui.md)
+- [Import a packaged Recipe using the API](./import-packaged-recipe-api.md)
