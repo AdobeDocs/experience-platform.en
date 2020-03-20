@@ -172,7 +172,7 @@ Schedules can currently only be created using the API. For detailed steps on cre
 
 >[!NOTE] Streaming segmentation is a beta feature, and is available on request.
 
-Additionally, a segment definition can be enabled for streaming segmentation before or after it has been created. Streaming segmentation instantly evaluates a customer as soon as an event comes into a particular segment group. With this capability, most segment rules can now be evaluated as the data is passed into Platform, meaning segment membership will be kept up to date without running scheduled segmentation jobs. For more detailed information about streaming segmentation, please read the [streaming segmentation documentation](./streaming-segmentation.md).
+Additionally, a segment definition can be enabled for streaming segmentation before or after it has been created. Streaming segmentation instantly evaluates a customer as soon as an event comes into a particular segment group. With this capability, most segment rules can now be evaluated as the data is passed into Platform, meaning segment membership will be kept up to date without running scheduled segmentation jobs. For more detailed information about streaming segmentation, please read the [streaming segmentation documentation](../api/streaming-segmentation.md).
 
 Enabling your segment definitions for streaming can be done using the UI or the API. To enable a new or existing segment definition for streaming in the UI, you need to toggle the *Streaming* option to **ON**. 
 

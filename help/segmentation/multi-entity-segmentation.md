@@ -43,23 +43,3 @@ This process can be done either using the Real-time Customer Profile API or the 
 After creating a segment, you can evaluate and access the segment results using the Real-time Customer Profile APIs. Evaluating a multi-entity segment is very similar to evaluating a regular segment.
 
 This process can only be done using the Real-time Customer Profile API. For a detailed guide on using the API to evaluate and access segments, please read [the tutorial on evaluating and accessing segments](./tutorials/evaluate-a-segment.md).
-
-[rtcp]: ../../technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md
-
-[seg-service]: ../../technical_overview/segmentation/segmentation-overview.md
-
-[xdm]: ../../technical_overview/schema_registry/xdm_system/xdm_system_in_experience_platform.md
-
-[segmentation-overview]: ../../technical_overview/segmentation/segmentation-overview.md#advanced-segmentation-features
-
-[get-schema-id]: ../schema_registry_api_tutorial/relationship_descriptor_tutorial.md#define-a-source-and-destination-schema
-
-[add-field-to-schema]: ../schema_registry_api_tutorial/relationship_descriptor_tutorial.md#create-a-new-mixin
-
-[relationship-api]: ../schema_registry_api_tutorial/relationship_descriptor_tutorial.md
-[relationship-ui]: ../schema_editor_tutorial/schema-relationship-ui-tutorial.md
-
-[segment-api]: ../creating_a_segment_tutorial/creating_a_segment_tutorial.md
-[segment-ui]: ../../technical_overview/segmentation/segment-builder-guide.md
-
-[access-segment-api]: ./evaluate_segment.md
