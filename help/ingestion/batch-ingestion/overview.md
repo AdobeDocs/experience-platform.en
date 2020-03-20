@@ -81,7 +81,7 @@ Before data can be added to a dataset, it must be linked to a batch, which will 
 POST /batches
 ```
 
-#### Request
+**Request**
 
 ```shell
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
@@ -99,7 +99,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 | -------- | ----------- |
 | datasetId | The ID of the dataset to upload the files into. |
 
-#### Response
+**Reponse**
 
 ```JSON
 {
@@ -148,7 +148,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | {DATASET_ID} | The ID of the dataset to upload files. | 
 | {FILE_NAME} | Name of file as it will be seen in the dataset. |
 
-#### Request
+**Request**
 
 ```SHELL
 curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet" \
@@ -164,7 +164,7 @@ curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 | -------- | ----------- |
 | {FILE_PATH_AND_NAME} | The path and filename of the file to be uploaded into the dataset. |
 
-#### Response
+**Reponse**
 
 ```JSON
 #Status 200 OK, with empty response body
@@ -183,7 +183,7 @@ POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}?action=initiali
 | {BATCH_ID} | The ID of the batch. |  
 | {DATASET_ID} | The ID of the dataset ingesting the files. |
 
-#### Request
+**Request**
 
 ```SHELL
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/part1=a/part2=b/{FILE_NAME}.parquet?action=initialize" \
@@ -193,7 +193,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
   -H "x-api-key: {API_KEY}"
 ``` 
 
-#### Response
+**Reponse**
 
 ```JSON
 #Status 201 CREATED, with empty response body
@@ -213,7 +213,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | {DATASET_ID} | The ID of the dataset to upload the files into. |
 | {FILE_NAME} | Name of file as it will be seen in the dataset. |
 
-#### Request
+**Request**
 
 ```SHELL
 curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/part1=a/part2=b/{FILE_NAME}.parquet" \
@@ -230,7 +230,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 | -------- | ----------- |
 | {FILE_PATH_AND_NAME} | The path and filename of the file to be uploaded into the dataset. |
 
-#### Response
+**Reponse**
 
 ```JSON
 #Status 200 OK, with empty response
@@ -240,11 +240,12 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 After all files have been uploaded to the batch, the batch can be signaled for completion. By doing this, the Catalog **DataSetFile** entries are created for the completed files and associated with the batch generated above. The Catalog batch is then marked as successful, which triggers downstream flows to ingest the available data.
 
-#### Request
+**Request**
 
 ```http
 POST /batches/{BATCH_ID}?actions=COMPLETE
 ```
+
 | Property | Description |
 | -------- | ----------- |
 | {BATCH_ID} | The ID of the batch to be uploaded into the dataset. |
@@ -257,7 +258,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 -H "x-api-key : {API_KEY}"
 ```
 
-#### Response
+**Reponse**
 
 ```JSON
 #Status 200 OK, with empty response
@@ -273,7 +274,7 @@ While waiting for the files to uploaded to the batch, the batch's status can be 
 GET /batch/{BATCH_ID}
 ```
 
-#### Request
+**Request**
 
 ```shell
 curl GET "https://platform.adobe.io/data/foundation/catalog/batch/{BATCH_ID}" \
@@ -283,7 +284,7 @@ curl GET "https://platform.adobe.io/data/foundation/catalog/batch/{BATCH_ID}" \
   -H "x-api-key: {API_KEY}"
 ```
 
-#### Response
+**Reponse**
 
 ```JSON
 {

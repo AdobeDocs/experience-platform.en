@@ -6,3 +6,7 @@ topic: developer guide
 ---
 
 # Batch ingestion developer guide
+
+## Replay a batch
+
+## How to ingest large parquet files
