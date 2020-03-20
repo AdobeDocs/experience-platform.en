@@ -231,6 +231,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/xdms/context/pers
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}"
 ```
+
 >[!NOTE] An optional query parameter, `expansion=xdm`, tells the API to fully expand and in-line any referenced schemas. You may want to do this when presenting a list of all potential fields to the user.
 
 **Response**
@@ -678,7 +679,7 @@ The following response shows a "success":
     "version": "1.0.1",
     "availableDates": {}
 }
-``` 
+```
     
 **Response - Failure**
 
