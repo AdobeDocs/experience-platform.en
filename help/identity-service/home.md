@@ -106,7 +106,7 @@ For example, by labeling phone number fields as identity fields, Identity Servic
 
 ### Configure a dataset for Identity Service
 
-During the streaming ingestion process, Identity Service automatically extracts identity data from record and time series data. However, before data can be ingested, it must be enabled for Identity Service. See the tutorial on  [configuring a Dataset for Real-time Customer Profile and Identity Service using APIs](../catalog/datasets/profile.md) for more information.
+During the streaming ingestion process, Identity Service automatically extracts identity data from record and time series data. However, before data can be ingested, it must be enabled for Identity Service. See the tutorial on  [configuring a Dataset for Real-time Customer Profile and Identity Service using APIs](../profile/tutorials/dataset-configuration.md) for more information.
 
 ### Ingest data to Identity Service
 
