@@ -32,7 +32,7 @@ If you prefer to publish a Model by using Sensei Machine Learning APIs, refer to
 ![](../images/model-recipes/publish-model/ui/3_configure_service.png)
 4.  All successful training runs for to the Model are listed. The new Service will inherit training and scoring configurations from the selected training run. 
 ![](../images/model-recipes/publish-model/ui/4_select_training_run.png)
-1.  Click **Finish** to create the Service and redirect to the **Service Gallery** to show all available Services, including the newly created Service.
+5.  Click **Finish** to create the Service and redirect to the **Service Gallery** to show all available Services, including the newly created Service.
 ![](../images/model-recipes/publish-model/ui/service_gallery.png)
 
 ## Score using a Service
