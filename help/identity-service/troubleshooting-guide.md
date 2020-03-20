@@ -63,7 +63,7 @@ See the [identity namespace overview](./home.md) for more information.
 
 Identity fields must be associated with an existing identity namespace when they are created. Any new namespaces must be [created using the API](#how-do-i-create-a-custom-namespace-for-my-organization) before associating them with identity fields.
 
-For step-by-step instructions for defining a namespace when creating an identity descriptor using the API, please see the section on [creating a descriptor](../schema_registry/schema_registry_developer_guide.md#create-descriptor) in the Schema Registry developer guide. For marking a schema field as an identity in the UI, follow the steps in the [Schema Editor tutorial](../../tutorials/schema_registry_api_tutorial/schema_registry_api_tutorial.md).
+For step-by-step instructions for defining a namespace when creating an identity descriptor using the API, please see the section on [creating a descriptor](../xdm/tutorials/create-schema-ui.md) in the Schema Registry developer guide. For marking a schema field as an identity in the UI, follow the steps in the [Schema Editor tutorial](../xdm/tutorials/create-schema-api.md).
 
 ## What are the standard identity namespaces provided by Experience Platform?
 
