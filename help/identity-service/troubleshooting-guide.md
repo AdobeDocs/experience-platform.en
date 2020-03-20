@@ -84,11 +84,11 @@ The following standard namespaces are provided for use by all organizations with
 
 ## Where can I find the list of identity namespaces available for my organization?
 
-Using the [Identity Service API](../../../../../../acpdr/swagger-specs/id-service-api.yaml), you can list all available identity namespaces for your organization by making a GET request to the `/idnamespace/identities` endpoint. See the section on [listing available namespaces](identity_services_api.md#listing-available-namespaces) in the Identity Service API overview for more information.
+Using the [Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml), you can list all available identity namespaces for your organization by making a GET request to the `/idnamespace/identities` endpoint. See the section on [listing available namespaces](./api/list-namespaces.md) in the Identity Service API overview for more information.
 
 ## How do I create a custom namespace for my organization?
 
-Using the [Identity Service API](../../../../../../acpdr/swagger-specs/id-service-api.yaml), you can create a custom identity namespace for your organization by making a POST request to the `/idnamespace/identities` endpoint. See the section on [creating a custom namespace](identity_services_api.md#creating-a-custom-namespace) in the Identity Service API overview for more information.
+Using the [Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml), you can create a custom identity namespace for your organization by making a POST request to the `/idnamespace/identities` endpoint. See the section on [creating a custom namespace](./api/create-custom-namespace.md) in the Identity Service API overview for more information.
 
 ## What are composite identities and XIDs?
 
