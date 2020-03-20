@@ -71,3 +71,7 @@ To limit the payload in responses, APIs adapt their responses to the type of ide
 The examples in this document do not cover the complete functionality of the Identity Service API. For the complete API, see the [Swagger API Reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml).
 
 > **Note:** All identities returned will be in native XID form when native XID is used in the request. Using the ID/namespace form is recommended. For more information, see the section on [getting the XID for an identity](./create-custom-namespace.md).
+
+## Next steps
+
+Now that you have gathered the required credentials, you can now continue to read the rest of the developer guide. Each section provides important information regarding their endpoints and demonstrate example API calls for performing CRUD operations. Each call includes the general **API format**, a sample **request** showing required headers and properly formatted payloads, and a sample **response** for a successful call.
