@@ -180,7 +180,7 @@ curl -X POST
 | **`trainingDataSetId`** | Identification referring to the specific data set to be used for training Experiment. |
 | **`trainingTimeframe`** | An Integer value representing minutes for filtering data to be used for training Experiment. For example, a value of `"10080"` means data from the past 10080 minutes or 168 hours will be used for the training Experiment Run. Note that a value of `"0"` will not filter data, all data within the dataset is used for training. |
 | **`scoringDataSetId`** | Identification referring to the specific data set to be used for scheduled scoring Experiment Runs. |
-|**`scoringTimeframe`** | An Integer value representing minutes for filtering data to be used for scoring Experiment Runs. For example, a value of `"10080"` means data from the past 10080 minutes or 168 hours will be used for each scheduled scoring Experiment Run. Note that a value of `"0"` will not filter data, all data within the dataset is used for scoring. |
+| **`scoringTimeframe`** | An Integer value representing minutes for filtering data to be used for scoring Experiment Runs. For example, a value of `"10080"` means data from the past 10080 minutes or 168 hours will be used for each scheduled scoring Experiment Run. Note that a value of `"0"` will not filter data, all data within the dataset is used for scoring. |
 | **`scoringSchedule`** | Contains details regarding scheduled scoring Experiment Runs. |
 
 **Response**
@@ -306,9 +306,9 @@ curl -X GET "https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}"
   -H "x-gw-ims-org-id: {IMS_ORG}" 
 ```
 
-* `{API_KEY}` : Your specific API key value found in your unique Adobe Experience Platform integration.  
-* `{IMS_ORG}` :  Your IMS organization ID can be found under the integration details in the Adobe I/O Console.  
-* `{ACCESS_TOKEN}` : Your specific bearer token value provided after authentication.  
+- `{API_KEY}` : Your specific API key value found in your unique Adobe Experience Platform integration.  
+- `{IMS_ORG}` :  Your IMS organization ID can be found under the integration details in the Adobe I/O Console.  
+- `{ACCESS_TOKEN}` : Your specific bearer token value provided after authentication.  
 
 **Response**
 
