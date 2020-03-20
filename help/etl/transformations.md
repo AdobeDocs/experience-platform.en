@@ -10,7 +10,7 @@ topic: overview
 This article demonstrates the following example transformations that an extract, transform, load (ETL) developer can encounter:
 
 - [Flat CSV to hierarchy](#flat-csv-to-hierarchy):  
-   Convert a CSV file containing CRM data into hierarchical [Experience Data Model (XDM)](../../technical_overview/schema_registry/xdm_system/xdm_system_in_experience_platform.md) data. 
+   Convert a CSV file containing CRM data into hierarchical [Experience Data Model (XDM)](../xdm/home.md) data. 
 - [Dataframe to XDM schema](#dataframe-to-xdm-schema):   
    Express an XDM schema as a parquet dataframe.
 - [Identities to Identity Map](#identities-to-identity-map):  
