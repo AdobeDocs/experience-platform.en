@@ -525,11 +525,11 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{FILE_ID}" \
   -H "x-api-key : {API_KEY}"
 ```
 
-The response may point to a single file, or a directory. Details on each can be found in the [data access tutorial](../../tutorials/data_access_tutorial/data_access_tutorial.md).
+The response may point to a single file, or a directory. Details on each can be found in the [data access tutorial](../profile/tutorials/access.md).
 
 ### Access file content
 
-The [data access API]([../../../../../../acpdr/swagger-specs/data-access-api.yaml](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)) can be used to access the contents of a specific file. To fetch the contents, a GET request is made using the value returned for `_links.self.href` when accessing a file using the file ID.
+The [data access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) can be used to access the contents of a specific file. To fetch the contents, a GET request is made using the value returned for `_links.self.href` when accessing a file using the file ID.
 
 **Request**
 
