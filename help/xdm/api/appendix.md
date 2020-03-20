@@ -88,7 +88,7 @@ It is worthwhile to know that a mapping takes place between standard XDM and the
 
 The open source project is available to you, but when it comes to interacting with resources through the Schema Registry, the API examples in this document provide the best practices you should know and follow.
 
-## Defining XDM field types in the API
+## Defining XDM field types in the API {#field-types}
 
 XDM schemas are defined using JSON Schema standards and basic field types, with additional constraints for field names which are enforced by Experience Platform. XDM allows you to define additional field types through the use of formats and optional constraints. The XDM field types are exposed by the field-level attribute, `meta:xdmType`.
 

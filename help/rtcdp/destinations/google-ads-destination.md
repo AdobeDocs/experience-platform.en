@@ -17,20 +17,30 @@ Note the following details that are specific to Google Ads destinations:
 
 * You can send the following [identities](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md) to Google Ads destinations: **Google cookie ID, IDFA, GAID, Roku IDs, Microsoft IDs, Amazon Fire TV IDs**.
 * Activated audiences are created programmatically in the Google platform.
-* Adobe Real-time CDP does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand data drop-off.
+* Adobe Real-time CDP does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand audience targeting size.
+
+>[!IMPORTANT]
+>
+>If you are looking to create your first destination with Google Ads and have not enabled the [ID sync functionality](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up Google integrations in Audience Manager, the ID syncs you had set up carry over to Adobe Real-time CDP.
 
 ## Prerequisites
 
+### Existing Google Ads account
+
+Google has paused any new Google Ads integrations with third-party vendors. You must have an existing integration with Google Ads in order to be able to perform the whitelisting steps in the next section and to create a Google Ads destination in Adobe Real-time CDP.
+
 ### Whitelisting
 
-Before creating the Google Ads destination in Adobe Real-time CDP, you must contact Google asking for your account to be whitelisted. Contact Google and provide the following information:
+>[!NOTE]
+>
+>Whitelisting is mandatory before setting up your first Google Ads destination in Adobe Real-time CDP. Please ensure the whitelisting process described below has been completed by Google before creating a destination.
 
-* **Account ID** : this is Adobe's account ID with Google. Contact Adobe Support to obtain this ID.
-* **Customer ID** : this is Adobe's customer account ID with Google. Contact Adobe Support to obtain this ID.
-* **Partner ID** : This is your three-digit partner ID with Google;
-* **Network ID** : this is your account with Google;
-* **Audience Link ID** : this is your account with Google;
-* Your account type: **AdWords**.
+Before creating the Google Ad Manager destination in Adobe Real-time CDP, you must contact Google asking for Adobe to be whitelisted as a data provider and your account to be whitelisted. Contact Google and provide the following information:
+
+* **Account ID** : this is Adobe's account ID with Google. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
+* **Customer ID** : this is Adobe's customer account ID with Google. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
+* Your account type: **AdWords**
+* **Google AdWords ID** : This is your ID with Google. The ID format is typically 123-456-7890.
 
 ## Create destination
 
@@ -42,7 +52,7 @@ Before creating the Google Ads destination in Adobe Real-time CDP, you must cont
 *  **Name**: Fill in the preferred name for this destination.
 *  **Description**: Optional. For example, you can mention which campaign you are using this destination for.
 *  **Account Type**: AdWords is the only available option.
-*  **Account ID**: Fill in your account ID with Google Ads.
+*  **Account ID**: Fill in your account ID with Google Ads. The ID format is 123-456-7890. 
 
 ## Activate segments to Google Ads
 

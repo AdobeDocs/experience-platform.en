@@ -25,7 +25,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial]^. Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -35,7 +35,7 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-> **Note:** For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+>[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 

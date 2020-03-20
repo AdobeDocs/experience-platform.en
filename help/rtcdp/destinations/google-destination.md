@@ -17,7 +17,7 @@ Note the following details that are specific to Google destinations:
 
 * You can send the following [identities](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md) to Google destinations: **Google cookie ID, IDFA, GAID**.
 * Activated audiences are created programmatically in the Google platform.
-* Adobe Real-time CDP does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand data drop-off.
+* Adobe Real-time CDP does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand audience targeting size.
 
 ## Prerequisites
 
