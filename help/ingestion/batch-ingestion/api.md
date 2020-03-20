@@ -395,6 +395,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 ```http
 201 Created
 ```
+
 ```json
 {
     "id": "{BATCH_ID}",
@@ -670,6 +671,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 ```http
 201 Created
 ```
+
 ```json
 {
     "id": "{BATCH_ID}",

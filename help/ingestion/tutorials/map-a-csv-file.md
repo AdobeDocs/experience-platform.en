@@ -115,7 +115,7 @@ The following table lists all supported mapping functions, including sample expr
 | last | Retrieves the last given argument. | last("1", "2", "3") | "3" |
 | uuid /<br>guid | Generates a pseudo-random ID. | uuid()<br>guid() | {UNIQUE_ID} |
 | now | Retrieves the current time. | now() | "2019-10-23T10:10:24.556-07:00[America/Los_Angeles]" |
-| timestamp | Retrieves the current Unix time. | timestamp() | 	1571850624571 |
+| timestamp | Retrieves the current Unix time. | timestamp() | 1571850624571 |
 | format | Formats the input date according to a specified format. | format({DATE}, "yyyy-MM-dd HH:mm:ss") | "2019-10-23 11:24:35" |
 | dformat | Converts a timestamp to a date string according to a specified format. | dformat(1571829875, "dd-MMM-yyyy hh:mm") | "23-Oct-2019 11:24" |
 | date | Converts a date string into a ZonedDateTime object (ISO 8601 format). | date("23-Oct-2019 11:24") | "2019-10-23T11:24:00+00:00" |
