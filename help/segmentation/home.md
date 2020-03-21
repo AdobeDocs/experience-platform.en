@@ -59,11 +59,11 @@ To learn more about streaming segmentation, please read the [streaming segmentat
 
 As an alternative to an ongoing data selection process, batch segmentation moves all profile data at once through segment definitions to produce corresponding audiences. Once created, this segment is saved and stored so that you can export it for use.
 
- To learn how to evaluate segments see the [segment evaluation tutorial](./tutorials/evaluate-a-segment.md). 
+To learn how to evaluate segments see the [segment evaluation tutorial](./tutorials/evaluate-a-segment.md). 
 
 ## Access segmentation results
 
-See the Profile API tutorial to learn how to [access an exported segment](../profile/tutorials/access.md).
+To learn how to access an exported segment, see the [segment evaluation tutorial](./tutorials/evaluate-a-segment.md).
   
 ## Segment metadata
 
