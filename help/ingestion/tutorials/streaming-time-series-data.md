@@ -53,13 +53,13 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 To create a dataset, you will first need to create a new schema that implements the XDM ExperienceEvent class. For more information about how to create schemas, please read the [Schema Registry API developer guide](../../xdm/api/getting-started.md).
 
-#### API format
+**API format**
 
 ```http
 POST /schemaregistry/tenant/schemas
 ```
 
-#### Request
+**Request**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas
@@ -98,7 +98,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | `description` | A meaningful description for the schema you are creating. |
 | `meta:immutableTags` | In this example, the `union` tag is used to persist your data into [Real-time Customer Profile](../../profile/home.md). |
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 201 with details of your newly created schema.
 
@@ -196,13 +196,13 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-	"@type":"xdm:descriptorIdentity",
-	"xdm:sourceProperty":"/_experience/campaign/message/profileSnapshot/workEmail/address",
-	"xdm:property":"xdm:code",
-	"xdm:isPrimary":true,
-	"xdm:namespace":"Email",
-	"xdm:sourceSchema":"{SCHEMA_REF_ID}",
-	"xdm:sourceVersion":1
+    "@type":"xdm:descriptorIdentity",
+    "xdm:sourceProperty":"/_experience/campaign/message/profileSnapshot/workEmail/address",
+    "xdm:property":"xdm:code",
+    "xdm:isPrimary":true,
+    "xdm:namespace":"Email",
+    "xdm:sourceSchema":"{SCHEMA_REF_ID}",
+    "xdm:sourceVersion":1
 }
 ```
 
@@ -215,7 +215,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 > Please ensure that the codes are valid - the example above uses "email" which is a standard identity namespace. Other commonly used standard identity namespaces can be found within the [Identity Service FAQ](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform).
 >
 > If you would like to create a custom namespace, follow the steps outlined in the [identity namespace overview](../../identity-service/home.md).
-#### Response
+**Response**
 
 A successful response returns HTTP status 201 with information on the newly created primary identity namespace for the schema.
 
@@ -241,13 +241,13 @@ Once you have created your schema, you will need to create a dataset to ingest r
 
 >[!NOTE] This dataset will be enabled for **Real-time Customer Profile** and **Identity** by setting the appropriate tags.
 
-#### API format
+**API format**
 
 ```http
 POST /catalog/dataSets
 ```
 
-#### Request
+**Request**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
@@ -275,7 +275,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 }'
 ```
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 201 and an array containing the ID of the newly created dataset in the format `@/dataSets/{DATASET_ID}`.
 
@@ -289,7 +289,7 @@ A successful response returns HTTP status 201 and an array containing the ID of 
 
 With the dataset and streaming connection in place, you can ingest XDM-formatted JSON records to ingest time series data within Platform.
 
-#### API format
+**API format**
 
 ```http
 POST /collection/{CONNECTION_ID}?synchronousValidation=true
@@ -300,7 +300,7 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 | `{CONNECTION_ID}` | The `id` value of your newly created streaming connection. |
 | `synchronousValidation`| An optional query parameter intended for development purposes. If set to `true`, it can be used for immediate feedback to determine if the request was successfully sent. By default, this value is set to `false`. |
 
-#### Request
+**Request**
 
 >[!NOTE] You will need to generate your own `xdmEntity._id` and `xdmEntity.timestamp`. A good way to generate an ID is to use a UUID. Additionally, the following API call does **not** require any authentication headers.
 
@@ -372,7 +372,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 }'
 ```
 
-#### Response
+**Response**
 
 An successful response returns HTTP status 200 with details of the newly streamed Profile.
 
@@ -400,7 +400,7 @@ To validate the previously ingested records, you can use the [Profile Access API
 
 >[!NOTE] If the merge policy ID is not defined and the schema.</span>name or relatedSchema</span>.name is `_xdm.context.profile`, Profile Access will fetch **all** related identities.
 
-#### API format
+**API format**
 
 ```http
 GET /access/entities
@@ -415,7 +415,7 @@ GET /access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name
 | `relatedEntityId` | The ID of the related entity. If provided, you must also provide the entity namespace. |
 | `relatedEntityIdNS` | The namespace of the ID you are trying to retrieve. |
 
-#### Request
+**Request**
 
 ```shell
 curl -X GET \
@@ -427,7 +427,7 @@ curl -X GET \
 
 ```
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 200 with details of the entities requested. As you can see, this is the same time series data that was previously ingested.
 
