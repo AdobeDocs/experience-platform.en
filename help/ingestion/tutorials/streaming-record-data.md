@@ -29,7 +29,7 @@ The following sections provide additional information that you will need to know
 
 ### Reading sample API calls
 
-This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.mdd#how-do-i-format-an-api-request) in the Experience Platform troubleshooting guide.
+This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the Experience Platform troubleshooting guide.
 
 ### Gather values for required headers
 
@@ -148,7 +148,7 @@ A successful response returns HTTP status 201 with details of your newly created
 
 | Property | Description |
 | -------- | ----------- |
-| `{TENANT_ID}` | This ID is used to ensure that resources you create are namespaced properly and contained within your IMS Organization. For more information about the Tenant ID, please read the [schema registry guide](../schema_registry/schema_registry_developer_guide.md). |
+| `{TENANT_ID}` | This ID is used to ensure that resources you create are namespaced properly and contained within your IMS Organization. For more information about the Tenant ID, please read the [schema registry guide](../../xdm/api/getting-started.md#know-your-tenant-id). |
 
 Please take note of the `$id` as well as the `version` attributes, as both of these will be used when creating your dataset.
 
@@ -186,9 +186,9 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 >[!NOTE] ​ ​**Identity Namespace Codes**
 >
-> Please ensure that the codes are valid - the example above uses "email" which is a standard identity namespace. Other commonly used standard identity namespaces can be found within the [Identity Service FAQ](../identity_services_architectural_overview/identity_services_faq.md) documentation in [this table](../identity_services_architectural_overview/identity_services_faq.md#are-there-any-identity-namespaces-i-can-use-out-of-the-box).
-> >
-> If you would like to create a custom namespace, follow the steps outlined in the [identity namespace overview](../identity_namespace_overview/identity_namespace_overview.md).
+> Please ensure that the codes are valid - the example above uses "email" which is a standard identity namespace. Other commonly used standard identity namespaces can be found within the [Identity Service FAQ](../identity_services_architectural_overview/identity_services_faq.md#are-there-any-identity-namespaces-i-can-use-out-of-the-box).
+>
+> If you would like to create a custom namespace, follow the steps outlined in the [identity namespace overview](../../identity-service/home.md).
 
 **Response**
 
@@ -342,9 +342,9 @@ A successful response returns HTTP status 200 with details of the newly streamed
 
 ## Retrieve the newly ingested record data
 
-To validate the previously ingested records, you can use the [Profile Access API](../../tutorials/consuming_unified_profile_data/consuming_unified_profile_data.md) to retrieve the record data.
+To validate the previously ingested records, you can use the [Profile Access API](../../profile/api/entities.md) to retrieve the record data.
 
-> **Note:** If the merge policy ID is not defined and the schema.</span>name or relatedSchema</span>.name is `_xdm.context.profile`, Profile Access will fetch **all** related identities.
+>[!NOTE] If the merge policy ID is not defined and the schema.</span>name or relatedSchema</span>.name is `_xdm.context.profile`, Profile Access will fetch **all** related identities.
 
 **API format**
 
