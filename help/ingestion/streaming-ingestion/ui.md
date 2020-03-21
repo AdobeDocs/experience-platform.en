@@ -70,4 +70,4 @@ After clicking **Next**, you can review the details before clicking **Finish** t
 
 ## Next steps
 
-By following this tutorial, you have created a streaming HTTP connection, enabling you to use the streaming endpoint to access a variety of Data Ingestion APIs. For instructions to create a streaming connection in the API, please read the [creating a streaming connection tutorial](./creating_a_streaming_connection.md).
+By following this tutorial, you have created a streaming HTTP connection, enabling you to use the streaming endpoint to access a variety of Data Ingestion APIs. For instructions to create a streaming connection in the API, please read the [creating a streaming connection tutorial](../tutorials/create-streaming-connection.md).
