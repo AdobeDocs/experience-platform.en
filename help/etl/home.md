@@ -269,7 +269,7 @@ The observable schema is the schema that you would use if reading the data or pr
 
 The ETL application may provide a capability to preview data (["Figure 8" in the ETL Workflow](./workflow.md)). The data access API provides several options to preview data. 
 
-Additional information, including step-by-step guidance for previewing data using the data access API, can be found in the [data access tutorial](../profile/tutorials/access.md).
+Additional information, including step-by-step guidance for previewing data using the data access API, can be found in the [data access tutorial](../data-access/tutorials/dataset-data.md).
 
 ### Get dataset details using the "properties" query parameter 
 
@@ -495,11 +495,11 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches?dataSet=D
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
 
-Details on filtering batches can be found in the [data access tutorial](../profile/tutorials/access.md).
+Details on filtering batches can be found in the [data access tutorial](../data-access/tutorials/dataset-data.md).
 
 ### Get files out of a batch
 
-Once you have the ID for the batch you are looking for (`{BATCH_ID}`), it is possible to retrieve a list of files belonging to a specific batch via the [data access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml).  Details for doing so are available in the [data access tutorial](../profile/tutorials/access.md).
+Once you have the ID for the batch you are looking for (`{BATCH_ID}`), it is possible to retrieve a list of files belonging to a specific batch via the [data access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml).  Details for doing so are available in the [data access tutorial](../data-access/tutorials/dataset-data.md).
 
 **Request**
 
@@ -525,7 +525,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{FILE_ID}" \
   -H "x-api-key : {API_KEY}"
 ```
 
-The response may point to a single file, or a directory. Details on each can be found in the [data access tutorial](../profile/tutorials/access.md).
+The response may point to a single file, or a directory. Details on each can be found in the [data access tutorial](../data-access/tutorials/dataset-data.md).
 
 ### Access file content
 
@@ -541,7 +541,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{DATASET_FIL
   -H "x-api-key: {API_KEY}"
 ```
 
-The response to this request contains the contents of the file. For more information, including details on response pagination, see the [How to Query Data via data access API](../profile/tutorials/access.md) tutorial.
+The response to this request contains the contents of the file. For more information, including details on response pagination, see the [How to Query Data via data access API](../data-access/tutorials/dataset-data.md) tutorial.
 
 ### Validate records for schema compliance
 
