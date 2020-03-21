@@ -56,7 +56,7 @@ Requests that contain a payload (POST, PUT, PATCH) may require an additional `Co
 
 ## Types
 
-When ingesting data, it is important to understand how Experience Data Model (XDM) schemas work. For more information about how XDM field types map to different formats, please read the [Schema Registry developer guide](../schema_registry/schema_registry_developer_guide.md).
+When ingesting data, it is important to understand how Experience Data Model (XDM) schemas work. For more information about how XDM field types map to different formats, please read the [Schema Registry developer guide](../../xdm/api/getting-started.md).
 
 There is some flexibility when ingesting data -  if a type does not match what is in the target schema, the data will be converted to the expressed target type.  If it cannot, it will fail the batch with a `TypeCompatibilityException`. 
 

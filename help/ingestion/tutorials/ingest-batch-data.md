@@ -22,7 +22,7 @@ This tutorial will walk you through the steps to ingest data into Experience Pla
 
 In order to complete this tutorial, you must have access to Experience Platform. If you do not have access to an IMS Organization in Experience Platform, please speak to your system administrator before proceeding. 
 
-If you would prefer to ingest data using Data Ingestion APIs please begin by reading the [Batch Ingestion Overview](../../technical_overview/ingest_architectural_overview/ingest_architectural_overview.md).
+If you would prefer to ingest data using Data Ingestion APIs please begin by reading the [Batch Ingestion developer guide](../batch-ingestion/api.md).
 
 ## Datasets workspace
 
