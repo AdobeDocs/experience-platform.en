@@ -307,7 +307,6 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
-  -H "Cache-Control: no-cache" \
   -H "Content-Type: application/json" \
   -d '{
     "header": {
