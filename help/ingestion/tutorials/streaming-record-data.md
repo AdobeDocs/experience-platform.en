@@ -170,13 +170,13 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-	"@type":"xdm:descriptorIdentity",
-	"xdm:sourceProperty":"/workEmail/address",
-	"xdm:property":"xdm:code",
-	"xdm:isPrimary":true,
-	"xdm:namespace":"Email",
-	"xdm:sourceSchema":"{SCHEMA_REF_ID}",
-	"xdm:sourceVersion":1
+    "@type":"xdm:descriptorIdentity",
+    "xdm:sourceProperty":"/workEmail/address",
+    "xdm:property":"xdm:code",
+    "xdm:isPrimary":true,
+    "xdm:namespace":"Email",
+    "xdm:sourceSchema":"{SCHEMA_REF_ID}",
+    "xdm:sourceVersion":1
 }
 ```
 
@@ -232,16 +232,16 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d ' {
-	"name": "Dataset name",
-	"description": "Dataset description",
-	"schemaRef": {
-		"id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID},
-		"contentType": "application/vnd.adobe.xed-full+json;version=1.0"
-	},
-	"tags": {
-		"unifiedIdentity": ["enabled:true"],
-		"unifiedProfile": ["enabled:true"]
-	}
+    "name": "Dataset name",
+    "description": "Dataset description",
+    "schemaRef": {
+        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID},
+        "contentType": "application/vnd.adobe.xed-full+json;version=1.0"
+    },
+    "tags": {
+        "unifiedIdentity": ["enabled:true"],
+        "unifiedProfile": ["enabled:true"]
+    }
 }'
 ```
 
