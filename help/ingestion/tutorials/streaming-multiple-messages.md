@@ -500,6 +500,7 @@ The response payload includes a status for each message along with a GUID in the
     ]
 }
 ```
+
 The example response above shows error messages for the previous request. By comparing this response to the previous valid response, you can observe that the request resulted in a partial success, with one message being ingested successfully and three messages resulting in failure. Note that both responses return a '207' status code. For more information on status codes, please see the [response codes](#response-codes) table in the Appendix of this tutorial.
 
 The first message was successfully sent to Platform and is not affected by the results of the other messages. As a result, when attempting to resend the failed messages, you do not need to re-include this message.
@@ -556,11 +557,11 @@ The following table shows status codes returned by successful and failed respons
 
 | Status code | Description |
 | :---: | --- |
-| 207 	| Although '207' is used as the overall response status code, the recipient needs to consult the contents of the multistatus response body for further information about the success or failure of the method execution. The response code is used in success, partial success, and also in failure situations. |
-| 400 	| There was a problem with the request. See the response body for a more specific error message (For example, Message payload was missing required fields, or Message was unknown xdm format).	|
-| 401 	| Unauthorized: request missing valid authorization header. This is only returned for inlets that have authentication enabled.	|
-| 403 	| Unauthorized:  Provided authorization token is invalid or expired. This is only returned for inlets that have authentication enabled. |
-| 413 	| Payload too large - thrown when the total payload request is greater than 1MB. |
-| 429 	| Too many requests within specified time duration. |
-| 500 	| Error in processing payload. See the response body for a more specific error message (For example, Message payload schema not specified, or did not match the XDM definition in Platform). |
-| 503 	| Service is not currently available. Clients should retry at least 3 times using an exponential back-off strategy. |
+| 207  | Although '207' is used as the overall response status code, the recipient needs to consult the contents of the multistatus response body for further information about the success or failure of the method execution. The response code is used in success, partial success, and also in failure situations. |
+| 400  | There was a problem with the request. See the response body for a more specific error message (For example, Message payload was missing required fields, or Message was unknown xdm format).	|
+| 401  | Unauthorized: request missing valid authorization header. This is only returned for inlets that have authentication enabled.	|
+| 403  | Unauthorized:  Provided authorization token is invalid or expired. This is only returned for inlets that have authentication enabled. |
+| 413  | Payload too large - thrown when the total payload request is greater than 1MB. |
+| 429  | Too many requests within specified time duration. |
+| 500  | Error in processing payload. See the response body for a more specific error message (For example, Message payload schema not specified, or did not match the XDM definition in Platform). |
+| 503  | Service is not currently available. Clients should retry at least 3 times using an exponential back-off strategy. |
