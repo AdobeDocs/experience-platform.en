@@ -9,4 +9,4 @@ topic: getting started
 
 Here's what release notes are, and here's where you can read them.
 
-Go to the release notes.
+Go to the [release notes](../release-notes/latest.md).

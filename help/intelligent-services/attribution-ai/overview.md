@@ -7,43 +7,40 @@ topic: Attribution AI
 
 # Attribution AI overview
 
->   **Note**: The Attribution AI functionality outlined in this document is in beta. The documentation and the functionality are subject to change.
-
-Attribution AI in Adobe Experience Platform is a multi-channel, algorithmic attribution service that calculates influence and incremental impact of customer interactions against specified outcomes. With Attribution AI, marketers can measure and optimize their customers’ experiences by understanding the impact of every individual customer interaction in each phase of their customers’ journeys.
+Attribution AI in Adobe Intelligent Services is a multi-channel, algorithmic attribution service that calculates influence and incremental impact of customer interactions against specified outcomes. With Attribution AI, marketers can measure and optimize their customers’ experiences by understanding the impact of every individual customer interaction in each phase of their customers’ journeys.
 
 - [Understanding Attribution AI](#understanding-attribution-ai)
-- [Attribution AI algorithmic models](#algorithmic-models)
+- [Attribution AI algorithmic scores](#attribution-ai-algorithmic-scores)
 - [Use cases](#examples-of-business-use-cases)
 - [Next steps](#next-steps)
 
 ## Understanding Attribution AI
 
-Attribution AI is used to attribute credits to touchpoints and success events, so that marketers can quantify the marketing impact of each individual marketing touchpoint across customer journeys. Examples of touchpoints include display ad impressions, email sends, email opens and paid search clicks.
+Attribution AI is used to attribute credits to touchpoints leading to success events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys. Examples of touchpoints include display ad impressions, email sends, email opens and paid search clicks.
 
 Attribution AI outputs can be segregated across various dimensions and can be utilized across different stages of the customer journey. This is accomplished without needing to translate business needs to machine learning problems, picking algorithms, training, or deploying models.
 
 Attribution AI data can be from Adobe (e.g. Analytics) or non-Adobe data sources.
 
-Attribution AI supports two categories of models, Algorithmic and Rule-based. Algorithmic models include incremental and influenced. Rule-based models include First touch, Last touch, Linear, U-shaped, and Time-Decay
+Attribution AI supports two categories of scores, Algorithmic and Rule-based. Algorithmic scores include incremental and influenced. Rule-based scores include First touch, Last touch, Linear, U-shaped, and Time-Decay
 
-## Attribution AI algorithmic models
+## Attribution AI algorithmic scores
 
-Attribution AI produces two different types of algorithmic models in addition to a number of rule-based models.
+Attribution AI supports two categories of attribution scores, Algorithmic and Rule-based scores.
 
-The two algorithmic models include the incremental and influence models. The incremental model assigns credit to touchpoints according to the marginal increase in the conversions due to the touchpoints. The influenced model distributes the credits in a normalized fashion across the touchpoints considered. The main difference is that incremental models take into account the baseline representing other touchpoints not considered. These models are designed to make the most accurate measurements and support optimized marketing budget decisions at the most granular level.
+Attribution AI produces two different types of algorithmic scores, incremental and influenced. Influenced score is the fraction of the conversion that each marketing touchpoint is responsible for. Incremental score is the amount of marginal impact directly caused by the marketing touchpoint. The main difference between the incremental score and the influenced score is the incremental score takes the baseline effect into account. It does not assume that a conversion is caused purely by the preceding marketing touchpoints.
 
-See the table below for more details about each of these attribution models:
+See the table below for more details about each of these attribution scores:
 
-| Attribution models | Description |
+| Attribution scores | Description |
 | ----- | ----------- |
-| First Touch | Ruled-based attribution model that assigns all credits to the initial touchpoint on a conversion path. |
-| Last Touch | Ruled-based attribution model that assigns all credit to the touchpoint closest to the conversion. |
-| Linear | Ruled-based attribution model that assigns equal credit to each touchpoint on a conversion path. |
-| U-Shaped | Rule-based attribution model that assigns 40% of the credit to the first touchpoint and 40% of the credit to the last touchpoint, with the other touchpoints splitting the remaining 20% equally. |
-| Time Decay | Ruled-based attribution model where touchpoints closer to the conversion receive more credit than touchpoints that are farther away in time from the conversion. |
-| Influenced (algorithmic) | ML-based attribution. The number of units that are **preceded** by at least one defined touchpoint.  This can be split across channels, touchpoint types, campaigns, geos, and any other dimension that is provided as input to Attribution AI. |
-| Incrimental (algorithmic) | The number of units that are **caused** by the defined touchpoints.  This can be split across channels, touchpoint types, campaigns, geos, and any other dimension that is provided as input to Attribution AI.|
-
+| First Touch | Ruled-based attribution score that assigns all credits to the initial touchpoint on a conversion path. |
+| Last Touch | Ruled-based attribution score that assigns all credit to the touchpoint closest to the conversion. |
+| Linear | Ruled-based attribution score that assigns equal credit to each touchpoint on a conversion path. |
+| U-Shaped | Rule-based attribution score that assigns 40% of the credit to the first touchpoint and 40% of the credit to the last touchpoint, with the other touchpoints splitting the remaining 20% equally. |
+| Time Decay | Ruled-based attribution score where touchpoints closer to the conversion receive more credit than touchpoints that are farther away in time from the conversion. |
+| Influenced (algorithmic) | Influenced score is the fraction of the conversion that each marketing touchpoint is responsible for. |
+| Incremental (algorithmic) | Incremental score is the amount of marginal impact directly caused by a marketing touchpoint.|
 
 ## Examples of business use cases
 
@@ -57,7 +54,7 @@ Attribution AI can be used to assist with the following example use cases:
 
 ### Additional features
 
-Attribution AI also offers integration with other Adobe solutions like Adobe Media Optimizer and Adobe Analytics. This enables you to use these solutions to utilize the customizable algorithmic model to evaluate media performance and provide analytical insights.
+Attribution AI also offers integration with other Adobe solutions such as Adobe Analytics. This enables you to use these solutions to utilize the customizable algorithmic model to evaluate media performance and provide analytical insights.
   
 ## Next steps
 

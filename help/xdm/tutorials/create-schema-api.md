@@ -249,7 +249,7 @@ The response shows the newly added mixin in the `meta:extends` array and contain
 
 You can now add another standard mixin by repeating the steps using another mixin. 
 
->[!NOTE] It is worthwhile to review all available mixins to familiarize yourself with the fields included in each. You can list (GET) all mixins available for use with a particular class by performing a request against each of the "global" and "tenant" containers, returning only those mixins where the "meta:intendedToExtend" field matches the class you're using. In this case, it is the XDM Individual Profile class, so the XDM Individual Profile `$id` is used: 
+>[!TIP] It is worthwhile to review all available mixins to familiarize yourself with the fields included in each. You can list (GET) all mixins available for use with a particular class by performing a request against each of the "global" and "tenant" containers, returning only those mixins where the "meta:intendedToExtend" field matches the class you're using. In this case, it is the XDM Individual Profile class, so the XDM Individual Profile `$id` is used: 
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
