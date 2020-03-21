@@ -50,7 +50,7 @@ In addition, failed records provide details on the errors that ocurred while pro
 
 In the [Experience Platform UI](http:/platform.adobe.com), click  **Monitoring**  on the left navigation menu. 
 
-![](images/click-monitoring.png)
+![](../images/quality/monitor-data-flows/click-monitoring.png)
 
 The **Batch end-to-end** monitoring page appears, displaying a list of the previously ingested batches. You can click any of the batches for more detailed information about that record.
 

@@ -23,7 +23,7 @@ Please read the [create a streaming connection guide](../tutorials/create-stream
 
 Once you are confident that your data is clean, you can enable your datasets for Real-time Customer Profile and Identity Service.
 
-For more information on enabling a dataset for Profile and Identity Service, please read the [configure a dataset guide](../../catalog/datasets/profile.md).
+For more information on enabling a dataset for Profile and Identity Service, please read the [configure a dataset guide](../../catalog/datasets/profile.md). 
 
 ## What is the expected latency for streaming ingestion on Platform?
 
