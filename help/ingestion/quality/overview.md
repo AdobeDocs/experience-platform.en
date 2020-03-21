@@ -40,8 +40,8 @@ The following validations are done for streaming ingestion:
 
 | Validation area | Description |
 | --------------- | ----------- |
-| Schema | Ensures that the schema is **not** empty and contains a reference to the union schema, as follows: `"meta:immutableTags": ["union"]` 
-`identityField` | Ensures that all valid identity descriptors are defined. |
+| Schema | Ensures that the schema is **not** empty and contains a reference to the union schema, as follows: `"meta:immutableTags": ["union"]` |
+| `identityField` | Ensures that all valid identity descriptors are defined. |
 | JSON | Ensures that the JSON is valid. |
 | IMS Organization | Ensures that the IMS Organization that is listed is a valid organization. |
 | Source name | Ensures that the name of the data source is specified. |
