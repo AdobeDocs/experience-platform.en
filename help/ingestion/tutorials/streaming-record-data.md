@@ -186,7 +186,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 >[!NOTE] ​ ​**Identity Namespace Codes**
 >
-> Please ensure that the codes are valid - the example above uses "email" which is a standard identity namespace. Other commonly used standard identity namespaces can be found within the [Identity Service FAQ](../identity_services_architectural_overview/identity_services_faq.md#are-there-any-identity-namespaces-i-can-use-out-of-the-box).
+> Please ensure that the codes are valid - the example above uses "email" which is a standard identity namespace. Other commonly used standard identity namespaces can be found within the [Identity Service FAQ](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform).
 >
 > If you would like to create a custom namespace, follow the steps outlined in the [identity namespace overview](../../identity-service/home.md).
 
