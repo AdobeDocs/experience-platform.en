@@ -252,7 +252,7 @@ The previous section indicated how XDM objects can be passed to a decision reque
 ]
 ```
 
-The schema must have been constructed by your organization. To learn about constructing schemas please refer to the [Schema Editor Tutorial](./../xdm/tutorials/create-schema-ui.md). Your schema will be in a namespace `https://ns.adobe.com/{TENANT_ID}/schemas`.
+The schema must have been constructed by your organization. To learn about constructing schemas please refer to the [Schema Editor Tutorial](../../xdm/tutorials/create-schema-ui.md). Your schema will be in a namespace `https://ns.adobe.com/{TENANT_ID}/schemas`.
 
 The [Schema Registry API developer guide](../../xdm/tutorials/create-schema-api.md) explains how schemas can be accessed programmatically and how a developer obtains the tenant ID and the numeric identifier of your schema. The version number is required and is also provided by the schema registry APIs.
 
@@ -291,4 +291,4 @@ Note that the PQL syntax does not use prefixes in property names. Global propert
 All records for profile and experience event entities are managed already in the profile store. By passing one or more profile identity to the request the profile for those identieties will be identified and looked up from the store. The data is then automatically available to decision rules and models evaluated by the decision strategy.
 
 To retrieve the profile and experience records the default merge policy is applied.
-Note, that after uploading profile records to the Platform datalake there is a slight delay until the profile records can be looke up. The same holds true for ingesting profile and experience records via the streaming APIs, only after a few seconds the data will be available for evaluating decision rules that evaluate profile and experience event data.
+Note, that after uploading profile records to the Platform datalake there is a slight delay until the profile records can be looked up. The same holds true for ingesting profile and experience records via the streaming APIs, only after a few seconds the data will be available for evaluating decision rules that evaluate profile and experience event data.
