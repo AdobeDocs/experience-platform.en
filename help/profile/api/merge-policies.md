@@ -7,25 +7,15 @@ topic: guide
 
 # Merge policies
 
-Adobe Experience Platform enables you to bring data together from multiple sources and combine it in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create that unified view. 
-
-Using RESTful APIs or the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. 
-
-This guide shows steps for working with merge policies using the API. To work with merge policies using the UI, please refer to the [merge policies user guide](../ui/merge-policies.md).
+Adobe Experience Platform enables you to bring data together from multiple sources and combine it in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create that unified view. Using RESTful APIs or the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. This guide shows steps for working with merge policies using the API. To work with merge policies using the UI, please refer to the [merge policies user guide](../ui/merge-policies.md).
 
 ## Getting started
 
-The API endpoints used in this guide are part of the Real-time Customer Profile API. Before continuing, please review the [Real-time Customer Profile API developer guide](getting-started.md).
-
-In particular, the [getting started section](getting-started.md#getting-started) of the Profile developer guide includes links to related topics, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform APIs.
+The API endpoints used in this guide are part of the Real-time Customer Profile API. Before continuing, please review the [Real-time Customer Profile API developer guide](getting-started.md). In particular, the [getting started section](getting-started.md#getting-started) of the Profile developer guide includes links to related topics, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform APIs.
 
 ## Components of merge policies {#components-of-merge-policies}
 
-Merge policies are private to your IMS Organization, allowing you to create different policies in order to merge schemas in the specific way that you need. Any API accessing Profile data requires a merge policy, though a default will be used if one is not explicitly provided. Platform provides a default merge policy, or you can create a merge policy for a specific schema and mark it as the default for your organization. 
-
-Each organization can potentially have multiple merge policies per schema, however each schema can have only one default merge policy. Any merge policy set as default will be used in cases where the schema name is provided and a merge policy is required but not provided.
-
-When you set a merge policy as the default, any existing merge policy that was previously set as the default will automatically be updated to no longer be used as the default.
+Merge policies are private to your IMS Organization, allowing you to create different policies in order to merge schemas in the specific way that you need. Any API accessing Profile data requires a merge policy, though a default will be used if one is not explicitly provided. Platform provides a default merge policy, or you can create a merge policy for a specific schema and mark it as the default for your organization. Each organization can potentially have multiple merge policies per schema, however each schema can have only one default merge policy. Any merge policy set as default will be used in cases where the schema name is provided and a merge policy is required but not provided. When you set a merge policy as the default, any existing merge policy that was previously set as the default will automatically be updated to no longer be used as the default.
 
 ### Complete merge policy object
 
@@ -230,9 +220,7 @@ See the [components of merge policies](#components-of-merge-policies) section at
 
 ### List multiple merge policies by criteria
 
-You can list multiple merge policies within your IMS Organization by issuing a GET request to the `/config/mergePolicies` endpoint and using optional query parameters to filter, order, and paginate the response.
-
-Multiple parameters can be included, separated by ampersands (&). Making a call to this endpoint with no parameters will retrieve all merge policies available for your organization.
+You can list multiple merge policies within your IMS Organization by issuing a GET request to the `/config/mergePolicies` endpoint and using optional query parameters to filter, order, and paginate the response. Multiple parameters can be included, separated by ampersands (&). Making a call to this endpoint with no parameters will retrieve all merge policies available for your organization.
 
 **API format**
 
