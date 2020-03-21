@@ -8,3 +8,4 @@ user-guide-title: Adobe Experience Platform Tutorials
 
 * [Tutorials overview](home.md)
 * [Authenticate to Experience Platform APIs](authentication.md)
+* [Configure Real-time Customer Profile](configure-profile.md)

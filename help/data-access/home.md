@@ -239,7 +239,7 @@ Contents of the file
 
 ## Additional code samples
 
-For additional samples, please refer to the [data access tutorial](../profile/tutorials/access.md).
+For additional samples, please refer to the [data access tutorial](tutorials/dataset-data.md).
 
 
 ## Subscribe to data ingestion events
