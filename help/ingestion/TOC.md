@@ -9,7 +9,6 @@ user-guide-title: Adobe Experience Platform Data Ingestion Help
 - [Data Ingestion overview](home.md)
 - Streaming ingestion {#streaming}
     - [Overview](streaming-ingestion/overview.md)
-    - [Streaming ingestion API](streaming-ingestion/api.md)
     - [Streaming ingestion UI](streaming-ingestion/ui.md)
     - [Troubleshooting](streaming-ingestion/troubleshooting.md)
 - Batch ingestion{#batch}
@@ -19,6 +18,8 @@ user-guide-title: Adobe Experience Platform Data Ingestion Help
     - [Partial batch ingestion](batch-ingestion/partial.md)
     - [Troubleshooting](batch-ingestion/troubleshooting.md)
 - Tutorials {#tutorials}
+    - [Map a CSV file to XDM](tutorials/map-a-csv-file.md)
+    - [Ingest batch data using the UI](tutorials/ingest-batch-data.md)
     - [Create a streaming connection](tutorials/create-streaming-connection.md)
     - [Streaming record data](tutorials/streaming-record-data.md)
     - [Streaming time series data](tutorials/streaming-time-series-data.md)
