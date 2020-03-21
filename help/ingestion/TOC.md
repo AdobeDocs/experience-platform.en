@@ -19,9 +19,9 @@ user-guide-title: Adobe Experience Platform Data Ingestion Help
     - [Partial batch ingestion](batch-ingestion/partial.md)
     - [Troubleshooting](batch-ingestion/troubleshooting.md)
 - Tutorials {#tutorials}
+    - [Create a streaming connection](tutorials/create-streaming-connection.md)
     - [Streaming record data](tutorials/streaming-record-data.md)
     - [Streaming time series data](tutorials/streaming-time-series-data.md)
-    - [Authenticated data collection](tutorials/authenticated-data-collection.md)
     - [Streaming multiple messages](tutorials/streaming-multiple-messages.md)
 - Data ingestion quality and monitoring{#quality}
     - [Overview](quality/overview.md)
