@@ -138,6 +138,7 @@ Once you know which file in the batch failed, you can download the failed file a
 ```http
 GET /batches/{BATCH_ID}/failed?path={FAILED_FILE}
 ```
+
 | Property | Description |
 | -------- | ----------- |
 | {BATCH_ID} | The ID of the batch that contains the failed file. |
