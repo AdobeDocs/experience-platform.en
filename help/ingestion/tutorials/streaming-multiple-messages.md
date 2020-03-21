@@ -558,8 +558,8 @@ The following table shows status codes returned by successful and failed respons
 | Status code | Description |
 | :---: | --- |
 | 207  | Although '207' is used as the overall response status code, the recipient needs to consult the contents of the multistatus response body for further information about the success or failure of the method execution. The response code is used in success, partial success, and also in failure situations. |
-| 400  | There was a problem with the request. See the response body for a more specific error message (For example, Message payload was missing required fields, or Message was unknown xdm format).	|
-| 401  | Unauthorized: request missing valid authorization header. This is only returned for inlets that have authentication enabled.	|
+| 400 | There was a problem with the request. See the response body for a more specific error message (For example, Message payload was missing required fields, or Message was unknown xdm format). |
+| 401  | Unauthorized: request missing valid authorization header. This is only returned for inlets that have authentication enabled. |
 | 403  | Unauthorized:  Provided authorization token is invalid or expired. This is only returned for inlets that have authentication enabled. |
 | 413  | Payload too large - thrown when the total payload request is greater than 1MB. |
 | 429  | Too many requests within specified time duration. |
