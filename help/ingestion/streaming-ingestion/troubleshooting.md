@@ -30,7 +30,7 @@ The following is a list of answers to frequently asked questions about streaming
 
 ### How do I know that the payload I'm sending is formatted properly?
 
-Data Ingestion leverages Experience Data Model (XDM) schemas to validate the format of incoming data. Sending data that does not conform to the structure of a pre-defined XDM schema will cause ingestion to fail. For more information on XDM and its use in Experience Platform, see the [XDM System overview](../schema_registry/xdm_system/xdm_system_in_experience_platform.md).
+Data Ingestion leverages Experience Data Model (XDM) schemas to validate the format of incoming data. Sending data that does not conform to the structure of a pre-defined XDM schema will cause ingestion to fail. For more information on XDM and its use in Experience Platform, see the [XDM System overview](../../xdm/home.md).
 
 Streaming ingestion supports two modes of validation: synchronous and asynchronous. Each validation method handles failed data differently.
 
