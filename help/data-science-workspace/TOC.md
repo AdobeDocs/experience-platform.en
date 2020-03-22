@@ -10,7 +10,6 @@ user-guide-title: Adobe Experience Platform Data Science Workspace Help
 * [Data Science Workspace walkthrough](walkthrough.md)
 * JupyterLab notebooks {#jupyterlab}
   * [JupyterLab user guide](jupyterlab/overview.md)
-  * [Access platform data in notebooks](jupyterlab/access-platform-data.md)
   * [Analyze your data using notebooks](jupyterlab/analyze-your-data.md)
   * [Query service in Jupyter notebook](jupyterlab/query-service.md)
   * [Create a recipe using Jupyter notebooks](jupyterlab/create-a-recipe.md)

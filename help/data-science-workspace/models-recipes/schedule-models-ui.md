@@ -57,4 +57,4 @@ Once a Service is created, you can follow the steps below to configure and apply
 
 ## Next steps
 
-By following this tutorial, you have successfully scheduled automated training and scoring runs on a Service, and completed the Data Science Workspace tutorial UI workflow. If you have not done so already, consider [restarting the tutorial](../jupyterlab/access-platform-data.md) and follow the API workflow to create, train, score, and publish a Model.
+By following this tutorial, you have successfully scheduled automated training and scoring runs on a Service, and completed the Data Science Workspace tutorial UI workflow. If you have not done so already, consider [restarting the tutorial](./create-retails-sales-dataset.md) and follow the API workflow to create, train, score, and publish a Model.
