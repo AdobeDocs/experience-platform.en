@@ -14,7 +14,6 @@ user-guide-title: Adobe Experience Platform Data Ingestion Help
 - Batch ingestion{#batch}
     - [Overview](batch-ingestion/overview.md)
     - [Batch ingestion API](batch-ingestion/api.md)
-    - [Batch ingestion UI](batch-ingestion/ui.md)
     - [Partial batch ingestion](batch-ingestion/partial.md)
     - [Troubleshooting](batch-ingestion/troubleshooting.md)
 - Tutorials {#tutorials}
