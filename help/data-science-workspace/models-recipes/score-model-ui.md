@@ -17,7 +17,7 @@ This tutorial demonstrates the steps required to score a Model in the Data Scien
 
 In order to complete this tutorial, you must have access to Experience Platform. If you do not have access to an IMS Organization in Experience Platform, please speak to your system administrator before proceeding.
 
-This tutorial requires a trained Model. If you do not have a trained Model, follow the [train and evaluate a Model in the UI](../train_and_evaluate_a_model_tutorial/train_and_evaluate_a_model_ui.md) tutorial before continuing.
+This tutorial requires a trained Model. If you do not have a trained Model, follow the [train and evaluate a Model in the UI](./train-evaluate-model-ui.md) tutorial before continuing.
 
 ## Create a new scoring run
 
