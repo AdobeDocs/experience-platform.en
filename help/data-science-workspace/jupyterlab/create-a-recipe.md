@@ -53,8 +53,6 @@ Start making necessary changes to the cell and when finished, simply run the cel
 
 >[!NOTE] You should run the cells manually when applicable. 
 
-
-
 ## Get started with the Recipe Builder notebook
 
 Now that you know the basics for the JupyterLab notebook environment, you can begin looking at the files that make up a machine learning model recipe. The files we will talk about are shown here:
