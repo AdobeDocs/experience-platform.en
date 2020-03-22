@@ -53,7 +53,7 @@ We will be consuming the APIs to create an Experiment Run for training. For this
 
 ### Create an MLInstance
 
-Creating a MLInstance can be done using the following request. You will be using the `{ENGINE_ID}` that was returned when creating an Engine from the [Import a packaged Recipe using the API](../../author_a_model/import_a_packaged_recipe/import_a_packaged_recipe_using_api.md) tutorial.
+Creating a MLInstance can be done using the following request. You will be using the `{ENGINE_ID}` that was returned when creating an Engine from the [Import a packaged Recipe using the API](./import-packaged-recipe-ui.md) tutorial.
 
 **Request**
 
@@ -383,6 +383,7 @@ You will get the following response which will let you know the `{EXPERIMENT_RUN
 The status of the Experiment run can be queried with the `{EXPERIMENT_RUN_ID}`.
 
 **Request**
+
 ```shell
 curl -X GET \
   https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}/runs/{EXPERIMENT_RUN_ID}/status \
@@ -454,6 +455,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
+
 `{EXPERIMENT_RUN_ID}`: The ID corresponding to the Experiment Run you want to target. This can be found in the response when creating your Experiment Run.  
 `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.  
 `{IMS_ORG}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
