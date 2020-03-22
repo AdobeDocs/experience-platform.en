@@ -60,11 +60,11 @@ The next screen provides options to create integrations with different events, p
 The *Integration Details* form appears, requiring you to provide a name and description for the integration, as well as public key certificate.
 
 If you do not have a public certificate, you can generate one in the terminal by using the following command:
-  
+
 ```shell
 openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate_pub
 ```
-  
+
 Once you have generated a certificate, drag and drop the file into the **Public keys certificates** box or click **Select a File** to browse your file directory and select the certificate directly.
   
 After adding your certificate, the *Event Registration* option appears. Click **Add Event Registration**.
