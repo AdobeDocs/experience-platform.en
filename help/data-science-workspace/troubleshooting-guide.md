@@ -21,7 +21,7 @@ This document provides answers to frequently asked questions about Adobe Experie
 
 With the latest update of the Google Chrome browser to version 80.x, all 3rd party cookies are blocked by default. This new policy can prevent JupyterLab from loading within Adobe Experience Platform.
 
-> **Note:** This is a temporary problem. The dependency on 3rd party cookies is set to be removed in a future release.
+>[!NOTE] This is a temporary problem. The dependency on 3rd party cookies is set to be removed in a future release.
 
 To remedy this issue use the following steps: 
 
@@ -39,7 +39,7 @@ Lastly, toggle “Block third-party cookies” to "OFF".
 
 ![chrome advanced](./images/faq/toggle-off.png)
 
-> **Note:** Alternatively, you could disable third-party cookies and whitelist [*.]ds.adobe.net
+>[!NOTE] Alternatively, you could disable third-party cookies and whitelist [*.]ds.adobe.net
 
 Navigate to “chrome://flags/” in your address bar. Search for and disable the flag titled *“SameSite by default cookies”* by using the dropdown menu on the right.
    
