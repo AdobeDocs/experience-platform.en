@@ -101,7 +101,7 @@ for more information.
 You have also successfully ingested Retail Sales sample data into Experience Platform using the provided bootstrap script.
 
 To continue working with the ingested data:
-- [Analyze your data using Jupyter notebooks](./analyze-your-data.md)
+- [Analyze your data using Jupyter notebooks](../jupyterlab/analyze-your-data.md)
     - Use Jupyter notebooks in Data Science Workspace to access, explore, visualize, and understand your data.
-- [Package source files into a Recipe](../models-recipes/package-source-files-recipe.md)
+- [Package source files into a Recipe](./package-source-files-recipe.md)
     - Follow this tutorial to learn how to bring your own Model into Data Science Workspace by packaging source files in an importable Recipe file.
