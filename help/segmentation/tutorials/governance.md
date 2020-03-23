@@ -9,14 +9,6 @@ topic: tutorial
 
 This tutorial covers the steps for enforcing data usage compliance for Real-time Customer Profile audience segments using APIs.
 
-The steps involved include:
-
-- [Look up a merge policy for a segment definition](#look-up-a-merge-policy-for-a-segment-definition)
-- [Find the source datasets from the merge policy](#find-the-source-datasets-from-the-merge-policy)
-- [Look up data usage labels for the source datasets](#look-up-data-usage-labels-for-the-source-datasets)
-- [Filter data fields](#filter-data-fields) *(Optional)*
-- [Evaluate data for policy violations](#evaluate-data-for-policy-violations)
-
 ## Getting started
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
