@@ -7,13 +7,7 @@ topic: tutorial
 
 # Stream record data to Adobe Experience Platform
 
-This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs. Specifically, this documentation will help you:
-
-- [Compose a schema based off of the XDM Individual Profile class](#compose-a-schema-based-off-of-the-xdm-individual-profile-class)
-- [Set a primary identity descriptor for the schema](#set-a-primary-identity-descriptor-for-the-schema)
-- [Create a dataset for record data](#create-a-dataset-for-record-data)
-- [Ingest record data to the streaming connection](#ingest-record-data-to-the-streaming-connection)
-- [Retrieve the newly ingested record data](#retrieve-the-newly-ingested-record-data)
+This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs.
 
 ## Getting started
 

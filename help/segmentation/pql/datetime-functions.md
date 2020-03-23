@@ -9,18 +9,6 @@ topic: developer guide
 
 Date and time functions are used to perform date and time operations on values within Profile Query Language (PQL). More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
 
-This document will provide more details for the following date/time functions:
-
-- [Current month](#current-month)
-- [Get month](#get-month)
-- [Current year](#current-year)
-- [Get year](#get-year)
-- [Current day of month](#current-day-of-month)
-- [Get day of month](#get-day-of-month)
-- [Occurs](#occurs)
-- [Now](#now)
-- [Today](#today)
-
 ## Current month
 
 The `currentMonth` function returns the current month as an integer. 

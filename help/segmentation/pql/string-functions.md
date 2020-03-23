@@ -9,20 +9,6 @@ topic: developer guide
 
 Profile Query Language (PQL) offers functions to make interaction with strings simpler. More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
 
-This document provides details for the following functions:
-
-- [Like](#like)
-- [Starts with](#starts-with)
-- [Does not start with](#does-not-start-with)
-- [Ends with](#ends-with)
-- [Does not end with](#does-not-end-with)
-- [Contains](#contains)
-- [Does not contain](#does-not-contain)
-- [Equals](#equals)
-- [Not equal to](#not-equal-to)
-- [Matches](#matches)
-- [Regular expression group](#regular-expression-group)
-
 ## Like
 
 The `like` function is used to determine if a string matches a specified pattern.

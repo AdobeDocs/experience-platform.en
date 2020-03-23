@@ -9,23 +9,6 @@ topic: developer guide
 
 Profile Query Language (PQL) offers functions to make interaction with arrays, lists, and strings easier. More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
 
-This document provides more details for the following functions:
-
-- [In](#in)
-- [Not in](#not-in)
-- [Intersects](#intersects)
-- [Intersection](#intersection)
-- [Subset of](#subset-of)
-- [Superset of](#superset-of)
-- [Includes](#includes)
-- [Distinct](#distinct)
-- [Group by](#group-by)
-- [Filter](#filter)
-- [Map](#map)
-- [First `n` in array](#first-n-in-array)
-- [Last `n` in array](#last-n-in-array)
-- [First item](#first-item)
-
 ## In
 
 The `in` function is used to determine if an item is a member of an array or list.

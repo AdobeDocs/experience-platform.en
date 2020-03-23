@@ -66,7 +66,7 @@ GET /segment/definitions/{SEGMENT_DEFINITION_ID}
 
 | Property | Description |
 | -------- | ----------- |
-| {SEGMENT_DEFINITION_ID} | The ID of the segment definition you want to lookup. |
+| `{SEGMENT_DEFINITION_ID}` | The ID of the segment definition you want to lookup. |
 
 **Request**
 
@@ -119,7 +119,7 @@ A successful response returns the details of the segment definition.
 
 | Property | Description |
 | -------- | ----------- |
-| mergePolicyId | The ID of the merge policy used for the segment definition. This will be used in the next step. |
+| `mergePolicyId` | The ID of the merge policy used for the segment definition. This will be used in the next step. |
 
 ## Find the source datasets from the merge policy
 
@@ -133,7 +133,7 @@ GET /config/mergePolicies/{MERGE_POLICY_ID}
 
 | Property | Description |
 | -------- | ----------- |
-| {MERGE_POLICY_ID} | The ID of the merge policy obtained in the [previous step](#lookup-a-merge-policy-for-a-segment-definition). |
+| `{MERGE_POLICY_ID}` | The ID of the merge policy obtained in the [previous step](#lookup-a-merge-policy-for-a-segment-definition). |
 
 **Request**
 
@@ -174,9 +174,9 @@ A successful response returns the details of the merge policy.
 
 | Property | Description |
 | -------- | ----------- |
-| schema.name | The name of the schema associated with the merge policy. |
-| attributeMerge.type | The data precedence configuration type for the merge policy. If the value is `dataSetPrecedence`, the datasets associated with this merge policy are listed under `attributeMerge > data > order`. If the value is `timestampOrdered`, then all datasets associated with the schema referenced in `schema.name` are used by the merge policy. |
-| attributeMerge.data.order | If the `attributeMerge.type` is `dataSetPrecedence`, this attribute will be an array containing the IDs of the datasets used by this merge policy. These IDs are used in the next step. |
+| `schema.name` | The name of the schema associated with the merge policy. |
+| `attributeMerge.type` | The data precedence configuration type for the merge policy. If the value is `dataSetPrecedence`, the datasets associated with this merge policy are listed under `attributeMerge > data > order`. If the value is `timestampOrdered`, then all datasets associated with the schema referenced in `schema.name` are used by the merge policy. |
+| `attributeMerge.data.order` | If the `attributeMerge.type` is `dataSetPrecedence`, this attribute will be an array containing the IDs of the datasets used by this merge policy. These IDs are used in the next step. |
 
 ## Lookup data usage labels for the source datasets
 
@@ -192,7 +192,7 @@ GET /dataSets/{DATASET_ID}/dule
 
 | Property | Description |
 | -------- | ----------- |
-| {DATASET_ID} | The ID of the dataset whose data usage labels you want to lookup. |
+| `{DATASET_ID}` | The ID of the dataset whose data usage labels you want to lookup. |
 
 **Request**
 
@@ -251,9 +251,9 @@ A successful response returns a list of data usage labels associated with the da
 
 | Property | Description |
 | -------- | ----------- |
-| dataset | An object that contains the data usage labels applied to the dataset as a whole. |
-| schemaFields | An array of objects representing specific schema fields that have data usage labels applied to them. |
-| schemaFields.path | The path of the schema field whose data usage labels are listed in the same object. |
+| `dataset` | An object that contains the data usage labels applied to the dataset as a whole. |
+| `schemaFields` | An array of objects representing specific schema fields that have data usage labels applied to them. |
+| `schemaFields.path` | The path of the schema field whose data usage labels are listed in the same object. |
 
 ## Filter data fields
 

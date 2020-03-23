@@ -9,11 +9,6 @@ topic: developer guide
 
 Filter functions are used to filter data within arrays in Profile Query Language (PQL). More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
 
-This document will provide details on the following filter functions:
-
-- [Filter](#filter)
-- [Up operator](#up-operator)
-
 ## Filter 
 
 The `[]` (filter) function allows filters to be applied to an array and return a subset of the array which match the specified condition. 

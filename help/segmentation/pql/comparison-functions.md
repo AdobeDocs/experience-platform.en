@@ -9,15 +9,6 @@ topic: developer guide
 
 Comparison functions are used to compare between different expressions and values, returning `true` or `false` accordingly. More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
 
-This document provides details for the following Profile Query Language (PQL) comparison functions: 
-
-- [Equals](#equals)
-- [Not equal](#not-equal)
-- [Greater than](#greater-than)
-- [Greater than or equal to](#greater-than-or-equal-to)
-- [Less than](#less-than)
-- [Less than or equal to](#less-than-or-equal-to)
-
 ## Equals
 
 The `=` (equals) function checks whether one value or expression is equal to another value or expression.

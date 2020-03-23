@@ -9,11 +9,6 @@ topic: developer guide
 
 Profile Query Language (PQL) offers functions to make interaction with objects simpler. More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
 
-This document provides details for the following functions:
-
-- [Is null](#is-null)
-- [Is not null](#is-not-null)
-
 ## Is null
 
 The `isNull` function determines if an object reference does not exist.

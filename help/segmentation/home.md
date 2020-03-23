@@ -9,17 +9,7 @@ topic: overview
 
 Adobe Experience Platform Segmentation Service provides a user interface and RESTful API that allows you to build segments and generate audiences from your Real-time Customer Profile data. These segments are centrally configured and maintained on Platform, and are readily accessible by any Adobe solution. 
 
-This document provides an overview of Segmentation Service and the role it plays in Adobe Experience Platform. The following topics are covered:
-
-- [How segmentation works](#how-segmentation-works): Understand the big picture of segmentation and its role within Experience Platform.
-    - [Creating segments](#create-segments)
-    - [Evaluating segments](#evaluating-segments)
-        - [Streaming segmentation](#streaming-segmentation)
-        - [Batch segmentation](#batch-segmentation)
-    - [Access segmentation results](#access-segmentation-results)
-- [Segment metadata](#segment-metadata): Learn why segment names and merge policies play an important role within Experience Platform.
-- [Advanced Segmentation Service features](#advanced-segmentation-features): Learn alternative ways to generate audiences using different segment types. 
-- [Segmentation Service data types](#segmentation-service-data-types): Learn how data types influence the segment definition process.
+This document provides an overview of Segmentation Service and the role it plays in Adobe Experience Platform.
 
 ## Getting started with Segmentation Service
 

@@ -7,10 +7,7 @@ topic: tutorial
 
 # Creating a streaming connection
 
-This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs. Specifically, this documentation will help you:
-
-- [Create a connection](#create-a-connection)
-- [Fetch the data collection URL](#get-data-collection-url)
+This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs.
 
 ## Getting started
 
