@@ -9,18 +9,6 @@ topic: overview
 
 Access control for Experience Platform is provided through the [Adobe Admin Console](https://adminconsole.adobe.com). This functionality leverages product profiles in Admin Console, which link users with permissions and sandboxes.
 
-This document serves as an overview of access control in Experience Platform and covers the following topics:
-
-- [Access control overview](#access-control-overview)
-  - [Access control hierarchy and workflow](#access-control-hierarchy-and-workflow)
-  - [Adobe Admin Console](#adobe-admin-console)
-    - [Product profiles](#product-profiles)
-    - [Default product profiles](#default-product-profiles)
-  - [Sandboxes and permissions](#sandboxes-and-permissions)
-    - [Access to sandboxes](#access-to-sandboxes)
-    - [Permissions](#permissions)
-  - [Next steps](#next-steps)
-
 ## Access control hierarchy and workflow
 
 In order to configure access control for Experience Platform, you must have administrator privileges for an organization that has an Experience Platform product integration. The minimum role that grant or withdraw permissions is a **product profile administrator**. Other administrator roles that can manage permissions are **product administrators** (can manage all profiles within a product) and **system administrators** (no restrictions). See the Adobe Help Center article on [administrative roles](https://helpx.adobe.com/enterprise/using/admin-roles.html) for more information.
