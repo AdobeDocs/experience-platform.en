@@ -14,7 +14,7 @@ This document provides a step-by-step tutorial for gaining access to an Adobe Ex
 To maintain the security of your applications and users, all requests to Adobe I/O APIs must be authenticated and authorized using standards such as OAuth and JSON Web Tokens (JWT). The JWT is then used along with client specific information to generate your personal access token.
 
 This tutorial covers the steps of authentication through the creation of an access token outlined in the following flowchart:
-![]^(./images/how_to_authenticate_acp_for_api_flowchart.png)
+![](images/authentication/authentication-flowchart.png)
 
 ## Prerequisites
 
@@ -43,11 +43,11 @@ Before creating integrations on Adobe I/O, your account must have developer perm
 
 Contact an Admin Console administrator in your Organization to add you as a developer for one of your Organization's products using the [Admin Console](https://adminconsole.adobe.com/).
 
- ![]^(./images/add_developer.png)
+ ![](images/authentication/assign-developer.png)
 
 The administrator must assign you as a developer to at least one product profile to proceed.
 
- ![]^(./images/add_developer2.png)
+ ![](images/authentication/add-developer.png)
 
 Once you are assigned as a developer, you will have access privileges to create integrations on [Adobe I/O](https://console.adobe.io/). These integrations are a pipeline from external apps and services to the Adobe API.
 
@@ -55,11 +55,11 @@ Once you are assigned as a developer, you will have access privileges to create 
 
 Your Admin Console administrator must also add you to the product as a user. 
 
-![]^(./images/assign_user.png)
+![](images/authentication/assign-users.png)
 
 Similar to the process for adding a developer, the administrator must assign you to at least one product profile in order to proceed.
 
-![]^(./images/assign_user2.png)
+![](images/authentication/assign-user-details.png)
 
 
 ## One time setup
@@ -88,19 +88,19 @@ From the **Integrations** page, click **New Integration** to start the process. 
 * Choose what Adobe service to integrate with
 * Add integration details, public key, and product profile
 
-![]^(./images/new_integration0.png)
+![](images/authentication/integrations.png)
 
 #### Choose type of integration
 
 The next screen asks if you want to access an API or receive near-real time events. Select **Access an API** and then **Continue**.
 
-![]^(./images/new_integration1.png)
+![](images/authentication/create-new-integration.png)
 
 #### Choose what Adobe service to integrate with
 
 If your account is associated with multiple IMS organizations, you can switch between them by using the drop-down menu on the top right. Select **Workshop** and **Experience Platform API** under **Adobe Experience Platform** to access the APIs.
 
-![]^(./images/new_integration2.png)
+![](images/authentication/integration-select-service.png)
 
 Click **Continue** to move to the next section.
 
@@ -108,7 +108,7 @@ Click **Continue** to move to the next section.
 
 The next screen prompts you to fill in your integration details, enter your public key certificate, and select a product profile.
 
-![]^(./images/new_integration3.png)
+![](images/authentication/integration-details.png)
 
 First, enter your integration details. Next, select a product profile. Product profiles grant granular access to a group of features belonging to the service that you selected in previous steps.
 
@@ -174,7 +174,7 @@ Click **Create Integration** to complete the process.
 
 After creating your integration, you can view its details. Click **Retrieve Client Secret** and your screen will look similar to this:
 
-![]^(./images/access_values.png)
+![](images/authentication/access-values.png)
 
 Copy down the values for `{API KEY}`, `{IMS ORG}` which is the Organization ID, and `{CLIENT SECRET}` as these will be used in the next step.
 
@@ -186,7 +186,7 @@ The final step is to generate your `{ACCESS_TOKEN}` which will be used to authen
 
 While in your integration's detail page in Adobe I/O Console, navigate to the **JWT** tab:
 
-![]^(./images/jwt_empty.png)
+![](images/authentication/generate-jwt.png)
 
 The page prompts you to enter the `private.key` you created in the previous section. Open the command line to view the contents of your `private.key` file:
 
@@ -209,7 +209,7 @@ wPW5MQjmygodzCh7+eGLrg==
 
 Copy the entire output and paste it into the text field, then click **Generate JWT**. Copy down your generated JWT for the next step.
 
-![]^(./images/generated_jwt.png)
+![](images/authentication/generated-jwt.png)
 
 ### Generate access token
 
