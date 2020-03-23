@@ -17,6 +17,8 @@ Attribution AI requires datasets to conform to the Consumer Experience Events (C
 
 ## Downloading and querying scores
 
+>[!NOTE] If you do not need to query or download raw scores, you can skip this step and proceed to the user interface guide.
+
 Downloading and querying scores for Attribution AI is done through Snowflake. Currently, you need to email Adobe support at attributionai-support@adobe.com in order to set up and receive the credentials to your reader account for Snowflake or to bulk export raw data.
 
 Once Adobe support has processed your request, you are provided a URL for the reader account to Snowflake and the corresponding credentials below:
