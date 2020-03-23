@@ -48,7 +48,7 @@ person.birthMonth in [3, 6, 9]
 
 The `notIn` function is used to determine if an item is not a member of an array or list.
 
->**Note:** The `notIn` function *also* ensures that neither value is equal to null. Therefore, the results are not an exact negation of the `in` function.
+>[!NOTE] The `notIn` function *also* ensures that neither value is equal to null. Therefore, the results are not an exact negation of the `in` function.
 
 **Format**
 

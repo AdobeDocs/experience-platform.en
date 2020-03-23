@@ -152,7 +152,7 @@ The `occurs` function can be written using any of the following formats:
 | `{DIRECTION}` | A preposition describing when to compare the date to. Can be any of the following words: `before`, `after`, `from`. |
 | `{TIME}` | Can be a timestamp literal (`today`, `now`, `yesterday`, `tomorrow`), a relative time unit (one of `this`, `last`, or `next` followed by a time unit), or a timestamp attribute. |
 
->**Note:** Usage of the word `on` is optional. It is there to improve readability for some combinations, such as `timestamp occurs on date(2019,12,31)`.
+>[!NOTE] Usage of the word `on` is optional. It is there to improve readability for some combinations, such as `timestamp occurs on date(2019,12,31)`.
 
 **Example**
 
