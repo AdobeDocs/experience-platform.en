@@ -1,10 +1,10 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Metadata and Storage Help
+user-guide-title: Catalog and Datasets Help
 ---
 
-# Metadata and storage {#catalog}
+# Catalog and Datasets {#catalog}
 
 * [Catalog Service overview](home.md)
 * Catalog Service API {#api}
