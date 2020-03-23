@@ -35,7 +35,7 @@ In the Adobe Experience Platform UI, click **Services** in the left navigation. 
 
 The Customer AI service page appears. This page lists service instances of Customer AI and displays information about them, including the name of the instance, propensity type, how often the instance is run, and the status of the last update.
 
-> Note: Only service instances that have completed successful scoring runs have insights.
+>[!NOTE] Only service instances that have completed successful scoring runs have insights.
 
 ![Create instance](./images/insights/dashboard.png)
 
@@ -56,8 +56,7 @@ To view details from within the dashboard, click on a service instance container
 
 ![right rail](./images/insights/success-run.png)
 
->[!NOTE]
->In the event that a scoring run fails, an error message is provided. The error message is listed under *Last run details* in the right rail which is only visible to failed runs.
+>[!NOTE] In the event that a scoring run fails, an error message is provided. The error message is listed under *Last run details* in the right rail which is only visible to failed runs.
 
 ![failed run message](./images/insights/failed-run.png)
 

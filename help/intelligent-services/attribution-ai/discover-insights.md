@@ -112,11 +112,11 @@ The *Product* filter allows you to select from any products that were initially 
 
 The *Geography* filter populates country codes based on region-based models. Depending on your data this filter may or may not be present.
 
-> **Note:** Country codes are two characters long. A complete list can be found here [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
+>[!NOTE] Country codes are two characters long. A complete list can be found here [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
 
 ### Region
 
-> **Note:** This filter is only present if you performed the optional step [region-based modeling](./user-guide.md#region-based-modeling-optional) in the Attribution AI user interface guide when creating your service instance. 
+>[!NOTE] This filter is only present if you performed the optional step [region-based modeling](./user-guide.md#region-based-modeling-optional) in the Attribution AI user interface guide when creating your service instance. 
 
 This filter allows you select any regions you set up in the instance creation process.
 
