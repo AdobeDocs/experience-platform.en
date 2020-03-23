@@ -25,11 +25,14 @@ This page explains how you can connect to cloud storage locations in Adobe Real-
 
 3. In the **[!UICONTROL Setup]** step, enter a **[!UICONTROL Name]** and a **[!UICONTROL Description]** for your activation flow. 
    1. For Amazon S3 destinations, insert the **[!UICONTROL Bucket name]** and the **[!UICONTROL Folder path]** in your cloud storage destination where the files will be delivered. Select **[!UICONTROL Create Destination]** after you filled in the fields above.
-   2. For SFTP destinations, insert the **[!UICONTROL Folder path]**.
 
     ![Connect to cloud storage destination - authentication step](/help/rtcdp/destinations/assets/cloud-destinations-setup-step.png)
 
-4. Your destination is now created. You can select **[!UICONTROL Save & Exit]** if you want to activate segments later on or you can select **[!UICONTROL Next]** to continue the workflow and select segments to activate. Im either case, see the next section, [Activate segments](#activate-segments), for the rest of the workflow,
+   2. For SFTP destinations, insert the **[!UICONTROL Folder path]**.
+
+    ![Connect to cloud storage destination - authentication step](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
+
+4. Your destination is now created. You can select **[!UICONTROL Save & Exit]** if you want to activate segments later on or you can select **[!UICONTROL Next]** to continue the workflow and select segments to activate. In either case, see the next section, [Activate segments](#activate-segments), for the rest of the workflow to export data.
 
 ## Activate segments {#activate-segments}
 
