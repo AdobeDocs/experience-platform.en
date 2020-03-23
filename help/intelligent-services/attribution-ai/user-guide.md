@@ -7,7 +7,7 @@ topic: User guide
 
 # Attribution AI user guide
 
-Attribution AI in Adobe Intelligent Services is a multi-channel, algorithmic attribution service that calculates the influence and incremental impact of customer interactions against specified outcomes. With Attribution AI, you can measure and optimize your customers' experiences by understanding the impact of every individual customer interaction in each phase of your customers' journeys.
+Attribution AI, as part of Intelligent Services is a multi-channel, algorithmic attribution service that calculates the influence and incremental impact of customer interactions against specified outcomes. With Attribution AI, marketers can measure and optimize marketing and advertising spend by understanding the impact of every individual customer interaction across each phase of the customers’ journeys.
 
 This document serves as a guide for interacting with Attribution AI in the  Intelligent Services user interface. The following topics are covered:
 
@@ -30,7 +30,7 @@ In the Adobe Experience Platform UI, click **Services** in the left navigation. 
 
 ![Accessing your instance](./images/user-guide/open_Attribution_ai.png)
 
-The Attribution AI dashboard appears. The dashboard lists service instances of Attribution AI and displays information about them, including the name of the instance, conversion events, how often the instance is run, and the status of the last update. Click **Create instance** to begin.
+The Attribution AI service page appears. This page lists service instances of Attribution AI and displays information about them, including the name of the instance, conversion events, how often the instance is run, and the status of the last update. Click **Create instance** to begin.
 
 ![Create instance](./images/user-guide/landing_page.png)
 
@@ -46,7 +46,7 @@ Under *Basic information*, provide a name and optional description for your serv
 
 ### Select a dataset
 
-After filling out the basic information, click the dropdown labeled **Select Dataset** to select your dataset. The dataset is used to train the model and score the subsequent data it produces. Once a dataset is chosen, click **Next** in the top-right corner to proceed to the define events page.
+After filling out the basic information, click the dropdown labeled **Select Dataset** to select your dataset. The dataset is used to train the model and score the subsequent data it produces. When selecting a dataset from the dropdown selector, only ones that are compatible with Attribution AI and conform to the Experience Data Model (XDM) schema are listed. Once a dataset is chosen, click **Next** in the top-right corner to proceed to the define events page.
 
 ![setup page](./images/user-guide/initial_creation_attribution.png)
 
@@ -74,7 +74,7 @@ The *Add event* and *Add Group* buttons are used to further define your conversi
 
 ![add event](./images/user-guide/add_event.png)
 
-Clicking **Add event** creates additional fields which can be filled using the same method as outlined above. Click the **x** to remove an event that has been added.
+Clicking **Add event** creates additional fields which can be filled using the same method as outlined above. Doing so adds an *AND* statement to the string definition below the *conversion name*. Click the **x** to remove an event that has been added.
 
 ![add event menu](./images/user-guide/add_event_result.png)
 

@@ -1,7 +1,7 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Intelligent Services Help
+user-guide-title: Intelligent Services Help
 ---
 
 # Adobe Intelligent Services {#intelligent-services}
