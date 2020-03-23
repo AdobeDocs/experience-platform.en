@@ -15,7 +15,9 @@ topic: Getting started
 
 Attribution AI requires datasets to conform to the Consumer Experience Events (CEE) schema, which is a mixin in the [Experience Data Model](../../xdm/home.md) (XDM). Please contact Adobe support at attributionai-support@adobe.com in order to implement or make changes to this data. If media spend data is present, you can do further analysis such as incremental revenue and ROI. If customer profile data is available, you can further attribute credits to the customer profile level.
 
-Additionally, downloading scores for Attribution AI is done through Snowflake. Currently, you need to email Adobe support at attributionai-support@adobe.com in order to set up and receive the credentials to your reader account for Snowflake. 
+## Downloading and querying scores
+
+Downloading and querying scores for Attribution AI is done through Snowflake. Currently, you need to email Adobe support at attributionai-support@adobe.com in order to set up and receive the credentials to your reader account for Snowflake or to bulk export raw data.
 
 Once Adobe support has processed your request, you are provided a URL for the reader account to Snowflake and the corresponding credentials below:
 
