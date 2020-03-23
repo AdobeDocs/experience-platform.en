@@ -7,6 +7,8 @@ topic: Downloading scores
 
 # Downloading scores in Attribution AI using Snowflake
 
+>[!IMPORTANT] Please contact attributionai-support@adobe.com for more details on raw score downloads for bulk exporting of data.
+
 Downloading scores for Attribution AI is done through Snowflake. Currently, you need to email Adobe support at attributionai-support@adobe.com in order to set up and receive the credentials to your reader account for Snowflake. 
 
 Once Adobe support has processed your request, you are provided a URL for the reader account to Snowflake and the corresponding credentials below:
@@ -15,7 +17,9 @@ Once Adobe support has processed your request, you are provided a URL for the re
 - Username
 - Password
 
-Once you have your credentials and URL, you can access your scores, either in their raw format or aggregated by touchpoint date or conversion date..
+>[!NOTE] The reader account is for querying the data using sql clients or worksheet and for BI solutions, which supports JDBC connector.
+
+Once you have your credentials and URL, you can query the model tables, either in their raw format or aggregated by touchpoint date or conversion date.
 
 ## Finding your schema in Snowflake
 
@@ -29,9 +33,7 @@ Using the provided credentials, log in to Snowflake. Click the **Worksheets** ta
 
 ## Downloading raw scores from Snowflake
 
-Snowflake can bulk-export data from a database table into flat delimited text files.
-
-For steps on how to download your data from Snowflake, please visit the [unloading into a snowflake stage](https://docs.snowflake.net/manuals/user-guide/data-unload-snowflake.html#) guide.
+Please contact attributionai-support@adobe.com for more details on raw score downloads.
 
 ## Connecting PowerBI to Snowflake (optional)
 
@@ -50,3 +52,7 @@ Once you have selected your schema, tables appear containing your attribution sc
 APP_{APP_ID} | Raw attribution score. |
 APP_{APP_ID}_BY_CONV_DATE | Raw attribution score aggregated at the conversion date level. |
 APP_{APP_ID}_BY_TP_DATE | Raw attribution score aggregated at the touchpoint date level. |
+
+## Next Steps
+
+This document outlined the steps required for querying data and downloading scores for Attribution AI. You can now continue to browse the other [Intelligent Services](../home.md) and guides that are offered.

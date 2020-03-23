@@ -7,9 +7,9 @@ topic: User guide
 
 # Customer AI user guide
 
-Customer AI in Adobe Experience Platform Intelligent Services enables you to generate custom propensity scores without having to worry about machine learning.
+Customer AI, as part of Intelligent Services enables you to generate custom propensity scores without having to worry about machine learning.
 
-This guide covers steps for working with Customer AI using the Experience Platform user interface. Steps are provided for the following topics:
+This guide covers steps for working with Customer AI. Steps are provided for the following topics:
 
 *   [Configure an instance](#configure-an-instance)
 *   [Create customer segments with predicted scores](#create-customer-segments-with-predicted-scores)
@@ -18,9 +18,9 @@ In addition, the appendix to this tutorial provides information regarding the [o
 
 ## Configure an instance
 
-Experience Platform provides Customer AI as a simple-to-use Adobe Sensei service that can be configured for different use cases. The following sections provide steps for configuring an instance of Customer AI.
+Intelligent Services provide Customer AI as a simple-to-use Adobe Sensei service that can be configured for different use cases. The following sections provide steps for configuring an instance of Customer AI.
 
-### Setup your instance
+### Set up your instance
 
 In the Platform UI, click **Services** in the left navigation. The **Services** browser appears and displays all available services at your disposal. In the container for Customer AI, click **Open**.
 
@@ -32,13 +32,13 @@ The *Customer AI* screen displays all existing Customer AI instances. Click **Cr
 
 The instance creation workflow appears, starting on the *Setup* step.
 
-Below are important information on values for which you must provide the instance with:
+Below is important information on values that you must provide the instance with:
 
-*   The instance's name is be used in all places where Customer AI score is displayed. Hence names should describe what the prediction scores represent, for example, "Likelihood to cancel magazine subscription".
+*   The instance's name is be used in all places where Customer AI score is displayed. Hence, names should describe what the prediction scores represent, for example, "Likelihood to cancel magazine subscription".
 
-*   The propensity type determines the intent of the score and metric polarity. You can either choose **Churn** or **Conversion**.
+*   The propensity type determines the intent of the score and metric polarity. You can either choose **Churn** or **Conversion**. Please see the note under [scoring summary](./discover-insights.md#scoring-summary) in the discovering insights document for more information on how the propensity type affects your instance.
 
-*   Data source refers to the input dataset which is be used to predict scores. By design, Customer AI uses Consumer Experience Event data to calculate propensity scores. When selecting a dataset from the dropdown selector, only ones that are compatible with Customer AI are listed.
+*   Data source is where the data is located. Dataset is the input dataset which is used to predict scores. By design, Customer AI uses Consumer Experience Event data to calculate propensity scores. When selecting a dataset from the dropdown selector, only ones that are compatible with Customer AI are listed.
 
 *   By default, propensity scores are generated for all profiles unless an eligible population is specified. You can specify an eligible population by defining conditions to include or exclude profiles based on events.
 
@@ -74,13 +74,15 @@ Exclude events as needed and then click **Finish** to create the instance.
 
 If the instance is created successfully, a prediction run is immediately triggered and subsequent runs execute according to your defined schedule.
 
->   **Note:** Depending on the size of the input data, prediction runs can take up to 24 hours to complete.
+>[!NOTE] Depending on the size of the input data, prediction runs can take up to 24 hours to complete.
 
 By following this section, you have configured an instance of Customer AI and a prediction run was executed. Upon the run's successful completion, scored insights automatically populate profiles with predicted scores. Please wait up to 24 hours before continuing to the next section of this tutorial.
 
 ## Create customer segments with predicted scores
 
 When a prediction run completes, predicted propensity scores are automatically consumed by Profiles. Enriching Profiles with Customer AI scores allows for the creation of customer segments to find audiences based on their propensity scores. This section provides steps for creating segments using the Segment Builder. For a more robust tutorial on creating segments, please see the [Segment Builder user guide](../../segmentation/tutorials/create-a-segment.md).
+
+>[!IMPORTANT] In order to utilize this method, Real-time Customer Profile needs to be enabled for the dataset.
 
 In the Platform UI, click **Segments** in the left navigation, and then click **Create segment**. 
 
