@@ -279,4 +279,4 @@ The [export a segment](../../segmentation/tutorials/evaluate-a-segment.md) secti
 
 ## Next Steps
 
-This document outlined the steps required for downloading Customer AI scores. You can now continue to browse the other [Adobe Intelligent Services](../home.md) and guides that are offered.
+This document outlined the steps required for downloading Customer AI scores. You can now continue to browse the other [Intelligent Services](../home.md) and guides that are offered.

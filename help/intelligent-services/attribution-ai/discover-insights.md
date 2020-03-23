@@ -42,9 +42,9 @@ In the Adobe Experience Platform UI, click **Services** in the left navigation. 
 
 ![Accessing your instance](./images/insights/open_Attribution_ai.png)
 
-The Attribution AI dashboard appears. The dashboard lists service instances of Attribution AI and displays information about them, including the name of the instance, conversion events, how often the instance is run, and the status of the last update. Click on a service instance name to begin.
+The Attribution AI service page appears. This page lists service instances of Attribution AI and displays information about them, including the name of the instance, conversion events, how often the instance is run, and the status of the last update. Click on a service instance name to begin.
 
-> Note: Only service instances that have completed successful scoring runs can be clicked.
+>[!NOTE] Only service instances that have completed successful scoring runs can be selected.
 
 ![Create instance](./images/insights/select-service-instance.png)
 
@@ -86,17 +86,19 @@ The *More actions* button is located in the top-right navigation next to *Edit*.
 
 Attribution AI insights allow you to filter your data and automatically update the UI visuals based on your selected filters.
 
-> **Note:** By default, every filter is set to "All" except the *Attribution model* filter which is set to "Incremental attributed conversions".
+>[!NOTE] By default, every filter is set to "All" except the *Attribution model* filter which is set to "Incremental and Influenced attributed conversions".
 
 ### Conversion event
 
-When you create a new instance in Attribution AI, one of the required fields is "Conversion events". From within the instance, the *Conversion events* dropdown allows you to select any of the events defined for your instance in order to filter your data. Selecting specific events changes the UI visualizations to only populate conversions belonging to those events.
+When you create a new instance in Attribution AI, one of the required fields is "Conversion events". Conversion events are Business objectives that identify the impact of marketing activities, such as, e-commerce orders, in-store purchases, and website visits.
+
+From within the instance, the *Conversion events* dropdown allows you to select any of the events defined for your instance in order to filter your data. Selecting specific events changes the UI visualizations to only populate conversions belonging to those events.
 
 ![conversion event](./images/insights/conversion-event.png)
 
 ### Attribution model
 
-Clicking *Attribution model* opens a dropdown with all of the different attribution models available. You can select multiple models to compare results. For more information on the different attribution models and how they work, visit the [attribution ai overview](./overview.md) which contains a table with information on each model.
+Clicking *Attribution model* opens a dropdown with all of the different attribution models available. You can select multiple models to compare results. For more information on the different attribution models and how they work, visit the [Attribution AI](./overview.md) overview which contains a table with information on each model.
 
 ![attribution model](./images/insights/attribution-model.png)
 
@@ -126,7 +128,7 @@ Clicking the *Channel* filter reveals a dropdown containing all of your availabl
 
 ### Date Range
 
-Click the calendar icon to open the date range popover. The beginning and end dates determine the amount of data populated in the UI. You can choose to narrow or broaden the date range in order to focus or expand the amount of data populated. 
+Click the calendar icon to open the date range popover. The beginning and end conversion event dates determine the amount of data populated in the UI. You can choose to narrow or broaden the date range in order to focus or expand the amount of data populated. 
 
 ![date range](./images/insights/display-date-range.png)
 

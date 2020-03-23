@@ -7,9 +7,9 @@ topic: Discovering insights
 
 # Discovering insights with Customer AI
 
-Customer AI in Adobe Experience Platform provides marketers with the power to leverage Adobe Sensei to anticipate what your customers next action is going to be. Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale. This is accomplished without having to transform the business needs to a machine learning problem, picking an algorithm, training, or deployment.
+Customer AI, as part of Intelligent Services provides marketers with the power to leverage Adobe Sensei to anticipate what your customers next action is going to be. Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale. This is accomplished without having to transform the business needs to a machine learning problem, picking an algorithm, training, or deployment.
 
-This document serves as a guide for interacting with service instance insights in the Adobe Intelligent Services Customer AI user interface. The following topics are covered:
+This document serves as a guide for interacting with service instance insights in the Intelligent Services Customer AI user interface. The following topics are covered:
 
 - [Service instance overview](#service-instance-overview)
   - [Service instance details](#service-instance-details)
@@ -29,11 +29,11 @@ In order to utilize insights for Customer AI, you need to have a service instanc
 
 ## Service instance overview
 
-In the Platform UI, click **Services** in the left navigation. The *Services* browser appears and displays available Adobe Intelligent Services. In the container for Customer AI, click **Open**.
+In the Adobe Experience Platform UI, click **Services** in the left navigation. The *Services* browser appears and displays available Intelligent Services. In the container for Customer AI, click **Open**.
 
 ![Accessing your instance](./images/insights/navigate-to-service.png)
 
-The Customer AI dashboard appears. The dashboard lists service instances of Customer AI and displays information about them, including the name of the instance, propensity type, how often the instance is run, and the status of the last update.
+The Customer AI service page appears. This page lists service instances of Customer AI and displays information about them, including the name of the instance, propensity type, how often the instance is run, and the status of the last update.
 
 > Note: Only service instances that have completed successful scoring runs have insights.
 
@@ -91,8 +91,7 @@ The **More actions** button is located in the top-right navigation next to **Edi
 
 Scoring Summary displays the total number of profiles scored and categorizes them into buckets containing high, medium, and low propensity. The propensity buckets are determined based on score range, low is less than 24, medium is 25 to 74, and high is above 74. Each bucket has a color corresponding to the legend. 
 
->[!NOTE]
->If it is a conversion propensity score, the high scores show in green and the low scores in red. If you are predicting churn propensity this is flipped, the high scores are in red and the low scores are green. The medium bucket remains yellow regardless of what propensity type you choose.
+>[!NOTE] If it is a conversion propensity score, the high scores show in green and the low scores in red. If you are predicting churn propensity this is flipped, the high scores are in red and the low scores are green. The medium bucket remains yellow regardless of what propensity type you choose.
 
 ![scoring summary](./images/insights/scoring-summary.png)
 
