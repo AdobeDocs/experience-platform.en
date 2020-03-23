@@ -45,10 +45,10 @@ Before creating the Google Ads destination in Adobe Real-time CDP, you must cont
 ## Create destination
 
 1. In **[!UICONTROL Connections > Destinations]**, select Google Ads, and select **[!UICONTROL Create destination]**.
-    ![Connect Google Ads destination](/help/rtcdp/destinations/assets/google-ads-destination.png)
+    ![Connect Google Ads destination](/help/rtcdp/destinations/assets/google-2-destination.png)
 
 2. In the Create destination wizard, fill in the Basic Information for the destination.
-    ![Basic information Google Ads](/help/rtcdp/destinations/assets/google-ads-basic-information.png)
+    ![Basic information Google Ads](/help/rtcdp/destinations/assets/google-2-basic-information.png)
 *  **Name**: Fill in the preferred name for this destination.
 *  **Description**: Optional. For example, you can mention which campaign you are using this destination for.
 *  **Account Type**: AdWords is the only available option.
