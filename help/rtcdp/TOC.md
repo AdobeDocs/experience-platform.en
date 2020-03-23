@@ -27,7 +27,6 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Adobe Campaign](destinations/adobe-campaign-destination.md)
     * Advertising destinations{#advertiser-destinations}
       * [Advertising destinations overview](destinations/advertising-destinations.md)
-      * [Google](destinations/google-destination.md)
       * [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
       * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
       * [Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md)

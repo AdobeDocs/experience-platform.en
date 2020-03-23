@@ -35,7 +35,7 @@ Google has paused any new Google Ads integrations with third-party vendors. You 
 >
 >Whitelisting is mandatory before setting up your first Google Ads destination in Adobe Real-time CDP. Please ensure the whitelisting process described below has been completed by Google before creating a destination.
 
-Before creating the Google Ad Manager destination in Adobe Real-time CDP, you must contact Google asking for Adobe to be whitelisted as a data provider and your account to be whitelisted. Contact Google and provide the following information:
+Before creating the Google Ads destination in Adobe Real-time CDP, you must contact Google asking for Adobe to be whitelisted as a data provider and your account to be whitelisted. Contact Google and provide the following information:
 
 * **Account ID** : this is Adobe's account ID with Google. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
 * **Customer ID** : this is Adobe's customer account ID with Google. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
@@ -45,14 +45,14 @@ Before creating the Google Ad Manager destination in Adobe Real-time CDP, you mu
 ## Create destination
 
 1. In **[!UICONTROL Connections > Destinations]**, select Google Ads, and select **[!UICONTROL Create destination]**.
-    ![Connect Google Ads destination](/help/rtcdp/destinations/assets/google-ads-destination1.png)
+    ![Connect Google Ads destination](/help/rtcdp/destinations/assets/google-ads-destination.png)
 
 2. In the Create destination wizard, fill in the Basic Information for the destination.
-    ![Basic information Google Ads](/help/rtcdp/destinations/assets/google-ads-basic-information1.png)
+    ![Basic information Google Ads](/help/rtcdp/destinations/assets/google-ads-basic-information.png)
 *  **Name**: Fill in the preferred name for this destination.
 *  **Description**: Optional. For example, you can mention which campaign you are using this destination for.
 *  **Account Type**: AdWords is the only available option.
-*  **Account ID**: Fill in your account ID with Google Ads. The ID format is 123-456-7890. 
+*  **Account ID**: Fill in your account ID with Google Ads. The ID format is typically 123-456-7890. 
 
 ## Activate segments to Google Ads
 
