@@ -85,7 +85,7 @@ An IMS organization is an an Adobe representation of a customer. Any licensed Ad
 
 ## Where can I find my API key? {#where-can-i-find-my-api-key}
 
-An API key is required as a header in all API requests. It can be found through the [Adobe I/O Console](https://console.adobe.io/). Within the console, on the **Integrations** tab, navigate to the **Overview** section for a specific integration and you will find the key under **Client Credentials**. For a step-by-step walkthrough of how to authenticate to Platform, see the [authentication tutorial](../tutorials/authentication).
+An API key is required as a header in all API requests. It can be found through the [Adobe I/O Console](https://console.adobe.io/). Within the console, on the **Integrations** tab, navigate to the **Overview** section for a specific integration and you will find the key under **Client Credentials**. For a step-by-step walkthrough of how to authenticate to Platform, see the [authentication tutorial](../tutorials/authentication.md).
 
 ## How do I get an access token? {#how-do-i-get-an-access-token}
 
@@ -145,7 +145,7 @@ Status Code | Description | Possible Causes
 
 All API calls in Platform require specific request headers. To see which headers are required for individual services, please see the [API Reference documentation](https://www.adobe.io/apis/experienceplatform/home/api-reference.html). To find the values for the required authentication headers, see the [Authentication tutorial](../tutorials/authentication.md). If any of these headers are missing or invalid when making an API call, the following errors may occur.
 
-### OAuth token is missing
+### OAuth token is missing {#oauth-token-is-missing}
 
 ```json
 {
@@ -210,7 +210,7 @@ This error message displays when an IMS org header (`x-gw-ims-org-id`) is missin
 }
 ```
 
-This error message displays when the user or Adobe I/O integration (identified by the [access token](#how-do-I-get-an-access-token) in the `Authorization` header) is not entitled to make calls to Experience Platform APIs for the IMS Org provided in the `x-gw-ims-org-id` header. Ensure that you have provided the correct ID for your IMS organization in the header before trying again. If you do not know your organization ID, you can find it in the [Adobe I/O Console](https://console.adobe.io): in the **Integrations** tab, navigate to the **Overview** section for a specific integration to find the ID under **Client Credentials**.
+This error message displays when the user or Adobe I/O integration (identified by the [access token](#how-do-i-get-an-access-token) in the `Authorization` header) is not entitled to make calls to Experience Platform APIs for the IMS Org provided in the `x-gw-ims-org-id` header. Ensure that you have provided the correct ID for your IMS organization in the header before trying again. If you do not know your organization ID, you can find it in the [Adobe I/O Console](https://console.adobe.io): in the **Integrations** tab, navigate to the **Overview** section for a specific integration to find the ID under **Client Credentials**.
 
 ### Valid content-type not specified
 
@@ -238,7 +238,7 @@ The following is a list of troubleshooting guides and API reference documentatio
 |Data Ingestion (Streaming)|[Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [Streaming ingestion troubleshooting guide](../ingestion/streaming-ingestion/troubleshooting.md)|
 |Data Science Workspace | [Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [Data Science Workspace troubleshooting guide](../data-science-workspace/troubleshooting-guide.md) |
 |Data Usage Labeling and Enforcement (DULE) | [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)||
-|Experience Data Model (XDM) | [Schema Registry API](../../../../../acpdr/swagger-specs/schema-registry.yaml) | [XDM System FAQ and troubleshooting guide](../xdm/troubleshooting-guide.md)|
+|Experience Data Model (XDM) | [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [XDM System FAQ and troubleshooting guide](../xdm/troubleshooting-guide.md)|
 |Identity Service | [Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [Identity Service troubleshooting guide](../identity-service/troubleshooting-guide.md)|
 |Query Service | [Query Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [Query Service troubleshooting guide](../query-service/troubleshooting-guide.md)|
 |Real-time Customer Profile | [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)||
