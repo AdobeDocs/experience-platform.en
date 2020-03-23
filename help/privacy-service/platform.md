@@ -119,7 +119,7 @@ The `schemaMetadata` property for the dataset contains a `gdpr` array, which is 
 
 >[!NOTE] Although the array is named `gdpr`, adding labels to it will allow for privacy job requests for both GDPR and CCPA regulations.
 
-#### API format
+**API format**
 
 ```http
 PATCH /dataSets/{DATASET_ID}
@@ -129,7 +129,7 @@ PATCH /dataSets/{DATASET_ID}
 | --- | --- |
 | `{DATASET_ID}` | The `id` value of the dataset to be updated. |
 
-#### Request
+**Request**
 
 In this example, a dataset includes an email address in the `personalEmail.address` field. In order for this field to act as an identifier for Data Lake privacy requests, a label that uses an unregistered namespace must be added to its `gdpr` array.
 
@@ -176,7 +176,7 @@ curl -X PATCH 'https://platform.adobe.io/data/foundation/catalog/dataSets/5d8e9c
 | `namespace` | An array listing the namespace(s) to be associated with the field specified in `path`. |
 | `path` | The path to the field within the dataset's associated schema that applies to the `namespace`. Ideally, privacy labels should only be applied to "leaf" fields (fields without sub-fields). |
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 200 (OK) with the ID of the dataset provided in the payload. Using the ID to look up the dataset again reveals that the privacy labels have been added.
 
