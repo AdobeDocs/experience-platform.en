@@ -7,6 +7,8 @@ seo-description: Destinations are pre-built integrations with destination platfo
 
 # Destinations Overview
 
+![Destinations overview banner](/help/rtcdp/destinations/assets/destinations-overview-banner.png)
+
 **Destinations** are pre-built integrations with destination platforms that allow for the seamless activation of data from Real-time Customer Data Platform. You can use **Destinations** to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
 ## Destinations and Sources
