@@ -9,7 +9,7 @@ topic: Developer guide
 
 The following sections provide reference information for various features of the Sensei Machine Learning API.
 
-## Query parameters for asset retrieval
+## Query parameters for asset retrieval {#query}
 
 The Sensei Machine Learning API provides support for query parameters with retrieving assets. Available query parameters and their usages are described in the following table:
 
@@ -22,7 +22,7 @@ The Sensei Machine Learning API provides support for query parameters with retri
 
 >[!NOTE] When combining multiple query parameters, they must be separated by ampersands (**&**).
 
-## Python CPU and GPU configurations
+## Python CPU and GPU configurations {#cpu-gpu-config}
 
 Python Engines have the ability to choose between either a CPU or a GPU for its training or scoring purposes, and is defined on an [MLInstance](./mlinstances.md) as a task specification (`tasks.specification`).
 
@@ -61,7 +61,7 @@ The following is an example configuration that specifies using a CPU for trainin
 
 >[!NOTE] The values of `cpus` and `gpus` does not signify the number of CPUs or GPUs, but rather the number of physical machines. These values are permissibly `"1"` and will throw an exception otherwise.
 
-## PySpark and Spark resource configurations
+## PySpark and Spark resource configurations {#resource-config}
 
 PySpark and Spark Engines have the ability to modify computational resources for training and scoring purposes, these resources are described in the following table:
 
