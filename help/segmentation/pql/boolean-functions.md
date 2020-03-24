@@ -9,13 +9,6 @@ topic: developer guide
 
 Boolean functions are used to perform boolean logic on different elements in Profile Query Language (PQL).  More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
 
-This document will provide more details for the following boolean functions:
-
-- [And](#and)
-- [Or](#or)
-- [Not](#not)
-- [If](#if)
-
 ## And
 
 The `and` function is used to create a logical conjunction.

@@ -11,10 +11,6 @@ Profile Query Language (PQL) is an Experience Data Model (XDM) compliant query l
 
 This guide provides a general overview of PQL, covering formatting guidelines and providing example PQL expressions.
 
-- [PQL query formatting](#pql-query-formatting)
-- [PQL literals](#pql-literals)
-- [PQL functions](#pql-functions)
-
 ## PQL query formatting
 
 PQL queries have the following signature:

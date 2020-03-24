@@ -9,14 +9,6 @@ topic: developer guide
 
 Arithmetic functions are used to perform basic calculations on values in Profile Query Language (PQL). More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
 
-This document provides more details for the following arithmetic functions:
-
-- [Add](#add)
-- [Multiply](#multiply)
-- [Subtract](#subtraction)
-- [Divide](#division)
-- [Remainder](#modulo)
-
 ## Add
 
 The `+` (addition) function is used to find the sum of two argument expressions.

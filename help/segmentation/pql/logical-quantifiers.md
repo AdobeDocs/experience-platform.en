@@ -9,11 +9,6 @@ topic: developer guide
 
 Logical quantifiers can be used to assert conditions with arrays in Profile Query Language (PQL). More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
 
-This document provides details on the following logical quantifiers:
-
-- [Exists](#exists)
-- [For all](#for-all)
-
 ## Exists
 
 The `exists` function determines the existence of an item in an array, provided it satisfies the provided condition.

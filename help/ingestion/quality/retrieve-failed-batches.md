@@ -82,7 +82,7 @@ GET /batches/{BATCH_ID}/failed
 
 | Property | Description |
 | -------- | ----------- |
-| {BATCH_ID} | The ID of the batch that you're looking up. |
+| `{BATCH_ID}` | The ID of the batch that you're looking up. |
 
 **Request**
 
@@ -141,8 +141,8 @@ GET /batches/{BATCH_ID}/failed?path={FAILED_FILE}
 
 | Property | Description |
 | -------- | ----------- |
-| {BATCH_ID} | The ID of the batch that contains the failed file. |
-| {FAILED_FILE} | The name of the file that has the failed formatting. |
+| `{BATCH_ID}` | The ID of the batch that contains the failed file. |
+| `{FAILED_FILE}` | The name of the file that has the failed formatting. |
 
 **Request**
 
