@@ -33,12 +33,12 @@ The **[!UICONTROL Browse]** tab displays the destinations with which you have es
 
 Element | Description 
 ---------|----------
- Destination Name | The name you provided for your activation flow to this destination.
+ Name | The name you provided for your activation flow to this destination.
  Destination | The destination platform that you selected for your activation flow.
- Created | The date and UTC time when the activation flow to the destination was created.
- Connection Type | *For email marketing destinations only*. Represents the connection type to your storage bucket. Can be S3 or FTP. 
+ Connection Type | Represents the connection type to your storage bucket or destination. <ul><li>For email marketing destinations: Can be S3 or FTP.</li><li>For real-time advertising destinations: Server-to-server</li></ul>
  Username | The account credentials you selected for the destination flow.
  Segments | The number of segments that are being activated to this destination.
+ Created | The date and UTC time when the activation flow to the destination was created.
  Status | `Active` or `Inactive`. Indicates whether data is currently being activated to this destination. To edit the status, see [Disable activation](/help/rtcdp/destinations/activate-destinations.md#disable-activation).
 
 Click on a destination row to bring up more information about the destination in the right rail.
@@ -56,9 +56,11 @@ In the **[!UICONTROL Accounts]** tab, you can learn more about the connections t
 Element | Description
 ---------|----------
  Platform | The destination for which you have set up the connection.
+ Connection Type | Represents the connection type to your storage bucket or destination. <ul><li>For email marketing destinations: Can be S3 or FTP.</li><li>For real-time advertising destinations: Server-to-server</li><li>For Amazon S3 cloud storage destinations: Access Key </li><li>For SFTP cloud storage destinations: Basic authentication for SFTP</li></ul>
  Username | The username you selected in the [connect destination wizard](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination).
- Flows | Represents the number of unique successful destination flows connected with basic information created for a destination.
+ Data Flows | Represents the number of unique successful destination flows connected with basic information created for a destination.
  Authorized | The date when the connection to this destination was authorized.
+ Status | `Active` or `Inactive`. Indicates whether data is currently being activated to this destination. To edit the status, see [Disable activation](/help/rtcdp/destinations/activate-destinations.md#disable-activation).
  
 ## System View {#system-view}
 
