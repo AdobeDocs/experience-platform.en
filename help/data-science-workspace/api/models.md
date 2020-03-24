@@ -87,7 +87,7 @@ A successful response returns a payload containing the details of your Models in
 | Property | Description |
 | --- | --- |
 | `id` | The ID corresponding to the Model. |
-| `modelArtifactUri` | A URI indicating where the model is stored. The URI ends with  |the `name` value for the model.
+| `modelArtifactUri` | A URI indicating where the model is stored. The URI ends with the `name` value for the model. |
 | `experimentId` | A valid Experiment ID. |
 | `experimentRunId` | A valid Experiment Run ID. |
 
@@ -151,7 +151,7 @@ A successful response returns a payload containing the details of your Model inc
 | Property | Description |
 | --- | --- |
 | `id` | The ID corresponding to the Model. |
-| `modelArtifactUri` | A URI indicating where the model is stored. The URI ends with  |the `name` value for the model.
+| `modelArtifactUri` | A URI indicating where the model is stored. The URI ends with the `name` value for the model. |
 | `experimentId` | A valid Experiment ID. |
 | `experimentRunId` | A valid Experiment Run ID. |
 
