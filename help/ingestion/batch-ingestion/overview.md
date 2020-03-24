@@ -9,20 +9,7 @@ topic: overview
 
 The Batch Ingestion API allows you to ingest data into Adobe Experience Platform as batch files. Data being ingested can be the profile data from a flat file in a CRM system (such as a parquet file), or data that conforms to a known schema in the Experience Data Model (XDM) registry.
 
-This document will provide information on the following topics:
-- [Using the API](#using-the-api)
-    - [Data Ingestion prerequisites](#data-ingestion-prerequisites)
-    - [Batch ingestion best practices](#batch-ingestion-best-practices)
-    - [Create a batch](#create-a-batch)
-- [File upload](#file-upload)
-    - [Small file upload](#small-file-upload)
-    - [Large file upload - create file](#large-file-upload---create-file)
-    - [Large file upload - upload subsequent parts](#large-file-upload---upload-subsequent-parts)
-- [Signal batch completion](#signal-batch-completion)
-- [Check batch status](#check-batch-status)
-- [Batch ingestion statuses](#batch-ingestion-statuses)
-
-See the [Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) reference for additional information.
+The [Data Ingestion API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) provides additional information on these API calls.
 
 The following diagram outlines the batch ingestion process:
 

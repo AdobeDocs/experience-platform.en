@@ -13,27 +13,20 @@ Data loaded into Platform must go through multiple steps in order to reach its d
 
 To assist in monitoring the ingestion process, Experience Platform makes it possible to subscribe to a set of events that are published by each step of the process, notifying you to the status of the ingested data and any possible failures. 
 
-This document provides detailed information on data ingestion notifications, including:
-
-- [Available status notification events](#available-status-notification-events)
-- [Notification payload schema](#notification-payload-schema)
-- [Subscribing to Data Ingestion Status Notifications](#subscribe-to-data-ingestion-status-notifications)
-    - [Creating a new integration using Adobe I/O Console](#create-a-new-integration-using-adobe-io-console)
-
 ## Available status notification events
 
 Below is a list of available data ingestion status notifications that you can subscribe to. 
 
 >[!NOTE] There is only one event topic provided for all data ingestion notifications. In order to distinguish between different statuses, the event code can be used.
 
-|Platform Service|Status| Event description | Event code|
-|---|----|----|----|
-|Data Landing|success|Ingestion - Batch succeeded|ing_load_success|
-|Data Landing|failure|Ingestion - Batch failed|ing_load_failure|
-|Real-time Customer Profile|success|Profile service - Data load batch Succeeded|ps_load_success|
-|Real-time Customer Profile|failure|Profile service - Data load batch failed|ps_load_failure|
-|Identity Graph|success|Identity graph - Data load batch succeeded|ig_load_success|
-|Identity Graph|failure|Identity graph - Data load batch failed|ig_load_failure|
+| Platform Service | Status | Event description | Event code |
+| ---------------- | ------ | ----------------- | ---------- |
+| Data Landing | success | Ingestion - Batch succeeded | ing_load_success |
+| Data Landing | failure | Ingestion - Batch failed | ing_load_failure |
+| Real-time Customer Profile | success | Profile service - Data load batch Succeeded | ps_load_success |
+| Real-time Customer Profile | failure | Profile service - Data load batch failed | ps_load_failure |
+| Identity Graph | success | Identity graph - Data load batch succeeded | ig_load_success |
+| Identity Graph | failure | Identity graph - Data load batch failed | ig_load_failure |
 
 ## Notification payload schema
 
@@ -51,7 +44,7 @@ Sign in to [Adobe I/O Console](https://console.adobe.io/home) and click the *Int
 
 The *Create new integration* screen appears. Select **Receive near-real time events**, then click **Continue**.
 
-![Recieve near-realtime events](../images/quality/subscribe-events/create_integration_receive_events.png)
+![Receive near-realtime events](../images/quality/subscribe-events/create_integration_receive_events.png)
 
 The next screen provides options to create integrations with different events, products, and services available to your organization based on your subscriptions, entitlements, and permissions. For this integration, select **Platform notifications** under Experience Platform, then click **Continue**. 
  
@@ -75,6 +68,6 @@ The *Event registration details* dialog expands to show additional controls. Her
   
 ![Select events](../images/quality/subscribe-events/create_integration_select_event.png)
 
-## Next Steps
+## Next steps
 
 Once you have created your I/O integration you can view any received notifications for that integration. Refer to the [Tracing Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) guide for detailed instructions on how to trace your events.

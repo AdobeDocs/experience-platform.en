@@ -7,42 +7,7 @@ topic: troubleshooting
 
 # Batch ingestion troubleshooting guide
 
-This documentation will help answer frequently asked questions regarding Adobe Experience Platform Batch Data Ingestion APIs. Specifically, this documentation will answer the following questions:
-
-## Batch API Calls
-
-- [Are batches immediately active after receiving an HTTP 200 OK from the CompleteBatch API?](#are-batches-immediately-active-after-receiving-an-http-200-ok-from-the-completebatch-api)
-- [Is it safe to retry the CompleteBatch API call after it fails?](#is-it-safe-to-retry-the-completebatch-api-call-after-it-fails)
-- [When should the Large File Upload API be used?](#when-should-the-large-file-upload-api-be-used)
-- [Why is the Large File Complete API call failing?](#why-is-the-large-file-complete-api-call-failing)
-
-## Ingestion Support
-
-- [What are the supported ingestion formats?](#what-are-the-supported-ingest-formats)
-- [Where should the input batch format be specified?](#where-should-the-batch-input-format-be-specified)
-- [How is multi-line JSON ingested?](#how-is-multi-line-json-ingested)
-- [What is the difference between single-line and multi-line JSON?](#what-is-the-difference-between-json-lines-single-line-json-and-multi-line-json)
-- [Is CSV ingestion supported?](#is-csv-ingestion-supported)
-- [What types of validation are performed on the data?](#what-types-of-validation-are-performed-on-the-data)
-- [How can an already ingested batch be replaced?](#how-can-an-already-ingested-batch-be-replaced)
-- [How is batch ingestion monitored?](#how-is-batch-ingestion-monitored)
-
-## Batch States
-
-- [What are the possible batch states?](#what-are-the-possible-batch-states)
-- [What does the "Staging" state mean for batches?](#what-does-%22staging%22-mean-for-batches)
-- [What does the "Retrying" state mean for a batch?](#what-does-it-mean-when-a-batch-is-%22retrying%22)
-- [What does the "Stalled" state mean for a batch?](#what-does-it-mean-when-a-batch-is-%22stalled%22)
-- [What does the "Loading" state mean for a batch?](#what-does-it-mean-if-a-batch-is-still-%22loading%22)
-- [Is there a way to know if a batch is successfully ingested?](#is-there-a-way-to-know-if-a-batch-has-been-successfully-ingested)
-- [What happens after a batch fails?](#what-happens-after-a-batch-fails)
-
-## Batch Support
-
-- [How should batches be deleted?](#how-should-batches-be-deleted)
-- [What batch-level metrics are available?](#what-batch-level-metrics-are-available)
-- [Why are batch-level metrics not available on all batches?](#why-are-metrics-not-available-on-some-batches)
-- [What do the different status codes mean?](#what-do-the-different-status-codes-mean)
+This documentation will help answer frequently asked questions regarding Adobe Experience Platform Batch Data Ingestion APIs. 
 
 ## Batch API Calls
 

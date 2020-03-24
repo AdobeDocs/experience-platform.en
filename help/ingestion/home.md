@@ -9,11 +9,7 @@ topic: overview
 
 Adobe Experience Platform brings data from multiple sources together in order to help marketers better understand the behavior of their customers. Adobe Experience Platform Data Ingestion represents the multiple methods by which Platform ingests data from these sources, as well as how that data is persisted within the Data Lake for use by downstream Platform services.
 
-This document introduces the three main ways in which data is ingested into Platform, with links to their respective overview documentation for more detailed information:
-
-- [Batch ingestion](#batch-ingestion)
-- [Streaming ingestion](#streaming-ingestion)
-- [Sources](#sources)
+This document introduces the three main ways in which data is ingested into Platform, with links to their respective overview documentation for more detailed information.
 
 ## Batch ingestion
 
