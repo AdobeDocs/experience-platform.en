@@ -108,7 +108,7 @@ You can drag and drop an audience from the *Audience* tab onto the rule builder 
 
 For Platform audiences created using Segment Builder, you are given the option to convert the audience into the set of rules that were used in the segment definition for that audience. This conversion makes a copy of the rule logic, that can then be modified without affecting the original segment definition.
 
->**Note:** When adding an audience from an external source, only the audience membership is referenced. You cannot convert the audience to rules, and therefore the rules used to create the original audience cannot be modified in the new segment definition.
+>[!NOTE] When adding an audience from an external source, only the audience membership is referenced. You cannot convert the audience to rules, and therefore the rules used to create the original audience cannot be modified in the new segment definition.
 
 ![](../images/segment-builder/add-audience-to-segment.png)
 

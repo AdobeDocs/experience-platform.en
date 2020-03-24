@@ -7,12 +7,7 @@ topic: tutorial
 
 # Map a CSV file to an XDM schema
 
-In order to ingest CSV data into Adobe Experience Platform, the data must be mapped to an Experience Data Model (XDM) schema. This tutorial covers the following steps for mapping a CSV file to an XDM schema using the Experience Platform user interface:
-
-- [Add data](#add-data)
-- [Choose a destination](#choose-a-destination)
-- [Map CSV fields to XDM schema fields](#map-csv-fields-to-xdm-schema-fields)
-- [Ingest data](#ingest-data)
+In order to ingest CSV data into Adobe Experience Platform, the data must be mapped to an Experience Data Model (XDM) schema. This tutorial covers how to map a CSV file to an XDM schema using the Experience Platform user interface.
 
 In addition, the appendix to this tutorial provides further information regarding the use of [mapping functions](#mapping-functions).
 

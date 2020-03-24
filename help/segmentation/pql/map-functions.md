@@ -9,12 +9,6 @@ topic: developer guide
 
 Profile Query Language (PQL) offers functions to make interaction with maps easier. More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
 
-This document provides details for the following functions:
-
-- [Get](#get)
-- [Keys](#keys)
-- [Values](#values)
-
 ## Get
 
 The `get` function is used to retrieve the value of a map for a given key.

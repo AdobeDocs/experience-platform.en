@@ -86,14 +86,14 @@ curl -X POST \
 
 | Property | Description  |
 | --------- | ------------ | 
-| name | **Required.** A unique name by which to refer to the segment. |
-| schema | **Required.** The schema associated with the entities in the segment. Consists of either an `id` or `name` field. | 
-| expression | **Required.** An entity that contains fields information about the segment definition. |
-| expression.type | Specifies the expression type. Currently, only "PQL" is supported. |
-| expression.format | Indicates the structure of the expression in value. Currently, the following format is supported: <ul><li>`pql/text`: A textual representation of a segment definition, according to the published PQL grammar.  For example, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
-| expression.value | An expression that conforms to the type indicated in `expression.format`. |
-| mergePolicyId | The identifier of the merge policy to use for the exported data. For more information, please read the [merge policy configuration document](../../profile/api/merge-policies.md). |
-| description | A human readable description of the definition. |
+| `name` | **Required.** A unique name by which to refer to the segment. |
+| `schema` | **Required.** The schema associated with the entities in the segment. Consists of either an `id` or `name` field. | 
+| `expression` | **Required.** An entity that contains fields information about the segment definition. |
+| `expression.type` | Specifies the expression type. Currently, only "PQL" is supported. |
+| `expression.format` | Indicates the structure of the expression in value. Currently, the following format is supported: <ul><li>`pql/text`: A textual representation of a segment definition, according to the published PQL grammar.  For example, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
+| `expression.value` | An expression that conforms to the type indicated in `expression.format`. |
+| `mergePolicyId` | The identifier of the merge policy to use for the exported data. For more information, please read the [merge policy configuration document](../../profile/api/merge-policies.md). |
+| `description` | A human readable description of the definition. |
 
 **Response**
 
@@ -172,8 +172,8 @@ curl -X POST \
 
 | Property | Description | 
 | --------- | ----------- |
-| predicateExpression | The PQL expression to query the data by. |
-| predicateModel | The name of the XDM schema the Profile data is based on. |
+| `predicateExpression` | The PQL expression to query the data by. |
+| `predicateModel` | The name of the XDM schema the Profile data is based on. |
 
 **Response**
 
@@ -191,8 +191,8 @@ A successful response returns the details of the newly created preview job, incl
 
 | Property | Description | 
 | -------- | ----------- |
-| state | The current state of the preview job. It will be in the "RUNNING" state until processing is complete, at which point it becomes "RESULT_READY" or "FAILED". |
-| previewId | The ID of the preview job, to be used for lookup purposes when viewing an estimate or preview, as outlined in the following section. |
+| `state` | The current state of the preview job. It will be in the "RUNNING" state until processing is complete, at which point it becomes "RESULT_READY" or "FAILED". |
+| `previewId` | The ID of the preview job, to be used for lookup purposes when viewing an estimate or preview, as outlined in the following section. |
 
 ### View an estimate or preview
 
@@ -210,7 +210,7 @@ GET /estimate/{PREVIEW_ID}
 
 | Property | Description | 
 | -------- | ----------- |
-| PREVIEW_ID | The ID of the preview job you want to view. |
+| `{PREVIEW_ID}` | The ID of the preview job you want to view. |
 
 **Request**
 
@@ -250,8 +250,8 @@ A successful response returns the details of the estimate.
 
 | Property | Description | 
 | -------- | ----------- |
-| state | The current state of the preview job. Will be "RUNNING" until processing is complete, at which point it becomes "RESULT_READY" or "FAILED". |
-| _links.preview | When the preview job's current state is "RESULT_READY", this attribute provides a URL to view the estimate. |
+| `state` | The current state of the preview job. Will be "RUNNING" until processing is complete, at which point it becomes "RESULT_READY" or "FAILED". |
+| `_links.preview` | When the preview job's current state is "RESULT_READY", this attribute provides a URL to view the estimate. |
 
 ### View a preview**
 
@@ -263,7 +263,7 @@ GET /preview/{PREVIEW_ID}
 
 | Property | Description | 
 | -------- | ----------- |
-| PREVIEW_ID | The ID of the preview job you want to view. |
+| `{PREVIEW_ID}` | The ID of the preview job you want to view. |
 
 **Request**
 

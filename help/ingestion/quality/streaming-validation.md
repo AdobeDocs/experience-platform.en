@@ -83,7 +83,7 @@ curl -X POST https://dcs.adobedc.net/collection/{INLET_ID}?synchronousValidation
 
 | Parameter | Description |
 | --------- | ----------- |
-| {JSON_PAYLOAD} | The JSON body of a data you wish to ingest. |
+| `{JSON_PAYLOAD}` | The JSON body of a data you wish to ingest. |
 
 **Response**
 
@@ -160,7 +160,7 @@ curl -X POST https://dcs.adobedc.net/collection/{COLLECTION_ID} \
 
 | Parameter | Description |
 | --------- | ----------- |
-| {JSON_PAYLOAD} | The JSON body of a data you wish to ingest. |
+| `{JSON_PAYLOAD}` | The JSON body of a data you wish to ingest. |
 
 >[!NOTE] No extra query parameter is required, as asynchronous validation is enabled by default.
 

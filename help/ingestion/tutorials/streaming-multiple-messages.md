@@ -48,7 +48,7 @@ POST /collection/batch/{DATA_INLET_ID}
 
 | Property | Description |
 | -------- | ----------- |
-| {DATA_INLET_ID} | The ID of the created Data inlet. |
+| `{DATA_INLET_ID}` | The ID of the created Data inlet. |
 
 **Request**
 
@@ -230,7 +230,7 @@ POST /collection/batch/{DATA_INLET_ID}
 
 | Property | Description |
 | -------- | ----------- |
-| {DATA_INLET_ID} | The ID of the created Data inlet. |
+| `{DATA_INLET_ID}` | The ID of the created Data inlet. |
 
 **Request**
 

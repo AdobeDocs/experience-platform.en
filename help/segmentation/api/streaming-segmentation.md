@@ -5,18 +5,11 @@ title: Streaming segmentation
 topic: developer guide
 ---
 
-# Evaluate events in real-time with streaming segmentation
+# Evaluate events in real-time with streaming segmentation (Beta) 
 
->**Note:** Streaming segmentation is a beta feature, and will be available on request.
+>[!NOTE] Streaming segmentation is a beta feature, and will be available on request.
 
 Streaming segmentation (also known as continuous query evaluation) is the ability to instantly evaluate a customer as soon as an event comes into a particular segment group. With this capability, most segment rules can now be evaluated as the data is passed into Adobe Experience Platform, meaning segment membership will be kept up to date without running scheduled segmentation jobs.
-
-This developer guide provides details for managing streaming segmentation. Specifically, this developer guide covers the following details:
-
-- [Retrieving all streaming enabled segments](#retrieve-all-streaming-segmentation-enabled-segments)
-- [Creating a streaming enabled segment](#create-a-streaming-enabled-segment)
-- [Enabling an existing segment for streaming segmentation](#enable-an-existing-segment-for-streaming-segmentation)
-- [Enabling scheduled segmentation to establish a baseline](#enable-scheduled-evaluation)
 
 ![](../images/api/streaming-segment-evaluation.png)
 
@@ -288,7 +281,7 @@ GET /segment/definitions/{SEGMENT_DEFINITION_ID}
 
 | Parameter | Description |
 | --------- | ----------- |
-| {SEGMENT_DEFINITION_ID} |  The ID of the segment definition you want to look up. |
+| `{SEGMENT_DEFINITION_ID}` |  The ID of the segment definition you want to look up. |
 
 **Request**
 
@@ -479,12 +472,12 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| name | **(Required)** The name of schedule. Must be a string. |
-| type | **(Required)** The job type in string format. The supported types are `batch_segmentation` and `export`. |
-| properties | **(Required)** An object containing additional properties related to the schedule. |
-| properties.segments | **(Required when `type` equals `batch_segmentation`)** Using `["*"]` ensures all segments are included. |
-| schedule | **(Required)** A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24 hour period. The example shown (`0 0 1 * * ?`) means the job is triggered every day at 1:00:00 UTC. For more information, please review the [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation. |
-| state | *(Optional)* String containing the schedule state. Available values: `active` and `inactive`. Default value is `inactive`. An IMS Organization can only create one schedule. Steps for updating the schedule are available later in this tutorial. |
+| `name` | **(Required)** The name of schedule. Must be a string. |
+| `type` | **(Required)** The job type in string format. The supported types are `batch_segmentation` and `export`. |
+| `properties` | **(Required)** An object containing additional properties related to the schedule. |
+| `properties.segments` | **(Required when `type` equals `batch_segmentation`)** Using `["*"]` ensures all segments are included. |
+| `schedule` | **(Required)** A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24 hour period. The example shown (`0 0 1 * * ?`) means the job is triggered every day at 1:00:00 UTC. For more information, please review the [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation. |
+| `state` | *(Optional)* String containing the schedule state. Available values: `active` and `inactive`. Default value is `inactive`. An IMS Organization can only create one schedule. Steps for updating the schedule are available later in this tutorial. |
 
 **Response**
 
