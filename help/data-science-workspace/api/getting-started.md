@@ -39,3 +39,4 @@ Once you have gathered the required authentication credentials, you can proceed 
 * [MLInstances (Recipes)](mlinstances.md)
 * [MLServices](mlservices.md)
 * [Models](models.md)
+* [Appendix](appendix.md)

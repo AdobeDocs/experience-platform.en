@@ -427,20 +427,3 @@ curl -X DELETE \
     "detail": "Experiments successfully deleted"
 }
 ```
-
-## Appendix
-
-The following sections provide reference information for various features of the Sensei Machine Learning API.
-
-### Query parameters for asset retrieval
-
-The Sensei Machine Learning API provides support for query parameters with retrieving assets. Available query parameters and their usages are described in the following table:
-
-| Query parameter | Description | Default value |
-| --------------- | ----------- | ------- |
-| `start` | Indicates the starting index for pagination. | `start=0` |
-| `limit` | Indicates the maximum number of results to return. | `limit=25` |
-| `orderby` | Indicates the properties to use for sorting in priority order. Include a dash (**-**) before a property name to sort in descending order, otherwise results are sorted in ascending order. | `orderby=created` |
-| `property` | Indicates the comparison expression that an object must satisfy in order to be returned. | `property=deleted==false` |
-
->[!NOTE] When combining multiple query parameters, they must be separated by ampersands (**&**).
