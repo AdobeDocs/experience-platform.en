@@ -7,7 +7,7 @@ topic: Walkthrough
 
 # Data Science Workspace walkthrough
 
-This document provides a walkthrough for the Data Science Workspace in Adobe Experience Platform. Specifically we will go over the general workflow a data scientist would go through to solve a problem using machine learning.
+This document provides a walkthrough for Adobe Experience Platform Data Science Workspace. Specifically we will go over the general workflow a data scientist would go through to solve a problem using machine learning.
 
 ## Prerequisites
 

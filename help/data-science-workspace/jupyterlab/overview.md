@@ -162,7 +162,7 @@ If the kernel is shut-down or inactive for a prolonged period, then **No Kernel!
 
 ![](../images/jupyterlab/user-guide/switch_kernel.gif)
 
-### PySpark/Spark execution resource
+### PySpark/Spark execution resource {#execution-resource}
 
 <!-- need to update with databricks -->
 
@@ -511,7 +511,7 @@ val timedf = spark.sql("""
 ```
 
 
-## Supported libraries
+## Supported libraries {#supported-libraries}
 
 ### Python / R
 

@@ -58,7 +58,7 @@ This can happen if the cell in question is accidentally changed from "Code" to "
 The Python kernel comes pre-installed with many popular machine learning libraries. However, you can install additional custom libraries by executing the following command within a code cell:
 
 ```shell
-!pip install {library name}
+!pip install {LIBRARY_NAME}
 ```
 
 For a complete list of pre-installed Python libraries, see the [appendix section of the JupyterLab User Guide](./jupyterlab/overview.md#supported-libraries).
