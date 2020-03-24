@@ -129,8 +129,8 @@ You can retrieve a list of MLInstances by performing a single GET request. To he
 
 ```http
 GET /mlInstances
-GET /mlInstances?{QUERY_PARAMETER_1}={VALUE_1}
-GET /mlInstances?{QUERY_PARAMETER_1}={VALUE_1}&{PARAMETER_2}={VALUE_2}
+GET /mlInstances?{QUERY_PARAMETER}={VALUE}
+GET /mlInstances?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 ```
 
 | Parameter | Description |
