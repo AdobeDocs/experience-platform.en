@@ -187,7 +187,7 @@ A successful response returns a payload containing the details of the newly crea
 
 ## Create a feature pipeline Engine using binary artifacts
 
-You can create a feature pipeline Engine using local `.jar` or `.egg` binary artifacts by performing a POST request while providing its meta data and the artifact's paths in multipart forms. A PySpark or Spark Engine has the ability to specify computation resources such as the number of cores or the amount of memory. Please refer to the appendix section on [PySpark and Spark resource configurations](#pyspark-and-spark-resource-configurations) for more information.
+You can create a feature pipeline Engine using local `.jar` or `.egg` binary artifacts by performing a POST request while providing its meta data and the artifact's paths in multipart forms. A PySpark or Spark Engine has the ability to specify computation resources such as the number of cores or the amount of memory. Please refer to the appendix section on [PySpark and Spark resource configurations](appendix.md#resource-config) for more information.
 
 **API Format**
 
@@ -253,7 +253,7 @@ A successful response returns a payload containing the details of the newly crea
 
 ## Retrieve a list of Engines
 
-You can retrieve a list of Engines by performing a single GET request. To help filter results, you can specify query parameters in the request path. For a list of available queries, refer to the appendix section on [query parameters for asset retrieval](#query-parameters-for-asset-retrieval).
+You can retrieve a list of Engines by performing a single GET request. To help filter results, you can specify query parameters in the request path. For a list of available queries, refer to the appendix section on [query parameters for asset retrieval](appendix.md#query).
 
 **API Format**
 
@@ -326,7 +326,7 @@ A successful response returns a list of Engines and their details.
 }
 ```
 
-### Retrieve a specific Engine
+### Retrieve a specific Engine {#retrieve-specific}
 
 You can retrieve the details of a specific Engine by performing a GET request that includes the ID of the desired Engine in the request path.
 
@@ -384,7 +384,7 @@ A successful response returns a payload containing the details of the desired En
 
 You can modify and update an existing Engine by overwriting its properties through a PUT request that includes the target Engine's ID in the request path and providing a JSON payload containing updated properties.
 
->[!NOTE] In order to ensure the success of this PUT request, it is suggested that first you perform a GET request to [retrieve the Engine by ID](#retrieve-an-engine-by-id). Then, modify and update the returned JSON object and apply the entirety of the modified JSON object as the payload for the PUT request.
+>[!NOTE] In order to ensure the success of this PUT request, it is suggested that first you perform a GET request to [retrieve the Engine by ID](#retrieve-specific). Then, modify and update the returned JSON object and apply the entirety of the modified JSON object as the payload for the PUT request.
 
 The following sample API call will update an Engine's name and description while having these properties initially:
 
