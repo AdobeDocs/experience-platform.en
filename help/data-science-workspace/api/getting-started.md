@@ -36,6 +36,6 @@ Once you have gathered the required authentication credentials, you can proceed 
 * [Engines](engines.md)
 * [Experiments](experiments.md)
 * [Insights](insights.md)
-* [ML Instances](mlinstances.md)
-* [ML Services](mlservices.md)
+* [MLInstances (Recipes)](mlinstances.md)
+* [MLServices](mlservices.md)
 * [Models](models.md)
