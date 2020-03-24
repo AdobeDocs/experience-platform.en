@@ -11,4 +11,8 @@ Connect your Real-time Customer Data Platform to a 3rd-party advertising platfor
 
 When connecting to an advertising destination, your audiences are sent as IDs to the destination platform, where they are mapped to an ID known by the destination platform.
 
-Currently, Real-time CDP supports the Google advertising destination. For information on how to connect the destination, see [Google destination](/help/rtcdp/destinations/google-destination.md).
+Currently, Real-time CDP supports the advertising destinations listed below. For information on how to connect to these destinations, see the individual links:
+
+* [Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
+* [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
+* [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
