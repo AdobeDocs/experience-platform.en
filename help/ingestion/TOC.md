@@ -19,6 +19,7 @@ user-guide-title: Adobe Experience Platform Data Ingestion Help
 - Tutorials {#tutorials}
     - [Map a CSV file to XDM](tutorials/map-a-csv-file.md)
     - [Ingest batch data using the UI](tutorials/ingest-batch-data.md)
+    - [Create an authenticated streaming connection](tutorials/create-authenticated-streaming-connection.md)
     - [Create a streaming connection](tutorials/create-streaming-connection.md)
     - [Streaming record data](tutorials/streaming-record-data.md)
     - [Streaming time series data](tutorials/streaming-time-series-data.md)
