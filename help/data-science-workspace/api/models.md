@@ -9,42 +9,17 @@ topic: Developer guide
 
 A model is an instance of a machine learning recipe that is trained using historical data and configurations to solve for a business use case.
 
-This developer guide provides steps to help you start using the [Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) `/models` endpoint and demonstrates API calls for performing CRUD operations for the following:
+## Retrieve a list of Models
 
-* [Retrieve a list of Models](#retrieve-a-list-of-models)
-* [Retrieve a specific Model](#retrieve-a-specific-model)
-* [Update a Model by ID](#update-a-model-by-id)
-* [Delete a Model by ID](#delete-a-model-by-id)
+You can retrieve a list of Model details belonging to all Models by performing a single GET request to /models. By default this list will order itself from oldest created model and limit the results to 25. You may choose to filter results by specifying some query parameters. For a list of available queries, refer to the appendix section on [query parameters for asset retrieval](#appendix.md#query).
 
-## Getting started
-
-You are required to have completed the [authentication](../../tutorials/authentication.md) tutorial in order to have access to the following request headers to make calls to the `/models` endpoint:
-
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
-
-All resources in Experience Platform are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
-
-* x-sandbox-name: `{SANDBOX_NAME}`
-
-For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
-
-All requests that contain a payload (POST, PUT, PATCH) require an additional header:
-
-* Content-Type: application/json
-
-### Retrieve a list of Models
-
-You can retrieve a list of Model details belonging to all Models by performing a single GET request to /models. By default this list will order itself from oldest created model and limit the results to 25. You may choose to filter results by specifying some query parameters. For a list of available queries, refer to the appendix section on [query parameters for asset retrieval](#query-parameters-for-asset-retrieval).
-
-#### API Format
+**API format**
 
 ```http
 GET /models
 ```
 
-#### Request
+**Request**
 
 ```shell
 curl -X GET \
@@ -55,9 +30,9 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
-A successful response returns a payload containing the details of your Models including each Models unique identifier ( **id** ).
+A successful response returns a payload containing the details of your Models including each Models unique identifier (`id`).
 
 ```json
 {
@@ -109,26 +84,30 @@ A successful response returns a payload containing the details of your Models in
 }
 ```
 
-*  `id`: The ID corresponding to the Model.
-*  `modelArtifactUri`: A URI indicating where the model is stored. The URI ends with the `name` value for the model.
-*  `{EXPERIMENT_ID}`: A valid Experiment ID.
-*  `{EXPERIEMENT_RUN_ID}`: A valid Experiment Run ID.
+| Property | Description |
+| --- | --- |
+| `id`: The ID corresponding to the Model. |
+| `modelArtifactUri`: A URI indicating where the model is stored. The URI ends with  |the `name` value for the model.
+| `experimentId`: A valid Experiment ID. |
+| `experimentRunId`: A valid Experiment Run ID. |
 
-### Retrieve a specific Model
+## Retrieve a specific Model
 
-You can retrieve a list of Model details belonging to a particular Model by performing a single GET request and providing a valid Model ID in the request path. To help filter results, you can specify query parameters in the request path. For a list of available queries, refer to the appendix section on [query parameters for asset retrieval](#query-parameters-for-asset-retrieval).
+You can retrieve a list of Model details belonging to a particular Model by performing a single GET request and providing a valid Model ID in the request path. To help filter results, you can specify query parameters in the request path. For a list of available queries, refer to the appendix section on [query parameters for asset retrieval](appendix.md#query).
 
-#### API Format
+**API Format**
 
 ```http
 GET /models/{MODEL_ID}
 GET /models/?property=experimentRunID=={EXPERIMENT_RUN_ID}
 ```
 
-* `{MODEL_ID}`: The identifier of the trained or published Model.
-* `{EXPERIMENT_RUN_ID}`: The identifier of the experiment run
+| Parameter | Description |
+| --- | --- |
+| `{MODEL_ID}` | The identifier of the trained or published Model. |
+| `{EXPERIMENT_RUN_ID}` | The identifier of the experiment run. |
   
-#### Request
+**Request**
 
 The following request contains a query and retrieves a list of trained Models sharing the same experimentRunID ({EXPERIMENT_RUN_ID}).
 
@@ -141,9 +120,9 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
-A successful response returns a payload containing the details of your Model including the Models unique identifier ( **id** ).
+A successful response returns a payload containing the details of your Model including the Models unique identifier (`id`).
 
 ```json
 {
@@ -169,26 +148,30 @@ A successful response returns a payload containing the details of your Model inc
 }
 ```
 
-*  `id`: The ID corresponding to the Model.
-*  `modelArtifactUri`: A URI indicating where the model is stored. The URI ends with the `name` value for the model.
-*  `{EXPERIMENT_ID}`: A valid Experiment ID.
-*  `{EXPERIEMENT_RUN_ID}`: A valid Experiment Run ID.
+| Property | Description |
+| --- | --- |
+| `id` | The ID corresponding to the Model. |
+| `modelArtifactUri` | A URI indicating where the model is stored. The URI ends with  |the `name` value for the model.
+| `experimentId` | A valid Experiment ID. |
+| `experimentRunId` | A valid Experiment Run ID. |
 
-### Update a Model by ID
+## Update a Model by ID
 
 You can update an existing Model by overwriting its properties through a PUT request that includes the target Model's ID in the request path and providing a JSON payload containing updated properties.
 
 >[!TIP] In order to ensure the success of this PUT request, it is suggested that first you perform a GET request to retrieve the Model by ID. Then, modify and update the returned JSON object and apply the entirety of the modified JSON object as the payload for the PUT request.
 
-#### API Format
+**API Format**
 
 ```http
 PUT /models/{MODEL_ID}
 ```
 
-* `{MODEL_ID}`: The identifier of the trained or published Model.
+| Parameter | Description |
+| --- | --- |
+| `{MODEL_ID}` | The identifier of the trained or published Model. |
   
-#### Request
+**Request**
 
 ```shell
 curl -X PUT \
@@ -213,7 +196,7 @@ curl -X PUT \
     }'
 ```
 
-#### Response
+**Response**
 
 A successful response returns a payload containing the Experiment's updated details.
 
@@ -233,19 +216,21 @@ A successful response returns a payload containing the Experiment's updated deta
     }
 ```
 
-### Delete a Model by ID
+## Delete a Model by ID
 
 You can delete a single Model by performing a DELETE request that includes the target Model's ID in the request path.
 
-#### API Format
+**API Format**
 
 ```http
 DELETE /models/{MODEL_ID}
 ```
 
-* `{MODEL_ID}`: The identifier of the trained or published Model.
+| Parameter | Description |
+| --- | --- |
+| `{MODEL_ID}` | The identifier of the trained or published Model. |
 
-#### Request
+**Request**
 
 ```shell
 curl -X DELETE \
@@ -256,7 +241,7 @@ curl -X DELETE \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
 A successful response returns a payload containing a 200 status confirming the deletion of the Model.
 
@@ -267,20 +252,3 @@ A successful response returns a payload containing a 200 status confirming the d
     "detail": "Model deletion was successful"
 }
 ```
-
-## Appendix
-
-The following sections provide reference information for various features of the Sensei Machine Learning API.
-
-### Query parameters for asset retrieval
-
-The Sensei Machine Learning API provides support for query parameters with retrieving assets. Available query parameters and their usages are described in the following table:
-
-| Query parameter | Description | Default value |
-| --------------- | ----------- | ------- |
-| `start` | Indicates the starting index for pagination. | `start=0` |
-| `limit` | Indicates the maximum number of results to return. | `limit=25` |
-| `orderby` | Indicates the properties to use for sorting in priority order. Include a dash (**-**) before a property name to sort in descending order, otherwise results are sorted in ascending order. | `orderby=created` |
-| `property` | Indicates the comparison expression that an object must satisfy in order to be returned. | `property=deleted==false` |
-
->[!NOTE] When combining multiple query parameters, they must be separated by ampersands (**&**).
