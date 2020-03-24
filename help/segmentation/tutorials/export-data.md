@@ -182,7 +182,7 @@ curl -X POST \
 | `filter.segmentQualificationTime.startTime` | *(Optional)* Segment qualification start time for a segment ID for a given status. It not provided, there will be no filter on the start time for a segment ID qualification. The timestamp must be provided in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
 | `filter.segmentQualificationTime.endTime` | *(Optional)* Segment qualification end time for a segment ID for a given status. It not provided, there will be no filter on the end time for a segment ID qualification. The timestamp must be provided in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
 | `filter.fromIngestTimestamp `| *(Optional)* Limits exported profiles to only include those that have been updated after this timestamp. The timestamp must be provided in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. <ul><li>`fromIngestTimestamp` for **profiles**, if provided: Includes all the merged profiles where merged updated timestamp is greater than the given timestamp. Supports `greater_than` operand.</li><li>`fromTimestamp` for **events**: All events ingested after this timestamp will be exported corresponding to resultant profile result. This is not the event time itself but the ingestion time for the events.</li> |
-| `filter.emptyProfiles` | - *(Optional)* Boolean. Profiles can contain Profile records, ExperienceEvent records, or both. Profiles with no Profile records and only ExperienceEvent records are referred to as "emptyProfiles". To export all profiles in the Profile store, including the "emptyProfiles", set the value of `emptyProfiles` to `true`. If `emptyProfiles` is set to `false`, only profiles with Profile records in the store are exported. By default, if `emptyProfiles` attribute is not included, only profiles containing Profile records are exported. |
+| `filter.emptyProfiles` | *(Optional)* Boolean. Profiles can contain Profile records, ExperienceEvent records, or both. Profiles with no Profile records and only ExperienceEvent records are referred to as "emptyProfiles". To export all profiles in the Profile store, including the "emptyProfiles", set the value of `emptyProfiles` to `true`. If `emptyProfiles` is set to `false`, only profiles with Profile records in the store are exported. By default, if `emptyProfiles` attribute is not included, only profiles containing Profile records are exported. |
 | `additionalFields.eventList` | *(Optional)* Controls the time series event fields exported for child or associated objects by providing one or more of the following settings:<ul><li>`eventList.fields`: Control the fields to export.</li><li>`eventList.filter`: Specifies criteria that limits the results included from associated objects. Expects a minimum value required for export, typically a date.</li><li>`eventList.filter.fromIngestTimestamp`: Filters time series events to those that have been ingested after the provided timestamp. This is not the event time itself but the ingestion time for the events.</li></ul> |
 | `destination` | **(Required)** Destination information for the exported data:<ul><li>`destination.datasetId`: **(Required)** The ID of the dataset where data is to be exported.</li><li>`destination.segmentPerBatch`: *(Optional)* A Boolean value that, if not provided, defaults to `false`. A value of `false` exports all segment IDs into a single batch ID. A value of `true` exports one segment ID into one batch ID. Note that setting the value to be `true` may affect batch export performance.</li></ul> |
 | `schema.name` | **(Required)** The name of the schema associated with the dataset where data is to be exported. |
@@ -286,7 +286,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
 **Response**
@@ -435,7 +435,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Response**
@@ -539,7 +539,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Response**

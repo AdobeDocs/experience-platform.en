@@ -13,7 +13,7 @@ Boolean functions are used to perform boolean logic on different elements in Pro
 
 The `and` function is used to create a logical conjunction.
 
-**Format**at
+**Format**
 
 ```sql
 {QUERY} and {QUERY}
@@ -31,7 +31,7 @@ homeAddress.countryISO = "CA" and person.birthYear = 1985
 
 The `or` function is used to create a logical disjunction.
 
-**Format**at
+**Format**
 
 ```sql
 {QUERY} or {QUERY}

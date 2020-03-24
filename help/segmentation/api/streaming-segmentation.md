@@ -39,7 +39,7 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
-> **Note:** For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+>[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
@@ -548,4 +548,4 @@ The same operation can be used to disable a schedule by replacing the "value" in
 
 Now that you have enabled both new and existing segments for streaming segmentation, and enabled scheduled segmentation to develop a baseline and perform recurring evaluations, you can begin to create segments for your organization. 
 
-To learn how to perform similar actions and work with segments using the Adobe Experience Platform user interface, please visit the [Segment Builder user guide](../ui/../home.md).
+To learn how to perform similar actions and work with segments using the Adobe Experience Platform user interface, please visit the [Segment Builder user guide](../ui/overview.md).

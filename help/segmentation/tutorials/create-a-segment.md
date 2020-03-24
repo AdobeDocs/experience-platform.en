@@ -253,7 +253,7 @@ A successful response returns the details of the estimate.
 | `state` | The current state of the preview job. Will be "RUNNING" until processing is complete, at which point it becomes "RESULT_READY" or "FAILED". |
 | `_links.preview` | When the preview job's current state is "RESULT_READY", this attribute provides a URL to view the estimate. |
 
-### View a preview**
+### View a preview
 
 **API format**
 
