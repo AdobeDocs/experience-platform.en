@@ -11,10 +11,10 @@ user-guide-title: Adobe Experience Platform Help
 * Experience Platform documentation {#documentation}
   * [Documentation overview](documentation/overview.md)
   * [Access control](https://docs-stg.corp.adobe.com/content/help/en/experience-platform/access-control/home.html)
-  * [Catalog & Datasets](https://docs-stg.corp.adobe.com/content/help/en/experience-platform/catalog/home.html)
+  * [Catalog and Datasets](https://docs-stg.corp.adobe.com/content/help/en/experience-platform/catalog/home.html)
   * [Data Access](https://docs-stg.corp.adobe.com/content/help/en/experience-platform/data-access/home.html)
   * [Data Governance](https://docs-stg.corp.adobe.com/content/help/en/experience-platform/data-governance/home.html)
-  * [Data Ingestion (Batch & Streaming)](https://docs-stg.corp.adobe.com/content/help/en/experience-platform/ingestion/home.html)
+  * [Data Ingestion (Batch and Streaming)](https://docs-stg.corp.adobe.com/content/help/en/experience-platform/ingestion/home.html)
   * [Data Science Workspace](https://docs-stg.corp.adobe.com/content/help/en/experience-platform/data-science-workspace/home.html)
   * [Decisioning](https://docs-stg.corp.adobe.com/content/help/en/experience-platform/decisioning/home.html)
   * [Destinations](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html)
