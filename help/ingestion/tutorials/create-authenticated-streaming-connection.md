@@ -1,16 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Create a streaming connection
+title: Create an authenticated streaming connection
 topic: tutorial
 ---
 
-# Creating a streaming connection
+# Creating an authenticated streaming connection
 
-This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs. Specifically, this documentation will help you:
-
-- [Create a connection](#create-a-connection)
-- [Fetch the data collection URL](#get-data-collection-url)
+Authenticated Data Collection allows Adobe Experience Platform services, such as Real-time Customer Profile and Identity, to differentiate between records coming from trusted sources and un-trusted sources. Clients that want to send Personally Identifiable Information (PII) can do so by sending access tokens as part of the POST request.
 
 ## Getting started
 
@@ -59,7 +56,9 @@ POST /flowservice/connections
 
 **Request**
 
->[!NOTE] The values for the listed `providerId` and the `connectionSpec` **must** be used as shown in the example, as they are what specifies to the API that you are creating a streaming connection for streaming ingestion.. 
+>[!NOTE] The values for the listed `providerId` and the `connectionSpec` **must** be used as shown in the example, as they are what specifies to the API that you are creating a streaming connection for streaming ingestion. 
+>
+> Notice how `authenticationRequired: true` has been added to the request payload.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -81,7 +80,8 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
          "params": {
              "sourceId": "Sample connection",
              "dataType": "xdm",
-             "name": "Sample connection"
+             "name": "Sample connection",
+             "authenticationRequired": true
          }
      }
  }
@@ -168,14 +168,35 @@ A successful response returns HTTP status 200 with detailed information about th
 
 ## Next steps
 
-Now that you have created a streaming connection, you can stream either time series or record data, allowing you to ingest data within Platform. To learn how to stream time series data to Platform, go to the [streaming time series data tutorial](./streaming-time-series-data.md). To learn how to stream record data to Platform, go to the [streaming record data tutorial](./streaming-record-data.md).
+Now that you have created an authenticated streaming connection, you can stream either time series or record data, allowing you to ingest data within Platform. To learn how to stream time series data to Platform, go to the [streaming time series data tutorial](./streaming-time-series-data.md). To learn how to stream record data to Platform, go to the [streaming record data tutorial](./streaming-record-data.md).
 
 ## Appendix
 
-This section provides supplemental information on creating streaming connections using the API.
+This section provides supplemental information about authenticated streaming connections.
 
-### Authenticated streaming connections
+### Sending messages to an authenticated streaming connection
 
-Authenticated data collection allows Adobe Experience Platform services, such as Real-time Customer Profile and Identity, to differentiate between records coming from trusted sources and un-trusted sources. Clients that want to send Personally Identifiable Information (PII) can do so by sending IMS Access Tokens as part of the POST request - if the IMS Token is valid, the records are marked as collected from valid sources.
+If a streaming connection has authentication enabled, the client will be required to add the `Authorization` header to their request. 
 
-More information about creating an authenticated streaming connection can be found in the [create an authenticated streaming connection tutorial](create-authenticated-streaming-connection.md).
+If the `Authorization` header is not present, or an invalid/expired access token is sent, an HTTP 401 Unauthorized response will be returned, with a similar response as below:
+
+**Response**
+
+```json
+{
+    "type": "https://ns.adobe.com/adobecloud/problem/data-collection-service-authorization",
+    "status": "401",
+    "title": "Authorization",
+    "report": {
+        "message": "[id] Ims service token is empty"
+    }
+}
+```
+
+### Sending messages to an unauthenticated streaming connection with Authorization 
+
+If a streaming connection does not have authentication enabled, the client can still (optionally) add the `Authorization` header to their request.
+
+If the `Authorization` header is not present, or an invalid/expired access token is sent, an HTTP 401 Unauthorized response will be returned, the data will still be published, but with the `authenticatedRequest` field set to `false`.
+
+If the `Authorization` header is present and valid, the data will be published with the `authenticatedRequest` field set to `true`.
