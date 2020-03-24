@@ -9,7 +9,7 @@ seo-description: In Adobe Real-time Customer Data Platform, select Destinations 
 
 In Adobe Real-time Customer Data Platform, select **Destinations** from the left navigation bar to access the Destinations workspace.
 
-The Destinations workspace consists of four sections, **Catalog**, **Browse**, **Accounts**, and **Data flows**, which are described in the sections below.
+The Destinations workspace consists of four sections, **Catalog**, **Browse**, **Accounts**, and **System View**, which are described in the sections below.
 
 ![Destinations-overview](/help/rtcdp/destinations/assets/destinations-overview.png)
 
@@ -27,7 +27,7 @@ For more information on destination categories and information on each destinati
 
 ## Browse {#browse}
 
-The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection. Destinations with the enabled toggle turned on set the destination to active and vice-versa. You can also view the destinations where you have data flowing by selecting **Segments > Browse** and selecting a segment to inspect. See the table below for all the information that is provided for each destination in the Browse tab:
+The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection. Destinations with the **enabled** toggle turned on set the destination to active and vice-versa. You can also view the destinations where you have data flowing by selecting **Segments > Browse** and selecting a segment to inspect. See the table below for all the information that is provided for each destination in the Browse tab:
 
 ![Browse Tab](/help/rtcdp/destinations/assets/browse-tab.png)
 
@@ -60,12 +60,12 @@ Element | Description
  Flows | Represents the number of unique successful destination flows connected with basic information created for a destination.
  Authorized | The date when the connection to this destination was authorized.
  
-## Data flows {#data-flows}
+## System View {#system-view}
 
-The **[!UICONTROL Data flows]** tab displays a graphic representation of the activation flows that you have set up in the Real-time Customer Data Platform.
+The **[!UICONTROL System View]** tab displays a graphic representation of the activation flows that you have set up in the Real-time Customer Data Platform.
 
 ![Data-flows1](/help/rtcdp/destinations/assets/data-flows1.png)
 
-Select any of the destinations displayed on the page and press **[!UICONTROL View flows]** to see information on all the data flows you have set up for each destination.
+Select any of the destinations displayed on the page and press **[!UICONTROL View flows]** to see information on all the connections you have set up for each destination.
 
 ![Data-flows2](/help/rtcdp/destinations/assets/data-flows2.png)
