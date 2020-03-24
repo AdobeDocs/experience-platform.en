@@ -11,12 +11,12 @@ Insights contain metrics which are used to empower a data scientist to evaluate 
 
 ## Retrieve a list of Insights
 
-You can retrieve a list of Insights by performing a single GET request to the insights endpoint.  To help filter results, you can specify query parameters in the request path. For a list of available queries, refer to the appendix section on [query parameters for asset retrieval](#query-parameters-for-asset-retrieval).
+You can retrieve a list of Insights by performing a single GET request to the insights endpoint.  To help filter results, you can specify query parameters in the request path. For a list of available queries, refer to the appendix section on [query parameters for asset retrieval](appendix.md#query).
 
 **API Format**
 
 ```http
-GET /insights/
+GET /insights
 ```
 
 **Request**
@@ -101,7 +101,7 @@ A successful response returns a payload that includes a list of insights and eac
 
 ## Retrieve a specific Insight
 
-To look up a particular insight make a GET request and provide a valid `{INSIGHT_ID}` in the request path. To help filter results, you can specify query parameters in the request path. For a list of available queries, refer to the appendix section on [query parameters for asset retrieval](#query-parameters-for-asset-retrieval).
+To look up a particular insight make a GET request and provide a valid `{INSIGHT_ID}` in the request path. To help filter results, you can specify query parameters in the request path. For a list of available queries, refer to the appendix section on [query parameters for asset retrieval](appendix.md#query).
 
 **API Format**
 
