@@ -5,19 +5,13 @@ title: Real-time Customer Profile API developer guide
 topic: guide
 ---
 
-# Edge projections
+# Edge destinations and projections
 
-In order to drive coordinated, consistent, and personalized experiences for your customers across multiple channels in real-time, the right data needs to be readily available and continuously updated as changes happen. Adobe Experience Platform enables this real-time access to data through the use of what are known as edges.
-
-An edge is a geographically placed server that stores data and makes it readily accessible to applications. For example, Adobe applications such as Adobe Target and Adobe Campaign use edges in order to provide personalized customer experiences in real-time. Data is routed to an edge by a projection, with a projection destination defining the edge to which data will be sent, and a projection configuration defining the specific information that will be made available on the edge.
-
-This guide provides detailed instructions for using the Real-time Customer Profile API to work with edge projections, including destinations and configurations.
+In order to drive coordinated, consistent, and personalized experiences for your customers across multiple channels in real-time, the right data needs to be readily available and continuously updated as changes happen. Adobe Experience Platform enables this real-time access to data through the use of what are known as edges. An edge is a geographically placed server that stores data and makes it readily accessible to applications. For example, Adobe applications such as Adobe Target and Adobe Campaign use edges in order to provide personalized customer experiences in real-time. Data is routed to an edge by a projection, with a projection destination defining the edge to which data will be sent, and a projection configuration defining the specific information that will be made available on the edge. This guide provides detailed instructions for using the Real-time Customer Profile API to work with edge projections, including destinations and configurations.
 
 ## Getting started
 
-The API endpoints used in this guide are part of the Real-time Customer Profile API. Before continuing, please review the [Real-time Customer Profile developer guide](getting-started.md).
-
-In particular, the [getting started section](getting-started.md#getting-started) of the Profile developer guide includes links to related topics, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform APIs.
+The API endpoints used in this guide are part of the Real-time Customer Profile API. Before continuing, please review the [Real-time Customer Profile developer guide](getting-started.md). In particular, the [getting started section](getting-started.md#getting-started) of the Profile developer guide includes links to related topics, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform APIs.
 
 ## Projection destinations
 
@@ -486,9 +480,7 @@ A successful response returns the details of the newly created projection config
 
 ## Selectors {#selectors}
 
-A selector is a comma-separated list of XDM field names. In a projection configuration, the selector designates the properties to be included in projections.
-
-The format of the `selector` parameter value is loosely based on XPath syntax. Supported syntax is summarized below, with additional examples provided for reference.
+A selector is a comma-separated list of XDM field names. In a projection configuration, the selector designates the properties to be included in projections. The format of the `selector` parameter value is loosely based on XPath syntax. Supported syntax is summarized below, with additional examples provided for reference.
 
 ### Supported syntax
 
@@ -633,6 +625,4 @@ Returns only the values of the `type` and `city` fields for each element in the 
 
 ## Next Steps
 
-This guide has shown you the steps involved in order to configure edge projections and destinations, including how to properly format the `selector` parameter. You can now create new edge destinations and projections specific to the needs of your organization. 
-
-To discover additional actions available through the Profile API, please see the [Real-time Customer Profile API developer guide](getting-started.md).
+This guide has shown you the steps involved in order to configure edge projections and destinations, including how to properly format the `selector` parameter. You can now create new edge destinations and projections specific to the needs of your organization. To discover additional actions available through the Profile API, please see the [Real-time Customer Profile API developer guide](getting-started.md).

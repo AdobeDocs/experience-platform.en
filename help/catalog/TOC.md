@@ -1,10 +1,10 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Metadata and Storage Help
+user-guide-title: Catalog and Datasets Help
 ---
 
-# Metadata and storage {#catalog}
+# Catalog and Datasets {#catalog}
 
 * [Catalog Service overview](home.md)
 * Catalog Service API {#api}
@@ -23,6 +23,5 @@ user-guide-title: Metadata and Storage Help
   * [Datasets overview](datasets/overview.md)
   * [Datasets user guide](datasets/user-guide.md)
   * [Create and populate a dataset using APIs](datasets/create.md)
-  * [Configure a dataset for Real-time Customer Profile and Identity Service using APIs](datasets/profile.md)
 * [Data protection in Experience Platform](data-protection.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)

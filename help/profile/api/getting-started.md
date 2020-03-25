@@ -45,7 +45,7 @@ All requests with a payload in the request body (such as POST, PUT, and PATCH ca
 
 ## (Alpha) Computed attributes
 
->[!Note] 
+>[!IMPORTANT] 
 >Computed attribute functionality is in alpha and is not available to all users. Documentation and functionality are subject to change.
 
 Computed attributes enable you to automatically compute the value of fields based on other values, calculations, and expressions. Computed attributes operate on the profile level, meaning you can aggregate values across all records and events.
@@ -60,6 +60,10 @@ Adobe Experience Platform enables real-time personalization of customer experien
 
 For detailed information on working with edge projections, please visit the [edge projections sub-guide](edge-projections.md).
 
+## Entities
+
+Through Adobe Experience Platform you can access Real-time Customer Profile data using RESTful APIs or the user interface. To learn how to access entities, more commonly known as "profiles", using the API, follow the steps outlined in the [entities sub-guide](entities.md).
+
 ## Merge policies
 
 When bringing data from multiple sources together in Experience Platform, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create individual customer profiles. 
@@ -68,9 +72,9 @@ Using the Real-time Customer Profile API, you can create new merge policies, man
 
 For a guide to working with merge policies using the Platform UI, please see the [Merge Policies user guide](../ui/merge-policies.md).
 
-## Profile system search
+## Profile search
 
-
+Profile search is used to search and index configurable fields contained across various data sources and return them in near real-time. To begin working with Profile search, see the [search sub-guide](profile-search.md)
 
 ## Profile system jobs
 
