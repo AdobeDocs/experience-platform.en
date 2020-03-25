@@ -240,7 +240,6 @@ GET /export/batches/{BATCH_ID}/failed?path=conversion_errors
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{DATASET_ID}` | The `id` value of the dataset you are retrieving error information from. |
 | `{BATCH_ID}` | The `id` value of the batch you are retrieving error information from. |
 
 **Request**
