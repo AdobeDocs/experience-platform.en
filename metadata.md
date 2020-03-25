@@ -2,12 +2,12 @@
 cloud: experience-cloud
 product: adobe experience platform
 solution-title: Documentation
-solution-hub-url: https://docs.adobe.com/content/help/en/experience-platform/landing/home.html
+solution-hub-url: https://docs-stg.corp.adobe.com/content/help/en/experience-platform/landing/documentation/overview.html
 solution-image: assets/experience_cloud_appicon_32.png
 getting-started-title: Platform Overview
-getting-started-url: https://experienceleague.adobe.com/#recommended/solutions/experience-platform
+getting-started-url: https://docs-stg.corp.adobe.com/content/help/en/experience-platform/landing/home.html
 tutorials-title: Tutorials
-tutorials-url: https://experienceleague.adobe.com/#recommended/solutions/experience-platform
+tutorials-url: https://docs-stg.corp.adobe.com/content/help/en/experience-platform/tutorials/home.html
 git-repo: https://github.com/AdobeDocs/experience-platform.en
 index: yes
 ---
@@ -25,7 +25,3 @@ The metadata.md file includes repo-level metadata that passes through to user gu
 | tutorials-url | Link to video tutorials--either helpx tutorials or KT tutorials |
 | mini-toc-levels | Determines the number of heading levels that appear in right rail. default is 2 |
 | git-repo | Specifies the location of the master repo for internal use |
-
-solution-hub-url: https://docs.adobe.com/content/help/en/experience-platform/landing/documentation/overview.html
-getting-started-url: https://docs.adobe.com/content/help/en/experience-platform/landing/home.html
-tutorials-url: https://docs.adobe.com/content/help/en/experience-platform/tutorials/home.html
