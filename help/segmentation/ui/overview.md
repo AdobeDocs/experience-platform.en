@@ -7,17 +7,7 @@ topic: ui guide
 
 # Segment Builder user guide
 
-Adobe Experience Platform Segmentation Service provides a RESTful API and user interface for creating segment definitions from Real-time Customer Profile data. In addition to providing an overview of Segment Builder, the UI implementation of Segmentation Service, this document also provides helpful information on the following topics:
-
-- [Accessing segment definitions](#accessing-segment-definitions): How to access segment definitions within Adobe Experience Platform.
-- [Segment Builder workspace](#segment-builder-workspace): Familiarize yourself with the layout of the Segment Builder workspace.
-- [Segment definition building blocks](#segment-definition-building-blocks): Understand the basic components involved in segmentation.
-- [Rule builder canvas](#rule-builder-canvas): Define rules that describe the behavior and characteristics of your target audience.
-- [Containers](#containers): Control how rules are executed by using nested queries.
-- [Merge policies](#merge-policies): Select the merge policy that will be used to determine how data will be prioritized and what data will be combined.
-- [Segment properties](#segment-properties): Understand the resulting segment properties from the rules created on the rule builder canvas.
-- [Enabling scheduled segmentation](#enable-scheduled-segmentation): Enable segment definitions to evaluate on a recurring schedule. 
-- [Enabling streaming segmentation](#enable-streaming-segmentation): Enable segment definitions to continuously evaluate as data is ingested.
+Adobe Experience Platform Segmentation Service provides a RESTful API and user interface for creating segment definitions from Real-time Customer Profile data.
 
 ## Getting started
 

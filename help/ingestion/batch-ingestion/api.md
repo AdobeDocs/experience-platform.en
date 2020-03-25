@@ -7,15 +7,7 @@ topic: developer guide
 
 # Batch ingestion developer guide
 
-This document provides a comprehensive overview of using [batch ingestion APIs](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Specifically, this documentation will show you how to do the following:
-
-- [Ingest JSON files](#ingest-json-files)
-- [Ingest Parquet files](#ingest-parquet-files)
-- [Ingest large Parquet files](#ingest-large-parquet-files)
-- [Ingest CSV files](#ingest-csv-files)
-- [Cancel a batch](#cancel-a-batch)
-- [Delete a batch](#delete-a-batch)
-- [Replay a batch](#replay-a-batch)
+This document provides a comprehensive overview of using [batch ingestion APIs](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). 
 
 The appendix to this document provides information for [formatting data to be used for ingestion](#data-transformation-for-batch-ingestion), including sample CSV and JSON data files.
 

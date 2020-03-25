@@ -108,9 +108,9 @@ GET /batches?createdAfter={START_TIMESTAMP}&dataSet={DATASET_ID}&sort={SORT_BY}
 
 | Property | Description | 
 | -------- | ----------- |
-| {START_TIMESTAMP} | The start timestamp in milliseconds (for example, 1514836799000). |
-| {DATASET_ID} | The dataset identifier. |
-| {SORT_BY} | Sorts the response by the value provided. For example, `desc:created` sorts the objects by creation date in descending order. |
+| `{START_TIMESTAMP}` | The start timestamp in milliseconds (for example, 1514836799000). |
+| `{DATASET_ID}` | The dataset identifier. |
+| `{SORT_BY}` | Sorts the response by the value provided. For example, `desc:created` sorts the objects by creation date in descending order. |
 
 **Request**
 
@@ -196,7 +196,7 @@ GET /batches/{BATCH_ID}/files
 
 | Property | Description |
 | -------- | ----------- |
-| {BATCH_ID} | Batch identifier of the batch that you are trying to access. |
+| `{BATCH_ID}` | Batch identifier of the batch that you are trying to access. |
 
 **Request**
 
@@ -237,7 +237,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c6f332168
 
 | Property | Description |
 | -------- | ----------- |
-| data._links > self > href | The URL to access this file. |
+| `data._links.self.href` | The URL to access this file. |
 
 The response contains a data array that lists all the files within the specified batch. Files are referenced by their file ID, which is found under the `dataSetFileId` field.
 
@@ -253,7 +253,7 @@ GET /files/{FILE_ID}
 
 | Property | Description |
 | -------- | ----------- |
-| {FILE_ID} | The identifier of the file you want to access. |
+| `{FILE_ID}` | The identifier of the file you want to access. |
 
 **Request**
 
@@ -293,8 +293,8 @@ Depending on whether the file ID points to an individual file or a directory, th
 
 | Property | Description |
 | -------- | ----------- |
-| {FILE_NAME}.parquet | The name of the file. |
-| _links.self.href | The URL to download the file. |
+| `{FILE_NAME}.parquet` | The name of the file. |
+| `_links.self.href` | The URL to download the file. |
 
 **Case 2: File ID points to a directory**
 
@@ -339,7 +339,7 @@ Depending on whether the file ID points to an individual file or a directory, th
 
 | Property | Description |
 | -------- | ----------- | 
-| data._links.self.href | The URL to download the associated file. |
+| `data._links.self.href` | The URL to download the associated file. |
 
 This response returns a directory containing two separate files, with IDs `{FILE_ID_2}` and `{FILE_ID_3}`. In this scenario, you will need to follow the URL of each file in order to access the file.
 
@@ -355,8 +355,8 @@ HEAD /files/{FILE_ID}?path={FILE_NAME}
 
 | Property | Description |
 | -------- | ----------- |
-| {FILE_ID} | The file's identifier. |
-| {FILE_NAME} | The file name (for example, profiles.parquet) |
+| `{FILE_ID}` | The file's identifier. |
+| `{FILE_NAME`} | The file name (for example, profiles.parquet) |
 
 **Request**
 
@@ -386,8 +386,8 @@ GET /files/{FILE_ID}?path={FILE_NAME}
 
 | Property | Description |
 | -------- | ----------- |
-| {FILE_ID} | The file's identifier. |
-| {FILE_NAME} | The file name (for example, profiles.parquet). |
+| `{FILE_ID}` | The file's identifier. |
+| `{FILE_NAME`} | The file name (for example, profiles.parquet). |
 
 **Request**
 
@@ -417,8 +417,8 @@ GET /files/{FILE_ID}?path={FILE_NAME}
 
 | Property | Description |
 | -------- | ----------- |
-| {FILE_ID} | The file's identifier. |
-| {FILE_NAME} | The file name (for example, profiles.parquet) |
+| `{FILE_ID} `| The file's identifier. |
+| `{FILE_NAME}` | The file name (for example, profiles.parquet) |
 
 **Request**
 
@@ -433,7 +433,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 
 | Property | Description |
 | -------- | ----------- | 
-| bytes=0-99 | Specifies the range of bytes to download. If this is not specified, the API will download the entire file. In this example, the first 100 bytes will be downloaded. |
+| `Range: bytes=0-99` | Specifies the range of bytes to download. If this is not specified, the API will download the entire file. In this example, the first 100 bytes will be downloaded. |
 
 **Response**
 
@@ -461,9 +461,9 @@ GET /batches/{BATCH_ID}/files?start={OFFSET}&limit={LIMIT}
 
 | Property | Description | 
 | -------- | ----------- |
-| {BATCH_ID} | Batch identifier of the batch that you are trying to access. |
-| {OFFSET} | The specified index to start the result array (for example, start=0) |
-| {LIMIT} | Controls how many results gets returned in the result array (for example, limit=1) |
+| `{BATCH_ID}` | Batch identifier of the batch that you are trying to access. |
+| `{OFFSET}` | The specified index to start the result array (for example, start=0) |
+| `{LIMIT}` | Controls how many results gets returned in the result array (for example, limit=1) |
 
 **Request**
 

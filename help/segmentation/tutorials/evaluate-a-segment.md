@@ -15,7 +15,7 @@ This tutorial requires a working understanding of the various Adobe Experience P
 
 - [Real-time Customer Profile](../../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
 - [Adobe Experience Platform Segmentation Service](../home.md): Allows you to build audience segments from Real-time Customer Profile data.
-- [Experience Data Model (XDM)](../../xdm/home.md: The standardized framework by which Platform organizes customer experience data.
+- [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
 - [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ### Required headers
