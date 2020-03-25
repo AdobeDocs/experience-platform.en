@@ -17,24 +17,24 @@ To begin working with Experience Platform services, select a guide from the left
 
 ## Experience Platform tutorials
 
-Get started with Platform quickly and easily by following along with step-by-step tutorials for everything from preparing your data for ingestion to advanced machine learning algorithms. These tutorials have been designed to supplement the information found within the Experience Platform documentation, so for best results keep the documents on-hand while completing the tutorials. To view available tutorials, visit the [Adobe Experience Platform tutorials section](../tutorials/home.md)
+Get started with Platform quickly and easily by following along with step-by-step tutorials for everything from preparing your data for ingestion to advanced machine learning algorithms. These tutorials have been designed to supplement the information found within the Experience Platform documentation, so for best results keep the documents on-hand while completing the tutorials. To view available tutorials, select Experience Platform tutorials in the left navigation.
 
-## Reference documents
+## Reference documents and resources
 
-* **[Release Notes](release-notes.md)**<br/>
+* **Release notes**<br/>
 Get information about the most recent release and review past releases.
 
-* **[Glossary](glossary.md)**<br/>
+* **Glossary**<br/>
 Review Adobe Experience Platform terminology.
 
-* **[Troubleshooting Guide](troubleshooting.md)**<br/>
+* **Troubleshooting guide**<br/>
 Find resolutions to common errors and answers to frequently asked questions.
 
-* **[API fundamentals](api-fundamentals.md)**<br/>
+* **API fundamentals**<br/>
 Learn the basics of working with Platform APIs.
 
-* **[API Reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)**<br/>
-Find details about available endpoints, including headers, parameters, sample requests, and responses.
+* **API reference**<br/>
+Find details about available endpoints, including headers, parameters, sample requests, and responses. These documents are hosted on Adobe I/O.
 
 
 

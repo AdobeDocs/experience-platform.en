@@ -11,12 +11,9 @@ Data ingestion allows you to ingest your data to Adobe Experience Platform. You 
 
 This user guide provides a steps on how to monitor your data within Adobe Experience Platform user interface. This guide requires you to have an Adobe ID and access to Adobe Experience Platform.
 
-- [Monitoring streaming end-to-end data flows](#monitor-streaming-end-to-end-data-flows)
-- [Monitoring batch end-to-end data flows](#monitor-batch-end-to-end-data-flows)
-
 ## Monitor streaming end-to-end data ingestion
 
-In the [Experience Platform UI](http:/platform.adobe.com), click **Monitoring** on the left navigation menu, then click **Streaming end-to-end**.
+In the [Experience Platform UI](https://platform.adobe.com), click **Monitoring** on the left navigation menu, then click **Streaming end-to-end**.
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
@@ -48,7 +45,7 @@ In addition, failed records provide details on the errors that ocurred while pro
 
 ## Monitor batch end-to-end data ingestion
 
-In the [Experience Platform UI](http:/platform.adobe.com), click  **Monitoring**  on the left navigation menu. 
+In the [Experience Platform UI](https://platform.adobe.com), click  **Monitoring**  on the left navigation menu. 
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 

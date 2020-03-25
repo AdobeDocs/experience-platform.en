@@ -7,15 +7,7 @@ topic: developer guide
 
 # Batch ingestion developer guide
 
-This document provides a comprehensive overview of using [batch ingestion APIs](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Specifically, this documentation will show you how to do the following:
-
-- [Ingest JSON files](#ingest-json-files)
-- [Ingest Parquet files](#ingest-parquet-files)
-- [Ingest large Parquet files](#ingest-large-parquet-files)
-- [Ingest CSV files](#ingest-csv-files)
-- [Cancel a batch](#cancel-a-batch)
-- [Delete a batch](#delete-a-batch)
-- [Replay a batch](#replay-a-batch)
+This document provides a comprehensive overview of using [batch ingestion APIs](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). 
 
 The appendix to this document provides information for [formatting data to be used for ingestion](#data-transformation-for-batch-ingestion), including sample CSV and JSON data files.
 
@@ -123,7 +115,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 | Parameter | Description |
 | --------- | ----------- |
-| datasetId | The ID of the reference dataset. |
+| `datasetId` | The ID of the reference dataset. |
 
 **Response**
 
@@ -149,8 +141,8 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 | Parameter | Description |
 | --------- | ----------- |
-| id | The ID of the newly created batch. |
-| relatedObjects.id | The ID of the referenced dataset. |
+| `id` | The ID of the newly created batch. |
+| `relatedObjects.id` | The ID of the referenced dataset. |
 
 ### Upload files
 
@@ -166,9 +158,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Parameter | Description |
 | --------- | ----------- |
-| {BATCH_ID} | The ID of the batch you want to upload to. |
-| {DATASET_ID} | The ID of the batch's reference dataset. |
-| {FILE_NAME} | The name of the file you want to upload. |
+| `{BATCH_ID}` | The ID of the batch you want to upload to. |
+| `{DATASET_ID}` | The ID of the batch's reference dataset. |
+| `{FILE_NAME}` | The name of the file you want to upload. |
 
 **Request**
 
@@ -186,7 +178,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Description |
 | --------- | ----------- |
-| {FILE_PATH_AND_NAME} | The full path and name of the file you are trying to upload. |
+| `{FILE_PATH_AND_NAME}` | The full path and name of the file you are trying to upload. |
 
 **Response**
 
@@ -206,7 +198,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 
 | Parameter | Description |
 | --------- | ----------- |
-| {BATCH_ID} | The ID of the batch you want to upload to. |
+| `{BATCH_ID}` | The ID of the batch you want to upload to. |
 
 **Request**
 
@@ -251,7 +243,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 | Parameter | Description |
 | --------- | ------------ |
-| {DATASET_ID} | The ID of the reference dataset. |
+| `{DATASET_ID}` | The ID of the reference dataset. |
 
 **Response**
 
@@ -281,9 +273,9 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 | Parameter | Description |
 | --------- | ----------- |
-| {BATCH_ID} | The ID of the newly created batch. |
-| {DATASET_ID} | The ID of the referenced dataset. | 
-| {USER_ID} | The ID of the user who created the batch. |
+| `{BATCH_ID}` | The ID of the newly created batch. |
+| `{DATASET_ID}` | The ID of the referenced dataset. | 
+| `{USER_ID}` | The ID of the user who created the batch. |
 
 ### Upload files
 
@@ -297,9 +289,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Parameter | Description |
 | --------- | ----------- |
-| {BATCH_ID} | The ID of the batch you want to upload to. |
-| {DATASET_ID} | The ID of the batch's reference dataset. |
-| {FILE_NAME} | The name of the file you want to upload. |
+| `{BATCH_ID}` | The ID of the batch you want to upload to. |
+| `{DATASET_ID}` | The ID of the batch's reference dataset. |
+| `{FILE_NAME}` | The name of the file you want to upload. |
 
 **Request**
 
@@ -317,7 +309,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Description |
 | --------- | ----------- |
-| {FILE_PATH_AND_NAME} | The full path and name of the file you're trying to upload.  |
+| `{FILE_PATH_AND_NAME}` | The full path and name of the file you're trying to upload.  |
 
 **Response**
 
@@ -337,7 +329,7 @@ POST /batches/{BATCH_ID}?action=complete
 
 | Parameter | Description |
 | --------- | ----------- |
-| {BATCH_ID} | The ID of the batch you want to signal is ready for completion. |
+| `{BATCH_ID}` | The ID of the batch you want to signal is ready for completion. |
 
 **Request**
 
@@ -388,7 +380,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 | Parameter | Description |
 | --------- | -----------  |
-| {DATASET_ID} | The ID of the reference dataset. |
+| `{DATASET_ID}` | The ID of the reference dataset. |
 
 **Response**
 
@@ -418,9 +410,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 | Parameter | Description |
 | --------- | ----------- |
-| {BATCH_ID} | The ID of the newly created batch. |
-| {DATASET_ID} | The ID of the referenced dataset. |
-| {USER_ID} | The ID of the user who created the batch. |
+| `{BATCH_ID}` | The ID of the newly created batch. |
+| `{DATASET_ID}` | The ID of the referenced dataset. |
+| `{USER_ID}` | The ID of the user who created the batch. |
 
 ### Initialize large file
 
@@ -434,9 +426,9 @@ POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Parameter | Description |
 | --------- | ----------- |
-| {BATCH_ID} | The ID of the newly created batch. |
-| {DATASET_ID} | The ID of the referenced dataset. |
-| {FILE_NAME} | The name of the file that is about to be initialized. |
+| `{BATCH_ID}` | The ID of the newly created batch. |
+| `{DATASET_ID}` | The ID of the referenced dataset. |
+| `{FILE_NAME}` | The name of the file that is about to be initialized. |
 
 **Request**
 
@@ -466,9 +458,9 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Parameter | Description |
 | --------- | ----------- |
-| {BATCH_ID} | The ID of the batch you want to upload to. |
-| {DATASET_ID} | The ID of the batch's reference dataset. |
-| {FILE_NAME} | The name of the file you want to upload. |
+| `{BATCH_ID}` | The ID of the batch you want to upload to. |
+| `{DATASET_ID}` | The ID of the batch's reference dataset. |
+| `{FILE_NAME}` | The name of the file you want to upload. |
 
 **Request**
 
@@ -487,8 +479,8 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 | Parameter | Description |
 | --------- | ----------- |
-| {CONTENT_RANGE} | In integers, the beginning and the end of the requested range. |
-| {FILE_PATH_AND_NAME} | The full path and name of the file you're trying to upload. |
+| `{CONTENT_RANGE}` | In integers, the beginning and the end of the requested range. |
+| `{FILE_PATH_AND_NAME}` | The full path and name of the file you're trying to upload. |
 
 
 **Response**
@@ -509,9 +501,9 @@ POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Parameter | Description |
 | --------- | ----------- |
-| {BATCH_ID} | The ID of the batch you want to signal completion of. |
-| {DATASET_ID} | The ID of the batch's reference dataset. |
-| {FILE_NAME} | The name of the file you want to signal completion of. |
+| `{BATCH_ID}` | The ID of the batch you want to signal completion of. |
+| `{DATASET_ID}` | The ID of the batch's reference dataset. |
+| `{FILE_NAME}` | The name of the file you want to signal completion of. |
 
 **Request**
 
@@ -541,7 +533,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 
 | Parameter | Description |
 | --------- | ----------- |
-| {BATCH_ID} | The ID of the batch you want to signal is complete. |
+| `{BATCH_ID}` | The ID of the batch you want to signal is complete. |
 
 
 **Request**
@@ -606,8 +598,8 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 | Parameter | Description |
 | --------- | ----------- |
-| {TENANT_ID} | This ID is used to ensure that resources you create are namespaced properly and contained within your IMS Organization. | 
-| {SCHEMA_ID} | The ID of the schema you've created. |
+| `{TENANT_ID}` | This ID is used to ensure that resources you create are namespaced properly and contained within your IMS Organization. | 
+| `{SCHEMA_ID}` | The ID of the schema you've created. |
 
 An explanation of what the different part of the "fileDescription" section of the JSON body can be seen below:
 
@@ -626,12 +618,12 @@ An explanation of what the different part of the "fileDescription" section of th
 
 | Parameter | Description |
 | --------- | ----------- |
-| format | The format of the mastered file, not the format of the input file. |
-| delimiters | The character to use as the delimiter. |
-| quotes | The character to use for quotes. |
-| escapes | The character to use as the escape character. |
-| header | The uploaded file **must** contain headers. Since schema validation is done, this must be set to true. In addition, headers may **not** contain any spaces - if you have any spaces in your header, please replace them with underscores instead. |
-| charset | An optional field. Other supported charsets include "US-ASCII" and "ISO-8869-1". If left empty, UTF-8 is assumed by default. |
+| `format` | The format of the mastered file, not the format of the input file. |
+| `delimiters` | The character to use as the delimiter. |
+| `quotes` | The character to use for quotes. |
+| `escapes` | The character to use as the escape character. |
+| `header` | The uploaded file **must** contain headers. Since schema validation is done, this must be set to true. In addition, headers may **not** contain any spaces - if you have any spaces in your header, please replace them with underscores instead. |
+| `charset` | An optional field. Other supported charsets include "US-ASCII" and "ISO-8869-1". If left empty, UTF-8 is assumed by default. |
 
 The dataset referenced must have the file description block listed above and must point to a valid schema in the registry. Otherwise, the file will not be mastered into parquet.
 
@@ -664,7 +656,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 | Parameter | Description |
 | --------- | ----------- |
-| {DATASET_ID} | The ID of the reference dataset. |
+| `{DATASET_ID}` | The ID of the reference dataset. |
 
 **Response**
 
@@ -694,9 +686,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 | Parameter | Description |
 | --------- | ----------- |
-| {BATCH_ID} | The ID of the newly created batch. |  
-| {DATASET_ID} | The ID of the referenced dataset. |  
-| {USER_ID} | The ID of the user who created the batch. |
+| `{BATCH_ID}` | The ID of the newly created batch. |  
+| `{DATASET_ID}` | The ID of the referenced dataset. |  
+| `{USER_ID}` | The ID of the user who created the batch. |
 
 ### Upload files
 
@@ -712,9 +704,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Parameter | Description |
 | --------- | ----------- |
-| {BATCH_ID} | The ID of the batch you want to upload to. |
-| {DATASET_ID} | The ID of the batch's reference dataset. |
-| {FILE_NAME} | The name of the file you want to upload. |
+| `{BATCH_ID}` | The ID of the batch you want to upload to. |
+| `{DATASET_ID}` | The ID of the batch's reference dataset. |
+| `{FILE_NAME}` | The name of the file you want to upload. |
 
 **Request**
 
@@ -732,7 +724,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Description |
 | --------- | ----------- |
-| {FILE_PATH_AND_NAME} | The full path and name of the file you're trying to upload. |
+| `{FILE_PATH_AND_NAME}` | The full path and name of the file you're trying to upload. |
 
 
 **Response**
@@ -779,7 +771,7 @@ POST /batches/{BATCH_ID}?action=ABORT
 
 | Parameter | Description |
 | --------- | ----------- |
-| {BATCH_ID} | The ID of the batch you want to cancel. |
+| `{BATCH_ID}` | The ID of the batch you want to cancel. |
 
 **Request**
 
@@ -809,7 +801,7 @@ POST /batches/{BATCH_ID}?action=REVERT
 
 | Parameter | Description |
 | --------- | ----------- |
-| {BATCH_ID} | The ID of the batch you want to delete. |
+| `{BATCH_ID}` | The ID of the batch you want to delete. |
 
 **Request**
 
@@ -864,7 +856,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 | Parameter | Description |
 | --------- | ----------- | 
-| {DATASET_ID} | The ID of the reference dataset. |
+| `{DATASET_ID}` | The ID of the reference dataset. |
 
 **Response**
 
@@ -900,9 +892,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 | Parameter | Description |
 | --------- | ----------- |
-| {BATCH_ID} | The ID of the newly created batch. |
-| {DATASET_ID} | The ID of the referenced dataset. |
-| {USER_ID} | The ID of the user who created the batch. |
+| `{BATCH_ID}` | The ID of the newly created batch. |
+| `{DATASET_ID}` | The ID of the referenced dataset. |
+| `{USER_ID}` | The ID of the user who created the batch. |
 
 
 ### Upload files
@@ -917,9 +909,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Parameter | Description |
 | --------- | ----------- |
-| {BATCH_ID} | The ID of the batch you want to upload to. |
-| {DATASET_ID} | The ID of the batch's reference dataset. |
-| {FILE_NAME} | The name of the file you want to upload. |
+| `{BATCH_ID}` | The ID of the batch you want to upload to. |
+| `{DATASET_ID}` | The ID of the batch's reference dataset. |
+| `{FILE_NAME}` | The name of the file you want to upload. |
 
 **Request**
 
@@ -937,7 +929,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Description |
 | --------- | ----------- |
-| {FILE_PATH_AND_NAME} | The full path and name of the file you're trying to upload. |
+| `{FILE_PATH_AND_NAME}` | The full path and name of the file you're trying to upload. |
 
 **Response**
 
@@ -957,7 +949,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 
 | Parameter | Description |
 | --------- | ----------- |
-| {BATCH_ID} | The ID of the batch you want to complete. |
+| `{BATCH_ID}` | The ID of the batch you want to complete. |
 
 **Request**
 

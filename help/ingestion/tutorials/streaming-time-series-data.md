@@ -7,13 +7,7 @@ topic: tutorial
 
 # Stream time series data to Adobe Experience Platform
 
-This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs. Specifically, this documentation will help you:
-
-- [Compose a schema based off of the XDM ExperienceEvent class](#compose-a-schema-based-off-of-the-xdm-experienceevent-class)
-- [Set a primary identity descriptor for the schema](#set-a-primary-identity-descriptor-for-the-schema)
-- [Create a dataset for time series data](#create-a-dataset-for-time-series-data)
-- [Ingest time series data to the streaming connection](#ingest-time-series-data-to-the-streaming-connection)
-- [Retrieve the newly ingested time series data](#retrieve-the-newly-ingested-time-series-data)
+This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs.
 
 ## Getting started
 

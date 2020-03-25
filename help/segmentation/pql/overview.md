@@ -11,10 +11,6 @@ Profile Query Language (PQL) is an Experience Data Model (XDM) compliant query l
 
 This guide provides a general overview of PQL, covering formatting guidelines and providing example PQL expressions.
 
-- [PQL query formatting](#pql-query-formatting)
-- [PQL literals](#pql-literals)
-- [PQL functions](#pql-functions)
-
 ## PQL query formatting
 
 PQL queries have the following signature:
@@ -62,7 +58,7 @@ PQL provides support for the following literal types:
 | Integer | A data type representing a whole number. It can be positive, negative, or zero. | `-201`, `0`, `412` |
 | Double | A data type representing any real number. It can be positive, negative, or zero. | `-51.24`, `3.14`, `0.6942058` | 
 | Date | A data type that can be used to create dates based on the year, month, and day as integer parameters. It is formatted as `date(year, month, day)` | `date(2020, 3, 14)` |
-| Array | A data type that is comprised as a group of other literal values. It uses square brackets to group and commas to delimit between different values. <br> **Note:** You cannot directly access properties of items within an array. So, if you need to access a property within an array, the supported method is `select X from array where X.item = ...`. <br> PQL reserves the word `xEvent` to refer to an array of experience events linked to a profile. | `[1, 4, 7]`, `["US", "CA"]`, |  
+| Array | A data type that is comprised as a group of other literal values. It uses square brackets to group and commas to delimit between different values. <br> **Note:** You cannot directly access properties of items within an array. So, if you need to access a property within an array, the supported method is `select X from array where X.item = ...`. <br> PQL reserves the word `xEvent` to refer to an array of experience events linked to a profile. | `[1, 4, 7]`, `["US", "CA"]` |  
 | Relative time references | Reserved words that can be used to form timestamp and time interval references. <ul><li>now, today, yesterday, tomorrow</li><li>this, last, next</li><li>before, after, from</li><li>millisecond(s), second(s), minute(s), hour(s), day(s), week(s), month(s), year(s), decade(s), century/centuries, millennium/millennia</li></ul>| `X.timestamp occurs before today`, `X.timestamp occurs last month`, `X.timestamp occurs <= 3 days before now` |
 
 

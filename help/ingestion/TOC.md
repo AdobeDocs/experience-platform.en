@@ -9,16 +9,18 @@ user-guide-title: Adobe Experience Platform Data Ingestion Help
 - [Data Ingestion overview](home.md)
 - Streaming ingestion {#streaming}
     - [Overview](streaming-ingestion/overview.md)
-    - [Streaming ingestion UI](streaming-ingestion/ui.md)
+    - [Streaming ingestion UI](streaming-ingestion/ui-overview.md)
+    - [Kafka connector](streaming-ingestion/kafka.md)
     - [Troubleshooting](streaming-ingestion/troubleshooting.md)
 - Batch ingestion{#batch}
     - [Overview](batch-ingestion/overview.md)
-    - [Batch ingestion API](batch-ingestion/api.md)
+    - [Batch ingestion API](batch-ingestion/api-overview.md)
     - [Partial batch ingestion](batch-ingestion/partial.md)
     - [Troubleshooting](batch-ingestion/troubleshooting.md)
 - Tutorials {#tutorials}
     - [Map a CSV file to XDM](tutorials/map-a-csv-file.md)
     - [Ingest batch data using the UI](tutorials/ingest-batch-data.md)
+    - [Create an authenticated streaming connection](tutorials/create-authenticated-streaming-connection.md)
     - [Create a streaming connection](tutorials/create-streaming-connection.md)
     - [Streaming record data](tutorials/streaming-record-data.md)
     - [Streaming time series data](tutorials/streaming-time-series-data.md)

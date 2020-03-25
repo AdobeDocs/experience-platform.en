@@ -9,20 +9,7 @@ topic: overview
 
 The Batch Ingestion API allows you to ingest data into Adobe Experience Platform as batch files. Data being ingested can be the profile data from a flat file in a CRM system (such as a parquet file), or data that conforms to a known schema in the Experience Data Model (XDM) registry.
 
-This document will provide information on the following topics:
-- [Using the API](#using-the-api)
-    - [Data Ingestion prerequisites](#data-ingestion-prerequisites)
-    - [Batch ingestion best practices](#batch-ingestion-best-practices)
-    - [Create a batch](#create-a-batch)
-- [File upload](#file-upload)
-    - [Small file upload](#small-file-upload)
-    - [Large file upload - create file](#large-file-upload---create-file)
-    - [Large file upload - upload subsequent parts](#large-file-upload---upload-subsequent-parts)
-- [Signal batch completion](#signal-batch-completion)
-- [Check batch status](#check-batch-status)
-- [Batch ingestion statuses](#batch-ingestion-statuses)
-
-See the [Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) reference for additional information.
+The [Data Ingestion API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) provides additional information on these API calls.
 
 The following diagram outlines the batch ingestion process:
 
@@ -97,7 +84,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 | Property | Description |
 | -------- | ----------- |
-| datasetId | The ID of the dataset to upload the files into. |
+| `datasetId` | The ID of the dataset to upload the files into. |
 
 **Reponse**
 
@@ -123,8 +110,8 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 | Property | Description |
 | -------- | ----------- |
-| id | The ID of the batch that was just created (used in subsequent requests). |  
-| relatedObjects.id | The ID of the dataset to upload the files into. |
+| `id` | The ID of the batch that was just created (used in subsequent requests). |  
+| `relatedObjects.id` | The ID of the dataset to upload the files into. |
 
 ## File upload
 
@@ -132,7 +119,7 @@ After successfully creating a new batch for uploading, files can then be uploade
 
 You can upload files using the **Small File Upload API**. However, if your files are too large and the gateway limit is exceeded (such as extended timeouts, requests for body size exceeded, and other constrictions), you can switch over to the **Large File Upload API**. This API uploads the file in chunks, and stitches data together using the **Large File Upload Complete API** call.
 
->**Note:** The examples below use the [parquet](https://parquet.apache.org/documentation/latest/) file format. An example that uses the JSON file format can be found in the [batch ingestion developer guide](./api.md) 
+>[!NOTE] The examples below use the [parquet](https://parquet.apache.org/documentation/latest/) file format. An example that uses the JSON file format can be found in the [batch ingestion developer guide](./api-overview.md) 
 
 ### Small file upload
 
@@ -144,9 +131,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Property | Description |
 | -------- | ----------- |
-| {BATCH_ID} | The ID of the batch. |  
-| {DATASET_ID} | The ID of the dataset to upload files. | 
-| {FILE_NAME} | Name of file as it will be seen in the dataset. |
+| `{BATCH_ID}` | The ID of the batch. |  
+| `{DATASET_ID}` | The ID of the dataset to upload files. | 
+| `{FILE_NAME}` | Name of file as it will be seen in the dataset. |
 
 **Request**
 
@@ -162,7 +149,7 @@ curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 | Property | Description |
 | -------- | ----------- |
-| {FILE_PATH_AND_NAME} | The path and filename of the file to be uploaded into the dataset. |
+| `{FILE_PATH_AND_NAME}` | The path and filename of the file to be uploaded into the dataset. |
 
 **Reponse**
 
@@ -180,8 +167,8 @@ POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}?action=initiali
 
 | Property | Description |
 | -------- | ----------- |
-| {BATCH_ID} | The ID of the batch. |  
-| {DATASET_ID} | The ID of the dataset ingesting the files. |
+| `{BATCH_ID}` | The ID of the batch. |  
+| `{DATASET_ID}` | The ID of the dataset ingesting the files. |
 
 **Request**
 
@@ -209,9 +196,9 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Property | Description |
 | -------- | ----------- |
-| {BATCH_ID} | The ID of the batch. |  
-| {DATASET_ID} | The ID of the dataset to upload the files into. |
-| {FILE_NAME} | Name of file as it will be seen in the dataset. |
+| `{BATCH_ID}` | The ID of the batch. |  
+| `{DATASET_ID}` | The ID of the dataset to upload the files into. |
+| `{FILE_NAME}` | Name of file as it will be seen in the dataset. |
 
 **Request**
 
@@ -228,7 +215,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 | Property | Description |
 | -------- | ----------- |
-| {FILE_PATH_AND_NAME} | The path and filename of the file to be uploaded into the dataset. |
+| `{FILE_PATH_AND_NAME}` | The path and filename of the file to be uploaded into the dataset. |
 
 **Reponse**
 
@@ -248,7 +235,7 @@ POST /batches/{BATCH_ID}?actions=COMPLETE
 
 | Property | Description |
 | -------- | ----------- |
-| {BATCH_ID} | The ID of the batch to be uploaded into the dataset. |
+| `{BATCH_ID}` | The ID of the batch to be uploaded into the dataset. |
 
 ```SHELL
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
@@ -376,9 +363,9 @@ curl GET "https://platform.adobe.io/data/foundation/catalog/batch/{BATCH_ID}" \
 
 | Property | Description |
 | -------- | ----------- |
-| {BATCH_ID} | The ID of the batch to be uploaded into the dataset. |
-| {IMS_ORG} | Your IMS organization credentials found in your unique Adobe Experience Platform integration. |
-| {USER_ID} | The ID of the user who created or updated the batch. |
+| `{BATCH_ID}` | The ID of the batch to be uploaded into the dataset. |
+| `{IMS_ORG}` | Your IMS organization credentials found in your unique Adobe Experience Platform integration. |
+| `{USER_ID}` | The ID of the user who created or updated the batch. |
 
 The `"status"` field is what shows the current status of the batch requested. The batches can have one of the following states:
 

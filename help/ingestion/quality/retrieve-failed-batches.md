@@ -9,10 +9,7 @@ topic: overview
 
 Adobe Experience Platform provides two methods for uploading and ingesting data. You can either use batch ingestion, which allows you to insert their data using various file types (such as CSVs), or streaming ingestion, which allows you to insert their data to Platform using streaming endpoints in real-time.
 
-This tutorial covers steps for retrieving information about a failed batch using Data Ingestion APIs. Specifically, this tutorial shows you how to:
-
-- [Retrieve a failed batch](#retrieve-the-failed-batch)
-- [Download a failed batch](#download-the-failed-batch)
+This tutorial covers steps for retrieving information about a failed batch using Data Ingestion APIs.
 
 ## Getting started
 
@@ -82,7 +79,7 @@ GET /batches/{BATCH_ID}/failed
 
 | Property | Description |
 | -------- | ----------- |
-| {BATCH_ID} | The ID of the batch that you're looking up. |
+| `{BATCH_ID}` | The ID of the batch that you're looking up. |
 
 **Request**
 
@@ -141,8 +138,8 @@ GET /batches/{BATCH_ID}/failed?path={FAILED_FILE}
 
 | Property | Description |
 | -------- | ----------- |
-| {BATCH_ID} | The ID of the batch that contains the failed file. |
-| {FAILED_FILE} | The name of the file that has the failed formatting. |
+| `{BATCH_ID}` | The ID of the batch that contains the failed file. |
+| `{FAILED_FILE}` | The name of the file that has the failed formatting. |
 
 **Request**
 

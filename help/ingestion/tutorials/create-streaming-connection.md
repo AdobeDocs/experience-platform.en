@@ -7,10 +7,7 @@ topic: tutorial
 
 # Creating a streaming connection
 
-This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs. Specifically, this documentation will help you:
-
-- [Create a connection](#create-a-connection)
-- [Fetch the data collection URL](#get-data-collection-url)
+This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs.
 
 ## Getting started
 
@@ -169,3 +166,13 @@ A successful response returns HTTP status 200 with detailed information about th
 ## Next steps
 
 Now that you have created a streaming connection, you can stream either time series or record data, allowing you to ingest data within Platform. To learn how to stream time series data to Platform, go to the [streaming time series data tutorial](./streaming-time-series-data.md). To learn how to stream record data to Platform, go to the [streaming record data tutorial](./streaming-record-data.md).
+
+## Appendix
+
+This section provides supplemental information on creating streaming connections using the API.
+
+### Authenticated streaming connections
+
+Authenticated data collection allows Adobe Experience Platform services, such as Real-time Customer Profile and Identity, to differentiate between records coming from trusted sources and un-trusted sources. Clients that want to send Personally Identifiable Information (PII) can do so by sending IMS Access Tokens as part of the POST request - if the IMS Token is valid, the records are marked as collected from valid sources.
+
+More information about creating an authenticated streaming connection can be found in the [create an authenticated streaming connection tutorial](create-authenticated-streaming-connection.md).

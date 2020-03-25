@@ -11,12 +11,7 @@ Adobe Experience Platform allows you to easily segment customer profiles into au
 
 This tutorial walks through the steps required to create a dataset that can be used for exporting an audience segment using the Experience Platform UI.
 
-This tutorial is directly related to the steps outlined in the tutorial for [evaluating and accessing segment results](../tutorials/evaluate-a-segment.md). The evaluating a segment tutorial provides steps for creating a dataset using the Catalog API, whereas this tutorial outlines steps to create a dataset using the Experience Platform UI, including:
-
-- [Creating a dataset](#create-a-dataset)
-- [Selecting the XDM Individual Profile Union schema](#select-xdm-individual-profile-union-schema)
-- [Configuring the dataset](#configure-dataset)
-- [Finding the Dataset ID in the Dataset activity tab](#dataset-activity)
+This tutorial is directly related to the steps outlined in the tutorial for [evaluating and accessing segment results](./evaluate-a-segment.md). The evaluating a segment tutorial provides steps for creating a dataset using the Catalog API, whereas this tutorial outlines steps to create a dataset using the Experience Platform UI.
 
 ## Getting started
 

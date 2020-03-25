@@ -9,26 +9,13 @@ topic: tutorial
 
 This document provides a tutorial for evaluating segments and accessing segment results using the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 
 
-The tutorial covers the following steps:
-
-- [Evaluate a segment](#evaluate-a-segment)
-    - [Scheduled evaluation](#scheduled-evaluation)
-        - [Create a schedule](#create-a-schedule)
-    - [On-demand evaluation](#on-demand-evaluation)
-        - [Create a segment job](#create-a-segment-job) 
-        - [Lookup segment job status](#lookup-segment-job-status)
-- [Interpret segment results](#interpret-segment-results)
-- [Access segment results](#access-segment-results)
-    - [Look up a profile](#look-up-a-profile)
-    - [Export a segment](#export-a-segment)
-
 ## Getting started
 
 This tutorial requires a working understanding of the various Adobe Experience Platform services involved in creating audience segments. Before beginning this tutorial, please review the documentation for the following services:
 
 - [Real-time Customer Profile](../../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
 - [Adobe Experience Platform Segmentation Service](../home.md): Allows you to build audience segments from Real-time Customer Profile data.
-- [Experience Data Model (XDM)](../../xdm/home.md: The standardized framework by which Platform organizes customer experience data.
+- [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
 - [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ### Required headers
@@ -98,12 +85,12 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| name | **(Required)** The name of schedule. Must be a string. |
-| type | **(Required)** The job type in string format. The supported types are `batch_segmentation` and `export`. |
-| properties | **(Required)** An object containing additional properties related to the schedule. |
-| properties.segments | **(Required when `type` equals `batch_segmentation`)** Using `["*"]` ensures all segments are included. |
-| schedule | **(Required)** A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24 hour period. The example shown (`0 0 1 * * ?`) means the job is triggered every day at 1:00:00 UTC. For more information, please review the [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation. |
-| state | *(Optional)* String containing the schedule state. Available values: `active` and `inactive`. Default value is `inactive`. An IMS Organization can only create one schedule. Steps for updating the schedule are available later in this tutorial. |
+| `name` | **(Required)** The name of schedule. Must be a string. |
+| `type` | **(Required)** The job type in string format. The supported types are `batch_segmentation` and `export`. |
+| `properties` | **(Required)** An object containing additional properties related to the schedule. |
+| `properties.segments` | **(Required when `type` equals `batch_segmentation`)** Using `["*"]` ensures all segments are included. |
+| `schedule` | **(Required)** A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24 hour period. The example shown (`0 0 1 * * ?`) means the job is triggered every day at 1:00:00 UTC. For more information, please review the [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation. |
+| `state` | *(Optional)* String containing the schedule state. Available values: `active` and `inactive`. Default value is `inactive`. An IMS Organization can only create one schedule. Steps for updating the schedule are available later in this tutorial. |
 
 **Response**
 
@@ -245,7 +232,7 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| segmentId | The identifier of a segment definition from which to build the audience. At least one segment ID must be supplied in the payload array. |
+| `segmentId` | The identifier of a segment definition from which to build the audience. At least one segment ID must be supplied in the payload array. |
 
 **Response**
 
@@ -309,8 +296,8 @@ A successful response returns the details of the newly created segment job, incl
 
 | Property | Description |
 | -------- | ----------- |
-| id | The identifier of the new segment job, used for lookup purposes. |
-| status | The current status of the segment job. Will be "PROCESSING" until processing is complete, at which point it becomes "SUCCEEDED" or "FAILED". |
+| `id` | The identifier of the new segment job, used for lookup purposes. |
+| `status` | The current status of the segment job. Will be "PROCESSING" until processing is complete, at which point it becomes "SUCCEEDED" or "FAILED". |
 
 ### Lookup segment job status
 
@@ -324,7 +311,7 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 
 | Property | Description |
 | -------- | ----------- |
-| {SEGMENT_JOB_ID} | The `id` of the segment job you want to access. |
+| `{SEGMENT_JOB_ID}` | The `id` of the segment job you want to access. |
 
 **Request**
 
@@ -414,8 +401,8 @@ A successful response returns the details of the segmentation job, and will prov
 
 | Property | Description |
 | -------- | ----------- |
-| segmentedProfileCounter | The total number of merged profiles which qualify for the segment. |
-| segmentedProfileByNamespaceCounter` | A breakdown of the profiles that qualify for the segment by identity namespace code. A list of identity namespace codes can be found in the [identity namespace overview](../../identity-service/namespaces.md). |
+| `segmentedProfileCounter` | The total number of merged profiles which qualify for the segment. |
+| `segmentedProfileByNamespaceCounter` | A breakdown of the profiles that qualify for the segment by identity namespace code. A list of identity namespace codes can be found in the [identity namespace overview](../../identity-service/namespaces.md). |
 
 ## Interpret segment results
 
@@ -448,8 +435,8 @@ The following example shows what the `segmentMembership` attribute looks like fo
 
 | Property | Description |
 | -------- | ----------- |
-| lastQualificationTime | The timestamp when the assertion of segment membership was made and the profile entered or exited the segment. |
-| status | The status of segment participation as part of the current request. Must be equal to one of the following known values: <ul><li>`existing`: Entity continues to be in the segment.</li><li>`realized`: Entity is entering the segment.</li><li>`exited`: Entity is exiting the segment.</li></ul> |
+| `lastQualificationTime` | The timestamp when the assertion of segment membership was made and the profile entered or exited the segment. |
+| `status` | The status of segment participation as part of the current request. Must be equal to one of the following known values: <ul><li>`existing`: Entity continues to be in the segment.</li><li>`realized`: Entity is entering the segment.</li><li>`exited`: Entity is exiting the segment.</li></ul> |
 
 ## Access segment results
 
@@ -520,9 +507,9 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| name | A descriptive name for the dataset. |
-| schemaRef.id | The ID of the union view (schema) that the dataset will be associated with. |
-| fileDescription.persisted | A Boolean value that when set to `true`, enables the dataset to persist in the union view. |
+| `name` | A descriptive name for the dataset. |
+| `schemaRef.id` | The ID of the union view (schema) that the dataset will be associated with. |
+| `fileDescription.persisted` | A Boolean value that when set to `true`, enables the dataset to persist in the union view. |
 
 **Response**
 
@@ -600,30 +587,32 @@ curl -X POST \
   }'
 ```
 
-- `fields`: *(Optional)* Limits the data fields to be included in the export to only those provided in this parameter. The same parameter is also available when creating a segment, therefore the fields in the segment may have already been filtered. Omitting this value will result in all fields being included in the exported data.
-- `mergePolicy`: *(Optional)* Specifies the merge policy to govern the exported data. Include this parameter when there are multiple segments being exported. Omitting this value will cause the Export Service to use the merge policy provided by the segment.
-    - `id`: The ID of the merge policy.
-    - `version`: The specific version of the merge policy to use. Omitting this value will default to the most recent version.
-- `filter`: *(Optional)* Specifies one or more of the following filters to apply to the segment before export:
-    - `segments`: *(Optional)* Specifies the segments to export. Omitting this value will result in all data from all profiles being exported. Accepts an array of segment objects, each containing the following fields:
-        - `segmentId`: **(Required if using `segments`)** Segment ID for profiles to be exported.
-        - `segmentNs`: *(Optional)* Segment namespace for the given `segmentID`.
-        - `status`: *(Optional)* An array of strings providing a status filter for the `segmentID`. By default, `status` will have the value `["realized", "existing"]` which represents all profiles that fall into the segment at the current time. Possible values include: `"realized"`, `"existing"`, and `"exited"`.
-    - `segmentQualificationTime`: *(Optional)* Filter based on segment qualification time. The start time and/or end time can be provided. 
-        - `segmentQualificationTime.startTime`: *(Optional)* Segment qualification start time for a segment ID for a given status. It not provided, there will be no filter on the start time for a segment ID qualification. The timestamp must be provided in [RFC 3339](https://tools.ietf.org/html/rfc3339) format.
-        - `segmentQualificationTime.endTime`: *(Optional)* Segment qualification end time for a segment ID for a given status. It not provided, there will be no filter on the end time for a segment ID qualification. The timestamp must be provided in [RFC 3339](https://tools.ietf.org/html/rfc3339) format.
-    - `fromIngestTimestamp`: *(Optional)* Limits exported profiles to only include those that have been updated after this timestamp. The timestamp must be provided in [RFC 3339](https://tools.ietf.org/html/rfc3339) format.
-        - `fromIngestTimestamp` for **profiles**, if provided: Includes all the merged profiles where merged updated timestamp is greater than the given timestamp. Supports `greater_than` operand.
-        - `fromTimestamp` for events: All events ingested after this timestamp will be exported corresponding to resultant profile result. This is not the event time itself but the ingestion time for the events.
-    - `emptyProfiles` - *(Optional)* Boolean. Profiles can contain Profile records, ExperienceEvent records, or both. Profiles with no Profile records and only ExperienceEvent records are referred to as "emptyProfiles". To export all profiles in the Profile store, including the "emptyProfiles", set the value of `emptyProfiles` to `true`. If `emptyProfiles` is set to `false`, only profiles with Profile records in the store are exported. By default, if `emptyProfiles` attribute is not included, only profiles containing Profile records are exported.
-- `additionalFields.eventList`: *(Optional)* Controls the time series event fields exported for child or associated objects by providing one or more of the following settings:
-    - `eventList.fields`: Control the fields to export.
-    - `eventList.filter`: Specifies criteria that limits the results included from associated objects. Expects a minimum value required for export, typically a date.
-        - `filter.fromIngestTimestamp`: Filters time series events to those that have been ingested after the provided timestamp. This is not the event time itself but the ingestion time for the events.
-- `destination`: **(Required)** Destination information for the exported data
-    - `destination.datasetId`: **(Required)** The ID of the dataset where data is to be exported.
-    - `destination.segmentPerBatch`: *(Optional)* A Boolean value that, if not provided, defaults to `false`. A value of `false` exports all segment IDs into a single batch ID. A value of `true` exports one segment ID into one batch ID. Note that setting the value to be `true` may affect batch export performance.
-- `schema.name`: **(Required)** The name of the schema associated with the dataset where data is to be exported.
+| Property | Description |
+| -------- | ----------- |
+| `fields` | *(Optional)* Limits the data fields to be included in the export to only those provided in this parameter. The same parameter is also available when creating a segment, therefore the fields in the segment may have already been filtered. Omitting this value will result in all fields being included in the exported data |
+| `mergePolicy` | *(Optional)* Specifies the merge policy to govern the exported data. Include this parameter when there are multiple segments being exported. Omitting this value will cause the Export Service to use the merge policy provided by the segment. |
+`mergePolicy.id` | The ID of the merge policy |
+| `mergePolicy.version` | The specific version of the merge policy to use. Omitting this value will default to the most recent version. |
+| `filter` | *(Optional)* Specifies one or more of the following filters to apply to the segment before export: |
+| `filter.segments` | *(Optional)* Specifies the segments to export. Omitting this value will result in all data from all profiles being exported. Accepts an array of segment objects, each containing the following fields: |
+| `filter.segments.segmentId` | **(Required if using `segments`)** Segment ID for profiles to be exported. |
+| `filter.segments.segmentNs` | *(Optional)* Segment namespace for the given `segmentID`. |
+| `filter.segments.status` | *(Optional)* An array of strings providing a status filter for the `segmentID`. By default, `status` will have the value `["realized", "existing"]` which represents all profiles that fall into the segment at the current time. Possible values include: `"realized"`, `"existing"`, and `"exited"`. |
+| `filter.segmentQualificationTime` | *(Optional)* Filter based on segment qualification time. The start time and/or end time can be provided. |
+| `filter.segmentQualificationTime.startTime` | *(Optional)* Segment qualification start time for a segment ID for a given status. It not provided, there will be no filter on the start time for a segment ID qualification. The timestamp must be provided in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
+| `filter.segmentQualificationTime.endTime` | *(Optional)* Segment qualification end time for a segment ID for a given status. It not provided, there will be no filter on the end time for a segment ID qualification. The timestamp must be provided in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
+| `filter.fromIngestTimestamp` | *(Optional)* Limits exported profiles to only include those that have been updated after this timestamp. The timestamp must be provided in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
+| `filter.fromIngestTimestamp` for **profiles**, if provided | Includes all the merged profiles where merged updated timestamp is greater than the given timestamp. Supports `greater_than` operand. |
+| `filter.fromTimestamp` for events | All events ingested after this timestamp will be exported corresponding to resultant profile result. This is not the event time itself but the ingestion time for the events. |
+| `filter.emptyProfiles` | *(Optional)* Boolean. Profiles can contain Profile records, ExperienceEvent records, or both. Profiles with no Profile records and only ExperienceEvent records are referred to as "emptyProfiles". To export all profiles in the Profile store, including the "emptyProfiles", set the value of `emptyProfiles` to `true`. If `emptyProfiles` is set to `false`, only profiles with Profile records in the store are exported. By default, if `emptyProfiles` attribute is not included, only profiles containing Profile records are exported. |
+| `additionalFields.eventList` | *(Optional)* Controls the time series event fields exported for child or associated objects by providing one or more of the following settings: |
+| `additionalFields.eventList.fields` | Control the fields to export. |
+| `additionalFields.eventList.filter` | Specifies criteria that limits the results included from associated objects. Expects a minimum value required for export, typically a date. |
+| `additionalFields.eventList.filter.fromIngestTimestamp` | Filters time series events to those that have been ingested after the provided timestamp. This is not the event time itself but the ingestion time for the events. |
+| `destination` | **(Required)** Destination information for the exported data |
+| `destination.datasetId` | **(Required)** The ID of the dataset where data is to be exported. |
+| `destination.segmentPerBatch` | *(Optional)* A Boolean value that, if not provided, defaults to `false`. A value of `false` exports all segment IDs into a single batch ID. A value of `true` exports one segment ID into one batch ID. Note that setting the value to be `true` may affect batch export performance. |
+| `schema.name` | **(Required)** The name of the schema associated with the dataset where data is to be exported. |
 
 **Response**
 
@@ -711,8 +700,8 @@ GET /export/jobs?offset=2
 
 | Property | Description |
 | -------- | ----------- |
-| limit | Specify the number of records to be returned. |
-| offset | Offset the page of results to be returned by the number provided. |
+| `limit` | Specify the number of records to be returned. |
+| `offset` | Offset the page of results to be returned by the number provided. |
 
 
 **Request**
@@ -862,7 +851,7 @@ GET /export/jobs/{EXPORT_JOB_ID}
 
 | Property | Description |
 | -------- | ----------- |
-| {EXPORT_JOB_ID} | The `id` of the export job you want to access. |
+| `{EXPORT_JOB_ID}` | The `id` of the export job you want to access. |
 
 **Request**
 
@@ -952,7 +941,7 @@ curl -X GET \
 
 | Property | Description |
 | -------- | ----------- |
-| batchId | The identifier of the batches created from a successful export, to be used for lookup purposes when reading audience data. |
+| `batchId` | The identifier of the batches created from a successful export, to be used for lookup purposes when reading audience data. |
 
 ## Next steps
 

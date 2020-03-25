@@ -9,14 +9,6 @@ topic: developer guide
 
 Aggregation functions are used to group together multiple values within Profile Query Language (PQL) arrays to form a single summary value. More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
 
-This document provides more details for the following aggregation functions: 
-
-- [Count](#count)
-- [Sum](#sum)
-- [Average](#average)
-- [Minimum](#minimum)
-- [Maximum](#maximum)
-
 ## Count
 
 The `count` function returns the number of elements within the given array.
@@ -75,7 +67,7 @@ orders.average(order.price)
 
 The `min` function returns the smallest of all the selected values within the array.
 
-** Format
+**Format**
 
 ```sql
 {ARRAY}.min()

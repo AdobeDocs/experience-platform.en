@@ -23,5 +23,6 @@ user-guide-title: Catalog and Datasets Help
   * [Datasets overview](datasets/overview.md)
   * [Datasets user guide](datasets/user-guide.md)
   * [Create and populate a dataset using APIs](datasets/create.md)
+* [Privacy request processing in the Data Lake](privacy.md)
 * [Data protection in Experience Platform](data-protection.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)

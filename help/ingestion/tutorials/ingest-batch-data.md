@@ -9,20 +9,11 @@ topic: tutorial
 
 Adobe Experience Platform allows you to easily import data into Platform as batch files. Examples of data to be ingested may include profile data from a flat file in a CRM system (such as a parquet file) or data that conforms to a known Experience Data Model (XDM) schema in the Schema Registry.
 
-This tutorial will walk you through the steps to ingest data into Experience Platform using the user interface, including showing you how to:
-
-- [Create a dataset](#create-a-dataset)
-- [Select a dataset schema](#select-dataset-schema)
-- [Enable a dataset for Real-time Customer Profile](#enable-dataset-for-unified-profile-service)
-- [Add data to a dataset](#add-data-to-dataset)
-- [View batch details](#batch-details)
-- [Preview dataset data](#preview-dataset)
-
 ## Getting started
 
 In order to complete this tutorial, you must have access to Experience Platform. If you do not have access to an IMS Organization in Experience Platform, please speak to your system administrator before proceeding. 
 
-If you would prefer to ingest data using Data Ingestion APIs please begin by reading the [Batch Ingestion developer guide](../batch-ingestion/api.md).
+If you would prefer to ingest data using Data Ingestion APIs please begin by reading the [Batch Ingestion developer guide](../batch-ingestion/api-overview.md).
 
 ## Datasets workspace
 
