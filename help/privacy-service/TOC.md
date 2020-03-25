@@ -23,7 +23,6 @@ user-guide-title: Adobe Experience Platform Privacy Service Help
   * [GDPR terminology](gdpr/terminology.md)
 * CCPA guide {#ccpa}
   * [CCPA FAQ](ccpa/faq.md)
-* [Privacy request processing in Adobe Experience Platform](platform.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html)
 * [Release notes](release-notes.md)
