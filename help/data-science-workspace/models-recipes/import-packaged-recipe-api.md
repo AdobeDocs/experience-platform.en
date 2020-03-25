@@ -26,8 +26,8 @@ An Engine contains machine learning algorithms and logic to solve specific probl
 
 This tutorial requires a packaged Recipe file in the form of either a binary artifact or a Docker URL. Follow the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial to create a packaged Recipe file or provide your own.
 
--   Binary artifact : The binary artifact (eg. JAR, EGG) used to create an Engine.  
--   `{DOCKER_URL}` : An URL address to a Docker image of an intelligent service.
+-   Binary artifact (deprecated): The binary artifact (eg. JAR, EGG) used to create an Engine.  
+-   `{DOCKER_URL}`: An URL address to a Docker image of an intelligent service.
 
 This tutorial requires you to have completed the [Authentication to Adobe Experience Platform tutorial](../../tutorials/authentication.md) in order to successfully make calls to Platform APIs. Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
@@ -38,22 +38,26 @@ This tutorial requires you to have completed the [Authentication to Adobe Experi
 ## Create an Engine
 
 Depending on the form of the packaged Recipe file to be included as a part of the API request, an Engine is created through one of two ways:
--   [Create an Engine with a binary artifact](#create-an-engine-with-a-binary-artifact)
+-   [Create an Engine with a binary artifact (deprecated)](#create-an-engine-with-a-binary-artifact-deprecated)
 -   [Create an Engine with a Docker URL](#create-an-engine-with-a-docker-url)
 
-### Create an Engine with a binary artifact
+### Create an Engine with a binary artifact (deprecated)
+
+<!-- Will need to remove binary artifact documentation once the old flags are turned off -->
+
+>[!CAUTION] binary artifacts are used in PySpark 3 (Spark 2.3 - deprecated) and Spark (Spark 2.3 - deprecated). JupyterLab Notebooks now provides Pyspark 3 (Spark 2.4) and Scala. With this update, all engines can now be made using a Docker URL. See the [Docker URL section](#create-an-engine-with-a-docker-url) of this document. Binary artifacts are set to be removed in a future release.
 
 In order to create an Engine using a local packaged `.jar` or `.egg` binary artifact, you must provide the absolute path to the binary artifact file in your local file system. Consider navigating to the directory containing the binary artifact in a Terminal environment, and execute the `pwd` Unix command for the absolute path.
 
 The following call creates an Engine with a binary artifact:
 
-#### API Format
+**API format**
 
 ```http
 POST /engines
 ```
 
-#### Request
+**Request**
 
 ```shell
 curl -X POST \
@@ -70,17 +74,14 @@ curl -X POST \
     -F 'defaultArtifact=@path/to/binary/artifact/file/pysparkretailapp-0.1.0-py3.7.egg'
 ```
 
--   `engine > name` : The desired name for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in Data Science Workspace user interface as the Recipe's name.
--   `engine > description` : An optional description for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in Data Science Workspace user interface as the Recipe's description. Do not remove this property, let this value be an empty string if you choose not to provide a description.
--   `engine > type`: The execution type of the Engine. This value corresponds to the language in which the binary artifact was developed in.
+| Property | Description |
+| -------  | ----------- |
+| `engine.name` | The desired name for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in Data Science Workspace user interface as the Recipe's name. |
+| `engine.description` | An optional description for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in Data Science Workspace user interface as the Recipe's description. Do not remove this property, let this value be an empty string if you choose not to provide a description. |
+| `engine.type` | The execution type of the Engine. This value corresponds to the language in which the binary artifact was developed in. When uploading a binary artifact to create an Engine, `type` is either `Spark` or `PySpark`. |
+| `defaultArtifact` | The absolute path to the binary artifact file used to create the Engine. Ensure to include `@` before the file path. |
 
-    >[!NOTE] When uploading a binary artifact to create an Engine, `type` is either `Spark` or `PySpark`.
-
--   `defaultArtifact` : The absolute path to the binary artifact file used to create the Engine.
-
-    >[!NOTE] Ensure to include `@` before the file path.
-
-#### Response
+**Response**
 
 ```JSON
 {
@@ -114,13 +115,13 @@ In order to create an Engine with a packaged Recipe file stored in a Docker cont
 
 The following call creates an Engine with a Docker URL:
 
-#### API Format
+**API format**
 
 ```http
 POST /engines
 ```
 
-#### Request
+**Request**
 
 ```shell
 curl -X POST \
@@ -144,25 +145,16 @@ curl -X POST \
         }
     }' 
 ```
-
--   `engine > name` : The desired name for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in Data Science Workspace user interface as the Recipe's name.
--   `engine > description` : An optional description for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in Data Science Workspace user interface as the Recipe's description. Do not remove this property, let this value be an empty string if you choose not to provide a description.
--   `engine > type`: The execution type of the Engine. This value corresponds to the language in which the Docker image is developed in.
-
-    >[!NOTE] When a Docker URL is provided to create an Engine, `type` is either `Python`, `R`, or `Tensorflow`.
-
--   `artifacts > default > image > location` : Your `{DOCKER_URL}` goes here. A complete Docker URL has the following structure: 
-
-    ```
-    your_docker_host.azurecr.io/docker_image_file:version
-    ```
-
--   `artifacts > default > image > name` : An additional name for the Docker image file. Do not remove this property, let this value be an empty string if you choose not to provide an additional Docker image file name.
--   `artifacts > default > image > executionType` : The execution type of this Engine. This value corresponds to the language in which the Docker image is developed in.
-
-    >[!NOTE] When a Docker URL is provided to create an Engine, `executionType` is either `Python`, `R`, or `Tensorflow`.
-
-#### Response
+| Property | Description |
+| -------  | ----------- |
+| `engine.name` | The desired name for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in Data Science Workspace user interface as the Recipe's name. |
+| `engine.description` | An optional description for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in Data Science Workspace user interface as the Recipe's description. Do not remove this property, let this value be an empty string if you choose not to provide a description. |
+| `engine.type` | The execution type of the Engine. This value corresponds to the language in which the Docker image is developed in. When a Docker URL is provided to create an Engine, `type` is either `Python`, `R`, `PySpark`, `Spark` (Scala), or `Tensorflow`. |
+| `artifacts.default.image.location` | Your `{DOCKER_URL}` goes here. A complete Docker URL has the following structure: `your_docker_host.azurecr.io/docker_image_file:version` |
+| `artifacts.default.image.name` | An additional name for the Docker image file. Do not remove this property, let this value be an empty string if you choose not to provide an additional Docker image file name. |
+| `artifacts.default.image.executionType` | The execution type of this Engine. This value corresponds to the language in which the Docker image is developed in. When a Docker URL is provided to create an Engine, `executionType` is either `Python`, `R`, `PySpark`, `Spark` (Scala), or `Tensorflow`. |
+    
+**Response**
 
 ```JSON
 {
