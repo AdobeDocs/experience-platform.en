@@ -7,33 +7,13 @@ topic: overview
 
 # Data Science Workspace overview
 
-Data Science Workspace uses machine learning and artificial intelligence to unleash insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe solutions.  
+Adobe Experience Platform Data Science Workspace uses machine learning and artificial intelligence to unleash insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe solutions.  
 
 Data scientists of all skill levels will find sophisticated, easy-to-use tools that support rapid development, training, and tuning of machine learning recipes - all the benefits of AI technology, without the complexity.  
 
 With Data Science Workspace, data scientists can easily create intelligent services APIs - powered by machine learning. These services work with other Adobe services, including Adobe Target and Adobe Analytics Cloud, to help you automate personalized, targeted digital experiences in web, desktop, and mobile apps.
 
-This guide provides an overview of the following concepts related to Data Science Workspace:
-
-- [Understanding Data Science Workspace](#understanding-data-science-workspace)
-    - [One-stop data access](#one-stop-data-access)
-    - [Prebuilt machine learning recipes](#prebuilt-machine-learning-recipes)
-    - [Workflow focused on the data scientist](#workflow-focused-on-the-data-scientist)
-    - [Data exploration](#data-exploration)
-    - [Authoring](#authoring)
-    - [Experimentation](#experimentation)
-    - [Operationalization](#operationalization)
-    - [Continuous improvement](#continuous-improvement)
-    - [Access to new features and datasets](#access-to-new-features-and-datasets)
-    - [Access control in Data Science Workspace](#access-control-in-data-science-workspace)
-    - [Security and peace of mind](#security-and-peace-of-mind)
-    - [Sandbox support](#sandbox-support)
-- [Data Science Workspace in action](#data-science-workspace-in-action)
-    - [Define the problem](#define-the-problem)
-    - [Explore and prepare the data](#explore-and-prepare-the-data)
-    - [Author the recipe](#author-the-recipe)
-    - [Experiment with the recipe](#experiment-with-the-recipe)
-    - [Operationalize the model](#operationalize-the-model)
+This guide provides an overview the key concepts related to Data Science Workspace.
 
 ## Introduction
 
