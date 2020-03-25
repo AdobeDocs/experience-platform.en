@@ -13,9 +13,9 @@ author: ens28527
 ## Release date: September 10, 2019
 
 Updates to existing features:
- *   [Data Ingestion](#data-ingestion)
- *   [Data Science Workspace](#data-science-workspace)
- *   [Query Service](#query-service)
+* [Data Ingestion](#data-ingestion)
+* [Data Science Workspace](#data-science-workspace)
+* [Query Service](#query-service)
 
 ## Data Ingestion
 
@@ -25,7 +25,7 @@ Adobe Experience Platform provides a rich set of features to ingest any type and
 
 | Feature    | Description  |
 | ----------- | ---------- |
-| New domain for streaming ingestion | The `dcs.data.adobe.net` domain has been moved to the new common data collection domain `dcs.adobedc.net`. Users must update their implementations according to the revised Adobe Experience Platform streaming ingestion documentation. All documentation related to Adobe Experience Platform streaming ingestion has been updated to use the new domain.
+| New domain for streaming ingestion | The `dcs.data.adobe.net` domain has been moved to the new common data collection domain `dcs.adobedc.net`. Users must update their implementations according to the revised Adobe Experience Platform streaming ingestion documentation. All documentation related to Adobe Experience Platform streaming ingestion has been updated to use the new domain.|
 
 For more information, visit the [Data Ingestion documentation](../../ingestion/home.md).
 
@@ -50,6 +50,7 @@ Adobe Experience Platform Data Science Workspace is a fully managed service with
 For more information, visit the [Data Science Workspace Overview](../../data-science-workspace/home.md).
 
 ## Query Service
+
 Query Service provides the ability to use standard SQL to query data in Adobe Experience Platform to support a variety of analysis and data management use cases. It is a serverless tool that allows you to join datasets from the Data Lake and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-time Customer Profile.
 
 You can use Query Service to build data analysis ecosystems, creating a picture of customers across their various interaction channels. These channels might include point-of-sale systems, web, mobile, or CRM systems.
@@ -58,9 +59,9 @@ You can use Query Service to build data analysis ecosystems, creating a picture 
 
 | Feature    | Description  |
 | -----------| ---------- |
-| Improvements to Query Editor | Added a save function that allows you to save a query and work on it later. Added a "Browse" tab to the Query Service user interface on Adobe Experience Platform that shows queries saved by users in your organization.<br><br>Implemented a "Query Details" panel that displays useful metadata about the query being viewed. |
+| Improvements to Query Editor | Added a save function that allows you to save a query and work on it later. Added a "Browse" tab to the Query Service user interface on Adobe Experience Platform that shows queries saved by users in your organization. Implemented a "Query Details" panel that displays useful metadata about the query being viewed. |
 | New attribution functions | Adobe-defined functions in Query Service to query for channel attribution with expiration parameters. |
-| Enhancements to SQL syntax | Support for iLike syntax.
+| Enhancements to SQL syntax | Support for iLike syntax.|
 | Generate datasets with a defined XDM Schema | Added a new clause in Create Table as Select (CTAS) queries that allows you to specify a target schema. |
 
 For more information, refer to the [Query Service documentation](../../query-service/home.md).
