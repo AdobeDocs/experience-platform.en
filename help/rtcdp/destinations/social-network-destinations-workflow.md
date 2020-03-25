@@ -10,7 +10,7 @@ seo-description: Instructions to connect to your social network ad accounts
 
 ## Workflow to create cloud storage destinations
 
-This tutorial uses Facebook as an example, but the workflow in the Adobe Real-time CDP will the same for all Social Network destinations, once more are added to the product.
+This tutorial uses Facebook as an example, but the workflow in the Adobe Real-time CDP is the same for all Social Network destinations, once more are added to the product.
 
 1. In **[!UICONTROL Connections > Destinations]**, select your preferred social network destination, then select **[!UICONTROL Connect destination]**.
 
@@ -33,3 +33,7 @@ This tutorial uses Facebook as an example, but the workflow in the Adobe Real-ti
     ![Connect to social network destination - setup step](/help/rtcdp/destinations/assets/facebook-setup-step.png)
 
 5. Your destination is now created. You can select **[!UICONTROL Save & Exit]** if you want to activate segments later on or you can select **[!UICONTROL Next]** to continue the workflow and select segments to activate. In either case, see the next section, [Activate segments](#activate-segments), for the rest of the workflow.
+
+## Activate segments to social networks {#activate-segments}
+
+For instructions on how to activate segments to social networks, see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md).
