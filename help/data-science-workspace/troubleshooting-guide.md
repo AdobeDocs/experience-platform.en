@@ -9,14 +9,6 @@ topic: Troubleshooting
 
 This document provides answers to frequently asked questions about Adobe Experience Platform Data Science Workspace. For questions and troubleshooting regarding Platform APIs in general, see the [Adobe Experience Platform API troubleshooting guide](../landing/troubleshooting.md).
 
-- [JupyterLab environment is not loading in Google Chrome](#jupyterlab-environment-is-not-loading-in-google-chrome)
--   [Why am I unable to access JupyterLab in Safari?](#why-am-i-unable-to-access-jupyterlab-in-safari)
--   [Why am I seeing a '403 Forbidden' message when trying to upload or delete a file in JupyterLab?](#why-am-i-seeing-a-403-forbidden-message-when-trying-to-upload-or-delete-a-file-in-jupyterlab)
--   [Why do some parts of my Jupyter Notebook look scrambled or do not render as code?](#why-do-some-parts-of-my-jupyter-notebook-look-scrambled-or-do-not-render-as-code)
--   [How do I install custom Python libraries?](#how-do-i-install-custom-python-libraries)
--   [Can I install custom PySpark libraries?](#can-i-install-custom-pyspark-libraries)
--   [Is it possible to configure Spark cluster resources for JupyterLab Spark or PySpark kernel?](#is-it-possible-to-configure-spark-cluster-resources-for-jupyterlab-spark-or-pyspark-kernel)
-
 ## JupyterLab environment is not loading in Google Chrome
 
 With the latest update of the Google Chrome browser to version 80.x, all 3rd party cookies are blocked by default. This new policy can prevent JupyterLab from loading within Adobe Experience Platform.
@@ -66,7 +58,7 @@ This can happen if the cell in question is accidentally changed from "Code" to "
 The Python kernel comes pre-installed with many popular machine learning libraries. However, you can install additional custom libraries by executing the following command within a code cell:
 
 ```shell
-!pip install {library name}
+!pip install {LIBRARY_NAME}
 ```
 
 For a complete list of pre-installed Python libraries, see the [appendix section of the JupyterLab User Guide](./jupyterlab/overview.md#supported-libraries).
