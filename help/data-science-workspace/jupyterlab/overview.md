@@ -9,55 +9,30 @@ topic: Overview
 
 JupyterLab is a web-based user interface for <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> and is tightly integrated into Adobe Experience Platform. It provides an interactive development environment for data scientists to work with Jupyter notebooks, code, and data.
 
-This document provides an overview of JupyterLab and its features as well as instructions to perform common actions:
+This document provides an overview of JupyterLab and its features as well as instructions to perform common actions.
 
-*   [JupyterLab on Adobe Experience Platform](#jupyterlab-on-adobe-experience-platform)
-*   [Integration with other Platform services](#integration-with-other-platform-services)
-*   [Key features and common operations](#key-features-and-common-operations)
-    *   [Access JupyterLab](#access-jupyterlab)
-    *   [JupyterLab interface](#jupyterlab-interface)
-    *   [Code cells](#code-cells)
-    *   [Kernels](#kernels)
-    *   [Kernel sessions](#kernel-sessions)
-    *   [PySpark/Spark execution resource](#pysparkspark-execution-resource)
-    *   [Launcher](#launcher)
-*   [Access Platform data using Notebooks](#access-platform-data-using-notebooks)
-    *   [Read from a dataset in Python/R](#read-from-a-dataset-in-pythonr)
-    *   [Read from a dataset in PySpark/Spark](#read-from-a-dataset-in-pysparkspark)
-    *   [Query data using Query Service in Python](#query-data-using-query-service-in-python)
-    *   [Filter ExperienceEvent data in Python/R](#filter-experienceevent-data-in-pythonr)
-    *   [Filter ExperienceEvent data in PySPark/Spark](#filter-experienceevent-data-in-pysparkspark)
+## JupyterLab on Experience Platform
 
-The appendix to this document includes additional useful resources related to JupyterLab:
-
-*   [Supported libraries](#supported-libraries)
-*   [Optional SQL flags for Query Service](#optional-sql-flags-for-query-service)
-
-## JupyterLab on Adobe Experience Platform
-
-Experience Platform's JupyterLab integration is accompanied with architectural changes, design considerations, customized notebook extensions, pre-installed libraries, and an Adobe themed interface.
+Experience Platform's JupyterLab integration is accompanied with architectural changes, design considerations, customized notebook extensions, pre-installed libraries, and an Adobe-themed interface.
 
 The following list outlines some of the features that are unique to JupyterLab on Platform:
 
-*   **Kernels**
-    *   Kernels provide notebook and other JupyterLab front-ends the ability to execute and introspect code in different programming languages. Experience Platform provides additional kernels to support development in Python, R, PySpark, and Spark. See the [kernels](#kernels) section for more details.
-*   **Data access**
-    *   Access existing datasets directly from within JupyterLab with full support for read and write capabilities.
-*   **Platform service integration**
-    *   Built-in integrations allows you to utilize other Platform services directly from within JupyterLab. A complete list of supported integrations is provided in the section on [Integration with other Platform services](#integration-with-other-platform-services).
-*   **Authentication**
-    *   In addition to <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">JupyterLab's built-in security model</a>, every interaction between your application and Experience Platform, including Platform service-to-service communication is encrypted and authenticated through the <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">Adobe Identity Management System (IMS)</a>.
-*   **Development libraries**
-    *   In Experience Platform, JupyterLab provides pre-installed libraries for Python, R, and PySpark. See the [appendix](#supported-libraries) for a complete list of supported libraries.
-*   **Library controller**
-    *   When the the pre-installed libraries are lacking for your needs, additional libraries can be installed for Python and R, and are temporarily stored in isolated containers to maintain the integrity of Platform and keep your data safe. See the [kernels](#kernels) section for more details.
-        >[!NOTE] Additional libraries are only available for the session in which they were installed. You must reinstall any additional libraries you require when starting new sessions.
+| Feature | Description |
+| --- | --- |
+| **Kernels** | Kernels provide notebook and other JupyterLab front-ends the ability to execute and introspect code in different programming languages. Experience Platform provides additional kernels to support development in Python, R, PySpark, and Spark. See the [kernels](#kernels) section for more details. |
+| **Data access** | Access existing datasets directly from within JupyterLab with full support for read and write capabilities. |
+| **Platform service integration** | Built-in integrations allows you to utilize other Platform services directly from within JupyterLab. A complete list of supported integrations is provided in the section on [Integration with other Platform services](#service-integration). |
+| **Authentication** | In addition to <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">JupyterLab's built-in security model</a>, every interaction between your application and Experience Platform, including Platform service-to-service communication is encrypted and authenticated through the <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">Adobe Identity Management System (IMS)</a>. |
+| **Development libraries** | In Experience Platform, JupyterLab provides pre-installed libraries for Python, R, and PySpark. See the [appendix](#supported-libraries) for a complete list of supported libraries. |
+| **Library controller** | When the the pre-installed libraries are lacking for your needs, additional libraries can be installed for Python and R, and are temporarily stored in isolated containers to maintain the integrity of Platform and keep your data safe. See the [kernels](#kernels) section for more details. |
 
-## Integration with other Platform services
+>[!NOTE] Additional libraries are only available for the session in which they were installed. You must reinstall any additional libraries you require when starting new sessions.
+
+## Integration with other Platform services {#service-integration}
 
 Standardization and interoperability are key concepts behind Experience Platform. The integration of JupyterLab on Platform as an embedded IDE allows it to interact with other Platform services, enabling you to utilize Platform to its full potential. The following Platform services are available in JupyterLab:
 
-*   **Data Catalog:** Access and explore datasets with read and write functionalities.
+*   **Catalog Service:** Access and explore datasets with read and write functionalities.
 *   **Query Service:** Access and explore datasets using SQL, providing lower data access overheads when dealing with large amounts of data.
 *   **Sensei ML Framework:** Model development with the ability to train and score data, as well as recipe creation with a single click.
 
@@ -135,7 +110,7 @@ Common cell actions are described below:
 
 *   **Delete a cell:** Click on the body of the cell you wish to delete and then click the **scissor** icon.
 
-### Kernels
+### Kernels {#kernels}
 
 <!-- will need to edit this sparkmagic %% for data bricks not supported -->
 
@@ -147,10 +122,10 @@ Certain features and functionalities are limited to particular kernels as descri
 
 | Kernel | Library installation support | Platform integrations |
 | :----: | :--------------------------: | :-------------------- |
-| **Python** | yes | <ul><li>Sensei ML Framework</li><li>Data Catalog</li><li>Query Service</li></ul> |
-| **R** | yes | <ul><li>Sensei ML Framework</li><li>Data Catalog</li></ul> |
-| **PySpark** | no | <ul><li>Sensei ML Framework</li><li>Data Catalog</li></ul> |
-| **Spark** | no | <ul><li>Sensei ML Framework</li><li>Data Catalog</li></ul> |
+| **Python** | Yes | <ul><li>Sensei ML Framework</li><li>Catalog Service</li><li>Query Service</li></ul> |
+| **R** | Yes | <ul><li>Sensei ML Framework</li><li>Catalog Service</li></ul> |
+| **PySpark** | No | <ul><li>Sensei ML Framework</li><li>Catalog Service</li></ul> |
+| **Spark** | No | <ul><li>Sensei ML Framework</li><li>Catalog Service</li></ul> |
 
 ### Kernel sessions
 
@@ -162,7 +137,7 @@ If the kernel is shut-down or inactive for a prolonged period, then **No Kernel!
 
 ![](../images/jupyterlab/user-guide/switch_kernel.gif)
 
-### PySpark/Spark execution resource
+### PySpark/Spark execution resource {#execution-resource}
 
 <!-- need to update with databricks -->
 
@@ -211,15 +186,17 @@ All configurable properties are listed in the table below:
 
 The customized *Launcher* provides you with useful notebook templates for their supported kernels to help you kickstart your task, including:
 
-*   **Blank:** An empty notebook file.
-*   **Starter:** A pre-filled notebook demonstrating data exploration using sample data.
-*   **Retail Sales:** A pre-filled notebook featuring the <a href="https://adobe.ly/2wOgO3L" target="_blank">Retail Sales Recipe</a> using sample data.
-*   **Recipe Builder:** A notebook template for creating a recipe in JupyterLab. It is pre-filled with code and commentary that demonstrates and describes the recipe creation process. Refer to the <a href="https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en" target="_blank">notebook to recipe tutorial</a> for a detailed walkthrough.
-*   **Query Service:** A pre-filled notebook demonstrating the usage of Query Service directly in JupyterLab with provided sample workflows that analyzes data at scale.
-*   **XDM Events:** A pre-filled notebook demonstrating data exploration on postvalue Experience Event data, focusing on features common across the data structure.
-*   **XDM Queries:** A pre-filled notebook demonstrating sample business queries on Experience Event data.
-*   **Aggregation:** A pre-filled notebook demonstrating sample workflows to aggregate large amounts of data into smaller, manageable chunks.
-*   **Clustering:** A pre-filled notebook demonstrating the end-to-end machine learning modeling process using clustering algorithms.
+| Template | Description |
+| --- | --- |
+| Blank | An empty notebook file. |
+| Starter | A pre-filled notebook demonstrating data exploration using sample data. |
+| Retail Sales | A pre-filled notebook featuring the <a href="https://adobe.ly/2wOgO3L" target="_blank">Retail Sales Recipe</a> using sample data. |
+| Recipe Builder | A notebook template for creating a recipe in JupyterLab. It is pre-filled with code and commentary that demonstrates and describes the recipe creation process. Refer to the <a href="https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en" target="_blank">notebook to recipe tutorial</a> for a detailed walkthrough. |
+| Query Service | A pre-filled notebook demonstrating the usage of Query Service directly in JupyterLab with provided sample workflows that analyzes data at scale. |
+| XDM Events | A pre-filled notebook demonstrating data exploration on postvalue Experience Event data, focusing on features common across the data structure. |
+| XDM Queries | A pre-filled notebook demonstrating sample business queries on Experience Event data. |
+| Aggregation | A pre-filled notebook demonstrating sample workflows to aggregate large amounts of data into smaller, manageable chunks. |
+| Clustering | A pre-filled notebook demonstrating the end-to-end machine learning modeling process using clustering algorithms. |
 
 Some notebook templates are limited to certain kernels. Template availability for each kernel is mapped in the following table:
 
@@ -300,7 +277,7 @@ Python and R notebooks allow you to paginate data when accessing datasets. Sampl
 
 [//]: # (In the following samples, the first step is currently required but once the SDK is complete, users are no longer required to explicitly define client_context)
 
-**Read from a dataset in Python/R without pagination**
+#### Read from a dataset in Python/R without pagination
 
 Executing the following code will read the entire dataset. If the execution is successful, then data will be saved as a Pandas dataframe referenced by the variable `df`.
 
@@ -330,7 +307,7 @@ df
 
 *   `{DATASET_ID}`: The unique identity of the dataset to be accessed
 
-**Read from a dataset in Python/R with pagination**
+#### Read from a dataset in Python/R with pagination
 
 Executing the following code will read data from the specified dataset. Pagination is achieved by limiting and offsetting data through the functions `limit()` and `offset()` respectively. Limiting data refers to the maximum number of data points to be read, while offsetting refers to the number of data points to skip prior to reading data. If the read operation executes successfully, then data will be saved as a Pandas dataframe referenced by the variable `df`.
 
@@ -511,7 +488,7 @@ val timedf = spark.sql("""
 ```
 
 
-## Supported libraries
+## Supported libraries {#supported-libraries}
 
 ### Python / R
 
@@ -640,41 +617,9 @@ val timedf = spark.sql("""
 
 This table outlines the optional SQL flags that can be used for Query Service.
 
-<table>
-    <tr>
-        <th><strong> Flag </strong></th>
-        <th><strong> Description </strong></th>
-    </tr>
-    <tr>
-        <td>
-            <code> -h </code>, <code> --help </code>
-        </td >
-        <td >
-            Show the help message and exit.
-        </td>
-    </tr>
-    <tr>
-        <td >
-            <code> -n </code>, <code> --notify </code>
-        </td>
-        <td>
-            Toggle option for notifying query results.
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <code> -a </code>, <code> --async </code>
-        </td>
-        <td>
-            Using this flag executes the query asynchonously and can free up the kernel while the query is executing. Be cautious when assigning query results to variables as it may be undefined if the query is not complete.
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <code> -d </code>, <code> --display </code>
-        </td>
-        <td>
-            Using this flag prevents results from being displayed.
-        </td>
-    </tr>
-</table>
+| **Flag** | **Description** |
+| --- | --- |
+| `-h`, `--help` | Show the help message and exit. |
+| `-n`, `--notify` | Toggle option for notifying query results. |
+| `-a`, `--async` | Using this flag executes the query asynchonously and can free up the kernel while the query is executing. Be cautious when assigning query results to variables as it may be undefined if the query is not complete. |
+| `-d`, `--display` | Using this flag prevents results from being displayed. |
