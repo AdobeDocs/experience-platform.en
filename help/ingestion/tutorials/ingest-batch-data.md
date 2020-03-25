@@ -115,7 +115,7 @@ At the bottom of the tab is a list showing the _Batch ID_ of the data that was j
 
 Click on the _Batch ID_ to view a **Batch Overview**, showing additional details regarding the batch. Once the batch has finished loading, the information about the batch will update to show the number of _Records Ingested_ and the _File Size_. The _Status_ will also change to "Success" or "Failed". If the batch fails the _Error Code_ section will contain details regarding any errors during ingestion.
 
-For more information and frequently asked questions regarding batch ingestion, see the [Batch Ingestion Troubleshooting Guide](../batch-ingestion/troubleshooting.md).
+For more information and frequently asked questions regarding batch ingestion, see the [Batch Ingestion troubleshooting guide](../batch-ingestion/troubleshooting.md).
 
 To return to the **Dataset Activity** screen, click the name of the dataset (_Loyalty Details_) in the breadcrumb.
 
@@ -133,4 +133,4 @@ Click **Preview Dataset** to open a dialog showing sample data from within the d
 
 Now that you have created a dataset and successfully ingested data into Experience Platform, you can repeat these steps to create a new dataset or ingest more data into the existing dataset.
 
-To learn more about batch ingestion, please read the [batch ingestion overview](../batch-ingestion/overview.md).
+To learn more about batch ingestion, please read the [Batch Ingestion overview](../batch-ingestion/overview.md).

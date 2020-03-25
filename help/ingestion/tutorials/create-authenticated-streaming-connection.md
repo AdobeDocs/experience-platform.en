@@ -57,8 +57,6 @@ POST /flowservice/connections
 **Request**
 
 >[!NOTE] The values for the listed `providerId` and the `connectionSpec` **must** be used as shown in the example, as they are what specifies to the API that you are creating a streaming connection for streaming ingestion. 
->
-> Notice how `authenticationRequired: true` has been added to the request payload.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \

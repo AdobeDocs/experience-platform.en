@@ -56,21 +56,20 @@ For example, neither JSON nor CSV has a date or date-time type. As a result, the
 
 The table below shows the conversions supported when ingesting data.
 
-| Inbound (row) vs Target (col) | String  | Byte  | Short  | Integer  | Long  | Double  | Date  | Date-Time  | Boolean  | Object  | Array  | Map |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:----:|
-| String    | X | X | X | X | X | X | X | X |   |   |   |   |
-| Byte      | X | X | X | X | X | X |   |   |   |   |   |   |
-| Short     | X | X | X | X | X | X |   |   |   |   |   |   |
-| Integer   | X | X | X | X | X | X |   |   |   |   |   |   |
-| Long      | X | X | X | X | X | X | X | X |   |   |   |   |
-| Double    | X | X | X | X | X | X |   |   |   |   |   |   |
-| Date      |   |   |   |   |   |   | X |   |   |   |   |   |
-| Date-Time |   |   |   |   |   |   |   | X |   |   |   |   |
-| Boolean   |   |   |   |   |   |   |   |   | X |   |   |   |
-| Object    |   |   |   |   |   |   |   |   |   | X |   | X |
-| Array     |   |   |   |   |   |   |   |   |   |   | X |   |
-| Map       |   |   |   |   |   |   |   |   |   |   |   | X |
+| Inbound (row) vs Target (col) | String  | Byte  | Short  | Integer  | Long  | Double  | Date  | Date-Time | Object | Map |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| String    | X | X | X | X | X | X | X | X |   |   |
+| Byte      | X | X | X | X | X | X |   |   |   |   |
+| Short     | X | X | X | X | X | X |   |   |   |   |
+| Integer   | X | X | X | X | X | X |   |   |   |   |
+| Long      | X | X | X | X | X | X | X | X |   |   |
+| Double    | X | X | X | X | X | X |   |   |   |   |
+| Date      |   |   |   |   |   |   | X |   |   |   |
+| Date-Time |   |   |   |   |   |   |   | X |   |   |
+| Object    |   |   |   |   |   |   |   |   | X | X |
+| Map       |   |   |   |   |   |   |   |   | X | X |
 
+>[!NOTE] Booleans and arrays cannot be converted to other types.
 
 ## Ingestion constraints
 
@@ -115,7 +114,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 | Parameter | Description |
 | --------- | ----------- |
-| `datasetId` | The ID of the reference dataset. |
+| `{DATASET_ID}` | The ID of the reference dataset. |
 
 **Response**
 
@@ -141,8 +140,8 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 | Parameter | Description |
 | --------- | ----------- |
-| `id` | The ID of the newly created batch. |
-| `relatedObjects.id` | The ID of the referenced dataset. |
+| `{BATCH_ID}` | The ID of the newly created batch. |
+| `{DATASET_ID}` | The ID of the referenced dataset. |
 
 ### Upload files
 
@@ -295,7 +294,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Request**
 
->[!NOTE] This API supports single-part upload. Ensure that the content-type is application/octet-stream.
+>[!CAUTION] This API supports single-part upload. Ensure that the content-type is application/octet-stream.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
@@ -464,7 +463,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Request**
 
->[!NOTE] This API supports single-part upload. Ensure that the content-type is application/octet-stream.
+>[!CAUTION] This API supports single-part upload. Ensure that the content-type is application/octet-stream.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
@@ -710,7 +709,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Request**
 
->[!NOTE] This API supports single-part upload. Ensure that the content-type is application/octet-stream.
+>[!CAUTION] This API supports single-part upload. Ensure that the content-type is application/octet-stream.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.csv \
@@ -915,7 +914,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Request**
 
->[!NOTE] This API supports single-part upload. Ensure that the content-type is application/octet-stream. Do not use the curl -F option, as it defaults to multi-part request that is incompatible with the API.
+>[!CAUTION] This API supports single-part upload. Ensure that the content-type is application/octet-stream. Do not use the curl -F option, as it defaults to multi-part request that is incompatible with the API.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.json \
