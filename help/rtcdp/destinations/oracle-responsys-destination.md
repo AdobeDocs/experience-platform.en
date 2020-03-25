@@ -11,7 +11,7 @@ seo-description: Responsys is an enterprise email marketing tool for cross-chann
 
 [Responsys](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/) is an enterprise email marketing tool for cross-channel marketing campaigns offered by Oracle to personalize interactions across email, mobile, display, and social.
 
-To send segment data to Oracle Responsys, you must first [connect the destination](#connect-destination) in Adobe Real-time Customer Data Platform, and then [set up a data import](#import-data-into-responsys) from your storage location into Oracle Responsys.
+To send segment data to Oracle Responsys, you must first [connect to the destination](#connect-destination) in Adobe Real-time Customer Data Platform, and then [set up a data import](#import-data-into-responsys) from your storage location into Oracle Responsys.
 
 ## Connect destination {#connect-destination}
 
@@ -19,16 +19,14 @@ To send segment data to Oracle Responsys, you must first [connect the destinatio
 
     ![Connect to Responsys](/help/rtcdp/destinations/assets/connect-oracle-responsys.png)
 
-1. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. For Oracle Responsys, you can select between **SFTP with Password** and **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect]**.
-
-    ![Set up Responsys wizard](/help/rtcdp/destinations/assets/responsys-wizard.png)
+1. In the **Authentication** step, if you had previously set up a connection to your cloud storage destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection. Fill in your account authentication credentials and select **[!UICONTROL Connect to destination]**. For Oracle Responsys, you can select between **SFTP with Password** and **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect to destination]**.
 
     For **SFTP with Password** connections, you must provide Domain, Port, Username, and Password.
     For **SFTP with SSH Key** connections, you must provide Domain, Port, Username, and SSH Key.
 
-    ![Fill in Responsys information](/help/rtcdp/destinations/assets/responsys-step2.png)
+    ![Fill in Responsys information](/help/rtcdp/destinations/assets/responsys-authentication.png)
 
-1. In **Basic Information**, fill in the relevant information for your destination, as shown below:
+2. In the **Setup** step, fill in the relevant information for your destination as shown below:
    * **Name**: Pick a relevant name for your destination.
    * **Description**: Enter a description for your destination.
    * **Folder Path**: Provide the path in your storage location where Real-time CDP will deposit your export data as CSV or tab-delimited files.
@@ -36,7 +34,7 @@ To send segment data to Oracle Responsys, you must first [connect the destinatio
 
     ![Responsys basic information](/help/rtcdp/destinations/assets/responsys-basic-information.png)
 
-1. Click **Create** after filling in the fields in **Basic Information**. Your destination is now connected and you can [activate segments](/help/rtcdp/destinations/activate-destinations.md) to the destination.
+3. Click **Create destinations** after filling in the fields above. Your destination is now connected and you can [activate segments](/help/rtcdp/destinations/activate-destinations.md) to the destination.
 
 ## Destination attributes {#destination-attributes}
 
