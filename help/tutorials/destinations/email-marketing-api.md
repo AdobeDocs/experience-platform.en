@@ -7,13 +7,13 @@ topic: tutorial
 
 # Create email marketing destinations and activate data in Adobe's Real-time Customer Data Platform
 
-This tutorial demonstrates how to use API calls to connect to your Adobe Experience Platform data, create an [email marketing destination](../../rtcdp/destinations/destinations-cat/email-destinations/email-marketing-destinations.md), create a dataflow to your new created destination, and activate data to your new created destination.
+This tutorial demonstrates how to use API calls to connect to your Adobe Experience Platform data, create an [email marketing destination](../../rtcdp/destinations/email-marketing-destinations.md), create a dataflow to your new created destination, and activate data to your new created destination.
 
 This tutorial uses the Adobe Campaign destination in all examples, but the steps are identical for all email marketing destinations.
 
 ![Overview - the steps to create a destination and activate segments](../images/destinations/flow-api-destinations-steps-overview.png)
 
-If you prefer to use the user interface in Adobe's Real-time CDP to connect a destination and activate data, see the [Connect a destination](../../rtcdp/destinations/dest-tutorials/connect-destination.md) and [Activate profiles and segments to a destination](../../rtcdp/destinations/dest-tutorials/activate-destinations.md) tutorials.
+If you prefer to use the user interface in Adobe's Real-time CDP to connect a destination and activate data, see the [Connect a destination](../../rtcdp/destinations/connect-destination.md) and [Activate profiles and segments to a destination](../../rtcdp/destinations/activate-destinations.md) tutorials.
 
 ## Get started
 
@@ -355,7 +355,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 *   `{CONNECTION_SPEC_ID}`: Use the connection spec ID you obtained in the step [Get the list of available destinations](#get-the-list-of-available-destinations).
-*   `{S3 or SFTP}`: fill in the desired connection type for this destination. In the [destination catalog](../../rtcdp/destinations/destinations-cat/destinations-catalog.md), scroll to your preferred destination to see if S3 and/or SFTP connection types are supported. 
+*   `{S3 or SFTP}`: fill in the desired connection type for this destination. In the [destination catalog](../../rtcdp/destinations/destinations-catalog.md), scroll to your preferred destination to see if S3 and/or SFTP connection types are supported. 
 *   `{ACCESS_ID}`: Your access ID for your Amazon S3 storage location.
 *   `{SECRET_KEY}`: Your secret key for your Amazon S3 storage location.
 
@@ -665,4 +665,4 @@ The returned response should include in the `transformations` parameter the segm
 By following this tutorial, you have successfully connected Real-time CDP to one of your preferred email marketing destinations and set up a dataflow to the respective destination. Outgoing data can now be used in the destination for email campaigns, targeted advertising, and many other use cases. See the following pages for more details:
 
 *   [Destinations overview](../../rtcdp/destinations/destinations-overview.md)
-*   [Destinations Catalog overview](../../rtcdp/destinations/destinations-cat/destinations-catalog.md)
+*   [Destinations Catalog overview](../../rtcdp/destinations/destinations-catalog.md)
