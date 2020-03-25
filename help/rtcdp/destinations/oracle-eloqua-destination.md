@@ -5,7 +5,7 @@ description: Oracle Eloqua is a software as a service (SaaS) platform for market
 seo-description: Oracle Eloqua is a software as a service (SaaS) platform for marketing automation offered by Oracle that aims to help B2B marketers and organizations manage marketing campaigns and sales lead generation.
 ---
 
-#  Oracle Eloqua
+# Oracle Eloqua
 
 ## Overview
 
