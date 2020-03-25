@@ -8,25 +8,12 @@ topic: Tutorial
 # Analyze your data using notebooks
 
 This tutorial focuses on how to use Jupyter notebooks, built within Data Science Workspace, to access, explore, and visualize your data. By the end of this tutorial, you should have a understanding of some of the features Jupyter notebooks offer to better understand your data.
-- [Explore notebooks in Data Science Workspace](#explore-notebooks-in-data-science-workspace)
-    - [Choose your workspace](#choose-your-workspace)
-    - [Create a new notebook](#create-a-new-notebook)
-    - [Access data](#access-data)
-        - [External data](#external-data)
-        - [Adobe Experience Platform data](#adobe-experience-platform-data)
-            - [By Dataset ID](#by-dataset-id)
-    - [Explore our data](#explore-our-data)
-        - [Statistical summary](#statistical-summary)
-        - [Data visualization](#data-visualization)
-            - [Univariate graphs](#univariate-graphs)
-            - [Multivariate graphs](#multivariate-graphs)
-- [Next steps](#next-steps)
 
 The following concepts are introduced:
 
 - **JupyterLab:** [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is the next-generation web-based interface for Project Jupyter, and is tightly integrated into Adobe Experience Platform.
-- **Batches:** Datasets are made up of batches. A Batch is a set of data collected over a period of time and processed together as a single unit. New batches are created when data is added to a Dataset.
-- **Data Access SDK (deprecated):** The Data Access SDK is now deprecated, please use the [platform SDK](../authoring/platform-sdk.md) guide.
+- **Batches:** Datasets are made up of batches. A batch is a set of data collected over a period of time and processed together as a single unit. New batches are created when data is added to a dataset.
+- **Data Access SDK (deprecated):** The Data Access SDK is now deprecated. Please use the [Platform SDK](../authoring/platform-sdk.md) guide.
 
 ## Explore notebooks in Data Science Workspace
 
@@ -74,9 +61,9 @@ Finally, we can take a peek at what our data looks like. We can use `df.head(n)`
 
 ![](../images/jupyterlab/analyze-data/df_head.png)
 
-#### Adobe Experience Platform data
+#### Experience Platform data
 
-Now, we will go over accessing Adobe Experience Platform data.
+Now, we will go over accessing Experience Platform data.
 
 ##### By Dataset ID
 
@@ -113,9 +100,9 @@ If you restart your kernel and run all the cells again, you should get the same 
 ![](../images/jupyterlab/analyze-data/restart_kernel_run.png)
 
 
-### Explore our data
+### Explore your data
 
-Now that we can access our data, let's focus on the data itself by using statistics and visualization. The dataset that we are using is a retail dataset which gives miscellaneous information about 45 different stores on a given day. Some characteristics for a given `date` and `store` include the following:
+Now that we can access your data, let's focus on the data itself by using statistics and visualization. The dataset that we are using is a retail dataset which gives miscellaneous information about 45 different stores on a given day. Some characteristics for a given `date` and `store` include the following:
 - `storeType`
 - `weeklySales`
 - `storeSize`

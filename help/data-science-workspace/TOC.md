@@ -14,6 +14,7 @@ user-guide-title: Adobe Experience Platform Data Science Workspace Help
   * [Query service in Jupyter notebook](jupyterlab/query-service.md)
   * [Create a recipe using Jupyter notebooks](jupyterlab/create-a-recipe.md)
 * Sensei Machine Learning API {#api}
+  * [Getting started](api/getting-started.md)
   * [Engines](api/engines.md)
   * [MLInstances (recipes)](api/mlinstances.md)
   * [Experiments](api/experiments.md)
