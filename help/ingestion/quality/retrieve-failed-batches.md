@@ -9,10 +9,7 @@ topic: overview
 
 Adobe Experience Platform provides two methods for uploading and ingesting data. You can either use batch ingestion, which allows you to insert their data using various file types (such as CSVs), or streaming ingestion, which allows you to insert their data to Platform using streaming endpoints in real-time.
 
-This tutorial covers steps for retrieving information about a failed batch using Data Ingestion APIs. Specifically, this tutorial shows you how to:
-
-- [Retrieve a failed batch](#retrieve-the-failed-batch)
-- [Download a failed batch](#download-the-failed-batch)
+This tutorial covers steps for retrieving information about a failed batch using Data Ingestion APIs.
 
 ## Getting started
 

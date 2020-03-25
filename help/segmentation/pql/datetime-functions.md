@@ -13,7 +13,7 @@ Date and time functions are used to perform date and time operations on values w
 
 The `currentMonth` function returns the current month as an integer. 
 
-**Format**at
+**Format**
 
 ```sql
 currentMonth()
@@ -31,7 +31,7 @@ person.birthMonth = currentMonth()
 
 The `getMonth` function returns the month, as an integer, based on a given timestamp.
 
-**Format**at
+**Format**
 
 ```sql
 {TIMESTAMP}.getMonth()
@@ -49,7 +49,7 @@ person.birthdate.getMonth() = 6
 
 The `currentYear` function returns the current year as an integer.
 
-**Format**at
+**Format**
 
 ```sql
 currentYear()
@@ -67,7 +67,7 @@ product.saleYear = currentYear()
 
 The `getYear` function returns the year, as an integer, based on a given timestamp.
 
-**Format**at
+**Format**
 
 ```sql
 {TIMESTAMP}.getYear()
@@ -85,7 +85,7 @@ person.birthday.getYear() in [1991, 1992, 1993, 1994, 1995]
 
 The `currentDayOfMonth` function returns the current day of the month as an integer.
 
-**Format**at
+**Format**
 
 ```sql
 currentDayOfMonth()
@@ -103,7 +103,7 @@ person.birthDay = currentDayOfMonth()
 
 The `getDayOfMonth` function returns the day, as an integer, based on a given timestamp.
 
-**Format**at
+**Format**
 
 ```sql
 {TIMESTAMP}.getDayOfMonth()
@@ -121,7 +121,7 @@ product.sale.getDayOfMonth() <= 15
 
 The `occurs` function compares the given timestamp function with a fixed period of time.
 
-**Format**at
+**Format**
 
 The `occurs` function can be written using any of the following formats:
 

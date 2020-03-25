@@ -185,12 +185,12 @@ The response format depends on the type of Accept header sent in the request. Lo
 
 | Accept | Description |
 | ------ | ----------- |
-| application/vnd.adobe.xed-id+json | List (GET) requests, titles, ids and versions |
-| application/vnd.adobe.xed-full+json; version={major version} | $refs and allOf resolved, has titles and descriptions |
-| application/vnd.adobe.xed+json; version={major version} | Raw with $ref and allOf, has titles and descriptions |
-| application/vnd.adobe.xed-notext+json; version={major version} | Raw with $ref and allOf, no titles or descriptions |
-| application/vnd.adobe.xed-full-notext+json; version={major version} |$refs and allOf resolved, no titles or descriptions |
-| application/vnd.adobe.xed-full-desc+json; version={major version} | $refs and allOf resolved, descriptors included |
+| `application/vnd.adobe.xed-id+json` | List (GET) requests, titles, ids and versions |
+| `application/vnd.adobe.xed-full+json; version={major version}` | $refs and allOf resolved, has titles and descriptions |
+| `application/vnd.adobe.xed+json; version={major version}` | Raw with $ref and allOf, has titles and descriptions |
+| `application/vnd.adobe.xed-notext+json; version={major version}` | Raw with $ref and allOf, no titles or descriptions |
+| `application/vnd.adobe.xed-full-notext+json; version={major version}` |$refs and allOf resolved, no titles or descriptions |
+| `application/vnd.adobe.xed-full-desc+json; version={major version}` | $refs and allOf resolved, descriptors included |
 
 >[!NOTE] `application/vnd.adobe.xed-id+json` and `application/vnd.adobe.xed-full+json; version={major version}` are the most commonly used Accept headers. `application/vnd.adobe.xed-id+json` is preferred for listing resources in the Schema Registry as it returns only the "title", "id", and "version". `application/vnd.adobe.xed-full+json; version={major version}` is preferred for viewing a specific resource (by its "id"), as it returns all fields (nested under "properties"), as well as titles and descriptions.
 
@@ -279,13 +279,13 @@ You can refer to the [Catalog Service overview](../catalog/home.md) for detailed
 
 **API format**
 
-```
+```http
 GET /catalog/dataSets?limit={value}&properties={value}
 ```
 
 **Request**
 
-```SHELL
+```shell
 curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets?limit=1&properties=files" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
@@ -415,7 +415,7 @@ The "href" property can be used to fetch preview data via the [data access API](
 
 **API format**
 
-```
+```http
 GET /export/files/{FILE_ID}?path={FILE_NAME}.{FILE_FORMAT}
 ```
 
@@ -442,6 +442,10 @@ The destination component as output of transformed data, the Data Engineer will 
 ```shell
 GET /catalog/dataSets/{DATASET_ID}
 ```
+
+| Property | Description |
+| -------- | ----------- |
+| `{DATASET_ID}` | The `id` value of the dataset you are trying to access. |
 
 **Request**
 
@@ -551,7 +555,7 @@ If you are using the reference implementation found on [GitHub](https://github.c
 
 Validation can be performed for logical XDM types, using attributes such as `minLength` and `maxlength` for strings, `minimum` and `maximum` for integers, and more. The [Schema Registry API developer guide](../xdm/api/getting-started.md) contains a table that outlines XDM types and the properties that can be used for validation. 
 
-**_Note:_** The minimum and maximum values provided for various `integer` types are the MIN and MAX values that the type can support, but these values can be further constrained to minimums and maximums of your choosing.
+>[!NOTE] The minimum and maximum values provided for various `integer` types are the MIN and MAX values that the type can support, but these values can be further constrained to minimums and maximums of your choosing.
 
 ### Create a batch
 
@@ -680,8 +684,6 @@ The following response shows a "success":
     "availableDates": {}
 }
 ```
-
-
 
 **Response - Failure**
 

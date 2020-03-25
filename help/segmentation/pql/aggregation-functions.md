@@ -67,7 +67,7 @@ orders.average(order.price)
 
 The `min` function returns the smallest of all the selected values within the array.
 
-** Format
+**Format**
 
 ```sql
 {ARRAY}.min()

@@ -11,19 +11,6 @@ This document provides answers to frequently asked questions about streaming ing
 
 Adobe Experience Platform Data Ingestion provides RESTful APIs that you can use to ingest data into Experience Platform. The ingested data is used to update individual customer profiles in near real-time, allowing you to deliver personalized, relevant experiences across multiple channels. Please read the [Data Ingestion overview](../home.md) for more information on the service and the different ingestion methods. For steps on how to use streaming ingestion APIs, please read the [streaming ingestion overview](../streaming-ingestion/overview.md).
 
-- **Streaming data to Platform**
-    - [How do I know that the payload I'm sending is formatted properly?](#how-do-i-know-that-the-payload-im-sending-is-formatted-properly)
-    - [Can I validate a request payload before sending it to Platform?](#can-i-validate-a-request-payload-before-sending-it-to-platform)
-    - [What happens when synchronous validation is requested on an edge that does not support it?](#what-happens-when-synchronous-validation-is-requested-on-an-edge-that-does-not-support-it)
-    - [How do I authenticate sent data?](#how-do-i-authenticate-sent-data)
-    - [What is the latency for streaming data to Real-time Customer Profile?](#what-is-the-latency-for-streaming-data-to-real-time-customer-profile)
-    - [Can I include multiple messages in the same API request?](#can-i-include-multiple-messages-in-the-same-api-request)
-- **Response handling and data management**
-    - [How do I know if the data I'm sending is being received?](#how-do-i-know-if-the-data-im-sending-is-being-received)
-    - [Why is my streaming data not available in the Data Lake?](#why-is-my-streaming-data-not-available-in-the-data-lake)
-    - [How do I parse the response returned for the API request?](#how-do-i-parse-the-response-returned-for-the-api-request)
-    - [Why are my sent messages not being received by Real-time Customer Profile?](#why-are-my-sent-messages-not-being-received-by-real-time-customer-profile)
-
 ## FAQ
 
 The following is a list of answers to frequently asked questions about streaming ingestion.

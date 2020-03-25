@@ -24,15 +24,7 @@ A description of some commonly used terms throughout this document.
 | Dataset | A collection of data that includes schema and fields. |
 | Batch | A set of data collected over a period of time and processed together as a single unit. |
 
-## Common use cases
-
-The Data Access API supports a multitude of common use cases in order to streamline data access and discovery:
-
-- [Retrieve a list of files within a batch](#retrieve-list-of-files-within-a-batch)
-- [Access and download files within a batch](#access-and-download-files-within-a-batch)
-- [Access the contents of a file](#access-the-contents-of-a-file)
-
-### Retrieve list of files within a batch
+## Retrieve list of files within a batch
 
 By using a batch identifier (batchID), the Data Access API can retrieve a list of files belonging to that particular batch.
 
@@ -44,7 +36,7 @@ GET /batches/{BATCH_ID}/files
 
 | Property | Description |
 | -------- | ----------- |
-| {BATCH_ID} | The ID of the specified batch. |
+| `{BATCH_ID}` | The ID of the specified batch. |
 
 **Request**
 
@@ -99,10 +91,10 @@ The `"data"` array contains a list of all files within the specified batch. Each
 
 | Property | Description |
 | -------- | ----------- |
-| data.dataSetFileId | The file ID for each file in the specified batch. |
-| data._links.self.href | The url to access the file. |
+| `data.dataSetFileId` | The file ID for each file in the specified batch. |
+| `data._links.self.href` | The url to access the file. |
 
-### Access and download files within a batch
+## Access and download files within a batch
 
 By using a file identifier (`{FILE_ID}`), the Data Access API can be used to access specific details of a file, including its name, size in bytes, and a link to download.
 
@@ -116,7 +108,7 @@ GET /files/{FILE_ID}
 
 | Property | Description |
 | -------- | ----------- |
-| {FILE_ID} | Equal to the `"dataSetFileId"`, the ID of the file to be accessed. |
+| `{FILE_ID}` | Equal to the `"dataSetFileId"`, the ID of the file to be accessed. |
 
 **Request**
 
@@ -152,9 +144,9 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 | Property | Description |
 | -------- | ----------- |
-| data.name | Name of the file (e.g. profiles.csv). |
-| data.length | Size of the file (in bytes). |
-| data._links.self.href | The URL to download the file. |
+| `data.name` | Name of the file (e.g. profiles.csv). |
+| `data.length` | Size of the file (in bytes). |
+| `data._links.self.href` | The URL to download the file. |
 
 **Directory response**
 
@@ -199,10 +191,10 @@ When a directory is returned, it contains an array of all files within the direc
 
 | Property | Description |
 | -------- | ----------- |
-| data.name | Name of the file (e.g. profiles.csv). |
-| data._links.self.href | The URL to download the file. |
+| `data.name` | Name of the file (e.g. profiles.csv). |
+| `data._links.self.href` | The URL to download the file. |
 
-### Access the contents of a file
+## Access the contents of a file
 
 The Data Access API can also be used to access the contents of a file. This can then be used to download the contents to an external source.
 
@@ -214,7 +206,7 @@ GET /files/{dataSetFileId}?path={FILE_NAME}
 
 | Property | Description |
 | -------- | ----------- |
-| {FILE_NAME} | The name of the file you are trying to access. |
+| `{FILE_NAME}` | The name of the file you are trying to access. |
 
 **Request**
 
@@ -228,8 +220,8 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 | Property | Description |
 | -------- | ----------- |
-| {FILE_ID} | The ID of the file within a dataset. |
-| {FILE_NAME} | The full name of the file (e.g. profiles.csv). |
+| `{FILE_ID}` | The ID of the file within a dataset. |
+| `{FILE_NAME}` | The full name of the file (e.g. profiles.csv). |
 
 **Response**
 
