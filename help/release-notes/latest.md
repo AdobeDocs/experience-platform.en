@@ -33,7 +33,7 @@ Adobe Experience Platform Data Governance is a series of strategies and technolo
 
 * None
 
-For more information about Data Governance, see the [Data Governance overview](../data-governance/home.html).
+For more information about Data Governance, see the [Data Governance overview](../data-governance/home.md).
 
 ## Data Ingestion
 
