@@ -9,7 +9,7 @@ topic: getting started
 
 Adobe Experience Platform APIs employ several underlying technologies and syntaxes that are important to understand in order to effectively manage JSON-based Platform resources. This document provides a brief overview of these technologies, as well as links to external documentation for more information.
 
-## JSON Pointer
+## JSON Pointer {#json-pointer}
 
 JSON Pointer is a standardized string syntax ([RFC 6901](https://tools.ietf.org/html/rfc6901)) for identifying specific values within JSON documents. A JSON Pointer is a string of tokens separated by `/` characters, which specify either object keys or array indexes, and the tokens can be a string or a number. JSON Pointer strings are used in many PATCH operations for Platform APIs, as described later in this document. For more information on JSON Pointer, please refer to the [JSON Pointer overview documentation](https://rapidjson.org/md_doc_pointer.html). 
 
