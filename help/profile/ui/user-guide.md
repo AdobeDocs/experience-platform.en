@@ -27,7 +27,7 @@ In the [Experience Platform UI](http://platform.adobe.com), click **Profiles** i
 
 ## View profile samples
 
-Click **Browse** to view a sample list of available profiles. Each listed profile displays its ID, first name, last name, and personal email. Clicking the ID of a listed profile displays its details within the [Profile Viewer](#profile-viewer).
+Click **Browse** to view a sample list of available profiles. This sample includes up to 50 profiles from your total [profile count](#profile-count). The samples are refreshed by an automatic job that picks up new profile data as it is ingested. Each listed profile displays its ID, first name, last name, and personal email. Clicking the ID of a listed profile displays its details within the [Profile Viewer](#profile-viewer).
 
 ![](../images/user-guide/profile-samples.png)
 
@@ -35,25 +35,31 @@ You can customize the attributes that are displayed in the list by clicking the 
 
 ![](../images/user-guide/column-selector.png)
 
+### Profile count {#profile-count}
+
+The profile count displays the total number of profiles your organization has within Experience Platform, after your organization's default merge policy has merged together profile fragments to form a single profile for each individual customer. In other words, your organization may have multiple profile fragments related to a single customer who interacts with your brand across different channels, but these fragments would be merged together (according to the default merge policy) and would return a count of "1" profile because they are all related to the same individual.
+
+The profile count also includes both profiles with attributes (record data) as well as profiles (such as Adobe Analytics profiles) containing only time series (event) data. The count is refreshed regularly to provide an up-to-date total number of profiles within Platform. Any time an ingestion of profiles increases or decreases the count by more than 5%, a job is automatically triggered to update the count. If your organization is using streaming ingestion, jobs are scheduled to run every hour to pick up newly ingested data.
+
+![](../images/user-guide/profile-count.png)
+
 ### Profile search
 
 If you know a linked identity for a particular profile (such as its email address), you can look up that profile by clicking **Find a profile**. This is the most reliable way to access a specific profile, regardless of whether it appears in the list of samples.
 
 ![](../images/user-guide/find-a-profile.png)
 
-In the dialog that appears, select an appropriate ID namespace from the dropdown list ("Email" in this example) and enter the ID value below before clicking **OK**.
+In the dialog that appears, select an appropriate ID namespace from the dropdown list ("Email" in this example) and enter the ID value below before clicking **OK**. If found, the details of the targeted profile appear in the profile viewer, as described in the next section.
 
 ![](../images/user-guide/find-a-profile-details.png)
 
-If found, the details of the targeted profile appear in the Profile Viewer, as described in the next section.
+### Profile viewer {#profile-viewer}
 
-### Profile Viewer {#profile-viewer}
-
-Upon selecting or searching for a specific profile, the _Detail_ screen of the Profile Viewer opens. This page displays information about the selected profile, such as the profile's basic attributes, linked identities, and available contact channels.
+Upon selecting or searching for a specific profile, the _Detail_ screen of the profile viewer opens. This page displays information about the selected profile, such as the profile's basic attributes, linked identities, and available contact channels. The profile information displayed has been merged together from multiple profile fragments to form a single view of the individual customer.
 
 ![](../images/user-guide/profile-viewer-detail.png)
 
-The Profile Viewer also provides tabs that allow you to view Experience Events and segment memberships associated with this profile, if any exist.
+The profile viewer also provides tabs that allow you to view events and segment memberships associated with this profile, if any exist.
 
 ![](../images/user-guide/profile-viewer-events-seg.png)
 
