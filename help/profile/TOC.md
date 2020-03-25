@@ -21,4 +21,5 @@ user-guide-title: Real-time Customer Profile Help
 * Tutorials {#tutorials}
   * [Add data to Profile](tutorials/add-profile-data.md)
   * [Configure dataset for Profile & Identity](tutorials/dataset-configuration.md)
+* [Privacy request processing in Real-time Customer Profile](privacy.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)
