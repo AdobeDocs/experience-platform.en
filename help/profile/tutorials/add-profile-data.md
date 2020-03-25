@@ -19,11 +19,11 @@ You can enable a schema for use in Real-time Customer Profile using the Schema R
 
 All data uploaded to Platform using batch ingestion is uploaded to individual datasets. Before this data can be used by Real-time Customer Profile, the dataset in question has to be specifically configured. For complete instructions, see the tutorial on [configuring a dataset for Profile and Identity Service](dataset-configuration.md).
 
-Once the dataset has been configured, you can start ingesting data into it. See the [batch ingestion developer guide](../../ingestion/batch-ingestion/api.md) for detailed steps on how to upload files in different formats.
+Once the dataset has been configured, you can start ingesting data into it. See the [batch ingestion developer guide](../../ingestion/batch-ingestion/api-overview.md) for detailed steps on how to upload files in different formats.
 
 ## Add data using streaming ingestion
 
-Any stream-ingested data that is compliant with a Profile-enabled XDM schema will automatically add or overwrite the appropriate record in Real-time Customer Profile. If more than one identity is supplied in the record, or time series data is consumed, those identities will be mapped in the identity graph without additional configuration. See the [streaming ingestion developer guide](../../ingestion/streaming-ingestion/api.md) to learn more.
+Any stream-ingested data that is compliant with a Profile-enabled XDM schema will automatically add or overwrite the appropriate record in Real-time Customer Profile. If more than one identity is supplied in the record, or time series data is consumed, those identities will be mapped in the identity graph without additional configuration. See the [streaming ingestion developer guide](../../ingestion/tutorials/streaming-record-data.md) to learn more.
 
 ## Confirm that the upload is successful
 
