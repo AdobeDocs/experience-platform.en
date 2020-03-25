@@ -9,12 +9,12 @@ user-guide-title: Adobe Experience Platform Data Ingestion Help
 - [Data Ingestion overview](home.md)
 - Streaming ingestion {#streaming}
     - [Overview](streaming-ingestion/overview.md)
-    - [Streaming ingestion UI](streaming-ingestion/ui.md)
+    - [Streaming ingestion UI](streaming-ingestion/ui-overview.md)
     - [Kafka connector](streaming-ingestion/kafka.md)
     - [Troubleshooting](streaming-ingestion/troubleshooting.md)
 - Batch ingestion{#batch}
     - [Overview](batch-ingestion/overview.md)
-    - [Batch ingestion API](batch-ingestion/api.md)
+    - [Batch ingestion API](batch-ingestion/api-overview.md)
     - [Partial batch ingestion](batch-ingestion/partial.md)
     - [Troubleshooting](batch-ingestion/troubleshooting.md)
 - Tutorials {#tutorials}

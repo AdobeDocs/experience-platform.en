@@ -21,7 +21,7 @@ Yes - it is safe to retry the API call. Despite the failure, it is possible that
 
 ### When should the Large File Upload API be used?
 
-The recommended file size for using the Large File Upload API is 256 MB or larger. More information about how to use the Large File Upload API can be found [here](./api.md#how-to-ingest-large-parquet-files).
+The recommended file size for using the Large File Upload API is 256 MB or larger. More information about how to use the Large File Upload API can be found [here](./api-overview.md#how-to-ingest-large-parquet-files).
 
 ### Why is the Large File Complete API call failing?
 
@@ -120,7 +120,7 @@ There are three levels of validation performed on the data:
 
 ### How can an already ingested batch be replaced?
 
-An already ingested batch can be replaced by using the Batch Replay feature. More information about Batch Replay can be found [here](./api.md#replay-a-batch).
+An already ingested batch can be replaced by using the Batch Replay feature. More information about Batch Replay can be found [here](./api-overview.md#replay-a-batch).
 
 ### How is batch ingestion monitored?
 
