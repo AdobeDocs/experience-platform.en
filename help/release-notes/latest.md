@@ -49,9 +49,23 @@ Adobe Experience Platform provides a rich set of features to ingest any type and
 
 * None
 
-
 To learn more about ingesting data into Platform, visit the [Data Ingestion documentation](../ingestion/home.md).
 
+
+## Destinations
+
+In [Adobe Real-time Customer Data Platform](../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
+
+### New destinations
+
+New destinations are available where you can activate your Adobe Experience Platform data. See below for details:
+
+|Destination | Description|
+|--- | ---|
+|Cloud storage destinations | Adobe Real-time CDP can now deliver your segments as data files to your Amazon S3 or SFTP cloud storage locations. This enables you to send audiences and their profile attributes to your internal systems, via CSV or tab-delimited files.|
+|Advertising destinations | The Google destination card is now split into three destination cards, for the three different Google platforms currently supported in Adobe Real-time CDP: Google Ads, Google Ad Manager, Google Display & Video 360.|
+
+To learn more, visit the [destinations overview](../rtcdp/destinations/destinations-overview.md)
 
 ## Identity Service
 

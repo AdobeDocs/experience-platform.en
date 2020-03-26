@@ -12,11 +12,6 @@ author: ens28527
 
 ## Release date: September 10, 2019
 
-Updates to existing features:
-* [Data Ingestion](#data-ingestion)
-* [Data Science Workspace](#data-science-workspace)
-* [Query Service](#query-service)
-
 ## Data Ingestion
 
 Adobe Experience Platform provides a rich set of features to ingest any type and latency of data. Adobe Experience Platform Data Ingestion provides multiple alternatives for ingesting data including Batch APIs, Streaming APIs, native Adobe connectors, data integration partners, or the Adobe Experience Platform UI.
