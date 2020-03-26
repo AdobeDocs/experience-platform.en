@@ -29,7 +29,7 @@ XDM is a publicly documented specification designed to improve the power of digi
 
 * None
 
-To learn more about working with XDM using the Schema Registry API and Schema Editor user interface, please read the [XDM System documentation](../../xdm/home.md).
+To learn more about working with XDM using the Schema Registry API and Schema Editor user interface, please read the [XDM System documentation](../xdm/home.md).
 
 ## Privacy Service
 
@@ -49,7 +49,7 @@ New legal and organizational regulations are giving users the right to access or
 
 * None
 
-For more information about Privacy Service, please start by reading the [Privacy Service overview](../../privacy-service/home.md).
+For more information about Privacy Service, please start by reading the [Privacy Service overview](../privacy-service/home.md).
 
 ## Sources
 
@@ -76,11 +76,11 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 * None
 
-For more information about sources, see the [sources overview](../../source-connectors/home.md)
+For more information about sources, see the [sources overview](../source-connectors/home.md)
 
 ## Destinations
 
-In [Adobe Real-time CDP](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
+In [Adobe Real-time CDP](../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
 ### New features
 
@@ -100,4 +100,4 @@ In [Adobe Real-time CDP](../../rtcdp/overview.md), destinations are pre-built in
 
 * None
 
-See the [Destinations overview](../../rtcdp/destinations/destinations-overview.md) for more information.
+See the [Destinations overview](../rtcdp/destinations/destinations-overview.md) for more information.

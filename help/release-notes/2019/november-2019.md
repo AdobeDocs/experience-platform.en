@@ -69,7 +69,7 @@ With the November release, Adobe's Real-time Customer Data Platform supports the
 * Advertising: Google
 * Email marketing: Adobe Campaign, Salesforce Marketing Cloud, Oracle Responsys, Oracle Eloqua
 
-See the [destination catalog](../../rtcdp/destinations/destinations-catalog.html) for information about each of the destinations.
+See the [destination catalog](../../rtcdp/destinations/destinations-catalog.md) for information about each of the destinations.
 
 ### Known limitations
 

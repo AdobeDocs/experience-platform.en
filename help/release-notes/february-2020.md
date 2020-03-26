@@ -1,11 +1,9 @@
 ---
-
 title: Adobe Experience Platform Release Notes
 description: Experience Platform release notes February 12, 2020
 doc-type: release notes
 last-update: February 14, 2019
 author: ens71067
-
 ---
 
 # Adobe Experience Platform release notes 
@@ -32,4 +30,4 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 * None
 
-For more information about sources, see the [sources overview](../../source-connectors/home.md).
+For more information about sources, see the [sources overview](../source-connectors/home.md).
