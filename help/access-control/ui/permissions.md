@@ -25,7 +25,7 @@ To add a permission, click the **plus (+)** icon next to the permission's name. 
 
 ![add-permissions](../images/add-permissions.png)
 
-> **Note**: The *Included Permissions Items* list only displays added permissions from the currently selected category.
+>[!NOTE] The *Included Permissions Items* list only displays added permissions from the currently selected category.
 
 To remove a permission, click the **X** icon next to the permission's name, or select **Remove all** to remove all permissions under the current category. Removed permissions reappear under *Available Permission Items*.
 

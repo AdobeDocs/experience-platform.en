@@ -9,7 +9,7 @@ topic: API guide
 
 Identity data is typically provided as an ID string value and identity namespace in XDM data ingested, and when supplying an identity for use in an API call. When identities are persisted in Identity Service, an ID is generated and assigned to that identity, called the native XID. Platform APIs requiring identity data support using this more compact form for the aggregated ID and namespace. XID is a base64 encoded string.
 
-> **Note:** This format is mainly for internal Adobe use. Native XID as a singular value is more space efficient and is what is used internally within Platform solutions for storage and serialization. However it is not human readable, it is opaque, and requires a separate call to obtain it to use.
+>[!NOTE] This format is mainly for internal Adobe use. Native XID as a singular value is more space efficient and is what is used internally within Platform solutions for storage and serialization. However it is not human readable, it is opaque, and requires a separate call to obtain it to use.
 
 Acquire the XID for a given ID value and namespace using the service described in this section.
 

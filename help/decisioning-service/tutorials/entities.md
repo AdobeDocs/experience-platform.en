@@ -41,7 +41,7 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
-> **Note:** For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+>[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
@@ -95,7 +95,7 @@ When the administrator has granted access to containers for regular users or int
 
 The context for the Platform Decisioning Service containers is currently `dma_offers`.
 
-> **Note:** The context for Platform Decisioning Containers is soon to change to `acp`. Filtering is optional, but filters by only `dma_offers` will require edits upon a future release. To prepare for this change clients should use no filters or apply both product contexts as their filter.
+>[!NOTE] The context for Platform Decisioning Containers is soon to change to `acp`. Filtering is optional, but filters by only `dma_offers` will require edits upon a future release. To prepare for this change clients should use no filters or apply both product contexts as their filter.
 
 **Request**
 
@@ -226,7 +226,7 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
   -H 'x-request-id: {NEW_UUID}'  
 ```
 
-> **Note:** Although `instanceId` is given as a path parameter, applications should, whenever possible, not construct the path themselves and instead follow links to instances contained in list and search operations. See sections ‎6.4.4 and ‎6.4.6 for details. 
+>[!NOTE] Although `instanceId` is given as a path parameter, applications should, whenever possible, not construct the path themselves and instead follow links to instances contained in list and search operations. See sections ‎6.4.4 and ‎6.4.6 for details. 
 
 **Response** 
 
@@ -319,7 +319,7 @@ The response depends on the `{schemaId}` specified. For instance for "https<span
 }
 ```
 
-> **Note:** The result contains the instances for the given schema or the first page of this list. Note, that instances can comply to more than one schema and therefore can appear in more than one list.
+>[!NOTE] The result contains the instances for the given schema or the first page of this list. Note, that instances can comply to more than one schema and therefore can appear in more than one list.
 
 Page resources are transient and are read-only; they cannot be updated or deleted. The paging model provides random access to subsets of a large lists over an extended period of time without maintaining any per-client state.
 
@@ -563,7 +563,7 @@ When using the APIs with the content type `application/vnd.adobe.platform.xcore.
 }
 ```
 
-> For brevity reasons, in the all the JSON snippets only the instance properties are illustrated and only when it is required the envelope properties and _links section is shown. 
+>[!NOTE] For brevity reasons, in the all the JSON snippets only the instance properties are illustrated and only when it is required the envelope properties and _links section is shown. 
 
 ### General offer properties 
 
