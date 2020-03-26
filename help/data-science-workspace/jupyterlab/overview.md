@@ -623,3 +623,36 @@ This table outlines the optional SQL flags that can be used for Query Service.
 | `-n`, `--notify` | Toggle option for notifying query results. |
 | `-a`, `--async` | Using this flag executes the query asynchonously and can free up the kernel while the query is executing. Be cautious when assigning query results to variables as it may be undefined if the query is not complete. |
 | `-d`, `--display` | Using this flag prevents results from being displayed. |
+
+## Initializing sparkSession
+
+All Spark 2.4 notebooks require that you initialize the session with the following boilerplate code:
+
+<table>
+  <th>PySpark 3 (Spark 2.3 - deprecated)</th>
+  <th>PySpark 3 (Spark 2.4)</th>
+  <tr>
+  <td>
+  <pre class="JSON language-JSON hljs"> 
+spark
+  </pre>
+  </td>
+  <td>
+  <pre class="JSON language-JSON hljs">
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.getOrCreate()
+</pre>
+  </td>
+  </tr>
+</table>
+
+The following screenshots highlight the differences in configuration for PySpark 2.3 and PySpark 2.4. This example uses the *Aggregation* starter notebooks provided in JupyterLab.
+
+**Configuration example for 2.3 (deprecated)**
+
+![config 1](../images/jupyterlab/tutorials/2.3-config.png)
+![config 2](../images/jupyterlab/tutorials/2.3-config-import.png)
+
+**Configuration example for 2.4**
+
+![config 3](../images/jupyterlab/tutorials/2.4-config.png)
