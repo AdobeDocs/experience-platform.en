@@ -84,7 +84,6 @@ Segments can be configured to continually generate an audience on an ongoing bas
 - [Sequential segmentation](#sequential-segmentation)
 - [Dynamic segmentation](#dynamic-segmentation)
 - [Multi-entity segmentation](#multi-entity-segmentation)
-- [Personalization payload](#personalization-payload)
 
 These advanced features are discussed in more detail in the following sections.
 
@@ -140,7 +139,7 @@ Using the API, the data architect relates the key from the ExperienceEvent schem
 
 See the [schema composition overview](../xdm/schema/composition.md#union) to learn how to define relationships across XDM classes.
 
-## Personalization payload
+<!-- ## Personalization payload
 
 Segments can now carry a payload of contextual details to enable deep personalization of Adobe Solutions as well as external non-Adobe applications. These payloads can be added while defining your target segment.
 
@@ -157,7 +156,7 @@ While this solution does not change the binary nature of segment membership, it 
 - **Attributes**: this would include information about the segment ID such as last qualification time, XDM version, status and so on.
 - **Event data**: Specific aspects of experience events which resulted in the profile qualifying for the segment
 
-Adding this specific data to the segment itself allows execution engines to personalize the experience for the customers in their target audience.
+Adding this specific data to the segment itself allows execution engines to personalize the experience for the customers in their target audience. -->
 
 ### Use cases
 

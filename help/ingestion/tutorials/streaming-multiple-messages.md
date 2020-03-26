@@ -36,24 +36,24 @@ After registering a streaming connection, you, as the data producer, will have a
 
 The following example shows how to send multiple messages to a specific dataset within a single HTTP request. Insert the dataset ID in the message header to have that message directly ingested into it.
 
-You can get the ID for an existing dataset using the Platform UI or using a listing operation in the API. The dataset ID can be found on [Experience Platform](https://platform.adobe.com) by going to the **Datasets** tab, clicking on the dataset you want the ID for, and copying the string from the **Dataset ID** field on the **Info** tab. See the [Catalog Service overview][catalog-service-listing-datasets] for information on how to retrieve datasets using the API.
+You can get the ID for an existing dataset using the Platform UI or using a listing operation in the API. The dataset ID can be found on [Experience Platform](https://platform.adobe.com) by going to the **Datasets** tab, clicking on the dataset you want the ID for, and copying the string from the **Dataset ID** field on the **Info** tab. See the [Catalog Service overview](../../catalog/home.md) for information on how to retrieve datasets using the API.
 
 Instead of using an existing dataset, you can create a new dataset. Please read the [create a dataset using APIs](../../catalog/api/create-dataset.md) tutorial for more information on creating a dataset using APIs.
 
 **API format**
 
 ```http
-POST /collection/batch/{DATA_INLET_ID}
+POST /collection/{CONNECTION_ID}
 ```
 
 | Property | Description |
 | -------- | ----------- |
-| `{DATA_INLET_ID}` | The ID of the created Data inlet. |
+| `{CONNECTION_ID}` | The ID of the created streaming connection. |
 
 **Request**
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/batch/{DATA_INLET_ID} \
+curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
   -H 'Content-Type: application/json' \
   -d '{
   "messages": [
@@ -220,22 +220,22 @@ The following example shows what happens when the batch includes valid and inval
 The request payload is an array of JSON objects representing the event in XDM schema. Note that the following conditions needs to be met for successful validation of the message:
 - The `imsOrgId` field in the message header has to match the inlet definition. If the request payload does not include an `imsOrgId` field, the Data Collection Core Service (DCCS) will add the field automatically.
 - The header of the message should reference an existing XDM schema created in the Platform UI.
-- The `dataSetId` field needs to reference an existing dataset in Platform, and its schema needs to match the schema provided in the `header` object within each message included in the request body.
+- The `datasetId` field needs to reference an existing dataset in Platform, and its schema needs to match the schema provided in the `header` object within each message included in the request body.
 
 **API format**
 
 ```http
-POST /collection/batch/{DATA_INLET_ID}
+POST /collection/{CONNECTION_ID}
 ```
 
 | Property | Description |
 | -------- | ----------- |
-| `{DATA_INLET_ID}` | The ID of the created Data inlet. |
+| `{CONNECTION_ID}` | The ID of the created Data inlet. |
 
 **Request**
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/batch/{DATA_INLET_ID} \
+curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
   -H 'Content-Type: application/json' \
   -d '{
   "messages": [
@@ -522,9 +522,9 @@ The second message failed because it lacked a message body. The collection reque
     },
 ```
 
-The third message failed due to an invalid IMS organization ID being used in the header. The IMS organization must match with the {DATA_INLET_ID} that you are trying to post to. To determine which IMS organization ID matches the streaming connection you are using, you can perform a `GET inlet` request using the [Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). See [retrieving a streaming connection](./create-streaming-connection.md#get-data-collection-url) for an example of how to retrieve previously created streaming connections. 
+The third message failed due to an invalid IMS organization ID being used in the header. The IMS organization must match with the {CONNECTION_ID} that you are trying to post to. To determine which IMS organization ID matches the streaming connection you are using, you can perform a `GET inlet` request using the [Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). See [retrieving a streaming connection](./create-streaming-connection.md#get-data-collection-url) for an example of how to retrieve previously created streaming connections. 
 
-The fourth message failed because it did not follow the expected XDM schema. The `xdmSchema` included in the header and body of the request do not match the XDM schema of the `{DATASET_ID}`. You can retrieve information on datasets, including their schema, using the Platform UI or the API. The instructions in [streaming to specific datasets](#streaming-to-specific-datasets) show how to retrieve dataset information. Correcting the schema in the message header and body allows it to pass DCCS validation and be successfully sent to Platform. The message body must also be updated to match the XDM schema of the `{DATASET_ID}` for it to pass streaming validation on Platform. For more information on what happens to messages that successfully stream to Platform, see the [confirm messages ingested](#confirm-messages-ingested) section of this tutorial.
+The fourth message failed because it did not follow the expected XDM schema. The `xdmSchema` included in the header and body of the request do not match the XDM schema of the `{DATASET_ID}`. Correcting the schema in the message header and body allows it to pass DCCS validation and be successfully sent to Platform. The message body must also be updated to match the XDM schema of the `{DATASET_ID}` for it to pass streaming validation on Platform. For more information on what happens to messages that successfully stream to Platform, see the [confirm messages ingested](#confirm-messages-ingested) section of this tutorial.
 
 ### Retrieve failed messages from Platform
 
@@ -544,8 +544,6 @@ Batch messages that pass streaming validation on Platform are ingested into the 
 ## Next steps
 
 Now that you know how to send multiple messages in a single request and verify when messages are successfully ingested into the target dataset, you can start streaming your own data to Platform. For an overview of how to query and retrieve ingested data from Platform, see the [Data Access](../../data-access/tutorials/dataset-data.md) guide.
-
-Once you are comfortable streaming to Platform and have successfully ingested test data to work with, consider doing the [data access tutorial](../../data-access/tutorials/dataset-data.md) to learn how to use the API to query dataset data.
 
 ## Appendix
 
