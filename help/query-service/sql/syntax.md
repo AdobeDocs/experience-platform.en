@@ -7,30 +7,7 @@ topic: syntax
 
 # SQL syntax
 
-Query Service provides the ability to use standard ANSI SQL for `SELECT` statements and other limited commands. This document shows SQL syntax supported by Query Service for the following commands:
-
-- [Define a SELECT query](#define-a-select-query)
-- [JOINS](#joins)
-- [UNION, INTERSECT, and EXCEPT](#union-intersect-and-except)
-- [CREATE TABLE AS SELECT](#create-table-as-select)
-- [INSERT INTO](#insert-into)
-- [Spark SQL commands](#spark-sql-commands)
-    - [DROP TABLE](#drop-table)
-    - [SET](#set)
-- [PostgreSQL commands](#postgresql-commands)
-    - [BEGIN](#begin)
-    - [CLOSE](#close)
-    - [COMMIT](#commit)
-    - [DEALLOCATE](#deallocate)
-    - [DECLARE](#declare)
-    - [EXECUTE](#execute)
-    - [EXPLAIN](#explain)
-    - [FETCH](#fetch)
-    - [PREPARE](#prepare)
-    - [ROLLBACK](#rollback)
-    - [SELECT INTO](#select-into)
-    - [SHOW](#show)
-    - [START TRANSACTION](#start-transaction)
+Query Service provides the ability to use standard ANSI SQL for `SELECT` statements and other limited commands. This document shows SQL syntax supported by Query Service.
 
 ## Define a SELECT query
 

@@ -9,19 +9,6 @@ topic: query editor
 
 Query Editor is an interactive tool provided by Adobe Experience Platform Query Service, which allows you to write, validate, and run queries for customer experience data within the Experience Platform user interface. Query Editor supports developing queries for analysis and data exploration, and allows you to run interactive queries for development purposes as well as non-interactive queries to populate datasets in Experience Platform.
 
-Within this document you will find information on the following topics:
-- [Query authoring using Query Editor](#query-authoring-using-query-editor)
-  - [Accessing Query Editor](#accessing-query-editor)
-  - [Writing queries](#writing-queries)
-  - [Writing tools in Query Editor](#writing-tools-in-query-editor)
-  - [Error detection](#error-detection)
-  - [Query details](#query-details)
-  - [Saving queries](#saving-queries)
-  - [How to find previous queries](#how-to-find-previous-queries)
-- [Executing queries using Query Editor](#executing-queries-using-query-editor)
-  - [Console](#console)
-  - [Query results](#query-results)
-
 For more information about the concepts and features of Query Service, see the [Query Service overview][query-service-overview]. To learn more about how to navigate the Query Service user interface on Platform, see the [Query Service UI overview][query-service-ui].
 
 ## Getting started
@@ -86,9 +73,7 @@ While you are viewing a query in Query Editor, the *Query Details* panel provide
 
 ![Image](../images/queries/query-editor-overview/query-details.png)
 
-This panel allows you to generate an output dataset directly from the UI, delete or name the displayed query, and view the SQL code in an easy to copy format on the *SQL Query* tab. This panel also shows useful metadata such as the last time the query was modified and who modified it, if applicable.
-
-To generate a dataset, click **Output Dataset**. The *Output Dataset* dialog appears. Enter a name and description, then click **Run Query**. The new dataset is displayed in the *Datasets* tab on the Query Service user interface on Platform.
+This panel allows you to generate an output dataset directly from the UI, delete or name the displayed query, and view the SQL code in an easy to copy format on the *SQL Query* tab. This panel also shows useful metadata such as the last time the query was modified and who modified it, if applicable. To generate a dataset, click **Output Dataset**. The *Output Dataset* dialog appears. Enter a name and description, then click **Run Query**. The new dataset is displayed in the *Datasets* tab on the Query Service user interface on Platform.
 
 ### Saving queries
 
