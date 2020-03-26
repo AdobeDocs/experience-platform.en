@@ -14,6 +14,7 @@ topic: Getting started
 - [Building schemas](../../xdm/tutorials/create-schema-ui.md): This tutorial covers the steps for creating a schema using the Schema Editor within Experience Platform.
 
 Attribution AI requires datasets to conform to the Consumer Experience Events (CEE) schema, which is a mixin in the [Experience Data Model](../../xdm/home.md) (XDM). Please contact Adobe support at attributionai-support@adobe.com in order to implement or make changes to this data. If media spend data is present, you can do further analysis such as incremental revenue and ROI. If customer profile data is available, you can further attribute credits to the customer profile level.
+
 ## Terminology
 
 - **Conversion event:** Any digital event or digital interaction that customers do to indicate a milestone towards a goal, such as conference registrations. Additional examples include paid conversions, free account sign-ups, or qualifying for a trait.
