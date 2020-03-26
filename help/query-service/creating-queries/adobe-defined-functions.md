@@ -204,11 +204,11 @@ LIMIT 10;
       PageViews,
       session.depth AS SessionPageDepth
     FROM
-      (SELECT 
-    	  endUserIds._experience.aaid.id as VisitorID,
-   	  timestamp,
-   	  web.webPageDetails.pageviews.value AS PageViews,
-    	  web.webPageDetails.name AS PageName,
+      (SELECT
+        endUserIds._experience.aaid.id as VisitorID,
+        timestamp,
+        web.webPageDetails.pageviews.value AS PageViews,
+        web.webPageDetails.name AS PageName,
         SESS_TIMEOUT(timestamp, 60 * 30) 
           OVER (PARTITION BY endUserIDs._experience.aaid.id 
                 ORDER BY timestamp 
