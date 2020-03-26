@@ -9,12 +9,6 @@ topic: tutorial
 
 This document provides a tutorial for working with the runtime services of Decisioning Service using Adobe Experience Platform APIs. 
 
-The tutorial covers the following:
-
-[Compilation of decision models](#compilation-of-decision-models)  
-[REST API calls to execute decisions](#rest-api-calls-to-execute-decisions)  
-[Dynamic context data in decisioning requests](#dynamic-context-data-in-decisioning-requests)  
-
 ## Getting started
 
 This tutorial requires a working understanding of the Experience Platform services involved in decisioning and determining the next best offer to present during customer experiences. Before beginning this tutorial, please review the documentation for the following:

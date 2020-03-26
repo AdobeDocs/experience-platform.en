@@ -9,11 +9,6 @@ topic: Attribution AI
 
 Attribution AI, as part of Intelligent Services is a multi-channel, algorithmic attribution service that calculates the influence and incremental impact of customer interactions against specified outcomes. With Attribution AI, marketers can measure and optimize marketing and advertising spend by understanding the impact of every individual customer interaction across each phase of the customers’ journeys. 
 
-- [Understanding Attribution AI](#understanding-attribution-ai)
-- [Attribution AI algorithmic scores](#attribution-ai-algorithmic-scores)
-- [Use cases](#examples-of-business-use-cases)
-- [Next steps](#next-steps)
-
 ## Understanding Attribution AI
 
 Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys. Examples of touchpoints include display ad impressions, email sends, email opens and paid search clicks.

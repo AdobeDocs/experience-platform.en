@@ -7,19 +7,7 @@ topic: Downloading scores
 
 # Downloading scores in Customer AI
 
-This document serves as a guide for downloading scores for Customer AI. The following topics are covered:
-- [Download scores at the individual level](#find-your-dataset-id)
-  - [Find your dataset ID](#find-your-dataset-id)
-  - [Retrieve your batch ID](#retrieve-your-batch-id)
-  - [Retrieve the next API call with your batch ID](#retrieve-the-next-api-call-with-your-batch-id)
-  - [Retrieve your files](#retriev-your-files)
-  - [Download your file data](#download-your-file-data)
-- [Download a segment configured with Customer AI](#download-a-segment-configured-with-customer-ai)
-
-Currently, there are two ways to download Customer AI scores:
-
-1. If you want to download the scores at the individual level and/or do not have Real-time Customer Profile enabled, start by navigating to [finding your dataset ID](#finding-your-dataset-id).
-2. If you have Profile enabled and want to download segments that you have configured using Customer AI, please navigate to [download a segment configured with Customer AI](#download-a-segment-configured-with-customer-ai).
+This document serves as a guide for downloading scores for Customer AI. 
 
 ## Getting started
 
@@ -27,7 +15,12 @@ Customer AI allows you to download scores in the parquet file format. This tutor
 
 Additionally, in order to access scores for Customer AI, you need to have a service instance with a successful run status available. To create a new service instance, visit the [Customer AI user guide](./user-guide.md). If you recently created a service instance and it is still training and scoring, please allow 24 hours for it to finish running.
 
-## Find your dataset ID
+Currently, there are two ways to download Customer AI scores:
+
+1. If you want to download the scores at the individual level and/or do not have Real-time Customer Profile enabled, start by navigating to [finding your dataset ID](#dataset-id).
+2. If you have Profile enabled and want to download segments that you have configured using Customer AI, please navigate to [download a segment configured with Customer AI](#segment).
+
+## Find your dataset ID {#dataset-id}
 
 Within your service instance for Customer AI insights, click the *More actions* dropdown in the top-right navigation then select **Access scores**.
 
@@ -264,7 +257,7 @@ The response downloads the file you requested in in your current directory. In t
 
 ![Terminal](./images/download-scores/response.png)
 
-## Download a segment configured with Customer AI
+## Download a segment configured with Customer AI {#segment}
 
 An alternative way to download your score data is by exporting your audience to a dataset. After a segmentation job has successfully completed (the value of the `status` attribute is "SUCCEEDED"), you can export your audience to a dataset where it can be accessed and acted upon. To learn more about segmentation, visit the [segmentation overview](../../segmentation/home.md).
 
