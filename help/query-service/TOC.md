@@ -35,7 +35,6 @@ user-guide-title: Adobe Experience Platform Query Service Help
 * Sample queries {#samples}
   * [Sample queries overview](sample-queries/overview.md)
   * [Adobe Analytics](sample-queries/adobe-analytics.md)
-  * [Adobe Analytics field mapping to XDM ExperienceEvents](sample-queries/analytics-field-map.md)
   * [Adobe Target](sample-queries/adobe-target.md)
 * Connect clients to Query Service {#clients}
   * [Client connections overview](clients/overview.md)

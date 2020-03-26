@@ -7,7 +7,7 @@ topic: queries
 
 # Sample queries for Adobe Analytics data
 
-Data from selected Adobe Analytics report suites is transformed into XDM ExperienceEvents and ingested into Adobe Experience Platform as datasets for you. This document outlines a number of use cases where Adobe Experience Platform Query Service makes use of this data, and the included sample queries should work with your Adobe Analytics datasets. Information on where your Analytics fields land in XDM can be [found here](./analytics-field-map.md).
+Data from selected Adobe Analytics report suites is transformed into XDM ExperienceEvents and ingested into Adobe Experience Platform as datasets for you. This document outlines a number of use cases where Adobe Experience Platform Query Service makes use of this data, and the included sample queries should work with your Adobe Analytics datasets. See the [Analytics field mapping documentation](../../source-connectors/ui/adobe-applications/analytics-mapping.md) for more information on mapping to XDM ExperienceEvents.
 
 ## Getting started
 
@@ -122,9 +122,7 @@ ORDER BY Hour;
 
 ## Merchandising variables (product syntax)
 
-In Adobe Analytics, custom product-level data can be collected through specially configured variables called "Merchandising Variables." These are based on either an eVar or Custom Event. The difference between these variables and their standard use is that they represent a separate value for each product found on the hit rather than only a single value for the hit. These variables are referred to as Product Syntax Merchandising Variables. 
-
-This allows for collection of information like a per product "discount amount" or information about the product's "location on page" in the customer's search results.
+In Adobe Analytics, custom product-level data can be collected through specially configured variables called "Merchandising Variables." These are based on either an eVar or Custom Event. The difference between these variables and their standard use is that they represent a separate value for each product found on the hit rather than only a single value for the hit. These variables are referred to as Product Syntax Merchandising Variables. This allows for collection of information like a per product "discount amount" or information about the product's "location on page" in the customer's search results.
 
 Here are the XDM fields to access the merchandising variables in your Analytics dataset:
 

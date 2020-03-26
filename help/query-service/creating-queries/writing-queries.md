@@ -16,9 +16,7 @@ For detailed information on the SQL syntax used in Query Service, please read th
 
 ## Query execution models
 
-Adobe Experience Platform Query Service has two models of query execution: interactive and non-interactive. 
-
-Interactive execution is used for query development and report generation in business intelligence tools, while non-interactive is used for larger jobs and operational queries as a part of a data processing workflow.
+Adobe Experience Platform Query Service has two models of query execution: interactive and non-interactive. Interactive execution is used for query development and report generation in business intelligence tools, while non-interactive is used for larger jobs and operational queries as a part of a data processing workflow.
 
 ### Interactive query execution
 
@@ -26,11 +24,11 @@ Queries can be executed interactively by submitting them through the Query Servi
 
 Interactive query execution has the following limitations:
 
-Parameter       | Limitation   
---------------- |:-------------:
-Query timeout | 10 minutes 
-Maximum rows returned | 50,000 
-Maximum concurrent queries | 5 
+|Parameter       | Limitation   |
+|--------------- |-------------|
+|Query timeout | 10 minutes |
+|Maximum rows returned | 50,000| 
+|Maximum concurrent queries | 5 |
 
 >[!NOTE] To override the maximum rows limitation, include `LIMIT 0` in your query. The query timeout of 10 minutes still applies. 
 

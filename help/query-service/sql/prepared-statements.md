@@ -75,14 +75,14 @@ SELECT * FROM table WHERE id >= 10000 AND id <= 10005;
 
 The SQL query above will return the following response:
 
-id | firstname | lastname | birthdate | email  | city | country
---- | --------- | -------- | --------- | ----- | ------- | ---- 
-10000 | alexander | davis | 1993-09-15 | example@example.com | Vancouver | Canada 
-10001 | antoine | dubois | 1967-03-14 | example2@example.com | Paris | France
-10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tokyo | Japan
-10003 | linus | pettersson | 1982-06-03 | example4@example.com | Stockholm | Sweden
-10004 | aasir | waithaka | 1976-12-17 | example5@example.com | Nairobi | Kenya
-10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Chile
+|id | firstname | lastname | birthdate | email  | city | country|
+|--- | --------- | -------- | --------- | ----- | ------- | ---- |
+|10000 | alexander | davis | 1993-09-15 | example@example.com | Vancouver | Canada |
+|10001 | antoine | dubois | 1967-03-14 | example2@example.com | Paris | France|
+|10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tokyo | Japan|
+|10003 | linus | pettersson | 1982-06-03 | example4@example.com | Stockholm | Sweden|
+|10004 | aasir | waithaka | 1976-12-17 | example5@example.com | Nairobi | Kenya|
+|10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Chile|
 
 This SQL query can be parameterized by using the following prepared statement:
 
@@ -98,14 +98,14 @@ EXECUTE getIdRange(10000, 10005);
 
 When this is called, you will see the exact same results as before:
 
-id | firstname | lastname | birthdate | email  | city | country
---- | --------- | -------- | --------- | ----- | ------- | ---- 
-10000 | alexander | davis | 1993-09-15 | example@example.com | Vancouver | Canada 
-10001 | antoine | dubois | 1967-03-14 | example2@example.com | Paris | France
-10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tokyo | Japan
-10003 | linus | pettersson | 1982-06-03 | example4@example.com | Stockholm | Sweden
-10004 | aasir | waithaka | 1976-12-17 | example5@example.com | Nairobi | Kenya
-10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Chile
+|id | firstname | lastname | birthdate | email  | city | country|
+|--- | --------- | -------- | --------- | ----- | ------- | ---- |
+|10000 | alexander | davis | 1993-09-15 | example@example.com | Vancouver | Canada |
+|10001 | antoine | dubois | 1967-03-14 | example2@example.com | Paris | France|
+|10002 | kyoko | sakura | 1999-11-26 | example3@example.com | Tokyo | Japan|
+|10003 | linus | pettersson | 1982-06-03 | example4@example.com | Stockholm | Sweden|
+|10004 | aasir | waithaka | 1976-12-17 | example5@example.com | Nairobi | Kenya|
+|10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Chile|
 
 After you have finished using the prepared statement, you can deallocate it by using the following call:
 
