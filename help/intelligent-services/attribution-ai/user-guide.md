@@ -9,20 +9,7 @@ topic: User guide
 
 Attribution AI, as part of Intelligent Services is a multi-channel, algorithmic attribution service that calculates the influence and incremental impact of customer interactions against specified outcomes. With Attribution AI, marketers can measure and optimize marketing and advertising spend by understanding the impact of every individual customer interaction across each phase of the customers’ journeys.
 
-This document serves as a guide for interacting with Attribution AI in the  Intelligent Services user interface. The following topics are covered:
-
-- [Create an instance](#create-an-instance)
-  - [Name the instance](#name-the-instance)
-  - [Select a dataset](#select-a-dataset)
-- [Defining events](#defining-events)
-  - [Define conversion events](#define-conversion-events)
-  - [Define the lookback window](#define-lookback-window)
-  - [Define touchpoints](#define-touchpoints)
-- [Advanced training and scoring setup](#advanced-training-and-scoring-setup)
-  - [Schedule scoring](#schedule-scoring)
-  - [Region-based modeling](#region-based-modeling-optional)
-  - [Training window](#training-window)
-- [Next steps](#next-steps)
+This document serves as a guide for interacting with Attribution AI in the  Intelligent Services user interface.
 
 ## Create an instance
 

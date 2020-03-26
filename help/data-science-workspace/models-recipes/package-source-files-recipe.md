@@ -9,17 +9,6 @@ topic: Tutorial
 
 This tutorial provides instructions on how you can package the provided Retail Sales sample source files into an archive file, which can be used to create a recipe in Adobe Experience Platform Data Science Workspace by following the recipe import workflow either in the UI or using the API.
 
-- [Prerequisites](#prerequisites)
-- [Recipe creation](#recipe-creation)
-    - [Docker based model authoring](#docker-based-model-authoring)
-    - [Binary based model authoring](#binary-based-model-authoring)
-    - [Package the source files](#package-the-source-files)
-        - [Build Python Docker image](#build-python-docker-image)
-        - [Build R Docker image](#build-r-docker-image)
-        - [Build PySpark binaries](#build-pyspark-binaries)
-        - [Build Scala binaries](#build-scala-binaries)
-- [Next steps](#next-steps)
-
 Concepts to understand:
 
 - **Recipes**: A recipe is Adobe's term for a Model specification and is a top-level container representing a specific machine learning, artificial intelligence algorithm or ensemble of algorithms, processing logic, and configuration required to build and execute a trained model and hence help solve specific business problems.

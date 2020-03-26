@@ -81,19 +81,19 @@ In addition to segment name and merge policy, Segment Builder offers you an addi
 ## Advanced segmentation features
 
 Segments can be configured to continually generate an audience on an ongoing basis by combining [streaming data ingestion](../ingestion/streaming-ingestion/overview.md) with any of the following advanced segmentation features: 
-- [Sequential segmentation](#sequential-segmentation)
-- [Dynamic segmentation](#dynamic-segmentation)
-- [Multi-entity segmentation](#multi-entity-segmentation)
+- [Sequential segmentation](#sequential)
+- [Dynamic segmentation](#dynamic)
+- [Multi-entity segmentation](#multi-entity)
 
 These advanced features are discussed in more detail in the following sections.
 
-## Sequential segmentation
+## Sequential segmentation {#sequential}
 
 A standard user journey is sequential in nature.  Adobe Experience Platform allows you to define an ordered series of segments to reflect this journey thereby capturing sequences of events as they occur. You can arrange events into their desired order by using the visual event timeline in the Segment Builder.
 
 An example of a customer journey that would require sequential segmentation would be product view > product add > checkout > No purchase. 
 
-## Dynamic segmentation
+## Dynamic segmentation {#dynamic}
 
 Dynamic segmentation solves the scalability problems marketers traditionally face when building segments for marketing campaigns.
 
@@ -113,7 +113,7 @@ As a result of the different segment combinations that inevitably arise as you s
 
 By assigning a variable to the purchase state attribute, your dynamic segment simplifies to "find me a purchase where the state of that purchase is not equal to the customer's home state". Doing so allows you to then consolidate 50 static segments into a single dynamic segment. 
  
-## Multi-entity segmentation
+## Multi-entity segmentation {#multi-entity}
 
 With the advanced multi-entity segmentation feature, you can create segments using multiple XDM classes thereby adding extensions to person schemas. As a result, Segmentation Service can access additional fields during segment definition as if they were native to the profile data store.
 

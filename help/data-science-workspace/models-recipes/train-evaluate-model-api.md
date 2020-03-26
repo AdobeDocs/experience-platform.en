@@ -9,17 +9,6 @@ topic: Tutorial
 
 
 This tutorial will show you how to create, train, and evaluate a Model using API calls. Refer to [this document](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) for a detailed list of API documentation.
-- [Prerequisites](#prerequisites)
-- [API workflow](#api-workflow)
-    - [Create an MLInstance](#create-an-mlinstance)
-    - [Create an Experiment](#create-an-experiment)
-        - [Create a scheduled Experiment for training](#create-a-scheduled-experiment-for-training)
-        - [Create an Experiment Run for training](#create-an-experiment-run-for-training)
-            - [Retrieve an Experiment Run status](#retrieve-an-experiment-run-status)
-            - [Retrieve the trained Model](#retrieve-the-trained-model)
-    - [Stop and delete a scheduled Experiment](#stop-and-delete-a-scheduled-experiment)
-- [Next steps](#next-steps)
-
 
 ## Prerequisites
 

@@ -7,17 +7,7 @@ topic: Tutorial
 
 # Publish a model as a service (API)
 
-- [Prerequisite](#prerequisite)
-- [Key Terms](#key-terms)
-- [API Workflow](#api-workflow)
-- [Creating a ML Service with an existing training Experiment Run and scheduled scoring](#creating-a-ml-service-with-an-existing-training-experiment-run-and-scheduled-scoring)
-- [Creating a ML Service from an existing ML Instance](#creating-a-ml-service-from-an-existing-ml-instance)
-    - [ML Service with scheduled Experiment for scoring](#ml-service-with-scheduled-experiment-for-scoring)
-    - [ML Service with scheduled Experiments for training and scoring](#ml-service-with-scheduled-experiments-for-training-and-scoring)
-- [Retrieving ML Services](#retrieving-ml-services)
-- [Schedule training or scoring](#schedule-training-or-scoring)
-
-## Prerequisite
+## Prerequisites
 
 - Follow this [Tutorial](../../tutorials/authentication.md) for authorization to start making API calls.
 From the tutorial you should now have the following information:
@@ -45,13 +35,6 @@ Term | Definition
 ## API Workflow
 
 This tutorial will go over creating, retrieving, and updating a ML Service.
-
-- [Creating a ML Service with an existing training Experiment Run and scheduled scoring](#creating-a-ml-service-with-an-existing-training-experiment-run-and-scheduled-scoring)
-- [Creating a ML Service from an existing ML Instance](#creating-a-ml-service-from-an-existing-ml-instance)
-    - [ML Service with scheduled Experiment for scoring](#ml-service-with-scheduled-experiment-for-scoring)
-    - [ML Service with scheduled Experiments for training and scoring](#ml-service-with-scheduled-experiments-for-training-and-scoring)
-- [Retrieving ML Services](#retrieving-ml-services)
-- [Schedule training or scoring](#schedule-training-or-scoring)
 
 ## Creating a ML Service with an existing training Experiment Run and scheduled scoring
 

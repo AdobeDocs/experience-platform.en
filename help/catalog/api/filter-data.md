@@ -468,7 +468,7 @@ A successful response contains a list of Catalog objects that are sorted accordi
 Catalog provides two methods of filtering by property, which are further outlined in the sections that follow:
 
 * [Using simple filters](#using-simple-filters): Filter by whether a specific property matches a specific value.
-* [Using the `property` parameter](#using-the-property-parameter): Use conditional expressions to filter based whether a property exists, or if a property's value matches, approximates, or compares to another specified value or regular expression.
+* [Using the property parameter](#using-the-property-parameter): Use conditional expressions to filter based whether a property exists, or if a property's value matches, approximates, or compares to another specified value or regular expression.
 
 ### Using simple filters {#using-simple-filters}
 

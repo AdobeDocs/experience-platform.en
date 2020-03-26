@@ -9,28 +9,7 @@ topic: Attribution AI insights
 
 Attribution AI service instances provide insights which can be used to assist in making and measuring marketing decisions related to marketing performance and return on investment. Selecting a service instance provides visualizations and filters to assist you in understanding the impact of every customer interaction in each phase of the customer journey.
 
-This document serves as a guide for interacting with service instance insights in the Adobe Intelligent Services user interface. The following topics are covered:
-
-- [Service instance overview](#service-instance-insights-overview)
-  - [Service instance details](#service-instance-details)
-  - [Edit an instance](#edit-an-instance)
-  - [Delete an instance](#more-actions)
-  - [Download summary data](#more-actions)
-  - [Access scores](#more-actions)
-  - [View run history](#more-actions)
-- [Filter your data by](#filtering-your-data)
-  - [Conversion event](#conversion-event)
-  - [Attribution model](#attribution-model)
-  - [Product](#product)
-  - [Geography](#geography)
-  - [Region](#region)
-  - [Channel](#channel)
-  - [Date Range](#date-range)
-- [Overview of your data](#overview-of-your-data)
-- [Weekly trends](#weekly-trends)
-- [Breakdown by channel](#breakdown-by-channel)
-- [Top campaigns](#top-campaigns)
-- [Next steps](#next-steps)
+This document serves as a guide for interacting with service instance insights in the Adobe Intelligent Services user interface.
 
 ## Getting started
 
