@@ -19,7 +19,7 @@ To send segment data to Oracle Eloqua, you must first [connect the destination](
 
     ![Connect to Eloqua](/help/rtcdp/destinations/assets/connect-oracle-eloqua.png)
 
-2. In the **Authentication** step, if you had previously set up a connection to your cloud storage destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection. Fill in your account authentication credentials and select **[!UICONTROL Connect to destination]**. For Oracle Eloqua, you can select between **SFTP with Password** and **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect to destination]**.
+2. In the **Authentication** step, if you had previously set up a connection to your cloud storage destination, select **[!UICONTROL Existing Account]** and select one of your existing connections. Or, you can select **[!UICONTROL New Account]** to set up a new connection. Fill in your account authentication credentials and select **[!UICONTROL Connect to destination]**. For Oracle Eloqua, you can select between **SFTP with Password** and **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect to destination]**.
 
     For **SFTP with Password** connections, you must provide Domain, Port, Username, and Password.
     For **SFTP with SSH Key** connections, you must provide Domain, Port, Username, and SSH Key.

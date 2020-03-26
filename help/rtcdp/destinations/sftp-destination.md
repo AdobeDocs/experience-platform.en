@@ -19,7 +19,6 @@ See [Cloud storage destinations workflow ](/help/rtcdp/destinations/cloud-storag
 
 For SFTP destinations, enter the following information in the create destination workflow, in the **Authentication** step:
 
-* **Host**
-* **Username**
-* **Password**
-
+* **Host**: the address of your SFTP storage location
+* **Username**: the username to log into your SFTP storage location
+* **Password**: the password to log into your SFTP storage location
