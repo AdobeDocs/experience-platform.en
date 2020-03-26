@@ -7,9 +7,7 @@ topic: queries
 
 # Data deduplication in Query Service
 
-Adobe Experience Platform Query Service supports data deduplication when it may be required to remove an entire row from a calculation or ignore a specific set of fields because only part of the data in the row is a duplicate.
-
-The common pattern for deduplication involves using the `ROW_NUMBER()` function across a window for an ID, or pair of IDs, over ordered time (using the Experience Data Model (XDM) `timestamp` field) to return a new field that represents the number of times a duplicate has been detected. When this value is `1`, that refers to the original instance and in most cases that is the instance that you would wish to use, ignoring every other instance. This will most often be done inside of a sub-select where the deduplication is done in a higher-level `SELECT` like performing an aggregate count.
+Adobe Experience Platform Query Service supports data deduplication when it may be required to remove an entire row from a calculation or ignore a specific set of fields because only part of the data in the row is a duplicate. The common pattern for deduplication involves using the `ROW_NUMBER()` function across a window for an ID, or pair of IDs, over ordered time (using the Experience Data Model (XDM) `timestamp` field) to return a new field that represents the number of times a duplicate has been detected. When this value is `1`, that refers to the original instance and in most cases that is the instance that you would wish to use, ignoring every other instance. This will most often be done inside of a sub-select where the deduplication is done in a higher-level `SELECT` like performing an aggregate count.
 
 ## Use cases
 
