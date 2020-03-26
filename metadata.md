@@ -1,7 +1,7 @@
 ---
 cloud: experience-cloud
 product: adobe experience platform
-solution-title: Documentation
+solution-title: Documentation Home
 solution-hub-url: https://docs-stg.corp.adobe.com/content/help/en/experience-platform/landing/documentation/overview.html
 solution-image: assets/experience_cloud_appicon_32.png
 getting-started-title: Platform Overview
