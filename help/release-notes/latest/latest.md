@@ -33,7 +33,7 @@ Adobe Experience Platform Data Governance is a series of strategies and technolo
 
 * None
 
-For more information about Data Governance, see the [Data Governance overview](../data-governance/home.md).
+For more information about Data Governance, see the [Data Governance overview](../../data-governance/home.md).
 
 ## Data Ingestion
 
@@ -43,18 +43,18 @@ Adobe Experience Platform provides a rich set of features to ingest any type and
 
 |Feature | Description|
 |------- | -----------|
-|Partial batch ingestion | Partial batch ingestion is the ability to ingest data containing errors, up to a certain threshold. With this capability, users can successfully ingest all their correct data into Adobe Experience Platform while all their incorrect data is batched separately. Details are added to unsuccessful batches to explain why they did not pass validation. More information about partial batch ingestion can be found in the [partial batch ingestion documentation](../ingestion/batch-ingestion/partial.md).|
+|Partial batch ingestion | Partial batch ingestion is the ability to ingest data containing errors, up to a certain threshold. With this capability, users can successfully ingest all their correct data into Adobe Experience Platform while all their incorrect data is batched separately. Details are added to unsuccessful batches to explain why they did not pass validation. More information about partial batch ingestion can be found in the [partial batch ingestion documentation](../../ingestion/batch-ingestion/partial.md).|
 
 ### Known issues
 
 * None
 
-To learn more about ingesting data into Platform, visit the [Data Ingestion documentation](../ingestion/home.md).
+To learn more about ingesting data into Platform, visit the [Data Ingestion documentation](../../ingestion/home.md).
 
 
 ## Destinations
 
-In [Adobe Real-time Customer Data Platform](../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
+In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
 ### New destinations
 
@@ -65,7 +65,7 @@ New destinations are available where you can activate your Adobe Experience Plat
 |Cloud storage destinations | Adobe Real-time CDP can now deliver your segments as data files to your Amazon S3 or SFTP cloud storage locations. This enables you to send audiences and their profile attributes to your internal systems, via CSV or tab-delimited files.|
 |Advertising destinations | The Google destination card is now split into three destination cards, for the three different Google platforms currently supported in Adobe Real-time CDP: Google Ads, Google Ad Manager, Google Display & Video 360.|
 
-To learn more, visit the [destinations overview](../rtcdp/destinations/destinations-overview.md)
+To learn more, visit the [destinations overview](../../rtcdp/destinations/destinations-overview.md)
 
 ## Identity Service
 
@@ -83,7 +83,7 @@ Adobe Experience Platform Identity Service helps you to gain a better view of yo
 
 * None
 
-For more information about Identity Service, see the [Identity Service overview](../identity-service/home.md).
+For more information about Identity Service, see the [Identity Service overview](../../identity-service/home.md).
 
 ## Sources
 
@@ -106,4 +106,4 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 * None
 
-To learn more about sources, see the [sources overview](../source-connectors/home.md).
+To learn more about sources, see the [sources overview](../../source-connectors/home.md).
