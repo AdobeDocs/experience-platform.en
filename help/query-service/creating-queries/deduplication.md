@@ -18,7 +18,7 @@ This document outlines sub-select and full sample query examples for deduplicati
 * [Purchases](#purchases)
 * [Metrics](#metrics)
 
-### ExperienceEvents
+### ExperienceEvents {#experienceevents}
 
 In the case of duplicate ExperienceEvents, you will likely wish to ignore the entire row.
 
@@ -52,7 +52,7 @@ SELECT COUNT(*) AS num_events FROM (
 ) WHERE id_dup_num = 1
 ```
 
-### Purchases
+### Purchases {#purchases}
 
 If you have duplicate purchases you will likely wish to keep most of the ExperienceEvent row, but ignore the fields tied to the purchase (such as the `commerce.orders` metric). For purchases, there is a special field for the purchase ID. This field is `commerce.order.purchaseID`.
 
@@ -92,7 +92,7 @@ SELECT SUM(commerce.purchases.value) AS num_purchases FROM (
 ) WHERE id_dup_num = 1 AND purchaseID_dup_num = 1
 ```
 
-### Metrics
+### Metrics {#metrics}
 
 If you have a metric that is using the optional unique ID and a duplicate of that ID appears, you will likely want to ignore that metric value and keep the rest of the ExperienceEvent. In XDM, almost all metrics use the `Measure` data type that includes an optional `id` field that you could use for deduplication.
 

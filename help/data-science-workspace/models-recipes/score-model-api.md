@@ -9,12 +9,6 @@ topic: Tutorial
 
 This tutorial will show you how to leverage the APIs to create an Experiment and an Experiment Run. For a detailed list of API documentation please refer to [this document](https://www.adobe.io/apis/cloudplatform/dataservices/api-reference.html).
 
-- [Create a scheduled Experiment for scoring](#create-a-scheduled-experiment-for-scoring)
-    - [Create an Experiment Run for scoring](#create-an-experiment-run-for-scoring)
-    - [Retrieve an Experiment Run status for scheduled Experiment Run](#retrieve-an-experiment-run-status-for-scheduled-experiment-run)
-    - [Stop and delete a scheduled Experiment](#stop-and-delete-a-scheduled-experiment)
-
-
 ## Create a scheduled Experiment for scoring
 
 Similar to scheduled Experiments for training, creating a scheduled Experiment for scoring is also done by including a `template` section to the body parameter. Additionally, the `name` field under `tasks` in the body is set as `score`.

@@ -16,20 +16,6 @@ This tutorial will go over:
 
 By the end of this tutorial, you should be able to configure recipe code, define custom metrics, use pre-built evaluation metrics and default visualization charts.
 
-- [What are metrics?](#what-are-metrics)
-- [What is the Model Insights Framework?](#what-is-the-model-insights-framework)
-- [Configuring recipe code](#configuring-recipe-code)
-    - [Scala](#scala)
-        - [Default evaluation metrics for Scala](#default-evaluation-metrics-for-scala)
-        - [Custom evaluation metrics for Scala](#custom-evaluation-metrics-for-scala)
-    - [Python/Tensorflow](#pythontensorflow)
-        - [Custom evaluation metrics for Python](#custom-evaluation-metrics-for-python)
-        - [Custom evaluation metrics for Tensorflow](#custom-evaluation-metrics-for-tensorflow)
-    - [R](#r)
-        - [Custom evaluation metrics for R](#custom-evaluation-metrics-for-r)
-- [Using pre-built metrics and visualization charts](#using-pre-built-metrics-and-visualization-charts)
-
-
 ## What are metrics?
 
 After implementing and training a model, the next step a data scientist would do is to find how well the model will perform. Various metrics are used to find how effective a model will do compared with others. Some examples of metrics used include:
@@ -51,7 +37,7 @@ Currently, the Model Insights Framework supports the following runtimes:
 
 Sample code for recipes can be found in the [experience-platform-dsw-reference](https://github.com/adobe/experience-platform-dsw-reference) repository under `recipes`. Specific files from this repository will be referenced throughout this tutorial.
 
-### Scala
+### Scala {#scala}
 
 There are two ways to bring in metrics to the recipes. One is to use the default evaluation metrics provided by the SDK and the other is to write custom evaluation metrics. 
 
@@ -115,7 +101,7 @@ evaluation.class=com.adobe.platform.ml.Evaluator
 
 In the Data Science Workspace, the user would be able to see the insights in the "Evaluation Metrics" tab in the experiment page.
 
-### Python/Tensorflow
+### Python/Tensorflow {#pythontensorflow}
 
 As of now, there are no default evaluation metrics for Python or Tensorflow. Thus, to get the evaluation metrics for Python or Tensorflow, you will need to create a custom evaluation metric. This can be done by implementing the `Evaluator` class.
 
@@ -153,7 +139,7 @@ class Evaluator(AbstractEvaluator):
        return 'train', 'test'
 ```
 
-### R
+### R {#r}
 
 As of now, there are no default evaluation metrics for R. Thus, to get the evaluation metrics for R, you will need to define the `applicationEvaluator` class as part of the recipe.
 

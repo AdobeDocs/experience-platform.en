@@ -9,19 +9,7 @@ topic: Discovering insights
 
 Customer AI, as part of Intelligent Services provides marketers with the power to leverage Adobe Sensei to anticipate what your customers next action is going to be. Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale. This is accomplished without having to transform the business needs to a machine learning problem, picking an algorithm, training, or deployment.
 
-This document serves as a guide for interacting with service instance insights in the Intelligent Services Customer AI user interface. The following topics are covered:
-
-- [Service instance overview](#service-instance-overview)
-  - [Service instance details](#service-instance-details)
-  - [Edit an instance](#edit-an-instance)
-  - [Delete an instance](#more-actions)
-  - [Access scores](#more-actions)
-  - [View run history](#more-actions)
-- [Scoring summary](#scoring-summary)
-- [Distribution of Scores](#distribution-of-scores)
-- [Influential factors](#influential-factors)
-  - [Create a segment](#create-a-segment)
-- [Next steps](#next-steps)
+This document serves as a guide for interacting with service instance insights in the Intelligent Services Customer AI user interface.
 
 ## Getting started
 

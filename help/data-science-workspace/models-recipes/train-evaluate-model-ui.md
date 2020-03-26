@@ -9,10 +9,7 @@ topic: Tutorial
 
 In Adobe Experience Platform Data Science Workspace, a machine learning Model is created by incorporating an existing Recipe that is appropriate for the Model's intent. The Model is then trained and evaluated to optimize its operating efficiency and efficacy by fine-tuning its associated Hyperparameters. Recipes are reusable, meaning that multiple Models can be created and tailored to specific purposes with a single Recipe.
 
-This tutorial walks through the following steps to create, train, and evaluate a Model:
-- [Create a Model](#create-a-model)
-- [Create a training Run](#create-a-training-run)
-- [Evaluate the Model](#evaluate-the-model)
+This tutorial walks through the steps to create, train, and evaluate a Model.
 
 ## Getting started
 
