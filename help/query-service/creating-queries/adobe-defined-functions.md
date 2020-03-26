@@ -1,3 +1,10 @@
+---
+keywords: Experience Platform;home;popular topics
+solution: Experience Platform
+title: Adobe-defined functions
+topic: queries
+---
+
 # Using Adobe-defined functions
 
 One of Adobe's big differentiators is that they understand experience data and what customers need to be able to do with that data. You can use this understanding to build helper functions that make your job easier.
