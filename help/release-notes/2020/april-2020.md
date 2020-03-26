@@ -21,7 +21,7 @@ Experience Platform leverages [Adobe Admin Console](https://adminconsole.adobe.c
 |Permissions | In the Admin Console, the _Permissions_ tab within a Platform product profile allows you customize which Platform capabilities are available for the users attached to that profile. Available permission categories include: Data Modeling, Data Management, Profile Management, Identities, Data Monitoring, Sandbox Administration, Destinations, Sources.|
 |Access to sandboxes | The _Permissions_ tab within a Platform product profile can grant users access to specific sandboxes. See the section on [sandboxes](#sandboxes) below for more information.|
 
-For more information, please see the [access control overview](../access-control/home.md).
+For more information, please see the [access control overview](../../access-control/home.md).
 
 ## Sandboxes
 
@@ -36,4 +36,4 @@ Experience Platform is built to enrich digital experience applications on a glob
 |Sandbox switcher | In the Experience Platform user interface, the sandbox switcher in the top-left corner of the screen allows you to switch between available sandboxes through a dropdown menu.|
 |`x-sandbox-name` header | All calls to Experience Platform APIs must now include the new `x-sandbox-name` header, whose value references the `name` attribute of the sandbox the operation will take place in.|
 
-For more information, please see the [sandboxes overview](../sandboxes/home.md).
+For more information, please see the [sandboxes overview](../../sandboxes/home.md).
