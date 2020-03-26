@@ -255,5 +255,3 @@ The following table includes columns that show the name of the Analytics field (
 | visit_ref_type | _experience.analytics.session.web.webReferrer.type | string | Numeric ID representing the referrer type of the first referrer of the visit. |
 | visit_search_engine | _experience.analytics.session.search.searchEngine | string | Numeric ID of the first search engine of the visit. |
 | visit_start_time_gmt | _experience.analytics.session.timestamp | integer | Timestamp of the first hit of the visit in Unix time. |
-
-<img src="https://i.imgur.com/aIgvaQu.png" alt="back-to-top" width="50" height="50" style="position: fixed; bottom: 30px; float: right; right: 10%; left: 90%; opacity: 0.4; padding-top: 0px; padding-bottom: 0px; border-style: hidden; border-radius: 50%;" onmouseover="this.style.opacity = 0.9;" onmouseout="this.style.opacity = 0.4;" onclick="document.documentElement.scrollTop = document.getElementsByClassName('udp-header')[0].offsetHeight; document.body.scrollTop = document.getElementsByClassName('udp-header')[0].offsetHeight;">
