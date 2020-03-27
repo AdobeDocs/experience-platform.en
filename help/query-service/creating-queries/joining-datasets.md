@@ -10,8 +10,8 @@ topic: queries
 Joining datasets allows you to include data from other datasets in your query. This example uses a custom operating system dataset to map the `operatingsystemID` to the `operatingsystem` value.
 
 Datasets:
-* your_analytics_table
-* custom_operating_system_lookup
+- your_analytics_table
+- custom_operating_system_lookup
 
 Create a `SELECT` statement for the top 50 operating systems by number of page views.
 

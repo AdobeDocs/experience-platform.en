@@ -25,10 +25,8 @@ After a dataset is created, it can be accessed like any other dataset in the dat
 
 ## Generate datasets with a pre-defined Experience Data Model schema
 
-In order to generate a dataset with a pre-defined Experience Data Model (XDM) schema, you will have to use the SQL syntax. For more information about what syntax you have to use, please read the [SQL Syntax guide][sql-syntax-guide].
+In order to generate a dataset with a pre-defined Experience Data Model (XDM) schema, you will have to use the SQL syntax. For more information about what syntax you have to use, please read the [SQL Syntax guide](../sql/syntax.md#create-table-as-select).
 
 ## Output datasets
 
 Datasets created through this functionality are generated with an ad hoc schema that matches the structure of the output data as defined in the SQL statement. Some downstream services require datasets with particular Experience Data Model (XDM) schemas. Verify the data formatting requirements for downstream services prior to writing your queries. 
-
-[sql-syntax-guide]: ../sql/syntax.md#create-table-as-select
