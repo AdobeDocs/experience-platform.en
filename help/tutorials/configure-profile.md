@@ -5,7 +5,7 @@ title: Configure Real-time Customer Profile
 topic: tutorial
 ---
 
-# Configure Real-time Customer Profile
+# Configure Real-time Customer Profile and Identity Service
 
 In order to configure Real-time Customer Profile for your organization, you are required to complete multiple separate workflows. This document outlines the steps involved and provides links to tutorials for completing each individual workflow.
 
