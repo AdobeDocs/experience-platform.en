@@ -36,6 +36,8 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Oracle Eloqua](destinations/oracle-eloqua-destination.md)
       * [Oracle Responsys](destinations/oracle-responsys-destination.md)
       * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
+    * Adobe Launch Extensions{#launch-extensions}
+      * [Adobe Launch extensions overview](/help/rtcdp/destinations/adobe-launch-destinations.md)
     * Social network destinations{#social-network-destinations}
       * [Social network destinations overview](/help/rtcdp/destinations/social-network-destinations.md)
       * [Social network destinations authentication flow](/help/rtcdp/destinations/social-network-destinations-workflow.md)
