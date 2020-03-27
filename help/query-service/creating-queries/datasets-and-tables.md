@@ -27,7 +27,7 @@ To view the available tables on Platform with SQL, you can use either `\d` or `S
 `\d` displays the standard PostgreSQL view
 
 ```
-      List of relations
+             List of relations
  Schema |       Name      | Type  |  Owner   
 --------+-----------------+-------+----------
  public | luma_midvalues  | table | postgres

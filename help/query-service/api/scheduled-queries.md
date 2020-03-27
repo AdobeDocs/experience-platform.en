@@ -15,27 +15,29 @@ Now that you understand what headers to use, you are ready to begin making calls
 
 You can retrieve a list of all scheduled queries for your IMS Organization by making a GET request to the `/schedules` endpoint. 
 
-#### API format
+**API format**
 
 ```http
 GET /schedules
 GET /schedules?{QUERY_PARAMETERS}
 ```
 
-- `{QUERY_PARAMETERS}`: (*Optional*) Parameters added to the request path which configure the results returned in the response. Multiple parameters can be included, separated by ampersands (`&`). The available parameters are listed below.
+| Property | Description |
+| -------- | ----------- |
+| `{QUERY_PARAMETERS}` | (*Optional*) Parameters added to the request path which configure the results returned in the response. Multiple parameters can be included, separated by ampersands (`&`). The available parameters are listed below. |
 
 **Query parameters**
 
 The following is a list of available query parameters for listing scheduled queries. All of these parameters are optional. Making a call to this endpoint with no parameters will retrieve all scheduled queries available for your organization.
 
-Parameter | Description
---------- | -----------
-`orderby` | Specifies the field by which to order results. The supported fields are `created` and `updated`. For example, `orderby=created` will sort results by created in ascending order. Adding a `-` before created (`orderby=-created`) will sort items by created in descending order. 
-`limit` | Specifies the page size limit to control the number of results that are included in a page. (*Default value: 20*)
-`start` | Offsets the response list, using zero-based numbering. For example, `start=2` will return a list starting from the third listed query. (*Default value: 0*)
-`property` | Filter results based on fields. The filters **must** be HTML escaped. Commas are used to combine multiple sets of filters. The supported fields are `created`, `templateId`, and `userId`. The list of supported operators are `>` (greater than), `<` (less than), and `==` (equal to). For example, `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` will return all scheduled queries where the user ID is as specified.
+| Parameter | Description |
+| --------- | ----------- |
+| `orderby` | Specifies the field by which to order results. The supported fields are `created` and `updated`. For example, `orderby=created` will sort results by created in ascending order. Adding a `-` before created (`orderby=-created`) will sort items by created in descending order. |
+| `limit` | Specifies the page size limit to control the number of results that are included in a page. (*Default value: 20*) |
+| `start` | Offsets the response list, using zero-based numbering. For example, `start=2` will return a list starting from the third listed query. (*Default value: 0*) |
+| `property` | Filter results based on fields. The filters **must** be HTML escaped. Commas are used to combine multiple sets of filters. The supported fields are `created`, `templateId`, and `userId`. The list of supported operators are `>` (greater than), `<` (less than), and `==` (equal to). For example, `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` will return all scheduled queries where the user ID is as specified. |
 
-#### Request
+**Request**
 
 The following request retrieves the latest scheduled query created for your IMS organization.
 
@@ -47,7 +49,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 200 with a list of scheduled queries for the specified IMS Organization. The following response returns the latest scheduled query created for your IMS organization.
 
@@ -117,13 +119,13 @@ A successful response returns HTTP status 200 with a list of scheduled queries f
 
 You can create a new scheduled query by making a POST request to the `/schedules` endpoint.
 
-#### API format
+**API format**
 
 ```http
 POST /schedules
 ```
 
-#### Request
+**Request**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/schedules
@@ -147,13 +149,15 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
  '
 ```
 
-- `query/dbName`: The name of the database you are creating a scheduled query for.
-- `query/sql`: The SQL query you want to create.
-- `query/name`: The name of the scheduled query.
-- `schedule/schedule`: The cron schedule for the query. For more information about cron schedules, please read the [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation. In this example, "30 * * * *" means that the query will run every hour at the 30 minute mark.
-- `schedule/startDate`: The start date for your scheduled query, written as a UTC timestamp.
+| Property | Description |
+| -------- | ----------- |
+| `query.dbName` | The name of the database you are creating a scheduled query for. |
+| `query.sql` | The SQL query you want to create. |
+| `query.name` | The name of the scheduled query. |
+| `schedule.schedule` | The cron schedule for the query. For more information about cron schedules, please read the [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation. In this example, "30 * * * *" means that the query will run every hour at the 30 minute mark. |
+| `schedule.startDate` | The start date for your scheduled query, written as a UTC timestamp. |
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 202 (Accepted) with details of your newly created scheduled query. Once the scheduled query is finished activating, the `state` will change from `REGISTERING` to `ENABLED`.
 
@@ -212,15 +216,17 @@ A successful response returns HTTP status 202 (Accepted) with details of your ne
 
 You can retrieve information for a specific scheduled query by making a GET request to the `/schedules` endpoint and providing its ID in the request path.
 
-#### API format
+**API format**
 
 ```http
 GET /schedules/{SCHEDULE_ID}
 ```
 
-- `{SCHEDULE_ID}`: The `id` value of the scheduled query you want to retrieve.
+| Property | Description |
+| -------- | ----------- |
+| `{SCHEDULE_ID}` | The `id` value of the scheduled query you want to retrieve. |
 
-#### Request
+**Request**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm
@@ -230,7 +236,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 200 with details of the specified scheduled query.
 
@@ -297,16 +303,18 @@ The PATCH request supports two different paths: `/state` and `/schedule/schedule
 
 You can use `/state` to update the state of the selected scheduled query - ENABLED or DISABLED. To update the state, you will need to set the value as `enable` or `disable`.
 
-#### API format
+**API format**
 
 ```http
 PATCH /schedules/{SCHEDULE_ID}
 ```
 
-- `{SCHEDULE_ID}`: The `id` value of the scheduled query you want to retrieve.
+| Property | Description |
+| -------- | ----------- |
+| `{SCHEDULE_ID}` | The `id` value of the scheduled query you want to retrieve. |
 
 
-#### Request
+**Request**
 
 This API request uses the JSON Patch syntax for its payload. For more information on how JSON Patch works, please read the API fundamentals document. 
 
@@ -327,10 +335,12 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
  }'
 ```
 
-- `path`: The path of the value you want to patch. In this case, since you are updating the scheduled query's state, you need to set the value of `path` to `/state`.
-- `value`: The updated value of the `/state`. This value can either be set as `enable` or `disable` to enable or disable the scheduled query.
+| Property | Description |
+| -------- | ----------- |
+| `path` | The path of the value you want to patch. In this case, since you are updating the scheduled query's state, you need to set the value of `path` to `/state`. |
+| `value` | The updated value of the `/state`. This value can either be set as `enable` or `disable` to enable or disable the scheduled query. |
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 202 (Accepted) with the following message.
 
@@ -345,15 +355,17 @@ A successful response returns HTTP status 202 (Accepted) with the following mess
 
 You can use `/schedule/schedule` to update the cron schedule of the scheduled query. For more information about cron schedules, please read the [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation.
 
-#### API format
+**API format**
 
 ```http
 PATCH /schedules/{SCHEDULE_ID}
 ```
 
-- `{SCHEDULE_ID}`: The `id` value of the scheduled query you want to retrieve.
+| Property | Description |
+| -------- | ----------- |
+| `{SCHEDULE_ID}` | The `id` value of the scheduled query you want to retrieve. |
 
-#### Request
+**Request**
 
 This API request uses the JSON Patch syntax for its payload. For more information on how JSON Patch works, please read the API fundamentals document. 
 
@@ -374,10 +386,12 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
  }'
 ```
 
-- `path`: The path of the value you want to patch. In this case, since you are updating the scheduled query's schedule, you need to set the value of `path` to `/schedule/schedule`.
-- `value`: The updated value of the `/schedule`. This value needs to be in the form of a cron schedule. So, in this example, the scheduled query will run every hour at the 45 minute mark.
+| Property | Description |
+| -------- | ----------- |
+| `path` | The path of the value you want to patch. In this case, since you are updating the scheduled query's schedule, you need to set the value of `path` to `/schedule/schedule`. |
+| `value` | The updated value of the `/schedule`. This value needs to be in the form of a cron schedule. So, in this example, the scheduled query will run every hour at the 45 minute mark. |
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 202 (Accepted) with the following message.
 
@@ -394,15 +408,17 @@ You can delete a specified scheduled query by making a DELETE request to the `/s
 
 >[!NOTE] The schedule **must** be disabled before being deleted.
 
-#### API format
+**API format**
 
 ```http
 DELETE /schedules/{SCHEDULE_ID}
 ```
 
-- `{SCHEDULE_ID}`: The `id` value of the scheduled query you want to retrieve.
+| Property | Description |
+| -------- | ----------- |
+| `{SCHEDULE_ID}` | The `id` value of the scheduled query you want to retrieve. |
 
-#### Request
+**Request**
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm
@@ -412,7 +428,7 @@ curl -X DELETE https://platform.adobe.io/data/foundation/query/schedules/e95186d
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 202 (Accepted) with the following message.
 

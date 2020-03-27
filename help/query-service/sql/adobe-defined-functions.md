@@ -7,7 +7,7 @@ topic: functions
 
 # Adobe-defined functions
 
-Adobe-defined functions (ADFs) are prebuilt functions in Query Service that help perform common business related tasks on ExperienceEvent data. These include functions for Sessionization and Attribution like those found in Adobe Analytics. See the [Adobe Analytics documentation][Adobe Analytics] for more information about Adobe Analytics and the concepts behind the ADFs defined on this page. This document provides information for Adobe-defined functions available in Query Service.
+Adobe-defined functions (ADFs) are prebuilt functions in Query Service that help perform common business related tasks on ExperienceEvent data. These include functions for Sessionization and Attribution like those found in Adobe Analytics. See the [Adobe Analytics documentation](https://docs.adobe.com/content/help/en/analytics/landing/home.html) for more information about Adobe Analytics and the concepts behind the ADFs defined on this page. This document provides information for Adobe-defined functions available in Query Service.
 
 ## Window functions
 
@@ -31,7 +31,7 @@ Syntax: `OVER ([partition] [order] [frame])`
 
 When you are working with ExperienceEvent data originating from a website, mobile application, interactive voice response system, or any other customer interaction channel it helps if events can be grouped around a related period of activity. Typically, you have a specific intent driving your activity like researching a product, paying a bill, checking account balance, filling out an application, and so on. This grouping helps associate the events to uncover more context about the customer experience.
 
-For more information about Sessionization in Adobe Analytics, see the documentation on [context-aware sessions][Analytics Sessionization].
+For more information about Sessionization in Adobe Analytics, see the documentation on [context-aware sessions](https://docs.adobe.com/content/help/en/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
 
 ### Specification
 
@@ -87,7 +87,7 @@ LIMIT 10
 
 Associating customer actions to success is an important part of understanding the factors that influence customer experience. The following ADFs support First and Last attribution with different expiration settings.
 
-For more information about attribution in Adobe Analytics, see the [Attribution IQ overview][Analytics Attribution] in the Analytics Analyze Guide.
+For more information about attribution in Adobe Analytics, see the [Attribution IQ overview](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/panels/attribution.html) in the Analytics Analyze Guide.
 
 ### First touch attribution
 
@@ -643,9 +643,4 @@ LIMIT 10
 
 ## Next steps
 
-Using the functions described here, you can write queries to access your own ExperienceEvent datasets using Query Service. For more information about authoring queries in Query Service, see the documentation on [creating queries][Creating queries].
-
-[Creating queries]: ../creating-queries/creating-queries.md
-[Adobe Analytics]: https://docs.adobe.com/content/help/en/analytics/landing/home.html
-[Analytics Sessionization]: https://docs.adobe.com/content/help/en/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html
-[Analytics Attribution]: https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/panels/attribution.html
+Using the functions described here, you can write queries to access your own ExperienceEvent datasets using Query Service. For more information about authoring queries in Query Service, see the documentation on [creating queries](../creating-queries/creating-queries.md).
