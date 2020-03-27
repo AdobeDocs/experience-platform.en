@@ -39,20 +39,20 @@ After issuing these commands, you should see the following:
 
 ![Image](../images/clients/psql/path.png)
     
-Next, you need to add the two lines shown that include "Postgres."
+3. Add the two lines shown that include "Postgres."
     
-3. Save your updates, then open a command prompt and type:
+4. Save your updates, then open a command prompt and type:
 
 ```shell
 psql -V
 ```
-    
+
 You should see something like this:
-    
+
 ```shell
 psql (PostgreSQL) 9.5.14
 ```
-    
+
 ## Connect PSQL and Query Service
 
 1. Return to the Platform UI on the "Connect BI Tools" page. 
@@ -61,17 +61,17 @@ psql (PostgreSQL) 9.5.14
     
 ![Image](../images/clients/psql/connect-bi.png)
     
-[!IMPORTANT]: If you are on a PC, use a text editor to remove the line breaks in the command string, then copy the string.
+> [!IMPORTANT]: If you are on a PC, use a text editor to remove the line breaks in the command string, then copy the string.
 
 3. Paste the command string into a terminal or command window and press Enter.
     
 You should see a result like this:
-    
+
 ```shell
 psql (10.5, server 0.1.0)
 SSL connection (protocol: TLSv1.2, cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: 256, compression: off)
 Type "help" for help.
 all=>
 ```
-    
+
 If you don't see at least version 10.5, then you need to download that version or newer.

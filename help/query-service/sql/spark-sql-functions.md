@@ -533,7 +533,8 @@ Example:
 
 `power(expr1, expr2)`: Raises `expr1` to the power of `expr2`.
 
-Examples
+Examples:
+
 ```
 > SELECT power(2, 3);
  8.0
@@ -1049,6 +1050,7 @@ Example:
 Since: 1.5.0
 
 #### date_trunc
+
 `date_trunc(fmt, ts)`: Returns timestamp ts truncated to the unit specified by the format model `fmt`. `fmt` should be one of ["YEAR", "YYYY", "YY", "MON", "MONTH", "MM", "DAY", "DD", "HOUR", "MINUTE", "SECOND", "WEEK", "QUARTER"]
 
 Examples:
@@ -1349,7 +1351,7 @@ Examples:
 > SELECT unix_timestamp('2016-04-08', 'yyyy-MM-dd');
  1460041200
 ```
- 
+
 Since: 1.5.0
 
 #### weekday
@@ -2082,6 +2084,7 @@ Example:
 ```
 
 #### lpad
+
 `lpad(str, len, pad)`: Returns `str`, left-padded with `pad` to a length of `len`. If `str` is longer than `len`, the return value is shortened to `len` characters.
 
 Examples:
@@ -2381,6 +2384,7 @@ Example:
 > SELECT uuid();
  46707d92-02f4-4817-8116-a4c3b23e6266
 ```
+
 >[!NOTE] Function is non-deterministic. 
 
 ### Data evaluation 
@@ -2416,6 +2420,7 @@ Examples:
 > SELECT concat(array(1, 2, 3), array(4, 5), array(6));
  [1,2,3,4,5,6]
 ```
+
 >[!NOTE] `concat` logic for arrays is available since 2.4.0. 
 
 #### concat_ws
