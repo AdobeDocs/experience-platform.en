@@ -10,6 +10,8 @@ user-guide-title: Adobe Experience Platform Decisioning Service
 - [Experience Decisioning domain model](experience-model.md)
 - [Offer Decisioning domain model](offer-model.md)
 - Tutorials {#tutorials}
+  - [Getting started](tutorials/getting-started.md)
   - [Work with Decisioning Service runtime using APIs](tutorials/runtime.md)
   - [Manage Decisioning Service entities using APIs](tutorials/entities.md)
+- [Troubleshooting guide](troubleshooting-guide.md)
 - [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/decisioning-ode.yaml)
