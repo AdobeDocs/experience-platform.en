@@ -33,15 +33,15 @@ After issuing these commands, you should see the following:
 
 ## Install Postgres on a PC
 
-1. Download and install Postgres from this [location](https://www.postgresql.org/download/windows/).
+Download and install Postgres from this [location](https://www.postgresql.org/download/windows/).
 
-2. Edit your path variable:
+Edit your path variable:
 
 ![Image](../images/clients/psql/path.png)
     
-3. Add the two lines shown that include "Postgres."
+Add the two lines shown that include "Postgres."
     
-4. Save your updates, then open a command prompt and type:
+Save your updates, then open a command prompt and type:
 
 ```shell
 psql -V
@@ -55,15 +55,15 @@ psql (PostgreSQL) 9.5.14
 
 ## Connect PSQL and Query Service
 
-1. Return to the Platform UI on the "Connect BI Tools" page. 
+Return to the Platform UI on the "Connect BI Tools" page. 
 
-2. Click **copy** for "PSQL Command."
+Click **copy** for "PSQL Command."
     
 ![Image](../images/clients/psql/connect-bi.png)
     
 > [!IMPORTANT]: If you are on a PC, use a text editor to remove the line breaks in the command string, then copy the string.
 
-3. Paste the command string into a terminal or command window and press Enter.
+Paste the command string into a terminal or command window and press Enter.
     
 You should see a result like this:
 
