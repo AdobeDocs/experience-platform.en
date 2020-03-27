@@ -5,7 +5,7 @@ title: Create a streaming connection
 topic: tutorial
 ---
 
-# Creating a streaming connection
+# Creating a streaming connection using the API
 
 This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs.
 
