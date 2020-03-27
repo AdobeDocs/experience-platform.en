@@ -92,15 +92,15 @@ The following table lists all supported mapping functions, including sample expr
 
 | Function | Description | Sample expression | Sample output |
 | -------- | ----------- | ----------------- | ------------- |
-| concat | Concatenates given strings. | concat("Hi, ", "there", "!") | "Hi, there!" |
-| explode | Splits the string based on a regex and returns an array of parts. | explode("Hi, there!", " ") | \["Hi,", "there"\] |
+| concat | Concatenates given strings. | concat("Hi, ", "there", "!") | `"Hi, there!"` |
+| explode | Splits the string based on a regex and returns an array of parts. | explode("Hi, there!", " ") | `["Hi,", "there"]` |
 | instr | Returns the location/index of a substring. | instr("adobe<span>.com", "com") | 6 |
 | replacestr | Replaces the search string if present in original string. | replacestr("This is a string re test", "re", "replace") | "This is a string replace test" |
 | substr| Returns a substring of a given length. | substr("This is a substring test", 7, 8) | " a subst" |
 | lower /<br>lcase | Converts a string to lowercase. | lower("HeLLo")<br>lcase("HeLLo") | "hello" |
 | upper /<br>ucase | Converts a string to uppercase. | upper("HeLLo")<br>ucase("HeLLo") | "HELLO" |
-| split | Splits an input string on a separator. | split("Hello world", " ") | \["Hello", "world"\] |
-| join | Joins a list of objects using the separator. | join(" ", \["Hello", "world"\]) | "Hello world" |
+| split | Splits an input string on a separator. | split("Hello world", " ") | `["Hello", "world"]` |
+| join | Joins a list of objects using the separator. | `join(" ", ["Hello", "world"]`) | "Hello world" |
 | coalesce | Returns the first non-null object in a given list. | coalesce(null, null, null, "first", null, "second") | "first" |
 | decode | Given a key and a list of key value pairs flattened as an array, the function returns the value if key is found or return a default value if present in the array. | decode("k2", "k1", "v1", "k2", "v2", "default") | "v2" |
 | iif | Evaluates a given boolean expression and returns the specified value based on the result. | iif("s".equalsIgnoreCase("S"), "True", "False") | "True" |
@@ -109,13 +109,13 @@ The following table lists all supported mapping functions, including sample expr
 | first | Retrieves the first given argument. | first("1", "2", "3") | "1" |
 | last | Retrieves the last given argument. | last("1", "2", "3") | "3" |
 | uuid /<br>guid | Generates a pseudo-random ID. | uuid()<br>guid() | {UNIQUE_ID} |
-| now | Retrieves the current time. | now() | "2019-10-23T10:10:24.556-07:00\[America/Los_Angeles\]" |
+| now | Retrieves the current time. | now() | `2019-10-23T10:10:24.556-07:00[America/Los_Angeles]` |
 | timestamp | Retrieves the current Unix time. | timestamp() | 1571850624571 |
 | format | Formats the input date according to a specified format. | format({DATE}, "yyyy-MM-dd HH:mm:ss") | "2019-10-23 11:24:35" |
 | dformat | Converts a timestamp to a date string according to a specified format. | dformat(1571829875, "dd-MMM-yyyy hh:mm") | "23-Oct-2019 11:24" |
 | date | Converts a date string into a ZonedDateTime object (ISO 8601 format). | date("23-Oct-2019 11:24") | "2019-10-23T11:24:00+00:00" |
 | date_part | Retrieves the parts of the date. The following component values are supported: <br><br>"year"<br>"yyyy"<br>"yy"<br><br>"quarter"<br>"qq"<br>"q"<br><br>"month"<br>"mm"<br>"m"<br><br>"dayofyear"<br>"dy"<br>"y"<br><br>"day"<br>"dd"<br>"d"<br><br>"week"<br>"ww"<br>"w"<br><br>"weekday"<br>"dw"<br>"w"<br><br>"hour"<br>"hh"<br>"hh24"<br>"hh12"<br><br>"minute"<br>"mi"<br>"n"<br><br>"second"<br>"ss"<br>"s"<br><br>"millisecond"<br>"ms" | date_part(date("2019-10-17 11:55:12"), "MM") | 10 |
 | set_date_part | Replaces a component in a given date. The following components are accepted: <br><br>"year"<br>"yyyy"<br>"yy"<br><br>"month"<br>"mm"<br>"m"<br><br>"day"<br>"dd"<br>"d"<br><br>"hour"<br>"hh"<br><br>"minute"<br>"mi"<br>"n"<br><br>"second"<br>"ss"<br>"s" | set_date_part("m", 4, date("2016-11-09T11:44:44.797") | "2016-04-09T11:44:44.797" |
-| make_date_time /<br>make_timestamp | Creates a date from parts. | make_date_time(2019, 10, 17, 11, 55, 12, 999, "America/Los_Angeles") | "2019-10-17T11:55:12.0​00000999-07:00\[America/Los_Angeles\]" |
+| make_date_time /<br>make_timestamp | Creates a date from parts. | make_date_time(2019, 10, 17, 11, 55, 12, 999, "America/Los_Angeles") | `2019-10-17T11:55:12.0​00000999-07:00[America/Los_Angeles]` |
 | current_timestamp | Returns the current timestamp. | current_timestamp() | 1571850624571 |
 | current_date | Returns the current date without a time component. | current_date() | "18-Nov-2019" |
