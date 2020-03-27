@@ -105,7 +105,7 @@ In this example, the provided `x-api-key` value is invalid. Ensure that the have
 
 ## 5XX error messages
 
-500-level errors indicate that an error or unresolvable request occurred on the server side. To resolve your issue, try resending your API request again after a few minutes have passed. If you are still receiving a 5XX error r
+500-level errors indicate that an error or unresolvable request occurred on the server side. To resolve your issue, try resending your API request again after a few minutes have passed.
 
 ## Additional common API errors
 
