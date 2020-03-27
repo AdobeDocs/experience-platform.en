@@ -9,11 +9,6 @@ topic: overview
 
 The Product Recommendations recipe enables you to provide personalized product recommendations that are tailored to your customer's needs and interests. With an accurate prediction model, a customer's purchase history can provide you with insight on what products they may be interested in.
 
-This document answers questions such as:
-* [Who is this recipe built for?](#who-is-this-recipe-built-for)
-* [What does this recipe do?](#what-does-this-recipe-do)
-* [How do I get started?](#how-do-i-get-started)
-
 ## Who is this recipe built for?
 
 In modern day, a retailer can offer a multitude of products, giving their customers a lot of choices which can also hinder their customers search. Due to time and effort constraints, customers may not find the product they desire, resulting in purchases with a high level of cognitive dissonance or no purchase at all.

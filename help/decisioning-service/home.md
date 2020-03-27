@@ -61,7 +61,7 @@ You can use Decisioning Service in a synchronous request-response interaction mo
 
 Use of Decisioning Service is optional and only requires a few steps in addition to the typical steps required to create Profile entities and manage them.
 
- > To make the most out of the Real-time Customer Profile, the Decisioning Service directly integrates with the profile store. The API calls only need to indicate one of the identities for a given profile.
+>[!NOTE] To make the most out of the Real-time Customer Profile, the Decisioning Service directly integrates with the profile store. The API calls only need to indicate one of the identities for a given profile.
 
 The typical sequence of steps starts with building out profiles:
 

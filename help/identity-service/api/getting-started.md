@@ -35,7 +35,7 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
-> **Note:** For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md).
+>[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md).
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
@@ -54,7 +54,7 @@ The table below shows example paths using regions:
 | Identity Service API | https://</span>platform-va7.adobe.</span>io/data/core/identity/{ENDPOINT}|https://</span>platform-nld2.adobe.</span>io/data/core/identity/{ENDPOINT} |
 | Identity Namespace API | https://</span>platform-va7.adobe.</span>io/data/core/idnamespace/{ENDPOINT}|https://</span>platform-nld2.adobe.</span>io/data/core/idnamespace{ENDPOINT} |
 
-> Note: Requests made without specifying a region may result in calls routing to the incorrect region or cause calls to fail unexpectedly.
+>[!NOTE] Requests made without specifying a region may result in calls routing to the incorrect region or cause calls to fail unexpectedly.
 
 If you are unable to locate the region within your IMS Org profile, please contact your system administrator for support.
 
@@ -70,7 +70,7 @@ To limit the payload in responses, APIs adapt their responses to the type of ide
 
 The examples in this document do not cover the complete functionality of the Identity Service API. For the complete API, see the [Swagger API Reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml).
 
-> **Note:** All identities returned will be in native XID form when native XID is used in the request. Using the ID/namespace form is recommended. For more information, see the section on [getting the XID for an identity](./create-custom-namespace.md).
+>[!NOTE] All identities returned will be in native XID form when native XID is used in the request. Using the ID/namespace form is recommended. For more information, see the section on [getting the XID for an identity](./create-custom-namespace.md).
 
 ## Next steps
 

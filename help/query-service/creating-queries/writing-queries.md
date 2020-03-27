@@ -7,10 +7,7 @@ topic: queries
 
 # General guidance for query execution in Query Service
 
-This document details important details to know when writing queries in Adobe Experience Platform Query Service. The following topics are covered:
-- [Using different query execution models](#query-execution-models)
-- [Accessing schema fields within an object](#working-with-schema-fields-and-objects)
-- [Working with single quotes, double quotes, and back quotes](#when-to-use-single-quotes-double-quotes-and-back-quotes)
+This document details important details to know when writing queries in Adobe Experience Platform Query Service.
 
 For detailed information on the SQL syntax used in Query Service, please read the [SQL syntax documentation](../sql/syntax.md).
 

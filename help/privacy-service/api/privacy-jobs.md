@@ -17,12 +17,12 @@ Before creating a new job request, you must first collect identifying informatio
 
 The Privacy Service API supports two kinds of job requests for personal data:
 
-* [Access and/or delete](#create-an-access/delete-job): Access (read) or delete personal data.
-* [Opt out of sale](#create-an-opt-out-of-sale-job): Mark personal data as not to be sold.
+* [Access and/or delete](#access-delete): Access (read) or delete personal data.
+* [Opt out of sale](#opt-out): Mark personal data as not to be sold.
 
 >[!IMPORTANT] While access and delete requests can be combined as a single API call, opt-out requests must be made separately.
 
-### Create an access/delete job
+### Create an access/delete job {#access-delete}
 
 This section demonstrates how to make an access/delete job request using the API.
 
@@ -155,7 +155,7 @@ A successful response returns the details of the newly created jobs.
 
 Once you have successfully submitted the job request, you can proceed to the next step of [checking the job's status](#check-the-status-of-a-job).
 
-### Create an opt-out-of-sale job
+### Create an opt-out-of-sale job {#opt-out}
 
 This section demonstrates how to make an opt-out-of-sale job request using the API.
 

@@ -176,20 +176,20 @@ This tutorial covered how to create or modify a dataset to enable partial batch 
 
 Partial batch ingestion has four different error types when ingesting data.
 
-- [Unreadable files](#unreadable-files)
-- [Invalid schemas or headers](#invalid-schemas-or-headers)
-- [Unparsable rows](#unparsable-rows)
-- [Invalid XDM conversion](#invalid-xdm-conversion)
+- [Unreadable files](#unreadable)
+- [Invalid schemas or headers](#schemas-headers)
+- [Unparsable rows](#unparsable)
+- [Invalid XDM conversion](#conversion)
 
-### Unreadable files
+### Unreadable files {#unreadable}
 
 If the batch ingested has unreadable files, the batch's errors will be attached on the batch itself. More information on retrieving the failed batch can be found in the [retrieving failed batches guide](../quality/retrieve-failed-batches.md).
 
-### Invalid schemas or headers
+### Invalid schemas or headers {#schemas-headers}
 
 If the batch ingested has an invalid schema or invalid headers, the batch's errors will be attached on the batch itself. More information on retrieving the failed batch can be found in the [retrieving failed batches guide](../quality/retrieve-failed-batches.md).
 
-### Unparsable rows
+### Unparsable rows {#unparsable}
 
 If the batch ingested has unparsable rows, the batch's errors will be stored in a file that can be accessed by using the endpoint outlined below.
 
@@ -228,7 +228,7 @@ A successful response returns HTTP status 200 with details of the unparsable row
 }
 ```
 
-### Invalid XDM conversion
+### Invalid XDM conversion {#conversion}
 
 If the batch ingested has invalid XDM conversions, the batch's errors will be stored in a file that can be accessed by using the following endpoint.
 

@@ -9,28 +9,7 @@ topic: Attribution AI insights
 
 Attribution AI service instances provide insights which can be used to assist in making and measuring marketing decisions related to marketing performance and return on investment. Selecting a service instance provides visualizations and filters to assist you in understanding the impact of every customer interaction in each phase of the customer journey.
 
-This document serves as a guide for interacting with service instance insights in the Adobe Intelligent Services user interface. The following topics are covered:
-
-- [Service instance overview](#service-instance-insights-overview)
-  - [Service instance details](#service-instance-details)
-  - [Edit an instance](#edit-an-instance)
-  - [Delete an instance](#more-actions)
-  - [Download summary data](#more-actions)
-  - [Access scores](#more-actions)
-  - [View run history](#more-actions)
-- [Filter your data by](#filtering-your-data)
-  - [Conversion event](#conversion-event)
-  - [Attribution model](#attribution-model)
-  - [Product](#product)
-  - [Geography](#geography)
-  - [Region](#region)
-  - [Channel](#channel)
-  - [Date Range](#date-range)
-- [Overview of your data](#overview-of-your-data)
-- [Weekly trends](#weekly-trends)
-- [Breakdown by channel](#breakdown-by-channel)
-- [Top campaigns](#top-campaigns)
-- [Next steps](#next-steps)
+This document serves as a guide for interacting with service instance insights in the Adobe Intelligent Services user interface.
 
 ## Getting started
 
@@ -77,7 +56,7 @@ The *More actions* button is located in the top-right navigation next to *Edit*.
 
 - **Delete**: Deletes the instance.
 - **Download summary data**: Downloads a CSV file containing the summary data.
-- **Access scores**: Clicking *Access scores* redirects you to the [downloading scores for Attribution AI tutorial](./download-scores.md).
+- **Access scores**: Clicking *Access scores* redirects you to the [access scores for Attribution AI tutorial](./download-scores.md).
 - **View run history**: A popover containing a list of all the scoring runs associated with the service instance appears.
 
 ![more actions](./images/insights/more-actions.png)
@@ -168,4 +147,4 @@ The *Top campaigns* card displays an overview of your campaigns and how the camp
 
 ## Next steps
 
-Once you have finished filtering the data and are able to display the appropriate information, you have the option to download the scores. For an in-depth guide on how to download your scores, visit the [downloading scores in Attribution AI](./download-scores.md) tutorial. Additionally, you can also download your summary data as indicated in [more actions](#more-actions). Selecting "Download summary data" downloads the summary data aggregated by dates.
+Once you have finished filtering the data and are able to display the appropriate information, you have the option to access the scores. For an in-depth guide on how to access your scores, visit the [access scores in Attribution AI](./download-scores.md) tutorial. Additionally, you can also download your summary data as indicated in [more actions](#more-actions). Selecting "Download summary data" downloads the summary data aggregated by dates.

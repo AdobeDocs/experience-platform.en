@@ -8,13 +8,6 @@ topic: Tutorial
 # Import a packaged recipe (UI)
 
 This tutorial provides insight on how to configure and import a packaged recipe using the provided Retail Sales example. By the end of this tutorial, you will be ready to create, train, and evaluate a Model in Adobe Experience Platform Data Science Workspace.
-- [UI workflow](#ui-workflow)
-    - [Configure a recipe](#configure-a-recipe)
-    - [Import binary based recipe - PySpark](#import-binary-based-recipe---pyspark)
-    - [Import binary based recipe - Scala Spark](#import-binary-based-recipe---scala-spark)
-    - [Import Docker based recipe - Python](#import-docker-based-recipe---python)
-    - [Import Docker based recipe - R](#import-docker-based-recipe---r)
-- [Next steps](#next-steps)
 
 ## Prerequisites
 
@@ -25,13 +18,13 @@ This tutorial requires a packaged recipe in the form of either a Docker image UR
 Importing a packaged recipe into Data Science Workspace requires specific recipe configurations, compiled into a single JavaScript Object Notation (JSON) file, this compilation of recipe configurations is referred to as the **configuration file**. A packaged recipe with a particular set of configurations is referred to as a **recipe instance**. One recipe can be used to create many recipe instances in Data Science Workspace.
 
 The workflow for importing a package recipe consists of the following steps:
-- [Configure a recipe](#configure-a-recipe)
-- [Import binary based recipe - PySpark](#import-binary-based-recipe---pyspark)
-- [Import binary based recipe - Scala Spark](#import-binary-based-recipe---scala-spark)
-- [Import Docker based recipe - Python](#import-docker-based-recipe---python)
-- [Import Docker based recipe - R](#import-docker-based-recipe---r)
+- [Configure a recipe](#configure)
+- [Import binary based recipe - PySpark](#pyspark)
+- [Import binary based recipe - Scala Spark](#scala)
+- [Import Docker based recipe - Python](#python)
+- [Import Docker based recipe - R](#r)
 
-### Configure a recipe
+### Configure a recipe {#configure}
 
 Every recipe instance in Data Science Workspace is accompanied with a set of configurations that tailor the recipe instance to suit a particular use case. Configuration files define the default training and scoring behaviors of a Model created using this recipe instance.
 
@@ -118,7 +111,7 @@ Below is a sample configuration file showing default training and scoring behavi
 
 For the purpose of this tutorial, you can leave the default configuration files for Retail Sales recipe in the Data Science Workspace Reference the way they are.
 
-### Import binary based recipe - PySpark
+### Import binary based recipe - PySpark {#pyspark}
 
 In the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial, an **EGG** binary file was built using the Retail Sales PySpark source files. 
 
@@ -138,7 +131,7 @@ Under the **Feature Manage** section, click on your tenant identification in the
 Congratulations, you've created the Retail Sales recipe! Move on to the [next steps](#next-steps) to find out how to create a Model in Data Science Workspace using the newly created Retail Sales recipe.
 
 
-### Import binary based recipe - Scala Spark
+### Import binary based recipe - Scala Spark {#scala}
 
 In the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial, a **JAR** binary file was built using the Retail Sales Scala Spark source files. 
 
@@ -156,7 +149,7 @@ Under the **Feature Manage** section, click on your tenant identification in the
 
 Congratulations, you've created the Retail Sales recipe! Move on to the [next steps](#next-steps) to find out how to create a Model in Data Science Workspace using the newly created Retail Sales recipe.
 
-### Import Docker based recipe - Python
+### Import Docker based recipe - Python {#python}
 
 In the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial, a Docker URL was provided at the end of building the Retail Sales recipe using Python source files. 
 
@@ -170,7 +163,7 @@ Under the **Feature Manage** section, click on your tenant identification in the
 
 Congratulations, you've created the Retail Sales recipe! Move on to the [next steps](#next-steps) to find out how to create a Model in Data Science Workspace using the newly created Retail Sales recipe.
 
-### Import Docker based recipe - R
+### Import Docker based recipe - R {#r}
 
 In the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial, a Docker URL was provided at the end of building the Retail Sales recipe using R source files. 
 
