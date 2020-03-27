@@ -15,7 +15,7 @@ The following sections walk through calls you can make using the `/queries` endp
 
 You can retrieve a list of all queries for your IMS Organization by making a GET request to the `/queries` endpoint. 
 
-#### API format
+**API format**
 
 ```http
 GET /queries
@@ -28,16 +28,16 @@ GET /queries?{QUERY_PARAMETERS}
 
 The following is a list of available query parameters for listing queries. All of these parameters are optional. Making a call to this endpoint with no parameters will retrieve all queries available for your organization.
 
-Parameter | Description
---------- | -----------
-`orderby` | Specifies the field by which to order results. The supported fields are `created` and `updated`. For example, `orderby=created` will sort results by created in ascending order. Adding a `-` before created (`orderby=-created`) will sort items by created in descending order. 
-`limit` | Specifies the page size limit to control the number of results that are included in a page. (*Default value: 20*)
-`start` | Offsets the response list, using zero-based numbering. For example, `start=2` will return a list starting from the third listed query. (*Default value: 0*)
-`property` | Filter results based on fields. The filters **must** be HTML escaped. Commas are used to combine multiple sets of filters. The supported fields are `created`, `updated`, `state`, and `id`. The list of supported operators are `>` (greater than), `<` (less than), `>=` (greater than or equal to), `<=` (less than or equal to), `==` (equal to), `!=` (not equal to), and `~` (contains). For example, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` will return all queries with the specified ID.
-`excludeSoftDeleted` | Indicates whether a query which has been soft deleted should be included. For example, `excludeSoftDeleted=false` will **include** soft deleted queries. (*Boolean, default value: true*)
-`excludeHidden` | Indicates whether non-user driven queries should be displayed. Having this value set to false will **include** non-user driven queries, such as CURSOR definitions, FETCH, or metadata queries. (*Boolean, default value: true*)
+| Parameter | Description |
+| --------- | ----------- |
+| `orderby` | Specifies the field by which to order results. The supported fields are `created` and `updated`. For example, `orderby=created` will sort results by created in ascending order. Adding a `-` before created (`orderby=-created`) will sort items by created in descending order. |
+| `limit` | Specifies the page size limit to control the number of results that are included in a page. (*Default value: 20*) |
+| `start` | Offsets the response list, using zero-based numbering. For example, `start=2` will return a list starting from the third listed query. (*Default value: 0*) |
+| `property` | Filter results based on fields. The filters **must** be HTML escaped. Commas are used to combine multiple sets of filters. The supported fields are `created`, `updated`, `state`, and `id`. The list of supported operators are `>` (greater than), `<` (less than), `>=` (greater than or equal to), `<=` (less than or equal to), `==` (equal to), `!=` (not equal to), and `~` (contains). For example, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` will return all queries with the specified ID. |
+| `excludeSoftDeleted` | Indicates whether a query which has been soft deleted should be included. For example, `excludeSoftDeleted=false` will **include** soft deleted queries. (*Boolean, default value: true*) |
+| `excludeHidden` | Indicates whether non-user driven queries should be displayed. Having this value set to false will **include** non-user driven queries, such as CURSOR definitions, FETCH, or metadata queries. (*Boolean, default value: true*) |
 
-#### Request
+**Request**
 
 The following request retrieves the latest query created for your IMS organization.
 
@@ -49,7 +49,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 200 with a list of queries for the specified IMS Organization as JSON. The following response returns the latest query created for your IMS organization.
 
@@ -114,13 +114,13 @@ A successful response returns HTTP status 200 with a list of queries for the spe
 
 You can create a new query by making a POST request to the `/queries` endpoint.
 
-#### API format
+**API format**
 
 ```http
 POST /queries
 ```
 
-#### Request
+**Request**
 
 The following request creates a new query, configured by the values provided in the payload:
 
@@ -139,12 +139,14 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
     }  
 ```
 
-- `dbName`: The name of the database you are creating a SQL query for.
-- `sql`: The SQL query you want to create.
-- `name`: The name of your SQL query.
-- `description`: The description of your SQL query.
+| Property | Description |
+| -------- | ----------- |
+| `dbName` | The name of the database you are creating a SQL query for. |
+| `sql` | The SQL query you want to create. |
+| `name` | The name of your SQL query. |
+| `description` | The description of your SQL query. |
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 202 (Accepted) with details of your newly created query. Once the query is finished activating and has successfully run, the `state` will change from `SUBMITTED` to `SUCCESS`.
 
@@ -193,15 +195,17 @@ A successful response returns HTTP status 202 (Accepted) with details of your ne
 
 You can retrieve detailed information about a specific query by making a GET request to the `/queries` endpoint and providing the query's `id` value in the request path.
 
-#### API format
+**API format**
 
 ```http
 GET /queries/{QUERY_ID}
 ```
 
-- `{QUERY_ID}`: The `id` value of the query you want to retrieve.
+| Property | Description |
+| -------- | ----------- |
+| `{QUERY_ID}` | The `id` value of the query you want to retrieve. |
 
-#### Request
+**Request**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8f-463a-a182-54bccb9954fc \
@@ -211,7 +215,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 200 with detailed information about the specified query.
 
@@ -260,16 +264,18 @@ A successful response returns HTTP status 200 with detailed information about th
 
 You can request to delete a specified query by making a PATCH request to the `/queries` endpoint and providing the query's `id` value in the request path.
 
-#### API format
+**API format**
 
 ```http
 PATCH /queries/{QUERY_ID}
 ```
 
-- `{QUERY_ID}`: The `id` value of the query you want to cancel.
+| Property | Description |
+| -------- | ----------- |
+| `{QUERY_ID}` | The `id` value of the query you want to cancel. |
 
 
-#### Request
+**Request**
 
 This API request uses the JSON Patch syntax for its payload. For more information on how JSON Patch works, please read the API fundamentals document. 
 
@@ -285,9 +291,11 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
  }'
  ```
 
-- `op`: In order to cancel the query, you must set the op parameter with the value `cancel `.
+ | Property | Description |
+ | -------- | ----------- |
+| `op` | In order to cancel the query, you must set the op parameter with the value `cancel `. |
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 202 (Accepted) with the following message:
 
