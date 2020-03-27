@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Create a streaming connection
+title: Create a streaming connection using the UI
 topic: tutorial
 ---
 
