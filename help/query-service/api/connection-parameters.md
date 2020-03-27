@@ -15,13 +15,13 @@ Now that you understand what headers to use, you are ready to begin making calls
 
 You can retrieve your connection parameters for using the [interactive service](../creating-queries/writing-queries.md) by making a GET request to the `/connection_parameters` endpoint. For more information about clients that use connection parameters to connect via the interactive service, please read the documentation on [Query Service clients](../clients/overview.md).
 
-#### API format
+**API format**
 
 ```http
 GET /connection_parameters
 ```
 
-#### Request
+**Request**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/connection_parameters
@@ -31,7 +31,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/connection_parameter
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 200 with your connection parameters.
 

@@ -30,17 +30,19 @@ con <- dbConnect(drv,
  password="{PASSWORD}")
 ```
 
-- **dbname:** The name of the database that will be used.
-- **Host and Port**: The host endpoint and its port for Query Service. 
-- **User and Password**: The login credentials that will be used. The username takes the form of `ORG_ID@AdobeOrg`.
+| Property | Description |
+| -------- | ----------- |
+| `{DATABASE_NAME}` | The name of the database that will be used. |
+| `{HOST_NUMBER` and `{PORT_NUMBER}` | The host endpoint and its port for Query Service. | 
+| `{USERNAME}` and `{PASSWORD}` | The login credentials that will be used. The username takes the form of `ORG_ID@AdobeOrg`. |
 
->[!NOTE] For more information on finding your database name, host, port, and login credentials, visit the [credentials page on Platform][credentials]. To find your credentials, log in to Platform, click **Queries**, then click **Credentials**.
+>[!NOTE] For more information on finding your database name, host, port, and login credentials, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to Platform, click **Queries**, then click **Credentials**.
 
-## Next Steps
+## Next steps
 
 Now that you have connected to Query Service, you can write queries to execute and edit SQL statements. For example, you can use `dbGetQuery(con, sql)` to execute queries, where `sql` is the SQL query you want to run.
 
-The following query uses a dataset containing [ExperienceEvents][experience-event] and creates a histogram of page views of a website, given the device's screen height.
+The following query uses a dataset containing [ExperienceEvents](../creating-queries/experience-event-queries.md) and creates a histogram of page views of a website, given the device's screen height.
 
 ```sql
 df_pageviews <- dbGetQuery(con,
@@ -75,8 +77,4 @@ df_pageviews
 7 600-699 3097040
 ```
 
-For more information on how to write and run queries, please read the [running queries guide][running-queries].
-
-[credentials]: https://platform.adobe.com/query/configuration
-[running-queries]: ../creating-queries/creating-queries.md
-[experience-event]: ../creating-queries/experience-event-queries.md
+For more information on how to write and run queries, please read the [running queries guide](../creating-queries/creating-queries.md).

@@ -15,27 +15,29 @@ Now that you understand what headers to use, you are ready to begin making calls
 
 You can retrieve a list of all query templates for your IMS Organization by making a GET request to the `/query-templates` endpoint. 
 
-#### API format
+**API format**
 
 ```http
 GET /query-templates
 GET /query-templates?{QUERY_PARAMETERS}
 ```
 
-- `{QUERY_PARAMETERS}`: (*Optional*) Parameters added to the request path which configure the results returned in the response. Multiple parameters can be included, separated by ampersands (`&`). The available parameters are listed below.
+| Property | Description |
+| -------- | ----------- |
+| `{QUERY_PARAMETERS}` | (*Optional*) Parameters added to the request path which configure the results returned in the response. Multiple parameters can be included, separated by ampersands (`&`). The available parameters are listed below. |
 
 **Query parameters**
 
 The following is a list of available query parameters for listing query templates. All of these parameters are optional. Making a call to this endpoint with no parameters will retrieve all query templates available for your organization.
 
-Parameter | Description
---------- | -----------
-`orderby` | Specifies the field by which to order results. The supported fields are `created` and `updated`. For example, `orderby=created` will sort results by created in ascending order. Adding a `-` before created (`orderby=-created`) will sort items by created in descending order. 
-`limit` | Specifies the page size limit to control the number of results that are included in a page. (*Default value: 20*)
-`start` | Offsets the response list, using zero-based numbering. For example, `start=2` will return a list starting from the third listed query. (*Default value: 0*)
-`property` | Filter results based on fields. The filters **must** be HTML escaped. Commas are used to combine multiple sets of filters. The supported fields are `name` and `userId`. The only supported operator is `==` (equal to). For example, `name==my_template` will return all query templates with the name `my_template`.
+| Parameter | Description |
+| --------- | ----------- |
+| `orderby` | Specifies the field by which to order results. The supported fields are `created` and `updated`. For example, `orderby=created` will sort results by created in ascending order. Adding a `-` before created (`orderby=-created`) will sort items by created in descending order. | 
+| `limit` | Specifies the page size limit to control the number of results that are included in a page. (*Default value: 20*) |
+| `start` | Offsets the response list, using zero-based numbering. For example, `start=2` will return a list starting from the third listed query. (*Default value: 0*) |
+| `property` | Filter results based on fields. The filters **must** be HTML escaped. Commas are used to combine multiple sets of filters. The supported fields are `name` and `userId`. The only supported operator is `==` (equal to). For example, `name==my_template` will return all query templates with the name `my_template`. |
 
-#### Request
+**Request**
 
 The following request retrieves the latest query template created for your IMS organization.
 
@@ -47,7 +49,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limi
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 200 with a list of query templates for the specified IMS Organization. The following response returns the latest query template created for your IMS organization.
 
@@ -102,13 +104,13 @@ A successful response returns HTTP status 200 with a list of query templates for
 
 You can create a query template by making a POST request to the `/query-templates` endpoint.
 
-#### API format
+**API format**
 
 ```http
 POST /query-templates
 ```
 
-#### Request
+**Request**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
@@ -122,10 +124,12 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
     }'
 ```
 
-- `sql`: The SQL query you want to create.
-- `name`: The name of the query template.
+| Property | Description |
+| -------- | ----------- |
+| `sql` | The SQL query you want to create. |
+| `name` | The name of the query template. |
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 202 (Accepted) with details of your newly created query template.
 
@@ -161,15 +165,17 @@ A successful response returns HTTP status 202 (Accepted) with details of your ne
 
 You can retrieve a specific query template by making a GET request to the `/query-templates/{TEMPLATE_ID}` endpoint and providing the ID of the query template in the request path.
 
-#### API format
+**API format**
 
 ```http
 GET /query-templates/{TEMPLATE_ID}
 ```
 
-- `{TEMPLATE_ID}`: The `id` value of the query template you want to retrieve.
+| Property | Description |
+| -------- | ----------- | 
+| `{TEMPLATE_ID}` | The `id` value of the query template you want to retrieve. |
 
-#### Request
+**Request**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -179,7 +185,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates/0094
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 200 with details of your specified query template.
 
@@ -215,15 +221,17 @@ A successful response returns HTTP status 200 with details of your specified que
 
 You can update a specific query template by making a PUT request to the `/query-templates/{TEMPLATE_ID}` endpoint and providing the ID of the query template in the request path.
 
-#### API format
+**API format**
 
 ```http
 PUT /query-templates/{TEMPLATE_ID}
 ```
 
-- `{TEMPLATE_ID}`: The `id` value of the query template you want to retrieve.
+| Property | Description |
+| -------- | ----------- |
+| `{TEMPLATE_ID}` | The `id` value of the query template you want to retrieve. |
 
-#### Request
+**Request**
 
 >[!NOTE] The PUT request requires both the sql and name field to be filled, and will **overwrite** the current content of that query template.
 
@@ -239,10 +247,12 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
  }'
 ```
 
-- `sql`: The SQL query you want to update.
-- `name`: The name of the scheduled query.
+| Property | Description |
+| -------- | ----------- |
+| `sql` | The SQL query you want to update. |
+| `name` | The name of the scheduled query. |
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 202 (Accepted) with the updated information for your specified query template.
 
@@ -279,15 +289,17 @@ A successful response returns HTTP status 202 (Accepted) with the updated inform
 
 You can delete a specific query template by making a DELETE request to the `/query-templates/{TEMPLATE_ID}` and providing the ID of the query template in the request path.
 
-#### API format
+**API format**
 
 ```http
 DELETE /query-templates/{TEMPLATE_ID}
 ```
 
-- `{TEMPLATE_ID}`: The `id` value of the query template you want to retrieve.
+| Property | Description |
+| -------- | ----------- |
+| `{TEMPLATE_ID}` | The `id` value of the query template you want to retrieve. |
 
-#### Request
+**Request**
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -297,7 +309,7 @@ curl -X DELETE https://platform.adobe.io/data/foundation/query/query-templates/0
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response 
+**Response** 
 
 A successful response returns HTTP status 202 (Accepted) with the following message. 
 

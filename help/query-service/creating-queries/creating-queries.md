@@ -11,8 +11,8 @@ Adobe Experience Platform Query Service provides the power to run SQL queries ag
 
 The following documentation will help you to better understand core concepts within Query Service:
 
-* [Datasets vs tables and schema](./datasets-and-tables.md)
-* [General guidance for writing queries](./writing-queries.md)
-* [ExperienceEvent queries](./experience-event-queries.md)
-* [Joining datasets](./joining-datasets.md)
-* [Deduplicating data](./deduplication.md)
+- [Datasets vs tables and schema](./datasets-and-tables.md)
+- [General guidance for writing queries](./writing-queries.md)
+- [ExperienceEvent queries](./experience-event-queries.md)
+- [Joining datasets](./joining-datasets.md)
+- [Deduplicating data](./deduplication.md)

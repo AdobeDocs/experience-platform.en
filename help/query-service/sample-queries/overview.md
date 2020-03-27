@@ -11,5 +11,5 @@ Adobe Experience Cloud solution data is available natively in Experience Platfor
 
 There are a number of standard queries that you might want to run against your Adobe data. Please see the documents below for sample queries for Adobe Analytics and Adobe Target. Sample queries for other solution data will be added in the future.
 
-* [Adobe Analytics sample queries](adobe-analytics.md)
-* [Adobe Target sample queries](adobe-target.md)
+- [Adobe Analytics sample queries](adobe-analytics.md)
+- [Adobe Target sample queries](adobe-target.md)

@@ -20,7 +20,7 @@ The *Register Server* dialog appears. Under the *General* tab, select **PostgreS
 - **Host and Port**: The host endpoint and its port for Query Service. 
 - **Database:** The database that will be used.
 
->[!NOTE] For more information on finding your login credentials, host, port, and database name, visit the [credentials page on Platform][credentials]. To find your credentials, log in to Platform, click **Queries**, then click **Credentials**.
+>[!NOTE] For more information on finding your login credentials, host, port, and database name, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to Platform, click **Queries**, then click **Credentials**.
 
 ![](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
@@ -32,7 +32,4 @@ After inputting your connection details, click **Test Connection** to ensure you
 
 ## Next Steps
 
-Now that you have connected to Query Service, you can use the *Query Analyzer* within Aqua Data Studio to execute and edit SQL statements. For more information on how to write and run queries, please read the [running queries guide][running-queries].
-
-[credentials]: https://platform.adobe.com/query/configuration
-[running-queries]: ../creating-queries/creating-queries.md
+Now that you have connected to Query Service, you can use the *Query Analyzer* within Aqua Data Studio to execute and edit SQL statements. For more information on how to write and run queries, please read the [running queries guide](../creating-queries/creating-queries.md).
