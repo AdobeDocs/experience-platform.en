@@ -69,7 +69,7 @@ Experience Platform provides support for ingesting data from a third-party marke
 
 ## API tutorials
 
-You can create source connectors using the Flow Service API. For more information, see the [sources API tutorial document]https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-api-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/api/sources-api-tutorial.md).
+You can create source connectors using the Flow Service API. For more information, see the [sources API tutorial document](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-api-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/api/sources-api-tutorial.md).
 
 ## Access control for sources in data ingestion
 
