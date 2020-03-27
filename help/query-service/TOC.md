@@ -19,6 +19,7 @@ user-guide-title: Adobe Experience Platform Query Service Help
   - [UI overview](ui/overview.md)
   - [Query Editor user guide](ui/user-guide.md)
 - Creating queries {#creating-queries}
+  - [Adobe defined functions](creating-queries/adobe-defined-functions.md)
   - [Creating queries overview](creating-queries/creating-queries.md)
   - [Datasets vs tables and schemas](creating-queries/datasets-and-tables.md)
   - [General guidance for query execution](creating-queries/writing-queries.md)
@@ -30,6 +31,7 @@ user-guide-title: Adobe Experience Platform Query Service Help
   - [SQL overview](sql/overview.md)
   - [SQL syntax](sql/syntax.md)
   - [Adobe-defined functions](sql/adobe-defined-functions.md)
+  - [Spark SQL functions](sql/spark-sql-functions.md)
   - [Metadata commands](sql/metadata.md)
   - [Prepared statements](sql/prepared-statements.md)
 - Sample queries {#samples}
