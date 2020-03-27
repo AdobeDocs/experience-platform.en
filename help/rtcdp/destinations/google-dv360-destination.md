@@ -42,14 +42,14 @@ Before creating the Google Display & Video 360 destination in Adobe Real-time CD
 1. In **[!UICONTROL Connections > Destinations]**, select Google Display & Video 360, and select **[!UICONTROL Create destination]**.
     ![Connect Google Display & Video 360 destination](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
-2. In the Create destination wizard, fill in the Basic Information for the destination.
+2. In the Create destination workflow, fill in the [!UICONTROL Basic Information] for the destination.
     ![Basic information Google Display & Video 360](/help/rtcdp/destinations/assets/google-dv360-basic-information.png)
-*  **Name**: Fill in the preferred name for this destination.
-*  **Description**: Optional. For example, you can mention which campaign you are using this destination for.
-*  **Account Type**: Select an option, depending on your account with Google:
+*  **[!UICONTROL Name]**: Fill in the preferred name for this destination.
+*  **[!UICONTROL Description]**: Optional. For example, you can mention which campaign you are using this destination for.
+*  **[!UICONTROL Account Type]**: Select an option, depending on your account with Google:
    * Use `Invite Advertiser` to allow audiences to be shared only to a specific brand in your Display & Video 360 account.
    * Use `Invite Partner` to allow audiences to be shared to all brands in your Display & Video 360 account.
-*  **Account ID**: Fill in your **[!DNL Invite partner]** or **[!DNL Invite advertiser]** account ID with Google. Typically, this is a six or seven digit ID.
+*  **[!UICONTROL Account ID]**: Fill in your **[!DNL Invite partner]** or **[!DNL Invite advertiser]** account ID with Google. Typically, this is a six or seven digit ID.
 
 >[!NOTE]
 >
