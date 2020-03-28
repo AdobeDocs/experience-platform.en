@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform Streaming ingestion
-topic: ui guide
+title: Create a streaming connection using the UI
+topic: tutorial
 ---
 
-# Streaming ingestion UI guide
+# Create a streaming connection using the UI
 
 This UI guide will help you create a streaming connection using Adobe Experience Platform.
 

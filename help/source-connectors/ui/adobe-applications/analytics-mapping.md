@@ -47,7 +47,7 @@ The following table includes columns that show the name of the Analytics field (
 | ipv6 | environment.ipV6 | string |
 | j_jscript | environment.browserDetails.javaScriptVersion | string | The vesrion of JavaScript supported by the browser. |
 | user_agent | environment.browserDetails.userAgent | string | The user agent string sent in the HTTP header. |
-| mobileappid | application.</span>name | string | The mobile app ID, stored in the following format: \[AppName]\[BundleVersion]. |
+| mobileappid | application.</span>name | string | The mobile app ID, stored in the following format: `[AppName][BundleVersion]`. |
 | mobiledevice | device.model | string | The name of the mobile device. On iOS, it is stored as a comma-separated 2-digit string. The first number represents the device generation and the second number represents the device family. |
 | pointofinterest | placeContext.POIinteraction.POIDetail.</span>name | string | Used by mobile services. Represents the point of interest. |
 | pointofinterestdistance | placeContext.POIinteraction.POIDetail.geoInteractionDetails.distanceToCenter | number | Used by mobile services. Represents the point of interest distance. |

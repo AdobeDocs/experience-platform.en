@@ -299,7 +299,7 @@ A successful response returns the details of the newly created segment job, incl
 | `id` | The identifier of the new segment job, used for lookup purposes. |
 | `status` | The current status of the segment job. Will be "PROCESSING" until processing is complete, at which point it becomes "SUCCEEDED" or "FAILED". |
 
-### Lookup segment job status
+### Look up segment job status
 
 You can use the `id` for a specific segment job to perform a lookup request (GET) in order to view the current status of the job.
 
@@ -444,9 +444,9 @@ The results of a segment job can be accessed in one of two ways: you can access 
 
 The following sections outline these options in more detail.
 
-## Lookup a profile 
+## Look up a profile 
 
-If you know the specific profile that you would like to access, you can do so using the Real-time Customer Profile API. The complete steps for accessing individual profiles are available in the [Access Real-time Customer Profile data using the Profile API](../../profile/tutorials/access.md tutorial.
+If you know the specific profile that you would like to access, you can do so using the Real-time Customer Profile API. The complete steps for accessing individual profiles are available in the [Access Real-time Customer Profile data using the Profile API](../../profile/api/entities.md) tutorial.
 
 ## Export a segment
 

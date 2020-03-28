@@ -27,7 +27,7 @@ Reference: [Spark SQL function documentation](https://spark.apache.org/docs/2.4.
 
 ### Math and statistical operators and functions
 
-#### %
+#### Modulo
 
 `expr1 % expr2`: Returns the remainder after `expr1`/`expr2`.
 
@@ -40,7 +40,7 @@ Examples:
  0.2
 ```
 
-#### *
+#### Multiply
 
 `expr1 * expr2`: Returns `expr1`*`expr2`.
 
@@ -51,7 +51,7 @@ Example:
  6
 ```
 
-#### +
+#### Add
 
 `expr1 + expr2`: Returns `expr1`+`expr2`.
 
@@ -62,7 +62,7 @@ Example:
  3
 ```
 
-#### - 
+#### Subtract 
 
 `expr1 - expr2`: Returns `expr1`-`expr2`.
 
@@ -73,7 +73,7 @@ Example:
  1
 ```
 
-#### /
+#### Divide
 
 `expr1 / expr2`: Returns `expr1`/`expr2`. It always performs floating point division.
 
@@ -734,11 +734,11 @@ Example:
 
 ### Logical operators
 
-#### !
+#### Logical not
 
 `! expr`: Logical not.
 
-#### <
+#### Less than
 
 `expr1 < expr2`: Returns true if `expr1` is less than `expr2`.
 
@@ -761,7 +761,7 @@ Examples:
  NULL
 ```
 
-#### <=
+#### Less than or equal to
 
 `expr1 <= expr2`: Returns true if `expr1` is less than or equal to `expr2`.
 
@@ -784,7 +784,7 @@ Examples:
  NULL
 ```
 
-#### =
+#### Equal to
 
 `expr1 = expr2`: Returns true if `expr1` equals `expr2`, or false otherwise.
 
@@ -805,7 +805,7 @@ Examples:
  NULL
 ```
 
-#### >
+#### Greater than
 
 `expr1 > expr2`: Returns true if `expr1` is greater than `expr2`.
 
@@ -828,7 +828,7 @@ Examples:
  NULL
 ```
 
-#### >=
+#### Greater than or equal to
 
 `expr1 >= expr2`: Returns true if `expr1` is greater than or equal to `expr2`.
 
@@ -851,7 +851,7 @@ Examples:
  NULL
 ```
 
-#### ^
+#### Bitwise exclusive or
 
 `expr1 ^ expr2`: Returns the result of bitwise exclusive OR of `expr1` and `expr2`.
 
