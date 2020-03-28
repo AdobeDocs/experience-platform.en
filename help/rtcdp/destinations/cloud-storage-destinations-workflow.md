@@ -15,7 +15,7 @@ This page explains how you can connect to cloud storage locations in Adobe Real-
 
     ![Connect to cloud storage destination](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
-2. In the **Authentication** step, if you had previously set up a connection to your cloud storage destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to your cloud storage destination. Fill in your account authentication credentials and select **[!UICONTROL Connect to destination]**. See [Amazon S3 destination](/help/rtcdp/destinations/amazon-s3-destination.md) and [SFTP destination](/help/rtcdp/destinations/sftp-destination.md) for specifics around credentials input in the **Authentication** step.
+2. In the **[!UICONTROL Authentication]** step, if you had previously set up a connection to your cloud storage destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to your cloud storage destination. Fill in your account authentication credentials and select **[!UICONTROL Connect to destination]**. See [Amazon S3 destination](/help/rtcdp/destinations/amazon-s3-destination.md) and [SFTP destination](/help/rtcdp/destinations/sftp-destination.md) for specifics around credentials input in the **Authentication** step.
 
     >[!NOTE]
     >
