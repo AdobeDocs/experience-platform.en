@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Create a streaming connection
+title: Create a streaming connection using the API
 topic: tutorial
 ---
 
-# Creating a streaming connection
+# Creating a streaming connection using the API
 
 This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs.
 
