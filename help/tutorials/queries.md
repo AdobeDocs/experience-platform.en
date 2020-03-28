@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Data Science Workspace tutorials
+title: Query Platform data
 topic: tutorial
 ---
 
-# Data Science Workspace tutorials
+# Query Platform data
