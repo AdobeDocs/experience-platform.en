@@ -11,6 +11,9 @@ topic: getting started
 
 Experience Platform enables organizations to centralize and standardize customer data and content from any system and apply data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences. 
 
+>[!NOTE]
+>Please be aware that Adobe Experience Platform documentation has recently moved. As such, please take a moment to review the new navigation and to update any existing bookmarks.
+
 ## Experience Platform documentation
 
 To begin working with Experience Platform services, select a guide from the left navigation.
@@ -22,7 +25,7 @@ Get started with Platform quickly and easily by following along with step-by-ste
 ## Reference documents and resources
 
 * **Release notes**<br/>
-Get information about the most recent release and review past releases.
+Find information about the most recent Experience Platform release and review past releases.
 
 * **Glossary**<br/>
 Review Adobe Experience Platform terminology.
@@ -34,7 +37,7 @@ Find resolutions to common errors and answers to frequently asked questions.
 Learn the basics of working with Platform APIs.
 
 * **API reference**<br/>
-Find details about available endpoints, including headers, parameters, sample requests, and responses. These documents are hosted on Adobe I/O.
+Discover Experience Platform APIs, including headers, parameters, sample requests, and responses. *These documents are hosted on Adobe I/O.*
 
 
 
