@@ -7,36 +7,37 @@ topic: getting started
 
 # Adobe Experience Platform overview
 
-![](/help/assets/platform-banner-1.png)
-
-Experience Platform enables organizations to centralize and standardize customer data and content from any system and apply data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences. 
-
 >[!NOTE]
->Please be aware that Adobe Experience Platform documentation has recently moved. As such, please take a moment to review the new navigation and to update any existing bookmarks.
+>Adobe Experience Platform documentation has recently moved. Please take a moment to review the new navigation and to update any existing bookmarks.
+ 
+Adobe Experience Platform is the most powerful, flexible, and open system on the market for building and managing complete solutions that drive customer experience. Experience Platform enables organizations to centralize and standardize customer data and content from any system and apply data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
+
+Built on open APIs, Experience Platform exposes the full functionality of the system to developers, supporting the easy integration of enterprise solutions using familiar tools. Experience Platform also supports partners to build and integrate their own products and technologies as needed. This power and flexibility makes Experience Platform unique in the market. It gives partners, customers, and a community of developers a foundation on which to build innovations that drive The Experience Business: exceeding customer expectations by delivering a continually improving, fully-personalized experience drawn from a 360-degree view of the customer and their individual preferences.
+
 
 ## Experience Platform documentation
 
-To begin working with Experience Platform services, select a guide from the left navigation.
+Experience Platform documentation is provided in multiple formats for a variety of features and services. To learn more about the types of documentation that are available, as well as to read brief descriptions of each of the Platform services, please visit the [Experience Platform documentation overview](documentation/overview.md). Or, to begin learning more about a specific Platform service right away, select a guide from the alphabetical list in the left navigation.
 
 ## Experience Platform tutorials
 
-Get started with Platform quickly and easily by following along with step-by-step tutorials for everything from preparing your data for ingestion to advanced machine learning algorithms. These tutorials have been designed to supplement the information found within the Experience Platform documentation, so for best results keep the documents on-hand while completing the tutorials. To view available tutorials, select Experience Platform tutorials in the left navigation.
+Get started with Platform quickly and easily by following along with step-by-step tutorials for everything from preparing your data for ingestion to advanced machine learning algorithms. These tutorials have been designed to supplement the information found within the Experience Platform documentation, so for best results keep the documents on-hand while completing the tutorials. Visit the [Experience Platform tutorials](../tutorials/home.md) to get started.
 
 ## Reference documents and resources
 
-* **Release notes**<br/>
+* [**Release notes**](../release-notes/home.md)<br/>
 Find information about the most recent Experience Platform release and review past releases.
 
-* **Glossary**<br/>
+* [**Glossary**](glossary.md)<br/>
 Review Adobe Experience Platform terminology.
 
-* **Troubleshooting guide**<br/>
+* [**Troubleshooting guide**](troubleshooting.md)<br/>
 Find resolutions to common errors and answers to frequently asked questions.
 
-* **API fundamentals**<br/>
+* [**API fundamentals**](api-fundamentals.md)<br/>
 Learn the basics of working with Platform APIs.
 
-* **API reference**<br/>
+* [**API reference**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>
 Discover Experience Platform APIs, including headers, parameters, sample requests, and responses. *These documents are hosted on Adobe I/O.*
 
 
