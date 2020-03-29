@@ -25,7 +25,7 @@ Get started with Platform quickly and easily by following along with step-by-ste
 
 ## Reference documents and resources
 
-* [**Release notes**](../release-notes/home.md)<br/>
+* [**Release notes**](../release-notes/latest.md)<br/>
 Find information about the most recent Experience Platform release and review past releases.
 
 * [**Glossary**](glossary.md)<br/>
