@@ -7,6 +7,9 @@ topic: overview
 
 # Adobe Experience Platform documentation overview
 
+>[!NOTE]
+>Adobe Experience Platform documentation has recently moved. Please take a moment to review the new navigation and to update any existing bookmarks.
+
 ## Types of documentation
 
 Adobe Experience Platform documentation is provided in multiple formats, including overviews, tutorials, and guides for both the user interface and API. Here is a brief description of the most common documentation types that are available for Experience Platform services:
