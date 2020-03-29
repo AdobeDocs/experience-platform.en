@@ -14,7 +14,6 @@ Adobe Experience Platform is the most powerful, flexible, and open system on the
 
 Built on open APIs, Experience Platform exposes the full functionality of the system to developers, supporting the easy integration of enterprise solutions using familiar tools. Experience Platform also supports partners to build and integrate their own products and technologies as needed. This power and flexibility makes Experience Platform unique in the market. It gives partners, customers, and a community of developers a foundation on which to build innovations that drive The Experience Business: exceeding customer expectations by delivering a continually improving, fully-personalized experience drawn from a 360-degree view of the customer and their individual preferences.
 
-
 ## Experience Platform documentation
 
 Experience Platform documentation is provided in multiple formats for a variety of features and services. To learn more about the types of documentation that are available, as well as to read brief descriptions of each of the Platform services, please visit the [Experience Platform documentation overview](documentation/overview.md). Or, to begin learning more about a specific Platform service right away, select a guide from the alphabetical list in the left navigation.
@@ -25,7 +24,7 @@ Get started with Platform quickly and easily by following along with step-by-ste
 
 ## Reference documents and resources
 
-* [**Release notes**](../release-notes/latest.md)<br/>
+* [**Release notes**](../release-notes/latest/latest.md)<br/>
 Find information about the most recent Experience Platform release and review past releases.
 
 * [**Glossary**](glossary.md)<br/>
