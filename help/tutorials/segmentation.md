@@ -11,7 +11,7 @@ Adobe Experience Platform Segmentation Service provides a user interface and RES
 
 ## Create a segment definition
 
-A segment definition is the rule set used to describe key characteristics or behavior of a target audience. Once conceptualized, the rules outlined in a segment definition are used to determine qualifying audience members for a segment. The developing, testing, previewing, and saving of a segment definition can be done using the Platform user interface or APIs. To create a segment definition, follow the [creating a segment API tutorial](../segmentation/tutorials/create-a-segment.md) or the [Segment Builder UI user guide](../segmentation/ui/home.md).
+A segment definition is the rule set used to describe key characteristics or behavior of a target audience. Once conceptualized, the rules outlined in a segment definition are used to determine qualifying audience members for a segment. The developing, testing, previewing, and saving of a segment definition can be done using the Platform user interface or APIs. To create a segment definition, follow the [creating a segment API tutorial](../segmentation/tutorials/create-a-segment.md) or the [Segment Builder UI user guide](../segmentation/ui/overview.md).
 
 ## Evaluate a segment and access results
 

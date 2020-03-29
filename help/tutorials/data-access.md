@@ -11,7 +11,7 @@ Adobe Experience Platform enables users to discover and access ingested datasets
 
 ## Access Data using APIs
 
-Learn how to locate, access, and download data stored within a dataset using the Data Access API in Adobe Experience Platform, as well as some of the unique features of the Data Access API, such as paging and partial downloads. To get started, follow the [data access API tutorial](../data-access/dataset-data.md).
+Learn how to locate, access, and download data stored within a dataset using the Data Access API in Adobe Experience Platform, as well as some of the unique features of the Data Access API, such as paging and partial downloads. To get started, follow the [data access API tutorial](../data-access/tutorials/dataset-data.md).
 
 ## Create a dataset
 
