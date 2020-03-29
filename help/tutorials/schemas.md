@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Work with XDM schemas and descriptors
+title: XDM schemas and descriptors
 topic: tutorial
 ---
 

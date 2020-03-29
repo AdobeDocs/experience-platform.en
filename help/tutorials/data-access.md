@@ -5,4 +5,14 @@ title: Data Access tutorials
 topic: tutorial
 ---
 
-# Data Access tutorials
+# Access Experience Platform data
+
+Adobe Experience Platform enables users to discover and access ingested datasets within Experience Platform using the Data Access API.
+
+## Access Data using APIs
+
+Learn how to locate, access, and download data stored within a dataset using the Data Access API in Adobe Experience Platform, as well as some of the unique features of the Data Access API, such as paging and partial downloads. To get started, follow the [data access API tutorial](../data-access/dataset-data.md).
+
+## Create a dataset
+
+Follow step-by-step instructions for creating a dataset using Platform APIs and populating that dataset using a file in the [create a dataset tutorial](../catalog/datasets/create.md). 

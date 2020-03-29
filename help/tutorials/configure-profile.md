@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Configure Real-time Customer Profile
+title: Real-time Customer Profile tutorials
 topic: tutorial
 ---
 
@@ -19,7 +19,7 @@ To begin ingesting data into Profile, you must have a dataset that has been prop
 
 ## Configure merge policies
 
-Adobe Experience Platform enables you to bring data together from multiple sources and combine it in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create that unified view. Using RESTful APIs or the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. To work with merge policies in the Platform UI, visit the [merge policies user guide](../profile/ui/merge-policies.md). To work with merge policies using the Real-time Customer Profile API, see the [merge policies developer guide](../profile/api/merge-policies.md)
+Adobe Experience Platform enables you to bring data together from multiple sources and combine it in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create that unified view. Using RESTful APIs or the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. To work with merge policies in the Platform UI, visit the [merge policies user guide](../profile/ui/merge-policies.md). To work with merge policies using the Real-time Customer Profile API, see the [merge policies developer guide](../profile/api/merge-policies.md).
 
 ## Configure edge projections
 

@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Decisioning Service tutorials
+title: Decisioning tutorials
 topic: tutorial
 ---
 
