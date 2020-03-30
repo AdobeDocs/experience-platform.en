@@ -56,7 +56,7 @@ Experience Events can be either explicit or implicit. Explicit events are direct
 
 While not all events are easily categorized across all data sources, it is extremely valuable to harmonize similar events into similar types where possible for processing. 
 
-![ExperienceEvent Customer Journey](images/overview/experience-event-journey.png "Experience Events show a customer journey over time")
+![ExperienceEvent Customer Journey](images/overview/experience-event-journey.png)
 
 ## XDM schemas and Experience Platform services
 
