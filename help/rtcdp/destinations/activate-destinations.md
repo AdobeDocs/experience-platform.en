@@ -15,18 +15,18 @@ To activate data to destinations, you must have successfully [connected a destin
 
 ## Activate data {#activate-data}
 
-1. In **Destinations > Browse**, select the destination where you want to activate your segments.
+1. In **[!UICONTROL Destinations > Browse]**, select the destination where you want to activate your segments.
 2. Click the name of the destination. This takes you to the Activate flow.
     ![activate-flow](/help/rtcdp/destinations/assets/activate-flow.png)
-    Note that if an activation flow already exists for a destination, you can see the segments that are currently being sent to the destination. Select **Edit activation** in the right rail and follow the steps below to modify the activation details.
-3. Select **Activate**;
-4. In **Activate destination** wizard, on the **Select Segments** page, select which segments to send to the destination.
+    Note that if an activation flow already exists for a destination, you can see the segments that are currently being sent to the destination. Select **[!UICONTROL Edit activation]** in the right rail and follow the steps below to modify the activation details.
+3. Select **[!UICONTROL Activate]**;
+4. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to the destination.
     ![segments-to-destination](/help/rtcdp/destinations/assets/select-segments.png)
-5. *Conditional*. This step only applies for segments mapped to email marketing destinations. <br> On the **Destination Attributes** page, select **Add new field** and select the attributes that you want to send to the destination.
+5. *Conditional*. This step only applies for segments mapped to email marketing destinations. <br> On the **[!UICONTROL Destination Attributes]** page, select **[!UICONTROL Add new field]** and select the attributes that you want to send to the destination.
    We recommend one of the attributes to be a [unique identifier](/help/rtcdp/destinations/email-marketing-destinations.md#identity) from your union schema. For more information about mandatory attributes, see Identity in the [Email marketing destinations](/help/rtcdp/destinations/email-marketing-destinations.md#identity) article. 
    ![destination-attributes](/help/rtcdp/destinations/assets/destination-attributes.png)
-6. On the **Schedule** page, you can see the start date for sending data to the destination, as well as the frequency of sending data to the destination.
-7. On the **Review** page, you can see a summary of your selection. Select **Cancel** to break up the flow, **Back** to modify your settings, or **Finish** to confirm your selection and start sending data to the destination.
+6. On the **[!UICONTROL Schedule]** page, you can see the start date for sending data to the destination, as well as the frequency of sending data to the destination.
+7. On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
 ![confirm-selection](/help/rtcdp/destinations/assets/confirm-selection.png)
 
@@ -34,14 +34,14 @@ To activate data to destinations, you must have successfully [connected a destin
 
 Follow the steps below to edit existing activation flows in Real-time CDP: 
 
-1. Select **Destinations** in the left navigation bar, then click the **Browse** tab, and click the destination name.
+1. Select **[!UICONTROL Destinations]** in the left navigation bar, then click the **[!UICONTROL Browse]** tab, and click the destination name.
 2. Select **[!UICONTROL Edit activation]** in the right rail to change which segments to send to the destination.
 
 ## Verify that segment activation was successful {#verify-activation}
 
-### Email marketing destinations
+### Email marketing destinations and cloud storage destinations
 
-For email marketing destinations, Adobe Real-time CDP creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. Expect a new file to be created in your storage location every day. The file format is:
+For email marketing destinations and cloud storage destinations, Adobe Real-time CDP creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. Expect a new file to be created in your storage location every day. The file format is:
 `<destination name>id<destination id><timestamp-yyyymmddhhmmss>`
 
 The files you would receive on three consecutive days could look like this:
@@ -62,7 +62,7 @@ Check the respective advertising destination that you are activating your data t
 
 To disable an existing activation flow, follow the steps below:
 
-1. Select **Destinations** in the left navigation bar, then click the **Browse** tab, and click the destination name.
+1. Select **[!UICONTROL Destinations]** in the left navigation bar, then click the **[!UICONTROL Browse]** tab, and click the destination name.
 2. Click the **[!UICONTROL Enabled]** control in the right rail to change the activation flow state.
 3. In the **Update data flow state** window, select **Confirm** to disable the activation flow.
 
