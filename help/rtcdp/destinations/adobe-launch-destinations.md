@@ -7,13 +7,30 @@ seo-description: Launch is the next-generation of tag management capabilities fr
 
 # Adobe Launch destinations {#adobe-launch-destinations}
 
-Launch is the next-generation of tag management capabilities from Adobe. Launch gives customers a simple way to deploy and manage all of the analytics, marketing, and advertising tags necessary to power relevant customer experiences.
+Adobe Launch is the next-generation of tag management capabilities from Adobe. Launch gives customers a simple way to deploy and manage all of the analytics, marketing, and advertising tags necessary to power relevant customer experiences. Read more in the [Adobe Launch documentation](https://docs.adobe.com/content/help/en/launch/using/overview.html).
 
 ## How Launch extensions work
 
-Launch extensions forward event data to several types of destinations. Other types of destinations in Adobe Real-time CDP capture event data, combine it with other data sources, apply segmentation, and export segments and qualified profiles to destinations.
+Launch extensions forward event data to several types of destinations. This is a simpler type of integration with destination platforms, as it only forwards raw event data. Other types of destinations in Adobe Real-time CDP capture event data, combine it with other data sources, apply segmentation, and export segments and qualified profiles to destinations.
 
 ![Adobe Launch extensions compared to other destinations](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
+
+## Benefits of using Adobe Launch extensions
+
+Adobe Launch is free for existing Experience Cloud customers. Adobe Launch simplifies tag deployment on your website via easy-to-use extensions that you can install, configure, update, and delete. Adobe Launch has a small footprint on your website and allows you to keep your pages loading quickly.
+
+You can create rules that determine when to forward event data to extensions. This is a powerful functionality, which enables you to forward event data only in certain situations as opposed to sending event data on every interaction. For more information, read about rules in the [Adobe Launch documentation](https://docs.adobe.com/help/en/launch/using/reference/manage-resources/rules.html).
+
+## Example use cases for Adobe Launch extensions
+
+Example use cases for using Launch extensions:
+
+* You can send website or native app data to Facebook via the Facebook pixel extension. Facebook Pixel indicates which parts of your site or app a visitor navigated to, forwards that information to Facebook, and you can retarget your visitor via Facebook
+* You can forward event data from your websites and apps into Google Analytics to analyze and make decisions based off that data
+* You could turn on a client-side chatbox app at the right time based on how the user is interacting with the page, according to rules you set up in Adobe Launch. 
+
+
+## Extension categories
 
 Launch extensions can be grouped into the following categories:
 
@@ -25,4 +42,4 @@ Launch extensions can be grouped into the following categories:
 * Surveys
 * Voice of the customer
 
-You can find documentation for each extension on https://exchange.adobe.com/
+You can find documentation for each extension on https://exchange.adobe.com/.
