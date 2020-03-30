@@ -23,7 +23,7 @@ XDM is a publicly documented specification that provides a standardized framewor
 
 Adhering to XDM standards allows customer experience data to be uniformly incorporated, making it easier to deliver data and gather information.
 
-For more information about how XDM is used in Experience Platform, see the [XDM Systems overview](../../../xdm/home.md). To learn more about how XDM Schemas like Profile and ExperienceEvent are structured, see the [basics of schema composition](../../../xdm/schema/composition.md).
+For more information about how XDM is used in Experience Platform, see the [XDM System overview](../../xdm/home.md). To learn more about how XDM Schemas like Profile and ExperienceEvent are structured, see the [basics of schema composition](../../xdm/schema/composition.md).
 
 ## XDM schemas examples
 
@@ -62,7 +62,7 @@ While users have the ability to disable datasets, it is not recommended to disab
 
 ### Connections
 
-Adobe Audience Manager creates one connection in Catalog: **Audience Manager Connection**. Catalog is the system of the records for data location and lineage within Adobe Experience Platform. A connection is a Catalog object that is a customer-specific instance of Connectors. Please see the [Catalog Service overview](../../../catalog/home.md) for more information on Catalog, connections, and connectors.
+Adobe Audience Manager creates one connection in Catalog: **Audience Manager Connection**. Catalog is the system of the records for data location and lineage within Adobe Experience Platform. A connection is a Catalog object that is a customer-specific instance of Connectors. Please see the [Catalog Service overview](../../catalog/home.md) for more information on Catalog, connections, and connectors.
 
 ## What is the expected latency for Audience Manager Data on Platform?
 
