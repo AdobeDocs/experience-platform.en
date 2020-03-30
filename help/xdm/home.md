@@ -29,7 +29,7 @@ The **Schema Registry** provides a user interface and RESTful API from which you
 
 For a comprehensive guide to the major operations available in the Schema Registry, see the [Schema Registry developer guide](api/getting-started.md).
 
-## Data behaviors in XDM System
+## Data behaviors in XDM System {#data-behaviors}
 
 Data intended for use in Experience Platform is grouped into two behavior types:
 
