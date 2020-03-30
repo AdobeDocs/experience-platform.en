@@ -1,49 +1,53 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform product documentation
+title: Adobe Experience Platform overview
 topic: getting started
 ---
 
-# Adobe Experience Platform
+# Adobe Experience Platform overview
 
-![](/help/assets/platform-banner-1.png)
+>[!NOTE]
+>Adobe Experience Platform documentation has recently moved. Please take a moment to review the new navigation and to update any existing bookmarks.
+ 
+Adobe Experience Platform is the most powerful, flexible, and open system on the market for building and managing complete solutions that drive customer experience. Experience Platform enables organizations to centralize and standardize customer data and content from any system and apply data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
 
-**[Adobe Experience Platform overview](https://www.adobe.io/apis/experienceplatform/home/overview.html)**<br/>
-Experience Platform enables organizations to centralize and standardize customer data and content from any system and apply data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences. 
-
-## Reference documents
-
-* **[Release Notes](https://www.adobe.io/apis/experienceplatform/home/services/release-notes.html#!end-user/markdown/release-notes/release-notes.md)**<br/>
-Get information about the most recent release, and review past releases.
-
-* **[Glossary](https://www.adobe.io/apis/experienceplatform/home/services/acp-glossary.html)**<br/>
-Review Adobe Experience Platform terminology.
-
-* **[Troubleshooting Guide](https://www.adobe.io/apis/experienceplatform/home/services/troubleshooting.html)**<br/>
-Learn about common errors and resolutions.
+Built on open APIs, Experience Platform exposes the full functionality of the system to developers, supporting the easy integration of enterprise solutions using familiar tools. Experience Platform also supports partners to build and integrate their own products and technologies as needed. This power and flexibility makes Experience Platform unique in the market. It gives partners, customers, and a community of developers a foundation on which to build innovations that drive The Experience Business: exceeding customer expectations by delivering a continually improving, fully-personalized experience drawn from a 360-degree view of the customer and their individual preferences.
 
 ## Experience Platform documentation
 
-* **[Experience Platform services documentation](https://www.adobe.io/apis/experienceplatform/home/services.html)**<br/>
-Experience Platform services enable you to manage profile, data, privacy, and other items important to your business.
+Experience Platform documentation is provided in multiple formats for a variety of features and services. To learn more about the types of documentation that are available, as well as to read brief descriptions of each of the Platform services, please visit the [Experience Platform documentation overview](documentation/overview.md). Or, to begin learning more about a specific Platform service right away, select a guide from the alphabetical list in the left navigation.
 
-* **[Real-time Customer Data Platform](/help/rtcdp/overview.md)**<br/>
-Real-time CDP combines multiple enterprise data sources to create unified profiles in real time that can be used to provide one-to-one personalized customer experiences across all channels and devices.
+## Experience Platform tutorials
 
-* **[API Reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)**<br/>
-Details about each Experience Platform API.
+Get started with Platform quickly and easily by following along with step-by-step tutorials for everything from preparing your data for ingestion to advanced machine learning algorithms. These tutorials have been designed to supplement the information found within the Experience Platform documentation, so for best results keep the documents on-hand while completing the tutorials. Visit the [Experience Platform tutorials](../tutorials/home.md) to get started.
 
-* **[Experience Platform Launch](https://docs.adobe.com/content/help/en/launch/using/overview.html)**<br/>
-Launch gives customers a simple way to deploy and manage all of the analytics, marketing, and advertising tags necessary to power relevant customer experiences.
+## Reference documents and resources
 
-* **[Experience Platform Auditor](https://docs.adobe.com/content/help/en/auditor/using/overview.html)**<br/>
-Auditor grades your Adobe Experience Cloud implementation and gives pointers on how to improve it. Auditor helps you get more value from your Adobe products, individually and collectively. 
+* [**Release notes**](../release-notes/latest/latest.md)<br/>
+Find information about the most recent Experience Platform release and review past releases.
 
-* **[Experience Cloud Debugger](https://docs.adobe.com/content/help/en/debugger/using/experience-cloud-debugger.html)**<br/>
-The Adobe Experience Cloud Debugger extension for Chrome examines your web pages and helps you find problems with how your Experience Cloud solutions are implemented. 
+* [**Glossary**](glossary.md)<br/>
+Review Adobe Experience Platform terminology.
 
-<!--
+* [**Troubleshooting guide**](troubleshooting.md)<br/>
+Find resolutions to common errors and answers to frequently asked questions.
+
+* [**API fundamentals**](api-fundamentals.md)<br/>
+Learn the basics of working with Platform APIs.
+
+* [**API reference**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>
+Discover Experience Platform APIs, including headers, parameters, sample requests, and responses. *These documents are hosted on Adobe I/O.*
+
+
+
+
+
+ 
+
+
+
+<!-- 
 ## What's New
 
 * **[Privacy management](https://helpx.adobe.com/campaign/kb/campaign-privacy.html)**<br/>
@@ -112,5 +116,4 @@ Learn more about general guidelines for mobile deliveries.
 * [Technical notes](https://helpx.adobe.com/campaign/kb/acs-article-list.html)
 
 * [Adobe Campaign Standard Implementation guide](https://helpx.adobe.com/campaign/kb/campaign-standard-implementation-guide.html)
-
--->
+ -->

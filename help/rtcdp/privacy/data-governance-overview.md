@@ -13,11 +13,11 @@ Adobe Experience Platform Data Governance allows you to manage customer data and
 
 Real-time CDP is built on top of Adobe Experience Platform, and therefore the majority of Data Governance capabilities are covered in the Experience Platform documentation. This document is intended to complement the [Data Governance overview](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) for Experience Platform, and outlines the Governance features that are available in Real-time CDP. The following topics are covered:
 
-* [Apply usage labels to your data](#apply-usage-labels-to-your-data)
-* [Manage data usage policies](#manage-data-usage-policies)
-* [Enforce data usage compliance](#enforce-data-usage-compliance)
+* [Apply usage labels to your data](#labels)
+* [Manage data usage policies](#policies)
+* [Enforce data usage compliance](#enforcement)
 
-## Apply usage labels to your data
+## Apply usage labels to your data {#labels}
 
 Data Governance allows you to apply usage labels to your data, either at the dataset or dataset-field level. Data usage labels allow you to categorize data according to usage policies that apply to that data. 
 
@@ -30,7 +30,7 @@ You can set data usage restrictions on a destination by defining marketing use c
 Marketing use cases can be defined during the _Setup_ phase for the _Edit Destination_ workflow. See the destination documentation for more information. 
 
 
-## Manage data usage policies
+## Manage data usage policies {#policies}
 
 In order for data usage labels to effectively support data compliance, data usage policies must be defined and enabled. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Real-time CDP. See the "Data usage policies" section in the Experience Platform [Data Governance overview](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) for more information.
 
@@ -52,7 +52,7 @@ When a segment is first activated, DULE Policy Service checks for policy violati
 * The data usage labels applied to fields and datasets within the segment to be activated.
 * The marketing purpose of the destination. 
 
-### Policy violation messages
+### Policy violation messages {#enforcement}
 
 If a policy violation occurs from attempting to activate a segment (or [making edits to an already activated segment](#policy-enforcement-for-activated-segments)) the action is prevented and a popover appears indicating that one or more policies have been violated. Select a policy violation in the popover's left column to display details for that violation.
 
