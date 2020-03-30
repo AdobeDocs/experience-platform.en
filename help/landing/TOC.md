@@ -40,6 +40,3 @@ user-guide-title: Adobe Experience Platform Help
 * [Troubleshooting guide](troubleshooting.md)
 * [API fundamentals](api-fundamentals.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)
-
-
-  
