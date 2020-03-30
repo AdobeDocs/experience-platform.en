@@ -16,4 +16,8 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
   - [Azure Blob and Amazon S3 connector](cloud-storage/blob-s3.md)
   - [FTP and SFTP connector](cloud-storage/ftp-sftp.md)
   - [Google Cloud Storage connector](cloud-storage/google-cloud-storage.md)
-  
+- CRM {#crm}
+  - [Google AdWords connector](crm/adwords.md)
+  - [HubSpot connector](crm/hubspot.md)
+  - [Microsoft Dynamics connector](crm/ms-dynamics.md)
+  - [Salesforce connector](crm/salesforce.md)
