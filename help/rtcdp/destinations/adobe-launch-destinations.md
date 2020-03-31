@@ -17,7 +17,7 @@ Launch extensions forward event data to several types of destinations. **Event F
 
 ## Benefits of using Adobe Launch extensions
 
-Adobe Launch is free for existing Experience Cloud customers. Adobe Launch simplifies tag deployment on your website via easy-to-use extensions that you can install, configure, update, and delete. Adobe Launch has a small footprint on your website and allows you to keep your pages loading quickly.
+Adobe Launch is free for existing Experience Cloud customers. Adobe Launch simplifies tag deployment on your website via easy-to-use extensions that you can install, configure, update, and delete. Adobe Launch has a small footprint on your website and allows you to keep your pages loading quickly. 
 
 You can create *rules* that determine when to forward event data to extensions. This  powerful functionality enables you to forward event data only in certain situations as opposed to sending event data on every interaction. For more information, read about rules in the [Adobe Launch documentation](https://docs.adobe.com/help/en/launch/using/reference/manage-resources/rules.html).
 
