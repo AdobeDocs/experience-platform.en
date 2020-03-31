@@ -32,6 +32,5 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [MySQL connector](databases/mysql)
     - [PostgreSQL connector](databases/postgres.md)
     - [SQL Server connector](databases/sql-server.md)
-
-<!--
-- Marketing {#automation} -->
+  - Marketing automation {#marketing-automation}
+    - [HubSpot connector](marketing-automation/hubspot.md)
