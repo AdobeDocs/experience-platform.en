@@ -29,7 +29,7 @@ XDM is a publicly documented specification that provides common structures and d
 
 Adhering to XDM standards allows data to be uniformly incorporated, making it easier to deliver data and gather information.
 
-To learn more about XDM, please see the [XDM System overview](../../xdm/home.md).
+To learn more about XDM, please see the [XDM System overview](../../../xdm/home.md).
 
 ## How are fields mapped from Adobe Analytics to XDM?
 
