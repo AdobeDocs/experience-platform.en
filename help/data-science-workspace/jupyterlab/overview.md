@@ -114,7 +114,7 @@ Common cell actions are described below:
 
 Notebook kernels are the language-specific computing engines for processing notebook cells. In addition to Python, JupyterLab provides additional language support in R, PySpark, and Spark. When you open a notebook document, the associated kernel is launched. When a notebook cell is executed, the kernel performs the computation and produces results which may consume significant CPU and memory resources. Note that allocated memory is not freed until the kernel is shut-down.
 
->[!IMPORTANT] JupyterLab Launcher updated from Spark 2.3 to Spark 2.4. This means that the Spark and PySpark kernels are no longer recommended. See the [Pyspark 3 (Spark 2.3) to PySpark 3 (Spark 2.4)](./pyspark-conversion-guide.md) and [Spark 2.3 to Scala (Spark 2.4)](./spark-scala-migration.md) guides for more information on the changes to notebook kernels.
+>[!IMPORTANT] JupyterLab Launcher updated from Spark 2.3 to Spark 2.4. Spark and PySpark kernels are no longer supported in Spark 2.4. See the [Pyspark 3 (Spark 2.3) to PySpark 3 (Spark 2.4)](./pyspark-conversion-guide.md) and [Spark 2.3 to Scala (Spark 2.4)](./spark-scala-migration.md) guides for more information on the changes to notebook kernels.
 
 Certain features and functionalities are limited to particular kernels as described in the table below:
 
@@ -474,7 +474,7 @@ df <- dataset_reader$
 
 ### Filter ExperienceEvent data in PySpark/Spark
 
->[!IMPORTANT] JupyterLab Launcher updated from Spark 2.3 to Spark 2.4. This means that the Spark and PySpark kernels are no longer recommended. See the [Pyspark 3 (Spark 2.3) to PySpark 3 (Spark 2.4)](./pyspark-conversion-guide.md) and [Spark 2.3 to Scala (Spark 2.4)](./spark-scala-migration.md) guides for more information on the changes to notebook kernels. Each guide contains information and examples for filtering ExperienceEvent data.
+>[!IMPORTANT] JupyterLab Launcher updated from Spark 2.3 to Spark 2.4. Spark and PySpark kernels are not supported in Spark 2.4. See the [Pyspark 3 (Spark 2.3) to PySpark 3 (Spark 2.4)](./pyspark-conversion-guide.md) and [Spark 2.3 to Scala (Spark 2.4)](./spark-scala-migration.md) guides for more information on the changes to notebook kernels. Each guide contains information and examples for filtering ExperienceEvent data.
 
 Accessing and filtering an ExperienceEvent dataset in a PySpark or Spark notebook requires you to provide the dataset identity (`{DATASET_ID}`), your organization's IMS identity, and the filter rules defining a specific time range. A Filtering time range is defined by using the function `spark.sql()`, where the function parameter is a SQL query string.
 
