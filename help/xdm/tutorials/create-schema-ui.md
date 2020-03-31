@@ -31,7 +31,7 @@ After logging into Experience Platform, click **Schemas** in the left-hand navig
 
 Click the filter icon next to the Search bar to use filtering capabilities for all resources in the registry, including classes, mixins, and data types.
 
-![View the Schema Library](../images/tutorials/create-schema/schemas_filter.png "View the Schema Library containing a list of all available schemas.")
+![View the Schema Library](../images/tutorials/create-schema/schemas_filter.png)
 
 ## Create and name a schema
 
@@ -41,7 +41,7 @@ To begin composing a schema, click **Create Schema** in the top right corner of 
 
 The *Schema Editor* appears. This is the canvas upon which you will compose your schema. When you arrive at the editor, an "Untitled Schema" in the *Structure* section of the canvas is automatically created for you to begin customizing.
 
-![Schema Editor](../images/tutorials/create-schema/schema_editor.png "The editor will contain an 'untitled schema' ready for you to customize.")
+![Schema Editor](../images/tutorials/create-schema/schema_editor.png)
 
 On the right-hand side of the editor are *Schema Properties* where you can provide a name for the schema (using the **Display Name** field). Once a name is entered, the canvas updates to reflect the new name of the schema.
 
@@ -69,11 +69,11 @@ Click on the class name to display the description of the class. You can also ch
 
 This tutorial uses the XDM Individual Profile class. Click the radio button beside the class to select it, then click **Assign Class**.
 
-![Assign Class Dialog](../images/tutorials/create-schema/assign_class.png "Select the class your schema will implement.")
+![Assign Class Dialog](../images/tutorials/create-schema/assign_class.png)
 
 The canvas reappears. The *Class* section now contains the class you selected (XDM Individual Profile) and the fields contributed by the XDM Individual Profile class are now visible within the *Structure* section.
 
-![XDM Individual Profile Class Assigned](../images/tutorials/create-schema/class_assigned_structure.png "The XDM Individual Profile class now appears in the Schema Editor.")
+![XDM Individual Profile Class Assigned](../images/tutorials/create-schema/class_assigned_structure.png)
 
 The fields appear in the format "fieldName | Data Type". Steps for defining schema fields in the UI are provided later in this tutorial.
 
