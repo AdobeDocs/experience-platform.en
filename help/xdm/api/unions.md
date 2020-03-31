@@ -27,7 +27,7 @@ The `timeSeriesEvents` array is a list of time-series events that relate to the 
 
 ### Segment membership map
 
-The `segmentMembership` map stores the results of segment evaluations. When segment jobs are successfully run using the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml), the map is updated. `segmentMembership` also stores any pre-evaluated audience segments that are ingested into Platform, allowing for integration with other solutions like Adobe Audience Manager.
+The `segmentMembership` map stores the results of segment evaluations. When segment jobs are successfully run using the [Segmentation API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml), the map is updated. `segmentMembership` also stores any pre-evaluated audience segments that are ingested into Platform, allowing for integration with other solutions like Adobe Audience Manager.
 
 See the tutorial on [creating segments using APIs](../../segmentation/tutorials/create-a-segment.md) for more information.
 
