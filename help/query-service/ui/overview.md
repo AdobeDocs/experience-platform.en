@@ -9,17 +9,9 @@ topic: guide
 
 The Adobe Experience Platform Query Service provides a user interface that can be used to write and execute queries, view previously executed queries, and access queries saved by users within your IMS Organization. To access the UI within [Adobe Experience Platform][platform-ui], select **Queries** in the left navigation.
 
-This document provides an overview of the Query Service user interface in Platform. Within this document you will find information on the following topics:
-- [Query Editor](#query-editor)
-- [Browse](#browse)
-- [Log](#log)
-- [Credentials](#credentials)
-
 ## Query Editor
 
-The Query Editor enables you to write and execute queries without using an external client.
-
-Click **Create Query** to open the Query Editor and create a new query. You can also access the Query Editor by selecting a query from the *Log* or *Browse* tabs. Selecting a previously executed or saved query will open the Query Editor and display the SQL for the selected query.
+The Query Editor enables you to write and execute queries without using an external client. Click **Create Query** to open the Query Editor and create a new query. You can also access the Query Editor by selecting a query from the *Log* or *Browse* tabs. Selecting a previously executed or saved query will open the Query Editor and display the SQL for the selected query.
 
 ![Image](../images/queries/ui-overview/overview.png)
 

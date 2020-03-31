@@ -7,16 +7,18 @@ seo-description: Destinations are pre-built integrations with destination platfo
 
 # Destinations Overview
 
-**Destinations** are pre-built integrations with destination platforms that allow for the seamless activation of data from Real-time Customer Data Platform. You can use **Destinations** to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+![Destinations overview banner](/help/rtcdp/destinations/assets/destinations-overview-banner.png)
+
+**Destinations** are pre-built integrations with destination platforms that allow for the seamless activation of data from Real-time Customer Data Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
 ## Destinations and Sources
 
-One of the core functionalities of Real-time CDP is ingesting your first-party data and activating it for your business needs. Use **[!UICONTROL Sources]** to ingest data into Real-time CDP and **[!UICONTROL Destinations]** to export data from Real-time CDP. 
+One of the core functionalities of Real-time CDP is ingesting your first-party data and activating it for your business needs. Use sources to ingest data into Real-time CDP and destinations to export data from Real-time CDP. 
 
 ## Destinations steps
 
-* Use **[!UICONTROL Destinations]** to [activate](/help/rtcdp/destinations/activate-destinations.md) and send profiles or segments to marketing automation platforms, digital advertising platforms, and more.
 * Choose from a [self-service catalog](/help/rtcdp/destinations/destinations-catalog.md) of all the destinations available in Real-time CDP.
+* Use **[!UICONTROL Destinations]** to [activate](/help/rtcdp/destinations/activate-destinations.md) and send profiles or segments to marketing automation platforms, digital advertising platforms, and more.
 * Schedule data exports to your preferred destinations at regular times.
 
 ## Controls
@@ -45,10 +47,10 @@ Segment export destinations send the profiles and the segments that they qualifi
 
 ### Destination categories
 
-The destinations in the [Destinations catalog](/help/rtcdp/destinations/destinations-catalog.md) are grouped by destination category (**Advertising** or **Email marketing**). For more information on each of them, see the [Destinations catalog](/help/rtcdp/destinations/destinations-catalog.md).
+The destinations in the [Destinations catalog](/help/rtcdp/destinations/destinations-catalog.md) are grouped by destination category (**Advertising**, **Cloud storage**, or **Email marketing**). For more information on each of them, see the [Destinations catalog](/help/rtcdp/destinations/destinations-catalog.md).
 
 ## Destinations and Access Controls
 
-The **[!UICONTROL Destinations]** functionality in Real-time CDP works with Adobe Experience Platform access control permissions. Depending on your user's permission level, you can view, manage, and activate destinations. For information about the individual permissions, see [Access control in Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md) and scroll down to the bottom of the page.
+The destinations functionality in Real-time CDP works with Adobe Experience Platform access control permissions. Depending on your user's permission level, you can view, manage, and activate destinations. For information about the individual permissions, see [Access control in Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md) and scroll down to the bottom of the page.
 
 For more information about access controls, see the [Access control user guide](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-user-guide.md).

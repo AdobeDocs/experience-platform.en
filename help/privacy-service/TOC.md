@@ -8,6 +8,7 @@ user-guide-title: Adobe Experience Platform Privacy Service Help
 
 * [Privacy Service overview](home.md)
 * [Privacy Service and Experience Cloud applications](experience-cloud-apps.md)
+* [Privacy JS Library overview](js-library.md)
 * Privacy Service API {#api}
   * [Getting started](api/getting-started.md)
   * [Privacy jobs](api/privacy-jobs.md)
@@ -16,7 +17,6 @@ user-guide-title: Adobe Experience Platform Privacy Service Help
   * [Privacy Service UI overview](ui/overview.md)
   * [Privacy Service user guide](ui/user-guide.md)
 * [Identity data for privacy requests](identity-data.md)
-* [Privacy JS Library overview](js-library.md)
 * [Subscribe to Privacy Events](privacy-events.md)
 * GDPR guide {#gdpr}
   * [GDPR FAQ](gdpr/faq.md)

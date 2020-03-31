@@ -9,7 +9,8 @@ topic: queries
 
 Data from Adobe Target is transformed into Experience Event XDM schema and ingested into Experience Platform as datasets for you. There are many use cases for Query Service with this data, and the following sample queries should work with your Adobe Target datasets.
 
-A note about the following examples: You need to edit the SQL to fill in the expected parameters for your queries based on the dataset, variables, or timeframe you are interested in evaluating. Provide parameters wherever you see { } in the SQL.
+>[!NOTE]
+>In the following examples, you will need to edit the SQL to fill in the expected parameters for your queries based on the dataset, variables, or timeframe you are interested in evaluating. Provide parameters wherever you see `{ }` in the SQL.
 
 ## Standard dataset name for Target data source on Platform: 
 
@@ -18,11 +19,11 @@ Adobe Target Experience Events (friendly name) <br>
 
 ## High-level partial XDM field mapping
 
-The use of [ ] denotes an array 
+The use of `[ ]` denotes an array 
 
 | Name | XDM Field | Notes |
 | ---- | --------- | ----- |
-| mboxName | `_experience.target.mboxname`||
+|mboxName | `_experience.target.mboxname`||
 |Activity ID | `_experience.target.activities.activityID`||
 |Experience ID|`_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID`||
 |Segment ID|`_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id`||

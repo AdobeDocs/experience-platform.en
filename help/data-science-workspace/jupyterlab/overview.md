@@ -623,3 +623,4 @@ This table outlines the optional SQL flags that can be used for Query Service.
 | `-n`, `--notify` | Toggle option for notifying query results. |
 | `-a`, `--async` | Using this flag executes the query asynchonously and can free up the kernel while the query is executing. Be cautious when assigning query results to variables as it may be undefined if the query is not complete. |
 | `-d`, `--display` | Using this flag prevents results from being displayed. |
+

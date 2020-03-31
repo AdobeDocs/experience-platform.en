@@ -119,7 +119,7 @@ After successfully creating a new batch for uploading, files can then be uploade
 
 You can upload files using the **Small File Upload API**. However, if your files are too large and the gateway limit is exceeded (such as extended timeouts, requests for body size exceeded, and other constrictions), you can switch over to the **Large File Upload API**. This API uploads the file in chunks, and stitches data together using the **Large File Upload Complete API** call.
 
->[!NOTE] The examples below use the [parquet](https://parquet.apache.org/documentation/latest/) file format. An example that uses the JSON file format can be found in the [batch ingestion developer guide](./api-overview.md) 
+>[!NOTE] The examples below use the [parquet](https://parquet.apache.org/documentation/latest/) file format. An example that uses the JSON file format can be found in the [batch ingestion developer guide](./api-overview.md).
 
 ### Small file upload
 
@@ -133,7 +133,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | -------- | ----------- |
 | `{BATCH_ID}` | The ID of the batch. |  
 | `{DATASET_ID}` | The ID of the dataset to upload files. | 
-| `{FILE_NAME}` | Name of file as it will be seen in the dataset. |
+| `{FILE_NAME}` | The name of file as it will be seen in the dataset. |
 
 **Request**
 
@@ -169,6 +169,7 @@ POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}?action=initiali
 | -------- | ----------- |
 | `{BATCH_ID}` | The ID of the batch. |  
 | `{DATASET_ID}` | The ID of the dataset ingesting the files. |
+| `{FILE_NAME}` | The name of file as it will be seen in the dataset. |
 
 **Request**
 
@@ -230,7 +231,7 @@ After all files have been uploaded to the batch, the batch can be signaled for c
 **Request**
 
 ```http
-POST /batches/{BATCH_ID}?actions=COMPLETE
+POST /batches/{BATCH_ID}?action=COMPLETE
 ```
 
 | Property | Description |
@@ -260,6 +261,10 @@ While waiting for the files to uploaded to the batch, the batch's status can be 
 ```http
 GET /batch/{BATCH_ID}
 ```
+
+| Property | Description |
+| -------- | ----------- |
+| `{BATCH_ID}` | The ID of the batch that is being checked. |
 
 **Request**
 
@@ -363,8 +368,6 @@ curl GET "https://platform.adobe.io/data/foundation/catalog/batch/{BATCH_ID}" \
 
 | Property | Description |
 | -------- | ----------- |
-| `{BATCH_ID}` | The ID of the batch to be uploaded into the dataset. |
-| `{IMS_ORG}` | Your IMS organization credentials found in your unique Adobe Experience Platform integration. |
 | `{USER_ID}` | The ID of the user who created or updated the batch. |
 
 The `"status"` field is what shows the current status of the batch requested. The batches can have one of the following states:

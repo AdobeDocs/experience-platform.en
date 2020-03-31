@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;attribution ai;download scores;popular topics
+keywords: Experience Platform;attribution ai;access scores;popular topics
 solution: Experience Platform
-title: Downloading scores in Attribution AI using Snowflake
-topic: Downloading scores
+title: Accessing scores in Attribution AI
+topic: Accessing scores
 ---
 
-# Downloading scores in Attribution AI using Snowflake
+# Accessing scores in Attribution AI
 
 >[!IMPORTANT] Please contact attributionai-support@adobe.com for more details on raw score downloads for bulk exporting of data.
 
-Downloading scores for Attribution AI is done through Snowflake. Currently, you need to email Adobe support at attributionai-support@adobe.com in order to set up and receive the credentials to your reader account for Snowflake. 
+Accessing scores for Attribution AI is done through Snowflake. Currently, you need to email Adobe support at attributionai-support@adobe.com in order to set up and receive the credentials to your reader account for Snowflake. 
 
 Once Adobe support has processed your request, you are provided a URL for the reader account to Snowflake and the corresponding credentials below:
 
@@ -17,9 +17,9 @@ Once Adobe support has processed your request, you are provided a URL for the re
 - Username
 - Password
 
->[!NOTE] The reader account is for querying the data using sql clients or worksheet and for BI solutions, which supports JDBC connector.
+>[!NOTE] The reader account is for querying the data using sql clients, worksheet, and BI solutions which supports JDBC connector.
 
-Once you have your credentials and URL, you can query the model tables, either in their raw format or aggregated by touchpoint date or conversion date.
+Once you have your credentials and URL, you can query the model tables, either in their raw format., aggregated by touchpoint date, or conversion date.
 
 ## Finding your schema in Snowflake
 
@@ -55,4 +55,4 @@ APP_{APP_ID}_BY_TP_DATE | Raw attribution score aggregated at the touchpoint dat
 
 ## Next Steps
 
-This document outlined the steps required for querying data and downloading scores for Attribution AI. You can now continue to browse the other [Intelligent Services](../home.md) and guides that are offered.
+This document outlined the steps required for querying data and accessing scores for Attribution AI. You can now continue to browse the other [Intelligent Services](../home.md) and guides that are offered.

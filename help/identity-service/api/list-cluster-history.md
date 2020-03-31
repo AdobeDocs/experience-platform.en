@@ -61,7 +61,7 @@ curl -X GET \
 
 Use the `POST` method as a batch equivalent of the `GET` method described above to return the cluster histories of multiple identities.
 
-> **NOTE:** Request should indicate no more than a maximum of 1000 identities. Requests exceeding 1000 identities will result in 400 status code.
+>[!NOTE] Request should indicate no more than a maximum of 1000 identities. Requests exceeding 1000 identities will result in 400 status code.
 
 **API format**
 
@@ -203,7 +203,7 @@ curl -X POST \
 }
 ```
 
-> **Note:** The response will always have one entry for each XID provided in the request regardless of whether a request's XIDs belong to the same cluster or if one or more have any cluster associated at all.
+>[!NOTE] The response will always have one entry for each XID provided in the request regardless of whether a request's XIDs belong to the same cluster or if one or more have any cluster associated at all.
 
 ## Next steps
 

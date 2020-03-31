@@ -9,12 +9,6 @@ topic: tutorial
 
 This document provides a tutorial for working with the runtime services of Decisioning Service using Adobe Experience Platform APIs. 
 
-The tutorial covers the following:
-
-[Compilation of decision models](#compilation-of-decision-models)  
-[REST API calls to execute decisions](#rest-api-calls-to-execute-decisions)  
-[Dynamic context data in decisioning requests](#dynamic-context-data-in-decisioning-requests)  
-
 ## Getting started
 
 This tutorial requires a working understanding of the Experience Platform services involved in decisioning and determining the next best offer to present during customer experiences. Before beginning this tutorial, please review the documentation for the following:
@@ -42,7 +36,7 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
-> **Note:** For more information on sandboxes in Platform, see the [sandbox overview documentation](../../tutorials/authentication.md).
+>[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../tutorials/authentication.md).
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
@@ -52,7 +46,7 @@ Also needed for runtime requests:
 
 - x-request-id: `{UUID}`
 
-> **Note:** `UUID` is a string in UUID format that is globally unique and must not be reused for different API calls
+>[!NOTE] `UUID` is a string in UUID format that is globally unique and must not be reused for different API calls
 
 Decisioning Service is controlled by a number of business objects that are related to each other. All business objects are stored in Platform’s business object repository, XDM Core Object Repository. A key feature of this repository is that the APIs are orthogonal to the type of business object. Instead of using a POST, GET, PUT, PATCH or DELETE API that indicates the type of resource in its API endpoint, there are only 6 generic endpoints but they accept or return a parameter that indicates the type of the object when that disambiguation is needed. The schema must be registered with the repository, but beyond that the repository is usable for an open-ended set of object types.  
 

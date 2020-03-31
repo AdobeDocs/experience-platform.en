@@ -7,20 +7,18 @@ topic: queries
 
 # Data deduplication in Query Service
 
-Adobe Experience Platform Query Service supports data deduplication when it may be required to remove an entire row from a calculation or ignore a specific set of fields because only part of the data in the row is a duplicate.
-
-The common pattern for deduplication involves using the `ROW_NUMBER()` function across a window for an ID, or pair of IDs, over ordered time (using the Experience Data Model (XDM) `timestamp` field) to return a new field that represents the number of times a duplicate has been detected. When this value is `1`, that refers to the original instance and in most cases that is the instance that you would wish to use, ignoring every other instance. This will most often be done inside of a sub-select where the deduplication is done in a higher-level `SELECT` like performing an aggregate count.
+Adobe Experience Platform Query Service supports data deduplication when it may be required to remove an entire row from a calculation or ignore a specific set of fields because only part of the data in the row is a duplicate. The common pattern for deduplication involves using the `ROW_NUMBER()` function across a window for an ID, or pair of IDs, over ordered time (using the Experience Data Model (XDM) `timestamp` field) to return a new field that represents the number of times a duplicate has been detected. When this value is `1`, that refers to the original instance and in most cases that is the instance that you would wish to use, ignoring every other instance. This will most often be done inside of a sub-select where the deduplication is done in a higher-level `SELECT` like performing an aggregate count.
 
 ## Use cases
 
 Some use cases for deduplication are global across the date-range and some are constrained to a single visitor or end-user ID within the `identityMap`.
 
 This document outlines sub-select and full sample query examples for deduplicating three common use cases:
-* [ExperienceEvents](#experienceevents)
-* [Purchases](#purchases)
-* [Metrics](#metrics)
+- [ExperienceEvents](#experienceevents)
+- [Purchases](#purchases)
+- [Metrics](#metrics)
 
-### ExperienceEvents
+### ExperienceEvents {#experienceevents}
 
 In the case of duplicate ExperienceEvents, you will likely wish to ignore the entire row.
 
@@ -54,7 +52,7 @@ SELECT COUNT(*) AS num_events FROM (
 ) WHERE id_dup_num = 1
 ```
 
-### Purchases
+### Purchases {#purchases}
 
 If you have duplicate purchases you will likely wish to keep most of the ExperienceEvent row, but ignore the fields tied to the purchase (such as the `commerce.orders` metric). For purchases, there is a special field for the purchase ID. This field is `commerce.order.purchaseID`.
 
@@ -94,7 +92,7 @@ SELECT SUM(commerce.purchases.value) AS num_purchases FROM (
 ) WHERE id_dup_num = 1 AND purchaseID_dup_num = 1
 ```
 
-### Metrics
+### Metrics {#metrics}
 
 If you have a metric that is using the optional unique ID and a duplicate of that ID appears, you will likely want to ignore that metric value and keep the rest of the ExperienceEvent. In XDM, almost all metrics use the `Measure` data type that includes an optional `id` field that you could use for deduplication.
 

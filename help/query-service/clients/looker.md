@@ -27,7 +27,7 @@ From here, you can fill out the details for the Connection Settings.
 - **Database:** The database that will be used. 
 - **Username and Password:** The login credentials that will be used. The username will be in the form of `ORG_ID@AdobeOrg`. 
 
->[!NOTE] For more information on finding your host and port, database name, and login credentials, visit the [credentials page on Platform][credentials]. To find your credentials, log in to Platform, click **Queries**, then click **Credentials**.
+>[!NOTE] For more information on finding your host and port, database name, and login credentials, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to Platform, click **Queries**, then click **Credentials**.
 
 After inputting your connection details, click on **Test These Settings** to ensure your credentials work properly. If they do, a message telling you can connect will appear below. If your connection is indeed successful, click on **Add Connection** to create your connection.
 
@@ -35,7 +35,4 @@ After inputting your connection details, click on **Test These Settings** to ens
 
 ## Next Steps
 
-Now that you've connected with Query Service, you can use Looker to write queries. For more information on how to write and run queries, please read the [running queries guide][running-queries].
-
-[credentials]: https://platform.adobe.com/query/configuration
-[running-queries]: ../creating-queries/creating-queries.md
+Now that you've connected with Query Service, you can use Looker to write queries. For more information on how to write and run queries, please read the [running queries guide](../creating-queries/creating-queries.md).

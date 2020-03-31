@@ -71,7 +71,7 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 Submit the following request to ingest data to your data inlet with synchronous validation:
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{INLET_ID}?synchronousValidation=true \
+curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
   -H "Content-Type: application/json" \
   -d '{JSON_PAYLOAD}'
 ```
@@ -148,7 +148,7 @@ POST /collection/{CONNECTION_ID}
 Submit the following request to ingest data to your data inlet with asynchronous validation:
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{COLLECTION_ID} \
+curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
   -H "Content-Type: application/json" \
   -d '{JSON_PAYLOAD}'
 ```

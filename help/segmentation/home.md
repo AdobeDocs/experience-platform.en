@@ -81,20 +81,19 @@ In addition to segment name and merge policy, Segment Builder offers you an addi
 ## Advanced segmentation features
 
 Segments can be configured to continually generate an audience on an ongoing basis by combining [streaming data ingestion](../ingestion/streaming-ingestion/overview.md) with any of the following advanced segmentation features: 
-- [Sequential segmentation](#sequential-segmentation)
-- [Dynamic segmentation](#dynamic-segmentation)
-- [Multi-entity segmentation](#multi-entity-segmentation)
-- [Personalization payload](#personalization-payload)
+- [Sequential segmentation](#sequential)
+- [Dynamic segmentation](#dynamic)
+- [Multi-entity segmentation](#multi-entity)
 
 These advanced features are discussed in more detail in the following sections.
 
-## Sequential segmentation
+## Sequential segmentation {#sequential}
 
 A standard user journey is sequential in nature.  Adobe Experience Platform allows you to define an ordered series of segments to reflect this journey thereby capturing sequences of events as they occur. You can arrange events into their desired order by using the visual event timeline in the Segment Builder.
 
 An example of a customer journey that would require sequential segmentation would be product view > product add > checkout > No purchase. 
 
-## Dynamic segmentation
+## Dynamic segmentation {#dynamic}
 
 Dynamic segmentation solves the scalability problems marketers traditionally face when building segments for marketing campaigns.
 
@@ -114,7 +113,7 @@ As a result of the different segment combinations that inevitably arise as you s
 
 By assigning a variable to the purchase state attribute, your dynamic segment simplifies to "find me a purchase where the state of that purchase is not equal to the customer's home state". Doing so allows you to then consolidate 50 static segments into a single dynamic segment. 
  
-## Multi-entity segmentation
+## Multi-entity segmentation {#multi-entity}
 
 With the advanced multi-entity segmentation feature, you can create segments using multiple XDM classes thereby adding extensions to person schemas. As a result, Segmentation Service can access additional fields during segment definition as if they were native to the profile data store.
 
@@ -140,7 +139,7 @@ Using the API, the data architect relates the key from the ExperienceEvent schem
 
 See the [schema composition overview](../xdm/schema/composition.md#union) to learn how to define relationships across XDM classes.
 
-## Personalization payload
+<!-- ## Personalization payload
 
 Segments can now carry a payload of contextual details to enable deep personalization of Adobe Solutions as well as external non-Adobe applications. These payloads can be added while defining your target segment.
 
@@ -157,7 +156,7 @@ While this solution does not change the binary nature of segment membership, it 
 - **Attributes**: this would include information about the segment ID such as last qualification time, XDM version, status and so on.
 - **Event data**: Specific aspects of experience events which resulted in the profile qualifying for the segment
 
-Adding this specific data to the segment itself allows execution engines to personalize the experience for the customers in their target audience.
+Adding this specific data to the segment itself allows execution engines to personalize the experience for the customers in their target audience. -->
 
 ### Use cases
 

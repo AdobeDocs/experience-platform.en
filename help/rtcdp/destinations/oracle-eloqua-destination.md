@@ -19,24 +19,22 @@ To send segment data to Oracle Eloqua, you must first [connect the destination](
 
     ![Connect to Eloqua](/help/rtcdp/destinations/assets/connect-oracle-eloqua.png)
 
-1. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. For Oracle Eloqua, you can select between **SFTP with Password** and **SFTP with SSH Key**. Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect]**.
+2. In the **[!UICONTROL Authentication]** step, if you had previously set up a connection to your cloud storage destination, select **[!UICONTROL Existing Account]** and select one of your existing connections. Or, you can select **[!UICONTROL New Account]** to set up a new connection. Fill in your account authentication credentials and select **[!UICONTROL Connect to destination]**. For Oracle Eloqua, you can select between **[!UICONTROL SFTP with Password]** and **[!UICONTROL SFTP with SSH Key]**. Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect to destination]**.
 
-    ![Set up Eloqua wizard](/help/rtcdp/destinations/assets/eloqua-wizard.png)
+    For **[!UICONTROL SFTP with Password]** connections, you must provide Domain, Port, Username, and Password.
+    For **[!UICONTROL SFTP with SSH Key]** connections, you must provide Domain, Port, Username, and SSH Key.
 
-    For **SFTP with Password** connections, you must provide Domain, Port, Username, and Password.
-    For **SFTP with SSH Key** connections, you must provide Domain, Port, Username, and SSH Key.
+    ![Set up Eloqua wizard](/help/rtcdp/destinations/assets/eloqua-authentication.png)
 
-    ![Fill in Eloqua information](/help/rtcdp/destinations/assets/eloqua-step2.png)
-
-1. In **Basic Information**, fill in the relevant information for your destination as shown below: 
-   * **Name**: Pick a relevant name for your destination.
-   * **Description**: Enter a description for your destination.
-   * **Folder Path**: Provide the path in your storage location where Real-time CDP will deposit your export data as CSV or tab-delimited files.
-   * **File Format**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location.
+3. In the **[!UICONTROL Setup]** step, fill in the relevant information for your destination as shown below: 
+   * **[!UICONTROL Name]**: Pick a relevant name for your destination.
+   * **[!UICONTROL Description]**: Enter a description for your destination.
+   * **[!UICONTROL Folder Path]**: Provide the path in your storage location where Real-time CDP will deposit your export data as CSV or tab-delimited files.
+   * **[!UICONTROL File Format]**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location.
 
     ![Eloqua basic information](/help/rtcdp/destinations/assets/eloqua-basic-information.png)
 
-1. Click **Create** after filling in the fields in **Basic Information**. Your destination is now connected and you can [activate segments](/help/rtcdp/destinations/activate-destinations.md) to the destination.
+4. Click **[!UICONTROL Create destination]** after filling in the fields above. Your destination is now created and you can [activate segments](/help/rtcdp/destinations/activate-destinations.md) to the destination.
 
 ## Destination attributes
 

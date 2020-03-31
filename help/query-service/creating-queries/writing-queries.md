@@ -7,30 +7,25 @@ topic: queries
 
 # General guidance for query execution in Query Service
 
-This document details important details to know when writing queries in Adobe Experience Platform Query Service. The following topics are covered:
-- [Using different query execution models](#query-execution-models)
-- [Accessing schema fields within an object](#working-with-schema-fields-and-objects)
-- [Working with single quotes, double quotes, and back quotes](#when-to-use-single-quotes-double-quotes-and-back-quotes)
+This document details important details to know when writing queries in Adobe Experience Platform Query Service.
 
 For detailed information on the SQL syntax used in Query Service, please read the [SQL syntax documentation](../sql/syntax.md).
 
 ## Query execution models
 
-Adobe Experience Platform Query Service has two models of query execution: interactive and non-interactive. 
-
-Interactive execution is used for query development and report generation in business intelligence tools, while non-interactive is used for larger jobs and operational queries as a part of a data processing workflow.
+Adobe Experience Platform Query Service has two models of query execution: interactive and non-interactive. Interactive execution is used for query development and report generation in business intelligence tools, while non-interactive is used for larger jobs and operational queries as a part of a data processing workflow.
 
 ### Interactive query execution
 
-Queries can be executed interactively by submitting them through the Query Service UI or [through a connected client][connect-client]. When running Query Service through a connected client, an active session runs between the client and Query Service until either the submitted query returns or times out.
+Queries can be executed interactively by submitting them through the Query Service UI or [through a connected client](../clients/overview.md). When running Query Service through a connected client, an active session runs between the client and Query Service until either the submitted query returns or times out.
 
 Interactive query execution has the following limitations:
 
-Parameter       | Limitation   
---------------- |:-------------:
-Query timeout | 10 minutes 
-Maximum rows returned | 50,000 
-Maximum concurrent queries | 5 
+| Parameter | Limitation |
+| --------- | ---------- |
+| Query timeout | 10 minutes |
+| Maximum rows returned | 50,000 | 
+| Maximum concurrent queries | 5 |
 
 >[!NOTE] To override the maximum rows limitation, include `LIMIT 0` in your query. The query timeout of 10 minutes still applies. 
 
@@ -44,14 +39,16 @@ Queries submitted through the Query Service API are run non-interactively. Non-i
 
 To access a field within an object in your query, you can use either dot notation (`.`) or bracket notation (`[]`). The following SQL statement uses dot notation to traverse the `endUserIds` object down to the `mcid` object.
 
-  ```sql
-  SELECT endUserIds._experience.mcid
-  FROM {ANALYTICS_TABLE_NAME}
-  WHERE endUserIds._experience.mcid IS NOT NULL
-  LIMIT 1
-  ```
+```sql
+SELECT endUserIds._experience.mcid
+FROM {ANALYTICS_TABLE_NAME}
+WHERE endUserIds._experience.mcid IS NOT NULL
+LIMIT 1
+```
 
-- `{ANALYTICS_TABLE_NAME}`: The name of your analytics table. 
+| Property | Description |
+| -------- | ----------- |
+| `{ANALYTICS_TABLE_NAME}` | The name of your analytics table. |
 
 The following SQL statement uses bracket notation to traverse the `endUserIds` object down to the `mcid` object. 
 
@@ -62,7 +59,9 @@ WHERE endUserIds._experience.mcid IS NOT NULL
 LIMIT 1
 ```
 
-- `{ANALYTICS_TABLE_NAME}`: The name of your analytics table. 
+| Property | Description |
+| -------- | ----------- |
+| `{ANALYTICS_TABLE_NAME}` | The name of your analytics table. |
 
 >[!NOTE] Since each notation type returns the same results, the one you choose to use is up to your preference.
 
@@ -178,5 +177,3 @@ Back quotes are **not** needed if you are using bracket-notation.
 ## Next steps
 
 By reading this document, you have been introduced to some important considerations when writing queries using Query Service. For more information on how to use the SQL syntax to write your own queries, please read the [SQL syntax documentation](../sql/syntax.md).
-
-[connect-client]: ../clients/overview.md

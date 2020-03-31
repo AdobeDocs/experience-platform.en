@@ -154,7 +154,7 @@ In order to delete a batch, the batch ID must be included in the body of the POS
 >[!NOTE]
 > The reason you cannot delete batches for datasets based on record schemas is because record type dataset batches overwrite previous records and therefore cannot be "undone" or deleted. The only way to remove the impact of erroneous batches for datasets based on record schemas is to reingest the batch with the correct data in order to overwrite the incorrect records. 
 
-For more information on record and time series behavior, please review the [section on XDM data behaviors]^(../../technical_overview/schema_registry/xdm_system/xdm_system_in_experience_platform.md#data-behaviors-in-xdm-system) in the [XDM System overview]^(../../technical_overview/schema_registry/xdm_system/xdm_system_in_experience_platform.md).
+For more information on record and time series behavior, please review the [section on XDM data behaviors](../../xdm/home.md#data-behaviors) in the XDM System overview.
 
 **API format**
 

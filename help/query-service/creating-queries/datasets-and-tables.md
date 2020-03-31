@@ -7,17 +7,13 @@ topic: queries
 
 # Datasets vs tables and schemas
 
-Review the list of datasets by navigating to [Platform UI](https://platform.adobe.com/datasets). 
-
-* Observe the dataset names. 
->[!NOTE] Dataset names have spaces and might otherwise not be SQL safe. 
+Review the list of datasets available in the [Adobe Experience Platform UI](https://platform.adobe.com/datasets), being sure to observe the dataset names. 
+>[!NOTE] Some dataset names have spaces and might otherwise not be SQL safe. 
 
 ![](../images/queries/datasets-and-tables/dataset-names.png)
 
 
-Review the Dataset schema in the UI by clicking on a schema name in the dataset table. 
-
-* Notice the hierarchical nature of the schema. 
+Review the hierarchical structure of the Dataset schema in the UI by clicking on a schema name in the dataset table. 
 
 ![](../images/queries/datasets-and-tables/schema-information.png)
 
@@ -27,10 +23,11 @@ Open the PSQL command line and use the connection details from here: [https://pl
 
 To view the available tables on Platform with SQL, you can use either `\d` or `SHOW TABLES;`.
 
+
 `\d` displays the standard PostgreSQL view
 
 ```
-      List of relations
+             List of relations
  Schema |       Name      | Type  |  Owner   
 --------+-----------------+-------+----------
  public | luma_midvalues  | table | postgres
@@ -49,6 +46,7 @@ To view the available tables on Platform with SQL, you can use either `\d` or `S
 ```
 
 To view the root schema of a table use the `\d table_name` command.
+
 >[!NOTE] The schema presented shows the root fields, most of which are complex, referred to an Object type in the Dataset schema UI. 
 
 `\d luma_midvalues`
@@ -75,7 +73,6 @@ To view the root schema of a table use the `\d table_name` command.
 ```
 
 To go further into the schema, use underscores (`_`) to declare the column in the table you want to describe. For example, `\d table_name_column`
-
 
 `\d luma_midvalues_web`
 

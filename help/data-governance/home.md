@@ -123,5 +123,4 @@ The following table outlines key terms related to Data Governance and the DULE f
 
 The following video is intended to support your understanding of Data Governance, and outlines the key aspects of the Data Usage Labeling and Enforcement (DULE) framework.
 
-<a href="https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-governance/understanding-data-governance.html" target="_blank"><img src="./images/overview/understanding-governance.png"></a>
-
+>[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)

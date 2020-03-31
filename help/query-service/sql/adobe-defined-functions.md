@@ -7,24 +7,7 @@ topic: functions
 
 # Adobe-defined functions
 
-Adobe-defined functions (ADFs) are prebuilt functions in Query Service that help perform common business related tasks on ExperienceEvent data. These include functions for Sessionization and Attribution like those found in Adobe Analytics. See the [Adobe Analytics documentation][Adobe Analytics] for more information about Adobe Analytics and the concepts behind the ADFs defined on this page.
-
-This document provides information for the following Adobe-defined functions available in Query Service:
-- [Window functions](#window-functions)
-- [Sessionization](#sessionization)
-- [Attribution](#attribution)
-  - [First touch attribution](#first-touch-attribution)
-  - [First touch attribution with expiration condition](#first-touch-attribution-with-expiration-condition)
-  - [First touch attribution with expiration timeout](#first-touch-attribution-with-expiration-timeout)
-  - [Last touch attribution](#last-touch-attribution)
-  - [Last touch attribution with expiration condition](#last-touch-attribution-with-expiration-condition)
-  - [Last touch attribution with expiration timeout](#last-touch-attribution-with-expiration-timeout)
-- [Previous/next touch](#previousnext-touch)
-  - [Previous touch](#previous-touch)
-  - [Next touch](#next-touch)
-- [Time-between](#time-between)
-  - [Time-between previous match](#time-between-previous-match)
-  - [Time-between next match](#time-between-next-match)
+Adobe-defined functions (ADFs) are prebuilt functions in Query Service that help perform common business related tasks on ExperienceEvent data. These include functions for Sessionization and Attribution like those found in Adobe Analytics. See the [Adobe Analytics documentation](https://docs.adobe.com/content/help/en/analytics/landing/home.html) for more information about Adobe Analytics and the concepts behind the ADFs defined on this page. This document provides information for Adobe-defined functions available in Query Service.
 
 ## Window functions
 
@@ -48,7 +31,7 @@ Syntax: `OVER ([partition] [order] [frame])`
 
 When you are working with ExperienceEvent data originating from a website, mobile application, interactive voice response system, or any other customer interaction channel it helps if events can be grouped around a related period of activity. Typically, you have a specific intent driving your activity like researching a product, paying a bill, checking account balance, filling out an application, and so on. This grouping helps associate the events to uncover more context about the customer experience.
 
-For more information about Sessionization in Adobe Analytics, see the documentation on [context-aware sessions][Analytics Sessionization].
+For more information about Sessionization in Adobe Analytics, see the documentation on [context-aware sessions](https://docs.adobe.com/content/help/en/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
 
 ### Specification
 
@@ -104,7 +87,7 @@ LIMIT 10
 
 Associating customer actions to success is an important part of understanding the factors that influence customer experience. The following ADFs support First and Last attribution with different expiration settings.
 
-For more information about attribution in Adobe Analytics, see the [Attribution IQ overview][Analytics Attribution] in the Analytics Analyze Guide.
+For more information about attribution in Adobe Analytics, see the [Attribution IQ overview](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/panels/attribution.html) in the Analytics Analyze Guide.
 
 ### First touch attribution
 
@@ -275,9 +258,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ### First touch attribution with expiration timeout
 
-Returns the first touch attribution value and details for a single channel in the target ExperienceEvent dataset for a specified time period. The query returns a `struct` object with the first touch value, timestamp, and attribution for each row returned for the selected channel.
-
-This query is useful if you want to see what interaction, within a selected time interval, led to a customer action. In the example shown below, the first touch returned for each customer action is the earliest interaction within the previous seven days (`expTimeout = 86400 * 7`).
+Returns the first touch attribution value and details for a single channel in the target ExperienceEvent dataset for a specified time period. The query returns a `struct` object with the first touch value, timestamp, and attribution for each row returned for the selected channel. This query is useful if you want to see what interaction, within a selected time interval, led to a customer action. In the example shown below, the first touch returned for each customer action is the earliest interaction within the previous seven days (`expTimeout = 86400 * 7`).
 
 #### Specification
 
@@ -330,9 +311,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ### Last touch attribution with expiration condition
 
-Returns the last touch attribution value and details for a single channel in the target ExperienceEvent dataset, expiring after or before a condition. The query returns a `struct` object with the last touch value, timestamp, and attribution for each row returned for the selected channel.
-
-This query is useful if you want to see the last interaction in a series of customer actions within a portion of the ExperienceEvent dataset determined by a condition of your chosing. In the example shown below, a purchase is recorded (`commerce.purchases.value IS NOT NULL`) on each of the four days shown in the results (July 15, 21, 23, and 29) and the last tracking code on each day is attributed 100% (`1.0`) responsibility for the customer actions.
+Returns the last touch attribution value and details for a single channel in the target ExperienceEvent dataset, expiring after or before a condition. The query returns a `struct` object with the last touch value, timestamp, and attribution for each row returned for the selected channel. This query is useful if you want to see the last interaction in a series of customer actions within a portion of the ExperienceEvent dataset determined by a condition of your chosing. In the example shown below, a purchase is recorded (`commerce.purchases.value IS NOT NULL`) on each of the four days shown in the results (July 15, 21, 23, and 29) and the last tracking code on each day is attributed 100% (`1.0`) responsibility for the customer actions.
 
 #### Specification
 
@@ -386,9 +365,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 ### Last touch attribution with expiration timeout
 
-Returns the last touch attribution value and details for a single channel in the target ExperienceEvent dataset for a specified time period. The query returns a `struct` object with the last touch value, timestamp, and attribution for each row returned for the selected channel.
-
-This query is useful if you want to see the last interaction within a selected time interval. In the example shown below, the last touch returned for each customer action is the final interaction within the following seven days (`expTimeout = 86400 * 7`).
+Returns the last touch attribution value and details for a single channel in the target ExperienceEvent dataset for a specified time period. The query returns a `struct` object with the last touch value, timestamp, and attribution for each row returned for the selected channel. This query is useful if you want to see the last interaction within a selected time interval. In the example shown below, the last touch returned for each customer action is the final interaction within the following seven days (`expTimeout = 86400 * 7`).
 
 #### Specification
 
@@ -666,9 +643,4 @@ LIMIT 10
 
 ## Next steps
 
-Using the functions described here, you can write queries to access your own ExperienceEvent datasets using Query Service. For more information about authoring queries in Query Service, see the documentation on [creating queries][Creating queries].
-
-[Creating queries]: ../creating-queries/creating-queries.md
-[Adobe Analytics]: https://docs.adobe.com/content/help/en/analytics/landing/home.html
-[Analytics Sessionization]: https://docs.adobe.com/content/help/en/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html
-[Analytics Attribution]: https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/panels/attribution.html
+Using the functions described here, you can write queries to access your own ExperienceEvent datasets using Query Service. For more information about authoring queries in Query Service, see the documentation on [creating queries](../creating-queries/creating-queries.md).

@@ -11,12 +11,12 @@ Adobe Experience Platform Privacy Service is built to support privacy requests f
 
 This document serves as a reference for Experience Cloud application documentation that outlines how to configure that application for privacy-related operations. This includes how to format and label your data. Two categories of applications are covered:
 
-* [Applications integrated with Privacy Service](#applications-integrated-with-privacy-service): Applications that are able to send access, delete, or opt-out requests to Privacy Service.
-* [Self-serve applications](#self-serve-applications): Applications that must manage their privacy requests internally, and cannot communicate with Privacy Service directly.
+* [Applications integrated with Privacy Service](#integrated): Applications that are able to send access, delete, or opt-out requests to Privacy Service.
+* [Self-serve applications](#self-serve): Applications that must manage their privacy requests internally, and cannot communicate with Privacy Service directly.
 
 Please review the documentation for your Experience Cloud applications to learn how to format your privacy requests, and which values are supported for those requests.
 
-## Applications integrated with Privacy Service
+## Applications integrated with Privacy Service {#integrated}
 
 The following is a list of Experience Cloud applications that are integrated with Privacy Service, including the Privacy Service capabilities they are compatible with, and links to documentation for more information.
 
@@ -34,7 +34,7 @@ Adobe Target | ✓ | N/A | <ul><li>[Access/delete documentation](https://marketi
 Adobe Customer Attributes (CRS) | ✓ | N/A | <ul><li>Customer Attributes does not have the capability to transfer data, therefore opt-out-of-sale requests are not applicable.</li></ul>
 -->
 
-## Self-serve applications
+## Self-serve applications {#self-serve}
 
 The following is a list of Experience Cloud applications that are not integrated with Privacy Service and must manage their privacy concerns internally. Links to each application's documentation are provided, along with descriptions of the documentation's contents.
 
