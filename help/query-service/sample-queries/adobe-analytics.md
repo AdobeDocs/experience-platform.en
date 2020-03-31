@@ -7,7 +7,7 @@ topic: queries
 
 # Sample queries for Adobe Analytics data
 
-Data from selected Adobe Analytics report suites is transformed into XDM ExperienceEvents and ingested into Adobe Experience Platform as datasets for you. This document outlines a number of use cases where Adobe Experience Platform Query Service makes use of this data, and the included sample queries should work with your Adobe Analytics datasets. See the [Analytics field mapping documentation](../../source-connectors/adobe-applications/analytics-mapping.md) for more information on mapping to XDM ExperienceEvents.
+Data from selected Adobe Analytics report suites is transformed into XDM ExperienceEvents and ingested into Adobe Experience Platform as datasets for you. This document outlines a number of use cases where Adobe Experience Platform Query Service makes use of this data, and the included sample queries should work with your Adobe Analytics datasets. See the [Analytics field mapping documentation](../../sources/connectors/adobe-applications/analytics-mapping.md) for more information on mapping to XDM ExperienceEvents.
 
 ## Getting started
 

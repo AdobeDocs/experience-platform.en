@@ -32,7 +32,7 @@ user-guide-title: Adobe Experience Platform Help
   * [Real-time Customer Data Platform](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)
   * [Sandboxes](https://docs.adobe.com/content/help/en/experience-platform/sandbox/home.html)
   * [Segmentation](https://docs.adobe.com/content/help/en/experience-platform/segmentation/home.html)
-  * [Sources (Connectors)](https://docs.adobe.com/content/help/en/experience-platform/source-connectors/home.html)
+  * [Sources (Connectors)](https://docs.adobe.com/content/help/en/experience-platform/sources/home.html)
   * [XDM (Experience Data Model)](https://docs.adobe.com/content/help/en/experience-platform/xdm/home.html)
 * [Experience Platform tutorials](https://docs.adobe.com/content/help/en/experience-platform/tutorials/home.html)
 * [Release notes](https://docs.adobe.com/content/help/en/experience-platform/release-notes/latest.html)

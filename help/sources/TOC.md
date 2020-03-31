@@ -29,7 +29,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [Amazon Redshift connector](databases/redshift.md)
     - [Google BigQuery connector](databases/bigquery.md)
     - [MariaDB connector](databases/mariadb.md)
-    - [MySQL connector](databases/mysql)
+    - [MySQL connector](databases/mysql.md)
     - [PostgreSQL connector](databases/postgres.md)
     - [SQL Server connector](databases/sql-server.md)
   - Marketing automation {#marketing-automation}
