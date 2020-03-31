@@ -52,7 +52,7 @@ Information regarding key features of JupyterLab and instructions on performing 
 
 ### Access JupyterLab
 
-In <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>, click **Models** from the left navigation column, then click **Notebooks** found in the top navigation to access JupyterLab. Allow some time for JupyterLab to fully initialize.
+In [Adobe Experience Platform](https://platform.adobe.com), Select **Notebooks** from the left navigation column. Allow some time for JupyterLab to fully initialize.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
@@ -112,11 +112,9 @@ Common cell actions are described below:
 
 ### Kernels {#kernels}
 
-<!-- will need to edit this sparkmagic %% for data bricks not supported -->
-
 Notebook kernels are the language-specific computing engines for processing notebook cells. In addition to Python, JupyterLab provides additional language support in R, PySpark, and Spark. When you open a notebook document, the associated kernel is launched. When a notebook cell is executed, the kernel performs the computation and produces results which may consume significant CPU and memory resources. Note that allocated memory is not freed until the kernel is shut-down.
 
->[!NOTE] PySpark and Spark functionalities are supported by <a href="https://github.com/jupyter-incubator/sparkmagic" target="_blank">Sparkmagic</a>.
+>[!IMPORTANT] JupyterLab Launcher updated from Spark 2.3 to Spark 2.4. This means that the Spark and PySpark kernels are no longer recommended. See the [Pyspark 3 (Spark 2.3) to PySpark 3 (Spark 2.4)](./pyspark-conversion-guide.md) and [Spark 2.3 to Scala (Spark 2.4)](./spark-scala-migration.md) guides for more information on the changes to notebook kernels.
 
 Certain features and functionalities are limited to particular kernels as described in the table below:
 
@@ -124,8 +122,9 @@ Certain features and functionalities are limited to particular kernels as descri
 | :----: | :--------------------------: | :-------------------- |
 | **Python** | Yes | <ul><li>Sensei ML Framework</li><li>Catalog Service</li><li>Query Service</li></ul> |
 | **R** | Yes | <ul><li>Sensei ML Framework</li><li>Catalog Service</li></ul> |
-| **PySpark** | No | <ul><li>Sensei ML Framework</li><li>Catalog Service</li></ul> |
-| **Spark** | No | <ul><li>Sensei ML Framework</li><li>Catalog Service</li></ul> |
+| **PySpark - deprecated** | No | <ul><li>Sensei ML Framework</li><li>Catalog Service</li></ul> |
+| **Spark - deprecated** | No | <ul><li>Sensei ML Framework</li><li>Catalog Service</li></ul> |
+| **Scala** | No | <ul><li>Sensei ML Framework</li><li>Catalog Service</li></ul> |
 
 ### Kernel sessions
 
@@ -139,7 +138,7 @@ If the kernel is shut-down or inactive for a prolonged period, then **No Kernel!
 
 ### PySpark/Spark execution resource {#execution-resource}
 
-<!-- need to update with databricks -->
+>[!IMPORTANT] With the transition of Spark 2.3 to Spark 2.4, both the Spark and PySpark kernels are deprecated. New PySpark 3 (Spark 2.4) notebooks use the Python3 Kernel, for more information visit the [Pyspark 3 (Spark 2.3) to PySpark 3 (Spark 2.4)](./pyspark-conversion-guide.md) guide. New Spark notebooks should utilize the Scala kernel, for more information visit the [Spark 2.3 to Scala (Spark 2.4)](./spark-scala-migration.md) guide.
 
 PySpark and Spark kernels allows you to configure Spark cluster resources within your PySpark or Spark notebook by using the configure command (`%%configure`) and providing a list of configurations. Ideally, these configurations are defined before the Spark application is initialized. Modifying the configurations while the Spark application is active requires an additional force flag after the command (`%%configure -f`) which will restart the application in order for the changes to be applied, as shown below:
 
@@ -238,7 +237,7 @@ Some notebook templates are limited to certain kernels. Template availability fo
         <td >no</td>
     </tr>
     <tr>
-        <th  ><strong>PySpark</strong></th>
+        <th  ><strong>PySpark 3 (Spark 2.3 - deprecated)</strong></th>
         <td >yes</td>
         <td >yes</td>
         <td >no</td>
@@ -250,7 +249,31 @@ Some notebook templates are limited to certain kernels. Template availability fo
         <td >no</td>
     </tr>
     <tr>
-        <th ><strong>Spark</strong></th>
+        <th ><strong>Spark (Spark 2.3 - deprecated)</strong></th>
+        <td >yes</td>
+        <td >yes</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >yes</td>
+    </tr>
+      <tr>
+        <th  ><strong>PySpark 3 (Spark 2.4)</strong></th>
+        <td >no</td>
+        <td >yes</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >no</td>
+        <td >yes</td>
+        <td >yes</td>
+        <td >no</td>
+    </tr>
+    <tr>
+        <th ><strong>Scala</strong></th>
         <td >yes</td>
         <td >yes</td>
         <td >no</td>
@@ -339,7 +362,9 @@ df <- dataset_reader$limit(100L)$offset(10L)$read()
 
 ### Read from a dataset in PySpark/Spark
 
-With an an active PySpark or Spark notebook opened, expand the **Data Explorer** tab from the left sidebar and double click **Datasets** to view a list of available datasets. Right click on the dataset listing you wish to access and click **Explore Data in Notebook**. The following code cells are generated:
+>[!IMPORTANT] JupyterLab Launcher updated from Spark 2.3 to Spark 2.4. Spark and PySpark kernels are no longer recommended. See the [Pyspark 3 (Spark 2.3) to PySpark 3 (Spark 2.4)](./pyspark-conversion-guide.md) and [Spark 2.3 to Scala (Spark 2.4)](./spark-scala-migration.md) guides for more information on the changes to reading datasets using the new notebook kernels.
+
+With an an active PySpark 3 (Spark 2.3 - deprecated) or Spark (Spark 2.3 - deprecated) notebook opened, expand the **Data Explorer** tab from the left sidebar and double click **Datasets** to view a list of available datasets. Right click on the dataset listing you wish to access and click **Explore Data in Notebook**. The following code cells are generated:
 
 ```python
 # PySpark
@@ -448,6 +473,8 @@ df <- dataset_reader$
 ```
 
 ### Filter ExperienceEvent data in PySpark/Spark
+
+>[!IMPORTANT] JupyterLab Launcher updated from Spark 2.3 to Spark 2.4. This means that the Spark and PySpark kernels are no longer recommended. See the [Pyspark 3 (Spark 2.3) to PySpark 3 (Spark 2.4)](./pyspark-conversion-guide.md) and [Spark 2.3 to Scala (Spark 2.4)](./spark-scala-migration.md) guides for more information on the changes to notebook kernels. Each guide contains information and examples for filtering ExperienceEvent data.
 
 Accessing and filtering an ExperienceEvent dataset in a PySpark or Spark notebook requires you to provide the dataset identity (`{DATASET_ID}`), your organization's IMS identity, and the filter rules defining a specific time range. A Filtering time range is defined by using the function `spark.sql()`, where the function parameter is a SQL query string.
 
