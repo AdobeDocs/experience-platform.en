@@ -19,12 +19,12 @@ Before starting this tutorial, you must have the following prerequisites:
     -   x-gw-ims-org-id: `{IMS_ORG}`
     -   Client secret: `{CLIENT_SECRET}`
     -   Client certificate: `{PRIVATE_KEY}`
--   Sample data and source files for the [Retail Sales Recipe](../pre-built-recipes/retail-sales.md). Download the assets required for this and other Data Science Workspace tutorials from the <a href="https://github.com/adobe/experience-platform-dsw-reference/" target="_blank">Adobe public Git repository</a>.
--   <a href="https://www.python.org/downloads/" target="_blank">Python >= 2.7</a> and the following Python packages:
-    -   <a href="https://pypi.org/project/pip/" target="_blank">pip</a>
-    -   <a href="https://pyyaml.org/" target="_blank">PyYAML</a>
-    -   <a href="https://pypi.org/project/dictor/" target="_blank">dictor</a>
-    -   <a href="https://pypi.org/project/jwt/" target="_blank">JWT</a>
+-   Sample data and source files for the [Retail Sales Recipe](../pre-built-recipes/retail-sales.md). Download the assets required for this and other Data Science Workspace tutorials from the [Adobe public Git repository](https://github.com/adobe/experience-platform-dsw-reference/).
+-   [Python >= 2.7](https://www.python.org/downloads/) and the following Python packages:
+    -   [pip](https://pypi.org/project/pip/)
+    -   [PyYAML](https://pyyaml.org/)
+    -   [dictor](https://pypi.org/project/dictor/)
+    -   [JWT](https://pypi.org/project/jwt/)
 -   A working understanding of the following concepts used in this tutorial:
     -   [Experience Data Model (XDM)](../../xdm/home.md)
     -   [Basics of schema composition](../../xdm/schema/field-dictionary.md)

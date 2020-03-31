@@ -183,7 +183,7 @@ For more information on working with Profile, see the [Real-time Customer Profil
 
 ## Mapping datafiles to XDM schemas
 
-All datafiles that are ingested into Experience Platform must conform to the structure of an XDM schema. For more information on how to format datafiles to comply with XDM hierarchies (including sample files), see the document on [sample ETL transformations]^. For general information about ingesting datafiles into Experience Platform, see the [batch ingestion overview](../../ingestion/batch-ingestion/overview.md).
+All datafiles that are ingested into Experience Platform must conform to the structure of an XDM schema. For more information on how to format datafiles to comply with XDM hierarchies (including sample files), see the document on [sample ETL transformations](../../etl/transformations.md). For general information about ingesting datafiles into Experience Platform, see the [batch ingestion overview](../../ingestion/batch-ingestion/overview.md).
 
 ## Next steps
 

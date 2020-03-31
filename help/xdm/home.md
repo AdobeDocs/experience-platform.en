@@ -29,7 +29,7 @@ The **Schema Registry** provides a user interface and RESTful API from which you
 
 For a comprehensive guide to the major operations available in the Schema Registry, see the [Schema Registry developer guide](api/getting-started.md).
 
-## Data behaviors in XDM System
+## Data behaviors in XDM System {#data-behaviors}
 
 Data intended for use in Experience Platform is grouped into two behavior types:
 
@@ -56,7 +56,7 @@ Experience Events can be either explicit or implicit. Explicit events are direct
 
 While not all events are easily categorized across all data sources, it is extremely valuable to harmonize similar events into similar types where possible for processing. 
 
-![ExperienceEvent Customer Journey](images/overview/experience-event-journey.png "Experience Events show a customer journey over time")
+![ExperienceEvent Customer Journey](images/overview/experience-event-journey.png)
 
 ## XDM schemas and Experience Platform services
 
