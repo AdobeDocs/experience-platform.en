@@ -99,6 +99,4 @@ Now that you have added data usage labels at the dataset and field level, you ca
 
 The following video is intended to support your understanding of Data Governance, and outlines how to apply labels to a dataset and individual fields.
 
->[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
-
-<!-- <a href="https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-governance/classify-data-using-governance-labels.html" target="_blank"><img src="../images/labels/classify_data.png"></a> -->
+>[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on)
