@@ -19,7 +19,7 @@ Adobe Target Experience Events (friendly name) <br>
 
 ## High-level partial XDM field mapping
 
-The use of [ ] denotes an array 
+The use of `[ ]` denotes an array 
 
 | Name | XDM Field | Notes |
 | ---- | --------- | ----- |

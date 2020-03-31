@@ -14,9 +14,9 @@ Adobe Experience Platform Query Service supports data deduplication when it may 
 Some use cases for deduplication are global across the date-range and some are constrained to a single visitor or end-user ID within the `identityMap`.
 
 This document outlines sub-select and full sample query examples for deduplicating three common use cases:
-* [ExperienceEvents](#experienceevents)
-* [Purchases](#purchases)
-* [Metrics](#metrics)
+- [ExperienceEvents](#experienceevents)
+- [Purchases](#purchases)
+- [Metrics](#metrics)
 
 ### ExperienceEvents {#experienceevents}
 

@@ -7,7 +7,9 @@ seo-description: The Destinations Catalog provides a list of available destinati
 
 # Destinations Catalog
 
-The **Destinations Catalog** provides a list of available destination platforms that are ready to receive data. These destination platforms include Adobe solutions, advertising platforms, customer relation management (CRM) systems, email marketing platforms, and more. Browse the catalog to determine which destination platforms are best for your advertising and personalization use cases, then set up flows to activate your segments to destinations.
+The **Destinations Catalog** provides a list of available destination platforms that are ready to receive data. These destination platforms include Adobe solutions, advertising platforms, customer relation management (CRM) systems, email marketing platforms, and more. 
+
+Browse the catalog to determine which destination platforms are best for your advertising and personalization use cases, then set up flows to activate your segments to destinations.
 
 ## Destination categories
 
@@ -15,4 +17,5 @@ You can activate your data to different destination categories in the Real-time 
 
 * [Adobe solutions](/help/rtcdp/destinations/adobe-destinations.md)
 * [Advertising destinations](/help/rtcdp/destinations/advertising-destinations.md)
+* [Cloud storage destinations](/help/rtcdp/destinations/cloud-storage-destinations.md)
 * [Email marketing](/help/rtcdp/destinations/email-marketing-destinations.md)
