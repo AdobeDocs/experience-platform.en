@@ -172,6 +172,8 @@ Once streaming segmentation has been enabled, a baseline must be established (th
 
 ## DULE policy violations
 
+>[!NOTE] DULE policy violations only apply if you are creating a segment that has been assigned to a destination.
+
 Once you are done creating your segment, the segment will be analyzed by Data Governance to ensure there are no policy violations within the segment. For details on DULE and policy violations, please refer to the [data usage label overview](../../data-governance/labels/overview.md).
 
 ![](../images/segment-builder/segment-dule-policy-violations.png)
