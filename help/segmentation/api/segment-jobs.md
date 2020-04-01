@@ -38,9 +38,9 @@ The following is a list of available query parameters for listing segment jobs. 
 | --------- | ----------- |
 | `start` | Specifies the starting offset for the segment jobs returned. |
 | `limit` | Specifies the number of segment jobs returned per page. |
-| `status` | Filters the results based on status. The supported values are NEW, QUEUED, PROCESSING, SUCCEEDED, FAILED |
+| `status` | Filters the results based on status. The supported values are NEW, QUEUED, PROCESSING, SUCCEEDED, FAILED, CANCELLING, CANCELLED |
 | `sort` | Orders the segment jobs returned. Is written in the format `[attributeName]:[desc|asc]`. |
-| `property` | Filters segment jobs and gets exact matches for the filter given. Is written in the format `[arrayTypeAttributeName]~[objectKey]==[value]` |
+| `property` | Filters segment jobs and gets exact matches for the filter given. Is written in the format `[jsonObjectPath]==[value]` |
 
 **Request**
 
