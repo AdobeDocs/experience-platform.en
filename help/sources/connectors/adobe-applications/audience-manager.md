@@ -23,7 +23,7 @@ XDM is a publicly documented specification that provides a standardized framewor
 
 Adhering to XDM standards allows customer experience data to be uniformly incorporated, making it easier to deliver data and gather information.
 
-For more information about how XDM is used in Experience Platform, see the [XDM Systems overview](../../../xdm/home.md). To learn more about how XDM Schemas like Profile and ExperienceEvent are structured, see the [basics of schema composition](../../../xdm/schema/composition.md).
+For more information about how XDM is used in Experience Platform, see the [XDM System overview](../../../xdm/home.md). To learn more about how XDM Schemas like Profile and ExperienceEvent are structured, see the [basics of schema composition](../../../xdm/schema/composition.md).
 
 ## XDM schemas examples
 
