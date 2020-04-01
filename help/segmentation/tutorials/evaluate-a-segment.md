@@ -7,7 +7,7 @@ topic: tutorial
 
 # Evaluate and access segment results
 
-This document provides a tutorial for evaluating segments and accessing segment results using the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 
+This document provides a tutorial for evaluating segments and accessing segment results using the [Segmentation API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml). 
 
 ## Getting started
 
