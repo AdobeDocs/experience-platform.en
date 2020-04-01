@@ -69,3 +69,30 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [Collect database or NoSQL data](tutorials/api/collect/database-nosql.md)
   - [Ingest parquet data from a third-party cloud storage system](tutorials/api/create-dataset-base-connection.md)
   - [Create a dataset base connection using the Flow Service API](tutorials/api/cloud-storage-parquet.md)
+- API tutorials {#api-tutorials}
+  - Create a source connector {#create}
+    - Adobe applications {#adobe-applications}
+      - [Adobe Audience Manager connector](tutorials/ui/create/adobe-applications/analytics.md)
+      - [Adobe Analytics connector](tutorials/ui/create/adobe-applications/audience-manager.md)
+      - [Customer attributes connector](tutorials/ui/create/adobe-applications/customer-attributes.md)
+    - Cloud storage {#cloud-storage}
+      - [Azure Data Lake Storage Gen2 connector](tutorials/ui/create/cloud-storage/adls-gen2.md)
+      - [Azure Blob and Amazon S3 connector](tutorials/ui/create/cloud-storage/blob-s3.md)
+      - [FTP and SFTP connector](tutorials/ui/create/cloud-storage/ftp-sftp.md)
+      - [Google Cloud Storage connector](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+    - CRM {#crm}
+      - [Microsoft Dynamics and Salesforce connector](tutorials/ui/create/crm/dynamics-salesforce.md)
+      - [PayPal connector](tutorials/ui/create/crm/paypal.md)
+    - Customer Success {#customer-success}
+      - [Salesforce Service Cloud connector](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
+      - [ServiceNow connector](tutorials/ui/create/customer-success/servicenow.md)
+    - Databases {#databases}
+      - [Amazon Redshift connector](tutorials/ui/create/databases/redshift.md)
+      - [Azure Synapse Analytics connector](tutorials/ui/create/databases/synapse-analytics.md)
+      - [Google Big Query connector](tutorials/ui/create/databases/bigquery.md)
+      - [MariaDB connector](tutorials/ui/create/databases/mariadb.md)
+      - [Microsoft SQL Server connector](tutorials/ui/create/databases/sql-server.md)
+      - [MySQL connector](tutorials/ui/create/databases/mysql.md)
+      - [PostgreSQL connector](tutorials/ui/create/databases/postgres.md)
+    - Marketing automation {#marketing-automation}
+     - [HubSpot connector](tutorials/ui/create/marketing-automation/hubspot.md)
