@@ -57,8 +57,15 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [MySQL connector](tutorials/api/create/databases/mysql.md)
       - [PostgreSQL connector](tutorials/api/create/databases/postgres.md)
       - [SQL Server connector](tutorials/api/create/databases/sql-server.md)
-
-
-<!-- - Explore connected data {#explore}
-- Collect connected data {#collect}
-- UI tutorials {#ui-tutorials} -->
+  - Explore data {#explore}
+    - [Explore cloud storage data](tutorials/api/explore/cloud-storage.md)
+    - [Explore CRM data](tutorials/api/explore/crm.md)
+    - [Explore customer success data](tutorials/api/explore/customer-success.md)
+    - [Explore database or NoSQL data](tutorials/api/explore/database-nosql.md)
+  - Collect data {#collect}
+    - [Collect cloud storage data](tutorials/api/collect/cloud-storage.md)
+    - [Collect CRM data](tutorials/api/collect/crm.md)
+    - [Collect customer success data](tutorials/api/collect/customer-success.md)
+    - [Collect database or NoSQL data](tutorials/api/collect/database-nosql.md)
+  - [Ingest parquet data from a third-party cloud storage system](tutorials/api/create-dataset-base-connection.md)
+  - [Create a dataset base connection using the Flow Service API](tutorials/api/cloud-storage-parquet.md)
