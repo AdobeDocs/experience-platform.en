@@ -223,8 +223,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `mergePolicy` | Optional. If not provided, the export will take the same merge policy as the given segment. |
 | `filter` | Optional. If left blank, all the data will be exported. |
 | `filter.segments` | Optional. The segment filters for the export job. |
-| `filter.segmentQualificationTime` | Optional. A filter for the segment qualification time. The start and/or end time can be provided.
-| `filter.fromIngestTimestamp` | Optional. An RFC-3339 formatted timestamp. 
+| `filter.segmentQualificationTime` | Optional. A filter for the segment qualification time. The start and/or end time can be provided. |
+| `filter.fromIngestTimestamp` | Optional. An RFC-3339 formatted timestamp. | 
 | `destination.datasetId` | Required. The `id` value of the dataset where the data is being exported to. |
 | `segments.segmentId` | Required. The `id` value of the segment that is being exported. |
 | `segments.sgementNs` | Optional. The `namespace` for the given segment. |

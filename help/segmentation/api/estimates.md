@@ -34,6 +34,7 @@ GET /estimate/{PREVIEW_ID}
 The following request retrieves the results of a specific estimate job.
 
 //need to get a preview ID
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/estimate/{PREVIEW_ID} \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
