@@ -489,6 +489,6 @@ To continue learning how to work with resources within Data Science Workspace, p
 
 The following video is designed to support your understanding of building and deploying models.
 
->[!VIDEO](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-science-workspace/build-and-deploy-a-model.html)
+>[!VIDEO](https://images-tv.adobe.com/mpcv3/65884d30-94fe-47ef-8d4e-efafe5303260_1578451719.1920x1080at3000_h264.mp4)
 
 
