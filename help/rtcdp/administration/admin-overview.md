@@ -17,10 +17,10 @@ The following sections provide introductions to the central components of Experi
 
 Access control is administered through the [Adobe Admin Console](http://adminconsole.adobe.com). This functionality leverages product profiles in Admin Console, allowing you to link users with permissions and sandboxes. Using this feature, administrators can grant or restrict access to specific Real-time CDP capabilities for defined sets of users.
 
-To learn more about access control, see the [access control overview](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md) in the Experience Platform documentation.
+To learn more about access control, see the [access control overview](../../access-control/home.md) in the Experience Platform documentation.
 
 >[!IMPORTANT]
->For a detailed guide to granting access to Real-time CDP capabilities, including enabling visibility in the UI, please follow the steps provided in the [access control user guide](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-user-guide.md), specifically those for managing details and additional services for a product profile.
+>For a detailed guide to granting access to Real-time CDP capabilities, including enabling visibility in the UI, please follow the steps provided in the [access control user guide](../../access-control/ui/overview.md), specifically those for managing details and additional services for a product profile.
 
 ## Sandboxes
 
@@ -28,4 +28,4 @@ Adobe Experience Platform (and Real-time CDP by extension) is built to enrich di
 
 To address this need, Adobe Experience Platform provides "sandboxes", enabling you to partition a single Platform instance into separate virtual environments that can be used to develop and evolve digital experience applications.
 
-For more information on sandboxes, see the [sandboxes overview](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/sandboxes/sandboxes-overview.md) in the Experience Platform documentation.
+For more information on sandboxes, see the [sandboxes overview](../../sandboxes/home.md) in the Experience Platform documentation.
