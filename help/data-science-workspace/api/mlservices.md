@@ -101,7 +101,7 @@ A successful response returns a payload containing the details of the newly crea
 
 ## Retrieve a list of MLServices
 
-You can retrieve a list of MLServices by performing a single GET request. To help filter results, you can specify query parameters in the request path. For a list of available queries, refer to the appendix section on [query parameters for asset retrieval](appendix.md#query).
+You can retrieve a list of MLServices by performing a single GET request. To help filter results, you can specify query parameters in the request path. For a list of available queries, refer to the appendix section on [query parameters for asset retrieval](./appendix.md#query).
 
 **API Format**
 
@@ -113,7 +113,7 @@ GET /mlServices?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parameter | Description |
 | --- | --- |
-| `{QUERY_PARAMETER}` | One of the [available query parameters](appendix.md#query) used to filter results. |
+| `{QUERY_PARAMETER}` | One of the [available query parameters](./appendix.md#query) used to filter results. |
 | `{VALUE}` | The value for the preceding query parameter. |
 
 **Request**
