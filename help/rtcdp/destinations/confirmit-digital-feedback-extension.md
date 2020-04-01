@@ -1,30 +1,26 @@
 ---
-title: Adobe Target extension
-seo-title: Adobe Target extension
-description: The Adobe Target extension is a personalization destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+title: Confirmit Digital Feedback extension
+seo-title: Confirmit Digital Feedback extension
+description: The Confirmit Digital Feedback extension is a Voice of the Customer destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 seo-description: 
 ---
 
-# Adobe Target Extension
+# Confirmit Digital Feedback Extension
 
 ## Overview
 
-Adobe Target is a personalization destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100162.html).
-
-![Adobe Target extension](/help/rtcdp/destinations/assets/adobe-target-extension.png)
+Confirmit Digital Feedback is a Voice of the Customer destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html).
 
 
 ## Install extension
 
-To install the Adobe Target extension:
+To install the Confirmit Digital Feedback extension:
 
 1. In Adobe Real-time CDP, go to **[!UICONTROL Destinations > Catalog]**.
 2. Browse to the extension in the destinations interface or use the search bar to find it.
 3. Select the destination, select **[!UICONTROL Install Extension]** in the right rail. If the **[!UICONTROL Install Extension]** control is greyed out, contact your organization administrator and ask them to grant you the **[!UICONTROL manage_properties]** permission in Experience Platform Launch.
 4. In the modal window, select the Experience Platform Launch property in which you want to install the extension. You also have the option of creating a new property in Experience Platform Launch if you haven't created one yet.
 5. The workflow takes you to Experience Platform Launch to complete the installation.
-
-For information about the extension configuration options, see the extension page in [Experience Launch documentation](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/target-extension/overview.html).
 
 
 ## How to use the extension
@@ -36,6 +32,3 @@ In Launch, you can set up rules for your installed extensions to send event data
 ## Configure and delete extension
 
 Even after the extension is installed on one of your properties, the Adobe Real-time CDP UI still displays **[!UICONTROL Install]** for the extension. Kick off the installation workflow as described in Install extension to get to Launch and configure or delete your extension.
-
-
-
