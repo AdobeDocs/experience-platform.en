@@ -63,7 +63,9 @@ The following is an example configuration that specifies using a CPU for trainin
 
 ## PySpark and Spark resource configurations {#resource-config}
 
-PySpark and Spark Engines have the ability to modify computational resources for training and scoring purposes, these resources are described in the following table:
+>[!IMPORTANT] New PySpark 3 (Spark 2.4) notebooks use the Python 3 kernel. Refer to the [Python CPU and GPU configurations](#cpu-gpu-config) section to configure new PySpark 3 (Spark 2.4) notebooks. Scala (Spark 2.4) can still use the following methods outlined below:
+
+Spark Engines have the ability to modify computational resources for training and scoring purposes, these resources are described in the following table:
 
 | Resource | Description | Type |
 | -------- | ----------- | ---- |

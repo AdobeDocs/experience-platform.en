@@ -43,7 +43,7 @@ A successful response returns a payload containing the details of your Docker re
 }
 ```
 
-## Create an Engine using Docker URLs
+## Create an Engine using Docker URLs {#docker-image}
 
 You can create an Engine by performing a POST request while providing its metadata and a Docker URL that references a Docker image in multipart forms.
 
@@ -53,7 +53,7 @@ You can create an Engine by performing a POST request while providing its metada
 POST /engines
 ```
 
-**Request**
+**Request Python/R**
 
 ```shell
 curl -X POST \
@@ -89,10 +89,46 @@ curl -X POST \
 | `artifacts.default.image.location` | The location of the Docker image linked to by a Docker URL. |
 | `artifacts.default.image.executionType` | The execution type of the Engine. This value corresponds to the language in which the Docker image is built upon and can be either "Python", "R", or "Tensorflow". |
 
+**Request PySpark/Scala**
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/sensei/engines \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'content-type: multipart/form-data' \
+    -F 'engine={
+    "name": "Spark retail sales recipe",
+    "description": "A description for this Engine",
+    "type": "Spark",
+    "mlLibrary":"databricks-spark",
+    "artifacts": {
+        "default": {
+            "image": {
+                "name": "modelspark",
+                "executionType": "Spark",
+                "packagingType": "docker",
+                "location": "v1d2cs4mimnlttw.azurecr.io/sarunbatchtest:0.0.1"
+            }
+        }
+    }
+}'
+```
+
+| Property | Description |
+| --- | --- |
+| `name` | The desired name for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in the UI as the Recipe's name. |
+| `description` | An optional description for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in UI as the Recipe's description. This property is required. If you do not want to provide a description, set its value to be an empty string. |
+| `type` | The execution type of the Engine. This value corresponds to the language in which the Docker image is built upon "Spark". |
+| `mlLibrary` | An additional field that is required for creating engines using PySpark and Scala notebooks. |
+| `artifacts.default.image.location` | The location of the Docker image linked to by a Docker URL. |
+| `artifacts.default.image.executionType` | The execution type of the Engine. This value corresponds to the language in which the Docker image is built upon "Spark". |
 
 **Response**
 
-A successful response returns a payload containing the details of the newly created Engine including its unique identifier (`id`).
+A successful response returns a payload containing the details of the newly created Engine including its unique identifier (`id`). The following example response is for a Python Engine, all Engine responses follow this format:
 
 ```json
 {
@@ -119,7 +155,9 @@ A successful response returns a payload containing the details of the newly crea
 }
 ```
 
-## Create an Engine using binary artifacts
+## Create an Engine using binary artifacts - deprecated
+
+>[!IMPORTANT] binary artifacts are no longer supported. PySpark and Spark notebooks should now use [docker image](#docker-image) to create an Engine.
 
 You can create an Engine using local `.jar` or `.egg` binary artifacts by performing a POST request while providing its meta data and the artifact's path in multipart forms.
 
@@ -185,7 +223,9 @@ A successful response returns a payload containing the details of the newly crea
 }
 ```
 
-## Create a feature pipeline Engine using binary artifacts
+## Create a feature pipeline Engine using binary artifacts - deprecated
+
+>[!IMPORTANT] binary artifacts are no longer supported.
 
 You can create a feature pipeline Engine using local `.jar` or `.egg` binary artifacts by performing a POST request while providing its meta data and the artifact's paths in multipart forms. A PySpark or Spark Engine has the ability to specify computation resources such as the number of cores or the amount of memory. Please refer to the appendix section on [PySpark and Spark resource configurations](./appendix.md#resource-config) for more information.
 
