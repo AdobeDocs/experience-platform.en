@@ -157,7 +157,7 @@ A successful response returns a payload containing the details of the newly crea
 
 ## Create an Engine using binary artifacts - deprecated
 
->[!IMPORTANT] binary artifacts are no longer supported. PySpark and Spark notebooks should now use [docker image](#docker-image) to create an Engine.
+>[!IMPORTANT] binary artifacts are no longer supported. PySpark and Spark notebooks should now use a [docker image](#docker-image) to create an Engine.
 
 You can create an Engine using local `.jar` or `.egg` binary artifacts by performing a POST request while providing its meta data and the artifact's path in multipart forms.
 
