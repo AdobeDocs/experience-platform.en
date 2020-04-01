@@ -27,7 +27,7 @@ In particular, the [getting started section](./getting-started.md#getting-starte
 
 You can retrieve a list of all segment definitions for your IMS Organization by making a GET request to the `/segment/definitions` endpoint.
 
-#### API format
+**API format**
 
 ```http
 GET /segment/definitions
@@ -40,15 +40,15 @@ GET /segment/definitions?{QUERY_PARAMETERS}
 
 The following is a list of available query parameters for listing segment definitions. All of these parameters are optional. Making a call to this endpoint with no parameters will retrieve all segment definitions available for your organization.
 
-Parameter | Description
---------- | ------------
-`start` | ???
-`limit` | Specifies the number of segment definitions returned per page.
-`page` | Specifies which page the results of segment definitions will start from.
-`sort` | Specified which field to sort the results by.
-`evaluationInfo.continuous.enabled` | Specifies if the segment definition is streaming-enabled.
+| Parameter | Description |
+| --------- | ----------- |
+| `start` | ??? |
+| `limit` | Specifies the number of segment definitions returned per page. |
+| `page` | Specifies which page the results of segment definitions will start from. |
+| `sort` | Specified which field to sort the results by. |
+| `evaluationInfo.continuous.enabled` | Specifies if the segment definition is streaming-enabled. |
 
-#### Request
+**Request**
 
 ```shell
 cur -X GET https://platform.adobe.io/data/core/ups/segment/definitions?QUERY \
@@ -58,7 +58,7 @@ cur -X GET https://platform.adobe.io/data/core/ups/segment/definitions?QUERY \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 200 with a list of segment definitions for the specified IMS organization as JSON.
 
@@ -157,13 +157,13 @@ A successful response returns HTTP status 200 with a list of segment definitions
 
 You can create a new segment definition by making a POST request to the `/segment/definitions` endpoint.
 
-#### API format
+**API format**
 
 ```http
 POST /segment/definitions
 ```
 
-#### Request
+**Request**
 
 ```shell 
 curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
@@ -196,7 +196,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 explain body
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 200 with details of your newly created segment definition.
 
@@ -248,7 +248,7 @@ explain body and headers
 
 You can retrieve detailed information about a specific segment definition by making a GET request to the `/segment/definitions` endpoint and providing the segment definition's `id` value in the request path.
 
-#### API format
+**API format**
 
 ```http
 GET /segment/definitions/{SEGMENT_ID}
@@ -256,7 +256,7 @@ GET /segment/definitions/{SEGMENT_ID}
 
 - `{SEGMENT_ID}`: The `id` value of the segment definition you want to retrieve.
 
-#### Request
+**Request**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
@@ -266,7 +266,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 200 with detailed information about the specified segment definition.
 
@@ -316,7 +316,7 @@ A successful response returns HTTP status 200 with detailed information about th
 
 You can request to delete a specified segment definition by making a DELETE request to the `/segment/definitions` endpoint and providing the segment definition's `id` value in the request path.
 
-#### API format
+**API format**
 
 ```http
 DELETE /segment/definitions/{SEGMENT_ID}
@@ -324,7 +324,7 @@ DELETE /segment/definitions/{SEGMENT_ID}
 
 - `{SEGMENT_ID}` The `id` value of the segment definition you want to delete.
 
-#### Request
+**Request**
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
@@ -334,7 +334,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/definitions/4afe3
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 200 with no message.
 
@@ -342,7 +342,7 @@ A successful response returns HTTP status 200 with no message.
 
 You can update a specified segment definition by making a PATCH request to the `/segment/definitions` endpoint and providing the segment definition's `id` value in the request path.
 
-#### API format
+**API format**
 
 ```http
 PATCH /segment/definitions/{SEGMENT_ID}
@@ -350,7 +350,7 @@ PATCH /segment/definitions/{SEGMENT_ID}
 
 - `{SEGMENT_ID}`: The `id` value of the segment definition you want to update.
 
-#### Request
+**Request**
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
@@ -384,7 +384,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34
 
 explain body
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 200 with details of your newly updated segment definition.
 

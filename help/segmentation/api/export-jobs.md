@@ -24,7 +24,7 @@ In particular, the [getting started section](./getting-started.md#getting-starte
 
 You can retrieve a list of all export jobs for your IMS Organization by making a GET request to the `/export/jobs` endpoint.
 
-#### API format
+**API format**
 
 ```http
 GET /export/jobs
@@ -37,13 +37,13 @@ GET /export/jobs?{QUERY_PARAMETERS}
 
 The following is a list of available query parameters for listing export jobs. All of these parameters are optional. Making a call to this endpoint with no parameters will retrieve all export jobs available for your organization.
 
-Parameter | Description
---------- | -----------
-`limit` | Specifies the number of export jobs returned.
-`offset` | Specifies the offset of the pages of results.  
-`status` | Filters the results based on status. The supported values are `NEW`, `SUCCEEDED`, and `FAILED`.
+| Parameter | Description |
+| --------- | ----------- |
+| `limit` | Specifies the number of export jobs returned. |
+| `offset` | Specifies the offset of the pages of results. | 
+| `status` | Filters the results based on status. The supported values are `NEW`, `SUCCEEDED`, and `FAILED`. |
 
-#### Request
+**Request**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?status=SUCCEEDED \
@@ -53,7 +53,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?status=SUCCEEDED
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 200 with a list of export jobs for the specified IMS organization as JSON. The following response returns a list of all the successful export jobs for the IMS organization.
 
@@ -161,13 +161,13 @@ A successful response returns HTTP status 200 with a list of export jobs for the
 
 You can create a new export job by making a POST request to the `/export/jobs` endpoint.
 
-#### API format
+**API format**
 
 ```http
 POST /export/jobs
 ```
 
-#### Request
+**Request**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
@@ -225,13 +225,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `filter.segments` | Optional. The segment filters for the export job. |
 | `filter.segmentQualificationTime` | Optional. A filter for the segment qualification time. The start and/or end time can be provided.
 | `filter.fromIngestTimestamp` | Optional. An RFC-3339 formatted timestamp. 
-| destination.datasetId | Required. The `id` value of the dataset where the data is being exported to. |
-| segments.segmentId | Required. The `id` value of the segment that is being exported. |
-| segments.sgementNs | Optional. The `namespace` for the given segment. |
+| `destination.datasetId` | Required. The `id` value of the dataset where the data is being exported to. |
+| `segments.segmentId` | Required. The `id` value of the segment that is being exported. |
+| `segments.sgementNs` | Optional. The `namespace` for the given segment. |
 
 
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 200 with details of your newly created export job.
 
@@ -326,7 +326,7 @@ A successful response returns HTTP status 200 with details of your newly created
 
 You can retrieve detailed information about a specific export job by making a GET request to the `/export/jobs` endpoint and providing the export job's `id` value in the request path.
 
-#### API format
+**API format**
 
 ```http
 GET /export/jobs/{EXPORT_JOB_ID}
@@ -334,7 +334,7 @@ GET /export/jobs/{EXPORT_JOB_ID}
 
 - `{EXPORT_JOB_ID}`: The `id` value of the export job you want to retrieve.
 
-#### Request
+**Request**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_ID} \
@@ -344,7 +344,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_ID} 
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 200 with detailed information about the specified export job.
 
@@ -439,7 +439,7 @@ A successful response returns HTTP status 200 with detailed information about th
 
 You can request to delete a specified export job by making a DELETE request to the `/export/jobs` endpoint and providing the export job's `id` value in the request path.
 
-#### API format
+**API format**
 
 ```http
 DELETE /export/jobs/{EXPORT_JOB_ID}
@@ -447,7 +447,7 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 
 - `{EXPORT_JOB_ID}`: The `id` value of the export job you want to delete.
 
-#### Request
+**Request**
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_ID} \
@@ -457,7 +457,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_I
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 200 with the following message:
 

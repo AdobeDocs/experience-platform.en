@@ -19,13 +19,13 @@ In particular, the [getting started section](./getting-started.md#getting-starte
 
 ## Convert formatting from pql/text and pql/json
 
-#### API format
+**API format**
 
 ```http
 POST /segment/conversion
 ```
 
-#### Request
+**Request**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
@@ -50,16 +50,16 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
  '
 ```
 
-Request body parameter | Description
----------------------- | -----------
-`name` | A unique name for the segment definition.
-`expression.type` | The expression type. It can either be `PQL` or `ARL`.
-`expression.format` | The expression format. It can either be `pql/text` or `pql/json`.
-`expression.value` | The query string of the expression you want to convert.
-`schema.name` | The class ID of the schema you are referencing.
-`ttlInDays` | An integer representing the time to live (TTL).
+| Property | Description |
+| -------- | ----------- |
+| `name` | A unique name for the segment definition. |
+| `expression.type` | The expression type. It can either be `PQL` or `ARL`. |
+| `expression.format` | The expression format. It can either be `pql/text` or `pql/json`. |
+| `expression.value` | The query string of the expression you want to convert. |
+| `schema.name` | The class ID of the schema you are referencing. |
+| `ttlInDays` | An integer representing the time to live (TTL). |
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 200 with details of your converted segment.
 

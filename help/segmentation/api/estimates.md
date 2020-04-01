@@ -21,7 +21,7 @@ In particular, the [getting started section](./getting-started.md#getting-starte
 
 You can retrieve details of a specific estimate job by making a GET request to the `/estimate` endpoint and providing the estimate job's `id` value in the request path.
 
-#### API format
+**API format**
 
 ```http
 GET /estimate/{PREVIEW_ID}
@@ -29,7 +29,7 @@ GET /estimate/{PREVIEW_ID}
 
 - `{PREVIEW_ID}`: The `id` value of the estimate job you want to retrieve.
 
-#### Request
+**Request**
 
 The following request retrieves the results of a specific estimate job.
 
@@ -42,7 +42,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/{PREVIEW_ID} \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 200 with details of the estimate job.
 

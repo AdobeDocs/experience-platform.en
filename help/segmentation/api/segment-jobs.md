@@ -7,12 +7,9 @@ topic: developer guide
 
 # Segment jobs developer guide
 
-intro
+A segment job is an asynchronous process that creates a new audience segment. It references a segment definition, as well as any merge policies controlling how Real-time Customer Profile merges overlapping attributes across your profile fragments. When a segment job successfully completes, you can gather various information about the segment, such as any errors that may have occurred during processing and the ultimate size of your audience.
 
-- Retrieve a list of segment jobs
-- Create a new segment job
-- Retrieve a specific segment job
-- Cancel or delete a specific segment job
+This guide provides information to help you better understand segment jobs and includes sample API calls for performing basic actions using the API.
 
 ## Getting started
 
@@ -24,7 +21,7 @@ In particular, the [getting started section](./getting-started.md#getting-starte
 
 You can retrieve a list of all segment jobs for your IMS Organization by making a GET request to the `/segment/jobs` endpoint.
 
-#### API format
+**API format**
 
 ```http
 GET /segment/jobs
@@ -37,13 +34,15 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 
 The following is a list of available query parameters for listing segment jobs. All of these parameters are optional. Making a call to this endpoint with no parameters will retrieve all segment jobs available for your organization.
 
-Parameter | Description
---------- | -----------
-`start` | ???
-`limit` | Specifies the number of segment jobs returned per page.
-`status` | Filters the results based on status. The supported values are ??? NEW, QUEUED, PROCESSING, SUCCEEDED, FAILED?
+| Parameter | Description |
+| --------- | ----------- |
+| `start` | Specifies the starting offset for the segment jobs returned. |
+| `limit` | Specifies the number of segment jobs returned per page. |
+| `status` | Filters the results based on status. The supported values are NEW, QUEUED, PROCESSING, SUCCEEDED, FAILED |
+| `sort` | Orders the segment jobs returned. Is written in the format `[attributeName]:[desc|asc]`. |
+| `property` | Filters segment jobs and gets exact matches for the filter given. Is written in the format `[arrayTypeAttributeName]~[objectKey]==[value]` |
 
-#### Request
+**Request**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDED \
@@ -53,7 +52,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 200 with a list of segment jobs for the specified IMS organization as JSON. The following response returns a list of all the successful segment jobs for the IMS organization.
 
@@ -168,13 +167,13 @@ A successful response returns HTTP status 200 with a list of segment jobs for th
 
 You can create a new segment job by making a POST request to the `/segment/jobs` endpoint.
 
-#### API format
+**API format**
 
 ```http
 POST /segment/jobs
 ```
 
-#### Request
+**Request**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -192,7 +191,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
  '
 ```
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 200 with details of your newly created segment job.
 
@@ -251,15 +250,17 @@ A successful response returns HTTP status 200 with details of your newly created
 
 You can retrieve detailed information about a specific segment job by making a GET request to the `/segment/jobs` endpoint and providing the segment job's `id` value in the request path.
 
-#### API format
+**API format**
 
 ```http
-GET /segment/jobs/{SEGMENT_ID}
+GET /segment/jobs/{SEGMENT_JOB_ID}
 ```
 
-- `{SEGMENT_ID}`: The `id` value of the segment job you want to retrieve.
+| Property | Description |
+| -------- | ----------- | 
+| `{SEGMENT_JOB_ID}` | The `id` value of the segment job you want to retrieve. |
 
-#### Request
+**Request**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-43eb-9fca-557ea53771fd \
@@ -269,7 +270,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 200 with detailed information about the specified segment job.
 
@@ -337,15 +338,17 @@ A successful response returns HTTP status 200 with detailed information about th
 
 You can request to delete a specified segment job by making a DELETE request to the `/segment/jobs` endpoint and providing the segment job's `id` value in the request path.
 
-#### API format
+**API format**
 
 ```http
-DELETE /segment/jobs/{SEGMENT_ID}
+DELETE /segment/jobs/{SEGMENT_JOB_ID}
 ```
 
-- `{SEGMENT_ID}`: The `id` value of the segment job you want to delete.
+| Property | Description |
+| -------- | ----------- | 
+| `{SEGMENT_JOB_ID}` | The `id` value of the segment job you want to delete. |
 
-#### Request
+**Request**
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-43eb-9fca-557ea53771fd \
@@ -355,8 +358,17 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfe
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
-A successful response returns HTTP status 200 with no message.
+A successful response returns HTTP status 204 with the following information.
+
+```json
+{
+    "status": true,
+    "message": "Segment job with id 'd3b4a50d-dfea-43eb-9fca-557ea53771fd' has been marked for cancelling"
+}
+```
 
 ## Next steps
+
+After reading this guide you now have a better understanding of how segment jobs work. For more information on Segmentation, please read the [Segmentation overview](../home.md).

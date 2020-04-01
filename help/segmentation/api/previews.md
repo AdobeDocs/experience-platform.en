@@ -23,13 +23,13 @@ In particular, the [getting started section](./getting-started.md#getting-starte
 
 You can create a new preview by making a POST request to the `/preview` endpoint.
 
-#### API format
+**API format**
 
 ```http
 POST /preview
 ```
 
-#### Request
+**Request**
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/preview \
@@ -50,7 +50,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 
 body info
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 201 (Created) with details of your newly created preview.
 
@@ -70,7 +70,7 @@ response info, x-location does not exist.
 
 You can retrieve detailed information about a specific preview by making a GET request to the `/preview` endpoint and providing the preview's `id` value in the request path.
 
-#### API format
+**API format**
 
 ```http
 GET /preview/{PREVIEW_ID}
@@ -78,7 +78,7 @@ GET /preview/{PREVIEW_ID}
 
 - `{PREVIEW_ID}`: The `id` value of the preview you want to retrieve.
 
-#### Request
+**Request**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgtM2YzMS00YjY0LThkODQtYWNkMGM0ZmJkYWQzOmU4OTAwNjhiLWY1Y2EtNGE4Zi1hNmI1LWFmODdmZjBjYWFjMzow \
@@ -88,7 +88,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 200 with detailed information about the specified preview.
 
@@ -111,7 +111,7 @@ A successful response returns HTTP status 200 with detailed information about th
 
 You can delete a specific preview by making a DELETE request to the `/preview` endpoint and by providing the preview's `id` value in the request path.
 
-#### API format
+**API format**
 
 ```http
 DELETE /preview/{PREVIEW_ID}
@@ -119,7 +119,7 @@ DELETE /preview/{PREVIEW_ID}
 
 - `{PREVIEW_ID}` The `id` value of the preview you want to delete.
 
-#### Request
+**Request**
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgtM2YzMS00YjY0LThkODQtYWNkMGM0ZmJkYWQzOmU4OTAwNjhiLWY1Y2EtNGE4Zi1hNmI1LWFmODdmZjBjYWFjMzow \
@@ -129,7 +129,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzM
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-#### Response
+**Response**
 
 A successful response returns HTTP status 200 with the following message:
 
