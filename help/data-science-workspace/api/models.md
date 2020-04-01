@@ -11,7 +11,7 @@ A model is an instance of a machine learning recipe that is trained using histor
 
 ## Retrieve a list of Models
 
-You can retrieve a list of Model details belonging to all Models by performing a single GET request to /models. By default this list will order itself from oldest created model and limit the results to 25. You may choose to filter results by specifying some query parameters. For a list of available queries, refer to the appendix section on [query parameters for asset retrieval](appendix.md#query).
+You can retrieve a list of Model details belonging to all Models by performing a single GET request to /models. By default this list will order itself from oldest created model and limit the results to 25. You may choose to filter results by specifying some query parameters. For a list of available queries, refer to the appendix section on [query parameters for asset retrieval](./appendix.md#query).
 
 **API format**
 
@@ -93,7 +93,7 @@ A successful response returns a payload containing the details of your Models in
 
 ## Retrieve a specific Model
 
-You can retrieve a list of Model details belonging to a particular Model by performing a single GET request and providing a valid Model ID in the request path. To help filter results, you can specify query parameters in the request path. For a list of available queries, refer to the appendix section on [query parameters for asset retrieval](appendix.md#query).
+You can retrieve a list of Model details belonging to a particular Model by performing a single GET request and providing a valid Model ID in the request path. To help filter results, you can specify query parameters in the request path. For a list of available queries, refer to the appendix section on [query parameters for asset retrieval](./appendix.md#query).
 
 **API Format**
 
