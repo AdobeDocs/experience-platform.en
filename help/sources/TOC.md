@@ -69,7 +69,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [Collect database or NoSQL data](tutorials/api/collect/database-nosql.md)
   - [Ingest parquet data from a third-party cloud storage system](tutorials/api/create-dataset-base-connection.md)
   - [Create a dataset base connection using the Flow Service API](tutorials/api/cloud-storage-parquet.md)
-- API tutorials {#api-tutorials}
+- UI tutorials {#ui-tutorials}
   - Create a source connector {#create}
     - Adobe applications {#adobe-applications}
       - [Adobe Audience Manager connector](tutorials/ui/create/adobe-applications/analytics.md)
@@ -95,4 +95,11 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [MySQL connector](tutorials/ui/create/databases/mysql.md)
       - [PostgreSQL connector](tutorials/ui/create/databases/postgres.md)
     - Marketing automation {#marketing-automation}
-     - [HubSpot connector](tutorials/ui/create/marketing-automation/hubspot.md)
+      - [HubSpot connector](tutorials/ui/create/marketing-automation/hubspot.md)
+  - Configure a dataflow {#dataflow}
+      - [Configure a dataflow for a cloud storage connector](tutorials/ui/dataflow/cloud-storage.md)
+      - [Configure a dataflow for a database connector](tutorials/ui/dataflow/databases.md)
+      - [Configure a dataflow for a CRM connector](tutorials/ui/dataflow/crm.md)
+      - [Configure a dataflow for a customer success connector](tutorials/ui/dataflow/customer-success.md)
+      - [Configure a dataflow for a marketing automation connector](tutorials/ui/dataflow/marketing-automation.md)
+  - [Activate inbound data to populate customer profiles](tutorials/ui/activate.md)
