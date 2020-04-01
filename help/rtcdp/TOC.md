@@ -28,6 +28,7 @@ user-guide-title: Real-Time Customer Data Platform Help
     * Advertising destinations{#advertiser-destinations}
       * [Advertising destinations overview](destinations/advertising-destinations.md)
       * [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
+      * [Google Ads (Experience Platform Launch extension)](/help/rtcdp/destinations/google-ads-extension.md)
       * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
       * [Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
     * Cloud storage destinations{#cloud-storage}
@@ -41,8 +42,12 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Oracle Eloqua](destinations/oracle-eloqua-destination.md)
       * [Oracle Responsys](destinations/oracle-responsys-destination.md)
       * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
-    * Adobe Launch Extensions{#launch-extensions}
-      * [Adobe Launch extensions overview](/help/rtcdp/destinations/adobe-launch-destinations.md)
+    * Experience Platform Launch extensions{#launch-extensions}
+      * [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-destinations.md)  
+    * Personalization destinations {#personalization-destinations}
+      * [Personalization destinations overview](/help/rtcdp/destinations/personalization-destinations.md)
+      * [Adobe Target (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-target-extension.md)
+      * [Gainsight (Experience Platform Launch extension)](/help/rtcdp/destinations/gainsight-extension.md)
     * Social network destinations{#social-network-destinations}
       * [Social network destinations overview](/help/rtcdp/destinations/social-network-destinations.md)
       * [Social network destinations authentication flow](/help/rtcdp/destinations/social-network-destinations-workflow.md)

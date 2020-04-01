@@ -15,4 +15,5 @@ Currently, Real-time CDP supports the advertising destinations listed below. For
 
 * [Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
 * [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
+* [Google Ads (Experience Platform Launch extension)](/help/rtcdp/destinations/google-ads-extension.md)
 * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
