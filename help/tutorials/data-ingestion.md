@@ -7,7 +7,11 @@ topic: tutorial
 
 # Ingest data into Experience Platform
 
-Adobe Experience Platform brings data from multiple sources together in order to help marketers better understand the behavior of their customers. Adobe Experience Platform Data Ingestion represents the multiple methods by which Platform ingests data from these sources, as well as how that data is persisted within the Data Lake for use by downstream Platform services. Data Ingestion includes batch ingestion, streaming ingestion, and ingestion using source connectors. To learn more, read the [Data Ingestion overview](../ingestion/home.md) and the [Sources overview](../source-connectors/home.md).
+Adobe Experience Platform brings data from multiple sources together in order to help marketers better understand the behavior of their customers. Adobe Experience Platform Data Ingestion represents the multiple methods by which Platform ingests data from these sources, as well as how that data is persisted within the Data Lake for use by downstream Platform services. Data Ingestion includes batch ingestion, streaming ingestion, and ingestion using source connectors. To learn more, read the [Data Ingestion overview](../ingestion/home.md) or proceed directly to the [Sources documentation](../source-connectors/home.md).
+
+## Create a source connector in the UI and API
+
+Source connectors allow you to ingest data from multiple sources, where it can then be labeled, structured, and enhanced using Platform services. To begin creating a connector using the UI, please visit the [creating a source connector in the UI overview](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/sources-ui-tutorial.md). To create source connectors using the API, visit the [create a source connector using the Flow Service API overview](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-api-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/api/sources-api-tutorial.md).
 
 ## Ingest batch data
 
@@ -33,7 +37,5 @@ With a dataset and steaming connections in place, you can stream record or time 
 
 When streaming data to Adobe Experience Platform, making numerous HTTP calls can be expensive. For instance, instead of creating 200 HTTP requests with 1KB payloads, it is much more efficient to create 1 HTTP request with 200 messages of 1KB each, with a single payload of 200KB. When used correctly, grouping multiple messages within a single request is an excellent way to optimize data being sent to Experience Platform. To learn how to send multiple messages to Experience Platform within a single HTTP request using streaming ingestion, follow the [sending multiple messages tutorial](../ingestion/tutorials/streaming-multiple-messages.md).
 
-## Create a source connector in the UI and API
 
-Source connectors allow you to ingest data from multiple sources, where it can then be labeled, structured, and enhanced using Platform services. To begin creating a connector using the UI, please visit the [creating a source connector in the UI overview](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/sources-ui-tutorial.md). To create source connectors using the API, visit the [create a source connector using the Flow Service API overview](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-api-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/api/sources-api-tutorial.md).
 
