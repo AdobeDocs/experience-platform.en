@@ -16,7 +16,7 @@ The Google Ads extension is an advertising destination in Adobe Real-time Custom
 To install the Google Ads extension:
 
 1. In Adobe Real-time CDP, go to **Destinations > Catalog**.
-2. Browse to the extension in the destinations UI or use the search bar to find it.
+2. Browse to the extension in the destinations interface or use the search bar to find it.
 3. Select the destination, select **Install Extension** in the right rail. If the **Install Extension** control is greyed out, contact your organization administrator and ask them to grant you the **manage_properties** permission in Experience Platform Launch.
 4. In the modal window, select the Experience Platform Launch property in which you want to install the extension. You also have the option of creating a new property in Experience Platform Launch if you haven't created one yet.
 5. The workflow takes you to Experience Platform Launch to complete the installation.
