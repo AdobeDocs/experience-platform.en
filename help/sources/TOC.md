@@ -40,8 +40,8 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Amazon S3 connector](tutorials/api/create/cloud-storage/s3.md)
       - [Azure Blob connector](tutorials/api/create/cloud-storage/blob.md)
       - [Azure Data Lake Storage Gen2 connector](tutorials/api/create/cloud-storage/google.md)
-      - [Google Cloud Storage connector](tutorials/api/create/cloud-storage/s3)
-      - [SFTP connector](tutorials/api/create/cloud-storage/s3)
+      - [Google Cloud Storage connector](tutorials/api/create/cloud-storage/s3.md)
+      - [SFTP connector](tutorials/api/create/cloud-storage/sftp.md)
     - CRM {#crm}
       - [Google AdWords connector](tutorials/api/create/crm/adwords.md)
       - [HubSpot connector](tutorials/api/create/crm/hubspot.md)
