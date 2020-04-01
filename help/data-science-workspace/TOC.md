@@ -21,6 +21,7 @@ user-guide-title: Adobe Experience Platform Data Science Workspace Help
   * [Models](api/models.md)
   * [MLServices](api/mlservices.md)
   * [Insights](api/insights.md)
+  * [Appendix](api/appendix.md)
 * Pre-built recipes {#pre-built-recipes}
   * [Product recommendation recipe](pre-built-recipes/product-recommendations.md)
   * [Product purchase prediction](pre-built-recipes/product-purchase-prediction.md)
