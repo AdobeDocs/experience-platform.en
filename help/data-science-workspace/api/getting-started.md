@@ -33,10 +33,10 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 Once you have gathered the required authentication credentials, you can proceed to the subsequent sections of this developer guide for sample API calls to the following endpoint groups:
 
-* [Engines](engines.md)
-* [Experiments](experiments.md)
-* [Insights](insights.md)
-* [MLInstances (Recipes)](mlinstances.md)
-* [MLServices](mlservices.md)
-* [Models](models.md)
-* [Appendix](appendix.md)
+* [Engines](./engines.md)
+* [Experiments](./experiments.md)
+* [Insights](./insights.md)
+* [MLInstances (Recipes)](./mlinstances.md)
+* [MLServices](./mlservices.md)
+* [Models](./models.md)
+* [Appendix](./appendix.md)

@@ -19,7 +19,7 @@ This document provides a step-by-step tutorial to enrich Real-time Customer Prof
 
 This tutorial requires a working understanding of the various aspects of Adobe Experience Platform involved in ingesting Profile data and creating segments. Before beginning this tutorial, please review the documentation for the following services:
 
-*   [Real-time Customer Profile](../../rtcdp/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+*   [Real-time Customer Profile](../../rtcdp/overview.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 *   [Identity Service](../../identity-service/home.md): Enables Real-time Customer Profile by bridging identities from disparate data sources being ingested into Platform.
 *   [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
 
