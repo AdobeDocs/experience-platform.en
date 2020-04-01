@@ -47,7 +47,7 @@ Item | Description |
  Category | Indicates the type of destination. See [Destinations Catalog](/help/rtcdp/destinations/destinations-catalog.md) for more information. |
  Connection Type | Indicates in which form your audiences are being sent to the destination. Can be **Cookie** or **Profile-based**. |
  Frequency | Indicates how often the audiences are sent to the destination. Can be **Streaming** or **Batch**.  |
- Identity | Represents the identity namespace accepted by the destination. For example, the Identity field can be GAID, IDFA, email. For all accepted identity namespaces, see standard namespaces in the [Identity namespace overview](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md).   |
+ Identity | Represents the identity namespace accepted by the destination. For example, the Identity field can be GAID, IDFA, email. For all accepted identity namespaces, see standard namespaces in the [Identity namespace overview](../../identity-service/namespaced.md).   |
  Created by | Indicates the user who created this destination flow. |
  Created | Indicates the UTC date and time when this destination flow was created. |
 

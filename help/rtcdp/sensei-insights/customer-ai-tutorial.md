@@ -22,9 +22,9 @@ This tutorial covers steps for working with Customer AI using the Experience Pla
 
 This guide requires a working understanding of the various Platform services involved in using Customer AI. Before beginning this tutorial, please review the following documents:
 
-*   [Real-time Customer Profile overview](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)
-*   [Segmentation Service overview](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)
-*   [Segment Builder user guide](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segment-builder-guide.md)
+*   [Real-time Customer Profile overview](../../profile/home.md)
+*   [Segmentation Service overview](../../segmentation/home.md)
+*   [Segment Builder user guide](../../segmentation/ui/overview.md)
 
 ## Configure an instance
 
@@ -90,7 +90,7 @@ By following this section, you have configured an instance of Customer AI and a 
 
 ## Create customer segments with predicted scores
 
-When a prediction run completes, predicted propensity scores are automatically consumed by Profiles. Enriching Profiles with Customer AI scores allows for the creation of customer segments that are based on propensity scores. This section provides steps for creating segments using the Segment Builder. For a more robust tutorial on creating segments, please see the [Segment Builder user guide](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segment-builder-guide.md).
+When a prediction run completes, predicted propensity scores are automatically consumed by Profiles. Enriching Profiles with Customer AI scores allows for the creation of customer segments that are based on propensity scores. This section provides steps for creating segments using the Segment Builder. For a more robust tutorial on creating segments, please see the [Segment Builder user guide](../../segmentation/ui/overview.md).
 
 In the Platform UI, click **Segments** in the left navigation, and then click **Create segment**. 
 
