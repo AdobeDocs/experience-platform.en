@@ -128,7 +128,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns a payload containing the details of the newly created Engine including its unique identifier (`id`). The following example response is for a Python Engine, all Engine responses follow this format:
+A successful response returns a payload containing the details of the newly created Engine including its unique identifier (`id`). The following example response is for a Python Engine. All Engine responses follow this format:
 
 ```json
 {
@@ -157,7 +157,8 @@ A successful response returns a payload containing the details of the newly crea
 
 ## Create an Engine using binary artifacts - deprecated
 
->[!IMPORTANT] binary artifacts are no longer supported. PySpark and Spark notebooks should now use a [docker image](#docker-image) to create an Engine.
+>[!IMPORTANT] 
+>Binary artifacts are no longer supported. PySpark 3 (Spark 2.4) and Scala (Spark 2.4) notebooks should now follow the [docker image](#docker-image) examples to create an Engine.
 
 You can create an Engine using local `.jar` or `.egg` binary artifacts by performing a POST request while providing its meta data and the artifact's path in multipart forms.
 
