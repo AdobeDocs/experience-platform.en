@@ -40,7 +40,7 @@ The following is a list of available query parameters for listing segment jobs. 
 | `limit` | Specifies the number of segment jobs returned per page. |
 | `status` | Filters the results based on status. The supported values are NEW, QUEUED, PROCESSING, SUCCEEDED, FAILED, CANCELLING, CANCELLED |
 | `sort` | Orders the segment jobs returned. Is written in the format `[attributeName]:[desc|asc]`. |
-| `property` | Filters segment jobs and gets exact matches for the filter given. It can be written in either of the following formats: <ul><li>`[jsonObjectPath]==[value]` - filtering within the array</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filtering on the object key</li></ul> |
+| `property` | Filters segment jobs and gets exact matches for the filter given. It can be written in either of the following formats: <ul><li>`[jsonObjectPath]==[value]` - filtering on the object key</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filtering within the array</li></ul> |
 
 **Request**
 
