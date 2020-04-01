@@ -102,7 +102,7 @@ The **[!UICONTROL Recent datasets]** card shows the five most recent datasets cr
 
 Click a dataset to view the details for that item, or **[!UICONTROL View all]** to see the list of datasets. From there, you can click on a specific source for details.
 
-For more information about datasets, see the [datasets overview](../../catalog/datasets/overview.md).
+For more information about datasets, see the [datasets overview](../catalog/datasets/overview.md).
 
 ### Recent sources
 

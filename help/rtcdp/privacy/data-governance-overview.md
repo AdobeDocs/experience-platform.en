@@ -66,7 +66,7 @@ Click **Data Lineage** to track the destinations, segments, merge policies, or d
 
 Once a violation has triggered, the **Save** button is disabled for the activation until the appropriate components are updated to comply with data usage policies.
 
-### Policy enforcement for activated segments
+### Policy enforcement for activated segments {#policy-enforcement-for-activated-segments}
 
 Policy enforcement still applies to segments after they have been activated, restricting any changes to a segment or its destination that would result in a policy violation. Due to the numerous components involved in activating segments to destinations, any of the following actions can potentially trigger a violation:
 
