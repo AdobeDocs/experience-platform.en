@@ -9,7 +9,9 @@ seo-description:
 
 ## Overview
 
-Adobe Target is a personalization destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100162.html).
+Adobe Target is a personalization destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100162.html). 
+This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-destinations.md).
+
 
 ![Adobe Target extension](/help/rtcdp/destinations/assets/adobe-target-extension.png)
 
