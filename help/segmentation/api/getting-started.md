@@ -13,10 +13,10 @@ Segmentation allows you to build segments and generate audiences in Adobe Experi
 
 This guide requires a working understanding of the various Adobe Experience Platform services involved with using Segmentation.
 
-- [Segmentation](./segmentation-overview.md): Allows you to build audience segments from Real-time Customer Profile data.
-- [Experience Data Model (XDM) System](../schema_registry/xdm_system/xdm_system_in_experience_platform.md): The standardized framework by which Experience Platform organizes customer experience data.
-- [Real-time Customer Profile](../unified_profile_architectural_overview/unified_profile_architectural_overview.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-- [Sandboxes](../sandboxes/sandboxes-overview.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+- [Segmentation](../home.md): Allows you to build audience segments from Real-time Customer Profile data.
+- [Experience Data Model (XDM) System](../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+- [Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+- [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully use Segmentation using the API.
 
