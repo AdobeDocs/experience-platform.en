@@ -56,6 +56,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 A successful response returns HTTP status 200 with a list of segment jobs for the specified IMS organization as JSON. The following response returns a list of all the successful segment jobs for the IMS organization.
 
+>[!NOTE] The following response has been truncated for space, and will only show the first returned job.
+
 ```json
 {
     "_page": {
@@ -86,23 +88,7 @@ A successful response returns HTTP status 200 with a list of segment jobs for th
                         "expression": {
                             "type": "PQL",
                             "format": "pql/json",
-                            "value": "{\"nodeType\":\"select\",\"variables\":[{\"nodeType\":\"varDecl\",\"varName\":\"var1\",\"from\":{\"nodeType\":\"fieldLookup\",\"fieldName\":\"timeSeriesEvents\",\"object\":{\"nodeType\":\"literal\",\"literalType\":\"XDMObject\",\"value\":\"profile\"}},\"where\":{\"nodeType\":\"fnApply\",\"fnName\":\"in\",\"params\":[{\"nodeType\":\"fieldLookup\",\"fieldName\":\"eventType\",\"object\":{\"nodeType\":\"varRef\",\"varName\":\"var1\"}},{\"literalType\":\"List\",\"nodeType\":\"literal\",\"value\":[\"advertising.starts\"]}]}}]}"
-                        },
-                        "mergePolicyId": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
-                        "mergePolicy": {
-                            "id": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
-                            "version": 1
-                        }
-                    }
-                },
-                {
-                    "segmentId": "ca763983-5572-4ea4-809c-b7dff7e0d79b",
-                    "segment": {
-                        "id": "ca763983-5572-4ea4-809c-b7dff7e0d79b",
-                        "expression": {
-                            "type": "PQL",
-                            "format": "pql/json",
-                            "value": "{\"nodeType\":\"fnApply\",\"fnName\":\"and\",\"params\":[{\"nodeType\":\"fnApply\",\"fnName\":\"=\",\"params\":[{\"nodeType\":\"fieldLookup\",\"fieldName\":\"points\",\"object\":{\"nodeType\":\"fieldLookup\",\"fieldName\":\"_acpstardust\",\"object\":{\"nodeType\":\"literal\",\"literalType\":\"XDMObject\",\"value\":\"profile\"}}},{\"literalType\":\"Double\",\"nodeType\":\"literal\",\"value\":2}]},{\"nodeType\":\"fnApply\",\"fnName\":\"equals\",\"params\":[{\"nodeType\":\"fieldLookup\",\"fieldName\":\"testLoyaltyID\",\"object\":{\"nodeType\":\"fieldLookup\",\"fieldName\":\"_acpstardust\",\"object\":{\"nodeType\":\"literal\",\"literalType\":\"XDMObject\",\"value\":\"profile\"}}},{\"literalType\":\"String\",\"nodeType\":\"literal\",\"value\":\"\"},{\"nodeType\":\"literal\",\"literalType\":\"Boolean\",\"value\":false}]}]}"
+                            "value": "{PQL_EXPRESSION}"
                         },
                         "mergePolicyId": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
                         "mergePolicy": {
@@ -154,8 +140,7 @@ A successful response returns HTTP status 200 with a list of segment jobs for th
             "updateTime": 1573204395000,
             "creationTime": 1573203600535,
             "updateEpoch": 1573204395
-        },
-        ...
+        }
     ],
     "_links": {
         "next": {}
