@@ -38,7 +38,7 @@ Additional metrics--for example for profiles and segments--are available in othe
 
 The **[!UICONTROL Datasets]** counter shows the number of datasets in the system and the amount of data in Platform. This counter is updated when a dataset is created.
 
-For more information about datasets, see the [datasets overview](../../catalog/datasets/overview.md).
+For more information about datasets, see the [datasets overview](../catalog/datasets/overview.md).
 
 ### Profiles
 
