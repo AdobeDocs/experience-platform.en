@@ -7,21 +7,31 @@ seo-description: Launch is the next-generation of tag management capabilities fr
 
 # Experience Platform Launch destinations {#adobe-launch-destinations}
 
-Experience Platform Launch is the next-generation of tag management capabilities from Adobe. Launch gives customers a simple way to deploy and manage all of the analytics, marketing, and advertising tags necessary to power relevant customer experiences. Read more in the [Experience Platform Launch documentation](https://docs.adobe.com/content/help/en/launch/using/overview.html).
+Experience Platform Launch is the next-generation of tag management capabilities from Adobe. Launch gives customers a simple way to deploy and manage all of the analytics, marketing, and advertising tags necessary to power relevant customer experiences. Launch is offered to Adobe Experience Cloud customers as an included, value-add feature.
+
+For an introduction to Experience Platform Launch capabilities, see the resources below:
+*  Experience Platform Launch [documentation](https://docs.adobe.com/content/help/en/launch/using/overview.html)
+*  Experience Platform Launch [quick start videos](https://docs.adobe.com/content/help/en/launch/using/intro/get-started/videos.html). Start with [Introduction to Experience Platform Launch](https://www.youtube.com/embed/rwqqkG1SERU) and [Publishing process overview](https://helpx.adobe.com/analytics/how-to/adobe-launch-publishing-process.html), then move on to the next concepts. 
 
 ## How Launch extensions work
 
-Launch extensions forward event data to several types of destinations. **Event Forwarding** is a simpler type of integration with destination platforms, which only forwards raw event data. **Profile/Segment Export** destinations in Adobe Real-time Customer Data Platform capture event data, combine it with other data sources, apply segmentation, and export segments and qualified profiles to destinations.
+Launch extensions forward raw event data to several types of destinations. They belong to the **Event Forwarding** type of destination. This is a simpler type of integration with destination platforms, which only forwards raw event data. Examples of those are the [Gainsight personalization extension](/help/rtcdp/destinations/gainsight-extension.md) or the [Confirmit Voice of the Customer extension](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md).
+
+**Profile/Segment Export** destinations in Adobe Real-time Customer Data Platform capture event data, combine it with other data sources, apply segmentation, and export segments and qualified profiles to destinations. Examples of those are the [Amazon S3 cloud storage destination](/help/rtcdp/destinations/amazon-s3-destination.md) or the [Google Display & Video 360 advertising destination](/help/rtcdp/destinations/google-dv360-destination.md).
 
 ![Experience Platform Launch extensions compared to other destinations](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
-## Benefits of using Experience Platform Launch extensions
+## Benefits of using Launch extensions
 
-Experience Platform Launch is free for existing Experience Cloud customers. Launch simplifies tag deployment on your website via easy-to-use extensions that you can install, configure, update, and delete. Launch has a small footprint on your website and allows you to keep your pages loading quickly. 
+Experience Platform Launch is free for existing Experience Cloud customers. Launch simplifies tag deployment on your website via easy-to-use extensions that you can install, configure, update, and delete. Launch has a small footprint on your website and allows you to keep your pages loading quickly.
+
+>[!IMPORTANT]
+>
+>While you cannot activate segments to Launch extensions, you can set up rules to only forward event data in certain situations. Read more below.
 
 You can create *rules* that determine when to forward event data to extensions. This powerful functionality enables you to forward event data only in certain situations as opposed to sending event data on every interaction. For more information, read about rules in the [Launch documentation](https://docs.adobe.com/help/en/launch/using/reference/manage-resources/rules.html).
 
-## Example use cases for Experience Platform Launch extensions
+## Example use cases for Launch extensions
 
 Launch extensions enable you to satisfy various customer use cases. Some example use cases for using Launch extensions are:
 
@@ -32,7 +42,7 @@ Launch extensions enable you to satisfy various customer use cases. Some example
 
 ## Extension categories
 
-Launch extensions can belong to the following categories:
+Launch extensions can fall under the following categories in Adobe Real-time CDP:
 
 * [Advertising](/help/rtcdp/destinations/advertising-destinations.md)
 * Analytics
