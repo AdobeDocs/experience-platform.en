@@ -552,7 +552,7 @@ timepd = spark.sql("""
 """)
 ```
 
-#### PySpark 3 (Spark 2.4) {pyspark3-spark2.4}
+#### PySpark 3 (Spark 2.4) {#pyspark3-spark2.4}
 
 ```python
 # PySpark 3 (Spark 2.4)
@@ -592,7 +592,7 @@ val timedf = spark.sql("""
 """)
 ```
 
-#### Scala (Spark 2.4) {scala-spark}
+#### Scala (Spark 2.4) {#scala-spark}
 
 ```scala
 // Spark (Spark 2.4)
