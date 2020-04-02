@@ -209,5 +209,5 @@ For additional information, such as a complete day-to-day workflow, please begin
 
 The following video is designed to support your understanding of Data Science Workspace.
 
->[!VIDEO](https://images-tv.adobe.com/mpcv3/2fbf62c1-44ed-4162-8eed-f47ab8599701_1578435939.1920x1080at3000_h264.mp4)
+>[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&amp;enable10seconds=on&amp;speedcontrol=on)
 

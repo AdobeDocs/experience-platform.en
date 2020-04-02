@@ -11,5 +11,5 @@ Built on top of Adobe Experience Platform, Real-time Customer Data Platform enab
 
 Through the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. You can also specify preferences regarding data sources and determine which data has priority should a conflict arise while merging.
 
-You can find step-by-step instructions for working with merge policies using the Adobe Experience Platform user interface by following the [working with merge policies tutorial on Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/merge_policies/create-merge-policies.md).
+You can find step-by-step instructions for working with merge policies using the Adobe Experience Platform user interface by following the [merge policies user guide](../../profile/ui/merge-policies.md).
 

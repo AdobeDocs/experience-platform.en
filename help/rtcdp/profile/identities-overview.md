@@ -13,7 +13,7 @@ Now, instead of five separate customers interacting with your brand across five 
 
 ## Identity namespaces
 
-Identity namespaces are a component of Identity Service and serve as indicators providing additional context to customer identities. An example of a commonly used ID namespace would be "Email", where the use of the same email address across multiple websites allows you to stitch together several different identities, each with a unique customer ID, as actually belonging to the same customer. Experience Platform allows you to use ID namespaces to search for individual profiles within the user interface. For more information on viewing profiles, please see the [profile viewer overview](/help/rtcdp/profile/profile-viewer.md). To learn more about identity namespaces, see the [identity namespace overview on Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md).
+Identity namespaces are a component of Identity Service and serve as indicators providing additional context to customer identities. An example of a commonly used ID namespace would be "Email", where the use of the same email address across multiple websites allows you to stitch together several different identities, each with a unique customer ID, as actually belonging to the same customer. Experience Platform allows you to use ID namespaces to search for individual profiles within the user interface. For more information on viewing profiles, please see the [profile viewer overview](/help/rtcdp/profile/profile-viewer.md). To learn more about identity namespaces, see the [identity namespace overview](../../identity-service/namespaces.md).
 
 ## Identity graphs
 
@@ -23,4 +23,4 @@ Identity Service manages an identity graph visible by only your organization and
 
 ## Next steps
 
-Identities, and the relationships between them, are defined and maintained by Identity Service and leveraged by Real-time Customer Profile to build a complete picture of each individual customer and their interactions. To learn more, please visit the [Identity Service documentation on Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_services_architectural_overview/identity_services_architectural_overview.md).
+Identities, and the relationships between them, are defined and maintained by Identity Service and leveraged by Real-time Customer Profile to build a complete picture of each individual customer and their interactions. To learn more, please visit the [Identity Service documentation](../../identity-service/home.md).
