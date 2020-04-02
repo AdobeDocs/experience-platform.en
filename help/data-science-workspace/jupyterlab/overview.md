@@ -114,7 +114,7 @@ Common cell actions are described below:
 
 Notebook kernels are the language-specific computing engines for processing notebook cells. In addition to Python, JupyterLab provides additional language support in R, PySpark, and Spark. When you open a notebook document, the associated kernel is launched. When a notebook cell is executed, the kernel performs the computation and produces results which may consume significant CPU and memory resources. Note that allocated memory is not freed until the kernel is shut-down.
 
->[!IMPORTANT] JupyterLab Launcher updated from Spark 2.3 to Spark 2.4. Spark and PySpark kernels are no longer supported in Spark 2.4. See the [Pyspark 3 (Spark 2.3) to PySpark 3 (Spark 2.4)](./pyspark-conversion-guide.md) and [Spark 2.3 to Scala (Spark 2.4)](./spark-scala-migration.md) guides for more information on the changes to notebook kernels.
+>[!IMPORTANT] JupyterLab Launcher updated from Spark 2.3 to Spark 2.4. Spark and PySpark kernels are no longer supported in Spark 2.4 notebooks.
 
 Certain features and functionalities are limited to particular kernels as described in the table below:
 
@@ -141,9 +141,9 @@ If the kernel is shut-down or inactive for a prolonged period, then **No Kernel!
 >[!IMPORTANT] 
 >With the transition of Spark 2.3 to Spark 2.4, both the Spark and PySpark kernels are deprecated. 
 >
->New PySpark 3 (Spark 2.4) notebooks use the Python3 Kernel. See the guide on converting [Pyspark 3 (Spark 2.3) to PySpark 3 (Spark 2.4)](./pyspark-conversion-guide.md) if you wish to use existing Spark 2.3 code. 
+>New PySpark 3 (Spark 2.4) notebooks use the Python3 Kernel. See the guide on converting [Pyspark 3 (Spark 2.3) to PySpark 3 (Spark 2.4)](./pyspark-conversion-guide.md) if you wish to convert existing Spark 2.3 code. 
 >
->New Spark notebooks should utilize the Scala kernel. See the guide on converting [Spark 2.3 to Scala (Spark 2.4)](./spark-scala-migration.md) if you wish to use existing Spark 2.3 code.
+>New Spark notebooks should utilize the Scala kernel. See the guide on converting [Spark 2.3 to Scala (Spark 2.4)](./spark-scala-migration.md)  Spark 2.3 code.if you wish to convert existing
 
 PySpark and Spark kernels allows you to configure Spark cluster resources within your PySpark or Spark notebook by using the configure command (`%%configure`) and providing a list of configurations. Ideally, these configurations are defined before the Spark application is initialized. Modifying the configurations while the Spark application is active requires an additional force flag after the command (`%%configure -f`) which will restart the application in order for the changes to be applied, as shown below:
 
@@ -366,16 +366,18 @@ df <- dataset_reader$limit(100L)$offset(10L)$read()
 
 *   `{DATASET_ID}`: The unique identity of the dataset to be accessed
 
-### Read from a dataset in PySpark/Spark
+### Read from a dataset in PySpark/Spark/Scala
 
 >[!IMPORTANT] 
 >With the transition of Spark 2.3 to Spark 2.4, both the Spark and PySpark kernels are deprecated. 
 >
->New PySpark 3 (Spark 2.4) notebooks use the Python3 Kernel. See the guide on converting [Pyspark 3 (Spark 2.3) to PySpark 3 (Spark 2.4)](./pyspark-conversion-guide.md) if you wish to use existing Spark 2.3 code. 
+>New PySpark 3 (Spark 2.4) notebooks use the Python3 Kernel. See the guide on converting [Pyspark 3 (Spark 2.3) to PySpark 3 (Spark 2.4)](./pyspark-conversion-guide.md) if you wish to convert existing Spark 2.3 code. New notebooks should follow the [PySpark 3 (Spark 2.4)](#pyspark2.4) example below.
 >
->New Spark notebooks should utilize the Scala kernel. See the guide on converting [Spark 2.3 to Scala (Spark 2.4)](./spark-scala-migration.md) if you wish to use existing Spark 2.3 code.
+>New Spark notebooks should utilize the Scala kernel. See the guide on converting [Spark 2.3 to Scala (Spark 2.4)](./spark-scala-migration.md) if you wish to convert existing Spark 2.3 code. New notebooks should follow the [Scala (Spark 2.4)](#spark2.4) example below. 
 
 With an an active PySpark or Spark notebook opened, expand the **Data Explorer** tab from the left sidebar and double click **Datasets** to view a list of available datasets. Right-click on the dataset listing you wish to access and click **Explore Data in Notebook**. The following code cells are generated:
+
+#### PySpark (Spark 2.3 - deprecated)
 
 ```python
 # PySpark 3 (Spark 2.3 - deprecated)
@@ -386,6 +388,18 @@ pd0 = spark.read.format("com.adobe.platform.dataset").\
 pd0.describe()
 pd0.show(10, False)
 ```
+
+#### PySpark (Spark 2.4) {#pyspark2.4}
+
+```python
+# PySpark 3 (Spark 2.4)
+
+%dataset read --datasetId {DATASET_ID} --dataFrame pd0
+pd0.describe()
+pd0.show(10, False)
+```
+
+#### Spark (Spark 2.3 - deprecated)
 
 ```scala
 // Spark (Spark 2.3 - deprecated)
@@ -398,6 +412,30 @@ val dataFrame = spark.read.
 dataFrame.printSchema()
 dataFrame.show()
 ```
+
+#### Scala (Spark 2.4) {#spark2.4}
+
+```scala
+// Spark (Spark 2.4)
+
+// initialize the session
+import org.apache.spark.sql.{Dataset, SparkSession}
+val spark = SparkSession.builder().master("local").getOrCreate()
+
+val dataFrame = spark.read.format("com.adobe.platform.query")
+    .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
+    .option("ims-org", sys.env("IMS_ORG_ID"))
+    .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID"))
+    .option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN"))
+    .option("mode", "batch")
+    .option("dataset-id", "5e68141134492718af974844")
+    .load()
+dataFrame.printSchema()
+dataFrame.show()
+```
+
+>[!TIP]
+>In Scala, you can use `sys.env()` to declare and return a value from within `option`.
 
 ### Query data using Query Service in Python
 
@@ -534,7 +572,7 @@ timepd = spark.sql("""
 timepd.show()
 ```
 
-**Spark (Spark 2.3 - deprecated)**
+#### Spark (Spark 2.3 - deprecated)
 
 ```scala
 // Spark (Spark 2.3 - deprecated)
