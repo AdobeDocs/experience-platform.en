@@ -170,6 +170,14 @@ Enabling your segment definitions for streaming can be done using the UI or the 
 
 Once streaming segmentation has been enabled, a baseline must be established (this is the initial run after which the segment will always be up-to-date). The system handles baselining automatically, however this is only possible if scheduled segmentation has been enabled. For details on enabling scheduled segmentation, please refer to [the previous section in this user guide](#enable-scheduled-segmentation).
 
+## DULE policy violations
+
+>[!NOTE] DULE policy violations only apply if you are creating a segment that has been assigned to a destination.
+
+Once you are done creating your segment, the segment will be analyzed by Data Governance to ensure there are no policy violations within the segment. For details on DULE and policy violations, please refer to the [data usage label overview](../../data-governance/labels/overview.md).
+
+![](../images/segment-builder/segment-dule-policy-violations.png)
+
 ## Next steps
 
 Segment Builder provides a rich workflow allowing you to isolate marketable audiences from Real-time Customer Profile data. After reading this guide you should now be able to:
