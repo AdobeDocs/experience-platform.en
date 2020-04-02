@@ -11,7 +11,7 @@ Real-time Customer Data Platform (Real-time CDP) brings data from multiple enter
 
 Adobe Experience Platform Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within Real-time CDP, allowing you to define usage policies, categorize your data based on those policies, and check for policy violations when performing certain marketing actions.
 
-Real-time CDP is built on top of Adobe Experience Platform, and therefore the majority of Data Governance capabilities are covered in the Experience Platform documentation. This document is intended to complement the [Data Governance overview](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) for Experience Platform, and outlines the Governance features that are available in Real-time CDP. The following topics are covered:
+Real-time CDP is built on top of Adobe Experience Platform, and therefore the majority of Data Governance capabilities are covered in the Experience Platform documentation. This document is intended to complement the [Data Governance overview](../../data-governance/home.md) for Experience Platform, and outlines the Governance features that are available in Real-time CDP. The following topics are covered:
 
 * [Apply usage labels to your data](#labels)
 * [Manage data usage policies](#policies)
@@ -21,7 +21,7 @@ Real-time CDP is built on top of Adobe Experience Platform, and therefore the ma
 
 Data Governance allows you to apply usage labels to your data, either at the dataset or dataset-field level. Data usage labels allow you to categorize data according to usage policies that apply to that data. 
 
-For detailed information on working with data usage labels, see the [data usage labels user guide](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/tutorials/dule/dule_working_with_labels.md) for Adobe Experience Platform.
+For detailed information on working with data usage labels, see the [data usage labels user guide](../../data-governance/labels/overview.md) for Adobe Experience Platform.
 
 ## Set restrictions on destinations
 
@@ -32,9 +32,9 @@ Marketing use cases can be defined during the _Setup_ phase for the _Edit Destin
 
 ## Manage data usage policies {#policies}
 
-In order for data usage labels to effectively support data compliance, data usage policies must be defined and enabled. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Real-time CDP. See the "Data usage policies" section in the Experience Platform [Data Governance overview](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) for more information.
+In order for data usage labels to effectively support data compliance, data usage policies must be defined and enabled. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Real-time CDP. See the "Data usage policies" section in the Experience Platform [Data Governance overview](../../data-governance/home.md) for more information.
 
-Adobe Experience Platform provides several **core policies** for common customer experience use cases. These policies can be viewed by making a request to the [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml), as shown in the "List all policies" section in the [Policy Service developer guide](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_policy_service_developer_guide.md). You can also create your own **custom policies** to model custom usage restrictions, as shown in the "Create a policy" section in the developer guide.
+Adobe Experience Platform provides several **core policies** for common customer experience use cases. These policies can be viewed by making a request to the [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml), as shown in the "List all policies" section in the [Policy Service developer guide](../../data-governance/policies/overview.md). You can also create your own **custom policies** to model custom usage restrictions, as shown in the "Create a policy" section in the developer guide.
 
 ## (Beta) Enforce data usage compliance {#enforce-data-usage-compliance}
 
@@ -66,7 +66,7 @@ Click **Data Lineage** to track the destinations, segments, merge policies, or d
 
 Once a violation has triggered, the **Save** button is disabled for the activation until the appropriate components are updated to comply with data usage policies.
 
-### Policy enforcement for activated segments
+### Policy enforcement for activated segments {#policy-enforcement-for-activated-segments}
 
 Policy enforcement still applies to segments after they have been activated, restricting any changes to a segment or its destination that would result in a policy violation. Due to the numerous components involved in activating segments to destinations, any of the following actions can potentially trigger a violation:
 
@@ -79,4 +79,4 @@ If any of the above actions triggers a violation, that action is prevented from 
 
 ## Next steps
 
-Now that you have been introduced to the key Data Governance features on Real-time CDP and how Experience Platform enables them, please continue to the [documentation for Data Governance on Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html). The documentation provides overviews of essential Data Governance concepts, as well as step-by-step workflows for managing data usage labels and policies.
+Now that you have been introduced to the key Data Governance features on Real-time CDP and how Experience Platform enables them, please continue to the [documentation for Data Governance on Adobe Experience Platform](../../data-governance/home.md). The documentation provides overviews of essential Data Governance concepts, as well as step-by-step workflows for managing data usage labels and policies.
