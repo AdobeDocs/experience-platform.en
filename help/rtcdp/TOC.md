@@ -31,11 +31,17 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Google Ads (Experience Platform Launch extension)](/help/rtcdp/destinations/google-ads-extension.md)
       * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
       * [Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
+    * Analytics destinations {#analytics-destinations}
+      * [Analytics destinations overview](destinations/analytics-destinations.md)
     * Cloud storage destinations{#cloud-storage}
       * [Cloud storage destinations overview](destinations/cloud-storage-destinations.md)
       * [Workflow to create cloud storage destinations](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
       * [Amazon S3 destination](destinations/amazon-s3-destination.md)
       * [SFTP destination](destinations/sftp-destination.md)
+    * CRM destinations {#crm-destinations}
+      * [CRM destinations overview](destinations/crm-destinations.md)
+    * Data Management Platform destinations {dmp-destinations}
+      * [Data Management Platform destinations overview](destinations/dmp-destinations.md)
     * Email marketing destinations{#email-destinations}
       * [Email marketing destinations overview](destinations/email-marketing-destinations.md)
       * [Adobe Campaign](destinations/adobe-campaign-destination.md)
@@ -52,6 +58,8 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Social network destinations overview](/help/rtcdp/destinations/social-network-destinations.md)
       * [Social network destinations authentication flow](/help/rtcdp/destinations/social-network-destinations-workflow.md)
       * [Facebook destination](/help/rtcdp/destinations/facebook-destination.md)
+    * Survey destinations {#surveys}
+      * [Survey destinations overview](/help/rtcdp/destinations/survey-destinations.md)
     * Voice of the customer destinations {#voice-of-customer-destinations}
       * [Voice of the customer destinations overview](/help/rtcdp/destinations/voice-of-customer-destinations.md)
       * [Confirmit Digital Feedback (Experience Platform Launch extension)](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)
