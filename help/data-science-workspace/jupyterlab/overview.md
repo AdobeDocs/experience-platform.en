@@ -416,7 +416,7 @@ dataFrame.show()
 #### Scala (Spark 2.4) {#spark2.4}
 
 ```scala
-// Spark (Spark 2.4)
+// Scala (Spark 2.4)
 
 // initialize the session
 import org.apache.spark.sql.{Dataset, SparkSession}
