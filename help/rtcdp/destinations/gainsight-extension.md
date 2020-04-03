@@ -5,11 +5,12 @@ description: The Gainsight extension is a personalization destination in Adobe R
 seo-description: The Gainsight extension is a personalization destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
-# Gainsight Extension {#gainsight-extension}
+# Gainsight extension {#gainsight-extension}
 
 ## Overview {#overview}
 
 Gainsight is a personalization extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.103343.html).
+
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-destinations.md).
 
 ![Gainsight extension](/help/rtcdp/destinations/assets/gainsight-extension.png)

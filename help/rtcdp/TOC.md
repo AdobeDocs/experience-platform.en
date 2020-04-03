@@ -27,12 +27,16 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Adobe Campaign](destinations/adobe-campaign-destination.md)
     * Advertising destinations{#advertiser-destinations}
       * [Advertising destinations overview](destinations/advertising-destinations.md)
+      * [Awin Adveritising Mastertag (Experience Platform Launch extension)](/help/rtcdp/destinations/awin-mastertag-extension.md)
       * [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
       * [Google Ads (Experience Platform Launch extension)](/help/rtcdp/destinations/google-ads-extension.md)
       * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
       * [Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
     * Analytics destinations {#analytics-destinations}
       * [Analytics destinations overview](destinations/analytics-destinations.md)
+      * [Adobe Analytics (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-analytics-extension.md)
+      * [Adobe Media Analytics for Audio and Video (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-video-analytics-extension.md)
+      * [Google Global Site Tag analytics (Experience Platform Launch extension)](/help/rtcdp/destinations/gtag-analytics-extension.md)
     * Cloud storage destinations{#cloud-storage}
       * [Cloud storage destinations overview](destinations/cloud-storage-destinations.md)
       * [Workflow to create cloud storage destinations](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
@@ -42,6 +46,7 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [CRM destinations overview](destinations/crm-destinations.md)
     * Data Management Platform destinations {dmp-destinations}
       * [Data Management Platform destinations overview](destinations/dmp-destinations.md)
+      * [Audience Manager DIL (Experience Platform Launch extension)](/help/rtcdp/destinations/aam-dil-extension.md)
     * Email marketing destinations{#email-destinations}
       * [Email marketing destinations overview](destinations/email-marketing-destinations.md)
       * [Adobe Campaign](destinations/adobe-campaign-destination.md)
@@ -53,6 +58,7 @@ user-guide-title: Real-Time Customer Data Platform Help
     * Personalization destinations {#personalization-destinations}
       * [Personalization destinations overview](/help/rtcdp/destinations/personalization-destinations.md)
       * [Adobe Target (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-target-extension.md)
+      * [Adobe Target v2 (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-target-v2-extension.md)
       * [Gainsight (Experience Platform Launch extension)](/help/rtcdp/destinations/gainsight-extension.md)
     * Social network destinations{#social-network-destinations}
       * [Social network destinations overview](/help/rtcdp/destinations/social-network-destinations.md)
