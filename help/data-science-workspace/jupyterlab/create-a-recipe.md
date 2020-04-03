@@ -36,6 +36,8 @@ The Recipe Builder notebook allows you to run training and scoring runs inside t
 
 >[!NOTE] The Recipe Builder notebook supports working with all file formats but currently the Create Recipe functionality only supports Python.
 
+<!-- update this image -->
+
 ![](../images/jupyterlab/create-recipe/notebook_launcher.png)
 
 When you click on the Recipe Builder notebook from the launcher, the notebook will be opened in the tab. The template used in the notebook is the Python Retail Sales Forecasting Recipe which can also be found in [this public repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
@@ -64,9 +66,6 @@ Now that you know the basics for the JupyterLab notebook environment, you can be
 - [Pipeline file](#pipeline-file)
 - [Evaluator file](#evaluator-file)
 - [Data Saver file](#data-saver-file)
-
-
-
 
 ### Requirements file
 
@@ -464,14 +463,17 @@ For debugging purposes, if you wish to see the hidden output, add `debug` to the
 
 When you are done editing the recipe and satisfied with the training/scoring output, you can create a recipe from the notebook by pressing **Create Recipe**. After pressing the button, you will be prompted to enter a recipe name. This name will represent the actual recipe created on Platform.
 
+<!-- update the ui screenshot here -->
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
 Once you press **Ok** you will be able to navigate to the new recipe on [Adobe Experience Platform](https://platform.adobe.com/). You can click on the **View Recipes** button to take you to the **Recipes** tab under **ML Models**
 
+<!-- update the ui screenshot here -->
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
 Once the process is complete, the recipe will look something like this:
 
+<!-- update the ui screenshot here -->
 ![](../images/jupyterlab/create-recipe/recipe_details.png)
 
 >[!CAUTION]
