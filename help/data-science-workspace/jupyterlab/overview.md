@@ -141,14 +141,20 @@ If the kernel is shut-down or inactive for a prolonged period, then **No Kernel!
 >[!IMPORTANT] 
 >With the transition of Spark 2.3 to Spark 2.4, both the Spark and PySpark kernels are deprecated. 
 >
->New PySpark 3 (Spark 2.4) notebooks use the Python3 Kernel. See the guide on converting [Pyspark 3 (Spark 2.3) to PySpark 3 (Spark 2.4)](./pyspark-conversion-guide.md) if you wish to convert existing Spark 2.3 code. 
+>New PySpark 3 (Spark 2.4) notebooks use the Python3 Kernel. See the guide on converting [Pyspark 3 (Spark 2.3) to PySpark 3 (Spark 2.4)](./pyspark-conversion-guide.md) for an in-depth tutorial on updating your existing notebooks.
 >
->New Spark notebooks should utilize the Scala kernel. See the guide on converting [Spark 2.3 to Scala (Spark 2.4)](./spark-scala-migration.md)  Spark 2.3 code.if you wish to convert existing
+>New Spark notebooks should utilize the Scala kernel. See the guide on converting [Spark 2.3 to Scala (Spark 2.4)](./spark-scala-migration.md) for an in-depth tutorial on updating your existing notebooks.
 
 PySpark and Spark kernels allows you to configure Spark cluster resources within your PySpark or Spark notebook by using the configure command (`%%configure`) and providing a list of configurations. Ideally, these configurations are defined before the Spark application is initialized. Modifying the configurations while the Spark application is active requires an additional force flag after the command (`%%configure -f`) which will restart the application in order for the changes to be applied, as shown below:
 
 >[!CAUTION]
->The `%%configure` command does not work for the Python and Scala kernels in Spark 2.4 notebooks.
+>With PySpark 3 (Spark 2.4) and Scala (Spark 2.4) notebooks, `%%` sparkmagic is no longer supported. The following operations can no longer be utilized:
+- `%%help`
+- `%%info`
+- `%%cleanup`
+- `%%delete`
+- `%%configure`
+- `%%local`
 
 ```python
 %%configure -f 
@@ -163,8 +169,6 @@ PySpark and Spark kernels allows you to configure Spark cluster resources within
     }
 }
 ```
-
->[!TIP] Use the help command (`%%help`) to view all commands available.
 
 All configurable properties are listed in the table below:
 
@@ -391,6 +395,8 @@ pd0.show(10, False)
 
 #### PySpark (Spark 2.4) {#pyspark2.4}
 
+With the introduction of Spark 2.4, [`%dataset`](#magic) custom magic is supplied. 
+
 ```python
 # PySpark 3 (Spark 2.4)
 
@@ -428,7 +434,7 @@ val dataFrame = spark.read.format("com.adobe.platform.query")
     .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID"))
     .option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN"))
     .option("mode", "batch")
-    .option("dataset-id", "5e68141134492718af974844")
+    .option("dataset-id", "{DATASET_ID}")
     .load()
 dataFrame.printSchema()
 dataFrame.show()
@@ -436,6 +442,30 @@ dataFrame.show()
 
 >[!TIP]
 >In Scala, you can use `sys.env()` to declare and return a value from within `option`.
+
+### Using %dataset magic in PySpark 3 (Spark 2.4) notebooks {#magic}
+
+With the introduction of Spark 2.4, `%dataset` custom magic is supplied for use in new PySpark 3 (Spark 2.4) notebooks (Python 3 kernel).
+
+**Usage**
+
+`%dataset {action} --datasetId {id} --dataFrame {df} --mode auto`
+
+**Description**
+
+A custom Data Science Workspace magic command for reading or writing a dataset from a Python notebook (Python 3 kernel).
+
+- **{action}**: The type of action to perform on the dataset. Two actions are available "read" or "write".
+- **--datasetId {id}**: Used to supply the id of the dataset to read or write. This is a required argument.
+- **--dataFrame {df}**: The pandas dataframe. This is a required argument.
+  - When the action is "read", {df} is the variable where results of the dataset read operation are available.
+  - When the action is "write", this dataframe {df} is written to the dataset.
+- **--mode**: Allowed parameters are "auto", "batch", and "interactive". By default the mode is set to "auto". It is recommended to use "batch" mode when reading large amounts of data.
+
+**Examples**
+
+- **Read example**: `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
+- **Write example**: `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0 --mode`
 
 ### Query data using Query Service in Python
 
@@ -560,7 +590,7 @@ timepd = spark.sql("""
 from pyspark.sql import SparkSession
 spark = SparkSession.builder.getOrCreate()
 
-%dataset read --datasetId 5d49448ada1c701647dd6129 --dataFrame df
+%dataset read --datasetId {DATASET_ID} --dataFrame df
 
 df.createOrReplaceTempView("event")
 timepd = spark.sql("""
@@ -608,7 +638,7 @@ val spark = org.apache.spark.sql.SparkSession.builder().appName("Notebook")
   .getOrCreate()
 
 // Stage Exploratory
-val dataSetId: String = "5e37fb3a64985e18ad9e4782"
+val dataSetId: String = "{DATASET_ID}"
 val orgId: String = sys.env("IMS_ORG_ID")
 val clientId: String = sys.env("PYDASDK_IMS_CLIENT_ID")
 val userToken: String = sys.env("PYDASDK_IMS_USER_TOKEN")
