@@ -101,7 +101,7 @@ curl -X POST \
 | `expandIDs` | An optional property that, when set to `true`, represents an optimization for processing the IDs in the applications (currently only supported by Analytics). If omitted, this value defaults to `false`. |
 | `priority` | An optional property used by Adobe Analytics that sets the priority for processing requests. Accepted values are `normal` and `low`. If `priority` is omitted, the default behavior is `normal`. |
 | `analyticsDeleteMethod` | An optional property that specifies how Adobe Analytics should handle the personal data. Two possible values are accepted for this attribute: <ul><li>`anonymize`: All data referenced by the given collection of user IDs is made anonymous. If `analyticsDeleteMethod` is omitted, this is the default behavior.</li><li>`purge`: All data is removed completely.</li></ul> |
-| `regulation` **(Required)** | The regulation for the request (must be either "gdpr" or "ccpa"). |
+| `regulation` **(Required)** | The regulation for the request. Must be one of the following three values: <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
 
 **Response**
 
@@ -395,7 +395,7 @@ GET ?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | Parameter | Description |
 | --- | --- |
-| `{REGULATION}` | The regulation type to query for. Accepted values are `gdpr` and `ccpa`. |
+| `{REGULATION}` | The regulation type to query for. Accepted values are `gdpr`, `ccpa`, and `pdpa_tha`. |
 | `{PAGE}` | The page of data to be displayed, using 0-based numbering. The default is `0`. |
 | `{SIZE}` | The number of results to display on each page. The default is `1` and the maximum is `100`. Exceeding the maximum causes the API to return a 400-code error. |
 
