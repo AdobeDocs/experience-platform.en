@@ -14,4 +14,3 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [Adobe Analytics](ui/adobe-applications/analytics-mapping.md)
     - [Adobe Audience Manager](ui/adobe-applications/audience-manager-mapping.md)
     - [Adobe Target](ui/adobe-applications/target-mapping.md)
-- [Troubleshooting guide](troubleshooting-guide.md)
