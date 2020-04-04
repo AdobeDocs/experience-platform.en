@@ -449,7 +449,7 @@ With the introduction of Spark 2.4, `%dataset` custom magic is supplied for use 
 
 **Usage**
 
-`%dataset {action} --datasetId {id} --dataFrame {df} --mode auto`
+`%dataset {action} --datasetId {id} --dataFrame {df}`
 
 **Description**
 
@@ -460,12 +460,12 @@ A custom Data Science Workspace magic command for reading or writing a dataset f
 - **--dataFrame {df}**: The pandas dataframe. This is a required argument.
   - When the action is "read", {df} is the variable where results of the dataset read operation are available.
   - When the action is "write", this dataframe {df} is written to the dataset.
-- **--mode**: Allowed parameters are "auto", "batch", and "interactive". By default the mode is set to "auto". It is recommended to use "batch" mode when reading large amounts of data.
+- **--mode (optional)**: Allowed parameters are "batch", and "interactive". By default the mode is set to "interactive". It is recommended to use "batch" mode when reading large amounts of data.
 
 **Examples**
 
 - **Read example**: `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
-- **Write example**: `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0 --mode`
+- **Write example**: `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
 
 ### Query data using Query Service in Python
 
