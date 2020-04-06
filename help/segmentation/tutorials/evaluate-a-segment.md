@@ -500,8 +500,7 @@ curl -X POST \
         "persisted": true,
         "containerFormat": "parquet",
         "format": "parquet"
-    },
-    "aspect": "production"
+    }
 }'
 ```
 
