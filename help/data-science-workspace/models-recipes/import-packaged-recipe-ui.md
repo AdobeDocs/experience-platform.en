@@ -168,7 +168,7 @@ The *configure* page for the *import a recipe* workflow appears. Enter a name an
 >[!NOTE]
 > In the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial, a Docker URL was provided at the end of building the Retail Sales recipe using PySpark source files.
 
-1. Once you are on the *Select source* page, paste the Docker URL corresponding to the packaged recipe built using PySpark source files in the **Source URL** field. Next, import the provided configuration file by dragging and dropping, or use the file system **Browser**. The provided configuration file can be found at `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`. Select **PySpark** in the *Runtime* drop down, the default artifact should auto populate to **Docker**. Once everything has been filled out, click **Next** in the top-right corner to proceed to *Manage schemas*.
+1. Once you are on the *Select source* page, paste the Docker URL corresponding to the packaged recipe built using PySpark source files in the **Source URL** field. Next, import the provided configuration file by dragging and dropping, or use the file system **Browser**. The provided configuration file can be found at `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`. Select **PySpark** in the *Runtime* drop down, the default artifact auto populates to **Docker**. Once everything has been filled out, click **Next** in the top-right corner to proceed to *Manage schemas*.
 ![](../images/models-recipes/import-package-ui/pyspark-databricks.png)
 2. Select the Retail Sales input and output schemas under the section *Manage Schemas*, they were created using the provided bootstrap script in the [create the retail sales schema and dataset](../models-recipes/create-retails-sales-dataset.md) tutorial. 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
@@ -189,7 +189,7 @@ The *configure* page for the *import a recipe* workflow appears. Enter a name an
 >[!NOTE]
 > In the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial, a Docker URL was provided at the end of building the Retail Sales recipe using Scala (Spark) source files.
 
-1. Once you are on the *Select source* page, paste the Docker URL corresponding to the packaged recipe built using Scala source files in the *Source URL* field. Next, import the provided configuration file by dragging and dropping, or use the file system **Browser**. The provided configuration file can be found at `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Select **Spark** in the *Runtime* drop down, the default artifact should auto populate to **Docker**. Once everything has been filled out, click **Next** in the top-right corner.
+1. Once you are on the *Select source* page, paste the Docker URL corresponding to the packaged recipe built using Scala source files in the *Source URL* field. Next, import the provided configuration file by dragging and dropping, or use the file system **Browser**. The provided configuration file can be found at `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Select **Spark** in the *Runtime* drop down, the default artifact auto populates to **Docker**. Once everything has been filled out, click **Next** in the top-right corner to proceed to *Manage schemas*.
 ![](../images/models-recipes/import-package-ui/scala-databricks.png)
 2. Select the Retail Sales input and output schemas under the section *Manage Schemas*, they were created using the provided bootstrap script in the [create the retail sales schema and dataset](../models-recipes/create-retails-sales-dataset.md) tutorial. 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
@@ -207,6 +207,9 @@ This tutorial provided insight on configuring and importing a recipe into Data S
 - [Train and evaluate a Model using the API](./train-evaluate-model-api.md)
 
 ## Deprecated workflows
+
+>[!CAUTION]
+>Importing binary based recipes is no longer supported in PySpark 3 (Spark 2.4) and Scala (Spark 2.4).
 
 ### Import binary based recipe - PySpark {#pyspark-deprecated}
 
