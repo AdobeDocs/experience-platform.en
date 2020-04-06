@@ -7,11 +7,11 @@ topic: policies
 
 # Data usage policies user guide
 
-Adobe Experience Platform Data Governance provides a user interface that allows you to create and manage data usage labels. This document provides an overview of the actions you can perform in the _Policies_ workspace in the Experience Platform UI.
+Adobe Experience Platform Data Governance provides a user interface that allows you to create and manage data usage policies. This document provides an overview of the actions you can perform in the _Policies_ workspace in the Experience Platform UI.
 
 ## Prerequisites
 
-This guide requires a working understanding of the following Experience Platform services:
+This guide requires a working understanding of the following Experience Platform concepts:
 
 - [Data Governance](../home.md)
 - [Data usage policies](./overview.md)
@@ -41,6 +41,8 @@ Next, select the data usage labels that the policy will be based on. When select
 ![](../images/policies/add-labels.png)
 
 The *[!UICONTROL Select marketing actions]* step appears. Choose the appropriate marketing actions from the provided list, then click **[!UICONTROL Next]** to continue.
+
+>[!NOTE] When selecting multiple marketing actions, the policy interprets them as an "OR" rule. In other words, the policy applies if _any_ of the selected marketing actions are performed.
 
 ![](../images/policies/add-marketing-actions.png)
 
