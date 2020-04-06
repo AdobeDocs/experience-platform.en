@@ -168,7 +168,7 @@ The *configure* page for the *import a recipe* workflow appears. Enter a name an
 >[!NOTE]
 > In the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial, a Docker URL was provided at the end of building the Retail Sales recipe using PySpark source files.
 
-1. Once you are on the *Select source* page, paste the Docker URL corresponding to the packaged recipe built using PySpark source files in the **Source URL** field. Next, import the provided configuration file by dragging and dropping, or use the file system **Browser**. The provided configuration file can be found at `experience-platform-dsw-reference/recipes/pyspark/retail/retail.config.json`. Click **Next** when both items have been supplied.
+1. Once you are on the *Select source* page, paste the Docker URL corresponding to the packaged recipe built using PySpark source files in the **Source URL** field. Next, import the provided configuration file by dragging and dropping, or use the file system **Browser**. The provided configuration file can be found at `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`. Click **Next** when both items have been supplied.
 ![](../images/models-recipes/import-package-ui/pyspark-databricks.png)
 2. Select the Retail Sales input and output schemas under the section **Manage Schemas**, they were created using the provided bootstrap script in the [create the retail sales schema and dataset](../models-recipes/create-retails-sales-dataset.md) tutorial. 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
