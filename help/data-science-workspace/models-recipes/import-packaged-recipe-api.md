@@ -201,7 +201,8 @@ You have created an Engine using the API and a unique Engine identifier was obta
 
 <!-- Will need to remove binary artifact documentation once the old flags are turned off -->
 
->[!CAUTION] binary artifacts are used in PySpark 3 (Spark 2.3 - deprecated) and Spark (Spark 2.3 - deprecated). JupyterLab Notebooks now provides Pyspark 3 (Spark 2.4) and Scala. With this update, all engines can now be made using a Docker URL. See the [Docker URL section](#create-an-engine-with-a-docker-url) of this document. Binary artifacts are set to be removed in a future release.
+>[!CAUTION]
+> Binary artifacts are used in PySpark 3 (Spark 2.3 - deprecated) and Spark (Spark 2.3 - deprecated). JupyterLab Notebooks now provides Pyspark 3 (Spark 2.4) and Scala (Spark 2.4). With this update, all engines can now be made using a Docker URL. See the [Docker URL section](#create-an-engine-with-a-docker-url) of this document. Binary artifacts are set to be removed in a future release.
 
 In order to create an Engine using a local packaged `.jar` or `.egg` binary artifact, you must provide the absolute path to the binary artifact file in your local file system. Consider navigating to the directory containing the binary artifact in a Terminal environment, and execute the `pwd` Unix command for the absolute path.
 
