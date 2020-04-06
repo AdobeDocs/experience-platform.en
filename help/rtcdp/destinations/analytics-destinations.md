@@ -13,4 +13,9 @@ Currently, Adobe Real-time Customer Data Platform supports the analytics destina
 
 * [Adobe Analytics (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-analytics-extension.md)
 * [Adobe Media Analytics for Audio and Video (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-video-analytics-extension.md)
+* [Clicktale (Experience Platform Launch extension)](/help/rtcdp/destinations/clicktale-extension.md)
+* [Contentsquare (Experience Platform Launch extension)](/help/rtcdp/destinations/contentsquare-extension.md)
+* [Decibel (Experience Platform Launch extension)](/help/rtcdp/destinations/decibel-extension.md)
+* [Demandbase (Experience Platform Launch extension)](/help/rtcdp/destinations/demandbase-extension.md)
+* [Dialogtech (Experience Platform Launch extension)](/help/rtcdp/destinations/dialogtech-extension.md)
 * [Google Global Site Tag analytics (Experience Platform Launch extension)](/help/rtcdp/destinations/gtag-analytics-extension.md)
