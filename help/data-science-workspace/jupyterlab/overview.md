@@ -149,12 +149,12 @@ PySpark and Spark kernels allows you to configure Spark cluster resources within
 
 >[!CAUTION]
 >With PySpark 3 (Spark 2.4) and Scala (Spark 2.4) notebooks, `%%` sparkmagic is no longer supported. The following operations can no longer be utilized:
-- `%%help`
-- `%%info`
-- `%%cleanup`
-- `%%delete`
-- `%%configure`
-- `%%local`
+* `%%help`
+* `%%info`
+* `%%cleanup`
+* `%%delete`
+* `%%configure`
+* `%%local`
 
 ```python
 %%configure -f 
@@ -455,12 +455,12 @@ With the introduction of Spark 2.4, `%dataset` custom magic is supplied for use 
 
 A custom Data Science Workspace magic command for reading or writing a dataset from a Python notebook (Python 3 kernel).
 
-- **{action}**: The type of action to perform on the dataset. Two actions are available "read" or "write".
-- **--datasetId {id}**: Used to supply the id of the dataset to read or write. This is a required argument.
-- **--dataFrame {df}**: The pandas dataframe. This is a required argument.
+* **{action}**: The type of action to perform on the dataset. Two actions are available "read" or "write".
+* **--datasetId {id}**: Used to supply the id of the dataset to read or write. This is a required argument.
+* **--dataFrame {df}**: The pandas dataframe. This is a required argument.
   - When the action is "read", {df} is the variable where results of the dataset read operation are available.
   - When the action is "write", this dataframe {df} is written to the dataset.
-- **--mode (optional)**: Allowed parameters are "batch", and "interactive". By default the mode is set to "interactive". It is recommended to use "batch" mode when reading large amounts of data.
+* **--mode (optional)**: Allowed parameters are "batch", and "interactive". By default the mode is set to "interactive". It is recommended to use "batch" mode when reading large amounts of data.
 
 **Examples**
 
