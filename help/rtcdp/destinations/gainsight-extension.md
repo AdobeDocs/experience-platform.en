@@ -9,6 +9,8 @@ seo-description: The Gainsight extension is a personalization destination in Ado
 
 ## Overview {#overview}
 
+Gainsight empowers product owners with the tools to deeply understand user behavior, drive product adoption, and collect user feedback.
+
 Gainsight is a personalization extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.103343.html).
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-destinations.md).
@@ -30,6 +32,8 @@ To install the Gainsight extension:
 3. Click on the destination to highlight it, then select **[!UICONTROL Install Extension]** in the right rail. If the **[!UICONTROL Install Extension]** control is greyed out, you are missing the **[!UICONTROL manage_properties]** permission. See [Prerequisites](#prerequisites).
 4. In the **[!UICONTROL Select available Launch property]** window, select the Launch property in which you want to install the extension. You also have the option of creating a new property in Launch. A property is a collection of rules, data elements, configured extensions, environments, and libraries. Learn about properties in the [Properties page section](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) of the Launch documentation.
 5. The workflow takes you to Launch to complete the installation. 
+
+For information about the extension configuration options and installation support, see the [Gainsight page on Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.103343.html).
 
 You can also install the extension directly in the [Experience Platform Launch interface](https://launch.adobe.com/). See [Add a new extension](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) in the Launch documentation.
 

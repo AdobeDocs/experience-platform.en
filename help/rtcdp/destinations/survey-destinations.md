@@ -11,4 +11,4 @@ The customer is always right, but you need to hear their voice first. With surve
 
 Currently, Adobe Real-time Customer Data Platform supports the survey destinations listed below. For information on how to connect to these destinations, see the individual links:
 
-* [Confirmit Digital Feedback (Experience Platform Launch extension)](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)
+* [Foresee (Experience Platform Launch extension)](/help/rtcdp/destinations/foresee-extension.md)

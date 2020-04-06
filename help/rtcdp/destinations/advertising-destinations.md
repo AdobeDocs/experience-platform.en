@@ -13,7 +13,12 @@ When connecting to an advertising destination, your audiences are sent as IDs to
 
 Currently, Real-time CDP supports the advertising destinations listed below. For information on how to connect to these destinations, see the individual links:
 
+* [Awin Adveritising Conversion Tag (Experience Platform Launch extension)](/help/rtcdp/destinations/awin-conversiontag-extension.md)
 * [Awin Adveritising Mastertag (Experience Platform Launch extension)](/help/rtcdp/destinations/awin-mastertag-extension.md)
+* [Bing Ads Universal Event Tracking (Experience Platform Launch extension)](/help/rtcdp/destinations/bing-ads-extension.md)
+* [Branch (Experience Platform Launch extension)](/help/rtcdp/destinations/branch-extension.md)
+* [Facebook Pixel (Experience Platform Launch extension)](/help/rtcdp/destinations/facebook-pixel-extension.md)
+* [Flashtalking OneTag (Experience Platform Launch extension)](/help/rtcdp/destinations/flashtalking-extension.md)
 * [Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
 * [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
 * [Google Ads (Experience Platform Launch extension)](/help/rtcdp/destinations/google-ads-extension.md)
