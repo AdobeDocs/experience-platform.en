@@ -38,7 +38,7 @@ The Recipe Builder notebook allows you to run training and scoring runs inside t
 
 <!-- update this image -->
 
-![](../images/jupyterlab/create-recipe/notebook_launcher.png)
+![](../images/jupyterlab/create-recipe/recipe-builder.png)
 
 When you click on the Recipe Builder notebook from the launcher, the notebook will be opened in the tab. The template used in the notebook is the Python Retail Sales Forecasting Recipe which can also be found in [this public repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
@@ -96,7 +96,7 @@ Users must fill in the following variables before running training and scoring:
 
 To find the dataset and schema IDs, go to the Data Tab within notebooks on the left navigation bar (under the folder icon).
 
-![](../images/jupyterlab/create-recipe/data_tab.png)
+![](../images/jupyterlab/create-recipe/datasets.png)
 
 The same information can be found on [Adobe Experience Platform](https://platform.adobe.com/) under the **[Schema](https://platform.adobe.com/schema)** and **[Datasets](https://platform.adobe.com/dataset/overview)** tabs.
 
@@ -106,8 +106,6 @@ By default, the following configuration parameters are set for you when you acce
 - `ML_FRAMEWORK_IMS_TOKEN` 
 - `ML_FRAMEWORK_IMS_ML_TOKEN` 
 - `ML_FRAMEWORK_IMS_TENANT_ID` 
-
-
 
 ## Training data loader
 
@@ -295,7 +293,7 @@ The `load()` function in your scoring data loader should complete with the scori
 
 ### Pipeline file
 
-The `pipeline.py` file includes logic for training and scoring. We will go over both in the next two sections.
+The `pipeline.py` file includes logic for training and scoring. 
 
 ### Training 
 
@@ -461,9 +459,12 @@ For debugging purposes, if you wish to see the hidden output, add `debug` to the
 
 ## Create recipe
 
-When you are done editing the recipe and satisfied with the training/scoring output, you can create a recipe from the notebook by pressing **Create Recipe**. After pressing the button, you will be prompted to enter a recipe name. This name will represent the actual recipe created on Platform.
+When you are done editing the recipe and satisfied with the training/scoring output, you can create a recipe from the notebook by pressing **Create Recipe** in the top-right navigation. 
 
-<!-- update the ui screenshot here -->
+![](../images/jupyterlab/create-recipe/create-recipe.png)
+
+After pressing the button, you are prompted to enter a recipe name. This name represents the actual recipe created on Platform.
+
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
 Once you press **Ok** you will be able to navigate to the new recipe on [Adobe Experience Platform](https://platform.adobe.com/). You can click on the **View Recipes** button to take you to the **Recipes** tab under **ML Models**
