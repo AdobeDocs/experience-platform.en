@@ -458,14 +458,14 @@ A custom Data Science Workspace magic command for reading or writing a dataset f
 * **{action}**: The type of action to perform on the dataset. Two actions are available "read" or "write".
 * **--datasetId {id}**: Used to supply the id of the dataset to read or write. This is a required argument.
 * **--dataFrame {df}**: The pandas dataframe. This is a required argument.
-  - When the action is "read", {df} is the variable where results of the dataset read operation are available.
-  - When the action is "write", this dataframe {df} is written to the dataset.
+  * When the action is "read", {df} is the variable where results of the dataset read operation are available.
+  * When the action is "write", this dataframe {df} is written to the dataset.
 * **--mode (optional)**: Allowed parameters are "batch", and "interactive". By default the mode is set to "interactive". It is recommended to use "batch" mode when reading large amounts of data.
 
 **Examples**
 
-- **Read example**: `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
-- **Write example**: `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
+* **Read example**: `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
+* **Write example**: `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
 
 ### Query data using Query Service in Python
 
