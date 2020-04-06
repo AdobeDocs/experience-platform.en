@@ -36,8 +36,6 @@ The Recipe Builder notebook allows you to run training and scoring runs inside t
 
 >[!NOTE] The Recipe Builder notebook supports working with all file formats but currently the Create Recipe functionality only supports Python.
 
-<!-- update this image -->
-
 ![](../images/jupyterlab/create-recipe/recipe-builder.png)
 
 When you click on the Recipe Builder notebook from the launcher, the notebook will be opened in the tab. The template used in the notebook is the Python Retail Sales Forecasting Recipe which can also be found in [this public repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
@@ -48,7 +46,6 @@ You will notice that in the toolbar there are three additional actions namely â€
 
 ## Make edits to recipe files
 
-<!-- Databricks update to recipe needed -->
 To make edits to the recipe files, navigate to the cell in Jupyter corresponding to the file path. For example, if you want to make changes to `evaluator.py`, look for `%%writefile demo-recipe/evaluator.py`. 
 
 Start making necessary changes to the cell and when finished, simply run the cell. The `%%writefile filename.py` command will write the contents of the cell to the `filename.py`. You will have to manually run the cell for each file with changes.
@@ -147,8 +144,6 @@ df = pd.read_json(data)
 ```
 
 Now your data is in the dataframe object and can be analyzed and manipulated in the [next section](#data-preparation-and-feature-engineering).
-
-
 
 ### From Data Access SDK (Deprecated)
 
@@ -289,8 +284,6 @@ df.dropna(0, inplace=True)
 
 The `load()` function in your scoring data loader should complete with the scoring dataset as the output.
 
-
-
 ### Pipeline file
 
 The `pipeline.py` file includes logic for training and scoring. 
@@ -338,8 +331,6 @@ def train(configProperties, data):
 ```
 
 Notice that depending on your application, you will have arguments in your `GradientBoostingRegressor()` function. `xTrainingDataset` should contain your features used for training while `yTrainingDataset` should contain your labels.
-
-
 
 ### Scoring 
 
@@ -448,7 +439,6 @@ def save(configProperties, prediction):
     print(prediction)
 ```
 
-
 ## Training and scoring
 
 When you are done making changes to your notebook and want to train your recipe, you can click on the associated buttons at the top of the bar to creating a training run in the cell. Upon clicking the button, a log of commands and outputs from the training script will appear in the notebook (under the `evaluator.py` cell). Conda first installs all the dependencies, then the training is initiated.
@@ -469,12 +459,10 @@ After pressing the button, you are prompted to enter a recipe name. This name re
 
 Once you press **Ok** you will be able to navigate to the new recipe on [Adobe Experience Platform](https://platform.adobe.com/). You can click on the **View Recipes** button to take you to the **Recipes** tab under **ML Models**
 
-<!-- update the ui screenshot here -->
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
 Once the process is complete, the recipe will look something like this:
 
-<!-- update the ui screenshot here -->
 ![](../images/jupyterlab/create-recipe/recipe_details.png)
 
 >[!CAUTION]
