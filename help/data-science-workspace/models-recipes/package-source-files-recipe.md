@@ -31,8 +31,6 @@ A Docker image allows a developer to package up an application with all the part
 
 The built Docker image will be pushed to Azure Container Registry using credentials supplied to you during the recipe creation workflow.
 
->[!NOTE] Only source files written in **Python**, **R**, and **Tensorflow** require Azure Container Registry credentials.
-
 To obtain your Azure Container Registry credentials, log into <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>. On the left navigation column, navigate to **Workflows**. Select **Import Recipe from Source File**, and **Launch** a new import procedure. See the screen shot below for reference.
 
 ![](../images/models-recipes/package-source-files/workflow_ss.png)
@@ -49,9 +47,10 @@ Note the values for **Docker Host**, **Username**, and **Password**. These will 
 
 Once pushed, you and other users can access the image via URL. The **Source File** field will expect this URL as an input.
 
-### Binary based model authoring
+### Binary based model authoring (deprecated)
 
 For source files written in Scala or PySpark, a binary file will be generated. Building the binary file is as simple as running the provided build script.
+
 >[!NOTE] Only source files written in ScalaSpark or PySpark will generate a binary file upon running the build script.
 
 ### Package the source files
@@ -60,10 +59,12 @@ Start by obtaining the sample codebase found in the <a href="https://github.com/
 
 - [Build Python Docker image](#build-python-docker-image)
 - [Build R Docker image](#build-r-docker-image)
-- [Build PySpark binaries](#build-pyspark-binaries)
-- [Build Scala binaries](#build-scala-binaries)
+- [Build PySpark (Spark 2.4) Docker image](#build-pyspark-docker-image)
+- [Build Scala (Spark 2.4) Docker image](#build-scala-docker-image)
+- [Build PySpark (Spark 2.3) binaries (deprecated)](#build-pyspark-binaries)
+- [Build Scala (Spark 2.3) binaries (deprecated)](#build-scala-binaries)
 
-#### Build Python Docker image
+### Build Python Docker image
 
 If you have not done so, clone the github repository onto your local system with the following command:
 
@@ -92,7 +93,7 @@ Once the build script is complete, you are given a Docker source file URL in you
 
 Copy this URL and move on to the [next steps](#next-steps).
 
-#### Build R Docker image
+### Build R Docker image
 
 If you have not done so, clone the github repository onto your local system with the following command:
 
@@ -121,7 +122,90 @@ Once the build script is complete, you are given a Docker source file URL in you
 
 Copy this URL and move on to the [next steps](#next-steps).
 
-#### Build PySpark binaries
+### Build PySpark Docker image
+
+Start by cloning the github repository onto your local system with the following command:
+
+```shell
+git clone https://github.com/adobe/experience-platform-dsw-reference.git
+```
+
+Navigate to the directory `experience-platform-dsw-reference/recipes/pyspark/retail`. The scripts `login.sh` and `build.sh` are located here and used to log in to Docker and to build the  Docker image. If you have your [Docker credentials](#docker-based-model-authoring) ready, enter the following commands in order:
+
+```BASH
+# for logging in to Docker
+./login.sh
+ 
+# for building Docker image
+./build.sh
+```
+
+Note that when executing the login script, you will need to provide the Docker host, username, and password. When building, you are required to provide the Docker host and a version tag for the build.
+
+Once the build script is complete, you are given a Docker source file URL in your console output. For this specific example, it will look something like:
+
+```BASH
+# URL format: 
+{DOCKER_HOST}/ml-retailsales-pyspark:{VERSION_TAG}
+```
+
+Copy this URL and move on to the [next steps](#next-steps).
+
+### Build Scala Docker image
+
+Start by cloning the github repository onto your local system with the following command:
+
+```shell
+git clone https://github.com/adobe/experience-platform-dsw-reference.git
+```
+
+Navigate to the directory `experience-platform-dsw-reference/recipes/scala/retail`. Next, changes are required in the pom.xml file for dependencies.
+
+Change the model-authoring-sdk dependency version and add exclusions in the pom file.
+
+```json
+<groupId>com.adobe.platform.ml</groupId>
+<artifactId>authoring-sdk_2.11</artifactId>
+<version>1.0.0</version>
+<classifier>jar-with-dependencies</classifier>
+```
+
+Next, update the Spark version in the pom file to 2.4.3 and the Scala version to 2.11.12.
+
+Once you have finished updating the pom.xml file, in the same directory you can find the scripts `login.sh` and `build.sh`. You which use these to log in to Docker build the Docker image. If you have your [Docker credentials](#docker-based-model-authoring) ready, enter the following commands in order:
+
+```BASH
+# for logging in to Docker
+./login.sh
+ 
+# for building Docker image
+./build.sh
+```
+
+Note that when executing the login script, you will need to provide the Docker host, username, and password. When building, you are required to provide the Docker host and a version tag for the build.
+
+Once the build script is complete, you are given a Docker source file URL in your console output. For this specific example, it will look something like:
+
+```BASH
+# URL format: 
+{DOCKER_HOST}/ml-retailsales-spark:{VERSION_TAG}
+```
+
+Copy this URL and move on to the [next steps](#next-steps).
+
+## Next steps
+
+This tutorial went over packaging source files into a Recipe, the prerequisite step for importing a Recipe into Data Science Workspace. You should now have a Docker image in Azure Container Registry along with the corresponding image URL or a binary file stored locally in your file system. You are now ready to begin the tutorial on **Importing a packaged Recipe into Data Science Workspace**. Select one of the tutorial links below to get started.
+
+- [Import a packaged Recipe in the UI](./import-packaged-recipe-ui.md)
+- [Import a packaged Recipe using the API](./import-packaged-recipe-api.md)
+
+## Building binaries (deprecated)
+
+>[!CAUTION]
+> Binaries are not supported in new PySpark 3 (Spark 2.4) and Scala notebooks. Please follow the [Docker workflows](#docker-based-model-authoring) when working with PySpark 3 (Spark 2.4) and Scala. The following workflows are only applicable to Spark 2.3 recipes.
+
+### Build PySpark binaries (deprecated)
 
 If you have not done so, clone the github repository onto your local system with the following command:
 
@@ -140,7 +224,7 @@ The `.egg` file is generated in the `dist` folder.
 
 You can now move on to the [next steps](#next-steps).
 
-#### Build Scala binaries
+#### Build Scala binaries (deprecated)
 
 If you have not already done so, run the following command to clone the Github repository to your local system:
 
@@ -158,10 +242,3 @@ cd recipes/scala/
 The generated `.jar` artifact with dependencies is found in the `/target` directory.
 
 You can now move on to the [next steps](#next-steps).
-
-## Next steps
-
-This tutorial went over packaging source files into a Recipe, the prerequisite step for importing a Recipe into Data Science Workspace. You should now have a Docker image in Azure Container Registry along with the corresponding image URL or a binary file stored locally in your file system. You are now ready to begin the tutorial on **Importing a packaged Recipe into Data Science Workspace**. Select one of the tutorial links below to get started.
-
-- [Import a packaged Recipe in the UI](./import-packaged-recipe-ui.md)
-- [Import a packaged Recipe using the API](./import-packaged-recipe-api.md)
