@@ -1,19 +1,20 @@
 ---
-title: Google Ads extension
-seo-title: Google Ads extension
-description: The Google Ads extension is an advertising destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Google Ads extension is an advertising destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+title: Contentsquare extension
+seo-title: Contentsquare extension
+description: The Contentsquare extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The Contentsquare extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
-# Google Ads Destination
+# Contentsquare extension {#contentsquare-extension}
 
 ## Overview {#overview}
 
-This extension tracks conversions from users that click on your Google Ads. You will need to also install the gtag.js extension and add it to your library, as Google Ads depends on it.
+Visualize in-page behaviors, see WHY customers abandon and HOW you can improve. Attribute revenue to UX and content elements for each Analytics segment and Target test. Install the Contentsquare tag, setup custom variables and events. Start gathering data for your UX analysis in a few clicks.
 
-Google Ads is an advertising extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.101383.google-ads.html).
+Contentsquare is an analytics extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100364.html).
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-destinations.md).
+
 
 ## Prerequisites {#prerequisites}
 
@@ -23,7 +24,7 @@ To use this extension, you need access to Experience Platform Launch. Experience
 
 ## Install extension {#install-extension}
 
-To install the Google Ads extension:
+To install the Contentsquare extension:
 
 1. In the [Adobe Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations > Catalog]**.
 2. Select the extension from the catalog or use the search bar.
@@ -31,7 +32,7 @@ To install the Google Ads extension:
 4. In the **[!UICONTROL Select available Launch property]** window, select the Launch property in which you want to install the extension. You also have the option of creating a new property in Launch. A property is a collection of rules, data elements, configured extensions, environments, and libraries. Learn about properties in the [Properties page section](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) of the Launch documentation.
 5. The workflow takes you to Launch to complete the installation. 
 
-For information about the extension configuration options and installation support, see the [Google Ads page on Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.101383.google-ads.html).
+For information about the extension configuration options, see the [Contentsquare extension page](https://exchange.adobe.com/experiencecloud.details.100364.html) on Adobe Exchange.
 
 You can also install the extension directly in the [Experience Platform Launch interface](https://launch.adobe.com/). See [Add a new extension](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) in the Launch documentation.
 
@@ -51,9 +52,6 @@ You can configure, upgrade, and delete extensions in the Launch interface.
 >If the extension is already installed on one of your properties, the Adobe Real-time CDP UI still displays **[!UICONTROL Install]** for the extension. Kick off the installation workflow as described in [Install extension](#install-extension) to get to Launch and configure or delete your extension.
 
 To upgrade your extension, see [Extension upgrade](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/extension-upgrade.html) in the Launch documentation.
-
-
-
 
 
 

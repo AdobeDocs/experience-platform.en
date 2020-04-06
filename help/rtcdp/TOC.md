@@ -27,7 +27,12 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Adobe Campaign](destinations/adobe-campaign-destination.md)
     * Advertising destinations{#advertiser-destinations}
       * [Advertising destinations overview](destinations/advertising-destinations.md)
+      * [Awin Adveritising Conversion Tag (Experience Platform Launch extension)](/help/rtcdp/destinations/awin-conversiontag-extension.md)
       * [Awin Adveritising Mastertag (Experience Platform Launch extension)](/help/rtcdp/destinations/awin-mastertag-extension.md)
+      * [Beemray (Experience Platform Launch extension)](/help/rtcdp/destinations/beemray-extension.md)
+      * [Branch (Experience Platform Launch extension)](/help/rtcdp/destinations/branch-extension.md)
+      * [Facebook Pixel (Experience Platform Launch extension)](/help/rtcdp/destinations/facebook-pixel-extension.md)
+      * [Flashtalking OneTag (Experience Platform Launch extension)](/help/rtcdp/destinations/flashtalking-extension.md)
       * [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
       * [Google Ads (Experience Platform Launch extension)](/help/rtcdp/destinations/google-ads-extension.md)
       * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
@@ -36,6 +41,11 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Analytics destinations overview](destinations/analytics-destinations.md)
       * [Adobe Analytics (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-analytics-extension.md)
       * [Adobe Media Analytics for Audio and Video (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-video-analytics-extension.md)
+      * [Clicktale (Experience Platform Launch extension)](/help/rtcdp/destinations/clicktale-extension.md)
+      * [Contentsquare (Experience Platform Launch extension)](/help/rtcdp/destinations/contentsquare-extension.md)
+      * [Decibel (Experience Platform Launch extension)](/help/rtcdp/destinations/decibel-extension.md)
+      * [Demandbase (Experience Platform Launch extension)](/help/rtcdp/destinations/demandbase-extension.md)
+      * [Dialogtech (Experience Platform Launch extension)](/help/rtcdp/destinations/dialogtech-extension.md)
       * [Google Global Site Tag analytics (Experience Platform Launch extension)](/help/rtcdp/destinations/gtag-analytics-extension.md)
     * Cloud storage destinations{#cloud-storage}
       * [Cloud storage destinations overview](destinations/cloud-storage-destinations.md)
@@ -59,6 +69,7 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Personalization destinations overview](/help/rtcdp/destinations/personalization-destinations.md)
       * [Adobe Target (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-target-extension.md)
       * [Adobe Target v2 (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-target-v2-extension.md)
+      * [Beemray (Experience Platform Launch extension)](/help/rtcdp/destinations/beemray-extension.md)
       * [Gainsight (Experience Platform Launch extension)](/help/rtcdp/destinations/gainsight-extension.md)
     * Social network destinations{#social-network-destinations}
       * [Social network destinations overview](/help/rtcdp/destinations/social-network-destinations.md)
@@ -66,6 +77,7 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Facebook destination](/help/rtcdp/destinations/facebook-destination.md)
     * Survey destinations {#surveys}
       * [Survey destinations overview](/help/rtcdp/destinations/survey-destinations.md)
+      * [Foresee (Experience Platform Launch extension)](/help/rtcdp/destinations/foresee-extension.md)
     * Voice of the customer destinations {#voice-of-customer-destinations}
       * [Voice of the customer destinations overview](/help/rtcdp/destinations/voice-of-customer-destinations.md)
       * [Confirmit Digital Feedback (Experience Platform Launch extension)](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)

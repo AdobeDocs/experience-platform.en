@@ -13,4 +13,5 @@ Currently, Adobe Real-time CDP supports the personalization destinations listed 
 
 * [Adobe Target (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-target-extension.md)
 * [Adobe Target v2 (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-target-v2-extension.md)
+* [Beemray (Experience Platform Launch extension)](/help/rtcdp/destinations/beemray-extension.md)
 * [Gainsight (Experience Platform Launch extension)](/help/rtcdp/destinations/gainsight-extension.md)
