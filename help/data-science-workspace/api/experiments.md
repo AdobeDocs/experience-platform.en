@@ -124,7 +124,7 @@ A successful response returns a payload containing the details of the newly crea
 
 ## Retrieve a list of Experiments
 
-You can retrieve a list of Experiments belonging to a particular MLInstance by performing a single GET request and providing a valid MLInstance ID as a query parameter. For a list of available queries, refer to the appendix section on [query parameters for asset retrieval](appendix.md#query).
+You can retrieve a list of Experiments belonging to a particular MLInstance by performing a single GET request and providing a valid MLInstance ID as a query parameter. For a list of available queries, refer to the appendix section on [query parameters for asset retrieval](./appendix.md#query).
 
 
 **API Format**
@@ -234,7 +234,7 @@ A successful response returns a payload containing the details of the requested 
 
 ## Retrieve a list of Experiment runs
 
-You can retrieve a list of training or scoring runs belonging to a particular Experiment by performing a single GET request and providing a valid Experiment ID. To help filter results, you can specify query parameters in the request path. For a complete list of available query parameters, see the appendix section on [query parameters for asset retrieval](appendix.md#query).
+You can retrieve a list of training or scoring runs belonging to a particular Experiment by performing a single GET request and providing a valid Experiment ID. To help filter results, you can specify query parameters in the request path. For a complete list of available query parameters, see the appendix section on [query parameters for asset retrieval](./appendix.md#query).
 
 >[!NOTE] When combining multiple query parameters, they must be separated by ampersands (&).
 
@@ -249,7 +249,7 @@ GET /experiments/{EXPERIMENT_ID}/runs?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAM
 | Parameter | Description |
 | --- | --- |
 | `{EXPERIMENT_ID}` | A valid Experiment ID. |
-| `{QUERY_PARAMETER}` | One of the [available query parameters](appendix.md#query) used to filter results. |
+| `{QUERY_PARAMETER}` | One of the [available query parameters](./appendix.md#query) used to filter results. |
 | `{VALUE}` | The value for the preceding query parameter. |
 
 **Request**

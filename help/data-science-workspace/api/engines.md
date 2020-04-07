@@ -187,7 +187,7 @@ A successful response returns a payload containing the details of the newly crea
 
 ## Create a feature pipeline Engine using binary artifacts
 
-You can create a feature pipeline Engine using local `.jar` or `.egg` binary artifacts by performing a POST request while providing its meta data and the artifact's paths in multipart forms. A PySpark or Spark Engine has the ability to specify computation resources such as the number of cores or the amount of memory. Please refer to the appendix section on [PySpark and Spark resource configurations](appendix.md#resource-config) for more information.
+You can create a feature pipeline Engine using local `.jar` or `.egg` binary artifacts by performing a POST request while providing its meta data and the artifact's paths in multipart forms. A PySpark or Spark Engine has the ability to specify computation resources such as the number of cores or the amount of memory. Please refer to the appendix section on [PySpark and Spark resource configurations](./appendix.md#resource-config) for more information.
 
 **API Format**
 
@@ -253,7 +253,7 @@ A successful response returns a payload containing the details of the newly crea
 
 ## Retrieve a list of Engines
 
-You can retrieve a list of Engines by performing a single GET request. To help filter results, you can specify query parameters in the request path. For a list of available queries, refer to the appendix section on [query parameters for asset retrieval](appendix.md#query).
+You can retrieve a list of Engines by performing a single GET request. To help filter results, you can specify query parameters in the request path. For a list of available queries, refer to the appendix section on [query parameters for asset retrieval](./appendix.md#query).
 
 **API Format**
 

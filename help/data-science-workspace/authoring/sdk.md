@@ -241,7 +241,7 @@ The following table describes the abstract methods of a Spark Data Saver class:
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">save(configProperties, sparkSession)</code></p>
+                <p><code class=" language-undefined">save(configProperties, dataFrame)</code></p>
                 <p>Receive output data as a DataFrame and stores it in a Platform dataset</p>
             </td>
             <td>
