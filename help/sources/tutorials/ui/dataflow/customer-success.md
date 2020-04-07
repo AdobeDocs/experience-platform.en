@@ -132,7 +132,7 @@ When a dataflow is created, it immediately becomes active and ingests data accor
 
 Within the *authenticaton* screen, select the name of the account that's associated with the dataflow you wish to disable.
 
-![](../../../../ingestion/quality/monitor.png)
+![](../../../images/tutorials/dataflow/customer-success/monitor.png)
 
 The _Source activity_ page appears. Select the active dataflow from the list to open its *Properties* column on the right-hand side of the screen, which contains an **Enabled** toggle button. Click the toggle to disable the dataflow. The same toggle can be used to re-enable a dataflow after it has been disabled.
 
