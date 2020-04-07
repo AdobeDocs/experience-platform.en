@@ -10,7 +10,45 @@ author: ens71067
 
 ## Release date: April 8, 2020
 
-## Access control
+## Privacy Service
+
+New legal and organizational regulations are giving users the right to access or delete their personal data from your data stores upon request. Adobe Experience Platform Privacy Service provides a RESTful API and user interface to help you manage these data requests from your customers. With Privacy Service, you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| PDPA support | Privacy requests can now be created and tracked under the Personal Data Protection Act (PDPA) in Thailand. When making privacy requests in the API, the `regulation` array accepts the value "pdpa_tha". |
+| Namespace types in the UI | You can now specify different namespace types in the Request Builder in the Privacy Service UI. See the [user guide](../../privacy-service/ui/user-guide.md) for more information. |
+| Old endpoint deprecation | The old API endpoint (`data/privacy/gdpr`) has been deprecated. |
+
+Known issues
+
+* None
+
+For more information about Privacy Service, please start by reading the [Privacy Service overview](../../privacy-service/home.md).
+
+## Sources
+
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third party software, and your CRM system.
+
+Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
+
+### New features
+
+| Feature | Description |
+| ------- | ----------- |
+| API and UI support for databases | New source connectors for Apache Spark (on HDInsights), Azure Synapse Analytics, Azure Table Storage, Hive (on HDInsights), and Phoenix. |
+| API and UI support for payments-based applications| New source connectors for PayPal. |
+| API and UI support for protocols-based applications | New source connectors for Generic OData. |
+
+### Known issues
+
+* None
+
+For more information about sources, see the [sources overview](../../source-connectors/home.md).
+
+<!-- ## Access control
 
 Experience Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) product profiles to link users with permissions and sandboxes. Permissions control access to a variety of Platform capabilities, including data modeling, profile management, and sandbox administration.
 
@@ -36,4 +74,4 @@ Experience Platform is built to enrich digital experience applications on a glob
 |Sandbox switcher | In the Experience Platform user interface, the sandbox switcher in the top-left corner of the screen allows you to switch between available sandboxes through a dropdown menu.|
 |`x-sandbox-name` header | All calls to Experience Platform APIs must now include the new `x-sandbox-name` header, whose value references the `name` attribute of the sandbox the operation will take place in.|
 
-For more information, please see the [sandboxes overview](../../sandboxes/home.md).
+For more information, please see the [sandboxes overview](../../sandboxes/home.md). -->

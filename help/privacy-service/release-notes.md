@@ -9,16 +9,26 @@ topic: release notes
 
 This document contains information about new features for Adobe Experience Platform Privacy Service, as well as enhancements and significant bug fixes.
 
+## April 8, 2020
+
+### New features
+
+| Feature | Description |
+| --- | --- |
+| PDPA support | Privacy requests can now be created and tracked under the Personal Data Protection Act (PDPA) in Thailand. When making privacy requests in the API, the `regulation` array accepts the value "pdpa_tha". |
+| Namespace types in the UI | You can now specify different namespace types in the Request Builder in the Privacy Service UI. See the [user guide](ui/user-guide.md) for more information. |
+| Old endpoint deprecation | The old API endpoint (`data/privacy/gdpr`) has been deprecated. |
+
 ## January 14, 2020
 
 ### New features
 
-Feature | Description
---- | ---
-Privacy Service rebranding | The formerly named "GDPR Service" has been rebranded to Privacy Service as the service has grown to support other regulations in addition to GDPR.
-New API endpoints | Base path for the Privacy Service API has been updated from `/data/privacy/gdpr` to `/data/core/privacy/jobs`
-New required `regulation` property | When creating new jobs in the Privacy Service API, a `regulation` property must be supplied in the request payload to indicate which regulation to track the job under. Accepted values are `gdpr` and `ccpa`. See the document on [privacy jobs](api/privacy-jobs.md) in the Privacy Service developer guide for more information.
-Support for Adobe Primetime Authentication | Privacy Service now accepts access/delete requests from Adobe Primetime Authentication, using `primetimeAuthentication` as its product value. See the [Primetime Authentication documentation](http://tve.helpdocsonline.com/how-to-make-a-privacy-request) for more information.
+| Feature | Description |
+| --- | --- |
+| Privacy Service rebranding | The formerly named "GDPR Service" has been rebranded to Privacy Service as the service has grown to support other regulations in addition to GDPR. |
+| New API endpoints | Base path for the Privacy Service API has been updated from `/data/privacy/gdpr` to `/data/core/privacy/jobs` |
+| New required `regulation` property | When creating new jobs in the Privacy Service API, a `regulation` property must be supplied in the request payload to indicate which regulation to track the job under. Accepted values are `gdpr` and `ccpa`. See the document on [privacy jobs](api/privacy-jobs.md) in the Privacy Service developer guide for more information. |
+| Support for Adobe Primetime Authentication | Privacy Service now accepts access/delete requests from Adobe Primetime Authentication, using `primetimeAuthentication` as its product value. See the [Primetime Authentication documentation](http://tve.helpdocsonline.com/how-to-make-a-privacy-request) for more information. |
 
 ### Enhancements
 
@@ -30,11 +40,11 @@ Support for Adobe Primetime Authentication | Privacy Service now accepts access/
 
 ### New features
 
-Feature | Description
---- | ---
-Request Metrics Dashboard | The new metrics dashboard in the Privacy Service UI provides visibility into submitted, errored, and completed GDPR requests. 
-Request Builder | To service organizations with both technical and non-technical users submitting GDPR requests, a “Create Request” functionality has been added to the UI. The JSON file submission capability is still available in the Privacy Service UI for those organizations who prefer to continue using it.
-GDPR Job Event Notifications | Event notifications about GDPR job statuses are a critical element to many workflows. While notifications were previously served using individual email notices, GDPR event notifications are messages that leverage Adobe I/O events, which are sent to a configured webhook facilitating job request automation. Privacy Service UI users can subscribe to Adobe I/O GDPR events to receive updates when a product or the GDPR job has been completed.
+| Feature | Description |
+| --- | --- |
+| Request Metrics Dashboard | The new metrics dashboard in the Privacy Service UI provides visibility into submitted, errored, and completed GDPR requests.  |
+| Request Builder | To service organizations with both technical and non-technical users submitting GDPR requests, a “Create Request” functionality has been added to the UI. The JSON file submission capability is still available in the Privacy Service UI for those organizations who prefer to continue using it. |
+| GDPR Job Event Notifications | Event notifications about GDPR job statuses are a critical element to many workflows. While notifications were previously served using individual email notices, GDPR event notifications are messages that leverage Adobe I/O events, which are sent to a configured webhook facilitating job request automation. Privacy Service UI users can subscribe to Adobe I/O GDPR events to receive updates when a product or the GDPR job has been completed. |
 
 ## April 18, 2019
 

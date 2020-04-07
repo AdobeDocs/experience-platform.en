@@ -38,7 +38,7 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
-> [!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+>[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
@@ -48,7 +48,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 This workflow begins by accessing a known audience segment. Segments that are enabled for use in Real-time Customer Profile contain a merge policy ID within their segment definition. This merge policy contains information about which datasets are to be included in the segment, which in turn contain any applicable data usage labels.
 
-Using the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml), you can lookup a segment definition by its ID to find its associated merge policy.
+Using the [Segmentation API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml), you can lookup a segment definition by its ID to find its associated merge policy.
 
 **API format**
 
@@ -249,7 +249,7 @@ A successful response returns a list of data usage labels associated with the da
 
 ## Filter data fields
 
-> [!NOTE] This step is optional. If you do not wish to adjust the data included in your segment based on your findings in the previous step of [looking up data usage labels](#lookup-data-usage-labels-for-the-source-datasets), you can skip ahead to the final step of [evaluating the data for policy violations](#evaluate-data-for-policy-violations).
+>[!NOTE] This step is optional. If you do not wish to adjust the data included in your segment based on your findings in the previous step of [looking up data usage labels](#lookup-data-usage-labels-for-the-source-datasets), you can skip ahead to the final step of [evaluating the data for policy violations](#evaluate-data-for-policy-violations).
 
 If you wish to adjust the data included in your audience segment, you can do so using one of the following two methods:
 

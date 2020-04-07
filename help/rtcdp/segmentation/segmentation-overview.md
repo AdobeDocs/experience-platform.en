@@ -21,4 +21,4 @@ Platform allows you to easily create and access segments, as well as use differe
 
 ## Next steps
 
-After reading this overview, you should now understand how Real-time CDP utilizes Segmentation Service to enhance customization and personalization of marketing campaigns. For more information about the Segmentation Service, please read the [Segmentation documentation on Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md).
+After reading this overview, you should now understand how Real-time CDP utilizes Segmentation Service to enhance customization and personalization of marketing campaigns. For more information about the Segmentation Service, please read the [Segmentation documentation](../../segmentation/home.md).

@@ -11,4 +11,4 @@ Real-time Customer Data Platform (Real-time CDP) allows you to bring data from m
 
 Real-time CDP is built on top of Adobe Experience Platform and utilizes many of the Experience Platform services and functionalities. Thus, you can be confident that your data will be checked and validated as it is ingested.
 
-For more detailed information about data quality, please read the [data quality documentation on Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/data-ingestion/data-ingestion-services.html#!api-specification/markdown/narrative/technical_overview/data_ingestion_quality/data_ingestion_quality.md).
+For more detailed information about data quality, please read the [data quality documentation on Adobe I/O](../../ingestion/quality/overview.md).
