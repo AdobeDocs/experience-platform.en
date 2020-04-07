@@ -95,6 +95,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [MariaDB connector](tutorials/ui/create/databases/mariadb.md)
       - [Microsoft SQL Server connector](tutorials/ui/create/databases/sql-server.md)
       - [MySQL connector](tutorials/ui/create/databases/mysql.md)
+      - [Phoenix connector](tutorials/ui/create/databases/phoenix.md)
       - [PostgreSQL connector](tutorials/ui/create/databases/postgres.md)
     - Marketing automation {#marketing-automation}
       - [HubSpot connector](tutorials/ui/create/marketing-automation/hubspot.md)
