@@ -10,7 +10,25 @@ author: ens71067
 
 ## Release date: April 8, 2020
 
-## Access control
+## Privacy Service
+
+New legal and organizational regulations are giving users the right to access or delete their personal data from your data stores upon request. Adobe Experience Platform Privacy Service provides a RESTful API and user interface to help you manage these data requests from your customers. With Privacy Service, you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| PDPA support | Privacy requests can now be created and tracked under the Personal Data Protection Act (PDPA) in Thailand. When making privacy requests in the API, the `regulation` array accepts the value "pdpa_tha". |
+| Namespace types in the UI | You can now specify different namespace types in the Request Builder in the Privacy Service UI. See the [user guide](../../privacy-service/ui/user-guide.md) for more information. |
+| Old endpoint deprecation | The old API endpoint (`data/privacy/gdpr`) has been deprecated. |
+
+Known issues
+
+* None
+
+For more information about Privacy Service, please start by reading the [Privacy Service overview](../../privacy-service/home.md).
+
+<!-- ## Access control
 
 Experience Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) product profiles to link users with permissions and sandboxes. Permissions control access to a variety of Platform capabilities, including data modeling, profile management, and sandbox administration.
 
@@ -36,4 +54,4 @@ Experience Platform is built to enrich digital experience applications on a glob
 |Sandbox switcher | In the Experience Platform user interface, the sandbox switcher in the top-left corner of the screen allows you to switch between available sandboxes through a dropdown menu.|
 |`x-sandbox-name` header | All calls to Experience Platform APIs must now include the new `x-sandbox-name` header, whose value references the `name` attribute of the sandbox the operation will take place in.|
 
-For more information, please see the [sandboxes overview](../../sandboxes/home.md).
+For more information, please see the [sandboxes overview](../../sandboxes/home.md). -->
