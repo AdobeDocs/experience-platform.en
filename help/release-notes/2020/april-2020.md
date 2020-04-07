@@ -45,6 +45,26 @@ Known issues
 
 For more information about Privacy Service, please start by reading the [Privacy Service overview](../../privacy-service/home.md).
 
+## Sources
+
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third party software, and your CRM system.
+
+Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
+
+### New features
+
+| Feature | Description |
+| ------- | ----------- |
+| API and UI support for databases | New source connectors for Apache Spark (on HDInsights), Azure Synapse Analytics, Azure Table Storage, Hive (on HDInsights), and Phoenix. |
+| API and UI support for payments-based applications| New source connectors for PayPal. |
+| API and UI support for protocols-based applications | New source connectors for Generic OData. |
+
+### Known issues
+
+* None
+
+For more information about sources, see the [sources overview](../../source-connectors/home.md).
+
 <!-- ## Access control
 
 Experience Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) product profiles to link users with permissions and sandboxes. Permissions control access to a variety of Platform capabilities, including data modeling, profile management, and sandbox administration.
