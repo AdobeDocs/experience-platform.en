@@ -57,7 +57,7 @@ The _Select schema_ dialog appears. Select the schema you wish to apply to the n
 
 ![select-schema](../../../images/tutorials/dataflow/crm/select-schema.png)
 
-Based on your needs, you can choose to map fields directly, or use mapper functions to transform source data to derive computed or calculated values. For more information on data mapping and mapper functions, refer to the tutorial on [mapping CSV data to XDM schema fields](./../../../../tutorials/map-csv-to-xdm/map-csv-to-xdm.md#map-csv-fields-to-xdm-schema-fields).
+Based on your needs, you can choose to map fields directly, or use mapper functions to transform source data to derive computed or calculated values. For more information on data mapping and mapper functions, refer to the tutorial on [mapping CSV data to XDM schema fields](../../../../ingestion/tutorials/map-a-csv-file.md).
 
 Once your source data is mapped, click **Next**.
 
