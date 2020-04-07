@@ -30,6 +30,23 @@ The DULE framework simplifies and streamlines the process of categorizing data a
 
 For more information, please see the [Data Governance overview](../../data-governance/home.md).
 
+## Intelligent Services
+
+Intelligent Services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company's needs using business-level configurations without the need for data science expertise. Additionally, marketing practitioners can activate predictions in Adobe Experience Cloud, Adobe Experience Platform, and 3rd party applications.
+
+**Key features**
+
+|Feature|Description|
+|---|---|
+| Customer AI | Customer AI provides marketers with the power to generate customer predictions at the individual level with explanations. With the help of influential factors, Customer AI can tell you what a customer is likely to do and why. Additionally, marketers can benefit from Customer AI predictions and insights to personalize customer experiences by serving the most appropriate offers and messaging. |
+| Attribution AI | Attribution AI is a multi-channel, algorithmic attribution service that calculates the influence and incremental impact of customer interactions against specified outcomes. With Attribution AI, marketers can measure and optimize marketing and advertising spend by understanding the impact of every individual customer interaction across each phase of the customers’ journeys.|
+
+**Known issues**
+
+* No known issues currently.
+
+For more information on Intelligent Services and what it has to offer, see the [Intelligent Services overview](../../intelligent-services/home.md). 
+
 ## Privacy Service
 
 New legal and organizational regulations are giving users the right to access or delete their personal data from your data stores upon request. Adobe Experience Platform Privacy Service provides a RESTful API and user interface to help you manage these data requests from your customers. With Privacy Service, you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
@@ -48,30 +65,22 @@ Known issues
 
 For more information about Privacy Service, please start by reading the [Privacy Service overview](../../privacy-service/home.md).
 
-<!-- ## Access control
+## Sources
 
-Experience Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) product profiles to link users with permissions and sandboxes. Permissions control access to a variety of Platform capabilities, including data modeling, profile management, and sandbox administration.
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third party software, and your CRM system.
 
-### Key features
+Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
-|Feature | Description|
-|--- | ---|
-|Permissions | In the Admin Console, the _Permissions_ tab within a Platform product profile allows you customize which Platform capabilities are available for the users attached to that profile. Available permission categories include: Data Modeling, Data Management, Profile Management, Identities, Data Monitoring, Sandbox Administration, Destinations, Sources.|
-|Access to sandboxes | The _Permissions_ tab within a Platform product profile can grant users access to specific sandboxes. See the section on [sandboxes](#sandboxes) below for more information.|
+### New features
 
-For more information, please see the [access control overview](../../access-control/home.md).
+| Feature | Description |
+| ------- | ----------- |
+| API and UI support for databases | New source connectors for Apache Spark (on HDInsights), Azure Synapse Analytics, Azure Table Storage, Hive (on HDInsights), and Phoenix. |
+| API and UI support for payments-based applications| New source connectors for PayPal. |
+| API and UI support for protocols-based applications | New source connectors for Generic OData. |
 
-## Sandboxes
+### Known issues
 
-Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance. In order to address this need, Experience Platform provides sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* None
 
-### Key features
-
-|Feature | Description|
-|--- | ---|
-|Production sandbox | Experience Platform provides a single production sandbox, which cannot be deleted or reset.|
-|Non-production sandboxes | Multiple non-production sandboxes can be created for a single Platform instance, allowing you to test features, run experiments, and make custom configurations without impacting your production sandbox.|
-|Sandbox switcher | In the Experience Platform user interface, the sandbox switcher in the top-left corner of the screen allows you to switch between available sandboxes through a dropdown menu.|
-|`x-sandbox-name` header | All calls to Experience Platform APIs must now include the new `x-sandbox-name` header, whose value references the `name` attribute of the sandbox the operation will take place in.|
-
-For more information, please see the [sandboxes overview](../../sandboxes/home.md). -->
+For more information about sources, see the [sources overview](../../source-connectors/home.md).
