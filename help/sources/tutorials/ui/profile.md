@@ -13,12 +13,12 @@ Inbound data from your source connector can be used towards enriching and popula
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
--   [Experience Data Model (XDM) System](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-    -   [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-    -   [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
--   [Real-time Customer Profile](../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+-   [Experience Data Model (XDM) System](../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+    -   [Basics of schema composition](../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
+    -   [Schema Editor tutorial](../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
+-   [Real-time Customer Profile](../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
-Additionally, this tutorial requires that you have already created and configured a source connector.  A list of tutorials for creating different connectors in the UI can be found in the [source connectors overview](../../../home.md).
+Additionally, this tutorial requires that you have already created and configured a source connector.  A list of tutorials for creating different connectors in the UI can be found in the [source connectors overview](../../home.md).
 
 ## Populate your Real-time Customer Profile data
 
