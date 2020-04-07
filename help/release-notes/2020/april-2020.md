@@ -30,6 +30,24 @@ The DULE framework simplifies and streamlines the process of categorizing data a
 
 For more information, please see the [Data Governance overview](../../data-governance/home.md).
 
+## Privacy Service
+
+New legal and organizational regulations are giving users the right to access or delete their personal data from your data stores upon request. Adobe Experience Platform Privacy Service provides a RESTful API and user interface to help you manage these data requests from your customers. With Privacy Service, you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| PDPA support | Privacy requests can now be created and tracked under the Personal Data Protection Act (PDPA) in Thailand. When making privacy requests in the API, the `regulation` array accepts the value "pdpa_tha". |
+| Namespace types in the UI | You can now specify different namespace types in the Request Builder in the Privacy Service UI. See the [user guide](../../privacy-service/ui/user-guide.md) for more information. |
+| Old endpoint deprecation | The old API endpoint (`data/privacy/gdpr`) has been deprecated. |
+
+Known issues
+
+* None
+
+For more information about Privacy Service, please start by reading the [Privacy Service overview](../../privacy-service/home.md).
+
 <!-- ## Access control
 
 Experience Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) product profiles to link users with permissions and sandboxes. Permissions control access to a variety of Platform capabilities, including data modeling, profile management, and sandbox administration.
