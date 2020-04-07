@@ -89,7 +89,9 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - Databases {#databases}
       - [Amazon Redshift connector](tutorials/ui/create/databases/redshift.md)
       - [Azure Synapse Analytics connector](tutorials/ui/create/databases/synapse-analytics.md)
+      - [Azure Table Storage connector](tutorials/ui/create/databases/ats.md)
       - [Google Big Query connector](tutorials/ui/create/databases/bigquery.md)
+      - [Hive connector](tutorials/ui/create/databases/hive.md)
       - [MariaDB connector](tutorials/ui/create/databases/mariadb.md)
       - [Microsoft SQL Server connector](tutorials/ui/create/databases/sql-server.md)
       - [MySQL connector](tutorials/ui/create/databases/mysql.md)
