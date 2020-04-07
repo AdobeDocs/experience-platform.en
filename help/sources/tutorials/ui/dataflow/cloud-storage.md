@@ -32,8 +32,8 @@ Experience Platform supports the following file formats to be ingested from exte
 
 After creating your cloud storage connector, the *Select data* step appears, providing an interactive interface for you to explore your cloud storage hierarchy.
 
-- The left half of the interface is a directory browser, displaying your server's files and directories.
-- The right half of the interface lets you preview up to 100 rows of data from a compatible file.
+* The left half of the interface is a directory browser, displaying your server's files and directories.
+* The right half of the interface lets you preview up to 100 rows of data from a compatible file.
 
 Clicking a listed folder allows you to traverse the folder hierarchy into deeper folders. Once you have a compatible file or folder selected, the **Select data format** dropdown appears, where you can choose a format to display the data in the preview window.
 
@@ -106,9 +106,9 @@ Provide values for the dataflow and click **Next**.
 
 The *Review* step appears, allowing you to review your new dataflow before it is created. Details are grouped within the following categories:
 
-- *Source details*: Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
-- *Target details*: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
-- *Schedule details*: Shows the active period, frequency, and interval of the ingestion schedule.
+* *Source details*: Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
+* *Target details*: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
+* *Schedule details*: Shows the active period, frequency, and interval of the ingestion schedule.
 
 Once you have reviewed your dataflow, click **Finish** and allow some time for the dataflow to be created.
 
