@@ -38,8 +38,9 @@ This tutorial requires you to have completed the [Authentication to Adobe Experi
 ## Create an Engine
 
 Depending on the form of the packaged Recipe file to be included as a part of the API request, an Engine is created through one of two ways:
--   [Create an Engine with a binary artifact (deprecated)](#create-an-engine-with-a-binary-artifact-deprecated)
+
 -   [Create an Engine with a Docker URL](#create-an-engine-with-a-docker-url)
+-   [Create an Engine with a binary artifact (deprecated)](#create-an-engine-with-a-binary-artifact-deprecated)
 
 ### Create an Engine with a Docker URL
 
@@ -63,6 +64,7 @@ curl -X POST \
     -H 'X-API-KEY: {API_KEY}' \
     -H 'content-type: multipart/form-data' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H `x-sandbox-name: {SANDBOX_NAME}` \
     -F 'engine={
         "name": "Retail Sales Engine Python",
         "description": "A description for Retail Sales Engine, this Engines execution type is Python",
@@ -202,7 +204,7 @@ You have created an Engine using the API and a unique Engine identifier was obta
 <!-- Will need to remove binary artifact documentation once the old flags are turned off -->
 
 >[!CAUTION]
-> Binary artifacts are used in PySpark 3 (Spark 2.3 - deprecated) and Spark (Spark 2.3 - deprecated). JupyterLab Notebooks now provides Pyspark 3 (Spark 2.4) and Scala (Spark 2.4). With this update, all engines can now be made using a Docker URL. See the [Docker URL section](#create-an-engine-with-a-docker-url) of this document. Binary artifacts are set to be removed in a subsequent release.
+> Binary artifacts are used in old PySpark and Spark recipes. Data Science Workspace now supports Docker URLs for all recipes. With this update, all engines are now made using a Docker URL. See the [Docker URL section](#create-an-engine-with-a-docker-url) of this document. Binary artifacts are set to be removed in a subsequent release.
 
 In order to create an Engine using a local packaged `.jar` or `.egg` binary artifact, you must provide the absolute path to the binary artifact file in your local file system. Consider navigating to the directory containing the binary artifact in a Terminal environment, and execute the `pwd` Unix command for the absolute path.
 
