@@ -10,6 +10,23 @@ author: ens71067
 
 ## Release date: April 8, 2020
 
+## Intelligent Services
+
+Intelligent Services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company's needs using business-level configurations without the need for data science expertise. Additionally, marketing practitioners can activate predictions in Adobe Experience Cloud, Adobe Experience Platform, and 3rd party applications.
+
+**Key features**
+
+|Feature|Description|
+|---|---|
+| Customer AI | Customer AI provides marketers with the power to generate customer predictions at the individual level with explanations. With the help of influential factors, Customer AI can tell you what a customer is likely to do and why. Additionally, marketers can benefit from Customer AI predictions and insights to personalize customer experiences by serving the most appropriate offers and messaging. |
+| Attribution AI | Attribution AI is a multi-channel, algorithmic attribution service that calculates the influence and incremental impact of customer interactions against specified outcomes. With Attribution AI, marketers can measure and optimize marketing and advertising spend by understanding the impact of every individual customer interaction across each phase of the customers’ journeys.|
+
+**Known issues**
+
+* No known issues currently.
+
+For more information on Intelligent Services and what it has to offer, see the [Intelligent Services overview](../../intelligent-services/home.md). 
+
 ## Privacy Service
 
 New legal and organizational regulations are giving users the right to access or delete their personal data from your data stores upon request. Adobe Experience Platform Privacy Service provides a RESTful API and user interface to help you manage these data requests from your customers. With Privacy Service, you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
