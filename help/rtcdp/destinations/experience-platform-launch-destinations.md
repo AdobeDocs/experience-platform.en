@@ -45,10 +45,10 @@ Launch extensions enable you to satisfy various customer use cases. Some example
 Launch extensions can fall under the following categories in Adobe Real-time CDP:
 
 * [Advertising](/help/rtcdp/destinations/advertising-destinations.md)
-* Analytics
-* CRM
-* Data Management Platform
-* Email marketing destinations
+* [Analytics](/help/rtcdp/destinations/analytics-destinations.md)
+* [CRM](/help/rtcdp/destinations/crm-destinations.md)
+* [Data Management Platform](/help/rtcdp/destinations/dmp-destinations.md)
+* [Email marketing destinations](/help/rtcdp/destinations/email-marketing-destinations.md)
 * [Personalization](/help/rtcdp/destinations/personalization-destinations.md)
-* Surveys
-* Voice of the customer
+* [Surveys](/help/rtcdp/destinations/survey-destinations.md)
+* [Voice of the customer](/help/rtcdp/destinations/voice-of-customer-destinations.md)

@@ -1,17 +1,17 @@
 ---
-title: Foresee extension
-seo-title: Foresee extension
-description: The Foresee extension is a survey destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+title: Invoca Tags extension
+seo-title: Invoca Tags extension
+description: The Invoca Tags extension is a CRM destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 seo-description: 
 ---
 
-# Foresee extension {#foresee-extension}
+# Invoca Tags extension {#invoca-extension}
 
 ## Overview {#overview}
 
-Configure ForeSee product deployments using Experience Platform Launch.
+Invoca brings call data and voice insights into the digital customer journey. With Invoca’s call intelligence platform, marketers finally have analytics to measure call outcomes and tie offline conversions back to digital spend.
 
-Foresee is a survey extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100164.html).
+Invoca Tags is a CRM extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100067.invoca.html).
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-destinations.md).
 
@@ -23,7 +23,7 @@ To use this extension, you need access to Experience Platform Launch. Experience
 
 ## Install extension {#install-extension}
 
-To install the Foresee extension:
+To install the Invoca Tags extension:
 
 1. In the [Adobe Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations > Catalog]**.
 2. Select the extension from the catalog or use the search bar.
@@ -31,7 +31,7 @@ To install the Foresee extension:
 4. In the **[!UICONTROL Select available Launch property]** window, select the Launch property in which you want to install the extension. You also have the option of creating a new property in Launch. A property is a collection of rules, data elements, configured extensions, environments, and libraries. Learn about properties in the [Properties page section](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) of the Launch documentation.
 5. The workflow takes you to Launch to complete the installation. 
 
-For information about the extension configuration options, see the [Foresee extension page](https://exchange.adobe.com/experiencecloud.details.100164.html) on Adobe Exchange.
+For information about the extension configuration options and installation support, see the [Invoca Tags page on Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100067.invoca.html).
 
 You can also install the extension directly in the [Experience Platform Launch interface](https://launch.adobe.com/). See [Add a new extension](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) in the Launch documentation.
 
