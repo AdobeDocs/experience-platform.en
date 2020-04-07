@@ -19,7 +19,7 @@ New legal and organizational regulations are giving users the right to access or
 | Feature | Description |
 | --- | --- |
 | PDPA support | Privacy requests can now be created and tracked under the Personal Data Protection Act (PDPA) in Thailand. When making privacy requests in the API, the `regulation` array accepts the value "pdpa_tha". |
-| Namespace types in the UI | You can now specify different namespace types in the Request Builder in the Privacy Service UI. See the [user guide](ui/user-guide.md) for more information. |
+| Namespace types in the UI | You can now specify different namespace types in the Request Builder in the Privacy Service UI. See the [user guide](../../privacy-service/ui/user-guide.md) for more information. |
 | Old endpoint deprecation | The old API endpoint (`data/privacy/gdpr`) has been deprecated. |
 
 Known issues
