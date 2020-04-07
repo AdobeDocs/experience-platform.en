@@ -97,6 +97,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [MySQL connector](tutorials/ui/create/databases/mysql.md)
       - [Phoenix connector](tutorials/ui/create/databases/phoenix.md)
       - [PostgreSQL connector](tutorials/ui/create/databases/postgres.md)
+      - [Spark connector](tutorials/ui/create/databases/spark.md)
     - Marketing automation {#marketing-automation}
       - [HubSpot connector](tutorials/ui/create/marketing-automation/hubspot.md)
   - Configure a dataflow {#dataflow}
