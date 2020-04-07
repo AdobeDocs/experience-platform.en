@@ -106,4 +106,4 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Configure a dataflow for a CRM connector](tutorials/ui/dataflow/crm.md)
       - [Configure a dataflow for a customer success connector](tutorials/ui/dataflow/customer-success.md)
       - [Configure a dataflow for a marketing automation connector](tutorials/ui/dataflow/marketing-automation.md)
-  - [Activate inbound data to populate customer profiles](tutorials/ui/activate.md)
+  - [Activate inbound data to populate customer profiles](tutorials/ui/profile.md)
