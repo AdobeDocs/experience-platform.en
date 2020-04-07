@@ -17,19 +17,19 @@ Under the *Adobe applications* category, select **Adobe Audience Manager** to ex
 
 To create a new source connector for Adobe Audience Manager, click **Connect source**.
 
-![](../../../../images/aam/aam_catalog.png)
+![](../../../../images/tutorials/create/aam/aam_catalog.png)
 
 A dialog box appears. Click **Connect** to create the connection.
 
-![](../../../../images/aam/aam_connect_full.png)
+![](../../../../images/tutorials/create/aam/aam_connect_full.png)
 
 If a source connection with Adobe Audience Manager is established, the *Source activity* page for Audience Manager connector be displayed.
 
-![](../../../../images/aam/aam_flow.png)
+![](../../../../images/tutorials/create/aam/aam_flow.png)
 
 If you wish to pause incoming Audience Manager data, you can do so by clicking the dataflow listing and toggle its *Status* from the right *Properties* column.
 
-![](../../../../images/aam/aam_flow_disable.png)
+![](../../../../images/tutorials/create/aam/aam_flow_disable.png)
 
 ## Next steps
 

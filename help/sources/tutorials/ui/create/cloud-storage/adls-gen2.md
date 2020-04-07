@@ -41,7 +41,7 @@ Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience 
 
 Under the *Cloud Storage* category, select **Azure Data Lake Gen2** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source view its documentation. To create a new inbound base connection, click **Connect source**.
 
-![](../../../../images/adls-gen2/catalog.png)
+![](../../../../images/tutorials/create/adls-gen2/catalog.png)
 
 The *Connect to Azure Data Lake Gen2* dialog appears. On this page, you can either use new credentials or existing credentials. 
 
@@ -49,13 +49,13 @@ The *Connect to Azure Data Lake Gen2* dialog appears. On this page, you can eith
 
 If you are using new credentials, select **New Account**. On the input form that appears, provide the base connection with a name, an optional description, and your ADLS Gen2 credentials. When finished, select **Connect** and then allow some time for the new base connection to establish.
 
-![](../../../../images/adls-gen2/connect.png)
+![](../../../../images/tutorials/create/adls-gen2/connect.png)
 
 ### Existing account
 
 To connect an existing account, select the ADLS Gen2 account you want to connect with, then select **Next** to proceed.
 
-![](../../../../images/adls-gen2/existing.png)
+![](../../../../images/tutorials/create/adls-gen2/existing.png)
 
 ## Next steps
 

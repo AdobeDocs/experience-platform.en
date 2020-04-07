@@ -42,7 +42,7 @@ You can select the appropriate category from the catalog on the left-hand side o
 
 Under the *Customer Success* category, select **Salesforce Service Cloud** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To create a new inbound connection, select **Connect source**.
 
-![catalog](../../../../images/ssc/catalog.png)
+![catalog](../../../../images/tutorials/create/ssc/catalog.png)
 
 The *Connect to Salesforce Service Cloud* page appears. On this page, you can either use new credentials or existing credentials.
 
@@ -50,13 +50,13 @@ The *Connect to Salesforce Service Cloud* page appears. On this page, you can ei
 
 If you are using new credentials, select **New account**. On the input form that appears, provide the connection with a name, an optional description, and your SSC credentials. When finished, select **Connect** and then allow some time for the new account to establish.
 
-![connect](../../../../images/ssc/connect.png)
+![connect](../../../../images/tutorials/create/ssc/connect.png)
 
 ### Existing account
 
 To connect an existing account, select the SSC account you want to connect with, then select **Next** to proceed.
 
-![existing](../../../../images/ssc/existing.png)
+![existing](../../../../images/tutorials/create/ssc/existing.png)
 
 ## Next steps
 

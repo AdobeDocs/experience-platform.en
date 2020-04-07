@@ -42,7 +42,7 @@ You can select the appropriate category from the catalog on the left-hand side o
 
 Under the *Databases* category, select **Spark** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To create a new inbound connection, select **Connect source**.
 
-![catalog](../../../../images/spark/catalog.png)
+![catalog](../../../../images/tutorials/create/spark/catalog.png)
 
 The *Connect to Spark* page appears. On this page, you can either use new credentials or existing credentials.
 
@@ -50,13 +50,13 @@ The *Connect to Spark* page appears. On this page, you can either use new creden
 
 If you are using new credentials, select **New account**. On the input form that appears, provide the connection with a name, an optional description, and your Spark credentials. When finished, select **Connect** and then allow some time for the new account to establish.
 
-![new](../../../../images/spark/new.png)
+![new](../../../../images/tutorials/create/spark/new.png)
 
 ### Existing account
 
 To connect an existing account, select the Spark account you want to connect with, then select **Next** to proceed.
 
-![existing](../../../../images/spark/existing.png)
+![existing](../../../../images/tutorials/create/spark/existing.png)
 
 ## Next steps
 

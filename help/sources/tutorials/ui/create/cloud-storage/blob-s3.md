@@ -42,11 +42,11 @@ Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience 
 
 Under the *Cloud Storage* category, select either **Azure Blob Storage** or **Amazon S3** to expose an information bar on the right-side of your screen. The information bar provides a brief description for the selected source as well as options to view its documentation or to connect with the source. To create a new inbound base connection, click **Connect source**. 
 
-![](../../../../images/s3/s3_sources_catalog.png)
+![](../../../../images/tutorials/create/s3/s3_sources_catalog.png)
 
 On the input form, provide the base connection with a name, an optional description, and your Blob or S3 credentials. Lastly, click **Connect** and then allow some time for the new base connection to establish.
 
-![](../../../../images/s3/s3_credentials.png)
+![](../../../../images/tutorials/create/s3/s3_credentials.png)
 
 ## Next steps
 

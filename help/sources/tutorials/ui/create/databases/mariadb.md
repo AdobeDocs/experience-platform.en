@@ -38,7 +38,7 @@ Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience 
 
 Under the *Databases* category, select **Maria DB** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To create a new inbound base connection, select **Connect source**. 
 
-![](../../../../images/maria-db/sources-catalog.png)
+![](../../../../images/tutorials/create/maria-db/sources-catalog.png)
 
 The *Connect to Maria DB* page appears. On this page, you can either use new credentials or existing credentials.
 
@@ -46,13 +46,13 @@ The *Connect to Maria DB* page appears. On this page, you can either use new cre
 
 If you are using new credentials, select **New account**. On the input form that appears, provide the base connection with a name, an optional description, and your Maria DB credentials. When finished, select **Connect** and then allow some time for the new base connection to establish.
 
-![](../../../../images/maria-db/new-credentials.png)
+![](../../../../images/tutorials/create/maria-db/new-credentials.png)
 
 ### Existing account
 
 To connect an existing account, select the Maria DB account you want to connect with, then select **Next** to proceed.
 
-![](../../../../images/maria-db/existing-credentials.png)
+![](../../../../images/tutorials/create/maria-db/existing-credentials.png)
 
 ## Next steps
 

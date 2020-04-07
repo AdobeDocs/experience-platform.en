@@ -45,7 +45,7 @@ You can select the appropriate category from the catalog on the left-hand side o
 
 Under the *Databases* category, select **Phoenix** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To create a new inbound connection, select **Connect source**.
 
-![catalog](../../../../images/phoenix/catalog.png)
+![catalog](../../../../images/tutorials/create/phoenix/catalog.png)
 
 The *Connect to Phoenix* page appears. On this page, you can either use new credentials or existing credentials.
 
@@ -53,13 +53,13 @@ The *Connect to Phoenix* page appears. On this page, you can either use new cred
 
 If you are using new credentials, select **New account**. On the input form that appears, provide the connection with a name, an optional description, and your Phoenix credentials. When finished, select **Connect** and then allow some time for the new account to establish.
 
-![connect](../../../../images/phoenix/new.png)
+![connect](../../../../images/tutorials/create/phoenix/new.png)
 
 ### Existing account
 
 To connect an existing account, select the Phoenix account you want to connect with, then select **Next** to proceed.
 
-![existing](../../../../images/phoenix/existing.png)
+![existing](../../../../images/tutorials/create/phoenix/existing.png)
 
 ## Next steps
 

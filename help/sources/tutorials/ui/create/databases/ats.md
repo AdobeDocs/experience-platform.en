@@ -40,7 +40,7 @@ You can select the appropriate category from the catalog on the left-hand side o
 
 Under the *Databases* category, select **Azure Table Storage** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To create a new inbound connection, select **Connect source**.
 
-![catalog](../../../../images/ats/catalog.png)
+![catalog](../../../../images/tutorials/create/ats/catalog.png)
 
 The *Connect to Azure Table Storage* page appears. On this page, you can either use new credentials or existing credentials.
 
@@ -48,13 +48,13 @@ The *Connect to Azure Table Storage* page appears. On this page, you can either 
 
 If you are using new credentials, select **New account**. On the input form that appears, provide the connection with a name, an optional description, and your ATS credentials. When finished, select **Connect** and then allow some time for the new account to establish.
 
-![connect](../../../../images/ats/new.png)
+![connect](../../../../images/tutorials/create/ats/new.png)
 
 ### Existing account
 
 To connect an existing account, select the ATS account you want to connect with, then select **Next** to proceed.
 
-![existing](../../../../images/ats/existing.png)
+![existing](../../../../images/tutorials/create/ats/existing.png)
 
 ## Next steps
 

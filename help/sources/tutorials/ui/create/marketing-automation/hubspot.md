@@ -41,7 +41,7 @@ Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience 
 
 Under the *Marketing automation* category, select **HubSpot** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To create a new inbound base connection, select **Connect source**.
 
-![catalog](../../../../images/hubspot/catalog.png)
+![catalog](../../../../images/tutorials/create/hubspot/catalog.png)
 
 The *Connect to HubSpot* page appears. On this page, you can either use new credentials or existing credentials.
 
@@ -49,13 +49,13 @@ The *Connect to HubSpot* page appears. On this page, you can either use new cred
 
 If you are using new credentials, select **New account**. On the input form that appears, provide the base connection with a name, an optional description, and your HubSpot credentials. When finished, select **Connect** and then allow some time for the new base connection to establish.
 
-![connect](../../../../images/hubspot/connect.png)
+![connect](../../../../images/tutorials/create/hubspot/connect.png)
 
 ### Existing account
 
 To connect an existing account, select the  HubSpot account you want to connect with, then select **Next** to proceed.
 
-![existing](../../../../images/hubspot/existing.png)
+![existing](../../../../images/tutorials/create/hubspot/existing.png)
 
 ## Next steps
 

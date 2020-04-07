@@ -34,11 +34,11 @@ Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience 
 
 Under the *CRM* category, select either **Microsoft Dynamics** or **Salesforce** to expose an information bar on the right-side of your screen. The information bar provides a brief description for the selected source as well as options to view its documentation or to connect with the source. To create a new inbound base connection, click **Connect source**. 
 
-![](../../../../images/salesforce/sf_sources_catalog.png)
+![](../../../../images/tutorials/create/salesforce/sf_sources_catalog.png)
 
 On the input form, provide the base connection with a name, an optional description, and your Dynamics or Salesforce credentials. Lastly, click **Connect** and then allow some time for the new base connection to establish.
 
-![](../../../../images/salesforce/sf_credentials.png)
+![](../../../../images/tutorials/create/salesforce/sf_credentials.png)
 
 Once a base connection with your CRM system is established, you can continue on to the next section and configure a dataflow to bring CRM data into Platform.
 

@@ -42,7 +42,7 @@ You can select the appropriate category from the catalog on the left-hand side o
 
 Under the *Customer Success* category, select **ServiceNow** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To create a new account, select **Connect source**.
 
-![](../../../../images/servicenow/catalog.png)
+![](../../../../images/tutorials/create/servicenow/catalog.png)
 
 The *Connect to ServiceNow* page appears. On this page, you can either use new credentials or existing credentials.
 
@@ -50,13 +50,13 @@ The *Connect to ServiceNow* page appears. On this page, you can either use new c
 
 If you are using new credentials, select **New account**. On the input form that appears, provide the  connection with a name, an optional description, and your ServiceNow credentials. When finished, select **Connect** and then allow some time for the new account to establish.
 
-![](../../../../images/servicenow/new-credentials.png)
+![](../../../../images/tutorials/create/servicenow/new-credentials.png)
 
 ### Existing account
 
 To connect an existing account, select the ServiceNow account you want to connect with, then select **Next** to proceed.
 
-![](../../../../images/servicenow/existing-credentials.png)
+![](../../../../images/tutorials/create/servicenow/existing-credentials.png)
 
 ## Next steps
 

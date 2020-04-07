@@ -40,11 +40,11 @@ Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience 
 
 Under the *Cloud Storage* category, select **Google Cloud Storage** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source view its documentation, or to connect with the source. To create a new inbound base connection, click **Connect source**. 
 
-![](../../../../images/google-cloud-storage/sources-catalog.png)
+![](../../../../images/tutorials/create/google-cloud-storage/sources-catalog.png)
 
 The _Connect to Google Cloud Storage_ dialog appears. On the input form, provide the base connection with a name, an optional description, and your GCS credentials. When finished, click **Connect** and then allow some time for the new base connection to establish.
 
-![](../../../../images/google-cloud-storage/gcs-credentials.png)
+![](../../../../images/tutorials/create/google-cloud-storage/gcs-credentials.png)
 
 Once a base connection is established, you can continue on to the next section and configure a dataflow to bring data into Platform.
 
