@@ -7,7 +7,7 @@ seo-description: The D&B Visitor Intelligence extension is a personalization des
 
 # D&B Visitor Intelligence extension {#dnb-extension}
 
-## Overview {#overview}
+## Overview {#overview} 
 
 Analyze your unknown visitors and convert them into leads.
 
