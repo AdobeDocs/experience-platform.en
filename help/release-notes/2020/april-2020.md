@@ -10,7 +10,27 @@ author: ens71067
 
 ## Release date: April 8, 2020
 
-## Access control
+## Data Governance
+
+Adobe Experience Platform Data Governance is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within Experience Platform at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
+
+Getting started with data governance requires a thorough understanding of the regulations, contractual obligations, and corporate policies that apply to your customer data. From there, data can be classified by applying the appropriate data usage labels, and its use can be controlled through the definition of data usage policies.
+
+The DULE framework simplifies and streamlines the process of categorizing data and creating data usage policies through the Experience Platform user interface and DULE Policy Service API. 
+
+### New features
+
+| Feature    | Description  |
+| -----------| ---------- |
+| Manage data usage policies in the UI  | Data usage policies can now be managed within the _Policies_ workspace in the Experience Platform UI. See the [policy user guide](../../data-governance/policies/user-guide.md) for more information.|
+
+**Known issues**
+
+* None.
+
+For more information, please see the [Data Governance overview](../../data-governance/home.md).
+
+<!-- ## Access control
 
 Experience Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) product profiles to link users with permissions and sandboxes. Permissions control access to a variety of Platform capabilities, including data modeling, profile management, and sandbox administration.
 
@@ -36,4 +56,4 @@ Experience Platform is built to enrich digital experience applications on a glob
 |Sandbox switcher | In the Experience Platform user interface, the sandbox switcher in the top-left corner of the screen allows you to switch between available sandboxes through a dropdown menu.|
 |`x-sandbox-name` header | All calls to Experience Platform APIs must now include the new `x-sandbox-name` header, whose value references the `name` attribute of the sandbox the operation will take place in.|
 
-For more information, please see the [sandboxes overview](../../sandboxes/home.md).
+For more information, please see the [sandboxes overview](../../sandboxes/home.md). -->
