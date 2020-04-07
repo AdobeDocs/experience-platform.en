@@ -82,6 +82,15 @@ Once you have made the necessary changes, click **Save** to return to the *Merge
 
 ![](../images/merge-policies/edited.png)
 
+## Data governance policy violations
+
+When creating or updating a merge policy, a check is performed to determine if the merge policy violates any of the data usage policies defined by your organization. Data usage policies are part of Adobe Experience Platform Data Governance and are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on specific Platform data. For example, if a merge policy was used to create a segment that activated to a third-party destination, and your organization had a data usage policy preventing the export of specific data to third parties, you would receive a "Data governance policy violation detected" notification when attempting to save your merge policy. 
+
+This notification includes a list of data usage policies that have been violated and allows you to view the details of the violation by selecting a policy from the list. Upon selecting a violated policy, the *Data lineage* tab provides the *Reason for violation* and the *Affected activations*, each providing more detail into how the data usage policy has been violated.
+
+To learn more about how data governance is performed within Adobe Experience Platform, please begin by reading the [Data Governance overview](../../data-governance/home.md).
+
+![](../images/merge-policies/policy-violation.png)
 
 ## Next steps
 
