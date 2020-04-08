@@ -33,11 +33,11 @@ The built Docker image is pushed to the Azure Container Registry using credentia
 
 To obtain your Azure Container Registry credentials, log into <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>. On the left navigation column, navigate to **Workflows**. Select **Import Recipe from Source File**, and **Launch** a new import procedure. See the screen shot below for reference.
 
-![](../images/models-recipes/package-source-files/workflow_ss.png)
+![](../images/models-recipes/package-source-files/import.png)
 
 Provide an appropriate **Recipe Name**, for example, "Retail Sales recipe", and optionally provide a description or documentation URL. Once complete, click **Next**.
 
-![](../images/models-recipes/package-source-files/recipe_info.png)
+![](../images/models-recipes/package-source-files/configure.png)
 
 Select the appropriate **Runtime**, then choose **Classification** for **Type**. Your Azure Container Registry credentials are generated.
 
@@ -50,9 +50,12 @@ Select the appropriate **Runtime**, then choose **Classification** for **Type**.
 >- For PySpark recipes select the **PySpark** runtime. An artifact type auto populates. 
 >- For Scala recipes select the **Spark** runtime. An artifact type auto populates. 
 
-![](../images/models-recipes/package-source-files/recipe_workflow_recipe_source.png)
+![](../images/models-recipes/package-source-files/docker-creds.png)
 
-Note the values for *Docker Host*, *Username*, and *Password*. These are used later to build and push your Docker image in the steps outlined below.
+Note the values for *Docker Host*, *Username*, and *Password*. These are used to build and push your Docker image in the workflows outlined below.
+
+>[!NOTE]
+>The Source URL is provided after completing the steps outlined below. The configuration file is explained in subsequent tutorials found in [next steps](#next-steps).
 
 ### Package the source files
 
@@ -179,7 +182,7 @@ Once the build script is complete, you are given a Docker source file URL in you
 
 Copy this URL and move on to the [next steps](#next-steps).
 
-## Next steps
+## Next steps {#next-steps}
 
 This tutorial went over packaging source files into a Recipe, the prerequisite step for importing a Recipe into Data Science Workspace. You should now have a Docker image in Azure Container Registry along with the corresponding image URL. You are now ready to begin the tutorial on **Importing a packaged Recipe into Data Science Workspace**. Select one of the tutorial links below to get started.
 
