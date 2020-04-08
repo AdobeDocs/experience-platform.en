@@ -64,7 +64,7 @@ If you have not done so, clone the github repository onto your local system with
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Navigate to the directory `experience-platform-dsw-reference/recipes/python/retail`. Here, you will find the scripts `login.sh` and `build.sh` used to log in to Docker and to build the python Docker image. If you have your [Docker credentials](#docker-based-model-authoring) ready, enter the following commands in order:
+Navigate to the directory `experience-platform-dsw-reference/recipes/python/retail`. Here, you will find the scripts `login.sh` and `build.sh` used to login to Docker and to build the python Docker image. If you have your [Docker credentials](#docker-based-model-authoring) ready, enter the following commands in order:
 
 ```BASH
 # for logging in to Docker
@@ -93,7 +93,7 @@ If you have not done so, clone the github repository onto your local system with
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Navigate to the directory `experience-platform-dsw-reference/recipes/R/Retail - GradientBoosting` inside your cloned repository. Here, you'll find the files `login.sh` and `build.sh` which you will use to log in to Docker and to build the R Docker image. If you have your [Docker credentials](#docker-based-model-authoring) ready, enter the following commands in order:
+Navigate to the directory `experience-platform-dsw-reference/recipes/R/Retail - GradientBoosting` inside your cloned repository. Here, you'll find the files `login.sh` and `build.sh` which you will use to login to Docker and to build the R Docker image. If you have your [Docker credentials](#docker-based-model-authoring) ready, enter the following commands in order:
 
 ```BASH
 # for logging in to Docker
@@ -122,7 +122,7 @@ Start by cloning the github repository onto your local system with the following
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Navigate to the directory `experience-platform-dsw-reference/recipes/pyspark/retail`. The scripts `login.sh` and `build.sh` are located here and used to log in to Docker and to build the  Docker image. If you have your [Docker credentials](#docker-based-model-authoring) ready, enter the following commands in order:
+Navigate to the directory `experience-platform-dsw-reference/recipes/pyspark/retail`. The scripts `login.sh` and `build.sh` are located here and used to login to Docker and to build the  Docker image. If you have your [Docker credentials](#docker-based-model-authoring) ready, enter the following commands in order:
 
 ```BASH
 # for logging in to Docker
@@ -151,7 +151,7 @@ Start by cloning the github repository onto your local system with the following
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Next, navigate to the directory `experience-platform-dsw-reference/recipes/scala/retail` where you can find the scripts `login.sh` and `build.sh`. These scripts are used to log in to Docker and build the Docker image. If you have your [Docker credentials](#docker-based-model-authoring) ready, enter the following commands to terminal in order:
+Next, navigate to the directory `experience-platform-dsw-reference/recipes/scala/retail` where you can find the scripts `login.sh` and `build.sh`. These scripts are used to login to Docker and build the Docker image. If you have your [Docker credentials](#docker-based-model-authoring) ready, enter the following commands to terminal in order:
 
 ```BASH
 # for logging in to Docker
