@@ -52,11 +52,11 @@ Select the appropriate **Runtime**, then choose **Classification** for **Type**.
 
 ![](../images/models-recipes/package-source-files/recipe_workflow_recipe_source.png)
 
-Note the values for *Docker Host*, *Username*, and *Password*. These are used later to build and push your Docker image.
+Note the values for *Docker Host*, *Username*, and *Password*. These are used later to build and push your Docker image in the steps outlined below.
 
 ### Package the source files
 
-Start by obtaining the sample codebase found in the <a href="https://github.com/adobe/experience-platform-dsw-reference" target="_blank">Experience Platform Data Science Workspace Reference</a> repository. Depending on which programming language the sample source files are written in, building their respective archive file differs in procedure.
+Start by obtaining the sample codebase found in the <a href="https://github.com/adobe/experience-platform-dsw-reference" target="_blank">Experience Platform Data Science Workspace Reference</a> repository.
 
 - [Build Python Docker image](#build-python-docker-image)
 - [Build R Docker image](#build-r-docker-image)
@@ -110,7 +110,7 @@ Navigate to the directory `experience-platform-dsw-reference/recipes/R/Retail - 
 ./build.sh
 ```
 
-Note that when executing the login script, you will need to provide the Docker host, username, and password. When building, you are required to provide the Docker host and a version tag for the build.
+Note that when executing the login script, you need to provide the Docker host, username, and password. When building, you are required to provide the Docker host and a version tag for the build.
 
 Once the build script is complete, you are given a Docker source file URL in your console output. For this specific example, it will look something like:
 
