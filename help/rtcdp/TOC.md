@@ -17,6 +17,7 @@ user-guide-title: Real-Time Customer Data Platform Help
   * [Data quality on Platform](datasets/data-quality.md)
 * Destinations {#destinations}
   * [Destinations overview](destinations/destinations-overview.md)
+  * [Destination types and categories](/help/rtcdp/destinations/destination-types.md)
   * Destinations interface  {#destinations-interface}
     * [Destinations workspace](destinations/destinations-workspace.md)
     * [Destination details page](destinations/destination-details-page.md)
