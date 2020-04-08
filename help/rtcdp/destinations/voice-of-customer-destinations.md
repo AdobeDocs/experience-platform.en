@@ -11,4 +11,7 @@ The customer is always right, but you need to hear their voice first. With Voice
 
 Currently, Adobe Real-time Customer Data Platform supports the Voice of the Customer destinations listed below. For information on how to connect to these destinations, see the individual links:
 
-* [Confirmit Digital Feedback (Experience Platform Launch extension)](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)
+* [Confirmit Digital Feedback (Experience Platform Launch extension)](confirmit-digital-feedback-extension.md)
+* [Medallia (Experience Platform Launch extension)](medallia-extension.md)
+* [Talk URL Inbox (Experience Platform Launch extension)](talkurl-extension.md)
+* [QuestionPro Intercept Surveys (Experience Platform Launch extension)](web-intercept-surveys-extension.md)

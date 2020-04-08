@@ -11,7 +11,8 @@ Offer personalized experiences to your customers. Personalize browser pages, app
 
 Currently, Adobe Real-time CDP supports the personalization destinations listed below. For information on how to connect to these destinations, see the individual links:
 
-* [Adobe Target (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-target-extension.md)
-* [Adobe Target v2 (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-target-v2-extension.md)
-* [Beemray (Experience Platform Launch extension)](/help/rtcdp/destinations/beemray-extension.md)
-* [Gainsight (Experience Platform Launch extension)](/help/rtcdp/destinations/gainsight-extension.md)
+* [Adobe Target (Experience Platform Launch extension)](adobe-target-extension.md)
+* [Adobe Target v2 (Experience Platform Launch extension)](adobe-target-v2-extension.md)
+* [Beemray (Experience Platform Launch extension)](beemray-extension.md)
+* [Gainsight (Experience Platform Launch extension)](gainsight-extension.md)
+* [Marketo Web Personalization (Experience Platform Launch extension)](marketo-web-personalization-extension.md)
