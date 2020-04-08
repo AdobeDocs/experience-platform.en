@@ -52,11 +52,21 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [ServiceNow connector](tutorials/api/create/customer-success/servicenow.md)
     - Databases {#databases}
       - [Amazon Redshift connector](tutorials/api/create/databases/redshift.md)
+      - [Apache Spark on Azure HDInsights connector](tutorials/api/create/databases/spark.md)
+      - [Azure Synapse Analytics connector](tutorials/api/create/databases/synapse-analytics.md)
+      - [Azure Table Storage connector](tutorials/api/create/databases/ats.md)
       - [Google BigQuery connector](tutorials/api/create/databases/bigquery.md)
+      - [Hive connector](tutorials/api/create/databases/hive.md)
+      - [HP Vertica connector](tutorials/api/create/databases/vertica.md)
       - [MariaDB connector](tutorials/api/create/databases/mariadb.md)
       - [MySQL connector](tutorials/api/create/databases/mysql.md)
+      - [Phoenix connector](tutorials/api/create/databases/phoenix.md)
       - [PostgreSQL connector](tutorials/api/create/databases/postgres.md)
       - [SQL Server connector](tutorials/api/create/databases/sql-server.md)
+    - Payments {#payments}
+      - [PayPal connector](tutorials/api/create/databases/paypal.md)
+    - Protocols {#protocols}
+      - [Generic OData connector](tutorials/api/create/databases/odata.md)
   - Explore data {#explore}
     - [Explore cloud storage data](tutorials/api/explore/cloud-storage.md)
     - [Explore CRM data](tutorials/api/explore/crm.md)
