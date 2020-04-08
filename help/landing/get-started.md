@@ -5,6 +5,8 @@ title: Adobe Experience Platform product documentation
 topic: getting started
 ---
 
-# Adobe Experience Platform getting started
+# Getting started with Adobe Experience Platform
 
->[!VIDEO](https://video.tv.adobe.com/v/27361?quality=12)
+This video provides a quick introduction to Experience Platform and outlines the business challenges it solves. There are multiple video tutorials available to supplement the Platform documentation. For additional videos that will help you get started using Platform, see the [Introduction to Platform video series](https://docs.adobe.com/content/help/en/platform-learn/tutorials/intro-to-platform/overview.html).
+
+>[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)
