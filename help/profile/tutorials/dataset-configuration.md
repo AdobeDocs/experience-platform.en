@@ -165,7 +165,6 @@ curl -X GET \
         "createdUser": "{CREATED_BY}",
         "updatedUser": "{CREATED_BY}",
         "viewId": "5b020a27e7040801dedbf46f",
-        "aspect": "production",
         "status": "enabled",
         "fileDescription": {
             "persisted": true,
