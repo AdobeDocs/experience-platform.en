@@ -123,7 +123,7 @@ curl -X POST \
 | `name` | The desired name for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in the UI as the Recipe's name. |
 | `description` | An optional description for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in UI as the Recipe's description. This property is required. If you do not want to provide a description, set its value to be an empty string. |
 | `type` | The execution type of the Engine. This value corresponds to the language in which the Docker image is built upon "PySpark". |
-| `mlLibrary` | An additional field that indicates databricks usage. This field is required for creating engines for PySpark and Scala recipes. |
+| `mlLibrary` | A field that is required when creating engines for PySpark and Scala recipes. |
 | `artifacts.default.image.location` | The location of the Docker image linked to by a Docker URL. |
 | `artifacts.default.image.executionType` | The execution type of the Engine. This value corresponds to the language in which the Docker image is built upon "Spark". |
     
@@ -160,7 +160,7 @@ curl -X POST \
 | `name` | The desired name for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in the UI as the Recipe's name. |
 | `description` | An optional description for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in UI as the Recipe's description. This property is required. If you do not want to provide a description, set its value to be an empty string. |
 | `type` | The execution type of the Engine. This value corresponds to the language in which the Docker image is built upon "Spark". |
-| `mlLibrary` | An additional field that indicates databricks usage. This field is required for creating engines for PySpark and Scala recipes. |
+| `mlLibrary` | A field that is required when creating engines for PySpark and Scala recipes. |
 | `artifacts.default.image.location` | The location of the Docker image linked to by a Docker URL. |
 | `artifacts.default.image.executionType` | The execution type of the Engine. This value corresponds to the language in which the Docker image is built upon "Spark". |
 
