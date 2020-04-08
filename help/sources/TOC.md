@@ -39,8 +39,8 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - Cloud storage {#cloud-storage}
       - [Amazon S3 connector](tutorials/api/create/cloud-storage/s3.md)
       - [Azure Blob connector](tutorials/api/create/cloud-storage/blob.md)
-      - [Azure Data Lake Storage Gen2 connector](tutorials/api/create/cloud-storage/google.md)
-      - [Google Cloud Storage connector](tutorials/api/create/cloud-storage/s3.md)
+      - [Azure Data Lake Storage Gen2 connector](tutorials/api/create/cloud-storage/adls-gen2.md)
+      - [Google Cloud Storage connector](tutorials/api/create/cloud-storage/google.md)
       - [SFTP connector](tutorials/api/create/cloud-storage/sftp.md)
     - CRM {#crm}
       - [Google AdWords connector](tutorials/api/create/crm/adwords.md)
@@ -64,9 +64,9 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [PostgreSQL connector](tutorials/api/create/databases/postgres.md)
       - [SQL Server connector](tutorials/api/create/databases/sql-server.md)
     - Payments {#payments}
-      - [PayPal connector](tutorials/api/create/databases/paypal.md)
+      - [PayPal connector](tutorials/api/create/payments/paypal.md)
     - Protocols {#protocols}
-      - [Generic OData connector](tutorials/api/create/databases/odata.md)
+      - [Generic OData connector](tutorials/api/create/protocols/odata.md)
   - Explore data {#explore}
     - [Explore cloud storage data](tutorials/api/explore/cloud-storage.md)
     - [Explore CRM data](tutorials/api/explore/crm.md)
