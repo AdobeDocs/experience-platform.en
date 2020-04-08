@@ -31,15 +31,15 @@ A Docker image allows a developer to package up an application with all the part
 
 The built Docker image is pushed to the Azure Container Registry using credentials supplied to you during the recipe creation workflow.
 
-To obtain your Azure Container Registry credentials, log into <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>. On the left navigation column, navigate to **Workflows**. Select **Import Recipe from Source File**, and **Launch** a new import procedure. See the screen shot below for reference.
+To obtain your Azure Container Registry credentials, log into <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>. On the left navigation column, navigate to **Workflows**. Select **Import Recipe** followed by selecting **Launch**. See the screen shot below for reference.
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-Provide an appropriate **Recipe Name**, for example, "Retail Sales recipe", and optionally provide a description or documentation URL. Once complete, click **Next**.
+The *Configure* page opens. Provide an appropriate **Recipe Name**, for example, "Retail Sales recipe", and optionally provide a description or documentation URL. Once complete, click **Next**.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
-Select the appropriate **Runtime**, then choose **Classification** for **Type**. Your Azure Container Registry credentials are generated.
+Select the appropriate *Runtime*, then choose *Classification* for *Type*. Your Azure Container Registry credentials are generated once complete.
 
 >[!NOTE]
 >*Type* is the class of machine learning problem the recipe is designed for and is used after training to help tailor evaluating the training run.
