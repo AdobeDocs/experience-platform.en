@@ -37,6 +37,7 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Google Ads (Experience Platform Launch extension)](/help/rtcdp/destinations/google-ads-extension.md)
       * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
       * [Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
+      * [Google gtag (Experience Platform Launch extension)](/help/rtcdp/destinations/gtag-advertising-extension.md)
       * [LinkedIn Insight Tag (Experience Platform Launch extension)](/help/rtcdp/destinations/linkedin-extension.md)
       * [Pinterest Conversion Tracking (Experience Platform Launch extension)](destinations/pinterest-extension.md)
       * [Twitter Universal Website Tag (Experience Platform Launch extension)](destinations/twitter-uwt-extension.md)
@@ -50,6 +51,7 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Demandbase (Experience Platform Launch extension)](/help/rtcdp/destinations/demandbase-extension.md)
       * [Dialogtech (Experience Platform Launch extension)](/help/rtcdp/destinations/dialogtech-extension.md)
       * [Google Global Site Tag analytics (Experience Platform Launch extension)](/help/rtcdp/destinations/gtag-analytics-extension.md)
+      * [Google Universal Analytics (Experience Platform Launch extension)](/help/rtcdp/destinations/google-universal-analytics-extension.md)
       * [Nielsen BSDK (Experience Platform Launch extension)](destinations/nielsen-bsdk-extension.md)
       * [Nielsen IMA Handler (Experience Platform Launch extension)](destinations/nielsen-ima-extension.md)
       * [Nielsen VideoJS Player Handler (Experience Platform Launch extension)](destinations/nielsen-videojs-extension.md)
@@ -65,6 +67,7 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [SFTP destination](destinations/sftp-destination.md)
     * CRM destinations {#crm-destinations}
       * [CRM destinations overview](destinations/crm-destinations.md)
+      * [Invoca Tags (Experience Platform Launch extension)](/help/rtcdp/destinations/invoca-extension.md)
     * Data Management Platform destinations {dmp-destinations}
       * [Data Management Platform destinations overview](destinations/dmp-destinations.md)
       * [Audience Manager DIL (Experience Platform Launch extension)](/help/rtcdp/destinations/aam-dil-extension.md)
@@ -84,6 +87,7 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Adobe Target (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-target-extension.md)
       * [Adobe Target v2 (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-target-v2-extension.md)
       * [Beemray (Experience Platform Launch extension)](/help/rtcdp/destinations/beemray-extension.md)
+      * [D&B Visitor Intelligence (Experience Platform Launch extension)](/help/rtcdp/destinations/dnb-extension.md)
       * [Gainsight (Experience Platform Launch extension)](/help/rtcdp/destinations/gainsight-extension.md)
       * [Marketo Web Personalization (Experience Platform Launch extension)](destinations/marketo-web-personalization-extension.md)
     * Social network destinations{#social-network-destinations}
@@ -93,6 +97,7 @@ user-guide-title: Real-Time Customer Data Platform Help
     * Survey destinations {#surveys}
       * [Survey destinations overview](/help/rtcdp/destinations/survey-destinations.md)
       * [Foresee (Experience Platform Launch extension)](/help/rtcdp/destinations/foresee-extension.md)
+      * [InMoment (Experience Platform Launch extension)](/help/rtcdp/destinations/inmoment-extension.md)
       * [Qualtrics Website Feedback (Experience Platform Launch extension)](destinations/qualtrics-extension.md)
     * Voice of the customer destinations {#voice-of-customer-destinations}
       * [Voice of the customer destinations overview](/help/rtcdp/destinations/voice-of-customer-destinations.md)
