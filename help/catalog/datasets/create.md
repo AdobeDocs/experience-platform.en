@@ -450,7 +450,7 @@ With the batch ID, you can use the Data Access API to read-back and verify all o
 
 You can also use the Data Access API to return the name, size in bytes, and a link to download the file or folder.
 
-Detailed steps for working with the Data Access API can be found in the [Data Access developer guide](../../data-access/api.md).
+Detailed steps for working with the Data Access API can be found in the [Data Access developer guide](../../data-access/home.md).
 
 ## Update the dataset schema
 

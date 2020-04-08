@@ -70,16 +70,18 @@ To download the complete job data as a CSV file, click **Export to CSV** at the 
 
 ## Create a new privacy job request
 
+>[!NOTE] In order to create a privacy job request, you must provide identity information for the specific customers whose data is to be accessed or deleted. Please review the document on [identity data for privacy requests](../identity-data.md) before continuing with this section.
+
 The Privacy Service UI provides two methods to create new job requests:
 
-* Use the Request Builder
-* Upload a JSON file
+* [Use the Request Builder](#request-builder)
+* [Upload a JSON file](#json)
 
 Steps for using each of these methods are provided in the following sections.
 
-### Use the Request Builder
+### Use the Request Builder {#request-builder}
 
-Using the Request Builder, you can manually create a new privacy job request in the user interface. The Request Builder is best used for simpler and smaller sets of requests, because the Request Builder limits requests to have only ID type per user. For more complicated requests, it may better to [upload a JSON file](#upload-a-json-file) instead.
+Using the Request Builder, you can manually create a new privacy job request in the user interface. The Request Builder is best used for simpler and smaller sets of requests, because the Request Builder limits requests to have only ID type per user. For more complicated requests, it may better to [upload a JSON file](#json) instead.
 
 To start using the Request builder, click **Create Request** below the Status Report widget on the right-hand side of the screen.
 
@@ -87,19 +89,31 @@ To start using the Request builder, click **Create Request** below the Status Re
 
 The *Create Request* dialog opens, displaying the available options for submitting a privacy job request for the currently selected regulation type.
 
-![](../images/user-guide/request-builder.png)
+<img src='../images/user-guide/request-builder.png' width=500 /><br/>
 
-Select the **Job Type** of the request ("Delete" or "Access") and one or more available **Products** from the list. Under **Customer IDs**, select an ID type from the drop-down menu (email, ECID, or AAID). Type the ID values in the textbox to the right, pressing **\<enter>** for each ID to add it to the list.
+Select the **Job Type** of the request ("Delete" or "Access") and one or more available **Products** from the list.
 
-![](../images/user-guide/request-builder-fillout.png)
+<img src='../images/user-guide/type-and-products.png' width=500 /><br/>
 
-The IDs included in this list will receive a copy of any email notifications from Privacy Service, which are sent when a job completes, finishes with errors, or times out. When finished, click **Create**.
+Under *Namespace type*, select the appropriate namespace type for the customer IDs being sent to Privacy Service.
 
-![](../images/user-guide/request-builder-create.png)
+<img src='../images/user-guide/namespace-type.png' width=500 /><br/>
+
+When using the _standard_ namespace type, select a namespace from the drop-down menu (email, ECID, or AAID), then type the ID values in the textbox to the right, pressing **\<enter>** for each ID to add it to the list.
+
+<img src='../images/user-guide/standard-namespace.png' width=500 /><br/>
+
+When using the _custom_ namespace type, you must manually type in the namespace before providing the ID values below.
+
+<img src='../images/user-guide/custom-namespace.png' width=500 /><br/>
+
+When finished, click **Create**.
+
+<img src='../images/user-guide/request-builder-create.png' width=500 /><br/>
 
 The dialog disappears, and the new job (or jobs) are listed in the Job Requests widget along with their current processing status.
 
-### Upload a JSON file
+### Upload a JSON file {#json}
 
 When creating more complicated requests, such as those that use multiple ID types for each data subject being processed, you can create a request by uploading a JSON file.
 
@@ -109,12 +123,12 @@ Click the arrow next to **Create Request**, below the Status Report widget on th
 
 The *Upload JSON* dialog appears, providing a window for you to drag and drop your JSON file into.
 
-![](../images/user-guide/upload-json.png)
+<img src='../images/user-guide/upload-json.png' width=500 /><br/>
 
 If you do not have a JSON file to upload, click **Download Adobe-GDPR-Request.json** to download a template that you can populate according to the values you have collected from your data subjects.
 
 
-![](../images/user-guide/privacy-template.png)
+<img src='../images/user-guide/privacy-template.png' width=500 /><br/>
 
 
 Locate the JSON file on your computer, and drag it into the dialog window. If the upload is successful, the file name appears in the dialog. You can continue to add more JSON files as necessary by dragging and dropping them into the dialog.
