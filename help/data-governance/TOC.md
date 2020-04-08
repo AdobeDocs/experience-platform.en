@@ -13,6 +13,7 @@ user-guide-title: Adobe Experience Platform Data Governance Help
   * [Supported data usage labels](labels/reference.md)
 * Data usage policies {#policies}
   * [Data usage policies overview](policies/overview.md)
+  * [Data usage policies user guide](policies/user-guide.md)
   * [Create a data usage policy using the Policy Service API](policies/create.md)
 * Policy enforcement {#enforcement}
   * [Policy enforcement overview](enforcement/overview.md)
