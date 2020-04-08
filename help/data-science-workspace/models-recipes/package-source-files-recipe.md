@@ -64,7 +64,7 @@ If you have not done so, clone the github repository onto your local system with
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Navigate to the directory `experience-platform-dsw-reference/recipes/python/retail`. Here, you will find the scripts `login.sh` and `build.sh` which you  use to log in to Docker and to build the python Docker image. If you have your [Docker credentials](#docker-based-model-authoring) ready, enter the following commands in order:
+Navigate to the directory `experience-platform-dsw-reference/recipes/python/retail`. Here, you will find the scripts `login.sh` and `build.sh` used to log in to Docker and to build the python Docker image. If you have your [Docker credentials](#docker-based-model-authoring) ready, enter the following commands in order:
 
 ```BASH
 # for logging in to Docker
@@ -74,7 +74,7 @@ Navigate to the directory `experience-platform-dsw-reference/recipes/python/reta
 ./build.sh
 ```
 
-Note that when executing the login script, you will need to provide the Docker host, username, and password. When building, you are required to provide the Docker host and a version tag for the build.
+Note that when executing the login script, you need to provide the Docker host, username, and password. When building, you are required to provide the Docker host and a version tag for the build.
 
 Once the build script is complete, you are given a Docker source file URL in your console output. For this specific example, it will look something like:
 
@@ -132,7 +132,7 @@ Navigate to the directory `experience-platform-dsw-reference/recipes/pyspark/ret
 ./build.sh
 ```
 
-Note that when executing the login script, you will need to provide the Docker host, username, and password. When building, you are required to provide the Docker host and a version tag for the build.
+Note that when executing the login script, you need to provide the Docker host, username, and password. When building, you are required to provide the Docker host and a version tag for the build.
 
 Once the build script is complete, you are given a Docker source file URL in your console output. For this specific example, it will look something like:
 
@@ -145,26 +145,13 @@ Copy this URL and move on to the [next steps](#next-steps).
 
 ### Build Scala Docker image {#scala-docker}
 
-Start by cloning the github repository onto your local system with the following command:
+Start by cloning the github repository onto your local system with the following command in terminal:
 
 ```shell
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Navigate to the directory `experience-platform-dsw-reference/recipes/scala/retail`. Next, changes are required in the pom.xml file for dependencies.
-
-Change the model-authoring-sdk dependency version and add exclusions in the pom file.
-
-```json
-<groupId>com.adobe.platform.ml</groupId>
-<artifactId>authoring-sdk_2.11</artifactId>
-<version>1.0.0</version>
-<classifier>jar-with-dependencies</classifier>
-```
-
-Next, update the Spark version in the pom file to 2.4.3 and the Scala version to 2.11.12.
-
-Once you have finished updating the pom.xml file, in the same directory you can find the scripts `login.sh` and `build.sh`. You which use these to log in to Docker build the Docker image. If you have your [Docker credentials](#docker-based-model-authoring) ready, enter the following commands in order:
+Next, navigate to the directory `experience-platform-dsw-reference/recipes/scala/retail` where you can find the scripts `login.sh` and `build.sh`. These scripts are used to log in to Docker and build the Docker image. If you have your [Docker credentials](#docker-based-model-authoring) ready, enter the following commands to terminal in order:
 
 ```BASH
 # for logging in to Docker
@@ -174,7 +161,7 @@ Once you have finished updating the pom.xml file, in the same directory you can 
 ./build.sh
 ```
 
-Note that when executing the login script, you will need to provide the Docker host, username, and password. When building, you are required to provide the Docker host and a version tag for the build.
+When executing the login script, you need to provide the Docker host, username, and password. When building, you are required to provide the Docker host and a version tag for the build.
 
 Once the build script is complete, you are given a Docker source file URL in your console output. For this specific example, it will look something like:
 
