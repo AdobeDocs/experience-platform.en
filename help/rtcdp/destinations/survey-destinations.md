@@ -13,3 +13,5 @@ Currently, Adobe Real-time Customer Data Platform supports the survey destinatio
 
 * [Foresee (Experience Platform Launch extension)](/help/rtcdp/destinations/foresee-extension.md)
 * [InMoment (Experience Platform Launch extension)](/help/rtcdp/destinations/inmoment-extension.md)
+* [Qualtrics Website Feedback (Experience Platform Launch extension)](qualtrics-extension.md)
+

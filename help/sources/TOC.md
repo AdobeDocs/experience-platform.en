@@ -89,11 +89,15 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - Databases {#databases}
       - [Amazon Redshift connector](tutorials/ui/create/databases/redshift.md)
       - [Azure Synapse Analytics connector](tutorials/ui/create/databases/synapse-analytics.md)
+      - [Azure Table Storage connector](tutorials/ui/create/databases/ats.md)
       - [Google Big Query connector](tutorials/ui/create/databases/bigquery.md)
+      - [Hive connector](tutorials/ui/create/databases/hive.md)
       - [MariaDB connector](tutorials/ui/create/databases/mariadb.md)
       - [Microsoft SQL Server connector](tutorials/ui/create/databases/sql-server.md)
       - [MySQL connector](tutorials/ui/create/databases/mysql.md)
+      - [Phoenix connector](tutorials/ui/create/databases/phoenix.md)
       - [PostgreSQL connector](tutorials/ui/create/databases/postgres.md)
+      - [Spark connector](tutorials/ui/create/databases/spark.md)
     - Marketing automation {#marketing-automation}
       - [HubSpot connector](tutorials/ui/create/marketing-automation/hubspot.md)
   - Configure a dataflow {#dataflow}
@@ -102,4 +106,5 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Configure a dataflow for a CRM connector](tutorials/ui/dataflow/crm.md)
       - [Configure a dataflow for a customer success connector](tutorials/ui/dataflow/customer-success.md)
       - [Configure a dataflow for a marketing automation connector](tutorials/ui/dataflow/marketing-automation.md)
-  - [Activate inbound data to populate customer profiles](tutorials/ui/activate.md)
+  - [Activate inbound data to populate customer profiles](tutorials/ui/profile.md)
+  - [Monitor accounts and dataset flows](tutorials/ui/monitor.md)

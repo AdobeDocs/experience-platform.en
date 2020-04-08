@@ -15,6 +15,7 @@ Currently, Real-time CDP supports the advertising destinations listed below. For
 
 * [Awin Adveritising Conversion Tag (Experience Platform Launch extension)](/help/rtcdp/destinations/awin-conversiontag-extension.md)
 * [Awin Adveritising Mastertag (Experience Platform Launch extension)](/help/rtcdp/destinations/awin-mastertag-extension.md)
+* [Beemray (Experience Platform Launch extension)](beemray-extension.md)
 * [Bing Ads Universal Event Tracking (Experience Platform Launch extension)](/help/rtcdp/destinations/bing-ads-extension.md)
 * [Branch (Experience Platform Launch extension)](/help/rtcdp/destinations/branch-extension.md)
 * [Facebook Pixel (Experience Platform Launch extension)](/help/rtcdp/destinations/facebook-pixel-extension.md)
@@ -24,3 +25,7 @@ Currently, Real-time CDP supports the advertising destinations listed below. For
 * [Google Ads (Experience Platform Launch extension)](/help/rtcdp/destinations/google-ads-extension.md)
 * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
 * [Google gtag (Experience Platform Launch extension)](/help/rtcdp/destinations/gtag-advertising-extension.md)
+* [LinkedIn Insight Tag (Experience Platform Launch extension)](linkedin-extension.md)
+* [Pinterest Conversion Tracking (Experience Platform Launch extension)](pinterest-extension.md)
+* [Twitter Universal Website Tag (Experience Platform Launch extension)](twitter-uwt-extension.md)
+

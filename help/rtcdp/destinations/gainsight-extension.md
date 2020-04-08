@@ -15,7 +15,7 @@ Gainsight is a personalization extension in Adobe Real-time Customer Data Platfo
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-destinations.md).
 
-![Gainsight extension](/help/rtcdp/destinations/assets/gainsight-extension.png)
+![Gainsight extension](assets/gainsight-extension.png)
 
 ## Prerequisites {#prerequisites}
 
@@ -52,6 +52,3 @@ You can configure, upgrade, and delete extensions in the Launch interface.
 >If the extension is already installed on one of your properties, the Adobe Real-time CDP UI still displays **[!UICONTROL Install]** for the extension. Kick off the installation workflow as described in [Install extension](#install-extension) to get to Launch and configure or delete your extension.
 
 To upgrade your extension, see [Extension upgrade](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/extension-upgrade.html) in the Launch documentation.
-
-
-
