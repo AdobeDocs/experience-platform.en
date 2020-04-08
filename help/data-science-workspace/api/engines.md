@@ -127,10 +127,10 @@ curl -X POST \
 | --- | --- |
 | `name` | The desired name for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in the UI as the Recipe's name. |
 | `description` | An optional description for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in UI as the Recipe's description. This property is required. If you do not want to provide a description, set its value to be an empty string. |
-| `type` | The execution type of the Engine. This value corresponds to the language in which the Docker image is built upon "Spark". |
-| `mlLibrary` | A field that is required when creating engines for PySpark and Scala recipes. |
-| `artifacts.default.image.location` | The location of the Docker image linked to by a Docker URL. |
-| `artifacts.default.image.executionType` | The execution type of the Engine. This value corresponds to the language in which the Docker image is built upon "Spark". |
+| `type` | The execution type of the Engine. This value corresponds to the language in which the Docker image is built upon. The value can be set to Spark or PySpark. |
+| `mlLibrary` | A field that is required when creating engines for PySpark and Scala recipes. This field must be set to `databricks-spark`. |
+| `artifacts.default.image.location` | The location of the Docker image. Only Azure ACR or Public (unauthenticated) Dockerhub is supported. |
+| `artifacts.default.image.executionType` | The execution type of the Engine. This value corresponds to the language in which the Docker image is built upon. This can be either "Spark" or "PySpark". |
 
 **Response**
 
@@ -417,7 +417,7 @@ curl -X DELETE \
 ## Deprecated requests
 
 >[!IMPORTANT] 
->Binary artifacts are no longer supported. PySpark 3 (Spark 2.4) and Scala (Spark 2.4) should now follow the [docker image](#docker-image) examples to create an Engine.
+>Binary artifacts are no longer supported and are set to be removed at a later date. New PySpark and Scala recipes should now follow the [docker image](#docker-image) examples to create an Engine.
 
 ## Create an Engine using binary artifacts - deprecated
 
@@ -487,7 +487,7 @@ A successful response returns a payload containing the details of the newly crea
 
 ## Create a feature pipeline Engine using binary artifacts - deprecated
 
->[!IMPORTANT] binary artifacts are no longer supported.
+>[!IMPORTANT] binary artifacts are no longer supported and are set to be removed at a later date.
 
 You can create a feature pipeline Engine using local `.jar` or `.egg` binary artifacts by performing a POST request while providing its meta data and the artifact's paths in multipart forms. A PySpark or Spark Engine has the ability to specify computation resources such as the number of cores or the amount of memory. Please refer to the appendix section on [PySpark and Spark resource configurations](./appendix.md#resource-config) for more information.
 
