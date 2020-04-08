@@ -1,21 +1,21 @@
 ---
-title: Gainsight extension
-seo-title: Gainsight extension
-description: The Gainsight extension is a personalization destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Gainsight extension is a personalization destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+title: Qualtrics Website Feedback extension
+seo-title: Qualtrics Website Feedback extension
+description: THe Qualtrics Website Feedback extension is a surveys destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The Qualtrics Website Feedback extension is a surveys destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
-# Gainsight extension {#gainsight-extension}
+# Qualtrics Website Feedback Extension {#qualtrics-extension}
 
 ## Overview {#overview}
 
-Gainsight empowers product owners with the tools to deeply understand user behavior, drive product adoption, and collect user feedback.
+Qualtrics Website Feedback enables you to engage your website visitors with the right message, at the right time. Whether you want to improve visitor experience with website feedback surveys or increase conversion, Qualtrics Website Feedback has got you covered.
 
-Gainsight is a personalization extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.103343.html).
+Create and deploy highly-targeted, branded web messages within minutes using an intuitive point-and-click interface. The data and insights you gather from your website are surfaced alongside customer feedback data across all channels offering a complete view of your customer experience - all on one platform.
+
+Qualtrics Website Feedback is a survey extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101569.qualtrics-website-feedback.html).
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-destinations.md).
-
-![Gainsight extension](assets/gainsight-extension.png)
 
 ## Prerequisites {#prerequisites}
 
@@ -25,7 +25,7 @@ To use this extension, you need access to Experience Platform Launch. Experience
 
 ## Install extension {#install-extension}
 
-To install the Gainsight extension:
+To install the Qualtrics Website Feedback extension:
 
 1. In the [Adobe Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations > Catalog]**.
 2. Select the extension from the catalog or use the search bar.
@@ -33,7 +33,7 @@ To install the Gainsight extension:
 4. In the **[!UICONTROL Select available Launch property]** window, select the Launch property in which you want to install the extension. You also have the option of creating a new property in Launch. A property is a collection of rules, data elements, configured extensions, environments, and libraries. Learn about properties in the [Properties page section](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) of the Launch documentation.
 5. The workflow takes you to Launch to complete the installation. 
 
-For information about the extension configuration options and installation support, see the [Gainsight page on Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.103343.html).
+For information about the extension configuration options and installation support, see the [Qualtrics Website Feedback page on Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101569.qualtrics-website-feedback.html).
 
 You can also install the extension directly in the [Experience Platform Launch interface](https://launch.adobe.com/). See [Add a new extension](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) in the Launch documentation.
 
