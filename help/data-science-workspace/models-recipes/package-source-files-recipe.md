@@ -39,13 +39,20 @@ Provide an appropriate **Recipe Name**, for example, "Retail Sales recipe", and 
 
 ![](../images/models-recipes/package-source-files/recipe_info.png)
 
-Select the appropriate **Runtime**, then choose **Classification** for **Type**. Your Azure Container Registry credentials will be generated.
+Select the appropriate **Runtime**, then choose **Classification** for **Type**. Your Azure Container Registry credentials are generated.
+
+>[!NOTE]
+>*Type* is the class of machine learning problem the recipe is designed for and is used after training to help tailor evaluating the training run.
+
+>[!TIP]
+>- For Python recipes select the **Python** runtime. 
+>- For R recipes select the **R** runtime.
+>- For PySpark recipes select the **PySpark** runtime. An artifact type auto populates. 
+>- For Scala recipes select the **Spark** runtime. An artifact type auto populates. 
 
 ![](../images/models-recipes/package-source-files/recipe_workflow_recipe_source.png)
 
-Note the values for **Docker Host**, **Username**, and **Password**. These will be used later to build and push your Docker image.
-
-Once pushed, you and other users can access the image via URL. The **Source File** field will expect this URL as an input.
+Note the values for *Docker Host*, *Username*, and *Password*. These are used later to build and push your Docker image.
 
 ### Package the source files
 
