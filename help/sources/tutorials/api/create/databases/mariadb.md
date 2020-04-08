@@ -10,6 +10,7 @@ topic: overview
 Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
 This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to Maria DB.
+
 ## Getting started
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
