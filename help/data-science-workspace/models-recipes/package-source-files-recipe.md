@@ -39,7 +39,7 @@ The *Configure* page opens. Provide an appropriate **Recipe Name**, for example,
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
-Select the appropriate *Runtime*, then choose *Classification* for *Type*. Your Azure Container Registry credentials are generated once complete.
+Select the appropriate *Runtime*, then choose a **Classification** for *Type*. Your Azure Container Registry credentials are generated once complete.
 
 >[!NOTE]
 >*Type* is the class of machine learning problem the recipe is designed for and is used after training to help tailor evaluating the training run.
