@@ -58,4 +58,4 @@ To connect an existing account, select the  PayPal account you want to connect w
 
 ## Next steps
 
-By following this tutorial, you have established a base connection to your PayPal account. You can now continue on to the next tutorial and [configure a dataflow to bring CRM data into Platform](../../dataflow/crm.md).
+By following this tutorial, you have established a base connection to your PayPal account. You can now continue on to the next tutorial and [configure a dataflow to bring CRM data into Platform](../../dataflow/payments.md).
