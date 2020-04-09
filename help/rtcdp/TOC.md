@@ -28,10 +28,12 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Adobe Campaign](destinations/adobe-campaign-destination.md)
     * Advertising destinations{#advertiser-destinations}
       * [Advertising destinations overview](destinations/advertising-destinations.md)
+      * [Adobe Advertising Cloud (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
       * [Awin Adveritising Conversion Tag (Experience Platform Launch extension)](/help/rtcdp/destinations/awin-conversiontag-extension.md)
       * [Awin Adveritising Mastertag (Experience Platform Launch extension)](/help/rtcdp/destinations/awin-mastertag-extension.md)
       * [Beemray (Experience Platform Launch extension)](/help/rtcdp/destinations/beemray-extension.md)
       * [Branch (Experience Platform Launch extension)](/help/rtcdp/destinations/branch-extension.md)
+      * [DoubleClick Floodlight (Experience Platform Launch extension)](/help/rtcdp/destinations/doubleclick-floodlight-extension.md)
       * [Facebook Pixel (Experience Platform Launch extension)](/help/rtcdp/destinations/facebook-pixel-extension.md)
       * [Flashtalking OneTag (Experience Platform Launch extension)](/help/rtcdp/destinations/flashtalking-extension.md)
       * [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
@@ -76,6 +78,7 @@ user-guide-title: Real-Time Customer Data Platform Help
     * Email marketing destinations{#email-destinations}
       * [Email marketing destinations overview](destinations/email-marketing-destinations.md)
       * [Adobe Campaign](destinations/adobe-campaign-destination.md)
+      * [Bizible Analytics](/help/rtcdp/destinations/bizible-extension.md)
       * [Marketo (Experience Platform Launch extension)](destinations/marketo-extension.md)
       * [Marketo Munchkin (Experience Platform Launch extension)](destinations/marketo-munchkin-extension.md)
       * [Oracle Eloqua](destinations/oracle-eloqua-destination.md)
@@ -92,10 +95,12 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [D&B Visitor Intelligence (Experience Platform Launch extension)](/help/rtcdp/destinations/dnb-extension.md)
       * [Experience Cloud ID Service (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-ecid-extension.md)
       * [Gainsight (Experience Platform Launch extension)](/help/rtcdp/destinations/gainsight-extension.md)
+      * [Kickfire (Experience Platform Launch extension)](/help/rtcdp/destinations/kickfire-extension.md)
       * [Marketo Web Personalization (Experience Platform Launch extension)](destinations/marketo-web-personalization-extension.md)
     * Social network destinations{#social-network-destinations}
       * [Social network destinations overview](/help/rtcdp/destinations/social-network-destinations.md)
       * [Social network destinations authentication flow](/help/rtcdp/destinations/social-network-destinations-workflow.md)
+      * [Adobe Livefyre (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-livefyre-extension.md)
       * [Facebook destination](/help/rtcdp/destinations/facebook-destination.md)
     * Survey destinations {#surveys}
       * [Survey destinations overview](/help/rtcdp/destinations/survey-destinations.md)
