@@ -104,7 +104,7 @@ Once you have reviewed your dataflow, click **Finish** and allow some time for t
 
 ## Monitor your dataset flow
 
-Once your dataset flow has been created, you can monitor the data that is being ingested through it. For more information on how to monitor your dataset flows, see the tutorial on [accounts and dataset flows](../accounts-and-dataset-flows.md).
+Once your dataset flow has been created, you can monitor the data that is being ingested through it. For more information on how to monitor your dataset flows, see the tutorial on [accounts and dataset flows](../monitor.md).
 
 ## Next steps
 
