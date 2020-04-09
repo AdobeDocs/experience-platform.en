@@ -87,12 +87,12 @@ The following table outlines metrics for Real-time Customer Profile.
 | timeseries.profiles.dataset.recordfailed.count | Number of records failed by Profile, for one dataset or for all datasets. | Dataset ID (Optional) |
 | timeseries.profiles.dataset.batchsuccess.count | Number of Profile batches ingested for a dataset or for all datasets. | Dataset ID (Optional) |
 | timeseries.profiles.dataset.batchfailed.count | Number of Profile batches failed for one dataset or for all datasets. | Dataset ID (Optional) |
-|platform.ups.ingest.streaming.request.m1_rate	|Incoming Request rate.|IMS Org|
-|platform.ups.ingest.streaming.access.put.success.m1_rate	|Ingestion success rate.|IMS Org|
-|platform.ups.ingest.streaming.records.created.m15_rate	|Rate of new records ingested for a dataset.|Dataset ID|
-|platform.ups.ingest.streaming.request.error.created.outOfOrder.m1_rate	|Rate of out-of-order timestamped records for create request for a dataset.|Dataset ID|
-|platform.ups.profile-commons.ingest.streaming.dataSet.record.created.timestamp	|Timestamp for last create record request for a dataset.|Dataset ID|
-|platform.ups.ingest.streaming.request.error.updated.outOfOrder.m1_rate	|Rate of out-of-order timestamped records for update request for a dataset.|Dataset ID|
-|platform.ups.profile-commons.ingest.streaming.dataSet.record.updated.timestamp	|Timestamp for last update record request for a dataset.| Dataset ID|
-|platform.ups.ingest.streaming.record.size.m1_rate|Average record size.|IMS Org|
-|platform.ups.ingest.streaming.records.updated.m15_rate|Rate of update requests for records ingested for a dataset.|Dataset ID|
+| platform.ups.ingest.streaming.request.m1_rate | Incoming Request rate. | IMS Org |
+| platform.ups.ingest.streaming.access.put.success.m1_rate | Ingestion success rate. | IMS Org |
+| platform.ups.ingest.streaming.records.created.m15_rate | Rate of new records ingested for a dataset. | Dataset ID |
+| platform.ups.ingest.streaming.request.error.created.outOfOrder.m1_rate | Rate of out-of-order timestamped records for create request for a dataset. | Dataset ID |
+| platform.ups.profile-commons.ingest.streaming.dataSet.record.created.timestamp | Timestamp for last create record request for a dataset.| Dataset ID |
+| platform.ups.ingest.streaming.request.error.updated.outOfOrder.m1_rate | Rate of out-of-order timestamped records for update request for a dataset. | Dataset ID |
+| platform.ups.profile-commons.ingest.streaming.dataSet.record.updated.timestamp | Timestamp for last update record request for a dataset. | Dataset ID |
+| platform.ups.ingest.streaming.record.size.m1_rate | Average record size. | IMS Org |
+| platform.ups.ingest.streaming.records.updated.m15_rate | Rate of update requests for records ingested for a dataset. | Dataset ID |
