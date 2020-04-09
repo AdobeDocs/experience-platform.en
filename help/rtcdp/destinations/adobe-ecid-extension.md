@@ -1,19 +1,20 @@
 ---
-title: Quantum Metric extension
-seo-title: Quantum Metric extension
-description: THe Quantum Metric extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Quantum Metric extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+title: Experience Cloud ID Service extension
+seo-title: Experience Cloud ID Service extension
+description: The Experience Cloud ID Service extension is a personalization destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The Experience Cloud ID Service extension is a personalization destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
-# Quantum Metric Extension {#quantum-metric-extension}
+# Experience Cloud ID Service extension {#adobe-ecid-extension}
 
 ## Overview {#overview}
 
-Quantum Metric's integration with Adobe Launch facilitates codeless deployment of Quantum Metric's data collection tag. In addition, this extension offers the ability to capture Launch Data Elements containing useful information from the Quantum Metric API.
+This extension implements the Experience Cloud ID Service, which identifies visitors across all Experience Cloud solutions.
 
-Quantum Metric is an analytics extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101535.quantum-metric-extension-for-adobe-launch.html).
+Experience Cloud ID Service is a personalization extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the [Experience Cloud ID Service extension page](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html) in Experience Platform Launch documentation.
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
+
 
 ## Prerequisites {#prerequisites}
 
@@ -23,7 +24,7 @@ To use this extension, you need access to Experience Platform Launch. Experience
 
 ## Install extension {#install-extension}
 
-To install the Quantum Metric extension:
+To install the Experience Cloud ID Service extension:
 
 1. In the [Adobe Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations > Catalog]**.
 2. Select the extension from the catalog or use the search bar.
@@ -31,7 +32,7 @@ To install the Quantum Metric extension:
 4. In the **[!UICONTROL Select available Launch property]** window, select the Launch property in which you want to install the extension. You also have the option of creating a new property in Launch. A property is a collection of rules, data elements, configured extensions, environments, and libraries. Learn about properties in the [Properties page section](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) of the Launch documentation.
 5. The workflow takes you to Launch to complete the installation. 
 
-For information about the extension configuration options and installation support, see the [Quantum Metric page on Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101535.quantum-metric-extension-for-adobe-launch.html).
+For information about the extension configuration options and installation support, see the [Experience Cloud ID Service extension page](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html) in Experience Launch documentation.
 
 You can also install the extension directly in the [Experience Platform Launch interface](https://launch.adobe.com/). See [Add a new extension](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) in the Launch documentation.
 

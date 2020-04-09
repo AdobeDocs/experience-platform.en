@@ -44,6 +44,7 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Twitter Universal Website Tag (Experience Platform Launch extension)](destinations/twitter-uwt-extension.md)
     * Analytics destinations {#analytics-destinations}
       * [Analytics destinations overview](destinations/analytics-destinations.md)
+      * [Adform Website Tracking (Experience Platform Launch extension)](/help/rtcdp/destinations/adform-extension.md)
       * [Adobe Analytics (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-analytics-extension.md)
       * [Adobe Media Analytics for Audio and Video (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-video-analytics-extension.md)
       * [Clicktale (Experience Platform Launch extension)](/help/rtcdp/destinations/clicktale-extension.md)
@@ -82,13 +83,14 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [PebblePost (Experience Platform Launch extension)](destinations/pebblepost-extension.md)
       * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
     * Experience Platform Launch extensions{#launch-extensions}
-      * [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-destinations.md)  
+      * [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md)  
     * Personalization destinations {#personalization-destinations}
       * [Personalization destinations overview](/help/rtcdp/destinations/personalization-destinations.md)
       * [Adobe Target (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-target-extension.md)
       * [Adobe Target v2 (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-target-v2-extension.md)
       * [Beemray (Experience Platform Launch extension)](/help/rtcdp/destinations/beemray-extension.md)
       * [D&B Visitor Intelligence (Experience Platform Launch extension)](/help/rtcdp/destinations/dnb-extension.md)
+      * [Experience Cloud ID Service (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-ecid-extension.md)
       * [Gainsight (Experience Platform Launch extension)](/help/rtcdp/destinations/gainsight-extension.md)
       * [Marketo Web Personalization (Experience Platform Launch extension)](destinations/marketo-web-personalization-extension.md)
     * Social network destinations{#social-network-destinations}
