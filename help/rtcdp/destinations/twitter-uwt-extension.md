@@ -13,7 +13,7 @@ Twitter Universal Website Tag provides actions to send beacons to Twitter UWT Ta
 
 Twitter Universal Website Tag is an advertising extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see [Advanced Conversion Tracking](https://business.twitter.com/en/solutions/twitter-ads/website-clicks/advanced-conversion-tracking.html).
 
-This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-destinations.md).
+This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
 ## Prerequisites {#prerequisites}
 

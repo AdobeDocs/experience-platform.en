@@ -15,6 +15,8 @@ In Adobe Real-time Customer Data Platform, we distinguish between two destinatio
 
 ![Types of destinations](/help/rtcdp/destinations/assets/types-of-destinations.png)
 
+<br>&nbsp;
+
 ### Connections
 
 **Profile Export** and **Segment Export** destinations in Adobe Real-time Customer Data Platform capture event data, combine it with other data sources, apply segmentation, and export segments and qualified profiles to destinations. Examples of those are the [Amazon S3 cloud storage destination](/help/rtcdp/destinations/amazon-s3-destination.md) or the [Google Display & Video 360 advertising destination](/help/rtcdp/destinations/google-dv360-destination.md).
@@ -37,9 +39,9 @@ The video below runs you through the particularities of the two types of destina
 
  Adobe Real-time CDP leverages the power and flexibility of Experience Platform Launch to include Launch extensions in the user Real-time CDP interface. 
  
- Launch extensions forward raw event data to several types of destinations. They belong to the **Event Forwarding** type of destination. This is a simpler type of integration with destination platforms, which only forwards raw event data. Examples of those are the [Gainsight personalization extension](/help/rtcdp/destinations/gainsight-extension.md) or the [Confirmit Voice of the Customer extension](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md).
+ Launch extensions forward raw event data to several types of destinations. Think of extensions as an **Event Forwarding** type of destination. This is a simpler type of integration with destination platforms, which only forwards raw event data. Examples of those are the [Gainsight personalization extension](/help/rtcdp/destinations/gainsight-extension.md) or the [Confirmit Voice of the Customer extension](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md).
 
- For detailed information about Experience Platform Launch extensions, see the [Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-destinations.md).
+ For detailed information about Experience Platform Launch extensions, see the [Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
 
 ![Experience Platform Launch extensions compared to other destinations](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
