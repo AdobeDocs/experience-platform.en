@@ -17,4 +17,5 @@ Currently, Adobe Real-time CDP supports the personalization destinations listed 
 * [D&B Visitor Intelligence (Experience Platform Launch extension)](/help/rtcdp/destinations/dnb-extension.md)
 * [Experience Cloud ID Service (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-ecid-extension.md)
 * [Gainsight (Experience Platform Launch extension)](/help/rtcdp/destinations/gainsight-extension.md)
+* [Kickfire (Experience Platform Launch extension)](/help/rtcdp/destinations/kickfire-extension.md)
 * [Marketo Web Personalization (Experience Platform Launch extension)](marketo-web-personalization-extension.md)
