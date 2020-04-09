@@ -156,8 +156,8 @@ curl -X POST \
 
 | Property | Description |
 | --------- | ----------- |
-| `auth.params.connectionString` | The connection string associated with your MySQL account.
-| `connectionSpec.id` | The ID of the connection specification associated with your MySQL account.
+| `auth.params.connectionString` | The connection string associated with your MySQL account. |
+| `connectionSpec.id` | The ID of the connection specification associated with your MySQL account. |
 
 **Response**
 

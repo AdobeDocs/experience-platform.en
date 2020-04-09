@@ -57,7 +57,6 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Azure Table Storage connector](tutorials/api/create/databases/ats.md)
       - [Google BigQuery connector](tutorials/api/create/databases/bigquery.md)
       - [Hive connector](tutorials/api/create/databases/hive.md)
-      - [HP Vertica connector](tutorials/api/create/databases/vertica.md)
       - [MariaDB connector](tutorials/api/create/databases/mariadb.md)
       - [MySQL connector](tutorials/api/create/databases/mysql.md)
       - [Phoenix connector](tutorials/api/create/databases/phoenix.md)
