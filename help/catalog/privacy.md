@@ -60,7 +60,6 @@ This section demonstrates how to add privacy labels to a dataset for use in Data
         "createdUser": "{USER_ID}",
         "updatedUser": "{USER_ID}",
         "viewId": "5d8e9cf5872f18164763f972",
-        "aspect": "production",
         "status": "enabled",
         "fileDescription": {
             "persisted": true,
