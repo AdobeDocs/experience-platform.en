@@ -17,15 +17,21 @@ In the [Experience Platform UI](https://platform.adobe.com), click **Monitoring*
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-The *Streaming end-to-end* monitoring page appears. This workspace provides a graph that displays the rate of messages being streamed, as well as a detailed list of incoming data.
+The *Streaming end-to-end* monitoring page appears. This workspace provides a graph that displays the rate of streamed events being received by Platform, a graph that displays the rate of streamed events which were successfully processed by [Real-time Customer Profile](../../profile/home.md), as well as a detailed list of incoming data.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
-By default, the graph shows the rate of ingestion over the past seven days. This date range can be adjusted to show various periods of time by clicking the highlighted button.
+By default, the top graph shows the rate of ingestion over the past seven days. This date range can be adjusted to show various periods of time by clicking the highlighted button.
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-graph.png)
 
-Underneath the graph is a list of all the streaming ingestion records that correspond with the date range displayed above. Each listed batch displays its ID, dataset name, when it was last updated, the number of records in the batch, as well as the number of errors (if any exist). You can click any of the records for more detailed information about that record.
+The bottom graph shows the rate of successfully processed streamed events by Profile over the past seven days. This date range can be adjusted to show various periods of time by clicking the highlighted button.
+
+> [!NOTE] In order for data to show up on this graph, the data must be **explicitly** enabled for Profile. To learn how to enable streaming data for Profile, read the [datasets user guide](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
+
+Insert image here.
+
+Underneath the graphs is a list of all the streaming ingestion records that correspond with the date range displayed above. Each listed batch displays its ID, dataset name, when it was last updated, the number of records in the batch, as well as the number of errors (if any exist). You can click any of the records for more detailed information about that record.
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-streams.png)
 
