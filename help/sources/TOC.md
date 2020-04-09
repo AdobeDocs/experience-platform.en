@@ -72,11 +72,15 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [Explore CRM data](tutorials/api/explore/crm.md)
     - [Explore customer success data](tutorials/api/explore/customer-success.md)
     - [Explore database or NoSQL data](tutorials/api/explore/database-nosql.md)
+    - [Explore payment data](tutorials/api/explore/payments.md)
+    - [Explore protocol data](tutorials/api/explore/protocols.md)
   - Collect data {#collect}
     - [Collect cloud storage data](tutorials/api/collect/cloud-storage.md)
     - [Collect CRM data](tutorials/api/collect/crm.md)
     - [Collect customer success data](tutorials/api/collect/customer-success.md)
     - [Collect database or NoSQL data](tutorials/api/collect/database-nosql.md)
+    - [Collect payment data](tutorials/api/collect/payments.md)
+    - [Collect protocol data](tutorials/api/collect/protocols.md)
   - [Ingest parquet data from a third-party cloud storage system](tutorials/api/create-dataset-base-connection.md)
   - [Create a dataset base connection using the Flow Service API](tutorials/api/cloud-storage-parquet.md)
 - UI tutorials {#ui-tutorials}
