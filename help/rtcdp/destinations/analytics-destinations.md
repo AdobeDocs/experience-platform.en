@@ -11,6 +11,7 @@ seo-description: The customer is always right, but you need to hear their voice 
 
 Currently, Adobe Real-time Customer Data Platform supports the analytics destinations listed below. For information on how to connect to these destinations, see the individual links:
 
+* [Adform Website Tracking (Experience Platform Launch extension)](/help/rtcdp/destinations/adform-extension.md)
 * [Adobe Analytics (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-analytics-extension.md)
 * [Adobe Media Analytics for Audio and Video (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-video-analytics-extension.md)
 * [Clicktale (Experience Platform Launch extension)](/help/rtcdp/destinations/clicktale-extension.md)
