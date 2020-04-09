@@ -13,7 +13,7 @@ Branch provides powerful links and solutions that help you acquire, engage, and 
 
 Branch is an advertising extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the [features page](https://branch.io/features/) on the Branch website.
 
-This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-destinations.md).
+This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
 ## Prerequisites {#prerequisites}
 
