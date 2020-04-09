@@ -40,7 +40,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Amazon S3 connector](tutorials/api/create/cloud-storage/s3.md)
       - [Azure Blob connector](tutorials/api/create/cloud-storage/blob.md)
       - [Azure Data Lake Storage Gen2 connector](tutorials/api/create/cloud-storage/google.md)
-      - [Google Cloud Storage connector](tutorials/api/create/cloud-storage/s3.md)
+      - [Google Cloud Storage connector](tutorials/api/create/cloud-storage/google.md)
       - [SFTP connector](tutorials/api/create/cloud-storage/sftp.md)
     - CRM {#crm}
       - [Google AdWords connector](tutorials/api/create/crm/adwords.md)
@@ -110,6 +110,6 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Configure a dataflow for a customer success connector](tutorials/ui/dataflow/customer-success.md)
       - [Configure a dataflow for a marketing automation connector](tutorials/ui/dataflow/marketing-automation.md)
       - [Configure a dataflow for a payment connector](tutorials/ui/dataflow/payments.md)
-      - [Configure a dataflow for a protocol connector](tutorials/ui/dataflow/protocol.md)
+      - [Configure a dataflow for a protocol connector](tutorials/ui/dataflow/protocols.md)
   - [Activate inbound data to populate customer profiles](tutorials/ui/profile.md)
   - [Monitor accounts and dataset flows](tutorials/ui/monitor.md)
