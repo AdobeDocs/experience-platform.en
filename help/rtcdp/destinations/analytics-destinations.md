@@ -21,6 +21,8 @@ Currently, Adobe Real-time Customer Data Platform supports the analytics destina
 * [Dialogtech (Experience Platform Launch extension)](/help/rtcdp/destinations/dialogtech-extension.md)
 * [Google Global Site Tag analytics (Experience Platform Launch extension)](/help/rtcdp/destinations/gtag-analytics-extension.md)
 * [Google Universal Analytics (Experience Platform Launch extension)](/help/rtcdp/destinations/google-universal-analytics-extension.md)
+* [Invoca Tags (Experience Platform Launch extension)](/help/rtcdp/destinations/invoca-extension.md)
+* [JW Player Analytics (Beta) (Experience Platform Launch extension)](/help/rtcdp/destinations/jw-player-analytics-extension.md)
 * [Nielsen BSDK (Experience Platform Launch extension)](nielsen-bsdk-extension.md)
 * [Nielsen IMA Handler (Experience Platform Launch extension)](nielsen-ima-extension.md)
 * [Nielsen VideoJS Player Handler (Experience Platform Launch extension)](nielsen-videojs-extension.md)
