@@ -56,6 +56,8 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Dialogtech (Experience Platform Launch extension)](/help/rtcdp/destinations/dialogtech-extension.md)
       * [Google Global Site Tag analytics (Experience Platform Launch extension)](/help/rtcdp/destinations/gtag-analytics-extension.md)
       * [Google Universal Analytics (Experience Platform Launch extension)](/help/rtcdp/destinations/google-universal-analytics-extension.md)
+      * [Invoca Tags (Experience Platform Launch extension)](/help/rtcdp/destinations/invoca-extension.md)
+      * [JW Player Analytics (Beta) (Experience Platform Launch extension)](/help/rtcdp/destinations/jw-player-analytics-extension.md)
       * [Nielsen BSDK (Experience Platform Launch extension)](destinations/nielsen-bsdk-extension.md)
       * [Nielsen IMA Handler (Experience Platform Launch extension)](destinations/nielsen-ima-extension.md)
       * [Nielsen VideoJS Player Handler (Experience Platform Launch extension)](destinations/nielsen-videojs-extension.md)
@@ -69,16 +71,13 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Workflow to create cloud storage destinations](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
       * [Amazon S3 destination](destinations/amazon-s3-destination.md)
       * [SFTP destination](destinations/sftp-destination.md)
-    * CRM destinations {#crm-destinations}
-      * [CRM destinations overview](destinations/crm-destinations.md)
-      * [Invoca Tags (Experience Platform Launch extension)](/help/rtcdp/destinations/invoca-extension.md)
     * Data Management Platform destinations {dmp-destinations}
       * [Data Management Platform destinations overview](destinations/dmp-destinations.md)
       * [Audience Manager DIL (Experience Platform Launch extension)](/help/rtcdp/destinations/aam-dil-extension.md)
     * Email marketing destinations{#email-destinations}
       * [Email marketing destinations overview](destinations/email-marketing-destinations.md)
       * [Adobe Campaign](destinations/adobe-campaign-destination.md)
-      * [Bizible Analytics](/help/rtcdp/destinations/bizible-extension.md)
+      * [Bizible Analytics (Experience Platform Launch extension)](/help/rtcdp/destinations/bizible-extension.md)
       * [Marketo (Experience Platform Launch extension)](destinations/marketo-extension.md)
       * [Marketo Munchkin (Experience Platform Launch extension)](destinations/marketo-munchkin-extension.md)
       * [Oracle Eloqua](destinations/oracle-eloqua-destination.md)
