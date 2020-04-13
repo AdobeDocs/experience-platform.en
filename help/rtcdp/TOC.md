@@ -32,6 +32,7 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Awin Advertising Conversion Tag (Experience Platform Launch extension)](/help/rtcdp/destinations/awin-conversiontag-extension.md)
       * [Awin Advertising Mastertag (Experience Platform Launch extension)](/help/rtcdp/destinations/awin-mastertag-extension.md)
       * [Beemray (Experience Platform Launch extension)](/help/rtcdp/destinations/beemray-extension.md)
+      * [Bing Ads Universal Event Tracking (Experience Platform Launch extension)](/help/rtcdp/destinations/bing-ads-extension.md)
       * [Branch (Experience Platform Launch extension)](/help/rtcdp/destinations/branch-extension.md)
       * [DoubleClick Floodlight (Experience Platform Launch extension)](/help/rtcdp/destinations/doubleclick-floodlight-extension.md)
       * [Facebook Pixel (Experience Platform Launch extension)](/help/rtcdp/destinations/facebook-pixel-extension.md)
