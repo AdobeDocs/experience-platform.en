@@ -5,13 +5,11 @@ description: Learn how to get Adobe Experience Cloud Id.
 seo-description: Learn how to get Adobe Experience Cloud Id.
 ---
 
-# (Beta) Debugging
+# (Beta) Getting Experience Cloud ID
 
 >[!IMPORTANT]
 >
 >Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
-
-# Getting Experience Cloud ID
 
 Adobe Experience Cloud uses a unique ID for every consumer. If you want to use this unique ID, use the `getEcid` command. 
 
