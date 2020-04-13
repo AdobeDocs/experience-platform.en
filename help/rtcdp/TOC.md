@@ -56,7 +56,6 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Dialogtech (Experience Platform Launch extension)](/help/rtcdp/destinations/dialogtech-extension.md)
       * [Google Global Site Tag analytics (Experience Platform Launch extension)](/help/rtcdp/destinations/gtag-analytics-extension.md)
       * [Google Universal Analytics (Experience Platform Launch extension)](/help/rtcdp/destinations/google-universal-analytics-extension.md)
-      * [Invoca Tags (Experience Platform Launch extension)](/help/rtcdp/destinations/invoca-extension.md)
       * [JW Player Analytics (Beta) (Experience Platform Launch extension)](/help/rtcdp/destinations/jw-player-analytics-extension.md)
       * [Nielsen BSDK (Experience Platform Launch extension)](destinations/nielsen-bsdk-extension.md)
       * [Nielsen IMA Handler (Experience Platform Launch extension)](destinations/nielsen-ima-extension.md)
@@ -106,12 +105,13 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Foresee (Experience Platform Launch extension)](/help/rtcdp/destinations/foresee-extension.md)
       * [InMoment (Experience Platform Launch extension)](/help/rtcdp/destinations/inmoment-extension.md)
       * [Qualtrics Website Feedback (Experience Platform Launch extension)](destinations/qualtrics-extension.md)
+      * [Web Intercept Surveys - QuestionPro (Experience Platform Launch extension)](/help/rtcdp/destinations/web-intercept-surveys-extension.md)
     * Voice of the customer destinations {#voice-of-customer-destinations}
       * [Voice of the customer destinations overview](/help/rtcdp/destinations/voice-of-customer-destinations.md)
       * [Confirmit Digital Feedback (Experience Platform Launch extension)](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)
+      * [Invoca Tags (Experience Platform Launch extension)](/help/rtcdp/destinations/invoca-extension.md)
       * [Medallia (Experience Platform Launch extension)](destinations/medallia-extension.md)
       * [Talk URL Inbox (Experience Platform Launch extension)](destinations/talkurl-extension.md)
-      * [QuestionPro Intercept Surveys (Experience Platform Launch extension)](destinations/web-intercept-surveys-extension.md)
   * Destinations tutorials {#dest-tutorials}
     * [Connect to a destination](/help/rtcdp/destinations/connect-destination.md)
     * [Activate profiles and segments to a destination](destinations/activate-destinations.md)

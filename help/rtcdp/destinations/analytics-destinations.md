@@ -1,13 +1,13 @@
 ---
-title: analytics Destinations
-seo-title: analytics Destinations
-description: The customer is always right, but you need to hear their voice first. With analytics destinations, you can collect useful feedback and interact with your customers. 
-seo-description: The customer is always right, but you need to hear their voice first. With analytics destinations, you can collect useful feedback and interact with your customers. 
+title: Analytics Destinations
+seo-title: Analytics Destinations
+description: Analytics destinations track how visitors interact with content on your site and collect data to understand the behavior of your audience. These platforms deliver unique insights on engagement and conversion of your most valuable visitors.
+seo-description: Analytics destinations track how visitors interact with content on your site and collect data to understand the behavior of your audience. These platforms deliver unique insights on engagement and conversion of your most valuable visitors.
 ---
 
 # Analytics destinations {#analytics-destinations}
 
----- Category Description for analytics destinations -----
+Analytics destinations track how visitors interact with content on your site and collect data to understand the behavior of your audience. These platforms deliver unique insights on engagement and conversion of your most valuable visitors.
 
 Currently, Adobe Real-time Customer Data Platform supports the analytics destinations listed below. For information on how to connect to these destinations, see the individual links:
 
@@ -21,7 +21,6 @@ Currently, Adobe Real-time Customer Data Platform supports the analytics destina
 * [Dialogtech (Experience Platform Launch extension)](/help/rtcdp/destinations/dialogtech-extension.md)
 * [Google Global Site Tag analytics (Experience Platform Launch extension)](/help/rtcdp/destinations/gtag-analytics-extension.md)
 * [Google Universal Analytics (Experience Platform Launch extension)](/help/rtcdp/destinations/google-universal-analytics-extension.md)
-* [Invoca Tags (Experience Platform Launch extension)](/help/rtcdp/destinations/invoca-extension.md)
 * [JW Player Analytics (Beta) (Experience Platform Launch extension)](/help/rtcdp/destinations/jw-player-analytics-extension.md)
 * [Nielsen BSDK (Experience Platform Launch extension)](nielsen-bsdk-extension.md)
 * [Nielsen IMA Handler (Experience Platform Launch extension)](nielsen-ima-extension.md)
