@@ -184,7 +184,7 @@ PySpark 3 (Spark 2.4) notebooks use the Python 3 Kernel instead of the deprecate
 
 To confirm or change the kernel in the JupyterLab UI, select the kernel button located in the top right navigation bar of your notebook. If you are using a one of the predefined launcher notebooks, the kernel is pre-selected. The example below uses the PySpark 3 (Spark 2.4) *Aggregation* notebook starter. 
 
-![check kernel](../images/jupyterlab/pyspark-migration/check-kernel.png)
+![check kernel](../images/migration/pyspark-migration/check-kernel.png)
 
 Selecting the drop down menu opens up a list of available kernels.
 
