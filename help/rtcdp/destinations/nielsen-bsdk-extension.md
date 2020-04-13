@@ -19,6 +19,8 @@ Nielsen BSDK is an analytics extension in Adobe Real-time Customer Data Platform
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-destinations.md).
 
+![Nielsen BSDK Extension](assets/nielsen-bsdk-extension.png)
+
 ## Prerequisites {#prerequisites}
 
 This extension is available in the Destinations catalog for all customers who have purchased Adobe Real-time CDP.

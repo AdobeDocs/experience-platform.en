@@ -15,7 +15,7 @@ Talk URL Inbox is a voice of the customer extension in Adobe Real-time Customer 
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-destinations.md).
 
-![Talk URL Inbox extension](/help/rtcdp/destinations/assets/Talk URL Inbox-extension.png)
+![Talk URL Inbox extension](assets/talkurl-extension.png)
 
 ## Prerequisites {#prerequisites}
 
