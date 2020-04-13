@@ -95,7 +95,7 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `baseConnectionId` | The ID of a base connection for a cloud storage. |
+| `baseConnectionId` | The ID of a base connection for a cloud storage system. |
 | `data.schema.id` | The ID of the ad-hoc XDM schema. |
 | `params.path` | The path of the source file. |
 
