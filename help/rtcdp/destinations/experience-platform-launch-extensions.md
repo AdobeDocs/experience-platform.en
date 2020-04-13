@@ -13,6 +13,12 @@ For an introduction to Experience Platform Launch capabilities, see the resource
 *  Experience Platform Launch [documentation](https://docs.adobe.com/content/help/en/launch/using/overview.html)
 *  Experience Platform Launch [quick start videos](https://docs.adobe.com/content/help/en/launch/using/intro/get-started/videos.html). Start with [Introduction to Experience Platform Launch](https://www.youtube.com/embed/rwqqkG1SERU) and [Publishing process overview](https://helpx.adobe.com/analytics/how-to/adobe-launch-publishing-process.html), then move on to the next concepts. 
 
+## How to find the Launch extensions in the Adobe Real-time CDP interface
+
+To find the Launch extensions in the Adobe Real-time CDP interface, browse to **[!UICONTROL Destinations > Catalog]** and select **[!UICONTROL Extensions]** in the **[!UICONTROL Types]** filter. 
+
+![Extensions filter in the interface](/help/rtcdp/destinations/assets/extensions-filter.png)
+
 ## How Launch extensions work
 
 Launch extensions forward raw event data to several types of destinations. Think of extensions as an **Event Forwarding** type of destination. This is a simpler type of integration with destination platforms, which only forwards raw event data. Examples of those are the [Gainsight personalization extension](/help/rtcdp/destinations/gainsight-extension.md) or the [Confirmit Voice of the Customer extension](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md).
