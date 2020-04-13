@@ -23,6 +23,7 @@ XDM is a publicly documented specification designed to improve the power of digi
 | --- | --- |
 | Automatic alternate display info | The Schema Registry automatically applies the customized title and description values configured in the `alternateDisplayInfo` descriptor. |
 | Scalar field restrictions | The Schema Registry does not allow more than 6000 scalar fields in a single schema. |
+| Performance overhaul | The Schema Registry has been overhauled to perform and meet the demands of Experience Platform better. |
 
 **Bug fixes**
 
