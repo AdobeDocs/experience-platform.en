@@ -2,8 +2,9 @@
 title: Adobe Experience Platform Release Notes
 description: Experience Platform release notes April 8, 2020
 doc-type: release notes
-last-update: April 7, 2020
+last-update: April 13, 2020
 author: ens71067
+keywords: release notes;
 ---
 
 # Adobe Experience Platform release notes 
@@ -29,6 +30,22 @@ The DULE framework simplifies and streamlines the process of categorizing data a
 * None.
 
 For more information, please see the [Data Governance overview](../../data-governance/home.md).
+
+
+## Destinations
+
+In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
+
+### New destinations
+
+Adobe Real-time CDP now supports data activation to over fifty Experience Cloud Launch extensions, enabling analytics, personalization, and other use cases. See below for details:
+
+|Documentation | Description|
+|--- | ---|
+|[Destination types and categories](/help/rtcdp/destinations/destination-types.md) | This article explains the difference between connections and extensions in the Adobe Real-time CDP interface and recommends when to use each of these destinations.|
+|[Experience Platform Launch extensions](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | This page explains what Launch extensions are, lists use cases for using them, and links to documentation for each Launch extension in Adobe Real-time CDP.|
+
+For more information, please see the [Destinations overview](/help/rtcdp/destinations/destinations-overview.md).
 
 ## Intelligent Services
 
