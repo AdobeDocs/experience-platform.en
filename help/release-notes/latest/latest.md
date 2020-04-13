@@ -2,8 +2,9 @@
 title: Adobe Experience Platform Release Notes
 description: Experience Platform release notes April 8, 2020
 doc-type: release notes
-last-update: April 7, 2020
+last-update: April 13, 2020
 author: ens71067
+keywords: release notes;
 ---
 
 # Adobe Experience Platform release notes 
