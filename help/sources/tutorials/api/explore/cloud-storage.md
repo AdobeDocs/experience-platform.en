@@ -7,6 +7,8 @@ topic: overview
 
 # Explore a cloud storage system using the Flow Service API
 
+Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
+
 This tutorial uses the Flow Service API to explore a third party cloud storage system.
 
 ## Getting started
