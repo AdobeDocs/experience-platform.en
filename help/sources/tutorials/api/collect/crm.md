@@ -452,7 +452,7 @@ A successful response returns details of the newly created mapping including its
 }
 ```
 
-## Look up dataflow specifications
+## Look up dataflow specifications {#specs}
 
 A dataflow is responsible for collecting data from sources, and bringing them into Platform. In order to create a dataflow, you must first obtain the dataflow specifications that are responsible for collecting CRM data.
 
