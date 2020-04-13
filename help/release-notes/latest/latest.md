@@ -106,4 +106,4 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 * None
 
-To learn more about sources, see the [sources overview](../../source-connectors/home.md).
+To learn more about sources, see the [sources overview](../../sources/home.md).
