@@ -1,6 +1,6 @@
 ---
-title: Debugging
-seo-title: Adobe Experience Platform Web SDK debugging
+title: Getting Experience Cloud ID
+seo-title: Adobe Experience Platform Web SDK Getting Experience Cloud ID
 description: Learn how to get Adobe Experience Cloud Id.
 seo-description: Learn how to get Adobe Experience Cloud Id.
 ---
