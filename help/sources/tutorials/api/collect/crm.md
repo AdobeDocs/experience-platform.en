@@ -11,7 +11,7 @@ This tutorial covers the steps for retrieving data from a CRM system and bringin
 
 ## Getting started
 
-This tutorial requires you to have access to a CRM system through a valid base connection and information about the table you wish to bring into Platform, including the table's path and structure. If you do not have this information, see the tutorial on [exploring CRM systems using the Flow Service API](./explore-crm-system-api-tutorial.md) before attempting this tutorial.
+This tutorial requires you to have access to a CRM system through a valid base connection and information about the table you wish to bring into Platform, including the table's path and structure. If you do not have this information, see the tutorial on [exploring CRM systems using the Flow Service API](../explore/crm.md) before attempting this tutorial.
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
