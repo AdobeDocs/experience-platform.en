@@ -95,12 +95,12 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Gainsight (Experience Platform Launch extension)](/help/rtcdp/destinations/gainsight-extension.md)
       * [Kickfire (Experience Platform Launch extension)](/help/rtcdp/destinations/kickfire-extension.md)
       * [Marketo Web Personalization (Experience Platform Launch extension)](destinations/marketo-web-personalization-extension.md)
-    * Social network destinations{#social-network-destinations}
+    * Social network destinations{#social-destinations}
       * [Social network destinations overview](/help/rtcdp/destinations/social-network-destinations.md)
       * [Social network destinations authentication flow](/help/rtcdp/destinations/social-network-destinations-workflow.md)
       * [Adobe Livefyre (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-livefyre-extension.md)
       * [Facebook destination](/help/rtcdp/destinations/facebook-destination.md)
-    * Survey destinations {#surveys}
+    * Survey destinations {#survey-destinations}
       * [Survey destinations overview](/help/rtcdp/destinations/survey-destinations.md)
       * [Foresee (Experience Platform Launch extension)](/help/rtcdp/destinations/foresee-extension.md)
       * [InMoment (Experience Platform Launch extension)](/help/rtcdp/destinations/inmoment-extension.md)
