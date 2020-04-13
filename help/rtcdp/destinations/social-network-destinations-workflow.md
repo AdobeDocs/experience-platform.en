@@ -38,7 +38,7 @@ This tutorial uses Facebook as an example, but the workflow in Adobe Real-time C
     >
     >For Facebook destinations. **[!UICONTROL Account ID]** is your Facebook Ad Account ID. You can find this ID in the Facebook Ads Manager. Prefix the ID with `act_` as shown below: 
 
-    ![Connect to social network destination - setup step](/help/rtcdp/destinations/assets/social-network-setup.png)
+    ![Connect to social network destination - setup step](/help/rtcdp/destinations/assets/social-network-step.png)
 
 5. Your destination is now created. You can select **[!UICONTROL Save & Exit]** if you want to activate segments later on or you can select **[!UICONTROL Next]** to continue the workflow and select segments to activate. In either case, see the next section, [Activate segments to social networks](#activate-segments), for the rest of the workflow.
 
