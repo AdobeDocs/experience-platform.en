@@ -28,7 +28,7 @@ In order to explore your database or NoSQL system using Platform APIs, you must 
 * [Apache Spark on Azure HDInsights ](../create/databases/spark.md)
 * [Azure Synapse Analytics](../create/databases/synapse-analytics.md)
 * [Azure Table Storage](../create/databases/ats.md)
-* [Google BigQuery](../create/databases/biquery.md)
+* [Google BigQuery](../create/databases/bigquery.md)
 * [Hive](../create/databases/hive.md)
 * [MariaDB](../create/databases/mariadb.md)
 * [MySQL](../create/databases/mysql.md)
