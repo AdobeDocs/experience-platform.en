@@ -11,7 +11,7 @@ seo-description: Learn how to get Adobe Experience Cloud Id.
 >
 >Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
 
-Adobe Experience Cloud uses a unique ID for every consumer. If you want to use this unique ID, use the `getEcid` command.
+Adobe Experience Cloud uses a unique ID for every consumer. If you want to use this unique ID, use the `getEcid` command. `getEcid` returns the existing ECID for the current visitor. For first-time visitors who don't have an ECID yet, this command generates a new ECID.
 
 >[!NOTE]
 >
