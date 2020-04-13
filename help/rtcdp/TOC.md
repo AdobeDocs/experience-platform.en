@@ -26,11 +26,11 @@ user-guide-title: Real-Time Customer Data Platform Help
     * Adobe destinations{#adobe-destinations}
       * [Adobe destinations overview](destinations/adobe-destinations.md)
       * [Adobe Campaign](destinations/adobe-campaign-destination.md)
-    * Advertising destinations{#advertiser-destinations}
+    * Advertising destinations{#advertising-destinations}
       * [Advertising destinations overview](destinations/advertising-destinations.md)
       * [Adobe Advertising Cloud (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
-      * [Awin Adveritising Conversion Tag (Experience Platform Launch extension)](/help/rtcdp/destinations/awin-conversiontag-extension.md)
-      * [Awin Adveritising Mastertag (Experience Platform Launch extension)](/help/rtcdp/destinations/awin-mastertag-extension.md)
+      * [Awin Advertising Conversion Tag (Experience Platform Launch extension)](/help/rtcdp/destinations/awin-conversiontag-extension.md)
+      * [Awin Advertising Mastertag (Experience Platform Launch extension)](/help/rtcdp/destinations/awin-mastertag-extension.md)
       * [Beemray (Experience Platform Launch extension)](/help/rtcdp/destinations/beemray-extension.md)
       * [Branch (Experience Platform Launch extension)](/help/rtcdp/destinations/branch-extension.md)
       * [DoubleClick Floodlight (Experience Platform Launch extension)](/help/rtcdp/destinations/doubleclick-floodlight-extension.md)
