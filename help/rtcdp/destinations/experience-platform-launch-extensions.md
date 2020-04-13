@@ -1,11 +1,11 @@
 ---
-title: Experience Platform Launch Destinations
-seo-title: Experience Platform Launch Destinations
+title: Experience Platform Launch Extensions
+seo-title: Experience Platform Launch Extensions
 description: Launch is the next-generation of tag management capabilities from Adobe. Launch gives customers a simple way to deploy and manage all of the analytics, marketing, and advertising tags necessary to power relevant customer experiences.
 seo-description: Launch is the next-generation of tag management capabilities from Adobe. Launch gives customers a simple way to deploy and manage all of the analytics, marketing, and advertising tags necessary to power relevant customer experiences.
 ---
 
-# Experience Platform Launch destinations {#adobe-launch-destinations}
+# Experience Platform Launch extensions {#experience-platform-launch-extensions}
 
 Experience Platform Launch is the next-generation of tag management capabilities from Adobe. Launch gives customers a simple way to deploy and manage all of the analytics, marketing, and advertising tags necessary to power relevant customer experiences. Launch is offered to Adobe Experience Cloud customers as an included, value-add feature.
 
@@ -15,7 +15,7 @@ For an introduction to Experience Platform Launch capabilities, see the resource
 
 ## How Launch extensions work
 
-Launch extensions forward raw event data to several types of destinations. They belong to the **Event Forwarding** type of destination. This is a simpler type of integration with destination platforms, which only forwards raw event data. Examples of those are the [Gainsight personalization extension](/help/rtcdp/destinations/gainsight-extension.md) or the [Confirmit Voice of the Customer extension](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md).
+Launch extensions forward raw event data to several types of destinations. Think of extensions as an **Event Forwarding** type of destination. This is a simpler type of integration with destination platforms, which only forwards raw event data. Examples of those are the [Gainsight personalization extension](/help/rtcdp/destinations/gainsight-extension.md) or the [Confirmit Voice of the Customer extension](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md).
 
 **Profile/Segment Export** destinations in Adobe Real-time Customer Data Platform capture event data, combine it with other data sources, apply segmentation, and export segments and qualified profiles to destinations. Examples of those are the [Amazon S3 cloud storage destination](/help/rtcdp/destinations/amazon-s3-destination.md) or the [Google Display & Video 360 advertising destination](/help/rtcdp/destinations/google-dv360-destination.md).
 
@@ -45,10 +45,9 @@ Launch extensions enable you to satisfy various customer use cases. Some example
 Launch extensions can fall under the following categories in Adobe Real-time CDP:
 
 * [Advertising](/help/rtcdp/destinations/advertising-destinations.md)
-* Analytics
-* CRM
-* Data Management Platform
-* Email marketing destinations
+* [Analytics](/help/rtcdp/destinations/analytics-destinations.md)
+* [Data Management Platform](/help/rtcdp/destinations/dmp-destinations.md)
+* [Email marketing destinations](/help/rtcdp/destinations/email-marketing-destinations.md)
 * [Personalization](/help/rtcdp/destinations/personalization-destinations.md)
-* Surveys
-* Voice of the customer
+* [Surveys](/help/rtcdp/destinations/survey-destinations.md)
+* [Voice of the customer](/help/rtcdp/destinations/voice-of-customer-destinations.md)

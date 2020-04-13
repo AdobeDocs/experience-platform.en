@@ -13,7 +13,7 @@ Install the LinkedIn Insight Tag to use conversion tracking, retargeting and web
 
 LinkedIn Insight Tag is an advertising extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see [LinkedIn Insight Tag](https://business.linkedin.com/marketing-solutions/insight-tag).
 
-This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-destinations.md).
+This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
 ![LinkedIn Insight Tag Extension](assets/linkedin-extension.png)
 

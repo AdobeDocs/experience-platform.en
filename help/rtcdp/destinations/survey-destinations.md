@@ -11,5 +11,7 @@ The customer is always right, but you need to hear their voice first. With surve
 
 Currently, Adobe Real-time Customer Data Platform supports the survey destinations listed below. For information on how to connect to these destinations, see the individual links:
 
-* [Foresee (Experience Platform Launch extension)](foresee-extension.md)
+* [Foresee (Experience Platform Launch extension)](/help/rtcdp/destinations/foresee-extension.md)
+* [InMoment (Experience Platform Launch extension)](/help/rtcdp/destinations/inmoment-extension.md)
 * [Qualtrics Website Feedback (Experience Platform Launch extension)](qualtrics-extension.md)
+

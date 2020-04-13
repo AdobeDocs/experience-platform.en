@@ -40,7 +40,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Amazon S3 connector](tutorials/api/create/cloud-storage/s3.md)
       - [Azure Blob connector](tutorials/api/create/cloud-storage/blob.md)
       - [Azure Data Lake Storage Gen2 connector](tutorials/api/create/cloud-storage/google.md)
-      - [Google Cloud Storage connector](tutorials/api/create/cloud-storage/s3.md)
+      - [Google Cloud Storage connector](tutorials/api/create/cloud-storage/google.md)
       - [SFTP connector](tutorials/api/create/cloud-storage/sftp.md)
     - CRM {#crm}
       - [Google AdWords connector](tutorials/api/create/crm/adwords.md)
@@ -82,7 +82,6 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Google Cloud Storage connector](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
     - CRM {#crm}
       - [Microsoft Dynamics and Salesforce connector](tutorials/ui/create/crm/dynamics-salesforce.md)
-      - [PayPal connector](tutorials/ui/create/crm/paypal.md)
     - Customer Success {#customer-success}
       - [Salesforce Service Cloud connector](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
       - [ServiceNow connector](tutorials/ui/create/customer-success/servicenow.md)
@@ -100,11 +99,17 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Spark connector](tutorials/ui/create/databases/spark.md)
     - Marketing automation {#marketing-automation}
       - [HubSpot connector](tutorials/ui/create/marketing-automation/hubspot.md)
+    - Payments {#payments}
+      - [PayPal connector](tutorials/ui/create/payments/paypal.md)
+    - Protocols {#protocols}
+      - [Generic OData connector](tutorials/ui/create/protocols/odata.md)
   - Configure a dataflow {#dataflow}
       - [Configure a dataflow for a cloud storage connector](tutorials/ui/dataflow/cloud-storage.md)
       - [Configure a dataflow for a database connector](tutorials/ui/dataflow/databases.md)
       - [Configure a dataflow for a CRM connector](tutorials/ui/dataflow/crm.md)
       - [Configure a dataflow for a customer success connector](tutorials/ui/dataflow/customer-success.md)
       - [Configure a dataflow for a marketing automation connector](tutorials/ui/dataflow/marketing-automation.md)
+      - [Configure a dataflow for a payment connector](tutorials/ui/dataflow/payments.md)
+      - [Configure a dataflow for a protocol connector](tutorials/ui/dataflow/protocols.md)
   - [Activate inbound data to populate customer profiles](tutorials/ui/profile.md)
   - [Monitor accounts and dataset flows](tutorials/ui/monitor.md)

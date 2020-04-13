@@ -13,9 +13,9 @@ The MasterTag is a JavaScript library containing all functions required for Awin
 
 Awin Advertiser Mastertag is an advertising extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103176.awin-advertiser-mastertag.html).
 
-This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-destinations.md).
+This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
-![Awin Advertiser Mastertag extension](/help/rtcdp/destinations/assets/awin-mastertag-extension.png)
+![Awin Advertiser Mastertag extension in the UI](/help/rtcdp/destinations/assets/awin-mastertag-extension.png)
 
 ## Prerequisites {#prerequisites}
 
