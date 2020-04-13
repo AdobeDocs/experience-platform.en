@@ -44,6 +44,8 @@ Adobe Real-time CDP now supports data activation to over fifty Experience Cloud 
 |[Destination types and categories](/help/rtcdp/destinations/destination-types.md) | This article explains the difference between connections and extensions in the Adobe Real-time CDP interface and recommends when to use each of these destinations.|
 |[Experience Platform Launch extensions](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | This page explains what Launch extensions are, lists use cases for using them, and links to documentation for each Launch extension in Adobe Real-time CDP.|
 
+For more information, please see the [Destinations overview](/help/rtcdp/destinations/destinations-overview.md).
+
 ## Intelligent Services
 
 Intelligent Services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company's needs using business-level configurations without the need for data science expertise. Additionally, marketing practitioners can activate predictions in Adobe Experience Cloud, Adobe Experience Platform, and 3rd party applications.
