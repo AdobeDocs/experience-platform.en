@@ -14,8 +14,8 @@ When connecting to an advertising destination, your audiences are sent as IDs to
 Currently, Real-time CDP supports the advertising destinations listed below. For information on how to connect to these destinations, see the individual links:
 
 * [Adobe Advertising Cloud (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
-* [Awin Adveritising Conversion Tag (Experience Platform Launch extension)](/help/rtcdp/destinations/awin-conversiontag-extension.md)
-* [Awin Adveritising Mastertag (Experience Platform Launch extension)](/help/rtcdp/destinations/awin-mastertag-extension.md)
+* [Awin Advertising Conversion Tag (Experience Platform Launch extension)](/help/rtcdp/destinations/awin-conversiontag-extension.md)
+* [Awin Advertising Mastertag (Experience Platform Launch extension)](/help/rtcdp/destinations/awin-mastertag-extension.md)
 * [Beemray (Experience Platform Launch extension)](beemray-extension.md)
 * [Bing Ads Universal Event Tracking (Experience Platform Launch extension)](/help/rtcdp/destinations/bing-ads-extension.md)
 * [Branch (Experience Platform Launch extension)](/help/rtcdp/destinations/branch-extension.md)
