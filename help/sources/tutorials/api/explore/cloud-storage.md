@@ -61,7 +61,7 @@ Using the base connection for your cloud storage, you can explore files and dire
 
 Use the following call to find the path of the file you wish to bring into Platform:
 
-**API Format**
+**API format**
 
 ```http
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
@@ -107,7 +107,7 @@ A successful response returns an array of files and folders found within the que
 
 To inspect the structure of data file from your cloud storage, perform a GET request while providing the file's path as a query parameter.
 
-**API Format**
+**API format**
 
 ```http
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}

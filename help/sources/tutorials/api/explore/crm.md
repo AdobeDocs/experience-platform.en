@@ -53,7 +53,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 Using the base connection for your CRM system, you can explore your data tables by performing GET requests. Use the following call to find the path of the table you wish to inspect or ingest into Platform.
 
-**API Format**
+**API format**
 
 ```http
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
@@ -108,7 +108,7 @@ A successful response is an array of tables from to your CRM system. Find the ta
 
 To inspect the structure of a table from your CRM system, perform a GET request while specifying the path of a table as a query parameter.
 
-**API Format**
+**API format**
 
 ```http
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}
