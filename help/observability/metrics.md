@@ -14,7 +14,7 @@ The following tables list all of the metrics that are exposed by Observability I
 The following table outlines metrics for Adobe Experience Platform Data Ingestion. Metrics in **bold** are streaming ingestion metrics.
 
 | Insights metric | Description | ID query parameter |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.ingestion.dataset.new.count | Total number of datasets created. | N/A |
 | timeseries.ingestion.dataset.size | Cumulative size of all data ingested for one dataset for or all datasets.| Dataset ID (Optional) |
 | timeseries.ingestion.dataset.dailysize | Size of data ingested on a daily usage basis for one dataset or for all datasets. | Dataset ID (Optional) |
@@ -42,7 +42,7 @@ The following table outlines metrics for Adobe Experience Platform Data Ingestio
 The following table outlines metrics for Adobe Experience Platform Identity Service.
 
 | Insights metric | Description | ID query parameter |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.identity.dataset.recordsuccess.count | Number of records written to their data source by Identity Service, for one dataset or all datasets. | Dataset ID (Optional) |
 | timeseries.identity.dataset.recordfailed.count | Number of records failed by Identity Service, for one dataset or for all datasets. | Dataset ID (Optional) |
 | timeseries.identity.dataset.namespacecode.recordsuccess.count | Number of Identity records successfully ingested for a namespace. | Namespace ID (**Required**) |
@@ -58,7 +58,7 @@ The following table outlines metrics for Adobe Experience Platform Identity Serv
 The following table outlines metrics for Adobe Experience Platform Privacy Service.
 
 | Insights metric | Description | ID query parameter |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.gdpr.jobs.totaljobs.count | Total number of jobs created from GDPR. | ENV (**Required**) |
 | timeseries.gdpr.jobs.completedjobs.count | Total number of completed jobs from GDPR. | ENV (**Required**) |
 | timeseries.gdpr.jobs.errorjobs.count | Total number of error jobs from GDPR. | ENV (**Required**) |
@@ -68,7 +68,7 @@ The following table outlines metrics for Adobe Experience Platform Privacy Servi
 The following table outlines metrics for Adobe Experience Platform Query Service.
 
 | Insights metric | Description | ID query parameter |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.queryservice.query.scheduleonce.count | Total number of non-recurring scheduled queries. | N/A |
 | timeseries.queryservice.query.scheduledrecurring.count | Total number of recurring scheduled queries. | N/A |
 | timeseries.queryservice.query.batchquery.count | Total number of executed batch queries. | N/A |
@@ -81,7 +81,7 @@ The following table outlines metrics for Adobe Experience Platform Query Service
 The following table outlines metrics for Real-time Customer Profile.
 
 | Insights metric | Description | ID query parameter |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.profiles.dataset.recordread.count | Number of records read from the data lake by Profile, for one dataset or for all datasets. | Dataset ID (Optional) |
 | timeseries.profiles.dataset.recordsuccess.count | Number of records written to their data source by Profile, for one dataset or for all datasets. | Dataset ID (Optional) |
 | timeseries.profiles.dataset.recordfailed.count | Number of records failed by Profile, for one dataset or for all datasets. | Dataset ID (Optional) |
