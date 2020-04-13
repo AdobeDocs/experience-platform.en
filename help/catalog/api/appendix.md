@@ -127,7 +127,6 @@ curl -X POST \
       "method": "post",
       "body": {
         "status": "enabled",
-        "aspect": "production",
         "dataSetId": "<<firstObjectId.id>>"
       }
     }
