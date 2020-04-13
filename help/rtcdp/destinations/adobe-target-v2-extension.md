@@ -5,7 +5,7 @@ description: The Adobe Target v2 extension is a personalization destination in A
 seo-description: 
 ---
 
-# Adobe Target v2 Extension (#adobe-target-v2-extension)
+# Adobe Target v2 Extension {#adobe-target-v2-extension}
 
 ## Overview {#overview}
 
