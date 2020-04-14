@@ -32,7 +32,7 @@ Recent changes to Data Science Workspace require that existing Spark and PySpark
   - [Prepare docker scripts]()
   - [create the recipe with docker]()
 
-Additionally, the following video is designed to assist in understanding the changes needed in order to update your existing recipes.
+Additionally, the following video is designed to further assist in understanding the changes that are required for existing recipes.
 
 >[!VIDEO](https://video.tv.adobe.com/v/33048?learn=on&quality=12)
 
@@ -46,10 +46,26 @@ Before you build the Docker image, review the following examples for reading and
 
 **Read a dataset**
 
-The following table outlines the changes that are needed for reading a dataset in the `helper.py` file.
-<!-- link through -->
+The following table outlines the changes that are needed for reading a dataset and uses the [helper.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/helper/Helper.scala) Adobe provided example.
 
-```scala
+With the updates to Spark recipes, a number of values need to be added and changed. First, `DataSetOptions` is no longer used. Replace `DataSetOptions` with `QSOption`. Additionally, new `option` parameters are required. Both `QSOption.mode` and `QSOption.datasetId` are needed. Lastly, `orgId` and `serviceApiKey` need to be changed to `imsOrg` and `apiKey`. See the table below for a comparison on reading datasets:
+
+<table>
+  <th>Old way of reading a dataset</th>
+  <th>New way of reading a dataset</th>
+  <tr>
+  <td>
+  <pre class="JSON language-JSON hljs">
+  var df = sparkSession.read.format("com.adobe.platform.dataset")
+    .option(DataSetOptions.orgId, orgId)
+    .option(DataSetOptions.serviceToken, serviceToken)
+    .option(DataSetOptions.userToken, userToken)
+    .option(DataSetOptions.serviceApiKey, apiKey)
+    .load(dataSetId)
+</pre>
+  </td>
+  <td>
+<pre class="JSON language-JSON hljs">
 import com.adobe.platform.query.QSOption
 
 var df = sparkSession.read.format("com.adobe.platform.query")
@@ -57,16 +73,39 @@ var df = sparkSession.read.format("com.adobe.platform.query")
   .option(QSOption.serviceToken, {serviceToken})
   .option(QSOption.imsOrg, {orgId})
   .option(QSOption.apiKey, {apiKey})
-  .option(QSOption.mode, "batch")
+  .option(QSOption.mode, "interactive")
   .option(QSOption.datasetId, {dataSetId})
   .load()
-```
+  </pre>
+  </td>
+  </tr>
+</table>
+
+>[!TIP]
+> interactive" mode times out if queries are running longer than 10 minutes. If you are ingesting more than a couple gigabytes of data, it is recommended that you switch to "batch" mode. "batch" mode takes longer to start up but can handle larger sets of data.
 
 **Write to a dataset**
 
-The following table outlines the changes that are needed for reading a dataset in the `data_saver.py` file.
+The following table outlines the changes that are needed for reading a dataset by using the [ScoringDataSaver.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/ScoringDataSaver.scala) Adobe provided example.
 
-```scala
+With the updates to Spark recipes, a number of values need to be added and changed. First, `DataSetOptions` is no longer used. Replace `DataSetOptions` with `QSOption`. Additionally, new `option` parameters are required. Both `QSOption.mode` and `QSOption.datasetId` are needed. Lastly, `orgId` and `serviceApiKey` need to be changed to `imsOrg` and `apiKey`. See the table below for a comparison on writing datasets:
+
+<table>
+  <th>Old way of writing a dataset</th>
+  <th>New way of writing a dataset</th>
+  <tr>
+  <td>
+  <pre class="JSON language-JSON hljs">
+  df.write.format("com.adobe.platform.dataset")
+    .option(DataSetOptions.orgId, orgId)
+    .option(DataSetOptions.serviceToken, serviceToken)
+    .option(DataSetOptions.userToken, userToken)
+    .option(DataSetOptions.serviceApiKey, apiKey)
+    .save(scoringResultsDataSetId)
+</pre>
+  </td>
+  <td>
+<pre class="JSON language-JSON hljs">
 import com.adobe.platform.query.QSOption
 
 df.write.format("com.adobe.platform.query")
@@ -77,13 +116,19 @@ df.write.format("com.adobe.platform.query")
   .option(QSOption.mode, "batch")
   .option(QSOption.datasetId, {dataSetId})
   .save()
-```
+</pre>
+  </td>
+  </tr>
+</table>
+
+>[!TIP]
+> interactive" mode times out if queries are running longer than 10 minutes. If you are ingesting more than a couple gigabytes of data, it is recommended that you switch to "batch" mode. "batch" mode takes longer to start up but can handle larger sets of data.
 
 ### Package docker based source files
 
 Start by navigating to the directory where your recipe is located. 
 
-For this example the new Scala Retail Sales recipe is used and can be found by the Data Science Workspace public github repository.
+For this example the new Scala Retail Sales recipe is used and can be found in the [Data Science Workspace public github repository](https://github.com/adobe/experience-platform-dsw-reference).
 
 **download the sample recipe**
 
@@ -172,7 +217,7 @@ To build your recipe using the API, follow the [import a packaged recipe (API)](
 
 # Notebook migration guides {#notebook}
 
-Recent changes to JupyterLab notebooks require that you change your existing PySpark and Spark 2.3 notebooks to 2.4. With this change, JupyterLab Launcher has been updated with new starter notebooks. Please use the following guides to learn more about the changes to notebooks.
+Recent changes to JupyterLab notebooks require that you update your existing PySpark and Spark 2.3 notebooks to 2.4. With this change, JupyterLab Launcher has been updated with new starter notebooks. For a step-by-step guide on how to convert your notebooks, select one of the following guides:
 
 - [PySpark 2.3 to 2.4 migration guide](#pyspark-23-to-24-notebook-migration-guide)
 - [Spark 2.3 to Spark 2.4 (Scala) migration guide](#spark-23-to-spark-24-scala-notebook-migration-guide)
