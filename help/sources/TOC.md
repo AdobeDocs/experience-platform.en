@@ -39,7 +39,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - Cloud storage {#cloud-storage}
       - [Amazon S3 connector](tutorials/api/create/cloud-storage/s3.md)
       - [Azure Blob connector](tutorials/api/create/cloud-storage/blob.md)
-      - [Azure Data Lake Storage Gen2 connector](tutorials/api/create/cloud-storage/google.md)
+      - [Azure Data Lake Storage Gen2 connector](tutorials/api/create/cloud-storage/adls-gen2.md)
       - [Google Cloud Storage connector](tutorials/api/create/cloud-storage/google.md)
       - [SFTP connector](tutorials/api/create/cloud-storage/sftp.md)
     - CRM {#crm}
@@ -52,21 +52,34 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [ServiceNow connector](tutorials/api/create/customer-success/servicenow.md)
     - Databases {#databases}
       - [Amazon Redshift connector](tutorials/api/create/databases/redshift.md)
+      - [Apache Spark on Azure HDInsights connector](tutorials/api/create/databases/spark.md)
+      - [Azure Synapse Analytics connector](tutorials/api/create/databases/synapse-analytics.md)
+      - [Azure Table Storage connector](tutorials/api/create/databases/ats.md)
       - [Google BigQuery connector](tutorials/api/create/databases/bigquery.md)
+      - [Hive connector](tutorials/api/create/databases/hive.md)
       - [MariaDB connector](tutorials/api/create/databases/mariadb.md)
       - [MySQL connector](tutorials/api/create/databases/mysql.md)
+      - [Phoenix connector](tutorials/api/create/databases/phoenix.md)
       - [PostgreSQL connector](tutorials/api/create/databases/postgres.md)
       - [SQL Server connector](tutorials/api/create/databases/sql-server.md)
+    - Payments {#payments}
+      - [PayPal connector](tutorials/api/create/payments/paypal.md)
+    - Protocols {#protocols}
+      - [Generic OData connector](tutorials/api/create/protocols/odata.md)
   - Explore data {#explore}
     - [Explore cloud storage data](tutorials/api/explore/cloud-storage.md)
     - [Explore CRM data](tutorials/api/explore/crm.md)
     - [Explore customer success data](tutorials/api/explore/customer-success.md)
     - [Explore database or NoSQL data](tutorials/api/explore/database-nosql.md)
+    - [Explore payment data](tutorials/api/explore/payments.md)
+    - [Explore protocol data](tutorials/api/explore/protocols.md)
   - Collect data {#collect}
     - [Collect cloud storage data](tutorials/api/collect/cloud-storage.md)
     - [Collect CRM data](tutorials/api/collect/crm.md)
     - [Collect customer success data](tutorials/api/collect/customer-success.md)
     - [Collect database or NoSQL data](tutorials/api/collect/database-nosql.md)
+    - [Collect payment data](tutorials/api/collect/payments.md)
+    - [Collect protocol data](tutorials/api/collect/protocols.md)
   - [Ingest parquet data from a third-party cloud storage system](tutorials/api/create-dataset-base-connection.md)
   - [Create a dataset base connection using the Flow Service API](tutorials/api/cloud-storage-parquet.md)
 - UI tutorials {#ui-tutorials}

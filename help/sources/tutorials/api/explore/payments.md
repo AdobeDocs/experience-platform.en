@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Explore a customer success system using the Flow Service API
+title: Explore a payment system using the Flow Service API
 topic: overview
 ---
 
-# Explore a customer success system using the Flow Service API
+# Explore a payment system using the Flow Service API
 
 Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
-This tutorial uses the Flow Service API to explore Customer Success (CS) systems.
+This tutorial uses the Flow Service API to explore payment applications.
 
 ## Getting started
 
@@ -18,14 +18,13 @@ This guide requires a working understanding of the following components of Adobe
 *   [Sources](../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 *   [Sandboxes](../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully connect to a CS system using the Flow Service API.
+The following sections provide additional information that you will need to know in order to successfully connect to a payments application using the Flow Service API.
 
 ### Obtain a base connection
 
-In order to explore your CS system using Platform APIs, you must possess a valid base connection ID. If you do not already have a base connection for the CS system you wish to work with, you can create one through the following tutorials:
+In order to explore your payment system using Platform APIs, you must possess a valid base connection ID. If you do not already have a base connection for the payment system you wish to work with, you can create one through the following tutorial:
 
-* [Salesforce Service Cloud](../create/customer-success/salesforce-service-cloud.md)
-* [ServiceNow](../create/customer-success/servicenow.md)
+* [PayPal](../create/payments/paypal.md)
 
 ### Reading sample API calls
 
@@ -49,7 +48,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ## Explore your data tables
 
-Using the base connection for your CS system, you can explore your data tables by performing GET requests. Use the following call to find the path of the table you wish to inspect or ingest into Platform.
+Using the connection ID for your payments system, you can explore your data tables by performing GET requests. Use the following call to find the path of the table you wish to inspect or ingest into Platform.
 
 **API format**
 
@@ -59,13 +58,13 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 
 | Parameter | Description |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | The ID of a CS base connection. |
+| `{BASE_CONNECTION_ID}` | The ID of a payments base connection. |
 
 **Request**
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/60a5c8b9-3c30-43ba-a5c8-b93c3093ba66/explore?objectType=root' \
+    'http://platform.adobe.io/data/foundation/flowservice/connections/24151d58-ffa7-4960-951d-58ffa7396097/explore?objectType=root' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -74,35 +73,35 @@ curl -X GET \
 
 **Response**
 
-A successful response returns an array of tables from your CS system. Find the table you wish to bring into Platform and take note of its `path` property, as you are required to provide it in the next step to inspect its structure.
+A successful response returns an array of tables from your payments system. Find the table you wish to bring into Platform and take note of its `path` property, as you are required to provide it in the next step to inspect its structure.
 
 ```json
 [
     {
         "type": "table",
-        "name": "Accepted Event Relation",
-        "path": "AcceptedEventRelation",
+        "name": "PayPal.Billing_Plans",
+        "path": "PayPal.Billing_Plans",
         "canPreview": true,
         "canFetchSchema": true
     },
     {
         "type": "table",
-        "name": "Account",
-        "path": "Account",
+        "name": "PayPal.Billing_Plans_Payment_Definition",
+        "path": "PayPal.Billing_Plans_Payment_Definition",
         "canPreview": true,
         "canFetchSchema": true
     },
     {
         "type": "table",
-        "name": "Account Change Event",
-        "path": "AccountChangeEvent",
+        "name": "PayPal.Billing_Plans_Payment_Definition_Charge_Models",
+        "path": "PayPal.Billing_Plans_Payment_Definition_Charge_Models",
         "canPreview": true,
         "canFetchSchema": true
     },
     {
         "type": "table",
-        "name": "Account Clean Info",
-        "path": "AccountCleanInfo",
+        "name": "PayPal.Catalog_Products",
+        "path": "PayPal.Catalog_Products",
         "canPreview": true,
         "canFetchSchema": true
     }
@@ -111,7 +110,7 @@ A successful response returns an array of tables from your CS system. Find the t
 
 ## Inspect the structure of a table
 
-To inspect the structure of a table from your CS system, perform a GET request while specifying the path of a table as a query parameter.
+To inspect the structure of a table from your payments system, perform a GET request while specifying the path of a table as a query parameter.
 
 **API format**
 
@@ -120,13 +119,13 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 ```
 
 | Parameter | Description |
-| --- | --- |
-| `{BASE_CONNECTION_ID}` | The ID of a CS base connection. |
-| `{TABLE_PATH}` | The path of a table. |
+| --------- | ----------- |
+| `{BASE_CONNECTION_ID}` | The connection ID of your payments system. |
+| `{TABLE_PATH}` | The path of a table within your payments system.|
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/60a5c8b9-3c30-43ba-a5c8-b93c3093ba66/explore?objectType=table&object=test1.Mytable' \
+    'http://platform.adobe.io/data/foundation/flowservice/connections/24151d58-ffa7-4960-951d-58ffa7396097/explore?objectType=table&object=test1.Mytable' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -143,21 +142,28 @@ A successful response returns the structure of the specified table. Details rega
     "schema": {
         "columns": [
             {
-                "name": "Id",
+                "name": "Product_Id",
                 "type": "string",
                 "xdm": {
                     "type": "string"
                 }
             },
             {
-                "name": "Name",
+                "name": "Product_Name",
                 "type": "string",
                 "xdm": {
                     "type": "string"
                 }
             },
             {
-                "name": "Phone",
+                "name": "Description",
+                "type": "string",
+                "xdm": {
+                    "type": "string"
+                }
+            },
+            {
+                "name": "Type",
                 "type": "string",
                 "xdm": {
                     "type": "string"
@@ -170,4 +176,4 @@ A successful response returns the structure of the specified table. Details rega
 
 ## Next steps
 
-By following this tutorial, you have explored your CS system, found the path of the table you wish to ingest into Platform, and obtained information regarding its structure. You can use this information in the next tutorial to [collect data from your CS system and bring it into Platform](../collect/customer-success.md).
+By following this tutorial, you have explored your payments system, found the path of the table you wish to ingest into Platform, and obtained information regarding its structure. You can use this information in the next tutorial to [collect data from your payments system and bring it into Platform](../collect/payments.md).
