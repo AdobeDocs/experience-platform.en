@@ -34,17 +34,17 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
-- Authorization: Bearer `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+* Authorization: Bearer `{ACCESS_TOKEN}`
+* x-api-key: `{API_KEY}`
+* x-gw-ims-org-id: `{IMS_ORG}`
 
 All resources in Experience Platform, including those belonging to Flow Service, are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+* x-sandbox-name: `{SANDBOX_NAME}`
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
 
-- Content-Type: `application/json`
+* Content-Type: `application/json`
 
 ## Look up connection specifications
 
@@ -177,7 +177,7 @@ A successful response returns details of the newly created base connection, incl
 
 By following this tutorial, you have created a dataset base connection connection using the Flow Service API, and have obtained the connection's unique ID value. You can use this base connection to create a target connection. The following tutorials walk through the steps of creating a target connection, depending on the category of source connector you are using:
 
-- [Cloud storage](./collect/cloud-storage.md)
-- [CRM](./collect/crm.md)
-- [Customer Success](./collect/customer-success.md)
-- [Database](./collect/database-nosql.md)
+* [Cloud storage](./collect/cloud-storage.md)
+* [CRM](./collect/crm.md)
+* [Customer Success](./collect/customer-success.md)
+* [Database](./collect/database-nosql.md)
