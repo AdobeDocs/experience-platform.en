@@ -13,13 +13,13 @@ For an introduction to Experience Platform Launch capabilities, see the resource
 *  Experience Platform Launch [documentation](https://docs.adobe.com/content/help/en/launch/using/overview.html)
 *  Experience Platform Launch [quick start videos](https://docs.adobe.com/content/help/en/launch/using/intro/get-started/videos.html). Start with [Introduction to Experience Platform Launch](https://www.youtube.com/embed/rwqqkG1SERU) and [Publishing process overview](https://helpx.adobe.com/analytics/how-to/adobe-launch-publishing-process.html), then move on to the next concepts. 
 
-## How to find the Launch extensions in the Adobe Real-time CDP interface
+## How to find the Launch extensions in the Adobe Real-time CDP interface {#how-to-find-extensions-in-interface}
 
 To find the Launch extensions in the Adobe Real-time CDP interface, browse to **[!UICONTROL Destinations > Catalog]** and select **[!UICONTROL Extensions]** in the **[!UICONTROL Types]** filter. 
 
 ![Extensions filter in the interface](/help/rtcdp/destinations/assets/extensions-filter.png)
 
-## How Launch extensions work
+## How Launch extensions work {#how-extensions-work}
 
 Launch extensions forward raw event data to several types of destinations. Think of extensions as an **Event Forwarding** type of destination. This is a simpler type of integration with destination platforms, which only forwards raw event data. Examples of those are the [Gainsight personalization extension](/help/rtcdp/destinations/gainsight-extension.md) or the [Confirmit Voice of the Customer extension](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md).
 
@@ -27,7 +27,7 @@ Launch extensions forward raw event data to several types of destinations. Think
 
 ![Experience Platform Launch extensions compared to other destinations](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
-## Benefits of using Launch extensions
+## Benefits of using Launch extensions {#extensions-benefits}
 
 Experience Platform Launch is free for existing Experience Cloud customers. Launch simplifies tag deployment on your website via easy-to-use extensions that you can install, configure, update, and delete. Launch has a small footprint on your website and allows you to keep your pages loading quickly.
 
@@ -37,7 +37,7 @@ Experience Platform Launch is free for existing Experience Cloud customers. Laun
 
 You can create *rules* that determine when to forward event data to extensions. This powerful functionality enables you to forward event data only in certain situations as opposed to sending event data on every interaction. For more information, read about rules in the [Launch documentation](https://docs.adobe.com/help/en/launch/using/reference/manage-resources/rules.html).
 
-## Example use cases for Launch extensions
+## Example use cases for Launch extensions {#extensions-use-cases}
 
 Launch extensions enable you to satisfy various customer use cases. Some example use cases for using Launch extensions are:
 
@@ -46,7 +46,7 @@ Launch extensions enable you to satisfy various customer use cases. Some example
 * You could turn on a client-side chatbox app at the right time based on how your users are interacting with your pages, according to rules you set up in Launch.
 
 
-## Extension categories
+## Extension categories {#extension-categories}
 
 Launch extensions can fall under the following categories in Adobe Real-time CDP:
 
