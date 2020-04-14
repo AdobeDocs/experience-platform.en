@@ -19,7 +19,6 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [Google Cloud Storage connector](connectors/cloud-storage/google-cloud-storage.md)
   - CRM {#crm}
     - [Google AdWords connector](connectors/crm/adwords.md)
-    - [HubSpot connector](connectors/crm/hubspot.md)
     - [Microsoft Dynamics connector](connectors/crm/ms-dynamics.md)
     - [Salesforce connector](connectors/crm/salesforce.md)
   - Customer success {#customer-success}
@@ -27,11 +26,16 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [ServiceNow connector](connectors/customer-success/servicenow.md)
   - Databases {#databases}
     - [Amazon Redshift connector](connectors/databases/redshift.md)
+    - [Apache Hive on Azure HDInsights connector](connectors/databases/hive.md)
+    - [Apache Spark on Azure HDInsights connector](connectors/databases/spark.md)
+    - [Azure Synapse Analytics connector](connectors/databases/synapse-analytics.md)
+    - [Azure Table Storage connector](connectors/databases/ats.md)
     - [Google BigQuery connector](connectors/databases/bigquery.md)
     - [MariaDB connector](connectors/databases/mariadb.md)
+    - [Microsoft SQL Server connector](connectors/databases/sql-server.md)
     - [MySQL connector](connectors/databases/mysql.md)
+    - [Phoenix connector](connectors/databases/phoenix.md)
     - [PostgreSQL connector](connectors/databases/postgres.md)
-    - [SQL Server connector](connectors/databases/sql-server.md)
   - Marketing automation {#marketing-automation}
     - [HubSpot connector](connectors/marketing-automation/hubspot.md)
 - API tutorials {#api-tutorials}
