@@ -15,6 +15,8 @@ Marketo Web Personalization is a personalization extension in Adobe Real-time Cu
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
+![Marketo Web Personalization Extension](assets/marketo-web-personalization-extension.png)
+
 ## Prerequisites {#prerequisites}
 
 This extension is available in the Destinations catalog for all customers who have purchased Adobe Real-time CDP.
