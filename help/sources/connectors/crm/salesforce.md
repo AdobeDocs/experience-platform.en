@@ -9,9 +9,17 @@ topic: overview
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-CRM systems provide data that can help build customer relationships, which in turn, create loyalty and drive customer retention. Experience Platform provides support for ingesting CRM data from Salesforce.
+Experience Platform provides support for ingesting data from a third-party CRM system. Support for CRM providers include Salesforce.
 
-See the following documents for more information on how to connect Salesforce to Platform:
+The documentation below provides information on how to connect Salesforce to Platform using APIs or the user interface:
 
-- [Salesforce API tutorial](../../tutorials/api/create/crm/salesforce.md)
-- [Salesforce UI tutorial](../../tutorials/ui/create/crm/dynamics-salesforce.md)
+## Connect Salesforce to Platform using APIs
+
+- [Create a Salesforce connector using the Flow Service API](../../tutorials/api/create/crm/salesforce.md)
+- [Explore a CRM system using the Flow Service API](../../tutorials/api/explore/crm.md)
+- [Collect CRM data using the Flow Service API](../../tutorials/api/collect/crm.md)
+
+## Connect Salesforce to Platform using the UI
+
+- [Create a Salesforce source connector in the UI](../../tutorials/ui/create/crm/dynamics-salesforce.md)
+- [Configure a dataflow for a CRM connector in the UI](../../tutorials/ui/dataflow/crm.md)
