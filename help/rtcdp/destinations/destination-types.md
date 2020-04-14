@@ -19,15 +19,17 @@ In Adobe Real-time Customer Data Platform, we distinguish between two destinatio
 
 ### Connections
 
-**Profile Export** and **Segment Export** destinations in Adobe Real-time Customer Data Platform capture event data, combine it with other data sources, apply segmentation, and export segments and qualified profiles to destinations. Examples of those are the [Amazon S3 cloud storage destination](/help/rtcdp/destinations/amazon-s3-destination.md) or the [Google Display & Video 360 advertising destination](/help/rtcdp/destinations/google-dv360-destination.md).
+**Profile Export** and **Segment Export** destinations in Adobe Real-time Customer Data Platform capture event data, combine it with other data sources to form the [real-time customer profile](https://docs.adobe.com/content/help/en/experience-platform/profile/home.html), apply segmentation, and export segments and qualified profiles to destinations. 
+
+<br>&nbsp;
 
 #### Profile export destinations
 
-Profile export destinations generate a file containing profiles and/or attributes. These destinations use raw data, often with email address as the primary key.
+Profile export destinations generate a file containing profiles and/or attributes. These destinations use raw data, often with email address as the primary key. The [Amazon S3 cloud storage destination](/help/rtcdp/destinations/amazon-s3-destination.md) is an example of destination where you can deposit files containing profile exports.
 
 #### Segment export destinations
 
-Segment export destinations send the profiles and the segments that they qualified for to destination platforms. These destinations use segment ID or user IDs.
+Segment export destinations send the profiles and the segments that they qualified for to destination platforms. These destinations use segment ID or user IDs. Advertising destinations such as [Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md) or [Google Ads](/help/rtcdp/destinations/google-ads-destination.md) are examples of these types of destinations.
 
 #### Profile export and Segment export destinations - video overview
 
@@ -35,9 +37,11 @@ The video below runs you through the particularities of the two types of destina
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
+<br>&nbsp;
+
 ### Extensions
 
- Adobe Real-time CDP leverages the power and flexibility of Experience Platform Launch to include Launch extensions in the user Real-time CDP interface. 
+ Adobe Real-time CDP leverages the power and flexibility of Experience Platform Launch to include Launch extensions in the Adobe Real-time CDP interface. 
  
  Launch extensions forward raw event data to several types of destinations. Think of extensions as an **Event Forwarding** type of destination. This is a simpler type of integration with destination platforms, which only forwards raw event data. Examples of those are the [Gainsight personalization extension](/help/rtcdp/destinations/gainsight-extension.md) or the [Confirmit Voice of the Customer extension](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md).
 
@@ -45,6 +49,18 @@ The video below runs you through the particularities of the two types of destina
 
 
 ![Experience Platform Launch extensions compared to other destinations](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
+
+<br>&nbsp;
+
+### When to use connections and extensions
+
+As a marketer, you could use a combination of connections and extensions to address your use cases.
+
+Connections are useful when it’s necessary to leverage a complete centralized customer profile or a customer segment for activation. For example, use connections if you are joining behavioral data from an analytics system with uploaded CRM data to qualify a user for a given segment before delivering a personalized message to that user.
+
+Extensions are helpful when event data is used to trigger an action, or to conduct segmentation in an external environment. For example, if behavioral data needs to be forwarded to an external system without being joined to other data sources on file for a given user.
+
+<br>&nbsp;
 
 ## Destination categories
 

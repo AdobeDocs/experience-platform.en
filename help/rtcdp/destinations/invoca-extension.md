@@ -1,7 +1,7 @@
 ---
 title: Invoca Tags extension
 seo-title: Invoca Tags extension
-description: The Invoca Tags extension is a CRM destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Invoca Tags extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 seo-description: 
 ---
 
@@ -11,7 +11,7 @@ seo-description:
 
 Invoca brings call data and voice insights into the digital customer journey. With Invoca’s call intelligence platform, marketers finally have analytics to measure call outcomes and tie offline conversions back to digital spend.
 
-Invoca Tags is a CRM extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100067.invoca.html).
+Invoca Tags is an analytics extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100067.invoca.html).
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 

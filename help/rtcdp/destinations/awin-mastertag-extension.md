@@ -15,7 +15,7 @@ Awin Advertiser Mastertag is an advertising extension in Adobe Real-time Custome
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
-![Awin Advertiser Mastertag extension](/help/rtcdp/destinations/assets/awin-mastertag-extension.png)
+![Awin Advertiser Mastertag extension in the UI](/help/rtcdp/destinations/assets/awin-mastertag-extension.png)
 
 ## Prerequisites {#prerequisites}
 
