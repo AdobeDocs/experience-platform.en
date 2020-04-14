@@ -272,7 +272,7 @@ A successful response returns an array containing the ID of the newly created da
 
 In order to ingest external data into Platform, an Experience Platform dataset base connection must first be acquired.
 
-To create a dataset base connection, follow the steps outlined in the [dataset base connection tutorial](../dataset-base-connection-tutorial.md).
+To create a dataset base connection, follow the steps outlined in the [dataset base connection tutorial](../create-dataset-base-connection.md).
 
 Continue following the steps outlined in the developer guide until you have created a dataset base connection. Obtain and store the unique identifier (`$id`) and proceed to use it as the connection ID in the next step to create a target connection.
 
