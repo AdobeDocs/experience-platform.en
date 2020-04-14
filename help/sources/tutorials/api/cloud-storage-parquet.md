@@ -230,6 +230,7 @@ curl -X POST \
         }
     }'
 ```
+
 | Property | Description |
 | -------- | ----------- |
 | `baseConnectionId` | The connection for the API that represents your cloud storage. |
