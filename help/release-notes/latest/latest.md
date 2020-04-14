@@ -11,6 +11,28 @@ keywords: release notes;
 
 ## Release date: April 8, 2020
 
+## Experience Data Model (XDM) System
+
+Standardization and interoperability are key concepts behind Experience Platform. Experience Data Model (XDM), driven by Adobe, is an effort to standardize customer experience data and define schemas for customer experience management.
+
+XDM is a publicly documented specification designed to improve the power of digital experiences. It provides common structures and definitions for any application to communicate with services on Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation delivering insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+### New features
+
+| Feature | Description |
+| --- | --- |
+| Automatic alternate display info | The Schema Registry automatically applies the customized title and description values configured in the `alternateDisplayInfo` descriptor. |
+| Scalar field restrictions | The Schema Registry does not allow more than 6000 scalar fields in a single schema. |
+| Performance overhaul | The Schema Registry has been overhauled to perform and meet the demands of Experience Platform better. |
+
+**Bug fixes**
+
+* Updated XDM to XED converted to support a cleaner XED format for nested URI fields in standard XDM.
+
+**Known issues**
+
+* Known
+
 ## Data Governance
 
 Adobe Experience Platform Data Governance is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within Experience Platform at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.

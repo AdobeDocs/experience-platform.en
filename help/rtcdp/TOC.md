@@ -129,7 +129,6 @@ user-guide-title: Real-Time Customer Data Platform Help
   * [Segment builder guide](segmentation/segment-builder-guide.md)
 * Sources {#sources}
   * [Sources overview](sources/sources-overview.md)
-  * [Sources tutorials](sources/sources-tutorials.md)
   * [Implement website tags with Adobe Launch](sources/launch.md)
-* [Release notes](https://www.adobe.io/apis/experienceplatform/home/services/release-notes.html#!end-user/markdown/release-notes/release-notes.md)
-* [Glossary](https://www.adobe.io/apis/experienceplatform/home/services/acp-glossary.html)
+* [Release notes](https://www.adobe.com/go/platform-release-notes-en)
+* [Glossary](https://www.adobe.com/go/platform-glossary-en)
