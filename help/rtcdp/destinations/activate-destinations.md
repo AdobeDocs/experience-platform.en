@@ -25,7 +25,14 @@ To activate data to destinations, you must have successfully [connected a destin
 5. *Conditional*. This step only applies for segments mapped to email marketing destinations. <br> On the **[!UICONTROL Destination Attributes]** page, select **[!UICONTROL Add new field]** and select the attributes that you want to send to the destination.
    We recommend one of the attributes to be a [unique identifier](/help/rtcdp/destinations/email-marketing-destinations.md#identity) from your union schema. For more information about mandatory attributes, see Identity in the [Email marketing destinations](/help/rtcdp/destinations/email-marketing-destinations.md#identity) article. 
    ![destination-attributes](/help/rtcdp/destinations/assets/destination-attributes.png)
-6. On the **[!UICONTROL Schedule]** page, you can see the start date for sending data to the destination, as well as the frequency of sending data to the destination.
+6. On the **[!UICONTROL Segment schedule]** page, you can see the start date for sending data to the destination, as well as the frequency of sending data to the destination.
+
+    >[!IMPORTANT]
+    >
+    >For social destinations, you must select the origin of your audience in this step. You can proceed to the next step only after selecting one of the options in the image below.
+
+    ![choose data origin](/help/rtcdp/destinations/assets/choose-data-origin.png) 
+
 7. On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
 ![confirm-selection](/help/rtcdp/destinations/assets/confirm-selection.png)
@@ -56,7 +63,11 @@ The presence of these files in your storage location is confirmation of successf
 
 ### Advertising destinations
 
-Check the respective advertising destination that you are activating your data to. If activation was successful, audiences are populated in your advertising platform.  
+Check the respective advertising destination that you are activating your data to. If activation was successful, audiences are populated in your advertising platform.
+
+### Social network destinations
+
+For Facebook, a successful activation means that a Facebook custom audience would be created programmatically in [Facebook Ads Manager](https://www.facebook.com/adsmanager/manage/). Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated segments.
 
 ## Disable activation {#disable-activation}
 

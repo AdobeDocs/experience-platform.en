@@ -7,8 +7,6 @@ seo-description: Overview of datasets in Adobe Experience Platform
 
 # Datasets
 
-The Datasets workspace within Experience Platform allows you to view and manage all of the datasets that your IMS organization has made, as well as create new ones.
+Within the Adobe Experience Platform user interface, you are able to view and manage all of the datasets that your IMS Organization has made, as well as create new ones. To browse Datasets in the UI, select **[!UICONTROL Datasets]** in the left-hand navigation. The *[!UICONTROL Browse]* tab contains a list of datasets, including columns showing Name, Created (date and time), Source, Schema, and Last Batch Status, as well as the date and time the dataset was Last Updated.
 
-View the Datasets workspace by clicking **[!UICONTROL Datasets]** in the left-hand navigation. The Datasets workspace contains a list of datasets, including columns showing Name, Created (date and time), Source, Schema, and Last Batch Status, as well as the date and time the dataset was Last Updated.
-
-For information about using the Datasets workspace, see the [Datasets overview](../../catalog/datasets/overview.md).
+For information about Datasets in Experience Platform, begin by reading the [Datasets overview](../../catalog/datasets/overview.md). 
