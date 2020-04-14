@@ -1,13 +1,13 @@
 ---
 title: Personalization Destinations
 seo-title: Personalization Destinations
-description: Offer personalized experiences to your customers. Personalize browser pages, app experiences, and much more.
-seo-description: Offer personalized experiences to your customers. Personalize browser pages, app experiences, and much more.
+description: Personalization platforms collect data and insights from individual behaviors. These platforms can assist marketers in navigating anonymous data, serving up offers or ads to prospects based on previous activity or as part of audience segments with similar habits.
+seo-description: Personalization platforms collect data and insights from individual behaviors. These platforms can assist marketers in navigating anonymous data, serving up offers or ads to prospects based on previous activity or as part of audience segments with similar habits.
 ---
 
 # Personalization destinations {#personalization-destinations}
 
-Offer personalized experiences to your customers. Personalize browser pages, app experiences, and much more.
+Personalization platforms collect data and insights from individual behaviors. These platforms can assist marketers in navigating anonymous data, serving up offers or ads to prospects based on previous activity or as part of audience segments with similar habits.
 
 Currently, Adobe Real-time CDP supports the personalization destinations listed below. For information on how to connect to these destinations, see the individual links:
 
@@ -17,4 +17,5 @@ Currently, Adobe Real-time CDP supports the personalization destinations listed 
 * [D&B Visitor Intelligence (Experience Platform Launch extension)](/help/rtcdp/destinations/dnb-extension.md)
 * [Experience Cloud ID Service (Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-ecid-extension.md)
 * [Gainsight (Experience Platform Launch extension)](/help/rtcdp/destinations/gainsight-extension.md)
+* [Kickfire (Experience Platform Launch extension)](/help/rtcdp/destinations/kickfire-extension.md)
 * [Marketo Web Personalization (Experience Platform Launch extension)](marketo-web-personalization-extension.md)

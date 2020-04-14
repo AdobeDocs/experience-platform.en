@@ -15,6 +15,8 @@ Twitter Universal Website Tag is an advertising extension in Adobe Real-time Cus
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
+![Twitter Universal Website Tag Extension](assets/twitter-uwt-extension.png)
+
 ## Prerequisites {#prerequisites}
 
 This extension is available in the Destinations catalog for all customers who have purchased Adobe Real-time CDP.
