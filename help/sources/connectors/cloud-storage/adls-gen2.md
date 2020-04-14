@@ -13,5 +13,13 @@ Cloud storage sources can bring your own data into Platform without the need to 
 
 See the following documents for more information on how to connect ADLS-Gen2 to Platform:
 
-- [ADLS-Gen2 API tutorial](../../tutorials/api/create/cloud-storage/adls-gen2.md)
-- [ADLS-Gen2 UI tutorial](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
+## Connect ADLS-Gen2 to Platform using APIs
+
+- [Create an ADLS-Gen2 connector using the Flow Service API](../../tutorials/api/create/cloud-storage/adls-gen2.md)
+- [Explore a cloud storage system using the Flow Service API](../../tutorials/api/explore/cloud-storage.md)
+- [Collect cloud storage data using the Flow Service API](../../tutorials/api/collect/cloud-storage.md)
+
+## Connect ADLS-Gen2 to Platform using the UI
+
+- [Create an ADLS-Gen2 source connector in the UI](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
+- [Configure a dataflow for a cloud storage connector in the UI](../../tutorials/ui/dataflow/cloud-storage.md)

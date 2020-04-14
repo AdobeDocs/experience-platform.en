@@ -5,7 +5,7 @@ title: Create an Azure Data Lake Storage Gen2 connector using the Flow Service A
 topic: overview
 ---
 
-# Create an Amazon S3 connector using the Flow Service API
+# Create an Azure Data Lake Storage Gen2 connector using the Flow Service API
 
 Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
