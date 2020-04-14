@@ -191,17 +191,17 @@ PySpark 3 (Spark 2.4) notebooks use the Python 3 Kernel instead of the deprecate
 
 To confirm or change the kernel in the JupyterLab UI, select the kernel button located in the top right navigation bar of your notebook. If you are using a one of the predefined launcher notebooks, the kernel is pre-selected. The example below uses the PySpark 3 (Spark 2.4) *Aggregation* notebook starter. 
 
-![check kernel](../images/migration/pyspark-migration/check-kernel.png)
+![check kernel](./images/migration/pyspark-migration/check-kernel.png)
 
 Selecting the drop down menu opens up a list of available kernels.
 
-![select kernel](../images/jupyterlab/pyspark-migration/kernel-click.png)
+![select kernel](./images/migration/pyspark-migration/kernel-click.png)
 
-![kernel dropdown](../images/jupyterlab/pyspark-migration/select-kernel.png)
+![kernel dropdown](./images/migration/pyspark-migration/select-kernel.png)
 
 For PySpark 3 (Spark 2.4) notebooks, select the Python 3 kernel and confirm by clicking the **Select** button.
 
-![confirm kernel](../images/jupyterlab/pyspark-migration/confirm-kernel.png)
+![confirm kernel](./images/migration/pyspark-migration/confirm-kernel.png)
 
 ## Initializing sparkSession
 
@@ -236,12 +236,12 @@ The following images highlight the differences in configuration for PySpark 2.3 
 
 **Configuration example for 2.3 (deprecated)**
 
-![config 1](../images/jupyterlab/pyspark-migration/2.3-config.png)
-![config 2](../images/jupyterlab/pyspark-migration/2.3-config-import.png)
+![config 1](./images/migration/pyspark-migration/2.3-config.png)
+![config 2](./images/migration/pyspark-migration/2.3-config-import.png)
 
 **Configuration example for 2.4**
 
-![config 3](../images/jupyterlab/pyspark-migration/2.4-config.png)
+![config 3](./images/migration/pyspark-migration/2.4-config.png)
 
 ## Using %dataset magic {#magic}
 
@@ -308,23 +308,23 @@ The following images highlight the key differences in loading data for PySpark 2
 
 **Loading data in PySpark 2.3 (Luma dataset) - deprecated**
 
-![Load 1](../images/jupyterlab/pyspark-migration/2.3-load.png)
+![Load 1](./images/jupyterlab/pyspark-migration/2.3-load.png)
 
 **Loading data in PySpark 2.4 (Luma dataset)**
 
 With PySpark 3 (Spark 2.4) `sc = spark.sparkContext` is defined in loading.
 
-![Load 1](../images/jupyterlab/pyspark-migration/2.4-load.png)
+![Load 1](./images/migration/pyspark-migration/2.4-load.png)
 
 **Loading Experience Could Platform data in PySpark 2.3 - deprecated**
 
-![Load 2](../images/jupyterlab/pyspark-migration/2.3-load-alt.png)
+![Load 2](./images/migration/pyspark-migration/2.3-load-alt.png)
 
 **Loading Experience Could Platform data in PySpark 2.4**
 
 With PySpark 3 (Spark 2.4) the `org_id` and `dataset_id` no longer need to be defined. Additionally, `df = spark.read.format` has been replaced with a custom magic [`%dataset`](#magic) to make reading and writing datasets easier.
 
-![Load 2](../images/jupyterlab/pyspark-migration/2.4-load-alt.png)
+![Load 2](./images/migration/pyspark-migration/2.4-load-alt.png)
 
 | Element | description |
 | ------- | ----------- |
@@ -404,13 +404,13 @@ The following images highlight the key differences for creating a local datafram
 
 **Create local dataframe PySpark 2.3 - deprecated**
 
-![dataframe 1](../images/jupyterlab/pyspark-migration/2.3-dataframe.png)
+![dataframe 1](./images/migration/pyspark-migration/2.3-dataframe.png)
 
 **Create local dataframe PySpark 2.4**
 
 With PySpark 3 (Spark 2.4) `%%sql` Sparkmagic is not longer supported and has been replaced with the following:
 
-![dataframe 2](../images/jupyterlab/pyspark-migration/2.4-dataframe.png)
+![dataframe 2](./images/migration/pyspark-migration/2.4-dataframe.png)
 
 ## Write to a dataset
 
@@ -465,16 +465,16 @@ The following images highlight the key differences for writing data back to Plat
 
 **Writing data back to Platform PySpark 2.3 - deprecated**
 
-![dataframe 1](../images/jupyterlab/pyspark-migration/2.3-write.png)
-![dataframe 1](../images/jupyterlab/pyspark-migration/2.3-write-2.png)
-![dataframe 1](../images/jupyterlab/pyspark-migration/2.3-write-3.png)
+![dataframe 1](./images/migration/pyspark-migration/2.3-write.png)
+![dataframe 1](./images/migration/pyspark-migration/2.3-write-2.png)
+![dataframe 1](./images/migration/pyspark-migration/2.3-write-3.png)
 
 **Writing data back to Platform PySpark 2.4**
 
 With PySpark 3 (Spark 2.4) the `%dataset` custom magic removes the need to define values such as `userToken`, `serviceToken`, `serviceApiKey`, and `.option`. Additionally, `orgId` no longer needs to be defined.
 
-![dataframe 2](../images/jupyterlab/pyspark-migration/2.4-write.png)
-![dataframe 2](../images/jupyterlab/pyspark-migration/2.4-write-2.png)
+![dataframe 2](./images/migration/pyspark-migration/2.4-write.png)
+![dataframe 2](./images/migration/pyspark-migration/2.4-write-2.png)
 
 ## Spark 2.3 to Spark 2.4 (Scala) notebook migration guide 
 
@@ -490,17 +490,17 @@ Scala (Spark 2.4) notebooks use the Scala Kernel instead of the deprecated Spark
 
 To confirm or change the kernel in the JupyterLab UI, select the kernel button located in the top right navigation bar of your notebook. The *Select Kernel* popover appears. If you are using one of the predefined launcher notebooks, the kernel is pre-selected. The example below uses the Scala *Clustering* notebook in JupyterLab Launcher.
 
-![check kernel](../images/jupyterlab/spark-scala/scala-kernel.png)
+![check kernel](./images/migration/spark-scala/scala-kernel.png)
 
 Selecting the drop down menu opens up a list of available kernels.
 
-![kernel dropdown](../images/jupyterlab/spark-scala/select-dropdown.png)
+![kernel dropdown](./images/migration/spark-scala/select-dropdown.png)
 
-![select kernel](../images/jupyterlab/spark-scala/dropdown.png)
+![select kernel](./images/migration/spark-scala/dropdown.png)
 
 For Scala (Spark 2.4) notebooks, select the Scala kernel and confirm by clicking the **Select** button.
 
-![confirm kernel](../images/jupyterlab/spark-scala/select.png)
+![confirm kernel](./images/migration/spark-scala/select.png)
 
 ## Initializing SparkSession
 
@@ -542,7 +542,7 @@ Spark (Spark 2.3 - deprecated) uses the Spark kernel, and therefore, you were no
 
 Using Spark 2.4 with the Scala kernel requires that you define `val spark` and import `SparkSesson` in order to read or write:
 
-![importing and defining spark](../images/jupyterlab/spark-scala/start-session.png)
+![importing and defining spark](./images/migration/spark-scala/start-session.png)
 
 ## Query data
 
@@ -619,13 +619,13 @@ The Scala (Spark 2.4) image below highlights the key differences in making queri
 
 The Spark (Spark 2.3 - deprecated) notebook uses the Spark kernel. The Spark kernel supports and uses `%%sql` sparkmagic.
 
-![](../images/jupyterlab/spark-scala/sql-2.3.png)
+![](./images/migration/spark-scala/sql-2.3.png)
 
 **Scala (Spark 2.4)**
 
 The Scala kernel no longer supports `%%sql` sparkmagic. Existing sparkmagic code needs to be converted.
 
-![importing and defining spark](../images/jupyterlab/spark-scala/sql-2.4.png)
+![importing and defining spark](./images/migration/spark-scala/sql-2.4.png)
 
 ## Read a dataset
 
@@ -686,13 +686,13 @@ The images below highlight the key differences in loading data with the Spark 2.
 
 The Spark (Spark 2.3 - deprecated) notebook uses the Spark kernel. The following two cells shows an example of loading the dataset with a specified dataset id in the date range of (2019-3-21, 2019-3-29).
 
-![loading spark 2.3](../images/jupyterlab/spark-scala/load-2.3.png)
+![loading spark 2.3](./images/migration/spark-scala/load-2.3.png)
 
 **Scala (Spark 2.4)**
 
 The Scala (Spark 2.4) notebook uses the Scala kernel which requires more values upon setup as highlighted in the first code cell. Additionally, `var mdata` requires more `option` values to be filled. In this notebook, the previously mentioned code for [initializing SparkSession](#initializing-sparksession) is included within the `var mdata` code cell.
 
-![loading spark 2.4](../images/jupyterlab/spark-scala/load-2.4.png)
+![loading spark 2.4](./images/migration/spark-scala/load-2.4.png)
 
 >[!TIP] In Scala, you can use `sys.env()` to declare and return a value from within `option`. This eliminates the need to define variables if you know they are only going to be used a single time. The following example takes `val userToken` in the above example and declares it in-line within `option`:
 > ```scala
