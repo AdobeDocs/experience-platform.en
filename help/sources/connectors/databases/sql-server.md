@@ -17,7 +17,7 @@ The documentation below provides information on how to connect Microsoft SQL Ser
 
 - [Create a Microsoft SQL Server connector using the Flow Service API](../../tutorials/api/create/databases/sql-server.md)
 - [Explore a database system using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
-- [Collecte data from a database using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
+- [Collect data from a database using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Connect Microsoft SQL Server to Platform using the UI
 
