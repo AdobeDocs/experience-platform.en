@@ -19,7 +19,7 @@ In Adobe Real-time Customer Data Platform, we distinguish between two destinatio
 
 ### Connections
 
-**Profile Export** and **Segment Export** destinations in Adobe Real-time Customer Data Platform capture event data, combine it with other data sources to form the [real-time customer profile](https://docs.adobe.com/content/help/en/experience-platform/profile/home.html), apply segmentation, and export segments and qualified profiles to destinations. 
+**Profile Export** and **Segment Export** destinations in Adobe Real-time Customer Data Platform capture event data, combine it with other data sources to form the [real-time customer profile](/help/profile/home.md), apply segmentation, and export segments and qualified profiles to destinations. 
 
 <br>&nbsp;
 
@@ -64,7 +64,7 @@ Extensions are helpful when event data is used to trigger an action, or to condu
 
 ## Destination categories
 
-The destinations and extensions in the [destinations catalog](https://platform.adobe.com/destination/catalog) are grouped by destination category (**Advertising**, **Cloud storage**, **Survey platforms**, **Email marketing**, etc.), depending on the marketing use case that they help you achieve. For more information on each of the categories, as well as the destinations included in each category, see the [Destinations catalog documentation](/help/rtcdp/destinations/destinations-catalog.md).
+The connections and extensions in the [destinations catalog](https://platform.adobe.com/destination/catalog) are grouped by destination category (**Advertising**, **Cloud storage**, **Survey platforms**, **Email marketing**, etc.), depending on the marketing use case that they help you achieve. For more information on each of the categories, as well as the destinations included in each category, see the [Destinations catalog documentation](/help/rtcdp/destinations/destinations-catalog.md).
 
-![Destination categories](/help/rtcdp/destinations/assets/destination-categories.png)
+![Destination categories](/help/rtcdp/destinations/assets/destination-categories-menu.png)
 
