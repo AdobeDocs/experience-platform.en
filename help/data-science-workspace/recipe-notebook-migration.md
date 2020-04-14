@@ -15,9 +15,9 @@ The following guides outlines the steps and information required for migrating e
  - [Recipe migration guides](#recipe-migration-guides)
  - [Notebook migration guides](#notebook-migration-guides)
 
-# Recipe migration guides
+# Recipe migration guides {#recipe}
 
-Recent changes to Data Science Workspace require that existing Spark and PySpark recipes be updated. Use the following guides to assist in transitioning your recipes.]
+Recent changes to Data Science Workspace require that existing Spark and PySpark recipes be updated. Use the following guides to assist in transitioning your recipes.
 
 - [Spark migration guide](#spark-migration-guide)
   - [Modify how you read and write datasets]()
@@ -32,8 +32,10 @@ Recent changes to Data Science Workspace require that existing Spark and PySpark
   - [Prepare docker scripts]()
   - [create the recipe with docker]()
 
-<!-- messaging to org admins vs details  -->
-<!--  -->
+Additionally, the following video is designed to assist in understanding the changes needed in order to update your existing recipes.
+
+>[!VIDEO](https://video.tv.adobe.com/v/33048?learn=on&quality=12)
+
 ## Spark migration guide
 
 Spark recipes are now using the Docker workflow. Additionally, updates have been made to the Platform SDK for reading and writing datasets. Use the following guide to re-create your existing recipes with a Docker workflow.
@@ -168,7 +170,12 @@ To build your recipe using the UI, follow the [import a packaged recipe (UI)](./
 
 To build your recipe using the API, follow the [import a packaged recipe (API)](./import-packaged-recipe-api.md) tutorial for PySpark.
 
-# Notebook migration guides
+# Notebook migration guides {#notebook}
+
+Recent changes to JupyterLab notebooks require that you change your existing PySpark and Spark 2.3 notebooks to 2.4. With this change, JupyterLab Launcher has been updated with new starter notebooks. Please use the following guides to learn more about the changes to notebooks.
+
+- [PySpark 2.3 to 2.4 migration guide](#pyspark-23-to-24-notebook-migration-guide)
+- [Spark 2.3 to Spark 2.4 (Scala) migration guide](#spark-23-to-spark-24-scala-notebook-migration-guide)
 
 ## PySpark 2.3 to 2.4 notebook migration guide 
 
