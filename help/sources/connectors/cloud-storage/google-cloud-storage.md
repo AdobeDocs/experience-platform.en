@@ -11,7 +11,15 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 Cloud storage sources can bring your own data into Platform without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM parquet, or delimited. Every step of the process is integrated into the Sources workflow using the user interface. Support for cloud storage providers include Google Cloud Storage.
 
-See the following documents for more information on how to connect Google Cloud Storage to Platform:
+The documentation below provides information on how to connect ADLS-Gen2 to Platform using APIs or the user interface:
 
-- [Google Cloud Storage API tutorial](../../tutorials/api/create/cloud-storage/google.md)
-- [Google Cloud Storage UI tutorial](../../tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+## Connect Google Cloud Storage to Platform using APIs
+
+- [Create a Google Cloud Storage connector using the Flow Service API](../../tutorials/api/create/cloud-storage/google.md)
+- [Explore a cloud storage system using the Flow Service API](../../tutorials/api/explore/cloud-storage.md)
+- [Collect cloud storage data using the Flow Service API](../../tutorials/api/collect/cloud-storage.md)
+
+## Connect Google Cloud Storage to Platform using the UI
+
+- [Create a Google Cloud Storage source connector in the UI](../../tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+- [Configure a dataflow for a cloud storage connector in the UI](../../tutorials/ui/dataflow/cloud-storage.md)
