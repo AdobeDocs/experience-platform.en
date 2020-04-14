@@ -64,23 +64,35 @@ The request above used the `application/vnd.adobe.xed-id+json` Accept header, th
 }
 ```
 
-## Filter results with query parameters {#query}
+## Using query parameters {#query}
 
-To help filter results, the Schema Registry supports the use of query parameters when listing resources.
-
-The most common query parameters include:
-
-| Parameter | Description |
-| --- | --- |
-| `limit` | Limit the number of resources returned. Example: `limit=5` will return a list of five resources. |
-| `orderby` | Sort results by a specific property. Example: `orderby=title` will sort results by title in ascending order (A-Z). Adding a `-` before title (`orderby=-title`) will sort items by title in descending order (Z-A). |
-| `property` | Filter results on any top-level attributes. For example, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` returns only mixins that are compatible with the XDM Individual Profile class. |
+The Schema Registry supports the use of query parameters to page and filter results when listing resources.
 
 >[!NOTE] When combining multiple query parameters, they must be separated by ampersands (`&`).
 
-The Schema Registry also supports the use of wildcard characters to add more flexibility to your query parameters:
+### Paging
 
-| Example query | Description |
+The most common query parameters for paging include:
+
+| Parameter | Description |
 | --- | --- |
-| `property=title~test$` | Returns resources that have a title ending with "test". |
-| `property=title~^test` | Returns resources that have a title beginning with "test". |
+| `start` | Specify where the listed results should be gin. Example: `start=2` will list results from the third returned item onward.  |
+| `limit` | Limit the number of resources returned. Example: `limit=5` will return a list of five resources. |
+| `orderby` | Sort results by a specific property. Example: `orderby=title` will sort results by title in ascending order (A-Z). Adding a `-` before title (`orderby=-title`) will sort items by title in descending order (Z-A). |
+
+### Filtering
+
+You can filter results by using the `property` parameter, which is used to apply a specific operator against a given JSON property within the retrieved resources. Supported operators include:
+
+| Operator | Description | Example |
+| --- | --- | --- |
+| `==` | Filters by whether the property equals the provided value. | `property=title==test` |
+| `!=` | Filters by whether the property does not equal the provided value. | `property=title!=test` |
+| `<` | Filters by whether the property is less than the provided value. | `property=version<5` |
+| `>` | Filters by whether the property is greater than the provided value. | `property=version>5` |
+| `<=` | Filters by whether the property is less than or equal to the provided value. | `property=version<=5` |
+| `>=` | Filters by whether the property is greater than or equal to the provided value. | `property=version>=5` |
+| `~` | Filters by whether the property matches a provided regular expression. | `property=title~test$` |
+| (None) | Stating only the property name returns only entries where the property exists. | `property=title` |
+
+>[!TIP] You can use the `property` parameter to filter mixins by their compatible class. For example, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` returns only mixins that are compatible with the XDM Individual Profile class.
