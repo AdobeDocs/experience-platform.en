@@ -15,12 +15,12 @@ Data Science Workspace has two variants in Adobe Experience Platform. Data Scien
 
 With the Purchase of Intelligence Pack, you receive access to both the *Models* and *Services* tabs in the left-navigation bar. *Models* provides tools used to create, publish, and store advanced machine learning recipes and models. *Services* contains both Adobe provided services such as [Intelligent Services](../intelligent-services/home.md) and any custom external services you create with Data Science Workspace.
 
-The following table outlines some of the key differences in Foundation and Intelligence Pack:
+The following table outlines some of the key differences for Foundation and Intelligence Pack:
 
 | | Foundation | Intelligence Pack |
 | --- | --- | --- |
 | **Packaging** | Included with Platform and Real-time Customer Data Profile. | Upgrade option |
-| **Configureation options** | Easily access, explore and prep your behavioral and transactional data. Examples include access to the JupyterLab Notebook interface with support for Python and R. Ability to explore and derive insights with minimal effort. Ability to easily write data sets back into Experience Platform. As well as the power to use insights to analyze and predict business outcomes. | Intelligence Pack allows you to leverage larger datasets to train machine learning models. Develop complex models with technologies such as Spark and TensorFlow. Seamlessly Package models and deploy them in Intelligence Services, as well as, automate insights by configuring training and scoring schedules. |
+| **Configuration options** | Easily access, explore and prep your behavioral and transactional data. Examples include access to the JupyterLab Notebook interface with support for Python and R. Ability to explore and derive insights with minimal effort. Ability to easily write data sets back into Experience Platform. As well as the power to use insights to analyze and predict business outcomes. | Intelligence Pack allows you to leverage larger datasets to train machine learning models. Develop complex models with technologies such as Spark and TensorFlow. Seamlessly Package models and deploy them in Intelligence Services, as well as, automate insights by configuring training and scoring schedules. |
 | **Modeling support** | Supports an average modeling data size of 2GB | Supports an average modeling data size of 30GB |
 
 ## Access control
