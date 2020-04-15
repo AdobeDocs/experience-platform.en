@@ -12,10 +12,10 @@ topic: Tutorial
 
 The following guides outlines the steps and information required for migrating existing Recipes and Notebooks. 
 
- - [Recipe migration guides](#recipe-migration-guides)
- - [Notebook migration guides](#notebook-migration-guides)
+- [Recipe migration guides](#recipe-migration-guides)
+- [Notebook migration guides](#notebook-migration-guides)
 
-# Recipe migration guides {#recipe}
+## Recipe migration guides {#recipe}
 
 Recent changes to Data Science Workspace require that existing Spark and PySpark recipes be updated. Use the following guides to assist in transitioning your recipes.
 
@@ -323,7 +323,7 @@ To build your recipe using the UI, follow the [import a packaged recipe (UI)](./
 
 To build your recipe using the API, follow the [import a packaged recipe (API)](./import-packaged-recipe-api.md) tutorial for PySpark.
 
-# Notebook migration guides {#notebook}
+## Notebook migration guides {#notebook}
 
 Recent changes to JupyterLab notebooks require that you update your existing PySpark and Spark 2.3 notebooks to 2.4. With this change, JupyterLab Launcher has been updated with new starter notebooks. For a step-by-step guide on how to convert your notebooks, select one of the following guides:
 
