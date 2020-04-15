@@ -15,6 +15,8 @@ InMoment is a survey extension in Adobe Real-time Customer Data Platform. For mo
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
+![Inmoment extension](/help/rtcdp/destinations/assets/inmoment-extension.png)
+
 ## Prerequisites {#prerequisites}
 
 This extension is available in the Destinations catalog for all customers who have purchased Adobe Real-time CDP.

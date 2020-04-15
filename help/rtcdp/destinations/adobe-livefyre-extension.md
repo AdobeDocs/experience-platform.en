@@ -5,7 +5,7 @@ description: The Adobe Livefyre extension is a social destination in Adobe Real-
 seo-description: 
 ---
 
-# Adobe Livefyre extension {#bing-ads-extension}
+# Adobe Livefyre extension {#adobe-livefyre-extension}
 
 ## Overview {#overview}
 
