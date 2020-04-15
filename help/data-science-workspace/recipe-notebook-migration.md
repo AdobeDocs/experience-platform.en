@@ -12,36 +12,36 @@ topic: Tutorial
 
 The following guides outlines the steps and information required for migrating existing Recipes and Notebooks. 
 
-- [Recipe migration guides](#recipe-migration-guides)
-- [Notebook migration guides](#notebook-migration-guides)
+- [Recipe migration guides](#recipe-migration)
+- [Notebook migration guides](#notebook-migration)
 
-## Recipe migration guides {#recipe}
+## Recipe migration guides {#recipe-migration}
 
-Recent changes to Data Science Workspace require that existing Spark and PySpark recipes be updated. Use the following guides to assist in transitioning your recipes.
+Recent changes to Data Science Workspace require that existing Spark and PySpark recipes be updated. Use the following workflows to assist in transitioning your recipes.
 
 - [Spark migration guide](#spark-migration-guide)
-  - [Modify how you read and write datasets](#read-and-write-datasets)
-  - [Download the sample recipe](#download-the-sample-recipe)
-  - [Add the docker file](#add-the-dockerfile)
-  - [Check dependencies](#change-dependencies)
-  - [Prepare docker scripts](#prepare-your-docker-scripts)
-  - [create the recipe with docker](#create-a-recipe)
+  - [Modify how you read and write datasets](#read-write-recipe-spark)
+  - [Download the sample recipe](#download-sample-spark)
+  - [Add the docker file](#add-dockerfile-spark)
+  - [Check dependencies](#change-dependencies-spark)
+  - [Prepare docker scripts](#prepare-docker-spark)
+  - [create the recipe with docker](#create-recipe-spark)
 - [PySpark migration guide](#pyspark-migration-guide)
-  - [Modify how you read and write datasets](#read-and-write-datasets)
-  - [Download the sample recipe](#download-the-sample-recipe)
-  - [Add the docker file](#add-the-dockerfile)
-  - [Prepare docker scripts](#prepare-your-docker-scripts)
-  - [create the recipe with docker](#create-a-recipe)
+  - [Modify how you read and write datasets](#pyspark-read-write)
+  - [Download the sample recipe](#pyspark-download-sample)
+  - [Add the docker file](#pyspark-add-dockerfile)
+  - [Prepare docker scripts](#pyspark-prepare-docker)
+  - [create the recipe with docker](#pyspark-create-recipe)
 
 Additionally, the following video is designed to further assist in understanding the changes that are required for existing recipes. This video uses PySpark.
 
 >[!VIDEO](https://video.tv.adobe.com/v/33048?learn=on&quality=12)
 
-## Spark migration guide
+## Spark migration guide {#spark-migration-guide}
 
 Spark recipes are now using the Docker workflow. Additionally, updates have been made to the Platform SDK for reading and writing datasets. Use the following guide to re-create your existing recipes with a Docker workflow.
 
-### Read and write datasets
+### Read and write datasets (Spark) {#read-write-recipe-spark}
 
 Before you build the Docker image, review the following examples for reading and writing datasets in the Platform SDK. If you are converting existing recipes, your Platform SDK needs to be updated.
 
@@ -125,13 +125,13 @@ df.write.format("com.adobe.platform.query")
 >[!TIP]
 > interactive" mode times out if queries are running longer than 10 minutes. If you are ingesting more than a couple gigabytes of data, it is recommended that you switch to "batch" mode. "batch" mode takes longer to start up but can handle larger sets of data.
 
-### Package docker based source files
+### Package docker based source files (Spark) {#package-docker-spark}
 
 Start by navigating to the directory where your recipe is located. 
 
 For this example the new Scala Retail Sales recipe is used and can be found in the [Data Science Workspace public github repository](https://github.com/adobe/experience-platform-dsw-reference).
 
-### Download the sample recipe
+### Download the sample recipe (Spark) {#download-sample-spark}
 
 The sample recipe contains files that need to be copied over to your existing recipe. To clone the public github that contains all the sample recipes, enter the following in terminal.
 
@@ -141,7 +141,7 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 
 The Scala recipe is located in the following directory `experience-platform-dsw-reference/recipes/scala/retail`.
 
-## Add the Dockerfile
+### Add the Dockerfile (Spark) {#add-dockerfile-spark}
 
 A new file is needed in your recipe folder in order to use the docker based workflow. Copy and paste the Dockerfile from the the recipes folder located at `experience-platform-dsw-reference/recipes/scala/Dockerfile`. Optionally, you can also copy and paste the code below in a new file called `Dockerfile`.
 
@@ -151,7 +151,7 @@ FROM adobe/acp-dsw-ml-runtime-spark:0.0.1
 COPY target/ml-retail-sample-spark-*-jar-with-dependencies.jar /application.jar
 ```
 
-## Change dependencies
+### Change dependencies (Spark) {#change-dependencies-spark}
 
 If you are using an existing recipe, changes are required in the pom.xml file for dependencies. Change the model-authoring-sdk dependency version to 1.0.0. Next, update the Spark version in the pom file to 2.4.3 and the Scala version to 2.11.12.
 
@@ -162,7 +162,7 @@ If you are using an existing recipe, changes are required in the pom.xml file fo
 <classifier>jar-with-dependencies</classifier>
 ```
 
-### Prepare your Docker scripts
+### Prepare your Docker scripts (Spark) {#prepare-docker-spark}
 
 Spark recipes no longer use Binary Artifacts and instead require building a Docker image. If you have not done so download and install [Docker](https://www.docker.com/products/docker-desktop).
 
@@ -172,21 +172,21 @@ Your folder structure should now look similar to the following example. Note tha
 
 ![folder structure](./images/migration/folder.png)
 
-The next step is to follow the [package source files into a recipe](./package-source-files-recipe.md) tutorial. This tutorial has a section that outlines building a docker image for a Scala (Spark) recipe. Once complete you are provided with the Docker image in Azure Container Registry along with the corresponding image URL.
+The next step is to follow the [package source files into a recipe](./models-recipes/package-source-files-recipe.md) tutorial. This tutorial has a section that outlines building a docker image for a Scala (Spark) recipe. Once complete you are provided with the Docker image in Azure Container Registry along with the corresponding image URL.
 
-### Create a recipe
+### Create a recipe (Spark) {#create-recipe-spark}
 
-In order to create a recipe you need to have completed the [package source files](./package-source-files-recipe.md) tutorial and have your docker image URL ready. You can create a recipe with the UI or API.
+In order to create a recipe you need to have completed the [package source files](./models-recipes/package-source-files-recipe.md) tutorial and have your docker image URL ready. You can create a recipe with the UI or API.
 
-To build your recipe using the UI, follow the [import a packaged recipe (UI)](./import-packaged-recipe-ui.md) tutorial for Scala.
+To build your recipe using the UI, follow the [import a packaged recipe (UI)](./models-recipes/import-packaged-recipe-ui.md) tutorial for Scala.
 
-To build your recipe using the API, follow the [import a packaged recipe (API)](./import-packaged-recipe-api.md) tutorial for Scala.
+To build your recipe using the API, follow the [import a packaged recipe (API)](./models-recipes/import-packaged-recipe-api.md) tutorial for Scala.
 
-## PySpark migration guide
+## PySpark migration guide {#pyspark-migration-guide}
 
 For PySpark recipes, the recipe should be a docker image instead of a .egg binary. Additionally, changes have been made to the  Platform SDK for reading and writing datasets.
 
-### Read and write datasets
+### Read and write datasets (PySpark) {#pyspark-read-write}
 
 In order for existing recipes to Before you build the Docker image, review the following examples for reading and writing datasets in the  Platform SDK. If you are converting existing recipes, the Platform SDK needs to be updated.
 
@@ -269,13 +269,13 @@ scored_df.write.format("com.adobe.platform.query")
   </tr>
 </table>
 
-### Package docker based source files
+### Package docker based source files (PySpark) {#pyspark-package-docker}
 
 Start by navigating to the directory where your recipe is located. 
 
 For this example the new PySpark Retail Sales recipe is used and can be found in the [Data Science Workspace public github repository](https://github.com/adobe/experience-platform-dsw-reference).
 
-### Download the sample recipe
+### Download the sample recipe (PySpark) {#pyspark-download-sample}
 
 The sample recipe contains files that need to be copied over to your existing recipe. To clone the public github that contains all the sample recipes, enter the following in terminal.
 
@@ -285,7 +285,7 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 
 The PySpark recipe is located in the following directory `experience-platform-dsw-reference/recipes/pyspark`.
 
-### Add the Dockerfile
+### Add the Dockerfile (PySpark) {#pyspark-add-dockerfile}
 
 A new file is needed in your recipe folder in order to use the docker based workflow. Copy and paste the Dockerfile from the the recipes folder located at `experience-platform-dsw-reference/recipes/pyspark/Dockerfile`. Optionally, you can also copy and paste the code below and make a new file called `Dockerfile`.
 
@@ -303,7 +303,7 @@ RUN cd /recipe && \
 RUN cp /databricks/conda/envs/${DEFAULT_DATABRICKS_ROOT_CONDA_ENV}/lib/python3.6/site-packages/pysparkretailapp-*.egg /application.egg
 ```
 
-### Prepare your Docker scripts
+### Prepare your Docker scripts (PySpark) {#pyspark-prepare-docker}
 
 PySpark recipes no longer use Binary Artifacts and instead require building a Docker image. If you have not done so, download and install [Docker](https://www.docker.com/products/docker-desktop).
 
@@ -313,17 +313,17 @@ Your folder structure should now look similar to the following example. The file
 
 ![folder structure](./images/migration/folder.png)
 
-Your recipe is now ready to be built using a Docker image. The next step is to follow the [package source files into a recipe](./package-source-files-recipe.md) tutorial. This tutorial has a section that outlines building a docker image for a PySpark (Spark 2.4) recipe. Once complete you are provided with the Docker image in Azure Container Registry along with the corresponding image URL.
+Your recipe is now ready to be built using a Docker image. The next step is to follow the [package source files into a recipe](./models-recipes/package-source-files-recipe.md) tutorial. This tutorial has a section that outlines building a docker image for a PySpark (Spark 2.4) recipe. Once complete you are provided with the Docker image in Azure Container Registry along with the corresponding image URL.
 
-### Create a recipe
+### Create a recipe (PySpark) {#pyspark-create-recipe}
 
-In order to create a recipe you need to have completed the [package source files](./package-source-files-recipe.md) tutorial and have your docker image URL ready. You can create a recipe with the UI or API.
+In order to create a recipe you need to have completed the [package source files](./models-recipes/package-source-files-recipe.md) tutorial and have your docker image URL ready. You can create a recipe with the UI or API.
 
-To build your recipe using the UI, follow the [import a packaged recipe (UI)](./import-packaged-recipe-ui.md) tutorial for PySpark.
+To build your recipe using the UI, follow the [import a packaged recipe (UI)](./models-recipes/import-packaged-recipe-ui.md) tutorial for PySpark.
 
-To build your recipe using the API, follow the [import a packaged recipe (API)](./import-packaged-recipe-api.md) tutorial for PySpark.
+To build your recipe using the API, follow the [import a packaged recipe (API)](./models-recipes/import-packaged-recipe-api.md) tutorial for PySpark.
 
-## Notebook migration guides {#notebook}
+## Notebook migration guides {#notebook-migration}
 
 Recent changes to JupyterLab notebooks require that you update your existing PySpark and Spark 2.3 notebooks to 2.4. With this change, JupyterLab Launcher has been updated with new starter notebooks. For a step-by-step guide on how to convert your notebooks, select one of the following guides:
 
@@ -338,7 +338,7 @@ With the introduction of PySpark 2.4 to JupyterLab Notebooks, new Python noteboo
 
 To convert your existing PySpark 3 (Spark 2.3) notebooks to Spark 2.4, follow the examples outlined below:
 
-## Kernel
+### Kernel
 
 PySpark 3 (Spark 2.4) notebooks use the Python 3 Kernel instead of the deprecated PySpark kernel used in PySpark 3 (Spark 2.3 - deprecated) notebooks.
 
