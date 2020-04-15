@@ -29,28 +29,14 @@ The controls in the [Destinations workspace](/help/rtcdp/destinations/destinatio
 * Create, edit, activate, and disable data flows to the destinations in the catalog;
 * Create an account in a storage location or link Real-time CDP to the account in the destination platform;
 * Select which segments should be activated to destinations;
-* Select which [Experience Data Model (XDM) fields](../../xdm/home.md) to export when activating segments to email marketing destinations.
+* Select which [Experience Data Model (XDM) fields](https://www.adobe.io/apis/experienceplatform/home/xdm/xdmservices.html#!api-specification/markdown/narrative/technical_overview/schema_registry/xdm_system/xdm_system_in_experience_platform.md) to export when activating segments to email marketing destinations.
 
-## Destination types and categories - video overview
+## Destination types and categories 
 
-In Adobe Real-time CDP, there are two types of destinations, Profile Export destinations and Segment Export destinations. The video below describes the two types of destinations. 
-
->[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
-
-### Profile export destinations
-
-Profile export destinations generate a file containing profiles and/or attributes. These destinations use raw data, often with email address as the primary key.
-
-### Segment export destinations
-
-Segment export destinations send the profiles and the segments that they qualified for. These destinations use segment ID or user IDs.
-
-### Destination categories
-
-The destinations in the [Destinations catalog](/help/rtcdp/destinations/destinations-catalog.md) are grouped by destination category (**Advertising**, **Cloud storage**, or **Email marketing**). For more information on each of them, see the [Destinations catalog](/help/rtcdp/destinations/destinations-catalog.md).
+For detailed information, see the [destination types and categories overview](/help/rtcdp/destinations/destination-types.md).
 
 ## Destinations and Access Controls
 
-The destinations functionality in Real-time CDP works with Adobe Experience Platform access control permissions. Depending on your user's permission level, you can view, manage, and activate destinations. For information about the individual permissions, see [Access control in Adobe Experience Platform](../../access-control/home.md) and scroll down to the bottom of the page.
+The destinations functionality in Real-time CDP works with Adobe Experience Platform access control permissions. Depending on your user's permission level, you can view, manage, and activate destinations. For information about the individual permissions, see [Access control in Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md) and scroll down to the bottom of the page.
 
-For more information about access controls, see the [Access control user guide](../../access-control/ui/overview.md).
+For more information about access controls, see the [Access control user guide](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-user-guide.md).
