@@ -15,9 +15,9 @@ The documentation below provides information on how to connect HubSpot to Platfo
 
 ## Connect HubSpot to Platform using APIs
 
-- [Create a HubSpot connector using the Flow Service API](../../tutorials/api/create/crm/hubspot.md)
-- [Explore a marketing automation system using the Flow Service API](../../tutorials/api/explore/crm.md)
-- [Collect marketing automation data using the Flow Service API](../../tutorials/api/collect/crm.md)
+- [Create a HubSpot connector using the Flow Service API](../../tutorials/api/create/marketing-automation/hubspot.md)
+- [Explore a marketing automation system using the Flow Service API](../../tutorials/api/explore/marketing-automation.md)
+- [Collect marketing automation data using the Flow Service API](../../tutorials/api/collect/marketing-automation.md)
 
 ## Connect HubSpot to Platform using the UI
 
