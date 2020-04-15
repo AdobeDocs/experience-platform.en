@@ -110,19 +110,7 @@ Data Science Workspace tracks where intelligent services are invoked and how the
 
 ### Access to new features and datasets
 
-Data scientists can take advantage of new technologies and datasets as soon as they are available through Adobe services. Through frequent updates, we do the work of integrating datasets and technologies into the platform, so you don't have to.
-
-### Access control in Data Science Workspace
-
-Access control for Experience Platform is administered through the [Adobe Admin Console](https://adminconsole.adobe.com). This functionality leverages product profiles in Admin Console, which link users with permissions and sandboxes. See the [access control overview](../access-control/home.md) for more information.
-
->[!IMPORTANT] In order to use Data Science Workspace, the "Manage Data Science Workspace" permission must be enabled. 
-
-The following table outlines the effects of having this permission enabled or disabled:
-
-| Permission | Enabled | Disabled |
-|---|---|---|
-| Manage Data Science Workspace | Provides access to all services in Data Science Workspace. | API and UI access to all services within Data Science Workspace are disabled. While disabled, routing to the Data Science Workspace *Models* and *Services* pages are prevented. |
+Data scientists can take advantage of new technologies and datasets as soon as they are available through Adobe services. Through frequent updates, we do the work of integrating datasets and technologies into the platform, so you don't have to
 
 ### Security and peace of mind
 
@@ -130,15 +118,6 @@ Securing your data is a top priority for Adobe. Adobe protects your data with se
 
 Security is built into software and services as part of the Adobe Secure Product Lifecycle.
 To learn about Adobe data and software security, compliance, and more, visit the security page at https://www.adobe.com/security.html.
-
-### Sandbox support
-
-Sandboxes are virtual partitions within a single instance of Experience Platform. Each Platform instance supports one production sandbox and multiple non-production sandboxes, each maintaining its own library of Platform resources. Non-production sandboxes allow you to test features, run experiments, and make custom configurations without impacting your production sandbox. For more information on sandboxes, see the [sandboxes overview](../sandboxes/home.md).
-
-Currently, Data Science Workspace has a couple sandbox limitations:
-
-- Compute resources are shared across the production sandbox and non-production sandboxes. Isolation for production sandboxes is set to be provided in the future.
-- Scala/Spark and PySpark workloads for both notebooks and recipes are currently only supported in the production sandbox. Support for non-production sandboxes is set to be provided in the future.
 
 ## Data Science Workspace in action 
 
