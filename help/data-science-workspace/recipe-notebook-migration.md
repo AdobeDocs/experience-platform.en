@@ -655,7 +655,7 @@ For Scala (Spark 2.4) notebooks, select the Scala kernel and confirm by clicking
 
 ![confirm kernel](./images/migration/spark-scala/select.png)
 
-## Initializing SparkSession {#initializing-sparksession}
+## Initializing SparkSession {#initialize-sparksession-scala}
 
 All Scala (Spark 2.4) notebooks require that you initialize the session with the following boilerplate code:
 
@@ -843,7 +843,7 @@ The Spark (Spark 2.3 - deprecated) notebook uses the Spark kernel. The following
 
 **Scala (Spark 2.4)**
 
-The Scala (Spark 2.4) notebook uses the Scala kernel which requires more values upon setup as highlighted in the first code cell. Additionally, `var mdata` requires more `option` values to be filled. In this notebook, the previously mentioned code for [initializing SparkSession](#initializing-sparksession) is included within the `var mdata` code cell.
+The Scala (Spark 2.4) notebook uses the Scala kernel which requires more values upon setup as highlighted in the first code cell. Additionally, `var mdata` requires more `option` values to be filled. In this notebook, the previously mentioned code for [initializing SparkSession](#initialize-sparksession-scala) is included within the `var mdata` code cell.
 
 ![loading spark 2.4](./images/migration/spark-scala/load-2.4.png)
 
