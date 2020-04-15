@@ -11,6 +11,52 @@ This document provides answers to frequently asked questions about Adobe Experie
 
 Privacy Service provides a RESTful API and user interface to help companies manage customer data privacy requests. With Privacy Service, you can submit requests to access and delete private or personal customer data, facilitating automated compliance with organizational and legal privacy regulations.
 
+## When making privacy requests in the API, what is the difference between a user and a user ID? {#user-ids}
+
+In order to make a new privacy job in the API, the JSON payload of the request must contain a `users` array that lists specific information for each user to which the privacy request applies. Each item in the `users` array is an object which represents a particular user, identified by its `key` value.
+
+In turn, each user object (or `key`) contains its own `userIDs` array. This array lists specific ID values **for that one particular user**.
+
+Consider the following example `users` array:
+
+```json
+"users": [
+  {
+    "key": "DavidSmith",
+    "action": ["access"],
+    "userIDs": [
+      {
+        "namespace": "email",
+        "value": "dsmith@acme.com",
+        "type": "standard"
+      }
+    ]
+  },
+  {
+    "key": "user12345",
+    "action": ["access", "delete"],
+    "userIDs": [
+      {
+        "namespace": "email",
+        "value": "ajones@acme.com",
+        "type": "standard"
+      },
+      {
+        "namespace": "ECID",
+        "type": "standard",
+        "value":  "443636576799758681021090721276",
+        "isDeletedClientSide": false
+      }
+    ]
+  }
+]
+```
+
+The array contains two objects, representing individual users identified by their `key` values ("DavidSmith" and "user12345"). "DavidSmith" only has one listed ID (their email address), whereas "user12345" has two (their email address and ECID).
+
+For more information on providing user identity information, see the guide on [identity data for privacy requests](identity-data.md).
+
+
 ## Can I use Privacy Service to clean up data that was accidentally sent to Platform?
 
 Adobe does not support using Privacy Service for clearing out data that was accidentally submitted to a product. Privacy Service is designed to assist you in meeting your obligations for data subject (or consumer) access or delete requests. These requests are time-sensitive and are completed related to applicable privacy law. Submission of requests which are not data-subject/consumer access or delete requests impacts all Privacy Service customers and the ability for Privacy Service to support the appropriate legal timelines.
