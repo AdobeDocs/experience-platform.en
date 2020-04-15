@@ -73,6 +73,8 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Phoenix connector](tutorials/api/create/databases/phoenix.md)
       - [PostgreSQL connector](tutorials/api/create/databases/postgres.md)
       - [SQL Server connector](tutorials/api/create/databases/sql-server.md)
+    - Marketing automation {#marketing-automation}
+      - [HubSpot connector](tutorials/api/create/marketing-automation/hubspot.md)
     - Payments {#payments}
       - [PayPal connector](tutorials/api/create/payments/paypal.md)
     - Protocols {#protocols}
@@ -83,6 +85,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [Explore CRM data](tutorials/api/explore/crm.md)
     - [Explore customer success data](tutorials/api/explore/customer-success.md)
     - [Explore database or NoSQL data](tutorials/api/explore/database-nosql.md)
+    - [Explore marketing automation data](tutorials/api/explore/marketing-automation.md)
     - [Explore payment data](tutorials/api/explore/payments.md)
     - [Explore protocol data](tutorials/api/explore/protocols.md)
   - Collect data {#collect}
@@ -91,6 +94,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [Collect CRM data](tutorials/api/collect/crm.md)
     - [Collect customer success data](tutorials/api/collect/customer-success.md)
     - [Collect database or NoSQL data](tutorials/api/collect/database-nosql.md)
+    - [Collect marketing automation data](tutorials/api/collect/marketing-automation.md)
     - [Collect payment data](tutorials/api/collect/payments.md)
     - [Collect protocol data](tutorials/api/collect/protocols.md)
   - [Ingest parquet data from a third-party cloud storage system](tutorials/api/create-dataset-base-connection.md)
