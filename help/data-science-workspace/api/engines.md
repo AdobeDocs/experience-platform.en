@@ -487,9 +487,10 @@ A successful response returns a payload containing the details of the newly crea
 
 ## Create a feature pipeline Engine using binary artifacts - deprecated
 
->[!IMPORTANT] binary artifacts are no longer supported and are set to be removed at a later date.
+>[!IMPORTANT]
+>Binary artifacts are no longer supported and are set to be removed at a later date.
 
-You can create a feature pipeline Engine using local `.jar` or `.egg` binary artifacts by performing a POST request while providing its meta data and the artifact's paths in multipart forms. A PySpark or Spark Engine has the ability to specify computation resources such as the number of cores or the amount of memory. Please refer to the appendix section on [PySpark and Spark resource configurations](./appendix.md#resource-config) for more information.
+You can create a feature pipeline Engine using local `.jar` or `.egg` binary artifacts by performing a POST request while providing its metadata and the artifact's paths in multipart forms. A PySpark or Spark Engine has the ability to specify computation resources such as the number of cores or the amount of memory. Please refer to the appendix section on [PySpark and Spark resource configurations](./appendix.md#resource-config) for more information.
 
 **API Format**
 
