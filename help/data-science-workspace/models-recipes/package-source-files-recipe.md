@@ -61,12 +61,12 @@ Note the values for *Docker Host*, *Username*, and *Password*. These are used to
 
 Start by obtaining the sample codebase found in the <a href="https://github.com/adobe/experience-platform-dsw-reference" target="_blank">Experience Platform Data Science Workspace Reference</a> repository.
 
-- [Build Python Docker image](#build-python-docker-image)
-- [Build R Docker image](#build-r-docker-image)
-- [Build PySpark Docker image](#build-pyspark-docker-image)
-- [Build Scala (Spark) Docker image](#build-scala-docker-image)
+- [Build Python Docker image](#python-docker)
+- [Build R Docker image](#r-docker)
+- [Build PySpark Docker image](#pyspark-docker)
+- [Build Scala (Spark) Docker image](#scala-docker)
 
-### Build Python Docker image
+### Build Python Docker image {#python-docker}
 
 If you have not done so, clone the github repository onto your local system with the following command:
 
@@ -95,7 +95,7 @@ Once the build script is complete, you are given a Docker source file URL in you
 
 Copy this URL and move on to the [next steps](#next-steps).
 
-### Build R Docker image
+### Build R Docker image {#r-docker}
 
 If you have not done so, clone the github repository onto your local system with the following command:
 
@@ -124,7 +124,7 @@ Once the build script is complete, you are given a Docker source file URL in you
 
 Copy this URL and move on to the [next steps](#next-steps).
 
-### Build PySpark Docker image
+### Build PySpark Docker image {#pyspark-docker}
 
 Start by cloning the github repository onto your local system with the following command:
 
