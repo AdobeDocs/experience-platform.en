@@ -117,11 +117,13 @@ For the purpose of this tutorial, you can leave the default configuration files 
 
 ### Import Docker based recipe - Python {#python}
 
-Start by navigating and selecting **Workflows** located in the top-left of the Platform UI. Next, select *import a recipe* and click **Launch**.
+Start by navigating and selecting **Workflows** located in the top-left of the Platform UI. Next, select *Import recipe* and click **Launch**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-The *configure* page for the *import a recipe* workflow appears. Enter a name and description for the recipe then select **Next** in the top-right corner.
+The *Configure* page for the *Import recipe* workflow appears. Enter a name and description for the recipe then select **Next** in the top-right corner.
+
+![configure workflow](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
 > In the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial, a Docker URL was provided at the end of building the Retail Sales recipe using Python source files.
@@ -137,7 +139,7 @@ Next, select the Retail Sales input and output schemas under the section *Manage
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-Under the *Feature Managment* section, click on your tenant identification in the schema viewer to expand the Retail Sales input schema. Select the input and output features by highlighting the desired feature, and selecting either **Input Feature** or **Target Feature** in the right **Field Properties** window. For the purpose of this tutorial, set **weeklySales** as the  **Target Feature** and everything else as **Input Feature**. Click **Next** to review your new configured recipe.
+Under the *Feature Management* section, click on your tenant identification in the schema viewer to expand the Retail Sales input schema. Select the input and output features by highlighting the desired feature, and selecting either **Input Feature** or **Target Feature** in the right **Field Properties** window. For the purpose of this tutorial, set **weeklySales** as the  **Target Feature** and everything else as **Input Feature**. Click **Next** to review your new configured recipe.
 
 Review the recipe, add, modify, or remove configurations as necessary. Click **Finish** to create the recipe.
 
@@ -147,11 +149,13 @@ Proceed to the [next steps](#next-steps) to find out how to create a Model in Da
 
 ### Import Docker based recipe - R {#r}
 
- Start by navigating and selecting **Workflows** located in the top-left of the Platform UI. Next, select *import a recipe* and click **Launch**.
+ Start by navigating and selecting **Workflows** located in the top-left of the Platform UI. Next, select *Import recipe* and click **Launch**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-The *configure* page for the *import a recipe* workflow appears. Enter a name and description for the recipe then select **Next** in the top-right corner.
+The *Configure* page for the *Import recipe* workflow appears. Enter a name and description for the recipe then select **Next** in the top-right corner.
+
+![configure workflow](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
 > In the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial, a Docker URL was provided at the end of building the Retail Sales recipe using R source files.
@@ -167,7 +171,7 @@ Next, select the Retail Sales input and output schemas under the section *Manage
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-Under the *Feature Managment* section, click on your tenant identification in the schema viewer to expand the Retail Sales input schema. Select the input and output features by highlighting the desired feature, and selecting either **Input Feature** or **Target Feature** in the right **Field Properties** window. For the purpose of this tutorial, set **weeklySales** as the  **Target Feature** and everything else as **Input Feature**. Click **Next** to review your new configured recipe.
+Under the *Feature Management* section, click on your tenant identification in the schema viewer to expand the Retail Sales input schema. Select the input and output features by highlighting the desired feature, and selecting either **Input Feature** or **Target Feature** in the right **Field Properties** window. For the purpose of this tutorial, set **weeklySales** as the  **Target Feature** and everything else as **Input Feature**. Click **Next** to review your new Configured recipe.
 
 Review the recipe, add, modify, or remove configurations as necessary. Click **Finish** to create the recipe.
 
@@ -177,16 +181,18 @@ Proceed to the [next steps](#next-steps) to find out how to create a Model in Da
 
 ### Import Docker based recipe - PySpark {#pyspark}
 
- Start by navigating and selecting **Workflows** located in the top-left of the Platform UI. Next, select *import a recipe* and click **Launch**.
+ Start by navigating and selecting **Workflows** located in the top-left of the Platform UI. Next, select *Import recipe* and click **Launch**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-The *configure* page for the *import a recipe* workflow appears. Enter a name and description for the recipe then select **Next** in the top-right corner to proceed.
+The *Configure* page for the *Import recipe* workflow appears. Enter a name and description for the recipe then select **Next** in the top-right corner to proceed.
+
+![configure workflow](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
 > In the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial, a Docker URL was provided at the end of building the Retail Sales recipe using PySpark source files.
 
-Once you are on the *Select source* page, paste the Docker URL corresponding to the packaged recipe built using PySpark source files in the **Source URL** field. Next, import the provided configuration file by dragging and dropping, or use the file system **Browser**. The provided configuration file can be found at `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`. Select **PySpark** in the *Runtime* drop down, the default artifact auto populates to **Docker**. Next, select **Classification** in the *Type* drop down. Once everything has been filled out, click **Next** in the top-right corner to proceed to *Manage schemas*.
+Once you are on the *Select source* page, paste the Docker URL corresponding to the packaged recipe built using PySpark source files in the **Source URL** field. Next, import the provided configuration file by dragging and dropping, or use the file system **Browser**. The provided configuration file can be found at `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`. Select **PySpark** in the *Runtime* drop down. Once the PySpark runtime is selected the default artifact auto populates to **Docker**. Next, select **Classification** in the *Type* drop down. Once everything has been filled out, click **Next** in the top-right corner to proceed to *Manage schemas*.
 
 >[!NOTE]
 > *Type* supports **Classification** and **Regression**. If your model does not fall under one of those types select **Custom**.
@@ -197,7 +203,7 @@ Next, select the Retail Sales input and output schemas under the section *Manage
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-Under the *Feature Managment* section, click on your tenant identification in the schema viewer to expand the Retail Sales input schema. Select the input and output features by highlighting the desired feature, and selecting either **Input Feature** or **Target Feature** in the right **Field Properties** window. For the purpose of this tutorial, set **weeklySales** as the  **Target Feature** and everything else as **Input Feature**. Click **Next** to review your new configured recipe.
+Under the *Feature Management* section, click on your tenant identification in the schema viewer to expand the Retail Sales input schema. Select the input and output features by highlighting the desired feature, and selecting either **Input Feature** or **Target Feature** in the right **Field Properties** window. For the purpose of this tutorial, set **weeklySales** as the  **Target Feature** and everything else as **Input Feature**. Click **Next** to review your new configured recipe.
 
 Review the recipe, add, modify, or remove configurations as necessary. Click **Finish** to create the recipe.
 
@@ -207,16 +213,18 @@ Proceed to the [next steps](#next-steps) to find out how to create a Model in Da
 
 ### Import Docker based recipe - Scala {#scala}
 
- Start by navigating and selecting **Workflows** located in the top-left of the Platform UI. Next, select *import a recipe* and click **Launch**.
+ Start by navigating and selecting **Workflows** located in the top-left of the Platform UI. Next, select *Import recipe* and click **Launch**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-The *configure* page for the *import a recipe* workflow appears. Enter a name and description for the recipe then select **Next** in the top-right corner to proceed.
+The *Configure* page for the *Import recipe* workflow appears. Enter a name and description for the recipe then select **Next** in the top-right corner to proceed.
+
+![configure workflow](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
 > In the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial, a Docker URL was provided at the end of building the Retail Sales recipe using Scala (Spark) source files.
 
-Once you are on the *Select source* page, paste the Docker URL corresponding to the packaged recipe built using Scala source files in the *Source URL* field. Next, import the provided configuration file by dragging and dropping, or use the file system **Browser**. The provided configuration file can be found at `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Select **Spark** in the *Runtime* drop down, the default artifact auto populates to **Docker**. Next, select **Regression** from the *Type* drop down. Once everything has been filled out, click **Next** in the top-right corner to proceed to *Manage schemas*.
+Once you are on the *Select source* page, paste the Docker URL corresponding to the packaged recipe built using Scala source files in the *Source URL* field. Next, import the provided configuration file by dragging and dropping, or use the file system **Browser**. The provided configuration file can be found at `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Select **Spark** in the *Runtime* drop down. Once the Spark runtime is selected the default artifact auto populates to **Docker**. Next, select **Regression** from the *Type* drop down. Once everything has been filled out, click **Next** in the top-right corner to proceed to *Manage schemas*.
 
 >[!NOTE]
 > *Type* supports **Classification** and **Regression**. If your model does not fall under one of those types select **Custom**.
@@ -227,7 +235,7 @@ Next, select the Retail Sales input and output schemas under the section *Manage
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-Under the *Feature Managment* section, click on your tenant identification in the schema viewer to expand the Retail Sales input schema. Select the input and output features by highlighting the desired feature, and selecting either **Input Feature** or **Target Feature** in the right **Field Properties** window. For the purpose of this tutorial, set **weeklySales** as the  **Target Feature** and everything else as **Input Feature**. Click **Next** to review your new configured recipe.
+Under the *Feature Management* section, click on your tenant identification in the schema viewer to expand the Retail Sales input schema. Select the input and output features by highlighting the desired feature, and selecting either **Input Feature** or **Target Feature** in the right **Field Properties** window. For the purpose of this tutorial, set **weeklySales** as the  **Target Feature** and everything else as **Input Feature**. Click **Next** to review your new configured recipe.
 
 Review the recipe, add, modify, or remove configurations as necessary. Click **Finish** to create the recipe.
 
@@ -260,7 +268,7 @@ Similarly, import the provided configuration file by dragging and dropping, or u
 ![](../images/models-recipes/import-package-ui/recipe_source.png)
 4. You may encounter errors at this point. This is normal behavior and is to be expected. Select the Retail Sales input and output schemas under the section **Manage Schemas**, they were created using the provided bootstrap script in the [create the retail sales schema and dataset](../models-recipes/create-retails-sales-dataset.md) tutorial. 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
-Under the **Feature Managment** section, click on your tenant identification in the schema viewer to expand the Retail Sales input schema. Select the input and output features by highlighting the desired feature, and selecting either **Input Feature** or **Target Feature** in the right **Field Properties** window. For the purpose of this tutorial, set **weeklySales** as the  **Target Feature** and everything else as **Input Feature**. Click **Next** to review your new configured recipe. 
+Under the **Feature Management** section, click on your tenant identification in the schema viewer to expand the Retail Sales input schema. Select the input and output features by highlighting the desired feature, and selecting either **Input Feature** or **Target Feature** in the right **Field Properties** window. For the purpose of this tutorial, set **weeklySales** as the  **Target Feature** and everything else as **Input Feature**. Click **Next** to review your new configured recipe. 
 5. Review the recipe, add, modify, or remove configurations as necessary. Click **Finish** to create the recipe.
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
@@ -279,7 +287,7 @@ In the [Package source files into a Recipe](./package-source-files-recipe.md) tu
 ![](../images/models-recipes/import-package-ui/recipe_source_scala.png)
 4. You may encounter errors at this point. This is normal behavior and is to be expected. Select the Retail Sales input and output schemas under the section **Manage Schemas**, they were created using the provided bootstrap script in the [create the retail sales schema and dataset](../models-recipes/create-retails-sales-dataset.md) tutorial. 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
-Under the **Feature Managment** section, click on your tenant identification in the schema viewer to expand the Retail Sales input schema. Select the input and output features by highlighting the desired feature, and selecting either **Input Feature** or **Target Feature** in the right **Field Properties** window. For the purpose of this tutorial, set **weeklySales** as the  **Target Feature** and everything else as **Input Feature**. Click **Next** to review your new configured recipe.
+Under the **Feature Management** section, click on your tenant identification in the schema viewer to expand the Retail Sales input schema. Select the input and output features by highlighting the desired feature, and selecting either **Input Feature** or **Target Feature** in the right **Field Properties** window. For the purpose of this tutorial, set **weeklySales** as the  **Target Feature** and everything else as **Input Feature**. Click **Next** to review your new configured recipe.
 5. Review the recipe, add, modify, or remove configurations as necessary. Click **Finish** to create the recipe.
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
