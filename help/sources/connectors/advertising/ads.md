@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Google AdWords connector
+title: Google Ads connector
 topic: overview
 ---
 
-# Google AdWords connector
+# Google Ads connector

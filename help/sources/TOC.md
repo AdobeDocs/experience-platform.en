@@ -12,13 +12,14 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [Analytics data connector](connectors/adobe-applications/analytics.md)
     - [Audience Manager connector](connectors/adobe-applications/audience-manager.md)
     - [Customer attributes connector](connectors/adobe-applications/customer-attributes.md)
+  - Advertising {#advertising}
+    - [Google AdWords connector](connectors/advertising/ads.md)
   - Cloud storage {#cloud-storage}
     - [Azure Data Lake Storage Gen2 connector](connectors/cloud-storage/adls-gen2.md)
     - [Azure Blob and Amazon S3 connector](connectors/cloud-storage/blob-s3.md)
     - [FTP and SFTP connector](connectors/cloud-storage/ftp-sftp.md)
     - [Google Cloud Storage connector](connectors/cloud-storage/google-cloud-storage.md)
   - CRM {#crm}
-    - [Google AdWords connector](connectors/crm/adwords.md)
     - [Microsoft Dynamics connector](connectors/crm/ms-dynamics.md)
     - [Salesforce connector](connectors/crm/salesforce.md)
   - Customer success {#customer-success}
