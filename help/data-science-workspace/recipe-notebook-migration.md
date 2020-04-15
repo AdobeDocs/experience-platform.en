@@ -32,7 +32,7 @@ Recent changes to Data Science Workspace require that existing Spark and PySpark
   - [Prepare docker scripts]()
   - [create the recipe with docker]()
 
-Additionally, the following video is designed to further assist in understanding the changes that are required for existing recipes.
+Additionally, the following video is designed to further assist in understanding the changes that are required for existing recipes. This video uses PySpark.
 
 >[!VIDEO](https://video.tv.adobe.com/v/33048?learn=on&quality=12)
 
@@ -130,7 +130,7 @@ Start by navigating to the directory where your recipe is located.
 
 For this example the new Scala Retail Sales recipe is used and can be found in the [Data Science Workspace public github repository](https://github.com/adobe/experience-platform-dsw-reference).
 
-**download the sample recipe**
+**Download the sample recipe**
 
 The sample recipe contains files that need to be copied over to your existing recipe. To clone the public github that contains all the sample recipes, enter the following in terminal.
 
@@ -139,6 +139,16 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
 The Scala recipe is located in the following directory `experience-platform-dsw-reference/recipes/scala/retail`.
+
+**Add the Dockerfile**
+
+A new file is needed in your recipe folder in order to use the docker based workflow. Copy and paste the Dockerfile from the the recipes folder located at `experience-platform-dsw-reference/recipes/scala/Dockerfile`. Optionally, you can also copy and paste the code below in a new file called `Dockerfile`.
+
+```scala
+FROM adobe/acp-dsw-ml-runtime-spark:0.0.1
+
+COPY target/ml-retail-sample-spark-*-jar-with-dependencies.jar /application.jar
+```
 
 **Change dependencies**
 
@@ -155,7 +165,13 @@ If you are using an existing recipe, changes are required in the pom.xml file fo
 
 Spark recipes no longer use Binary Artifacts and instead require building a Docker image. If you have not done so download and install [Docker](https://www.docker.com/products/docker-desktop).
 
-In the provided Scala sample recipe, you can find the scripts `login.sh` and `build.sh` located in then retail folder. Copy and paste these files into your existing recipe. The next step is to follow the [package source files into a recipe](./package-source-files-recipe.md) tutorial. This tutorial outlines building a docker image for a Scala (Spark) recipe. Once complete you are provided with the Docker image in Azure Container Registry along with the corresponding image URL.
+In the provided Scala sample recipe, you can find the scripts `login.sh` and `build.sh` located at `experience-platform-dsw-reference/recipes/scala/` . Copy and paste these files into your existing recipe. 
+
+Your folder structure should now look similar to the following example. Note that this example folder structure is a PySpark recipe, your files should end in `.scala`. The files that have been added are highlighted in the image below:
+
+![folder structure](./images/migration/folder.png)
+
+The next step is to follow the [package source files into a recipe](./package-source-files-recipe.md) tutorial. This tutorial has a section that outlines building a docker image for a Scala (Spark) recipe. Once complete you are provided with the Docker image in Azure Container Registry along with the corresponding image URL.
 
 ### Create a recipe
 
@@ -175,37 +191,126 @@ In order for existing recipes to Before you build the Docker image, review the f
 
 **Read a dataset**
 
-```python
+The following table outlines the changes that are needed for reading a dataset and uses the [helper.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/helper/Helper.scala) Adobe provided example.
+
+With the updates to Spark recipes, a number of values need to be added and changed. First, `DataSetOptions` is no longer used. Replace `DataSetOptions` with `qs_option`. Additionally, new `option` parameters are required. Both `qs_option.mode` and `qs_option.datasetId` are needed. Lastly, `orgId` and `serviceApiKey` need to be changed to `imsOrg` and `apiKey`. See the table below for a comparison on reading datasets:
+
+<table>
+  <th>Old way of reading a dataset</th>
+  <th>New way of reading a dataset</th>
+  <tr>
+  <td>
+  <pre class="JSON language-JSON hljs">
+dataset_options = get_dataset_options(spark.sparkContext)
+
+pd = spark.read.format("com.adobe.platform.dataset") 
+  .option(dataset_options.serviceToken(), service_token) 
+  .option(dataset_options.userToken(), user_token) 
+  .option(dataset_options.orgId(), org_id) 
+  .option(dataset_options.serviceApiKey(), api_key)
+  .load(dataset_id)
+</pre>
+  </td>
+  <td>
+<pre class="JSON language-JSON hljs">
 qs_option = spark_context._jvm.com.adobe.platform.query.QSOption
 
-pd = sparkSession.read.format("com.adobe.platform.query") \
-  .option(qs_option.userToken, {userToken}) \
-  .option(qs_option.serviceToken, {serviceToken}) \
-  .option(qs_option.imsOrg, {orgId}) \
-  .option(qs_option.apiKey, {apiKey}) \
-  .option(qs_option.mode, "batch") \
-  .option(qs_option.datasetId, {dataSetId}) \
+pd = sparkSession.read.format("com.adobe.platform.query") 
+  .option(qs_option.userToken, {userToken}) 
+  .option(qs_option.serviceToken, {serviceToken}) 
+  .option(qs_option.imsOrg, {orgId}) 
+  .option(qs_option.apiKey, {apiKey}) 
+  .option(qs_option.mode, "interactive") 
+  .option(qs_option.datasetId, {dataSetId}) 
   .load()
-```
+  </pre>
+  </td>
+  </tr>
+</table>
+
+>[!TIP]
+> interactive" mode times out if queries are running longer than 10 minutes. If you are ingesting more than a couple gigabytes of data, it is recommended that you switch to "batch" mode. "batch" mode takes longer to start up but can handle larger sets of data.
 
 **Write to a dataset**
 
-```python
+With the updates to PySpark recipes, a number of values need to be added and changed. First, `DataSetOptions` is no longer used. Replace `DataSetOptions` with `qs_option`. Additionally, new `option` parameters are required. Both `qs_option.mode` and `qs_option.datasetId` are needed. Lastly, `orgId` and `serviceApiKey` need to be changed to `imsOrg` and `apiKey`. See the table below for a comparison on writing datasets:
+
+<table>
+  <th>Old way of writing a dataset</th>
+  <th>New way of writing a dataset</th>
+  <tr>
+  <td>
+  <pre class="JSON language-JSON hljs">
+df.write.format("com.adobe.platform.dataset")
+    .option(DataSetOptions.orgId, orgId)
+    .option(DataSetOptions.serviceToken, serviceToken)
+    .option(DataSetOptions.userToken, userToken)
+    .option(DataSetOptions.serviceApiKey, apiKey)
+    .save(scoringResultsDataSetId)
+</pre>
+  </td>
+  <td>
+<pre class="JSON language-JSON hljs">
 qs_option = spark_context._jvm.com.adobe.platform.query.QSOption
 
-scored_df.write.format("com.adobe.platform.query") \
-  .option(qs_option.userToken, {userToken}) \
-  .option(qs_option.serviceToken, {serviceToken}) \
-  .option(qs_option.imsOrg, {orgId}) \
-  .option(qs_option.apiKey, {apiKey}) \
-  .option(qs_option.mode, "batch") \
-  .option(qs_option.datasetId, {dataSetId}) \
+scored_df.write.format("com.adobe.platform.query") 
+  .option(qs_option.userToken, {userToken}) 
+  .option(qs_option.serviceToken, {serviceToken}) 
+  .option(qs_option.imsOrg, {orgId}) 
+  .option(qs_option.apiKey, {apiKey}) 
+  .option(qs_option.mode, "batch") 
+  .option(qs_option.datasetId, {dataSetId}) 
   .save()
-```
+</pre>
+  </td>
+  </tr>
+</table>
 
 ### Package docker based source files
 
-The [package source files into a recipe](./package-source-files-recipe.md) document outlines building a docker image for a PySpark (Spark 2.4) recipe. Once complete you are provided with the Docker image in Azure Container Registry along with the corresponding image URL.
+Start by navigating to the directory where your recipe is located. 
+
+For this example the new PySpark Retail Sales recipe is used and can be found in the [Data Science Workspace public github repository](https://github.com/adobe/experience-platform-dsw-reference).
+
+### Download the sample recipe
+
+The sample recipe contains files that need to be copied over to your existing recipe. To clone the public github that contains all the sample recipes, enter the following in terminal.
+
+```BASH
+git clone https://github.com/adobe/experience-platform-dsw-reference.git
+```
+
+The PySpark recipe is located in the following directory `experience-platform-dsw-reference/recipes/pyspark`.
+
+### Add the Dockerfile
+
+A new file is needed in your recipe folder in order to use the docker based workflow. Copy and paste the Dockerfile from the the recipes folder located at `experience-platform-dsw-reference/recipes/pyspark/Dockerfile`. Optionally, you can also copy and paste the code below and make a new file called `Dockerfile`.
+
+```scala
+#From should change to the dockerhub link once the pyspark ml runtime is pushed
+FROM adobe/acp-dsw-ml-runtime-pyspark:0.0.1
+RUN mkdir /recipe
+
+COPY . /recipe
+
+RUN cd /recipe && \
+    ${PYTHON} setup.py clean install && \
+    rm -rf /recipe
+
+RUN cp /databricks/conda/envs/${DEFAULT_DATABRICKS_ROOT_CONDA_ENV}/lib/python3.6/site-packages/pysparkretailapp-*.egg /application.egg
+```
+
+**Prepare your Docker scripts**
+
+PySpark recipes no longer use Binary Artifacts and instead require building a Docker image. If you have not done so, download and install [Docker](https://www.docker.com/products/docker-desktop).
+
+In the provided PySpark sample recipe, you can find the scripts `login.sh` and `build.sh` located at `experience-platform-dsw-reference/recipes/pyspark` . Copy and paste these files into your existing recipe. 
+
+Your folder structure should now look similar to the following example. The files that have been added are highlighted in the image below:
+
+![folder structure](./images/migration/folder.png)
+
+Your recipe is now ready to be built using a Docker image. The next step is to follow the [package source files into a recipe](./package-source-files-recipe.md) tutorial. This tutorial has a section that outlines building a docker image for a PySpark (Spark 2.4) recipe. Once complete you are provided with the Docker image in Azure Container Registry along with the corresponding image URL.
 
 ### Create a recipe
 
