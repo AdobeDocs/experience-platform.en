@@ -38,6 +38,10 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [PostgreSQL connector](connectors/databases/postgres.md)
   - Marketing automation {#marketing-automation}
     - [HubSpot connector](connectors/marketing-automation/hubspot.md)
+  - Payments {#payments}
+    - [PayPal connector](connectors/payments/paypal.md)
+  - Protocols {#protocols}
+    - [Generic OData connector](connectors/protocols/odata.md)
 - API tutorials {#api-tutorials}
   - Create a source connector {#create}
     - Cloud storage {#cloud-storage}
