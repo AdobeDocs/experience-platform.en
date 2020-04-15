@@ -45,6 +45,8 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [Generic OData connector](connectors/protocols/odata.md)
 - API tutorials {#api-tutorials}
   - Create a source connector {#create}
+    - Advertising {#advertising}
+      - [Google Ads connector](tutorials/api/create/advertising/ads.md)
     - Cloud storage {#cloud-storage}
       - [Amazon S3 connector](tutorials/api/create/cloud-storage/s3.md)
       - [Azure Blob connector](tutorials/api/create/cloud-storage/blob.md)
@@ -76,6 +78,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - Protocols {#protocols}
       - [Generic OData connector](tutorials/api/create/protocols/odata.md)
   - Explore data {#explore}
+    - [Explore advertising data](tutorials/api/explore/advertising.md)
     - [Explore cloud storage data](tutorials/api/explore/cloud-storage.md)
     - [Explore CRM data](tutorials/api/explore/crm.md)
     - [Explore customer success data](tutorials/api/explore/customer-success.md)
@@ -83,6 +86,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [Explore payment data](tutorials/api/explore/payments.md)
     - [Explore protocol data](tutorials/api/explore/protocols.md)
   - Collect data {#collect}
+    - [Collect advertising data](tutorials/api/collect/advertising.md)
     - [Collect cloud storage data](tutorials/api/collect/cloud-storage.md)
     - [Collect CRM data](tutorials/api/collect/crm.md)
     - [Collect customer success data](tutorials/api/collect/customer-success.md)

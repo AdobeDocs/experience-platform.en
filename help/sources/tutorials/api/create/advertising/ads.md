@@ -59,13 +59,13 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 A connection specifies a source and contains your credentials for that source. Only one connection is required per Google Ads account as it can be used to create multiple source connectors to bring in different data.
 
-#### API format
+**API format**
 
 ```https
 POST /connections
 ```
 
-#### Request
+**Request**
 
 In order to create a Google Ads connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for Google Ads is `221c7626-58f6-4eec-8ee2-042b0226f03b`.
 
@@ -107,7 +107,7 @@ curl -X POST \
 | `auth.params.clientSecret` | The client secret of your Ads account. |
 | `connectionSpec.id` | The Google Ads connection specification ID: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
-#### Response
+**Response**
 
 A successful response returns details of the newly created connection, including its unique identifier (`id`). This ID is required to explore your data in the next tutorial.
 
