@@ -354,26 +354,22 @@ A successful response returns the URI for the marketing action, the data usage l
 
 Using the data returned in the API response, you can set up protocols within your experience application to appropriately enforce policy violations when they occur.
 
-## Next steps
+## Filter data fields
 
-By following this tutorial, you have looked up the data usage labels associated with an audience segment and tested them for policy violations against specific marketing actions. For more information on Data Governance in Experience Platform, see the [Data Governance overview](../../data-governance/home.md).
+If your audience segment does not pass evaluation, you can adjust the data included in the segment through one of the two methods outlined below.
 
-## Appendix
-
-The following section contains additional information for enforcing data governance on segments.
-
-### Filter data fields
-
-If you wish to adjust the data included in your audience segment, you can do so using one of the following two methods:
-
-#### Update the merge policy of the segment definition
+### Update the merge policy of the segment definition
 
 Updating the merge policy of a segment definition will adjust the datasets and fields that will be included when the segment job is run. See the section on [updating an existing merge policy](../../profile/api/merge-policies.md#update) in the API merge policy tutorial for more information. 
 
-#### Restrict specific data fields when exporting the segment
+### Restrict specific data fields when exporting the segment
 
 When exporting a segment to a dataset using the Real-time Customer Profile API, you can filter the data that is included in the export by using the `fields` parameter. Any data fields added to this parameter will be included in the export, while all other data fields will be excluded.
 
 Consider a segment that has data fields named "A", "B", and "C". If you wished to only export field "C", then the `fields` parameter would contain field "C" alone. By doing this, fields "A" and "B" would be excluded when exporting the segment.
  
 See the section on [exporting a segment](./evaluate-a-segment.md#export) in the segmentation tutorial for more information.
+
+## Next steps
+
+By following this tutorial, you have looked up the data usage labels associated with an audience segment and tested them for policy violations against specific marketing actions. For more information on Data Governance in Experience Platform, see the [Data Governance overview](../../data-governance/home.md).
