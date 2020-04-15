@@ -11,9 +11,7 @@ This tutorial covers the steps for retrieving data from an advertising system an
 
 ## Getting started
 
-This tutorial requires you to have a valid connection with the third-party advertising system you wish to ingest data from. A valid connection involves your application's connection specification ID and connection ID. More information about creating a advertising connection and retrieving these values can be found in the [connect an advertising source to Platform](../../api/create/advertising/ads.md) tutorial.
-
-This tutorial also requires you to have information about the file you wish to bring into Platform, including the file's path and structure. If you do not have this information, see the tutorial on [exploring a advertising application using the Flow Service API](../../api/create/advertising/ads.md) before attempting this tutorial.
+This tutorial requires you to have information about the file you wish to bring into Platform, including the file's path and structure. If you do not have this information, see the tutorial on [exploring a advertising application using the Flow Service API](../../api/create/advertising/ads.md) before attempting this tutorial.
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
