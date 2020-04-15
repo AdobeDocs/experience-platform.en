@@ -20,17 +20,18 @@ The following guides outlines the steps and information required for migrating e
 Recent changes to Data Science Workspace require that existing Spark and PySpark recipes be updated. Use the following guides to assist in transitioning your recipes.
 
 - [Spark migration guide](#spark-migration-guide)
-  - [Modify how you read and write datasets]()
-  - [Download the sample recipe]()
-  - [Check dependencies]()
-  - [Prepare docker scripts]()
-  - [create the recipe with docker]()
+  - [Modify how you read and write datasets](#read-and-write-datasets)
+  - [Download the sample recipe](#download-the-sample-recipe)
+  - [Add the docker file](#add-the-dockerfile)
+  - [Check dependencies](#change-dependencies)
+  - [Prepare docker scripts](#prepare-your-docker-scripts)
+  - [create the recipe with docker](#create-a-recipe)
 - [PySpark migration guide](#pyspark-migration-guide)
-  - [Modify how you read and write datasets]()
-  - [Download the sample recipe]()
-  - [Check dependencies]()
-  - [Prepare docker scripts]()
-  - [create the recipe with docker]()
+  - [Modify how you read and write datasets](#read-and-write-datasets)
+  - [Download the sample recipe](#download-the-sample-recipe)
+  - [Add the docker file](#add-the-dockerfile)
+  - [Prepare docker scripts](#prepare-your-docker-scripts)
+  - [create the recipe with docker](#create-a-recipe)
 
 Additionally, the following video is designed to further assist in understanding the changes that are required for existing recipes. This video uses PySpark.
 
@@ -130,7 +131,7 @@ Start by navigating to the directory where your recipe is located.
 
 For this example the new Scala Retail Sales recipe is used and can be found in the [Data Science Workspace public github repository](https://github.com/adobe/experience-platform-dsw-reference).
 
-**Download the sample recipe**
+### Download the sample recipe
 
 The sample recipe contains files that need to be copied over to your existing recipe. To clone the public github that contains all the sample recipes, enter the following in terminal.
 
@@ -140,7 +141,7 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 
 The Scala recipe is located in the following directory `experience-platform-dsw-reference/recipes/scala/retail`.
 
-**Add the Dockerfile**
+## Add the Dockerfile
 
 A new file is needed in your recipe folder in order to use the docker based workflow. Copy and paste the Dockerfile from the the recipes folder located at `experience-platform-dsw-reference/recipes/scala/Dockerfile`. Optionally, you can also copy and paste the code below in a new file called `Dockerfile`.
 
@@ -150,7 +151,7 @@ FROM adobe/acp-dsw-ml-runtime-spark:0.0.1
 COPY target/ml-retail-sample-spark-*-jar-with-dependencies.jar /application.jar
 ```
 
-**Change dependencies**
+## Change dependencies
 
 If you are using an existing recipe, changes are required in the pom.xml file for dependencies. Change the model-authoring-sdk dependency version to 1.0.0. Next, update the Spark version in the pom file to 2.4.3 and the Scala version to 2.11.12.
 
@@ -161,7 +162,7 @@ If you are using an existing recipe, changes are required in the pom.xml file fo
 <classifier>jar-with-dependencies</classifier>
 ```
 
-**Prepare your Docker scripts**
+### Prepare your Docker scripts
 
 Spark recipes no longer use Binary Artifacts and instead require building a Docker image. If you have not done so download and install [Docker](https://www.docker.com/products/docker-desktop).
 
@@ -191,7 +192,7 @@ In order for existing recipes to Before you build the Docker image, review the f
 
 **Read a dataset**
 
-The following table outlines the changes that are needed for reading a dataset and uses the [helper.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/helper/Helper.scala) Adobe provided example.
+The following table outlines the changes that are needed for reading a dataset and uses the [helper.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/helper.py) Adobe provided example.
 
 With the updates to Spark recipes, a number of values need to be added and changed. First, `DataSetOptions` is no longer used. Replace `DataSetOptions` with `qs_option`. Additionally, new `option` parameters are required. Both `qs_option.mode` and `qs_option.datasetId` are needed. Lastly, `orgId` and `serviceApiKey` need to be changed to `imsOrg` and `apiKey`. See the table below for a comparison on reading datasets:
 
@@ -232,6 +233,8 @@ pd = sparkSession.read.format("com.adobe.platform.query")
 > interactive" mode times out if queries are running longer than 10 minutes. If you are ingesting more than a couple gigabytes of data, it is recommended that you switch to "batch" mode. "batch" mode takes longer to start up but can handle larger sets of data.
 
 **Write to a dataset**
+
+The following table outlines the changes that are needed for reading a dataset by using the [Sdata_saver.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/data_saver.py) Adobe provided example.
 
 With the updates to PySpark recipes, a number of values need to be added and changed. First, `DataSetOptions` is no longer used. Replace `DataSetOptions` with `qs_option`. Additionally, new `option` parameters are required. Both `qs_option.mode` and `qs_option.datasetId` are needed. Lastly, `orgId` and `serviceApiKey` need to be changed to `imsOrg` and `apiKey`. See the table below for a comparison on writing datasets:
 
@@ -300,7 +303,7 @@ RUN cd /recipe && \
 RUN cp /databricks/conda/envs/${DEFAULT_DATABRICKS_ROOT_CONDA_ENV}/lib/python3.6/site-packages/pysparkretailapp-*.egg /application.egg
 ```
 
-**Prepare your Docker scripts**
+### Prepare your Docker scripts
 
 PySpark recipes no longer use Binary Artifacts and instead require building a Docker image. If you have not done so, download and install [Docker](https://www.docker.com/products/docker-desktop).
 
