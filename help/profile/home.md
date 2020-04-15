@@ -11,9 +11,7 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 
 ## Understanding Real-time Customer Profile
 
-Real-time Customer Profile is a generic lookup entity store that merges data from various enterprise data assets, and then provides access to that data in the form of individual customer profiles and related time series events. This feature enables marketers to drive coordinated, consistent and relevant experiences with their audiences across multiple channels, as summarized in the video below:
-
->[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12&enable10seconds=on&speedcontrol=on)
+Real-time Customer Profile is a generic lookup entity store that merges data from various enterprise data assets, and then provides access to that data in the form of individual customer profiles and related time series events. This feature enables marketers to drive coordinated, consistent and relevant experiences with their audiences across multiple channels.
 
 ### Profile data store
 
@@ -39,15 +37,22 @@ Every business wants to communicate with their customers in a way that feels per
 
 ### Segmentation
 
-Adobe Experience Platform Segmentation Service produces the audiences needed to power experiences for your individual customers. When an audience segment is created, the ID of that segment is added to the list of segment memberships for all qualifying profiles. Segment rules are built and applied to Real-time Customer Profile data using RESTful APIs and the Segment Builder user interface. To learn more about segmentation, please begin by reading the [Segmentation Service overview](../segmentation/home.md).
+Adobe Experience Platform Segmentation Service produces the audiences needed to power experiences for your individual customers. When an audience segment is created, the ID of that segment is added to the list of segment memberships for all qualifying profiles. Segment rules are built and applied to Real-time Customer Profile data using RESTful APIs and the Segment Builder user interface. To learn more about segmentation, please begin by reading the [Segmentation Service overview](../segmentation/home.md). 
 
-### Profile fragments and union views {#profile-fragments-and-union-schemas}
+### Profile fragments and union schemas {#profile-fragments-and-union-schemas}
 
-One of the key features of Real-time Customer Profile is the ability to unify multi-channel data. When Real-time Customer Profile is used to access an entity, it can supply you with a merged view of all profile fragments for that entity across datasets, referred to as the union view. Real-time Customer Profile data is merged across sources when an entity or profile is accessed by its ID or exported as a segment. To learn more about accessing profiles and union views, visit the Real-time Customer Profile API developer sub-guide on [Entities, also known as "Profile Access"](api/entities.md).
+One of the key features of Real-time Customer Profile is the ability to unify multi-channel data. When Real-time Customer Profile is used to access an entity, it can supply you with a merged view of all profile fragments for that entity across datasets, referred to as the union view and made possible through what is known as a union schema. Real-time Customer Profile data is merged across sources when an entity or profile is accessed by its ID or exported as a segment. To learn more about accessing profiles and union views, visit the Real-time Customer Profile API developer sub-guide on [Entities, also known as "Profile Access"](api/entities.md).
 
 ### Merge policies
 
 When bringing data together from multiple sources and combining it in order to see a complete view of each of your individual customers, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create that unified view. Using RESTful APIs or the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. For more information on working with merge policies using APIs, please see the Real-time Customer Profile API [merge policies sub-guide](api/merge-policies.md) or the [merge policies user guide](ui/merge-policies.md) for how to work with merge policies using the Platform UI. 
+
+## (Alpha) Configure computed attributes
+
+>[!IMPORTANT]
+>The computed attribute functionality outlined in this document is in alpha. The documentation and the functionality are subject to change.
+
+Computed attributes enable you to automatically compute the value of fields based on other values, calculations, and expressions. Computed attributes operate on the profile level, meaning you can aggregate values across all records and events. Each computed attribute contains an expression, or "rule", that evaluates incoming data and stores the resulting value in a profile attribute or into an event. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, and step-by-step instructions for working with them, please see the Real-time Customer Profile API [sub-guide on Computed Attributes](api/computed-attributes.md). This guide will help you better understand the role computed attributes play within Adobe Experience Platform, and it includes sample API calls for performing basic CRUD operations using the Real-time Customer Profile API.
 
 ## Real-time components
 
@@ -59,9 +64,18 @@ Real-time input is made possible through a process called streaming ingestion. A
 
 ### Edge projections
 
-In order to drive coordinated, consistent, and personalized experiences for your customers across multiple channels in real-time, the right data needs to be readily available and continuously updated as changes happen. Adobe Experience Platform enables this real-time access to data through the use of what are known as edges. An edge is a geographically placed server that stores data and makes it readily accessible to applications. For example, Adobe applications such as Adobe Target and Adobe Campaign use edges in order to provide personalized customer experiences in real-time. Data is routed to an edge by a projection, with a projection destination defining the edge to which data will be sent, and a projection configuration defining the specific information that will be made available on the edge.
+In order to drive coordinated, consistent, and personalized experiences for your customers across multiple channels in real-time, the right data needs to be readily available and continuously updated as changes happen. Adobe Experience Platform enables this real-time access to data through the use of what are known as edges. An edge is a geographically placed server that stores data and makes it readily accessible to applications. For example, Adobe applications such as Adobe Target and Adobe Campaign use edges in order to provide personalized customer experiences in real-time. Data is routed to an edge by a projection, with a projection destination defining the edge to which data will be sent, and a projection configuration defining the specific information that will be made available on the edge. To learn more and begin working with edges and projections, refer to the Real-time Customer Profile API [Edge Projections sub-guide](api/edge-projections.md). 
 
-To learn more and begin working with edges and projections, refer to the Real-time Customer Profile API [Edge Projections sub-guide](api/edge-projections.md). 
+## Add data to Real-time Customer Profile
+
+Platform can be configured to send your record and time-series data to Profile, supporting real-time streaming ingestion and batch ingestion. For more information, see the tutorial outlining how to [add data to Real-time Customer Profile](tutorials/add-profile-data.md). 
+
+>[!Note]
+>Data collected through Adobe solutions, including Analytics Cloud, Marketing Cloud, and Advertising Cloud, flows into Experience Platform and is ingested into Profile.
+
+### Profile streaming ingestion metrics
+
+Observability Insights allows you to expose key metrics in Adobe Experience Platform. In addition to Platform usage statistics and performance indicators for various Platform functionalities, there are specific Profile-related metrics that allow you to gain insight into incoming request rates, successful ingestion rates, ingested record sizes, and more. To learn more, begin by reading the [Observability Insights overview](../observability/home.md), and for a complete list of Profile metrics, see the documentation on [available metrics](../observability/metrics.md).
 
 ## Data governance and Privacy
 
@@ -78,26 +92,8 @@ Data governance is managed at several points. These include deciding what data i
 
 Experience Platform enables your customers to send opt-out requests related to the usage and storage of their data within Real-time Customer Profile. For more information on how opt-out requests are handled, please see the documentation on [honoring opt-out requests](../segmentation/honoring-opt-outs.md).
 
-## Add data to Real-time Customer Profile
+## Next steps and additional resources
 
-Platform can be configured to send your record and time-series data to Profile, supporting real-time streaming ingestion and batch ingestion. For more information, see the tutorial outlining how to [add data to Real-time Customer Profile](tutorials/add-profile-data.md).
+To learn more about Real-time Customer Profile, please continue reading the documentation provided in this guide and supplement your learning by watching the video below or exploring other [Experience Platform video tutorials](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html).
 
->[!Note]
->Data collected through Adobe solutions, including Analytics Cloud, Marketing Cloud, and Advertising Cloud, flows into Experience Platform and is ingested into Profile. 
-
-## Create audience segments
-
-The cornerstone of your marketing campaign is your audience. Real-time Customer Profile provides the tools for segmenting your customer base into audiences consisting of members meeting the precise criteria you require. With segmentation, you can isolate audience members using criteria such as:
-
-* Customers for whom one week has passed since last making a purchase.
-* Customers for whom the sum of the purchases is greater than $10,000.
-* Customers who have seen a set number of unique marketing campaigns from a pre-defined list, specified by their Campaign ID, and explored them within 30 minutes.
-
-To get started with segmentation, refer to the [segmentation overview](../segmentation/home.md). 
-
-## (Alpha) Configure computed attributes
-
->[!IMPORTANT]
->The computed attribute functionality outlined in this document is in alpha. The documentation and the functionality are subject to change.
-
-Computed attributes enable you to automatically compute the value of fields based on other values, calculations, and expressions. Computed attributes operate on the profile level, meaning you can aggregate values across all records and events. Each computed attribute contains an expression, or "rule", that evaluates incoming data and stores the resulting value in a profile attribute or into an event. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, and step-by-step instructions for working with them, please see the Real-time Customer Profile API [sub-guide on Computed Attributes](api/computed-attributes.md). This guide will help you better understand the role computed attributes play within Adobe Experience Platform, and it includes sample API calls for performing basic CRUD operations using the Real-time Customer Profile API.
+>[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12)
