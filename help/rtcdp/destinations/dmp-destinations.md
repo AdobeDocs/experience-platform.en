@@ -11,4 +11,4 @@ Data Management Platforms (DMPs) enable advertisers, publishers, and agencies to
 
 Currently, Adobe Real-time Customer Data Platform supports the Data Management Platform (DMP) destinations listed below. For information on how to connect to these destinations, see the individual links:
 
-* [Audience Manager DIL (Experience Platform Launch extension)](/help/rtcdp/destinations/aam-dil-extension.md)
+* [Audience Manager DIL extension](/help/rtcdp/destinations/aam-dil-extension.md)

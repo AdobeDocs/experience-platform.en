@@ -11,7 +11,7 @@ Voice platforms gather and collate data from various sources including voice mes
 
 Currently, Adobe Real-time Customer Data Platform supports the Voice of the Customer destinations listed below. For information on how to connect to these destinations, see the individual links:
 
-* [Confirmit Digital Feedback (Experience Platform Launch extension)](confirmit-digital-feedback-extension.md)
-* [Invoca Tags (Experience Platform Launch extension)](/help/rtcdp/destinations/invoca-extension.md)
-* [Medallia (Experience Platform Launch extension)](medallia-extension.md)
-* [Talk URL Inbox (Experience Platform Launch extension)](talkurl-extension.md)
+* [Confirmit Digital Feedback extension](confirmit-digital-feedback-extension.md)
+* [Invoca Tags extension](/help/rtcdp/destinations/invoca-extension.md)
+* [Medallia extension](medallia-extension.md)
+* [Talk URL Inbox extension](talkurl-extension.md)

@@ -15,7 +15,7 @@ Bing Ads Universal Event Tracking (UET) is an advertising extension in Adobe Rea
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
-![Bing Ads extension](assets/bing-ads-extension.png)
+![Bing Ads extension](assets/bing-extension.png)
 
 
 ## Prerequisites {#prerequisites}
