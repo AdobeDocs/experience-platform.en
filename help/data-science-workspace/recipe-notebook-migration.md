@@ -327,10 +327,10 @@ To build your recipe using the API, follow the [import a packaged recipe (API)](
 
 Recent changes to JupyterLab notebooks require that you update your existing PySpark and Spark 2.3 notebooks to 2.4. With this change, JupyterLab Launcher has been updated with new starter notebooks. For a step-by-step guide on how to convert your notebooks, select one of the following guides:
 
-- [PySpark 2.3 to 2.4 migration guide](#pyspark-23-to-24-notebook-migration-guide)
-- [Spark 2.3 to Spark 2.4 (Scala) migration guide](#spark-23-to-spark-24-scala-notebook-migration-guide)
+- [PySpark 2.3 to 2.4 migration guide](#pyspark-notebook-migration)
+- [Spark 2.3 to Spark 2.4 (Scala) migration guide](#spark-notebook-migration)
 
-## PySpark 2.3 to 2.4 notebook migration guide 
+## PySpark 2.3 to 2.4 notebook migration guide {#pyspark-notebook-migration}
 
 With the introduction of PySpark 2.4 to JupyterLab Notebooks, new Python notebooks with PySpark 2.4 are now using the Python 3 kernel instead of the PySpark 3 kernel. This means existing code running on PySpark 2.3 is not supported in PySpark 2.4.
 
@@ -461,7 +461,7 @@ The following images highlight the key differences in loading data for PySpark 2
 
 **Loading data in PySpark 2.3 (Luma dataset) - deprecated**
 
-![Load 1](./images/jupyterlab/pyspark-migration/2.3-load.png)
+![Load 1](./images/migration/pyspark-migration/2.3-load.png)
 
 **Loading data in PySpark 2.4 (Luma dataset)**
 
@@ -629,7 +629,7 @@ With PySpark 3 (Spark 2.4) the `%dataset` custom magic removes the need to defin
 ![dataframe 2](./images/migration/pyspark-migration/2.4-write.png)
 ![dataframe 2](./images/migration/pyspark-migration/2.4-write-2.png)
 
-## Spark 2.3 to Spark 2.4 (Scala) notebook migration guide 
+## Spark 2.3 to Spark 2.4 (Scala) notebook migration guide {#spark-notebook-migration}
 
 With the introduction of Spark 2.4 to JupyterLab Notebooks, existing Spark (Spark 2.3) notebooks are now using the Scala kernel instead of the Spark kernel. This means existing code running on Spark (Spark 2.3) is not supported in Scala (Spark 2.4). Additionally, all new Spark notebooks should use Scala (Spark 2.4) in the JupyterLab launcher.
 
@@ -655,7 +655,7 @@ For Scala (Spark 2.4) notebooks, select the Scala kernel and confirm by clicking
 
 ![confirm kernel](./images/migration/spark-scala/select.png)
 
-## Initializing SparkSession
+## Initializing SparkSession {#initializing-sparksession}
 
 All Scala (Spark 2.4) notebooks require that you initialize the session with the following boilerplate code:
 
@@ -780,7 +780,7 @@ The Scala kernel no longer supports `%%sql` sparkmagic. Existing sparkmagic code
 
 ![importing and defining spark](./images/migration/spark-scala/sql-2.4.png)
 
-## Read a dataset
+## Read a dataset {#notebook-read-dataset-spark}
 
 In Spark 2.3 you needed define variables for `option` values used to read data or use the raw values in the code cell. In Scala, you can use `sys.env("PYDASDK_IMS_USER_TOKEN")` to declare and return a value, this eliminates the need to define variables such as `var userToken`. In the Scala (Spark 2.4) example below, `sys.env` is used to define and return all the required values needed for reading a dataset.
 
@@ -854,7 +854,7 @@ The Scala (Spark 2.4) notebook uses the Scala kernel which requires more values 
 
 ## Write to a dataset
 
- Similar to [reading a dataset](#read-a-dataset), writing to a dataset requires additional `option` values outlined in the table below. In Scala, you can use `sys.env("PYDASDK_IMS_USER_TOKEN")` to declare and return a value, this eliminates the need to define variables such as `var userToken`. In the Scala example below, `sys.env` is used to define and return all the required values needed for writing to a dataset.
+ Similar to [reading a dataset](#notebook-read-dataset-spark), writing to a dataset requires additional `option` values outlined in the table below. In Scala, you can use `sys.env("PYDASDK_IMS_USER_TOKEN")` to declare and return a value, this eliminates the need to define variables such as `var userToken`. In the Scala example below, `sys.env` is used to define and return all the required values needed for writing to a dataset.
 
 <table>
   <th>Notebook</th>
