@@ -5,7 +5,7 @@ title: Create a Google Ads connector using the Flow Service API
 topic: overview
 ---
 
-# Create a Google AdWords connector using the Flow Service API
+# Create a Google Ads connector using the Flow Service API
 
 Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
@@ -78,8 +78,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "google-adwords base connection",
-        "description": "Base connection for google-adwords",
+        "name": "google-ads connection",
+        "description": "Connection for google-ads",
         "auth": {
             "specName": "Basic Authentication",
             "params": {
@@ -120,4 +120,4 @@ A successful response returns details of the newly created connection, including
 
 ## Next steps
 
-By following this tutorial, you have created an AdWords base connection using the Flow Service API, and have obtained the connection's unique ID value. You can use this base connection ID in the next tutorial as you learn how to [explore advertising systems using the Flow Service API](../../explore/advertising.md).
+By following this tutorial, you have created a Google Ads connection using the Flow Service API and have obtained the connection's unique ID value. You can use this ID in the next tutorial as you learn how to [explore advertising systems using the Flow Service API](../../explore/advertising.md).
