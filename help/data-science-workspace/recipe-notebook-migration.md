@@ -245,11 +245,11 @@ With the updates to PySpark recipes, a number of values need to be added and cha
   <td>
   <pre class="JSON language-JSON hljs">
 df.write.format("com.adobe.platform.dataset")
-    .option(DataSetOptions.orgId, orgId)
-    .option(DataSetOptions.serviceToken, serviceToken)
-    .option(DataSetOptions.userToken, userToken)
-    .option(DataSetOptions.serviceApiKey, apiKey)
-    .save(scoringResultsDataSetId)
+  .option(DataSetOptions.orgId, orgId)
+  .option(DataSetOptions.serviceToken, serviceToken)
+  .option(DataSetOptions.userToken, userToken)
+  .option(DataSetOptions.serviceApiKey, apiKey)
+  .save(scoringResultsDataSetId)
 </pre>
   </td>
   <td>
