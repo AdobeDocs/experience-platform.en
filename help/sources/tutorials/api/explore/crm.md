@@ -24,8 +24,6 @@ The following sections provide additional information that you will need to know
 
 In order to explore your CRM system using Platform APIs, you must possess a valid base connection ID. If you do not already have a base connection for the CRM system you wish to work with, you can create one through the following tutorials:
 
-*   [Google AdWords](../create/crm/adwords.md)
-*   [HubSpot](../create/crm/hubspot.md)
 *   [Microsoft Dynamics](../create/crm/ms-dynamics.md)
 *   [Salesforce](../create/crm/salesforce.md)
 

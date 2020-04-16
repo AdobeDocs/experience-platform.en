@@ -20,11 +20,9 @@ This guide requires a working understanding of the following components of Adobe
 
 The following sections provide additional information that you will need to know in order to successfully connect to a payments application using the Flow Service API.
 
-### Obtain a base connection
+### Gather required credentials
 
-In order to explore your payment system using Platform APIs, you must possess a valid base connection ID. If you do not already have a base connection for the payment system you wish to work with, you can create one through the following tutorial:
-
-* [PayPal](../create/payments/paypal.md)
+This tutorial requires you to have a valid connection with the third-party payments application you wish to ingest data from. A valid connection involves your application's connection specification ID and connection ID. More information about creating a payments connection and retrieving these values can be found in the [connect a payments source to Platform](../../api/create/payments/paypal.md) tutorial.
 
 ### Reading sample API calls
 
