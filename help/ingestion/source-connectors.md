@@ -11,4 +11,4 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set-up source connections to various data providers with ease. These source connections enable you to authenticate your storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
-More information about these source connectors can be found in the [source connectors documentation](../source-connectors/home.md).
+More information about these source connectors can be found in the [source connectors documentation](../sources/home.md).
