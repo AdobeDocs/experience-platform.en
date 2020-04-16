@@ -7,7 +7,7 @@ topic: overview
 
 # Configure a dataflow for an advertising connector in the UI
 
-A dataflow is a scheduled task that retrieves and ingests data from a source to an Adobe Experience Platform dataset. This tutorial provides steps to configure a new dataflow using your payments account.
+A dataflow is a scheduled task that retrieves and ingests data from a source to an Adobe Experience Platform dataset. This tutorial provides steps to configure a new dataflow using your advertising account.
 
 ## Getting started
 
@@ -18,18 +18,18 @@ This tutorial requires a working understanding of the following components of Ad
     -   [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 -   [Real-time Customer Profile](../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
-Additionally, this tutorial requires that you have already created a payments account. A list of tutorials for creating different payment connectors in the UI can be found in the [source connectors overview](../../../home.md).
+Additionally, this tutorial requires that you have already created a advertising account. A list of tutorials for creating different payment connectors in the UI can be found in the [source connectors overview](../../../home.md).
 
 ## Select data
 
-After creating your payments account, the *Select data* step appears, providing an interactive interface for you to explore your file hierarchy.
+After creating your advertising account, the *Select data* step appears, providing an interactive interface for you to explore your file hierarchy.
 
 - The left half of the interface is a directory browser, displaying your server's files and directories.
 - The right half of the interface lets you preview up to 100 rows of data from a compatible file.
 
 Select the directory you wish to use, then select **Next**.
 
-![add-data](../../../images/tutorials/dataflow/payments/add-data.png)
+![add-data](../../../images/tutorials/dataflow/advertising/add-data.png)
 
 ## Map data fields to an XDM schema
 
@@ -41,11 +41,11 @@ Choose a dataset for inbound data to be ingested into. You can either use an exi
 
 To ingest data into an existing dataset, select **Use existing dataset**, then click the dataset icon.
 
-![use-existing-dataset](../../../images/tutorials/dataflow/payments/existing-dataset.png)
+![use-existing-dataset](../../../images/tutorials/dataflow/advertising/use-existing-target-dataset.png)
 
 The *Select dataset* dialog appears. Find the dataset you you wish to use, select it, then click **Continue**.
 
-![select-existing-dataset](../../../images/tutorials/dataflow/payments/select-dataset.png)
+![select-existing-dataset](../../../images/tutorials/dataflow/advertising/select-existing-dataset.png)
 
 ### Use a new dataset
 
@@ -55,11 +55,11 @@ During this process, you can also enable *Partial ingestion* and *Error diagnost
 
 When finished, click the schema icon.
 
-![create-new-dataset](../../../images/tutorials/dataflow/payments/new-dataset.png)
+![create-new-dataset](../../../images/tutorials/dataflow/advertising/new-target-dataset.png)
 
 The *Select schema* dialog appears. Select the schema you wish to apply to the new dataset, then click **Done**.
 
-![select-schema](../../../images/tutorials/dataflow/payments/select-schema.png)
+![select-schema](../../../images/tutorials/dataflow/advertising/select-existing-schema.png)
 
 Based on your needs, you can choose to map fields directly, or use mapper functions to transform source data to derive computed or calculated values. For more information on data mapping and mapper functions, refer to the tutorial on [mapping CSV data to XDM schema fields](../../../../ingestion/tutorials/map-a-csv-file.md).
 
@@ -67,7 +67,7 @@ The *Mapping* screen also allows you to set *Delta column*. When the dataset flo
 
 Once your source data is mapped, click **Next**.
 
-![](../../../images/tutorials/dataflow/payments/mapping.png)
+![](../../../images/tutorials/dataflow/advertising/mapping.png)
 
 ## Schedule ingestion runs
 
@@ -84,13 +84,13 @@ Dataflows are designed to automatically ingest data on a scheduled basis. If you
 
 Provide values for the schedule and click **Next**.
 
-![scheduling](../../../images/tutorials/dataflow/payments/scheduling.png)
+![scheduling](../../../images/tutorials/dataflow/advertising/schedule.png)
 
 ## Name your dataset flow
 
 The *Dataset flow detail* step appears, where you must provide a name and an optional description for the dataset flow. Select **Next** when finished.
 
-![dataset-flow-details](../../../images/tutorials/dataflow/payments/dataset-flow-details.png)
+![dataset-flow-details](../../../images/tutorials/dataflow/advertising/dataset-flow-detail.png)
 
 ## Review your dataset flow
 
@@ -102,7 +102,7 @@ The *Review* step appears, allowing you to review your new dataflow before it is
 
 Once you have reviewed your dataflow, click **Finish** and allow some time for the dataflow to be created.
 
-![review](../../../images/tutorials/dataflow/payments/review.png)
+![review](../../../images/tutorials/dataflow/advertising/review.png)
 
 ## Monitor your dataset flow
 
@@ -125,11 +125,11 @@ When a dataset flow is created, it immediately becomes active and ingests data a
 
 Within the *Dataset Flows* screen, select the name of the dataset flow you wish to disable.
 
-![browse-dataset-flow](../../../images/tutorials/dataflow/payments/view-dataset-flows.png)
+![browse-dataset-flow](../../../images/tutorials/dataflow/advertising/view-dataset-flows.png)
 
 The *Properties* column appears on the right-hand side of the screen. This panel contains an **Enabled** toggle button. Click the toggle to disable the dataflow. The same toggle can be used to re-enable a dataflow after it has been disabled.
 
-![disable](../../../images/tutorials/dataflow/payments/disable.png)
+![disable](../../../images/tutorials/dataflow/advertising/disable.png)
 
 ### Activate inbound data for Profile population
 
