@@ -7,13 +7,13 @@ topic: Intelligent Services
 
 # Prepare data for use in Intelligent Services
 
-In order for Intelligent Services to discover insights from your time-series data, the data must be semantically enriched and maintained in a standard structure. Intelligent Services leverage Experience Data Model (XDM) schemas in order to achieve this. Specifically, all datasets that are used in Intelligent Services must conform to the **Consumer Experience Events (CEE)** XDM schema. 
+In order for Intelligent Services to discover insights from your marketing events data, the data must be semantically enriched and maintained in a standard structure. Intelligent Services leverage Experience Data Model (XDM) schemas in order to achieve this. Specifically, all datasets that are used in Intelligent Services must conform to the **Consumer Experience Events (CEE)** XDM schema. 
 
-This document provides general guidance on mapping your time-series data to this schema, outlining information on important fields within the schema to help you determine how to effectively map your data to its structure.
+This document provides general guidance on mapping your marketing events data from multiple channels to this schema, outlining information on important fields within the schema to help you determine how to effectively map your data to its structure.
 
 ## Understanding the CEE schema
 
-The Consumer ExperienceEvent schema describes the behavior of an individual as it relates to digital content consumption (web or mobile) as well as online or offline purchases. The use of this schema is required for Intelligent Services because of its semantically well-defined fields (columns), avoiding any evars or unknown names that would otherwise make the data less clear. 
+The Consumer ExperienceEvent schema describes the behavior of an individual as it relates to digital marketing events (web or mobile) as well as online or offline commerce activity. The use of this schema is required for Intelligent Services because of its semantically well-defined fields (columns), avoiding any unknown names that would otherwise make the data less clear. 
 
 Like all XDM schemas, the CEE mixin is extensible. In other words, additional fields can be added to the CEE mixin, and different variations can be included in multiple schemas if required.
 
@@ -25,18 +25,32 @@ The table below highlights the key fields within the CEE mixin which should be u
 
 | XDM field | Description | Reference |
 | --- | --- | --- |
-| `xdm:channel` | The marketing channel related to the ExperienceEvent. The field includes information about the channel type, media type, and location type. **This field _must_ be provided in order for Attribution AI to work with your data.** | [Experience channel schema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) |
+| `xdm:channel` | The marketing channel related to the ExperienceEvent. The field includes information about the channel type, media type, and location type. **This field _must_ be provided in order for Attribution AI to work with your data**. See the [table below](#example-channels) for some example mappings. | [Experience channel schema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) |
 | `xdm:productListItems` | An array of items which represent products selected by a customer, including the product SKU, name, price, and quantity. | [Commerce details schema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) |
 | `xdm:commerce` | Contains commerce-specific information about the ExperienceEvent, including the purchase order number and payment information. | [Commerce details schema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) |
 | `xdm:web` | Represents web details relating to the ExperienceEvent, such as the interaction, page details, and referrer. | [ExperienceEvent web details schema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-web.schema.md) |
 
+### Example channels {#example-channels}
+
+The `xdm:channel` field represents the marketing channel related to the ExperienceEvent. The following table provides some examples of marketing channels mapped to XDM:
+
+| Channel | `channel.mediaType` | `channel._type` | `channel.mediaAction` |
+| --- | --- | --- | --- |
+| Paid Search | PAID | SEARCH | CLICK |
+| Social - Marketing | EARNED | SOCIAL | CLICK |
+| Display | PAID | DISPLAY | CLICK |
+| Email | PAID | EMAIL | CLICK |
+| Internal Referrer | OWNED | DIRECT | CLICK |
+| Display ViewThrough | PAID | DISPLAY | IMPRESSION |
+| QR Code Redirect | OWNED | DIRECT | CLICK |
+| SMS Text Message | OWNED | SMS | CLICK |
+| Mobile | OWNED | MOBILE | CLICK |
+
 ## Mapping and ingesting data
 
-Once you have determined whether your time-series data can be mapped to the CEE schema, you can start the process of bringing your data into Intelligent Services.
+Once you have determined whether your time-series data can be mapped to the CEE schema, you can start the process of bringing your data into Intelligent Services. Contact Adobe Consulting Services to help map your data to the schema and ingest it into the service.
 
-Unless you have a subscription to Adobe Experience Platform, you must contact Adobe Consulting Services to help map your data to the schema and ingest it into the service.
-
-If you do have access to Experience Platform and want to map and ingest the data yourself, follow the steps outlined in the section below.
+If you have an Adobe Experience Platform subscription and want to map and ingest the data yourself, follow the steps outlined in the section below.
 
 ### Using Adobe Experience Platform
 
