@@ -64,7 +64,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 * None.
 
-For more information about sources, see the [sources overview](../../source-connectors/home.md).
+For more information about sources, see the [sources overview](../../sources/home.md).
 
 ## Experience Data Model (XDM) System
 
