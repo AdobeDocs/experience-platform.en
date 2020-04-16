@@ -13,7 +13,7 @@ An MLInstance is a pairing of an existing [Engine](./engines.md) with an appropr
 
 You can create an MLInstance by performing a POST request while providing a request payload consisting of a valid Engine ID (`{ENGINE_ID}`) and an appropriate set of default configurations.
 
-If the Engine ID references a PySpark or Spark Engine then you have the ability to configure the amount of computation resources such as the number of cores or the amount of memory. If a Python Engine is referenced then you can choose between using either a CPU or GPU for training and scoring purposes. Refer to the appendix sections on [PySpark and Spark resource configurations](appendix.md#resource-config) and [Python CPU and GPU configurations](appendix.md#cpu-gpu-config) for more information.
+If the Engine ID references a PySpark or Spark Engine then you have the ability to configure the amount of computation resources such as the number of cores or the amount of memory. If a Python Engine is referenced then you can choose between using either a CPU or GPU for training and scoring purposes. Refer to the appendix sections on [PySpark and Spark resource configurations](./appendix.md#resource-config) and [Python CPU and GPU configurations](./appendix.md#cpu-gpu-config) for more information.
 
 **API Format**
 
@@ -123,7 +123,7 @@ A successful response returns a payload containing the details of the newly crea
 
 ## Retrieve a list of MLInstances
 
-You can retrieve a list of MLInstances by performing a single GET request. To help filter results, you can specify query parameters in the request path. For a list of available queries, refer to the appendix section on [query parameters for asset retrieval](appendix.md#query).
+You can retrieve a list of MLInstances by performing a single GET request. To help filter results, you can specify query parameters in the request path. For a list of available queries, refer to the appendix section on [query parameters for asset retrieval](./appendix.md#query).
 
 **API Format**
 
@@ -135,7 +135,7 @@ GET /mlInstances?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parameter | Description |
 | --- | --- |
-| `{QUERY_PARAMETER}` | One of the [available query parameters](appendix.md#query) used to filter results. |
+| `{QUERY_PARAMETER}` | One of the [available query parameters](./appendix.md#query) used to filter results. |
 | `{VALUE}` | The value for the preceding query parameter. |
 
 **Request**

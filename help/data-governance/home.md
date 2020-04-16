@@ -70,15 +70,11 @@ In order for data usage labels to effectively support data compliance, data usag
 
 An example of a marketing action might be the desire to export a dataset to a third-party service. If there is a policy in place saying that specific types of data, such as Personally Identifiable Information (PII), cannot be exported and an "I" label (Identity data) has been applied to the dataset, you will receive a response from the Policy Service telling you that a data usage policy has been violated.
 
-### How to create and work with data usage policies
+Once data usage labels have been applied, data stewards can create policies using the DULE Policy Service API or the Experience Platform user interface.
 
-Once data usage labels have been applied, data stewards can create policies using the DULE Policy Service API.
+For more information on performing the key operations provided by the DULE Policy Service API, see the [Policy Service developer guide](api/getting-started.md). For step-by-step instructions on working with DULE policies, see the tutorial on [creating and evaluating DULE policies using the API](policies/create.md).
 
-As a data steward, you can use the Policy Service API to manage and evaluate policies related to marketing actions being taken on data containing DULE labels. Using the API, you can create and update policies, determine the status of a policy, and work with marketing actions to evaluate whether a specific action violates a data usage policy.
-
-Within the Policy Service API, all policies and marketing actions are referred to as either `core` or `custom` resources. `core` resources are defined and maintained by Adobe, whereas `custom` resources are created and maintained by individual customers. The `custom` resources are therefore unique and visible solely to the organization that created them.
-
-For more information on performing the key operations provided by the DULE Policy Service API, see the [Policy Service developer guide](api/getting-started.md). For step-by-step instructions on working with DULE policies, see the tutorial on [creating and evaluating DULE policies](policies/create.md).
+For information on how to manage policies in the Experience Platform UI, see the [policies user guide](policies/user-guide.md).
 
 ## Future releases
 
@@ -123,5 +119,4 @@ The following table outlines key terms related to Data Governance and the DULE f
 
 The following video is intended to support your understanding of Data Governance, and outlines the key aspects of the Data Usage Labeling and Enforcement (DULE) framework.
 
-<a href="https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-governance/understanding-data-governance.html" target="_blank"><img src="./images/overview/understanding-governance.png"></a>
-
+>[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)

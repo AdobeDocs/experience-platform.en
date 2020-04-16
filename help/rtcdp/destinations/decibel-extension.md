@@ -15,6 +15,8 @@ Decibel is an analytics extension in Adobe Real-time Customer Data Platform. For
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
+![Decibel extension](assets/decibel-extension.png)
+
 
 ## Prerequisites {#prerequisites}
 

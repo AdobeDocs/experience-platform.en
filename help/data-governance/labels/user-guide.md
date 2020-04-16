@@ -95,8 +95,10 @@ It is important to remember that inheritance moves from the top-level down only 
 
 Now that you have added data usage labels at the dataset and field level, you can begin to ingest data into Experience Platform. To learn more, start by reading the [data ingestion documentation](../../ingestion/home.md).
 
+You can also now define data usage policies based on the labels you have applied. For more information, see the [data usage policies overview](../policies/overview.md).
+
 ## Additional resources
 
 The following video is intended to support your understanding of Data Governance, and outlines how to apply labels to a dataset and individual fields.
 
-<a href="https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-governance/classify-data-using-governance-labels.html" target="_blank"><img src="./images/classify_data.png"></a>
+>[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on)

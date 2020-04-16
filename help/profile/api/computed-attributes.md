@@ -45,13 +45,13 @@ In order to configure a computed attribute, you first need to identify the field
 >[!NOTE]
 >Computed attributes cannot be added to fields within Adobe-defined mixins. The field must be within the `tenant` namespace, meaning it must be a field that you define and add to a schema.
 
-In order to successfully define a computed attribute field, the schema must be enabled for Profile and appear as part of the union schema for the class upon which the schema is based. For more information on Profile-enabled schemas and unions, please review the section of the Schema Registry developer guide section on [enabling a schema for Profile and viewing union schemas]^(../../technical_overview/schema_registry/schema_registry_developer_guide.md). It is also recommended to review the [section on unions]^(../../technical_overview/schema_registry/schema_composition/schema_composition.md) in the schema composition basics documentation.
+In order to successfully define a computed attribute field, the schema must be enabled for Profile and appear as part of the union schema for the class upon which the schema is based. For more information on Profile-enabled schemas and unions, please review the section of the Schema Registry developer guide section on [enabling a schema for Profile and viewing union schemas](../../xdm/api/getting-started.md). It is also recommended to review the [section on unions](../../xdm/schema/composition.md) in the schema composition basics documentation.
 
 The workflow in this tutorial uses a Profile-enabled schema and follows the steps for defining a new mixin containing the computed attribute field and ensuring it is the correct namespace. If you already have a field that is in the correct namespace within a Profile-enabled schema, you can proceed directly to the step for [creating a computed attribute](#create-a-computed-attribute).
 
 ### View a schema
 
-The steps that follow use the Adobe Experience Platform user interface to locate a schema, add a mixin, and define a field. If you prefer to use the Schema Registry API, please refer to the [Schema Registry developer guide]^(../../technical_overview/schema_registry/schema_registry_developer_guide.md) for steps on how to create a mixin, add a mixin to a schema, and enable a schema for use with Real-time Customer Profile.
+The steps that follow use the Adobe Experience Platform user interface to locate a schema, add a mixin, and define a field. If you prefer to use the Schema Registry API, please refer to the [Schema Registry developer guide](../../xdm/api/getting-started.md) for steps on how to create a mixin, add a mixin to a schema, and enable a schema for use with Real-time Customer Profile.
 
 In the user interface, click **Schemas** in the left-rail and use the search bar on the *Browse* tab to quickly find the schema you wish to update.
 
@@ -144,9 +144,9 @@ curl -X POST \
 |---|---|
 |`name`|The name of the computed attribute field, as a string.|
 |`path`|The path to the field containing the computed attribute. This path is found within the `properties` attribute of the schema and should NOT include the field name in the path. When writing the path, omit the multiple levels of `properties` attributes.|
-|`{TENANT_ID}`|If you are unfamiliar with your tenant ID, please refer to the steps for finding your tenant ID in the [Schema Registry developer guide]^(../../technical_overview/schema_registry/schema_registry_developer_guide.md#know-your-tenant_id).|
+|`{TENANT_ID}`|If you are unfamiliar with your tenant ID, please refer to the steps for finding your tenant ID in the [Schema Registry developer guide](../../xdm/api/getting-started.md#know-your-tenant_id).|
 |`description`|A description of the computed attribute. This is especially useful once multiple computed attributes have been defined as it will help others within your IMS Organization to determine the correct computed attribute to use.|
-|`expression.value`|A valid Profile Query Language (PQL) expression. For more information on PQL and links to supported queries, please read the [PQL overview]^(../../technical_overview/unified_profile_architectural_overview/unified_profile_pql.md).|
+|`expression.value`|A valid Profile Query Language (PQL) expression. For more information on PQL and links to supported queries, please read the [PQL overview](../../segmentation/pql/overview.md).|
 |`schema.name`|The class upon which the schema containing the computed attribute field is based. Example: `_xdm.context.experienceevent` for a schema based on the XDM ExperienceEvent class.|
 
 **Response**
@@ -201,7 +201,7 @@ A successfully created computed attribute returns HTTP Status 200 (OK) and a res
 |---|---|
 |`id`|A unique, read-only, system-generated ID that can be used for referencing the computed attribute during other API operations.|
 |`imsOrgId`| The IMS Organization related to the computed attribute, should match the value sent in the request.|
-|`sandbox`|The sandbox object contains details of the sandbox within which the computed attribute was configured. This information is drawn from the sandbox header sent in the request. For more information, please see the [sandboxes overview]^(../../technical_overview/sandboxes/sandboxes-overview.md).|
+|`sandbox`|The sandbox object contains details of the sandbox within which the computed attribute was configured. This information is drawn from the sandbox header sent in the request. For more information, please see the [sandboxes overview](../../sandboxes/home.md).|
 |`positionPath`|An array containing the deconstructed `path` to the field that was sent in the request.|
 |`returnSchema.meta:xdmType`|The type of the field where the computed attribute will be stored.|
 |`definedOn`|An array showing the union schemas upon which the computed attribute has been defined. Contains one object per union schema, meaning there may be multiple objects within the array if the computed attribute has been added to multiple schemas based on different classes.|

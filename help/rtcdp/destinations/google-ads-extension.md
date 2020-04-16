@@ -5,7 +5,7 @@ description: The Google Ads extension is an advertising destination in Adobe Rea
 seo-description: The Google Ads extension is an advertising destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
-# Google Ads Destination
+# Google Ads extension
 
 ## Overview {#overview}
 
@@ -14,6 +14,8 @@ This extension tracks conversions from users that click on your Google Ads. You 
 Google Ads is an advertising extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.101383.google-ads.html).
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
+
+![Google Ads extension](/help/rtcdp/destinations/assets/google-extension-2.png)
 
 ## Prerequisites {#prerequisites}
 
