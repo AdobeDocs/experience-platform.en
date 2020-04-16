@@ -105,6 +105,8 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Adobe Audience Manager connector](tutorials/ui/create/adobe-applications/analytics.md)
       - [Adobe Analytics connector](tutorials/ui/create/adobe-applications/audience-manager.md)
       - [Customer attributes connector](tutorials/ui/create/adobe-applications/customer-attributes.md)
+    - Advertising {#create}
+      - [Google Ads connector](tutorials/ui/create/advertising/ads.md)
     - Cloud storage {#cloud-storage}
       - [Azure Data Lake Storage Gen2 connector](tutorials/ui/create/cloud-storage/adls-gen2.md)
       - [Azure Blob and Amazon S3 connector](tutorials/ui/create/cloud-storage/blob-s3.md)
@@ -134,6 +136,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - Protocols {#protocols}
       - [Generic OData connector](tutorials/ui/create/protocols/odata.md)
   - Configure a dataflow {#dataflow}
+      - [Configure a dataflow for an advertising connector](tutorials/ui/dataflow/advertising.md)
       - [Configure a dataflow for a cloud storage connector](tutorials/ui/dataflow/cloud-storage.md)
       - [Configure a dataflow for a database connector](tutorials/ui/dataflow/databases.md)
       - [Configure a dataflow for a CRM connector](tutorials/ui/dataflow/crm.md)
