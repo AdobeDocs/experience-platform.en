@@ -33,17 +33,17 @@ Recent changes to Data Science Workspace require that existing Spark and PySpark
   - [Prepare docker scripts](#pyspark-prepare-docker)
   - [create the recipe with docker](#pyspark-create-recipe)
 
-Additionally, the following video is designed to further assist in understanding the changes that are required for existing recipes. This video uses PySpark.
-
->[!VIDEO](https://video.tv.adobe.com/v/33048?learn=on&quality=12)
-
 ## Spark migration guide {#spark-migration-guide}
 
 Spark recipes are now using the Docker workflow. Additionally, updates have been made to the Platform SDK for reading and writing datasets. Use the following guide to re-create your existing recipes with a Docker workflow.
 
+The following video is designed to further assist in understanding the changes that are required for Spark recipes.
+
+>[!VIDEO](https://video.tv.adobe.com/v/33243)
+
 ### Read and write datasets (Spark) {#read-write-recipe-spark}
 
-Before you build the Docker image, review the following examples for reading and writing datasets in the Platform SDK. If you are converting existing recipes, your Platform SDK needs to be updated.
+Before you build the Docker image, review the following examples for reading and writing datasets in the Platform SDK. If you are converting existing recipes, your Platform SDK code needs to be updated.
 
 **Read a dataset**
 
@@ -83,7 +83,7 @@ var df = sparkSession.read.format("com.adobe.platform.query")
 </table>
 
 >[!TIP]
-> interactive" mode times out if queries are running longer than 10 minutes. If you are ingesting more than a couple gigabytes of data, it is recommended that you switch to "batch" mode. "batch" mode takes longer to start up but can handle larger sets of data.
+> Interactive mode times out if queries are running longer than 10 minutes. If you are ingesting more than a few gigabytes of data, it is recommended that you switch to "batch" mode. Batch mode takes longer to start up but can handle larger sets of data.
 
 **Write to a dataset**
 
@@ -114,7 +114,7 @@ df.write.format("com.adobe.platform.query")
   .option(QSOption.serviceToken, {serviceToken})
   .option(QSOption.imsOrg, {orgId})
   .option(QSOption.apiKey, {apiKey})
-  .option(QSOption.mode, "batch")
+  .option(QSOption.mode, "interactive")
   .option(QSOption.datasetId, {dataSetId})
   .save()
 </pre>
@@ -123,7 +123,7 @@ df.write.format("com.adobe.platform.query")
 </table>
 
 >[!TIP]
-> interactive" mode times out if queries are running longer than 10 minutes. If you are ingesting more than a couple gigabytes of data, it is recommended that you switch to "batch" mode. "batch" mode takes longer to start up but can handle larger sets of data.
+> Interactive mode times out if queries are running longer than 10 minutes. If you are ingesting more than a few gigabytes of data, it is recommended that you switch to "batch" mode. Batch mode takes longer to start up but can handle larger sets of data.
 
 ### Package docker based source files (Spark) {#package-docker-spark}
 
@@ -143,7 +143,10 @@ The Scala recipe is located in the following directory `experience-platform-dsw-
 
 ### Add the Dockerfile (Spark) {#add-dockerfile-spark}
 
-A new file is needed in your recipe folder in order to use the docker based workflow. Copy and paste the Dockerfile from the the recipes folder located at `experience-platform-dsw-reference/recipes/scala/Dockerfile`. Optionally, you can also copy and paste the code below in a new file called `Dockerfile`.
+A new file is needed in your recipe folder in order to use the docker based workflow. Copy and paste the Dockerfile from the the recipes folder located at `experience-platform-dsw-reference/recipes/scala/Dockerfile`. Optionally, you can also copy and paste the code below in a new file called `Dockerfile`. 
+
+>[!NOTE]
+> The following `ml-retail-sample-spark-*-jar-with-dependencies.jar` should be replaced with the name of your recipe's jar file.
 
 ```scala
 FROM adobe/acp-dsw-ml-runtime-spark:0.0.1
@@ -186,9 +189,13 @@ To build your recipe using the API, follow the [import a packaged recipe (API)](
 
 For PySpark recipes, the recipe should be a docker image instead of a .egg binary. Additionally, changes have been made to the  Platform SDK for reading and writing datasets.
 
+The following video is designed to further assist in understanding the changes that are required for PySpark recipes.
+
+>[!VIDEO](https://video.tv.adobe.com/v/33048?learn=on&quality=12)
+
 ### Read and write datasets (PySpark) {#pyspark-read-write}
 
-In order for existing recipes to Before you build the Docker image, review the following examples for reading and writing datasets in the  Platform SDK. If you are converting existing recipes, the Platform SDK needs to be updated.
+In order for existing recipes to Before you build the Docker image, review the following examples for reading and writing datasets in the  Platform SDK. If you are converting existing recipes, your Platform SDK code needs to be updated.
 
 **Read a dataset**
 
@@ -230,7 +237,7 @@ pd = sparkSession.read.format("com.adobe.platform.query")
 </table>
 
 >[!TIP]
-> interactive" mode times out if queries are running longer than 10 minutes. If you are ingesting more than a couple gigabytes of data, it is recommended that you switch to "batch" mode. "batch" mode takes longer to start up but can handle larger sets of data.
+> Interactive mode times out if queries are running longer than 10 minutes. If you are ingesting more than a few gigabytes of data, it is recommended that you switch to "batch" mode. Batch mode takes longer to start up but can handle larger sets of data.
 
 **Write to a dataset**
 
@@ -261,7 +268,7 @@ scored_df.write.format("com.adobe.platform.query")
   .option(qs_option.serviceToken, {serviceToken}) 
   .option(qs_option.imsOrg, {orgId}) 
   .option(qs_option.apiKey, {apiKey}) 
-  .option(qs_option.mode, "batch") 
+  .option(qs_option.mode, "interactive") 
   .option(qs_option.datasetId, {dataSetId}) 
   .save()
 </pre>
@@ -817,7 +824,7 @@ val df1 = spark.read.format("com.adobe.platform.query")
   .option("ims-org", sys.env("IMS_ORG_ID"))
   .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID"))
   .option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN"))
-  .option("mode", "batch")
+  .option("mode", "interactive")
   .option("dataset-id", "5e68141134492718af974844")
   .load()
 </pre>
@@ -895,7 +902,7 @@ df1.write.format("com.adobe.platform.query")
   .option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN"))
   .option("ims-org", sys.env("IMS_ORG_ID"))
   .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID"))
-  .option("mode", "batch")
+  .option("mode", "interactive")
   .option("dataset-id", "5e68141134492718af974844")
   .save()
 </pre>
