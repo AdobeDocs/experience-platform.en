@@ -96,7 +96,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 *   Source connectors for cloud-based storages do not support the ingestion of compressed files.
 
-For more information about sources, see [Sources overview](../../source-connectors/home.md).
+For more information about sources, see [Sources overview](../../sources/home.md).
 
 ## Data Science Workspace
 
