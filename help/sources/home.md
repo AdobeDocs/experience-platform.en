@@ -26,50 +26,68 @@ Experience Platform allows data to be ingested from other Adobe applications, in
 - [Adobe Analytics data connector overview](connectors/adobe-applications/analytics.md)
 - [Create an Adobe Analytics source connector in the UI](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/adobe-applications/adobe-analytics-ui-tutorial.md)
 
+### Advertising
+
+Experience Platform provides support for ingesting data from a third-party advertising system. See the following related documents for more information on specific source connectors:
+
+- [Google Ads connector](connectors/advertising/ads.md)
+
 ### Cloud Storage
 
-Cloud storage sources can bring your own data into Platform without the need to download, format, or upload. Every step of the process is integrated into the Sources workflow using the user interface. Support for cloud storage providers include Amazon S3, Azure Blob, FTP servers, and SFTP servers. See the following related documents for more information:
+Cloud storage sources can bring your own data into Platform without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM parquet, or delimited. Every step of the process is integrated into the Sources workflow using the user interface. See the following related documents for more information:
 
-- [Create an Azure Blob or Amazon S3 source connector in the UI](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/cloud-storages/amazon-s3-ui-tutorial.md)
-- [Create an Azure Data Lake Storage Gen2 source connector in the UI](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/cloud-storages/adls-gen2-ui-tutorial.md)
-- [Create an FTP or SFTP source connector in the UI](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/cloud-storages/ftp-sftp-ui-tutorial.md)
-- [Create a Google Cloud Storage source connector in the UI](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/cloud-storages/google-cloud-storage-ui-tutorial.md)
+- [Azure Data Lake Storage Gen2 connector](connectors/cloud-storage/adls-gen2.md)
+- [Azure Blob and Amazon S3 connector](connectors/cloud-storage/blob-s3.md)
+- [FTP and SFTP connector](connectors/cloud-storage/ftp-sftp.md)
+- [Google Cloud Storage connector](connectors/cloud-storage/google-cloud-storage.md)
 
 ### Customer Relationship Management (CRM)
 
 CRM systems provide data that can help build customer relationships, which in turn, create loyalty and drive customer retention. Experience Platform provides support for ingesting CRM data from Microsoft Dynamics 365 and Salesforce. See the following related documents for more information:
 
-- [Create a Microsoft Dynamics 365 or Salesforce source connector in the UI](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/crm/dynamics-salesforce-ui-tutorial.md)
-- [Create a PayPal source connector in the UI](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/crm/paypal-tutorial.md)
+- [Microsoft Dynamics connector](connectors/crm/ms-dynamics.md)
+- [Salesforce connector](connectors/crm/salesforce.md)
 
-### Customer Success (CS)
+### Customer Success
 
 Experience Platform provides support for ingesting data from a third-party customer success application. See the following related documents for more information:
 
-- [Create a Salesforce Service Cloud source connector in the UI](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/customer-success/salesforce-service-cloud-tutorial.md)
-- [Create a ServiceNow source connector in the UI](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/customer-success/servicenow-ui-tutorial.md)
+- [Salesforce Service Cloud connector](connectors/customer-success/salesforce-service-cloud.md)
+- [ServiceNow connector](connectors/customer-success/servicenow.md)
 
 ### Database
 
 Experience Platform provides support for ingesting data from a third-party database. See the following related documents for more information on specific source connectors:
 
-- [Create an AWS Redshift source connector in the UI](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/databases/amazon-redshift-ui-tutorial.md)
-- [Create an Azure Synapse Analytics source connector in the UI](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/databases/azure-synapse-analytics-ui-tutorial.md)
-- [Create a Google BigQuery source connector in the UI](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/databases/google-big-query-ui-tutorial.md)
-- [Create a MariaDB source connector in the UI](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-api-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/api/database-nosql/mariadb-api-tutorial.md)
-- [Create a Microsoft SQL Server source connector in the UI](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/databases/sql-server-ui-tutorial.md)
-- [Create a MySQL source connector in the UI](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/databases/mysql-ui-tutorial.md)
-- [Create a PostgreSQL source connector in the UI](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/databases/postgresql-tutorial.md)
+- [Amazon Redshift connector](connectors/databases/redshift.md)
+- [Apache Hive on Azure HDInsights connector](connectors/databases/hive.md)
+- [Apache Spark on Azure HDInsights connector](connectors/databases/spark.md)
+- [Azure Synapse Analytics connector](connectors/databases/synapse-analytics.md)
+- [Azure Table Storage connector](connectors/databases/ats.md)
+- [Google BigQuery connector](connectors/databases/bigquery.md)
+- [MariaDB connector](connectors/databases/mariadb.md)
+- [Microsoft SQL Server connector](connectors/databases/sql-server.md)
+- [MySQL connector](connectors/databases/mysql.md)
+- [Phoenix connector](connectors/databases/phoenix.md)
+- [PostgreSQL connector](connectors/databases/postgres.md)
 
 ### Marketing Automation
 
 Experience Platform provides support for ingesting data from a third-party marketing automation system. See the following related documents for more information on specific source connectors:
 
-- [Create a HubSpot source connector in the UI](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/marketing-automation/hubspot-tutorial.md)
+- [HubSpot connector](connectors/marketing-automation/hubspot.md)
 
-## API tutorials
+### Payments
 
-You can create source connectors using the Flow Service API. For more information, see the [sources API tutorial document](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-api-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/api/sources-api-tutorial.md).
+Experience Platform provides support for ingesting data from a third-party payments system. See the following related documents for more information on specific source connectors:
+
+- [PayPal connector](connectors/payments/paypal.md)
+
+### Protocols
+
+Experience Platform provides support for ingesting data from a third-party protocols system. See the following related documents for more information on specific source connectors:
+
+- [Generic OData connector](connectors/protocols/odata.md)
 
 ## Access control for sources in data ingestion
 
