@@ -5,7 +5,7 @@ title: Create an Apache Hive on Azure HDInsights source connector in the UI
 topic: overview
 ---
 
-# Create a Hive source connector in the UI
+# Create an Apache Hive on Azure HDInsights source connector in the UI
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an Apache Hive on Azure HDInsights source connector using the Platform user interface.
 
