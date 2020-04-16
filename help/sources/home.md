@@ -25,7 +25,7 @@ Experience Platform allows data to be ingested from other Adobe applications, in
 - [Create an Adobe Audience Manager source connector in the UI](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Adobe Analytics data connector overview](connectors/adobe-applications/analytics.md)
 - [Create an Adobe Analytics source connector in the UI](./tutorials/ui/create/adobe-applications/analytics.md)
-- [Create a customer attributes source connector in the UI](./tutorials/ui/create/adobe-applications/customer-attributes.md)
+- [Create a Customer Attributes source connector in the UI](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 
 ### Advertising
 

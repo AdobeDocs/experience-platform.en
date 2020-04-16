@@ -9,10 +9,10 @@ topic: overview
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-Experience Platform provides support for ingesting customer attributes profile data into Adobe Experience Platform. 
+Experience Platform provides support for ingesting Customer Attributes profile data into Adobe Experience Platform. 
 
-The documentation below provides information on how to connect customer attributes to Platform using APIs or the user interface:
+The documentation below provides information on how to connect Customer Attributes to Platform using APIs or the user interface:
 
-## Connect customer attributes to Platform using the UI
+## Connect Customer Attributes to Platform using the UI
 
-- [Create a customer attributes source connector in the UI](../../tutorials/ui/create/adobe-applications/customer-attributes.md)
+- [Create a Customer Attributes source connector in the UI](../../tutorials/ui/create/adobe-applications/customer-attributes.md)
