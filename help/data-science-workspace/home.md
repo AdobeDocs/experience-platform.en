@@ -110,7 +110,7 @@ Data Science Workspace tracks where intelligent services are invoked and how the
 
 ### Access to new features and datasets
 
-Data scientists can take advantage of new technologies and datasets as soon as they are available through Adobe services. Through frequent updates, we do the work of integrating datasets and technologies into the platform, so you don't have to
+Data scientists can take advantage of new technologies and datasets as soon as they are available through Adobe services. Through frequent updates, we do the work of integrating datasets and technologies into the platform, so you don't have to.
 
 ### Security and peace of mind
 
