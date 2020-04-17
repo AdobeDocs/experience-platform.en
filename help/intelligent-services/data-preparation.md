@@ -7,7 +7,7 @@ topic: Intelligent Services
 
 # Prepare data for use in Intelligent Services
 
-In order for Intelligent Services to discover insights from your marketing events data, the data must be semantically enriched and maintained in a standard structure. Intelligent Services leverage Experience Data Model (XDM) schemas in order to achieve this. Specifically, all datasets that are used in Intelligent Services must conform to the **Consumer Experience Events (CEE)** XDM schema. 
+In order for Intelligent Services to discover insights from your marketing events data, the data must be semantically enriched and maintained in a standard structure. Intelligent Services leverage Experience Data Model (XDM) schemas in order to achieve this. Specifically, all datasets that are used in Intelligent Services must conform to the **Consumer ExperienceEvent (CEE)** XDM schema. 
 
 This document provides general guidance on mapping your marketing events data from multiple channels to this schema, outlining information on important fields within the schema to help you determine how to effectively map your data to its structure.
 
@@ -48,7 +48,7 @@ The `xdm:channel` field represents the marketing channel related to the Experien
 
 ## Mapping and ingesting data
 
-Once you have determined whether your time-series data can be mapped to the CEE schema, you can start the process of bringing your data into Intelligent Services. Contact Adobe Consulting Services to help map your data to the schema and ingest it into the service.
+Once you have determined whether your marketing events data can be mapped to the CEE schema, you can start the process of bringing your data into Intelligent Services. Contact Adobe Consulting Services to help map your data to the schema and ingest it into the service.
 
 If you have an Adobe Experience Platform subscription and want to map and ingest the data yourself, follow the steps outlined in the section below.
 
