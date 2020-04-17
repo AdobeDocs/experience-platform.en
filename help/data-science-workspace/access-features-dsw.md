@@ -13,7 +13,12 @@ The following document outlines Data Science workspace permissions, provisioning
 
 Data Science Workspace has two variants in Adobe Experience Platform. Data Science Workspace Foundation and Data Science Workspace Intelligence Pack. Foundation is included with your base Platform purchase but in order to utilize all the features for Data Science Workspace, Intelligence Pack needs to be purchased. 
 
-With the Purchase of Intelligence Pack, you receive access to both the *Models* and *Services* tabs in the left-navigation bar. *Models* provides tools used to create, publish, and store advanced machine learning recipes and models. *Services* contains both Adobe provided services such as [Intelligent Services](../intelligent-services/home.md) and any custom external services you create with Data Science Workspace.
+With the Purchase of Intelligence Pack, you receive access to both the *Models* and *Services* tabs in the left-navigation bar under *DATA SCIENCE*. Foundation only displays the *Notebooks* tab.
+
+![DSW tabs](./images/access/platform-tabs.png)
+
+- *Models* provides tools used to create, publish, and store advanced machine learning recipes and models. 
+- *Services* contains both Adobe provided services such as [Intelligent Services](../intelligent-services/home.md) and any custom external services you created with Data Science Workspace.
 
 The following table outlines some of the key differences for Foundation and Intelligence Pack:
 
