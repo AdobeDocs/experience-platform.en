@@ -7,7 +7,7 @@ user-guide-title: Adobe Experience Platform Data Science Workspace Help
 # Data Science Workspace {#data-science-workspace}
 
 * [Data Science Workspace overview](home.md)
-* [Data Science Workspace access and features](access-features-dsw.md)
+* [Data Science Workspace access and provisioning](access-features-dsw.md)
 * [Data Science Workspace walkthrough](walkthrough.md)
 * JupyterLab notebooks {#jupyterlab}
   * [JupyterLab user guide](jupyterlab/overview.md)

@@ -5,11 +5,11 @@ title: Data Science Workspace overview
 topic: Access and features for data science workspace
 ---
 
-# Data Science Workspace access and features
+# Data Science Workspace access and provisioning
 
 The following document outlines Data Science workspace permissions, provisioning, and access to features. 
 
-## Available features
+## Data Science Workspace Foundations and Intelligence Pack
 
 Data Science Workspace has two variants in Adobe Experience Platform. Data Science Workspace Foundation and Data Science Workspace Intelligence Pack. Foundation is included with your base Platform purchase but in order to utilize all the features for Data Science Workspace, Intelligence Pack needs to be purchased. 
 
