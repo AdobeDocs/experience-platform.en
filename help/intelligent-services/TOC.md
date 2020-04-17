@@ -7,6 +7,7 @@ user-guide-title: Intelligent Services Help
 # Adobe Intelligent Services {#intelligent-services}
 
 * [Intelligent Services overview](home.md)
+* [Prepare data for use in Intelligent Services](data-preparation.md)
 * Attribution AI {#attribution-ai}
   * [Overview](attribution-ai/overview.md)
   * [Getting started with Attribution AI](attribution-ai/getting-started.md)
