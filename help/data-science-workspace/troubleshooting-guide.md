@@ -11,9 +11,9 @@ This document provides answers to frequently asked questions about Adobe Experie
 
 ## JupyterLab environment is not loading in Google Chrome
 
-With the latest update of the Google Chrome browser to version 80.x, all 3rd party cookies are blocked by default. This new policy can prevent JupyterLab from loading within Adobe Experience Platform.
+>[!IMPORTANT] This issue has been resolved. Please ensure your Chrome browser is up-to-date. Default settings should be able to access JupyterLab.
 
->[!NOTE] This is a temporary problem. The dependency on 3rd party cookies is set to be removed in a future release.
+With the latest update of the Google Chrome browser to version 80.x, all 3rd party cookies are blocked by default. This policy can prevent JupyterLab from loading within Adobe Experience Platform.
 
 To remedy this issue use the following steps: 
 
@@ -42,6 +42,18 @@ After Step 2, you are prompted to relaunch your browser. After you relaunch, Jup
 ## Why am I unable to access JupyterLab in Safari?
 
 Safari disables third-party cookies by default. Because your Jupyter virtual machine instance resides on a different domain than its parent frame, Adobe Experience Platform currently requires that third-party cookies be enabled. Please enable third-party cookies or switch to a different browser such as Google Chrome.
+
+For Safari 12, you need to switch your User Agent to 'Chrome' or 'Firefox'. To switch your User Agent start by opening the *Safari* menu and select **Preferences**. The preferences window appears.
+
+![Safari preferences]()
+
+Within the Safari preferences window, select **Advanced**. Then within that menu, check *Show Develop menu in menu bar*. You can close the preferences window after this step is complete.
+
+![Safari advanced]()
+
+Next, from the top navigation bar select the **Develop** menu. From within the *Develop* dropdown, hover over *User Agent*. You can select the **Chrome** or **Firefox** user agent string you would like to use.
+
+![Develop menu]()
 
 ## Why am I seeing a '403 Forbidden' message when trying to upload or delete a file in JupyterLab?
 
