@@ -7,11 +7,11 @@ topic: tutorial
 
 # Ingest data into Experience Platform
 
-Adobe Experience Platform brings data from multiple sources together in order to help marketers better understand the behavior of their customers. Adobe Experience Platform Data Ingestion represents the multiple methods by which Platform ingests data from these sources, as well as how that data is persisted within the Data Lake for use by downstream Platform services. Data Ingestion includes batch ingestion, streaming ingestion, and ingestion using source connectors. To learn more, read the [Data Ingestion overview](../ingestion/home.md) or proceed directly to the [Sources documentation](../source-connectors/home.md).
+Adobe Experience Platform brings data from multiple sources together in order to help marketers better understand the behavior of their customers. Adobe Experience Platform Data Ingestion represents the multiple methods by which Platform ingests data from these sources, as well as how that data is persisted within the Data Lake for use by downstream Platform services. Data Ingestion includes batch ingestion, streaming ingestion, and ingestion using source connectors. To learn more, read the [Data Ingestion overview](../ingestion/home.md) or proceed directly to the [Sources documentation](../sources/home.md).
 
 ## Create a source connector in the UI and API
 
-Source connectors allow you to ingest data from multiple sources, where it can then be labeled, structured, and enhanced using Platform services. To begin creating a connector using the UI, please visit the [creating a source connector in the UI overview](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/sources-ui-tutorial.md). To create source connectors using the API, visit the [create a source connector using the Flow Service API overview](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-api-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/api/sources-api-tutorial.md).
+Source connectors allow you to ingest data from multiple sources, where it can then be labeled, structured, and enhanced using Platform services. To begin creating a source connector, see the [sources overview](../sources/home.md).
 
 ## Ingest batch data
 
