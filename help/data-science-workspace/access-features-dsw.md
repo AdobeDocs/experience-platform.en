@@ -42,17 +42,21 @@ The following table outlines some of the key differences for Foundation and Inte
             <strong>Configuration options</strong>
         </td>
         <td>
-            <li>Easily access, explore and prep your behavioral and transactional data.</li>
-            <li>Access to the JupyterLab Notebook interface with support for Python and R.</li>
-            <li>Explore and derive insights with minimal effort.</li>
-            <li>Easily write data sets back into Experience Platform.</li>
-            <li>Use insights to analyze and predict business outcomes.</li>
+            <ul>
+                <li>Easily access, explore and prep your behavioral and transactional data.</li>
+                <li>Access to the JupyterLab Notebook interface with support for Python and R.</li>
+                <li>Explore and derive insights with minimal effort.</li>
+                <li>Easily write data sets back into Experience Platform.</li>
+                <li>Use insights to analyze and predict business outcomes.</li>
+            </ul>
         </td>
         <td>
-            <li>Leverage larger datasets to train machine learning models.</li>
-            <li> Develop complex models with technologies such as Spark and TensorFlow.</li>
-            <li> Seamlessly Package models and deploy them in Intelligence Services.</li>
-            <li> Automate insights by configuring training and scoring schedules.</li>
+            <ul>
+                <li>Leverage larger datasets to train machine learning models.</li>
+                <li> Develop complex models with technologies such as Spark and TensorFlow.</li>
+                <li> Seamlessly Package models and deploy them in Intelligence Services.</li>
+                <li> Automate insights by configuring training and scoring schedules.</li>
+            </ul>
         </td>
     </tr>
     <tr>
