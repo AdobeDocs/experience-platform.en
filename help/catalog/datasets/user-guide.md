@@ -46,7 +46,7 @@ For more robust methods to access your data, Experience Platform provides downst
 *   [Query Service overview](../../query-service/home.md)
 *   [JupyterLab user guide](../../data-science-workspace/jupyterlab/overview.md)
 
-## Create a dataset
+## Create a dataset {#create}
 
 To create a new dataset, start by clicking **Create dataset** in the *Datasets* dashboard.
 
