@@ -291,8 +291,8 @@ The PySpark recipe is located in the following directory `experience-platform-ds
 
 A new file is needed in your recipe folder in order to use the docker based workflow. Copy and paste the Dockerfile from the the recipes folder located at `experience-platform-dsw-reference/recipes/pyspark/Dockerfile`. Optionally, you can also copy and paste the code below and make a new file called `Dockerfile`.
 
->[!NOTE]
->In the example below, you need to replace `pysparkretailapp-*.egg` with the name of your recipe's egg file.
+>[!IMPORTANT]
+> The example egg file shown below `pysparkretailapp-*.egg` should be replaced with the name of your recipe's egg file.
 
 ```scala
 FROM adobe/acp-dsw-ml-runtime-pyspark:0.0.1
