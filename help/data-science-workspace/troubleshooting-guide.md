@@ -11,9 +11,9 @@ This document provides answers to frequently asked questions about Adobe Experie
 
 ## JupyterLab environment is not loading in Google Chrome
 
->[!IMPORTANT] This issue has been resolved but could still be present in Chrome 80.x. Please ensure your Chrome browser is up-to-date. 
+>[!IMPORTANT] This issue has been resolved but could still be present in Google Chrome 80.x browser. Please ensure your Chrome browser is up-to-date. 
 
-With the latest update of the Google Chrome browser to version 80.x, all 3rd party cookies are blocked by default. This policy can prevent JupyterLab from loading within Adobe Experience Platform.
+With the Google Chrome browser version 80.x, all 3rd party cookies are blocked by default. This policy can prevent JupyterLab from loading within Adobe Experience Platform.
 
 To remedy this issue use the following steps: 
 
