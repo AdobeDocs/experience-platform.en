@@ -41,19 +41,19 @@ After Step 2, you are prompted to relaunch your browser. After you relaunch, Jup
 
 ## Why am I unable to access JupyterLab in Safari?
 
-Safari disables third-party cookies by default. Because your Jupyter virtual machine instance resides on a different domain than its parent frame, Adobe Experience Platform currently requires that third-party cookies be enabled. Please enable third-party cookies or switch to a different browser such as Google Chrome.
+Safari disables third-party cookies by default in Safari < 12. Because your Jupyter virtual machine instance resides on a different domain than its parent frame, Adobe Experience Platform currently requires that third-party cookies be enabled. Please enable third-party cookies or switch to a different browser such as Google Chrome.
 
 For Safari 12, you need to switch your User Agent to 'Chrome' or 'Firefox'. To switch your User Agent start by opening the *Safari* menu and select **Preferences**. The preferences window appears.
 
-![Safari preferences]()
+![Safari preferences](./images/faq/preferences.png)
 
 Within the Safari preferences window, select **Advanced**. Then within that menu, check *Show Develop menu in menu bar*. You can close the preferences window after this step is complete.
 
-![Safari advanced]()
+![Safari advanced](./images/faq/advanced.png)
 
 Next, from the top navigation bar select the **Develop** menu. From within the *Develop* dropdown, hover over *User Agent*. You can select the **Chrome** or **Firefox** user agent string you would like to use.
 
-![Develop menu]()
+![Develop menu](./images/faq/user-agent.png)
 
 ## Why am I seeing a '403 Forbidden' message when trying to upload or delete a file in JupyterLab?
 
