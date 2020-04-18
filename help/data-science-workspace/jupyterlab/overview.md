@@ -141,9 +141,9 @@ If the kernel is shut-down or inactive for a prolonged period, then **No Kernel!
 >[!IMPORTANT] 
 >With the transition of Spark 2.3 to Spark 2.4, both the Spark and PySpark kernels are deprecated. 
 >
->New PySpark 3 (Spark 2.4) notebooks use the Python3 Kernel. See the guide on converting [Pyspark 3 (Spark 2.3) to PySpark 3 (Spark 2.4)](../recipe-migration-guide.md) for an in-depth tutorial on updating your existing notebooks.
+>New PySpark 3 (Spark 2.4) notebooks use the Python3 Kernel. See the guide on converting [Pyspark 3 (Spark 2.3) to PySpark 3 (Spark 2.4)](../recipe-notebook-migration.md) for an in-depth tutorial on updating your existing notebooks.
 >
->New Spark notebooks should utilize the Scala kernel. See the guide on converting [Spark 2.3 to Scala (Spark 2.4)](../recipe-migration-guide.md) for an in-depth tutorial on updating your existing notebooks.
+>New Spark notebooks should utilize the Scala kernel. See the guide on converting [Spark 2.3 to Scala (Spark 2.4)](../recipe-notebook-migration.md) for an in-depth tutorial on updating your existing notebooks.
 
 PySpark and Spark kernels allows you to configure Spark cluster resources within your PySpark or Spark notebook by using the configure command (`%%configure`) and providing a list of configurations. Ideally, these configurations are defined before the Spark application is initialized. Modifying the configurations while the Spark application is active requires an additional force flag after the command (`%%configure -f`) which will restart the application in order for the changes to be applied, as shown below:
 
@@ -375,9 +375,9 @@ df <- dataset_reader$limit(100L)$offset(10L)$read()
 >[!IMPORTANT] 
 >With the transition of Spark 2.3 to Spark 2.4, both the Spark and PySpark kernels are deprecated. 
 >
->New PySpark 3 (Spark 2.4) notebooks use the Python3 Kernel. See the guide on converting [Pyspark 3 (Spark 2.3) to PySpark 3 (Spark 2.4)](../recipe-migration-guide.md) if you wish to convert existing Spark 2.3 code. New notebooks should follow the [PySpark 3 (Spark 2.4)](#pyspark2.4) example below.
+>New PySpark 3 (Spark 2.4) notebooks use the Python3 Kernel. See the guide on converting [Pyspark 3 (Spark 2.3) to PySpark 3 (Spark 2.4)](../recipe-notebook-migration.md) if you wish to convert existing Spark 2.3 code. New notebooks should follow the [PySpark 3 (Spark 2.4)](#pyspark2.4) example below.
 >
->New Spark notebooks should utilize the Scala kernel. See the guide on converting [Spark 2.3 to Scala (Spark 2.4)](../recipe-migration-guide.md) if you wish to convert existing Spark 2.3 code. New notebooks should follow the [Scala (Spark 2.4)](#spark2.4) example below. 
+>New Spark notebooks should utilize the Scala kernel. See the guide on converting [Spark 2.3 to Scala (Spark 2.4)](../recipe-notebook-migration.md) if you wish to convert existing Spark 2.3 code. New notebooks should follow the [Scala (Spark 2.4)](#spark2.4) example below. 
 
 With an an active PySpark or Spark notebook opened, expand the **Data Explorer** tab from the left sidebar and double click **Datasets** to view a list of available datasets. Right-click on the dataset listing you wish to access and click **Explore Data in Notebook**. The following code cells are generated:
 
@@ -556,9 +556,9 @@ df <- dataset_reader$
 >[!IMPORTANT] 
 >With the transition of Spark 2.3 to Spark 2.4, both the Spark and PySpark kernels are deprecated. 
 >
->New PySpark 3 (Spark 2.4) notebooks use the Python3 Kernel. See the guide on converting [Pyspark 3 (Spark 2.3) to PySpark 3 (Spark 2.4)](../recipe-migration-guide.md) for more information on converting your existing code. If you are creating a new PySpark notebook, use the [PySpark 3 (spark 2.4)](#pyspark3-spark2.4) example for filtering ExperienceEvent data.
+>New PySpark 3 (Spark 2.4) notebooks use the Python3 Kernel. See the guide on converting [Pyspark 3 (Spark 2.3) to PySpark 3 (Spark 2.4)](../recipe-notebook-migration.md) for more information on converting your existing code. If you are creating a new PySpark notebook, use the [PySpark 3 (spark 2.4)](#pyspark3-spark2.4) example for filtering ExperienceEvent data.
 >
->New Spark notebooks should utilize the Scala kernel. See the guide on converting [Spark 2.3 to Scala (Spark 2.4)](../recipe-migration-guide.md) for more information on  converting your existing code. If you are creating a new Spark notebook, use the [Scala (spark 2.4)](#scala-spark) example for filtering ExperienceEvent data.
+>New Spark notebooks should utilize the Scala kernel. See the guide on converting [Spark 2.3 to Scala (Spark 2.4)](../recipe-notebook-migration.md) for more information on  converting your existing code. If you are creating a new Spark notebook, use the [Scala (spark 2.4)](#scala-spark) example for filtering ExperienceEvent data.
 
 Accessing and filtering an ExperienceEvent dataset in a PySpark or Spark notebook requires you to provide the dataset identity (`{DATASET_ID}`), your organization's IMS identity, and the filter rules defining a specific time range. A Filtering time range is defined by using the function `spark.sql()`, where the function parameter is a SQL query string.
 
