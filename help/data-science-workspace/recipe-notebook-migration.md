@@ -473,11 +473,11 @@ With PySpark 3 (Spark 2.4) `sc = spark.sparkContext` is defined in loading.
 
 ![Load 1](./images/migration/pyspark-migration/2.4-load.png)
 
-**Loading Experience Could Platform data in PySpark 2.3 - deprecated**
+**Loading Experience Cloud Platform data in PySpark 2.3 - deprecated**
 
 ![Load 2](./images/migration/pyspark-migration/2.3-load-alt.png)
 
-**Loading Experience Could Platform data in PySpark 2.4**
+**Loading Experience Cloud Platform data in PySpark 2.4**
 
 With PySpark 3 (Spark 2.4) the `org_id` and `dataset_id` no longer need to be defined. Additionally, `df = spark.read.format` has been replaced with a custom magic [`%dataset`](#magic) to make reading and writing datasets easier.
 
