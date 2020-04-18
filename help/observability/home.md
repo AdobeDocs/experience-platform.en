@@ -9,7 +9,7 @@ topic: overview
 
 Observability Insights is a RESTful API that allows you to expose key observability metrics in Adobe Experience Platform. These metrics provide insights into Platform usage statistics, health-checks for Platform services, historical trends, and performance indicators for various Platform functionalities. 
 
-This document demonstrates an example call to the Observability Insights API, and provides a list of exposed metrics that are compatible with the service. For a complete list of Observability endpoints, please refer to the [Observability Insights API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml).
+This document demonstrates an example call to the Observability Insights API. For a complete list of Observability endpoints, please refer to the [Observability Insights API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml).
 
 ## Getting started
 
@@ -19,11 +19,9 @@ In order to make calls to Platform APIs, you must first complete the [authentica
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in Experience Platform are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in Experience Platform are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in. For more information on sandboxes in Platform, see the [sandbox overview documentation](../sandboxes/home.md).
 
 * x-sandbox-name: `{SANDBOX_NAME}`
-
->[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../sandboxes/home.md). 
 
 ## Retrieve observability metrics
 
@@ -44,7 +42,7 @@ GET /metrics?metric={METRIC}&metric={METRIC_2}&id={ID}&dateRange={DATE_RANGE}
 | Parameter | Description |
 | --- | --- |
 | `{METRIC}` | The metric you want to expose. When combining multiple metrics in a single call, you must use an ampersand (`&`) to separate individual metrics. For example, `metric={METRIC_1}&metric={METRIC_2}`. |
-| `{ID}` | The identifier for a particular Platform resource whose metrics you want to expose. This ID may be optional, required, or not applicable depending on the metrics being used. For a list of available metrics, as well as supported IDs (both required and optional) for each metric, see the reference document on [available metrics](metrics.md) below. |
+| `{ID}` | The identifier for a particular Platform resource whose metrics you want to expose. This ID may be optional, required, or not applicable depending on the metrics being used. For a list of available metrics, as well as supported IDs (both required and optional) for each metric, see the reference document on [available metrics](metrics.md). |
 | `{DATE_RANGE}` | The date range for the metrics you want to expose, in ISO 8601 format (for example, `2018-10-01T07:00:00.000Z/2018-10-09T07:00:00.000Z`). |
 
 **Request**

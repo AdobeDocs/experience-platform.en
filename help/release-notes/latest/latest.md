@@ -1,55 +1,57 @@
 ---
-
 title: Adobe Experience Platform Release Notes
-description: Experience Platform release notes March 11, 2020
+description: Experience Platform release notes April 8, 2020
 doc-type: release notes
-last-update: March 10, 2020
+last-update: April 13, 2020
 author: ens71067
-
+keywords: release notes;
 ---
 
 # Adobe Experience Platform release notes 
 
-## Release date: March 11, 2020
+## Release date: April 8, 2020
+
+## Experience Data Model (XDM) System
+
+Standardization and interoperability are key concepts behind Experience Platform. Experience Data Model (XDM), driven by Adobe, is an effort to standardize customer experience data and define schemas for customer experience management.
+
+XDM is a publicly documented specification designed to improve the power of digital experiences. It provides common structures and definitions for any application to communicate with services on Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation delivering insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+### New features
+
+| Feature | Description |
+| --- | --- |
+| Automatic alternate display info | The Schema Registry automatically applies the customized title and description values configured in the `alternateDisplayInfo` descriptor. |
+| Scalar field restrictions | The Schema Registry does not allow more than 6000 scalar fields in a single schema. |
+| Performance overhaul | The Schema Registry has been overhauled to perform and meet the demands of Experience Platform better. |
+
+**Bug fixes**
+
+* Updated XDM to XED converted to support a cleaner XED format for nested URI fields in standard XDM.
+
+**Known issues**
+
+* Known
 
 ## Data Governance
 
-Experience Platform allows companies to bring data from multiple enterprise systems together to better allow marketers to identify, understand, and engage customers. Experience Platform includes an end-to-end data governance infrastructure, including Data Usage Labeling and Enforcement (DULE), to ensure the proper use of data within Platform and when being shared between systems.
-
 Adobe Experience Platform Data Governance is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within Experience Platform at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
 
-### New features
+Getting started with data governance requires a thorough understanding of the regulations, contractual obligations, and corporate policies that apply to your customer data. From there, data can be classified by applying the appropriate data usage labels, and its use can be controlled through the definition of data usage policies.
 
->[!NOTE]
->Some of the following new features are currently in beta and are not available to all users. Beta features are subject to change.
-
-| Feature | Description |
-| ------- | ----------- |
-| Automated enforcement of data usage policies for Real-time Customer Data Platform| Data usage policies are now enforced in the workflow of activating data to destinations. Data Governance is also embedded and enforced when making changes that affect existing activations (such as changes to dataset labels, merge policies, segment definitions, and others). |
-| Data lineage for enforcement | When a data usage policy is violated in Real-time CDP, the UI displays a notification that contains data lineage information to help the user understand why the policies were violated and what they can do to resolve the violation. |
-
-
-### Known issues
-
-* None
-
-For more information about Data Governance, see the [Data Governance overview](../../data-governance/home.md).
-
-## Data Ingestion
-
-Adobe Experience Platform provides a rich set of features to ingest any type and latency of data. Adobe Experience Platform Data Ingestion provides multiple alternatives for ingesting data including Batch APIs, Streaming APIs, native Adobe connectors, data integration partners, or the Adobe Experience Platform UI.
+The DULE framework simplifies and streamlines the process of categorizing data and creating data usage policies through the Experience Platform user interface and DULE Policy Service API. 
 
 ### New features
 
-|Feature | Description|
-|------- | -----------|
-|Partial batch ingestion | Partial batch ingestion is the ability to ingest data containing errors, up to a certain threshold. With this capability, users can successfully ingest all their correct data into Adobe Experience Platform while all their incorrect data is batched separately. Details are added to unsuccessful batches to explain why they did not pass validation. More information about partial batch ingestion can be found in the [partial batch ingestion documentation](../../ingestion/batch-ingestion/partial.md).|
+| Feature    | Description  |
+| -----------| ---------- |
+| Manage data usage policies in the UI  | Data usage policies can now be managed within the _Policies_ workspace in the Experience Platform UI. See the [policy user guide](../../data-governance/policies/user-guide.md) for more information.|
 
-### Known issues
+**Known issues**
 
-* None
+* None.
 
-To learn more about ingesting data into Platform, visit the [Data Ingestion documentation](../../ingestion/home.md).
+For more information, please see the [Data Governance overview](../../data-governance/home.md).
 
 
 ## Destinations
@@ -58,36 +60,53 @@ In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), destinatio
 
 ### New destinations
 
-New destinations are available where you can activate your Adobe Experience Platform data. See below for details:
+Adobe Real-time CDP now supports data activation to over fifty Experience Cloud Launch extensions, enabling analytics, personalization, and other use cases. See below for details:
 
-|Destination | Description|
+|Documentation | Description|
 |--- | ---|
-|Cloud storage destinations | Adobe Real-time CDP can now deliver your segments as data files to your Amazon S3 or SFTP cloud storage locations. This enables you to send audiences and their profile attributes to your internal systems, via CSV or tab-delimited files.|
-|Advertising destinations | The Google destination card is now split into three destination cards, for the three different Google platforms currently supported in Adobe Real-time CDP: Google Ads, Google Ad Manager, Google Display & Video 360.|
+|[Destination types and categories](/help/rtcdp/destinations/destination-types.md) | This article explains the difference between connections and extensions in the Adobe Real-time CDP interface and recommends when to use each of these destinations.|
+|[Experience Platform Launch extensions](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | This page explains what Launch extensions are, lists use cases for using them, and links to documentation for each Launch extension in Adobe Real-time CDP.|
 
-To learn more, visit the [destinations overview](../../rtcdp/destinations/destinations-overview.md)
+For more information, please see the [Destinations overview](/help/rtcdp/destinations/destinations-overview.md).
 
-## Identity Service
+## Intelligent Services
 
-Delivering relevant digital experiences requires having a complete understanding of your customer. This is made more difficult when your customer data is fragmented across disparate systems, causing each individual customer to appear to have multiple "identities".
+Intelligent Services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company's needs using business-level configurations without the need for data science expertise. Additionally, marketing practitioners can activate predictions in Adobe Experience Cloud, Adobe Experience Platform, and 3rd party applications.
 
-Adobe Experience Platform Identity Service helps you to gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real-time.
+**Key features**
 
-### New features
+|Feature|Description|
+|---|---|
+| Customer AI | Customer AI provides marketers with the power to generate customer predictions at the individual level with explanations. With the help of influential factors, Customer AI can tell you what a customer is likely to do and why. Additionally, marketers can benefit from Customer AI predictions and insights to personalize customer experiences by serving the most appropriate offers and messaging. |
+| Attribution AI | Attribution AI is a multi-channel, algorithmic attribution service that calculates the influence and incremental impact of customer interactions against specified outcomes. With Attribution AI, marketers can measure and optimize marketing and advertising spend by understanding the impact of every individual customer interaction across each phase of the customers’ journeys.|
+
+**Known issues**
+
+* No known issues currently.
+
+For more information on Intelligent Services and what it has to offer, see the [Intelligent Services overview](../../intelligent-services/home.md). 
+
+## Privacy Service
+
+New legal and organizational regulations are giving users the right to access or delete their personal data from your data stores upon request. Adobe Experience Platform Privacy Service provides a RESTful API and user interface to help you manage these data requests from your customers. With Privacy Service, you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
+
+**New features**
 
 | Feature | Description |
-| ------- | ----------- |
-| Enhanced Private Graph | Private Graph functionality has been enhanced to reduce graph generation latency from a weekly batch process to a daily refreshed graph, allowing Identity Service customers to access more up-to-date identity graphs and linkages. |
+| --- | --- |
+| PDPA support | Privacy requests can now be created and tracked under the Personal Data Protection Act (PDPA) in Thailand. When making privacy requests in the API, the `regulation` array accepts the value "pdpa_tha". |
+| Namespace types in the UI | You can now specify different namespace types in the Request Builder in the Privacy Service UI. See the [user guide](../../privacy-service/ui/user-guide.md) for more information. |
+| Old endpoint deprecation | The old API endpoint (`data/privacy/gdpr`) has been deprecated. |
 
-### Known issues
+Known issues
 
 * None
 
-For more information about Identity Service, see the [Identity Service overview](../../identity-service/home.md).
+For more information about Privacy Service, please start by reading the [Privacy Service overview](../../privacy-service/home.md).
 
 ## Sources
 
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third party software, and your CRM system.
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
@@ -95,15 +114,12 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Feature | Description |
 | ------- | ----------- |
-| Deprecated signals for Adobe Audience Manager connector | Signal-level data from Audience Manger will no longer be sent. Note that segment membership for Traits and Segments will still be included. As a result of this change, inbound datasets will no longer be generated. |
-| Renamed datasets | Datasets generated by Audience Manger connector will have updated names and descriptions. |
-| Enable Profile toggle in Audience Manger | Profile toggle can be enabled or disabled to promote dataset to Real-time Customer Profile. Toggle will be enabled by default.|
-| UI support for cloud storage systems | New source connector for Azure Data Lake Storage Gen2 in the UI. |
-| UI support for CRM systems | New source connector for HubSpot, Salesforce Service Cloud, and ServiceNow in the UI. |
-| UI support for database systems | New source connector for AWS Redshift, Google BigQuery, MariaDB, Microsoft SQL Server, and MySQL in the UI. |
+| API and UI support for databases | New source connectors for Apache Spark (on HDInsights), Azure Synapse Analytics, Azure Table Storage, Hive (on HDInsights), and Phoenix. |
+| API and UI support for payments-based applications| New source connectors for PayPal. |
+| API and UI support for protocols-based applications | New source connectors for Generic OData. |
 
 ### Known issues
 
 * None
 
-To learn more about sources, see the [sources overview](../../source-connectors/home.md).
+To learn more about sources, see the [sources overview](../../sources/home.md).
