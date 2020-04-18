@@ -2,13 +2,36 @@
 title: Adobe Experience Platform Release Notes
 description: Experience Platform release notes April 8, 2020
 doc-type: release notes
-last-update: April 7, 2020
+last-update: April 13, 2020
 author: ens71067
+keywords: release notes;
 ---
 
 # Adobe Experience Platform release notes 
 
 ## Release date: April 8, 2020
+
+## Experience Data Model (XDM) System
+
+Standardization and interoperability are key concepts behind Experience Platform. Experience Data Model (XDM), driven by Adobe, is an effort to standardize customer experience data and define schemas for customer experience management.
+
+XDM is a publicly documented specification designed to improve the power of digital experiences. It provides common structures and definitions for any application to communicate with services on Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation delivering insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+### New features
+
+| Feature | Description |
+| --- | --- |
+| Automatic alternate display info | The Schema Registry automatically applies the customized title and description values configured in the `alternateDisplayInfo` descriptor. |
+| Scalar field restrictions | The Schema Registry does not allow more than 6000 scalar fields in a single schema. |
+| Performance overhaul | The Schema Registry has been overhauled to perform and meet the demands of Experience Platform better. |
+
+**Bug fixes**
+
+* Updated XDM to XED converted to support a cleaner XED format for nested URI fields in standard XDM.
+
+**Known issues**
+
+* Known
 
 ## Data Governance
 
@@ -29,6 +52,22 @@ The DULE framework simplifies and streamlines the process of categorizing data a
 * None.
 
 For more information, please see the [Data Governance overview](../../data-governance/home.md).
+
+
+## Destinations
+
+In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
+
+### New destinations
+
+Adobe Real-time CDP now supports data activation to over fifty Experience Cloud Launch extensions, enabling analytics, personalization, and other use cases. See below for details:
+
+|Documentation | Description|
+|--- | ---|
+|[Destination types and categories](/help/rtcdp/destinations/destination-types.md) | This article explains the difference between connections and extensions in the Adobe Real-time CDP interface and recommends when to use each of these destinations.|
+|[Experience Platform Launch extensions](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | This page explains what Launch extensions are, lists use cases for using them, and links to documentation for each Launch extension in Adobe Real-time CDP.|
+
+For more information, please see the [Destinations overview](/help/rtcdp/destinations/destinations-overview.md).
 
 ## Intelligent Services
 
@@ -83,4 +122,4 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 * None
 
-For more information about sources, see the [sources overview](../../source-connectors/home.md).
+To learn more about sources, see the [sources overview](../../sources/home.md).

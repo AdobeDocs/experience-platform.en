@@ -1,11 +1,10 @@
 ---
-
 title: Adobe Experience Platform Release Notes
 description: Experience Platform release notes March 11, 2020
 doc-type: release notes
 last-update: March 10, 2020
 author: ens71067
-
+keywords: release notes;
 ---
 
 # Adobe Experience Platform release notes 
@@ -20,8 +19,7 @@ Adobe Experience Platform Data Governance is a series of strategies and technolo
 
 ### New features
 
->[!NOTE]
->Some of the following new features are currently in beta and are not available to all users. Beta features are subject to change.
+>[!NOTE] Some of the following new features are currently in beta and are not available to all users. Beta features are subject to change.
 
 | Feature | Description |
 | ------- | ----------- |
@@ -106,4 +104,4 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 * None
 
-To learn more about sources, see the [sources overview](../../source-connectors/home.md).
+To learn more about sources, see the [sources overview](../../sources/home.md).

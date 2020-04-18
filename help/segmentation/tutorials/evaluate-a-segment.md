@@ -448,7 +448,7 @@ The following sections outline these options in more detail.
 
 If you know the specific profile that you would like to access, you can do so using the Real-time Customer Profile API. The complete steps for accessing individual profiles are available in the [Access Real-time Customer Profile data using the Profile API](../../profile/api/entities.md) tutorial.
 
-## Export a segment
+## Export a segment {#export}
 
 After a segmentation job has successfully completed (the value of the `status` attribute is "SUCCEEDED"), you can export your audience to a dataset where it can be accessed and acted upon. 
 
@@ -500,8 +500,7 @@ curl -X POST \
         "persisted": true,
         "containerFormat": "parquet",
         "format": "parquet"
-    },
-    "aspect": "production"
+    }
 }'
 ```
 
