@@ -31,7 +31,7 @@ Experience Platform allows you to set up source connections to various data prov
 
 Source connections can be configured to gather data from other Adobe applications (such as Adobe Analytics and Adobe Audience Manager), third-party cloud storage sources (such as Azure Blob, Amazon S3, FTP servers, and SFTP servers), and third-party CRM systems (such as Microsoft Dynamics and Salesforce).
 
-See the [Sources overview](../source-connectors/home.md) for more information.
+See the [Sources overview](../sources/home.md) for more information.
 
 ## Next steps
 
