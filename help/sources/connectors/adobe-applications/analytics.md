@@ -33,7 +33,7 @@ To learn more about XDM, please see the [XDM System overview](../../../xdm/home.
 
 ## How are fields mapped from Adobe Analytics to XDM?
 
-When a source connection is established for bringing Analytics data into Experience Platform using the Platform user interface, data fields are automatically mapped and ingested into Real-time Customer Profile within minutes. For instructions on creating a source connection with Adobe Analytics using the Platform UI, see the [Analytics data connector tutorial](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/adobe-applications/adobe-analytics-ui-tutorial.md).
+When a source connection is established for bringing Analytics data into Experience Platform using the Platform user interface, data fields are automatically mapped and ingested into Real-time Customer Profile within minutes. For instructions on creating a source connection with Adobe Analytics using the Platform UI, see the [Analytics data connector tutorial](../../tutorials/ui/create/adobe-applications/analytics.md).
 
 For detailed information on the field mapping that occurs between Analytics and Experience Platform, please visit the [Adobe Analytics field mapping](./analytics-mapping.md) guide.
 
