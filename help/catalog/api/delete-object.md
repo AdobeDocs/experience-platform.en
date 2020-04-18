@@ -17,9 +17,11 @@ You can delete a Catalog object by providing its ID in the path of a DELETE requ
 DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 ```
 
+>[!IMPORTANT] The `DELETE /batches/{ID}` endpoint has been deprecated. In order to delete a batch, you should be using the [Batch Ingestion API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
+
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of Catalog object to be deleted. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | The type of Catalog object to be deleted. Valid objects are: <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | The identifier of the specific object you want to update. |
 
 **Request**
