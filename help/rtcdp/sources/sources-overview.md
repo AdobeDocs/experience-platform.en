@@ -9,4 +9,4 @@ seo-description: This document provides an overview of Sources in Real-Time Cust
 
 Real-Time Customer Data Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe Solutions, cloud-based storage, third party software, and your CRM.
 
-For a more detailed overview of sources, including a list of available sources and links to tutorials, please read the [Sources documentation](../../source-connectors/home.md).
+For a more detailed overview of sources, including a list of available sources and links to tutorials, please read the [Sources documentation](../../sources/home.md).
