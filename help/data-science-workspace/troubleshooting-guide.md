@@ -13,7 +13,7 @@ This document provides answers to frequently asked questions about Adobe Experie
 
 >[!IMPORTANT] This issue has been resolved but could still be present in the Google Chrome 80.x browser. Please ensure your Chrome browser is up-to-date. 
 
-With the Google Chrome browser version 80.x, all 3rd party cookies are blocked by default. This policy can prevent JupyterLab from loading within Adobe Experience Platform.
+With the Google Chrome browser version 80.x, all third-party cookies are blocked by default. This policy can prevent JupyterLab from loading within Adobe Experience Platform.
 
 To remedy this issue use the following steps: 
 
