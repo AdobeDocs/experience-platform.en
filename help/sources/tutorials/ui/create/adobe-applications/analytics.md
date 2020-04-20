@@ -9,6 +9,14 @@ topic: overview
 
 This tutorial provides steps for creating an Adobe Analytics source connector in the UI to bring consumer data into Adobe Experience Platform.
 
+## Getting started
+
+This tutorial requires a working understanding of the following components of Adobe Experience Platform:
+
+*   [Experience Data Model (XDM) System](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+*   [Real-time Customer Profile](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+*   [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+
 ## Create a source connection with Adobe Analytics
 
 Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> and then select **Sources** from the left navigation bar to access the sources workspace. The *Catalog* screen displays available sources to create inbound connections with, and each source shows the number of existing accounts and dataset flows associated to them.
@@ -28,7 +36,6 @@ The *Accounts* screen lists all previously established accounts for Adobe Analyt
 Analytics report suites can be configured for one sandbox at a time. To import the same report suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.
 
 From the list of available report suites, select the one you want to bring into Platform and click **Next**.
-
 
 ![](../../../../images/tutorials/create/analytics/select-data.png)
 
