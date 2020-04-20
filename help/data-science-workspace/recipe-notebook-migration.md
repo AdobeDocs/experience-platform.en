@@ -334,6 +334,10 @@ Recent changes to JupyterLab notebooks require that you update your existing PyS
 - [PySpark 2.3 to 2.4 migration guide](#pyspark-notebook-migration)
 - [Spark 2.3 to Spark 2.4 (Scala) migration guide](#spark-notebook-migration)
 
+The following video is designed to further assist in understanding the changes that are required for JupyterLab Notebooks:
+
+>[!VIDEO](https://video.tv.adobe.com/v/33444?quality=12&learn=on)
+
 ## PySpark 2.3 to 2.4 notebook migration guide {#pyspark-notebook-migration}
 
 With the introduction of PySpark 2.4 to JupyterLab Notebooks, new Python notebooks with PySpark 2.4 are now using the Python 3 kernel instead of the PySpark 3 kernel. This means existing code running on PySpark 2.3 is not supported in PySpark 2.4.
