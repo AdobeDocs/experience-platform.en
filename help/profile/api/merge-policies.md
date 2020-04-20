@@ -415,7 +415,7 @@ A successful response returns the details of the newly created merge policy.
 
 See the [components of merge policies](#components-of-merge-policies) section at the beginning of this document for details on each of the individual elements that make up a merge policy.
 
-## Update a merge policy
+## Update a merge policy {#update}
 
 You can modify an existing merge policy by editing individual attributes (PATCH) or by overwriting the entire merge policy with new attributes (PUT). Examples of each are shown below.
 
