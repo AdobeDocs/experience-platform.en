@@ -11,28 +11,37 @@ This tutorial provides steps for creating an Adobe Analytics source connector in
 
 ## Create a source connection with Adobe Analytics
 
-Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> and then select **Sources** from the left navigation bar to access the sources workspace. The *Catalog* screen displays available sources to create in-bound connections with, and each source shows the number of existing connections associated to them. Select the option for **Adobe Analytics** and then click **View source** to see all established in-bound connections to it.
+Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> and then select **Sources** from the left navigation bar to access the sources workspace. The *Catalog* screen displays available sources to create inbound connections with, and each source shows the number of existing accounts and dataset flows associated to them.
 
-![](../../../../images/tutorials/create/analytics/AA-sources_catalog.png)
+You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-The *Source activity* screen lists all previously established connections to Adobe Analytics, you can create a new connection by clicking **Select data**. 
+Under the *Adobe Applications* category, select **Adobe Analytics** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To view existing accounts, select **Accounts**.
 
->[!NOTE] Multiple in-bound connections to a source can be made for bringing in different data. 
+![](../../../../images/tutorials/create/analytics/catalog.png)
 
-![](../../../..//images/tutorials/create/analytics/AA-source_activity.png)
+The *Accounts* screen lists all previously established accounts for Adobe Analytics, you can create a new dataset flow by clicking **Select data**. 
+
+>[!NOTE] Multiple in-bound connections to a source can be made for bringing in different data.
+
+![](../../../../images/tutorials/create/analytics/dataset-flows.png)
+
+Analytics report suites can be configured for one sandbox at a time. To import the same report suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.
 
 From the list of available report suites, select the one you want to bring into Platform and click **Next**.
 
->[!NOTE] Only one report suite can be selected per Analytics source connection. Additionally, only one report suite can only exist in one sandbox.
 
-![](../../../../images/tutorials/create/analytics/AA-select_data.png)
+![](../../../../images/tutorials/create/analytics/select-data.png)
+
+The *Dataset flow detail* step appears, where you must provide a name and an optional description for the dataset flow. Select **Next** when finished.
+
+![](../../../../images/tutorials/create/analytics/dataset-flow-detail.png)
 
 The *Review* step appears, allowing you to review your new Analytics in-bound connection before it is created. Details of the connection are grouped by categories, including:
 
-*   *Source details*: Shows the type of the source connection and the selected report suite.
-*   *Target details*: When creating other source connectors, this container shows which dataset the source data is ingesting into, including the schema the dataset adheres to. Analytics data is automatically mapped and ingested into Real-time Customer Profiles.
+*   *Connection*: Shows the type of the source connection and the selected report suite.
+*   *Assign dataset & map fields*: When creating other source connectors, this container shows which dataset the source data is ingesting into, including the schema the dataset adheres to. Analytics data is automatically mapped and ingested into Real-time Customer Profiles.
 
-![](../../../../images/tutorials/create/analytics/AA-review.png)
+![](../../../../images/tutorials/create/analytics/review.png)
 
 ## Next steps
 
