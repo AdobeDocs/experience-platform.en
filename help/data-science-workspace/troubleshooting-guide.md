@@ -11,7 +11,7 @@ This document provides answers to frequently asked questions about Adobe Experie
 
 ## JupyterLab environment is not loading in Google Chrome
 
->[!IMPORTANT] This issue has been resolved but could still be present in Google Chrome 80.x browser. Please ensure your Chrome browser is up-to-date. 
+>[!IMPORTANT] This issue has been resolved but could still be present in the Google Chrome 80.x browser. Please ensure your Chrome browser is up-to-date. 
 
 With the Google Chrome browser version 80.x, all 3rd party cookies are blocked by default. This policy can prevent JupyterLab from loading within Adobe Experience Platform.
 
@@ -43,15 +43,15 @@ After Step 2, you are prompted to relaunch your browser. After you relaunch, Jup
 
 Safari disables third-party cookies by default in Safari < 12. Because your Jupyter virtual machine instance resides on a different domain than its parent frame, Adobe Experience Platform currently requires that third-party cookies be enabled. Please enable third-party cookies or switch to a different browser such as Google Chrome.
 
-For Safari 12, you need to switch your User Agent to 'Chrome' or 'Firefox'. To switch your User Agent start by opening the *Safari* menu and select **Preferences**. The preferences window appears.
+For Safari 12, you need to switch your User Agent to 'Chrome' or 'Firefox'. To switch your User Agent, start by opening the *Safari* menu and select **Preferences**. The preferences window appears.
 
 ![Safari preferences](./images/faq/preferences.png)
 
-Within the Safari preferences window, select **Advanced**. Then within that menu, check *Show Develop menu in menu bar*. You can close the preferences window after this step is complete.
+Within the Safari preferences window, select **Advanced**. Then check the *Show Develop menu in menu bar* box. You can close the preferences window after this step is complete.
 
 ![Safari advanced](./images/faq/advanced.png)
 
-Next, from the top navigation bar select the **Develop** menu. From within the *Develop* dropdown, hover over *User Agent*. You can select the **Chrome** or **Firefox** user agent string you would like to use.
+Next, from the top navigation bar select the **Develop** menu. From within the *Develop* dropdown, hover over *User Agent*. You can select the **Chrome** or **Firefox** User Agent string you would like to use.
 
 ![Develop menu](./images/faq/user-agent.png)
 
