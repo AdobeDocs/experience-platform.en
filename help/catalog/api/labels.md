@@ -7,7 +7,7 @@ topic: developer guide
 
 # Data usage labels
 
-The Catalog Service API provides endpoints to manage data usage labels for datasets. For a robust introduction to the role data usage labels with the Adobe Experience Platform Data Governance framework, please refer to the [labels overview](../../data-governance/labels/overview.md).
+The Catalog Service API provides endpoints to manage data usage labels for datasets. For a robust introduction to the role of data usage labels within the Adobe Experience Platform Data Governance framework, please refer to the [labels overview](../../data-governance/labels/overview.md).
 
 >[!NOTE] In order to make calls to the endpoints outlined in the sections below, you must have the unique `id` value for a specific dataset. If you do not have this value, see the section on [listing Catalog objects](list-objects.md) to find the IDs of your existing datasets.
 
@@ -106,7 +106,7 @@ curl -X POST \
 | Property | Description |
 | --- | --- |
 | `labels` | A list of data usage labels that you want to add to the dataset. |
-| `optionalLabels` | A list of any optional fields or schemas within the dataset that you want to add labels to. Each item in this array must have the following properties: <ul><li><code>option</code>: The Experience Data Model (XDM) schema of the optional field. This object must contain the following three properties:<ul><li><code>id</code>: The URI <code>$id</code> value of the schema.</li><li><code>contentType</code>: The content type and version number of the schema. This should take the form of one of a valid <a href="../../xdm/api/look-up-resource.md">Accept header</a> in an XDM lookup request.</li><li><code>schemaPath</code>: The path to the optional field within the dataset's schema.</li></ul></li><li><code>labels</code>: A list of data usage labels that you want to add to the optional field.</li></ul> |
+| `optionalLabels` | A list of any optional fields or schemas within the dataset that you want to add labels to. Each item in this array must have the following properties: <br/><br/>`option`: The Experience Data Model (XDM) schema of the optional field. This object must contain the following three properties:<ul><li><code>id</code>: The URI <code>$id</code> value of the schema.</li><li><code>contentType</code>: The content type and version number of the schema. This should take the form of one of the valid <a href="../../xdm/api/look-up-resource.md">Accept headers</a> for an XDM lookup request.</li><li><code>schemaPath</code>: The path to the optional field within the dataset's schema.</li></ul>`labels`: A list of data usage labels that you want to add to the optional field. |
 
 **Response**
 
@@ -172,7 +172,7 @@ curl -X PUT \
 | Property | Description |
 | --- | --- |
 | `labels` | A list of data usage labels that will overwrite the existing labels for the dataset. |
-| `optionalLabels` | A list of any optional fields or schemas within the dataset whose labels you wish to overwrite or maintain. Each item in this array must have the following properties: <ul><li><code>option</code>: The Experience Data Model (XDM) schema of the optional field. This object must contain the following three properties:<ul><li><code>id</code>: The URI <code>$id</code> value of the schema.</li><li><code>contentType</code>: The content type and version number of the schema. This should take the form of one of a valid <a href="../../xdm/api/look-up-resource.md">Accept header</a> in an XDM lookup request.</li><li><code>schemaPath</code>: The path to the optional field within the dataset's schema.</li></ul></li><li><code>labels</code>: A list of data usage labels to apply to the optional field.</li></ul> |
+| `optionalLabels` | A list of any optional fields or schemas within the dataset whose labels you wish to overwrite or maintain. Each item in this array must have the following properties: <br/><br/>`option`: The Experience Data Model (XDM) schema of the optional field. This object must contain the following three properties:<ul><li><code>id</code>: The URI <code>$id</code> value of the schema.</li><li><code>contentType</code>: The content type and version number of the schema. This should take the form of one of the valid <a href="../../xdm/api/look-up-resource.md">Accept headers</a> for an XDM lookup request.</li><li><code>schemaPath</code>: The path to the optional field within the dataset's schema.</li></ul>`labels`: A list of data usage labels that you want to add to the optional field. |
 
 ## Delete labels for a dataset
 
