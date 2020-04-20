@@ -13,7 +13,7 @@ This document provides steps on how to manage data usage labels at the dataset- 
 
 Before you read this guide, it is recommended that you read the [Catalog Service overview](../../catalog/home.md) for a more robust introduction to the service. In addition, you must also follow the steps outlined in the [getting started section](../../catalog/api/getting-started.md) in the Catalog developer guide to gather the required credentials to make calls to the Catalog API.
 
-In order to make calls to the endpoints outlined in the sections below, you must have the unique `id` value for a specific dataset. If you do not have this value, see the developer guide section on [listing Catalog objects](list-objects.md) to find the IDs of your existing datasets.
+In order to make calls to the endpoints outlined in the sections below, you must have the unique `id` value for a specific dataset. If you do not have this value, see the developer guide section on [listing Catalog objects](../../catalog/api/list-objects.md) to find the IDs of your existing datasets.
 
 ## Look up labels for a dataset {#lookup}
 
