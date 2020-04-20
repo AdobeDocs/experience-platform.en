@@ -58,4 +58,3 @@ Once the connection is created, a target schema and dataset is automatically cre
 *   [Segmentation Service overview](../../../../../segmentation/home.md)
 *   [Data Science Workspace overview](../../../../../data-science-workspace/home.md)
 *   [Query Service overview](../../../../../query-service/home.md)
-
