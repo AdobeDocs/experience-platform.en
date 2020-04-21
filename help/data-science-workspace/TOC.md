@@ -21,6 +21,7 @@ user-guide-title: Adobe Experience Platform Data Science Workspace Help
   * [Models](api/models.md)
   * [MLServices](api/mlservices.md)
   * [Insights](api/insights.md)
+  * [Appendix](api/appendix.md)
 * Pre-built recipes {#pre-built-recipes}
   * [Product recommendation recipe](pre-built-recipes/product-recommendations.md)
   * [Product purchase prediction](pre-built-recipes/product-purchase-prediction.md)
@@ -45,5 +46,6 @@ user-guide-title: Adobe Experience Platform Data Science Workspace Help
   * [Publish a model as a service (UI)](models-recipes/publish-model-service-ui.md)
   * [Publish a model as a service (API)](models-recipes/publish-model-service-api.md)
   * [Schedule automated training and scoring on a service (UI)](models-recipes/schedule-models-ui.md)
+* [Recipe and notebook migration guides](recipe-notebook-migration.md) 
 * [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)

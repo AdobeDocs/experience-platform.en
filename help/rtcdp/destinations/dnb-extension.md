@@ -15,6 +15,8 @@ D&B Visitor Intelligence is a personalization extension in Adobe Real-time Custo
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
+![D&B Visitor Intelligence extension](assets/dnb-extension.png)
+
 ## Prerequisites {#prerequisites}
 
 This extension is available in the Destinations catalog for all customers who have purchased Adobe Real-time CDP.

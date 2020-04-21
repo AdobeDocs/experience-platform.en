@@ -19,7 +19,7 @@ In Adobe Real-time Customer Data Platform, we distinguish between two destinatio
 
 ### Connections
 
-**Profile Export** and **Segment Export** destinations in Adobe Real-time Customer Data Platform capture event data, combine it with other data sources to form the [real-time customer profile](https://docs.adobe.com/content/help/en/experience-platform/profile/home.html), apply segmentation, and export segments and qualified profiles to destinations. 
+**Profile Export** and **Segment Export** destinations in Adobe Real-time Customer Data Platform capture event data, combine it with other data sources to form the [real-time customer profile](/help/profile/home.md), apply segmentation, and export segments and qualified profiles to destinations. 
 
 <br>&nbsp;
 
@@ -41,12 +41,13 @@ The video below runs you through the particularities of the two types of destina
 
 ### Extensions
 
- Adobe Real-time CDP leverages the power and flexibility of Experience Platform Launch to include Launch extensions in the Adobe Real-time CDP interface. 
- 
- Launch extensions forward raw event data to several types of destinations. Think of extensions as an **Event Forwarding** type of destination. This is a simpler type of integration with destination platforms, which only forwards raw event data. Examples of those are the [Gainsight personalization extension](/help/rtcdp/destinations/gainsight-extension.md) or the [Confirmit Voice of the Customer extension](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md).
+Adobe Real-time CDP leverages the power and flexibility of Experience Platform Launch to include Launch extensions in the Adobe Real-time CDP interface. 
 
- For detailed information about Experience Platform Launch extensions, see the [Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
+>[!TIP]
+>
+>For detailed information about Experience Platform Launch extensions, including use cases and how to find them in the interface, see the [Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
+Launch extensions forward raw event data to several types of destinations. Think of extensions as an **Event Forwarding** type of destination. This is a simpler type of integration with destination platforms, which only forwards raw event data. Examples of those are the [Gainsight personalization extension](/help/rtcdp/destinations/gainsight-extension.md) or the [Confirmit Voice of the Customer extension](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md).
 
 ![Experience Platform Launch extensions compared to other destinations](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
@@ -64,7 +65,7 @@ Extensions are helpful when event data is used to trigger an action, or to condu
 
 ## Destination categories
 
-The destinations and extensions in the [destinations catalog](https://platform.adobe.com/destination/catalog) are grouped by destination category (**Advertising**, **Cloud storage**, **CRM**, **Email marketing**, etc.), depending on the marketing use case that they help you achieve. For more information on each of the categories, as well as the destinations included in each category, see the [Destinations catalog documentation](/help/rtcdp/destinations/destinations-catalog.md).
+The connections and extensions in the [destinations catalog](https://platform.adobe.com/destination/catalog) are grouped by destination category (**Advertising**, **Cloud storage**, **Survey platforms**, **Email marketing**, etc.), depending on the marketing use case that they help you achieve. For more information on each of the categories, as well as the destinations included in each category, see the [Destinations catalog documentation](/help/rtcdp/destinations/destinations-catalog.md).
 
-![Destination categories](/help/rtcdp/destinations/assets/destination-categories.png)
+![Destination categories](/help/rtcdp/destinations/assets/destination-categories-menu.png)
 

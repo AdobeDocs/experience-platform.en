@@ -31,7 +31,7 @@ Using the provided credentials, log in to Snowflake. Click the **Worksheets** ta
 
 ![find a schema](./images/download-scores/edited_snowflake_2.png)
 
-## Downloading raw scores from Snowflake
+## Downloading raw scores
 
 Please contact attributionai-support@adobe.com for more details on raw score downloads.
 

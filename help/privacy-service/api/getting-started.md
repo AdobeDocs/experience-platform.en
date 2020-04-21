@@ -22,11 +22,11 @@ The following sections provide additional information that you will need to know
 
 ### Reading sample API calls
 
-This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](https://www.adobe.io/apis/experienceplatform/home/services/troubleshooting.html#!api-specification/markdown/narrative/technical_overview/platform_faq_and_troubleshooting/platform_faq_and_troubleshooting.md) in the Experience Platform troubleshooting guide.
+This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md) in the Experience Platform troubleshooting guide.
 
 ### Gather values for required headers
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/authenticate_to_acp_tutorial/authenticate_to_acp_tutorial.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -36,10 +36,6 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 * Content-Type: application/json
 
-## Sample API calls
-
-Now that you understand what headers to use, you are ready to begin making calls to the Privacy Service API. The document on [privacy jobs](privacy-jobs.md) walks through the various API calls you can make using the Privacy Service API. Each example call includes the general API format, a sample request showing required headers, and a sample response.
-
 ## Next steps
 
-Now that you have learned how to make calls using the Privacy Service API, you can create your own non-interactive queries. For steps on how to perform the same operations in the Privacy Service UI, please read the [UI overview](../ui/overview.md).
+Now that you understand what headers to use, you are ready to begin making calls to the Privacy Service API. The document on [privacy jobs](privacy-jobs.md) walks through the various API calls you can make using the Privacy Service API. Each example call includes the general API format, a sample request showing required headers, and a sample response.

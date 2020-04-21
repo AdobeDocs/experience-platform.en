@@ -67,7 +67,7 @@ Check the respective advertising destination that you are activating your data t
 
 ### Social network destinations
 
-For Facebook, a successful activation means that a Facebook custom audience would be created programmatically in [Facebook Ads Manager](https://www.facebook.com/adsmanager/manage/).Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated segments.
+For Facebook, a successful activation means that a Facebook custom audience would be created programmatically in [Facebook Ads Manager](https://www.facebook.com/adsmanager/manage/). Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated segments.
 
 ## Disable activation {#disable-activation}
 

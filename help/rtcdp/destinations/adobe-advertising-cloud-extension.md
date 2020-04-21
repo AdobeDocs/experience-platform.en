@@ -15,6 +15,7 @@ Adobe Advertising Cloud is an advertising extension in Adobe Real-time Customer 
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
+![Adobe Advertising Cloud extension](/help/rtcdp/destinations/assets/adobe-advertising-cloud-extension.png)
 
 ## Prerequisites {#prerequisites}
 

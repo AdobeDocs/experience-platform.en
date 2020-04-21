@@ -38,7 +38,7 @@ Additional metrics--for example for profiles and segments--are available in othe
 
 The **[!UICONTROL Datasets]** counter shows the number of datasets in the system and the amount of data in Platform. This counter is updated when a dataset is created.
 
-For more information about datasets, see [Ingest data into Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
+For more information about datasets, see the [datasets overview](../catalog/datasets/overview.md).
 
 ### Profiles
 
@@ -54,7 +54,7 @@ For more information about profiles, see [A unified view of your customer in Rea
 
 **[!UICONTROL Segments]** shows the total number of segments created for the organization. This number is updated when new segments are created.
 
-For more information about segments, see [Segmentation Service overview](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md).
+For more information about segments, see [Segmentation Service overview](segmentation/segmentation-overview.md).
 
 ### Destinations
 
@@ -102,7 +102,7 @@ The **[!UICONTROL Recent datasets]** card shows the five most recent datasets cr
 
 Click a dataset to view the details for that item, or **[!UICONTROL View all]** to see the list of datasets. From there, you can click on a specific source for details.
 
-For more information about datasets, see [Ingest data into Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
+For more information about datasets, see the [datasets overview](../catalog/datasets/overview.md).
 
 ### Recent sources
 
@@ -118,7 +118,7 @@ The **[!UICONTROL Recent segments]** metric card shows the five most recent segm
 
 Click a segment to view the details for that item, or **[!UICONTROL View all]** to see information about more segments.
 
-For more information about segments, see [Segmentation Service overview](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md).
+For more information about segments, see [Segmentation Service overview](segmentation/segmentation-overview.md).
 
 ### Recent destinations
 

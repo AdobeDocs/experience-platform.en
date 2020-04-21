@@ -34,9 +34,10 @@ Creating a recipe from scratch can be done within Data Science Workspace. To sta
 
 The Recipe Builder notebook allows you to run training and scoring runs inside the notebook. This gives you the flexibility to make changes to their `train()` and `score()` methods in between running experiments on the training and scoring data. Once you are happy with the outputs of the training and scoring, you can create a recipe to be used in Data Science Workspace using the notebook to recipe functionality built in to the Recipe Builder notebook.
 
->[!NOTE] The Recipe Builder notebook supports working with all file formats but currently the Create Recipe functionality only supports Python.
+>[!NOTE] 
+>The Recipe Builder notebook supports working with all file formats but currently the Create Recipe functionality only supports Python.
 
-![](../images/jupyterlab/create-recipe/notebook_launcher.png)
+![](../images/jupyterlab/create-recipe/recipe-builder.png)
 
 When you click on the Recipe Builder notebook from the launcher, the notebook will be opened in the tab. The template used in the notebook is the Python Retail Sales Forecasting Recipe which can also be found in [this public repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
@@ -46,7 +47,6 @@ You will notice that in the toolbar there are three additional actions namely â€
 
 ## Make edits to recipe files
 
-<!-- Databricks update to recipe needed -->
 To make edits to the recipe files, navigate to the cell in Jupyter corresponding to the file path. For example, if you want to make changes to `evaluator.py`, look for `%%writefile demo-recipe/evaluator.py`. 
 
 Start making necessary changes to the cell and when finished, simply run the cell. The `%%writefile filename.py` command will write the contents of the cell to the `filename.py`. You will have to manually run the cell for each file with changes.
@@ -65,9 +65,6 @@ Now that you know the basics for the JupyterLab notebook environment, you can be
 - [Evaluator file](#evaluator-file)
 - [Data Saver file](#data-saver-file)
 
-
-
-
 ### Requirements file
 
 The requirements file is used to declare additional libraries you wish to use in the recipe. You can specify the version number if there is a dependency. To look for additional libraries, visit https://anaconda.org. The list of main libraries already in use include:
@@ -80,9 +77,8 @@ numpy
 data_access_sdk_python
 ```
 
->[!NOTE] Libraries or specific versions you add may be incompatible with the above libraries.
-
-
+>[!NOTE] 
+>Libraries or specific versions you add may be incompatible with the above libraries.
 
 ### Configuration files
 
@@ -97,7 +93,7 @@ Users must fill in the following variables before running training and scoring:
 
 To find the dataset and schema IDs, go to the Data Tab within notebooks on the left navigation bar (under the folder icon).
 
-![](../images/jupyterlab/create-recipe/data_tab.png)
+![](../images/jupyterlab/create-recipe/datasets.png)
 
 The same information can be found on [Adobe Experience Platform](https://platform.adobe.com/) under the **[Schema](https://platform.adobe.com/schema)** and **[Datasets](https://platform.adobe.com/dataset/overview)** tabs.
 
@@ -107,8 +103,6 @@ By default, the following configuration parameters are set for you when you acce
 - `ML_FRAMEWORK_IMS_TOKEN` 
 - `ML_FRAMEWORK_IMS_ML_TOKEN` 
 - `ML_FRAMEWORK_IMS_TENANT_ID` 
-
-
 
 ## Training data loader
 
@@ -125,7 +119,8 @@ This step uses the [pandas dataframe](https://pandas.pydata.org/pandas-docs/stab
 - [Platform SDK](#platform-sdk)
 - [External sources](#external-sources)
 
->[!NOTE] In the Recipe Builder notebook, data is loaded via the `platform_sdk` data loader.
+>[!NOTE] 
+>In the Recipe Builder notebook, data is loaded via the `platform_sdk` data loader.
 
 ### Platform SDK
 
@@ -151,11 +146,10 @@ df = pd.read_json(data)
 
 Now your data is in the dataframe object and can be analyzed and manipulated in the [next section](#data-preparation-and-feature-engineering).
 
-
-
 ### From Data Access SDK (Deprecated)
 
->[!CAUTION]  `data_access_sdk_python` is no longer recommended, please see [Convert Data Access code to Platform SDK](../authoring/platform-sdk.md) for a guide on using the `platform_sdk` data loader.
+>[!CAUTION] 
+> `data_access_sdk_python` is no longer recommended, please see [Convert Data Access code to Platform SDK](../authoring/platform-sdk.md) for a guide on using the `platform_sdk` data loader.
 
 Users can load data using the Data Access SDK. The library can be imported at the top of the page by including the line:
 
@@ -172,7 +166,8 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
                      ims_org=configProperties['ML_FRAMEWORK_IMS_TENANT_ID'])
 ```
 
->[!NOTE] As mentioned in the [Configuration File section](#configuration-files), the following configuration parameters are set for you when you access data from Experience Platform:
+>[!NOTE] 
+>As mentioned in the [Configuration File section](#configuration-files), the following configuration parameters are set for you when you access data from Experience Platform:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID` 
 > - `ML_FRAMEWORK_IMS_TOKEN` 
 > - `ML_FRAMEWORK_IMS_ML_TOKEN` 
@@ -292,17 +287,16 @@ df.dropna(0, inplace=True)
 
 The `load()` function in your scoring data loader should complete with the scoring dataset as the output.
 
-
-
 ### Pipeline file
 
-The `pipeline.py` file includes logic for training and scoring. We will go over both in the next two sections.
+The `pipeline.py` file includes logic for training and scoring. 
 
 ### Training 
 
 The purpose of training is to create a model using features and labels in your training dataset. 
 
->[!NOTE]  _Features_ refer to the input variable used by the machine learning model to predict the _labels_.
+>[!NOTE]  
+>_Features_ refer to the input variable used by the machine learning model to predict the _labels_.
 
 The `train()` function should include the training model and return the trained model. Some examples of different models can be found in the [scikit-learn user guide documentation](https://scikit-learn.org/stable/user_guide.html). 
 
@@ -341,8 +335,6 @@ def train(configProperties, data):
 ```
 
 Notice that depending on your application, you will have arguments in your `GradientBoostingRegressor()` function. `xTrainingDataset` should contain your features used for training while `yTrainingDataset` should contain your labels.
-
-
 
 ### Scoring 
 
@@ -451,7 +443,6 @@ def save(configProperties, prediction):
     print(prediction)
 ```
 
-
 ## Training and scoring
 
 When you are done making changes to your notebook and want to train your recipe, you can click on the associated buttons at the top of the bar to creating a training run in the cell. Upon clicking the button, a log of commands and outputs from the training script will appear in the notebook (under the `evaluator.py` cell). Conda first installs all the dependencies, then the training is initiated.
@@ -462,7 +453,11 @@ For debugging purposes, if you wish to see the hidden output, add `debug` to the
 
 ## Create recipe
 
-When you are done editing the recipe and satisfied with the training/scoring output, you can create a recipe from the notebook by pressing **Create Recipe**. After pressing the button, you will be prompted to enter a recipe name. This name will represent the actual recipe created on Platform.
+When you are done editing the recipe and satisfied with the training/scoring output, you can create a recipe from the notebook by pressing **Create Recipe** in the top-right navigation. 
+
+![](../images/jupyterlab/create-recipe/create-recipe.png)
+
+After pressing the button, you are prompted to enter a recipe name. This name represents the actual recipe created on Platform.
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
@@ -489,6 +484,6 @@ To continue learning how to work with resources within Data Science Workspace, p
 
 The following video is designed to support your understanding of building and deploying models.
 
->[!VIDEO](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-science-workspace/build-and-deploy-a-model.html)
+>[!VIDEO](https://video.tv.adobe.com/v/30575?quality=12&enable10seconds=on&speedcontrol=on)
 
 

@@ -15,7 +15,7 @@ user-guide-title: Adobe Experience Platform Help
   * [Catalog and Datasets](https://docs.adobe.com/content/help/en/experience-platform/catalog/home.html)
   * [Data Access](https://docs.adobe.com/content/help/en/experience-platform/data-access/home.html)
   * [Data Governance](https://docs.adobe.com/content/help/en/experience-platform/data-governance/home.html)
-  * [Data Ingestion (Batch and Streaming)](https://docs.adobe.com/content/help/en/experience-platform/ingestion/home.html)
+  * [Data Ingestion](https://docs.adobe.com/content/help/en/experience-platform/ingestion/home.html)
   * [Data Science Workspace](https://docs.adobe.com/content/help/en/experience-platform/data-science-workspace/home.html)
   * [Debugger](https://docs.adobe.com/content/help/en/debugger/using/experience-cloud-debugger.html)
   * [Decisioning Service](https://docs.adobe.com/content/help/en/experience-platform/decisioning/home.html)

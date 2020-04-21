@@ -39,7 +39,7 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-For more information on sandboxes in Platform, see the [sandbox overview documentation]^(../../technical_overview/sandboxes/sandboxes-overview.md). 
+For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All requests with a payload in the request body (such as POST, PUT, and PATCH calls) must include a `Content-Type` header. Accepted values specific to each call are provided in the call parameters.
 

@@ -13,7 +13,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [Audience Manager connector](connectors/adobe-applications/audience-manager.md)
     - [Customer attributes connector](connectors/adobe-applications/customer-attributes.md)
   - Advertising {#advertising}
-    - [Google AdWords connector](connectors/advertising/ads.md)
+    - [Google Ads connector](connectors/advertising/ads.md)
   - Cloud storage {#cloud-storage}
     - [Azure Data Lake Storage Gen2 connector](connectors/cloud-storage/adls-gen2.md)
     - [Azure Blob and Amazon S3 connector](connectors/cloud-storage/blob-s3.md)
@@ -54,7 +54,6 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Google Cloud Storage connector](tutorials/api/create/cloud-storage/google.md)
       - [SFTP connector](tutorials/api/create/cloud-storage/sftp.md)
     - CRM {#crm}
-      - [Google AdWords connector](tutorials/api/create/crm/adwords.md)
       - [HubSpot connector](tutorials/api/create/crm/hubspot.md)
       - [Microsoft Dynamics connector](tutorials/api/create/crm/ms-dynamics.md)
       - [Salesforce connector](tutorials/api/create/crm/salesforce.md)
@@ -102,8 +101,8 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
 - UI tutorials {#ui-tutorials}
   - Create a source connector {#create}
     - Adobe applications {#adobe-applications}
-      - [Adobe Audience Manager connector](tutorials/ui/create/adobe-applications/analytics.md)
-      - [Adobe Analytics connector](tutorials/ui/create/adobe-applications/audience-manager.md)
+      - [Adobe Analytics connector](tutorials/ui/create/adobe-applications/analytics.md)
+      - [Adobe Audience Manager connector](tutorials/ui/create/adobe-applications/audience-manager.md)
       - [Customer attributes connector](tutorials/ui/create/adobe-applications/customer-attributes.md)
     - Advertising {#create}
       - [Google Ads connector](tutorials/ui/create/advertising/ads.md)

@@ -22,5 +22,6 @@ You can activate your data to different destination categories in the Real-time 
 * [Data Management Platform](/help/rtcdp/destinations/dmp-destinations.md)
 * [Email marketing](/help/rtcdp/destinations/email-marketing-destinations.md)
 * [Personalization](/help/rtcdp/destinations/personalization-destinations.md)
+* [Social destinations](/help/rtcdp/destinations/social-network-destinations.md)
 * [Surveys](/help/rtcdp/destinations/survey-destinations.md)
 * [Voice of the customer](/help/rtcdp/destinations/voice-of-customer-destinations.md)
