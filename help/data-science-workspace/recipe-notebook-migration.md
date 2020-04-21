@@ -68,7 +68,6 @@ With the updates to Spark recipes, a number of values need to be added and chang
   <td>
 <pre class="JSON language-JSON hljs">
 import com.adobe.platform.query.QSOption
-
 var df = sparkSession.read.format("com.adobe.platform.query")
   .option(QSOption.userToken", {userToken})
   .option(QSOption.serviceToken, {serviceToken})
@@ -108,7 +107,6 @@ With the updates to Spark recipes, a number of values need to be added and chang
   <td>
 <pre class="JSON language-JSON hljs">
 import com.adobe.platform.query.QSOption
-
 df.write.format("com.adobe.platform.query")
   .option(QSOption.userToken", {userToken})
   .option(QSOption.serviceToken, {serviceToken})
@@ -206,7 +204,6 @@ With the updates to Spark recipes, a number of values need to be added and chang
   <td>
   <pre class="JSON language-JSON hljs">
 dataset_options = get_dataset_options(spark.sparkContext)
-
 pd = spark.read.format("com.adobe.platform.dataset") 
   .option(dataset_options.serviceToken(), service_token) 
   .option(dataset_options.userToken(), user_token) 
@@ -218,7 +215,6 @@ pd = spark.read.format("com.adobe.platform.dataset")
   <td>
 <pre class="JSON language-JSON hljs">
 qs_option = spark_context._jvm.com.adobe.platform.query.QSOption
-
 pd = sparkSession.read.format("com.adobe.platform.query") 
   .option(qs_option.userToken, {userToken}) 
   .option(qs_option.serviceToken, {serviceToken}) 
