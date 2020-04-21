@@ -101,8 +101,8 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
 - UI tutorials {#ui-tutorials}
   - Create a source connector {#create}
     - Adobe applications {#adobe-applications}
-      - [Adobe Audience Manager connector](tutorials/ui/create/adobe-applications/analytics.md)
-      - [Adobe Analytics connector](tutorials/ui/create/adobe-applications/audience-manager.md)
+      - [Adobe Analytics connector](tutorials/ui/create/adobe-applications/analytics.md)
+      - [Adobe Audience Manager connector](tutorials/ui/create/adobe-applications/audience-manager.md)
       - [Customer attributes connector](tutorials/ui/create/adobe-applications/customer-attributes.md)
     - Advertising {#create}
       - [Google Ads connector](tutorials/ui/create/advertising/ads.md)
