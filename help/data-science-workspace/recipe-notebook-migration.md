@@ -68,7 +68,6 @@ With the updates to Spark recipes, a number of values need to be added and chang
   <td>
 <pre class="JSON language-JSON hljs">
 import com.adobe.platform.query.QSOption
-
 var df = sparkSession.read.format("com.adobe.platform.query")
   .option(QSOption.userToken", {userToken})
   .option(QSOption.serviceToken, {serviceToken})
@@ -108,7 +107,6 @@ With the updates to Spark recipes, a number of values need to be added and chang
   <td>
 <pre class="JSON language-JSON hljs">
 import com.adobe.platform.query.QSOption
-
 df.write.format("com.adobe.platform.query")
   .option(QSOption.userToken", {userToken})
   .option(QSOption.serviceToken, {serviceToken})
@@ -206,7 +204,6 @@ With the updates to Spark recipes, a number of values need to be added and chang
   <td>
   <pre class="JSON language-JSON hljs">
 dataset_options = get_dataset_options(spark.sparkContext)
-
 pd = spark.read.format("com.adobe.platform.dataset") 
   .option(dataset_options.serviceToken(), service_token) 
   .option(dataset_options.userToken(), user_token) 
@@ -218,7 +215,6 @@ pd = spark.read.format("com.adobe.platform.dataset")
   <td>
 <pre class="JSON language-JSON hljs">
 qs_option = spark_context._jvm.com.adobe.platform.query.QSOption
-
 pd = sparkSession.read.format("com.adobe.platform.query") 
   .option(qs_option.userToken, {userToken}) 
   .option(qs_option.serviceToken, {serviceToken}) 
@@ -258,7 +254,6 @@ df.write.format("com.adobe.platform.dataset")
   <td>
 <pre class="JSON language-JSON hljs">
 qs_option = spark_context._jvm.com.adobe.platform.query.QSOption
-
 scored_df.write.format("com.adobe.platform.query") 
   .option(qs_option.userToken, {userToken}) 
   .option(qs_option.serviceToken, {serviceToken}) 
@@ -446,7 +441,6 @@ With the introduction of Spark 2.4, [`%dataset`](#magic) custom magic is supplie
   <td>
   <pre class="JSON language-JSON hljs">
 dataset_options = sc._jvm.com.adobe.platform.dataset.DataSetOptions
-
 pd0 = spark.read.format("com.adobe.platform.dataset")
   .option(dataset_options.orgId(), "310C6D375BA5248F0A494212@AdobeOrg")
   .load("5e68141134492718af974844")
@@ -593,9 +587,7 @@ With the introduction of Spark 2.4, [`%dataset`](#magic) custom magic is supplie
 userToken = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.USER_TOKEN")
 serviceToken = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.SERVICE_TOKEN")
 serviceApiKey = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.SERVICE_API_KEY")
-
 dataset_options = sc._jvm.com.adobe.platform.dataset.DataSetOptions
-
 pd0.write.format("com.adobe.platform.dataset")
   .option(dataset_options.orgId(), "310C6D375BA5248F0A494212@AdobeOrg")
   .option(dataset_options.userToken(), userToken)
@@ -607,7 +599,6 @@ pd0.write.format("com.adobe.platform.dataset")
   <td>
   <pre class="JSON language-JSON hljs">
 %dataset write --datasetId 5e68141134492718af974844 --dataFrame pd0
-
 pd0.describe()
 pd0.show(10, False)
 </pre>
@@ -805,9 +796,7 @@ In Spark 2.3 you needed define variables for `option` values used to read data o
   <th>code</th>
   <td>
   <pre class="JSON language-JSON hljs">
-
 import com.adobe.platform.dataset.DataSetOptions
-
 var df1 = spark.read.format("com.adobe.platform.dataset")
   .option(DataSetOptions.orgId, "310C6D375BA5248F0A494212@AdobeOrg")
   .option(DataSetOptions.batchId, "dbe154d3-197a-4e6c-80f8-9b7025eea2b9")
@@ -816,10 +805,8 @@ var df1 = spark.read.format("com.adobe.platform.dataset")
   </td>
   <td>
   <pre class="JSON language-JSON hljs">
-
 import org.apache.spark.sql.{Dataset, SparkSession}
 val spark = SparkSession.builder().master("local").getOrCreate()
-
 val df1 = spark.read.format("com.adobe.platform.query")
   .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
   .option("ims-org", sys.env("IMS_ORG_ID"))
@@ -877,13 +864,10 @@ The Scala (Spark 2.4) notebook uses the Scala kernel which requires more values 
   <th>code</th>
   <td>
   <pre class="JSON language-JSON hljs">
-
 import com.adobe.platform.dataset.DataSetOptions
-
 var userToken = spark.sparkContext.getConf.getOption("spark.yarn.appMasterEnv.USER_TOKEN").get
 var serviceToken = spark.sparkContext.getConf.getOption("spark.yarn.appMasterEnv.SERVICE_TOKEN").get
 var serviceApiKey = spark.sparkContext.getConf.getOption("spark.yarn.appMasterEnv.SERVICE_API_KEY").get
-
 df1.write.format("com.adobe.platform.dataset")
   .option(DataSetOptions.orgId, "310C6D375BA5248F0A494212@AdobeOrg")
   .option(DataSetOptions.userToken, userToken)
@@ -894,10 +878,8 @@ df1.write.format("com.adobe.platform.dataset")
   </td>
   <td>
   <pre class="JSON language-JSON hljs">
-
 import org.apache.spark.sql.{Dataset, SparkSession}
 val spark = SparkSession.builder().master("local").getOrCreate()
-
 df1.write.format("com.adobe.platform.query")
   .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
   .option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN"))
