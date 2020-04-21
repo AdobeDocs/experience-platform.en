@@ -50,7 +50,7 @@ Requests that contain a payload (POST, PUT, PATCH) may require an additional `Co
 
 When ingesting data, it is important to understand how Experience Data Model (XDM) schemas work. For more information about how XDM field types map to different formats, please read the [Schema Registry developer guide](../../xdm/api/getting-started.md).
 
-There is some flexibility when ingesting data -  if a type does not match what is in the target schema, the data will be converted to the expressed target type.  If it cannot, it will fail the batch with a `TypeCompatibilityException`. 
+There is some flexibility when ingesting data - if a type does not match what is in the target schema, the data will be converted to the expressed target type. If it cannot, it will fail the batch with a `TypeCompatibilityException`. 
 
 For example, neither JSON nor CSV has a date or date-time type. As a result, these values are expressed using [ISO 8061 formatted strings](https://www.iso.org/iso-8601-date-and-time-format.html) ("2018-07-10T15:05:59.000-08:00") or Unix Time formatted in milliseconds (1531263959000) and are converted at ingestion time to the target XDM type.
 
@@ -308,7 +308,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | The full path and name of the file you're trying to upload.  |
+| `{FILE_PATH_AND_NAME}` | The full path and name of the file you're trying to upload. |
 
 **Response**
 
@@ -378,7 +378,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 ```
 
 | Parameter | Description |
-| --------- | -----------  |
+| --------- | ----------- |
 | `{DATASET_ID}` | The ID of the reference dataset. |
 
 **Response**
@@ -685,8 +685,8 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{BATCH_ID}` | The ID of the newly created batch. |  
-| `{DATASET_ID}` | The ID of the referenced dataset. |  
+| `{BATCH_ID}` | The ID of the newly created batch. |
+| `{DATASET_ID}` | The ID of the referenced dataset. |
 | `{USER_ID}` | The ID of the user who created the batch. |
 
 ### Upload files
@@ -788,7 +788,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
-## Delete a batch
+## Delete a batch {#delete-a-batch}
 
 A batch can be deleted by performing the following POST request with the `action=REVERT` query parameter to the ID of the batch you wish to delete. The batch is the marked as "inactive", making it eligible for garbage collection. The batch will be asynchronously collected, at which time it will be marked as "deleted".
 
@@ -824,7 +824,7 @@ If you want to replace an already ingested batch, you can do so with "batch repl
 
 ### Create batch
 
-Firstly, you will need to create a batch, with JSON as the input format. When creating the batch, you will need to provide a dataset ID. You will also need to ensure that all the files uploaded as part of the batch conform to the XDM schema linked to the provided dataset. Additionally, you will need to provide the old batch(es) as reference in the replay section. In the  example below, you are replaying batches with IDs `batchIdA` and `batchIdB`.
+Firstly, you will need to create a batch, with JSON as the input format. When creating the batch, you will need to provide a dataset ID. You will also need to ensure that all the files uploaded as part of the batch conform to the XDM schema linked to the provided dataset. Additionally, you will need to provide the old batch(es) as reference in the replay section. In the example below, you are replaying batches with IDs `batchIdA` and `batchIdB`.
 
 **API format**
 
