@@ -20,3 +20,4 @@ user-guide-title: Adobe Experience Platform Identity Service
 - [ECID overview](ecid.md)
 - [Troubleshooting guide](troubleshooting-guide.md)
 - [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)
+- [Platform release notes](../release-notes/latest/latest.md)

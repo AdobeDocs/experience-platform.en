@@ -149,3 +149,4 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Configure a dataflow for a protocol connector](tutorials/ui/dataflow/protocols.md)
   - [Activate inbound data to populate customer profiles](tutorials/ui/profile.md)
   - [Monitor accounts and dataset flows](tutorials/ui/monitor.md)
+- [Platform release notes](../release-notes/latest/latest.md) 

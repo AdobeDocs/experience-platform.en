@@ -20,3 +20,4 @@ user-guide-title: Intelligent Services Help
   * [User interface guide](customer-ai/user-guide.md)
   * [Discovering insights](customer-ai/discover-insights.md)
   * [Downloading scores](customer-ai/download-scores.md)
+* [Platform release notes](../release-notes/latest/latest.md) 

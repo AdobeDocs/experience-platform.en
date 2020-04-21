@@ -22,3 +22,4 @@ user-guide-title: Sandboxes in Adobe Experience Platform Help
   * [Delete a sandbox](api/delete-sandbox.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml)
+* [Platform release notes](../release-notes/latest/latest.md)

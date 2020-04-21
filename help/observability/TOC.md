@@ -10,3 +10,4 @@ topic: overview
 * [Observability Insights overview](home.md)
 * [Metrics](metrics.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)
+* [Platform release notes](../release-notes/latest/latest.md)

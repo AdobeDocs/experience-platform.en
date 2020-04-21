@@ -49,3 +49,4 @@ user-guide-title: Adobe Experience Platform Query Service Help
   - [Tableau](clients/tableau.md)
 - [Troubleshooting guide](troubleshooting-guide.md)
 - [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml)
+- [Platform release notes](../release-notes/latest/latest.md)

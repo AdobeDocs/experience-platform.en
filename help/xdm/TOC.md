@@ -33,3 +33,4 @@ user-guide-title: Experience Data Model (XDM) System Help
   * [Create an ad-hoc schema (API)](tutorials/ad-hoc.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
+* [Platform release notes](../release-notes/latest/latest.md)
