@@ -39,7 +39,7 @@ Below are examples of the Audience Manager structure mapped to XDM ExperienceEve
 
 ## How are fields mapped from Adobe Audience Manager to XDM?
 
-Please see documentation for [Audience Manager mapping fields][audience-manager-mapping-fields] for more information.
+Please see documentation for [Audience Manager mapping fields](./mapping/audience-manager.md) for more information.
 
 ## Data management on Platform
 
