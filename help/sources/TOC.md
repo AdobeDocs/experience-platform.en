@@ -54,7 +54,6 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Google Cloud Storage connector](tutorials/api/create/cloud-storage/google.md)
       - [SFTP connector](tutorials/api/create/cloud-storage/sftp.md)
     - CRM {#crm}
-      - [Google AdWords connector](tutorials/api/create/crm/adwords.md)
       - [HubSpot connector](tutorials/api/create/crm/hubspot.md)
       - [Microsoft Dynamics connector](tutorials/api/create/crm/ms-dynamics.md)
       - [Salesforce connector](tutorials/api/create/crm/salesforce.md)
