@@ -12,6 +12,10 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [Analytics data connector](connectors/adobe-applications/analytics.md)
     - [Audience Manager connector](connectors/adobe-applications/audience-manager.md)
     - [Customer attributes connector](connectors/adobe-applications/customer-attributes.md)
+    - Mapping Adobe application fields {#mapping}
+      - [Analytics mapping fields](connectors/adobe-applications/mapping/analytics.md)
+      - [Audience Manager mapping fields](connectors/adobe-applications/mapping/audience-manager.md)
+      - [Target mapping fields](connectors/adobe-applications/mapping/target.md)
   - Advertising {#advertising}
     - [Google Ads connector](connectors/advertising/ads.md)
   - Cloud storage {#cloud-storage}
