@@ -27,7 +27,7 @@ Under the *Adobe Applications* category, select **Adobe Analytics** to expose an
 
 ![](../../../../images/tutorials/create/analytics/catalog.png)
 
-The *Accounts* screen lists all previously established accounts for Adobe Analytics, you can create a new dataset flow by clicking **Select data**. 
+The *Accounts* screen lists all previously established accounts for Adobe Analytics, you can create a new dataset flow by clicking **Select data**.
 
 >[!NOTE] Multiple in-bound connections to a source can be made for bringing in different data.
 
@@ -40,6 +40,8 @@ From the list of available report suites, select the one you want to bring into 
 ![](../../../../images/tutorials/create/analytics/select-data.png)
 
 The *Dataset flow detail* step appears, where you must provide a name and an optional description for the dataset flow. Select **Next** when finished.
+
+For more information on how to label data coming from Analytics, visit the [data usage labels guide](../../../../../data-governance/labels/user-guide.md).
 
 ![](../../../../images/tutorials/create/analytics/dataset-flow-detail.png)
 
