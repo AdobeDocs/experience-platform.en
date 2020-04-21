@@ -5,7 +5,7 @@ title: Target mapping field
 topic: overview
 ---
 
-# Target mapping field
+# Target mapping fields
 
 Adobe Experience Platform allows you to ingest Adobe Target data through the Target source connector. When using the connector, all data from Target fields must be mapped to the [Experience Data Model (XDM)](../../../xdm/home.md) fields associated with the XDM ExperienceEvent class.
 
