@@ -63,7 +63,7 @@ The following is an example configuration that specifies using a CPU for trainin
 
 ## PySpark and Spark resource configurations {#resource-config}
 
-PySpark and Spark Engines have the ability to modify computational resources for training and scoring purposes, these resources are described in the following table:
+Spark Engines have the ability to modify computational resources for training and scoring purposes. These resources are described in the following table:
 
 | Resource | Description | Type |
 | -------- | ----------- | ---- |
