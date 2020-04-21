@@ -9,7 +9,7 @@ topic: overview
 
 Adobe Experience Platform allows you to ingest Adobe Analytics data through the Analytics Data Connector (ADC). Some of the data ingested through ADC can be mapped directly from Analytics fields to Experience Data Model (XDM) fields, while other data requires transformations and specific functions in order to be successfully mapped.
 
-![](images/analytics-data-experience-platform.png)
+![](../images/analytics-data-experience-platform.png)
 
 ## Direct mapping fields
 
@@ -184,7 +184,7 @@ The following table includes columns that show the name of the Analytics field (
 
 Select fields (known as "postvalues") require more advanced transformations before they can successfully mapped from Adobe Analytics fields to Experience Data Model (XDM). Performing these advanced transformations involves the use of Adobe Experience Platfrom Query Service and prebuilt functions (called Adobe-defined functions) for sessionization, attribution, and deduplication.
 
-To learn more about performing this transformations using Query Service, please visit the [Adobe-defined functions](../../../query-service/sql/adobe-defined-functions.md) documentation.
+To learn more about performing this transformations using Query Service, please visit the [Adobe-defined functions](../../../../query-service/sql/adobe-defined-functions.md) documentation.
 
 The following table includes columns that show the name of the Analytics field (*Analytics field*), the corresponding XDM field (*XDM field*) and its type (*XDM type*), as well as a description of the field (*Description*). 
 

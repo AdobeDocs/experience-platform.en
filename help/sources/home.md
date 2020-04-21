@@ -22,9 +22,10 @@ Sources in Experience Platform are grouped into the following categories:
 Experience Platform allows data to be ingested from other Adobe applications, including Adobe Analytics, Adobe Audience Manager, and Experience Platform Launch. See the following related documents for more information:
 
 - [Adobe Audience Manager connector overview](connectors/adobe-applications/audience-manager.md)
-- [Create an Adobe Audience Manager source connector in the UI](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/adobe-applications/aam-ui-tutorial.md)
+- [Create an Adobe Audience Manager source connector in the UI](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Adobe Analytics data connector overview](connectors/adobe-applications/analytics.md)
-- [Create an Adobe Analytics source connector in the UI](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/adobe-applications/adobe-analytics-ui-tutorial.md)
+- [Create an Adobe Analytics source connector in the UI](./tutorials/ui/create/adobe-applications/analytics.md)
+- [Create a Customer Attributes source connector in the UI](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 
 ### Advertising
 
