@@ -27,6 +27,8 @@ Under the *Adobe Applications* category, select **Adobe Analytics** to expose an
 
 ![](../../../../images/tutorials/create/analytics/catalog.png)
 
+### Select data
+
 The *Accounts* screen lists all previously established accounts for Adobe Analytics, you can create a new dataset flow by clicking **Select data**.
 
 >[!NOTE] Multiple in-bound connections to a source can be made for bringing in different data.
@@ -39,11 +41,15 @@ From the list of available report suites, select the one you want to bring into 
 
 ![](../../../../images/tutorials/create/analytics/select-data.png)
 
+### Name your dataset flow
+
 The *Dataset flow detail* step appears, where you must provide a name and an optional description for the dataset flow. Select **Next** when finished.
 
 For more information on how to label data coming from Analytics, visit the [data usage labels guide](../../../../../data-governance/labels/user-guide.md).
 
 ![](../../../../images/tutorials/create/analytics/dataset-flow-detail.png)
+
+### Review your dataset flow
 
 The *Review* step appears, allowing you to review your new Analytics in-bound connection before it is created. Details of the connection are grouped by categories, including:
 
@@ -52,9 +58,19 @@ The *Review* step appears, allowing you to review your new Analytics in-bound co
 
 ![](../../../../images/tutorials/create/analytics/review.png)
 
+### Monitor your dataset flow
+
+Once your dataset flow has been created, you can monitor the data that is being ingested through it. From the *Catalog* screen, select *Dataset flows* to view a list of established flows associated with your Analytics account.
+
+![](../../../../images/tutorials/create/analytics/catalog-dataset-flows.png)
+
+The *Dataset flows* page appears. On this page is a pair of dataset flows, including information about their name, source data, creation time, and status. The connector instantiates to identical dataset flows upon creation. One flow represents live data and the other as backfill.
+
+![](../../../../images/tutorials/create/analytics/backfill.png)
+
 ## Next steps
 
-Once the connection is created, a target schema and dataset is automatically created to contain the incoming data. Furthermore, data back-filling occurs and ingests up to 13 months of historical data. When the initial ingestion completes, Analytics data and be used by downstream Platform services such as Real-time Customer Profile and Segmentation Service. See the following documents for more details:
+Once the connection is created, a target schema and dataset flow is automatically created to contain the incoming data. Furthermore, data back-filling occurs and ingests up to 13 months of historical data. When the initial ingestion completes, Analytics data and be used by downstream Platform services such as Real-time Customer Profile and Segmentation Service. See the following documents for more details:
 
 *   [Real-time Customer Profile overview](../../../../../profile/home.md)
 *   [Segmentation Service overview](../../../../../segmentation/home.md)
