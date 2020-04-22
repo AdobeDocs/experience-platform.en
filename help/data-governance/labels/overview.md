@@ -21,4 +21,4 @@ For more information on available data usage labels in Experience Platform and t
 
 ## Next steps
 
-Now that you have been introduced data usage labels, you can continue to the read the [user guide](user-guide.md) to learn how to manage labels in the Experience Platform UI.
+Now that you have been introduced data usage labels, you can continue to the read the [user guide](user-guide.md) to learn how to manage labels in the Experience Platform UI. For steps on how to manage labels using APIs, see the appropriate section in the [Catalog Service developer guide](../../catalog/api/labels.md).
