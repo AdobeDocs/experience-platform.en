@@ -18,6 +18,7 @@ user-guide-title: Catalog and Datasets Help
   * [Delete an object](api/delete-object.md)
   * [Create a dataset](api/create-dataset.md)
   * [Create a batch](api/create-batch.md)
+  * [Data usage labels](api/labels.md)
   * [Appendix](api/appendix.md)
 * Datasets {#datasets}
   * [Datasets overview](datasets/overview.md)

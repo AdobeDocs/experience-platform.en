@@ -47,5 +47,8 @@ user-guide-title: Adobe Experience Platform Data Science Workspace Help
   * [Publish a model as a service (UI)](models-recipes/publish-model-service-ui.md)
   * [Publish a model as a service (API)](models-recipes/publish-model-service-api.md)
   * [Schedule automated training and scoring on a service (UI)](models-recipes/schedule-models-ui.md)
+* [Recipe and notebook migration guides](recipe-notebook-migration.md) 
 * [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
+* [Platform release notes](../release-notes/latest/latest.md)
+* [Platform release notes](http://www.adobe.com/go/platform-release-notes-en)
