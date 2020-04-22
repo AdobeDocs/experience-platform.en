@@ -11,9 +11,9 @@ This document serves as a guide for downloading scores for Customer AI.
 
 ## Getting started
 
-Customer AI allows you to download scores in the parquet file format. This tutorial requires that you have read and finished the downloading Customer AI scores section in the [getting started](./getting-started.md) guide.
+Customer AI allows you to download scores in the parquet file format. This tutorial requires that you have read and finished the downloading Customer AI scores section in the [getting started](../getting-started.md) guide.
 
-Additionally, in order to access scores for Customer AI, you need to have a service instance with a successful run status available. To create a new service instance, visit the [Customer AI user guide](./user-guide.md). If you recently created a service instance and it is still training and scoring, please allow 24 hours for it to finish running.
+Additionally, in order to access scores for Customer AI, you need to have a service instance with a successful run status available. To create a new service instance, visit [Configuring a Customer AI instance](./configure.md). If you recently created a service instance and it is still training and scoring, please allow 24 hours for it to finish running.
 
 Currently, there are two ways to download Customer AI scores:
 
@@ -24,15 +24,15 @@ Currently, there are two ways to download Customer AI scores:
 
 Within your service instance for Customer AI insights, click the *More actions* dropdown in the top-right navigation then select **Access scores**.
 
-![more actions](./images/insights/more-actions.png)
+![more actions](../images/insights/more-actions.png)
 
 A new dialog appears, containing a link to the downloading scores documentation and the dataset ID for your current instance. Copy the dataset ID to your clipboard and proceed to the next step.
 
-![Dataset ID](./images/download-scores/access-scores.png)
+![Dataset ID](../images/download-scores/access-scores.png)
 
 ## Retrieve your batch ID
 
-Using your dataset ID from the previous step, you need to make a call to the  Catalog API in order to retrieve a batch ID. Additional query parameters are used for this API call in order to return a single batch instead of a list of batches belonging to your organization. For more information on the types of query parameters available, visit the guide on [filtering Catalog data using query parameters](../../catalog/api/filter-data.md).
+Using your dataset ID from the previous step, you need to make a call to the  Catalog API in order to retrieve a batch ID. Additional query parameters are used for this API call in order to return a single batch instead of a list of batches belonging to your organization. For more information on the types of query parameters available, visit the guide on [filtering Catalog data using query parameters](../../../catalog/api/filter-data.md).
 
 **API format**
 
@@ -255,15 +255,15 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 The response downloads the file you requested in in your current directory. In this example the filename is "filename.parquet".
 
-![Terminal](./images/download-scores/response.png)
+![Terminal](../images/download-scores/response.png)
 
 ## Download a segment configured with Customer AI {#segment}
 
-An alternative way to download your score data is by exporting your audience to a dataset. After a segmentation job has successfully completed (the value of the `status` attribute is "SUCCEEDED"), you can export your audience to a dataset where it can be accessed and acted upon. To learn more about segmentation, visit the [segmentation overview](../../segmentation/home.md).
+An alternative way to download your score data is by exporting your audience to a dataset. After a segmentation job has successfully completed (the value of the `status` attribute is "SUCCEEDED"), you can export your audience to a dataset where it can be accessed and acted upon. To learn more about segmentation, visit the [segmentation overview](../../../segmentation/home.md).
 
 >[!IMPORTANT] In order to utilize this method of exporting, Real-time Customer Profile needs to be enabled for the dataset.
 
-The [export a segment](../../segmentation/tutorials/evaluate-a-segment.md) section in the segment evaluation guide covers the required steps to export an audience dataset. The guide outlines and provides examples of the following:
+The [export a segment](../../../segmentation/tutorials/evaluate-a-segment.md) section in the segment evaluation guide covers the required steps to export an audience dataset. The guide outlines and provides examples of the following:
 
 - **Create a target dataset:** Create the dataset to hold audience members.
 - **Generate audience profiles in the dataset:** Populate the dataset with XDM Individual Profiles based on the results of a segment job.
@@ -272,4 +272,4 @@ The [export a segment](../../segmentation/tutorials/evaluate-a-segment.md) secti
 
 ## Next Steps
 
-This document outlined the steps required for downloading Customer AI scores. You can now continue to browse the other [Intelligent Services](../home.md) and guides that are offered.
+This document outlined the steps required for downloading Customer AI scores. You can now continue to browse the other [Intelligent Services](../../home.md) and guides that are offered.

@@ -1,6 +1,6 @@
-## Create customer segments with predicted scores
+# Create customer segments with predicted scores
 
-When a prediction run completes, predicted propensity scores are automatically consumed by Profiles. Enriching Profiles with Customer AI scores allows for the creation of customer segments to find audiences based on their propensity scores. This section provides steps for creating segments using the Segment Builder. For a more robust tutorial on creating segments, please see the [Segment Builder user guide](../../segmentation/tutorials/create-a-segment.md).
+When a prediction run completes, predicted propensity scores are automatically consumed by Profiles. Enriching Profiles with Customer AI scores allows for the creation of customer segments to find audiences based on their propensity scores. This section provides steps for creating segments using the Segment Builder. For a more robust tutorial on creating segments, please see the [Segment Builder user guide](../../../segmentation/tutorials/create-a-segment.md).
 
 >[!IMPORTANT] In order to utilize this method, Real-time Customer Profile needs to be enabled for the dataset.
 
@@ -21,3 +21,7 @@ Under the right-hand *Segment properties* column, provide a name for the segment
 Above the left-hand *Fields* column, click the **gear** icon and select a **Merge policy**. Click **Save** to create the segment.
 
 ![](../images/user-guide/merge_policy.png)
+
+## Next steps
+
+By following this tutorial, you have successfully found audiences based on their propensity scores using the Segment Builder. You can now target your audiences by activating them to destinations. See the [destinations overview](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html) for more information.

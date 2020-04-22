@@ -28,4 +28,4 @@ Customer AI generates several attributes for individual profiles that are deemed
 
 ## Next steps
 
-Once you have prepared your data and have all your credentials and schemas in place, start by following the [Configure a Customer AI Instance](./user-guide.md) guide. This guide walks you through creating an instance for Customer AI.
+Once you have prepared your data and have all your credentials and schemas in place, start by following the [Configure a Customer AI Instance](./user-guide/configure.md) guide. This guide walks you through creating an instance for Customer AI.

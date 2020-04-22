@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;user guide;customer ai;popular topics
+keywords: Experience Platform;user guide;customer ai;popular topics;configure instance;create instance;
 solution: Experience Platform
-title: Customer AI user guide
-topic: User guide
+title: Configuring a Customer AI instance
+topic: Instance creation
 ---
 
-# Configuring an instance in Customer AI
+# Configuring a Customer AI instance
 
 Customer AI, as part of Intelligent Services enables you to generate custom propensity scores without having to worry about machine learning.
 
@@ -71,5 +71,5 @@ By following this section, you have configured an instance of Customer AI and a 
 
 ## Next steps
 
-By following this tutorial, you have successfully configured an instance of Customer AI, generated propensity scores, and found audiences based on their propensity scores using the Segment Builder. You can now target your audiences by activating them to destinations. See the [destinations overview](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html) for more information.
+By following this tutorial, you have successfully configured an instance of Customer AI and generated propensity scores. You can now choose to use the Segment builder to [create customer segments with predicted scores](./create-segment.md) or [discover insights with Customer AI](./discover-insights.md).
 
