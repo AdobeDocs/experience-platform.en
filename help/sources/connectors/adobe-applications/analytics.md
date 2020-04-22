@@ -35,7 +35,7 @@ To learn more about XDM, please see the [XDM System overview](../../../xdm/home.
 
 When a source connection is established for bringing Analytics data into Experience Platform using the Platform user interface, data fields are automatically mapped and ingested into Real-time Customer Profile within minutes. For instructions on creating a source connection with Adobe Analytics using the Platform UI, see the [Analytics data connector tutorial](../../tutorials/ui/create/adobe-applications/analytics.md).
 
-For detailed information on the field mapping that occurs between Analytics and Experience Platform, please visit the [Adobe Analytics field mapping](./analytics-mapping.md) guide.
+For detailed information on the field mapping that occurs between Analytics and Experience Platform, please visit the [Adobe Analytics field mapping](./mapping/analytics.md) guide.
 
 ## What is the expected latency for Analytics Data on Platform?
 
