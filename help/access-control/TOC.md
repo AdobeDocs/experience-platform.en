@@ -20,4 +20,4 @@ user-guide-title: Access Control in Adobe Experience Platform Help
   * [View effective policies](api/effective-policies.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml)
-* [Platform release notes](http://www.adobe.com/go/platform-release-notes-en)
+* [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

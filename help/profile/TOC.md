@@ -24,4 +24,4 @@ user-guide-title: Real-time Customer Profile Help
   * [More tutorials](https://docs.adobe.com/content/help/en/experience-platform/tutorials/home.html)
 * [Privacy request processing](privacy.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)
-* [Platform release notes](http://www.adobe.com/go/platform-release-notes-en)
+* [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
