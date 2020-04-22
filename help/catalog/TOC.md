@@ -26,4 +26,4 @@ user-guide-title: Catalog and Datasets Help
 * [Privacy request processing in the Data Lake](privacy.md)
 * [Data protection in Experience Platform](data-protection.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
-* [Platform release notes](../release-notes/latest/latest.md)
+* [Platform release notes](http://www.adobe.com/go/platform-release-notes-en)

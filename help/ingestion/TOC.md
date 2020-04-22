@@ -33,4 +33,4 @@ user-guide-title: Adobe Experience Platform Data Ingestion Help
     - [Subscribe to data ingestion events](quality/subscribe-events.md)
 - [Source connectors](source-connectors.md)
 - [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
-- [Platform release notes](../release-notes/latest/latest.md)
+- [Platform release notes](http://www.adobe.com/go/platform-release-notes-en)

@@ -9,4 +9,4 @@ user-guide-title: Adobe Experience Platform Data Access
 - [Overview](home.md)
 - Tutorials {#tutorials}
   - [Access dataset data](tutorials/dataset-data.md)
-- [Platform release notes](../release-notes/latest/latest.md)
+- [Platform release notes](http://www.adobe.com/go/platform-release-notes-en)
