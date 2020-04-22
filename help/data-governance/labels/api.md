@@ -139,8 +139,6 @@ A successful response returns the labels that have been added to the dataset.
 
 You can delete the labels applied to a dataset by making a DELETE request.
 
->[!NOTE] You should only use this operation when preparing the parent dataset for deletion. 
-
 **API format**
 
 ```http
@@ -164,7 +162,7 @@ curl -X DELETE \
 
 **Response**
 
-A successful response HTTP status 200 (OK), indicated that the labels have been deleted. You can [look up the existing labels](#lookup) for the dataset in a separate call to confirm this.
+A successful response HTTP status 200 (OK), indicating that the labels have been deleted. You can [look up the existing labels](#lookup) for the dataset in a separate call to confirm this.
 
 ## Next steps
 
