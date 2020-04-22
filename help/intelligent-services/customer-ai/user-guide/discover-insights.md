@@ -72,9 +72,9 @@ The **More actions** button is located in the top-right navigation next to **Edi
 - **Access scores**: Clicking *Access scores* opens a dialog providing a link to the [downloading scores for Customer AI](./download-scores.md) tutorial, the dialog also provides the dataset id required for making API calls.
 - **View run history**: A dialog containing a list of all the scoring runs associated with the service instance appears.
 
-![more actions](./images/insights/more-actions.png)
+![more actions](../images/insights/more-actions.png)
 
-## Scoring Summary
+## Scoring Summary {#scoring-summary}
 
 Scoring Summary displays the total number of profiles scored and categorizes them into buckets containing high, medium, and low propensity. The propensity buckets are determined based on score range, low is less than 24, medium is 25 to 74, and high is above 74. Each bucket has a color corresponding to the legend. 
 

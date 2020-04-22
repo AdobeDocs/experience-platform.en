@@ -30,7 +30,7 @@ A new dialog appears, containing a link to the downloading scores documentation 
 
 ![Dataset ID](../images/download-scores/access-scores.png)
 
-## Retrieve your batch ID
+## Retrieve your batch ID {#retrieve-your-batch-id}
 
 Using your dataset ID from the previous step, you need to make a call to the  Catalog API in order to retrieve a batch ID. Additional query parameters are used for this API call in order to return a single batch instead of a list of batches belonging to your organization. For more information on the types of query parameters available, visit the guide on [filtering Catalog data using query parameters](../../../catalog/api/filter-data.md).
 
@@ -94,7 +94,7 @@ Within the score batch ID object is a `relatedObjects` array. This array contain
 }
 ```
 
-## Retrieve the next API call with your batch ID
+## Retrieve the next API call with your batch ID {#retrieve-the-next-api-call-with-your-batch-id}
 
 Once you have your batch ID, you are able to make a new GET request to `/batches`. The request returns a link thats used as the next API request.
 
@@ -148,7 +148,7 @@ A successful response returns a payload containing a `_links` object. Within the
 }
 ```
 
-## Retrieve your files
+## Retrieve your files {#retrieving-your-files}
 
 Using the `href` value you got in the previous step as an API call, make a new GET request to retrieve your file directory.
 
