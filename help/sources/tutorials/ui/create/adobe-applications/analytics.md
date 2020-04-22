@@ -64,7 +64,9 @@ Once your dataset flow has been created, you can monitor the data that is being 
 
 ![](../../../../images/tutorials/create/analytics/catalog-dataset-flows.png)
 
-The *Dataset flows* page appears. On this page is a pair of dataset flows, including information about their name, source data, creation time, and status. The connector instantiates to identical dataset flows upon creation. One flow represents live data and the other as backfill.
+The *Dataset flows* page appears. On this page is a pair of dataset flows, including information about their name, source data, creation time, and status.
+
+The connector instantiates to identical dataset flows upon creation. One flow represents live data and the other as backfill. Flow designated as backfill does not go into Profile.
 
 ![](../../../../images/tutorials/create/analytics/backfill.png)
 
