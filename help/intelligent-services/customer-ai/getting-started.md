@@ -38,4 +38,4 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ## Next steps
 
-Once you are ready and have all your credentials and schemas in place, start by following the [Customer AI user interface guide](./user-guide.md). This guide walks you through creating an instance and submitting it for training and scoring.
+Once you have completed the steps outlined in the document above, visit the [Input and Output](./input-output.md) documentation. This document give a brief overview of what types of data are used and produced in Customer AI.
