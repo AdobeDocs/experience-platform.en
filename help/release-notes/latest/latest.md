@@ -15,7 +15,7 @@ New features in Adobe Experience Platform:
 * [Intelligent Services](#intelligent)
 
 Updates to existing features:
-* [Experience Data Model (XDM) and XDM System](#xdm)
+* [Experience Data Model (XDM)](#xdm)
 * [Data Governance](#governance)
 * [Destinations](#destinations)
 * [Privacy Service](#privacy)
