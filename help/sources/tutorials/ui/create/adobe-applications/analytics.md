@@ -45,8 +45,6 @@ From the list of available report suites, select the one you want to bring into 
 
 The *Dataset flow detail* step appears, where you must provide a name and an optional description for the dataset flow. Select **Next** when finished.
 
-For more information on how to label data coming from Analytics, visit the [data usage labels guide](../../../../../data-governance/labels/user-guide.md).
-
 ![](../../../../images/tutorials/create/analytics/dataset-flow-detail.png)
 
 ### Review your dataset flow
@@ -64,11 +62,27 @@ Once your dataset flow has been created, you can monitor the data that is being 
 
 ![](../../../../images/tutorials/create/analytics/catalog-dataset-flows.png)
 
-The *Dataset flows* page appears. On this page is a pair of dataset flows, including information about their name, source data, creation time, and status.
+The *Dataset flows* screen appears. On this page is a pair of dataset flows, including information about their name, source data, creation time, and status.
 
 The connector instantiates to identical dataset flows upon creation. One flow represents live data and the other as backfill. Flow designated as backfill does not go into Profile.
 
+Select the dataset flow you wish to view from the list.
+
 ![](../../../../images/tutorials/create/analytics/backfill.png)
+
+The *Dataset activity* page appears. This page displays the rate of messages being consumed in the form of a graph. Select *Data governance* from the top header to access the labelling fields.
+
+![](../../../../images/tutorials/create/analytics/batches.png)
+
+You can view a dataset flow's inherited labels from the *Data governance* screen. To access specific labels, select the edit button on the top right.
+
+![](../../../../images/tutorials/create/analytics/data-gov.png)
+
+The *Edit governance labels* panel appears. This screen allows you to access and edit a dataset flow's contract, identity, and sensitive labels.
+
+For more information on how to label data coming from Analytics, visit the [data usage labels guide](../../../../../data-governance/labels/user-guide.md).
+
+![](../../../../images/tutorials/create/analytics/labels.png)
 
 ## Next steps
 
