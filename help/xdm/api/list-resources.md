@@ -11,6 +11,8 @@ You can view a list of all resources (schemas, classes, mixins, or data types) w
 
 **API format**
 
+>[!NOTE] When listing resources, the Schema Registry limits result sets to 300 items. In order to return resources beyond this limit, you must use [paging parameters](#paging). It is also recommended that you use query parameters to [filter results](#filtering) and reduce the number of resources returned.
+
 ```http
 GET /{CONTAINER_ID}/{RESOURCE_TYPE}
 GET /{CONTAINER_ID}/{RESOURCE_TYPE}?{QUERY_PARAMS}
@@ -40,6 +42,7 @@ The response format depends on the Accept header sent in the request. The follow
 | ------- | ------------ |
 | application/vnd.adobe.xed-id+json | Returns a short summary of each resource, generally the preferred header for listing |
 | application/vnd.adobe.xed+json | Returns full JSON schema for each resource, with original `$ref` and `allOf` included |
+| application/vnd.adobe.xdm-v2+json | Returns all the results in a single request. |
 
 **Response**
 
@@ -70,7 +73,7 @@ The Schema Registry supports the use of query parameters to page and filter resu
 
 >[!NOTE] When combining multiple query parameters, they must be separated by ampersands (`&`).
 
-### Paging
+### Paging {#paging}
 
 The most common query parameters for paging include:
 
@@ -80,7 +83,7 @@ The most common query parameters for paging include:
 | `limit` | Limit the number of resources returned. Example: `limit=5` will return a list of five resources. |
 | `orderby` | Sort results by a specific property. Example: `orderby=title` will sort results by title in ascending order (A-Z). Adding a `-` before title (`orderby=-title`) will sort items by title in descending order (Z-A). |
 
-### Filtering
+### Filtering {#filtering}
 
 You can filter results by using the `property` parameter, which is used to apply a specific operator against a given JSON property within the retrieved resources. Supported operators include:
 
