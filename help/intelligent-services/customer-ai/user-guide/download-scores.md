@@ -22,7 +22,7 @@ Currently, there are two ways to download Customer AI scores:
 
 ## Find your dataset ID {#dataset-id}
 
-Within your service instance for Customer AI insights, click the *More actions* dropdown in the top-right navigation then select **Access scores**.
+Within your service instance for Customer AI insights, click the *More actions* dropdown in the top-right navigation then select **[!UICONTROL Access scores]**.
 
 ![more actions](../images/insights/more-actions.png)
 

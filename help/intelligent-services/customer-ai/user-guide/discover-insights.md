@@ -17,7 +17,7 @@ In order to utilize insights for Customer AI, you need to have a service instanc
 
 ## Service instance overview
 
-In the Adobe Experience Platform UI, click **Services** in the left navigation. The *Services* browser appears and displays available Intelligent Services. In the container for Customer AI, click **Open**.
+In the Adobe Experience Platform UI, click **[!UICONTROL Services]** in the left navigation. The *Services* browser appears and displays available Intelligent Services. In the container for Customer AI, click **[!UICONTROL Open]**.
 
 ![Accessing your instance](../images/insights/navigate-to-service.png)
 
@@ -40,7 +40,7 @@ Next, the insights page for that service instance appears, where you are provide
 
 There are two ways to view service instance details, the first is from the dashboard and the second from within the service instance. 
 
-To view details from within the dashboard, click on a service instance container avoiding the hyperlink that is attached to the name. This opens a right rail that provides additional details such as the description, scoring frequency, the prediction goal, and eligible population. Additionally, you can choose to edit and delete the instance by clicking **Edit** or **Delete**.
+To view details from within the dashboard, click on a service instance container avoiding the hyperlink that is attached to the name. This opens a right rail that provides additional details such as the description, scoring frequency, the prediction goal, and eligible population. Additionally, you can choose to edit and delete the instance by clicking **[!UICONTROL Edit]** or **[!UICONTROL Delete]**.
 
 ![right rail](../images/insights/success-run.png)
 
@@ -48,7 +48,7 @@ To view details from within the dashboard, click on a service instance container
 
 ![failed run message](../images/insights/failed-run.png)
 
-The second way to view additional details for a service instance is located within the insights page. You can click **Show more** in the top-right to populate a drop down. Details are listed such as the score definition, when it was created, and the propensity type. For more information on any of the properties listed, please visit [Configuring a Customer AI instance](./configure.md).
+The second way to view additional details for a service instance is located within the insights page. You can click **[!UICONTROL Show more]** in the top-right to populate a drop down. Details are listed such as the score definition, when it was created, and the propensity type. For more information on any of the properties listed, please visit [Configuring a Customer AI instance](./configure.md).
 
 ![show more](../images/insights/landing-show-more.png)
 
@@ -56,21 +56,21 @@ The second way to view additional details for a service instance is located with
 
 ### Edit an instance
 
-To edit an instance, click **Edit** in the top-right navigation.
+To edit an instance, click **[!UICONTROL Edit]** in the top-right navigation.
 
 ![click the edit button](../images/insights/edit-button.png)
 
-The edit dialog box appears, allowing you to edit the *Description* and *Scoring Frequency* of the instance. To confirm your changes and close the dialog, click **Edit** in the bottom-right corner.
+The edit dialog box appears, allowing you to edit the *Description* and *Scoring Frequency* of the instance. To confirm your changes and close the dialog, click **[!UICONTROL Edit]** in the bottom-right corner.
 
 ![edit popover](../images/insights/edit-instance.png)
 
 ### More actions
 
-The **More actions** button is located in the top-right navigation next to **Edit**. Clicking **More actions** opens a dropdown that allows you to select one of the following operations:
+The **[!UICONTROL More actions]** button is located in the top-right navigation next to **[!UICONTROL Edit]**. Clicking **[!UICONTROL More actions]** opens a dropdown that allows you to select one of the following operations:
 
-- **Delete**: Deletes the instance.
-- **Access scores**: Clicking *Access scores* opens a dialog providing a link to the [downloading scores for Customer AI](./download-scores.md) tutorial, the dialog also provides the dataset id required for making API calls.
-- **View run history**: A dialog containing a list of all the scoring runs associated with the service instance appears.
+- **[!UICONTROL Delete]**: Deletes the instance.
+- **[!UICONTROL Access scores]**: Clicking *Access scores* opens a dialog providing a link to the [downloading scores for Customer AI](./download-scores.md) tutorial, the dialog also provides the dataset id required for making API calls.
+- **[!UICONTROL View run history]**: A dialog containing a list of all the scoring runs associated with the service instance appears.
 
 ![more actions](../images/insights/more-actions.png)
 
@@ -96,19 +96,19 @@ For each score bucket, a card is generated that shows the top 10 influential fac
 
 ### Create a segment
 
-Clicking the **Create Segment** button in any of the buckets for Low, Medium, and High propensity redirects you to the segment builder.
+Clicking the **[!UICONTROL Create Segment]** button in any of the buckets for Low, Medium, and High propensity redirects you to the segment builder.
 
 ![Click create segment](../images/insights/influential-factors-create-segment.png)
 
 ![Create a segment](../images/insights/create-segment.png)
 
-The segment builder is used to define a segment. When selecting **Create Segment** from the Insights page, Customer AI automatically adds the selected buckets information to the segment. To finish creating your segment, simply fill in the *Name* and *Description* containers located in the right rail of the segment builder user interface. After you have given the segment a name and description, click **Save** in the top-right.
+The segment builder is used to define a segment. When selecting **[!UICONTROL Create Segment]** from the Insights page, Customer AI automatically adds the selected buckets information to the segment. To finish creating your segment, simply fill in the *Name* and *Description* containers located in the right rail of the segment builder user interface. After you have given the segment a name and description, click **[!UICONTROL Save]** in the top-right.
 
 >![NOTE] Since the propensity scores are written to the individual profile, they are available in the Segment builder like any other profile attributes. When you navigate to the segment builder to create new segments you can see all the various propensity scores under your namespace Customer AI.
 
 ![Segment fill in](../images/insights/segment-saving.png)
 
- To view your new segment in the Platform UI, click **Segments** in the left navigation. The *Browse* page appears and displays all available segments. 
+ To view your new segment in the Platform UI, click **[!UICONTROL Segments]** in the left navigation. The *Browse* page appears and displays all available segments. 
 
  ![All your Segments](../images/insights/Segments-dashboard.png)
 
