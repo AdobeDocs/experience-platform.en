@@ -9,7 +9,8 @@ user-guide-title: Adobe Experience Platform Data Governance Help
 * [Data Governance overview](home.md)
 * Data usage labels {#labels}
   * [Data usage labels overview](labels/overview.md)
-  * [Data usage labels user guide](labels/user-guide.md)
+  * [Manage data usage labels in the UI](labels/user-guide.md)
+  * [Manage data usage labels in the API](labels/api.md)
   * [Supported data usage labels](labels/reference.md)
 * Data usage policies {#policies}
   * [Data usage policies overview](policies/overview.md)
@@ -24,3 +25,4 @@ user-guide-title: Adobe Experience Platform Data Governance Help
   * [Marketing actions](api/marketing-actions.md)
   * [Evaluation](api/evaluation.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)
+* [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

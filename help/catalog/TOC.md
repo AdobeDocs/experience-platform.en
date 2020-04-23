@@ -18,6 +18,7 @@ user-guide-title: Catalog and Datasets Help
   * [Delete an object](api/delete-object.md)
   * [Create a dataset](api/create-dataset.md)
   * [Create a batch](api/create-batch.md)
+  * [Data usage labels](api/labels.md)
   * [Appendix](api/appendix.md)
 * Datasets {#datasets}
   * [Datasets overview](datasets/overview.md)
@@ -26,3 +27,4 @@ user-guide-title: Catalog and Datasets Help
 * [Privacy request processing in the Data Lake](privacy.md)
 * [Data protection in Experience Platform](data-protection.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
+* [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
