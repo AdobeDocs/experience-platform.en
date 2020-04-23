@@ -43,7 +43,7 @@ Instead of using an existing dataset, you can create a new dataset. Please read 
 **API format**
 
 ```http
-POST /collection/{CONNECTION_ID}
+POST /collection/batch/{CONNECTION_ID}
 ```
 
 | Property | Description |
@@ -53,7 +53,7 @@ POST /collection/{CONNECTION_ID}
 **Request**
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
+curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
   -H 'Content-Type: application/json' \
   -d '{
   "messages": [
@@ -225,7 +225,7 @@ The request payload is an array of JSON objects representing the event in XDM sc
 **API format**
 
 ```http
-POST /collection/{CONNECTION_ID}
+POST /collection/batch/{CONNECTION_ID}
 ```
 
 | Property | Description |
@@ -235,7 +235,7 @@ POST /collection/{CONNECTION_ID}
 **Request**
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
+curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
   -H 'Content-Type: application/json' \
   -d '{
   "messages": [
