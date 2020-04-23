@@ -11,13 +11,21 @@ keywords: release notes;
 
 ## Release date: March 11, 2020
 
-## Data Governance
+Updates to existing features in Adobe Experience Platform:
+
+* [Data Governance](governance)
+* [Data Ingestion](#ingestion)
+* [Destinations](#destinations)
+* [Identity Service](#identity)
+* [Sources](#sources)
+
+## Data Governance {#governance}
 
 Experience Platform allows companies to bring data from multiple enterprise systems together to better allow marketers to identify, understand, and engage customers. Experience Platform includes an end-to-end data governance infrastructure, including Data Usage Labeling and Enforcement (DULE), to ensure the proper use of data within Platform and when being shared between systems.
 
 Adobe Experience Platform Data Governance is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within Experience Platform at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
 
-### New features
+**New features**
 
 >[!NOTE] Some of the following new features are currently in beta and are not available to all users. Beta features are subject to change.
 
@@ -27,34 +35,34 @@ Adobe Experience Platform Data Governance is a series of strategies and technolo
 | Data lineage for enforcement | When a data usage policy is violated in Real-time CDP, the UI displays a notification that contains data lineage information to help the user understand why the policies were violated and what they can do to resolve the violation. |
 
 
-### Known issues
+**Known issues**
 
 * None
 
 For more information about Data Governance, see the [Data Governance overview](../../data-governance/home.md).
 
-## Data Ingestion
+## Data Ingestion {#ingestion}
 
 Adobe Experience Platform provides a rich set of features to ingest any type and latency of data. Adobe Experience Platform Data Ingestion provides multiple alternatives for ingesting data including Batch APIs, Streaming APIs, native Adobe connectors, data integration partners, or the Adobe Experience Platform UI.
 
-### New features
+**New features**
 
 |Feature | Description|
 |------- | -----------|
 |Partial batch ingestion | Partial batch ingestion is the ability to ingest data containing errors, up to a certain threshold. With this capability, users can successfully ingest all their correct data into Adobe Experience Platform while all their incorrect data is batched separately. Details are added to unsuccessful batches to explain why they did not pass validation. More information about partial batch ingestion can be found in the [partial batch ingestion documentation](../../ingestion/batch-ingestion/partial.md).|
 
-### Known issues
+**Known issues**
 
 * None
 
 To learn more about ingesting data into Platform, visit the [Data Ingestion documentation](../../ingestion/home.md).
 
 
-## Destinations
+## Destinations {#destinations}
 
 In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
-### New destinations
+**New destinations**
 
 New destinations are available where you can activate your Adobe Experience Platform data. See below for details:
 
@@ -65,31 +73,31 @@ New destinations are available where you can activate your Adobe Experience Plat
 
 To learn more, visit the [destinations overview](../../rtcdp/destinations/destinations-overview.md)
 
-## Identity Service
+## Identity Service {#identity}
 
 Delivering relevant digital experiences requires having a complete understanding of your customer. This is made more difficult when your customer data is fragmented across disparate systems, causing each individual customer to appear to have multiple "identities".
 
 Adobe Experience Platform Identity Service helps you to gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real-time.
 
-### New features
+**New features**
 
 | Feature | Description |
 | ------- | ----------- |
 | Enhanced Private Graph | Private Graph functionality has been enhanced to reduce graph generation latency from a weekly batch process to a daily refreshed graph, allowing Identity Service customers to access more up-to-date identity graphs and linkages. |
 
-### Known issues
+**Known issues**
 
 * None
 
 For more information about Identity Service, see the [Identity Service overview](../../identity-service/home.md).
 
-## Sources
+## Sources {#sources}
 
 Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
-### New features
+**New features**
 
 | Feature | Description |
 | ------- | ----------- |
@@ -100,7 +108,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | UI support for CRM systems | New source connector for HubSpot, Salesforce Service Cloud, and ServiceNow in the UI. |
 | UI support for database systems | New source connector for AWS Redshift, Google BigQuery, MariaDB, Microsoft SQL Server, and MySQL in the UI. |
 
-### Known issues
+**Known issues**
 
 * None
 
