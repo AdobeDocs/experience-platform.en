@@ -11,17 +11,6 @@ Adobe Experience Platform allows you to build and create custom Feature Pipeline
 
 This document describes the various classes found in a Feature Pipeline, and provides a step-by-step tutorial for creating a custom Feature Pipeline using the [Model Authoring SDK](./sdk.md) in PySpark and Spark.
 
-The tutorial covers the following steps:
-- [Implement your Feature Pipeline classes](#implement-your-feature-pipeline-classes)
-    -  [Define variables in a configuration file](#define-variables-in-the-configuration-json-file)
-    -  [Prepare the input data with DataLoader](#prepare-the-input-data-with-dataloader)
-    -  [Transform a dataset with DatasetTransformer](#transform-a-dataset-with-datasettransformer)
-    -  [Engineer data features with FeaturePipelineFactory](#engineer-data-features-with-featurepipelinefactory)
-    -  [Store your feature dataset with DataSaver](#store-your-feature-dataset-with-datasaver)
-    -  [Specify your implemented class names in the application file](#specify-your-implemented-class-names-in-the-application-file)
--  [Build the binary artifact](#build-the-binary-artifact)
--  [Create a Feature Pipeline Engine using the API](#create-a-feature-pipeline-engine-using-the-api)
-
 ## Feature Pipeline Classes
 
 The following table describes the main Abstract Classes that you must extend in order to build a Feature Pipeline:
@@ -40,11 +29,11 @@ The following flowchart shows the Runtime's order of execution:
 ![](../images/authoring/feature-pipeline/FeaturePipeline_Runtime_flow.png)
 
 
-## Implement your Feature Pipeline classes
+## Implement your Feature Pipeline classes {#implement-your-feature-pipeline-classes}
 
 The following sections provide details and examples on implementing the required classes for a Feature Pipeline.
 
-### Define variables in the configuration JSON file
+### Define variables in the configuration JSON file {#define-variables-in-the-configuration-json-file}
 
 The configuration JSON file consists of key-value pairs and is intended for you to specify any variables to be later defined during runtime. These key-value pairs can define properties such as input dataset location, output dataset ID, tenant ID, column headers, and so on.
 
@@ -92,7 +81,7 @@ val input_dataset_id: String = configProperties.get("datasetId")
 ```
 
 
-### Prepare the input data with DataLoader
+### Prepare the input data with DataLoader {#prepare-the-input-data-with-dataloader}
 
 The DataLoader is responsible for the retrieval and filtering of input data. Your implementation of DataLoader must extend the abstract class `DataLoader` and override the abstract method `load`.
 
@@ -196,7 +185,7 @@ class MyDataLoader extends DataLoader {
 
 
 
-### Transform a dataset with DatasetTransformer
+### Transform a dataset with DatasetTransformer {#transform-a-dataset-with-datasettransformer}
 
 A DatasetTransformer provides the logic for transforming an input DataFrame and returns a new derived DataFrame. This class can be implemented to either work cooporatively with a FeaturePipelineFactory, work as the sole feature engineering component, or you can choose to not implement this class. 
 
@@ -253,7 +242,7 @@ class MyDatasetTransformer extends DatasetTransformer {
 
 
 
-### Engineer data features with FeaturePipelineFactory
+### Engineer data features with FeaturePipelineFactory {#engineer-data-features-with-featurepipelinefactory}
 
 A FeaturePipelineFactory allows you to implement your feature engineering logic by defining and chaining together a series of Spark Transformers through a Spark Pipeline. This class can be implemented to either work cooperatively with a DatasetTransformer, work as the sole feature engineering component, or you can choose to not implement this class.
 
@@ -334,7 +323,7 @@ class MyFeaturePipelineFactory(uid:String) extends FeaturePipelineFactory(uid) {
 
 
 
-### Store your feature dataset with DataSaver
+### Store your feature dataset with DataSaver {#store-your-feature-dataset-with-datasaver}
 
 The DataSaver is responsible for storing your resulting feature datasets into a storage locaiton. Your implementation of DataSaver must extend the abstract class `DataSaver` and override the abstract method `save`.
 
@@ -467,7 +456,7 @@ class MyDataSaver extends DataSaver {
 }
 ```
 
-### Specify your implemented class names in the application file
+### Specify your implemented class names in the application file {#specify-your-implemented-class-names-in-the-application-file}
 
 Now that your Feature Pipeline classes are defined and implemented, you must specify the names of your classes in the application file.
 
@@ -515,7 +504,7 @@ feature.dataSaver=MyDataSaver
 
 
 
-## Build the binary artifact
+## Build the binary artifact {#build-the-binary-artifact}
 
 Now that your Feature Pipeline classes implemented, you can build and compile it into a binary artifact which can then be used to create a Feature Pipeline through API calls.
 
@@ -543,11 +532,11 @@ mvn clean install
 
 Successfully building your Feature Pipeline will generate a `.jar` artifact in the `/dist` directory, this artifact is used to create a Feature Pipeline.
 
-## Create a Feature Pipeline Engine using the API
+## Create a Feature Pipeline Engine using the API {#create-a-feature-pipeline-engine-using-the-api}
 
 Now that you have authored your Feature Pipeline and built the binary artifact, you can [create a Feature Pipeline Engine using the Sensei Machine Learning API](../api/engines.md#create-a-feature-pipeline-engine-using-binary-artifacts). Successfully creating a Feature Pipeline Engine will provide you with an Engine ID as part of the response body, make sure to save this value before continuing to the next steps.
 
-## Next steps
+## Next steps {#next-steps}
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the Feature Pipeline Engine. Update this document once those tutorials are available)
 

@@ -30,7 +30,7 @@ A new dialog appears, containing a link to the downloading scores documentation 
 
 ![Dataset ID](./images/download-scores/access-scores.png)
 
-## Retrieve your batch ID
+## Retrieve your batch ID {#retrieve-your-batch-id}
 
 Using your dataset ID from the previous step, you need to make a call to the  Catalog API in order to retrieve a batch ID. Additional query parameters are used for this API call in order to return a single batch instead of a list of batches belonging to your organization. For more information on the types of query parameters available, visit the guide on [filtering Catalog data using query parameters](../../catalog/api/filter-data.md).
 
