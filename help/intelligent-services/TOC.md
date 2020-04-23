@@ -20,3 +20,4 @@ user-guide-title: Intelligent Services Help
   * [User interface guide](customer-ai/user-guide.md)
   * [Discovering insights](customer-ai/discover-insights.md)
   * [Downloading scores](customer-ai/download-scores.md)
+* [Platform release notes](https://www.adobe.com/go/platform-release-notes-en) 
