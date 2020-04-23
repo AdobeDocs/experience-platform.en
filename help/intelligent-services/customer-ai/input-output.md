@@ -15,7 +15,10 @@ Customer AI uses Consumer Experience Event data to calculate propensity scores. 
 
 ## Customer AI output data
 
-Customer AI generates several attributes for individual profiles that are deemed eligible. There are two ways to consume the score based on what you have provisioned. If you have Real-time customer profile enabled for your dataset, you can consume it via Real-time customer profile. If you don't have Real-time customer profile you can download the Customer AI output dataset available on the data lake. Output values are consumed by Real-time Customer Profile which can be used to create and define segments.
+Customer AI generates several attributes for individual profiles that are deemed eligible. There are two ways to consume the score based on what you have provisioned. If you have Real-time Customer Profile enabled for your dataset, you can consume it via Real-time Customer Profile. If you don't have Real-time Customer Profile you can download the Customer AI output dataset available on the data lake. 
+
+>[!NOTE]
+>Output values are consumed by Real-time Customer Profile which can be used to create and define segments.
 
  The table below describes the various attributes found in the output of Customer AI:
 
