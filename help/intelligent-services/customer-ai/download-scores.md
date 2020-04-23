@@ -94,7 +94,7 @@ Within the score batch ID object is a `relatedObjects` array. This array contain
 }
 ```
 
-## Retrieve the next API call with your batch ID
+## Retrieve the next API call with your batch ID {#retrieve-the-next-api-call-with-your-batch-id}
 
 Once you have your batch ID, you are able to make a new GET request to `/batches`. The request returns a link thats used as the next API request.
 
@@ -148,7 +148,7 @@ A successful response returns a payload containing a `_links` object. Within the
 }
 ```
 
-## Retrieve your files
+## Retrieve your files {#retrieving-your-files}
 
 Using the `href` value you got in the previous step as an API call, make a new GET request to retrieve your file directory.
 
