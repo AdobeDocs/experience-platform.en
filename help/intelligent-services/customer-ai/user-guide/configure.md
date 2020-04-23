@@ -11,13 +11,13 @@ Customer AI, as part of Intelligent Services enables you to generate custom prop
 
 Intelligent Services provide Customer AI as a simple-to-use Adobe Sensei service that can be configured for different use cases. The following sections provide steps for configuring an instance of Customer AI.
 
-## Set up your instance
+## Set up your instance {#set-up-your-instance}
 
 In the Platform UI, click **[!UICONTROL Services]** in the left navigation. The **[!UICONTROL Services]** browser appears and displays all available services at your disposal. In the container for Customer AI, click **[!UICONTROL Open]**.
 
 ![](../images/user-guide/navigate-to-service.png)
 
-The *Customer AI* screen displays all existing Customer AI instances. Click **Create instance**.
+The *Customer AI* screen displays all existing Customer AI instances. Click **[!UICONTROL Create instance]**.
 
 ![](../images/user-guide/dashboard.png)
 
@@ -37,7 +37,7 @@ Provide the required values and then click **[!UICONTROL Next]**.
 
 ![](../images/user-guide/setup.png)
 
-### Define a goal
+### Define a goal {#define-a-goal}
 
 The *Define goal* step appears and it provides an interactive environment for you to visually define a goal. A goal is composed of one or more events, where each event's occurrence is based on the condition it holds. The objective of a Customer AI instance is to determine the likeliness of achieving its goal within a given time frame.
 
@@ -45,7 +45,7 @@ Click **[!UICONTROL Enter Field Name]** and select a field from the dropdown lis
 
 ![](../images/user-guide/goal.png)
 
-### Configure a schedule *(optional)*
+### Configure a schedule *(optional)* {#configure-a-schedule}
 
 The *advanced* step appears. This optional step allows you to configure a schedule to automate prediction runs, define prediction exclusions to filter certain events, or click **[!UICONTROL Finish]** if nothing is needed. 
 
@@ -69,7 +69,7 @@ If the instance is created successfully, a prediction run is immediately trigger
 
 By following this section, you have configured an instance of Customer AI and a prediction run was executed. Upon the run's successful completion, scored insights automatically populate profiles with predicted scores. Please wait up to 24 hours before continuing to the next section of this tutorial.
 
-## Next steps
+## Next steps {#next-steps}
 
 By following this tutorial, you have successfully configured an instance of Customer AI and generated propensity scores. You can now choose to use the Segment builder to [create customer segments with predicted scores](./create-segment.md) or [discover insights with Customer AI](./discover-insights.md).
 

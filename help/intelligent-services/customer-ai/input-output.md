@@ -15,7 +15,9 @@ Customer AI uses Consumer Experience Event data to calculate propensity scores. 
 
 ## Customer AI output data
 
-Customer AI generates several attributes for individual profiles that are deemed eligible. These values are consumed by Real-time Customer Profile which can be used to create and define segments. The table below describes the various attributes found in the output of Customer AI:
+Customer AI generates several attributes for individual profiles that are deemed eligible. There are two ways to consume the score based on what you have provisioned. If you have Real-time customer profile enabled for your dataset, you can consume it via Real-time customer profile. If you don't have Real-time customer profile you can download the Customer AI output dataset available on the data lake. Output values are consumed by Real-time Customer Profile which can be used to create and define segments.
+
+ The table below describes the various attributes found in the output of Customer AI:
 
 | Attribute | Description |
 | ----- | ----------- |
@@ -26,6 +28,6 @@ Customer AI generates several attributes for individual profiles that are deemed
 | Score date | The date on which scoring occurred. |
 | Influential factors | Predicted reasons on why a profile is likely to convert or churn. Factors are comprised of the following attributes:<ul><li>Code: The profile or behavioral attribute which positively influences a profile's predicted score. </li><li>Value: The value of the profile or behavioral attribute.</li><li>Importance: Indicates the weight of the profile or behavioral attribute has on the predicted score (low, medium, high)</li></ul> |
 
-## Next steps
+## Next steps {#next-steps}
 
 Once you have prepared your data and have all your credentials and schemas in place, start by following the [Configure a Customer AI Instance](./user-guide/configure.md) guide. This guide walks you through creating an instance for Customer AI.
