@@ -31,6 +31,8 @@ The sections below highlight the key fields within the CEE mixin which should be
 
 This field represents the marketing channel related to the ExperienceEvent. The field includes information about the channel type, media type, and location type. **This field _must_ be provided in order for Attribution AI to work with your data**.
 
+![](./images/data-preparation/channel.png)
+
 **Example schema**
 
 ```json
@@ -63,25 +65,25 @@ The following table provides some examples of marketing channels mapped to the `
 
 This field is an array of items which represent products selected by a customer, including the product SKU, name, price, and quantity.
 
+![](./images/data-preparation/productListItems.png)
+
 **Example schema**
 
 ```json
 [
   {
     "xdm:SKU": "1002352692",
-    "xdm:lineItemId": "12345678",
     "xdm:name": "24-Watt 8-Light Chrome Integrated LED Bath Light",
     "xdm:currencyCode": "USD",
     "xdm:quantity": 1,
-    "xdm:priceTotal": 159
+    "xdm:priceTotal": 159.45
   },
   {
     "xdm:SKU": "3398033623",
-    "xdm:lineItemId": "48693817",
     "xdm:name": "16ft RGB LED Strips",
     "xdm:currencyCode": "USD",
     "xdm:quantity": 1,
-    "xdm:priceTotal": 80
+    "xdm:priceTotal": 79.99
   }
 ]
 ```
@@ -91,6 +93,8 @@ For complete information regarding each of the required sub-fields for `xdm:prod
 ### xdm:commerce
 
 This field contains commerce-specific information about the ExperienceEvent, including the purchase order number and payment information.
+
+![](./images/data-preparation/commerce.png)
 
 **Example schema**
 
@@ -128,6 +132,8 @@ For complete information regarding each of the required sub-fields for `xdm:comm
 
 This field represents web details relating to the ExperienceEvent, such as the interaction, page details, and referrer.
 
+![](./images/data-preparation/web.png)
+
 **Example schema**
 
 ```json
@@ -155,6 +161,8 @@ For complete information regarding each of the required sub-fields for `xdm:prod
 ### xdm:marketing
 
 This field contains information related to marketing activities that are active with the touchpoint.
+
+![](./images/data-preparation/marketing.png)
 
 **Example schema**
 
