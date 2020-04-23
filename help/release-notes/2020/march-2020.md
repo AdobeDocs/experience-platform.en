@@ -13,7 +13,7 @@ keywords: release notes;
 
 Updates to existing features in Adobe Experience Platform:
 
-* [Data Governance](governance)
+* [Data Governance](#governance)
 * [Data Ingestion](#ingestion)
 * [Destinations](#destinations)
 * [Identity Service](#identity)
