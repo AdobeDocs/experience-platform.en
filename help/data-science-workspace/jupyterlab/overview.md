@@ -47,16 +47,16 @@ Information regarding key features of JupyterLab and instructions on performing 
 *  [Code cells](#code-cells)
 *  [Kernels](#kernels)
 *  [Kernel sessions](#kernel-sessions)
-*  [PySpark/Spark execution resource](#pysparkspark-execution-resource)
+*  [PySpark/Spark execution resource](#execution-resource)
 *  [Launcher](#launcher)
 
-### Access JupyterLab
+### Access JupyterLab {#access-jupyterlab}
 
 In [Adobe Experience Platform](https://platform.adobe.com), select **Notebooks** from the left navigation column. Allow some time for JupyterLab to fully initialize.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
-### JupyterLab interface
+### JupyterLab interface {#jupyterlab-interface}
 
 The JupyterLab interface consists of a menu bar, a collapsible left sidebar, and the main work area containing tabs of documents and activities.
 
@@ -94,7 +94,7 @@ The main work area in JupyterLab enables you to arrange documents and other acti
 
 ![](../images/jupyterlab/user-guide/main_work_area.gif)
 
-### Code cells
+### Code cells {#code-cells}
 
 Code cells are the primary content of notebooks. They contain source code in the language of the notebook's associated kernel and the output as a result of executing the code cell. An execution count is displayed to the right of every code cell which represents its order of execution.
 
@@ -126,7 +126,7 @@ Certain features and functionalities are limited to particular kernels as descri
 | **Spark - deprecated** | No | <ul><li>Sensei ML Framework</li><li>Catalog Service</li></ul> |
 | **Scala** | No | <ul><li>Sensei ML Framework</li><li>Catalog Service</li></ul> |
 
-### Kernel sessions
+### Kernel sessions {#kernel-sessions}
 
 Each active notebook or activity on JupyterLab utilizes a kernel session. All active sessions can be found by expanding the **Running terminals and kernels** tab from the left sidebar. The type and state of the kernel for a notebook can be identified by observing the top right of the notebook interface. In the diagram below, the notebook's associated kernel is **Python 3** and the its current state is represented by a grey circle to the right. A hollow circle implies an idling kernel and a solid circle implies a busy kernel.
 
@@ -189,7 +189,7 @@ All configurable properties are listed in the table below:
 | name | Name of the application | string |
 | conf | Spark configuration property | Map of key=val |
 
-### Launcher
+### Launcher {#launcher}
 
 [//]: # (Talk about the different Notebooks, introduce that certain starter notebooks are limited to particular kernels)
 
@@ -794,7 +794,7 @@ timedf.show()
 | python | 3.6.7 |
 | mkl-rt | 11.1 |
 
-## Optional SQL flags for Query Service
+## Optional SQL flags for Query Service {#optional-sql-flags-for-query-service}
 
 This table outlines the optional SQL flags that can be used for Query Service.
 
