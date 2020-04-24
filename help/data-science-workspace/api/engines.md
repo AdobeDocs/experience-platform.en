@@ -161,7 +161,7 @@ A successful response returns a payload containing the details of the newly crea
 }
 ```
 
-## Create a feature pipeline Engine using Docker URLs {feature-pipeline-docker}
+## Create a feature pipeline Engine using Docker URLs {#feature-pipeline-docker}
 
 You can create a feature pipeline Engine by performing a POST request while providing its metadata and a Docker URL that references a Docker image.
 
@@ -201,7 +201,7 @@ curl -X POST \
            ]
        }
    }
-}
+}'
 ```
 
 | Property | Description |
