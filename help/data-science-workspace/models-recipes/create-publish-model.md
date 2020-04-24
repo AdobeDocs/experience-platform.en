@@ -146,10 +146,12 @@ The final step in the Data Science workflow is to operationalize your model in o
 
 Once the scoring run has successfully completed, you will be able to preview the results and view the insights generated.
 
-1.  On the scoring runs page, click on the completed scoring run, then click **Preview Scoring Results Dataset** on the right rail.
+1.  On the scoring runs page, click on the completed scoring run, then click **[!UICONTROL Preview Scoring Results Dataset]** on the right rail.
     ![](../images/models-recipes/model-walkthrough/score_complete.png)
-2.  In the preview table, each row contains product recommendations for a particular customer, labeled as **recommendations** and **userId** respectively. Since the **num_recommendations** Hyperparameter was set to 10 in the sample screenshots, each row of recommendations can contain up to 10 product identities delimited by a number sign (#).
+2.  In the preview table, each row contains product recommendations for a particular customer, labeled as **[!UICONTROL recommendations]** and **[!UICONTROL userId]** respectively. Since the **[!UICONTROL num_recommendations]** Hyperparameter was set to 10 in the sample screenshots, each row of recommendations can contain up to 10 product identities delimited by a number sign (#).
     ![](../images/models-recipes/model-walkthrough/preview_score_results.png)
+
+## Next steps {#next-steps}
 
 Well done, you have successfully generated product recommendations!
 

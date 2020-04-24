@@ -19,42 +19,42 @@ This tutorial requires an existing Recipe. If you do not have a Recipe, follow t
 
 ## Create a Model
 
-1. In Adobe Experience Platform, click the **Models** link located in the left navigation column to list all existing Models. Click **Create Model** near the top right of the page to begin a Model creation process.
+1. In Adobe Experience Platform, click the **[!UICONTROL Models]** link located in the left navigation column to list all existing Models. Click **[!UICONTROL Create Model]** near the top right of the page to begin a Model creation process.
 ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-2. Browse through the list of existing Recipes, find and select the Recipe to be used to create the Model and click **Next**.
+2. Browse through the list of existing Recipes, find and select the Recipe to be used to create the Model and click **[!UICONTROL Next]**.
 ![](../images/models-recipes/train-evaluate-ui/select_recipe.png)
 
-3. Select an appropriate input dataset and click **Next**. This will set the default input training dataset for the Model. 
+3. Select an appropriate input dataset and click **[!UICONTROL Next]**. This will set the default input training dataset for the Model. 
 ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
-4. Provide a name for the Model and review the default Model configurations. Default configurations were applied during Recipe creation, review and modify the configuration values by double-clicking the values. To provide a new set of configurations, click **Upload New Config** and drag a JSON file containing Model configurations into the browser window. Click **Finish** to create the Model.
+4. Provide a name for the Model and review the default Model configurations. Default configurations were applied during Recipe creation, review and modify the configuration values by double-clicking the values. To provide a new set of configurations, click **[!UICONTROL Upload New Config]** and drag a JSON file containing Model configurations into the browser window. Click **[!UICONTROL Finish]** to create the Model.
     >[!NOTE]Configurations are unique and specific to their intended Recipe, this means that configurations for the Retail Sales Recipe will not work for the Product Recommendations Recipe. See the [reference](#reference) section for a list of Retail Sales Recipe configurations.
 
     ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
 ## Create a training Run
 
-1. In Adobe Experience Platform, click the **Models** link located in the left navigation column to list all existing Models. Find and click on the name of the Model to be trained.
+1. In Adobe Experience Platform, click the **[!UICONTROL Models]** link located in the left navigation column to list all existing Models. Find and click on the name of the Model to be trained.
 ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
 2. All existing training runs with their current training statuses are listed. For Models created using the Data Science Workspace user interface, a training run is automatically generated and executed using the default configurations and input training dataset.
 ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
-3. Create a new training run by clicking **Train** near the top-right of the Model overview page.
+3. Create a new training run by clicking **[!UICONTROL Train]** near the top-right of the Model overview page.
 ![](../images/models-recipes/train-evaluate-ui/training_input.png)
 
-4. Select the training input dataset for the training run and click **Next**.
+4. Select the training input dataset for the training run and click **[!UICONTROL Next]**.
 ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
-5. Default configurations provided during the Model's creation are shown, change and modify these accordingly by double-clicking the values. Click **Finish** to create and execute the training run.
+5. Default configurations provided during the Model's creation are shown, change and modify these accordingly by double-clicking the values. Click **[!UICONTROL Finish]** to create and execute the training run.
     >[!NOTE]Configurations are unique and specific to their intended Recipe, this means that configurations for the Retail Sales Recipe will not work for the Product Recommendations Recipe. See the [reference](#reference) section for a list of Retail Sales Recipe configurations.
 
     ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 ## Evaluate the Model
 
-1. In Adobe Experience Platform, click the **Models** link located in the left navigation column to list all existing Models. Find and click on the name of the Model to be evaluated.
+1. In Adobe Experience Platform, click the **[!UICONTROL Models]** link located in the left navigation column to list all existing Models. Find and click on the name of the Model to be evaluated.
 ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
 2. All existing training runs with their current training statuses are listed. With multiple completed training runs, evaluation metrics can be compared across different training runs in the Model evaluation chart, select an evaluation metric using the dropdown list above the graph.
