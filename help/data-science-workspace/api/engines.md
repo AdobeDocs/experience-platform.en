@@ -182,32 +182,34 @@ curl -X POST \
     -H 'x-api-key: acp_foundation_machineLearning' \
     -H 'Content-Type: text/plain' \
     -F '{
-    "name": "Data Transformation Service Engine",
-    "type": "Spark",
+    "type": "PySpark",
+    "algorithm":"fp",
+    "name": "Feature_Pipeline_Engine",
+    "description": "Feature_Pipeline_Engine",
     "mlLibrary": "databricks-spark",
     "artifacts":
-    {
-        "default":
-        {
-            "image":
-            {
-                "location": "va7prod1databricksacr0vvocuh3x634fq.azurecr.io/data-prep-sample:0.0.3",
-                "name": "dataprep",
-                "executionType": "Spark",
+	{
+       "default":
+       {
+           "image": {
+                "location": "v1d2cs4mimnlttw.azurecr.io/ml-featurepipeline-pyspark:0.2.1",
+                "name": "datatransformation",
+                "executionType": "PySpark",
                 "packagingType": "docker"
             },
-            "defaultMLInstanceConfigs": [
-            ]
-        }
-    }
-    }'
+           "defaultMLInstanceConfigs": [
+           ]
+       }
+   }
+}
 ```
 
 | Property | Description |
 | --- | --- |
+| `type` | The execution type of the Engine. This value corresponds to the language in which the Docker image is built upon. The value can be set to Spark or PySpark. |
+| `algorithm` | The algorithm being used, set this value to `fp` (feature pipeline). |
 | `name` | The desired name for the feature pipeline Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in the UI as the Recipe's name. |
 | `description` | An optional description for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in UI as the Recipe's description. This property is required. If you do not want to provide a description, set its value to be an empty string. |
-| `type` | The execution type of the Engine. This value corresponds to the language in which the Docker image is built upon. The value can be set to Spark or PySpark. |
 | `mlLibrary` | A field that is required when creating engines for PySpark and Scala recipes. This field must be set to `databricks-spark`. |
 | `artifacts.default.image.location` | The location of the Docker image. Only Azure ACR or Public (unauthenticated) Dockerhub is supported. |
 | `artifacts.default.image.executionType` | The execution type of the Engine. This value corresponds to the language in which the Docker image is built upon. This can be either "Spark" or "PySpark". |
@@ -215,8 +217,30 @@ curl -X POST \
 
 **Response**
 
+A successful response returns a payload containing the details of the newly created feature pipeline Engine including its unique identifier (`id`). The following example response is for a PySpark feature pipeline Engine.
+
 ```json
-response here
+{
+    "id": "88333891-4309-4fd9-acd0-3de7827cecd1",
+    "name": "Feature_Pipeline_Engine",
+    "description": "Feature_Pipeline_Engine",
+    "type": "PySpark",
+    "algorithm": "fp",
+    "mlLibrary": "databricks-spark",
+    "created": "2020-04-24T20:46:58.382Z",
+    "updated": "2020-04-24T20:46:58.382Z",
+    "deprecated": false,
+    "artifacts": {
+        "default": {
+            "image": {
+                "location": "v1d2cs4mimnlttw.azurecr.io/ml-featurepipeline-pyspark:0.2.1",
+                "name": "datatransformation",
+                "executionType": "PySpark",
+                "packagingType": "docker"
+            }
+        }
+    }
+}
 ```
 
 ## Retrieve a list of Engines
