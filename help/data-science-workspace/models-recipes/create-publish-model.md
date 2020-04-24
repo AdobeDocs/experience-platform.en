@@ -43,7 +43,7 @@ Before starting this tutorial, you must have the following prerequisites:
     *   Batches: Datasets are made up of batches. A batch is a set of data collected over a period of time and processed together as a single unit.
     *   JupyterLab: [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is an open-source web-based interface for Project Jupyter and is tightly integrated into Experience Platform.
 
-## Prepare your data
+## Prepare your data {#prepare-your-data}
 
 To create a machine learning Model that makes personalized product recommendations to your customers, previous customer purchases on your website must be analyzed. This section explores how this data is ingested into Platform through Adobe Analytics, and how that data is transformed into a Feature dataset to be used by your machine learning Model.
 
@@ -64,7 +64,7 @@ The other datasets have been pre-populated with batches for previewing purposes.
 | Recommendations Input Dataset | Recommendations Input Schema | The Analytics data is transformed into a training dataset using a feature pipeline. This data is used to train the Product Recommendations machine learning Model. `itemid` and `userid` correspond to a product purchased by that customer. |
 | Recommendations Output Dataset | Recommendations Output Schema | The dataset for which scoring results are stored, it will contain the list of recommended products for each customer. |
 
-## Author your Model
+## Author your Model {#author-your-model}
 
 The second component of the Data Science Workspace lifecycle involves authoring Recipes and Models. The Product Recommendations Recipe is designed to generate product recommendations at scale by utilizing past purchase data and machine learning. 
 
@@ -81,7 +81,7 @@ Recipes are the basis for a Model as they contain machine learning algorithms an
 
 You have now reviewed the input and output schemas required by the Product Recommendations Recipe. You can now continue to the next section to find out how to create, train, and evaluate a Product Recommendations Model.
 
-## Train and evaluate your Model
+## Train and evaluate your Model {#train-and-evaluate-your-model}
 
 Now that your data is prepared and the Recipe is ready to be used, you can create, train, and evaluate your machine learning Model.
 
@@ -116,7 +116,7 @@ You can choose to wait for the training run to finish, or continue to create a n
 3.  An additional data point will appear on the Model evaluation chart once the new training run completes, this may take up to several minutes.
     ![](../images/models-recipes/model-walkthrough/post_training_run.png)
 
-### Evaluate the Model
+### Evaluate the Model 
 
 Each time a training run completes, you can view the resulting evaluation metrics to determine how well the Model performed.
 
@@ -126,7 +126,7 @@ Each time a training run completes, you can view the resulting evaluation metric
 3.  You can see the dataset, schema, and configuration parameters used for each training run on the right rail.
 4.  Navigate back to the Model page and identify the top performing training run by observing their evaluation metrics.
 
-## Operationalize your Model
+## Operationalize your Model {#operationalize-your-model}
 
 The final step in the Data Science workflow is to operationalize your model in order to score and consume insights from your data store.
 

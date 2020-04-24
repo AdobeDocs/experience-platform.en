@@ -485,7 +485,7 @@ A successful response returns a payload containing the details of the newly crea
 }
 ```
 
-## Create a feature pipeline Engine using binary artifacts - deprecated
+## Create a feature pipeline Engine using binary artifacts - deprecated {#create-a-feature-pipeline-engine-using-binary-artifacts}
 
 >[!IMPORTANT]
 >Binary artifacts are no longer supported and are set to be removed at a later date.
