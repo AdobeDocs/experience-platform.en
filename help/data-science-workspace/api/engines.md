@@ -18,7 +18,7 @@ Your Docker registry credentials are required in order to upload a packaged Reci
 
 **API Format**
 
-```http
+```https
 GET /engines/dockerRegistry
 ```
 
@@ -53,7 +53,7 @@ You can create an Engine by performing a POST request while providing its metada
 
 **API Format**
 
-```http
+```https
 POST /engines
 ```
 
@@ -161,13 +161,93 @@ A successful response returns a payload containing the details of the newly crea
 }
 ```
 
+## Create a feature pipeline Engine using Docker URLs {#feature-pipeline-docker}
+
+You can create a feature pipeline Engine by performing a POST request while providing its metadata and a Docker URL that references a Docker image.
+
+**API format**
+
+```https
+POST /engines
+```
+
+**Request**
+
+```shell
+curl -X POST \
+ https://platform.adobe.io/data/sensei/engines \
+    -H 'Authorization: Bearer ' \
+    -H 'x-gw-ims-org-id: 20655D0F5B9875B20A495E23@AdobeOrg' \
+    -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=engine.v1.json' \
+    -H 'x-api-key: acp_foundation_machineLearning' \
+    -H 'Content-Type: text/plain' \
+    -F '{
+    "type": "PySpark",
+    "algorithm":"fp",
+    "name": "Feature_Pipeline_Engine",
+    "description": "Feature_Pipeline_Engine",
+    "mlLibrary": "databricks-spark",
+    "artifacts": {
+       "default": {
+           "image": {
+                "location": "v7d1cs2mimnlttw.azurecr.io/ml-featurepipeline-pyspark:0.2.1",
+                "name": "datatransformation",
+                "executionType": "PySpark",
+                "packagingType": "docker"
+            },
+           "defaultMLInstanceConfigs": [
+           ]
+       }
+   }
+}'
+```
+
+| Property | Description |
+| --- | --- |
+| `type` | The execution type of the Engine. This value corresponds to the language in which the Docker image is built upon. The value can be set to Spark or PySpark. |
+| `algorithm` | The algorithm being used, set this value to `fp` (feature pipeline). |
+| `name` | The desired name for the feature pipeline Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in the UI as the Recipe's name. |
+| `description` | An optional description for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in UI as the Recipe's description. This property is required. If you do not want to provide a description, set its value to be an empty string. |
+| `mlLibrary` | A field that is required when creating engines for PySpark and Scala recipes. This field must be set to `databricks-spark`. |
+| `artifacts.default.image.location` | The location of the Docker image. Only Azure ACR or Public (unauthenticated) Dockerhub is supported. |
+| `artifacts.default.image.executionType` | The execution type of the Engine. This value corresponds to the language in which the Docker image is built upon. This can be either "Spark" or "PySpark". |
+| `artifacts.default.image.packagingType` | The packaging type of the Engine. This value should be set to `docker`. |
+
+**Response**
+
+A successful response returns a payload containing the details of the newly created feature pipeline Engine including its unique identifier (`id`). The following example response is for a PySpark feature pipeline Engine.
+
+```json
+{
+    "id": "88236891-4309-4fd9-acd0-3de7827cecd1",
+    "name": "Feature_Pipeline_Engine",
+    "description": "Feature_Pipeline_Engine",
+    "type": "PySpark",
+    "algorithm": "fp",
+    "mlLibrary": "databricks-spark",
+    "created": "2020-04-24T20:46:58.382Z",
+    "updated": "2020-04-24T20:46:58.382Z",
+    "deprecated": false,
+    "artifacts": {
+        "default": {
+            "image": {
+                "location": "v7d1cs3mimnlttw.azurecr.io/ml-featurepipeline-pyspark:0.2.1",
+                "name": "datatransformation",
+                "executionType": "PySpark",
+                "packagingType": "docker"
+            }
+        }
+    }
+}
+```
+
 ## Retrieve a list of Engines
 
 You can retrieve a list of Engines by performing a single GET request. To help filter results, you can specify query parameters in the request path. For a list of available queries, refer to the appendix section on [query parameters for asset retrieval](./appendix.md#query).
 
 **API Format**
 
-```http
+```https
 GET /engines
 GET /engines?parameter_1=value_1
 GET /engines?parameter_1=value_1&parameter_2=value_2
@@ -242,7 +322,7 @@ You can retrieve the details of a specific Engine by performing a GET request th
 
 **API Format**
 
-```http
+```https
 GET /engines/{ENGINE_ID}
 ```
 
@@ -317,7 +397,7 @@ The following sample API call will update an Engine's name and description while
 
 **API Format**
 
-```http
+```https
 PUT /engines/{ENGINE_ID}
 ```
 
@@ -385,7 +465,7 @@ You can delete an Engine by performing a DELETE request while specifying the tar
 
 **API Format**
 
-```http
+```https
 DELETE /engines/{ENGINE_ID}
 ```
 
@@ -425,7 +505,7 @@ You can create an Engine using local `.jar` or `.egg` binary artifacts by perfor
 
 **API Format**
 
-```http
+```https
 POST /engines
 ```
 
@@ -494,7 +574,7 @@ You can create a feature pipeline Engine using local `.jar` or `.egg` binary art
 
 **API Format**
 
-```http
+```https
 POST /engines
 ```
 
