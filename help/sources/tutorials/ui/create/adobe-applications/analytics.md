@@ -23,19 +23,19 @@ Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience 
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the *Adobe Applications* category, select **Adobe Analytics** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To view existing accounts, select **Accounts**.
+Under the *Adobe applications* category, select **Adobe Analytics** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To view existing accounts, select **Accounts**.
 
 ![](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### Select data
 
-The *Accounts* screen lists all previously established accounts for Adobe Analytics, you can create a new dataset flow by clicking **Select data**.
+The *Adobe Analytics* step appears. Previously established dataset flows for Analytics will be listed on this screen. You can create a new dataset flow by clicking **Select data**.
 
 >[!NOTE] Multiple in-bound connections to a source can be made for bringing in different data.
 
 ![](../../../../images/tutorials/create/analytics/dataset-flows.png)
 
-Analytics report suites can be configured for one sandbox at a time. To import the same report suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.
+<!---Analytics report suites can be configured for one sandbox at a time. To import the same report suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
 From the list of available report suites, select the one you want to bring into Platform and click **Next**.
 
@@ -49,10 +49,10 @@ The *Dataset flow detail* step appears, where you must provide a name and an opt
 
 ### Review your dataset flow
 
-The *Review* step appears, allowing you to review your new Analytics in-bound connection before it is created. Details of the connection are grouped by categories, including:
+The *Review* step appears, allowing you to review your new Analytics in-bound dataset flow before it is created. Details of the connection are grouped by categories, including:
 
 *   *Connection*: Shows the type of the source connection and the selected report suite.
-*   *Assign dataset & map fields*: When creating other source connectors, this container shows which dataset the source data is ingesting into, including the schema the dataset adheres to. Analytics data is automatically mapped and ingested into Real-time Customer Profiles.
+*   *Assign dataset & map fields*: When creating other source connectors, this container shows which dataset the source data is ingesting into, including the schema the dataset adheres to. The output schema and dataset is automatically configured for Adobe Analytics dataset flows.
 
 ![](../../../../images/tutorials/create/analytics/review.png)
 
@@ -64,7 +64,9 @@ Once your dataset flow has been created, you can monitor the data that is being 
 
 The *Dataset flows* screen appears. On this page is a pair of dataset flows, including information about their name, source data, creation time, and status.
 
-The connector instantiates to identical dataset flows upon creation. One flow represents live data and the other as backfill. Flow designated as backfill does not go into Profile.
+The connector instantiates two dataset flows. One flow represents backfill data and the other is for live data. Backfill data is not configured for Profile but is persisted to the data lake for analytical and data-science use-cases.
+
+For more information on backfill, live data, and their respective latencies, see the [Analytics Data Connector overview](../../../../connectors/adobe-applications/analytics.md).
 
 Select the dataset flow you wish to view from the list.
 
