@@ -20,7 +20,7 @@ In order to complete this tutorial, you must have access to Experience Platform.
 
 This tutorial requires an existing Service. If you do not have an accessible Service to work with, you can create one by following the [Publish your Model as a Service in the UI](./publish-model-service-ui.md) tutorial.
 
-## Configure scheduled scoring
+## Configure scheduled scoring {#configure-scheduled-scoring}
 
 Model scoring can be configured to be an automated process on a scheduled basis. Once a Service is created, you can follow the steps below to configure and apply a scoring schedule:
 
@@ -37,7 +37,7 @@ Model scoring can be configured to be an automated process on a scheduled basis.
 ![](../images/models-recipes/schedule/service_with_scoring_schedule.png)
 
 
-## Configure scheduled training
+## Configure scheduled training {#configure-scheduled-training}
 
 Configuring scheduled training runs on a Service ensures that the machine learning Model is updated to the most recent data patterns. Whenever a scheduled training run completes, the resulting trained Model is used to power the Service until the next scheduled training run. 
 
