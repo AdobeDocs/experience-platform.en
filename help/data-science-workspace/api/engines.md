@@ -18,7 +18,7 @@ Your Docker registry credentials are required in order to upload a packaged Reci
 
 **API Format**
 
-```http
+```https
 GET /engines/dockerRegistry
 ```
 
@@ -53,7 +53,7 @@ You can create an Engine by performing a POST request while providing its metada
 
 **API Format**
 
-```http
+```https
 POST /engines
 ```
 
@@ -167,7 +167,7 @@ You can create a feature pipeline Engine by performing a POST request while prov
 
 **API format**
 
-```http
+```https
 POST /engines
 ```
 
@@ -247,7 +247,7 @@ You can retrieve a list of Engines by performing a single GET request. To help f
 
 **API Format**
 
-```http
+```https
 GET /engines
 GET /engines?parameter_1=value_1
 GET /engines?parameter_1=value_1&parameter_2=value_2
@@ -322,7 +322,7 @@ You can retrieve the details of a specific Engine by performing a GET request th
 
 **API Format**
 
-```http
+```https
 GET /engines/{ENGINE_ID}
 ```
 
@@ -397,7 +397,7 @@ The following sample API call will update an Engine's name and description while
 
 **API Format**
 
-```http
+```https
 PUT /engines/{ENGINE_ID}
 ```
 
@@ -465,7 +465,7 @@ You can delete an Engine by performing a DELETE request while specifying the tar
 
 **API Format**
 
-```http
+```https
 DELETE /engines/{ENGINE_ID}
 ```
 
@@ -505,7 +505,7 @@ You can create an Engine using local `.jar` or `.egg` binary artifacts by perfor
 
 **API Format**
 
-```http
+```https
 POST /engines
 ```
 
@@ -574,7 +574,7 @@ You can create a feature pipeline Engine using local `.jar` or `.egg` binary art
 
 **API Format**
 
-```http
+```https
 POST /engines
 ```
 
