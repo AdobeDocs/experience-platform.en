@@ -19,7 +19,7 @@ The *Source activity* screen lists all previously established connections to Ado
 
 >[!NOTE] Multiple in-bound connections to a source can be made for bringing in different data. 
 
-![](../../../..//images/tutorials/create/analytics/AA-source_activity.png)
+![](/help/sources/images/tutorials/create/analytics/AA-source_activity.png)
 
 From the list of available report suites, select the one you want to bring into Platform and click **Next**.
 

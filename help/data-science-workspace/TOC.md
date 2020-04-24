@@ -49,3 +49,4 @@ user-guide-title: Adobe Experience Platform Data Science Workspace Help
 * [Recipe and notebook migration guides](recipe-notebook-migration.md) 
 * [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
+* [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

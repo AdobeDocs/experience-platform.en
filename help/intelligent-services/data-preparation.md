@@ -13,38 +13,168 @@ This document provides general guidance on mapping your marketing events data fr
 
 ## Understanding the CEE schema
 
-The Consumer ExperienceEvent schema describes the behavior of an individual as it relates to digital marketing events (web or mobile) as well as online or offline commerce activity. The use of this schema is required for Intelligent Services because of its semantically well-defined fields (columns), avoiding any unknown names that would otherwise make the data less clear. 
+The Consumer ExperienceEvent schema describes the behavior of an individual as it relates to digital marketing events (web or mobile) as well as online or offline commerce activity. The use of this schema is required for Intelligent Services because of its semantically well-defined fields (columns), avoiding any unknown names that would otherwise make the data less clear.
+
+Intelligent Services utilize several key fields within this schema to generate insights from your marketing events data, all of which can be found at the root level and expanded to show their required subfields.
+
+![](./images/data-preparation/schema-expansion.gif)
 
 Like all XDM schemas, the CEE mixin is extensible. In other words, additional fields can be added to the CEE mixin, and different variations can be included in multiple schemas if required.
 
 A complete example of the mixin can be found in the [public XDM repository](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md), and should be used as a reference for the key fields outlined in the section below.
 
-### Key fields
+## Key fields
 
-The table below highlights the key fields within the CEE mixin which should be utilized in order for Intelligent Services to generate useful insights, including descriptions and links to reference documentation for further examples.
+The sections below highlight the key fields within the CEE mixin which should be utilized in order for Intelligent Services to generate useful insights, including descriptions and links to reference documentation for further examples.
 
-| XDM field | Description | Reference |
-| --- | --- | --- |
-| `xdm:channel` | The marketing channel related to the ExperienceEvent. The field includes information about the channel type, media type, and location type. **This field _must_ be provided in order for Attribution AI to work with your data**. See the [table below](#example-channels) for some example mappings. | [Experience channel schema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) |
-| `xdm:productListItems` | An array of items which represent products selected by a customer, including the product SKU, name, price, and quantity. | [Commerce details schema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) |
-| `xdm:commerce` | Contains commerce-specific information about the ExperienceEvent, including the purchase order number and payment information. | [Commerce details schema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) |
-| `xdm:web` | Represents web details relating to the ExperienceEvent, such as the interaction, page details, and referrer. | [ExperienceEvent web details schema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-web.schema.md) |
+### xdm:channel
 
-### Example channels {#example-channels}
+This field represents the marketing channel related to the ExperienceEvent. The field includes information about the channel type, media type, and location type. **This field _must_ be provided in order for Attribution AI to work with your data**.
 
-The `xdm:channel` field represents the marketing channel related to the ExperienceEvent. The following table provides some examples of marketing channels mapped to XDM:
+![](./images/data-preparation/channel.png)
 
-| Channel | `channel.mediaType` | `channel._type` | `channel.mediaAction` |
+**Example schema**
+
+```json
+{
+  "@id": "https://ns.adobe.com/xdm/channels/facebook-feed",
+  "@type": "https://ns.adobe.com/xdm/channel-types/social",
+  "xdm:mediaType": "earned",
+  "xdm:mediaAction": "clicks"
+}
+```
+
+For complete information regarding each of the required sub-fields for `xdm:channel`, please refer to the [experience channel schema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) spec. For some example mappings, see the [table below](#example-channels).
+
+#### Example channel mappings {#example-channels}
+
+The following table provides some examples of marketing channels mapped to the `xdm:channel` schema:
+
+| Channel | `@type` | `mediaType` | `mediaAction` |
 | --- | --- | --- | --- |
-| Paid Search | PAID | SEARCH | CLICK |
-| Social - Marketing | EARNED | SOCIAL | CLICK |
-| Display | PAID | DISPLAY | CLICK |
-| Email | PAID | EMAIL | CLICK |
-| Internal Referrer | OWNED | DIRECT | CLICK |
-| Display ViewThrough | PAID | DISPLAY | IMPRESSION |
-| QR Code Redirect | OWNED | DIRECT | CLICK |
-| SMS Text Message | OWNED | SMS | CLICK |
-| Mobile | OWNED | MOBILE | CLICK |
+| Paid Search | https:/<span>/ns.adobe.com/xdm/channel-types/search | paid | clicks |
+| Social - Marketing | https:/<span>/ns.adobe.com/xdm/channel-types/social | earned | clicks |
+| Display | https:/<span>/ns.adobe.com/xdm/channel-types/display | paid | clicks |
+| Email | https:/<span>/ns.adobe.com/xdm/channel-types/email | paid | clicks |
+| Internal Referrer | https:/<span>/ns.adobe.com/xdm/channel-types/direct | owned | clicks |
+| Display ViewThrough | https:/<span>/ns.adobe.com/xdm/channel-types/display | paid | impressions |
+| QR Code Redirect | https:/<span>/ns.adobe.com/xdm/channel-types/direct | owned | clicks |
+| Mobile | https:/<span>/ns.adobe.com/xdm/channel-types/mobile | owned | clicks |
+
+### xdm:productListItems
+
+This field is an array of items which represent products selected by a customer, including the product SKU, name, price, and quantity.
+
+![](./images/data-preparation/productListItems.png)
+
+**Example schema**
+
+```json
+[
+  {
+    "xdm:SKU": "1002352692",
+    "xdm:name": "24-Watt 8-Light Chrome Integrated LED Bath Light",
+    "xdm:currencyCode": "USD",
+    "xdm:quantity": 1,
+    "xdm:priceTotal": 159.45
+  },
+  {
+    "xdm:SKU": "3398033623",
+    "xdm:name": "16ft RGB LED Strips",
+    "xdm:currencyCode": "USD",
+    "xdm:quantity": 1,
+    "xdm:priceTotal": 79.99
+  }
+]
+```
+
+For complete information regarding each of the required sub-fields for `xdm:productListItems`, please refer to the [commerce details schema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) spec.
+
+### xdm:commerce
+
+This field contains commerce-specific information about the ExperienceEvent, including the purchase order number and payment information.
+
+![](./images/data-preparation/commerce.png)
+
+**Example schema**
+
+```json
+{
+    "xdm:order": {
+      "xdm:purchaseID": "a8g784hjq1mnp3",
+      "xdm:purchaseOrderNumber": "123456",
+      "xdm:payments": [
+        {
+          "xdm:transactionID": "transactid-a111",
+          "xdm:paymentAmount": 59,
+          "xdm:paymentType": "credit_card",
+          "xdm:currencyCode": "USD"
+        },
+        {
+          "xdm:transactionId": "transactid-a222",
+          "xdm:paymentAmount": 100,
+          "xdm:paymentType": "gift_card",
+          "xdm:currencyCode": "USD"
+        }
+      ],
+      "xdm:currencyCode": "USD",
+      "xdm:priceTotal": 159
+    },
+    "xdm:purchases": {
+      "xdm:value": 1
+    }
+  }
+```
+
+For complete information regarding each of the required sub-fields for `xdm:commerce`, please refer to the [commerce details schema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) spec.
+
+### xdm:web
+
+This field represents web details relating to the ExperienceEvent, such as the interaction, page details, and referrer.
+
+![](./images/data-preparation/web.png)
+
+**Example schema**
+
+```json
+{
+  "xdm:webPageDetails": {
+    "xdm:siteSection": "Shopping Cart",
+    "xdm:server": "example.com",
+    "xdm:name": "Purchase Confirmation",
+    "xdm:URL": "https://www.example.com/orderConf",
+    "xdm:errorPage": false,
+    "xdm:homePage": false,
+    "xdm:pageViews": {
+      "xdm:value": 1
+    }
+  },
+  "xdm:webReferrer": {
+    "xdm:URL": "https://www.example.com/checkout",
+    "xdm:referrerType": "internal"
+  }
+}
+```
+
+For complete information regarding each of the required sub-fields for `xdm:productListItems`, please refer to the [ExperienceEvent web details schema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-web.schema.md) spec.
+
+### xdm:marketing
+
+This field contains information related to marketing activities that are active with the touchpoint.
+
+![](./images/data-preparation/marketing.png)
+
+**Example schema**
+
+```json
+{
+  "xdm:trackingCode": "marketingcampaign111",
+  "xdm:campaignGroup": "50%_DISCOUNT",
+  "xdm:campaignName": "50%_DISCOUNT_USA"
+}
+```
+
+For complete information regarding each of the required sub-fields for `xdm:productListItems`, please refer to the [marketing sechma](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) spec.
 
 ## Mapping and ingesting data
 

@@ -13,3 +13,4 @@ user-guide-title: Adobe Experience Platform Decisioning Service
   - [Work with Decisioning Service runtime using APIs](tutorials/runtime.md)
   - [Manage Decisioning Service entities using APIs](tutorials/entities.md)
 - [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/decisioning-ode.yaml)
+- [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

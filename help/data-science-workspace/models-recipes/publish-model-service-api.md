@@ -119,7 +119,7 @@ Depending on your specific use case and requirements, creating a ML Service with
 
 Note that a ML Service can be created using a ML Instance without scheduling any training or scoring Experiments. Such ML Service will create ordinary Experiment entities and a single Experiment Run for training and scoring.
 
-### ML Service with scheduled Experiment for scoring
+### ML Service with scheduled Experiment for scoring {#ml-service-with-scheduled-experiment-for-scoring}
 
 Creating an ML Service by publishing a ML Instance with scheduled Experiment Runs for scoring will result in the creation of an ordinary Experiment entity for training. The resulting training Experiment Run that is generated will be used for all scheduled scoring Experiment Runs. Ensure you have the `mlInstanceId`, `trainingDataSetId`, and `scoringDataSetId` required for the creation of the ML Service, and that they exist and are valid values.
 
@@ -193,7 +193,7 @@ curl -X POST
 
 From the `JSON` response, the keys `trainingExperimentId` and `scoringExperimentId` suggests that a new training and scoring Experiment entity was created for this ML Service. The presence of the `scoringSchedule` object refers to details on scoring Experiment Run schedule. The `id` key in the response refers to the ML Service you have just created.
 
-### ML Service with scheduled Experiments for training and scoring
+### ML Service with scheduled Experiments for training and scoring {#ml-service-with-scheduled-experiments-for-training-and-scoring}
 
 To publish an existing ML Instance as a ML Service with scheduled training and scoring Experiment Runs, you are required to provide both training and scoring schedules. When a ML Service of this configuration is created, scheduled Experiment entities for both training and scoring is also created. Note that training and scoring schedules do not have to be the same. During a scoring job execution, the latest trained model produced by scheduled training Experiment Runs will be fetched and used for the scheduled scoring run.
 
@@ -277,7 +277,7 @@ curl -X POST "https://platform-int.adobe.io/data/sensei/mlServices"
 
 The addition of `trainingExperimentId` and `scoringExperimentId` in the response body suggests the creation of Experiment entities for both training and scoring. The presence of `trainingSchedule` and `scoringSchedule` suggests that the above mentioned Experiment entities for training and scoring are scheduled Experiments. The `id` key in the response refers to the ML Service you have just created.
 
-## Retrieving ML Services
+## Retrieving ML Services {#retrieving-ml-services}
 
 To retrieve an existing ML Service is as simple as making a `GET` request to `/mlServices` endpoint. Ensure to have the ML Service identification for the specific ML Service you are attempting to retrieve.
 

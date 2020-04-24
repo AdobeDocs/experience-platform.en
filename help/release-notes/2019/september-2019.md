@@ -10,9 +10,15 @@ author: ens28527
 
 # Adobe Experience Platform release notes 
 
-## Release date: September 10, 2019
+**Release date: September 10, 2019**
 
-## Data Ingestion
+Updates to existing features in Adobe Experience Platform:
+
+* [Data Ingestion](#ingestion)
+* [Data Science Workspace](#dsw)
+* [Query Service](#query)
+
+## Data Ingestion {#ingestion}
 
 Adobe Experience Platform provides a rich set of features to ingest any type and latency of data. Adobe Experience Platform Data Ingestion provides multiple alternatives for ingesting data including Batch APIs, Streaming APIs, native Adobe connectors, data integration partners, or the Adobe Experience Platform UI.
 
@@ -24,7 +30,7 @@ Adobe Experience Platform provides a rich set of features to ingest any type and
 
 For more information, visit the [Data Ingestion documentation](../../ingestion/home.md).
 
-## Data Science Workspace
+## Data Science Workspace {#dsw}
 
 Adobe Experience Platform Data Science Workspace is a fully managed service within Experience Platform that enables data scientists to seamlessly generate insights from data and content across Adobe solutions and third-party systems by building and operationalizing Machine Learning Models. Data Science Workspace is tightly integrated with Platform and powers the end-to-end data science lifecycle, including exploration and preparation of XDM data, followed by the development and operationalization of Models to automatically enrich Real-time Customer Profile with Machine Learning Insights.
 
@@ -44,7 +50,7 @@ Adobe Experience Platform Data Science Workspace is a fully managed service with
 
 For more information, visit the [Data Science Workspace Overview](../../data-science-workspace/home.md).
 
-## Query Service
+## Query Service {#query}
 
 Query Service provides the ability to use standard SQL to query data in Adobe Experience Platform to support a variety of analysis and data management use cases. It is a serverless tool that allows you to join datasets from the Data Lake and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-time Customer Profile.
 
