@@ -18,11 +18,14 @@ user-guide-title: Adobe Experience Platform Privacy Service Help
   * [Privacy Service user guide](ui/user-guide.md)
 * [Identity data for privacy requests](identity-data.md)
 * [Subscribe to Privacy Events](privacy-events.md)
-* GDPR guide {#gdpr}
+* GDPR guides {#gdpr}
   * [GDPR FAQ](gdpr/faq.md)
   * [GDPR terminology](gdpr/terminology.md)
-* CCPA guide {#ccpa}
+* CCPA guides {#ccpa}
   * [CCPA FAQ](ccpa/faq.md)
+* PDPA (Thailand) guides {#pdpa-tha}
+  * [PDPA (Thailand) FAQ](./pdpa-tha/faq.md)
+  * [PDPA (Thailand) terminology](./pdpa-tha/terminology.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html)
 * [Release notes](release-notes.md)
