@@ -52,7 +52,7 @@ The *Dataset flow detail* step appears, where you must provide a name and an opt
 The *Review* step appears, allowing you to review your new Analytics in-bound dataset flow before it is created. Details of the connection are grouped by categories, including:
 
 *   *Connection*: Shows the type of the source connection and the selected report suite.
-*   *Assign dataset & map fields*: When creating other source connectors, this container shows which dataset the source data is ingesting into, including the schema the dataset adheres to. The output schema and dataset is automatically configured for Adobe Analytics dataset flows.
+*   *Assign dataset & map fields*: When creating other source connectors, this container shows which dataset the source data is ingesting into, including the schema the dataset adheres to. The output schema and dataset is automatically configured for Analytics dataset flows.
 
 ![](../../../../images/tutorials/create/analytics/review.png)
 
