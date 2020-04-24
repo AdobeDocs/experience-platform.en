@@ -75,7 +75,7 @@ This tutorial requires an existing Recipe. If you do not have a Recipe, follow t
 
 This tutorial walked you through creating, training, and evaluating a Model in Data Science Workspace. Once you have arrived at an optimized Model, you can use the trained Model to generate insights by following the [Score a Model in the UI](./score-model-ui.md) tutorial.
 
-## Reference
+## Reference {#reference}
 
 ### Retail Sales Recipe configurations
 

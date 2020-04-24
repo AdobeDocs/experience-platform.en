@@ -28,7 +28,7 @@ In addition to the above-mentioned documents, it is highly recommended that you 
 *   [Basics of schema composition](../../xdm/schema/composition.md): Describes XDM schemas, building blocks, principles, and best practices for composing schemas to be used in Experience Platform.
 *   [Schema Editor tutorial](../../xdm/tutorials/create-schema-ui.md): Provides detailed instructions for creating schemas using the Schema Editor within Experience Platform.
 
-## Create an output schema and dataset
+## Create an output schema and dataset {#create-an-output-schema-and-dataset}
 
 The first step towards enriching Real-time Customer Profile with scoring insights is knowing what real-world object (such as a person) your data defines. Having an understanding of your data enables you to describe and design a structure that is meaning to your data, much like designing a relational database.
 
@@ -70,7 +70,7 @@ Composing a schema begins by assigning a class. Classes define the behavioral as
 
 Now that you have a created an output schema dataset, you are ready continue on to the next section to configure and enable them for Profile enrichment.
 
-## Configure an output schema and dataset
+## Configure an output schema and dataset {#configure-an-output-schema-and-dataset}
 
 Before you can enable a dataset for Profile, you need to configure the dataset's schema to having a primary identity field and then enable the schema for Profile. If you wish to create and enable a new schema, you can refer to the tutorial on [creating a schema using the Schema Editor](../../xdm/tutorials/create-schema-ui.md). Otherwise follow the instructions below to enable an existing schema and dataset.
 
@@ -94,7 +94,7 @@ Before you can enable a dataset for Profile, you need to configure the dataset's
 
 When data is ingested into a Profile-enabled dataset, that same data is also ingested as Profile records. Now that your schema and dataset is prepared, generate some data into the dataset by performing scoring runs using an appropriate model, and continue with this tutorial to create insight segments using the Segment Builder.
 
-## Create segments using the Segment Builder
+## Create segments using the Segment Builder {#create-segments-using-the-segment-builder}
 
 Now that you have generated and ingested insights into your Profile-enabled dataset, you can manage that data by identifying subsets of related elements using the Segment Builder. Follow the steps below to build your own segments.
 
@@ -114,6 +114,6 @@ Now that you have generated and ingested insights into your Profile-enabled data
     ![](../images/models-recipes/enrich-rtcdp/save_segment.png)
 
 
-## Next steps
+## Next steps {#next-steps}
 
 This document walked you through the steps required to enable a schema and dataset for Profile, and briefly demonstrated the workflow for creating insight segments using the Segment Builder. To learn more about segments and the Segment Builder, refer to the [Segmentation service overview](../../segmentation/home.md).

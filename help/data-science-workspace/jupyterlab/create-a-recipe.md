@@ -8,18 +8,6 @@ topic: Tutorial
 # Create a recipe using Jupyter notebooks
 
 This tutorial will go over two main sections. First, you will create a machine learning model using a template within JupyterLab Notebook. Next, you will exercise the notebook to recipe workflow within JupyterLab to create a recipe within Data Science Workspace. 
-- [Get started with the JupyterLab notebook environment](#get-started-with-the-jupyterlab-notebook-environment)
-- [Make edits to recipe files](#make-edits-to-recipe-files)
-- [Get started with the Recipe Builder notebook](#get-started-with-the-recipe-builder-notebook)
-    - [Requirements file](#requirements-file)
-    - [Configuration files](#configuration-files)
-    - [Training data loader](#training-data-loader)
-    - [Scoring data loader](#scoring-data-loader)
-    - [Pipeline file](#pipeline-file)
-    - [Evaluator file](#evaluator-file)
-    - [Data Saver file](#data-saver-file)
-- [Training and scoring](#training-and-scoring)
-- [Create a recipe](#create-recipe)
 
 ## Concepts introduced:
 
@@ -41,7 +29,7 @@ The Recipe Builder notebook allows you to run training and scoring runs inside t
 
 When you click on the Recipe Builder notebook from the launcher, the notebook will be opened in the tab. The template used in the notebook is the Python Retail Sales Forecasting Recipe which can also be found in [this public repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-You will notice that in the toolbar there are three additional actions namely – **Train**, **Score** and **Create Recipe**. These icons will only appear in the Recipe Builder notebook. More information about these actions will be talked about [in the training and scoring section](#training-and-scoring) after building your Recipe in the notebook.
+You will notice that in the toolbar there are three additional actions namely – **[!UICONTROL Train]**, **[!UICONTROL Score]** and **[!UICONTROL Create Recipe]**. These icons will only appear in the Recipe Builder notebook. More information about these actions will be talked about [in the training and scoring section](#training-and-scoring) after building your Recipe in the notebook.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -65,7 +53,7 @@ Now that you know the basics for the JupyterLab notebook environment, you can be
 - [Evaluator file](#evaluator-file)
 - [Data Saver file](#data-saver-file)
 
-### Requirements file
+### Requirements file {#requirements-file}
 
 The requirements file is used to declare additional libraries you wish to use in the recipe. You can specify the version number if there is a dependency. To look for additional libraries, visit https://anaconda.org. The list of main libraries already in use include:
 
@@ -80,7 +68,7 @@ data_access_sdk_python
 >[!NOTE] 
 >Libraries or specific versions you add may be incompatible with the above libraries.
 
-### Configuration files
+### Configuration files {#configuration-files}
 
 The configuration files, `training.conf` and `scoring.conf`, are used to specify the datasets you wish to use for training and scoring as well as adding hyperparameters. There are separate configurations for training and scoring. 
 
@@ -104,7 +92,7 @@ By default, the following configuration parameters are set for you when you acce
 - `ML_FRAMEWORK_IMS_ML_TOKEN` 
 - `ML_FRAMEWORK_IMS_TENANT_ID` 
 
-## Training data loader
+## Training data loader {#training-data-loader}
 
 The purpose of the Training Data Loader is to instantiate data used for creating the machine learning model. Typically, there are two tasks that the training data loader will accomplish:
 - Load data from Platform
@@ -112,7 +100,7 @@ The purpose of the Training Data Loader is to instantiate data used for creating
 
 The following two sections will go over loading data and data preparation. 
 
-### Loading data 
+### Loading data {#loading-data}
 
 This step uses the [pandas dataframe](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Data can be loaded from files in Adobe Experience Platform using either the Platform SDK (`platform_sdk`), or from external sources using pandas' `read_csv()` or `read_json()` functions.
 
@@ -122,11 +110,11 @@ This step uses the [pandas dataframe](https://pandas.pydata.org/pandas-docs/stab
 >[!NOTE] 
 >In the Recipe Builder notebook, data is loaded via the `platform_sdk` data loader.
 
-### Platform SDK
+### Platform SDK {#platform-sdk}
 
 For an in-depth tutorial on using the `platform_sdk` data loader, please visit the [Platform SDK guide](../authoring/platform-sdk.md). This tutorial provides information on build authentication, basic reading of data, and basic writing of data.
 
-### External sources 
+### External sources {#external-sources}
 
 This section shows you how to import a JSON or CSV file to a pandas object. Official documentation from the pandas library can be found here:
 - [read_csv](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)
@@ -175,7 +163,7 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 
 Now that you have your data, you can begin with data preparation and feature engineering.
 
-### Data preparation and feature engineering
+### Data preparation and feature engineering {#data-preparation-and-feature-engineering}
 
 After the data is loaded, the data undergoes preparation and is then split to the `train` and `val` datasets. Sample code is seen below:
 
@@ -217,7 +205,7 @@ This data is split between `train` and `val` dataset.
 
 The `load()` function should complete with the `train` and `val` dataset as the output.
 
-### Scoring data loader
+### Scoring data loader {#scoring-data-loader}
 
 The procedure to load data for scoring is similar to the loading training data in the `split()` function. We use the Data Access SDK to load data from the `scoringDataSetId` found in our `recipe.conf` file. 
 
@@ -287,11 +275,11 @@ df.dropna(0, inplace=True)
 
 The `load()` function in your scoring data loader should complete with the scoring dataset as the output.
 
-### Pipeline file
+### Pipeline file {#pipeline-file}
 
 The `pipeline.py` file includes logic for training and scoring. 
 
-### Training 
+### Training {#training}
 
 The purpose of training is to create a model using features and labels in your training dataset. 
 
@@ -336,7 +324,7 @@ def train(configProperties, data):
 
 Notice that depending on your application, you will have arguments in your `GradientBoostingRegressor()` function. `xTrainingDataset` should contain your features used for training while `yTrainingDataset` should contain your labels.
 
-### Scoring 
+### Scoring {#scoring}
 
 The `score()` function should contain the scoring algorithm and return a measurement to indicate how successful the model performs. The `score()` function uses the scoring dataset labels and the trained model to generate a set of predicted features. These predicted values are then compared with the actual features in the scoring dataset. In this example, the `score()` function uses the trained model to predict features using the labels from the scoring dataset. The predicted features are returned.
 
@@ -358,11 +346,11 @@ def score(configProperties, data, model):
     return data
 ```
 
-### Evaluator file
+### Evaluator file {#evaluator-file}
 
 The `evaluator.py` file contains logic for how you wish to evaluate your trained recipe as well as how your training data should be split. In the retail sales example, the logic for loading and preparing the training data will be included. We will go over the two sections below.
 
-### Split the dataset 
+### Split the dataset {#split-the-dataset}
 
 The data preparation phase for training requires splitting the dataset to be used for training and testing. This `val` data will be used implicitly to evaluate the model after it is trained. This process is separate from scoring. 
 
@@ -381,7 +369,7 @@ def split(self, configProperties={}, dataframe=None):
     return train, val
 ```
 
-### Evaluate the trained model
+### Evaluate the trained model {#evaluate-the-trained-model}
 
 The `evaluate()` function is performed after the model is trained and will return a metric to indicate how successful the model performs. The `evaluate()` function uses the testing dataset labels and the Trained model to predict a set of features. These predicted values are then compared with actual features in the testing dataset. Common scoring algorithms include:
 - [Mean absolute percentage error (MAPE)](https://en.wikipedia.org/wiki/Mean_absolute_percentage_error)
@@ -410,7 +398,7 @@ def evaluate(self, data=[], model={}, configProperties={}):
 
 Notice that the function returns a `metric` object containing an array of evaluation metrics. These metrics will be used to evaluate how well the trained model performs.
 
-### Data Saver file
+### Data Saver file {#data-saver-file}
 
 The `datasaver.py` file contains the `save()` function to save your prediction while testing scoring. The `save()` function will take your prediction and using Experience Platform Catalog APIs, write the data to the `scoringResultsDataSetId` you specified in your `scoring.conf` file.
 
@@ -443,17 +431,17 @@ def save(configProperties, prediction):
     print(prediction)
 ```
 
-## Training and scoring
+## Training and scoring {#training-and-scoring}
 
 When you are done making changes to your notebook and want to train your recipe, you can click on the associated buttons at the top of the bar to creating a training run in the cell. Upon clicking the button, a log of commands and outputs from the training script will appear in the notebook (under the `evaluator.py` cell). Conda first installs all the dependencies, then the training is initiated.
 
-Note that you must run training at least once before you can run scoring. Clicking on the **Run Scoring** button will score on the trained model that was generated during training. The scoring script will appear under `datasaver.py`.
+Note that you must run training at least once before you can run scoring. Clicking on the **[!UICONTROL Run Scoring]** button will score on the trained model that was generated during training. The scoring script will appear under `datasaver.py`.
 
 For debugging purposes, if you wish to see the hidden output, add `debug` to the end of the output cell and re-run it.
 
-## Create recipe
+## Create recipe {#create-recipe}
 
-When you are done editing the recipe and satisfied with the training/scoring output, you can create a recipe from the notebook by pressing **Create Recipe** in the top-right navigation. 
+When you are done editing the recipe and satisfied with the training/scoring output, you can create a recipe from the notebook by pressing **[!UICONTROL Create Recipe]** in the top-right navigation. 
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
@@ -461,7 +449,7 @@ After pressing the button, you are prompted to enter a recipe name. This name re
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-Once you press **Ok** you will be able to navigate to the new recipe on [Adobe Experience Platform](https://platform.adobe.com/). You can click on the **View Recipes** button to take you to the **Recipes** tab under **ML Models**
+Once you press **[!UICONTROL Ok]** you will be able to navigate to the new recipe on [Adobe Experience Platform](https://platform.adobe.com/). You can click on the **[!UICONTROL View Recipes]** button to take you to the **[!UICONTROL Recipes]** tab under **[!UICONTROL ML Models]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
@@ -474,13 +462,13 @@ Once the process is complete, the recipe will look something like this:
 > - Do not edit the `%%writefile` line at the top of the file cells
 > - Do not create recipes in different notebooks at the same time
 
-## Next steps
+## Next steps {#next-steps}
 
 By completing this tutorial, you have learned how to create a machine learning model in the Recipe Builder notebook. You have also learned how to exercise the notebook to recipe workflow within the notebook to create a recipe within Data Science Workspace.
 
 To continue learning how to work with resources within Data Science Workspace, please visit the Data Science Workspace recipes and models dropdown.
 
-## Additional resources
+## Additional resources {#additional-resources}
 
 The following video is designed to support your understanding of building and deploying models.
 
