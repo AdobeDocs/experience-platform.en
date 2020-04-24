@@ -10,7 +10,7 @@ author: crhoades, ens28527
 
 # Adobe Experience Platform release notes 
 
-## Release date: November 18, 2019
+**Release date: November 18, 2019**
 
 New features in Adobe Experience Platform:  
 * [Real-time Customer Data Platform](#rtcdp)
