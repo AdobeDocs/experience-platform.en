@@ -192,7 +192,7 @@ curl -X POST \
        "default":
        {
            "image": {
-                "location": "v1d2cs4mimnlttw.azurecr.io/ml-featurepipeline-pyspark:0.2.1",
+                "location": "v7d1cs2mimnlttw.azurecr.io/ml-featurepipeline-pyspark:0.2.1",
                 "name": "datatransformation",
                 "executionType": "PySpark",
                 "packagingType": "docker"
@@ -221,7 +221,7 @@ A successful response returns a payload containing the details of the newly crea
 
 ```json
 {
-    "id": "88333891-4309-4fd9-acd0-3de7827cecd1",
+    "id": "88236891-4309-4fd9-acd0-3de7827cecd1",
     "name": "Feature_Pipeline_Engine",
     "description": "Feature_Pipeline_Engine",
     "type": "PySpark",
@@ -233,7 +233,7 @@ A successful response returns a payload containing the details of the newly crea
     "artifacts": {
         "default": {
             "image": {
-                "location": "v1d2cs4mimnlttw.azurecr.io/ml-featurepipeline-pyspark:0.2.1",
+                "location": "v7d1cs3mimnlttw.azurecr.io/ml-featurepipeline-pyspark:0.2.1",
                 "name": "datatransformation",
                 "executionType": "PySpark",
                 "packagingType": "docker"
