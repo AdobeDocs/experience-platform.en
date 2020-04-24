@@ -187,10 +187,8 @@ curl -X POST \
     "name": "Feature_Pipeline_Engine",
     "description": "Feature_Pipeline_Engine",
     "mlLibrary": "databricks-spark",
-    "artifacts":
-	{
-       "default":
-       {
+    "artifacts": {
+       "default": {
            "image": {
                 "location": "v7d1cs2mimnlttw.azurecr.io/ml-featurepipeline-pyspark:0.2.1",
                 "name": "datatransformation",
