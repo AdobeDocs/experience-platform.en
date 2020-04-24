@@ -7,7 +7,7 @@ topic: developer guide
 
 # List resources
 
-You can view a list of all resources (schemas, classes, mixins, or data types) within a container by performing a single GET request.
+You can view a list of all Schema Registry resources of a certain type (classes, mixins, schemas, data types, or descriptors) within a container by performing a single GET request.
 
 >[!NOTE] When listing resources, the Schema Registry limits result sets to 300 items. In order to return resources beyond this limit, you must use [paging parameters](#paging). It is also recommended that you use query parameters to [filter results](#filtering) and reduce the number of resources returned.
 
@@ -21,7 +21,7 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}?{QUERY_PARAMS}
 | Parameter | Description |
 | --- | --- |
 | `{CONTAINER_ID}` | The container where the resources are located ("global" or "tenant"). |
-| `{RESOURCE_TYPE}` | The type of resource to retrieve from the Schema Library. Valid types are `datatypes`, `mixins`, `schemas`, and `classes`. |
+| `{RESOURCE_TYPE}` | The type of resource to retrieve from the Schema Library. Valid types are `classes`, `mixins`, `schemas`, `datatypes`, and `descriptors`. |
 | `{QUERY_PARAMS`} | Optional query parameters to filter results by. See the section on [query parameters](#query) for more information. |
 
 **Request**
