@@ -161,6 +161,64 @@ A successful response returns a payload containing the details of the newly crea
 }
 ```
 
+## Create a feature pipeline Engine using Docker URLs {feature-pipeline-docker}
+
+You can create a feature pipeline Engine by performing a POST request while providing its metadata and a Docker URL that references a Docker image.
+
+**API format**
+
+```http
+POST /engines
+```
+
+**Request**
+
+```shell
+curl -X POST \
+ https://platform.adobe.io/data/sensei/engines \
+    -H 'Authorization: Bearer ' \
+    -H 'x-gw-ims-org-id: 20655D0F5B9875B20A495E23@AdobeOrg' \
+    -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=engine.v1.json' \
+    -H 'x-api-key: acp_foundation_machineLearning' \
+    -H 'Content-Type: text/plain' \
+    -F '{
+    "name": "Data Transformation Service Engine",
+    "type": "Spark",
+    "mlLibrary": "databricks-spark",
+    "artifacts":
+    {
+        "default":
+        {
+            "image":
+            {
+                "location": "va7prod1databricksacr0vvocuh3x634fq.azurecr.io/data-prep-sample:0.0.3",
+                "name": "dataprep",
+                "executionType": "Spark",
+                "packagingType": "docker"
+            },
+            "defaultMLInstanceConfigs": [
+            ]
+        }
+    }
+    }'
+```
+
+| Property | Description |
+| --- | --- |
+| `name` | The desired name for the feature pipeline Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in the UI as the Recipe's name. |
+| `description` | An optional description for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in UI as the Recipe's description. This property is required. If you do not want to provide a description, set its value to be an empty string. |
+| `type` | The execution type of the Engine. This value corresponds to the language in which the Docker image is built upon. The value can be set to Spark or PySpark. |
+| `mlLibrary` | A field that is required when creating engines for PySpark and Scala recipes. This field must be set to `databricks-spark`. |
+| `artifacts.default.image.location` | The location of the Docker image. Only Azure ACR or Public (unauthenticated) Dockerhub is supported. |
+| `artifacts.default.image.executionType` | The execution type of the Engine. This value corresponds to the language in which the Docker image is built upon. This can be either "Spark" or "PySpark". |
+| `artifacts.default.image.packagingType` | The packaging type of the Engine. This value should be set to `docker`. |
+
+**Response**
+
+```json
+response here
+```
+
 ## Retrieve a list of Engines
 
 You can retrieve a list of Engines by performing a single GET request. To help filter results, you can specify query parameters in the request path. For a list of available queries, refer to the appendix section on [query parameters for asset retrieval](./appendix.md#query).
