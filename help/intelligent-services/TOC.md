@@ -24,4 +24,3 @@ user-guide-title: Intelligent Services Help
     * [Create segments using Customer AI scores](customer-ai/user-guide/create-segment.md)
     * [Downloading scores](customer-ai/user-guide/download-scores.md)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
-* test
