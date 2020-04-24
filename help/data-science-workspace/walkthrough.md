@@ -41,7 +41,7 @@ In our tutorial, we will be using Python 3 in the Jupyter Notebook to show how t
 
 ![](./images/walkthrough/retail_sales.png)
 
-### Setup
+### Setup {#setup}
 
 With the Retail Sales notebook opened, the first thing we do is to load the libraries required for our workflow. The following list will give a short description of what each are used for:
 - **numpy** - scientific computing library that adds support for large, multi-dimensional arrays and matrices
@@ -51,7 +51,7 @@ With the Retail Sales notebook opened, the first thing we do is to load the libr
 - **sklearn** - machine learning library that features classification, regression, support vector, and cluster algorithms
 - **warnings** - library that controls warning messages  
 
-### Explore data
+### Explore data {#exploring-data}
 
 #### Load data
 
@@ -125,7 +125,7 @@ Using the same retail dataset, we can generate the correlation matrix.
 
 Notice the diagonal of ones down the center. This shows that when comparing a variable to itself, it has complete positive correlation. Strong positive correlation will have a magnitude closer to 1 while weak correlations will be closer to 0. Negative correlation is shown with a negative coefficient showing an inverse trend.
 
-### Feature engineering
+### Feature engineering {#feature-engineering}
 
 In this section, we will be making modifications to our Retail dataset. We will perform the following operations:
 
@@ -173,7 +173,7 @@ A summary of the dataset after our modifications is shown below:
 
 ![](./images/walkthrough/df_info_new.png)
 
-### Training and verification
+### Training and verification {#training-and-verification}
 
 Now, it is time to create some models of the data and select which model is the best performer for predicting future sales. We will evaluate the 5 following algorithms:
 
