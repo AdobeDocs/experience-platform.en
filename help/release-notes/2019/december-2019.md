@@ -10,7 +10,7 @@ author: ens71067
 
 # Adobe Experience Platform release notes 
 
-## Release date: December 11, 2019
+**Release date: December 11, 2019**
 
 Updates to existing features in Adobe Experience Platform:
 

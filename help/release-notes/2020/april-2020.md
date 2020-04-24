@@ -9,7 +9,7 @@ keywords: release notes;
 
 # Adobe Experience Platform release notes 
 
-## Release date: April 8, 2020
+**Release date: April 8, 2020**
 
 New features in Adobe Experience Platform:
 * [Intelligent Services](#intelligent)
