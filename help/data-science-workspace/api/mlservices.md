@@ -11,7 +11,7 @@ An MLService is a published trained model that provides your organization with t
 
 Automated training and scoring schedules are defined with a starting timestamp, ending timestamp, and a frequency represented as a <a href="https://en.wikipedia.org/wiki/Cron" target="_blank">cron expression</a>. Schedules can be defined when [creating an MLService](#create-an-mlservice) or applied by [updating an existing MLService](#update-an-mlservice).
 
-## Create an MLService
+## Create an MLService {#create-an-mlservice}
 
 You can create an MLService by performing a POST request and a payload that provides a name for the service and a valid MLInstance ID. The MLInstance used to create an MLService is not required to have existing training Experiments but you can choose to create the MLService with an existing trained model by providing the corresponding Experiment ID and training run ID.
 
@@ -99,7 +99,7 @@ A successful response returns a payload containing the details of the newly crea
 }
 ```
 
-## Retrieve a list of MLServices
+## Retrieve a list of MLServices {#retrieve-a-list-of-mlservices}
 
 You can retrieve a list of MLServices by performing a single GET request. To help filter results, you can specify query parameters in the request path. For a list of available queries, refer to the appendix section on [query parameters for asset retrieval](./appendix.md#query).
 
@@ -158,7 +158,7 @@ A successful response returns a list of MLServices and their details including t
 }
 ```
 
-## Retrieve a specific MLService
+## Retrieve a specific MLService {#retrieve-a-specific-mlservice}
 
 You can retrieve the details of a specific Experiment by performing a GET request that includes the desired MLService's ID in the request path.
 
@@ -202,7 +202,7 @@ A successful response returns a payload containing the details of the requested 
 }
 ```
 
-## Update an MLService
+## Update an MLService {#update-an-mlservice}
 
 You can update an existing MLService by overwriting its properties through a PUT request that includes the target MLService's ID in the request path and providing a JSON payload containing updated properties.
 
