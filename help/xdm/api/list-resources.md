@@ -9,9 +9,11 @@ topic: developer guide
 
 You can view a list of all resources (schemas, classes, mixins, or data types) within a container by performing a single GET request.
 
-**API format**
-
 >[!NOTE] When listing resources, the Schema Registry limits result sets to 300 items. In order to return resources beyond this limit, you must use [paging parameters](#paging). It is also recommended that you use query parameters to [filter results](#filtering) and reduce the number of resources returned.
+>
+> If you want to override the 300-item limit entirely, you must use the Accept header `application/vnd.adobe.xdm-v2+json` to return all results in a single request.
+
+**API format**
 
 ```http
 GET /{CONTAINER_ID}/{RESOURCE_TYPE}
@@ -40,9 +42,9 @@ The response format depends on the Accept header sent in the request. The follow
 
 | Accept header | Description |
 | ------- | ------------ |
-| application/vnd.adobe.xed-id+json | Returns a short summary of each resource, generally the preferred header for listing |
-| application/vnd.adobe.xed+json | Returns full JSON schema for each resource, with original `$ref` and `allOf` included |
-| application/vnd.adobe.xdm-v2+json | Returns all the results in a single request. |
+| application/vnd.adobe.xed-id+json | Returns a short summary of each resource. This is the recommended header for listing resources. (Limit: 300)|
+| application/vnd.adobe.xed+json | Returns full JSON schema for each resource, with original `$ref` and `allOf` included. (Limit: 300) |
+| application/vnd.adobe.xdm-v2+json | Returns the full JSON schema for all results in a single request, overriding the 300-item limit. |
 
 **Response**
 
