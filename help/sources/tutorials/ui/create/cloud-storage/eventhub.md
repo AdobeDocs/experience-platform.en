@@ -48,7 +48,7 @@ The *Connect to Azure EventHub* dialog appears. On this page, you can either use
 
 If you are using new credentials, select **New Account**. On the input form that appears, provide the base connection with a name, an optional description, and your EventHub credentials. When finished, select **Connect** and then allow some time for the new base connection to establish.
 
-![](../../../../images/tutorials/create/eventhub/connect.png)
+![](../../../../images/tutorials/create/eventhub/new.png)
 
 ### Existing account
 
