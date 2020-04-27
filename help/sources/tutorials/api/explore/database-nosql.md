@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Explore a database or NoSQL system using the Flow Service API
+title: Explore a database using the Flow Service API
 topic: overview
 ---
 
-# Explore a database or NoSQL system using the Flow Service API
+# Explore a database using the Flow Service API
 
 Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
-This tutorial uses the Flow Service API to explore databases or NoSQL systems.
+This tutorial uses the Flow Service API to explore database systems.
 
 ## Getting started
 
