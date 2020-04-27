@@ -17,7 +17,10 @@ user-guide-title: Intelligent Services Help
 * Customer AI {#customer-ai}
   * [Overview](customer-ai/overview.md)
   * [Getting started with Customer AI](customer-ai/getting-started.md)
-  * [User interface guide](customer-ai/user-guide.md)
-  * [Discovering insights](customer-ai/discover-insights.md)
-  * [Downloading scores](customer-ai/download-scores.md)
-* [Platform release notes](https://www.adobe.com/go/platform-release-notes-en) 
+  * [Input and Output](customer-ai/input-output.md)
+  * User interface guide {#user-guide}
+    * [Configure an instance](customer-ai/user-guide/configure.md)
+    * [Discovering insights](customer-ai/user-guide/discover-insights.md)
+    * [Create segments using Customer AI scores](customer-ai/user-guide/create-segment.md)
+    * [Downloading scores](customer-ai/user-guide/download-scores.md)
+* [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

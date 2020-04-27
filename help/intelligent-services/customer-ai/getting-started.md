@@ -18,7 +18,7 @@ The guides for Customer AI require a working understanding of the various Platfo
 
 ## Downloading Customer AI scores
 
->[!NOTE] If you do not need to download raw scores, you can skip this step and proceed to the user interface guide.
+>[!NOTE] If you do not need to download raw scores, you can skip this step and proceed to the [configuration guide](./user-guide/configure.md).
 
 Downloading Customer AI scores is done through a combination of API calls. In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
@@ -38,4 +38,4 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ## Next steps
 
-Once you are ready and have all your credentials and schemas in place, start by following the [Customer AI user interface guide](./user-guide.md). This guide walks you through creating an instance and submitting it for training and scoring.
+Once you have completed the steps outlined in the document above, visit the [Input and Output](./input-output.md) documentation. This document give a brief overview of what types of data are used and produced in Customer AI.

@@ -9,7 +9,7 @@ keywords: release notes;
 
 # Adobe Experience Platform release notes 
 
-## Release date: March 11, 2020
+**Release date: March 11, 2020**
 
 Updates to existing features in Adobe Experience Platform:
 

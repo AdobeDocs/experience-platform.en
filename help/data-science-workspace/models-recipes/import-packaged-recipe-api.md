@@ -42,7 +42,7 @@ Depending on the form of the packaged Recipe file to be included as a part of th
 -   [Create an Engine with a Docker URL](#create-an-engine-with-a-docker-url)
 -   [Create an Engine with a binary artifact (deprecated)](#create-an-engine-with-a-binary-artifact-deprecated)
 
-### Create an Engine with a Docker URL
+### Create an Engine with a Docker URL {#create-an-engine-with-a-docker-url}
 
 In order to create an Engine with a packaged Recipe file stored in a Docker container, you must provide the Docker URL to the packaged Recipe file.
 
@@ -195,11 +195,11 @@ A successful response returns a payload containing the details of the newly crea
 
 A successful response shows a JSON payload with information regarding the newly created Engine. The `id` key represents the unique Engine identifier and is required in the next tutorial to create an MLInstance. Ensure the Engine identifier is saved before continuing to the next steps.
 
-## Next steps
+## Next steps {#next-steps}
 
 You have created an Engine using the API and a unique Engine identifier was obtained as part of the response body. You can use this Engine identifier in the next tutorial as you learn how to [create, train, and evaluate a Model using the API](./train-evaluate-model-api.md).
 
-### Create an Engine with a binary artifact (deprecated)
+### Create an Engine with a binary artifact (deprecated) {#create-an-engine-with-a-binary-artifact-deprecated}
 
 <!-- Will need to remove binary artifact documentation once the old flags are turned off -->
 

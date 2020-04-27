@@ -13,7 +13,7 @@ This tutorial provides you with information on converting `data_access_sdk_pytho
 - [Basic reading of data](#basic-reading-of-data)
 - [Basic writing of data](#basic-writing-of-data)
 
-## Build authentication
+## Build authentication {#build-authentication}
 
 Authentication is required to make calls to Adobe Experience Platform, and is comprised of API Key, IMS Org ID, a user token, and a service token.
 
@@ -60,7 +60,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
               service_token={SERVICE_TOKEN})
 ```
 
-## Basic reading of data
+## Basic reading of data {#basic-reading-of-data}
 
 With the new Platform SDK, the maximum read size is 32 GB, with a maximum read time of 10 minutes. 
 
@@ -95,7 +95,7 @@ df <- dataset_reader$read()
 df
 ```
 
-## Filter by offset and limit
+## Filter by offset and limit {#filter-by-offset-and-limit}
 
 Since filtering by batch ID is no longer supported, in order to scope reading of data, you need to use `offset` and `limit`.
 
@@ -113,7 +113,7 @@ df <- dataset_reader$limit(100L)$offset(1L)$read()
 df
 ```
 
-## Filter by date
+## Filter by date {#filter-by-date}
 
 Granularity of date filtering is now defined by the timestamp, rather than being set by the day.
 
@@ -149,7 +149,7 @@ The new Platform SDK supports the following operations:
 | And (`&`) | `And()` |
 | Or (`|`) | `Or()` |
 
-## Filter by selected columns
+## Filter by selected columns {#filter-by-selected-columns}
 
 To further refine your reading of data, you can also filter by column name.
 
@@ -165,7 +165,7 @@ df = dataset_reader.select(['column-a','column-b']).read()
 df <- dataset_reader$select(c('column-a','column-b'))$read() 
 ```
 
-## Get sorted results
+## Get sorted results {#get-sorted-results}
 
 Results received can be sorted by specified columns of the target dataset and in their order (asc/desc) respectively.
 
@@ -183,7 +183,7 @@ df = dataset_reader.sort([('column-a', 'asc'), ('column-b', 'desc')])
 df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 ```
 
-## Basic writing of data
+## Basic writing of data {#basic-writing-of-data}
 
 >[!NOTE] The IMS Org is set within the `client_context`. 
 
