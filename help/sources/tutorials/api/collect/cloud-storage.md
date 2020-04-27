@@ -654,7 +654,7 @@ By following this tutorial, you have created a source connector to collect data 
 
 ## Appendix
 
-The following section lists the different connectors and their connections specifications.
+The following section lists the different cloud storage source connectors and their connections specifications.
 
 ### Connection specification
 
