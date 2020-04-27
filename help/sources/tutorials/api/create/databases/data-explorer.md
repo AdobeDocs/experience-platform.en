@@ -29,7 +29,7 @@ In order for Flow Service to connect with Data Explorer, you must provide values
 | `endpoint` | The endpoint of the Data Explorer server. |
 | `database` | The name of the Data Explorer database. |
 | `tenant` | The unique tenant ID used to connect to the Data Explorer database. |
-| `service PrincipalId` | The unique service principal ID used to connect to the Data Explorer database. |
+| `servicePrincipalId` | The unique service principal ID used to connect to the Data Explorer database. |
 | `servicePrincipalKey` | The unique service principal key used to connect to the Data Explorer database. |
 | `connectionSpec.id` | The unique identifier needed to create a connection. The connection specification ID for Data Explorer is `0479cc14-7651-4354-b233-7480606c2ac3`. |
 
@@ -77,11 +77,11 @@ curl -X POST \
     "auth": {
         "specName": "Service Principal Based Authentication",
            "params": {
-                "endpoint": "https://connectorscluster.eastus2.kusto.windows.net",
-                "database": "testdatabase",
-                "tenant": "fa7b1b5a-7b34-4387-94ae-d2c178decee1",
-                "servicePrincipalId": "c9a9bca0-c012-4e1c-abdf-7a6f356a0900",
-                "servicePrincipalKey": "ybzN]Gejx@F15z/k[GyjbulOw8HLl2I]"
+                "endpoint": "{ENDPOINT}",
+                "database": "{DATABASE}",
+                "tenant": "{TENANT}",
+                "servicePrincipalId": "{SERVICE_PRINCIPAL_ID}",
+                "servicePrincipalKey": "{SERVICE_PRINCIPAL_KEY}"
             }
     },
     "connectionSpec": {
@@ -93,12 +93,12 @@ curl -X POST \
 
 | Parameter | Description |
 | --------- | ----------- |
-| `endpoint` | The endpoint of the Data Explorer server. |
-| `database` | The name of the Data Explorer database. |
-| `tenant` | The unique tenant ID used to connect to the Data Explorer database. |
-| `service PrincipalId` | The unique service principal ID used to connect to the Data Explorer database. |
-| `servicePrincipalKey` | The unique service principal key used to connect to the Data Explorer database. |
-| `connectionSpec.id` | The unique identifier needed to create a connection. The connection specification ID for Data Explorer is `0479cc14-7651-4354-b233-7480606c2ac3`. |
+| `auth.params.endpoint` | The endpoint of the Data Explorer server. |
+| `auth.params.database` | The name of the Data Explorer database. |
+| `auth.params.tenant` | The unique tenant ID used to connect to the Data Explorer database. |
+| `auth.params.servicePrincipalId` | The unique service principal ID used to connect to the Data Explorer database. |
+| `auth.params.servicePrincipalKey` | The unique service principal key used to connect to the Data Explorer database. |
+| `connectionSpec.id` | The Data Explorer connection spec ID: `0479cc14-7651-4354-b233-7480606c2ac3`. |
 
 **Response**
 
