@@ -51,9 +51,9 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 *   Content-Type: `application/json`
 
-## Create a base connection
+## Create a connection
 
-A base connection specifies a source and contains your credentials for that source. Only one base connection is required per AWS Kinesis account as it can be used to create multiple source connectors to bring in different data.
+A connection specifies a source and contains your credentials for that source. Only one connection is required per AWS Kinesis account as it can be used to create multiple source connectors to bring in different data.
 
 **API format**
 
@@ -72,8 +72,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "AWS Kinesis base connection",
-        "description": "Base connector for AWS Kinesis",
+        "name": "AWS Kinesis connection",
+        "description": "Connector for AWS Kinesis",
         "auth": {
             "specName": "Basic Authentication for Kinesis",
             "params": {
@@ -92,11 +92,11 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.accessKeyId` | The access key ID for your Kinesis account. |
 | `auth.params.secretKey` | The secret access key for your Kinesis account. |
-| `connectionSpec.id` | The connection specification `id` of creating a base connection for AWS Kinesis. |
+| `connectionSpec.id` | The Kinesis connection specification ID: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
 **Response**
 
-A successful response returns details of the newly created base connection, including its unique identifier (`id`). This ID is required to explore your cloud storage data in the next tutorial.
+A successful response returns details of the newly created connection, including its unique identifier (`id`). This ID is required to explore your cloud storage data in the next tutorial.
 
 ```json
 {

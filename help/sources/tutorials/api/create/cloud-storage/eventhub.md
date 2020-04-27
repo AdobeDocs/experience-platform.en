@@ -52,9 +52,9 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 *   Content-Type: `application/json`
 
-## Create a base connection
+## Create a connection
 
-A base connection specifies a source and contains your credentials for that source. Only one base connection is required per Azure EventHub account as it can be used to create multiple source connectors to bring in different data.
+A connection specifies a source and contains your credentials for that source. Only one connection is required per Azure EventHub account as it can be used to create multiple source connectors to bring in different data.
 
 **API format**
 
@@ -73,8 +73,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Azure EventHub base connection",
-        "description": "Base connector for Azure EventHub",
+        "name": "Azure EventHub connection",
+        "description": "Connector for Azure EventHub",
         "auth": {
             "specName": "Basic Authentication for EventHub",
             "params": {
@@ -93,11 +93,11 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.sasKeyName` | The name of the authorization rule, which is also known as the SAS key name. |
 | `auth.params.sasKey` | The generated shared access signature. |
-| `connectionSpec.id` | The connection specification `id` of creating a base connection for Azure EventHub. |
+| `connectionSpec.id` | The Azure EventHub connection specification ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 **Response**
 
-A successful response returns details of the newly created base connection, including its unique identifier (`id`). This ID is required to explore your cloud storage data in the next tutorial.
+A successful response returns details of the newly created connection, including its unique identifier (`id`). This ID is required to explore your cloud storage data in the next tutorial.
 
 ```json
 {
