@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Create a Azure Table Storage connector using the Flow Service API
+title: Create an Azure Table Storage connector using the Flow Service API
 topic: overview
 ---
 
-# Create a Azure Table Storage connector using the Flow Service API
+# Create an Azure Table Storage connector using the Flow Service API
 
 Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
@@ -57,14 +57,13 @@ A connection specifies a source and contains your credentials for that source. O
 
 **API format**
 
-```http
+```https
 POST /connections
 ```
 
 **Request**
 
 In order to create aan ATS connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for ATS is `ecde33f2-c56f-46cc-bdea-ad151c16cd69`.
-
 
 ```shell
 curl -X POST \
