@@ -11,7 +11,7 @@ seo-description: allow customers of the Adobe Experience Cloud to interact with 
 >
 >Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
 
-Adobe Experience Platform Web SDK is a client-side JavaScript library that allows customers of the Adobe Experience Cloud to interact with the various services in the Experience Cloud. 
+Adobe Experience Platform Web SDK is a client-side JavaScript library that allows customers of the Adobe Experience Cloud to interact with the various services in the Experience Cloud through the Adobe Experience Platform Edge Network. 
 
 ## SDKs replaced by Adobe Experience Platform Web SDK
 
