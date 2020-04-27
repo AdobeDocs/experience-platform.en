@@ -63,7 +63,7 @@ POST /connections
 
 **Request**
 
-In order to create aan ATS connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for ATS is `ecde33f2-c56f-46cc-bdea-ad151c16cd69`.
+In order to create an ATS connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for ATS is `ecde33f2-c56f-46cc-bdea-ad151c16cd69`.
 
 ```shell
 curl -X POST \

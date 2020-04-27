@@ -67,7 +67,7 @@ POST /connections
 
 **Request**
 
-In order to create aan ATS connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for ATS is `0479cc14-7651-4354-b233-7480606c2ac3`.
+In order to create a Data Explorer connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for Data Explorer is `0479cc14-7651-4354-b233-7480606c2ac3`.
 
 ```shell
 curl -X POST \
