@@ -6,13 +6,15 @@ topic: overview
 ---
 
 
-# Partial batch ingestion
+# Partial batch ingestion (Beta)
 
 Partial batch ingestion is the ability to ingest data containing errors, up to a certain threshold. With this capability, users can successfully ingest all their correct data into Adobe Experience Platform while all their incorrect data is batched separately, along with details as to why it is invalid.
 
 This document provides a tutorial for managing partial batch ingestion. 
 
 In addition, the [appendix](#partial-batch-ingestion-error-types) to this tutorial provides a reference for partial batch ingestion error types.
+
+>[!IMPORTANT] This feature only exists using the API. Please contact your team in order to gain access to this feature.
 
 ## Getting started
 
@@ -67,7 +69,7 @@ Similarly, to modify an existing dataset, follow the steps in the [Catalog devel
 
 Within the dataset, you will need to add the tag described above.
 
-## Enable a dataset for partial batch ingestion in the UI
+<!-- ## Enable a dataset for partial batch ingestion in the UI
 
 >[!NOTE] This section describes enabling a dataset for partial batch ingestion using the UI. If you have already enabled a dataset for partial batch ingestion using the API, you can skip ahead to the next section.
 
@@ -95,7 +97,7 @@ To modify an existing dataset, select the dataset you want to modify. The sideba
 
 The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
 
-The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
+The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%. -->
 
 ## Retrieve partial batch ingestion errors
 
