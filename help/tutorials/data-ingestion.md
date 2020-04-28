@@ -23,7 +23,7 @@ In order to ingest CSV data into Adobe Experience Platform, the data must be map
 
 ## Create a streaming connection
 
-In order to start streaming data to Experience Platform, you must first create a streaming HTTP connection. When creating a streaming connection, you need to provide key details such as the source of streaming data, and whether or not you intend to send data from a trusted (authenticated) or an untrusted (unauthenticated) source. This can be done using the Platform user interface or Experience Platform APIs. To learn more, follow the tutorials for [creating a streaming connection using the UI](../ingestion/tutorials/create-streaming-connection-ui.md) or [creating a streaming connection using APIs](../ingestion/tutorials/create-streaming-connection.md).
+In order to start streaming data to Experience Platform, you must first create a streaming HTTP connection. When creating a streaming connection, you need to provide key details such as the source of streaming data, and whether or not you intend to send data from a trusted or an un-trusted source. This can be done using the Platform user interface or Experience Platform APIs. To learn more, follow the tutorials for [creating a streaming connection using the UI](../ingestion/tutorials/create-streaming-connection-ui.md) or [creating a streaming connection using APIs](../ingestion/tutorials/create-streaming-connection.md).
 
 ## Create a trusted streaming connection
 
