@@ -11,24 +11,23 @@ seo-description: Learn how to configure the Experience Platform Edge Network.
 >
 >Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
 
-
-The configuration for the Adobe Experience Platfrom Web SDK is split between two places. The [configure command](configuring-the-sdk.md) in the SDK controls things that must be handled on the client, like the `edgeDomain`. The edge configuration handles all other configuration for the SDK. When a request is sent to the Adobe Experience Platform Edge Network the `edgeConfigId` is used to reference teh server side configuration.
+The configuration for the Adobe Experience Platfrom Web SDK is split between two places. The [configure command](configuring-the-sdk.md) in the SDK controls things that must be handled on the client, like the `edgeDomain`. The edge configuration handles all other configuration for the SDK. When a request is sent to the Adobe Experience Platform Edge Network the `edgeConfigId` is used to reference the server side configuration.
 
 ## Creating an Edge Configuration ID
 
-Edge configuration IDs can be created in Launch using the Edge Configuration Tool. This tool allows you to create both edge configuration as well environments within those configuration. 
+Edge configuration IDs can be created in Launch using the Edge Configuration Tool. This tool allows you to create both edge configuration as well environments within those configuration.
 
 ![edge configuration tool navigation](../../assets/edge_configuration_nav.png)
 
 >[!NOTE] The edge configuration tool is available to all customers regardless if they use Launch as a tag maanager.
 
-You can create an edge configuration by clicking on New Edge Configuration in the top right of the screen. After you give it a name and a description it will ask you for the default settings for each environment. 
+You can create an edge configuration by clicking on New Edge Configuration in the top right of the screen. After you give it a name and a description it will ask you for the default settings for each environment.
 
 ### Default Environment Settings
 
 By defualt when you create an edge configuration the tool will create 3 environement for you. `dev`, `stage`, `prod`. These match the default environements in launch. These are useful to route data differently based on which environment you are in. When you enter default environment settings it will create each of your environments with those settings. You can always change them later.
 
-The id used in the SDK as the `edgeConfigId` is a composite ID that specifies the configuration and the environment. If no environment is present then the production environment is used. 
+The id used in the SDK as the `edgeConfigId` is a composite ID that specifies the configuration and the environment. If no environment is present then the production environment is used.
 
 ### Environment Settings
 
@@ -86,19 +85,19 @@ The property token can be found in [!UICONTROL Adobe Target] > [!UICONTROL setup
 
 ##### [UICONTORL Target Environment ID]
 
-[Environments](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) in Adobe Target help you manage your implementation through all stages of development. This setting specifies which environment you are going to use with each environment. 
+[Environments](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) in Adobe Target help you manage your implementation through all stages of development. This setting specifies which environment you are going to use with each environment.
 
 Adobe recommends setting this differently for each of your `dev`, `stage`, and `prod` edge environments to keep things simple. However, if you already have [!UICONTORL environments] defined you may use those.
 
 #### Adobe Audience Manager
 
-All that is needed to send data to Adobe Audience Manager is to enable the section. The other settings are optional but encouraged. 
+All that is needed to send data to Adobe Audience Manager is to enable the section. The other settings are optional but encouraged.
 
 ![Adobe Audience Manage settings block](../../assets/edge_configuration_aam.png)
 
 ##### [!UICONTROL Cookie Destinations Enabled]
 
-Allows the SDK to share segment information via [[!UICONTROL Cookie Destinations]](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) from Audience Manager. 
+Allows the SDK to share segment information via [[!UICONTROL Cookie Destinations]](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) from Audience Manager.
 
 ##### [!UICONTROL URL Destinations Enabled]
 
@@ -112,4 +111,4 @@ Controls whether data is sent to Adobe Analytics. Additional details are in the 
 
 ##### [!UICONTROL Report Suite ID]
 
-The report suite can be found in the Adobe Analytics Admin section under [!UICONTROL Admin>ReportSuites]. If multiple report suites are specified then data will be copied to each report suite. 
+The report suite can be found in the Adobe Analytics Admin section under [!UICONTROL Admin>ReportSuites]. If multiple report suites are specified then data will be copied to each report suite.
