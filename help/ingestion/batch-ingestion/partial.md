@@ -12,7 +12,7 @@ Partial batch ingestion is the ability to ingest data containing errors, up to a
 
 This document provides a tutorial for managing partial batch ingestion. 
 
-In addition, the [appendix](#partial-batch-ingestion-error-types) to this tutorial provides a reference for partial batch ingestion error types.
+In addition, the [appendix](#appendix) to this tutorial provides a reference for partial batch ingestion error types.
 
 >[!IMPORTANT] This feature only exists using the API. Please contact your team in order to gain access to this feature.
 
@@ -45,7 +45,7 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 ## Enable a dataset for partial batch ingestion in the API
 
->[!NOTE] This section describes enabling a dataset for partial batch ingestion using the API. For instructions on using the UI, please read the [enable a dataset for partial batch ingestion in the UI](#enable-a-dataset-for-partial-batch-ingestion-in-the-ui) step.
+<!-- >[!NOTE] This section describes enabling a dataset for partial batch ingestion using the API. For instructions on using the UI, please read the [enable a dataset for partial batch ingestion in the UI](#enable-a-dataset-for-partial-batch-ingestion-in-the-ui) step. -->
 
 You can create a new dataset or modify an existing dataset with partial ingestion enabled.
 
@@ -174,7 +174,7 @@ If the batch has an error and has error diagnostics enabled, the status will be 
 
 This tutorial covered how to create or modify a dataset to enable partial batch ingestion. For more information on batch ingestion, please read the [batch ingestion developer guide](./api-overview.md).
 
-## Partial batch ingestion error types
+## Partial batch ingestion error types {#appendix}
 
 Partial batch ingestion has four different error types when ingesting data.
 
