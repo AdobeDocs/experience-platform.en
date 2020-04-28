@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Create an authenticated streaming connection
+title: Create a trusted streaming connection
 topic: tutorial
 ---
 
-# Creating an authenticated streaming connection
+# Creating a trusted streaming connection
 
 Authenticated Data Collection allows Adobe Experience Platform services, such as Real-time Customer Profile and Identity, to differentiate between records coming from trusted sources and un-trusted sources. Clients that want to send Personally Identifiable Information (PII) can do so by sending access tokens as part of the POST request.
 
@@ -166,13 +166,13 @@ A successful response returns HTTP status 200 with detailed information about th
 
 ## Next steps
 
-Now that you have created an authenticated streaming connection, you can stream either time series or record data, allowing you to ingest data within Platform. To learn how to stream time series data to Platform, go to the [streaming time series data tutorial](./streaming-time-series-data.md). To learn how to stream record data to Platform, go to the [streaming record data tutorial](./streaming-record-data.md).
+Now that you have created a trusted streaming connection, you can stream either time series or record data, allowing you to ingest data within Platform. To learn how to stream time series data to Platform, go to the [streaming time series data tutorial](./streaming-time-series-data.md). To learn how to stream record data to Platform, go to the [streaming record data tutorial](./streaming-record-data.md).
 
 ## Appendix
 
-This section provides supplemental information about authenticated streaming connections.
+This section provides supplemental information about trusted streaming connections.
 
-### Sending messages to an authenticated streaming connection
+### Sending messages to a trusted streaming connection
 
 If a streaming connection has authentication enabled, the client will be required to add the `Authorization` header to their request. 
 
@@ -191,10 +191,8 @@ If the `Authorization` header is not present, or an invalid/expired access token
 }
 ```
 
-### Sending messages to an unauthenticated streaming connection with Authorization 
+### Sending messages to a non-trusted streaming connection with an Authorization header
 
-If a streaming connection does not have authentication enabled, the client can still (optionally) add the `Authorization` header to their request.
-
-If the `Authorization` header is not present, or an invalid/expired access token is sent, an HTTP 401 Unauthorized response will be returned, the data will still be published, but with the `authenticatedRequest` field set to `false`.
+Data can also be requested without the need for authorization. In order to collect this data, the `authenticatedRequest` field should be set to false. In this case, an HTTP 401 `Unauthorized` response will be returned when making a data collection call, but the data will still be collected.
 
 If the `Authorization` header is present and valid, the data will be published with the `authenticatedRequest` field set to `true`.
