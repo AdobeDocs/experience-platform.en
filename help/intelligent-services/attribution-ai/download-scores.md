@@ -27,7 +27,7 @@ A new dialog appears, containing a link to the downloading scores documentation 
 
 ## Retrieve your batch ID {#retrieve-your-batch-id}
 
-Using your dataset ID from the previous step, you need to make a call to the  Catalog API in order to retrieve a batch ID. Additional query parameters are used for this API call in order to return the latest successful batch instead of a list of batches belonging to your organization. To return additional batches, increase the number for the `limit` query parameter to the desired amount you wish to be returned. For more information on the types of query parameters available, visit the guide on [filtering Catalog data using query parameters](../../../catalog/api/filter-data.md).
+Using your dataset ID from the previous step, you need to make a call to the  Catalog API in order to retrieve a batch ID. Additional query parameters are used for this API call in order to return the latest successful batch instead of a list of batches belonging to your organization. To return additional batches, increase the number for the `limit` query parameter to the desired amount you wish to be returned. For more information on the types of query parameters available, visit the guide on [filtering Catalog data using query parameters](../../catalog/api/filter-data.md).
 
 **API format**
 
