@@ -278,10 +278,6 @@ Using the provided credentials, log in to Snowflake. Click the **Worksheets** ta
 
 ![find a schema](./images/download-scores/edited_snowflake_2.png)
 
-## Downloading raw scores
-
-Please contact attributionai-support@adobe.com for more details on raw score downloads.
-
 ## Connecting PowerBI to Snowflake (optional)
 
 Your Snowflake credentials can be used to set up a connection between PowerBI Desktop and Snowflake databases. 
