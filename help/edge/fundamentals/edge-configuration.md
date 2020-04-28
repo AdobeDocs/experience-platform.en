@@ -56,7 +56,7 @@ The settings listed here enable you to send data to the Adobe Experience Platfor
 
 ##### [!UICONTROL Sandbox]
 
-Sandboxes are locations in the Adobe Experience Platform that allow customers to isolate their data and implementations from each other. More details about how they work are located in the [Sandboxes documentation](help/sandboxes/home.md).
+Sandboxes are locations in the Adobe Experience Platform that allow customers to isolate their data and implementations from each other. More details about how they work are located in the [Sandboxes documentation](../../sandboxes/home.md).
 
 ##### [!UICONTROL Streaming Inlet]
 
