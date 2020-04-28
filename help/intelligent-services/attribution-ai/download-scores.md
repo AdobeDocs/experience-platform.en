@@ -27,12 +27,12 @@ A new dialog appears, containing a link to the downloading scores documentation 
 
 ## Retrieve your batch ID {#retrieve-your-batch-id}
 
-Using your dataset ID from the previous step, you need to make a call to the  Catalog API in order to retrieve a batch ID. Additional query parameters are used for this API call in order to return the latest successful single batch instead of a list of batches belonging to your organization. To return additional batches, increase the number of `limit` to the desired amount you wish to be returned. For more information on the types of query parameters available, visit the guide on [filtering Catalog data using query parameters](../../../catalog/api/filter-data.md).
+Using your dataset ID from the previous step, you need to make a call to the  Catalog API in order to retrieve a batch ID. Additional query parameters are used for this API call in order to return the latest successful batch instead of a list of batches belonging to your organization. To return additional batches, increase the number for the `limit` query parameter to the desired amount you wish to be returned. For more information on the types of query parameters available, visit the guide on [filtering Catalog data using query parameters](../../../catalog/api/filter-data.md).
 
 **API format**
 
 ```http
-GET /batches?&dataSet={DATASET_ID}&status=success&orderBy=desc:created&limit=1
+GET /batches?&dataSet={DATASET_ID}&createdClient=acp_foundation_push&status=success&orderBy=desc:created&limit=1
 ```
 
 | Parameter | Description |
@@ -42,7 +42,7 @@ GET /batches?&dataSet={DATASET_ID}&status=success&orderBy=desc:created&limit=1
 **Request**
 
 ```shell
-curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?&dataSet=5e8f81ce7a4ecb18a8d25b22&status=success&orderBy=desc:created&limit=1' \
+curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?&dataSet=5e8f81ce7a4ecb18a8d25b22&createdClient=acp_foundation_push&status=success&orderBy=desc:created&limit=1' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -51,16 +51,14 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?&dataSet=
 
 **Response**
 
-A successful response returns a payload containing a score batch ID object. In this example, the object is `01E5QSWCXXYFQ054FNBKYV2BAQ`. 
-
-Within the score batch ID object is a `relatedObjects` array. This array contains two objects. The first object has a `type` value of "batch", and also contains an ID. In the example response below, the batch ID is `035e2520-5e69-11ea-b624-51evfeba55d1`. Copy your batch ID to use in the next API call.
+A successful response returns a payload containing a batch ID object. In this example, the Key value to the object returned is the batch ID `01E5QSWCAASFQ054FNBKYV6TIQ`. Copy your batch ID to use in the next API call.
 
 >[!NOTE]
 > The following response has had the `tags` object reformated for readability.
 
 ```json
 {
-    "01E5QSWCXXYFQ054FNBKYV2BAQ": {
+    "01E5QSWCAASFQ054FNBKYV6TIQ": {
         "status": "success",
         "tags": {
             "Tags": [ ... ],
@@ -68,11 +66,11 @@ Within the score batch ID object is a `relatedObjects` array. This array contain
         "relatedObjects": [
             {
                 "type": "dataSet",
-                "id": "5e8f81ce7a4ecb18a8d25b22"
+                "id": "5e8f81cf7a4ecb28a8d85b22"
             }
         ],
-        "id": "01E5QSWCXXYFQ054FNBKYV2BAQ",
-        "externalId": "01E5QSWCXXYFQ054FNBKYV2BAQ",
+        "id": "01E5QSWCAASFQ054FNBKYV6TIQ",
+        "externalId": "01E5QSWCAASFQ054FNBKYV6TIQ",
         "replay": {
             "predecessors": [
                 "01E5N7EDQQP4JHJ93M7C3WM5SP"
@@ -83,7 +81,7 @@ Within the score batch ID object is a `relatedObjects` array. This array contain
         "inputFormat": {
             "format": "parquet"
         },
-        "imsOrg": "802657965B526A0A0A495D4A@AdobeOrg",
+        "imsOrg": "412657965Y566A4A0A495D4A@AdobeOrg",
         "started": 1586715571808,
         "metrics": {
             "partitionCount": 1,
@@ -124,7 +122,7 @@ GET batches/{BATCH_ID}/files
 Using your own batch ID, make the following request.
 
 ```shell
-curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/035e2520-5e69-11ea-b624-51evfeba55d1/files' \
+curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/01E5QSWCAASFQ054FNBKYV6TIQ/files' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -139,15 +137,15 @@ A successful response returns a payload containing a `_links` object. Within the
 {
     "data": [
         {
-            "dataSetFileId": "035e2520-5e69-11ea-b624-51ecfeba55d0-1",
-            "dataSetViewId": "5e3b2fe3fe4b9f18a8b7a3db",
+            "dataSetFileId": "01E5QSWCAASFQ054FNBKYV6TIQ-1",
+            "dataSetViewId": "5e8f81cf7a4ecb28a8d85b22",
             "version": "1.0.0",
-            "created": "1583361894479",
-            "updated": "1583361894479",
+            "created": "1586715582571",
+            "updated": "1586715582571",
             "isValid": false,
             "_links": {
                 "self": {
-                    "href": "https://platform.adobe.io:443/data/foundation/export/files/035e2520-5e69-11ea-b624-51ecfeba55d0-1"
+                    "href": "https://platform.adobe.io:443/data/foundation/export/files/01E5QSWCXXYFQ054FNBKYV2BAQ-1"
                 }
             }
         }
@@ -176,7 +174,7 @@ GET files/{DATASETFILE_ID}
 **Request**
 
 ```shell
-curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520-5e69-11ea-b624-51ecfeba55d0-1' \
+curl -X GET 'https://platform.adobe.io/data/foundation/export/files/01E5QSWCAASFQ054FNBKYV6TIQ-1' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -191,36 +189,18 @@ The response contains a data array that may have a single entry, or a list of fi
 {
     "data": [
         {
-            "name": "part-00000-tid-7597930103898538622-a25f1890-efa9-40eb-a2cb-1b378e93d582-528-1-c000.snappy.parquet",
-            "length": "16214531",
+            "name": "part-00000-tid-5614147572541837832-908bd66a-d856-47fe-b7da-c8e7d22a4097-1370467-1.c000.snappy.parquet",
+            "length": "2380211",
             "_links": {
                 "self": {
-                    "href": "https://platform.adobe.io:443/data/foundation/export/files/035e2520-5e69-11ea-b624-51ecfeba55d0-1?path=part-00000-tid-7597930103898538622-a25f1890-efa9-40eb-a2cb-1b378e93d582-528-1-c000.snappy.parquet"
-                }
-            }
-        },
-        {
-            "name": "...",
-            "length": "16235375",
-            "_links": {
-                "self": {
-                    "href": "..."
+                    "href": "https://platform.adobe.io:443/data/foundation/export/files/01E5QSWCXXYFQ054FNBKYV2BAQ-1?path=part-00000-trd-5714147572541837832-938bd66a-d556-41fe-b7da-c8e7d22a4097-1320467-1.c000.snappy.parquet"
                 }
             }
         }
     ],
     "_page": {
         "limit": 100,
-        "count": 100
-    },
-    "_links": {
-        "next": {
-            "href": "..."
-        },
-        "page": {
-            "href": "...",
-            "templated": true
-        }
+        "count": 1
     }
 }
 ```
@@ -252,21 +232,21 @@ GET files/{DATASETFILE_ID}?path={FILE_NAME}
 **Request**
 
 ```shell
-curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520-5e69-11ea-b624-51ecfeba55d0-1?path=part-00000-tid-7597930103898538622-a25f1890-efa9-40eb-a2cb-1b378e93d582-528-1-c000.snappy.parquet' \
+curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWCXXYFQ054FNBKYV2BAQ-1?path=part-00000-trd-5714147572541837832-938bd66a-d556-41fe-b7da-c8e7d22a4097-1320467-1.c000.snappy.parquet' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -O 'filename.parquet'
+  -O 'file.parquet'
 ```
 
 >[!TIP] Make sure you are in the correct directory or folder you want your file saved to before you make the GET request.
 
 **Response**
 
-The response downloads the file you requested in in your current directory. In this example the filename is "filename.parquet".
+The response downloads the file you requested in in your current directory. In this example the filename is "file.parquet".
 
-![Terminal](../images/download-scores/response.png)
+![Terminal](./images/download-scores/terminal-output.png)
 
 ## Next Steps
 
