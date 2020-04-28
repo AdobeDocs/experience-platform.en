@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;getting started;customer ai;popular topics
 solution: Experience Platform
-title: Getting started in Customer AI
+title: Customer AI input and output
 topic: Getting started
 ---
 
