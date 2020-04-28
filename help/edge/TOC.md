@@ -13,6 +13,7 @@ user-guide-title:  Adobe Experience Platform Edge Network Help
 * Fundamentals {#fundamentals}
   * [Installing the SDK](fundamentals/installing-the-sdk.md)
   * [Executing commands](fundamentals/executing-commands.md)
+  * [Configuring the Edge](fundamentals/edge-configuration.md)
   * [Configuring the SDK](fundamentals/configuring-the-sdk.md)
   * [Tracking events](fundamentals/tracking-events.md)
   * [Merging event data](fundamentals/merging-event-data.md)

@@ -28,6 +28,8 @@ You can create an edge configuration by clicking on New Edge Configuration in th
 
 By defualt when you create an edge configuration the tool will create 3 environement for you. `dev`, `stage`, `prod`. These match the default environements in launch. These are useful to route data differently based on which environment you are in. When you enter default environment settings it will create each of your environments with those settings. You can always change them later.
 
+The id used in the SDK as the `edgeConfigId` is a composite ID that specifies the configuration and the environment. If no environment is present then the production environment is used. 
+
 ### Environment Settings
 
 Below are each of the settings available to an environment. Most sections can be enabled or disabled. When disabled your settings will still be saved but are not active.
@@ -46,7 +48,7 @@ Controls whether or not the SDK will do identity syncs with 3rd party partners.
 
 ID Syncs can be grouped into containers to allow different ID syncs to be run at different times. This controls which container of ID Syncs is run for a given configuration ID.
 
-#### [!UICONTROL Adobe Experience Platform]
+#### Adobe Experience Platform
 
 The settings listed here enable you to send data to the Adobe Experience Platform.
 
@@ -64,7 +66,7 @@ A streaming inlet is an HTTP source in the Adobe Experience Platform. These are 
 
 Edge configuration support sending data to datasets that have a schema of class [!UICONTROL Experience Event].
 
-#### [!UICONTROL Adobe Target]
+#### Adobe Target
 
 To configure Adobe Target you will need to provide a client code. The other options are optional.
 
@@ -88,3 +90,26 @@ The property token can be found in [!UICONTROL Adobe Target] > [!UICONTROL setup
 
 Adobe recommends setting this differently for each of your `dev`, `stage`, and `prod` edge environments to keep things simple. However, if you already have [!UICONTORL environments] defined you may use those.
 
+#### Adobe Audience Manager
+
+All that is needed to send data to Adobe Audience Manager is to enable the section. The other settings are optional but encouraged. 
+
+![Adobe Audience Manage settings block](../../assets/edge_configuration_aam.png)
+
+##### [!UICONTROL Cookie Destinations Enabled]
+
+Allows the SDK to share segment information via [[!UICONTROL Cookie Destinations]](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) from Audience Manager. 
+
+##### [!UICONTROL URL Destinations Enabled]
+
+Allows the SDK to share segment information via a [[!UICONTROL URL Destinations]](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html). These are configured in Audience Manager.
+
+#### Adobe Analytics
+
+Controls whether data is sent to Adobe Analytics. Additional details are in the [Analytics Overview](../solution-specific/analytics/analytics-overview.md).
+
+![Adobe Analytics Settings Block](../../assets/edge_configuration_aa.png)
+
+##### [!UICONTROL Report Suite ID]
+
+The report suite can be found in the Adobe Analytics Admin section under [!UICONTROL Admin>ReportSuites]. If multiple report suites are specified then data will be copied to each report suite. 
