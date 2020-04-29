@@ -41,4 +41,4 @@ The PDPA follows the footprint of the European Union's General Data Protection A
 
 ## Can data subjects under the age of 10 give consent? 
 
-Parental consent is required for the collection of personal data of children under the age of 10.  
+Parental consent is required for the collection of personal data of children under the age of 10. 
