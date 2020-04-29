@@ -62,4 +62,4 @@ You can enable or disable custom data usage policies on the *[!UICONTROL Browse]
 
 ## Next steps
 
-This document provided an overview of how to manage data usage policies in Experience Platform UI. For steps on how to manage policies using the DULE Policy API, see the [API policy creation tutorial](./create.md). For information on how to enforce data usage policies, see the [policy enforcement overview](../enforcement/overview.md).
+This document provided an overview of how to manage data usage policies in Experience Platform UI. For steps on how to manage policies using the DULE Policy API, see the [developer guide](../api/getting-started.md). For information on how to enforce data usage policies, see the [policy enforcement overview](../enforcement/overview.md).
