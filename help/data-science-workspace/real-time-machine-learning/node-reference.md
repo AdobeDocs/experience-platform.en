@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;Data Science Workspace;popular topics;Real time machine learning;node reference;
+keywords: Experience Platform;developer guide;Data Science Workspace;popular topics;Real-time Machine Learning;node reference;
 solution: Experience Platform
-title: Real time machine learning nodes reference guide
+title: Real-time Machine Learning nodes reference guide
 topic: Nodes reference
 ---
 
-# Real time machine learning nodes reference guide
+# Real-time Machine Learning nodes reference guide
 
-The following guide outlines the supported node libraries for real time machine learning.
+The following guide outlines the supported node libraries for Real-time Machine Learning.
 
 ## Discovering nodes for use in your ML pipeline
 
@@ -44,7 +44,7 @@ Standard nodes build upon open source data science libraries such as Pandas and 
 
 ### ModelUpload
 
-The ModelUpload node is an internal Adobe node that takes a model_path and uploads the model from the local model path to the real time machine learning Blob Store.
+The ModelUpload node is an internal Adobe node that takes a model_path and uploads the model from the local model path to the Real-time Machine Learning Blob Store.
 
 ```python
 model = ModelUpload(params={'model_path': model_path})
