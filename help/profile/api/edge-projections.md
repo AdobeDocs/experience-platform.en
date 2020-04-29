@@ -133,6 +133,7 @@ curl -X POST \
 ```
 
 |Property|Description|
+|---|---|
 |`type` **(Required)** |The type of destination to be created. The only accepted value, "EDGE", creates an edge destination.|
 |`dataCenters` **(Required)** |A string array that lists the edges toward which projections are to be routed. May contain one or more of the following values: "OR1" - Western United States, "VA5" - Eastern United States, "NLD1" - EMEA.|
 |`ttl` **(Required)** |Specifies projection expiration. Accepted value range: 600 to 604800. Default value: 3600.|
