@@ -32,6 +32,8 @@ For more information about identity namespaces in Experience Platform, see the [
 
 When creating privacy requests for the Data Lake, valid identity values (and their associated namespaces) must be provided for each individual customer in order to locate their data and process it accordingly. Therefore, all datasets that are subject to privacy requests must contain an **identity descriptor** in their associated XDM schema.
 
+>[!NOTE] Any datasets based on schemas that do not support identity descriptor metadata (such as ad-hoc datasets) currently cannot be processed in privacy requests.
+
 This section walks through the steps of adding an identity descriptor to an existing dataset's XDM schema. If you already have a dataset with an identity descriptor, you can skip ahead to the [next section](#nested-maps).
 
 >[!IMPORTANT] When deciding which schema fields to set as identities, keep in mind the [limitations of using nested map-type fields](#nested-maps).
