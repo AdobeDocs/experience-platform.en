@@ -27,5 +27,5 @@ user-guide-title: Adobe Experience Platform Privacy Service Help
   * [PDPA (Thailand) FAQ](./pdpa-tha/faq.md)
   * [PDPA (Thailand) terminology](./pdpa-tha/terminology.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
-* [API reference](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html)
+* [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml)
 * [Release notes](release-notes.md)
