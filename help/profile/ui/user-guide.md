@@ -69,7 +69,7 @@ Click **Merge Policies** to view a list of merge policies belonging to your orga
 
 ![](../images/user-guide/profile-merge-policies.png)
 
-For more information on working with merge policies in the UI, see the [mMerge Policies user guide](merge-policies.md).
+For more information on working with merge policies in the UI, see the [Merge Policies user guide](merge-policies.md).
 
 ## Union schema
 
