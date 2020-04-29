@@ -7,7 +7,7 @@ topic: overview
 
 # Privacy request processing in the Data Lake
 
-Adobe Experience Platform Privacy Service processes customer requests to access, opt out of sale, or delete their personal data as delineated by privacy regulations such as the General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA).
+Adobe Experience Platform Privacy Service processes customer requests to access, opt out of sale, or delete their personal data as delineated by legal and organizational privacy regulations.
 
 This document covers essential concepts related to processing privacy requests for customer data stored in the Data Lake.
 
@@ -18,168 +18,112 @@ It is recommended that you have a working understanding of the following Experie
 * [Privacy Service](../privacy-service/home.md): Manages customer requests for accessing, opting out of sale, or deleting their personal data across Adobe Experience Cloud applications.
 * [Catalog Service](home.md): The system of record for data location and lineage within Experience Platform. Provides an API that can be used to update dataset metadata.
 * [Experience Data Model (XDM) System](../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+* [Identity Service](../identity-service/home.md): Solves the fundamental challenge posed by the fragmentation of customer experience data by bridging identities across devices and systems.
 
-## Adding privacy labels to datasets {#privacy-labels}
+## Understanding identity namespaces {#namespaces}
 
-In order for a dataset to be processed in a privacy request for the Data Lake, the dataset must be given privacy labels. Privacy labels indicate which fields within a dataset's associated schema apply to the namespaces you expect to be sent in privacy requests.
+Adobe Experience Platform Identity Service bridges customer identity data across systems and devices. Identity Service uses **identity namespaces** to provide context to identity values by relating them to their system of origin. A namespace can represent a generic concept such as an email address ("Email") or associate the identity with a specific application, such as an Adobe Advertising Cloud ID ("AdCloud") or Adobe Target ID ("TNTID").
 
-This section demonstrates how to add privacy labels to a dataset for use in Data Lake privacy requests. To begin, consider the following dataset:
+Identity Service maintains a store of globally defined (standard) and user-defined (custom) identity namespaces. Standard namespaces are available for all organizations (for example, "Email" and "ECID"), while your organization can also create custom namespaces to suit its particular needs.
 
-```json
-{
-    "5d8e9cf5872f18164763f971": {
-        "name": "Loyalty Members",
-        "description": "Dataset for the Loyalty Members schema",
-        "imsOrg": "{IMS_ORG}",
-        "tags": {
-            "adobe/pqs/table": [
-                "loyalty_members"
-            ]
-        },
-        "namespace": "ACP",
-        "state": "DRAFT",
-        "id": "5d8e9cf5872f18164763f971",
-        "dule": {
-            "identity": [],
-            "contract": [
-                "C2",
-                "C5"
-            ],
-            "sensitive": [],
-            "contracts": [
-                "C2",
-                "C5"
-            ],
-            "identifiability": [],
-            "specialTypes": []
-        },
-        "version": "1.0.2",
-        "created": 1569627381749,
-        "updated": 1569880723282,
-        "createdClient": "acp_ui_platform",
-        "createdUser": "{USER_ID}",
-        "updatedUser": "{USER_ID}",
-        "viewId": "5d8e9cf5872f18164763f972",
-        "status": "enabled",
-        "fileDescription": {
-            "persisted": true,
-            "containerFormat": "parquet",
-            "format": "parquet"
-        },
-        "files": "@/dataSets/5d8e9cf5872f18164763f971/views/5d8e9cf5872f18164763f972/files",
-        "schemaMetadata": {
-            "primaryKey": [],
-            "delta": [],
-            "dule": [
-                {
-                    "path": "/properties/personalEmail/properties/address",
-                    "identity": [
-                        "I1"
-                    ],
-                    "contract": [],
-                    "sensitive": [],
-                    "contracts": [],
-                    "identifiability": [
-                        "I1"
-                    ],
-                    "specialTypes": []
-                }
-            ],
-            "gdpr": []
-        },
-        "schemaRef": {
-            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/2c66c3a4323128d3701289df4468e8a6",
-            "contentType": "application/vnd.adobe.xed-full+json;version=1"
-        }
-    }
-}
-```
+For more information about identity namespaces in Experience Platform, see the [identity namespace overview](../identity-service/namespaces.md).
 
-The `schemaMetadata` property for the dataset contains a `gdpr` array, which is currently empty. To add privacy labels to the dataset, this array must be updated using a PATCH request to the [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
+## Adding identity data to datasets
 
->[!NOTE] Although the array is named `gdpr`, adding labels to it will allow for privacy job requests for both GDPR and CCPA regulations.
+When creating privacy requests for the Data Lake, valid identity values (and their associated namespaces) must be provided for each individual customer in order to locate their data and process it accordingly. Therefore, all datasets that are subject to privacy requests must contain an **identity descriptor** in their associated XDM schema.
+
+This section walks through the steps of adding an identity descriptor to an existing dataset's XDM schema. If you already have a dataset with an identity descriptor, you can skip ahead to the [next section](#nested-maps).
+
+>[!IMPORTANT] When deciding which schema fields to set as identities, keep in mind the [limitations of using nested map-type fields](#nested-maps).
+
+There are two methods of adding an identity descriptor to a dataset schema:
+
+* [Using the UI](#identity-ui)
+* [Using the API](#identity-api)
+
+### Using the UI {#identity-ui}
+
+In the Experience Platform user interface, the _[!UICONTROL Schemas]_ workspace allows you to edit your existing XDM schemas. To add an identity descriptor to a schema, select the schema from the list and follow the steps for [setting a schema field as an identity field](../xdm/tutorials/create-schema-ui.md#identity-field) in the Schema Editor tutorial.
+
+Once you have set the appropriate fields within the schema as identity fields, you can proceed to the next section on [submitting privacy requests](#submit).
+
+### Using the API {#identity-api}
+
+>[!NOTE] This section assumes you know the unique URI ID value of your dataset's XDM schema. If you do not know this value, you can retrieve it by using the Catalog Service API. After reading the [getting started](./api/getting-started.md) section of the developer guide, follow the steps outlined in for [listing](./api/list-objects.md) or [looking up](./api/look-up-object.md) Catalog objects to find your dataset. The schema ID can be found under `schemaRef.id`
+>
+> This section includes calls to the Schema Registry API. For important information related to using the API, including knowing your `{TENANT_ID}` and the concept of containers, see the [getting started](../xdm/api/getting-started.md) section of the developer guide.
+
+You can add an identity descriptor to a dataset's XDM schema by making a POST request to the `/descriptors` endpoint in the Schema Registry API.
 
 **API format**
 
 ```http
-PATCH /dataSets/{DATASET_ID}
+POST /descriptors
 ```
-
-| Parameter | Description |
-| --- | --- |
-| `{DATASET_ID}` | The `id` value of the dataset to be updated. |
 
 **Request**
 
-In this example, a dataset includes an email address in the `personalEmail.address` field. In order for this field to act as an identifier for Data Lake privacy requests, a label that uses an unregistered namespace must be added to its `gdpr` array.
-
-The following request adds a privacy label which assigns the namespace "email_label" to the `personalEmail.address` field.
-
->[!IMPORTANT] When running a PATCH operation on a dataset's `schemaMetadata` property, be sure to copy any existing sub-properties within the request payload. Excluding any existing values from the payload will cause them to be removed from the dataset.
+The following request defines an identity descriptor on an "email address" field in a sample schema.
 
 ```shell
-curl -X PATCH 'https://platform.adobe.io/data/foundation/catalog/dataSets/5d8e9cf5872f18164763f971' \
+curl -X POST \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'Content-Type: application/json' \
-  -d '{ 
-    "schemaMetadata": { 
-      "primaryKey": [],
-      "delta": [],
-      "dule": [
-        {
-          "path": "/properties/personalEmail/properties/address",
-          "identity": [
-              "I1"
-          ],
-          "contract": [],
-          "sensitive": [],
-          "contracts": [],
-          "identifiability": [
-              "I1"
-          ],
-          "specialTypes": []
-        }
-      ],
-      "gdpr": [
-          {
-              "namespace": ["email_label"],
-              "path": "/properties/personalEmail/properties/address"
-          }
-      ]
-  }'
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '
+      {
+        "@type": "xdm:descriptorIdentity",
+        "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/fbc52b243d04b5d4f41eaa72a8ba58be",
+        "xdm:sourceVersion": 1,
+        "xdm:sourceProperty": "/personalEmail/address",
+        "xdm:namespace": "Email",
+        "xdm:property": "xdm:code",
+        "xdm:isPrimary": false
+      }'
 ```
 
 | Property | Description |
 | --- | --- |
-| `namespace` | An array listing the namespace(s) to be associated with the field specified in `path`. Namespaces are used to identify privacy-related fields when [submitting access or delete requests](#submit) in the Privacy Service API. |
-| `path` | The path to the field within the dataset's associated schema that applies to the `namespace`. Ideally, privacy labels should only be applied to "leaf" fields (fields without sub-fields). |
+| `@type` | The type of descriptor being created. For identity descriptors, the value must be "xdm:descriptorIdentity". |
+| `xdm:sourceSchema` | The unique URI ID of your dataset's XDM schema. |
+| `xdm:sourceVersion` | The version of the XDM schema specified in `xdm:sourceSchema`. |
+| `xdm:sourceProperty` | The path to the schema field that the descriptor is being applied to. |
+| `xdm:namespace` | One of the [standard identity namespaces](../privacy-service/api/appendix.md#standard-namespaces) recognized by Privacy Service, or a custom namespace defined by your organization. |
+| `xdm:property` | Either "xdm:id" or "xdm:code", depending on the namespace being used under `xdm:namespace`. |
+| `xdm:isPrimary` | An optional boolean value. When true, this indicates that the field  is a primary identity. Schemas may contain only one primary identity. Defaults to false if not included. |
 
 **Response**
 
-A successful response returns HTTP status 200 (OK) with the ID of the dataset provided in the payload. Using the ID to look up the dataset again reveals that the privacy labels have been added.
+A successful response returns HTTP status 201 (Created) and the details of the newly created descriptor.
 
 ```json
-[
-    "@/dataSets/5d8e9cf5872f18164763f971"
-]
+{
+  "@type": "xdm:descriptorIdentity",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/fbc52b243d04b5d4f41eaa72a8ba58be",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/personalEmail/address",
+  "xdm:namespace": "Email",
+  "xdm:property": "xdm:code",
+  "xdm:isPrimary": false,
+  "meta:containerId": "tenant",
+  "@id": "f3a1dfa38a4871cf4442a33074c1f9406a593407"
+}
 ```
-
-### Labeling nested map-type fields
-
-It is important to note that there are two kinds of nested map-type fields that do not support privacy labeling:
-
-* A map-type field within an array-type field
-* A map-type field within another map-type field
-
-Privacy job processing for either of the two examples above will eventually fail. For this reason, it is recommended that you avoid using nested map-type fields to store private customer data. Relevant consumer IDs should be stored as a non-map datatype within the `identityMap` field (itself a map-type field) for record-based datasets, or the `endUserID` field for time-series-based datasets.
 
 ## Submitting requests {#submit}
 
->[!NOTE] This section covers how to format privacy requests for the Data Lake. It is strongly recommended that you review the [Privacy Service API](../privacy-service/api/getting-started.md) or [Privacy Service UI](../privacy-service/ui/overview.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
+>[!NOTE] This section covers how to format privacy requests for the Data Lake. It is strongly recommended that you review the [Privacy Service UI](../privacy-service/ui/overview.md) or [Privacy Service API](../privacy-service/api/getting-started.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
 
-The following section outlines how to make privacy requests for the Data Lake using the Privacy Service API or UI.
+The following section outlines how to make privacy requests for the Data Lake using the Privacy Service UI or API.
+
+### Using the UI
+
+When creating job requests in the UI, be sure to select **AEP Data Lake** and/or **Profile** under _Products_ in order to process jobs for data stored in the Data Lake or Real-time Customer Profile, respectively.
+
+<img src='images/privacy/product-value.png' width=450><br>
 
 ### Using the API
 
@@ -228,12 +172,6 @@ curl -X POST \
 }'
 ```
 
-### Using the UI
-
-When creating job requests in the UI, be sure to select **AEP Data Lake** and/or **Profile** under _Products_ in order to process jobs for data stored in the Data Lake or Real-time Customer Profile, respectively.
-
-<img src='images/privacy/product-value.png' width=450><br>
-
 ## Delete request processing
 
 When Experience Platform receives a delete request from Privacy Service, Platform sends confirmation to Privacy Service that the request has been received and affected data has been marked for deletion. The records are then removed from the Data Lake within seven days. During that seven-day window, the data is soft-deleted and is therefore not accessible by any Platform service.
@@ -245,3 +183,16 @@ In future releases, Platform will send confirmation to Privacy Service after dat
 By reading this document, you have been introduced to the important concepts involved with processing privacy requests for the Data Lake. It is recommended that you continue reading the documentation provided throughout this guide in order to deepen your understanding of how to manage identity data and create privacy jobs.
 
 See the document on [privacy request processing for Real-time Customer Profile](../profile/privacy.md) for steps on processing privacy requests for the Profile store.
+
+## Appendix
+
+The following section contains additional information for processing privacy requests in the Data Lake.
+
+### Labeling nested map-type fields {#nested-maps}
+
+It is important to note that there are two kinds of nested map-type fields that do not support privacy labeling:
+
+* A map-type field within an array-type field
+* A map-type field within another map-type field
+
+Privacy job processing for either of the two examples above will eventually fail. For this reason, it is recommended that you avoid using nested map-type fields to store private customer data. Relevant consumer IDs should be stored as a non-map datatype within the `identityMap` field (itself a map-type field) for record-based datasets, or the `endUserID` field for time-series-based datasets.
