@@ -50,7 +50,7 @@ Using the connection ID for your database, you can explore your data tables by p
 
 **API format**
 
-```http
+```https
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 ```
 
@@ -98,7 +98,7 @@ To inspect the structure of a table from your database, perform a GET request wh
 
 **API format**
 
-```http
+```https
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}
 ```
 
