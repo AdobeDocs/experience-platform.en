@@ -28,7 +28,7 @@ In order for Flow Service to connect with your Blob storage, you must provide va
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string required to access data in your Blob storage. The Blob connection string pattern is: `DefaultEndpointsProtocol=https;AccountName=<accountname>;AccountKey=<accountkey>` |
+| `connectionString` | The connection string required to access data in your Blob storage. The Blob connection string pattern is: `DefaultEndpointsProtocol=https;AccountName=<accountname>;AccountKey=<accountkey>`. |
 
 For more information on getting started, visit [this Azure Blob document](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string).
 

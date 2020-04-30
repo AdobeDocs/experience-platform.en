@@ -30,9 +30,22 @@ Experience Platform supports the following file formats to be ingested from exte
 
 ### Gather required credentials
 
-In order to access your Blob storage on Platform, you must provide a valid **Azure Storage connection string**. You can learn more about connection strings including ways to obtain them through <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string" target="_blank">this Microsoft Azure document</a>.
+In order to access your Blob storage on Platform, you must provide a valid value for the following credential: 
 
-Similarly, accessing your S3 bucket on Platform requires you to provide your **S3 Access Key** and **S3 Secret Key**. For more information, refer to <a href="https://aws.amazon.com/blogs/security/wheres-my-secret-access-key/" target="_blank">this AWS document</a>.
+| Credential | Description |
+| ---------- | ----------- |
+| `connectionString` | The connection string required to access data in your Blob storage. The Blob connection string pattern is: `DefaultEndpointsProtocol=https;AccountName=<accountname>;AccountKey=<accountkey>`. |
+
+For more information on getting started, visit [this Azure Blob document](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string).
+
+Similarly, accessing your S3 bucket on Platform requires you to provide your valid values for the following credentials:
+
+| Credential | Description |
+| ---------- | ----------- |
+| `s3AccessKey` | The access key ID for your S3 storage. |
+| `s3SecretKey` | The secret key ID for your S3 storage. |
+
+For more information on getting started, visit [this AWS document](https://aws.amazon.com/blogs/security/wheres-my-secret-access-key/).
 
 ## Connect your Blob or S3 account
 

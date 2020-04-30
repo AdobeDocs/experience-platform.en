@@ -26,7 +26,7 @@ In order to access your Synapse account on Platform, you must provide the follow
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string associated with your Synapse authentication. |
+| `connectionString` | The connection string associated with your Synapse authentication. The Synapse connection string pattern is `Server=tcp:<servername>.database.windows.net,1433;Database=<databasename>;User ID=<username>@<servername>;Password=<password>;Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
 
 For more information about this value, refer to [this Synapse document](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-sql-data-warehouse).
 

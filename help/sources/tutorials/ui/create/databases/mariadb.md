@@ -26,7 +26,7 @@ In order to access your Maria DB account on Platform, you must provide the follo
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string associated with your MariaDB authentication. |
+| `connectionString` | The connection string associated with your MariaDB authentication. The MariaDB connection string pattern is: `Server=<host>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>`. |
 
 Please refer to [this document](https://mariadb.com/kb/en/about-mariadb-connector-odbc/) for more information about getting started with MariaDB.
 

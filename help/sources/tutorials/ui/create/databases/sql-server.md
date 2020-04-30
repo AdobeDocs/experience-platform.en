@@ -26,7 +26,7 @@ In order to connect to SQL Server on Platform, you must provide the following co
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string associated with your SQL Server account. |
+| `connectionString` | The connection string associated with your SQL Server account. The SQL Server connection string pattern is: `Data Source=<servername>\\<instance name if using named instance>;Initial Catalog=<databasename>;Integrated Security=False;User ID=<username>;Password=<password>;`. |
 
 Please refer to [this document](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server) for more information on getting started with SQL Server.
 
