@@ -1,6 +1,6 @@
 ---
 title: Edge Configuration
-seo-title: Edge configuration for the Experience Platfrom Web SDK
+seo-title: Edge configuration for the Experience Platform Web SDK
 description: Learn how to configure the Experience Platform Edge Network. 
 seo-description: Learn how to configure the Experience Platform Edge Network. 
 ---
@@ -19,13 +19,13 @@ Edge configuration IDs can be created in Launch using the Edge Configuration Too
 
 ![edge configuration tool navigation](../../assets/edge_configuration_nav.png)
 
->[!NOTE] The edge configuration tool is available to all customers regardless if they use Launch as a tag maanager.
+>[!NOTE] The edge configuration tool is available to whitelisted customer regardless if they use Launch as a tag manager. Additionally users will require develop permissions in launch. See the [User Permissions](https://docs.adobe.com/content/help/en/launch/using/reference/admin/user-permissions.html) in Launch for more details.
 
 You can create an edge configuration by clicking on New Edge Configuration in the top right of the screen. After you give it a name and a description it will ask you for the default settings for each environment.
 
 ### Default Environment Settings
 
-By defualt when you create an edge configuration the tool will create 3 environement for you. `dev`, `stage`, `prod`. These match the default environements in launch. These are useful to route data differently based on which environment you are in. When you enter default environment settings it will create each of your environments with those settings. You can always change them later.
+These default settings will be used to create your first three environments with identical settings. These three environments are dev, stage, and prod. They match the three default environments in Launch. When you build a Launch library to a dev environment, it will automatically use the dev environment from your configuration. You can edit settings in individual environments as much as you'd like.
 
 The id used in the SDK as the `edgeConfigId` is a composite ID that specifies the configuration and the environment. If no environment is present then the production environment is used.
 
@@ -33,23 +33,23 @@ The id used in the SDK as the `edgeConfigId` is a composite ID that specifies th
 
 Below are each of the settings available to an environment. Most sections can be enabled or disabled. When disabled your settings will still be saved but are not active.
 
-#### [!UICONTORL Identity]
+#### [!UICONTROL Identity]
 
 The identity section is the only section that is always on. It has two setting available; ID Syncs Enabled and ID Sync Container ID.
 
 ![Identity section of the configuration UI](../../assets/edge_configuration_identity.png)
 
-##### [!UICONTORL ID Sync Enabled]
+##### [!UICONTROL ID Sync Enabled]
 
 Controls whether or not the SDK will do identity syncs with 3rd party partners.
 
-##### [!UICONTORL ID Sync Container ID]
+##### [!UICONTROL ID Sync Container ID]
 
 ID Syncs can be grouped into containers to allow different ID syncs to be run at different times. This controls which container of ID Syncs is run for a given configuration ID.
 
 #### Adobe Experience Platform
 
-The settings listed here enable you to send data to the Adobe Experience Platform.
+The settings listed here enable you to send data to the Adobe Experience Platform. You should only enabled this section if you have purchase the Adobe Experience Platform.
 
 ![Adobe Experience Platform settings block](../../assets/edge_configuration_aep.png)
 
@@ -59,15 +59,15 @@ Sandboxes are locations in the Adobe Experience Platform that allow customers to
 
 ##### [!UICONTROL Streaming Inlet]
 
-A streaming inlet is an HTTP source in the Adobe Experience Platform. These are created under [!UICONTROL Sources] tab in the Adobe Experience Platform.
+A streaming inlet is an HTTP source in the Adobe Experience Platform. These are created under the [!UICONTROL Sources] tab in the Adobe Experience Platform as an HTTP API.
 
 ##### [!UICONTROL Event Dataset]
 
-Edge configuration support sending data to datasets that have a schema of class [!UICONTROL Experience Event].
+Edge configurations support sending data to datasets that have a schema of class [!UICONTROL Experience Event].
 
 #### Adobe Target
 
-To configure Adobe Target you will need to provide a client code. The other options are optional.
+To configure Adobe Target you will need to provide a client code. The other fields are optional.
 
 ![Adobe Target settings block](../../assets/edge_configuration_target.png)
 
@@ -75,19 +75,19 @@ To configure Adobe Target you will need to provide a client code. The other opti
 
 ##### [!UICONTROL Client Code]
 
-The unique ID for a target account. To find this you can navigate to [!UICONTROL Adobe Target] > [!UICONTROL Setup]> [!UICONTORL Implementation] > [!UICONTORL edit settings] next to the [!UICONTROL download] button for either [!UICONTROL at.js] or [!UICONTORL mbox.js]
+The unique ID for a target account. To find this you can navigate to [!UICONTROL Adobe Target] > [!UICONTROL Setup]> [!UICONTROL Implementation] > [!UICONTROL edit settings] next to the [!UICONTROL download] button for either [!UICONTROL at.js] or [!UICONTROL mbox.js]
 
-##### [!UICONTORL Property Token]
+##### [!UICONTROL Property Token]
 
 Target allows customers to control permissions through the use of properties. Details can be found in the [Enterprise Permissions](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) section of the Target Documentation.
 
 The property token can be found in [!UICONTROL Adobe Target] > [!UICONTROL setup] > [UICONTROL Properties]
 
-##### [UICONTORL Target Environment ID]
+##### [UICONTROL Target Environment ID]
 
 [Environments](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) in Adobe Target help you manage your implementation through all stages of development. This setting specifies which environment you are going to use with each environment.
 
-Adobe recommends setting this differently for each of your `dev`, `stage`, and `prod` edge environments to keep things simple. However, if you already have [!UICONTORL environments] defined you may use those.
+Adobe recommends setting this differently for each of your `dev`, `stage`, and `prod` edge configuration environments to keep things simple. However, if you already have [!UICONTROL Adobe Target environments] defined you may use those.
 
 #### Adobe Audience Manager
 
