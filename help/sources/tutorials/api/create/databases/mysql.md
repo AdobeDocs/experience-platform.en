@@ -26,7 +26,7 @@ In order for Flow Service to connect with your MySQL storage, you must provide t
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The MySQL connection string associated with your account. |
+| `connectionString` | The MySQL connection string associated with your account. The MySQL connection string pattern is: `Server=<server>;Port=<port>;Database=<database>;UID=<username>;PWD=<password>`. |
 
 You can learn more about connection strings and how to obtain them by reading the [MySQL document](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html).
 

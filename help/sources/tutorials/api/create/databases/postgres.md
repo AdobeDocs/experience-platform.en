@@ -26,7 +26,7 @@ In order for Flow Service to connect with PSQL, you must provide the following c
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string associated with your PSQL account. |
+| `connectionString` | The connection string associated with your PSQL account. The PSQL connection string pattern is: `Server=<server>;Database=<database>;Port=<port>;UID=<username>;Password=<Password>`. |
 
 For more information about getting started, refer to this [PSQL document](https://www.postgresql.org/docs/9.2/app-psql.html).
 

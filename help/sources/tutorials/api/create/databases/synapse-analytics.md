@@ -26,7 +26,7 @@ In order for Flow Service to connect with Synapse, you must provide values for t
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string used to connect to Azure Synapse Analytics. |
+| `connectionString` | The connection string used to connect to Synapse. The Synapse connection string pattern is `Server=tcp:<servername>.database.windows.net,1433;Database=<databasename>;User ID=<username>@<servername>;Password=<password>;Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
 | `connectionSpec.id` | The unique identifier needed to create a connection. The connection specification ID for Synapse is: `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
 
 For more information about getting started refer to [this Synapse document](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-aad-authentication-configure?toc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Ftoc.json&bc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Fbreadcrumb%2Ftoc.json&tabs=azure-powershell).
