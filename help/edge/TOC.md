@@ -20,6 +20,7 @@ user-guide-title:  Adobe Experience Platform Edge Network Help
   * [Debugging](fundamentals/debugging.md)
   * [Interacting with multiple properties](fundamentals/interacting-with-multiple-properties.md)
   * [Rendering personalized content](fundamentals/rendering-personalization-content.md)
+  * [Managing Flicker](fundamentals/managing-flicker.md)
   * [Supporting consent](fundamentals/supporting-consent.md)
   * [Supporting in-app browsers](fundamentals/supporting-in-app-browsers.md)
 * What to Implement {#implement}
@@ -28,6 +29,8 @@ user-guide-title:  Adobe Experience Platform Edge Network Help
   * Analytics {#analytics}
     * [Analytics Overview](solution-specific/analytics/analytics-overview.md)
     * [Automatically Mapped Variables](solution-specific/analytics/automatically-mapped-vars.md)
+  * Target {#target}
+    * [Target Overview](solution-specific/target/target-overview.md)
 * Reference {#ref}
   * [Automatically Collected Information](reference/automatic-information.md)
   * [Retrieving Library Information](reference/retrieving-library-information.md)
