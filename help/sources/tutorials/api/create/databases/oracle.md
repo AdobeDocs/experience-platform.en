@@ -22,7 +22,7 @@ The following sections provide additional information that you will need to know
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string used to connect to Oracle. |
+| `connectionString` | The connection string used to connect to Oracle. The Oracle connection string pattern is: `Host=<host>;Port=<port>;Sid=<sid>;User Id=<username>;Password=<password>`. |
 | `connectionSpec.id` | The unique identifier needed to create a connection. The connection specification ID for Oracle is `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
 For more information about getting started refer to [this Oracle document](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199).
