@@ -57,7 +57,7 @@ A connection specifies a source and contains your credentials for that source. O
 
 **API format**
 
-```https
+```http
 POST /connections
 ```
 
