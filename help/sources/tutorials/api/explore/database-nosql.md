@@ -9,7 +9,7 @@ topic: overview
 
 Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
-This tutorial uses the Flow Service API to explore database systems.
+This tutorial uses the Flow Service API to explore the contents and file structure of a third-party database.
 
 ## Getting started
 
@@ -50,7 +50,7 @@ Using the connection ID for your database, you can explore your data tables by p
 
 **API format**
 
-```https
+```http
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 ```
 
@@ -62,7 +62,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/54c22133-3a01-4d3b-8221-333a01bd3b03/explore?objectType=root' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections/54c22133-3a01-4d3b-8221-333a01bd3b03/explore?objectType=root' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -71,7 +71,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns an array of tables from your database or NoSQL system. Find the table you wish to bring into Platform and take note of its `path` property, as you are required to provide it in the next step to inspect its structure.
+A successful response returns an array of tables from your database. Find the table you wish to bring into Platform and take note of its `path` property, as you are required to provide it in the next step to inspect its structure.
 
 ```json
 [
@@ -98,7 +98,7 @@ To inspect the structure of a table from your database, perform a GET request wh
 
 **API format**
 
-```https
+```http
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}
 ```
 
@@ -111,7 +111,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/54c22133-3a01-4d3b-8221-333a01bd3b03/explore?objectType=table&object=test1.Mytable' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections/54c22133-3a01-4d3b-8221-333a01bd3b03/explore?objectType=table&object=test1.Mytable' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -148,4 +148,4 @@ A successful response returns the structure of the specified table. Details rega
 
 ## Next steps
 
-By following this tutorial, you have explored your database, found the path of the table you wish to ingest into Platform, and obtained information regarding its structure. You can use this information in the next tutorial to [collect data from your database or NoSQL system and bring it into Platform](../collect/database-nosql.md).
+By following this tutorial, you have explored your database, found the path of the table you wish to ingest into Platform, and obtained information regarding its structure. You can use this information in the next tutorial to [collect data from your database and bring it into Platform](../collect/database-nosql.md).

@@ -13,7 +13,7 @@ This tutorial covers the steps for retrieving data from a third-party database a
 
 ## Getting started
 
-This tutorial required you to have a valid connection to a third-party database, as well as information about the file you wish to bring into Platform (including the file's path and structure). If you do not have this information, see the tutorial on [exploring a database using the Flow Service API](../explore/database-nosql.md) before attempting this tutorial.
+This tutorial requires you to have a valid connection to a third-party database, as well as information about the file you wish to bring into Platform (including the file's path and structure). If you do not have this information, see the tutorial on [exploring a database using the Flow Service API](../explore/database-nosql.md) before attempting this tutorial.
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
@@ -60,7 +60,7 @@ With an ad-hoc XDM schema created, a source connection can now be created using 
 
 **API format**
 
-```https
+```http
 POST /sourceConnections
 ```
 
@@ -121,7 +121,7 @@ A target XDM schema can be created by performing a POST request to the [Schema R
 
 **API format**
 
-```https
+```http
 POST /tenant/schemas
 ```
 
@@ -223,7 +223,7 @@ A target dataset can be created by performing a POST request to the [Catalog Ser
 
 **API format**
 
-```https
+```http
 POST /dataSets
 ```
 
@@ -274,7 +274,7 @@ You now have the unique identifiers for a dataset base connection, a target sche
 
 **API format**
 
-```https
+```http
 POST /targetConnections
 ```
 
@@ -335,7 +335,7 @@ In order for the source data to be ingested into a target dataset, it must first
 
 **API format**
 
-```https
+```http
 POST /mappingSets
 ```
 
@@ -465,7 +465,7 @@ A dataflow is responsible for collecting data from sources and bringing them int
 
 **API format**
 
-```https
+```http
 GET /flowSpecs?property=name=="CRMToAEP"
 ```
 
@@ -616,7 +616,7 @@ A dataflow is responsible for scheduling and collecting data from a source. You 
 
 **API format**
 
-```https
+```http
 POST /flows
 ```
 

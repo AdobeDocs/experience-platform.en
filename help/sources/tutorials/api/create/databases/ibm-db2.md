@@ -56,7 +56,7 @@ A connection specifies a source and contains your credentials for that source. O
 
 **API format**
 
-```https
+```http
 POST /connections
 ```
 
@@ -66,24 +66,30 @@ In order to create an DB2 connection, its unique connection specification ID mus
 
 ```shell
 curl -X POST \
-{
-    "name": "DB2 connection",
-    "description": "DB2 test connection",
-    "auth": {
-        "specName": "Basic Authentication",
-           "params": {
-                "server": "{SERVER}",
-                "database": "{DATABASE}",
-                "authenticationType": "{AUTHENTICATION_TYPE}",
-                "username": "{USERNAME}",
-                "password": "{PASSWORD}"
-            }
-    },
-    "connectionSpec": {
-        "id": "09182899-b429-40c9-a15a-bf3ddbc8ced7",
-        "version": "1.0"
-    }
-}
+    'https://platform.adobe.io/data/foundation/flowservice/connections' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "name": "DB2 connection",
+        "description": "DB2 test connection",
+        "auth": {
+            "specName": "Basic Authentication",
+            "params": {
+                    "server": "{SERVER}",
+                    "database": "{DATABASE}",
+                    "authenticationType": "{AUTHENTICATION_TYPE}",
+                    "username": "{USERNAME}",
+                    "password": "{PASSWORD}"
+                }
+        },
+        "connectionSpec": {
+            "id": "09182899-b429-40c9-a15a-bf3ddbc8ced7",
+            "version": "1.0"
+        }
+    }'
 ```
 
 | Parameter | Description |

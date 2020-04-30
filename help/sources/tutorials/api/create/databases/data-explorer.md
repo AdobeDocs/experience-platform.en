@@ -61,7 +61,7 @@ A connection specifies a source and contains your credentials for that source. O
 
 **API format**
 
-```https
+```http
 POST /connections
 ```
 
@@ -71,24 +71,30 @@ In order to create a Data Explorer connection, its unique connection specificati
 
 ```shell
 curl -X POST \
-{
-    "name": "Azure Data Explorer connection",
-    "description": "A connection for Azure Data Explorer",
-    "auth": {
-        "specName": "Service Principal Based Authentication",
-           "params": {
-                "endpoint": "{ENDPOINT}",
-                "database": "{DATABASE}",
-                "tenant": "{TENANT}",
-                "servicePrincipalId": "{SERVICE_PRINCIPAL_ID}",
-                "servicePrincipalKey": "{SERVICE_PRINCIPAL_KEY}"
-            }
-    },
-    "connectionSpec": {
-        "id": "0479cc14-7651-4354-b233-7480606c2ac3",
-        "version": "1.0"
-    }
-}
+    'https://platform.adobe.io/data/foundation/flowservice/connections' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "name": "Azure Data Explorer connection",
+        "description": "A connection for Azure Data Explorer",
+        "auth": {
+            "specName": "Service Principal Based Authentication",
+            "params": {
+                    "endpoint": "{ENDPOINT}",
+                    "database": "{DATABASE}",
+                    "tenant": "{TENANT}",
+                    "servicePrincipalId": "{SERVICE_PRINCIPAL_ID}",
+                    "servicePrincipalKey": "{SERVICE_PRINCIPAL_KEY}"
+                }
+        },
+        "connectionSpec": {
+            "id": "0479cc14-7651-4354-b233-7480606c2ac3",
+            "version": "1.0"
+        }
+    }'
 ```
 
 | Parameter | Description |

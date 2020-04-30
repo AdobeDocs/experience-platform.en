@@ -53,7 +53,7 @@ A connection specifies a source and contains your credentials for that source. O
 
 **API format**
 
-```https
+```http
 POST /connections
 ```
 
@@ -63,21 +63,26 @@ In order to create an Oracle connection, its unique connection specification ID 
 
 ```shell
 curl -X POST \
-{
-    "name": "Oracle connection",
-    "description": "A connection for Oracle",
-    "auth": {
-        "specName": "ConnectionString",
-           "params": {
-                "connectionString": "{CONNECTION_STRING}"
-            }
-    },
-    "connectionSpec": {
-        "id": "d6b52d86-f0f8-475f-89d4-ce54c8527328",
-        "version": "1.0"
-    }
-}
-
+    'https://platform.adobe.io/data/foundation/flowservice/connections' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "name": "Oracle connection",
+        "description": "A connection for Oracle",
+        "auth": {
+            "specName": "ConnectionString",
+            "params": {
+                    "connectionString": "{CONNECTION_STRING}"
+                }
+        },
+        "connectionSpec": {
+            "id": "d6b52d86-f0f8-475f-89d4-ce54c8527328",
+            "version": "1.0"
+        }
+    }'
 ```
 
 | Parameter | Description |

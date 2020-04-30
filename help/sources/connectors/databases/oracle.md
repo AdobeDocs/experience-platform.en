@@ -9,9 +9,9 @@ topic: overview
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-Experience Platform provides support for ingesting data from a third-party database. Platform can connect to different types of databases such as relational, NoSQL, or data warehouses. Support for database providers include Oracle.
+Experience Platform provides support for ingesting data from a third-party database. Platform can connect to different types of databases such as relational, NoSQL, or data warehouses. Support for database providers includes Oracle.
 
-The documentation below provides information on how to connect Oracle to Platform using APIs or the user interface:
+The documentation below provides information on how to connect Oracle to Platform using APIs:
 
 ## Connect Oracle to Platform using APIs
 
