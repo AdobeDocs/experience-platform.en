@@ -19,3 +19,9 @@ For information on how to connect to cloud storage destinations, see [Workflow t
 
 **Profile-based export** -  you are exporting details about the individuals in the audience. These details are needed for personalization and can include attributes, events, segment memberships, etc.
 
+## Available Cloud storage destinations
+
+* [Amazon S3 destination](destinations/amazon-s3-destination.md)
+* [AWS Kinesis destination](/help/rtcdp/destinations/aws-kinesis-destination.md)
+* [Azure EventHubs destination](/help/rtcdp/destinations/azure-event-hubs-destination.md)
+* [SFTP destination](destinations/sftp-destination.md)
