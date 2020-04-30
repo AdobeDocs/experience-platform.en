@@ -26,7 +26,7 @@ In order to access your ATS account on Platform, you must provide the following 
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | A connection string to connect to your Azure Table Storage instance. |
+| `connectionString` | A connection string to connect to your Azure Table Storage instance. The connection string to connect to ATS instance. The connection string pattern for ATS is `DefaultEndpointsProtocol=https;AccountName=<accountname>;AccountKey=<accountkey>`. |
 
 For more information about getting started refer to [this Azure Table Storage document](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction).
 

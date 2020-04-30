@@ -26,7 +26,7 @@ In order for Flow Service to connect with ATS, you must provide values for the f
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string to connect to Azure Table Storage instance. |
+| `connectionString` | The connection string to connect to ATS instance. The connection string pattern for ATS is `DefaultEndpointsProtocol=https;AccountName=<accountname>;AccountKey=<accountkey>`. |
 | `connectionSpec.id` | The unique identifier needed to create a connection. The connection specification ID for ATS is `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
 For more information about getting started refer to [this ATS document](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction).
