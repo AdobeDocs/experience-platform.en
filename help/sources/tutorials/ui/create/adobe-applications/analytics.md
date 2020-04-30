@@ -19,17 +19,17 @@ This tutorial requires a working understanding of the following components of Ad
 
 ## Create a source connection with Adobe Analytics
 
-Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> and then select **Sources** from the left navigation bar to access the sources workspace. The *Catalog* screen displays available sources to create inbound connections with, and each source shows the number of existing accounts and dataset flows associated to them.
+Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> and then select **[!UICONTROL Sources]** from the left navigation bar to access the sources workspace. The *Catalog* screen displays available sources to create inbound connections with, and each source shows the number of existing accounts and dataset flows associated to them.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the *Adobe applications* category, select **Adobe Analytics** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To view existing accounts, select **Accounts**.
+Under the *Adobe applications* category, select **[!UICONTROL Adobe Analytics]** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To view existing accounts, select **[!UICONTROL Accounts]**.
 
 ![](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### Select data
 
-The *Adobe Analytics* step appears. Previously established dataset flows for Analytics will be listed on this screen. You can create a new dataset flow by clicking **Select data**.
+The *Adobe Analytics* step appears. Previously established dataset flows for Analytics are listed on this screen. You can create a new dataset flow by clicking **[!UICONTROL Select data]**.
 
 >[!NOTE] Multiple in-bound connections to a source can be made for bringing in different data.
 
@@ -37,13 +37,13 @@ The *Adobe Analytics* step appears. Previously established dataset flows for Ana
 
 <!---Analytics report suites can be configured for one sandbox at a time. To import the same report suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
-From the list of available report suites, select the one you want to bring into Platform and click **Next**.
+From the list of available report suites, select the one you want to bring into Platform and click **[!UICONTROL Next]**.
 
 ![](../../../../images/tutorials/create/analytics/select-data.png)
 
 ### Name your dataset flow
 
-The *Dataset flow detail* step appears, where you must provide a name and an optional description for the dataset flow. Select **Next** when finished.
+The *Dataset flow detail* step appears, where you must provide a name and an optional description for the dataset flow. Select **[UICONTROL! Next]** when finished.
 
 ![](../../../../images/tutorials/create/analytics/dataset-flow-detail.png)
 
@@ -64,7 +64,7 @@ Once your dataset flow has been created, you can monitor the data that is being 
 
 The *Dataset flows* screen appears. On this page is a pair of dataset flows, including information about their name, source data, creation time, and status.
 
-The connector instantiates two dataset flows. One flow represents backfill data and the other is for live data. Backfill data is not configured for Profile but is persisted to the data lake for analytical and data-science use-cases.
+The connector instantiates two dataset flows. One flow represents backfill data and the other is for live data. Backfill data is not configured for Profile but is sent to the data lake for analytical and data-science use-cases.
 
 For more information on backfill, live data, and their respective latencies, see the [Analytics Data Connector overview](../../../../connectors/adobe-applications/analytics.md).
 
