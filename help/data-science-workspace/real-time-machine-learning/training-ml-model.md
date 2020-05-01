@@ -7,6 +7,9 @@ topic: Training a ML model
 
 # Training a model for Real-time Machine Learning
 
+>[!IMPORTANT]
+>Real-time Machine Learning is not available to all users yet. This feature is in alpha and still being tested.
+
 This document provides a tutorial for uploading an ONNX model to the Real-time Machine Learning model store. 
 
 Using one of the following options, you are going to write python code to read, preprocess, and analyze data. Next, you are going to train your own ML model, serialize it into ONNX format, and finally upload it to Real-time Machine Learning model store. Additionally, by the end of the tutorial, you are given a model ID that identifies the trained model for use in subsequent tutorials.
@@ -156,9 +159,12 @@ In the Adobe Experience Platform UI, select **[!UICONTROL Notebooks]** from with
 
 ![open JupyterLab](../images/rtml/open-jupyterlab.png)
 
-Next, follow the [create a recipe using Jupyter notebooks](../jupyterlab/create-a-recipe.md) tutorial. Once complete, you need to modify the pipeline.py file for real time inferencing to work.
+Next, follow the [create a recipe using Jupyter notebooks](../jupyterlab/create-a-recipe.md) tutorial. Once complete, you need to modify the pipeline.py file for real time inferencing to work. 
 
-Make sure you save your model in the ONNX format and set the environment variable to `ONNX_MODEL_PATH`. Use the example below to modify the pipeline file.
+>[!NOTE]
+>The template provided by Data Science Workspace needs to be modified to use your dataset.
+
+Make sure you save your model in the ONNX format and set the environment variable to `ONNX_MODEL_PATH`. The example below shows how to modify the pipeline file using the recipe-builder template.
 
 ```python
 def train(configProperties, data):
@@ -204,11 +210,41 @@ def train(configProperties, data):
 
 After modifying the pipeline.py file, run **[!UICONTROL Training]** and **[!UICONTROL Scoring]**. Once complete, select the **[!UICONTROL Create Recipe]** button.
 
-![training and scoring buttons]()
+![training and scoring buttons](../images/rtml/train-score.png)
 
-A recipe  is created and can be viewed by navigating to **[!UICONTROL Models]** then selecting **[!UICONTROL Recipes]** in the top-left navigation. A list of recipes sorted by creation date appear. Confirm your new recipe is at the top.
+A naming dialog appears, enter the name of your recipe and select **[!UICONTROL OK]**. A new dialog appears alerting you that the recipe creation has begun. The recipe may take up-to 24 hours to appear.
 
-![your recipe]() 
+![Recipe dialog](../images/rtml/recipe-dialog.png)
+
+![Recipe dialog](../images/rtml/recipe-dialog-confrim.png)
+
+Once a recipe is created, it can be viewed by selecting **[!UICONTROL View Recipes]** in the dialog provided or by navigating to **[!UICONTROL Models]** then selecting **[!UICONTROL Recipes]** in the top-left navigation. A list of recipes sorted by creation date appear. Confirm your new recipe is at the top.
+
+![your recipe](../images/rtml/view-recipe.png) 
+
+Select your recipe. The recipe overview page appears. In the top-right navigation select **[!UICONTROL Create Model]**.
+
+![Recipe overview](../images/rtml/create-model.png)
+
+Next, select an appropriate dataset. Then click Next in the top-right navigation.
+
+![select dataset](../images/rtml/select-dataset.png)
+
+The configuration page opens. Provide a name for the model and review the default model configurations. Default configurations were applied during recipe creation. Review and modify the configuration values by double-clicking the values. To provide a new set of configurations, click **[!UICONTROL Upload New Config]** and drag a JSON file containing model configurations into the browser window. Click **[!UICONTROL Finish]** to create the Model.
+
+![Configure model](../images/rtml/configure-model.png)
+
+Once your model is created you have to for your training run to complete. Once done, click on a specific training run to view the details of that run. A properties dialog appears to the right, select **[!UICONTROL View Activity Logs]**.
+
+![view training runs](../images/rtml/view-training.png)
+
+The *View Activity Logs* dialog popover appears. Select the URL for the *stderr* logs to download the logs and see the details of the run.
+
+![view logs](../images/rtml/view-logs.png)
+
+Logs are particularly useful for failed runs to see what went wrong. But, in this case you are looking for the `model-id` corresponding to the onnx model you made. Copy the model id. You do not have to run a scoring job. Real-time Machine Learning edge scoring is covered in the [next step](#next-steps).
+
+![Find model ID](../images/rtml/find-model-id-logs.png)
 
 ## Training a model using the Data Science Workplace recipe workflow {#recipe-workflow-train-model}
 

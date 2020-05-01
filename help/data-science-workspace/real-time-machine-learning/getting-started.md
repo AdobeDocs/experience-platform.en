@@ -7,13 +7,16 @@ topic: Getting started
 
 # Getting started with Real-time Machine Learning
 
-In order to utilize Real-time Machine Learning, you need to have access to an organization provisioned with Adobe Experience Platform and Data Science Workspace. Additionally, you need to have a dataset on Platform. 
+>[!IMPORTANT]
+>Real-time Machine Learning is not available to all users yet. This feature is in alpha and still being tested.
+
+In order to utilize Real-time Machine Learning, you need to have access to an organization provisioned with Adobe Experience Platform and Data Science Workspace. Additionally, you need to have a dataset in Platform. 
 
 ## Datasets in Adobe Experience Platform
 
 Datasets are used in Real-time Machine Learning. You have the option to use an external dataset and upload it to your JupyterLab environment or create a new dataset within Platform if you have not done so already.
 
-To learn more about using an external dataset by uploading data to your JupyterLab environment visit the [analyze your data using notebooks](../jupyterlab/analyze-your-data.md#external-data) tutorial.
+To learn more about using an external dataset such as uploading data to your JupyterLab environment, visit the [analyze your data using notebooks](../jupyterlab/analyze-your-data.md#external-data) tutorial.
 
 >[!NOTE]
 >If you already have a dataset you wish to use, you can skip this step.

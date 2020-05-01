@@ -7,6 +7,9 @@ topic: Nodes reference
 
 # Real-time Machine Learning nodes reference guide
 
+>[!IMPORTANT]
+>Real-time Machine Learning is not available to all users yet. This feature is in alpha and still being tested.
+
 The following guide outlines the supported node libraries for Real-time Machine Learning.
 
 ## Discovering nodes for use in your ML pipeline

@@ -7,5 +7,8 @@ topic: Scoring a ML model
 
 # Score a Real-time Machine Learning model
 
+>[!IMPORTANT]
+>Real-time Machine Learning is not available to all users yet. This feature is in alpha and still being tested.
+
 This tutorial show you how to use Real-time Machine Learning nodes to pre-process incoming data and score it against your ONNX model.
 
