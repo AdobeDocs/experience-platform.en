@@ -39,6 +39,9 @@ alloy("event", {
 });
 ```
 
+>[!NOTE]
+>There is a 32 KB limit on the data that can be sent in each event in the XDM field.
+
 ### Sending non-XDM data
 
 Currently, sending data that does not match an XDM schema is unsupported. Support is planned for a future date.
@@ -181,4 +184,4 @@ If the `onBeforeEventSend` callback throws an exception, the event is still sent
 
 When sending an event, an error might be thrown if the data being sent is too large (over 32KB for the full request). In this case, you need to reduce the amount of data being sent.
 
-When debugging is enabled, the server synchronously validates event data being sent against the configured XDM schema. If the data does not match the schema, details about the mismatch are returned from the server and an error is thrown. In this case, modify the data to match the schema. When debugging is not enabled, the server validates data asynchronously and, therefore, no corresponding error is thrown. 
+When debugging is enabled, the server synchronously validates event data being sent against the configured XDM schema. If the data does not match the schema, details about the mismatch are returned from the server and an error is thrown. In this case, modify the data to match the schema. When debugging is not enabled, the server validates data asynchronously and, therefore, no corresponding error is thrown.
