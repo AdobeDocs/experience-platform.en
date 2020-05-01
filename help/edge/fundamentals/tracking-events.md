@@ -39,7 +39,7 @@ alloy("event", {
 });
 ```
 
->[!Note]
+>[!NOTE]
 >There is a 32 KB limit on the data that can be sent in each event in the XDM field.
 
 ### Sending non-XDM data
