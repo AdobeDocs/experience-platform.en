@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Create an Azure Table Storage connector using the Flow Service API
+title: Create an Oracle connector using the Flow Service API
 topic: overview
 ---
 
-# Create an Azure Table Storage connector using the Flow Service API
+# Create an Oracle connector using the Flow Service API
 
 Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
-This tutorial uses the Flow Service API to walk you through the steps to connect Azure Table Storage (hereinafter referred to as "ATS") to Experience Platform.
+This tutorial uses the Flow Service API to walk you through the steps to connect Oracle to Experience Platform.
 
 ## Getting started
 
@@ -18,18 +18,14 @@ This guide requires a working understanding of the following components of Adobe
 *   [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 *   [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully connect to ATS using the Flow Service API.
-
-### Gather required credentials
-
-In order for Flow Service to connect with ATS, you must provide values for the following connection properties:
+The following sections provide additional information that you will need to know in order to successfully connect to Oracle using the Flow Service API.
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string to connect to ATS instance. The connection string pattern for ATS is `DefaultEndpointsProtocol=https;AccountName=<accountname>;AccountKey=<accountkey>`. |
-| `connectionSpec.id` | The unique identifier needed to create a connection. The connection specification ID for ATS is `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `connectionString` | The connection string used to connect to Oracle. The Oracle connection string pattern is: `Host=<host>;Port=<port>;Sid=<sid>;User Id=<username>;Password=<password>`. |
+| `connectionSpec.id` | The unique identifier needed to create a connection. The connection specification ID for Oracle is `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
-For more information about getting started refer to [this ATS document](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction).
+For more information about getting started refer to [this Oracle document](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199).
 
 ### Reading sample API calls
 
@@ -53,7 +49,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ## Create a connection
 
-A connection specifies a source and contains your credentials for that source. Only one connector is required per ATS account as it can be used to create multiple source connectors to bring in different data.
+A connection specifies a source and contains your credentials for that source. Only one connector is required per Oracle account as it can be used to create multiple source connectors to bring in different data.
 
 **API format**
 
@@ -63,7 +59,7 @@ POST /connections
 
 **Request**
 
-In order to create an ATS connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for ATS is `ecde33f2-c56f-46cc-bdea-ad151c16cd69`.
+In order to create an Oracle connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for Oracle is `d6b52d86-f0f8-475f-89d4-ce54c8527328`.
 
 ```shell
 curl -X POST \
@@ -74,16 +70,16 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Azure Table Storage connection",
-        "description": "Azure Table Storage connection",
+        "name": "Oracle connection",
+        "description": "A connection for Oracle",
         "auth": {
-            "specName": "Connection String Based Authentication",
+            "specName": "ConnectionString",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
-            }
+                    "connectionString": "{CONNECTION_STRING}"
+                }
         },
         "connectionSpec": {
-            "id": "ecde33f2-c56f-46cc-bdea-ad151c16cd69",
+            "id": "d6b52d86-f0f8-475f-89d4-ce54c8527328",
             "version": "1.0"
         }
     }'
@@ -91,8 +87,8 @@ curl -X POST \
 
 | Parameter | Description |
 | --------- | ----------- |
-| `auth.params.connectionString` | The connection string associated with your ATS account. |
-| `connectionSpec.id` | The ATS connection specification ID: `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `auth.params.connectionString` | The connection string associated with your Oracle account. |
+| `connectionSpec.id` | The Oracle connection specification ID: `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
 **Response**
 
@@ -100,11 +96,11 @@ A successful response returns details of the newly created connection, including
 
 ```json
 {
-    "id": "82abddb3-d59a-436c-abdd-b3d59a436c21",
-    "etag": "\"7d00fde3-0000-0200-0000-5e84d9430000\""
+    "id": "f088e4f2-2464-480c-88e4-f22464b80c90",
+    "etag": "\"43011faa-0000-0200-0000-5ea740cd0000\""
 }
 ```
 
 ## Next steps
 
-By following this tutorial, you have created an ATS connection using the Flow Service API and have obtained the connection's unique ID value. You can use this ID in the next tutorial as you learn how to [explore databases using the Flow Service API](../../explore/database-nosql.md).
+By following this tutorial, you have created an Oracle connection using the Flow Service API and have obtained the connection's unique ID value. You can use this ID in the next tutorial as you learn how to [explore databases using the Flow Service API](../../explore/database-nosql.md).
