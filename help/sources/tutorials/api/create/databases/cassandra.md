@@ -11,7 +11,6 @@ Flow Service is used to collect and centralize customer data from various dispar
 
 This tutorial uses the Flow Service API to walk you through the steps to connect Apache Cassandra (hereinafter referred to as "Cassandra") to Experience Platform.
 
-
 ## Getting started
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
