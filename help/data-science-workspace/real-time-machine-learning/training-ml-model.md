@@ -8,7 +8,7 @@ topic: Training a ML model
 # Training a model for Real-time Machine Learning
 
 >[!IMPORTANT]
->Real-time Machine Learning is not available to all users yet. This feature is in alpha and still being tested.
+>Real-time Machine Learning is not available to all users yet. This feature is in alpha and still being tested. This document is subject to change.
 
 This document provides a tutorial for uploading an ONNX model to the Real-time Machine Learning model store. 
 
@@ -85,12 +85,16 @@ Once you have completed the previous step, you need to serialize your model into
 Use the following template to convert to ONNX and upload your dataset:
 
 ```python
-from rtml_nodelibs.nodes.standard.ml.artifact_utils import ModelUpload
-from rtml_nodelibs.core.nodefactory import NodeFactory as nf
-from skl2onnx.common.data_types import FloatTensorType
-from skl2onnx import convert_sklearn
+from rtml_nodelibs.nodes.standard.ml.artifact_utils
+import ModelUpload
+from rtml_nodelibs.core.nodefactory
+import NodeFactory as nf
+from skl2onnx.common.data_types
+import FloatTensorType
+from skl2onnx
+import convert_sklearn
 
-#------ Save sklearn model in ONNX format at model_path ------
+#-- -- --Save sklearn model in ONNX format at model_path-- -- --
 inputs = [('features', FloatTensorType([None, X_train.shape[1]]))]
 model_onnx = convert_sklearn(classifier, 'ScikitLearnModel', inputs)
 
@@ -98,10 +102,12 @@ model_path = "model.onnx"
 os.environ["ONNX_MODEL_PATH"] = model_path
 
 with open(model_path, "wb") as f:
-	f.write(model_onnx.SerializeToString())
+  f.write(model_onnx.SerializeToString())
 
-#------- Upload the model from model_path to RTML model store -------
-model = ModelUpload(params={'model_path': model_path})
+  # -- -- -- - Upload the model from model_path to RTML model store-- -- -- -
+  model = ModelUpload(params = {
+    'model_path': model_path
+  })
 
 msg_model = model.process(None, 1)
 
@@ -151,7 +157,7 @@ model_id = msg_model.model['model_id']
 print("Model ID : ", model_id)
 ```
 
-After running the cell above, a `model_id` is returned. Copy the model_id to be used in the [next tutorial](#next-steps).
+After running the cell above, a `model_id` is returned. Copy the model ID to be used in the [next tutorial](#next-steps).
 
 ## Train a model using a pre-built recipe template {#train-using-recipe-builder}
 
@@ -212,7 +218,7 @@ After modifying the pipeline.py file, run **[!UICONTROL Training]** and **[!UICO
 
 ![training and scoring buttons](../images/rtml/train-score.png)
 
-A naming dialog appears. Enter the name of your recipe and select **[!UICONTROL OK]**. A new dialog appears alerting you that the recipe creation has begun. The recipe may take up-to 24 hours to appear.
+A naming dialog appears. Enter the name of your recipe and select **[!UICONTROL OK]**. A new dialog appears alerting you that the recipe creation has begun. Allow some time for the recipe to be created.
 
 ![Recipe dialog](../images/rtml/recipe-dialog.png)
 
@@ -230,11 +236,13 @@ Next, select an appropriate dataset. Then click **[!UICONTROL Next]** in the top
 
 ![select dataset](../images/rtml/select-dataset.png)
 
-The configuration page opens. Provide a name for the model and review the default model configurations. Default configurations are applied during recipe creation. Review and modify the configuration values by double-clicking the values. To provide a new set of configurations, click **[!UICONTROL Upload New Config]** and drag a JSON file containing model configurations into the browser window. Select **[!UICONTROL Finish]** to create the Model.
+The configuration page opens. Provide a name for the model and review the default model configurations. Default configurations are applied during recipe creation. Review and modify the configuration values by double-clicking the values. To provide a new set of configurations, click **[!UICONTROL Upload New Config]** and drag a JSON file containing model configurations into the browser window. Select **[!UICONTROL Finish]** to create the model.
 
 ![Configure model](../images/rtml/configure-model.png)
 
-Once your model is created, you have to wait for your training run to complete. Once a successful training run is complete, you can select the training run to view it's details. Select a training run. Once selected a properties dialog appears to the right, select **[!UICONTROL View Activity Logs]**.
+Once your model is created, you have to wait for your training run to complete. Once a successful training run is complete, you can select the training run to view it's details. 
+
+Select a training run. Once selected, a properties dialog appears to the right. Within this dialog select **[!UICONTROL View Activity Logs]**.
 
 ![view training runs](../images/rtml/view-training.png)
 
@@ -242,7 +250,10 @@ The *View Activity Logs* dialog popover appears. Select the URL for the *stderr*
 
 ![view logs](../images/rtml/view-logs.png)
 
-Logs are particularly useful for failed runs to see what went wrong. But, in this case you are looking for the `model-id` corresponding to the ONNX model you made. Copy the model id. You do not have to run a scoring job. Real-time Machine Learning edge scoring is covered in the [next step](#next-steps).
+Logs are particularly useful for failed runs to see what went wrong. But, in this case you are looking for the `model-id` corresponding to the ONNX model you made. Copy the model id. 
+
+>[!NOTE]
+>You do not have to run a scoring job. Real-time Machine Learning edge scoring is covered in the [next step](#next-steps).
 
 ![Find model ID](../images/rtml/find-model-id-logs.png)
 

@@ -8,7 +8,7 @@ topic: Getting started
 # Getting started with Real-time Machine Learning
 
 >[!IMPORTANT]
->Real-time Machine Learning is not available to all users yet. This feature is in alpha and still being tested.
+>Real-time Machine Learning is not available to all users yet. This feature is in alpha and still being tested. This document is subject to change.
 
 In order to utilize Real-time Machine Learning, you need to have access to an organization provisioned with Adobe Experience Platform and Data Science Workspace. Additionally, you need to have a dataset in Platform. 
 

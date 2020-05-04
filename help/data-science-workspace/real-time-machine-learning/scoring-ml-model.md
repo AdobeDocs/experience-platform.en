@@ -8,13 +8,16 @@ topic: Scoring a ML model
 # Score a Real-time Machine Learning model
 
 >[!IMPORTANT]
->Real-time Machine Learning is not available to all users yet. This feature is in alpha and still being tested.
+>Real-time Machine Learning is not available to all users yet. This feature is in alpha and still being tested. This document is subject to change.
 
 This tutorial show you how to use Real-time Machine Learning nodes to pre-process incoming data and score it against your ONNX model.
 
 **Known issues for alpha:**
 - Functions used in nodes cannot be serialized. For example, a lambda function used in a pandas node.
 - 60 seconds sleep after edge deployment is done manually. This can be transferred to the score_edge method of EdgeUtils.
+
+>[!IMPORTANT]
+>In order to score a model for use in Real-time Machine Learning, you need to have completed the previous tutorial on [training a model for Real-time Machine Learning](./training-ml-model.md)
 
 ## Create a new notebook
 
@@ -101,7 +104,7 @@ dsl = GraphBuilder.generate_dsl(nodes=nodes, edges=edges)
 
 ## Publish to edge
 
-Once you have created a graph you are now able to deploy the graph to the edge.
+Now that you have created a graph you can deploy your graph to the edge.
 
 >[!IMPORTANT]
 >Do not publish to edge randomly, this can overload the edge nodes. Publishing the same model multiple times is not recommended.
@@ -113,7 +116,7 @@ edge_utils = EdgeUtils()
 
 ## Edge Client
 
-Edge scoring is done by a POST request from a client. Typically, this can be done from a client application that needs ML scores. You can also do it from Postman. Here, EdgeUtils is used to demonstrate the process.
+After publishing to edge, scoring is done by a POST request from a client. Typically, this can be done from a client application that needs ML scores. You can also do it from Postman. Here, EdgeUtils is used to demonstrate the process.
 
 ```python
 import time

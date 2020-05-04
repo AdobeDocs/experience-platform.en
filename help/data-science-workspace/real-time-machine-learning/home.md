@@ -10,7 +10,7 @@ topic: Getting started
 >[!IMPORTANT]
 >Real-time Machine Learning is not available to all users yet. This feature is in alpha and still being tested. This document is subject to change.
 
-Adobe Experience Platform's Real-time Machine Learning framework enables you to unleash the power of machine learning to deliver the right experiences to the right end-users at the right time and in the right channels in the sub-second time frame.
+Adobe Experience Platform's Real-time Machine Learning framework enables you to unleash the power of machine learning to deliver the right experiences to the right end-users at the right time in the right channels with a sub-second time frame.
 
 ## Benefits
 
