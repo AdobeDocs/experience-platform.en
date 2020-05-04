@@ -16,16 +16,21 @@ The guides for Real-time Machine Learning require a working understanding Python
 
 ## Datasets in Adobe Experience Platform
 
-Datasets are used in Real-time Machine Learning. You have the option to use an external dataset and upload it to your JupyterLab environment or create a new dataset within Platform if you have not done so already.
-
-To learn more about using an external dataset such as uploading data to your JupyterLab environment, visit the [analyze your data using notebooks](../jupyterlab/analyze-your-data.md#external-data) tutorial.
+To start using Real-time Machine Learning, you must have a populated dataset within Experience Platform. You have the option to use an external dataset and upload it to your JupyterLab environment or create a new dataset within Platform if you have not done so already.
 
 >[!NOTE]
 >If you already have a dataset you wish to use, you can skip this step.
 
-To create a new dataset for use in Real-time Machine Learning, you need a data-schema for your dataset. Follow the create a schema using the schema editor [UI](../../xdm/tutorials/create-schema-ui.md) or [API](../../xdm/tutorials/create-schema-api.md) tutorial.
+### Use an external dataset
 
-Next, you need to ingest data using the schema you created. Follow the ingest data into AEP [UI](../../ingestion/batch-ingestion/ui.md) or [API](../../ingestion/batch-ingestion/api-overview.md) tutorial to finish creating your dataset in Platform.
+To learn more about using an external dataset such as uploading data to your JupyterLab environment, visit the tutorial on [analyzing your data using notebooks](../jupyterlab/analyze-your-data.md#external-data).
+
+### Create a new dataset
+
+To create a new dataset for use in Real-time Machine Learning, you need a data-schema for your dataset. Next, you need to ingest data using the schema you created. Use the following tutorials to create and populate a dataset for Platform:
+
+- [Create and populate a dataset in the API](../../catalog/datasets/create.md)
+- [Create and populate a dataset in the UI](../../ingestion/tutorials/ingest-batch-data.md)
 
 ## Git and Docker
 
@@ -39,5 +44,5 @@ If you plan on training a model using the Data Science Workplace recipe workflow
 
 ## Next steps
 
-Once you have prepared your data for Real-time Machine Learning, start by following the [training a model](./training-ml-model.md) tutorial. This document provides a tutorial for creating and uploading an ONNX model to the Real-time Machine Learning model store. 
+Once you have prepared your data for Real-time Machine Learning, start by following the tutorial on [training a model](./training-ml-model.md) to learn how to create and upload an ONNX model to the Real-time Machine Learning model store.
 
