@@ -44,7 +44,7 @@ Use the Prediction REST API endpoint to generate machine learning insights in re
 
 ### Delivery
 
-Marketers can then define segments and rules that map Real-time Machine Learning scores to experience using Adobe Target's Experience Targeting Activity feature. This allows for visitors of your brands website to be shown a same or next-page hyper-personalized experience in real time (under 100ms).
+Marketers can then define segments and rules that map Real-time Machine Learning scores to experiences using Adobe Target's Experience Targeting Activity feature. This allows for visitors of your brands website to be shown a same or next-page hyper-personalized experience in real time (under 100ms).
 
 ## Next steps
 
