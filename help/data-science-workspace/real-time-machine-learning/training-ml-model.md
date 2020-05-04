@@ -12,7 +12,7 @@ topic: Training a ML model
 
 This document provides a tutorial for uploading an ONNX model to the Real-time Machine Learning model store. 
 
-Using one of the following options, you are going to write python code to read, preprocess, and analyze data. Next, you are going to train your own ML model, serialize it into ONNX format, and finally upload it to Real-time Machine Learning model store. Additionally, by the end of the tutorial, you are given a model ID that identifies the trained model for use in subsequent tutorials.
+Using one of the following options, you are going to write python code to read, preprocess, and analyze data. Next, you need to train your own ML model, serialize it into ONNX format, and finally upload it to Real-time Machine Learning model store. Additionally, by the end of the tutorial, you are given a model ID that identifies the trained model for use in the [scoring tutorial](./scoring-ml-model.md).
 
 * [Training a model using a Python notebook](#training-model-python-notebook)
 * [Training a model using your own ONNX model](#train-using-own-onnx-model)
@@ -32,7 +32,7 @@ Start by selecting the **blank Python 3 notebook** from within the JupyterLab la
 
 ### Access data {#access-data}
 
-Next, select the dataset you wish to use. To access your dataset in your JupyterLab notebook, select the **Data** tab in the left-navigation of JupyterLab. The *Datasets* and *Schemas* directories appear. Select **[!UICONTROL Datasets]** and right-click, then select the **[!UICONTROL Explore Data in Notebook]** option from the dropdown menu on the ingested dataset you wish to use. An executable code entry appears in your notebook.
+Next, select the dataset you wish to use. To access a dataset in your JupyterLab notebook, select the **Data** tab in the left-navigation of JupyterLab. The *Datasets* and *Schemas* directories appear. Select **[!UICONTROL Datasets]** and right-click, then select the **[!UICONTROL Explore Data in Notebook]** option from the dropdown menu on the dataset you wish to use. An executable code entry appears in your notebook.
 
 ![dataset access](../images/rtml/access-dataset.png)
 
@@ -151,7 +151,7 @@ model_id = msg_model.model['model_id']
 print("Model ID : ", model_id)
 ```
 
-After running the cell above, a `model_id` is returned. Copy the model_id to be used in the [next tutorial](#next-steps)
+After running the cell above, a `model_id` is returned. Copy the model_id to be used in the [next tutorial](#next-steps).
 
 ## Train a model using a pre-built recipe template {#train-using-recipe-builder}
 
@@ -162,7 +162,7 @@ In the Adobe Experience Platform UI, select **[!UICONTROL Notebooks]** from with
 Next, follow the [create a recipe using Jupyter notebooks](../jupyterlab/create-a-recipe.md) tutorial. Once complete, you need to modify the pipeline.py file for real time inferencing to work. 
 
 >[!NOTE]
->The template provided by Data Science Workspace needs to be modified to use your dataset.
+>The template provided by Data Science Workspace needs to be modified to fit your dataset.
 
 Make sure you save your model in the ONNX format and set the environment variable to `ONNX_MODEL_PATH`. The example below shows how to modify the pipeline file using the recipe-builder template.
 
@@ -212,7 +212,7 @@ After modifying the pipeline.py file, run **[!UICONTROL Training]** and **[!UICO
 
 ![training and scoring buttons](../images/rtml/train-score.png)
 
-A naming dialog appears, enter the name of your recipe and select **[!UICONTROL OK]**. A new dialog appears alerting you that the recipe creation has begun. The recipe may take up-to 24 hours to appear.
+A naming dialog appears. Enter the name of your recipe and select **[!UICONTROL OK]**. A new dialog appears alerting you that the recipe creation has begun. The recipe may take up-to 24 hours to appear.
 
 ![Recipe dialog](../images/rtml/recipe-dialog.png)
 
@@ -226,15 +226,15 @@ Select your recipe. The recipe overview page appears. In the top-right navigatio
 
 ![Recipe overview](../images/rtml/create-model.png)
 
-Next, select an appropriate dataset. Then click Next in the top-right navigation.
+Next, select an appropriate dataset. Then click **[!UICONTROL Next]** in the top-right navigation.
 
 ![select dataset](../images/rtml/select-dataset.png)
 
-The configuration page opens. Provide a name for the model and review the default model configurations. Default configurations were applied during recipe creation. Review and modify the configuration values by double-clicking the values. To provide a new set of configurations, click **[!UICONTROL Upload New Config]** and drag a JSON file containing model configurations into the browser window. Click **[!UICONTROL Finish]** to create the Model.
+The configuration page opens. Provide a name for the model and review the default model configurations. Default configurations are applied during recipe creation. Review and modify the configuration values by double-clicking the values. To provide a new set of configurations, click **[!UICONTROL Upload New Config]** and drag a JSON file containing model configurations into the browser window. Select **[!UICONTROL Finish]** to create the Model.
 
 ![Configure model](../images/rtml/configure-model.png)
 
-Once your model is created you have to for your training run to complete. Once done, click on a specific training run to view the details of that run. A properties dialog appears to the right, select **[!UICONTROL View Activity Logs]**.
+Once your model is created, you have to wait for your training run to complete. Once a successful training run is complete, you can select the training run to view it's details. Select a training run. Once selected a properties dialog appears to the right, select **[!UICONTROL View Activity Logs]**.
 
 ![view training runs](../images/rtml/view-training.png)
 
@@ -242,30 +242,54 @@ The *View Activity Logs* dialog popover appears. Select the URL for the *stderr*
 
 ![view logs](../images/rtml/view-logs.png)
 
-Logs are particularly useful for failed runs to see what went wrong. But, in this case you are looking for the `model-id` corresponding to the onnx model you made. Copy the model id. You do not have to run a scoring job. Real-time Machine Learning edge scoring is covered in the [next step](#next-steps).
+Logs are particularly useful for failed runs to see what went wrong. But, in this case you are looking for the `model-id` corresponding to the ONNX model you made. Copy the model id. You do not have to run a scoring job. Real-time Machine Learning edge scoring is covered in the [next step](#next-steps).
 
 ![Find model ID](../images/rtml/find-model-id-logs.png)
 
 ## Training a model using the Data Science Workplace recipe workflow {#recipe-workflow-train-model}
 
-This is the best method to use if you are familiar with Docker, git and/or packaging python code. It gives you the most amount of flexibility and freedom in creating your recipes on DSW. You can pull our base docker image and build your own docker environment, debug your recipe with more ease,  clone some of our prebuillt recipes to play around with any DSW services, schedule the recipe runs and much more. 
+This is the best method to use if you are familiar with Docker, git and packaging Python code. Using the Data Science Workspace workflow gives you the most amount of flexibility and freedom in creating your recipes. You can pull a base docker image and build your own docker environment, debug your recipe with more ease, clone prebuillt recipes to play around with any Data Science Workspace service, schedule the recipe runs, and much more.
 
-You need a data-schema for your dataset.  (**If you already have data ingested into AEP, skip to next step.) 
+### Create a schema
+
+The first step requires that you have a data-schema for your dataset. A schema can be created via the Adobe Experience Platform UI or Platform APIs.
+
+>[!NOTE]
+>If you already have the data you wish to use ingested into Adobe Experience Platform, skip to [create a Python recipe](#create-a-python-recipe).
+
 * [Create a schema using the schema editor UI tutorial](../../xdm/tutorials/create-schema-ui.md)
 * [Create a schema using the schema editor API tutorial](../../xdm/tutorials/create-schema-api.md)
 
-You need to ingest data using the schema that you just created. (** If you already have data ingested into AEP, skip to next step.)
+### Ingest your data
+
+Next, you need to ingest data using the schema that you just created. This can be done by using the API or Platform UI.
+
+>[!NOTE]
+>If you already have the data you wish to use ingested into Adobe Experience Platform, skip to [create a Python recipe](#create-a-python-recipe).
+
 * [Ingest data into Adobe Experience Platform UI tutorial](../../ingestion/tutorials/ingest-batch-data.md)
 * [Ingest data into Adobe Experience Platform API tutorial](../../ingestion/batch-ingestion/api-overview.md)
 
-Create a Python recipe 
-* [Create a Python recipe](../models-recipes/package-source-files-recipe.md)
+### Create a Python recipe {#create-a-python-recipe}
 
-Create a training run 
+Recipe creation starts with packaging source files to build an archive file. Source files define the machine learning logic and algorithms used to solve a specific problem at hand. Use the following tutorial to build a Python Docker image.
+
+* [Package source files into a recipe](../models-recipes/package-source-files-recipe.md)
+
+Once you complete the tutorial above and have a Docker image in an Azure Container Registry along with the corresponding image URL. You are now ready to begin the tutorial on importing a packaged Recipe into Data Science Workspace. Select one of the tutorial links below to get started:
+
+* [Import a packaged Recipe in the UI](../models-recipes/import-packaged-recipe-ui.md)
+* [Import a packaged Recipe using the API](../models-recipes/import-packaged-recipe-api.md)
+
+### Create a training run 
+
+In Adobe Experience Platform Data Science Workspace, a machine learning Model is created by incorporating an existing Recipe that is appropriate for the Model's intent. The Model is then trained and evaluated to optimize its operating efficiency and efficacy by fine-tuning its associated Hyperparameters.
+
 * [Train and evaluate a model in the UI](../models-recipes/train-evaluate-model-ui.md)
 * [Train and evaluate a model in the API](../models-recipes/train-evaluate-model-api.md)
 
-In the pipeline.py file for your recipe, make sure to save the model in ONNX format and set the environment variable ONNX_MODEL_PATH.
+>[!IMPORTANT]
+>In the pipeline.py file for your recipe, save the model in ONNX format within `model_path` and set the environment variable to `ONNX_MODEL_PATH`. The runtime looks for this specific environment variable.
 
 ```python
 def train(configProperties, data):
@@ -309,15 +333,19 @@ def train(configProperties, data):
     return model
 ```
 
-Wait for your training run to complete. Once done, click on a specific training run to view the details of that run.
+Once your model is created, you have to wait for your training run to complete. Once a successful training run is complete, you can select the training run to view it's details. Select a training run. Once selected a properties dialog appears to the right, select **[!UICONTROL View Activity Logs]**.
 
-![Training run complete]()
+![view training runs](../images/rtml/view-training.png)
 
-Click on View Activity Logs in the top right corner and download stderr logs to see the details of the run. Logs are particularly useful for failed runs to see what went wrong. But, In our case we are looking for a model-id corresponding to our onnx model.
+The *View Activity Logs* dialog popover appears. Select the URL for the *stderr* logs to download the logs and see the details of the run.
 
-![Find model ID]()
+![view logs](../images/rtml/view-logs.png)
 
-You do not have to run a scoring job in the recipe. Real-time Machine Learning edge scoring is covered in the [next step](#next-steps).
+Logs are particularly useful for failed runs to see what went wrong. But, in this case you are looking for the `model-id` corresponding to the ONNX model you made. Copy the model id.
+
+![Find model ID](../images/rtml/find-model-id-logs.png)
+
+You do not have to run a scoring job in the recipe. Real-time Machine Learning edge scoring is covered in the [next tutorial](#next-steps).
 
 ## Next steps {#next-steps}
 
