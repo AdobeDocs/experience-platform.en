@@ -27,7 +27,7 @@ A new dialog appears, containing a link to the downloading scores documentation 
 
 ## Retrieve your batch ID {#retrieve-your-batch-id}
 
-Using your dataset ID from the previous step, you need to make a call to the  Catalog API in order to retrieve a batch ID. Additional query parameters are used for this API call in order to return the latest successful batch instead of a list of batches belonging to your organization. To return additional batches, increase the number for the `limit` query parameter to the desired amount you wish to be returned. For more information on the types of query parameters available, visit the guide on [filtering Catalog data using query parameters](../../catalog/api/filter-data.md).
+Using your dataset ID from the previous step, you need to make a call to the Catalog API in order to retrieve a batch ID. Additional query parameters are used for this API call in order to return the latest successful batch instead of a list of batches belonging to your organization. To return additional batches, increase the number for the `limit` query parameter to the desired amount you wish to be returned. For more information on the types of query parameters available, visit the guide on [filtering Catalog data using query parameters](../../catalog/api/filter-data.md).
 
 **API format**
 
@@ -254,7 +254,7 @@ This document outlined the steps required for downloading Attribution AI scores.
 
 ## Accessing scores using Snowflake
 
->[!IMPORTANT] Please contact attributionai-support@adobe.com for more details on raw score downloads for bulk exporting of data.
+>[!IMPORTANT] Please contact attributionai-support@adobe.com for more details on accessing scores using SnowFlake.
 
 Accessing scores for Attribution AI is done through Snowflake. Currently, you need to email Adobe support at attributionai-support@adobe.com in order to set up and receive the credentials to your reader account for Snowflake. 
 
@@ -274,7 +274,7 @@ Using the provided credentials, log in to Snowflake. Click the **Worksheets** ta
 
 ![Worksheets & navigating](./images/download-scores/edited_snowflake_1.png)
 
- Next, click **Select Schema** in the top-right corner of the screen. In the popover that appears, confirm you have the right database selected. Next, click the *Schema* dropdown and select one of your listed schemas. You are able to directly query from the score tables listed under the selected schema.
+Next, click **Select Schema** in the top-right corner of the screen. In the popover that appears, confirm you have the right database selected. Next, click the *Schema* dropdown and select one of your listed schemas. You are able to directly query from the score tables listed under the selected schema.
 
 ![find a schema](./images/download-scores/edited_snowflake_2.png)
 
@@ -287,11 +287,3 @@ First, under the *Server* box, type in your Snowflake URL. Next, under *Warehous
 ![example of POWERBI](./images/download-scores/powerbi-snowflake.png)
 
 After the connection is established, select your Snowflake database, then select the appropriate schema. You are now able to load all the tables.
-
-Once you have selected your schema, tables appear containing your attribution scores.
-
-| Table | Description |
-| ----- | ----------- |
-APP_{APP_ID} | Raw attribution score. |
-APP_{APP_ID}_BY_CONV_DATE | Raw attribution score aggregated at the conversion date level. |
-APP_{APP_ID}_BY_TP_DATE | Raw attribution score aggregated at the touchpoint date level. |
