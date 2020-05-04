@@ -10,32 +10,39 @@ author: crhoades, ens28527
 
 # Adobe Experience Platform release notes 
 
-## Release date: January 15, 2020
+**Release date: January 15, 2020**
 
-## Experience Data Model (XDM) System
+Updates to existing features in Adobe Experience Platform:
+
+* [Experience Data Model (XDM) System](#xdm)
+* [Privacy Service](#privacy)
+* [Sources](#sources)
+* [Destinations](#destinations)
+
+## Experience Data Model (XDM) System {#xdm}
 
 Standardization and interoperability are key concepts behind Experience Platform. Experience Data Model (XDM), driven by Adobe, is an effort to standardize customer experience data and define schemas for customer experience management.
 
 XDM is a publicly documented specification designed to improve the power of digital experiences. It provides common structures and definitions for any application to communicate with services on Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation delivering insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
 
-### New features
+**New features**
 
 |Feature | Description|
 |--- | ---|
 |Field-type restrictions for fields of equal hierarchy | After an XDM field has been defined as as a certain type, any other fields of the same name and hierarchy must use the same field type, regardless of the classes or mixins they are used in. For example, if a mixin for the XDM Profile class contains a `profile.age` field of type "integer", a similar mixin for XDM ExperienceEvent cannot have a `profile.age` field of type "string". In order to utilize a different field type, the field must be of a different hierarchy than the previously defined field (for example, `profile.person.age`). This feature is meant to prevent conflicts when schemas are brought together in a union. While the constraint does not retroactively affect existing schemas, it is strongly recommended that you review your schemas for field-type conflicts and edit them as necessary.|
 |Case-sensitive field validation | Custom fields on the same level must have different names, regardless of capitalization. For example, if you add ad a custom field named "Email", you cannot add another custom field at the same level named "email".|
 
-### Known issues
+**Known issues**
 
 * None
 
 To learn more about working with XDM using the Schema Registry API and Schema Editor user interface, please read the [XDM System documentation](../../xdm/home.md).
 
-## Privacy Service
+## Privacy Service {#privacy}
 
 New legal and organizational regulations are giving users the right to access or delete their personal data from your data stores upon request. Adobe Experience Platform Privacy Service provides a RESTful API and user interface to help you manage these data requests from your customers. With Privacy Service, you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
 
-### New features
+**New features**
 
 |Feature | Description|
 |--- | ---|
@@ -45,19 +52,19 @@ New legal and organizational regulations are giving users the right to access or
 |Support for Adobe Primetime Authentication | Privacy Service now accepts access/delete requests from Adobe Primetime Authentication, using `primetimeAuthentication` as its product value.|
 |Privacy Service UI enhancements | Separate job tracking pages for GDPR and CCPA regulations. New _Regulation Type_ dropdown to switch between tracking data for GDPR and CCPA.|
 
-### Known issues
+**Known issues**
 
 * None
 
 For more information about Privacy Service, please start by reading the [Privacy Service overview](../../privacy-service/home.md).
 
-## Sources
+## Sources {#sources}
 
 Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third party software, and your CRM system.
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
-### New features
+**New features**
 
 |Feature | Description|
 |--- | ---|
@@ -72,17 +79,17 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 |Data Ingestion | Manage Sources | Access to read, create, edit, and disable sources.|
 |Data Ingestion | View Sources | Read-only access to available sources in the *Catalog* tab and authenticated sources in the *Browse* tab.|
 
-### Known issues
+**Known issues**
 
 * None
 
 For more information about sources, see the [sources overview](../../sources/home.md)
 
-## Destinations
+## Destinations {#destinations}
 
 In [Adobe Real-time CDP](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
-### New features
+**New features**
 
 |Feature | Description|
 |--- | ---|
@@ -96,7 +103,7 @@ In [Adobe Real-time CDP](../../rtcdp/overview.md), destinations are pre-built in
 |Destinations | View Destinations | Read-only access to available destinations in the _Catalog_ tab and authenticated destinations in the _Browse_ tab.|
 |Destinations | Activate Destinations | Ability to activate data to destinations. This permission requires either "Manage Destinations" or "View Destinations" to be added to the product profile.|
 
-### Known issues
+**Known issues**
 
 * None
 

@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Collect data from an external database or NoSQL system through source connectors and APIs
+title: Collect data from a third-party database through source connectors and APIs
 topic: overview
 ---
 
-# Collect data from an external database or NoSQL system through source connectors and APIs
+# Collect data from a third-party database through source connectors and APIs
 
 Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
-This tutorial covers the steps for retrieving data from a database or NoSQL system and ingesting it into Platform through source connectors and APIs.
+This tutorial covers the steps for retrieving data from a third-party database and ingesting it into Platform through source connectors and APIs.
 
 ## Getting started
 
-This tutorial requires you to have access to a third-party database or NoSQL system through a valid base connection and information about the file you wish to bring into Platform, including the file's path and structure. If you do not have this information, see the tutorial on [exploring a database or NoSQL system using the Flow Service API](../explore/database-nosql.md) before attempting this tutorial.
+This tutorial requires you to have a valid connection to a third-party database, as well as information about the file you wish to bring into Platform (including the file's path and structure). If you do not have this information, see the tutorial on [exploring a database using the Flow Service API](../explore/database-nosql.md) before attempting this tutorial.
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
@@ -97,7 +97,7 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `baseConnectionId`| The ID of a base connection for a database or NoSQL system. |
+| `baseConnectionId`| The ID of a database connection. |
 | `data.schema.id`| The `$id` of the ad-hoc XDM schema. |
 | `params.path`| The path of the source file. |
 | `connectionSpec.id`| The connection specification ID for a database or NoSQL system. |
@@ -459,7 +459,7 @@ A successful response returns details of the newly created mapping including its
 }
 ```
 
-## Look up dataflow specifications {#specs}
+## Retrieve dataflow specifications {#specs}
 
 A dataflow is responsible for collecting data from sources and bringing them into Platform. In order to create a dataflow, you must first obtain the dataflow specifications by performing a GET request to the Flow Service API. Dataflow specifications are responsible for collecting data from an external database or NoSQL system.
 
@@ -644,16 +644,6 @@ curl -X POST \
         ],
         "transformations": [
             {
-                "name": "Copy",
-                "params": {
-                    "deltaColumn": {
-                        "name": "updatedAt",
-                        "dateFormat": "YYYY-MM-DD",
-                        "timezone": "UTC"
-                    }
-                }
-            },
-            {
                 "name": "Mapping",
                 "params": {
                     "mappingId": "ab91c736-1f3d-4b09-8424-311d3d3e3cea",
@@ -671,10 +661,10 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `flowSpec.id`| The dataflow specification ID associated with your database or NoSQL system. |
-| `sourceConnectionIds`| The source connection ID associated with your database or NoSQL system. |
-| `targetConnectionIds`| The target connection ID associated with your database or NoSQL system. |
-| `transformations.params.mappingId`| The mapping ID associated with your database or NoSQL system. |
+| `flowSpec.id`| The dataflow specification ID associated with your database. |
+| `sourceConnectionIds`| The source connection ID associated with your database. |
+| `targetConnectionIds`| The target connection ID associated with your database. |
+| `transformations.params.mappingId`| The mapping ID associated with your database. |
 
 **Response**
 
@@ -688,7 +678,30 @@ A successful response returns the ID (`id`) of the newly created dataflow.
 
 ## Next steps
 
-By following this tutorial, you have created a source connector to collect data from a database or NoSQL system on a scheduled basis. Incoming data can now be used by downstream Platform services such as Real-time Customer Profile and Data Science Workspace. See the following documents for more details:
+By following this tutorial, you have created a source connector to collect data from a third-party database on a scheduled basis. Incoming data can now be used by downstream Platform services such as Real-time Customer Profile and Data Science Workspace. See the following documents for more details:
 
 *   [Real-time Customer Profile overview](../../../../profile/home.md)
 *   [Data Science Workspace overview](../../../../data-science-workspace/home.md)
+
+## Appendix
+
+The following section lists the different cloud storage source connectors and their connections specifications.
+
+### Connection specification
+
+| Connector name | Connection spec ID |
+| -------------- | --------------- |
+| Amazon Redshift | `3416976c-a9ca-4bba-901a-1f08f66978ff` |
+| Apache Hive on Azure HDInsights | `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
+| Apache Spark on Azure HDInsights | `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
+| Azure Data Explorer | `0479cc14-7651-4354-b233-7480606c2ac3` |
+| Azure Synapse Analytics | `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
+| Azure Table Storage | `ecde33f2-c56f-46cc-bdea-ad151c16cd69` |
+| Google BigQuery | `3c9b37f8-13a6-43d8-bad3-b863b941fedd` |
+| IBM DB2 | `09182899-b429-40c9-a15a-bf3ddbc8ced7` |
+| MariaDB | `000eb99-cd47-43f3-827c-43caf170f015` |
+| Microsoft SQL Server | `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec` |
+| MySQL | `26d738e0-8963-47ea-aadf-c60de735468a` |
+| Oracle | `d6b52d86-f0f8-475f-89d4-ce54c8527328` |
+| Phoenix | `102706fb-a5cd-42ee-afe0-bc42f017ff43` |
+| PostgreSQL | `74a1c565-4e59-48d7-9d67-7c03b8a13137` |
