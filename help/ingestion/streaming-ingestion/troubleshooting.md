@@ -37,7 +37,7 @@ When synchronous validation is not supported for the requested location, a 501 e
 
 ### How do I authenticate sent data?
 
-Experience Platform supports secured data collection. When authenticated data collection is enabled, clients must send a JSON Web Token (JWT) and their IMS Organization ID as request headers. For more information on how to send authenticated data to Platform, please see the guide on [authenticated data collection](../tutorials/create-trusted-streaming-connection.md).
+Experience Platform supports secured data collection. When authenticated data collection is enabled, clients must send a JSON Web Token (JWT) and their IMS Organization ID as request headers. For more information on how to send authenticated data to Platform, please see the guide on [authenticated data collection](../tutorials/create-authenticated-streaming-connection.md).
 
 ### What is the latency for streaming data to Real-time Customer Profile?
 
