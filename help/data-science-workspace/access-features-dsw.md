@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;Data Science Workspace;popular topics;access control;sandbox;foundation;intelligence pack
+keywords: Experience Platform;home;Data Science Workspace;popular topics;access control;sandbox;intelligence pack
 solution: Experience Platform
 title: Data Science Workspace overview
 topic: Access and features for data science workspace
@@ -9,11 +9,11 @@ topic: Access and features for data science workspace
 
 The following document outlines Data Science workspace permissions, provisioning, and access to features. 
 
-## Data Science Workspace Foundation and Intelligence Pack
+##  Intelligence Pack addon for Data Science Workspace
 
-Data Science Workspace has two variants in Adobe Experience Platform. Data Science Workspace Foundation and Data Science Workspace Intelligence Pack. Foundation is included with your base Platform purchase. In order to utilize all the features for Data Science Workspace, however, Intelligence Pack needs to be purchased.
+The Intelligence pack addon is needed in order to utilize all the available features for Data Science Workspace.
 
-Upon purchasing Intelligence Pack, you receive access to both the *Models* and *Services* tabs in the left-navigation bar under *DATA SCIENCE*. Foundation only displays the *Notebooks* tab.
+Upon purchasing Intelligence Pack, you receive access to both the *Models* and *Services* tabs in the left-navigation bar under *DATA SCIENCE*. Without Intelligence Pack, the *DATA SCIENCE* menu only displays the *Notebooks* tab.
 
 ![DSW tabs](./images/access/platform-tabs.png)
 
@@ -24,8 +24,8 @@ The following table outlines some of the key differences for Foundation and Inte
 
 <table>
     <th></th>
-    <th>Foundation</th>
-    <th>Intelligence Pack</th>
+    <th>Data Science Workspace</th>
+    <th>Intelligence Pack addon</th>
     <tr>
         <td>
             <strong>Packaging</strong>
