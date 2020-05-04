@@ -25,7 +25,7 @@ Concepts to understand:
 
 Recipe creation starts with packaging source files to build an archive file. Source files define the machine learning logic and algorithms used to solve a specific problem at hand, and are written in either Python, R, PySpark, or Scala. Built archive files take the form of a Docker image. Once built, the packaged archive file is imported into Data Science Workspace to create a recipe [in the UI](./import-packaged-recipe-ui.md) or [using the API](./import-packaged-recipe-api.md).
 
-### Docker based model authoring
+### Docker based model authoring {#docker-based-model-authoring}
 
 A Docker image allows a developer to package up an application with all the parts it needs, such as libraries and other dependencies, and ship it out as one package.
 

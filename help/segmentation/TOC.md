@@ -35,3 +35,4 @@ user-guide-title: Adobe Experience Platform Segmentation Service Help
     - [Create a dataset to export data](tutorials/create-dataset-export-segment.md)
     - [Enforce data usage compliance for segments](tutorials/governance.md)
 - [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
+- [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

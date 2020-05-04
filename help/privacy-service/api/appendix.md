@@ -7,7 +7,7 @@ topic: developer guide
 
 # Appendix
 
-## Standard identity namespaces
+## Standard identity namespaces {#standard-namespaces}
 
 All identities that are sent to Privacy Service must be provided under a specific identity namespace. Identity namespaces are a component of [Adobe Experience Platform Identity Service](../../identity-service/home.md) that indicate the context to which an identity relates.
 

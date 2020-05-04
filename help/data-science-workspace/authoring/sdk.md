@@ -9,18 +9,9 @@ topic: Overview
 
 The Model Authoring SDK enables you to develop custom machine learning Recipes and Feature Pipelines which can be used in Adobe Experience Platform Data Science Workspace, providing implementable templates in PySpark and Spark.
 
-This document provides information regarding the various classes found within the Model Authoring SDK:
+This document provides information regarding the various classes found within the Model Authoring SDK.
 
--   [DataLoader](#dataloader)
-    -   [Load data from a Platform dataset](#load-data-from-a-platform-dataset)
--   [DataSaver](#datasaver)
-    -   [Save data to a Platform dataset](#save-data-to-a-platform-dataset)
--   [DatasetTransformer](#datasettransformer)
--   [FeaturePipelineFactory](#featurepipelinefactory)
--   [PipelineFactory](#pipelinefactory)
--   [MLEvaluator](#mlevaluator)
-
-## DataLoader
+## DataLoader {#dataloader}
 
 The DataLoader class encapsulates anything related to the retrieving, filtering, and returning of raw input data. Examples of input data include those for training, scoring, or feature engineering. Data loaders extend the abstract class `DataLoader` and must override the abstract method `load`.
 
@@ -79,7 +70,7 @@ The following table describes the abstract methods of a Spark Data Loader class:
     </tbody>
 </table>
 
-### Load data from a Platform dataset
+### Load data from a Platform dataset {#load-data-from-a-platform-dataset}
 
 The following example retrieves Platform data by ID and returns a DataFrame, where the dataset ID (`datasetId`) is a defined property in the configuration file.
 
@@ -195,7 +186,7 @@ class MyDataLoader extends DataLoader {
 }
 ```
 
-## DataSaver
+## DataSaver {#datasaver}
 
 The DataSaver class encapsulates anything related to storing output data including those from scoring or feature engineering. Data savers extend the abstract class `DataSaver` and must override the abstract method `save`.
 
@@ -254,7 +245,7 @@ The following table describes the abstract methods of a Spark Data Saver class:
     </tbody>
 </table>
 
-### Save data to a Platform dataset
+### Save data to a Platform dataset {#save-data-to-a-platform-dataset}
 
 In order to store data onto a Platform dataset, the properties must be either provided or defined in the configuration file:
 
@@ -394,7 +385,7 @@ class ScoringDataSaver extends DataSaver {
 }
 ```
 
-## DatasetTransformer
+## DatasetTransformer {#datasettransformer}
 
 The DatasetTransformer class modifies and transforms the structure of a dataset. The Sensei Machine Learning Runtime does not require this component to be defined, and is implemented based on your requirements. 
 
@@ -455,7 +446,7 @@ The following table describes the abstract methods of a Spark dataset transforme
     </tbody>
 </table>
 
-## FeaturePipelineFactory
+## FeaturePipelineFactory {#featurepipelinefactory}
 
 The FeaturePipelineFactory class contains feature extraction algorithms and defines the stages of a Feature Pipeline from start to finish.
 
@@ -537,7 +528,7 @@ The following table describes the class methods of a Spark FeaturePipelineFactor
     </tbody>
 </table>
 
-## PipelineFactory
+## PipelineFactory {#pipelinefactory}
 
 The PipelineFactory class encapsulates methods and definitions for model training and scoring, where training logic and algorithms are defined in the form of a Spark Pipeline.
 
@@ -646,7 +637,7 @@ The following table describes the class methods of a Spark PipelineFactory:
     </tbody>
 </table>
 
-## MLEvaluator
+## MLEvaluator {#mlevaluator}
 
 The MLEvaluator class provides methods for defining evaluation metrics and determining training and testing datasets.
 
