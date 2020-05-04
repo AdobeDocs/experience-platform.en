@@ -19,7 +19,7 @@ The guides for Real-time Machine Learning require a working understanding Python
 To start using Real-time Machine Learning, you must have a populated dataset within Experience Platform. You have the option to use an external dataset and upload it to your JupyterLab environment or create a new dataset within Platform if you have not done so already.
 
 >[!NOTE]
->If you already have a dataset you wish to use, you can skip this step.
+>If you already have a dataset you wish to use, you can skip the following two steps.
 
 ### Use an external dataset
 
