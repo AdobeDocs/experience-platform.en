@@ -9,7 +9,7 @@ topic: Access and features for data science workspace
 
 The following document outlines Data Science workspace permissions, provisioning, and access to features. 
 
-##  Intelligence Pack addon for Data Science Workspace
+## Intelligence Pack addon for Data Science Workspace
 
 The Intelligence pack addon is needed in order to utilize all the available features for Data Science Workspace.
 
