@@ -175,43 +175,38 @@ Make sure you save your model in the ONNX format and set the environment variabl
 ```python
 def train(configProperties, data):
 
-    print("Train Start")
+  print("Train Start")
 
-    #########################################
-    # Extract fields from configProperties
-    #########################################
-    learning_rate = float(configProperties['learning_rate'])
-    n_estimators = int(configProperties['n_estimators'])
-    max_depth = int(configProperties['max_depth'])
+########## Extract fields from configProperties ##########
+learning_rate = float(configProperties['learning_rate'])
+n_estimators = int(configProperties['n_estimators'])
+max_depth = int(configProperties['max_depth'])
 
+########## Fit model ##########
+X_train = data.drop('weeklySalesAhead', axis = 1).values
+y_train = data['weeklySalesAhead'].values
 
-    #########################################
-    # Fit model
-    #########################################
-    X_train = data.drop('weeklySalesAhead', axis=1).values
-    y_train = data['weeklySalesAhead'].values
+seed = 1234
+model = GradientBoostingRegressor(learning_rate = learning_rate,
+  n_estimators = n_estimators,
+  max_depth = max_depth,
+  random_state = seed)
 
-    seed = 1234
-    model = GradientBoostingRegressor(learning_rate=learning_rate,
-                                      n_estimators=n_estimators,
-                                      max_depth=max_depth,
-                                      random_state=seed)
+model.fit(X_train, y_train)
 
-    model.fit(X_train, y_train)
-	
-	#------ Save sklearn model in ONNX format at model_path ------
-    inputs = [('features', FloatTensorType([None, X_train.shape[1]]))]
-	model_onnx = convert_sklearn(model, 'ScikitLearnModel', inputs)
+########## Save sklearn model in ONNX format at model_path ##########
+inputs = [('features', FloatTensorType([None, X_train.shape[1]]))]
+model_onnx = convert_sklearn(model, 'ScikitLearnModel', inputs)
 
-	model_path = "retail_sales_model.onnx"
-	os.environ["ONNX_MODEL_PATH"] = model_path
+model_path = "retail_sales_model.onnx"
+os.environ["ONNX_MODEL_PATH"] = model_path
 
-	with open(model_path, "wb") as f:
-		f.write(model_onnx.SerializeToString())
+with open(model_path, "wb") as f:
+  f.write(model_onnx.SerializeToString())
 
-    print("Train Complete")
+print("Train Complete")
 
-    return model
+return model
 ```
 
 After modifying the pipeline.py file, run **[!UICONTROL Training]** and **[!UICONTROL Scoring]**. Once complete, select the **[!UICONTROL Create Recipe]** button.
