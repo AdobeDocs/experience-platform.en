@@ -250,7 +250,7 @@ The response downloads the file you requested in in your current directory. In t
 
 ## Next Steps
 
-This document outlined the steps required for downloading Attribution AI scores. You can now continue to browse the other [Intelligent Services](../../home.md) and guides that are offered.
+This document outlined the steps required for downloading Attribution AI scores. You can now continue to browse the other [Intelligent Services](../home.md) and guides that are offered.
 
 ## Accessing scores using Snowflake
 
@@ -268,7 +268,7 @@ Once Adobe support has processed your request, you are provided a URL for the re
 
 Once you have your credentials and URL, you can query the model tables, either in their raw format., aggregated by touchpoint date, or conversion date.
 
-## Finding your schema in Snowflake
+### Finding your schema in Snowflake
 
 Using the provided credentials, log in to Snowflake. Click the **Worksheets** tab in the top-left main navigation, then navigate to your database directory in the left panel.
 
