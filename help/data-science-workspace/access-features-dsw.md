@@ -20,7 +20,7 @@ Upon purchasing Intelligence Pack, you receive access to both the *Models* and *
 - *Models* provides tools used to create, publish, and store advanced machine learning recipes and models. 
 - *Services* contains both Adobe-provided services such as [Intelligent Services](../intelligent-services/home.md) and any custom external services you created with Data Science Workspace.
 
-The following table outlines some of the key differences for Foundation and Intelligence Pack:
+The following table outlines some of the key differences for Data Science Workspace with and without the Intelligence Pack:
 
 <table>
     <th></th>
