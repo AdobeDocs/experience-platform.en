@@ -56,7 +56,7 @@ Schemas are used for ingesting data into Experience Platform. This data can be u
 
 To help with this process, key fields can be marked as "Identity". Upon data ingestion, the data in those fields will be inserted into the "Identity Graph" for that individual. The graph data can then be accessed by [Real-time Customer Profile](../../profile/home.md) and other Experience Platform services to provide a stitched-together view of each individual customer.
 
-Fields that are commonly marked as "Identity" include: email address, phone number, [Experience Cloud ID (ECID)](https://marketing.adobe.com/resources/help/en_US/mcvid/), CRM ID, or other unique ID fields. You should also consider any unique identifiers specific to your organization, as they may be good "Identity" fields as well.
+Fields that are commonly marked as "Identity" include: email address, phone number, [Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/en/id-service/using/home.html), CRM ID, or other unique ID fields. You should also consider any unique identifiers specific to your organization, as they may be good "Identity" fields as well.
 
 It is important to think about customer identities during the schema planning phase in order to help ensure data is being brought together to build the most robust profile possible. See the [Identity Service overview](../../identity-service/home.md) to learn more about how identity information can help you deliver digital experiences to your customers.
 
