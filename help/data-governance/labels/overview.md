@@ -19,6 +19,12 @@ Data usage labels that are applied at the dataset level are propagated to all fi
 
 For more information on available data usage labels in Experience Platform and the usage policies they represent, see the guide on [supported data usage labels](reference.md).
 
+## Label inheritance for audience segments
+
+All audience segments created by [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) inherit the usage labels of their corresponding datasets, regardless of whether the labels have been applied at the dataset or field level. This allows applications built on top of Experience Platform (such as Real-time Customer Data Platform) to provide automatic data usage policy enforcement when activating segments to destinations.
+
+For more information on how automatic enforcement works in Real-time CDP, see the [Real-time CDP Data Governance overview](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance).
+
 ## Next steps
 
 Now that you have been introduced data usage labels, you can continue to the read the [user guide](user-guide.md) to learn how to manage labels in the Experience Platform UI. For steps on how to manage labels using APIs, see the appropriate section in the [Catalog Service developer guide](../../catalog/api/labels.md).
