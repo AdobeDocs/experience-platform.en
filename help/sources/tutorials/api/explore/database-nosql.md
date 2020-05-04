@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Explore a database or NoSQL system using the Flow Service API
+title: Explore a database using the Flow Service API
 topic: overview
 ---
 
-# Explore a database or NoSQL system using the Flow Service API
+# Explore a database using the Flow Service API
 
 Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
-This tutorial uses the Flow Service API to explore databases or NoSQL systems.
+This tutorial uses the Flow Service API to explore the contents and file structure of a third-party database.
 
 ## Getting started
 
@@ -18,23 +18,11 @@ This guide requires a working understanding of the following components of Adobe
 *   [Sources](../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 *   [Sandboxes](../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully connect to a database or NoSQL system using the Flow Service API.
+The following sections provide additional information that you will need to know in order to successfully connect to a third-party database using the Flow Service API.
 
-### Obtain a base connection
+### Gather required credentials
 
-In order to explore your database or NoSQL system using Platform APIs, you must possess a valid base connection ID. If you do not already have a base connection for the database or NoSQL system you wish to work with, you can create one through the following tutorials:
-
-* [Amazon Redshift](../create/databases/redshift.md)
-* [Apache Spark on Azure HDInsights ](../create/databases/spark.md)
-* [Azure Synapse Analytics](../create/databases/synapse-analytics.md)
-* [Azure Table Storage](../create/databases/ats.md)
-* [Google BigQuery](../create/databases/bigquery.md)
-* [Hive](../create/databases/hive.md)
-* [MariaDB](../create/databases/mariadb.md)
-* [MySQL](../create/databases/mysql.md)
-* [Phoenix](../create/databases/phoenix.md)
-* [PostgreSQL](../create/databases/postgres.md)
-* [SQL Server](../create/databases/sql-server.md)
+This tutorial requires you to have a valid connection with the third-party database you wish to ingest data from. A valid connection involves your database's connection specification ID and connection ID. More information about creating a database connection and retrieving these values can be found in the [source connectors overview](./../../../home.md#database).
 
 ### Reading sample API calls
 
@@ -58,7 +46,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ## Explore your data tables
 
-Using the base connection for your database or NoSQL system, you can explore your data tables by performing GET requests. Use the following call to find the path of the table you wish to inspect or ingest into Platform.
+Using the connection ID for your database, you can explore your data tables by performing GET requests. Use the following call to find the path of the table you wish to inspect or ingest into Platform.
 
 **API format**
 
@@ -68,13 +56,13 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 
 | Parameter | Description |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | The ID of a database or NoSQL base connection. |
+| `{BASE_CONNECTION_ID}` | The ID of a database connection. |
 
 **Request**
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/54c22133-3a01-4d3b-8221-333a01bd3b03/explore?objectType=root' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections/54c22133-3a01-4d3b-8221-333a01bd3b03/explore?objectType=root' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -83,7 +71,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns an array of tables from your database or NoSQL system. Find the table you wish to bring into Platform and take note of its `path` property, as you are required to provide it in the next step to inspect its structure.
+A successful response returns an array of tables from your database. Find the table you wish to bring into Platform and take note of its `path` property, as you are required to provide it in the next step to inspect its structure.
 
 ```json
 [
@@ -106,7 +94,7 @@ A successful response returns an array of tables from your database or NoSQL sys
 
 ## Inspect the structure of a table
 
-To inspect the structure of a table from your database or NoSQL system, perform a GET request while specifying the path of a table as a query parameter.
+To inspect the structure of a table from your database, perform a GET request while specifying the path of a table as a query parameter.
 
 **API format**
 
@@ -116,14 +104,14 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 
 | Parameter | Description |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | The ID of a database or NoSQL base connection. |
+| `{BASE_CONNECTION_ID}` | The ID of a database connection. |
 | `{TABLE_PATH}` | The path of a table. |
 
 **Request**
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/54c22133-3a01-4d3b-8221-333a01bd3b03/explore?objectType=table&object=test1.Mytable' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections/54c22133-3a01-4d3b-8221-333a01bd3b03/explore?objectType=table&object=test1.Mytable' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -160,4 +148,4 @@ A successful response returns the structure of the specified table. Details rega
 
 ## Next steps
 
-By following this tutorial, you have explored your database or NoSQL system, found the path of the table you wish to ingest into Platform, and obtained information regarding its structure. You can use this information in the next tutorial to [collect data from your database or NoSQL system and bring it into Platform](../collect/database-nosql.md).
+By following this tutorial, you have explored your database, found the path of the table you wish to ingest into Platform, and obtained information regarding its structure. You can use this information in the next tutorial to [collect data from your database and bring it into Platform](../collect/database-nosql.md).
