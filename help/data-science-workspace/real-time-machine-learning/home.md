@@ -20,10 +20,9 @@ A combination of seamless computation on both the Hub and the Edge dramatically 
 
 ## Real-time Machine Learning architecture
 
-The following diagram provides a high level view of the Real-time Machine Learning architecture.
+The following diagram provides a overview for the Real-time Machine Learning architecture.
 
-![typical Real time ML App](../images/rtml/edge-diagram.png)
-
+![Simplified overview](../images/rtml/simple-overview.png)
 
 ## Real-time Machine Learning workflow (Alpha)
 
