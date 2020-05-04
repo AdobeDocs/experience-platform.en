@@ -15,9 +15,9 @@ The Experience Cloud Identifier (ECID) is the client side module providing acces
 
 Identifying your online users requires instrumentizing your site or mobile app with the ECID, which provides a universal and persistent ID that identifies your visitors across all solutions in Adobe Experience Platform.
  
-If you are working with a website implementation, explore the resources [here](https://marketing.adobe.com/resources/help/en_US/mcvid).
+If you are working with a website implementation, explore the resources [here](https://docs.adobe.com/content/help/en/id-service/using/home.html).
 
-If you are working with a mobile app, see how ECID is used to [track visitors between an app and mobile web](https://marketing.adobe.com/resources/help/en_US/mobile/ios/hybrid_app.html).
+If you are working with a mobile app, see how ECID is used to [track visitors between an app and mobile web](https://docs.adobe.com/content/help/en/mobile-services/ios/sdk-reference-ios/hybrid-app.html).
 
 Deploying these tools can be simple and easy to manage if you use [Adobe Launch](https://docs.adobe.com/content/help/en/launch/using/overview.html).
 
