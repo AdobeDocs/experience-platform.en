@@ -26,7 +26,7 @@ In order for Flow Service to connect with File Storage, you must provide values 
 
 | Credential | Description |
 | ---------- | ----------- |
-| `host` | The endpoint of the File storage instance you are accessing. |
+| `host` | The endpoint of the File Storage instance you are accessing. |
 | `userId` | The user with sufficient access to the File Storage endpoint. |
 | `password` | The File Storage access key. |
 | Connection specification ID | The unique identifier needed to create a connection. The connection spec ID for File Storage is: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
