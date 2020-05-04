@@ -39,5 +39,5 @@ If you plan on training a model using the Data Science Workplace recipe workflow
 
 ## Next steps
 
-Once you have prepared your data for Real-time Machine Learning, start by following the [training a model](./training-ml-model.md) tutorial. This document provides a tutorial for uploading an ONNX model to the Real-time Machine Learning model store. 
+Once you have prepared your data for Real-time Machine Learning, start by following the [training a model](./training-ml-model.md) tutorial. This document provides a tutorial for creating and uploading an ONNX model to the Real-time Machine Learning model store. 
 
