@@ -29,7 +29,7 @@ The following diagram provides a high level view of the Real-time Machine Learni
 
 ### Data ingestion and preparations
 
-Data is ingested and transformed with the Experience Data Model (XDM) on Adobe Experience Platform. This data is used for model training. To learn more about XDM, visit the [XDM overview](../xdm/home.md).
+Data is ingested and transformed with the Experience Data Model (XDM) on Adobe Experience Platform. This data is used for model training. To learn more about XDM, visit the [XDM overview](../../xdm/home.md).
 
 ### Authoring
 
