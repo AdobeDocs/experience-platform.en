@@ -32,7 +32,7 @@ In order for Flow Service to connect with Cassandra, you must provide values for
 | `password` | The password to connect to the Cassandra server for authentication. |
 | `connectionSpec.id` | The unique identifier needed to create a connection. The connection specification ID for Cassandra is `a8f4d393-1a6b-43f3-931f-91a16ed857f4`. |
 
-For more information about getting started refer to [this Cassandra document](https://cassandra.apache.org/doc/latest/operating/security.html#authentication).
+For more information about getting started, refer to [this Cassandra document](https://cassandra.apache.org/doc/latest/operating/security.html#authentication).
 
 ### Reading sample API calls
 
