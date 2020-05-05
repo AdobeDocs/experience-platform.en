@@ -14,7 +14,7 @@ Azure Event Hubs is a big data streaming platform and event ingestion service. I
 You can create a live outbound connection to your Azure Event Hubs storage to stream data from Adobe Experience Platform.
 
 * For more information about Azure Event Hubs, see the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about).
-* To connect to Azure Event Hubs using API calls, see [Streaming destinations API tutorial](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md).
+* To connect to Azure Event Hubs using API calls, see the [Streaming destinations API tutorial](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md).
 * To connect to Azure Event Hubs using the Adobe Real-time CDP user interface, see the sections below.
 
 ![AWS Kinesis in the UI](/help/rtcdp/destinations/assets/azure-event-hubs-destination.png)

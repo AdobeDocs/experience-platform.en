@@ -12,7 +12,7 @@ seo-description: Create a live outbound connection to your AWS Kinesis storage t
 You can use Amazon Kinesis Data Streams to collect and process large streams of data records in real time. You can create a live outbound connection to your AWS Kinesis storage to stream data from Adobe Experience Platform.
 
 * For more information about Amazon Kinesis, see the [Amazon documentation](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
-* To connect to AWS Kinesis using API calls, see [Streaming destinations API tutorial](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md).
+* To connect to AWS Kinesis using API calls, see the [Streaming destinations API tutorial](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md).
 * To connect to AWS Kinesis using the Adobe Real-time CDP user interface, see the sections below.
 
 ![AWS Kinesis in the UI](/help/rtcdp/destinations/assets/aws-kinesis-destination.png)
