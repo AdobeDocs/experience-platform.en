@@ -38,25 +38,25 @@ For more information about getting started refer to [this DB2 document](https://
 
 Once you have gathered your required credentials, you can follow the steps below to create a new DB2 account to connect to Platform.
 
-Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> and then select **Sources** from the left navigation bar to access the *Sources* workspace. The *Catalog* screen displays a variety of sources for which you can create an inbound account with, and each source shows the number of existing accounts and dataset flows associated with them.
+Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> and then select **[!UICONTROL Sources]** from the left navigation bar to access the *[!UICONTROL Sources]* workspace. The *[!UICONTROL Catalog]* screen displays a variety of sources for which you can create an inbound account with, and each source shows the number of existing accounts and dataset flows associated with them.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the *Databases* category, select **IBM DB2** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To create a new inbound connection, you can either select **Connect source** from the information bar on the right-hand side of your screen, or you can select the plus icon the upper right corner of your source's respective card.
+Under the *[!UICONTROL Databases]* category, select **IBM DB2** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To create a new inbound connection, you can either select **[!UICONTROL Connect source]** from the information bar on the right-hand side of your screen, or you can select the plus icon the upper right corner of your source's respective card.
 
 ![catalog](../../../../images/tutorials/create/ibm-db2/catalog.png)
 
-The *Connect to IBM DB2* page appears. On this page, you can either use new credentials or existing credentials.
+The *[!UICONTROL Connect to IBM DB2]* page appears. On this page, you can either use new credentials or existing credentials.
 
 ### New account
 
-If you are using new credentials, select **New account**. On the input form that appears, provide the connection with a name, an optional description, and your DB2 credentials. When finished, select **Connect** and then allow some time for the new account to establish.
+If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide the connection with a name, an optional description, and your DB2 credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new account to establish.
 
 ![connect](../../../../images/tutorials/create/ibm-db2/new.png)
 
 ### Existing account
 
-To connect an existing account, select the DB2 account you want to connect with, then select **Next** to proceed.
+To connect an existing account, select the DB2 account you want to connect with, then select **[!UICONTROL Next]** to proceed.
 
 ![existing](../../../../images/tutorials/create/ibm-db2/existing.png)
 
