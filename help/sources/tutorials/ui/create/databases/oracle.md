@@ -35,25 +35,25 @@ For more information about getting started refer to [this Oracle document](https
 
 Once you have gathered your required credentials, you can follow the steps below to create a new Oracle account to connect to Platform.
 
-Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> and then select **Sources** from the left navigation bar to access the *Sources* workspace. The *Catalog* screen displays a variety of sources for which you can create inbound account, and each source shows the number of existing accounts and dataset flows associated to them.
+Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> and then select **[!UICONTROL Sources]** from the left navigation bar to access the *[!UICONTROL Sources]* workspace. The *[!UICONTROL Catalog]* screen displays a variety of sources for which you can create inbound account, and each source shows the number of existing accounts and dataset flows associated to them.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the *Databases* category, select **Oracle DB** and click **on the + icon (+)** to create a new Oracle connector.
+Under the *Databases* category, select **[!UICONTROL Oracle DB]** and click **on the + icon (+)** to create a new Oracle connector.
 
 ![catalog](../../../../images/tutorials/create/oracle/catalog.png)
 
-The *Connect to Oracle DB* page appears. On this page, you can either use new credentials or existing credentials.
+The *[!UICONTROL Connect to Oracle DB]* page appears. On this page, you can either use new credentials or existing credentials.
 
 ### New account
 
-If you are using new credentials, select **New account**. On the input form that appears, provide the connection with a name, an optional description, and your Oracle credentials. When finished, select **Connect** and then allow some time for the new account to establish.
+If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide the connection with a name, an optional description, and your Oracle credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new account to establish.
 
 ![connect](../../../../images/tutorials/create/oracle/new.png)
 
 ### Existing account
 
-To connect an existing account, select the Oracle account you want to connect with, then select **Next** to proceed.
+To connect an existing account, select the Oracle account you want to connect with, then select **[!UICONTROL Next]** to proceed.
 
 ![existing](../../../../images/tutorials/create/oracle/existing.png)
 
