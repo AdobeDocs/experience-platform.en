@@ -27,6 +27,10 @@ Empower marketers to get started with AI/ML right away and start improving marke
 
 ## Intelligent Services workflow
 
+The following video is designed to support your understanding of Intelligent Services.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32654?learn=on&quality=12)
+
 ### Ingest
 
 Customer data is ingested and transformed with the Experience Data Model (XDM) on Adobe Experience Platform. To learn more about XDM, visit the [XDM overview](../xdm/home.md).

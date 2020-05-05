@@ -9,7 +9,7 @@ topic: User guide
 
 Attribution AI, as part of Intelligent Services is a multi-channel, algorithmic attribution service that calculates the influence and incremental impact of customer interactions against specified outcomes. With Attribution AI, marketers can measure and optimize marketing and advertising spend by understanding the impact of every individual customer interaction across each phase of the customers’ journeys.
 
-This document serves as a guide for interacting with Attribution AI in the  Intelligent Services user interface.
+This document serves as a guide for interacting with Attribution AI in the Intelligent Services user interface.
 
 ## Create an instance
 
@@ -170,3 +170,9 @@ Once you have selected your training window, click **Finish** in the top-right c
 ## Next steps
 
 By following this tutorial, you have successfully created a service instance in Attribution AI. Once the instance has finished scoring (allow up to 24 hours), you are ready to [discover  Attribution AI insights](./discover-insights.md). Additionally, if you wish to download your scoring results, visit the [downloading raw scores](./download-scores.md) documentation.
+
+## Additional resources
+
+The following video outlines an end-to-end workflow for creating a new instance.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32668?learn=on&quality=12)
