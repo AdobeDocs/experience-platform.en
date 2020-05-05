@@ -48,7 +48,7 @@ The administrator must assign you as a developer to at least one product profile
 
  ![](images/authentication/add-developer.png)
 
-Once you are assigned as a developer, you will have access privileges to create integrations on [Adobe I/O](https://console.adobe.io/). These integrations are a pipeline from external apps and services to the Adobe API.
+Once you are assigned as a developer, you will have access privileges to create integrations on [Adobe I/O](https://www.adobe.com/go/devs_console_ui). These integrations are a pipeline from external apps and services to the Adobe API.
 
 **Gain user access**
 
@@ -75,7 +75,7 @@ The steps are covered in detail below.
 
 ### One-time setup
 
-Go to [Adobe Developer Console](https://console.adobe.io/) and sign in with your Adobe ID. Next, follow the steps outlined in the tutorial on [creating an empty project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in the Adobe Developer Console documentation.
+Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. Next, follow the steps outlined in the tutorial on [creating an empty project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in the Adobe Developer Console documentation.
 
 Once you have created a new project, click **[!UICONTROL Add API]** on the _Project Overview_ screen.
 
