@@ -32,12 +32,12 @@ A new dialog appears, containing a link to the downloading scores documentation 
 
 ## Retrieve your batch ID {#retrieve-your-batch-id}
 
-Using your dataset ID from the previous step, you need to make a call to the  Catalog API in order to retrieve a batch ID. Additional query parameters are used for this API call in order to return a single batch instead of a list of batches belonging to your organization. For more information on the types of query parameters available, visit the guide on [filtering Catalog data using query parameters](../../../catalog/api/filter-data.md).
+Using your dataset ID from the previous step, you need to make a call to the Catalog API in order to retrieve a batch ID. Additional query parameters are used for this API call in order to return the latest successful batch instead of a list of batches belonging to your organization. To return additional batches, increase the number for the limit query parameter to the desired amount you wish to be returned. For more information on the types of query parameters available, visit the guide on [filtering Catalog data using query parameters](../../../catalog/api/filter-data.md).
 
 **API format**
 
 ```http
-GET /batches?&dataSet={DATASET_ID}&orderBy=desc:created&limit=1
+GET /batches?&dataSet={DATASET_ID}&createdClient=acp_foundation_push&status=success&orderBy=desc:created&limit=1
 ```
 
 | Parameter | Description |
@@ -47,7 +47,7 @@ GET /batches?&dataSet={DATASET_ID}&orderBy=desc:created&limit=1
 **Request**
 
 ```shell
-curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5cd9146b31dae914b75f654f&orderBy=desc:created&limit=1' \
+curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5cd9146b31dae914b75f654f&createdClient=acp_foundation_push&status=success&orderBy=desc:created&limit=1' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -56,40 +56,51 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
 
 **Response**
 
-A successful response returns a payload containing a score batch ID object. In this example, the object is `5e602f67c2f39715a87f46b1`. 
-
-Within the score batch ID object is a `relatedObjects` array. This array contains two objects. The first object has a `type` value of "batch", and also contains an ID. In the example response below, the batch ID is `035e2520-5e69-11ea-b624-51evfeba55d1`. Copy your batch ID to use in the next API call.
+A successful response returns a payload containing a batch ID object. In this example, the key value to the object returned is the batch ID `01E5QSWCAASFQ054FNBKYV6TIQ`. Copy your batch ID to use in the next API call.
 
 ```json
-{   
-    "5e602f67c2f39715a87f46b1": {
-        "imsOrg": "{IMS_ORG}",
+{
+    "01E5QSWCAASFQ054FNBKYV6TIQ": {
+        "status": "success",
+        "tags": {
+            "Tags": [ ... ],
+        },
         "relatedObjects": [
             {
-                "id": "5c01a91863540e14cd3d0432",
-                "type": "dataSet"
-            },
-            {
-                "id": "035e2520-5e69-11ea-b624-51evfeba55d1",
-                "type": "batch"
+                "type": "dataSet",
+                "id": "5cd9146b31dae914b75f654f"
             }
         ],
-        "status": "success",
-        "metrics": {
-            "recordsRead": 46721830,
-            "recordsWritten": 46721830,
-            "avgNumExecutorsPerTask": 33,
-            "startTime": 1583362385336,
-            "inputSizeInKb": 10242034,
-            "endTime": 1583363197517
+        "id": "01E5QSWCAASFQ054FNBKYV6TIQ",
+        "externalId": "01E5QSWCAASFQ054FNBKYV6TIQ",
+        "replay": {
+            "predecessors": [
+                "01E5N7EDQQP4JHJ93M7C3WM5SP"
+            ],
+            "reason": "Replacing for 2020-04-09",
+            "predecessorListingType": "IMMEDIATE"
         },
-        "errors": [],
-        "created": 1550791457173,
-        "createdClient": "{CLIENT_CREATED}",
-        "createdUser": "{CREATED_BY}",
-        "updatedUser": "{CREATED_BY}",
-        "updated": 1550792060301,
-        "version": "1.0.116"
+        "inputFormat": {
+            "format": "parquet"
+        },
+        "imsOrg": "412657965Y566A4A0A495D4A@AdobeOrg",
+        "started": 1586715571808,
+        "metrics": {
+            "partitionCount": 1,
+            "outputByteSize": 2380339,
+            "inputFileCount": -1,
+            "inputByteSize": 2381007,
+            "outputRecordCount": 24340,
+            "outputFileCount": 1,
+            "inputRecordCount": 24340
+        },
+        "completed": 1586715582735,
+        "created": 1586715571217,
+        "createdClient": "acp_foundation_push",
+        "createdUser": "sensei_exp_attributionai@AdobeID",
+        "updatedUser": "acp_foundation_dataTracker@AdobeID",
+        "updated": 1586715583582,
+        "version": "1.0.5"
     }
 }
 ```
