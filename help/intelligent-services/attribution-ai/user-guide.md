@@ -173,6 +173,6 @@ By following this tutorial, you have successfully created a service instance in 
 
 ## Additional resources
 
-The following video outlines an end-to-end workflow for creating a new instance.
+The following video outlines an end-to-end workflow for creating a new instance in Attribution AI.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32668?learn=on&quality=12)
