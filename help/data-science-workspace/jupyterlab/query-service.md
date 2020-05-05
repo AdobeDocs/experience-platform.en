@@ -9,16 +9,7 @@ topic: Tutorial
 
 Adobe Experience Platform allows you to use Structured Query Language (SQL) in Data Science Workspace by integrating Query Service into JupyterLab as a standard feature. 
 
-This tutorial demonstrates the following sample SQL queries for common use cases to explore, transform, and analyze Adobe Analytics data:
-
--   [Access JupyterLab and Query Service](#access-jupyterlab-and-query-service)
--   [Query your data](#query-your-data)
-    -   [Hourly visitor count](#hourly-visitor-count)
-    -   [Hourly activity count](#hourly-activity-count)
-    -   [Number of events per visitor session](#number-of-events-per-visitor-session)
-    -   [Popular pages for a given day](#popular-pages-for-a-given-day)
-    -   [Active users for a given day](#active-users-for-a-given-day)
-    -   [Active cities by user activity](#active-cities-by-user-activity)
+This tutorial demonstrates sample SQL queries for common use cases to explore, transform, and analyze Adobe Analytics data.
 
 ## Getting started
 
@@ -34,25 +25,25 @@ Before starting this tutorial, you must have the following prerequisites:
     -   [Query Service SQL Syntax](../../query-service/sql/overview.md)
     -   Adobe Analytics
 
-## Access JupyterLab and Query Service
+## Access JupyterLab and Query Service {#access-jupyterlab-and-query-service}
 
-1.  In [Experience Platform](https://platform.adobe.com), navigate to **Models** from the left navigation column. Click **Notebooks** in the top header to open JupyterLab. Allow a moment for JupyterLab to load.
+1.  In [Experience Platform](https://platform.adobe.com), navigate to **[!UICONTROL Notebooks]** from the left navigation column. Allow a moment for JupyterLab to load.
 
-    ![](../images/jupyterlab/query/notebook_ui.png)
+    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
-    > [!NOTE] If a new Launcher tab did not automatically appear, open a new Launcher tab by clicking **File > New Launcher**.
+    > [!NOTE] If a new Launcher tab did not automatically appear, open a new Launcher tab by clicking **[!UICONTROL File]** then select **[!UICONTROL New Launcher]**.
 
-2.  In the Launcher tab, click the **Blank** icon in a Python 3 environment to open an empty notebook.
+2.  In the Launcher tab, click the **[!UICONTROL Blank]** icon in a Python 3 environment to open an empty notebook.
 
     ![](../images/jupyterlab/query/blank_notebook.png)
 
     > [!NOTE] Python 3 is currently the only supported environment for Query Service in notebooks.
 
-3.  On the left selection rail, click the **Data** icon and double click the **Datasets** directory to list all datasets.
+3.  On the left selection rail, click the **[!UICONTROL Data]** icon and double click the **[!UICONTROL Datasets]** directory to list all datasets.
 
     ![](../images/jupyterlab/query/dataset.png)
 
-4.  Find an Adobe Analytics dataset to explore and right-click on the listing, click **Query Data in Notebook** to generate SQL queries in the empty notebook. 
+4.  Find an Adobe Analytics dataset to explore and right-click on the listing, click **[!UICONTROL Query Data in Notebook]** to generate SQL queries in the empty notebook. 
 
 5.  Click the first generated cell containing the function `qs_connect()` and execute it by clicking the play button. This function creates a connection between your notebook instance and the Query Service.
 
@@ -90,17 +81,17 @@ Before starting this tutorial, you must have the following prerequisites:
 
     >[!NOTE] You can change these values at any time. When doing so, be sure to execute the variables cell for the changes to be applied.
 
-## Query your data
+## Query your data {#query-your-data}
 
-Enter the following SQL queries in individual notebook cells. Execute a query by clicking on its cell followed by clicking the **play** button. Successful query results or error logs are displayed below the executed cell.
+Enter the following SQL queries in individual notebook cells. Execute a query by clicking on its cell followed by clicking the **[!UICONTROL play]** button. Successful query results or error logs are displayed below the executed cell.
 
-When a notebook is inactive for an extended period of time, the connection between the notebook and Query Service may break. In such cases, restart JupyterLab by clicking the **Power** button located at the top right corner. 
+When a notebook is inactive for an extended period of time, the connection between the notebook and Query Service may break. In such cases, restart JupyterLab by clicking the **[!UICONTROL Power]** button located at the top right corner. 
 
 ![](../images/jupyterlab/query/restart_button.png)
 
-The notebook kernel will reset but the cells will remain, re-run **all** the cells to continue where you had left off.
+The notebook kernel will reset but the cells will remain, re-run **[!UICONTROL all]** the cells to continue where you had left off.
 
-### Hourly visitor count
+### Hourly visitor count {#hourly-visitor-count}
 
 The following query returns the hourly visitor count for a specified date:
 
@@ -141,7 +132,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-### Hourly activity count
+### Hourly activity count {#hourly-activity-count}
 
 The following query returns the hourly actions count for a specified date:
 
@@ -192,7 +183,7 @@ Executing the modified query will store the results in `hourly_actions_date_rang
 hourly_actions_date_rage.head()
 ```
 
-### Number of events per visitor session
+### Number of events per visitor session {#number-of-events-per-visitor-session}
 
 The following query returns the number of events per visitor session for a specified date:
 
@@ -227,7 +218,7 @@ fig = go.Figure(data = data, layout = layout)
 iplot(fig)
 ```
 
-### Popular pages for a given day
+### Popular pages for a given day {#popular-pages-for-a-given-day}
 
 The following query returns the ten most popular pages for a specified date:
 
@@ -246,7 +237,7 @@ ORDER  BY page_views DESC
 LIMIT  10;
 ```
 
-### Active users for a given day
+### Active users for a given day {#active-users-for-a-given-day}
 
 The following query returns the ten most active users for a specified date:
 
@@ -265,7 +256,7 @@ ORDER  BY Count DESC
 LIMIT  10;
 ```
 
-### Active cities by user activity
+### Active cities by user activity {#active-cities-by-user-activity}
 
 The following query returns the ten cities that are generating a majority of user activities for a specified date:
 
