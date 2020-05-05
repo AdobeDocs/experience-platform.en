@@ -42,7 +42,7 @@ Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience 
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the *[!UICONTROL Databases]* category, select **[!UICONTROL Azure Data Explorer]** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To create a new inbound connection, you can either select **[!UICONTROL Connect source]** from the information bar on the right-hand side of your screen, or you can select the plus icon the upper right corner of your source's respective card.
+Under the *[!UICONTROL Databases]* category, select **[!UICONTROL Azure Data Explorer]** and click **on the + icon (+)** to create a new Data Explorer connector.
 
 ![catalog](../../../../images/tutorials/create/data-explorer/catalog.png)
 
