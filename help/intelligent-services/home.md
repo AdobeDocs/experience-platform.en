@@ -9,6 +9,10 @@ topic: Intelligent Services overview
 
 Intelligent Services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company's needs using business-level configurations without the need for data science expertise. Additionally, marketing practitioners can activate predictions in Adobe Experience Cloud, Adobe Experience Platform, and 3rd party applications.
 
+The following video is designed to support your understanding of Intelligent Services. Using example business use cases, this video explains a high level workflow and outlines the capabilities of both Attribution AI and Customer AI.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32654?learn=on&quality=12)
+
 ## Benefits of Intelligent Services
 
 Intelligent Services, built on Adobe Experience Platform, gives marketers responsible for customer experience access to AI-as-a-service, making it easy for anyone to predict customer behavior, measure the impact of a campaign, or ensure better return on every investment. Listed below are some of the benefits that Intelligent Services provides.
@@ -26,10 +30,6 @@ Developed with the highest level of accuracy resultant through the adoption of a
 Empower marketers to get started with AI/ML right away and start improving marketing ROI with new self-service workflows, custom configurations, and flexible options to operationalize predictive insights.
 
 ## Intelligent Services workflow
-
-The following video is designed to support your understanding of Intelligent Services.
-
->[!VIDEO](https://video.tv.adobe.com/v/32654?learn=on&quality=12)
 
 ### Ingest
 
