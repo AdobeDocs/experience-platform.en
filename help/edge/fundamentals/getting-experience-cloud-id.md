@@ -15,7 +15,7 @@ Adobe Experience Cloud uses a unique ID for every consumer. If you want to use t
 
 >[!NOTE]
 >
->This method is typically used with custom solutions that require reading the visitor ID. It is not used by a standard implementation.
+>This method is typically used with custom solutions that require reading the Experience Cloud ID. It is not used by a standard implementation.
 
 ```javascript
 alloy("getIdentity")
