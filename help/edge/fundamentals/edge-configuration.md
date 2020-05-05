@@ -87,7 +87,7 @@ Target allows customers to control permissions through the use of properties. De
 
 The property token can be found in [!UICONTROL Adobe Target] > [!UICONTROL setup] > [UICONTROL Properties]
 
-##### [UICONTROL Target Environment ID]
+##### [!UICONTROL Target Environment ID]
 
 [Environments](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) in Adobe Target help you manage your implementation through all stages of development. This setting specifies which environment you are going to use with each environment.
 
