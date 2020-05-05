@@ -49,9 +49,9 @@ To create a machine learning Model that makes personalized product recommendatio
 
 ### Explore the data and understand the schemas
 
-1.  Log in to [Adobe Experience Platform](https://platform.adobe.com/) and click **Datasets** to list all existing datasets and select the dataset that you would like to explore. In this case, the Analytics dataset **Golden Data Set postValues**.
+1.  Log in to [Adobe Experience Platform](https://platform.adobe.com/) and click **[!UICONTROL Datasets]** to list all existing datasets and select the dataset that you would like to explore. In this case, the Analytics dataset **Golden Data Set postValues**.
     ![](../images/models-recipes/model-walkthrough/datasets_110.png)
-2.  Select **Preview Dataset** near the top right to examine sample records, then click **Close**.
+2.  Select **[!UICONTROL Preview Dataset]** near the top right to examine sample records, then click **[!UICONTROL Close]**.
     ![](../images/models-recipes/model-walkthrough/golden_data_set_110.png)
 3.  Select the link under Schema in the right rail to view the schema for the dataset, then go back to the dataset details page."
     ![](../images/models-recipes/model-walkthrough/golden_schema_110.png)
@@ -72,11 +72,11 @@ Recipes are the basis for a Model as they contain machine learning algorithms an
 
 ### Explore the Product Recommendations Recipe
 
-1.  In Adobe Experience Platform, navigate to **Models** from the left navigation column, then click **Recipes** at the top to view a list of available Recipes for your organization.
+1.  In Adobe Experience Platform, navigate to **[!UICONTROL Models]** from the left navigation column, then click **[!UICONTROL Recipes]** at the top to view a list of available Recipes for your organization.
     ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
-2.  Locate and open the provided **Recommendations Recipe** by clicking its name.
+2.  Locate and open the provided **[!UICONTROL Recommendations Recipe]** by clicking its name.
     ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3.  In the right-hand rail, click **Recommendations Input Schema** to view the schema powering the recipe. The schema fields **itemId** and **userId** correspond to a product purchased (**interactionType**) by that customer at a specific time (**timestamp**). Follow the same steps to review the fields for the **Recommendations Output Schema**.
+3.  In the right-hand rail, click **[!UICONTROL Recommendations Input Schema]** to view the schema powering the recipe. The schema fields **[!UICONTROL itemId]** and **[!UICONTROL userId]** correspond to a product purchased (**[!UICONTROL interactionType]**) by that customer at a specific time (**[!UICONTROL timestamp]**). Follow the same steps to review the fields for the **[!UICONTROL Recommendations Output Schema]**.
     ![](../images/models-recipes/model-walkthrough/preview_schemas.png)
 
 You have now reviewed the input and output schemas required by the Product Recommendations Recipe. You can now continue to the next section to find out how to create, train, and evaluate a Product Recommendations Model.
@@ -89,13 +89,13 @@ Now that your data is prepared and the Recipe is ready to be used, you can creat
 
 A Model is an instance of a Recipe, enabling you to train and score with data at scale.
 
-1.  In Adobe Experience Platform, navigate to **Models** from the left navigation column, then click **Recipes** at the top of the page to display a list of all available Recipes for your organization..
+1.  In Adobe Experience Platform, navigate to **[!UICONTROL Models]** from the left navigation column, then click **[!UICONTROL Recipes]** at the top of the page to display a list of all available Recipes for your organization..
     ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
-2.  Locate and open the provided **Recommendations Recipe** by clicking its name, entering the Recipe's overview page. Click **Create a Model** either from the center (if there are no existing Models) or from the top right of the Recipe Overview page.
+2.  Locate and open the provided **[!UICONTROL Recommendations Recipe]** by clicking its name, entering the Recipe's overview page. Click **[!UICONTROL Create a Model]** either from the center (if there are no existing Models) or from the top right of the Recipe Overview page.
     ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3.  A list of available input datasets for training is shown, select **Recommendations Input Dataset** and click **Next**.
+3.  A list of available input datasets for training is shown, select **[!UICONTROL Recommendations Input Dataset]** and click **[!UICONTROL Next]**.
     ![](../images/models-recipes/model-walkthrough/select_dataset.png)
-4.  Provide a name for the Model, for example "Product Recommendations Model". Available configurations for the model are listed, containing settings for the Model's default training and scoring behaviors. No changes are needed as these configurations are specific to your organization. Review the configurations and click **Finish**.
+4.  Provide a name for the Model, for example "Product Recommendations Model". Available configurations for the model are listed, containing settings for the Model's default training and scoring behaviors. No changes are needed as these configurations are specific to your organization. Review the configurations and click **[!UICONTROL Finish]**.
     ![](../images/models-recipes/model-walkthrough/configure_model.png)
 5.  The Model has now been created and the Model's *Overview* page appears within a newly generated training run. A training run is generated by default when a Model is created.
     ![](../images/models-recipes/model-walkthrough/model_post_creation.png)
@@ -104,13 +104,13 @@ You can choose to wait for the training run to finish, or continue to create a n
 
 ### Train the Model using custom Hyperparameters
 
-1.  On the *Model Overview* page, click **Train** near the top right to create a new training run. Select the same input dataset you used when creating the Model and click **Next**.
+1.  On the *Model Overview* page, click **[!UICONTROL Train]** near the top right to create a new training run. Select the same input dataset you used when creating the Model and click **[!UICONTROL Next]**.
     ![](../images/models-recipes/model-walkthrough/training_select_dataset.png)
-2.  The *Configuration* page appears. Here you can configure the training run's **num_recommendations** value, also known as a Hyperparameter. A trained and optimized Model will utilize the best-performing Hyperparameters based on the results of the training run.
+2.  The *Configuration* page appears. Here you can configure the training run's **[!UICONTROL num_recommendations]** value, also known as a Hyperparameter. A trained and optimized Model will utilize the best-performing Hyperparameters based on the results of the training run.
 
     Hyperparameters cannot be learned, therefore they must be assigned before training runs occur. Adjusting Hyperparameters may change the accuracy of the Trained Model. Since optimizing a Model is an iterative process, multiple training runs may be required before a satisfactory evaluation is achieved.
 
-    >[!TIP] Set **num_recommendations** to 10. 
+    >[!TIP] Set **[!UICONTROL num_recommendations]** to 10. 
 
     ![](../images/models-recipes/model-walkthrough/configure_hyperparameter.png)
 3.  An additional data point will appear on the Model evaluation chart once the new training run completes, this may take up to several minutes.
@@ -133,12 +133,12 @@ The final step in the Data Science workflow is to operationalize your model in o
 ### Score and generate insights
 
 1.  On the product recommendations Model *Overview* page, click the name of the best-performing training run, with the highest recall and precision values.
-2.  On the top-right of the training run details page, click **Score**.
-3.  Select the **Recommendations Input Dataset** as the scoring input dataset, which is the same dataset you used when you created the Model and executed its training runs. Then, click **Next**.
+2.  On the top-right of the training run details page, click **[!UICONTROL Score]**.
+3.  Select the **[!UICONTROL Recommendations Input Dataset]** as the scoring input dataset, which is the same dataset you used when you created the Model and executed its training runs. Then, click **[!UICONTROL Next]**.
     ![](../images/models-recipes/model-walkthrough/scoring_input.png)
-4.  Select the **Recommendations Output Dataset** as the scoring output dataset. Scoring results will be stored in this dataset as a batch.
+4.  Select the **[!UICONTROL Recommendations Output Dataset]** as the scoring output dataset. Scoring results will be stored in this dataset as a batch.
     ![](../images/models-recipes/model-walkthrough/scoring_output.png)
-5.  Review the scoring configurations. These parameters contain the input and output datasets selected earlier along with the appropriate schemas. Click **Finish** to begin the scoring run. The run may take several minutes to complete.
+5.  Review the scoring configurations. These parameters contain the input and output datasets selected earlier along with the appropriate schemas. Click **[!UICONTROL Finish]** to begin the scoring run. The run may take several minutes to complete.
     ![](../images/models-recipes/model-walkthrough/scoring_configure.png)
 
 
@@ -146,10 +146,12 @@ The final step in the Data Science workflow is to operationalize your model in o
 
 Once the scoring run has successfully completed, you will be able to preview the results and view the insights generated.
 
-1.  On the scoring runs page, click on the completed scoring run, then click **Preview Scoring Results Dataset** on the right rail.
+1.  On the scoring runs page, click on the completed scoring run, then click **[!UICONTROL Preview Scoring Results Dataset]** on the right rail.
     ![](../images/models-recipes/model-walkthrough/score_complete.png)
-2.  In the preview table, each row contains product recommendations for a particular customer, labeled as **recommendations** and **userId** respectively. Since the **num_recommendations** Hyperparameter was set to 10 in the sample screenshots, each row of recommendations can contain up to 10 product identities delimited by a number sign (#).
+2.  In the preview table, each row contains product recommendations for a particular customer, labeled as **[!UICONTROL recommendations]** and **[!UICONTROL userId]** respectively. Since the **[!UICONTROL num_recommendations]** Hyperparameter was set to 10 in the sample screenshots, each row of recommendations can contain up to 10 product identities delimited by a number sign (#).
     ![](../images/models-recipes/model-walkthrough/preview_score_results.png)
+
+## Next steps {#next-steps}
 
 Well done, you have successfully generated product recommendations!
 
