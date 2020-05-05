@@ -29,7 +29,7 @@ pprint(nf.discover_nodes())
 
 **Example response**
 
-```json
+```python
 {'FieldOps': 'rtml_nodelibs.nodes.standard.preprocessing.fieldops.FieldOps',
  'FieldTrans': 'rtml_nodelibs.nodes.standard.preprocessing.fieldtrans.FieldTrans',
  'ModelUpload': 'rtml_nodelibs.nodes.standard.ml.artifact_utils.ModelUpload',
@@ -48,7 +48,7 @@ Standard nodes build upon open source data science libraries such as Pandas and 
 
 ### ModelUpload
 
-The ModelUpload node is an internal Adobe node that takes a model_path and uploads the model from the local model path to the Real-time Machine Learning Blob Store.
+The ModelUpload node is an internal Adobe node that takes a model_path and uploads the model from the local model path to the Real-time Machine Learning blob store.
 
 ```python
 model = ModelUpload(params={'model_path': model_path})
@@ -60,10 +60,10 @@ model_id = msg_model.model['model_id']
 
 ### ONNXNode
 
-ONNXNode is an internal Adobe node that takes a model_id to pull the pre-trained onnx model and uses it to score on incoming data. 
+ONNXNode is an internal Adobe node that takes a model ID to pull the pre-trained ONNX model and uses it to score on incoming data. 
 
 >[!TIP]
->Specify the columns in the same order that you would like the data to be sent to the onnx model to score.
+>Specify the columns in the same order that you would like the data to be sent to the ONNX model to score.
 
 ```python
 node_model_score = ONNXNode(params={"features": ['browser', 'device', 'login_page', 'product_page', 'search_page'], "model_id": model_id})
@@ -73,7 +73,7 @@ node_model_score = ONNXNode(params={"features": ['browser', 'device', 'login_pag
 
 The following Pandas node lets you import any `pd.DataFrame` method or any general pandas top level function. To learn more about Pandas methods, visit the [Pandas methods documentation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). For more information on top level functions, visit the [Pandas API reference guide for general functions](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
 
-The node below uses `"import": "map"` to import the method name as a string in the parameters. Then, input the parameters as a map. The example below does this by using `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. After you have the map in place, you have the option to set `inplace` as true or false. Set inplace as True or False based on whether you want to apply transformation inplace or not. By default `"inplace": False` creates a new column. Support to provide a new column name is set to be added in a subsequent release. The last line `cols` can be a column name or a list of columns. Specify the columns on which you want to apply the transformation, in this example `device` is specified.
+The node below uses `"import": "map"` to import the method name as a string in the parameters, followed by, inputting the parameters as a map function. The example below does this by using `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. After you have the map in place, you have the option to set `inplace` as true or false. Set `inplace` as `True` or `False` based on whether you want to apply transformation inplace or not. By default `"inplace": False` creates a new column. Support to provide a new column name is set to be added in a subsequent release. The last line `cols` can be a single column name or a list of columns. Specify the columns on which you want to apply the transformation. In this example `device` is specified.
 
 ```python
 #  df["device"] = df["device"].map({"Desktop":1, "Mobile":0}, na_action=0)
@@ -94,7 +94,7 @@ node_browser_apply = Pandas(params={"import": "map",
 
 ### ScikitLearn
 
-The ScikitLearn node lets you import any scikitlearn ML model or scaler. Use the table below for more information on any of the values used in the example:
+The ScikitLearn node lets you import any ScikitLearn ML model or scaler. Use the table below for more information on any of the values used in the example:
 
 ```python
 model_train = ScikitLearn(params={
@@ -111,19 +111,23 @@ msg6 = model_train.process(msg5)
 
 |Value|Description|
 | --- | --- |
-| features | input features to the model (list of strings). <br> For example: ‘browser’, ‘device’, ‘login_page’, ‘product_page’, ‘search_page’ |
-| label | target column name (string) |
-| mode | train/test (string) |
-| model_path | path to the save model locally in onnx format |
-| params | **model:** absolute import path to the model (string) eg: “sklearn.linear_model.LogisticRegression”. <br> **model_params:** model hyperparameters, see the [sklearn API (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) documentation for more information. |
+| features | Input features to the model (list of strings). <br> For example: ‘browser’, ‘device’, ‘login_page’, ‘product_page’, ‘search_page’ |
+| label | Target column name (string). |
+| mode | Train/test (string). |
+| model_path | Path to the save model locally in onnx format. |
+| params.model |  Absolute import path to the model (string) eg: “sklearn.linear_model.LogisticRegression”. |
+| params.model_params |  Model hyperparameters, see the [sklearn API (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) documentation for more information.
 | node_instance.process(data_message_from_previous_node) | The method `process()` takes DataMsg from the previous node and applies transformation. This depends on the current node being used. |
 
 ### Split
 
-Use the following node to split your dataframe into train and test by passing `train_size` or `test_size`. This returns a dataframe with multi-index. You can access train and test dataframes using this example, `msg5.data.xs(“train”)`.
+Use the following node to split your dataframe into train and test by passing `train_size` or `test_size`. This returns a dataframe with a multi-index. You can access train and test dataframes using the following example, `msg5.data.xs(“train”)`.
 
 ```python
 splitter = Split(params={"train_size": 0.7})
 msg5 = splitter.process(msg4)
 ```
 
+## Next steps
+
+The next step is to create a node for use in scoring a Real-time Machine Learning model. Visit the tutorial on [scoring a Real-time Machine Learning model](./node-reference.md) for more information.

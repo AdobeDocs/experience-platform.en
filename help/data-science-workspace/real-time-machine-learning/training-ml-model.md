@@ -94,7 +94,7 @@ import FloatTensorType
 from skl2onnx
 import convert_sklearn
 
-#-- -- --Save sklearn model in ONNX format at model_path-- -- --
+########## Save sklearn model in ONNX format at model_path ##########
 inputs = [('features', FloatTensorType([None, X_train.shape[1]]))]
 model_onnx = convert_sklearn(classifier, 'ScikitLearnModel', inputs)
 
@@ -104,7 +104,7 @@ os.environ["ONNX_MODEL_PATH"] = model_path
 with open(model_path, "wb") as f:
   f.write(model_onnx.SerializeToString())
 
-  # -- -- -- - Upload the model from model_path to RTML model store-- -- -- -
+  ########## Upload the model from model_path to RTML model store ##########
   model = ModelUpload(params = {
     'model_path': model_path
   })
@@ -147,7 +147,7 @@ from rtml_nodelibs.nodes.standard.ml.artifact_utils import ModelUpload
 from rtml_nodelibs.core.nodefactory import NodeFactory as nf
  
 model_path = <path/to/onnx_model>
-#------- Upload the model from model_path to RTML model store -------
+########## Upload the model from model_path to RTML model store ##########
 model = ModelUpload(params={'model_path': model_path})
  
 msg_model = model.process(None, 1)
@@ -254,11 +254,11 @@ Logs are particularly useful for failed runs to see what went wrong. But, in thi
 
 ## Training a model using the Data Science Workplace recipe workflow {#recipe-workflow-train-model}
 
-This is the best method to use if you are familiar with Docker, git and packaging Python code. Using the Data Science Workspace workflow gives you the most amount of flexibility and freedom in creating your recipes. You can pull a base docker image and build your own docker environment, debug your recipe with more ease, clone prebuillt recipes to play around with any Data Science Workspace service, schedule the recipe runs, and much more.
+This is the best method to use if you are familiar with Docker, git and packaging Python code. Using the Data Science Workspace workflow gives you the most amount of flexibility and freedom in creating your recipes. You can pull a base docker image and build your own docker environment, debug your recipe with more ease, clone pre-built recipes to play around with any Data Science Workspace service, schedule the recipe runs, and much more.
 
 ### Create a schema
 
-The first step requires that you have a data-schema for your dataset. A schema can be created via the Adobe Experience Platform UI or Platform APIs.
+The first step requires that you have a data schema for your dataset. A schema can be created via the Adobe Experience Platform UI or Platform APIs.
 
 >[!NOTE]
 >If you already have the data you wish to use ingested into Adobe Experience Platform, skip to [create a Python recipe](#create-a-python-recipe).
@@ -282,7 +282,7 @@ Recipe creation starts with packaging source files to build an archive file. Sou
 
 * [Package source files into a recipe](../models-recipes/package-source-files-recipe.md)
 
-Once you complete the tutorial above and have a Docker image in an Azure Container Registry along with the corresponding image URL. You are now ready to begin the tutorial on importing a packaged Recipe into Data Science Workspace. Select one of the tutorial links below to get started:
+To complete the next step you need to have a Docker image in an Azure Container Registry along with the corresponding image URL. Select one of the tutorial links below to finish creating a Python recipe:
 
 * [Import a packaged Recipe in the UI](../models-recipes/import-packaged-recipe-ui.md)
 * [Import a packaged Recipe using the API](../models-recipes/import-packaged-recipe-api.md)
@@ -302,17 +302,16 @@ def train(configProperties, data):
  
     print("Train Start")
  
-    #########################################
-    # Extract fields from configProperties
-    #########################################
+    ########## Extract fields from configProperties ##########
+
     learning_rate = float(configProperties['learning_rate'])
     n_estimators = int(configProperties['n_estimators'])
     max_depth = int(configProperties['max_depth'])
  
  
-    #########################################
-    # Fit model
-    #########################################
+    
+    ########## Fit model ##########
+    
     X_train = data.drop('weeklySalesAhead', axis=1).values
     y_train = data['weeklySalesAhead'].values
  
@@ -324,7 +323,7 @@ def train(configProperties, data):
  
     model.fit(X_train, y_train)
      
-    #------ Save sklearn model in ONNX format at model_path ------
+    ########## Save sklearn model in ONNX format at model_path ##########
     inputs = [('features', FloatTensorType([None, X_train.shape[1]]))]
     model_onnx = convert_sklearn(model, 'ScikitLearnModel', inputs)
  
@@ -339,7 +338,7 @@ def train(configProperties, data):
     return model
 ```
 
-Once your model is created, you have to wait for your training run to complete. Once a successful training run is complete, you can select the training run to view it's details. Select a training run. Once selected a properties dialog appears to the right, select **[!UICONTROL View Activity Logs]**.
+Once your model is created, you have to wait for your training run to complete. Once a successful training run is complete, you can select the training run to view its details. Select a training run. Once selected a properties dialog appears to the right, select **[!UICONTROL View Activity Logs]**.
 
 ![view training runs](../images/rtml/view-training.png)
 

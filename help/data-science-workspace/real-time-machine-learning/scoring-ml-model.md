@@ -10,13 +10,13 @@ topic: Scoring a ML model
 >[!IMPORTANT]
 >Real-time Machine Learning is not available to all users yet. This feature is in alpha and still being tested. This document is subject to change.
 
-This tutorial show you how to use Real-time Machine Learning nodes to pre-process incoming data and score it against your ONNX model.
-
-**Known issues for alpha:**
-- Functions used in nodes cannot be serialized. For example, a lambda function used in a pandas node.
-- 60 seconds sleep after edge deployment is done manually. This can be transferred to the score_edge method of EdgeUtils.
+This tutorial shows you how to use Real-time Machine Learning nodes to pre-process incoming data and score it against your ONNX model.
 
 >[!IMPORTANT]
+> - Functions used in nodes cannot be serialized. For example, a lambda function used in a pandas node.
+> - There is a 60 second sleep after edge deployment is done manually. This can be transferred to the score_edge method of EdgeUtils.
+
+>[!NOTE]
 >In order to score a model for use in Real-time Machine Learning, you need to have completed the previous tutorial on [training a model for Real-time Machine Learning](./training-ml-model.md)
 
 ## Create a new notebook
@@ -31,7 +31,7 @@ Start by selecting the **blank Python 3 notebook** from within the JupyterLab la
 
 ## Import and discover nodes
 
-Start by importing all the required packages for your model.
+Start by importing all the required packages for your model. Make sure any packages you plan on using for node authoring are imported.
 
 >[!NOTE]
 >Your list of imports might differ based on what model you made.
@@ -63,8 +63,7 @@ The response received is a list of nodes.
 
 ## Node authoring for edge scoring
 
-Next, you need to define and author a node for edge scoring. Replace the `model_id` in the example with your model ID that you received from completing training in the [previous tutorial](./training-ml-model.md). This example uses the Pandas node to import a pd.DataDrame method or general pandas top level function. In the example below, the map function is imported and used to create two nodes. For more information on the available nodes and how to use them, visit the [node reference guide](./node-reference.md).
-
+Next, you need to define and author a node for edge scoring. Replace the `model_id` in the example with your model ID that you received from completing training in the [previous tutorial](./training-ml-model.md). This example uses the Pandas node to import a pd.DataDrame method or general pandas top level function. The map function is imported and used to create two nodes. For more information on the available nodes and how to use them, visit the [node reference guide](./node-reference.md).
 
 ```python
 model_id = '{your_model_id}' # Get Model ID from Training Notebook.
@@ -82,9 +81,9 @@ model_score_node = ONNXNode(params={"features": ['sepal_length', 'sepal_width', 
 
 ## Build Graph DSL
 
-Once you have created all your nodes. The next step is to chain your nodes together to create a graph. 
+With your nodes created, the next step is to chain the nodes together to create a graph. 
 
-First you need to list all the nodes that are apart of the graph.
+Start by listing all the nodes that are a part of the graph.
 
 ```python
 nodes = [node_device_apply, node_browser_apply, node_model_score]
@@ -107,14 +106,14 @@ dsl = GraphBuilder.generate_dsl(nodes=nodes, edges=edges)
 Now that you have created a graph you can deploy your graph to the edge.
 
 >[!IMPORTANT]
->Do not publish to edge randomly, this can overload the edge nodes. Publishing the same model multiple times is not recommended.
+>Do not publish to edge often, this can overload the edge nodes. Publishing the same model multiple times is not recommended.
 
 ```python
 edge_utils = EdgeUtils()
 (edge_location, service_id) = edge_utils.publish_to_edge(dsl=dsl)
 ```
 
-## Edge Client
+## Edge client
 
 After publishing to edge, scoring is done by a POST request from a client. Typically, this can be done from a client application that needs ML scores. You can also do it from Postman. Here, EdgeUtils is used to demonstrate the process.
 
@@ -141,7 +140,7 @@ Once scoring is complete, the edge URL, Payload, and scored output from edge are
 ## Deleting a deployed app from edge (optional)
 
 >![CAUTION]
->This code cell is used to delete your deployed edge application. Do not use the following code cell unless you need to delete a deployed edge application. 
+>This cell is used to delete your deployed edge application. Do not use the following cell unless you need to delete a deployed edge application. 
 
 ```python
 if edge_utils.delete_from_edge(service_id=service_id):
