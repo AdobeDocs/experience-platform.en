@@ -28,14 +28,11 @@ To be able to send data to Adobe Experience Platform, you must create an XDM sch
 - Add the Adobe Experience Platform Web SDK mixin to the schema you created
 - [Create a dataset](https://platform.adobe.com/dataset/overview) with your schema where you would like the data to land
 
-## Requesting a configuration ID
+## Create an configuration ID
 
-You must have a configuration ID to use the SDK. The configuration ID ensures that your data is routed to the right place. You can obtain a configuration ID either from your consultant or through Client Care. They will need the following information:
+You can create a configuration ID using the [edge configuration tool](../fundamentals/edge-configuration.md) in launch.
 
-- **Org ID:** You can find this using the instructions [here](https://docs.adobe.com/content/help/en/core-services/interface/manage-users-and-products/organizations.html)
-- **Dataset ID:** This is available in the dataset UI when you click on a dataset
-- **Schema ID:** This is available in the URL of the schema creation screen
-- **Friendly Name:** This is the friendly name that will be used in future UIs for this configuration
+>Note: Your organization must be whitelisted for the feature. Please contact your CSM to get put on the list for eventual whitelisting.
 
 ## Install the SDK in Launch
 
