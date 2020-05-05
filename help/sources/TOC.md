@@ -132,6 +132,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Amazon Redshift connector](tutorials/ui/create/databases/redshift.md)
       - [Apache Hive on Azure HDInsights connector](tutorials/ui/create/databases/hive.md)
       - [Apache Spark on Azure HDInsights connector](tutorials/ui/create/databases/spark.md)
+      - [Azure Data Explorer connector](tutorials/ui/create/databases/data-explorer.md)
       - [Azure Synapse Analytics connector](tutorials/ui/create/databases/synapse-analytics.md)
       - [Azure Table Storage connector](tutorials/ui/create/databases/ats.md)
       - [Google Big Query connector](tutorials/ui/create/databases/bigquery.md)
