@@ -256,7 +256,7 @@ This document outlined the steps required for downloading Attribution AI scores.
 
 >[!IMPORTANT] Please contact attributionai-support@adobe.com for more details on accessing scores using SnowFlake.
 
-Accessing scores for Attribution AI is done through Snowflake. Currently, you need to email Adobe support at attributionai-support@adobe.com in order to set up and receive the credentials to your reader account for Snowflake. 
+You can access aggregated Attribution AI scores through Snowflake. Currently, you need to email Adobe support at attributionai-support@adobe.com in order to set up and receive the credentials to your reader account for Snowflake. 
 
 Once Adobe support has processed your request, you are provided a URL for the reader account to Snowflake and the corresponding credentials below:
 
@@ -266,7 +266,7 @@ Once Adobe support has processed your request, you are provided a URL for the re
 
 >[!NOTE] The reader account is for querying the data using sql clients, worksheet, and BI solutions which supports JDBC connector.
 
-Once you have your credentials and URL, you can query the model tables, either in their raw format., aggregated by touchpoint date, or conversion date.
+Once you have your credentials and URL, you can query the model tables, aggregated by touchpoint date, or conversion date.
 
 ### Finding your schema in Snowflake
 
