@@ -73,3 +73,9 @@ By following this section, you have configured an instance of Customer AI and a 
 
 By following this tutorial, you have successfully configured an instance of Customer AI and generated propensity scores. You can now choose to use the Segment builder to [create customer segments with predicted scores](./create-segment.md) or [discover insights with Customer AI](./discover-insights.md).
 
+## Additional resources
+
+The following video is designed to support your understanding of the configuration workflow for Customer AI. Additionally, best practices and use case examples are provided.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)
+
