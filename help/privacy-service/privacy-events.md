@@ -67,7 +67,7 @@ Take note of the `Forwarding` URL (`https://212d6cd2.ngrok.io`), as this will be
 
 ## Create a new project in Adobe Developer Console
 
-Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. Next, follow the steps outlined in the tutorial on [creating an empty project]() in the Adobe Developer Console documentation.
+Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. Next, follow the steps outlined in the tutorial on [creating an empty project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in the Adobe Developer Console documentation.
 
 ## Add Privacy Events to the project
 
