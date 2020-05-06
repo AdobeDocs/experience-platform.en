@@ -19,6 +19,10 @@ Attribution AI data can be from Adobe (e.g. Analytics) or non-Adobe data sources
 
 Attribution AI supports two categories of scores, algorithmic and rule-based. Algorithmic scores include incremental and influenced scores. Rule-based scores include First touch, Last touch, Linear, U-shaped, and Time-Decay.
 
+The following video is designed to support your understanding of Attribution AI.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32667?learn=on&quality=12)
+
 ## Attribution AI algorithmic scores
 
 Attribution AI supports two categories of attribution scores, algorithmic and rule-based scores.
