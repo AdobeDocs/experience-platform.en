@@ -21,18 +21,26 @@ Attribution AI requires datasets to conform to the Consumer Experience Events (C
 
 - **Touchpoint:** Any digital event or digital interaction that customers do in the path towards a goal. Examples include before-purchase-related marketing efforts, display advertising impressions viewed, and paid search clicks.
 
-## Accessing and querying scores
+## Downloading Attribution AI scores
 
->[!NOTE] If you do not need to query or access raw scores, you can skip this step and proceed to the [user interface guide](./user-guide.md).
+>[!NOTE] If you do not need to download raw scores, you can skip this step and proceed to the [next steps](#next-steps).
 
-Accessing and querying scores for Attribution AI is done through Snowflake. Currently, you need to email Adobe support at attributionai-support@adobe.com in order to set up and receive the credentials to your reader account for Snowflake or to bulk export raw data.
+Downloading Attribution AI scores is done through a combination of API calls. In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
-Once Adobe support has processed your request, you are provided a URL for the reader account to Snowflake and the corresponding credentials below:
+- Authorization: Bearer `{ACCESS_TOKEN}`
+- x-api-key: `{API_KEY}`
+- x-gw-ims-org-id: `{IMS_ORG}`
 
-- Snowflake URL
-- Username
-- Password
+All resources in Experience Platform are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-## Next steps
+- x-sandbox-name: `{SANDBOX_NAME}`
+
+>[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+
+### Reading sample API calls
+
+This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md) in the Experience Platform troubleshooting guide.
+
+## Next steps {#next-steps}
 
 Once you are ready and have all your credentials and schemas in place, start by following the [Attribution AI user interface guide](./user-guide.md). This guide walks you through creating an instance and submitting it for training and scoring.
