@@ -31,24 +31,24 @@ A Docker image allows a developer to package up an application with all the part
 
 The built Docker image is pushed to the Azure Container Registry using credentials supplied to you during the recipe creation workflow.
 
-To obtain your Azure Container Registry credentials, log into <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>. On the left navigation column, navigate to **Workflows**. Select **Import Recipe** followed by selecting **Launch**. See the screen shot below for reference.
+To obtain your Azure Container Registry credentials, log into <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>. On the left navigation column, navigate to **[!UICONTROL Workflows]**. Select **[!UICONTROL Import Recipe]** followed by selecting **[!UICONTROL Launch]**. See the screen shot below for reference.
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-The *Configure* page opens. Provide an appropriate **Recipe Name**, for example, "Retail Sales recipe", and optionally provide a description or documentation URL. Once complete, click **Next**.
+The *Configure* page opens. Provide an appropriate *Recipe Name*, for example, "Retail Sales recipe", and optionally provide a description or documentation URL. Once complete, click **[!UICONTROL Next]**.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
-Select the appropriate *Runtime*, then choose a **Classification** for *Type*. Your Azure Container Registry credentials are generated once complete.
+Select the appropriate *Runtime*, then choose a **[!UICONTROL Classification]** for *Type*. Your Azure Container Registry credentials are generated once complete.
 
 >[!NOTE]
 >*Type* is the class of machine learning problem the recipe is designed for and is used after training to help tailor evaluating the training run.
 
 >[!TIP]
->- For Python recipes select the **Python** runtime. 
->- For R recipes select the **R** runtime.
->- For PySpark recipes select the **PySpark** runtime. An artifact type auto populates. 
->- For Scala recipes select the **Spark** runtime. An artifact type auto populates. 
+>- For Python recipes select the **[!UICONTROL Python]** runtime. 
+>- For R recipes select the **[!UICONTROL R]** runtime.
+>- For PySpark recipes select the **[!UICONTROL PySpark]** runtime. An artifact type auto populates. 
+>- For Scala recipes select the **[!UICONTROL Spark]** runtime. An artifact type auto populates. 
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
 
@@ -184,7 +184,7 @@ Copy this URL and move on to the [next steps](#next-steps).
 
 ## Next steps {#next-steps}
 
-This tutorial went over packaging source files into a Recipe, the prerequisite step for importing a Recipe into Data Science Workspace. You should now have a Docker image in Azure Container Registry along with the corresponding image URL. You are now ready to begin the tutorial on **Importing a packaged Recipe into Data Science Workspace**. Select one of the tutorial links below to get started.
+This tutorial went over packaging source files into a Recipe, the prerequisite step for importing a Recipe into Data Science Workspace. You should now have a Docker image in Azure Container Registry along with the corresponding image URL. You are now ready to begin the tutorial on importing a packaged recipe into Data Science Workspace. Select one of the tutorial links below to get started:
 
 - [Import a packaged Recipe in the UI](./import-packaged-recipe-ui.md)
 - [Import a packaged Recipe using the API](./import-packaged-recipe-api.md)
