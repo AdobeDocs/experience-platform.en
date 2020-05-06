@@ -1,11 +1,11 @@
 ---
-title: Getting Experience Cloud ID
-seo-title: Adobe Experience Platform Web SDK Getting Experience Cloud ID
+title: Retrieving Experience Cloud ID
+seo-title: Adobe Experience Platform Web SDK Retrieving Experience Cloud ID
 description: Learn how to get Adobe Experience Cloud Id.
 seo-description: Learn how to get Adobe Experience Cloud Id.
 ---
 
-# (Beta) Getting Experience Cloud ID
+# (Beta) Retrieving Experience Cloud ID
 
 >[!IMPORTANT]
 >

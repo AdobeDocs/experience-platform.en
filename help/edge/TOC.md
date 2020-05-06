@@ -21,7 +21,7 @@ user-guide-title:  Adobe Experience Platform Edge Network Help
   * [Rendering personalized content](fundamentals/rendering-personalization-content.md)
   * [Supporting consent](fundamentals/supporting-consent.md)
   * [Supporting in-app browsers](fundamentals/supporting-in-app-browsers.md)
-  * [Getting Experience Cloud ID](fundamentals/getting-experience-cloud-id.md)
+  * [Retrieving Experience Cloud ID](fundamentals/getting-experience-cloud-id.md)
 * What to Implement {#implement}
   * [Products](what-to-implement/commerce.md)
 * Solution Specific Considerations {#solutions}
