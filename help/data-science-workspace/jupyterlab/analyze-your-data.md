@@ -47,7 +47,7 @@ The Retail Sales recipe is a standalone example which uses the same Retail Sales
 
 We will go over accessing data internally from Adobe Experience Platform and data externally. We will be using the `data_access_sdk_python` library to access internal data such as datasets and XDM schemas. For external data, we will use the pandas Python library.
 
-#### External data
+#### External data {#external-data}
 
 With the Retail Sales notebook opened, find the "Load Data" header. The following Python code uses pandas' `DataFrame` data structure and the [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) function to read the CSV hosted on Github into the DataFrame:
 
@@ -65,7 +65,7 @@ Finally, we can take a peek at what our data looks like. We can use `df.head(n)`
 
 Now, we will go over accessing Experience Platform data.
 
-##### By Dataset ID
+#### By Dataset ID
 
 For this section, we are using the Retail Sales dataset which is the same dataset used in the Retail Sales sample notebook.
 
@@ -141,7 +141,7 @@ Looking at the minimum and maximum values for `store`, we can see that there are
 
 This means 22 stores are of `storeType` `A`, 17 are `storeType` `B`, and 6 are `storeType` `C`.
 
-#### Data visualization
+### Data visualization
 
 Now that we know our data frame values, we want to supplement this with visualizations to make things clearer and easier to identify patterns. Graphs are also useful when conveying results to an audience. Some Python libraries which are useful for visualization include:
 - [Matplotlib](https://matplotlib.org/)
@@ -160,7 +160,7 @@ In this section, we will quickly go over some advantages for using each library.
 [ggplot](https://ggplot2.tidyverse.org/) is a package also built on top of matplotlib. However the main difference is that the tool is a port of ggplot2 for R. Similar to seaborn, the goal is to improve upon matplotlib. Users that are familiar with ggplot2 for R should consider this library.
 
 
-##### Univariate graphs 
+### Univariate graphs 
 
 Univariate graphs are plots of an individual variable. A common univariate graph is used to visualize your data is the box and whisker plot.
 
@@ -170,7 +170,7 @@ Using our retail dataset from before, we can generate the box and whisker plot f
 
 A box and whisker plot is used to show the distribution of data. The outer lines of the plot show the upper and lower quartiles, while the box spans the interquartile range. The line in the box marks the median. Any points of data more than 1.5 times the upper or lower quartile are marked as a circle. These points are considered outliers.
 
-##### Multivariate graphs
+### Multivariate graphs
 
 Multivariate plots are used to see the interaction between variables. With the visualization, data scientists can see if there are any correlations or patterns between the variables. A common multivariate graph used is a correlation matrix. With a correlation matrix, dependencies between multiple variables are quantified with the correlation coefficient. 
 

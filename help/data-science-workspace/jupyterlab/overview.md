@@ -47,7 +47,7 @@ Information regarding key features of JupyterLab and instructions on performing 
 *  [Code cells](#code-cells)
 *  [Kernels](#kernels)
 *  [Kernel sessions](#kernel-sessions)
-*  [PySpark/Spark execution resource](#execution-resource)
+*  [PySpark/Spark execution resource](#pyspark-spark-execution-resource)
 *  [Launcher](#launcher)
 
 ### Access JupyterLab {#access-jupyterlab}
@@ -136,7 +136,7 @@ If the kernel is shut-down or inactive for a prolonged period, then **No Kernel!
 
 ![](../images/jupyterlab/user-guide/switch_kernel.gif)
 
-### PySpark/Spark execution resource {#execution-resource}
+### PySpark/Spark execution resource {#pyspark-spark-execution-resource}
 
 >[!IMPORTANT] 
 >With the transition of Spark 2.3 to Spark 2.4, both the Spark and PySpark kernels are deprecated. 
