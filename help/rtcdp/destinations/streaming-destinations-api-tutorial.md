@@ -1,21 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics; API tutorials; streaming destinations API; Real-time CDP
 solution: Experience Platform
-title: Create streaming destinations
+title: Connect to streaming destinations and activate data
 topic: tutorial
 ---
 
 # Connect to streaming destinations and activate data in Adobe's Real-time Customer Data Platform using APIs
 
-!!!!!WORK IN PROGRESS!!!!
-
-This tutorial demonstrates how to use API calls to connect to your Adobe Experience Platform data, create a connection to a streaming cloud storage destination ([AWS Kinesis](/help/rtcdp/destinations/aws-kinesis-destination.md) or [Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), create a dataflow to your new created destination, and activate data to your new created destination.
+This tutorial demonstrates how to use API calls to connect to your Adobe Experience Platform data, create a connection to a streaming cloud storage destination (AWS Kinesis or Azure Event Hubs), create a dataflow to your new created destination, and activate data to your new created destination.
 
 This tutorial uses the AWS Kinesis destination in all examples, but the steps are identical for Azure Event Hubs.
 
 ![Overview - the steps to create a streaming destination and activate segments](/help/rtcdp/destinations/assets/flow-prelim.png)
 
-If you prefer to use the user interface in Adobe's Real-time CDP to connect a destination and activate data, see the [Connect a destination](../../rtcdp/destinations/connect-destination.md) and [Activate profiles and segments to a destination](../../rtcdp/destinations/activate-destinations.md) tutorials.
+If you prefer to use the user interface in Adobe's Real-time CDP to connect to a destination and activate data, see the [Connect a destination](../../rtcdp/destinations/connect-destination.md) and [Activate profiles and segments to a destination](../../rtcdp/destinations/activate-destinations.md) tutorials.
 
 ## Get started
 
@@ -25,7 +23,7 @@ This guide requires a working understanding of the following components of Adobe
 *   [Catalog Service](../../catalog/home.md): Catalog is the system of record for data location and lineage within Experience Platform.
 *   [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to activate data to email marketing destinations in Adobe Real-time CDP.
+The following sections provide additional information that you will need to know in order to activate data to streaming destinations in Adobe Real-time CDP.
 
 ### Gather required credentials
 
@@ -57,22 +55,6 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 *   Content-Type: `application/json`
 
-<!--
-
-### Definitions
-
-Before starting this tutorial, familiarize yourself with the following terms which we'll use throughout the tutorial:
-
-**Flow**: 
-
-**Base Connection**: 
-
-**Target Connection**: 
-
-**Source Connection**: 
-
--->
-
 ### Swagger documentation {#swagger-docs}
 
 You can find accompanying reference documentation for all the API calls in this tutorial in Swagger. See https://platform.adobe.io/data/foundation/flowservice/swagger#/. We recommend that you use this tutorial and the Swagger documentation page in parallel.
@@ -90,21 +72,6 @@ GET /connectionSpecs
 ```
 
 **Request** 
-
-<!--
-
-```shell
-curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connectionSpecs' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'x-sandbox-id: {SANDBOX_ID}' \    
-    -H 'Content-Type: application/json' \
-```
-
--->
 
 ```
 
@@ -158,30 +125,6 @@ POST /connections
 
 **Request**
 
-<!--
-
-```shell
-curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'x-sandbox-id: {SANDBOX_ID}' \ 
-    -H 'Content-Type: application/json' \
-    -d  '{
-            
-            "name": "Base connection to Experience Platform",
-            "description": "This call establishes the connection to Experience Platform data",
-            "connectionSpec": {
-                "id": "{CONNECTION_SPEC}",
-                "version": "1.0"
-            }
-           }'
-```
-
--->
-
 ```
 
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -224,34 +167,6 @@ POST /sourceConnections
 
 **Request**
 
-<!--
-
-```shell
-curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-id: {SANDBOX_ID}' \ 
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d  '{
-  "name": "Connecting to Unified Profile Service",
-  "description": "Optional",
-  "baseConnectionId": "{BASE_CONNECTION_ID}",
-  "connectionSpec": {
-    "id": "{CONNECTION_SPEC}",
-    "version": "1.0"
-  },
-  "data": {
-    "format": "CSV",
-    "schema": null
-  }
-  }
-```
-
--->
-
 ```
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -268,8 +183,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
             },
             "baseConnectionId": "{BASE_CONNECTION_ID}",
             "data": {
-                "format": "CSV",
-                "schema": null
+                "format": "json"
             },
             "params" : {}
 }'
@@ -293,7 +207,7 @@ A successful response returns the unique identifier (`id`) for the newly created
 
 ![Destination steps overview step 3](/help/rtcdp/destinations/assets/step3-create-streaming-destination-api.png)
 
-In this step, you are setting up a connection to your desired email marketing destination. This consists of two substeps which are described below. 
+In this step, you are setting up a connection to your desired streaming destination. This consists of two substeps which are described below.
 
 1. First, you must perform a call to authorize access to the streaming destination, by setting up a base connection. 
 2. Then, using the base connection ID, you will make another call in which you create a target connection, which specifies the location in your storage account where the exported data will be delivered, as well as the format of the data that will be exported.
@@ -308,37 +222,6 @@ POST /connections
 
 **Request**
 
-<!--
-
-```shell
-curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'x-sandbox-id: {SANDBOX_ID}' \ 
-    -H 'Content-Type: application/json' \
-    -d  '{
-            
-            "name": "S3 Connection for Adobe Campaign",
-            "description": "ACME company holiday campaign",
-            "connectionSpec": {
-                "id": "{CONNECTION_SPEC}",
-                "version": "1.0"
-            },
-            "auth": {
-                "specName": "{S3 or SFTP}",
-                "params": {
-                    "accessId": "{ACCESS_ID}",
-                    "secretKey": "{SECRET_KEY}"
-                }
-            }
-           }'
-```
-
--->
-
 ```
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -347,26 +230,34 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "name": "S3 Connection for Adobe Campaign",
+    "name": "Connection for AWS Kinesis",
     "description": "your company's holiday campaign",
     "connectionSpec": {
         "id": "{_CONNECTION_SPEC_ID}",
         "version": "1.0"
     },
     "auth": {
-        "specName": "{S3 or SFTP}",
+        "specName": "{AUTHENTICATION_CREDENTIALS}",
         "params": {
-            "accessId": "{ACCESS_ID}",
-            "secretKey": "{SECRET_KEY}"
+            "accessKeyId": "{ACCESS_ID}", /// for AWS Kinesis connections
+            "secretKey": "{SECRET_KEY}", /// for AWS Kinesis connections
+            "region": "{REGION}" /// for AWS Kinesis connections
+            "sasKeyName": "{SAS_KEY_NAME}", for Azure Event Hubs connections
+            "sasKey": "{SAS_KEY}", for Azure Event Hubs connections
+            "namespace": "{EVENT_HUB_NAMESPACE}" for Azure Event Hubs connections
         }
     }
 }'
 ```
 
 *   `{CONNECTION_SPEC_ID}`: Use the connection spec ID you obtained in the step [Get the list of available destinations](#get-the-list-of-available-destinations).
-*   `{S3 or SFTP}`: fill in the desired connection type for this destination. In the [destination catalog](../../rtcdp/destinations/destinations-catalog.md), scroll to your preferred destination to see if S3 and/or SFTP connection types are supported. 
-*   `{ACCESS_ID}`: Your access ID for your Amazon S3 storage location.
-*   `{SECRET_KEY}`: Your secret key for your Amazon S3 storage location.
+*   `{AUTHENTICATION_CREDENTIALS}`: fill in the name of your streaming destination, e.g.: `AWS Kinesis authentication credentials` or `Azure Event Hubs authentication credentials`. 
+*   `{ACCESS_ID}`: Your access ID for your Amazon Kinesis storage location.
+*   `{SECRET_KEY}`: Your secret key for your Amazon Kinesis storage location.
+*  `{REGION}`: The region in your Amazon Kinesis account where Adobe Real-time CDP will stream your data.
+*  `{SAS_KEY_NAME}`: 
+*  `{SAS_KEY}`: 
+*  `{EVENT_HUB_NAMESPACE}`: Fill in the Azure Event Hubs namespace where Adobe Real-time CDP will stream your data. For more information, see [Create an Event Hubs namespace](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) in the Microsoft documentation.
 
 **Response**
 
@@ -388,40 +279,6 @@ POST /targetConnections
 
 **Request**
 
-<!--
-
-```shell
-curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/targetConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \    
-    -H 'x-sandbox-id: {SANDBOX_ID}' \ 
-    -H 'Content-Type: application/json' \
-    -d  '{
-   "baseConnectionId": "{BASE_CONNECTION_ID}",
-   "name": "TargetConnection for Adobe Campaign",
-   "data": {
-       "format": "CSV",
-       "schema": {
-           "id": "1.0",
-           "version": "1.0"
-       },
-    "connectionSpec": {
-    "id": "{CONNECTION_SPEC_ID}",
-    "version": "1.0"
-   },
-   "params": {
-       "mode": "S3",
-       "bucketName": "{BUCKETNAME}",
-       "path": "{FILEPATH}"
-    }
-    }
-```
-
--->
-
 ```
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -429,8 +286,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-gw-ims-org-id: {IMS_ORG}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "name": "TargetConnection for Adobe Campaign",
-    "description": "Connection to Adobe Campaign",
+    "name": "AWS kinesis target connection",
+    "description": "Connection to AWS Kinesis",
     "baseConnection": "{BASE_CONNECTION_ID}",
     "connectionSpec": {
         "id": "{CONNECTION_SPEC_ID}",
@@ -438,28 +295,26 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     },
     "data": {
         "format": "json",
-        "schema": {
-            "id": "1.0",
-            "version": "1.0"
-        }
     },
     "params": {
-        "mode": "S3",
-        "bucketName": "{BUCKETNAME}",
-        "path": "{FILEPATH}",
-        "format": "CSV"
+        "stream": "{NAME_OF_DATA_STREAM}", /// for AWS Kinesis connections
+        "region": "{REGION}", /// for AWS Kinesis connections
+        "eventHubName": "{EVENT_HUB_NAME}", /// for Azure Event Hubs connections
+        "namespace": "EVENT_HUB_NAMESPACE" /// for Azure Event Hubs connections
     }
 }'
 ```
 
 *   `{BASE_CONNECTION_ID}`: Use the base connection ID you obtained in the step above.
 *   `{CONNECTION_SPEC_ID}`: Use the connection spec you obtained in the step [Get the list of available destinations](#get-the-list-of-available-destinations).
-*   `{BUCKETNAME}`: Your Amazon S3 bucket, where Real-time CDP will deposit the data export.
-*   `{FILEPATH}`: The path in your Amazon S3 bucket directory where Real-time CDP will deposit the data export.
+*   `{NAME_OF_DATA_STREAM}`: Provide a name for the data stream to your streaming destination. This is how the stream will appear in your account.
+*   `{REGION}`: The region in your Amazon Kinesis account where Adobe Real-time CDP will stream your data.
+*   `{EVENT_HUB_NAME}`: Fill in the Azure Event Hub name where Adobe Real-time CDP will stream your data. For more information, see [Create an event hub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) in the Microsoft documentation.
+*   `{EVENT_HUB_NAMESPACE}`: Fill in the Azure Event Hubs namespace where Adobe Real-time CDP will stream your data. For more information, see [Create an Event Hubs namespace](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) in the Microsoft documentation.
 
 **Response**
 
-A successful response returns the unique identifier (`id`) for the newly created target connection to your email marketing destination. Store this value as it is required in later steps.
+A successful response returns the unique identifier (`id`) for the newly created target connection to your streaming destination. Store this value as it is required in later steps.
 
 ```json
 {
@@ -495,8 +350,8 @@ curl -X POST \
 -H 'Content-Type: application/json' \
 -d  '{
    
-        "name": "Activate segments to Adobe Campaign",
-        "description": "This operation creates a dataflow which we will later use to activate segments to Adobe Campaign",
+        "name": "Create dataflow to AWS Kinesis",
+        "description": "This operation creates a dataflow to AWS Kinesis",
         "flowSpec": {
             "id": "{FLOW_SPEC_ID}",
             "version": "1.0"
@@ -506,26 +361,13 @@ curl -X POST \
         ],
         "targetConnectionIds": [
             "{TARGET_CONNECTION_ID}"
-        ],
-        "transformations": [
-            {
-                "name": "GeneralTransform",
-                "params": {
-                    "segmentSelectors": {
-                        "selectors": []
-                    },
-                    "profileSelectors": {
-                        "selectors": []
-                    }
-                }
-            }
         ]
     }
 ```
 
-*   `{FLOW_SPEC_ID}`: Use the flow for the streaming destination that you want to connect to. To get the flow spec, perform a GET operation on the `flowspecs` endpoint. See Swagger documentation here: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. In the response, look for `upsTo` and copy the corresponding ID of the email marketing destination that you want to connect to. For example, for Adobe Campaign, look for `upsToCampaign` and copy the `id` parameter.
+*   `{FLOW_SPEC_ID}`: Use the flow for the streaming destination that you want to connect to. To get the flow spec, perform a GET operation on the `flowspecs` endpoint. See Swagger documentation here: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. In the response, look for `upsTo` and copy the corresponding ID of the streaming destination that you want to connect to. 
 *   `{SOURCE_CONNECTION_ID}`: Use the source connection ID you obtained in the step [Connect to your Experience Platform](#connect-to-your-experience-platform-data).
-*   `{TARGET_CONNECTION_ID}`: Use the target connection ID you obtained in the step [Connect to email marketing destination](#connect-to-email-marketing-destination).
+*   `{TARGET_CONNECTION_ID}`: Use the target connection ID you obtained in the step [Connect to streaming destination](#connect-to-streaming-destination).
 
 **Response**
 
@@ -543,7 +385,7 @@ A successful response returns the ID (`id`) of the newly created dataflow and an
 
 ![Destination steps overview step 5](/help/rtcdp/destinations/assets/step5-create-streaming-destination-api.png)
 
-Having created all the connections and the data flow, now you can activate your profile data to the email marketing platform. In this step, you select which segments and which profile attributes you are sending to the destination and you can schedule and send data to the destination.
+Having created all the connections and the data flow, now you can activate your profile data to the streaming platform. In this step, you select which segments and which profile attributes you are sending to the destination and you can schedule and send data to the destination.
 
 To activate segments to your new destination, you must perform a JSON PATCH operation, similar to the example below. You can activate mutiple segments and profile attributes in one call. To learn more about JSON PATCH, see the [RFC specification](https://tools.ietf.org/html/rfc6902). 
 
@@ -671,7 +513,7 @@ The returned response should include in the `transformations` parameter the segm
 
 ## Next steps
 
-By following this tutorial, you have successfully connected Real-time CDP to one of your preferred email marketing destinations and set up a dataflow to the respective destination. Outgoing data can now be used in the destination for email campaigns, targeted advertising, and many other use cases. See the following pages for more details:
+By following this tutorial, you have successfully connected Real-time CDP to one of your preferred streaming destinations and set up a data flow to the respective destination. Outgoing data can now be used in the destination for customer analytics or any other data operations you may wish to perform. See the following pages for more details:
 
 *   [Destinations overview](../../rtcdp/destinations/destinations-overview.md)
 *   [Destinations Catalog overview](../../rtcdp/destinations/destinations-catalog.md)
