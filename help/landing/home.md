@@ -18,6 +18,12 @@ Built on open APIs, Experience Platform exposes the full functionality of the sy
 
 Experience Platform documentation is provided in multiple formats for a variety of features and services. To learn more about the types of documentation that are available, as well as to read brief descriptions of each of the Platform services, please visit the [Experience Platform documentation overview](documentation/overview.md). Or, to begin learning more about a specific Platform service right away, select a guide from the alphabetical list in the left navigation.
 
+>[NOTE]
+>
+>Beginning May 7, 2020, Adobe is rolling out a new user experience for Adobe Experience Platform. This experience includes a new Help menu, which displays links to featured articles and recommends context-relevant documentation.
+>
+>This roll-out is gradual, so you might not see the changes immediately. When the experience is implemented for you, you will automatically be redirected to the new experience. However, you can view the experience at any time by going to [https://experience.adobe.com/](https://experience.adobe.com/). 
+
 ## Experience Platform tutorials
 
 Get started with Platform quickly and easily by following along with step-by-step tutorials for everything from preparing your data for ingestion to advanced machine learning algorithms. These tutorials have been designed to supplement the information found within the Experience Platform documentation, so for best results keep the documents on-hand while completing the tutorials. Visit the [Experience Platform tutorials](../tutorials/home.md) to get started.
