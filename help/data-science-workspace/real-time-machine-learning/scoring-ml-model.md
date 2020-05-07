@@ -37,17 +37,17 @@ Start by importing all the required packages for your model. Make sure any packa
 >Your list of imports might differ based on what model you made.
 
 ```python
-from pprint import pprint
+import uuid
 import json
+from pprint import pprint
+
 from rtml_nodelibs.core.nodefactory import NodeFactory as nf
 from rtml_sdk.graph.utils import GraphBuilder
 from rtml_sdk.edge.utils import EdgeUtils
-
 from rtml_nodelibs.nodes.standard.preprocessing.pandasnode import Pandas
 from rtml_nodelibs.nodes.standard.ml.onnx import ONNXNode
 from rtml_nodelibs.nodes.standard.preprocessing.json_to_df import JsonToDataframe
 from rtml_nodelibs.core.datamsg import DataMsg
-import uuid
 ```
 
 To see the list of available nodes, copy and paste the following example in your notebook.
