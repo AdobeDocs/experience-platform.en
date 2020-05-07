@@ -22,12 +22,6 @@ user-guide-title: Adobe Experience Platform Data Science Workspace Help
   * [MLServices](api/mlservices.md)
   * [Insights](api/insights.md)
   * [Appendix](api/appendix.md)
-* Real time machine learning (Alpha) {#real-time-machine-learning}
-  * [Overview](real-time-machine-learning/home.md)
-  * [Getting started](real-time-machine-learning/getting-started.md)
-  * [Training a Real-time ML model](real-time-machine-learning/training-ml-model.md)
-  * [Scoring a Real-time ML model](real-time-machine-learning/scoring-ml-model.md)
-  * [Node reference guide](real-time-machine-learning/node-reference.md)
 * Pre-built recipes {#pre-built-recipes}
   * [Product recommendation recipe](pre-built-recipes/product-recommendations.md)
   * [Product purchase prediction](pre-built-recipes/product-purchase-prediction.md)
