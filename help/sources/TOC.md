@@ -32,6 +32,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [ServiceNow connector](connectors/customer-success/servicenow.md)
   - Databases {#databases}
     - [Amazon Redshift connector](connectors/databases/redshift.md)
+    - [Apache Cassandra connector](connectors/databases/cassandra.md)
     - [Apache Hive on Azure HDInsights connector](connectors/databases/hive.md)
     - [Apache Spark on Azure HDInsights connector](connectors/databases/spark.md)
     - [Azure Data Explorer connector](connectors/databases/data-explorer.md)
@@ -71,6 +72,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [ServiceNow connector](tutorials/api/create/customer-success/servicenow.md)
     - Databases {#databases}
       - [Amazon Redshift connector](tutorials/api/create/databases/redshift.md)
+      - [Apache Cassandra connector](tutorials/api/create/databases/cassandra.md)
       - [Apache Hive on Azure HDInsights connector](tutorials/api/create/databases/hive.md)
       - [Apache Spark on Azure HDInsights connector](tutorials/api/create/databases/spark.md)
       - [Azure Data Explorer connector](tutorials/api/create/databases/data-explorer.md)

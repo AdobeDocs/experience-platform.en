@@ -77,35 +77,6 @@ alloy("event", {
 });
 ```
 
-### Starting a view
-
-When a view has started, it is important to notify the SDK by setting `viewStart` to `true` within the `event` command. This indicates, among other things, that the SDK should retrieve and render personalized content. Even if you are not using personalization currently, it greatly simplifies enabling personalization or other features later because you will not be required to modify on-page code. In addition, tracking views is beneficial when viewing analytics reports after data has been collected.
-
-The definition of a view can depend on the context.
-
-* In a regular website, each webpage is typically considered a unique view. In this case, an event with `viewStart` set to `true` should be executed as soon as possible at the top of the page.
-* In a single page application \(SPA\), a view is less defined. It typically means that the user has navigated within the application and most of the content has changed. For those familiar with the technical foundations of single page applications, this is typically when the application loads a new route. Whenever a user moves to a new view, however you choose to define a _view_, an event with `viewStart` set to `true` should be executed.
-
-The event with `viewStart` set to `true` is the primary mechanism for sending data to the Adobe Experience Cloud and requesting content from the Adobe Experience Cloud. Here is how you start a view:
-
-```javascript
-alloy("event", {
-  "viewStart": true,
-  "xdm": {
-    "commerce": {
-      "order": {
-        "purchaseID": "a8g784hjq1mnp3",
-        "purchaseOrderNumber": "VAU3123",
-        "currencyCode": "USD",
-        "priceTotal": 999.98
-      }
-    }
-  }
-});
-```
-
-After data is sent, the server responds with personalized content, among other things. This personalized content is automatically rendered into your view. Link handlers are also automatically attached to the new view's content.
-
 ## Using the sendBeacon API
 
 It can be tricky to send event data just before the web page user has navigated away. If the request takes too long, the browser might cancel the request. Some browsers have implemented a web standard API called `sendBeacon` to allow data to be more easily collected during this time. When using `sendBeacon`, the browser makes the web request in the global browsing context. This means the browser makes the beacon request in the background and does not hold up the page navigation. To tell Adobe Experience Platform Web SDK to use `sendBeacon`, add the option `"documentUnloading": true` to the event command.  Here is an example:
@@ -134,7 +105,7 @@ If you want to handle a response from an event, you can be notified of a success
 
 ```javascript
 alloy("event", {
-  "viewStart": true,
+  "renderDecisions": true,
   "xdm": {
     "commerce": {
       "order": {
@@ -145,7 +116,7 @@ alloy("event", {
       }
     }
   }
-}).then(function() {
+}).then(function(results) {
     // Tracking the event succeeded.
   })
   .catch(function(error) {
