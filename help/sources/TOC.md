@@ -148,7 +148,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Generic OData connector](tutorials/ui/create/protocols/odata.md)
   - Configure a dataflow {#dataflow}
       - [Configure a dataflow for an advertising connector](tutorials/ui/dataflow/advertising.md)
-      - [Configure a dataflow for a cloud storage connector](tutorials/ui/dataflow/cloud-storage.md)
+      - [Configure a dataflow for a cloud storage connector](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [Configure a dataflow for a database connector](tutorials/ui/dataflow/databases.md)
       - [Configure a dataflow for a CRM connector](tutorials/ui/dataflow/crm.md)
       - [Configure a dataflow for a customer success connector](tutorials/ui/dataflow/customer-success.md)

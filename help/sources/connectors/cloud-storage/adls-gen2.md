@@ -7,11 +7,11 @@ topic: overview
 
 # Azure Data Lake Storage Gen2 connector
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+Adobe Experience Platform provides native connectivity for cloud providers like AWS, Google Cloud Platform, and Azure. You can bring your data from these systems into Platform.
 
-Cloud storage sources can bring your own data into Platform without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM parquet, or delimited. Every step of the process is integrated into the Sources workflow using the user interface. Support for cloud storage providers includes Azure Date Lake Storage Gen2.
+Cloud storage sources can bring your own data into Platform without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM parquet, or delimited. Every step of the process is integrated into the Sources workflow. Platform allows you to bring in data from Azure Data Lake Storage Gen2 through batches.
 
-The documentation below provides information on how to connect ADLS-Gen2 to Platform using APIs or the user interface:
+The documentation below provides information on how to connect Azure Data Lake Storage Gen2 to Platform using APIs or the user interface:
 
 ## Connect ADLS-Gen2 to Platform using APIs
 
@@ -22,4 +22,4 @@ The documentation below provides information on how to connect ADLS-Gen2 to Plat
 ## Connect ADLS-Gen2 to Platform using the UI
 
 - [Create an ADLS-Gen2 source connector in the UI](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
-- [Configure a dataflow for a cloud storage connector in the UI](../../tutorials/ui/dataflow/cloud-storage.md)
+- [Configure a dataflow for a cloud storage connector in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)

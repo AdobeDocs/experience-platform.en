@@ -18,7 +18,7 @@ This tutorial requires a working understanding of the following components of Ad
     -   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 -   [Real-time Customer Profile](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
-If you already have a Blob or S3 base connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/cloud-storage.md).
+If you already have a Blob or S3 base connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/batch/cloud-storage.md).
 
 ### Supported file formats
 
@@ -50,4 +50,4 @@ On the input form, provide the base connection with a name, an optional descript
 
 ## Next steps
 
-By following this tutorial, you have established a base connection to your Azure Blob or Amazon S3 account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](../../dataflow/cloud-storage.md).
+By following this tutorial, you have established a base connection to your Azure Blob or Amazon S3 account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](../../dataflow/batch/cloud-storage.md).
