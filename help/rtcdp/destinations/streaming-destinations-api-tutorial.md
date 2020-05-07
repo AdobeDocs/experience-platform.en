@@ -38,7 +38,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required and optional headers {#gather-values}
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+In order to make calls to Platform APIs, you must first complete the [authentication tutorial](/help/tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 *   Authorization: Bearer `{ACCESS_TOKEN}`
 *   x-api-key: `{API_KEY}`
