@@ -6,7 +6,7 @@ topic: overview
 ---
 
 # Configure a dataflow for a database connector in the UI
- 
+
 A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps to configure a new dataflow using your database base connector.
 
 ## Getting started
@@ -22,14 +22,14 @@ Additionally, this tutorial requires that you have already created a database co
 
 ## Select data
 
-After creating your database connector, the *Select data* step appears, providing an interactive interface for you to explore your database hierarchy.
+After creating your database connector, the *[!UICONTROL Select data]* step appears, providing an interactive interface for you to explore your database hierarchy.
 
 - The left half of the interface is a browser, displaying your account's list of databases.
 - The right half of the interface lets you preview up to 100 rows of data.
 
-Select the database you wish to use, then click **Next**.
+Select the database you wish to use, then click **[!UICONTROL Next]**.
 
-![](../../../images/tutorials/dataflow/databases/select-data-next.png)
+![](../../../images/tutorials/dataflow/databases/add-data.png)
 
 ## Map data fields to an XDM schema
 
@@ -39,33 +39,35 @@ Choose a dataset for inbound data to be ingested into. You can either use an exi
 
 ### Use an existing dataset
 
-To ingest data into an existing dataset, select **Use existing dataset**, then click the dataset icon.
+To ingest data into an existing dataset, select **[!UICONTROL Existing dataset]**, then click the dataset icon.
 
-![](../../../images/tutorials/dataflow/databases/use-existing-dataset.png)
+![](../../../images/tutorials/dataflow/databases/existing-dataset.png)
 
-The _Select dataset_ dialog appears. Find the dataset you you wish to use, select it, then click **Continue**.
+The *[!UICONTROL Select dataset]* dialog appears. Find the dataset you you wish to use, select it, then click **[!UICONTROL Continue]**.
 
-![](../../../images/tutorials/dataflow/databases/select-dataset.png)
+![](../../../images/tutorials/dataflow/databases/select-existing-dataset.png)
 
 ### Use a new dataset
 
-To ingest data into a new dataset, select **Create new dataset** and enter a name and description for the dataset in the fields provided. Next, click the schema icon.
+To ingest data into a new dataset, select **[!UICONTROL New dataset]** and enter a name and description for the dataset in the fields provided.
 
-![](../../../images/tutorials/dataflow/databases/use-new-dataset.png)
+You can attach a schema field by typing a schema name in the **[!UICONTROL Select schema]** search bar. You can also select the drop down icon to see a list of existing schemas. Alternatively, you can select **[!UICONTROL Advanced search]** to a screen of existing schemas including their respective details.
 
-The _Select schema_ dialog appears. Select the schema you wish to apply to the new dataset, then click **Done**.
+![](../../../images/tutorials/dataflow/databases/new-dataset.png)
 
-![](../../../images/tutorials/dataflow/databases/select-schema.png)
+The *[!UICONTROL Select schema] dialog appears. Select the schema you wish to apply to the new dataset, then click **[!UICONTROL Done]**.
+
+![](../../../images/tutorials/dataflow/databases/select-existing-schema.png)
 
 Based on your needs, you can choose to map fields directly, or use mapper functions to transform source data to derive computed or calculated values. For more information on data mapping and mapper functions, refer to the tutorial on [mapping CSV data to XDM schema fields](../../../../ingestion/tutorials/map-a-csv-file.md).
 
-Once your source data is mapped, click **Next**.
+Once your source data is mapped, click **[!UICONTROL Next]**.
 
-![](../../../images/tutorials/dataflow/databases/mapping-data.png)
+![](../../../images/tutorials/dataflow/databases/mapping.png)
 
 ## Schedule ingestion runs
 
-The *Scheduling* step appears, allowing you to configure an ingestion schedule to automatically ingest the selected source data using the configured mappings. The following table outlines the different configurable fields for scheduling:
+The *[!UICONTROL Scheduling]* step appears, allowing you to configure an ingestion schedule to automatically ingest the selected source data using the configured mappings. The following table outlines the different configurable fields for scheduling:
 
 | Field | Description |
 | --- | --- |
@@ -73,48 +75,35 @@ The *Scheduling* step appears, allowing you to configure an ingestion schedule t
 | Interval | An integer that sets the interval for the selected frequency. |
 | Start time | A UTC timestamp for which the very first ingestion will occur. |
 | Backfill | A boolean value that determines what data is initially ingested. If *Backfill* is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If *Backfill* is disabled, only the files that are loaded in between the first run of ingestion and the *Start time* will be ingested. Files loaded prior to *Start time* will not be ingested. |
+| Delta Column | An option with a filtered set of source schema fields of type, date, or time. This field is used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column. |
 
-Dataflows are designed to automatically ingest data on a scheduled basis. If you wish to only ingest once through this workflow, you can do so by configuring the **Frequency** to "Day" and applying a very large number for the **Interval**, such as 10000 or similar.
+Dataset flows are designed to automatically ingest data on a scheduled basis. If you wish to only ingest once through this workflow, you can do so by configuring the **[!UICONTROL Frequency]** to "Day" and applying a very large number for the **[!UICONTROL Interval]**, such as 10000 or similar.
 
-Provide values for the schedule and click **Next**.
+Provide values for the schedule and select **[!UICONTROL Next]**.
 
-![](../../../images/tutorials/dataflow/databases/scheduling.png)
+![](../../../images/tutorials/dataflow/databases/schedule.png)
 
-## Name your dataflow
+## Name your dataset flow
 
-The *Name flow* step appears, where you must provide a name and an optional description for the dataflow. Click Next when finished."
+The *[!UICONTROL Dataset flow detail] step appears, where you must provide a name and an optional description for the dataset flow. Select **[!UICONTROL Next]** when finished.
 
-![](../../../images/tutorials/dataflow/databases/name-flow.png)
+![](../../../images/tutorials/dataflow/databases/dataset-flow-detail.png)
 
-## Review your dataflow 
+## Review your dataset flow
 
-The *Review* step appears, allowing you to review your new dataflow before it is created. Details are grouped within the following categories:
+The *[!UICONTROL Review]* step appears, allowing you to review your new dataset flow before it is created. Details are grouped within the following categories:
 
-- *Connection details*: Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
-- *Mapping details*: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
-- *Schedule details*: Shows the active period, frequency, and interval of the ingestion schedule.
+- *Connection*: Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
+- *Assign dataset & map fields*: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
+- *Scheduling*: Shows the active period, frequency, and interval of the ingestion schedule.
 
-Once you have reviewed your dataflow, click **Finish** and allow some time for the dataflow to be created.
+Once you have reviewed your dataset flow, click **Finish** and allow some time for the dataflow to be created.
 
 ![](../../../images/tutorials/dataflow/databases/review.png)
 
 ## Monitor your dataflow
 
-Once your dataflow has been created, you can monitor the data that is being ingested through it. Follow the steps below to access a dataflow's dataset monitor.
-
-Within the _Sources_ workspace, click the **Browse** tab to list your base connections. In the displayed list, find the connection that contains the dataflow you wish to monitor by clicking its name.
-
-![](../../../images/tutorials/dataflow/databases/browse-base-connectors.png)
-
-The *Source activity* screen appears. From here, click the name of a dataset whose activity you want to monitor.
-
-![](../../../images/tutorials/dataflow/databases/select-dataflow-dataset.png)
-
-The *Dataset activity* screen appears. This page displays the rate of messages being consumed in the form of a graph.
-
-![](../../../images/tutorials/dataflow/databases/dataset-activity.png)
-
-For more information on monitoring datasets and ingestion, refer to the tutorial on [monitoring streaming dataflows](../../../../ingestion/quality/monitor-data-flows.md).
+Once your dataset flow has been created, you can monitor the data that is being ingested through it. For more information on how to monitor your dataset flows, see the tutorial on [accounts and dataset flows](../monitor.md).
 
 ## Next steps
 
@@ -131,13 +120,13 @@ The following sections provide additional information for working with source co
 
 When a dataflow is created, it immediately becomes active and ingests data according to the schedule it was given. You can disable an active dataflow at any time by following the instructions below.
 
-Within the _Sources_ workspace, click the **Browse** tab. Next, click the name of the base connection that's associated with the dataflow you wish to disable.
+Within the *[!UICONTROL Sources]* workspace, select the **[!UICONTROL Dataset flows]** tab. Next, select the dataset flow that you wish to disable.
 
-![](../../../images/tutorials/dataflow/databases/browse-base-connectors.png)
+![](../../../images/tutorials/dataflow/databases/dataset-flow-list.png)
 
-The _Source activity_ page appears. Select the active dataflow from the list to open its *Properties* column on the right-hand side of the screen, which contains an **Enabled** toggle button. Click the toggle to disable the dataflow. The same toggle can be used to re-enable a dataflow after it has been disabled.
+The *Properties* column appears on the right-hand side of the screen, including an **[!UICONTROL Enabled]** toggle button. Select the toggle to disable the dataflow. The same toggle can be used to re-enable a dataflow after it has been disabled.
 
-![](../../../images/tutorials/dataflow/databases/toggle-enabled.png)
+![](../../../images/tutorials/dataflow/databases/disable.png)
 
 ### Activate inbound data for Profile population
 
