@@ -116,7 +116,7 @@ msg6 = model_train.process(msg5)
 | mode | Train/test (string). |
 | model_path | Path to the save model locally in onnx format. |
 | params.model |  Absolute import path to the model (string) eg: “sklearn.linear_model.LogisticRegression”. |
-| params.model_params |  Model hyperparameters, see the [sklearn API (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) documentation for more information.
+| params.model_params |  Model hyperparameters, see the [sklearn API (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) documentation for more information. |
 | node_instance.process(data_message_from_previous_node) | The method `process()` takes DataMsg from the previous node and applies transformation. This depends on the current node being used. |
 
 ### Split
