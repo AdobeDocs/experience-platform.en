@@ -255,8 +255,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 *   `{ACCESS_ID}`: Your access ID for your Amazon Kinesis storage location.
 *   `{SECRET_KEY}`: Your secret key for your Amazon Kinesis storage location.
 *  `{REGION}`: The region in your Amazon Kinesis account where Adobe Real-time CDP will stream your data.
-*  `{SAS_KEY_NAME}`: 
-*  `{SAS_KEY}`: 
+*  `{SAS_KEY_NAME}`: Fill in your SAS key name. Learn about authenticating to [!DNL Azure Event Hubs] with SAS keys in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+*  `{SAS_KEY}`: Fill in your SAS key. Learn about authenticating to [!DNL Azure Event Hubs] with SAS keys in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 *  `{EVENT_HUB_NAMESPACE}`: Fill in the Azure Event Hubs namespace where Adobe Real-time CDP will stream your data. For more information, see [Create an Event Hubs namespace](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) in the Microsoft documentation.
 
 **Response**
