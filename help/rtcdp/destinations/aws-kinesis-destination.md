@@ -9,10 +9,10 @@ seo-description: Create a live outbound connection to your AWS Kinesis storage t
 
 ## Overview
 
-You can use Amazon Kinesis Data Streams to collect and process large streams of data records in real time. You can create a live outbound connection to your AWS Kinesis storage to stream data from Adobe Experience Platform.
+You can use Amazon Kinesis Data Streams to collect and process large streams of data records in real time. Create a live outbound connection to your AWS Kinesis storage to stream real-time data from Adobe Experience Platform. 
 
 * For more information about Amazon Kinesis, see the [Amazon documentation](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
-* To connect to AWS Kinesis using API calls, see the [Streaming destinations API tutorial](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md).
+* To connect to AWS Kinesis using API calls, see the [Streaming destinations API tutorial].
 * To connect to AWS Kinesis using the Adobe Real-time CDP user interface, see the sections below.
 
 ![AWS Kinesis in the UI](/help/rtcdp/destinations/assets/aws-kinesis-destination.png)
@@ -34,7 +34,7 @@ For AWS Kinesis destinations, enter the following information in the create dest
 
 * **Name**: 
 * **Description**: 
-* **stream**: Provide a name for the stream to your cloud destination
+* **stream**: Provide a name for the stream to your AWS Kinesis destination
 * **region**: Indicate which AWS Kinesis region to stream data to. 
 
 ![Input fields in the setup step](/help/rtcdp/destinations/assets/aws-kinesis-setup-step.png)
@@ -49,12 +49,37 @@ See [Activate profiles and segments to a destination](/help/rtcdp/destinations/a
 
 ## Exported data
 
-Mention here the format in which customers should expect their data in AWS Kinesis. 
+Your exported Experience Platform data lands in [!DNL AWS Kinesis] in JSON format. For example, an incoming stream containing the hashed email identity of an audience that has exited a certain segment could look like this:
+
+```
+
+{
+   "segmentMembership":{
+      "ups":{
+         "7841ba61-23c1-4bb3-a495-00d695fe1e93":{
+            "lastQualificationTime":"2020-03-03T21:24:39Z",
+            "status":"exited"
+         }
+      }
+   }
+},
+"identityMap":{
+   "email_lc_sha256":[
+      {
+         "id":"655332b5fa2aea4498bf7a290cff017cb4"
+      },
+      {
+         "id":"66baf76ef9de8b42df8903f00e0e3dc0b7"
+      }
+   ]
+},
+
+```
 
 
 
 >[!MORELIKETHIS]
 >
->* [Connect to AWS Kinesis using APIs](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
+>* Link to AWS Kinesis API tutorial
 >* [Azure Event Hubs destination](/help/rtcdp/destinations/azure-event-hubs-destination.md)
 >* [Destination types and categories](/help/rtcdp/destinations/destination-types.md) 
