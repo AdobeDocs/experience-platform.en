@@ -48,6 +48,71 @@ Use the Prediction REST API endpoint to generate machine learning insights in re
 
 Marketers can then define segments and rules that map Real-time Machine Learning scores to experiences using Adobe Target. This allows for visitors of your brand's website to be shown a same or next-page hyper-personalized experience in real time (under 100ms).
 
+## Development plan
+
+Real-time Machine Learning is currently in the Alpha phase. The table below outlines some of the features and updates that are expected to release in the future beta iteration.
+
+<table>
+    <th></th>
+    <th>Alpha (May)</th>
+    <th>Beta</th>
+    <tr>
+        <td>
+            <strong>Features</strong>
+        </td>
+        <td>
+            <li>Data Science Workspace bring your own Model and author via Notebook launcher integration.</li>
+            <li>Starter set of authoring operators.</li>
+            <li>Deploy to Hub</li>
+            <li>Scikit Learn based Models.</li>
+        </td>
+        <td>
+            <li>Data Science Workspace Service Gallery UI integration.</li>
+            <li>Automatically enrich Real-time Customer Profile with inference results.</li>
+            <li>Deep learning Models.</li>
+            <li>Expanded set of authoring operators including custom operators.</li>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <strong>Availability</strong>
+        </td>
+        <td>
+            North America
+        </td>
+        <td>
+            <li>North America</li>
+            <li>Europe and Middle East (EMEA)</li>
+            <li>Asia Pacific (APAC)</li>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <strong>Authoring</strong>
+        </td>
+        <td>
+            <li>Python support</li>
+            <li>Real-time Machine Learning SDK</li>
+            <li>Python authoring nodes: Pandas, ScikitLearn, ONNXNode, Split, ModelUpload, OneHotEncoder.</li>
+        </td>
+        <td>
+            <li>Tensorflow support.</li>
+            <li>Additional Python authoring nodes: Real-time Customer Profile Reader, Real-time Customer Profile Writer, Numpy Arrays, XDM2Frame, Frame2XDM. </li>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <strong>Scoring run times</strong>
+        </td>
+        <td>
+            ONNX
+        </td>
+        <td>
+            ONNX
+        </td>
+    </tr>
+</table>
+
 ## Next steps
 
 You can begin by following the [getting started](./getting-started.md) guide. This guide walks you through setting up all the required prerequisites for creating a Real-time Machine Learning model.
