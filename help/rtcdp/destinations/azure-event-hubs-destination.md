@@ -21,7 +21,7 @@ You can create a live outbound connection to your [!DNL Azure Event Hubs] storag
 
 ## Connect destination {#connect-destination}
 
-See [Cloud storage destinations workflow ](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)for instructions on how to connect to your cloud storage destinations, including Azure Event Hubs. 
+See [Cloud storage destinations workflow ](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)for instructions on how to connect to your cloud storage destinations, including [!DNL Azure Event Hubs]. 
 
 For [!DNL Azure Event Hubs] destinations, enter the following information in the create destination workflow:
 
@@ -34,10 +34,10 @@ For [!DNL Azure Event Hubs] destinations, enter the following information in the
 
 ### In the Setup step
 
-* **[!UICONTROL Name]**: Fill in a name for the connection to Azure Event Hubs
-* **[!UICONTROL Description]**: Provide a description of the connection.  Examples: "Premium tier customers", "Males interested in kitesurfing"
-* **[!UICONTROL eventHubName]**: Provide a name for the stream to your Azure Event Hubs destination
-* **[!UICONTROL namespace]**: Fill in your Azure Event Hubs namespace, where you will be streaming data. 
+* **[!UICONTROL Name]**: Fill in a name for the connection to [!DNL Azure Event Hubs].
+* **[!UICONTROL Description]**: Provide a description of the connection.  Examples: "Premium tier customers", "Males interested in kitesurfing".
+* **[!UICONTROL eventHubName]**: Provide a name for the stream to your [!DNL Azure Event Hubs] destination.
+* **[!UICONTROL namespace]**: Fill in your [!DNL Azure Event Hubs ] namespace, where you will be streaming data. 
 
 ![Data required in the setup step](/help/rtcdp/destinations/assets/event-hubs-setup-step.png)
 
