@@ -9,33 +9,33 @@ seo-description: Create a live outbound connection to your AWS Kinesis storage t
 
 ## Overview
 
-You can use Amazon Kinesis Data Streams to collect and process large streams of data records in real time. Create a live outbound connection to your AWS Kinesis storage to stream real-time data from Adobe Experience Platform. 
+You can use [!DNL Amazon Kinesis Data Streams] to collect and process large streams of data records in real time. Create a live outbound connection to your [!DNL AWS Kinesis] storage to stream real-time data from Adobe Experience Platform. 
 
-* For more information about Amazon Kinesis, see the [Amazon documentation](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
-* To connect to AWS Kinesis using API calls, see the [Streaming destinations API tutorial].
-* To connect to AWS Kinesis using the Adobe Real-time CDP user interface, see the sections below.
+* For more information about [!DNL Amazon Kinesis], see the [Amazon documentation](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
+* To connect to [!DNL AWS Kinesis] using API calls, see the [Streaming destinations API tutorial].
+* To connect to [!DNL AWS Kinesis] using the Adobe Real-time CDP user interface, see the sections below.
 
 ![AWS Kinesis in the UI](/help/rtcdp/destinations/assets/aws-kinesis-destination.png)
 
 ## Connect destination {#connect-destination}
 
-See [Cloud storage destinations workflow ](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)for instructions on how to connect to your cloud storage destinations, including AWS Kinesis. 
+See [Cloud storage destinations workflow ](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)for instructions on how to connect to your cloud storage destinations, including [!DNL AWS Kinesis]. 
 
-For AWS Kinesis destinations, enter the following information in the create destination workflow:
+For [!DNL AWS Kinesis] destinations, enter the following information in the create destination workflow:
 
 ### In the Authentication step
 
-* **AWS Kinesis access key and secret key**: In AWS Kinesis, generate an access key - secret access key pair to grant Adobe Real-time CDP access to your AWS Kinesis account. Learn more in the [AWS Kinesis documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **region**: Indicate which AWS Kinesis region to stream data to. **Need to mention** - how do customers enter region information here, in which format?
+* **AWS Kinesis access key and secret key**: In [!DNL AWS Kinesis], generate an access key - secret access key pair to grant Adobe Real-time CDP access to your [!DNL AWS Kinesis] account. Learn more in the [AWS Kinesis documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **region**: Indicate which [!DNL AWS Kinesis] region to stream data to.
 
 ![Input fields in the authentication step](/help/rtcdp/destinations/assets/aws-kinesis-authentication-step.png)
 
 ### In the Setup step
 
-* **Name**: 
-* **Description**: 
-* **stream**: Provide a name for the stream to your AWS Kinesis destination
-* **region**: Indicate which AWS Kinesis region to stream data to. 
+* **Name**: Provide a name for your connection to [!DNL AWS Kinesis]
+* **Description**: Provide a description for your connection to [!DNL AWS Kinesis].
+* **stream**: Provide a name for the stream to your [!DNL AWS Kinesis] destination
+* **region**: Indicate which [!DNL AWS Kinesis] region to stream data to. 
 
 ![Input fields in the setup step](/help/rtcdp/destinations/assets/aws-kinesis-setup-step.png)
 

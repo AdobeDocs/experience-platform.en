@@ -19,8 +19,8 @@ For information on how to connect to cloud storage destinations, see [Workflow t
 
 ## Available Cloud storage destinations
 
-* [Amazon S3 destination](destinations/amazon-s3-destination.md)
-* [SFTP destination](destinations/sftp-destination.md)
+* [Amazon S3 destination](/help/rtcdp/destinations/amazon-s3-destination.md)
+* [SFTP destination](/help/rtcdp/destinations/sftp-destination.md)
 
 ## Available Cloud storage streaming destinations
 
