@@ -45,7 +45,7 @@ The preprocessing phase kicks in once the SDK has received the personalized cont
 After all the personalization content has been rendered successfully, or if there was any error, all previously hidden elements are shown to make sure that there are no hidden elements on the page that were hidden by the SDK.
 
 
-# Managing flicker when SDK is loaded asynchronously
+## Managing flicker when SDK is loaded asynchronously
 
 The recommendation is to always load the SDK asynchronously to get the best page rendering performance. However, this has some implications for the rendering of personalized content. When the SDK is loaded asynchronously, it is required to use the prehiding snippet. The prehiding snippet must be added before the SDK in the HTML page. Here is an example snippet that hides the entire body:
 
