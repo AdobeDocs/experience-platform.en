@@ -11,7 +11,7 @@ The following document outlines Data Science workspace permissions, provisioning
 
 ## Intelligence Pack addon for Data Science Workspace
 
-The Intelligence pack addon is needed in order to utilize all the available features for Data Science Workspace.
+The Intelligence pack addon for Data Science Workspace allows you to utilize additional advanced features and increase performance in areas such as Workspace capabilities and Query Service.
 
 Upon purchasing Intelligence Pack, you receive access to both the *Models* and *Services* tabs in the left-navigation bar under *DATA SCIENCE*. Without Intelligence Pack, the *DATA SCIENCE* menu only displays the *Notebooks* tab.
 
@@ -21,6 +21,9 @@ Upon purchasing Intelligence Pack, you receive access to both the *Models* and *
 - *Services* contains both Adobe-provided services such as [Intelligent Services](../intelligent-services/home.md) and any custom external services you created with Data Science Workspace.
 
 The following table outlines some of the key differences for Data Science Workspace with and without the Intelligence Pack:
+
+>[!NOTE]
+>You can license more than one Intelligence Pack and the increased capacity outlined below is added to your overall entitlement. For example, a customer licensing 2 Intelligence Packs is entitled to a total of 20 Query Service users and 20 Data Science Workspace users.
 
 <table>
     <th></th>
@@ -64,10 +67,29 @@ The following table outlines some of the key differences for Data Science Worksp
             <strong>Modeling support</strong>
         </td>
         <td>
-            Supports an average modeling data size of 2GB.
+            <li>Supports an average modeling data size of 2GB.</li>
+            <li>Supports 5 concurrent Notebooks.</li>
+            <li>Supports 1 interactive batch query.</li>
+            <li>CPU capacity across all Notebooks is 32 CPU Cores and 256 gigabytes of RAM.</li>
         </td>
         <td>
-            Supports an average modeling data size of 30GB.
+            <li>Supports an average modeling data size of 30GB.</li>
+            <li>Supports 10 concurrent Notebooks.</li>
+            <li>Supports 10 concurrent interactive batch queries.</li>
+            <li>CPU capacity across all Notebooks is 128 CPU Cores and 512 gigabytes of RAM.</li>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <strong>Number of users</strong>
+        </td>
+        <td>
+            <li>Support for 5 Data Science Workspace users.</li>
+            <li>Support for 1 Query Service user.</li>
+        </td>
+        <td>
+            <li>Support for 10 Data Science Workspace users.</li>
+            <li>Support for 10 Query Service users.</li>
         </td>
     </tr>
 </table>
