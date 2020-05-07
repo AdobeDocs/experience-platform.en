@@ -18,7 +18,7 @@ This tutorial will go over two main sections. First, you will create a machine l
 
 ## Get started with the JupyterLab notebook environment
 
-Creating a recipe from scratch can be done within Data Science Workspace. To start, navigate to [Adobe Experience Platform](https://platform.adobe.com) and click on the **ML Models** tab on the left to get to the Data Science Workspace. From here, click on the **Notebooks** sub-tab and on the Jupyterlab launcher screen, create a new notebook by select the Recipe Builder template.
+Creating a recipe from scratch can be done within Data Science Workspace. To start, navigate to [Adobe Experience Platform](https://platform.adobe.com) and click on the **[!UICONTROL Notebooks]** tab on the left. Create a new notebook by selecting the Recipe Builder template from the JupyterLab Launcher.
 
 The Recipe Builder notebook allows you to run training and scoring runs inside the notebook. This gives you the flexibility to make changes to their `train()` and `score()` methods in between running experiments on the training and scoring data. Once you are happy with the outputs of the training and scoring, you can create a recipe to be used in Data Science Workspace using the notebook to recipe functionality built in to the Recipe Builder notebook.
 

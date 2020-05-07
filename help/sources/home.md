@@ -61,6 +61,7 @@ Experience Platform provides support for ingesting data from a third-party custo
 Experience Platform provides support for ingesting data from a third-party database. See the following related documents for more information on specific source connectors:
 
 - [Amazon Redshift connector](connectors/databases/redshift.md)
+- [Apache Cassandra connector](connectors/databases/cassandra.md)
 - [Apache Hive on Azure HDInsights connector](connectors/databases/hive.md)
 - [Apache Spark on Azure HDInsights connector](connectors/databases/spark.md)
 - [Azure Data Explorer connector](connectors/databases/data-explorer.md)
