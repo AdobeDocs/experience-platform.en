@@ -354,4 +354,4 @@ You do not have to run a scoring job in the recipe. Real-time Machine Learning e
 
 ## Next steps {#next-steps}
 
-By following one of the tutorials above, you have successfully trained and uploaded an ONNX model to the Real-time Machine Learning model store, and have a `model_id` that identifies your model. Continue to the next tutorial to learn how you can [Score your Real-time Machine Learning model](./scoring-ml-model.md).
+By following one of the tutorials above, you have successfully trained and uploaded an ONNX model to the Real-time Machine Learning model store, and have a `model_id` that identifies your model. Continue to the next tutorial to learn how you can [score your Real-time Machine Learning model](./scoring-ml-model.md).
