@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Configure a dataflow for a database connector in the UI
+title: Configure a dataset flow for a database connector in the UI
 topic: overview
 ---
 
-# Configure a dataflow for a database connector in the UI
+# Configure a dataset flow for a database connector in the UI
 
-A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps to configure a new dataflow using your database base connector.
+A dataset flow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps to configure a new dataset flow using your database base connector.
 
 ## Getting started
 
@@ -85,7 +85,7 @@ Provide values for the schedule and select **[!UICONTROL Next]**.
 
 ## Name your dataset flow
 
-The *[!UICONTROL Dataset flow detail] step appears, where you must provide a name and an optional description for the dataset flow. Select **[!UICONTROL Next]** when finished.
+The *[!UICONTROL Dataset flow detail]* step appears, where you must provide a name and an optional description for the dataset flow. Select **[!UICONTROL Next]** when finished.
 
 ![](../../../images/tutorials/dataflow/databases/dataset-flow-detail.png)
 
@@ -97,17 +97,17 @@ The *[!UICONTROL Review]* step appears, allowing you to review your new dataset 
 - *Assign dataset & map fields*: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
 - *Scheduling*: Shows the active period, frequency, and interval of the ingestion schedule.
 
-Once you have reviewed your dataset flow, click **Finish** and allow some time for the dataflow to be created.
+Once you have reviewed your dataset flow, click **[!UICONTROL Finish]** and allow some time for the dataset flow to be created.
 
 ![](../../../images/tutorials/dataflow/databases/review.png)
 
-## Monitor your dataflow
+## Monitor your dataset flow
 
 Once your dataset flow has been created, you can monitor the data that is being ingested through it. For more information on how to monitor your dataset flows, see the tutorial on [accounts and dataset flows](../monitor.md).
 
 ## Next steps
 
-By following this tutorial, you have successfully created a dataflow to bring in data from an external database and gained insight on monitoring datasets. Incoming data can now be used by downstream Platform services such as Real-time Customer Profile and Data Science Workspace. See the following documents for more details:
+By following this tutorial, you have successfully created a dataset flow to bring in data from an external database and gained insight on monitoring datasets. Incoming data can now be used by downstream Platform services such as Real-time Customer Profile and Data Science Workspace. See the following documents for more details:
 
 -   [Real-time Customer Profile overview](../../../../profile/home.md)
 -   [Data Science Workspace overview](../../../../data-science-workspace/home.md)
@@ -116,15 +116,15 @@ By following this tutorial, you have successfully created a dataflow to bring in
 
 The following sections provide additional information for working with source connectors.
 
-### Disable a dataflow
+### Disable a dataset flow
 
-When a dataflow is created, it immediately becomes active and ingests data according to the schedule it was given. You can disable an active dataflow at any time by following the instructions below.
+When a dataset flow is created, it immediately becomes active and ingests data according to the schedule it was given. You can disable an active dataset flow at any time by following the instructions below.
 
 Within the *[!UICONTROL Sources]* workspace, select the **[!UICONTROL Dataset flows]** tab. Next, select the dataset flow that you wish to disable.
 
 ![](../../../images/tutorials/dataflow/databases/dataset-flow-list.png)
 
-The *Properties* column appears on the right-hand side of the screen, including an **[!UICONTROL Enabled]** toggle button. Select the toggle to disable the dataflow. The same toggle can be used to re-enable a dataflow after it has been disabled.
+The *Properties* column appears on the right-hand side of the screen, including an **[!UICONTROL Enabled]** toggle button. Select the toggle to disable the dataset flow. The same toggle can be used to re-enable a dataset flow after it has been disabled.
 
 ![](../../../images/tutorials/dataflow/databases/disable.png)
 
