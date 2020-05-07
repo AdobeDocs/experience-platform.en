@@ -22,7 +22,7 @@ A combination of seamless computation on both the Hub and the Edge dramatically 
 
 The following diagram provides a overview for the Real-time Machine Learning architecture.
 
-![Simplified overview](../images/rtml/simple-overview.png)
+![Simplified overview](../images/rtml/simple-overview-2.png)
 
 ## Real-time Machine Learning workflow (Alpha)
 
@@ -97,7 +97,7 @@ Real-time Machine Learning is currently in the Alpha phase. The table below outl
         </td>
         <td>
             <li>Tensorflow support.</li>
-            <li>Additional Python authoring nodes: Real-time Customer Profile Reader, Real-time Customer Profile Writer, Numpy Arrays, XDM2Frame, Frame2XDM. </li>
+            <li>Additional Python authoring nodes: Real-time Customer Profile Reader, Real-time Customer Profile Writer, Numpy Arrays, XDM2Frame, Frame2XDM.</li>
         </td>
     </tr>
     <tr>
