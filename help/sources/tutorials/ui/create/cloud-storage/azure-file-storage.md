@@ -29,19 +29,18 @@ In order to authenticate your Azure File Storage source connector, you must prov
 | `host` | The endpoint of the Azure File Storage instance you are accessing. |
 | `userId` | The user with sufficient access to the Azure File Storage endpoint. |
 | `password` | The Azure File Storage access key. |
-| Connection specification ID | The unique identifier needed to create a connection. The connection spec ID for File Storage is: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
 
 For more information about getting started refer to [this Azure File Storage document](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows).
 
 ## Connect your Azure File Storage account
 
-Once you have gathered your required credentials, you can follow the steps below to create a new DB2 account to connect to Platform.
+Once you have gathered your required credentials, you can follow the steps below to create a new Azure File Storage account to connect to Platform.
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the *[!UICONTROL Sources]* workspace. The *[!UICONTROL Catalog]* screen displays a variety of sources for which you can create an inbound account with, and each source shows the number of existing accounts and dataflows associated with them.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the *[!UICONTROL Databases]* category, select **[!UICONTROL Azure File Storage]** click **on the + icon (+)** to create a new DB2 connector.
+Under the *[!UICONTROL Databases]* category, select **[!UICONTROL Azure File Storage]** click **on the + icon (+)** to create a new Azure File Storage connector.
 
 ![catalog](../../../../images/tutorials/create/azure-file-storage/catalog.png)
 
@@ -57,7 +56,7 @@ If you are using new credentials, select **[!UICONTROL New account]**. On the in
 
 To connect an existing account, select the Azure File Storage account you want to connect with, then select **[!UICONTROL Next]** to proceed.
 
-![existing](../../../../images/tutorials/create/ibm-db2/existing.png)
+![existing](../../../../images/tutorials/create/azure-file-storage/existing.png)
 
 ## Next steps
 
