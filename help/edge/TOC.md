@@ -23,6 +23,7 @@ user-guide-title:  Adobe Experience Platform Edge Network Help
   * [Managing Flicker](fundamentals/managing-flicker.md)
   * [Supporting consent](fundamentals/supporting-consent.md)
   * [Supporting in-app browsers](fundamentals/supporting-in-app-browsers.md)
+  * [Retrieving Experience Cloud ID](fundamentals/retrieving-experience-cloud-id.md)
 * What to Implement {#implement}
   * [Products](what-to-implement/commerce.md)
 * Solution Specific Considerations {#solutions}
