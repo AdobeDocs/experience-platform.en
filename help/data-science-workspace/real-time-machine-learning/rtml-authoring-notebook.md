@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;developer guide;Data Science Workspace;popular topics;Real time machine learning;node reference;
 solution: Experience Platform
-title: Training a model for Real-time Machine Learning
-topic: Training a ML model
+title:  Real-time Machine Learning authoring notebook user guide
+topic: Training and scoring a ML model
 ---
 
 # Real-time Machine Learning authoring notebook user guide
