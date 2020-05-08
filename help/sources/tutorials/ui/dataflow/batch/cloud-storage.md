@@ -37,13 +37,13 @@ After creating your cloud storage connector, the *Select data* step appears, pro
 
 Clicking a listed folder allows you to traverse the folder hierarchy into deeper folders. Once you have a compatible file or folder selected, the **Select data format** dropdown appears, where you can choose a format to display the data in the preview window.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/select-data.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
 
 Once the preview window populates, you can click **Next** to upload all files within the selected folder. If you want to upload to a specific file, select that file from the listing before clicking **Next**.
 
 >[!NOTE] Supported file formats include CSV, JSON, and Parquet. JSON and Parquet files must be XDM-compliant.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/select-data-next.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-next.png)
 
 ## Map data fields to an XDM schema
 
@@ -55,27 +55,27 @@ Choose a dataset for inbound data to be ingested into. You can either use an exi
 
 To ingest data into an existing dataset, select **Use existing dataset**, then click the dataset icon.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/use-existing-data.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-existing-data.png)
 
 The _Select dataset_ dialog appears. Find the dataset you you wish to use, select it, then click **Continue**.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/select-existing-data.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-existing-data.png)
 
 **Use a new dataset**
 
 To ingest data into a new dataset, select **Create new dataset** and enter a name and description for the dataset in the fields provided. Next, click the schema icon.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/use-new-schema.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-new-schema.png)
 
 The _Select schema_ dialog appears. Select the schema you wish to apply to the new dataset, then click **Done**.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/select-schema.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
 Based on your needs, you can choose to map fields directly, or use mapper functions to transform source data to derive computed or calculated values. For more information on data mapping and mapper functions, refer to the tutorial on [mapping CSV data to XDM schema fields](../../../../../ingestion/tutorials/map-a-csv-file.md).
 
 Once your source data is mapped, click **Next**.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/mapping.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
 ## Schedule ingestion runs
 
@@ -92,7 +92,7 @@ Dataflows are designed to automatically ingest data on a scheduled basis. If you
 
 Provide values for the schedule and click **Next**.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/scheduling.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling.png)
 
 ## Name your dataflow
 
@@ -100,7 +100,7 @@ The *Name flow* step appears, allowing you to name and give a brief description 
 
 Provide values for the dataflow and click **Next**.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/name-your-dataflow.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/name-your-dataflow.png)
 
 ### Review your dataflow
 
@@ -112,7 +112,7 @@ The *Review* step appears, allowing you to review your new dataflow before it is
 
 Once you have reviewed your dataflow, click **Finish** and allow some time for the dataflow to be created.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/review.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/review.png)
 
 ## Monitor your dataflow
 
@@ -120,15 +120,15 @@ Once your cloud storage dataflow has been created, you can monitor the data that
 
 Within the *Sources* workspace, click the **Browse** tab to list your base connections. In the displayed list, find the connection that contains the dataflow you wish to monitor by clicking its name.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/browse.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/browse.png)
 
  The *Source activity* screen appears. From here, click the name of a dataset whose activity you want to monitor.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/source-activity.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/source-activity.png)
 
 The *Dataset activity* screen appears. This page displays the rate of messages being consumed in the form of a graph.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/dataset-activity.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/dataset-activity.png)
 
 Below the graph is a list of batches that were ingested into the dataset, showing their status (successful or failed) and the number of records ingested. If a batch is ingested into a Profile-enabled dataset, the number of ingested profiles and identities are displayed.
 
@@ -153,11 +153,11 @@ When a dataflow is created, it immediately becomes active and ingests data accor
 
 Within the *Sources* workspace, click the **Browse** tab. Next, click the name of the base connection that's associated the active dataflow you wish to disable.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/browse.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/browse.png)
 
 The *Source activity* page appears. Select the active dataflow from the list to open its *Properties* column on the right-hand side of the screen, which contains an **Enabled** toggle button. Click the toggle to disable the dataflow. The same toggle can be used to re-enable a dataflow after it has been disabled.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/disable-source.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/disable-source.png)
 
 ### Activate inbound data for Profile population
 
