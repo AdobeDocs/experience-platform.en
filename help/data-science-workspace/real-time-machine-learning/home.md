@@ -20,7 +20,7 @@ A combination of seamless computation on both the Hub and the Edge dramatically 
 
 ## Real-time Machine Learning architecture
 
-The following diagram provides a overview for the Real-time Machine Learning architecture. Currently, alpha has a more simplified version.
+The following diagrams provide a overview for the Real-time Machine Learning architecture. Currently, alpha has a more simplified version.
 
 ![alpha arch](../images/rtml/alpha-arch.png)
 
@@ -52,13 +52,13 @@ Marketers can then define segments and rules that map Real-time Machine Learning
 
 ## Current functionality 
 
-Real-time Machine Learning is currently in Alpha. This functionality is going to update over time.
+Real-time Machine Learning is currently in alpha. The functionality outlined below is subject to change as more features and nodes are made available.
 
 >[!NOTE]
 > Alpha limitations:
 > - Functions used in nodes cannot be serialized. For example, a lambda function used in a Pandas node.
 > - There is a 60 second sleep after edge deployment is done manually.
-> - For deep learning, your data needs to be sent in such a way that when `df.values` is called it returns an array that is acceptable by your DL model. This is because the ONNX model scoring node does `df.values` and sends the output to score against the model.
+> - For deep learning, your data needs to be sent in such a way that when `df.values` is called it returns an array that is acceptable by your DL model. This is because the ONNX model scoring node uses `df.values` and sends the output to score against the model.
 
 ### Features:
 
@@ -70,10 +70,11 @@ Real-time Machine Learning is currently in Alpha. This functionality is going to
             <strong>Features</strong>
         </td>
         <td>
-            <li>Data Science Workspace bring your own Model and author via Notebook launcher integration.</li>
+            <li>Using the RTML notebook template, author, test, and deploy a custom machine learning model.</li>
+            <li>Support for importing pre-trained machine learning models.</li>
+            <li>Real-time Machine Learning SDK.</li>
             <li>Starter set of authoring nodes.</li>
-            <li>Deploy to Hub</li>
-            <li>Scikit Learn based Models.</li>
+            <li>Deployed to Adobe Experience Platform Hub.</li>
         </td>
     </tr>
     <tr>
@@ -86,12 +87,15 @@ Real-time Machine Learning is currently in Alpha. This functionality is going to
     </tr>
     <tr>
         <td>
-            <strong>Authoring</strong>
+            <strong>Authoring Nodes</strong>
         </td>
         <td>
-            <li>Python support</li>
-            <li>Real-time Machine Learning SDK</li>
-            <li>Python authoring nodes: Pandas, ScikitLearn, ONNXNode, Split, ModelUpload, OneHotEncoder.</li>
+            <li>Pandas</li>
+            <li>ScikitLearn</li>
+            <li>ONNXNode</li>
+            <li>Split</li>
+            <li>ModelUpload</li>
+            <li>OneHotEncoder</li>
         </td>
     </tr>
     <tr>
