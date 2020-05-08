@@ -21,5 +21,5 @@ The documentation below provides information on how to connect Azure Data Explor
 
 ## Connect Azure Data Explorer to Platform using the UI
 
-- [Create an Azure Data Explorer source connector in the UI](../../tutorials/ui/create/databases/ats.md)
+- [Create an Azure Data Explorer source connector in the UI](../../tutorials/ui/create/databases/data-explorer.md)
 - [Configure a dataflow for a database connector in the UI](../../tutorials/ui/dataflow/databases.md)
