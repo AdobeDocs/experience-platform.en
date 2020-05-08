@@ -121,6 +121,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - Cloud storage {#cloud-storage}
       - [Azure Data Lake Storage Gen2 connector](tutorials/ui/create/cloud-storage/adls-gen2.md)
       - [Azure Blob and Amazon S3 connector](tutorials/ui/create/cloud-storage/blob-s3.md)
+      - [Azure File Storage connector](tutorials/ui/create/cloud-storage/azure-file-storage.md)
       - [FTP and SFTP connector](tutorials/ui/create/cloud-storage/ftp-sftp.md)
       - [Google Cloud Storage connector](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
     - CRM {#crm}
