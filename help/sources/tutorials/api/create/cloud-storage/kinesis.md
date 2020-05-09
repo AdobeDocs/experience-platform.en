@@ -28,6 +28,7 @@ In order for Flow Service to connect with your AWS Kinesis account, you must pro
 | ---------- | ----------- |
 | `accessKeyId` | The access key ID for your Kinesis account. |
 | `secretKey` | The secret access key for your Kinesis account. |
+| `connectionSpec.id` | The Kinesis connection specification ID: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
 For more information about these values, refer to [this EventHub document](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 

@@ -116,25 +116,7 @@ Once you have reviewed your dataflow, click **Finish** and allow some time for t
 
 ## Monitor your dataflow
 
-Once your cloud storage dataflow has been created, you can monitor the data that is being ingested through it. Follow the steps below to access a dataflow's dataset monitor.
-
-Within the *Sources* workspace, click the **Browse** tab to list your base connections. In the displayed list, find the connection that contains the dataflow you wish to monitor by clicking its name.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/browse.png)
-
- The *Source activity* screen appears. From here, click the name of a dataset whose activity you want to monitor.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/source-activity.png)
-
-The *Dataset activity* screen appears. This page displays the rate of messages being consumed in the form of a graph.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/dataset-activity.png)
-
-Below the graph is a list of batches that were ingested into the dataset, showing their status (successful or failed) and the number of records ingested. If a batch is ingested into a Profile-enabled dataset, the number of ingested profiles and identities are displayed.
-
-You can view more details about a listed batch by clicking its ID.
-
-For more information on monitoring datasets and ingestion, refer to the tutorial on [monitoring streaming dataflows](../../../../../ingestion/quality/monitor-data-flows.md).
+Once your cloud storage dataflow has been created, you can monitor the data that is being ingested through it. For more information on monitoring datasets, see the tutorial on [monitoring streaming dataflows](../../../../../ingestion/quality/monitor-data-flows.md).
 
 ## Next steps
 
@@ -151,7 +133,7 @@ The following sections provide additional information for working with source co
 
 When a dataflow is created, it immediately becomes active and ingests data according to the schedule it was given. You can disable an active dataflow at any time by following the instructions below.
 
-Within the *Sources* workspace, click the **Browse** tab. Next, click the name of the base connection that's associated the active dataflow you wish to disable.
+Within the *Sources* workspace, click the **Browse** tab. Next, click the name of the account that's associated the active dataflow you wish to disable.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/browse.png)
 
