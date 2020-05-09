@@ -9,7 +9,7 @@ topic: overview
 
 Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
-This tutorial uses the Flow Service API to walk you through the steps to connect Azure File Storage (hereinafter referred to as "File Storage") to Experience Platform.
+This tutorial uses the Flow Service API to walk you through the steps to connect Azure File Storage to Experience Platform.
 
 ## Getting started
 
@@ -18,20 +18,20 @@ This guide requires a working understanding of the following components of Adobe
 *   [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 *   [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully connect to File Storage using the Flow Service API.
+The following sections provide additional information that you will need to know in order to successfully connect to Azure File Storage using the Flow Service API.
 
 ### Gather required credentials
 
-In order for Flow Service to connect with File Storage, you must provide values for the following connection properties:
+In order for Flow Service to connect with Azure File Storage, you must provide values for the following connection properties:
 
 | Credential | Description |
 | ---------- | ----------- |
-| `host` | The endpoint of the File Storage instance you are accessing. |
-| `userId` | The user with sufficient access to the File Storage endpoint. |
-| `password` | The File Storage access key. |
-| Connection specification ID | The unique identifier needed to create a connection. The connection spec ID for File Storage is: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
+| `host` | The endpoint of the Azure File Storage instance you are accessing. |
+| `userId` | The user with sufficient access to the Azure File Storage endpoint. |
+| `password` | The password for your Azure File Storage instance |
+| Connection specification ID | The unique identifier needed to create a connection. The connection spec ID for Azure File Storage is: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
 
-For more information about getting started refer to [this File Storage document](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows).
+For more information about getting started refer to [this Azure File Storage document](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows).
 
 ### Reading sample API calls
 
@@ -55,7 +55,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ## Create a connection
 
-A connection specifies a source and contains your credentials for that source. Only one connection is required per File Storage account as it can be used to create multiple source connectors to bring in different data.
+A connection specifies a source and contains your credentials for that source. Only one connection is required per Azure File Storage account as it can be used to create multiple source connectors to bring in different data.
 
 **API format**
 
@@ -65,7 +65,7 @@ POST /connections
 
 **Request**
 
-In order to create a File Storage connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for File Storage is `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`.
+In order to create a Azure File Storage connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for Azure File Storage is `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`.
 
 ```shell
 curl -X POST \
@@ -95,10 +95,10 @@ curl -X POST \
 
 | Property | Description |
 | --------- | ----------- |
-| `auth.params.host` | The endpoint of the File storage instance you are accessing.. |
-| `auth.params.userId` | The user with sufficient access to the File Storage endpoint. |
-| `auth.params.password` | The File Storage access key. |
-| `connectionSpec.id` | The File Storage connection specification ID: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`. |
+| `auth.params.host` | The endpoint of the Azure File Storage instance you are accessing.. |
+| `auth.params.userId` | The user with sufficient access to the Azure File Storage endpoint. |
+| `auth.params.password` | The Azure File Storage access key. |
+| `connectionSpec.id` | The Azure File Storage connection specification ID: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`. |
 
 **Response**
 
