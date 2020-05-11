@@ -9,7 +9,7 @@ topic: developer guide
 
 The following sections walk through calls you can make using the `/jobs` endpoint in the Privacy Service API. Each call includes the general API format, a sample request showing required headers, and a sample response.
 
-## Create a privacy job
+## Create a privacy job {#create-job}
 
 Before creating a new job request, you must first collect identifying information about the data subjects whose data you want to access, delete, or opt out of sale. Once you have the required data, it must be provided in the payload of a POST request to the root endpoint.
 
@@ -153,7 +153,7 @@ A successful response returns the details of the newly created jobs.
 | --- | --- |
 | `jobId` | A read-only, unique system-generated ID for a job. This value is used in the next step of looking up a specific job. |
 
-Once you have successfully submitted the job request, you can proceed to the next step of [checking the job's status](#check-the-status-of-a-job).
+Once you have successfully submitted the job request, you can proceed to the next step of [checking the job's status](#check-status).
 
 ### Create an opt-out-of-sale job {#opt-out}
 
@@ -277,7 +277,7 @@ A successful response returns the details of the newly created jobs.
 
 Once you have successfully submitted the job request, you can proceed to the next step of checking the job's status.
 
-## Check the status of a job
+## Check the status of a job {#check-status}
 
 Using one of the `jobId` values returned in the previous step, you can retrieve information about that job, such as its current processing status.
 
@@ -291,7 +291,7 @@ GET /jobs/{JOB_ID}
 
 | Parameter | Description |
 | --- | --- |
-| `{JOB_ID}` | The ID of the job you want to look up, returned under `jobId` in the response of the [previous step](#create-a-job-request). |
+| `{JOB_ID}` | The ID of the job you want to look up, returned under `jobId` in the response of the [previous step](#create-job). |
 
 **Request**
 
