@@ -61,6 +61,7 @@ alloy("commandName", options)
   })
 ```
 
-## Suppressing errors
+## Consent
 
-If the promise is rejected and you have not added a `catch` call, the error "bubbles up" and is logged in your browser's developer console, regardless of whether logging is enabled in Adobe Experience Platform Web SDK. If this is a concern for you, you can set the `suppressErrors` configuration option to `true` as outlined in [Configuring the SDK](configuring-the-sdk.md).
+If a user has not given their consent for a particular purpose the promise will still be resolved, however, the response object will only contain the information that can be provided in the context of what the user has consented to.
+
