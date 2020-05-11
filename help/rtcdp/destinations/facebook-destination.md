@@ -11,7 +11,7 @@ seo-description: Activate profiles for your Facebook campaigns for audience targ
 
 Activate profiles for your Facebook campaigns for audience targeting, personalization and suppression based on hashed emails.
 
-## Destination specifics {destination-specs}
+## Destination specifics {#destination-specs}
 
 ### Activation Type {#activation-type}
 
