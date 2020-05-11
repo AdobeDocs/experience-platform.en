@@ -1,8 +1,8 @@
 ---
 title: Azure Event Hubs destination
 seo-title: Azure Event Hubs destination
-description: Create a live outbound connection to your Azure Event Hubs storage to stream data from Experience Platform.
-seo-description: Create a live outbound connection to your Azure Event Hubs storage to stream data from Experience Platform.
+description: Create a real-time outbound connection to your Azure Event Hubs storage to stream data from Experience Platform.
+seo-description: Create a real-time outbound connection to your Azure Event Hubs storage to stream data from Experience Platform.
 ---
 
 # Azure Event Hubs destination
@@ -11,7 +11,7 @@ seo-description: Create a live outbound connection to your Azure Event Hubs stor
 
 [!DNL Azure Event Hubs] is a big data streaming platform and event ingestion service. It can receive and process millions of events per second. Data sent to an event hub can be transformed and stored by using any real-time analytics provider or batching/storage adapters.
 
-You can create a live outbound connection to your [!DNL Azure Event Hubs] storage to stream data from Adobe Experience Platform.
+You can create a real-time outbound connection to your [!DNL Azure Event Hubs] storage to stream data from Adobe Experience Platform.
 
 * For more information about [!DNL Azure Event Hubs], see the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about).
 * To connect to [!DNL Azure Event Hubs] using API calls, see the [Streaming destinations API tutorial].

@@ -1,15 +1,17 @@
 ---
 title: AWS Kinesis destination
 seo-title: AWS Kinesis destination
-description: Create a live outbound connection to your AWS Kinesis storage to stream data from Adobe Experience Platform.
-seo-description: Create a live outbound connection to your AWS Kinesis storage to stream data from Adobe Experience Platform.
+description: Create a real-time outbound connection to your AWS Kinesis storage to stream data from Adobe Experience Platform.
+seo-description: Create a real-time outbound connection to your AWS Kinesis storage to stream data from Adobe Experience Platform.
 ---
 
 # AWS Kinesis destination
 
 ## Overview
 
-You can use [!DNL Amazon Kinesis Data Streams] to collect and process large streams of data records in real time. Create a live outbound connection to your [!DNL AWS Kinesis] storage to stream real-time data from Adobe Experience Platform. 
+The [!DNL Amazon Kinesis Data Streams] service allows you to collect and process large streams of data records in real time. 
+
+You can create a real-time outbound connection to your [!DNL AWS Kinesis] storage to stream data from Adobe Experience Platform. 
 
 * For more information about [!DNL Amazon Kinesis], see the [Amazon documentation](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
 * To connect to [!DNL AWS Kinesis] using API calls, see the [Streaming destinations API tutorial].
@@ -19,7 +21,7 @@ You can use [!DNL Amazon Kinesis Data Streams] to collect and process large stre
 
 ## Connect destination {#connect-destination}
 
-See [Cloud storage destinations workflow ](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)for instructions on how to connect to your cloud storage destinations, including [!DNL AWS Kinesis]. 
+See [Cloud storage destinations workflow ](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)for instructions on how to connect to your cloud storage destinations, including those supported by [!DNL AWS]. 
 
 For [!DNL AWS Kinesis] destinations, enter the following information in the create destination workflow:
 
@@ -35,7 +37,6 @@ For [!DNL AWS Kinesis] destinations, enter the following information in the crea
 * **Name**: Provide a name for your connection to [!DNL AWS Kinesis]
 * **Description**: Provide a description for your connection to [!DNL AWS Kinesis].
 * **stream**: Provide a name for the stream to your [!DNL AWS Kinesis] destination
-* **region**: Indicate which [!DNL AWS Kinesis] region to stream data to. 
 
 ![Input fields in the setup step](/help/rtcdp/destinations/assets/aws-kinesis-setup-step.png)
 
