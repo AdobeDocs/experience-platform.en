@@ -7,7 +7,7 @@ seo-description: Instructions to connect to your social network ad accounts
 
 # Social Network destinations authentication workflow {#social-network-destinations-workflow}
 
-## Workflow to create cloud storage destinations
+## Workflow to create social network destinations
 
 This tutorial uses Facebook as an example, but the workflow in Adobe Real-time Customer Data Platform will be the same for all social network destinations, once more are added to the product.
 
