@@ -246,12 +246,14 @@ model_id = msg_model.model['model_id']
 print("Model ID : ", model_id)
 ```
 
->[!TIP]
+>[!NOTE]
 >Change the `model_path` string value to name your model.
 
 ![ONNX model]()
 
 ### Uploading your own pre-trained ONNX model {#pre-trained-model-upload}
+
+
 
 
 
