@@ -72,13 +72,20 @@ Using one of the following options, you are going to write python code to read, 
 
 ### Training your own model {#training-your-own-model}
 
-Start by loading your training data. In the **RTML Authoring** template, the CSV dataset is grabbed from Github. If you wish to use a dataset from within Adobe Experience Platform, uncomment the cell below *Load Training Data*. Next, you need to replace the `dataset_id` with the appropriate value.
+Start by loading your training data.
+
+>[!NOTE]
+>In the **RTML Authoring** template, the CSV dataset is grabbed from Github.
+
+If you wish to use a dataset from within Adobe Experience Platform, uncomment the cell below *Load Training Data*. Next, you need to replace `DATASET_ID` with the appropriate value.
+
+![rtml dataset](../images/rtml/rtml-dataset.png)
 
 To access a dataset in your JupyterLab notebook, select the **Data** tab in the left-navigation of JupyterLab. The *Datasets* and *Schemas* directories appear. Select **[!UICONTROL Datasets]** and right-click, then select the **[!UICONTROL Explore Data in Notebook]** option from the dropdown menu on the dataset you wish to use. An executable code entry appears at the bottom of the notebook. This cell has your `dataset_id`.
 
 ![dataset access](../images/rtml/access-dataset.png)
 
-After uncommenting, copy and paste the `dataset_id` in the following cell. 
+After uncommenting, copy and paste your dataset ID by replacing `DATASET_ID` in the following cell. 
 
 ![rtml dataset](../images/rtml/rtml-dataset.png)
 
