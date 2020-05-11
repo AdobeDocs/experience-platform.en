@@ -11,18 +11,32 @@ seo-description: Activate profiles for your Facebook campaigns for audience targ
 
 Activate profiles for your Facebook campaigns for audience targeting, personalization and suppression based on hashed emails.
 
+## Use Cases
+
+To help you better understand how and when you should use the Facebook destination, here are two sample use cases that Adobe Real-time Customer Data Platform customers can solve by using this feature.
+
+
+### Use Case #1
+An online retailer wants to reach existing customers through social platforms and show them personalized offers based on their previous orders. The online retailer can ingest email addresses from their own CRM to Adobe Real-time CDP, build segments from their own offline data, and send these segments to the Facebook social platform, optimizing their advertising spending.
+
+
+### Use Case #2
+An airline has different customer tiers (Bronze, Silver, and Gold), and wants to provide each of the tiers with personalized offers via social platforms. However, not all customers use the airline's mobile app, and some of them have not logged on to the company's website. The only identifiers the company has about these customers are membership IDs and email addresses.
+To target them across social media, they can onboard the customer data from their CRM into Adobe Real-time CDP, using the hashed email addresses as identifiers.
+Next, they can combine their offline data with their existing online activity data, to build new audience segments that they can target through the Facebook destination.
+
 ## Destination specifics {#destination-specs}
 
 ### Activation Type {#activation-type}
 
-Segment Export - you are exporting all members of a segment (audience) with their identifiers (name, phone number, etc.) used in the Facebook destination
+Segment Export - you are exporting all members of a segment (audience) with their identifiers (name, phone number, etc.) used in the Facebook destination.
 
-### Prerequisites {#prerequisites}
+### Facebook account prerequisites {#facebook-account-prerequisites}
 
 Before you can send your audience segments to [!DNL Facebook], make sure you meet the following requirements:
 
-1. Your [!DNL Facebook] user account must have the **Manage campaigns** permission enabled for the Ad account that you plan to use.
-2. Add the **Adobe Experience Cloud** business account as an advertising partner in your [!DNL Facebook Ad Account]. Use `business ID=206617933627973`. See [Add Partners to Your Business Manager](https://www.facebook.com/business/help/1717412048538897) for details.
+1. Your [!DNL Facebook] user account must have the **[!DNL Manage campaigns]** permission enabled for the Ad account that you plan to use.
+2. Add the **Adobe Experience Cloud** business account as an advertising partner in your [!DNL Facebook Ad Account]. Use `business ID=206617933627973`. See [Add Partners to Your Business Manager](https://www.facebook.com/business/help/1717412048538897) in the Facebook documentation for details.
     >[!IMPORTANT]
     > When configuring the permissions for Adobe Experience Cloud, you must enable the **Manage campaigns** permission. This is required for the [!DNL Adobe Real-time CDP] integration.
 3. Read and sign the [!DNL Facebook Custom Audiences] Terms of Service. To do this, go to `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, where `accountID` is your [!DNL Facebook Ad Account ID].
@@ -30,6 +44,8 @@ Before you can send your audience segments to [!DNL Facebook], make sure you mee
 ### Email hashing requirements {#email-hashing-requirements}
 
 Facebook requires that no personally identifiable information (PII) is sent in clear. Therefore, the audiences activated to Facebook must be keyed off *hashed* email addresses. You can choose to hash email addresses before ingesting them into Adobe Experience Platform, or you can choose to work with email addresses in clear in Experience Platform and have our algorithm hash them on activation.
+
+To learn about ingesting email addresses in Experience Platform, see the [batch ingestion overview](/help/ingestion/batch-ingestion/overview.md) and the [steaming ingestion overview](/help/ingestion/streaming-ingestion/overview.md).
 
 If you select to hash the email addresses yourself, make sure to comply with the following requirements:
 
@@ -43,14 +59,14 @@ If you select to hash the email addresses yourself, make sure to comply with the
 
 >[!TIP]
 >
->If you choose not to hash email addresses, Adobe Real-time CDP will do that for you when you activate segments to Facebook. In the activation workflow, select the `Email_LC_SHA256` option as shown below.
+>If you choose not to hash email addresses, Adobe Real-time CDP will do that for you when you activate segments to Facebook. In the [activation workflow](/help/rtcdp/destinations/activate-destinations.md#activate-data) (see step 5), select the `Email_LC_SHA256` option as shown below.
 
 
 ![Hashing on activation](/help/rtcdp/destinations/assets/identity-mapping.png)
 
-## Connect destination {#connect-destination}
+## Connect to destination {#connect-destination}
 
-To connect the Facebook destination, see [Social network destinations authentication workflow](/help/rtcdp/destinations/social-network-destinations-workflow.md). 
+To connect to the Facebook destination, see [Social network destinations authentication workflow](/help/rtcdp/destinations/social-network-destinations-workflow.md). 
 
 
 ## Activate segments to Facebook {#activate-segments}

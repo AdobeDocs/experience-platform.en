@@ -9,7 +9,7 @@ seo-description: Instructions to connect to your social network ad accounts
 
 ## Workflow to create cloud storage destinations
 
-This tutorial uses Facebook as an example, but the workflow in Adobe Real-time Customer Data Platform will be the same for all Social Network destinations, once more are added to the product.
+This tutorial uses Facebook as an example, but the workflow in Adobe Real-time Customer Data Platform will be the same for all social network destinations, once more are added to the product.
 
 1. In **[!UICONTROL Destinations > Catalog]**, scroll to the **[!UICONTROL Social]** category. Select your preferred social network destination, then select **[!UICONTROL Connect destination]**.
 
@@ -31,13 +31,24 @@ This tutorial uses Facebook as an example, but the workflow in Adobe Real-time C
 
     >[!IMPORTANT]
     >
-    > * The *Single Identity Personalization* marketing use case is selected by default for social network destinations and cannot be removed. 
-    > * For Facebook destinations. **[!UICONTROL Account ID]** is your Facebook Ad Account ID. You can find this ID in the Facebook Ads Manager. Prefix the ID with `act_` as shown below: 
+    > For Facebook destinations. **[!UICONTROL Account ID]** is your Facebook Ad Account ID. You can find this ID in the Facebook Ads Manager. Prefix the ID with `act_` as shown below: 
 
-    ![Connect to social network destination - setup step](/help/rtcdp/destinations/assets/social-networks-setup-step.png)
+    ![Connect to social network destination - setup step](/help/rtcdp/destinations/assets/social-network-setup-step.png)
 
 5. Your destination is now created. You can select **[!UICONTROL Save & Exit]** if you want to activate segments later on or you can select **[!UICONTROL Next]** to continue the workflow and select segments to activate. In either case, see the next section, [Activate segments to social networks](#activate-segments), for the rest of the workflow.
 
 ## Activate segments to social networks {#activate-segments}
 
 For instructions on how to activate segments to social networks, see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md).
+
+
+<!--
+
+// update IMPORTANT note in step 4 after marketing use cases are released for RTCDP
+
+    >[!IMPORTANT]
+    >
+    > * The *Single Identity Personalization* marketing use case is selected by default for social network destinations and cannot be removed. 
+    > * For Facebook destinations. **[!UICONTROL Account ID]** is your Facebook Ad Account ID. You can find this ID in the Facebook Ads Manager. Prefix the ID with `act_` as shown below: 
+
+    ![Connect to social network destination - setup step](/help/rtcdp/destinations/assets/social-networks-setup-step.png)
