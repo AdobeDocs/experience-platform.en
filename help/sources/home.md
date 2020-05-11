@@ -39,6 +39,7 @@ Cloud storage sources can bring your own data into Platform without the need to 
 
 - [Azure Data Lake Storage Gen2 connector](connectors/cloud-storage/adls-gen2.md)
 - [Azure Blob and Amazon S3 connector](connectors/cloud-storage/blob-s3.md)
+- [Azure File Storage connector](connectors/cloud-storage/azure-file-storage.md)
 - [FTP and SFTP connector](connectors/cloud-storage/ftp-sftp.md)
 - [Google Cloud Storage connector](connectors/cloud-storage/google-cloud-storage.md)
 
