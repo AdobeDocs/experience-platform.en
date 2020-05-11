@@ -48,7 +48,7 @@ See [Activate profiles and segments to a destination](/help/rtcdp/destinations/a
 
 ## Exported data
 
-Your exported Experience Platform data lands in [!DNL Azure Event Hubs] in JSON format. For example, an incoming stream containing the hashed email identity of an audience that has exited a certain segment could look like this:
+Your exported Experience Platform data lands in [!DNL Azure Event Hubs] in JSON format. For example, an event stream containing the hashed email identity of an audience that has exited a certain segment could look like this:
 
 ```
 

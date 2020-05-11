@@ -9,7 +9,7 @@ seo-description: Create a real-time outbound connection to your AWS Kinesis stor
 
 ## Overview
 
-The [!DNL Amazon Kinesis Data Streams] service allows you to collect and process large streams of data records in real time. 
+The [!DNL Kinesis Data Streams] service by AWS allows you to collect and process large streams of data records in real time. 
 
 You can create a real-time outbound connection to your [!DNL AWS Kinesis] storage to stream data from Adobe Experience Platform. 
 
@@ -28,7 +28,7 @@ For [!DNL AWS Kinesis] destinations, enter the following information in the crea
 ### In the Authentication step
 
 * **AWS Kinesis access key and secret key**: In [!DNL AWS Kinesis], generate an access key - secret access key pair to grant Adobe Real-time CDP access to your [!DNL AWS Kinesis] account. Learn more in the [AWS Kinesis documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **region**: Indicate which [!DNL AWS Kinesis] region to stream data to.
+* **region**: Indicate which [!DNL AWS] region to stream data to.
 
 ![Input fields in the authentication step](/help/rtcdp/destinations/assets/aws-kinesis-authentication-step.png)
 
@@ -40,9 +40,13 @@ For [!DNL AWS Kinesis] destinations, enter the following information in the crea
 
 ![Input fields in the setup step](/help/rtcdp/destinations/assets/aws-kinesis-setup-step.png)
 
+<!--
+
 >[!IMPORTANT]
 >
 >Adobe Real-time CDP needs `write` permissions on the bucket object where the export files will be delivered.
+
+-->
 
 ## Activate segments {#activate-segments}
 
@@ -50,7 +54,7 @@ See [Activate profiles and segments to a destination](/help/rtcdp/destinations/a
 
 ## Exported data
 
-Your exported Experience Platform data lands in [!DNL AWS Kinesis] in JSON format. For example, an incoming stream containing the hashed email identity of an audience that has exited a certain segment could look like this:
+Your exported Experience Platform data lands in [!DNL AWS Kinesis] in JSON format. For example, an event containing the hashed email identity of an audience that has exited a certain segment could look like this:
 
 ```
 
