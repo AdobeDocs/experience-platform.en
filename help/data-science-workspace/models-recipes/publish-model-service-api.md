@@ -124,7 +124,7 @@ Note that an ML Service can be created using an ML Instance without scheduling a
 
 You can create an ML Service by publishing an ML Instance with scheduled Experiment Runs for scoring, which will create an ordinary Experiment entity for training. A training Experiment Run is generated and will be used for all scheduled scoring Experiment Runs. Ensure you have the `mlInstanceId`, `trainingDataSetId`, and `scoringDataSetId` required for the creation of the ML Service, and that they exist and are valid values.
 
-***API format**
+**API format**
 
 ```http
 POST /mlServices
@@ -197,7 +197,7 @@ A successful response returns the details of the newly created ML Service. This 
 
 To publish an existing ML Instance as an ML Service with scheduled training and scoring Experiment Runs, you are required to provide both training and scoring schedules. When an ML Service of this configuration is created, scheduled Experiment entities for both training and scoring is also created. Note that training and scoring schedules do not have to be the same. During a scoring job execution, the latest trained model produced by scheduled training Experiment Runs will be fetched and used for the scheduled scoring run.
 
-***API format**
+**API format**
 
 ```http
 POST /mlServices
