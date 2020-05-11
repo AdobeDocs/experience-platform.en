@@ -68,7 +68,7 @@ The response received is a list of nodes.
 Using one of the following options, you are going to write python code to read, preprocess, and analyze data. Next, you need to train your own ML model, serialize it into ONNX format, and finally upload it to Real-time Machine Learning model store.
 
 - [Training your own model](#training-your-own-model)
-- [Uploading your own pre-trained ONNX model]()
+- [Uploading your own pre-trained ONNX model](#pre-trained-model-upload)
 
 ### Training your own model {#training-your-own-model}
 
@@ -92,6 +92,171 @@ After uncommenting, copy and paste your dataset ID by replacing `DATASET_ID` in 
 Once complete, right-click and delete the cell that you generated at the bottom of the notebook.
 
 ### Training properties
+
+Using the template provided, modify any of the training properties within `config_properties`.
+
+```python
+config_properties = {
+    "train_records_limit":1000000,
+    "n_estimators": "80",
+    "max_depth": "5",
+    "ten_id": "_experienceplatform"  
+}
+```
+
+### Prepare your model
+
+Using the *RTML Authoring* template, you need to analyze, pre-process, train, and evaluate your ML model. This is done by applying data transformations and building a training pipeline.
+
+**Data tranformations**
+
+The *RTML Authoring* templates *Data Transformations* cell is expected to be modified to work with your own dataset. Typically this involves renaming columns, data rollup, and data preparation/feature engineering. 
+
+>[!NOTE]
+>The following example has been condensed for readability purposes using `[ ... ]`. Please view the *RTML Authoring* template for the complete code cell.
+
+```python
+df1.rename(columns = {config_properties['ten_id']+'.identification.ecid' : 'ecid',
+                     [ ... ]}, inplace=True)
+df1 = df1[['ecid', 'km', 'cartype', 'age', 'gender', 'carbrand', 'leasing', 'city', 
+       'country', 'nationality', 'primaryuser', 'purchase', 'pricequote', 'timestamp']]
+print("df1 shape 1", df1.shape)
+#########################################
+# Data Rollup
+######################################### 
+df1['timestamp'] = pd.to_datetime(df1.timestamp)
+df1['hour'] = df1['timestamp'].dt.hour.astype(int)
+df1['dayofweek'] = df1['timestamp'].dt.dayofweek
+
+df1.loc[(df1['purchase'] == 'yes'), 'purchase'] = 1
+df1.purchase.fillna(0, inplace=True)
+df1['purchase'] = df1['purchase'].astype(int)
+
+[ ... ]
+
+print("df1 shape 2", df1.shape)
+
+#########################################
+# Data Preparation/Feature Engineering
+#########################################      
+
+df1['carbrand'] = df1['carbrand'].str.lower()
+df1['country'] = df1['country'].str.lower()
+df1.loc[(df1['carbrand'] == 'vw'), 'carbrand'] = 'volkswagen'
+
+[ ... ]
+
+df1['age'].fillna(df1['age'].median(), inplace=True)
+df1['gender'].fillna('notgiven', inplace=True)
+
+[ ... ]
+
+df1['city'] = df1.groupby('country')['city'].transform(lambda x : x.fillna(x.mode()))
+df1.dropna(subset = ['pricequote'], inplace=True)
+print("df1 shape 3", df1.shape)
+print(df1)
+
+#grouping
+grouping_cols = ['carbrand', 'cartype', 'city', 'country']
+
+for col in grouping_cols:
+    df_idx = pd.DataFrame(df1[col].value_counts().head(6))
+
+    def grouping(x):
+        if x in df_idx.index:
+            return x
+        else:
+            return "Others"
+    df1[col] = df1[col].apply(lambda x: grouping(x))
+
+def age(x):
+    if x < 20:
+        return "u20"
+    elif x > 19 and x < 29:
+    [ ... ]
+    else: 
+        return "Others"
+
+df1['age'] = df1['age'].astype(int)
+df1['age_bucket'] = df1['age'].apply(lambda x: age(x))
+
+df_final = df1[['hour', 'dayofweek','age_bucket', 'gender', 'city',  
+   'country', 'carbrand', 'cartype', 'leasing', 'pricequote', 'purchase']]
+print("df final", df_final.shape)
+
+cat_cols = ['age_bucket', 'gender', 'city', 'dayofweek', 'country', 'carbrand', 'cartype', 'leasing']
+df_final = pd.get_dummies(df_final, columns = cat_cols)
+```
+
+Run the provided cell to see an example result. The output table returned from the `carinsurancedataset.csv` dataset returns the modifications defined.
+
+![Example of data transformations]()
+
+**Training pipeline**
+
+Next you need to create the training pipeline. This is going to look similar to any other training pipeline file except you need to convert and generate an ONNX file.
+
+Using the data transformations defined in your previous cell, modify the template. The following code highlighted below is used for generating an ONNX file in your feature pipeline. Please view the *RTML Authoring* template for the complete pipeline code cell.
+
+```python
+#for generating onnx
+def generate_onnx_resources(self):        
+    install_dir = os.path.expanduser('~/my-workspace')
+    print("Generating Onnx")
+        
+    from skl2onnx import convert_sklearn
+    from skl2onnx.common.data_types import FloatTensorType
+        
+    # ONNX-ification
+    initial_type = [('float_input', FloatTensorType([None, self.feature_len]))]
+
+    print("Converting Model to Onnx")
+    onx = convert_sklearn(self.model, initial_types=initial_type)
+             
+    with open("model.onnx", "wb") as f:
+        f.write(onx.SerializeToString())
+            
+    print("Model onnx created")
+```
+
+Once you have completed your training pipeline and modified your data through data transformations, use the following cell to run training.
+
+```python
+model = train(config_properties, df_final)
+```
+
+### Generate and upload an ONNX model
+
+Once you have completed a successful training run, you need to generate an ONNX model and upload the trained model to the Real-time Machine Learning model store. Once the following cells have been run, your ONNX model appears in the left rail alongside all your other notebooks.
+
+```python
+import os
+import skl2onnx, subprocess
+
+model.generate_onnx_resources()
+```
+
+```python
+model_path = "model.onnx"
+
+model = ModelUpload(params={'model_path': model_path})
+msg_model = model.process(None, 1)
+model_id = msg_model.model['model_id']
+ 
+print("Model ID : ", model_id)
+```
+
+>[!TIP]
+>Change the `model_path` string value to name your model.
+
+![ONNX model]()
+
+### Uploading your own pre-trained ONNX model {#pre-trained-model-upload}
+
+
+
+
+
 
 
 
