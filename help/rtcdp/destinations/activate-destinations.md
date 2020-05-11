@@ -22,9 +22,14 @@ To activate data to destinations, you must have successfully [connected a destin
 3. Select **[!UICONTROL Activate]**;
 4. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to the destination.
     ![segments-to-destination](/help/rtcdp/destinations/assets/select-segments.png)
-5. *Conditional*. This step only applies for segments mapped to email marketing destinations. <br> On the **[!UICONTROL Destination Attributes]** page, select **[!UICONTROL Add new field]** and select the attributes that you want to send to the destination.
+5. *Conditional*. This step differs depending on the type of destination where you are activating your segments. <br> For *email marketing destinations* and *cloud storage destinations*, on the **[!UICONTROL Select Attributes]** page, select **[!UICONTROL Add new field]** and select the attributes that you want to send to the destination.
    We recommend one of the attributes to be a [unique identifier](/help/rtcdp/destinations/email-marketing-destinations.md#identity) from your union schema. For more information about mandatory attributes, see Identity in the [Email marketing destinations](/help/rtcdp/destinations/email-marketing-destinations.md#identity) article. 
-   ![destination-attributes](/help/rtcdp/destinations/assets/destination-attributes.png)
+   ![destination-attributes](/help/rtcdp/destinations/assets/select-attributes-step.png)
+   For *social network destinations*, in the **[!UICONTROL Identity mapping]** step, select source attributes to map to target identities.
+   ![identity mapping before filling in fields](/help/rtcdp/destinations/assets/facebook-identity-mapping-1.png)
+   In the example below, the personal email address in the identity schema will be hashed to comply with the Facebook [email hashing requirements](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements). Press **[!UICONTROL Next]** after selecting the mapping.
+   ![identity mapping after filling in fields](/help/rtcdp/destinations/assets/facebook-identity-mapping-2.png)
+
 6. On the **[!UICONTROL Segment schedule]** page, you can see the start date for sending data to the destination, as well as the frequency of sending data to the destination.
 
     >[!IMPORTANT]
