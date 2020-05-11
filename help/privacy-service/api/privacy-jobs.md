@@ -7,7 +7,7 @@ topic: developer guide
 
 # Privacy jobs
 
-The following sections walk through calls you can make using the root endpoint (`/`) in the Privacy Service API. Each call includes the general API format, a sample request showing required headers, and a sample response.
+The following sections walk through calls you can make using the `/jobs` endpoint in the Privacy Service API. Each call includes the general API format, a sample request showing required headers, and a sample response.
 
 ## Create a privacy job
 
@@ -29,7 +29,7 @@ This section demonstrates how to make an access/delete job request using the API
 **API format**
 
 ```http
-POST /
+POST /jobs
 ```
 
 **Request**
@@ -162,7 +162,7 @@ This section demonstrates how to make an opt-out-of-sale job request using the A
 **API format**
 
 ```http
-POST /
+POST /jobs
 ```
 
 **Request**
@@ -286,7 +286,7 @@ Using one of the `jobId` values returned in the previous step, you can retrieve 
 **API format**
 
 ```http
-GET /{JOB_ID}
+GET /jobs/{JOB_ID}
 ```
 
 | Parameter | Description |
@@ -387,10 +387,10 @@ You can view a list of all available job requests within your organization by ma
 This request format uses a `regulation` query parameter on the root (`/`) endpoint, therefore it begins with a question mark (`?`) as shown below. The response is paginated, allowing you to use other query parameters (`page` and `size`) to filter the response. You can separate multiple parameters using ampersands (`&`).
 
 ```http
-GET ?regulation={REGULATION}
-GET ?regulation={REGULATION}&page={PAGE}
-GET ?regulation={REGULATION}&size={SIZE}
-GET ?regulation={REGULATION}&page={PAGE}&size={SIZE}
+GET /jobs?regulation={REGULATION}
+GET /jobs?regulation={REGULATION}&page={PAGE}
+GET /jobs?regulation={REGULATION}&size={SIZE}
+GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 ```
 
 | Parameter | Description |
