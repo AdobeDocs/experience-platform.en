@@ -21,7 +21,9 @@ For more information on available data usage labels in Experience Platform and t
 
 ## Label inheritance for audience segments
 
-All audience segments created by [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) inherit the usage labels of their corresponding datasets, regardless of whether the labels have been applied at the dataset or field level. This allows applications built on top of Experience Platform (such as Real-time Customer Data Platform) to provide automatic data usage policy enforcement when activating segments to destinations.
+All audience segments created by [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) inherit the usage labels of their corresponding datasets. This allows applications built on top of Experience Platform (such as Real-time Customer Data Platform) to provide automatic data usage policy enforcement when activating segments to destinations.
+
+In addition to inheriting dataset-level labels, segments inherit all field-level labels from their associated datasets by default. Depending on how your Platform-based application consumes segments, you can potentially specify which fields are used, thereby preventing the segment from inheriting labels from excluded fields.
 
 For more information on how automatic enforcement works in Real-time CDP, see the [Real-time CDP Data Governance overview](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance).
 
