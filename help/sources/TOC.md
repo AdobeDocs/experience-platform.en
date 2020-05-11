@@ -21,6 +21,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
   - Cloud storage {#cloud-storage}
     - [Azure Data Lake Storage Gen2 connector](connectors/cloud-storage/adls-gen2.md)
     - [Azure Blob and Amazon S3 connector](connectors/cloud-storage/blob-s3.md)
+    - [Azure File Storage connector](connectors/cloud-storage/azure-file-storage.md)
     - [FTP and SFTP connector](connectors/cloud-storage/ftp-sftp.md)
     - [Google Cloud Storage connector](connectors/cloud-storage/google-cloud-storage.md)
   - CRM {#crm}
@@ -31,7 +32,6 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [ServiceNow connector](connectors/customer-success/servicenow.md)
   - Databases {#databases}
     - [Amazon Redshift connector](connectors/databases/redshift.md)
-    - [Apache Cassandra connector](connectors/databases/cassandra.md)
     - [Apache Hive on Azure HDInsights connector](connectors/databases/hive.md)
     - [Apache Spark on Azure HDInsights connector](connectors/databases/spark.md)
     - [Azure Data Explorer connector](connectors/databases/data-explorer.md)
@@ -59,6 +59,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Amazon S3 connector](tutorials/api/create/cloud-storage/s3.md)
       - [Azure Blob connector](tutorials/api/create/cloud-storage/blob.md)
       - [Azure Data Lake Storage Gen2 connector](tutorials/api/create/cloud-storage/adls-gen2.md)
+      - [Azure File Storage connector](tutorials/api/create/cloud-storage/azure-file-storage.md)
       - [Google Cloud Storage connector](tutorials/api/create/cloud-storage/google.md)
       - [SFTP connector](tutorials/api/create/cloud-storage/sftp.md)
     - CRM {#crm}
@@ -70,7 +71,6 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [ServiceNow connector](tutorials/api/create/customer-success/servicenow.md)
     - Databases {#databases}
       - [Amazon Redshift connector](tutorials/api/create/databases/redshift.md)
-      - [Apache Cassandra connector](tutorials/api/create/databases/cassandra.md)
       - [Apache Hive on Azure HDInsights connector](tutorials/api/create/databases/hive.md)
       - [Apache Spark on Azure HDInsights connector](tutorials/api/create/databases/spark.md)
       - [Azure Data Explorer connector](tutorials/api/create/databases/data-explorer.md)
@@ -108,8 +108,8 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [Collect marketing automation data](tutorials/api/collect/marketing-automation.md)
     - [Collect payment data](tutorials/api/collect/payments.md)
     - [Collect protocol data](tutorials/api/collect/protocols.md)
-  - [Ingest parquet data from a third-party cloud storage system](tutorials/api/create-dataset-base-connection.md)
-  - [Create a dataset base connection using the Flow Service API](tutorials/api/cloud-storage-parquet.md)
+  - [Ingest parquet data from a third-party cloud storage system](tutorials/api/cloud-storage-parquet.md)
+  - [Create a dataset base connection using the Flow Service API](tutorials/api/create-dataset-base-connection.md)
 - UI tutorials {#ui-tutorials}
   - Create a source connector {#create}
     - Adobe applications {#adobe-applications}
@@ -121,6 +121,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - Cloud storage {#cloud-storage}
       - [Azure Data Lake Storage Gen2 connector](tutorials/ui/create/cloud-storage/adls-gen2.md)
       - [Azure Blob and Amazon S3 connector](tutorials/ui/create/cloud-storage/blob-s3.md)
+      - [Azure File Storage connector](tutorials/ui/create/cloud-storage/azure-file-storage.md)
       - [FTP and SFTP connector](tutorials/ui/create/cloud-storage/ftp-sftp.md)
       - [Google Cloud Storage connector](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
     - CRM {#crm}
@@ -132,12 +133,15 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Amazon Redshift connector](tutorials/ui/create/databases/redshift.md)
       - [Apache Hive on Azure HDInsights connector](tutorials/ui/create/databases/hive.md)
       - [Apache Spark on Azure HDInsights connector](tutorials/ui/create/databases/spark.md)
+      - [Azure Data Explorer connector](tutorials/ui/create/databases/data-explorer.md)
       - [Azure Synapse Analytics connector](tutorials/ui/create/databases/synapse-analytics.md)
       - [Azure Table Storage connector](tutorials/ui/create/databases/ats.md)
       - [Google Big Query connector](tutorials/ui/create/databases/bigquery.md)
+      - [IBM DB2 connector](tutorials/ui/create/databases/ibm-db2.md)
       - [MariaDB connector](tutorials/ui/create/databases/mariadb.md)
       - [Microsoft SQL Server connector](tutorials/ui/create/databases/sql-server.md)
       - [MySQL connector](tutorials/ui/create/databases/mysql.md)
+      - [Oracle connector](tutorials/ui/create/databases/oracle.md)
       - [Phoenix connector](tutorials/ui/create/databases/phoenix.md)
       - [PostgreSQL connector](tutorials/ui/create/databases/postgres.md)
     - Marketing automation {#marketing-automation}
