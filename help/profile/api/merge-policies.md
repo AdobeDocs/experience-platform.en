@@ -166,7 +166,7 @@ Where the value of `name` is the name of the XDM class upon which the schema ass
 
 ## Access merge policies {#access-merge-policies}
 
-Using the Real-time Customer Profile API, the `/config/mergePolicies` endpoint allows you perform a lookup request to view a specific merge policy by its ID, or access all of the merge policies in your IMS Organization, filtered by specific criteria.
+Using the Real-time Customer Profile API, the `/config/mergePolicies` endpoint allows you perform a lookup request to view a specific merge policy by its ID, or access all of the merge policies in your IMS Organization, filtered by specific criteria. You can also use the `/config/mergePolicies/bulk-get` endpoint to retrieve multiple merge policies by their IDs. Steps for performing each of these calls are outlined in the following sections.
 
 ### Access a single merge policy by ID
 
@@ -213,6 +213,99 @@ A successful response returns the details of the merge policy.
     },
     "default": false,
     "updateEpoch": 1551127597
+}
+```
+
+See the [components of merge policies](#components-of-merge-policies) section at the beginning of this document for details on each of the individual elements that make up a merge policy.
+
+### Retrieve multiple merge policies by their IDs
+
+You can retrieve multiple merge policies by making a POST request to the `/config/mergePolicies/bulk-get` endpoint and including the IDs of the merge policies you wish to retrieve in the request body.
+
+**API format**
+
+```http
+POST /config/mergePolicies/bulk-get
+```
+
+**Request**
+
+The request body includes an "ids" array with individual objects containing the "id" for each merge policy for which you would like to retrieve details.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/core/ups/config/mergePolicies/bulk-get' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "ids": [
+          {
+            "id": "0bf16e61-90e9-4204-b8fa-ad250360957b"
+          }
+          {
+            "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130"
+          }
+        ]
+      }'
+```
+
+**Response**
+
+A successful response returns HTTP Status 207 (Multi-Status) and the details of the merge policies whose IDs were provided in the POST request.
+
+```json
+{
+    "id": "0bf16e61-90e9-4204-b8fa-ad250360957b",
+    "name": "Profile Default Merge Policy",
+    "imsOrgId": "{IMS_ORG}",
+    "sandbox": {
+        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "version": 1,
+    "identityGraph": {
+        "type": "none"
+    },
+    "attributeMerge": {
+        "type": "timestampOrdered"
+    },
+    "default": true,
+    "updateEpoch": 1552086578
+},
+{
+    "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130",
+    "name": "Dataset Precedence Merge Policy",
+    "imsOrgId": "{IMS_ORG}",
+    "sandbox": {
+        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "version": 1,
+    "identityGraph": {
+        "type": "pdg"
+    },
+    "attributeMerge": {
+        "type": "dataSetPrecedence",
+        "order": [
+            "5b76f86b85d0e00000be5c8b",
+            "5b76f8d787a6af01e2ceda18"
+        ]
+    },
+    "default": false,
+    "updateEpoch": 1576099719
 }
 ```
 
