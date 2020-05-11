@@ -227,7 +227,7 @@ model = train(config_properties, df_final)
 
 ### Generate and upload an ONNX model
 
-Once you have completed a successful training run, you need to generate an ONNX model and upload the trained model to the Real-time Machine Learning model store. Once the following cells have been run, your ONNX model appears in the left rail alongside all your other notebooks.
+Once you have completed a successful training run, you need to generate an ONNX model and upload the trained model to the Real-time Machine Learning model store. Once the following cells have been run, your ONNX model appears in the left-rail alongside all your other notebooks.
 
 ```python
 import os
@@ -253,8 +253,82 @@ print("Model ID : ", model_id)
 
 ### Uploading your own pre-trained ONNX model {#pre-trained-model-upload}
 
+Using the upload button located in JupyterLab notebooks, upload your pre-trained ONNX model to the Data Science Workspace notebooks environment.
 
+![upload icon](../images/rtml/upload.png)
 
+Next, change the `model_path` string value in the *RTML Authoring* notebook to match your ONNX model name. Once complete, run the *Set model path* cell and then run the *Upload your model to RTML Model Store* cell. Your model location and model ID are both returned in the response when successful.
+
+![model id](../images/rtml/model-id.png)
+
+## DSL creation
+
+This section outlines creating a DSL. You are going to author the nodes that includes any preprocessing of data along with ONNX node. Next, a DSL graph is created using nodes and edges. Edges connect nodes using tuple based format (node_1, node_2) and note that the graph should not have cycles.
+
+>[!IMPORTANT] 
+>ONNX node is mandatory. Without ONNX node, the application will fail.
+
+### Node authoring
+
+>[!NOTE]
+> You are likely to have many nodes based on the type of data being used. The following example outlines only a single node in the *RTML Authoring* template. Please view the *RTML Authoring* template for the complete code cell.
+
+The Pandas node below uses `"import": "map"` to import the method name as a string in the parameters, followed by, inputting the parameters as a map function. The example below does this by using `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`. After you have the map in place, you have the option to set `inplace` as true or false. Set `inplace` as `True` or `False` based on whether you want to apply transformation inplace or not. By default `"inplace": False` creates a new column. Support to provide a new column name is set to be added in a subsequent release. The last line `cols` can be a single column name or a list of columns. Specify the columns on which you want to apply the transformation. In this example `leasing` is specified. For more information on the available nodes and how to use them, visit the [node reference guide](./node-reference.md).
+
+```python
+# Renaming leasing column using Pandas Node
+leasing_mapper_node = Pandas(params={'import': 'map',
+                                'kwargs': {'arg': {
+                                    'dataLayerNull': 'notgiven', 
+                                    'no': 'no', 
+                                    'yes': 'yes', 
+                                    'notgiven': 'notgiven'}},
+                                'inplace': True,
+                                'cols': 'leasing'})
+```
+
+### Build Graph DSL
+
+With your nodes created, the next step is to chain the nodes together to create a graph. 
+
+Start by listing all the nodes that are a part of the graph.
+
+```python
+nodes = [json_df_node, 
+        to_datetime_node,
+        hour_node,
+        dayofweek_node,
+        age_fillna_node,
+        carbrand_fillna_node,
+        country_fillna_node,
+        cartype_primary_nationality_km_fillna_node,
+        carbrand_mapper_node,
+        cartype_mapper_node,
+        country_mapper_node,
+        gender_mapper_node,
+        leasing_mapper_node,
+        age_to_int_node,
+        age_bins_node,
+        dummies_node, 
+        onnx_node]
+```
+
+Next, connect the nodes with edges. Each tuple is an edge connection.
+
+```python
+edges = [(nodes[i], nodes[i+1]) for i in range(len(nodes)-1)]
+```
+
+Once your nodes are connected, build the graph.
+
+```python
+dsl = GraphBuilder.generate_dsl(nodes=nodes, edges=edges)
+pprint(json.loads(dsl))
+```
+
+Once complete, an `edge` object is returned containing each of the nodes and the parameters that were mapped to them.
+
+![edge return]()
 
 
 
