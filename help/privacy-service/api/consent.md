@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Jobs
+title: Consent
 topic: developer guide
 ---
 
