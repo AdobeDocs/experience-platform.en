@@ -55,13 +55,22 @@ Likewise, if knowing when the command fails is not important to you, you may rem
 
 ```javascript
 alloy("commandName", options)
-  .then(function(value) {
+  .then(function(results) {
     // The command succeeded.
     // "value" will be whatever the command returned
   })
 ```
 
-## Consent
+### Response objects
+
+All `then` commands return a results object then the parameters you asked for are properties of that object. For example library info is passed as an property of the results object in the following command.
+
+```js
+alloy("getLibraryInfo").then(function(results) {
+  console.log(results.libraryInfo.version);
+});
+```
+
+### Consent
 
 If a user has not given their consent for a particular purpose the promise will still be resolved, however, the response object will only contain the information that can be provided in the context of what the user has consented to.
-
