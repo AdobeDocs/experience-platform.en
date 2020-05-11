@@ -27,7 +27,7 @@ To activate data to destinations, you must have successfully [connected a destin
    ![destination-attributes](/help/rtcdp/destinations/assets/select-attributes-step.png)
    For *social network destinations*, in the **[!UICONTROL Identity mapping]** step, select source attributes to map to target identities.
    ![identity mapping before filling in fields](/help/rtcdp/destinations/assets/facebook-identity-mapping-1.png)
-   In the example below, the personal email address in the identity schema will be hashed to comply with the Facebook [email hashing requirements](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements). Press **[!UICONTROL Next]** after selecting the mapping.
+   In the example below, the personal email address in the identity schema has been hashed on ingestion into Experience Platform to comply with the Facebook [email hashing requirements](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements). Press **[!UICONTROL Next]** after selecting the mapping.
    ![identity mapping after filling in fields](/help/rtcdp/destinations/assets/facebook-identity-mapping-2.png)
 
 6. On the **[!UICONTROL Segment schedule]** page, you can see the start date for sending data to the destination, as well as the frequency of sending data to the destination.
@@ -82,3 +82,4 @@ To disable an existing activation flow, follow the steps below:
 2. Click the **[!UICONTROL Enabled]** control in the right rail to change the activation flow state.
 3. In the **Update data flow state** window, select **Confirm** to disable the activation flow.
 
+In AWS Kinesis, generate an access key - secret access key pair to grant Adobe Real-time CDP access to your AWS Kinesis account. Learn more in the [AWS Kinesis documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).

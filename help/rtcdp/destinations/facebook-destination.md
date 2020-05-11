@@ -17,10 +17,14 @@ To help you better understand how and when you should use the Facebook destinati
 
 
 ### Use Case #1
+
+
 An online retailer wants to reach existing customers through social platforms and show them personalized offers based on their previous orders. The online retailer can ingest email addresses from their own CRM to Adobe Real-time CDP, build segments from their own offline data, and send these segments to the Facebook social platform, optimizing their advertising spending.
 
 
 ### Use Case #2
+
+
 An airline has different customer tiers (Bronze, Silver, and Gold), and wants to provide each of the tiers with personalized offers via social platforms. However, not all customers use the airline's mobile app, and some of them have not logged on to the company's website. The only identifiers the company has about these customers are membership IDs and email addresses.
 To target them across social media, they can onboard the customer data from their CRM into Adobe Real-time CDP, using the hashed email addresses as identifiers.
 Next, they can combine their offline data with their existing online activity data, to build new audience segments that they can target through the Facebook destination.
@@ -29,7 +33,7 @@ Next, they can combine their offline data with their existing online activity da
 
 ### Activation Type {#activation-type}
 
-Segment Export - you are exporting all members of a segment (audience) with their identifiers (name, phone number, etc.) used in the Facebook destination.
+Segment Export - you are exporting all members of a segment (audience) with the identifiers (name, phone number, etc.) used in the Facebook destination.
 
 ### Facebook account prerequisites {#facebook-account-prerequisites}
 
@@ -57,9 +61,9 @@ If you select to hash the email addresses yourself, make sure to comply with the
 * Do not salt the string.
 
 
->[!TIP]
+>[!IMPORTANT]
 >
->If you choose not to hash email addresses, Adobe Real-time CDP will do that for you when you activate segments to Facebook. In the [activation workflow](/help/rtcdp/destinations/activate-destinations.md#activate-data) (see step 5), select the `Email_LC_SHA256` option as shown below.
+>If you choose not to hash email addresses, Adobe Real-time CDP will do that for you when you activate segments to Facebook. In the [activation workflow](/help/rtcdp/destinations/activate-destinations.md#activate-data) (see step 5), select the `Email` option as shown below for *raw email addresses* and `Email_LC_SHA256` for *hashed email addresses*.
 
 
 ![Hashing on activation](/help/rtcdp/destinations/assets/identity-mapping.png)
