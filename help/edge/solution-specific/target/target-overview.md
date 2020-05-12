@@ -32,6 +32,7 @@ With the SDK you can use the VEC normally with one exception you will need the [
 ## Auto-render VEC Activities
 
 The AEP Web SDK has the power to automatically render your experiences defined via Adobe Target’s VEC on the web for your users. In order to indicate to the AEP Web SDK to auto-render VEC activities, send an event wither ‘renderDecisions’ = true
+
 ```javascript
 alloy
 ("event", 
