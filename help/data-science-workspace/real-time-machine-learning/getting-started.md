@@ -14,6 +14,13 @@ In order to utilize Real-time Machine Learning, you need to have access to an or
 
 The guides for Real-time Machine Learning require a working understanding of Python 3, [Jupyter notebooks](../jupyterlab/overview.md), data science, and machine learning.
 
+Key Terms:
+
+- **DSL:** Domain Specific Language
+- **Node:** 
+- **Edge:** Real-time Machine Learning scoring service can be run on edge clusters closer to your activations and applications.
+- **Hub:** The current alpha is running the Real-time Machine Learning scoring service on the Adobe Experience Platform Hub while the Experience Edge Network is in development.
+
 ## Datasets in Adobe Experience Platform
 
 To start using Real-time Machine Learning, you must have a populated dataset within Experience Platform. You have the option to use an external dataset and upload it to your JupyterLab environment or create a new dataset within Platform if you have not done so already.

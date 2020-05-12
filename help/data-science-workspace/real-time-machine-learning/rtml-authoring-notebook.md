@@ -10,15 +10,15 @@ topic: Training and scoring a ML model
 >[!IMPORTANT]
 >Real-time Machine Learning is not available to all users yet. This feature is in alpha and still being tested. This document is subject to change.
 
-The following guide outlines the steps needed to build a Real-time Machine Learning application. Using the Adobe provided **[!UICONTROL RTML Authoring]** notebook template, this guide covers training a model, creating a DSL, publishing DSL to Edge, and scoring the request.
+The following guide outlines the steps needed to build a Real-time Machine Learning application. Using the Adobe provided **[!UICONTROL RTML Authoring]** notebook template, this guide covers training a model, creating a DSL, publishing DSL to Edge, and scoring the request. As you progress through implementing your Real-time Machine Learning model, it's expected that you modify the template to fit the needs of your dataset.
 
-## Create a RTML authoring notebook
+## Create a Real-time Machine Learning authoring notebook
 
 In the Adobe Experience Platform UI, select **[!UICONTROL Notebooks]** from within *Data Science*. Next, select **[!UICONTROL JupyterLab]** and allow some time for the environment to load.
 
 ![open JupyterLab](../images/rtml/open-jupyterlab.png)
 
-Start by selecting the **RTML Authoring notebook** from within the JupyterLab launcher.
+The JupyterLab launcher appears. Scroll down to *Real-Time Machine Learning* and select the **RTML Authoring** notebook. A template opens containing example notebook cells with an example dataset.
 
 ![blank python](../images/rtml/author-notebook.png)
 
@@ -52,14 +52,12 @@ from rtml_nodelibs.core.nodefactory import NodeFactory as nf
 from rtml_nodelibs.core.datamsg import DataMsg
 ```
 
-The following code cell creates a list of available nodes.
+The following code cell prints a list of available nodes.
 
 ```python
 # Discover Nodes
 pprint(nf.discover_nodes())
 ```
-
-The response received is a list of nodes.
 
 ![list of notes](../images/rtml/node-list.png)
 
@@ -67,27 +65,23 @@ The response received is a list of nodes.
 
 Using one of the following options, you are going to write python code to read, preprocess, and analyze data. Next, you need to train your own ML model, serialize it into ONNX format, and finally upload it to Real-time Machine Learning model store.
 
-- [Training your own model](#training-your-own-model)
-- [Uploading your own pre-trained ONNX model](#pre-trained-model-upload)
+- [Training your own model in JupyterLab notebooks](#training-your-own-model)
+- [Uploading your own pre-trained ONNX model to JupyterLab notebooks](#pre-trained-model-upload)
 
 ### Training your own model {#training-your-own-model}
 
 Start by loading your training data.
 
 >[!NOTE]
->In the **RTML Authoring** template, the CSV dataset is grabbed from Github.
+>In the **RTML Authoring** template, the [car insurance CSV dataset](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) is grabbed from Github.
 
-If you wish to use a dataset from within Adobe Experience Platform, uncomment the cell below *Load Training Data*. Next, you need to replace `DATASET_ID` with the appropriate value.
+If you wish to use a dataset from within Adobe Experience Platform, uncomment the cell below. Next, you need to replace `DATASET_ID` with the appropriate value.
 
 ![rtml dataset](../images/rtml/rtml-dataset.png)
 
 To access a dataset in your JupyterLab notebook, select the **Data** tab in the left-navigation of JupyterLab. The *Datasets* and *Schemas* directories appear. Select **[!UICONTROL Datasets]** and right-click, then select the **[!UICONTROL Explore Data in Notebook]** option from the dropdown menu on the dataset you wish to use. An executable code entry appears at the bottom of the notebook. This cell has your `dataset_id`.
 
 ![dataset access](../images/rtml/access-dataset.png)
-
-After uncommenting, copy and paste your dataset ID by replacing `DATASET_ID` in the following cell. 
-
-![rtml dataset](../images/rtml/rtml-dataset.png)
 
 Once complete, right-click and delete the cell that you generated at the bottom of the notebook.
 
@@ -190,7 +184,7 @@ df_final = pd.get_dummies(df_final, columns = cat_cols)
 
 Run the provided cell to see an example result. The output table returned from the `carinsurancedataset.csv` dataset returns the modifications defined.
 
-![Example of data transformations]()
+![Example of data transformations](../images/rtml/table-return.png)
 
 **Training pipeline**
 
@@ -227,7 +221,7 @@ model = train(config_properties, df_final)
 
 ### Generate and upload an ONNX model
 
-Once you have completed a successful training run, you need to generate an ONNX model and upload the trained model to the Real-time Machine Learning model store. Once the following cells have been run, your ONNX model appears in the left-rail alongside all your other notebooks.
+Once you have completed a successful training run, you need to generate an ONNX model and upload the trained model to the Real-time Machine Learning model store. After running the following cells, your ONNX model appears in the left-rail alongside all your other notebooks.
 
 ```python
 import os
@@ -263,15 +257,15 @@ Next, change the `model_path` string value in the *RTML Authoring* notebook to m
 
 ## DSL creation
 
-This section outlines creating a DSL. You are going to author the nodes that includes any preprocessing of data along with ONNX node. Next, a DSL graph is created using nodes and edges. Edges connect nodes using tuple based format (node_1, node_2) and note that the graph should not have cycles.
+This section outlines creating a DSL. You are going to author the nodes that includes any preprocessing of data along with ONNX node. Next, a DSL graph is created using nodes and edges. Edges connect nodes using tuple based format (node_1, node_2). The graph should not have cycles.
 
 >[!IMPORTANT] 
->ONNX node is mandatory. Without ONNX node, the application will fail.
+>Using the ONNX node is mandatory. Without the ONNX node, the application will be unsuccessful.
 
 ### Node authoring
 
 >[!NOTE]
-> You are likely to have many nodes based on the type of data being used. The following example outlines only a single node in the *RTML Authoring* template. Please view the *RTML Authoring* template for the complete code cell.
+> You are likely to have multiple nodes based on the type of data being used. The following example outlines only a single node in the *RTML Authoring* template. Please view the *RTML Authoring* template for the complete code cell.
 
 The Pandas node below uses `"import": "map"` to import the method name as a string in the parameters, followed by, inputting the parameters as a map function. The example below does this by using `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`. After you have the map in place, you have the option to set `inplace` as true or false. Set `inplace` as `True` or `False` based on whether you want to apply transformation inplace or not. By default `"inplace": False` creates a new column. Support to provide a new column name is set to be added in a subsequent release. The last line `cols` can be a single column name or a list of columns. Specify the columns on which you want to apply the transformation. In this example `leasing` is specified. For more information on the available nodes and how to use them, visit the [node reference guide](./node-reference.md).
 
@@ -394,7 +388,7 @@ After publishing to edge, scoring is done by a POST request from a client. Typic
 ```python
 # Wait for the app to come up
 import time
-time.sleep(60)
+time.sleep(20)
 ```
 
 Using the same schema that was used in training, sample scoring data is generated. This data is used to build a scoring dataframe then converted into a scoring dictionary. Please view the *RTML Authoring* template for the complete code cell.

@@ -5,12 +5,12 @@ title: Training a model for Real-time Machine Learning
 topic: Training a ML model
 ---
 
-# Training a model for Real-time Machine Learning
+# Training a model with the IRIS dataset for Real-time Machine Learning 
 
 >[!IMPORTANT]
 >Real-time Machine Learning is not available to all users yet. This feature is in alpha and still being tested. This document is subject to change.
 
-This document provides a tutorial for uploading an ONNX model to the Real-time Machine Learning model store. 
+This document provides a tutorial for uploading an ONNX model to the Real-time Machine Learning model store using the IRIS dataset. The following tutorials are simplified and do not reflect the complexity of a Real-time Machine Learning service. To view an advanced example, visit the [Real-time Machine Learning authoring notebook user guide](./rtml-authoring-notebook.md).
 
 Using one of the following options, you are going to write python code to read, preprocess, and analyze data. Next, you need to train your own ML model, serialize it into ONNX format, and finally upload it to Real-time Machine Learning model store. Additionally, by the end of the tutorial, you are given a model ID that identifies the trained model for use in the [scoring tutorial](./scoring-ml-model.md).
 

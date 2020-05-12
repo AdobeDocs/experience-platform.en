@@ -5,12 +5,12 @@ title: Score a Real-time Machine Learning model
 topic: Scoring a ML model
 ---
 
-# Score a Real-time Machine Learning model
+# Score a Real-time Machine Learning model with the IRIS dataset
 
 >[!IMPORTANT]
 >Real-time Machine Learning is not available to all users yet. This feature is in alpha and still being tested. This document is subject to change.
 
-This tutorial shows you how to use Real-time Machine Learning nodes to pre-process incoming data and score it against your ONNX model.
+This tutorial shows you how to use Real-time Machine Learning nodes to pre-process incoming data and score it against your ONNX model using the IRIS dataset. The following tutorial is simplified and does not reflect the complexity of a Real-time Machine Learning service. To view an advanced example, visit the [Real-time Machine Learning authoring notebook user guide](./rtml-authoring-notebook.md).
 
 >[!IMPORTANT]
 > - Functions used in nodes cannot be serialized. For example, a lambda function used in a pandas node.
@@ -119,7 +119,7 @@ After publishing to edge, scoring is done by a POST request from a client. Typic
 
 ```python
 import time
-time.sleep(600)
+time.sleep(20)
 ```
 
 ```python
