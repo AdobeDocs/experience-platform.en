@@ -31,7 +31,7 @@ Each time a command is executed, a promise is returned. The promise represents t
 
 ```javascript
 alloy("commandName", options)
-  .then(function(value) {
+  .then(function(result) {
     // The command succeeded.
     // "value" is whatever the command returned
   })
@@ -55,7 +55,7 @@ Likewise, if knowing when the command fails is not important to you, you may rem
 
 ```javascript
 alloy("commandName", options)
-  .then(function(results) {
+  .then(function(result) {
     // The command succeeded.
     // "value" will be whatever the command returned
   })
@@ -63,14 +63,14 @@ alloy("commandName", options)
 
 ### Response objects
 
-All `then` commands return a results object then the parameters you asked for are properties of that object. For example library info is passed as an property of the results object in the following command.
+All promises returned from commands are resolved with a `result` object. The result object will contain data depending on the command and the user's consent. For example library info is passed as an property of the results object in the following command.
 
 ```js
-alloy("getLibraryInfo").then(function(results) {
+alloy("getLibraryInfo").then(function(result) {
   console.log(results.libraryInfo.version);
 });
 ```
 
 ### Consent
 
-If a user has not given their consent for a particular purpose the promise will still be resolved, however, the response object will only contain the information that can be provided in the context of what the user has consented to.
+If a user has not given their consent for a particular purpose, the promise will still be resolved; however, the response object will only contain the information that can be provided in the context of what the user has consented to.

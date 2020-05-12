@@ -31,7 +31,7 @@ If you want to use this unique ID, use the `getIdentity` command. `getIdentity` 
 
 ```javascript
 alloy("getIdentity")
-  .then(function(results.identity.ECID) {
+  .then(function(result.identity.ECID) {
     // This function will get called with Adobe Experience Cloud Id when the command promise is resolved
   })
   .catch(function(error) {
