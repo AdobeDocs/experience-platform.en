@@ -70,7 +70,7 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Cloud storage destinations overview](destinations/cloud-storage-destinations.md)
       * [Workflow to create cloud storage destinations](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
       * [Amazon S3 destination](destinations/amazon-s3-destination.md)
-      * [AWS Kinesis destination](/help/rtcdp/destinations/aws-kinesis-destination.md)
+      * [AWS Kinesis destination](/help/rtcdp/destinations/amazon-kinesis-destination.md)
       * [Azure EventHubs destination](/help/rtcdp/destinations/azure-event-hubs-destination.md)
       * [SFTP destination](destinations/sftp-destination.md)
     * Data Management Platform destinations {dmp-destinations}
