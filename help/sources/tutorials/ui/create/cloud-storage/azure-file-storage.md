@@ -60,4 +60,4 @@ To connect an existing account, select the Azure File Storage account you want t
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your Azure File Storage account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into Platform](../../dataflow/cloud-storage.md).
+By following this tutorial, you have established a connection to your Azure File Storage account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into Platform](../../dataflow/batch/cloud-storage.md).
