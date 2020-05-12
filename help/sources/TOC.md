@@ -19,10 +19,10 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
   - Advertising {#advertising}
     - [Google Ads connector](connectors/advertising/ads.md)
   - Cloud storage {#cloud-storage}
-    - [AWS Kinesis connector](connectors/cloud-storage/kinesis.md)
+    - [Amazon Kinesis connector](connectors/cloud-storage/kinesis.md)
     - [Azure Data Lake Storage Gen2 connector](connectors/cloud-storage/adls-gen2.md)
     - [Azure Blob and Amazon S3 connector](connectors/cloud-storage/blob-s3.md)
-    - [Azure EventHub connector](connectors/cloud-storage/eventhub.md)
+    - [Azure Event Hubs connector](connectors/cloud-storage/eventhub.md)
     - [Azure File Storage connector](connectors/cloud-storage/azure-file-storage.md)
     - [FTP and SFTP connector](connectors/cloud-storage/ftp-sftp.md)
     - [Google Cloud Storage connector](connectors/cloud-storage/google-cloud-storage.md)
