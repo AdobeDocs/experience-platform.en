@@ -7,6 +7,8 @@ topic: overview
 
 # Create an Azure Table Storage source connector in the UI
 
+[!NOTE] Azure Table Storage connector is in beta. The features and documentation are subject to change.
+
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a Azure Table Storage (hereinafter referred to as "ATS") source connector using the Platform user interface.
 
 ## Getting started

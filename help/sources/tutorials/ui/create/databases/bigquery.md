@@ -7,6 +7,9 @@ topic: overview
 
 # Create a Google Big Query source connector in the UI
 
+>[!NOTE]
+>Google BigQuery connector is in beta. The features and documentation are subject to change.
+
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a Google Big Query (hereinafter referred to as "GBQ") source connector using the Platform user interface.
 
 ## Getting started

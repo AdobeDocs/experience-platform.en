@@ -7,6 +7,9 @@ topic: overview
 
 # Create an IBM DB2 connector using the Flow Service API
 
+>[!NOTE]
+>IBM DB2 connector is in beta. The features and documentation are subject to change.
+
 Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
 This tutorial uses the Flow Service API to walk you through the steps to connect IBM DB2 (hereinafter referred to as "DB2") to Experience Platform.

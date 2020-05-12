@@ -8,6 +8,9 @@ topic: overview
 
 # Create an IBM DB2 source connector in the UI
 
+>[!NOTE]
+>IBM DB2 connector is in beta. The features and documentation are subject to change.
+
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an IBM DB2 (hereinafter referred to as "DB2") source connector using the Platform user interface.
 
 ## Getting started
