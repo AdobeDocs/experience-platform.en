@@ -257,55 +257,59 @@ curl -X POST \
 A successful response returns HTTP Status 207 (Multi-Status) and the details of the merge policies whose IDs were provided in the POST request.
 
 ```json
-{
-    "id": "0bf16e61-90e9-4204-b8fa-ad250360957b",
-    "name": "Profile Default Merge Policy",
-    "imsOrgId": "{IMS_ORG}",
-    "sandbox": {
-        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "version": 1,
-    "identityGraph": {
-        "type": "none"
-    },
-    "attributeMerge": {
-        "type": "timestampOrdered"
-    },
-    "default": true,
-    "updateEpoch": 1552086578
-},
-{
-    "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130",
-    "name": "Dataset Precedence Merge Policy",
-    "imsOrgId": "{IMS_ORG}",
-    "sandbox": {
-        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "version": 1,
-    "identityGraph": {
-        "type": "pdg"
-    },
-    "attributeMerge": {
-        "type": "dataSetPrecedence",
-        "order": [
-            "5b76f86b85d0e00000be5c8b",
-            "5b76f8d787a6af01e2ceda18"
-        ]
-    },
-    "default": false,
-    "updateEpoch": 1576099719
+{ 
+    "results": { 
+        "0bf16e61-90e9-4204-b8fa-ad250360957b": {
+            "id": "0bf16e61-90e9-4204-b8fa-ad250360957b",
+            "name": "Profile Default Merge Policy",
+            "imsOrgId": "{IMS_ORG}",
+            "sandbox": {
+                "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+                "sandboxName": "prod",
+                "type": "production",
+                "default": true
+            },
+            "schema": {
+                "name": "_xdm.context.profile"
+            },
+            "version": 1,
+            "identityGraph": {
+                "type": "none"
+            },
+            "attributeMerge": {
+                "type": "timestampOrdered"
+            },
+            "default": true,
+            "updateEpoch": 1552086578
+        },
+        "42d4a596-b1c6-46c0-994e-ca5ef1f85130": {
+            "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130",
+            "name": "Dataset Precedence Merge Policy",
+            "imsOrgId": "{IMS_ORG}",
+            "sandbox": {
+                "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+                "sandboxName": "prod",
+                "type": "production",
+                "default": true
+            },
+            "schema": {
+                "name": "_xdm.context.profile"
+            },
+            "version": 1,
+            "identityGraph": {
+                "type": "pdg"
+            },
+            "attributeMerge": {
+                "type": "dataSetPrecedence",
+                "order": [
+                    "5b76f86b85d0e00000be5c8b",
+                    "5b76f8d787a6af01e2ceda18"
+                ]
+            },
+            "default": false,
+            "updateEpoch": 1576099719
+        }
+    }
 }
 ```
 
