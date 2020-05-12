@@ -55,84 +55,9 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 *   Content-Type: `application/json`
 
-## Look up connection specifications
+## Create a connection
 
-In order to create an SFTP connection, a set of SFTP connection specifications must exist within Flow Service. The first step in connecting Platform to SFTP is to retrieve these specifications.
-
-**API format**
-
-Each available source has its own unique set of connection specifications for describing connector properties such as authentication requirements. You can look up connection specifications for SFTP by performing a GET request and using query parameters.
-
-Sending a GET request without query parameters will return connection specifications for all available sources. You can include the query `property=name=="sftp"` to obtain information specifically for SFTP.
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="sftp"
-```
-
-**Request**
-
-The following request retrieves the connection specifications for an SFTP server.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="sftp"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Response**
-
-A successful response returns the connection specification for the SFTP server, including its unique identifier (`id`). This ID is required in the next step to create a base connection.
-
-```json
-{
-    "items": [
-        {
-            "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
-            "name": "sftp",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Basic Authentication for sftp",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params required for connecting to sftp",
-                        "properties": {
-                            "host": {
-                                "type": "string",
-                                "description": "Specify the name or IP address of the SFTP server."
-                            },
-                            "userName": {
-                                "type": "string",
-                                "description": "Specify the user who has access to the SFTP server."
-                            },
-                            "password": {
-                                "type": "string",
-                                "description": "Specify the password for the user (userName).",
-                                "format": "password"
-                            }
-                        },
-                        "required": [
-                            "host",
-                            "userName",
-                            "password"
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
-}
-```
-
-## Create a base connection
-
-A base connection specifies a source and contains your credentials for that source. Only one base connection is required per SFTP account as it can be used to create multiple source connectors to bring in different data.
+A connection specifies a source and contains your credentials for that source. Only one connection is required per SFTP account as it can be used to create multiple source connectors to bring in different data.
 
 **API format**
 
@@ -170,11 +95,11 @@ curl -X POST \
 | `auth.params.host` | The host name of your SFTP server. |
 | `auth.params.username` | The username associated with your SFTP server. |
 | `auth.params.password` | The password associated with your SFTP server. |
-| `connectionSpec.id` | The connection specification `id` of your SFTP server retrieved in the previous step. |
+| `connectionSpec.id` | The STFP server connection specification ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 **Response**
 
-A successful response returns the unique identifier (`id`) of the newly created base connection. This ID is required to explore your SFTP server in the next tutorial.
+A successful response returns the unique identifier (`id`) of the newly created connection. This ID is required to explore your SFTP server in the next tutorial.
 
 ```json
 {
