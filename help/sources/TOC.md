@@ -19,8 +19,11 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
   - Advertising {#advertising}
     - [Google Ads connector](connectors/advertising/ads.md)
   - Cloud storage {#cloud-storage}
+    - [AWS Kinesis connector](connectors/cloud-storage/kinesis.md)
     - [Azure Data Lake Storage Gen2 connector](connectors/cloud-storage/adls-gen2.md)
     - [Azure Blob and Amazon S3 connector](connectors/cloud-storage/blob-s3.md)
+    - [Azure EventHub connector](connectors/cloud-storage/eventhub.md)
+    - [Azure File Storage connector](connectors/cloud-storage/azure-file-storage.md)
     - [FTP and SFTP connector](connectors/cloud-storage/ftp-sftp.md)
     - [Google Cloud Storage connector](connectors/cloud-storage/google-cloud-storage.md)
   - CRM {#crm}
@@ -58,6 +61,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Amazon S3 connector](tutorials/api/create/cloud-storage/s3.md)
       - [Azure Blob connector](tutorials/api/create/cloud-storage/blob.md)
       - [Azure Data Lake Storage Gen2 connector](tutorials/api/create/cloud-storage/adls-gen2.md)
+      - [Azure File Storage connector](tutorials/api/create/cloud-storage/azure-file-storage.md)
       - [Google Cloud Storage connector](tutorials/api/create/cloud-storage/google.md)
       - [SFTP connector](tutorials/api/create/cloud-storage/sftp.md)
     - CRM {#crm}
@@ -119,6 +123,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - Cloud storage {#cloud-storage}
       - [Azure Data Lake Storage Gen2 connector](tutorials/ui/create/cloud-storage/adls-gen2.md)
       - [Azure Blob and Amazon S3 connector](tutorials/ui/create/cloud-storage/blob-s3.md)
+      - [Azure File Storage connector](tutorials/ui/create/cloud-storage/azure-file-storage.md)
       - [FTP and SFTP connector](tutorials/ui/create/cloud-storage/ftp-sftp.md)
       - [Google Cloud Storage connector](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
     - CRM {#crm}
