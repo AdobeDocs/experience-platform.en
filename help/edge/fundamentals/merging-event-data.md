@@ -64,7 +64,7 @@ As with all commands, a promise is returned because you might execute the comman
 ```javascript
 var eventMergeIdPromise = alloy("createEventMergeId");
 
-eventMergeIdPromise.then(function(eventMergeId) {
+eventMergeIdPromise.then(function(results) {
   alloy("event", {
     "xdm": {
       "commerce": {
@@ -76,13 +76,13 @@ eventMergeIdPromise.then(function(eventMergeId) {
         }
       }
     }
-    "mergeId": eventMergeId
+    "mergeId": results.eventMergeId
   });
 });
 
 // Time passes and more data becomes available
 
-eventMergeIdPromise.then(function(eventMergeId) {
+eventMergeIdPromise.then(function(results) {
   alloy("event", {
     "xdm": {
       "commerce": {
@@ -98,7 +98,7 @@ eventMergeIdPromise.then(function(eventMergeId) {
         }
       }
     }
-    "mergeId": eventMergeId
+    "mergeId": results.eventMergeId
   });
 });
 ```
@@ -108,9 +108,9 @@ Follow this same pattern if you would like access to the event merge ID for othe
 ```javascript
 var eventMergeIdPromise = alloy("createEventMergeId");
 
-eventMergeIdPromise.then(function(eventMergeId) {
+eventMergeIdPromise.then(function(results) {
   // send event merge ID to a third-party provider
-  console.log(eventMergeId);
+  console.log(results.eventMergeId);
 });
 ```
 
