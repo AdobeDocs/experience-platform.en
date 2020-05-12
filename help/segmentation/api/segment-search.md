@@ -24,11 +24,11 @@ The search endpoint can be used to get search results based on the values of the
 **API format**
 
 ```http
-GET /search?{QUERY_PARAMETERS}
+GET /search/results/{SCHEMA_CLASS}?{QUERY_PARAMETERS}
 ```
 
-|Parameter|Description|
-|---|---|
+| Parameter | Description |
+| --------- | ----------- |
 |`schema.name`|**Required.** The name of the schema class containing the content to be searched, written in dot-notation format. Currently, only `schema.name=_xdm.context.segmentdefinition` is supported.|
 |`limit`|The number of search results to return. The default value is 50.|
 |`page`|The page number used for paginating results of the query searched.|
