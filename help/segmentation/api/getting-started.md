@@ -80,6 +80,11 @@ Segment jobs process previously established segment definitions to generate an a
 
 For more information on using this endpoint, please read the [segment jobs developer guide](./segment-jobs.md).
 
+## Segment search
+
+Profile search is used to search and index configurable fields contained across various data sources and return them in near real-time. To begin working with Profile search, see the [search sub-guide](profile-search.md)
+
+
 ## Next steps
 
 To begin making calls using the Segmentation API, select one of the sub-guides to learn how to use specific Segmentation-related endpoints. To learn more about working with segments using the Platform UI, see the [Segmentation user guide](../ui/overview.md).

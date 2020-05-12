@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;
 solution: Adobe Experience Platform
-title: Real-time Customer Profile API developer guide
+title: Segmentation API developer guide
 topic: guide
 ---
 
-# Profile search
+# Segment search
 
-Profile search is used to search and index configurable fields contained across various data sources and return them in near real-time. 
+Segment search is used to search and index configurable fields contained across various data sources and return them in near real-time. 
 
-This guide provides information to help you better understand Profile search and includes sample API calls for performing basic actions using the API.
+This guide provides information to help you better understand Segment search and includes sample API calls for performing basic actions using the API.
 
 ## Getting started
 
-The API endpoints used in this guide are part of the Real-time Customer Profile API. Before continuing, please review the [Real-time Customer Profile developer guide](getting-started.md).
+The API endpoints used in this guide are part of the Segmentation API. Before continuing, please review the [Segmentation developer guide](getting-started.md).
 
-In particular, the [getting started section](getting-started.md) of the Profile developer guide includes links to related topics, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform APIs.
+In particular, the [getting started section](getting-started.md) of the Segmentation developer guide includes links to related topics, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform APIs.
 
 ### Get search results
 
@@ -85,7 +85,7 @@ A successful response returns an array of objects that meet your search criteria
 
 ### Create provisioning requests
 
-You can create provisioning requests to enable Profile search on schemas by making a POST request to the `/search/provisioning/component/init` endpoint.
+You can create provisioning requests to enable Segment search on schemas by making a POST request to the `/search/provisioning/component/init` endpoint.
 
 **Request**
 
@@ -190,7 +190,7 @@ The request has been accepted for processing, but the processing has not been co
 
 ## Next steps
 
-After reading this guide you now have a better understanding of how Real-time Customer Profile search works. For more information on Real-time Customer Profile, please read the [Real-time Customer Profile overview](../home.md). For more information on Segmentation, please read the [Segmentation overview](../../segmentation/home.md).
+After reading this guide you now have a better understanding of how  Segment search works. For more information on Segmentation, please read the [Segmentation overview](../home.md).
 
 ## Appendix {#appendix}
 
