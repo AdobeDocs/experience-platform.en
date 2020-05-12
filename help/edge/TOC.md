@@ -31,7 +31,7 @@ user-guide-title:  Adobe Experience Platform Edge Network Help
     * [Analytics Overview](solution-specific/analytics/analytics-overview.md)
     * [Automatically Mapped Variables](solution-specific/analytics/automatically-mapped-vars.md)
   * Audience Manager {#aam}
-    * [Audience Manager Overview](solution-specific/audience_manager/audience-manager-overview.md)
+    * [Audience Manager Overview](solution-specific/audience-manager/audience-manager-overview.md)
   * Target {#target}
     * [Target Overview](solution-specific/target/target-overview.md)
 * Reference {#ref}
