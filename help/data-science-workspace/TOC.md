@@ -25,10 +25,8 @@ user-guide-title: Adobe Experience Platform Data Science Workspace Help
 * Real time machine learning (Alpha) {#real-time-machine-learning}
   * [Overview](real-time-machine-learning/home.md)
   * [Getting started](real-time-machine-learning/getting-started.md)
-  * [RTML Authoring notebook training and scoring user guide](real-time-machine-learning/rtml-authoring-notebook.md)
+  * [RTML Authoring notebook user guide](real-time-machine-learning/rtml-authoring-notebook.md)
   * [Node reference guide](real-time-machine-learning/node-reference.md)
-  * [Training a Real-time ML model (simplified)](real-time-machine-learning/training-ml-model.md)
-  * [Scoring a Real-time ML model (simplified)](real-time-machine-learning/scoring-ml-model.md)
 * Pre-built recipes {#pre-built-recipes}
   * [Product recommendation recipe](pre-built-recipes/product-recommendations.md)
   * [Product purchase prediction](pre-built-recipes/product-purchase-prediction.md)

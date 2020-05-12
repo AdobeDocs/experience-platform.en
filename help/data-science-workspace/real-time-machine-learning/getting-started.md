@@ -38,17 +38,7 @@ To create a new dataset for use in Real-time Machine Learning, you need a data-s
 - [Create and populate a dataset in the API](../../catalog/datasets/create.md)
 - [Create and populate a dataset in the UI](../../ingestion/tutorials/ingest-batch-data.md)
 
-## Git and Docker
-
-If you plan on training a model using the Data Science Workplace recipe workflow, Git and Docker are required. 
-
->[!NOTE]
->You do not need to download Git and Docker if you plan on training a model using a Python notebook or if you are using your own ONNX model.
-
-- [Git installation guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-- [Docker installation guide](https://docs.docker.com/get-docker/)
-
 ## Next steps
 
-Once you have prepared your data for Real-time Machine Learning, start by following the tutorial on [training a model](./training-ml-model.md) to learn how to create and upload an ONNX model to the Real-time Machine Learning model store.
+Once you have prepared your data for Real-time Machine Learning, start by following the [Real-time Machine Learning authoring notebook user guide](./rtml-authoring-notebook.md) to learn how to create and upload an ONNX model to the Real-time Machine Learning model store.
 
