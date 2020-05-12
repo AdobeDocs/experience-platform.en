@@ -58,51 +58,12 @@ Real-time Machine Learning is currently in alpha. The functionality outlined bel
 
 ### Features:
 
-<table>
-    <th></th>
-    <th>Alpha (May)</th>
-    <tr>
-        <td>
-            <strong>Features</strong>
-        </td>
-        <td>
-            <li>Using the RTML notebook template, author, test, and deploy a custom machine learning model.</li>
-            <li>Support for importing pre-trained machine learning models.</li>
-            <li>Real-time Machine Learning SDK.</li>
-            <li>Starter set of authoring nodes.</li>
-            <li>Deployed to Adobe Experience Platform Hub.</li>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <strong>Availability</strong>
-        </td>
-        <td>
-            North America
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <strong>Authoring Nodes</strong>
-        </td>
-        <td>
-            <li>Pandas</li>
-            <li>ScikitLearn</li>
-            <li>ONNXNode</li>
-            <li>Split</li>
-            <li>ModelUpload</li>
-            <li>OneHotEncoder</li>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <strong>Scoring run times</strong>
-        </td>
-        <td>
-            ONNX
-        </td>
-    </tr>
-</table>
+| | Alpha (May) |
+| --- | --- |
+| **Features** | - Using the RTML notebook template, author, test, and deploy a custom machine learning model. <br> - Support for importing pre-trained machine learning models. <br> - Real-time Machine Learning SDK. <br> - Starter set of authoring nodes. <br> - Deployed to Adobe Experience Platform Hub. |
+| **Availability** | North America |
+| **Authoring Nodes** | - Pandas <br> - ScikitLearn <br> - ONNXNode <br> - Split <br> - ModelUpload <br> - OneHotEncoder |
+| **Scoring run times** | ONNX |
 
 ## Next steps
 
