@@ -249,7 +249,7 @@ print("Model ID : ", model_id)
 >[!NOTE]
 >Change the `model_path` string value to name your model.
 
-![ONNX model]()
+![ONNX model](../images/rtml/onnx-model-rail.png)
 
 ### Uploading your own pre-trained ONNX model {#pre-trained-model-upload}
 
@@ -287,11 +287,11 @@ leasing_mapper_node = Pandas(params={'import': 'map',
                                 'cols': 'leasing'})
 ```
 
-### Build Graph DSL
+### Build the graph domain specific language (DSL)
 
 With your nodes created, the next step is to chain the nodes together to create a graph. 
 
-Start by listing all the nodes that are a part of the graph.
+Start by listing all the nodes that are a part of the graph by building an array.
 
 ```python
 nodes = [json_df_node, 
@@ -328,9 +328,102 @@ pprint(json.loads(dsl))
 
 Once complete, an `edge` object is returned containing each of the nodes and the parameters that were mapped to them.
 
-![edge return]()
+![edge return](../images/rtml/edge-return.png)
 
+## Publish to Edge (Hub)
 
+>[!NOTE]
+>Real-time Machine Learning is temporarily deployed to and managed by the Adobe Expereince Platform Hub. For additional details, visit the overview section on [Real-time Machine Learning architecture](./home.md#architecture).
+
+Now that you have created a DSL graph, you can deploy your graph to the edge.
+
+>[!IMPORTANT]
+>Do not publish to edge often, this can overload the edge nodes. Publishing the same model multiple times is not recommended.
+
+```python
+edge_utils = EdgeUtils()
+(edge_location, service_id) = edge_utils.publish_to_edge(dsl=dsl)
+print(f'Edge Location: {edge_location}')
+print(f'Service ID: {service_id}')
+```
+
+### Updating your DSL and re-publishing to Edge (optional)
+
+If you do not need to update your DSL, you can skip to [scoring](#scoring).
+
+>[!NOTE]
+>The following cells are only required if you wish to update an existing DSL that has been published to Edge.
+
+Your models are likely to continue to develop. Rather than creating a whole new service, it is possible to update an existing service with your new model. You can define a node you wish to update, assign it a new ID, then re-upload the new DSL to the Edge. 
+
+In the example below, node 0 is updated with a new ID.
+
+```python
+# Update the id of Node 0 with a random uuid.
+
+dsl_dict = json.loads(dsl)
+print(f"ID of Node 0 in current DSL: {dsl_dict['edge']['applicationDsl']['nodes'][0]['id']}")
+
+new_node_id = str(uuid.uuid4())
+print(f'Updated Node ID: {new_node_id}')
+
+dsl_dict['edge']['applicationDsl']['nodes'][0]['id'] = new_node_id
+```
+
+![Updated node](../images/rtml/updated-node.png)
+
+After updating the node ID, you're able to re-publish an updated DSL to the Edge.
+
+```python
+# Republish the updated dsl to edge
+(edge_location_ret, service_id, updated_dsl) = edge_utils.update_deployment(dsl=json.dumps(dsl_dict), service_id=service_id)
+print(f'Updated dsl: {updated_dsl}')
+```
+
+You are returned the updated DSL.
+
+![Updated DSL](../images/rtml/updated-dsl.png)
+
+## Scoring {#scoring}
+
+After publishing to edge, scoring is done by a POST request from a client. Typically, this can be done from a client application that needs ML scores. You can also do it from Postman. The *RTML Authoring* template uses EdgeUtils to demonstrate this process.
+
+>[!NOTE]
+>A small processing time is required before scoring starts.
+
+```python
+# Wait for the app to come up
+import time
+time.sleep(60)
+```
+
+Using the same schema that was used in training, sample scoring data is generated. This data is used to build a scoring dataframe then converted into a scoring dictionary. Please view the *RTML Authoring* template for the complete code cell.
+
+![Scoring data](../images/rtml/generate-score-data.png)
+
+### Score against the edge endpoint
+
+Use the following cell within the *RTML Authoring* template to score against your edge service.
+
+![Score against edge](../images/rtml/scoring-edge.png)
+
+Once scoring is complete, the edge URL, Payload, and scored output from edge are returned. 
+
+## Deleting a deployed app from edge (optional)
+
+>![CAUTION]
+>This cell is used to delete your deployed edge application. Do not use the following cell unless you need to delete a deployed edge application. 
+
+```python
+if edge_utils.delete_from_edge(service_id=service_id):
+    print(f"Deleted service id {service_id} successfully")
+else:
+    print(f"Failed to delete service id {service_id}")
+```
+
+## Next steps
+
+By following the tutorial above, you have successfully trained and uploaded an ONNX model to the Real-time Machine Learning model store. Additionally, you have scored and deployed your Real-time Machine Learning model. If you wish to learn more about the nodes available for model authoring, visit the [node reference guide](./node-reference.md).
 
 
 

@@ -18,7 +18,7 @@ Real-time Machine Learning can dramatically enhance the relevance of your digita
 
 A combination of seamless computation on both the Hub and the Edge dramatically reduces the latency that is traditionally involved in powering hyper-personalized experiences that are both relevant and responsive. Hence, Real-time Machine Learning provides inferences with incredibly low latency for synchronous decision-making. Examples include rendering personalized web page content or surfacing of an offer or discount to reduce churn and increase conversions on a web store.
 
-## Real-time Machine Learning architecture
+## Real-time Machine Learning architecture {#architecture}
 
 The following diagrams provide a overview for the Real-time Machine Learning architecture. Currently, alpha has a more simplified version.
 
