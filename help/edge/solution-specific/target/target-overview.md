@@ -51,7 +51,6 @@ alloy
 );
 ```
 
-
 ## Using the Form-Based Composer
 
 The Form-Based Experience Composer is a non-visual interface that’s useful for configuring A/B Tests, Experience Targeting, Automated Personalization, and Recommendations activities with different response types such as JSON, HTML, Image, etc. Depending on the response type or decision returned by Adobe Target, your core business logic can be executed. In order to retrieve decisions for your Form Based Composer activities, send an event with all ‘decisionScopes’ you want to retrieve a decision for.
@@ -84,30 +83,29 @@ alloy
 AEP Web SDK provides a functionality where you can retrieve VEC actions without relying on the AEP Web SDK to render the VEC actions for you. Send an event with ‘__view__’ as a ‘decisionScopes’.
 
 ```javascript
-alloy
-("event", {
-  decisionScopes: [
-    “__view__”,"foo", "bar"], 
+alloy("event", {
+  decisionScopes: [“__view__”,"foo", "bar"], 
   "xdm": { 
-    "commerce": { 
-      "order": { 
-        "purchaseID": "a8g784hjq1mnp3", 
-        "purchaseOrderNumber": "VAU3123", 
-        "currencyCode": 
-        "USD", 
-        "priceTotal": 999.98 
+    "web": { 
+      "webPageDetails": { 
+        "name": "Home Page"
        }
       } 
      }
     }
-   );
+   ).then(results){
+  for (decision of results.decisions){
+     if(decision.decisionScope == "__view__")
+       console.log(decision.content)
+}
+};
 ```   
 
 ## Audiences in XDM
 
 When defining Audiences for your Target activities that will be delivered via the AEP Web SDK, [XDM](https://docs.adobe.com/content/help/en/experience-platform/xdm/home.html) must be defined and utilized. After you define XDM schemas, classes, and mixins, you can create a Target audience rule defined by XDM data for targeting. Within Target, XDM data will show up in the Audience Builder as a custom parameter. The XDM is serialized using dot notation (e.g. web.webPageDetails.name)
 
-If you have Target activities with predefined audiences that don’t use XDM data, please be aware that they won’t be delivered correctly via the AEP Web SDK. You must use audiences that use XDM data for targeting. Therefore, it is highly recommended for you to review your Target activities and the audiences that are being used and re-define the audiences that don’t use XDM data so that your activities will be delivered correctly via the AEP Web SDK.
+If you have Target activities with predefined audiences that use custom parameters or user profile, please be aware that they won’t be delivered correctly via the AEP Web SDK. Instead of using custom parameters or user profile, you must use XDM instead. However, there are out of the box audience targeting fields supported via the AEP Web SDK that do not require XDM. These are the fields available in the Target UI that do not require XDM: Target Library, Geo, Network, Operating System, Site Pages, Browser, Traffic Sources, Time Frame.
 
 ## Terminology
 
