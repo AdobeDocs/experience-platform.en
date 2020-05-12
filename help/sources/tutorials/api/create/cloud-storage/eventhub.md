@@ -7,6 +7,9 @@ topic: overview
 
 # Create an Azure EventHub connector using the Flow Service API
 
+>[!NOTE]
+> The Azure EventHub connector is in beta. The features and documentation are subject to change.
+
 Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
 This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to an Azure EventHub account.
