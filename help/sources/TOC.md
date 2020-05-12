@@ -19,8 +19,10 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
   - Advertising {#advertising}
     - [Google Ads connector](connectors/advertising/ads.md)
   - Cloud storage {#cloud-storage}
+    - [Amazon Kinesis connector](connectors/cloud-storage/kinesis.md)
     - [Azure Data Lake Storage Gen2 connector](connectors/cloud-storage/adls-gen2.md)
     - [Azure Blob and Amazon S3 connector](connectors/cloud-storage/blob-s3.md)
+    - [Azure Event Hubs connector](connectors/cloud-storage/eventhub.md)
     - [Azure File Storage connector](connectors/cloud-storage/azure-file-storage.md)
     - [FTP and SFTP connector](connectors/cloud-storage/ftp-sftp.md)
     - [Google Cloud Storage connector](connectors/cloud-storage/google-cloud-storage.md)
@@ -152,7 +154,8 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Generic OData connector](tutorials/ui/create/protocols/odata.md)
   - Configure a dataflow {#dataflow}
       - [Configure a dataflow for an advertising connector](tutorials/ui/dataflow/advertising.md)
-      - [Configure a dataflow for a cloud storage connector](tutorials/ui/dataflow/cloud-storage.md)
+      - [Configure a dataflow for a batch cloud storage connector](tutorials/ui/dataflow/batch/cloud-storage.md)
+      - [Configure a dataflow for a streaming cloud storage connector](tutorials/ui/dataflow/streaming/cloud-storage.md)
       - [Configure a dataflow for a database connector](tutorials/ui/dataflow/databases.md)
       - [Configure a dataflow for a CRM connector](tutorials/ui/dataflow/crm.md)
       - [Configure a dataflow for a customer success connector](tutorials/ui/dataflow/customer-success.md)
