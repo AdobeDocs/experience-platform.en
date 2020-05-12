@@ -19,7 +19,8 @@ Key Terms:
 - **DSL:** Domain Specific Language
 - **Edge:** Real-time Machine Learning scoring service can be run on edge clusters closer to your activations and applications.
 - **Hub:** The current alpha is running the Real-time Machine Learning scoring service on the Adobe Experience Platform Hub while the Experience Edge Network is in development.
-
+- **Node:** The utilization of a Graph representation to model a data transformation and processing pipeline requires a defined set of Nodes (or Operators) that can perform certain tasks within the Graph. This set of Operators is not static. It will change over time as enhancements are made to existing Operators and new Operators are proposed for inclusion. 
+  
 ## Datasets in Adobe Experience Platform
 
 To start using Real-time Machine Learning, you must have access to a dataset. You have the option to use an external dataset and upload it to your JupyterLab environment or create a new dataset within Platform if you have not done so already.
