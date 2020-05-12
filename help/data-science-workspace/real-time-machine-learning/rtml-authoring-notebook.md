@@ -253,7 +253,7 @@ Using the upload button located in JupyterLab notebooks, upload your pre-trained
 
 Next, change the `model_path` string value in the *RTML Authoring* notebook to match your ONNX model name. Once complete, run the *Set model path* cell and then run the *Upload your model to RTML Model Store* cell. Your model location and model ID are both returned in the response when successful.
 
-![model id](../images/rtml/model-id.png)
+![uploading own model](../images/rtml/upload-own-model.png)
 
 ## DSL creation
 
