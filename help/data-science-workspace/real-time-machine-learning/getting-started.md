@@ -12,7 +12,7 @@ topic: Getting started
 
 In order to utilize Real-time Machine Learning, you need to have access to an organization provisioned with Adobe Experience Platform and Data Science Workspace. Additionally, you need to have a dataset in Adobe Experience Platform. 
 
-The guides for Real-time Machine Learning require a working understanding Python 3, [Jupyter notebooks](../jupyterlab/overview.md), data science, and machine learning.
+The guides for Real-time Machine Learning require a working understanding of Python 3, [Jupyter notebooks](../jupyterlab/overview.md), data science, and machine learning.
 
 ## Datasets in Adobe Experience Platform
 
