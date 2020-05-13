@@ -22,7 +22,7 @@ To activate data to destinations, you must have successfully [connected a destin
 3. Select **[!UICONTROL Activate]**;
 4. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to the destination.
     ![segments-to-destination](/help/rtcdp/destinations/assets/select-segments.png)
-5. *Conditional*. This step only applies for segments mapped to email marketing destinations. <br> On the **[!UICONTROL Destination Attributes]** page, select **[!UICONTROL Add new field]** and select the attributes that you want to send to the destination.
+5. *Conditional*. This step only applies for segments mapped to cloud storage destinations and email marketing destinations. <br> On the **[!UICONTROL Destination Attributes]** page, select **[!UICONTROL Add new field]** and select the attributes that you want to send to the destination.
    We recommend one of the attributes to be a [unique identifier](/help/rtcdp/destinations/email-marketing-destinations.md#identity) from your union schema. For more information about mandatory attributes, see Identity in the [Email marketing destinations](/help/rtcdp/destinations/email-marketing-destinations.md#identity) article. 
    ![destination-attributes](/help/rtcdp/destinations/assets/destination-attributes.png)
 6. On the **[!UICONTROL Segment schedule]** page, you can see the start date for sending data to the destination, as well as the frequency of sending data to the destination.

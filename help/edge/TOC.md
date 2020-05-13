@@ -20,7 +20,6 @@ user-guide-title:  Adobe Experience Platform Edge Network Help
   * [Debugging](fundamentals/debugging.md)
   * [Interacting with multiple properties](fundamentals/interacting-with-multiple-properties.md)
   * [Rendering personalized content](fundamentals/rendering-personalization-content.md)
-  * [Managing Flicker](fundamentals/managing-flicker.md)
   * [Supporting consent](fundamentals/supporting-consent.md)
   * [Supporting in-app browsers](fundamentals/supporting-in-app-browsers.md)
   * [Identity](fundamentals/identity.md)
@@ -33,7 +32,8 @@ user-guide-title:  Adobe Experience Platform Edge Network Help
   * Audience Manager {#aam}
     * [Audience Manager Overview](solution-specific/audience-manager/audience-manager-overview.md)
   * Target {#target}
-    * [Target Overview](solution-specific/target/target-overview.md)
+    * [Target overview](solution-specific/target/target-overview.md)
+    * [Flicker management](solution-specific/target/flicker-management.md)
 * Reference {#ref}
   * [Automatically Collected Information](reference/automatic-information.md)
   * [Retrieving Library Information](reference/retrieving-library-information.md)
