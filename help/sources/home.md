@@ -39,6 +39,9 @@ Cloud storage sources can bring your own data into Platform without the need to 
 
 - [Azure Data Lake Storage Gen2 connector](connectors/cloud-storage/adls-gen2.md)
 - [Azure Blob and Amazon S3 connector](connectors/cloud-storage/blob-s3.md)
+- [Amazon Kinesis connector](connectors/cloud-storage/kinesis.md)
+- [Azure Event Hubs connector](connectors/cloud-storage/eventhub.md)
+- [Azure File Storage connector](connectors/cloud-storage/azure-file-storage.md)
 - [FTP and SFTP connector](connectors/cloud-storage/ftp-sftp.md)
 - [Google Cloud Storage connector](connectors/cloud-storage/google-cloud-storage.md)
 
@@ -63,12 +66,15 @@ Experience Platform provides support for ingesting data from a third-party datab
 - [Amazon Redshift connector](connectors/databases/redshift.md)
 - [Apache Hive on Azure HDInsights connector](connectors/databases/hive.md)
 - [Apache Spark on Azure HDInsights connector](connectors/databases/spark.md)
+- [Azure Data Explorer connector](connectors/databases/data-explorer.md)
 - [Azure Synapse Analytics connector](connectors/databases/synapse-analytics.md)
 - [Azure Table Storage connector](connectors/databases/ats.md)
 - [Google BigQuery connector](connectors/databases/bigquery.md)
+- [IBM DB2 connector](connectors/databases/ibm-db2.md)
 - [MariaDB connector](connectors/databases/mariadb.md)
 - [Microsoft SQL Server connector](connectors/databases/sql-server.md)
 - [MySQL connector](connectors/databases/mysql.md)
+- [Oracle connector](connectors/databases/oracle.md)
 - [Phoenix connector](connectors/databases/phoenix.md)
 - [PostgreSQL connector](connectors/databases/postgres.md)
 

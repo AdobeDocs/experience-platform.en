@@ -81,11 +81,11 @@ For more information on specific endpoints in Platform APIs, including required 
 
 ## What is my IMS organization? {#what-is-my-ims-organization}
 
-An IMS organization is an an Adobe representation of a customer. Any licensed Adobe solutions are integrated with this customer organization. When an IMS organization is entitled to Experience Platform, it can assign access to developers. The IMS Org ID (`x-gw-ims-org-id`) represents the organization that an API call should be executed for, and is therefore required as a header in all API requests. This ID can be found through the [Adobe I/O Console](https://console.adobe.io/): in the **Integrations** tab, navigate to the **Overview** section for any particular integration to find the ID under **Client Credentials**. For a step-by-step walkthrough of how to authenticate into Platform, see the [authentication tutorial](../tutorials/authentication.md).
+An IMS organization is an an Adobe representation of a customer. Any licensed Adobe solutions are integrated with this customer organization. When an IMS organization is entitled to Experience Platform, it can assign access to developers. The IMS Org ID (`x-gw-ims-org-id`) represents the organization that an API call should be executed for, and is therefore required as a header in all API requests. This ID can be found through the [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): in the **Integrations** tab, navigate to the **Overview** section for any particular integration to find the ID under **Client Credentials**. For a step-by-step walkthrough of how to authenticate into Platform, see the [authentication tutorial](../tutorials/authentication.md).
 
 ## Where can I find my API key? {#where-can-i-find-my-api-key}
 
-An API key is required as a header in all API requests. It can be found through the [Adobe I/O Console](https://console.adobe.io/). Within the console, on the **Integrations** tab, navigate to the **Overview** section for a specific integration and you will find the key under **Client Credentials**. For a step-by-step walkthrough of how to authenticate to Platform, see the [authentication tutorial](../tutorials/authentication.md).
+An API key is required as a header in all API requests. It can be found through the [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Within the console, on the **Integrations** tab, navigate to the **Overview** section for a specific integration and you will find the key under **Client Credentials**. For a step-by-step walkthrough of how to authenticate to Platform, see the [authentication tutorial](../tutorials/authentication.md).
 
 ## How do I get an access token? {#how-do-i-get-an-access-token}
 

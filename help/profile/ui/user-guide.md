@@ -39,7 +39,9 @@ You can customize the attributes that are displayed in the list by clicking the 
 
 The profile count displays the total number of profiles your organization has within Experience Platform, after your organization's default merge policy has merged together profile fragments to form a single profile for each individual customer. In other words, your organization may have multiple profile fragments related to a single customer who interacts with your brand across different channels, but these fragments would be merged together (according to the default merge policy) and would return a count of "1" profile because they are all related to the same individual.
 
-The profile count also includes both profiles with attributes (record data) as well as profiles (such as Adobe Analytics profiles) containing only time series (event) data. The count is refreshed regularly to provide an up-to-date total number of profiles within Platform. Any time an ingestion of profiles increases or decreases the count by more than 5%, a job is automatically triggered to update the count. If your organization is using streaming ingestion, jobs are scheduled to run every hour to pick up newly ingested data.
+The profile count also includes both profiles with attributes (record data) as well as profiles containing only time series (event) data, such as Adobe Analytics profiles. The profile count is refreshed regularly to provide an up-to-date total number of profiles within Platform. 
+
+When the ingestion of profiles into the Profile Store increases or decreases the count by more than 5%, a job is triggered to update the count. For streaming data workflows, a check is done on an hourly basis to determine if the 5% increase or decrease threshold has been met. If it has, a job is automatically triggered to update the profile count. For batch ingestion, within 15 minutes of successfully ingesting a batch into the Profile Store, if the 5% increase or decrease threshold is met, a job is run to update the profile count.
 
 ![](../images/user-guide/profile-count.png)
 
@@ -69,7 +71,7 @@ Click **Merge Policies** to view a list of merge policies belonging to your orga
 
 ![](../images/user-guide/profile-merge-policies.png)
 
-For more information on working with merge policies in the UI, see the [mMerge Policies user guide](merge-policies.md).
+For more information on working with merge policies in the UI, see the [Merge Policies user guide](merge-policies.md).
 
 ## Union schema
 
