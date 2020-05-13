@@ -45,6 +45,8 @@ topic: getting started
 
 **Attributes:** Attributes are specified characteristics that represent a profile.
 
+**Attribute Merge:** Attribute merge defines how a merge policy prioritizes profile attribute value in the case of data conflicts. 
+
 **Attribution AI:** Attribution AI is an Adobe Sensei Service that delivers algorithmic multi-channel attribution capabilities across the entire customer lifecycle.
 
 **Audience**: An audience is the resulting set of profiles that meet the criteria of a segment definition.
@@ -141,14 +143,6 @@ topic: getting started
 
 **Data Stream:** A data stream is a set or collection of messages which share the same schema and are sent by the same source.
 
-**Dataset:** A dataset is a storage and management construct for a collection of data, typically a table, that contains schema (columns) and fields (rows).
-
-**Dataset Flow:** In Real-time Customer Data Platform, a dataset flow is a visual representation of source datasets that flow through Real-time Customer Profile to destinations. 
-
-**Dataset ID:** An Adobe-generated identifier for an ingested dataset.
-
-**Dataset Output:** Dataset output provides a mechanism for determining what the *Create Table as Select* option will be used for a particular Query Service run.
-
 **Data Governance:** Data governance encompasses the strategies and technologies used to ensure data is in compliance with regulations and organization policies with respect to data usage.
 
 **Data Governance Labels:** Data governance labels provide users the ability to classify data that reflects privacy-related considerations and contractual conditions to be compliant with regulations and corporate policies. Data governance labels added to a dataset are inherited down or applied to all fields within that dataset.  Data governance labels can also be applied directly to fields.
@@ -166,6 +160,14 @@ topic: getting started
 **Data Type:** Data type is a reusable object with properties in a hierarchical representation.
 
 **Data Usage Labels:** Data usage labels provide users the ability to categorize data that reflects privacy-related considerations and contractual conditions to be compliant with regulations and corporate policies.
+
+**Dataflow:** In Real-time Customer Data Platform, a dataflow is a virtual pipeline of data that flows into Platform from a source and out to destinations. 
+
+**Dataset:** A dataset is a storage and management construct for a collection of data, typically a table, that contains schema (columns) and fields (rows).
+
+**Dataset ID:** An Adobe-generated identifier for an ingested dataset.
+
+**Dataset Output:** Dataset output provides a mechanism for determining what the *Create Table as Select* option will be used for a particular Query Service run.
 
 **Decision Event:** A decision event is used to capture observations about the outcome and context of a decision activity. The decision event captures information about how the decision made, when it was occurring, what options were proposed (chosen) and what contextual state existed that either influenced the decision or could be observed during the decision process. The decision event also captures the proposition ID, a globally unique identifier that can be used to correlate the decision to other events.
 
@@ -210,6 +212,8 @@ topic: getting started
 **Experience Data Model (XDM):** Experience Data Model (XDM) is the concept of using standard schemas to unify data for use with Experience Platform and Adobe Experience Cloud applications. XDM standardizes how data is structured and speeds up and simplifies the process of gaining insights from massive amounts of data.
 
 **Experience Platform Launch:** Launch is a tag and SDK management ecosystem, integrated with Experience Platform and Experience Cloud applications. Launch provides tools to deploy, unify, and manage analytics, marketing, and advertising integrations that are necessary to power relevant customer experiences on all client devices.
+
+**Experience Platform Launch Extensions:** Experience Platform Launch extensions enable delivery of raw event data directly to Real-time Customer Data Platform destinations. Installing Launch extensions requires access to Launch properties.
 
 **Experiment:** An experiment is a process of creating a trained model by training the instance with a sample portion of the live production data.
 
@@ -270,6 +274,8 @@ topic: getting started
 **Identity Stitching:** Identity stitching is the process of identifying data fragments and stitching them together to form a complete record of a profile.
 
 **Identity Symbol:** Identity symbol is an abbreviation of an identity namespace that can be used as a reference in APIs.
+
+**Identity Value:** Identity value is data associated with an assigned identity in the schema. When matching record data across profile fragments both the identity value and the namespace must match. 
 
 **I1 Data Label:** The `I1` data label is used to classify directly identifiable data that can identify or contact a specific person rather than a device.
 
@@ -372,6 +378,8 @@ topic: getting started
 **Profile:** Profile is an Experience Platform standard data model used to define attributes of consumers. A profile can also be an aggregate of event data and attributes related to a person and or device.
 
 **Profile Export:** Profile export is one of the two types of destinations in Real-time Customer Data Platform. Profile export generates a file containing profiles and attributes, and uses raw PII data with email and is used to integrate with marketing and email automation platforms.
+
+**Profile FProfile Fragragment:** A profile fragment is the profile information for just one identity out of the list of identities that exist for a particular user. 
 
 **Profile ID:** A profile ID is an auto-generated identifier associated with an identity type and represents a profile.
 

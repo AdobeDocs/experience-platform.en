@@ -148,3 +148,9 @@ The *Top campaigns* card displays an overview of your campaigns and how the camp
 ## Next steps
 
 Once you have finished filtering the data and are able to display the appropriate information, you have the option to access the scores. For an in-depth guide on how to access your scores, visit the [access scores in Attribution AI](./download-scores.md) tutorial. Additionally, you can also download your summary data as indicated in [more actions](#more-actions). Selecting "Download summary data" downloads the summary data aggregated by dates.
+
+## Additional resources
+
+The following video is designed to assist with learning how to use the Attribution AI insights page to understand the ROI of marketing channels and campaigns.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32669?learn=on&quality=12)

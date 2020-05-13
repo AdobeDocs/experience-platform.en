@@ -52,90 +52,10 @@ All resources in Experience Platform, including those belonging to the Flow Serv
 All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
 
 *   Content-Type: `application/json`
+  
+## Create a connection
 
-## Look up connection specifications
-
-Before connecting Platform to ADLS Gen2, you must verify that connection specifications exist for ADLS Gen2. If connection specifications do not exist then a connection cannot be made.
-
-Each available source has its own unique set of connection specifications for describing connector properties such as authentication requirements. You can look up connection specifications for ADLS Gen2 by performing a GET request and using query parameters.
-
-**API format**
-
-Sending a GET request without query parameters will return connection specifications for all available sources. You can include the query `property=name=="adls-gen2"` to obtain information specifically for ADLS Gen2.
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="adls-gen2"
-```
-
-**Request**
-
-The following request retrieves the connection specifications for ADLS Gen2.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="adls-gen2"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Response**
-
-A successful response returns the connection specifications for ADLS Gen2, including its unique identifier (`id`). This ID is required in the next step to create a base connection.
-
-```json
-{
-    "items": [
-        {
-            "id": "b3ba5556-48be-44b7-8b85-ff2b69b46dc4",
-            "name": "adls-gen2",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Basic Authentication for adls-gen2",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params required for connecting to adlsgen2 using service principal",
-                        "properties": {
-                            "url": {
-                                "type": "string",
-                                "description": "Endpoint for Azure Data Lake Storage Gen2."
-                            },
-                            "servicePrincipalId": {
-                                "type": "string",
-                                "description": "Service Principal Id to connect to ADLSGen2."
-                            },
-                            "servicePrincipalKey": {
-                                "type": "string",
-                                "description": "Service Principal Key to connect to ADLSGen2.",
-                                "format": "password"
-                            },
-                            "tenant": {
-                                "type": "string",
-                                "description": "Tenant information(domain name or tenant ID)."
-                            }
-                        },
-                        "required": [
-                            "url",
-                            "servicePrincipalId",
-                            "servicePrincipalKey",
-                            "tenant"
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
-}
-```
-
-## Create a base connection
-
-A base connection specifies a source and contains your credentials for that source. Only one base connection is required per ADLS Gen2 account as it can be used to create multiple source connectors to bring in different data.
+A connection specifies a source and contains your credentials for that source. Only one connection is required per ADLS Gen2 account as it can be used to create multiple source connectors to bring in different data.
 
 **API format**
 
@@ -155,7 +75,7 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "adls-gen2",
-        "description": "base connection for adls-gen2",
+        "description": "Connection for adls-gen2",
         "auth": {
             "specName": "Basic Authentication for adls-gen2",
             "params": {
@@ -178,11 +98,11 @@ curl -X POST \
 | `auth.params.servicePrincipalId` | The service principal ID of your ADLS Gen2 account. |
 | `auth.params.servicePrincipalKey` | The service principal key of your ADLS Gen2 account. |
 | `auth.params.tenant` | The tenant information of your ADLS Gen2 account. |
-| `connectionSpec.id` | The connection specification `id` of your ADLS Gen2 account retrieved in the previous step. |
+| `connectionSpec.id` | The ADLS Gen2 connection specification ID: `0ed90a81-07f4-4586-8190-b40eccef1c5a1`. |
 
 **Response**
 
-A successful response returns details of the newly created base connection, including its unique identifier (`id`). This ID is required to explore your cloud storage in the next step.
+A successful response returns details of the newly created connection, including its unique identifier (`id`). This ID is required to explore your cloud storage in the next step.
 
 ```json
 {
