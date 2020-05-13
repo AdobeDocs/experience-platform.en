@@ -132,4 +132,4 @@ msg5 = splitter.process(msg4)
 
 ## Next steps
 
-The next step is to create nodes for use in scoring a Real-time Machine Learning model. For more information, visit the [Real-time Machine Learning authoring notebook user guide](./rtml-authoring-notebook.md).
+The next step is to create nodes for use in scoring a Real-time Machine Learning model. For more information, visit the [Real-time Machine Learning notebook user guide](./rtml-authoring-notebook.md).

@@ -1,26 +1,26 @@
 ---
 keywords: Experience Platform;developer guide;Data Science Workspace;popular topics;Real time machine learning;node reference;
 solution: Experience Platform
-title:  Real-time Machine Learning authoring notebook user guide
+title:  Real-time Machine Learning notebook user guide
 topic: Training and scoring a ML model
 ---
 
-# Real-time Machine Learning authoring notebook user guide (Alpha)
+# Real-time Machine Learning notebook user guide (Alpha)
 
 >[!IMPORTANT]
 >Real-time Machine Learning is not available to all users yet. This feature is in alpha and still being tested. This document is subject to change.
 
-The following guide outlines the steps needed to build a Real-time Machine Learning application. Using the Adobe provided **[!UICONTROL RTML Authoring]** notebook template, this guide covers training a model, creating a DSL, publishing DSL to Edge, and scoring the request. As you progress through implementing your Real-time Machine Learning model, it's expected that you modify the template to fit the needs of your dataset.
+The following guide outlines the steps needed to build a Real-time Machine Learning application. Using the Adobe provided **[!UICONTROL Real-time ML]** Python notebook template, this guide covers training a model, creating a DSL, publishing DSL to Edge, and scoring the request. As you progress through implementing your Real-time Machine Learning model, it's expected that you modify the template to fit the needs of your dataset.
 
-## Create a Real-time Machine Learning authoring notebook
+## Create a Real-time Machine Learning notebook
 
 In the Adobe Experience Platform UI, select **[!UICONTROL Notebooks]** from within *Data Science*. Next, select **[!UICONTROL JupyterLab]** and allow some time for the environment to load.
 
 ![open JupyterLab](../images/rtml/open-jupyterlab.png)
 
-The JupyterLab launcher appears. Scroll down to *Real-Time Machine Learning* and select the **RTML Authoring** notebook. A template opens containing example notebook cells with an example dataset.
+The JupyterLab launcher appears. Scroll down to *Real-Time Machine Learning* and select the **Real-time ML** notebook. A template opens containing example notebook cells with an example dataset.
 
-![blank python](../images/rtml/author-notebook.png)
+![blank python](../images/rtml/authoring-notebook.png)
 
 ## Import and discover nodes
 
@@ -73,7 +73,7 @@ Using one of the following options, you are going to write Python code to read, 
 Start by loading your training data.
 
 >[!NOTE]
->In the **RTML Authoring** template, the [car insurance CSV dataset](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) is grabbed from Github.
+>In the **Real-time ML** template, the [car insurance CSV dataset](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) is grabbed from Github.
 
 If you wish to use a dataset from within Adobe Experience Platform, uncomment the cell below. Next, you need to replace `DATASET_ID` with the appropriate value.
 
@@ -100,14 +100,14 @@ config_properties = {
 
 ### Prepare your model
 
-Using the *RTML Authoring* template, you need to analyze, pre-process, train, and evaluate your ML model. This is done by applying data transformations and building a training pipeline.
+Using the *Real-time ML* template, you need to analyze, pre-process, train, and evaluate your ML model. This is done by applying data transformations and building a training pipeline.
 
 **Data tranformations**
 
-The *RTML Authoring* templates *Data Transformations* cell needs to be modified to work with your own dataset. Typically this involves renaming columns, data rollup, and data preparation/feature engineering. 
+The *Real-time ML* templates *Data Transformations* cell needs to be modified to work with your own dataset. Typically this involves renaming columns, data rollup, and data preparation/feature engineering. 
 
 >[!NOTE]
->The following example has been condensed for readability purposes using `[ ... ]`. Please view the *RTML Authoring* template for the complete code cell.
+>The following example has been condensed for readability purposes using `[ ... ]`. Please view the *Real-time ML* template for the complete code cell.
 
 ```python
 df1.rename(columns = {config_properties['ten_id']+'.identification.ecid' : 'ecid',
@@ -190,7 +190,7 @@ Run the provided cell to see an example result. The output table returned from t
 
 Next you need to create the training pipeline. This is going to look similar to any other training pipeline file except you need to convert and generate an ONNX file.
 
-Using the data transformations defined in your previous cell, modify the template. The following code highlighted below is used for generating an ONNX file in your feature pipeline. Please view the *RTML Authoring* template for the complete pipeline code cell.
+Using the data transformations defined in your previous cell, modify the template. The following code highlighted below is used for generating an ONNX file in your feature pipeline. Please view the *Real-time ML* template for the complete pipeline code cell.
 
 ```python
 #for generating onnx
@@ -251,7 +251,7 @@ Using the upload button located in JupyterLab notebooks, upload your pre-trained
 
 ![upload icon](../images/rtml/upload.png)
 
-Next, change the `model_path` string value in the *RTML Authoring* notebook to match your ONNX model name. Once complete, run the *Set model path* cell and then run the *Upload your model to RTML Model Store* cell. Your model location and model ID are both returned in the response when successful.
+Next, change the `model_path` string value in the *Real-time ML* notebook to match your ONNX model name. Once complete, run the *Set model path* cell and then run the *Upload your model to RTML Model Store* cell. Your model location and model ID are both returned in the response when successful.
 
 ![uploading own model](../images/rtml/upload-own-model.png)
 
@@ -265,7 +265,7 @@ This section outlines creating a DSL. You are going to author the nodes that inc
 ### Node authoring
 
 >[!NOTE]
-> You are likely to have multiple nodes based on the type of data being used. The following example outlines only a single node in the *RTML Authoring* template. Please view the *RTML Authoring* template for the complete code cell.
+> You are likely to have multiple nodes based on the type of data being used. The following example outlines only a single node in the *Real-time ML* template. Please view the *Real-time ML* template for the complete code cell.
 
 The Pandas node below uses `"import": "map"` to import the method name as a string in the parameters, followed by inputting the parameters as a map function. The example below does this by using `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`. After you have the map in place, you have the option to set `inplace` as `True` or `False`. Set `inplace` as `True` or `False` based on whether you want to apply transformation inplace or not. By default `"inplace": False` creates a new column. Support to provide a new column name is set to be added in a subsequent release. The last line `cols` can be a single column name or a list of columns. Specify the columns on which you want to apply the transformation. In this example `leasing` is specified. For more information on the available nodes and how to use them, visit the [node reference guide](./node-reference.md).
 
@@ -383,7 +383,7 @@ You are returned the updated DSL.
 
 ## Scoring {#scoring}
 
-After publishing to Edge, scoring is done by a POST request from a client. Typically, this can be done from a client application that needs ML scores. You can also do it from Postman. The *RTML Authoring* template uses EdgeUtils to demonstrate this process.
+After publishing to Edge, scoring is done by a POST request from a client. Typically, this can be done from a client application that needs ML scores. You can also do it from Postman. The *Real-time ML* template uses EdgeUtils to demonstrate this process.
 
 >[!NOTE]
 >A small processing time is required before scoring starts.
@@ -394,13 +394,13 @@ import time
 time.sleep(20)
 ```
 
-Using the same schema that was used in training, sample scoring data is generated. This data is used to build a scoring dataframe then converted into a scoring dictionary. Please view the *RTML Authoring* template for the complete code cell.
+Using the same schema that was used in training, sample scoring data is generated. This data is used to build a scoring dataframe then converted into a scoring dictionary. Please view the *Real-time ML* template for the complete code cell.
 
 ![Scoring data](../images/rtml/generate-score-data.png)
 
 ### Score against the Edge endpoint
 
-Use the following cell within the *RTML Authoring* template to score against your Edge service.
+Use the following cell within the *Real-time ML* template to score against your Edge service.
 
 ![Score against edge](../images/rtml/scoring-edge.png)
 
