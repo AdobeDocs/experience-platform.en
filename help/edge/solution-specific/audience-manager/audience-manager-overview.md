@@ -5,7 +5,7 @@ description: Learn how to send Data to Adobe Audience Manager with Experience Pl
 seo-description: Learn how to send Data to Adobe Audience Manager with Experience Platform Web SDK
 ---
 
-# (Beta) Audience MAnager on the Experience Platform Edge Netwrok
+# (Beta) Audience Manager on the Experience Platform Edge Netwrok
 
 >[!IMPORTANT]
 >
