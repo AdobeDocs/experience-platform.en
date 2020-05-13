@@ -7,9 +7,13 @@ topic: tutorial
 
 # Connect to streaming destinations and activate data in Adobe's Real-time Customer Data Platform using APIs
 
-This tutorial demonstrates how to use API calls to connect to your Adobe Experience Platform data, create a connection to a streaming cloud storage destination (Amazon Kinesis or Azure Event Hubs), create a dataflow to your new created destination, and activate data to your new created destination.
+>[!NOTE]
+>
+>The [!DNL Amazon Kinesis] and [!DNL Azure Event Hubs] destinations in Adobe Real-time CDP are currently in beta. The documentation and the functionality are subject to change.
 
-This tutorial uses the Amazon Kinesis destination in all examples, but the steps are identical for Azure Event Hubs.
+This tutorial demonstrates how to use API calls to connect to your Adobe Experience Platform data, create a connection to a streaming cloud storage destination ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) or [Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), create a dataflow to your new created destination, and activate data to your new created destination.
+
+This tutorial uses the [!DNL Amazon Kinesis] destination in all examples, but the steps are identical for [!DNL Azure Event Hubs].
 
 ![Overview - the steps to create a streaming destination and activate segments](/help/rtcdp/destinations/assets/flow-prelim.png)
 
@@ -29,8 +33,8 @@ The following sections provide additional information that you will need to know
 
 To complete the steps in this tutorial, you should have the following credentials ready, depending on the type of destinations that you are connecting and activating segments to.
 
-* For Amazon Kinesis connections: `accessKeyId`, `secretKey`, `region` or `connectionUrl`
-* For Azure Event Hubs connections: `sasKeyName`, `sasKey`, `namespace`
+* For [!DNL Amazon Kinesis] connections: `accessKeyId`, `secretKey`, `region` or `connectionUrl`
+* For [!DNL Azure Event Hubs] connections: `sasKeyName`, `sasKey`, `namespace`
 
 ### Reading sample API calls {#reading-sample-api-calls}
 
@@ -87,7 +91,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Response**
 
-A successful response contains a list of available destinations and their unique identifiers (`id`). Store the value of the destination that you plan to use, as it will be required in further steps. For example, if you want to connect and deliver segments to Amazon Kinesis or Azure Event Hubs, look for the following snippet in the response:
+A successful response contains a list of available destinations and their unique identifiers (`id`). Store the value of the destination that you plan to use, as it will be required in further steps. For example, if you want to connect and deliver segments to [!DNL Amazon Kinesis] or [!DNL Azure Event Hubs], look for the following snippet in the response:
 
 ```json
 {
