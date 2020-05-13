@@ -29,6 +29,7 @@ GET /search/results/{SCHEMA_CLASS}?{QUERY_PARAMETERS}
 
 | Parameter | Description |
 | --------- | ----------- |
+| `{SCHEMA_CLASS}` | The source of where you want to search.
 |`schema.name`|**Required.** The name of the schema class containing the content to be searched, written in dot-notation format. Currently, only `schema.name=_xdm.context.segmentdefinition` is supported.|
 |`limit`|The number of search results to return. The default value is 50.|
 |`page`|The page number used for paginating results of the query searched.|
@@ -41,7 +42,7 @@ GET /search/results/{SCHEMA_CLASS}?{QUERY_PARAMETERS}
 
 ```shell
 curl -X GET \
-    https://platform.adobe.io/data/core/ups/search?schema.name=_xdm.context.segmentdefinition \
+    https://platform.adobe.io/data/core/ups/search/results/{SCHEMA_CLASS}?schema.name=_xdm.context.segmentdefinition \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'Content-Type: application/json' \
     -H 'x-api-key: {API_KEY}' \
