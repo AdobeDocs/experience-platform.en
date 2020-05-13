@@ -15,7 +15,7 @@ To enable Target you will need to do the following:
 
 - Turn on activity.id and experience.id reponse tokens in the Target UI.
 
-![target_reponse_token](help/assets/target_response_token.png)
+![target_reponse_token](../../assets/target_response_token.png)
 
 - Enable target in your [edge configuration](../../fundamentals/edge-configuration.md) with the appropriate client code.
 - Add the `renderDecisions` option to your events.
@@ -23,7 +23,7 @@ To enable Target you will need to do the following:
 Then optionally you can also:
 
 - Add `decisionScopes` to your events to retrieve specific activities (useful for activities created with the form based composer).
-- Add the [prehiding snippet](../../fundamentals/managing-flicker.md) to hide only certian portions of the page.
+- Add the [prehiding snippet](../../solution-specific/target/flicker-mangement.md) to hide only certian portions of the page.
 
 ## Using the Adobe Target VEC
 
