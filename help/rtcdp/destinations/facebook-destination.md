@@ -31,9 +31,15 @@ Next, they can combine their offline data with their existing online activity da
 
 ## Destination specifics {#destination-specs}
 
+### Data governance for Facebook destinations {#data-governance}
+
+>[!IMPORTANT]
+>
+>Data sent to Facebook should not include stitched identities. You are responsible for honoring this obligation and can do so by ensuring that segments selected for activation do not use a stitching option in their merge policy. Learn more about [merge policies](/help/profile/ui/merge-policies.md).
+
 ### Activation Type {#activation-type}
 
-Segment Export - you are exporting all members of a segment (audience) with the identifiers (name, phone number, etc.) used in the Facebook destination.
+**Segment Export** - you are exporting all members of a segment (audience) with the identifiers (name, phone number, etc.) used in the Facebook destination.
 
 ### Facebook account prerequisites {#facebook-account-prerequisites}
 

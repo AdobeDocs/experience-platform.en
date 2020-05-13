@@ -74,6 +74,10 @@ Check the respective advertising destination that you are activating your data t
 
 For Facebook, a successful activation means that a Facebook custom audience would be created programmatically in [Facebook Ads Manager](https://www.facebook.com/adsmanager/manage/). Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated segments.
 
+>[!TIP]
+>
+>The integration between Adobe Real-time CDP and Facebook supports historical audience backfills. All historical segment qualifications get sent to Facebook when you activate the segments to the destination.
+
 ## Disable activation {#disable-activation}
 
 To disable an existing activation flow, follow the steps below:
