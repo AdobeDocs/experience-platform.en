@@ -11,25 +11,24 @@ seo-description: Quick start guide for using the Experience Platform Web SDK ext
 >
 >Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
 
-Currently the Adobe Experience Platform Web SDK only supports sending data to Adobe Experience Platform using XDM. You must satisfy the following prerequisites.
+This guide will take you through the different how to setup the Adobe Experience Platform Web SDK in Launch. To be able to use this feature you need to be whitelisted. If you would like to get on the waiting list please reach out to you CSM.
 
 - Have a [1st-party domain (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) enabled. If you already have a CNAME for Analytics, you should use that one.
-- Be entitled to Adobe Experience Platform
+- Be entitled to Adobe Experience Platform Data Platform. If you have not purchased platform we will provision you with Experience Platform Data Services Foundation for use with the SDK.
 - Be using the latest version of the Visitor ID service
-
-## Prepare platform
-
-To be able to send data to Adobe Experience Platform, you must create an XDM schema and a dataset that uses that schema.
-
-- [Create a schema](../../xdm/tutorials/create-schema-ui.md)
-- Add the Adobe Experience Platform Web SDK mixin to the schema you created
-- [Create a dataset](https://platform.adobe.com/dataset/overview) with your schema where you would like the data to land
 
 ## Create an configuration ID
 
-You can create a configuration ID using the [edge configuration tool](../fundamentals/edge-configuration.md) in launch.
+You can create a configuration ID using the [edge configuration tool](../fundamentals/edge-configuration.md) in launch. This will allow you to enable the Edge Network to send data to the various solutions. Details for how to find each option are found in the [Edge Configuration Tool](../fundamentals/edge-configuration.md) Page.
 
 >Note: Your organization must be whitelisted for the feature. Please contact your CSM to get put on the list for eventual whitelisting.
+
+## Prepare a Schema
+
+The Experience Platform Edge Network takes data as XDM. XDM is a data format that lets you define schemas. The schema defines how the Edge Network expects the data to be formatted. To send data you will need to define your schema. 
+
+- [Create a schema](../../xdm/tutorials/create-schema-ui.md)
+- Add the Adobe Experience Platform Web SDK mixin to the schema you created
 
 ## Install the SDK in Launch
 
@@ -37,28 +36,25 @@ Log in to Launch and install the `AEP Web SDK` extension. As part of installing 
 
 For more details on different configuration options, see [Configuring the SDK](../fundamentals/configuring-the-sdk.md).
 
+## Create a Data Element Base on Your Schema
+
+In launch create a Data Element that references the schema by changing the extension to AEP Web SDK and setting the type to XDM Object. This will load up your schema and allow you to map data elements into different parts of the schema.
+
+![Date Element In Launch](../../assets/edge_data_element.png)
+
 ## Send an event
 
-After the extension is installed, start sending events by adding a "Send Beacon" action from the AEP Web SDK extension. It is recommended that you send at least one event every time a page is loaded with the "occurs at the start of a view" option checked.
+After the extension is installed, start sending events by adding a "sendEvent" action from the AEP Web SDK extension to a rule. Be sure to add the data element you just created to the event as the XDM data. We recommend that you send at least one event every time a page is loaded.
 
 For more details on how to track events, see [Tracking Events](../fundamentals/tracking-events.md).
 
-## Send data
+## Next Steps
 
-You can send data that matches the schema you created earlier along with your events. For example, if you own a commerce site and added the commerce mixin to your schema, you would send the following structure when someone views a product.
+Once you have data flowing you can do the following. 
 
-```javascript
-{
-  "commerce": {
-    "productListAdds": {
-        "value":1
-    }
-  },
-  "productListItems":{
-      "name":"Floppy Green Hat",
-      "SKU":"HATFLP123",
-      "product":"1234567",
-      "quantity":2
-  }
-}
-```
+- [Build out your schema](https://docs.adobe.com/content/help/en/experience-platform/xdm/schema/composition.html)
+- Learn how to [personalize the experience](../fundamentals/rendering-personalization-content.md)
+- Learn about how to send data to multiple solutions
+  - [Adobe Analytics](../solution-specific/analytics/analytics-overview.md)
+  - [Adobe Audience Manager](../solution-specific/audience-manager/audience-manager-overview.md)
+  - [Adobe Target](../solution-specific/target/target-overview.md)
