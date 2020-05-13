@@ -99,4 +99,4 @@ You can configure resources by adding the following block to the first cell of y
 }
 ```
 
-For more information on Spark cluster resource configuration, including the complete list of configurable properties, see the [JupyterLab User Guide](./jupyterlab/overview.md#pyspark-spark-execution-resource).
+For more information on Spark cluster resource configuration, including the complete list of configurable properties, see the [JupyterLab User Guide](./jupyterlab/overview.md#kernels).

@@ -190,11 +190,3 @@ If the `Authorization` header is not present, or an invalid/expired access token
     }
 }
 ```
-
-### Sending messages to an unauthenticated streaming connection with Authorization 
-
-If a streaming connection does not have authentication enabled, the client can still (optionally) add the `Authorization` header to their request.
-
-If the `Authorization` header is not present, or an invalid/expired access token is sent, an HTTP 401 Unauthorized response will be returned, the data will still be published, but with the `authenticatedRequest` field set to `false`.
-
-If the `Authorization` header is present and valid, the data will be published with the `authenticatedRequest` field set to `true`.

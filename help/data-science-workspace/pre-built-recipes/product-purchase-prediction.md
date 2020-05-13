@@ -52,6 +52,6 @@ totalPrice2 | Number
 
 ## Algorithm
 
-First, the training dataset in the **ProductPrediction** schema is loaded. From here, the model is trained using a [random forest classifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). Random forest classifier is a type of ensembled algorithm which refers to an algorithm that combines multiple algorithms to obtain improved predictive performance. The idea behind the algorithm is that the random forest classifier builds multiple decision trees and merges them to create a more accurate and stable prediction.
+First, the training dataset in the *ProductPrediction* schema is loaded. From here, the model is trained using a [random forest classifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). Random forest classifier is a type of ensembled algorithm which refers to an algorithm that combines multiple algorithms to obtain improved predictive performance. The idea behind the algorithm is that the random forest classifier builds multiple decision trees and merges them to create a more accurate and stable prediction.
 
 This process starts with creating a set of decision trees that randomly selects subsets of training data. Afterwards, the results of each decision tree is averaged.

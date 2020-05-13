@@ -39,6 +39,9 @@ Cloud storage sources can bring your own data into Platform without the need to 
 
 - [Azure Data Lake Storage Gen2 connector](connectors/cloud-storage/adls-gen2.md)
 - [Azure Blob and Amazon S3 connector](connectors/cloud-storage/blob-s3.md)
+- [Amazon Kinesis connector](connectors/cloud-storage/kinesis.md)
+- [Azure Event Hubs connector](connectors/cloud-storage/eventhub.md)
+- [Azure File Storage connector](connectors/cloud-storage/azure-file-storage.md)
 - [FTP and SFTP connector](connectors/cloud-storage/ftp-sftp.md)
 - [Google Cloud Storage connector](connectors/cloud-storage/google-cloud-storage.md)
 
@@ -61,7 +64,6 @@ Experience Platform provides support for ingesting data from a third-party custo
 Experience Platform provides support for ingesting data from a third-party database. See the following related documents for more information on specific source connectors:
 
 - [Amazon Redshift connector](connectors/databases/redshift.md)
-- [Apache Cassandra connector](connectors/databases/cassandra.md)
 - [Apache Hive on Azure HDInsights connector](connectors/databases/hive.md)
 - [Apache Spark on Azure HDInsights connector](connectors/databases/spark.md)
 - [Azure Data Explorer connector](connectors/databases/data-explorer.md)
