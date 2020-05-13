@@ -5,7 +5,7 @@ title:  Real-time Machine Learning authoring notebook user guide
 topic: Training and scoring a ML model
 ---
 
-# Real-time Machine Learning authoring notebook user guide
+# Real-time Machine Learning authoring notebook user guide (Alpha)
 
 >[!IMPORTANT]
 >Real-time Machine Learning is not available to all users yet. This feature is in alpha and still being tested. This document is subject to change.
@@ -24,7 +24,7 @@ The JupyterLab launcher appears. Scroll down to *Real-Time Machine Learning* and
 
 ## Import and discover nodes
 
-Start by importing all the required packages for your model. Make sure any packages you plan on using for node authoring are imported.
+Start by importing all the required packages for your model. Make sure any package you plan on using for node authoring is imported.
 
 >[!NOTE]
 >Your list of imports might differ based on the model you wish to make. This list is going to change as new nodes are added over time. Please refer to the [node reference guide](./node-reference.md) for a complete list of available nodes.
@@ -63,7 +63,7 @@ pprint(nf.discover_nodes())
 
 ## Training a Real-time Machine Learning model
 
-Using one of the following options, you are going to write python code to read, preprocess, and analyze data. Next, you need to train your own ML model, serialize it into ONNX format, and finally upload it to Real-time Machine Learning model store.
+Using one of the following options, you are going to write Python code to read, preprocess, and analyze data. Next, you need to train your own ML model, serialize it into ONNX format then upload it to Real-time Machine Learning model store.
 
 - [Training your own model in JupyterLab notebooks](#training-your-own-model)
 - [Uploading your own pre-trained ONNX model to JupyterLab notebooks](#pre-trained-model-upload)
@@ -104,7 +104,7 @@ Using the *RTML Authoring* template, you need to analyze, pre-process, train, an
 
 **Data tranformations**
 
-The *RTML Authoring* templates *Data Transformations* cell is expected to be modified to work with your own dataset. Typically this involves renaming columns, data rollup, and data preparation/feature engineering. 
+The *RTML Authoring* templates *Data Transformations* cell needs to be modified to work with your own dataset. Typically this involves renaming columns, data rollup, and data preparation/feature engineering. 
 
 >[!NOTE]
 >The following example has been condensed for readability purposes using `[ ... ]`. Please view the *RTML Authoring* template for the complete code cell.
@@ -267,7 +267,7 @@ This section outlines creating a DSL. You are going to author the nodes that inc
 >[!NOTE]
 > You are likely to have multiple nodes based on the type of data being used. The following example outlines only a single node in the *RTML Authoring* template. Please view the *RTML Authoring* template for the complete code cell.
 
-The Pandas node below uses `"import": "map"` to import the method name as a string in the parameters, followed by, inputting the parameters as a map function. The example below does this by using `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`. After you have the map in place, you have the option to set `inplace` as true or false. Set `inplace` as `True` or `False` based on whether you want to apply transformation inplace or not. By default `"inplace": False` creates a new column. Support to provide a new column name is set to be added in a subsequent release. The last line `cols` can be a single column name or a list of columns. Specify the columns on which you want to apply the transformation. In this example `leasing` is specified. For more information on the available nodes and how to use them, visit the [node reference guide](./node-reference.md).
+The Pandas node below uses `"import": "map"` to import the method name as a string in the parameters, followed by inputting the parameters as a map function. The example below does this by using `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`. After you have the map in place, you have the option to set `inplace` as `True` or `False`. Set `inplace` as `True` or `False` based on whether you want to apply transformation inplace or not. By default `"inplace": False` creates a new column. Support to provide a new column name is set to be added in a subsequent release. The last line `cols` can be a single column name or a list of columns. Specify the columns on which you want to apply the transformation. In this example `leasing` is specified. For more information on the available nodes and how to use them, visit the [node reference guide](./node-reference.md).
 
 ```python
 # Renaming leasing column using Pandas Node
@@ -307,10 +307,10 @@ nodes = [json_df_node,
         onnx_node]
 ```
 
-Next, connect the nodes with edges. Each tuple is an edge connection.
+Next, connect the nodes with edges. Each tuple is an Edge connection.
 
 >[!TIP]
-> As the nodes are linearly dependent on each other (each node depends on previous node's output), you can create links using a simple python list comprehension. Please add your own connections if a node depends on multiple inputs.
+> As the nodes are linearly dependent on each other (each node depends on previous node's output), you can create links using a simple Python list comprehension. Please add your own connections if a node depends on multiple inputs.
 
 ```python
 edges = [(nodes[i], nodes[i+1]) for i in range(len(nodes)-1)]
@@ -332,10 +332,10 @@ Once complete, an `edge` object is returned containing each of the nodes and the
 >[!NOTE]
 >Real-time Machine Learning is temporarily deployed to and managed by the Adobe Expereince Platform Hub. For additional details, visit the overview section on [Real-time Machine Learning architecture](./home.md#architecture).
 
-Now that you have created a DSL graph, you can deploy your graph to the edge.
+Now that you have created a DSL graph, you can deploy your graph to the Edge.
 
 >[!IMPORTANT]
->Do not publish to edge often, this can overload the edge nodes. Publishing the same model multiple times is not recommended.
+>Do not publish to Edge often, this can overload the Edge nodes. Publishing the same model multiple times is not recommended.
 
 ```python
 edge_utils = EdgeUtils()
@@ -372,7 +372,7 @@ dsl_dict['edge']['applicationDsl']['nodes'][0]['id'] = new_node_id
 After updating the node ID, you're able to re-publish an updated DSL to the Edge.
 
 ```python
-# Republish the updated dsl to edge
+# Republish the updated DSL to Edge
 (edge_location_ret, service_id, updated_dsl) = edge_utils.update_deployment(dsl=json.dumps(dsl_dict), service_id=service_id)
 print(f'Updated dsl: {updated_dsl}')
 ```
@@ -383,7 +383,7 @@ You are returned the updated DSL.
 
 ## Scoring {#scoring}
 
-After publishing to edge, scoring is done by a POST request from a client. Typically, this can be done from a client application that needs ML scores. You can also do it from Postman. The *RTML Authoring* template uses EdgeUtils to demonstrate this process.
+After publishing to Edge, scoring is done by a POST request from a client. Typically, this can be done from a client application that needs ML scores. You can also do it from Postman. The *RTML Authoring* template uses EdgeUtils to demonstrate this process.
 
 >[!NOTE]
 >A small processing time is required before scoring starts.
@@ -398,18 +398,18 @@ Using the same schema that was used in training, sample scoring data is generate
 
 ![Scoring data](../images/rtml/generate-score-data.png)
 
-### Score against the edge endpoint
+### Score against the Edge endpoint
 
-Use the following cell within the *RTML Authoring* template to score against your edge service.
+Use the following cell within the *RTML Authoring* template to score against your Edge service.
 
 ![Score against edge](../images/rtml/scoring-edge.png)
 
-Once scoring is complete, the edge URL, Payload, and scored output from edge are returned. 
+Once scoring is complete, the Edge URL, Payload, and scored output from the Edge are returned. 
 
-## Deleting a deployed app from edge (optional)
+## Deleting a deployed app from Edge (optional)
 
 >![CAUTION]
->This cell is used to delete your deployed edge application. Do not use the following cell unless you need to delete a deployed edge application. 
+>This cell is used to delete your deployed Edge application. Do not use the following cell unless you need to delete a deployed Edge application. 
 
 ```python
 if edge_utils.delete_from_edge(service_id=service_id):
@@ -421,12 +421,3 @@ else:
 ## Next steps
 
 By following the tutorial above, you have successfully trained and uploaded an ONNX model to the Real-time Machine Learning model store. Additionally, you have scored and deployed your Real-time Machine Learning model. If you wish to learn more about the nodes available for model authoring, visit the [node reference guide](./node-reference.md).
-
-
-
-
-
-
-
-
-

@@ -5,7 +5,7 @@ title: Real-time Machine Learning overview
 topic: Overview
 ---
 
-# Real-time Machine Learning overview
+# Real-time Machine Learning overview (Alpha)
 
 >[!IMPORTANT]
 >Real-time Machine Learning is not available to all users yet. This feature is in alpha and still being tested. This document is subject to change.
@@ -22,7 +22,7 @@ The following diagrams provide a overview for the Real-time Machine Learning arc
 
 ![Simplified overview](../images/rtml/end-to-end-arch.png)
 
-## Real-time Machine Learning workflow (Alpha)
+## Real-time Machine Learning workflow
 
 The following workflow outlines the typical steps and results involved in creating and utilizing a Real-time Machine Learning model.
 
@@ -54,7 +54,7 @@ Real-time Machine Learning is currently in alpha. The functionality outlined bel
 > Alpha limitations:
 > - Currently, only ONNX based models are supported.
 > - Functions used in nodes cannot be serialized. For example, a lambda function used in a Pandas node.
-> - There is a 60 second sleep after edge deployment is done manually.
+> - There is a 60 second sleep after Edge deployment is done manually.
 > - For deep learning, your data needs to be sent in such a way that when `df.values` is called it returns an array that is acceptable by your DL model. This is because the ONNX model scoring node uses `df.values` and sends the output to score against the model.
 
 
