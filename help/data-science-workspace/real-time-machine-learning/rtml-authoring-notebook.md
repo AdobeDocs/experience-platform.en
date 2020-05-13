@@ -255,7 +255,7 @@ Next, change the `model_path` string value in the *RTML Authoring* notebook to m
 
 ![uploading own model](../images/rtml/upload-own-model.png)
 
-## DSL creation
+## Domain specific language (DSL) creation
 
 This section outlines creating a DSL. You are going to author the nodes that includes any preprocessing of data along with ONNX node. Next, a DSL graph is created using nodes and edges. Edges connect nodes using tuple based format (node_1, node_2). The graph should not have cycles.
 
@@ -281,7 +281,7 @@ leasing_mapper_node = Pandas(params={'import': 'map',
                                 'cols': 'leasing'})
 ```
 
-### Build the graph domain specific language (DSL)
+### Build the DSL graph
 
 With your nodes created, the next step is to chain the nodes together to create a graph. 
 
