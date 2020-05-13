@@ -51,7 +51,7 @@ From the *Select identity namespace* dialog, choose the namespace by which you w
 
 ### Identity value
 
-After selecting an **Identity namespace**, you return to the *Browse* tab where you can enter an **Identity value**. This value is specific to an individual customer and must be a valid entry for the namespace provided. For example, selecting the **Identity namespace** "Email" would require an **Indentity value** in the form of a valid email address. 
+After selecting an **Identity namespace**, you return to the *Browse* tab where you can enter an **Identity value**. This value is specific to an individual customer profile and must be a valid entry for the namespace provided. For example, selecting the **Identity namespace** "Email" would require an **Identity value** in the form of a valid email address. 
 
 ![](../images/user-guide/profiles-show-profile.png)
 
