@@ -23,9 +23,9 @@ Updates to existing features in Adobe Experience Platform:
 
 Adobe Experience Platform is releasing updates to the domain and header bar to improve your experience and unify with other Experience Cloud applications.
 
-* Easier switching between your organizations or to a different application
-* Improved user help, including featured articles and context-relevant documentation in the Help menu
-* Ability to give feedback about the Experience Platform and file support tickets  
+- Easier switching between your organizations or to a different application
+- Improved user help, including featured articles and context-relevant documentation in the Help menu
+- Ability to give feedback about the Experience Platform and file support tickets  
 
 The roll-out of the new experience is gradual. You can view the experience at [https://experience.adobe.com/platform](https://experience.adobe.com/platform).
 
