@@ -12,9 +12,25 @@ author: crhoades, ens28527
 
 Updates to existing features in Adobe Experience Platform:
 
+- [User interface updates](#ux)
 - [Data Science Workspace](#dsw)
 - [Experience Platform Web SDK and Experience Platform Edge Network](#edge)
 - [Sources](#sources)
+
+## User interface updates {#ux}
+
+The domain and header bar have been updated to unify and improve your experience across all Experience Cloud applications. These updates do not change current workflows.
+
+These updates are being rolled out gradually, so you might not see the changes immediately. You can view the experience at any time by going to [https://experience.adobe.com/platform](https://experience.adobe.com/platform).
+
+** Notable changes and improvements**
+
+|Feature | Description|
+|--- | ---|
+| Organization and application switchers | Switch more easily between your organizations or to a different application. |
+| Improved user Help menu | The help menu now includes featured articles and context-aware article recommendations. Search results also include results from community forums and more video content. Feedback options make it easier to provide feedback about article usefulness, report issues, and share your ideas. | 
+| Improved Notifications | The Notifications drop-down now has two tabs, one for your own product notifications, and one for more global product announcements. |
+| A new, easier URL pattern | Update your bookmarks to the new url: `experience.adobe.com/<application name>`. For example, https://experience.adobe.com/target, https://experience.adobe.com/analytics, and so on. |
 
 ## Data Science Workspace {#dsw}
 
