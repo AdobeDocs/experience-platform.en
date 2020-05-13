@@ -20,9 +20,16 @@ Experience Platform documentation is provided in multiple formats for a variety 
 
 >[!NOTE]
 >
->Beginning in May, 2020, Adobe is rolling out an updated shell for Adobe Experience Platform. This includes a new Help menu, which displays links to featured articles and recommends context-relevant documentation. This menu also provides the ability to give feedback about the documentation and file support tickets. From time to time, you might receive a survey for additional feedback.
+>Beginning in May, 2020, Adobe is making updates to the domain and header bar to unify and improve your experience across all Experience Cloud applications. This includes a new Help menu. The new help menu includes the following:
 >
->This roll-out is gradual, so you might not see the changes immediately. When the experience is implemented for you, you will automatically be redirected to the new experience. You can view the experience at any time by going to [https://experience.adobe.com/](https://experience.adobe.com/). 
+>* Links to featured articles 
+>* Context-relevant documentation recommendations
+>* The ability to give feedback about the documentation and report issues
+>* Improved search results that also include results from community forums and video content. 
+>
+> From time to time, you might receive a survey for additional feedback. 
+>
+>This roll-out is gradual, so you might not see the changes immediately. You can view the updated experience at any time by going to [https://experience.adobe.com/](https://experience.adobe.com/). 
 
 ## Experience Platform tutorials
 
