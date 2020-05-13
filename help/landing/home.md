@@ -24,7 +24,7 @@ Experience Platform documentation is provided in multiple formats for a variety 
 >
 >* Links to featured articles 
 >* Context-relevant documentation recommendations
->* The ability to give feedback about the documentation and report issues
+>* The ability to give feedback about the Experience Platform and report issues
 >* Improved search results that also include results from community forums and video content. 
 >
 > From time to time, you might receive a survey for additional feedback. 
