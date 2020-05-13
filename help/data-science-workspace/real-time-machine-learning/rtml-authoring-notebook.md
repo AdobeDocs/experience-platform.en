@@ -310,7 +310,7 @@ nodes = [json_df_node,
 Next, connect the nodes with edges. Each tuple is an edge connection.
 
 >[!TIP]
-> As the nodes are linearly dependent on each other (each node depends on previous node's output. You can create links using a simple python list comprehension. Please add your own links if a node depends on multiple inputs.
+> As the nodes are linearly dependent on each other (each node depends on previous node's output), you can create links using a simple python list comprehension. Please add your own connections if a node depends on multiple inputs.
 
 ```python
 edges = [(nodes[i], nodes[i+1]) for i in range(len(nodes)-1)]
