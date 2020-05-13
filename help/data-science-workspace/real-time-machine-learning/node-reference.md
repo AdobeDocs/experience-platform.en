@@ -10,6 +10,8 @@ topic: Nodes reference
 >[!IMPORTANT]
 >Real-time Machine Learning is not available to all users yet. This feature is in alpha and still being tested. This document is subject to change.
 
+A Node is the fundamental unit of which graphs are formed. Each node performs a specific task and they can be chained together using links to form a graph that represents an ML pipeline. The task performed by a node represents an operation on input data such as a transformation of data or schema, or a machine learning inference. The node outputs the transformed or inferred value to the next node(s).
+
 The following guide outlines the supported node libraries for Real-time Machine Learning.
 
 ## Discovering nodes for use in your ML pipeline
