@@ -21,7 +21,7 @@ user-guide-title: Real-Time Customer Data Platform Help
   * Destinations interface  {#destinations-interface}
     * [Destinations workspace](destinations/destinations-workspace.md)
     * [Destination details page](destinations/destination-details-page.md)
-  * Destinations catalog  {#destinations-cat}
+  * Destinations catalog {#destinations-cat}
     * [Destinations catalog overview](destinations/destinations-catalog.md)
     * Adobe destinations{#adobe-destinations}
       * [Adobe destinations overview](destinations/adobe-destinations.md)
@@ -69,7 +69,9 @@ user-guide-title: Real-Time Customer Data Platform Help
     * Cloud storage destinations{#cloud-storage}
       * [Cloud storage destinations overview](destinations/cloud-storage-destinations.md)
       * [Workflow to create cloud storage destinations](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
+      * [Amazon Kinesis destination](/help/rtcdp/destinations/amazon-kinesis-destination.md)
       * [Amazon S3 destination](destinations/amazon-s3-destination.md)
+      * [Azure EventHubs destination](/help/rtcdp/destinations/azure-event-hubs-destination.md)
       * [SFTP destination](destinations/sftp-destination.md)
     * Data Management Platform destinations {#dmp-destinations}
       * [Data Management Platform destinations overview](destinations/dmp-destinations.md)
