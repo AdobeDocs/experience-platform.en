@@ -31,21 +31,20 @@ See [Cloud storage destinations workflow ](/help/rtcdp/destinations/cloud-storag
 
 For [!DNL Azure Event Hubs] destinations, enter the following information in the create destination workflow:
 
-### In the Authentication step {#authentication-step}
+### In the Account step {#account-step}
 
 * **[!UICONTROL SAS Key Name]** and **[!UICONTROL SAS Key]**: Fill in your SAS key name and key. Learn about authenticating to [!DNL Azure Event Hubs] with SAS keys in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * **[!UICONTROL Namespace]**: Fill in your [!DNL Azure Event Hubs] namespace. Learn about [!DNL Azure Event Hubs] namespaces in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 
-![Input required in the authentication step](/help/rtcdp/destinations/assets/event-hubs-authentication-step.png)
+![Input required in the authentication step](/help/rtcdp/destinations/assets/event-hubs-account-step.png)
 
-### In the Setup step {#setup-step}
+### In the Authentication step {#authentication-step}
 
 * **[!UICONTROL Name]**: Fill in a name for the connection to [!DNL Azure Event Hubs].
 * **[!UICONTROL Description]**: Provide a description of the connection.  Examples: "Premium tier customers", "Males interested in kitesurfing".
 * **[!UICONTROL eventHubName]**: Provide a name for the stream to your [!DNL Azure Event Hubs] destination.
-* **[!UICONTROL namespace]**: Fill in your [!DNL Azure Event Hubs ] namespace, where you will be streaming data. 
 
-![Data required in the setup step](/help/rtcdp/destinations/assets/event-hubs-setup-step.png)
+![Data required in the setup step](/help/rtcdp/destinations/assets/event-hubs-authentication-step.png)
 
 ## Activate segments {#activate-segments}
 
