@@ -5,11 +5,11 @@ description: Learn how to merge Experience Platform Web SDK event data
 seo-description: Learn how to merge Experience Platform Web SDK event data
 ---
 
-# (Beta) Merging event data
+# Merging event data
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+>This feature is still in development and so not all solutions will be able to merge this data. 
 
 Sometimes, not all data is available when an event occurs. You might want to capture the data you _do_ have so it isn't lost if, for example, the user closes the browser. On the other hand, you might also include any data that will become available later.
 

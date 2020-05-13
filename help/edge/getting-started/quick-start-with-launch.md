@@ -5,15 +5,11 @@ description: Quick start guide for using the Experience Platform Web SDK extensi
 seo-description: Quick start guide for using the Experience Platform Web SDK extension to collect data
 ---
 
-# (Beta) Prerequisites
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+# Welcome
 
 This guide will take you through the different how to setup the Adobe Experience Platform Web SDK in Launch. To be able to use this feature you need to be whitelisted. If you would like to get on the waiting list please reach out to you CSM.
 
-- Have a [1st-party domain (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) enabled. If you already have a CNAME for Analytics, you should use that one.
+- Have a [1st-party domain (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) enabled. If you already have a CNAME for Analytics, you should use that one. Testing in development will work without a CNAME but you will need one before you go to production
 - Be entitled to Adobe Experience Platform Data Platform. If you have not purchased platform we will provision you with Experience Platform Data Services Foundation for use with the SDK.
 - Be using the latest version of the Visitor ID service
 
