@@ -30,27 +30,27 @@ In order to enrich customer profiles, the target dataset's source schema must be
 
 Within the Sources workspace, click the **Browse** tab to list your base connections. In the displayed list, find the connection that contains the dataflow you wish to populate profiles with. Click the connection's name to access its details.
 
-![](../../images/tutorials/dataflow/cloud-storage/browse.png)
+![](../../images/tutorials/dataflow/cloud-storage/batch/browse.png)
 
 The connection's *Source activity* screen appears, displaying the datasets that the connection is ingesting source data into. Click the name of the dataset you wish to enable for Profile.
 
-![](../../images/tutorials/dataflow/cloud-storage/dataset-dataflow.png)
+![](../../images/tutorials/dataflow/cloud-storage/batch/dataset-dataflow.png)
 
 The *Dataset activity* screen appears. The *Properties* column on the right-hand side of the screen displays the details of the dataset, and includes a **Profile** switch and a link to the schema the dataset adheres to. Click the name of the schema to view its composition.
 
-![](../../images/tutorials/dataflow/cloud-storage/select-dataset-schema.png)
+![](../../images/tutorials/dataflow/cloud-storage/batch/select-dataset-schema.png)
 
 The *Schema Editor* appears, showing the structure of the schema in the center canvas. Within the canvas, select the field to be set as the primary identity. Under the *Field properties* tab that appears, select the **Identity** checkbox, then **Primary identity**. Finally, select an appropriate **Identity namespace**, then click **Apply**.
 
-![](../../images/tutorials/dataflow/cloud-storage/set-schema-identity.png)
+![](../../images/tutorials/dataflow/cloud-storage/batch/set-schema-identity.png)
 
 Click the top-level object of the schema's structure and the *Schema properties* column appears. Enable the schema for Profile by toggling the **Profile** switch. Click **Save** to finalize your changes.
 
-![](../../images/tutorials/dataflow/cloud-storage/enable-profile.png)
+![](../../images/tutorials/dataflow/cloud-storage/batch/enable-profile.png)
 
 Now that the schema is enabled for Profile, return to the *Dataset activity* screen and enable the dataset for Profile by clicking the **Profile** toggle within the *Properties* column.
 
-![](../../images/tutorials/dataflow/cloud-storage/enable-dataset-profile.png)
+![](../../images/tutorials/dataflow/cloud-storage/batch/enable-dataset-profile.png)
 
 With both the schema and dataset enabled for Profile, data ingested into that dataset will now also populate customer profiles.
 
