@@ -31,7 +31,7 @@ Each time a command is executed, a promise is returned. The promise represents t
 
 ```javascript
 alloy("commandName", options)
-  .then(function(value) {
+  .then(function(result) {
     // The command succeeded.
     // "value" is whatever the command returned
   })
@@ -55,12 +55,22 @@ Likewise, if knowing when the command fails is not important to you, you may rem
 
 ```javascript
 alloy("commandName", options)
-  .then(function(value) {
+  .then(function(result) {
     // The command succeeded.
     // "value" will be whatever the command returned
   })
 ```
 
-## Suppressing errors
+### Response objects
 
-If the promise is rejected and you have not added a `catch` call, the error "bubbles up" and is logged in your browser's developer console, regardless of whether logging is enabled in Adobe Experience Platform Web SDK. If this is a concern for you, you can set the `suppressErrors` configuration option to `true` as outlined in [Configuring the SDK](configuring-the-sdk.md).
+All promises returned from commands are resolved with a `result` object. The result object will contain data depending on the command and the user's consent. For example library info is passed as an property of the results object in the following command.
+
+```js
+alloy("getLibraryInfo").then(function(result) {
+  console.log(results.libraryInfo.version);
+});
+```
+
+### Consent
+
+If a user has not given their consent for a particular purpose, the promise will still be resolved; however, the response object will only contain the information that can be provided in the context of what the user has consented to.
