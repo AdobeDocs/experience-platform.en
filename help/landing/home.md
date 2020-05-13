@@ -20,11 +20,11 @@ Experience Platform documentation is provided in multiple formats for a variety 
 
 >[!NOTE]
 >
->Beginning in May, 2020, Adobe rolling out updates to the domain and header bar to unify and improve your experience across all Experience Cloud applications. This includes a new Help menu. The new Help menu includes the following:
+>Beginning in May, 2020, Adobe is rolling out updates to the domain and header bar to unify and improve your experience across all Experience Cloud applications. This includes a new Help menu. The new Help menu includes the following:
 >
 >* Links to featured articles 
 >* Context-relevant documentation recommendations
->* The ability to give feedback about the documentation and report issues
+>* The ability to give feedback about the Experience Platform and report issues
 >* Improved search results that also include results from community forums and video content. 
 >
 > From time to time, you might receive a survey for additional feedback. 
