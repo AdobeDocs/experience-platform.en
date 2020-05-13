@@ -71,7 +71,7 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Workflow to create cloud storage destinations](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
       * [Amazon S3 destination](destinations/amazon-s3-destination.md)
       * [SFTP destination](destinations/sftp-destination.md)
-    * Data Management Platform destinations {dmp-destinations}
+    * Data Management Platform destinations {#dmp-destinations}
       * [Data Management Platform destinations overview](destinations/dmp-destinations.md)
       * [Audience Manager DIL extension](/help/rtcdp/destinations/aam-dil-extension.md)
     * Email marketing destinations{#email-destinations}

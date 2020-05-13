@@ -233,7 +233,6 @@ Contents of the file
 
 For additional samples, please refer to the [data access tutorial](tutorials/dataset-data.md).
 
-
 ## Subscribe to data ingestion events
 
-Platform makes specific high-value events available for subscription through the [Adobe I/O console](https://console.adobe.io/). For instance, you can subscribe to data ingestion events to be notified of potential delays and failures. More information about using Adobe I/O Events can be found in the [getting started guide](https://www.adobe.io/apis/experienceplatform/events/docs.html).
+Platform makes specific high-value events available for subscription through the [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). For instance, you can subscribe to data ingestion events to be notified of potential delays and failures. See the tutorial on [subscribing to data ingestion notifications](../ingestion/quality/subscribe-events.md) for more information.
