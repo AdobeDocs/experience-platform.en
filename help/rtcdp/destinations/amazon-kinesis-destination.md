@@ -5,7 +5,12 @@ description: Create a real-time outbound connection to your Amazon Kinesis stora
 seo-description: Create a real-time outbound connection to your Amazon Kinesis storage to stream data from Adobe Experience Platform.
 ---
 
-# Amazon Kinesis destination
+# (Beta) Amazon Kinesis destination
+
+
+>[!IMPORTANT]
+>
+>The [!DNL Amazon Kinesis] destination in Adobe Real-time CDP is currently in beta. The documentation and the functionality are subject to change.
 
 ## Overview {#overview}
 
@@ -14,7 +19,7 @@ The [!DNL Kinesis Data Streams] service by Amazon Web Services allows you to col
 You can create a real-time outbound connection to your [!DNL Amazon Kinesis] storage to stream data from Adobe Experience Platform. 
 
 * For more information about [!DNL Amazon Kinesis], see the [Amazon documentation](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
-* To connect to [!DNL Amazon Kinesis] using API calls, see the [Streaming destinations API tutorial].
+* To connect to [!DNL Amazon Kinesis] using API calls, see the [Streaming destinations API tutorial](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md).
 * To connect to [!DNL Amazon Kinesis] using the Adobe Real-time CDP user interface, see the sections below.
 
 ![Amazon Kinesis in the UI](/help/rtcdp/destinations/assets/aws-kinesis-destination.png)
@@ -92,6 +97,6 @@ Your exported Experience Platform data lands in [!DNL Amazon Kinesis] in JSON fo
 
 >[!MORELIKETHIS]
 >
->* Link to Amazon Kinesis API tutorial
+>* [Connect to Amazon Kinesis and activate data using API calls](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
 >* [Azure Event Hubs destination](/help/rtcdp/destinations/azure-event-hubs-destination.md)
 >* [Destination types and categories](/help/rtcdp/destinations/destination-types.md) 

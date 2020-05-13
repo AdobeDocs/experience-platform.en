@@ -1,11 +1,15 @@
 ---
-title: Azure Event Hubs destination
-seo-title: Azure Event Hubs destination
+title: (Beta) Azure Event Hubs destination
+seo-title: (Beta) Azure Event Hubs destination
 description: Create a real-time outbound connection to your Azure Event Hubs storage to stream data from Experience Platform.
 seo-description: Create a real-time outbound connection to your Azure Event Hubs storage to stream data from Experience Platform.
 ---
 
-# Azure Event Hubs destination
+# (Beta) Azure Event Hubs destination
+
+>[!IMPORTANT]
+>
+>The [!DNL Azure Event Hubs] destination in Adobe Real-time CDP is currently in beta. The documentation and the functionality are subject to change.
 
 ## Overview {#overview}
 
@@ -14,7 +18,7 @@ seo-description: Create a real-time outbound connection to your Azure Event Hubs
 You can create a real-time outbound connection to your [!DNL Azure Event Hubs] storage to stream data from Adobe Experience Platform.
 
 * For more information about [!DNL Azure Event Hubs], see the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about).
-* To connect to [!DNL Azure Event Hubs] using API calls, see the [Streaming destinations API tutorial].
+* To connect to [!DNL Azure Event Hubs] using API calls, see the [Streaming destinations API tutorial](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md).
 * To connect to [!DNL Azure Event Hubs] using the Adobe Real-time CDP user interface, see the sections below.
 
 ![AWS Kinesis in the UI](/help/rtcdp/destinations/assets/azure-event-hubs-destination.png)
@@ -84,6 +88,6 @@ Your exported Experience Platform data lands in [!DNL Azure Event Hubs] in JSON 
 
 >[!MORELIKETHIS]
 >
->* Link to Azure Event Hubs API tutorial
+>* [Connect to Azure Event Hubs and activate data using API calls](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
 >* [AWS Kinesis destination](/help/rtcdp/destinations/amazon-kinesis-destination.md)
 >* [Destination types and categories](/help/rtcdp/destinations/destination-types.md) 
