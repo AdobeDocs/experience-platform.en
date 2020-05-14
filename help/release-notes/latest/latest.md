@@ -66,7 +66,7 @@ For more information, please see the [Destinations overview](/help/rtcdp/destina
 
 ## Experience Platform Web SDK and Experience Platform Edge Network {#edge}
 
-The Experience Platform Web SDK and Experience Platform Edge Network allow users to send data to the Adobe Experience Platform and other Adobe Solutions in real-time for end-user devices and browsers. The most recent list of use cases can be found in our [public roadmap](https://github.com/adobe/alloy/projects/5) which is updated often. 
+The Experience Platform Web SDK and Experience Platform Edge Network allow users to send data to the Adobe Experience Platform and other Adobe Solutions in real-time for end-user devices and browsers. The most recent list of use cases can be found in our [public roadmap](https://github.com/adobe/alloy/projects/5) which is updated often.
 
 **New features**
 
@@ -80,7 +80,7 @@ The Experience Platform Web SDK and Experience Platform Edge Network allow users
 | Adobe Analytics | Send data to Analytics report suites via the edge configuration. XDM is flattened into context data, supports multi-suite tagging |
 | Adobe Target | Support for Adobe Target. Including VEC, Form based composer, A/B, XT, Automated Personalization, MVT|
 | Adobe Audience Manager Support | Support for Audience Manager ID syncs, URL destinations and Cookie Destinations |
-| `synceIdnetity` | Renamed `setCustomersIds` to `syncIdentity` to make it more clear |
+| Identity Syncing | Renamed `setCustomersIds` to `syncIdentity` to make it more clear |
 | XDM Object Builder | In the launch extension you can now build XDM objects as Data Elements |
 
 For more information on Platform Web SDK and Edge Network, refer to the [documentation](../../edge/home.md).
