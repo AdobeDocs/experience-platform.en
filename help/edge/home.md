@@ -28,7 +28,7 @@ We highly recommend you [checkout our getting started guide](getting-started/qui
 
 This product is constantly evolving and growing to support more and more use cases. To keep up on the latest we checkout our [supported use-cases board](https://github.com/adobe/alloy/projects/5). We keep this up to date with the use cases we currently support and ones we are working on to enable you to make the best decisions possible. 
 
-- __Use Cases Not Yet Supported__ - are use case that are on our roadmap to be done in the future.
-- __Use Cases In Progress__ - These are the use cases the team is currently working on completing for release. 
-- __Supported Use Cases__ - These are the use cases that are supported and work today. 
-- __Use Cases We Won't Support__ - These are the use cases we have made a decision not to support.
+* __Use Cases Not Yet Supported__ - are use case that are on our roadmap to be done in the future.
+* __Use Cases In Progress__ - These are the use cases the team is currently working on completing for release.
+* __Supported Use Cases__ - These are the use cases that are supported and work today. 
+* __Use Cases We Won't Support__ - These are the use cases we have made a decision not to support.
