@@ -7,10 +7,6 @@ seo-description: Learn how to track Experience Platform Web SDK events
 
 # Tracking events
 
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
-
 To send event data to the Adobe Experience Cloud, use the `event` command. The `event` command is the primary way to send data to the Experience Cloud, and to retrieve personalized content, identities, and audience destinations.
 
 Data sent to Adobe Experience Cloud falls into two categories: 

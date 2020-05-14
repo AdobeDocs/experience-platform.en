@@ -5,11 +5,7 @@ description: Learn how to configure the Experience Platform Web SDK
 seo-description: Learn how to configure the Experience Platform Web SDK
 ---
 
-# (Beta) Configuring the SDK
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+# Configuring the SDK
 
 Configuration for the SDK is done with the `configure` command.
 
