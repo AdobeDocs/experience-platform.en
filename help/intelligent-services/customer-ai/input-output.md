@@ -26,7 +26,7 @@ The following examples provided use a simple formula to help you determine the m
 Minimum length of data required = eligible population + outcome window
 
 >[!NOTE]
-> 30 is the minimum number of days required for eligible population. If this is not provided the default is 120 days + outcome window.
+> 30 is the minimum number of days required for eligible population. If this is not provided the default is 120 days.
 
 Examples : 
 
@@ -34,7 +34,7 @@ Examples :
 
 - You want to predict whether the user is likely to purchase a watch in the next 7 days. In this case the minimum length of data required = 120 days + 7days. The eligible population defaults to 120 days and the outcome window is 7 days totaling 127 days.
 
-- You want to predict whether the customer is likely to purchase a watch in the next 7 days. You also want to score users who have some web activity in the last 7 days. In this case the minimum length of data required = 30days + 7days. The eligible population requires a minimum of 30 days and the outcome window is 7 days totaling 37 days.
+- You want to predict whether the customer is likely to purchase a watch in the next 7 days. You also want to score users who have some web activity in the last 7 days. In this case the minimum length of data required = 30 days + 7days. The eligible population requires a minimum of 30 days and the outcome window is 7 days totaling 37 days.
 
 Apart from the minimum data required, Customer AI also works best with fresh data since in this use case Customer AI is doing a prediction for the future based on a user's recent behavioral data.
 
