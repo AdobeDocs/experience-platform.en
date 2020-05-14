@@ -37,7 +37,7 @@ mycustomname1("configure", {
   "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg"
 });
 
-mycustomname1("event", {
+mycustomname1("sendEvent", {
   "data": {
     "key": "value"
   }
@@ -48,7 +48,7 @@ mycustomname2("configure", {
   "orgId": "ADB3NUMBERSANDLETTERS2@AdobeOrg"
 });
 
-mycustomname2("event", {
+mycustomname2("sendEvent", {
   "data": {
     "key": "value"
   }
