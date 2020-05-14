@@ -439,7 +439,7 @@ The following section contains additional information regarding export jobs in t
 
 ### Additional export payload examples
 
-The example API call shown in the section on [initiating an export job](#initiate) creates a job that contains both profile (record) and event (time-series) data. This sections 
+The example API call shown in the section on [initiating an export job](#initiate) creates a job that contains both profile (record) and event (time-series) data. This section provides additional request payload examples to limit your export to contain one data type or the other.
 
 The following payload creates an export job that only contains profile data (no events):
 
