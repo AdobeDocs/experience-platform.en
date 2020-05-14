@@ -15,26 +15,26 @@ Customer AI uses Consumer Experience Event data to calculate propensity scores. 
 
 ### Historical data
 
-Customer AI requires historical data for model training but the amount of data required is based on two key elements. Outcome window and eligible population. 
+Customer AI requires historical data for model training but the amount of data required is based on two key elements: outcome window and eligible population. 
 
-By default, Customer AI looks for a user to have had activity in the last 120 days if no eligible population definition is provided during the application configuration. Apart from the amount of data Customer AI also needs a minimum amount of success events which is based on predicted goal definition. Currently, Customer AI needs a minimum of 500 success events.
+By default, Customer AI looks for a user to have had activity in the last 120 days if no eligible population definition is provided during the application configuration. Apart from the minimum amount of Consumer Experience Event data that is required, Customer AI also needs a minimum amount of success events based on a predicted goal definition. Currently, Customer AI needs a minimum of 500 success events.
 
-The following examples provided use a simple formula to help you determine the minimum amount of data required. If you have more than the minimum requirment, your model is likely to provide more accurate results. If you have less than the minimum amount required, the model will fail as there is not s sufficient amount of data for model training. 
+The following examples provided use a simple formula to help you determine the minimum amount of data required. If you have more than the minimum requirement, your model is likely to provide more accurate results. If you have less than the minimum amount required, the model will fail as there is not a sufficient amount of data for model training. 
 
-Formula:
+**Formula**:
 
-Minimum Length of data required = [max(eligible population,30* ) or 120days if none provided ] + outcome window
+Minimum length of data required = eligible population + outcome window
 
 >[!NOTE]
-> *30 is the minimum number of days required.
+> 30 is the minimum number of days required for eligible population. If this is not provided the default is 120 days + outcome window.
 
 Examples : 
 
-- You want to predict whether a customer is likely to purchase a watch in the next 30 days. You also want to score users who have some web activity in the last 60 days. In this case the minimum Length of data required = 60 days + 30 days.
+- You want to predict whether a customer is likely to purchase a watch in the next 30 days. You also want to score users who have some web activity in the last 60 days. In this case the minimum length of data required = 60 days + 30 days. The eligible population is 60 days and the outcome window is 30 days totaling 90 days.
 
-- You want to predict whether the user is likely to purchase a watch in the next 7 days. In this case the minimum Length of data required = 120 days + 7days.
+- You want to predict whether the user is likely to purchase a watch in the next 7 days. In this case the minimum length of data required = 120 days + 7days. The eligible population defaults to 120 days and the outcome window is 7 days totaling 127 days.
 
-- You want to predict whether the customer is likely to purchase a watch in the next 7 days. You also want to score users who have some web activity in the last 7 days. In this case the minimum Length of data required = 30days + 7days.
+- You want to predict whether the customer is likely to purchase a watch in the next 7 days. You also want to score users who have some web activity in the last 7 days. In this case the minimum length of data required = 30days + 7days. The eligible population requires a minimum of 30 days and the outcome window is 7 days totaling 37 days.
 
 Apart from the minimum data required, Customer AI also works best with fresh data since in this use case Customer AI is doing a prediction for the future based on a user's recent behavioral data.
 
