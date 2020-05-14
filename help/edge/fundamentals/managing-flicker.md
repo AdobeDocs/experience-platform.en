@@ -1,5 +1,5 @@
 ---
-title: Managing Flick for Personalized Experiences
+title: Managing Flicker for Personalized Experiences
 seo-title: Adobe Experience Platform Web SDK managing flicker
 description: Learn how to manage flicker on user experiences
 seo-description: Learn how to manage flicker with the Experience Platform Web SDK properties
