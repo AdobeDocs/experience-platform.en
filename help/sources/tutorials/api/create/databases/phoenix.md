@@ -8,7 +8,7 @@ topic: overview
 # Create a Phoenix connector using the Flow Service API
 
 >[!NOTE]
->Phoenix connector is in beta. The features and documentation are subject to change.
+>The Phoenix connector is in beta. The features and documentation are subject to change.
 
 Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 

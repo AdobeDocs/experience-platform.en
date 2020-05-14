@@ -8,7 +8,7 @@ topic: overview
 # Create a HubSpot connector using the Flow Service API
 
 >[!NOTE]
->HubSpot connector is in beta. The features and documentation are subject to change.
+>The HubSpot connector is in beta. The features and documentation are subject to change.
 
 Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
