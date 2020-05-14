@@ -5,7 +5,7 @@ description: Learn how to send Data to Adobe Audience Manager with Experience Pl
 seo-description: Learn how to send Data to Adobe Audience Manager with Experience Platform Web SDK
 ---
 
-# Audience MAnager on the Experience Platform Edge Netwrok
+# Audience Manager on the Experience Platform Edge Netwrok
 
 The Adobe Experience Platform Web SDK is integrated with Adobe Audience Manager and supports sending and receiving data from Audience Manager, Cookie & URL destinations and ID syncing.
 

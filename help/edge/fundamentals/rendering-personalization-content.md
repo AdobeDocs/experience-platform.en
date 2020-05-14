@@ -7,7 +7,7 @@ seo-description: Learn how to render personalized content with Experience Platfo
 
 # Overview of Personalization Options
 
-The Adobe Experience Platform Web SDK supports querying the personalization solutions at Adobe including Adobe Target. There are two modes for personalization: retrieving content that can be rendered automatically and content that the developer must render. The SDK also provides facilities to [manage flicker](managing-flicker.md).
+The Adobe Experience Platform Web SDK supports querying the personalization solutions at Adobe including Adobe Target. There are two modes for personalization: retrieving content that can be rendered automatically and content that the developer must render. The SDK also provides facilities to [manage flicker](../../edge/solution-specific/target/flicker-management.md).
 
 ## Automatically Rendering Content
 
