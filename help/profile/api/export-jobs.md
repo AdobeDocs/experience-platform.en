@@ -21,9 +21,6 @@ In particular, the [getting started section](getting-started.md#getting-started)
 
 Exporting Profile data requires first creating a dataset into which the data will be exported, then initiating a new export job. Both of these steps can be achieved using Experience Platform APIs, with the former using the Catalog Service API and the latter using the Real-time Customer Profile API. Detailed instructions for completing each step are outlined in the sections that follow.
 
-- [Create a target dataset](#create-a-target-dataset) - Create a dataset to hold exported data.
-- [Initiate a new export job](#initiate-export-job) - Populate the dataset with XDM Individual Profile data.
-
 ### Create a target dataset
 
 When exporting Profile data, a target dataset must first be created. It is important that the dataset be configured correctly to ensure the export is successful. 
@@ -110,26 +107,6 @@ curl -X POST \
       "id": "e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2",
       "version": 1
     },
-    "filter": {
-      "segments": [
-        {
-          "segmentId": "4edc8488-2c35-4f6d-b4c6-9075c68d2df4",
-          "segmentNs": "AAM",
-          "status": ["realized"]
-        },
-        {
-          "segmentId": "1rfe8422-334d-12f4-3sd4-12cf6g990g51",
-          "segmentNs": "UPS",
-          "status": ["exited"]
-        }
-      ],
-      "segmentQualificationTime": {
-            "startTime": "2019-09-01T00:00:00Z",
-            "endTime": "2019-09-02T00:00:00Z"
-        },
-      "fromIngestTimestamp": "2018-10-25T13:22:04-07:00",
-      "emptyProfiles": false
-    },
     "additionalFields" : {
       "eventList": {
         "fields": "environment.browserDetails.name,environment.browserDetails.version",
@@ -137,35 +114,28 @@ curl -X POST \
           "fromIngestTimestamp": "2018-10-25T13:22:04-07:00"
         }
       }
-    },
+    }
     "destination": {
       "datasetId": "5b020a27e7040801dedba61b",
-      "segmentPerBatch": true
+      "segmentPerBatch": false
     },
     "schema": {
       "name": "_xdm.context.profile"
     }
-  }'
+  }' 
 ```
 
 | Property | Description |
 | -------- | ----------- |
-| `fields` | *(Optional)* Limits the data fields to be included in the export to only those provided in this parameter. The same parameter is also available when creating a segment, therefore the fields in the segment may have already been filtered. Omitting this value will result in all fields being included in the exported data. |
-| `mergePolicy` | *(Optional)* Specifies the merge policy to govern the exported data. Include this parameter when there are multiple segments being exported. Omitting this value will cause the Export Service to use the merge policy provided by the segment. |
+| `fields` | *(Optional)* Limits the data fields to be included in the export to only those provided in this parameter. Omitting this value will result in all fields being included in the exported data. |
+| `mergePolicy` | *(Optional)* Specifies the merge policy to govern the exported data. Include this parameter when there are multiple segments being exported. |
 | `mergePolicy.id` | The ID of the merge policy. |
 | `mergePolicy.version` | The specific version of the merge policy to use. Omitting this value will default to the most recent version.|
-| `filter` | *(Optional)* Specifies one or more of the following filters to apply to the segment before export. |
-| `filter.segments` | *(Optional)* Specifies the segments to export. Omitting this value will result in all data from all profiles being exported. Accepts an array of segment objects, each containing the following fields:<ul><li>`segmentId`: **(Required if using `segments`)** Segment ID for profiles to be exported.</li><li>`segmentNs` *(Optional)* Segment namespace for the given `segmentID`.</li><li>`status` *(Optional)* An array of strings providing a status filter for the `segmentID`. By default, `status` will have the value `["realized", "existing"]` which represents all profiles that fall into the segment at the current time. Possible values include: `"realized"`, `"existing"`, and `"exited"`.</br></br>For more information, see the [creating segments tutorial](./create-a-segment.md).</li></ul> |
-| `filter.segmentQualificationTime` | *(Optional)* Filter based on segment qualification time. The start time and/or end time can be provided. |
-| `filter.segmentQualificationTime.startTime` | *(Optional)* Segment qualification start time for a segment ID for a given status. It not provided, there will be no filter on the start time for a segment ID qualification. The timestamp must be provided in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
-| `filter.segmentQualificationTime.endTime` | *(Optional)* Segment qualification end time for a segment ID for a given status. It not provided, there will be no filter on the end time for a segment ID qualification. The timestamp must be provided in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
-| `filter.fromIngestTimestamp `| *(Optional)* Limits exported profiles to only include those that have been updated after this timestamp. The timestamp must be provided in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. <ul><li>`fromIngestTimestamp` for **profiles**, if provided: Includes all the merged profiles where merged updated timestamp is greater than the given timestamp. Supports `greater_than` operand.</li><li>`fromTimestamp` for **events**: All events ingested after this timestamp will be exported corresponding to resultant profile result. This is not the event time itself but the ingestion time for the events.</li> |
-| `filter.emptyProfiles` | *(Optional)* Boolean. Profiles can contain Profile records, ExperienceEvent records, or both. Profiles with no Profile records and only ExperienceEvent records are referred to as "emptyProfiles". To export all profiles in the Profile store, including the "emptyProfiles", set the value of `emptyProfiles` to `true`. If `emptyProfiles` is set to `false`, only profiles with Profile records in the store are exported. By default, if `emptyProfiles` attribute is not included, only profiles containing Profile records are exported. |
-| `additionalFields.eventList` | *(Optional)* Controls the time series event fields exported for child or associated objects by providing one or more of the following settings:<ul><li>`eventList.fields`: Control the fields to export.</li><li>`eventList.filter`: Specifies criteria that limits the results included from associated objects. Expects a minimum value required for export, typically a date.</li><li>`eventList.filter.fromIngestTimestamp`: Filters time series events to those that have been ingested after the provided timestamp. This is not the event time itself but the ingestion time for the events.</li></ul> |
+| `additionalFields.eventList` | *(Optional)* Controls the time-series event fields exported for child or associated objects by providing one or more of the following settings:<ul><li>`eventList.fields`: Control the fields to export.</li><li>`eventList.filter`: Specifies criteria that limits the results included from associated objects. Expects a minimum value required for export, typically a date.</li><li>`eventList.filter.fromIngestTimestamp`: Filters time-series events to those that have been ingested after the provided timestamp. This is not the event time itself but the ingestion time for the events.</li></ul> |
 | `destination` | **(Required)** Destination information for the exported data:<ul><li>`destination.datasetId`: **(Required)** The ID of the dataset where data is to be exported.</li><li>`destination.segmentPerBatch`: *(Optional)* A Boolean value that, if not provided, defaults to `false`. A value of `false` exports all segment IDs into a single batch ID. A value of `true` exports one segment ID into one batch ID. Note that setting the value to be `true` may affect batch export performance.</li></ul> |
 | `schema.name` | **(Required)** The name of the schema associated with the dataset where data is to be exported. |
 
->[!NOTE] To export only Profile data, and not include related ExperienceEvent data, remove the "additionalFields" object from the request.
+>[!NOTE] To export only Profile data and not include related time-series data, remove the "additionalFields" object from the request.
 
 **Response**
 
@@ -175,20 +145,6 @@ A successful response returns a dataset populated with Profile data as specified
 {
     "profileInstanceId": "ups",
     "jobType": "BATCH",
-    "filter": {
-      "segments": [
-        {
-          "segmentId": "4edc8488-2c35-4f6d-b4c6-9075c68d2df4",
-          "segmentNs": "AAM",
-          "status": ["realized"]
-        },
-        {
-          "segmentId": "1rfe8422-334d-12f4-3sd4-12cf6g990g51",
-          "segmentNs": "UPS",
-          "status": ["exited"]
-        }
-      ]
-    },
     "id": 24115,
     "schema": {
         "name": "_xdm.context.profile"
@@ -207,36 +163,13 @@ A successful response returns a dataset populated with Profile data as specified
     },
     "destination": {
       "dataSetId" : "5cf6bcf79ecc7c14530fe436",
-      "segmentPerBatch": true,
-      "batches" : [
-        {
-          "segmentId": "4edc8488-2c35-4f6d-b4c6-9075c68d2df4",
-          "segmentNs": "AAM",
-          "status": ["realized"],
-          "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
-        },
-        {
-          "segmentId": "1rfe8422-334d-12f4-3sd4-12cf6g990g51",
-          "segmentNs": "UPS",
-          "status": ["exited"],
-          "batchId": "df4gssdfb93a09f7e37fa53ad52"
-        }
-      ]
+      "segmentPerBatch": false,
+      "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
     },
     "updateTime": 1559674261868,
     "imsOrgId": "{IMS_ORG}",
     "creationTime": 1559674261657
 }
-```
-
-If `destination.segmentPerBatch` had not been included in the request (if not present, it defaults to `false`) or the value had been set to `false`, the `destination` object in the response above would not have a `batches` array and instead would include only one `batchId`, as shown below. That single batch would include all segment IDs, whereas the response above shows a single segment ID per batch ID.
-
-```json
-  "destination": {
-    "datasetId": "5cf6bcf79ecc7c14530fe436",
-    "segmentPerBatch": false,
-    "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
-  }
 ```
 
 ## List all export jobs
@@ -247,14 +180,14 @@ You can return a list of all export jobs for a particular IMS Organization by pe
 
 ```http
 GET /export/jobs
-GET /export/jobs?limit=4
-GET /export/jobs?offset=2
+GET /export/jobs?limit={LIMIT}
+GET /export/jobs?offset={OFFSET}
 ```
 
 | Property | Description |
 | -------- | ----------- |
-| `limit` | Specify the number of records to be returned. |
-| `offset` | Offset the page of results to be returned by the number provided. |
+| `{LIMIT}` | The number of records to be returned. |
+| `{OFFSET}` | The number of pages to offset the returned results by. |
 
 **Request**
 
@@ -277,13 +210,6 @@ The response includes a `records` object containing the export jobs created by y
     {
       "profileInstanceId": "ups",
       "jobType": "BATCH",
-      "filter": {
-          "segments": [
-              {
-                  "segmentId": "52c26d0d-45f2-47a2-ab30-ed06abc981ff"
-              }
-          ]
-      },
       "id": 726,
       "schema": {
           "name": "_xdm.context.profile"
@@ -422,20 +348,6 @@ curl -X GET \
 {
     "profileInstanceId": "ups",
     "jobType": "BATCH",
-    "filter": {
-      "segments": [
-        {
-          "segmentId": "4edc8488-2c35-4f6d-b4c6-9075c68d2df4",
-          "segmentNs": "AAM",
-          "status": ["realized"]
-        },
-        {
-          "segmentId": "1rfe8422-334d-12f4-3sd4-12cf6g990g51",
-          "segmentNs": "UPS",
-          "status": ["exited"]
-        }
-      ]
-    },
     "id": 24115,
     "schema": {
         "name": "_xdm.context.profile"
@@ -469,21 +381,8 @@ curl -X GET \
     },
     "destination": {
       "dataSetId" : "5cf6bcf79ecc7c14530fe436",
-      "segmentPerBatch": true,
-      "batches" : [
-        {
-          "segmentId": "4edc8488-2c35-4f6d-b4c6-9075c68d2df4",
-          "segmentNs": "AAM",
-          "status": ["realized"],
-          "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
-        },
-        {
-          "segmentId": "1rfe8422-334d-12f4-3sd4-12cf6g990g51",
-          "segmentNs": "UPS",
-          "status": ["exited"],
-          "batchId": "df4gssdfb93a09f7e37fa53ad52"
-        }
-      ]
+      "segmentPerBatch": false,
+      "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
     },
     "updateTime": 1559674261868,
     "imsOrgId": "{IMS_ORG}",
