@@ -432,3 +432,57 @@ For step-by-step instructions on how to use the Data Access API to access and do
 You can also access successfully exported Real-time Customer Profile data using Adobe Experience Platform Query Service. Using the UI or RESTful API, Query Service allows you to write, validate, and run queries on data within the Data Lake.
 
 For more information on how to query audience data, please review the [Query Service documentation](../../query-service/home.md).
+
+## Appendix
+
+The following section contains additional information regarding export jobs in the Profile API.
+
+### Additional export payload examples
+
+The example API call shown in the section on [initiating an export job](#initiate) creates a job that contains both profile (record) and event (time-series) data. This sections 
+
+The following payload creates an export job that only contains profile data (no events):
+
+```json
+{
+    "fields": "identities.id,personalEmail.address",
+    "mergePolicy": {
+      "id": "e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2",
+      "version": 1
+    },
+    "destination": {
+      "datasetId": "5b020a27e7040801dedba61b",
+      "segmentPerBatch": false
+    },
+    "schema": {
+      "name": "_xdm.context.profile"
+    }
+  }
+```
+
+To create an export job that only contains event data (no profile attributes), the payload may look similar to the following:
+
+```json
+{
+    "fields": "identityMap",
+    "mergePolicy": {
+      "id": "e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2",
+      "version": 1
+    },
+    "additionalFields" : {
+      "eventList": {
+        "fields": "environment.browserDetails.name,environment.browserDetails.version",
+        "filter": {
+          "fromIngestTimestamp": "2018-10-25T13:22:04-07:00"
+        }
+      }
+    },
+    "destination": {
+      "datasetId": "5b020a27e7040801dedba61b",
+      "segmentPerBatch": false
+    },
+    "schema": {
+      "name": "_xdm.context.profile"
+    }
+  }
+```
