@@ -5,11 +5,7 @@ description: Learn how to execute Experience Platform Web SDK commands
 seo-description: Learn how to execute Experience Platform Web SDK commands
 ---
 
-# (Beta) Executing commands
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+# Executing commands
 
 After the base code has been implemented on your webpage, you can begin executing commands with the SDK. You do not need to wait for the external file \(`alloy.js`\) to be loaded from the server before executing commands. If the SDK has not finished loading, commands are queued and processed by the SDK as soon as possible.
 

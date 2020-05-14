@@ -26,13 +26,11 @@ Adobe Advertising Cloud | ✓ | ✓ | <ul><li>[Access/delete documentation](http
 Adobe Analytics | ✓ | ✓ | <ul><li>[Access/delete documentation](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html)</li><li>Analytics handles opt-out requests by using [privacy reporting variables](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/consent-variables.html)</li></ul>
 Adobe Audience Manager | ✓ | ✓ | <ul><li>[Access/delete documentation](https://docs.adobe.com/content/help/en/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[Opt-out documentation](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/declared-ids.html)</li></ul>
 Adobe Campaign Standard | ✓ | ✓ | <ul><li>[Access/delete documentation](https://docs.campaign.adobe.com/doc/standard/getting_started/en/ACS_GDPR.html)</li><li>[Opt-out documentation](../segmentation/honoring-opt-outs.md)</li></ul>
+Adobe Customer Attributes (CRS) | ✓ | N/A | <ul><li>[Access/delete documentation for GDPR](https://docs.adobe.com/content/help/en/core-services/interface/customer-attributes/gdpr.html)</li><li>[Access/delete documentation for CCPA](https://docs.adobe.com/content/help/en/core-services/interface/customer-attributes/ccpa.html)</li><li>Customer Attributes does not have the capability to transfer data, therefore opt-out-of-sale requests are not applicable.</li></ul>
 Adobe Experience Platform | ✓ | ✓ | <ul><li>[Access/delete documentation for the Data Lake](../catalog/privacy.md)</li><li>[Access/delete documentation for Real-time Customer Profile](../profile/privacy.md)</li><li>Experience Platform honors [opt-out requests for audience segments](../segmentation/honoring-opt-outs.md).</li></ul>
 Adobe Primetime Authentication | ✓ | N/A | <ul><li>[Access/delete documentation](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>Primetime does not have the capability to transfer data, therefore opt-out-of-sale requests are not applicable.</li></ul>
 Adobe Target | ✓ | N/A | <ul><li>[Access/delete documentation](https://docs.adobe.com/content/help/en/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html)</li><li>Target does not have the capability to transfer data, therefore opt-out-of-sale requests are not applicable.</li></ul>
 
-<!-- (To include once access/delete documentation is available)
-Adobe Customer Attributes (CRS) | ✓ | N/A | <ul><li>Customer Attributes does not have the capability to transfer data, therefore opt-out-of-sale requests are not applicable.</li></ul>
--->
 
 ## Self-serve applications {#self-serve}
 
