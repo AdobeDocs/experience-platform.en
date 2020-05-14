@@ -9,7 +9,7 @@ topic: guide
 
 Real-time Customer Profile enables you to build a single view of individual customers by bringing together data from multiple sources, including both attribute data and behavioral data. Data available within Profile can then be exported to a dataset for further processing. This document provides step-by-step instructions for creating and managing export jobs using the [Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 
 
-In addition to creating an export job, you can also access Profile data using the Profile Access API and through projections. Please see the [Profile Access API tutorial](./entities.md) or the tutorial on [configuring edge destinations and projections](./edge-projections.md) for more information on these other access patterns.
+In addition to creating an export job, you can also access Profile data using the Profile Access API. Please see the [Profile Access API guide](./entities.md) for more information on these other access patterns.
 
 ## Getting started
 
