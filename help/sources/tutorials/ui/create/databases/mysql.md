@@ -7,8 +7,8 @@ topic: overview
 
 # Create a MySQL source connector in the UI
 
->[!NOTE]
->MySQL connector is in beta. The features and documentation are subject to change.
+> [!NOTE]
+> The MySQL connector is in beta. The features and documentation are subject to change.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a MySQL source connector using the Platform user interface.
 

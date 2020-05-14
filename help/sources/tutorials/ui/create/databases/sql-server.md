@@ -7,8 +7,8 @@ topic: overview
 
 # Create a Microsoft SQL Server source connector in the UI
 
->[!NOTE]
->Microsoft SQL Server connector is in beta. The features and documentation are subject to change.
+> [!NOTE]
+> The Microsoft SQL Server connector is in beta. The features and documentation are subject to change.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a Microsoft SQL Server (hereinafter referred to as "SQL Server") source connector using the Platform user interface.
 
