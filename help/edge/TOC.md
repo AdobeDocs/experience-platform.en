@@ -9,6 +9,7 @@ user-guide-title:  Adobe Experience Platform Edge Network Help
 * [Edge Network overview](home.md)
 * Getting started {#get-started}
   * [Quick start with Launch](getting-started/quick-start-with-launch.md)
+  * [Quick start without Launch](getting-started/quick-start-without-launch.md)
 * Fundamentals {#fundamentals}
   * [Installing the SDK](fundamentals/installing-the-sdk.md)
   * [Executing commands](fundamentals/executing-commands.md)

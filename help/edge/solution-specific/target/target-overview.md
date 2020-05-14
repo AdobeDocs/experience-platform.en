@@ -35,7 +35,7 @@ The AEP Web SDK has the power to automatically render your experiences defined v
 
 ```javascript
 alloy
-("event", 
+("sendEvent", 
   { 
   "renderDecisions": true, 
   "xdm": {
@@ -58,7 +58,7 @@ The Form-Based Experience Composer is a non-visual interface that’s useful for
 
 ```javascript
 alloy
-  ("event", { 
+  ("sendEvent", { 
     decisionScopes: [
       "foo", "bar"], 
       "xdm": {
@@ -84,7 +84,7 @@ alloy
 AEP Web SDK provides a functionality where you can retrieve VEC actions without relying on the AEP Web SDK to render the VEC actions for you. Send an event with `__view__` defined as as a `decisionScopes`.
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   decisionScopes: [“__view__”,"foo", "bar"], 
   "xdm": { 
     "web": { 
