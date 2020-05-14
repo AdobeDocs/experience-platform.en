@@ -97,6 +97,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | ------- | ----------- |
 | Additional API and UI support for cloud storage systems | New source connectors for Azure File Storage. |
 | Additional API and UI support for databases | New source connectors for Azure Data Explorer, IBM DB2, and Oracle DB. |
+| Adobe Audience Manager to Experience Platform data sharing | The provisioning process for the Audience Manager connector has been updated. Audience Manager datasets for Real-time Customer Profile are now disabled by default. You can manually choose which datasets to promote to Profile. The new default settings are not retroactive and only impact provisioning for new Audience Manager connectors. See more information in the [Datasets user guide](../../catalog/datasets/user-guide.md). |
 
 **Known issues**
 

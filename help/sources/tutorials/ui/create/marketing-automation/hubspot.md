@@ -7,6 +7,9 @@ topic: overview
 
 # Create a HubSpot source connector in the UI
 
+> [!NOTE]
+> The HubSpot connector is in beta. The features and documentation are subject to change.
+
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a HubSpot source connector using the Platform user interface.
 
 ## Getting started

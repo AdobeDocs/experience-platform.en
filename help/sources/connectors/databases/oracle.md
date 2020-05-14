@@ -5,7 +5,7 @@ title: Oracle connector
 topic: overview
 ---
 
-# Oracle connector
+# (Beta) Oracle connector
 
 Adobe Experience Platform provides native connectivity for database providers like Microsoft, MySQL, and Azure. You can bring your data from these systems into Platform.
 
