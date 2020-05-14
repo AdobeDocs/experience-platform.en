@@ -5,11 +5,7 @@ description: Learn how to get Adobe Experience Cloud Id.
 seo-description: Learn how to get Adobe Experience Cloud Id.
 ---
 
-# (Beta) Retrieving Experience Cloud ID
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+# Retrieving Experience Cloud ID
 
 The Adobe Experience Platform Web SDK leverages the [Adobe Identity Service](../../identity-service/ecid.md). This ensures that each device has a unique identifier that is persisted on the device so activity between pages can be tied together.
 

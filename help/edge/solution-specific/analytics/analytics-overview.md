@@ -5,11 +5,7 @@ description: Learn how to send Data to Adobe Analytics with Experience Platform 
 seo-description: Learn how to send Data to Adobe Analytics with Experience Platform Web SDK
 ---
 
-# (Beta) Sending Data to Adobe Analytics
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+# Sending Data to Adobe Analytics
 
 The Adobe Experience Platform Web SDK can send data to Adobe Analytics. This works by translating `xdm` into a format the Adobe Analytics can use.
 
