@@ -73,6 +73,14 @@ The key for the object is the [Identity Namespace](../../identity-service/namesp
 
 This is the ID that you want to sync for the given namespace.
 
+#### `authenticationState`
+
+| **Type** | **Required** | **Default Value** | **Possible Values** |
+| -------- | ------------ | ----------------- | ------------------------------------ |
+| String   | Yes          | ambiguous         | ambiguous, authenticated & loggedOut |
+
+The authentication state of the ID.
+
 #### `primary`
 
 | **Type** | **Required** | **Default Value** |
