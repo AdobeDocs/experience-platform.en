@@ -11,6 +11,8 @@ seo-description: Activate profiles for your Facebook campaigns for audience targ
 
 Activate profiles for your Facebook campaigns for audience targeting, personalization and suppression based on hashed emails.
 
+![Facebook destination in the Real-time CDP UI](/help/rtcdp/destinations/assets/facebook-destination.png)
+
 ## Use Cases
 
 To help you better understand how and when you should use the Facebook destination, here are two sample use cases that Adobe Real-time Customer Data Platform customers can solve by using this feature.
