@@ -15,11 +15,11 @@ The documentation below provides information on how to connect HP Vertica to Pla
 
 ## Connect HP Vertica to Platform using APIs
 
-- [Create a HP Vertica connector using the Flow Service API](../../tutorials/api/create/databases/.md)
+- [Create an HP Vertica connector using the Flow Service API](../../tutorials/api/create/databases/hp-vertica.md)
 - [Explore a database system using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Collect data from a database using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Connect HP Vertica to Platform using the UI
 
-- [Create a HP Vertica source connector in the UI](../../tutorials/ui/create/databases/.md)
+- [Create an HP Vertica source connector in the UI](../../tutorials/ui/create/databases/.md)
 - [Configure a dataflow for a database connector in the UI](../../tutorials/ui/dataflow/databases.md)

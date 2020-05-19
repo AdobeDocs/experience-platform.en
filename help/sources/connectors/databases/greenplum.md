@@ -15,7 +15,7 @@ The documentation below provides information on how to connect GreenPlum to Plat
 
 ## Connect GreenPlum to Platform using APIs
 
-- [Create a GreenPlum connector using the Flow Service API](../../tutorials/api/create/databases/.md)
+- [Create a GreenPlum connector using the Flow Service API](../../tutorials/api/create/databases/greenplum.md)
 - [Explore a database system using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Collect data from a database using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
