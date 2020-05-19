@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Create an Azure EventHubs connector using the Flow Service API
+title: Create an Azure Event Hubs connector using the Flow Service API
 topic: overview
 ---
 
-# Create an Azure EventHubs connector using the Flow Service API
+# Create an Azure Event Hubs connector using the Flow Service API
 
 >[!NOTE]
-> The Azure EventHubs connector is in beta. The features and documentation are subject to change.
+> The Azure Event Hubs connector is in beta. The features and documentation are subject to change.
 
 Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
-This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to an Azure EventHubs account.
+This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to an Azure Event Hubs account.
 
 ## Getting started
 
@@ -21,20 +21,20 @@ This guide requires a working understanding of the following components of Adobe
 -   [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 -   [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully connect to an Azure EventHubs account using the Flow Service API.
+The following sections provide additional information that you will need to know in order to successfully connect to an Azure Event Hubs account using the Flow Service API.
 
 ### Gather required credentials
 
-In order for Flow Service to connect with your Azure EventHubs account, you must provide values for the following connection properties:
+In order for Flow Service to connect with your Azure Event Hubs account, you must provide values for the following connection properties:
 
 | Credential | Description |
 | ---------- | ----------- |
 | `sasKeyName` | The name of the authorization rule, which is also known as the SAS key name. |
 | `sasKey` | The generated shared access signature. |
-| `namespace` | The namespace of the EventHubs you are accessing. |
-| `connectionSpec.id` | The Azure EventHubs connection specification ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| `namespace` | The namespace of the Event Hubs you are accessing. |
+| `connectionSpec.id` | The Azure Event Hubs connection specification ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
-For more information about these values, refer to [this EventHubs document](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+For more information about these values, refer to [this Event Hubs document](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
 ### Reading sample API calls
 
@@ -58,7 +58,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ## Create a connection
 
-A connection specifies a source and contains your credentials for that source. Only one connection is required per Azure EventHubs account as it can be used to create multiple source connectors to bring in different data.
+A connection specifies a source and contains your credentials for that source. Only one connection is required per Azure Event Hubs account as it can be used to create multiple source connectors to bring in different data.
 
 **API format**
 
@@ -77,10 +77,10 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Azure EventHubs connection",
-        "description": "Connector for Azure EventHubs",
+        "name": "Azure Event Hubs connection",
+        "description": "Connector for Azure Event Hubs",
         "auth": {
-            "specName": "Basic Authentication for EventHubs",
+            "specName": "Basic Authentication for Event Hubs",
             "params": {
                 "sasKeyName": "sasKeyName",
                 "sasKey": "sasKey",
@@ -98,8 +98,8 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.sasKeyName` | The name of the authorization rule, which is also known as the SAS key name. |
 | `auth.params.sasKey` | The generated shared access signature. |
-| `namespace` | The namespace of the EventHubs you are accessing. |
-| `connectionSpec.id` | The Azure EventHubs connection specification ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| `namespace` | The namespace of the Event Hubs you are accessing. |
+| `connectionSpec.id` | The Azure Event Hubs connection specification ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 **Response**
 
@@ -114,4 +114,4 @@ A successful response returns details of the newly created connection, including
 
 ## Next steps
 
-By following this tutorial, you have created an Azure EventHubs connection using APIs and a unique ID was obtained as part of the response body. You can use this connection ID to [explore cloud storages using the Flow Service API](../../explore/cloud-storage.md).
+By following this tutorial, you have created an Azure Event Hubs connection using APIs and a unique ID was obtained as part of the response body. You can use this connection ID to [explore cloud storages using the Flow Service API](../../explore/cloud-storage.md).
