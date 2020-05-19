@@ -21,5 +21,5 @@ The documentation below provides information on how to connect HP Vertica to Pla
 
 ## Connect HP Vertica to Platform using the UI
 
-- [Create an HP Vertica source connector in the UI](../../tutorials/ui/create/databases/.md)
+- [Create an HP Vertica source connector in the UI](../../tutorials/ui/create/databases/hp-vertica.md)
 - [Configure a dataflow for a database connector in the UI](../../tutorials/ui/dataflow/databases.md)

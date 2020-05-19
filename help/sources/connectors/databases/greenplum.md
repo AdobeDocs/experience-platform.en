@@ -21,5 +21,5 @@ The documentation below provides information on how to connect GreenPlum to Plat
 
 ## Connect GreenPlum to Platform using the UI
 
-- [Create a GreenPlum source connector in the UI](../../tutorials/ui/create/databases/.md)
+- [Create a GreenPlum source connector in the UI](../../tutorials/ui/create/databases/greenplum.md)
 - [Configure a dataflow for a database connector in the UI](../../tutorials/ui/dataflow/databases.md)
