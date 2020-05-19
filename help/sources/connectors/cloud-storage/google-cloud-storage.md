@@ -21,12 +21,13 @@ The **[!UICONTROL Settings]** page appears. From here, you can see information r
 
 ![](../../images/tutorials/create/google-cloud-storage/project-access.png)
 
-The **[!UICONTROL Interoperability]** page contains information on authentication, access keys, and the default project associated with your user account. If you have not already established a default project for interoperable access, you can set one up from within the **Default project for interoperable access** section. If a default project has already been established, the section will show a confirmation that a project has been set as the default.
+The **[!UICONTROL Interoperability]** page contains information on authentication, access keys, and the default project associated with your user account. If you have not already established a default project for interoperable access, you can set one up from within the **Default project for interoperable access** section. If a default project has already been established, the section will show a confirmation that a project has been set as default.
 
-To generate a new access key and secret for your user account, select **[!UICONTROL Create a Key]**
+To generate a new access key ID and a secret access key for your user account, select **[!UICONTROL Create a Key]**
 
 ![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
 
+You can use your newly generated access key ID and secret access key to connect your Google Cloud Storage account to Platform.
 
 The documentation below provides information on how to connect Google Cloud Storage to Platform using APIs or the user interface:
 
