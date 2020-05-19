@@ -48,7 +48,15 @@ For more information on migrating your notebooks and recipes to use Spark 2.4, p
 
 In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
-**New destinations**
+**Facebook**
+
+Adobe Real-time CDP now supports data activation to Facebook, allowing you to activate profiles for your Facebook campaigns for audience targeting, personalization and suppression based on hashed emails.
+
+For more information about the new functionality, see the [Facebook destination](/help/rtcdp/destinations/facebook-destination.md) page.
+
+<br>&nbsp;
+
+**Amazon Kinesis and Azure Event Hubs streaming cloud storage destinations**
 
 Adobe Real-time CDP now supports data activation to streaming cloud storage destinations, allowing you to export audience data and events to these destinations in JSON format. You can then describe business logic on top of these events in your destinations. See below for details:
 

@@ -12,6 +12,7 @@ user-guide-title: Adobe Experience Platform Privacy Service Help
 * Privacy Service API {#api}
   * [Getting started](api/getting-started.md)
   * [Privacy jobs](api/privacy-jobs.md)
+  * [Consent](api/consent.md)
   * [Appendix](api/appendix.md)
 * Privacy Service UI {#ui}  
   * [Privacy Service UI overview](ui/overview.md)
