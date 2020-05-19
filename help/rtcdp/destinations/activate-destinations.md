@@ -22,9 +22,14 @@ To activate data to destinations, you must have successfully [connected a destin
 3. Select **[!UICONTROL Activate]**;
 4. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to the destination.
     ![segments-to-destination](/help/rtcdp/destinations/assets/select-segments.png)
-5. *Conditional*. This step only applies for segments mapped to email marketing destinations. <br> On the **[!UICONTROL Destination Attributes]** page, select **[!UICONTROL Add new field]** and select the attributes that you want to send to the destination.
+5. *Conditional*. This step differs depending on the type of destination where you are activating your segments. <br> For *email marketing destinations* and *cloud storage destinations*, on the **[!UICONTROL Select Attributes]** page, select **[!UICONTROL Add new field]** and select the attributes that you want to send to the destination.
    We recommend one of the attributes to be a [unique identifier](/help/rtcdp/destinations/email-marketing-destinations.md#identity) from your union schema. For more information about mandatory attributes, see Identity in the [Email marketing destinations](/help/rtcdp/destinations/email-marketing-destinations.md#identity) article. 
-   ![destination-attributes](/help/rtcdp/destinations/assets/destination-attributes.png)
+   ![destination-attributes](/help/rtcdp/destinations/assets/select-attributes-step.png)
+   For *social network destinations*, in the **[!UICONTROL Identity mapping]** step, select source attributes to map to target identities.
+   ![identity mapping before filling in fields](/help/rtcdp/destinations/assets/facebook-identity-mapping-1.png)
+   In the example below, the personal email address in the identity schema has been hashed on ingestion into Experience Platform to comply with the Facebook [email hashing requirements](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements). Press **[!UICONTROL Next]** after selecting the mapping.
+   ![identity mapping after filling in fields](/help/rtcdp/destinations/assets/facebook-identity-mapping-2.png)
+
 6. On the **[!UICONTROL Segment schedule]** page, you can see the start date for sending data to the destination, as well as the frequency of sending data to the destination.
 
     >[!IMPORTANT]
@@ -69,6 +74,10 @@ Check the respective advertising destination that you are activating your data t
 
 For Facebook, a successful activation means that a Facebook custom audience would be created programmatically in [Facebook Ads Manager](https://www.facebook.com/adsmanager/manage/). Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated segments.
 
+>[!TIP]
+>
+>The integration between Adobe Real-time CDP and Facebook supports historical audience backfills. All historical segment qualifications get sent to Facebook when you activate the segments to the destination.
+
 ## Disable activation {#disable-activation}
 
 To disable an existing activation flow, follow the steps below:
@@ -77,3 +86,4 @@ To disable an existing activation flow, follow the steps below:
 2. Click the **[!UICONTROL Enabled]** control in the right rail to change the activation flow state.
 3. In the **Update data flow state** window, select **Confirm** to disable the activation flow.
 
+In AWS Kinesis, generate an access key - secret access key pair to grant Adobe Real-time CDP access to your AWS Kinesis account. Learn more in the [AWS Kinesis documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).

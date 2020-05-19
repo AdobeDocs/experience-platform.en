@@ -5,11 +5,7 @@ description: Learn how to configure the Experience Platform Edge Network.
 seo-description: Learn how to configure the Experience Platform Edge Network. 
 ---
 
-# (Beta) Edge Configuration
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+# Edge Configuration
 
 The configuration for the Adobe Experience Platfrom Web SDK is split between two places. The [configure command](configuring-the-sdk.md) in the SDK controls things that must be handled on the client, like the `edgeDomain`. The edge configuration handles all other configuration for the SDK. When a request is sent to the Adobe Experience Platform Edge Network, the `edgeConfigId` is used to reference the server side configuration. This allows you to update configuration without having to make code changes on your website. 
 
