@@ -5,9 +5,7 @@ title: Streaming segmentation
 topic: developer guide
 ---
 
-# Evaluate events in real-time with streaming segmentation (Beta) 
-
->[!NOTE] Streaming segmentation is a beta feature, and will be available on request.
+# Evaluate events in real-time with streaming segmentation 
 
 Streaming segmentation (also known as continuous query evaluation) is the ability to instantly evaluate a customer as soon as an event comes into a particular segment group. With this capability, most segment rules can now be evaluated as the data is passed into Adobe Experience Platform, meaning segment membership will be kept up to date without running scheduled segmentation jobs.
 
@@ -206,22 +204,11 @@ curl -X POST \
         "type": "PQL",
         "format": "pql/text",
         "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": true
-        },
-        "synchronous": {
-            "enabled": false
-        }
     }
 }'
 ```
 
->[!NOTE] This is a standard "create a segment" request, with the added parameter of the `continuous` section being set to `enabled: true`. For more information about creating a segment definition, please read the documentation on [segment creation](../tutorials/create-a-segment.md).
+>[!NOTE] This is a standard "create a segment" request. For more information about creating a segment definition, please read the documentation on [segment creation](../tutorials/create-a-segment.md).
 
 **Response**
 
@@ -263,170 +250,6 @@ A successful response returns the details of the newly created streaming-enabled
     "updateEpoch": 1572021086000,
     "updateTime": 1572021086000
 }
-```
-
-## Enable an existing segment for streaming segmentation
-
-You can enable an existing segment for streaming segmentation by supplying the segment definition's ID in the path of a PATCH request. In addition, the payload of this PATCH request must include the full details of the existing segment definition, which can be accessed by making a GET request to the segment definition in question.
-
-### Look up an existing segment definition
-
-To look up an existing segment definition, you must supply its ID in the path of a GET request.
-
-**API format**
-
-```http
-GET /segment/definitions/{SEGMENT_DEFINITION_ID}
-```
-
-| Parameter | Description |
-| --------- | ----------- |
-| `{SEGMENT_DEFINITION_ID}` |  The ID of the segment definition you want to look up. |
-
-**Request**
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/segment/definitions/15063cb-2da8-4851-a2e2-bf59ddd2f004\
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Response**
-
-A successful response will return details of the segment definition you requested. 
-
-```json
-{
-    "id": "15063cb-2da8-4851-a2e2-bf59ddd2f004",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "sandbox": {
-        "sandboxId": "",
-        "sandboxName": "",
-        "type": "production",
-        "default": true
-    },
-    "name": "TestStreaming1",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/json",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "mergePolicyId": "50de2f9c-990c-4b96-945f-9570337ffe6d",
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": false
-        },
-        "synchronous": {
-            "enabled": false
-        }
-    }
-}
-```
-
->[!NOTE] For the next request, you will need the full details of the segment definition that were returned in this response. Please copy the details of this response to be used in the body of the next request.
-
-### Enable the existing segment for streaming segmentation
-
-Now that you know the details of the segment you want to update, you can perform a PATCH request to update the segment to enable streaming segmentation.
-
-**API format**
-
-```http
-PATCH /segment/definitions/{SEGMENT_DEFINITION_ID}
-```
-
-**Request**
-
-The payload of the following request supplies the details of the segment definition (obtained in the [previous step](#look-up-an-existing-segment-definition)), and updates it by changing its `continuous.enabled` property to `true`.
-
-```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/core/ups/segment/definitions/15063cb-2da8-4851-a2e2-bf59ddd2f004 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG_ID}' \
-  -d '{
-    "id": "15063cb-2da8-4851-a2e2-bf59ddd2f004",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    
-    "sandbox": {
-        "sandboxId": "{SANDBOX_ID}",
-        "sandboxName": "{SANDBOX_NAME}",
-        "type": "production",
-        "default": true
-    },
-    "name": "TestStreaming1",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/json",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "mergePolicyId": "50de2f9c-990c-4b96-945f-9570337ffe6d",
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": true
-        },
-        "synchronous": {
-            "enabled": false
-        }
-    }
-}'
-```
-
-**Response**
-
-A successful response returns the details of the newly updated segment definition. 
-
-```json
-{
-    "id": "15063cb-2da8-4851-a2e2-bf59ddd2f004",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "ttlInDays": 30,
-    "imsOrgId": "4A21D36B544916100A4C98A7@AdobeOrg",
-    "sandbox": {
-        "sandboxId": "{SANDBOX_ID}",
-        "sandboxName": "{SANDBOX_NAME}",
-        "type": "production",
-        "default": true
-    },
-    "name": "TestStreaming1",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/text",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": true
-        },
-        "synchronous": {
-            "enabled": false
-        }
-    },
-    "creationTime": 1572029711000,
-    "updateEpoch": 1572029712000,
-    "updateTime": 1572029712000
-}
-
 ```
 
 ## Enable scheduled evaluation
