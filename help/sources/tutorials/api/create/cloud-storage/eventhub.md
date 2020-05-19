@@ -31,9 +31,10 @@ In order for Flow Service to connect with your Azure Event Hubs account, you mus
 | ---------- | ----------- |
 | `sasKeyName` | The name of the authorization rule, which is also known as the SAS key name. |
 | `sasKey` | The generated shared access signature. |
-| `namespace` | The namespace of the EventHub you are accessing. |
+| `namespace` | The namespace of the Event Hubs you are accessing. |
+| `connectionSpec.id` | The Azure Event Hubs connection specification ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
-For more information about these values, refer to [this EventHub document](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+For more information about these values, refer to [this Event Hubs document](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
 ### Reading sample API calls
 
@@ -79,10 +80,11 @@ curl -X POST \
         "name": "Azure Event Hubs connection",
         "description": "Connector for Azure Event Hubs",
         "auth": {
-            "specName": "Basic Authentication for EventHub",
+            "specName": "Basic Authentication for Event Hubs",
             "params": {
                 "sasKeyName": "sasKeyName",
-                "sasKey": "sasKey"
+                "sasKey": "sasKey",
+                "namespace": "namespace"
             }
         },
         "connectionSpec": {
@@ -96,6 +98,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.sasKeyName` | The name of the authorization rule, which is also known as the SAS key name. |
 | `auth.params.sasKey` | The generated shared access signature. |
+| `namespace` | The namespace of the Event Hubs you are accessing. |
 | `connectionSpec.id` | The Azure Event Hubs connection specification ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 **Response**

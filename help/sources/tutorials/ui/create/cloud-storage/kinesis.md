@@ -43,7 +43,7 @@ Log in to [Adobe Experience Platform](https://platform.adobe.com) and then selec
 
 Under the *Cloud Storage* category, select **Amazon Kinesis** and click **on the + icon (+)** to create a new Kinesis connector.
 
-![](../../../../images/tutorials/create/eventhub/catalog.png)
+![](../../../../images/tutorials/create/kinesis/catalog.png)
 
 The *Connect to Amazon Kinesis* dialog appears. On this page, you can either use new credentials or existing credentials. 
 
@@ -51,13 +51,13 @@ The *Connect to Amazon Kinesis* dialog appears. On this page, you can either use
 
 If you are using new credentials, select **New Account**. On the input form that appears, provide a name, an optional description, and your Kinesis credentials. When finished, select **Connect** and then allow some time for the new connection to establish.
 
-![](../../../../images/tutorials/create/eventhub/new.png)
+![](../../../../images/tutorials/create/kinesis/new.png)
 
 ### Existing account
 
 To connect an existing account, select the Kinesis account you want to connect with, then select **Next** to proceed.
 
-![](../../../../images/tutorials/create/eventhub/existing.png)
+![](../../../../images/tutorials/create/kinesis/existing.png)
 
 ## Next steps
 
