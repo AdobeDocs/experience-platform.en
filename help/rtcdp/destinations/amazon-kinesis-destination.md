@@ -98,5 +98,5 @@ Your exported Experience Platform data lands in [!DNL Amazon Kinesis] in JSON fo
 >[!MORELIKETHIS]
 >
 >* [Connect to Amazon Kinesis and activate data using API calls](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
->* [Azure Event Hubs destination](/help/rtcdp/destinations/azure-event-hubs-destination.md)
+>* [Azure EventHubs destination](/help/rtcdp/destinations/azure-event-hubs-destination.md)
 >* [Destination types and categories](/help/rtcdp/destinations/destination-types.md) 

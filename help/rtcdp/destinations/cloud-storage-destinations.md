@@ -1,13 +1,13 @@
 ---
 title: Cloud storage destinations
 seo-title: Cloud storage destinations
-description: Adobe Real-time CDP can deliver your segments as data files to your Amazon S3, AWS Kinesis, Azure Event Hubs, or SFTP cloud storage locations.
-seo-description: Adobe Real-time CDP can deliver your segments as data files to your Amazon S3, AWS Kinesis, Azure Event Hubs, or SFTP cloud storage locations.
+description: Adobe Real-time CDP can deliver your segments as data files to your Amazon S3, AWS Kinesis, Azure EventHubs, or SFTP cloud storage locations.
+seo-description: Adobe Real-time CDP can deliver your segments as data files to your Amazon S3, AWS Kinesis, Azure EventHubs, or SFTP cloud storage locations.
 ---
 
 # Cloud storage destinations {#cloud-storage-destinations}
 
-Adobe Real-time CDP can deliver your segments as data files to your cloud storage locations. This enables you to send audiences and their profile attributes to your internal systems, via CSV or tab-delimited files for Amazon S3 and SFTP. For AWS Kinesis and Azure Event Hubs destinations, data is streamed out of Experience Platform in JSON format.
+Adobe Real-time CDP can deliver your segments as data files to your cloud storage locations. This enables you to send audiences and their profile attributes to your internal systems, via CSV or tab-delimited files for Amazon S3 and SFTP. For AWS Kinesis and Azure EventHubs destinations, data is streamed out of Experience Platform in JSON format.
 
 ![Adobe Cloud storage destinations](/help/rtcdp/destinations/assets/cloud-storage-destinations.png)
 

@@ -9,11 +9,11 @@ topic: tutorial
 
 >[!NOTE]
 >
->The [!DNL Amazon Kinesis] and [!DNL Azure Event Hubs] destinations in Adobe Real-time CDP are currently in beta. The documentation and the functionality are subject to change.
+>The [!DNL Amazon Kinesis] and [!DNL Azure EventHubs] destinations in Adobe Real-time CDP are currently in beta. The documentation and the functionality are subject to change.
 
-This tutorial demonstrates how to use API calls to connect to your Adobe Experience Platform data, create a connection to a streaming cloud storage destination ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) or [Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), create a dataflow to your new created destination, and activate data to your new created destination.
+This tutorial demonstrates how to use API calls to connect to your Adobe Experience Platform data, create a connection to a streaming cloud storage destination ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) or [Azure EventHubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), create a dataflow to your new created destination, and activate data to your new created destination.
 
-This tutorial uses the [!DNL Amazon Kinesis] destination in all examples, but the steps are identical for [!DNL Azure Event Hubs].
+This tutorial uses the [!DNL Amazon Kinesis] destination in all examples, but the steps are identical for [!DNL Azure EventHubs].
 
 ![Overview - the steps to create a streaming destination and activate segments](/help/rtcdp/destinations/assets/flow-prelim.png)
 
@@ -34,7 +34,7 @@ The following sections provide additional information that you will need to know
 To complete the steps in this tutorial, you should have the following credentials ready, depending on the type of destinations that you are connecting and activating segments to.
 
 * For [!DNL Amazon Kinesis] connections: `accessKeyId`, `secretKey`, `region` or `connectionUrl`
-* For [!DNL Azure Event Hubs] connections: `sasKeyName`, `sasKey`, `namespace`
+* For [!DNL Azure EventHubs] connections: `sasKeyName`, `sasKey`, `namespace`
 
 ### Reading sample API calls {#reading-sample-api-calls}
 
@@ -91,7 +91,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Response**
 
-A successful response contains a list of available destinations and their unique identifiers (`id`). Store the value of the destination that you plan to use, as it will be required in further steps. For example, if you want to connect and deliver segments to [!DNL Amazon Kinesis] or [!DNL Azure Event Hubs], look for the following snippet in the response:
+A successful response contains a list of available destinations and their unique identifiers (`id`). Store the value of the destination that you plan to use, as it will be required in further steps. For example, if you want to connect and deliver segments to [!DNL Amazon Kinesis] or [!DNL Azure EventHubs], look for the following snippet in the response:
 
 ```json
 {
@@ -103,7 +103,7 @@ A successful response contains a list of available destinations and their unique
 
 {
     "id": "bf9f5905-92b7-48bf-bf20-455bc6b60a4e",
-  "name": "Azure Event Hubs",
+  "name": "Azure EventHubs",
   ...
   ...
 }
@@ -234,7 +234,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "name": "Connection for Amazon Kinesis/ Azure Event Hubs",
+    "name": "Connection for Amazon Kinesis/ Azure EventHubs",
     "description": "your company's holiday campaign",
     "connectionSpec": {
         "id": "{_CONNECTION_SPEC_ID}",
@@ -247,7 +247,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
             "secretKey": "{SECRET_KEY}",
             "region": "{REGION}"
         },
-        "params": { // use these values for Azure Event Hubs connections
+        "params": { // use these values for Azure EventHubs connections
             "sasKeyName": "{SAS_KEY_NAME}",
             "sasKey": "{SAS_KEY}",
             "namespace": "{EVENT_HUB_NAMESPACE}"
@@ -257,13 +257,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 *   `{CONNECTION_SPEC_ID}`: Use the connection spec ID you obtained in the step [Get the list of available destinations](#get-the-list-of-available-destinations).
-*   `{AUTHENTICATION_CREDENTIALS}`: fill in the name of your streaming destination, e.g.: `Amazon Kinesis authentication credentials` or `Azure Event Hubs authentication credentials`. 
+*   `{AUTHENTICATION_CREDENTIALS}`: fill in the name of your streaming destination, e.g.: `Amazon Kinesis authentication credentials` or `Azure EventHubs authentication credentials`. 
 *   `{ACCESS_ID}`: *For Amazon Kinesis connections.* Your access ID for your Amazon Kinesis storage location.
 *   `{SECRET_KEY}`: *For Amazon Kinesis connections.* Your secret key for your Amazon Kinesis storage location.
 *  `{REGION}`: *For Amazon Kinesis connections.* The region in your Amazon Kinesis account where Adobe Real-time CDP will stream your data.
-*  `{SAS_KEY_NAME}`: *For Azure Event Hubs connections.* Fill in your SAS key name. Learn about authenticating to [!DNL Azure Event Hubs] with SAS keys in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
-*  `{SAS_KEY}`: *For Azure Event Hubs connections.* Fill in your SAS key. Learn about authenticating to [!DNL Azure Event Hubs] with SAS keys in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
-*  `{EVENT_HUB_NAMESPACE}`: *For Azure Event Hubs connections.* Fill in the Azure Event Hubs namespace where Adobe Real-time CDP will stream your data. For more information, see [Create an Event Hubs namespace](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) in the Microsoft documentation.
+*  `{SAS_KEY_NAME}`: *For Azure EventHubs connections.* Fill in your SAS key name. Learn about authenticating to [!DNL Azure EventHubs] with SAS keys in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+*  `{SAS_KEY}`: *For Azure EventHubs connections.* Fill in your SAS key. Learn about authenticating to [!DNL Azure EventHubs] with SAS keys in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+*  `{EVENT_HUB_NAMESPACE}`: *For Azure EventHubs connections.* Fill in the Azure EventHubs namespace where Adobe Real-time CDP will stream your data. For more information, see [Create an EventHubs namespace](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) in the Microsoft documentation.
 
 **Response**
 
@@ -292,8 +292,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-gw-ims-org-id: {IMS_ORG}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "name": "Amazon Kinesis/ Azure Event Hubs target connection",
-    "description": "Connection to Amazon Kinesis/ Azure Event Hubs",
+    "name": "Amazon Kinesis/ Azure EventHubs target connection",
+    "description": "Connection to Amazon Kinesis/ Azure EventHubs",
     "baseConnection": "{BASE_CONNECTION_ID}",
     "connectionSpec": {
         "id": "{CONNECTION_SPEC_ID}",
@@ -306,7 +306,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "stream": "{NAME_OF_DATA_STREAM}", 
         "region": "{REGION}"
     },
-    "params": { // use these values for Azure Event Hubs connections
+    "params": { // use these values for Azure EventHubs connections
         "eventHubName": "{EVENT_HUB_NAME}",
         "namespace": "EVENT_HUB_NAMESPACE"
     }
@@ -317,8 +317,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 *   `{CONNECTION_SPEC_ID}`: Use the connection spec you obtained in the step [Get the list of available destinations](#get-the-list-of-available-destinations).
 *   `{NAME_OF_DATA_STREAM}`: *For Amazon Kinesis connections.* Provide the name of your existing data stream in your Amazon Kinesis account. Adobe Real-time CDP will export data to this stream.
 *   `{REGION}`: *For Amazon Kinesis connections.* The region in your Amazon Kinesis account where Adobe Real-time CDP will stream your data.
-*   `{EVENT_HUB_NAME}`: *For Azure Event Hubs connections.* Fill in the Azure Event Hub name where Adobe Real-time CDP will stream your data. For more information, see [Create an event hub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) in the Microsoft documentation.
-*   `{EVENT_HUB_NAMESPACE}`: *For Azure Event Hubs connections.* Fill in the Azure Event Hubs namespace where Adobe Real-time CDP will stream your data. For more information, see [Create an Event Hubs namespace](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) in the Microsoft documentation.
+*   `{EVENT_HUB_NAME}`: *For Azure EventHubs connections.* Fill in the Azure Event Hub name where Adobe Real-time CDP will stream your data. For more information, see [Create an event hub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) in the Microsoft documentation.
+*   `{EVENT_HUB_NAMESPACE}`: *For Azure EventHubs connections.* Fill in the Azure EventHubs namespace where Adobe Real-time CDP will stream your data. For more information, see [Create an EventHubs namespace](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) in the Microsoft documentation.
 
 **Response**
 
@@ -358,8 +358,8 @@ curl -X POST \
 -H 'Content-Type: application/json' \
 -d  '{
    
-        "name": "Create dataflow to Amazon Kinesis/ Azure Event Hubs",
-        "description": "This operation creates a dataflow to Amazon Kinesis/ Azure Event Hubs",
+        "name": "Create dataflow to Amazon Kinesis/ Azure EventHubs",
+        "description": "This operation creates a dataflow to Amazon Kinesis/ Azure EventHubs",
         "flowSpec": {
             "id": "{FLOW_SPEC_ID}",
             "version": "1.0"
