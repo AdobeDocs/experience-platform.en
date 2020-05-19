@@ -11,6 +11,23 @@ Adobe Experience Platform provides native connectivity for cloud providers like 
 
 Cloud storage sources can bring your own data into Platform without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM parquet, or delimited. Every step of the process is integrated into the Sources workflow. Platform allows you to bring in data from Google Cloud Storage through batches.
 
+## Prerequisite set up before you connect your Google Cloud Storage account
+
+In order to connect to Platform, you must first enable interoperability for your Google Cloud Storage account. To access the interoperability setting, open your Google Cloud Platform console and select **[!UICONTROL Settings]** from the **[!UICONTROL Storage]** option of the navigation panel.
+
+![](../../images/tutorials/create/google-cloud-storage/nav.png)
+
+The **[!UICONTROL Settings]** page appears. From here, you can see information regarding your Google project ID and details about your Google Cloud Storage account. To access interoperability settings, select **[!UICONTROL Interoperability]** from the top header].
+
+![](../../images/tutorials/create/google-cloud-storage/project-access.png)
+
+The **[!UICONTROL Interoperability]** page contains information on authentication, access keys, and the default project associated with your user account. If you have not already established a default project for interoperable access, you can set one up from within the **Default project for interoperable access** section. If a default project has already been established, the section will show a confirmation that a project has been set as the default.
+
+To generate a new access key and secret for your user account, select **[!UICONTROL Create a Key]**
+
+![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
+
+
 The documentation below provides information on how to connect Google Cloud Storage to Platform using APIs or the user interface:
 
 ## Connect Google Cloud Storage to Platform using APIs
