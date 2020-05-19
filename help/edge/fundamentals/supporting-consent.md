@@ -5,11 +5,7 @@ description: Learn how to support consent preferences with Experience Platform W
 seo-description: Learn how to support consent preferences with Experience Platform Web SDK
 ---
 
-# (Beta) Supporting Consent
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+# Supporting Consent
 
 To respect your user's privacy, you might want to ask for the user's consent before allowing the SDK to use user-specific data for certain purposes. Currently, the SDK only allows users to opt in or out of all purposes, but in the future Adobe hopes to provide more granular control over specific purposes.
 
