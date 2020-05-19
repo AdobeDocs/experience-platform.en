@@ -56,19 +56,19 @@ For more information about the new functionality, see the [Facebook destination]
 
 <br>&nbsp;
 
-**Amazon Kinesis and Azure EventHubs streaming cloud storage destinations**
+**Amazon Kinesis and Azure Event Hubs streaming cloud storage destinations**
 
 Adobe Real-time CDP now supports data activation to streaming cloud storage destinations, allowing you to export audience data and events to these destinations in JSON format. You can then describe business logic on top of these events in your destinations. See below for details:
 
 >[!NOTE]
 >
->The [!DNL Amazon Kinesis] and [!DNL Azure EventHubs] destinations in Adobe Real-time CDP are currently in beta. The documentation and the functionality are subject to change.
+>The [!DNL Amazon Kinesis] and [!DNL Azure Event Hubs] destinations in Adobe Real-time CDP are currently in beta. The documentation and the functionality are subject to change.
 
 |Documentation | Description|
 |--- | ---|
 |[(Beta) Amazon Kinesis destination](/help/rtcdp/destinations/amazon-kinesis-destination.md) | This article explains how to create a real-time outbound connection to your [!DNL Amazon Kinesis] storage to stream data from Adobe Experience Platform.  |
-|[(Beta) Azure EventHubs destination](/help/rtcdp/destinations/azure-event-hubs-destination.md) | This article explains how to create a real-time outbound connection to your [!DNL Azure EventHubs] storage to stream data from Adobe Experience Platform.  |
-| [API tutorial - Connect to streaming destinations and activate data](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md) | This tutorial demonstrates how to use API calls to connect to your Adobe Experience Platform data, create a connection to a streaming cloud storage destination (Amazon Kinesis or Azure EventHubs), create a dataflow to your new created destination, and activate data to your new created destination. |
+|[(Beta) Azure Event Hubs destination](/help/rtcdp/destinations/azure-event-hubs-destination.md) | This article explains how to create a real-time outbound connection to your [!DNL Azure Event Hubs] storage to stream data from Adobe Experience Platform.  |
+| [API tutorial - Connect to streaming destinations and activate data](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md) | This tutorial demonstrates how to use API calls to connect to your Adobe Experience Platform data, create a connection to a streaming cloud storage destination (Amazon Kinesis or Azure Event Hubs), create a dataflow to your new created destination, and activate data to your new created destination. |
 
 For more information, please see the [Destinations overview](/help/rtcdp/destinations/destinations-overview.md).
 

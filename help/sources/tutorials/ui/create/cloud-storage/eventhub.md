@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Create an Azure EventHubs source connector in the UI
+title: Create an Azure Event Hubs source connector in the UI
 topic: overview
 ---
 
-# Create an Azure EventHubs source connector in the UI
+# Create an Azure Event Hubs source connector in the UI
 
 >[!NOTE]
-> The Azure EventHubs connector is in beta. The features and documentation are subject to change.
+> The Azure Event Hubs connector is in beta. The features and documentation are subject to change.
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for authenticating an Azure EventHubs (hereinafter referred to as "EventHub") source connector using the Platform user interface.
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for authenticating an Azure Event Hubs (hereinafter referred to as "EventHub") source connector using the Platform user interface.
 
 ## Getting started
 
@@ -41,11 +41,11 @@ Once you have gathered your required credentials, you can follow the steps below
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **Sources** from the left navigation bar to access the *Sources* workspace. The *Catalog* tab displays a variety of sources for which can be connected to Platform. Each source shows the number of existing accounts associated to them.
 
-Under the *Cloud Storage* category, select **Azure EventHubs** and click **on the + icon (+)** to create a new EventHub connector.
+Under the *Cloud Storage* category, select **Azure Event Hubs** and click **on the + icon (+)** to create a new EventHub connector.
 
 ![](../../../../images/tutorials/create/eventhub/catalog.png)
 
-The *Connect to Azure EventHubs* dialog appears. On this page, you can either use new credentials or existing credentials. 
+The *Connect to Azure Event Hubs* dialog appears. On this page, you can either use new credentials or existing credentials. 
 
 ### New account
 
