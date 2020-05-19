@@ -36,7 +36,7 @@ Examples :
 
 - You want to predict whether the customer is likely to purchase a watch in the next 7 days. You also want to score users who have some web activity in the last 7 days. In this case the minimum length of data required = 30 days + 7 days. The eligible population requires a minimum of 30 days and the outcome window is 7 days totaling 37 days.
 
-Apart from the minimum data required, Customer AI also works best with fresh data since in this use case Customer AI is doing a prediction for the future based on a user's recent behavioral data.
+Apart from the minimum data required, Customer AI also works best with recent data. In this use case, Customer AI is doing a prediction for the future based on a user's recent behavioral data. In other words, more recent data is likely to yield a more accurate prediction.
 
 ## Customer AI output data
 
