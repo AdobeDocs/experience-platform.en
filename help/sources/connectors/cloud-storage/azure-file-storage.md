@@ -5,7 +5,7 @@ title: Azure File Storage connector
 topic: overview
 ---
 
-# Azure File Storage connector
+# (Beta) Azure File Storage connector
 
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, Google Cloud Platform, and Azure. You can bring your data from these systems into Platform.
 
@@ -22,4 +22,4 @@ The documentation below provides information on how to connect Azure File Storag
 ## Connect Azure File Storage to Platform using the UI
 
 - [Create an Azure File Storage source connector in the UI](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
-- [Configure a dataflow for a cloud storage connector in the UI](../../tutorials/ui/dataflow/cloud-storage.md)
+- [Configure a dataflow for a cloud storage connector in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)

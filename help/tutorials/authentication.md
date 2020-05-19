@@ -120,9 +120,9 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-If your response is similar to the one shown below, then your credentials are valid and working. (This response has been truncated for space.)
-
 **Response**
+
+If your response is similar to the one shown below, then your credentials are valid and working. (This response has been truncated for space.)
 
 ```JSON
 {
