@@ -58,13 +58,13 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 A connection specifies a source and contains your credentials for that source. Only one connection is required per HP Vertica account as it can be used to create multiple source connectors to bring in different data.
 
-#### API format
+**API format**
 
 ```http
 POST /connections
 ```
 
-#### Request
+**Request**
 
 In order to create an HP Vertica connection, its unique connection spec ID must be provided as part of the POST request. The connection spec ID for HP Vertica is `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`.
 
@@ -97,7 +97,7 @@ curl -X POST \
 | `auth.params.connectionString` | The connection string associated with your HP Vertica account. |
 | `connectionSpec.id` | The HP Vertica connection spec ID: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`. |
 
-#### Response
+**Response**
 
 A successful response returns details of the newly created connection, including its unique identifier (`id`). This ID is required to explore your data in the next tutorial.
 
