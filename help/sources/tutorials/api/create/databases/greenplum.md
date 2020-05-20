@@ -91,7 +91,7 @@ curl -X POST \
 | Parameter | Description |
 | --------- | ----------- |
 | `auth.params.connectionString` | The connection string associated with your GreenPlum account. |
-| `connectionSpec.id` | The DB2 connection specification ID: `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
+| `connectionSpec.id` | The GreenPlum connection spec ID: `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
 
 **Response**
 

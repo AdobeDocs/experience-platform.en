@@ -29,8 +29,9 @@ In order for Flow Service to connect with your Blob storage, you must provide va
 | Credential | Description |
 | ---------- | ----------- |
 | `connectionString` | The connection string required to access data in your Blob storage. The Blob connection string pattern is: `DefaultEndpointsProtocol=https;AccountName=<accountname>;AccountKey=<accountkey>`. |
+| `connectionSpec.id` | The unique identifier needed to create a connection. The connection specification ID for Blob is: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
-For more information on getting started, visit [this Azure Blob document](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string).
+For more information about obtaining a connection string, refer to [this Azure Blob document](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string).
 
 ### Reading sample API calls
 
@@ -64,6 +65,8 @@ POST /connections
 
 **Request**
 
+In order to create a Blob connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for Blob is `4c10e202-c428-4796-9208-5f1f5732b1cf`.
+
 ```shell
 curl -X POST \
     'http://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -78,7 +81,7 @@ curl -X POST \
         "auth": {
             "specName": "ConnectionString",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "DefaultEndpointsProtocol=https;AccountName=<accountname>;AccountKey=<accountkey>"
             }
         },
         "connectionSpec": {
@@ -90,8 +93,8 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-|   `auth.params.connectionString` | The connection string for your Blob storage. |
-|   `connectionSpec.id` | The Blob storage connection specification ID: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
+|   `auth.params.connectionString` | The connection string required to access data in your Blob storage. The Blob connection string pattern is: `DefaultEndpointsProtocol=https;AccountName=<accountname>;AccountKey=<accountkey>`. |
+|   `connectionSpec.id` | The Blob storage connection specification ID is: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
 **Response**
 

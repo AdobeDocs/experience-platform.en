@@ -29,10 +29,10 @@ In order for Flow Service to connect with ATS, you must provide values for the f
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string to connect to ATS instance. The connection string pattern for ATS is `DefaultEndpointsProtocol=https;AccountName=<accountname>;AccountKey=<accountkey>`. |
-| `connectionSpec.id` | The unique identifier needed to create a connection. The connection specification ID for ATS is `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `connectionString` | The connection string used to connect to an ATS instance. The connection string pattern for ATS is: `DefaultEndpointsProtocol=https;AccountName=<accountname>;AccountKey=<accountkey>`. |
+| `connectionSpec.id` | The ID used to generate a connection. The fixed connection spec ID for ATS is `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
-For more information about getting started refer to [this ATS document](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction).
+For more information about obtaining a connection string, refer to [this ATS document](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction).
 
 ### Reading sample API calls
 
@@ -66,7 +66,7 @@ POST /connections
 
 **Request**
 
-In order to create an ATS connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for ATS is `ecde33f2-c56f-46cc-bdea-ad151c16cd69`.
+In order to create an ATS connection, its unique connection spec ID must be provided as part of the POST request. The connection spec ID for ATS is `ecde33f2-c56f-46cc-bdea-ad151c16cd69`.
 
 ```shell
 curl -X POST \
@@ -82,7 +82,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "DefaultEndpointsProtocol=https;AccountName=<accountname>;AccountKey=<accountkey>"
             }
         },
         "connectionSpec": {
@@ -94,8 +94,8 @@ curl -X POST \
 
 | Parameter | Description |
 | --------- | ----------- |
-| `auth.params.connectionString` | The connection string associated with your ATS account. |
-| `connectionSpec.id` | The ATS connection specification ID: `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `auth.params.connectionString` | The connection string used to connect to an ATS instance. The connection string pattern for ATS is: `DefaultEndpointsProtocol=https;AccountName=<accountname>;AccountKey=<accountkey>`. |
+| `connectionSpec.id` | The ATS connection spec ID is: `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
 **Response**
 

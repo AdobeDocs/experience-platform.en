@@ -30,8 +30,9 @@ In order for Flow Service to connect with MariaDB, you must provide the followin
 | Credential | Description |
 | ---------- | ----------- |
 | `connectionString` | The connection string associated with your MariaDB authentication. The MariaDB connection string pattern is: `Server=<host>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>`. |
+| `connectionSpec.id` | The ID used to generate a connection. The fixed connection spec ID for MariaDB is `3000eb99-cd47-43f3-827c-43caf170f015`. |
 
-Please refer to [this document](https://mariadb.com/kb/en/about-mariadb-connector-odbc/) for more information about getting started with MariaDB.
+For more information about obtaining a connection string, refer to [this MariaDB document](https://mariadb.com/kb/en/about-mariadb-connector-odbc/).
 
 ### Reading sample API calls
 
@@ -53,77 +54,9 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 *   Content-Type: `application/json`
 
-## Look up connection specifications
+## Create a connection
 
-In order to connect to MariaDB, a set of MariaDB connection specifications must exist within Flow Service. The first step in connecting Platform to MariaDB is to retrieve these specifications.
-
-**API format**
-
-Each available source has its own unique set of connection specifications for describing connector properties such as authentication requirements. Sending a GET request to the `/connectionSpecs` endpoint will return connection specifications for all available sources. You can include the query `property=name=="maria-db"` to obtain information specifically for MariaDB.
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="maria-db"
-```
-
-**Request**
-
-The following request retrieves the connection specifications for MariaDB.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="maria-db"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Response**
-
-A successful response returns the connection specifications for MariaDB, including its unique identifier (`id`). This ID is required in the next step to create a base connection.
-
-```json
-{
-    "items": [
-        {
-            "id": "3000eb99-cd47-43f3-827c-43caf170f015",
-            "name": "maria-db",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Connection String Based Authentication",
-                    "type": "connectionStringAuth",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params required for connecting to MariaDB",
-                        "properties": {
-                            "connectionString": {
-                                "type": "string",
-                                "description": "connection string to connect to any MariaDB instance.",
-                                "format": "password",
-                                "pattern": "^(Server=)(.*)(;Port=)(.*)(;Database=)(.*)(;UID=)(.*)(;PWD=)(.*)",
-                                "examples": [
-                                    "Server=<host>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>"
-                                ]
-                            }
-                        },
-                        "required": [
-                            "connectionString"
-                        ]
-                    }
-                }
-            ],
-        }
-    ]
-}
-```
-
-## Create a base connection
-
-A base connection specifies a source and contains your credentials for that source. Only one base connection is required per MariaDB account as it can be used to create multiple source connectors to bring in different data.
+A connection specifies a source and contains your credentials for that source. Only one connection is required per MariaDB account as it can be used to create multiple source connectors to bring in different data.
 
 **API format**
 
@@ -132,6 +65,8 @@ POST /connections
 ```
 
 **Request**
+
+In order to create a MariaDB connection, its unique connection spec ID must be provided as part of the POST request. The connection spec ID for MariaDB is `3000eb99-cd47-43f3-827c-43caf170f015`.
 
 ```shell
 curl -X POST \
@@ -142,12 +77,12 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "base connection for maria-db",
-        "description": "base connection for maria-db",
+        "name": "Test connection for maria-db",
+        "description": "Test connection for maria-db",
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "Server=<host>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>"
             }
         },
         "connectionSpec": {
@@ -159,12 +94,12 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `auth.params.connectionString` | The connection string associated with your MariaDB authentication. |
-| `connectionSpec.id` | The connection specification (`id`) gathered in the previous step. |
+| `auth.params.connectionString` | The connection string associated with your MariaDB authentication. The MariaDB connection string pattern is: `Server=<host>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>`. |
+| `connectionSpec.id` | The MariaDB connection spec ID is: `3000eb99-cd47-43f3-827c-43caf170f015`. |
 
 **Response**
 
-A successful response returns details of the newly created base connection, including its unique identifier (`id`). This ID is required to explore your cloud storage in the next step.
+A successful response returns details of the newly created base connection, including its unique identifier (`id`). This ID is required to explore your database in the next step.
 
 ```json
 {
@@ -175,4 +110,4 @@ A successful response returns details of the newly created base connection, incl
 
 ## Next steps
 
-By following this tutorial, you have created a MariaDB base connection using the Flow Service API, and have obtained the connection's unique ID value. You can use this base connection ID in the next tutorial as you learn how to [explore databases or NoSQL systems using the Flow Service API](../../explore/database-nosql.md).
+By following this tutorial, you have created a MariaDB connection using the Flow Service API, and have obtained the connection's unique ID value. You can use this connection ID in the next tutorial as you learn how to [explore databases or NoSQL systems using the Flow Service API](../../explore/database-nosql.md).

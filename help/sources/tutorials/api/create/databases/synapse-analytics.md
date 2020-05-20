@@ -32,7 +32,7 @@ In order for Flow Service to connect with Synapse, you must provide values for t
 | `connectionString` | The connection string used to connect to Synapse. The Synapse connection string pattern is `Server=tcp:<servername>.database.windows.net,1433;Database=<databasename>;User ID=<username>@<servername>;Password=<password>;Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
 | `connectionSpec.id` | The unique identifier needed to create a connection. The connection specification ID for Synapse is: `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
 
-For more information about getting started refer to [this Synapse document](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-aad-authentication-configure?toc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Ftoc.json&bc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Fbreadcrumb%2Ftoc.json&tabs=azure-powershell).
+For more information about obtaining a connection string, refer to [this Synapse document](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-aad-authentication-configure?toc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Ftoc.json&bc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Fbreadcrumb%2Ftoc.json&tabs=azure-powershell).
 
 ### Reading sample API calls
 
@@ -82,7 +82,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "`Server=tcp:<servername>.database.windows.net,1433;Database=<databasename>;User ID=<username>@<servername>;Password=<password>;Trusted_Connection=False;Encrypt=True;Connection Timeout=30`"
             }
         },
         "connectionSpec": {
@@ -94,12 +94,12 @@ curl -X POST \
 
 | Parameter | Description |
 | --------- | ----------- |
-| `auth.params.connectionString` | The connection string associated with your Synapse account. |
-| `connectionSpec.id` | The Synapse connection specification ID: `a49bcc7d-8038-43af-b1e4-5a7a089a7d79`. |
+| `auth.params.connectionString` | The connection string used to connect to Synapse. The Synapse connection string pattern is `Server=tcp:<servername>.database.windows.net,1433;Database=<databasename>;User ID=<username>@<servername>;Password=<password>;Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
+| `connectionSpec.id` | The Synapse connection specification ID is: `a49bcc7d-8038-43af-b1e4-5a7a089a7d79`. |
 
 **Response**
 
-A successful response returns details of the newly created connection, including its unique identifier (`id`). This ID is required to explore your data in the next tutorial.
+A successful response returns details of the newly created connection, including its unique identifier (`id`). This ID is required to explore your database in the next tutorial.
 
 ```json
 {
