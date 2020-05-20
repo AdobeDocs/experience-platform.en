@@ -1,12 +1,12 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title:  Adobe Experience Platform Edge Network Help
+user-guide-title:  Adobe Experience Platform Web SDK Help
 ---
 
-# Adobe Experience Platform Edge Network {#edge}
+# Adobe Experience Platform Web SDK {#edge}
 
-* [Edge Network overview](home.md)
+* [Web SDK overview](home.md)
 * Getting started {#get-started}
   * [Quick start with Launch](getting-started/quick-start-with-launch.md)
   * [Quick start without Launch](getting-started/quick-start-without-launch.md)
