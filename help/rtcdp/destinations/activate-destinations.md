@@ -26,6 +26,11 @@ To activate data to destinations, you must have successfully [connected a destin
    We recommend one of the attributes to be a [unique identifier](/help/rtcdp/destinations/email-marketing-destinations.md#identity) from your union schema. For more information about mandatory attributes, see Identity in the [Email marketing destinations](/help/rtcdp/destinations/email-marketing-destinations.md#identity) article. 
    ![destination-attributes](/help/rtcdp/destinations/assets/select-attributes-step.png)
    For *social network destinations*, in the **[!UICONTROL Identity mapping]** step, select source attributes to map to target identities.
+
+    >[!TIP]
+    >
+    > This step is optional. Will add more information later.
+
    ![identity mapping before filling in fields](/help/rtcdp/destinations/assets/facebook-identity-mapping-1.png)
    In the example below, the personal email address in the identity schema has been hashed on ingestion into Experience Platform to comply with the Facebook [email hashing requirements](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements). Press **[!UICONTROL Next]** after selecting the mapping.
    ![identity mapping after filling in fields](/help/rtcdp/destinations/assets/facebook-identity-mapping-2.png)
