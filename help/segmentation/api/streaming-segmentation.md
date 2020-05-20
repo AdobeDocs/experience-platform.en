@@ -57,6 +57,14 @@ The following table lists the different types of segmentation queries that suppo
 | Incoming hit that refers to a Profile within a relative time window | Any segment definition that refers to an incoming event and the profile attribute, **within the last seven days**. |
 | Incoming hit that refers to a Profile and has event history | Any segment definition that refers to an event **within the last 24 hours** and has a profile attribute. |
 
+The following section lists segment definition examples that will **not** be streaming segmentation enabled.
+
+| Query type | Details |
+| ---------- | ------- | 
+| Incoming hit within a relative time window | If the segment definition refers to an incoming event **not** within the **last seven day** period. For example, within the **last two weeks**. |
+| Incoming hit that refers to a Profile within a relative window | The following options will **not** support streaming segmentation:<ul><li>An incoming event **not** within the **last seven day** period.</li><li>A segment definition that includes Adobe Audience Manager (AAM) segments or traits.</li></ul> | 
+| Incoming hit that refers to a Profile and has event history | The following options will **not** support streaming segmentation:<ul><li>An event that does **not** occur within **the last 24 hours**.</li><li>A segment definition that includes Adobe Audience Manager (AAM) segments or traits.</li></ul> |
+
 ## Retrieve all streaming segmentation enabled segments
 
 You can retrieve a list of all your streaming segmentation enabled segments within your IMS Organization.

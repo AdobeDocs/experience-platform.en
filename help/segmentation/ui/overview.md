@@ -178,7 +178,7 @@ The following section lists segment definition examples that will **not** be str
 | ---------- | ------- | 
 | Incoming hit within a relative time window | If the segment definition refers to an incoming event **not** within the **last seven day** period. For example, within the **last two weeks**. |
 | Incoming hit that refers to a Profile within a relative window | The following options will **not** support streaming segmentation:<ul><li>An incoming event **not** within the **last seven day** period.</li><li>A segment definition that includes Adobe Audience Manager (AAM) segments or traits.</li></ul> | 
-| Incoming hit that refers to a Profile and has event history | The following options will **not** support streaming segmentation:<ul><li>An event that does **not** occur within **the last 24 hours**.</li><li>A segment definition that includes Adobe Audience Manager (AAM) segments or traits.</li></ul>
+| Incoming hit that refers to a Profile and has event history | The following options will **not** support streaming segmentation:<ul><li>An event that does **not** occur within **the last 24 hours**.</li><li>A segment definition that includes Adobe Audience Manager (AAM) segments or traits.</li></ul> |
 
 ## DULE policy violations
 
