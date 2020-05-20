@@ -5,20 +5,16 @@ description: Learn how to render personalized content with Experience Platform W
 seo-description: Learn how to render personalized content with Experience Platform Web SDK
 ---
 
-# (Beta) Overview of Personalization Options
+# Overview of Personalization Options
 
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
-
-The Adobe Experience Platform Web SDK supports querying the personalization solutions at Adobe including Adobe Target. There are two modes for personalization: retrieving content that can be rendered automatically and content that the developer must render. The SDK also provides facilities to [manage flicker](managing-flicker.md).
+The Adobe Experience Platform Web SDK supports querying the personalization solutions at Adobe including Adobe Target. There are two modes for personalization: retrieving content that can be rendered automatically and content that the developer must render. The SDK also provides facilities to [manage flicker](../../edge/solution-specific/target/flicker-management.md).
 
 ## Automatically Rendering Content
 
 The SDK automatically renders personalized content when you send an event to the server and set `renderDecisions` to `true` as an option on the event.
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "renderDecisions": true,
   "xdm": {
     "commerce": {
@@ -40,7 +36,7 @@ The rendering of personalized content is asynchronous, so there should not be an
 You can request the list of decisions to be returned as a promise on the `event` command by using `scopes`. A scope is a string the lets the personalization solution know which decision you would like.
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
     xdm:{...},
     scopes:['demo-1', 'demo-2']
   }).then(function(result){

@@ -51,80 +51,9 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 *   Content-Type: `application/json`
 
-## Look up connection specifications
+## Create a connection
 
-Before connecting Platform to a Google Cloud Storage, you must verify that connection specifications exist for Google Cloud Storage. If connection specifications do not exist then a connection cannot be made.
-
-Each available source has its own unique set of connection specifications for describing connector properties such as authentication requirements. You can look up connection specifications for Google Cloud Storage by performing a GET request and using query parameters.
-
-**API format**
-
-Sending a GET request without query parameters will return connection specifications for all available sources. You can include the query `property=name=="google-cloud"` to obtain information specifically for Google Cloud Storage.
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name==google-cloud
-```
-
-**Request**
-
-The following request retrieves the connection specifications for Google Cloud Storage.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="google-cloud"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Response**
-
-A successful response returns the connection specifications for Google Cloud Storage, including its unique identifier (`id`). This ID is required in the next step to create a base connection.
-
-```json
-{
-    "items": [
-        {
-            "id": "32e8f412-cdf7-464c-9885-78184cb113fd",
-            "name": "google-cloud",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Basic Authentication for google-cloud",
-                    "type": "Basic Authentication",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params required for connecting to google-cloud storage connector.",
-                        "properties": {
-                            "accessKeyId": {
-                                "type": "string",
-                                "description": "Access Key Id for the user account"
-                            },
-                            "secretAccessKey": {
-                                "type": "string",
-                                "description": "Secret Access Key for the user account",
-                                "format": "password"
-                            }
-                        },
-                        "required": [
-                            "accessKeyId",
-                            "secretAccessKey"
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
-}
-```
-
-## Create a base connection
-
-A base connection specifies a source and contains your credentials for that source. Only one base connection is required per Google Cloud Storage account as it can be used to create multiple source connectors to bring in different data.
+A connection specifies a source and contains your credentials for that source. Only one connection is required per Google Cloud Storage account as it can be used to create multiple source connectors to bring in different data.
 
 **API format**
 
@@ -143,8 +72,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Google Cloud Storage base connection",
-        "description": "Base connector for Google Cloud Storage",
+        "name": "Google Cloud Storage connection",
+        "description": "Connector for Google Cloud Storage",
         "auth": {
             "specName": "Basic Authentication for google-cloud",
             "params": {
@@ -163,11 +92,11 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.accessKeyId` | The access key ID associated with your Google Cloud Storage account. |
 | `auth.params.secretAccessKey` | The secret access key associated with your Google Cloud Storage account. |
-| `connectionSpec.id` | The connection specification `id` of your Google Cloud Storage account retrieved in the previous step. |
+| `connectionSpec.id` | The Google Cloud Storage connection specification ID: `32e8f412-cdf7-464c-9885-78184cb113fd` |
 
 **Response**
 
-A successful response returns details of the newly created base connection, including its unique identifier (`id`). This ID is required to explore your cloud storage data in the next tutorial.
+A successful response returns details of the newly created connection, including its unique identifier (`id`). This ID is required to explore your cloud storage data in the next tutorial.
 
 ```json
 {
