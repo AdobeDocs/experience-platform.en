@@ -172,7 +172,7 @@ A successful response returns an array of segments in your IMS Organization that
 
 ## Create a streaming-enabled segment
 
-After confirming that the segment you want to create does not already exist, you can create a new segment that is enabled for streaming segmentation.
+A segment will automatically be streaming-enabled if it matches one of the [streaming segmentation types listed above](#streaming-segmentation-enabled-query-types).
 
 **API format**
 

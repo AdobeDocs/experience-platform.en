@@ -172,6 +172,14 @@ Streaming segmentation will automatically be enforced for the following query ty
 
 For a segment which will undergo streaming segmentation, a baseline must be established (this is the initial run after which the segment will always be up-to-date). The system handles baselining automatically, however this is only possible if scheduled segmentation has been enabled. For details on enabling scheduled segmentation, please refer to [the previous section in this user guide](#enable-scheduled-segmentation).
 
+The following section lists segment definition examples that will **not** be streaming segmentation enabled.
+
+| Query type | Details |
+| ---------- | ------- | 
+| Incoming hit within a relative time window | If the segment definition refers to an incoming event **not** within the **last seven day** period. For example, within the **last two weeks**. |
+| Incoming hit that refers to a Profile within a relative window | The following options will **not** support streaming segmentation:<ul><li>An incoming event **not** within the **last seven day** period.</li><li>A segment definition that includes Adobe Audience Manager (AAM) segments or traits.</li></ul> | 
+| Incoming hit that refers to a Profile and has event history | The following options will **not** support streaming segmentation:<ul><li>An event that does **not** occur within **the last 24 hours**.</li><li>A segment definition that includes Adobe Audience Manager (AAM) segments or traits.</li></ul>
+
 ## DULE policy violations
 
 >[!NOTE] DULE policy violations only apply if you are creating a segment that has been assigned to a destination.
