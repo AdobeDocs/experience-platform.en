@@ -27,6 +27,8 @@ A complete example of the mixin can be found in the [public XDM repository](http
 
 The sections below highlight the key fields within the CEE mixin which should be utilized in order for Intelligent Services to generate useful insights, including descriptions and links to reference documentation for further examples.
 
+>[!IMPORTANT] The `xdm:channel` field (explained in the first section below) is **required** in order for Attribution AI to work with your data, while Customer AI does not have any mandatory fields. All other key fields are strongly recommended, but not mandatory.
+
 ### xdm:channel
 
 This field represents the marketing channel related to the ExperienceEvent. The field includes information about the channel type, media type, and location type. **This field _must_ be provided in order for Attribution AI to work with your data**.
@@ -178,7 +180,11 @@ For complete information regarding each of the required sub-fields for `xdm:prod
 
 ## Mapping and ingesting data
 
-Once you have determined whether your marketing events data can be mapped to the CEE schema, you can start the process of bringing your data into Intelligent Services. Contact Adobe Consulting Services to help map your data to the schema and ingest it into the service.
+Once you have determined whether your marketing events data can be mapped to the CEE schema, the next step is to determine which data you can start the process of bringing your data into Intelligent Services.
+
+>[!IMPORTANT] All historical data used in Intelligent Services must fall within the minimum time window of four months of data, plus the number of days intended as a lookback period.
+
+Contact Adobe Consulting Services to help map your data to the schema and ingest it into the service.
 
 If you have an Adobe Experience Platform subscription and want to map and ingest the data yourself, follow the steps outlined in the section below.
 
@@ -204,9 +210,58 @@ Once you have created and saved the schema, you can create a new dataset based o
 * [Create a dataset in the UI](../catalog/datasets/user-guide.md#create) (Follow the workflow for using an existing schema)
 * [Create a dataset in the API](../catalog/datasets/create.md)
 
+#### Add a primary identity namespace tag to the dataset
+
+Once you have created the dataset, the final step is to add a `primaryIdentityNameSpace` tag to the dataset. This can be done by making a PATCH request to the Catalog Service API.
+
+Before following along with the example API call below, see the [getting started section](../catalog/api/getting-started.md) in the Catalog developer guide for important information regarding required headers.
+
+**API format**
+
+```http
+PATCH /dataSets/{DATASET_ID}
+```
+
+| Parameter | Description |
+| --- | --- |
+| `{DATASET_ID}` | The ID of the dataset you created previously. |
+
+**Request**
+
+The following request adds a `primaryIdentityNamespace` tag to the dataset, specifying `mcid` as namespace value.
+
+```shell
+curl -X PATCH \
+  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "tags": {
+          "primaryIdentityNameSpace": ["mcid"]
+        }
+      }'
+```
+
+>[!NOTE] For more information on working with identity namespaces in Platform, see the [identity namespace overview](../identity-service/namespaces.md).
+
+**Response**
+
+A successful response returns an array containing ID of the updated dataset. This ID should match the one sent in the PATCH request.
+
+```json
+[
+    "@/dataSets/5ba9452f7de80400007fc52a"
+]
+```
+
 #### Map and ingest data
 
 After creating a CEE schema and dataset, you can start mapping your data tables to the schema and ingest that data into Platform. See the tutorial on [mapping a CSV file to an XDM schema](../ingestion/tutorials/map-a-csv-file.md) for steps on how to perform this in the UI. Once a dataset has been populated, the same dataset can be used to ingest additional data files.
+
+If your data is stored in a supported third-party application, you can also choose to create a [source connector](../sources/home.md) to ingest your marketing events data into Platform in real time.
 
 ## Next steps {#next-steps}
 
