@@ -212,7 +212,9 @@ Once you have created and saved the schema, you can create a new dataset based o
 
 #### Add a primary identity namespace tag to the dataset
 
-Once you have created the dataset, the final step is to add a `primaryIdentityNameSpace` tag to the dataset. This can be done by making a PATCH request to the Catalog Service API.
+If you are bringing in data from Adobe Audience Manager, Adobe Analytics, or another external source, the you must add a `primaryIdentityNameSpace` tag to the dataset. This can be done by making a PATCH request to the Catalog Service API.
+
+If you are ingesting data from a local CSV file, you can skip ahead to the next section on [mapping and ingesting data](#ingest).
 
 Before following along with the example API call below, see the [getting started section](../catalog/api/getting-started.md) in the Catalog developer guide for important information regarding required headers.
 
@@ -228,7 +230,9 @@ PATCH /dataSets/{DATASET_ID}
 
 **Request**
 
-The following request adds a `primaryIdentityNamespace` tag to the dataset, specifying `mcid` as namespace value.
+Depending on which source you are ingesting data from, you must provide appropriate `primaryIdentityNamespace` and `sourceConnectorId` tag values in the request payload.
+
+The following request adds the appropriate tag values for Audience Manager:
 
 ```shell
 curl -X PATCH \
@@ -240,7 +244,26 @@ curl -X PATCH \
   -H 'Content-Type: application/json' \
   -d '{
         "tags": {
-          "primaryIdentityNameSpace": ["mcid"]
+          "primaryIdentityNameSpace": ["mcid"],
+          "sourceConnectorId": ["audiencemanager"],
+        }
+      }'
+```
+
+The following request adds the appropriate tag values for Analytics:
+
+```shell
+curl -X PATCH \
+  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "tags": {
+          "primaryIdentityNameSpace": ["aaid"],
+          "sourceConnectorId": ["analytics"],
         }
       }'
 ```
@@ -257,7 +280,7 @@ A successful response returns an array containing ID of the updated dataset. Thi
 ]
 ```
 
-#### Map and ingest data
+#### Map and ingest data {#ingest}
 
 After creating a CEE schema and dataset, you can start mapping your data tables to the schema and ingest that data into Platform. See the tutorial on [mapping a CSV file to an XDM schema](../ingestion/tutorials/map-a-csv-file.md) for steps on how to perform this in the UI. Once a dataset has been populated, the same dataset can be used to ingest additional data files.
 
