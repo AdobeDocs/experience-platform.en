@@ -26,9 +26,9 @@ The following sections provide additional information that you will need to know
 | Credential | Description |
 | ---------- | ----------- |
 | `connectionString` | The connection string used to connect to your GreenPlum instance. The connection string pattern for GreenPlum is `HOST=<server>;PORT=<port>;DB=<database>;UID=<user name>;PWD=<password>` |
-| `connectionSpec.id` | The unique identifier needed to create a connection. The connection spec ID for GreenPlum is `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
+| `connectionSpec.id` | The identifier needed to create a connection. The fixed connection spec ID for GreenPlum is `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
 
-For more information about getting started refer to [this GreenPlum document](https://gpdb.docs.pivotal.io/580/security-guide/topics/Authenticate.html#topic_fzv_wb2_jr__config_ssl_client_conn).
+For more information on acquiring a connection string, refer to [this GreenPlum document](https://gpdb.docs.pivotal.io/580/security-guide/topics/Authenticate.html#topic_fzv_wb2_jr__config_ssl_client_conn).
 
 ### Reading sample API calls
 

@@ -55,7 +55,7 @@ If you are using new credentials, select **[!UICONTROL New account]**. On the in
 
 ### Existing account
 
-To connect an existing account, select the GreenPlum account you want to connect with, then select **[!UICONTROL Next]** to proceed.
+To connect an existing account, select the GreenPlum account you want to connect with, then select **[!UICONTROL Next]** in the top-right corner to proceed.
 
 ![existing](../../../../images/tutorials/create/greenplum/existing.png)
 
