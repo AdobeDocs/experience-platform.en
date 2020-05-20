@@ -38,7 +38,7 @@ Through [Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events.h
 
 ### Create a new project in Adobe Developer Console
 
-Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) sign in with your Adobe ID. Next, follow the steps outlined in the tutorial on [creating an empty project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in the Adobe Developer Console documentation.
+Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. Next, follow the steps outlined in the tutorial on [creating an empty project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in the Adobe Developer Console documentation.
 
 ### Add Experience Platform events to the project
 
@@ -82,4 +82,4 @@ The details page for the newly created event registration appears, where you can
 
 ## Next steps
 
-Once you have registered Platform notifications to your project, you can view any received notifications for that registration. Refer to the [Tracing Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) guide for detailed instructions on how to trace your events.
+Once you have registered Platform notifications to your project, you can view received events from the project dashboard. Refer to the [Tracing Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) guide for detailed instructions on how to trace your events.
