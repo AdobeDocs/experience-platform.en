@@ -47,20 +47,19 @@ Additional headers may be required to complete specific requests. The correct he
 
 ### Streaming segmentation enabled query types
 
-The following table lists the different types of segmentation queries and whether or not they support streaming segmentation.
+The following table lists the different types of segmentation queries that support streaming segmentation.
 
-| Query type | Sample query | Streaming segmentation supported |
-| ---------- | ------------ | --------------------------------- |
-| Simple demographic | "Give me all the people whose home address is in Canada." | Supported |
-| Time-series events | "Give me all the people who downloaded Lightroom." | Supported |
-| Demographic and time-series | "Give me all the people who live in Canada and have placed an order in the last 30 days." | Supported |
-| Absence of events | "Give me all the people who have abandoned two separate carts within two days of each other." | Supported |
-| Multi-entity | "Give me all the people whose entitlement type is 'Experienced'." | Not supported |
-| Advanced PQL functions | "Give me all the profiles which placed an order in the last week, and include the SKU and Name for all the products purchased." | Not supported |
+| Query type | Details |
+| ---------- | ------- |
+| Incoming hit | Any segment definition that refers to an incoming event. |
+| Incoming hit within a relative time window | Any segment definition that refers to an incoming event **within the last seven days**. |
+| Incoming hit that refers to a Profile | Any segment definition that refers to an incoming event and the profile attribute. |
+| Incoming hit that refers to a Profile within a relative time window | Any segment definition that refers to an incoming event and the profile attribute, **within the last seven days**. |
+| Incoming hit that refers to a Profile and has event history | Any segment definition that refers to an event **within the last 24 hours** and has a profile attribute. |
 
 ## Retrieve all streaming segmentation enabled segments
 
-Before creating a new streaming-enabled segment or updating an existing segment to be streaming-enabled, you should ensure that you are not duplicating information by retrieving a list of all the streaming-enabled segments.
+You can retrieve a list of all your streaming segmentation enabled segments within your IMS Organization.
 
 **API format**
 
@@ -182,8 +181,6 @@ POST /segment/definitions
 ```
 
 **Request**
-
-The following request creates a new segment that is streaming segmentation enabled. Note that the `continuous` section is set to `enabled: true`.
 
 ```shell
 curl -X POST \

@@ -158,11 +158,19 @@ Schedules can currently only be created using the API. For detailed steps on cre
 
 ![](../images/segment-builder/scheduled-segmentation.png)
 
-## Enable streaming segmentation
+## Streaming segmentation
 
-need text about queries that allow for streaming seg
+Streaming segmentation will automatically be enforced for the following query types:
 
-Once streaming segmentation has been enabled, a baseline must be established (this is the initial run after which the segment will always be up-to-date). The system handles baselining automatically, however this is only possible if scheduled segmentation has been enabled. For details on enabling scheduled segmentation, please refer to [the previous section in this user guide](#enable-scheduled-segmentation).
+| Query type | Details |
+| ---------- | ------- |
+| Incoming hit | Any segment definition that refers to an incoming event. |
+| Incoming hit within a relative time window | Any segment definition that refers to an incoming event **within the last seven days**. |
+| Incoming hit that refers to a Profile | Any segment definition that refers to an incoming event and the profile attribute. |
+| Incoming hit that refers to a Profile within a relative time window | Any segment definition that refers to an incoming event and the profile attribute, **within the last seven days**. |
+| Incoming hit that refers to a Profile and has event history | Any segment definition that refers to an event **within the last 24 hours** and has a profile attribute. |
+
+For a segment which will undergo streaming segmentation, a baseline must be established (this is the initial run after which the segment will always be up-to-date). The system handles baselining automatically, however this is only possible if scheduled segmentation has been enabled. For details on enabling scheduled segmentation, please refer to [the previous section in this user guide](#enable-scheduled-segmentation).
 
 ## DULE policy violations
 
