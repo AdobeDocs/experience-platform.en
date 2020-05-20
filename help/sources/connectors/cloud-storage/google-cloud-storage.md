@@ -13,7 +13,7 @@ Cloud storage sources can bring your own data into Platform without the need to 
 
 ## Prerequisite setup for connecting your Google Cloud Storage account
 
-In order to connect to Platform, you must first enable interoperability for your Google Cloud Storage account. To access the interoperability setting, open Google Cloud Platform and select **[!UICONTROL Settings]** from the **[!UICONTROL Storage]** option of the navigation panel.
+In order to connect to Platform, you must first enable interoperability for your Google Cloud Storage account. To access the interoperability setting, open Google Cloud Platform and select **[!UICONTROL Settings]** from the **[!UICONTROL Storage]** option in the navigation panel.
 
 ![](../../images/tutorials/create/google-cloud-storage/nav.png)
 
@@ -23,7 +23,7 @@ The **[!UICONTROL Settings]** page appears. From here, you can see information r
 
 The **[!UICONTROL Interoperability]** page contains information on authentication, access keys, and the default project associated with your user account. If you have not already established a default project for interoperable access, you can set one up from within the *[!UICONTROL Default project for interoperable access]* section. If a default project has already been established, the section will show a confirmation that a project has been set as default.
 
-To generate a new access key ID and a secret access key for your user account, select **[!UICONTROL Create a Key]**
+To generate a new access key ID and a secret access key for your user account, select **[!UICONTROL Create a Key]**.
 
 ![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
 
