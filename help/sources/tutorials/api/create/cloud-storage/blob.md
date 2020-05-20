@@ -52,73 +52,9 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 *   Content-Type: `application/json`
 
-## Look up connection specifications
+## Create a connection
 
-Before connecting Platform to a Blob storage, you must verify that connection specifications exist for Blob. If connection specifications do not exist then a connection cannot be made.
-
-Each available source has its own unique set of connection specifications for describing connector properties such as authentication requirements. You can look up connection specifications for Blob by performing a GET request and using query parameters.
-
-**API format**
-
-Sending a GET request without query parameters will return connection specifications for all available sources. You can include the query `property=name=="azure-blob"` to obtain information specifically for Blob.
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="azure-blob"
-```
-
-**Request**
-
-The following request retrieves the connection specifications for Blob.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="azure-blob"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Response**
-
-A successful response returns the connection specifications for Blob, including its unique identifier (`id`). This ID is required in the next step to create a base connection.
-
-```json
-{
-    "items": [
-        {
-            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
-            "name": "azure-blob",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "ConnectionString",
-                    "type": "ConnectionString",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "properties": {
-                            "connectionString": {
-                                "type": "string",
-                                "format": "password"
-                            }
-                        },
-                        "required": [
-                            "connectionString"
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
-}
-```
-
-## Create a base connection
-
-A base connection specifies a source and contains your credentials for that source. Only one base connection is required per Blob account as it can be used to create multiple source connectors to bring in different data.
+A connection specifies a source and contains your credentials for that source. Only one connection is required per Blob account as it can be used to create multiple source connectors to bring in different data.
 
 **API format**
 
@@ -137,8 +73,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Blob Base Connection",
-        "description": "Base connection for an Azure Blob account",
+        "name": "Blob Connection",
+        "description": "Cnnection for an Azure Blob account",
         "auth": {
             "specName": "ConnectionString",
             "params": {
@@ -155,11 +91,11 @@ curl -X POST \
 | Property | Description |
 | -------- | ----------- |
 |   `auth.params.connectionString` | The connection string for your Blob storage. |
-|   `connectionSpec.id` | The connection specification `id` of your Blob storage retrieved in the previous step. |
+|   `connectionSpec.id` | The Blob storage connection specification ID: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
 **Response**
 
-A successful response returns details of the newly created base connection, including its unique identifier (`id`). This ID is required to explore your storage in the next tutorial.
+A successful response returns details of the newly created connection, including its unique identifier (`id`). This ID is required to explore your storage in the next tutorial.
 
 ```json
 {

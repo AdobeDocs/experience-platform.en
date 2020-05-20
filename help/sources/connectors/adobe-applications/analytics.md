@@ -19,9 +19,7 @@ Adobe Analytics is a powerful engine to help you learn more about your customers
 
 At a high level, Adobe Analytics collects data from various digital channels and multiple data centers around the world. Once the data is collected, Visitor Identification, Segmentation and Transformation Architecture (VISTA) rules and processing rules are applied to shape the incoming data. After raw data has gone through this lightweight processing, it is then considered ready for consumption by Real-time Customer Profile. In a process parallel to the aforementioned, the same processed data is micro-batched and ingested into Platform datasets for consumption by Data Science Workspace, Query Service, and other data-discovery applications.
 
-See the following documents for more information on VISTA and processing rules:
-*   [VISTA rules overview](https://marketing.adobe.com/resources/help/en_US/reference/VISTA.html)
-*   [Processing rules overview](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/processing-rules/processing-rules.html)
+See [Processing rules overview](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/processing-rules/processing-rules.html) for more information on processing rules.
 
 ## Experience Data Model (XDM)
 
