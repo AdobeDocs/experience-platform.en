@@ -38,10 +38,10 @@ To activate data to destinations, you must have successfully [connected a destin
 
     *Another ID as primary identity*: If you are using another ID, such as *Rewards ID* or *Loyalty ID*, as primary identity in your schema, you need to manually map the email address from your identity schema as a target identity in the social destination, as shown below:
 
-   ![Loyalty ID as identity](/help/rtcdp/destinations/assets/loyaltyid-as-identity.gif)
+   ![Loyalty ID as identity](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
 
 
-   Select `Email_LC_SHA256` as target identity if you hashed customer email addresses on data ingestion into Adobe Experience Platform, according to Facebook [email hashing requirements](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements). <br> Select `Email` if the email addresses you are exporting are not hashed. Adobe Real-time CDP will hash the email addresses to comply with Facebook requirements.
+   Select `Email_LC_SHA256` as target identity if you hashed customer email addresses on data ingestion into Adobe Experience Platform, according to Facebook [email hashing requirements](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements). <br> Select `Email` as target identity if the email addresses you are using are not hashed. Adobe Real-time CDP will hash the email addresses to comply with Facebook requirements.
    
    ![identity mapping after filling in fields](/help/rtcdp/destinations/assets/identity-mapping.png)
 
