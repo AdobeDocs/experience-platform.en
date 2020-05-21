@@ -180,11 +180,9 @@ For complete information regarding each of the required sub-fields for `xdm:prod
 
 ## Mapping and ingesting data
 
-Once you have determined whether your marketing events data can be mapped to the CEE schema, the next step is to determine which data you can start the process of bringing your data into Intelligent Services.
+Once you have determined whether your marketing events data can be mapped to the CEE schema, the next step is to determine which data you to bring into Intelligent Services. All historical data used in Intelligent Services must fall within the minimum time window of four months of data, plus the number of days intended as a lookback period.
 
->[!IMPORTANT] All historical data used in Intelligent Services must fall within the minimum time window of four months of data, plus the number of days intended as a lookback period.
-
-Contact Adobe Consulting Services to help map your data to the schema and ingest it into the service.
+After deciding the range of data you want to send, contact Adobe Consulting Services to help map your data to the schema and ingest it into the service.
 
 If you have an Adobe Experience Platform subscription and want to map and ingest the data yourself, follow the steps outlined in the section below.
 
