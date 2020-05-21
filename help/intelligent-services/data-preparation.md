@@ -210,7 +210,7 @@ Once you have created and saved the schema, you can create a new dataset based o
 
 #### Add a primary identity namespace tag to the dataset
 
-If you are bringing in data from Adobe Audience Manager, Adobe Analytics, or another external source, the you must add a `primaryIdentityNameSpace` tag to the dataset. This can be done by making a PATCH request to the Catalog Service API.
+If you are bringing in data from Adobe Audience Manager, Adobe Analytics, or another external source, then you must add a `primaryIdentityNameSpace` tag to the dataset. This can be done by making a PATCH request to the Catalog Service API.
 
 If you are ingesting data from a local CSV file, you can skip ahead to the next section on [mapping and ingesting data](#ingest).
 
