@@ -68,6 +68,7 @@ A successful response returns HTTP status 200 with the following information.
   "status": {
     "message": "Success"
   }
+}
 ```
 
 ### Search individual entities
