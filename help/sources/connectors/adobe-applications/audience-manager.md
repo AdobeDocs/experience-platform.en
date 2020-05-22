@@ -47,7 +47,7 @@ Please see documentation for [Audience Manager mapping fields](./mapping/audienc
 
 Datasets are a storage and management construct for a collection of data, typically a table, that contains schema (columns) and fields (rows) and is made available by a data connection. Audience Manager data consists of Realtime data, Inbound data, and Profile data. To locate your Audience Manager datasets, use the search function in the UI with the provided naming conventions for each type of data.
 
-While users have the ability to disable datasets, it is not recommended to disable datasets that will be used for segment membership in Profile.
+Audience Manager datasets are disabled for Profile by default and users have the ability to enable or disable datasets based on their use cases. It is not recommended to disable datasets that will be used for segment membership in Profile.
 
 | Dataset Name | Description |
 | ------------ | ----------- |
