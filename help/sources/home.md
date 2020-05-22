@@ -70,6 +70,8 @@ Experience Platform provides support for ingesting data from a third-party datab
 - [Azure Synapse Analytics connector](connectors/databases/synapse-analytics.md)
 - [Azure Table Storage connector](connectors/databases/ats.md)
 - [Google BigQuery connector](connectors/databases/bigquery.md)
+- [GreenPlum connector](connectors/databases/greenplum.md)
+- [HP Vertica connector](connectors/databases/hp-vertica.md)
 - [IBM DB2 connector](connectors/databases/ibm-db2.md)
 - [MariaDB connector](connectors/databases/mariadb.md)
 - [Microsoft SQL Server connector](connectors/databases/sql-server.md)
