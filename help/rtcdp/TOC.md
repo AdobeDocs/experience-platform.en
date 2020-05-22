@@ -118,7 +118,7 @@ user-guide-title: Real-Time Customer Data Platform Help
   * Destinations UI tutorials {#dest-tutorials}
     * [Connect to a destination](/help/rtcdp/destinations/connect-destination.md)
     * [Activate profiles and segments to a destination](destinations/activate-destinations.md)
-  * Destination API tutorials {api-tutorials}
+  * Destination API tutorials {#api-tutorials}
     *  [Connect to streaming destinations (AWS Kinesis and Azure Event Hubs) and activate data](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
     *  [Connect to email marketing destinations and activate data](/help/tutorials/destinations/email-marketing-api.md)
 * Privacy and data governance {#privacy}
