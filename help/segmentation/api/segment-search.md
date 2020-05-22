@@ -29,7 +29,7 @@ GET /search/namespaces?{QUERY_PARAMETERS}
 
 | Parameters | Description | 
 | ---------- | ----------- | 
-| schema.name | **Required** The schema class value associated with the search objects. Currently, only `_xdm.context.segmentdefinition` is supported. |
+| schema.name | **(Required)** The schema class value associated with the search objects. Currently, only `_xdm.context.segmentdefinition` is supported. |
 | s | *(Optional)* A query that conforms to Microsoft's implementation of [Lucene's search syntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). If no search term is specified, then all records associated with `schema.name` will be returned. A more detailed explanation can be found in the [appendix](#appendix) of this document. |
 
 **Request**
@@ -83,12 +83,12 @@ GET /search/entities?{QUERY_PARAMETERS}
 
 | Parameters | Description | 
 | ---------- | ----------- | 
-| schema.name | **Required** The schema class value associated with the search objects. Currently, only `_xdm.context.segmentdefinition` is supported. |
-| namespace | **Required** The namespace you wish to search within. |
+| schema.name | **(Required)** The schema class value associated with the search objects. Currently, only `_xdm.context.segmentdefinition` is supported. |
+| namespace | **(Required)** The namespace you wish to search within. |
 | s | *(Optional)* A query that conforms to Microsoft's implementation of [Lucene's search syntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). If no search term is specified, then all records associated with `schema.name` will be returned. A more detailed explanation can be found in the [appendix](#appendix) of this document. |
 | entityId | *(Optional)* Limits your search to within the designated folder. |
 | limit | *(Optional)* The number of search results to return. The default value is 50. |
-| page | *(Optional)* The page number used for paginating results of the query searched. |
+| page | *(Optional)* The page number used for paginating results of the query searched. Please note that the page number starts at **0**.|
 
 
 **Request**
@@ -154,9 +154,9 @@ GET /search/taxonomy?{QUERY_PARAMETERS}
 
 | Parameters | Description | 
 | ---------- | ----------- | 
-| schema.name | **Required** The schema class value associated with the search objects. Currently, only `_xdm.context.segmentdefinition` is supported. |
-| namespace | **Required** The namespace you wish to search within. |
-| entityId | **Required** The ID of the search object you want to get the structural information about. |
+| schema.name | **(Required)** The schema class value associated with the search objects. Currently, only `_xdm.context.segmentdefinition` is supported. |
+| namespace | **(Required)** The namespace you wish to search within. |
+| entityId | **(Required)** The ID of the search object you want to get the structural information about. |
 
 **Request**
 
