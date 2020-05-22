@@ -82,8 +82,7 @@ For more information on using this endpoint, please read the [segment jobs devel
 
 ## Segment search
 
-Profile search is used to search and index configurable fields contained across various data sources and return them in near real-time. To begin working with Profile search, see the [search sub-guide](profile-search.md)
-
+Segment search is used to search and index configurable fields contained across various data sources and return them in near real-time. To begin working with Segment search, see the [search developer guide](segment-search.md)
 
 ## Next steps
 

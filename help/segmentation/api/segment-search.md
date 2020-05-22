@@ -17,176 +17,186 @@ The API endpoints used in this guide are part of the Segmentation API. Before co
 
 In particular, the [getting started section](getting-started.md) of the Segmentation developer guide includes links to related topics, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform APIs.
 
-### Get search results
+### Search across multiple namespaces
 
-The search endpoint can be used to get search results based on the values of the required `schema.name` parameter and additional optional query parameters. Multiple parameters can be used, separated by ampersands (&).
+This search endpoint can be used to search across various namespaces, returning a list of search count results. Multiple parameters can be used, separated by ampersands (&).
 
 **API format**
 
 ```http
-GET /search/results/{SCHEMA_CLASS}?{QUERY_PARAMETERS}
+GET /search/namespaces?{QUERY_PARAMETERS}
 ```
 
-| Parameter | Description |
-| --------- | ----------- |
-| `{SCHEMA_CLASS}` | The source of where you want to search.
-|`schema.name`|**Required.** The name of the schema class containing the content to be searched, written in dot-notation format. Currently, only `schema.name=_xdm.context.segmentdefinition` is supported.|
-|`limit`|The number of search results to return. The default value is 50.|
-|`page`|The page number used for paginating results of the query searched.|
-|`s`|A query that conforms to Microsoft's implementation of [Lucene's search syntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). If no search term is specified, then all records associated with `schema.name` will be returned. A more detailed explanation can be found in the [Search parameters](#search-parameters) section of this document.|
-|`namespace`|Identifies the actual data to search on the schema class specified in the `schema.name` parameter. |
-|`organization.type`|Determines the content of the response. The format of the content returned is dependent on the values used in `schema.name`. For `_xdm.context.segmentdefinition`, the valid values are `hierarchy` or `hierarchyinfo`.|
-|`organization.id`| **Required if `organization.type` is specified.** Gives the hierarchy of the specified organization when used with the `organization.type` of hierarchy.|
+| Parameters | Description | 
+| ---------- | ----------- | 
+| schema.name | **Required** The schema class value associated with the search objects. Currently, only `_xdm.context.segmentdefinition` is supported. |
+| s | *(Optional)* A query that conforms to Microsoft's implementation of [Lucene's search syntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). If no search term is specified, then all records associated with `schema.name` will be returned. A more detailed explanation can be found in the [appendix](#appendix) of this document. |
 
 **Request**
 
 ```shell
 curl -X GET \
-    https://platform.adobe.io/data/core/ups/search/results/{SCHEMA_CLASS}?schema.name=_xdm.context.segmentdefinition \
+    https://platform.adobe.io/data/core/ups/search/namespaces?schema.name=_xdm.context.segmentdefinition \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'Content-Type: application/json' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'x-ups-search-version: 1.0' 
 ```
 
 **Response**
 
-A successful response returns an array of objects that meet your search criteria. In this example, because the `schema.name` parameter was `_xdm.context.segmentdefinition`, a list of segment definitions is returned.
+A successful response returns HTTP status 200 with the following information.
 
 ```json
 {
-  "aam-hierarchy": {
-    "_xdm.context.segmentdefinition": [
-      {
-        "isFolder": true,
-        "id": "100023",
-        "name": "Segment Definition 1",
-        "description": "Sample description.",
-        "parentFolderId": "99970"
-      },
-      {
-        "isFolder": false,
-        "id": "1000028",
-        "name": "Segment Definition 2",
-        "description": "Sample description.",
-        "parentFolderId": "103584"
-      }
-    ]
-  },
+  "namespaces": [
+    {
+      "name": "AAMTraits",
+      "count": 45
+    },
+    {
+      "name": "AAMSegments",
+      "count": 10
+    },
+    {
+      "name": "SegmentsAISegments",
+      "count": 3
+    }
+  ],
+  "status": {
+    "message": "Success"
+  }
+```
+
+### Search individual entities
+
+This search endpoint can be used to retrieve a list of all full text indexed objects within the specified namespace. Multiple parameters can be used, separated by ampersands (&).
+
+**API format**
+
+```http
+GET /search/entities?{QUERY_PARAMETERS}
+```
+
+| Parameters | Description | 
+| ---------- | ----------- | 
+| schema.name | **Required** The schema class value associated with the search objects. Currently, only `_xdm.context.segmentdefinition` is supported. |
+| namespace | **Required** The namespace you wish to search within. |
+| s | *(Optional)* A query that conforms to Microsoft's implementation of [Lucene's search syntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). If no search term is specified, then all records associated with `schema.name` will be returned. A more detailed explanation can be found in the [appendix](#appendix) of this document. |
+| entityId | *(Optional)* Limits your search to within the designated folder. |
+| limit | *(Optional)* The number of search results to return. The default value is 50. |
+| page | *(Optional)* The page number used for paginating results of the query searched. |
+
+
+**Request**
+
+```shell
+curl -X GET \
+    https://platform.adobe.io/data/core/ups/search/entities?schema.name=_xdm.context.segmentdefinition&namespace=AAMSegments \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'Content-Type: application/json' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'x-ups-search-version: 1.0' 
+```
+
+**Response**
+
+A successful response returns HTTP status 200 with results matching the search query.
+
+```json
+{
+  "entities": [
+    {
+       "id": "1012667",
+       "base64EncodedSourceId": "RFVGamdydHpEdy01ZTE1ZGJlZGE4YjAxMzE4YWExZWY1MzM1",
+       "sourceId": "DUFjgrtzDw-5e15dbeda8b01318aa1ef533",
+       "isFolder": true,
+       "parentFolderId": "974139",
+       "name": "aam-47995 verification (100)"
+    },
+    {
+       "id": "14653311",
+       "base64EncodedSourceId": "REVGamduLVgzdy01ZTE2ZjRhNjc1ZDZhMDE4YThhZDM3NmY1",
+       "sourceId": "DEFjgn-X3w-5e16f4a675d6a018a8ad376f",
+       "isFolder": false,
+       "parentFolderId": "324050",
+       "name": "AAM - Heavy equipment",
+       "description": "AAM - Acme Equipment"
+    }
+ 
+ ],
   "page": {
     "totalCount": 2,
     "totalPages": 1,
-    "pageOffset": "1",
-    "pageSize": 2,
-    "limit": 2
+    "pageOffset": 0,
+    "pageSize": 10
+  },
+  "status": {
+    "message": "Success"
   }
 }
 ```
 
-### Create provisioning requests
+### Get structural information about a search object
 
-You can create provisioning requests to enable Segment search on schemas by making a POST request to the `/search/provisioning/component/init` endpoint.
+This search endpoint can be used to get the structural information about the requested search object.
+
+**API format**
+
+```http
+GET /search/taxonomy?{QUERY_PARAMETERS}
+```
+
+| Parameters | Description | 
+| ---------- | ----------- | 
+| schema.name | **Required** The schema class value associated with the search objects. Currently, only `_xdm.context.segmentdefinition` is supported. |
+| namespace | **Required** The namespace you wish to search within. |
+| entityId | **Required** The ID of the search object you want to get the structural information about. |
 
 **Request**
 
->[!CAUTION]
->This POST request does not contain a payload, and therefore does not require a Content-Type header. In addition, there is no Sandbox header because all of the data is sent into a global sandbox.
-
 ```shell
-curl -X POST \
-    https://platform.adobe.io/data/core/ups/search/provisioning/component/init \
+curl -X GET \
+    https://platform.adobe.io/data/core/ups/search/taxonomy?schema.name=_xdm.context.segmentdefinition&namespace=AAMSegments&entityId=porsche11037 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'Content-Type: application/json' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' 
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'x-ups-search-version: 1.0' 
 ```
 
 **Response**
 
-A successful response returns HTTP status 201 (Created) and the following message:
+A successful response returns HTTP status 200 with detailed structural information about the requested search object.
 
-```plaintext
-The request has been fulfilled and resulted in a new resource being created.
-```
-
-### Handle configuration requests
-
-The configuration endpoint can be used to set up the proper indexes, indexers, and data source connections for a new IMS Organization. Two properties are required in order to handle configuration requests: `databaseName` and `containerName`.
-
-`databaseName` represents the name of the Profile database for the organization that will be configured.
-
-`containerName` represents the name of the container populated by a data connector, which is what is read during configuration. There are two values for `containerName`, one or both can be used in the POST request:
-- `_xdm.content.segmentdefinition`
-- `_experience.audiencemanager.segmentfolder`
-
-### Create a configuration request
-
-The following API call generates the required data source, indexer, and index based on the parameters supplied in the request payload.
-
-**API format**
-
-```http
-POST /search/configure
-```
-
-**Request**
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/search/configure \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -d '{
-    "databaseName": {DATABASE_NAME},
-    "containerName": "_xdm.context.segmentdefinition" "_experience.audiencemanager.segmentfolder"
-  }'
-```
-
-**Response**
-
-A successful response returns HTTP status 202 (Accepted) and a plaintext message.
-
-```plaintext
-The request has been accepted for processing, but the processing has not been completed.
-```
-
-### Delete a configuration request
-
-The following API call removes matching index entries, and deletes the indexer and data source based on the parameters supplied in the request payload. 
-
->[!NOTE]
->The index itself will not be deleted, as it is a shared resource.
-
-**API format**
-
-```http
-DELETE /search/configure
-```
-
-**Request**
-
-```shell
-curl -X DELETE \
-  https://platform.adobe.io/data/core/ups/search/configure \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -d '{
-    "databaseName": {DATABASE_NAME},
-    "containerName": "_xdm.context.segmentdefinition" "_experience.audiencemanager.segmentfolder"
-  }'
-```
-
-**Response**
-
-A successful response returns HTTP status 202 (Accepted) and a plaintext message.
-
-```plaintext
-The request has been accepted for processing, but the processing has not been completed.
+```json
+{
+  "taxonomy": [
+    {
+      "id": "carTraits",
+      "label": "AAMTraits for Cars",
+      "parentFolderId": "root"
+    },
+    {
+      "id": "fastCarsFolder",
+      "label": "Fast Cars",
+      "parentFolderId": "carTraits"
+    },
+    {
+      "id": "porsche11037",
+      "label": "Porsche",
+      "parentFolderId": "redCarsFolderId"
+    }
+  ],
+  "status": {
+    "message": "Success"
+  }
+}
 ```
 
 ## Next steps
@@ -195,22 +205,37 @@ After reading this guide you now have a better understanding of how  Segment sea
 
 ## Appendix {#appendix}
 
-### Search parameters {#search-parameters}
+Search queries are written in the following manner: `{FieldName}:{SearchExpression}`.
 
-The following table lists the specifics of how the search parameter works when using the search API. 
+### Search fields {#search-fields}
 
-|Search Query | Description|
-|------------ | -----------|
-|foo | Search for any word. This will return results if the word "foo" is found in any of the searchable fields.|
-|foo AND bar | A Boolean search. This will return results if **both** the words "foo" and "bar" are found in any of the searchable fields.|
-|foo OR bar | A Boolean search. This will return results if **either** the word "foo" or the word "bar" are found in any of the searchable fields.|
-|foo NOT bar | A Boolean search. This will return results if the word "foo" is found but the word "bar" is not found in any of the searchable fields.|
-|name: foo AND bar | A Boolean search. This will return results if **both** the words "foo" and "bar" are found in the "name" field.|
-|run* | A wildcard search. Using an asterisk (*) matches 0 or more characters, meaning it will return results if the content of any of the searchable fields contains a word that starts with "run". For example, this will return results if the words "runs", "running", "runner", or "runt" appear.|
-|cam? | A wildcard search. Using a question mark (?) matches only exactly one character, meaning it will return results if the content of any of the searchable fields starts with "cam" and an additional letter. For example, this will return results if the words "camp" or "cams" appear, but will not return results if the words "camera" or "campfire" appear.|
-|"blue umbrella" | A phrase search. This will return results if the contents of any of the searchable fields contains the full phrase "blue umbrella".|
-|blue\~ | A fuzzy search. Optionally, you can put a number between 0-2 after the tilde (~) to specify the edit distance. For example, "blue\~1" would be return "blue", "blues", or "glue". Fuzzy search can **only** be applied to terms, not phrases. However, you can append tildes to the end of each word in a phrase. So, for example, "camping\~ in\~ the\~ summer\~" would match on "camping in the summer".|
-|"hotel airport"\~5 | A proximity search. This type of search is used to find terms that are near to each other in a document. For example, the phrase `"hotel airport"~5` will find the terms "hotel" and "airport" within 5 words of each other in a document.|
-|`/a[0-9]+b$/` | A regular expression search. This type of search finds a match based on the contents between forward slashes "/", as documented in the RegExp class. For example, to find documents containing "motel" or "hotel", specify `/[mh]otel/`. Regular expression searches are matched against single words.|
+The following table lists the fields which can be searched within the search parameter.
+
+| Field Name | Description |
+| ---------- | ----------- |
+| folderId | The folder or folders that have the folder ID of your specified search. |
+| folderLocation | The location or locations that have the folder location of your specified search. |
+| parentFolderId | The segment or folder that have the parent folder ID of your specified search. | 
+| segmentId | The segment matches the segment ID of your specified search. |
+| segmentName | The segment matches the segment name of your specified search. |
+| segmentDescription | The segment matches the segment description of your specified search. |
+
+### Search expression {#search-expression}
+
+The following table lists the specifics of how search queries works when using the search API. 
+
+| Search Expression | Description |
+| ----------------- | ----------- |
+| foo | Search for any word. This will return results if the word "foo" is found in any of the searchable fields. |
+| foo AND bar | A Boolean search. This will return results if **both** the words "foo" and "bar" are found in any of the searchable fields. |
+| foo OR bar | A Boolean search. This will return results if **either** the word "foo" or the word "bar" are found in any of the searchable fields. |
+| foo NOT bar | A Boolean search. This will return results if the word "foo" is found but the word "bar" is not found in any of the searchable fields. |
+| name: foo AND bar | A Boolean search. This will return results if **both** the words "foo" and "bar" are found in the "name" field. |
+| run* | A wildcard search. Using an asterisk (*) matches 0 or more characters, meaning it will return results if the content of any of the searchable fields contains a word that starts with "run". For example, this will return results if the words "runs", "running", "runner", or "runt" appear. |
+| cam? | A wildcard search. Using a question mark (?) matches only exactly one character, meaning it will return results if the content of any of the searchable fields starts with "cam" and an additional letter. For example, this will return results if the words "camp" or "cams" appear, but will not return results if the words "camera" or "campfire" appear. |
+| "blue umbrella" | A phrase search. This will return results if the contents of any of the searchable fields contains the full phrase "blue umbrella". |
+| blue\~ | A fuzzy search. Optionally, you can put a number between 0-2 after the tilde (~) to specify the edit distance. For example, "blue\~1" would be return "blue", "blues", or "glue". Fuzzy search can **only** be applied to terms, not phrases. However, you can append tildes to the end of each word in a phrase. So, for example, "camping\~ in\~ the\~ summer\~" would match on "camping in the summer". |
+| "hotel airport"\~5 | A proximity search. This type of search is used to find terms that are near to each other in a document. For example, the phrase `"hotel airport"~5` will find the terms "hotel" and "airport" within 5 words of each other in a document. |
+| `/a[0-9]+b$/` | A regular expression search. This type of search finds a match based on the contents between forward slashes "/", as documented in the RegExp class. For example, to find documents containing "motel" or "hotel", specify `/[mh]otel/`. Regular expression searches are matched against single words. |
 
 For more detailed documentation about the query syntax, please read the [Lucene query syntax documentation](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax).
