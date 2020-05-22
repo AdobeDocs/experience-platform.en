@@ -19,21 +19,17 @@ This user guide requires an understanding of the various Experience Platform ser
 * [Identity Service](../../identity-service/home.md): Enables Real-time Customer Profile by bridging identities from disparate data sources being ingested into Platform.
 * [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
 
-## Profile overview
+## Overview
 
-In the [Experience Platform UI](http://platform.adobe.com), click **Profiles** in the left navigation to open the _Overview_ tab in the _Profiles_ workspace. This tab displays several widgets that provide high-level information about the Profile store, including the total addressable audience, the number of Profile records that were ingested within the last week, as well as statistics regarding successful and failed records for the same time period.
+In the [Experience Platform UI](http://platform.adobe.com), click **Profiles** in the left navigation to open the _Overview_ tab. This tab provides links to documentation and videos to help you understand and begin working with profiles.
 
-![](../images/user-guide/profile-overview.png)
+![](../images/user-guide/profiles-overview.png)
 
-## View profile samples
+## Profile Browse
 
-Click **Browse** to view a sample list of available profiles. This sample includes up to 50 profiles from your total [profile count](#profile-count). The samples are refreshed by an automatic job that picks up new profile data as it is ingested. Each listed profile displays its ID, first name, last name, and personal email. Clicking the ID of a listed profile displays its details within the [Profile Viewer](#profile-viewer).
+Click the **Browse** tab in order to browse profiles by identities. This tab also contains your total [profile count](#profile-count). 
 
-![](../images/user-guide/profile-samples.png)
-
-You can customize the attributes that are displayed in the list by clicking the column selector icon. This displays a dropdown list containing common profile attributes which you can add or remove.
-
-![](../images/user-guide/column-selector.png)
+![](../images/user-guide/profiles-browse.png)
 
 ### Profile count {#profile-count}
 
@@ -43,43 +39,53 @@ The profile count also includes both profiles with attributes (record data) as w
 
 When the ingestion of profiles into the Profile Store increases or decreases the count by more than 5%, a job is triggered to update the count. For streaming data workflows, a check is done on an hourly basis to determine if the 5% increase or decrease threshold has been met. If it has, a job is automatically triggered to update the profile count. For batch ingestion, within 15 minutes of successfully ingesting a batch into the Profile Store, if the 5% increase or decrease threshold is met, a job is run to update the profile count.
 
-![](../images/user-guide/profile-count.png)
+### Identity namespace
 
-### Profile search
+The **Identity namespace** selector opens a dialog where you can choose the identity namespace by which you would like to search, and you can customize the attributes that are displayed from your search by selecting the filter icon and choosing which attributes you would like to add or remove.
 
-If you know a linked identity for a particular profile (such as its email address), you can look up that profile by clicking **Find a profile**. This is the most reliable way to access a specific profile, regardless of whether it appears in the list of samples.
+![](../images/user-guide/profiles-search-filter.png)
 
-![](../images/user-guide/find-a-profile.png)
+From the *Select identity namespace* dialog, choose the namespace by which you would like to search, or use the **Search** bar in the dialog to begin typing the name of a namespace. You can select a namespace to view additional details, and once you have found the namespace you would like to search by you can select the radio button and press **Select** to continue.
 
-In the dialog that appears, select an appropriate ID namespace from the dropdown list ("Email" in this example) and enter the ID value below before clicking **OK**. If found, the details of the targeted profile appear in the profile viewer, as described in the next section.
+![](../images/user-guide/profiles-select-identity-namespace.png)
 
-![](../images/user-guide/find-a-profile-details.png)
+### Identity value
 
-### Profile viewer {#profile-viewer}
+After selecting an **Identity namespace**, you return to the *Browse* tab where you can enter an **Identity value**. This value is specific to an individual customer profile and must be a valid entry for the namespace provided. For example, selecting the **Identity namespace** "Email" would require an **Identity value** in the form of a valid email address. 
 
-Upon selecting or searching for a specific profile, the _Detail_ screen of the profile viewer opens. This page displays information about the selected profile, such as the profile's basic attributes, linked identities, and available contact channels. The profile information displayed has been merged together from multiple profile fragments to form a single view of the individual customer.
+![](../images/user-guide/profiles-show-profile.png)
 
-![](../images/user-guide/profile-viewer-detail.png)
+Once a value has been entered, select **Show profile** and a single profile matching the value is returned. Select the **Profile ID** to view the profile details.
 
-The profile viewer also provides tabs that allow you to view events and segment memberships associated with this profile, if any exist.
+![](../images/user-guide/profiles-display-profile.png)
 
-![](../images/user-guide/profile-viewer-events-seg.png)
+### Profile detail
+
+Upon selecting the **Profile ID**, the _Detail_ tab opens. This page displays information about the selected profile, including basic attributes, linked identities, and available contact channels. The profile information displayed has been merged together from multiple profile fragments to form a single view of the individual customer.
+
+![](../images/user-guide/profiles-profile-detail.png)
+
+You can view additional information related to the profile including Attributes, Events, and Segments to which the profile is a member.
+
+![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## Merge policies
 
-Click **Merge Policies** to view a list of merge policies belonging to your organization. Each listed policy displays its name, whether or not it is the default merge policy, and the schema that it applies to.
-
-![](../images/user-guide/profile-merge-policies.png)
+Click **Merge Policies** to view a list of merge policies belonging to your organization. Each listed policy displays its name, whether or not it is the default merge policy, and the schema that it applies to. 
 
 For more information on working with merge policies in the UI, see the [Merge Policies user guide](merge-policies.md).
 
+![](../images/user-guide/profiles-merge-policies.png)
+
 ## Union schema
 
-Click **Union Schema** to view the union schemas for your profile data store. A union schema is an amalgamation of all Experience Data Model (XDM) fields under the same class, whose schemas have been enabled for use in Real-time Customer Profile. Click a class in the left-hand list to view the structure of its union schema in the canvas.
+Click **Union Schema** to view the union schemas for your Profile Store. A union schema is an amalgamation of all Experience Data Model (XDM) fields under the same class, whose schemas have been enabled for use in Real-time Customer Profile. Click a class in the left-hand list to view the structure of its union schema in the canvas.
 
-![](../images/user-guide/profile-union-schema.png)
+For example, selecting "XDM Profile" displays the union schema for the XDM Individual Profile class.
 
 See the section on union schemas in the [schema composition guide](../../xdm/schema/composition.md) for more information on union schemas and their role in Real-time Customer Profile.
+
+![](../images/user-guide/profiles-union-schema.png)
 
 ## Next steps
 

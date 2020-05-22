@@ -5,7 +5,7 @@ title: IBM DB2 connector
 topic: overview
 ---
 
-# IBM DB2 connector
+# (Beta) IBM DB2 connector
 
 Adobe Experience Platform provides native connectivity for database providers like Microsoft, MySQL, and Azure. You can bring your data from these systems into Platform.
 

@@ -5,18 +5,18 @@ description: Learn how to merge Experience Platform Web SDK event data
 seo-description: Learn how to merge Experience Platform Web SDK event data
 ---
 
-# (Beta) Merging event data
+# Merging event data
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+>This feature is still in development and so not all solutions will be able to merge this data. 
 
 Sometimes, not all data is available when an event occurs. You might want to capture the data you _do_ have so it isn't lost if, for example, the user closes the browser. On the other hand, you might also include any data that will become available later.
 
 In such cases, you can merge data with prior events by passing `eventMergeId` as an option to `event` commands as follows:
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "xdm": {
     "commerce": {
       "order": {
@@ -32,7 +32,7 @@ alloy("event", {
 
 // Time passes and more data becomes available
 
-alloy("event", {
+alloy("sendEvent", {
   "xdm": {
     "commerce": {
       "order": {
@@ -64,8 +64,8 @@ As with all commands, a promise is returned because you might execute the comman
 ```javascript
 var eventMergeIdPromise = alloy("createEventMergeId");
 
-eventMergeIdPromise.then(function(eventMergeId) {
-  alloy("event", {
+eventMergeIdPromise.then(function(results) {
+  alloy("sendEvent", {
     "xdm": {
       "commerce": {
         "order": {
@@ -76,14 +76,14 @@ eventMergeIdPromise.then(function(eventMergeId) {
         }
       }
     }
-    "mergeId": eventMergeId
+    "mergeId": results.eventMergeId
   });
 });
 
 // Time passes and more data becomes available
 
-eventMergeIdPromise.then(function(eventMergeId) {
-  alloy("event", {
+eventMergeIdPromise.then(function(results) {
+  alloy("sendEvent", {
     "xdm": {
       "commerce": {
         "order": {
@@ -98,7 +98,7 @@ eventMergeIdPromise.then(function(eventMergeId) {
         }
       }
     }
-    "mergeId": eventMergeId
+    "mergeId": results.eventMergeId
   });
 });
 ```
@@ -108,9 +108,9 @@ Follow this same pattern if you would like access to the event merge ID for othe
 ```javascript
 var eventMergeIdPromise = alloy("createEventMergeId");
 
-eventMergeIdPromise.then(function(eventMergeId) {
+eventMergeIdPromise.then(function(results) {
   // send event merge ID to a third-party provider
-  console.log(eventMergeId);
+  console.log(results.eventMergeId);
 });
 ```
 
@@ -119,7 +119,7 @@ eventMergeIdPromise.then(function(eventMergeId) {
 Inside the event command, the `mergeId` is actually added to the `xdm` payload.  If desired, the `mergeId` can be sent as part of the xdm option instead, like this:
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "xdm": {
     "commerce": {
       "order": {
