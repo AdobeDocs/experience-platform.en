@@ -29,7 +29,7 @@ In order for Flow Service to connect with your MySQL storage, you must provide t
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The MySQL connection string associated with your account. The MySQL connection string pattern is: `Server=<server>;Port=<port>;Database=<database>;UID=<username>;PWD=<password>`. |
+| `connectionString` | The MySQL connection string associated with your account. The MySQL connection string pattern is: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 | `connectionSpec.id` | The ID used to generate a connection. The fixed connection spec ID for MySQL is `26d738e0-8963-47ea-aadf-c60de735468a`. |
 
 For more information about obtaining a connection string, refer to [this MySQL document](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html).
@@ -82,7 +82,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "Server=<server>;Port=<port>;Database=<database>;UID=<username>;PWD=<password>"
+                "connectionString": "Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}"
             }
         },
         "connectionSpec": {
@@ -94,7 +94,7 @@ curl -X POST \
 
 | Property | Description |
 | --------- | ----------- |
-| `auth.params.connectionString` | The MySQL connection string associated with your account. The MySQL connection string pattern is: `Server=<server>;Port=<port>;Database=<database>;UID=<username>;PWD=<password>`. |
+| `auth.params.connectionString` | The MySQL connection string associated with your account. The MySQL connection string pattern is: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 | `connectionSpec.id` | The fixed connection spec ID for MySQL: `26d738e0-8963-47ea-aadf-c60de735468a`. |
 
 **Response**

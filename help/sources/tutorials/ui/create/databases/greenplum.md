@@ -29,7 +29,7 @@ The following sections provide additional information that you will need to know
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string used to connect to your GreenPlum instance. The connection string pattern for GreenPlum is `HOST=<server>;PORT=<port>;DB=<database>;UID=<user name>;PWD=<password>` |
+| `connectionString` | The connection string used to connect to your GreenPlum instance. The connection string pattern for GreenPlum is `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 
 For more information about getting started refer to [this GreenPlum document](https://gpdb.docs.pivotal.io/580/security-guide/topics/Authenticate.html#topic_fzv_wb2_jr__config_ssl_client_conn).
 

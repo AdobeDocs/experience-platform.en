@@ -29,7 +29,7 @@ In order for Flow Service to connect with MariaDB, you must provide the followin
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string associated with your MariaDB authentication. The MariaDB connection string pattern is: `Server=<host>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>`. |
+| `connectionString` | The connection string associated with your MariaDB authentication. The MariaDB connection string pattern is: `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 | `connectionSpec.id` | The ID used to generate a connection. The fixed connection spec ID for MariaDB is `3000eb99-cd47-43f3-827c-43caf170f015`. |
 
 For more information about obtaining a connection string, refer to [this MariaDB document](https://mariadb.com/kb/en/about-mariadb-connector-odbc/).
@@ -82,7 +82,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "Server=<host>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>"
+                "connectionString": "Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}"
             }
         },
         "connectionSpec": {
@@ -94,7 +94,7 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `auth.params.connectionString` | The connection string associated with your MariaDB authentication. The MariaDB connection string pattern is: `Server=<host>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>`. |
+| `auth.params.connectionString` | The connection string associated with your MariaDB authentication. The MariaDB connection string pattern is: `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 | `connectionSpec.id` | The MariaDB connection spec ID is: `3000eb99-cd47-43f3-827c-43caf170f015`. |
 
 **Response**

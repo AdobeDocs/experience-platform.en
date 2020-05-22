@@ -28,7 +28,7 @@ In order for Flow Service to connect with your Blob storage, you must provide va
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string required to access data in your Blob storage. The Blob connection string pattern is: `DefaultEndpointsProtocol=https;AccountName=<accountname>;AccountKey=<accountkey>`. |
+| `connectionString` | The connection string required to access data in your Blob storage. The Blob connection string pattern is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
 | `connectionSpec.id` | The unique identifier needed to create a connection. The connection specification ID for Blob is: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
 For more information about obtaining a connection string, refer to [this Azure Blob document](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string).
@@ -81,7 +81,7 @@ curl -X POST \
         "auth": {
             "specName": "ConnectionString",
             "params": {
-                "connectionString": "DefaultEndpointsProtocol=https;AccountName=<accountname>;AccountKey=<accountkey>"
+                "connectionString": "DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}"
             }
         },
         "connectionSpec": {
@@ -93,7 +93,7 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-|   `auth.params.connectionString` | The connection string required to access data in your Blob storage. The Blob connection string pattern is: `DefaultEndpointsProtocol=https;AccountName=<accountname>;AccountKey=<accountkey>`. |
+|   `auth.params.connectionString` | The connection string required to access data in your Blob storage. The Blob connection string pattern is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
 |   `connectionSpec.id` | The Blob storage connection specification ID is: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
 **Response**

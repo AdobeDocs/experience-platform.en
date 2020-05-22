@@ -29,7 +29,7 @@ In order to connect to SQL Server, you must provide the following connection pro
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string associated with your SQL Server account. The SQL Server connection string pattern is: `Data Source=<servername>\\<instance name if using named instance>;Initial Catalog=<databasename>;Integrated Security=False;User ID=<username>;Password=<password>;`. |
+| `connectionString` | The connection string associated with your SQL Server account. The SQL Server connection string pattern is: `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
 | `connectionSpec.id` | The ID used to generate a connection. The fixed connection spec ID for SQL Server is `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
 
 For more information about obtaining a connection string, refer to [this SQL Server document](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server).
@@ -82,7 +82,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "Data Source=<servername>\\<instance name if using named instance>;Initial Catalog=<databasename>;Integrated Security=False;User ID=<username>;Password=<password>;"
+                "connectionString": "Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};"
             }
         },
         "connectionSpec": {
@@ -93,7 +93,7 @@ curl -X POST \
 
 | Property | Description |
 | --------- | ----------- |
-| `auth.params.connectionString` | The connection string associated with your SQL Server account. The SQL Server connection string pattern is: `Data Source=<servername>\\<instance name if using named instance>;Initial Catalog=<databasename>;Integrated Security=False;User ID=<username>;Password=<password>;`. |
+| `auth.params.connectionString` | The connection string associated with your SQL Server account. The SQL Server connection string pattern is: `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
 | `connectionSpec.id` | The connection spec ID for SQL server is: `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
 
 **Response**

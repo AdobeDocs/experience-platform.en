@@ -29,7 +29,7 @@ In order for Flow Service to connect with HP Vertica, you must provide values fo
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string used to connect to your HP Vertica instance. The connection string pattern for HP Vertica is `Server=<server>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>` |
+| `connectionString` | The connection string used to connect to your HP Vertica instance. The connection string pattern for HP Vertica is `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 | `connectionSpec.id` | The identifier needed to create a connection. The fixed connection spec ID for HP Vertica is: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5` |
 
 For more information on acquiring a connection string, refer to [this HP Vertica document](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm).
@@ -82,7 +82,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "Server=<server>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>"
+                "connectionString": "Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}"
             }
         },
         "connectionSpec": {
@@ -94,7 +94,7 @@ curl -X POST \
 
 | Parameter | Description |
 | --------- | ----------- |
-| `auth.params.connectionString` | The connection string associated with your HP Vertica account. |
+| `auth.params.connectionString` | The connection string associated with your HP Vertica account. The connection string pattern for HP Vertica is: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 | `connectionSpec.id` | The HP Vertica connection spec ID: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`. |
 
 **Response**

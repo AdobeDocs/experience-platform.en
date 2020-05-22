@@ -30,11 +30,11 @@ Experience Platform supports the following file formats to be ingested from exte
 
 ### Gather required credentials
 
-In order to access your Blob storage on Platform, you must provide a valid value for the following credential: 
+In order to access your Blob storage on Platform, you must provide a valid value for the following credential:
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string required to access data in your Blob storage. The Blob connection string pattern is: `DefaultEndpointsProtocol=https;AccountName=<accountname>;AccountKey=<accountkey>`. |
+| `connectionString` | The connection string required to access data in your Blob storage. The Blob connection string pattern is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
 
 For more information on getting started, visit [this Azure Blob document](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string).
 

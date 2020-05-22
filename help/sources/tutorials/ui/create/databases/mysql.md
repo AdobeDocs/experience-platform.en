@@ -29,7 +29,7 @@ In order to access your MySQL account on Platform, you must provide the followin
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The MySQL connection string associated with your account. The MySQL connection string pattern is: `Server=<server>;Port=<port>;Database=<database>;UID=<username>;PWD=<password>`. |
+| `connectionString` | The MySQL connection string associated with your account. The MySQL connection string pattern is: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 
 You can learn more about connection strings and how to obtain them by reading the [MySQL document](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html).
 

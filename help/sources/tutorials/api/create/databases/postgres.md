@@ -29,7 +29,7 @@ In order for Flow Service to connect with PSQL, you must provide the following c
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string associated with your PSQL account. The PSQL connection string pattern is: `Server=<server>;Database=<database>;Port=<port>;UID=<username>;Password=<Password>`. |
+| `connectionString` | The connection string associated with your PSQL account. The PSQL connection string pattern is: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | The ID used to generate a connection. The fixed connection spec ID for PSQL is `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
 
 For more information about obtaining a connection string, refer to [this PSQL document](https://www.postgresql.org/docs/9.2/app-psql.html).
@@ -82,7 +82,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "Server=<server>;Database=<database>;Port=<port>;UID=<username>;Password=<Password>"
+                "connectionString": "Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}"
             }
         },
         "connectionSpec": {
@@ -94,7 +94,7 @@ curl -X POST \
 
 | Property | Description |
 | ------------- | --------------- |
-| `auth.params.connectionString`| The connection string associated with your PSQL account. The PSQL connection string pattern is: `Server=<server>;Database=<database>;Port=<port>;UID=<username>;Password=<Password>`. |
+| `auth.params.connectionString`| The connection string associated with your PSQL account. The PSQL connection string pattern is: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id`| The connection spec ID for PSQL is: `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
 
 **Response**
