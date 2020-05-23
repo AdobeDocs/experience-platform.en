@@ -173,6 +173,6 @@ This section provides supplemental information on creating streaming connections
 
 ### Authenticated streaming connections
 
-Authenticated data collection allows Adobe Experience Platform services, such as Real-time Customer Profile and Identity, to differentiate between records coming from trusted sources and un-trusted sources. Clients that want to send Personally Identifiable Information (PII) can do so by sending IMS Access Tokens as part of the POST request - if the IMS Token is valid, the records are marked as collected from valid sources.
+Authenticated data collection allows Adobe Experience Platform services, such as Real-time Customer Profile and Identity, to differentiate between records coming from trusted sources and untrusted sources. Clients that want to send Personally Identifiable Information (PII) can do so by sending IMS Access Tokens as part of the POST request - if the IMS Token is valid, the records are marked as collected from trusted sources.
 
 More information about creating an authenticated streaming connection can be found in the [create an authenticated streaming connection tutorial](create-authenticated-streaming-connection.md).

@@ -7,11 +7,7 @@ seo-description: Learn how to track Experience Platform Web SDK events
 
 # Tracking events
 
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
-
-To send event data to the Adobe Experience Cloud, use the `event` command. The `event` command is the primary way to send data to the Experience Cloud, and to retrieve personalized content, identities, and audience destinations.
+To send event data to the Adobe Experience Cloud, use the `sendEvent` command. The `sendEvent` command is the primary way to send data to the Experience Cloud, and to retrieve personalized content, identities, and audience destinations.
 
 Data sent to Adobe Experience Cloud falls into two categories: 
 
@@ -20,12 +16,12 @@ Data sent to Adobe Experience Cloud falls into two categories:
 
 ## Sending XDM data
 
-XDM data is an object whose content and structure matches a schema you have created within Adobe Experience Platform. [Learn more about how to create a schema.](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/schema_editor_tutorial/schema_editor_tutorial.md)
+XDM data is an object whose content and structure matches a schema you have created within Adobe Experience Platform. [Learn more about how to create a schema.](../../xdm/tutorials/create-schema-ui.md)
 
 Any XDM data you would like to be part of your analytics, personalization, audiences, or destinations should be sent using the `xdm` option.
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "xdm": {
     "commerce": {
       "order": {
@@ -39,6 +35,9 @@ alloy("event", {
 });
 ```
 
+>[!NOTE]
+>There is a 32 KB limit on the data that can be sent in each event in the XDM field.
+
 ### Sending non-XDM data
 
 Currently, sending data that does not match an XDM schema is unsupported. Support is planned for a future date.
@@ -48,7 +47,7 @@ Currently, sending data that does not match an XDM schema is unsupported. Suppor
 In an XDM experience event, there is an `eventType` field. This holds the primary event type for the record. This can be passed in as part of the `xdm` option.
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "xdm": {
     "eventType": "commerce.purchases",
     "commerce": {
@@ -68,47 +67,18 @@ Alternatively, the `eventType` can be passed into the event command using the `t
 ```javascript
 var myXDMData = { ... };
 
-alloy("event", {
+alloy("sendEvent", {
   "xdm": myXDMData,
   "type": "commerce.purchases"
 });
 ```
-
-### Starting a view
-
-When a view has started, it is important to notify the SDK by setting `viewStart` to `true` within the `event` command. This indicates, among other things, that the SDK should retrieve and render personalized content. Even if you are not using personalization currently, it greatly simplifies enabling personalization or other features later because you will not be required to modify on-page code. In addition, tracking views is beneficial when viewing analytics reports after data has been collected.
-
-The definition of a view can depend on the context.
-
-* In a regular website, each webpage is typically considered a unique view. In this case, an event with `viewStart` set to `true` should be executed as soon as possible at the top of the page.
-* In a single page application \(SPA\), a view is less defined. It typically means that the user has navigated within the application and most of the content has changed. For those familiar with the technical foundations of single page applications, this is typically when the application loads a new route. Whenever a user moves to a new view, however you choose to define a _view_, an event with `viewStart` set to `true` should be executed.
-
-The event with `viewStart` set to `true` is the primary mechanism for sending data to the Adobe Experience Cloud and requesting content from the Adobe Experience Cloud. Here is how you start a view:
-
-```javascript
-alloy("event", {
-  "viewStart": true,
-  "xdm": {
-    "commerce": {
-      "order": {
-        "purchaseID": "a8g784hjq1mnp3",
-        "purchaseOrderNumber": "VAU3123",
-        "currencyCode": "USD",
-        "priceTotal": 999.98
-      }
-    }
-  }
-});
-```
-
-After data is sent, the server responds with personalized content, among other things. This personalized content is automatically rendered into your view. Link handlers are also automatically attached to the new view's content.
 
 ## Using the sendBeacon API
 
 It can be tricky to send event data just before the web page user has navigated away. If the request takes too long, the browser might cancel the request. Some browsers have implemented a web standard API called `sendBeacon` to allow data to be more easily collected during this time. When using `sendBeacon`, the browser makes the web request in the global browsing context. This means the browser makes the beacon request in the background and does not hold up the page navigation. To tell Adobe Experience Platform Web SDK to use `sendBeacon`, add the option `"documentUnloading": true` to the event command.  Here is an example:
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "documentUnloading": true,
   "xdm": {
     "commerce": {
@@ -130,8 +100,8 @@ Browsers have imposed limits to the amount of data that can be sent with `sendBe
 If you want to handle a response from an event, you can be notified of a success or failure as follows:
 
 ```javascript
-alloy("event", {
-  "viewStart": true,
+alloy("sendEvent", {
+  "renderDecisions": true,
   "xdm": {
     "commerce": {
       "order": {
@@ -142,7 +112,7 @@ alloy("event", {
       }
     }
   }
-}).then(function() {
+}).then(function(results) {
     // Tracking the event succeeded.
   })
   .catch(function(error) {
@@ -171,7 +141,7 @@ alloy("configure", {
 
 `xdm` fields are set in this order:
 
-1. Values passed in as options to the event command `alloy("event", { xdm: ... });`
+1. Values passed in as options to the event command `alloy("sendEvent", { xdm: ... });`
 2. Automatically collected values.  (See [Automatic Information](../reference/automatic-information.md).)
 3. The changes made in the `onBeforeEventSend` callback.
 
@@ -181,4 +151,4 @@ If the `onBeforeEventSend` callback throws an exception, the event is still sent
 
 When sending an event, an error might be thrown if the data being sent is too large (over 32KB for the full request). In this case, you need to reduce the amount of data being sent.
 
-When debugging is enabled, the server synchronously validates event data being sent against the configured XDM schema. If the data does not match the schema, details about the mismatch are returned from the server and an error is thrown. In this case, modify the data to match the schema. When debugging is not enabled, the server validates data asynchronously and, therefore, no corresponding error is thrown. 
+When debugging is enabled, the server synchronously validates event data being sent against the configured XDM schema. If the data does not match the schema, details about the mismatch are returned from the server and an error is thrown. In this case, modify the data to match the schema. When debugging is not enabled, the server validates data asynchronously and, therefore, no corresponding error is thrown.

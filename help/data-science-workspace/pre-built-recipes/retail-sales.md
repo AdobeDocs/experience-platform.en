@@ -49,7 +49,7 @@ isHoliday | Boolean
 
 ## Algorithm
 
-First, the training dataset in the **DSWRetailSales** schema is loaded. From here, the model is trained using a [gradient boosting regressor algorithm](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). Gradient boosting uses the idea that weak learners (one that is at least slightly better than random chance) can form a succession of learners focused on improving the previous learner's weaknesses. Together, they can be used to create a powerful predictive model.
+First, the training dataset in the *DSWRetailSales* schema is loaded. From here, the model is trained using a [gradient boosting regressor algorithm](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). Gradient boosting uses the idea that weak learners (one that is at least slightly better than random chance) can form a succession of learners focused on improving the previous learner's weaknesses. Together, they can be used to create a powerful predictive model.
 
 The process involves three elements: a loss function, a weak learner, and an additive model. 
 

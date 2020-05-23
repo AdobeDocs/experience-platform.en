@@ -19,7 +19,7 @@ The ability to understand the relationships between your customers and their int
 
 ## Create an ad-hoc schema
 
-In specific circumstances, it may be necessary to create an Experience Data Model (XDM) schema with fields that are namespaced for usage only by a single dataset. This is referred to as an "ad-hoc" schema. Ad-hoc schemas are used in various [data ingestion](../ingestion/home.md) workflows for Experience Platform, including ingesting CSV files and creating certain kinds of [source connections](../source-connectors/home.md). Creating an ad-hoc schema is done using the Schema Registry API and is intended to be used in conjunction with other Experience Platform tutorials that require creating an ad-hoc schema as part of their workflow. To begin creating an ad-hoc schema, see the tutorial for [creating an ad-hoc schema using the API](../xdm/tutorials/ad-hoc.md).
+In specific circumstances, it may be necessary to create an Experience Data Model (XDM) schema with fields that are namespaced for usage only by a single dataset. This is referred to as an "ad-hoc" schema. Ad-hoc schemas are used in various [data ingestion](../ingestion/home.md) workflows for Experience Platform, including ingesting CSV files and creating certain kinds of [source connections](../sources/home.md). Creating an ad-hoc schema is done using the Schema Registry API and is intended to be used in conjunction with other Experience Platform tutorials that require creating an ad-hoc schema as part of their workflow. To begin creating an ad-hoc schema, see the tutorial for [creating an ad-hoc schema using the API](../xdm/tutorials/ad-hoc.md).
 
 ## Next Steps
 

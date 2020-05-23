@@ -7,11 +7,11 @@ topic: tutorial
 
 # Ingest data into Experience Platform
 
-Adobe Experience Platform brings data from multiple sources together in order to help marketers better understand the behavior of their customers. Adobe Experience Platform Data Ingestion represents the multiple methods by which Platform ingests data from these sources, as well as how that data is persisted within the Data Lake for use by downstream Platform services. Data Ingestion includes batch ingestion, streaming ingestion, and ingestion using source connectors. To learn more, read the [Data Ingestion overview](../ingestion/home.md) or proceed directly to the [Sources documentation](../source-connectors/home.md).
+Adobe Experience Platform brings data from multiple sources together in order to help marketers better understand the behavior of their customers. Adobe Experience Platform Data Ingestion represents the multiple methods by which Platform ingests data from these sources, as well as how that data is persisted within the Data Lake for use by downstream Platform services. Data Ingestion includes batch ingestion, streaming ingestion, and ingestion using source connectors. To learn more, read the [Data Ingestion overview](../ingestion/home.md) or proceed directly to the [Sources documentation](../sources/home.md).
 
 ## Create a source connector in the UI and API
 
-Source connectors allow you to ingest data from multiple sources, where it can then be labeled, structured, and enhanced using Platform services. To begin creating a connector using the UI, please visit the [creating a source connector in the UI overview](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/sources-ui-tutorial.md). To create source connectors using the API, visit the [create a source connector using the Flow Service API overview](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-api-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/api/sources-api-tutorial.md).
+Source connectors allow you to ingest data from multiple sources, where it can then be labeled, structured, and enhanced using Platform services. To begin creating a source connector, see the [sources overview](../sources/home.md).
 
 ## Ingest batch data
 
@@ -23,11 +23,11 @@ In order to ingest CSV data into Adobe Experience Platform, the data must be map
 
 ## Create a streaming connection
 
-In order to start streaming data to Experience Platform, you must first create a streaming HTTP connection. When creating a streaming connection, you need to provide key details such as the source of streaming data, and whether or not you intend to send data from a trusted (authenticated) or an untrusted (unauthenticated) source. This can be done using the Platform user interface or Experience Platform APIs. To learn more, follow the tutorials for [creating a streaming connection using the UI](../ingestion/tutorials/create-streaming-connection-ui.md) or [creating a streaming connection using APIs](../ingestion/tutorials/create-streaming-connection.md).
+In order to start streaming data to Experience Platform, you must first request an HTTP endpoint. You have the option to configure this endpoint to enforce authenticated behavior. This can be done using the Platform user interface or Experience Platform APIs. To learn more, follow the tutorials for [creating a streaming connection using the UI](../ingestion/tutorials/create-streaming-connection-ui.md) or [creating a streaming connection using APIs](../ingestion/tutorials/create-streaming-connection.md).
 
 ## Create an authenticated streaming connection
 
-Authenticated Data Collection allows Adobe Experience Platform services, such as Real-time Customer Profile and Identity, to differentiate between records coming from trusted sources and un-trusted sources. To get started, follow the tutorial for [creating an authenticated streaming connection](../ingestion/tutorials/create-authenticated-streaming-connection.md).
+Authenticated Data Collection allows Adobe Experience Platform services, such as Real-time Customer Profile and Identity, to differentiate between records coming from trusted sources and untrusted sources. To get started, follow the tutorial for [creating an authenticated streaming connection](../ingestion/tutorials/create-authenticated-streaming-connection.md).
 
 ## Stream record and time series data
 

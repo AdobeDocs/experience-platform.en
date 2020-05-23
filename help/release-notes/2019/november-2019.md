@@ -10,20 +10,20 @@ author: crhoades, ens28527
 
 # Adobe Experience Platform release notes 
 
-## Release date: November 18, 2019
+**Release date: November 18, 2019**
 
-New releases:  
-* [Real-time Customer Data Platform](#real-time-customer-data-platform)
+New features in Adobe Experience Platform:  
+* [Real-time Customer Data Platform](#rtcdp)
 * [Destinations](#destinations)
 * [Sources](#sources)
 
 Updates to existing features:
-* [Data Science Workspace](#data-science-workspace)
-* [Experience Data Model (XDM) System](#experience-data-model-xdm-system)
-* [Real-time Customer Profile](#real-time-customer-profile) 
-* [Segmentation Service](#segmentation-service)
+* [Data Science Workspace](#dsw)
+* [Experience Data Model (XDM) System](#xdm)
+* [Real-time Customer Profile](#profile) 
+* [Segmentation Service](#segmentation)
 
-## Real-time Customer Data Platform
+## Real-time Customer Data Platform {#rtcdp}
 
 Built on Adobe Experience Platform, the Adobe Real-time Customer Data Platform (Real-time CDP) helps companies bring together known and unknown data to activate customer profiles with intelligent decisioning throughout the customer journey. Real-time CDP combines multiple enterprise data sources to create unified profiles in real time that can be used to provide one-to-one personalized customer experiences across all channels and devices.
 
@@ -40,7 +40,7 @@ With Real-time CDP, you can:
 
 For more information, see the [Adobe Real-time Customer Data Platform documentation](../../rtcdp/overview.md).
 
-### Key features
+**Key features**
 
 |Feature|Description|
 |---|---|
@@ -48,7 +48,7 @@ For more information, see the [Adobe Real-time Customer Data Platform documentat
 |Home page metrics dashboard|The Adobe Real-time Customer Data Platform (Real-time CDP) home page includes a metrics dashboard that shows information about profiles and segments. The home page also contains links to learning materials. See the section on [Real-time Customer Data Platform metrics](#real-time-customer-data-platform-metrics) below.|
 |Sources|You can ingest data from a variety of sources such as Adobe Solutions, cloud-based storage, third party software, and your CRM. See the [Sources](#sources) section below to learn more.|
 
-### Real-time Customer Data Platform metrics
+**Real-time Customer Data Platform metrics**
 
 The Adobe Real-time Customer Data Platform (Real-time CDP) home page, which includes a metrics dashboard, appears when you log in to Real-time CDP.
 
@@ -58,11 +58,11 @@ If there is no data in the system when you log in to Real-time CDP, the dashboar
 
 To learn more, see the [Real-time Customer Data Platform metrics overview](../../rtcdp/home-page-dashboards.md)
 
-## Destinations
+## Destinations {#destinations}
 
 Destinations are pre-built integrations with destination platforms supported by Adobe’s Real-time Customer Data Platform that activate data to those partners in a seamless way. For more information, read the [Destinations overview](../../rtcdp/destinations/destinations-overview.md) article.
 
-### Available destinations
+**Available destinations**
 
 With the November release, Adobe's Real-time Customer Data Platform supports the following destinations:
 
@@ -71,20 +71,20 @@ With the November release, Adobe's Real-time Customer Data Platform supports the
 
 See the [destination catalog](../../rtcdp/destinations/destinations-catalog.md) for information about each of the destinations.
 
-### Known limitations
+**Known limitations**
 
 * The control to allow for custom activation schedules in the [activation flow](../../rtcdp/destinations/activate-destinations.md#activate-data) (Schedule step) is not available with the initial release. 
 * There is currently no way to edit or delete a destination configuration. To work around this limitation, you can enable or disable the destination in the top right corner of the [destination details page](../../rtcdp/destinations/destination-details-page.md). 
 * No validation is currently in place for account details, path, or credentials when connecting to your destination or storage account. Make sure you are entering the right credentials and double-check for spelling errors or typos. 
 * No credential renewals are in place with the initial release. Once an account is expired or needs refreshing, you must create a new destination connection and remap your previously mapped segments.
 
-## Sources
+## Sources {#sources}
 
 Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe Solutions, cloud-based storage, third party software, and your CRM system.
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to you authenticate to your storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
-### Key features
+**Key features**
 
 | Feature    | Description  |
 | ---------- | ------------ |
@@ -92,17 +92,17 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | Revamped workflows for CRM connectors | New intuitive UI workflow for creating and managing Microsoft Dynamics and Salesforce connectors. |
 | Connector support for cloud-based storages | Connectors can now access cloud-based storages. New sources include Amazon S3, Azure Blob, and FTP/SFTP servers. |
 
-### Known issues
+**Known issues**
 
 *   Source connectors for cloud-based storages do not support the ingestion of compressed files.
 
-For more information about sources, see [Sources overview](../../source-connectors/home.md).
+For more information about sources, see [Sources overview](../../sources/home.md).
 
-## Data Science Workspace
+## Data Science Workspace {#dsw}
 
 Adobe Experience Platform Data Science Workspace enables data scientists to seamlessly generate insights from data and content across Adobe applications and third-party systems by building and operationalizing Machine Learning Models. Data Science Workspace is tightly integrated with Platform and powers the end-to-end data science lifecycle, including exploration and preparation of XDM data, followed by the development and operationalization of Models to automatically enrich Real-time Customer Profile with Machine Learning Insights.
 
-### New features
+**New features**
 
 | Feature    | Description  |
 | -----------| ---------- |
@@ -111,13 +111,13 @@ Adobe Experience Platform Data Science Workspace enables data scientists to seam
 
 For more information, see the [Data Science Workspace overview](../../data-science-workspace/home.md).
 
-## Experience Data Model (XDM) System
+## Experience Data Model (XDM) System {#xdm}
 
 Standardization and interoperability are key concepts behind Experience Platform. Experience Data Model (XDM), driven by Adobe, is an effort to standardize customer experience data and define schemas for customer experience management.
 
 XDM is a publicly documented specification designed to improve the power of digital experiences. It provides common structures and definitions for any application to communicate with services on Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation delivering insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
 
-### New features
+**New features**
 
 | Feature    | Description  |
 | ---------- | ------------ |
@@ -128,13 +128,13 @@ XDM is a publicly documented specification designed to improve the power of digi
 | Format constraints for `xdm:alternateDisplayInfo` | The "Title" and "Description" fields for `xdm:alternateDisplayInfo` must both be strings to pass validation. |
 | Name change: XDM Individual Profile  | The "title" of the "XDM Profile" class has been updated to "XDM Individual Profile". The formal `$id` of the class has not changed. |
 
-### Known issues
+**Known issues**
 
 * None.
 
 To learn more about working with XDM using the Schema Registry API and Schema Editor user interface, please read the [XDM System documentation](../../xdm/home.md).
 
-## Real-time Customer Profile
+## Real-time Customer Profile {#profile}
 
 Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. Profile allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
 
@@ -146,17 +146,17 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 |Configure merge policies per projection|Applications can now configure merge policies per projection in order to generate a view of the data as governed by a specific merge policy. |
 |Computed Attributes| Computed attributes automatically compute the value of fields based on other values, calculations, and expressions. Computed attributes operate on the profile level to aggregate values such as "total purchase", "lifetime value", or "funnel status" based on an incoming event, an incoming event and profile data, or an incoming event, profile data, and historical events.|
 
-### Bug fixes
+**Bug fixes**
 
 * Simplified list of available ID stitching strategies in merge policy creation workflow.
 
-### Known issues
+**Known issues**
 
 * None.
 
 For more information on Real-time Customer Profile, including tutorials and best practices for working with Profile data, please read the [Real-time Customer Profile Overview](../../profile/home.md).
 
-## Segmentation Service
+## Segmentation Service {#segmentation}
 
 Adobe Experience Platform Segmentation Service provides a user interface and RESTful API that allows you to build segments and generate audiences from your Real-time Customer Profile data. These segments are centrally configured and maintained on Platform, making them readily accessible by any Adobe application.
 
@@ -171,7 +171,7 @@ Segmentation Service defines a particular subset of profiles by describing the c
 |RBAC support|Segment Builder now provides support for basic role-based access controls and permissions.|
 |Enhanced support for external audience sharing between Platform and Adobe solutions |Users can now bring in external (non-Experience Platform) audience metadata in scenarios where the number of audiences is large or not known a priori. This release includes access to Audience Manager metadata for customers who have provisioned the solution connector. This audience metadata can be used within Segment Builder to create new Experience Platform segments. <br/><br/> Additionally, segments created in Experience Platform will now be available for use in integrated Adobe solutions, including Audience Manager, Target, and Ad Cloud.|
 
-### Bug fixes
+**Bug fixes**
 
 * Fixed an issue causing Multi-Entity Segmentation to return zero profiles in case of nested relationships.
 * Fixed an issue where exclusion logic was returning misleading results.
@@ -179,7 +179,7 @@ Segmentation Service defines a particular subset of profiles by describing the c
 * Fixed an intermittent issue where multiple copies of the same XDM folder appeared.
 * Messaging is now produced to inform a user if segment estimates are unavailable for the selected merge policy.
 
-### Known issues
+**Known issues**
 
 * None.
 

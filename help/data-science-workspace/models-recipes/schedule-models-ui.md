@@ -20,36 +20,36 @@ In order to complete this tutorial, you must have access to Experience Platform.
 
 This tutorial requires an existing Service. If you do not have an accessible Service to work with, you can create one by following the [Publish your Model as a Service in the UI](./publish-model-service-ui.md) tutorial.
 
-## Configure scheduled scoring
+## Configure scheduled scoring {#configure-scheduled-scoring}
 
 Model scoring can be configured to be an automated process on a scheduled basis. Once a Service is created, you can follow the steps below to configure and apply a scoring schedule:
 
-1.  In Adobe Experience Platform, click the **Services** tab located in the left navigation column to access the *Service Gallery*. Find the Service you wish to schedule scoring runs on and click **Open** to view its *Overview* page.
+1.  In Adobe Experience Platform, click the **[!UICONTROL Services]** tab located in the left navigation column to access the *Service Gallery*. Find the Service you wish to schedule scoring runs on and click **[!UICONTROL Open]** to view its *Overview* page.
 ![](../images/models-recipes/schedule/click_to_open.png)
 
-2.  The Overview page displays the Service's scoring information. Click the **Update Schedule** link to configure a scoring schedule.
+2.  The Overview page displays the Service's scoring information. Click the **[!UICONTROL Update Schedule]** link to configure a scoring schedule.
 ![](../images/models-recipes/schedule/service_overview_score.png)
 
-3.  Configure the frequency, start date, end date, input dataset, and output dataset for the scoring schedule. Once you are satisfied with the configurations, click **Create** to update the Service's scoring schedule.
+3.  Configure the frequency, start date, end date, input dataset, and output dataset for the scoring schedule. Once you are satisfied with the configurations, click **[!UICONTROL Create]** to update the Service's scoring schedule.
 ![](../images/models-recipes/schedule/14_configure_scoring_schedule.png)
 
 4.  Your updated scoring schedule is shown in the Service's *Overview* page.
 ![](../images/models-recipes/schedule/service_with_scoring_schedule.png)
 
 
-## Configure scheduled training
+## Configure scheduled training {#configure-scheduled-training}
 
 Configuring scheduled training runs on a Service ensures that the machine learning Model is updated to the most recent data patterns. Whenever a scheduled training run completes, the resulting trained Model is used to power the Service until the next scheduled training run. 
 
 Once a Service is created, you can follow the steps below to configure and apply a training schedule:
 
-1.  In Adobe Experience Platform, click the **Services** tab located in the left navigation column to access the *Service Gallery*. Find the Service you wish to schedule training runs on and click **Open** to view its *Overview* page.
+1.  In Adobe Experience Platform, click the **[!UICONTROL Services]** tab located in the left navigation column to access the *Service Gallery*. Find the Service you wish to schedule training runs on and click **[!UICONTROL Open]** to view its *Overview* page.
 ![](../images/models-recipes/schedule/click_to_open.png)
 
-2.  The Overview page displays the Service's training information. Click the **Update Schedule** link to configure a training schedule.
+2.  The Overview page displays the Service's training information. Click the **[!UICONTROL Update Schedule]** link to configure a training schedule.
 ![](../images/models-recipes/schedule/service_overview_train.png)
 
-3.  Configure the frequency, start date, end date, and input dataset used for the training schedule. Once you are satisfied with the configurations, click **Create** to update the Service's training schedule.
+3.  Configure the frequency, start date, end date, and input dataset used for the training schedule. Once you are satisfied with the configurations, click **[!UICONTROL Create]** to update the Service's training schedule.
 ![](../images/models-recipes/schedule/12_configure_training_schedule.png)
 
 4.  Your updated training schedule is shown in the Service's *Overview* page.

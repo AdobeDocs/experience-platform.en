@@ -32,10 +32,14 @@ Customer is not built to:
 - Customer AI can’t predict which stage of the buying Journey the customer is in, for example, if they are in “awareness”, “consideration”, “purchase”, or “retention” stages.
 - Don’t use Customer AI to determine customers who are likely buy a product launching in the future. This requires certain success events to be present in the past for Customer AI to successfully train the machine learning algorithm on your data.
 
+The following video is designed to support your understanding of Customer AI.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
+
 ## How does it work?
 
 Customer AI works by analyzing existing Consumer Experience Event data to predict churn or conversion propensity scores. Adobe realizes that the definition of churn and conversion is not uniform across all the use cases and for this reason, you have the ability to define custom target goals as a set of conditions. You can configure the predicted goal as long as the event of interest is present within the input Consumer Experience Event data.
 
 ## Next steps
 
-You can begin by following the [getting started](./getting-started.md) guide. This guide walks you through setting up all the required pre-requests for Customer AI. If you already have all your credentials and data ready, visit the [Customer AI user guide](./user-guide.md). It provides steps for using Customer AI and demonstrates the creation of customer segments using propensity scores.
+You can begin by following the [getting started](./getting-started.md) guide. This guide walks you through setting up all the required prerequisites for Customer AI. If you already have all your credentials and data ready, visit  [configuring a Customer AI instance](./user-guide/configure.md). It provides steps for using Customer AI.

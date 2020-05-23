@@ -22,9 +22,29 @@ To activate data to destinations, you must have successfully [connected a destin
 3. Select **[!UICONTROL Activate]**;
 4. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to the destination.
     ![segments-to-destination](/help/rtcdp/destinations/assets/select-segments.png)
-5. *Conditional*. This step only applies for segments mapped to email marketing destinations. <br> On the **[!UICONTROL Destination Attributes]** page, select **[!UICONTROL Add new field]** and select the attributes that you want to send to the destination.
+5. *Conditional*. This step differs depending on the type of destination where you are activating your segments. <br> For *email marketing destinations* and *cloud storage destinations*, on the **[!UICONTROL Select Attributes]** page, select **[!UICONTROL Add new field]** and select the attributes that you want to send to the destination.
    We recommend one of the attributes to be a [unique identifier](/help/rtcdp/destinations/email-marketing-destinations.md#identity) from your union schema. For more information about mandatory attributes, see Identity in the [Email marketing destinations](/help/rtcdp/destinations/email-marketing-destinations.md#identity) article. 
-   ![destination-attributes](/help/rtcdp/destinations/assets/destination-attributes.png)
+   ![destination-attributes](/help/rtcdp/destinations/assets/select-attributes-step.png)
+
+    <br>&nbsp; 
+
+   For *social destinations*, in the **[!UICONTROL Identity mapping]** step, you can select source attributes to map as target identities in the destination. This step is either optional or mandatory, depending on which primary identity you are using in the schema. <br>&nbsp; 
+
+   *Email address as primary identity*: If you are using email address as primary identity in your schema, you can skip the Identity mapping step, as shown below:
+
+   ![Email address as identity](/help/rtcdp/destinations/assets/email-as-identity.gif)
+
+    <br>&nbsp; 
+
+    *Another ID as primary identity*: If you are using another ID, such as *Rewards ID* or *Loyalty ID*, as primary identity in your schema, you need to manually map the email address from your identity schema as a target identity in the social destination, as shown below:
+
+   ![Loyalty ID as identity](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
+
+
+   Select `Email_LC_SHA256` as target identity if you hashed customer email addresses on data ingestion into Adobe Experience Platform, according to Facebook [email hashing requirements](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements). <br> Select `Email` as target identity if the email addresses you are using are not hashed. Adobe Real-time CDP will hash the email addresses to comply with Facebook requirements.
+   
+   ![identity mapping after filling in fields](/help/rtcdp/destinations/assets/identity-mapping.png)
+
 6. On the **[!UICONTROL Segment schedule]** page, you can see the start date for sending data to the destination, as well as the frequency of sending data to the destination.
 
     >[!IMPORTANT]
@@ -69,6 +89,10 @@ Check the respective advertising destination that you are activating your data t
 
 For Facebook, a successful activation means that a Facebook custom audience would be created programmatically in [Facebook Ads Manager](https://www.facebook.com/adsmanager/manage/). Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated segments.
 
+>[!TIP]
+>
+>The integration between Adobe Real-time CDP and Facebook supports historical audience backfills. All historical segment qualifications get sent to Facebook when you activate the segments to the destination.
+
 ## Disable activation {#disable-activation}
 
 To disable an existing activation flow, follow the steps below:
@@ -77,3 +101,4 @@ To disable an existing activation flow, follow the steps below:
 2. Click the **[!UICONTROL Enabled]** control in the right rail to change the activation flow state.
 3. In the **Update data flow state** window, select **Confirm** to disable the activation flow.
 
+In AWS Kinesis, generate an access key - secret access key pair to grant Adobe Real-time CDP access to your AWS Kinesis account. Learn more in the [AWS Kinesis documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).

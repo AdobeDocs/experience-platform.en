@@ -19,7 +19,7 @@ For example, when handling customer data requests in Privacy Service, an identit
 
 It is therefore required that each identity sent to Privacy Service is accompanied with a **namespace** that provides context by relating the identity value to its system of origin. A namespace can represent a generic concept such as an email address ("Email") or associate the identity with a specific application, such as an Adobe Advertising Cloud ID ("AdCloud") or Adobe Target ID ("TNTID").
 
-Adobe Experience Platform Identity Service maintains a store of globally defined and user-defined identity namespaces. For more detailed information on namespaces, see the [identity namespace overview](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md). For a list of standard namespaces and namespace qualifiers that are commonly used in Privacy Service, see the [appendix section](api/appendix.md) in the developer guide.
+Adobe Experience Platform Identity Service maintains a store of globally defined and user-defined identity namespaces. For more detailed information on namespaces, see the [identity namespace overview](../identity-service/namespaces.md). For a list of standard namespaces and namespace qualifiers that are commonly used in Privacy Service, see the [appendix section](api/appendix.md) in the developer guide.
 
 ## ECID and Opt-in Service
 
