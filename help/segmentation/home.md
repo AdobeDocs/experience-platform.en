@@ -228,7 +228,7 @@ Currently, only Adobe Audience Manager is supported as an audience, with additio
 
 ### Segment sharing
 
-Segments created in Platform can be used within other [Adobe Experience Cloud Core Services](https://docs.adobe.com/content/help/en/core-services/interface/experience-cloud.html). 
+Segments created in Platform can be used within other [Adobe Experience Cloud Core Services](https://docs.adobe.com/content/help/en/core-services/interface/experience-cloud.html). To enable this feature, you will need to contact your solution architect or your consultant.
 
 ### Other data types
 
