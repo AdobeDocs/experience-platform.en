@@ -75,7 +75,7 @@ Start by loading your training data.
 >[!NOTE]
 >In the **Real-time ML** template, the [car insurance CSV dataset](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) is grabbed from Github.
 
-
+![Load traning data](../images/rtml/load_training.png)
 
 If you wish to use a dataset from within Adobe Experience Platform, uncomment the cell below. Next, you need to replace `DATASET_ID` with the appropriate value.
 
@@ -413,9 +413,9 @@ Use the following cell within the *Real-time ML* template to score against your 
 
 Once scoring is complete, the Edge URL, Payload, and scored output from the Edge are returned. 
 
-## List and delete a deployed app from Edge (optional)
+## List your deployed apps from the Edge
 
-To generate a list of your currently deployed apps on the edge use the following code cell. This cell cannot be edited or deleted.
+To generate a list of your currently deployed apps on the edge run the following code cell. This cell cannot be edited or deleted.
 
 ```python
 services = edge_utils.list_deployed_services()
@@ -436,7 +436,9 @@ The response returned is an array of your deployed services.
 ]
 ```
 
->![CAUTION]
+## Delete a deployed app or service id from the Edge (optional)
+
+>[!CAUTION]
 >This cell is used to delete your deployed Edge application. Do not use the following cell unless you need to delete a deployed Edge application. 
 
 ```python
