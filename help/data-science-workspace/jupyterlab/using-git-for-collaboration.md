@@ -1,33 +1,35 @@
 ---
-keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;Git;
+keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;Git;Github
 solution: Experience Platform
-title: Using Git for collaboration 
+title: Collaborate in JupyterLab using Git
 topic: Tutorial
 ---
 
-# Using Git for collaboration 
+# Collaborate in JupyterLab using Git
 
 Git is a distributed version-control system for tracking changes in source code during software development. Git is pre-installed within the Data Science Workspace JupyterLab environment.
 
-## Pre-requisites
+## Prerequisites
 
 >[!NOTE]
-> The Git server you intend to use needs to be accessible via the Internet.
+> The Git server you intend to use needs to be accessible via the internet.
 
-The Data Science Workspace JupyterLab environment is a hosted environment and not deployed within your corporate firewall, therefore the Git server you connect to must be accessible from the public Internet. This could be a public or private repository on [Github](https://github.com/) or another instance of a Git server that you have decided to host yourself.
+The Data Science Workspace JupyterLab environment is a hosted environment and not deployed within your corporate firewall, and therefore the Git server you connect to must be accessible from the public internet. This could be a public or private repository on [GitHub](https://github.com/) or another instance of a Git server that you have decided to host yourself.
 
-## Connecting Git to the Data Science Workspace JupyterLab Notebooks environment
+## Connect Git to the Data Science Workspace JupyterLab Notebooks environment
 
 Start by launching Adobe Experience Platform and navigating to the [JupyterLabs Notebooks](https://platform.adobe.com/notebooks/jupyterLab) environment.
 
-Within Jupyterlab select **[!UICONTROL File]** then hover over **[!UICONTROL New]** and from the dropdown select **[!UICONTROL Terminal]**.
+Within JupyterLab, select **[!UICONTROL File]** then hover over **[!UICONTROL New]**. From the dropdown that appears, select **[!UICONTROL Terminal]**.
 
 ![JupyterLab Nav](../images/jupyterlab/tutorials/open-terminal.png)
 
-Next, navigate to your workspace by using `cd my-workspace`. 
+Next, within *Terminal* navigate to your workspace by using the following command: `cd my-workspace`. 
+
+![cd workspace](../images/jupyterlab/tutorials/find-workspace.png)
 
 >[!TIP]
-> To see a list of available git commands, issue the command: `git -help`.
+> To see a list of available git commands, issue the command: `git -help` within your Terminal.
 
 Next, clone the repository you wish to use using the `git clone` command. Clone your project using an `https://` URL rather than `ssh://`.
 
@@ -46,4 +48,4 @@ Next, clone the repository you wish to use using the `git clone` command. Clone 
 
 ## Next steps
 
-After you have finished cloning your repository, you can use git as you normally would on your local machine to collaborate with others on notebooks. For more information on what you can do within JupyterLab see the [JupyterLab user guide](./overview.md).
+After you have finished cloning your repository, you can use Git as you normally would on your local machine to collaborate with others on notebooks. For more information on what you can do within JupyterLab, see the [JupyterLab user guide](./overview.md).
