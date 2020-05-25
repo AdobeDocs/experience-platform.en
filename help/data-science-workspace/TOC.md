@@ -13,7 +13,7 @@ user-guide-title: Adobe Experience Platform Data Science Workspace Help
   * [Analyze your data using notebooks](jupyterlab/analyze-your-data.md)
   * [Query service in Jupyter notebook](jupyterlab/query-service.md)
   * [Create a recipe using Jupyter notebooks](jupyterlab/create-a-recipe.md)
-  * [Using Git for collaboration within JupyterLab](jupyterlab/using-git-for-collaboration.md)
+  * [Collaborate in JupyterLab using Git](jupyterlab/using-git-for-collaboration.md)
 * Sensei Machine Learning API {#api}
   * [Getting started](api/getting-started.md)
   * [Engines](api/engines.md)
