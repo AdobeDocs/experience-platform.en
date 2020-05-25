@@ -5,17 +5,23 @@ title: Segmentation API developer guide
 topic: guide
 ---
 
-# Segment search
+# Segment Search
 
-Segment search is used to search and index configurable fields contained across various data sources and return them in near real-time. 
+Segment Search is used to search and index configurable fields contained across various data sources and return them in near real-time. 
 
-This guide provides information to help you better understand Segment search and includes sample API calls for performing basic actions using the API.
+This guide provides information to help you better understand Segment Search and includes sample API calls for performing basic actions using the API.
 
 ## Getting started
 
 The API endpoints used in this guide are part of the Segmentation API. Before continuing, please review the [Segmentation developer guide](getting-started.md).
 
-In particular, the [getting started section](getting-started.md) of the Segmentation developer guide includes links to related topics, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform APIs.
+In particular, the [getting started section](getting-started.md) of the Segmentation developer guide includes links to related topics, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to the Experience Platform API.
+
+### Required headers
+
+While the general required headers are covered in the [getting started](./getting-started.md) guide, there is an additional required header for Segment Search API requests, as shown below:
+
+- x-ups-search-version: "1.0"
 
 ### Search across multiple namespaces
 
@@ -24,13 +30,14 @@ This search endpoint can be used to search across various namespaces, returning 
 **API format**
 
 ```http
-GET /search/namespaces?{QUERY_PARAMETERS}
+GET /search/namespaces?schema.name={SCHEMA}
+GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 ```
 
 | Parameters | Description | 
 | ---------- | ----------- | 
-| schema.name | **(Required)** The schema class value associated with the search objects. Currently, only `_xdm.context.segmentdefinition` is supported. |
-| s | *(Optional)* A query that conforms to Microsoft's implementation of [Lucene's search syntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). If no search term is specified, then all records associated with `schema.name` will be returned. A more detailed explanation can be found in the [appendix](#appendix) of this document. |
+| schema.name (`{SCHEMA}`) | **(Required)** The schema class value associated with the search objects. Currently, only `_xdm.context.segmentdefinition` is supported. |
+| s (`{SEARCH_TERM}`) | *(Optional)* A query that conforms to Microsoft's implementation of [Lucene's search syntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). If no search term is specified, then all records associated with `schema.name` will be returned. A more detailed explanation can be found in the [appendix](#appendix) of this document. |
 
 **Request**
 
@@ -78,15 +85,17 @@ This search endpoint can be used to retrieve a list of all full text indexed obj
 **API format**
 
 ```http
-GET /search/entities?{QUERY_PARAMETERS}
+GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}
+GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&s={SEARCH_TERM}
+GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY_ID}
 ```
 
 | Parameters | Description | 
 | ---------- | ----------- | 
-| schema.name | **(Required)** The schema class value associated with the search objects. Currently, only `_xdm.context.segmentdefinition` is supported. |
-| namespace | **(Required)** The namespace you wish to search within. |
-| s | *(Optional)* A query that conforms to Microsoft's implementation of [Lucene's search syntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). If no search term is specified, then all records associated with `schema.name` will be returned. A more detailed explanation can be found in the [appendix](#appendix) of this document. |
-| entityId | *(Optional)* Limits your search to within the designated folder. |
+| schema.name (`{SCHEMA}`) | **(Required)** The schema class value associated with the search objects. Currently, only `_xdm.context.segmentdefinition` is supported. |
+| namespace (`{NAMESPACE}`) | **(Required)** The namespace you wish to search within. |
+| s (`{SEARCH_TERM}`) | *(Optional)* A query that conforms to Microsoft's implementation of [Lucene's search syntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). If no search term is specified, then all records associated with `schema.name` will be returned. A more detailed explanation can be found in the [appendix](#appendix) of this document. |
+| entityId (`{ENTITY_ID}`) | *(Optional)* Limits your search to within the designated folder. |
 | limit | *(Optional)* The number of search results to return. The default value is 50. |
 | page | *(Optional)* The page number used for paginating results of the query searched. Please note that the page number starts at **0**.|
 
@@ -149,14 +158,14 @@ This search endpoint can be used to get the structural information about the req
 **API format**
 
 ```http
-GET /search/taxonomy?{QUERY_PARAMETERS}
+GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY_ID}
 ```
 
 | Parameters | Description | 
 | ---------- | ----------- | 
-| schema.name | **(Required)** The schema class value associated with the search objects. Currently, only `_xdm.context.segmentdefinition` is supported. |
-| namespace | **(Required)** The namespace you wish to search within. |
-| entityId | **(Required)** The ID of the search object you want to get the structural information about. |
+| schema.name (`{SCHEMA}`) | **(Required)** The schema class value associated with the search objects. Currently, only `_xdm.context.segmentdefinition` is supported. |
+| namespace (`{NAMESPACE}`) | **(Required)** The namespace you wish to search within. |
+| entityId (`{ENTITY_ID}`) | **(Required)** The ID of the search object you want to get the structural information about. |
 
 **Request**
 
@@ -202,17 +211,17 @@ A successful response returns HTTP status 200 with detailed structural informati
 
 ## Next steps
 
-After reading this guide you now have a better understanding of how  Segment search works. For more information on Segmentation, please read the [Segmentation overview](../home.md).
+After reading this guide you now have a better understanding of how Segment Search works. For more information on Segmentation, please read the [Segmentation overview](../home.md).
 
 ## Appendix {#appendix}
 
-Search queries are written in the following manner: `{FieldName}:{SearchExpression}`.
+The following sections provide additional information about how search terms work. Search queries are written in the following manner: `{FieldName}:{SearchExpression}`.
 
 ### Search fields {#search-fields}
 
-The following table lists the fields which can be searched within the search parameter.
+The following table lists the fields which can be searched within the search query parameter.
 
-| Field Name | Description |
+| Field name | Description |
 | ---------- | ----------- |
 | folderId | The folder or folders that have the folder ID of your specified search. |
 | folderLocation | The location or locations that have the folder location of your specified search. |
@@ -223,10 +232,10 @@ The following table lists the fields which can be searched within the search par
 
 ### Search expression {#search-expression}
 
-The following table lists the specifics of how search queries works when using the search API. 
+The following table lists the specifics of how search queries works when using the Segment Search API. 
 
-| Search Expression | Description |
-| ----------------- | ----------- |
+| Example search expression | Description |
+| ------------------------- | ----------- |
 | foo | Search for any word. This will return results if the word "foo" is found in any of the searchable fields. |
 | foo AND bar | A Boolean search. This will return results if **both** the words "foo" and "bar" are found in any of the searchable fields. |
 | foo OR bar | A Boolean search. This will return results if **either** the word "foo" or the word "bar" are found in any of the searchable fields. |
