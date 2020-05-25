@@ -75,6 +75,8 @@ Start by loading your training data.
 >[!NOTE]
 >In the **Real-time ML** template, the [car insurance CSV dataset](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) is grabbed from Github.
 
+
+
 If you wish to use a dataset from within Adobe Experience Platform, uncomment the cell below. Next, you need to replace `DATASET_ID` with the appropriate value.
 
 ![rtml dataset](../images/rtml/rtml-dataset.png)
@@ -107,7 +109,7 @@ Using the *Real-time ML* template, you need to analyze, pre-process, train, and 
 The *Real-time ML* templates *Data Transformations* cell needs to be modified to work with your own dataset. Typically this involves renaming columns, data rollup, and data preparation/feature engineering. 
 
 >[!NOTE]
->The following example has been condensed for readability purposes using `[ ... ]`. Please view the *Real-time ML* template for the complete code cell.
+>The following example has been condensed for readability purposes using `[ ... ]`. Please view and expand the *Real-time ML* templates data transformations section for the complete code cell.
 
 ```python
 df1.rename(columns = {config_properties['ten_id']+'.identification.ecid' : 'ecid',
@@ -182,7 +184,7 @@ cat_cols = ['age_bucket', 'gender', 'city', 'dayofweek', 'country', 'carbrand', 
 df_final = pd.get_dummies(df_final, columns = cat_cols)
 ```
 
-Run the provided cell to see an example result. The output table returned from the `carinsurancedataset.csv` dataset returns the modifications defined.
+Run the provided cell to see an example result. The output table returned from the `carinsurancedataset.csv` dataset returns the modifications you defined.
 
 ![Example of data transformations](../images/rtml/table-return.png)
 
@@ -230,18 +232,23 @@ import skl2onnx, subprocess
 model.generate_onnx_resources()
 ```
 
+>[!NOTE]
+>Change the `model_path` string value (`model.onnx`) to change the name of your model.
+
 ```python
 model_path = "model.onnx"
+```
 
+>[!NOTE]
+>The following cell is not editable or deletable and required for your Real-time Machine Learning application to work.
+
+```python
 model = ModelUpload(params={'model_path': model_path})
 msg_model = model.process(None, 1)
 model_id = msg_model.model['model_id']
  
 print("Model ID : ", model_id)
 ```
-
->[!NOTE]
->Change the `model_path` string value to name your model.
 
 ![ONNX model](../images/rtml/onnx-model-rail.png)
 
@@ -265,7 +272,7 @@ This section outlines creating a DSL. You are going to author the nodes that inc
 ### Node authoring
 
 >[!NOTE]
-> You are likely to have multiple nodes based on the type of data being used. The following example outlines only a single node in the *Real-time ML* template. Please view the *Real-time ML* template for the complete code cell.
+> You are likely to have multiple nodes based on the type of data being used. The following example outlines only a single node in the *Real-time ML* template. Please view the *Real-time ML* templates *Node Authoring* section for the complete code cell.
 
 The Pandas node below uses `"import": "map"` to import the method name as a string in the parameters, followed by inputting the parameters as a map function. The example below does this by using `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`. After you have the map in place, you have the option to set `inplace` as `True` or `False`. Set `inplace` as `True` or `False` based on whether you want to apply transformation inplace or not. By default `"inplace": False` creates a new column. Support to provide a new column name is set to be added in a subsequent release. The last line `cols` can be a single column name or a list of columns. Specify the columns on which you want to apply the transformation. In this example `leasing` is specified. For more information on the available nodes and how to use them, visit the [node reference guide](./node-reference.md).
 
@@ -316,7 +323,7 @@ Next, connect the nodes with edges. Each tuple is an Edge connection.
 edges = [(nodes[i], nodes[i+1]) for i in range(len(nodes)-1)]
 ```
 
-Once your nodes are connected, build the graph.
+Once your nodes are connected, build the graph. The cell below is mandatory and cannot be edited or deleted.
 
 ```python
 dsl = GraphBuilder.generate_dsl(nodes=nodes, edges=edges)
@@ -406,7 +413,28 @@ Use the following cell within the *Real-time ML* template to score against your 
 
 Once scoring is complete, the Edge URL, Payload, and scored output from the Edge are returned. 
 
-## Deleting a deployed app from Edge (optional)
+## List and delete a deployed app from Edge (optional)
+
+To generate a list of your currently deployed apps on the edge use the following code cell. This cell cannot be edited or deleted.
+
+```python
+services = edge_utils.list_deployed_services()
+print(services)
+```
+
+The response returned is an array of your deployed services.
+
+```json
+[
+    {
+        "created": "2020-05-25T19:18:52.731Z",
+        "deprecated": false,
+        "id": "40ef76c0-1c6f-487a-8f8f-54f9cd40d1b7",
+        "type": "edge",
+        "updated": "2020-05-25T19:18:52.731Z"
+    }
+]
+```
 
 >![CAUTION]
 >This cell is used to delete your deployed Edge application. Do not use the following cell unless you need to delete a deployed Edge application. 
