@@ -165,6 +165,9 @@ curl -X POST \
     },
     "schema": {
       "name": "_xdm.context.profile"
+    },
+    "evaluationInfo": {
+        "segmentation": true
     }
   }'
 ```
@@ -185,6 +188,7 @@ curl -X POST \
 | `additionalFields.eventList` | *(Optional)* Controls the time series event fields exported for child or associated objects by providing one or more of the following settings:<ul><li>`eventList.fields`: Control the fields to export.</li><li>`eventList.filter`: Specifies criteria that limits the results included from associated objects. Expects a minimum value required for export, typically a date.</li><li>`eventList.filter.fromIngestTimestamp`: Filters time series events to those that have been ingested after the provided timestamp. This is not the event time itself but the ingestion time for the events.</li></ul> |
 | `destination` | **(Required)** Destination information for the exported data:<ul><li>`destination.datasetId`: **(Required)** The ID of the dataset where data is to be exported.</li><li>`destination.segmentPerBatch`: *(Optional)* A Boolean value that, if not provided, defaults to `false`. A value of `false` exports all segment IDs into a single batch ID. A value of `true` exports one segment ID into one batch ID. Note that setting the value to be `true` may affect batch export performance.</li></ul> |
 | `schema.name` | **(Required)** The name of the schema associated with the dataset where data is to be exported. |
+| `evaluationInfo.segmentation`| *(Optional)* A boolean value that, if not provided, defaults to `false`. A value of `true` indicates that segmentation needs to be done on the export job. |
 
 >[!NOTE] To export only Profile data, and not include related ExperienceEvent data, remove the "additionalFields" object from the request.
 
@@ -545,7 +549,7 @@ curl -X POST \
 
 A successful delete request returns HTTP Status 204 (No Content) and an empty response body, indicating the cancel operation was successful. 
 
-## Next Steps
+## Next steps
 
 Once the export has completed successfully, your data is available within the Data Lake in Experience Platform. You can then use the [Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) to access the data using the `batchId` associated with the export. Depending on the size of the export, the data may be in chunks and the batch may consist of several files.
 
