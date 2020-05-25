@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Creating a segment using the Segment Builder
+title: Viewing segment details
 topic: ui guide
 ---
 
-# Creating a segment using the Segment Builder
+# Viewing segment details
 
 Adobe Experience Platform Segmentation Service provides a RESTful API and user interface for creating segment definitions from Real-time Customer Profile data.
 
