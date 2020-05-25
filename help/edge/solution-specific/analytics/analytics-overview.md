@@ -5,11 +5,7 @@ description: Learn how to send Data to Adobe Analytics with Experience Platform 
 seo-description: Learn how to send Data to Adobe Analytics with Experience Platform Web SDK
 ---
 
-# (Beta) Sending Data to Adobe Analytics
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+# Sending Data to Adobe Analytics
 
 The Adobe Experience Platform Web SDK can send data to Adobe Analytics. This works by translating `xdm` into a format the Adobe Analytics can use.
 
@@ -35,16 +31,16 @@ If you had a schema that looked like this.
     key2:value2
   },
   array:[
-    v1,
-    v2,
-    v3
+    "v0",
+    "v1",
+    "v2"
   ],
   arrayofobjects:[
     {
-      obj1key:objval1
+      obj1key:objval0
     },
     {
-      obj2key:objval2
+      obj2key:objval1
     }
   ]
 }
@@ -56,11 +52,11 @@ Then these would be the context data keys available to you.
 a.x.key //value
 a.x.object.key1 //value1
 a.x.object.key2 //value2
-a.x.array[0] //v1
-a.x.array[1] //v2
-a.x.array[3] //v3
-a.x.arrayofobjects[1].obj1key //objval1
-a.x.arrayofobjects[2].obj2key //objval2
+a.x.array.0 //v0
+a.x.array.1 //v1
+a.x.array.2 //v2
+a.x.arrayofobjects.0.obj1key //objval0
+a.x.arrayofobjects.1.obj2key //objval1
 ```
 
 Here is an example of a processing rule that would use this data.

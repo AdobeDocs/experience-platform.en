@@ -5,11 +5,7 @@ description: Learn how to configure the Experience Platform Web SDK
 seo-description: Learn how to configure the Experience Platform Web SDK
 ---
 
-# (Beta) Configuring the SDK
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+# Configuring the SDK
 
 Configuration for the SDK is done with the `configure` command.
 
@@ -63,14 +59,6 @@ Indicates whether debugging should be enabled. Setting this config to `true` ena
 | String   | No           | `beta.adobedc.net` |
 
 The domain used to interact with Adobe Services. This is only used if you have a first party domain (CNAME) that proxies requests to the Adobe edge infrastructure.
-
-### `errorsEnabled`
-
-| **Type** | **Required** | **Default Value** |
-| -------- | ------------ | ----------------- |
-| Boolean  | No           | `true`            |
-
-Indicates whether errors should be suppressed. As described in [Executing Commands](executing-commands.md), _uncaught_ errors are logged to the developer console, regardless of whether debugging is enabled in Adobe Experience Platform Web SDK. By setting `errorsEnabled` to `false`, promises returned from Adobe Experience Platform Web SDK are never rejected, though errors are still logged to the console if logging is enabled in Adobe Experience Platform Web SDK.
 
 ### `orgId`
 

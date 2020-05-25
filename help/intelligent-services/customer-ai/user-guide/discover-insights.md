@@ -118,3 +118,9 @@ The segment builder is used to define a segment. When selecting **[!UICONTROL Cr
 ## Next steps
 
 This document outlined the insights provided by a Customer AI service instance. You can now continue to the tutorial on [downloading scores in Customer AI](./download-scores.md) or browse the other [Adobe Intelligent Services](../../home.md) guides that are offered.
+
+## Additional resources
+
+The following video outlines how to use Customer AI to see the output of the models and influential factors.
+
+>[!VIDEO](https://video.tv.adobe.com/v/32666?learn=on&quality=12)

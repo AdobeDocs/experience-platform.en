@@ -15,12 +15,12 @@ This tutorial requires you to have access to a third party cloud storage through
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
-*   [Experience Data Model (XDM) System](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-    *   [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-    *   [Schema Registry developer guide](../../../../xdm/api/getting-started.md): Includes important information that you need to know in order to successfully perform calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
-*   [Catalog Service](../../../../catalog/home.md): Catalog is the system of record for data location and lineage within Experience Platform.
-*   [Batch ingestion](../../../../ingestion/batch-ingestion/overview.md): The Batch Ingestion API allows you to ingest data into Experience Platform as batch files.
-*   [Sandboxes](../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+-   [Experience Data Model (XDM) System](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+    -   [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
+    -   [Schema Registry developer guide](../../../../xdm/api/getting-started.md): Includes important information that you need to know in order to successfully perform calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
+-   [Catalog Service](../../../../catalog/home.md): Catalog is the system of record for data location and lineage within Experience Platform.
+-   [Batch ingestion](../../../../ingestion/batch-ingestion/overview.md): The Batch Ingestion API allows you to ingest data into Experience Platform as batch files.
+-   [Sandboxes](../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully connect to a cloud storage using the Flow Service API.
 
@@ -32,17 +32,17 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
-*   Authorization: Bearer `{ACCESS_TOKEN}`
-*   x-api-key: `{API_KEY}`
-*   x-gw-ims-org-id: `{IMS_ORG}`
+-   Authorization: Bearer `{ACCESS_TOKEN}`
+-   x-api-key: `{API_KEY}`
+-   x-gw-ims-org-id: `{IMS_ORG}`
 
 All resources in Experience Platform, including those belonging to Flow Service, are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-*   x-sandbox-name: `{SANDBOX_NAME}`
+-   x-sandbox-name: `{SANDBOX_NAME}`
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
 
-*   Content-Type: `application/json`
+-   Content-Type: `application/json`
 
 ## Create an ad-hoc XDM class and schema
 
@@ -452,7 +452,7 @@ A successful response returns details of the newly created mapping including its
 }
 ```
 
-## Look up dataflow specifications {#specs}
+## Retrieve dataflow specifications {#specs}
 
 A dataflow is responsible for collecting data from sources, and bringing them into Platform. In order to create a dataflow, you must first obtain the dataflow specifications that are responsible for collecting cloud storage data.
 
@@ -571,10 +571,10 @@ A successful response returns the details of the dataflow specification that is 
 
 The last step towards collecting cloud storage data is to create a dataflow. By now, you have the following required values prepared:
 
-*   [Source connection ID](#source)
-*   [Target connection ID](#target)
-*   [Mapping ID](#mapping)
-*   [Dataflow specification ID](#specs)
+-   [Source connection ID](#source)
+-   [Target connection ID](#target)
+-   [Mapping ID](#mapping)
+-   [Dataflow specification ID](#specs)
 
 A dataflow is responsible for scheduling and collecting data from a source. You can create a dataflow by performing a POST request while providing the previously mentioned values within the payload.
 
@@ -649,5 +649,21 @@ A successful response returns the ID (`id`) of the newly created dataflow.
 
 By following this tutorial, you have created a source connector to collect data from your cloud storage on a scheduled basis. Incoming data can now be used by downstream Platform services such as Real-time Customer Profile and Data Science Workspace. See the following documents for more details:
 
-*   [Real-time Customer Profile overview](../../../../profile/home.md)
-*   [Data Science Workspace overview](../../../../data-science-workspace/home.md)
+-   [Real-time Customer Profile overview](../../../../profile/home.md)
+-   [Data Science Workspace overview](../../../../data-science-workspace/home.md)
+
+## Appendix
+
+The following section lists the different cloud storage source connectors and their connections specifications.
+
+### Connection specification
+
+| Connector name | Connection spec |
+| -------------- | --------------- |
+| Amazon S3 (S3) | `ecadc60c-7455-4d87-84dc-2a0e293d997b` |
+| Amazon Kinesis (Kinesis) | `86043421-563b-46ec-8e6c-e23184711bf6` |
+| Azure Blob (Blob) | `4c10e202-c428-4796-9208-5f1f5732b1cf` |
+| Azure Data Lake Storage Gen2  (ADLS Gen2) | `0ed90a81-07f4-4586-8190-b40eccef1c5a` |
+| Azure Event Hubs (Event Hubs) | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` | 
+| Google Cloud Storage | `32e8f412-cdf7-464c-9885-78184cb113fd` |
+| SFTP | `bf367b0d-3d9b-4060-b67b-0d3d9bd06094` | 
