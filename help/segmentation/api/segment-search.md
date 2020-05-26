@@ -17,7 +17,7 @@ The API endpoints used in this guide are part of the Segmentation API. Before co
 
 In particular, the [getting started section](getting-started.md) of the Segmentation developer guide includes links to related topics, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to the Experience Platform API.
 
-In addition to the required headers outlined in the getting started section, all requests to the Segment Search API require the additional header:
+In addition to the required headers outlined in the getting started section, all requests to the Segment Search API require the following additional header:
 
 - x-ups-search-version: "1.0"
 
