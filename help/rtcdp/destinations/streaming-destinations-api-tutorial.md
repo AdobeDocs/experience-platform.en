@@ -307,8 +307,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "region": "{REGION}"
     },
     "params": { // use these values for Azure Event Hubs connections
-        "eventHubName": "{EVENT_HUB_NAME}",
-        "namespace": "EVENT_HUB_NAMESPACE"
+        "eventHubName": "{EVENT_HUB_NAME}"
     }
 }'
 ```
@@ -318,7 +317,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 *   `{NAME_OF_DATA_STREAM}`: *For Amazon Kinesis connections.* Provide the name of your existing data stream in your Amazon Kinesis account. Adobe Real-time CDP will export data to this stream.
 *   `{REGION}`: *For Amazon Kinesis connections.* The region in your Amazon Kinesis account where Adobe Real-time CDP will stream your data.
 *   `{EVENT_HUB_NAME}`: *For Azure Event Hubs connections.* Fill in the Azure Event Hub name where Adobe Real-time CDP will stream your data. For more information, see [Create an event hub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) in the Microsoft documentation.
-*   `{EVENT_HUB_NAMESPACE}`: *For Azure Event Hubs connections.* Fill in the Azure Event Hubs namespace where Adobe Real-time CDP will stream your data. For more information, see [Create an Event Hubs namespace](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) in the Microsoft documentation.
 
 **Response**
 
@@ -500,8 +498,16 @@ The returned response should include in the `transformations` parameter the segm
         "name": "GeneralTransform",
         "params": {
             "profileSelectors": {
-                "selectors": []
-            },
+                        "selectors": [
+                            {
+                                "type": "JSON_PATH",
+                                "value": {
+                                    "path": "person.lastname",
+                                    "operator": "EXISTS"
+                                }
+                            }
+                        ]
+                    },
             "segmentSelectors": {
                 "selectors": [
                     {
