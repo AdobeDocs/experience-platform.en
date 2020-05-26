@@ -371,7 +371,7 @@ curl -X POST \
     }
 ```
 
-*   `{FLOW_SPEC_ID}`: Use the flow for the streaming destination that you want to connect to. To get the flow spec, perform a GET operation on the `flowspecs` endpoint. See Swagger documentation here: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. In the response, look for `upsTo` and copy the corresponding ID of the streaming destination that you want to connect to. 
+*   `{FLOW_SPEC_ID}`: The flow spec ID for profile based destinations is `71471eba-b620-49e4-90fd-23f1fa0174d8`. Use this value in the call. 
 *   `{SOURCE_CONNECTION_ID}`: Use the source connection ID you obtained in the step [Connect to your Experience Platform](#connect-to-your-experience-platform-data).
 *   `{TARGET_CONNECTION_ID}`: Use the target connection ID you obtained in the step [Connect to streaming destination](#connect-to-streaming-destination).
 
