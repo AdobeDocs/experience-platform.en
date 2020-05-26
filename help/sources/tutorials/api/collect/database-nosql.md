@@ -614,6 +614,8 @@ The last step towards collecting data is to create a dataflow. At this point, yo
 
 A dataflow is responsible for scheduling and collecting data from a source. You can create a dataflow by performing a POST request while providing the previously mentioned values within the payload.
 
+You can schedule an ingestion flow using schedule params. Start time designates the initial ingestion and must be set in epoch time in seconds. The frequency of flows can be defined as once, per minute, per hour, per day, or per week. The interval param represents the period between two consecutive flow runs and is not required if frequency is set to once. However, interval must be set to equal or greater than 15 for all other frequencies.
+
 **API format**
 
 ```http
@@ -665,6 +667,9 @@ curl -X POST \
 | `sourceConnectionIds`| The source connection ID associated with your database. |
 | `targetConnectionIds`| The target connection ID associated with your database. |
 | `transformations.params.mappingId`| The mapping ID associated with your database. |
+| `scheduleParams.startTime` | The start time for the dataflow in epoch time in seconds. |
+| `scheduleParams.frequency` | The selectable frequency values include: `once`, `minute`, `hour`, `day`, or `week`.
+| `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer. Interval is not required when frequency is set as `once` and should be greater than or equal to `15` for other frequency values. |
 
 **Response**
 
