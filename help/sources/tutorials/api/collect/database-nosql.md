@@ -614,7 +614,7 @@ The last step towards collecting data is to create a dataflow. At this point, yo
 
 A dataflow is responsible for scheduling and collecting data from a source. You can create a dataflow by performing a POST request while providing the previously mentioned values within the payload.
 
-You can schedule an ingestion flow using schedule params. Start time designates the initial ingestion and must be set in epoch time in seconds. The frequency of flows can be defined as once, per minute, per hour, per day, or per week. The interval param represents the period between two consecutive flow runs and is not required if frequency is set to once. However, interval must be set to equal or greater than 15 for all other frequencies.
+To schedule an ingestion, you must first set the start time value to epoch time in seconds. Then, you must set the frequency value to one of the five options: `once`, `minute`, `hour`, `day`, or `week`. The interval value designates the period between two consecutive ingestions and creating a one-time ingestion does not require an interval to be set. For all other frequencies, the interval value must be set to equal or greater than `15`.
 
 **API format**
 
