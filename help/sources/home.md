@@ -31,7 +31,7 @@ Experience Platform allows data to be ingested from other Adobe applications, in
 
 Experience Platform provides support for ingesting data from a third-party advertising system. See the following related documents for more information on specific source connectors:
 
-- [Google Ads connector](connectors/advertising/ads.md)
+- [Google AdWords connector](connectors/advertising/ads.md)
 
 ### Cloud Storage
 
