@@ -29,7 +29,7 @@ The following sections provide additional information that you will need to know
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string used to connect to your HP Vertica instance. The connection string pattern for HP Vertica is `Server=<server>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>` |
+| `connectionString` | The connection string used to connect to your HP Vertica instance. The connection string pattern for HP Vertica is `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 
 For more information about getting started refer to [this HP Vertica document](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm).
 
