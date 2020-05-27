@@ -297,7 +297,7 @@ An identity descriptor signals that the "sourceProperty" of the "sourceSchema" i
 
 #### Friendly name descriptor
 
-Friendly name descriptors allow a user to modify the `title` and `description` values of the core library schema fields. Especially useful when working with "eVars" and other "generic" fields that you wish to label as containing information specific to your organization. The UI can use these to show a more friendly name or to only show fields that have a friendly name.
+Friendly name descriptors allow a user to modify the `title`, `description`, and `meta:enum` values of the core library schema fields. Especially useful when working with "eVars" and other "generic" fields that you wish to label as containing information specific to your organization. The UI can use these to show a more friendly name or to only show fields that have a friendly name.
 
 ```json
 {
