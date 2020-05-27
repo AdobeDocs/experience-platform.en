@@ -12,12 +12,12 @@ author: crhoades, ens28527
 
 Updates to existing features in Adobe Experience Platform:
 
-- [Adobe Experience Platform release notes](#adobe-experience-platform-release-notes)
-  - [User interface updates {#ux}](#user-interface-updates-ux)
-  - [Data Science Workspace {#dsw}](#data-science-workspace-dsw)
-  - [Destinations {#destinations}](#destinations-destinations)
-  - [Experience Platform Web SDK and Experience Platform Edge Network {#edge}](#experience-platform-web-sdk-and-experience-platform-edge-network-edge)
-  - [Sources {#sources}](#sources-sources)
+- [User interface updates](#ux)
+- [Data Science Workspace](#dsw)
+- [Destinations](#destinations)
+- [Experience Platform Web SDK and Experience Platform Edge Network](#edge)
+- [Real-time Customer Profile](#profile)
+- [Sources](#sources)
 
 ## User interface updates {#ux}
 
@@ -93,6 +93,29 @@ The Experience Platform Web SDK and Experience Platform Edge Network allow users
 
 For more information on Platform Web SDK and Edge Network, refer to the [documentation](../../edge/home.md).
 
+## Real-time Customer Profile {#profile}
+
+Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. Profile allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+
+**New features**
+
+| Feature    | Description  |
+| -----------| ---------- |
+|New Profile Export metrics| Added metrics to profile export jobs showing total number of exported profiles and number of profiles in each namespace.|
+|New Observability Insights metrics| Observability Insights API now has the following metrics for streaming ingestion into Profile: Incoming Request Rate, Successful Ingestion Rate, Ingested Record Size.|
+|Bulk GET endpoint|Added bulk GET endpoint to Real-time Customer Profile API to enable retrieving of multiple results in a single API call. You can now bulk GET up to 100 IDs for segment definitions, segment jobs, and merge policies.|
+|Browse profile by identity|In the Platform UI you can now select an identity namespace and provide an identity value in order to browse a profile.|
+
+**Bug fixes**
+
+- None.
+
+**Known issues**
+
+- None.
+
+For more information on Real-time Customer Profile, including tutorials and best practices for working with Profile data, please read the [Real-time Customer Profile overview](../../profile/home.md).
+
 ## Sources {#sources}
 
 Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third party software, and your CRM system.
@@ -109,6 +132,6 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 **Known issues**
 
-- None
+- None.
 
 To learn more about sources, see the [sources overview](../../sources/home.md).
