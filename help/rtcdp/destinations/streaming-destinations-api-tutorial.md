@@ -387,7 +387,7 @@ A successful response returns the ID (`id`) of the newly created dataflow and an
 ```
 
 
-## Activate data to your new destination
+## Activate data to your new destination {#activate-data}
 
 ![Destination steps overview step 5](/help/rtcdp/destinations/assets/step5-create-streaming-destination-api.png)
 
@@ -446,6 +446,18 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
                 "path": "{PROFILE_ATTRIBUTE}"
             }
         }
+    },
+        },
+        {
+        "op": "add",
+        "path": "/transformations/0/params/profileSelectors/selectors/-",
+        "value": {
+            "type": "JSON_PATH",
+            "value": {
+                "operator": "EXISTS",
+                "path": "{PROFILE_ATTRIBUTE}"
+            }
+        }
     }
 ]
 ```
@@ -453,7 +465,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 *   `{DATAFLOW_ID}`: Use the data flow you obtained in the previous step.
 *   `{ETAG}`: Use the etag that you obtained in the previous step.
 *   `{SEGMENT_ID}`: Provide the segment ID that you want to export to this destination. To retrieve segment IDs for the segments that you want to activate, go to https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/, select **Segmentation Service API** in the left navigation menu, and look for the `GET /segment/jobs` operation.
-*   `{PROFILE_ATTRIBUTE}`: For example, `"person.lastName"`
+*   `{PROFILE_ATTRIBUTE}`: For example, `personalEmail.address` or `person.lastName`
 
 **Response**
 
@@ -502,6 +514,13 @@ The returned response should include in the `transformations` parameter the segm
                             {
                                 "type": "JSON_PATH",
                                 "value": {
+                                    "path": "personalEmail.address",
+                                    "operator": "EXISTS"
+                                }
+                            },
+                            {
+                                "type": "JSON_PATH",
+                                "value": {
                                     "path": "person.lastname",
                                     "operator": "EXISTS"
                                 }
@@ -523,6 +542,41 @@ The returned response should include in the `transformations` parameter the segm
         }
     }
 ],
+```
+
+**Exported Data**
+
+>[!IMPORTANT]
+>
+> In addition to the profile attributes and the segments in the step [Activate data to your new destination](#activate-data), the exported data in AWS Kinesis and Azure Event Hubs will also include information about the identity map. This represents the identities of the exported profiles (for example cookie ID, mobile ID, Google ID, etc.). See an example below.
+
+```
+
+{
+   "segmentMembership":{
+      "ups":{
+         "72ddd79b-6b0a-4e97-a8d2-112ccd81bd02":{
+            "lastQualificationTime":"2020-03-03T21:24:39Z",
+            "status":"qualified"
+         }
+      }
+   }
+},
+"identityMap":{
+   "email_lc_sha256":[
+      {
+         "id":"655332b5fa2aea4498bf7a290cff017cb4"
+      },
+      {
+         "id":"66baf76ef9de8b42df8903f00e0e3dc0b7"
+      }
+   ]
+},
+"profileAttributes":{
+   "need-information":"please-insert-information"
+}
+
+
 ```
 
 ## Next steps
