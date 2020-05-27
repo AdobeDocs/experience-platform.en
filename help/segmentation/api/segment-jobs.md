@@ -331,7 +331,38 @@ POST /segment/jobs/bulk-get
 
 **Request**
 
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "ids": [
+            {
+                "id": "cc3419d3-0389-47f1-b174-fead6b3c830d"
+            },
+            {
+                "id": "c527dc3f-07fe-4b96-be4e-23f38e734ff8"
+            }
+        ]
+    }'
+```
+
 **Response**
+
+A successful response returns HTTP status 207 with the following information.
+
+```json
+{
+    "results": {
+        "cc3419d3-0389-47f1-b174-fead6b3c830d": {
+            
+        }
+    }
+}
+```
 
 ## Cancel or delete a specific segment job
 
