@@ -213,7 +213,7 @@ After reading this guide you now have a better understanding of how Segment Sear
 
 ## Appendix {#appendix}
 
-The following sections provide additional information about how search terms work. Search queries are written in the following manner: `{FieldName}:{SearchExpression}`.
+The following sections provide additional information about how search terms work. Search queries are written in the following manner: `s={FieldName}:{SearchExpression}`. So, for example, to search for a segment named AAM or Platform, you would use the following search query: `s=segmentName:AAM%20OR%20Platform`.
 
 ### Search fields {#search-fields}
 
@@ -231,6 +231,8 @@ The following table lists the fields which can be searched within the search que
 ### Search expression {#search-expression}
 
 The following table lists the specifics of how search queries works when using the Segment Search API. 
+
+> ![NOTE] For best practices, HTML encode your search expression. The following examples are shown in a non-HTML encoded format for better clarity.
 
 | Example search expression | Description |
 | ------------------------- | ----------- |
