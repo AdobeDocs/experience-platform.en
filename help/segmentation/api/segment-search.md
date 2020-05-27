@@ -34,8 +34,8 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 
 | Parameters | Description | 
 | ---------- | ----------- | 
-| schema.name (`{SCHEMA}`) | **(Required)** The schema class value associated with the search objects. Currently, only `_xdm.context.segmentdefinition` is supported. |
-| s (`{SEARCH_TERM}`) | *(Optional)* A query that conforms to Microsoft's implementation of [Lucene's search syntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). If no search term is specified, then all records associated with `schema.name` will be returned. A more detailed explanation can be found in the [appendix](#appendix) of this document. |
+| schema.name={SCHEMA} | **(Required)** Where {SCHEMA} represents the schema class value associated with the search objects. Currently, only `_xdm.context.segmentdefinition` is supported. |
+| s={SEARCH_TERM} | *(Optional)* Where {SEARCH_TERM} represents a query that conforms to Microsoft's implementation of [Lucene's search syntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). If no search term is specified, then all records associated with `schema.name` will be returned. A more detailed explanation can be found in the [appendix](#appendix) of this document. |
 
 **Request**
 
@@ -90,12 +90,12 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | Parameters | Description | 
 | ---------- | ----------- | 
-| schema.name (`{SCHEMA}`) | **(Required)** The schema class value associated with the search objects. Currently, only `_xdm.context.segmentdefinition` is supported. |
-| namespace (`{NAMESPACE}`) | **(Required)** The namespace you wish to search within. |
-| s (`{SEARCH_TERM}`) | *(Optional)* A query that conforms to Microsoft's implementation of [Lucene's search syntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). If no search term is specified, then all records associated with `schema.name` will be returned. A more detailed explanation can be found in the [appendix](#appendix) of this document. |
-| entityId (`{ENTITY_ID}`) | *(Optional)* Limits your search to within the designated folder. |
-| limit | *(Optional)* The number of search results to return. The default value is 50. |
-| page | *(Optional)* The page number used for paginating results of the query searched. Please note that the page number starts at **0**.|
+| schema.name={SCHEMA}| **(Required)** Where {SCHEMA} contains the schema class value associated with the search objects. Currently, only `_xdm.context.segmentdefinition` is supported. |
+| namespace={NAMESPACE} | **(Required)** Where {NAMESPACE} contains the namespace you wish to search within. |
+| s={SEARCH_TERM} | *(Optional)* Where {SEARCH_TERM} contains a query that conforms to Microsoft's implementation of [Lucene's search syntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). If no search term is specified, then all records associated with `schema.name` will be returned. A more detailed explanation can be found in the [appendix](#appendix) of this document. |
+| entityId={ENTITY_ID} | *(Optional)* Limits your search to within the designated folder, specified with {ENTITY_ID}. |
+| limit={LIMIT} | *(Optional)* Where {LIMIT} represents the number of search results to return. The default value is 50. |
+| page={PAGE} | *(Optional)* Where {PAGE} represents the page number used for paginating results of the query searched. Please note that the page number starts at **0**.|
 
 
 **Request**
@@ -161,9 +161,9 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | Parameters | Description | 
 | ---------- | ----------- | 
-| schema.name (`{SCHEMA}`) | **(Required)** The schema class value associated with the search objects. Currently, only `_xdm.context.segmentdefinition` is supported. |
-| namespace (`{NAMESPACE}`) | **(Required)** The namespace you wish to search within. |
-| entityId (`{ENTITY_ID}`) | **(Required)** The ID of the search object you want to get the structural information about. |
+| schema.name={SCHEMA} | **(Required)** Where {SCHEMA} contains the schema class value associated with the search objects. Currently, only `_xdm.context.segmentdefinition` is supported. |
+| namespace={NAMESPACE} | **(Required)** Where {NAMESPACE} contains the namespace you wish to search within. |
+| entityId={ENTITY_ID} | **(Required)** The ID of the search object you want to get the structural information about, specified with {ENTITY_ID}. |
 
 **Request**
 
