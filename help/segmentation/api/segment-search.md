@@ -184,26 +184,29 @@ A successful response returns HTTP status 200 with detailed structural informati
 
 ```json
 {
-  "taxonomy": [
-    {
-      "id": "carTraits",
-      "label": "AAMTraits for Cars",
-      "parentFolderId": "root"
-    },
-    {
-      "id": "fastCarsFolder",
-      "label": "Fast Cars",
-      "parentFolderId": "carTraits"
-    },
-    {
-      "id": "porsche11037",
-      "label": "Porsche",
-      "parentFolderId": "redCarsFolderId"
+    "taxonomy": [
+        {
+            "id": "0",
+            "base64EncodedSourceId": "RFVGZ01BLTVlNjgzMGZjMzk3YjQ1MThhYWExYTA4Zg2",
+            "name": "AAMTraits for Cars",
+            "parentFolderId": "root"
+        },
+        {
+            "id": "150561",
+            "base64EncodedSourceId": "RFVGamdpRk1BZy01ZTY4MzBmYzM5N2I0NTE4YWFhMWEwOGY1",
+            "name": "Fast Cars",
+            "parentFolderId": "carTraits"
+        },
+        {
+            "id": "porsche11037",
+            "base64EncodedSourceId": "REFGZ01CLTVlNjczMGZjMzk3YjQ1MThhZGIxYTA4Zg==",
+            "name": "Porsche",
+            "parentFolderId": "redCarsFolderId"
+        }
+    ],
+    "status": {
+        "message": "Success"
     }
-  ],
-  "status": {
-    "message": "Success"
-  }
 }
 ```
 
@@ -214,6 +217,8 @@ After reading this guide you now have a better understanding of how Segment Sear
 ## Appendix {#appendix}
 
 The following sections provide additional information about how search terms work. Search queries are written in the following manner: `s={FieldName}:{SearchExpression}`. So, for example, to search for a segment named AAM or Platform, you would use the following search query: `s=segmentName:AAM%20OR%20Platform`.
+
+> ![NOTE] For best practices, the search expression should be HTML encoded, like the example shown above.
 
 ### Search fields {#search-fields}
 
@@ -232,7 +237,7 @@ The following table lists the fields which can be searched within the search que
 
 The following table lists the specifics of how search queries works when using the Segment Search API. 
 
-> ![NOTE] For best practices, HTML encode your search expression. The following examples are shown in a non-HTML encoded format for better clarity.
+> ![NOTE] The following examples are shown in a non-HTML encoded format for better clarity. For best practices, HTML encode your search expression. 
 
 | Example search expression | Description |
 | ------------------------- | ----------- |
