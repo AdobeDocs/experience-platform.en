@@ -8,6 +8,7 @@ topic: getting started
 # Adobe Experience Platform overview
 
 >[!NOTE]
+>
 >Adobe Experience Platform documentation has recently moved. Please take a moment to review the new navigation and to update any existing bookmarks.
  
 Adobe Experience Platform is the most powerful, flexible, and open system on the market for building and managing complete solutions that drive customer experience. Experience Platform enables organizations to centralize and standardize customer data and content from any system and apply data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
@@ -34,6 +35,10 @@ Experience Platform documentation is provided in multiple formats for a variety 
 ## Experience Platform tutorials
 
 Get started with Platform quickly and easily by following along with step-by-step tutorials for everything from preparing your data for ingestion to advanced machine learning algorithms. These tutorials have been designed to supplement the information found within the Experience Platform documentation, so for best results keep the documents on-hand while completing the tutorials. Visit the [Experience Platform tutorials](../tutorials/home.md) to get started.
+
+## Video tutorials
+
+Watch [video tutorials](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html) for a wide variety of Experience Platform topics.
 
 ## Reference documents and resources
 
