@@ -21,7 +21,7 @@ Profile accepts both **record** and **time-series** data, as long as the data in
 
 Like all Platform services, Profile requires its data to be semantically structured under an Experience Data Model (XDM) schema. In turn, this schema must have a **primary identity** defined and be enabled for use in Profile.
 
-If you are unfamiliar with XDM, start with the [XDM overview](../xdm/home.md) to learn more. Next, see the XDM user guide for steps on how to [set identity fields]() and [enable a schema for Profile]().
+If you are unfamiliar with XDM, start with the [XDM overview](../xdm/home.md) to learn more. Next, see the XDM user guide for steps on how to [set identity fields](../xdm/tutorials/create-schema-ui.md#identity-field) and [enable a schema for Profile](../xdm/tutorials/create-schema-ui.md#profile).
 
 ### Where is Profile data stored?
 
@@ -86,7 +86,7 @@ When creating a new computed attribute, this error occurs when the provided `nam
 
 When creating a new computed attribute, this error occurs when the provided `name` property is already being used for the schema indicated under `schema.name`. Replace the value with a unique name before trying again.
 
-###  Invalid delete request (Profile System Job)
+### Invalid delete request (Profile System Job)
 
 ```json
 {
