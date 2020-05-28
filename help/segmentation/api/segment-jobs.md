@@ -321,7 +321,7 @@ A successful response returns HTTP status 200 with detailed information about th
 
 ## Bulk retrieve segment jobs
 
-You can retrieve detailed information about multiple specified segment jobs by making a POST request to the `/segment/jobs/bulk-get` endpoint and providing the segment jobs' `id` values in the request body.
+You can retrieve detailed information about multiple specified segment jobs by making a POST request to the `/segment/jobs/bulk-get` endpoint and providing the  `id` values of the segment jobs in the request body.
 
 **API format**
 
