@@ -13,7 +13,6 @@ user-guide-title: Real-time Customer Profile Help
   * [Edge projections](api/edge-projections.md)
   * [Entities (Profile access)](api/entities.md)
   * [Merge policies](api/merge-policies.md)
-  * [Profile search](api/profile-search.md)
   * [Profile system jobs (Delete requests)](api/profile-system-jobs.md)
 * Profile UI {#ui}
   * [Profile user guide](ui/user-guide.md)

@@ -14,7 +14,7 @@ In order to utilize Real-time Machine Learning, you need to have access to an or
 
 The guides for Real-time Machine Learning require a working understanding of Python 3, [Jupyter notebooks](../jupyterlab/overview.md), data science, and machine learning.
 
-Key Terms:
+**Key Terms:**
 
 - **DSL:** Domain Specific Language.
 - **Edge:** Real-time Machine Learning scoring service can be run on Edge clusters closer to your activations and applications.

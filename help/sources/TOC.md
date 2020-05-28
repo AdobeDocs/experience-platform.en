@@ -17,7 +17,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Audience Manager mapping fields](connectors/adobe-applications/mapping/audience-manager.md)
       - [Target mapping fields](connectors/adobe-applications/mapping/target.md)
   - Advertising {#advertising}
-    - [Google Ads connector](connectors/advertising/ads.md)
+    - [Google AdWords connector](connectors/advertising/ads.md)
   - Cloud storage {#cloud-storage}
     - [Amazon Kinesis connector](connectors/cloud-storage/kinesis.md)
     - [Azure Data Lake Storage Gen2 connector](connectors/cloud-storage/adls-gen2.md)
@@ -58,7 +58,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
 - API tutorials {#api-tutorials}
   - Create a source connector {#create}
     - Advertising {#advertising}
-      - [Google Ads connector](tutorials/api/create/advertising/ads.md)
+      - [Google AdWords connector](tutorials/api/create/advertising/ads.md)
     - Cloud storage {#cloud-storage}
       - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
       - [Amazon S3 connector](tutorials/api/create/cloud-storage/s3.md)
@@ -125,7 +125,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Adobe Audience Manager connector](tutorials/ui/create/adobe-applications/audience-manager.md)
       - [Customer attributes connector](tutorials/ui/create/adobe-applications/customer-attributes.md)
     - Advertising {#create}
-      - [Google Ads connector](tutorials/ui/create/advertising/ads.md)
+      - [Google AdWords connector](tutorials/ui/create/advertising/ads.md)
     - Cloud storage {#cloud-storage}
       - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
       - [Azure Data Lake Storage Gen2 connector](tutorials/ui/create/cloud-storage/adls-gen2.md)

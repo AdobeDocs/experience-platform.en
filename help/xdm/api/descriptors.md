@@ -297,20 +297,25 @@ An identity descriptor signals that the "sourceProperty" of the "sourceSchema" i
 
 #### Friendly name descriptor
 
-Friendly name descriptors allow a user to modify the `title` and `description` values of the core library schema fields. Especially useful when working with "eVars" and other "generic" fields that you wish to label as containing information specific to your organization. The UI can use these to show a more friendly name or to only show fields that have a friendly name.
+Friendly name descriptors allow a user to modify the `title`, `description`, and `meta:enum` values of the core library schema fields. Especially useful when working with "eVars" and other "generic" fields that you wish to label as containing information specific to your organization. The UI can use these to show a more friendly name or to only show fields that have a friendly name.
 
 ```json
 {
   "@type": "xdm:alternateDisplayInfo",
   "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18",
-  "xdm:sourceVersion": 1
-  "xdm:sourceProperty": "/eVars/eVar1",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/xdm:eventType",
   "xdm:title": {
-    "en_us":{"Loyalty ID"}
+    "en_us": "Event Type"
   },
   "xdm:description": {
-    "en_us":{"Unique ID of loyalty program member."}
+    "en_us": "The type of experience event detected by the system."
   },
+  "meta:enum": {
+    "click": "Mouse Click",
+    "addCart": "Add to Cart",
+    "checkout": "Cart Checkout"
+  }
 }
 ```
 
@@ -322,6 +327,7 @@ Friendly name descriptors allow a user to modify the `title` and `description` v
 | `xdm:sourceProperty` | The path to the specific property that will be the identity. Path should begin with a "/" and not end with one. Do not include "properties" in the path (e.g. use "/personalEmail/address" instead of "/properties/personalEmail/properties/address") |
 | `xdm:title` | The new title you wish to display for this field, written in Title Case. |
 | `xdm:description` | An optional description can be added along with the title. |
+| `meta:enum` | If the field indicated by `xdm:sourceProperty` is a string field, `meta:enum` determines the list of suggested values for the field in the Experience Platform UI. It is important to note that `meta:enum` does not declare an enumeration or provide any data validation for the XDM field.<br><br>This should only be used for core XDM fields defined by Adobe. If the source property is a custom field defined by your organization, you should instead edit the field's `meta:enum` property directly through a [PATCH request](./update-resource.md).  |
 
 #### Relationship descriptor
 

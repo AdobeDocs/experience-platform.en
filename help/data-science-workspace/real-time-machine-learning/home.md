@@ -54,7 +54,7 @@ Real-time Machine Learning is currently in alpha. The functionality outlined bel
 > Alpha limitations:
 > - Currently, only ONNX based models are supported.
 > - Functions used in nodes cannot be serialized. For example, a lambda function used in a Pandas node.
-> - There is a 60 second sleep after Edge deployment is done manually.
+> - There is a 20 second sleep after Edge deployment is done manually.
 > - For deep learning, your data needs to be sent in such a way that when `df.values` is called it returns an array that is acceptable by your DL model. This is because the ONNX model scoring node uses `df.values` and sends the output to score against the model.
 
 
