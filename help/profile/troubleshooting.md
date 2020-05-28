@@ -41,7 +41,7 @@ There are multiple methods of accessing Profile data, depending on whether you a
 
 If you know the IDs of the Profile entities you want to access, you can use the `/entities` (Profile access) endpoint in the Profile API to look up those entities. See the section on [entities](./api/entities.md) in the developer guide for more information.
 
-If you do not know the the IDs of the Profile entities you want to access, you can use the `/search` endpoint in the Profile API to search for entities using query parameters. See the [Profile search](./api/profile-search.md) section in the developer guide for detailed steps.
+If you do not know the the IDs of the Profile entities you want to access, you can use the `/search` endpoint in the Segmentation Service API to search for entities using query parameters. See the [Segment Search](../segmentation/api/segment-search.md) section in the Segmentation Service developer guide for detailed steps.
 
 #### Using the UI
 
