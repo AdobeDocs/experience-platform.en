@@ -93,32 +93,44 @@ Your exported Experience Platform data lands in [!DNL Amazon Kinesis] in JSON fo
 
 ```
 
-As another example, the event below contains the hashed email address and phone numbers of an audience that has qualified for a certain segment.
+As another example, the event below contains the hashed email address and the last name profile attribute of an audience that has qualified for a certain segment.
 
 ```
-
 {
-   "segmentMembership":{
-      "ups":{
-         "7841ba61-23c1-4bb3-a495-00d695fe1e93":{
-            "lastQualificationTime":"2020-03-03T21:24:39Z",
-            "status":"qualified"
+   {
+      "segmentMembership":{
+         "ups":{
+            "7841ba61-23c1-4bb3-a495-00d695fe1e93":{
+               "lastQualificationTime":"2020-03-03T21:24:39Z",
+               "status":"qualified"
+            }
          }
       }
-   }
-},
-"identityMap":{
-   "email_lc_sha256":[
+   },
+   "identityMap":{
+      "email_lc_sha256":[
+         {
+            "id":"655332b5fa2aea4498bf7a290cff017cb4"
+         },
+         {
+            "id":"66baf76ef9de8b42df8903f00e0e3dc0b7"
+         },
+         {
+            "id":"12335ds29gr33433jk5733f00e05ghtjaa"
+         }
+      ]
+   },
+   "person": [
       {
-         "id":"655332b5fa2aea4498bf7a290cff017cb4"
+         "lastname":"smith"
       },
       {
-         "id":"66baf76ef9de8b42df8903f00e0e3dc0b7"
-      }
+         "lastname":"robinson"
+      },
+      {
+         "lastname":"williams"
+      },
    ]
-},
-"profileAttributes":{
-   "need-information":"please-insert-information"
 }
 
 ```
