@@ -83,6 +83,7 @@ Your exported Experience Platform data lands in [!DNL Azure Event Hubs] in JSON 
 },
 
 ```
+
 As another example, the event below contains the hashed email address and the last name profile attribute of an audience that has qualified for a certain segment.
 
 ```
