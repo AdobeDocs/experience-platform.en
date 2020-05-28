@@ -13,14 +13,39 @@ Real-time Customer Profile is a generic lookup entity store that merges data fro
 
 ## FAQ
 
-### What kinds of data are required for Real-time Customer Profile?
+The following is a list of answers to frequently asked questions about Real-time Customer Profile.
 
-### If I have already ingested data into Platform, can I convert it into Profile data?
+### What kinds of data are accepted for Real-time Customer Profile?
+
+Profile accepts both **record** and **time-series** data, as long as the data in question contains at least one identity value that associates the data with a unique individual person.
+
+Like all Platform services, Profile requires its data to be semantically structured under an Experience Data Model (XDM) schema. In turn, this schema must have a **primary identity** defined and be enabled for use in Profile.
+
+If you are unfamiliar with XDM, start with the [XDM overview](../xdm/home.md) to learn more. Next, see the XDM user guide for steps on how to [set identity fields]() and [enable a schema for Profile]().
 
 ### Where is Profile data stored?
 
+Real-time Customer Profile maintains its own data store (referred to as the "Profile store"), separate from the Data Lake that contains other ingested Platform data. 
+
+### If I have already ingested data into Platform, can I convert it into Profile data?
+
+If data has been ingested into a non-Profile dataset, it cannot be directly converted into Profile data. While you can configure an existing dataset to be enabled for Profile, any data that was ingested prior to that configuration will still not appear in the Profile store.
+
+If you wish to add previously ingested data to the Profile store, follow the [dataset configuration tutorial](./tutorials/dataset-configuration.md) to create a new dataset or convert an existing dataset to be enabled for Profile, and then re-ingest the desired data into that dataset.
+
 ### How can I access my Profile data?
 
+There are multiple methods of accessing Profile data, depending on whether you are using the API or UI.
+
+#### Using the API
+
+If you know the IDs of the Profile entities you want to access, you can use the `/entities` (Profile access) endpoint in the Profile API to look up those entities. See the section on [entities](./api/entities.md) in the developer guide for more information.
+
+If you do not know the the IDs of the Profile entities you want to access, you can use the `/search` endpoint in the Profile API to search for entities using query parameters. See the [Profile search](./api/profile-search.md) section in the developer guide for detailed steps.
+
+#### Using the UI
+
+In the Experience Platform UI, the **Browse** tab in the **Profiles** workspace allows you to view the total profile count and search for individual profiles by their identity value. See the [Profile user guide](./ui/user-guide.md) for more information.
 
 ## Error codes
 
@@ -71,3 +96,52 @@ When creating a new computed attribute, this error occurs when the provided `nam
 ```
 
 This error occurs when an invalid payload is provided for a delete system job. Ensure that you are providing a valid dataset or batch ID under the payload's `dataSetID` or `batchID` property, respectively. See the section on [creating a delete request](./api/profile-system-jobs.md#create-a-delete-request) in the Profile developer guide for more information.
+
+### Feed batch not found for profile dataset
+
+```json
+{
+  "requestId":"LlTmQkhgHKFGHGHnIkmUxcIL4YTFSpQw",
+  "errors":{
+    "400":[
+      {
+        "code":"400",
+        "message":"Feed batch not found for profile dataset   '5da688d2c4e60518ad25b7b1'   "
+      }
+    ]
+  }
+}
+```
+
+This error occurs when a valid batch could not be found when attempting to create a delete request for Profile data. Check that you have entered the correct ID for a Profile-enabled dataset before trying again.
+
+### The projection destination has not yet been created
+
+```json
+{
+  "status":404,
+  "title":"The projection destination has not yet been created.",
+  "type":"http://ns.adobe.com/adobecloud/problem/missing-entity"
+}
+```
+
+This error occurs when the `destinationId` provided in a `POST /config/projections` request is invalid. Double-check that you have provided a valid destination ID before trying again. To create a new destination, follow the steps outlined in the [Profile developer guide](./api/edge-projections.md#create-a-destination).
+
+### Unsupported media type
+
+```json
+{
+  "status": 415,
+  "title": "HTTP 415 Unsupported Media Type",
+  "type": "http://ns.adobe.com/adobecloud/problem/unsupported-media-type"
+}
+```
+
+This error occurs when sending a POST request with an invalid Content-Type header. Double-check that you are providing a valid Content-Type value for the endpoint you are using.
+
+Most Profile endpoints accept "application/json" for their Content-Type header, with the following exceptions:
+
+| Endpoint | Content-Type |
+| --- | --- |
+| `/config/projections` | application/vnd.adobe.platform.projectionConfig+json; version=1 |
+| `/config/destinations` | application/vnd.adobe.platform.projectionDestination+json; version=1 |
