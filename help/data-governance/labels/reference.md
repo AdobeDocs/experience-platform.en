@@ -9,9 +9,7 @@ topic: labels
 
 Adobe Experience Platform includes infrastructure for data governance with Data Usage Labeling and Enforcement (DULE) at its core.  DULE features enable the application of data usage labels to datasets and fields in order to categorize data according to the type of usage policies that apply to that data.
 
-The following list outlines all data usage labels currently supported by Experience Platform. Those listed in **bold** denote labels that can be manually applied to datasets and fields, while those listed in *italics* can only be applied automatically under certain conditions.
-
-More information regarding Data Governance and DULE can be found in the [Data Governance overview](../home.md).
+This document outlines all data usage labels currently supported by Experience Platform. More information regarding Data Governance and DULE can be found in the [Data Governance overview](../home.md).
 
 ## Contract Labels
 
@@ -28,7 +26,7 @@ Contract "C" labels are used to categorize data that has contractual obligations
 |**C7**|Data cannot be used for on-site targeting of content. [More info...](#c7)|
 |**C8**|Data cannot be used for measurement of your organization’s websites or apps. [More info...](#c8)|
 |**C9**|Data cannot be used in Data Science workflows. [More info...](#c9)|
-|*C10*|Data cannot be used for stitched identity activation. [More info...](#c10)|
+|**C10**|Data cannot be used for stitched identity activation. [More info...](#c10)|
 
 ## Identity Labels
 
@@ -117,7 +115,4 @@ Some contracts include explicit prohibitions on data use for data science. Somet
 
 ### C10 {#c10}
 
-Some data usage policies restrict the use of stitched identity data for single identity personalization. The C10 label is automatically applied to segments under the following scenarios:
-
-- The merge policy of the segment uses the "private graph" option
-- The segment is shared with Adobe Audience Manager with equivalent Data Export Controls applied
+Some data usage policies restrict the use of stitched identity data for personalization. The C10 label is automatically applied to segments if their merge policies use the "private graph" option.
