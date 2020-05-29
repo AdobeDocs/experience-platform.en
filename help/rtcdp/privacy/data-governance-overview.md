@@ -80,3 +80,7 @@ If any of the above actions triggers a violation, that action is prevented from 
 ## Next steps
 
 Now that you have been introduced to the key Data Governance features on Real-time CDP and how Experience Platform enables them, please continue to the [documentation for Data Governance on Adobe Experience Platform](../../data-governance/home.md). The documentation provides overviews of essential Data Governance concepts, as well as step-by-step workflows for managing data usage labels and policies.
+
+The following video provides an overview of Data Governance in Real-time CDP, including the use of marketing use-cases on destinations and example workflows for different scenarios:
+
+>[!VIDEO](https://video.tv.adobe.com/v/33631?quality=12&learn=on)
