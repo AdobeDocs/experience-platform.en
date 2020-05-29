@@ -92,6 +92,12 @@ Data governance is managed at several points. These include deciding what data i
 
 Experience Platform enables your customers to send opt-out requests related to the usage and storage of their data within Real-time Customer Profile. For more information on how opt-out requests are handled, please see the documentation on [honoring opt-out requests](../segmentation/honoring-opt-outs.md).
 
+## Profile guidelines
+
+Experience Platform has a series of guidelines to follow in order to effectively use Profile.
+
+
+
 ## Next steps and additional resources
 
 To learn more about Real-time Customer Profile, please continue reading the documentation provided in this guide and supplement your learning by watching the video below or exploring other [Experience Platform video tutorials](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html).
