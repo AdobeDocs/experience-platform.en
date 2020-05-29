@@ -52,11 +52,23 @@ In order to bring external data into Platform through source connectors, an ad-h
 
 To create an ad-hoc class and schema, follow the steps outlined in the [ad-hoc schema tutorial](../../../../xdm/tutorials/ad-hoc.md). When creating an ad-hoc class, all fields found in the source data must be described within the request body.
 
-Continue following the steps outlined in the developer guide until you have created an ad-hoc schema. Obtain and store the unique identifier (`$id`) of the ad-hoc schema and then proceed to the next step of this tutorial.
+Continue following the steps outlined in the developer guide until you have created an ad-hoc schema. The unique identifier (`$id`) of the ad-hoc schema is required to proceed to the next step of this tutorial.
 
 ## Create a source connection {#source}
 
-With an ad-hoc XDM schema created, a source connection can now be created using a POST request to the Flow Service API. A source connection consists of a base connection, a source data file, and a reference to the schema that describes the source data.
+With an ad-hoc XDM schema created, a source connection can now be created using a POST request to the Flow Service API. A source connection consists of a connection ID, a source data file, and a reference to the schema that describes the source data.
+
+To create a source connection, you must also define an enum value for the data format attribute.
+
+Use the following the enum values for **file-based connectors**:
+
+| Data.format | Enum value |
+| ----------- | ---------- |
+| Delimited files | `delimited` |
+| JSON files | `json` |
+| Parquet files | `parquet` |
+
+For all **table-based connectors** use the enum value: `tabular`.
 
 **API format**
 
@@ -79,7 +91,7 @@ curl -X POST \
         "baseConnectionId": "ac33bd66-1565-4915-b3bd-6615657915c4",
         "description": "Test source connection for a Cloud Storage connector",
         "data": {
-            "format": "parquet_xdm",
+            "format": "delimited",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/22a4ab59462a64de551d42dd10ec1f19d8d7246e3f90072a",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -101,11 +113,11 @@ curl -X POST \
 | `baseConnectionId` | The unique connection ID of the third-party cloud storage system you are accessing. |
 | `data.schema.id` | The ID of the ad-hoc XDM schema. |
 | `params.path` | The path of the source file you are accessing. |
-| `connectionSpec.id` | The connection spec ID associated with your specific third-party cloud storage system. |
+| `connectionSpec.id` | The connection spec ID associated with your specific third-party cloud storage system. See the [appendix](#appendix) for a list of connection spec IDs. |
 
 **Response**
 
-A successful response returns the unique identifier (`id`) of the newly created source connection. Store this value as it is required in later steps for creating a target connection.
+A successful response returns the unique identifier (`id`) of the newly created source connection. This ID is required in a later step to create a dataflow.
 
 ```json
 {
@@ -275,9 +287,9 @@ A successful response returns an array containing the ID of the newly created da
 
 ## Create a target connection
 
-A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection spec ID associated with Platform. This connection spec ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection spec ID associated with data lake. This connection spec ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-You now have the unique identifiers a target schema a target dataset and the connection spec ID to Platform. Using these identifiers, you can create a target connection using the Flow Service API to specify the dataset that will contain the inbound source data.
+You now have the unique identifiers a target schema a target dataset and the connection spec ID to data lake. Using these identifiers, you can create a target connection using the Flow Service API to specify the dataset that will contain the inbound source data.
 
 **API format**
 
@@ -299,7 +311,6 @@ curl -X POST \
         "name": "Target Connection for a Cloud Storage connector",
         "description": "Target Connection for a Cloud Storage connector",
         "data": {
-            "format": "parquet_xdm",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
                 "version": "application/vnd.adobe.xed-full+json;version=1.0"
@@ -319,11 +330,11 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | The `$id` of the target XDM schema. |
 | `params.dataSetId` | The ID of the target dataset. |
-| `connectionSpec.id` | The fixed connection spec ID to Platform. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | The fixed connection spec ID to data lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Response**
 
-A successful response returns the new target connection's unique identifier (`id`). Store this value as it is required in later steps.
+A successful response returns the new target connection's unique identifier (`id`). This ID is required in later steps.
 
 ```json
 {
@@ -573,6 +584,8 @@ The last step towards collecting cloud storage data is to create a dataflow. By 
 
 A dataflow is responsible for scheduling and collecting data from a source. You can create a dataflow by performing a POST request while providing the previously mentioned values within the payload.
 
+To schedule an ingestion, you must first set the start time value to epoch time in seconds. Then, you must set the frequency value to one of the five options: `once`, `minute`, `hour`, `day`, or `week`. The interval value designates the period between two consecutive ingestions and creating a one-time ingestion does not require an interval to be set. For all other frequencies, the interval value must be set to equal or greater than `15`.
+
 **API format**
 
 ```http
@@ -624,6 +637,9 @@ curl -X POST \
 | `sourceConnectionIds` | The source connection ID retrieved in an earlier step. |
 | `targetConnectionIds` | The target connection ID retrieved in an earlier step. |
 | `transformations.params.mappingId` | The mapping ID retrieved in an earlier step.|
+| `scheduleParams.startTime` | The start time for the dataflow in epoch time in seconds. |
+| `scheduleParams.frequency` | The selectable frequency values include: `once`, `minute`, `hour`, `day`, or `week`. |
+| `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer. Interval is not required when frequency is set as `once` and should be greater than or equal to `15` for other frequency values. |
 
 **Response**
 
@@ -655,6 +671,7 @@ The following section lists the different cloud storage source connectors and th
 | Amazon Kinesis (Kinesis) | `86043421-563b-46ec-8e6c-e23184711bf6` |
 | Azure Blob (Blob) | `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 | Azure Data Lake Storage Gen2  (ADLS Gen2) | `0ed90a81-07f4-4586-8190-b40eccef1c5a` |
-| Azure Event Hubs (Event Hubs) | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` | 
+| Azure Event Hubs (Event Hubs) | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| Azure File Storage | `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
 | Google Cloud Storage | `32e8f412-cdf7-464c-9885-78184cb113fd` |
-| SFTP | `bf367b0d-3d9b-4060-b67b-0d3d9bd06094` | 
+| SFTP | `bf367b0d-3d9b-4060-b67b-0d3d9bd06094` |
