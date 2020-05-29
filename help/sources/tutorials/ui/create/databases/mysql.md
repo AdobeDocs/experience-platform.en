@@ -7,6 +7,9 @@ topic: overview
 
 # Create a MySQL source connector in the UI
 
+> [!NOTE]
+> The MySQL connector is in beta. The features and documentation are subject to change.
+
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a MySQL source connector using the Platform user interface.
 
 ## Getting started
@@ -26,7 +29,7 @@ In order to access your MySQL account on Platform, you must provide the followin
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The MySQL connection string associated with your account. |
+| `connectionString` | The MySQL connection string associated with your account. The MySQL connection string pattern is: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 
 You can learn more about connection strings and how to obtain them by reading the [MySQL document](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html).
 

@@ -7,6 +7,9 @@ topic: overview
 
 # Create a Azure Synapse Analytics source connector in the UI
 
+> [!NOTE]
+> The Azure Synapse Analytics connector is in beta. The features and documentation are subject to change.
+
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a Azure Synapse Analytics (hereinafter referred to as "Synapse") source connector using the Platform user interface.
 
 ## Getting started
@@ -26,7 +29,7 @@ In order to access your Synapse account on Platform, you must provide the follow
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string associated with your Synapse authentication. |
+| `connectionString` | The connection string associated with your Synapse authentication. The Synapse connection string pattern is `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
 
 For more information about this value, refer to [this Synapse document](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-sql-data-warehouse).
 

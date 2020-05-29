@@ -7,6 +7,9 @@ topic: overview
 
 # Create an Azure Table Storage source connector in the UI
 
+>[!NOTE]
+>The Azure Table Storage connector is in beta. The features and documentation are subject to change.
+
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a Azure Table Storage (hereinafter referred to as "ATS") source connector using the Platform user interface.
 
 ## Getting started
@@ -26,7 +29,7 @@ In order to access your ATS account on Platform, you must provide the following 
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | A connection string to connect to your Azure Table Storage instance. |
+| `connectionString` | A connection string to connect to your Azure Table Storage instance. The connection string to connect to ATS instance. The connection string pattern for ATS is `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
 
 For more information about getting started refer to [this Azure Table Storage document](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction).
 

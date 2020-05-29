@@ -10,6 +10,7 @@ user-guide-title: Adobe Experience Platform Segmentation Service Help
 - Segmentation API {#api}
     - [Getting started](api/getting-started.md)
     - [Segment jobs](api/segment-jobs.md)
+    - [Segment search](api/segment-search.md)
     - [Streaming segmentation](api/streaming-segmentation.md)
 - Segmentation UI {#ui}
     - [Overview](ui/overview.md)

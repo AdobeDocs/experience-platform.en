@@ -7,6 +7,13 @@ seo-description: Learn how to install the Experience Platform Web SDK
 
 # Installing the SDK
 
+The AEP web SDK is available on a CDN for your to use. You can reference this file or download it and host it on your own infrastructure. It is available in a minified and non-minified version. The non-minified version is helpful for debugging purposes. 
+
+[https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
+[https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
+
+## Adding the Code
+
 The first step in implementing the Adobe Experience Platform Web SDK is to copy and paste the following "base code" as high as possible in the `<head>` tag of your HTML:
 
 ```markup
@@ -16,7 +23,7 @@ The first step in implementing the Adobe Experience Platform Web SDK is to copy 
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="alloy.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js" async></script>
 ```
 
 The base code creates a global function named `alloy`. Use this function to interact with the SDK. If you would like to name the global function something else, you may change the `alloy` name as follows:
@@ -28,7 +35,7 @@ The base code creates a global function named `alloy`. Use this function to inte
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["mycustomname"]);
 </script>
-<script src="alloy.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js" async></script>
 ```
 
 In this example, the global function is renamed `mycustomname`, instead of `alloy`.
@@ -73,5 +80,5 @@ To load the file synchronously instead of asynchronously, remove the `async` att
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="alloy.js"></script>
+<script src="https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js"></script>
 ```

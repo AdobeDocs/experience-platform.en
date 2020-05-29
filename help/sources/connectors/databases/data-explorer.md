@@ -5,7 +5,7 @@ title: Azure Data Explorer connector
 topic: overview
 ---
 
-# Azure Data Explorer connector
+# (Beta) Azure Data Explorer connector
 
 Adobe Experience Platform provides native connectivity for database providers like Microsoft, MySQL, and Azure. You can bring your data from these systems into Platform.
 

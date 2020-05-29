@@ -7,6 +7,9 @@ topic: overview
 
 # Create an Oracle source connector in the UI
 
+> [!NOTE]
+> The Oracle connector is in beta. The features and documentation are subject to change.
+
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an Oracle source connector using the Platform user interface.
 
 ## Getting started
@@ -26,7 +29,7 @@ In order to access your Oracle account on Platform, you must provide the followi
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string used to connect to Oracle. The Oracle connection string pattern is: `Host=<host>;Port=<port>;Sid=<sid>;User Id=<username>;Password=<password>`. |
+| `connectionString` | The connection string used to connect to Oracle. The Oracle connection string pattern is: `Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | The unique identifier needed to create a connection. The connection specification ID for Oracle is `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
 For more information about getting started refer to [this Oracle document](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199).

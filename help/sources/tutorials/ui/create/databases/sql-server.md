@@ -7,6 +7,9 @@ topic: overview
 
 # Create a Microsoft SQL Server source connector in the UI
 
+> [!NOTE]
+> The Microsoft SQL Server connector is in beta. The features and documentation are subject to change.
+
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a Microsoft SQL Server (hereinafter referred to as "SQL Server") source connector using the Platform user interface.
 
 ## Getting started
@@ -26,7 +29,7 @@ In order to connect to SQL Server on Platform, you must provide the following co
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string associated with your SQL Server account. |
+| `connectionString` | The connection string associated with your SQL Server account. The SQL Server connection string pattern is: `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
 
 Please refer to [this document](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server) for more information on getting started with SQL Server.
 

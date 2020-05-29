@@ -7,6 +7,9 @@ topic: overview
 
 # Create a Salesforce Service Cloud source connector in the UI
 
+>[!NOTE]
+>The Salesforce Service Cloud connector is in beta. The features and documentation are subject to change.
+
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a Salesforce Service Cloud (hereinafter referred to as "SSC") source connector using the Platform user interface.
 
 ## Getting started

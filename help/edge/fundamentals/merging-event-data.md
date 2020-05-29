@@ -16,7 +16,7 @@ Sometimes, not all data is available when an event occurs. You might want to cap
 In such cases, you can merge data with prior events by passing `eventMergeId` as an option to `event` commands as follows:
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "xdm": {
     "commerce": {
       "order": {
@@ -32,7 +32,7 @@ alloy("event", {
 
 // Time passes and more data becomes available
 
-alloy("event", {
+alloy("sendEvent", {
   "xdm": {
     "commerce": {
       "order": {
@@ -65,7 +65,7 @@ As with all commands, a promise is returned because you might execute the comman
 var eventMergeIdPromise = alloy("createEventMergeId");
 
 eventMergeIdPromise.then(function(results) {
-  alloy("event", {
+  alloy("sendEvent", {
     "xdm": {
       "commerce": {
         "order": {
@@ -83,7 +83,7 @@ eventMergeIdPromise.then(function(results) {
 // Time passes and more data becomes available
 
 eventMergeIdPromise.then(function(results) {
-  alloy("event", {
+  alloy("sendEvent", {
     "xdm": {
       "commerce": {
         "order": {
@@ -119,7 +119,7 @@ eventMergeIdPromise.then(function(results) {
 Inside the event command, the `mergeId` is actually added to the `xdm` payload.  If desired, the `mergeId` can be sent as part of the xdm option instead, like this:
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "xdm": {
     "commerce": {
       "order": {

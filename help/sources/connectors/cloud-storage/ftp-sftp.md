@@ -5,7 +5,7 @@ title: FTP and SFTP connector
 topic: overview
 ---
 
-# FTP and SFTP connector
+# (Beta) FTP and SFTP connector
 
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, Google Cloud Platform, and Azure. You can bring your data from these systems into Platform.
 

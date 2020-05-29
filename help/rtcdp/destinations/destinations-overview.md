@@ -40,3 +40,15 @@ For detailed information, see the [destination types and categories overview](/h
 The destinations functionality in Real-time CDP works with Adobe Experience Platform access control permissions. Depending on your user's permission level, you can view, manage, and activate destinations. For information about the individual permissions, see [Access control in Adobe Experience Platform](../../access-control/home.md) and scroll down to the bottom of the page.
 
 For more information about access controls, see the [Access control user guide](../../access-control/ui/overview.md).
+
+<!--
+
+// Commenting out DULE in Destinations service
+
+## Destinations and Data Usage Labeling and Enforcement (DULE)
+
+Data Usage Labeling and Enforcement (DULE) is the core mechanism of Adobe Experience Platform Data Governance. DULE is currently *not* enforced in Adobe Real-time CDP destinations.
+
+You are responsible for understanding the limitations and obligations of your data and how you use that data in Experience Platform.
+
+-->

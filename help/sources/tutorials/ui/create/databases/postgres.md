@@ -7,6 +7,9 @@ topic: overview
 
 # Create a PostgreSQL source connector in the UI
 
+> [!NOTE]
+> The PostgreSQL connector is in beta. The features and documentation are subject to change.
+
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a PostgreSQL (hereinafter referred to as "PSQL") source connector using the Platform user interface.
 
 ## Getting started
@@ -26,7 +29,7 @@ In order to access your PSQL account on Platform, you must provide the following
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string associated with your PSQL account. |
+| `connectionString` | The connection string associated with your PSQL account. The PSQL connection string pattern is: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
 
 For more information about getting started, refer to this [PSQL document](https://www.postgresql.org/docs/9.2/app-psql.html).
 

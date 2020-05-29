@@ -7,6 +7,9 @@ topic: overview
 
 # Create a MariaDB source connector in the UI
 
+> [!NOTE]
+> The MariaDB connector is in beta. The features and documentation are subject to change.
+
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a Maria DB source connector using the Platform user interface.
 
 ## Getting started
@@ -26,7 +29,7 @@ In order to access your Maria DB account on Platform, you must provide the follo
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string associated with your MariaDB authentication. |
+| `connectionString` | The connection string associated with your MariaDB authentication. The MariaDB connection string pattern is: `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 
 Please refer to [this document](https://mariadb.com/kb/en/about-mariadb-connector-odbc/) for more information about getting started with MariaDB.
 

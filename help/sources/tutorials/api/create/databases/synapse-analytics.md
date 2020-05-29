@@ -7,6 +7,9 @@ topic: overview
 
 # Create an Azure Synapse Analytics connector using the Flow Service API
 
+>[!NOTE]
+>The Azure Synapse Analytics connector is in beta. The features and documentation are subject to change.
+
 Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
 This tutorial uses the Flow Service API to walk you through the steps to connect Azure Synapse Analytics (hereinafter referred to as "Synapse") to Experience Platform.
@@ -26,10 +29,10 @@ In order for Flow Service to connect with Synapse, you must provide values for t
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string used to connect to Azure Synapse Analytics. |
+| `connectionString` | The connection string used to connect to Synapse. The Synapse connection string pattern is `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
 | `connectionSpec.id` | The unique identifier needed to create a connection. The connection specification ID for Synapse is: `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
 
-For more information about getting started refer to [this Synapse document](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-aad-authentication-configure?toc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Ftoc.json&bc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Fbreadcrumb%2Ftoc.json&tabs=azure-powershell).
+For more information about obtaining a connection string, refer to [this Synapse document](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-aad-authentication-configure?toc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Ftoc.json&bc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Fbreadcrumb%2Ftoc.json&tabs=azure-powershell).
 
 ### Reading sample API calls
 
@@ -79,7 +82,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30"
             }
         },
         "connectionSpec": {
@@ -91,12 +94,12 @@ curl -X POST \
 
 | Parameter | Description |
 | --------- | ----------- |
-| `auth.params.connectionString` | The connection string associated with your Synapse account. |
-| `connectionSpec.id` | The Synapse connection specification ID: `a49bcc7d-8038-43af-b1e4-5a7a089a7d79`. |
+| `auth.params.connectionString` | The connection string used to connect to Synapse. The Synapse connection string pattern is `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
+| `connectionSpec.id` | The Synapse connection specification ID is: `a49bcc7d-8038-43af-b1e4-5a7a089a7d79`. |
 
 **Response**
 
-A successful response returns details of the newly created connection, including its unique identifier (`id`). This ID is required to explore your data in the next tutorial.
+A successful response returns details of the newly created connection, including its unique identifier (`id`). This ID is required to explore your database in the next tutorial.
 
 ```json
 {

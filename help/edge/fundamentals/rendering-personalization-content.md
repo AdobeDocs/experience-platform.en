@@ -14,7 +14,7 @@ The Adobe Experience Platform Web SDK supports querying the personalization solu
 The SDK automatically renders personalized content when you send an event to the server and set `renderDecisions` to `true` as an option on the event.
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "renderDecisions": true,
   "xdm": {
     "commerce": {
@@ -36,7 +36,7 @@ The rendering of personalized content is asynchronous, so there should not be an
 You can request the list of decisions to be returned as a promise on the `event` command by using `scopes`. A scope is a string the lets the personalization solution know which decision you would like.
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
     xdm:{...},
     scopes:['demo-1', 'demo-2']
   }).then(function(result){
