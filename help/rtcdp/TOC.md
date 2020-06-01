@@ -71,7 +71,7 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Workflow to create cloud storage destinations](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
       * [Amazon Kinesis destination](/help/rtcdp/destinations/amazon-kinesis-destination.md)
       * [Amazon S3 destination](destinations/amazon-s3-destination.md)
-      * [Azure EventHubs destination](/help/rtcdp/destinations/azure-event-hubs-destination.md)
+      * [Azure Event Hubs destination](/help/rtcdp/destinations/azure-event-hubs-destination.md)
       * [SFTP destination](destinations/sftp-destination.md)
     * Data Management Platform destinations {#dmp-destinations}
       * [Data Management Platform destinations overview](destinations/dmp-destinations.md)
@@ -118,7 +118,7 @@ user-guide-title: Real-Time Customer Data Platform Help
   * Destinations UI tutorials {#dest-tutorials}
     * [Connect to a destination](/help/rtcdp/destinations/connect-destination.md)
     * [Activate profiles and segments to a destination](destinations/activate-destinations.md)
-  * Destination API tutorials {api-tutorials}
+  * Destination API tutorials {#api-tutorials}
     *  [Connect to streaming destinations (AWS Kinesis and Azure Event Hubs) and activate data](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
     *  [Connect to email marketing destinations and activate data](/help/tutorials/destinations/email-marketing-api.md)
 * Privacy and data governance {#privacy}

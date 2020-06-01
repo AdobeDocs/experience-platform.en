@@ -29,7 +29,7 @@ In order to access your PSQL account on Platform, you must provide the following
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string associated with your PSQL account. |
+| `connectionString` | The connection string associated with your PSQL account. The PSQL connection string pattern is: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
 
 For more information about getting started, refer to this [PSQL document](https://www.postgresql.org/docs/9.2/app-psql.html).
 

@@ -17,7 +17,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Audience Manager mapping fields](connectors/adobe-applications/mapping/audience-manager.md)
       - [Target mapping fields](connectors/adobe-applications/mapping/target.md)
   - Advertising {#advertising}
-    - [Google Ads connector](connectors/advertising/ads.md)
+    - [Google AdWords connector](connectors/advertising/ads.md)
   - Cloud storage {#cloud-storage}
     - [Amazon Kinesis connector](connectors/cloud-storage/kinesis.md)
     - [Azure Data Lake Storage Gen2 connector](connectors/cloud-storage/adls-gen2.md)
@@ -40,6 +40,8 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [Azure Synapse Analytics connector](connectors/databases/synapse-analytics.md)
     - [Azure Table Storage connector](connectors/databases/ats.md)
     - [Google BigQuery connector](connectors/databases/bigquery.md)
+    - [GreenPlum connector](connectors/databases/greenplum.md)
+    - [HP Vertica connector](connectors/databases/hp-vertica.md)
     - [IBM DB2 connector](connectors/databases/ibm-db2.md)
     - [MariaDB connector](connectors/databases/mariadb.md)
     - [Microsoft SQL Server connector](connectors/databases/sql-server.md)
@@ -56,7 +58,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
 - API tutorials {#api-tutorials}
   - Create a source connector {#create}
     - Advertising {#advertising}
-      - [Google Ads connector](tutorials/api/create/advertising/ads.md)
+      - [Google AdWords connector](tutorials/api/create/advertising/ads.md)
     - Cloud storage {#cloud-storage}
       - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
       - [Amazon S3 connector](tutorials/api/create/cloud-storage/s3.md)
@@ -81,6 +83,8 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Azure Synapse Analytics connector](tutorials/api/create/databases/synapse-analytics.md)
       - [Azure Table Storage connector](tutorials/api/create/databases/ats.md)
       - [Google BigQuery connector](tutorials/api/create/databases/bigquery.md)
+      - [GreenPlum connector](tutorials/api/create/databases/greenplum.md)
+      - [HP Vertica connector](tutorials/api/create/databases/hp-vertica.md)
       - [IBM DB2 connector](tutorials/api/create/databases/ibm-db2.md)
       - [MariaDB connector](tutorials/api/create/databases/mariadb.md)
       - [MySQL connector](tutorials/api/create/databases/mysql.md)
@@ -121,7 +125,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Adobe Audience Manager connector](tutorials/ui/create/adobe-applications/audience-manager.md)
       - [Customer attributes connector](tutorials/ui/create/adobe-applications/customer-attributes.md)
     - Advertising {#create}
-      - [Google Ads connector](tutorials/ui/create/advertising/ads.md)
+      - [Google AdWords connector](tutorials/ui/create/advertising/ads.md)
     - Cloud storage {#cloud-storage}
       - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
       - [Azure Data Lake Storage Gen2 connector](tutorials/ui/create/cloud-storage/adls-gen2.md)
@@ -143,6 +147,8 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Azure Synapse Analytics connector](tutorials/ui/create/databases/synapse-analytics.md)
       - [Azure Table Storage connector](tutorials/ui/create/databases/ats.md)
       - [Google Big Query connector](tutorials/ui/create/databases/bigquery.md)
+      - [GreenPlum connector](tutorials/ui/create/databases/greenplum.md)
+      - [HP Vertica connector](tutorials/ui/create/databases/hp-vertica.md)
       - [IBM DB2 connector](tutorials/ui/create/databases/ibm-db2.md)
       - [MariaDB connector](tutorials/ui/create/databases/mariadb.md)
       - [Microsoft SQL Server connector](tutorials/ui/create/databases/sql-server.md)
