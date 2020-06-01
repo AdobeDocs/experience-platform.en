@@ -645,3 +645,14 @@ By following this tutorial, you have created a source connector to collect data 
 
 *   [Real-time Customer Profile overview](../../../../profile/home.md)
 *   [Data Science Workspace overview](../../../../data-science-workspace/home.md)
+
+## Appendix
+
+The following section lists the different cloud storage source connectors and their connections specifications.
+
+### Connection specification
+
+| Connector name | Connection spec |
+| -------------- | --------------- |
+| Salesforce Service Cloud | `cb66ab34-8619-49cb-96d1-39b37ede86ea` |
+| ServiceNow | `eb13cb25-47ab-407f-ba89-c0125281c563` |
