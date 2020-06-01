@@ -7,7 +7,7 @@ topic: developer guide
 
 # Evaluate events in real-time with streaming segmentation 
 
-Streaming segmentation (also known as continuous query evaluation) is the ability to instantly evaluate a customer as soon as an event comes into a particular segment group. With this capability, most segment rules can now be evaluated as the data is passed into Adobe Experience Platform, meaning segment membership will be kept up to date without running scheduled segmentation jobs.
+Streaming segmentation (also known as continuous query evaluation) enables you to create and target high value segments at high speed and high scale. With this capability, most segment rules can now be evaluated as the data is passed into Adobe Experience Platform, meaning segment membership will be kept up to date without running segmentation jobs.
 
 ![](../images/api/streaming-segment-evaluation.png)
 
@@ -47,7 +47,7 @@ Additional headers may be required to complete specific requests. The correct he
 
 ### Streaming segmentation enabled query types
 
-The following table lists the different types of segmentation queries that support streaming segmentation.
+In order for a segment to be evaluated using streaming segmentation, the query must conform to the following guidelines.
 
 | Query type | Details |
 | ---------- | ------- |
@@ -64,6 +64,7 @@ The following section lists segment definition examples that will **not** be str
 | Incoming hit within a relative time window | If the segment definition refers to an incoming event **not** within the **last seven day** period. For example, within the **last two weeks**. |
 | Incoming hit that refers to a Profile within a relative window | The following options will **not** support streaming segmentation:<ul><li>An incoming event **not** within the **last seven day** period.</li><li>A segment definition that includes Adobe Audience Manager (AAM) segments or traits.</li></ul> | 
 | Incoming hit that refers to a Profile and has event history | The following options will **not** support streaming segmentation:<ul><li>An event that does **not** occur within **the last 24 hours**.</li><li>A segment definition that includes Adobe Audience Manager (AAM) segments or traits.</li></ul> |
+| Multi-entity queries | Multi-entity queries are, as a whole, **not** supported by streaming segmentation. |
 
 ## Retrieve all streaming segmentation enabled segments
 
