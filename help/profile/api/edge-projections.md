@@ -13,6 +13,9 @@ In order to drive coordinated, consistent, and personalized experiences for your
 
 The API endpoints used in this guide are part of the Real-time Customer Profile API. Before continuing, please review the [Real-time Customer Profile developer guide](getting-started.md). In particular, the [getting started section](getting-started.md#getting-started) of the Profile developer guide includes links to related topics, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform APIs.
 
+>[!NOTE]
+>Requests that contain a payload (POST, PUT, PATCH) require a `Content-Type` header. More than one `Content-Type` is used in this document. Please pay special attention to the headers in the sample calls to ensure you are using the correct `Content-Type` for each request.
+
 ## Projection destinations
 
 A projection can be routed to one or more edges by specifying the locations where data is to be sent. Each projection destination that is created has a unique ID that is then used to create the projection configuration.
@@ -418,6 +421,9 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 
 **Request**
 
+>[!NOTE]
+>The POST request to create a configuration requires a specific `Content-Type` header, as shown below. Using an incorrect `Content-Type` header results in an HTTP Status 415 (Unsupported Media Type) error.
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/config/projections?schemaName=_xdm.context.profile \
@@ -425,7 +431,7 @@ curl -X POST \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
+  -H 'Content-Type: application/vnd.adobe.platform.projectionConfig+json; version=1' \
   -d '{
         "selector": "emails,person(firstName)",
         "name": "my_test_projection",

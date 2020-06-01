@@ -27,9 +27,11 @@ An online retailer wants to reach existing customers through social platforms an
 ### Use Case #2
 
 
-An airline has different customer tiers (Bronze, Silver, and Gold), and wants to provide each of the tiers with personalized offers via social platforms. However, not all customers use the airline's mobile app, and some of them have not logged on to the company's website. The only identifiers the company has about these customers are membership IDs and email addresses.
-To target them across social media, they can onboard the customer data from their CRM into Adobe Real-time CDP, using the hashed email addresses as identifiers.
-Next, they can combine their offline data with their existing online activity data, to build new audience segments that they can target through the Facebook destination.
+An airline has different customer tiers (Bronze, Silver, and Gold), and wants to provide each of the tiers with personalized offers via social platforms. However, not all customers use the airline's mobile app, and some of them have not logged on to the company's website. The only identifiers the company has about these customers are membership IDs and email addresses. 
+
+To target them across social media, they can onboard the customer data from their CRM into Adobe Real-time CDP, using the email addresses as identifiers.
+
+Next, they can use their offline data including associated membership IDs and customer tiers to build new audience segments that they can target through the Facebook destination.
 
 ## Destination specifics {#destination-specs}
 

@@ -7,11 +7,13 @@ topic: overview
 
 # Collect marketing automation data through source connectors and APIs
 
+Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
+
 This tutorial covers the steps for retrieving data from a marketing automation system and bringing them in to Platform through source connectors and APIs.
 
 ## Getting started
 
-This tutorial requires you to have information about the file you wish to bring into Platform, including the file's path and structure. If you do not have this information, see the tutorial on [exploring a marketing automation application using the Flow Service API](../../api/create/marketing-automation/hubspot.md) before attempting this tutorial.
+This tutorial requires you to have access to a third-party marketing automation system through a valid connection and information about the file you wish to bring into Platform, including the file's path and structure. If you do not have this information, see the tutorial on [exploring a third party marketing automation system using the Flow Service API](../explore/marketing-automation.md) before attempting this tutorial.
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
@@ -50,11 +52,23 @@ In order to bring external data into Platform through source connectors, an ad-h
 
 To create an ad-hoc class and schema, follow the steps outlined in the [ad-hoc schema tutorial](../../../../xdm/tutorials/ad-hoc.md). When creating an ad-hoc class, all fields found in the source data must be described within the request body.
 
-Continue following the steps outlined in the developer guide until you have created an ad-hoc schema. Obtain and store the unique identifier (`$id`) of the ad-hoc schema and then proceed to the next step of this tutorial.
+Continue following the steps outlined in the developer guide until you have created an ad-hoc schema. The unique identifier (`$id`) of the ad-hoc schema is required to proceed to the next step of this tutorial.
 
 ## Create a source connection {#source}
 
-With an ad-hoc XDM schema created, a source connection can now be created using a POST request to the Flow Service API. A source connection consists of a base connection, a source data file, and a reference to the schema that describes the source data.
+With an ad-hoc XDM schema created, a source connection can now be created using a POST request to the Flow Service API. A source connection consists of a connection ID, a source data file, and a reference to the schema that describes the source data.
+
+To create a source connection, you must also define an enum value for the data format attribute.
+
+Use the following the enum values for **file-based connectors**:
+
+| Data.format | Enum value |
+| ----------- | ---------- |
+| Delimited files | `delimited` |
+| JSON files | `json` |
+| Parquet files | `parquet` |
+
+For all **table-based connectors** use the enum value: `tabular`.
 
 **API format**
 
@@ -73,13 +87,13 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Marketing automation source connection",
-        "baseConnectionId": "2fce94c1-9a93-4971-8e94-c19a93097129",
-        "description": "Marketing automation source connection",
+        "name": "Source connection for marketing automation",
+        "baseConnectionId": "c6d4ee17-6752-4e83-94ee-1767522e83fa",
+        "description": "Source connection for a marketing automationj connector",
         "data": {
-            "format": "parquet_xdm",
+            "format": "tabular",
             "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/80a6e931bd5e00190b72daafb4e1e4f7913a114808be9ac0",
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/5c65688f44feff94fe61cb3ae34de445fc885548b5ba5d57",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
             }
         },
@@ -95,10 +109,10 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `baseConnectionId`| The connection ID of your marketing automation application |
-| `data.schema.id`| The `$id` of the ad-hoc XDM schema. |
-| `params.path`| The path of the source file. |
-| `connectionSpec.id`| The connection specification ID of your marketing automation application. |
+| `baseConnectionId` | The unique connection ID of the third-party marketing automation system you are accessing. |
+| `data.schema.id` | The ID of the ad-hoc XDM schema. |
+| `params.path` | The path of the source file you are accessing. |
+| `connectionSpec.id`| The connection specification ID of your marketing automation system. |
 
 **Response**
 
@@ -106,8 +120,8 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 ```json
 {
-    "id": "c315c0ae-a339-44c4-95c0-aea33964c420",
-    "etag": "\"67010af9-0000-0200-0000-5e9795c40000\""
+    "id": "f44dbef2-a4f0-4978-8dbe-f2a4f0e978cf",
+    "etag": "\"5f00fba7-0000-0200-0000-5ed560520000\""
 }
 ```
 
@@ -115,7 +129,9 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 In earlier steps, an ad-hoc XDM schema was created to structure the source data. In order for the source data to be used in Platform, a target schema must also be created to structure the source data according to your needs. The target schema is then used to create a Platform dataset in which the source data is contained.
 
-A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). If you would prefer to use the user interface in Experience Platform, the [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md) provides step-by-step instructions for performing similar actions in the Schema Editor.
+A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+
+If you would prefer to use the user interface in Experience Platform, the [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md) provides step-by-step instructions for performing similar actions in the Schema Editor.
 
 **API format**
 
@@ -148,9 +164,6 @@ curl -X POST \
             },
             {
                 "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
-            },
-                    {
-                "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
             }
         ],
         "meta:containerId": "tenant",
@@ -166,11 +179,11 @@ A successful response returns details of the newly created schema including its 
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/63f2c82fcdcb606c536a62d7716e34acbf63cd4582a1c16b",
-    "meta:altId": "_{TENANT_ID}.schemas.63f2c82fcdcb606c536a62d7716e34acbf63cd4582a1c16b",
+    "$id": "https://ns.adobe.com/{TENANT_ID/schemas/da411446eec78026c28d9fafd9e406e304b771d55b07b91b",
+    "meta:altId": "_{TENANT_ID.schemas.da411446eec78026c28d9fafd9e406e304b771d55b07b91b",
     "meta:resourceType": "schemas",
     "version": "1.0",
-    "title": "Target schema for marketing automation",
+    "title": "Target schema for a marketing automation connector",
     "type": "object",
     "description": "Target schema for marketing automation",
     "allOf": [
@@ -181,11 +194,6 @@ A successful response returns details of the newly created schema including its 
         },
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile-person-details",
-            "type": "object",
-            "meta:xdmType": "object"
-        },
-        {
-            "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details",
             "type": "object",
             "meta:xdmType": "object"
         },
@@ -212,18 +220,18 @@ A successful response returns details of the newly created schema including its 
     ],
     "meta:xdmType": "object",
     "meta:registryMetadata": {
-        "repo:createdDate": 1586992941717,
-        "repo:lastModifiedDate": 1586992941717,
+        "repo:createdDate": 1591042937856,
+        "repo:lastModifiedDate": 1591042937856,
         "xdm:createdClientId": "{CREATED_CLIENT_ID}",
-        "xdm:lastModifiedClientId": "{CREATED_CLIENT_ID}",
+        "xdm:lastModifiedClientId": "{LAST_MODIFIED_CLIENT_ID}",
         "xdm:createdUserId": "{CREATED_USER_ID}",
-        "xdm:lastModifiedUserId": "{CREATED_USER_ID}",
-        "eTag": "d11e63a422b84a843cdd58d0ba8a16ce0a2068eda49ab380c1605ddd10efdf23",
-        "meta:globalLibVersion": "1.9.2"
+        "xdm:lastModifiedUserId": "{LAST_MODIFIED_USER_ID}",
+        "eTag": "3f205600107156ffc394bef428e92cbe25b2faa34e15dd916c0d8bb58d9b7dd3",
+        "meta:globalLibVersion": "1.10.4.2"
     },
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
     "meta:containerId": "tenant",
-    "meta:tenantNamespace": "_{TENANT_ID}"
+    "meta:tenantNamespace": "_{TENANT_ID"
 }
 ```
 
@@ -248,9 +256,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Target dataset for marketing automation",
+        "name": "Target dataset for a marketing automation connector",
         "schemaRef": {
-            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/14d89c5bb88e2ff488f23db896be469e7e30bb166bda8722",
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/da411446eec78026c28d9fafd9e406e304b771d55b07b91b",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         }
     }'
@@ -266,22 +274,15 @@ A successful response returns an array containing the ID of the newly created da
 
 ```json
 [
-    "@/dataSets/5e9797ac6d771118ad8356db"
+    "@/dataSets/5ed5639d798a22191b6987b2"
 ]
 ```
 
-## Create a dataset base connection
-
-In order to create a target connection and ingest external data into Platform, a dataset base connection must first be acquired.
-
-To create a dataset base connection, follow the steps outlined in the [dataset base connection tutorial](../create-dataset-base-connection.md).
-
-Continue following the steps outlined in the developer guide until you have created a dataset base connection. Obtain and store the unique identifier (`$id`) of the base connection and then proceed to the next step of this tutorial.
-
 ## Create a target connection
 
-You now have the unique identifiers for a dataset base connection, a target schema, and a target dataset. Using these identifiers, you can create a target connection using the Flow Service API to specify the dataset that will contain the inbound source data.
+A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection spec ID associated with data lake. This connection spec ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
+You now have the unique identifiers a target schema a target dataset and the connection spec ID to data lake. Using these identifiers, you can create a target connection using the Flow Service API to specify the dataset that will contain the inbound source data.
 **API format**
 
 ```https
@@ -299,21 +300,19 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "baseConnectionId": "44b1c1e43-a5ee-4d86-9c1e-43a5eebd8601",
-        "name": "Target Connection for marketing automation",
-        "description": "Target Connection for marketing automation",
+        "name": "Target Connection for a marketing automation connector",
+        "description": "Target Connection for a marketing automation connector",
         "data": {
-            "format": "parquet_xdm",
             "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/63f2c82fcdcb606c536a62d7716e34acbf63cd4582a1c16b",
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/da411446eec78026c28d9fafd9e406e304b771d55b07b91b",
                 "version": "application/vnd.adobe.xed-full+json;version=1.0"
             }
         },
         "params": {
-            "dataSetId": "5e9797ac6d771118ad8356db
+            "dataSetId": "5ed5639d798a22191b6987b2"
         },
             "connectionSpec": {
-            "id": "cc6a4487-9e91-433e-a3a3-9cf6626c1806",
+            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
             "version": "1.0"
         }
     }'
@@ -321,17 +320,14 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `baseConnectionId` | The ID of your dataset base connection. |
 | `data.schema.id` | The `$id` of the target XDM schema. |
 | `params.dataSetId` | The ID of the target dataset. |
-| `connectionSpec.id` | The connection specification ID for your marketing automation. |
-
->[!IMPORTANT] When creating a target connection, make sure to use the dataset base connection value for the base connection `id` as opposed to the connection ID of your third-party source connector.
+| `connectionSpec.id` | The fixed connection spec ID to data lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 ```json
 {
-    "id": "fd82157f-0eea-4c81-8215-7f0eeaec8139",
-    "etag": "\"5301d5ac-0000-0200-0000-5e97981a0000\""
+    "id": "4b3d05d8-b7aa-40de-bd05-d8b7aa80de65",
+    "etag": "\"dd00a1a2-0000-0200-0000-5ed564850000\""
 }
 ```
 
@@ -357,10 +353,18 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "version": 0,
-        "xdmSchema": "https://ns.adobe.com/adobe_mcdp_connectors_stg/schemas/63f2c82fcdcb606c536a62d7716e34acbf63cd4582a1c16b",
+        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/da411446eec78026c28d9fafd9e406e304b771d55b07b91b",
         "xdmVersion": "1.0",
         "id": null,
         "mappings": [
+            {
+                "destinationXdmPath": "_id",
+                "sourceAttribute": "Vid",
+                "identity": false,
+                "identityGroup": null,
+                "namespaceCode": null,
+                "version": 0
+            },
             {
                 "destinationXdmPath": "person.name.firstName",
                 "sourceAttribute": "Properties_Firstname_Value",
@@ -370,24 +374,8 @@ curl -X POST \
                 "version": 0
             },
             {
-                "destinationXdmPath": "person.name.lastName",
-                "sourceAttribute": "Properties_Lastname_Value",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "repositoryCreatedBy",
+                "destinationXdmPath": "_repo.createDate",
                 "sourceAttribute": "Added_At",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "_id",
-                "sourceAttribute": "Portal_Id",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
@@ -407,10 +395,10 @@ A successful response returns details of the newly created mapping including its
 
 ```json
 {
-    "id": "280a3cc950894945bf815c5fc60f3803",
+    "id": "500a9b747fcf4908a21917d49bd61780",
     "version": 0,
-    "createdDate": 1586993661034,
-    "modifiedDate": 1586993661034,
+    "createdDate": 1591043336298,
+    "modifiedDate": 1591043336298,
     "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
     "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
 }
@@ -571,6 +559,8 @@ The last step towards collecting marketing automation data is to create a datafl
 
 A dataflow is responsible for scheduling and collecting data from a source. You can create a dataflow by performing a POST request while providing the previously mentioned values within the payload.
 
+To schedule an ingestion, you must first set the start time value to epoch time in seconds. Then, you must set the frequency value to one of the five options: `once`, `minute`, `hour`, `day`, or `week`. The interval value designates the period between two consecutive ingestions and creating a one-time ingestion does not require an interval to be set. For all other frequencies, the interval value must be set to equal or greater than `15`.
+
 **API format**
 
 ```https
@@ -587,41 +577,50 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Dataflow for marketing automation",
-        "description": "Dataflow for marketing automation",
+        "name": "Dataflow for a marketing automation source",
+        "description": "collecting Hubspot.Contacts",
         "flowSpec": {
             "id": "14518937-270c-4525-bdec-c2ba7cce3860",
             "version": "1.0"
         },
         "sourceConnectionIds": [
-            "c315c0ae-a339-44c4-95c0-aea33964c420"
+            "f44dbef2-a4f0-4978-8dbe-f2a4f0e978cf"
         ],
         "targetConnectionIds": [
-            "fd82157f-0eea-4c81-8215-7f0eeaec8139"
+            "4b3d05d8-b7aa-40de-bd05-d8b7aa80de65"
         ],
         "transformations": [
             {
+                "name": "Copy",
+                "params": {
+                    "deltaColumn": "date-time"
+                }
+            },
+            {
                 "name": "Mapping",
                 "params": {
-                    "mappingId": "280a3cc950894945bf815c5fc60f3803",
+                    "mappingId": "500a9b747fcf4908a21917d49bd61780",
                     "mappingVersion": "0"
                 }
             }
         ],
         "scheduleParams": {
-            "startTime": "<START TIME>",
-            "frequency":"minute",
-            "interval":"30"
+            "startTime": "1591043454",
+            "frequency":"once",
+            "interval":"15"
         }
     }'
 ```
 
 | Property | Description |
 | --- | --- |
-| `flowSpec.id` | Dataflow specification ID. |
-| `sourceConnectionIds` | Source connection ID. |
-| `targetConnectionIds` | Target connection ID. |
-| `transformations.params.mappingId` | Mapping ID. |
+| `flowSpec.id` | The flow spec ID retrieved in the previous step. |
+| `sourceConnectionIds` | The source connection ID retrieved in an earlier step. |
+| `targetConnectionIds` | The target connection ID retrieved in an earlier step. |
+| `transformations.params.mappingId` | The mapping ID retrieved in an earlier step.|
+| `scheduleParams.startTime` | The start time for the dataflow in epoch time in seconds. |
+| `scheduleParams.frequency` | The selectable frequency values include: `once`, `minute`, `hour`, `day`, or `week`. |
+| `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer. Interval is not required when frequency is set as `once` and should be greater than or equal to `15` for other frequency values. |
 
 **Response**
 
@@ -629,7 +628,8 @@ A successful response returns the ID (`id`) of the newly created dataflow.
 
 ```json
 {
-    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "id": "e0bd8463-0913-4ca1-bd84-6309134ca1f6",
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
 
