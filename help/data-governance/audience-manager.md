@@ -7,7 +7,7 @@ topic: overview
 
 # Adobe Audience Manager Data Export Control support in Experience Platform
 
-In order to enforce data usage compliance in Experience Platform, all applicable datasets and fields must be given appropriate [data usage labels](). In addition, [data usage policies]() must be enabled for specific marketing actions against those labels, as outlined by the Data Usage Labeling and Enforcement (DULE) framework.
+In order to enforce data usage compliance in Experience Platform, all applicable datasets and fields must be given appropriate [data usage labels](./labels/overview.md). In addition, [data usage policies](./api/policies.md) must be enabled for specific marketing actions against those labels, as outlined by the Data Usage Labeling and Enforcement (DULE) framework.
 
 Experience Platform has the ability to share segments with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager segments are translated to equivalent labels and marketing actions recognized by Experience Platform Data Governance.
 
