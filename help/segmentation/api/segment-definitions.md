@@ -9,6 +9,8 @@ topic: developer guide
 
 Adobe Experience Platform allows you to create segments that define a group of specific attributes or behaviors from a group of profiles.
 
+This guide provides information to help you better understand segment definitions and includes sample API calls for performing basic actions using the API.
+
 ## Getting started
 
 The API endpoints used in this guide are part of the Segmentation API. Before continuing, please review the [Segmentation developer guide](./getting-started.md).
