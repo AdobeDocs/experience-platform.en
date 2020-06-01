@@ -9,8 +9,6 @@ topic: developer guide
 
 Adobe Experience Platform allows you to create segments that define a group of specific attributes or behaviors from a group of profiles.
 
-This developer guide provides instructions on the following areas for segment definitions:
-
 ## Getting started
 
 The API endpoints used in this guide are part of the Segmentation API. Before continuing, please review the [Segmentation developer guide](./getting-started.md).
@@ -265,7 +263,7 @@ A successful response returns HTTP status 200 with detailed information about th
     },
     "ttlInDays": 60,
     "profileInstanceId": "ups",
-    "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
+    "imsOrgId": "{IMS_ORG}",
     "sandbox": {
         "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
         "sandboxName": "prod",
@@ -344,7 +342,7 @@ A successful response returns HTTP status 207 with the requested segment definit
             },
             "ttlInDays": 60,
             "profileInstanceId": "ups",
-            "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
+            "imsOrgId": "{IMS_ORG}",
             "sandbox": {
                 "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
                 "sandboxName": "prod",
@@ -383,7 +381,7 @@ A successful response returns HTTP status 207 with the requested segment definit
             },
             "ttlInDays": 60,
             "profileInstanceId": "ups",
-            "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
+            "imsOrgId": "{IMS_ORG}",
             "sandbox": {
                 "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
                 "sandboxName": "prod",
@@ -542,4 +540,4 @@ A successful response returns HTTP status 200 with details of your newly updated
 
 ## Next steps
 
-After reading this guide you now have a better understanding of how segment definitions work. For more information on Segmentation, please read the [Segmentation overview](../home.md).
+After reading this guide you now have a better understanding of how segment definitions work. For more information on Segmentation, please read the [Segmentation overview](../home.md). 
