@@ -770,7 +770,7 @@ Using this payload in the request body, you can perform an additional POST reque
 
 ## Access time series events in multiple schema entities
 
-You can access multiple entities that are connected through a relationship descriptor. The following example API call assumes a relationship has already been defined between two schemas. For more information on relationship descriptors, please read the Schema Registry API developer guide [descriptors sub-guide]](../../xdm/api/descriptors.md).
+You can access multiple entities that are connected through a relationship descriptor. The following example API call assumes a relationship has already been defined between two schemas. For more information on relationship descriptors, please read the Schema Registry API developer guide [descriptors sub-guide](../../xdm/api/descriptors.md).
 
 You can include query parameters in the request path in order to specify which data to access. You can include multiple parameters, separated by ampersands (&). A complete list of valid parameters is provided in the [query parameters](#query-parameters) section of the appendix.
 
