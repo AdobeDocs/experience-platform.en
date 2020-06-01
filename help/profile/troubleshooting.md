@@ -27,9 +27,9 @@ If you are unfamiliar with XDM, start with the [XDM overview](../xdm/home.md) to
 
 Real-time Customer Profile maintains its own data store (referred to as the "Profile store"), separate from the Data Lake that contains other ingested Platform data. 
 
-### If I have already ingested data into Platform, can I convert it into Profile data?
+### If I have already ingested data into Platform, can I make it available in the Profile store?
 
-If data has been ingested into a non-Profile dataset, it cannot be directly converted into Profile data. While you can configure an existing dataset to be enabled for Profile, any data that was ingested prior to that configuration will still not appear in the Profile store.
+If data has been ingested into a non-Profile dataset, you must re-ingest that data into a Profile-enabled dataset in order to make it available in the Profile store. It is possible to enable an existing dataset for Profile, however any data that was ingested prior to that configuration will still not appear in the Profile store.
 
 If you wish to add previously ingested data to the Profile store, follow the [dataset configuration tutorial](./tutorials/dataset-configuration.md) to create a new dataset or convert an existing dataset to be enabled for Profile, and then re-ingest the desired data into that dataset.
 
@@ -41,11 +41,13 @@ There are multiple methods of accessing Profile data, depending on whether you a
 
 If you know the IDs of the Profile entities you want to access, you can use the `/entities` (Profile access) endpoint in the Profile API to look up those entities. See the section on [entities](./api/entities.md) in the developer guide for more information.
 
-If you do not know the the IDs of the Profile entities you want to access, you can use the `/search` endpoint in the Segmentation Service API to search for entities using query parameters. See the [Segment Search](../segmentation/api/segment-search.md) section in the Segmentation Service developer guide for detailed steps.
+You can also use the Adobe Experience Platform Segmentation Service API to access the individual profiles of customers who have qualified for a segment membership. See the [Segmentation Service overview](../segmentation/home.md) for more information.
 
 #### Using the UI
 
-In the Experience Platform UI, the **Browse** tab in the **Profiles** workspace allows you to view the total profile count and search for individual profiles by their identity value. See the [Profile user guide](./ui/user-guide.md) for more information.
+In the Experience Platform UI, the **[!UICONTROL Browse]** tab in the **[!UICONTROL Profiles]** workspace allows you to view the total profile count and search for individual profiles by their identity value. See the [Profile user guide](./ui/user-guide.md) for more information.
+
+You can also view a sample of profiles in the details of a segment, found under the **[!UICONTROL Browse]** tab in the **[!UICONTROL Segments]** workspace. After selecting a segment, you can select a listed profile to view its details. See the [Segmentation UI overview](../segmentation/ui/overview.md) for more information.
 
 ## Error codes
 
@@ -137,7 +139,7 @@ This error occurs when the `destinationId` provided in a `POST /config/projectio
 }
 ```
 
-This error occurs when sending a POST request with an invalid Content-Type header. Double-check that you are providing a valid Content-Type value for the endpoint you are using.
+This error occurs when sending a POST or PUT request with an invalid Content-Type header. Double-check that you are providing a valid Content-Type value for the endpoint you are using.
 
 Most Profile endpoints accept "application/json" for their Content-Type header, with the following exceptions:
 
