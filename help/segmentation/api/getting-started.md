@@ -38,7 +38,7 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
   
 >[!NOTE] For more information on working with sandboxes in Experience Platform, see the [sandboxes overview documentation](../../sandboxes/home.md).
 
-<!-- ## Estimates
+## Estimates
 
 Estimates provides statistical information for a segment definition, such as projected audience size and confidence interval. You can use the `/estimate` endpoint to view an estimate of a segment definition. 
 
@@ -56,17 +56,11 @@ Previews provide a paginated list of qualifying profiles for a segment definitio
 
 For more information on using this endpoint, please read the [previews developer guide](./previews.md).
 
-## PQL conversions
-
-Profile Query Language (PQL) conversions allows you to convert your formatting between `pql/text` and `pql/json`. You can do this by using the `/segment/conversion` endpoint.
-
-For more information on using this endpoint, please read the [PQL conversions developer guide](./pql-conversions.md).
-
 ## Schedules
 
 Schedules are a tool that can be used to automatically run export jobs once a day. You can use the `/config/schedules` endpoint to retrieve a list of schedules, create a new schedule, retrieve details of a specific schedule, update a specific schedule, or delete a specific schedule. 
 
-For more information on using this endpoint, please read the [schedules developer guide](./schedules.md). -->
+For more information on using this endpoint, please read the [schedules developer guide](./schedules.md). 
 
 ## Segment definitions
 
