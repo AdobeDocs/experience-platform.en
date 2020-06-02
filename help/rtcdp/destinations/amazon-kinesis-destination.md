@@ -66,71 +66,43 @@ See [Activate profiles and segments to a destination](/help/rtcdp/destinations/a
 
 ## Exported data {#exported-data}
 
-Your exported Experience Platform data lands in [!DNL Amazon Kinesis] in JSON format. For example, an event containing the hashed email identity of an audience that has exited a certain segment could look like this:
-
-```
-
-{
-   "segmentMembership":{
-      "ups":{
-         "7841ba61-23c1-4bb3-a495-00d695fe1e93":{
-            "lastQualificationTime":"2020-03-03T21:24:39Z",
-            "status":"exited"
-         }
-      }
-   }
-},
-"identityMap":{
-   "email_lc_sha256":[
-      {
-         "id":"655332b5fa2aea4498bf7a290cff017cb4"
-      },
-      {
-         "id":"66baf76ef9de8b42df8903f00e0e3dc0b7"
-      }
-   ]
-}
-
-```
-
-As another example, the event below contains the hashed email address and the last name profile attribute of an audience that has qualified for a certain segment.
+Your exported Experience Platform data lands in [!DNL Amazon Kinesis] in JSON format. For example, the event below contains the email address profile attribute of an audience that has qualified for a certain segment and exited another segment. The identities for this prospect are ECID and email.
 
 ```
 {
-   {
-      "segmentMembership":{
-         "ups":{
-            "7841ba61-23c1-4bb3-a495-00d695fe1e93":{
-               "lastQualificationTime":"2020-03-03T21:24:39Z",
-               "status":"qualified"
-            }
-         }
+  "person": {
+    "email": "yourstruly@adobe.con"
+  },
+  "segmentMembership": {
+    "ups": {
+      "7841ba61-23c1-4bb3-a495-00d3g5fe1e93": {
+        "lastQualificationTime": "2020-05-25T21:24:39Z",
+        "status": "exited"
+      },
+      "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
+        "lastQualificationTime": "2020-05-25T23:37:33Z",
+        "status": "existing"
       }
-   },
-   "identityMap":{
-      "email_lc_sha256":[
-         {
-            "id":"655332b5fa2aea4498bf7a290cff017cb4"
-         },
-         {
-            "id":"66baf76ef9de8b42df8903f00e0e3dc0b7"
-         },
-         {
-            "id":"12335ds29gr33433jk5733f00e05ghtjaa"
-         }
-      ]
-   },
-   "person": [
+    }
+  },
+  "identityMap": {
+    "ecid": [
       {
-         "lastname":"smith"
+        "id": "14575006536349286404619648085736425115"
       },
       {
-         "lastname":"robinson"
+        "id": "66478888669296734530114754794777368480"
+      }
+    ],
+    "email_lc_sha256": [
+      {
+        "id": "655332b5fa2aea4498bf7a290cff017cb4"
       },
       {
-         "lastname":"williams"
-      },
-   ]
+        "id": "66baf76ef9de8b42df8903f00e0e3dc0b7"
+      }
+    ]
+  }
 }
 
 ```

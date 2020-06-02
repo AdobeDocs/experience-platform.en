@@ -548,45 +548,44 @@ The returned response should include in the `transformations` parameter the segm
 
 >[!IMPORTANT]
 >
-> In addition to the profile attributes and the segments in the step [Activate data to your new destination](#activate-data), the exported data in AWS Kinesis and Azure Event Hubs will also include information about the identity map. This represents the identities of the exported profiles (for example cookie ID, mobile ID, Google ID, etc.). See an example below.
+> In addition to the profile attributes and the segments in the step [Activate data to your new destination](#activate-data), the exported data in AWS Kinesis and Azure Event Hubs will also include information about the identity map. This represents the identities of the exported profiles (for example [ECID](https://docs.adobe.com/content/help/en/id-service/using/intro/id-request.html), mobile ID, Google ID, email address, etc.). See an example below.
 
 ```
 
 {
-   {
-      "segmentMembership":{
-         "ups":{
-            "7841ba61-23c1-4bb3-a495-00d695fe1e93":{
-               "lastQualificationTime":"2020-03-03T21:24:39Z",
-               "status":"qualified"
-            }
-         }
+  "person": {
+    "email": "yourstruly@adobe.con"
+  },
+  "segmentMembership": {
+    "ups": {
+      "72ddd79b-6b0a-4e97-a8d2-112ccd81bd02": {
+        "lastQualificationTime": "2020-03-03T21:24:39Z",
+        "status": "exited"
+      },
+      "7841ba61-23c1-4bb3-a495-00d695fe1e93": {
+        "lastQualificationTime": "2020-03-04T23:37:33Z",
+        "status": "existing"
       }
-   },
-   "identityMap":{
-      "email_lc_sha256":[
-         {
-            "id":"655332b5fa2aea4498bf7a290cff017cb4"
-         },
-         {
-            "id":"66baf76ef9de8b42df8903f00e0e3dc0b7"
-         },
-         {
-            "id":"12335ds29gr33433jk5733f00e05ghtjaa"
-         }
-      ]
-   },
-   "person": [
+    }
+  },
+  "identityMap": {
+    "ecid": [
       {
-         "lastname":"smith"
+        "id": "14575006536349286404619648085736425115"
       },
       {
-         "lastname":"robinson"
+        "id": "66478888669296734530114754794777368480"
+      }
+    ],
+    "email_lc_sha256": [
+      {
+        "id": "655332b5fa2aea4498bf7a290cff017cb4"
       },
       {
-         "lastname":"williams"
-      },
-   ]
+        "id": "66baf76ef9de8b42df8903f00e0e3dc0b7"
+      }
+    ]
+  }
 }
 
 
