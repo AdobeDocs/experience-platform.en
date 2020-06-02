@@ -40,7 +40,7 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 ## Estimates
 
-Estimates provides statistical information for a segment definition, such as projected audience size and confidence interval. You can use the `/estimate` endpoint to view an estimate of a segment definition. 
+Estimates provide statistical information for a segment definition, such as projected audience size and confidence interval. You can use the `/estimate` endpoint to view an estimate of a segment definition. 
 
 For more information on using this endpoint, please read the [estimates developer guide](./estimates.md). 
 

@@ -7,11 +7,9 @@ topic: developer guide
 
 # Previews developer guide
 
-intro
+Previews provide a paginated list of qualifying profiles for a segment definition, allowing you to compare the results against what you expect.
 
-- Create a new preview
-- Retrieve a specific preview's results
-- Cancel or delete a specific preview
+This guide provides information to help you better understand previews and includes sample API calls for performing basic actions using the API.
 
 ## Getting started
 
@@ -39,16 +37,14 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
-{
-  "predicateExpression": "xEvent.metrics.commerce.abandons.value > 0",
-  "predicateType": "pql/text",
-  "predicateModel": "_xdm.context.profile",
-  "graphType": "pdg"
-}
+    {
+        "predicateExpression": "xEvent.metrics.commerce.abandons.value > 0",
+        "predicateType": "pql/text",
+        "predicateModel": "_xdm.context.profile",
+        "graphType": "pdg"
+    }
  '
 ```
-
-body info
 
 **Response**
 
@@ -56,15 +52,13 @@ A successful response returns HTTP status 201 (Created) with details of your new
 
 ```json
 {
-  "state": "NEW",
-  "previewQueryId": "e890068b-f5ca-4a8f-a6b5-af87ff0caac3",
-  "previewQueryStatus": "NEW",
-  "previewId": "MDphcHAtMzJiZTAzMjgtM2YzMS00YjY0LThkODQtYWNkMGM0ZmJkYWQzOmU4OTAwNjhiLWY1Y2EtNGE4Zi1hNmI1LWFmODdmZjBjYWFjMzow",
-  "previewExecutionId": 0
+    "state": "NEW",
+    "previewQueryId": "e890068b-f5ca-4a8f-a6b5-af87ff0caac3",
+    "previewQueryStatus": "NEW",
+    "previewId": "MDphcHAtMzJiZTAzMjgtM2YzMS00YjY0LThkODQtYWNkMGM0ZmJkYWQzOmU4OTAwNjhiLWY1Y2EtNGE4Zi1hNmI1LWFmODdmZjBjYWFjMzow",
+    "previewExecutionId": 0
 }
 ```
-
-response info, x-location does not exist.
 
 ## Retrieve a specific preview's results
 
@@ -76,7 +70,9 @@ You can retrieve detailed information about a specific preview by making a GET r
 GET /preview/{PREVIEW_ID}
 ```
 
-- `{PREVIEW_ID}`: The `id` value of the preview you want to retrieve.
+| Property | Description |
+| -------- | ----------- |
+| `{PREVIEW_ID}` | The `id` value of the preview you want to retrieve. |
 
 **Request**
 
@@ -117,7 +113,9 @@ You can delete a specific preview by making a DELETE request to the `/preview` e
 DELETE /preview/{PREVIEW_ID}
 ```
 
-- `{PREVIEW_ID}` The `id` value of the preview you want to delete.
+| Property | Description |
+| -------- | ----------- |
+| `{PREVIEW_ID}` | The `id` value of the preview you want to retrieve. |
 
 **Request**
 
