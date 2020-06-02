@@ -72,10 +72,6 @@ Using the Real-time Customer Profile API, you can create new merge policies, man
 
 For a guide to working with merge policies using the Platform UI, please see the [Merge Policies user guide](../ui/merge-policies.md).
 
-## Profile search
-
-Profile search is used to search and index configurable fields contained across various data sources and return them in near real-time. To begin working with Profile search, see the [search sub-guide](profile-search.md)
-
 ## Profile system jobs
 
 Data ingested into Platform is stored in the Data Lake as well as the Real-time Customer Profile data store. Occasionally it may be necessary to delete a dataset or batch from the Profile store in order to remove data that you no longer require or that was added in error. This requires using the API to create a Profile System Job, known as a "delete request", that can also be, modified, monitored, or deleted if required.
