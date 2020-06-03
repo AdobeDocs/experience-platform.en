@@ -49,7 +49,7 @@ There are three key elements to the DULE framework: Labels, Policies, and Enforc
 
 Data Governance enables data stewards to apply usage labels at the dataset and field level to categorize data according to the type of policies that apply.
 
-The DULE framework includes predefined data usage labels that can be used to categorize data in four ways:
+The DULE framework includes predefined data usage labels that can be used to categorize data in three ways:
 
 ![Data Usage Label Categories](./images/overview/label-categories.png)
 
