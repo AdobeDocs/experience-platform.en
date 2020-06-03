@@ -62,7 +62,7 @@ The DULE framework includes predefined data usage labels that can be used to cat
 
 Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practice encourages labeling data as soon as it is ingested into Experience Platform, or as soon as data becomes available in Platform.
 
-See the overview on [data usage labels](./labels/overview.md) for step-by-step instructions on how to apply labels to datasets and fields using the UI.
+See the overview on [data usage labels](./labels/overview.md) for more information.
 
 ## Data usage policies
 
@@ -72,9 +72,7 @@ An example of a marketing action might be the desire to export a dataset to a th
 
 Once data usage labels have been applied, data stewards can create policies using the DULE Policy Service API or the Experience Platform user interface.
 
-For more information on performing the key operations provided by the DULE Policy Service API, see the [Policy Service developer guide](api/getting-started.md). For step-by-step instructions on working with DULE policies, see the tutorial on [creating and evaluating DULE policies using the API](policies/create.md).
-
-For information on how to manage policies in the Experience Platform UI, see the [policies user guide](policies/user-guide.md).
+For more information on data usage policies and marketing actions, see the [policies overview](./policies/overview.md).
 
 ## Future releases
 
