@@ -56,7 +56,6 @@ The DULE framework includes predefined data usage labels that can be used to cat
 * **Contract "C" Data Labels:** Label and categorize data that has contractual obligations or is related to customer data governance policies. 
 * **Identity "I" Data Labels:** Label and categorize data that can identify or contact a specific person.
 * **Sensitive "S" Data Labels:** Label and categorize data related to sensitive data such as geographic data.
-* **GDPR Data Labels:** Label and categorize data that may contain personal identifiers for use in GDPR access and/or delete requests.
 
 >[!NOTE] See the guide on [supported data usage labels](labels/reference.md) for a complete list of available labels, as well as definitions for each label type.
 
