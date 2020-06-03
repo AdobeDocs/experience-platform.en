@@ -676,4 +676,5 @@ The following section lists the different cloud storage source connectors and th
 | Azure Event Hubs (Event Hubs) | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 | Azure File Storage | `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
 | Google Cloud Storage | `32e8f412-cdf7-464c-9885-78184cb113fd` |
+| HDFS | `54e221aa-d342-4707-bcff-7a4bceef0001` |
 | SFTP | `bf367b0d-3d9b-4060-b67b-0d3d9bd06094` |
