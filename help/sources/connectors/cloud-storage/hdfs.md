@@ -5,7 +5,7 @@ title: HDFS connector
 topic: overview
 ---
 
-# HDFS connector
+# (Beta) HDFS connector
 
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, Google Cloud Platform, and Azure. You can bring your data from these systems into Platform.
 
