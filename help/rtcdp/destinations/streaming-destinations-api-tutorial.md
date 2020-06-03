@@ -307,8 +307,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "region": "{REGION}"
     },
     "params": { // use these values for Azure Event Hubs connections
-        "eventHubName": "{EVENT_HUB_NAME}",
-        "namespace": "EVENT_HUB_NAMESPACE"
+        "eventHubName": "{EVENT_HUB_NAME}"
     }
 }'
 ```
@@ -318,7 +317,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 *   `{NAME_OF_DATA_STREAM}`: *For Amazon Kinesis connections.* Provide the name of your existing data stream in your Amazon Kinesis account. Adobe Real-time CDP will export data to this stream.
 *   `{REGION}`: *For Amazon Kinesis connections.* The region in your Amazon Kinesis account where Adobe Real-time CDP will stream your data.
 *   `{EVENT_HUB_NAME}`: *For Azure Event Hubs connections.* Fill in the Azure Event Hub name where Adobe Real-time CDP will stream your data. For more information, see [Create an event hub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) in the Microsoft documentation.
-*   `{EVENT_HUB_NAMESPACE}`: *For Azure Event Hubs connections.* Fill in the Azure Event Hubs namespace where Adobe Real-time CDP will stream your data. For more information, see [Create an Event Hubs namespace](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) in the Microsoft documentation.
 
 **Response**
 
@@ -373,7 +371,7 @@ curl -X POST \
     }
 ```
 
-*   `{FLOW_SPEC_ID}`: Use the flow for the streaming destination that you want to connect to. To get the flow spec, perform a GET operation on the `flowspecs` endpoint. See Swagger documentation here: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. In the response, look for `upsTo` and copy the corresponding ID of the streaming destination that you want to connect to. 
+*   `{FLOW_SPEC_ID}`: The flow spec ID for profile based destinations is `71471eba-b620-49e4-90fd-23f1fa0174d8`. Use this value in the call. 
 *   `{SOURCE_CONNECTION_ID}`: Use the source connection ID you obtained in the step [Connect to your Experience Platform](#connect-to-your-experience-platform-data).
 *   `{TARGET_CONNECTION_ID}`: Use the target connection ID you obtained in the step [Connect to streaming destination](#connect-to-streaming-destination).
 
@@ -389,7 +387,7 @@ A successful response returns the ID (`id`) of the newly created dataflow and an
 ```
 
 
-## Activate data to your new destination
+## Activate data to your new destination {#activate-data}
 
 ![Destination steps overview step 5](/help/rtcdp/destinations/assets/step5-create-streaming-destination-api.png)
 
@@ -448,6 +446,18 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
                 "path": "{PROFILE_ATTRIBUTE}"
             }
         }
+    },
+        },
+        {
+        "op": "add",
+        "path": "/transformations/0/params/profileSelectors/selectors/-",
+        "value": {
+            "type": "JSON_PATH",
+            "value": {
+                "operator": "EXISTS",
+                "path": "{PROFILE_ATTRIBUTE}"
+            }
+        }
     }
 ]
 ```
@@ -455,7 +465,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 *   `{DATAFLOW_ID}`: Use the data flow you obtained in the previous step.
 *   `{ETAG}`: Use the etag that you obtained in the previous step.
 *   `{SEGMENT_ID}`: Provide the segment ID that you want to export to this destination. To retrieve segment IDs for the segments that you want to activate, go to https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/, select **Segmentation Service API** in the left navigation menu, and look for the `GET /segment/jobs` operation.
-*   `{PROFILE_ATTRIBUTE}`: For example, `"person.lastName"`
+*   `{PROFILE_ATTRIBUTE}`: For example, `personalEmail.address` or `person.lastName`
 
 **Response**
 
@@ -500,8 +510,23 @@ The returned response should include in the `transformations` parameter the segm
         "name": "GeneralTransform",
         "params": {
             "profileSelectors": {
-                "selectors": []
-            },
+                        "selectors": [
+                            {
+                                "type": "JSON_PATH",
+                                "value": {
+                                    "path": "personalEmail.address",
+                                    "operator": "EXISTS"
+                                }
+                            },
+                            {
+                                "type": "JSON_PATH",
+                                "value": {
+                                    "path": "person.lastname",
+                                    "operator": "EXISTS"
+                                }
+                            }
+                        ]
+                    },
             "segmentSelectors": {
                 "selectors": [
                     {
@@ -517,6 +542,53 @@ The returned response should include in the `transformations` parameter the segm
         }
     }
 ],
+```
+
+**Exported Data**
+
+>[!IMPORTANT]
+>
+> In addition to the profile attributes and the segments in the step [Activate data to your new destination](#activate-data), the exported data in AWS Kinesis and Azure Event Hubs will also include information about the identity map. This represents the identities of the exported profiles (for example [ECID](https://docs.adobe.com/content/help/en/id-service/using/intro/id-request.html), mobile ID, Google ID, email address, etc.). See an example below.
+
+```
+
+{
+  "person": {
+    "email": "yourstruly@adobe.con"
+  },
+  "segmentMembership": {
+    "ups": {
+      "72ddd79b-6b0a-4e97-a8d2-112ccd81bd02": {
+        "lastQualificationTime": "2020-03-03T21:24:39Z",
+        "status": "exited"
+      },
+      "7841ba61-23c1-4bb3-a495-00d695fe1e93": {
+        "lastQualificationTime": "2020-03-04T23:37:33Z",
+        "status": "existing"
+      }
+    }
+  },
+  "identityMap": {
+    "ecid": [
+      {
+        "id": "14575006536349286404619648085736425115"
+      },
+      {
+        "id": "66478888669296734530114754794777368480"
+      }
+    ],
+    "email_lc_sha256": [
+      {
+        "id": "655332b5fa2aea4498bf7a290cff017cb4"
+      },
+      {
+        "id": "66baf76ef9de8b42df8903f00e0e3dc0b7"
+      }
+    ]
+  }
+}
+
+
 ```
 
 ## Next steps
