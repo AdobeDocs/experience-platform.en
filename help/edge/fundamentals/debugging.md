@@ -12,7 +12,7 @@ When debugging is enabled, the SDK outputs messages to the browser console that 
 Debugging is disabled by default, but can be toggled in three different ways: 
 
 * `configure` command
-* `debug` command
+* `setDebug` command
 * query string parameter
 
 ## Toggling debugging with the Configure command
@@ -35,7 +35,7 @@ alloy("configure", {
 Toggle debugging with a separate `debug` command as follows:
 
 ```javascript
-alloy("debug", {
+alloy("setDebug", {
   "enabled": true
 });
 ```
