@@ -21,5 +21,5 @@ The documentation below provides information on how to connect Salesforce to Pla
 
 ## Connect Salesforce to Platform using the UI
 
-- [Create a Salesforce source connector in the UI](../../tutorials/ui/create/crm/dynamics-salesforce.md)
+- [Create a Salesforce source connector in the UI](../../tutorials/ui/create/crm/salesforce.md)
 - [Configure a dataflow for a CRM connector in the UI](../../tutorials/ui/dataflow/crm.md)
