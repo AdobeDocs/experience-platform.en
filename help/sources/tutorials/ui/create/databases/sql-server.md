@@ -41,7 +41,7 @@ Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience 
 
 Under the *Databases* category, select **Microsoft SQL Server** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To create a new inbound base connection, select **Connect source**. 
 
-![](../../../../images/tutorials/create/microsoft-sql-server/sources-catalog.png)
+![](../../../../images/tutorials/create/microsoft-sql-server/catalog.png)
 
 The *Connect to Microsoft SQL Server* page appears. On this page, you can either use new credentials or existing credentials.
 
@@ -49,13 +49,13 @@ The *Connect to Microsoft SQL Server* page appears. On this page, you can either
 
 If you are using new credentials, select **New account**. On the input form that appears, provide the base connection with a name, an optional description, and your SQL Server credentials. When finished, select **Connect** and then allow some time for the new base connection to establish.
 
-![](../../../../images/tutorials/create/microsoft-sql-server/new-credentials.png)
+![](../../../../images/tutorials/create/microsoft-sql-server/new.png)
 
 ### Existing account
 
 To connect an existing account, select the SQL Server account you want to connect with, then select **Next** to proceed.
 
-![](../../../../images/tutorials/create/microsoft-sql-server/existing-credentials.png)
+![](../../../../images/tutorials/create/microsoft-sql-server/existing.png)
 
 ## Next steps
 
