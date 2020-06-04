@@ -11,7 +11,7 @@ Flow Service is used to collect and centralize customer data from various dispar
 
 This tutorial uses the Flow Service API to walk you through the steps to connect Platform to a Microsoft Dynamics (hereinafter referred to as "Dynamics") account for collecting CRM data.
 
-If you would prefer to use the user interface in Experience Platform, the [Dynamics or Salesforce source connector UI tutorial](../../../ui/create/crm/dynamics-salesforce.md) provides step-by-step instructions for performing similar actions.
+If you would prefer to use the user interface in Experience Platform, the [Dynamics source connector UI tutorial](../../../ui/create/crm/dynamics.md) provides step-by-step instructions for performing similar actions.
 
 ## Getting started
 
