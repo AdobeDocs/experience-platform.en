@@ -10,7 +10,7 @@ topic: overview
 >[!NOTE]
 >The CouchBase connector is in beta. The features and documentation are subject to change.
 
-Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
+Flow Service is used to collect and centralize customer data from various disparate sources to bring into Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
 This tutorial uses the Flow Service API to walk you through the steps to connect CouchBase to Experience Platform.
 
@@ -23,12 +23,12 @@ This guide requires a working understanding of the following components of Adobe
 
 The following sections provide additional information that you will need to know in order to successfully connect to CouchBase using the Flow Service API.
 
+### Gather required credentials
+
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string used to connect to your CouchBase instance. The connection string pattern for CouchBase is `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];` |
+| `connectionString` | The connection string used to connect to your CouchBase instance. The connection string pattern for CouchBase is `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. For more information on acquiring a connection string, refer to [this CouchBase document](https://docs.couchbase.com/c-sdk/2.10/client-settings.html#configuring-overview). |
 | `connectionSpec.id` | The identifier needed to create a connection. The fixed connection spec ID for CouchBase is `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
-
-For more information on acquiring a connection string, refer to [this CouchBase document](https://docs.couchbase.com/c-sdk/2.10/client-settings.html#configuring-overview).
 
 ### Reading sample API calls
 
@@ -42,7 +42,7 @@ In order to make calls to Platform APIs, you must first complete the [authentica
 *   x-api-key: `{API_KEY}`
 *   x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in Experience Platform, including those belonging to the Flow Service, are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in Experience Platform, including those belonging to Flow Service, are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 *   x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -62,7 +62,7 @@ POST /connections
 
 **Request**
 
-In order to create a CouchBase connection, its unique connection spec ID must be provided as part of the POST request. The connection spec ID for CouchBase is `1fe283f6-9bec-11ea-bb37-0242ac130002`.
+The following request creates a new CouchBase connection, configured by the properties provided in the payload:.
 
 ```shell
 curl -X POST \
@@ -88,14 +88,14 @@ curl -X POST \
     }'
 ```
 
-| Parameter | Description |
+| Property | Description |
 | --------- | ----------- |
 | `auth.params.connectionString` | The connection string used to connect to a CouchBase account. The connection string pattern is: `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. |
 | `connectionSpec.id` | The CouchBase connection spec ID: `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
 
 **Response**
 
-A successful response returns details of the newly created connection, including its unique identifier (`id`). This ID is required to explore your data in the next tutorial.
+A successful response returns the details of the newly created connection, including its unique identifier (`id`). This ID is required to explore your data in the next tutorial.
 
 ```json
 {

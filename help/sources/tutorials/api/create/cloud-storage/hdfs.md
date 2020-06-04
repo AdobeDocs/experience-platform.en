@@ -10,7 +10,7 @@ topic: overview
 >[!NOTE]
 >The HDFS connector is in beta. The features and documentation are subject to change.
 
-Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
+Flow Service is used to collect and centralize customer data from various disparate sources to bring into Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
 This tutorial uses the Flow Service API to walk you through the steps to connect a Hadoop Distributed File System (hereinafter referred to as "HDFS") to Experience Platform.
 
@@ -23,12 +23,12 @@ This guide requires a working understanding of the following components of Adobe
 
 The following sections provide additional information that you will need to know in order to successfully connect to HDFS using the Flow Service API.
 
+### Gather required credentials
+
 | Credential | Description |
 | ---------- | ----------- |
-| `url` | The URL defines auth params required for connecting to HDFS anonymously |
+| `url` | The URL defines auth params required for connecting to HDFS anonymously. For more information on authentication, refer to [this HDFS document](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html). |
 | `connectionSpec.id` | The identifier needed to create a connection. The fixed connection spec ID for HDFS is `54e221aa-d342-4707-bcff-7a4bceef0001`. |
-
-For more information on acquiring a connection string, refer to [this HDFS document](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html).
 
 ### Reading sample API calls
 
@@ -42,7 +42,7 @@ In order to make calls to Platform APIs, you must first complete the [authentica
 *   x-api-key: `{API_KEY}`
 *   x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in Experience Platform, including those belonging to the Flow Service, are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in Experience Platform, including those belonging to Flow Service, are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 *   x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -62,7 +62,7 @@ POST /connections
 
 **Request**
 
-In order to create a HDFS connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for HDFS is `54e221aa-d342-4707-bcff-7a4bceef0001`.
+The following request creates a new CouchBase connection, configured by the properties provided in the payload:
 
 ```shell
 curl -X POST \

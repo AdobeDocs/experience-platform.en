@@ -7,11 +7,9 @@ topic: overview
 
 # (Beta) HDFS connector
 
-Adobe Experience Platform provides native connectivity for cloud providers like AWS, Google Cloud Platform, and Azure. You can bring your data from these systems into Platform.
+Adobe Experience Platform provides native connectivity for cloud providers like AWS, Google Cloud Platform, and Azure, allowing you to bring your data from these systems. Ingested data can be formatted as JSON, parquet, or delimited. Support for cloud storage providers include HDFS.
 
-Cloud storage sources can bring your own data into Platform without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM parquet, or delimited. Every step of the process is integrated into the Sources workflow. Platform allows you to bring in data from HDFS through batches.
-
-The documentation below provides information on how to connect HDFS to Platform using APIs or the user interface:
+The documentation below provides information on how to connect HDFS to Platform using APIs:
 
 ## Connect HDFS to Platform using APIs
 
