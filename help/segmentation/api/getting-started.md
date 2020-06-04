@@ -38,23 +38,19 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
   
 >[!NOTE] For more information on working with sandboxes in Experience Platform, see the [sandboxes overview documentation](../../sandboxes/home.md).
 
-## Estimates
+## Estimates and previews
 
 Estimates provide statistical information for a segment definition, such as projected audience size and confidence interval. You can use the `/estimate` endpoint to view an estimate of a segment definition. 
 
-For more information on using this endpoint, please read the [estimates developer guide](./estimates.md). 
+Previews provide a paginated list of qualifying profiles for a segment definition, allowing you to compare the results against what you expect. You can use the `/preview` endpoint to create a new preview job, look up results of a specific preview job, or delete a specific preview job.
+
+For more information on using these endpoints, please read the [estimates and previews developer guide](./estimates-and-previews.md). 
 
 ## Export jobs
 
 Export jobs are asynchronous processes that are used to persist audience segment members to datasets. You can use the `/export/jobs` endpoint to retrieve all export jobs, create a new export job, retrieve details of a specific export job, or cancel a specific export job.
 
 For more information on using this endpoint, please read the [export jobs developer guide](./export-jobs.md).
-
-## Previews
-
-Previews provide a paginated list of qualifying profiles for a segment definition, allowing you to compare the results against what you expect. You can use the `/preview` endpoint to create a new preview job, look up results of a specific preview job, or delete a specific preview job.
-
-For more information on using this endpoint, please read the [previews developer guide](./previews.md).
 
 ## Schedules
 
