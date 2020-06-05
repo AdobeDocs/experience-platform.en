@@ -17,7 +17,7 @@ In order to utilize insights for Customer AI, you need to have a service instanc
 
 ## Service instance overview
 
-In the Adobe Experience Platform UI, click **[!UICONTROL Services]** in the left navigation. The *Services* browser appears and displays available Intelligent Services. In the container for Customer AI, click **[!UICONTROL Open]**.
+In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in the left navigation. The *Services* browser appears and displays available Intelligent Services. In the container for Customer AI, click **[!UICONTROL Open]**.
 
 ![Accessing your instance](../images/insights/navigate-to-service.png)
 

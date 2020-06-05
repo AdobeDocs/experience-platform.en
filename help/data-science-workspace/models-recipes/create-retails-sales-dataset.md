@@ -7,12 +7,12 @@ topic: Tutorial
 
 # Create the retail sales schema and dataset
 
-This tutorial provides you with the prerequisites and assets required for all other Adobe Experience Platform Data Science Workspace tutorials. Upon completion, the Retail Sales schema and datasets will be available for you and members of your IMS Organization on Experience Platform.
+This tutorial provides you with the prerequisites and assets required for all other [!DNL Adobe Experience Platform] Data Science Workspace tutorials. Upon completion, the Retail Sales schema and datasets will be available for you and members of your IMS Organization on Experience Platform.
 
 ## Getting started
 
 Before starting this tutorial, you must have the following prerequisites:
--   Access to Adobe Experience Platform. If you do not have access to an IMS Organization in Experience Platform, please speak to your system administrator before proceeding.
+-   Access to [!DNL Adobe Experience Platform]. If you do not have access to an IMS Organization in Experience Platform, please speak to your system administrator before proceeding.
 -   Authorization to make Experience Platform API calls. Complete the [Authenticate and access Adobe Experience Platform APIs](../../tutorials/authentication.md) tutorial to obtain the following values in order to successful complete this tutorial:
     -   Authorization: `{ACCESS_TOKEN}`
     -   x-api-key: `{API_KEY}`

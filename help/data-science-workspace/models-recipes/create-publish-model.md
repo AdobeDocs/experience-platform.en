@@ -11,7 +11,7 @@ topic: Tutorial
 
 Pretend you own an online retail website. When your customers shop at your retail website, you want to present them with personalized product recommendations to expose a variety of other products your business offers. Over the span of your website's existence, you have continuously gathered customer data and want to somehow use this data towards generating personalized product recommendations. 
 
-Adobe Experience Platform Data Science Workspace provides the means to achieve your goal using the prebuilt [Product Recommendations Recipe](../pre-built-recipes/product-recommendations.md). Follow this tutorial to see how you can access and understand your retail data, create and optimise a machine learning Model, and generate insights in Data Science Workspace.
+[!DNL Adobe Experience Platform] Data Science Workspace provides the means to achieve your goal using the prebuilt [Product Recommendations Recipe](../pre-built-recipes/product-recommendations.md). Follow this tutorial to see how you can access and understand your retail data, create and optimise a machine learning Model, and generate insights in Data Science Workspace.
 
 This tutorial reflects the workflow of Data Science Workspace, and covers the following steps for creating a machine learning Model:
 
@@ -24,7 +24,7 @@ This tutorial reflects the workflow of Data Science Workspace, and covers the fo
 
 Before starting this tutorial, you must have the following prerequisites:
 
-*   Access to Adobe Experience Platform. If you do not have access to an IMS Organization in Experience Platform, please speak to your system administrator before proceeding.
+*   Access to [!DNL Adobe Experience Platform]. If you do not have access to an IMS Organization in Experience Platform, please speak to your system administrator before proceeding.
 
 *   Enablement assets. Please reach out to your account representative to have the following items provisioned for you.
     *   Recommendations Recipe
@@ -45,7 +45,7 @@ Before starting this tutorial, you must have the following prerequisites:
 
 ## Prepare your data {#prepare-your-data}
 
-To create a machine learning Model that makes personalized product recommendations to your customers, previous customer purchases on your website must be analyzed. This section explores how this data is ingested into Platform through Adobe Analytics, and how that data is transformed into a Feature dataset to be used by your machine learning Model.
+To create a machine learning Model that makes personalized product recommendations to your customers, previous customer purchases on your website must be analyzed. This section explores how this data is ingested into Platform through [!DNL Adobe Analytics], and how that data is transformed into a Feature dataset to be used by your machine learning Model.
 
 ### Explore the data and understand the schemas
 
@@ -72,7 +72,7 @@ Recipes are the basis for a Model as they contain machine learning algorithms an
 
 ### Explore the Product Recommendations Recipe
 
-1.  In Adobe Experience Platform, navigate to **[!UICONTROL Models]** from the left navigation column, then click **[!UICONTROL Recipes]** at the top to view a list of available Recipes for your organization.
+1.  In [!DNL Adobe Experience Platform], navigate to **[!UICONTROL Models]** from the left navigation column, then click **[!UICONTROL Recipes]** at the top to view a list of available Recipes for your organization.
     ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
 2.  Locate and open the provided **[!UICONTROL Recommendations Recipe]** by clicking its name.
     ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
@@ -89,7 +89,7 @@ Now that your data is prepared and the Recipe is ready to be used, you can creat
 
 A Model is an instance of a Recipe, enabling you to train and score with data at scale.
 
-1.  In Adobe Experience Platform, navigate to **[!UICONTROL Models]** from the left navigation column, then click **[!UICONTROL Recipes]** at the top of the page to display a list of all available Recipes for your organization..
+1.  In [!DNL Adobe Experience Platform], navigate to **[!UICONTROL Models]** from the left navigation column, then click **[!UICONTROL Recipes]** at the top of the page to display a list of all available Recipes for your organization..
     ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
 2.  Locate and open the provided **[!UICONTROL Recommendations Recipe]** by clicking its name, entering the Recipe's overview page. Click **[!UICONTROL Create a Model]** either from the center (if there are no existing Models) or from the top right of the Recipe Overview page.
     ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)

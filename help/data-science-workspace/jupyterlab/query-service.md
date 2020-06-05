@@ -7,23 +7,23 @@ topic: Tutorial
 
 # Query service in Jupyter notebook
 
-Adobe Experience Platform allows you to use Structured Query Language (SQL) in Data Science Workspace by integrating Query Service into JupyterLab as a standard feature. 
+[!DNL Adobe Experience Platform] allows you to use Structured Query Language (SQL) in Data Science Workspace by integrating Query Service into JupyterLab as a standard feature. 
 
-This tutorial demonstrates sample SQL queries for common use cases to explore, transform, and analyze Adobe Analytics data.
+This tutorial demonstrates sample SQL queries for common use cases to explore, transform, and analyze [!DNL Adobe Analytics] data.
 
 ## Getting started
 
 Before starting this tutorial, you must have the following prerequisites:
 
--   Access to Adobe Experience Platform. If you do not have access to an IMS Organization in Experience Platform, please speak to your system administrator before proceeding
+-   Access to [!DNL Adobe Experience Platform]. If you do not have access to an IMS Organization in Experience Platform, please speak to your system administrator before proceeding
 
--   An Adobe Analytics dataset
+-   An [!DNL Adobe Analytics] dataset
 
 -   A working understanding of the following key concepts used in this tutorial:
     -   [Experience Data Model (XDM) and XDM System](../../xdm/home.md)
     -   [Query Service](../../query-service/home.md)
     -   [Query Service SQL Syntax](../../query-service/sql/overview.md)
-    -   Adobe Analytics
+    -   [!DNL Adobe Analytics]
 
 ## Access JupyterLab and Query Service {#access-jupyterlab-and-query-service}
 
@@ -43,13 +43,13 @@ Before starting this tutorial, you must have the following prerequisites:
 
     ![](../images/jupyterlab/query/dataset.png)
 
-4.  Find an Adobe Analytics dataset to explore and right-click on the listing, click **[!UICONTROL Query Data in Notebook]** to generate SQL queries in the empty notebook. 
+4.  Find an [!DNL Adobe Analytics] dataset to explore and right-click on the listing, click **[!UICONTROL Query Data in Notebook]** to generate SQL queries in the empty notebook. 
 
 5.  Click the first generated cell containing the function `qs_connect()` and execute it by clicking the play button. This function creates a connection between your notebook instance and the Query Service.
 
     ![](../images/jupyterlab/query/execute.png)
 
-6.  Copy down the Adobe Analytics dataset name from the second generated SQL query, it will be the value after `FROM`.
+6.  Copy down the [!DNL Adobe Analytics] dataset name from the second generated SQL query, it will be the value after `FROM`.
 
     ![](../images/jupyterlab/query/dataset_name.png)
 
@@ -74,7 +74,7 @@ Before starting this tutorial, you must have the following prerequisites:
     target_day = "01"
     ```
 
-    -   `target_table` : Name of your Adobe Analytics dataset.
+    -   `target_table` : Name of your [!DNL Adobe Analytics] dataset.
     -   `target_year` : Specific year for which the target data is from.
     -   `target_month` : Specific month for which the target is from.
     -   `target_day` : Specific day for which the target data is from.

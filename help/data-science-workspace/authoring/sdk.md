@@ -7,7 +7,7 @@ topic: Overview
 
 # SDK developer guide
 
-The Model Authoring SDK enables you to develop custom machine learning Recipes and Feature Pipelines which can be used in Adobe Experience Platform Data Science Workspace, providing implementable templates in PySpark and Spark.
+The Model Authoring SDK enables you to develop custom machine learning Recipes and Feature Pipelines which can be used in [!DNL Adobe Experience Platform] Data Science Workspace, providing implementable templates in PySpark and Spark.
 
 This document provides information regarding the various classes found within the Model Authoring SDK.
 

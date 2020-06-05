@@ -13,7 +13,7 @@ This document serves as a guide for interacting with Attribution AI in the Intel
 
 ## Create an instance
 
-In the Adobe Experience Platform UI, click **Services** in the left navigation. The *Services* browser appears and displays available Adobe intelligent services. In the container for Attribution AI, click **Open**.
+In the [!DNL Adobe Experience Platform] UI, click **Services** in the left navigation. The *Services* browser appears and displays available Adobe intelligent services. In the container for Attribution AI, click **Open**.
 
 ![Accessing your instance](./images/user-guide/open_Attribution_ai.png)
 
