@@ -50,7 +50,7 @@ The edit dialog box appears, allowing you to edit the description and scoring fr
 
 ![edit popover](./images/insights/edit-popover.png)
 
-### More actions
+### More actions {#more-actions}
 
 The *More actions* button is located in the top-right navigation next to *Edit*. Clicking **More actions** opens a dropdown that allows you to select one of the following operations:
 
