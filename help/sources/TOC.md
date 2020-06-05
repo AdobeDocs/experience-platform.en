@@ -135,7 +135,8 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [FTP and SFTP connector](tutorials/ui/create/cloud-storage/ftp-sftp.md)
       - [Google Cloud Storage connector](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
     - CRM {#crm}
-      - [Microsoft Dynamics and Salesforce connector](tutorials/ui/create/crm/dynamics-salesforce.md)
+      - [Microsoft Dynamics connector](tutorials/ui/create/crm/dynamics.md)
+      - [Salesforce connector](tutorials/ui/create/crm/salesforce.md)
     - Customer Success {#customer-success}
       - [Salesforce Service Cloud connector](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
       - [ServiceNow connector](tutorials/ui/create/customer-success/servicenow.md)

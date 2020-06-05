@@ -18,7 +18,7 @@ The Data Science Workspace JupyterLab environment is a hosted environment and no
 
 ## Connect Git to the Data Science Workspace JupyterLab Notebooks environment
 
-Start by launching Adobe Experience Platform and navigating to the [JupyterLabs Notebooks](https://platform.adobe.com/notebooks/jupyterLab) environment.
+Start by launching [!DNL Adobe Experience Platform] and navigating to the [JupyterLabs Notebooks](https://platform.adobe.com/notebooks/jupyterLab) environment.
 
 Within JupyterLab, select **[!UICONTROL File]** then hover over **[!UICONTROL New]**. From the dropdown that appears, select **[!UICONTROL Terminal]**.
 

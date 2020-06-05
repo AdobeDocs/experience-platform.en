@@ -44,7 +44,7 @@ Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience 
 
 Under the *Databases* category, select **Google Big Query** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To create a new inbound base connection, select **Connect source**. 
 
-![](../../../../images/tutorials/create/google-big-query/sources-catalog.png)
+![](../../../../images/tutorials/create/google-big-query/catalog.png)
 
 The *Connect to Google Big Query* page appears. On this page, you can either use new credentials or existing credentials.
 
@@ -52,13 +52,13 @@ The *Connect to Google Big Query* page appears. On this page, you can either use
 
 If you are using new credentials, select **New account**. On the input form that appears, provide the base connection with a name, an optional description, and your GBQ credentials. When finished, select **Connect** and then allow some time for the new base connection to establish.
 
-![](../../../../images/tutorials/create/google-big-query/gbq-new-credentials.png)
+![](../../../../images/tutorials/create/google-big-query/new.png)
 
 ### Existing account
 
 To connect an existing account, select the GBQ account you want to connect with, then select **Next** to proceed.
 
-![](../../../../images/tutorials/create/google-big-query/gbq-existing-credentials.png)
+![](../../../../images/tutorials/create/google-big-query/existing.png)
 
 ## Next steps
 
