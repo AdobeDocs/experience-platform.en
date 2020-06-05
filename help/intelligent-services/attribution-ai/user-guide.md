@@ -45,7 +45,7 @@ There are three different types of input data used for defining events:
 - **Lookback window:** Provides a time frame indicating how many days prior to the conversion event touchpoints should be included.
 - **Touchpoints:** recipient, individual, and or cookie-level marketing events used to evaluate the numeric or revenue-based impact of conversions.
 
-### Define conversion events
+### Define conversion events {#define-conversion-events}
 
 In order to define a conversion event, you need to give the event a name and select the event type by clicking the **Enter Field Name** dropdown menu. 
 
@@ -137,7 +137,7 @@ To change the time of day you want scoring to occur, click the clock icon. In th
 
 ![clock icon](./images/user-guide/time_of_day.png)
 
-### Region-based modeling (optional)
+### Region-based modeling (optional) {#region-based-modeling-optional}
 
 Your customers' behaviors might differ significantly by country and geographic region. For global businesses, using country-based or region-based models can increase attribution accuracy. Each region added creates a new model with that region's data.
 
