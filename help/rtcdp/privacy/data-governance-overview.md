@@ -23,18 +23,22 @@ Data Governance allows you to apply usage labels to your data, either at the dat
 
 For detailed information on working with data usage labels, see the [data usage labels user guide](../../data-governance/labels/overview.md) for Adobe Experience Platform.
 
-## Set restrictions on destinations
+## Configure marketing use cases for destinations
 
-You can set data usage restrictions on a destination by defining marketing use cases for that destination. Defining use cases for destinations allows you to check for usage policy violations and ensure that any profiles or segments sent to that destination are compatible with Data Governance rules.
+You can set data usage restrictions on a destination by defining marketing use cases (also called marketing actions) for that destination. A marketing use case for a destination defines the intended use for any data exported to that destination, for which there is a need to check for violations of data usage policies.
 
-Marketing use cases can be defined during the _Setup_ phase for the _Edit Destination_ workflow. See the destination documentation for more information. 
+For more information on marketing actions and their use in data usage policies, see the [data usage policies overview](../../data-governance/policies/overview.md) in the Experience Platform documentation.
+
+Defining use cases for destinations allows you to check for usage policy violations and ensure that any profiles or segments sent to those destinations are compliant with Data Governance rules.
+
+Marketing use cases can be defined when setting up a destination for the first time, or editing an existing destination. Depending on on the type of destination you are working with, the opportunity to configure marketing use cases will appear at different points in the workflow. See the [destination documentation](../destinations/connect-destination.md) for steps on how to configure your particular destination.
 
 
 ## Manage data usage policies {#policies}
 
 In order for data usage labels to effectively support data compliance, data usage policies must be defined and enabled. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Real-time CDP. See the "Data usage policies" section in the Experience Platform [Data Governance overview](../../data-governance/home.md) for more information.
 
-Adobe Experience Platform provides several **core policies** for common customer experience use cases. These policies can be viewed by making a request to the [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml), as shown in the "List all policies" section in the [Policy Service developer guide](../../data-governance/policies/overview.md). You can also create your own **custom policies** to model custom usage restrictions, as shown in the "Create a policy" section in the developer guide.
+Adobe Experience Platform provides several **core policies** for common customer experience use cases. These policies can be viewed in the UI by navigating to the **[!UICONTROL Policies]** workspace and selecting the **[!UICONTROL Browse]** tab. See the [policies user guide](../../data-governance/policies/user-guide.md) in the Experience Platform documentation for more detailed steps on working with policies in the UI, including how to make your own custom policies.
 
 ## (Beta) Enforce data usage compliance {#enforce-data-usage-compliance}
 
