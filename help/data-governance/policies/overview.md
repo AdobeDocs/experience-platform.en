@@ -9,40 +9,44 @@ topic: policies
 
 In order for data usage labels to effectively support data compliance, data usage policies must be implemented. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Experience Platform.
 
-This document provides a high-level overview of data usage policies, and provides links to further documentation 
+This document provides a high-level overview of data usage policies, and provides links to further documentation for working with policies in the UI or API.
 
 ## Marketing actions
 
-Marketing actions, in the context of the data governance framework, are actions that an Experience Platform data consumer can take, for which there is a need to check for violations of data usage policies.
+**Marketing actions**, (also called **marketing use cases**) in the context of the data governance framework, are actions that an Experience Platform data consumer can take, for which there is a need to check for violations of data usage policies. As such, each data usage policy is defined by a specific marketing action and the usage label(s) that action is restricted from being performed against.
 
-An example of a marketing action might be the desire to export a dataset to a third-party service. If there is a policy in place saying that specific types of data, such as Personally Identifiable Information (PII), cannot be exported and an "I" label (Identity data) has been applied to the dataset, you will receive a response from the Policy Service telling you that a data usage policy has been violated.
+An example of a marketing action might be the desire to export a dataset to a third-party service. If there is a policy in place saying that specific types of data (such as Personally Identifiable Information (PII)) cannot be exported, and you attempt to export a dataset that contains an "I" label (Identity data), you will receive a response from the Policy Service telling you that a data usage policy has been violated.
 
-### Adobe-defined marketing actions
+See the appendix to this document for a list of [available Adobe-defined marketing actions](#core-actions). You can also define your own custom marketing actions using the [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) or the Experience Platform UI. More information on working with marketing actions and policies is provided in the next section.
+
+## How to create and work with data usage policies
+
+Once data usage labels have been applied, data stewards can use the DULE Policy Service API or the Experience Platform user interface to manage and evaluate policies related to marketing actions being taken on data containing data usage labels. You can create and update policies, determine the status of a policy, and work with marketing actions to evaluate whether a specific action violates a data usage policy.
+
+For step-by-step instructions on working with marketing actions and data usage policies in the API, see the tutorial on [creating and evaluating data usage policies](create.md). For more information the key operations provided by the Policy Service API, see the [Policy Service developer guide](../api/getting-started.md).
+
+For information on how to work with marketing actions and policies in the Platform UI, see the [data usage policy user guide](./user-guide.md).
+
+## Next steps
+
+This document provided an introduction to data usage policies within the DULE framework. You can now continue to read the process documentation linked to throughout this guide to learn more about how to work with policies in the API and UI.
+
+## Appendix
+
+The following section provides additional information about data usage policies.
+
+### Adobe-defined marketing actions {#core-actions}
 
 The following table describes the core marketing actions that are provided out-of-the-box by Adobe:
 
 | Marketing action | Description |
 | --- | --- |
 | Analytics | An action that sends data to Adobe Analytics. |
-| Combine with PII | An action that combines Personally Identifiable Information (PII) with anonymous data. |
-| Cross Site Targeting | An action that uses data for cross-site ad targeting. |
-| Data Science | An action that uses data for data science or machine learning workflows. |
+| Combine with PII | An action that combines any Personally Identifiable Information (PII) with anonymous data. Contracts for data sourced from ad networks, ad servers, and third-party data providers often include specific contractual prohibitions on the use of such data with directly identifiable data. |
+| Cross Site Targeting | An action that uses data for cross-site ad targeting. The combination of data from several sites, including a combination of on-site data and off-site data or a combination of data from several off-site sources, is referred to as cross-site data. Cross-site data is typically collected and processed to make inferences about users' interests. |
+| Data Science | An action that uses data for data science workflows. Some contracts include explicit prohibitions on data use for data science. Sometimes these are phrased in terms that prohibit the use of data for Artificial Intelligence (AI), machine learning (ML), or modeling. |
 | Email Targeting | An action that uses data in email targeting campaigns. |
-| Export to Third Party | An action that exports data to processors and entities that do not have direct relationships with customers. |
-| Onsite Advertising | An action that uses data for targeted onsite ads. |
-| Onsite Personalization | An action that uses data for onsite content personalization. |
+| Export to Third Party | An action that exports data to processors and entities that do not have direct relationships with customers. Many data providers have terms in the contracts that prohibit the export of data from where it was originally collected. For example, social network contracts often restrict the transfer of data you receive from them. |
+| Onsite Advertising | An action that uses data for targeted onsite ads. Ads are messages or notifications, including text and images, appearing on a website or app that are primarily intended to promote the sale of goods or services. |
+| Onsite Personalization | An action that uses data for onsite content personalization. Onsite personalization is any data that is used to make inferences about users' interests, and is used to select which content or ads are served based on those inferences. |
 | Single Identity Personalization | An action that uses identity stitching to form customer journey profiles from disparate sources. |
-
-## How to create and work with data usage policies
-
-Once data usage labels have been applied, data stewards can create policies using the [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml).
-
-As a data steward, you can use the Policy Service API to manage and evaluate policies related to marketing actions being taken on data containing DULE labels. Using the API, you can create and update policies, determine the status of a policy, and work with marketing actions to evaluate whether a specific action violates a data usage policy.
-
-Within the Policy Service API, all policies and marketing actions are referred to as either `core` or `custom` resources. `core` resources are defined and maintained by Adobe, whereas `custom` resources are created and maintained by individual customers. The `custom` resources are therefore unique and visible solely to the organization that created them.
-
-For more information on performing the key operations provided by the DULE Policy Service API, see the [Policy Service developer guide](../api/getting-started.md). For step-by-step instructions on working with DULE policies, see the tutorial on [creating and evaluating DULE policies](create.md).
-
-## Next steps
-
-This document provided an introduction to data usage policies within the DULE framework. You can now continue to read the process documentation linked to throughout this guide to learn more about how to work with policies in the Experience Platform UI and API.
