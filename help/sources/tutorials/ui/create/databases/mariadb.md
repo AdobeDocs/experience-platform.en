@@ -39,9 +39,9 @@ Once you have gathered your required credentials, you can follow the steps below
 
 Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> and then select **Sources** from the left navigation bar to access the *Sources* workspace. The *Catalog* screen displays a variety of sources for which you can create inbound base connections with, and each source shows the number of existing base connections associated to them.
 
-Under the *Databases* category, select **Maria DB** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To create a new inbound base connection, select **Connect source**. 
+Under the *Databases* category, select **Maria DB** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To create a new inbound base connection, select **Connect source**.
 
-![](../../../../images/tutorials/create/maria-db/sources-catalog.png)
+![](../../../../images/tutorials/create/maria-db/catalog.png)
 
 The *Connect to Maria DB* page appears. On this page, you can either use new credentials or existing credentials.
 
@@ -49,13 +49,13 @@ The *Connect to Maria DB* page appears. On this page, you can either use new cre
 
 If you are using new credentials, select **New account**. On the input form that appears, provide the base connection with a name, an optional description, and your Maria DB credentials. When finished, select **Connect** and then allow some time for the new base connection to establish.
 
-![](../../../../images/tutorials/create/maria-db/new-credentials.png)
+![](../../../../images/tutorials/create/maria-db/new.png)
 
 ### Existing account
 
 To connect an existing account, select the Maria DB account you want to connect with, then select **Next** to proceed.
 
-![](../../../../images/tutorials/create/maria-db/existing-credentials.png)
+![](../../../../images/tutorials/create/maria-db/existing.png)
 
 ## Next steps
 
