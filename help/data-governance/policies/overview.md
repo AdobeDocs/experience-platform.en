@@ -26,6 +26,8 @@ See the appendix to this document for a list of [available Adobe-defined marketi
 
 Once data usage labels have been applied, data stewards can use the DULE Policy Service API or the Experience Platform UI to manage and evaluate policies related to marketing actions being taken on data containing data usage labels. You can create and update policies, determine the status of a policy, and work with marketing actions to evaluate whether a specific action violates a data usage policy.
 
+All data usage policies (including core policies provided by Adobe) are disabled by default. In order for an individual policy to be considered for enforcement, you must manually enable that policy through the API or UI.
+
 For step-by-step instructions on working with marketing actions and data usage policies in the API, see the tutorial on [creating and evaluating data usage policies](create.md). For more information the key operations provided by the Policy Service API, see the [Policy Service developer guide](../api/getting-started.md).
 
 For information on how to work with marketing actions and policies in the Platform UI, see the [data usage policy user guide](./user-guide.md).

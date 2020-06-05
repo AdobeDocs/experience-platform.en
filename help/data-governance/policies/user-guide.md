@@ -56,7 +56,9 @@ The *[!UICONTROL Browse]* tab reappears, which now lists the newly created polic
 
 ## Enable or disable a data usage policy {#enable}
 
-You can enable or disable custom data usage policies on the *[!UICONTROL Browse]* tab in the *[!UICONTROL Policies]* workspace. Select a custom policy from the list to display its details on the right. Under *[!UICONTROL Status]*, select the toggle button to enable or disable the policy.
+All data usage policies (including core policies provided by Adobe) are disabled by default. In order for an individual policy to be considered for enforcement, you must manually enable that policy through the API or UI.
+
+You can enable or disable policies from the *[!UICONTROL Browse]* tab in the *[!UICONTROL Policies]* workspace. Select a custom policy from the list to display its details on the right. Under *[!UICONTROL Status]*, select the toggle button to enable or disable the policy.
 
 ![](../images/policies/enable-policy.png)
 
