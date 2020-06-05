@@ -30,13 +30,13 @@ The following list outlines some of the features that are unique to JupyterLab o
 
 ## Integration with other Platform services {#service-integration}
 
-Standardization and interoperability are key concepts behind Experience Platform. The integration of JupyterLab on Platform as an embedded IDE allows it to interact with other Platform services, enabling you to utilize Platform to its full potential. The following Platform services are available in JupyterLab:
+Standardization and interoperability are key concepts behind [!DNL Experience Platform]. The integration of JupyterLab on [!DNL Platform] as an embedded IDE allows it to interact with other [!DNL Platform] services, enabling you to utilize [!DNL Platform] to its full potential. The following [!DNL Platform] services are available in JupyterLab:
 
 *   **Catalog Service:** Access and explore datasets with read and write functionalities.
 *   **Query Service:** Access and explore datasets using SQL, providing lower data access overheads when dealing with large amounts of data.
 *   **Sensei ML Framework:** Model development with the ability to train and score data, as well as recipe creation with a single click.
 
->[!NOTE] Some Platform service integrations on JupyterLab are limited to specific kernels. Refer to the section on [kernels](#kernels) for more details.
+>[!NOTE] Some [!DNL Platform] service integrations on JupyterLab are limited to specific kernels. Refer to the section on [kernels](#kernels) for more details.
 
 ## Key features and common operations
 
@@ -307,6 +307,18 @@ Each supported kernel provides built-in functionalities that allow you to read P
 ### Read from a dataset in Python/R
 
 Python and R notebooks allow you to paginate data when accessing datasets. Sample code to read data with and without pagination is demonstrated below.
+
+**Python notebook data limits:**
+
+A notebook server configured at 40Gb RAM was used for these benchmarks.
+- You should be able to read 2M rows (~6.1 GB data on disk) of XDM data in less than 22 mins.
+- You should be able to read 5M rows (~5.6 GB data on disk) of non-XDM (Ad Hoc) in less than 14 mins.
+
+**R notebook data limits:**
+
+A notebook server configured at 40Gb RAM was used for these benchmarks.
+- You should be able to read 1M rows of XDM data (3Gb data on disk) in under 13 mins.
+- You should be able to read 3M rows of Ad Hoc data (293Mb data on disk) in around 10 mins
 
 [//]: # (In the following samples, the first step is currently required but once the SDK is complete, users are no longer required to explicitly define client_context)
 
