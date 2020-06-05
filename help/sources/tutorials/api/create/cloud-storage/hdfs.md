@@ -62,7 +62,7 @@ POST /connections
 
 **Request**
 
-The following request creates a new CouchBase connection, configured by the properties provided in the payload:
+The following request creates a new HDFS connection, configured by the properties provided in the payload:
 
 ```shell
 curl -X POST \
