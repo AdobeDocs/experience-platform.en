@@ -27,7 +27,7 @@ The following sections provide additional information that you will need to know
 
 | Credential | Description |
 | ---------- | ----------- |
-| `url` | The URL defines auth params required for connecting to HDFS anonymously. For more information on authentication, refer to [this HDFS document](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html). |
+| `url` | The URL defines auth params required for connecting to HDFS anonymously. For more information on how to obtain this value, refer to [this HDFS document](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html). |
 | `connectionSpec.id` | The identifier needed to create a connection. The fixed connection spec ID for HDFS is `54e221aa-d342-4707-bcff-7a4bceef0001`. |
 
 ### Reading sample API calls

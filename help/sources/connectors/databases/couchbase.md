@@ -7,7 +7,7 @@ topic: overview
 
 # (Beta) CouchBase connector
 
-Adobe Experience Platform provides native connectivity for database providers like Microsoft, MySQL, and Azure. You can bring your data from these systems into Platform. Different types of third-party databases are supported, including relational, NoSQL, or data warehouses. Support for database providers includes CouchBase.
+Adobe Experience Platform provides native connectivity for database providers like Microsoft, MySQL, and Azure, allowing you to bring your data from these systems. Different types of third-party databases are supported, including relational, NoSQL, or data warehouses. Support for database providers includes CouchBase.
 
 The documentation below provides information on how to connect CouchBase to Platform using APIs:
 
