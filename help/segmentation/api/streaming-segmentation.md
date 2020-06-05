@@ -66,6 +66,8 @@ The following section lists segment definition examples that will **not** be str
 | Incoming hit that refers to a Profile and has event history | The following options will **not** support streaming segmentation:<ul><li>An event that does **not** occur within **the last 24 hours**.</li><li>A segment definition that includes Adobe Audience Manager (AAM) segments or traits.</li></ul> |
 | Multi-entity queries | Multi-entity queries are, as a whole, **not** supported by streaming segmentation. |
 
+Additionally, in order for streaming segmentation to work, the customer will need to enable scheduled segmentation for the organization.
+
 ## Retrieve all streaming segmentation enabled segments
 
 You can retrieve a list of all your streaming segmentation enabled segments within your IMS Organization.
