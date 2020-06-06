@@ -7,12 +7,7 @@ topic: developer guide
 
 # Export jobs
 
-intro
-
-- Retrieve a list of export jobs
-- Create a new export job
-- Retrieve a specific export job
-- Cancel or delete a specific export job
+Export jobs are asynchronous processes that are used to persist audience segment members to datasets. You can use the `/export/jobs` endpoint to retrieve all export jobs, create a new export job, retrieve details of a specific export job, or cancel a specific export job.
 
 ## Getting started
 

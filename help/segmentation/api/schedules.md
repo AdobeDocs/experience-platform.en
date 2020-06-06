@@ -7,13 +7,7 @@ topic: developer guide
 
 # Schedules developer guide
 
-intro
-
-- Retrieve a list of schedules
-- Create a new schedule
-- Retrieve a specific schedule
-- Update a specific schedule
-- Delete a specific schedule
+Schedules are a tool that can be used to automatically run export jobs once a day. You can use the `/config/schedules` endpoint to retrieve a list of schedules, create a new schedule, retrieve details of a specific schedule, update a specific schedule, or delete a specific schedule. 
 
 ## Getting started
 
@@ -29,10 +23,9 @@ You can retrieve a list of all schedules for your IMS Organization by making a G
 
 ```http
 GET /config/schedules
-GET /config/schedules?{QUERY_PARAMETERS}
+GET /config/schedules?start=1
+GET /config/schedules?limit=50
 ```
-
-- `{QUERY_PARAMETERS}`: (*Optional*) Parameters added to the request path which configure the results returned in the response. Multiple parameters can be included, separated by ampersands (`&`). The available parameters are listed below.
 
 **Query parameters**
 
@@ -130,7 +123,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `type` | **Required.** The type of job as a string. The two supported types are `batch_segmentation` and `export`. |
 | `properties` | **Required.** An object containing additional properties related to the schedule. |
 | `properties.segments` | **Required when `type` equals `batch_segmentation`.** Using `["*"]` ensures all segments are included. |
-| `schedule` | **Required.** A string containing the job schedule. For more information about cron schedules, please read the [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation. In this example, "0 0 1 * *" means that this schedule will run at midnight on the first of every month. |
+| `schedule` | **Required.** A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24 hour period. For more information about cron schedules, please read the [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation. In this example, "0 0 1 * *" means that this schedule will run at midnight on the first of every month. |
 | `state` | *Optional.* A string containing the schedule state. The two supported states are `active` and `inactive`. By default, the state is set to `inactive`. |
 
 **Response**
@@ -171,7 +164,9 @@ You can retrieve detailed information about a specific schedule by making a GET 
 GET /config/schedules/{SCHEDULE_ID}
 ```
 
-- `{SCHEDULE_ID}`: The `id` value of the schedule you want to retrieve.
+| Property | Description |
+| -------- | ----------- |
+| `{SCHEDULE_ID}` | The `id` value of the schedule you want to retrieve. |
 
 **Request**
 
@@ -226,7 +221,9 @@ You can use `/state` to update the state of the schedule - ACTIVE or INACTIVE. T
 PATCH /config/schedules/{SCHEDULE_ID}
 ```
 
-- `{SCHEDULE_ID}`: The `id` value of the schedule you want to update.
+| Property | Description |
+| -------- | ----------- |
+| `{SCHEDULE_ID}` | The `id` value of the schedule you want to update. |
 
 **Request**
 
@@ -266,12 +263,14 @@ You can use `schedule` to update the cron schedule. For more information about c
 PATCH /config/schedules/{SCHEDULE_ID}
 ```
 
-- `{SCHEDULE_ID}`: The `id` value of the schedule you want to update.
+| Property | Description |
+| -------- | ----------- |
+| `{SCHEDULE_ID}` | The `id` value of the schedule you want to update. |
 
 **Request**
 
 ```shell
-curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/{SCHEDULE_ID} \
+curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/{SCHEDULE_ID} \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
@@ -306,7 +305,9 @@ You can request to delete a specified schedule by making a DELETE request to the
 DELETE /config/schedules/{SCHEDULE_ID}
 ```
 
-- `{SCHEDULE_ID}`: The `id` value of the schedule you want to delete.
+| Property | Description |
+| -------- | ----------- |
+| `{SCHEDULE_ID}` | The `id` value of the schedule you want to delete. |
 
 **Request**
 
@@ -327,3 +328,5 @@ A successful response returns HTTP status 204 (No Content) with the following me
 ```
 
 ## Next steps
+
+After reading this guide you now have a better understanding of how schedules work. For more information on other Segmentation endpoints, please read the [Segmentation developer guide](./getting-started.md). 
