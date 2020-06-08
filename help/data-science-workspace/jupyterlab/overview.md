@@ -228,9 +228,9 @@ Each supported kernel provides built-in functionalities that allow you to read P
 
 The following information defines the max amount of data that can be read, what type of data was used, and the estimated timeframe reading the data takes. For Python and R, a notebook server configured at 40GB RAM was used for the benchmarks. For PySpark and Scala, a databricks cluster configured at 64GB RAM, 8 cores, 2 DBU with a maximum of 4 workers was used for the benchmarks outlined below.
 
-The ExperienceEvent schema data spans over a period of 10 days. This data is then bloated using the [shadow tool](https://git.corp.adobe.com/experience-platform/shadow) and copied into the DSW test org in step sizes starting from 1K rows and ranging up-to 1B rows.
+The ExperienceEvent schema data used varied in size starting from one thousand (1K) rows ranging up-to one billion (1B) rows. Note that for the PySpark and Spark metrics, a date span of 10 days was used for the XDM data.
 
-The ad-hoc schema data was pre-processed using Query Service Create Table as Select (CTAS) and used the same [shadow tool](https://git.corp.adobe.com/experience-platform/shadow) to get to the step sizes of the datasets.
+The ad-hoc schema data was pre-processed using Query Service Create Table as Select (CTAS). This data also varied in size starting from one thousand (1K) rows ranging up-to one billion (1B) rows.
 
 #### Python notebook data limits
 
@@ -271,8 +271,8 @@ The ad-hoc schema data was pre-processed using Query Service Create Table as Sel
 | Number of rows          | 1K     | 10K    | 100K  | 1M    | 2M    | 3M    | 5M      | 10M     | 50M      | 100M   | 500M   |
 |-------------------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
 | Size on disk            | 2.93MB | 4.38MB | 29.02 | 2.69GB| 5.39GB| 8.09GB| 13.42GB | 26.82GB | 134.24GB |268.39GB| 1.31TB |
-| SDK (Interactive mode)  | 33s    | 32.4s  | 55.1s | 253.5s| 489.2s| 729.6s| 1206.8s |    -    |    -     |   -    |  -     |    -   |
-| SDK (Batch mode)        | 815.8s | 492.8s |379.1s |637.4s |624.5s | 869.2s| 1104.1s| 1786s  | 5387.2s  | 10624.6s| 50547s  |
+| SDK (Interactive mode)  | 33s    | 32.4s  | 55.1s | 253.5s| 489.2s| 729.6s| 1206.8s |    -    |    -     |   -    |  -     |
+| SDK (Batch mode)        | 815.8s | 492.8s |379.1s |637.4s |624.5s | 869.2s| 1104.1s | 1786s   | 5387.2s  |10624.6s| 50547s |
 
 **ad-hoc schema:** On Interactive mode you should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in less than 3 minutes. On Batch mode you should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in around 18 minutes.
 
