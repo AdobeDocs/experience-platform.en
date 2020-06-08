@@ -70,7 +70,7 @@ The following section lists segment definition examples that will **not** be str
 
 Additionally, some guidelines apply when doing streaming segmentation:
 
-| Query type | Guidline |
+| Query type | Guideline |
 | ---------- | -------- |
 | Single event query | The look back window is limited to **7 days**. |
 | Query with event history | <ul><li>The look back window is limited to **1 day**.</li><li>A strict time ordering condition **must** exist between the events.</li><li>Only simple time orderings (before and after) between the events are allowed.</li><li>The individual events **cannot** be negated. However, the entire query **can** be negated.</ul>|
