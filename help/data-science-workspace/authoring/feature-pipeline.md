@@ -7,7 +7,7 @@ topic: Tutorial
 
 # Create a Feature Pipeline
 
-Adobe Experience Platform allows you to build and create custom Feature Pipelines to perform feature engineering at scale through the Sensei Machine Learning Framework Runtime (hereinafter referred to as "Runtime").
+[!DNL Adobe Experience Platform] allows you to build and create custom Feature Pipelines to perform feature engineering at scale through the Sensei Machine Learning Framework Runtime (hereinafter referred to as "Runtime").
 
 This document describes the various classes found in a Feature Pipeline, and provides a step-by-step tutorial for creating a custom Feature Pipeline using the [Model Authoring SDK](./sdk.md) in PySpark and Spark.
 

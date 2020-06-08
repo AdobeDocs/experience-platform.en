@@ -68,7 +68,8 @@ POST /connections
 
 **Request**
 
-In order to create a Azure File Storage connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for Azure File Storage is `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`.
+The following request creates a new Azure File Storage connection, configured by the properties provided in the payload:
+
 
 ```shell
 curl -X POST \

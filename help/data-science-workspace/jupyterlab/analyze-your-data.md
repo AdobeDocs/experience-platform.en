@@ -11,7 +11,7 @@ This tutorial focuses on how to use Jupyter notebooks, built within Data Science
 
 The following concepts are introduced:
 
-- **JupyterLab:** [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is the next-generation web-based interface for Project Jupyter, and is tightly integrated into Adobe Experience Platform.
+- **JupyterLab:** [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is the next-generation web-based interface for Project Jupyter, and is tightly integrated into [!DNL Adobe Experience Platform].
 - **Batches:** Datasets are made up of batches. A batch is a set of data collected over a period of time and processed together as a single unit. New batches are created when data is added to a dataset.
 - **Data Access SDK (deprecated):** The Data Access SDK is now deprecated. Please use the [Platform SDK](../authoring/platform-sdk.md) guide.
 
@@ -31,7 +31,7 @@ By default, Tensorflow recipe work in a GPU cluster and Python runs within a CPU
 
 ### Create a new notebook
 
-In the Adobe Experience Platform UI, click on the Data Science tab in the top menu to take you to the Data Science Workspace. From this page, click on the JupyterLab tab which will open the JupyterLab launcher. You should see a page similar to this.
+In the [!DNL Adobe Experience Platform] UI, click on the Data Science tab in the top menu to take you to the Data Science Workspace. From this page, click on the JupyterLab tab which will open the JupyterLab launcher. You should see a page similar to this.
 
 ![](../images/jupyterlab/analyze-data/jupyterlab_launcher.png)
 
@@ -45,7 +45,7 @@ The Retail Sales recipe is a standalone example which uses the same Retail Sales
 
 >[!NOTE] The `data_access_sdk_python` is deprecated and no longer recommended. Please refer to the [converting data access SDK to Platform SDK](../authoring/platform-sdk.md) tutorial to convert your code. The same steps below still apply for this tutorial.
 
-We will go over accessing data internally from Adobe Experience Platform and data externally. We will be using the `data_access_sdk_python` library to access internal data such as datasets and XDM schemas. For external data, we will use the pandas Python library.
+We will go over accessing data internally from [!DNL Adobe Experience Platform] and data externally. We will be using the `data_access_sdk_python` library to access internal data such as datasets and XDM schemas. For external data, we will use the pandas Python library.
 
 #### External data
 
@@ -63,7 +63,7 @@ Finally, we can take a peek at what our data looks like. We can use `df.head(n)`
 
 #### Experience Platform data
 
-Now, we will go over accessing Experience Platform data.
+Now, we will go over accessing [!DNL Experience Platform] data.
 
 ##### By Dataset ID
 
@@ -89,7 +89,7 @@ df = reader.load(data_set_id="xxxxxxxx", ims_org="xxxxxxxx@AdobeOrg")
 df.head()
 ```
 
-If you are working on other kernels other than Python, please refer to [this page](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) to access data on the Adobe Experience Platform.
+If you are working on other kernels other than Python, please refer to [this page](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) to access data on the [!DNL Adobe Experience Platform].
 
 Selecting the executable cell then pressing the play button in the toolbar will run the executable code. The output for `head()` will be be a table with your dataset's keys as columns and the first n rows in the dataset. `head()` accepts an integer argument to specify how many lines to output. By default this is 5.
 
@@ -183,7 +183,7 @@ Notice the diagonal of 1's down the center. This shows that when comparing a var
 
 ## Next steps
 
-This tutorial went over how to create a new Jupyter notebook in the Data Science Workspace and how to access data externally as well as from Adobe Experience Platform. Specifically, we went over the following steps:
+This tutorial went over how to create a new Jupyter notebook in the Data Science Workspace and how to access data externally as well as from [!DNL Adobe Experience Platform]. Specifically, we went over the following steps:
 - Create a new Jupyter notebook
 - Access datasets and schemas
 - Explore datasets 
