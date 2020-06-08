@@ -24,10 +24,6 @@ The workflow for importing a package recipe consists of the following steps:
 - [Import Docker based recipe - PySpark](#pyspark)
 - [Import Docker based recipe - Scala](#scala)
 
-Deprecated workflows:
-- [Import binary based recipe - PySpark](#pyspark-deprecated)
-- [Import binary based recipe - Scala Spark](#scala-deprecated)
-
 ### Configure a recipe {#configure}
 
 Every recipe instance in Data Science Workspace is accompanied with a set of configurations that tailor the recipe instance to suit a particular use case. Configuration files define the default training and scoring behaviors of a Model created using this recipe instance.
@@ -249,46 +245,3 @@ This tutorial provided insight on configuring and importing a recipe into Data S
 
 - [Train and evaluate a Model in the UI](./train-evaluate-model-ui.md)
 - [Train and evaluate a Model using the API](./train-evaluate-model-api.md)
-
-## Deprecated workflows
-
->[!CAUTION]
->Importing binary based recipes is no longer supported in PySpark 3 (Spark 2.4) and Scala (Spark 2.4).
-
-### Import binary based recipe - PySpark {#pyspark-deprecated}
-
-In the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial, an **EGG** binary file was built using the Retail Sales PySpark source files. 
-
-1. In [Adobe Experience Platform](https://platform.adobe.com/), find the left navigation panel and click **Workflows**. In the Workflows interface, **Launch** a new **Import Recipe from Source File** process.
-![](../images/models-recipes/import-package-ui/workflow_ss.png)
-2. Input an appropriate name for the Retail Sales recipe. For example, "Retail Sales recipe PySpark". Optionally include a recipe description and a documentation URL. Click **Next** when you're done.
-![](../images/models-recipes/import-package-ui/recipe_info.png)
-3. Import the PySpark Retail Sales recipe that was created in the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial by dragging and dropping, or use the file system **Browser**. The packaged recipe should be is located in `experience-platform-dsw-reference/recipes/pyspark/dist`.
-Similarly, import the provided configuration file by dragging and dropping, or use the file system **Browser**. The provided configuration file can be found at `experience-platform-dsw-reference/recipes/pyspark/pipeline.json`. Click **Next** when both files have been supplied.
-![](../images/models-recipes/import-package-ui/recipe_source.png)
-4. You may encounter errors at this point. This is normal behavior and is to be expected. Select the Retail Sales input and output schemas under the section **Manage Schemas**, they were created using the provided bootstrap script in the [create the retail sales schema and dataset](../models-recipes/create-retails-sales-dataset.md) tutorial. 
-![](../images/models-recipes/import-package-ui/recipe_schema.png)
-Under the **Feature Management** section, click on your tenant identification in the schema viewer to expand the Retail Sales input schema. Select the input and output features by highlighting the desired feature, and selecting either **Input Feature** or **Target Feature** in the right **Field Properties** window. For the purpose of this tutorial, set **weeklySales** as the  **Target Feature** and everything else as **Input Feature**. Click **Next** to review your new configured recipe. 
-5. Review the recipe, add, modify, or remove configurations as necessary. Click **Finish** to create the recipe.
-![](../images/models-recipes/import-package-ui/recipe_review.png)
-
-Proceed to the [next steps](#next-steps) to find out how to create a Model in Data Science Workspace using the newly created Retail Sales recipe.
-
-
-### Import binary based recipe - Scala Spark {#scala-deprecated}
-
-In the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial, a **JAR** binary file was built using the Retail Sales Scala Spark source files. 
-
-1. In [Adobe Experience Platform](https://platform.adobe.com/), find the left navigation panel and click **Workflows**. In the Workflows interface, **Launch** a new **Import Recipe from Source File** process.
-![](../images/models-recipes/import-package-ui/workflow_ss.png)
-2. Input an appropriate name for the Retail Sales recipe. For example, "Retail Sales recipe Scala Spark". Optionally include a recipe description and a documentation URL. Click **Next** when you're done.
-![](../images/models-recipes/import-package-ui/recipe_info_scala.png)
-3. Import the Scala Spark Retail Sales recipe that was created in the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial by dragging and dropping, or use the file system **Browser**. The packaged recipe **with dependencies** is located in `experience-platform-dsw-reference/recipes/scala/target`. Similarly, import the provided configuration file by dragging and dropping, or use the file system **Browser**. The provided configuration file can be found at `experience-platform-dsw-reference/recipes/scala/src/main/resources/pipelineservice.json`. Click **Next** when both files have been supplied.
-![](../images/models-recipes/import-package-ui/recipe_source_scala.png)
-4. You may encounter errors at this point. This is normal behavior and is to be expected. Select the Retail Sales input and output schemas under the section **Manage Schemas**, they were created using the provided bootstrap script in the [create the retail sales schema and dataset](../models-recipes/create-retails-sales-dataset.md) tutorial. 
-![](../images/models-recipes/import-package-ui/recipe_schema.png)
-Under the **Feature Management** section, click on your tenant identification in the schema viewer to expand the Retail Sales input schema. Select the input and output features by highlighting the desired feature, and selecting either **Input Feature** or **Target Feature** in the right **Field Properties** window. For the purpose of this tutorial, set **weeklySales** as the  **Target Feature** and everything else as **Input Feature**. Click **Next** to review your new configured recipe.
-5. Review the recipe, add, modify, or remove configurations as necessary. Click **Finish** to create the recipe.
-![](../images/models-recipes/import-package-ui/recipe_review.png)
-
-Proceed to the [next steps](#next-steps) to find out how to create a Model in Data Science Workspace using the newly created Retail Sales recipe.
