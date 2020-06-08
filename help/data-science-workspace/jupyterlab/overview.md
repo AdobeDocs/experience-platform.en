@@ -226,11 +226,11 @@ Each supported kernel provides built-in functionalities that allow you to read P
 
 ### Notebook data limits
 
-The following information defines the max amount of data that can be read, what type of data was used, and the estimated timeframe reading the data takes. For Python and R, a notebook server configured at 40GB RAM was used for the benchmarks. For PySpark and Scala, a notebook server configured at 64GB RAM, 8 cores, 2 DBU with a maximum of 4 workers was used for the benchmarks outlined below.
+The following information defines the max amount of data that can be read, what type of data was used, and the estimated timeframe reading the data takes. For Python and R, a notebook server configured at 40GB RAM was used for the benchmarks. For PySpark and Scala, a databricks cluster configured at 64GB RAM, 8 cores, 2 DBU with a maximum of 4 workers was used for the benchmarks outlined below.
 
-The ExperienceEvent schema data spans over a period of 10 days. This data is then bloated using the shadow tool - https://git.corp.adobe.com/experience-platform/shadow and copied into the DSW test org in step sizes starting from 1K rows and ranging up-to 1B rows. 
+The ExperienceEvent schema data spans over a period of 10 days. This data is then bloated using the [shadow tool](https://git.corp.adobe.com/experience-platform/shadow) and copied into the DSW test org in step sizes starting from 1K rows and ranging up-to 1B rows.
 
-The ad-hoc schema data was pre-processed using Query Service Create Table as Select (CTAS) and used the same shadow tool to get to the step sizes of the datasets.
+The ad-hoc schema data was pre-processed using Query Service Create Table as Select (CTAS) and used the same [shadow tool](https://git.corp.adobe.com/experience-platform/shadow) to get to the step sizes of the datasets.
 
 #### Python notebook data limits
 
