@@ -14,6 +14,8 @@ user-guide-title: Intelligent Services Help
   * [User interface guide](attribution-ai/user-guide.md)
   * [Discovering insights](attribution-ai/discover-insights.md)
   * [Accessing scores](attribution-ai/download-scores.md)
+* Content and Commerce AI {#content-commerce-ai}
+  * [Overview](content-commerce-ai/overview.md)
 * Customer AI {#customer-ai}
   * [Overview](customer-ai/overview.md)
   * [Getting started with Customer AI](customer-ai/getting-started.md)
