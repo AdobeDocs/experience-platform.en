@@ -112,7 +112,7 @@ The following table outlines how the UI behaves based on different combinations 
 
 For more information about the available permissions granted through the Admin Console, including those four sources, see the [access control overview](../access-control/home.md).
 
-## Terms and conditions
+## Terms and conditions {#terms-and-conditions}
 
 By using any of the Sources labeled as beta (“Beta”), You hereby acknowledge that the Beta is provided ***“as is” without warranty of any kind***.
 
