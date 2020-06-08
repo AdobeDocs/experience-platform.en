@@ -228,24 +228,59 @@ Each supported kernel provides built-in functionalities that allow you to read P
 
 The following information defines the max amount of data readable, what type of data, and the estimated timeframe reading the data takes. For Python and R, a notebook server configured at 40GB RAM was used for the benchmarks. For PySpark and Scala, a notebook server configured at 64GB RAM, 8 cores, 2 DBU with a maximum of 4 workers was used for the benchmarks outlined below.
 
-**Python notebook data limits:**
+#### Python notebook data limits
 
-* You should be able to read a maximum of 2 million rows (~6.1 GB data on disk) of XDM data in less than 22 minutes.
-* You should be able to read a maximum of 5 million rows (~5.6 GB data on disk) of non-XDM (ad-hoc) data in less than 14 minutes.
+**XDM ExperienceEvent schema:** You should be able to read a maximum of 2 million rows (~6.1 GB data on disk) of XDM data in less than 22 minutes. Adding additional rows may result in errors.
 
-**R notebook data limits:**
+| Number of Rows  | 1K | 10K | 100K | 1M | 2M |
+| ----------------------- | ------ | ------ | ----- | ----- | ----- |
+| Size on disk (MB)       | 18.73  | 187.5  | 308   | 3000  | 6050  |
+| SDK (in seconds)        | 20.3   | 86.8   | 63    | 659   | 1315  | 
 
-* You should be able to read a maximum of 1 million rows of XDM data (3GB data on disk) in under 13 minutes.
-* You should be able to read a maximum of 3 million rows of ad-hoc data (293MB data on disk) in around 10 minutes.
+**ad-hoc schema:** You should be able to read a maximum of 5 million rows (~5.6 GB data on disk) of non-XDM (ad-hoc) data in less than 14 minutes. Adding additional rows may result in errors.
+
+| Number of Rows          | 1K      | 10K     | 100K  | 1M    | 2M    | 3M    | 5M     |
+| ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- | ------ |
+| Size on disk (in MB)    | 1.21    | 11.72   | 115   | 1120  | 2250  | 3380  | 5630   |
+| SDK (in seconds)| 7.27    | 9.04    | 27.3  | 180   | 346   | 487   | 819    |
+
+#### R notebook data limits
+
+**XDM ExperienceEvent schema:** You should be able to read a maximum of 1 million rows of XDM data (3GB data on disk) in under 13 minutes.
+
+| Number of Rows          | 1K     | 10K    | 100K  | 1M    |
+| ----------------------- | ------ | ------ | ----- | ----- |
+| Size on disk (MB)       | 18.73  | 187.5  | 308   | 3000  |
+| R Kernel  (in seconds)  | 14.03  | 69.6   | 86.8  | 775   |
+
+**ad-hoc schema:** You should be able to read a maximum of 3 million rows of ad-hoc data (293MB data on disk) in around 10 minutes.
+
+| Number of Rows          | 1K      | 10K     | 100K  | 1M    | 2M    | 3M    |
+| ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- |
+| Size on disk (in MB)    | 0.082   | 0.612   | 9.0   | 91    | 188   | 293   |
+| R SDK (in sec)          | 7.7     | 4.58    | 35.9  | 233   | 470.5 | 603   |
 
 **PySpark (Python kernel) notebook data limits:**
 
-* **Interactive mode XDM:** You should be able to read a maximum of 5 million rows (~13.42GB data on disk) of XDM data in around 20 minutes.
-* **Batch mode XDM:** You should be able to read a maximum of 1 billion rows (~1.31TB data on disk) of XDM data in around 14 hours. Note that Batch mode becomes more efficient at 5 million rows.
-* **Interactive mode non-XDM (ad-hoc):** You should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in less than 3 minutes.
-* **Batch mode non-XDM (ad-hoc):** You should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in around 18 minutes.
+**XDM ExperienceEvent schema:** On Interactive mode you should be able to read a maximum of 5 million rows (~13.42GB data on disk) of XDM data in around 20 minutes. Interactive mode only supports up-to 5 million rows. If you wish to read larger datasets, it's suggested you switch to Batch mode. On Batch mode you should be able to read a maximum of 500 million rows (~1.31TB data on disk) of XDM data in around 14 hours.
+
+| Rows          | 1K     | 10K    | 100K  | 1M    | 2M    | 3M    | 5M      | 10M     | 50M      | 100M   | 500M   |
+|---------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
+| Size on disk  | 2.93MB | 4.38MB | 29.02 | 2.69GB| 5.39GB| 8.09GB| 13.42GB | 26.82GB | 134.24GB |268.39GB| 1.31TB |
+| SDK (Interactive mode)   | 33s    | 32.4s  | 55.1s | 253.5s| 489.2s| 729.6s | 1206.8s|    -    |    -     |   -    |  -     |    -   |
+| SDK (Batch mode)    | 815.8s | 492.8s |379.1s |637.4s |624.5s |869.2s | 1104.1s |1786s  | 5387.2s  |10624.6s|50547s  |
+
+**ad-hoc schema:** On Interactive mode You should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in less than 3 minutes. On Batch mode you should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in around 18 minutes.
+
+| Rows         | 1K     | 10K     | 100K    | 1M    | 2M    | 3M    | 5M     | 10M    | 50M     | 100M   | 500M    | 1B    |
+|--------------|--------|---------|---------|-------|-------|-------|--------|--------|---------|--------|---------|-------|
+| Size On Disk | 1.12MB | 11.24MB | 109.48MB| 2.69GB| 2.14GB| 3.21GB| 5.36GB | 10.71GB| 53.58GB |107.52GB| 535.88GB| 1.05TB|
+| SDK (Interactive mode)   | 28.2s  | 18.6s   |20.8s    |20.9s  |23.8s  |21.7s  |24.7s   | 22s    |28.4s    |40s     |97.4s    |154.5s |
+| SDK (Batch mode)   | 428.8s | 578.8s  |641.4s  |538.5s |630.9s |467.3s |411s    | 675s    |702s     |719.2s  |1022.1s  |1122.3s|
 
 **Spark (Scala kernel) notebook data limits:**
+
+**XDM ExperienceEvent schema:**
 
 * **Interactive mode XDM:** You should be able to read a maximum of 5 million rows (~13.42GB data on disk) of XDM data in around 18 minutes.
 * **Batch mode XDM:** You should be able to read a maximum of 1 billion rows (~1.31TB data on disk) of XDM data in around 14 hours. Note that Batch mode becomes more efficient at 5 million rows.
