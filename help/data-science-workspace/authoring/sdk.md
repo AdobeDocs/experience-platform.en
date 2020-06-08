@@ -270,18 +270,20 @@ class MyDataSaver(DataSaver):
     Implementation of DataSaver which stores a DataFrame to a Platform dataset
     """
 
-    def save(self, configProperties, prediction):
+    def save(self, config_properties, prediction):
 
         # Spark context
         sparkContext = prediction._sc
 
         # preliminary checks
         if config_properties is None:
-            raise ValueError("configProperties parameter is null")
+            raise ValueError("config_properties parameter is null")
         if prediction is None:
             raise ValueError("prediction parameter is null")
         if sparkContext is None:
             raise ValueError("sparkContext parameter is null")
+        
+        PLATFORM_SDK_PQS_PACKAGE = "com.adobe.platform.query"
 
         # prepare variables
         scored_dataset_id = str(config_properties.get("scoringResultsDataSetId"))
