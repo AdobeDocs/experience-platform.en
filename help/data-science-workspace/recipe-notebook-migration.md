@@ -8,7 +8,7 @@ topic: Tutorial
 # Recipe and notebook migration guides
 
 >[!NOTE]
->Notebooks and recipes using Python/R remain unaffected. The migration only applies to existing PySpark/Spark recipes and notebooks.
+>Notebooks and recipes using Python/R remain unaffected. The migration only applies to PySpark/Spark (2.3) recipes and notebooks.
 
 The following guides outline the steps and information required for migrating existing recipes and notebooks. 
 
