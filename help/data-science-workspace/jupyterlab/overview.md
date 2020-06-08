@@ -226,9 +226,9 @@ Each supported kernel provides built-in functionalities that allow you to read P
 
 ### Notebook data limits
 
-The following information defines the max amount of data readable, what type of data, and the estimated timeframe reading the data takes. For Python and R, a notebook server configured at 40GB RAM was used for the benchmarks. For PySpark and Scala, a notebook server configured at 64GB RAM, 8 cores, 2 DBU with a maximum of 4 workers was used for the benchmarks outlined below.
+The following information defines the max amount of data that can be read, what type of data was used, and the estimated timeframe reading the data takes. For Python and R, a notebook server configured at 40GB RAM was used for the benchmarks. For PySpark and Scala, a notebook server configured at 64GB RAM, 8 cores, 2 DBU with a maximum of 4 workers was used for the benchmarks outlined below.
 
-The data is ExperienceEvent based schema which spans over a period of 10 days. This data is then bloated using the shadow tool - https://git.corp.adobe.com/experience-platform/shadow and copied into the DSW test org in step sizes starting from 1K rows and ranging up-to 1B rows. 
+The data is an ExperienceEvent based schema which spans over a period of 10 days. This data is then bloated using the shadow tool - https://git.corp.adobe.com/experience-platform/shadow and copied into the DSW test org in step sizes starting from 1K rows and ranging up-to 1B rows. 
 
 The ad-hoc schema based data is data that has been pre-processed using Query Service Create Table as Select (CTAS) and used the same shadow tool to get to the step sizes of the datasets.
 
@@ -264,7 +264,7 @@ The ad-hoc schema based data is data that has been pre-processed using Query Ser
 | Size on disk (in MB)    | 0.082   | 0.612   | 9.0   | 91    | 188   | 293   |
 | R SDK (in sec)          | 7.7     | 4.58    | 35.9  | 233   | 470.5 | 603   |
 
-**PySpark (Python kernel) notebook data limits:**
+#### PySpark (Python kernel) notebook data limits:
 
 **XDM ExperienceEvent schema:** On Interactive mode you should be able to read a maximum of 5 million rows (~13.42GB data on disk) of XDM data in around 20 minutes. Interactive mode only supports up-to 5 million rows. If you wish to read larger datasets, it's suggested you switch to Batch mode. On Batch mode you should be able to read a maximum of 500 million rows (~1.31TB data on disk) of XDM data in around 14 hours.
 
@@ -282,7 +282,7 @@ The ad-hoc schema based data is data that has been pre-processed using Query Ser
 | SDK Interactive mode (in seconds) | 28.2s  | 18.6s   |20.8s    |20.9s  |23.8s  |21.7s  |24.7s   | 22s    |28.4s    |40s     |97.4s    |154.5s |
 | SDK Batch mode (in seconds) | 428.8s | 578.8s  |641.4s  |538.5s |630.9s |467.3s |411s    | 675s    |702s     |719.2s  |1022.1s  |1122.3s|
 
-**Spark (Scala kernel) notebook data limits:**
+#### Spark (Scala kernel) notebook data limits:
 
 **XDM ExperienceEvent schema:** On Interactive mode you should be able to read a maximum of 5 million rows (~13.42GB data on disk) of XDM data in around 18 minutes. Interactive mode only supports up-to 5 million rows. If you wish to read larger datasets, it's suggested you switch to Batch mode. On Batch mode you should be able to read a maximum of 500 million rows (~1.31TB data on disk) of XDM data in around 14 hours.
 
