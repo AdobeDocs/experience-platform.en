@@ -35,6 +35,7 @@ Standardization and interoperability are key concepts behind [!DNL Experience Pl
 *   **Catalog Service:** Access and explore datasets with read and write functionalities.
 *   **Query Service:** Access and explore datasets using SQL, providing lower data access overheads when dealing with large amounts of data.
 *   **Sensei ML Framework:** Model development with the ability to train and score data, as well as recipe creation with a single click.
+*   **Experience Data Model (XDM):** Standardization and interoperability are key concepts behind Adobe Experience Platform. [Experience Data Model (XDM)](https://www.adobe.com/go/xdm-home-en), driven by Adobe, is an effort to standardize customer experience data and define schemas for customer experience management.
 
 >[!NOTE] Some [!DNL Platform] service integrations on JupyterLab are limited to specific kernels. Refer to the section on [kernels](#kernels) for more details.
 
@@ -223,21 +224,37 @@ To open a new *Launcher*, click **File > New Launcher**. Alternatively, expand t
 
 Each supported kernel provides built-in functionalities that allow you to read Platform data from a dataset within a notebook. However, support for paginating data is limited to Python and R notebooks.
 
-### Read from a dataset in Python/R
+### Notebook data limits
 
-Python and R notebooks allow you to paginate data when accessing datasets. Sample code to read data with and without pagination is demonstrated below.
+The following information defines the max amount of data readable, what type of data, and the estimated timeframe reading the data takes. For Python and R, a notebook server configured at 40GB RAM was used for the benchmarks. For PySpark and Scala, a notebook server configured at 64GB RAM, 8 cores, 2 DBU with a maximum of 4 workers was used for the benchmarks outlined below.
 
 **Python notebook data limits:**
 
-A notebook server configured at 40Gb RAM was used for these benchmarks.
-* You should be able to read a maximum of 2M rows (~6.1 GB data on disk) of XDM data in less than 22 minutes.
-* You should be able to read a maximum of 5M rows (~5.6 GB data on disk) of non-XDM (Ad Hoc) in less than 14 minutes.
+* You should be able to read a maximum of 2 million rows (~6.1 GB data on disk) of XDM data in less than 22 minutes.
+* You should be able to read a maximum of 5 million rows (~5.6 GB data on disk) of non-XDM (ad-hoc) data in less than 14 minutes.
 
 **R notebook data limits:**
 
-A notebook server configured at 40Gb RAM was used for these benchmarks.
-* You should be able to read a maximum of 1M rows of XDM data (3Gb data on disk) in under 13 minutes.
-* You should be able to read a maximum of 3M rows of Ad Hoc data (293Mb data on disk) in around 10 minutes.
+* You should be able to read a maximum of 1 million rows of XDM data (3GB data on disk) in under 13 minutes.
+* You should be able to read a maximum of 3 million rows of ad-hoc data (293MB data on disk) in around 10 minutes.
+
+**PySpark (Python kernel) notebook data limits:**
+
+* **Interactive mode XDM:** You should be able to read a maximum of 5 million rows (~13.42GB data on disk) of XDM data in around 20 minutes.
+* **Batch mode XDM:** You should be able to read a maximum of 1 billion rows (~1.31TB data on disk) of XDM data in around 14 hours. Note that Batch mode becomes more efficient at 5 million rows.
+* **Interactive mode non-XDM (ad-hoc):** You should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in less than 3 minutes.
+* **Batch mode non-XDM (ad-hoc):** You should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in around 18 minutes.
+
+**Spark (Scala kernel) notebook data limits:**
+
+* **Interactive mode XDM:** You should be able to read a maximum of 5 million rows (~13.42GB data on disk) of XDM data in around 18 minutes.
+* **Batch mode XDM:** You should be able to read a maximum of 1 billion rows (~1.31TB data on disk) of XDM data in around 14 hours. Note that Batch mode becomes more efficient at 5 million rows.
+* **Interactive mode non-XDM (ad-hoc):** You should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in less than 3 minutes.
+* **Batch mode non-XDM (ad-hoc):** You should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in around 16 minutes.
+
+### Read from a dataset in Python/R
+
+Python and R notebooks allow you to paginate data when accessing datasets. Sample code to read data with and without pagination is demonstrated below.
 
 [//]: # (In the following samples, the first step is currently required but once the SDK is complete, users are no longer required to explicitly define client_context)
 
@@ -302,22 +319,6 @@ df <- dataset_reader$limit(100L)$offset(10L)$read()
 *   `{DATASET_ID}`: The unique identity of the dataset to be accessed
 
 ### Read from a dataset in PySpark/Spark/Scala
-
-**PySpark (Python kernel) notebook data limits:**
-
-A notebook server configured at 64Gb RAM, 8 Cores, 2 DBU with a maximum of 4 workers was used for these benchmarks.
-* **Interactive mode XDM:** You should be able to read a maximum of 5M rows (~13.42GB data on disk) of XDM data in around 20 minutes.
-* **Batch mode XDM:** You should be able to read a maximum of 1B rows (~1.31TB data on disk) of XDM data in around 14 hours. Note that Batch mode becomes more efficient at 5M rows.
-* **Interactive mode non-XDM (Ad Hoc):** You should be able to read a maximum of 1B rows (~1.05TB data on disk) of non-XDM data in less than 3 minutes.
-* **Batch mode non-XDM (Ad Hoc):** ou should be able to read a maximum of 1B rows (~1.05TB data on disk) of non-XDM data in around 18 minutes.
-
-**Spark (Scala kernel) notebook data limits:**
-
-A notebook server configured at 64Gb RAM, 8 Cores, 2 DBU with a maximum of 4 workers was used for these benchmarks.
-* **Interactive mode XDM:** You should be able to read a maximum of 5M rows (~13.42GB data on disk) of XDM data in around 18 minutes.
-* **Batch mode XDM:** You should be able to read a maximum of 1B rows (~1.31TB data on disk) of XDM data in around 14 hours. Note that Batch mode becomes more efficient at 5M rows.
-* **Interactive mode non-XDM (Ad Hoc):** You should be able to read a maximum of 1B rows (~1.05TB data on disk) of non-XDM data in less than 3 minutes.
-* **Batch mode non-XDM (Ad Hoc):** ou should be able to read a maximum of 1B rows (~1.05TB data on disk) of non-XDM data in around 16 minutes.
 
 With an an active PySpark or Scala notebook opened, expand the **Data Explorer** tab from the left sidebar and double click **Datasets** to view a list of available datasets. Right-click on the dataset listing you wish to access and click **Explore Data in Notebook**. The following code cells are generated:
 
