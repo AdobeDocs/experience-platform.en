@@ -44,6 +44,7 @@ Cloud storage sources can bring your own data into Platform without the need to 
 - [Azure File Storage connector](connectors/cloud-storage/azure-file-storage.md)
 - [FTP and SFTP connector](connectors/cloud-storage/ftp-sftp.md)
 - [Google Cloud Storage connector](connectors/cloud-storage/google-cloud-storage.md)
+- [HDFS connector](connectors/cloud-storage/hdfs.md)
 
 ### Customer Relationship Management (CRM)
 
@@ -69,6 +70,7 @@ Experience Platform provides support for ingesting data from a third-party datab
 - [Azure Data Explorer connector](connectors/databases/data-explorer.md)
 - [Azure Synapse Analytics connector](connectors/databases/synapse-analytics.md)
 - [Azure Table Storage connector](connectors/databases/ats.md)
+- [CouchBase connector](connectors/databases/couchbase.md)
 - [Google BigQuery connector](connectors/databases/bigquery.md)
 - [GreenPlum connector](connectors/databases/greenplum.md)
 - [HP Vertica connector](connectors/databases/hp-vertica.md)
