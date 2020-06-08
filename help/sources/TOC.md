@@ -131,7 +131,8 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - Advertising {#create}
       - [Google AdWords connector](tutorials/ui/create/advertising/ads.md)
     - Cloud storage {#cloud-storage}
-      - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
+      - [Amazon Kinesis connector](tutorials/ui/create/cloud-storage/kinesis.md)
+      - [Apache HDFS connector](tutorials/ui/create/cloud-storage/hdfs.md)
       - [Azure Data Lake Storage Gen2 connector](tutorials/ui/create/cloud-storage/adls-gen2.md)
       - [Azure Blob and Amazon S3 connector](tutorials/ui/create/cloud-storage/blob-s3.md)
       - [Azure Event Hubs connector](tutorials/ui/create/cloud-storage/eventhub.md)
@@ -151,6 +152,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Azure Data Explorer connector](tutorials/ui/create/databases/data-explorer.md)
       - [Azure Synapse Analytics connector](tutorials/ui/create/databases/synapse-analytics.md)
       - [Azure Table Storage connector](tutorials/ui/create/databases/ats.md)
+      - [Couchbase connector](tutorials/ui/create/databases/couchbase.md)
       - [Google Big Query connector](tutorials/ui/create/databases/bigquery.md)
       - [GreenPlum connector](tutorials/ui/create/databases/greenplum.md)
       - [HP Vertica connector](tutorials/ui/create/databases/hp-vertica.md)
