@@ -181,6 +181,13 @@ The following section lists segment definition examples that will **not** be str
 | Incoming hit that refers to a Profile and has event history | The following options will **not** support streaming segmentation:<ul><li>An event that does **not** occur within **the last 24 hours**.</li><li>A segment definition that includes Adobe Audience Manager (AAM) segments or traits.</li></ul> | ![](../images/segment-builder/event-history-failure.png)
 | Multi-entity queries | Multi-entity queries are, as a whole, **not** supported by streaming segmentation. |
 
+Additionally, some guidelines apply when doing streaming segmentation:
+
+| Query type | Guidline |
+| ---------- | -------- |
+| Single event query | The look back window is limited to **7 days**. |
+| Query with event history | <ul><li>The look back window is limited to **1 day**.</li><li>A strict time ordering condition **must** exist between the events.</li><li>Only simple time orderings (before and after) between the events are allowed.</li><li>The individual events **cannot** be negated. However, the entire query **can** be negated.</ul>|
+
 ## DULE policy violations
 
 >[!NOTE] DULE policy violations only apply if you are creating a segment that has been assigned to a destination.
