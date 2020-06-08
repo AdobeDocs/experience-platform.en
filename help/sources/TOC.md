@@ -26,6 +26,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [Azure File Storage connector](connectors/cloud-storage/azure-file-storage.md)
     - [FTP and SFTP connector](connectors/cloud-storage/ftp-sftp.md)
     - [Google Cloud Storage connector](connectors/cloud-storage/google-cloud-storage.md)
+    - [HDFS connector](connectors/cloud-storage/hdfs.md)
   - CRM {#crm}
     - [Microsoft Dynamics connector](connectors/crm/ms-dynamics.md)
     - [Salesforce connector](connectors/crm/salesforce.md)
@@ -39,6 +40,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [Azure Data Explorer connector](connectors/databases/data-explorer.md)
     - [Azure Synapse Analytics connector](connectors/databases/synapse-analytics.md)
     - [Azure Table Storage connector](connectors/databases/ats.md)
+    - [CouchBase connector](connectors/databases/couchbase.md)
     - [Google BigQuery connector](connectors/databases/bigquery.md)
     - [GreenPlum connector](connectors/databases/greenplum.md)
     - [HP Vertica connector](connectors/databases/hp-vertica.md)
@@ -67,6 +69,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Azure Event Hubs connector](tutorials/api/create/cloud-storage/eventhub.md)
       - [Azure File Storage connector](tutorials/api/create/cloud-storage/azure-file-storage.md)
       - [Google Cloud Storage connector](tutorials/api/create/cloud-storage/google.md)
+      - [HDFS connector](tutorials/api/create/cloud-storage/hdfs.md)
       - [SFTP connector](tutorials/api/create/cloud-storage/sftp.md)
     - CRM {#crm}
       - [HubSpot connector](tutorials/api/create/crm/hubspot.md)
@@ -82,6 +85,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Azure Data Explorer connector](tutorials/api/create/databases/data-explorer.md)
       - [Azure Synapse Analytics connector](tutorials/api/create/databases/synapse-analytics.md)
       - [Azure Table Storage connector](tutorials/api/create/databases/ats.md)
+      - [CouchBase connector](tutorials/api/create/databases/couchbase.md)
       - [Google BigQuery connector](tutorials/api/create/databases/bigquery.md)
       - [GreenPlum connector](tutorials/api/create/databases/greenplum.md)
       - [HP Vertica connector](tutorials/api/create/databases/hp-vertica.md)
