@@ -31,7 +31,7 @@ Lastly, toggle “Block third-party cookies” to "OFF".
 
 ![chrome advanced](./images/faq/toggle-off.png)
 
->[!NOTE] Alternatively, you could disable third-party cookies and allow list [*.]ds.adobe.net
+>[!NOTE] Alternatively, you could disable third-party cookies and add [*.]ds.adobe.net to the allow list.
 
 Navigate to “chrome://flags/” in your address bar. Search for and disable the flag titled *“SameSite by default cookies”* by using the dropdown menu on the right.
    
