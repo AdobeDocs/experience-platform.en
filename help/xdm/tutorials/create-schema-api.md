@@ -1846,7 +1846,7 @@ The following shows the completed Loyalty Members schema in JSON format:
                         "active": "Active",
                         "incomplete": "Incomplete",
                         "pending_verification": "Pending Verification",
-                        "blacklisted": "Deny listed",
+                        "denylisted": "Deny listed",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -1898,7 +1898,7 @@ The following shows the completed Loyalty Members schema in JSON format:
                     "meta:enum": {
                         "active": "Active",
                         "incomplete": "Incomplete",
-                        "blacklisted": "Deny listed",
+                        "denylisted": "Deny listed",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -1963,7 +1963,7 @@ The following shows the completed Loyalty Members schema in JSON format:
                     "meta:enum": {
                         "active": "Active",
                         "incomplete": "Incomplete",
-                        "blacklisted": "Deny listed",
+                        "denylisted": "Deny listed",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -2028,7 +2028,7 @@ The following shows the completed Loyalty Members schema in JSON format:
                     "meta:enum": {
                         "active": "Active",
                         "incomplete": "Incomplete",
-                        "blacklisted": "Deny listed",
+                        "denylisted": "Deny listed",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
