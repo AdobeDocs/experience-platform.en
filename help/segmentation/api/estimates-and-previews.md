@@ -103,46 +103,46 @@ A successful response returns HTTP status 200 with detailed information about th
 ```json
 {
    "results": [{
-         "XID_ADOBE-MARKETING-CLOUD-ID-1": {
+        "XID_ADOBE-MARKETING-CLOUD-ID-1": {
             "_href": "https://platform.adobe.io/data/core/ups/models/profile/XID_ADOBE-MARKETING-CLOUD-ID-1",
             "endCustomerIds": {
-               "XID_COOKIE_ID_1": {
-                  "_href": "https://platform.adobe.io/data/core/ups/models/profile/XID_COOKIE_ID_1"
-               },
-               "XID_PROFILE_ID_1": {
-                  "_href": "https://platform.adobe.io/data/core/ups/models/profile/XID_PROFILE_ID_1"
-               }
+                "XID_COOKIE_ID_1": {
+                    "_href": "https://platform.adobe.io/data/core/ups/models/profile/XID_COOKIE_ID_1"
+                },
+                "XID_PROFILE_ID_1": {
+                    "_href": "https://platform.adobe.io/data/core/ups/models/profile/XID_PROFILE_ID_1"
+                }
             }
-         }
-      },
-      {
-         "XID_COOKIE-ID-2": {
+        }
+    },
+    {
+        "XID_COOKIE-ID-2": {
             "_href": "https://platform.adobe.io/data/core/ups/models/profile/XID_COOKIE-ID-2",
             "endCustomerIds": {
-               "XID_COOKIE_ID_2-1": {
-                  "_href": "https://platform.adobe.io/data/core/ups/models/profile/XID_COOKIE_ID_2-1"
+                "XID_COOKIE_ID_2-1": {
+                    "_href": "https://platform.adobe.io/data/core/ups/models/profile/XID_COOKIE_ID_2-1"
 
-               },
-               "XID_PROFILE_ID_2": {
-                  "_href": "https://platform.adobe.io/data/core/ups/models/profile/XID_PROFILE_ID_2"
-               }
+                },
+                "XID_PROFILE_ID_2": {
+                    "_href": "https://platform.adobe.io/data/core/ups/models/profile/XID_PROFILE_ID_2"
+                }
             }
-         },
-         "XID_ADOBE-MARKETING-CLOUD-ID-3": {
+        },
+        "XID_ADOBE-MARKETING-CLOUD-ID-3": {
             "_href": "https://platform.adobe.io/data/core/ups/models/profile/XID_ADOBE-MARKETING-CLOUD-ID-1000"
-         },
-         "state": "RESULT_READY",
-         "links": {
+        },
+        "state": "RESULT_READY",
+        "links": {
             "_self": "https://platform.adobe.io/data/core/ups/preview?expression=<expr-1>&limit=1000",
             "next": "",
             "prev": ""
-         }
-      }
-   ],
-   "page": {
-      "offset": 0,
-      "size": 3
-   }
+        }
+    }
+    ],
+    "page": {
+        "offset": 0,
+        "size": 3
+    }
 }
 ```
 

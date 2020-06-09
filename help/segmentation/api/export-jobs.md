@@ -54,101 +54,101 @@ A successful response returns HTTP status 200 with a list of export jobs for the
 
 ```json
 {
-  "records": [
-    {
-      "id": 100,
-      "jobType": "BATCH",
-      "destination": {
-        "datasetId": "5b7c86968f7b6501e21ba9df",
-        "segmentPerBatch": false,
-        "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52",
-        "batches": {
-          "segmentId": "52c26d0d-45f2-47a2-ab30-ed06abc981ff",
-          "segmentNs": "ups",
-          "status": [
-            "realized"
-          ],
-          "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
-        }
-      },
-      "fields": "identities.id,personalEmail.address",
-      "schema": {
-        "name": "_xdm.context.profile"
-      },
-      "imsOrgId": "1BD6382559DF0C130A49422D@AdobeOrg",
-      "status": "SUCCEEDED",
-      "filter": {
-        "segments": [
-          {
-            "segmentId": "52c26d0d-45f2-47a2-ab30-ed06abc981ff",
-            "segmentNs": "ups",
-            "status": [
-              "realized"
-            ]
-          }
-        ],
-        "segmentQualificationTime": {
-          "startTime": "2018-01-01T00:00:00Z",
-          "endTime": "2018-02-01T00:00:00Z"
-        },
-        "fromIngestTimestamp": "2018-01-01T00:00:00Z",
-        "emptyProfiles": true
-      },
-      "additionalFields": {
-        "eventList": {
-          "fields": "string",
-          "filter": {
-            "fromIngestTimestamp": "2018-01-01T00:00:00Z"
-          }
-        }
-      },
-      "mergePolicy": {
-        "id": "timestampOrdered-none-mp",
-        "version": 1
-      },
-      "profileInstanceId": "ups",
-      "errors": [
+    "records":[
         {
-          "code": "0100000003",
-          "msg": "Error in Export Job",
-          "callStack": "com.adobe.aep.unifiedprofile.common.logging.Logger"
+            "id":100,
+            "jobType":"BATCH",
+            "destination":{
+                "datasetId":"5b7c86968f7b6501e21ba9df",
+                "segmentPerBatch":false,
+                "batchId":"da5cfb4de32c4b93a09f7e37fa53ad52",
+                "batches":{
+                    "segmentId":"52c26d0d-45f2-47a2-ab30-ed06abc981ff",
+                    "segmentNs":"ups",
+                    "status":[
+                        "realized"
+                    ],
+                    "batchId":"da5cfb4de32c4b93a09f7e37fa53ad52"
+                }
+            },
+            "fields":"identities.id,personalEmail.address",
+            "schema":{
+                "name":"_xdm.context.profile"
+            },
+            "imsOrgId":"1BD6382559DF0C130A49422D@AdobeOrg",
+            "status":"SUCCEEDED",
+            "filter":{
+                "segments":[
+                    {
+                        "segmentId":"52c26d0d-45f2-47a2-ab30-ed06abc981ff",
+                        "segmentNs":"ups",
+                        "status":[
+                            "realized"
+                        ]
+                    }
+                ],
+                "segmentQualificationTime":{
+                    "startTime":"2018-01-01T00:00:00Z",
+                    "endTime":"2018-02-01T00:00:00Z"
+                },
+                "fromIngestTimestamp":"2018-01-01T00:00:00Z",
+                "emptyProfiles":true
+            },
+            "additionalFields":{
+                "eventList":{
+                    "fields":"string",
+                    "filter":{
+                        "fromIngestTimestamp":"2018-01-01T00:00:00Z"
+                    }
+                }
+            },
+            "mergePolicy":{
+                "id":"timestampOrdered-none-mp",
+                "version":1
+            },
+            "profileInstanceId":"ups",
+            "errors":[
+                {
+                    "code":"0100000003",
+                    "msg":"Error in Export Job",
+                    "callStack":"com.adobe.aep.unifiedprofile.common.logging.Logger"
+                }
+            ],
+            "metrics":{
+                "totalTime":{
+                    "startTimeInMs":123456789000,
+                    "endTimeInMs":123456799000,
+                    "totalTimeInMs":10000
+                },
+                "profileExportTime":{
+                    "startTimeInMs":123456789000,
+                    "endTimeInMs":123456799000,
+                    "totalTimeInMs":10000
+                },
+                "aCPDatasetWriteTime":{
+                    "startTimeInMs":123456789000,
+                    "endTimeInMs":123456799000,
+                    "totalTimeInMs":10000
+                }
+            },
+            "computeGatewayJobId":{
+                "exportJob":"f3058161-7349-4ca9-807d-212cee2c2e94",
+                "pushJob":"feaeca05-d137-4605-aa4e-21d19d801fc6"
+            },
+            "creationTime":1538615973895,
+            "updateTime":1538616233239,
+            "requestId":"d995479c-8a08-4240-903b-af469c67be1f"
         }
-      ],
-      "metrics": {
-        "totalTime": {
-          "startTimeInMs": 123456789000,
-          "endTimeInMs": 123456799000,
-          "totalTimeInMs": 10000
-        },
-        "profileExportTime": {
-          "startTimeInMs": 123456789000,
-          "endTimeInMs": 123456799000,
-          "totalTimeInMs": 10000
-        },
-        "aCPDatasetWriteTime": {
-          "startTimeInMs": 123456789000,
-          "endTimeInMs": 123456799000,
-          "totalTimeInMs": 10000
-        }
-      },
-      "computeGatewayJobId": {
-        "exportJob": "f3058161-7349-4ca9-807d-212cee2c2e94",
-        "pushJob": "feaeca05-d137-4605-aa4e-21d19d801fc6"
-      },
-      "creationTime": 1538615973895,
-      "updateTime": 1538616233239,
-      "requestId": "d995479c-8a08-4240-903b-af469c67be1f"
+    ],
+    "page":{
+        "sortField":"createdTime",
+        "sort":"desc",
+        "pageOffset":"1540974701302_96",
+        "pageSize":10
+    },
+    "link":{
+        "next":"string"
     }
-  ],
-  "page": {
-    "sortField": "createdTime",
-    "sort": "desc",
-    "pageOffset": "1540974701302_96",
-    "pageSize": 10
-  },
-  "link": {
-    "next": "string"
-  }
 }
 ```
 
@@ -175,43 +175,43 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
 {
-  "fields": "identities.id,personalEmail.address",
-  "mergePolicy": {
-    "id": "timestampOrdered-none-mp",
-    "version": 1
-  },
-  "filter": {
-    "segments": [
-      {
-        "segmentId": "52c26d0d-45f2-47a2-ab30-ed06abc981ff",
-        "segmentNs": "ups",
-        "status": [
-          "realized"
-        ]
-      }
-    ],
-    "segmentQualificationTime": {
-      "startTime": "2018-01-01T00:00:00Z",
-      "endTime": "2018-02-01T00:00:00Z"
+    "fields":"identities.id,personalEmail.address",
+    "mergePolicy":{
+        "id":"timestampOrdered-none-mp",
+        "version":1
     },
-    "fromIngestTimestamp": "2018-01-01T00:00:00Z",
-    "emptyProfiles": true
-  },
-  "additionalFields": {
-    "eventList": {
-      "fields": "string",
-      "filter": {
-        "fromIngestTimestamp": "2018-01-01T00:00:00Z"
-      }
+    "filter":{
+        "segments":[
+            {
+                "segmentId":"52c26d0d-45f2-47a2-ab30-ed06abc981ff",
+                "segmentNs":"ups",
+                "status":[
+                    "realized"
+                ]
+            }
+        ],
+        "segmentQualificationTime":{
+            "startTime":"2018-01-01T00:00:00Z",
+            "endTime":"2018-02-01T00:00:00Z"
+        },
+        "fromIngestTimestamp":"2018-01-01T00:00:00Z",
+        "emptyProfiles":true
+    },
+    "additionalFields":{
+        "eventList":{
+            "fields":"string",
+            "filter":{
+                "fromIngestTimestamp":"2018-01-01T00:00:00Z"
+            }
+        }
+    },
+    "destination":{
+        "datasetId":"5b7c86968f7b6501e21ba9df"
+    },
+    "schema":{
+        "name":"_xdm.context.profile"
     }
-  },
-  "destination": {
-    "datasetId": "5b7c86968f7b6501e21ba9df"
-  },
-  "schema": {
-    "name": "_xdm.context.profile"
-  }
- }'
+}'
 ```
 
 | Parameter | Description |
@@ -239,88 +239,88 @@ A successful response returns HTTP status 200 with details of your newly created
 
 ```json
 {
-  "id": 100,
-  "jobType": "BATCH",
-  "destination": {
-    "datasetId": "5b7c86968f7b6501e21ba9df",
-    "segmentPerBatch": false,
-    "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52",
-    "batches": {
-      "segmentId": "52c26d0d-45f2-47a2-ab30-ed06abc981ff",
-      "segmentNs": "ups",
-      "status": [
-        "realized"
-      ],
-      "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
-    }
-  },
-  "fields": "identities.id,personalEmail.address",
-  "schema": {
-    "name": "_xdm.context.profile"
-  },
-  "imsOrgId": "1BD6382559DF0C130A49422D@AdobeOrg",
-  "status": "SUCCEEDED",
-  "filter": {
-    "segments": [
-      {
-        "segmentId": "52c26d0d-45f2-47a2-ab30-ed06abc981ff",
-        "segmentNs": "ups",
-        "status": [
-          "realized"
-        ]
-      }
+    "id":100,
+    "jobType":"BATCH",
+    "destination":{
+        "datasetId":"5b7c86968f7b6501e21ba9df",
+        "segmentPerBatch":false,
+        "batchId":"da5cfb4de32c4b93a09f7e37fa53ad52",
+        "batches":{
+            "segmentId":"52c26d0d-45f2-47a2-ab30-ed06abc981ff",
+            "segmentNs":"ups",
+            "status":[
+                "realized"
+            ],
+            "batchId":"da5cfb4de32c4b93a09f7e37fa53ad52"
+        }
+    },
+    "fields":"identities.id,personalEmail.address",
+    "schema":{
+        "name":"_xdm.context.profile"
+    },
+    "imsOrgId":"1BD6382559DF0C130A49422D@AdobeOrg",
+    "status":"SUCCEEDED",
+    "filter":{
+        "segments":[
+            {
+                "segmentId":"52c26d0d-45f2-47a2-ab30-ed06abc981ff",
+                "segmentNs":"ups",
+                "status":[
+                    "realized"
+                ]
+            }
+        ],
+        "segmentQualificationTime":{
+            "startTime":"2018-01-01T00:00:00Z",
+            "endTime":"2018-02-01T00:00:00Z"
+        },
+        "fromIngestTimestamp":"2018-01-01T00:00:00Z",
+        "emptyProfiles":true
+    },
+    "additionalFields":{
+        "eventList":{
+            "fields":"string",
+            "filter":{
+                "fromIngestTimestamp":"2018-01-01T00:00:00Z"
+            }
+        }
+    },
+    "mergePolicy":{
+        "id":"timestampOrdered-none-mp",
+        "version":1
+    },
+    "profileInstanceId":"ups",
+    "errors":[
+        {
+            "code":"0100000003",
+            "msg":"Error in Export Job",
+            "callStack":"com.adobe.aep.unifiedprofile.common.logging.Logger"
+        }
     ],
-    "segmentQualificationTime": {
-      "startTime": "2018-01-01T00:00:00Z",
-      "endTime": "2018-02-01T00:00:00Z"
+    "metrics":{
+        "totalTime":{
+            "startTimeInMs":123456789000,
+            "endTimeInMs":123456799000,
+            "totalTimeInMs":10000
+        },
+        "profileExportTime":{
+            "startTimeInMs":123456789000,
+            "endTimeInMs":123456799000,
+            "totalTimeInMs":10000
+        },
+        "aCPDatasetWriteTime":{
+            "startTimeInMs":123456789000,
+            "endTimeInMs":123456799000,
+            "totalTimeInMs":10000
+        }
     },
-    "fromIngestTimestamp": "2018-01-01T00:00:00Z",
-    "emptyProfiles": true
-  },
-  "additionalFields": {
-    "eventList": {
-      "fields": "string",
-      "filter": {
-        "fromIngestTimestamp": "2018-01-01T00:00:00Z"
-      }
-    }
-  },
-  "mergePolicy": {
-    "id": "timestampOrdered-none-mp",
-    "version": 1
-  },
-  "profileInstanceId": "ups",
-  "errors": [
-    {
-      "code": "0100000003",
-      "msg": "Error in Export Job",
-      "callStack": "com.adobe.aep.unifiedprofile.common.logging.Logger"
-    }
-  ],
-  "metrics": {
-    "totalTime": {
-      "startTimeInMs": 123456789000,
-      "endTimeInMs": 123456799000,
-      "totalTimeInMs": 10000
+    "computeGatewayJobId":{
+        "exportJob":"f3058161-7349-4ca9-807d-212cee2c2e94",
+        "pushJob":"feaeca05-d137-4605-aa4e-21d19d801fc6"
     },
-    "profileExportTime": {
-      "startTimeInMs": 123456789000,
-      "endTimeInMs": 123456799000,
-      "totalTimeInMs": 10000
-    },
-    "aCPDatasetWriteTime": {
-      "startTimeInMs": 123456789000,
-      "endTimeInMs": 123456799000,
-      "totalTimeInMs": 10000
-    }
-  },
-  "computeGatewayJobId": {
-    "exportJob": "f3058161-7349-4ca9-807d-212cee2c2e94",
-    "pushJob": "feaeca05-d137-4605-aa4e-21d19d801fc6"
-  },
-  "creationTime": 1538615973895,
-  "updateTime": 1538616233239,
-  "requestId": "d995479c-8a08-4240-903b-af469c67be1f"
+    "creationTime":1538615973895,
+    "updateTime":1538616233239,
+    "requestId":"d995479c-8a08-4240-903b-af469c67be1f"
 }
 ```
 
@@ -354,88 +354,88 @@ A successful response returns HTTP status 200 with detailed information about th
 
 ```json
 {
-  "id": 100,
-  "jobType": "BATCH",
-  "destination": {
-    "datasetId": "5b7c86968f7b6501e21ba9df",
-    "segmentPerBatch": false,
-    "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52",
-    "batches": {
-      "segmentId": "52c26d0d-45f2-47a2-ab30-ed06abc981ff",
-      "segmentNs": "ups",
-      "status": [
-        "realized"
-      ],
-      "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
-    }
-  },
-  "fields": "identities.id,personalEmail.address",
-  "schema": {
-    "name": "_xdm.context.profile"
-  },
-  "imsOrgId": "1BD6382559DF0C130A49422D@AdobeOrg",
-  "status": "SUCCEEDED",
-  "filter": {
-    "segments": [
-      {
-        "segmentId": "52c26d0d-45f2-47a2-ab30-ed06abc981ff",
-        "segmentNs": "ups",
-        "status": [
-          "realized"
-        ]
-      }
+    "id":100,
+    "jobType":"BATCH",
+    "destination":{
+        "datasetId":"5b7c86968f7b6501e21ba9df",
+        "segmentPerBatch":false,
+        "batchId":"da5cfb4de32c4b93a09f7e37fa53ad52",
+        "batches":{
+            "segmentId":"52c26d0d-45f2-47a2-ab30-ed06abc981ff",
+            "segmentNs":"ups",
+            "status":[
+                "realized"
+            ],
+            "batchId":"da5cfb4de32c4b93a09f7e37fa53ad52"
+        }
+    },
+    "fields":"identities.id,personalEmail.address",
+    "schema":{
+        "name":"_xdm.context.profile"
+    },
+    "imsOrgId":"1BD6382559DF0C130A49422D@AdobeOrg",
+    "status":"SUCCEEDED",
+    "filter":{
+        "segments":[
+            {
+                "segmentId":"52c26d0d-45f2-47a2-ab30-ed06abc981ff",
+                "segmentNs":"ups",
+                "status":[
+                    "realized"
+                ]
+            }
+        ],
+        "segmentQualificationTime":{
+            "startTime":"2018-01-01T00:00:00Z",
+            "endTime":"2018-02-01T00:00:00Z"
+        },
+        "fromIngestTimestamp":"2018-01-01T00:00:00Z",
+        "emptyProfiles":true
+    },
+    "additionalFields":{
+        "eventList":{
+            "fields":"string",
+            "filter":{
+                "fromIngestTimestamp":"2018-01-01T00:00:00Z"
+            }
+        }
+    },
+    "mergePolicy":{
+        "id":"timestampOrdered-none-mp",
+        "version":1
+    },
+    "profileInstanceId":"ups",
+    "errors":[
+        {
+            "code":"0100000003",
+            "msg":"Error in Export Job",
+            "callStack":"com.adobe.aep.unifiedprofile.common.logging.Logger"
+        }
     ],
-    "segmentQualificationTime": {
-      "startTime": "2018-01-01T00:00:00Z",
-      "endTime": "2018-02-01T00:00:00Z"
+    "metrics":{
+        "totalTime":{
+            "startTimeInMs":123456789000,
+            "endTimeInMs":123456799000,
+            "totalTimeInMs":10000
+        },
+        "profileExportTime":{
+            "startTimeInMs":123456789000,
+            "endTimeInMs":123456799000,
+            "totalTimeInMs":10000
+        },
+        "aCPDatasetWriteTime":{
+            "startTimeInMs":123456789000,
+            "endTimeInMs":123456799000,
+            "totalTimeInMs":10000
+        }
     },
-    "fromIngestTimestamp": "2018-01-01T00:00:00Z",
-    "emptyProfiles": true
-  },
-  "additionalFields": {
-    "eventList": {
-      "fields": "string",
-      "filter": {
-        "fromIngestTimestamp": "2018-01-01T00:00:00Z"
-      }
-    }
-  },
-  "mergePolicy": {
-    "id": "timestampOrdered-none-mp",
-    "version": 1
-  },
-  "profileInstanceId": "ups",
-  "errors": [
-    {
-      "code": "0100000003",
-      "msg": "Error in Export Job",
-      "callStack": "com.adobe.aep.unifiedprofile.common.logging.Logger"
-    }
-  ],
-  "metrics": {
-    "totalTime": {
-      "startTimeInMs": 123456789000,
-      "endTimeInMs": 123456799000,
-      "totalTimeInMs": 10000
+    "computeGatewayJobId":{
+        "exportJob":"f3058161-7349-4ca9-807d-212cee2c2e94",
+        "pushJob":"feaeca05-d137-4605-aa4e-21d19d801fc6"
     },
-    "profileExportTime": {
-      "startTimeInMs": 123456789000,
-      "endTimeInMs": 123456799000,
-      "totalTimeInMs": 10000
-    },
-    "aCPDatasetWriteTime": {
-      "startTimeInMs": 123456789000,
-      "endTimeInMs": 123456799000,
-      "totalTimeInMs": 10000
-    }
-  },
-  "computeGatewayJobId": {
-    "exportJob": "f3058161-7349-4ca9-807d-212cee2c2e94",
-    "pushJob": "feaeca05-d137-4605-aa4e-21d19d801fc6"
-  },
-  "creationTime": 1538615973895,
-  "updateTime": 1538616233239,
-  "requestId": "d995479c-8a08-4240-903b-af469c67be1f"
+    "creationTime":1538615973895,
+    "updateTime":1538616233239,
+    "requestId":"d995479c-8a08-4240-903b-af469c67be1f"
 }
 ```
 

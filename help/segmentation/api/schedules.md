@@ -104,17 +104,16 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
 {
-  "name": "profile-default",
-  "type": "batch_segmentation",
-  "properties": {
-    "segments": [
-      "*"
-    ]
-  },
-  "schedule": "0 0 1 * * ?",
-  "state": "inactive"
-}
- '
+    "name":"profile-default",
+    "type":"batch_segmentation",
+    "properties":{
+        "segments":[
+            "*"
+        ]
+    },
+    "schedule":"0 0 1 * * ?",
+    "state":"inactive"
+}'
 ```
 
 | Parameter | Description  |
@@ -236,13 +235,12 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/{SCHEDUL
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
 [
-  {
-    "op": "add",
-    "path": "/state",
-    "value": "active"
-  }
-]
-'
+    {
+        "op":"add",
+        "path":"/state",
+        "value":"active"
+    }
+]'
 ```
 
 | Parameter | Description |
@@ -278,13 +276,12 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/{SCHEDULE
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
 [
-  {
-    "op": "add",
-    "path": "/schedule",
-    "value": "0 0 2 * *"
-  }
-]
-'
+    {
+        "op":"add",
+        "path":"/schedule",
+        "value":"0 0 2 * *"
+    }
+]'
 ```
 
 | Parameter | Description |
