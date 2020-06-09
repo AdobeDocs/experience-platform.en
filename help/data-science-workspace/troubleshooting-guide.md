@@ -57,7 +57,7 @@ Next, from the top navigation bar select the **Develop** menu. From within the *
 
 ## Why am I seeing a '403 Forbidden' message when trying to upload or delete a file in JupyterLab?
 
-If your browser is enabled with advertisement blocking software such as Ghostery or AdBlock Plus, the domain "\*.adobe.net" must be whitelisted in each advertisement blocking software for JupyterLab to operate normally. This is because JupyterLab virtual machines run on a different domain than the Experience Platform domain.
+If your browser is enabled with advertisement blocking software such as Ghostery or AdBlock Plus, the domain "\*.adobe.net" must be allowed in each advertisement blocking software for JupyterLab to operate normally. This is because JupyterLab virtual machines run on a different domain than the Experience Platform domain.
 
 ## Why do some parts of my Jupyter Notebook look scrambled or do not render as code?
 

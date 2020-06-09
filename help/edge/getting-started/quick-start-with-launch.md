@@ -7,7 +7,7 @@ seo-description: Quick start guide for using the Experience Platform Web SDK ext
 
 # Welcome
 
-This guide will take you through the different how to setup the Adobe Experience Platform Web SDK in Launch. To be able to use this feature you need to be whitelisted. If you would like to get on the waiting list please reach out to you CSM.
+This guide will take you through the different how to setup the Adobe Experience Platform Web SDK in Launch. To be able to use this feature you need to have permissions and be on the allow list. If you would like to get on the waiting list please reach out to you CSM.
 
 - Have a [1st-party domain (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) enabled. If you already have a CNAME for Analytics, you should use that one. Testing in development will work without a CNAME but you will need one before you go to production
 - Be entitled to Adobe Experience Platform Data Platform. If you have not purchased Platform we will provision you with Experience Platform Data Services Foundation for use in a limited fashion with the SDK at no extra charge.
@@ -19,7 +19,7 @@ You can create a configuration ID using the [edge configuration tool](../fundame
 
 >[!NOTE]
 >
->Your organization must be whitelisted for the feature. Please contact your CSM to get put on the list for eventual whitelisting.
+>Your organization must be on the allow list for the feature. Please contact your CSM to get put on the allow list.
 
 ## Prepare a Schema
 
