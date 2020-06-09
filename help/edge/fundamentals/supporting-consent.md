@@ -38,7 +38,13 @@ If the user opts in, execute the `setConsent` command with the `general` option 
 
 ```javascript
 alloy("setConsent", {
-  "general": "in"
+    consent: [{ 
+      standard: "Adobe",
+      version: "1.0",
+      value: { 
+        general: "in" 
+      }
+    }]
 });
 ```
 
@@ -48,7 +54,13 @@ If the user chooses to opt out, execute the `setConsent` command with the `gener
 
 ```javascript
 alloy("setConsent", {
-  "general": "out"
+    consent: [{ 
+      standard: "Adobe",
+      version: "1.0",
+      value: { 
+        general: "out" 
+      }
+    }]
 });
 ```
 
