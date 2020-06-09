@@ -17,7 +17,7 @@ The API endpoints used in this guide are part of the Segmentation API. Before co
 
 In particular, the [getting started section](./getting-started.md#getting-started) of the Segmentation developer guide includes links to related topics, a guide to reading the sample API calls in the document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
-## Retrieve a list of segment definitions
+## Retrieve a list of segment definitions {#list}
 
 You can retrieve a list of all segment definitions for your IMS Organization by making a GET request to the `/segment/definitions` endpoint.
 
@@ -147,7 +147,7 @@ A successful response returns HTTP status 200 with a list of segment definitions
 }
 ```
 
-## Create a new segment definition
+## Create a new segment definition {#create}
 
 You can create a new segment definition by making a POST request to the `/segment/definitions` endpoint.
 
@@ -229,7 +229,7 @@ A successful response returns HTTP status 200 with details of your newly created
 }
 ```
 
-## Retrieve a specific segment definition
+## Retrieve a specific segment definition {#get}
 
 You can retrieve detailed information about a specific segment definition by making a GET request to the `/segment/definitions` endpoint and providing the segment definition's `id` value in the request path.
 
@@ -299,7 +299,7 @@ A successful response returns HTTP status 200 with detailed information about th
 }
 ```
 
-## Bulk retrieve segment definitions
+## Bulk retrieve segment definitions {#bulk-get}
 
 You can retrieve detailed information about multiple specified segment definitions by making a POST request to the `/segment/definitions/bulk-get` endpoint and providing the  `id` values of the segment definitions in the request body.
 
@@ -420,7 +420,7 @@ A successful response returns HTTP status 207 with the requested segment definit
 }
 ```
 
-## Delete a specific segment definition
+## Delete a specific segment definition {#delete}
 
 You can request to delete a specified segment definition by making a DELETE request to the `/segment/definitions` endpoint and providing the segment definition's `id` value in the request path.
 

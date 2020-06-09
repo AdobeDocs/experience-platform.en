@@ -7,7 +7,7 @@ topic: tutorial
 
 # Create a segment 
 
-This document provides a tutorial for developing, testing, previewing, and saving a segment definition using the [Segmentation API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml). 
+This document provides a tutorial for developing, testing, previewing, and saving a segment definition using the [Segmentation API](../api/getting-started.md). 
 
 For information on how to build segments using the user interface, please see the [Segment Builder guide](../ui/overview.md).
 
@@ -49,71 +49,7 @@ The first step in segmentation is to define a segment, represented in a construc
 
 You can create a new segment definition by making a POST request to the `/segment/definitions` endpoint in the Real-time Customer Profile API. The following example outlines how to format a definition request, including what information is required in order for a segment to be defined successfully.
 
-Segment definitions can be evaluated in two ways - batch segmentation and streaming segmentation. Batch segmentation evaluates segments based on a preset schedule or when evaluation is manually triggered, whereas streaming segmentation evaluates segments as soon as data is ingested in Platform. This tutorial will be using **batch segmentation**. For more information on streaming segmentation, please read the [overview on streaming segmentation](../api/streaming-segmentation.md).
-
-**API format**
-
-```http
-POST /segment/definitions
-```
-
-**Request**
-
-The following request creates a new segment definition for a schema called "MyProfile".
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/segment/definitions \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -d '{
-        "name": "My Sample Cart Abandons Segment Definition",
-        "schema": {
-            "name": "MyProfile",
-        },
-        "expression": {
-            "type": "PQL",
-            "format": "pql/text",
-            "value": "xEvent.metrics.commerce.abandons.value > 0",
-        },
-        "mergePolicyId": "mpid1",
-        "description": "This Segment represents those users who have abandoned a cart"
-    }'
-```
-
-| Property | Description  |
-| --------- | ------------ | 
-| `name` | **Required.** A unique name by which to refer to the segment. |
-| `schema` | **Required.** The schema associated with the entities in the segment. Consists of either an `id` or `name` field. | 
-| `expression` | **Required.** An entity that contains fields information about the segment definition. |
-| `expression.type` | Specifies the expression type. Currently, only "PQL" is supported. |
-| `expression.format` | Indicates the structure of the expression in value. Currently, the following format is supported: <ul><li>`pql/text`: A textual representation of a segment definition, according to the published PQL grammar.  For example, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
-| `expression.value` | An expression that conforms to the type indicated in `expression.format`. |
-| `mergePolicyId` | The identifier of the merge policy to use for the exported data. For more information, please read the [merge policy configuration document](../../profile/api/merge-policies.md). |
-| `description` | A human readable description of the definition. |
-
-**Response**
-
-A successful response returns the details of the newly created segment definition, including its system-generated, read-only `id` which will be used later in this tutorial.
-
-```json
-{
-    "id": "1234",
-    "name": "My Sample Cart Abandons Segment Definition",
-    "description": "This Segment represents those users who have abandoned a cart",
-    "type": "PQL",
-    "format": "pql/text",
-    "expression": "xEvent.metrics.commerce.abandons.value > 0",
-    "_links": {
-        "self": {
-            "href": "https://platform.adobe.io/data/core/ups/segment/definitions/1234"
-        }
-    }
-}
-```
+For a detailed explanation on how to define a segment, please read the [segment definition developer guide](../api/segment-definitions.md#create).
 
 ## Estimate and preview an audience
 
@@ -143,190 +79,15 @@ Estimates generally run over 10-15 seconds, beginning with a rough estimate and 
 ### Create a preview job
 
 You can create a new preview job by making a POST request to the `/preview` endpoint.
- 
-**API format**
 
-```http
-POST /preview
-```
-
-**Request**
-
-The following request creates a new preview job. The request body contains the query information related to the segment.
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/preview \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-  -d '{
-        "predicateExpression": "xEvent.metrics.commerce.abandons.value > 0",
-        "predicateType": "pql/text",
-        "predicateModel": "_xdm.context.profile",
-        "graphType": "simple",
-        "mergeStrategy": "simple"
-    }'
-```
-
-| Property | Description | 
-| --------- | ----------- |
-| `predicateExpression` | The PQL expression to query the data by. |
-| `predicateModel` | The name of the XDM schema the Profile data is based on. |
-
-**Response**
-
-A successful response returns the details of the newly created preview job, including its ID and current processing state.
-
-```json
-{
-   "state": "RUNNING",
-   "previewQueryId": "4a45e853-ac91-4bb7-a426-150937b6af5c",
-   "previewQueryStatus": "RUNNING",
-   "previewId": "MDoyOjRhNDVlODUzLWFjOTEtNGJiNy1hNDI2LTE1MDkzN2I2YWY1Yzo0Mg",
-   "previewExecutionId": 42
-}
-```
-
-| Property | Description | 
-| -------- | ----------- |
-| `state` | The current state of the preview job. It will be in the "RUNNING" state until processing is complete, at which point it becomes "RESULT_READY" or "FAILED". |
-| `previewId` | The ID of the preview job, to be used for lookup purposes when viewing an estimate or preview, as outlined in the following section. |
+More detailed instructions on creating a preview job can be found in the [estimates and previews developer guide](../api/estimates-and-previews.md#create-preview).
 
 ### View an estimate or preview
 
 Estimate and preview processes are run asynchronously as different queries can take different lengths of time to complete. Once a query has been initiated, you can use API calls to retrieve (GET) the current state of the estimate or preview as it progresses.
 
-Using the Real-time Customer Profile API, you can lookup a preview job's current state by its ID. If the state is "RESULT_READY", you can view the results. Depending on whether you want to view an estimate or a preview, each have their own endpoint in the API. Examples for both are provided below.
+Using the Real-time Customer Profile API, you can lookup a preview job's current state by its ID. If the state is "RESULT_READY", you can view the results. To look up a preview job's current state, please read the [retrieve preview job section of the estimates and previews developer guide](../api/estimates-and-previews.md#get-preview). To look up an estimate job's current state, please read the [retrieve preview job section of the estimates and previews developer guide](../api/estimates-and-previews.md#get-estimate).
 
-### View an estimate
-
-**API format**
-
-```http
-GET /estimate/{PREVIEW_ID}
-```
-
-| Property | Description | 
-| -------- | ----------- |
-| `{PREVIEW_ID}` | The ID of the preview job you want to view. |
-
-**Request**
-
-The following request retrieves an estimate, using the `previewId` created in the previous step.
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWFjOTEtNGJiNy1hNDI2LTE1MDkzN2I2YWY1Yzo0Mg \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Response**
-
-A successful response returns the details of the estimate.
-
-```json
-{
-    "estimatedSize": 45,
-    "state": "RESULT_READY",
-    "profilesReadSoFar": 83834,
-    "standardError": 0,
-    "error": {
-        "description": "",
-        "traceback": ""
-    },
-    "profilesMatchedSoFar": 46,
-    "totalRows": 82473,
-    "confidenceInterval": "95%",
-    "_links": {
-        "preview": "https://platform.adobe.io/data/core/ups/preview?previewQueryId=f88bc056-ee48-40d5-9ddb-8865d7d6a0e0"
-    }
-}
-```
-
-| Property | Description | 
-| -------- | ----------- |
-| `state` | The current state of the preview job. Will be "RUNNING" until processing is complete, at which point it becomes "RESULT_READY" or "FAILED". |
-| `_links.preview` | When the preview job's current state is "RESULT_READY", this attribute provides a URL to view the estimate. |
-
-### View a preview
-
-**API format**
-
-```http
-GET /preview/{PREVIEW_ID}
-```
-
-| Property | Description | 
-| -------- | ----------- |
-| `{PREVIEW_ID}` | The ID of the preview job you want to view. |
-
-**Request**
-
-The following request retrieves a preview, using the `previewId` created in the previous step.
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/preview/MDoyOjRhNDVlODUzLWFjOTEtNGJiNy1hNDI2LTE1MDkzN2I2YWY1Yzo0Mg \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Response**
-
-A successful response returns details of the preview.
-
-```json
-{
-   "results": [{
-         "XID_ADOBE-MARKETING-CLOUD-ID-1": {
-            "_href": "https://platform.adobe.io/data/core/ups/models/profile/XID_ADOBE-MARKETING-CLOUD-ID-1",
-            "endCustomerIds": {
-               "XID_COOKIE_ID_1": {
-                  "_href": "https://platform.adobe.io/data/core/ups/models/profile/XID_COOKIE_ID_1"
-               },
-               "XID_PROFILE_ID_1": {
-                  "_href": "https://platform.adobe.io/data/core/ups/models/profile/XID_PROFILE_ID_1"
-               }
-            }
-         }
-      },
-      {
-         "XID_COOKIE-ID-2": {
-            "_href": "https://platform.adobe.io/data/core/ups/models/profile/XID_COOKIE-ID-2",
-            "endCustomerIds": {
-               "XID_COOKIE_ID_2-1": {
-                  "_href": "https://platform.adobe.io/data/core/ups/models/profile/XID_COOKIE_ID_2-1"
-
-               },
-               "XID_PROFILE_ID_2": {
-                  "_href": "https://platform.adobe.io/data/core/ups/models/profile/XID_PROFILE_ID_2"
-               }
-            }
-         },
-         "XID_ADOBE-MARKETING-CLOUD-ID-3": {
-            "_href": "https://platform.adobe.io/data/core/ups/models/profile/XID_ADOBE-MARKETING-CLOUD-ID-1000"
-         },
-         "state": "RESULT_READY",
-         "links": {
-            "_self": "https://platform.adobe.io/data/core/ups/preview?expression=<expr-1>&limit=1000",
-            "next": "",
-            "prev": ""
-         }
-      }
-   ],
-   "page": {
-      "offset": 0,
-      "size": 3
-   }
-}
-```
 
 ## Next steps
 

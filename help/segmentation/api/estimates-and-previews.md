@@ -29,7 +29,7 @@ The sample size depends on the overall number of entities in your profile store.
 
 Estimates generally run over 10-15 seconds, beginning with a rough estimate and refining as more records are read.
 
-## Create a new preview
+## Create a new preview {#create-preview}
 
 You can create a new preview by making a POST request to the `/preview` endpoint.
 
@@ -72,7 +72,7 @@ A successful response returns HTTP status 201 (Created) with details of your new
 }
 ```
 
-## Retrieve a specific preview's results
+## Retrieve a specific preview's results {#get-preview}
 
 You can retrieve detailed information about a specific preview by making a GET request to the `/preview` endpoint and providing the preview's `id` value in the request path.
 
@@ -146,7 +146,7 @@ A successful response returns HTTP status 200 with detailed information about th
 }
 ```
 
-## Retrieve the results of a specific estimate job
+## Retrieve the results of a specific estimate job {#get-estimate}
 
 You can retrieve details of a specific estimate job by making a GET request to the `/estimate` endpoint and providing the estimate job's `id` value in the request path.
 
@@ -196,7 +196,7 @@ A successful response returns HTTP status 200 with details of the estimate job.
 }
 ```
 
-## Cancel or delete a specific preview
+## Cancel or delete a specific preview {#delete-preview}
 
 You can delete a specific preview by making a DELETE request to the `/preview` endpoint and by providing the preview's `id` value in the request path.
 

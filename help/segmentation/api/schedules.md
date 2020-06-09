@@ -15,7 +15,7 @@ The API endpoints used in this guide are part of the Segmentation API. Before co
 
 In particular, the [getting started section](./getting-started.md#getting-started) of the Segmentation developer guide includes links to related topics, a guide to reading the sample API calls in the document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
-## Retrieve a list of schedules
+## Retrieve a list of schedules {#retrieve-list}
 
 You can retrieve a list of all schedules for your IMS Organization by making a GET request to the `/config/schedules` endpoint.
 
@@ -83,7 +83,7 @@ A successful response returns HTTP status 200 with a list of schedules for the s
 }
 ```
 
-## Create a new schedule
+## Create a new schedule {#create}
 
 You can create a new schedule by making a POST request to the `/config/schedules` endpoint.
 
@@ -154,7 +154,7 @@ A successful response returns HTTP status 200 with details of your newly created
 }
 ```
 
-## Retrieve a specific schedule
+## Retrieve a specific schedule {#get}
 
 You can retrieve detailed information about a specific schedule by making a GET request to the `/config/schedules` endpoint and providing the schedule's `id` value in the request path.
 
@@ -203,15 +203,16 @@ A successful response returns HTTP status 200 with detailed information about th
     },
     "createEpoch": 1568267948,
     "updateEpoch": 1568267948
+}
 ```
 
-## Update details a specific schedule
+## Update details a specific schedule {#update}
 
 You can update a specified schedule by making a PATCH request to the `/config/schedules` endpoint and providing the schedule's `id` value in the request path.
 
 The PATCH request supports two different paths: `/state` and `/schedule`.
 
-### Update schedule state
+### Update schedule state {#update-state}
 
 You can use `/state` to update the state of the schedule - ACTIVE or INACTIVE. To update the state, you will need to set the value as `active` or `inactive`.
 
@@ -253,7 +254,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/{SCHEDUL
 
 A successful response returns HTTP status 204 (No Content).
 
-### Update schedule cron schedule
+### Update schedule cron schedule {#update-schedule}
 
 You can use `schedule` to update the cron schedule. For more information about cron schedules, please read the [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation.
 

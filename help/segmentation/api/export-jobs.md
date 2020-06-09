@@ -15,7 +15,7 @@ The API endpoints used in this guide are part of the Segmentation API. Before co
 
 In particular, the [getting started section](./getting-started.md#getting-started) of the Segmentation developer guide includes links to related topics, a guide to reading the sample API calls in the document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
-## Retrieve a list of export jobs
+## Retrieve a list of export jobs {#retrieve-list}
 
 You can retrieve a list of all export jobs for your IMS Organization by making a GET request to the `/export/jobs` endpoint.
 
@@ -152,7 +152,7 @@ A successful response returns HTTP status 200 with a list of export jobs for the
 }
 ```
 
-## Create a new export job
+## Create a new export job {#create}
 
 You can create a new export job by making a POST request to the `/export/jobs` endpoint.
 
@@ -324,7 +324,7 @@ A successful response returns HTTP status 200 with details of your newly created
 }
 ```
 
-## Retrieve a specific export job
+## Retrieve a specific export job {#get}
 
 You can retrieve detailed information about a specific export job by making a GET request to the `/export/jobs` endpoint and providing the export job's `id` value in the request path.
 
@@ -439,7 +439,7 @@ A successful response returns HTTP status 200 with detailed information about th
 }
 ```
 
-## Cancel or delete a specific export job
+## Cancel or delete a specific export job {#delete}
 
 You can request to delete a specified export job by making a DELETE request to the `/export/jobs` endpoint and providing the export job's `id` value in the request path.
 

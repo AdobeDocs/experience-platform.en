@@ -17,7 +17,7 @@ The API endpoints used in this guide are part of the Segmentation API. Before co
 
 In particular, the [getting started section](./getting-started.md#getting-started) of the Segmentation developer guide includes links to related topics, a guide to reading the sample API calls in the document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
-## Retrieve a list of segment jobs
+## Retrieve a list of segment jobs {#retrieve-list}
 
 You can retrieve a list of all segment jobs for your IMS Organization by making a GET request to the `/segment/jobs` endpoint.
 
@@ -148,7 +148,7 @@ A successful response returns HTTP status 200 with a list of segment jobs for th
 }
 ```
 
-## Create a new segment job
+## Create a new segment job {#create}
 
 You can create a new segment job by making a POST request to the `/segment/jobs` endpoint.
 
@@ -231,7 +231,7 @@ A successful response returns HTTP status 200 with details of your newly created
 }
 ```
 
-## Retrieve a specific segment job
+## Retrieve a specific segment job {#get}
 
 You can retrieve detailed information about a specific segment job by making a GET request to the `/segment/jobs` endpoint and providing the segment job's `id` value in the request path.
 
@@ -319,7 +319,7 @@ A successful response returns HTTP status 200 with detailed information about th
 }
 ```
 
-## Bulk retrieve segment jobs
+## Bulk retrieve segment jobs {#bulk-get}
 
 You can retrieve detailed information about multiple specified segment jobs by making a POST request to the `/segment/jobs/bulk-get` endpoint and providing the  `id` values of the segment jobs in the request body.
 
@@ -415,7 +415,7 @@ A successful response returns HTTP status 207 with the requested segment jobs.
 }
 ```
 
-## Cancel or delete a specific segment job
+## Cancel or delete a specific segment job {#delete}
 
 You can request to delete a specified segment job by making a DELETE request to the `/segment/jobs` endpoint and providing the segment job's `id` value in the request path.
 
