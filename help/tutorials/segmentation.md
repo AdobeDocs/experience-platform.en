@@ -19,7 +19,7 @@ Once you have developed, tested, and saved your segment definition, you can then
 
 ## Export segment data
 
-Exporting segments containing Profile data requires first [creating a dataset into which the data will be exported](../segmentation/tutorials/create-dataset-export-segment.md), then initiating a new export job. Steps for generating an export job can be found in the [evaluate a segment tutorial](../segmentation/tutorials/evaluate-a-segment-data.md). 
+Exporting segments containing Profile data requires first [creating a dataset into which the data will be exported](../segmentation/tutorials/create-dataset-export-segment.md), then initiating a new export job. Steps for generating an export job can be found in the [evaluate a segment tutorial](../segmentation/tutorials/evaluate-a-segment.md). 
 
 ## Configure merge policies
 
