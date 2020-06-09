@@ -22,7 +22,7 @@ By default the user is opted in to all purposes. To prevent the SDK from perform
 
 ```javascript
 alloy("configure", {
-  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "imsOrgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
   "defaultConsent": { "general": "pending" }
 });
