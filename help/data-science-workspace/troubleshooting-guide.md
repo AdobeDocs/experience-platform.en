@@ -31,7 +31,7 @@ Lastly, toggle “Block third-party cookies” to "OFF".
 
 ![chrome advanced](./images/faq/toggle-off.png)
 
->[!NOTE] Alternatively, you could disable third-party cookies and whitelist [*.]ds.adobe.net
+>[!NOTE] Alternatively, you could disable third-party cookies and add [*.]ds.adobe.net to the allow list.
 
 Navigate to “chrome://flags/” in your address bar. Search for and disable the flag titled *“SameSite by default cookies”* by using the dropdown menu on the right.
    
@@ -57,7 +57,7 @@ Next, from the top navigation bar select the **Develop** menu. From within the *
 
 ## Why am I seeing a '403 Forbidden' message when trying to upload or delete a file in JupyterLab?
 
-If your browser is enabled with advertisement blocking software such as Ghostery or AdBlock Plus, the domain "\*.adobe.net" must be whitelisted in each advertisement blocking software for JupyterLab to operate normally. This is because JupyterLab virtual machines run on a different domain than the Experience Platform domain.
+If your browser is enabled with advertisement blocking software such as Ghostery or AdBlock Plus, the domain "\*.adobe.net" must be allowed in each advertisement blocking software for JupyterLab to operate normally. This is because JupyterLab virtual machines run on a different domain than the Experience Platform domain.
 
 ## Why do some parts of my Jupyter Notebook look scrambled or do not render as code?
 
