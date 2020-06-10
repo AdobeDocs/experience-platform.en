@@ -11,7 +11,30 @@ In order for Intelligent Services to discover insights from your marketing event
 
 This document provides general guidance on mapping your marketing events data from multiple channels to this schema, outlining information on important fields within the schema to help you determine how to effectively map your data to its structure.
 
-## Understanding the CEE schema
+## Workflow summary
+
+The preparation process varies depending on whether your data is stored in Adobe Experience Platform or externally. This section summarizes the necessary steps you need to take, given either scenario.
+
+### [!DNL Experience Platform] data preparation
+
+If your data is already stored in [!DNL Platform], follow the steps below:
+
+1. Review the structure of the [Consumer ExperienceEvent schema](#cee-schema) and determine whether you data can be mapped to its fields.
+1. Contact Adobe Consulting Services to help map your data to the schema and ingest it into Adobe Experience Platform, or [follow the steps in this guide](#mapping) if you want to map the data yourself.
+
+### External data preparation
+
+If your data is stored outside of [!DNL Experience Platform], follow the steps below:
+
+1. Contact Adobe Consulting Services to request access credentials for a dedicated Azure Blob Storage container.
+1. Using your access credentials, upload your raw data to the Blob container.
+1. Work with Adobe Consulting Services to map your data to the [Consumer ExperienceEvent schema](#cee-schema) and ingest it into Adobe Experience Platform.
+
+The following diagram outlines the external data preparation process, highlighting the roles and responsibilities between you and Adobe Consulting Services:
+
+![](./images/data-preparation/external-prep.png)
+
+## Understanding the CEE schema {#cee-schema}
 
 The Consumer ExperienceEvent schema describes the behavior of an individual as it relates to digital marketing events (web or mobile) as well as online or offline commerce activity. The use of this schema is required for Intelligent Services because of its semantically well-defined fields (columns), avoiding any unknown names that would otherwise make the data less clear.
 
@@ -178,7 +201,7 @@ This field contains information related to marketing activities that are active 
 
 For complete information regarding each of the required sub-fields for `xdm:productListItems`, please refer to the [marketing sechma](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) spec.
 
-## Mapping and ingesting data
+## Mapping and ingesting data (#mapping)
 
 Once you have determined whether your marketing events data can be mapped to the CEE schema, the next step is to determine which data you to bring into Intelligent Services. All historical data used in Intelligent Services must fall within the minimum time window of four months of data, plus the number of days intended as a lookback period.
 
