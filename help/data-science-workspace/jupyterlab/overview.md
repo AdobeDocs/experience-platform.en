@@ -30,13 +30,14 @@ The following list outlines some of the features that are unique to JupyterLab o
 
 ## Integration with other Platform services {#service-integration}
 
-Standardization and interoperability are key concepts behind Experience Platform. The integration of JupyterLab on Platform as an embedded IDE allows it to interact with other Platform services, enabling you to utilize Platform to its full potential. The following Platform services are available in JupyterLab:
+Standardization and interoperability are key concepts behind [!DNL Experience Platform]. The integration of JupyterLab on [!DNL Platform] as an embedded IDE allows it to interact with other [!DNL Platform] services, enabling you to utilize [!DNL Platform] to its full potential. The following [!DNL Platform] services are available in JupyterLab:
 
 *   **Catalog Service:** Access and explore datasets with read and write functionalities.
 *   **Query Service:** Access and explore datasets using SQL, providing lower data access overheads when dealing with large amounts of data.
 *   **Sensei ML Framework:** Model development with the ability to train and score data, as well as recipe creation with a single click.
+*   **Experience Data Model (XDM):** Standardization and interoperability are key concepts behind Adobe Experience Platform. [Experience Data Model (XDM)](https://www.adobe.com/go/xdm-home-en), driven by Adobe, is an effort to standardize customer experience data and define schemas for customer experience management.
 
->[!NOTE] Some Platform service integrations on JupyterLab are limited to specific kernels. Refer to the section on [kernels](#kernels) for more details.
+>[!NOTE] Some [!DNL Platform] service integrations on JupyterLab are limited to specific kernels. Refer to the section on [kernels](#kernels) for more details.
 
 ## Key features and common operations
 
@@ -112,9 +113,7 @@ Common cell actions are described below:
 
 ### Kernels {#kernels}
 
-Notebook kernels are the language-specific computing engines for processing notebook cells. In addition to Python, JupyterLab provides additional language support in R, PySpark, and Spark. When you open a notebook document, the associated kernel is launched. When a notebook cell is executed, the kernel performs the computation and produces results which may consume significant CPU and memory resources. Note that allocated memory is not freed until the kernel is shut-down.
-
->[!IMPORTANT] JupyterLab Launcher updated from Spark 2.3 to Spark 2.4. Spark and PySpark kernels are no longer supported in Spark 2.4 notebooks.
+Notebook kernels are the language-specific computing engines for processing notebook cells. In addition to Python, JupyterLab provides additional language support in R, PySpark, and Spark (Scala). When you open a notebook document, the associated kernel is launched. When a notebook cell is executed, the kernel performs the computation and produces results which may consume significant CPU and memory resources. Note that allocated memory is not freed until the kernel is shut-down.
 
 Certain features and functionalities are limited to particular kernels as described in the table below:
 
@@ -122,8 +121,6 @@ Certain features and functionalities are limited to particular kernels as descri
 | :----: | :--------------------------: | :-------------------- |
 | **Python** | Yes | <ul><li>Sensei ML Framework</li><li>Catalog Service</li><li>Query Service</li></ul> |
 | **R** | Yes | <ul><li>Sensei ML Framework</li><li>Catalog Service</li></ul> |
-| **PySpark - deprecated** | No | <ul><li>Sensei ML Framework</li><li>Catalog Service</li></ul> |
-| **Spark - deprecated** | No | <ul><li>Sensei ML Framework</li><li>Catalog Service</li></ul> |
 | **Scala** | No | <ul><li>Sensei ML Framework</li><li>Catalog Service</li></ul> |
 
 ### Kernel sessions {#kernel-sessions}
@@ -135,59 +132,6 @@ Each active notebook or activity on JupyterLab utilizes a kernel session. All ac
 If the kernel is shut-down or inactive for a prolonged period, then **No Kernel!** with a solid circle is shown. Activate a kernel by clicking the kernel status and selecting the appropriate kernel type as demonstrated below:
 
 ![](../images/jupyterlab/user-guide/switch_kernel.gif)
-
-### PySpark/Spark execution resource {#execution-resource}
-
->[!IMPORTANT] 
->With the transition of Spark 2.3 to Spark 2.4, both the Spark and PySpark kernels are deprecated. 
->
->New PySpark 3 (Spark 2.4) notebooks use the Python3 Kernel. See the guide on converting [Pyspark 3 (Spark 2.3) to PySpark 3 (Spark 2.4)](../recipe-notebook-migration.md) for an in-depth tutorial on updating your existing notebooks.
->
->New Spark notebooks should utilize the Scala kernel. See the guide on converting [Spark 2.3 to Scala (Spark 2.4)](../recipe-notebook-migration.md) for an in-depth tutorial on updating your existing notebooks.
-
-PySpark and Spark kernels allows you to configure Spark cluster resources within your PySpark or Spark notebook by using the configure command (`%%configure`) and providing a list of configurations. Ideally, these configurations are defined before the Spark application is initialized. Modifying the configurations while the Spark application is active requires an additional force flag after the command (`%%configure -f`) which will restart the application in order for the changes to be applied, as shown below:
-
->[!CAUTION]
->With PySpark 3 (Spark 2.4) and Scala (Spark 2.4) notebooks, `%%` sparkmagic is no longer supported. The following operations can no longer be utilized:
-* `%%help`
-* `%%info`
-* `%%cleanup`
-* `%%delete`
-* `%%configure`
-* `%%local`
-
-```python
-%%configure -f 
-{
-    "numExecutors": 10,
-    "executorMemory": "8G",
-    "executorCores":4,
-    "driverMemory":"2G",
-    "driverCores":2,
-    "conf": {
-        "spark.cores.max": "40"
-    }
-}
-```
-
-All configurable properties are listed in the table below:
-
-| Property | Description | Type |
-| :------- | :---------- | :-----:|
-| kind | The session kind (required) | `session kind`_ |
-| proxyUser | The user to impersonate that will run this session (For example bob) | string |
-| jars | Files to be placed on the java `classpath` | list of paths |
-| pyFiles | Files to be placed on the `PYTHONPATH` | list of paths |
-| files | Files to be placed in executor working directory | list of paths |
-| driverMemory | Memory for driver in megabytes or gigabytes (For example 1000M, 2G) | string |
-| driverCores | Number of cores used by driver (YARN mode only) | int |
-| executorMemory | Memory for executor in megabytes or gigabytes (For example 1000M, 2G) | string |
-| executorCores | Number of cores used by executor | int |
-| numExecutors | Number of executors (YARN mode only) | int |
-| archives | Archives to be uncompressed in the executor working directory (YARN mode only) | list of paths |
-| queue | The YARN queue to submit too (YARN mode only) | string |
-| name | Name of the application | string |
-| conf | Spark configuration property | Map of key=val |
 
 ### Launcher {#launcher}
 
@@ -246,30 +190,6 @@ Some notebook templates are limited to certain kernels. Template availability fo
         <td >no</td>
         <td >no</td>
     </tr>
-    <tr>
-        <th  ><strong>PySpark 3 (Spark 2.3 - deprecated)</strong></th>
-        <td >yes</td>
-        <td >yes</td>
-        <td >no</td>
-        <td >no</td>
-        <td >no</td>
-        <td >no</td>
-        <td >yes</td>
-        <td >yes</td>
-        <td >no</td>
-    </tr>
-    <tr>
-        <th ><strong>Spark (Spark 2.3 - deprecated)</strong></th>
-        <td >yes</td>
-        <td >yes</td>
-        <td >no</td>
-        <td >no</td>
-        <td >no</td>
-        <td >no</td>
-        <td >no</td>
-        <td >no</td>
-        <td >yes</td>
-    </tr>
       <tr>
         <th  ><strong>PySpark 3 (Spark 2.4)</strong></th>
         <td >no</td>
@@ -303,6 +223,82 @@ To open a new *Launcher*, click **File > New Launcher**. Alternatively, expand t
 ## Access Platform data using Notebooks
 
 Each supported kernel provides built-in functionalities that allow you to read Platform data from a dataset within a notebook. However, support for paginating data is limited to Python and R notebooks.
+
+### Notebook data limits
+
+The following information defines the max amount of data that can be read, what type of data was used, and the estimated timeframe reading the data takes. For Python and R, a notebook server configured at 40GB RAM was used for the benchmarks. For PySpark and Scala, a databricks cluster configured at 64GB RAM, 8 cores, 2 DBU with a maximum of 4 workers was used for the benchmarks outlined below.
+
+The ExperienceEvent schema data used varied in size starting from one thousand (1K) rows ranging up-to one billion (1B) rows. Note that for the PySpark and Spark metrics, a date span of 10 days was used for the XDM data.
+
+The ad-hoc schema data was pre-processed using Query Service Create Table as Select (CTAS). This data also varied in size starting from one thousand (1K) rows ranging up-to one billion (1B) rows.
+
+#### Python notebook data limits
+
+**XDM ExperienceEvent schema:** You should be able to read a maximum of 2 million rows (~6.1 GB data on disk) of XDM data in less than 22 minutes. Adding additional rows may result in errors.
+
+| Number of Rows          | 1K     | 10K    | 100K  | 1M    | 2M    |
+| ----------------------- | ------ | ------ | ----- | ----- | ----- |
+| Size on disk (MB)       | 18.73  | 187.5  | 308   | 3000  | 6050  |
+| SDK (in seconds)        | 20.3   | 86.8   | 63    | 659   | 1315  | 
+
+**ad-hoc schema:** You should be able to read a maximum of 5 million rows (~5.6 GB data on disk) of non-XDM (ad-hoc) data in less than 14 minutes. Adding additional rows may result in errors.
+
+| Number of Rows          | 1K      | 10K     | 100K  | 1M    | 2M    | 3M    | 5M     |
+| ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- | ------ |
+| Size on disk (in MB)    | 1.21    | 11.72   | 115   | 1120  | 2250  | 3380  | 5630   |
+| SDK (in seconds)        | 7.27    | 9.04    | 27.3  | 180   | 346   | 487   | 819    |
+
+#### R notebook data limits
+
+**XDM ExperienceEvent schema:** You should be able to read a maximum of 1 million rows of XDM data (3GB data on disk) in under 13 minutes.
+
+| Number of Rows          | 1K     | 10K    | 100K  | 1M    |
+| ----------------------- | ------ | ------ | ----- | ----- |
+| Size on disk (MB)       | 18.73  | 187.5  | 308   | 3000  |
+| R Kernel  (in seconds)  | 14.03  | 69.6   | 86.8  | 775   |
+
+**ad-hoc schema:** You should be able to read a maximum of 3 million rows of ad-hoc data (293MB data on disk) in around 10 minutes.
+
+| Number of Rows          | 1K      | 10K     | 100K  | 1M    | 2M    | 3M    |
+| ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- |
+| Size on disk (in MB)    | 0.082   | 0.612   | 9.0   | 91    | 188   | 293   |
+| R SDK (in sec)          | 7.7     | 4.58    | 35.9  | 233   | 470.5 | 603   |
+
+#### PySpark (Python kernel) notebook data limits:
+
+**XDM ExperienceEvent schema:** On Interactive mode you should be able to read a maximum of 5 million rows (~13.42GB data on disk) of XDM data in around 20 minutes. Interactive mode only supports up-to 5 million rows. If you wish to read larger datasets, it's suggested you switch to Batch mode. On Batch mode you should be able to read a maximum of 500 million rows (~1.31TB data on disk) of XDM data in around 14 hours.
+
+| Number of rows          | 1K     | 10K    | 100K  | 1M    | 2M    | 3M    | 5M      | 10M     | 50M      | 100M   | 500M   |
+|-------------------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
+| Size on disk            | 2.93MB | 4.38MB | 29.02 | 2.69GB| 5.39GB| 8.09GB| 13.42GB | 26.82GB | 134.24GB |268.39GB| 1.31TB |
+| SDK (Interactive mode)  | 33s    | 32.4s  | 55.1s | 253.5s| 489.2s| 729.6s| 1206.8s |    -    |    -     |   -    |  -     |
+| SDK (Batch mode)        | 815.8s | 492.8s |379.1s |637.4s |624.5s | 869.2s| 1104.1s | 1786s   | 5387.2s  |10624.6s| 50547s |
+
+**ad-hoc schema:** On Interactive mode you should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in less than 3 minutes. On Batch mode you should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in around 18 minutes.
+
+| Number of rows| 1K     | 10K     | 100K    | 1M    | 2M    | 3M    | 5M     | 10M    | 50M     | 100M   | 500M    | 1B    |
+|--------------|--------|---------|---------|-------|-------|-------|--------|--------|---------|--------|---------|-------|
+| Size On Disk | 1.12MB | 11.24MB | 109.48MB| 2.69GB| 2.14GB| 3.21GB| 5.36GB | 10.71GB| 53.58GB |107.52GB| 535.88GB| 1.05TB|
+| SDK Interactive mode (in seconds) | 28.2s  | 18.6s   |20.8s    |20.9s  |23.8s  |21.7s  |24.7s   | 22s    |28.4s    |40s     |97.4s    |154.5s |
+| SDK Batch mode (in seconds) | 428.8s | 578.8s  |641.4s  |538.5s |630.9s |467.3s |411s    | 675s    |702s     |719.2s  |1022.1s  |1122.3s|
+
+#### Spark (Scala kernel) notebook data limits:
+
+**XDM ExperienceEvent schema:** On Interactive mode you should be able to read a maximum of 5 million rows (~13.42GB data on disk) of XDM data in around 18 minutes. Interactive mode only supports up-to 5 million rows. If you wish to read larger datasets, it's suggested you switch to Batch mode. On Batch mode you should be able to read a maximum of 500 million rows (~1.31TB data on disk) of XDM data in around 14 hours.
+
+| Number of rows | 1K     | 10K    | 100K  | 1M    | 2M    | 3M    | 5M      | 10M     | 50M      | 100M   | 500M   |
+|---------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
+| Size On Disk  | 2.93MB | 4.38MB | 29.02 | 2.69GB| 5.39GB| 8.09GB| 13.42GB | 26.82GB | 134.24GB |268.39GB| 1.31TB |
+| SDK Interactive mode (in seconds) | 37.9s  | 22.7s  | 45.6s | 231.7s| 444.7s| 660.6s | 1100s  |     -   |    -     |   -    |  -     |
+| SDK Batch mode (in seconds) | 374.4s | 398.5s |527s   |487.9s |588.9s |829s   |939.1s   | 1441s    |5473.2s  |10118.8 |49207.6 |
+
+**ad-hoc schema:** On Interactive mode you should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in less than 3 minutes. On Batch mode you should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in around 16 minutes.
+
+| Number of rows | 1K     | 10K     | 100K    | 1M    | 2M    | 3M    | 5M      | 10M     | 50M     | 100M   | 500M    | 1B    |
+|--------------|--------|---------|---------|-------|-------|-------|---------|---------|---------|--------|---------|-------|
+| Size On Disk | 1.12MB | 11.24MB | 109.48MB| 2.69GB| 2.14GB| 3.21GB| 5.36GB  | 10.71GB | 53.58GB |107.52GB| 535.88GB| 1.05TB|
+| SDK Interactive mode (in seconds)   | 35.7s  | 31s     |19.5s    |25.3s  |23s    |33.2s  |25.5s    | 29.2s   |29.7s    |36.9s   |83.5s    |139s   |
+| SDK Batch mode (in seconds)   | 448.8s | 459.7s  |519s    |475.8s |599.9s |347.6s |407.8s   | 397s    |518.8s   |487.9s  |760.2s   |975.4s |
 
 ### Read from a dataset in Python/R
 
@@ -372,26 +368,7 @@ df <- dataset_reader$limit(100L)$offset(10L)$read()
 
 ### Read from a dataset in PySpark/Spark/Scala
 
->[!IMPORTANT] 
->With the transition of Spark 2.3 to Spark 2.4, both the Spark and PySpark kernels are deprecated. 
->
->New PySpark 3 (Spark 2.4) notebooks use the Python3 Kernel. See the guide on converting [Pyspark 3 (Spark 2.3) to PySpark 3 (Spark 2.4)](../recipe-notebook-migration.md) if you wish to convert existing Spark 2.3 code. New notebooks should follow the [PySpark 3 (Spark 2.4)](#pyspark2.4) example below.
->
->New Spark notebooks should utilize the Scala kernel. See the guide on converting [Spark 2.3 to Scala (Spark 2.4)](../recipe-notebook-migration.md) if you wish to convert existing Spark 2.3 code. New notebooks should follow the [Scala (Spark 2.4)](#spark2.4) example below. 
-
-With an an active PySpark or Spark notebook opened, expand the **Data Explorer** tab from the left sidebar and double click **Datasets** to view a list of available datasets. Right-click on the dataset listing you wish to access and click **Explore Data in Notebook**. The following code cells are generated:
-
-#### PySpark (Spark 2.3 - deprecated)
-
-```python
-# PySpark 3 (Spark 2.3 - deprecated)
-
-pd0 = spark.read.format("com.adobe.platform.dataset").\
-    option('orgId', "YOUR_IMS_ORG_ID@AdobeOrg").\
-    load("{DATASET_ID}")
-pd0.describe()
-pd0.show(10, False)
-```
+With an an active PySpark or Scala notebook opened, expand the **Data Explorer** tab from the left sidebar and double click **Datasets** to view a list of available datasets. Right-click on the dataset listing you wish to access and click **Explore Data in Notebook**. The following code cells are generated:
 
 #### PySpark (Spark 2.4) {#pyspark2.4}
 
@@ -403,20 +380,6 @@ With the introduction of Spark 2.4, [`%dataset`](#magic) custom magic is supplie
 %dataset read --datasetId {DATASET_ID} --dataFrame pd0
 pd0.describe()
 pd0.show(10, False)
-```
-
-#### Spark (Spark 2.3 - deprecated)
-
-```scala
-// Spark (Spark 2.3 - deprecated)
-
-import com.adobe.platform.dataset.DataSetOptions
-val dataFrame = spark.read.
-    format("com.adobe.platform.dataset").
-    option(DataSetOptions.orgId, "YOUR_IMS_ORG_ID@AdobeOrg").
-    load("{DATASET_ID}")
-dataFrame.printSchema()
-dataFrame.show()
 ```
 
 #### Scala (Spark 2.4) {#spark2.4}
@@ -553,34 +516,9 @@ df <- dataset_reader$
 
 ### Filter ExperienceEvent data in PySpark/Spark
 
->[!IMPORTANT] 
->With the transition of Spark 2.3 to Spark 2.4, both the Spark and PySpark kernels are deprecated. 
->
->New PySpark 3 (Spark 2.4) notebooks use the Python3 Kernel. See the guide on converting [Pyspark 3 (Spark 2.3) to PySpark 3 (Spark 2.4)](../recipe-notebook-migration.md) for more information on converting your existing code. If you are creating a new PySpark notebook, use the [PySpark 3 (spark 2.4)](#pyspark3-spark2.4) example for filtering ExperienceEvent data.
->
->New Spark notebooks should utilize the Scala kernel. See the guide on converting [Spark 2.3 to Scala (Spark 2.4)](../recipe-notebook-migration.md) for more information on  converting your existing code. If you are creating a new Spark notebook, use the [Scala (spark 2.4)](#scala-spark) example for filtering ExperienceEvent data.
-
-Accessing and filtering an ExperienceEvent dataset in a PySpark or Spark notebook requires you to provide the dataset identity (`{DATASET_ID}`), your organization's IMS identity, and the filter rules defining a specific time range. A Filtering time range is defined by using the function `spark.sql()`, where the function parameter is a SQL query string.
+Accessing and filtering an ExperienceEvent dataset in a PySpark or Scala notebook requires you to provide the dataset identity (`{DATASET_ID}`), your organization's IMS identity, and the filter rules defining a specific time range. A Filtering time range is defined by using the function `spark.sql()`, where the function parameter is a SQL query string.
 
 The following cells filter an ExperienceEvent dataset to data existing exclusively between January 1, 2019 and the end of December 31, 2019.
-
-#### PySpark 3 (Spark 2.3 - deprecated)
-
-```python
-# PySpark 3 (Spark 2.3 - deprecated)
-
-pd = spark.read.format("com.adobe.platform.dataset").\
-    option("orgId", "YOUR_IMS_ORG_ID@AdobeOrg").\
-    load("{DATASET_ID}")
-
-pd.createOrReplaceTempView("event")
-timepd = spark.sql("""
-    SELECT *
-    FROM event
-    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
-    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
-""")
-```
 
 #### PySpark 3 (Spark 2.4) {#pyspark3-spark2.4}
 
@@ -600,26 +538,6 @@ timepd = spark.sql("""
     AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
 """)
 timepd.show()
-```
-
-#### Spark (Spark 2.3 - deprecated)
-
-```scala
-// Spark (Spark 2.3 - deprecated)
-
-import com.adobe.platform.dataset.DataSetOptions
-val dataFrame = spark.read.
-    format("com.adobe.platform.dataset").
-    option(DataSetOptions.orgId, "YOUR_IMS_ORG_ID@AdobeOrg").
-    load("{DATASET_ID}")
-
-dataFrame.createOrReplaceTempView("event")
-val timedf = spark.sql("""
-    SELECT * 
-    FROM event 
-    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
-    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
-""")
 ```
 
 #### Scala (Spark 2.4) {#scala-spark}
