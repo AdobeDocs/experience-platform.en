@@ -188,4 +188,4 @@ Segment Builder provides a rich workflow allowing you to isolate marketable audi
 - Enable all segment definitions for scheduled segmentation.
 - Enable specified segment definitions for streaming segmentation.
   
-For step-by-step instructions on working with Segmentation Service using the Real-time Customer Profile API, see the [creating audience segments using APIs](../tutorials/create-a-segment.md) tutorial.
+For step-by-step instructions on working with Segmentation Service using the Real-time Customer Profile API, see the [creating a segments using the API](../tutorials/create-a-segment.md) tutorial.

@@ -29,7 +29,7 @@ This process can be done either using the Schema Registry API or the Schema Edit
 
 Once you have defined your XDM relationships, you can use the Real-time Customer Profile APIs to build a segment.
 
-This process can be done either using the Real-time Customer Profile API or the Segment Builder. For a detailed guide on using the API to build a segment, please read [the tutorial on creating a segment using the Real-time Customer Profile API](./tutorials/create-a-segment.md). For a detailed guide on using the Segment Builder to build a segment, please read [the Segment Builder user guide](./ui/overview.md).
+This process can be done either using the Real-time Customer Profile API or the Segment Builder. For a detailed guide on using the API to build a segment, please read [the tutorial on creating a segment using the Segmentation API](./tutorials/create-a-segment.md). For a detailed guide on using the Segment Builder to build a segment, please read [the Segment Builder user guide](./ui/overview.md).
 
 ## How to evaluate and access segments for multi-entity segments
 

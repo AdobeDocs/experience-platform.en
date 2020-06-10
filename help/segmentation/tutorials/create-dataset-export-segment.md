@@ -77,4 +77,4 @@ Please make note of the **Dataset ID**, as this value is required to complete th
 
 Now that you have created a dataset based on the XDM Individual Profile Union Schema, you can use the **Dataset ID** to continue the [evaluating and accessing segment results](./evaluate-a-segment.md) tutorial.
 
-At this time, please return to the evaluating segment results tutorial and pick up from the [Generate XDM Individual Profiles for audience members](./evaluate-a-segment.md#generate-profiles-for-audience-members) step of the [exporting a segment](./evaluate-a-segment.md#export-a-segment) workflow. 
+At this time, please return to the evaluating segment results tutorial and pick up from the [Generate XDM Individual Profiles for audience members](./evaluate-a-segment.md#generate-profiles) step of the [exporting a segment](./evaluate-a-segment.md#export) workflow. 

@@ -42,9 +42,9 @@ Once you have developed, tested, and saved your segment definition, you can then
 
 [Scheduled evaluation](#scheduled-evaluation) (also known as 'scheduled segmentation') allows you to create a recurring schedule for running an export job at a specific time, whereas [on-demand evaluation](#on-demand-evaluation) involves creating a segment job to build the audience immediately. Steps for each are outlined below.
 
-If you have not yet completed the [Create a segment using the Real-time Customer Profile API](./create-a-segment.md) tutorial or created a segment definition using [Segment Builder](../ui/overview.md), please do so before proceeding with this tutorial.
+If you have not yet completed the [create a segment using the Segmentation API](./create-a-segment.md) tutorial or created a segment definition using [Segment Builder](../ui/overview.md), please do so before proceeding with this tutorial.
 
-## Scheduled evaluation
+## Scheduled evaluation {#scheduled-evaluation}
 
 Through scheduled evaluation, your IMS Org can create a recurring schedule to automatically run export jobs.
 
@@ -203,7 +203,7 @@ A successful response returns an array containing the read-only, system-generate
 ] 
 ```
 
-### Generate profiles for audience members
+### Generate profiles for audience members {#generate-profiles}
 
 Once you have a union-persisting dataset, you can create an export job to persist the audience members to the dataset by making a POST request to the `/export/jobs` endpoint in the Real-time Customer Profile API and providing the dataset ID and the segment information for the segments that you wish to export.
 
