@@ -9,7 +9,28 @@ topic: Tutorial
 
 [!DNL Adobe Experience Platform] allows you to build and create custom Feature Pipelines to perform feature engineering at scale through the Sensei Machine Learning Framework Runtime (hereinafter referred to as "Runtime").
 
-This document describes the various classes found in a Feature Pipeline, and provides a step-by-step tutorial for creating a custom Feature Pipeline using the [Model Authoring SDK](./sdk.md) in PySpark and Spark.
+This document describes the various classes found in a Feature Pipeline, and provides a step-by-step tutorial for creating a custom Feature Pipeline using the [Model Authoring SDK](./sdk.md) in PySpark.
+
+The following workflow is outlined in the document below:
+
+1. The recipe loads the dataset to a pipeline.
+2. Feature transformation is done on the dataset and written back to the [!DNL Platform].
+3. The transformed data is loaded for training.
+4. The feature pipeline defines the stages with the Gradient Boosting Regressor as the chosen model.
+5. The pipeline is used to fit the training data and the trained model is created.
+6. The model is transformed with the scoring dataset.
+7. Interesting columns of the output are then selected and saved back to the platform with the associated data.
+
+## Getting started
+
+To run the recipe in any ORG, the following is required:
+-  Schema of the dataset.
+-  The input dataset.
+-  Transformed schema and empty dataset with transformed schema. 
+-  Output schema and empty output dataset.
+
+All of the above datasets need to be uploaded to the [!DNL Platform] UI. For setting this up, use the [bootstrap script](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap).
+
 
 ## Feature Pipeline Classes
 
@@ -356,7 +377,7 @@ scoring.dataLoader: ScoringDataLoader
 scoring.dataSaver: MyDatasetSaver
 ```
 
-## Build the binary artifact {#build-the-binary-artifact}
+<!-- ## Build the binary artifact {#build-the-binary-artifact}
 
 Now that your Feature Pipeline classes implemented, you can build and compile it into a binary artifact which can then be used to create a Feature Pipeline through API calls.
 
@@ -370,7 +391,7 @@ To build a PySpark Feature Pipeline, run the `setup.py` Python script located in
 python3 setup.py bdist_egg
 ```
 
-Successfully building your Feature Pipeline will generate a `.egg` artifact in the `/dist` directory, this artifact is used to create a Feature Pipeline.
+Successfully building your Feature Pipeline will generate a `.egg` artifact in the `/dist` directory, this artifact is used to create a Feature Pipeline. -->
 
 <!-- **Spark**
 
@@ -387,7 +408,7 @@ Successfully building your Feature Pipeline will generate a `.jar` artifact in t
 
 ## Create a Feature Pipeline Engine using the API {#create-a-feature-pipeline-engine-using-the-api}
 
-Now that you have authored your Feature Pipeline and built the binary artifact, you can [create a Feature Pipeline Engine using the Sensei Machine Learning API](../api/engines.md#feature-pipeline-docker). Successfully creating a Feature Pipeline Engine will provide you with an Engine ID as part of the response body, make sure to save this value before continuing to the next steps.
+Now that you have authored your Feature Pipeline, you can [create a Feature Pipeline Engine using the Sensei Machine Learning API](../api/engines.md#feature-pipeline-docker). Successfully creating a Feature Pipeline Engine will provide you with an Engine ID as part of the response body, make sure to save this value before continuing to the next steps.
 
 ## Next steps {#next-steps}
 
