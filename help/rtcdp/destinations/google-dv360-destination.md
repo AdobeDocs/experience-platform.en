@@ -31,7 +31,7 @@ Note the following details that are specific to Google Display & Video 360 desti
 >
 >The allow list is mandatory before setting up your first Google Display & Video 360 destination in Adobe Real-time CDP. Please ensure the allow list process described below has been completed by Google before creating a destination.
 
-Before creating the Google Display & Video 360 destination in Adobe Real-time CDP, you must contact Google asking for Adobe to be put on the allow list as a data provider and your account to be allow listed. Contact Google and provide the following information:
+Before creating the Google Display & Video 360 destination in Adobe Real-time CDP, you must contact Google asking for Adobe to be put on the list of allowed data providers, and for your account to be added to the allow list. Contact Google and provide the following information:
 
 * **Account ID** : this is Adobe's account ID with Google. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
 * **Customer ID** : this is Adobe's customer account ID with Google. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
