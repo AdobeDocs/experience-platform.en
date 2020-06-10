@@ -7,37 +7,15 @@ topic: developer guide
 
 # Manage data usage labels using APIs
 
+The Dataset Service API allows you to programmatically manage usage labels for datasets. It is part of Adobe Experience Platform's data catalog capabilities, but is separate from the Catalog Service API which manages dataset metadata.
+
 This document provides steps on how to manage data usage labels at the dataset- and field-level using the Dataset Service API.
 
 ## Getting started
 
-The following sections provide additional information that you will need to know in order to successfully make calls to the Dataset Service API.
+Before you read this guide, follow the steps outlined in the [getting started section](../../catalog/api/getting-started.md) in the Catalog developer guide to gather the required credentials to make calls to [!DNL Platform] APIs.
 
-### Reading sample API calls
-
-This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the Experience Platform troubleshooting guide.
-
-### Gather values for required headers
-
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
-
-- Authorization: Bearer `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
-
-All resources in Experience Platform are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
-
-- x-sandbox-name: `{SANDBOX_NAME}`
-
->[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md).
-
-All requests that contain a payload (POST, PUT, PATCH) require an additional header:
-
-- Content-Type: application/json
-
-### Obtain a dataset ID
-
-In order to make calls to the endpoints outlined in the sections below, you must have the unique `id` value for a specific dataset. If you do not have this value, see the developer guide section on [listing Catalog objects](../../catalog/api/list-objects.md) to find the IDs of your existing datasets.
+In order to make calls to the endpoints outlined in the sections below, you must have the unique `id` value for a specific dataset. If you do not have this value, see the guide on [listing Catalog objects](../../catalog/api/list-objects.md) to find the IDs of your existing datasets.
 
 ## Look up labels for a dataset {#lookup}
 
@@ -193,3 +171,5 @@ A successful response HTTP status 200 (OK), indicating that the labels have been
 Now that you have added data usage labels at the dataset- and field-level, you can begin to ingest data into Experience Platform. To learn more, start by reading the [data ingestion documentation](../../ingestion/home.md).
 
 You can also now define data usage policies based on the labels you have applied. For more information, see the [data usage policies overview](../policies/overview.md).
+
+For more information on managing datasets in [!DNL Experience Platform], see the [datasets overview](../../catalog/datasets/overview.md).
