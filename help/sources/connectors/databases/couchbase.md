@@ -19,5 +19,5 @@ The documentation below provides information on how to connect Couchbase to Plat
 
 ## Connect Couchbase to Platform using the UI
 
-- [Create an Couchbase source connector in the UI](../../tutorials/ui/create/databases/couchbase.md)
+- [Create a Couchbase source connector in the UI](../../tutorials/ui/create/databases/couchbase.md)
 - [Configure a dataflow for a database connector in the UI](../../tutorials/ui/dataflow/databases.md)
