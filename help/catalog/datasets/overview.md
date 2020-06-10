@@ -59,3 +59,5 @@ The following is a list of downstream services that use datasets for various ope
 ## Next steps
 
 By reading this document, you have been introduced to the core uses of datasets in Experience Platform, as well as the various Platform services that utilize datasets. For more details on the many ways datasets are used in Platform, please review the service documentation linked throughout this overview.
+
+For steps on how to interact with datasets within the Experience Platform UI, see the [datasets user guide](user-guide.md).
