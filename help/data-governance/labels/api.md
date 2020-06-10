@@ -7,11 +7,35 @@ topic: developer guide
 
 # Manage data usage labels using APIs
 
-This document provides steps on how to manage data usage labels at the dataset- and field-level using the Catalog Service API.
+This document provides steps on how to manage data usage labels at the dataset- and field-level using the Dataset Service API.
 
 ## Getting started
 
-Before you read this guide, it is recommended that you read the [Catalog Service overview](../../catalog/home.md) for a more robust introduction to the service. In addition, you must also follow the steps outlined in the [getting started section](../../catalog/api/getting-started.md) in the Catalog developer guide to gather the required credentials to make calls to the Catalog API.
+The following sections provide additional information that you will need to know in order to successfully make calls to the Schema Registry API.
+
+### Reading sample API calls
+
+This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the Experience Platform troubleshooting guide.
+
+### Gather values for required headers
+
+In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+
+- Authorization: Bearer `{ACCESS_TOKEN}`
+- x-api-key: `{API_KEY}`
+- x-gw-ims-org-id: `{IMS_ORG}`
+
+All resources in Experience Platform are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
+
+- x-sandbox-name: `{SANDBOX_NAME}`
+
+>[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md).
+
+All requests that contain a payload (POST, PUT, PATCH) require an additional header:
+
+- Content-Type: application/json
+
+### Obtain a dataset ID
 
 In order to make calls to the endpoints outlined in the sections below, you must have the unique `id` value for a specific dataset. If you do not have this value, see the developer guide section on [listing Catalog objects](../../catalog/api/list-objects.md) to find the IDs of your existing datasets.
 
@@ -22,7 +46,7 @@ You can look up the data usage labels that have been applied to an existing data
 **API format**
 
 ```http
-GET /dataSets/{DATASET_ID}/labels
+GET /datasets/{DATASET_ID}/labels
 ```
 
 | Parameter | Description |
@@ -33,7 +57,7 @@ GET /dataSets/{DATASET_ID}/labels
 
 ```shell
 curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5abd49645591445e1ba04f87/labels' \
+  'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -75,8 +99,8 @@ You can create a set of labels for a dataset by providing them in the payload of
 **API format**
 
 ```http
-POST /dataSets/{DATASET_ID}/labels
-PUT /dataSets/{DATASET_ID}/labels
+POST /datasets/{DATASET_ID}/labels
+PUT /datasets/{DATASET_ID}/labels
 ```
 
 | Parameter | Description |
@@ -89,7 +113,7 @@ The following POST request adds a series of labels to the dataset, as well as a 
 
 ```shell
 curl -X POST \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5abd49645591445e1ba04f87/labels' \
+  'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -142,7 +166,7 @@ You can delete the labels applied to a dataset by making a DELETE request.
 **API format**
 
 ```http
-DELETE /dataSets/{DATASET_ID}/labels
+DELETE /datasets/{DATASET_ID}/labels
 ```
 
 | Parameter | Description |
@@ -153,7 +177,7 @@ DELETE /dataSets/{DATASET_ID}/labels
 
 ```shell
 curl -X DELETE \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5abd49645591445e1ba04f87/labels' \
+  'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
