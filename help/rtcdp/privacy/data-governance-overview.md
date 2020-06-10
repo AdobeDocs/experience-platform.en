@@ -31,7 +31,7 @@ For more information on marketing actions and their use in data usage policies, 
 
 Defining use cases for destinations allows you to check for usage policy violations and ensure that any profiles or segments sent to those destinations are compliant with Data Governance rules.
 
-Marketing use cases can be selected when setting up a destination for the first time, or when editing an existing destination. Depending on the type of destination you are working with, the opportunity to configure marketing use cases will appear at different points in the workflow. See the [destination documentation](../destinations/destination-overview.md) for steps on how to configure your particular destination.
+Marketing use cases can be selected when setting up a destination for the first time, or when editing an existing destination. Depending on the type of destination you are working with, the opportunity to configure marketing use cases will appear at different points in the workflow. See the [destination documentation](../destinations/destinations-overview.md) for steps on how to configure your particular destination.
 
 
 ## Manage data usage policies {#policies}
