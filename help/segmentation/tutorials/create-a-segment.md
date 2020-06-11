@@ -47,7 +47,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 The first step in segmentation is to define a segment, represented in a construct called a **segment definition**. A segment definition is an object that encapsulates a query written in Profile Query Language (PQL). This object is also called a **PQL predicate**. PQL predicates define the rules for the segment based on conditions related to any record or time series data you supply to Real-time Customer Profile. See the [PQL guide](../pql/overview.md) for more information on writing PQL queries.
 
-You can create a new segment definition by making a POST request to the `/segment/definitions` endpoint in the Real-time Customer Profile API. The following example outlines how to format a definition request, including what information is required in order for a segment to be defined successfully.
+You can create a new segment definition by making a POST request to the `/segment/definitions` endpoint in the Segmentation API. The following example outlines how to format a definition request, including what information is required in order for a segment to be defined successfully.
 
 For a detailed explanation on how to define a segment, please read the [segment definition developer guide](../api/segment-definitions.md#create).
 
@@ -80,15 +80,15 @@ Estimates generally run over 10-15 seconds, beginning with a rough estimate and 
 
 You can create a new preview job by making a POST request to the `/preview` endpoint.
 
-More detailed instructions on creating a preview job can be found in the [estimates and previews developer guide](../api/estimates-and-previews.md#create-preview).
+Detailed instructions on [creating a preview job](../api/estimates-and-previews.md#create-preview) can be found in the [estimates and previews developer guide](../api/estimates-and-previews.md#create-preview).
 
 ### View an estimate or preview
 
 Estimate and preview processes are run asynchronously as different queries can take different lengths of time to complete. Once a query has been initiated, you can use API calls to retrieve (GET) the current state of the estimate or preview as it progresses.
 
-Using the Real-time Customer Profile API, you can lookup a preview job's current state by its ID. If the state is "RESULT_READY", you can view the results. To look up a preview job's current state, please read the [retrieve preview job section of the estimates and previews developer guide](../api/estimates-and-previews.md#get-preview). To look up an estimate job's current state, please read the [retrieve preview job section of the estimates and previews developer guide](../api/estimates-and-previews.md#get-estimate).
+Using the Segmentation API, you can lookup a preview job's current state by its ID. If the state is "RESULT_READY", you can view the results. To look up a preview job's current state, please read the [retrieve preview job section of the estimates and previews developer guide](../api/estimates-and-previews.md#get-preview). To look up an estimate job's current state, please read the [retrieve preview job section of the estimates and previews developer guide](../api/estimates-and-previews.md#get-estimate).
 
 
 ## Next steps
 
-Once you have developed, tested, and saved your segment definition, you can create a segment job to build an audience using the Real-time Customer Profile API. See the tutorial on [evaluating and accessing segment results](./evaluate-a-segment.md) for detailed steps on how to accomplish this.
+Once you have developed, tested, and saved your segment definition, you can create a segment job to build an audience using the Segmentation API. See the tutorial on [evaluating and accessing segment results](./evaluate-a-segment.md) for detailed steps on how to accomplish this.

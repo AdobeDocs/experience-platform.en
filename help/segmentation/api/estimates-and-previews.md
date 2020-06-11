@@ -7,11 +7,11 @@ topic: developer guide
 
 # Estimates and previews
 
-As you develop your segment definition, you can use the estimate and preview tools within Real-time Customer Profile to view summary-level information to help ensure you are isolating the expected audience. Estimates provide statistical information on a segment definition, such as the projected audience size and confidence interval. Previews provide paginated lists of qualifying profiles for a segment definition, allowing you to compare the results against what you expect.
+As you develop your segment definition, you can use the estimate and preview tools within Adobe Experience Platform to view summary-level information to help ensure you are isolating the expected audience. Estimates provide statistical information on a segment definition, such as the projected audience size and confidence interval. Previews provide paginated lists of qualifying profiles for a segment definition, allowing you to compare the results against what you expect.
 
 ## Getting started
 
-The API endpoints used in this guide are part of the Segmentation API. Before continuing, please review the [Segmentation developer guide](./getting-started.md).
+The API endpoints used in this guide are part of the Adobe Experience Platform Segmentation Service API. Before continuing, please review the [Segmentation developer guide](./getting-started.md).
 
 In particular, the [getting started section](./getting-started.md#getting-started) of the Segmentation developer guide includes links to related topics, a guide to reading the sample API calls in the document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
@@ -74,7 +74,7 @@ A successful response returns HTTP status 201 (Created) with details of your new
 
 ## Retrieve a specific preview's results {#get-preview}
 
-You can retrieve detailed information about a specific preview by making a GET request to the `/preview` endpoint and providing the preview's `id` value in the request path.
+You can retrieve detailed information about a specific preview by making a GET request to the `/preview` endpoint and providing the preview ID in the request path.
 
 **API format**
 
@@ -84,7 +84,7 @@ GET /preview/{PREVIEW_ID}
 
 | Property | Description |
 | -------- | ----------- |
-| `{PREVIEW_ID}` | The `id` value of the preview you want to retrieve. |
+| `{PREVIEW_ID}` | The `previewId` value of the preview you want to retrieve. |
 
 **Request**
 
@@ -198,7 +198,7 @@ A successful response returns HTTP status 200 with details of the estimate job.
 
 ## Cancel or delete a specific preview {#delete-preview}
 
-You can delete a specific preview by making a DELETE request to the `/preview` endpoint and by providing the preview's `id` value in the request path.
+You can delete a specific preview by making a DELETE request to the `/preview` endpoint and by providing the ID of the preview you wish to delete in the request path.
 
 **API format**
 
@@ -208,7 +208,7 @@ DELETE /preview/{PREVIEW_ID}
 
 | Property | Description |
 | -------- | ----------- |
-| `{PREVIEW_ID}` | The `id` value of the preview you want to delete. |
+| `{PREVIEW_ID}` | The `previewId` value of the preview you want to delete. |
 
 **Request**
 
@@ -233,4 +233,4 @@ A successful response returns HTTP status 200 with the following message:
 
 ## Next steps
 
-After reading this guide you now have a better understanding of how estimates and previews work. For more information on other Segmentation endpoints, please read the [Segmentation developer guide](./getting-started.md). 
+After reading this guide you now have a better understanding of how estimates and previews work. For more information on other Segmentation API endpoints, please read the [Segmentation developer guide](./getting-started.md). 

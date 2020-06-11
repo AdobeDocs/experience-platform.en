@@ -39,7 +39,7 @@ The following is a list of available query parameters for listing schedules. All
 **Request**
 
 ```shell
-curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=X \
+curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
@@ -205,9 +205,9 @@ A successful response returns HTTP status 200 with detailed information about th
 }
 ```
 
-## Update details a specific schedule {#update}
+## Update details for a specific schedule {#update}
 
-You can update a specified schedule by making a PATCH request to the `/config/schedules` endpoint and providing the schedule's `id` value in the request path.
+You can update a specified schedule by making a PATCH request to the `/config/schedules` endpoint and providing the ID of the schedule you are trying to update in the request path.
 
 The PATCH request supports two different paths: `/state` and `/schedule`.
 
@@ -221,8 +221,8 @@ You can use `/state` to update the state of the schedule - ACTIVE or INACTIVE. T
 PATCH /config/schedules/{SCHEDULE_ID}
 ```
 
-| Property | Description |
-| -------- | ----------- |
+| Parameter | Description |
+| --------- | ----------- |
 | `{SCHEDULE_ID}` | The `id` value of the schedule you want to update. |
 
 **Request**
@@ -243,8 +243,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/{SCHEDUL
 ]'
 ```
 
-| Parameter | Description |
-| --------- | ----------- |
+| Property | Description |
+| -------- | ----------- |
 | `path` | The path of the value you want to patch. In this case, since you are updating the schedule's state, you need to set the value of `path` to `/state`. |
 | `value` | The updated value of the `/state`. This value can either be set as `active` or `inactive` to activate or deactivate the schedule. |
 
@@ -254,7 +254,7 @@ A successful response returns HTTP status 204 (No Content).
 
 ### Update schedule cron schedule {#update-schedule}
 
-You can use `schedule` to update the cron schedule. For more information about cron schedules, please read the [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation.
+You can use the `schedule` path to update the cron schedule. For more information about cron schedules, please read the [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation.
 
 **API format**
 
@@ -262,8 +262,8 @@ You can use `schedule` to update the cron schedule. For more information about c
 PATCH /config/schedules/{SCHEDULE_ID}
 ```
 
-| Property | Description |
-| -------- | ----------- |
+| Parameter | Description |
+| --------- | ----------- |
 | `{SCHEDULE_ID}` | The `id` value of the schedule you want to update. |
 
 **Request**
@@ -284,8 +284,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/{SCHEDULE
 ]'
 ```
 
-| Parameter | Description |
-| --------- | ----------- |
+| Property | Description |
+| -------- | ----------- |
 | `path` | The path of the value you want to patch. In this case, since you are updating the schedule's cron schedule, you need to set the value of `path` to `/schedule`. |
 | `value` | The updated value of the `/state`. This value needs to be in the form of a cron schedule. In this example, the schedule will run on the second of every month. |
 
@@ -295,7 +295,7 @@ A successful response returns HTTP status 204 (No Content).
 
 ## Delete a specific schedule
 
-You can request to delete a specified schedule by making a DELETE request to the `/config/schedules` and providing the schedule's `id` value in the request path.
+You can request to delete a specified schedule by making a DELETE request to the `/config/schedules` and providing the ID of the schedule you wish to delete in the request path.
 
 **API format**
 
@@ -303,8 +303,8 @@ You can request to delete a specified schedule by making a DELETE request to the
 DELETE /config/schedules/{SCHEDULE_ID}
 ```
 
-| Property | Description |
-| -------- | ----------- |
+| Parameter | Description |
+| --------- | ----------- |
 | `{SCHEDULE_ID}` | The `id` value of the schedule you want to delete. |
 
 **Request**
@@ -327,4 +327,4 @@ A successful response returns HTTP status 204 (No Content) with the following me
 
 ## Next steps
 
-After reading this guide you now have a better understanding of how schedules work. For more information on other Segmentation endpoints, please read the [Segmentation developer guide](./getting-started.md). 
+After reading this guide you now have a better understanding of how schedules work. For more information on other Segmentation API endpoints, please read the [Segmentation developer guide](./getting-started.md). 

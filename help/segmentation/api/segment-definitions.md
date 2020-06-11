@@ -45,7 +45,7 @@ The following is a list of available query parameters for listing segment defini
 **Request**
 
 ```shell
-cur -X GET https://platform.adobe.io/data/core/ups/segment/definitions?QUERY \
+curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
@@ -231,7 +231,7 @@ A successful response returns HTTP status 200 with details of your newly created
 
 ## Retrieve a specific segment definition {#get}
 
-You can retrieve detailed information about a specific segment definition by making a GET request to the `/segment/definitions` endpoint and providing the segment definition's `id` value in the request path.
+You can retrieve detailed information about a specific segment definition by making a GET request to the `/segment/definitions` endpoint and providing the ID of the segment definition you wish to retrieve in the request path.
 
 **API format**
 
@@ -541,4 +541,4 @@ A successful response returns HTTP status 200 with details of your newly updated
 
 ## Next steps
 
-After reading this guide you now have a better understanding of how segment definitions work. For more information on other Segmentation endpoints, please read the [Segmentation developer guide](./getting-started.md). 
+After reading this guide you now have a better understanding of how segment definitions work. For more information on other Segmentation API endpoints, please read the [Segmentation developer guide](./getting-started.md). 
