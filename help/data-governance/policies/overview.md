@@ -11,7 +11,7 @@ In order for data usage labels to effectively support data compliance, data usag
 
 This document provides a high-level overview of data usage policies, and provides links to further documentation for working with policies in the UI or API.
 
-## Marketing actions
+## Marketing actions {#marketing-actions}
 
 **Marketing actions**, (also called **marketing use cases**) in the context of the data governance framework, are actions that an Experience Platform data consumer can take, for which there is a need to check for violations of data usage policies. As such, each data usage policy is defined by the following:
 
@@ -22,7 +22,7 @@ An example of a marketing action might be the desire to export a dataset to a th
 
 See the appendix to this document for a list of [available Adobe-defined marketing actions](#core-actions). You can also define your own custom marketing actions using the [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) or the Experience Platform user interface. More information on working with marketing actions and policies is provided in the next section.
 
-## Managing data usage policies
+## Managing data usage policies {#manage}
 
 Once data usage labels have been applied, data stewards can use the DULE Policy Service API or the Experience Platform UI to manage and evaluate policies related to marketing actions being taken on data containing data usage labels. You can create and update policies, determine the status of a policy, and work with marketing actions to evaluate whether a specific action violates a data usage policy.
 
