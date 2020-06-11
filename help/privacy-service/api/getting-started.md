@@ -24,17 +24,64 @@ The following sections provide additional information that you will need to know
 
 This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md) in the Experience Platform troubleshooting guide.
 
-### Gather values for required headers
+## Gather values for required headers
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+In order to make calls to the Privacy Service API, you must first gather your access credentials to be used in required headers. This involves obtaining developer permissions for Experience Platform in the Adobe Admin Console, and then generating the credentials in Adobe Developer Console.
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+### Gain developer access to Experience Platform
 
-All requests that contain a payload (POST, PUT, PATCH) require an additional header:
+To gain developer access to Platform, follow the beginning steps in the [Experience Platform authentication tutorial](../../tutorials/authentication.md). Once you arrive at the step "Generate access credentials in Adobe Developer Console", return to this tutorial to generate the credentials specific to Privacy Service.
 
-* Content-Type: application/json
+### Generate access credentials
+
+Using Adobe Developer Console, you must generate the following three access credentials:
+
+* `{IMS_ORG}`
+* `{API_KEY}`
+* `{ACCESS_TOKEN}`
+
+Your `{IMS_ORG}` and `{API_KEY}` only need to be generated once and can be reused in future API calls. However, your `{ACCESS_TOKEN}` is temporary and must be regenerated every 24 hours.
+
+The steps for generating these values are covered in detail below.
+
+#### One-time setup
+
+Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. Next, follow the steps outlined in the tutorial on [creating an empty project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in the Adobe Developer Console documentation.
+
+Once you have created a new project, click **[!UICONTROL Add API]** on the _[!UICONTROL Project Overview]_ screen.
+
+![](../images/api/getting-started/add-api-button.png)
+
+The _[!UICONTROL Add an API]_ screen appears. Select **[!UICONTROL Privacy Service API]** from the list of available APIs before clicking **[!UICONTROL Next]**.
+
+![](../images/api/getting-started/add-privacy-service-api.png)
+
+The _[!UICONTROL Configure API]_ screen appears. Select the option to **[!UICONTROL Generate a key pair]**, then click **[!UICONTROL Generate keypair]** in the bottom-right corner.
+
+![](../images/api/getting-started/generate-key-pair.png)
+
+The key pair is automatically generated, and a ZIP file containing a private key and a public certificate are downloaded to your local machine (to be used in a later step). Select **[!UICONTROL Save configured API]** to complete the configuration.
+
+![](../images/api/getting-started/key-pair-generated.png)
+
+Once the API has been added to the project, the project page reappears on the _Privacy Service API_ tab. Under _[!UICONTROL Service Account (JWT)]_ are the following access credentials that are required in all calls to the Privacy Service API:
+
+* `{API_KEY}` (Client ID)
+* `{IMS_ORG}` (Organization ID)
+
+![](../images/api/getting-started/jwt-credentials.png)
+
+#### Authentication for each session
+
+The final required credential you must gather is your `{ACCESS_TOKEN}`. Unlike the values for `{API_KEY}` and `{IMS_ORG}`, a new token must be generated every 24 hours to continue using Platform APIs.
+
+To generate a new `{ACCESS_TOKEN}`, open the previously downloaded private key and paste its contents into the text box beside _[!UICONTROL Generate access token]_ before clicking **[!UICONTROL Generate Token]**.
+
+![](../images/api/getting-started/paste-private-key.png)
+
+A new access token is generated, and a button to copy the token to your clipboard is provided.
+
+![](../images/api/getting-started/generated-access-token.png)
 
 ## Next steps
 
