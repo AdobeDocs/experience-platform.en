@@ -23,7 +23,7 @@ Data Governance allows you to apply usage labels to your data, either at the dat
 
 For detailed information on working with data usage labels, see the [data usage labels user guide](../../data-governance/labels/overview.md) for Adobe Experience Platform.
 
-## Configure marketing use cases for destinations
+## Configure marketing use cases for destinations {#destinations}
 
 You can set data usage restrictions on a destination by defining marketing use cases (also called marketing actions) for that destination. A marketing use case for a destination defines the intended use for any data exported to that destination, for which there is a need to check for violations of data usage policies.
 
