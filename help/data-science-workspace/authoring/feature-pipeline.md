@@ -5,13 +5,13 @@ title: Create a Feature Pipeline
 topic: Tutorial
 ---
 
-# Create a Feature Pipeline
+# Create a feature pipeline
 
-[!DNL Adobe Experience Platform] allows you to build and create custom Feature Pipelines to perform feature engineering at scale through the Sensei Machine Learning Framework Runtime (hereinafter referred to as "Runtime").
+Adobe Experience Platform allows you to build and create custom Feature Pipelines to perform feature engineering at scale through the Sensei Machine Learning Framework Runtime (hereinafter referred to as "Runtime").
 
 This document describes the various classes found in a Feature Pipeline, and provides a step-by-step tutorial for creating a custom Feature Pipeline using the [Model Authoring SDK](./sdk.md) in PySpark.
 
-The following workflow is outlined in the document below:
+The following workflow takes place when a feature pipeline is run:
 
 1. The recipe loads the dataset to a pipeline.
 2. Feature transformation is done on the dataset and written back to the [!DNL Platform].
@@ -23,18 +23,17 @@ The following workflow is outlined in the document below:
 
 ## Getting started
 
-To run the recipe in any ORG, the following is required:
+To run a recipe in any ORG, the following is required:
 -  Schema of the dataset.
 -  The input dataset.
 -  Transformed schema and empty dataset with transformed schema. 
 -  Output schema and empty output dataset.
 
-All of the above datasets need to be uploaded to the [!DNL Platform] UI. For setting this up, use the [bootstrap script](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap).
-
+All of the above datasets need to be uploaded to the [!DNL Platform] UI. For setting this up, use the Adobe provided [bootstrap script](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap).
 
 ## Feature Pipeline Classes
 
-The following table describes the main Abstract Classes that you must extend in order to build a Feature Pipeline:
+The following table describes the main abstract classes that you must extend in order to build a Feature Pipeline:
 
 | Abstract Class | Description |
 | -------------- | ----------- |
@@ -43,7 +42,7 @@ The following table describes the main Abstract Classes that you must extend in 
 | FeaturePipelineFactory | A FeaturePipelineFactory class builds a Spark Pipeline consisting of a series of Spark Transformers to perform feature engineering. You can choose not to provide a FeaturePipelineFactory class and implement your feature engineering logic within the DatasetTransformer class instead. |
 | DataSaver | A DataSaver class provides the logic for the storage of a feature dataset. |
 
-When a Feature Pipeline job is initiated, the Runtime will first execute the DataLoader to load an input data as a DataFrame and then modifies the DataFrame by executing either the DatasetTransformer, or FeaturePipelineFactory, or both. Lastly, the resulting feature dataset is stored through the DataSaver.
+When a Feature Pipeline job is initiated, the Runtime first executes the DataLoader to load an input data as a DataFrame and then modifies the DataFrame by executing either the DatasetTransformer, or FeaturePipelineFactory, or both. Lastly, the resulting feature dataset is stored through the DataSaver.
 
 The following flowchart shows the Runtime's order of execution:
 
@@ -91,6 +90,8 @@ You can access the configuration JSON through any class method that defines `con
 ```python
 input_dataset_id = str(configProperties.get("datasetId"))
 ```
+
+See the [pipeline.json](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/feature_pipeline_recipes/pyspark/pipeline.json) file provided by Data Science Workspace for a more in depth configuration example.
 
 ### Prepare the input data with DataLoader {#prepare-the-input-data-with-dataloader}
 
@@ -377,41 +378,28 @@ scoring.dataLoader: ScoringDataLoader
 scoring.dataSaver: MyDatasetSaver
 ```
 
-<!-- ## Build the binary artifact {#build-the-binary-artifact}
-
-Now that your Feature Pipeline classes implemented, you can build and compile it into a binary artifact which can then be used to create a Feature Pipeline through API calls.
-
-**PySpark**
-
-To build a PySpark Feature Pipeline, run the `setup.py` Python script located in the root directory of the Model Authoring SDK.
-
->[!NOTE] Building a PySpark Feature Pipeline requires you to have Python 3 installed on your machine. 
-
-```shell
-python3 setup.py bdist_egg
-```
-
-Successfully building your Feature Pipeline will generate a `.egg` artifact in the `/dist` directory, this artifact is used to create a Feature Pipeline. -->
-
-<!-- **Spark**
-
-To build a Spark Feature Pipeline, run the following console command in the root directory of the Model Authoring SDK:
-
->[!NOTE] Building a Spark Feature Pipeline requires you to have Scala and sbt installed on your machine.
-
-```shell
-mvn clean install
-```
-
-Successfully building your Feature Pipeline will generate a `.jar` artifact in the `/dist` directory, this artifact is used to create a Feature Pipeline.
--->
-
 ## Create a Feature Pipeline Engine using the API {#create-a-feature-pipeline-engine-using-the-api}
 
-Now that you have authored your Feature Pipeline, you can [create a Feature Pipeline Engine using the Sensei Machine Learning API](../api/engines.md#feature-pipeline-docker). Successfully creating a Feature Pipeline Engine will provide you with an Engine ID as part of the response body, make sure to save this value before continuing to the next steps.
+Now that you have authored your Feature Pipeline, you need to create a docker image to make a call to the feature pipeline API. Follow the import a packaged recipe [API](../models-recipes/import-packaged-recipe-api.md) or [UI](../models-recipes/import-packaged-recipe-ui.md) tutorial to create a docker image for your PySpark recipe.
+
+ Once you have your docker image location, you can [create a Feature Pipeline Engine using the Sensei Machine Learning API](../api/engines.md#feature-pipeline-docker). Successfully creating a Feature Pipeline Engine will provide you with an Engine ID as part of the response body, make sure to save this value before continuing to the next steps.
+
+ The following list is an example API workflow using the [Sensei Machine Learning API](../api/getting-started.md):
+
+1. Create a feature pipeline Engine by performing a POST to `/engines`.
+2. Create an MLInstance by performing a POST to `/mlInstance`.
+3. Create an Experiment by performing a POST to `/experiments`.
+4. POST Feature Pipeline Experiment Run
+5. Use a GET request to `/experiments/{EXPERIMENT_ID}` to retrieve the experiment status and wait to be DONE.
+6. POST Training Experiment Run
+7. GET experiment status and wait to DONE
+8. POST Scoring Experiment Run
+9. GET experiment status and wait to DONE
+
+You can import the following postman collection to follow the workflow above: https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
 ## Next steps {#next-steps}
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the Feature Pipeline Engine. Update this document once those tutorials are available)
 
-By reading this document, you have authored a Feature Pipeline using the Model Authoring SDK, built a binary artifact, and used the artifact to create a Feature Pipeline Engine through an API call. You are now ready to [create a Feature Pipeline Model](../api/mlinstances.md#create-an-mlinstance) using your newly created Engine and start transforming datasets and extracting data features at scale.
+By reading this document, you have authored a Feature Pipeline using the Model Authoring SDK, created a docker image, and used the docker image URL to create a Feature Pipeline Engine through an API call. You are now ready to [create a Feature Pipeline Model](../api/mlinstances.md#create-an-mlinstance) using your newly created Engine and start transforming datasets and extracting data features at scale.
