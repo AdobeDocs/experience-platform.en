@@ -36,3 +36,11 @@ By default, the service endpoints are set to integration environment endpoints. 
 
 Additionally, your credentials can be added as environment variables.
 
+| Variable | Value |
+| -------- | ----- |
+| `ORG_ID` | Your `{IMS_ORG}` ID. |
+| `SERVICE_API_KEY` | Your `{API_KEY}` value. |
+| `USER_TOKEN` | Your `{ACCESS_TOKEN}` value. |
+| `SERVICE_TOKEN` | (Not sure what this is) |
+| `SANDBOX_ID` | |
+| `SANDBOX_NAME` | |
