@@ -23,14 +23,23 @@ This page explains how you can connect to cloud storage locations in Adobe Real-
 
     ![Connect to cloud storage destination - authentication step](/help/rtcdp/destinations/assets/cloud-destinations-authentication-step.png)
 
-3. In the **[!UICONTROL Setup]** step, enter a **[!UICONTROL Name]** and a **[!UICONTROL Description]** for your activation flow. <br>
+3. In the **[!UICONTROL Setup]** step, enter a **[!UICONTROL Name]** and a **[!UICONTROL Description]** for your activation flow. <br> 
+Also in this step, you can select any **[!UICONTROL Marketing use case]** that should apply to this destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Real-time CDP](/help/rtcdp/privacy/data-governance-overview.md) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](/help/data-governance/policies/overview.md#core-actions). <br>
    For Amazon S3 destinations, insert the **[!UICONTROL Bucket name]** and the **[!UICONTROL Folder path]** in your cloud storage destination where the files will be delivered. Select **[!UICONTROL Create Destination]** after you filled in the fields above.
 
-    ![Connect to Amazon S3 cloud storage destination - authentication step](/help/rtcdp/destinations/assets/cloud-destinations-setup-step.png)
+   ![Connect to Amazon S3 cloud storage destination - authentication step](/help/rtcdp/destinations/assets/amazon-s3-setup-step.png)
 
-   For SFTP destinations, insert the **[!UICONTROL Folder path]** where the files will be delivered. 
+   For SFTP destinations, insert the **[!UICONTROL Folder path]** where the files will be delivered. Select **[!UICONTROL Create Destination]** after you filled in the fields above.
 
-    ![Connect to SFTP cloud storage destination - authentication step](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
+   ![Connect to SFTP cloud storage destination - authentication step](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
+
+   For Amazon Kinesis destinations, provide the name of your existing data stream in your [!DNL Amazon Kinesis] account. Adobe Real-time CDP will export data to this stream. Select **[!UICONTROL Create Destination]** after you filled in the fields above.
+
+   ![Connect to Kinesis cloud storage destination - authentication step](/help/rtcdp/destinations/assets/kinesis-destinations-setup-step.png)
+
+   For Azure Event Hubs destinations, provide the name of your existing data stream in your [!DNL Amazon Kinesis] account. Adobe Real-time CDP will export data to this stream. Select **[!UICONTROL Create Destination]** after you filled in the fields above.
+
+   ![Connect to Kinesis cloud storage destination - authentication step](/help/rtcdp/destinations/assets/eventhubs-destinations-setup-step.png)   
 
 4. Your destination is now created. You can select **[!UICONTROL Save & Exit]** if you want to activate segments later on or you can select **[!UICONTROL Next]** to continue the workflow and select segments to activate. In either case, see the next section, [Activate segments](#activate-segments), for the rest of the workflow to export data.
 
