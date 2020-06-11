@@ -15,13 +15,6 @@ This document provides general guidance on mapping your marketing events data fr
 
 The preparation process varies depending on whether your data is stored in Adobe Experience Platform or externally. This section summarizes the necessary steps you need to take, given either scenario.
 
-### [!DNL Experience Platform] data preparation
-
-If your data is already stored in [!DNL Platform], follow the steps below:
-
-1. Review the structure of the [Consumer ExperienceEvent schema](#cee-schema) and determine whether you data can be mapped to its fields.
-1. Contact Adobe Consulting Services to help map your data to the schema and ingest it into Adobe Experience Platform, or [follow the steps in this guide](#mapping) if you want to map the data yourself.
-
 ### External data preparation
 
 If your data is stored outside of [!DNL Experience Platform], follow the steps below:
@@ -33,6 +26,13 @@ If your data is stored outside of [!DNL Experience Platform], follow the steps b
 The following diagram outlines the external data preparation process, highlighting the roles and responsibilities between you and Adobe Consulting Services:
 
 ![](./images/data-preparation/external-prep.png)
+
+### [!DNL Experience Platform] data preparation
+
+If your data is already stored in [!DNL Platform], follow the steps below:
+
+1. Review the structure of the [Consumer ExperienceEvent schema](#cee-schema) and determine whether your data can be mapped to its fields.
+1. Contact Adobe Consulting Services to help map your data to the schema and ingest it into Adobe Experience Platform, or [follow the steps in this guide](#mapping) if you want to map the data yourself.
 
 ## Understanding the CEE schema {#cee-schema}
 
