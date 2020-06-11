@@ -92,22 +92,24 @@ Data governance is managed at several points. These include deciding what data i
 
 Experience Platform enables your customers to send opt-out requests related to the usage and storage of their data within Real-time Customer Profile. For more information on how opt-out requests are handled, please see the documentation on [honoring opt-out requests](../segmentation/honoring-opt-outs.md).
 
-## Profile guidelines
+## Experience Platform guidelines for Profile Service
 
-Experience Platform has a series of guidelines to follow in order to effectively use Profile.
+Adobe Experience Platform provides a series of guidelines to help you avoid creating Experience Data Model (XDM) schemas which Profile Service cannot support.
 
-| Section | Boundary | 
-| ------- | -------- |
-| Profile union schema | A maximum of **20** datasets can contribute to the Profile union schema. |
-| Multi-entity relationships | A maximum of **5** multi-entity relationship can be created. | 
-| JSON depth for multi-entity association | The maximum JSON depth is **4**. |
-| Time series data | Time-series data is **not** permitted in Profile for non-people entities. |
-| Non-people schema relationships | Non-people schema relationships are **not** permitted. |
-| Profile fragment | The recommended maximum size of a profile fragment is **10kB**.<br><br> The absolute maximum size of a profile fragment is **1MB**. |
-| Non-person entity | The maximum total size for a single non-person entity is **200MB**. |
-| Datasets per non-person entity | A maximum of **1** dataset can be associated to a non-person entity. |
+| Area | Guideline | Description|
+| --- | --- | --- |
+| Profile-enabled datasets | Maximum 20 profile-enabled datasets| A maximum of **20** datasets can be enabled for profile. To enable another dataset for profile, an existing dataset must first be removed/disabled.|
+| Multi-entity relationships | Maximum number of multi-entity relationships| A maximum of **5** relationships can be defined between Real-time Customer Profile and other dimension entities. Additional relationship mappings cannot be saved until an existing relationship is removed/disabled. | 
+| Multi-entity relationships | Maximum JSON depth for multi-entity relationships| The maximum JSON depth for an ID field used in multi-entity relationships is **4**. This means that in a highly-nested schema, the relationship selector is disabled for fields that are nested more than 4 levels deep. |
+| Time series data | | Time-series data is **not** permitted in Profile for non-people entities. |
+| Non-people schema relationships | | Non-people schema relationships are **not** permitted. |
+| Profile fragments | Recommended maximum size | The recommended maximum size of a profile fragment is **10kB**. Ingesting larger profile fragments will result in degraded performance for those profiles.|
+| Profile fragments | Absolute maximum size | The absolute maximum size of a profile fragment is **1MB**. Ingestion will fail when attempting to upload a fragment that is larger than 1MB. |
+| Non-person entity | Maximum total size | The maximum total size for a single non-person entity is **200MB**. |
+| Datasets per non-person entity | Maximum of 1 dataset |A maximum of **1** dataset can be associated to a non-person entity. |
 
 <!--
+Includes an Enforcement column that is not yet active/available.
 | Section | Boundary | Enforcement |
 | ------- | -------- | ----------- |
 | Profile union schema | A maximum of **20** datasets can contribute to the Profile union schema. | A message stating you've reached the maximum number of datasets appears. You must either disable or clean up other obsolete datasets in order to create a new dataset. |
@@ -121,7 +123,7 @@ Experience Platform has a series of guidelines to follow in order to effectively
 
 --->
 
->![NOTE] A non-person entity refers to any XDM class that is **not** part of Profile.
+>[!NOTE] A non-person entity refers to any XDM class that is **not** part of Profile.
 
 ## Next steps and additional resources
 
