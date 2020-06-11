@@ -57,8 +57,7 @@ Before creating the Google Ad Manager destination in Adobe Real-time CDP, you mu
     >[!NOTE]
     >
     >When setting up a Google Ad Manager destination please work with your Google Account Manager or Adobe representative to understand which account type you have.
-
-3. Your destination is now created. You can select **[!UICONTROL Save & Exit]** if you want to activate segments later on or you can select **[!UICONTROL Next]** to continue the workflow and select segments to activate. In either case, see the next section, Activate segments to Google Ad Manager, for the rest of the workflow.
+3. Your destination is now created. You can select **[!UICONTROL Save & Exit]** if you want to activate segments later on or you can select **[!UICONTROL Next]** to continue the workflow and select segments to activate. In either case, see the next section, Activate segments to Google Ad Manager for the rest of the workflow.
 
 ## Activate segments to Google Ad Manager
 
