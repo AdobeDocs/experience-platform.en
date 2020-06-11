@@ -1,29 +1,29 @@
 ---
-keywords: Experience Platform;Tutorial;Feature Pipeline;Data Science Workspace;popular topics
-solution: Experience Platform
-title: Create a Feature Pipeline
+keywords: Experience Platform;Tutorial;feature pipeline;Data Science Workspace;popular topics
+solution: Adobe Experience Platform Data Science Workspace
+title: Create a feature pipeline
 topic: Tutorial
 ---
 
 # Create a feature pipeline
 
-Adobe Experience Platform allows you to build and create custom Feature Pipelines to perform feature engineering at scale through the Sensei Machine Learning Framework Runtime (hereinafter referred to as "Runtime").
+Adobe Experience Platform allows you to build and create custom feature pipelines to perform feature engineering at scale through the Sensei Machine Learning Framework Runtime (hereinafter referred to as "Runtime").
 
-This document describes the various classes found in a Feature Pipeline, and provides a step-by-step tutorial for creating a custom Feature Pipeline using the [Model Authoring SDK](./sdk.md) in PySpark.
+This document describes the various classes found in a feature pipeline, and provides a step-by-step tutorial for creating a custom feature pipeline using the [Model Authoring SDK](./sdk.md) in PySpark.
 
 The following workflow takes place when a feature pipeline is run:
 
 1. The recipe loads the dataset to a pipeline.
-2. Feature transformation is done on the dataset and written back to the [!DNL Platform].
+2. Feature transformation is done on the dataset and written back to Adobe Experience Platform.
 3. The transformed data is loaded for training.
 4. The feature pipeline defines the stages with the Gradient Boosting Regressor as the chosen model.
 5. The pipeline is used to fit the training data and the trained model is created.
 6. The model is transformed with the scoring dataset.
-7. Interesting columns of the output are then selected and saved back to the platform with the associated data.
+7. Interesting columns of the output are then selected and saved back to [!DNL Experience Platform] with the associated data.
 
 ## Getting started
 
-To run a recipe in any ORG, the following is required:
+To run a recipe in any organization, the following is required:
 -  Schema of the dataset.
 -  The input dataset.
 -  Transformed schema and empty dataset with transformed schema. 
@@ -31,9 +31,9 @@ To run a recipe in any ORG, the following is required:
 
 All of the above datasets need to be uploaded to the [!DNL Platform] UI. For setting this up, use the Adobe provided [bootstrap script](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap).
 
-## Feature Pipeline Classes
+## Feature pipeline Classes
 
-The following table describes the main abstract classes that you must extend in order to build a Feature Pipeline:
+The following table describes the main abstract classes that you must extend in order to build a feature pipeline:
 
 | Abstract Class | Description |
 | -------------- | ----------- |
@@ -97,7 +97,7 @@ See the [pipeline.json](https://github.com/adobe/experience-platform-dsw-referen
 
 The DataLoader is responsible for the retrieval and filtering of input data. Your implementation of DataLoader must extend the abstract class `DataLoader` and override the abstract method `load`.
 
-The following example retrieves a Platform dataset by ID and returns it as a DataFrame, where the dataset ID (`datasetId`) is a defined property in the configuration file.
+The following example retrieves a [!DNL Platform] dataset by ID and returns it as a DataFrame, where the dataset ID (`datasetId`) is a defined property in the configuration file.
 
 **PySpark example**
 
@@ -278,8 +278,7 @@ class MyFeaturePipelineFactory(FeaturePipelineFactory):
 
 The DataSaver is responsible for storing your resulting feature datasets into a storage locaiton. Your implementation of DataSaver must extend the abstract class `DataSaver` and override the abstract method `save`.
 
-The following example extends the DataSaver class which stores data to a Platform dataset by ID, where the dataset ID (`featureDatasetId`) and tenant ID (`tenantId`) are defined properties in the configuration file. Expand each example to see details:
-
+The following example extends the DataSaver class which stores data to a [!DNL Platform] dataset by ID, where the dataset ID (`featureDatasetId`) and tenant ID (`tenantId`) are defined properties in the configuration.
 
 **PySpark example**
 
@@ -345,7 +344,7 @@ class MyDataSaver(DataSaver):
 
 ### Specify your implemented class names in the application file {#specify-your-implemented-class-names-in-the-application-file}
 
-Now that your Feature Pipeline classes are defined and implemented, you must specify the names of your classes in the application yaml file.
+Now that your feature pipeline classes are defined and implemented, you must specify the names of your classes in the application yaml file.
 
 The following examples specifies implemented class names:
 
@@ -378,28 +377,28 @@ scoring.dataLoader: ScoringDataLoader
 scoring.dataSaver: MyDatasetSaver
 ```
 
-## Create a Feature Pipeline Engine using the API {#create-a-feature-pipeline-engine-using-the-api}
+## Create your feature pipeline Engine using the API {#create-a-feature-pipeline-engine-using-the-api}
 
-Now that you have authored your Feature Pipeline, you need to create a docker image to make a call to the feature pipeline API. Follow the import a packaged recipe [API](../models-recipes/import-packaged-recipe-api.md) or [UI](../models-recipes/import-packaged-recipe-ui.md) tutorial to create a docker image for your PySpark recipe.
+Now that you have authored your feature pipeline, you need to create a docker image to make a call to the feature pipeline API. Follow the import a packaged recipe [API](../models-recipes/import-packaged-recipe-api.md) or [UI](../models-recipes/import-packaged-recipe-ui.md) tutorial to create a docker image for your PySpark recipe. You need a docker image URL in order to make a call to the feature pipeline Engine API.
 
- Once you have your docker image location, you can [create a Feature Pipeline Engine using the Sensei Machine Learning API](../api/engines.md#feature-pipeline-docker). Successfully creating a Feature Pipeline Engine will provide you with an Engine ID as part of the response body, make sure to save this value before continuing to the next steps.
+ Once you have your docker image location, you can [create a feature pipeline Engine using the Sensei Machine Learning API](../api/engines.md#feature-pipeline-docker). Successfully creating a feature pipeline Engine provides you with an Engine ID as part of the response body, make sure to save this value before continuing.
 
  The following list is an example API workflow using the [Sensei Machine Learning API](../api/getting-started.md):
 
 1. Create a feature pipeline Engine by performing a POST to `/engines`.
 2. Create an MLInstance by performing a POST to `/mlInstance`.
-3. Create an Experiment by performing a POST to `/experiments`.
-4. POST Feature Pipeline Experiment Run
-5. Use a GET request to `/experiments/{EXPERIMENT_ID}` to retrieve the experiment status and wait to be DONE.
-6. POST Training Experiment Run
-7. GET experiment status and wait to DONE
-8. POST Scoring Experiment Run
-9. GET experiment status and wait to DONE
+3. Create an Experiment by performing a POST to `/experiments`. Save the `EXPERIMENT_ID` thats returned in the response.
+4. Make an additional POST to `experiments/{EXPERIMENT_ID}/runs` with your `EXPERIMENT_ID` and in the body send `{ "mode":"featurePipeline"}` to specify a feature pipeline experiment run. 
+5. Make a GET request to `/experiments/{EXPERIMENT_ID}` to retrieve the experiment status and wait to be DONE.
+6. Make a POST to `experiments/{EXPERIMENT_ID}/runs` and in the body set the mode to "train" and send the array of task that contain your parameters. This starts your training experiment run.
+7. Make a GET request to `/experiments/{EXPERIMENT_ID}` to retrieve the experiment status and wait to be DONE.
+8. Make a POST to `experiments/{EXPERIMENT_ID}/runs` and in the body set the mode to "score". This starts your scoring experiment run.
+9. Make a GET request to `/experiments/{EXPERIMENT_ID}` to retrieve the experiment status and wait to be DONE.
 
 You can import the following postman collection to follow the workflow above: https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
 ## Next steps {#next-steps}
 
-[//]: # (Next steps section should refer to tutorials on how to score data using the Feature Pipeline Engine. Update this document once those tutorials are available)
+[//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-By reading this document, you have authored a Feature Pipeline using the Model Authoring SDK, created a docker image, and used the docker image URL to create a Feature Pipeline Engine through an API call. You are now ready to [create a Feature Pipeline Model](../api/mlinstances.md#create-an-mlinstance) using your newly created Engine and start transforming datasets and extracting data features at scale.
+By reading this document, you have authored a feature pipeline using the Model Authoring SDK, created a docker image, and used the docker image URL to create a feature pipeline Engine through an API call. You are now ready to [create a feature pipeline Model](../api/mlinstances.md#create-an-mlinstance) using your newly created Engine and start transforming datasets and extracting data features at scale.
