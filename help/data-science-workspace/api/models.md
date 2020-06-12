@@ -38,10 +38,10 @@ A successful response returns a payload containing the details of your Models in
 {
     "children": [
         {
-            "id": "{MODEL_ID}",
+            "id": "15c53796-bd6b-4e09-b51d-7296aa20af71",
             "name": "A name for this Model",
-            "experimentId": "{EXPERIMENT_ID}",
-            "experimentRunId": "{EXPERIMENT_RUN_ID}",
+            "experimentId": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
+            "experimentRunId": "33408593-2871-4198-a812-6d1b7d939cda",
             "description": "A description for this Model",
             "modelArtifactUri": "wasb://test-models@mlpreprodstorage.blob.core.windows.net/model-name",
             "created": "2019-01-01T00:00:00.000Z",
@@ -51,10 +51,10 @@ A successful response returns a payload containing the details of your Models in
             "updated": "2019-01-02T00:00:00.000Z"
        },
         {
-            "id": "{MODEL_ID}",
+            "id": "27c53796-bd6b-4u59-b51d-7296aa20er23",
             "name": "Model 2",
-            "experimentId": "{EXPERIMENT_ID}",
-            "experimentRunId": "{EXPERIMENT_RUN_ID}",
+            "experimentId": "3cb25a2d-2cbd-4d34-a619-8ddae5259a5t",
+            "experimentRunId": "33408593-2871-4198-a812-6d1b7d939cda",
             "description": "A description for Model2",
             "modelArtifactUri": "wasb://test-models@mlpreprodstorage.blob.core.windows.net/model-name",
             "created": "2019-01-01T00:00:00.000Z",
@@ -64,10 +64,10 @@ A successful response returns a payload containing the details of your Models in
             "updated": "2019-01-02T00:00:00.000Z"
        },
         {
-            "id": "{MODEL_ID}",
+            "id": "15c53796-bd6b-4e09-b51d-7296aa20af71",
             "name": "Model 3",
-            "experimentId": "{EXPERIMENT_ID}",
-            "experimentRunId": "{EXPERIMENT_RUN_ID}",
+            "experimentId": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
+            "experimentRunId": "33408593-2871-4198-a812-6d1b7d939cda",
             "description": "A description for Model3",
             "modelArtifactUri": "wasb://test-models@mlpreprodstorage.blob.core.windows.net/model-name",
             "created": "2019-01-01T00:00:00.000Z",
@@ -113,7 +113,7 @@ The following request contains a query and retrieves a list of trained Models sh
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/sensei/models/?property=experimentRunId=={EXPERIMENT_RUN_ID} \
+  https://platform.adobe.io/data/sensei/models/?property=experimentRunId==33408593-2871-4198-a812-6d1b7d939cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -128,10 +128,10 @@ A successful response returns a payload containing the details of your Model inc
 {
     "children": [
         {
-            "id": "{MODEL_ID}",
+            "id": "15c53796-bd6b-4e09-b51d-7296aa20af71",
             "name": "A name for this Model",
-            "experimentId": "{EXPERIMENT_ID}",
-            "experimentRunId": "{EXPERIMENT_RUN_ID}",
+            "experimentId": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
+            "experimentRunId": "33408593-2871-4198-a812-6d1b7d939cda",
             "description": "A description for this Model",
             "modelArtifactUri": "wasb://test-models@mlpreprodstorage.blob.core.windows.net/model-name",
             "created": "2019-01-01T00:00:00.000Z",
@@ -142,7 +142,7 @@ A successful response returns a payload containing the details of your Model inc
        }
     ],
     "_page": {
-        "property": "experimentRunId=={EXPERIMENT_RUN_ID},deleted==false",
+        "property": "experimentRunId==33408593-2871-4198-a812-6d1b7d939cda,deleted==false",
         "count": 1
     }
 }
@@ -175,17 +175,17 @@ PUT /models/{MODEL_ID}
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/sensei/models/{MODEL_ID} \
+  https://platform.adobe.io/data/sensei/models/15c53796-bd6b-4e09-b51d-7296aa20af71 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=mlInstance.v1.json' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -d '{
-        "id": "{MODEL_ID}",
+        "id": "15c53796-bd6b-4e09-b51d-7296aa20af71",
         "name": "A name for this Model",
-        "experimentId": "{EXPERIMENT_ID}",
-        "experimentRunId": "{EXPERIMENT_RUN_ID}",
+        "experimentId": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
+        "experimentRunId": "33408593-2871-4198-a812-6d1b7d939cda",
         "description": "An updated description for this Model",
         "modelArtifactUri": "wasb://test-models@mlpreprodstorage.blob.core.windows.net/model-name",
         "created": "2019-01-01T00:00:00.000Z",
@@ -202,10 +202,10 @@ A successful response returns a payload containing the Experiment's updated deta
 
 ```json
 {
-        "id": "{MODEL_ID}",
+        "id": "15c53796-bd6b-4e09-b51d-7296aa20af71",
         "name": "A name for this Model",
-        "experimentId": "{EXPERIMENT_ID}",
-        "experimentRunId": "{EXPERIMENT_RUN_ID}",
+        "experimentId": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
+        "experimentRunId": "33408593-2871-4198-a812-6d1b7d939cda",
         "description": "An updated description for this Model",
         "modelArtifactUri": "wasb://test-models@mlpreprodstorage.blob.core.windows.net/model-name",
         "created": "2019-01-01T00:00:00.000Z",
@@ -234,7 +234,7 @@ DELETE /models/{MODEL_ID}
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/sensei/models/{MODEL_ID} \
+  https://platform.adobe.io/data/sensei/models/15c53796-bd6b-4e09-b51d-7296aa20af71 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
