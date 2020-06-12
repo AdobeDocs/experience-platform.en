@@ -54,7 +54,7 @@ For more information on using this endpoint, please read the [export jobs develo
 
 ## Schedules
 
-Schedules are a tool that can be used to automatically run export jobs once a day. You can use the `/config/schedules` endpoint to retrieve a list of schedules, create a new schedule, retrieve details of a specific schedule, update a specific schedule, or delete a specific schedule. 
+Schedules are a tool that can be used to automatically run batch segmentation jobs once a day. You can use the `/config/schedules` endpoint to retrieve a list of schedules, create a new schedule, retrieve details of a specific schedule, update a specific schedule, or delete a specific schedule. 
 
 For more information on using this endpoint, please read the [schedules developer guide](./schedules.md). 
 
