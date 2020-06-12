@@ -83,6 +83,17 @@ A successful response returns HTTP status 200 with a list of schedules for the s
 }
 ```
 
+| Parameter | Description  |
+| --------- | ------------ |
+| `_page.totalCount` | The total number of schedules returned. |
+| `_page.pageSize` | The size of the page of schedules. |
+| `children.name` | **Required.** The name of the schedule as a string. |
+| `children.type` | **Required.** The type of job as a string. The two supported types are `batch_segmentation` and `export`. |
+| `children.properties` | **Required.** An object containing additional properties related to the schedule. |
+| `children.properties.segments` | **Required when `type` equals `batch_segmentation`.** Using `["*"]` ensures all segments are included. |
+| `children.schedule` | **Required.** A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24 hour period. For more information about cron schedules, please read the [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation. In this example, "0 0 1 * *" means that this schedule will run at midnight on the first of every month. |
+| `children.state` | *Optional.* A string containing the schedule state. The two supported states are `active` and `inactive`. By default, the state is set to `inactive`. |
+
 ## Create a new schedule {#create}
 
 You can create a new schedule by making a POST request to the `/config/schedules` endpoint.
@@ -204,6 +215,15 @@ A successful response returns HTTP status 200 with detailed information about th
     "updateEpoch": 1568267948
 }
 ```
+
+| Parameter | Description  |
+| --------- | ------------ |
+| `name` | **Required.** The name of the schedule as a string. |
+| `type` | **Required.** The type of job as a string. The two supported types are `batch_segmentation` and `export`. |
+| `properties` | **Required.** An object containing additional properties related to the schedule. |
+| `properties.segments` | **Required when `type` equals `batch_segmentation`.** Using `["*"]` ensures all segments are included. |
+| `schedule` | **Required.** A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24 hour period. For more information about cron schedules, please read the [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation. In this example, "0 0 1 * *" means that this schedule will run at midnight on the first of every month. |
+| `state` | *Optional.* A string containing the schedule state. The two supported states are `active` and `inactive`. By default, the state is set to `inactive`. |
 
 ## Update details for a specific schedule {#update}
 

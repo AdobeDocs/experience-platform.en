@@ -7,7 +7,7 @@ topic: developer guide
 
 # Segment definitions developer guide
 
-Adobe Experience Platform allows you to create segments that define a group of specific attributes or behaviors from a group of profiles.
+Adobe Experience Platform allows you to create segments that define a group of specific attributes or behaviors from a group of profiles. A segment definition is an object that encapsulates a query written in Profile Query Language (PQL). This object is also called a PQL predicate. PQL predicates define the rules for the segment based on conditions related to any record or time series data you supply to Real-time Customer Profile. See the [PQL guide](../pql/overview.md) for more information on writing PQL queries.
 
 This guide provides information to help you better understand segment definitions and includes sample API calls for performing basic actions using the API.
 
@@ -238,6 +238,11 @@ A successful response returns HTTP status 200 with details of your newly created
 }
 ```
 
+| Property | Description |
+| -------- | ----------- |
+| `id` | A system-generated ID of your newly created segment definition. |
+| `evaluationInfo` | A system-generated object that tells what type of evaluation, batch, continuous (also known as streaming), or synchronous, the segment definition will undergo. |
+
 ## Retrieve a specific segment definition {#get}
 
 You can retrieve detailed information about a specific segment definition by making a GET request to the `/segment/definitions` endpoint and providing the ID of the segment definition you wish to retrieve in the request path.
@@ -307,6 +312,18 @@ A successful response returns HTTP status 200 with detailed information about th
     "updateTime": 1579292094000
 }
 ```
+
+| Property | Description  |	
+| -------- | ------------ |
+| `id` | A system-generated ID of your newly created segment definition. |	
+| `name` | **Required.** A unique name by which to refer to the segment. |	
+| `schema` | **Required.** The schema associated with the entities in the segment. Consists of either an `id` or `name` field. | 	
+| `expression` | **Required.** An entity that contains fields information about the segment definition. |	
+| `expression.type` | Specifies the expression type. Currently, only "PQL" is supported. |	
+| `expression.format` | Indicates the structure of the expression in value. Currently, the following format is supported: <ul><li>`pql/text`: A textual representation of a segment definition, according to the published PQL grammar.  For example, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |	
+| `expression.value` | An expression that conforms to the type indicated in `expression.format`. |	
+| `description` | A human readable description of the definition. |
+| `evaluationInfo` | A system-generated object that tells what type of evaluation, batch, continuous (also known as streaming), or synchronous, the segment definition will undergo. | 
 
 ## Bulk retrieve segment definitions {#bulk-get}
 
@@ -428,6 +445,18 @@ A successful response returns HTTP status 207 with the requested segment definit
     }
 }
 ```
+
+| Property | Description  |	
+| -------- | ------------ |
+| `id` | A system-generated ID of your newly created segment definition. |	
+| `name` | **Required.** A unique name by which to refer to the segment. |	
+| `schema` | **Required.** The schema associated with the entities in the segment. Consists of either an `id` or `name` field. | 	
+| `expression` | **Required.** An entity that contains fields information about the segment definition. |	
+| `expression.type` | Specifies the expression type. Currently, only "PQL" is supported. |	
+| `expression.format` | Indicates the structure of the expression in value. Currently, the following format is supported: <ul><li>`pql/text`: A textual representation of a segment definition, according to the published PQL grammar.  For example, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |	
+| `expression.value` | An expression that conforms to the type indicated in `expression.format`. |	
+| `description` | A human readable description of the definition. |
+| `evaluationInfo` | A system-generated object that tells what type of evaluation, batch, continuous (also known as streaming), or synchronous, the segment definition will undergo. | 
 
 ## Delete a specific segment definition {#delete}
 
