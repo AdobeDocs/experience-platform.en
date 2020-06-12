@@ -212,7 +212,7 @@ curl -X POST \
 | `artifacts.default.image.location` | The location of the Docker image. Only Azure ACR or Public (unauthenticated) Dockerhub is supported. |
 | `artifacts.default.image.executionType` | The execution type of the Engine. This value corresponds to the language in which the Docker image is built upon. This can be either "Spark" or "PySpark". |
 | `artifacts.default.image.packagingType` | The packaging type of the Engine. This value should be set to `docker`. |
-| `artifacts.default.defaultMLInstanceConfigs` | Your `pipeline.json` configuration file parameters.
+| `artifacts.default.defaultMLInstanceConfigs` | Your `pipeline.json` configuration file parameters. |
 
 **Response**
 
