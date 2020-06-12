@@ -39,7 +39,7 @@ The following is a list of available query parameters for listing segment defini
 | `start` | Specifies the starting offset for the segment definitions returned. | `start=4` |
 | `limit` | Specifies the number of segment definitions returned per page. | `limit=20` |
 | `page` | Specifies which page the results of segment definitions will start from. | `page=5` |
-| `sort` | Specifies which field to sort the results by. Is written in the following format: `[attributeName]:[desc|asc]`.  | `sort=`
+| `sort` | Specifies which field to sort the results by. Is written in the following format: `[attributeName]:[desc|asc]`.  | `sort=updateTime:desc` |
 | `evaluationInfo.continuous.enabled` | Specifies if the segment definition is streaming-enabled. | `evaluationInfo.continuous.enabled=true` |
 
 **Request**
@@ -182,14 +182,14 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
     }'
 ```
 
-| Property | Description  |	
-| --------- | ------------ | 	
-| `name` | **Required.** A unique name by which to refer to the segment. |	
-| `schema` | **Required.** The schema associated with the entities in the segment. Consists of either an `id` or `name` field. | 	
-| `expression` | **Required.** An entity that contains fields information about the segment definition. |	
-| `expression.type` | Specifies the expression type. Currently, only "PQL" is supported. |	
-| `expression.format` | Indicates the structure of the expression in value. Currently, the following format is supported: <ul><li>`pql/text`: A textual representation of a segment definition, according to the published PQL grammar.  For example, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |	
-| `expression.value` | An expression that conforms to the type indicated in `expression.format`. |	
+| Property | Description |
+| -------- | ----------- |
+| `name` | **Required.** A unique name by which to refer to the segment. |
+| `schema` | **Required.** The schema associated with the entities in the segment. Consists of either an `id` or `name` field. |
+| `expression` | **Required.** An entity that contains fields information about the segment definition. |
+| `expression.type` | Specifies the expression type. Currently, only "PQL" is supported. |
+| `expression.format` | Indicates the structure of the expression in value. Currently, the following format is supported: <ul><li>`pql/text`: A textual representation of a segment definition, according to the published PQL grammar.  For example, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
+| `expression.value` | An expression that conforms to the type indicated in `expression.format`. |
 | `description` | A human readable description of the definition. |
 
 **Response**
@@ -313,17 +313,17 @@ A successful response returns HTTP status 200 with detailed information about th
 }
 ```
 
-| Property | Description  |	
-| -------- | ------------ |
-| `id` | A system-generated ID of your newly created segment definition. |	
-| `name` | **Required.** A unique name by which to refer to the segment. |	
-| `schema` | **Required.** The schema associated with the entities in the segment. Consists of either an `id` or `name` field. | 	
-| `expression` | **Required.** An entity that contains fields information about the segment definition. |	
-| `expression.type` | Specifies the expression type. Currently, only "PQL" is supported. |	
-| `expression.format` | Indicates the structure of the expression in value. Currently, the following format is supported: <ul><li>`pql/text`: A textual representation of a segment definition, according to the published PQL grammar.  For example, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |	
-| `expression.value` | An expression that conforms to the type indicated in `expression.format`. |	
+| Property | Description |
+| -------- | ----------- |
+| `id` | A system-generated ID of your newly created segment definition. |
+| `name` | **Required.** A unique name by which to refer to the segment. |
+| `schema` | **Required.** The schema associated with the entities in the segment. Consists of either an `id` or `name` field. |
+| `expression` | **Required.** An entity that contains fields information about the segment definition. |
+| `expression.type` | Specifies the expression type. Currently, only "PQL" is supported. |
+| `expression.format` | Indicates the structure of the expression in value. Currently, the following format is supported: <ul><li>`pql/text`: A textual representation of a segment definition, according to the published PQL grammar.  For example, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
+| `expression.value` | An expression that conforms to the type indicated in `expression.format`. |
 | `description` | A human readable description of the definition. |
-| `evaluationInfo` | A system-generated object that tells what type of evaluation, batch, continuous (also known as streaming), or synchronous, the segment definition will undergo. | 
+| `evaluationInfo` | A system-generated object that tells what type of evaluation, batch, continuous (also known as streaming), or synchronous, the segment definition will undergo. |
 
 ## Bulk retrieve segment definitions {#bulk-get}
 
@@ -446,17 +446,17 @@ A successful response returns HTTP status 207 with the requested segment definit
 }
 ```
 
-| Property | Description  |	
-| -------- | ------------ |
-| `id` | A system-generated ID of your newly created segment definition. |	
-| `name` | **Required.** A unique name by which to refer to the segment. |	
-| `schema` | **Required.** The schema associated with the entities in the segment. Consists of either an `id` or `name` field. | 	
-| `expression` | **Required.** An entity that contains fields information about the segment definition. |	
-| `expression.type` | Specifies the expression type. Currently, only "PQL" is supported. |	
-| `expression.format` | Indicates the structure of the expression in value. Currently, the following format is supported: <ul><li>`pql/text`: A textual representation of a segment definition, according to the published PQL grammar.  For example, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |	
-| `expression.value` | An expression that conforms to the type indicated in `expression.format`. |	
+| Property | Description |
+| -------- | ----------- |
+| `id` | A system-generated ID of your newly created segment definition. |
+| `name` | **Required.** A unique name by which to refer to the segment. |
+| `schema` | **Required.** The schema associated with the entities in the segment. Consists of either an `id` or `name` field. |
+| `expression` | **Required.** An entity that contains fields information about the segment definition. |
+| `expression.type` | Specifies the expression type. Currently, only "PQL" is supported. |
+| `expression.format` | Indicates the structure of the expression in value. Currently, the following format is supported: <ul><li>`pql/text`: A textual representation of a segment definition, according to the published PQL grammar.  For example, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
+| `expression.value` | An expression that conforms to the type indicated in `expression.format`. |
 | `description` | A human readable description of the definition. |
-| `evaluationInfo` | A system-generated object that tells what type of evaluation, batch, continuous (also known as streaming), or synchronous, the segment definition will undergo. | 
+| `evaluationInfo` | A system-generated object that tells what type of evaluation, batch, continuous (also known as streaming), or synchronous, the segment definition will undergo. |
 
 ## Delete a specific segment definition {#delete}
 
