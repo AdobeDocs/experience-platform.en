@@ -381,24 +381,48 @@ scoring.dataSaver: MyDatasetSaver
 
 Now that you have authored your feature pipeline, you need to create a docker image to make a call to the feature pipeline API. Follow the import a packaged recipe [API](../models-recipes/import-packaged-recipe-api.md) or [UI](../models-recipes/import-packaged-recipe-ui.md) tutorial to create a docker image for your PySpark recipe. You need a docker image URL in order to make a call to the feature pipeline Engine API.
 
- Once you have your docker image location, you can [create a feature pipeline Engine using the Sensei Machine Learning API](../api/engines.md#feature-pipeline-docker). Successfully creating a feature pipeline Engine provides you with an Engine ID as part of the response body, make sure to save this value before continuing.
+>[!TIP]
+>If you do not have a Docker URL, visit the [Package source files into a recipe](../models-recipes/package-source-files-recipe.md) tutorial for a step-by-step walkthrough on creating a Docker host URL.
 
- The following list is an example API workflow using the [Sensei Machine Learning API](../api/getting-started.md):
+Optionally, you can use the following Postman collection to assist in completing the feature pipeline API workflow:
 
-1. Create a feature pipeline Engine by performing a POST to `/engines`.
-2. Create an MLInstance by performing a POST to `/mlInstance`.
-3. Create an Experiment by performing a POST to `/experiments`. Save the `EXPERIMENT_ID` thats returned in the response.
-4. Make an additional POST to `experiments/{EXPERIMENT_ID}/runs` with your `EXPERIMENT_ID` and in the body send `{ "mode":"featurePipeline"}` to specify a feature pipeline experiment run. 
-5. Make a GET request to `/experiments/{EXPERIMENT_ID}` to retrieve the experiment status and wait to be DONE.
-6. Make a POST to `experiments/{EXPERIMENT_ID}/runs` and in the body set the mode to "train" and send the array of task that contain your parameters. This starts your training experiment run.
-7. Make a GET request to `/experiments/{EXPERIMENT_ID}` to retrieve the experiment status and wait to be DONE.
-8. Make a POST to `experiments/{EXPERIMENT_ID}/runs` and in the body set the mode to "score". This starts your scoring experiment run.
-9. Make a GET request to `/experiments/{EXPERIMENT_ID}` to retrieve the experiment status and wait to be DONE.
+https://www.getpostman.com/collections/c5fc0d1d5805a5ddd41a
 
-You can import the following postman collection to follow the workflow above: https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
+### Create a feature pipeline engine
+
+Once you have your docker image location, you can [create a feature pipeline engine](../api/engines.md#feature-pipeline-docker) using the Sensei Machine Learning API by performing a POST to `/engines`. Successfully creating a feature pipeline engine provides you with an Engine unique identifier (`id`). Make sure to save this value before continuing.
+
+### Create an MLInstance
+
+Using your newly created `engineID`, you need to [create an MLIstance](../api/mlinstances.md#create-an-mlinstance) by making make a POST request to the `/mlInstance` endpoint. A successful response returns a payload containing the details of the newly created MLInstance including its unique identifier (`id`) used in the next API call.
+
+### Create an Experiment
+
+Next, you need to [create an Experiment](../api/experiments.md#create-an-experiment). To create an Experiment you need to have your MLIstance unique identifier (`id`) and make a POST request to the `/experiment` endpoint. A successful response returns a payload containing the details of the newly created Experiment including its unique identifier (`id`) used in the next API call.
+
+### Specify the Experiment run feature pipeline task
+
+After creating an Experiment, you have to change the experiments mode to `featurePipeline`. To change the mode, make an additional POST to [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) with your `EXPERIMENT_ID` and in the body send `{ "mode":"featurePipeline"}` to specify a feature pipeline experiment run.
+
+Once complete, make a GET request to `/experiments/{EXPERIMENT_ID}` to [retrieve the experiment status](../api/experiments.md#retrieve-specific) and wait for the experiment status to update to complete.
+
+### Specify the Experiment run training task
+
+Next, you need to [specify the training run task](../api/experiments.md#experiment-training-scoring). Make a POST to `experiments/{EXPERIMENT_ID}/runs` and in the body set the mode to `"train"` and send an array of tasks that contain your training parameters. A successful response returns a payload containing the details of the requested Experiment.
+
+Once complete, make a GET request to `/experiments/{EXPERIMENT_ID}` to [retrieve the experiment status](../api/experiments.md#retrieve-specific) and wait for the experiment status to update to complete.
+
+### Specify the Experiment run scoring task
+
+>[!NOTE]
+> To complete this step you need to have at least one successful scoring run associated with your Experiment.
+
+After a successful training run, you need to [specify the scoring run task](../api/experiments.md#experiment-training-scoring). Make a POST to `experiments/{EXPERIMENT_ID}/runs` and in the body set the mode to score: `{ "mode":"score" }`. This starts your scoring experiment run.
+
+Once complete, make a GET request to `/experiments/{EXPERIMENT_ID}` to [retrieve the experiment status](../api/experiments.md#retrieve-specific) and wait for the experiment status to update to complete.
 
 ## Next steps {#next-steps}
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-By reading this document, you have authored a feature pipeline using the Model Authoring SDK, created a docker image, and used the docker image URL to create a feature pipeline Engine through an API call. You are now ready to [create a feature pipeline Model](../api/mlinstances.md#create-an-mlinstance) using your newly created Engine and start transforming datasets and extracting data features at scale.
+By reading this document, you have authored a feature pipeline using the Model Authoring SDK, created a docker image, and used the docker image URL to create a feature pipeline Model by using the Sensei Machine Learning API. You are now ready to continue transforming datasets and extracting data features at scale using the [Sensei Machine Learning API](../api/getting-started.md).
