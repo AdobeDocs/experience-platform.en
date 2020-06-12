@@ -252,3 +252,163 @@ A successful response returns a payload containing a 200 status confirming the d
     "detail": "Model deletion was successful"
 }
 ```
+
+## Create a new transcoding for a Model
+
+Transcoding is the direct digital-to-digital conversion of one encoding to another. You create a new transcoding for a Model by providing the `MODEL_ID` and a `targetFormat` you want the new output to be in.
+
+**API Format**
+
+```http
+GET /models/{MODEL_ID}/transcodings
+```
+
+| Parameter | Description |
+| --- | --- |
+| `{MODEL_ID}` | The identifier of the trained or published Model. |
+
+**Request**
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/sensei/models/15c53796-bd6b-4e09-b51d-7296aa20af71/transcodings \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: text/plain' \
+    --data-raw '{
+    "id": "491a3be5-1d32-4541-94d5-cd1cd07affb5",
+	"modelId" : "15c53796-bd6b-4e09-b51d-7296aa20af71",
+	"targetFormat": "CoreML",
+    "created": "2019-12-16T19:59:08.360Z",
+    "createdBy": {
+        "userId": "FDD760CD5CD467380A495FE2@AdobeID"
+    },
+    "updated": "2019-12-19T18:37:43.696Z",
+    "deleted": false,
+}'
+```
+
+**Response**
+
+A successful response returns a payload containing a json object with the information of your transcoding.
+
+```json
+{
+  "id": "491a3be5-1d32-4541-94d5-cd1cd07affb5",
+  "modelId": "15c53796-bd6b-4e09-b51d-7296aa20af71",
+  "targetFormat": "CoreML",
+  "created": "2020-06-12T22:01:55.886Z",
+  "createdBy": {
+    "userId": "FDD760CD5CD467380A495FE2@AdobeID"
+  },
+  "updated": "2020-06-12T22:01:55.886Z",
+  "deleted": false
+}
+```
+
+## Retrieve a list of transcodings for a Model
+
+You can retrieve a list of transcodings that have been performed on a Model by performing a GET request with your `MODEL_ID`.
+
+**API Format**
+
+```http
+GET /models/{MODEL_ID}/transcodings
+```
+
+| Parameter | Description |
+| --- | --- |
+| `{MODEL_ID}` | The identifier of the trained or published Model. |
+
+**Request**
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/sensei/models/15c53796-bd6b-4e09-b51d-7296aa20af71/transcodings \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Response**
+
+A successful response returns a payload containing a json object with a list of each transcoding performed on the Model. Each transcoded Model receives a unique identifier (`id`).
+
+```json
+{
+    "children": [
+        {
+            "id": "460aa5a1-e972-455d-b8dc-4bc6cd91edb6",
+            "modelId": "15c53796-bd6b-4e09-b51d-7296aa20af71",
+            "created": "2019-12-20T01:07:50.978Z",
+            "createdBy": {
+                "userId": "FDD760CD5CD467380A495FE2@AdobeID"
+            },
+            "updated": "2019-12-20T01:07:50.978Z",
+            "deprecated": false
+        },
+        {
+            "id": "bdb3e4c2-4702-4045-86b4-17ee40df91cc",
+            "modelId": "15c53796-bd6b-4e09-b51d-7296aa20af71",
+            "created": "2019-12-20T17:48:26.473Z",
+            "createdBy": {
+                "userId": "FDD760CD5CD467380A495FE2@AdobeID"
+            },
+            "updated": "2019-12-20T17:48:26.473Z",
+            "deprecated": false
+        }
+    ],
+    "_page": {
+        "property": "modelId==15c53796-bd6b-4e09-b51d-7296aa20af71,deleted==false,deprecated==false",
+        "count": 2
+    }
+}
+```
+
+## Retrieve a specific transcoded Model
+
+You can retrieve a specific transcoded Model by performing a GET request with your `MODEL_ID` and the id of a transcoded model .
+
+**API Format**
+
+```http
+GET /models/{MODEL_ID}/transcodings/{TRANSCODING_ID}
+```
+
+| Parameter | Description |
+| --- | --- |
+| `{MODEL_ID}` | The unique identifier of a trained or published Model. |
+| `{TRANSCODING_ID}` | The unique identifier of a transcoded Model.
+
+**Request**
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/sensei/models/15c53796-bd6b-4e09-b51d-7296aa20af71/transcodings/460aa5a1-e972-455d-b8dc-4bc6cd91edb6 \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Response**
+
+A successful response returns a payload containing a json object with the data of the transcoded Model.
+
+```json
+{
+    "id": "460aa5a1-e972-455d-b8dc-4bc6cd91edb6",
+    "modelId": "15c53796-bd6b-4e09-b51d-7296aa20af71",
+    "created": "2019-12-20T01:07:50.978Z",
+    "createdBy": {
+        "userId": "FDD760CD5CD467380A495FE2@AdobeID"
+    },
+    "updated": "2019-12-20T01:07:50.978Z",
+    "deprecated": false
+}
+```
+
+
