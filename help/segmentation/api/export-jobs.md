@@ -326,7 +326,7 @@ A successful response returns HTTP status 200 with details of your newly created
 
 ## Retrieve a specific export job {#get}
 
-You can retrieve detailed information about a specific export job by making a GET request to the `/export/jobs` endpoint and providing the export job's `id` value in the request path.
+You can retrieve detailed information about a specific export job by making a GET request to the `/export/jobs` endpoint and providing the ID of the export job you wish to retrieve in the request path.
 
 **API format**
 
@@ -441,7 +441,7 @@ A successful response returns HTTP status 200 with detailed information about th
 
 ## Cancel or delete a specific export job {#delete}
 
-You can request to delete a specified export job by making a DELETE request to the `/export/jobs` endpoint and providing the export job's `id` value in the request path.
+You can request to delete a specified export job by making a DELETE request to the `/export/jobs` endpoint and providing the ID of the export job you wish to delete in the request path.
 
 **API format**
 

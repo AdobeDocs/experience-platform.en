@@ -34,13 +34,13 @@ GET /segment/definitions?{QUERY_PARAMETERS}
 
 The following is a list of available query parameters for listing segment definitions. All of these parameters are optional. Making a call to this endpoint with no parameters will retrieve all segment definitions available for your organization.
 
-| Parameter | Description |
-| --------- | ----------- |
-| `start` | Specifies the starting offset for the segment definitions returned. |
-| `limit` | Specifies the number of segment definitions returned per page. |
-| `page` | Specifies which page the results of segment definitions will start from. |
-| `sort` | Specifies which field to sort the results by. Is written in the following format: `[attributeName]:[desc|asc]`.  |
-| `evaluationInfo.continuous.enabled` | Specifies if the segment definition is streaming-enabled. |
+| Parameter | Description | Example |
+| --------- | ----------- | ------- |
+| `start` | Specifies the starting offset for the segment definitions returned. | `start=4` |
+| `limit` | Specifies the number of segment definitions returned per page. | `limit=20` |
+| `page` | Specifies which page the results of segment definitions will start from. | `page=5` |
+| `sort` | Specifies which field to sort the results by. Is written in the following format: `[attributeName]:[desc|asc]`.  | `sort=`
+| `evaluationInfo.continuous.enabled` | Specifies if the segment definition is streaming-enabled. | `evaluationInfo.continuous.enabled=true` |
 
 **Request**
 
@@ -99,7 +99,6 @@ A successful response returns HTTP status 200 with a list of segment definitions
             "updateEpoch": 1575588309,
             "updateTime": 1575588309000
         },
-        ... ,
         {
             "id": "ca763983-5572-4ea4-809c-b7dff7e0d79b",
             "schema": {
@@ -136,11 +135,11 @@ A successful response returns HTTP status 200 with a list of segment definitions
         }
     ],
     "page": {
-        "totalCount": 4,
+        "totalCount": 2,
         "totalPages": 1,
         "sortField": "creationTime",
         "sort": "desc",
-        "pageSize": 4,
+        "pageSize": 2,
         "limit": 100
     },
     "link": {}
@@ -182,6 +181,16 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
         "ttlInDays": 60
     }'
 ```
+
+| Property | Description  |	
+| --------- | ------------ | 	
+| `name` | **Required.** A unique name by which to refer to the segment. |	
+| `schema` | **Required.** The schema associated with the entities in the segment. Consists of either an `id` or `name` field. | 	
+| `expression` | **Required.** An entity that contains fields information about the segment definition. |	
+| `expression.type` | Specifies the expression type. Currently, only "PQL" is supported. |	
+| `expression.format` | Indicates the structure of the expression in value. Currently, the following format is supported: <ul><li>`pql/text`: A textual representation of a segment definition, according to the published PQL grammar.  For example, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |	
+| `expression.value` | An expression that conforms to the type indicated in `expression.format`. |	
+| `description` | A human readable description of the definition. |
 
 **Response**
 
@@ -301,7 +310,7 @@ A successful response returns HTTP status 200 with detailed information about th
 
 ## Bulk retrieve segment definitions {#bulk-get}
 
-You can retrieve detailed information about multiple specified segment definitions by making a POST request to the `/segment/definitions/bulk-get` endpoint and providing the  `id` values of the segment definitions in the request body.
+You can retrieve detailed information about multiple specified segment definitions by making a POST request to the `/segment/definitions/bulk-get` endpoint and providing the `id` values of the segment definitions in the request body.
 
 **API format**
 
@@ -422,7 +431,7 @@ A successful response returns HTTP status 207 with the requested segment definit
 
 ## Delete a specific segment definition {#delete}
 
-You can request to delete a specified segment definition by making a DELETE request to the `/segment/definitions` endpoint and providing the segment definition's `id` value in the request path.
+You can request to delete a specified segment definition by making a DELETE request to the `/segment/definitions` endpoint and providing the ID of the segment definition you wish to delete in the request path.
 
 **API format**
 
@@ -450,7 +459,7 @@ A successful response returns HTTP status 200 with no message.
 
 ## Update a specific segment definition
 
-You can update a specified segment definition by making a PATCH request to the `/segment/definitions` endpoint and providing the segment definition's `id` value in the request path.
+You can update a specified segment definition by making a PATCH request to the `/segment/definitions` endpoint and providing the ID of the segment definition you wish to update in the request path.
 
 **API format**
 

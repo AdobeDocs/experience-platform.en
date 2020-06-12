@@ -54,9 +54,15 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
         "predicateType": "pql/text",
         "predicateModel": "_xdm.context.profile",
         "graphType": "pdg"
-    }
- '
+    }'
 ```
+
+| Property | Description | 	
+| --------- | ----------- |	
+| `predicateExpression` | The PQL expression to query the data by. |
+| `predicateType` | | 	
+| `predicateModel` | The name of the XDM schema the Profile data is based on. |
+| `graphType` | |
 
 **Response**
 
@@ -72,6 +78,11 @@ A successful response returns HTTP status 201 (Created) with details of your new
 }
 ```
 
+| Property | Description | 	
+| -------- | ----------- |	
+| `state` | The current state of the preview job. It will be in the "RUNNING" state until processing is complete, at which point it becomes "RESULT_READY" or "FAILED". |	
+| `previewId` | The ID of the preview job, to be used for lookup purposes when viewing an estimate or preview, as outlined in the following section. |
+
 ## Retrieve a specific preview's results {#get-preview}
 
 You can retrieve detailed information about a specific preview by making a GET request to the `/preview` endpoint and providing the preview ID in the request path.
@@ -82,8 +93,8 @@ You can retrieve detailed information about a specific preview by making a GET r
 GET /preview/{PREVIEW_ID}
 ```
 
-| Property | Description |
-| -------- | ----------- |
+| Parameter | Description |
+| --------- | ----------- |
 | `{PREVIEW_ID}` | The `previewId` value of the preview you want to retrieve. |
 
 **Request**
@@ -148,17 +159,17 @@ A successful response returns HTTP status 200 with detailed information about th
 
 ## Retrieve the results of a specific estimate job {#get-estimate}
 
-You can retrieve details of a specific estimate job by making a GET request to the `/estimate` endpoint and providing the estimate job's `id` value in the request path.
+You can retrieve details of a specific estimate job by making a GET request to the `/estimate` endpoint and providing the ID of a previously created preview job in the request path.
 
 **API format**
 
 ```http
-GET /estimate/{ESTIMATE_ID}
+GET /estimate/{PREVIEW_ID}
 ```
 
-| Property | Description |
-| -------- | ----------- |
-| `{ESTIMATE_ID}` | The `id` value of the estimate job you want to retrieve. |
+| Parameter | Description |
+| --------- | ----------- |
+| `{PREVIEW_ID}` | The `id` value of the estimate job you want to retrieve. |
 
 **Request**
 
@@ -195,6 +206,11 @@ A successful response returns HTTP status 200 with details of the estimate job.
     }
 }
 ```
+
+| Property | Description | 	
+| -------- | ----------- |	
+| `state` | The current state of the preview job. Will be "RUNNING" until processing is complete, at which point it becomes "RESULT_READY" or "FAILED". |	
+| `_links.preview` | When the preview job's current state is "RESULT_READY", this attribute provides a URL to view the estimate. |
 
 ## Cancel or delete a specific preview {#delete-preview}
 

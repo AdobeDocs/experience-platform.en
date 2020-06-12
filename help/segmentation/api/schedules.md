@@ -155,7 +155,7 @@ A successful response returns HTTP status 200 with details of your newly created
 
 ## Retrieve a specific schedule {#get}
 
-You can retrieve detailed information about a specific schedule by making a GET request to the `/config/schedules` endpoint and providing the schedule's `id` value in the request path.
+You can retrieve detailed information about a specific schedule by making a GET request to the `/config/schedules` endpoint and providing the ID of the schedule you wish to retrieve in the request path.
 
 **API format**
 
