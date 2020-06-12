@@ -91,7 +91,7 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `{TASK}` | Specifies the run's task. Set this value as either `train` for training, `score` for scoring, or `fp` for feature pipeline. |
+| `{TASK}` | Specifies the run's task. Set this value as either `train` for training, `score` for scoring, or `featurePipeline` for feature pipeline. |
 
 **Response**
 

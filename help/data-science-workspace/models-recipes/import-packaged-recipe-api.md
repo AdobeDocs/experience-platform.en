@@ -36,16 +36,14 @@ This tutorial requires you to have completed the [Authentication to Adobe Experi
 
 ## Create an Engine
 
-Depending on the form of the packaged Recipe file to be included as a part of the API request, an Engine is created through one of two ways:
-
--   [Create an Engine with a Docker URL](#create-an-engine-with-a-docker-url)
+Depending on the form of the packaged Recipe file to be included as a part of the API request, an Engine is created.
 
 ### Create an Engine with a Docker URL {#create-an-engine-with-a-docker-url}
 
 In order to create an Engine with a packaged Recipe file stored in a Docker container, you must provide the Docker URL to the packaged Recipe file.
 
 >[!CAUTION]
-> If you are using Python or R use the request below. If you are using PySpark or Scala use the PySpark/Scala request example located below the Python/R example.
+> If you are using Python or R use the request below. If you are using PySpark or Scala, use the PySpark/Scala request example located below the Python/R example.
 
 **API format**
 

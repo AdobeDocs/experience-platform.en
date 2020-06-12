@@ -70,7 +70,7 @@ The following example demonstrates key-value pairs found within a configuration 
         "name": "fp",
         "parameters": [
             {
-                "key": "datasetId",
+                "key": "dataset_id",
                 "value": "000"
             },
             {
@@ -86,12 +86,12 @@ The following example demonstrates key-value pairs found within a configuration 
 ]
 ```
 
-You can access the configuration JSON through any class method that defines `configProperties` as a parameter. For example:
+You can access the configuration JSON through any class method that defines `config_properties` as a parameter. For example:
 
 **PySpark**
 
 ```python
-input_dataset_id = str(configProperties.get("datasetId"))
+dataset_id = str(config_properties.get(dataset_id))
 ```
 
 See the [pipeline.json](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/feature_pipeline_recipes/pyspark/pipeline.json) file provided by Data Science Workspace for a more in depth configuration example.
@@ -100,7 +100,7 @@ See the [pipeline.json](https://github.com/adobe/experience-platform-dsw-referen
 
 The DataLoader is responsible for the retrieval and filtering of input data. Your implementation of DataLoader must extend the abstract class `DataLoader` and override the abstract method `load`.
 
-The following example retrieves a [!DNL Platform] dataset by ID and returns it as a DataFrame, where the dataset ID (`datasetId`) is a defined property in the configuration file.
+The following example retrieves a [!DNL Platform] dataset by ID and returns it as a DataFrame, where the dataset ID (`dataset_id`) is a defined property in the configuration file.
 
 **PySpark example**
 
@@ -153,7 +153,7 @@ class MyDataLoader(DataLoader):
 
 A DatasetTransformer provides the logic for transforming an input DataFrame and returns a new derived DataFrame. This class can be implemented to either work cooporatively with a FeaturePipelineFactory, work as the sole feature engineering component, or you can choose to not implement this class. 
 
-The following example extends the DatasetTransformer class.
+The following example extends the DatasetTransformer class:
 
 
 **PySpark example**
@@ -236,7 +236,7 @@ class MyFeaturePipelineFactory(FeaturePipelineFactory):
         if config_properties is None:
             raise ValueError("config_properties parameter is null")
 
-        tenant_id = str(config_properties.get("tenant_id"))
+        tenant_id = str(config_properties.get("tenantId"))
         input_features = str(config_properties.get("ACP_DSW_INPUT_FEATURES"))
 
         if input_features is None:
@@ -382,12 +382,12 @@ scoring.dataSaver: MyDatasetSaver
 
 ## Create your feature pipeline Engine using the API {#create-a-feature-pipeline-engine-using-the-api}
 
-Now that you have authored your feature pipeline, you need to create a docker image to make a call to the feature pipeline API. Follow the import a packaged recipe [API](../models-recipes/import-packaged-recipe-api.md) or [UI](../models-recipes/import-packaged-recipe-ui.md) tutorial to create a docker image for your PySpark recipe. You need a docker image URL in order to make a call to the feature pipeline Engine API.
+Now that you have authored your feature pipeline, you need to create a docker image to make a call to the feature pipeline API. You need a docker image URL in order to make a call to the feature pipeline Engine API.
 
 >[!TIP]
 >If you do not have a Docker URL, visit the [Package source files into a recipe](../models-recipes/package-source-files-recipe.md) tutorial for a step-by-step walkthrough on creating a Docker host URL.
 
-Optionally, you can use the following Postman collection to assist in completing the feature pipeline API workflow:
+Optionally, you can also use the following Postman collection to assist in completing the feature pipeline API workflow:
 
 https://www.getpostman.com/collections/c5fc0d1d5805a5ddd41a
 
@@ -418,11 +418,13 @@ Once complete, make a GET request to `/experiments/{EXPERIMENT_ID}` to [retrieve
 ### Specify the Experiment run scoring task
 
 >[!NOTE]
-> To complete this step you need to have at least one successful scoring run associated with your Experiment.
+> To complete this step you need to have at least one successful training run associated with your Experiment.
 
 After a successful training run, you need to [specify the scoring run task](../api/experiments.md#experiment-training-scoring). Make a POST to `experiments/{EXPERIMENT_ID}/runs` and in the body set the mode to score: `{ "mode":"score" }`. This starts your scoring experiment run.
 
 Once complete, make a GET request to `/experiments/{EXPERIMENT_ID}` to [retrieve the experiment status](../api/experiments.md#retrieve-specific) and wait for the experiment status to update to complete.
+
+Once the scoring has completed your feature pipeline should be operational.
 
 ## Next steps {#next-steps}
 
