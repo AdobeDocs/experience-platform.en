@@ -5,11 +5,11 @@ title: Privacy Service FAQ
 topic: troubleshooting
 ---
 
-# Privacy Service FAQ
+# Privacy Service troubleshooting guide
 
-This document provides answers to frequently asked questions about Adobe Experience Platform Privacy Service.
+Adobe Experience Platform Privacy Service provides a RESTful API and user interface to help companies manage customer data privacy requests. With Privacy Service, you can submit requests to access and delete private or personal customer data, facilitating automated compliance with organizational and legal privacy regulations.
 
-Privacy Service provides a RESTful API and user interface to help companies manage customer data privacy requests. With Privacy Service, you can submit requests to access and delete private or personal customer data, facilitating automated compliance with organizational and legal privacy regulations.
+This document provides answers to frequently asked questions about Privacy Service, as well as information on commonly encountered errors in the API.
 
 ## When making privacy requests in the API, what is the difference between a user and a user ID? {#user-ids}
 
@@ -88,3 +88,18 @@ For more details, see the section on [looking up a job by its ID](api/privacy-jo
 ### Using the UI
 
 On the Privacy Service UI dashboard, find the job you want to download from the **Job Requests** widget. Click the ID of the job to open the _Job Details_ page. From here, click **Download** in the top-right corner to download the ZIP file. See the [Privacy Service user guide](ui/user-guide.md) for more detailed steps.
+
+## Common error messages
+
+The following table outlines some common errors in Privacy Service, with descriptions to help resolve their respective issues.
+
+| Error message | Description |
+| --- | --- |
+| User IDs were not found. | Some of the user IDs provided in the request could not be found and were skipped. Ensure that you are using the correct namespace(s) and ID values in the request payload. See the document on [providing identity data](./identity-data.md) for a more detailed explanation. |
+| Invalid Namespace | A provided identity namespace for a user ID was invalid. See the section on [standard identity namespaces](./api/appendix.md#standard-namespaces) in the Privacy Service developer guide appendix for a list of accepted namespaces. If you are using a custom namespace, ensure you are setting the ID's `type` property to "custom". |
+| Partially Completed | The job completed successfully, but some data was not applicable for the given request and was skipped. |
+| The data is not in the required format. | One or more of the data values for the specified application was incorrectly formatted. Check the job details for more info. |
+| The IMS Org has not been provisioned. | This message occurs when your IMS Org has not been provisioned for Privacy Service. Contact your administrator for more information. |
+| Access and permissions are required. | Access and permissions are required in order to use Privacy Service. Contact your administrator to gain access. |
+| There was a problem uploading and archiving the access data. | When this error occurs, re-upload the access data and try again. |
+| The workload was exceeded for the current document rate limit. | When this error occurs, reduce the submission rate and try again. |

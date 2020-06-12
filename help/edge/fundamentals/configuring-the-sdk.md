@@ -14,7 +14,7 @@ Configuration for the SDK is done with the `configure` command.
 
 ```javascript
 alloy("configure", {
-  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId":"ADB3LETTERSANDNUMBERS@AdobeOrg"
 });
 ```
@@ -23,13 +23,13 @@ There are many options that can be set during configuration. All options can be 
 
 ## General options
 
-### `configId`
+### `edgeConfigId`
 
 | **Type** | **Required** | **Default Value** |
 | -------- | ------------ | ----------------- |
 | String   | Yes          | none              |
 
-Your assigned configuration ID, which links the SDK to the appropriate accounts and configuration.  When configuring multiple instances within a single page, you must configure a different `configId` for each instance.
+Your assigned configuration ID, which links the SDK to the appropriate accounts and configuration.  When configuring multiple instances within a single page, you must configure a different `edgeConfigId` for each instance.
 
 ### `context`
 
