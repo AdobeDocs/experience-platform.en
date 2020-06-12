@@ -7,13 +7,15 @@ topic: developer guide
 
 # Manage data usage labels using APIs
 
-This document provides steps on how to manage data usage labels at the dataset- and field-level using the Catalog Service API.
+The Dataset Service API allows you to programmatically manage usage labels for datasets. It is part of Adobe Experience Platform's data catalog capabilities, but is separate from the Catalog Service API which manages dataset metadata.
+
+This document provides steps on how to manage data usage labels at the dataset- and field-level using the Dataset Service API.
 
 ## Getting started
 
-Before you read this guide, it is recommended that you read the [Catalog Service overview](../../catalog/home.md) for a more robust introduction to the service. In addition, you must also follow the steps outlined in the [getting started section](../../catalog/api/getting-started.md) in the Catalog developer guide to gather the required credentials to make calls to the Catalog API.
+Before you read this guide, follow the steps outlined in the [getting started section](../../catalog/api/getting-started.md) in the Catalog developer guide to gather the required credentials to make calls to [!DNL Platform] APIs.
 
-In order to make calls to the endpoints outlined in the sections below, you must have the unique `id` value for a specific dataset. If you do not have this value, see the developer guide section on [listing Catalog objects](../../catalog/api/list-objects.md) to find the IDs of your existing datasets.
+In order to make calls to the endpoints outlined in the sections below, you must have the unique `id` value for a specific dataset. If you do not have this value, see the guide on [listing Catalog objects](../../catalog/api/list-objects.md) to find the IDs of your existing datasets.
 
 ## Look up labels for a dataset {#lookup}
 
@@ -22,7 +24,7 @@ You can look up the data usage labels that have been applied to an existing data
 **API format**
 
 ```http
-GET /dataSets/{DATASET_ID}/labels
+GET /datasets/{DATASET_ID}/labels
 ```
 
 | Parameter | Description |
@@ -33,7 +35,7 @@ GET /dataSets/{DATASET_ID}/labels
 
 ```shell
 curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5abd49645591445e1ba04f87/labels' \
+  'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -75,8 +77,8 @@ You can create a set of labels for a dataset by providing them in the payload of
 **API format**
 
 ```http
-POST /dataSets/{DATASET_ID}/labels
-PUT /dataSets/{DATASET_ID}/labels
+POST /datasets/{DATASET_ID}/labels
+PUT /datasets/{DATASET_ID}/labels
 ```
 
 | Parameter | Description |
@@ -89,7 +91,7 @@ The following POST request adds a series of labels to the dataset, as well as a 
 
 ```shell
 curl -X POST \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5abd49645591445e1ba04f87/labels' \
+  'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -142,7 +144,7 @@ You can delete the labels applied to a dataset by making a DELETE request.
 **API format**
 
 ```http
-DELETE /dataSets/{DATASET_ID}/labels
+DELETE /datasets/{DATASET_ID}/labels
 ```
 
 | Parameter | Description |
@@ -153,7 +155,7 @@ DELETE /dataSets/{DATASET_ID}/labels
 
 ```shell
 curl -X DELETE \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5abd49645591445e1ba04f87/labels' \
+  'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -169,3 +171,5 @@ A successful response HTTP status 200 (OK), indicating that the labels have been
 Now that you have added data usage labels at the dataset- and field-level, you can begin to ingest data into Experience Platform. To learn more, start by reading the [data ingestion documentation](../../ingestion/home.md).
 
 You can also now define data usage policies based on the labels you have applied. For more information, see the [data usage policies overview](../policies/overview.md).
+
+For more information on managing datasets in [!DNL Experience Platform], see the [datasets overview](../../catalog/datasets/overview.md).

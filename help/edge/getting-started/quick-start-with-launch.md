@@ -10,7 +10,6 @@ seo-description: Quick start guide for using the Experience Platform Web SDK ext
 This guide will take you through the different steps on how to setup the Adobe Experience Platform Web SDK in Launch. To be able to use this feature you need to have permissions and be on the allow list. If you would like to get on the waiting list please reach out to you CSM.
 
 - Have a [1st-party domain (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) enabled. If you already have a CNAME for Analytics, you should use that one. Testing in development will work without a CNAME but you will need one before you go to production
-- Be entitled to Adobe Experience Platform Data Platform. If you have not purchased Platform we will provision you with Experience Platform Data Services Foundation for use in a limited fashion with the SDK at no extra charge.
 - Be using the latest version of the Visitor ID service
 
 ## Create an configuration ID
