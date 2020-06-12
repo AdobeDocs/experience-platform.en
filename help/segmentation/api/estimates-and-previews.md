@@ -60,9 +60,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | Property | Description |
 | -------- | ----------- |
 | `predicateExpression` | The PQL expression to query the data by. |
-| `predicateType` | |
+| `predicateType` | The only value that is available to use for this is PQL for now. |
 | `predicateModel` | The name of the XDM schema the Profile data is based on. |
-| `graphType` | |
+| `graphType` | The graph type that you want to get the cluster from. Possible values are “none” (perform no identity stitching) and “pdg” (perform identity stitching based on your private identity graph). |
 
 **Response**
 
