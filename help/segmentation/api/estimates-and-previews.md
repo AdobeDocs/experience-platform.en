@@ -60,7 +60,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | Property | Description |
 | -------- | ----------- |
 | `predicateExpression` | The PQL expression to query the data by. |
-| `predicateType` | | 	
+| `predicateType` | |
 | `predicateModel` | The name of the XDM schema the Profile data is based on. |
 | `graphType` | |
 
@@ -80,7 +80,7 @@ A successful response returns HTTP status 201 (Created) with details of your new
 
 | Property | Description |
 | -------- | ----------- |
-| `state` | The current state of the preview job. It will be in the "RUNNING" state until processing is complete, at which point it becomes "RESULT_READY" or "FAILED". |	
+| `state` | The current state of the preview job. It will be in the "RUNNING" state until processing is complete, at which point it becomes "RESULT_READY" or "FAILED". |
 | `previewId` | The ID of the preview job, to be used for lookup purposes when viewing an estimate or preview, as outlined in the following section. |
 
 ## Retrieve a specific preview's results {#get-preview}
