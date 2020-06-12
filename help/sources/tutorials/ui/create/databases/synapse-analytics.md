@@ -29,7 +29,7 @@ In order to access your Synapse account on Platform, you must provide the follow
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string associated with your Synapse authentication. |
+| `connectionString` | The connection string associated with your Synapse authentication. The Synapse connection string pattern is `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
 
 For more information about this value, refer to [this Synapse document](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-sql-data-warehouse).
 
@@ -41,7 +41,7 @@ Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience 
 
 Under the *Databases* category, select **Azure Synapse Analytics** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To create a new inbound base connection, select **Connect source**. 
 
-![](../../../../images/tutorials/create/azure-synapse-analytics/sources-catalog.png)
+![](../../../../images/tutorials/create/azure-synapse-analytics/catalog.png)
 
 The *Connect to Azure Synapse Analytics* page appears. On this page, you can either use new credentials or existing credentials.
 
@@ -49,13 +49,13 @@ The *Connect to Azure Synapse Analytics* page appears. On this page, you can eit
 
 If you are using new credentials, select **New account**. On the input form that appears, provide the base connection with a name, an optional description, and your Synapse credentials. When finished, select **Connect** and then allow some time for the new base connection to establish.
 
-![](../../../../images/tutorials/create/azure-synapse-analytics/new-credentials.png)
+![](../../../../images/tutorials/create/azure-synapse-analytics/new.png)
 
 ### Existing account
 
 To connect an existing account, select the Synapse account you want to connect with, then select **Next** to proceed.
 
-![](../../../../images/tutorials/create/azure-synapse-analytics/existing-credentials.png)
+![](../../../../images/tutorials/create/azure-synapse-analytics/existing.png)
 
 ## Next steps
 

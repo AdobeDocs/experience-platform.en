@@ -184,7 +184,7 @@ Once you have determined whether your marketing events data can be mapped to the
 
 After deciding the range of data you want to send, contact Adobe Consulting Services to help map your data to the schema and ingest it into the service.
 
-If you have an Adobe Experience Platform subscription and want to map and ingest the data yourself, follow the steps outlined in the section below.
+If you have an [!DNL Adobe Experience Platform] subscription and want to map and ingest the data yourself, follow the steps outlined in the section below.
 
 ### Using Adobe Experience Platform
 
@@ -210,7 +210,7 @@ Once you have created and saved the schema, you can create a new dataset based o
 
 #### Add a primary identity namespace tag to the dataset
 
-If you are bringing in data from Adobe Audience Manager, Adobe Analytics, or another external source, then you must add a `primaryIdentityNameSpace` tag to the dataset. This can be done by making a PATCH request to the Catalog Service API.
+If you are bringing in data from [!DNL Adobe Audience Manager], [!DNL Adobe Analytics], or another external source, then you must add a `primaryIdentityNameSpace` tag to the dataset. This can be done by making a PATCH request to the Catalog Service API.
 
 If you are ingesting data from a local CSV file, you can skip ahead to the next section on [mapping and ingesting data](#ingest).
 

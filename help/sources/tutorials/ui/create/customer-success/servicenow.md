@@ -53,13 +53,13 @@ The *Connect to ServiceNow* page appears. On this page, you can either use new c
 
 If you are using new credentials, select **New account**. On the input form that appears, provide the  connection with a name, an optional description, and your ServiceNow credentials. When finished, select **Connect** and then allow some time for the new account to establish.
 
-![](../../../../images/tutorials/create/servicenow/new-credentials.png)
+![](../../../../images/tutorials/create/servicenow/new.png)
 
 ### Existing account
 
 To connect an existing account, select the ServiceNow account you want to connect with, then select **Next** to proceed.
 
-![](../../../../images/tutorials/create/servicenow/existing-credentials.png)
+![](../../../../images/tutorials/create/servicenow/existing.png)
 
 ## Next steps
 

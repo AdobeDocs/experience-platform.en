@@ -25,13 +25,13 @@ Note the following details that are specific to Google Display & Video 360 desti
 
 ## Prerequisites
 
-### Whitelisting
+### Allow list
 
 >[!NOTE]
 >
->Whitelisting is mandatory before setting up your first Google Display & Video 360 destination in Adobe Real-time CDP. Please ensure the whitelisting process described below has been completed by Google before creating a destination.
+>The allow list is mandatory before setting up your first Google Display & Video 360 destination in Adobe Real-time CDP. Please ensure the allow list process described below has been completed by Google before creating a destination.
 
-Before creating the Google Display & Video 360 destination in Adobe Real-time CDP, you must contact Google asking for Adobe to be whitelisted as a data provider and your account to be whitelisted. Contact Google and provide the following information:
+Before creating the Google Display & Video 360 destination in Adobe Real-time CDP, you must contact Google asking for Adobe to be put on the list of allowed data providers, and for your account to be added to the allow list. Contact Google and provide the following information:
 
 * **Account ID** : this is Adobe's account ID with Google. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
 * **Customer ID** : this is Adobe's customer account ID with Google. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
@@ -42,7 +42,7 @@ Before creating the Google Display & Video 360 destination in Adobe Real-time CD
 1. In **[!UICONTROL Connections > Destinations]**, select Google Display & Video 360, and select **[!UICONTROL Create destination]**.
     ![Connect Google Display & Video 360 destination](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
-2. In the Create destination workflow, fill in the [!UICONTROL Basic Information] for the destination.
+2. In the Create destination workflow, fill in the [!UICONTROL Basic Information] for the destination. <br>
     ![Basic information Google Display & Video 360](/help/rtcdp/destinations/assets/google-dv360-basic-information.png)
 *  **[!UICONTROL Name]**: Fill in the preferred name for this destination.
 *  **[!UICONTROL Description]**: Optional. For example, you can mention which campaign you are using this destination for.

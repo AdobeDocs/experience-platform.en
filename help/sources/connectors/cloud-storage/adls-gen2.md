@@ -7,7 +7,7 @@ topic: overview
 
 # Azure Data Lake Storage Gen2 connector
 
-Adobe Experience Platform provides native connectivity for cloud providers like AWS, Google Cloud Platform, and Azure. You can bring your data from these systems into Platform.
+Adobe Experience Platform provides native connectivity for cloud providers like AWS, Google Cloud Platform, and Azure, allowing you to bring your data from these systems.
 
 Cloud storage sources can bring your own data into Platform without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM parquet, or delimited. Every step of the process is integrated into the Sources workflow. Platform allows you to bring in data from Azure Data Lake Storage Gen2 through batches.
 

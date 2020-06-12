@@ -31,7 +31,7 @@ Experience Platform allows data to be ingested from other Adobe applications, in
 
 Experience Platform provides support for ingesting data from a third-party advertising system. See the following related documents for more information on specific source connectors:
 
-- [Google Ads connector](connectors/advertising/ads.md)
+- [Google AdWords connector](connectors/advertising/ads.md)
 
 ### Cloud Storage
 
@@ -40,6 +40,7 @@ Cloud storage sources can bring your own data into Platform without the need to 
 - [Azure Data Lake Storage Gen2 connector](connectors/cloud-storage/adls-gen2.md)
 - [Azure Blob and Amazon S3 connector](connectors/cloud-storage/blob-s3.md)
 - [Amazon Kinesis connector](connectors/cloud-storage/kinesis.md)
+- [Apache HDFS connector](connectors/cloud-storage/hdfs.md)
 - [Azure Event Hubs connector](connectors/cloud-storage/eventhub.md)
 - [Azure File Storage connector](connectors/cloud-storage/azure-file-storage.md)
 - [FTP and SFTP connector](connectors/cloud-storage/ftp-sftp.md)
@@ -69,6 +70,7 @@ Experience Platform provides support for ingesting data from a third-party datab
 - [Azure Data Explorer connector](connectors/databases/data-explorer.md)
 - [Azure Synapse Analytics connector](connectors/databases/synapse-analytics.md)
 - [Azure Table Storage connector](connectors/databases/ats.md)
+- [Couchbase connector](connectors/databases/couchbase.md)
 - [Google BigQuery connector](connectors/databases/bigquery.md)
 - [GreenPlum connector](connectors/databases/greenplum.md)
 - [HP Vertica connector](connectors/databases/hp-vertica.md)

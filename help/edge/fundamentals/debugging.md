@@ -12,7 +12,7 @@ When debugging is enabled, the SDK outputs messages to the browser console that 
 Debugging is disabled by default, but can be toggled in three different ways: 
 
 * `configure` command
-* `debug` command
+* `setDebug` command
 * query string parameter
 
 ## Toggling debugging with the Configure command
@@ -21,7 +21,7 @@ When configuring the SDK using the `configure` command, enable debugging by sett
 
 ```javascript
 alloy("configure", {
-  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId":"ADB3LETTERSANDNUMBERS@AdobeOrg",
   "debugEnabled": true
 });
@@ -35,7 +35,7 @@ alloy("configure", {
 Toggle debugging with a separate `debug` command as follows:
 
 ```javascript
-alloy("debug", {
+alloy("setDebug", {
   "enabled": true
 });
 ```

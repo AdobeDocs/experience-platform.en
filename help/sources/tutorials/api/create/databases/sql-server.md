@@ -29,9 +29,10 @@ In order to connect to SQL Server, you must provide the following connection pro
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string associated with your SQL Server account. |
+| `connectionString` | The connection string associated with your SQL Server account. The SQL Server connection string pattern is: `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
+| `connectionSpec.id` | The ID used to generate a connection. The fixed connection spec ID for SQL Server is `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
 
-Please refer to [this document](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server) for more information on getting started with SQL Server.
+For more information about obtaining a connection string, refer to [this SQL Server document](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server).
 
 ### Reading sample API calls
 
@@ -53,77 +54,9 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 *   Content-Type: `application/json`
 
-## Look up connection specifications
+## Create a connection
 
-In order to create an SQL Server connection, a set of SQL Server connection specifications must exist within Flow Service. The first step in connecting Platform to SQL Server is to retrieve these specifications.
-
-**API format**
-
-Each available source has its own unique set of connection specifications for describing connector properties such as authentication requirements. Sending a GET request to the `/connectionSpecs` endpoint will return connection specifications for all available sources. You can also include the query `property=name=="sql-server"` to obtain information specifically for SQL Server.
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="sql-server"
-```
-
-**Request**
-
-The following request retrieves the connection specifications for SQL Server.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="sql-server"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Response**
-
-A successful response returns the connection specifications for SQL Server, including its unique identifier (`id`). This ID is required in the next step to create a base connection.
-
-```json
-{
-    "items": [
-        {
-            "id": "1f372ff9-38a4-4492-96f5-b9a4e4bd00ec",
-            "name": "sql-server",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Connection String Based Authentication",
-                    "type": "connectionString",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params required for connecting to SQL Server database",
-                        "properties": {
-                            "connectionString": {
-                                "type": "string",
-                                "description": "connection string to connect to any SQL Server database.",
-                                "format": "password",
-                                "pattern": "^(Data Source=)(.*)(;Initial Catalog=)(.*)(;Integrated Security=)(.*)(;User ID=)(.*)(;Password=)(.*)(;)",
-                                "examples": [
-                                    "Data Source=<servername>\\<instance name if using named instance>;Initial Catalog=<databasename>;Integrated Security=False;User ID=<username>;Password=<password>;"
-                                ]
-                            }
-                        },
-                        "required": [
-                            "connectionString"
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
-}
-```
-
-## Create a base connection
-
-A base connection specifies a source and contains your credentials for that source. Only one base connection is required per SQL Server account as it can be used to create multiple source connectors to bring in different data.
+A connection specifies a source and contains your credentials for that source. Only one connection is required per SQL Server account as it can be used to create multiple source connectors to bring in different data.
 
 **API format**
 
@@ -132,6 +65,8 @@ POST /connections
 ```
 
 **Request**
+
+In order to create an SQL Server connection, its unique connection spec ID must be provided as part of the POST request. The connection spec ID for SQL Server is `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`.
 
 ```shell
 curl -X POST \
@@ -147,7 +82,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};"
             }
         },
         "connectionSpec": {
@@ -158,12 +93,12 @@ curl -X POST \
 
 | Property | Description |
 | --------- | ----------- |
-| `auth.params.connectionString` | The connection string associated with your SQL Server authentication. |
-| `connectionSpec.id` | The connection specification (`id`) gathered in the previous step. |
+| `auth.params.connectionString` | The connection string associated with your SQL Server account. The SQL Server connection string pattern is: `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
+| `connectionSpec.id` | The connection spec ID for SQL server is: `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
 
 **Response**
 
-A successful response returns details of the newly created base connection, including its unique identifier (`id`). This ID is required to explore your data in the next tutorial.
+A successful response returns details of the newly created connection, including its unique identifier (`id`). This ID is required to explore your database in the next tutorial.
 
 ```json
 {
@@ -174,4 +109,4 @@ A successful response returns details of the newly created base connection, incl
 
 ## Next steps
 
-By following this tutorial, you have created an SQL Server base connection using the Flow Service API, and have obtained the connection's unique ID value. You can use this base connection ID in the next tutorial as you learn how to [explore databases or NoSQL systems using the Flow Service API](../../explore/database-nosql.md).
+By following this tutorial, you have created an SQL Server connection using the Flow Service API, and have obtained the connection's unique ID value. You can use this connection ID in the next tutorial as you learn how to [explore databases or NoSQL systems using the Flow Service API](../../explore/database-nosql.md).

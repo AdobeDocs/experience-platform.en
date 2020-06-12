@@ -19,7 +19,7 @@ In the connect destination flow, described in the section below, connect to eith
 
 1. In **[!UICONTROL Connections > Destinations]**, select the email marketing destination that you want to connect to, then select **[!UICONTROL Connect destination]**.
 
-    ![Connect to destination](/help/rtcdp/destinations/assets/connect-destination.png)
+    ![Connect to destination](/help/rtcdp/destinations/assets/connect-destination-1.png)
 
 2. In the Connect wizard, select the **[!UICONTROL Connection type]** for your storage location. You can select between **Amazon S3**, **SFTP with Password**, **SFTP with SSH Key**. Fill in the information below, depending on your connection type, then select **[!UICONTROL Connect]**.
 

@@ -25,7 +25,7 @@ The following sections provide additional information that you will need to know
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string used to connect to Oracle. The Oracle connection string pattern is: `Host=<host>;Port=<port>;Sid=<sid>;User Id=<username>;Password=<password>`. |
+| `connectionString` | The connection string used to connect to Oracle. The Oracle connection string pattern is: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | The unique identifier needed to create a connection. The connection specification ID for Oracle is `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
 For more information about getting started refer to [this Oracle document](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199).
@@ -78,7 +78,7 @@ curl -X POST \
         "auth": {
             "specName": "ConnectionString",
             "params": {
-                    "connectionString": "{CONNECTION_STRING}"
+                    "connectionString": "Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}"
                 }
         },
         "connectionSpec": {
@@ -90,7 +90,7 @@ curl -X POST \
 
 | Parameter | Description |
 | --------- | ----------- |
-| `auth.params.connectionString` | The connection string associated with your Oracle account. |
+| `auth.params.connectionString` | The connection string used to connect to your Oracle database. The Oracle connection string pattern is: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | The Oracle connection specification ID: `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
 **Response**

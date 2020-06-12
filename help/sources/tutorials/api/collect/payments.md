@@ -13,7 +13,7 @@ This tutorial covers the steps for retrieving data from a payments application a
 
 ## Getting started
 
-This tutorial requires you to have access to a payment system through a valid base connection, as well as information about the file you wish to bring into Platform (including the file's path and structure). If you do not have this information, see the tutorial on [exploring a payments application using the Flow Service API](../explore/payments.md) before attempting this tutorial.
+This tutorial requires you to have access to a payment system through a valid connection, as well as information about the file you wish to bring into Platform (including the file's path and structure). If you do not have this information, see the tutorial on [exploring a payments application using the Flow Service API](../explore/payments.md) before attempting this tutorial.
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
@@ -58,6 +58,18 @@ Continue following the steps outlined in the developer guide until you have crea
 
 With an ad-hoc XDM schema created, a source connection can now be created using a POST request to the Flow Service API. A source connection consists of a connection ID, a source data file, and a reference to the schema that describes the source data.
 
+To create a source connection, you must also define an enum value for the data format attribute.
+
+Use the following the enum values for **file-based connectors**:
+
+| Data.format | Enum value |
+| ----------- | ---------- |
+| Delimited files | `delimited` |
+| JSON files | `json` |
+| Parquet files | `parquet` |
+
+For all **table-based connectors** use the enum value: `tabular`.
+
 **API format**
 
 ```https
@@ -79,7 +91,7 @@ curl -X POST \
         "baseConnectionId": "24151d58-ffa7-4960-951d-58ffa7396097",
         "description": "Paypal",
         "data": {
-            "format": "parquet_xdm",
+            "format": "tabular",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/396f583b57577b2f2fca79c2cb88e9254992f5fa70ce5f1a",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -97,7 +109,7 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `baseConnectionId`| The connection ID of your payments application |
+| `baseConnectionId` | The unique connection ID of the third-party payments application you are accessing. |
 | `data.schema.id`| The `$id` of the ad-hoc XDM schema. |
 | `params.path`| The path of the source file. |
 | `connectionSpec.id`| The connection specification ID of your payments application. |
@@ -271,17 +283,11 @@ A successful response returns an array containing the ID of the newly created da
 ]
 ```
 
-## Create a dataset base connection
-
-In order to ingest external data into Platform, an Experience Platform dataset base connection must first be acquired.
-
-To create a dataset base connection, follow the steps outlined in the [dataset base connection tutorial](../create-dataset-base-connection.md).
-
-Continue following the steps outlined in the developer guide until you have created a dataset base connection. Obtain and store the unique identifier (`$id`) and proceed to use it as the connection ID in the next step to create a target connection.
-
 ## Create a target connection
 
-You now have with you the unique identifiers for a dataset base connection, a target schema, and a target dataset. You can now create a target connection using the Flow Service API to specify the dataset that will contain the inbound source data.
+A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection spec ID associated with data lake. This connection spec ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+
+You now have the unique identifiers a target schema a target dataset and the connection spec ID to data lake. Using these identifiers, you can create a target connection using the Flow Service API to specify the dataset that will contain the inbound source data.
 
 **API format**
 
@@ -300,11 +306,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "baseConnectionId": "72c47da8-c225-40c0-847d-a8c22550c01b",
         "name": "Target Connection for payments",
         "description": "Target Connection for payments",
         "data": {
-            "format": "parquet_xdm",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/14d89c5bb88e2ff488f23db896be469e7e30bb166bda8722"
             }
@@ -321,10 +325,9 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `baseConnectionId` | The ID of your dataset base connection. |
 | `data.schema.id` | The `$id` of the target XDM schema. |
 | `params.dataSetId` | The ID of the target dataset. |
-| `connectionSpec.id` | The connection specification ID for your payments application. |
+| `connectionSpec.id` | The fixed connection spec ID to data lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Response**
 
@@ -574,6 +577,8 @@ The last step towards collecting data is to create a dataflow. At this point, yo
 
 A dataflow is responsible for scheduling and collecting data from a source. You can create a dataflow by performing a POST request while providing the previously mentioned values within the payload.
 
+To schedule an ingestion, you must first set the start time value to epoch time in seconds. Then, you must set the frequency value to one of the five options: `once`, `minute`, `hour`, `day`, or `week`. The interval value designates the period between two consecutive ingestions and creating a one-time ingestion does not require an interval to be set. For all other frequencies, the interval value must be set to equal or greater than `15`.
+
 **API format**
 
 ```https
@@ -623,11 +628,21 @@ curl -X POST \
         ],
         "scheduleParams": {
             "startTime": "1567411548",
-            "frequency":"minute",
+            "frequency": "minute",
             "interval":"30"
         }
     }'
 ```
+
+| Property | Description |
+| --- | --- |
+| `flowSpec.id` | The flow spec ID retrieved in the previous step. |
+| `sourceConnectionIds` | The source connection ID retrieved in an earlier step. |
+| `targetConnectionIds` | The target connection ID retrieved in an earlier step. |
+| `transformations.params.mappingId` | The mapping ID retrieved in an earlier step.|
+| `scheduleParams.startTime` | The start time for the dataflow in epoch time in seconds. |
+| `scheduleParams.frequency` | The selectable frequency values include: `once`, `minute`, `hour`, `day`, or `week`. |
+| `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer. Interval is not required when frequency is set as `once` and should be greater than or equal to `15` for other frequency values. |
 
 **Response**
 
@@ -635,7 +650,8 @@ A successful response returns the ID `id` of the newly created dataflow.
 
 ```json
 {
-    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "id": "e0bd8463-0913-4ca1-bd84-6309134ca1f6",
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
 
