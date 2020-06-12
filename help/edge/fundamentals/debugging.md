@@ -21,7 +21,7 @@ When configuring the SDK using the `configure` command, enable debugging by sett
 
 ```javascript
 alloy("configure", {
-  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId":"ADB3LETTERSANDNUMBERS@AdobeOrg",
   "debugEnabled": true
 });
