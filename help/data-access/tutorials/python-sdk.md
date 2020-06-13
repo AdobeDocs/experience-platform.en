@@ -11,15 +11,15 @@ The Secure Python Data Access SDK is a software development kit that enables rea
 
 ## Getting started
 
-You are required to have completed the [authentication](../../tutorials/authentication.md) tutorial in order to have access to the following request headers to make calls to [!DNL Adobe Experience Platform] APIs:
+You are required to have completed the [authentication](../../tutorials/authentication.md) tutorial in order to have access to the values to make calls to the Secure Python Data Access SDK:
 
-- Authorization: Bearer `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- `{ACCESS_TOKEN}`
+- `{API_KEY}`
+- `{IMS_ORG}`
 
 All resources in Experience Platform are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- `{SANDBOX_NAME}`
 
 For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
 
@@ -42,5 +42,28 @@ Additionally, your credentials can be added as environment variables.
 | `SERVICE_API_KEY` | Your `{API_KEY}` value. |
 | `USER_TOKEN` | Your `{ACCESS_TOKEN}` value. |
 | `SERVICE_TOKEN` | (Not sure what this is) |
-| `SANDBOX_ID` | |
-| `SANDBOX_NAME` | |
+| `SANDBOX_ID` | The `{SANDBOX_ID}` value of your sandbox. |
+| `SANDBOX_NAME` | The `{SANDBOX_NAME}` value of your sandbox. |
+
+## Installation
+
+(I'm not sure?)
+
+## Reading from a dataset
+
+After setting the environment variables and completing installation, the dataset can now be read into the pandas dataframe.
+
+```python
+from platform_sdk.client_context import ClientContext
+from platform_sdk.dataset_reader import DatasetReader
+
+client_context = ClientContext(api_key=<api_key>,
+                               org_id=<org_id>,
+                               service_token=<service_token>,
+                               user_token=<user_token>,
+                               sandbox_id=<sandbox_id>,
+                               sandbox_name=<sandbox_name>)
+                               
+dataset_reader = DatasetReader(client_context, <dataset_id>)
+df = dataset_reader.read()
+```
