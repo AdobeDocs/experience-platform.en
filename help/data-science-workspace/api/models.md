@@ -164,7 +164,7 @@ You can register a pre-generated Model by making a POST request to the `/models`
 ```http
 POST /models
 ```
-  
+
 **Request**
 
 The following POST contains required form data. See the table below for more information on what is required.
