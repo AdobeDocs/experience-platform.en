@@ -25,13 +25,13 @@ For detailed information on working with data usage labels, see the [data usage 
 
 ## Configure marketing use cases for destinations {#destinations}
 
-You can set data usage restrictions on a destination by defining marketing use cases (also called marketing actions) for that destination. A marketing use case for a destination defines the intended use for any data exported to that destination, for which there is a need to check for violations of data usage policies.
+You can set data usage restrictions on a destination by defining marketing use cases (also called marketing actions) for that destination. A marketing use case for a destination indicates the intent of the data that will be exported to that destination.
 
-For more information on marketing actions and their use in data usage policies, see the [data usage policies overview](../../data-governance/policies/overview.md) in the Experience Platform documentation.
+>[!NOTE] For more information on marketing actions and their use in data usage policies, see the [data usage policies overview](../../data-governance/policies/overview.md) in the Experience Platform documentation.
 
-Defining use cases for destinations allows you to check for usage policy violations and ensure that any profiles or segments sent to those destinations are compliant with Data Governance rules.
+Defining marketing use cases on destinations allows you to ensure that any profiles or segments sent to those destinations are compliant with data usage policies. You should therefore add appropriate marketing use cases to your destinations based on your organization's needs to enforce policy restrictions on activation.
 
-Marketing use cases can be selected when setting up a destination for the first time, or when editing an existing destination. Depending on the type of destination you are working with, the opportunity to configure marketing use cases will appear at different points in the workflow. See the [destination documentation](../destinations/destinations-overview.md) for steps on how to configure your particular destination.
+Marketing use cases can only be selected when setting up a destination for the first time. Depending on the type of destination you are working with, the opportunity to configure marketing use cases will appear at different points in the setup workflow. See the [destination documentation](../destinations/destinations-overview.md) for steps on how to configure your particular destination.
 
 
 ## Manage data usage policies {#policies}
