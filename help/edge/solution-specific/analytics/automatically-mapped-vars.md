@@ -27,25 +27,25 @@ Below is a list of variables that the Adobe Experience Platform Edge Network aut
 | `commerce.productListRemovals.id` | `events` | `scRemove` Event Serialization.  |
 | `commerce.checkouts.id` | `events` | `scCheckout` Event Serialization.  |
 | `device.screenHeight` | `s` | AppMeasurement query parameter Screen Resolution mapping. |
-| `device.screenWidth` 	| `s` | AppMeasurement query parameter Screen Resolution mapping. |
-| `productlistitems.[N].lineitemid` 	| `products` | AppMeasurement query parameter Products Category mapping. |
-| `productlistitems.[N].name` 	| `products` | AppMeasurement query parameter Products Name mapping. |
-| `productlistitems.[N].quantity` 	| `products` | AppMeasurement query parameter Products Quantity mapping. |
-| `productlistitems.[N].pricetotal` 	| `products` | AppMeasurement query parameter Products Price mapping. |
-| `media.mediaTimed.primaryAssetViewDetails.@id` 	| `c.a.media.vsid` | AppMeasurement context data. |
-| `media.mediaTimed.primaryAssetReference.@id` 	| `c.a.media.asset`   | AppMeasurement context data. |
-| `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Rating.[N].iptc4xmpExt:RatingValue` 	| `c.a.media.rating` | AppMeasurement context data. |
-| `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Genre` 	| `c.a.media.genre` | AppMeasurement context data. |
-| `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Creator.[N].iptc4xmpExt:Name` 	| `c.a.media.originator` | AppMeasurement context data. |
-| `media.mediaTimed.starts.value` 	| `c.a.media.view` | AppMeasurement context data. |
-| `media.mediaTimed.progress10.value` 	| `c.a.media.progress10` | AppMeasurement context data. |
-| `media.mediaTimed.firstQuartiles.value` 	| `c.a.media.progress25` | AppMeasurement context data. |
-| `media.mediaTimed.midpoints.value` 	| `c.a.media.progress50` | AppMeasurement context data. |
-| `media.mediaTimed.thirdQuartiles.value` 	| `c.a.media.progress75` | AppMeasurement context data. |
-| `media.mediaTimed.progress95.value` 	| `c.a.media.progress95` | AppMeasurement context data. |
-| `media.mediaTimed.completes.value` 	| `c.a.media.complete` | AppMeasurement context data. |
-| `media.mediaTimed.mediaSegmentView.value` 	| `c.a.media.segmentView` | AppMeasurement context data. |
-| `media.mediaTimed.dropBeforeStart.value` 	|  `c.a.media.view`, `c.a.media.timePlayed`, `c.a.media.play`| AppMeasurement context data. |
+| `device.screenWidth` | `s` | AppMeasurement query parameter Screen Resolution mapping. |
+| `productlistitems.[N].lineitemid` | `products` | AppMeasurement query parameter Products Category mapping. |
+| `productlistitems.[N].name` | `products` | AppMeasurement query parameter Products Name mapping. |
+| `productlistitems.[N].quantity` | `products` | AppMeasurement query parameter Products Quantity mapping. |
+| `productlistitems.[N].pricetotal` | `products` | AppMeasurement query parameter Products Price mapping. |
+| `media.mediaTimed.primaryAssetViewDetails.@id` | `c.a.media.vsid` | AppMeasurement context data. |
+| `media.mediaTimed.primaryAssetReference.@id` | `c.a.media.asset`   | AppMeasurement context data. |
+| `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Rating.[N].iptc4xmpExt:RatingValue` | `c.a.media.rating` | AppMeasurement context data. |
+| `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Genre` | `c.a.media.genre` | AppMeasurement context data. |
+| `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Creator.[N].iptc4xmpExt:Name` | `c.a.media.originator` | AppMeasurement context data. |
+| `media.mediaTimed.starts.value` | `c.a.media.view` | AppMeasurement context data. |
+| `media.mediaTimed.progress10.value` | `c.a.media.progress10` | AppMeasurement context data. |
+| `media.mediaTimed.firstQuartiles.value` | `c.a.media.progress25` | AppMeasurement context data. |
+| `media.mediaTimed.midpoints.value` | `c.a.media.progress50` | AppMeasurement context data. |
+| `media.mediaTimed.thirdQuartiles.value` | `c.a.media.progress75` | AppMeasurement context data. |
+| `media.mediaTimed.progress95.value` | `c.a.media.progress95` | AppMeasurement context data. |
+| `media.mediaTimed.completes.value` | `c.a.media.complete` | AppMeasurement context data. |
+| `media.mediaTimed.mediaSegmentView.value` | `c.a.media.segmentView` | AppMeasurement context data. |
+| `media.mediaTimed.dropBeforeStart.value` |  `c.a.media.view`, `c.a.media.timePlayed`, `c.a.media.play`| AppMeasurement context data. |
 | `environment.browserDetails.userAgent` | `User-Agent` | This is a HTTP Header mapping, HEADER_USER_AGENT. |
 | `environment.browserDetails.acceptLanguage` | `Accept-Language` | This is a HTTP Header mapping, HEADER_ACCEPT_LANGUAGE. |
 | `environment.browserDetails.cookiesEnabled` | `k` | AppMeasurement query parameter COOKIES mapping with conversion BOOLEAN_TO_YN. |
