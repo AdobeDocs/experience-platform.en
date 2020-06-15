@@ -167,7 +167,7 @@ POST /models
   
 **Request**
 
-The following POST request contains required form data. See the table below for more information on what is required.
+The following POST contains required form data. See the table below for more information on what is required.
 
 ```shell
 curl -X POST \
