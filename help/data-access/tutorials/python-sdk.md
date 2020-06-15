@@ -17,9 +17,10 @@ You are required to have completed the [authentication](../../tutorials/authenti
 - `{API_KEY}`
 - `{IMS_ORG}`
 
-All resources in Experience Platform are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in Experience Platform are isolated to specific virtual sandboxes. Using the Python SDK requires the name and the ID of the sandbox the operation will take place in:
 
 - `{SANDBOX_NAME}`
+- `{SANDBOX_ID}`
 
 For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
 
@@ -47,9 +48,27 @@ Additionally, your credentials can be added as environment variables.
 
 ## Installation
 
-(I'm not sure?)
+All the packages will be in `./dist` after building.
 
-## Reading from a dataset
+### Wheel
+
+```python
+python3 setup.py bdist_wheel --universal
+```
+
+From the project directory, load wheel into your Python 3 environment.
+
+```python
+pip3 install ./dist/<name_of_wheel_file>.whl
+```
+
+### Egg file
+
+```python
+python3 setup.py bdist_egg
+```
+
+## Reading a dataset
 
 After setting the environment variables and completing installation, the dataset can now be read into the pandas dataframe.
 
@@ -63,7 +82,145 @@ client_context = ClientContext(api_key=<api_key>,
                                user_token=<user_token>,
                                sandbox_id=<sandbox_id>,
                                sandbox_name=<sandbox_name>)
-                               
+
 dataset_reader = DatasetReader(client_context, <dataset_id>)
 df = dataset_reader.read()
+```
+
+### SELECT columns from the dataset
+
+```python
+df = dataset_reader.select(['column-a','column-b']).read()
+```
+
+### Get partitioning information:
+
+```python
+client_context = ClientContext(api_key=<api_key>,
+                               org_id=<org_id>,
+                               service_token=<service_token>,
+                               user_token=<user_token>,
+                               sandbox_id=<sandbox_id>,
+                               sandbox_name=<sandbox_name>)
+
+dataset = Dataset(client_context).get_by_id(<dataset_id>)
+partitions = dataset.get_partitions_info()
+```
+
+### DISTINCT clause
+
+The DISTINCT clause allows you to fetch all the distinct values at a row/column level, removing all duplicate values from the response.
+
+An example of using the `distinct()` function can be seen below:
+
+```python
+df = dataset_reader.select(['column-a']).distinct().read()
+```
+
+### WHERE clause
+
+The Python SDK supports certain operators to help filter the dataset.
+
+>[!NOTE] The functions used for filtering are case sensitive.
+
+```python
+eq() = '='
+gt() = '>'
+ge() = '>='
+lt() = '<'
+le() = '<='
+And = and operator
+Or = or operator
+```
+
+An example of using these filtering functions can be seen below:
+
+```python
+df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experience_ds['timestamp'].lt(87879779797)).Or(experience_ds['a'].eq(123)))
+```
+
+### ORDER BY clause
+
+The ORDER BY clause allows received results to be sorted by a specified column in a specific order (ascending or descending).
+
+An example of using the `sort()` function can be seen below:
+
+```python
+df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
+```
+
+### LIMIT clause
+
+The LIMIT clause allows users to limit the number of records received from the dataset.
+
+An example of using the `limit()` function can be seen below:
+
+```python
+df = dataset_reader.limit(100).read()
+```
+
+### OFFSET clause
+
+The OFFSET clause allows users to skip rows, from the beginning, to start returning rows from a later point. In combination with LIMIT, this can be used to iterate rows in blocks.
+
+An example of using the `offset()` function can be seen below:
+
+```python
+df = dataset_reader.offset(100).read()
+```
+
+## Writing a dataset
+
+The Python SDK supports writing datasets. Users will need to supply the pandas dataframe that needs to be written to the dataset.
+
+### Writing the pandas dataframe
+
+```python
+client_context = ClientContext(api_key=<api_key>,
+                               org_id=<org_id>,
+                               service_token=<service_token>,
+                               user_token=<user_token>,
+                               sandbox_id=<sandbox_id>,
+                               sandbox_name=<sandbox_name>)
+
+# To fetch existing dataset
+dataset = Dataset(client_context).get_by_id(<dataset_id>)
+
+dataset_writer = DatasetWriter(client_context, dataset)
+
+write_tracker = dataset_writer.write(<dataFrame>, file_format='json')
+```
+
+## Userspace directory (Checkpointing)
+
+For longer running jobs, users may need to store intermediate steps. In instances like this, the Python SDK provides the user the ability to read and write to a userspace. 
+
+>![NOTE] Paths to the data are **not** stored by the SDK. Users will need to store the corresponding path to its respective data.
+
+### Write to userspace
+
+```python
+client_context = ClientContext(api_key=<api_key>,
+                               org_id=<org_id>,
+                               service_token=<service_token>,
+                               user_token=<user_token>,
+                               sandbox_id=<sandbox_id>,
+                               sandbox_name=<sandbox_name>)
+                               
+user_helper = UserSpaceHelper(client_context)
+user_helper.write(data_frame=<data_frame>, path=<path_to_directory>, ref_dataset_id=<ref_dataset_id>)
+```
+
+### Read from userspace
+
+```python
+client_context = ClientContext(api_key=<api_key>,
+                               org_id=<org_id>,
+                               service_token=<service_token>,
+                               user_token=<user_token>,
+                               sandbox_id=<sandbox_id>,
+                               sandbox_name=<sandbox_name>)
+                               
+user_helper = UserSpaceHelper(client_context)
+my_df = user_helper.read(path=<path_to_directory>, ref_dataset_id=<ref_dataset_id>)
 ```
