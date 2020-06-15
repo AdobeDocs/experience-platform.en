@@ -194,13 +194,13 @@ A successful response returns a payload containing the details of your Model inc
 
 ```json
 {
- "id": "a28f151a-597a-4a7e-87e9-1c1dbc9c2af7",
- "name": "Your Model - 0615-1342-45",
- "originType": "offline",
- "modelArtifactUri": "http://storageblobml.blob.core.windows.net/prod-models/a28f151a-597a-4a7e-87e9-1c1dbc9c2af7",
- "created": "2020-06-15T20:55:41.520Z",
- "updated": "2020-06-15T20:55:41.520Z",
- "deprecated": false
+  "id": "a28f151a-597a-4a7e-87e9-1c1dbc9c2af7",
+  "name": "Your Model - 0615-1342-45",
+  "originType": "offline",
+  "modelArtifactUri": "http://storageblobml.blob.core.windows.net/prod-models/a28f151a-597a-4a7e-87e9-1c1dbc9c2af7",
+  "created": "2020-06-15T20:55:41.520Z",
+  "updated": "2020-06-15T20:55:41.520Z",
+  "deprecated": false
 }
 ```
 
@@ -309,7 +309,7 @@ A successful response returns a payload containing a 200 status confirming the d
 
 ## Create a new transcoding for a Model {#create-transcoded-model}
 
-Transcoding is the direct digital-to-digital conversion of one encoding to another. You create a new transcoding for a Model by providing the `MODEL_ID` and a `targetFormat` you want the new output to be in.
+Transcoding is the direct digital-to-digital conversion of one encoding to another. You create a new transcoding for a Model by providing the `{MODEL_ID}` and a `targetFormat` you want the new output to be in.
 
 **API Format**
 
@@ -331,7 +331,7 @@ curl -X POST \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: text/plain' \
-    --data-raw '{
+    -D '{
  "id": "491a3be5-1d32-4541-94d5-cd1cd07affb5",
  "modelId" : "15c53796-bd6b-4e09-b51d-7296aa20af71",
  "targetFormat": "CoreML",
@@ -364,7 +364,7 @@ A successful response returns a payload containing a JSON object with the inform
 
 ## Retrieve a list of transcodings for a Model {#retrieve-transcoded-model-list}
 
-You can retrieve a list of transcodings that have been performed on a Model by performing a GET request with your `MODEL_ID`.
+You can retrieve a list of transcodings that have been performed on a Model by performing a GET request with your `{MODEL_ID}`.
 
 **API Format**
 
@@ -424,7 +424,7 @@ A successful response returns a payload containing a json object with a list of 
 
 ## Retrieve a specific transcoded Model {#retrieve-transcoded-model}
 
-You can retrieve a specific transcoded Model by performing a GET request with your `MODEL_ID` and the id of a transcoded model .
+You can retrieve a specific transcoded Model by performing a GET request with your `{MODEL_ID}` and the id of a transcoded model.
 
 **API Format**
 
@@ -450,7 +450,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns a payload containing a json object with the data of the transcoded Model.
+A successful response returns a payload containing a JSON object with the data of the transcoded Model.
 
 ```json
 {

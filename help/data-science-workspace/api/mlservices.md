@@ -9,7 +9,7 @@ topic: Developer guide
 
 An MLService is a published trained model that provides your organization with the ability to access and reuse previously developed models. A key feature of MLServices is the ability to automate training and scoring on a scheduled basis. Scheduled training runs can help upkeep a model's efficiency and accuracy, while scheduled scoring runs can ensure that new insights are consistently generated.
 
-Automated training and scoring schedules are defined with a starting timestamp, ending timestamp, and a frequency represented as a <a href="https://en.wikipedia.org/wiki/Cron" target="_blank">cron expression</a>. Schedules can be defined when [creating an MLService](#create-an-mlservice) or applied by [updating an existing MLService](#update-an-mlservice).
+Automated training and scoring schedules are defined with a starting timestamp, ending timestamp, and a frequency represented as a [cron expression](https://en.wikipedia.org/wiki/Cron). Schedules can be defined when [creating an MLService](#create-an-mlservice) or applied by [updating an existing MLService](#update-an-mlservice).
 
 ## Create an MLService {#create-an-mlservice}
 
