@@ -17,7 +17,7 @@ Edge configuration IDs can be created in Launch using the edge configuration too
 
 >[!NOTE] 
 >
->The edge configuration tool is available to whitelisted customers regardless whether they use Launch as a tag manager. Additionally, users require Develop permissions in Launch. See the [User Permissions](https://docs.adobe.com/content/help/en/launch/using/reference/admin/user-permissions.html) article in the Launch documentation for more details.
+>The edge configuration tool is available to customers on the allow list regardless whether they use Launch as a tag manager. Additionally, users require Develop permissions in Launch. See the [User Permissions](https://docs.adobe.com/content/help/en/launch/using/reference/admin/user-permissions.html) article in the Launch documentation for more details.
 
 You can create an edge configuration by clicking on **[UICONTROL New Edge Configuration]** in the top right area of the screen. After you provide a name and a description, you are asked for the default settings for each environment.
 
