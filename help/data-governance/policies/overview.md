@@ -24,7 +24,7 @@ An example of a marketing action might be the desire to export a dataset to a th
 
 When data usage happens in your organization's service, relevant marketing actions should be indicated so that any policy violations can be identified. You can then use the [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) to check for policy violations in your integration.
 
->[!NOTE] If you are using Real-time Customer Data Platform, you can set up marketing use cases on destinations to automate policy enforcement. See the document on [Data Governance in Real-time CDP]() for more information.
+>[!NOTE] If you are using Real-time Customer Data Platform, you can set up marketing use cases on destinations to automate policy enforcement. See the document on [Data Governance in Real-time CDP](../../rtcdp/privacy/data-governance-overview.md) for more information.
 
 See the appendix to this document for a list of [available Adobe-defined marketing actions](#core-actions). You can also define your own custom marketing actions using the DULE Policy Service API or the Experience Platform user interface. More information on working with marketing actions and policies is provided in the next section.
 
