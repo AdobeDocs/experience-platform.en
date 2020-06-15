@@ -9,7 +9,7 @@ topic: Developer guide
 
 Model development and training occurs at the Experiment level, where an Experiment consists of an MLInstance, training runs, and scoring runs.
 
-## Create an Experiment
+## Create an Experiment {#create-an-experiment}
 
 You can create an Experiment by performing a POST request while providing a name and a valid MLInstance ID in the request payload.
 
@@ -60,7 +60,7 @@ A successful response returns a payload containing the details of the newly crea
 }
 ```
 
-## Create and execute a training or scoring run
+## Create and execute a training or scoring run {#experiment-training-scoring}
 
 You can create training or scoring runs by performing a POST request and providing a valid Experiment ID and specifying the run task. Scoring runs can be created only if the Experiment has an existing and successful training run. Successfully creating a training run will initialize the model training procedure and its successful completion will generate a trained model. Generating trained models will replace any previously existing ones such that an Experiment can only utilize a single trained model at any given time.
 
@@ -91,7 +91,7 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `{TASK}` | Specifies the run's task. Set this value as either `train` for training, `score` for scoring, or `fp` for feature pipeline. |
+| `{TASK}` | Specifies the run's task. Set this value as either `train` for training, `score` for scoring, or `featurePipeline` for feature pipeline. |
 
 **Response**
 
@@ -212,7 +212,6 @@ curl -X GET \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
-
 
 **Response**
 
