@@ -167,7 +167,7 @@ POST /models
 
 **Request**
 
-The following POST contains required form data. See the table below for more information on what is required.
+The following POST contains the `modelArtifact` file and `model` property values that are needed. See the table below for more information on these values.
 
 ```shell
 curl -X POST \
