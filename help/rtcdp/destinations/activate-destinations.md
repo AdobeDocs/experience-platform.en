@@ -21,7 +21,7 @@ To activate data to destinations, you must have successfully [connected a destin
     Note that if an activation flow already exists for a destination, you can see the segments that are currently being sent to the destination. Select **[!UICONTROL Edit activation]** in the right rail and follow the steps below to modify the activation details.
 3. Select **[!UICONTROL Activate]**;
 4. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to the destination.
-    ![segments-to-destination](/help/rtcdp/destinations/assets/select-segments.png)
+    ![segments-to-destination](/help/rtcdp/destinations/assets/email-select-segments.png)
 5. *Conditional*. This step differs depending on the type of destination where you are activating your segments. <br> For *email marketing destinations* and *cloud storage destinations*, on the **[!UICONTROL Select Attributes]** page, select **[!UICONTROL Add new field]** and select the attributes that you want to send to the destination.
    We recommend one of the attributes to be a [unique identifier](/help/rtcdp/destinations/email-marketing-destinations.md#identity) from your union schema. For more information about mandatory attributes, see Identity in the [Email marketing destinations](/help/rtcdp/destinations/email-marketing-destinations.md#identity) article. 
    ![destination-attributes](/help/rtcdp/destinations/assets/select-attributes-step.png)
@@ -55,7 +55,17 @@ To activate data to destinations, you must have successfully [connected a destin
 
 7. On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
-![confirm-selection](/help/rtcdp/destinations/assets/confirm-selection.png)
+    >[!IMPORTANT]
+    >
+    >In this step, Real-time CDP checks for data governance policy violations. Shown below is an example where a data governance policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve data policy violations, see [Policy enforcement](/help/rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
+ 
+ ![confirm-selection](/help/rtcdp/destinations/assets/data-policy-violation.png)
+
+  If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination. 
+
+ ![confirm-selection](/help/rtcdp/destinations/assets/confirm-selection.png)
+
+
 
 ## Edit activation {#edit-activation}
 
@@ -100,5 +110,3 @@ To disable an existing activation flow, follow the steps below:
 1. Select **[!UICONTROL Destinations]** in the left navigation bar, then click the **[!UICONTROL Browse]** tab, and click the destination name.
 2. Click the **[!UICONTROL Enabled]** control in the right rail to change the activation flow state.
 3. In the **Update data flow state** window, select **Confirm** to disable the activation flow.
-
-In AWS Kinesis, generate an access key - secret access key pair to grant Adobe Real-time CDP access to your AWS Kinesis account. Learn more in the [AWS Kinesis documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
