@@ -27,14 +27,14 @@ The following workflow takes place when a feature pipeline is run:
 ## Getting started
 
 To run a recipe in any organization, the following is required:
--  Schema of the dataset.
--  The input dataset.
--  Transformed schema and empty dataset with transformed schema. 
--  Output schema and empty output dataset.
+-  An input dataset.
+-  The Schema of the dataset.
+-  A transformed schema and an empty dataset based on that  schema. 
+-  An output schema and an empty dataset based on that schema.
 
-All of the above datasets need to be uploaded to the [!DNL Platform] UI. For setting this up, use the Adobe provided [bootstrap script](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap).
+All of the above datasets need to be uploaded to the [!DNL Platform] UI. To set this up, use the Adobe-provided [bootstrap script](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap).
 
-## Feature pipeline Classes
+## Feature pipeline classes
 
 The following table describes the main abstract classes that you must extend in order to build a feature pipeline:
 
@@ -45,7 +45,7 @@ The following table describes the main abstract classes that you must extend in 
 | FeaturePipelineFactory | A FeaturePipelineFactory class builds a Spark Pipeline consisting of a series of Spark Transformers to perform feature engineering. You can choose not to provide a FeaturePipelineFactory class and implement your feature engineering logic within the DatasetTransformer class instead. |
 | DataSaver | A DataSaver class provides the logic for the storage of a feature dataset. |
 
-When a Feature Pipeline job is initiated, the Runtime first executes the DataLoader to load an input data as a DataFrame and then modifies the DataFrame by executing either the DatasetTransformer, or FeaturePipelineFactory, or both. Lastly, the resulting feature dataset is stored through the DataSaver.
+When a Feature Pipeline job is initiated, the Runtime first executes the DataLoader to load input data as a DataFrame and then modifies the DataFrame by executing either the DatasetTransformer, FeaturePipelineFactory, or both. Lastly, the resulting feature dataset is stored through the DataSaver.
 
 The following flowchart shows the Runtime's order of execution:
 
@@ -94,7 +94,7 @@ You can access the configuration JSON through any class method that defines `con
 dataset_id = str(config_properties.get(dataset_id))
 ```
 
-See the [pipeline.json](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/feature_pipeline_recipes/pyspark/pipeline.json) file provided by Data Science Workspace for a more in depth configuration example.
+See the [pipeline.json](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/feature_pipeline_recipes/pyspark/pipeline.json) file provided by Data Science Workspace for a more in-depth configuration example.
 
 ### Prepare the input data with DataLoader {#prepare-the-input-data-with-dataloader}
 
@@ -215,7 +215,7 @@ class MyDatasetTransformer(DatasetTransformer):
 
 A FeaturePipelineFactory allows you to implement your feature engineering logic by defining and chaining together a series of Spark Transformers through a Spark Pipeline. This class can be implemented to either work cooperatively with a DatasetTransformer, work as the sole feature engineering component, or you can choose to not implement this class.
 
-The following example extends the FeaturePipelieFactory class:
+The following example extends the FeaturePipelineFactory class:
 
 **PySpark example**
 
@@ -347,7 +347,7 @@ class MyDataSaver(DataSaver):
 
 ### Specify your implemented class names in the application file {#specify-your-implemented-class-names-in-the-application-file}
 
-Now that your feature pipeline classes are defined and implemented, you must specify the names of your classes in the application yaml file.
+Now that your feature pipeline classes are defined and implemented, you must specify the names of your classes in the application YAML file.
 
 The following examples specifies implemented class names:
 
@@ -380,9 +380,9 @@ scoring.dataLoader: ScoringDataLoader
 scoring.dataSaver: MyDatasetSaver
 ```
 
-## Create your feature pipeline Engine using the API {#create-a-feature-pipeline-engine-using-the-api}
+## Create your feature pipeline Engine using the API {#create-feature-pipeline-engine-api}
 
-Now that you have authored your feature pipeline, you need to create a docker image to make a call to the feature pipeline API. You need a docker image URL in order to make a call to the feature pipeline Engine API.
+Now that you have authored your feature pipeline, you need to create a Docker image to make a call to the feature pipeline endpoints in the Sensei Machine Learning API. You need a Docker image URL in order to make a call to the feature pipeline endpoints.
 
 >[!TIP]
 >If you do not have a Docker URL, visit the [Package source files into a recipe](../models-recipes/package-source-files-recipe.md) tutorial for a step-by-step walkthrough on creating a Docker host URL.
@@ -391,43 +391,43 @@ Optionally, you can also use the following Postman collection to assist in compl
 
 https://www.getpostman.com/collections/c5fc0d1d5805a5ddd41a
 
-### Create a feature pipeline engine
+### Create a feature pipeline engine {#create-engine-api}
 
-Once you have your docker image location, you can [create a feature pipeline engine](../api/engines.md#feature-pipeline-docker) using the Sensei Machine Learning API by performing a POST to `/engines`. Successfully creating a feature pipeline engine provides you with an Engine unique identifier (`id`). Make sure to save this value before continuing.
+Once you have your Docker image location, you can [create a feature pipeline engine](../api/engines.md#feature-pipeline-docker) using the Sensei Machine Learning API by performing a POST to `/engines`. Successfully creating a feature pipeline engine provides you with an Engine unique identifier (`id`). Make sure to save this value before continuing.
 
-### Create an MLInstance
+### Create an MLInstance {#create-mlinstance}
 
 Using your newly created `engineID`, you need to [create an MLIstance](../api/mlinstances.md#create-an-mlinstance) by making make a POST request to the `/mlInstance` endpoint. A successful response returns a payload containing the details of the newly created MLInstance including its unique identifier (`id`) used in the next API call.
 
-### Create an Experiment
+### Create an Experiment {#create-experiment}
 
 Next, you need to [create an Experiment](../api/experiments.md#create-an-experiment). To create an Experiment you need to have your MLIstance unique identifier (`id`) and make a POST request to the `/experiment` endpoint. A successful response returns a payload containing the details of the newly created Experiment including its unique identifier (`id`) used in the next API call.
 
-### Specify the Experiment run feature pipeline task
+### Specify the Experiment run feature pipeline task {#specify-feature-pipeline-task}
 
-After creating an Experiment, you have to change the experiments mode to `featurePipeline`. To change the mode, make an additional POST to [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) with your `EXPERIMENT_ID` and in the body send `{ "mode":"featurePipeline"}` to specify a feature pipeline experiment run.
+After creating an Experiment, you have to change the Experiment's mode to `featurePipeline`. To change the mode, make an additional POST to [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) with your `EXPERIMENT_ID` and in the body send `{ "mode":"featurePipeline"}` to specify a feature pipeline Experiment run.
 
-Once complete, make a GET request to `/experiments/{EXPERIMENT_ID}` to [retrieve the experiment status](../api/experiments.md#retrieve-specific) and wait for the experiment status to update to complete.
+Once complete, make a GET request to `/experiments/{EXPERIMENT_ID}` to [retrieve the experiment status](../api/experiments.md#retrieve-specific) and wait for the Experiment status to update to complete.
 
-### Specify the Experiment run training task
+### Specify the Experiment run training task {#training}
 
-Next, you need to [specify the training run task](../api/experiments.md#experiment-training-scoring). Make a POST to `experiments/{EXPERIMENT_ID}/runs` and in the body set the mode to `"train"` and send an array of tasks that contain your training parameters. A successful response returns a payload containing the details of the requested Experiment.
+Next, you need to [specify the training run task](../api/experiments.md#experiment-training-scoring). Make a POST to `experiments/{EXPERIMENT_ID}/runs` and in the body set the mode to `train` and send an array of tasks that contain your training parameters. A successful response returns a payload containing the details of the requested Experiment.
 
-Once complete, make a GET request to `/experiments/{EXPERIMENT_ID}` to [retrieve the experiment status](../api/experiments.md#retrieve-specific) and wait for the experiment status to update to complete.
+Once complete, make a GET request to `/experiments/{EXPERIMENT_ID}` to [retrieve the experiment status](../api/experiments.md#retrieve-specific) and wait for the Experiment status to update to complete.
 
-### Specify the Experiment run scoring task
+### Specify the Experiment run scoring task {#scoring}
 
 >[!NOTE]
 > To complete this step you need to have at least one successful training run associated with your Experiment.
 
-After a successful training run, you need to [specify the scoring run task](../api/experiments.md#experiment-training-scoring). Make a POST to `experiments/{EXPERIMENT_ID}/runs` and in the body set the mode to score: `{ "mode":"score" }`. This starts your scoring experiment run.
+After a successful training run, you need to [specify the scoring run task](../api/experiments.md#experiment-training-scoring). Make a POST to `experiments/{EXPERIMENT_ID}/runs` and in the body set the `mode` attribute to "score". This starts your scoring Experiment run.
 
-Once complete, make a GET request to `/experiments/{EXPERIMENT_ID}` to [retrieve the experiment status](../api/experiments.md#retrieve-specific) and wait for the experiment status to update to complete.
+Once complete, make a GET request to `/experiments/{EXPERIMENT_ID}` to [retrieve the experiment status](../api/experiments.md#retrieve-specific) and wait for the Experiment status to update to complete.
 
-Once the scoring has completed your feature pipeline should be operational.
+Once the scoring has completed, your feature pipeline should be operational.
 
 ## Next steps {#next-steps}
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-By reading this document, you have authored a feature pipeline using the Model Authoring SDK, created a docker image, and used the docker image URL to create a feature pipeline Model by using the Sensei Machine Learning API. You are now ready to continue transforming datasets and extracting data features at scale using the [Sensei Machine Learning API](../api/getting-started.md).
+By reading this document, you have authored a feature pipeline using the Model Authoring SDK, created a Docker image, and used the Docker image URL to create a feature pipeline Model by using the Sensei Machine Learning API. You are now ready to continue transforming datasets and extracting data features at scale using the [Sensei Machine Learning API](../api/getting-started.md).

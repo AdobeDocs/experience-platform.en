@@ -36,7 +36,7 @@ This tutorial requires you to have completed the [Authentication to Adobe Experi
 
 ## Create an Engine
 
-Depending on the form of the packaged Recipe file to be included as a part of the API request, an Engine is created.
+Engines can be created by making a POST request to the /engines endpoint. The created Engine is configured based on the form of the packaged Recipe file that must be included as part of the API request.
 
 ### Create an Engine with a Docker URL {#create-an-engine-with-a-docker-url}
 
