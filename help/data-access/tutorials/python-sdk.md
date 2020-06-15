@@ -76,12 +76,12 @@ After setting the environment variables and completing installation, the dataset
 from platform_sdk.client_context import ClientContext
 from platform_sdk.dataset_reader import DatasetReader
 
-client_context = ClientContext(api_key=<api_key>,
-                               org_id=<org_id>,
-                               service_token=<service_token>,
-                               user_token=<user_token>,
-                               sandbox_id=<sandbox_id>,
-                               sandbox_name=<sandbox_name>)
+client_context = ClientContext(api_key={API_KEY},
+                               org_id={IMS_ORG_ID},
+                               service_token={SERVICE_TOKEN},
+                               user_token={USER_TOKEN},
+                               sandbox_id={SANDBOX_ID},
+                               sandbox_name={SANDBOX_NAME})
 
 dataset_reader = DatasetReader(client_context, <dataset_id>)
 df = dataset_reader.read()
@@ -96,12 +96,12 @@ df = dataset_reader.select(['column-a','column-b']).read()
 ### Get partitioning information:
 
 ```python
-client_context = ClientContext(api_key=<api_key>,
-                               org_id=<org_id>,
-                               service_token=<service_token>,
-                               user_token=<user_token>,
-                               sandbox_id=<sandbox_id>,
-                               sandbox_name=<sandbox_name>)
+client_context = ClientContext(api_key={API_KEY},
+                               org_id={IMS_ORG_ID},
+                               service_token={SERVICE_TOKEN},
+                               user_token={USER_TOKEN},
+                               sandbox_id={SANDBOX_ID},
+                               sandbox_name={SANDBOX_NAME})
 
 dataset = Dataset(client_context).get_by_id(<dataset_id>)
 partitions = dataset.get_partitions_info()
@@ -176,12 +176,12 @@ The Python SDK supports writing datasets. Users will need to supply the pandas d
 ### Writing the pandas dataframe
 
 ```python
-client_context = ClientContext(api_key=<api_key>,
-                               org_id=<org_id>,
-                               service_token=<service_token>,
-                               user_token=<user_token>,
-                               sandbox_id=<sandbox_id>,
-                               sandbox_name=<sandbox_name>)
+client_context = ClientContext(api_key={API_KEY},
+                               org_id={IMS_ORG_ID},
+                               service_token={SERVICE_TOKEN},
+                               user_token={USER_TOKEN},
+                               sandbox_id={SANDBOX_ID},
+                               sandbox_name={SANDBOX_NAME})
 
 # To fetch existing dataset
 dataset = Dataset(client_context).get_by_id(<dataset_id>)
@@ -200,12 +200,12 @@ For longer running jobs, users may need to store intermediate steps. In instance
 ### Write to userspace
 
 ```python
-client_context = ClientContext(api_key=<api_key>,
-                               org_id=<org_id>,
-                               service_token=<service_token>,
-                               user_token=<user_token>,
-                               sandbox_id=<sandbox_id>,
-                               sandbox_name=<sandbox_name>)
+client_context = ClientContext(api_key={API_KEY},
+                               org_id={IMS_ORG_ID},
+                               service_token={SERVICE_TOKEN},
+                               user_token={USER_TOKEN},
+                               sandbox_id={SANDBOX_ID},
+                               sandbox_name={SANDBOX_NAME})
                                
 user_helper = UserSpaceHelper(client_context)
 user_helper.write(data_frame=<data_frame>, path=<path_to_directory>, ref_dataset_id=<ref_dataset_id>)
@@ -214,12 +214,12 @@ user_helper.write(data_frame=<data_frame>, path=<path_to_directory>, ref_dataset
 ### Read from userspace
 
 ```python
-client_context = ClientContext(api_key=<api_key>,
-                               org_id=<org_id>,
-                               service_token=<service_token>,
-                               user_token=<user_token>,
-                               sandbox_id=<sandbox_id>,
-                               sandbox_name=<sandbox_name>)
+client_context = ClientContext(api_key={API_KEY},
+                               org_id={IMS_ORG_ID},
+                               service_token={SERVICE_TOKEN},
+                               user_token={USER_TOKEN},
+                               sandbox_id={SANDBOX_ID},
+                               sandbox_name={SANDBOX_NAME})
                                
 user_helper = UserSpaceHelper(client_context)
 my_df = user_helper.read(path=<path_to_directory>, ref_dataset_id=<ref_dataset_id>)
