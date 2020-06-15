@@ -21,5 +21,5 @@ The documentation below provides information on how to connect Microsoft Dynamic
 
 ## Connect Microsoft Dynamics to Platform using the UI
 
-- [Create a Microsoft Dynamics source connector in the UI](../../tutorials/ui/create/crm/dynamics-salesforce.md)
+- [Create a Microsoft Dynamics source connector in the UI](../../tutorials/ui/create/crm/dynamics.md)
 - [Configure a dataflow for a CRM connector in the UI](../../tutorials/ui/dataflow/crm.md)

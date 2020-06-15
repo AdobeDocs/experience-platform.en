@@ -15,7 +15,7 @@ This tutorial provides you with information on converting `data_access_sdk_pytho
 
 ## Build authentication {#build-authentication}
 
-Authentication is required to make calls to Adobe Experience Platform, and is comprised of API Key, IMS Org ID, a user token, and a service token.
+Authentication is required to make calls to [!DNL Adobe Experience Platform], and is comprised of API Key, IMS Org ID, a user token, and a service token.
 
 ### Python
 

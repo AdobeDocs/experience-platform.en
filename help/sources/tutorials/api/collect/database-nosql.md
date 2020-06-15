@@ -697,6 +697,7 @@ The following section lists the different cloud storage source connectors and th
 | Azure Data Explorer | `0479cc14-7651-4354-b233-7480606c2ac3` |
 | Azure Synapse Analytics | `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
 | Azure Table Storage | `ecde33f2-c56f-46cc-bdea-ad151c16cd69` |
+| CouchBase | `1fe283f6-9bec-11ea-bb37-0242ac130002` |
 | Google BigQuery | `3c9b37f8-13a6-43d8-bad3-b863b941fedd` |
 | IBM DB2 | `09182899-b429-40c9-a15a-bf3ddbc8ced7` |
 | MariaDB | `000eb99-cd47-43f3-827c-43caf170f015` |
