@@ -180,7 +180,7 @@ curl -X POST \
     -F 'model={
             "name": "Your Model - 0615-1342-45",
             "originType": "offline"
-        }'
+    }'
 ```
 
 | Parameter | Description |
@@ -194,13 +194,13 @@ A successful response returns a payload containing the details of your Model inc
 
 ```json
 {
-    "id": "a28f151a-597a-4a7e-87e9-1c1dbc9c2af7",
-    "name": "Your Model - 0615-1342-45",
-    "originType": "offline",
-    "modelArtifactUri": "http://storageblobml.blob.core.windows.net/prod-models/a28f151a-597a-4a7e-87e9-1c1dbc9c2af7",
-    "created": "2020-06-15T20:55:41.520Z",
-    "updated": "2020-06-15T20:55:41.520Z",
-    "deprecated": false
+ "id": "a28f151a-597a-4a7e-87e9-1c1dbc9c2af7",
+ "name": "Your Model - 0615-1342-45",
+ "originType": "offline",
+ "modelArtifactUri": "http://storageblobml.blob.core.windows.net/prod-models/a28f151a-597a-4a7e-87e9-1c1dbc9c2af7",
+ "created": "2020-06-15T20:55:41.520Z",
+ "updated": "2020-06-15T20:55:41.520Z",
+ "deprecated": false
 }
 ```
 
@@ -332,15 +332,15 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: text/plain' \
     --data-raw '{
-    "id": "491a3be5-1d32-4541-94d5-cd1cd07affb5",
-	"modelId" : "15c53796-bd6b-4e09-b51d-7296aa20af71",
-	"targetFormat": "CoreML",
-    "created": "2019-12-16T19:59:08.360Z",
-    "createdBy": {
-        "userId": "FDD760CD5CD467380A495FE2@AdobeID"
-    },
-    "updated": "2019-12-19T18:37:43.696Z",
-    "deleted": false,
+ "id": "491a3be5-1d32-4541-94d5-cd1cd07affb5",
+ "modelId" : "15c53796-bd6b-4e09-b51d-7296aa20af71",
+ "targetFormat": "CoreML",
+ "created": "2019-12-16T19:59:08.360Z",
+ "createdBy": {
+    "userId": "FDD760CD5CD467380A495FE2@AdobeID"
+ },
+ "updated": "2019-12-19T18:37:43.696Z",
+ "deleted": false,
 }'
 ```
 
@@ -435,7 +435,7 @@ GET /models/{MODEL_ID}/transcodings/{TRANSCODING_ID}
 | Parameter | Description |
 | --- | --- |
 | `{MODEL_ID}` | The unique identifier of a trained or published Model. |
-| `{TRANSCODING_ID}` | The unique identifier of a transcoded Model.
+| `{TRANSCODING_ID}` | The unique identifier of a transcoded Model. |
 
 **Request**
 
