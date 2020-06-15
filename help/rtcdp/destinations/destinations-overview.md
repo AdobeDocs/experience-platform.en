@@ -45,8 +45,8 @@ For more information about access controls, see the [Access control user guide](
 
 Data governance is enforced for Real-time CDP destinations through:
 
-* *marketing use cases* that you can select in the create destinations workflow;
-* *data policy violations* that prevent you from activating segments to destinations if the marketing use cases on destinations conflict with the data policy on datasets used in the segments. 
+* *Marketing use cases* that you can select in the create destinations workflow;
+* *Data policy violations* that prevent you from activating segments to destinations if data policy violations are detected.
   
 See the Data Governance in Real-time CDP documentation for more information about [marketing use cases](/help/rtcdp/privacy/data-governance-overview.md#destinations) and [resolving data policy violations](/help/rtcdp/privacy/data-governance-overview.md#enforcement).
 

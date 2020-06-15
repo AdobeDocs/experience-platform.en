@@ -11,7 +11,7 @@ Activate the data you have in Adobe Real-time Customer Data Platform by mapping 
 
 ## Prerequisites {#prerequisites}
 
-To activate data to destinations, you must have successfully [connected a destination](/help/rtcdp/destinations/assets/connect-destination-1.png). If you haven't done so already, go to the [destinations catalog](/help/rtcdp/destinations/destinations-catalog.md), browse the supported destinations, and set up one or more destinations.
+To activate data to destinations, you must have successfully [connected a destination](/help/rtcdp/destinations/connect-destination.md). If you haven't done so already, go to the [destinations catalog](/help/rtcdp/destinations/destinations-catalog.md), browse the supported destinations, and set up one or more destinations.
 
 ## Activate data {#activate-data}
 
