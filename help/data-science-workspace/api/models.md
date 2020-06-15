@@ -155,7 +155,7 @@ A successful response returns a payload containing the details of your Model inc
 | `experimentId` | A valid Experiment ID. |
 | `experimentRunId` | A valid Experiment Run ID. |
 
-## Register a pre-generated Model
+## Register a pre-generated Model {#register-a-model}
 
 You can register a pre-generated Model by making a POST request to the `/models` endpoint. In order to register your Model, the `modelArtifact` file and `model` property values need to be included in the body of the request.
 
@@ -208,9 +208,6 @@ A successful response returns a payload containing the details of your Model inc
 | --- | --- |
 | `id` | The ID corresponding to the Model. |
 | `modelArtifactUri` | A URI indicating where the model is stored. The URI ends with the `id` value for your model. |
-
-
-
 
 ## Update a Model by ID
 
