@@ -9,6 +9,8 @@ topic: policies
 
 Adobe Experience Platform Data Governance provides a user interface that allows you to create and manage data usage policies. This document provides an overview of the actions you can perform in the _Policies_ workspace in the Experience Platform UI.
 
+>[!IMPORTANT] All data usage policies (including core policies provided by Adobe) are disabled by default. In order for an individual policy to be considered for enforcement, you must manually enable that policy. See the section on [enabling policies](#enable) for steps on how to do this in the UI.
+
 ## Prerequisites
 
 This guide requires a working understanding of the following Experience Platform concepts:

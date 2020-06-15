@@ -71,6 +71,8 @@ An example of a marketing action might be the desire to export a dataset to a th
 
 Once data usage labels have been applied, data stewards can create policies using the DULE Policy Service API or the Experience Platform user interface.
 
+>[!IMPORTANT] All data usage policies (including core policies provided by Adobe) are disabled by default. In order for an individual policy to be considered for enforcement, you must manually enable that policy.
+
 For more information on data usage policies and marketing actions, see the [policies overview](./policies/overview.md).
 
 ## Future releases
