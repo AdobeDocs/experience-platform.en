@@ -155,6 +155,63 @@ A successful response returns a payload containing the details of your Model inc
 | `experimentId` | A valid Experiment ID. |
 | `experimentRunId` | A valid Experiment Run ID. |
 
+## Register a pre-generated Model
+
+You can register a pre-generated Model by making a POST request to the `/models` endpoint. In order to register your Model, the `modelArtifact` file and `model` property values need to be included in the body of the request.
+
+**API Format**
+
+```http
+POST /models
+```
+  
+**Request**
+
+The following POST request contains required form data. See the table below for more information on what is required.
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/sensei/models \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -F 'modelArtifact=@/Users/yourname/Desktop/model.onnx' \
+    -F 'model={
+            "name": "Your Model - 0615-1342-45",
+            "originType": "offline"
+        }'
+```
+
+| Parameter | Description |
+| --- | --- |
+| `modelArtifact` | The location of the complete Model artifact you wish to include. |
+| `model` | The form data of the Model object that needs to be created. |
+
+**Response**
+
+A successful response returns a payload containing the details of your Model including the Models unique identifier (`id`).
+
+```json
+{
+    "id": "a28f151a-597a-4a7e-87e9-1c1dbc9c2af7",
+    "name": "Your Model - 0615-1342-45",
+    "originType": "offline",
+    "modelArtifactUri": "http://storageblobml.blob.core.windows.net/prod-models/a28f151a-597a-4a7e-87e9-1c1dbc9c2af7",
+    "created": "2020-06-15T20:55:41.520Z",
+    "updated": "2020-06-15T20:55:41.520Z",
+    "deprecated": false
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `id` | The ID corresponding to the Model. |
+| `modelArtifactUri` | A URI indicating where the model is stored. The URI ends with the `id` value for your model. |
+
+
+
+
 ## Update a Model by ID
 
 You can update an existing Model by overwriting its properties through a PUT request that includes the target Model's ID in the request path and providing a JSON payload containing updated properties.
@@ -253,14 +310,14 @@ A successful response returns a payload containing a 200 status confirming the d
 }
 ```
 
-## Create a new transcoding for a Model
+## Create a new transcoding for a Model {#create-transcoded-model}
 
 Transcoding is the direct digital-to-digital conversion of one encoding to another. You create a new transcoding for a Model by providing the `MODEL_ID` and a `targetFormat` you want the new output to be in.
 
 **API Format**
 
 ```http
-GET /models/{MODEL_ID}/transcodings
+POST /models/{MODEL_ID}/transcodings
 ```
 
 | Parameter | Description |
@@ -270,7 +327,7 @@ GET /models/{MODEL_ID}/transcodings
 **Request**
 
 ```shell
-curl -X GET \
+curl -X POST \
   https://platform.adobe.io/data/sensei/models/15c53796-bd6b-4e09-b51d-7296aa20af71/transcodings \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
@@ -292,7 +349,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns a payload containing a json object with the information of your transcoding.
+A successful response returns a payload containing a JSON object with the information of your transcoding. This includes the transcodings unique identifier (`id`) used in [retrieving a specific transcoded Model](#retrieve-transcoded-model).
 
 ```json
 {
@@ -308,7 +365,7 @@ A successful response returns a payload containing a json object with the inform
 }
 ```
 
-## Retrieve a list of transcodings for a Model
+## Retrieve a list of transcodings for a Model {#retrieve-transcoded-model-list}
 
 You can retrieve a list of transcodings that have been performed on a Model by performing a GET request with your `MODEL_ID`.
 
@@ -368,7 +425,7 @@ A successful response returns a payload containing a json object with a list of 
 }
 ```
 
-## Retrieve a specific transcoded Model
+## Retrieve a specific transcoded Model {#retrieve-transcoded-model}
 
 You can retrieve a specific transcoded Model by performing a GET request with your `MODEL_ID` and the id of a transcoded model .
 
