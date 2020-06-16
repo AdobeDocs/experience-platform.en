@@ -7,7 +7,7 @@ topic: tutorial
 
 # Create a segment 
 
-This document provides a tutorial for developing, testing, previewing, and saving a segment definition using the [Segmentation API](../api/getting-started.md). 
+This document provides a tutorial for developing, testing, previewing, and saving a segment definition using the [Adobe Experience Platform Segmentation Service API](../api/getting-started.md). 
 
 For information on how to build segments using the user interface, please see the [Segment Builder guide](../ui/overview.md).
 

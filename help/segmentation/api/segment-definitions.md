@@ -190,7 +190,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `expression.type` | Specifies the expression type. Currently, only "PQL" is supported. |
 | `expression.format` | Indicates the structure of the expression in value. Currently, the following format is supported: <ul><li>`pql/text`: A textual representation of a segment definition, according to the published PQL grammar.  For example, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | An expression that conforms to the type indicated in `expression.format`. |
-| `description` | A human readable description of the definition. |
+| `description` | A human-readable description of the definition. |
 
 **Response**
 
@@ -241,7 +241,7 @@ A successful response returns HTTP status 200 with details of your newly created
 | Property | Description |
 | -------- | ----------- |
 | `id` | A system-generated ID of your newly created segment definition. |
-| `evaluationInfo` | A system-generated object that tells what type of evaluation, batch, continuous (also known as streaming), or synchronous, the segment definition will undergo. |
+| `evaluationInfo` | A system-generated object that tells what type of evaluation the segment definition will undergo. It can be batch, continuous (also known as streaming), or synchronous segmentation. |
 
 ## Retrieve a specific segment definition {#get}
 

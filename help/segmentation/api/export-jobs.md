@@ -7,7 +7,7 @@ topic: developer guide
 
 # Export jobs
 
-Export jobs are asynchronous processes that are used to persist audience segment members to datasets. You can use the `/export/jobs` endpoint to retrieve all export jobs, create a new export job, retrieve details of a specific export job, or cancel a specific export job.
+Export jobs are asynchronous processes that are used to persist audience segment members to datasets. You can use the `/export/jobs` endpoint in the Adobe Experience Platform Segmentation API allows you to programmatically retrieve, create, and cancel export jobs.
 
 ## Getting started
 
@@ -23,9 +23,9 @@ You can retrieve a list of all export jobs for your IMS Organization by making a
 
 ```http
 GET /export/jobs
-GET /export/jobs?limit=4
-GET /export/jobs?offset=2
-GET /export/jobs?status=failed
+GET /export/jobs?limit={LIMIT}
+GET /export/jobs?offset={OFFSET}
+GET /export/jobs?status={STATUS}
 ```
 
 **Query parameters**
@@ -164,7 +164,7 @@ POST /export/jobs
 
 **Request**
 
-The following request creates a new export job, providing configuration parameters in the payload.
+The following request creates a new export job, configured by the parameters provided in the payload.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
@@ -214,8 +214,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 }'
 ```
 
-| Parameter | Description |
-| --------- | ----------- |
+| Property | Description |
+| -------- | ----------- |
 | `fields` | *(Optional)*. A list of the exported fields, separated by commas. If left blank, all fields will be exported. |
 | `mergePolicy` | *(Optional)*. Specifies the merge policy to govern the exported data. Include this parameter when there are multiple segments being exported. If not provided, the export will take the same merge policy as the given segment. |
 | `filter` | *(Optional)*. If left blank, all the data will be exported. |
@@ -224,14 +224,14 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `filter.segmentQualificationTime.startTime` | *(Optional)* Segment qualification start time for a segment ID for a given status. It not provided, there will be no filter on the start time for a segment ID qualification. The timestamp must be provided in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
 | `filter.segmentQualificationTime.endTime` | *(Optional)* Segment qualification end time for a segment ID for a given status. It not provided, there will be no filter on the end time for a segment ID qualification. The timestamp must be provided in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
 | `filter.fromIngestTimestamp `| *(Optional)* Limits exported profiles to only include those that have been updated after this timestamp. The timestamp must be provided in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. <ul><li>`fromIngestTimestamp` for **profiles**, if provided: Includes all the merged profiles where merged updated timestamp is greater than the given timestamp. Supports `greater_than` operand.</li><li>`fromTimestamp` for **events**: All events ingested after this timestamp will be exported corresponding to resultant profile result. This is not the event time itself but the ingestion time for the events.</li> |
-| `filter.emptyProfiles` | *(Optional)* Boolean. Profiles can contain Profile records, ExperienceEvent records, or both. Profiles with no Profile records and only ExperienceEvent records are referred to as "emptyProfiles". To export all profiles in the Profile store, including the "emptyProfiles", set the value of `emptyProfiles` to `true`. If `emptyProfiles` is set to `false`, only profiles with Profile records in the store are exported. By default, if `emptyProfiles` attribute is not included, only profiles containing Profile records are exported. |
-| `additionalFields.eventList` | *(Optional)* Controls the time series event fields exported for child or associated objects by providing one or more of the following settings:<ul><li>`eventList.fields`: Control the fields to export.</li><li>`eventList.filter`: Specifies criteria that limits the results included from associated objects. Expects a minimum value required for export, typically a date.</li><li>`eventList.filter.fromIngestTimestamp`: Filters time series events to those that have been ingested after the provided timestamp. This is not the event time itself but the ingestion time for the events.</li></ul> |
-| `destination` | **(Required)** Destination information for the exported data:<ul><li>`destination.datasetId`: **(Required)** The ID of the dataset where data is to be exported.</li><li>`destination.segmentPerBatch`: *(Optional)* A Boolean value that, if not provided, defaults to `false`. A value of `false` exports all segment IDs into a single batch ID. A value of `true` exports one segment ID into one batch ID. Note that setting the value to be `true` may affect batch export performance.</li></ul> |
+| `filter.emptyProfiles` | *(Optional)* A boolean value that indicates whether to filter for empty Profiles. Profiles can contain Profile records, ExperienceEvent records, or both. Profiles with no Profile records and only ExperienceEvent records are referred to as "emptyProfiles". To export all profiles in the Profile store, including the "emptyProfiles", set the value of `emptyProfiles` to `true`. If `emptyProfiles` is set to `false`, only profiles with Profile records in the store are exported. By default, if `emptyProfiles` attribute is not included, only profiles containing Profile records are exported. |
+| `additionalFields.eventList` | *(Optional)* Controls the time series event fields exported for child or associated objects by providing one or more of the following settings:<ul><li>`fields`: Control the fields to export.</li><li>`filter`: Specifies criteria that limits the results included from associated objects. Expects a minimum value required for export, typically a date.</li><li>`filter.fromIngestTimestamp`: Filters time series events to those that have been ingested after the provided timestamp. This is not the event time itself but the ingestion time for the events.</li></ul> |
+| `destination` | **(Required)** Destination information for the exported data:<ul><li>`datasetId`: **(Required)** The ID of the dataset where data is to be exported.</li><li>`segmentPerBatch`: *(Optional)* A Boolean value that, if not provided, defaults to `false`. A value of `false` exports all segment IDs into a single batch ID. A value of `true` exports one segment ID into one batch ID. Note that setting the value to be `true` may affect batch export performance.</li></ul> |
 | `schema.name` | **(Required)** The name of the schema associated with the dataset where data is to be exported. |
 | `evaluationInfo.segmentation`| *(Optional)* A boolean value that, if not provided, defaults to `false`. A value of `true` indicates that segmentation needs to be done on the export job. |
 | `destination.datasetId` | **Required**. The `id` value of the dataset where the data is being exported to. |
 | `segments.segmentId` | **Required**. The `id` value of the segment that is being exported. |
-| `segments.sgementNs` | *(Optional)*. The `namespace` for the given segment. |
+| `segments.segmentNs` | *(Optional)*. The `namespace` for the given segment. |
 
 **Response**
 
@@ -334,8 +334,8 @@ You can retrieve detailed information about a specific export job by making a GE
 GET /export/jobs/{EXPORT_JOB_ID}
 ```
 
-| Property | Description |
-| -------- | ----------- |
+| Parameter | Description |
+| --------- | ----------- |
 | `{EXPORT_JOB_ID}` | The `id` of the export job you want to access. |
 
 **Request**
@@ -449,8 +449,8 @@ You can request to delete a specified export job by making a DELETE request to t
 DELETE /export/jobs/{EXPORT_JOB_ID}
 ```
 
-| Property | Description |
-| -------- | ----------- |
+| Parameter | Description |
+| --------- | ----------- |
 | `{EXPORT_JOB_ID}` | The `id` of the export job you want to delete. |
 
 **Request**

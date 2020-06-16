@@ -13,7 +13,7 @@ As you develop your segment definition, you can use the estimate and preview too
 
 The API endpoints used in this guide are part of the Adobe Experience Platform Segmentation Service API. Before continuing, please review the [Segmentation developer guide](./getting-started.md).
 
-In particular, the [getting started section](./getting-started.md#getting-started) of the Segmentation developer guide includes links to related topics, a guide to reading the sample API calls in the document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+In particular, the [getting started section](./getting-started.md#getting-started) of the Segmentation developer guide includes links to related topics, a guide to reading the sample API calls in the document, and important information regarding required headers that are needed to successfully make calls to Experience Platform APIs.
 
 ## How estimates are generated
 
@@ -60,7 +60,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | Property | Description |
 | -------- | ----------- |
 | `predicateExpression` | The PQL expression to query the data by. |
-| `predicateType` | The only value that is available to use for this is PQL for now. |
+| `predicateType` | The predicate type for the query expression under `predicateExpression`. Currently, the only accepted value for this property is "pql/text". |
 | `predicateModel` | The name of the XDM schema the Profile data is based on. |
 | `graphType` | The graph type that you want to get the cluster from. Possible values are “none” (perform no identity stitching) and “pdg” (perform identity stitching based on your private identity graph). |
 
@@ -80,7 +80,7 @@ A successful response returns HTTP status 201 (Created) with details of your new
 
 | Property | Description |
 | -------- | ----------- |
-| `state` | The current state of the preview job. It will be in the "RUNNING" state until processing is complete, at which point it becomes "RESULT_READY" or "FAILED". |
+| `state` | The current state of the preview job. When initially created, it will be in the "NEW" state. Subsequently, it will be in the "RUNNING" state until processing is complete, at which point it becomes "RESULT_READY" or "FAILED". |
 | `previewId` | The ID of the preview job, to be used for lookup purposes when viewing an estimate or preview, as outlined in the following section. |
 
 ## Retrieve a specific preview's results {#get-preview}
@@ -159,7 +159,7 @@ A successful response returns HTTP status 200 with detailed information about th
 
 ## Retrieve the results of a specific estimate job {#get-estimate}
 
-You can retrieve details of a specific estimate job by making a GET request to the `/estimate` endpoint and providing the ID of a previously created preview job in the request path.
+You can retrieve the details of a specific estimate job by making a GET request to the `/estimate` endpoint and providing the ID of a previously created preview job in the request path.
 
 **API format**
 

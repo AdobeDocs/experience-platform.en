@@ -25,14 +25,14 @@ Defining relationships with the structure of your Experience Data Model (XDM) sc
 
 This process can be done either using the Schema Registry API or the Schema Editor. For a detailed guide on using the API to define a relationship between two schemas, please read [the tutorial on defining a relationship between two schemas using the API](../xdm/tutorials/relationship-api.md). For a detailed guide on using the Schema Editor to define a relationship between two schemas, please read [the tutorial on defining a relationship between two schemas using the Schema Editor](../xdm/tutorials/relationship-ui.md).
 
-## How to use create segments that use XDM relationships
+## How to create segments that use XDM relationships
 
-Once you have defined your XDM relationships, you can use the Segmentation APIs to build a segment.
+Once you have defined your XDM relationships, you can use the Segmentation Service API to build a segment.
 
-This process can be done either using the Segmentation API or the Segment Builder. For a detailed guide on using the API to build a segment, please read [the tutorial on creating a segment using the Segmentation API](./tutorials/create-a-segment.md). For a detailed guide on using the Segment Builder to build a segment, please read [the Segment Builder user guide](./ui/overview.md).
+This process can be done either using the Segmentation API or the Segment Builder user interface. For a detailed guide on using the API to build a segment, please read [the tutorial on creating a segment using the Segmentation API](./tutorials/create-a-segment.md). For a detailed guide on using the Segment Builder to build a segment, please read [the Segment Builder user guide](./ui/overview.md).
 
 ## How to evaluate and access segments for multi-entity segments
 
-After creating a segment, you can evaluate and access the segment results using the Segmentation APIs. Evaluating a multi-entity segment is very similar to evaluating a regular segment.
+After creating a segment, you can evaluate and access the segment results using the Segmentation API. Evaluating a multi-entity segment is very similar to evaluating a regular segment.
 
-This process can only be done using the Segmentation API. For a detailed guide on using the API to evaluate and access segments, please read [the tutorial on evaluating and accessing segments](./tutorials/evaluate-a-segment.md).
+This process can only be done using the Segmentation API. For a detailed guide on using the API to evaluate and access segments, please read the tutorial on [evaluating and accessing segments](./tutorials/evaluate-a-segment.md).
