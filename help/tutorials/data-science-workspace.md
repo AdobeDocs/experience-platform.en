@@ -50,11 +50,23 @@ To learn more, follow the [package source files into a recipe tutorial](../data-
 
 ## Import a recipe
 
-The import recipe tutorials provide insights on how to configure and import a packaged recipe. By the end of this tutorial, you can create, train, and evaluate a Model in Adobe Experience Platform Data Science Workspace. To learn more, follow the [import a packaged recipe (UI)](../data-science-workspace/models-recipes/import-packaged-recipe-ui.md) or the [import a packaged recipe (API)](../data-science-workspace/models-recipes/import-packaged-recipe-api.md) tutorial.
+The import recipe tutorials provide insights on how to configure and import a packaged recipe. By the end of this tutorial, you can create, train, and evaluate a Model in Adobe Experience Platform Data Science Workspace.
+
+**This guide will help you:**
+- Create a set of configurations for a recipe.
+- Import a Docker based recipe for Python, R, PySpark, or Scala (Spark).
+
+To learn more, follow the [import a packaged recipe (UI)](../data-science-workspace/models-recipes/import-packaged-recipe-ui.md) or the [import a packaged recipe (API)](../data-science-workspace/models-recipes/import-packaged-recipe-api.md) tutorial.
 
 ## Train and evaluate a model
 
-In Adobe Experience Platform Data Science Workspace, a machine learning Model is created by incorporating an existing Recipe that is appropriate for the Model's intent. The Model is then trained and evaluated to optimize its operating efficiency and efficacy by fine-tuning its associated Hyperparameters. Recipes are reusable, meaning that multiple Models can be created and tailored to specific purposes with a single Recipe. This tutorial walks through the steps to create, train, and evaluate a Model. To learn more, follow the [train and evaluate a model using the UI](../data-science-workspace/models-recipes/train-evaluate-model-ui.md) or the [train and evaluate a model using the API](../data-science-workspace/models-recipes/train-evaluate-model-api.md) tutorial.
+In Adobe Experience Platform Data Science Workspace, a machine learning Model is created by incorporating an existing Recipe that is appropriate for the Model's intent. The Model is then trained and evaluated to optimize its operating efficiency and efficacy by fine-tuning its associated Hyperparameters. Recipes are reusable, meaning that multiple Models can be created and tailored to specific purposes with a single Recipe. This tutorial walks through the steps to create, train, and evaluate a Model.
+
+**This guide will help you:**
+- Create a set of configurations for a recipe.
+- Import a Docker based recipe for Python, R, PySpark, or Scala (Spark).
+
+To learn more, follow the [train and evaluate a model using the UI](../data-science-workspace/models-recipes/train-evaluate-model-ui.md) or the [train and evaluate a model using the API](../data-science-workspace/models-recipes/train-evaluate-model-api.md) tutorial.
 
 ## Score a model
 
