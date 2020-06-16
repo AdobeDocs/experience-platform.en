@@ -11,16 +11,42 @@ Adobe Experience Platform Data Science Workspace uses machine learning and artif
 
 ## Sensei Machine Learning API
 
-The Sensei Machine Learning API provides a mechanism for data scientists to organize and manage machine learning services, from algorithm onboarding through experimentation and to service deployment. To learn more, visit the [getting started guide](../data-science-workspace/api/getting-started.md).
+The Sensei Machine Learning API provides a mechanism for data scientists to organize and manage machine learning services, from algorithm onboarding through experimentation and to service deployment. 
+
+**The following developer guides are available:**
+- [Engines](../data-science-workspace/api/engines.md) - Learn how to look up your Docker registry, create an Engine, create a feature pipeline Engine, retrieve the information for an Engine, update an Engine, and delete an Engine.
+- [MLInstances (recipes)](../data-science-workspace/api/mlinstances.md) - Learn how to create an MLInstance, retrieve the information for an MLInstance, update an MLInstance, and delete an MLInstance.
+- [Experiments](../data-science-workspace/api/experiments.md) - Learn how to create an Experiment, retrieve an Experiment or Experiment runs information, update an Experiment, and delete an Experiment.
+- [Models](../data-science-workspace/api/models.md) - Learn how to register your own Model, retrieve the information for a Model, update a Model, delete a Model, create a new transcoding for a Model, and retrieve the transcoded Models details.
+- [MLServices](../data-science-workspace/api/mlservices.md) - Learn how to create an MLService, retrieve the information for an MLService, update an MLService, and delete an MLService.
+- [Insights](../data-science-workspace/api/insights.md) - Learn how to retrieve the information for an Insight, add a new Model Insight, and retrieve a list of default metrics for algorithms.
+
+To learn more and get the required values for performing CRUD operations with the Sensei Machine Learning API, visit the [getting started guide](../data-science-workspace/api/getting-started.md).
 
 ## How to use JupyterLab Notebooks
 
 JupyterLab is a web-based user interface for Project Jupyter and is tightly integrated into Adobe Experience Platform. It provides an interactive development environment for data scientists to work with Jupyter notebooks, code, and data.
-This document provides an overview of JupyterLab and its features as well as instructions to perform common actions. To learn more, visit the [JupyterLab user guide](../data-science-workspace/jupyterlab/overview.md).
+This document provides an overview of JupyterLab and its features as well as instructions to perform common actions.
+
+**This guide will help you:**
+- Access and understand the JupyterLab interface.
+- Understand code cells and the available kernels within JupyterLab.
+- Read and query [!DNL Platform] data using Notebooks.
+- Understand the Notebook data limits.
+
+ To learn more, visit the [JupyterLab user guide](../data-science-workspace/jupyterlab/overview.md).
 
 ## Package source files for Docker recipe authoring
 
-A Docker image allows you to package up an application with all the parts it needs. This includes libraries and other dependencies all in one package. The built Docker image is pushed to the Azure Container Registry using credentials supplied to you during the recipe creation workflow. To learn more, follow the [package source files into a recipe tutorial](../data-science-workspace/models-recipes/package-source-files-recipe.md).
+A Docker image allows you to package up an application with all the parts it needs. This includes libraries and other dependencies all in one package. The built Docker image is pushed to the Azure Container Registry using credentials supplied to you during the recipe creation workflow. 
+
+**This guide will help you:**
+- Download the required software for recipe creation.
+- Understand Docker based model authoring.
+- Build a Docker image for Python, R, PySpark, or Scala (Spark).
+- Obtain a Docker source file URL.
+
+To learn more, follow the [package source files into a recipe tutorial](../data-science-workspace/models-recipes/package-source-files-recipe.md).
 
 ## Import a recipe
 
