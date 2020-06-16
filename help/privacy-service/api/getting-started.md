@@ -26,7 +26,13 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ## Gather values for required headers
 
-In order to make calls to the Privacy Service API, you must first gather your access credentials to be used in required headers. This involves obtaining developer permissions for Experience Platform in the Adobe Admin Console, and then generating the credentials in Adobe Developer Console.
+In order to make calls to the Privacy Service API, you must first gather your access credentials to be used in required headers:
+
+* Authorization: Bearer `{ACCESS_TOKEN}`
+* x-api-key: `{API_KEY}`
+* x-gw-ims-org-id: `{IMS_ORG}`
+
+This involves obtaining developer permissions for Experience Platform in the Adobe Admin Console, and then generating the credentials in Adobe Developer Console.
 
 ### Gain developer access to Experience Platform
 
@@ -64,22 +70,22 @@ The key pair is automatically generated, and a ZIP file containing a private key
 
 ![](../images/api/getting-started/key-pair-generated.png)
 
-Once the API has been added to the project, the project page reappears on the _Privacy Service API_ tab. Under _[!UICONTROL Service Account (JWT)]_ are the following access credentials that are required in all calls to the Privacy Service API:
+Once the API has been added to the project, the project page reappears on the _Privacy Service API overview_ page. From here, scroll down to the _[!UICONTROL Service Account (JWT)]_ section, which provides the following access credentials that are required in all calls to the Privacy Service API:
 
-* `{API_KEY}` (Client ID)
-* `{IMS_ORG}` (Organization ID)
+* **[!UICONTROL CLIENT ID]**: The Client ID is the required `{API_KEY}` for that must be provided in the x-api-key header.
+* **[!UICONTROL ORGANIZATION ID]**: The Organization ID is the `{IMS_ORG}` value that must be used in the x-gw-ims-org-id header.
 
 ![](../images/api/getting-started/jwt-credentials.png)
 
 #### Authentication for each session
 
-The final required credential you must gather is your `{ACCESS_TOKEN}`. Unlike the values for `{API_KEY}` and `{IMS_ORG}`, a new token must be generated every 24 hours to continue using Platform APIs.
+The final required credential you must gather is your `{ACCESS_TOKEN}`, which is used in the Authorization header. Unlike the values for `{API_KEY}` and `{IMS_ORG}`, a new token must be generated every 24 hours to continue using Platform APIs.
 
 To generate a new `{ACCESS_TOKEN}`, open the previously downloaded private key and paste its contents into the text box beside _[!UICONTROL Generate access token]_ before clicking **[!UICONTROL Generate Token]**.
 
 ![](../images/api/getting-started/paste-private-key.png)
 
-A new access token is generated, and a button to copy the token to your clipboard is provided.
+A new access token is generated, and a button to copy the token to your clipboard is provided. This value is used for the required Authorization header, and must be provided in the format `Bearer {ACCESS_TOKEN}`.
 
 ![](../images/api/getting-started/generated-access-token.png)
 
