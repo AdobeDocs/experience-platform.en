@@ -29,7 +29,7 @@ GET /config/schedules?limit={LIMIT}
 
 **Query parameters**
 
-The following is a list of available query parameters for listing schedules. All of these parameters are optional. Making a call to this endpoint with no parameters will retrieve all schedules available for your organization.
+The following is a list of available query parameters for listing schedules. All of these parameters are optional. Making a call to this endpoint with no parameters will retrieve all schedules available for your organization. Multiple parameters can be included, separated by ampersands (`&`). 
 
 | Parameter | Description |
 | --------- | ----------- |

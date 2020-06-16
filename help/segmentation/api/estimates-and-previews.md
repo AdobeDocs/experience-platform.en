@@ -52,8 +52,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
     {
         "predicateExpression": "xEvent.metrics.commerce.abandons.value > 0",
         "predicateType": "pql/text",
-        "predicateModel": "_xdm.context.profile",
-        "graphType": "pdg"
+        "predicateModel": "_xdm.context.profile"
     }'
 ```
 
@@ -62,7 +61,6 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | `predicateExpression` | The PQL expression to query the data by. |
 | `predicateType` | The predicate type for the query expression under `predicateExpression`. Currently, the only accepted value for this property is "pql/text". |
 | `predicateModel` | The name of the XDM schema the Profile data is based on. |
-| `graphType` | The graph type that you want to get the cluster from. Possible values are “none” (perform no identity stitching) and “pdg” (perform identity stitching based on your private identity graph). |
 
 **Response**
 
@@ -81,7 +79,7 @@ A successful response returns HTTP status 201 (Created) with details of your new
 | Property | Description |
 | -------- | ----------- |
 | `state` | The current state of the preview job. When initially created, it will be in the "NEW" state. Subsequently, it will be in the "RUNNING" state until processing is complete, at which point it becomes "RESULT_READY" or "FAILED". |
-| `previewId` | The ID of the preview job, to be used for lookup purposes when viewing an estimate or preview, as outlined in the following section. |
+| `previewId` | The ID of the preview job, to be used for lookup purposes when viewing an estimate or preview, as outlined in the next section. |
 
 ## Retrieve a specific preview's results {#get-preview}
 
@@ -148,14 +146,17 @@ A successful response returns HTTP status 200 with detailed information about th
             "next": "",
             "prev": ""
         }
-    }
-    ],
+    }],
     "page": {
         "offset": 0,
         "size": 3
     }
 }
 ```
+
+| Property | Description | 
+| -------- | ----------- |
+| `results` | 
 
 ## Retrieve the results of a specific estimate job {#get-estimate}
 

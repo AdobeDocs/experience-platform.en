@@ -7,7 +7,7 @@ topic: developer guide
 
 # Export jobs
 
-Export jobs are asynchronous processes that are used to persist audience segment members to datasets. You can use the `/export/jobs` endpoint in the Adobe Experience Platform Segmentation API allows you to programmatically retrieve, create, and cancel export jobs.
+Export jobs are asynchronous processes that are used to persist audience segment members to datasets. You can use the `/export/jobs` endpoint in the Adobe Experience Platform Segmentation API, which allows you to programmatically retrieve, create, and cancel export jobs.
 
 ## Getting started
 
@@ -30,7 +30,7 @@ GET /export/jobs?status={STATUS}
 
 **Query parameters**
 
-The following is a list of available query parameters for listing export jobs. All of these parameters are optional. Making a call to this endpoint with no parameters will retrieve all export jobs available for your organization.
+The following is a list of available query parameters for listing export jobs. All of these parameters are optional. Making a call to this endpoint with no parameters will retrieve all export jobs available for your organization. Multiple parameters can be included, separated by ampersands (`&`). 
 
 | Parameter | Description |
 | --------- | ----------- |
@@ -124,16 +124,10 @@ A successful response returns HTTP status 200 with a list of export jobs for the
                     "startTimeInMs":123456789000,
                     "endTimeInMs":123456799000,
                     "totalTimeInMs":10000
-                },
-                "aCPDatasetWriteTime":{
-                    "startTimeInMs":123456789000,
-                    "endTimeInMs":123456799000,
-                    "totalTimeInMs":10000
                 }
             },
             "computeGatewayJobId":{
-                "exportJob":"f3058161-7349-4ca9-807d-212cee2c2e94",
-                "pushJob":"feaeca05-d137-4605-aa4e-21d19d801fc6"
+                "exportJob":"f3058161-7349-4ca9-807d-212cee2c2e94"
             },
             "creationTime":1538615973895,
             "updateTime":1538616233239,
@@ -307,16 +301,10 @@ A successful response returns HTTP status 200 with details of your newly created
             "startTimeInMs":123456789000,
             "endTimeInMs":123456799000,
             "totalTimeInMs":10000
-        },
-        "aCPDatasetWriteTime":{
-            "startTimeInMs":123456789000,
-            "endTimeInMs":123456799000,
-            "totalTimeInMs":10000
         }
     },
     "computeGatewayJobId":{
-        "exportJob":"f3058161-7349-4ca9-807d-212cee2c2e94",
-        "pushJob":"feaeca05-d137-4605-aa4e-21d19d801fc6"
+        "exportJob":"f3058161-7349-4ca9-807d-212cee2c2e94"    
     },
     "creationTime":1538615973895,
     "updateTime":1538616233239,
@@ -422,16 +410,10 @@ A successful response returns HTTP status 200 with detailed information about th
             "startTimeInMs":123456789000,
             "endTimeInMs":123456799000,
             "totalTimeInMs":10000
-        },
-        "aCPDatasetWriteTime":{
-            "startTimeInMs":123456789000,
-            "endTimeInMs":123456799000,
-            "totalTimeInMs":10000
         }
     },
     "computeGatewayJobId":{
-        "exportJob":"f3058161-7349-4ca9-807d-212cee2c2e94",
-        "pushJob":"feaeca05-d137-4605-aa4e-21d19d801fc6"
+        "exportJob":"f3058161-7349-4ca9-807d-212cee2c2e94"
     },
     "creationTime":1538615973895,
     "updateTime":1538616233239,
