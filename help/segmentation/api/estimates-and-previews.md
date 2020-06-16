@@ -156,7 +156,7 @@ A successful response returns HTTP status 200 with detailed information about th
 
 | Property | Description | 
 | -------- | ----------- |
-| `results` | 
+| `results` | A list of entity IDs, along with the related identities. |
 
 ## Retrieve the results of a specific estimate job {#get-estimate}
 

@@ -146,6 +146,23 @@ A successful response returns HTTP status 200 with a list of export jobs for the
 }
 ```
 
+| Property | Description |
+| -------- | ----------- |
+| `fields` | A list of the exported fields, separated by commas.  |
+| `filter.segments` | The segments that are exported. The following fields are included:<ul><li>`segmentId`: Segment ID for profiles to be exported.</li><li>`segmentNs`: Segment namespace for the given `segmentID`.</li><li>`status`: An array of strings providing a status filter for the `segmentID`. By default, `status` will have the value `["realized", "existing"]` which represents all profiles that fall into the segment at the current time. Possible values include: "realized", "existing", and "exited".</li></ul> |
+| `filter.segmentQualificationTime` | A filter based on segment qualification time. |
+| `filter.segmentQualificationTime.startTime` | The segment qualification start time for a segment ID for a given status. The timestamp is listed in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
+| `filter.segmentQualificationTime.endTime` | The segment qualification end time for a segment ID for a given status. The timestamp is listed in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
+| `filter.fromIngestTimestamp `| The exported profiles included are limited to those that have been updated after this timestamp. The timestamp is listed in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
+| `filter.emptyProfiles` | A boolean value that indicates whether empty Profiles are filtered for. |
+| `additionalFields.eventList` | The time series event fields exported for child or associated objects by providing one or more of the following settings:<ul><li>`fields`: The fields that are exported.</li><li>`filter`: The limits of the results included from associated objects.</li><li>`filter.fromIngestTimestamp`: Filters time series events to those that have been ingested after the provided timestamp. This is not the event time itself but the ingestion time for the events.</li></ul> |
+| `destination` | Destination information for the exported data:<ul><li>`datasetId`: The ID of the dataset where data was exported.</li><li>`segmentPerBatch`: A Boolean value that shows whether or not segment IDs are consolidated. A value of `false` means all the segment IDs were into a single batch ID. A value of `true` means that one segment ID is exported into one batch ID.</li></ul> |
+| `schema.name` | The name of the schema associated with the dataset where data is to be exported. |
+| `evaluationInfo.segmentation`| A boolean value that, if not provided, defaults to `false`. A value of `true` indicates that segmentation needs to be done on the export job. |
+| `destination.datasetId` | The `id` value of the dataset where the data is being exported to. |
+| `segments.segmentId` | The `id` value of the segment that is being exported. |
+| `segments.segmentNs` | The `namespace` for the given segment. |
+
 ## Create a new export job {#create}
 
 You can create a new export job by making a POST request to the `/export/jobs` endpoint.
@@ -420,6 +437,23 @@ A successful response returns HTTP status 200 with detailed information about th
     "requestId":"d995479c-8a08-4240-903b-af469c67be1f"
 }
 ```
+
+| Property | Description |
+| -------- | ----------- |
+| `fields` | A list of the exported fields, separated by commas.  |
+| `filter.segments` | The segments that are exported. The following fields are included:<ul><li>`segmentId`: Segment ID for profiles to be exported.</li><li>`segmentNs`: Segment namespace for the given `segmentID`.</li><li>`status`: An array of strings providing a status filter for the `segmentID`. By default, `status` will have the value `["realized", "existing"]` which represents all profiles that fall into the segment at the current time. Possible values include: "realized", "existing", and "exited".</li></ul> |
+| `filter.segmentQualificationTime` | A filter based on segment qualification time. |
+| `filter.segmentQualificationTime.startTime` | The segment qualification start time for a segment ID for a given status. The timestamp is listed in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
+| `filter.segmentQualificationTime.endTime` | The segment qualification end time for a segment ID for a given status. The timestamp is listed in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
+| `filter.fromIngestTimestamp `| The exported profiles included are limited to those that have been updated after this timestamp. The timestamp is listed in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
+| `filter.emptyProfiles` | A boolean value that indicates whether empty Profiles are filtered for. |
+| `additionalFields.eventList` | The time series event fields exported for child or associated objects by providing one or more of the following settings:<ul><li>`fields`: The fields that are exported.</li><li>`filter`: The limits of the results included from associated objects.</li><li>`filter.fromIngestTimestamp`: Filters time series events to those that have been ingested after the provided timestamp. This is not the event time itself but the ingestion time for the events.</li></ul> |
+| `destination` | Destination information for the exported data:<ul><li>`datasetId`: The ID of the dataset where data was exported.</li><li>`segmentPerBatch`: A Boolean value that shows whether or not segment IDs are consolidated. A value of `false` means all the segment IDs were into a single batch ID. A value of `true` means that one segment ID is exported into one batch ID.</li></ul> |
+| `schema.name` | The name of the schema associated with the dataset where data is to be exported. |
+| `evaluationInfo.segmentation`| A boolean value that, if not provided, defaults to `false`. A value of `true` indicates that segmentation needs to be done on the export job. |
+| `destination.datasetId` | The `id` value of the dataset where the data is being exported to. |
+| `segments.segmentId` | The `id` value of the segment that is being exported. |
+| `segments.segmentNs` | The `namespace` for the given segment. |
 
 ## Cancel or delete a specific export job {#delete}
 
