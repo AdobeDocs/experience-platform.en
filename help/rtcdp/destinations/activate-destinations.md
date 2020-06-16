@@ -57,7 +57,7 @@ To activate data to destinations, you must have successfully [connected a destin
 
     >[!IMPORTANT]
     >
-    >In this step, Real-time CDP checks for data governance policy violations. Shown below is an example where a data governance policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve data policy violations, see [Policy enforcement](/help/rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
+    >In this step, Real-time CDP checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](/help/rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
  
  ![confirm-selection](/help/rtcdp/destinations/assets/data-policy-violation.png)
 
