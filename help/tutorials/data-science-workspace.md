@@ -17,7 +17,7 @@ The Sensei Machine Learning API provides a mechanism for data scientists to orga
 - [Engines](../data-science-workspace/api/engines.md) - Learn how to look up your Docker registry, create an Engine, create a feature pipeline Engine, retrieve the information for an Engine, update an Engine, and delete an Engine.
 - [MLInstances (recipes)](../data-science-workspace/api/mlinstances.md) - Learn how to create an MLInstance, retrieve the information for an MLInstance, update an MLInstance, and delete an MLInstance.
 - [Experiments](../data-science-workspace/api/experiments.md) - Learn how to create an Experiment, retrieve an Experiment or Experiment runs information, update an Experiment, and delete an Experiment.
-- [Models](../data-science-workspace/api/models.md) - Learn how to register your own Model, retrieve the information for a Model, update a Model, delete a Model, create a new transcoding for a Model, and retrieve the transcoded Models details.
+- [Models](../data-science-workspace/api/models.md) - Learn how to register your own Model, retrieve the information for a Model, update a Model, delete a Model, create a new transcoding for a Model, and retrieve a transcoded Models details.
 - [MLServices](../data-science-workspace/api/mlservices.md) - Learn how to create an MLService, retrieve the information for an MLService, update an MLService, and delete an MLService.
 - [Insights](../data-science-workspace/api/insights.md) - Learn how to retrieve the information for an Insight, add a new Model Insight, and retrieve a list of default metrics for algorithms.
 
