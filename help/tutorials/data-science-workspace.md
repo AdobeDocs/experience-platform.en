@@ -91,7 +91,7 @@ Scoring in Adobe Experience Platform Data Science Workspace can be achieved by f
 - Create a new scoring run.
 - View your scoring results.
 
-To get started, follow the score a model [API tutorial](./data-science-workspace/models-recipes/score-model-api.md) or the [UI tutorial](../data-science-workspace/models-recipes/score-model-ui.md).
+To get started, follow the score a model [API tutorial](../data-science-workspace/models-recipes/score-model-api.md) or the [UI tutorial](../data-science-workspace/models-recipes/score-model-ui.md).
 
 ## Publish a model as a service
 
