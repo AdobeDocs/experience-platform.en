@@ -9,7 +9,7 @@ topic: Developer guide
 
 Model development and training occurs at the Experiment level, where an Experiment consists of an MLInstance, training runs, and scoring runs.
 
-## Create an Experiment
+## Create an Experiment {#create-an-experiment}
 
 You can create an Experiment by performing a POST request while providing a name and a valid MLInstance ID in the request payload.
 
@@ -33,7 +33,7 @@ curl -X POST \
     -H 'content-type: application/vnd.adobe.platform.sensei+json;profile=experiment.v1.json' \
     -d '{
         "name": "a name for this Experiment",
-        "mlInstanceId": "{MLINSTANCE_ID}"
+        "mlInstanceId": "46986c8f-7739-4376-8509-0178bdf32cda"
     }'
 ```
 
@@ -48,9 +48,9 @@ A successful response returns a payload containing the details of the newly crea
 
 ```json
 {
-    "id": "{EXPERIMENT_ID}",
+    "id": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
     "name": "A name for this Experiment",
-    "mlInstanceId": "{MLINSTANCE_ID}",
+    "mlInstanceId": "46986c8f-7739-4376-8509-0178bdf32cda",
     "created": "2019-01-01T00:00:00.000Z",
     "createdBy": {
         "userId": "Jane_Doe@AdobeID"
@@ -60,7 +60,7 @@ A successful response returns a payload containing the details of the newly crea
 }
 ```
 
-## Create and execute a training or scoring run
+## Create and execute a training or scoring run {#experiment-training-scoring}
 
 You can create training or scoring runs by performing a POST request and providing a valid Experiment ID and specifying the run task. Scoring runs can be created only if the Experiment has an existing and successful training run. Successfully creating a training run will initialize the model training procedure and its successful completion will generate a trained model. Generating trained models will replace any previously existing ones such that an Experiment can only utilize a single trained model at any given time.
 
@@ -78,7 +78,7 @@ POST /experiments/{EXPERIMENT_ID}/runs
 
 ```shell
 curl -X POST \
-    https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}/runs \
+    https://platform.adobe.io/data/sensei/experiments/5cb25a2d-2cbd-4c99-a619-8ddae5250a7b/runs \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -91,7 +91,7 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `{TASK}` | Specifies the run's task. Set this value as either `train` for training, `score` for scoring, or `fp` for feature pipeline. |
+| `{TASK}` | Specifies the run's task. Set this value as either `train` for training, `score` for scoring, or `featurePipeline` for feature pipeline. |
 
 **Response**
 
@@ -99,9 +99,9 @@ A successful response returns a payload containing the details of the newly crea
 
 ```json
 {
-    "id": "{RUN_ID}",
+    "id": "33408593-2871-4198-a812-6d1b7d939cda",
     "mode": "{TASK}",
-    "experimentId": "{EXPERIMENT_ID}",
+    "experimentId": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
     "created": "2019-01-01T00:00:00.000Z",
     "createdBy": {
         "userId": "Jane_Doe@AdobeID"
@@ -142,7 +142,7 @@ GET /experiments?property=mlInstanceId=={MLINSTANCE_ID}
 
 ```shell
 curl -X GET \
-    https://platform.adobe.io/data/sensei/experiments?property=mlInstanceId=={MLINSTANCE_ID} \
+    https://platform.adobe.io/data/sensei/experiments?property=mlInstanceId==46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -157,25 +157,25 @@ A successful response returns a list of Experiments sharing the same MLInstance 
 {
     "children": [
         {
-            "id": "{EXPERIMENT_ID}",
+            "id": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
             "name": "A name for this Experiment",
-            "mlInstanceId": "{MLINSTANCE_ID}",
+            "mlInstanceId": "46986c8f-7739-4376-8509-0178bdf32cda",
             "created": "2019-01-01T00:00:00.000Z",
             "updated": "2019-01-01T00:00:00.000Z",
             "createdByService": false
         },
         {
-            "id": "{EXPERIMENT_ID}",
+            "id": "6cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
             "name": "Training Run 1",
-            "mlInstanceId": "{MLINSTANCE_ID}",
+            "mlInstanceId": "46986c8f-7839-4376-8509-0178bdf32cda",
             "created": "2019-01-01T00:00:00.000Z",
             "updated": "2019-01-01T00:00:00.000Z",
             "createdByService": false
         },
         {
-            "id": "{EXPERIMENT_ID}",
+            "id": "7cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
             "name": "Training Run 2",
-            "mlInstanceId": "{MLINSTANCE_ID}",
+            "mlInstanceId": "46986c8f-7939-4376-8509-0178bdf32cda",
             "created": "2019-01-01T00:00:00.000Z",
             "updated": "2019-01-01T00:00:00.000Z",
             "createdByService": false
@@ -206,13 +206,12 @@ GET /experiments/{EXPERIMENT_ID}
 
 ```shell
 curl -X GET \
-    https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID} \
+    https://platform.adobe.io/data/sensei/experiments/5cb25a2d-2cbd-4c99-a619-8ddae5250a7b \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
-
 
 **Response**
 
@@ -220,9 +219,9 @@ A successful response returns a payload containing the details of the requested 
 
 ```json
 {
-    "id": "{EXPERIMENT_ID}",
+    "id": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
     "name": "A name for this Experiment",
-    "mlInstanceId": "{MLINSTANCE_ID}",
+    "mlInstanceId": "46986c8f-7739-4376-8509-0178bdf32cda",
     "created": "2019-01-01T00:00:00.000Z",
     "createdBy": {
         "userId": "Jane_Doe@AdobeID"
@@ -258,7 +257,7 @@ The following request contains a query and retrieves a list of training runs bel
 
 ```shell
 curl -X GET \
-    https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}/runs?property=mode==train \
+    https://platform.adobe.io/data/sensei/experiments/5cb25a2d-2cbd-4c99-a619-8ddae5250a7b/runs?property=mode==train \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -273,9 +272,9 @@ A successful response returns a payload containing a list of runs and each of th
 {
     "children": [
         {
-            "id": "{RUN_ID}",
+            "id": "33408593-2871-4198-a812-6d1b7d939cda",
             "mode": "train",
-            "experimentId": "{EXPERIMENT_ID}",
+            "experimentId": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
             "created": "2019-01-01T00:00:00.000Z",
             "createdBy": {
                 "userId": "Jane_Doe@AdobeID"
@@ -284,7 +283,7 @@ A successful response returns a payload containing a list of runs and each of th
         }
     ],
     "_page": {
-        "property": "mode==train,experimentId=={EXPERIMENT_ID},deleted==false",
+        "property": "mode==train,experimentId==5cb25a2d-2cbd-4c99-a619-8ddae5250a7b,deleted==false",
         "totalCount": 1,
         "count": 1
     }
@@ -302,7 +301,7 @@ The following sample API call updates an Experiments's name while having these p
 ```json
 {
     "name": "A name for this Experiment",
-    "mlInstanceId": "{MLINSTANCE_ID}",
+    "mlInstanceId": "46986c8f-7739-4376-8509-0178bdf32cda",
     "created": "2019-01-01T00:00:00.000Z",
     "createdBy": {
         "userId": "Jane_Doe@AdobeID"
@@ -325,7 +324,7 @@ PUT /experiments/{EXPERIMENT_ID}
 
 ```shell
 curl -X PUT \
-    https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID} \
+    https://platform.adobe.io/data/sensei/experiments/5cb25a2d-2cbd-4c99-a619-8ddae5250a7b \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -333,7 +332,7 @@ curl -X PUT \
     -H 'content-type: application/vnd.adobe.platform.sensei+json;profile=experiments.v1.json' \
     -d '{
         "name": "An upated name",
-        "mlInstanceId": "{MLINSTANCE_ID}",
+        "mlInstanceId": "46986c8f-7739-4376-8509-0178bdf32cda",
         "created": "2019-01-01T00:00:00.000Z",
         "createdBy": {
             "userId": "Jane_Doe@AdobeID"
@@ -348,9 +347,9 @@ A successful response returns a payload containing the Experiment's updated deta
 
 ```json
 {
-    "id": "{EXPERIMENT_ID}",
+    "id": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
     "name": "An updated name",
-    "mlInstanceId": "{MLINSTANCE_ID}",
+    "mlInstanceId": "46986c8f-7739-4376-8509-0178bdf32cda",
     "created": "2019-01-01T00:00:00.000Z",
     "createdBy": {
         "userId": "Jane_Doe@AdobeID"
@@ -378,7 +377,7 @@ DELETE /experiments/{EXPERIMENT_ID}
 
 ```shell
 curl -X DELETE \
-    https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID} \
+    https://platform.adobe.io/data/sensei/experiments/5cb25a2d-2cbd-4c99-a619-8ddae5250a7b \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -413,7 +412,7 @@ DELETE /experiments?mlInstanceId={MLINSTANCE_ID}
 
 ```shell
 curl -X DELETE \
-    https://platform.adobe.io/data/sensei/experiments?mlInstanceId={MLINSTANCE_ID} \
+    https://platform.adobe.io/data/sensei/experiments?mlInstanceId=46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
