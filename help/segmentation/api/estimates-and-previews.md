@@ -17,7 +17,11 @@ In particular, the [getting started section](./getting-started.md#getting-starte
 
 ## How estimates are generated
 
-Data samples are used to evaluate segments and estimate the number of qualifying profiles. New data is loaded into memory each morning (between 12AM-2AM PT, which is 7-9AM UTC), and all segmentation queries are estimated using that day's sample data. Consequently, any new fields added or additional data collected will be reflected in estimates the following day.
+The method of data sampling is dependant on the method of ingestion.
+
+For batch ingestion, every fifteen minutes, the segments are automatically scanned to see if a newly successful batch was ingested since the last sampling job was run. If that is the case, the segments are scanned to see if there's been at least a 5% change in the number of records. If the segment matches both of these conditions, a new sampling job is triggered.
+
+For streaming ingestion, every hour, the segments are automatically scanned to see if there's been at least a 5% change in the number of records. If a segment matches this threshold, a new sampling job is triggered.
 
 The sample size depends on the overall number of entities in your profile store. These sample sizes are represented in the following table:
 
