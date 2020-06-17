@@ -7,7 +7,9 @@ topic: tutorial
 
 # Data Science Workspace tutorials
 
-Adobe Experience Platform Data Science Workspace uses machine learning and artificial intelligence to create insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe solutions. Data scientists of all skill levels have sophisticated, easy-to-use tools that support rapid development, training, and tuning of machine learning recipes - all the benefits of AI technology, without the complexity. To learn more, begin by reading the [Data Science Workspace overview](../data-science-workspace/home.md).
+Adobe Experience Platform Data Science Workspace uses machine learning and artificial intelligence to create insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe solutions. Data scientists of all skill levels have sophisticated, easy-to-use tools that support rapid development, training, and tuning of machine learning recipes - all the benefits of AI technology, without the complexity. 
+
+To learn more, begin by reading the [Data Science Workspace overview](../data-science-workspace/home.md).
 
 ## Sensei Machine Learning API
 
@@ -31,6 +33,7 @@ This document provides an overview of JupyterLab and its features as well as ins
 **This guide will help you:**
 - Access and understand the JupyterLab interface.
 - Understand code cells and the available kernels within JupyterLab.
+- Understand GPU and memory server configuration in Python/R.
 - Read and query [!DNL Platform] data using Notebooks.
 - Understand the Notebook data limits.
 
