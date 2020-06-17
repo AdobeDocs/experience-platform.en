@@ -75,7 +75,7 @@ curl -X POST \
         "artifacts": {
             "default": {
                 "image": {
-                    "location": "{DOCKER_URL}",
+                    "location": "v1rsvj32smc4wbs.azurecr.io/ml-featurepipeline-pyspark:1.0",
                     "name": "An additional name for the Docker image",
                     "executionType": "Python"
                 }
@@ -138,7 +138,7 @@ A successful response returns a payload containing the details of the newly crea
 
 ```json
 {
-    "id": "{ENGINE_ID}",
+    "id": "22f4166f-85ba-4130-a995-a2b8e1edde32",
     "name": "A name for this Engine",
     "description": "A description for this Engine",
     "type": "Python",
@@ -151,7 +151,7 @@ A successful response returns a payload containing the details of the newly crea
     "artifacts": {
         "default": {
             "image": {
-                "location": "{DOCKER_URL}",
+                "location": "v1rsvj32smc4wbs.azurecr.io/ml-featurepipeline-pyspark:1.0",
                 "name": "An additional name for the Docker image",
                 "executionType": "Python",
                 "packagingType": "docker"
@@ -195,7 +195,7 @@ curl -X POST \
                 "executionType": "PySpark",
                 "packagingType": "docker"
             },
-           "defaultMLInstanceConfigs": [
+           "defaultMLInstanceConfigs": [ ...
            ]
        }
    }
@@ -212,6 +212,7 @@ curl -X POST \
 | `artifacts.default.image.location` | The location of the Docker image. Only Azure ACR or Public (unauthenticated) Dockerhub is supported. |
 | `artifacts.default.image.executionType` | The execution type of the Engine. This value corresponds to the language in which the Docker image is built upon. This can be either "Spark" or "PySpark". |
 | `artifacts.default.image.packagingType` | The packaging type of the Engine. This value should be set to `docker`. |
+| `artifacts.default.defaultMLInstanceConfigs` | Your `pipeline.json` configuration file parameters. |
 
 **Response**
 
@@ -235,7 +236,8 @@ A successful response returns a payload containing the details of the newly crea
                 "name": "datatransformation",
                 "executionType": "PySpark",
                 "packagingType": "docker"
-            }
+            },
+        "defaultMLInstanceConfigs": [ ... ]
         }
     }
 }
@@ -272,7 +274,7 @@ A successful response returns a list of Engines and their details.
 {
     "children": [
         {
-            "id": "{ENGINE_ID}",
+            "id": "22f4166f-85ba-4130-a995-a2b8e1edde31",
             "name": "A name for this Engine",
             "description": "A description for this Engine",
             "type": "PySpark",
@@ -284,7 +286,7 @@ A successful response returns a list of Engines and their details.
             "updated": "2019-01-01T00:00:00.000Z"
         },
         {
-            "id": "{ENGINE_ID}",
+            "id": "22f4166f-85ba-4130-a995-a2b8e1edde32",
             "name": "A name for this Engine",
             "description": "A description for this Engine",
             "type": "Python",
@@ -296,7 +298,7 @@ A successful response returns a list of Engines and their details.
             "updated": "2019-01-01T00:00:00.000Z"
         },
         {
-            "id": "{ENGINE_ID}",
+            "id": "22f4166f-85ba-4130-a995-a2b8e1edde33",
             "name": "Feature Pipeline Engine",
             "description": "A feature pipeline Engine",
             "type": "PySpark",
@@ -334,7 +336,7 @@ GET /engines/{ENGINE_ID}
 
 ```shell
 curl -X GET \
-    https://platform.adobe.io/data/sensei/engines/{ENGINE_ID} \
+    https://platform.adobe.io/data/sensei/engines/22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -347,7 +349,7 @@ A successful response returns a payload containing the details of the desired En
 
 ```json
 {
-    "id": "{ENGINE_ID}",
+    "id": "22f4166f-85ba-4130-a995-a2b8e1edde32",
     "name": "A name for this Engine",
     "description": "A description for this Engine",
     "type": "PySpark",
@@ -360,10 +362,10 @@ A successful response returns a payload containing the details of the desired En
     "artifacts": {
         "default": {
             "image": {
-                "location": "wasbs://artifact-location.blob.core.windows.net/{ENGINE_ID}/default.egg",
+                "location": "v7d1cs2mimnlttw.azurecr.io/ml-featurepipeline-pyspark:0.2.1",
                 "name": "file.egg",
                 "executionType": "PySpark",
-                "packagingType": "egg"
+                "packagingType": "docker"
             }
         }
     }
@@ -409,7 +411,7 @@ PUT /engines/{ENGINE_ID}
 
 ```shell
 curl -X PUT \
-    https://platform.adobe.io/data/sensei/engines/{ENGINE_ID} \
+    https://platform.adobe.io/data/sensei/engines/22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -437,7 +439,7 @@ A successful response returns a payload containing the Engine's updated details.
 
 ```json
 {
-    "id": "{ENGINE_ID}",
+    "id": "22f4166f-85ba-4130-a995-a2b8e1edde32",
     "name": "An updated name for this Engine",
     "description": "An updated description",
     "type": "Python",
@@ -477,7 +479,7 @@ DELETE /engines/{ENGINE_ID}
 
 ```shell
 curl -X DELETE \
-    https://platform.adobe.io/data/sensei/engines/{ENGINE_ID} \
+    https://platform.adobe.io/data/sensei/engines/22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
