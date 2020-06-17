@@ -17,10 +17,11 @@ The dashboard for the Privacy Service UI provides two widgets that allow you to 
 
 ### Regulation Type
 
-Privacy Service supports job requests for two regulation types: 
+Privacy Service supports job requests for three regulation types: 
 
-* The General Data Protection Regulation (GDPR)
-* The California Consumer Privacy Act (CCPA). 
+* The European Union's General Data Protection Regulation (GDPR)
+* The California Consumer Privacy Act (CCPA)
+* Thailand's Personal Data Protection Act (PDPA_THA)
 
 Jobs for each regulation type are tracked separately. To switch between regulation types, click the **Regulation Type** dropdown menu and select the desired regulation from the list.
 

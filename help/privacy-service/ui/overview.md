@@ -13,15 +13,17 @@ Adobe Experience Platform Privacy Service provides a RESTful API and user interf
 
 You must have an Adobe ID in order to authenticate to the Privacy Service UI. In addition, you must have System Administrator privileges within the organization your Adobe ID is associated with.
 
-Navigate to the Adobe Experience Cloud sign-in page at https://experience.adobe.com. Click **Sign In with an Adobe ID** and enter your Adobe ID credentials when prompted. Once you are signed in, click **Administration**.
+Navigate to the Adobe Experience Cloud sign-in page at https://experience.adobe.com. Click **[!UICONTROL Sign In with an Adobe ID]** and enter your Adobe ID credentials when prompted. 
 
-![Administration tab](../images/ui-overview/admin-tab.png)
+Once you are signed in, click **[!UICONTROL Privacy UI]**.
 
->[!NOTE] The Administration tab only appears if you have system admin privileges within your organization.
+![](../images/ui-overview/quick-access.png)
 
-Finally, select **Launch Privacy UI** on the next screen to open the Privacy Service UI.
+### Logging in from Experience Platform
 
-![Administration page](../images/ui-overview/admin-page.png)
+If you have access to the Adobe Experience Platform UI, you can also access the Privacy Service UI through the **[!UICONTROL Requests]** tab in the left navigation.
+
+![](../images/ui-overview/platform.png)
 
 ## Next steps
 
