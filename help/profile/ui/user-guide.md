@@ -27,7 +27,7 @@ In the [Experience Platform UI](http://platform.adobe.com), click **Profiles** i
 
 ## Profile Browse
 
-Click the **Browse** tab in order to browse profiles by identities. This tab also contains your total [profile count](#profile-count). 
+Click the **Browse** tab in order to browse profiles by identities. This tab also contains important metrics related to your profile data, including your total [profile count](#profile-count) as well as a listing of profiles by namespace. 
 
 ![](../images/user-guide/profiles-browse.png)
 
@@ -38,6 +38,12 @@ The profile count displays the total number of profiles your organization has wi
 The profile count also includes both profiles with attributes (record data) as well as profiles containing only time series (event) data, such as Adobe Analytics profiles. The profile count is refreshed regularly to provide an up-to-date total number of profiles within Platform. 
 
 When the ingestion of profiles into the Profile Store increases or decreases the count by more than 5%, a job is triggered to update the count. For streaming data workflows, a check is done on an hourly basis to determine if the 5% increase or decrease threshold has been met. If it has, a job is automatically triggered to update the profile count. For batch ingestion, within 15 minutes of successfully ingesting a batch into the Profile Store, if the 5% increase or decrease threshold is met, a job is run to update the profile count.
+
+### Merge policy
+
+The **Merge policy** selector automatically selects the default merge policy for your organization. If you do not wish to use that merge policy you can select the `X` beside the default merge policy to open a *Select merge policy* dialog where you can choose another merge policy. For more information on working with merge policies in the UI, including how to define a default merge policy, see the [Merge Policies user guide](merge-policies.md).
+
+![](../images/user-guide/profiles-search-merge-policy.png)
 
 ### Identity namespace
 
