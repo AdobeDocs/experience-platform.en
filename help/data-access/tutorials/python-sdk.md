@@ -83,7 +83,7 @@ client_context = ClientContext(api_key={API_KEY},
                                sandbox_id={SANDBOX_ID},
                                sandbox_name={SANDBOX_NAME})
 
-dataset_reader = DatasetReader(client_context, <dataset_id>)
+dataset_reader = DatasetReader(client_context, {DATASET_ID})
 df = dataset_reader.read()
 ```
 
@@ -103,7 +103,7 @@ client_context = ClientContext(api_key={API_KEY},
                                sandbox_id={SANDBOX_ID},
                                sandbox_name={SANDBOX_NAME})
 
-dataset = Dataset(client_context).get_by_id(<dataset_id>)
+dataset = Dataset(client_context).get_by_id({DATASET_ID})
 partitions = dataset.get_partitions_info()
 ```
 
@@ -184,7 +184,7 @@ client_context = ClientContext(api_key={API_KEY},
                                sandbox_name={SANDBOX_NAME})
 
 # To fetch existing dataset
-dataset = Dataset(client_context).get_by_id(<dataset_id>)
+dataset = Dataset(client_context).get_by_id({DATASET_ID})
 
 dataset_writer = DatasetWriter(client_context, dataset)
 

@@ -44,7 +44,7 @@ Other configuration parameters include:
 
 Alternatively, aside from `ENVIRONMENT_NAME`, you can set any of the above environment variables within `QSOption`, as seen in the example below:
 
-```python
+```spark
     val df = spark.read
       .format("com.adobe.platform.query")
       .option(QSOption.userToken, userToken) // same as env var USER_TOKEN
@@ -67,4 +67,49 @@ Interactive mode creates a Java Database Connectivity (JDBC) connection to Query
 
 Batch mode uses Query Service's COPY command to generate Parquet result sets in a shared location. These Parquet files can then be further processed. This mode requires both a user token and a service token with the `acp.foundation.catalog.credentials` scope.
 
-An example of 
+An example of reading a dataset in interactive mode can be seen below:
+
+```spark
+val df = spark.read
+      .format("com.adobe.platform.query")
+      .option("user-token", {USER_TOKEN})
+      .option("ims-org", {IMS_ORG})
+      .option("api-key", {SERVICE_API_KEY})
+      .option("mode", "interactive")
+      .option("dataset-id", {DATASET_ID})
+      .option("sandbox-name", {SANDBOX_NAME})
+      .load()
+df.show()
+```
+
+Similarly, an example of reading a dataset in batch mode can be seen below:
+
+```spark
+val df = spark.read
+      .format("com.adobe.platform.query")
+      .option("user-token", {USER_TOKEN})
+      .option("service-token", {SERVICE_TOKEN})
+      .option("ims-org", {IMS_ORG})
+      .option("api-key", {SERVICE_API_KEY})
+      .option("mode", "batch")
+      .option("dataset-id", {DATASET_ID})
+      .option("sandbox-name", {SANDBOX_NAME})
+      .load()
+df.show()
+```
+
+### SELECT columns from the dataset
+
+The Spark SDK supports querying the 
+
+### LIMIT clause
+
+The LIMIT clause allows users to limit the number of records received from the dataset.
+
+An example of using the `limit()` function can be seen below:
+
+```spark
+df = df.limit(100)
+```
+
+## Writing to a dataset
