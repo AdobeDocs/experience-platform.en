@@ -7,60 +7,86 @@ topic: tutorial
 
 # Map a CSV file to an XDM schema
 
-In order to ingest CSV data into Adobe Experience Platform, the data must be mapped to an Experience Data Model (XDM) schema. This tutorial covers how to map a CSV file to an XDM schema using the Experience Platform user interface.
+In order to ingest CSV data into [!DNL Adobe Experience Platform], the data must be mapped to an Experience Data Model (XDM) schema. This tutorial covers how to map a CSV file to an XDM schema using the [!DNL Platform] user interface.
 
 In addition, the appendix to this tutorial provides further information regarding the use of [mapping functions](#mapping-functions).
 
 ## Getting started
 
-This tutorial requires a working understanding of the following components of Adobe Experience Platform:
+This tutorial requires a working understanding of the following components of [!DNL Platform]:
 
-- [Experience Data Model (XDM System)](../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-- [Batch ingestion](../batch-ingestion/overview.md): The method by which Platform ingests data from user-supplied datafiles.
+- [Experience Data Model (XDM System)](../../xdm/home.md): The standardized framework by which Experience [!DNL Platform] organizes customer experience data.
+- [Batch ingestion](../batch-ingestion/overview.md): The method by which [!DNL Platform] ingests data from user-supplied datafiles.
 
 This tutorial also requires that you have already created a dataset to ingest your CSV data into. For steps on creating a dataset in the UI, see the [data ingest tutorial](./ingest-batch-data.md).
 
+## Choose a destination
+
+Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Workflows]** from the left navigation bar to access the *[!UICONTROL Workflows]* workspace.
+
+From the **[!UICONTROL Workflows]** screen, select **[!UICONTROL Map CSV to XDM schema]** under the **[!UICONTROL Data ingestion]** section and then select **[!UICONTROL Launch]**
+
+![](../images/tutorials/map-a-csv-file/workflows.png)
+
+The *[!UICONTROL Map CSV to XDM schema]* workflow appears, starting on the *[!UICONTROL Destination]* step. Choose a dataset for inbound data to be ingested into. You can either use an existing dataset or create a new one.
+
+**Use an existing dataset**
+
+To ingest your CSV data into an existing dataset, select **[!UICONTROL Use existing dataset]**. You can either retrieve an existing dataset using the search function or by scrolling through the list of existing datasets in the panel.
+
+![](../images/tutorials/map-a-csv-file/existing-dataset.png)
+
+To ingest your CSV data into a new dataset, select **[!UICONTROL Create new dataset]** and enter a name and description for the dataset in the fields provided. Select a schema by using either the search function or by scrolling through the list of schemas provided. Select **[!UICONTROL Next]** to proceed.
+
+![](../images/tutorials/map-a-csv-file/create-new-dataset.png)
+
 ## Add data
 
-In the Experience Platform UI, click **Workflows** in the left navigation, then click **Map CSV to XDM schema**. In the right-hand rail that appears, click **Launch**.
-
-![](../images/tutorials/map-a-csv-file/workflow-tab.png)
-
-The _Map CSV to XDM schema_ workflow appears, starting on the _Add data_ step. 
+The *[!UICONTROL Add data]* step appears. Drag-and-drop your CSV file into the space provided, or select **[!UICONTROL Choose files]** to manually input your CSV file.
 
 ![](../images/tutorials/map-a-csv-file/add-data.png)
 
-Drag-and-drop your CSV file into the space provided, or click **Browse** to select a file directly. A _Sample data_ section appears once the file is uploaded, showing the first ten rows of data. Once you have confirmed that the data has uploaded as expected, click **Next**.
+A *[!UICONTROL Sample data]* section appears once the file is uploaded, showing the first ten rows of data. Once you have confirmed that the data has uploaded as expected, select **[!UICONTROL Next]**.
 
 ![](../images/tutorials/map-a-csv-file/csv-added.png)
 
-## Choose a destination
-
-The _Destination_ step appears. From the provided list, select the dataset that the CSV data will be ingested into, then click **Next**.
-
-![](../images/tutorials/map-a-csv-file/select-destination.png)
-
 ## Map CSV fields to XDM schema fields
 
-The _Mapping_ step appears. The columns of the CSV file are listed under _Source Field_, with their corresponding XDM schema fields listed under _Target Field_. Unselected target fields are outlined in red.
+The *[!UICONTROL Mapping]* step appears. The columns of the CSV file are listed under *[!UICONTROL Source Field]*, with their corresponding XDM schema fields listed under *[!UICONTROL Target Field]*. Unselected target fields are outlined in red. You can use the filter fields option to narrow down the list of source fields available.
 
-To map a CSV column to an XDM field, click the schema icon next to the column's corresponding target field.
+To map a CSV column to an XDM field, select the schema icon next to the column's corresponding target field.
 
-![](../images/tutorials/map-a-csv-file/target-field-mapping.png)
+![](../images/tutorials/map-a-csv-file/mapping.png)
 
-The _Select schema field_ window appears. Here you can navigate the structure of the XDM schema and locate the field you wish to map the CSV column to. Click an XDM field to select it, then click **Select**.
+The *[!UICONTROL Select schema field]* window appears. Here you can navigate the structure of the XDM schema and locate the field you wish to map the CSV column to. Click an XDM field to select it, then click **Select**.
 
-![](../images/tutorials/map-a-csv-file/xdm-field-selection.png)
+![](../images/tutorials/map-a-csv-file/select-schema-field.png)
 
-The _Mapping_ screen reappears, with the selected XDM field now appearing under _Target Field_.
+The *[!UICONTROL Mapping]* screen reappears, with the selected XDM field now appearing under *[!UICONTROL Target Field]*.
 
-![](../images/tutorials/map-a-csv-file/xdm-field-mapped.png)
+![](../images/tutorials/map-a-csv-file/field-mapped.png)
 
-If you do not wish to map a particular CSV column, you can remove the mapping by clicking the **remove icon** next to the target field. If you want to add a new mapping, click **Add new mapping** at the bottom of the list.
+If you do not wish to map a particular CSV column, you can remove the mapping by clicking the **remove icon** next to the target field. You can also remove all mappings by selecting the **[!UICONTROL Clear all mappings button]**.
 
-![](../images/tutorials/map-a-csv-file/remove-or-add-mapping.png)
+![](../images/tutorials/map-a-csv-file/remove-mapping.png)
+
+If you want to add a new mapping, click **[!UICONTROL Add new mapping]** at the top of the *[!UICONTROL Source Field]* list.
+
+![](../images/tutorials/map-a-csv-file/add-mapping.png)
 
 When mapping fields, you can also include functions to compute values based on input source fields. See the [mapping functions](#mapping-functions) section in the appendix for more information.
+
+**Add calculated field**
+
+Calculated Fields allow for values to be crated based on the attributes in the input schema. These values can then be assigned to attributes in the target schema.
+
+A Name and Description can be assigned to Calculated Attributes for easy reference later.
+
+Select the **[!UICONTROL Add calculated field]** button to proceed.
+
+![](../images/tutorials/map-a-csv-file/add-calculated-field.png)
+
+The **[!UICONTROL Create calculated field]** appears.
 
 Repeat the above steps to continue mapping CSV columns to XDM fields. Once you are finished, click **Next**.
 
