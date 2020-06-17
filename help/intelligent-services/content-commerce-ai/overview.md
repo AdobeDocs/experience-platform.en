@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;getting started;attribution ai;popular topics
+keywords: Experience Platform;getting started;content and commerce ai;popular topics
 solution: Experience Platform
-title: Getting started in Attribution AI
-topic: Getting started  
+title: Content and Commerce AI overview
+topic: Concent and Commerce AI 
 ---
 
 # Content and Commerce AI overview
@@ -20,21 +20,23 @@ Content is the lifeblood of these experiences. To better answer marketing questi
 | Text | - Keyword & Entity extraction <br>- Custom classifiers | - Automatically extract keywords and tags from enterprise documents and webpages using an out-of-the-box AI service. <br> - Automatically label an enterprise's documents or webpages per a corporate taxonomy using a service built on custom AI models. | 
 Images | - Visual recommendations <br> - Color extraction | - Deliver visually similar product recommendations to consumers, powered by an AI model developed on intuitive product features (design, color, shape). <br> - Accurately extract and quantify the color composition of a product image. |
 
-## Content and Commerce AI workflow
+## Understanding Content and Commerce AI 
 
-**Step 1: Understand the Content**
-- Extract intelligent features and metadata
-- Organize content (tag, categorize, group, de-duplicate)
-- Associate content data with assets
+The following workflow outlines the three steps Content and Commerce AI assists with to improve customer driven KPI's.
 
-**Step 2: Understand the Customer**
-- Associate customer's actions with content metadata
-- Get customer's preferences and affinities from content and actions
-- Add preferences to customer's profile
+**Step 1: Understanding the Content**
+- Extract intelligent features and metadata.
+- Organize content (tag, categorize, group, de-duplicate).
+- Associate content data with assets.
 
-**Step 3: Enable Experience Optimization**
-- Use customer's profile to deliver improved, personalized experiences, in session and for subsequent experiences
-- Use content features to gain insights into customers' behaviors that drive KPI's
+**Step 2: Understanding the Customer**
+- Associate customer's actions with content metadata.
+- Get customer's preferences and affinities from content and actions.
+- Add preferences to customer's profile.
+
+**Step 3: Enabling Experience Optimization**
+- Use customer's profile to deliver improved, personalized experiences, in session and for subsequent experiences.
+- Use content features to gain insights into customers' behaviors that drive KPI's.
 - Use content insights for improved content creation, authoring, and selection.
 
 ## Getting started with Content and Commerce AI
