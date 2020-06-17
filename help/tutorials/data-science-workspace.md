@@ -19,7 +19,7 @@ The Sensei Machine Learning API provides a mechanism for data scientists to orga
 - [Engines](../data-science-workspace/api/engines.md) - Learn how to look up your Docker registry, create an Engine, create a feature pipeline Engine, retrieve the information for an Engine, update an Engine, and delete an Engine.
 - [MLInstances (recipes)](../data-science-workspace/api/mlinstances.md) - Learn how to create an MLInstance, retrieve the information for an MLInstance, update an MLInstance, and delete an MLInstance.
 - [Experiments](../data-science-workspace/api/experiments.md) - Learn how to create an Experiment, retrieve an Experiment or Experiment runs information, update an Experiment, and delete an Experiment.
-- [Models](../data-science-workspace/api/models.md) - Learn how to register your own Model, retrieve the information for a Model, update a Model, delete a Model, create a new transcoding for a Model, and retrieve a transcoded Models details.
+- [Models](../data-science-workspace/api/models.md) - Learn how to register your own Model, retrieve the information for a Model, update a Model, delete a Model, create a new transcoding for a Model, and retrieve a transcoded Model's details.
 - [MLServices](../data-science-workspace/api/mlservices.md) - Learn how to create an MLService, retrieve the information for an MLService, update an MLService, and delete an MLService.
 - [Insights](../data-science-workspace/api/insights.md) - Learn how to retrieve the information for an Insight, add a new Model Insight, and retrieve a list of default metrics for algorithms.
 
@@ -27,12 +27,11 @@ To learn more and get the required values for performing CRUD operations with th
 
 ## How to use JupyterLab Notebooks
 
-JupyterLab is a web-based user interface for Project Jupyter and is tightly integrated into Adobe Experience Platform. It provides an interactive development environment for data scientists to work with Jupyter notebooks, code, and data.
-This document provides an overview of JupyterLab and its features as well as instructions to perform common actions.
+[!DNL JupyterLab] is a web-based user interface for [!DNL Project Jupyter] and is tightly integrated into Adobe Experience Platform. It provides an interactive development environment for data scientists to work with Jupyter notebooks, code, and data. This document provides an overview of [!DNL JupyterLab] and its features as well as instructions to perform common actions.
 
 **This guide will help you:**
-- Access and understand the JupyterLab interface.
-- Understand code cells and the available kernels within JupyterLab.
+- Access and understand the [!DNL JupyterLab] interface.
+- Understand code cells and the available kernels within [!DNL JupyterLab].
 - Understand GPU and memory server configuration in Python/R.
 - Read and query [!DNL Platform] data using Notebooks.
 - Understand the Notebook data limits.
@@ -44,7 +43,7 @@ This document provides an overview of JupyterLab and its features as well as ins
 A Docker image allows you to package up an application with all the parts it needs. This includes libraries and other dependencies all in one package. The built Docker image is pushed to the Azure Container Registry using credentials supplied to you during the recipe creation workflow. 
 
 **This tutorial will help you:**
-- Download the required pre-requisites for recipe creation.
+- Download the required prerequisites for recipe creation.
 - Understand Docker based model authoring.
 - Build a Docker image for Python, R, PySpark, or Scala (Spark).
 - Obtain a Docker source file URL.
@@ -62,7 +61,7 @@ The import recipe tutorials provide insights on how to configure and import a pa
 - Create a set of configurations for a recipe.
 - Import a Docker based recipe for Python, R, PySpark, or Scala (Spark).
 
-To learn more, follow the [import a packaged recipe (UI)](../data-science-workspace/models-recipes/import-packaged-recipe-ui.md) or the [import a packaged recipe (API)](../data-science-workspace/models-recipes/import-packaged-recipe-api.md) tutorial.
+To learn more, follow the import a packaged recipe [UI tutorial](../data-science-workspace/models-recipes/import-packaged-recipe-ui.md) or the [API tutorial](../data-science-workspace/models-recipes/import-packaged-recipe-api.md).
 
 ## Train and evaluate a model
 
@@ -77,7 +76,7 @@ To get started, follow the training and evaluating a model [API tutorial](../dat
 
 ## Optimize a Model using the Model Insights framework
 
-The Model Insights Framework provides the data scientist with tools in Data Science Workspace to make quick and informed choices for optimal machine learning models based on experiments. The framework will improve the speed and effectiveness of the machine learning workflow as well as improving ease of use for data scientists. This is done by providing a default template for each machine learning algorithm type to assist with model tuning. The end result allows data scientists and citizen data scientists to make better model optimization decisions for their end customers.
+The Model Insights Framework provides the data scientist with tools in Adobe Experience Platform Data Science Workspace to make quick and informed choices for optimal machine learning models based on experiments. The framework will improve the speed and effectiveness of the machine learning workflow as well as improving ease of use for data scientists. This is done by providing a default template for each machine learning algorithm type to assist with model tuning. The end result allows data scientists and citizen data scientists to make better model optimization decisions for their end customers.
 
 **This tutorial will help you:**
 - Configure recipe code.
@@ -98,17 +97,17 @@ To get started, follow the score a model [API tutorial](../data-science-workspac
 
 ## Publish a model as a service
 
-Data Science Workspace allows you to publish your Model as a Service, enabling users within your IMS Organization to score data without the need for creating their own Models. This can be done using the [!DNL Platform] user interface or the Sensei Machine Learning API.
+Adobe Experience Platform Data Science Workspace allows you to publish your Model as a service, enabling users within your IMS Organization to score data without the need for creating their own Models. This can be done using the [!DNL Platform] user interface or the Sensei Machine Learning API.
 
 **This tutorial will help you:**
 - Publish a Model as a service.
-- Score data using a service via the *Service Gallery*.
+- Score data using a service via the [!DNL Platform] Service Gallery.
 
 To get started, follow the publish a model as a service [API tutorial](../data-science-workspace/models-recipes/publish-model-service-api.md) or the [UI tutorial](../data-science-workspace/models-recipes/publish-model-service-ui.md).
 
 ## Schedule training and scoring for a Model
 
-Data Science Workspace allows you to set up scheduled scoring and training runs on a machine learning Service. Automating the training and scoring process can help maintain and improve a Service's efficiency through time by keeping up with patterns within your data. 
+Adobe Experience Platform Data Science Workspace allows you to set up scheduled scoring and training runs on a machine learning service. Automating the training and scoring process can help maintain and improve a service's efficiency through time by keeping up with patterns within your data. 
 
 **This tutorial will help you:**
 - Configure scheduled scoring
