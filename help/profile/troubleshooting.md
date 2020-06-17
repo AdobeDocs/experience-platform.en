@@ -99,7 +99,7 @@ When creating a new computed attribute, this error occurs when the provided `nam
 
 This error occurs when an invalid payload is provided for a delete system job. Ensure that you are providing a valid dataset or batch ID under the payload's `dataSetID` or `batchID` property, respectively. See the section on [creating a delete request](./api/profile-system-jobs.md#create-a-delete-request) in the Profile developer guide for more information.
 
-### Feed batch not found for profile dataset
+### Batch not found for profile dataset
 
 ```json
 {
@@ -108,7 +108,7 @@ This error occurs when an invalid payload is provided for a delete system job. E
     "400":[
       {
         "code":"400",
-        "message":"Feed batch not found for profile dataset   '5da688d2c4e60518ad25b7b1'   "
+        "message":"Batch not found for profile dataset '5da688d2c4e60518ad25b7b1'"
       }
     ]
   }
