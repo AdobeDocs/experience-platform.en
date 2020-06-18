@@ -53,7 +53,7 @@ To learn more, follow the [package source files into a recipe tutorial](../data-
 ## Import a recipe
 
 >[!NOTE] 
->This tutorial requires you to have a Docker source file URL.
+>This tutorial requires you to have a Docker source file URL. Visit the [package source files into a recipe tutorial](../data-science-workspace/models-recipes/package-source-files-recipe.md) if you do not have a Docker source file URL.
 
 The import recipe tutorials provide insights on how to configure and import a packaged recipe. By the end of this tutorial, you can create, train, and evaluate a Model in Adobe Experience Platform Data Science Workspace.
 
