@@ -7,6 +7,9 @@ topic: overview
 
 # (Beta) ServiceNow connector
 
+>[!NOTE]
+>The ServiceNow connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 Experience Platform provides support for ingesting data from a third-party customer success system. Support for customer success providers include ServiceNow.
