@@ -8,7 +8,7 @@ topic: overview
 # Create a GreenPlum source connector in the UI
 
 > [!NOTE]
-> The GreenPlum connector is in beta. The features and documentation are subject to change.
+> The GreenPlum connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an GreenPlum source connector using the Platform user interface.
 
