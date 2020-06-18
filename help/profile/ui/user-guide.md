@@ -27,15 +27,15 @@ In the [Experience Platform UI](http://platform.adobe.com), click **Profiles** i
 
 ## Profile Browse
 
-Click the **Browse** tab in order to browse profiles by identities. 
+Click the **Browse** tab in order to browse profiles by identity. 
 
 ### Profile metrics {#profile-metrics}
 
-On the right-hand side of the **Browse** tab are several important profile metrics related to your profile data, including your total [profile count](#profile-count) as well as a listing of profiles by namespace. 
+On the right-hand side of the **Browse** tab are several important profile metrics related to your profile data, including your total [profile count](#profile-count) as well as a listing of [profiles by namespace](#profiles-by-namespace). 
 
-These profile metrics are evaluated with the default merge policy for your organization. For more information on working with merge policies, including how to define a default merge policy, see the [Merge Policies user guide](merge-policies.md).
+These profile metrics are evaluated using the default merge policy of your organization. For more information on working with merge policies, including how to define a default merge policy, see the [Merge Policies user guide](merge-policies.md).
 
-In addition to these metrics, the profile metrics area also provides a *Last updated* date and time, showing when the metrics were last evaluated.
+In addition to these metrics, the profile metrics section also provides a *Last updated* date and time, showing when the metrics were last evaluated.
 
 ![](../images/user-guide/profiles-browse.png)
 
@@ -46,6 +46,12 @@ The profile count displays the total number of profiles your organization has wi
 The profile count also includes both profiles with attributes (record data) as well as profiles containing only time series (event) data, such as Adobe Analytics profiles. The profile count is refreshed regularly to provide an up-to-date total number of profiles within Platform. 
 
 When the ingestion of profiles into the Profile Store increases or decreases the count by more than 5%, a job is triggered to update the count. For streaming data workflows, a check is done on an hourly basis to determine if the 5% increase or decrease threshold has been met. If it has, a job is automatically triggered to update the profile count. For batch ingestion, within 15 minutes of successfully ingesting a batch into the Profile Store, if the 5% increase or decrease threshold is met, a job is run to update the profile count.
+
+### Profiles by namespace {#profiles-by-namespace}
+
+The *Profiles by namespace* metric displays the total count and breakdown of namespaces across all of the merged profiles in your Profile Store. The total number of profiles by namespace (in other words, adding together the values shown for each namespace) will always be higher than the profile count metric because one profile could have multiple namespaces associated with it. For example, if a customer interacts with your brand on more than one channel, multiple namespaces will be associated with that individual customer.
+
+Similar to the [profile count](#profile-count) metric, when the ingestion of profiles into the Profile Store increases or decreases the count by more than 5%, a job is triggered to update the namespace metrics. For streaming data workflows, a check is done on an hourly basis to determine if the 5% increase or decrease threshold has been met. If it has, a job is automatically triggered to update the profile count. For batch ingestion, within 15 minutes of successfully ingesting a batch into the Profile Store, if the 5% increase or decrease threshold is met, a job is run to update the metrics.
 
 ### Merge policy
 
