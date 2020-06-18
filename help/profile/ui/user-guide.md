@@ -13,10 +13,10 @@ This document serves as a guide for interacting with Real-time Customer Profile 
 
 ## Getting started
 
-This user guide requires an understanding of the various Experience Platform services involved with managing Real-time Customer Profile. Before reading this user guide, please review the documentation for the following services:
+This user guide requires an understanding of the various Experience Platform services involved with managing Real-time Customer Profiles. Before reading this user guide, please review the documentation for the following services:
 
 * [Real-time Customer Profile](../home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [Identity Service](../../identity-service/home.md): Enables Real-time Customer Profile by bridging identities from disparate data sources being ingested into Platform.
+* [Identity Service](../../identity-service/home.md): Enables Real-time Customer Profile by bridging identities from disparate data sources as they are ingested into Platform.
 * [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
 
 ## Overview
@@ -27,7 +27,15 @@ In the [Experience Platform UI](http://platform.adobe.com), click **Profiles** i
 
 ## Profile Browse
 
-Click the **Browse** tab in order to browse profiles by identities. This tab also contains important metrics related to your profile data, including your total [profile count](#profile-count) as well as a listing of profiles by namespace. 
+Click the **Browse** tab in order to browse profiles by identities. 
+
+### Profile metrics {#profile-metrics}
+
+On the right-hand side of the **Browse** tab are several important profile metrics related to your profile data, including your total [profile count](#profile-count) as well as a listing of profiles by namespace. 
+
+These profile metrics are evaluated with the default merge policy for your organization. For more information on working with merge policies, including how to define a default merge policy, see the [Merge Policies user guide](merge-policies.md).
+
+In addition to these metrics, the profile metrics area also provides a *Last updated* date and time, showing when the metrics were last evaluated.
 
 ![](../images/user-guide/profiles-browse.png)
 
@@ -41,7 +49,7 @@ When the ingestion of profiles into the Profile Store increases or decreases the
 
 ### Merge policy
 
-The **Merge policy** selector automatically selects the default merge policy for your organization. If you do not wish to use that merge policy you can select the `X` beside the default merge policy to open a *Select merge policy* dialog where you can choose another merge policy. For more information on working with merge policies in the UI, including how to define a default merge policy, see the [Merge Policies user guide](merge-policies.md).
+The **Merge policy** selector automatically selects the default merge policy for your organization. If you do not wish to use that merge policy you can select the `X` beside the default merge policy to open a *Select merge policy* dialog where you can choose another merge policy. To learn more about merge policies, see the [Merge Policies user guide](merge-policies.md).
 
 ![](../images/user-guide/profiles-search-merge-policy.png)
 
@@ -79,7 +87,7 @@ You can view additional information related to the profile including Attributes,
 
 Click **Merge Policies** to view a list of merge policies belonging to your organization. Each listed policy displays its name, whether or not it is the default merge policy, and the schema that it applies to. 
 
-For more information on working with merge policies in the UI, see the [Merge Policies user guide](merge-policies.md).
+For more information on merge policies, see the [Merge Policies user guide](merge-policies.md).
 
 ![](../images/user-guide/profiles-merge-policies.png)
 
