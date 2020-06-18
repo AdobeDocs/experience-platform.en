@@ -17,11 +17,11 @@ In particular, the [getting started section](./getting-started.md#getting-starte
 
 ## How estimates are generated
 
-The method of data sampling is dependant on the method of ingestion.
+The method of data sampling getting triggered is dependant on the method of ingestion.
 
-For batch ingestion, every fifteen minutes, the segments are automatically scanned to see if a newly successful batch was ingested since the last sampling job was run. If that is the case, the segments are scanned to see if there's been at least a 5% change in the number of records. If the segment matches both of these conditions, a new sampling job is triggered.
+For batch ingestion, every fifteen minutes, the profile store is automatically scanned to see if a newly successful batch was ingested since the last sampling job was run. If that is the case, the profile store is subsequently scanned to see if there's been at least a 5% change in the number of records. If these conditions are met, a new sampling job is triggered.
 
-For streaming ingestion, every hour, the segments are automatically scanned to see if there's been at least a 5% change in the number of records. If a segment matches this threshold, a new sampling job is triggered.
+For streaming ingestion, every hour, the profile store is automatically scanned to see if there's been at least a 5% change in the number of records. If this condition is met, a new sampling job is triggered.
 
 The sample size depends on the overall number of entities in your profile store. These sample sizes are represented in the following table:
 
