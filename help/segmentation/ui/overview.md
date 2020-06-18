@@ -164,11 +164,11 @@ Streaming segmentation will automatically be enforced for the following query ty
 
 | Query type | Details | Example |
 | ---------- | ------- | ------- |
-| Incoming hit | Any segment definition that refers to an incoming event. | ![](../images/segment-builder/incoming-hit.png) |
-| Incoming hit within a relative time window | Any segment definition that refers to an incoming event **within the last seven days**. | ![](../images/segment-builder/relative-hit-success.png) |
-| Incoming hit that refers to a Profile | Any segment definition that refers to an incoming event and the profile attribute. | ![](../images/segment-builder/profile-hit.png) |
-| Incoming hit that refers to a Profile within a relative time window | Any segment definition that refers to an incoming event and the profile attribute, **within the last seven days**. | ![](../images/segment-builder/profile-relative-success.png) |
-| Incoming hit that refers to a Profile and has event history | Any segment definition that refers to an event **within the last 24 hours** and has a profile attribute. | ![](../images/segment-builder/event-history-success.png) |
+| Incoming hit | Any segment definition that refers to a single incoming event with no time restriction. | ![](../images/segment-builder/incoming-hit.png) |
+| Incoming hit within a relative time window | Any segment definition that refers to a single incoming event **within the last seven days**. | ![](../images/segment-builder/relative-hit-success.png) |
+| Incoming hit that refers to a Profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. | ![](../images/segment-builder/profile-hit.png) |
+| Incoming hit that refers to a Profile within a relative time window | Any segment definition that refers to a single incoming event and one or more profile attributes, **within the last seven days**. | ![](../images/segment-builder/profile-relative-success.png) |
+| Multiple events that refer to a Profile | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. | ![](../images/segment-builder/event-history-success.png) |
 
 For a segment which will undergo streaming segmentation, a baseline must be established (this is the initial run after which the segment will always be up-to-date). The system handles baselining automatically, however this is only possible if scheduled segmentation has been enabled. For details on enabling scheduled segmentation, please refer to [the previous section in this user guide](#enable-scheduled-segmentation).
 
@@ -178,7 +178,7 @@ The following section lists segment definition examples that will **not** be str
 | ---------- | ------- | 
 | Incoming hit within a relative time window | If the segment definition refers to an incoming event **not** within the **last seven day** period. For example, within the **last two weeks**. | ![](../images/segment-builder/relative-hit-failure.png) |
 | Incoming hit that refers to a Profile within a relative window | The following options will **not** support streaming segmentation:<ul><li>An incoming event **not** within the **last seven day** period.</li><li>A segment definition that includes Adobe Audience Manager (AAM) segments or traits.</li></ul> | ![](../images/segment-builder/profile-relative-failure.png) |
-| Incoming hit that refers to a Profile and has event history | The following options will **not** support streaming segmentation:<ul><li>An event that does **not** occur within **the last 24 hours**.</li><li>A segment definition that includes Adobe Audience Manager (AAM) segments or traits.</li></ul> | ![](../images/segment-builder/event-history-failure.png) |
+| Multiple events that refer to a Profile | The following options will **not** support streaming segmentation:<ul><li>An event that does **not** occur within **the last 24 hours**.</li><li>A segment definition that includes Adobe Audience Manager (AAM) segments or traits.</li></ul> | ![](../images/segment-builder/event-history-failure.png) |
 | Multi-entity queries | Multi-entity queries are, as a whole, **not** supported by streaming segmentation. | |
 
 Additionally, some guidelines apply when doing streaming segmentation:
