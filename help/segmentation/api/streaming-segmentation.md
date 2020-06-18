@@ -51,11 +51,11 @@ In order for a segment to be evaluated using streaming segmentation, the query m
 
 | Query type | Details |
 | ---------- | ------- |
-| Incoming hit | Any segment definition that refers to an incoming event. |
-| Incoming hit within a relative time window | Any segment definition that refers to an incoming event **within the last seven days**. |
-| Incoming hit that refers to a Profile | Any segment definition that refers to an incoming event and the profile attribute. |
-| Incoming hit that refers to a Profile within a relative time window | Any segment definition that refers to an incoming event and the profile attribute, **within the last seven days**. |
-| Incoming hit that refers to a Profile and has event history | Any segment definition that refers to an event **within the last 24 hours** and has a profile attribute. |
+| Incoming hit | Any segment definition that refers to a single incoming event with no time restriction. |
+| Incoming hit within a relative time window | Any segment definition that refers to a single incoming event **within the last seven days**. |
+| Incoming hit that refers to a Profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. |
+| Incoming hit that refers to a Profile within a relative time window | Any segment definition that refers to a single incoming event and one or more profile attributes, **within the last seven days**. |
+| Multiple events that refer to a Profile | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. |
 
 In order for streaming segmentation to work, the customer will need to enable scheduled segmentation for the organization.
 
@@ -65,7 +65,7 @@ The following section lists segment definition examples that will **not** be str
 | ---------- | ------- | 
 | Incoming hit within a relative time window | If the segment definition refers to an incoming event **not** within the **last seven day** period. For example, within the **last two weeks**. |
 | Incoming hit that refers to a Profile within a relative window | The following options will **not** support streaming segmentation:<ul><li>An incoming event **not** within the **last seven day** period.</li><li>A segment definition that includes Adobe Audience Manager (AAM) segments or traits.</li></ul> | 
-| Incoming hit that refers to a Profile and has event history | The following options will **not** support streaming segmentation:<ul><li>An event that does **not** occur within **the last 24 hours**.</li><li>A segment definition that includes Adobe Audience Manager (AAM) segments or traits.</li></ul> |
+| Multiple events that refer to a Profile | The following options will **not** support streaming segmentation:<ul><li>An event that does **not** occur within **the last 24 hours**.</li><li>A segment definition that includes Adobe Audience Manager (AAM) segments or traits.</li></ul> |
 | Multi-entity queries | Multi-entity queries are, as a whole, **not** supported by streaming segmentation. |
 
 Additionally, some guidelines apply when doing streaming segmentation:
