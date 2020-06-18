@@ -7,6 +7,9 @@ topic: overview
 
 # (Beta) FTP and SFTP connector
 
+>[!NOTE]
+>The FTP and SFTP connectors are in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, Google Cloud Platform, and Azure, allowing you to bring your data from these systems.
 
 Cloud storage sources can bring your own data into Platform without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM parquet, or delimited. Every step of the process is integrated into the Sources workflow. Platform allows you to bring in data from an FTP or an SFTP server through batches.
