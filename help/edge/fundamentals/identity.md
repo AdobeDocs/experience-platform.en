@@ -38,6 +38,26 @@ alloy("getIdentity")
 
 ## Syncing Identities
 
+>[!NOTE]
+>
+>This method has been removed in version 2.0.0; it will be replaced with a different & improved workflow in future versions. If you are using version 2.0 and would like to sync identities, you can send them directly in the `xdm` option of the `sendEvent` command, under the `identityMap` field. The only difference when using this approach is the lack of hashing. You will need to hash IDs before passing them in. Hashing will be part of the upcoming improvements.
+
+```javascript
+alloy("sendEvent", {
+  xdm: {
+    "identityMap": {
+      "CustomNamespace": [
+        {
+          "id": "1234",
+          "authenticatedState": "ambiguous"
+        }
+      ]
+    }
+  }
+})
+```
+
+
 Additionally the Identity Service allows you to sync your own identifiers with the ECID using the `syncIdentity` command.
 
 ```javascript
