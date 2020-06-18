@@ -7,7 +7,11 @@ topic: developer guide
 
 # Evaluate events in real-time with streaming segmentation 
 
-Streaming segmentation (also known as continuous query evaluation) enables you to create and target high value segments at high speed and high scale. With this capability, most segment rules can now be evaluated as the data is passed into Adobe Experience Platform, meaning segment membership will be kept up to date without running segmentation jobs.
+Segmenting customers into audience groups is one of the most common workload items for profile stores. Segmentation can be performed to classify a customer into one of the groups and this can be done either:
+- Where time to activate is important – Real-time segmentation
+- Where richness of the group (data) is important - Batch segmentation
+
+Streaming segmentation can qualify a customer with respect to their demographic and behavioral data into a particular segment group in real time. With streaming segmentation, segment qualification now happens as data lands into Adobe Experience Platform, alleviating the need to schedule and run segmentation jobs. With this capability, most segment rules can now be evaluated as the data is passed into Platform, meaning segment membership will be kept up to date without running scheduled segmentation jobs.
 
 ![](../images/api/streaming-segment-evaluation.png)
 
@@ -47,6 +51,8 @@ Additional headers may be required to complete specific requests. The correct he
 
 ### Streaming segmentation enabled query types
 
+>[!NOTE] The customer will need to enable scheduled segmentation for the organization in order for streaming segmentation to work.
+
 In order for a segment to be evaluated using streaming segmentation, the query must conform to the following guidelines.
 
 | Query type | Details |
@@ -56,8 +62,6 @@ In order for a segment to be evaluated using streaming segmentation, the query m
 | Incoming hit that refers to a Profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. |
 | Incoming hit that refers to a Profile within a relative time window | Any segment definition that refers to a single incoming event and one or more profile attributes, **within the last seven days**. |
 | Multiple events that refer to a Profile | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. |
-
-In order for streaming segmentation to work, the customer will need to enable scheduled segmentation for the organization.
 
 The following section lists segment definition examples that will **not** be streaming segmentation enabled.
 

@@ -160,7 +160,9 @@ Schedules can currently only be created using the API. For detailed steps on cre
 
 ## Streaming segmentation
 
-Streaming segmentation will automatically be enforced for the following query types:
+>[!NOTE] In order for streaming segmentation to work, the customer will need to enable scheduled segmentation for the organization. For details on enabling scheduled segmentation, please refer to [the previous section in this user guide](#enable-scheduled-segmentation).
+
+A query will be automatically evaluated with streaming segmentation if it meets any of the following criteria:
 
 | Query type | Details | Example |
 | ---------- | ------- | ------- |
@@ -169,8 +171,6 @@ Streaming segmentation will automatically be enforced for the following query ty
 | Incoming hit that refers to a Profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. | ![](../images/segment-builder/profile-hit.png) |
 | Incoming hit that refers to a Profile within a relative time window | Any segment definition that refers to a single incoming event and one or more profile attributes, **within the last seven days**. | ![](../images/segment-builder/profile-relative-success.png) |
 | Multiple events that refer to a Profile | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. | ![](../images/segment-builder/event-history-success.png) |
-
-For a segment which will undergo streaming segmentation, a baseline must be established (this is the initial run after which the segment will always be up-to-date). The system handles baselining automatically, however this is only possible if scheduled segmentation has been enabled. For details on enabling scheduled segmentation, please refer to [the previous section in this user guide](#enable-scheduled-segmentation).
 
 The following section lists segment definition examples that will **not** be streaming segmentation enabled.
 
