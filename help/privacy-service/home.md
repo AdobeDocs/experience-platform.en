@@ -9,34 +9,59 @@ topic: overview
 
 In order to deliver better customer experiences, you need to collect and store your customers' personal data. When using this data, it is important to understand and respect your customers' privacy. New legal and organizational regulations are giving users the right to access or delete their personal data from your data stores upon request.
 
-Adobe Experience Platform Privacy Service provides a RESTful API and user interface to help you manage these data requests from your customers. With Privacy Service, you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
+Adobe Experience Platform Privacy Service was developed in response to a fundamental shift in how businesses are required to manage the personal data of their customers. The central purpose of Privacy Service is to automate compliance with data privacy regulations which, when violated, can result in major fines and disrupt data operations for your business.
 
-## Why Privacy Service?
+Privacy Service provides a RESTful API and user interface to help you manage these data requests from your customers. With Privacy Service, you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
 
-Privacy Service was developed in response to a fundamental shift in how businesses are required to manage the personal data of their customers. The central purpose of Privacy Service is to automate compliance with data privacy regulations which, when violated, can result in major fines and disrupt data operations for your business.
+## Getting started with Privacy Service {#getting-started}
 
-### Privacy Service and GDPR
+In order to make use of Privacy Service, several key decisions need to be made in terms of your organization's privacy requirements, the kinds of identity data you collect from your customers, and the best way to interface your CRM system with the service.
 
-The [General Data Protection Regulation](https://eugdpr.org/) (GDPR) introduced several new data privacy rights for members of the European Union, including the **Right to Access** and the **Right to be Forgotten**. This means that any EU citizen whose personal data has been collected by your business can request to access or delete their data at any time. Failure to comply to these requests within 30 days can result in multi-million dollar fines for your organization.
+The sections below provide general guidance on these important prerequisite steps, and also provide links to further Privacy Service documentation for more details.
 
-Privacy Service supports access and delete requests for GDPR, and tracks them separately from requests under the CCPA regulation. See the [GDPR FAQ](gdpr/faq.md) and [terminology](gdpr/terminology.md) documents for more information.
+### Determine your organization's privacy requirements {#requirements}
 
-### Privacy Service and CCPA
+Depending on the nature of your business and the jurisdictions it operates under, your data operations may be subject to legal privacy regulations. These regulations often give your customers the right to request access to the data you collect from them, and the right to request the deletion of that stored data. These customer requests for their personal data are referred to as "privacy requests" throughout the documentation.
 
-The [California Consumer Privacy Act](https://www.caprivacy.org/about) (CCPA) enhances privacy rights and consumer protection for residents of California, United States. The CCPA provides new data privacy rights to California residents, including the right to access and delete their personal data, to know whether their personal data is sold or disclosed (and to whom), and the right to opt out of having their data sold to third parties.
+The following table outlines the legal privacy regulations that Privacy Service manages requests for, including links to documentation for more information:
 
-Privacy Service supports access and delete requests for the CCPA regulation, and tracks them separately from GDPR requests. Privacy Service also supports sending opt-out-of-sale requests for Experience Cloud applications that support them. See the [CCPA FAQ](ccpa/faq.md) for more information.
+| Regulation | Description |
+| --- | --- |
+| CCPA (California) | The California Consumer Privacy Act (CCPA) enhances privacy rights and consumer protection for residents of California, United States. The CCPA provides new data privacy rights to California residents, including the right to access and delete their personal data, to know whether their personal data is sold or disclosed (and to whom), and the right to opt out of having their data sold to third parties.<br/><br/>Links for further documentation: <ul><li>[Legal overview](https://oag.ca.gov/privacy/ccpa)</li><li>[CCPA FAQ](ccpa/faq.md)</li></ul> |
+| GDPR (European Union) | The General Data Protection Regulation (GDPR) introduced several new data privacy rights for members of the European Union, including the **Right to Access** and the **Right to be Forgotten**. This means that any EU citizen whose personal data has been collected by your business can request to access or delete their data at any time. <br/><br/>Links for further documentation: <ul><li>[Legal overview](https://gdpr-info.eu/)</li><li>[GDPR FAQ](gdpr/faq.md)</li><li>[GDPR terminology](gdpr/terminology.md)</li></ul>|
+| PDPA_THA (Thailand) | The Personal Data Protection Act of Thailand (PDPA) was introduced to safeguard Thai data owners from the illegal collection, use, or disclosure of their personal data. Inspired by the European Union's GDPR, the regulation grants Thai citizens the right to request access to, or the deletion of, their stored personal data.<br/><br/>Links for further documentation: <ul><li>[Legal overview](https://www.dataprotectionreport.com/2020/02/thailand-personal-data-protection-law/)</li><li>[PDPA_THA FAQ](pdpa-tha/faq.md)</li><li>[PDPA_THA terminology](pdpa-tha/terminology.md)</li></ul> |
 
-## How to use Privacy Service to manage privacy job requests
+If your data operations fall under the purview of any of the above regulations, review their documentation for important information such as the specific privacy rights they afford your customers, and compliance windows for honoring privacy requests. This information should be taken into account when determining how to integrate Privacy Service into your CRM system, and how customers should interact with your website in order to make privacy requests.
 
-Privacy Service provides a RESTful API and user interface that allow you to manage your customers' requests for accessing/deleting their private data or opting out of sale (also known as **privacy jobs**). The service also provides a central audit and logging mechanism that allows you to view the status and results of privacy jobs involving Experience Cloud applications.
+In addition to legal regulations, any organizational or industry standards applicable to your organization should also be considered when making these decisions.
 
->[!NOTE] Opt-out requests are currently only supported by the Privacy Service API.
+### Determine types of identity data to send to Privacy Service {#identity}
 
-### Using the API
+In order for Privacy Service to process a privacy request from a customer, the service must be provided at least one unique identity value for that customer. A unique identity value is any piece of information that can be used to identify an individual person and their stored personal data within your Experience Cloud data stores.
 
-The [Privacy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) allows you to create and manage privacy jobs using RESTful API calls, allowing you to programmatically approach privacy regulation compliance for your Experience Cloud applications. For detailed steps on how to use the API, see the [Privacy Service API developer guide](api/getting-started.md).
+Depending on the Experience Cloud applications your CRM system utilizes, the type and number of identity values you must provide for each customer will vary. Some applications utilize their own internal customer ID values (such as Adobe Target IDs), while other solutions rely on global identifiers from Adobe Experience Cloud Identity Service (ECID) which track customer activity across all Experience Cloud applications. In addition, generic personal information like an email address or phone number can also serve as valid identity data.
 
-### Using the UI
+The document on [identity data for privacy requests](./identity-data.md) provides more detailed information on the types of identity information that are accepted for Privacy Service. The document also provides guidance on how to leverage Adobe technologies to effectively retrieve the appropriate identity information from your customers as they interact with your website, and send that data to Privacy Service in API requests.
+
+### Start making access, delete, and opt-out requests using the service {#requests}
+
+Once you have determined your business' privacy needs, and decided which identity values to send to Privacy Service, you can start making privacy requests. Privacy Service allows you to send privacy requests through either the API or the UI.
+
+>[!IMPORTANT]
+>The sections below provide links to documentation that cover how to make generic privacy requests in the API or UI. However, depending on the Experience Cloud applications you are using, the fields you must send in the request payload may be different from the examples shown in these guides. 
+>
+>As you follow along with the API or UI guides, please refer to the document on [Privacy Service and Experience Cloud applications](./experience-cloud-apps.md) for further documentation on how to format privacy requests for your particular Experience Cloud application(s).
+
+#### Using the API
+
+The [Privacy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) provides several endpoints for creating and managing privacy jobs using RESTful API calls, allowing you to programmatically approach privacy regulation compliance for your Experience Cloud applications. For detailed steps on how to use the API, see the [Privacy Service API developer guide](api/getting-started.md).
+
+#### Using the UI
+
+>[!NOTE] The Privacy Service UI currently only supports access and delete requests. All opt-out requests must be made through the API instead.
 
 The Privacy Service UI allows you to create and monitor privacy jobs using a graphical interface. The UI includes a **Status Report** widget that provides a visual representation of the status of all active requests, and allows you to create new requests by using the built-in **Request Builder** or by uploading JSON files. For more information on using the UI, see the [Privacy Service user guide](ui/overview.md).
+
+## Next steps
+
+This document provided a high-level overview of Privacy Service and the major steps required to start using the service's capabilities. Please refer to the documentation linked to throughout the overview for more in-depth information about the various aspects of working with Privacy Service.
