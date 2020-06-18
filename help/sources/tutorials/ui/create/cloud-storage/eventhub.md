@@ -8,7 +8,7 @@ topic: overview
 # Create an Azure Event Hubs source connector in the UI
 
 >[!NOTE]
-> The Azure Event Hubs connector is in beta. The features and documentation are subject to change.
+> The Azure Event Hubs connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for authenticating an Azure Event Hubs (hereinafter referred to as "Event Hubs") source connector using the Platform user interface.
 
