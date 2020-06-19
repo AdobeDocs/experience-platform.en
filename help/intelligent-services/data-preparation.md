@@ -21,7 +21,7 @@ If your data is stored outside of [!DNL Experience Platform], follow the steps b
 
 1. Contact Adobe Consulting Services to request access credentials for a dedicated Azure Blob Storage container.
 1. Using your access credentials, upload your data to the Blob container.
-1. Work with Adobe Consulting Services to map your data to the [Consumer ExperienceEvent schema](#cee-schema) and ingest it into Intelligent Services.
+1. Work with Adobe Consulting Services get your data mapped to the [Consumer ExperienceEvent schema](#cee-schema) and ingested into Intelligent Services.
 
 ### [!DNL Experience Platform] data preparation
 
