@@ -13,7 +13,7 @@ Adobe Experience Platform Data Governance provides a user interface that allows 
 
 This guide requires a working understanding of the following [!DNL Experience Platform] concepts:
 
-- [Data Governance](../home.md)
+- [!DNL Data Governance](../home.md)
 - [Data usage policies](./overview.md)
 
 ## View data usage policies
@@ -28,7 +28,7 @@ Click on a listed policy to view its description and type. If a custom policy is
 
 ## Create a custom data usage policy
 
-To create a new custom data usage policy, click **[!UICONTROL Create policy]** in the top-right corner of the *Policies* workspace.
+To create a new custom data usage policy, click **[!UICONTROL Create policy]** in the top-right corner of the *[!UICONTROL Policies]* workspace.
 
 ![](../images/policies/create-policy-button.png)
 
