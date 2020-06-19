@@ -7,7 +7,7 @@ topic: tutorial
 
 # Map a CSV file to an XDM schema
 
-In order to ingest CSV data into [!DNL Adobe Experience Platform], the data must be mapped to an Experience Data Model (XDM) schema. This tutorial covers how to map a CSV file to an XDM schema using the [!DNL Platform] user interface.
+In order to ingest CSV data into Adobe Experience Platform, the data must be mapped to an Experience Data Model (XDM) schema. This tutorial covers how to map a CSV file to an XDM schema using the [!DNL Platform] user interface.
 
 In addition, the appendix to this tutorial provides further information regarding the use of [mapping functions](#mapping-functions).
 
@@ -15,7 +15,7 @@ In addition, the appendix to this tutorial provides further information regardin
 
 This tutorial requires a working understanding of the following components of [!DNL Platform]:
 
-- [Experience Data Model (XDM System)](../../xdm/home.md): The standardized framework by which Experience [!DNL Platform] organizes customer experience data.
+- [Experience Data Model (XDM System)](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 - [Batch ingestion](../batch-ingestion/overview.md): The method by which [!DNL Platform] ingests data from user-supplied datafiles.
 
 This tutorial also requires that you have already created a dataset to ingest your CSV data into. For steps on creating a dataset in the UI, see the [data ingest tutorial](./ingest-batch-data.md).
@@ -76,9 +76,9 @@ If you want to add a new mapping, click **[!UICONTROL Add new mapping]** at the 
 
 When mapping fields, you can also include functions to compute values based on input source fields. See the [mapping functions](#mapping-functions) section in the appendix for more information.
 
-**Add calculated field**
+### Add calculated field
 
-Calculated Fields allow for values to be crated based on the attributes in the input schema. These values can then be assigned to attributes in the target schema.
+Calculated fields allow for values to be crated based on the attributes in the input schema. These values can then be assigned to attributes in the target schema.
 
 A Name and Description can be assigned to Calculated Attributes for easy reference later.
 
@@ -86,7 +86,15 @@ Select the **[!UICONTROL Add calculated field]** button to proceed.
 
 ![](../images/tutorials/map-a-csv-file/add-calculated-field.png)
 
-The **[!UICONTROL Create calculated field]** appears.
+The **[!UICONTROL Create calculated field]** appears. The left dialog box contains the fields, functions, and operators supported in calculated fields.
+
+| Parameter | Description |
+| --------- | ----------- |
+| Fields | The fields tab lists fields and attributes available in the source schema. |
+| Functions | The functions tab lists the functions available to transform the data. |
+| Operators | The operators tab lists the operators that are available to transform the data. |
+
+![](../images/tutorials/map-a-csv-file/fields-functions-operators.png)
 
 Repeat the above steps to continue mapping CSV columns to XDM fields. Once you are finished, click **Next**.
 
