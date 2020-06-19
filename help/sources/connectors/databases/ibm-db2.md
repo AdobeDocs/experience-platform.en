@@ -7,6 +7,9 @@ topic: overview
 
 # (Beta) IBM DB2 connector
 
+>[!NOTE]
+>The IBM DB2 connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+
 Adobe Experience Platform provides native connectivity for database providers like Microsoft, MySQL, and Azure. You can bring your data from these systems into Platform.
 
 Different types of third-party databases are supported, including relational, NoSQL, or data warehouses. Support for database providers includes IBM DB2.
