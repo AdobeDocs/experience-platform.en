@@ -7,11 +7,12 @@ topic: developer guide
 
 # Evaluate events in real-time with streaming segmentation 
 
-Segmenting customers into audience groups is one of the most common workload items for profile stores. Segmentation can be performed to classify a customer into one of the groups and can be done in either of the following methods:
+Segmenting customers into audience groups is one of the most common workload items for profile stores. Segmentation can be performed to classify a customer into one of the groups, including the following methods:
+
 - Real-time segmentation: Prioritizes minimizing time to activate
 - Batch segmentation: Prioritizes data richness
 
-Streaming segmentation can qualify a customer with respect to their demographic and behavioral data into a particular segment group in real time. With streaming segmentation, segment qualification now happens as data lands into Adobe Experience Platform, alleviating the need to schedule and run segmentation jobs. With this capability, most segment rules can now be evaluated as the data is passed into Platform, meaning segment membership will be kept up to date without running scheduled segmentation jobs.
+Streaming segmentation on Adobe Experience Platform allows customers to do segmentation in real time while focusing on data richness. With streaming segmentation, segment qualification now happens as data lands into Platform, alleviating the need to schedule and run segmentation jobs. With this capability, most segment rules can now be evaluated as the data is passed into Platform, meaning segment membership will be kept up to date without running scheduled segmentation jobs.
 
 ![](../images/api/streaming-segment-evaluation.png)
 
@@ -51,7 +52,7 @@ Additional headers may be required to complete specific requests. The correct he
 
 ### Streaming segmentation enabled query types
 
->[!NOTE] The customer will need to enable scheduled segmentation for the organization in order for streaming segmentation to work.
+>[!NOTE] You will need to enable scheduled segmentation for the organization in order for streaming segmentation to work. Information about enabling scheduled segmentation can be found in the [enable scheduled segmentation section](#enable-scheduled-segmentation)
 
 In order for a segment to be evaluated using streaming segmentation, the query must conform to the following guidelines.
 
@@ -59,29 +60,29 @@ In order for a segment to be evaluated using streaming segmentation, the query m
 | ---------- | ------- |
 | Incoming hit | Any segment definition that refers to a single incoming event with no time restriction. |
 | Incoming hit within a relative time window | Any segment definition that refers to a single incoming event **within the last seven days**. |
-| Incoming hit that refers to a Profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. |
-| Incoming hit that refers to a Profile within a relative time window | Any segment definition that refers to a single incoming event and one or more profile attributes, **within the last seven days**. |
-| Multiple events that refer to a Profile | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. |
+| Incoming hit that refers to a profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. |
+| Incoming hit that refers to a profile within a relative time window | Any segment definition that refers to a single incoming event and one or more profile attributes, **within the last seven days**. |
+| Multiple events that refer to a profile | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. |
 
-The following section lists segment definition examples that will **not** be streaming segmentation enabled.
+The following section lists segment definition examples that will **not** be enabled for streaming segmentation.
 
 | Query type | Details |
 | ---------- | ------- | 
-| Incoming hit within a relative time window | If the segment definition refers to an incoming event **not** within the **last seven day** period. For example, within the **last two weeks**. |
-| Incoming hit that refers to a Profile within a relative window | The following options will **not** support streaming segmentation:<ul><li>An incoming event **not** within the **last seven day** period.</li><li>A segment definition that includes Adobe Audience Manager (AAM) segments or traits.</li></ul> | 
-| Multiple events that refer to a Profile | The following options will **not** support streaming segmentation:<ul><li>An event that does **not** occur within **the last 24 hours**.</li><li>A segment definition that includes Adobe Audience Manager (AAM) segments or traits.</li></ul> |
+| Incoming hit within a relative time window | If the segment definition refers to an incoming event **not** within the **last seven-day period**. For example, within the **last two weeks**. |
+| Incoming hit that refers to a profile within a relative window | The following options will **not** support streaming segmentation:<ul><li>An incoming event **not** within the **last seven-day period**.</li><li>A segment definition that includes Adobe Audience Manager (AAM) segments or traits.</li></ul> | 
+| Multiple events that refer to a profile | The following options will **not** support streaming segmentation:<ul><li>An event that does **not** occur within **the last 24 hours**.</li><li>A segment definition that includes Adobe Audience Manager (AAM) segments or traits.</li></ul> |
 | Multi-entity queries | Multi-entity queries are, as a whole, **not** supported by streaming segmentation. |
 
 Additionally, some guidelines apply when doing streaming segmentation:
 
 | Query type | Guideline |
 | ---------- | -------- |
-| Single event query | The look back window is limited to **7 days**. |
-| Query with event history | <ul><li>The look back window is limited to **1 day**.</li><li>A strict time ordering condition **must** exist between the events.</li><li>Only simple time orderings (before and after) between the events are allowed.</li><li>The individual events **cannot** be negated. However, the entire query **can** be negated.</li></ul>|
+| Single event query | The look-back window is limited to **seven days**. |
+| Query with event history | <ul><li>The look-back window is limited to **one day**.</li><li>A strict time ordering condition **must** exist between the events.</li><li>Only simple time orderings (before and after) between the events are allowed.</li><li>The individual events **cannot** be negated. However, the entire query **can** be negated.</li></ul>|
 
-## Retrieve all streaming segmentation enabled segments
+## Retrieve all segments enabled for streaming segmentation
 
-You can retrieve a list of all your streaming segmentation enabled segments within your IMS Organization.
+You can retrieve a list of all your segments that are enabled for streaming segmentation within your IMS Organization by making a GET request to the `/segment/definitions` endpoint.
 
 **API format**
 
@@ -227,7 +228,7 @@ curl -X POST \
 }'
 ```
 
->[!NOTE] This is a standard "create a segment" request. For more information about creating a segment definition, please read the documentation on [segment creation](../tutorials/create-a-segment.md).
+>[!NOTE] This is a standard "create a segment" request. For more information about creating a segment definition, please read the tutorial on [creating a segment](../tutorials/create-a-segment.md).
 
 **Response**
 
@@ -271,11 +272,9 @@ A successful response returns the details of the newly created streaming-enabled
 }
 ```
 
-## Enable scheduled evaluation
+## Enable scheduled evaluation {#enable-scheduled-segmentation}
 
-Once streaming evaluation has been enabled, a baseline must be created (after which the segment will always be up-to-date). This is done automatically by the system, however scheduled evaluation (also known as scheduled segmentation) must first be enabled in order for the baselining to take place. 
-
-With scheduled segmentation, your IMS Org can create a recurring schedule to automatically run export jobs to evaluate segments.
+Once streaming evaluation has been enabled, a baseline must be created (after which the segment will always be up-to-date). Scheduled evaluation (also known as scheduled segmentation) must first be enabled in order for the system to automatically perform baselining. With scheduled segmentation, your IMS Org can adhere to a recurring schedule to automatically run export jobs to evaluate segments.
 
 >[!NOTE] Scheduled evaluation can be enabled for sandboxes with a maximum of five (5) merge policies for XDM Individual Profile. If your organization has more than five merge policies for XDM Individual Profile within a single sandbox environment, you will not be able to use scheduled evaluation.
 

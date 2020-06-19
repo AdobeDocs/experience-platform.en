@@ -34,7 +34,7 @@ Segments that are enabled for use in Real-time Customer Profile contain a merge 
 >[!NOTE]
 >Streaming segmentation is in beta and will be available upon request. The features and documentation are subject to change.
 
-Streaming segmentation is the ability to instantly evaluate a customer as soon as an event comes into a particular segment group. With this capability, most segment rules can now be evaluated as the data is passed into Adobe Experience Platform, meaning segment membership will be kept up to date without running scheduled segmentation jobs. To learn more, visit the [streaming segmentation overview](../segmentation/api/streaming-segmentation.md).
+Streaming segmentation is the ability to instantly evaluate a customer as soon as an event comes into a particular segment group. With this capability, most segment rules can now be evaluated as the data is passed into Adobe Experience Platform, meaning segment membership will be kept up-to-date without running scheduled segmentation jobs. To learn more, visit the [streaming segmentation overview](../segmentation/api/streaming-segmentation.md).
 
 ## Multi-entity segmentation
 
