@@ -7,18 +7,18 @@ topic: policies
 
 # Data usage policies user guide
 
-Adobe Experience Platform Data Governance provides a user interface that allows you to create and manage data usage policies. This document provides an overview of the actions you can perform in the _Policies_ workspace in the Experience Platform UI.
+Adobe Experience Platform Data Governance provides a user interface that allows you to create and manage data usage policies. This document provides an overview of the actions you can perform in the _Policies_ workspace in the [!DNL Experience Platform] UI.
 
 ## Prerequisites
 
-This guide requires a working understanding of the following Experience Platform concepts:
+This guide requires a working understanding of the following [!DNL Experience Platform] concepts:
 
 - [Data Governance](../home.md)
 - [Data usage policies](./overview.md)
 
 ## View data usage policies
 
-In the Experience Platform UI, click **[!UICONTROL Policies]** to open the *[!UICONTROL Policies]* workspace. In the **[!UICONTROL Browse]** tab, you can see a list of available policies, including their associated labels, marketing actions, and status.
+In the [!DNL Experience Platform] UI, click **[!UICONTROL Policies]** to open the *[!UICONTROL Policies]* workspace. In the **[!UICONTROL Browse]** tab, you can see a list of available policies, including their associated labels, marketing actions, and status.
 
 ![](../images/policies/browse-policies.png)
 
@@ -62,8 +62,8 @@ You can enable or disable custom data usage policies on the *[!UICONTROL Browse]
 
 ## Next steps
 
-This document provided an overview of how to manage data usage policies in Experience Platform UI. For steps on how to manage policies using the DULE Policy API, see the [developer guide](../api/getting-started.md). For information on how to enforce data usage policies, see the [policy enforcement overview](../enforcement/overview.md).
+This document provided an overview of how to manage data usage policies in [!DNL Experience Platform] UI. For steps on how to manage policies using the DULE Policy API, see the [developer guide](../api/getting-started.md). For information on how to enforce data usage policies, see the [policy enforcement overview](../enforcement/overview.md).
 
-The following video provides a demonstration of how to work with usage policies in the Experience Platform UI:
+The following video provides a demonstration of how to work with usage policies in the [!DNL Experience Platform] UI:
 
 >[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)
