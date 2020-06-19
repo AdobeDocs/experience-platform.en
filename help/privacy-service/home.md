@@ -37,7 +37,7 @@ In addition to legal regulations, any organizational or industry standards appli
 
 ### Determine types of identity data to send to Privacy Service {#identity}
 
-In order for Privacy Service to process a privacy request from a customer, the service must be provided at least one unique identity value for that customer. A unique identity value is any piece of information that can be used to identify an individual person and their stored personal data within your Experience Cloud data stores.
+In order for Privacy Service to process a privacy request from a customer, at least one unique identity value for that customer must be provided in the request itself. A unique identity value is any piece of information that can be used to identify an individual person and their stored personal data within your Experience Cloud data stores. Privacy Service uses this identity information to locate and process the customer's personal data according to the nature of the request (access, delete, or opt-out).
 
 Depending on the Experience Cloud applications your CRM system utilizes, the type and number of identity values you must provide for each customer will vary. Some applications utilize their own internal customer ID values (such as Adobe Target IDs), while other solutions rely on global identifiers from Adobe Experience Cloud Identity Service (ECID) which track customer activity across all Experience Cloud applications. In addition, generic personal information like an email address or phone number can also serve as valid identity data.
 
