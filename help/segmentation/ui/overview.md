@@ -188,6 +188,20 @@ Additionally, some guidelines apply when doing streaming segmentation:
 | Single event query | The look back window is limited to **7 days**. |
 | Query with event history | <ul><li>The look back window is limited to **1 day**.</li><li>A strict time ordering condition **must** exist between the events.</li><li>Only simple time orderings (before and after) between the events are allowed.</li><li>The individual events **cannot** be negated. However, the entire query **can** be negated.</li></ul>|
 
+### Monitoring streaming segmentation
+
+After creating a streaming segmentation enabled segment, you can monitor details of the segment. 
+
+![](../images/segment-builder/monitoring-streaming-segment.png)
+
+Specifically, details of the *total qualified audience size* are shown. If a job has been run within the last 24 hours, the **Total Audience Size** from the job is shown, in addition to a line chart for the audience added. Otherwise, the **Estimated Audience Size** is shown, in addition to a visualization trend line.
+
+![](../images/segment-builder/monitoring-streaming-segment-graph.png)
+
+Additional information about the last segment evaluation can be found by clicking he information bubble.
+
+![](../images/segment-builder/info-bubble.png)
+
 ## DULE policy violations
 
 >[!NOTE] DULE policy violations only apply if you are creating a segment that has been assigned to a destination.
