@@ -220,6 +220,15 @@ To open a new *Launcher*, click **File > New Launcher**. Alternatively, expand t
 
 ![](../images/jupyterlab/user-guide/new_launcher.gif)
 
+### GPU and memory server configuration in Python/R
+
+In [!DNL JupyterLab] select the gear icon in the top-right corner to open *Notebook server configuration*. You can toggle GPU on and allocate the amount of memory you need by using the slider. The amount of memory you can allocate depends on how much your organization has provisioned. Select **[!UICONTROL Update configs]** to save.
+
+>[!NOTE]
+>Only one GPU is provisioned per organization for Notebooks. If the GPU is in use, you need to wait for the user that has currently reserved the GPU to release it. This can be done by logging out or leaving the GPU in an idle state for four or more hours.
+
+![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
+
 ## Access Platform data using Notebooks
 
 Each supported kernel provides built-in functionalities that allow you to read Platform data from a dataset within a notebook. However, support for paginating data is limited to Python and R notebooks.

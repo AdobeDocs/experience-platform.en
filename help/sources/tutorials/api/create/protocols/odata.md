@@ -8,7 +8,7 @@ topic: overview
 # Create a Generic OData connector using the Flow Service API
 
 >[!NOTE]
->The Generic OData connector is in beta. The features and documentation are subject to change.
+>The Generic OData connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
