@@ -28,6 +28,14 @@ When data usage happens in your organization's service, relevant marketing actio
 
 See the appendix to this document for a list of [available Adobe-defined marketing actions](#core-actions). You can also define your own custom marketing actions using the DULE Policy Service API or the Experience Platform user interface. More information on working with marketing actions and policies is provided in the next section.
 
+<!-- (Add after AAM DEC mapping doc is published)
+### Inheritance from Adobe Audience Manager Data Export Controls
+
+Experience Platform has the ability to share segments with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager segments are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
+
+For a reference on how specific Data Export Controls map to marketing actions in Platform, please refer to the [Audience Manager documentation](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/data-export-controls.html).
+-->
+
 ## Managing data usage policies {#manage}
 
 Once data usage labels have been applied, data stewards can use the DULE Policy Service API or the Experience Platform UI to manage and evaluate policies related to marketing actions being taken on data containing data usage labels. You can create and update policies, determine the status of a policy, and work with marketing actions to evaluate whether a specific action violates a data usage policy.
