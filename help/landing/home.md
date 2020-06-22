@@ -15,6 +15,35 @@ Adobe Experience Platform is the most powerful, flexible, and open system on the
 
 Built on open APIs, Experience Platform exposes the full functionality of the system to developers, supporting the easy integration of enterprise solutions using familiar tools. Experience Platform also supports partners to build and integrate their own products and technologies as needed. This power and flexibility makes Experience Platform unique in the market. It gives partners, customers, and a community of developers a foundation on which to build innovations that drive The Experience Business: exceeding customer expectations by delivering a continually improving, fully-personalized experience drawn from a 360-degree view of the customer and their individual preferences.
 
+## Language support
+
+The Adobe Experience Platform user interface and documentation are available in multiple languages. 
+
+### User interface languages
+
+The Adobe Experience Platform user interface is current available in the following languages:
+
+* English
+* French
+* German
+* Japanese
+
+Your default user interface language is determined by the region specified in your user profile. To change your language:
+
+>[!NOTE]
+>
+> Selecting a region determines the language and content on Adobe.com.
+
+1. Click the current language in the footer of the Experience Platform interface.
+1. In your profile settings, click **[!UICONTROL Change Region]**.
+1. Select your region. 
+
+### Documentation languages
+
+The Adobe Experience Platform documentation is available in several languages. To change language, click the language dropdown and select the desired language.
+
+![image](assets/lang.jpg)
+
 ## Experience Platform documentation
 
 Experience Platform documentation is provided in multiple formats for a variety of features and services. To learn more about the types of documentation that are available, as well as to read brief descriptions of each of the Platform services, please visit the [Experience Platform documentation overview](documentation/overview.md). Or, to begin learning more about a specific Platform service right away, select a guide from the alphabetical list in the left navigation.
