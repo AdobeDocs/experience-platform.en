@@ -7,11 +7,6 @@ topic: developer guide
 
 # Evaluate events in real-time with streaming segmentation 
 
-Segmenting customers into audience groups is one of the most common workload items for profile stores. Segmentation can be performed to classify a customer into one of the groups, including the following methods:
-
-- Real-time segmentation: Prioritizes minimizing time to activate
-- Batch segmentation: Prioritizes data richness
-
 Streaming segmentation on Adobe Experience Platform allows customers to do segmentation in real time while focusing on data richness. With streaming segmentation, segment qualification now happens as data lands into Platform, alleviating the need to schedule and run segmentation jobs. With this capability, most segment rules can now be evaluated as the data is passed into Platform, meaning segment membership will be kept up to date without running scheduled segmentation jobs.
 
 ![](../images/api/streaming-segment-evaluation.png)
