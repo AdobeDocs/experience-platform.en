@@ -37,20 +37,20 @@ See [Cloud storage destinations workflow ](/help/rtcdp/destinations/cloud-storag
 
 For [!DNL Amazon Kinesis] destinations, enter the following information in the create destination workflow:
 
-### In the Account step {#account-step}
+### In the Authentication step {#authentication-step}
 
 * **Amazon Web Services access key and secret key**: In [!DNL Amazon Web Services], generate an access key - secret access key pair to grant Adobe Real-time CDP access to your [!DNL Amazon Kinesis] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **region**: Indicate which [!DNL Amazon Web Services] region to stream data to.
 
 ![Input fields in the account step](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
 
-### In the Authentication step {#authentication-step}
+### In the Setup step {#setup-step}
 
 * **Name**: Provide a name for your connection to [!DNL Amazon Kinesis]
 * **Description**: Provide a description for your connection to [!DNL Amazon Kinesis].
-* **stream**: Provide the name of your existing data stream in your [!DNL Amazon Kinesis] account. Adobe Real-time CDP will export data to this stream.
+* **stream**: Provide the name of an existing data stream in your [!DNL Amazon Kinesis] account. Adobe Real-time CDP will export data to this stream.
 
-![Input fields in the authentication step](/help/rtcdp/destinations/assets/aws-kinesis-authentication-step.png)
+![Input fields in the authentication step](/help/rtcdp/destinations/assets/aws-kinesis-setup-step.png)
 
 <!--
 

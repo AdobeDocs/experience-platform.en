@@ -42,14 +42,15 @@ Before creating the Google Display & Video 360 destination in Adobe Real-time CD
 1. In **[!UICONTROL Connections > Destinations]**, select Google Display & Video 360, and select **[!UICONTROL Create destination]**.
     ![Connect Google Display & Video 360 destination](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
-2. In the Create destination workflow, fill in the [!UICONTROL Basic Information] for the destination. <br>
-    ![Basic information Google Display & Video 360](/help/rtcdp/destinations/assets/google-dv360-basic-information.png)
+2. In the **Setup** step of the create destination workflow, fill in the [!UICONTROL Basic Information] for the destination, as well as the marketing use cases that should apply to this destination. <br>
+    ![Basic information Google Display & Video 360](/help/rtcdp/destinations/assets/dv360-setup-step.png)
 *  **[!UICONTROL Name]**: Fill in the preferred name for this destination.
 *  **[!UICONTROL Description]**: Optional. For example, you can mention which campaign you are using this destination for.
 *  **[!UICONTROL Account Type]**: Select an option, depending on your account with Google:
    * Use `Invite Advertiser` to allow audiences to be shared only to a specific brand in your Display & Video 360 account.
    * Use `Invite Partner` to allow audiences to be shared to all brands in your Display & Video 360 account.
 *  **[!UICONTROL Account ID]**: Fill in your **[!DNL Invite partner]** or **[!DNL Invite advertiser]** account ID with Google. Typically, this is a six or seven digit ID.
+*  **[!UICONTROL Marketing use case]**: Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Real-time CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](/help/data-governance/policies/overview.md#core-actions).  
 
 >[!NOTE]
 >
