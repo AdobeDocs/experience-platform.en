@@ -17,7 +17,7 @@ In order to utilize insights for Attribution AI, you need to have a service inst
 
 ## Service instance insights overview
 
-In the Adobe Experience Platform UI, click **Services** in the left navigation. The *Services* browser appears and displays available Adobe Intelligent Services. In the container for Attribution AI, click **Open**.
+In the [!DNL Adobe Experience Platform] UI, click **Services** in the left navigation. The *Services* browser appears and displays available Adobe Intelligent Services. In the container for Attribution AI, click **Open**.
 
 ![Accessing your instance](./images/insights/open_Attribution_ai.png)
 
@@ -50,7 +50,7 @@ The edit dialog box appears, allowing you to edit the description and scoring fr
 
 ![edit popover](./images/insights/edit-popover.png)
 
-### More actions
+### More actions {#more-actions}
 
 The *More actions* button is located in the top-right navigation next to *Edit*. Clicking **More actions** opens a dropdown that allows you to select one of the following operations:
 

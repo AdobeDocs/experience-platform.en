@@ -66,13 +66,13 @@ For more information on using this endpoint, please read the [PQL conversions de
 
 Schedules are a tool that can be used to automatically run export jobs once a day. You can use the `/config/schedules` endpoint to retrieve a list of schedules, create a new schedule, retrieve details of a specific schedule, update a specific schedule, or delete a specific schedule. 
 
-For more information on using this endpoint, please read the [schedules developer guide](./schedules.md).
+For more information on using this endpoint, please read the [schedules developer guide](./schedules.md). -->
 
 ## Segment definitions
 
 Segment definitions define which profiles will be part of which audience segments. You can use the `/segment/definitions` endpoint to retrieve a list of segment definitions, create a new segment definition, retrieve details of a specific segment definition, delete a specific segment definition, or overwrite details of a specific segment definition.
 
-For more information on using this endpoint, please read the [segment definitions developer guide](./segment-definitions.md). -->
+For more information on using this endpoint, please read the [segment definitions developer guide](./segment-definitions.md). 
 
 ## Segment jobs
 

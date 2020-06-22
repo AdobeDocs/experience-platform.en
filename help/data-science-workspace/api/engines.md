@@ -75,7 +75,7 @@ curl -X POST \
         "artifacts": {
             "default": {
                 "image": {
-                    "location": "{DOCKER_URL}",
+                    "location": "v1rsvj32smc4wbs.azurecr.io/ml-featurepipeline-pyspark:1.0",
                     "name": "An additional name for the Docker image",
                     "executionType": "Python"
                 }
@@ -138,7 +138,7 @@ A successful response returns a payload containing the details of the newly crea
 
 ```json
 {
-    "id": "{ENGINE_ID}",
+    "id": "22f4166f-85ba-4130-a995-a2b8e1edde32",
     "name": "A name for this Engine",
     "description": "A description for this Engine",
     "type": "Python",
@@ -151,7 +151,7 @@ A successful response returns a payload containing the details of the newly crea
     "artifacts": {
         "default": {
             "image": {
-                "location": "{DOCKER_URL}",
+                "location": "v1rsvj32smc4wbs.azurecr.io/ml-featurepipeline-pyspark:1.0",
                 "name": "An additional name for the Docker image",
                 "executionType": "Python",
                 "packagingType": "docker"
@@ -195,7 +195,7 @@ curl -X POST \
                 "executionType": "PySpark",
                 "packagingType": "docker"
             },
-           "defaultMLInstanceConfigs": [
+           "defaultMLInstanceConfigs": [ ...
            ]
        }
    }
@@ -212,6 +212,7 @@ curl -X POST \
 | `artifacts.default.image.location` | The location of the Docker image. Only Azure ACR or Public (unauthenticated) Dockerhub is supported. |
 | `artifacts.default.image.executionType` | The execution type of the Engine. This value corresponds to the language in which the Docker image is built upon. This can be either "Spark" or "PySpark". |
 | `artifacts.default.image.packagingType` | The packaging type of the Engine. This value should be set to `docker`. |
+| `artifacts.default.defaultMLInstanceConfigs` | Your `pipeline.json` configuration file parameters. |
 
 **Response**
 
@@ -235,7 +236,8 @@ A successful response returns a payload containing the details of the newly crea
                 "name": "datatransformation",
                 "executionType": "PySpark",
                 "packagingType": "docker"
-            }
+            },
+        "defaultMLInstanceConfigs": [ ... ]
         }
     }
 }
@@ -272,7 +274,7 @@ A successful response returns a list of Engines and their details.
 {
     "children": [
         {
-            "id": "{ENGINE_ID}",
+            "id": "22f4166f-85ba-4130-a995-a2b8e1edde31",
             "name": "A name for this Engine",
             "description": "A description for this Engine",
             "type": "PySpark",
@@ -284,7 +286,7 @@ A successful response returns a list of Engines and their details.
             "updated": "2019-01-01T00:00:00.000Z"
         },
         {
-            "id": "{ENGINE_ID}",
+            "id": "22f4166f-85ba-4130-a995-a2b8e1edde32",
             "name": "A name for this Engine",
             "description": "A description for this Engine",
             "type": "Python",
@@ -296,7 +298,7 @@ A successful response returns a list of Engines and their details.
             "updated": "2019-01-01T00:00:00.000Z"
         },
         {
-            "id": "{ENGINE_ID}",
+            "id": "22f4166f-85ba-4130-a995-a2b8e1edde33",
             "name": "Feature Pipeline Engine",
             "description": "A feature pipeline Engine",
             "type": "PySpark",
@@ -334,7 +336,7 @@ GET /engines/{ENGINE_ID}
 
 ```shell
 curl -X GET \
-    https://platform.adobe.io/data/sensei/engines/{ENGINE_ID} \
+    https://platform.adobe.io/data/sensei/engines/22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -347,7 +349,7 @@ A successful response returns a payload containing the details of the desired En
 
 ```json
 {
-    "id": "{ENGINE_ID}",
+    "id": "22f4166f-85ba-4130-a995-a2b8e1edde32",
     "name": "A name for this Engine",
     "description": "A description for this Engine",
     "type": "PySpark",
@@ -360,10 +362,10 @@ A successful response returns a payload containing the details of the desired En
     "artifacts": {
         "default": {
             "image": {
-                "location": "wasbs://artifact-location.blob.core.windows.net/{ENGINE_ID}/default.egg",
+                "location": "v7d1cs2mimnlttw.azurecr.io/ml-featurepipeline-pyspark:0.2.1",
                 "name": "file.egg",
                 "executionType": "PySpark",
-                "packagingType": "egg"
+                "packagingType": "docker"
             }
         }
     }
@@ -409,7 +411,7 @@ PUT /engines/{ENGINE_ID}
 
 ```shell
 curl -X PUT \
-    https://platform.adobe.io/data/sensei/engines/{ENGINE_ID} \
+    https://platform.adobe.io/data/sensei/engines/22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -437,7 +439,7 @@ A successful response returns a payload containing the Engine's updated details.
 
 ```json
 {
-    "id": "{ENGINE_ID}",
+    "id": "22f4166f-85ba-4130-a995-a2b8e1edde32",
     "name": "An updated name for this Engine",
     "description": "An updated description",
     "type": "Python",
@@ -477,7 +479,7 @@ DELETE /engines/{ENGINE_ID}
 
 ```shell
 curl -X DELETE \
-    https://platform.adobe.io/data/sensei/engines/{ENGINE_ID} \
+    https://platform.adobe.io/data/sensei/engines/22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -491,145 +493,5 @@ curl -X DELETE \
     "title": "Success",
     "status": 200,
     "detail": "Engine deletion was successful"
-}
-```
-
-## Deprecated requests
-
->[!IMPORTANT] 
->Binary artifacts are no longer supported and are set to be removed at a later date. New PySpark and Scala recipes should now follow the [docker image](#docker-image) examples to create an Engine.
-
-## Create an Engine using binary artifacts - deprecated
-
-You can create an Engine using local `.jar` or `.egg` binary artifacts by performing a POST request while providing its meta data and the artifact's path in multipart forms.
-
-**API Format**
-
-```https
-POST /engines
-```
-
-**Request**
-
-```shell
-curl -X POST \
-    https://platform.adobe.io/data/sensei/engines \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'content-type: multipart/form-data' \
-    -F 'engine={
-        "name": "A name for this Engine",
-        "description": "A description for this Engine",
-        "algorithm": "Classification",
-        "type": "PySpark",
-    }' \
-    -F 'defaultArtifact=@path/to/binary/artifact/file.egg'
-```
-
-| Property | Description |
-| --- | --- |
-| `name` | The desired name for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in the UI as the Recipe's name. |
-| `description` | An optional description for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in UI as the Recipe's description. This property is required. If you do not want to provide a description, set its value to be an empty string. |
-| `algorithm` | A string that specifies the type of machine learning algorithm. Supported algorithm types include "Classification", "Regression", or "Custom". |
-| `type` | The execution type of the Engine. This value corresponds to the language in which the binary artifact is built upon and can be either "PySpark" or "Spark". |
-
-
-**Response**
-
-A successful response returns a payload containing the details of the newly created Engine including its unique identifier (`id`).
-
-```json
-{
-    "id": "{ENGINE_ID}",
-    "name": "A name for this Engine",
-    "description": "A description for this Engine",
-    "type": "PySpark",
-    "algorithm": "Classification",
-    "created": "2019-01-01T00:00:00.000Z",
-    "createdBy": {
-        "userId": "Jane_Doe@AdobeID"
-    },
-    "updated": "2019-01-01T00:00:00.000Z",
-    "artifacts": {
-        "default": {
-            "image": {
-                "location": "wasbs://artifact-location.blob.core.windows.net/Engine_ID/default.egg",
-                "name": "file.egg",
-                "executionType": "PySpark",
-                "packagingType": "egg"
-            }
-        }
-    }
-}
-```
-
-## Create a feature pipeline Engine using binary artifacts - deprecated {#create-a-feature-pipeline-engine-using-binary-artifacts}
-
->[!IMPORTANT]
->Binary artifacts are no longer supported and are set to be removed at a later date.
-
-You can create a feature pipeline Engine using local `.jar` or `.egg` binary artifacts by performing a POST request while providing its metadata and the artifact's paths in multipart forms. A PySpark or Spark Engine has the ability to specify computation resources such as the number of cores or the amount of memory. Please refer to the appendix section on [PySpark and Spark resource configurations](./appendix.md#resource-config) for more information.
-
-**API Format**
-
-```https
-POST /engines
-```
-
-**Request**
-
-```shell
-curl -X POST \
-    https://platform.adobe.io/data/sensei/engines \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'content-type: multipart/form-data' \
-    -F 'engine={
-        "name": "Feature Pipeline Engine",
-        "description": "A feature pipeline Engine",
-        "algorithm":"fp",
-        "type": "PySpark"
-    }' \
-    -F 'featurePipelineOverrideArtifact=@path/to/binary/artifact/feature_pipeline.egg' \
-    -F 'defaultArtifact=@path/to/binary/artifact/feature_pipeline.egg'
-```
-
-| Property | Description |
-| --- | --- |
-| `name` | The desired name for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in the UI as the Recipe's name. |
-| `description` | An optional description for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in UI as the Recipe's description. This property is required. If you do not want to provide a description, set its value to be an empty string. |
-| `algorithm` | A string that specifies the type of machine learning algorithm. Set this value as "fp" to specify this creation to be a Feature Pipeline Engine. |
-| `type` | The execution type of the Engine. This value corresponds to the language in which the binary artifacts are built upon and can be either "PySpark" or "Spark". |
-
-**Response**
-
-A successful response returns a payload containing the details of the newly created Engine including its unique identifier (`id`).
-
-```json
-{
-    "id": "{ENGINE_ID}",
-    "name": "Feature Pipeline Engine",
-    "description": "A feature pipeline Engine",
-    "type": "PySpark",
-    "algorithm": "fp",
-    "created": "2019-01-01T00:00:00.000Z",
-    "createdBy": {
-        "userId": "Jane_Doe@AdobeID"
-    },
-    "updated": "2019-01-01T00:00:00.000Z",
-    "artifacts": {
-        "default": {
-            "image": {
-                "location": "wasbs://artifact-location.blob.core.windows.net/Engine_ID/default.egg",
-                "name": "file.egg",
-                "executionType": "PySpark",
-                "packagingType": "egg"
-            }
-        }
-    }
 }
 ```

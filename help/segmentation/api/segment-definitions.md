@@ -9,13 +9,7 @@ topic: developer guide
 
 Adobe Experience Platform allows you to create segments that define a group of specific attributes or behaviors from a group of profiles.
 
-This developer guide provides instructions on the following areas for segment definitions:
-
-- [Retrieve a list of segment definitions](#retrieve-a-list-of-segment-definitions)
-- [Create a new segment definition](#create-a-new-segment-definition)
-- [Retrieve a specific segment definition](#retrieve-a-specific-segment-definition)
-- [Delete a specific segment definition](#delete-a-specific-segment-definition)
-- [Update a specific segment definition](#update-a-specific-segment-definition)
+This guide provides information to help you better understand segment definitions and includes sample API calls for performing basic actions using the API.
 
 ## Getting started
 
@@ -42,10 +36,10 @@ The following is a list of available query parameters for listing segment defini
 
 | Parameter | Description |
 | --------- | ----------- |
-| `start` | ??? |
+| `start` | Specifies the starting offset for the segment definitions returned. |
 | `limit` | Specifies the number of segment definitions returned per page. |
 | `page` | Specifies which page the results of segment definitions will start from. |
-| `sort` | Specified which field to sort the results by. |
+| `sort` | Specifies which field to sort the results by. Is written in the following format: `[attributeName]:[desc|asc]`.  |
 | `evaluationInfo.continuous.enabled` | Specifies if the segment definition is streaming-enabled. |
 
 **Request**
@@ -71,7 +65,7 @@ A successful response returns HTTP status 200 with a list of segment definitions
                 "name": "_xdm.context.profile"
             },
             "ttlInDays": 30,
-            "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
+            "imsOrgId": "{IMS_ORG}",
             "sandbox": {
                 "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
                 "sandboxName": "prod",
@@ -83,7 +77,7 @@ A successful response returns HTTP status 200 with a list of segment definitions
             "expression": {
                 "type": "PQL",
                 "format": "pql/json",
-                "value": "{\"nodeType\":\"select\",\"variables\":[{\"nodeType\":\"varDecl\",\"varName\":\"_Checkouts1\",\"from\":{\"nodeType\":\"fieldLookup\",\"fieldName\":\"xEvent\",\"object\":{\"nodeType\":\"literal\",\"literalType\":\"XDMObject\",\"value\":\"profile\"}},\"where\":{\"nodeType\":\"fnApply\",\"fnName\":\"equals\",\"params\":[{\"nodeType\":\"fieldLookup\",\"fieldName\":\"eventType\",\"object\":{\"nodeType\":\"varRef\",\"varName\":\"_Checkouts1\"}},{\"literalType\":\"String\",\"nodeType\":\"literal\",\"value\":\"commerce.checkouts\"},{\"nodeType\":\"literal\",\"literalType\":\"Boolean\",\"value\":true}]}}]}"
+                "value": "{PQL_EXPRESSION}"
             },
             "mergePolicyId": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
             "evaluationInfo": {
@@ -112,13 +106,13 @@ A successful response returns HTTP status 200 with a list of segment definitions
                 "name": "_xdm.context.profile"
             },
             "ttlInDays": 30,
-            "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
+            "imsOrgId": "{IMS_ORG}",
             "name": "test segment",
             "description": "",
             "expression": {
                 "type": "PQL",
                 "format": "pql/json",
-                "value": "{\"nodeType\":\"fnApply\",\"fnName\":\"and\",\"params\":[{\"nodeType\":\"fnApply\",\"fnName\":\"=\",\"params\":[{\"nodeType\":\"fieldLookup\",\"fieldName\":\"points\",\"object\":{\"nodeType\":\"fieldLookup\",\"fieldName\":\"_acpstardust\",\"object\":{\"nodeType\":\"literal\",\"literalType\":\"XDMObject\",\"value\":\"profile\"}}},{\"literalType\":\"Double\",\"nodeType\":\"literal\",\"value\":2}]},{\"nodeType\":\"fnApply\",\"fnName\":\"equals\",\"params\":[{\"nodeType\":\"fieldLookup\",\"fieldName\":\"testLoyaltyID\",\"object\":{\"nodeType\":\"fieldLookup\",\"fieldName\":\"_acpstardust\",\"object\":{\"nodeType\":\"literal\",\"literalType\":\"XDMObject\",\"value\":\"profile\"}}},{\"literalType\":\"String\",\"nodeType\":\"literal\",\"value\":\"\"},{\"nodeType\":\"literal\",\"literalType\":\"Boolean\",\"value\":false}]}]}"
+                "value": "{PQL_EXPRESSION}"
             },
             "mergePolicyId": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
             "evaluationInfo": {
@@ -172,29 +166,22 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
- -d '
- {
-  "name": "People who ordered in the last 30 days",
-  "profileInstanceId": "ups",
-  "description": "Last 30 days",
-  "expression": {
-    "type": "PQL",
-    "format": "pql/text",
-    "value": "workAddress.country = \"US\""
-  },
-  "schema": {
-    "name": "_xdm.context.profile"
-  },
-  "payloadSchema": "string",
-  "ttlInDays": 60,
-  "creationTime": 0,
-  "updateTime": 0,
-  "updateEpoch": 0
-}
- '
+ -d '{
+        "name": "People who ordered in the last 30 days",
+        "profileInstanceId": "ups",
+        "description": "Last 30 days",
+        "expression": {
+            "type": "PQL",
+            "format": "pql/text",
+            "value": "workAddress.country = \"US\""
+        },
+        "schema": {
+            "name": "_xdm.context.profile"
+        },
+        "payloadSchema": "string",
+        "ttlInDays": 60
+    }'
 ```
-
-explain body
 
 **Response**
 
@@ -242,8 +229,6 @@ A successful response returns HTTP status 200 with details of your newly created
 }
 ```
 
-explain body and headers
-
 ## Retrieve a specific segment definition
 
 You can retrieve detailed information about a specific segment definition by making a GET request to the `/segment/definitions` endpoint and providing the segment definition's `id` value in the request path.
@@ -254,7 +239,9 @@ You can retrieve detailed information about a specific segment definition by mak
 GET /segment/definitions/{SEGMENT_ID}
 ```
 
-- `{SEGMENT_ID}`: The `id` value of the segment definition you want to retrieve.
+| Parameter | Description |
+| --------- | ----------- |
+| `{SEGMENT_ID}` | The `id` value of the segment definition you want to retrieve. |
 
 **Request**
 
@@ -278,7 +265,7 @@ A successful response returns HTTP status 200 with detailed information about th
     },
     "ttlInDays": 60,
     "profileInstanceId": "ups",
-    "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
+    "imsOrgId": "{IMS_ORG}",
     "sandbox": {
         "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
         "sandboxName": "prod",
@@ -312,6 +299,127 @@ A successful response returns HTTP status 200 with detailed information about th
 }
 ```
 
+## Bulk retrieve segment definitions
+
+You can retrieve detailed information about multiple specified segment definitions by making a POST request to the `/segment/definitions/bulk-get` endpoint and providing the  `id` values of the segment definitions in the request body.
+
+**API format**
+
+```http
+POST /segment/definitions/bulk-get
+```
+
+**Request**
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-get \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "ids": [
+            {
+                "id": "54669488-03ab-4e0d-a694-37fe49e32be8"
+            },
+            {
+                "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05"
+            }
+        ]
+    }'
+```
+
+**Response**
+
+A successful response returns HTTP status 207 with the requested segment definitions.
+
+```json
+{
+    "results": {
+        "54669488-03ab-4e0d-a694-37fe49e32be8": {
+            "id": "54669488-03ab-4e0d-a694-37fe49e32be8",
+            "schema": {
+                "name": "_xdm.context.profile"
+            },
+            "ttlInDays": 60,
+            "profileInstanceId": "ups",
+            "imsOrgId": "{IMS_ORG}",
+            "sandbox": {
+                "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
+                "sandboxName": "prod",
+                "type": "production",
+                "default": true
+            },
+            "name": "People who ordered in the last 30 days",
+            "description": "Last 30 days",
+            "expression": {
+                "type": "PQL",
+                "format": "pql/text",
+                "value": "workAddress.country = \"US\""
+            },
+            "evaluationInfo": {
+                "batch": {
+                    "enabled": true
+                },
+                "continuous": {
+                    "enabled": false
+                },
+                "synchronous": {
+                    "enabled": false
+                }
+            },
+            "dataGovernancePolicy": {
+                "excludeOptOut": true
+            },
+            "creationTime": 0,
+            "updateEpoch": 1579292094,
+            "updateTime": 1579292094000
+        },
+        "4afe34ae-8c98-4513-8a1d-67ccaa54bc05": {
+            "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
+            "schema": {
+                "name": "_xdm.context.profile"
+            },
+            "ttlInDays": 60,
+            "profileInstanceId": "ups",
+            "imsOrgId": "{IMS_ORG}",
+            "sandbox": {
+                "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
+                "sandboxName": "prod",
+                "type": "production",
+                "default": true
+            },
+            "name": "People who ordered in the last 30 days",
+            "description": "Last 30 days",
+            "expression": {
+                "type": "PQL",
+                "format": "pql/text",
+                "value": "workAddress.country = \"US\""
+            },
+            "evaluationInfo": {
+                "batch": {
+                    "enabled": true
+                },
+                "continuous": {
+                    "enabled": false
+                },
+                "synchronous": {
+                    "enabled": false
+                }
+            },
+            "dataGovernancePolicy": {
+                "excludeOptOut": true
+            },
+            "creationTime": 0,
+            "updateEpoch": 1579292094,
+            "updateTime": 1579292094000
+        }
+
+    }
+}
+```
+
 ## Delete a specific segment definition
 
 You can request to delete a specified segment definition by making a DELETE request to the `/segment/definitions` endpoint and providing the segment definition's `id` value in the request path.
@@ -322,7 +430,9 @@ You can request to delete a specified segment definition by making a DELETE requ
 DELETE /segment/definitions/{SEGMENT_ID}
 ```
 
-- `{SEGMENT_ID}` The `id` value of the segment definition you want to delete.
+| Parameter | Description |
+| --------- | ----------- |
+| `{SEGMENT_ID}` | The `id` value of the segment definition you want to delete. |
 
 **Request**
 
@@ -348,7 +458,9 @@ You can update a specified segment definition by making a PATCH request to the `
 PATCH /segment/definitions/{SEGMENT_ID}
 ```
 
-- `{SEGMENT_ID}`: The `id` value of the segment definition you want to update.
+| Parameter | Description |
+| --------- | ----------- |
+| `{SEGMENT_ID}` | The `id` value of the segment definition you want to update. |
 
 **Request**
 
@@ -381,8 +493,6 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34
 }
 '
 ```
-
-explain body
 
 **Response**
 
@@ -430,6 +540,6 @@ A successful response returns HTTP status 200 with details of your newly updated
 }
 ```
 
-explain body and header
-
 ## Next steps
+
+After reading this guide you now have a better understanding of how segment definitions work. For more information on Segmentation, please read the [Segmentation overview](../home.md). 

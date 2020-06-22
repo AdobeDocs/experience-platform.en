@@ -8,7 +8,7 @@ topic: overview
 # Create an Amazon Redshift source connector in the UI
 
 >The [!NOTE]
->The Amazon Redshift connector is in beta. The features and documentation are subject to change.
+>The Amazon Redshift connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a Amazon Redshift (hereinafter referred to as "Redshift") source connector using the Platform user interface.
 
@@ -42,9 +42,9 @@ Once you have gathered your required credentials, you can follow the steps below
 
 Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> and then select **Sources** from the left navigation bar to access the *Sources* workspace. The *Catalog* screen displays a variety of sources for which you can create inbound base connections with, and each source shows the number of existing base connections associated to them.
 
-Under the *Databases* category, select **Amazon Redshift** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To create a new inbound base connection, select **Connect source**. 
+Under the *Databases* category, select **Amazon Redshift** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To create a new inbound base connection, select **Connect source**.
 
-![](../../../../images/tutorials/create/redshift/sources-catalog.png)
+![](../../../../images/tutorials/create/redshift/catalog.png)
 
 The *Connect to Amazon Redshift* page appears. On this page, you can either use new credentials or existing credentials.
 
@@ -52,13 +52,13 @@ The *Connect to Amazon Redshift* page appears. On this page, you can either use 
 
 If you are using new credentials, select **New account**. On the input form that appears, provide the base connection with a name, an optional description, and your Redshift credentials. When finished, select **Connect** and then allow some time for the new base connection to establish.
 
-![](../../../../images/tutorials/create/redshift/new-credentials.png)
+![](../../../../images/tutorials/create/redshift/new.png)
 
 ### Existing account
 
 To connect an existing account, select the Redshift account you want to connect with, then select **Next** to proceed.
 
-![](../../../../images/tutorials/create/redshift/existing-credentials.png)
+![](../../../../images/tutorials/create/redshift/existing.png)
 
 ## Next steps
 

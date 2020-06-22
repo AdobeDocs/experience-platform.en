@@ -419,7 +419,7 @@ topic: getting started
 
 **Rule Component:** In Experience Platform Launch, rule components are the events, conditions, and actions that make up a rule.
 
-**Runtime:** Runtime specifies a runtime environment for a machine learning recipe. Spark and PySpark runtimes allow direct upload of a binary recipe source (.jar) file. Python, R, and Tensorflow runtimes enable input of a URL to a docker image for a recipe source.
+**Runtime:** Runtime specifies a runtime environment for a machine learning recipe. Python, R, Spark, PySpark, and Tensorflow runtimes enable input of a URL to a docker image for a recipe source.
 
 [Back to top](#adobe-experience-platform-glossary)
 

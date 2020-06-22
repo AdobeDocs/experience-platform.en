@@ -8,7 +8,7 @@ topic: overview
 # Create an Azure File Storage connector using the Flow Service API
 
 >[!NOTE]
->Azure File Storage connector is in beta. The features and documentation are subject to change.
+>The Azure File Storage connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
@@ -68,7 +68,8 @@ POST /connections
 
 **Request**
 
-In order to create a Azure File Storage connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for Azure File Storage is `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`.
+The following request creates a new Azure File Storage connection, configured by the properties provided in the payload:
+
 
 ```shell
 curl -X POST \

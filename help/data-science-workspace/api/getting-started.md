@@ -7,13 +7,13 @@ topic: Developer guide
 
 # Sensei Machine Learning API developer guide
 
-The Sensei Machine Learning API provides a mechanism for data scientiests to organize and manage machine learning services, from algorithm onboarding through experimentation and to service deployment.
+The Sensei Machine Learning API provides a mechanism for data scientists to organize and manage machine learning services, from algorithm onboarding through experimentation and to service deployment.
 
 This developer guide provides steps to help you start using the [Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml), and demonstrates API calls for performing CRUD operations on various Data Science Workspace resources.
 
 ## Getting started
 
-You are required to have completed the [authentication](../../tutorials/authentication.md) tutorial in order to have access to the following request headers to make calls to Adobe Experience Platform APIs:
+You are required to have completed the [authentication](../../tutorials/authentication.md) tutorial in order to have access to the following request headers to make calls to [!DNL Adobe Experience Platform] APIs:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
