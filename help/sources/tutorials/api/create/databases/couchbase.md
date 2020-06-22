@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Create a CouchBase connector using the Flow Service API
+title: Create a Couchbase connector using the Flow Service API
 topic: overview
 ---
 
-# Create a CouchBase connector using the Flow Service API
+# Create a Couchbase connector using the Flow Service API
 
 >[!NOTE]
->The CouchBase connector is in beta. The features and documentation are subject to change.
+>The Couchbase connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Flow Service is used to collect and centralize customer data from various disparate sources to bring into Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
-This tutorial uses the Flow Service API to walk you through the steps to connect CouchBase to Experience Platform.
+This tutorial uses the Flow Service API to walk you through the steps to connect Couchbase to Experience Platform.
 
 ## Getting started
 
@@ -21,14 +21,14 @@ This guide requires a working understanding of the following components of Adobe
 *   [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 *   [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully connect to CouchBase using the Flow Service API.
+The following sections provide additional information that you will need to know in order to successfully connect to Couchbase using the Flow Service API.
 
 ### Gather required credentials
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string used to connect to your CouchBase instance. The connection string pattern for CouchBase is `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. For more information on acquiring a connection string, refer to [this CouchBase document](https://docs.couchbase.com/c-sdk/2.10/client-settings.html#configuring-overview). |
-| `connectionSpec.id` | The identifier needed to create a connection. The fixed connection spec ID for CouchBase is `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
+| `connectionString` | The connection string used to connect to your Couchbase instance. The connection string pattern for Couchbase is `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. For more information on acquiring a connection string, refer to [this Couchbase document](https://docs.Couchbase.com/c-sdk/2.10/client-settings.html#configuring-overview). |
+| `connectionSpec.id` | The identifier needed to create a connection. The fixed connection spec ID for Couchbase is `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
 
 ### Reading sample API calls
 
@@ -52,7 +52,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ## Create a connection
 
-A connection specifies a source and contains your credentials for that source. Only one connector is required per CouchBase account as it can be used to create multiple source connectors to bring in different data.
+A connection specifies a source and contains your credentials for that source. Only one connector is required per Couchbase account as it can be used to create multiple source connectors to bring in different data.
 
 **API format**
 
@@ -62,7 +62,7 @@ POST /connections
 
 **Request**
 
-The following request creates a new CouchBase connection, configured by the properties provided in the payload:.
+The following request creates a new Couchbase connection, configured by the properties provided in the payload:.
 
 ```shell
 curl -X POST \
@@ -73,8 +73,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "CouchBase test connection",
-        "description": "A test connection for a CouchBase source",
+        "name": "Couchbase test connection",
+        "description": "A test connection for a Couchbase source",
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
@@ -90,8 +90,8 @@ curl -X POST \
 
 | Property | Description |
 | --------- | ----------- |
-| `auth.params.connectionString` | The connection string used to connect to a CouchBase account. The connection string pattern is: `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. |
-| `connectionSpec.id` | The CouchBase connection spec ID: `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
+| `auth.params.connectionString` | The connection string used to connect to a Couchbase account. The connection string pattern is: `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. |
+| `connectionSpec.id` | The Couchbase connection spec ID: `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
 
 **Response**
 
@@ -106,4 +106,4 @@ A successful response returns the details of the newly created connection, inclu
 
 ## Next steps
 
-By following this tutorial, you have created a CouchBase connection using the Flow Service API and have obtained the connection's unique ID value. You can use this ID in the next tutorial as you learn how to [explore databases using the Flow Service API](../../explore/database-nosql.md).
+By following this tutorial, you have created a Couchbase connection using the Flow Service API and have obtained the connection's unique ID value. You can use this ID in the next tutorial as you learn how to [explore databases using the Flow Service API](../../explore/database-nosql.md).

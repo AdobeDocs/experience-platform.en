@@ -40,11 +40,11 @@ Cloud storage sources can bring your own data into Platform without the need to 
 - [Azure Data Lake Storage Gen2 connector](connectors/cloud-storage/adls-gen2.md)
 - [Azure Blob and Amazon S3 connector](connectors/cloud-storage/blob-s3.md)
 - [Amazon Kinesis connector](connectors/cloud-storage/kinesis.md)
+- [Apache HDFS connector](connectors/cloud-storage/hdfs.md)
 - [Azure Event Hubs connector](connectors/cloud-storage/eventhub.md)
 - [Azure File Storage connector](connectors/cloud-storage/azure-file-storage.md)
 - [FTP and SFTP connector](connectors/cloud-storage/ftp-sftp.md)
 - [Google Cloud Storage connector](connectors/cloud-storage/google-cloud-storage.md)
-- [HDFS connector](connectors/cloud-storage/hdfs.md)
 
 ### Customer Relationship Management (CRM)
 
@@ -70,7 +70,7 @@ Experience Platform provides support for ingesting data from a third-party datab
 - [Azure Data Explorer connector](connectors/databases/data-explorer.md)
 - [Azure Synapse Analytics connector](connectors/databases/synapse-analytics.md)
 - [Azure Table Storage connector](connectors/databases/ats.md)
-- [CouchBase connector](connectors/databases/couchbase.md)
+- [Couchbase connector](connectors/databases/couchbase.md)
 - [Google BigQuery connector](connectors/databases/bigquery.md)
 - [GreenPlum connector](connectors/databases/greenplum.md)
 - [HP Vertica connector](connectors/databases/hp-vertica.md)
@@ -113,3 +113,13 @@ The following table outlines how the UI behaves based on different combinations 
 | **View Sources** Off and **Manage Sources** Off | Revoke all access to sources. |
 
 For more information about the available permissions granted through the Admin Console, including those four sources, see the [access control overview](../access-control/home.md).
+
+## Terms and conditions {#terms-and-conditions}
+
+By using any of the Sources labeled as beta (“Beta”), You hereby acknowledge that the Beta is provided ***“as is” without warranty of any kind***.
+
+Adobe shall have no obligation to maintain, correct, update, change, modify, or otherwise support the Beta. You are advised to use caution and not to rely in any way on the correct functioning or performance of such Beta and/or accompanying materials. The Beta is considered Confidential Information of Adobe.
+
+Any “Feedback” (information regarding the Beta including but not limited to problems or defects you encounter while using the Beta, suggestions, improvements, and recommendations) provided by You to Adobe is hereby assigned to Adobe including all rights, title, and interest in and to such Feedback.
+
+Submit Open Feedback or create a Support Ticket to share your suggestions or report a bug, seek a feature enhancement.
