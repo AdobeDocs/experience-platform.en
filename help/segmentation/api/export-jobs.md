@@ -54,114 +54,87 @@ A successful response returns HTTP status 200 with a list of export jobs for the
 
 ```json
 {
-    "records":[
+    "records": [
         {
-            "id":100,
-            "jobType":"BATCH",
-            "destination":{
-                "datasetId":"5b7c86968f7b6501e21ba9df",
-                "segmentPerBatch":false,
-                "batchId":"da5cfb4de32c4b93a09f7e37fa53ad52",
-                "batches":{
-                    "segmentId":"52c26d0d-45f2-47a2-ab30-ed06abc981ff",
-                    "segmentNs":"ups",
-                    "status":[
-                        "realized"
-                    ],
-                    "batchId":"da5cfb4de32c4b93a09f7e37fa53ad52"
-                }
+            "id": 100,
+            "jobType": "BATCH",
+            "destination": {
+                "datasetId": "5b7c86968f7b6501e21ba9df",
+                "segmentPerBatch": false,
+                "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52",
             },
-            "fields":"identities.id,personalEmail.address",
-            "schema":{
-                "name":"_xdm.context.profile"
+            "fields": "identities.id,personalEmail.address",
+            "schema": {
+                "name": "_xdm.context.profile"
             },
-            "imsOrgId":"1BD6382559DF0C130A49422D@AdobeOrg",
-            "status":"SUCCEEDED",
-            "filter":{
-                "segments":[
+            "imsOrgId": "1BD6382559DF0C130A49422D@AdobeOrg",
+            "status": "SUCCEEDED",
+            "filter": {
+                "segments": [
                     {
-                        "segmentId":"52c26d0d-45f2-47a2-ab30-ed06abc981ff",
-                        "segmentNs":"ups",
-                        "status":[
+                        "segmentId": "52c26d0d-45f2-47a2-ab30-ed06abc981ff",
+                        "segmentNs": "ups",
+                        "status": [
                             "realized"
                         ]
                     }
-                ],
-                "segmentQualificationTime":{
-                    "startTime":"2018-01-01T00:00:00Z",
-                    "endTime":"2018-02-01T00:00:00Z"
-                },
-                "fromIngestTimestamp":"2018-01-01T00:00:00Z",
-                "emptyProfiles":true
+                ]
             },
-            "additionalFields":{
-                "eventList":{
-                    "fields":"string",
-                    "filter":{
-                        "fromIngestTimestamp":"2018-01-01T00:00:00Z"
-                    }
-                }
+            "mergePolicy": {
+                "id": "timestampOrdered-none-mp",
+                "version": 1
             },
-            "mergePolicy":{
-                "id":"timestampOrdered-none-mp",
-                "version":1
-            },
-            "profileInstanceId":"ups",
-            "errors":[
+            "profileInstanceId": "ups",
+            "errors": [
                 {
-                    "code":"0100000003",
-                    "msg":"Error in Export Job",
-                    "callStack":"com.adobe.aep.unifiedprofile.common.logging.Logger"
+                    "code": "0100000003",
+                    "msg": "Error in Export Job",
+                    "callStack": "com.adobe.aep.unifiedprofile.common.logging.Logger"
                 }
             ],
-            "metrics":{
-                "totalTime":{
-                    "startTimeInMs":123456789000,
-                    "endTimeInMs":123456799000,
-                    "totalTimeInMs":10000
+            "metrics": {
+                "totalTime": {
+                    "startTimeInMs": 123456789000,
+                    "endTimeInMs": 123456799000,
+                    "totalTimeInMs": 10000
                 },
-                "profileExportTime":{
-                    "startTimeInMs":123456789000,
-                    "endTimeInMs":123456799000,
-                    "totalTimeInMs":10000
+                "profileExportTime": {
+                    "startTimeInMs": 123456789000,
+                    "endTimeInMs": 123456799000,
+                    "totalTimeInMs": 10000
                 }
             },
-            "computeGatewayJobId":{
-                "exportJob":"f3058161-7349-4ca9-807d-212cee2c2e94"
+            "computeGatewayJobId": {
+                "exportJob": "f3058161-7349-4ca9-807d-212cee2c2e94"
             },
-            "creationTime":1538615973895,
-            "updateTime":1538616233239,
-            "requestId":"d995479c-8a08-4240-903b-af469c67be1f"
+            "creationTime": 1538615973895,
+            "updateTime": 1538616233239,
+            "requestId": "d995479c-8a08-4240-903b-af469c67be1f"
         }
     ],
     "page":{
-        "sortField":"createdTime",
-        "sort":"desc",
-        "pageOffset":"1540974701302_96",
-        "pageSize":10
+        "sortField": "createdTime",
+        "sort": "desc",
+        "pageOffset": "1540974701302_96",
+        "pageSize": 10
     },
     "link":{
-        "next":"string"
+        "next": "/export/jobs/?limit=2&offset=1538573416687_722"
     }
 }
 ```
 
 | Property | Description |
 | -------- | ----------- |
-| `fields` | A list of the exported fields, separated by commas.  |
-| `filter.segments` | The segments that are exported. The following fields are included:<ul><li>`segmentId`: Segment ID for profiles to be exported.</li><li>`segmentNs`: Segment namespace for the given `segmentID`.</li><li>`status`: An array of strings providing a status filter for the `segmentID`. By default, `status` will have the value `["realized", "existing"]` which represents all profiles that fall into the segment at the current time. Possible values include: "realized", "existing", and "exited".</li></ul> |
-| `filter.segmentQualificationTime` | A filter based on segment qualification time. |
-| `filter.segmentQualificationTime.startTime` | The segment qualification start time for a segment ID for a given status. The timestamp is listed in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
-| `filter.segmentQualificationTime.endTime` | The segment qualification end time for a segment ID for a given status. The timestamp is listed in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
-| `filter.fromIngestTimestamp `| The exported profiles included are limited to those that have been updated after this timestamp. The timestamp is listed in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
-| `filter.emptyProfiles` | A boolean value that indicates whether empty Profiles are filtered for. |
-| `additionalFields.eventList` | The time series event fields exported for child or associated objects by providing one or more of the following settings:<ul><li>`fields`: The fields that are exported.</li><li>`filter`: The limits of the results included from associated objects.</li><li>`filter.fromIngestTimestamp`: Filters time series events to those that have been ingested after the provided timestamp. This is not the event time itself but the ingestion time for the events.</li></ul> |
 | `destination` | Destination information for the exported data:<ul><li>`datasetId`: The ID of the dataset where data was exported.</li><li>`segmentPerBatch`: A Boolean value that shows whether or not segment IDs are consolidated. A value of `false` means all the segment IDs were into a single batch ID. A value of `true` means that one segment ID is exported into one batch ID.</li></ul> |
+| `fields` | A list of the exported fields, separated by commas. |
 | `schema.name` | The name of the schema associated with the dataset where data is to be exported. |
-| `evaluationInfo.segmentation`| A boolean value that, if not provided, defaults to `false`. A value of `true` indicates that segmentation needs to be done on the export job. |
-| `destination.datasetId` | The `id` value of the dataset where the data is being exported to. |
-| `segments.segmentId` | The `id` value of the segment that is being exported. |
-| `segments.segmentNs` | The `namespace` for the given segment. |
+| `filter.segments` | The segments that are exported. The following fields are included:<ul><li>`segmentId`: Segment ID for profiles to be exported.</li><li>`segmentNs`: Segment namespace for the given `segmentID`.</li><li>`status`: An array of strings providing a status filter for the `segmentID`. By default, `status` will have the value `["realized", "existing"]` which represents all profiles that fall into the segment at the current time. Possible values include: "realized", "existing", and "exited".</li></ul> |
+| `mergePolicy` | Merge policy information for the exported data. | 
+| `metrics.totalTime` | A field indicating the total time that export job took to run. |
+| `metrics.profileExportTime` | A field indicating the time it took for the profiles to export. |
+| `page` | Information about the pagination of the requested export jobs. | 
+| `link.next` | A link to the next page of export jobs. | 
 
 ## Create a new export job {#create}
 
@@ -186,41 +159,43 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
 {
-    "fields":"identities.id,personalEmail.address",
-    "mergePolicy":{
-        "id":"timestampOrdered-none-mp",
-        "version":1
+    "fields": "identities.id,personalEmail.address",
+    "mergePolicy": {
+        "id": "timestampOrdered-none-mp",
+        "version": 1
     },
-    "filter":{
-        "segments":[
+    "filter": {
+        "segments": [
             {
-                "segmentId":"52c26d0d-45f2-47a2-ab30-ed06abc981ff",
-                "segmentNs":"ups",
-                "status":[
+                "segmentId": "52c26d0d-45f2-47a2-ab30-ed06abc981ff",
+                "segmentNs": "ups",
+                "status": [
                     "realized"
                 ]
             }
         ],
-        "segmentQualificationTime":{
-            "startTime":"2018-01-01T00:00:00Z",
-            "endTime":"2018-02-01T00:00:00Z"
+        "segmentQualificationTime": {
+            "startTime": "2018-01-01T00:00:00Z",
+            "endTime": "2018-02-01T00:00:00Z"
         },
-        "fromIngestTimestamp":"2018-01-01T00:00:00Z",
-        "emptyProfiles":true
+        "fromIngestTimestamp": "2018-01-01T00:00:00Z",
+        "emptyProfiles": true
     },
-    "additionalFields":{
-        "eventList":{
-            "fields":"string",
-            "filter":{
-                "fromIngestTimestamp":"2018-01-01T00:00:00Z"
+    "additionalFields": {
+        "eventList": {
+            "fields": "string",
+            "filter": {
+                "fromIngestTimestamp": "2018-01-01T00:00:00Z",
+                "toIngestTimestamp": "2020-01-01T00:00:00Z"
             }
         }
     },
     "destination":{
-        "datasetId":"5b7c86968f7b6501e21ba9df"
+        "datasetId": "5b7c86968f7b6501e21ba9df",
+        "segmentPerBatch": false
     },
     "schema":{
-        "name":"_xdm.context.profile"
+        "name": "_xdm.context.profile"
     }
 }'
 ```
@@ -236,13 +211,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `filter.segmentQualificationTime.endTime` | *(Optional)* Segment qualification end time for a segment ID for a given status. It not provided, there will be no filter on the end time for a segment ID qualification. The timestamp must be provided in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
 | `filter.fromIngestTimestamp `| *(Optional)* Limits exported profiles to only include those that have been updated after this timestamp. The timestamp must be provided in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. <ul><li>`fromIngestTimestamp` for **profiles**, if provided: Includes all the merged profiles where merged updated timestamp is greater than the given timestamp. Supports `greater_than` operand.</li><li>`fromTimestamp` for **events**: All events ingested after this timestamp will be exported corresponding to resultant profile result. This is not the event time itself but the ingestion time for the events.</li> |
 | `filter.emptyProfiles` | *(Optional)* A boolean value that indicates whether to filter for empty Profiles. Profiles can contain Profile records, ExperienceEvent records, or both. Profiles with no Profile records and only ExperienceEvent records are referred to as "emptyProfiles". To export all profiles in the Profile store, including the "emptyProfiles", set the value of `emptyProfiles` to `true`. If `emptyProfiles` is set to `false`, only profiles with Profile records in the store are exported. By default, if `emptyProfiles` attribute is not included, only profiles containing Profile records are exported. |
-| `additionalFields.eventList` | *(Optional)* Controls the time series event fields exported for child or associated objects by providing one or more of the following settings:<ul><li>`fields`: Control the fields to export.</li><li>`filter`: Specifies criteria that limits the results included from associated objects. Expects a minimum value required for export, typically a date.</li><li>`filter.fromIngestTimestamp`: Filters time series events to those that have been ingested after the provided timestamp. This is not the event time itself but the ingestion time for the events.</li></ul> |
+| `additionalFields.eventList` | *(Optional)* Controls the time series event fields exported for child or associated objects by providing one or more of the following settings:<ul><li>`fields`: Control the fields to export.</li><li>`filter`: Specifies criteria that limits the results included from associated objects. Expects a minimum value required for export, typically a date.</li><li>`filter.fromIngestTimestamp`: Filters time series events to those that have been ingested after the provided timestamp. This is not the event time itself but the ingestion time for the events.</li><li>`filter.toIngestTimestamp`: Filters the timestamp to those that have been ingested before the provided timestamp. This is not the event time itself but the ingestion time for the events.</li></ul> |
 | `destination` | **(Required)** Destination information for the exported data:<ul><li>`datasetId`: **(Required)** The ID of the dataset where data is to be exported.</li><li>`segmentPerBatch`: *(Optional)* A Boolean value that, if not provided, defaults to `false`. A value of `false` exports all segment IDs into a single batch ID. A value of `true` exports one segment ID into one batch ID. Note that setting the value to be `true` may affect batch export performance.</li></ul> |
 | `schema.name` | **(Required)** The name of the schema associated with the dataset where data is to be exported. |
-| `evaluationInfo.segmentation`| *(Optional)* A boolean value that, if not provided, defaults to `false`. A value of `true` indicates that segmentation needs to be done on the export job. |
-| `destination.datasetId` | **Required**. The `id` value of the dataset where the data is being exported to. |
-| `segments.segmentId` | **Required**. The `id` value of the segment that is being exported. |
-| `segments.segmentNs` | *(Optional)*. The `namespace` for the given segment. |
 
 **Response**
 
@@ -250,82 +221,67 @@ A successful response returns HTTP status 200 with details of your newly created
 
 ```json
 {
-    "id":100,
-    "jobType":"BATCH",
-    "destination":{
-        "datasetId":"5b7c86968f7b6501e21ba9df",
-        "segmentPerBatch":false,
-        "batchId":"da5cfb4de32c4b93a09f7e37fa53ad52",
-        "batches":{
-            "segmentId":"52c26d0d-45f2-47a2-ab30-ed06abc981ff",
-            "segmentNs":"ups",
-            "status":[
-                "realized"
-            ],
-            "batchId":"da5cfb4de32c4b93a09f7e37fa53ad52"
-        }
+    "id": 100,
+    "jobType": "BATCH",
+    "destination": {
+        "datasetId": "5b7c86968f7b6501e21ba9df",
+        "segmentPerBatch": false,
+        "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
     },
-    "fields":"identities.id,personalEmail.address",
-    "schema":{
-        "name":"_xdm.context.profile"
+    "fields": "identities.id,personalEmail.address",
+    "schema": {
+        "name": "_xdm.context.profile"
     },
-    "imsOrgId":"1BD6382559DF0C130A49422D@AdobeOrg",
-    "status":"SUCCEEDED",
-    "filter":{
-        "segments":[
+    "imsOrgId": "{IMS_ORG}",
+    "status": "NEW",
+    "filter": {
+        "segments": [
             {
-                "segmentId":"52c26d0d-45f2-47a2-ab30-ed06abc981ff",
-                "segmentNs":"ups",
-                "status":[
+                "segmentId": "52c26d0d-45f2-47a2-ab30-ed06abc981ff",
+                "segmentNs": "ups",
+                "status": [
                     "realized"
                 ]
             }
         ],
-        "segmentQualificationTime":{
-            "startTime":"2018-01-01T00:00:00Z",
-            "endTime":"2018-02-01T00:00:00Z"
+        "segmentQualificationTime": {
+            "startTime": "2018-01-01T00:00:00Z",
+            "endTime": "2018-02-01T00:00:00Z"
         },
-        "fromIngestTimestamp":"2018-01-01T00:00:00Z",
-        "emptyProfiles":true
+        "fromIngestTimestamp": "2018-01-01T00:00:00Z",
+        "emptyProfiles": true
     },
-    "additionalFields":{
-        "eventList":{
-            "fields":"string",
-            "filter":{
-                "fromIngestTimestamp":"2018-01-01T00:00:00Z"
+    "additionalFields": {
+        "eventList": {
+            "fields": "string",
+            "filter": {
+                "fromIngestTimestamp": "2018-01-01T00:00:00Z"
             }
         }
     },
-    "mergePolicy":{
-        "id":"timestampOrdered-none-mp",
-        "version":1
+    "mergePolicy": {
+        "id": "timestampOrdered-none-mp",
+        "version": 1
     },
-    "profileInstanceId":"ups",
-    "errors":[
+    "profileInstanceId": "ups",
+    "errors": [
         {
-            "code":"0100000003",
-            "msg":"Error in Export Job",
-            "callStack":"com.adobe.aep.unifiedprofile.common.logging.Logger"
+            "code": "0100000003",
+            "msg": "Error in Export Job",
+            "callStack": "com.adobe.aep.unifiedprofile.common.logging.Logger"
         }
     ],
-    "metrics":{
-        "totalTime":{
-            "startTimeInMs":123456789000,
-            "endTimeInMs":123456799000,
-            "totalTimeInMs":10000
-        },
-        "profileExportTime":{
-            "startTimeInMs":123456789000,
-            "endTimeInMs":123456799000,
-            "totalTimeInMs":10000
+    "metrics": {
+        "totalTime": {
+            "startTimeInMs": 123456789000,
         }
     },
-    "computeGatewayJobId":{
-        "exportJob":"f3058161-7349-4ca9-807d-212cee2c2e94"    
+    "computeGatewayJobId": {
+        "exportJob": "f3058161-7349-4ca9-807d-212cee2c2e94"    
     },
-    "creationTime":1538615973895,
-    "updateTime":1538616233239,
-    "requestId":"d995479c-8a08-4240-903b-af469c67be1f"
+    "creationTime": 1538615973895,
+    "updateTime": 1538616233239,
+    "requestId": "d995479c-8a08-4240-903b-af469c67be1f"
 }
 ```
 
@@ -359,64 +315,35 @@ A successful response returns HTTP status 200 with detailed information about th
 
 ```json
 {
-    "id":100,
-    "jobType":"BATCH",
-    "destination":{
-        "datasetId":"5b7c86968f7b6501e21ba9df",
-        "segmentPerBatch":false,
-        "batchId":"da5cfb4de32c4b93a09f7e37fa53ad52",
-        "batches":{
-            "segmentId":"52c26d0d-45f2-47a2-ab30-ed06abc981ff",
-            "segmentNs":"ups",
-            "status":[
-                "realized"
-            ],
-            "batchId":"da5cfb4de32c4b93a09f7e37fa53ad52"
-        }
+    "id": 100,
+    "jobType": "BATCH",
+    "destination": {
+        "datasetId": "5b7c86968f7b6501e21ba9df",
+        "segmentPerBatch": false,
+        "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
     },
-    "fields":"identities.id,personalEmail.address",
-    "schema":{
-        "name":"_xdm.context.profile"
+    "fields": "identities.id,personalEmail.address",
+    "schema": {
+        "name": "_xdm.context.profile"
     },
-    "imsOrgId":"1BD6382559DF0C130A49422D@AdobeOrg",
-    "status":"SUCCEEDED",
-    "filter":{
-        "segments":[
+    "imsOrgId": "{IMS_ORG}",
+    "status": "SUCCEEDED",
+    "filter": {
+        "segments": [
             {
-                "segmentId":"52c26d0d-45f2-47a2-ab30-ed06abc981ff",
-                "segmentNs":"ups",
+                "segmentId": "52c26d0d-45f2-47a2-ab30-ed06abc981ff",
+                "segmentNs": "ups",
                 "status":[
                     "realized"
                 ]
             }
-        ],
-        "segmentQualificationTime":{
-            "startTime":"2018-01-01T00:00:00Z",
-            "endTime":"2018-02-01T00:00:00Z"
-        },
-        "fromIngestTimestamp":"2018-01-01T00:00:00Z",
-        "emptyProfiles":true
-    },
-    "additionalFields":{
-        "eventList":{
-            "fields":"string",
-            "filter":{
-                "fromIngestTimestamp":"2018-01-01T00:00:00Z"
-            }
-        }
+        ]
     },
     "mergePolicy":{
         "id":"timestampOrdered-none-mp",
         "version":1
     },
     "profileInstanceId":"ups",
-    "errors":[
-        {
-            "code":"0100000003",
-            "msg":"Error in Export Job",
-            "callStack":"com.adobe.aep.unifiedprofile.common.logging.Logger"
-        }
-    ],
     "metrics":{
         "totalTime":{
             "startTimeInMs":123456789000,
@@ -427,6 +354,11 @@ A successful response returns HTTP status 200 with detailed information about th
             "startTimeInMs":123456789000,
             "endTimeInMs":123456799000,
             "totalTimeInMs":10000
+        },
+        "totalExportedProfileCounter": 20,
+        "exportedProfileByNamespaceCounter": {
+            "namespace1": 10,
+            "namespace2": 5
         }
     },
     "computeGatewayJobId":{
@@ -440,20 +372,14 @@ A successful response returns HTTP status 200 with detailed information about th
 
 | Property | Description |
 | -------- | ----------- |
+| `destination` | Destination information for the exported data:<ul><li>`datasetId`: The ID of the dataset where the data was exported.</li><li>`segmentPerBatch`: A Boolean value that shows whether or not segment IDs are consolidated. A value of `false` means all the segment IDs were into a single batch ID. A value of `true` means that one segment ID is exported into one batch ID.</li></ul> |
 | `fields` | A list of the exported fields, separated by commas.  |
-| `filter.segments` | The segments that are exported. The following fields are included:<ul><li>`segmentId`: Segment ID for profiles to be exported.</li><li>`segmentNs`: Segment namespace for the given `segmentID`.</li><li>`status`: An array of strings providing a status filter for the `segmentID`. By default, `status` will have the value `["realized", "existing"]` which represents all profiles that fall into the segment at the current time. Possible values include: "realized", "existing", and "exited".</li></ul> |
-| `filter.segmentQualificationTime` | A filter based on segment qualification time. |
-| `filter.segmentQualificationTime.startTime` | The segment qualification start time for a segment ID for a given status. The timestamp is listed in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
-| `filter.segmentQualificationTime.endTime` | The segment qualification end time for a segment ID for a given status. The timestamp is listed in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
-| `filter.fromIngestTimestamp `| The exported profiles included are limited to those that have been updated after this timestamp. The timestamp is listed in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
-| `filter.emptyProfiles` | A boolean value that indicates whether empty Profiles are filtered for. |
-| `additionalFields.eventList` | The time series event fields exported for child or associated objects by providing one or more of the following settings:<ul><li>`fields`: The fields that are exported.</li><li>`filter`: The limits of the results included from associated objects.</li><li>`filter.fromIngestTimestamp`: Filters time series events to those that have been ingested after the provided timestamp. This is not the event time itself but the ingestion time for the events.</li></ul> |
-| `destination` | Destination information for the exported data:<ul><li>`datasetId`: The ID of the dataset where data was exported.</li><li>`segmentPerBatch`: A Boolean value that shows whether or not segment IDs are consolidated. A value of `false` means all the segment IDs were into a single batch ID. A value of `true` means that one segment ID is exported into one batch ID.</li></ul> |
 | `schema.name` | The name of the schema associated with the dataset where data is to be exported. |
-| `evaluationInfo.segmentation`| A boolean value that, if not provided, defaults to `false`. A value of `true` indicates that segmentation needs to be done on the export job. |
-| `destination.datasetId` | The `id` value of the dataset where the data is being exported to. |
-| `segments.segmentId` | The `id` value of the segment that is being exported. |
-| `segments.segmentNs` | The `namespace` for the given segment. |
+| `filter.segments` | The segments that are exported. The following fields are included:<ul><li>`segmentId`: Segment ID for profiles to be exported.</li><li>`segmentNs`: Segment namespace for the given `segmentID`.</li><li>`status`: An array of strings providing a status filter for the `segmentID`. By default, `status` will have the value `["realized", "existing"]` which represents all profiles that fall into the segment at the current time. Possible values include: "realized", "existing", and "exited".</li></ul> |
+| `mergePolicy` | Merge policy information for the exported data. | 
+| `metrics.totalTime` | A field indicating the total time that export job took to run. |
+| `metrics.profileExportTime` | A field indicating the time it took for the profiles to export. |
+| `totalExportedProfileCounter` | The total number of profile exported across all batches. |
 
 ## Cancel or delete a specific export job {#delete}
 
@@ -481,7 +407,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_I
 
 **Response**
 
-A successful response returns HTTP status 200 with the following message:
+A successful response returns HTTP status 204 with the following message:
 
 ```json
 {
