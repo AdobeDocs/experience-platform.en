@@ -5,24 +5,24 @@ title: ServiceNow connector
 topic: overview
 ---
 
-# (Beta) ServiceNow connector
+# (Beta) [!DNL ServiceNow] connector
 
 >[!NOTE]
->The ServiceNow connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+>The [!DNL ServiceNow] connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-Experience Platform provides support for ingesting data from a third-party customer success system. Support for customer success providers include ServiceNow.
+[!DNL Experience Platform] provides support for ingesting data from a third-party customer success system. Support for customer success providers include [!DNL ServiceNow].
 
-The documentation below provides information on how to connect ServiceNow to Platform using APIs or the user interface:
+The documentation below provides information on how to connect [!DNL ServiceNow] to [!DNL Platform] using APIs or the user interface:
 
-## Connect ServiceNow to Platform using APIs
+## Connect [!DNL ServiceNow] to [!DNL Platform] using APIs
 
 - [Create a ServiceNow connector using the Flow Service API](../../tutorials/api/create/customer-success/servicenow.md)
 - [Explore a customer success system using the Flow Service API](../../tutorials/api/explore/customer-success.md)
 - [Collect data from a customer success system using the Flow Service API](../../tutorials/api/collect/customer-success.md)
 
-## Connect ServiceNow to Platform using the UI
+## Connect [!DNL ServiceNow] to [!DNL Platform] using the UI
 
 - [Create a ServiceNow source connector in the UI](../../tutorials/ui/create/customer-success/servicenow.md)
 - [Configure dataflow for a customer success connector in the UI](../../tutorials/ui/dataflow/customer-success.md)
