@@ -52,7 +52,7 @@ In the TCF specification, consent strings are used to encode relevant details ab
 
 For more information on how to generate a TCF consent string, refer to the [consent string formatting guide](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/IAB%20Tech%20Lab%20-%20Consent%20string%20and%20vendor%20list%20formats%20v2.md) in the TCF GitHub repo.
 
-## Interface the [!DNL Experience Platform] Web SDK to collect customer consent data
+## Integrate the [!DNL Experience Platform] Web SDK to collect customer consent data
 
 Once you are able to generate consent strings based on customer interactions with your service, you must integrate the [!DNL Experience Platform] Web SDK to collect those strings and send them to [!DNL Platform], along with the primary identity of the logged-in customer.
 
