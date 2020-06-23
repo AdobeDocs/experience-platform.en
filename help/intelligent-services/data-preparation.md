@@ -34,6 +34,8 @@ If your data is already stored in [!DNL Platform], follow the steps below:
 
 The Consumer ExperienceEvent schema describes the behavior of an individual as it relates to digital marketing events (web or mobile) as well as online or offline commerce activity. The use of this schema is required for Intelligent Services because of its semantically well-defined fields (columns), avoiding any unknown names that would otherwise make the data less clear.
 
+The CEE schema, like all XDM ExperienceEvent schemas, captures the time-series-based state of the system when an event (or set of events) occurred, including the point in time and the identity of the subject involved. Experience Events are fact records of what occurred, and thus they are immutable and represent what happened without aggregation or interpretation.
+
 Intelligent Services utilize several key fields within this schema to generate insights from your marketing events data, all of which can be found at the root level and expanded to show their required subfields.
 
 ![](./images/data-preparation/schema-expansion.gif)
@@ -226,6 +228,10 @@ Once you have created and saved the schema, you can create a new dataset based o
 
 * [Create a dataset in the UI](../catalog/datasets/user-guide.md#create) (Follow the workflow for using an existing schema)
 * [Create a dataset in the API](../catalog/datasets/create.md)
+
+After the dataset is created, you can find it in the Platform UI within the *[!UICONTROL Datasets]* workspace.
+
+![](images/data-preparation/dataset-location.png)
 
 #### Add a primary identity namespace tag to the dataset
 
