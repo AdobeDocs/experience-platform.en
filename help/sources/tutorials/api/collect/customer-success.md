@@ -338,7 +338,7 @@ A successful response returns the new target connection's unique identifier (`id
 
 ## Create a mapping {#mapping}
 
-In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema the target dataset adheres to. This is achieved by performing a POST request to the Conversion Service API with data mappings defined within the request payload.
+In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema the target dataset adheres to. This is achieved by performing a POST request to the [!DNL Conversion Service] API with data mappings defined within the request payload.
 
 **API format**
 
@@ -431,7 +431,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the details of the dataflow specification that is responsible for bringing data from your customer success system into Platform. This ID is required in the next step to create a new dataflow.
+A successful response returns the details of the dataflow specification that is responsible for bringing data from your customer success system into [!DNL Platform]. This ID is required in the next step to create a new dataflow.
 
 ```json
 {
@@ -641,7 +641,7 @@ A successful response returns the ID `id` of the newly created dataflow.
 
 ## Next steps
 
-By following this tutorial, you have created a source connector to collect data from a customer success system on a scheduled basis. Incoming data can now be used by downstream Platform services such as Real-time Customer Profile and Data Science Workspace. See the following documents for more details:
+By following this tutorial, you have created a source connector to collect data from a customer success system on a scheduled basis. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
 *   [Real-time Customer Profile overview](../../../../profile/home.md)
 *   [Data Science Workspace overview](../../../../data-science-workspace/home.md)
@@ -654,5 +654,5 @@ The following section lists the different cloud storage source connectors and th
 
 | Connector name | Connection spec |
 | -------------- | --------------- |
-| Salesforce Service Cloud | `cb66ab34-8619-49cb-96d1-39b37ede86ea` |
-| ServiceNow | `eb13cb25-47ab-407f-ba89-c0125281c563` |
+| [!DNL Salesforce Service Cloud] | `cb66ab34-8619-49cb-96d1-39b37ede86ea` |
+| [!DNL ServiceNow] | `eb13cb25-47ab-407f-ba89-c0125281c563` |
