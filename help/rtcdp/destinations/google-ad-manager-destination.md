@@ -44,18 +44,19 @@ Before creating the Google Ad Manager destination in Adobe Real-time CDP, you mu
 1. In **[!UICONTROL Connections > Destinations]**, select Google Ad Manager, and select **[!UICONTROL Create destination]**.
     ![Connect Google Ad Manager destination](/help/rtcdp/destinations/assets/google-1-destination.png)
 
-2. In the Create destination workflow, fill in the [!UICONTROL Basic Information] for the destination. <br>
-    ![Basic information Google Ad Manager](/help/rtcdp/destinations/assets/google-1-basic-information.png)
+2. In the **Setup** step of the create destination workflow, fill in the [!UICONTROL Basic Information] for the destination. <br>
+    ![Basic information Google Ad Manager](/help/rtcdp/destinations/assets/ad-manager-setup-step.png)
 *  **[!UICONTROL Name]**: Fill in the preferred name for this destination.
 *  **[!UICONTROL Description]**: Optional. For example, you can mention which campaign you are using this destination for.
 *  **[!UICONTROL Account Type]**: Select an option, depending on your account with Google:
    * Use `DFP by Google` for DoubleClick for Publishers
    * Use `AdX buyer` for Google AdX
 *  **[!UICONTROL Account ID]**: Fill in your account ID with Google. This can be your Network ID or your Audience Link ID. Typically, this is an eight digit ID.
+*  **[!UICONTROL Marketing use case]**: Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Real-time CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](/help/data-governance/policies/overview.md#core-actions).  
 
->[!NOTE]
+> [!NOTE]
 >
->When setting up a Google Ad Manager destination please work with your Google Account Manager or Adobe representative to understand which account type you have.
+> When setting up a Google Ad Manager destination please work with your Google Account Manager or Adobe representative to understand which account type you have.
 
 ## Activate segments to Google Ad Manager
 
