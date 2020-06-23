@@ -126,7 +126,7 @@ The response includes a "count" showing the total number of policies within the 
 }
 ```
 
-## Look up specific policy
+## Look up a policy
 
 Each policy contains an `id` field that can be used to request the details of a specific policy. If the `id` of a policy is unknown, it can be found using the listing (GET) request to list all policies within a specific container (`core` or `custom`) as shown in the previous step.
 

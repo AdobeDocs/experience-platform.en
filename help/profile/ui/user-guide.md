@@ -25,19 +25,21 @@ In the [Experience Platform UI](http://platform.adobe.com), click **Profiles** i
 
 ![](../images/user-guide/profiles-overview.png)
 
-## Profile Browse
+## Browse
 
-Click the **Browse** tab in order to browse profiles by identity. 
+Select the *Browse* tab in order to browse profiles by identity. 
+
+![](../images/user-guide/profiles-browse.png)
 
 ### Profile metrics {#profile-metrics}
 
-On the right-hand side of the **Browse** tab are several important profile metrics related to your profile data, including your total [profile count](#profile-count) as well as a listing of [profiles by namespace](#profiles-by-namespace). 
+On the right-hand side of the *Browse* tab are several important metrics related to your profile data, including your total [profile count](#profile-count) as well as a listing of [profiles by namespace](#profiles-by-namespace). 
 
 These profile metrics are evaluated using the default merge policy of your organization. For more information on working with merge policies, including how to define a default merge policy, see the [Merge Policies user guide](merge-policies.md).
 
 In addition to these metrics, the profile metrics section also provides a *Last updated* date and time, showing when the metrics were last evaluated.
 
-![](../images/user-guide/profiles-browse.png)
+![](../images/user-guide/profiles-profile-metrics.png)
 
 ### Profile count {#profile-count}
 
@@ -85,13 +87,13 @@ Upon selecting the **Profile ID**, the _Detail_ tab opens. This page displays in
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-You can view additional information related to the profile including Attributes, Events, and Segments to which the profile is a member.
+You can view additional information related to the profile including *Attributes*, *Events*, and *Segments* to which the profile is a member.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## Merge policies
 
-Click **Merge Policies** to view a list of merge policies belonging to your organization. Each listed policy displays its name, whether or not it is the default merge policy, and the schema that it applies to. 
+Select the *Merge Policies* tab to view a list of merge policies belonging to your organization. Each listed policy displays its name, whether or not it is the default merge policy, and the schema that it applies to. 
 
 For more information on merge policies, see the [Merge Policies user guide](merge-policies.md).
 
@@ -99,7 +101,7 @@ For more information on merge policies, see the [Merge Policies user guide](merg
 
 ## Union schema
 
-Click **Union Schema** to view the union schemas for your Profile Store. A union schema is an amalgamation of all Experience Data Model (XDM) fields under the same class, whose schemas have been enabled for use in Real-time Customer Profile. Click a class in the left-hand list to view the structure of its union schema in the canvas.
+Select the *Union Schema* tab to view the union schemas for your Profile Store. A union schema is an amalgamation of all Experience Data Model (XDM) fields under the same class, whose schemas have been enabled for use in Real-time Customer Profile. Select a class in the left-hand list to view the structure of its union schema in the canvas.
 
 For example, selecting "XDM Profile" displays the union schema for the XDM Individual Profile class.
 
