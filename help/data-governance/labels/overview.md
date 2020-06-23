@@ -27,6 +27,14 @@ In addition to inheriting dataset-level labels, segments inherit all field-level
 
 For more information on how automatic enforcement works in Real-time CDP, see the [Real-time CDP Data Governance overview](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance).
 
+<!-- (Add after DEC mapping reference is added to AAM docs to link out to)
+### Inheritance from Adobe Audience Manager Data Export Controls
+
+Experience Platform has the ability to share segments with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager segments are translated to equivalent labels and marketing actions recognized by Experience Platform Data Governance.
+
+For a reference on how specific Data Export Controls map to data usage labels in Platform, please refer to the [Audience Manager documentation](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/data-export-controls.html).
+-->
+
 ## Next steps
 
 Now that you have been introduced data usage labels, you can continue to the read the [user guide](user-guide.md) to learn how to manage labels in the Experience Platform UI. For steps on how to manage labels using APIs, see the appropriate section in the [Catalog Service developer guide](../../catalog/api/labels.md).
