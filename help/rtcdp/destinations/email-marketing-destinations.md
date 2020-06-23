@@ -19,17 +19,28 @@ In the connect destination flow, described in the section below, connect to eith
 
 1. In **[!UICONTROL Connections > Destinations]**, select the email marketing destination that you want to connect to, then select **[!UICONTROL Connect destination]**.
 
-    ![Connect to destination](/help/rtcdp/destinations/assets/connect-destination-1.png)
+    ![Connect to destination](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
-2. In the Connect wizard, select the **[!UICONTROL Connection type]** for your storage location. You can select between **Amazon S3**, **SFTP with Password**, **SFTP with SSH Key**. Fill in the information below, depending on your connection type, then select **[!UICONTROL Connect]**.
+2. In the **[!UICONTROL Authentication]** step, if you had previously set up a connection to your email marketing destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to your email marketing destination. In the **[!UICONTROL Connection type]** selector, you can select between **Amazon S3**, **SFTP with Password**, **SFTP with SSH Key**. Fill in the information below, depending on your connection type, then select **[!UICONTROL Connect]**.
 
-For **S3 connections**, you must provide your Access Key ID and Secret Access Key. 
+    For **S3 connections**, you must provide your Amazon Access Key ID and Secret Access Key. 
 
-For **SFTP with Password** connections, you must provide Domain, Port, Username, and Password.
+    For **SFTP with Password** connections, you must provide Domain, Port, Username, and Password for your SFTP server.
 
-For **SFTP with SSH Key** connections, you must provide Domain, Port, Username, and SSH Key.
+    For **SFTP with SSH Key** connections, you must provide Domain, Port, Username, and SSH Key for your SFTP server.
 
-## Step 2 - Select which schema fields to use as destination attributes in your exported files {#destination-attributes}
+3. In the **[!UICONTROL Setup]** step, enter a **[!UICONTROL Name]** and a **[!UICONTROL Description]** for your new destination, as well as the **[!UICONTROL File format]** for the exported files. <br> 
+If you selected Amazon S3 as storage option in the previous step, insert the **[!UICONTROL Bucket name]** and the **[!UICONTROL Folder path]** in your cloud storage destination where the files will be delivered. For the SFTP storage option, insert the **[!UICONTROL Folder path]** where the files will be delivered. <br> 
+Also in this step, you can select any **[!UICONTROL Marketing use case]** that should apply to this destination. Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Real-time CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](/help/data-governance/policies/overview.md#core-actions). <br>
+    ![Email setup step](/help/rtcdp/destinations/assets/email-setup-step.png)
+
+## Step 2 - Select which segment members to include in your destination exports {#select-segments}
+
+On the **[!UICONTROL Select Segments]** page, select which segments to send to the destination. Find more information about the fields in the sections below.
+
+![Select segments](/help/rtcdp/destinations/assets/email-select-segments.png)
+
+## Step 3 - Select which schema fields to use as destination attributes in your exported files {#destination-attributes}
 
 In this step, you are selecting which fields to export to email marketing destinations.
 
@@ -37,7 +48,7 @@ In this step, you are selecting which fields to export to email marketing destin
 
 ### Identity {#identity}
 
-We recommend that you select a unique identifier from your [union schema](../../profile/home.md#profile-fragments-and-union-schemas). This is the field that your users' identities are keyed off of. Most commonly, this field is the email address, but it can also be a loyalty program ID or a phone number. See the table below for the most common unique identifiers and their XDM field in unified schema. 
+We recommend that you select a unique identifier from your [union schema](../../profile/home.md#profile-fragments-and-union-schemas). This is the field that your users' identities are keyed off of. Most commonly, this field is the email address, but it can also be a loyalty program ID or a phone number. See the table below for the most common unique identifiers and their XDM field in the union schema. 
 
 Unique Identifier | XDM field in Unified Schema
 ---------|----------

@@ -7,6 +7,9 @@ topic: overview
 
 # (Beta) Amazon Kinesis connector
 
+>[!NOTE]
+>The Amazon Kinesis connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, Google Cloud Platform, and Azure. You can bring your data from these systems into Platform.
 
 Cloud storage sources can bring your own data into Platform without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM parquet, or delimited. Every step of the process is integrated into the Sources workflow. Platform allows you to bring in data from Amazon Kinesis in real-time.
