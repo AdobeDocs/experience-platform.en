@@ -49,20 +49,19 @@ There are three key elements to the DULE framework: Labels, Policies, and Enforc
 
 Data Governance enables data stewards to apply usage labels at the dataset and field level to categorize data according to the type of policies that apply.
 
-The DULE framework includes predefined data usage labels that can be used to categorize data in four ways:
+The DULE framework includes predefined data usage labels that can be used to categorize data in three ways:
 
 ![Data Usage Label Categories](./images/overview/label-categories.png)
 
 * **Contract "C" Data Labels:** Label and categorize data that has contractual obligations or is related to customer data governance policies. 
 * **Identity "I" Data Labels:** Label and categorize data that can identify or contact a specific person.
 * **Sensitive "S" Data Labels:** Label and categorize data related to sensitive data such as geographic data.
-* **GDPR Data Labels:** Label and categorize data that may contain personal identifiers for use in GDPR access and/or delete requests.
 
 >[!NOTE] See the guide on [supported data usage labels](labels/reference.md) for a complete list of available labels, as well as definitions for each label type.
 
 Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practice encourages labeling data as soon as it is ingested into [!DNL Experience Platform], or as soon as data becomes available in [!DNL Platform].
 
-See the overview on [data usage labels](./labels/overview.md) for step-by-step instructions on how to apply labels to datasets and fields using the UI.
+See the overview on [data usage labels](./labels/overview.md) for more information.
 
 ## Data usage policies
 
@@ -72,9 +71,9 @@ An example of a marketing action might be the desire to export a dataset to a th
 
 Once data usage labels have been applied, data stewards can create policies using the DULE Policy Service API or the [!DNL Experience Platform] user interface.
 
-For more information on performing the key operations provided by the DULE Policy Service API, see the [Policy Service developer guide](api/getting-started.md). For step-by-step instructions on working with DULE policies, see the tutorial on [creating and evaluating DULE policies using the API](policies/create.md).
+>[!IMPORTANT] All data usage policies (including core policies provided by Adobe) are disabled by default. In order for an individual policy to be considered for enforcement, you must manually enable that policy.
 
-For information on how to manage policies in the [!DNL Experience Platform] UI, see the [policies user guide](policies/user-guide.md).
+For more information on data usage policies and marketing actions, see the [policies overview](./policies/overview.md).
 
 ## Future releases
 
