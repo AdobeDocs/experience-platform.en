@@ -45,7 +45,7 @@ Before creating the Google Ad Manager destination in Adobe Real-time CDP, you mu
     ![Connect Google Ad Manager destination](/help/rtcdp/destinations/assets/google-1-destination.png)
 
 2. In the **Setup** step of the create destination workflow, fill in the [!UICONTROL Basic Information] for the destination. <br>
-    ![Basic information Google Ad Manager](/help/rtcdp/destinations/assets/ad-manager-setup-step.png)
+    ![Basic information Google Ad Manager](/help/rtcdp/destinations/assets/google-1-destination-setup-step.png)
 *  **[!UICONTROL Name]**: Fill in the preferred name for this destination.
 *  **[!UICONTROL Description]**: Optional. For example, you can mention which campaign you are using this destination for.
 *  **[!UICONTROL Account Type]**: Select an option, depending on your account with Google:
