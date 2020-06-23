@@ -102,6 +102,10 @@ For Platform audiences created using Segment Builder, you are given the option t
 
 ![](../images/segment-builder/add-audience-to-segment.png)
 
+### Code view
+
+Alternatively, you can have a code-based view of a rule created in the Segment Builder.
+
 ## Containers
 
 Segment rules are evaluated in the order they are listed. Containers allow control over the order of execution through the use of nested queries.
