@@ -5,9 +5,9 @@ title: Streaming segmentation
 topic: developer guide
 ---
 
-# Evaluate events in real-time with streaming segmentation 
+# Evaluate events in near real-time with streaming segmentation 
 
-Streaming segmentation on Adobe Experience Platform allows customers to do segmentation in real time while focusing on data richness. With streaming segmentation, segment qualification now happens as data lands into Platform, alleviating the need to schedule and run segmentation jobs. With this capability, most segment rules can now be evaluated as the data is passed into Platform, meaning segment membership will be kept up to date without running scheduled segmentation jobs.
+Streaming segmentation on Adobe Experience Platform allows customers to do segmentation in near real-time while focusing on data richness. With streaming segmentation, segment qualification now happens as data lands into Platform, alleviating the need to schedule and run segmentation jobs. With this capability, most segment rules can now be evaluated as the data is passed into Platform, meaning segment membership will be kept up-to-date without running scheduled segmentation jobs.
 
 ![](../images/api/streaming-segment-evaluation.png)
 
