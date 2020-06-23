@@ -15,9 +15,9 @@ Streaming segmentation on [!DNL Adobe Experience Platform] allows customers to d
 
 This developer guide requires a working understanding of the various [!DNL Adobe Experience Platform] services involved with streaming segmentation. Before beginning this tutorial, please review the documentation for the following services:
 
-- ![DNL Real-time Customer Profile](../../profile/home.md): Provides a unified consumer profile in real-time, based on aggregated data from multiple sources.
-- ![DNL Segmentation](../home.md): Provides the ability to create segments and audiences from your [!DNL Real-time Customer Profile] data.
-- ![DNL Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
+- [!DNL Real-time Customer Profile](../../profile/home.md): Provides a unified consumer profile in real-time, based on aggregated data from multiple sources.
+- [!DNL Segmentation](../home.md): Provides the ability to create segments and audiences from your [!DNL Real-time Customer Profile] data.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to [!DNL Platform] APIs.
 
@@ -45,7 +45,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 Additional headers may be required to complete specific requests. The correct headers are shown in each of the examples within this document. Please pay special attention to the sample requests in order to ensure that all required headers are included.
 
-### Streaming segmentation enabled query types
+### Streaming segmentation enabled query types {#streaming-segmentation-query-types}
 
 >[!NOTE] You will need to enable scheduled segmentation for the organization in order for streaming segmentation to work. Information about enabling scheduled segmentation can be found in the [enable scheduled segmentation section](#enable-scheduled-segmentation)
 
@@ -190,7 +190,7 @@ A successful response returns an array of segments in your IMS Organization that
 
 ## Create a streaming-enabled segment
 
-A segment will automatically be streaming-enabled if it matches one of the [streaming segmentation types listed above](#streaming-segmentation-enabled-query-types).
+A segment will automatically be streaming-enabled if it matches one of the [streaming segmentation types listed above](#streaming-segmentation-query-types).
 
 **API format**
 
