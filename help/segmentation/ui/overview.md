@@ -5,9 +5,9 @@ title: Segment Builder UI guide
 topic: ui guide
 ---
 
-# Segment Builder user guide
+# [!UICONTROL Segment Builder] user guide
 
-[!DNL Adobe Experience Platform Segmentation Service] provides a RESTful API and user interface for creating segment definitions from Real-time Customer Profile data.
+[!DNL Adobe Experience Platform Segmentation Service] provides a RESTful API and user interface for creating segment definitions from [!DNL Real-time Customer Profile] data.
 
 ## Getting started
 
@@ -34,9 +34,9 @@ Clicking **[!UICONTROL Create segment]** in the top-right corner opens the Segme
 
 ![](../images/segment-builder/segment-browse.png)
 
-## Segment Builder workspace 
+## [!UICONTROL Segment Builder] workspace 
 
-Segment Builder provides a rich workspace that allows you to interact with [!DNL Profile] data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. 
+[!UICONTROL Segment Builder] provides a rich workspace that allows you to interact with [!DNL Profile] data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. 
 
 ![](../images/segment-builder/segment-builder.png)
 
@@ -44,7 +44,7 @@ Segment Builder provides a rich workspace that allows you to interact with [!DNL
 
 The basic building blocks of segment definitions are **[!UICONTROL Attributes]** and **[!UICONTROL Events]**. In addition, the attributes and events contained in existing **[!UICONTROL Audiences]** can also be used as components for new definitions. 
 
-You can see these building blocks in the *Fields* section on the left side of the Segment Builder workspace. *Fields* contains a tab for each of the main building blocks: **[!UICONTROL Attributes]**, **[!UICONTROL Events]**, and **[!UICONTROL Audiences]**.
+You can see these building blocks in the *Fields* section on the left side of the [!UICONTROL Segment Builder] workspace. *[!UICONTROL Fields]* contains a tab for each of the main building blocks: **[!UICONTROL Attributes]**, **[!UICONTROL Events]**, and **[!UICONTROL Audiences]**.
 
 ![](../images/segment-builder/segment-fields.png)
 
@@ -58,23 +58,23 @@ The **[!UICONTROL Attributes]** tab allows you to browse [!DNL Profile] attribut
 
 The **[!UICONTROL Events]** tab allows you to create an audience based on events or actions that took place using XDM ExperienceEvent data elements. You can also find Event Types on the **[!UICONTROL Events]** tab, which are a collection of commonly used events to enable you to create your segments more quickly.
 
-In addition to being able to browse for [!DNL ExperienceEvent] elements, you can also search for Event Types. Event Types use the same coding logic as [!DNL ExperienceEvents], without requiring you to search through the [!DNL XDM ExperienceEvent] class looking for the correct event. For example, using the search bar to search "cart" returns the Event Types "AddCart" and "RemoveCart", which are two very commonly used cart actions when building segment definitions. 
+In addition to being able to browse for [!DNL ExperienceEvent] elements, you can also search for Event Types. Event Types use the same coding logic as [!DNL ExperienceEvents], without requiring you to search through the [!DNL XDM ExperienceEvent] class looking for the correct event. For example, using the search bar to search "cart" returns the Event Types "[!UICONTROL AddCart]" and "[!UICONTROL RemoveCart]", which are two very commonly used cart actions when building segment definitions. 
 
 Any type of component can be searched for by typing its name in the search bar, which uses [Lucene's search syntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). The search results begin to populate as entire words are entered. For example, to build a rule based on the XDM field `ExperienceEvent.commerce.productViews`, start typing “product views” in the search field. Once the word "product" has been typed, search results begin to appear. Each result includes the object hierarchy to which it belongs. 
 
 >[!NOTE] Custom schema fields defined by your organization may take up to 24 hours to appear and become available for use in building rules. 
 
-You can then easily drag and drop [!DNL ExperienceEvents] and Event Types into your segment definition.
+You can then easily drag and drop [!DNL ExperienceEvents] and [!UICONTROL Event Types] into your segment definition.
   
 ![](../images/segment-builder/events-eventTypes.png)  
 
-By default, only populated schema fields from your data store are shown. This includes Event Types. If the Event Types list is not visible, or you are only able to select "Any" as an Event Type, click the gear icon next to *Fields*, then select **[!UICONTROL Show full XDM schema]** under *[!UICONTROL Available Fields]*. Click the gear icon again to return to the *Fields* tab and you should now be able to view multiple Event Types and schema fields, regardless of whether they contain data or not.
+By default, only populated schema fields from your data store are shown. This includes [!UICONTROL Event Types]. If the [!UICONTROL Event Types] list is not visible, or you are only able to select "[!UICONTROL Any]" as an [!UICONTROL Event Type], click the gear icon next to *[!UICONTROL Fields]*, then select **[!UICONTROL Show full XDM schema]** under *[!UICONTROL Available Fields]*. Click the gear icon again to return to the *[!UICONTROL Fields]* tab and you should now be able to view multiple [!UICONTROL Event Types] and schema fields, regardless of whether they contain data or not.
 
 ![](../images/segment-builder/show-populated.png)
 
 ### Audiences
 
-The **[!UICONTROL Audiences]** tab lists all audiences imported from external sources, such as Adobe Audience Manager, as well as audiences created within Experience Platform.
+The **[!UICONTROL Audiences]** tab lists all audiences imported from external sources, such as Adobe Audience Manager, as well as audiences created within [!DNL Experience Platform].
 
 On the [!UICONTROL Audiences] tab, you can see all of the available sources as a group of folders. As you click into these folders, available sub-folders and audiences can be seen. Additionally, you can click on the folder icon (as shown in the far-right image) in order to view the folder structure (a check mark denotes the folder you are currently in) and easily navigate back through folders by clicking on the name of a folder in the tree.
 
@@ -82,13 +82,13 @@ You can hover over the &#9432; next to an audience to view information about the
 
 ![](../images/segment-builder/audience-folder-structure.png)
 
-You can also search for Audiences using the search bar, which utilizes [Lucene's search syntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). On the *[!UICONTROL Audiences]* tab, selecting a top-level folder causes the search bar to appear, allowing you to search within that folder. Search results only begin to populate once entire words are entered. For example, to find an Audience named `Online Shoppers`, start typing "Online" in the search bar. Once the word "Online" has been typed in full, search results containing the word "Online" appear.
+You can also search for [!UICONTROL Audiences] using the search bar, which utilizes [Lucene's search syntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). On the *[!UICONTROL Audiences]* tab, selecting a top-level folder causes the search bar to appear, allowing you to search within that folder. Search results only begin to populate once entire words are entered. For example, to find an [!UICONTROL Audience] named `Online Shoppers`, start typing "Online" in the search bar. Once the word "Online" has been typed in full, search results containing the word "Online" appear.
 
 ## Rule builder canvas
 
-A segment definition is a collection of rules used to describe key characteristics or behavior of a target audience. These rules are created using the *[!UICONTROL rule builder canvas]*, located in the center of Segment Builder.
+A segment definition is a collection of rules used to describe key characteristics or behavior of a target audience. These rules are created using the *[!UICONTROL rule builder canvas]*, located in the center of [!UICONTROL Segment Builder].
 
-To add a new rule to your segment definition, drag a tile from the *[!UICONTROL Fields]* tab and drop it onto the rule builder canvas. You will then be presented with context-specific options according to the type of data being added. Available data types include: strings, dates, [!DNL ExperienceEvents], Event Types, and Audiences. 
+To add a new rule to your segment definition, drag a tile from the *[!UICONTROL Fields]* tab and drop it onto the rule builder canvas. You will then be presented with context-specific options according to the type of data being added. Available data types include: strings, dates, [!DNL ExperienceEvents], [!UICONTROL Event Types], and [!UICONTROL Audiences]. 
 
 ![](../images/segment-builder/rule-builder-canvas.png)
 
@@ -110,7 +110,7 @@ Once you have added at least one tile to the rule builder canvas, you can begin 
 
 ![](../images/segment-builder/add-container.png)
 
-A new container appears as the child of the first container, but you can adjust the hierarchy by dragging and moving the containers. The default behavior of a container is to "Include" the attribute, event, or audience provided. You can set the rule to "Exclude" profiles that match the container criteria by clicking **[!UICONTROL Include]** in the top-left corner of the tile and selecting "Exclude".
+A new container appears as the child of the first container, but you can adjust the hierarchy by dragging and moving the containers. The default behavior of a container is to "[!UICONTROL Include]" the attribute, event, or audience provided. You can set the rule to "[!UICONTROL Exclude]" profiles that match the container criteria by clicking **[!UICONTROL Include]** in the top-left corner of the tile and selecting "[!UICONTROL Exclude]".
 
 A child container can also be extracted and added inline to the parent container by clicking "unwrap container" on the child container. Click the ellipses (...) in the top-right corner of the child container to access this option.
 
@@ -128,7 +128,7 @@ Once you click **[!UICONTROL Unwrap container]** the child container is removed 
 
 You can select a merge policy that matches your marketing purpose for this audience or use the default merge policy provided by [!DNL Platform]. You can create multiple merge policies unique to your organization, including creating your own default merge policy. For step-by-step instructions on creating merge policies for your organization, please see the tutorial on [working with merge policies using the UI](../../profile/ui/merge-policies.md). 
 
-To select a merge policy for your segment definition, click the gear icon on the *[!UICONTROL Fields]* tab, then use the *[!UICONTROL Merge Policy dropdown menu]* to select the merge policy that you wish to use.
+To select a merge policy for your segment definition, click the gear icon on the *[!UICONTROL Fields]* tab, then use the *[!UICONTROL Merge Policy] dropdown menu* to select the merge policy that you wish to use.
 
 ![](../images/segment-builder/merge-policy-selector.png)
 
