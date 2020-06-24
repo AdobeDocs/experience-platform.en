@@ -78,23 +78,27 @@ When mapping fields, you can also include functions to compute values based on i
 
 ### Add calculated field
 
-Calculated fields allow for values to be crated based on the attributes in the input schema. These values can then be assigned to attributes in the target schema.
-
-A Name and Description can be assigned to Calculated Attributes for easy reference later.
+Calculated fields allow for values to be crated based on the attributes in the input schema. These values can then be assigned to attributes in the target schema and be provided a name and description to allow for easier reference.
 
 Select the **[!UICONTROL Add calculated field]** button to proceed.
 
 ![](../images/tutorials/map-a-csv-file/add-calculated-field.png)
 
-The **[!UICONTROL Create calculated field]** appears. The left dialog box contains the fields, functions, and operators supported in calculated fields.
+The **[!UICONTROL Create calculated field]** panel appears. The left dialog box contains the fields, functions, and operators supported in calculated fields. Select one of the tabs to start adding functions, fields, or operators to the expression editor.
 
-| Parameter | Description |
+![](../images/tutorials/map-a-csv-file/create-calculated-field.png)
+
+| Tab | Description |
 | --------- | ----------- |
 | Fields | The fields tab lists fields and attributes available in the source schema. |
 | Functions | The functions tab lists the functions available to transform the data. |
 | Operators | The operators tab lists the operators that are available to transform the data. |
 
-![](../images/tutorials/map-a-csv-file/fields-functions-operators.png)
+You can manually add fields, functions, and operators using the expression editor in the center. Select the editor to start creating an expression.
+
+![](../images/tutorials/map-a-csv-file/expression-editor.png)
+
+Select **[!UICONTROL Save]** to proceed.
 
 Repeat the above steps to continue mapping CSV columns to XDM fields. Once you are finished, click **Next**.
 
