@@ -29,10 +29,7 @@ Adobe Experience Platform enables you to bring data together from multiple sourc
 
 Segments that are enabled for use in Real-time Customer Profile contain a merge policy ID within their segment definition. This merge policy contains information about which datasets are to be included in the segment, which in turn contain any applicable data usage labels. For specific steps covering enforcing data usage compliance for an audience segment, please follow the [data usage compliance enforcement tutorial for segments](../segmentation/tutorials/governance.md).
 
-## (Beta) Streaming segmentation
-
->[!NOTE]
->Streaming segmentation is in beta and will be available upon request. The features and documentation are subject to change.
+## Streaming segmentation
 
 Streaming segmentation is the ability to instantly evaluate a customer as soon as an event comes into a particular segment group. With this capability, most segment rules can now be evaluated as the data is passed into Adobe Experience Platform, meaning segment membership will be kept up-to-date without running scheduled segmentation jobs. To learn more, visit the [streaming segmentation overview](../segmentation/api/streaming-segmentation.md).
 
