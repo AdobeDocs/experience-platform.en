@@ -115,7 +115,7 @@ A successful response returns the details of the newly created segment definitio
 }
 ```
 
-## Estimate and preview an audience
+## Estimate and preview an audience {#estimate-and-preview-an-audience}
 
 As you develop your segment definition, you can use the estimate and preview tools within Real-time Customer Profile to view summary-level information to help ensure you are isolating the expected audience. Estimates provide statistical information on a segment definition, such as the projected audience size and confidence interval. Previews provide paginated lists of qualifying profiles for a segment definition, allowing you to compare the results against what you expect.
 
