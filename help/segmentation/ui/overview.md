@@ -96,7 +96,7 @@ To add a new rule to your segment definition, drag a tile from the *[!UICONTROL 
 
 You can drag and drop an audience from the *[!UICONTROL Audience]* tab onto the rule builder canvas to reference audience membership in the new segment definition. This allows you to include or exclude audience membership as an attribute in the new segment rule.
 
-For [!DNL Platform] audiences created using [!UICONTROL Segment Builder], you are given the option to convert the audience into the set of rules that were used in the segment definition for that audience. This conversion makes a copy of the rule logic, that can then be modified without affecting the original segment definition.
+For [!DNL Platform] audiences created using [!UICONTROL Segment Builder], you are given the option to convert the audience into the set of rules that were used in the segment definition for that audience. This conversion makes a copy of the rule logic, that can then be modified without affecting the original segment definition. Make sure that you have saved any recent changes to your segment definition before converting it to rule logic.
 
 >[!NOTE] When adding an audience from an external source, only the audience membership is referenced. You cannot convert the audience to rules, and therefore the rules used to create the original audience cannot be modified in the new segment definition.
 
