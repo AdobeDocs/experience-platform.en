@@ -102,9 +102,17 @@ For [!DNL Platform] audiences created using Segment Builder, you are given the o
 
 ![](../images/segment-builder/add-audience-to-segment.png)
 
+When using the convert to rules functionality, Segment Builder will try to the best of its ability to preserve the existing options should any conflicts arise.  
+
 ### Code view
 
-Alternatively, you can have a code-based view of a rule created in the Segment Builder.
+Alternatively, you can have a code-based view of a rule created in the Segment Builder. Once you have created your rule within the rule builder canvas, you can click *Code view* to see your segment as PQL.
+
+![](../images/segment-builder/code-view.png)
+
+ From here, after saving your segment, select the highlighted button to copy the value to use in API calls.
+
+![](../images/segment-builder/copy-code.png)
 
 ## Containers
 
