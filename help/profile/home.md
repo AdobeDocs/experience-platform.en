@@ -19,6 +19,10 @@ The relationship between Real-time Customer Profile and other services within Ex
 
 Real-time Customer Profile is a generic lookup entity store that merges data from various enterprise data assets, and then provides access to that data in the form of individual customer profiles and related time series events. This feature enables marketers to drive coordinated, consistent and relevant experiences with their audiences across multiple channels.
 
+### Profile guardrails
+
+Experience Platform provides a series of guardrails to help you avoid creating [Experience Data Model (XDM) schemas](../xdm/home.md) which Real-time Customer Profile cannot support. This includes soft limits that will result in performance degradation, as well has hard limits that will result in errors and system breakages. For more information, including a list of guidelines and example use cases, please read the [Profile guardrails](guardrails.md) documentation.
+
 ### Profile store
 
 Although Real-time Customer Profile processes ingested data and uses Adobe Experience Platform Identity Service to merge related data through identity mapping, it maintains its own data in the Profile store. In other words, the Profile store is separate from Catalog data (Data Lake) and Identity Service data (identity graph).
@@ -75,11 +79,6 @@ Platform can be configured to send your record and time-series data to Profile, 
 >[!Note]
 >Data collected through Adobe solutions, including Analytics Cloud, Marketing Cloud, and Advertising Cloud, flows into Experience Platform and is ingested into Profile.
 
-### Profile guardrails
-
-Experience Platform provides a series of guardrails to help you avoid creating Experience Data Model (XDM) schemas which Profile Service cannot support. This includes soft limits, where 
-
-
 ### Profile streaming ingestion metrics
 
 Observability Insights allows you to expose key metrics in Adobe Experience Platform. In addition to Platform usage statistics and performance indicators for various Platform functionalities, there are specific Profile-related metrics that allow you to gain insight into incoming request rates, successful ingestion rates, ingested record sizes, and more. To learn more, begin by reading the [Observability Insights overview](../observability/home.md), and for a complete list of Profile metrics, see the documentation on [available metrics](../observability/metrics.md).
@@ -98,10 +97,6 @@ Data governance is managed at several points. These include deciding what data i
 ### Handling opt-out and data privacy requests
 
 Experience Platform enables your customers to send opt-out requests related to the usage and storage of their data within Real-time Customer Profile. For more information on how opt-out requests are handled, please see the documentation on [honoring opt-out requests](../segmentation/honoring-opt-outs.md).
-
-## Experience Platform guidelines for Profile Service
-
-Adobe Experience Platform provides a series of guidelines to help you avoid creating Experience Data Model (XDM) schemas which Profile Service cannot support. To learn more, including viewing a list of guidelines and example use cases, please read the [Experience Platform guidelines for Profile Service](guidelines.md).
 
 ## Next steps and additional resources
 
