@@ -158,7 +158,7 @@ Schedules can currently only be created using the API. For detailed steps on cre
 
 ![](../images/segment-builder/scheduled-segmentation.png)
 
-## Streaming segmentation
+## Streaming segmentation {#streaming-segmentation}
 
 >[!NOTE] In order for streaming segmentation to work, the customer will need to enable scheduled segmentation for the organization. For details on enabling scheduled segmentation, please refer to [the previous section in this user guide](#enable-scheduled-segmentation).
 
