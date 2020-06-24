@@ -106,7 +106,7 @@ If any conflicts arise when convert audiences to rules, [!UICONTROL Segment Buil
 
 ### Code view
 
-Alternatively, you can view a code-based version of a rule created in the [!UICONTROL Segment Builder]. Once you have created your rule within the rule builder canvas, you can select *[!UICONTROL Code view]* to see your segment as PQL.
+Alternatively, you can view a code-based version of a rule created in the [!UICONTROL Segment Builder]. Once you have created your rule within the rule builder canvas, you can select **[!UICONTROL Code view]** to see your segment as PQL.
 
 ![](../images/segment-builder/code-view.png)
 
