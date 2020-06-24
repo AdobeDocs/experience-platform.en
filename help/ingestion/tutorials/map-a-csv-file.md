@@ -7,7 +7,7 @@ topic: tutorial
 
 # Map a CSV file to an XDM schema
 
-In order to ingest CSV data into Adobe Experience Platform, the data must be mapped to an Experience Data Model (XDM) schema. This tutorial covers how to map a CSV file to an XDM schema using the [!DNL Platform] user interface.
+In order to ingest CSV data into [!DNL Adobe Experience Platform], the data must be mapped to an Experience Data Model (XDM) schema. This tutorial covers how to map a CSV file to an XDM schema using the [!DNL Platform] user interface.
 
 In addition, the appendix to this tutorial provides further information regarding the use of [mapping functions](#mapping-functions).
 
@@ -15,14 +15,14 @@ In addition, the appendix to this tutorial provides further information regardin
 
 This tutorial requires a working understanding of the following components of [!DNL Platform]:
 
-- [Experience Data Model (XDM System)](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
-- [Batch ingestion](../batch-ingestion/overview.md): The method by which [!DNL Platform] ingests data from user-supplied datafiles.
+- [!DNL Experience Data Model (XDM System)](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
+- [!DNL Batch ingestion](../batch-ingestion/overview.md): The method by which [!DNL Platform] ingests data from user-supplied datafiles.
 
 This tutorial also requires that you have already created a dataset to ingest your CSV data into. For steps on creating a dataset in the UI, see the [data ingest tutorial](./ingest-batch-data.md).
 
 ## Choose a destination
 
-Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Workflows]** from the left navigation bar to access the *[!UICONTROL Workflows]* workspace.
+Log in to [!DNL Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Workflows]** from the left navigation bar to access the *[!UICONTROL Workflows]* workspace.
 
 From the **[!UICONTROL Workflows]** screen, select **[!UICONTROL Map CSV to XDM schema]** under the **[!UICONTROL Data ingestion]** section and then select **[!UICONTROL Launch]**
 
@@ -58,7 +58,7 @@ To map a CSV column to an XDM field, select the schema icon next to the column's
 
 ![](../images/tutorials/map-a-csv-file/mapping.png)
 
-The *[!UICONTROL Select schema field]* window appears. Here you can navigate the structure of the XDM schema and locate the field you wish to map the CSV column to. Click an XDM field to select it, then click **Select**.
+The *[!UICONTROL Select schema field]* window appears. Here you can navigate the structure of the XDM schema and locate the field you wish to map the CSV column to. Click an XDM field to select it, then click **[!UICONTROL Select]**.
 
 ![](../images/tutorials/map-a-csv-file/select-schema-field.png)
 
@@ -70,7 +70,7 @@ If you do not wish to map a particular CSV column, you can remove the mapping by
 
 ![](../images/tutorials/map-a-csv-file/remove-mapping.png)
 
-If you want to add a new mapping, click **[!UICONTROL Add new mapping]** at the top of the *[!UICONTROL Source Field]* list.
+If you want to add a new mapping, select **[!UICONTROL Add new mapping]** at the top of the *[!UICONTROL Source Field]* list.
 
 ![](../images/tutorials/map-a-csv-file/add-mapping.png)
 
@@ -100,15 +100,13 @@ You can manually add fields, functions, and operators using the expression edito
 
 Select **[!UICONTROL Save]** to proceed.
 
-Repeat the above steps to continue mapping CSV columns to XDM fields. Once you are finished, click **Next**.
+The mapping screen reappears with your newly created source field. Apply the appropriate target field and select **[!UICONTROL Finish]** to the mapping.
 
-![](../images/tutorials/map-a-csv-file/mapping-finish.png)
+![](../images/tutorials/map-a-csv-file/new-field.png)
 
-## Ingest data
+## Monitor your dataflow
 
-The _Ingest_ step appears, allowing you to review the details of your source file and target dataset. Click **Ingest** to start ingesting the CSV data. Depending on the size of the CSV file, this process may take several minutes. The screen updates once ingestion is complete, indicating success or failure. Click **Finish** to complete the workflow.
-
-![](../images/tutorials/map-a-csv-file/ingest-data.png)
+Once your CSV file is mapped and created, you can monitor the data that is being ingested through it. For more information on monitoring dataflows, see the tutorial on [monitoring streaming dataflows](../../ingestion/quality/monitor-data-flows.md).
 
 ## Next steps
 
