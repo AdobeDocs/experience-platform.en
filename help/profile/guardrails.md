@@ -13,9 +13,9 @@ Adobe Experience Platform provides a series of guardrails to help you avoid crea
 
 It is recommended that you read the following Experience Platform services documentation before attempting to build data models for use in Real-time Customer Profile. Working data models, and the guardrails outlined in this document, requires an understanding of the various Experience Platform services involved with managing Real-time Customer Profile entities: 
 
-* [Real-time Customer Profile](../home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [Identity Service](../../identity-service/home.md): Enables Real-time Customer Profile by bridging identities from disparate data sources as they are ingested into Platform.
-* [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
+* [Real-time Customer Profile](home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [Identity Service](../identity-service/home.md): Enables Real-time Customer Profile by bridging identities from disparate data sources as they are ingested into Platform.
+* [Experience Data Model (XDM)](../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
 
 ## Entity types
 
