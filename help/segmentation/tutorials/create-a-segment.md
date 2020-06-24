@@ -51,7 +51,7 @@ You can create a new segment definition by making a POST request to the `/segmen
 
 For a detailed explanation on how to define a segment, please read the [segment definition developer guide](../api/segment-definitions.md#create).
 
-## Estimate and preview an audience
+## Estimate and preview an audience {#estimate-and-preview-an-audience}
 
 As you develop your segment definition, you can use the estimate and preview tools within Real-time Customer Profile to view summary-level information to help ensure you are isolating the expected audience. Estimates provide statistical information on a segment definition, such as the projected audience size and confidence interval. Previews provide paginated lists of qualifying profiles for a segment definition, allowing you to compare the results against what you expect.
 

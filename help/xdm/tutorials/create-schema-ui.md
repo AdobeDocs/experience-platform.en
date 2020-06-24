@@ -23,7 +23,7 @@ This tutorial requires a working understanding of the various aspects of Adobe E
 
 This tutorial requires you to have access to Experience Platform. If you do not have access to an IMS Organization in Experience Platform, please speak to your system administrator before proceeding. 
 
-## Browse existing schemas in the Schemas workspace
+## Browse existing schemas in the Schemas workspace {#browse}
 
 The Schemas workspace within Experience Platform provides a visualization of the Schema Library, allowing you to view and manage all of the schemas available to you, as well as compose new ones. The workspace also includes the Schema Editor, the canvas on which you will compose a schema throughout this tutorial.
 
@@ -33,7 +33,7 @@ Click the filter icon next to the Search bar to use filtering capabilities for a
 
 ![View the Schema Library](../images/tutorials/create-schema/schemas_filter.png)
 
-## Create and name a schema
+## Create and name a schema {#create}
 
 To begin composing a schema, click **Create Schema** in the top right corner of the Schemas workspace. 
 
@@ -55,7 +55,7 @@ There are several important considerations to make when deciding on a name for y
 
 This tutorial composes a schema to ingest data related to the members of a loyalty program, therefore the schema is named "Loyalty Members".
 
-## Assign a class
+## Assign a class {#class}
 
 On the left-hand side of the editor is the *Composition* section. It currently contains two sub-sections: *Schema* and *Class*. 
 
@@ -79,7 +79,7 @@ The fields appear in the format "fieldName | Data Type". Steps for defining sche
 
 >[!NOTE] You can [change the class of a schema](#change-class) at any point during the initial composition process before the schema has been saved, but this should be done with extreme caution. Mixins are only compatible with certain classes, therefore changing the class will reset the canvas and any fields you have added. 
 
-## Add a mixin
+## Add a mixin {#mixin}
 
 Now that a class has been assigned, the *Composition* section contains a third sub-section: *Mixins*. 
 
@@ -107,7 +107,7 @@ Notice that the "name" field has a data type of "Person Name", meaning it too de
 
 Click on different fields within the canvas to see any additional fields they contribute to the schema structure.
 
-## Add another mixin
+## Add another mixin {#mixin-2}
 
 You can now repeat the same steps to add another mixin. When you view the *Add Mixin* dialog this time, notice that the "Profile Person Details" mixin has been greyed out and the radio button next to it cannot be selected. This prevents you from accidentally duplicating mixins that you have already included in the current schema.
 
@@ -121,7 +121,7 @@ Similar to the "name" field, the fields you just added represent multi-field con
 
 ![](../images/tutorials/create-schema/personal_details_structure.png)
 
-## Define a new mixin
+## Define a new mixin {#define-mixin}
 
 The "Loyalty Members" schema is meant to capture data related to the members of a loyalty program, so it will require some specific loyalty-related fields. There are no standard mixins available that contain the necessary fields, therefore you will need to define a new mixin.
 
@@ -135,7 +135,7 @@ For this tutorial, name the new mixin "Loyalty Details".
 
 Click **Add Mixin** to return to the schema editor. "Loyalty Details" should now appear under *Mixins* on the left-side of the canvas, but there are no fields associated with it yet and therefore no new fields appear under *Structure*.
 
-## Add fields to the mixin
+## Add fields to the mixin {#mixin-fields}
 
 Now that you have created the "Loyalty Details" mixin, it is time to define the fields that the mixin will contribute to the schema.
 
@@ -174,7 +174,7 @@ Different constraint options are available depending on the data type selected. 
 
 ![](../images/tutorials/create-schema/loyaltyId_field.png)
 
-## Add more fields to mixin
+## Add more fields to mixin {#mixin-fields-2}
 
 Now that you have added the "loyaltyId" field, you can add additional fields to capture loyalty-related information such as:
 
@@ -187,7 +187,7 @@ When complete, the Loyalty object will contain fields for: Loyalty ID, Points, a
 
 ![](../images/tutorials/create-schema/loyalty_object_fields.png)
 
-## Add 'enum' field to mixin
+## Add 'enum' field to mixin {#enum}
 
 When defining fields in the Schema Editor, there are some additional options that you can apply to basic field types in order to provide further constraints on the data the field can contain. 
 
@@ -208,7 +208,7 @@ More information about available additional constraints:
 * **Enum:** Indicates that this field must contain one of the values from an enumerated list of possible values.  
 * **Identity:** Indicates that this field is an identity field. More information regarding identity fields is provided [later in this tutorial](#identity-field).
 
-## Convert a multi-field object into a data type
+## Convert a multi-field object into a data type {#datatype}
 
 After adding several loyalty-specific fields, the "loyalty" object now contains a common data structure that could be useful in other schemas. 
 

@@ -128,7 +128,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed+json; version=1'
 ```
 
-**Response **
+**Response**
 
 The response format depends on the Accept header sent with the request. Try experimenting with different Accept headers to see which one best meets your needs.
 
