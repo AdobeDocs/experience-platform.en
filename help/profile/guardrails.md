@@ -5,9 +5,9 @@ title: Experience Platform guidelines
 topic: guide
 ---
 
-# Experience Platform guidelines for Profile Service
+# Experience Platform guardrails for Profile Service
 
-Adobe Experience Platform provides a series of guidelines to help you avoid creating Experience Data Model (XDM) schemas which Profile Service cannot support.
+Adobe Experience Platform provides a series of guardrails to help you avoid creating Experience Data Model (XDM) schemas which Profile Service cannot support.
 
 | Area | Guideline | Description|
 | --- | --- | --- |

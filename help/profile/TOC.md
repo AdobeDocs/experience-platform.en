@@ -7,7 +7,7 @@ user-guide-title: Real-time Customer Profile Help
 # Real-time Customer Profile {#profile}
 
 * [Profile overview](home.md)
-* [Profile guidelines](guidelines.md)
+* [Profile guardrails](guardrails.md)
 * Profile API {#api}
   * [Getting started](api/getting-started.md)
   * [(Alpha) Computed attributes](api/computed-attributes.md)

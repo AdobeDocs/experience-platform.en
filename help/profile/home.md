@@ -9,27 +9,33 @@ topic: guide
 
 Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. Profile allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction. This overview will help you understand the role and use of Real-time Customer Profile in Experience Platform.
 
-## Understanding Real-time Customer Profile
-
-Real-time Customer Profile is a generic lookup entity store that merges data from various enterprise data assets, and then provides access to that data in the form of individual customer profiles and related time series events. This feature enables marketers to drive coordinated, consistent and relevant experiences with their audiences across multiple channels.
-
-### Profile data store
-
-Although Real-time Customer Profile processes ingested data and uses Adobe Experience Platform Identity Service to merge related data through identity mapping, it maintains its own data in the Profile store. In other words, the Profile store is separate from Catalog data (Data Lake) and Identity Service data (identity graph).
-
-### Profile and Platform services
+## Profile in Experience Platform
 
 The relationship between Real-time Customer Profile and other services within Experience Platform is highlighted in the following diagram:
 
 ![The relationship between Profile and other Experience Platform services.](images/profile-overview/profile-in-platform.png) 
 
-### Profiles and record data
+## Profile data
+
+Real-time Customer Profile is a generic lookup entity store that merges data from various enterprise data assets, and then provides access to that data in the form of individual customer profiles and related time series events. This feature enables marketers to drive coordinated, consistent and relevant experiences with their audiences across multiple channels.
+
+### Profile store
+
+Although Real-time Customer Profile processes ingested data and uses Adobe Experience Platform Identity Service to merge related data through identity mapping, it maintains its own data in the Profile store. In other words, the Profile store is separate from Catalog data (Data Lake) and Identity Service data (identity graph).
+
+### Record data
 
 A profile is a representation of a subject, an organization or an individual, also referred to as record data. For example, the profile of a product may include a SKU and description, whereas the profile of a person contains information like first name, last name, and email address. Using Experience Platform, you can customize profiles to use types of data relevant to your business. The standard Experience Data Model (XDM) Individual Profile class is the preferred class upon which to build a schema when describing customer record data, and supplies the data integral to many interactions between Platform services. For more information on working with schemas in Experience Platform, please begin by reading the [XDM System overview](../xdm/home.md).
 
 ### Time series events
 
 Time series data provides a snapshot of the system at the time an action was taken either directly or indirectly by a subject, as well as data detailing the event itself. Represented by the standard schema class XDM ExperienceEvent, time series data can describe events such as items being added to a cart, links being clicked, and videos viewed. Time series data can be used to base segmentation rules on, and events can be accessed individually in the context of a profile. 
+
+### Profile fragments and union schemas {#profile-fragments-and-union-schemas}
+
+One of the key features of Real-time Customer Profile is the ability to unify multi-channel data. When Real-time Customer Profile is used to access an entity, it can supply you with a merged view of all profile fragments for that entity across datasets, referred to as the union view and made possible through what is known as a union schema. Real-time Customer Profile data is merged across sources when an entity or profile is accessed by its ID or exported as a segment. To learn more about accessing profiles and union views, visit the Real-time Customer Profile API developer sub-guide on [Entities, also known as "Profile Access"](api/entities.md) and the [Profile UI user guide](ui/user-guide.md).
+
+
 
 ### Identities
 
@@ -38,10 +44,6 @@ Every business wants to communicate with their customers in a way that feels per
 ### Segmentation
 
 Adobe Experience Platform Segmentation Service produces the audiences needed to power experiences for your individual customers. When an audience segment is created, the ID of that segment is added to the list of segment memberships for all qualifying profiles. Segment rules are built and applied to Real-time Customer Profile data using RESTful APIs and the Segment Builder user interface. To learn more about segmentation, please begin by reading the [Segmentation Service overview](../segmentation/home.md). 
-
-### Profile fragments and union schemas {#profile-fragments-and-union-schemas}
-
-One of the key features of Real-time Customer Profile is the ability to unify multi-channel data. When Real-time Customer Profile is used to access an entity, it can supply you with a merged view of all profile fragments for that entity across datasets, referred to as the union view and made possible through what is known as a union schema. Real-time Customer Profile data is merged across sources when an entity or profile is accessed by its ID or exported as a segment. To learn more about accessing profiles and union views, visit the Real-time Customer Profile API developer sub-guide on [Entities, also known as "Profile Access"](api/entities.md).
 
 ### Merge policies
 
@@ -66,12 +68,17 @@ Real-time input is made possible through a process called streaming ingestion. A
 
 In order to drive coordinated, consistent, and personalized experiences for your customers across multiple channels in real-time, the right data needs to be readily available and continuously updated as changes happen. Adobe Experience Platform enables this real-time access to data through the use of what are known as edges. An edge is a geographically placed server that stores data and makes it readily accessible to applications. For example, Adobe applications such as Adobe Target and Adobe Campaign use edges in order to provide personalized customer experiences in real-time. Data is routed to an edge by a projection, with a projection destination defining the edge to which data will be sent, and a projection configuration defining the specific information that will be made available on the edge. To learn more and begin working with edges and projections, refer to the Real-time Customer Profile API [Edge Projections sub-guide](api/edge-projections.md). 
 
-## Add data to Real-time Customer Profile
+## Ingest data into Profile
 
 Platform can be configured to send your record and time-series data to Profile, supporting real-time streaming ingestion and batch ingestion. For more information, see the tutorial outlining how to [add data to Real-time Customer Profile](tutorials/add-profile-data.md). 
 
 >[!Note]
 >Data collected through Adobe solutions, including Analytics Cloud, Marketing Cloud, and Advertising Cloud, flows into Experience Platform and is ingested into Profile.
+
+### Profile guardrails
+
+Experience Platform provides a series of guardrails to help you avoid creating Experience Data Model (XDM) schemas which Profile Service cannot support. This includes soft limits, where 
+
 
 ### Profile streaming ingestion metrics
 
