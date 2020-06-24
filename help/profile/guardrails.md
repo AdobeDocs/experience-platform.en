@@ -56,8 +56,8 @@ Adhering to the following guardrails is recommended when creating an XDM schema 
 | Guardrail | Boundary | Limit Type | Description |
 | --- | --- | --- | --- |
 | No time-series data permitted in profile for non-people entities| 0 | | **Time-series data is not permitted in Profile for non-people entities.** If a time-series dataset is associated with a non-people ID, the dataset cannot be enabled for Profile. |
-| No nested relationships permitted | 0 | | **You cannot create a relationship between two non-people schemas.** The ability to create relationships is not supported for any schemas which are not part of the Profile union schema.
-| Maximum JSON depth for primary ID field | 4 | | **The maximum JSON depth for the primary ID field is 4.** This means that in a highly-nested schema, you cannot select a field as a primary ID if it is nested more than 4 levels deep. A field that is on the 4th nested level can be used as a primary ID.  |
+| No nested relationships permitted | 0 | | **You cannot create a relationship between two non-people schemas.** The ability to create relationships is not supported for any schemas which are not part of the Profile union schema.|
+| Maximum JSON depth for primary ID field | 4 | | **The maximum JSON depth for the primary ID field is 4.** This means that in a highly-nested schema, you cannot select a field as a primary ID if it is nested more than 4 levels deep. A field that is on the 4th nested level can be used as a primary ID.|
 
 ## Data size guardrails
 
@@ -68,11 +68,11 @@ The following guardrails refer to data size and are recommended to ensure data c
 | Guardrail | Boundary | Limit Type | Description|
 | --- | --- | --- | --- |
 | Maximum size per profile fragment | 10KB | Soft | **The recommended maximum size of a profile fragment is 10kB.** Ingesting larger profile fragments will affect system performance. For example, loading a heavy CRM dataset where some profile fragments are 50kB in size will result in degraded system performance.|
-| Absolute maximum size per profile fragment | 1MB | Hard | **The absolute maximum size of a profile fragment is 1MB.** Ingestion will fail when attempting to upload a profile fragment that is larger than 1MB. |
+| Absolute maximum size per profile fragment | 1MB | Hard | **The absolute maximum size of a profile fragment is 1MB.** Ingestion will fail when attempting to upload a profile fragment that is larger than 1MB.|
 
 ### Dimension entity guardrails
 
 | Guardrail | Boundary | Limit Type | Description|
 | --- | --- | --- | --- |
 | Maximum total size for a single dimension entity | 200MB | | **The maximum total size for a single non-person entity is 200MB.** Ingesting larger dimension entities will result in degraded system performance.|
-| Datasets per dimensional entity schema | 1 | | **A maximum of 1 dataset can be associated with each dimensional entity schema.** For example, if you create a schema for "products" and add a contributing dataset, you are unable to create a second dataset tied to the products schema. |
+| Datasets per dimensional entity schema | 1 | | **A maximum of 1 dataset can be associated with each dimensional entity schema.** For example, if you create a schema for "products" and add a contributing dataset, you are unable to create a second dataset tied to the products schema.|
