@@ -5,7 +5,7 @@ title: Create a data usage policy
 topic: policies
 ---
 
-# Create a data usage policy
+# Create a data usage policy in the API
 
 Data Usage Labeling and Enforcement (DULE) is the core mechanism of Adobe Experience Platform Data Governance. The [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) allows you to create and manage DULE policies to determine what marketing actions can be taken against data that contains certain DULE labels.
 
