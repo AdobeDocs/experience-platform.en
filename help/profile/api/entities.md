@@ -5,15 +5,13 @@ title: Real-time Customer Profile API developer guide
 topic: guide
 ---
 
-# Entities (Profile access)
+# Entities (Profile access) endpoint
 
 Adobe Experience Platform enables you to access Real-time Customer Profile data using RESTful APIs or the user interface. This guide outlines how to access entities, more commonly known as "profiles", using the API. For more information on accessing Profile data using the Platform UI, please refer to the [Profile user guide](../ui/user-guide.md). 
 
 ## Getting started
 
-The API endpoints used in this guide are part of the Real-time Customer Profile API. Before continuing, please review the [Real-time Customer Profile API developer guide](getting-started.md).
-
-In particular, the [getting started section](getting-started.md#getting-started) of the Profile developer guide includes links to related topics, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform APIs.
+The API endpoint used in this guide is part of the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Before continuing, please review the [Real-time Customer Profile API getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 ## Access profile data by identity
 
@@ -770,7 +768,7 @@ Using this payload in the request body, you can perform an additional POST reque
 
 ## Access time series events in multiple schema entities
 
-You can access multiple entities that are connected through a relationship descriptor. The following example API call assumes a relationship has already been defined between two schemas. For more information on relationship descriptors, please read the Schema Registry API developer guide [descriptors sub-guide](../../xdm/api/descriptors.md).
+You can access multiple entities that are connected through a relationship descriptor. The following example API call assumes a relationship has already been defined between two schemas. For more information on relationship descriptors, please read the Schema Registry API developer guide [descriptors endpoint guide](../../xdm/api/descriptors.md).
 
 You can include query parameters in the request path in order to specify which data to access. You can include multiple parameters, separated by ampersands (&). A complete list of valid parameters is provided in the [query parameters](#query-parameters) section of the appendix.
 
