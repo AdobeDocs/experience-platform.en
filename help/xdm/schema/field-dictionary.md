@@ -14,7 +14,7 @@ See the [basics of schema composition](composition.md) for more information rega
 
 The table below includes the field name (not all XDM fields are namespaced using “xdm”) along with its title and description, type, and format where required, as well as its corresponding XDM type and the resources (mixins, data types, and schemas) in which the field can be found.
 
-You can use the search functionality in the Schema Editor to view details of these resources, as shown in the Schema Editor tutorial.
+You can use the search functionality in the Schema Editor to view details of these resources, as shown in the [Schema Editor tutorial](../tutorials/create-schema-ui.md).
 
 >[!NOTE] If a field is marked "**DEPRECATED**", it means that it should no longer be used in new implementations. The field continues to be available for backwards compatibility, but will no longer be supported in future releases.
 
