@@ -102,6 +102,11 @@ A successful response returns HTTP status 200 with a list of export jobs for the
                     "startTimeInMs": 123456789000,
                     "endTimeInMs": 123456799000,
                     "totalTimeInMs": 10000
+                },
+                "totalExportedProfileCounter": 20,
+                "exportedProfileByNamespaceCounter": {
+                    "namespace1": 10,
+                    "namespace2": 5
                 }
             },
             "computeGatewayJobId": {
@@ -110,6 +115,64 @@ A successful response returns HTTP status 200 with a list of export jobs for the
             "creationTime": 1538615973895,
             "updateTime": 1538616233239,
             "requestId": "d995479c-8a08-4240-903b-af469c67be1f"
+        },
+        {
+            "profileInstanceId": "test_xdm_latest_profile_20_e2e_1538573005395",
+            "errors": [
+                {
+                    "code": "0090000009",
+                    "msg": "Error writing profiles to output path 'adl://va7devprofilesnapshot.azuredatalakestore.net/snapshot/722'",
+                    "callStack": "com.adobe.aep.unifiedprofile.common.logging.Logger" 
+                },
+                {
+                    "code": "unknown",
+                    "msg": "Job aborted.",
+                    "callStack": "org.apache.spark.SparkException: Job aborted."
+                }
+            ],
+            "jobType": "BATCH",
+            "filter": {
+                "segments": [
+                    {
+                        "segmentId": "52c26d0d-45f2-47a2-ab30-ed06abc981ff",
+                        "segmentNs": "AAM",
+                        "status": ["realized", "existing"]
+                    }
+                ]
+            },
+            "id": 722,
+            "schema": {
+                "name": "_xdm.context.profile"
+            },
+            "mergePolicy": {
+                "id": "7972e3d6-96ea-4ece-9627-cbfd62709c5d",
+                "version": 1
+            },
+            "status": "FAILED",
+            "requestId": "KbOAsV7HXmdg262lc4yZZhoml27UWXPZ",
+            "computeGatewayJobId": {
+                "exportJob": "15971e0f-317c-4390-9038-1a0498eb356f"
+            },
+            "metrics": {
+                "totalTime": {
+                    "startTimeInMs": 1538573416687,
+                    "endTimeInMs": 1538573922551,
+                    "totalTimeInMs": 505864
+                },
+                "profileExportTime": {
+                    "startTimeInMs": 1538573872211,
+                    "endTimeInMs": 1538573918809,
+                    "totalTimeInMs": 46598
+                }
+            },
+            "destination": {
+                "datasetId": "5bb4c46757920712f924a3eb",
+                "segmentPerBatch": false,
+                "batchId": "IWEQ6920712f9475762D"
+            },
+            "updateTime": 1538573922551,
+            "imsOrgId": "1BD6382559DF0C130A49422D@AdobeOrg",
+            "creationTime": 1538573416687
         }
     ],
     "page":{
@@ -253,7 +316,7 @@ A successful response returns HTTP status 200 with details of your newly created
     },
     "additionalFields": {
         "eventList": {
-            "fields": "string",
+            "fields": "_id, _experience",
             "filter": {
                 "fromIngestTimestamp": "2018-01-01T00:00:00Z"
             }
@@ -264,20 +327,13 @@ A successful response returns HTTP status 200 with details of your newly created
         "version": 1
     },
     "profileInstanceId": "ups",
-    "errors": [
-        {
-            "code": "0100000003",
-            "msg": "Error in Export Job",
-            "callStack": "com.adobe.aep.unifiedprofile.common.logging.Logger"
-        }
-    ],
     "metrics": {
         "totalTime": {
             "startTimeInMs": 123456789000,
         }
     },
     "computeGatewayJobId": {
-        "exportJob": "f3058161-7349-4ca9-807d-212cee2c2e94"    
+        "exportJob": ""    
     },
     "creationTime": 1538615973895,
     "updateTime": 1538616233239,
@@ -380,6 +436,88 @@ A successful response returns HTTP status 200 with detailed information about th
 | `metrics.totalTime` | A field indicating the total time that export job took to run. |
 | `metrics.profileExportTime` | A field indicating the time it took for the profiles to export. |
 | `totalExportedProfileCounter` | The total number of profile exported across all batches. |
+
+>[!NOTE] The destination and merge metric objects differ when `segmentPerBatch = false`, compared to when `segmentPerBatch = true`. The differences are shown in the examples below.
+
+**`segmentPerBatch` is false**
+
+```json
+{
+    "destination": {
+        "datasetId": "5b7c86968f7b6501e21ba9df",
+        "segmentPerBatch": false,
+        "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
+    },
+    "metrics": {
+        "totalTime": {
+            "startTimeInMs": 123456789000,
+            "endTimeInMs": 123456799000,
+            "totalTimeInMs": 10000
+        },
+        "profileExportTime": {
+            "startTimeInMs": 123456789000,
+            "endTimeInMs": 123456799000,
+            "totalTimeInMs": 10000
+        },
+        "totalExportedProfileCounter": 20,
+        "exportedProfileByNamespaceCounter": {
+            "namespace1": 10,
+            "namespace2": 5
+    }
+}
+```
+
+**`segmentPerBatch` is true**
+
+```json
+{
+    "destination": {
+        "dataSetId" : "<DATASET_ID>",
+        "segmentPerBatch": true,
+        "batches" : [
+            {
+                "segmentId": "segment1",
+                "segmentNs": "ups",
+                "status": ["realized"]
+                "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
+            },
+            {
+                "segmentId": "segment2",
+                "segmentNs": "AdCloud",
+                "status": "exited",
+                "batchId": "df4gssdfb93a09f7e37fa53ad52"
+            }
+        ]
+    },
+    "metrics": {
+        "totalTime": {
+            "startTimeInMs": 123456789000,
+            "endTimeInMs": 123456799000,
+            "totalTimeInMs": 10000
+        },
+        "profileExportTime": {
+            "startTimeInMs": 123456789000,
+            "endTimeInMs": 123456799000,
+            "totalTimeInMs": 10000
+        },
+        "totalExportedProfileCounter": 20,
+        "exportedProfileCounter": {
+            "segmentId1": 10,
+            "segmentId2": 5
+        },
+        "exportedProfileByNamespaceCounter": {
+            "segmentId1": {
+                "namespace1": 8,
+                "namespace2": 5
+            },
+            "segmentId2": {
+                "namespace1": 3,
+                "namespace2": 5
+            }
+        }
+    }
+}
+```
 
 ## Cancel or delete a specific export job {#delete}
 
