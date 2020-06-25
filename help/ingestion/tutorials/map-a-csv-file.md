@@ -24,7 +24,7 @@ This tutorial also requires that you have already created a dataset to ingest yo
 
 Log in to [!DNL Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Workflows]** from the left navigation bar to access the *[!UICONTROL Workflows]* workspace.
 
-From the **[!UICONTROL Workflows]** screen, select **[!UICONTROL Map CSV to XDM schema]** under the **[!UICONTROL Data ingestion]** section and then select **[!UICONTROL Launch]**
+From the **[!UICONTROL Workflows]** screen, select **[!UICONTROL Map CSV to XDM schema]** under the **[!UICONTROL Data ingestion]** section and then select **[!UICONTROL Launch]**.
 
 ![](../images/tutorials/map-a-csv-file/workflows.png)
 
@@ -78,7 +78,7 @@ When mapping fields, you can also include functions to compute values based on i
 
 ### Add calculated field
 
-Calculated fields allow for values to be crated based on the attributes in the input schema. These values can then be assigned to attributes in the target schema and be provided a name and description to allow for easier reference.
+Calculated fields allow for values to be created based on the attributes in the input schema. These values can then be assigned to attributes in the target schema and be provided a name and description to allow for easier reference.
 
 Select the **[!UICONTROL Add calculated field]** button to proceed.
 
@@ -94,13 +94,13 @@ The **[!UICONTROL Create calculated field]** panel appears. The left dialog box 
 | Functions | The functions tab lists the functions available to transform the data. |
 | Operators | The operators tab lists the operators that are available to transform the data. |
 
-You can manually add fields, functions, and operators using the expression editor in the center. Select the editor to start creating an expression.
+You can manually add fields, functions, and operators using the expression editor at the center. Select the editor to start creating an expression.
 
 ![](../images/tutorials/map-a-csv-file/expression-editor.png)
 
 Select **[!UICONTROL Save]** to proceed.
 
-The mapping screen reappears with your newly created source field. Apply the appropriate target field and select **[!UICONTROL Finish]** to the mapping.
+The mapping screen reappears with your newly created source field. Apply the appropriate corresponding target field and select **[!UICONTROL Finish]** to complete the mapping.
 
 ![](../images/tutorials/map-a-csv-file/new-field.png)
 
@@ -118,7 +118,7 @@ The following section provides additional information for mapping CSV columns to
 
 ### Mapping functions
 
-Certain mapping functions can be used to compute and calculate values based on what is entered in source fields. To use a function, type it in under _Source Field_ with appropriate syntax and inputs.
+Certain mapping functions can be used to compute and calculate values based on what is entered in source fields. To use a function, type it in under *Source Field* with appropriate syntax and inputs.
 
 For example, to concatenate **city** and **country** CSV fields and assign them to the **city** XDM field, set the source field as `concat(city, ", ", county)`.
 
