@@ -50,7 +50,7 @@ During this step, you can also activate the **[!UICONTROL Enable partial ingesti
 
 The *[!UICONTROL Sample data]* section appears once the file is uploaded, showing the first ten rows of data. Once you have confirmed that the data has uploaded as expected, select **[!UICONTROL Next]**.
 
-![](../images/tutorials/map-a-csv-file/csv-added.png)
+![](../images/tutorials/map-a-csv-file/sample-data.png)
 
 ## Map CSV fields to XDM schema fields
 
