@@ -7,27 +7,31 @@ topic: guide
 
 # Platform guardrails for Real-time Customer Profile
 
-Adobe Experience Platform provides a series of guardrails to help you avoid creating data models which Real-time Customer Profile cannot support.
+Real-time Customer Profile provides centrally accessible individual profiles that allow you to target your customers with personalized cross-channel experiences based on behavioral insights and customer attributes. In order to achieve this targeting, Profile and the segmentation engine within Platform use a highly denormalized hybrid data model. The hybrid data model offers a new approach to developing customer profiles making it important for the data to be modeled correctly. While the Profile Store maintaining profile data is not a relational store, Profile permits integration with small dimension entities in order to create segments in a simplified and intuitive manner. This integration is known as multi-entity segmentation. 
+
+Adobe Experience Platform provides a series of guardrails to help you avoid creating data models which Real-time Customer Profile cannot support. This document outlines the best practices and constraints when using dimension entities, specifically in batch segmentation. For more information on data modeling within Platform and an introduction to schemas, please be sure to read the [basics of schema composition](../xdm/schema/composition.md) guide, part of the [Experience Data Model (XDM)](../xdm/home.md) documentation.
 
 ## Getting started
 
 It is recommended that you read the following Experience Platform services documentation before attempting to build data models for use in Real-time Customer Profile. Working data models, and the guardrails outlined in this document, requires an understanding of the various Experience Platform services involved with managing Real-time Customer Profile entities: 
 
 * [Real-time Customer Profile](home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [Identity Service](../identity-service/home.md): Enables Real-time Customer Profile by bridging identities from disparate data sources as they are ingested into Platform.
+* [Adobe Experience Platform Identity Service](../identity-service/home.md): Enables Real-time Customer Profile by bridging identities from disparate data sources as they are ingested into Platform.
 * [Experience Data Model (XDM)](../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
+  * [Basics of schema composition](../xdm/schema/composition.md): An introduction to schemas and data modeling within Experience Platform.
+* [Segmentation Service](../segmentation/home.md): The segmentation engine within Platform used to create audience segments from your customer profiles based on customer behaviors and attributes.
 
 ## Entity types
 
-Real-time Customer Profile utilizes a highly-denormalized hybrid data model that consists of two core entity types:
+The Profile Store data model consists of two core entity types:
 
 * **Primary entity:** A primary entity, or Profile entity, merges data together to form a "single source of truth" for an individual. This unified data is represented using what is known as a "union view". A union view aggregates the fields of all schemas that implement the same class into a single union schema. The union schema for Real-time Customer Profile is a denormalized hybrid data model that acts as a container for all profile attributes and behavioral events. 
 
-  As XDM Individual Profile and XDM ExperienceEvent data is ingested and managed by Catalog, it triggers Real-time Customer Profile to begin ingesting data that has been enabled for its use. The more interactions and details that are ingested, the more robust individual profiles become.
+  Time-independent attributes, also known as "record data" are modeled using XDM Individual Profile, while time-series data, also known as "event data" is modeled using XDM ExperienceEvent. As record and time-series data is ingested and managed by Catalog, it triggers Real-time Customer Profile to begin ingesting data that has been enabled for its use. The more interactions and details that are ingested, the more robust individual profiles become.
 
   ![](images/guardrails/profile-entity.png) 
 
-* **Dimension entity:** Your organization may also define XDM classes to describe things other than individuals, such as stores, products, or properties. These non-people schemas are known as "dimension entities" and do not contain time-series data. They must also be small enough that the segmentation engine powered by Adobe Experience Platform Segmentation Service can load the entire data set into memory for optimal processing through a fast point lookup.
+* **Dimension entity:** Your organization may also define XDM classes to describe things other than individuals, such as stores, products, or properties. These non-people schemas are known as "dimension entities" and do not contain time-series data. Dimension entities provide lookup data which aids and simplifies multi-entity segment definitions and must be small enough that the segmentation engine can load the entire data set into memory for optimal processing (fast point lookup).
 
   ![](images/guardrails/profile-and-dimension-entities.png)
 
