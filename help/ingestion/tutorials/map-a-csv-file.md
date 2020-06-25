@@ -44,8 +44,6 @@ To ingest your CSV data into a new dataset, select **[!UICONTROL Create new data
 
 The *[!UICONTROL Add data]* step appears. Drag-and-drop your CSV file into the space provided, or select **[!UICONTROL Choose files]** to manually input your CSV file.
 
-During this step, you can also activate the **[!UICONTROL Enable partial ingestion]** option to allow the ingestion of batch data within a specified threshold. You can modify the **[!UICONTROL Error threshold %]** by dragging the scroll or by manually inputting a number in the textbox.
-
 ![](../images/tutorials/map-a-csv-file/add-data.png)
 
 The *[!UICONTROL Sample data]* section appears once the file is uploaded, showing the first ten rows of data. Once you have confirmed that the data has uploaded as expected, select **[!UICONTROL Next]**.
