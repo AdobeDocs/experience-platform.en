@@ -7,7 +7,7 @@ topic: tutorial
 
 # Map a CSV file to an XDM schema
 
-In order to ingest CSV data into [!DNL Adobe Experience Platform], the data must be mapped to an Experience Data Model (XDM) schema. This tutorial covers how to map a CSV file to an XDM schema using the [!DNL Platform] user interface.
+In order to ingest CSV data into [!DNL Adobe Experience Platform], the data must be mapped to an [!DNL Experience Data Model] (XDM) schema. This tutorial covers how to map a CSV file to an XDM schema using the [!DNL Platform] user interface.
 
 In addition, the appendix to this tutorial provides further information regarding the use of [mapping functions](#mapping-functions).
 
@@ -46,7 +46,7 @@ The *[!UICONTROL Add data]* step appears. Drag-and-drop your CSV file into the s
 
 ![](../images/tutorials/map-a-csv-file/add-data.png)
 
-A *[!UICONTROL Sample data]* section appears once the file is uploaded, showing the first ten rows of data. Once you have confirmed that the data has uploaded as expected, select **[!UICONTROL Next]**.
+The *[!UICONTROL Sample data]* section appears once the file is uploaded, showing the first ten rows of data. Once you have confirmed that the data has uploaded as expected, select **[!UICONTROL Next]**.
 
 ![](../images/tutorials/map-a-csv-file/csv-added.png)
 
@@ -110,7 +110,7 @@ Once your CSV file is mapped and created, you can monitor the data that is being
 
 ## Next steps
 
-By following this tutorial, you have successfully mapped a flat CSV file to an XDM schema and ingested it into Platform. This data can now be used by downstream Platform services such as Real-time Customer Profile. See the [!DNL Real-time Customer Profile overview](../../profile/home.md) for more information.
+By following this tutorial, you have successfully mapped a flat CSV file to an XDM schema and ingested it into [!DNL Platform]. This data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile]. See the [!DNL Real-time Customer Profile](../../profile/home.md) overview for more information.
 
 ## Appendix
 
@@ -118,7 +118,7 @@ The following section provides additional information for mapping CSV columns to
 
 ### Mapping functions
 
-Certain mapping functions can be used to compute and calculate values based on what is entered in source fields. To use a function, type it in under *Source Field* with appropriate syntax and inputs.
+Certain mapping functions can be used to compute and calculate values based on what is entered in source fields. To use a function, type it in under *[!UICONTROL Source Field]* with appropriate syntax and inputs.
 
 For example, to concatenate **city** and **country** CSV fields and assign them to the **city** XDM field, set the source field as `concat(city, ", ", county)`.
 
