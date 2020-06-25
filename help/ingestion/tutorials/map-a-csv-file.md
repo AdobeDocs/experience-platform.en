@@ -34,7 +34,7 @@ The *[!UICONTROL Map CSV to XDM schema]* workflow appears, starting on the *[!UI
 
 To ingest your CSV data into an existing dataset, select **[!UICONTROL Use existing dataset]**. You can either retrieve an existing dataset using the search function or by scrolling through the list of existing datasets in the panel.
 
-![](../images/tutorials/map-a-csv-file/existing-dataset.png)
+![](../images/tutorials/map-a-csv-file/use-existing-dataset.png)
 
 To ingest your CSV data into a new dataset, select **[!UICONTROL Create new dataset]** and enter a name and description for the dataset in the fields provided. Select a schema by using either the search function or by scrolling through the list of schemas provided. Select **[!UICONTROL Next]** to proceed.
 
@@ -88,7 +88,7 @@ Select the **[!UICONTROL Add calculated field]** button to proceed.
 
 The **[!UICONTROL Create calculated field]** panel appears. The left dialog box contains the fields, functions, and operators supported in calculated fields. Select one of the tabs to start adding functions, fields, or operators to the expression editor.
 
-![](../images/tutorials/map-a-csv-file/create-calculated-field.png)
+![](../images/tutorials/map-a-csv-file/create-calculated-fields.png)
 
 | Tab | Description |
 | --------- | ----------- |
