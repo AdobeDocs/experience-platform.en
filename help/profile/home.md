@@ -129,6 +129,6 @@ Experience Platform has a series of guidelines to follow in order to effectively
 To learn more about Real-time Customer Profile, please continue reading the documentation and supplement your learning by watching the video below or exploring other [Experience Platform video tutorials](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html).
 
 >[!WARNING]
->The Platform UI shown in the following video is out of date. Please refer to the [Real-time Customer Profile user guide](/ui/user-guide.md) for the latest UI screenshots and functionality. 
+>The Platform UI shown in the following video is out of date. Please refer to the [Real-time Customer Profile user guide](ui/user-guide.md) for the latest UI screenshots and functionality. 
 
 >[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12)
