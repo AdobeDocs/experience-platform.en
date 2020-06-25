@@ -96,11 +96,23 @@ To add a new rule to your segment definition, drag a tile from the *[!UICONTROL 
 
 You can drag and drop an audience from the *[!UICONTROL Audience]* tab onto the rule builder canvas to reference audience membership in the new segment definition. This allows you to include or exclude audience membership as an attribute in the new segment rule.
 
-For [!DNL Platform] audiences created using Segment Builder, you are given the option to convert the audience into the set of rules that were used in the segment definition for that audience. This conversion makes a copy of the rule logic, that can then be modified without affecting the original segment definition.
+For [!DNL Platform] audiences created using [!UICONTROL Segment Builder], you are given the option to convert the audience into the set of rules that were used in the segment definition for that audience. This conversion makes a copy of the rule logic, that can then be modified without affecting the original segment definition. Make sure that you have saved any recent changes to your segment definition before converting it to rule logic.
 
 >[!NOTE] When adding an audience from an external source, only the audience membership is referenced. You cannot convert the audience to rules, and therefore the rules used to create the original audience cannot be modified in the new segment definition.
 
 ![](../images/segment-builder/add-audience-to-segment.png)
+
+If any conflicts arise when convert audiences to rules, [!UICONTROL Segment Builder] will attempt to preserve the existing options to the best of its ability.  
+
+### Code view
+
+Alternatively, you can view a code-based version of a rule created in the [!UICONTROL Segment Builder]. Once you have created your rule within the rule builder canvas, you can select **[!UICONTROL Code view]** to see your segment as PQL.
+
+![](../images/segment-builder/code-view.png)
+
+Code view provides a button that allows you to copy the value of the segment to use in API calls. To get the latest version of the segment, make sure you have saved your latest changes to the segment.
+
+![](../images/segment-builder/copy-code.png)
 
 ## Containers
 
@@ -158,7 +170,7 @@ Schedules can currently only be created using the API. For detailed steps on cre
 
 ![](../images/segment-builder/scheduled-segmentation.png)
 
-## Streaming segmentation
+## Streaming segmentation {#streaming-segmentation}
 
 >[!NOTE] In order for streaming segmentation to work, the customer will need to enable scheduled segmentation for the organization. For details on enabling scheduled segmentation, please refer to [the previous section in this user guide](#enable-scheduled-segmentation).
 
