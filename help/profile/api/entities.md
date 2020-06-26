@@ -5,9 +5,9 @@ title: Real-time Customer Profile API developer guide
 topic: guide
 ---
 
-# Entities (Profile access) endpoint
+# Entities endpoint (Profile access)
 
-Adobe Experience Platform enables you to access Real-time Customer Profile data using RESTful APIs or the user interface. This guide outlines how to access entities, more commonly known as "profiles", using the API. For more information on accessing Profile data using the Platform UI, please refer to the [Profile user guide](../ui/user-guide.md). 
+Adobe Experience Platform enables you to access Real-time Customer Profile data using RESTful APIs or the user interface. This guide outlines how to access entities, more commonly known as "profiles", using the API. For more information on accessing profiles using the Platform UI, please refer to the [Profile user guide](../ui/user-guide.md). 
 
 ## Getting started
 
