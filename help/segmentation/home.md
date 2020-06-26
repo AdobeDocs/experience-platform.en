@@ -39,8 +39,6 @@ For information on building segment definitions using the API, see the tutorial 
 
 ### Streaming segmentation
 
->[!NOTE] Streaming segmentation is a beta feature, and will be available on request.
-
 Streaming segmentation is an ongoing data selection process that updates your segments in response to user activity. Once a segment has been built and saved, the segment definition is applied against incoming data to Real-time Customer Profile. Segment additions and removals are processed regularly, ensuring your target audience remains relevant. 
 
 To learn more about streaming segmentation, please read the [streaming segmentation documentation](./api/streaming-segmentation.md).

@@ -15,7 +15,7 @@ Real-time CDP is built on top of Adobe Experience Platform, and therefore the ma
 
 * [Apply usage labels to your data](#labels)
 * [Manage data usage policies](#policies)
-* [Enforce data usage compliance](#enforcement)
+* [Enforce data usage compliance](#enforce-data-usage-compliance)
 
 ## Apply usage labels to your data {#labels}
 
@@ -40,10 +40,7 @@ In order for data usage labels to effectively support data compliance, data usag
 
 Adobe Experience Platform provides several **core policies** for common customer experience use cases. These policies can be viewed in the UI by navigating to the **[!UICONTROL Policies]** workspace and selecting the **[!UICONTROL Browse]** tab. See the [policies user guide](../../data-governance/policies/user-guide.md) in the Experience Platform documentation for more detailed steps on working with policies in the UI, including how to make your own custom policies.
 
-## (Beta) Enforce data usage compliance {#enforce-data-usage-compliance}
-
->[!IMPORTANT]
->This feature is currently in beta and is not available to all users. It can be enabled upon request. The documentation and the functionality are subject to change.
+## Enforce data usage compliance {#enforce-data-usage-compliance}
 
 Once data is labeled and usage policies are defined, you can enforce data usage compliance with policies. When activating audience segments to destinations in Real-time CDP, Data Governance automatically enforces usage policies should any violations occur.
 
