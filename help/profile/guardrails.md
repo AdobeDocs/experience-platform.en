@@ -20,6 +20,7 @@ It is recommended that you read the following Experience Platform services docum
 * [Experience Data Model (XDM)](../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
   * [Basics of schema composition](../xdm/schema/composition.md): An introduction to schemas and data modeling within Experience Platform.
 * [Segmentation Service](../segmentation/home.md): The segmentation engine within Platform used to create audience segments from your customer profiles based on customer behaviors and attributes.
+  * [Multi-entity segmentation](../segmentation/multi-entity-segmentation.md): A guide to creating segments that integrate dimension entities with profile data.
 
 ## Entity types
 
@@ -37,7 +38,7 @@ The Profile Store data model consists of two core entity types:
 
 ## Limit types
 
-When defining XDM schemas, it is recommended to stay within the provided guardrails to ensure proper performance and avoid system errors. The guardrails provided in this document include two limit types:
+When defining your data model, it is recommended to stay within the provided guardrails to ensure proper performance and avoid system errors. The guardrails provided in this document include two limit types:
 
 * **Soft limit:** A soft limit provides a recommended maximum for optimal system performance. It is possible to go beyond a soft limit without breaking the system or receiving error messages, however going beyond a soft limit will result in performance degradation. It is recommended to stay within the soft limit to avoid decreases in overall performance.
 
@@ -45,11 +46,11 @@ When defining XDM schemas, it is recommended to stay within the provided guardra
 
 ## Data model guardrails
 
-Adhering to the following guardrails is recommended when creating an XDM schema for use with Real-time Customer Profile.
+Adhering to the following guardrails is recommended when creating a data model for use with Real-time Customer Profile.
 
 ### Primary entity Guardrails
 
-| Guardrail | Boundary | Limit Type | Description |
+| Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
 | Number of datasets permitted to contribute to the profile union schema | 20 |  | **A maximum of 20 Profile-enabled datasets are permitted.** To enable another dataset for Profile, an existing dataset must first be removed or disabled.|
 | Number of multi-entity relationships permitted| 5 |  | **A maximum of 5 multi-entity relationships can be defined between primary entities and dimension entities.** Additional relationship mappings should not be made until an existing relationship is removed or disabled. | 
@@ -57,7 +58,7 @@ Adhering to the following guardrails is recommended when creating an XDM schema 
 
 ### Dimension entity Guardrails
 
-| Guardrail | Boundary | Limit Type | Description |
+| Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
 | No time-series data permitted in profile for non-people entities| 0 | | **Time-series data is not permitted in profile for non-people entities.** If a time-series dataset is associated with a non-people ID, the dataset cannot be enabled for Profile. |
 | No nested relationships permitted | 0 | | **You cannot create a relationship between two non-people schemas.** The ability to create relationships is not supported for any schemas which are not part of the Profile union schema.|
@@ -69,14 +70,14 @@ The following guardrails refer to data size and are recommended to ensure data c
 
 ### Primary entity guardrails
 
-| Guardrail | Boundary | Limit Type | Description|
+| Guardrail | Limit| Limit Type | Description|
 | --- | --- | --- | --- |
 | Maximum size per profile fragment | 10KB | Soft | **The recommended maximum size of a profile fragment is 10kB.** Ingesting larger profile fragments will affect system performance. For example, loading a heavy CRM dataset where some profile fragments are 50kB in size will result in degraded system performance.|
 | Absolute maximum size per profile fragment | 1MB | Hard | **The absolute maximum size of a profile fragment is 1MB.** Ingestion will fail when attempting to upload a profile fragment that is larger than 1MB.|
 
 ### Dimension entity guardrails
 
-| Guardrail | Boundary | Limit Type | Description|
+| Guardrail | Limit | Limit Type | Description|
 | --- | --- | --- | --- |
-| Maximum total size for all dimensional entities of a given type | 200MB | | **The maximum total size for all non-person entities of a given type is 200MB.** Ingesting larger dimension entities will result in degraded system performance. For example, attempting to load a 10GB product catalog as a dimension entity is not recommended.|
+| Maximum total size for dimension entity (total for all records in an entity) | 200MB | | **The maximum total size for all records in a non-person entity of a given type is 200MB.** Ingesting larger dimension entities will result in degraded system performance. For example, attempting to load a 10GB product catalog as a dimension entity is not recommended.|
 | Datasets per dimensional entity schema | 1 | | **A maximum of 1 dataset can be associated with each dimensional entity schema.** For example, if you create a schema for "products" and add a contributing dataset, you are unable to create a second dataset tied to the products schema.|
