@@ -36,7 +36,9 @@ When creating privacy requests for the Data Lake, valid identity values (and the
 
 This section walks through the steps of adding an identity descriptor to an existing dataset's XDM schema. If you already have a dataset with an identity descriptor, you can skip ahead to the [next section](#nested-maps).
 
->[!IMPORTANT] When deciding which schema fields to set as identities, keep in mind the [limitations of using nested map-type fields](#nested-maps).
+>[!IMPORTANT]
+>
+>When deciding which schema fields to set as identities, keep in mind the [limitations of using nested map-type fields](#nested-maps).
 
 There are two methods of adding an identity descriptor to a dataset schema:
 
