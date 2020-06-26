@@ -5,17 +5,15 @@ title: Segment definitions
 topic: developer guide
 ---
 
-# Segment definitions developer guide
+# Segment definitions endpoing guide
 
-Adobe Experience Platform allows you to create segments that define a group of specific attributes or behaviors from a group of profiles. A segment definition is an object that encapsulates a query written in Profile Query Language (PQL). This object is also called a PQL predicate. PQL predicates define the rules for the segment based on conditions related to any record or time series data you supply to Real-time Customer Profile. See the [PQL guide](../pql/overview.md) for more information on writing PQL queries.
+[!DNL Adobe Experience Platform] allows you to create segments that define a group of specific attributes or behaviors from a group of profiles. A segment definition is an object that encapsulates a query written in [!DNL Profile Query Language] (PQL). This object is also called a PQL predicate. PQL predicates define the rules for the segment based on conditions related to any record or time series data you supply to [!DNL Real-time Customer Profile]. See the [PQL guide](../pql/overview.md) for more information on writing PQL queries.
 
 This guide provides information to help you better understand segment definitions and includes sample API calls for performing basic actions using the API.
 
 ## Getting started
 
-The API endpoints used in this guide are part of the Segmentation API. Before continuing, please review the [Segmentation developer guide](./getting-started.md).
-
-In particular, the [getting started section](./getting-started.md#getting-started) of the Segmentation developer guide includes links to related topics, a guide to reading the sample API calls in the document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started section of Segmentation developer guide](./getting-started.md#getting-started), as it includes a guide to reading the sample API calls in the document and important information regarding required headers that are needed to successfully make calls to [!DNL Experience Platform] APIs.
 
 ## Retrieve a list of segment definitions {#list}
 

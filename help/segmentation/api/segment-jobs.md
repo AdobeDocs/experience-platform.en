@@ -5,17 +5,15 @@ title: Segment jobs
 topic: developer guide
 ---
 
-# Segment jobs developer guide
+# Segment jobs endpoint guide
 
-A segment job is an asynchronous process that creates a new audience segment. It references a segment definition, as well as any merge policies controlling how Real-time Customer Profile merges overlapping attributes across your profile fragments. When a segment job successfully completes, you can gather various information about the segment, such as any errors that may have occurred during processing and the ultimate size of your audience.
+A segment job is an asynchronous process that creates a new audience segment. It references a segment definition, as well as any merge policies controlling how [!DNL Real-time Customer Profile] merges overlapping attributes across your profile fragments. When a segment job successfully completes, you can gather various information about the segment, such as any errors that may have occurred during processing and the ultimate size of your audience.
 
 This guide provides information to help you better understand segment jobs and includes sample API calls for performing basic actions using the API.
 
 ## Getting started
 
-The API endpoints used in this guide are part of the Segmentation API. Before continuing, please review the [Segmentation developer guide](./getting-started.md).
-
-In particular, the [getting started section](./getting-started.md#getting-started) of the Segmentation developer guide includes links to related topics, a guide to reading the sample API calls in the document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started section of Segmentation developer guide](./getting-started.md#getting-started), as it includes a guide to reading the sample API calls in the document and important information regarding required headers that are needed to successfully make calls to [!DNL Experience Platform] APIs.
 
 ## Retrieve a list of segment jobs {#retrieve-list}
 

@@ -5,15 +5,13 @@ title: Schedules
 topic: developer guide
 ---
 
-# Schedules developer guide
+# Schedules endpoint guide
 
 Schedules are a tool that can be used to automatically run batch segmentation jobs once a day. You can use the `/config/schedules` endpoint to retrieve a list of schedules, create a new schedule, retrieve details of a specific schedule, update a specific schedule, or delete a specific schedule. 
 
 ## Getting started
 
-The API endpoints used in this guide are part of the Segmentation API. Before continuing, please review the [Segmentation developer guide](./getting-started.md).
-
-In particular, the [getting started section](./getting-started.md#getting-started) of the Segmentation developer guide includes links to related topics, a guide to reading the sample API calls in the document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started section of Segmentation developer guide](./getting-started.md#getting-started), as it includes a guide to reading the sample API calls in the document and important information regarding required headers that are needed to successfully make calls to [!DNL Experience Platform] APIs.
 
 ## Retrieve a list of schedules {#retrieve-list}
 

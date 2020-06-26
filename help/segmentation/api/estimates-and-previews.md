@@ -1,19 +1,17 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Estimates and previews
+title: Estimates and previews endpoints guide
 topic: developer guide
 ---
 
-# Estimates and previews
+# Estimates and previews endpoints guide
 
-As you develop your segment definition, you can use the estimate and preview tools within Adobe Experience Platform to view summary-level information to help ensure you are isolating the expected audience. Estimates provide statistical information on a segment definition, such as the projected audience size and confidence interval. Previews provide paginated lists of qualifying profiles for a segment definition, allowing you to compare the results against what you expect.
+As you develop your segment definition, you can use the estimate and preview tools within [!DNL Adobe Experience Platform] to view summary-level information to help ensure you are isolating the expected audience. Estimates provide statistical information on a segment definition, such as the projected audience size and confidence interval. Previews provide paginated lists of qualifying profiles for a segment definition, allowing you to compare the results against what you expect.
 
 ## Getting started
 
-The API endpoints used in this guide are part of the Adobe Experience Platform Segmentation Service API. Before continuing, please review the [Segmentation developer guide](./getting-started.md).
-
-In particular, the [getting started section](./getting-started.md#getting-started) of the Segmentation developer guide includes links to related topics, a guide to reading the sample API calls in the document, and important information regarding required headers that are needed to successfully make calls to Experience Platform APIs.
+The endpoints used in this guide are part of the [!DNL Adobe Experience Platform] Segmentation Service API. Before continuing, please review the [getting started section of Segmentation developer guide](./getting-started.md#getting-started), as it includes a guide to reading the sample API calls in the document and important information regarding required headers that are needed to successfully make calls to Experience Platform APIs.
 
 ## How estimates are generated
 

@@ -1,19 +1,17 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Export jobs
+title: Export jobs endpoint guide
 topic: developer guide
 ---
 
-# Export jobs
+# Export jobs endpoint guide
 
-Export jobs are asynchronous processes that are used to persist audience segment members to datasets. You can use the `/export/jobs` endpoint in the Adobe Experience Platform Segmentation API, which allows you to programmatically retrieve, create, and cancel export jobs.
+Export jobs are asynchronous processes that are used to persist audience segment members to datasets. You can use the `/export/jobs` endpoint in the [!DNL Adobe Experience Platform Segmentation] API, which allows you to programmatically retrieve, create, and cancel export jobs.
 
 ## Getting started
 
-The API endpoints used in this guide are part of the Segmentation API. Before continuing, please review the [Segmentation developer guide](./getting-started.md).
-
-In particular, the [getting started section](./getting-started.md#getting-started) of the Segmentation developer guide includes links to related topics, a guide to reading the sample API calls in the document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started section of Segmentation developer guide](./getting-started.md#getting-started), as it includes a guide to reading the sample API calls in the document and important information regarding required headers that are needed to successfully make calls to [!DNL Experience Platform] APIs.
 
 ## Retrieve a list of export jobs {#retrieve-list}
 
@@ -463,6 +461,7 @@ A successful response returns HTTP status 200 with detailed information about th
         "exportedProfileByNamespaceCounter": {
             "namespace1": 10,
             "namespace2": 5
+        }
     }
 }
 ```
@@ -478,7 +477,7 @@ A successful response returns HTTP status 200 with detailed information about th
             {
                 "segmentId": "segment1",
                 "segmentNs": "ups",
-                "status": ["realized"]
+                "status": ["realized"],
                 "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
             },
             {
