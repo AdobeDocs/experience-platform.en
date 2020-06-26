@@ -11,7 +11,7 @@ In order to drive coordinated, consistent, and personalized experiences for your
 
 ## Getting started
 
-The API endpoints used in this guide are part of the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Before continuing, please review the [Real-time Customer Profile API getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The API endpoint used in this guide is part of the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 >[!NOTE]
 >Requests that contain a payload (POST, PUT, PATCH) require a `Content-Type` header. More than one `Content-Type` is used in this document. Please pay special attention to the headers in the sample calls to ensure you are using the correct `Content-Type` for each request.
