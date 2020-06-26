@@ -7,32 +7,48 @@ topic: overview
 
 # Multi-entity segmentation
 
-Multi-entity segmentation is the ability to extend Profile data with additional data based on products, stores, or other non-profile classes. Once connected, data from additional classes becomes available as if they were native to the Profile schema.
-
-For more information about multi-entity segmentation, please read the [segmentation overview](./home.md).
+Multi-entity segmentation is the ability to extend profile data with additional "non-people" data, also known as "dimension entities", that your organization may define, such as products or stores. Once connected, dimension entity data becomes available as it relates to the Profile schema. Multi-entity segmentation provides the flexibility needed to identify audience segments based on data relevant to your business needs. This process can be done quickly and easily without requiring expertise in querying databases. This enables you to add key data to your segments without having to make costly changes to data streams or wait for a back-end data merge.
 
 ## Getting started
 
-This tutorial requires a working understanding of the various Adobe Experience Platform services involved in using segmentation. Before beginning this tutorial, please review the documentation for the following services:
+This guide requires a working understanding of the various Adobe Experience Platform services involved in using segmentation. Before continuing with this guide, please review the following documentation:
 
-- [Real-time Customer Profile](../profile/home.md): Provides a unified consumer profile in real-time, based on aggregated data from multiple sources.
-- [Adobe Experience Platform Segmentation Service](./home.md): Allows you to build segments from Real-time Customer Profile.
-- [Experience Data Model (XDM)](../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
+* [Real-time Customer Profile](../profile/home.md): Provides a unified consumer profile in real-time, based on aggregated data from multiple sources.
+  * [Profile guardrails](../profile/guardrails.md): Best practices for creating data models supported by Profile.
+* [Adobe Experience Platform Segmentation Service](./home.md): Allows you to build segments from Real-time Customer Profile data.
+* [Experience Data Model (XDM)](../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
+  * [Basics of schema composition](../xdm/schema/composition.md#union): Learn best practices for composing schemas to be used in Experience Platform.
 
-## How to define XDM relationships
+## Use cases
 
-Defining relationships with the structure of your Experience Data Model (XDM) schemas is an important and integral part of segment creation. 
+To illustrate the value of multi-entity segmentation, consider three standard marketing use cases that illustrate the challenges present in most marketing applications:
 
-This process can be done either using the Schema Registry API or the Schema Editor. For a detailed guide on using the API to define a relationship between two schemas, please read [the tutorial on defining a relationship between two schemas using the API](../xdm/tutorials/relationship-api.md). For a detailed guide on using the Schema Editor to define a relationship between two schemas, please read [the tutorial on defining a relationship between two schemas using the Schema Editor](../xdm/tutorials/relationship-ui.md).
+### Email personalization
 
-## How to use create segments that use XDM relationships
+A marketer building an email campaign may have attempted to build a segment for a target audience by using recent customer store purchases within the last three months. Ideally, this segment would require both the item name and the name of the store where the purchase was made. Previously, the challenge was capturing the store identifier from the purchase event and assigning it to an individual customer profile.
 
-Once you have defined your XDM relationships, you can use the Real-time Customer Profile APIs to build a segment.
+### Email retargeting
 
-This process can be done either using the Real-time Customer Profile API or the Segment Builder. For a detailed guide on using the API to build a segment, please read [the tutorial on creating a segment using the Real-time Customer Profile API](./tutorials/create-a-segment.md). For a detailed guide on using the Segment Builder to build a segment, please read [the Segment Builder user guide](./ui/overview.md).
+It is often complex to create and qualify segments for email campaigns targeting "cart abandonment". Knowing which products to include in a personalized message was difficult due to the availability of the required data. Data for which products were abandoned is tied to events which were formerly challenging to monitor and extract data from.
 
-## How to evaluate and access segments for multi-entity segments
+### Ad retargeting
 
-After creating a segment, you can evaluate and access the segment results using the Real-time Customer Profile APIs. Evaluating a multi-entity segment is very similar to evaluating a regular segment.
+Another traditional challenge for marketers has been creating ads to retarget customers with abandoned shopping cart items. While segment definitions addressed this challenge, there was no formal method to differentiate between purchased products and abandoned products. Now you can target specific datasets during segment definition.
 
-This process can only be done using the Real-time Customer Profile API. For a detailed guide on using the API to evaluate and access segments, please read [the tutorial on evaluating and accessing segments](./tutorials/evaluate-a-segment.md).
+## Define relationships
+
+Defining relationships within the structure of your Experience Data Model (XDM) schemas is an important and integral part of segment creation. This process can be done either using the Schema Registry API or the Schema Editor. For detailed steps showing how to define a relationship between two schemas, please choose from the following tutorials:
+
+* [Defining a relationship between two schemas using the API](../xdm/tutorials/relationship-api.md)
+* [Defining a relationship between two schemas using the Schema Editor UI](../xdm/tutorials/relationship-ui.md)
+
+## Create a multi-entity segment
+
+Once you have defined the necessary XDM relationships, you can begin to build a multi-entity segment. This process can be done using either the Segmentation API or the Segment Builder UI. For more information, please choose from the following guides:
+
+* [Creating a segment using the Segmentation API](./tutorials/create-a-segment.md)
+* [Creating a segment using the Segment Builder UI](./ui/overview.md)
+
+## Evaluate and access multi-entity segments
+
+After creating a segment, you can evaluate and access the segment results using the Segmentation API. Evaluating a multi-entity segment is very similar to evaluating a standard segment. This process can only be done using the Segmentation API. For a detailed guide showing how to use the API to evaluate and access segments, please read the [evaluating and accessing segments](./tutorials/evaluate-a-segment.md) tutorial.

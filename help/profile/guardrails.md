@@ -9,14 +9,14 @@ topic: guide
 
 Real-time Customer Profile provides centrally accessible individual profiles that allow you to target your customers with personalized cross-channel experiences based on behavioral insights and customer attributes. In order to achieve this targeting, Profile and the segmentation engine within Platform use a highly denormalized hybrid data model. The hybrid data model offers a new approach to developing customer profiles making it important for the data to be modeled correctly. While the Profile Store maintaining profile data is not a relational store, Profile permits integration with small dimension entities in order to create segments in a simplified and intuitive manner. This integration is known as multi-entity segmentation. 
 
-Adobe Experience Platform provides a series of guardrails to help you avoid creating data models which Real-time Customer Profile cannot support. This document outlines the best practices and constraints when using dimension entities, specifically in batch segmentation. For more information on data modeling within Platform and an introduction to schemas, please be sure to read the [basics of schema composition](../xdm/schema/composition.md) guide, part of the [Experience Data Model (XDM)](../xdm/home.md) documentation.
+Adobe Experience Platform provides a series of guardrails to help you avoid creating data models which Real-time Customer Profile cannot support. This document outlines the best practices and constraints when using dimension entities, specifically in batch segmentation. 
 
 ## Getting started
 
-It is recommended that you read the following Experience Platform services documentation before attempting to build data models for use in Real-time Customer Profile. Working data models, and the guardrails outlined in this document, requires an understanding of the various Experience Platform services involved with managing Real-time Customer Profile entities: 
+It is recommended that you read the following Experience Platform services documentation before attempting to build data models for use in Real-time Customer Profile. Working with data models, and the guardrails outlined in this document, require an understanding of the various Experience Platform services involved with managing Real-time Customer Profile entities: 
 
 * [Real-time Customer Profile](home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [Adobe Experience Platform Identity Service](../identity-service/home.md): Enables Real-time Customer Profile by bridging identities from disparate data sources as they are ingested into Platform.
+* [Adobe Experience Platform Identity Service](../identity-service/home.md): Supports the creation of a "single view of the customer" by ridging identities from disparate data sources as they are ingested into Platform.
 * [Experience Data Model (XDM)](../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
   * [Basics of schema composition](../xdm/schema/composition.md): An introduction to schemas and data modeling within Experience Platform.
 * [Segmentation Service](../segmentation/home.md): The segmentation engine within Platform used to create audience segments from your customer profiles based on customer behaviors and attributes.
