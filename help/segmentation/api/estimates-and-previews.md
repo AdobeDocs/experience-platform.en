@@ -11,11 +11,11 @@ As you develop your segment definition, you can use the estimate and preview too
 
 ## Getting started
 
-The endpoints used in this guide are part of the [!DNL Adobe Experience Platform] Segmentation Service API. Before continuing, please review the [getting started section of Segmentation developer guide](./getting-started.md#getting-started), as it includes a guide to reading the sample API calls in the document and important information regarding required headers that are needed to successfully make calls to Experience Platform APIs.
+The endpoints used in this guide are part of the [!DNL Adobe Experience Platform] Segmentation Service API. Before continuing, please review the [getting started document in the Segmentation developer guide](./getting-started.md#getting-started), as it includes a guide to reading the sample API calls in the document and important information regarding required headers that are needed to successfully make calls to Experience Platform APIs.
 
 ## How estimates are generated
 
-The method of data sampling getting triggered is dependant on the method of ingestion.
+The way data sampling gets triggered depends on the method of ingestion.
 
 For batch ingestion, every fifteen minutes, the profile store is automatically scanned to see if a newly successful batch was ingested since the last sampling job was run. If that is the case, the profile store is subsequently scanned to see if there's been at least a 5% change in the number of records. If these conditions are met, a new sampling job is triggered.
 
@@ -67,6 +67,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 **Response**
 
 A successful response returns HTTP status 201 (Created) with details of your newly created preview.
+
+>[!NOTE] An estimate job is automatically created when a preview job is created. These two jobs will share the same ID.
 
 ```json
 {
@@ -162,7 +164,7 @@ A successful response returns HTTP status 200 with detailed information about th
 
 ## Retrieve the results of a specific estimate job {#get-estimate}
 
-You can retrieve the details of a specific estimate job by making a GET request to the `/estimate` endpoint and providing the ID of a previously created preview job in the request path.
+You can retrieve the details of a specific estimate job by making a GET request to the `/estimate` endpoint and providing the ID of a previously created preview job in the request path. 
 
 **API format**
 

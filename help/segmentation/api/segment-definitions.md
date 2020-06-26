@@ -13,7 +13,7 @@ This guide provides information to help you better understand segment definition
 
 ## Getting started
 
-The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started section of Segmentation developer guide](./getting-started.md#getting-started), as it includes a guide to reading the sample API calls in the document and important information regarding required headers that are needed to successfully make calls to [!DNL Experience Platform] APIs.
+The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started document in the Segmentation developer guide](./getting-started.md#getting-started), as it includes a guide to reading the sample API calls in the document and important information regarding required headers that are needed to successfully make calls to [!DNL Experience Platform] APIs.
 
 ## Retrieve a list of segment definitions {#list}
 
