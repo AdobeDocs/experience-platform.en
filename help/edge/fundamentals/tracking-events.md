@@ -18,7 +18,7 @@ Data sent to Adobe Experience Cloud falls into two categories:
 
 XDM data is an object whose content and structure matches a schema you have created within Adobe Experience Platform. [Learn more about how to create a schema.](../../xdm/tutorials/create-schema-ui.md)
 
-Any XDM data you would like to be part of your analytics, personalization, audiences, or destinations should be sent using the `xdm` option.
+Any XDM data that you would like to be part of your analytics, personalization, audiences, or destinations should be sent using the `xdm` option.
 
 ```javascript
 alloy("sendEvent", {
