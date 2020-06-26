@@ -577,4 +577,4 @@ A successful response returns HTTP status 200 with details of your newly updated
 
 ## Next steps
 
-After reading this guide you now have a better understanding of how segment definitions work. For more information on other Segmentation API endpoints, please read the [Segmentation developer guide](./getting-started.md). 
+After reading this guide you now have a better understanding of how segment definitions work. For more information on creating a segment, please read the [create a segment](../tutorials/create-a-segment.md) tutorial. 

@@ -449,4 +449,4 @@ A successful response returns HTTP status 204 with the following information.
 
 ## Next steps
 
-After reading this guide you now have a better understanding of how segment jobs work. For more information on Segmentation, please read the [Segmentation overview](../home.md).
+After reading this guide you now have a better understanding of how segment jobs work.

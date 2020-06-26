@@ -7,19 +7,19 @@ topic: tutorial
 
 # Create a segment 
 
-This document provides a tutorial for developing, testing, previewing, and saving a segment definition using the [Adobe Experience Platform Segmentation Service API](../api/getting-started.md). 
+This document provides a tutorial for developing, testing, previewing, and saving a segment definition using the [DNL Adobe Experience Platform Segmentation Service API](../api/getting-started.md). 
 
 For information on how to build segments using the user interface, please see the [Segment Builder guide](../ui/overview.md).
 
 ## Getting started
 
-This tutorial requires a working understanding of the various Adobe Experience Platform services involved in creating audience segments. Before beginning this tutorial, please review the documentation for the following services:
+This tutorial requires a working understanding of the various [!DNL Adobe Experience Platform] services involved in creating audience segments. Before beginning this tutorial, please review the documentation for the following services:
 
-- [Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-- [Adobe Experience Platform Segmentation Service](../home.md): Allows you to build audience segments from Real-time Customer Profile data.
-- [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
+- [!DNL Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+- [!DNL Adobe Experience Platform Segmentation Service](../home.md): Allows you to build audience segments from Real-time Customer Profile data.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
 
-The following sections provide additional information that you will need to know in order to successfully make calls to the Platform APIs.
+The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.
 
 ### Reading sample API calls
 
@@ -27,17 +27,17 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in Experience Platform are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+>[!NOTE] For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
@@ -45,15 +45,15 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 ## Develop a segment definition
 
-The first step in segmentation is to define a segment, represented in a construct called a **segment definition**. A segment definition is an object that encapsulates a query written in Profile Query Language (PQL). This object is also called a **PQL predicate**. PQL predicates define the rules for the segment based on conditions related to any record or time series data you supply to Real-time Customer Profile. See the [PQL guide](../pql/overview.md) for more information on writing PQL queries.
+The first step in segmentation is to define a segment, represented in a construct called a **segment definition**. A segment definition is an object that encapsulates a query written in [!DNL Profile Query Language] (PQL). This object is also called a **PQL predicate**. PQL predicates define the rules for the segment based on conditions related to any record or time series data you supply to [!DNL Real-time Customer Profile]. See the [PQL guide](../pql/overview.md) for more information on writing PQL queries.
 
-You can create a new segment definition by making a POST request to the `/segment/definitions` endpoint in the Segmentation API. The following example outlines how to format a definition request, including what information is required in order for a segment to be defined successfully.
+You can create a new segment definition by making a POST request to the `/segment/definitions` endpoint in the [!DNL Segmentation] API. The following example outlines how to format a definition request, including what information is required in order for a segment to be defined successfully.
 
 For a detailed explanation on how to define a segment, please read the [segment definition developer guide](../api/segment-definitions.md#create).
 
 ## Estimate and preview an audience {#estimate-and-preview-an-audience}
 
-As you develop your segment definition, you can use the estimate and preview tools within Real-time Customer Profile to view summary-level information to help ensure you are isolating the expected audience. Estimates provide statistical information on a segment definition, such as the projected audience size and confidence interval. Previews provide paginated lists of qualifying profiles for a segment definition, allowing you to compare the results against what you expect.
+As you develop your segment definition, you can use the estimate and preview tools within [!DNL Real-time Customer Profile] to view summary-level information to help ensure you are isolating the expected audience. Estimates provide statistical information on a segment definition, such as the projected audience size and confidence interval. Previews provide paginated lists of qualifying profiles for a segment definition, allowing you to compare the results against what you expect.
 
 By estimating and previewing your audience, you can test and optimize your PQL predicates until they produce a desireable result, where they can then be used in an updated segment definition.
 
@@ -80,15 +80,15 @@ Estimates generally run over 10-15 seconds, beginning with a rough estimate and 
 
 You can create a new preview job by making a POST request to the `/preview` endpoint.
 
-Detailed instructions on [creating a preview job](../api/estimates-and-previews.md#create-preview) can be found in the [estimates and previews developer guide](../api/estimates-and-previews.md#create-preview).
+Detailed instructions on [creating a preview job](../api/estimates-and-previews.md#create-preview) can be found in the [estimates and previews endpoints guide](../api/estimates-and-previews.md#create-preview).
 
 ### View an estimate or preview
 
 Estimate and preview processes are run asynchronously as different queries can take different lengths of time to complete. Once a query has been initiated, you can use API calls to retrieve (GET) the current state of the estimate or preview as it progresses.
 
-Using the Segmentation API, you can lookup a preview job's current state by its ID. If the state is "RESULT_READY", you can view the results. To look up a preview job's current state, please read the [retrieve preview job section of the estimates and previews developer guide](../api/estimates-and-previews.md#get-preview). To look up an estimate job's current state, please read the [retrieve preview job section of the estimates and previews developer guide](../api/estimates-and-previews.md#get-estimate).
+Using the Segmentation API, you can lookup a preview job's current state by its ID. If the state is "RESULT_READY", you can view the results. To look up a preview job's current state, please read the [retrieve preview job section of the estimates and previews endpoints guide](../api/estimates-and-previews.md#get-preview). To look up an estimate job's current state, please read the [retrieve preview job section of the estimates and previews endpoints guide](../api/estimates-and-previews.md#get-estimate).
 
 
 ## Next steps
 
-Once you have developed, tested, and saved your segment definition, you can create a segment job to build an audience using the Segmentation API. See the tutorial on [evaluating and accessing segment results](./evaluate-a-segment.md) for detailed steps on how to accomplish this.
+Once you have developed, tested, and saved your segment definition, you can create a segment job to build an audience using the [!DNL Segmentation] API. See the tutorial on [evaluating and accessing segment results](./evaluate-a-segment.md) for detailed steps on how to accomplish this.

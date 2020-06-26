@@ -7,30 +7,30 @@ topic: tutorial
 
 # Evaluate and access segment results
 
-This document provides a tutorial for evaluating segments and accessing segment results using the [Segmentation API](../api/getting-started.md). 
+This document provides a tutorial for evaluating segments and accessing segment results using the [!DNL Segmentation API](../api/getting-started.md). 
 
 ## Getting started
 
-This tutorial requires a working understanding of the various Adobe Experience Platform services involved in creating audience segments. Before beginning this tutorial, please review the documentation for the following services:
+This tutorial requires a working understanding of the various [!DNL Adobe Experience Platform] services involved in creating audience segments. Before beginning this tutorial, please review the documentation for the following services:
 
-- [Real-time Customer Profile](../../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
-- [Adobe Experience Platform Segmentation Service](../home.md): Allows you to build audience segments from Real-time Customer Profile data.
-- [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
-- [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+- [!DNL Real-time Customer Profile](../../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
+- [!DNL Adobe Experience Platform Segmentation Service](../home.md): Allows you to build audience segments from [!DNL Real-time Customer Profile] data.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
+- [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ### Required headers
 
-This tutorial also requires you to have completed the [authentication tutorial](../../tutorials/authentication.md) in order to successfully make calls to Platform APIs. Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+This tutorial also requires you to have completed the [authentication tutorial](../../tutorials/authentication.md) in order to successfully make calls to [!DNL Platform] APIs. Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in Experience Platform are isolated to specific virtual sandboxes. Requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. Requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+>[!NOTE] For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All POST, PUT, and PATCH requests require an additional header:
 
@@ -74,9 +74,9 @@ On-demand evaluation allows you to create a segment job in order to generate an 
 
 ### Create a segment job
 
-A segment job is an asynchronous process that creates a new audience segment. It references a segment definition, as well as any merge policies controlling how Real-time Customer Profile merges overlapping attributes across your profile fragments. When a segment job successfully completes, you can gather various information about the segment, such as any errors that may have occurred during processing and the ultimate size of your audience.
+A segment job is an asynchronous process that creates a new audience segment. It references a segment definition, as well as any merge policies controlling how [!DNL Real-time Customer Profile] merges overlapping attributes across your profile fragments. When a segment job successfully completes, you can gather various information about the segment, such as any errors that may have occurred during processing and the ultimate size of your audience.
 
-You can create a new segment job by making a POST request to the `/segment/jobs` endpoint in the Real-time Customer Profile API.
+You can create a new segment job by making a POST request to the `/segment/jobs` endpoint in the [!DNL Real-time Customer Profile] API.
 
 More detailed information about using this endpoint can be found in the [segment jobs developer guide](../api/segment-jobs.md#create)
 
@@ -89,7 +89,7 @@ More detailed information about using this endpoint can be found in the [segment
 
 ## Interpret segment results
 
-When segment jobs are successfully run, the `segmentMembership` map is updated for each profile included within the segment. `segmentMembership` also stores any pre-evaluated audience segments that are ingested into Platform, allowing for integration with other solutions like Adobe Audience Manager.
+When segment jobs are successfully run, the `segmentMembership` map is updated for each profile included within the segment. `segmentMembership` also stores any pre-evaluated audience segments that are ingested into [!DNL Platform], allowing for integration with other solutions like [!DNL Adobe Audience Manager].
 
 The following example shows what the `segmentMembership` attribute looks like for each individual profile record:
 
@@ -129,7 +129,7 @@ The following sections outline these options in more detail.
 
 ## Look up a profile 
 
-If you know the specific profile that you would like to access, you can do so using the Real-time Customer Profile API. The complete steps for accessing individual profiles are available in the [Access Real-time Customer Profile data using the Profile API](../../profile/api/entities.md) tutorial.
+If you know the specific profile that you would like to access, you can do so using the [!DNL Real-time Customer Profile] API. The complete steps for accessing individual profiles are available in the [Access Real-time Customer Profile data using the Profile API](../../profile/api/entities.md) tutorial.
 
 ## Export a segment {#export}
 
@@ -151,7 +151,7 @@ One of the key considerations is the schema upon which the dataset is based (`sc
 There are two ways to create the necessary dataset:
 
 - **Using APIs:** The steps that follow in this tutorial outline how to create a dataset that references the XDM Individual Profile Union Schema using the Catalog API. 
-- **Using the UI:** To use the Adobe Experience Platform user interface to create a dataset that references the union schema, follow the steps in the [UI tutorial](../ui/overview.md) and then return to this tutorial to proceed with the steps for [generating audience profiles](#generate-xdm-profiles-for-audience-members).
+- **Using the UI:** To use the [!DNL Adobe Experience Platform] user interface to create a dataset that references the union schema, follow the steps in the [UI tutorial](../ui/overview.md) and then return to this tutorial to proceed with the steps for [generating audience profiles](#generate-xdm-profiles-for-audience-members).
 
 If you already have a compatible dataset and know its ID, you can proceed directly to the step for [generating audience profiles](#generate-xdm-profiles-for-audience-members).
 
@@ -205,22 +205,22 @@ A successful response returns an array containing the read-only, system-generate
 
 ### Generate profiles for audience members {#generate-profiles}
 
-Once you have a union-persisting dataset, you can create an export job to persist the audience members to the dataset by making a POST request to the `/export/jobs` endpoint in the Real-time Customer Profile API and providing the dataset ID and the segment information for the segments that you wish to export.
+Once you have a union-persisting dataset, you can create an export job to persist the audience members to the dataset by making a POST request to the `/export/jobs` endpoint in the [!DNL Real-time Customer Profile] API and providing the dataset ID and the segment information for the segments that you wish to export.
 
-More detailed information about using this endpoint can be found in the [export jobs developer guide](../api/export-jobs.md#create)
+More detailed information about using this endpoint can be found in the [export jobs endpoint guide](../api/export-jobs.md#create)
 
 ### Monitor export progress
 
 As an export job processes, you can monitor its status by making a GET request to the `/export/jobs` endpoint and including the `id` of the export job in the path. The export job is complete once the `status` field returns the value "SUCCEEDED".
 
-More detailed information about using this endpoint can be found in the [export jobs developer guide](../api/export-jobs.md#get)
+More detailed information about using this endpoint can be found in the [export jobs endpoint guide](../api/export-jobs.md#get)
 
 ## Next steps
 
-Once the export has completed successfully, your data is available within the Data Lake in Experience Platform. You can then use the [Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) to access the data using the `batchId` associated with the export. Depending on the size of the segment, the data may be in chunks and the batch may consist of several files.
+Once the export has completed successfully, your data is available within the Data Lake in [!DNL Experience Platform]. You can then use the [Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) to access the data using the `batchId` associated with the export. Depending on the size of the segment, the data may be in chunks and the batch may consist of several files.
 
-For step-by-step instructions on how to use the Data Access API to access and download batch files, follow the [Data Access tutorial](../../data-access/tutorials/dataset-data.md).
+For step-by-step instructions on how to use the [!DNL Data Access] API to access and download batch files, follow the [Data Access tutorial](../../data-access/tutorials/dataset-data.md).
 
-You can also access successfully exported segment data using Adobe Experience Platform Query Service. Using the UI or RESTful API, Query Service allows you to write, validate, and run queries on data within the Data Lake.
+You can also access successfully exported segment data using [!DNL Adobe Experience Platform Query Service]. Using the UI or RESTful API, [!DNL Query Service] allows you to write, validate, and run queries on data within the Data Lake.
 
-For more information on how to query audience data, please review the [Query Service documentation](../../query-service/home.md).
+For more information on how to query audience data, please review the documentation on [!DNL Query Service](../../query-service/home.md).

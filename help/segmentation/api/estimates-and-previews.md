@@ -252,4 +252,4 @@ A successful response returns HTTP status 200 with the following message:
 
 ## Next steps
 
-After reading this guide you now have a better understanding of how estimates and previews work. For more information on other Segmentation API endpoints, please read the [Segmentation developer guide](./getting-started.md). 
+After reading this guide you now have a better understanding of how estimates and previews work.

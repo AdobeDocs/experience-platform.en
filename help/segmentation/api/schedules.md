@@ -345,4 +345,4 @@ A successful response returns HTTP status 204 (No Content) with the following me
 
 ## Next steps
 
-After reading this guide you now have a better understanding of how schedules work. For more information on other Segmentation API endpoints, please read the [Segmentation developer guide](./getting-started.md). 
+After reading this guide you now have a better understanding of how schedules work.

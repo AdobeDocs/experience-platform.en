@@ -214,7 +214,7 @@ A successful response returns HTTP status 200 with detailed structural informati
 
 ## Next steps
 
-After reading this guide you now have a better understanding of how Segment Search works. For more information on Segmentation, please read the [Segmentation overview](../home.md).
+After reading this guide you now have a better understanding of how Segment Search works.
 
 ## Appendix {#appendix}
 
