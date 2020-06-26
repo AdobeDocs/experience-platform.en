@@ -17,7 +17,9 @@ You can delete a Catalog object by providing its ID in the path of a DELETE requ
 DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 ```
 
->[!IMPORTANT] The `DELETE /batches/{ID}` endpoint has been deprecated. In order to delete a batch, you should be using the [Batch Ingestion API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
+>[!IMPORTANT]
+>
+>The `DELETE /batches/{ID}` endpoint has been deprecated. In order to delete a batch, you should be using the [Batch Ingestion API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
 
 | Parameter | Description |
 | --- | --- |
