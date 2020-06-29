@@ -69,15 +69,17 @@ Customer consent data must be sent to a Profile-enabled dataset whose schema con
 
 ## Export segments
 
-### Export segments to downstream destinations
+### Export to downstream destinations
 
 <!-- Which purposes does the user need to consent to in the CMP dialogue so that Real-time CDP can function properly?
 Mention how different vendors cross-check if the other ones have the necessary consent permissions from the user. -->
 
-### Export segments to other Experience Cloud applications
+### Export to other Experience Cloud applications
 
 <!-- How is consent conveyed when segments are shared (e.g. via Segue) with other solutions. The person to ask here might be Shelby Farmer. -->
 
 ## Test your IAB TCF implementation
 
 <!-- Since this is a privacy-sensitive feature, our customers will probably want to test out their implementation of IAB TCF. A section that guides them to testing might be helpful. -->
+
+## Next steps
