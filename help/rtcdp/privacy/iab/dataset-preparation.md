@@ -109,7 +109,7 @@ In order for Real-time CDP to associate the consent data it receives to specific
 
 To enable the schema for Profile, you must first choose a **primary identity** for the schema. Depending on the types of data you collect from your customers, you may need to add additional mixins to the schema in order to represent the customer's unique identity.
 
->[!NOTE] If you require further guidance on which field to set as a primary identity, review the Identity Service documentation. In particular, the overview on [identity namespaces](../../../identity-service/namespaces) provides important information on different accepted identity types.
+>[!NOTE] If you require further guidance on which field to set as a primary identity, review the Identity Service documentation. In particular, the overview on [identity namespaces](../../../identity-service/namespaces.md) provides important information on different accepted identity types.
 
 In this example, an email address field is set as the primary identity. Select the field from the canvas, then select the **[!UICONTROL Identity]** and **[!UICONTROL Primary identity]** checkboxes in the right-hand rail. Next, select the appropriate identity namespace in the provided dropdown menu before clicking **[!UICONTROL Apply]**.
 
