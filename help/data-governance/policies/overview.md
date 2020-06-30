@@ -7,18 +7,18 @@ topic: policies
 
 # Data usage policies overview
 
-In order for data usage labels to effectively support data compliance, data usage policies must be implemented. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Experience Platform.
+In order for data usage labels to effectively support data compliance, data usage policies must be implemented. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform].
 
 This document provides a high-level overview of data usage policies, and provides links to further documentation for working with policies in the UI or API.
 
 ## Marketing actions {#marketing-actions}
 
-**Marketing actions**, (also called **marketing use cases**) in the context of the data governance framework, are actions that an Experience Platform data consumer can take, for which your organization wants to restrict data usage. As such, a data usage policy is defined by the following:
+**Marketing actions**, (also called **marketing use cases**) in the context of the data governance framework, are actions that an [!DNL Experience Platform] data consumer can take, for which your organization wants to restrict data usage. As such, a data usage policy is defined by the following:
 
 1. A specific marketing action
 2. The data usage label(s) that action is restricted from being performed against
 
-An example of a marketing action might be the desire to export a dataset to a third-party service. If there is a policy in place saying that specific types of data (such as Personally Identifiable Information (PII)) cannot be exported, and you attempt to export a dataset that contains an "I" label (Identity data), you will receive a response from the Policy Service telling you that a data usage policy has been violated.
+An example of a marketing action might be the desire to export a dataset to a third-party service. If there is a policy in place saying that specific types of data (such as Personally Identifiable Information (PII)) cannot be exported, and you attempt to export a dataset that contains an "I" label (Identity data), you will receive a response from the [!DNL Policy Service] telling you that a data usage policy has been violated.
 
 >[!NOTE] Marketing actions by themselves do not restrict data usage. They must be included in enabled data usage policies in order for those actions to be evaluated for policy violations.
 
