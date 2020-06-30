@@ -7,21 +7,21 @@ topic: developer guide
 
 # Estimates and previews endpoints guide
 
-As you develop your segment definition, you can use the estimate and preview tools within [!DNL Adobe Experience Platform] to view summary-level information to help ensure you are isolating the expected audience. Estimates provide statistical information on a segment definition, such as the projected audience size and confidence interval. Previews provide paginated lists of qualifying profiles for a segment definition, allowing you to compare the results against what you expect.
+As you develop your segment definition, you can use the estimate and preview tools within [!DNL Adobe Experience Platform] to view summary-level information to help ensure you are isolating the expected audience. **Previews** provide paginated lists of qualifying profiles for a segment definition, allowing you to compare the results against what you expect. **Estimates** provide statistical information on a segment definition, such as the projected audience size and confidence interval. 
 
 ## Getting started
 
-The endpoints used in this guide are part of the [!DNL Adobe Experience Platform] Segmentation Service API. Before continuing, please review the [getting started document in the Segmentation developer guide](./getting-started.md#getting-started), as it includes a guide to reading the sample API calls in the document and important information regarding required headers that are needed to successfully make calls to Experience Platform APIs.
+The endpoints used in this guide are part of the [!DNL Adobe Experience Platform] Segmentation Service API. Before reading this guide, please refer to the [getting started document guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
 
 ## How estimates are generated
 
 The way data sampling gets triggered depends on the method of ingestion.
 
-For batch ingestion, every fifteen minutes, the profile store is automatically scanned to see if a newly successful batch was ingested since the last sampling job was run. If that is the case, the profile store is subsequently scanned to see if there's been at least a 5% change in the number of records. If these conditions are met, a new sampling job is triggered.
+For batch ingestion the profile store is automatically scanned every fifteen minutes to see if a newly successful batch was ingested since the last sampling job was run. If that is the case, the profile store is subsequently scanned to see if there's been at least a 5% change in the number of records. If these conditions are met, a new sampling job is triggered.
 
-For streaming ingestion, every hour, the profile store is automatically scanned to see if there's been at least a 5% change in the number of records. If this condition is met, a new sampling job is triggered.
+For streaming ingestion the profile store is automatically scanned every hour to see if there's been at least a 5% change in the number of records. If this condition is met, a new sampling job is triggered.
 
-The sample size depends on the overall number of entities in your profile store. These sample sizes are represented in the following table:
+The sample size of the scan depends on the overall number of entities in your profile store. These sample sizes are represented in the following table:
 
 | Entities in profile store | Sample size |
 | ------------------------- | ----------- |
@@ -62,7 +62,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | -------- | ----------- |
 | `predicateExpression` | The PQL expression to query the data by. |
 | `predicateType` | The predicate type for the query expression under `predicateExpression`. Currently, the only accepted value for this property is "pql/text". |
-| `predicateModel` | The name of the XDM schema the Profile data is based on. |
+| `predicateModel` | The name of the Experience Data Model (XDM) schema the profile data is based on. |
 
 **Response**
 
@@ -160,11 +160,11 @@ A successful response returns HTTP status 200 with detailed information about th
 
 | Property | Description | 
 | -------- | ----------- |
-| `results` | A list of entity IDs, along with the related identities. |
+| `results` | A list of entity IDs, along with their related identities. The links provided can be used to look up the specified entities, using the [Profile Access API](../../profile/api/entities.md). |
 
 ## Retrieve the results of a specific estimate job {#get-estimate}
 
-You can retrieve the details of a specific estimate job by making a GET request to the `/estimate` endpoint and providing the ID of a previously created preview job in the request path. 
+Once you have created a preview job, you can use its `previewId` in the path of a GET request to the `/estimate` endpoint to view statistical information about the segment definition, including projected audience size and confidence interval.
 
 **API format**
 
@@ -254,4 +254,4 @@ A successful response returns HTTP status 200 with the following message:
 
 ## Next steps
 
-After reading this guide you now have a better understanding of how estimates and previews work.
+After reading this guide you now have a better understanding of how to work with  estimates and previews. To learn more about the other Segmentation Service API endpoints, please read the [Segmentation Service developer guide overview](./overview.md).
