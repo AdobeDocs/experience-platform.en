@@ -159,4 +159,16 @@ The canvas reappears with the **[!UICONTROL Profile]** toggle enabled. Click **[
 
 Once you have created schemas that include consent mixins, you must create datasets based on those schemas which will ultimately ingest your customers' consent data.
 
+>[!NOTE] The steps below cover how to make a dataset for the XDM Individual Profile schema you created earlier, which is required for consent enforcement to occur. If you also created the optional XDM ExperienceEvent schema for tracking changes over time, follow the steps in this section again to create a separate dataset for that schema.
+
+![](../assets/iab/dataset-create.png)
+
+![](../assets/iab/dataset-create-from-schema.png)
+
+![](../assets/iab/dataset-select-schema.png)
+
+![](../assets/iab/dataset-configure.png)
+
+![](../assets/iab/dataset-enable-profile.png)
+
 ## Next steps
