@@ -110,7 +110,7 @@ One of the key benefits provided by Adobe Experience Platform is its capability 
 
 >[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)
 
-For additional information on the architecture that powers of Adobe Experience Platform, please see the following video:
+For additional information on the architecture that powers of Adobe Experience Platform, please watch the following video:
 
 >[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)
 
