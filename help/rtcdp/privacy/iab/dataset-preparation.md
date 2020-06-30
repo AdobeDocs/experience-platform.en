@@ -101,25 +101,27 @@ The Schema Editor canvas reappears, allowing you to review the structure of the 
 
 ![](../assets/iab/profile-privacy-structure.png)
 
-If you are editing an existing schema that has already been enabled for use in Real-time Customer Profile, click **[!UICONTROL Save]** to confirm your changes before continuing to the section on [creating a consent schema based on XDM ExperienceEvent](#event-schema). If you are creating a new schema, follow the steps outlined in the subsection below.
+If you are editing an existing schema that has already been enabled for use in Real-time Customer Profile, click **[!UICONTROL Save]** to confirm your changes before skipping ahead to the section on [creating a consent schema based on XDM ExperienceEvent](#event-schema). If you are creating a new schema, continue following the steps outlined in the subsection below.
 
 #### Enable the schema for use in Real-time Customer Profile
 
->[!IMPORTANT] In order 
+In order for Real-time CDP to associate the consent data it receives to specific customer profiles, the consent schema must be enabled for use in Real-time Customer Profile.
 
-To enable a schema for use in Real-time Customer Profile, you must first choose a **primary identity** for the schema. Depending on 
+To enable the schema for Profile, you must first choose a **primary identity** for the schema. Depending on the types of data you collect from your customers, you may need to add additional mixins to the schema in order to represent the customer's unique identity.
+
+>[!NOTE] If you require further guidance on which field to set as a primary identity, review the Identity Service documentation. In particular, the overview on [identity namespaces](../../../identity-service/namespaces) provides important information on different accepted identity types.
+
+In this example, an email address field is set as the primary identity. Select the field from the canvas, then select the **[!UICONTROL Identity]** and **[!UICONTROL Primary identity]** checkboxes in the right-hand rail. Next, select the appropriate identity namespace in the provided dropdown menu before clicking **[!UICONTROL Apply]**.
 
 ![](../assets/iab/profile-primary-id.png)
 
-
+Once you have applied a primary namespace to the schema, click the schema's name in the left-hand rail to open the *[!UICONTROL Schema properties]* dialog in the right-hand rail. From here, click the **[!UICONTROL Profile]** toggle button to enable the schema. Finally, click **[!UICONTROL Save]** to confirm your changes.
 
 ![](../assets/iab/profile-enable-profile.png)
 
-
-
 ### Create a consent schema based on XDM ExperienceEvent {#event-schema}
 
->[!NOTE] This step is optional. If you do not wish to track customer consent changes over time, you can skip to the next section on [creating datasets based on your privacy schemas](#datasets).
+>[!NOTE] This step is optional. If you do not wish to track customer consent changes over time, you can skip to the next section on [creating datasets based on your consent schemas](#datasets).
 
 Within the Schema Editor for your XDM ExperienceEvent schema, click **[!UICONTROL Add]** within the *[!UICONTROL Mixins]* section on the left side of the canvas.
 
@@ -133,14 +135,28 @@ The Schema Editor canvas reappears, showing the added consent string fields. Rev
 
 ![](../assets/iab/event-privacy-structure.png)
 
+If you are editing an existing schema that has already been enabled for use in Real-time Customer Profile, click **[!UICONTROL Save]** to confirm your changes before skipping ahead to the section on [creating datasets based on your consent schemas](#datasets). If you are creating a new schema, continue following the steps outlined in the subsection below.
+
 #### Enable the schema for use in Real-time Customer Profile
 
+In order for Real-time CDP to associate the consent data it receives to specific customer profiles, the consent schema must be enabled for use in Real-time Customer Profile.
 
+>[!NOTE] The example shown below uses the schema's `identityMap` field as its primary identity. Depending on your purposes, you may want to add additional fields to the schema to serve as the primary identity instead.
+
+To enable an ExperienceEvent schema for Profile, click the schema's name in the left-hand rail to open *[!UICONTROL Schema properties]* dialog in the right-hand rail. From here, click the **[!UICONTROL Profile]** toggle button to enable the schema. Finally, click **[!UICONTROL Save]** to confirm your changes.
 
 ![](../assets/iab/event-enable-profile.png)
 
-## Create [!DNL Profile]-enabled datasets based on your privacy schemas {#datasets}
+If you have not previously set up a primary identity for the schema, you are given the option of using the schema's `identityMap` field instead. Select the checkbox and click **[!UICONTROL Enable]** to enable the schema.
 
-Once you have created schemas that include privacy mixins, you must create datasets based on those schemas which will ultimately ingest your customers' consent data.
+<img src='../assets/iab/missing-primary-identity.png' width=700 /><br/>
+
+The canvas reappears with the **[!UICONTROL Profile]** toggle enabled. Click **[!UICONTROL Save]** to confirm your changes.
+
+![](../assets/iab/event-profile-enabled.png)
+
+## Create [!DNL Profile]-enabled datasets based on your consent schemas {#datasets}
+
+Once you have created schemas that include consent mixins, you must create datasets based on those schemas which will ultimately ingest your customers' consent data.
 
 ## Next steps
