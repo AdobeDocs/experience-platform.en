@@ -17,7 +17,11 @@ Built on open APIs, [!DNL Experience Platform] exposes the full functionality of
 
 The following videos outlines a hypothetical experience built with Adobe Experience Platform, as seen from the perspective of a customer. See how [!DNL Experience Platform] creates a rich, relevant and real-time experience.
 
+**Customer perspective:**
+
 >[!VIDEO](https://video.tv.adobe.com/v/27361?quality=12&learn=on)
+
+**Behind the scenes:**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28144?quality=12&learn=on)
 
@@ -75,7 +79,7 @@ Get started with [!DNL Platform] quickly and easily by following along with step
 
 Watch [video tutorials](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html) for a wide variety of [!DNL Experience Platform] topics.
 
-For a quick tour of [!DNL Experience Platform's] user interface, please see the following video:
+For a quick tour of [!DNL Experience Platform's] user interface, please watch the following video:
 
 >[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)
 
@@ -95,6 +99,32 @@ Learn the basics of working with [!DNL Platform] APIs.
 
 * [**API reference**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>
 Discover [!DNL Experience Platform] APIs, including headers, parameters, sample requests, and responses. *These documents are hosted on Adobe I/O.*
+
+## Adobe Experience Platform integrations
+
+[!DNL Platform] utilizes Application Services and [!DNL Intelligent Services] built on top of [!DNL Experience Platform], for more information please watch the following video:
+
+>[!VIDEO](https://video.tv.adobe.com/v/32554?quality=12&learn=on)
+
+One of the key benefits provided by Adobe Experience Platform is its capability to integrate with other existing Adobe services. The following video gives an overview of how [!DNL Experience Platform] services integrate with [!DNL Experience Cloud] applications and capabilities such as Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager, [!DNL Customer Attributes], [!DNL Audience Library], and [!DNL Experience Platform Launch].
+
+>[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)
+
+For additional information on the architecture that powers of Adobe Experience Platform, please see the following video:
+
+>[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)
+
+## [!DNL Experience Platform] capabilities 
+
+The following videos outline the key capabilities and use cases for [!DNL Experience Platform]:
+
+**Capabilities:**
+
+>[!VIDEO](https://video.tv.adobe.com/v/32502?quality=12&learn=on)
+
+**Use cases:**
+
+>[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)
 
 
 

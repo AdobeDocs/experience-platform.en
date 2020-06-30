@@ -25,49 +25,27 @@ Adobe Experience Platform documentation is provided in multiple formats, includi
 
 Documentation is currently available for the Adobe Experience Platform services and features listed below. You can learn more about the services through the brief descriptions provided here, and gain a deeper understanding by selecting from the alphabetical list in the left navigation.
 
-* **Access control:** Experience Platform leverages product profiles in Adobe Admin Console, which link users with permissions and sandboxes. 
-* **Auditor:** Auditor grades your Adobe Experience Cloud implementation and gives pointers on how to improve it. Auditor helps you get more value from your Adobe products, individually and collectively.
-* **Catalog & Datasets:** Manages the metadata for the datasets created in the tenant, data lineage, and policies associated with them.
-* **Data Access:** Provides access to the content of registered datasets for data export.
-* **Data Governance:** Adobe Experience Platform brings data from multiple enterprise systems together to better allow marketers to identify, understand, and engage customers. [!DNL Experience Platform] includes end-to-end Data Governance infrastructure to ensure the proper use of data within Platform and when being shared between systems.
-* **Data Ingestion (Batch & Streaming):** Bring data into Adobe Experience Platform using batch ingestion, streaming ingestion, and [source connectors](#sources).
-* **Data Science Workspace:** Data Science Workspace offers predefined machine learning models you can use in your own solutions as well as the capability to create your own models.
-* **Debugger:** The Adobe Experience Cloud Debugger extension for Chrome examines your web pages and helps you find problems with how your Experience Cloud solutions are implemented.
-* **Decisioning Service:** Create personalized, optimized, and orchestrated experiences in applications running on Adobe Experience Platform.
-* **Destinations:** Destinations are pre-built integrations with commonly used applications that allow for the seamless activation of data from Real-time Customer Data Platform. You can use Destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+* **[!DNL Access control]:** [!DNL Experience Platform] leverages product profiles in Adobe Admin Console, which link users with permissions and sandboxes. 
+* **[!DNL Auditor]:** Auditor grades your Adobe Experience Cloud implementation and gives pointers on how to improve it. Auditor helps you get more value from your Adobe products, individually and collectively.
+* **[!DNL Catalog & Datasets]:** Manages the metadata for the datasets created in the tenant, data lineage, and policies associated with them.
+* **[!DNL Data Access]:** Provides access to the content of registered datasets for data export.
+* **[!DNL Data Governance]:** Adobe Experience Platform brings data from multiple enterprise systems together to better allow marketers to identify, understand, and engage customers. [!DNL Experience Platform] includes end-to-end [!DNL Data Governance] infrastructure to ensure the proper use of data within [!DNL Platform] and when being shared between systems.
+* **[!DNL Data Ingestion] (Batch & Streaming):** Bring data into Adobe Experience Platform using batch ingestion, streaming ingestion, and [source connectors](#sources).
+* **[!DNL Data Science Workspace]:** [!DNL Data Science Workspace] offers predefined machine learning models you can use in your own solutions as well as the capability to create your own models.
+* **[!DNL Debugger]:** The Adobe Experience Cloud Debugger extension for [!DNL Chrome] examines your web pages and helps you find problems with how your [!DNL Experience Cloud] solutions are implemented.
+* **[!DNL Decisioning Service]:** Create personalized, optimized, and orchestrated experiences in applications running on Adobe Experience Platform.
+* **[!DNL Destinations]:** Destinations are pre-built integrations with commonly used applications that allow for the seamless activation of data from Real-time Customer Data Platform. You can use Destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 * **ETL (Extract, Transform, Load):** Create high performance connectors for data integration tools for integration with Adobe Experience Platform.
-* **Experience Platform Web SDK (Beta):** The Adobe Experience Platform Web SDK client-side JavaScript library allows customers of the Adobe Experience Cloud to interact with the various services in the Experience Cloud.
-* **Identity Service:** Gain a better understanding of your customers by bridging identities from multiple devices and behaviors across channels to form a single view of each individual customer.
-* **Intelligent Services:** Empower marketers and marketing analysts to leverage the power of artificial intelligence and machine learning in delivering customer experiences.
-* **Launch:** Launch provides a simple way to deploy and manage all of the analytics, marketing, and advertising tags necessary to power personalized, relevant, real-time experience for your customers.
-* **Observability Insights:** Expose key observability metrics in Adobe Experience Platform, providing insights into usage statistics, historical trends, and performance indicators for various [!DNL Platform] functionalities.
-* **Privacy Service:** Privacy Service provides a RESTful API and user interface that allow you to make data access and delete requests that comply with privacy regulations.
-* **Profile (Real-time Customer Profile):** See a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third party data into Real-time Customer Profiles.
-* **Query Service:** Use SQL queries to retrieve data from Adobe Experience Platform, such as Adobe solution data, customer 1st party data, or any other Platform data.
-* **Real-time Customer Data Platform:** Real-time CDP combines multiple enterprise data sources to create unified profiles in real time that can be used to provide one-to-one personalized customer experiences across all channels and devices.
-* **Sandboxes:** Sandboxes partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
-* **Segmentation:** Create segments based on Real-time Customer Profile data to generate audiences and power consumer experiences.
-* **Sources (Connections):** {#sources} Bring data into Adobe Experience Platform from a variety of sources such as Adobe applications, cloud-based storage, databases, and more.
+* **[!DNL Experience Platform Web SDK] (Beta):** The Adobe Experience Platform Web SDK client-side JavaScript library allows customers of the Adobe Experience Cloud to interact with the various services in the Experience Cloud.
+* **[!DNL Identity Service]:** Gain a better understanding of your customers by bridging identities from multiple devices and behaviors across channels to form a single view of each individual customer.
+* **[!DNL Intelligent Services]:** Empower marketers and marketing analysts to leverage the power of artificial intelligence and machine learning in delivering customer experiences.
+* **[!DNL Launch]:** Launch provides a simple way to deploy and manage all of the analytics, marketing, and advertising tags necessary to power personalized, relevant, real-time experience for your customers.
+* **[!DNL Observability Insights]:** Expose key observability metrics in Adobe Experience Platform, providing insights into usage statistics, historical trends, and performance indicators for various [!DNL Platform] functionalities.
+* **[!DNL Privacy Service]:** Privacy Service provides a RESTful API and user interface that allow you to make data access and delete requests that comply with privacy regulations.
+* **[!DNL Profile] (Real-time Customer Profile):** See a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third party data into [!DNL Real-time Customer Profiles].
+* **[!DNL Query Service]:** Use SQL queries to retrieve data from Adobe Experience Platform, such as Adobe solution data, customer 1st party data, or any other Platform data.
+* **[!DNL Real-time Customer Data Platform]:** Real-time CDP combines multiple enterprise data sources to create unified profiles in real time that can be used to provide one-to-one personalized customer experiences across all channels and devices.
+* **[!DNL Sandboxes]:** Sandboxes partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* **[!DNL Segmentation]:** Create segments based on Real-time Customer Profile data to generate audiences and power consumer experiences.
+* **[!DNL Sources] (Connections):** {#sources} Bring data into Adobe Experience Platform from a variety of sources such as Adobe applications, cloud-based storage, databases, and more.
 * **XDM (Experience Data Model)**: Driven by Adobe, XDM is an effort to standardize customer experience data and define schemas for customer experience management. XDM schemas to support the interoperability of data across [!DNL Experience Platform] components.
-
-For more information on the Application Services and Intelligent Services built on top of Experience Platform please see the following video:
-
->[!VIDEO](https://video.tv.adobe.com/v/32554?quality=12&learn=on)
-
-For additional information on the architecture that powers of Adobe Experience Platform, please see the following video:
-
->[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)
-
-### Integration
-
-One of the key benefits provided by Adobe Experience Platform is its capability to integrate with other existing Adobe services. The following video gives an overview of how [!DNL Experience Platform] services integrate with [!DNL Experience Cloud] applications and capabilities such as Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager, [!DNL Customer Attributes], [!DNL Audience Library], and [!DNL Experience Platform Launch].
-
->[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)
-
-## [!DNL Experience Platform] capabilities 
-
-The following videos outline the key capabilities and use cases for [!DNL Experience Platform]:
-
->[!VIDEO](https://video.tv.adobe.com/v/32502?quality=12&learn=on)
-
->[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)
