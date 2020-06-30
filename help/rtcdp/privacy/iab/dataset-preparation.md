@@ -13,7 +13,13 @@ This document provides steps for setting up datasets to collect IAB TCF 2.0 cons
 
 ## Prerequisites
 
-This tutorial uses the Schema Editor in the Adobe Experience Platform UI to create and edit Experience Data Model (XDM) schemas. Before starting, it is strongly recommended that you review the [basics of schema composition](../../../xdm/schema/composition.md) to learn more about the basic building blocks of schemas. After that, review the tutorial on [creating a schema in the UI](../../../xdm/tutorials/create-schema-ui.md) to familiarize yourself with the full schema creation process before following the steps outlined below.
+This tutorial requires a working understanding of the following components of Adobe Experience Platform:
+
+* [Experience Data Model (XDM)](../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+    * [Basics of schema composition](../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas.
+    * [Create a schema in the UI](../../../xdm/tutorials/create-schema-ui.md): A tutorial covering the basics of working with the Schema Editor.
+* [Identity Service](../../../identity-service/home.md): Bridges customer identities from disparate data sources across devices and systems.
+* [Real-time Customer Profile](../../../profile/home.md): Leverages Identity Service to create detailed customer profiles from your datasets in real-time. Real-time Customer pulls data from the Data Lake and persists customer profiles in its own separate data store.
 
 ## Consent schema structure {#structure}
 
@@ -81,11 +87,37 @@ In the Platform UI, click **[!UICONTROL Schemas]** in the left navigation to ope
 
 The sections below explain how to add the appropriate consent mixins for each schema.
 
-### Add privacy mixin to an [!DNL XDM Individual Profile] schema {#add-profile-mixin}
+### Create a consent schema based on [!DNL XDM Individual Profile] {#profile-schema}
 
 Within the Schema Editor for your [!DNL XDM Individual Profile] schema, click **[!UICONTROL Add]** within the *[!UICONTROL Mixins]* section on the left side of the canvas.
 
-### Add privacy mixin to an XDM ExperienceEvent schema {#add-event-mixin}
+![](../assets/iab/add-mixin-profile.png)
+
+The *[!UICONTROL Add mixin]* dialog appears. From here, select **[!UICONTROL Profile privacy]** from the list. You can optionally use the search bar to narrow down results to locate the mixin easier. Once the mixin is selected, click **[!UICONTROL Add mixin]**.
+
+![](../assets/iab/add-profile-privacy.png)
+
+The Schema Editor canvas reappears, allowing you to review the structure of the added consent string fields.
+
+![](../assets/iab/profile-privacy-structure.png)
+
+If you are editing an existing schema that has already been enabled for use in Real-time Customer Profile, click **[!UICONTROL Save]** to confirm your changes before continuing to the section on [creating a consent schema based on XDM ExperienceEvent](#event-schema). If you are creating a new schema, follow the steps outlined in the subsection below.
+
+#### Enable the schema for use in Real-time Customer Profile
+
+>[!IMPORTANT] In order 
+
+To enable a schema for use in Real-time Customer Profile, you must first choose a **primary identity** for the schema. Depending on 
+
+![](../assets/iab/profile-primary-id.png)
+
+
+
+![](../assets/iab/profile-enable-profile.png)
+
+
+
+### Create a consent schema based on XDM ExperienceEvent {#event-schema}
 
 >[!NOTE] This step is optional. If you do not wish to track customer consent changes over time, you can skip to the next section on [creating datasets based on your privacy schemas](#datasets).
 
@@ -100,6 +132,12 @@ The *[!UICONTROL Add mixin]* dialog appears. From here, select **[!UICONTROL Exp
 The Schema Editor canvas reappears, showing the added consent string fields. Review the structure of the schema before clicking **[!UICONTROL Save]** to confirm your changes.
 
 ![](../assets/iab/event-privacy-structure.png)
+
+#### Enable the schema for use in Real-time Customer Profile
+
+
+
+![](../assets/iab/event-enable-profile.png)
 
 ## Create [!DNL Profile]-enabled datasets based on your privacy schemas {#datasets}
 
