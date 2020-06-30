@@ -100,9 +100,9 @@ Learn the basics of working with [!DNL Platform] APIs.
 * [**API reference**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>
 Discover [!DNL Experience Platform] APIs, including headers, parameters, sample requests, and responses. *These documents are hosted on Adobe I/O.*
 
-## Adobe Experience Platform integrations
+## Adobe Experience Platform integration video resources
 
-[!DNL Platform] utilizes Application Services and [!DNL Intelligent Services] built on top of [!DNL Experience Platform], for more information please watch the following video:
+[!DNL Experience Platform] utilizes Application Services and [!DNL Intelligent Services] built on top of [!DNL Experience Platform], for more information please watch the following video:
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554?quality=12&learn=on)
 
@@ -114,7 +114,7 @@ For additional information on the architecture that powers of Adobe Experience P
 
 >[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)
 
-## [!DNL Experience Platform] capabilities 
+### [!DNL Experience Platform] capabilities & use cases
 
 The following videos outline the key capabilities and use cases for [!DNL Experience Platform]:
 
