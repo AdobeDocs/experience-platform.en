@@ -28,7 +28,7 @@ This guide also requires a working understanding of the following Adobe Experien
 
 In addition, you should also be familiar with [destinations](../../destinations/destinations-overview.md) and their use in Real-time CDP.
 
-## Customer consent flow summary
+## Customer consent flow summary {#summary}
 
 After the system has been properly configured, the way in which Real-time CDP collects and processes customer consent data can be summarized as follows:
 
@@ -41,13 +41,13 @@ After the system has been properly configured, the way in which Real-time CDP co
 
 The rest of the sections in this document provide guidance on how to configure Real-time CDP and your data operations to fulfill the requirements described above.
 
-## Determine how to generate customer consent data within your CMP
+## Determine how to generate customer consent data within your CMP {#consent-data}
 
 Since each CMP system is unique, you must determine the best way to allow your customers to provide consent as they interact with your service. A common way to achieve this is through the use of a cookie disclaimer dialog, similar to the following example:
 
 <img src="../assets/iab/cmp-dialog.png" width=600px /><br />
 
-### Consent strings
+### Consent strings {#consent-strings}
 
 Regardless of the method you use to collect the data, the goal is to generate a string value based on the consent options chosen by the customer, called a **consent string**.
 
@@ -55,31 +55,43 @@ In the TCF specification, consent strings are used to encode relevant details ab
 
 Consent strings may only be created by a CMP that is registered with the IAB TCF. For more information on how to generate consent strings, refer to the [consent string formatting guide](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/IAB%20Tech%20Lab%20-%20Consent%20string%20and%20vendor%20list%20formats%20v2.md) in the IAB TCF GitHub repo.
 
-## Integrate the [!DNL Experience Platform] Web SDK to collect customer consent data
+## Integrate the [!DNL Experience Platform] Web SDK to collect customer consent data {#sdk}
 
 Once you have configured your CMP to generate consent strings, you must integrate the [!DNL Experience Platform] Web SDK to collect those strings and send them to [!DNL Platform], along with the primary identity of the logged-in customer.
 
 This data should conform to the structure of the Profile Privacy XDM mixin, which is covered in the next section. For information on how to send XDM data using the SDK, see the document on [tracking events](../../../edge/fundamentals/tracking-events.md).
 
-## Create a Profile-enabled dataset with IAB consent fields
+## Create a Profile-enabled dataset with IAB consent fields {#dataset}
 
-Customer consent data must be sent to a Profile-enabled dataset whose schema contains IAB consent fields. Refer to the tutorial on [creating datasets for capturing TCF 2.0 consent](./dataset-preparation.md) for how to create the required dataset(s) before continuing with this guide.
+Customer consent data must be sent to a Profile-enabled dataset whose schema contains IAB consent fields. Refer to the tutorial on [creating datasets for capturing TCF 2.0 consent](./dataset-preparation.md) for how to create the required dataset before continuing with this guide.
 
-## Update [!DNL Profile] merge policies to include consent data
+## Update [!DNL Profile] merge policies to include consent data {#merge-policies}
 
-## Export segments
+Once you have created a Profile-enabled dataset for collecting consent data, you must ensure that your merge policies have been configured to always include IAB consent fields in your customer profiles. This involves setting dataset precedence so that your consent dataset is prioritized over other potentially conflicting datasets.
 
-### Export to downstream destinations
+For more information on how to work with merge policies, refer to the [merge policies user guide](../../../profile/ui/merge-policies.md).
 
-<!-- Which purposes does the user need to consent to in the CMP dialogue so that Real-time CDP can function properly?
-Mention how different vendors cross-check if the other ones have the necessary consent permissions from the user. -->
+## Export segments {#export}
 
-### Export to other Experience Cloud applications
+Once you have collected customer consent data and have created audience segments containing that data, you can then enforce TCF 2.0 compliance when exporting those segments to downstream destinations.
+
+### Export to downstream destinations {#destinations}
+
+<!-- Which purposes does the user need to consent to in the CMP dialogue so that Real-time CDP can function properly? -->
+
+<!-- Mention how different vendors cross-check if the other ones have the necessary consent permissions from the user. -->
+
+### Shared segments with Experience Cloud applications {#experience-cloud}
 
 <!-- How is consent conveyed when segments are shared (e.g. via Segue) with other solutions. The person to ask here might be Shelby Farmer. -->
 
-## Test your IAB TCF implementation
+## Test your implementation {#test-implementation}
 
-<!-- Since this is a privacy-sensitive feature, our customers will probably want to test out their implementation of IAB TCF. A section that guides them to testing might be helpful. -->
+Once you have configured your TCF 2.0 implementation and have exported segments to destinations, any data that does not meet consent requirements will not be exported. However, in order to see whether the the right customer profiles were filtered during the export, you must manually check the data stores on your destinations to see if consent was properly enforced.
 
 ## Next steps
+
+This document covered the process of configuring your data operations in Real-time CDP to be compliant with TCF 2.0. For more information on the other privacy capabilities provided by Real-time CDP, refer to the following documentation:
+
+* [Privacy in Real-time CDP](../privacy-overview.md)
+* [Data Governance in Real-time CDP](../data-governance-overview.md)
