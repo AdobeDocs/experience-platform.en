@@ -143,7 +143,7 @@ In order for Real-time CDP to associate the consent data it receives to specific
 
 >[!NOTE] The example shown below uses the schema's `identityMap` field as its primary identity. Depending on your purposes, you may want to add additional fields to the schema to serve as the primary identity instead.
 
-To enable an ExperienceEvent schema for Profile, click the schema's name in the left-hand rail to open *[!UICONTROL Schema properties]* dialog in the right-hand rail. From here, click the **[!UICONTROL Profile]** toggle button to enable the schema. Finally, click **[!UICONTROL Save]** to confirm your changes.
+To enable an ExperienceEvent schema for Profile, click the schema's name in the left-hand rail to open *[!UICONTROL Schema properties]* dialog in the right-hand rail. From here, click the **[!UICONTROL Profile]** toggle button to enable the schema.
 
 ![](../assets/iab/event-enable-profile.png)
 
