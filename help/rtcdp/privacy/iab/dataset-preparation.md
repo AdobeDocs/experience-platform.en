@@ -9,7 +9,7 @@ topic: privacy events
 
 In order for Real-time Customer Data Platform to collect customer consent data in compliance with the IAB Transparency & Consent Framework (TCF) 2.0, that data must be sent to datasets whose schemas contain IAB consent fields and are enabled for use in Real-time Customer Profile.
 
-This document provides steps for setting up datasets to collect IAB TCF 2.0 consent data. For higher-level guidance on how to configure Real-time CDP for TCF 2.0 compliance, refer to the [IAB TCF 2.0 compliance overview](./overview.md).
+This document provides steps for setting up datasets to collect IAB TCF 2.0 consent data. For an overview of the full workflow to configure Real-time CDP for TCF 2.0 compliance, refer to the [IAB TCF 2.0 compliance overview](./overview.md).
 
 ## Prerequisites
 
@@ -161,14 +161,28 @@ Once you have created schemas that include consent mixins, you must create datas
 
 >[!NOTE] The steps below cover how to make a dataset for the XDM Individual Profile schema you created earlier, which is required for consent enforcement to occur. If you also created the optional XDM ExperienceEvent schema for tracking changes over time, follow the steps in this section again to create a separate dataset for that schema.
 
+Select **[!UICONTROL Datasets]** in the left navigation, then click **[!UICONTROL Create dataset]** in the top-right corner.
+
 ![](../assets/iab/dataset-create.png)
+
+On the next page, select **[!UICONTROL Create dataset from schema]**.
 
 ![](../assets/iab/dataset-create-from-schema.png)
 
+The _[!UICONTROL Create dataset from schema]_ workflow appears, starting at the _[!UICONTROL Select schema]_ step. In the provided list, locate the consent schema that you created earlier. You can optionally use the search to narrow down results and locate your schema easier. Click the radio button next to the schema to select it, then click **[!UICONTROL Next]** to continue.
+
 ![](../assets/iab/dataset-select-schema.png)
 
+The _[!UICONTROL Configure dataset]_ step appears. Provide a unique, easily identifiable name and description for the dataset before clicking **[!UICONTROL Finish]**.
+
 ![](../assets/iab/dataset-configure.png)
+
+The details page for the newly created dataset appears. The final step in the process is to enable the dataset for use in Real-time Customer Profile. In the right-hand rail, click the **[!UICONTROL Profile]** toggle button enable the dataset.
 
 ![](../assets/iab/dataset-enable-profile.png)
 
 ## Next steps
+
+By following this tutorial, you have created a Profile-enabled dataset that can now be used to collect customer consent data. If you followed the optional steps, you have also created a Profile-enabled dataset that can be used to track consent preference changes over time.
+
+You can now return to the [IAB TCF 2.0 overview](./overview.md#merge-policies) to continue the process of configuring Real-time CDP for TCF 2.0 compliance.
