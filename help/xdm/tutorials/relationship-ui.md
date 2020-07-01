@@ -9,7 +9,9 @@ topic: tutorials
 
 The ability to understand the relationships between your customers and their interactions with your brand across various channels is an important part of Adobe Experience Platform. Defining these relationships within the structure of your Experience Data Model (XDM) schemas allows you to gain complex insights into your customer data.
 
-This document provides a tutorial for defining a one-to-one relationship between two schemas defined by your organization using the Schema Editor in the Experience Platform user interface. For steps on defining schema relationships using the API, see the tutorial on [defining a relationship using the Schema Registry API](relationship-api.md).
+While schema relationships can be inferred through the use of the union schema and Real-time Customer Profile, this only applies to schemas that share the same class (namely, XDM Individual Profile or XDM ExperienceEvent). To establish a relationship between two schemas belonging to different classes, a dedicated **relationship field** must be added to a source schema, which references the ID of a destination schema.
+
+This document provides a tutorial for defining a relationship between two schemas using the Schema Editor in the Experience Platform user interface. For steps on defining schema relationships using the API, see the tutorial on [defining a relationship using the Schema Registry API](relationship-api.md).
 
 ## Getting started
 
@@ -21,7 +23,7 @@ This tutorial requires a working understanding of XDM System and the Schema Edit
 
 ## Define a source and destination schema
 
-It is expected that you have already created the two schemas that will be defined in the relationship. For demonstration purposes, this tutorial creates a relationship between members of an organization's loyalty program (defined in a "Loyalty Members" schema) and their favorite hotels (defined in a "Hotels" schema).
+It is expected that you have already created the two schemas that will be defined in the relationship. For demonstration purposes, this tutorial creates a relationship between members of an organization's loyalty program (defined in a "Loyalty Members" schema, based on the XDM Individual Profile class) and their favorite hotels (defined in a "Hotels" schema, based on a custom "Hotel" class).
 
 Schema relationships are represented by a **source schema** having a field that refers to another field within a **destination schema**. In the steps that follow, "Loyalty Members" will be the source schema, while "Hotels" will act as the destination schema.
 
