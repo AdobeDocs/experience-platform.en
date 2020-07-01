@@ -7,7 +7,7 @@ topic: Tutorial
 
 # Publish a model as a service (API)
 
-This tutorial covers the process of publishing a model as a service using the [Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
+This tutorial covers the process of publishing a model as a service using the [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
 
 ## Getting started
 
@@ -15,7 +15,7 @@ This tutorial requires a working understanding of Adobe Experience Platform Data
 
 To follow along with this tutorial, you must have an existing ML Engine, ML Instance, and Experiment. For steps on how to create these in the API, see the tutorial on [importing a packaged recipe](./import-packaged-recipe-api.md).
 
-Finally, before starting this tutorial, please review the [getting started](../api/getting-started.md) section of the developer guide for important information that you need to know in order to successfully make calls to the Sensei Machine Learning API, including the required headers used throughout this tutorial:
+Finally, before starting this tutorial, please review the [getting started](../api/getting-started.md) section of the developer guide for important information that you need to know in order to successfully make calls to the [!DNL Sensei Machine Learning] API, including the required headers used throughout this tutorial:
 
 - `{ACCESS_TOKEN}`
 - `{IMS_ORG}`
@@ -31,7 +31,7 @@ The following table outlines some common terminology used in this tutorial:
 
 Term | Definition
 --- | ---
-**Machine Learning Instance (ML Instance)** | An instance of a Sensei Engine for a particular tenant, containing specific data, parameters, and Sensei code.
+**Machine Learning Instance (ML Instance)** | An instance of a [!DNL Sensei] Engine for a particular tenant, containing specific data, parameters, and [!DNL Sensei] code.
 **Experiment** | An umbrella entity for holding training Experiment Runs, scoring Experiment Runs, or both.
 **Scheduled Experiment** | A term to describe the automation of training or scoring Experiment Runs, governed by a user defined schedule.
 **Experiment Run** | A particular instance of training or scoring Experiments. Multiple Experiment Runs from a particular Experiment may differ in dataset values used for training or scoring.

@@ -7,7 +7,7 @@ topic: labels
 
 # Data usage labels user guide
 
-This user guide covers steps for working with data usage labels (also known as DULE labels) within the Experience Platform user interface. Before using the guide, please see the [Data Governance overview](../home.md) for a more robust introduction to the DULE framework.
+This user guide covers steps for working with data usage labels (also known as DULE labels) within the [!DNL Experience Platform] user interface. Before using the guide, please see the [Data Governance overview](../home.md) for a more robust introduction to the DULE framework.
 
 ## Managing data usage labels at the dataset level
 
@@ -93,12 +93,12 @@ It is important to remember that inheritance moves from the top-level down only 
 
 ## Next steps
 
-Now that you have added data usage labels at the dataset and field level, you can begin to ingest data into Experience Platform. To learn more, start by reading the [data ingestion documentation](../../ingestion/home.md).
+Now that you have added data usage labels at the dataset and field level, you can begin to ingest data into [!DNL Experience Platform]. To learn more, start by reading the [data ingestion documentation](../../ingestion/home.md).
 
 You can also now define data usage policies based on the labels you have applied. For more information, see the [data usage policies overview](../policies/overview.md).
 
 ## Additional resources
 
-The following video is intended to support your understanding of Data Governance, and outlines how to apply labels to a dataset and individual fields.
+The following video is intended to support your understanding of [!DNL Data Governance], and outlines how to apply labels to a dataset and individual fields.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on)

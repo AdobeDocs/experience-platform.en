@@ -7,7 +7,7 @@ topic: API guide
 
 # Get the cluster history of an identity
 
-Identities can move clusters over the course of various device graph runs. Identity Service provides visibility into the cluster associations of a given identity over time.
+Identities can move clusters over the course of various device graph runs. [!DNL Identity Service] provides visibility into the cluster associations of a given identity over time.
 
 Use optional `graph-type` parameter to indicate the output type to get the cluster from. Options are:
 
