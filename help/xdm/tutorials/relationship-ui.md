@@ -25,19 +25,21 @@ This tutorial requires a working understanding of XDM System and the Schema Edit
 
 It is expected that you have already created the two schemas that will be defined in the relationship. For demonstration purposes, this tutorial creates a relationship between members of an organization's loyalty program (defined in a "Loyalty Members" schema, based on the XDM Individual Profile class) and their favorite hotels (defined in a "Hotels" schema, based on a custom "Hotel" class).
 
+>[!IMPORTANT] Both schemas must be enabled for Profile in order for a relationship to be established. See the section on [enabling a schema for use in Profile](./create-schema-ui.md#profile) in the schema creation tutorial if you require guidance on how to configure your schemas.
+
 Schema relationships are represented by a **source schema** having a field that refers to another field within a **destination schema**. In the steps that follow, "Loyalty Members" will be the source schema, while "Hotels" will act as the destination schema.
 
 For reference purposes, the following sections describe the structure of each schema used in this tutorial before a relationship has been defined.
 
 ### Loyalty Members schema
 
-The source schema "Loyalty Members" is the schema that was constructed in the tutorial for [creating a schema in the UI](create-schema-ui.md). It includes a "loyalty" object under its "\_tenantId" namespace, which includes several loyalty-specific fields. One of these fields, "loyaltyId", serves as the primary identity for the schema under the "Email" namespace. As seen under _Schema Properties_, this schema has been enabled for use in [Real-time Customer Profile](../../profile/home.md).
+The source schema "Loyalty Members" is the schema that was constructed in the tutorial for [creating a schema in the UI](create-schema-ui.md). It includes a "loyalty" object under its "\_tenantId" namespace, which includes several loyalty-specific fields. One of these fields, "loyaltyId", serves as the primary identity for the schema under the "Email" namespace. As seen under _Schema Properties_, this schema has been enabled for use in Real-time Customer Profile.
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
 ### Hotels schema
 
-The destination schema "Hotels" contains fields that describe a hotel, include its address, brand, number of rooms, and star rating. The "hotelId" field serves as the primary identity for the schema under the "ECID" namespace. Unlike "Loyalty Members", this schema has not been enabled for Real-time Customer Profile.
+The destination schema "Hotels" contains fields that describe a hotel, include its address, brand, number of rooms, and star rating. The "email" field serves as the primary identity for the schema under the "Email" namespace. Like "Loyalty Members", this schema has also been enabled for Real-time Customer Profile.
 
 ![](../images/tutorials/relationship/hotels.png)
 
