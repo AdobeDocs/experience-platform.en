@@ -21,24 +21,24 @@ You can retrieve a list of all segment jobs for your IMS Organization by making 
 
 **API format**
 
+The `/segment/jobs` endpoint supports several query parameters to help filter your results. While these parameters are optional, their use is strongly recommended to help reduce expensive overhead. Making a call to this endpoint with no parameters will retrieve all export jobs available for your organization. Multiple parameters can be included, separated by ampersands (`&`). 
+
 ```http
 GET /segment/jobs
-GET /segment/jobs?{QUERY_PARAMETERS}
+GET /segment/jobs?start={START}
+GET /segment/jobs?limit={LIMIT}
+GET /segment/jobs?status={STATUS}
+GET /segment/jobs?sort={SORT}
+GET /segment/jobs?property={PROPERTY}
 ```
-
-- `{QUERY_PARAMETERS}`: (*Optional*) Parameters added to the request path which configure the results returned in the response. Multiple parameters can be included, separated by ampersands (`&`). The available parameters are listed below.
-
-**Query parameters**
-
-The following is a list of available query parameters for listing segment jobs. All of these parameters are optional. Making a call to this endpoint with no parameters will retrieve all segment jobs available for your organization.
 
 | Parameter | Description |
 | --------- | ----------- |
-| `start` | Specifies the starting offset for the segment jobs returned. |
-| `limit` | Specifies the number of segment jobs returned per page. |
-| `status` | Filters the results based on status. The supported values are NEW, QUEUED, PROCESSING, SUCCEEDED, FAILED, CANCELLING, CANCELLED |
-| `sort` | Orders the segment jobs returned. Is written in the format `[attributeName]:[desc|asc]`. |
-| `property` | Filters segment jobs and gets exact matches for the filter given. It can be written in either of the following formats: <ul><li>`[jsonObjectPath]==[value]` - filtering on the object key</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filtering within the array</li></ul> |
+| `{START}` | Specifies the starting offset for the segment jobs returned. |
+| `{LIMIT}` | Specifies the number of segment jobs returned per page. |
+| `{STATUS}` | Filters the results based on status. The supported values are NEW, QUEUED, PROCESSING, SUCCEEDED, FAILED, CANCELLING, CANCELLED |
+| `{SORT}` | Orders the segment jobs returned. Is written in the format `[attributeName]:[desc|asc]`. |
+| `{PROPERTY}` | Filters segment jobs and gets exact matches for the filter given. It can be written in either of the following formats: <ul><li>`[jsonObjectPath]==[value]` - filtering on the object key</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filtering within the array</li></ul> |
 
 **Request**
 

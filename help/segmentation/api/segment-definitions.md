@@ -21,6 +21,8 @@ You can retrieve a list of all segment definitions for your IMS Organization by 
 
 **API format**
 
+The `/segment/definitions` endpoint supports several query parameters to help filter your results. While these parameters are optional, their use is strongly recommended to help reduce expensive overhead. Making a call to this endpoint with no parameters will retrieve all export jobs available for your organization. Multiple parameters can be included, separated by ampersands (`&`). 
+
 ```http
 GET /segment/definitions
 GET /segment/definitions?start={START}
@@ -29,12 +31,6 @@ GET /segment/definitions?page={PAGE}
 GET /segment/definitions?sort={SORT}
 GET /segment/definitions?evaluationInfo.continuous.enabled={STREAMING}
 ```
-
-- `{QUERY_PARAMETERS}`: (*Optional*) Parameters added to the request path which configure the results returned in the response. Multiple parameters can be included, separated by ampersands (`&`). The available parameters are listed below.
-
-**Query parameters**
-
-The following is a list of available query parameters for listing segment definitions. All of these parameters are optional. Making a call to this endpoint with no parameters will retrieve all segment definitions available for your organization.
 
 | Parameter | Description | Example |
 | --------- | ----------- | ------- |
