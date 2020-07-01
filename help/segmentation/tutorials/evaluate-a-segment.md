@@ -16,7 +16,7 @@ This tutorial requires a working understanding of the various [!DNL Adobe Experi
 - [!DNL Real-time Customer Profile](../../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
 - [!DNL Adobe Experience Platform Segmentation Service](../home.md): Allows you to build audience segments from [!DNL Real-time Customer Profile] data.
 - [!DNL Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
-- [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ### Required headers
 
@@ -54,19 +54,19 @@ Through scheduled evaluation, your IMS Org can create a recurring schedule to au
 
 By making a POST request to the `/config/schedules` endpoint, you can create a schedule and include the specific time when the schedule should be triggered.
 
-More detailed information about using this endpoint can be found in the [schedules developer guide](../api/schedules.md#create)
+More detailed information about using this endpoint can be found in the [schedules endpoint guide](../api/schedules.md#create)
 
 ### Enable a schedule
 
 By default, a schedule is inactive when created unless the `state` property is set to `active` in the create (POST) request body. You can enable a schedule (set the `state` to `active`) by making a PATCH request to the `/config/schedules` endpoint and including the ID of the schedule in the path.
 
-More detailed information about using this endpoint can be found in the [schedules developer guide](../api/schedules.md#update-state)
+More detailed information about using this endpoint can be found in the [schedules endpoint guide](../api/schedules.md#update-state)
 
 ### Update the schedule time
 
 Schedule timing can be updated by making a PATCH request to the `/config/schedules` endpoint and including the ID of the schedule in the path.
 
-More detailed information about using this endpoint can be found in the [schedules developer guide](../api/schedules.md#update-schedule)
+More detailed information about using this endpoint can be found in the [schedules endpoint guide](../api/schedules.md#update-schedule)
 
 ## On-demand evaluation
 
@@ -78,14 +78,14 @@ A segment job is an asynchronous process that creates a new audience segment. It
 
 You can create a new segment job by making a POST request to the `/segment/jobs` endpoint in the [!DNL Real-time Customer Profile] API.
 
-More detailed information about using this endpoint can be found in the [segment jobs developer guide](../api/segment-jobs.md#create)
+More detailed information about using this endpoint can be found in the [segment jobs endpoint guide](../api/segment-jobs.md#create)
 
 
 ### Look up segment job status
 
 You can use the `id` for a specific segment job to perform a lookup request (GET) in order to view the current status of the job.
 
-More detailed information about using this endpoint can be found in the [segment jobs developer guide](../api/segment-jobs.md#get)
+More detailed information about using this endpoint can be found in the [segment jobs endpoint guide](../api/segment-jobs.md#get)
 
 ## Interpret segment results
 

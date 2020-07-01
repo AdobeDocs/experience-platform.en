@@ -9,23 +9,23 @@ topic: guide
 
 [!DNL Adobe Experience Platform Segmentation Service] allows you to build segments and generate audiences in [!DNL Adobe Experience Platform] from your [!DNL Real-time Customer Profile] data.
 
-The Segmentation Service API includes multiple endpoints, outlined below. Please visit the individual endpoint guides for details and refer to the [getting started guide](getting-started.md) for important information on required headers, reading sample API calls, and more.
+The [!DNL Segmentation Service] API provides multiple endpoints that allow you to programmatically manage your segmentation operations in [!DNL Experience Platform]. This overview document provides high-level introductions to each of these endpoints, and links to their associated endpoint guides for details. Before reading the individual endpoint guides, please refer to the [getting started guide](getting-started.md) for important information on required headers, reading sample API calls, and more.
 
-To view all available endpoints and CRUD operations, please refer to the [Segmentation Service API Reference swagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml).
-
-## Estimates and previews
-
-Estimates provide statistical information for a segment definition, such as projected audience size and confidence interval. You can use the `/estimate` endpoint to view an estimate of a segment definition. 
-
-Previews provide a paginated list of qualifying profiles for a segment definition, allowing you to compare the results against what you expect. You can use the `/preview` endpoint to create a new preview job, look up results of a specific preview job, or delete a specific preview job.
-
-For more information on using these endpoints, please read the [estimates and previews endpoints guide](./estimates-and-previews.md). 
+To view all available endpoints and CRUD operations, please refer to the [Segmentation Service API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml).
 
 ## Export jobs
 
 Export jobs are asynchronous processes that are used to persist audience segment members to datasets. You can use the `/export/jobs` endpoint to retrieve all export jobs, create a new export job, retrieve details of a specific export job, or cancel a specific export job.
 
 For more information on using this endpoint, please read the [export jobs endpoint guide](./export-jobs.md).
+
+## Previews and estimates
+
+Previews provide a paginated list of qualifying profiles for a segment definition, allowing you to compare the results against what you expect. You can use the `/preview` endpoint to create a new preview job, look up results of a specific preview job, or delete a specific preview job.
+
+Estimates provide statistical information for segment definitions, such as projected audience size and confidence interval. You can use the `/estimate` endpoint to view an estimate of a segment definition. 
+
+For more information on using these endpoints, please read the [previews and estimates endpoints guide](./previews-and-estimates.md). 
 
 ## Schedules
 
@@ -35,20 +35,20 @@ For more information on using this endpoint, please read the [schedules endpoint
 
 ## Segment definitions
 
-Segment definitions define which profiles will be part of which audience segments. You can use the `/segment/definitions` endpoint to retrieve a list of segment definitions, create a new segment definition, retrieve details of a specific segment definition, delete a specific segment definition, or overwrite details of a specific segment definition.
+Segment definitions define which profiles will be part of which audience segments. You can use the `/segment/definitions` endpoint to manage segment definitions.
 
 For more information on using this endpoint, please read the [segment definitions endpoint guide](./segment-definitions.md). 
 
 ## Segment jobs
 
-Segment jobs process previously established segment definitions to generate an audience segment. You can use the `/segment/jobs` endpoint to retrieve a list of segment jobs, create a new segment job, retrieve details of a specific segment job, or delete a specific segment job.
+Segment jobs process previously established segment definitions to generate an audience segment. You can use the `/segment/jobs` endpoint to manage segment jobs.
 
 For more information on using this endpoint, please read the [segment jobs endpoint guide](./segment-jobs.md).
 
 ## Segment search
 
-Segment search is used to search and index configurable fields contained across various data sources and return them in near real-time. To begin working with Segment search, see the [search endpoint guide](segment-search.md)
+Segment search is used to search and index configurable fields contained across various data sources and return them in near real-time. To begin working with segment search, see the [search endpoint guide](segment-search.md)
 
 ## Next steps
 
-To begin making calls using the [!DNL Segmentation] API, select one of the endpoint guides to learn how to use specific [!DNL Segmentation]-related endpoints. To learn more about working with segments using the [!DNL Platform] UI, see the [Segmentation user guide](../ui/overview.md).
+To get started with the [!DNL Segmentation Service] API, review the different endpoint guides for detailed steps on how to make calls to the service's various endpoints. To learn more about working with segments using the [!DNL Platform] UI, see the [Segmentation user guide](../ui/overview.md).

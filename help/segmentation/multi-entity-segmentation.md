@@ -33,6 +33,6 @@ This process can be done either using the Segmentation API or the Segment Builde
 
 ## How to evaluate and access segments for multi-entity segments
 
-After creating a segment, you can evaluate and access the segment results using the Segmentation API. Evaluating a multi-entity segment is very similar to evaluating a regular segment.
+After creating a segment, you can evaluate and access the segment results using the [!DNL Segmentation Service] API. Evaluating a multi-entity segment is very similar to evaluating a regular segment.
 
-This process can only be done using the Segmentation API. For a detailed guide on using the API to evaluate and access segments, please read the tutorial on [evaluating and accessing segments](./tutorials/evaluate-a-segment.md).
+This process can only be done using the [!DNL Segmentation Service] API. For a detailed guide on using the API to evaluate and access segments, please read the tutorial on [evaluating and accessing segments](./tutorials/evaluate-a-segment.md).

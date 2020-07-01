@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Estimates and previews endpoints guide
+title: Previews and estimates endpoints guide
 topic: developer guide
 ---
 
-# Estimates and previews endpoints guide
+# Previews and estimates endpoints guide
 
 As you develop your segment definition, you can use the estimate and preview tools within [!DNL Adobe Experience Platform] to view summary-level information to help ensure you are isolating the expected audience. **Previews** provide paginated lists of qualifying profiles for a segment definition, allowing you to compare the results against what you expect. **Estimates** provide statistical information on a segment definition, such as the projected audience size and confidence interval. 
 
@@ -174,7 +174,7 @@ GET /estimate/{PREVIEW_ID}
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | The `id` value of the estimate job you want to retrieve. |
+| `{PREVIEW_ID}` | An estimate job is only triggered when a preview job is created, and the two jobs share the same ID value for lookup purposes. Specifically, this is the `previewId` value returned when the preview job was created. |
 
 **Request**
 
@@ -254,4 +254,4 @@ A successful response returns HTTP status 200 with the following message:
 
 ## Next steps
 
-After reading this guide you now have a better understanding of how to work with  estimates and previews. To learn more about the other Segmentation Service API endpoints, please read the [Segmentation Service developer guide overview](./overview.md).
+After reading this guide you now have a better understanding of how to work with  previews and estimates. To learn more about the other Segmentation Service API endpoints, please read the [Segmentation Service developer guide overview](./overview.md).

@@ -7,14 +7,14 @@ topic: developer guide
 
 # Getting started with [!DNL Segmentation Service] {#getting-started}
 
-[!DNL Adobe Experience Platform Segmentation Service] allows you to build segments and generate audiences in [!DNL Adobe Experience Platform] from your [!DNL Real-time Customer Profile] data.
+Adobe Experience Platform Segmentation Service allows you to build segments and generate audiences in Adobe Experience Platform from your [!DNL Real-time Customer Profile] data.
 
-The developer guide requires a working understanding of the various [!DNL Adobe Experience Platform] services involved with using [!DNL Segmentation].
+The developer guide requires a working understanding of the various Experience Platform services involved with using [!DNL Segmentation Service].
 
 - [!DNL Segmentation](../home.md): Allows you to build audience segments from Real-time Customer Profile data.
 - [!DNL Experience Data Model (XDM) System](../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
 - [!DNL Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-- [!DNL Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+- [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully use [!DNL Segmentation] using the API.
 
@@ -38,4 +38,4 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 
 ## Next steps
 
-To being making calls using the [!DNL Segmentation Service] API, select one of the available endpoint guides.
+To being making calls using the [!DNL Segmentation Service] API, select one of the available endpoint guides either using the left navigation rail or withing the [developer guider overview](./overview.md)

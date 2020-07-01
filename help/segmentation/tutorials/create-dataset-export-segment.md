@@ -11,13 +11,13 @@ topic: tutorial
 
 This tutorial walks through the steps required to create a dataset that can be used for exporting an audience segment using the [!DNL Experience Platform] UI.
 
-This tutorial is directly related to the steps outlined in the tutorial for [evaluating and accessing segment results](./evaluate-a-segment.md). The evaluating a segment tutorial provides steps for creating a dataset using the [!DNL Catalog] API, whereas this tutorial outlines steps to create a dataset using the [!DNL Experience Platform] UI.
+This tutorial is directly related to the steps outlined in the tutorial for [evaluating and accessing segment results](./evaluate-a-segment.md). The evaluating a segment tutorial provides steps for creating a dataset using the [!DNL Catalog Service] API, whereas this tutorial outlines steps to create a dataset using the [!DNL Experience Platform] UI.
 
 ## Getting started
 
 In order to export a segment, the dataset must be based on the XDM Individual Profile Union Schema. A union schema is a system-generated, read-only schema that aggregates the fields of all schemas that share the same class, in this case that is the XDM Individual Profile class. For more information on union view schemas, please see the [Real-time Customer Profile section of the Schema Registry developer guide](../../xdm/schema/composition.md#union).
 
-To view union schemas in the UI, click **[!UICONTROL Profiles]** in the left-navigation, then click on the *[!UICONTROL Union schema]* tab as shown below.
+To view union schemas in the UI, click **[!UICONTROL Profiles]** in the left-navigation, then click on the **[!UICONTROL Union schema]** tab as shown below.
 
 ![Union schema tab in Experience Platform UI](../images/tutorials/segment-export-dataset/union-schema-ui.png)
 

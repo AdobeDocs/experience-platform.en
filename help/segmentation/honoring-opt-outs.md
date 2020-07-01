@@ -18,9 +18,7 @@ Honoring opt-out requests requires an understanding of the various [!DNL Adobe E
 - [!DNL Real-time Customer Profile](../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
 - [!DNL Adobe Experience Platform Segmentation Service](./home.md): Allows you to build audience segments from [!DNL Real-time Customer Profile] data.
 - [!DNL Experience Data Model (XDM)](../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
-- [!DNL Adobe Experience Platform Privacy Service](../privacy-service/home.md): Helps organizations to automate compliance with data privacy regulations involving customer data within [!DNL Platform]. These regulations include:
-    - [!DNL California Consumer Privacy Act] (CCPA): Data privacy rights for California residents, including the right to access and delete personal data and to know whether personal data is sold or disclosed (and to whom). 
-    - [!DNL General Data Protection Regulation] (GDPR): Data privacy rights for members of the European Union, including the 'Right to Access' and the 'Right to be Forgotten'.  
+- [!DNL Adobe Experience Platform Privacy Service](../privacy-service/home.md): Helps organizations to automate compliance with data privacy regulations involving customer data within [!DNL Platform].
 
 ## Opt-out mixins
 
@@ -108,7 +106,7 @@ The sections below demonstrate how to add the appropriate fields for the two typ
 
 [!DNL Segmentation] automatically honors all profiles containing the "[!UICONTROL General Opt-Out]" flag, meaning those profiles will not be included in audiences or exports by default. However, it is best practice to add the appropriate fields to ensure opted-out profiles are not included in audiences and marketing activities.
 
-This can be done using the ∂ user interface by adding **[!UICONTROL Privacy Opt-Outs]** attributes. In this instance, the segment is set to include only those who have opted-in (meaning they do not have a general opt-out flag on their profile. This is done by declaring that the "[!UICONTROL Opt-Out Type]" equals "[!UICONTROL General Opt-Out]" and the "[!UICONTROL Opt-Out Value]" equals "[!UICONTROL Opt-in]". 
+This can be done using the user interface by adding **[!UICONTROL Privacy Opt-Outs]** attributes. In this instance, the segment is set to include only those who have opted in (meaning they do not have a general opt-out flag on their profile. This is done by declaring that the "[!UICONTROL Opt-Out Type]" equals "[!UICONTROL General Opt-Out]" and the "[!UICONTROL Opt-Out Value]" equals "[!UICONTROL Opt-in]". 
 
 ![](images/opt-outs/segment-general-opt-out.png)
 

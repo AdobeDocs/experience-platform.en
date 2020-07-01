@@ -7,17 +7,19 @@ topic: developer guide
 
 # Export jobs endpoint guide
 
-Export jobs are asynchronous processes that are used to persist audience segment members to datasets. You can use the `/export/jobs` endpoint in the [!DNL Adobe Experience Platform Segmentation] API, which allows you to programmatically retrieve, create, and cancel export jobs.
+Export jobs are asynchronous processes that are used to persist audience segment members to datasets. You can use the `/export/jobs` endpoint in the Adobe Experience Platform Segmentation API, which allows you to programmatically retrieve, create, and cancel export jobs.
 
 ## Getting started
 
-The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before reading this guide, please refer to the [getting started document guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
+The endpoints used in this guide are part of the Adobe Experience Platform Segmentation Service API. Before reading this guide, please refer to the [getting started document guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
 
 ## Retrieve a list of export jobs {#retrieve-list}
 
 You can retrieve a list of all export jobs for your IMS Organization by making a GET request to the `/export/jobs` endpoint.
 
 **API format**
+
+The `/export/jobs` endpoint supports several query parameters to help filter your results. While these parameters are optional, their use is strongly recommended to help reduce expensive overhead. Making a call to this endpoint with no parameters will retrieve all export jobs available for your organization. Multiple parameters can be included, separated by ampersands (`&`). 
 
 ```http
 GET /export/jobs
@@ -26,17 +28,15 @@ GET /export/jobs?offset={OFFSET}
 GET /export/jobs?status={STATUS}
 ```
 
-**Query parameters**
-
-The following is a list of available query parameters for listing export jobs. All of these parameters are optional. Making a call to this endpoint with no parameters will retrieve all export jobs available for your organization. Multiple parameters can be included, separated by ampersands (`&`). 
-
 | Parameter | Description |
 | --------- | ----------- |
-| `limit` | Specifies the number of export jobs returned. |
-| `offset` | Specifies the offset of the pages of results. | 
-| `status` | Filters the results based on status. The supported values are `NEW`, `SUCCEEDED`, and `FAILED`. |
+| `{LIMIT}` | Specifies the number of export jobs returned. |
+| `{OFFSET}` | Specifies the offset of the pages of results. | 
+| `{STATUS}` | Filters the results based on status. The supported values are "NEW", "SUCCEEDED", and "FAILED". |
 
 **Request**
+
+The following request will retrieve all export jobs with the status "SUCCEEDED" within your IMS Organization.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?status=SUCCEEDED \
@@ -48,7 +48,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?status=SUCCEEDED
 
 **Response**
 
-A successful response returns HTTP status 200 with a list of export jobs for the specified IMS organization as JSON. The following response returns a list of all the successful export jobs for the IMS organization.
+The following response returns HTTP status 200 with a list of successfully completed export jobs, based on the query parameter provided in the request path.
 
 ```json
 {
@@ -187,10 +187,10 @@ A successful response returns HTTP status 200 with a list of export jobs for the
 
 | Property | Description |
 | -------- | ----------- |
-| `destination` | Destination information for the exported data:<ul><li>`datasetId`: The ID of the dataset where data was exported.</li><li>`segmentPerBatch`: A Boolean value that shows whether or not segment IDs are consolidated. A value of `false` means all the segment IDs were into a single batch ID. A value of `true` means that one segment ID is exported into one batch ID.</li></ul> |
+| `destination` | Destination information for the exported data:<ul><li>`datasetId`: The ID of the dataset where data was exported.</li><li>`segmentPerBatch`: A Boolean value that shows whether or not segment IDs are consolidated. A value of "false" means all the segment IDs were into a single batch ID. A value of "true" means that one segment ID is exported into one batch ID.</li></ul> |
 | `fields` | A list of the exported fields, separated by commas. |
 | `schema.name` | The name of the schema associated with the dataset where data is to be exported. |
-| `filter.segments` | The segments that are exported. The following fields are included:<ul><li>`segmentId`: Segment ID for profiles to be exported.</li><li>`segmentNs`: Segment namespace for the given `segmentID`.</li><li>`status`: An array of strings providing a status filter for the `segmentID`. By default, `status` will have the value `["realized", "existing"]` which represents all profiles that fall into the segment at the current time. Possible values include: "realized", "existing", and "exited".</li></ul> |
+| `filter.segments` | The segments that are exported. The following fields are included:<ul><li>`segmentId`: The segment ID that profiles will be exported to.</li><li>`segmentNs`: Segment namespace for the given `segmentID`.</li><li>`status`: An array of strings providing a status filter for the `segmentID`. By default, `status` will have the value `["realized", "existing"]` which represents all profiles that fall into the segment at the current time. Possible values include: "realized", "existing", and "exited".</li></ul> |
 | `mergePolicy` | Merge policy information for the exported data. | 
 | `metrics.totalTime` | A field indicating the total time that export job took to run. |
 | `metrics.profileExportTime` | A field indicating the time it took for the profiles to export. |
@@ -263,17 +263,17 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 
 | Property | Description |
 | -------- | ----------- |
-| `fields` | *(Optional)*. A list of the exported fields, separated by commas. If left blank, all fields will be exported. |
-| `mergePolicy` | *(Optional)*. Specifies the merge policy to govern the exported data. Include this parameter when there are multiple segments being exported. If not provided, the export will take the same merge policy as the given segment. |
-| `filter` | *(Optional)*. If left blank, all the data will be exported. |
-| `filter.segments` | *(Optional)* Specifies the segments to export. Omitting this value will result in all data from all profiles being exported. Accepts an array of segment objects, each containing the following fields:<ul><li>`segmentId`: **(Required if using `segments`)** Segment ID for profiles to be exported.</li><li>`segmentNs` *(Optional)* Segment namespace for the given `segmentID`.</li><li>`status` *(Optional)* An array of strings providing a status filter for the `segmentID`. By default, `status` will have the value `["realized", "existing"]` which represents all profiles that fall into the segment at the current time. Possible values include: `"realized"`, `"existing"`, and `"exited"`.</li></ul> |
-| `filter.segmentQualificationTime` | *(Optional)* Filter based on segment qualification time. The start time and/or end time can be provided. |
-| `filter.segmentQualificationTime.startTime` | *(Optional)* Segment qualification start time for a segment ID for a given status. It not provided, there will be no filter on the start time for a segment ID qualification. The timestamp must be provided in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
-| `filter.segmentQualificationTime.endTime` | *(Optional)* Segment qualification end time for a segment ID for a given status. It not provided, there will be no filter on the end time for a segment ID qualification. The timestamp must be provided in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
-| `filter.fromIngestTimestamp `| *(Optional)* Limits exported profiles to only include those that have been updated after this timestamp. The timestamp must be provided in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. <ul><li>`fromIngestTimestamp` for **profiles**, if provided: Includes all the merged profiles where merged updated timestamp is greater than the given timestamp. Supports `greater_than` operand.</li><li>`fromTimestamp` for **events**: All events ingested after this timestamp will be exported corresponding to resultant profile result. This is not the event time itself but the ingestion time for the events.</li> |
-| `filter.emptyProfiles` | *(Optional)* A boolean value that indicates whether to filter for empty Profiles. Profiles can contain Profile records, ExperienceEvent records, or both. Profiles with no Profile records and only ExperienceEvent records are referred to as "emptyProfiles". To export all profiles in the Profile store, including the "emptyProfiles", set the value of `emptyProfiles` to `true`. If `emptyProfiles` is set to `false`, only profiles with Profile records in the store are exported. By default, if `emptyProfiles` attribute is not included, only profiles containing Profile records are exported. |
-| `additionalFields.eventList` | *(Optional)* Controls the time series event fields exported for child or associated objects by providing one or more of the following settings:<ul><li>`fields`: Control the fields to export.</li><li>`filter`: Specifies criteria that limits the results included from associated objects. Expects a minimum value required for export, typically a date.</li><li>`filter.fromIngestTimestamp`: Filters time series events to those that have been ingested after the provided timestamp. This is not the event time itself but the ingestion time for the events.</li><li>`filter.toIngestTimestamp`: Filters the timestamp to those that have been ingested before the provided timestamp. This is not the event time itself but the ingestion time for the events.</li></ul> |
-| `destination` | **(Required)** Destination information for the exported data:<ul><li>`datasetId`: **(Required)** The ID of the dataset where data is to be exported.</li><li>`segmentPerBatch`: *(Optional)* A Boolean value that, if not provided, defaults to `false`. A value of `false` exports all segment IDs into a single batch ID. A value of `true` exports one segment ID into one batch ID. Note that setting the value to be `true` may affect batch export performance.</li></ul> |
+| `fields` | A list of the exported fields, separated by commas. If left blank, all fields will be exported. |
+| `mergePolicy` | Specifies the merge policy to govern the exported data. Include this parameter when there are multiple segments being exported. If not provided, the export will take the same merge policy as the given segment. |
+| `filter` | An object that specifies the segments that are going to be included in the export job by ID, qualification time, or ingest time, depending on the subproperties listed below. If left blank, all the data will be exported. |
+| `filter.segments` | Specifies the segments to export. Omitting this value will result in all data from all profiles being exported. Accepts an array of segment objects, each containing the following fields:<ul><li>`segmentId`: **(Required if using `segments`)** Segment ID for profiles to be exported.</li><li>`segmentNs` *(Optional)* Segment namespace for the given `segmentID`.</li><li>`status` *(Optional)* An array of strings providing a status filter for the `segmentID`. By default, `status` will have the value `["realized", "existing"]` which represents all profiles that fall into the segment at the current time. Possible values include: `"realized"`, `"existing"`, and `"exited"`.</li></ul> |
+| `filter.segmentQualificationTime` | Filter based on segment qualification time. The start time and/or end time can be provided. |
+| `filter.segmentQualificationTime.startTime` | Segment qualification start time for a segment ID for a given status. It not provided, there will be no filter on the start time for a segment ID qualification. The timestamp must be provided in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
+| `filter.segmentQualificationTime.endTime` | Segment qualification end time for a segment ID for a given status. It not provided, there will be no filter on the end time for a segment ID qualification. The timestamp must be provided in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. |
+| `filter.fromIngestTimestamp `| Limits exported profiles to only include those that have been updated after this timestamp. The timestamp must be provided in [RFC 3339](https://tools.ietf.org/html/rfc3339) format. <ul><li>`fromIngestTimestamp` for **profiles**, if provided: Includes all the merged profiles where merged updated timestamp is greater than the given timestamp. Supports `greater_than` operand.</li><li>`fromIngestTimestamp` for **events**: All events ingested after this timestamp will be exported corresponding to resultant profile result. This is not the event time itself but the ingestion time for the events.</li> |
+| `filter.emptyProfiles` | A boolean value that indicates whether to filter for empty profiles. Profiles can contain profile records, ExperienceEvent records, or both. Profiles with no profile records and only ExperienceEvent records are referred to as "emptyProfiles". To export all profiles in the profile store, including the "emptyProfiles", set the value of `emptyProfiles` to `true`. If `emptyProfiles` is set to `false`, only profiles with profile records in the store are exported. By default, if `emptyProfiles` attribute is not included, only profiles containing profile records are exported. |
+| `additionalFields.eventList` | Controls the time-series event fields exported for child or associated objects by providing one or more of the following settings:<ul><li>`fields`: Control the fields to export.</li><li>`filter`: Specifies criteria that limits the results included from associated objects. Expects a minimum value required for export, typically a date.</li><li>`filter.fromIngestTimestamp`: Filters time-series events to those that have been ingested after the provided timestamp. This is not the event time itself but the ingestion time for the events.</li><li>`filter.toIngestTimestamp`: Filters the timestamp to those that have been ingested before the provided timestamp. This is not the event time itself but the ingestion time for the events.</li></ul> |
+| `destination` | **(Required)** Information about the exported data:<ul><li>`datasetId`: **(Required)** The ID of the dataset where data is to be exported.</li><li>`segmentPerBatch`: *(Optional)* A Boolean value that, if not provided, defaults to "false". A value of "false" exports all segment IDs into a single batch ID. A value of "true" exports one segment ID into one batch ID. Note that setting the value to be "true" may affect batch export performance.</li></ul> |
 | `schema.name` | **(Required)** The name of the schema associated with the dataset where data is to be exported. |
 
 **Response**
@@ -435,7 +435,7 @@ A successful response returns HTTP status 200 with detailed information about th
 | `metrics.profileExportTime` | A field indicating the time it took for the profiles to export. |
 | `totalExportedProfileCounter` | The total number of profile exported across all batches. |
 
->[!NOTE] The destination and merge metric objects differ when `segmentPerBatch = false`, compared to when `segmentPerBatch = true`. The differences are shown in the examples below.
+The destination and merge metric objects differ when `segmentPerBatch = false`, compared to when `segmentPerBatch = true`. The differences are shown in the examples below.
 
 **`segmentPerBatch` is false**
 
@@ -520,7 +520,7 @@ A successful response returns HTTP status 200 with detailed information about th
 
 ## Cancel or delete a specific export job {#delete}
 
-You can request to delete a specified export job by making a DELETE request to the `/export/jobs` endpoint and providing the ID of the export job you wish to delete in the request path.
+You can request to delete the specified export job by making a DELETE request to the `/export/jobs` endpoint and providing the ID of the export job you wish to delete in the request path.
 
 **API format**
 

@@ -5,31 +5,31 @@ title: Adobe Experience Platform Segmentation Service
 topic: overview
 ---
 
-# [!DNL Segmentation Service] overview
+# Adobe Experience Platform Segmentation Service overview
 
-[!DNL Adobe Experience Platform Segmentation Service] provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on Platform, and are readily accessible by any Adobe solution. 
+Adobe Experience Platform Segmentation Service provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on Platform, and are readily accessible by any Adobe solution. 
 
-This document provides an overview of [!DNL Segmentation Service] and the role it plays in [!DNL Adobe Experience Platform].
+This document provides an overview of [!DNL Segmentation Service] and the role it plays in Adobe Experience Platform.
 
 ## Getting started with [!DNL Segmentation Service]
 
 It is important to understand the following key terms used throughout this document:
 
-- **[!DNL Segmentation]**: Dividing a large group of individuals (such as customers, prospects, users, or organizations) into smaller groups that share similar traits and will respond similarly to marketing strategies.
+- **Segmentation**: Dividing a large group of individuals (such as customers, prospects, users, or organizations) into smaller groups that share similar traits and will respond similarly to marketing strategies.
 - **Segment definition**: The rule set used to describe key characteristics or behavior of a target audience. Once conceptualized, the rules outlined in a segment definition are used to determine qualifying audience members for a segment.
 - **Audience**: The resulting set of profiles that meet the criteria of a segment definition.
 
 ## How segmentation works
 
-[!DNL Segmentation] is the process of defining specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people from your customer base. For example, in an email campaign called "Did you forget to buy your sneakers?", you may want an audience of all users who searched for running shoes within the last 30 days, but who did not complete a purchase. 
+Segmentation is the process of defining specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people from your customer base. For example, in an email campaign called "Did you forget to buy your sneakers?", you may want an audience of all users who searched for running shoes within the last 30 days, but who did not complete a purchase. 
 
 Once a segment has been conceptually defined it is built in [!DNL Experience Platform]. Typically, segments are built by the marketer or audience specialist although some organizations prefer they be created by their marketing department, in collaboration with their data analysts. Upon reviewing the data being sent to [!DNL Platform], the data analyst composes the segment definition by selecting which fields and values will be used to build the rules or conditions of the segment. This is done using either the UI or API. 
 
 ## Create segments
 
-Whether created using the API or using the [!UICONTROL Segment Builder], segments are ultimately defined using [!DNL Profile Query Language] (PQL). This is where the conceptual segment definition gets described in the language built to retrieve profiles meeting the criteria. For more information, see the [PQL overview](./pql/overview.md).  
+Whether created using the API or using the [!DNL Segment Builder], segments are ultimately defined using [!DNL Profile Query Language] (PQL). This is where the conceptual segment definition gets described in the language built to retrieve profiles meeting the criteria. For more information, see the [PQL overview](./pql/overview.md).  
 
-To learn how to create and use segments in the [!UICONTROL Segment Builder] (the UI implementation of [!DNL Segmentation Service]), see the [Segment Builder guide](./ui/overview.md). 
+To learn how to create and use segments in the [!DNL Segment Builder] (the UI implementation of [!DNL Segmentation Service]), see the [Segment Builder guide](./ui/overview.md). 
 
 For information on building segment definitions using the API, see the tutorial on [creating audience segments using the API](./tutorials/create-a-segment.md).
 
@@ -57,7 +57,7 @@ To learn how to access an exported segment, see the [segment evaluation tutorial
 
 Segment metadata facilitates indexing in the event any of your segments are to be reused and/or combined. 
 
-Composing your segments (through either the API or [!UICONTROL Segment Builder]) requires that you to define a segment name and merge policy.
+Composing your segments (through either the API or [!DNL Segment Builder]) requires that you to define a segment name and merge policy.
 
 ### Segment names
 
@@ -74,7 +74,7 @@ If a merge policy is not defined, the default [!DNL Platform] merge policy is us
 
 ### Other segment metadata
 
-In addition to segment name and merge policy, [!UICONTROL Segment Builder] offers you an additional "segment description" metadata field where you can summarize your segment definition's purpose.
+In addition to segment name and merge policy, [!DNL Segment Builder] offers you an additional "segment description" metadata field where you can summarize your segment definition's purpose.
 
 ## Advanced segmentation features
 
@@ -87,7 +87,7 @@ These advanced features are discussed in more detail in the following sections.
 
 ## Sequential segmentation {#sequential}
 
-A standard user journey is sequential in nature. [!DNL Adobe Experience Platform] allows you to define an ordered series of segments to reflect this journey thereby capturing sequences of events as they occur. You can arrange events into their desired order by using the visual event timeline in the [!UICONTROL Segment Builder].
+A standard user journey is sequential in nature. Adobe Experience Platform allows you to define an ordered series of segments to reflect this journey thereby capturing sequences of events as they occur. You can arrange events into their desired order by using the visual event timeline in the [!DNL Segment Builder].
 
 An example of a customer journey that would require sequential segmentation would be product view > product add > checkout > No purchase. 
 
@@ -133,7 +133,7 @@ The data architect's resources include access to web data from customer browsing
 
 >[!NOTE] We will assume in this example that the data architect has already established an ID Namespace.
 
-Using the API, the data architect relates the key from the ExperienceEvent schema with the "products" class. Doing so allows the data architect to make use of the additional fields from the "products" class as if they are native to the ExperienceEvent schema. As the final step of the configuration work, the data architect needs to bring the appropriate data into [!DNL Real-time Customer Profile]. This is done by enabling the "products" dataset for use with [!DNL Profile]. With the configuration work complete, either the data architect or the marketer can build the target segment in [!UICONTROL Segment Builder].
+Using the API, the data architect relates the key from the ExperienceEvent schema with the "products" class. Doing so allows the data architect to make use of the additional fields from the "products" class as if they are native to the ExperienceEvent schema. As the final step of the configuration work, the data architect needs to bring the appropriate data into [!DNL Real-time Customer Profile]. This is done by enabling the "products" dataset for use with [!DNL Profile]. With the configuration work complete, either the data architect or the marketer can build the target segment in [!DNL Segment Builder].
 
 See the [schema composition overview](../xdm/schema/composition.md#union) to learn how to define relationships across XDM classes.
 
@@ -203,7 +203,7 @@ Date data allows you to assign time-based context to your segment definitions, e
 
 ### Experience Events
 
-As an [!DNL Adobe Experience Platform] schema, XDM ExperienceEvents record explicit and implicit customer interactions with [!DNL Platform]-integrated applications, including a snapshot of the system at the time the interaction took place. ExperienceEvents are fact records. As such, they are a data source available to you during segment definition.
+As an Adobe Experience Platform schema, XDM ExperienceEvents record explicit and implicit customer interactions with [!DNL Platform]-integrated applications, including a snapshot of the system at the time the interaction took place. ExperienceEvents are fact records. As such, they are a data source available to you during segment definition.
 
 As seen in the table below, event data is rendered using keywords which help refine event behavior and specify event attributes. 
 
@@ -222,7 +222,7 @@ Existing segment definitions can also be used as components of a new segment def
 
 External audiences can also be used as components of a new segment definition, adding their attribute rules to the new segment.
 
-Currently, only [!DNL Adobe Audience Manager] is supported as an audience. Additional sources will be enabled in the future.
+Currently, only Adobe Audience Manager is supported as an audience. Additional sources will be enabled in the future.
 
 ### Other data types
 

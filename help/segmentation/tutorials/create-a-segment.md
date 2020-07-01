@@ -80,15 +80,15 @@ Estimates generally run over 10-15 seconds, beginning with a rough estimate and 
 
 You can create a new preview job by making a POST request to the `/preview` endpoint.
 
-Detailed instructions on [creating a preview job](../api/estimates-and-previews.md#create-preview) can be found in the [estimates and previews endpoints guide](../api/estimates-and-previews.md#create-preview).
+Detailed instructions on creating a preview job can be found in the [previews and estimates endpoints guide](../api/previews-and-estimates.md#create-preview).
 
 ### View an estimate or preview
 
 Estimate and preview processes are run asynchronously as different queries can take different lengths of time to complete. Once a query has been initiated, you can use API calls to retrieve (GET) the current state of the estimate or preview as it progresses.
 
-Using the Segmentation API, you can lookup a preview job's current state by its ID. If the state is "RESULT_READY", you can view the results. To look up a preview job's current state, please read the [retrieve preview job section of the estimates and previews endpoints guide](../api/estimates-and-previews.md#get-preview). To look up an estimate job's current state, please read the [retrieve preview job section of the estimates and previews endpoints guide](../api/estimates-and-previews.md#get-estimate).
+Using the [!DNL Segmentation Service] API, you can look up a preview job's current state by its ID. If the state is "RESULT_READY", you can view the results. To look up a preview job's current state, please read the section on [retrieving a preview job section](../api/previews-and-estimates.md#get-preview) in the previews and estimates endpoints guide. To look up an estimate job's current state, please read the section on [retrieving an estimate job](../api/previews-and-estimates.md#get-estimate) in the previews and estimates endpoints guide.
 
 
 ## Next steps
 
-Once you have developed, tested, and saved your segment definition, you can create a segment job to build an audience using the [!DNL Segmentation] API. See the tutorial on [evaluating and accessing segment results](./evaluate-a-segment.md) for detailed steps on how to accomplish this.
+Once you have developed, tested, and saved your segment definition, you can create a segment job to build an audience using the [!DNL Segmentation Service] API. See the tutorial on [evaluating and accessing segment results](./evaluate-a-segment.md) for detailed steps on how to accomplish this.
