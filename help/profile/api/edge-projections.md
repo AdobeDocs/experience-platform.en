@@ -5,13 +5,13 @@ title: Real-time Customer Profile API developer guide
 topic: guide
 ---
 
-# Edge destinations and projections
+# Edge projection configurations and destinations endpoints
 
 In order to drive coordinated, consistent, and personalized experiences for your customers across multiple channels in real-time, the right data needs to be readily available and continuously updated as changes happen. Adobe Experience Platform enables this real-time access to data through the use of what are known as edges. An edge is a geographically placed server that stores data and makes it readily accessible to applications. For example, Adobe applications such as Adobe Target and Adobe Campaign use edges in order to provide personalized customer experiences in real-time. Data is routed to an edge by a projection, with a projection destination defining the edge to which data will be sent, and a projection configuration defining the specific information that will be made available on the edge. This guide provides detailed instructions for using the Real-time Customer Profile API to work with edge projections, including destinations and configurations.
 
 ## Getting started
 
-The API endpoints used in this guide are part of the Real-time Customer Profile API. Before continuing, please review the [Real-time Customer Profile developer guide](getting-started.md). In particular, the [getting started section](getting-started.md#getting-started) of the Profile developer guide includes links to related topics, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform APIs.
+The API endpoint used in this guide is part of the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 >[!NOTE]
 >Requests that contain a payload (POST, PUT, PATCH) require a `Content-Type` header. More than one `Content-Type` is used in this document. Please pay special attention to the headers in the sample calls to ensure you are using the correct `Content-Type` for each request.
@@ -632,4 +632,4 @@ Returns only the values of the `type` and `city` fields for each element in the 
 
 ## Next Steps
 
-This guide has shown you the steps involved in order to configure edge projections and destinations, including how to properly format the `selector` parameter. You can now create new edge destinations and projections specific to the needs of your organization. To discover additional actions available through the Profile API, please see the [Real-time Customer Profile API developer guide](getting-started.md).
+This guide has shown you the steps involved in order to configure projections and destinations, including how to properly format the `selector` parameter. You can now create new projection destinations and configurations specific to the needs of your organization.

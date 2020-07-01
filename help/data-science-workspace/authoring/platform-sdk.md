@@ -5,7 +5,7 @@ title: Platform SDK guide
 topic: SDK authoring
 ---
 
-# Platform SDK guide
+# [!DNL Platform] SDK guide
 
 This tutorial provides you with information on converting `data_access_sdk_python` to the new Python `platform_sdk` in both Python and R. This tutorial provides information on the following operations:
 
@@ -62,7 +62,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## Basic reading of data {#basic-reading-of-data}
 
-With the new Platform SDK, the maximum read size is 32 GB, with a maximum read time of 10 minutes. 
+With the new [!DNL Platform] SDK, the maximum read size is 32 GB, with a maximum read time of 10 minutes. 
 
 If your read time is taking too long, you can try using one of the following filtering options:
 
@@ -137,7 +137,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-The new Platform SDK supports the following operations:
+The new [!DNL Platform] SDK supports the following operations:
 
 | Operation | Function |
 | --------- | -------- |
@@ -210,4 +210,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Next steps
 
-Once you have configured the `platform_sdk` data loader, the data undergoes preparation and is then split to the `train` and `val` datasets. To learn about data preparation and feature engineering please visit the section on [data preparation and feature engineering](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) in the tutorial for creating a recipe using JupyterLab notebooks.
+Once you have configured the `platform_sdk` data loader, the data undergoes preparation and is then split to the `train` and `val` datasets. To learn about data preparation and feature engineering please visit the section on [data preparation and feature engineering](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) in the tutorial for creating a recipe using [!DNL JupyterLab] notebooks.

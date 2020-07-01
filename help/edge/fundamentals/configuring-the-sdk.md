@@ -9,8 +9,9 @@ seo-description: Learn how to configure the Experience Platform Web SDK
 
 Configuration for the SDK is done with the `configure` command.
 
->[!Important]
->`configure` should _always_ be the first command called.
+>[!IMPORTANT]
+>
+>`configure` should *always* be the first command called.
 
 ```javascript
 alloy("configure", {
@@ -47,10 +48,10 @@ Indicates which context categories to collect automatically as described in [Aut
 
 Indicates whether debugging should be enabled. Setting this config to `true` enables the following features:
 
-| **Feature**            |                    |                                                                                                                            |
+| **Feature**            | **Function** | 
 | ---------------------- | ------------------ |
 | Synchronous validation | Validates the data being collected against the schema and returns an error in the response under the following label: `collect:error OR success` |
-| Console logging        | Enables debugging messages to be displayed in the browser's JavaScript console                                                                  |
+| Console logging        | Enables debugging messages to be displayed in the browser's JavaScript console  |
 
 ### `edgeDomain`
 
@@ -58,7 +59,7 @@ Indicates whether debugging should be enabled. Setting this config to `true` ena
 | -------- | ------------ | ------------------ |
 | String   | No           | `beta.adobedc.net` |
 
-The domain used to interact with Adobe Services. This is only used if you have a first party domain (CNAME) that proxies requests to the Adobe edge infrastructure.
+The domain used to interact with Adobe services. This is only used if you have a first party domain (CNAME) that proxies requests to the Adobe edge infrastructure.
 
 ### `orgId`
 
@@ -78,7 +79,7 @@ Your assigned Experience Cloud organization ID.  When configuring multiple insta
 
 Indicates whether data associated with link clicks should be automatically collected. For clicks that qualify as link clicks, the following [Web Interaction](https://github.com/adobe/xdm/blob/master/docs/reference/context/webinteraction.schema.md) data is collected:
 
-| **Property** |                                     |
+| **Property** |    **Description**                  |
 | ------------ | ----------------------------------- |
 | Link Name    | Name determined by the link context |
 | Link URL     | Normalized URL                      |
@@ -90,7 +91,7 @@ Indicates whether data associated with link clicks should be automatically colle
 | -------- | ------------ | ----------------- |
 | Function | No           | () => undefined   |
 
-Set this to configure a callback that is called for every event just before it is sent.  An object with the field `xdm` is sent in to the callback.  Modify the xdm object to change what is sent.  Inside the callback, the `xdm` object will already have the data passed in the event command, and the automatically collected information.  For more information on the timing of this callback and an example, see [Modifying Events Globally](tracking-events.md#modifying-events-globally).
+Set this to configure a callback that is called for every event just before it is sent.  An object with the field `xdm` is sent in to the callback.  Modify the `xdm` object to change what is sent.  Inside the callback, the `xdm` object will already have the data passed in the event command, and the automatically collected information.  For more information on the timing of this callback and an example, see [Modifying Events Globally](tracking-events.md#modifying-events-globally).
 
 ## Privacy options
 
@@ -110,7 +111,7 @@ Sets the user's default consent. This is used when there is no consent preferenc
 | -------- | ------------ | ----------------- |
 | String   | No           | none              |
 
-Used to create a CSS style definition that hides content areas of your web page while personalized content is loaded from the server. If this option is not provided, the SDK does not attempt to hide any content areas while personalized content is loaded, potentially resulting in "flicker."
+Used to create a CSS style definition that hides content areas of your web page while personalized content is loaded from the server. If this option is not provided, the SDK does not attempt to hide any content areas while personalized content is loaded, potentially resulting in "flicker".
 
 For example, if you had an element on your web page with an ID of `container` whose default content you would like to hide while personalized content is being loaded from the server, an example of a prehiding style would be as follows:
 
@@ -126,7 +127,7 @@ For example, if you had an element on your web page with an ID of `container` wh
 | -------- | ------------ | ----------------- |
 | Boolean  | No           | `true`            |
 
-Enables cookie destinations, which allows the setting of cookies based on segment qualification.
+Enables Audience Manager [!UICONTROL cookie destinations], which allows the setting of cookies based on segment qualification.
 
 ### `urlDestinationsEnabled`
 
@@ -134,7 +135,7 @@ Enables cookie destinations, which allows the setting of cookies based on segmen
 | -------- | ------------ | ----------------- |
 | Boolean  | No           | `true`            |
 
-Enables URL destinations, which allows the firing of URLs based on segment qualification.
+Enables Audience Manager [!UICONTROL URL destinations], which allows the firing of URLs based on segment qualification.
 
 ## Identity options
 
@@ -160,4 +161,4 @@ Enables the ID sync feature, which allows the firing of URLs to synchronize the 
 | -------- | ------------ | ----------------- |
 | Boolean  | No           | true              |
 
-Enables the setting of Adobe third-party cookies. The SDK has the ability to persist the visitor ID in a third-party context to enable the same visitor ID to be used across site. This is useful if you have multiple sites or you want to share data with partners; however, sometimes this is not desired for privacy reasons.
+Enables the setting of Adobe third-party cookies. The SDK has the ability to persist the visitor ID in a third-party context to enable the same visitor ID to be used across sites. This is useful if you have multiple sites or you want to share data with partners; however, sometimes this is not desired for privacy reasons.

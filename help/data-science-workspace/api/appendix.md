@@ -7,11 +7,11 @@ topic: Developer guide
 
 # Appendix
 
-The following sections provide reference information for various features of the Sensei Machine Learning API.
+The following sections provide reference information for various features of the [!DNL Sensei Machine Learning] API.
 
 ## Query parameters for asset retrieval {#query}
 
-The Sensei Machine Learning API provides support for query parameters with retrieving assets. Available query parameters and their usages are described in the following table:
+The [!DNL Sensei Machine Learning] API provides support for query parameters with retrieving assets. Available query parameters and their usages are described in the following table:
 
 | Query parameter | Description | Default value |
 | --------------- | ----------- | ------- |
