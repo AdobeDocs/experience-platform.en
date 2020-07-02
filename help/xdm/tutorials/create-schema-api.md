@@ -1004,7 +1004,7 @@ A successful response returns HTTP Status 201 (Created) with a response body con
 }
 ```
 
-## Enable schema for use in Real-time Customer Profile
+## Enable schema for use in Real-time Customer Profile {#profile}
 
 By adding the "union" tag to the `meta:immutableTags` attribute, you can enable the Loyalty Members schema for use by Real-time Customer Profile. 
 
