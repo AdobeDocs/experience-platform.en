@@ -7,7 +7,7 @@ topic: Overview
 
 # SDK developer guide
 
-The Model Authoring SDK enables you to develop custom machine learning Recipes and Feature Pipelines which can be used in [!DNL Adobe Experience Platform] Data Science Workspace, providing implementable templates in PySpark and Spark (Scala).
+The Model Authoring SDK enables you to develop custom machine learning Recipes and Feature Pipelines which can be used in [!DNL Adobe Experience Platform] Data Science Workspace, providing implementable templates in [!DNL PySpark] and [!DNL Spark (Scala)].
 
 This document provides information regarding the various classes found within the Model Authoring SDK.
 
@@ -45,7 +45,7 @@ The following table describes the abstract methods of a PySpark Data Loader clas
 
 **Spark**
 
-The following table describes the abstract methods of a Spark Data Loader class:
+The following table describes the abstract methods of a [!DNL Spark] Data Loader class:
 
 <table>
     <thead>
@@ -70,9 +70,9 @@ The following table describes the abstract methods of a Spark Data Loader class:
     </tbody>
 </table>
 
-### Load data from a Platform dataset {#load-data-from-a-platform-dataset}
+### Load data from a [!DNL Platform] dataset {#load-data-from-a-platform-dataset}
 
-The following example retrieves Platform data by ID and returns a DataFrame, where the dataset ID (`datasetId`) is a defined property in the configuration file.
+The following example retrieves [!DNL Platform] data by ID and returns a DataFrame, where the dataset ID (`datasetId`) is a defined property in the configuration file.
 
 **PySpark**
 
@@ -191,7 +191,7 @@ The DataSaver class encapsulates anything related to storing output data includi
 
 **PySpark**
 
-The following table describes the abstract methods of a PySpark Data Saver class:
+The following table describes the abstract methods of a [!DNL PySpark] Data Saver class:
 
 <table>
     <thead>
@@ -219,7 +219,7 @@ The following table describes the abstract methods of a PySpark Data Saver class
 
 **Spark (Scala)**
 
-The following table describes the abstract methods of a Spark Data Saver class:
+The following table describes the abstract methods of a [!DNL Spark] Data Saver class:
 
 <table>
     <thead>
@@ -244,14 +244,14 @@ The following table describes the abstract methods of a Spark Data Saver class:
     </tbody>
 </table>
 
-### Save data to a Platform dataset {#save-data-to-a-platform-dataset}
+### Save data to a [!DNL Platform] dataset {#save-data-to-a-platform-dataset}
 
-In order to store data onto a Platform dataset, the properties must be either provided or defined in the configuration file:
+In order to store data onto a [!DNL Platform] dataset, the properties must be either provided or defined in the configuration file:
 
-- A valid Platform dataset ID to which data will be stored
+- A valid [!DNL Platform] dataset ID to which data will be stored
 - The tenant ID belonging to your organization
 
-The following examples store data (`prediction`) onto a Platform dataset, where the dataset ID (`datasetId`) and tenant ID (`tenantId`) are defined properties within the configuration file.
+The following examples store data (`prediction`) onto a [!DNL Platform] dataset, where the dataset ID (`datasetId`) and tenant ID (`tenantId`) are defined properties within the configuration file.
 
 
 **PySpark**
@@ -387,7 +387,7 @@ class ScoringDataSaver extends DataSaver {
 
 ## DatasetTransformer {#datasettransformer}
 
-The DatasetTransformer class modifies and transforms the structure of a dataset. The Sensei Machine Learning Runtime does not require this component to be defined, and is implemented based on your requirements. 
+The DatasetTransformer class modifies and transforms the structure of a dataset. The [!DNL Sensei Machine Learning Runtime] does not require this component to be defined, and is implemented based on your requirements. 
 
 In regards to a feature pipeline, dataset transformers can be used cooporatively with a feature pipeline factory to prepare data for feature engineering.
 
@@ -421,7 +421,7 @@ The following table describes the class methods of a PySpark dataset transformer
 
 **Spark (Scala)**
 
-The following table describes the abstract methods of a Spark dataset transformer class:
+The following table describes the abstract methods of a [!DNL Spark] dataset transformer class:
 
 <table>
     <thead>
@@ -492,7 +492,7 @@ The following table describes the class methods of a PySpark FeaturePipelineFact
 
 **Spark (Scala)**
 
-The following table describes the class methods of a Spark FeaturePipelineFactory:
+The following table describes the class methods of a [!DNL Spark] FeaturePipelineFactory:
 
 <table>
     <thead>
@@ -530,7 +530,7 @@ The following table describes the class methods of a Spark FeaturePipelineFactor
 
 ## PipelineFactory {#pipelinefactory}
 
-The PipelineFactory class encapsulates methods and definitions for model training and scoring, where training logic and algorithms are defined in the form of a Spark Pipeline.
+The PipelineFactory class encapsulates methods and definitions for model training and scoring, where training logic and algorithms are defined in the form of a [!DNL Spark] Pipeline.
 
 **PySpark**
 
@@ -601,7 +601,7 @@ The following table describes the class methods of a PySpark PipelineFactory:
 
 **Spark (Scala)**
 
-The following table describes the class methods of a Spark PipelineFactory:
+The following table describes the class methods of a [!DNL Spark] PipelineFactory:
 
 <table>
     <thead>
@@ -685,7 +685,7 @@ The following table describes the class methods of a PySpark MLEvaluator:
 
 **Spark (Scala)**
 
-The following table describes the class methods of a Spark MLEvaluator:
+The following table describes the class methods of a [!DNL Spark] MLEvaluator:
 
 <table>
     <thead>

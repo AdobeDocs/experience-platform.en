@@ -7,20 +7,20 @@ topic: policies
 
 # Data usage policies user guide
 
-Adobe Experience Platform Data Governance provides a user interface that allows you to create and manage data usage policies. This document provides an overview of the actions you can perform in the _Policies_ workspace in the Experience Platform user interface.
+Adobe Experience Platform Data Governance provides a user interface that allows you to create and manage data usage policies. This document provides an overview of the actions you can perform in the _Policies_ workspace in the [!DNL Experience Platform] user interface.
 
 >[!IMPORTANT] All data usage policies (including core policies provided by Adobe) are disabled by default. In order for an individual policy to be considered for enforcement, you must manually enable that policy. See the section on [enabling policies](#enable) for steps on how to do this in the UI.
 
 ## Prerequisites
 
-This guide requires a working understanding of the following Experience Platform concepts:
+This guide requires a working understanding of the following [!DNL Experience Platform] concepts:
 
-- [Data Governance](../home.md)
+- [!DNL Data Governance](../home.md)
 - [Data usage policies](./overview.md)
 
 ## View data usage policies {#view-policies}
 
-In the Experience Platform UI, click **[!UICONTROL Policies]** to open the *[!UICONTROL Policies]* workspace. In the **[!UICONTROL Browse]** tab, you can see a list of available policies, including their associated labels, marketing actions, and status.
+In the [!DNL Experience Platform] UI, click **[!UICONTROL Policies]** to open the *[!UICONTROL Policies]* workspace. In the **[!UICONTROL Browse]** tab, you can see a list of available policies, including their associated labels, marketing actions, and status.
 
 ![](../images/policies/browse-policies.png)
 
@@ -30,7 +30,7 @@ Click on a listed policy to view its description and type. If a custom policy is
 
 ## Create a custom data usage policy {#create-policy}
 
-To create a new custom data usage policy, click **[!UICONTROL Create policy]** in the top-right corner of the **[!UICONTROL Browse]** tab in the *Policies* workspace.
+To create a new custom data usage policy, click **[!UICONTROL Create policy]** in the top-right corner of the **[!UICONTROL Browse]** tab in the *[!UICONTROL Policies]* workspace.
 
 ![](../images/policies/create-policy-button.png)
 
@@ -100,8 +100,8 @@ If the marketing action is not being used by any existing usage policies, you ca
 
 ## Next steps
 
-This document provided an overview of how to manage data usage policies in Experience Platform UI. For steps on how to manage policies using the DULE Policy API, see the [developer guide](../api/getting-started.md). For information on how to enforce data usage policies, see the [policy enforcement overview](../enforcement/overview.md).
+This document provided an overview of how to manage data usage policies in [!DNL Experience Platform] UI. For steps on how to manage policies using the DULE Policy API, see the [developer guide](../api/getting-started.md). For information on how to enforce data usage policies, see the [policy enforcement overview](../enforcement/overview.md).
 
-The following video provides a demonstration of how to work with usage policies in the Experience Platform UI:
+The following video provides a demonstration of how to work with usage policies in the [!DNL Experience Platform] UI:
 
 >[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)

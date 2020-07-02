@@ -10,9 +10,9 @@ topic: Overview
 >[!IMPORTANT]
 >Real-time Machine Learning is not available to all users yet. This feature is in alpha and still being tested. This document is subject to change.
 
-Real-time Machine Learning can dramatically enhance the relevance of your digital experience content for your end-users. This is made possible by leveraging real-time inferencing and continuous learning on the Experience Edge.
+Real-time Machine Learning can dramatically enhance the relevance of your digital experience content for your end-users. This is made possible by leveraging real-time inferencing and continuous learning on the [!DNL Experience Edge].
 
-A combination of seamless computation on both the Hub and the Edge dramatically reduces the latency that is traditionally involved in powering hyper-personalized experiences that are both relevant and responsive. Hence, Real-time Machine Learning provides inferences with incredibly low latency for synchronous decision-making. Examples include rendering personalized web page content or surfacing of an offer or discount to reduce churn and increase conversions on a web store.
+A combination of seamless computation on both the Hub and the [!DNL Edge] dramatically reduces the latency that is traditionally involved in powering hyper-personalized experiences that are both relevant and responsive. Hence, Real-time Machine Learning provides inferences with incredibly low latency for synchronous decision-making. Examples include rendering personalized web page content or surfacing of an offer or discount to reduce churn and increase conversions on a web store.
 
 ## Real-time Machine Learning architecture {#architecture}
 
@@ -28,7 +28,7 @@ The following workflow outlines the typical steps and results involved in creati
 
 ### Data ingestion and preparations
 
-Data is ingested and transformed with the Experience Data Model (XDM) on Adobe Experience Platform. This data is used for model training. To learn more about XDM, visit the [XDM overview](../../xdm/home.md).
+Data is ingested and transformed with the [!DNL Experience Data Model] (XDM) on Adobe Experience Platform. This data is used for model training. To learn more about XDM, visit the [XDM overview](../../xdm/home.md).
 
 ### Authoring
 
@@ -36,7 +36,7 @@ Create a Real-time Machine Learning model by authoring it from scratch or bringi
 
 ### Deployment
 
-Deploy your model to Experience Edge to create a Real-time Machine Learning service in the Service Gallery using the Prediction API endpoint.
+Deploy your model to [!DNL Experience Edge] to create a Real-time Machine Learning service in the [!UICONTROL Service Gallery] using the Prediction API endpoint.
 
 ### Inference
 
@@ -54,7 +54,7 @@ Real-time Machine Learning is currently in alpha. The functionality outlined bel
 > Alpha limitations:
 > - Currently, only ONNX based models are supported.
 > - Functions used in nodes cannot be serialized. For example, a lambda function used in a Pandas node.
-> - There is a 20 second sleep after Edge deployment is done manually.
+> - There is a 20 second sleep after [!DNL Edge] deployment is done manually.
 > - For deep learning, your data needs to be sent in such a way that when `df.values` is called it returns an array that is acceptable by your DL model. This is because the ONNX model scoring node uses `df.values` and sends the output to score against the model.
 
 

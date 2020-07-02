@@ -15,7 +15,7 @@ Real-time CDP is built on top of Adobe Experience Platform, and therefore the ma
 
 * [Apply usage labels to your data](#labels)
 * [Manage data usage policies](#policies)
-* [Enforce data usage compliance](#enforcement)
+* [Enforce data usage compliance](#enforce-data-usage-compliance)
 
 ## Apply usage labels to your data {#labels}
 

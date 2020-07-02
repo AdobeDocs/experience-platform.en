@@ -5,12 +5,12 @@ title: Create an Apache HDFS source connector in the UI
 topic: overview
 ---
 
-# Create an Apache HDFS source connector in the UI
+# Create an [!DNL Apache] HDFS source connector in the UI
 
 >[!NOTE]
->The Apache HDFS connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+>The [!DNL Apache] HDFS connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
-Source connectors in [!DNL Adobe Experience Platform] provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for authenticating an Apache Hadoop Distributed File System (hereinafter referred to as "HDFS") source connector using the [!DNL Platform] user interface.
+Source connectors in [!DNL Adobe Experience Platform] provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for authenticating an [!DNL Apache Hadoop Distributed File System] (hereinafter referred to as "HDFS") source connector using the [!DNL Platform] user interface.
 
 ## Getting started
 

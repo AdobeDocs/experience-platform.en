@@ -279,7 +279,7 @@ class MyFeaturePipelineFactory(FeaturePipelineFactory):
 
 ### Store your feature dataset with DataSaver {#store-your-feature-dataset-with-datasaver}
 
-The DataSaver is responsible for storing your resulting feature datasets into a storage locaiton. Your implementation of DataSaver must extend the abstract class `DataSaver` and override the abstract method `save`.
+The DataSaver is responsible for storing your resulting feature datasets into a storage location. Your implementation of DataSaver must extend the abstract class `DataSaver` and override the abstract method `save`.
 
 The following example extends the DataSaver class which stores data to a [!DNL Platform] dataset by ID, where the dataset ID (`featureDatasetId`) and tenant ID (`tenantId`) are defined properties in the configuration.
 
@@ -382,7 +382,7 @@ scoring.dataSaver: MyDatasetSaver
 
 ## Create your feature pipeline Engine using the API {#create-feature-pipeline-engine-api}
 
-Now that you have authored your feature pipeline, you need to create a Docker image to make a call to the feature pipeline endpoints in the Sensei Machine Learning API. You need a Docker image URL in order to make a call to the feature pipeline endpoints.
+Now that you have authored your feature pipeline, you need to create a Docker image to make a call to the feature pipeline endpoints in the [!DNL Sensei Machine Learning] API. You need a Docker image URL in order to make a call to the feature pipeline endpoints.
 
 >[!TIP]
 >If you do not have a Docker URL, visit the [Package source files into a recipe](../models-recipes/package-source-files-recipe.md) tutorial for a step-by-step walkthrough on creating a Docker host URL.
@@ -393,7 +393,7 @@ https://www.getpostman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### Create a feature pipeline engine {#create-engine-api}
 
-Once you have your Docker image location, you can [create a feature pipeline engine](../api/engines.md#feature-pipeline-docker) using the Sensei Machine Learning API by performing a POST to `/engines`. Successfully creating a feature pipeline engine provides you with an Engine unique identifier (`id`). Make sure to save this value before continuing.
+Once you have your Docker image location, you can [create a feature pipeline engine](../api/engines.md#feature-pipeline-docker) using the [!DNL Sensei Machine Learning] API by performing a POST to `/engines`. Successfully creating a feature pipeline engine provides you with an Engine unique identifier (`id`). Make sure to save this value before continuing.
 
 ### Create an MLInstance {#create-mlinstance}
 
@@ -430,4 +430,4 @@ Once the scoring has completed, your feature pipeline should be operational.
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-By reading this document, you have authored a feature pipeline using the Model Authoring SDK, created a Docker image, and used the Docker image URL to create a feature pipeline Model by using the Sensei Machine Learning API. You are now ready to continue transforming datasets and extracting data features at scale using the [Sensei Machine Learning API](../api/getting-started.md).
+By reading this document, you have authored a feature pipeline using the Model Authoring SDK, created a Docker image, and used the Docker image URL to create a feature pipeline Model by using the [!DNL Sensei Machine Learning] API. You are now ready to continue transforming datasets and extracting data features at scale using the [!DNL Sensei Machine Learning API](../api/getting-started.md).

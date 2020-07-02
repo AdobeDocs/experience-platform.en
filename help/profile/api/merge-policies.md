@@ -11,7 +11,7 @@ Adobe Experience Platform enables you to bring data together from multiple sourc
 
 ## Getting started
 
-The API endpoints used in this guide are part of the Real-time Customer Profile API. Before continuing, please review the [Real-time Customer Profile API developer guide](getting-started.md). In particular, the [getting started section](getting-started.md#getting-started) of the Profile developer guide includes links to related topics, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform APIs.
+The API endpoint used in this guide is part of the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 ## Components of merge policies {#components-of-merge-policies}
 
