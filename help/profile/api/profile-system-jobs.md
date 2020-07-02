@@ -7,14 +7,14 @@ topic: guide
 
 # Profile system jobs (Delete requests)
 
-Adobe Experience Platform enables you to ingest data from multiple sources and build robust profiles for individual customers. Data ingested into Platform is stored in the Data Lake as well as the Real-time Customer Profile data store. Occasionally it may be necessary to delete a dataset or batch from the Profile store in order to remove data that is no longer needed or was added in error. This requires using the Real-time Customer Profile API to create a Profile system job, also known as a "delete request", that can also be modified, monitored, or removed if required.
+Adobe Experience Platform enables you to ingest data from multiple sources and build robust profiles for individual customers. Data ingested into Platform is stored in the Data Lake as well as the Real-time Customer Profile data store. Occasionally it may be necessary to delete a dataset or batch from the Profile Store in order to remove data that is no longer needed or was added in error. This requires using the Real-time Customer Profile API to create a Profile system job, also known as a "delete request", that can also be modified, monitored, or removed if required.
 
 >[!NOTE]
 >If you are trying to delete datasets or batches from the Data Lake, please visit the [Catalog Service overview](../../catalog/home.md) for instructions.
 
 ## Getting started
 
-The API endpoints used in this guide are part of the Real-time Customer Profile API. Before continuing, please review the [Real-time Customer Profile API developer guide](getting-started.md). In particular, the [getting started section](getting-started.md#getting-started) of the Profile developer guide includes links to related topics, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform APIs.
+The API endpoint used in this guide is part of the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 ## View delete requests
 
@@ -299,7 +299,7 @@ A successful delete request returns HTTP Status 200 (OK) and an empty response b
 
 ## Next Steps
 
-Now that you know the steps involved in deleting datasets and batches from the Profile store within Experience Platform, you can safely delete data that has been added erroneously or that your organization no longer needs. Please be mindful that a delete request cannot be undone, therefore you should only delete data that you are confident you do not need now and will not need in the future.
+Now that you know the steps involved in deleting datasets and batches from the Profile Store within Experience Platform, you can safely delete data that has been added erroneously or that your organization no longer needs. Please be mindful that a delete request cannot be undone, therefore you should only delete data that you are confident you do not need now and will not need in the future.
 
 ## Appendix {#appendix}
 
