@@ -7,39 +7,39 @@ topic: tutorials
 
 # Define a relationship between two schemas using the Schema Editor
 
-The ability to understand the relationships between your customers and their interactions with your brand across various channels is an important part of Adobe Experience Platform. Defining these relationships within the structure of your Experience Data Model (XDM) schemas allows you to gain complex insights into your customer data.
+The ability to understand the relationships between your customers and their interactions with your brand across various channels is an important part of Adobe Experience Platform. Defining these relationships within the structure of your [!DNL Experience Data Model] (XDM) schemas allows you to gain complex insights into your customer data.
 
-While schema relationships can be inferred through the use of the union schema and Real-time Customer Profile, this only applies to schemas that share the same class. To establish a relationship between two schemas belonging to different classes, a dedicated **relationship field** must be added to a source schema, which references the identity of a destination schema.
+While schema relationships can be inferred through the use of the union schema and [!DNL Real-time Customer Profile], this only applies to schemas that share the same class. To establish a relationship between two schemas belonging to different classes, a dedicated **relationship field** must be added to a source schema, which references the identity of a destination schema.
 
-This document provides a tutorial for defining a relationship between two schemas using the Schema Editor in the Experience Platform user interface. For steps on defining schema relationships using the API, see the tutorial on [defining a relationship using the Schema Registry API](relationship-api.md).
+This document provides a tutorial for defining a relationship between two schemas using the Schema Editor in the [!DNL Experience Platform] user interface. For steps on defining schema relationships using the API, see the tutorial on [defining a relationship using the Schema Registry API](relationship-api.md).
 
 ## Getting started
 
-This tutorial requires a working understanding of XDM System and the Schema Editor in the Experience Platform UI. Before beginning this tutorial, please review the following documentation:
+This tutorial requires a working understanding of [!DNL XDM System] and the Schema Editor in the [!DNL Experience Platform] UI. Before beginning this tutorial, please review the following documentation:
 
-* [XDM System in Experience Platform](../home.md): An overview of XDM and its implementation in Experience Platform.
+* [XDM System in Experience Platform](../home.md): An overview of XDM and its implementation in [!DNL Experience Platform].
 * [Basics of schema composition](../schema/composition.md): An introduction of the building blocks of XDM schemas.
 * [Create a schema using the Schema Editor](create-schema-ui.md): A tutorial covering the basics of working with the Schema Editor.
 
 ## Define a source and destination schema
 
-It is expected that you have already created the two schemas that will be defined in the relationship. For demonstration purposes, this tutorial creates a relationship between members of an organization's loyalty program (defined in a "Loyalty Members" schema) and their favorite hotels (defined in a "Hotels" schema).
+It is expected that you have already created the two schemas that will be defined in the relationship. For demonstration purposes, this tutorial creates a relationship between members of an organization's loyalty program (defined in a "[!UICONTROL Loyalty Members]" schema) and their favorite hotels (defined in a "[!DNL Hotels]" schema).
 
->[!IMPORTANT] In order to establish a relationship, both schemas must have defined primary identities and be enabled for Real-time Customer Profile. See the section on [enabling a schema for use in Profile](./create-schema-ui.md#profile) in the schema creation tutorial if you require guidance on how to configure your schemas accordingly.
+>[!IMPORTANT] In order to establish a relationship, both schemas must have defined primary identities and be enabled for [!DNL Real-time Customer Profile]. See the section on [enabling a schema for use in Profile](./create-schema-ui.md#profile) in the schema creation tutorial if you require guidance on how to configure your schemas accordingly.
 
-Schema relationships are represented by a dedicated field within a **source schema** that refers to another field within a **destination schema**. In the steps that follow, "Loyalty Members" will be the source schema, while "Hotels" will act as the destination schema.
+Schema relationships are represented by a dedicated field within a **source schema** that refers to another field within a **destination schema**. In the steps that follow, "[!UICONTROL Loyalty Members]" will be the source schema, while "[!DNL Hotels]" will act as the destination schema.
 
 For reference purposes, the following sections describe the structure of each schema used in this tutorial before a relationship has been defined.
 
 ### Loyalty Members schema
 
-The source schema "[!UICONTROL Loyalty Members]" is based on the XDM [!DNL Individual Profile] class, and is the schema that was constructed in the tutorial for [creating a schema in the UI](create-schema-ui.md). It includes a "[!UICONTROL loyalty]" object under its "\_tenantId" namespace, which includes several loyalty-specific fields. One of these fields, "loyaltyId", serves as the primary identity for the schema under the "[!UICONTROL Email]" namespace. As seen under _[!UICONTROL Schema Properties]_, this schema has been enabled for use in Real-time Customer Profile.
+The source schema "[!UICONTROL Loyalty Members]" is based on the XDM [!DNL Individual Profile] class, and is the schema that was constructed in the tutorial for [creating a schema in the UI](create-schema-ui.md). It includes a "[!UICONTROL loyalty]" object under its "\_tenantId" namespace, which includes several loyalty-specific fields. One of these fields, "loyaltyId", serves as the primary identity for the schema under the "[!UICONTROL Email]" namespace. As seen under _[!UICONTROL Schema Properties]_, this schema has been enabled for use in [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
 ### Hotels schema
 
-The destination schema "[!UICONTROL Hotels]" is based on a custom "Hotels" class, and contains fields that describe a hotel. The "[!UICONTROL email]" field serves as the primary identity for the schema under the "[!UICONTROL Email]" namespace. Like "[!UICONTROL Loyalty Members]", this schema has also been enabled for Real-time Customer Profile.
+The destination schema "[!UICONTROL Hotels]" is based on a custom "[!UICONTROL Hotels]" class, and contains fields that describe a hotel. The "[!UICONTROL email]" field serves as the primary identity for the schema under the "[!UICONTROL Email]" namespace. Like "[!UICONTROL Loyalty Members]", this schema has also been enabled for [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/relationship/hotels.png)
 
@@ -57,7 +57,7 @@ The _[!UICONTROL Add Mixin]_ dialog appears. From here, click **[!UICONTROL Crea
 
 <img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width=750><br>
 
-The canvas reappears with "Loyalty Relationship" appearing in the _[!UICONTROL Mixins]_ section. Click the mixin name, then click **[!UICONTROL Add Field]** next to the root-level "Loyalty Members" field.
+The canvas reappears with "[!UICONTROL Loyalty Relationship]" appearing in the _[!UICONTROL Mixins]_ section. Click the mixin name, then click **[!UICONTROL Add Field]** next to the root-level "[!UICONTROL Loyalty Members]" field.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
@@ -81,7 +81,7 @@ Select the reference field in the canvas, then scroll down under _[!UICONTROL Fi
 
 ![](../images/tutorials/relationship/relationship-checkbox.png)
 
-Click the dropdown for **[!UICONTROL Reference Schema]** and select the destination schema for the relationship ("[!UICONTROL Hotels]" in this example). If the destination schema is enabled for Profile, the **[!UICONTROL Reference Identity Namespace]** field is automatically set to the namespace of the destination schema's primary identity. If the schema does not have a primary identity defined, you must manually select the namespace that you plan to use from the dropdown menu. Click **[!UICONTROL Apply]** when finished.
+Select the dropdown for **[!UICONTROL Reference Schema]** and select the destination schema for the relationship ("[!UICONTROL Hotels]" in this example). If the destination schema is enabled for Profile, the **[!UICONTROL Reference Identity Namespace]** field is automatically set to the namespace of the destination schema's primary identity. If the schema does not have a primary identity defined, you must manually select the namespace that you plan to use from the dropdown menu. Click **[!UICONTROL Apply]** when finished.
 
 ![](../images/tutorials/relationship/reference-schema-id-namespace.png)
 
