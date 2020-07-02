@@ -356,7 +356,7 @@ curl -X POST \
 
 | Parameter | Description |
 | --- | --- |
-| `@type` | The type of descriptor being defined. For reference descriptors the value must be "xdm:descriptorReferenceIdentity".
+| `@type` | The type of descriptor being defined. For reference descriptors the value must be "xdm:descriptorReferenceIdentity". |
 | `xdm:sourceSchema` | The `$id` URL of the destination schema. |
 | `xdm:sourceVersion` | The version number of the destination schema. |
 | `sourceProperty` | The path to the destination schema's primary identity field. |
