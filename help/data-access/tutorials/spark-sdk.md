@@ -44,20 +44,33 @@ Other configuration parameters include:
 
 Alternatively, aside from `ENVIRONMENT_NAME`, you can set any of the above environment variables within `QSOption`, as seen in the example below:
 
-```spark
-    val df = spark.read
-      .format("com.adobe.platform.query")
-      .option(QSOption.userToken, userToken) // same as env var USER_TOKEN
-      .option(QSOption.imsOrg, "69A7534C5808063C0A494234@AdobeOrg") // same as env var ORG_ID
-      .option(QSOption.apiKey, "acp_foundation_queryService") // same as env var SERVICE_API_KEY
-      .option("mode", "interactive")
-      .option("query", "SELECT * FROM csv10000row_xcm_001 LIMIT 10")
-      .load()
+```scala
+val df = spark.read
+    .format("com.adobe.platform.query")
+    .option(QSOption.userToken, userToken) // same as env var USER_TOKEN
+    .option(QSOption.imsOrg, "69A7534C5808063C0A494234@AdobeOrg") // same as env var ORG_ID
+    .option(QSOption.apiKey, "acp_foundation_queryService") // same as env var SERVICE_API_KEY
+    .option("mode", "interactive")
+    .option("query", "SELECT * FROM csv10000row_xcm_001 LIMIT 10")
+    .load()
 ```
 
 ## Installation
 
-???
+Using the Spark SDK requires performance optimizations that need to be added to the `SparkSession`. You can apply them by using one of the following methods:
+
+Apply it directly to the current SparkSession:
+
+```scala
+import com.adobe.platform.query.QSOptimizations
+QSOptimizations.apply(spark)
+```
+
+Set the following conf before, or on SparkSession creation:
+
+```scala
+spark.sql.extensions = com.adobe.platform.query.QSSparkSessionExtensions
+```
 
 ## Reading a dataset
 
@@ -69,7 +82,7 @@ Batch mode uses Query Service's COPY command to generate Parquet result sets in 
 
 An example of reading a dataset in interactive mode can be seen below:
 
-```spark
+```scala
 val df = spark.read
       .format("com.adobe.platform.query")
       .option("user-token", {USER_TOKEN})
@@ -84,7 +97,7 @@ df.show()
 
 Similarly, an example of reading a dataset in batch mode can be seen below:
 
-```spark
+```scala
 val df = spark.read
       .format("com.adobe.platform.query")
       .option("user-token", {USER_TOKEN})
@@ -100,7 +113,47 @@ df.show()
 
 ### SELECT columns from the dataset
 
-The Spark SDK supports querying the 
+```scala
+df = df.select("column-a", "column-b").show()
+```
+
+### DISTINCT clause
+
+The DISTINCT clause allows you to fetch all the distinct values at a row/column level, removing all duplicate values from the response.
+
+An example of using the `distinct()` function can be seen below:
+
+```scala
+df = df.select("column-a", "column-b").distinct().show()
+```
+
+### WHERE clause
+
+The Spark SDK allows for two methods for filtering: Using an SQL expression or by filtering through conditions.
+
+An example of using these filtering functions can be seen below:
+
+#### SQL expression
+
+```scala
+df.where("age > 15")
+```
+
+#### Filtering conditions
+
+```scala
+df.where("age" > 15 || "name" = "Steve")
+```
+
+### ORDER BY clause
+
+The ORDER BY clause allows received results to be sorted by a specified column in a specific order (ascending or descending). In the Spark SDK, this is done by using the `sort()` function.
+
+An example of using the `sort()` function can be seen below:
+
+```scala
+df = df.sort($"column1", $"column2".desc)
+```
 
 ### LIMIT clause
 
@@ -108,8 +161,30 @@ The LIMIT clause allows users to limit the number of records received from the d
 
 An example of using the `limit()` function can be seen below:
 
-```spark
+```scala
 df = df.limit(100)
 ```
 
 ## Writing to a dataset
+
+The Spark SDK supports writing datasets. Users will first need to retrieve a previous dataset to write to a new dataset.
+
+```scala
+val df = spark.read
+      .format("com.adobe.platform.query")
+      .option("user-token", userToken)
+      .option("ims-org", "{IMS_ORG}")
+      .option("api-key", "{API_KEY}")
+      .option("mode", "interactive")
+      .option("dataset-id", "{DATASET_ID}")
+      .load()
+
+    df.write
+      .format("com.adobe.platform.query")
+      .option("user-token", {USER_TOKEN})
+      .option("service-token", {SERVICE_TOKEN})
+      .option("ims-org", "{IMS_ORG_ID})
+      .option("api-key", "{API_KEY}")
+      .option("create-dataset", "{DATASET_ID}")
+      .save()
+```

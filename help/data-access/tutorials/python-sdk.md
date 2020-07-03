@@ -141,7 +141,7 @@ df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experie
 
 ### ORDER BY clause
 
-The ORDER BY clause allows received results to be sorted by a specified column in a specific order (ascending or descending).
+The ORDER BY clause allows received results to be sorted by a specified column in a specific order (ascending or descending). In the Python SDK, this is done by using the `sort()` function.
 
 An example of using the `sort()` function can be seen below:
 
