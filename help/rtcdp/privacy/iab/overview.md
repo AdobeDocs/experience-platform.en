@@ -30,14 +30,18 @@ In addition, you should also be familiar with [destinations](../../destinations/
 
 ## Customer consent flow summary {#summary}
 
-After the system has been properly configured, the way in which Real-time CDP collects and processes customer consent data can be summarized as follows:
+After the system has been properly configured, the way in which Real-time CDP collects customer consent data can be summarized as follows:
 
-* A customer provides their consent preferences for data collection through a dialog on your website.
-* The customer's identity and corresponding consent data are collected using the Experience Platform Web SDK.
-* The collected consent data is ingested into a Profile-enabled dataset whose schema contains IAB consent fields.
-* Real-time Customer Profile updates the stored consent data for that customer's profile, based on the collected identity data.
-* Segmentation rules define specific consent values as a requirement for the profile's inclusion in exported segments.
-* Applicable destinations only accept data from activated segments if the appropriate consent string is included.
+1. A customer provides their consent preferences for data collection through a dialog on your website.
+1. Your CMP detects the consent preference change, and generates IAB consent data accordingly.
+1. Using the Experience Platform Web SDK, the generated consent data (returned by the CMP) is sent to Adobe Experience Platform.
+1. The collected consent data is ingested into a Profile-enabled dataset whose schema contains IAB consent fields.
+
+Once IAB consent data has successfully been ingested, the following processes take place in downstream Real-time CDP services:
+
+1. Real-time Customer Profile updates the stored consent data for that customer's profile, based on the collected identity data.
+1. Segmentation rules define specific consent values as a requirement for the profile's inclusion in exported segments.
+1. Applicable destinations only accept data from activated segments if the appropriate consent string is included.
 
 The rest of the sections in this document provide guidance on how to configure Real-time CDP and your data operations to fulfill the requirements described above.
 
@@ -53,13 +57,7 @@ Regardless of the method you use to collect the data, the goal is to generate a 
 
 In the TCF specification, consent strings are used to encode relevant details about a customer's consent settings, in terms of specific marketing purposes as defined by policies and vendors. Real-time CDP utilizes these strings to store the consent settings for each customer, and therefore a new consent string must be generated each time those settings change.
 
-Consent strings may only be created by a CMP that is registered with the IAB TCF. For more information on how to generate consent strings, refer to the [consent string formatting guide](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/IAB%20Tech%20Lab%20-%20Consent%20string%20and%20vendor%20list%20formats%20v2.md) in the IAB TCF GitHub repo.
-
-## Integrate the [!DNL Experience Platform] Web SDK to collect customer consent data {#sdk}
-
-Once you have configured your CMP to generate consent strings, you must integrate the [!DNL Experience Platform] Web SDK to collect those strings and send them to [!DNL Platform], along with the primary identity of the logged-in customer.
-
-This data should conform to the structure of the Profile Privacy XDM mixin, which is covered in the next section. For information on how to send XDM data using the SDK, see the document on [tracking events](../../../edge/fundamentals/tracking-events.md).
+Consent strings may only be created by a CMP that is registered with the IAB TCF. For more information on how to generate consent strings using your particular CMP, refer to the [consent string formatting guide](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/IAB%20Tech%20Lab%20-%20Consent%20string%20and%20vendor%20list%20formats%20v2.md) in the IAB TCF GitHub repo.
 
 ## Create a Profile-enabled dataset with IAB consent fields {#dataset}
 
@@ -70,6 +68,103 @@ Customer consent data must be sent to a Profile-enabled dataset whose schema con
 Once you have created a Profile-enabled dataset for collecting consent data, you must ensure that your merge policies have been configured to always include IAB consent fields in your customer profiles. This involves setting dataset precedence so that your consent dataset is prioritized over other potentially conflicting datasets.
 
 For more information on how to work with merge policies, refer to the [merge policies user guide](../../../profile/ui/merge-policies.md).
+
+## Integrate the [!DNL Experience Platform Web] SDK to collect customer consent data {#sdk}
+
+>[!NOTE] The use of the [!DNL Experience Platform Web] SDK is required in order to process consent data in Adobe Experience Platform. Visitor.js is currently not supported.
+>
+>Visitor.js is still supported for consent processing in Adobe Audience Manager, however, and compliance with TCF 2.0 only requires that the library is updated to version 5.0.
+
+Once you have configured your CMP to generate consent strings, you must integrate the [!DNL Experience Platform] Web SDK to collect those strings and send them to [!DNL Platform]. The [!DNL Platform] SDK provides two commands that can be used to send IAB consent data to Platform (explained in the subsections below), and should be used when a customer provides consent information for the first time, and anytime that consent changes thereafter.
+
+**The SDK does not interface with any CMPs out of the box**. It is up to you to determine integrate the SDK into your website, listen for consent changes, and call the appropriate command. 
+
+### Making consent-change commands
+
+The sections below provide examples of how each SDK command can be used in different scenarios.
+
+>[!NOTE] For an introduction to the common syntax for all [!DNL Platform] SDK commands, see the document on [executing commands](../../../edge/fundamentals/executing-commands.md).
+
+<!-- This data should conform to the structure of the Profile Privacy XDM mixin, which is covered in the next section. For information on how to send XDM data using the SDK, see the document on [tracking events](../../../edge/fundamentals/tracking-events.md). -->
+
+#### Using CMP consent-change hooks
+
+Many CMPs provide out-of-the-box hooks that listen to consent-change events. When these events occur, you can use the `setConsent` command to update that customer's consent data.
+
+The `setConsent` command expects two arguments: (1) a string that indicates the command type (in this case, "setConsent"), and (2) a payload that contains a `consent` array, which must contain at least one object that provides the required consent fields, as shown below:
+
+```js
+alloy("setConsent", {
+  consent: [{
+    standard: "IAB",
+    version: "2.0",
+    value: "CLcVDxRMWfGmWAVAHCENAXCkAKDAADnAABRgA5mdfCKZuYJez-NQm0TBMYA4oCAAGQYIAAAAAAEAIAEgAA.argAC0gAAAAAAAAAAAA",
+    gdprApplies: "true"
+  }]
+});
+```
+
+| Payload property | Description |
+| --- | --- |
+| `standard` | The consent standard being used. This value must be set to "IAB" for TCF 2.0 consent processing. |
+| `version` | The version number of the consent standard indicated under `standard`. This value must be set to "2.0" for TCF 2.0 consent processing. |
+| `value` | The base-64-encoded consent string generated by the CMP. |
+| `gdprApplies` | A Boolean value that indicates whether the GDPR applies to the currently logged-in customer. In order for TCF 2.0 to be enforced for this customer, the value must be set to "true". |
+
+The `setConsent` command should be used as part of a CMP hook that detects changes in consent settings. The following JavaScript provides an example of how the `setConsent` command can be used for OneTrust's `OnConsentChanged` hook:
+
+```js
+OneTrust.OnConsentChanged(function () {
+  // Retrieve the TCF 2.0 consent data generated by the CMP, and pass it to Alloy. 
+  __tcfapi("getTCData", 2, (data, success) => {
+    if (success) {
+      const { tcString, gdprApplies } = data;
+
+      alloy("setConsent", {
+        consent: [{
+          standard: "IAB",
+          version: "2.0",
+          value: tcString,
+          gdprApplies
+        }]
+      });
+    }
+  });
+});
+```
+
+#### Using events
+
+You can also collect TCF 2.0 consent data on every event triggered in [!DNL Platform] by using the `sendEvent` command.
+
+>[!NOTE] In order to use this method, you must have added the [!DNL Experience Event Privacy mixin] to your [!DNL Profile]-enabled [!DNL XDM ExperienceEvent] schema. See the section on [updating the ExperienceEvent schema](./dataset-preparation.md#event-schema) in the dataset preparation guide for steps on how to configure this.
+
+The `sendEvent` command should be used as a callback in appropriate event listeners on your website. The command expects two arguments: (1) a string that indicates the command type (in this case, "sendEvent"), and (2) a payload containing an `xdm` object that provides the required consent fields as JSON:
+
+```js
+alloy("sendEvent", {
+  xdm: {
+    "consentStrings": [{
+      "consentStandard": "IAB TCF",
+      "consentStandardVersion": "2.0",
+      "consentStringValue": "CLcVDxRMWfGmWAVAHCENAXCkAKDAADnAABRgA5mdfCKZuYJez-NQm0TBMYA4oCAAGQYIAAAAAAEAIAEgAA.argAC0gAAAAAAAAAAAA",
+      "gdprApplies": true
+    }]
+  }
+});
+```
+
+| Payload property | Description |
+| --- | --- |
+| `xdm.consentStrings` | An array that must contain at least one object that provides the required consent fields. |
+| `consentStandard` | The consent standard being used. This value must be set to "IAB" for TCF 2.0 consent processing. |
+| `consentStandardVersion` | The version number of the consent standard indicated under `standard`. This value must be set to "2.0" for TCF 2.0 consent processing. |
+| `consentStringValue` | The base-64-encoded consent string generated by the CMP. |
+| `gdprApplies` | A Boolean value that indicates whether the GDPR applies to the currently logged-in customer. In order for TCF 2.0 to be enforced for this customer, the value must be set to "true". |
+
+### Handling SDK responses
+
+All [!DNL Platform SDK] commands return promises that indicate whether the call succeeded or failed. You can then use these responses for additional logic such as displaying confirmation messages to the customer. See the section on [handling success or failure](../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) in the guide on executing SDK commands for specific examples.
 
 ## Export segments {#export}
 
