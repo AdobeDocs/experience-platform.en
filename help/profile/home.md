@@ -47,7 +47,7 @@ One of the key features of Real-time Customer Profile is the ability to unify mu
 
 When bringing data together from multiple sources and combining it in order to see a complete view of each of your individual customers, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create that unified view. Using RESTful APIs or the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. For more information on working with merge policies using the Real-time Customer Profile API, please see the [merge policies endpoint guide](api/merge-policies.md). To work with merge policies using the Experience Platform UI, refer to the [merge policies user guide](ui/merge-policies.md). 
 
-## (Alpha) Configure computed attributes
+### (Alpha) Configure computed attributes
 
 >[!IMPORTANT]
 >The computed attribute functionality outlined in this document is in alpha. The documentation and the functionality are subject to change.
@@ -73,7 +73,7 @@ Platform can be configured to send your record and time-series data to Profile, 
 >[!Note]
 >Data collected through Adobe solutions, including Analytics Cloud, Marketing Cloud, and Advertising Cloud, flows into Experience Platform and is ingested into Profile.
 
-### Profile streaming ingestion metrics
+### Profile ingestion metrics
 
 Observability Insights allows you to expose key metrics in Adobe Experience Platform. In addition to Platform usage statistics and performance indicators for various Platform functionalities, there are specific Profile-related metrics that allow you to gain insight into incoming request rates, successful ingestion rates, ingested record sizes, and more. To learn more, begin by reading the [Observability Insights overview](../observability/home.md), and for a complete list of Profile metrics, see the documentation on [available metrics](../observability/metrics.md).
 
