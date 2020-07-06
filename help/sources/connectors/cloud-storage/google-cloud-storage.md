@@ -29,8 +29,6 @@ To generate a new access key ID and a secret access key for your user account, s
 
 You can use your newly generated access key ID and secret access key to connect your [!DNL Google Cloud Storage] account to [!DNL Platform].
 
-The documentation below provides information on how to connect [!DNL Google Cloud Storage] to [!DNL Platform] using APIs or the user interface:
-
 ## Connect [!DNL Google Cloud Storage] to [!DNL Platform]
 
 The documentation below provides information on how to connect [!DNL Google Cloud Storage] to [!DNL Platform] using APIs or the user interface:
