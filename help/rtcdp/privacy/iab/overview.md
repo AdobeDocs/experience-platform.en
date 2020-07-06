@@ -172,13 +172,19 @@ Once you have collected customer consent data and have created audience segments
 
 ### Export to downstream destinations {#destinations}
 
-<!-- Which purposes does the user need to consent to in the CMP dialogue so that Real-time CDP can function properly? -->
+Any data that is exported to downstream destinations is filtered based on the consent preferences for each customer profile. Any profile that does not meet the require consent preferences is skipped during the export process.
 
-<!-- Mention how different vendors cross-check if the other ones have the necessary consent permissions from the user. -->
+Customers must consent to the following purposes (as outlined by [TCF 2.0 policies](https://iabeurope.eu/iab-europe-transparency-consent-framework-policies/#Appendix_A_Purposes_and_Features_Definitions)) in order for their profiles to be included in segments that are exported to destinations:
 
+* **Purpose 1**: Store and/or access information on a device
+* **Purpose 10**: Develop and improve products
+
+These required purposes are specific to [!DNL Real-time CDP]. Different vendors will cross-check for their own required purposes if segments are shared between them.
+
+<!-- (To obtain clarity on this from Shelby Farmer)
 ### Shared segments with Experience Cloud applications {#experience-cloud}
 
-<!-- How is consent conveyed when segments are shared (e.g. via Segue) with other solutions. The person to ask here might be Shelby Farmer. -->
+How is consent conveyed when segments are shared (e.g. via Segue) with other solutions. The person to ask here might be Shelby Farmer. -->
 
 ## Test your implementation {#test-implementation}
 
