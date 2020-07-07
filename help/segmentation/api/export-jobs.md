@@ -36,10 +36,10 @@ GET /export/jobs?status={STATUS}
 
 **Request**
 
-The following request will retrieve all export jobs with the status "SUCCEEDED" within your IMS Organization.
+The following request will retrieve the last two export jobs within your IMS Organization.
 
 ```shell
-curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?status=SUCCEEDED \
+curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
@@ -187,7 +187,7 @@ The following response returns HTTP status 200 with a list of successfully compl
 
 | Property | Description |
 | -------- | ----------- |
-| `destination` | Destination information for the exported data:<ul><li>`datasetId`: The ID of the dataset where data was exported.</li><li>`segmentPerBatch`: A Boolean value that shows whether or not segment IDs are consolidated. A value of "false" means all the segment IDs were into a single batch ID. A value of "true" means that one segment ID is exported into one batch ID.</li></ul> |
+| `destination` | Destination information for the exported data:<ul><li>`datasetId`: The ID of the dataset where data was exported.</li><li>`segmentPerBatch`: A Boolean value that shows whether or not segment IDs are consolidated. A value of "false" means all the segment IDs are exported into a single batch ID. A value of "true" means that one segment ID is exported into one batch ID. **Note:** Setting the value to true may affect batch export performance.</li></ul> |
 | `fields` | A list of the exported fields, separated by commas. |
 | `schema.name` | The name of the schema associated with the dataset where data is to be exported. |
 | `filter.segments` | The segments that are exported. The following fields are included:<ul><li>`segmentId`: The segment ID that profiles will be exported to.</li><li>`segmentNs`: Segment namespace for the given `segmentID`.</li><li>`status`: An array of strings providing a status filter for the `segmentID`. By default, `status` will have the value `["realized", "existing"]` which represents all profiles that fall into the segment at the current time. Possible values include: "realized", "existing", and "exited".</li></ul> |
@@ -339,6 +339,33 @@ A successful response returns HTTP status 200 with details of your newly created
 }
 ```
 
+| Property | Description |
+| -------- | ----------- |
+| `id` | A system-generated read-only value identifying the export job that was just created. |
+
+Alternatively, if `destination.segmentPerBatch` had been set to `true`, the `destination` object above would have a `batches` array, as shown below:
+
+```json
+    "destination": {
+        "dataSetId" : "{DATASET_ID}",
+        "segmentPerBatch": true,
+        "batches" : [
+            {
+                "segmentId": "segment1",
+                "segmentNs": "ups",
+                "status": ["realized"],
+                "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
+            },
+            {
+                "segmentId": "segment2",
+                "segmentNs": "AdCloud",
+                "status": "exited",
+                "batchId": "df4gssdfb93a09f7e37fa53ad52"
+            }
+        ]
+    }
+```
+
 ## Retrieve a specific export job {#get}
 
 You can retrieve detailed information about a specific export job by making a GET request to the `/export/jobs` endpoint and providing the ID of the export job you wish to retrieve in the request path.
@@ -356,7 +383,7 @@ GET /export/jobs/{EXPORT_JOB_ID}
 **Request**
 
 ```shell
-curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_ID} \
+curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
@@ -369,7 +396,7 @@ A successful response returns HTTP status 200 with detailed information about th
 
 ```json
 {
-    "id": 100,
+    "id": 11037,
     "jobType": "BATCH",
     "destination": {
         "datasetId": "5b7c86968f7b6501e21ba9df",
@@ -393,21 +420,21 @@ A successful response returns HTTP status 200 with detailed information about th
             }
         ]
     },
-    "mergePolicy":{
-        "id":"timestampOrdered-none-mp",
-        "version":1
+    "mergePolicy": {
+        "id": "timestampOrdered-none-mp",
+        "version": 1
     },
-    "profileInstanceId":"ups",
-    "metrics":{
-        "totalTime":{
-            "startTimeInMs":123456789000,
-            "endTimeInMs":123456799000,
-            "totalTimeInMs":10000
+    "profileInstanceId": "ups",
+    "metrics": {
+        "totalTime": {
+            "startTimeInMs": 123456789000,
+            "endTimeInMs": 123456799000,
+            "totalTimeInMs": 10000
         },
-        "profileExportTime":{
-            "startTimeInMs":123456789000,
-            "endTimeInMs":123456799000,
-            "totalTimeInMs":10000
+        "profileExportTime": {
+            "startTimeInMs": 123456789000,
+            "endTimeInMs": 123456799000,
+            "totalTimeInMs": 10000
         },
         "totalExportedProfileCounter": 20,
         "exportedProfileByNamespaceCounter": {
@@ -415,12 +442,12 @@ A successful response returns HTTP status 200 with detailed information about th
             "namespace2": 5
         }
     },
-    "computeGatewayJobId":{
-        "exportJob":"f3058161-7349-4ca9-807d-212cee2c2e94"
+    "computeGatewayJobId": {
+        "exportJob": "f3058161-7349-4ca9-807d-212cee2c2e94"
     },
-    "creationTime":1538615973895,
-    "updateTime":1538616233239,
-    "requestId":"d995479c-8a08-4240-903b-af469c67be1f"
+    "creationTime": 1538615973895,
+    "updateTime": 1538616233239,
+    "requestId": "d995479c-8a08-4240-903b-af469c67be1f"
 }
 ```
 
@@ -434,89 +461,6 @@ A successful response returns HTTP status 200 with detailed information about th
 | `metrics.totalTime` | A field indicating the total time that export job took to run. |
 | `metrics.profileExportTime` | A field indicating the time it took for the profiles to export. |
 | `totalExportedProfileCounter` | The total number of profile exported across all batches. |
-
-The destination and merge metric objects differ when `segmentPerBatch = false`, compared to when `segmentPerBatch = true`. The differences are shown in the examples below.
-
-**`segmentPerBatch` is false**
-
-```json
-{
-    "destination": {
-        "datasetId": "5b7c86968f7b6501e21ba9df",
-        "segmentPerBatch": false,
-        "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
-    },
-    "metrics": {
-        "totalTime": {
-            "startTimeInMs": 123456789000,
-            "endTimeInMs": 123456799000,
-            "totalTimeInMs": 10000
-        },
-        "profileExportTime": {
-            "startTimeInMs": 123456789000,
-            "endTimeInMs": 123456799000,
-            "totalTimeInMs": 10000
-        },
-        "totalExportedProfileCounter": 20,
-        "exportedProfileByNamespaceCounter": {
-            "namespace1": 10,
-            "namespace2": 5
-        }
-    }
-}
-```
-
-**`segmentPerBatch` is true**
-
-```json
-{
-    "destination": {
-        "dataSetId" : "<DATASET_ID>",
-        "segmentPerBatch": true,
-        "batches" : [
-            {
-                "segmentId": "segment1",
-                "segmentNs": "ups",
-                "status": ["realized"],
-                "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
-            },
-            {
-                "segmentId": "segment2",
-                "segmentNs": "AdCloud",
-                "status": "exited",
-                "batchId": "df4gssdfb93a09f7e37fa53ad52"
-            }
-        ]
-    },
-    "metrics": {
-        "totalTime": {
-            "startTimeInMs": 123456789000,
-            "endTimeInMs": 123456799000,
-            "totalTimeInMs": 10000
-        },
-        "profileExportTime": {
-            "startTimeInMs": 123456789000,
-            "endTimeInMs": 123456799000,
-            "totalTimeInMs": 10000
-        },
-        "totalExportedProfileCounter": 20,
-        "exportedProfileCounter": {
-            "segmentId1": 10,
-            "segmentId2": 5
-        },
-        "exportedProfileByNamespaceCounter": {
-            "segmentId1": {
-                "namespace1": 8,
-                "namespace2": 5
-            },
-            "segmentId2": {
-                "namespace1": 3,
-                "namespace2": 5
-            }
-        }
-    }
-}
-```
 
 ## Cancel or delete a specific export job {#delete}
 

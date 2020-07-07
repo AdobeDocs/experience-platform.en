@@ -21,7 +21,7 @@ For more information on using this endpoint, please read the [export jobs endpoi
 
 ## Previews and estimates
 
-Previews provide a paginated list of qualifying profiles for a segment definition, allowing you to compare the results against what you expect. You can use the `/preview` endpoint to create a new preview job, look up results of a specific preview job, or delete a specific preview job.
+Previews provide a paginated list of qualifying profiles for a segment definition, allowing you to compare the results against what you expect. You can use the `/preview` endpoint to create a new preview job or look up results of a specific preview job.
 
 Estimates provide statistical information for segment definitions, such as projected audience size and confidence interval. You can use the `/estimate` endpoint to view an estimate of a segment definition. 
 

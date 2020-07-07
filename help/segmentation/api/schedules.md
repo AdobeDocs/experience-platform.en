@@ -19,7 +19,7 @@ You can retrieve a list of all schedules for your IMS Organization by making a G
 
 **API format**
 
-The `/config/schedules` endpoint supports several query parameters to help filter your results. While these parameters are optional, their use is strongly recommended to help reduce expensive overhead. Making a call to this endpoint with no parameters will retrieve all export jobs available for your organization. Multiple parameters can be included, separated by ampersands (`&`). 
+The `/config/schedules` endpoint supports several query parameters to help filter your results. While these parameters are optional, their use is strongly recommended to help reduce expensive overhead. Making a call to this endpoint with no parameters will retrieve all schedules available for your organization. Multiple parameters can be included, separated by ampersands (`&`). 
 
 ```http
 GET /config/schedules
@@ -48,10 +48,12 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 
 A successful response returns HTTP status 200 with a list of schedules for the specified IMS organization as JSON. 
 
+>[!NOTE] The following response has been truncated for space, and shows only the first schedule returned.
+
 ```json
 {
     "_page": {
-        "totalCount": 1,
+        "totalCount": 10,
         "pageSize": 1
     },
     "children": [
@@ -179,7 +181,7 @@ GET /config/schedules/{SCHEDULE_ID}
 **Request**
 
 ```shell
-curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/{SCHEDULE_ID}
+curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
@@ -225,13 +227,13 @@ A successful response returns HTTP status 200 with detailed information about th
 
 ## Update details for a specific schedule {#update}
 
-You can update the specified schedule by making a PATCH request to the `/config/schedules` endpoint and providing the ID of the schedule you are trying to update in the request path.
+You can update a specific schedule by making a PATCH request to the `/config/schedules` endpoint and providing the ID of the schedule you are trying to update in the request path.
 
 The PATCH request allows you to update either the [state](#update-state) or the [cron schedule](#update-schedule) for an individual schedule.
 
 ### Update schedule state {#update-state}
 
-You can use the JSON Patch path `/state` to update the state of the schedule - ACTIVE or INACTIVE. To update the state, you will need to set the value as `active` or `inactive`.
+You can use a JSON Patch operation to update the state of the schedule. To update the state, you declare the `path` property as `/state` and set the `value` to either `active` or `inactive`. For more information about JSON Patch, please read the [JSON Patch](http://jsonpatch.com/) documentation.
 
 **API format**
 
@@ -246,7 +248,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 **Request**
 
 ```shell
-curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/{SCHEDULE_ID} \
+curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
@@ -270,9 +272,9 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/{SCHEDUL
 
 A successful response returns HTTP status 204 (No Content).
 
-### Update schedule's cron schedule {#update-schedule}
+### Update cron schedule {#update-schedule}
 
-You can use the JSON Patch path `schedule` to update the cron schedule. For more information about cron schedules, please read the [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation.
+You can use a JSON Patch operation to update the cron schedule. To update the schedule, you declare the `path` property as `/schedule` and set the `value` to a valid cron schedule. For more information about JSON Patch, please read the [JSON Patch](http://jsonpatch.com/) documentation. For more information about cron schedules, please read the [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation.
 
 **API format**
 
@@ -287,7 +289,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 **Request**
 
 ```shell
-curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/{SCHEDULE_ID} \
+curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
@@ -328,7 +330,7 @@ DELETE /config/schedules/{SCHEDULE_ID}
 **Request**
 
 ```shell
-curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/{SCHEDULE_ID} \
+curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \

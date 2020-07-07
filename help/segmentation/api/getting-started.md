@@ -16,7 +16,7 @@ The developer guide requires a working understanding of the various Experience P
 - [!DNL Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 - [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully use [!DNL Segmentation] using the API.
+The following sections provide additional information that you will need to know in order to successfully work with the [!DNL Segmentation] API.
 
 ## Reading sample API calls
 
@@ -38,4 +38,4 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 
 ## Next steps
 
-To being making calls using the [!DNL Segmentation Service] API, select one of the available endpoint guides either using the left navigation rail or withing the [developer guider overview](./overview.md)
+To being making calls using the [!DNL Segmentation Service] API, select one of the available endpoint guides either using the left navigation or within the [developer guide overview](./overview.md)

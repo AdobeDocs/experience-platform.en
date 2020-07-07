@@ -11,15 +11,15 @@ As you develop your segment definition, you can use the estimate and preview too
 
 ## Getting started
 
-The endpoints used in this guide are part of the [!DNL Adobe Experience Platform] Segmentation Service API. Before reading this guide, please refer to the [getting started document guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
+The endpoints used in this guide are part of the [!DNL Adobe Experience Platform] [!DNL Segmentation Service] API. Before reading this guide, please refer to the [getting started document guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
 
 ## How estimates are generated
 
 The way data sampling gets triggered depends on the method of ingestion.
 
-For batch ingestion the profile store is automatically scanned every fifteen minutes to see if a newly successful batch was ingested since the last sampling job was run. If that is the case, the profile store is subsequently scanned to see if there's been at least a 5% change in the number of records. If these conditions are met, a new sampling job is triggered.
+For batch ingestion, the profile store is automatically scanned every fifteen minutes to see if a new batch was successfully ingested since the last sampling job was run. If that is the case, the profile store is subsequently scanned to see if there's been at least a 5% change in the number of records. If these conditions are met, a new sampling job is triggered.
 
-For streaming ingestion the profile store is automatically scanned every hour to see if there's been at least a 5% change in the number of records. If this condition is met, a new sampling job is triggered.
+For streaming ingestion, the profile store is automatically scanned every hour to see if there's been at least a 5% change in the number of records. If this condition is met, a new sampling job is triggered.
 
 The sample size of the scan depends on the overall number of entities in your profile store. These sample sizes are represented in the following table:
 
@@ -29,11 +29,13 @@ The sample size of the scan depends on the overall number of entities in your pr
 | 1 to 20 million | 1 million |
 | Over 20 million | 5% of total |
 
-Estimates generally run over 10-15 seconds, beginning with a rough estimate and refining as more records are read.
+>[!NOTE] Estimates generally take 10 to 15 seconds to run, beginning with a rough estimate and refining as more records are read.
 
 ## Create a new preview {#create-preview}
 
 You can create a new preview by making a POST request to the `/preview` endpoint.
+
+>[!NOTE] An estimate job is automatically created when a preview job is created. These two jobs will share the same ID.
 
 **API format**
 
@@ -68,8 +70,6 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 
 A successful response returns HTTP status 201 (Created) with details of your newly created preview.
 
->[!NOTE] An estimate job is automatically created when a preview job is created. These two jobs will share the same ID.
-
 ```json
 {
     "state": "NEW",
@@ -85,7 +85,7 @@ A successful response returns HTTP status 201 (Created) with details of your new
 | `state` | The current state of the preview job. When initially created, it will be in the "NEW" state. Subsequently, it will be in the "RUNNING" state until processing is complete, at which point it becomes "RESULT_READY" or "FAILED". |
 | `previewId` | The ID of the preview job, to be used for lookup purposes when viewing an estimate or preview, as outlined in the next section. |
 
-## Retrieve a specific preview's results {#get-preview}
+## Retrieve the results of a specific preview {#get-preview}
 
 You can retrieve detailed information about a specific preview by making a GET request to the `/preview` endpoint and providing the preview ID in the request path.
 
@@ -216,41 +216,6 @@ A successful response returns HTTP status 200 with details of the estimate job.
 | -------- | ----------- |
 | `state` | The current state of the preview job. Will be "RUNNING" until processing is complete, at which point it becomes "RESULT_READY" or "FAILED". |
 | `_links.preview` | When the preview job's current state is "RESULT_READY", this attribute provides a URL to view the estimate. |
-
-## Cancel or delete a specific preview {#delete-preview}
-
-You can delete a specific preview by making a DELETE request to the `/preview` endpoint and by providing the ID of the preview you wish to delete in the request path.
-
-**API format**
-
-```http
-DELETE /preview/{PREVIEW_ID}
-```
-
-| Property | Description |
-| -------- | ----------- |
-| `{PREVIEW_ID}` | The `previewId` value of the preview you want to delete. |
-
-**Request**
-
-```shell
-curl -X DELETE https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgtM2YzMS00YjY0LThkODQtYWNkMGM0ZmJkYWQzOmU4OTAwNjhiLWY1Y2EtNGE4Zi1hNmI1LWFmODdmZjBjYWFjMzow \
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Response**
-
-A successful response returns HTTP status 200 with the following message:
-
-```json
-{
-    "status": true,
-    "message": "KILLED"
-}
-```
 
 ## Next steps
 
