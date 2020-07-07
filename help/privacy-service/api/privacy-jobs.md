@@ -356,8 +356,8 @@ A successful response returns the details of the specified job.
     "requestId": "15700479082313109RX-899",
     "userKey": "David Smith",
     "action": "access",
-    "status": "error",
-    "submittedBy": "02b38adf-6573-401e-b4cc-6b08dbc0e61c@techacct.adobe.com",
+    "status": "complete",
+    "submittedBy": "{ACCOUNT_ID}",
     "createdDate": "10/02/2019 08:25 PM GMT",
     "lastModifiedDate": "10/02/2019 08:25 PM GMT",
     "userIds": [
@@ -382,8 +382,21 @@ A successful response returns the details of the specified job.
             "retryCount": 0,
             "processedDate": "10/02/2019 08:25 PM GMT",
             "productStatusResponse": {
-                "status": "submitted",
-                "message": "processing"
+                "status": "complete",
+                "message": "Success",
+                "responseMsgCode": "PRVCY-6000-200",
+                "responseMsgDetail": "Finished successfully."
+            }
+        },
+        {
+            "product": "Profile",
+            "retryCount": 0,
+            "processedDate": "10/02/2019 08:25 PM GMT",
+            "productStatusResponse": {
+                "status": "complete",
+                "message": "Success",
+                "responseMsgCode": "PRVCY-6000-200",
+                "responseMsgDetail": "Success dataSetIds = [5dbb87aad37beb18a96feb61], Failed dataSetIds = []"
             }
         },
         {
@@ -391,8 +404,14 @@ A successful response returns the details of the specified job.
             "retryCount": 0,
             "processedDate": "10/02/2019 08:25 PM GMT",
             "productStatusResponse": {
-                "status": "submitted",
-                "message": "processing"
+                "status": "complete",
+                "message": "Success",
+                "responseMsgCode": "PRVCY-6054-200",
+                "responseMsgDetail": "PARTIALLY COMPLETED- Data not found for some requests, check results for more info.",
+                "results": {
+                  "processed": ["1123A4D5690B32A"],
+                  "ignored": ["dsmith@acme.com"]
+                }
             }
         }
     ],
@@ -403,19 +422,24 @@ A successful response returns the details of the specified job.
 
 | Property | Description |
 | --- | --- |
-| `productStatusResponse` | The current status of the job. Details about each possible status are provided in the table below. |
+| `productStatusResponse` | Each object within the `productResponses` array contains information about the current status of the job with respect to a specific [!DNL Experience Cloud] application.|
+| `productStatusResponse.status` | The job's current status category. See the table below for a list of [available status categories](#status-categories) and their corresponding meanings. |
+| `productStatusResponse.message` | The job's specific status, corresponding to the status category. |
+| `productStatusResponse.responseMsgCode` | A standard code for product response messages received by Privacy Service. The details of the message are provided under `responseMsgDetail`. |
+| `productStatusResponse.responseMsgDetail` | A more detailed explanation of the job's status. Messages for similar statuses may vary between products.|
+| `productStatusResponse.results` | For certain statuses, some products may return a `results` object that provides additional information not covered by `responseMsgDetail`. |
 | `downloadURL` | If the status of the job is `complete`, this attribute provides a URL to download the job results as a ZIP file. This file is available to download for 60 days after the job completes. |
 
-### Job status responses
+### Job status categories {#status-categories}
 
-The following table lists the different possible job statuses and their corresponding meaning:
+The following table lists the different possible job status categories and their corresponding meaning:
 
-| Status Code | Status Message | Meaning |
-| ----------- | -------------- | -------- |
-| 1 | Complete | Job is complete and (if required) files are uploaded from every application. |
-| 2 | Processing | Applications have acknowledged the job and are currently processing. |
-| 3 | Submitted | Job is submitted to every applicable application. |
-| 4 | Error | Something failed in the processing of the job - more specific information may be obtained by retrieving individual job details. |
+| Status category | Meaning |
+| -------------- | -------- |
+| Complete | Job is complete and (if required) files are uploaded from every application. |
+| Processing | Applications have acknowledged the job and are currently processing. |
+| Submitted | Job is submitted to every applicable application. |
+| Error | Something failed in the processing of the job - more specific information may be obtained by retrieving individual job details. |
 
 >[!NOTE] A submitted job might remain in a processing state if it has a dependent child job that is still processing.
 
