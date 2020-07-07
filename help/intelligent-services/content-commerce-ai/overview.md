@@ -1,6 +1,6 @@
 ---
-keywords: Experience Cloud;getting started;content and commerce ai;popular topics;Intelligent Service
-solution: Experience Cloud; Intelligent Service
+keywords: Experience Cloud;getting started;content and commerce ai;popular topics;Intelligent Services
+solution: Experience Cloud; Intelligent Services
 title: Content and Commerce AI overview
 topic: Content and Commerce AI 
 ---
