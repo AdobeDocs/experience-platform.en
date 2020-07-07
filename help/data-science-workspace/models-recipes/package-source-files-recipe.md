@@ -170,8 +170,9 @@ Next, navigate to the directory `experience-platform-dsw-reference/recipes/scala
 # for building Docker image
 ./build.sh
 ```
+
 >[!TIP]
->If you are receiving a permission error when trying to login to Docker using the `login.sh` script, try letting bash run it for you by using the command `bash login.sh`.
+>If you are receiving a permission error when trying to login to Docker using the `login.sh` script, try using the command `bash login.sh`.
 
 When executing the login script, you need to provide the Docker host, username, and password. When building, you are required to provide the Docker host and a version tag for the build.
 
