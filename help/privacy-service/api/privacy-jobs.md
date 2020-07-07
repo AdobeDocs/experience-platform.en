@@ -9,6 +9,47 @@ topic: developer guide
 
 The following sections walk through calls you can make using the `/jobs` endpoint in the Privacy Service API. Each call includes the general API format, a sample request showing required headers, and a sample response.
 
+## List all jobs {#list}
+
+You can view a list of all available job requests within your organization by making a GET request to the root (`/`) endpoint.
+
+**API format**
+
+This request format uses a `regulation` query parameter on the root (`/`) endpoint, therefore it begins with a question mark (`?`) as shown below. The response is paginated, allowing you to use other query parameters (`page` and `size`) to filter the response. You can separate multiple parameters using ampersands (`&`).
+
+```http
+GET /jobs?regulation={REGULATION}
+GET /jobs?regulation={REGULATION}&page={PAGE}
+GET /jobs?regulation={REGULATION}&size={SIZE}
+GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
+```
+
+| Parameter | Description |
+| --- | --- |
+| `{REGULATION}` | The regulation type to query for. Accepted values are `gdpr`, `ccpa`, and `pdpa_tha`. |
+| `{PAGE}` | The page of data to be displayed, using 0-based numbering. The default is `0`. |
+| `{SIZE}` | The number of results to display on each page. The default is `1` and the maximum is `100`. Exceeding the maximum causes the API to return a 400-code error. |
+
+**Request**
+
+The following request retrieves a paginated list of all jobs within an IMS Organization, starting from the third page with a page size of 50.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/privacy/jobs?regulation=gdpr&page=2&size=50 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}'
+```
+
+**Response**
+
+A successful response returns a list of jobs, with each job containing details such as its `jobId`. In this example, the response would contain a list of 50 jobs, starting on the third page of results. 
+
+### Accessing subsequent pages
+
+To fetch the next set of results in a paginated response, you must make another API call to the same endpoint while increasing the `page` query parameter by 1.
+
 ## Create a privacy job {#create-job}
 
 Before creating a new job request, you must first collect identifying information about the data subjects whose data you want to access, delete, or opt out of sale. Once you have the required data, it must be provided in the payload of a POST request to the root endpoint.
@@ -291,7 +332,7 @@ GET /jobs/{JOB_ID}
 
 | Parameter | Description |
 | --- | --- |
-| `{JOB_ID}` | The ID of the job you want to look up, returned under `jobId` in the response of the [previous step](#create-job). |
+| `{JOB_ID}` | The ID of the job you want to look up. This ID is returned under `jobId` in the API responses for [creating a job](#create-job) and [listing all jobs](#list). |
 
 **Request**
 
@@ -377,47 +418,6 @@ The following table lists the different possible job statuses and their correspo
 | 4 | Error | Something failed in the processing of the job - more specific information may be obtained by retrieving individual job details. |
 
 >[!NOTE] A submitted job might remain in a processing state if it has a dependent child job that is still processing.
-
-## List all jobs
-
-You can view a list of all available job requests within your organization by making a GET request to the root (`/`) endpoint.
-
-**API format**
-
-This request format uses a `regulation` query parameter on the root (`/`) endpoint, therefore it begins with a question mark (`?`) as shown below. The response is paginated, allowing you to use other query parameters (`page` and `size`) to filter the response. You can separate multiple parameters using ampersands (`&`).
-
-```http
-GET /jobs?regulation={REGULATION}
-GET /jobs?regulation={REGULATION}&page={PAGE}
-GET /jobs?regulation={REGULATION}&size={SIZE}
-GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
-```
-
-| Parameter | Description |
-| --- | --- |
-| `{REGULATION}` | The regulation type to query for. Accepted values are `gdpr`, `ccpa`, and `pdpa_tha`. |
-| `{PAGE}` | The page of data to be displayed, using 0-based numbering. The default is `0`. |
-| `{SIZE}` | The number of results to display on each page. The default is `1` and the maximum is `100`. Exceeding the maximum causes the API to return a 400-code error. |
-
-**Request**
-
-The following request retrieves a paginated list of all jobs within an IMS Organization, starting from the third page with a page size of 50.
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/privacy/jobs?regulation=gdpr&page=2&size=50 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
-```
-
-**Response**
-
-A successful response returns a list of jobs, with each job containing details such as its `jobId`. In this example, the response would contain a list of 50 jobs, starting on the third page of results. 
-
-### Accessing subsequent pages
-
-To fetch the next set of results in a paginated response, you must make another API call to the same endpoint while increasing the `page` query parameter by 1.
 
 ## Next steps
 
