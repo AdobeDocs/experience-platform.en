@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;getting started;content and commerce ai;popular topics
+keywords: Experience Cloud;getting started;content and commerce ai;popular topics
 solution: Experience Platform
 title: Content and Commerce AI overview
-topic: Concent and Commerce AI 
+topic: Content and Commerce AI 
 ---
 
 # Content and Commerce AI overview
@@ -22,7 +22,10 @@ Images | - Visual recommendations <br> - Color extraction | - Deliver visually s
 
 ## Understanding Content and Commerce AI 
 
-The following workflow outlines the three steps Content and Commerce AI assists with to improve customer driven KPI's.
+The overall vision of Content and Commerce AI is broken down into three steps to realize optimal customer engagement and maximize customer-driven KPIs. 
+
+>[!NOTE]
+>For Beta, Content and Commerce AI is focusing on testing the foundation step in the journey (step 1).
 
 **Step 1: Understanding the Content**
 - Extract intelligent features and metadata.
@@ -41,14 +44,8 @@ The following workflow outlines the three steps Content and Commerce AI assists 
 
 ## Getting started with Content and Commerce AI
 
-Content and Commerce AI utilizes Adobe Experience Platforms APIs. In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+Content and Commerce AI utilizes Adobe Experience Clouds APIs. In order to make calls to [!DNL Experience Cloud] APIs through Adobe I/O and the I/O Console Integration, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Cloud] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
-
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
-
-- x-sandbox-name: `{SANDBOX_NAME}`
-
-For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
