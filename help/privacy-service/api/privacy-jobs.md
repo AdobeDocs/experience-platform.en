@@ -7,15 +7,15 @@ topic: developer guide
 
 # Privacy jobs
 
-The following sections walk through calls you can make using the `/jobs` endpoint in the Privacy Service API. Each call includes the general API format, a sample request showing required headers, and a sample response.
+This document covers how to work with privacy jobs using API calls. Specifically, it covers the use of the `/job` endpoint in the Privacy Service API. Before reading this guide, refer to the [getting started section](./getting-started.md#getting-started) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
 
 ## List all jobs {#list}
 
-You can view a list of all available job requests within your organization by making a GET request to the root (`/`) endpoint.
+You can view a list of all available privacy jobs within your organization by making a GET request to the `/jobs` endpoint.
 
 **API format**
 
-This request format uses a `regulation` query parameter on the root (`/`) endpoint, therefore it begins with a question mark (`?`) as shown below. The response is paginated, allowing you to use other query parameters (`page` and `size`) to filter the response. You can separate multiple parameters using ampersands (`&`).
+This request format uses a `regulation` query parameter on the `/jobs` endpoint, therefore it begins with a question mark (`?`) as shown below. The response is paginated, allowing you to use other query parameters (`page` and `size`) to filter the response. You can separate multiple parameters using ampersands (`&`).
 
 ```http
 GET /jobs?regulation={REGULATION}
@@ -52,9 +52,9 @@ To fetch the next set of results in a paginated response, you must make another 
 
 ## Create a privacy job {#create-job}
 
-Before creating a new job request, you must first collect identifying information about the data subjects whose data you want to access, delete, or opt out of sale. Once you have the required data, it must be provided in the payload of a POST request to the root endpoint.
+Before creating a new job request, you must first collect identifying information about the data subjects whose data you want to access, delete, or opt out of sale. Once you have the required data, it must be provided in the payload of a POST request to the `/jobs` endpoint.
 
->[!NOTE] Compatible Adobe Experience Cloud applications use different values for identifying data subjects. See the guide on [Privacy Service and Experience Cloud applications](../experience-cloud-apps.md) for more information on required identifiers for your application(s).
+>[!NOTE] Compatible Adobe Experience Cloud applications use different values for identifying data subjects. See the guide on [Privacy Service and Experience Cloud applications](../experience-cloud-apps.md) for more information on required identifiers for your application(s). For more general guidance on determining which IDs to send to Privacy Service, see the document on [identity data in privacy requests](../identity-data.md).
 
 The Privacy Service API supports two kinds of job requests for personal data:
 
@@ -320,7 +320,7 @@ Once you have successfully submitted the job request, you can proceed to the nex
 
 ## Check the status of a job {#check-status}
 
-Using one of the `jobId` values returned in the previous step, you can retrieve information about that job, such as its current processing status.
+You can retrieve information about a specific job, such as its current processing status, by including that job's `jobId` in the path of a GET request to the `/jobs` endpoint.
 
 >[!IMPORTANT] Data for previously created jobs is only available for retrieval within 30 days of the job's completion date.
 
@@ -332,7 +332,7 @@ GET /jobs/{JOB_ID}
 
 | Parameter | Description |
 | --- | --- |
-| `{JOB_ID}` | The ID of the job you want to look up. This ID is returned under `jobId` in the API responses for [creating a job](#create-job) and [listing all jobs](#list). |
+| `{JOB_ID}` | The ID of the job you want to look up. This ID is returned under `jobId` in successful API responses for [creating a job](#create-job) and [listing all jobs](#list). |
 
 **Request**
 
@@ -352,7 +352,7 @@ A successful response returns the details of the specified job.
 
 ```json
 {
-    "jobId": "527ef92d-6cd9-45cc-9bf1-477cfa1e2ca2",
+    "jobId": "6fc09b53-c24f-4a6c-9ca2-c6076b0842b6",
     "requestId": "15700479082313109RX-899",
     "userKey": "David Smith",
     "action": "access",
