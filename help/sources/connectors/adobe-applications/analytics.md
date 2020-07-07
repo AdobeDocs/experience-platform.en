@@ -7,7 +7,7 @@ topic: overview
 
 # Analytics Data Connector
 
-Adobe Experience Platform allows you to ingest Adobe Analytics data through the Analytics Data Connector (ADC). ADC streams data collected by Adobe Analytics to Platform in real-time, converting SCDS-formated Analytics data into Experience Data Model (XDM) fields for consumption by Platform.
+Adobe Experience Platform allows you to ingest Adobe Analytics data through the Analytics Data Connector (ADC). ADC streams data collected by Adobe Analytics to [!DNL Platform] in real-time, converting SCDS-formatted Analytics data into Experience Data Model (XDM) fields for consumption by [!DNL Platform].
 
 This document provides an overview of Adobe Analytics and describes the use-cases for Analytics data.
 
