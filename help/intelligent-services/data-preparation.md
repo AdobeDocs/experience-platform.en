@@ -21,7 +21,7 @@ If your data is stored outside of [!DNL Experience Platform], follow the steps b
 
 1. Contact Adobe Consulting Services to request access credentials for a dedicated Azure Blob Storage container.
 1. Using your access credentials, upload your data to the Blob container.
-1. Work with Adobe Consulting Services to map your data to the [Consumer ExperienceEvent schema](#cee-schema) and ingest it into Intelligent Services.
+1. Work with Adobe Consulting Services get your data mapped to the [Consumer ExperienceEvent schema](#cee-schema) and ingested into Intelligent Services.
 
 ### [!DNL Experience Platform] data preparation
 
@@ -34,6 +34,8 @@ If your data is already stored in [!DNL Platform], follow the steps below:
 
 The Consumer ExperienceEvent schema describes the behavior of an individual as it relates to digital marketing events (web or mobile) as well as online or offline commerce activity. The use of this schema is required for Intelligent Services because of its semantically well-defined fields (columns), avoiding any unknown names that would otherwise make the data less clear.
 
+The CEE schema, like all XDM ExperienceEvent schemas, captures the time-series-based state of the system when an event (or set of events) occurred, including the point in time and the identity of the subject involved. Experience Events are fact records of what occurred, and thus they are immutable and represent what happened without aggregation or interpretation.
+
 Intelligent Services utilize several key fields within this schema to generate insights from your marketing events data, all of which can be found at the root level and expanded to show their required subfields.
 
 ![](./images/data-preparation/schema-expansion.gif)
@@ -44,13 +46,38 @@ A complete example of the mixin can be found in the [public XDM repository](http
 
 ## Key fields
 
-The sections below highlight the key fields within the CEE mixin which should be utilized in order for Intelligent Services to generate useful insights, including descriptions and links to reference documentation for further examples.
+There are several key fields within the CEE mixin which should be utilized in order for Intelligent Services to generate useful insights. This section describes the use case and expected data for these fields, and provides links to reference documentation for further examples.
 
->[!IMPORTANT] The `xdm:channel` field (explained in the first section below) is **required** in order for Attribution AI to work with your data, while Customer AI does not have any mandatory fields. All other key fields are strongly recommended, but not mandatory.
+### Mandatory fields
 
-### xdm:channel
+While the use of all key fields is strongly recommended, there are two fields that are **required** in order for Intelligent Services to work:
 
-This field represents the marketing channel related to the ExperienceEvent. The field includes information about the channel type, media type, and location type. **This field _must_ be provided in order for Attribution AI to work with your data**.
+* [A primary identity field](#identity)
+* [xdm:timestamp](#timestamp)
+* [xdm:channel](#channel) (mandatory only for Attribution AI)
+
+#### Primary identity {#identity}
+
+One of the fields in your schema must be set as a primary identity field, which allows Intelligent Services to link each instance of time-series data to an individual person.
+
+You must determine the best field to use as a primary identity based on the source and nature of your data. An identity field must include an **identity namespace** that indicates the type of identity data the field expects as a value. Some valid namespace values include:
+
+* "email"
+* "phone"
+* "mcid" (for Adobe Audience Manager IDs)
+* "aaid" (for Adobe Analytics IDs)
+
+If you are unsure which field you should use as a primary identity, contact Adobe Consulting Services to determine the best solution.
+
+#### xdm:timestamp {#timestamp}
+
+This field represents the datetime at which the event occurred. This value must be provided as a string, as per the ISO 8601 standard.
+
+#### xdm:channel {#channel}
+
+>[!NOTE] This field is only mandatory when using Attribution AI.
+
+This field represents the marketing channel related to the ExperienceEvent. The field includes information about the channel type, media type, and location type.
 
 ![](./images/data-preparation/channel.png)
 
@@ -67,7 +94,7 @@ This field represents the marketing channel related to the ExperienceEvent. The 
 
 For complete information regarding each of the required sub-fields for `xdm:channel`, please refer to the [experience channel schema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) spec. For some example mappings, see the [table below](#example-channels).
 
-#### Example channel mappings {#example-channels}
+##### Example channel mappings {#example-channels}
 
 The following table provides some examples of marketing channels mapped to the `xdm:channel` schema:
 
@@ -82,7 +109,11 @@ The following table provides some examples of marketing channels mapped to the `
 | QR Code Redirect | https:/<span>/ns.adobe.com/xdm/channel-types/direct | owned | clicks |
 | Mobile | https:/<span>/ns.adobe.com/xdm/channel-types/mobile | owned | clicks |
 
-### xdm:productListItems
+### Recommended fields
+
+The remainder of key fields are outlined in this section. While these fields aren't necessarily required for Intelligent Services to work, it is strongly recommended that you use as many of them as possible in order to gain richer insights.
+
+#### xdm:productListItems
 
 This field is an array of items which represent products selected by a customer, including the product SKU, name, price, and quantity.
 
@@ -111,7 +142,7 @@ This field is an array of items which represent products selected by a customer,
 
 For complete information regarding each of the required sub-fields for `xdm:productListItems`, please refer to the [commerce details schema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) spec.
 
-### xdm:commerce
+#### xdm:commerce
 
 This field contains commerce-specific information about the ExperienceEvent, including the purchase order number and payment information.
 
@@ -149,7 +180,7 @@ This field contains commerce-specific information about the ExperienceEvent, inc
 
 For complete information regarding each of the required sub-fields for `xdm:commerce`, please refer to the [commerce details schema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) spec.
 
-### xdm:web
+#### xdm:web
 
 This field represents web details relating to the ExperienceEvent, such as the interaction, page details, and referrer.
 
@@ -179,7 +210,7 @@ This field represents web details relating to the ExperienceEvent, such as the i
 
 For complete information regarding each of the required sub-fields for `xdm:productListItems`, please refer to the [ExperienceEvent web details schema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-web.schema.md) spec.
 
-### xdm:marketing
+#### xdm:marketing
 
 This field contains information related to marketing activities that are active with the touchpoint.
 
@@ -227,7 +258,13 @@ Once you have created and saved the schema, you can create a new dataset based o
 * [Create a dataset in the UI](../catalog/datasets/user-guide.md#create) (Follow the workflow for using an existing schema)
 * [Create a dataset in the API](../catalog/datasets/create.md)
 
+After the dataset is created, you can find it in the Platform UI within the *[!UICONTROL Datasets]* workspace.
+
+![](images/data-preparation/dataset-location.png)
+
 #### Add a primary identity namespace tag to the dataset
+
+>[!NOTE] Future releases of Intelligent Services will integrate [Adobe Experience Platform Identity Service](../identity-service/home.md) into their customer identification capabilities. As such, the steps outlined below are subject to change.
 
 If you are bringing in data from [!DNL Adobe Audience Manager], [!DNL Adobe Analytics], or another external source, then you must add a `primaryIdentityNameSpace` tag to the dataset. This can be done by making a PATCH request to the Catalog Service API.
 

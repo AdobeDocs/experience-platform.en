@@ -5,16 +5,9 @@ title: Optimize a model
 topic: Tutorial
 ---
 
-# Optimize a model
+# Optimize a model using the Model Insights framework
 
-
-This tutorial will go over:
-
-- Configuring Recipe code  
-- Defining custom metrics  
-- Using pre-built evaluation metrics and visualization charts  
-
-By the end of this tutorial, you should be able to configure recipe code, define custom metrics, use pre-built evaluation metrics and default visualization charts.
+The Model Insights Framework provides the data scientist with tools in [!DNL Data Science Workspace] to make quick and informed choices for optimal machine learning models based on experiments. The framework will improve the speed and effectiveness of the machine learning workflow as well as improving ease of use for data scientists. This is done by providing a default template for each machine learning algorithm type to assist with model tuning. The end result allows data scientists and citizen data scientists to make better model optimization decisions for their end customers.
 
 ## What are metrics?
 
@@ -24,15 +17,11 @@ After implementing and training a model, the next step a data scientist would do
 - Confusion matrix
 - Classification report
 
-## What is the Model Insights Framework?
-
-The Model Insights Framework provides the data scientist with tools in Data Science Workspace to make quick and informed choices for optimal machine learning models based on experiments. The framework will improve the speed and effectiveness of the machine learning workflow as well as improving ease of use for data scientists. This is done by providing a default template for each machine learning algorithm type to assist with model tuning. The end result allows data scientists and citizen data scientists to make better model optimization decisions for their end customers.
-
 ## Configuring recipe code
 
 Currently, the Model Insights Framework supports the following runtimes:
 - [Scala](#scala)
-- [Python/Tensorflow](#pythontensorflow)
+- [!DNL Python/Tensorflow](#pythontensorflow)
 - [R](#r)
 
 Sample code for recipes can be found in the [experience-platform-dsw-reference](https://github.com/adobe/experience-platform-dsw-reference) repository under `recipes`. Specific files from this repository will be referenced throughout this tutorial.
@@ -99,19 +88,19 @@ Once defined in the recipe, the next step is to enable it in the recipes. This i
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 
-In the Data Science Workspace, the user would be able to see the insights in the "Evaluation Metrics" tab in the experiment page.
+In the [!DNL Data Science Workspace], the user would be able to see the insights in the "Evaluation Metrics" tab in the experiment page.
 
-### Python/Tensorflow {#pythontensorflow}
+### [!DNL Python/Tensorflow] {#pythontensorflow}
 
-As of now, there are no default evaluation metrics for Python or Tensorflow. Thus, to get the evaluation metrics for Python or Tensorflow, you will need to create a custom evaluation metric. This can be done by implementing the `Evaluator` class.
+As of now, there are no default evaluation metrics for [!DNL Python] or [!DNL Tensorflow]. Thus, to get the evaluation metrics for [!DNL Python] or [!DNL Tensorflow], you will need to create a custom evaluation metric. This can be done by implementing the `Evaluator` class.
 
-#### Custom evaluation metrics for Python
+#### Custom evaluation metrics for [!DNL Python]
 
 For custom evaluation metrics, there are two main methods that need to be implemented for the evaluator: `split()` and `evaluate()`. 
 
-For Python, these methods would be defined in [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) for the `Evaluator` class. Follow the [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) link for an example of the `Evaluator`.
+For [!DNL Python], these methods would be defined in [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) for the `Evaluator` class. Follow the [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) link for an example of the `Evaluator`.
 
-Creating evaluation metrics in Python requires the user to implement the `evaluate()` and `split()` methods. 
+Creating evaluation metrics in [!DNL Python] requires the user to implement the `evaluate()` and `split()` methods. 
 
 The `evaluate()` method returns the metric object which contains an array of metric objects with properties of `name`, `value`, and `valueType`. 
 
@@ -121,7 +110,7 @@ The `split()` method should return a training and testing dataframe which is the
 
 #### Custom evaluation metrics for Tensorflow
 
-For Tensorflow, similar to Python, the methods `evaluate()` and `split()` in the `Evaluator` class will need to be implemented. For `evaluate()`, the metrics should be returned while `split()` returns the train and test data sets. 
+For [!DNL Tensorflow], similar to [!DNL Python], the methods `evaluate()` and `split()` in the `Evaluator` class will need to be implemented. For `evaluate()`, the metrics should be returned while `split()` returns the train and test data sets. 
 
 ```PYTHON
 from ml.runtime.python.Interfaces.AbstractEvaluator import AbstractEvaluator
@@ -156,7 +145,7 @@ Data is first loaded to a dataset from a source as defined in [retail.config.jso
 
 ## Using pre-built metrics and visualization charts
 
-The Sensei Model Insights Framework will support one default template for each type of machine learning algorithm. The table below shows common high-level machine learning algorithm classes and corresponding evaluation metrics and visualizations. 
+The [!DNL Sensei Model Insights Framework] will support one default template for each type of machine learning algorithm. The table below shows common high-level machine learning algorithm classes and corresponding evaluation metrics and visualizations. 
 
 ML Algorithm Type | Evaluation Metrics | Visualizations
 --- | --- | ---

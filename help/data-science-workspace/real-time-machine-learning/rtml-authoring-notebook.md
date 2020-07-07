@@ -18,7 +18,7 @@ In the Adobe Experience Platform UI, select **[!UICONTROL Notebooks]** from with
 
 ![open JupyterLab](../images/rtml/open-jupyterlab.png)
 
-The JupyterLab launcher appears. Scroll down to *Real-Time Machine Learning* and select the **Real-time ML** notebook. A template opens containing example notebook cells with an example dataset.
+The [!DNL JupyterLab] launcher appears. Scroll down to *Real-Time Machine Learning* and select the **[!UICONTROL Real-time ML]** notebook. A template opens containing example notebook cells with an example dataset.
 
 ![blank python](../images/rtml/authoring-notebook.png)
 
@@ -63,7 +63,7 @@ pprint(nf.discover_nodes())
 
 ## Training a Real-time Machine Learning model
 
-Using one of the following options, you are going to write Python code to read, preprocess, and analyze data. Next, you need to train your own ML model, serialize it into ONNX format then upload it to Real-time Machine Learning model store.
+Using one of the following options, you are going to write [!DNL Python] code to read, preprocess, and analyze data. Next, you need to train your own ML model, serialize it into ONNX format then upload it to Real-time Machine Learning model store.
 
 - [Training your own model in JupyterLab notebooks](#training-your-own-model)
 - [Uploading your own pre-trained ONNX model to JupyterLab notebooks](#pre-trained-model-upload)
@@ -73,7 +73,7 @@ Using one of the following options, you are going to write Python code to read, 
 Start by loading your training data.
 
 >[!NOTE]
->In the **Real-time ML** template, the [car insurance CSV dataset](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) is grabbed from Github.
+>In the **Real-time ML** template, the [car insurance CSV dataset](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) is grabbed from [!DNL Github].
 
 ![Load traning data](../images/rtml/load_training.png)
 
@@ -81,7 +81,7 @@ If you wish to use a dataset from within Adobe Experience Platform, uncomment th
 
 ![rtml dataset](../images/rtml/rtml-dataset.png)
 
-To access a dataset in your JupyterLab notebook, select the **Data** tab in the left-navigation of JupyterLab. The *Datasets* and *Schemas* directories appear. Select **[!UICONTROL Datasets]** and right-click, then select the **[!UICONTROL Explore Data in Notebook]** option from the dropdown menu on the dataset you wish to use. An executable code entry appears at the bottom of the notebook. This cell has your `dataset_id`.
+To access a dataset in your [!DNL JupyterLab] notebook, select the **Data** tab in the left-navigation of [!DNL JupyterLab]. The *[!UICONTROL Datasets]* and *[!UICONTROL Schemas]* directories appear. Select **[!UICONTROL Datasets]** and right-click, then select the **[!UICONTROL Explore Data in Notebook]** option from the dropdown menu on the dataset you wish to use. An executable code entry appears at the bottom of the notebook. This cell has your `dataset_id`.
 
 ![dataset access](../images/rtml/access-dataset.png)
 
@@ -102,11 +102,11 @@ config_properties = {
 
 ### Prepare your model
 
-Using the *Real-time ML* template, you need to analyze, pre-process, train, and evaluate your ML model. This is done by applying data transformations and building a training pipeline.
+Using the *[!UICONTROL Real-time ML]* template, you need to analyze, pre-process, train, and evaluate your ML model. This is done by applying data transformations and building a training pipeline.
 
 **Data tranformations**
 
-The *Real-time ML* templates *Data Transformations* cell needs to be modified to work with your own dataset. Typically this involves renaming columns, data rollup, and data preparation/feature engineering. 
+The *[!UICONTROL Real-time ML]* templates *Data Transformations* cell needs to be modified to work with your own dataset. Typically this involves renaming columns, data rollup, and data preparation/feature engineering. 
 
 >[!NOTE]
 >The following example has been condensed for readability purposes using `[ ... ]`. Please view and expand the *Real-time ML* templates data transformations section for the complete code cell.
@@ -254,7 +254,7 @@ print("Model ID : ", model_id)
 
 ### Uploading your own pre-trained ONNX model {#pre-trained-model-upload}
 
-Using the upload button located in JupyterLab notebooks, upload your pre-trained ONNX model to the Data Science Workspace notebooks environment.
+Using the upload button located in [!DNL JupyterLab] notebooks, upload your pre-trained ONNX model to the [!DNL Data Science Workspace] notebooks environment.
 
 ![upload icon](../images/rtml/upload.png)
 
@@ -314,7 +314,7 @@ nodes = [json_df_node,
         onnx_node]
 ```
 
-Next, connect the nodes with edges. Each tuple is an Edge connection.
+Next, connect the nodes with edges. Each tuple is an [!DNL Edge] connection.
 
 >[!TIP]
 > As the nodes are linearly dependent on each other (each node depends on previous node's output), you can create links using a simple Python list comprehension. Please add your own connections if a node depends on multiple inputs.
@@ -339,10 +339,10 @@ Once complete, an `edge` object is returned containing each of the nodes and the
 >[!NOTE]
 >Real-time Machine Learning is temporarily deployed to and managed by the Adobe Expereince Platform Hub. For additional details, visit the overview section on [Real-time Machine Learning architecture](./home.md#architecture).
 
-Now that you have created a DSL graph, you can deploy your graph to the Edge.
+Now that you have created a DSL graph, you can deploy your graph to the [!DNL Edge].
 
 >[!IMPORTANT]
->Do not publish to Edge often, this can overload the Edge nodes. Publishing the same model multiple times is not recommended.
+>Do not publish to [!DNL Edge] often, this can overload the [!DNL Edge] nodes. Publishing the same model multiple times is not recommended.
 
 ```python
 edge_utils = EdgeUtils()
@@ -358,7 +358,7 @@ If you do not need to update your DSL, you can skip to [scoring](#scoring).
 >[!NOTE]
 >The following cells are only required if you wish to update an existing DSL that has been published to Edge.
 
-Your models are likely to continue to develop. Rather than creating a whole new service, it is possible to update an existing service with your new model. You can define a node you wish to update, assign it a new ID, then re-upload the new DSL to the Edge. 
+Your models are likely to continue to develop. Rather than creating a whole new service, it is possible to update an existing service with your new model. You can define a node you wish to update, assign it a new ID, then re-upload the new DSL to the [!DNL Edge]. 
 
 In the example below, node 0 is updated with a new ID.
 
@@ -390,7 +390,7 @@ You are returned the updated DSL.
 
 ## Scoring {#scoring}
 
-After publishing to Edge, scoring is done by a POST request from a client. Typically, this can be done from a client application that needs ML scores. You can also do it from Postman. The *Real-time ML* template uses EdgeUtils to demonstrate this process.
+After publishing to [!DNL Edge], scoring is done by a POST request from a client. Typically, this can be done from a client application that needs ML scores. You can also do it from Postman. The *[!UICONTROL Real-time ML]* template uses EdgeUtils to demonstrate this process.
 
 >[!NOTE]
 >A small processing time is required before scoring starts.
@@ -407,15 +407,15 @@ Using the same schema that was used in training, sample scoring data is generate
 
 ### Score against the Edge endpoint
 
-Use the following cell within the *Real-time ML* template to score against your Edge service.
+Use the following cell within the *Real-time ML* template to score against your [!DNL Edge] service.
 
 ![Score against edge](../images/rtml/scoring-edge.png)
 
-Once scoring is complete, the Edge URL, Payload, and scored output from the Edge are returned. 
+Once scoring is complete, the [!DNL Edge] URL, Payload, and scored output from the [!DNL Edge] are returned. 
 
-## List your deployed apps from the Edge
+## List your deployed apps from the [!DNL Edge]
 
-To generate a list of your currently deployed apps on the edge run the following code cell. This cell cannot be edited or deleted.
+To generate a list of your currently deployed apps on the [!DNL Edge], run the following code cell. This cell cannot be edited or deleted.
 
 ```python
 services = edge_utils.list_deployed_services()
@@ -436,10 +436,10 @@ The response returned is an array of your deployed services.
 ]
 ```
 
-## Delete a deployed app or service id from the Edge (optional)
+## Delete a deployed app or service id from the [!DNL Edge] (optional)
 
 >[!CAUTION]
->This cell is used to delete your deployed Edge application. Do not use the following cell unless you need to delete a deployed Edge application. 
+>This cell is used to delete your deployed Edge application. Do not use the following cell unless you need to delete a deployed [!DNL Edge] application. 
 
 ```python
 if edge_utils.delete_from_edge(service_id=service_id):

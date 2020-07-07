@@ -73,7 +73,7 @@ Before starting this tutorial, familiarize yourself with the following terms whi
 
 ### Swagger documentation 
 
-You can find accompanying reference documentation for all the API calls in this tutorial in Swagger. See https://platform.adobe.io/data/foundation/flowservice/swagger#/. We recommend that you use this tutorial and the Swagger documentation page in parallel.
+You can find accompanying reference documentation for all the API calls in this tutorial in Swagger. See the [Flow Service API documentation on Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). We recommend that you use this tutorial and the Swagger documentation page in parallel.
 
 ## Get the list of available destinations {#get-the-list-of-available-destinations}
 
