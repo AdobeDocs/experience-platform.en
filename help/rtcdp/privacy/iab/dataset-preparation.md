@@ -70,7 +70,7 @@ The example below shows the schema fields provided by both consent mixins, and t
 | --- | --- |
 | `xdm:optOutConsentLevel` | Contains an array of opt-out objects, used for general and sale opt-outs. While included in the Profile Privacy mixin, these are not required for TCF 2.0 compliance. |
 | `xdm:identityPrivacyInfo` | Contains privacy information for individual customers, organized by identity namespace and value. In the above example, a single customer is identified under the `ECID` namespace, with a value of `24162382913728446`. |
-| `xdm:identityIABConsent` | Each customer identity within `xdm:identityPrivacyInfo` must contain this field its associated subfields in order to update those customers' consent settings in [!DNL Profile]. |
+| `xdm:identityIABConsent` | Each customer identity within `xdm:identityPrivacyInfo` must contain this field and its associated subfields in order to update those customers' consent settings in [!DNL Profile]. |
 | `xdm:consentTimestamp` | The datetime of when the consent update occurred, in ISO 8601 format. |
 | `xdm:consentString` | Contains the customer's updated consent data and other contextual information. |
 | `xdm:consentStandard` | The consent framework that the data applies to. For TCF compliance, the value should be "IAB TCF". |

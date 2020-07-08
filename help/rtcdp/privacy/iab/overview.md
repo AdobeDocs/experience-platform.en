@@ -42,16 +42,24 @@ After the system has been properly configured, the way in which Real-time CDP co
 Once IAB consent data has successfully been ingested, the following processes take place in downstream Real-time CDP services:
 
 1. Real-time Customer Profile updates the stored consent data for that customer's profile.
-1. Segmentation rules define specific consent values as a requirement for the profile's inclusion in exported segments.
-1. Applicable destinations only accept data from activated segments if the appropriate consent string is included.
+1. Segmentation rules define specific consent attributes and values as a requirement for the profile's inclusion in exported segments.
+1. Real-time CDP processes customer IDs only if the vendor permission for Real-time CDP (565) is provided for every ID in a cluster.
+1. When exporting segments to destinations belonging to members of the TCF 2.0 vendor list, Real-time CDP includes only includes profiles in exported segments if the vendor permission for vendor 565 is provided for every ID in a cluster.
 
 The rest of the sections in this document provide guidance on how to configure Real-time CDP and your data operations to fulfill the requirements described above.
 
 ## Determine how to generate customer consent data within your CMP {#consent-data}
 
-Since each CMP system is unique, you must determine the best way to allow your customers to provide consent as they interact with your service. A common way to achieve this is through the use of a cookie disclaimer dialog, similar to the following example:
+Since each CMP system is unique, you must determine the best way to allow your customers to provide consent as they interact with your service. A common way to achieve this is through the use of a cookie consent dialog, similar to the following example:
 
-<img src="../assets/iab/cmp-dialog.png" width=600px /><br />
+![](../assets/iab/cmp-dialog.png)
+
+This dialog must allow the customer to opt in or out of the following:
+
+| Consent option | Description |
+| --- | --- |
+| **Purposes** | Purposes define which ad tech purposes a brand can use a customer's data for. The following purposes must be opted into in order for Real-time CDP to process customer IDs: <ul><li>**Purpose 1**: Store and/or access information on a device</li><li>**Purpose 10**: Develop and improve products</li></ul> |
+| **Vendor permissions** | In addition to ad tech purposes, the dialog must also allow the customer to opt in or out of having their data used by specific vendors, including Real-time CDP (565). |
 
 ### Consent strings {#consent-strings}
 
@@ -69,25 +77,23 @@ Customer consent data must be sent to a Profile-enabled dataset whose schema con
 
 Once you have created a Profile-enabled dataset for collecting consent data, you must ensure that your merge policies have been configured to always include IAB consent fields in your customer profiles. This involves setting dataset precedence so that your consent dataset is prioritized over other potentially conflicting datasets.
 
-For more information on how to work with merge policies, refer to the [merge policies user guide](../../../profile/ui/merge-policies.md).
+For more information on how to work with merge policies, refer to the [merge policies user guide](../../../profile/ui/merge-policies.md). When setting up your merge policies, you must ensure that your segments include all the required consent attributes provided by the [XDM privacy mixin](./dataset-preparation.md#privacy-mixin), as outlined in the guide on dataset preparation.
 
 ## Integrate the [!DNL Experience Platform Web] SDK to collect customer consent data {#sdk}
 
->[!NOTE] The use of the [!DNL Experience Platform Web] SDK is required in order to process consent data in Adobe Experience Platform. Visitor.js is currently not supported.
+>[!NOTE] The use of the [!DNL Experience Platform Web] SDK is required in order to process consent data in Adobe Experience Platform. Experience Cloud Identity Service is currently not supported.
 >
->Visitor.js is still supported for consent processing in Adobe Audience Manager, however, and compliance with TCF 2.0 only requires that the library is updated to version 5.0.
+>Experience Cloud Identity Service is still supported for consent processing in Adobe Audience Manager, however, and compliance with TCF 2.0 only requires that the library is updated to [version 5.0](https://github.com/Adobe-Marketing-Cloud/id-service/releases).
 
 Once you have configured your CMP to generate consent strings, you must integrate the [!DNL Experience Platform] Web SDK to collect those strings and send them to [!DNL Platform]. The [!DNL Platform] SDK provides two commands that can be used to send IAB consent data to Platform (explained in the subsections below), and should be used when a customer provides consent information for the first time, and anytime that consent changes thereafter.
 
-**The SDK does not interface with any CMPs out of the box**. It is up to you to determine integrate the SDK into your website, listen for consent changes, and call the appropriate command. 
+**The SDK does not interface with any CMPs out of the box**. It is up to you to determine how to integrate the SDK into your website, listen for consent changes in the CMP, and call the appropriate command. 
 
 ### Making consent-change commands
 
 The sections below provide examples of how each SDK command can be used in different scenarios.
 
 >[!NOTE] For an introduction to the common syntax for all [!DNL Platform] SDK commands, see the document on [executing commands](../../../edge/fundamentals/executing-commands.md).
-
-<!-- This data should conform to the structure of the Profile Privacy XDM mixin, which is covered in the next section. For information on how to send XDM data using the SDK, see the document on [tracking events](../../../edge/fundamentals/tracking-events.md). -->
 
 #### Using CMP consent-change hooks
 
@@ -170,22 +176,26 @@ All [!DNL Platform SDK] commands return promises that indicate whether the call 
 
 ## Export segments {#export}
 
-Once you have collected customer consent data and have created audience segments containing that data, you can then enforce TCF 2.0 compliance when exporting those segments to downstream destinations.
+>[!NOTE] Before you start exporting segments, you must ensure that your segments include all required consent fields. See the section on [configuring merge policies](#merge-policies) for more information.
 
-Any data that is exported to downstream destinations is filtered based on the consent preferences for each customer profile. Any profile that does not meet the require consent preferences is skipped during the export process.
+Once you have collected customer consent data and have created audience segments containing the required consent attributes, you can then enforce TCF 2.0 compliance when exporting those segments to downstream destinations.
+
+Any data that is exported to downstream destinations is filtered based on the consent preferences for each customer profile. Any profile that does not meet the required consent preferences is skipped during the export process.
 
 Customers must consent to the following purposes (as outlined by [TCF 2.0 policies](https://iabeurope.eu/iab-europe-transparency-consent-framework-policies/#Appendix_A_Purposes_and_Features_Definitions)) in order for their profiles to be included in segments that are exported to destinations:
 
 * **Purpose 1**: Store and/or access information on a device
 * **Purpose 10**: Develop and improve products
 
-While these purposes are required for [!DNL Real-time CDP], different vendors will cross-check for their own required purposes if segments are shared between them.
+TCF 2.0 also requires that the source of data must check the destination's vendor permission before sending data to that destination. As such, [!DNL Real-time CDP] checks if the destination's vendor permission is opted in to for all IDs in the cluster before including data bound to that destination.
 
->[!NOTE] Any segments that are shared with Adobe Audience Manager will contain the same TCF 2.0 consent values as their [!DNL Platform] counterparts. Since [!DNL Audience Manager] shares the same vendor ID as [!DNL Real-time CDP] (565), the same purposes are required. See the document on the [Adobe Audience Manager plug-in for IAB TCF](https://docs.adobe.com/help/en/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html) for more information.
+>[!NOTE] Any segments that are shared with Adobe Audience Manager will contain the same TCF 2.0 consent values as their [!DNL Platform] counterparts. Since [!DNL Audience Manager] shares the same vendor ID as [!DNL Real-time CDP] (565), the same purposes and vendor permission are required. See the document on the [Adobe Audience Manager plug-in for IAB TCF](https://docs.adobe.com/help/en/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html) for more information.
 
 ## Test your implementation {#test-implementation}
 
-Once you have configured your TCF 2.0 implementation and have exported segments to destinations, any data that does not meet consent requirements will not be exported. However, in order to see whether the the right customer profiles were filtered during the export, you must manually check the data stores on your destinations to see if consent was properly enforced.
+Once you have configured your TCF 2.0 implementation and have exported segments to destinations, any data that does not meet consent requirements will not be exported. However, in order to see whether the right customer profiles were filtered during the export, you must manually check the data stores on your destinations to see if consent was properly enforced.
+
+It is important to note that if multiple IDs make up a cluster and TCF 2.0 applies, the entire cluster will be excluded if even a single ID has not opted in to the correct purposes and vendor permissions.
 
 ## Next steps
 
