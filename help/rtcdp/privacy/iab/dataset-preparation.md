@@ -61,7 +61,9 @@ While each privacy mixin varies in structure and the types of fields they contai
 
 In the [!DNL Platform] UI, click **[!UICONTROL Schemas]** in the left navigation to open the *[!UICONTROL Schemas] workspace*. From the **[!UICONTROL Browse]** tab, create a new schema based on the **[!DNL XDM Individual Profile] class**. If you wish to track consent preference changes over time, you must also create a separate schema based on the **XDM ExperienceEvent class**.
 
->[!NOTE] If you have existing XDM schemas that you want to use to capture consent data instead, you can edit those schemas instead of creating new ones.
+>[!NOTE]
+>
+>If you have existing XDM schemas that you want to use to capture consent data instead, you can edit those schemas instead of creating new ones.
 
 The sections below explain how to add the appropriate consent mixins for each schema.
 
@@ -87,7 +89,9 @@ In order for [!DNL Real-time CDP] to associate the consent data it receives to s
 
 To enable the schema for [!DNL Profile], you must first choose a **primary identity** for the schema. Depending on the types of data you collect from your customers, you may need to add additional mixins to the schema in order to represent the customer's unique identity.
 
->[!NOTE] If you require further guidance on which field to set as a primary identity, review the [!DNL Identity Service] documentation. In particular, the overview on [identity namespaces](../../../identity-service/namespaces.md) provides important information on different accepted identity types.
+>[!NOTE]
+>
+>If you require further guidance on which field to set as a primary identity, review the [!DNL Identity Service] documentation. In particular, the overview on [identity namespaces](../../../identity-service/namespaces.md) provides important information on different accepted identity types.
 
 In this example, an email address field is set as the primary identity. Select the field from the canvas, then select the **[!UICONTROL Identity]** and **[!UICONTROL Primary identity]** checkboxes in the right-hand rail. Next, select the appropriate identity namespace in the provided dropdown menu before clicking **[!UICONTROL Apply]**.
 
@@ -100,7 +104,9 @@ Once you have applied a primary namespace to the schema, click the schema's name
 ### Create a consent schema based on XDM ExperienceEvent {#event-schema}
 
 <!-- (To confirm whether this is required for both SDK commands or not) 
->[!NOTE] This step is optional. If you do not wish to track customer consent changes over time, you can skip to the next section on [creating datasets based on your consent schemas](#datasets). -->
+>[!NOTE]
+>
+>This step is optional. If you do not wish to track customer consent changes over time, you can skip to the next section on [creating datasets based on your consent schemas](#datasets). -->
 
 Within the Schema Editor for your XDM ExperienceEvent schema, click **[!UICONTROL Add]** within the *[!UICONTROL Mixins]* section on the left side of the canvas.
 
@@ -120,7 +126,9 @@ If you are editing an existing schema that has already been enabled for use in [
 
 In order for [!DNL Real-time CDP] to associate the consent data it receives to specific customer profiles, the consent schema must be enabled for use in [!DNL Real-time Customer Profile].
 
->[!NOTE] The example shown below uses the schema's `identityMap` field as its primary identity. Depending on your purposes, you may want to add additional fields to the schema to serve as the primary identity instead.
+>[!NOTE]
+>
+>The example shown below uses the schema's `identityMap` field as its primary identity. Depending on your purposes, you may want to add additional fields to the schema to serve as the primary identity instead.
 
 To enable an ExperienceEvent schema for Profile, click the schema's name in the left-hand rail to open *[!UICONTROL Schema properties]* dialog in the right-hand rail. From here, click the **[!UICONTROL Profile]** toggle button to enable the schema.
 
@@ -138,7 +146,9 @@ The canvas reappears with the **[!UICONTROL Profile]** toggle enabled. Click **[
 
 Once you have created schemas that include consent mixins, you must create datasets based on those schemas which will ultimately ingest your customers' consent data.
 
->[!NOTE] The steps below cover how to make a dataset for the [!DNL XDM Individual Profile] schema you created earlier, which is required for consent enforcement to occur. If you also created the optional XDM ExperienceEvent schema for tracking changes over time, follow the steps in this section again to create a separate dataset for that schema.
+>[!NOTE]
+>
+>The steps below cover how to make a dataset for the [!DNL XDM Individual Profile] schema you created earlier, which is required for consent enforcement to occur. If you also created the optional XDM ExperienceEvent schema for tracking changes over time, follow the steps in this section again to create a separate dataset for that schema.
 
 Select **[!UICONTROL Datasets]** in the left navigation, then click **[!UICONTROL Create dataset]** in the top-right corner.
 

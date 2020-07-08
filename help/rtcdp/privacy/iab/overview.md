@@ -9,7 +9,9 @@ topic: privacy events
 
 The [!DNL Transparency & Consent Framework] (TCF), as outlined by the [!DNL Interactive Advertising Bureau] (IAB), is an open-standard technical framework intended to enable organizations to obtain, record, and update consumer consent for the processing of their personal data, in compliance with the European Union's [!DNL General Data Protection Regulation] (GDPR). The second iteration of the framework, TCF 2.0, grants more flexibility for how consumers can provide or withhold consent, including whether and how vendors may use certain features of data processing, such as precise geolocation.
 
->[!NOTE] More information on TCF 2.0 can be found on the [IAB Europe website](https://iabeurope.eu/tcf-2-0/), including support materials and technical specifications.
+>[!NOTE]
+>
+>More information on TCF 2.0 can be found on the [IAB Europe website](https://iabeurope.eu/tcf-2-0/), including support materials and technical specifications.
 
 [!DNL Real-time Customer Data Platform (Real-time CDP)] is part of the registered [IAB TCF 2.0 vendor list](https://iabeurope.eu/vendor-list-tcf-v2-0/), under the ID **565**. In compliance with TCF 2.0 requirements, [!DNL Real-time CDP] allows you to collect customer consent data and integrate it into your stored customer profiles. This consent data can then be factored into whether profiles are included in exported audience segments, depending on their use case.
 
@@ -19,7 +21,9 @@ This document provides an overview of how to configure your data operations and 
 
 In order to follow along with this guide, you must be using a Consent Management Platform (CMP), either commercial or your own, that is integrated and compliant with the IAB TCF. See the [list of compliant CMPs](https://iabeurope.eu/cmp-list/) for more information.
 
->[!IMPORTANT] If the ID of your CMP is invalid, [!DNL Real-time CDP] will keep processing your data as-is. In order to enforce TCF 2.0, you must confirm that your CMP has a valid ID that has been registered with IAB TCF 2.0 before sending data to [!DNL Experience Platform].
+>[!IMPORTANT]
+>
+>If the ID of your CMP is invalid, [!DNL Real-time CDP] will keep processing your data as-is. In order to enforce TCF 2.0, you must confirm that your CMP has a valid ID that has been registered with IAB TCF 2.0 before sending data to [!DNL Experience Platform].
 
 This guide also requires a working understanding of the following Adobe Experience Platform services:
 
@@ -81,7 +85,9 @@ For more information on how to work with merge policies, refer to the [merge pol
 
 ## Integrate the [!DNL Experience Platform] Web SDK to collect customer consent data {#sdk}
 
->[!NOTE] The use of the [!DNL Experience Platform] Web SDK is required in order to process consent data in Adobe Experience Platform. [!DNL Experience Cloud Identity Service] is currently not supported.
+>[!NOTE]
+>
+>The use of the [!DNL Experience Platform] Web SDK is required in order to process consent data in Adobe Experience Platform. [!DNL Experience Cloud Identity Service] is currently not supported.
 >
 >[!DNL Experience Cloud Identity Service] is still supported for consent processing in Adobe Audience Manager, however, and compliance with TCF 2.0 only requires that the library is updated to [version 5.0](https://github.com/Adobe-Marketing-Cloud/id-service/releases).
 
@@ -93,7 +99,9 @@ Once you have configured your CMP to generate consent strings, you must integrat
 
 The sections below provide examples of how each SDK command can be used in different scenarios.
 
->[!NOTE] For an introduction to the common syntax for all [!DNL Platform] SDK commands, see the document on [executing commands](../../../edge/fundamentals/executing-commands.md).
+>[!NOTE]
+>
+>For an introduction to the common syntax for all [!DNL Platform] SDK commands, see the document on [executing commands](../../../edge/fundamentals/executing-commands.md).
 
 #### Using CMP consent-change hooks
 
@@ -145,7 +153,9 @@ OneTrust.OnConsentChanged(function () {
 
 You can also collect TCF 2.0 consent data on every event triggered in [!DNL Platform] by using the `sendEvent` command.
 
->[!NOTE] In order to use this method, you must have added the [!DNL Experience Event Privacy mixin] to your [!DNL Profile]-enabled [!DNL XDM ExperienceEvent] schema. See the section on [updating the ExperienceEvent schema](./dataset-preparation.md#event-schema) in the dataset preparation guide for steps on how to configure this.
+>[!NOTE]
+>
+>In order to use this method, you must have added the [!DNL Experience Event Privacy mixin] to your [!DNL Profile]-enabled [!DNL XDM ExperienceEvent] schema. See the section on [updating the ExperienceEvent schema](./dataset-preparation.md#event-schema) in the dataset preparation guide for steps on how to configure this.
 
 The `sendEvent` command should be used as a callback in appropriate event listeners on your website. The command expects two arguments: (1) a string that indicates the command type (in this case, "sendEvent"), and (2) a payload containing an `xdm` object that provides the required consent fields as JSON:
 
@@ -176,7 +186,9 @@ All [!DNL Platform SDK] commands return promises that indicate whether the call 
 
 ## Export segments {#export}
 
->[!NOTE] Before you start exporting segments, you must ensure that your segments include all required consent fields. See the section on [configuring merge policies](#merge-policies) for more information.
+>[!NOTE]
+>
+>Before you start exporting segments, you must ensure that your segments include all required consent fields. See the section on [configuring merge policies](#merge-policies) for more information.
 
 Once you have collected customer consent data and have created audience segments containing the required consent attributes, you can then enforce TCF 2.0 compliance when exporting those segments to downstream destinations.
 
@@ -189,7 +201,9 @@ Customers must consent to the following purposes (as outlined by [TCF 2.0 polici
 
 TCF 2.0 also requires that the source of data must check the destination's vendor permission before sending data to that destination. As such, [!DNL Real-time CDP] checks if the destination's vendor permission is opted in to for all IDs in the cluster before including data bound to that destination.
 
->[!NOTE] Any segments that are shared with Adobe Audience Manager will contain the same TCF 2.0 consent values as their [!DNL Platform] counterparts. Since [!DNL Audience Manager] shares the same vendor ID as [!DNL Real-time CDP] (565), the same purposes and vendor permission are required. See the document on the [Adobe Audience Manager plug-in for IAB TCF](https://docs.adobe.com/help/en/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html) for more information.
+>[!NOTE]
+>
+>Any segments that are shared with Adobe Audience Manager will contain the same TCF 2.0 consent values as their [!DNL Platform] counterparts. Since [!DNL Audience Manager] shares the same vendor ID as [!DNL Real-time CDP] (565), the same purposes and vendor permission are required. See the document on the [Adobe Audience Manager plug-in for IAB TCF](https://docs.adobe.com/help/en/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html) for more information.
 
 ## Test your implementation {#test-implementation}
 
