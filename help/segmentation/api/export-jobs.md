@@ -177,7 +177,7 @@ The following response returns HTTP status 200 with a list of successfully compl
         "sortField": "createdTime",
         "sort": "desc",
         "pageOffset": "1540974701302_96",
-        "pageSize": 10
+        "pageSize": 2
     },
     "link":{
         "next": "/export/jobs/?limit=2&offset=1538573416687_722"
