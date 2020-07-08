@@ -34,50 +34,28 @@ While the use case of each mixin is different, the specific fields that they pro
 
 ### Consent mixin fields {#privacy-mixin}
 
-The example below shows the schema fields provided by both consent mixins, and the types of values they expect:
+While each privacy mixin varies in structure and the types of fields they contain, they both provide the `xdm:consentString` attribute, whose subfields are required for TCF 2.0 enforcement to take place. The structure of these fields is shown below, along with the types of values they expect:
 
 ```json
 {
-  "xdm:optOutConsentLevel": {
-    "xdm:privacyOptOuts": [
-      {
-        "xdm:optOutType": "general_opt_out",
-        "xdm:optOutValue": "out",
-        "xdm:timestamp": "2019-01-01T15:52:25+00:00"
-      }
-    ]
-  },
-  "xdm:identityPrivacyInfo": {
-    "ECID": {
-      "24162382913728446": {
-        "xdm:identityIABConsent": {
-          "xdm:consentTimestamp": "2020-04-11T05:05:05Z",
-          "xdm:consentString": {
-            "xdm:consentStandard": "IAB TCF",
-            "xdm:consentStandardVersion": "2.0",
-            "xdm:consentStringValue": "BObdrPUOevsguAfDqFENCNAAAAAmeAAA.PVAfDObdrA.DqFENCAmeAENCDA",
-            "xdm:gdprApplies": true,
-            "xdm:containsPersonalData": false
-          }
-        }
-      }
-    }
+  "xdm:consentString": {
+    "xdm:consentStandard": "IAB TCF",
+    "xdm:consentStandardVersion": "2.0",
+    "xdm:consentStringValue": "BObdrPUOevsguAfDqFENCNAAAAAmeAAA.PVAfDObdrA.DqFENCAmeAENCDA",
+    "xdm:gdprApplies": true,
+    "xdm:containsPersonalData": false
   }
 }
 ```
 
 | Property | Description |
 | --- | --- |
-| `xdm:optOutConsentLevel` | Contains an array of opt-out objects, used for general and sale opt-outs. While included in the Profile Privacy mixin, these are not required for TCF 2.0 compliance. |
-| `xdm:identityPrivacyInfo` | Contains privacy information for individual customers, organized by identity namespace and value. In the above example, a single customer is identified under the `ECID` namespace, with a value of `24162382913728446`. |
-| `xdm:identityIABConsent` | Each customer identity within `xdm:identityPrivacyInfo` must contain this field and its associated subfields in order to update those customers' consent settings in [!DNL Profile]. |
-| `xdm:consentTimestamp` | The datetime of when the consent update occurred, in ISO 8601 format. |
 | `xdm:consentString` | Contains the customer's updated consent data and other contextual information. |
 | `xdm:consentStandard` | The consent framework that the data applies to. For TCF compliance, the value should be "IAB TCF". |
 | `xdm:consentStandardVersion` | The version number of the consent framework indicated by `xdm:consentStandard`. For TCF 2.0 compliance, the value should be "2.0". |
 | `xdm:consentStringValue` | The consent string that was generated based on the customer's selected consent settings. |
-| `xdm:gdprApplies` | A boolean value indicating whether or not the GDPR applies to this customer. Defaults to false if not included. |
-| `xdm:containsPersonalData` | A boolean value indicating whether or not the consent update contains personal data. Defaults to false if not included. |
+| `xdm:gdprApplies` | A boolean value indicating whether or not the GDPR applies to this customer. The value must be set to "true" in order for TCF 2.0 enforcement to occur. Defaults to "false" if not included. |
+| `xdm:containsPersonalData` | A boolean value indicating whether or not the consent update contains personal data. Defaults to "false" if not included. |
 
 ## Create customer consent schemas {#create-schemas}
 
