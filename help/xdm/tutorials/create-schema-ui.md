@@ -287,9 +287,14 @@ Uncomment and double check the link once the video has been updated to match the
 
 ## Additional resources
 
-The following video is designed to show you how to create a simple Schema in Adobe Experience Platform using standard classes and mixins. 
+This video is designed to show you how to create a simple Schema in Adobe Experience Platform using standard classes and mixins. 
 
 [!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
+
+<!--
+This video is designed to assist with helping your understanding of adding mixins and classes. The video includes examples of using a standard mixin and defining your own custom mixins.
+
+[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
 
 -->
 
