@@ -48,4 +48,4 @@ For detailed information on the field mapping that occurs between [!DNL Analytic
 
 ## Primary identifiers in Analytics data
 
-Every hit from the ADC contains a primary identifier that is dependant on an ECID or an AAID exists. If the source connection contains an ECID, the ECID is designated as the primary identifier. If the source connection contains an AAID, then the AAID is designated as the primary.
+Every hit from the ADC contains a primary identifier that is dependant on whether an ECID or an AAID exists. If there is an ECID, the ECID is designated as the primary identifier. If there is an AAID, then the AAID is designated as the primary.
