@@ -15,7 +15,7 @@ This document provides steps for setting up datasets to collect IAB TCF 2.0 cons
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-* [Experience Data Model (XDM)](../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+* [Experience Data Model (XDM)](../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     * [Basics of schema composition](../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas.
     * [Create a schema in the UI](../../../xdm/tutorials/create-schema-ui.md): A tutorial covering the basics of working with the Schema Editor.
 * [Identity Service](../../../identity-service/home.md): Bridges customer identities from disparate data sources across devices and systems.
@@ -27,8 +27,8 @@ There are two XDM mixins that provide customer consent fields that are required 
 
 | Schema | Description |
 | --- | --- |
-| Profile privacy mixin (**required**) | This mixin captures the current consent preferences of a customer. When used in a [!DNL Profile]-enabled schema, the values provided in this mixin are taken as the source of truth for how consent enforcement should apply to a customer's data. The use of this mixin in a [!DNL Profile]-enabled schema is **required** in order for consent enforcement to occur. |
-| [!DNL Experience Event] privacy mixin (*optional*) | This mixin captures the consent preferences of a customer at a given point in time. When used in a [!DNL Profile]-enabled schema, the data captured in these fields can be used to track changes in a customer's consent preferences over time. The use of this mixin is optional. |
+| Profile privacy mixin | This mixin captures the current consent preferences of a customer. When used in a [!DNL Profile]-enabled schema, the values provided in this mixin are taken as the source of truth for how consent enforcement should apply to a customer's data. |
+| [!DNL Experience Event] privacy mixin | This mixin captures the consent preferences of a customer at a given point in time. When used in a [!DNL Profile]-enabled schema, the data captured in these fields can be used to track changes in a customer's consent preferences over time. |
 
 While the use case of each mixin is different, the specific fields that they provide are roughly the same. These fields are explained further in the following section.
 
@@ -59,7 +59,7 @@ While each privacy mixin varies in structure and the types of fields they contai
 
 ## Create customer consent schemas {#create-schemas}
 
-In the Platform UI, click **[!UICONTROL Schemas]** in the left navigation to open the *[!UICONTROL Schemas] workspace*. From the **[!UICONTROL Browse]** tab, create a new schema based on the **[!DNL XDM Individual Profile] class**. If you wish to track consent preference changes over time, you must also create a separate schema based on the **XDM ExperienceEvent class**.
+In the [!DNL Platform] UI, click **[!UICONTROL Schemas]** in the left navigation to open the *[!UICONTROL Schemas] workspace*. From the **[!UICONTROL Browse]** tab, create a new schema based on the **[!DNL XDM Individual Profile] class**. If you wish to track consent preference changes over time, you must also create a separate schema based on the **XDM ExperienceEvent class**.
 
 >[!NOTE] If you have existing XDM schemas that you want to use to capture consent data instead, you can edit those schemas instead of creating new ones.
 
@@ -99,7 +99,8 @@ Once you have applied a primary namespace to the schema, click the schema's name
 
 ### Create a consent schema based on XDM ExperienceEvent {#event-schema}
 
->[!NOTE] This step is optional. If you do not wish to track customer consent changes over time, you can skip to the next section on [creating datasets based on your consent schemas](#datasets).
+<!-- (To confirm whether this is required for both SDK commands or not) 
+>[!NOTE] This step is optional. If you do not wish to track customer consent changes over time, you can skip to the next section on [creating datasets based on your consent schemas](#datasets). -->
 
 Within the Schema Editor for your XDM ExperienceEvent schema, click **[!UICONTROL Add]** within the *[!UICONTROL Mixins]* section on the left side of the canvas.
 
