@@ -9,7 +9,9 @@ topic: developer guide
 
 You can delete a sandbox by making a DELETE request that includes the sandbox's `name` in the request path.
 
->[!NOTE] Making this API call updates the sandbox's `status` property to "deleted" and deactivates it. GET requests can still retrieve sandbox's details after it has been deleted.
+>[!NOTE]
+>
+>Making this API call updates the sandbox's `status` property to "deleted" and deactivates it. GET requests can still retrieve sandbox's details after it has been deleted.
 
 **API format**
 

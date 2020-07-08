@@ -33,7 +33,9 @@ curl -X POST \
   ]'
 ```
 
->[!NOTE] For a complete list of permissions and resource types that can be provided in the payload array, see the appendix section on [accepted permissions and resource types](#accepted-permissions-and-resource-types).
+>[!NOTE]
+>
+>For a complete list of permissions and resource types that can be provided in the payload array, see the appendix section on [accepted permissions and resource types](#accepted-permissions-and-resource-types).
 
 **Response**
 

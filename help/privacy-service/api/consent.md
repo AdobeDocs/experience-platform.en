@@ -59,7 +59,9 @@ curl -X POST \
 | `nameSpace` | Each object in the `entities` array must contain one of the [standard identity namespaces](./appendix.md#standard-namespaces) recognized by the Privacy Service API. |
 | `values` | An array of values for each user, corresponding with the provided `nameSpace`. |
 
->[!NOTE] For more information on how to determine which customer identity values to send to Privacy Service, see the guide on [providing identity data](../identity-data.md).
+>[!NOTE]
+>
+>For more information on how to determine which customer identity values to send to Privacy Service, see the guide on [providing identity data](../identity-data.md).
 
 **Response**
 

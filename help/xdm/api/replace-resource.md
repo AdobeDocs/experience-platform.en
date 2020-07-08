@@ -11,7 +11,9 @@ The Schema Registry allows you to replace an entire resource through a PUT opera
 
 This method is especially useful if you want to update a lot of information in the resource at once.
 
->[!NOTE] If you only want to update part of a resource instead of replacing it entirely, see the document on [updating a resource using a PATCH operation](update-resource.md).
+>[!NOTE]
+>
+>If you only want to update part of a resource instead of replacing it entirely, see the document on [updating a resource using a PATCH operation](update-resource.md).
 
 **API format**
 

@@ -27,7 +27,9 @@ Interactive query execution has the following limitations:
 | Maximum rows returned | 50,000 | 
 | Maximum concurrent queries | 5 |
 
->[!NOTE] To override the maximum rows limitation, include `LIMIT 0` in your query. The query timeout of 10 minutes still applies. 
+>[!NOTE]
+>
+>To override the maximum rows limitation, include `LIMIT 0` in your query. The query timeout of 10 minutes still applies. 
 
 By default, the results of interactive queries are returned to the client and are **not** persisted. In order to persist the results as a dataset in Experience Platform, the query must use the `CREATE TABLE AS SELECT` syntax.
 
@@ -63,7 +65,9 @@ LIMIT 1
 | -------- | ----------- |
 | `{ANALYTICS_TABLE_NAME}` | The name of your analytics table. |
 
->[!NOTE] Since each notation type returns the same results, the one you choose to use is up to your preference.
+>[!NOTE]
+>
+>Since each notation type returns the same results, the one you choose to use is up to your preference.
 
 Both of the example queries above return a flattened object, rather than a single value:
 
@@ -143,7 +147,9 @@ FROM
 )
 ```
 
->[!NOTE] Double quotes **cannot** be used with dot notation field access. 
+>[!NOTE]
+>
+>Double quotes **cannot** be used with dot notation field access. 
 
 ### Back quotes
 

@@ -36,7 +36,9 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../tutorials/authentication.md).
+>[!NOTE]
+>
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../tutorials/authentication.md).
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
@@ -46,7 +48,9 @@ Also needed for runtime requests:
 
 - x-request-id: `{UUID}`
 
->[!NOTE] `UUID` is a string in UUID format that is globally unique and must not be reused for different API calls
+>[!NOTE]
+>
+>`UUID` is a string in UUID format that is globally unique and must not be reused for different API calls
 
 [!DNL Decisioning Service] is controlled by a number of business objects that are related to each other. All business objects are stored in [!DNL Platform’s] business object repository, XDM Core Object Repository. A key feature of this repository is that the APIs are orthogonal to the type of business object. Instead of using a POST, GET, PUT, PATCH or DELETE API that indicates the type of resource in its API endpoint, there are only 6 generic endpoints but they accept or return a parameter that indicates the type of the object when that disambiguation is needed. The schema must be registered with the repository, but beyond that the repository is usable for an open-ended set of object types.  
 
