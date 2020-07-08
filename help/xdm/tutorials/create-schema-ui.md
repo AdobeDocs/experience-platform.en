@@ -282,6 +282,17 @@ Your new schema is now able to be used to ingest data into Platform. Remember th
 
 The "Loyalty Members" schema is also available to be viewed and managed using the Schema Registry API. To begin working with the API, start by reading the [Schema Registry API developer guide](../api/getting-started.md).
 
+<!--
+Uncomment and double check the link once the video has been updated to match the documentation - commented at (07.07.2020).
+
+## Additional resources
+
+The following video is designed to show you how to create a simple Schema in Adobe Experience Platform using standard classes and mixins. 
+
+[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
+
+-->
+
 ## Appendix
 
 The following information is supplemental to the Schema Editor Tutorial.

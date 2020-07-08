@@ -115,3 +115,10 @@ See the [Decisioning Service overview](../decisioning-service/home.md) for more 
 Now that you better understand the role of schemas throughout Experience Platform, you are ready to start composing your own. 
 
 To learn design principles and best practices for composing schemas to be used with Experience Platform, begin by reading the [basics of schema composition](schema/composition.md). For step-by-step instructions on how to create a schema, see the tutorials on creating a schema [using the API](tutorials/create-schema-api.md) or [using the user interface](tutorials/create-schema-ui.md).
+
+## Additional resources
+
+The following video was made to assist in your understanding on the XDM System and Experience Data Model. The XDM System is the infrastructure that supports Real-time Customer Profiles, machine learning and customer journey analytics in Adobe Experience Platform. XDM or Experience Data Model is the standard data model to describe customer experiences. When you use XDM to build schemas and ingest data adhering to these schemas you can begin to use XDM system.
+
+[!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)
+
