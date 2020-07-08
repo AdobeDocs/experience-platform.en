@@ -15,7 +15,9 @@ Each schema can have one or more schema descriptor entities applied to it. Each 
 
 This document provides example API calls for descriptors, as well as a complete list of available descriptors and the fields required for defining each type.
 
->[!NOTE] Descriptors require unique Accept headers that replace `xed` with `xdm`, but otherwise look very similar to Accept headers used elsewhere in the Schema Registry. The proper Accept headers have been included in the sample calls below, but take extra caution to ensure the correct headers are being used.
+>[!NOTE]
+>
+>Descriptors require unique Accept headers that replace `xed` with `xdm`, but otherwise look very similar to Accept headers used elsewhere in the Schema Registry. The proper Accept headers have been included in the sample calls below, but take extra caution to ensure the correct headers are being used.
 
 ## List descriptors
 

@@ -54,7 +54,9 @@ Now that the schema is enabled for [!DNL Profile], return to the *[!UICONTROL Da
 
 With both the schema and dataset enabled for [!DNL Profile], data ingested into that dataset will now also populate customer profiles.
 
->[!NOTE] Existing data within a recently enabled dataset is not consumed by [!DNL Profile]
+>[!NOTE]
+>
+>Existing data within a recently enabled dataset is not consumed by [!DNL Profile]
 
 ## Next steps
 

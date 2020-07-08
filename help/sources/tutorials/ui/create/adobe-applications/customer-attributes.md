@@ -13,19 +13,25 @@ This tutorial provides steps for creating a source connector in the UI for colle
 
 Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> and then select **Sources** from the left navigation bar to access the sources workspace. The *Catalog* screen displays available sources to create inbound connections with, and each source shows the number of existing connections associated to them. Select the option for **Customer Attributes** and then click **Connect source**. Allow some time for the connection to establish, you will be redirected if a connection is successfully made.
 
->[!NOTE] If you've already established a source connector for customer attributes profile data, the option to connect with the source will be disabled.
+>[!NOTE]
+>
+>If you've already established a source connector for customer attributes profile data, the option to connect with the source will be disabled.
 
 ![](../../../../images/tutorials/create/customer-attributes/CA-sources_catalog.png)
 
 The *Source activity* screen lists all previously established connections for customer attributes profile data, you can create a new connection by clicking **Select data**. 
 
->[!NOTE] Multiple inbound connections to a source can be made for bringing in different data. 
+>[!NOTE]
+>
+>Multiple inbound connections to a source can be made for bringing in different data. 
 
 ![](../../../../images/tutorials/create/customer-attributes/CA-source_activity.png)
 
 From the list of available customer attributes profile datasets, select the one you want to bring into Platform and click **Next**.
 
->[!NOTE] Only one dataset can be selected per customer attributes source connection.
+>[!NOTE]
+>
+>Only one dataset can be selected per customer attributes source connection.
 
 ![](../../../../images/tutorials/create/customer-attributes/CA-select_data.png)
 
