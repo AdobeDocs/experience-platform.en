@@ -29,7 +29,9 @@ For more information about identity namespaces in Experience Platform, see the [
 
 ## Submitting requests {#submit}
 
->[!NOTE] This section covers how to create privacy requests for the Profile data store. It is strongly recommended that you review the [Privacy Service API](../privacy-service/api/getting-started.md) or [Privacy Service UI](../privacy-service/ui/overview.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
+>[!NOTE]
+>
+>This section covers how to create privacy requests for the Profile data store. It is strongly recommended that you review the [Privacy Service API](../privacy-service/api/getting-started.md) or [Privacy Service UI](../privacy-service/ui/overview.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
 
 The following section outlines how to make privacy requests for Real-time Customer Profile and the Data Lake using the Privacy Service API or UI.
 

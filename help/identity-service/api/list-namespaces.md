@@ -28,7 +28,9 @@ curl -X GET \
 
 The response includes an array of objects, with each object representing an available namespace. Namespaces with a "[!UICONTROL custom]" value of "[!UICONTROL false]" are standard namespaces, while those with a "[!UICONTROL custom]" value of "[!UICONTROL true]" are namespaces that your organization has created.
 
->[!NOTE] This response has been truncated for space.
+>[!NOTE]
+>
+>This response has been truncated for space.
 
 ```json
 [

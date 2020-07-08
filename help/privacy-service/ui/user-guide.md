@@ -47,13 +47,17 @@ To view further details about a given data point, click the data point in questi
 
 ![Applied filter from widget](../images/user-guide/apply-filter.png)
 
->[!NOTE] When a filter has been applied to the Job Requests widget, you can remove the filter by clicking the **X** on the filter pill. Job Requests then return to the default tracking list.
+>[!NOTE]
+>
+>When a filter has been applied to the Job Requests widget, you can remove the filter by clicking the **X** on the filter pill. Job Requests then return to the default tracking list.
 
 ### Job Requests
 
 The Job Requests widget lists all available job requests in your organization, including details such as the request type, current status, due date, and requestor email.
 
->[!NOTE] The data for previously created jobs is only accessible for 30 days after the completion date.
+>[!NOTE]
+>
+>The data for previously created jobs is only accessible for 30 days after the completion date.
 
 You can filter the list by typing keywords into the search bar below the Job Requests title. The list automatically filters as you type, showing requests that contain values that match your search terms. You can also use the **Requested on** dropdown menu to select a time range for the listed jobs.
 
@@ -71,7 +75,9 @@ To download the complete job data as a CSV file, click **Export to CSV** at the 
 
 ## Create a new privacy job request
 
->[!NOTE] In order to create a privacy job request, you must provide identity information for the specific customers whose data is to be accessed or deleted. Please review the document on [identity data for privacy requests](../identity-data.md) before continuing with this section.
+>[!NOTE]
+>
+>In order to create a privacy job request, you must provide identity information for the specific customers whose data is to be accessed or deleted. Please review the document on [identity data for privacy requests](../identity-data.md) before continuing with this section.
 
 The Privacy Service UI provides two methods to create new job requests:
 

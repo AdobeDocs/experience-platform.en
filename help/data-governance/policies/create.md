@@ -210,7 +210,9 @@ This expression is called a **policy expression** and is an object containing ei
 }
 ```
 
->[!NOTE] Only OR and AND operators are supported.
+>[!NOTE]
+>
+>Only OR and AND operators are supported.
 
 Once you have configured your policy expression, you can create a new DULE policy by making a POST request to the `/policies/custom` endpoint.
 
@@ -315,7 +317,9 @@ Record the URI ID of the newly created DULE policy, as it is used in the next st
 
 ## Enable the DULE policy
 
->[!NOTE] While this step is optional if you wish to leave your DULE policy in `DRAFT` status, please note that by default a policy must have its status set to `ENABLED` in order to participate in evaluation. See the tutorial on [enforcing DULE policies](../enforcement/api-enforcement.md) for information on how to make exceptions for policies in `DRAFT` status.
+>[!NOTE]
+>
+>While this step is optional if you wish to leave your DULE policy in `DRAFT` status, please note that by default a policy must have its status set to `ENABLED` in order to participate in evaluation. See the tutorial on [enforcing DULE policies](../enforcement/api-enforcement.md) for information on how to make exceptions for policies in `DRAFT` status.
 
 By default, DULE policies that have their `status` property set to `DRAFT` do not participate in evaluation. You can enable your policy for evaluation by making a PATCH request to the `/policies/custom/` endpoint and providing the unique identifier for the policy at the end of the request path.
 

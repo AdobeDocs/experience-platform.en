@@ -31,7 +31,9 @@ Under the *Adobe applications* category, select **[!UICONTROL Adobe Analytics]**
 
 The *Adobe Analytics* step appears. Previously established dataset flows for Analytics are listed on this screen. You can create a new dataset flow by clicking **[!UICONTROL Select data]**.
 
->[!NOTE] Multiple in-bound connections to a source can be made for bringing in different data.
+>[!NOTE]
+>
+>Multiple in-bound connections to a source can be made for bringing in different data.
 
 ![](../../../../images/tutorials/create/analytics/dataset-flows.png)
 

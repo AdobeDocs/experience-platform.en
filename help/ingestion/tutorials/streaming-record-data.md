@@ -37,7 +37,9 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+>[!NOTE]
+>
+>For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
@@ -178,7 +180,9 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 | -------- | ----------- |
 | `{SCHEMA_REF_ID}` | The `$id` that you previously received when you composed the schema. It should look something like this: `"https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}"` |
 
->[!NOTE] ​ ​**Identity Namespace Codes**
+>[!NOTE]
+>
+>​ ​**Identity Namespace Codes**
 >
 > Please ensure that the codes are valid - the example above uses "email" which is a standard identity namespace. Other commonly used standard identity namespaces can be found within the [Identity Service FAQ](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform).
 >
@@ -208,7 +212,9 @@ A successful response returns HTTP status 201 with information on the newly crea
 
 Once you have created your schema, you will need to create a dataset to ingest record data.
 
->[!NOTE] This dataset will be enabled for **Real-time Customer Profile** and **Identity Service**.
+>[!NOTE]
+>
+>This dataset will be enabled for **Real-time Customer Profile** and **Identity Service**.
 
 **API format**
 
@@ -266,7 +272,9 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 **Request**
 
->[!NOTE] The following API call does **not** require any authentication headers.
+>[!NOTE]
+>
+>The following API call does **not** require any authentication headers.
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
@@ -338,7 +346,9 @@ A successful response returns HTTP status 200 with details of the newly streamed
 
 To validate the previously ingested records, you can use the [Profile Access API](../../profile/api/entities.md) to retrieve the record data.
 
->[!NOTE] If the merge policy ID is not defined and the schema.</span>name or relatedSchema</span>.name is `_xdm.context.profile`, Profile Access will fetch **all** related identities.
+>[!NOTE]
+>
+>If the merge policy ID is not defined and the schema.</span>name or relatedSchema</span>.name is `_xdm.context.profile`, Profile Access will fetch **all** related identities.
 
 **API format**
 

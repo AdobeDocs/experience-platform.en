@@ -331,7 +331,9 @@ A successful response returns the details of the ML Service.
 }
 ```
 
->[!NOTE] Retrieving different ML Services may return a response with more or less key-value pairs. The above response is a representation of a [ML Service with both scheduled training and scoring Experiment Runs](#ml-service-with-scheduled-experiments-for-training-and-scoring).
+>[!NOTE]
+>
+>Retrieving different ML Services may return a response with more or less key-value pairs. The above response is a representation of a [ML Service with both scheduled training and scoring Experiment Runs](#ml-service-with-scheduled-experiments-for-training-and-scoring).
 
 
 ## Schedule training or scoring
@@ -381,7 +383,9 @@ curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
       }'
 ```
 
->[!WARNING] Do not attempt to modify the `startTime` on existing scheduled training and scoring jobs. If the `startTime` must be modified, consider publishing the same Model and rescheduling training and scoring jobs.
+>[!WARNING]
+>
+>Do not attempt to modify the `startTime` on existing scheduled training and scoring jobs. If the `startTime` must be modified, consider publishing the same Model and rescheduling training and scoring jobs.
 
 **Response**
 
