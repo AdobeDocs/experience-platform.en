@@ -45,3 +45,7 @@ For detailed information on the field mapping that occurs between [!DNL Analytic
 | Backfill data (13 Months of Data or 10 Billion events, whichever is lower) | < 4 weeks |
 
 >[!NOTE] Latency will vary depending on customer configuration, data volumes, and consumer applications. For example, if the Analytics implementation is configured with `A4T` the latency to Pipeline will increase to 5-10 minutes.
+
+## Primary identifiers in Analytics data
+
+Every hit from the ADC contains a primary identifier that is dependant on an ECID or an AAID exists. If the source connection contains an ECID, the ECID is designated as the primary identifier. If the source connection contains an AAID, then the AAID is designated as the primary.
