@@ -13,7 +13,9 @@ Access control for Experience Platform is provided through the [Adobe Admin Cons
 
 In order to configure access control for Experience Platform, you must have administrator privileges for an organization that has an Experience Platform product integration. The minimum role that grant or withdraw permissions is a **product profile administrator**. Other administrator roles that can manage permissions are **product administrators** (can manage all profiles within a product) and **system administrators** (no restrictions). See the Adobe Help Center article on [administrative roles](https://helpx.adobe.com/enterprise/using/admin-roles.html) for more information.
 
->[!NOTE] From this point on, any mentions of "administrator" in this document refer to a product profile administrator or higher (as outlined above).
+>[!NOTE]
+>
+>From this point on, any mentions of "administrator" in this document refer to a product profile administrator or higher (as outlined above).
 
 A high-level workflow for gaining and assigning access permissions can be summarized as follows:
 

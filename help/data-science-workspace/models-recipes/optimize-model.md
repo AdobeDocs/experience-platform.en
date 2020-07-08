@@ -55,7 +55,9 @@ After an evaluator class is enabled, a number of metrics will be calculated duri
 evaluation.metrics.com=com.adobe.platform.ml.impl.Constants.DEFAULT
 ```
 
->[!NOTE] If the metric is not defined, the default metrics will be active.
+>[!NOTE]
+>
+>If the metric is not defined, the default metrics will be active.
 
 A specific metric can be enabled by changing the value for `evaluation.metrics.com`. In the following example, the F-Score metric is enabled.
 
@@ -76,7 +78,9 @@ The following table state the default metrics for each class. A user can also us
 
 The custom evaluator can be provided by extending the interface of `MLEvaluator.scala` in your `Evaluator.scala` file. In the example [Evaluator.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/Evaluator.scala) file, we define custom `split()` and `evaluate()` functions. Our `split()` function splits our data randomly with a ratio of 8:2 and our `evaluate()` function defines and returns 3 metrics: MAPE, MAE, and RMSE.
 
->[!IMPORTANT] For the `MLMetric` class, do not use `"measures"` for `valueType` when creating a new `MLMetric` else the metric will not populate in the custom evaluation metrics table.  
+>[!IMPORTANT]
+>
+>For the `MLMetric` class, do not use `"measures"` for `valueType` when creating a new `MLMetric` else the metric will not populate in the custom evaluation metrics table.  
 >  
 > Do this: `metrics.add(new MLMetric("MAPE", mape, "double"))`  
 > Not this: `metrics.add(new MLMetric("MAPE", mape, "measures"))`

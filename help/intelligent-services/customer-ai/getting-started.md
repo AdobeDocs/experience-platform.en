@@ -18,7 +18,9 @@ The guides for Customer AI require a working understanding of the various Platfo
 
 ## Downloading Customer AI scores
 
->[!NOTE] If you do not need to download raw scores, you can skip this step and proceed to the [configuration guide](./user-guide/configure.md).
+>[!NOTE]
+>
+>If you do not need to download raw scores, you can skip this step and proceed to the [configuration guide](./user-guide/configure.md).
 
 Downloading Customer AI scores is done through a combination of API calls. In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
@@ -30,7 +32,9 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+>[!NOTE]
+>
+>For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 ### Reading sample API calls
 

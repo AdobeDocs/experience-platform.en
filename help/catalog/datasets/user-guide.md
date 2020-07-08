@@ -83,7 +83,9 @@ The *Configure* step appears. Provide the dataset with a name and optional descr
 
 The *Add data* step appears. Upload the CSV file by either dragging and dropping it onto the center of your screen, or click **Browse** to explore your file directory. The file can be up to ten gigabytes in size. Once the CSV file is uploaded, click **Save** to create the dataset.
 
->[!NOTE] CSV column names must start with alphanumeric characters, and can contain only letters, numbers, and underscores.
+>[!NOTE]
+>
+>CSV column names must start with alphanumeric characters, and can contain only letters, numbers, and underscores.
 
 ![](../images/datasets/user-guide/add_csv_data.png)
 
@@ -110,7 +112,9 @@ Data Usage Labeling and Enforcement (DULE) is the core data governance mechanism
 
 You can delete a dataset by first accessing its *Dataset activity* screen. Then, click **Delete dataset** to delete it. 
 
->[!NOTE] Datasets created and utilized by Adobe applications and services (such as Adobe Analytics, Adobe Audience Manager, or Decisioning Service) cannot be deleted.
+>[!NOTE]
+>
+>Datasets created and utilized by Adobe applications and services (such as Adobe Analytics, Adobe Audience Manager, or Decisioning Service) cannot be deleted.
 
 ![](../images/datasets/user-guide/delete_dataset.png)
 

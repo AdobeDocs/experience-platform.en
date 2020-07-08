@@ -19,7 +19,9 @@ The next section provides steps for creating a new dataset to apply labels to. I
 
 ### Create a new dataset
 
->[!NOTE] In this example, a dataset is created using a pre-configured Experience Data Model (XDM) schema. For more information on XDM schemas, see the [XDM System overview](../../xdm/home.md) and [basics of schema composition](../../xdm/schema/composition.md).
+>[!NOTE]
+>
+>In this example, a dataset is created using a pre-configured Experience Data Model (XDM) schema. For more information on XDM schemas, see the [XDM System overview](../../xdm/home.md) and [basics of schema composition](../../xdm/schema/composition.md).
 
 To create a new dataset, click **[!UICONTROL Create Dataset]** in the top-right corner of the _[!UICONTROL Datasets]_ workspace.
 

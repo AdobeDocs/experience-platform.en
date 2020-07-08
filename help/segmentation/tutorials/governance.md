@@ -40,7 +40,9 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+>[!NOTE]
+>
+>For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
@@ -174,7 +176,9 @@ A successful response returns the details of the merge policy.
 
 ## Evaluate datasets for policy violations
 
->[!NOTE]  This step assumes that you have at least one active data usage policy that prevents specific marketing actions to be performed on data containing certain labels. If you do not have any applicable usage policies for the datasets being evaluated, please follow the [policy creation tutorial](../../data-governance/policies/create.md) to create one before continuing with this step.
+>[!NOTE]
+>
+> This step assumes that you have at least one active data usage policy that prevents specific marketing actions to be performed on data containing certain labels. If you do not have any applicable usage policies for the datasets being evaluated, please follow the [policy creation tutorial](../../data-governance/policies/create.md) to create one before continuing with this step.
 
 Once you have obtained the IDs of the merge policy's source datasets, you can use the [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) to evaluate those datasets against specific marketing actions in order to check for data usage policy violations.
 

@@ -28,7 +28,9 @@ The workflow for importing a package recipe consists of the following steps:
 
 Every recipe instance in [!DNL Data Science Workspace] is accompanied with a set of configurations that tailor the recipe instance to suit a particular use case. Configuration files define the default training and scoring behaviors of a Model created using this recipe instance.
 
->[!NOTE] Configuration files are recipe and case specific.
+>[!NOTE]
+>
+>Configuration files are recipe and case specific.
 
 Below is a sample configuration file showing default training and scoring behaviors for the Retail Sales recipe. 
 

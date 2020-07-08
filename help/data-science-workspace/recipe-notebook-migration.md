@@ -317,7 +317,9 @@ The following video is designed to further assist in understanding the changes t
 
 With the introduction of PySpark 2.4 to [!DNL JupyterLab Notebooks], new [!DNL Python] notebooks with PySpark 2.4 are now using the [!DNL Python] 3 kernel instead of the PySpark 3 kernel. This means existing code running on PySpark 2.3 is not supported in PySpark 2.4.
 
->[!IMPORTANT] PySpark 2.3 is deprecated and set to be removed in a subsequent release. All existing examples are set to be replaced with PySpark 2.4 examples.
+>[!IMPORTANT]
+>
+>PySpark 2.3 is deprecated and set to be removed in a subsequent release. All existing examples are set to be replaced with PySpark 2.4 examples.
 
 To convert your existing PySpark 3 ([!DNL Spark] 2.3) notebooks to [!DNL Spark] 2.4, follow the examples outlined below:
 
@@ -453,7 +455,9 @@ With PySpark 3 ([!DNL Spark] 2.4) the `org_id` and `dataset_id` no longer need t
 | ------- | ----------- |
 [%dataset](#magic) | Custom magic for data access in [!DNL Python] 3 kernel. |
 
->[!TIP] --mode can be set to `interactive` or `batch`. The default for --mode is `interactive`. It is recommended to use `batch` mode when reading large amounts of data.
+>[!TIP]
+>
+>--mode can be set to `interactive` or `batch`. The default for --mode is `interactive`. It is recommended to use `batch` mode when reading large amounts of data.
 
 ## Creating a local dataframe
 
@@ -521,7 +525,9 @@ sample_df = df.sample(fraction)
    </tr>
 </table>
 
->[!TIP] You can also specify an optional seed sample such as a boolean withReplacement, double fraction, or a long seed.
+>[!TIP]
+>
+>You can also specify an optional seed sample such as a boolean withReplacement, double fraction, or a long seed.
 
 The following images highlight the key differences for creating a local dataframe in PySpark 2.3 and PySpark 2.4. This example uses the *Aggregation* starter notebooks provided in [!DNL JupyterLab Launcher].
 
@@ -569,7 +575,9 @@ pd0.show(10, False)
 pd0 | Name of pandas dataframe object to use or create. |
 [%dataset](#magic) | Custom magic for data access in [!DNL Python] 3 kernel. |
 
->[!TIP] --mode can be set to `interactive` or `batch`. The default for --mode is `interactive`. It is recommended to use `batch` mode when reading large amounts of data.
+>[!TIP]
+>
+>--mode can be set to `interactive` or `batch`. The default for --mode is `interactive`. It is recommended to use `batch` mode when reading large amounts of data.
 
 The following images highlight the key differences for writing data back to [!DNL Platform] in PySpark 2.3 and PySpark 2.4. This example uses the *Aggregation* starter notebooks provided in [!DNL JupyterLab Launcher].
 
@@ -590,7 +598,9 @@ With PySpark 3 ([!DNL Spark] 2.4) the `%dataset` custom magic removes the need t
 
 With the introduction of [!DNL Spark] 2.4 to [!DNL JupyterLab Notebooks], existing [!DNL Spark] ([!DNL Spark] 2.3) notebooks are now using the Scala kernel instead of the [!DNL Spark] kernel. This means existing code running on [!DNL Spark] ([!DNL Spark] 2.3) is not supported in Scala ([!DNL Spark] 2.4). Additionally, all new [!DNL Spark] notebooks should use Scala ([!DNL Spark] 2.4) in the [!DNL JupyterLab Launcher].
 
->[!IMPORTANT] [!DNL Spark] ([!DNL Spark] 2.3) is deprecated and set to be removed in a subsequent release. All existing examples are set to be replaced with Scala ([!DNL Spark] 2.4) examples.
+>[!IMPORTANT]
+>
+>[!DNL Spark] ([!DNL Spark] 2.3) is deprecated and set to be removed in a subsequent release. All existing examples are set to be replaced with Scala ([!DNL Spark] 2.4) examples.
 
 To convert your existing [!DNL Spark] ([!DNL Spark] 2.3) notebooks to Scala ([!DNL Spark] 2.4), follow the examples outlined below:
 
@@ -788,7 +798,9 @@ The Scala ([!DNL Spark] 2.4) notebook uses the Scala kernel which requires more 
 
 ![loading spark 2.4](./images/migration/spark-scala/load-2.4.png)
 
->[!TIP] In Scala, you can use `sys.env()` to declare and return a value from within `option`. This eliminates the need to define variables if you know they are only going to be used a single time. The following example takes `val userToken` in the above example and declares it in-line within `option`:
+>[!TIP]
+>
+>In Scala, you can use `sys.env()` to declare and return a value from within `option`. This eliminates the need to define variables if you know they are only going to be used a single time. The following example takes `val userToken` in the above example and declares it in-line within `option`:
 > ```scala
 > .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
 > ```

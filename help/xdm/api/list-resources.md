@@ -9,7 +9,9 @@ topic: developer guide
 
 You can view a list of all Schema Registry resources of a certain type (classes, mixins, schemas, data types, or descriptors) within a container by performing a single GET request.
 
->[!NOTE] When listing resources, the Schema Registry limits result sets to 300 items. In order to return resources beyond this limit, you must use [paging parameters](#paging). It is also recommended that you use query parameters to [filter results](#filtering) and reduce the number of resources returned.
+>[!NOTE]
+>
+>When listing resources, the Schema Registry limits result sets to 300 items. In order to return resources beyond this limit, you must use [paging parameters](#paging). It is also recommended that you use query parameters to [filter results](#filtering) and reduce the number of resources returned.
 
 **API format**
 
@@ -71,7 +73,9 @@ The request above used the `application/vnd.adobe.xed-id+json` Accept header, th
 
 The Schema Registry supports the use of query parameters to page and filter results when listing resources.
 
->[!NOTE] When combining multiple query parameters, they must be separated by ampersands (`&`).
+>[!NOTE]
+>
+>When combining multiple query parameters, they must be separated by ampersands (`&`).
 
 ### Paging {#paging}
 
@@ -98,4 +102,6 @@ You can filter results by using the `property` parameter, which is used to apply
 | `~` | Filters by whether the property matches a provided regular expression. | `property=title~test$` |
 | (None) | Stating only the property name returns only entries where the property exists. | `property=title` |
 
->[!TIP] You can use the `property` parameter to filter mixins by their compatible class. For example, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` returns only mixins that are compatible with the XDM Individual Profile class.
+>[!TIP]
+>
+>You can use the `property` parameter to filter mixins by their compatible class. For example, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` returns only mixins that are compatible with the XDM Individual Profile class.

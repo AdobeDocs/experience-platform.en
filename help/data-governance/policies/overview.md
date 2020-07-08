@@ -20,11 +20,15 @@ This document provides a high-level overview of data usage policies, and provide
 
 An example of a marketing action might be the desire to export a dataset to a third-party service. If there is a policy in place saying that specific types of data (such as Personally Identifiable Information (PII)) cannot be exported, and you attempt to export a dataset that contains an "I" label (Identity data), you will receive a response from the [!DNL Policy Service] telling you that a data usage policy has been violated.
 
->[!NOTE] Marketing actions by themselves do not restrict data usage. They must be included in enabled data usage policies in order for those actions to be evaluated for policy violations.
+>[!NOTE]
+>
+>Marketing actions by themselves do not restrict data usage. They must be included in enabled data usage policies in order for those actions to be evaluated for policy violations.
 
 When data usage happens in your organization's service, relevant marketing actions should be indicated so that any policy violations can be identified. You can then use the [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) to check for policy violations in your integration.
 
->[!NOTE] If you are using Real-time Customer Data Platform, you can set up marketing use cases on destinations to automate policy enforcement. See the document on [Data Governance in Real-time CDP](../../rtcdp/privacy/data-governance-overview.md) for more information.
+>[!NOTE]
+>
+>If you are using Real-time Customer Data Platform, you can set up marketing use cases on destinations to automate policy enforcement. See the document on [Data Governance in Real-time CDP](../../rtcdp/privacy/data-governance-overview.md) for more information.
 
 See the appendix to this document for a list of [available Adobe-defined marketing actions](#core-actions). You can also define your own custom marketing actions using the DULE Policy Service API or the Experience Platform user interface. More information on working with marketing actions and policies is provided in the next section.
 
@@ -40,7 +44,9 @@ For a reference on how specific Data Export Controls map to marketing actions in
 
 Once data usage labels have been applied, data stewards can use the DULE Policy Service API or the Experience Platform UI to manage and evaluate policies related to marketing actions being taken on data containing data usage labels. You can create and update policies, determine the status of a policy, and work with marketing actions to evaluate whether a specific action violates a data usage policy.
 
->[!IMPORTANT] All data usage policies (including core policies provided by Adobe) are disabled by default. In order for an individual policy to be considered for enforcement, you must manually enable that policy through the API or UI.
+>[!IMPORTANT]
+>
+>All data usage policies (including core policies provided by Adobe) are disabled by default. In order for an individual policy to be considered for enforcement, you must manually enable that policy through the API or UI.
 
 For step-by-step instructions on working with marketing actions and data usage policies in the API, see the tutorial on [creating and evaluating data usage policies](create.md). For more information the key operations provided by the Policy Service API, see the [Policy Service developer guide](../api/getting-started.md).
 
@@ -58,7 +64,9 @@ The following section provides additional information about data usage policies.
 
 The table below describes the core marketing actions that are provided out-of-the-box by Adobe.
 
->[!NOTE] The core marketing actions should be seen as a starting point to help you identify what usage policies to create and check for violations. The definitions and how they are interpreted depend on your organization's needs and policies.
+>[!NOTE]
+>
+>The core marketing actions should be seen as a starting point to help you identify what usage policies to create and check for violations. The definitions and how they are interpreted depend on your organization's needs and policies.
 
 | Marketing action | Description |
 | --- | --- |

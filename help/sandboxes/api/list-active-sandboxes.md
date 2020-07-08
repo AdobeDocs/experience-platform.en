@@ -7,7 +7,9 @@ topic: developer guide
 
 # List active sandboxes for the current user
 
->[!NOTE] Unlike other endpoints provided in the Sandbox API, this endpoint is available for all users, including those without Sandbox Administration access permissions.
+>[!NOTE]
+>
+>Unlike other endpoints provided in the Sandbox API, this endpoint is available for all users, including those without Sandbox Administration access permissions.
 
 You can list the sandboxes that are active for the current user by making a GET request to the root (`/`) endpoint.
 
