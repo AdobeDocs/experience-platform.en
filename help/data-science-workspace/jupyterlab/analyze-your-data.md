@@ -43,7 +43,9 @@ The Retail Sales recipe is a standalone example which uses the same Retail Sales
 
 ### Access data
 
->[!NOTE] The `data_access_sdk_python` is deprecated and no longer recommended. Please refer to the [converting data access SDK to Platform SDK](../authoring/platform-sdk.md) tutorial to convert your code. The same steps below still apply for this tutorial.
+>[!NOTE]
+>
+>The `data_access_sdk_python` is deprecated and no longer recommended. Please refer to the [converting data access SDK to Platform SDK](../authoring/platform-sdk.md) tutorial to convert your code. The same steps below still apply for this tutorial.
 
 We will go over accessing data internally from [!DNL Adobe Experience Platform] and data externally. We will be using the `data_access_sdk_python` library to access internal data such as datasets and XDM schemas. For external data, we will use the pandas [!DNL Python] library.
 
@@ -79,7 +81,9 @@ Since the dataset is the same, we want to replace the load data from the previou
 
 Now, we can right click on the `Retail-Training-<your-alias>` dataset and select the "Explore Data in Notebook" option in the dropdown. An executable code entry will appear in your notebook.
 
->[!TIP] refer to the [!DNL Platform SDK](../authoring/platform-sdk.md) guide to convert your code.
+>[!TIP]
+>
+>refer to the [!DNL Platform SDK](../authoring/platform-sdk.md) guide to convert your code.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader

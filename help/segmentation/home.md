@@ -33,7 +33,9 @@ To learn how to create and use segments in the [!DNL Segment Builder] (the UI im
 
 For information on building segment definitions using the API, see the tutorial on [creating audience segments using the API](./tutorials/create-a-segment.md).
 
->[!NOTE] In the event a schema is extended, all future uploads must update newly added fields accordingly. For more information on customizing [!DNL Experience Data Model] (XDM), visit the [Schema Editor tutorial](../xdm/tutorials/create-schema-ui.md).
+>[!NOTE]
+>
+>In the event a schema is extended, all future uploads must update newly added fields accordingly. For more information on customizing [!DNL Experience Data Model] (XDM), visit the [Schema Editor tutorial](../xdm/tutorials/create-schema-ui.md).
 
 ## Evaluate segments
 
@@ -63,7 +65,9 @@ Composing your segments (through either the API or [!DNL Segment Builder]) requi
 
 When creating a new segment, you are required to provide a segment name. The segment name is used to identify a particular segment amongst the collection built by [!DNL Segmentation Service]. Segment names should therefore be descriptive, concise, and unique.
 
->[!NOTE] When planning a segment, remember that segments can be referenced from, and combined with, any other segment. When selecting a name, consider the possibility that your segment may contain reusable portions.
+>[!NOTE]
+>
+>When planning a segment, remember that segments can be referenced from, and combined with, any other segment. When selecting a name, consider the possibility that your segment may contain reusable portions.
 
 ### Merge policies
 
@@ -72,7 +76,9 @@ If a merge policy is not defined, the default [!DNL Platform] merge policy is us
 
 More information about merge policies can be found in the [merge policies guide](../profile/api/merge-policies.md).
 
->[!NOTE] Estimation of audience sizes is based on the organization's default profile merge policy.
+>[!NOTE]
+>
+>Estimation of audience sizes is based on the organization's default profile merge policy.
 
 ### Other segment metadata
 
@@ -133,7 +139,9 @@ The data architect's resources include access to web data from customer browsing
 
 **The solution**
 
->[!NOTE] We will assume in this example that the data architect has already established an ID Namespace.
+>[!NOTE]
+>
+>We will assume in this example that the data architect has already established an ID Namespace.
 
 Using the API, the data architect relates the key from the ExperienceEvent schema with the "products" class. Doing so allows the data architect to make use of the additional fields from the "products" class as if they are native to the ExperienceEvent schema. As the final step of the configuration work, the data architect needs to bring the appropriate data into [!DNL Real-time Customer Profile]. This is done by enabling the "products" dataset for use with [!DNL Profile]. With the configuration work complete, either the data architect or the marketer can build the target segment in [!DNL Segment Builder].
 

@@ -34,7 +34,55 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 
 - x-sandbox-name: `{SANDBOX_NAME}`
   
->[!NOTE] For more information on working with sandboxes in [!DNL Experience Platform], see the [sandboxes overview documentation](../../sandboxes/home.md).
+>[!NOTE]
+>
+>For more information on working with sandboxes in [!DNL Experience Platform], see the [sandboxes overview documentation](../../sandboxes/home.md).
+
+<!-- ## Estimates
+
+Estimates provides statistical information for a segment definition, such as projected audience size and confidence interval. You can use the `/estimate` endpoint to view an estimate of a segment definition. 
+
+For more information on using this endpoint, please read the [estimates developer guide](./estimates.md). 
+
+## Export jobs
+
+Export jobs are asynchronous processes that are used to persist audience segment members to datasets. You can use the `/export/jobs` endpoint to retrieve all export jobs, create a new export job, retrieve details of a specific export job, or cancel a specific export job.
+
+For more information on using this endpoint, please read the [export jobs developer guide](./export-jobs.md).
+
+## Previews
+
+Previews provide a paginated list of qualifying profiles for a segment definition, allowing you to compare the results against what you expect. You can use the `/preview` endpoint to create a new preview job, look up results of a specific preview job, or delete a specific preview job.
+
+For more information on using this endpoint, please read the [previews developer guide](./previews.md).
+
+## PQL conversions
+
+Profile Query Language (PQL) conversions allows you to convert your formatting between `pql/text` and `pql/json`. You can do this by using the `/segment/conversion` endpoint.
+
+For more information on using this endpoint, please read the [PQL conversions developer guide](./pql-conversions.md).
+
+## Schedules
+
+Schedules are a tool that can be used to automatically run export jobs once a day. You can use the `/config/schedules` endpoint to retrieve a list of schedules, create a new schedule, retrieve details of a specific schedule, update a specific schedule, or delete a specific schedule. 
+
+For more information on using this endpoint, please read the [schedules developer guide](./schedules.md). -->
+
+## Segment definitions
+
+Segment definitions define which profiles will be part of which audience segments. You can use the `/segment/definitions` endpoint to retrieve a list of segment definitions, create a new segment definition, retrieve details of a specific segment definition, delete a specific segment definition, or overwrite details of a specific segment definition.
+
+For more information on using this endpoint, please read the [segment definitions developer guide](./segment-definitions.md). 
+
+## Segment jobs
+
+Segment jobs process previously established segment definitions to generate an audience segment. You can use the `/segment/jobs` endpoint to retrieve a list of segment jobs, create a new segment job, retrieve details of a specific segment job, or delete a specific segment job.
+
+For more information on using this endpoint, please read the [segment jobs developer guide](./segment-jobs.md).
+
+## Segment search
+
+Segment search is used to search and index configurable fields contained across various data sources and return them in near real-time. To begin working with Segment search, see the [search developer guide](segment-search.md)
 
 ## Next steps
 

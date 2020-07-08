@@ -28,7 +28,9 @@ The datasets workspace within the [!DNL Experience Platform] UI allows you to vi
 
 To view the datasets workspace, click **Datasets** in the left-hand navigation, then click on the *[!UICONTROL Browse]* tab. The datasets workspace contains a list of datasets, including columns showing *[!UICONTROL Name]*, *[!UICONTROL Created]* (date and time), *[!UICONTROL Source]*, *[!UICONTROL Schema]*, and *[!UICONTROL Last Batch Status]*, as well as the date and time the dataset was *[!UICONTROL Last Updated]*. Depending on the width of each column, you may be required to scroll left or right to see all columns. 
 
->[!NOTE] Click on the filter icon next to the search bar to use filtering capabilities to view only those datasets enabled for [!DNL Real-time Customer Profile].
+>[!NOTE]
+>
+>Click on the filter icon next to the search bar to use filtering capabilities to view only those datasets enabled for [!DNL Real-time Customer Profile].
 
 ![View all datasets](../images/tutorials/segment-export-dataset/datasets-workspace.png)
 

@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Real-time Customer Profile API developer guide
+title: Computed attributes - Real-time Customer Profile API
 topic: guide
 ---
 
@@ -475,7 +475,9 @@ A successful update returns HTTP Status 204 (No Content) and an empty response b
 
 It is also possible to delete a computed attribute using the API. This is done by making a DELETE request to the `/config/computedAttributes` endpoint and including the ID of the computed attribute that you wish to delete in the request path.
 
->[!Note] 
+>[!Note]
+>
+>
 >Please use caution when deleting a computed attribute as it may be in use in more than one schema and the DELETE operation cannot be undone.
 
 **API format**

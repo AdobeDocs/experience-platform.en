@@ -52,7 +52,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 A successful response returns HTTP status 200 with a list of segment jobs for the specified IMS organization as JSON. The following response returns a list of all the successful segment jobs for the IMS organization.
 
->[!NOTE] The following response has been truncated for space, and will only show the first returned job.
+>[!NOTE]
+>
+>The following response has been truncated for space, and will only show the first returned job.
 
 ```json
 {
@@ -379,7 +381,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 A successful response returns HTTP status 207 with the requested segment jobs.
 
->[!NOTE] The following response has been truncated for space, only showing partial details of each segment job. The full response will list the full details for the segment jobs requested.
+>[!NOTE]
+>
+>The following response has been truncated for space, only showing partial details of each segment job. The full response will list the full details for the segment jobs requested.
 
 ```json
 {

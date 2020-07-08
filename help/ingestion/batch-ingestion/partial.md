@@ -14,7 +14,9 @@ This document provides a tutorial for managing partial batch ingestion.
 
 In addition, the [appendix](#appendix) to this tutorial provides a reference for partial batch ingestion error types.
 
->[!IMPORTANT] This feature only exists using the API. Please contact your team in order to gain access to this feature.
+>[!IMPORTANT]
+>
+>This feature only exists using the API. Please contact your team in order to gain access to this feature.
 
 ## Getting started
 
@@ -41,7 +43,9 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+>[!NOTE]
+>
+>For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 ## Enable a dataset for partial batch ingestion in the API
 
@@ -71,7 +75,9 @@ Within the dataset, you will need to add the tag described above.
 
 <!-- ## Enable a dataset for partial batch ingestion in the UI
 
->[!NOTE] This section describes enabling a dataset for partial batch ingestion using the UI. If you have already enabled a dataset for partial batch ingestion using the API, you can skip ahead to the next section.
+>[!NOTE]
+>
+>This section describes enabling a dataset for partial batch ingestion using the UI. If you have already enabled a dataset for partial batch ingestion using the API, you can skip ahead to the next section.
 
 To enable a dataset for partial ingestion through the Platform UI, click **Datasets** in the left navigation. You can either [create a new dataset](#create-a-new-dataset-with-partial-batch-ingestion-enabled) or [modify an existing dataset](#modify-an-existing-dataset-to-enable-partial-batch-ingestion).
 

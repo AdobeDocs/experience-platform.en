@@ -41,7 +41,9 @@ When finished, click **Create**.
 
 ![](../images/ui/create-sandbox-dialog.png)
 
->[!NOTE] Since you are restricted to creating non-production sandbox types only, the **type** option is locked at "Non-Production" and cannot be manipulated.
+>[!NOTE]
+>
+>Since you are restricted to creating non-production sandbox types only, the **type** option is locked at "Non-Production" and cannot be manipulated.
 
 Once you have finished creating the sandbox, refresh the page and the new sandbox appears in the _Sandboxes_ dashboard with a status of "Creating". New sandboxes take approximately 15 minutes to be provisioned by the system, after which their status changes to "Active".
 
@@ -49,7 +51,9 @@ Once you have finished creating the sandbox, refresh the page and the new sandbo
 
 ## Reset a sandbox
 
->[!NOTE] This functionality is only available for non-production sandboxes. Production sandboxes cannot be reset.
+>[!NOTE]
+>
+>This functionality is only available for non-production sandboxes. Production sandboxes cannot be reset.
 
 Resetting a non-production sandbox deletes all resources associated with that sandbox (schemas, datasets, and so on), while maintaining the sandbox's name and associated permissions. This "clean" sandbox continues to be available under the same name for users that have access to it.
 
@@ -67,7 +71,9 @@ A confirmation message appears and the sandbox's state changes to "Resetting". O
 
 ## Delete a sandbox
 
->[!NOTE] This functionality is only available for non-production sandboxes. Production sandboxes cannot be deleted.
+>[!NOTE]
+>
+>This functionality is only available for non-production sandboxes. Production sandboxes cannot be deleted.
 
 Deleting a non-production sandbox permanently removes all resources associated with that sandbox, including permissions.
 

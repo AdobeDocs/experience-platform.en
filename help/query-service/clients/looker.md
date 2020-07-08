@@ -27,7 +27,9 @@ From here, you can fill out the details for the Connection Settings.
 - **Database:** The database that will be used. 
 - **Username and Password:** The login credentials that will be used. The username will be in the form of `ORG_ID@AdobeOrg`. 
 
->[!NOTE] For more information on finding your host and port, database name, and login credentials, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to Platform, click **Queries**, then click **Credentials**.
+>[!NOTE]
+>
+>For more information on finding your host and port, database name, and login credentials, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to Platform, click **Queries**, then click **Credentials**.
 
 After inputting your connection details, click on **Test These Settings** to ensure your credentials work properly. If they do, a message telling you can connect will appear below. If your connection is indeed successful, click on **Add Connection** to create your connection.
 

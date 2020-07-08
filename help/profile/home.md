@@ -121,7 +121,9 @@ Experience Platform has a series of guidelines to follow in order to effectively
 
 --->
 
->[!NOTE] 
+>[!NOTE]
+>
+>
 >A non-person entity refers to any XDM class that is **not** part of Profile.
 
 ## Next steps and additional resources

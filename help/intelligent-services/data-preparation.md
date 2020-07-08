@@ -75,7 +75,9 @@ This field represents the datetime at which the event occurred. This value must 
 
 #### xdm:channel {#channel}
 
->[!NOTE] This field is only mandatory when using Attribution AI.
+>[!NOTE]
+>
+>This field is only mandatory when using Attribution AI.
 
 This field represents the marketing channel related to the ExperienceEvent. The field includes information about the channel type, media type, and location type.
 
@@ -238,7 +240,9 @@ If you have an [!DNL Adobe Experience Platform] subscription and want to map and
 
 ### Using Adobe Experience Platform
 
->[!NOTE] The steps below require a subscription to Experience Platform. If you do not have access to Platform, skip ahead to the [next steps](#next-steps) section.
+>[!NOTE]
+>
+>The steps below require a subscription to Experience Platform. If you do not have access to Platform, skip ahead to the [next steps](#next-steps) section.
 
 This section outlines the workflow for mapping and ingesting data into Experience Platform for use in Intelligent Services, including links to tutorials for detailed steps.
 
@@ -249,7 +253,9 @@ When you are ready to start preparing your data for ingestion, the first step is
 * [Create a schema in the UI](../xdm/tutorials/create-schema-ui.md)
 * [Create a schema in the API](../xdm/tutorials/create-schema-api.md)
 
->[!IMPORTANT] The tutorials above follow a generic workflow for creating a schema. When choosing a class for the schema, you must use the **XDM ExperienceEvent class**. Once this class has been chosen, you can then add the CEE mixin to the schema.
+>[!IMPORTANT]
+>
+>The tutorials above follow a generic workflow for creating a schema. When choosing a class for the schema, you must use the **XDM ExperienceEvent class**. Once this class has been chosen, you can then add the CEE mixin to the schema.
 
 After adding the CEE mixin to the schema, you can add other mixins as required for additional fields within your data.
 
@@ -264,7 +270,9 @@ After the dataset is created, you can find it in the Platform UI within the *[!U
 
 #### Add a primary identity namespace tag to the dataset
 
->[!NOTE] Future releases of Intelligent Services will integrate [Adobe Experience Platform Identity Service](../identity-service/home.md) into their customer identification capabilities. As such, the steps outlined below are subject to change.
+>[!NOTE]
+>
+>Future releases of Intelligent Services will integrate [Adobe Experience Platform Identity Service](../identity-service/home.md) into their customer identification capabilities. As such, the steps outlined below are subject to change.
 
 If you are bringing in data from [!DNL Adobe Audience Manager], [!DNL Adobe Analytics], or another external source, then you must add a `primaryIdentityNameSpace` tag to the dataset. This can be done by making a PATCH request to the Catalog Service API.
 
@@ -322,7 +330,9 @@ curl -X PATCH \
       }'
 ```
 
->[!NOTE] For more information on working with identity namespaces in Platform, see the [identity namespace overview](../identity-service/namespaces.md).
+>[!NOTE]
+>
+>For more information on working with identity namespaces in Platform, see the [identity namespace overview](../identity-service/namespaces.md).
 
 **Response**
 
