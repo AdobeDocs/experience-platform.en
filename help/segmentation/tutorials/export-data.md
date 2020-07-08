@@ -32,7 +32,9 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+>[!NOTE]
+>
+>For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All POST, PUT, and PATCH requests require an additional header:
 
@@ -190,7 +192,9 @@ curl -X POST \
 | `schema.name` | **(Required)** The name of the schema associated with the dataset where data is to be exported. |
 | `evaluationInfo.segmentation`| *(Optional)* A boolean value that, if not provided, defaults to `false`. A value of `true` indicates that segmentation needs to be done on the export job. |
 
->[!NOTE] To export only Profile data, and not include related ExperienceEvent data, remove the "additionalFields" object from the request.
+>[!NOTE]
+>
+>To export only Profile data, and not include related ExperienceEvent data, remove the "additionalFields" object from the request.
 
 **Response**
 

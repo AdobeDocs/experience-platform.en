@@ -8,7 +8,9 @@ topic: queries
 # Datasets vs tables and schemas
 
 Review the list of datasets available in the [Adobe Experience Platform UI](https://platform.adobe.com/datasets), being sure to observe the dataset names. 
->[!NOTE] Some dataset names have spaces and might otherwise not be SQL safe. 
+>[!NOTE]
+>
+>Some dataset names have spaces and might otherwise not be SQL safe. 
 
 ![](../images/queries/datasets-and-tables/dataset-names.png)
 
@@ -47,7 +49,9 @@ To view the available tables on Platform with SQL, you can use either `\d` or `S
 
 To view the root schema of a table use the `\d table_name` command.
 
->[!NOTE] The schema presented shows the root fields, most of which are complex, referred to an Object type in the Dataset schema UI. 
+>[!NOTE]
+>
+>The schema presented shows the root fields, most of which are complex, referred to an Object type in the Dataset schema UI. 
 
 `\d luma_midvalues`
 

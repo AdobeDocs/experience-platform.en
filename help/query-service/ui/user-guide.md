@@ -85,7 +85,9 @@ All queries executed from Query Editor are captured in the Log table. You can us
 
 See the [Query Service UI overview][query-service-ui] for more information. 
 
->[!NOTE] Queries that are not executed are not saved by the Log. In order for the query to be available in Query Service, it must be run or saved in Query Editor.
+>[!NOTE]
+>
+>Queries that are not executed are not saved by the Log. In order for the query to be available in Query Service, it must be run or saved in Query Editor.
 
 ## Executing queries using Query Editor
 
@@ -97,7 +99,9 @@ The console provides information on the status and operation of Query Service. T
 
 ![Image](../images/queries/query-editor-overview/console.png)
 
->[!NOTE] The console only shows errors that resulted from executing a query. It does not show query validation errors before a query is executed.
+>[!NOTE]
+>
+>The console only shows errors that resulted from executing a query. It does not show query validation errors before a query is executed.
 
 ### Query results
 

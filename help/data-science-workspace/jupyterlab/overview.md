@@ -26,7 +26,9 @@ The following list outlines some of the features that are unique to JupyterLab o
 | **Development libraries** | In [!DNL Experience Platform], [!DNL JupyterLab] provides pre-installed libraries for [!DNL Python], R, and PySpark. See the [appendix](#supported-libraries) for a complete list of supported libraries. |
 | **Library controller** | When the the pre-installed libraries are lacking for your needs, additional libraries can be installed for Python and R, and are temporarily stored in isolated containers to maintain the integrity of [!DNL Platform] and keep your data safe. See the [kernels](#kernels) section for more details. |
 
->[!NOTE] Additional libraries are only available for the session in which they were installed. You must reinstall any additional libraries you require when starting new sessions.
+>[!NOTE]
+>
+>Additional libraries are only available for the session in which they were installed. You must reinstall any additional libraries you require when starting new sessions.
 
 ## Integration with other [!DNL Platform] services {#service-integration}
 
@@ -37,7 +39,9 @@ Standardization and interoperability are key concepts behind [!DNL Experience Pl
 *   **[!DNL Sensei ML Framework]:** Model development with the ability to train and score data, as well as recipe creation with a single click.
 *   **[!DNL Experience Data Model (XDM)]:** Standardization and interoperability are key concepts behind Adobe Experience Platform. [Experience Data Model (XDM)](https://www.adobe.com/go/xdm-home-en), driven by Adobe, is an effort to standardize customer experience data and define schemas for customer experience management.
 
->[!NOTE] Some [!DNL Platform] service integrations on [!DNL JupyterLab] are limited to specific kernels. Refer to the section on [kernels](#kernels) for more details.
+>[!NOTE]
+>
+>Some [!DNL Platform] service integrations on [!DNL JupyterLab] are limited to specific kernels. Refer to the section on [kernels](#kernels) for more details.
 
 ## Key features and common operations
 
@@ -590,7 +594,9 @@ val timedf = spark.sql("""
 timedf.show()
 ```
 
->[!TIP] 
+>[!TIP]
+>
+>
 >In Scala, you can use `sys.env()` to declare and return a value from within `option`. This eliminates the need to define variables if you know they are only going to be used a single time. The following example takes `val userToken` from the above example and declares it in-line within `option` as an alternative:
 > ```scala
 > .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
