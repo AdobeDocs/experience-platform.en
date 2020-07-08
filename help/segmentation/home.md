@@ -70,6 +70,8 @@ When creating a new segment, you are required to provide a segment name. The seg
 Merge policies are rules used by [!DNL Profile] to determine how data will be prioritized and combined into a unified view under certain conditions. 
 If a merge policy is not defined, the default [!DNL Platform] merge policy is used. If you would rather use a merge policy specific to your organization, you can create your own and mark it as your organization's default.
 
+More information about merge policies can be found in the [merge policies guide](../profile/api/merge-policies.md).
+
 >[!NOTE] Estimation of audience sizes is based on the organization's default profile merge policy.
 
 ### Other segment metadata

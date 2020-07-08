@@ -11,7 +11,7 @@ As you develop your segment definition, you can use the estimate and preview too
 
 ## Getting started
 
-The endpoints used in this guide are part of the [!DNL Adobe Experience Platform] [!DNL Segmentation Service] API. Before reading this guide, please refer to the [getting started document guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
+The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
 
 ## How estimates are generated
 

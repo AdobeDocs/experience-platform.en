@@ -450,7 +450,11 @@ A successful response returns HTTP status 207 with the requested segment jobs.
 
 ## Cancel or delete a specific segment job {#delete}
 
-You can request to delete the specified segment job by making a DELETE request to the `/segment/jobs` endpoint and providing the ID of the segment job you wish to delete in the request path.
+You can delete a specific segment job by making a DELETE request to the `/segment/jobs` endpoint and providing the ID of the segment job you wish to delete in the request path.
+
+>[!NOTE]
+>
+>The API response to the delete request is immediate. However, the actual deletion of the segment job is asynchronous. In other words, there is a time difference between when the delete request to the segment job is made and when it is applied.
 
 **API format**
 
