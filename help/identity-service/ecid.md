@@ -7,7 +7,7 @@ topic: overview
 
 # ECID overview
 
-The [!DNL Experience Cloud Identifier] (ECID) is the client side module providing access to identity management, serving three primary functions:
+The [!DNL Experience Cloud Identity Service] (ECID) is the client side module providing access to identity management, serving three primary functions:
 
 - Identify each visitor
 - Provide synchronization with Partners
