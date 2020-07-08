@@ -7,7 +7,9 @@ topic: developer guide
 
 # Evaluate events in near real-time with streaming segmentation 
 
->[!NOTE] The following document states how to use streaming segmentation using the API. For information on using streaming segmentation using the UI, please read the [Segment Builder guide](../ui/overview.md#streaming-segmentation).
+>[!NOTE]
+>
+>The following document states how to use streaming segmentation using the API. For information on using streaming segmentation using the UI, please read the [Segment Builder guide](../ui/overview.md#streaming-segmentation).
 
 Streaming segmentation on [!DNL Adobe Experience Platform] allows customers to do segmentation in near real-time while focusing on data richness. With streaming segmentation, segment qualification now happens as data lands into [!DNL Platform], alleviating the need to schedule and run segmentation jobs. With this capability, most segment rules can now be evaluated as the data is passed into [!DNL Platform], meaning segment membership will be kept up-to-date without running scheduled segmentation jobs.
 
@@ -39,7 +41,9 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
+>[!NOTE]
+>
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
@@ -49,7 +53,9 @@ Additional headers may be required to complete specific requests. The correct he
 
 ### Streaming segmentation enabled query types {#streaming-segmentation-query-types}
 
->[!NOTE] You will need to enable scheduled segmentation for the organization in order for streaming segmentation to work. Information about enabling scheduled segmentation can be found in the [enable scheduled segmentation section](#enable-scheduled-segmentation)
+>[!NOTE]
+>
+>You will need to enable scheduled segmentation for the organization in order for streaming segmentation to work. Information about enabling scheduled segmentation can be found in the [enable scheduled segmentation section](#enable-scheduled-segmentation)
 
 In order for a segment to be evaluated using streaming segmentation, the query must conform to the following guidelines.
 
@@ -225,7 +231,9 @@ curl -X POST \
 }'
 ```
 
->[!NOTE] This is a standard "create a segment" request. For more information about creating a segment definition, please read the tutorial on [creating a segment](../tutorials/create-a-segment.md).
+>[!NOTE]
+>
+>This is a standard "create a segment" request. For more information about creating a segment definition, please read the tutorial on [creating a segment](../tutorials/create-a-segment.md).
 
 **Response**
 
@@ -273,7 +281,9 @@ A successful response returns the details of the newly created streaming-enabled
 
 Once streaming evaluation has been enabled, a baseline must be created (after which the segment will always be up-to-date). Scheduled evaluation (also known as scheduled segmentation) must first be enabled in order for the system to automatically perform baselining. With scheduled segmentation, your IMS Org can adhere to a recurring schedule to automatically run export jobs to evaluate segments.
 
->[!NOTE] Scheduled evaluation can be enabled for sandboxes with a maximum of five (5) merge policies for XDM Individual Profile. If your organization has more than five merge policies for XDM Individual Profile within a single sandbox environment, you will not be able to use scheduled evaluation.
+>[!NOTE]
+>
+>Scheduled evaluation can be enabled for sandboxes with a maximum of five (5) merge policies for XDM Individual Profile. If your organization has more than five merge policies for XDM Individual Profile within a single sandbox environment, you will not be able to use scheduled evaluation.
 
 ### Create a schedule
 

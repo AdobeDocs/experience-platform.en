@@ -62,7 +62,9 @@ Similar to the process for adding a developer, the administrator must assign you
 
 ## Generate access credentials in Adobe Developer Console
 
->[!NOTE] If you are following this document from the [Privacy Service developer guide](../privacy-service/api/getting-started.md), you can now return to that guide to generate the access credentials unique to Privacy Service.
+>[!NOTE]
+>
+>If you are following this document from the [Privacy Service developer guide](../privacy-service/api/getting-started.md), you can now return to that guide to generate the access credentials unique to Privacy Service.
 
 Using Adobe Developer Console, you must generate the following three access credentials:
 

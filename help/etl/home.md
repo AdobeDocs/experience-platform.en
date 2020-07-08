@@ -59,7 +59,9 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../sandboxes/home.md). 
+>[!NOTE]
+>
+>For more information on sandboxes in Platform, see the [sandbox overview documentation](../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
@@ -75,7 +77,9 @@ In the ETL tool, the user will start designing their mapping transforms after co
 
 Mockups for a sample ETL tool and workflow have been provided in the [ETL workflow](./workflow.md). While ETL tools may differ in format, most expose similar functionality.
 
->[!NOTE] The ETL connector must specify a time stamp filter marking the date to ingest data and offset (i.e. The window for which data is to be read). The ETL tool should support taking these two parameters in this or another relevant UI. In Adobe Experience Platform, these parameters will be mapped to either available dates (if present) or captured date present in batch object of dataset.
+>[!NOTE]
+>
+>The ETL connector must specify a time stamp filter marking the date to ingest data and offset (i.e. The window for which data is to be read). The ETL tool should support taking these two parameters in this or another relevant UI. In Adobe Experience Platform, these parameters will be mapped to either available dates (if present) or captured date present in batch object of dataset.
 
 ### View list of datasets
 
@@ -159,7 +163,9 @@ The XDM schema is the schema you use when you need to present the user with a li
 
 The first "schemaRef.id" value in the previous response object (`https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18`) is a URI that points to a specific XDM schema in the Schema Registry. The schema can be retrieved by making a lookup (GET) request to the Schema Registry API.
 
->[!NOTE] The "schemaRef" property replaces the now deprecated "schema" property. If "schemaRef" is absent from the dataset or does not contain a value, you will need to check for the presence of a "schema" property. This could be done by replacing "schemaRef" with "schema" in the `properties` query parameter in the previous call. More details on the "schema" property are available in the [Dataset "schema" Property](#dataset-schema-property-deprecated---eol-2019-05-30) section that follows.
+>[!NOTE]
+>
+>The "schemaRef" property replaces the now deprecated "schema" property. If "schemaRef" is absent from the dataset or does not contain a value, you will need to check for the presence of a "schema" property. This could be done by replacing "schemaRef" with "schema" in the `properties` query parameter in the previous call. More details on the "schema" property are available in the [Dataset "schema" Property](#dataset-schema-property-deprecated---eol-2019-05-30) section that follows.
 
 **API format**
 
@@ -192,7 +198,9 @@ The response format depends on the type of Accept header sent in the request. Lo
 | `application/vnd.adobe.xed-full-notext+json; version={major version}` |$refs and allOf resolved, no titles or descriptions |
 | `application/vnd.adobe.xed-full-desc+json; version={major version}` | $refs and allOf resolved, descriptors included |
 
->[!NOTE] `application/vnd.adobe.xed-id+json` and `application/vnd.adobe.xed-full+json; version={major version}` are the most commonly used Accept headers. `application/vnd.adobe.xed-id+json` is preferred for listing resources in the Schema Registry as it returns only the "title", "id", and "version". `application/vnd.adobe.xed-full+json; version={major version}` is preferred for viewing a specific resource (by its "id"), as it returns all fields (nested under "properties"), as well as titles and descriptions.
+>[!NOTE]
+>
+>`application/vnd.adobe.xed-id+json` and `application/vnd.adobe.xed-full+json; version={major version}` are the most commonly used Accept headers. `application/vnd.adobe.xed-id+json` is preferred for listing resources in the Schema Registry as it returns only the "title", "id", and "version". `application/vnd.adobe.xed-full+json; version={major version}` is preferred for viewing a specific resource (by its "id"), as it returns all fields (nested under "properties"), as well as titles and descriptions.
 
 **Response**
 
@@ -232,13 +240,17 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/xdms/context/pers
   -H "x-api-key: {API_KEY}"
 ```
 
->[!NOTE] An optional query parameter, `expansion=xdm`, tells the API to fully expand and in-line any referenced schemas. You may want to do this when presenting a list of all potential fields to the user.
+>[!NOTE]
+>
+>An optional query parameter, `expansion=xdm`, tells the API to fully expand and in-line any referenced schemas. You may want to do this when presenting a list of all potential fields to the user.
 
 **Response**
 
 Similar to the steps for [viewing dataset schema](#view-dataset-schema), the response contains a JSON schema that describes the structure and field-level information of the data, serialized as JSON.
 
->[!NOTE] When the "schema" field is empty or absent entirely, the connector should read the "schemaRef" field and use the [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) as shown in the previous steps to [view a dataset schema](#view-dataset-schema).
+>[!NOTE]
+>
+>When the "schema" field is empty or absent entirely, the connector should read the "schemaRef" field and use the [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) as shown in the previous steps to [view a dataset schema](#view-dataset-schema).
 
 ### The "observableSchema" property
 
@@ -555,7 +567,9 @@ If you are using the reference implementation found on [GitHub](https://github.c
 
 Validation can be performed for logical XDM types, using attributes such as `minLength` and `maxlength` for strings, `minimum` and `maximum` for integers, and more. The [Schema Registry API developer guide](../xdm/api/getting-started.md) contains a table that outlines XDM types and the properties that can be used for validation. 
 
->[!NOTE] The minimum and maximum values provided for various `integer` types are the MIN and MAX values that the type can support, but these values can be further constrained to minimums and maximums of your choosing.
+>[!NOTE]
+>
+>The minimum and maximum values provided for various `integer` types are the MIN and MAX values that the type can support, but these values can be further constrained to minimums and maximums of your choosing.
 
 ### Create a batch
 

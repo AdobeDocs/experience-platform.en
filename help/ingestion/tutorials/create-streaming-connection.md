@@ -38,7 +38,9 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+>[!NOTE]
+>
+>For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
@@ -56,7 +58,9 @@ POST /flowservice/connections
 
 **Request**
 
->[!NOTE] The values for the listed `providerId` and the `connectionSpec` **must** be used as shown in the example, as they are what specifies to the API that you are creating a streaming connection for streaming ingestion.. 
+>[!NOTE]
+>
+>The values for the listed `providerId` and the `connectionSpec` **must** be used as shown in the example, as they are what specifies to the API that you are creating a streaming connection for streaming ingestion.. 
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \

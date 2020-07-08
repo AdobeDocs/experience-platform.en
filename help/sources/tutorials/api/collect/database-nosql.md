@@ -316,7 +316,9 @@ curl -X POST \
 | `params.dataSetId` | The ID of the target dataset. |
 | `connectionSpec.id` | The connection specification ID of your third-party database. |
 
->[!NOTE] When creating a target connection, make sure to use the dataset base connection value for the base connection `id` as opposed to the base connection of your third-party source connector.
+>[!NOTE]
+>
+>When creating a target connection, make sure to use the dataset base connection value for the base connection `id` as opposed to the base connection of your third-party source connector.
 
 **Response**
 

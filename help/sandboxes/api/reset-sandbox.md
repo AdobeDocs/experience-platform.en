@@ -55,4 +55,6 @@ A successful response returns the details of the updated sandbox, showing that i
 }
 ```
 
->[!NOTE] Once a sandbox is reset, it takes roughly 15 minutes to be provisioned by the system. Once provisioned, the sandbox's `state` becomes "active" or "failed".
+>[!NOTE]
+>
+>Once a sandbox is reset, it takes roughly 15 minutes to be provisioned by the system. Once provisioned, the sandbox's `state` becomes "active" or "failed".

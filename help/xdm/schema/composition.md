@@ -70,7 +70,9 @@ Since maintaining backwards compatibility is crucial for schema evolution, Exper
 |------------------------------------|---------------------------------|
 |<ul><li>Adding new fields to an existing schema</li><li>Making a mandatory field optional</li></ul>|<ul><li>Removing previously defined fields</li><li>Introducing new mandatory fields</li><li>Renaming or redefining existing fields</li><li>Removing or restricting previously supported field values</li><li>Moving attributes to a different location in the tree</li></ul>|
 
->[!NOTE] If a schema has not yet been used to ingest data into Experience Platform, you may introduce a breaking change to that schema. However, once the schema has been used in Platform, it must adhere to the additive versioning policy.
+>[!NOTE]
+>
+>If a schema has not yet been used to ingest data into Experience Platform, you may introduce a breaking change to that schema. However, once the schema has been used in Platform, it must adhere to the additive versioning policy.
 
 ### Schemas and data ingestion
 
@@ -139,7 +141,9 @@ The valid ranges of these scalar types can be further constrained to certain pat
 * Date-time
 * Map
 
->[!NOTE] The "map" field type allows for key-value pair data, including multiple values for a single key. Maps can only be defined at the system level, meaning you may encounter a map in an industry or vendor-defined schema, but it is not available for use in fields you define. The [Schema Registry API developer guide](../api/getting-started.md) contains more information on defining field types.
+>[!NOTE]
+>
+>The "map" field type allows for key-value pair data, including multiple values for a single key. Maps can only be defined at the system level, meaning you may encounter a map in an industry or vendor-defined schema, but it is not available for use in fields you define. The [Schema Registry API developer guide](../api/getting-started.md) contains more information on defining field types.
 
 Some data operations used by downstream services and applications enforce constraints on specific field types. Affected services include, but are not limited to:
 

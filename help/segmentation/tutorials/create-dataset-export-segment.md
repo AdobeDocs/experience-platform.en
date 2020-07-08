@@ -28,7 +28,9 @@ The datasets workspace within the Experience Platform UI allows you to view and 
 
 To view the datasets workspace, click **Datasets** in the left-hand navigation, then click on the *Browse* tab. The datasets workspace contains a list of datasets, including columns showing *Name*, *Created* (date and time), *Source*, *Schema*, and *Last Batch Status*, as well as the date and time the dataset was *Last Updated*. Depending on the width of each column, you may be required to scroll left or right to see all columns. 
 
->[!NOTE] Click on the filter icon next to the search bar to use filtering capabilities to view only those datasets enabled for Real-time Customer Profile.
+>[!NOTE]
+>
+>Click on the filter icon next to the search bar to use filtering capabilities to view only those datasets enabled for Real-time Customer Profile.
 
 ![View all datasets](../images/tutorials/segment-export-dataset/datasets-workspace.png)
 
