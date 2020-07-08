@@ -7,13 +7,13 @@ topic: developer guide
 
 # Segment jobs endpoint guide
 
-A segment job is an asynchronous process that creates a new audience segment. It references a segment definition, as well as any merge policies controlling how [!DNL Real-time Customer Profile] merges overlapping attributes across your profile fragments. When a segment job successfully completes, you can gather various information about the segment, such as any errors that may have occurred during processing and the ultimate size of your audience.
+A segment job is an asynchronous process that creates a new audience segment. It references a [segment definition](./segment-definitions.md), as well as any [merge policies](../../profile/api/merge-policies.md) controlling how [!DNL Real-time Customer Profile] merges overlapping attributes across your profile fragments. When a segment job successfully completes, you can gather various information about the segment, such as any errors that may have occurred during processing and the ultimate size of your audience.
 
 This guide provides information to help you better understand segment jobs and includes sample API calls for performing basic actions using the API.
 
 ## Getting started
 
-The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before reading this guide, please refer to the [getting started document guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
+The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
 
 ## Retrieve a list of segment jobs {#retrieve-list}
 
@@ -25,20 +25,18 @@ The `/segment/jobs` endpoint supports several query parameters to help filter yo
 
 ```http
 GET /segment/jobs
-GET /segment/jobs?start={START}
-GET /segment/jobs?limit={LIMIT}
-GET /segment/jobs?status={STATUS}
-GET /segment/jobs?sort={SORT}
-GET /segment/jobs?property={PROPERTY}
+GET /segment/jobs?{QUERY_PARAMETERS}
 ```
 
-| Parameter | Description |
-| --------- | ----------- |
-| `{START}` | Specifies the starting offset for the segment jobs returned. |
-| `{LIMIT}` | Specifies the number of segment jobs returned per page. |
-| `{STATUS}` | Filters the results based on status. The supported values are NEW, QUEUED, PROCESSING, SUCCEEDED, FAILED, CANCELLING, CANCELLED |
-| `{SORT}` | Orders the segment jobs returned. Is written in the format `[attributeName]:[desc|asc]`. |
-| `{PROPERTY}` | Filters segment jobs and gets exact matches for the filter given. It can be written in either of the following formats: <ul><li>`[jsonObjectPath]==[value]` - filtering on the object key</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filtering within the array</li></ul> |
+**Query parameters**
+
+| Parameter | Description | Example |
+| --------- | ----------- | ------- |
+| `start` | Specifies the starting offset for the segment jobs returned. | `start=1` |
+| `limit` | Specifies the number of segment jobs returned per page. | `limit=20` |
+| `status` | Filters the results based on status. The supported values are NEW, QUEUED, PROCESSING, SUCCEEDED, FAILED, CANCELLING, CANCELLED | `status=NEW` |
+| `sort` | Orders the segment jobs returned. Is written in the format `[attributeName]:[desc|asc]`. | `sort=creationTime:desc` |
+| `property` | Filters segment jobs and gets exact matches for the filter given. It can be written in either of the following formats: <ul><li>`[jsonObjectPath]==[value]` - filtering on the object key</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filtering within the array</li></ul> | `property=segments~segmentId==workInUS` |
 
 **Request**
 
@@ -146,6 +144,15 @@ A successful response returns HTTP status 200 with a list of segment jobs for th
 }
 ```
 
+| Property | Description |
+| -------- | ----------- |
+| `id` | A system-generated read-only identifier for the segment job. | 
+| `status` | The current status for the segment job. Potential values for the status include "NEW", "PROCESSING", "CANCELLING", "CANCELLED", "FAILED", and "SUCCEEDED". |
+| `segments` | An object that contains information about the segment definitions returned within the segment job. |
+| `segments.segment.id` | The ID of the segment definition. |
+| `segments.segment.expression` | An object that contains information about the segment definition's expression, written in PQL. |
+| `metrics` | An object that contains diagnostic information about the segment job. |
+
 ## Create a new segment job {#create}
 
 You can create a new segment job by making a POST request to the `/segment/jobs` endpoint.
@@ -172,6 +179,10 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
   }
 ]'
 ```
+
+| Property | Description |
+| -------- | ----------- |
+| `segmentId` | The ID of the segment definition that you want to create a segment job for. |
 
 **Response**
 
@@ -227,6 +238,14 @@ A successful response returns HTTP status 200 with details of your newly created
     "updateEpoch": 1579304260
 }
 ```
+
+| Property | Description |
+| -------- | ----------- |
+| `id` | A system-generated read-only identifier for the newly created segment job. | 
+| `status` | The current status for the segment job. Since the segment job is newly created, the status will always be "NEW". |
+| `segments` | An object that contains information about the segment definitions that this segment job is running for. |
+| `segments.segment.id` | The ID of the segment definition. |
+| `segments.segment.expression` | An object that contains information about the segment definition's expression, written in PQL. |
 
 ## Retrieve a specific segment job {#get}
 
@@ -316,9 +335,18 @@ A successful response returns HTTP status 200 with detailed information about th
 }
 ```
 
+| Property | Description |
+| -------- | ----------- |
+| `id` | A system-generated read-only identifier for the segment job. | 
+| `status` | The current status for the segment job. Potential values for the status include "NEW", "PROCESSING", "CANCELLING", "CANCELLED", "FAILED", and "SUCCEEDED". |
+| `segments` | An object that contains information about the segment definitions returned within the segment job. |
+| `segments.segment.id` | The ID of the segment definition. |
+| `segments.segment.expression` | An object that contains information about the segment definition's expression, written in PQL. |
+| `metrics` | An object that contains diagnostic information about the segment job. |
+
 ## Bulk retrieve segment jobs {#bulk-get}
 
-You can retrieve detailed information about multiple specified segment jobs by making a POST request to the `/segment/jobs/bulk-get` endpoint and providing the  `id` values of the segment jobs in the request body.
+You can retrieve detailed information about multiple segment jobs by making a POST request to the `/segment/jobs/bulk-get` endpoint and providing the  `id` values of the segment jobs in the request body.
 
 **API format**
 
@@ -411,6 +439,14 @@ A successful response returns HTTP status 207 with the requested segment jobs.
     }
 }
 ```
+
+| Property | Description |
+| -------- | ----------- |
+| `id` | A system-generated read-only identifier for the segment job. | 
+| `status` | The current status for the segment job. Potential values for the status include "NEW", "PROCESSING", "CANCELLING", "CANCELLED", "FAILED", and "SUCCEEDED". |
+| `segments` | An object that contains information about the segment definitions returned within the segment job. |
+| `segments.segment.id` | The ID of the segment definition. |
+| `segments.segment.expression` | An object that contains information about the segment definition's expression, written in PQL. |
 
 ## Cancel or delete a specific segment job {#delete}
 

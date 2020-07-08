@@ -306,8 +306,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 | Property | Description |
 | -------- | ----------- |
-| `path` | The path of the value you want to patch. In this case, since you are updating the schedule's cron schedule, you need to set the value of `path` to `/schedule`. |
-| `value` | The updated value of the schedule's state. This value needs to be in the form of a cron schedule. In this example, the schedule will run on the second of every month. |
+| `path` | The path of the value you want to updated. In this case, since you are updating the cron schedule, you need to set the value of `path` to `/schedule`. |
+| `value` | The updated value of the cron schedule. This value needs to be in the form of a cron schedule. In this example, the schedule will run on the second of every month. |
 
 **Response**
 
@@ -315,7 +315,7 @@ A successful response returns HTTP status 204 (No Content).
 
 ## Delete a specific schedule
 
-You can request to delete the specified schedule by making a DELETE request to the `/config/schedules` endpoint and providing the ID of the schedule you wish to delete in the request path.
+You can request to delete a specific schedule by making a DELETE request to the `/config/schedules` endpoint and providing the ID of the schedule you wish to delete in the request path.
 
 **API format**
 
@@ -339,11 +339,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382
 
 **Response**
 
-A successful response returns HTTP status 204 (No Content) with the following message:
-
-```json
-(No Content) Schedule deleted successfully
-```
+A successful response returns HTTP status 204 (No Content).
 
 ## Next steps
 
