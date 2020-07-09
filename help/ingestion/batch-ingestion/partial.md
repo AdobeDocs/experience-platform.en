@@ -96,7 +96,7 @@ To use an existing dataset, start by selecting a dataset. The sidebar on the rig
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
 
-The [!UICONTROL *[!UICONTROL Partial ingestion]*] toggle allows you to enable or disable the use of partial batch ingestion.
+The *[!UICONTROL Partial ingestion]* toggle allows you to enable or disable the use of partial batch ingestion.
 
 The *[!UICONTROL Error diagnostics]* toggle only appears when the *[!UICONTROL Partial ingestion]* toggle is off. This feature allows [!DNL Platform] to generate detailed error messages about your ingested batches. If the *[!UICONTROL Partial ingestion]* toggle is turned on, enhanced error diagnostics are automatically enforced.
 
