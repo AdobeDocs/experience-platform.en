@@ -118,5 +118,5 @@ To learn design principles and best practices for composing schemas to be used w
 
 To reinforce your understanding of XDM System in Experience Platform, watch the following video:
 
-[!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)
 
