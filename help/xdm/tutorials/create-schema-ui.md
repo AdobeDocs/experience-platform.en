@@ -290,7 +290,7 @@ Your new schema is now able to be used to ingest data into Platform. Remember th
 
 The "Loyalty Members" schema is also available to be viewed and managed using the Schema Registry API. To begin working with the API, start by reading the [Schema Registry API developer guide](../api/getting-started.md).
 
->[!CAUTION]
+>[!WARNING]
 >
 >The Platform UI shown in the following videos are out of date. Please refer to the documentation above for the latest UI screenshots and functionality.
 
@@ -301,8 +301,6 @@ The following video shows how to create a simple schema in the Platform UI.
 The following video is intended to reinforce your understanding of working with mixins and classes.
 
 [!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
-
-
 
 ## Appendix
 
