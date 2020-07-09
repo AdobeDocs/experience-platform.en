@@ -12,16 +12,16 @@ topic: Content and Commerce AI
 
 Content and Commerce AI is a set of AI services that allows you to extract intelligent features from your content, organize, streamline content flow, and deliver more impactful, personalized experiences to your customers.
 
-All brands strive to deliver a perfect customer experience; You're constantly trying to find better answers to who/what/where/why/when/and how customers interact with your touchpoints.
+All brands strive to deliver a perfect customer experience; You're constantly trying to find better answers to the key marketing questions - the who/what/where/why/when/and how of your customer touchpoints.
 
-Content is the lifeblood of these experiences. To better answer marketing questions, you must understand content and a customers interactions with it. With Content and Commerce AI, you can learn what parts of the content you provide resonates with your customers. Using these insights, you will be able to personalize experiences and boost KPI's
+Content is the lifeblood of these experiences. To better answer marketing questions, you must understand content and a customer's interactions with it. With Content and Commerce AI, you can learn what features of the content you provide resonates with your customers. Using these insights allows you to personalize experiences and boost KPI's.
 
 ## Content and Commerce AI service functionalities
 
 | Content Type | Features | Overview of functionality |
 | --- | --- | --- |
 | Text | - Keyword & Entity extraction <br>- Custom classifiers | - Automatically extract keywords and tags from enterprise documents and webpages using an out-of-the-box AI service. <br> - Automatically label an enterprise's documents or webpages per a corporate taxonomy using a service built on custom AI models. | 
-Images | - Visual recommendations <br> - Color extraction | - Deliver visually similar product recommendations to consumers, powered by an AI model developed on intuitive product features (design, color, shape). <br> - Accurately extract and quantify the color composition of a product image. |
+Images | - Visual recommendations <br> - Color extraction | - Deliver visually similar product recommendations to consumers, powered by an AI model developed on intuitive product features (design, color, shape). <br> - Accurately extract the dominant colors (labels and hex values) and their weightage from a product image. |
 
 ## Understanding Content and Commerce AI 
 
@@ -36,7 +36,7 @@ The overall vision of Content and Commerce AI is broken down into three steps to
 - Associate content data with assets.
 
 **Step 2: Understanding the Customer**
-- Associate customer's actions with content metadata.
+- Associate customer's actions with content features.
 - Get customer's preferences and affinities from content and actions.
 - Add preferences to customer's profile.
 
@@ -47,7 +47,7 @@ The overall vision of Content and Commerce AI is broken down into three steps to
 
 ## Getting started with Content and Commerce AI
 
-Content and Commerce AI utilizes Adobe Experience Clouds APIs. In order to make calls to [!DNL Experience Cloud] APIs through Adobe I/O and the I/O Console Integration, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Cloud] API calls, as shown below:
+Content and Commerce AI utilizes utilizes Adobe I/O APIs. In order to make calls to Adobe I/O APIs and the I/O Console Integration, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all the Adobe I/O API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
