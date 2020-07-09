@@ -79,7 +79,7 @@ The Schema Editor canvas reappears, allowing you to review the structure of the 
 
 If you are editing an existing schema that has already been enabled for use in [!DNL Real-time Customer Profile], click **[!UICONTROL Save]** to confirm your changes before skipping ahead to the section on [creating a dataset based on your consent schema](#dataset). If you are creating a new schema, continue following the steps outlined in the subsection below.
 
-#### Enable the schema for use in [!DNL Real-time Customer Profile]
+### Enable the schema for use in [!DNL Real-time Customer Profile]
 
 In order for [!DNL Real-time CDP] to associate the consent data it receives to specific customer profiles, the consent schema must be enabled for use in [!DNL Real-time Customer Profile].
 
