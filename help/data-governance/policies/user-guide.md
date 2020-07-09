@@ -9,7 +9,9 @@ topic: policies
 
 Adobe Experience Platform Data Governance provides a user interface that allows you to create and manage data usage policies. This document provides an overview of the actions you can perform in the _Policies_ workspace in the [!DNL Experience Platform] user interface.
 
->[!IMPORTANT] All data usage policies (including core policies provided by Adobe) are disabled by default. In order for an individual policy to be considered for enforcement, you must manually enable that policy. See the section on [enabling policies](#enable) for steps on how to do this in the UI.
+>[!IMPORTANT]
+>
+>All data usage policies (including core policies provided by Adobe) are disabled by default. In order for an individual policy to be considered for enforcement, you must manually enable that policy. See the section on [enabling policies](#enable) for steps on how to do this in the UI.
 
 ## Prerequisites
 
@@ -44,7 +46,9 @@ Next, select the data usage labels that the policy will be based on. When select
 
 The *[!UICONTROL Select marketing actions]* step appears. Choose the appropriate marketing actions from the provided list, then click **[!UICONTROL Next]** to continue.
 
->[!NOTE] When selecting multiple marketing actions, the policy interprets them as an "OR" rule. In other words, the policy applies if _any_ of the selected marketing actions are performed.
+>[!NOTE]
+>
+>When selecting multiple marketing actions, the policy interprets them as an "OR" rule. In other words, the policy applies if _any_ of the selected marketing actions are performed.
 
 ![](../images/policies/add-marketing-actions.png)
 
@@ -86,7 +90,9 @@ The newly created action appears in the *[!UICONTROL Marketing actions]* tab. Yo
 
 ## Edit or delete a marketing action {#edit-delete-marketing-action}
 
->[!NOTE] Only custom marketing actions defined by your organization can be edited. Marketing actions defined by Adobe cannot be changed or deleted.
+>[!NOTE]
+>
+>Only custom marketing actions defined by your organization can be edited. Marketing actions defined by Adobe cannot be changed or deleted.
 
 In the **[!UICONTROL Policies]** workspace, select the **[!UICONTROL Marketing actions]** tab to view a list of available marketing actions defined by Adobe and your own organization. Select a custom marketing action from the list, then used the provided fields in the right-hand section to edit the marketing action's details.
 
@@ -94,7 +100,9 @@ In the **[!UICONTROL Policies]** workspace, select the **[!UICONTROL Marketing a
 
 If the marketing action is not being used by any existing usage policies, you can delete it by clicking **[!UICONTROL Delete marketing action]**.
 
->[!NOTE] Attempting to delete a marketing action that is being used by an existing policy will cause an error message to appear, indicating that the delete attempt failed.
+>[!NOTE]
+>
+>Attempting to delete a marketing action that is being used by an existing policy will cause an error message to appear, indicating that the delete attempt failed.
 
 ![](../images/policies/delete-marketing-action.png)
 

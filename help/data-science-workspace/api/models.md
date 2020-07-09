@@ -213,7 +213,9 @@ A successful response returns a payload containing the details of your Model inc
 
 You can update an existing Model by overwriting its properties through a PUT request that includes the target Model's ID in the request path and providing a JSON payload containing updated properties.
 
->[!TIP] In order to ensure the success of this PUT request, it is suggested that first you perform a GET request to retrieve the Model by ID. Then, modify and update the returned JSON object and apply the entirety of the modified JSON object as the payload for the PUT request.
+>[!TIP]
+>
+>In order to ensure the success of this PUT request, it is suggested that first you perform a GET request to retrieve the Model by ID. Then, modify and update the returned JSON object and apply the entirety of the modified JSON object as the payload for the PUT request.
 
 **API Format**
 

@@ -116,7 +116,9 @@ Data scientists can take advantage of new technologies and datasets as soon as t
 
 Access control for [!DNL Experience Platform] is administered through the [Adobe Admin Console](https://adminconsole.adobe.com). This functionality leverages product profiles in Admin Console, which link users with permissions and sandboxes. See the [access control overview](../access-control/home.md) for more information.
 
->[!IMPORTANT] In order to use [!DNL Data Science Workspace], the [!UICONTROL "Manage Data Science Workspace"] permission must be enabled. 
+>[!IMPORTANT]
+>
+>In order to use [!DNL Data Science Workspace], the [!UICONTROL "Manage Data Science Workspace"] permission must be enabled. 
 
 The following table outlines the effects of having this permission enabled or disabled:
 

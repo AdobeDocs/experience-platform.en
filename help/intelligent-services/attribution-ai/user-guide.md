@@ -53,7 +53,9 @@ In order to define a conversion event, you need to give the event a name and sel
 
 Once an event is selected, a new dropdown appears to its right. The second dropdown is used to provide further context to your event through the use of operations. For this conversion event, the default operation *exists* is used.
 
->[!NOTE] A string under your *conversion name* is updated as you define your event.
+>[!NOTE]
+>
+>A string under your *conversion name* is updated as you define your event.
 
 ![no dropdown](./images/user-guide/conversion_event_1.png)
 
@@ -91,7 +93,9 @@ For the purpose of this touchpoint, select **equals**.
 
 Once an operator for a touchpoint is selected, *Enter Field Value* is made available. The dropdown values for *Enter Field Value* populate based on the operator and touchpoint value you previously selected. If a value does not populate in the dropdown, you can type that value in manually. Click the dropdown and select **CLICK**.
 
->[!NOTE] The operators "exists" and "not exists" do not have field values associated with them.
+>[!NOTE]
+>
+>The operators "exists" and "not exists" do not have field values associated with them.
  
 ![touchpoint dropdown](./images/user-guide/touchpoint_dropdown.png)
 
@@ -105,7 +109,9 @@ Clicking **Add group** gives you the option to create additional fields separate
 
 ![touchpoint overview](./images/user-guide/add_group_touchpoint.png)
 
->[!NOTE] Use the string under *Touchpoint name* for a quick overview of your touchpoint. Notice that the string matches the name of the touchpoint.
+>[!NOTE]
+>
+>Use the string under *Touchpoint name* for a quick overview of your touchpoint. Notice that the string matches the name of the touchpoint.
 
 ![](./images/user-guide/touchpoint_string.png)
 
@@ -133,7 +139,9 @@ Click the dropdown under *Scoring Frequency* to select between daily, weekly, an
 
 To change the time of day you want scoring to occur, click the clock icon. In the new overlay that appears, enter the time of day you want scoring to take place. Click outside the overlay to close it.
 
->[!NOTE] It can take up to 24 hours for each scoring process to complete.
+>[!NOTE]
+>
+>It can take up to 24 hours for each scoring process to complete.
 
 ![clock icon](./images/user-guide/time_of_day.png)
 
@@ -151,7 +159,9 @@ Next, select an operator.
 
 Lastly, type in the country code in the *Enter Field Value* dropdown.
 
->[!NOTE] Country codes are two characters long. A complete list can be found here [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
+>[!NOTE]
+>
+>Country codes are two characters long. A complete list can be found here [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
 
 ![region](./images/user-guide/region-based.png)
 
@@ -159,7 +169,9 @@ Lastly, type in the country code in the *Enter Field Value* dropdown.
 
 To ensure that you get the most accurate model possible, it is important to train your model with historical data that represents your business. By default, the model is trained using 2 quarters (6 months) of data. Select the dropdown to change the default. You can choose to train with one to four quarters of data (3-12 months).
 
->[!NOTE] A shorter training window is more sensitive to recent trends, whereas a longer training window creates a more robust model and is less sensitive to recent trends.
+>[!NOTE]
+>
+>A shorter training window is more sensitive to recent trends, whereas a longer training window creates a more robust model and is less sensitive to recent trends.
 
 ![training window](./images/user-guide/training_window.png)
 

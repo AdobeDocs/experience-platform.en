@@ -20,7 +20,9 @@ The *Register Server* dialog appears. Under the *General* tab, select **PostgreS
 - **Host and Port**: The host endpoint and its port for Query Service. 
 - **Database:** The database that will be used.
 
->[!NOTE] For more information on finding your login credentials, host, port, and database name, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to Platform, click **Queries**, then click **Credentials**.
+>[!NOTE]
+>
+>For more information on finding your login credentials, host, port, and database name, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to Platform, click **Queries**, then click **Credentials**.
 
 ![](../images/clients/aqua-data-studio/register-server-general-tab.png)
 

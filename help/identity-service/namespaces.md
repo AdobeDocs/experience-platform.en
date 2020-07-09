@@ -65,7 +65,9 @@ Namespaces that you define are private to your organization and require a unique
 
 Similar to Standard namespaces, you can click on a Custom namespace from the *[!UICONTROL Browse]* tab to view its details, however with a Custom namespace you can also edit its Display Name and Description from the details area.
 
->[!NOTE] Once a namespace has been created, it cannot be deleted and its "Identity Symbol" (or "code" in the API) and "Type" cannot be changed.
+>[!NOTE]
+>
+>Once a namespace has been created, it cannot be deleted and its "Identity Symbol" (or "code" in the API) and "Type" cannot be changed.
 
 ## Namespaces in identity data
 
