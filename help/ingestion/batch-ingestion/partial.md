@@ -6,7 +6,7 @@ topic: overview
 ---
 
 
-# Partial batch ingestion (Beta)
+# Partial batch ingestion
 
 Partial batch ingestion is the ability to ingest data containing errors, up to a certain threshold. With this capability, users can successfully ingest all their correct data into Adobe Experience Platform while all their incorrect data is batched separately, along with details as to why it is invalid.
 
@@ -14,102 +14,117 @@ This document provides a tutorial for managing partial batch ingestion.
 
 In addition, the [appendix](#appendix) to this tutorial provides a reference for partial batch ingestion error types.
 
->[!IMPORTANT]
->
->This feature only exists using the API. Please contact your team in order to gain access to this feature.
-
 ## Getting started
 
 This tutorial requires a working knowledge of the various Adobe Experience Platform services involved with partial batch ingestion. Before beginning this tutorial, please review the documentation for the following services:
 
-- [Batch ingestion](./overview.md): The method which Platform ingests and stores data from data files, such as CSV and Parquet.
+- [Batch ingestion](./overview.md): The method which [!DNL Platform] ingests and stores data from data files, such as CSV and Parquet.
 - [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
 
-The following sections provide additional information that you will need to know in order to successfully make calls to Platform APIs.
+The following sections provide additional information that you will need to know in order to successfully make calls to [!DNL Platform] APIs.
 
 ### Reading sample API calls
 
-This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the Experience Platform troubleshooting guide.
+This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
 
 ### Gather values for required headers
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in Experience Platform are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
 
-## Enable a dataset for partial batch ingestion in the API
+## Enable a batch for partial batch ingestion in the API {#enable-api}
 
-<!-- >[!NOTE] This section describes enabling a dataset for partial batch ingestion using the API. For instructions on using the UI, please read the [enable a dataset for partial batch ingestion in the UI](#enable-a-dataset-for-partial-batch-ingestion-in-the-ui) step. -->
+>[!NOTE]
+>
+>This section describes enabling a batch for partial batch ingestion using the API. For instructions on using the UI, please read the [enable a batch for partial batch ingestion in the UI](#enable-ui) step.
 
-You can create a new dataset or modify an existing dataset with partial ingestion enabled.
+You can create a new batch with partial ingestion enabled.
 
-To create a new dataset, follow the steps in the [create a dataset tutorial](../../catalog/api/create-dataset.md). Once you reach the *Create a dataset* step, add the following field within the request body:
+To create a new batch, follow the steps in the [batch ingestion developer guide](./api-overview.md). Once you reach the *Create batch* step, add the following field within the request body:
 
 ```json
 {
     ...
-    "tags" : {
-        "partialBatchIngestion":["errorThresholdPercentage:5"]
-    },
+    "enableErrorDiagnostics": true,
+    "partialIngestionPercentage": 5
     ...
 }
 ```
 
 | Property | Description |
 | -------- | ----------- |
-| `errorThresholdPercentage` | The percentage of acceptable errors before the entire batch will fail. |
+| `enableErrorDiagnostics` | A flag that allows [!DNL Platform] to generate detailed error messages about your batch. |
+| `partialIngestionPercentage` | The percentage of acceptable errors before the entire batch will fail. So, in this example, a maximum of 5% of the batch can be errors, before it will fail. |
 
-Similarly, to modify an existing dataset, follow the steps in the [Catalog developer guide](../../catalog/api/update-object.md). 
 
-Within the dataset, you will need to add the tag described above.
-
-<!-- ## Enable a dataset for partial batch ingestion in the UI
+## Enable a batch for partial batch ingestion in the UI {#enable-ui}
 
 >[!NOTE]
 >
->This section describes enabling a dataset for partial batch ingestion using the UI. If you have already enabled a dataset for partial batch ingestion using the API, you can skip ahead to the next section.
+>This section describes enabling a batch for partial batch ingestion using the UI. If you have already enabled a batch for partial batch ingestion using the API, you can skip ahead to the next section.
 
-To enable a dataset for partial ingestion through the Platform UI, click **Datasets** in the left navigation. You can either [create a new dataset](#create-a-new-dataset-with-partial-batch-ingestion-enabled) or [modify an existing dataset](#modify-an-existing-dataset-to-enable-partial-batch-ingestion).
+To enable a batch for partial ingestion through the [!DNL Platform] UI, you can create a new batch through source connections, create a new batch in an existing dataset, or create a new batch through the "[!UICONTROL Map CSV to XDM flow]". 
 
-### Create a new dataset with partial batch ingestion enabled
+### Create a new source connection {#new-source}
 
-To create a new dataset, follow the steps in the [dataset user guide](../../catalog/datasets/user-guide.md). Once you reach the *Configure dataset* step, take note of the *Partial Ingestion* and *Error Diagnostics* fields.
+To create a new source connection, follow the listed steps in the [Sources overview](../../sources/home.md). Once you reach the *[!UICONTROL Dataflow detail]* step, take note of the *[!UICONTROL Partial ingestion]* and *[!UICONTROL Error diagnostics]* fields.
 
-![](../images/batch-ingestion/partial-ingestion/configure-dataset-focus.png)
+![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
-The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
+The *[!UICONTROL Partial ingestion]* toggle allows you to enable or disable the use of partial batch ingestion.
 
-The *Error Diagnostics* toggle only appears when the *Partial Ingestion* toggle is off. This feature allows Platform to generate detailed error messages about your ingested batches. If the *Partial Ingestion* toggle is turned on, enhanced error diagnostics are automatically enforced.
+The *[!UICONTROL Error diagnostics]* toggle only appears when the *[!UICONTROL Partial ingestion]* toggle is off. This feature allows [!DNL Platform] to generate detailed error messages about your ingested batches. If the *[!UICONTROL Partial ingestion]* toggle is turned on, enhanced error diagnostics are automatically enforced.
 
-![](../images/batch-ingestion/partial-ingestion/configure-dataset-partial-ingestion-focus.png)
+![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
-The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
+The *[!UICONTROL Error threshold]* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
 
-### Modify an existing dataset to enable partial batch ingestion
+### Use an existing dataset {#existing-dataset}
 
-To modify an existing dataset, select the dataset you want to modify. The sidebar on the right populates with information about the dataset. 
+To use an existing dataset, start by selecting a dataset. The sidebar on the right populates with information about the dataset. 
 
-![](../images/batch-ingestion/partial-ingestion/modify-dataset-focus.png)
+![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
 
-The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
+The *[!UICONTROL Partial ingestion]* toggle allows you to enable or disable the use of partial batch ingestion.
 
-The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%. -->
+The *[!UICONTROL Error diagnostics]* toggle only appears when the *[!UICONTROL Partial ingestion]* toggle is off. This feature allows [!DNL Platform] to generate detailed error messages about your ingested batches. If the *[!UICONTROL Partial ingestion]* toggle is turned on, enhanced error diagnostics are automatically enforced.
 
-## Retrieve partial batch ingestion errors
+![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
+
+The *[!UICONTROL Error threshold]* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
+
+Now, you can upload data using the **Add data** button, and it will be ingested using partial ingestion.
+
+### Use the "[!UICONTROL Map CSV to XDM schema]" flow {#map-flow}
+
+To use the "[!UICONTROL Map CSV to XDM schema]" flow, follow the listed steps in the [Map a CSV file tutorial](../tutorials/map-a-csv-file.md). Once you reach the *Add data* step, take note of the *[!UICONTROL Partial ingestion]* and *[!UICONTROL Error diagnostics]* fields.
+
+![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
+
+The *[!UICONTROL Partial ingestion]* toggle allows you to enable or disable the use of partial batch ingestion.
+
+The *[!UICONTROL Error diagnostics]* toggle only appears when the *[!UICONTROL Partial ingestion]* toggle is off. This feature allows [!DNL Platform] to generate detailed error messages about your ingested batches. If the *[!UICONTROL Partial ingestion]* toggle is turned on, enhanced error diagnostics are automatically enforced.
+
+![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
+
+The *[!UICONTROL Error threshold]* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
+
+## Retrieve partial batch ingestion errors {#retrieve-errors}
 
 If batches contain failures, you will need to retrieve error information about these failures so you can re-ingest the data.
 
-### Check status
+### Check status {#check-status}
 
 To check the status of the ingested batch, you must supply the batch's ID in the path of a GET request.
 
@@ -142,6 +157,9 @@ A successful response returns HTTP status 200 with detailed information about th
     "af838510-2233-11ea-acf0-f3edfcded2d2": {
         "status": "success",
         "tags": {
+            ...
+            "acp_enableErrorDiagnostics": true,
+            "acp_partialIngestionPercent": 5
             ...
         },
         "relatedObjects": [
@@ -176,7 +194,7 @@ A successful response returns HTTP status 200 with detailed information about th
 
 If the batch has an error and has error diagnostics enabled, the status will be "success" with more information about the error provided in a downloadable error file.
 
-## Next steps
+## Next steps {#next-steps}
 
 This tutorial covered how to create or modify a dataset to enable partial batch ingestion. For more information on batch ingestion, please read the [batch ingestion developer guide](./api-overview.md).
 
