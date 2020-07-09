@@ -296,11 +296,11 @@ The "Loyalty Members" schema is also available to be viewed and managed using th
 
 The following video shows how to create a simple schema in the [!DNL Platform] UI.
 
-[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
 
 The following video is intended to reinforce your understanding of working with mixins and classes.
 
-[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
 
 ## Appendix
 
