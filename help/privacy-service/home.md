@@ -48,7 +48,7 @@ In addition to legal regulations, any organizational or industry standards appli
 
 ### Label data for privacy requests {#label}
 
-Depending on the on the Experience Cloud applications that you are using, you must label the specific data fields that should be accessed or deleted in response to privacy requests. The process for labelling data varies between applications. To learn how to label data for each supported Adobe application, see the document on [Experience Cloud applications](./experience-cloud-apps.md).
+Depending on the Experience Cloud applications that you are using, you must label the specific data fields that should be accessed or deleted in response to privacy requests. The process for labelling data varies between applications. To learn how to label data for each supported Adobe application, see the document on [Experience Cloud applications](./experience-cloud-apps.md).
 
 ### Determine the types of identity data to send to Privacy Service {#identity}
 
