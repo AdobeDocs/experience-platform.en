@@ -17,6 +17,17 @@ Privacy Service provides a RESTful API and user interface to help you manage cus
 
 In order to make use of Privacy Service, several key decisions need to be made in terms of your organization's privacy requirements, the kinds of identity data you collect from your customers, and the best way to interface your CRM system with the service.
 
+These decisions can be summarized through the following questions:
+
+1. **What information am I gathering from my customers?** 
+    * To make the best use of Privacy Service, you must have a detailed understanding of the types of data you collect from your customers, and which of it is subject to privacy regulations. See the section on [determining privacy requirements](#requirements) for more information.
+1. **Have I correctly labeled my data?**
+    * Data must be properly labeled in order for the service to determine which fields to access or delete during privacy jobs. See the section on [labelling data](#label) for more information.
+1. **Do I know which IDs to send to Privacy Service?** 
+    * When sending privacy requests, individual customer IDs specific to particular Adobe applications must be provided. See the sections on [providing identity data](#identity)  and [making privacy requests](#requests) for more information.
+1. **How am I tracking my privacy jobs?** 
+    * Once you have made privacy requests, there are several options for tracking their status and results. See the section on [monitoring privacy jobs](#monitor) for more information.
+
 The sections below provide general guidance on these important prerequisite steps, and also provide links to further Privacy Service documentation for more details.
 
 ### Determine your organization's privacy requirements {#requirements}
@@ -35,7 +46,11 @@ If your data operations fall under the purview of any of the above regulations, 
 
 In addition to legal regulations, any organizational or industry standards applicable to your organization should also be considered when making these decisions.
 
-### Determine types of identity data to send to Privacy Service {#identity}
+### Label data for privacy requests {#label}
+
+Depending on the on the Experience Cloud applications that you are using, you must label the specific data fields that should be accessed or deleted in response to privacy requests. The process for labelling data varies between applications. To learn how to label data for each supported Adobe application, see the document on [Experience Cloud applications](./experience-cloud-apps.md).
+
+### Determine the types of identity data to send to Privacy Service {#identity}
 
 In order for Privacy Service to process a privacy request from a customer, at least one unique identity value for that customer must be provided in the request itself. A unique identity value is any piece of information that can be used to identify an individual person and their stored personal data within your Experience Cloud data stores. Privacy Service uses this identity information to locate and process the customer's personal data according to the nature of the request (access, delete, or opt-out).
 
@@ -43,7 +58,7 @@ Depending on the Experience Cloud applications your CRM system utilizes, the typ
 
 The document on [identity data for privacy requests](./identity-data.md) provides more detailed information on the types of identity information that are accepted for Privacy Service. The document also provides guidance on how to leverage Adobe technologies to effectively retrieve the appropriate identity information from your customers as they interact with your website, and send that data to Privacy Service in API requests.
 
-### Start making access, delete, and opt-out requests using the service {#requests}
+### Start making privacy requests {#requests}
 
 Once you have determined your business' privacy needs, and decided which identity values to send to Privacy Service, you can start making privacy requests. Privacy Service allows you to send privacy requests through either the API or the UI.
 
@@ -61,6 +76,16 @@ The [Privacy Service API](https://www.adobe.io/apis/experienceplatform/home/api-
 >[!NOTE] The Privacy Service UI currently only supports access and delete requests. All opt-out requests must be made through the API instead.
 
 The Privacy Service UI allows you to create and monitor privacy jobs using a graphical interface. The UI includes a **Status Report** widget that provides a visual representation of the status of all active requests, and allows you to create new requests by using the built-in **Request Builder** or by uploading JSON files. For more information on using the UI, see the [Privacy Service user guide](ui/overview.md).
+
+### Monitor privacy jobs {#monitor}
+
+Once you have made privacy jobs, you have several options for monitoring their status and results.
+
+The Privacy Service UI provides a monitoring dashboard that allows you to view a visual representation of the status of all active requests. See the [Privacy Service user guide](ui/overview.md) for more information.
+
+You can also choose to programmatically monitor the status of Privacy jobs by using the lookup endpoints provided by the Privacy Service API. See the [Privacy Service developer guide](./api/getting-started.md) 
+
+Privacy jobs can also be monitored by subscribing to Privacy Events. Privacy Events leverage Adobe I/O Events sent to a configured webhook in order to facilitate efficient job request automation. They reduce or eliminate the need to poll the Privacy Service API in order to check if a job is complete or if a certain milestone within a workflow has been reached. See the tutorial on [subscribing to Privacy Events](./privacy-events.md) for more information.
 
 ## Next steps
 
