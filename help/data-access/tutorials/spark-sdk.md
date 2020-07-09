@@ -7,26 +7,26 @@ topic: tutorial
 
 # Secure Spark Data Access SDK
 
-The Secure Spark Data Access SDK is a software development kit that enables reading and writing of datasets from Adobe Experience Platform.
+The Secure Spark [!DNL Data Access] SDK is a software development kit that enables reading and writing of datasets from Adobe Experience Platform.
 
 ## Getting started
 
-You are required to have completed the [authentication](../../tutorials/authentication.md) tutorial in order to have access to the values to make calls to the Secure Spark Data Access SDK:
+You are required to have completed the [authentication](../../tutorials/authentication.md) tutorial in order to have access to the values to make calls to the Secure Spark [!DNL Data Access] SDK:
 
 - `{ACCESS_TOKEN}`
 - `{API_KEY}`
 - `{IMS_ORG}`
 
-All resources in Experience Platform are isolated to specific virtual sandboxes. Using the Python SDK requires the name and the ID of the sandbox the operation will take place in:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. Using the Spark SDK requires the name and the ID of the sandbox the operation will take place in:
 
 - `{SANDBOX_NAME}`
 - `{SANDBOX_ID}`
 
-For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 ## Environment setup
 
-The Spark SDK expects you to provide credentials in environment variables or Data Source options.
+The [!DNL Spark] SDK expects you to provide credentials in environment variables or Data Source options.
 
 | Variable | Value |
 | -------- | ----- | 
@@ -57,7 +57,7 @@ val df = spark.read
 
 ## Installation
 
-Using the Spark SDK requires performance optimizations that need to be added to the `SparkSession`. You can apply them by using one of the following methods:
+Using the [!DNL Spark] SDK requires performance optimizations that need to be added to the `SparkSession`. You can apply them by using one of the following methods:
 
 Apply it directly to the current SparkSession:
 
@@ -74,11 +74,11 @@ spark.sql.extensions = com.adobe.platform.query.QSSparkSessionExtensions
 
 ## Reading a dataset
 
-The Spark SDK supports two modes of reading: interactive and batch.
+The [!DNL Spark] SDK supports two modes of reading: interactive and batch.
 
 Interactive mode creates a Java Database Connectivity (JDBC) connection to Query Service and gets results through a regular JDBC `ResultSet` that is automatically translated to a `DataFrame`. This mode works similarly to the built-in Spark method `spark.read.jdbc()`. This mode is meant only for small datasets and only requires a user token for authentication.
 
-Batch mode uses Query Service's COPY command to generate Parquet result sets in a shared location. These Parquet files can then be further processed. This mode requires both a user token and a service token with the `acp.foundation.catalog.credentials` scope.
+Batch mode uses [!DNL Query Service]'s COPY command to generate Parquet result sets in a shared location. These Parquet files can then be further processed. This mode requires both a user token and a service token with the `acp.foundation.catalog.credentials` scope.
 
 An example of reading a dataset in interactive mode can be seen below:
 
@@ -129,7 +129,7 @@ df = df.select("column-a", "column-b").distinct().show()
 
 ### WHERE clause
 
-The Spark SDK allows for two methods for filtering: Using an SQL expression or by filtering through conditions.
+The [!DNL Spark] SDK allows for two methods for filtering: Using an SQL expression or by filtering through conditions.
 
 An example of using these filtering functions can be seen below:
 
@@ -147,7 +147,7 @@ df.where("age" > 15 || "name" = "Steve")
 
 ### ORDER BY clause
 
-The ORDER BY clause allows received results to be sorted by a specified column in a specific order (ascending or descending). In the Spark SDK, this is done by using the `sort()` function.
+The ORDER BY clause allows received results to be sorted by a specified column in a specific order (ascending or descending). In the [!DNL Spark] SDK, this is done by using the `sort()` function.
 
 An example of using the `sort()` function can be seen below:
 
@@ -167,7 +167,7 @@ df = df.limit(100)
 
 ## Writing to a dataset
 
-The Spark SDK supports writing datasets. Users will first need to retrieve a previous dataset to write to a new dataset.
+The [!DNL Spark] SDK supports writing datasets. Users will first need to retrieve a previous dataset to write to a new dataset.
 
 ```scala
 val df = spark.read

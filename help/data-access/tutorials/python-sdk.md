@@ -5,24 +5,24 @@ title: Secure Python Data Access SDK
 topic: tutorial
 ---
 
-# Secure Python Data Access SDK
+# Secure Python [!DNL Data Access] SDK
 
-The Secure Python Data Access SDK is a software development kit that enables reading and writing of datasets from Adobe Experience Platform.
+The Secure Python [!DNL Data Access] SDK is a software development kit that enables reading and writing of datasets from Adobe Experience Platform.
 
 ## Getting started
 
-You are required to have completed the [authentication](../../tutorials/authentication.md) tutorial in order to have access to the values to make calls to the Secure Python Data Access SDK:
+You are required to have completed the [authentication](../../tutorials/authentication.md) tutorial in order to have access to the values to make calls to the Secure Python [!DNL Data Access] SDK:
 
 - `{ACCESS_TOKEN}`
 - `{API_KEY}`
 - `{IMS_ORG}`
 
-All resources in Experience Platform are isolated to specific virtual sandboxes. Using the Python SDK requires the name and the ID of the sandbox the operation will take place in:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. Using the [!DNL Python] SDK requires the name and the ID of the sandbox the operation will take place in:
 
 - `{SANDBOX_NAME}`
 - `{SANDBOX_ID}`
 
-For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 ## Environment setup
 
@@ -48,7 +48,7 @@ Additionally, your credentials can be added as environment variables.
 
 ## Installation
 
-All the packages will be in `./dist` after building.
+All the packages are outputted to `./dist` after building.
 
 ### Wheel
 
@@ -119,7 +119,7 @@ df = dataset_reader.select(['column-a']).distinct().read()
 
 ### WHERE clause
 
-The Python SDK supports certain operators to help filter the dataset.
+The [!DNL Python] SDK supports certain operators to help filter the dataset.
 
 >[!NOTE] The functions used for filtering are case sensitive.
 
@@ -171,7 +171,7 @@ df = dataset_reader.offset(100).read()
 
 ## Writing a dataset
 
-The Python SDK supports writing datasets. Users will need to supply the pandas dataframe that needs to be written to the dataset.
+The [!DNL Python] SDK supports writing datasets. Users will need to supply the pandas dataframe that needs to be written to the dataset.
 
 ### Writing the pandas dataframe
 
@@ -193,7 +193,7 @@ write_tracker = dataset_writer.write(<dataFrame>, file_format='json')
 
 ## Userspace directory (Checkpointing)
 
-For longer running jobs, users may need to store intermediate steps. In instances like this, the Python SDK provides the user the ability to read and write to a userspace. 
+For longer running jobs, users may need to store intermediate steps. In instances like this, the [!DNL Python] SDK provides the user the ability to read and write to a userspace. 
 
 >![NOTE] Paths to the data are **not** stored by the SDK. Users will need to store the corresponding path to its respective data.
 
