@@ -35,7 +35,9 @@ See the tutorial on [creating segments using APIs](../../segmentation/tutorials/
 
 In order for a schema to be included in the merged union view, the "union" tag must be added to the `meta:immutableTags` attribute of the schema. This is done through a PATCH request to update the schema and add the `meta:immutableTags` array with a value of "union".
 
->[!NOTE] Immutable tags are tags that are intended to be set, but never removed.
+>[!NOTE]
+>
+>Immutable tags are tags that are intended to be set, but never removed.
 
 **API format**
 
@@ -157,7 +159,9 @@ A successful response returns HTTP status 200 (OK) and a `results` array in the 
 
 You can view a specific union by performing a GET request that includes the `$id` and, depending on the Accept header, some or all of the details of the union.
 
->[!NOTE] Union lookups are available using the `/unions` and `/schemas` endpoint to enable them for use in Profile exports into a dataset. 
+>[!NOTE]
+>
+>Union lookups are available using the `/unions` and `/schemas` endpoint to enable them for use in Profile exports into a dataset. 
 
 **API format**
 

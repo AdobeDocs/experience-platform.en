@@ -8,14 +8,15 @@ user-guide-title: Real-time Customer Profile Help
 
 * [Profile overview](home.md)
 * [Profile guardrails](guardrails.md)
-* Profile API {#api}
+* Profile API developer guide {#api}
+  * [Overview](api/overview.md)
   * [Getting started](api/getting-started.md)
   * [(Alpha) Computed attributes](api/computed-attributes.md)
   * [Edge projections](api/edge-projections.md)
   * [Entities (Profile access)](api/entities.md)
   * [Merge policies](api/merge-policies.md)
   * [Profile system jobs (Delete requests)](api/profile-system-jobs.md)
-* UI user guides {#ui}
+* UI guides {#ui}
   * [Profile user guide](ui/user-guide.md)
   * [Merge policies user guide](ui/merge-policies.md)
 * Tutorials {#tutorials}

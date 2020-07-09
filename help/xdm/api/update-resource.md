@@ -11,7 +11,9 @@ You can modify or update resources in the tenant container using a PATCH request
 
 For more information on JSON Patch, including available operations, see the official [JSON Patch documentation](http://jsonpatch.com/).
 
->[!NOTE] If you want to replace an entire resource with new values instead of updating individual fields, see the document on [replacing a resource using a PUT operation](replace-resource.md).
+>[!NOTE]
+>
+>If you want to replace an entire resource with new values instead of updating individual fields, see the document on [replacing a resource using a PUT operation](replace-resource.md).
 
 ## Add mixins to a schema
 

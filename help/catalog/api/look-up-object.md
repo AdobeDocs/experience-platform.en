@@ -9,7 +9,9 @@ topic: developer guide
 
 If you know the unique identifier for a specific Catalog object, you can perform a GET request to view that object's details. 
 
->[!NOTE] When viewing specific objects, it is still best practice to [filter by properties](filter-data.md) and return only the properties you are interested in.
+>[!NOTE]
+>
+>When viewing specific objects, it is still best practice to [filter by properties](filter-data.md) and return only the properties you are interested in.
 
 **API format**
 
@@ -56,4 +58,6 @@ A successful response returns the specified dataset with only the requested `pro
 }
 ```
 
->[!NOTE] Properties whose values are prefixed with `@` represent interrelated objects. See the appendix section on [viewing interrelated objects](appendix.md#view-interrelated-objects) for steps on how to view the details of these objects.
+>[!NOTE]
+>
+>Properties whose values are prefixed with `@` represent interrelated objects. See the appendix section on [viewing interrelated objects](appendix.md#view-interrelated-objects) for steps on how to view the details of these objects.

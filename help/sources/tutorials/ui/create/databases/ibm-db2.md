@@ -11,13 +11,13 @@ topic: overview
 > [!NOTE]
 > The IBM DB2 connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an IBM DB2 (hereinafter referred to as "DB2") source connector using the Platform user interface.
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an IBM DB2 (hereinafter referred to as "DB2") source connector using the [!DNL Platform] user interface.
 
 ## Getting started
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-*   [Experience Data Model (XDM) System](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+*   [Experience Data Model (XDM) System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     *   [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
     *   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 *   [Real-time Customer Profile](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
@@ -26,7 +26,7 @@ If you already have a valid DB2 connection, you may skip the remainder of this d
 
 ### Gather required credentials
 
-The following sections provide additional information that you will need to know in order to successfully connect to DB2 using the Flow Service API.
+The following sections provide additional information that you will need to know in order to successfully connect to DB2 using the [!DNL Flow Service] API.
 
 | Credential | Description |
 | ---------- | ----------- |
@@ -39,7 +39,7 @@ For more information about getting started refer to [this DB2 document](https://
 
 ## Connect your IBM DB2 account
 
-Once you have gathered your required credentials, you can follow the steps below to create a new DB2 account to connect to Platform.
+Once you have gathered your required credentials, you can follow the steps below to create a new DB2 account to connect to [!DNL Platform].
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the *[!UICONTROL Sources]* workspace. The *[!UICONTROL Catalog]* screen displays a variety of sources for which you can create an inbound account with, and each source shows the number of existing accounts and dataset flows associated with them.
 

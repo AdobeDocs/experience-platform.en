@@ -33,7 +33,9 @@ To learn how to create and use segments in the Segment Builder (the UI implement
 
 For information on building segment definitions using the API, see the tutorial on [creating audience segments using the API](./tutorials/create-a-segment.md).
 
->[!NOTE] In the event a schema is extended, all future uploads must update newly added fields accordingly. For more information on customizing Experience Data Model (XDM), visit the [Schema Editor tutorial](../xdm/tutorials/create-schema-ui.md).
+>[!NOTE]
+>
+>In the event a schema is extended, all future uploads must update newly added fields accordingly. For more information on customizing Experience Data Model (XDM), visit the [Schema Editor tutorial](../xdm/tutorials/create-schema-ui.md).
 
 ## Evaluate segments
 
@@ -63,14 +65,18 @@ Composing your segments (through either the API or Segment Builder) requires tha
 
 When creating a new segment, you are required to provide a segment name. The segment name is used to identify a particular segment amongst the collection built by Segmentation Service. Segment names should therefore be descriptive, concise, and unique.
 
->[!NOTE] When planning a segment, remember that segments can be referenced from, and combined with, any other segment. When selecting a name, consider the possibility that your segment may contain reusable portions.
+>[!NOTE]
+>
+>When planning a segment, remember that segments can be referenced from, and combined with, any other segment. When selecting a name, consider the possibility that your segment may contain reusable portions.
 
 ### Merge policies
 
 Merge policies are rules used by Profile to determine how data will be prioritized and combined into a unified view under certain conditions. 
 If a merge policy is not defined, the default Platform merge policy is used. If you would rather use a merge policy specific to your organization, you can create your own and mark it as your organization's default.
 
->[!NOTE] Estimation of audience sizes is based on the organization's default profile merge policy.
+>[!NOTE]
+>
+>Estimation of audience sizes is based on the organization's default profile merge policy.
 
 ### Other segment metadata
 

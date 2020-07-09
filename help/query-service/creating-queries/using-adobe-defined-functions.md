@@ -88,7 +88,9 @@ The Attribution ADFs found in Query Service allow those allocations to be define
 
 This example focuses on last-touch attribution, but Adobe also offers first-touch attribution. 
 
->[!NOTE] Other options with timeouts and event-based expiration will be available in future versions of Query Service.
+>[!NOTE]
+>
+>Other options with timeouts and event-based expiration will be available in future versions of Query Service.
 
 **Syntax:**
 

@@ -21,7 +21,9 @@ The Datasets workspace within Experience Platform allows you to view and manage 
 
 View the Datasets workspace by clicking **Datasets** in the left-hand navigation. The Datasets workspace contains a list of datasets, including columns showing _Name_, _Created_ (date and time), _Source_, _Schema_, and _Last Batch Status_, as well as the date and time the dataset was _Last Updated_. 
 
->[!NOTE] Click on the filter icon next to the Search bar to use filtering capabilities to view only those datasets enabled for Profile.
+>[!NOTE]
+>
+>Click on the filter icon next to the Search bar to use filtering capabilities to view only those datasets enabled for Profile.
 
 ![View all datasets](../images/tutorials/ingest-batch-data/datasets_workspace.png)
 
@@ -93,7 +95,9 @@ Data can be added into a dataset in a number of different ways. You could choose
 
 To begin adding data to the dataset, click on the **Add Data** tab. You can now drag and drop files or browse your computer for the files you wish to add. 
 
->[!NOTE] Platform supports two files types for data ingestion, parquet or JSON. You may add up to five files at a time, with the maximum file size of each file being 10 GB.
+>[!NOTE]
+>
+>Platform supports two files types for data ingestion, parquet or JSON. You may add up to five files at a time, with the maximum file size of each file being 10 GB.
 
 ![Add Data tab](../images/tutorials/ingest-batch-data/add_data.png)
 

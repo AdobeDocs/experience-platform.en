@@ -52,7 +52,9 @@ To learn more, follow the [package source files into a recipe tutorial](../data-
 
 ## Import a recipe
 
->[!NOTE] 
+>[!NOTE]
+>
+>
 >This tutorial requires you to have a Docker source file URL. Visit the [package source files into a recipe tutorial](../data-science-workspace/models-recipes/package-source-files-recipe.md) if you do not have a Docker source file URL.
 
 The import recipe tutorials provide insights on how to configure and import a packaged recipe. By the end of this tutorial, you can create, train, and evaluate a Model in Adobe Experience Platform Data Science Workspace.
@@ -130,7 +132,7 @@ To learn more, visit the tutorial for [creating a feature pipeline](../data-scie
 
 ## Build a Real-Time Machine Learning application (alpha)
 
-A combination of seamless computation on both the Hub and the Edge dramatically reduces the latency that is traditionally involved in powering hyper-personalized experiences that are both relevant and responsive. Hence, Real-time Machine Learning provides inferences with incredibly low latency for synchronous decision-making. Examples include rendering personalized web page content, surfacing of an offer, and discounts to reduce churn while increasing conversions on a web store.
+A combination of seamless computation on both the Hub and the [!DNL Edge] dramatically reduces the latency that is traditionally involved in powering hyper-personalized experiences that are both relevant and responsive. Hence, Real-time Machine Learning provides inferences with incredibly low latency for synchronous decision-making. Examples include rendering personalized web page content, surfacing of an offer, and discounts to reduce churn while increasing conversions on a web store.
 
 **This guide will help you:**
 - Understand the Real-time Machine Learning architecture.

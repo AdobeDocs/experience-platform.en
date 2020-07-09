@@ -27,7 +27,9 @@ For detailed information on working with data usage labels, see the [data usage 
 
 You can set data usage restrictions on a destination by defining marketing use cases (also called marketing actions) for that destination. A marketing use case for a destination indicates the intent of the data that will be exported to that destination.
 
->[!NOTE] For more information on marketing actions and their use in data usage policies, see the [data usage policies overview](../../data-governance/policies/overview.md) in the Experience Platform documentation.
+>[!NOTE]
+>
+>For more information on marketing actions and their use in data usage policies, see the [data usage policies overview](../../data-governance/policies/overview.md) in the Experience Platform documentation.
 
 Defining marketing use cases on destinations allows you to ensure that any profiles or segments sent to those destinations are compliant with data usage policies. You should therefore add appropriate marketing use cases to your destinations based on your organization's needs to enforce policy restrictions on activation.
 
@@ -40,7 +42,10 @@ In order for data usage labels to effectively support data compliance, data usag
 
 Adobe Experience Platform provides several **core policies** for common customer experience use cases. These policies can be viewed in the UI by navigating to the **[!UICONTROL Policies]** workspace and selecting the **[!UICONTROL Browse]** tab. See the [policies user guide](../../data-governance/policies/user-guide.md) in the Experience Platform documentation for more detailed steps on working with policies in the UI, including how to make your own custom policies.
 
-## Enforce data usage compliance {#enforce-data-usage-compliance}
+## (Beta) Enforce data usage compliance {#enforce-data-usage-compliance}
+
+>[!IMPORTANT]
+>This feature is currently in beta and is not available to all users. It can be enabled upon request. The documentation and the functionality are subject to change.
 
 Once data is labeled and usage policies are defined, you can enforce data usage compliance with policies. When activating audience segments to destinations in Real-time CDP, Data Governance automatically enforces usage policies should any violations occur.
 
@@ -53,7 +58,9 @@ When a segment is first activated, DULE Policy Service checks for policy violati
 * The data usage labels applied to fields and datasets within the segment to be activated.
 * The marketing purpose of the destination. 
 
->[!NOTE] If there are data usage labels that have only been applied to certain fields within a dataset (rather than the entire dataset), enforcement of those field-level labels on activation only occurs under the following conditions:
+>[!NOTE]
+>
+>If there are data usage labels that have only been applied to certain fields within a dataset (rather than the entire dataset), enforcement of those field-level labels on activation only occurs under the following conditions:
 >* The fields are used in the segment definition.
 >* The fields are configured as projected attributes for the target destination.
 
