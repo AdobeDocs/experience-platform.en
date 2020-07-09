@@ -282,13 +282,25 @@ Click **Profile** and a pop-up appears, asking you to confirm that you wish to e
 >
 >Once a schema has been enabled for Real-time Customer Profile and saved, it cannot be disabled.
 
-## Next steps
+## Next steps and additional resources
 
 Now that you have finished composing a "Loyalty Members" schema, you can see the complete schema in the *Structure* section of the editor. Click **Save** and the schema will be saved to the Schema Library, making it accessible by the Schema Registry.
 
 Your new schema is now able to be used to ingest data into Platform. Remember that once the schema has been used to ingest data, only additive changes may be made. See the [basics of schema composition](../schema/composition.md) for more information on schema versioning.
 
 The "Loyalty Members" schema is also available to be viewed and managed using the Schema Registry API. To begin working with the API, start by reading the [Schema Registry API developer guide](../api/getting-started.md).
+
+>[!WARNING]
+>
+>The [!DNL Platform] UI shown in the following videos are out-of-date. Please refer to the documentation above for the latest UI screenshots and functionality.
+
+The following video shows how to create a simple schema in the [!DNL Platform] UI.
+
+>[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
+
+The following video is intended to reinforce your understanding of working with mixins and classes.
+
+>[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
 
 ## Appendix
 
