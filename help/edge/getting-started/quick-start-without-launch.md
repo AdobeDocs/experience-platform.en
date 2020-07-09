@@ -28,7 +28,7 @@ The Experience Platform Edge Network takes data as XDM. XDM is a data format tha
 - [Create a schema](../../xdm/tutorials/create-schema-ui.md)
 - Add the Adobe Experience Platform Web SDK mixin to the schema you created
 
-The following video is intended to support you in creating a schema, dataset, and streaming source connector for Web SDK data.
+The following video is intended to support you in creating a schema, dataset, and streaming source connector for your Web SDK data.
 
 >[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 

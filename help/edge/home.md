@@ -9,7 +9,7 @@ seo-description: allow customers of the Adobe Experience Cloud to interact with 
 
 Adobe Experience Platform Web SDK is a client-side JavaScript library that allows customers of the Adobe Experience Cloud to interact with the various services in the Experience Cloud through the Adobe Experience Platform Edge Network.
 
-The following video gives an overview of Adobe Experience Platform Web SDK and Edge Network.
+The following video gives an overview of the Adobe Experience Platform Web SDK and Edge Network.
 
 >[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 
@@ -26,7 +26,7 @@ This is not just a wrapper around existing libraries. It is a complete rewrite. 
 
 In addition to a new library, there is a new endpoint that streamlines the HTTP requests to Adobe solutions. Before, Visitor.js sent a blocking call to the visitor ID service, then AT.js sent a call to Adobe Target, DIL.js sent a call to Adobe Audience Manager, and finally AppMeasurement.js sent a call to Adobe Analytics. This new library and endpoint can retrieve an ID, fetch a [!DNL Target] experience, send data to Audience Manager, and pass the data to the Adobe Experience Platform in a single call.
 
-The following video demonstrates Adobe Experience Platform Web SDK and Edge Network in action, with a single call to Adobe sending data to Experience Platform, Analytics, Audience Manager and Target.
+The following video demonstrates the Adobe Experience Platform Web SDK and Edge Network in action. The video example uses a single call to Adobe which sends data to Experience Platform, Analytics, Audience Manager and Target.
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
