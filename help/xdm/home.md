@@ -112,7 +112,7 @@ See the [Decisioning Service overview](../decisioning-service/home.md) for more 
 
 ## Next steps and additional resources
 
-Now that you better understand the role of schemas throughout Experience Platform, you are ready to start composing your own. To continue supplementing your learning please continue reading the documentation and watch the video below.
+Now that you better understand the role of schemas throughout Experience Platform, you are ready to start composing your own. To continue supplementing your learning, start by reading the suggested documentation and watch the video below.
 
 To learn design principles and best practices for composing schemas to be used with Experience Platform, begin by reading the [basics of schema composition](schema/composition.md). For step-by-step instructions on how to create a schema, see the tutorials on creating a schema [using the API](tutorials/create-schema-api.md) or [using the user interface](tutorials/create-schema-ui.md).
 
