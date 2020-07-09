@@ -292,9 +292,9 @@ The "Loyalty Members" schema is also available to be viewed and managed using th
 
 >[!WARNING]
 >
->The Platform UI shown in the following videos are out of date. Please refer to the documentation above for the latest UI screenshots and functionality.
+>The [!DNL Platform] UI shown in the following videos are out of date. Please refer to the documentation above for the latest UI screenshots and functionality.
 
-The following video shows how to create a simple schema in the Platform UI.
+The following video shows how to create a simple schema in the [!DNL Platform] UI.
 
 [!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
 
