@@ -47,7 +47,7 @@ You can also use the Adobe Experience Platform Segmentation Service API to acces
 
 In the Experience Platform UI, the **[!UICONTROL Browse]** tab in the **[!UICONTROL Profiles]** workspace allows you to view the total profile count and search for individual profiles by their identity value. See the [Profile user guide](./ui/user-guide.md) for more information.
 
-You can also view a sample of profiles in the details of a segment, found under the **[!UICONTROL Browse]** tab in the **[!UICONTROL Segments]** workspace. After selecting a segment, you can select a listed profile to view its details. See the [Segmentation UI overview](../segmentation/ui/overview.md) for more information.
+You can also view a list of your segments under the **[!UICONTROL Browse]** tab in the **[!UICONTROL Segments]** workspace. After selecting a segment, a sample of profiles qualified for that segment is displayed. You can then select any of these listed profiles to view their details. See the [Segmentation UI overview](../segmentation/ui/overview.md) for more information.
 
 ## Error codes
 
