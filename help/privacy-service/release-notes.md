@@ -9,6 +9,10 @@ topic: release notes
 
 This document contains information about new features for Adobe Experience Platform Privacy Service, as well as enhancements and significant bug fixes.
 
+>[!NOTE]
+>
+>The latest release notes for other Experience Platform services can be found [here](../release-notes/latest/latest.md).
+
 ## April 8, 2020
 
 ### New features

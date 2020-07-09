@@ -34,7 +34,9 @@ POST /tenant/classes
 
 The following request creates a new XDM class, configured by the attributes supplied in the payload. By supplying a `$ref` property set to `https://ns.adobe.com/xdm/data/adhoc` in the `allOf` array, this class inherits the `adhoc` behavior. The request also defines an `_adhoc` object, which contains the custom fields for the class.
 
->[!NOTE] The custom fields defined under `_adhoc` vary depending the use case of the ad-hoc schema. Please refer to the specific workflow in the appropriate tutorial for required custom fields based on use case.
+>[!NOTE]
+>
+>The custom fields defined under `_adhoc` vary depending the use case of the ad-hoc schema. Please refer to the specific workflow in the appropriate tutorial for required custom fields based on use case.
 
 ```shell
 curl -X POST \
@@ -212,7 +214,9 @@ A successful response returns the details of the newly created schema, including
 
 ## View the full ad-hoc schema
 
->[!NOTE] This step is optional. If you do not wish to inspect the field structure of your ad-hoc schema, you can skip to the [next steps](#next-steps) section at the end of this tutorial.
+>[!NOTE]
+>
+>This step is optional. If you do not wish to inspect the field structure of your ad-hoc schema, you can skip to the [next steps](#next-steps) section at the end of this tutorial.
 
 Once the ad-hoc schema has been created, you can make a lookup (GET) request to view the schema in its expanded form. This is done by using the appropriate Accept header in the GET request, as demonstrated below.
 

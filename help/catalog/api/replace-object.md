@@ -9,7 +9,9 @@ topic: developer guide
 
 You can overwrite the contents of a Catalog object using a PUT request, wherein the entire resource is replaced with the request payload.
 
->[!NOTE] If you only need to update a few specific fields within a Catalog object, using a PATCH request may be more efficient.
+>[!NOTE]
+>
+>If you only need to update a few specific fields within a Catalog object, using a PATCH request may be more efficient.
 
 **API format**
 

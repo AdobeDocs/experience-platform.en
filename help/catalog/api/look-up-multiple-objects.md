@@ -9,7 +9,9 @@ topic: developer guide
 
 If you wish to view several specific objects, rather than making one request per object, Catalog provides a simple shortcut for requesting multiple objects of the same type. You can use a single GET request to return multiple specific objects by including a comma-separated list of IDs. 
 
->[!NOTE] Even when requesting specific Catalog objects, it is still best practice to `properties` query parameter to return only the properties you need.
+>[!NOTE]
+>
+>Even when requesting specific Catalog objects, it is still best practice to `properties` query parameter to return only the properties you need.
 
 **API format**
 
@@ -38,7 +40,9 @@ curl -X GET \
 
 A successful response returns a list of the specified datasets, containing only the requested properties (`name`, `description`, and `files`) for each. 
 
->[!NOTE] If a returned object does not contain one ore more of the requested properties indicated by the `properties` query, the response returns only the requested properties that it does include, as shown in "Sample Dataset 3" and "Sample Dataset 4" below.
+>[!NOTE]
+>
+>If a returned object does not contain one ore more of the requested properties indicated by the `properties` query, the response returns only the requested properties that it does include, as shown in "Sample Dataset 3" and "Sample Dataset 4" below.
 
 ```json
 {

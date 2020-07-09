@@ -124,10 +124,10 @@ Within the *[!UICONTROL Sources]* workspace, select the **[!UICONTROL Dataflowss
 
 ![](../../../images/tutorials/dataflow/databases/list-of-dataflows.png)
 
-The *Properties* column appears on the right-hand side of the screen, including an **[!UICONTROL Enabled]** toggle button. Select the toggle to disable the dataflow. The same toggle can be used to re-enable a dataflow after it has been disabled.
+The *[!UICONTROL Properties]* column appears on the right-hand side of the screen, including an **[!UICONTROL Enabled]** toggle button. Select the toggle to disable the dataflow. The same toggle can be used to re-enable a dataflow after it has been disabled.
 
 ![](../../../images/tutorials/dataflow/databases/disable.png)
 
-### Activate inbound data for Profile population
+### Activate inbound data for [!DNL Profile] population
 
-Inbound data from your source connector can be used towards enriching and populating your Real-time Customer Profile data. For more information on populating your Real-Customer Profile data, see the tutorial on [Profile population](../profile.md).
+Inbound data from your source connector can be used towards enriching and populating your [!DNL Real-time Customer Profile] data. For more information on populating your [!DNL Real-time Customer Profile] data, see the tutorial on [Profile population](../profile.md).
