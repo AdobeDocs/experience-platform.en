@@ -8,6 +8,7 @@ topic: Content and Commerce AI
 # Content and Commerce AI overview
 
 >[!NOTE]
+>
 >Content and Commerce AI is in beta. The documentation is subject to change.
 
 Content and Commerce AI is a set of AI services that allows you to extract intelligent features from your content, organize, streamline content flow, and deliver more impactful, personalized experiences to your customers.
@@ -28,6 +29,7 @@ Images | - Visual recommendations <br> - Color extraction | - Deliver visually s
 The overall vision of Content and Commerce AI is broken down into three steps to realize optimal customer engagement and maximize customer-driven KPIs. 
 
 >[!NOTE]
+>
 >For Beta, Content and Commerce AI is focusing on testing the foundation step in the journey (step 1).
 
 **Step 1: Understanding the Content**
