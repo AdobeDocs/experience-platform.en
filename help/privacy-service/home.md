@@ -63,6 +63,7 @@ The document on [identity data for privacy requests](./identity-data.md) provide
 Once you have determined your business' privacy needs, and decided which identity values to send to Privacy Service, you can start making privacy requests. Privacy Service allows you to send privacy requests through either the API or the UI.
 
 >[!IMPORTANT]
+>
 >The sections below provide links to documentation that cover how to make generic privacy requests in the API or UI. However, depending on the Experience Cloud applications you are using, the fields you must send in the request payload may be different from the examples shown in these guides. 
 >
 >As you follow along with the API or UI guides, please refer to the document on [Privacy Service and Experience Cloud applications](./experience-cloud-apps.md) for further documentation on how to format privacy requests for your particular Experience Cloud application(s).
@@ -73,19 +74,21 @@ The [Privacy Service API](https://www.adobe.io/apis/experienceplatform/home/api-
 
 #### Using the UI
 
->[!NOTE] The Privacy Service UI currently only supports access and delete requests. All opt-out requests must be made through the API instead.
+>[!NOTE]
+>
+>The Privacy Service UI currently only supports access and delete requests. All opt-out requests must be made through the API instead.
 
 The Privacy Service UI allows you to create and monitor privacy jobs using a graphical interface. The UI includes a **Status Report** widget that provides a visual representation of the status of all active requests, and allows you to create new requests by using the built-in **Request Builder** or by uploading JSON files. For more information on using the UI, see the [Privacy Service user guide](ui/overview.md).
 
 ### Monitor privacy jobs {#monitor}
 
-Once you have made privacy jobs, you have several options for monitoring their status and results.
+Once you have made privacy jobs, you have several options for monitoring their status and results:
 
-The Privacy Service UI provides a monitoring dashboard that allows you to view a visual representation of the status of all active requests. See the [Privacy Service user guide](ui/overview.md) for more information.
-
-You can also choose to programmatically monitor the status of Privacy jobs by using the lookup endpoints provided by the Privacy Service API. See the [Privacy Service developer guide](./api/getting-started.md) 
-
-Privacy jobs can also be monitored by subscribing to Privacy Events. Privacy Events leverage Adobe I/O Events sent to a configured webhook in order to facilitate efficient job request automation. They reduce or eliminate the need to poll the Privacy Service API in order to check if a job is complete or if a certain milestone within a workflow has been reached. See the tutorial on [subscribing to Privacy Events](./privacy-events.md) for more information.
+| Monitoring method | Description |
+| --- | --- |
+| Privacy Service UI | The Privacy Service UI provides a monitoring dashboard that allows you to view a visual representation of the status of all active requests. See the [Privacy Service user guide](ui/overview.md) for more information. |
+| Privacy Service API | You can programmatically monitor the status of Privacy jobs by using the lookup endpoints provided by the Privacy Service API. See the [Privacy Service developer guide](./api/getting-started.md) for detailed steps on how to use the API. |
+| Privacy Events | Privacy Events leverage Adobe I/O Events sent to a configured webhook in order to facilitate efficient job request automation. They reduce or eliminate the need to poll the Privacy Service API in order to check if a job is complete or if a certain milestone within a workflow has been reached. See the tutorial on [subscribing to Privacy Events](./privacy-events.md) for more information. |
 
 ## Next steps
 
