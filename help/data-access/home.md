@@ -17,7 +17,15 @@ Detailed information on using the Data Access API to connect with Platform can b
 
 ## Python SDK
 
+Users can read and write with datasets using the Python SDK. More detailed information about the Python SDK can be found in the [Python SDK tutorial](./tutorials/python-sdk.md). 
+
+Data Science Workspace uses the Python SDK within Notebooks and Recipes. For more information about Data Science Workspace, please read the [Data Science Workspace overview](../data-science-workspace/home.md).
+
 ## Spark SDK
+
+Users can read and write with datasets using the Spark SDK. More detailed information about the Spark SDK can be found in the [Spark SDK tutorial](./tutorials/spark-sdk.md).
+
+Data Science Workspace uses the Spark SDK within Notebooks and Recipes. For more information about Data Science Workspace, please read the [Data Science Workspace overview](../data-science-workspace/home.md).
 
 ## Subscribe to data ingestion events
 

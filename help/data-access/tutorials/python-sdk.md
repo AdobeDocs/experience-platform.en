@@ -42,7 +42,7 @@ Additionally, your credentials can be added as environment variables.
 | `ORG_ID` | Your `{IMS_ORG}` ID. |
 | `SERVICE_API_KEY` | Your `{API_KEY}` value. |
 | `USER_TOKEN` | Your `{ACCESS_TOKEN}` value. |
-| `SERVICE_TOKEN` | (Not sure what this is) |
+| `SERVICE_TOKEN` | Your `{SERVICE_TOKEN}`, which you may need to authorize back-channel requests between services. |
 | `SANDBOX_ID` | The `{SANDBOX_ID}` value of your sandbox. |
 | `SANDBOX_NAME` | The `{SANDBOX_NAME}` value of your sandbox. |
 
