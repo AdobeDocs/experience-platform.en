@@ -6,7 +6,7 @@ topic: overview
 ---
 
 
-# Partial batch ingestion (Beta)
+# Partial batch ingestion
 
 Partial batch ingestion is the ability to ingest data containing errors, up to a certain threshold. With this capability, users can successfully ingest all their correct data into Adobe Experience Platform while all their incorrect data is batched separately, along with details as to why it is invalid.
 
@@ -76,7 +76,7 @@ To create a new batch, follow the steps in the [batch ingestion developer guide]
 
 To enable a batch for partial ingestion through the Platform UI, you can either create a new batch through source connections or in an existing dataset. 
 
-### Create a new source connection
+### Create a new source connection {#new-source}
 
 To create a new source connection, follow the listed steps in the [Sources overview](../../sources/home.md). Once you reach the *Dataflow detail* step, take note of the *Partial Ingestion* and *Error Diagnostics* fields.
 
@@ -90,15 +90,27 @@ The *Error Diagnostics* toggle only appears when the *Partial Ingestion* toggle 
 
 The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
 
-### Use an existing dataset
+### Use an existing dataset {#existing-dataset}
 
-To use an existing dataset, 
+To use an existing dataset, select the dataset you want to use. The sidebar on the right populates with information about the dataset. 
 
-## Retrieve partial batch ingestion errors
+![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
+
+The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
+
+The *Error Diagnostics* toggle only appears when the *Partial Ingestion* toggle is off. This feature allows Platform to generate detailed error messages about your ingested batches. If the *Partial Ingestion* toggle is turned on, enhanced error diagnostics are automatically enforced.
+
+![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
+
+The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
+
+Now, you can upload data using the **Add data** button, and it will be ingested using partial ingestion.
+
+## Retrieve partial batch ingestion errors {#retrieve-errors}
 
 If batches contain failures, you will need to retrieve error information about these failures so you can re-ingest the data.
 
-### Check status
+### Check status {#check-status}
 
 To check the status of the ingested batch, you must supply the batch's ID in the path of a GET request.
 
@@ -168,7 +180,7 @@ A successful response returns HTTP status 200 with detailed information about th
 
 If the batch has an error and has error diagnostics enabled, the status will be "success" with more information about the error provided in a downloadable error file.
 
-## Next steps
+## Next steps {#next-steps}
 
 This tutorial covered how to create or modify a dataset to enable partial batch ingestion. For more information on batch ingestion, please read the [batch ingestion developer guide](./api-overview.md).
 
