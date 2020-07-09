@@ -20,7 +20,7 @@ This tutorial requires a working understanding of the following components of Ad
 
 ## Monitor accounts
 
-Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the *[!UICONTROL Sources]* workspace. The *[!UICONTROL Catalog]* screen displays a variety of sources for which you can create accounts dataset flows with. Each source shows the number of existing accounts and dataflows associated to them.
+Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the *[!UICONTROL Sources]* workspace. The *[!UICONTROL Catalog]* screen displays a variety of sources for which you can create accounts and dataflows with. Each source shows the number of existing accounts and dataflows associated to them.
 
 Select *[!UICONTROL Accounts]* from the top header to view existing accounts.
 
@@ -38,27 +38,31 @@ The sorting panel allows you to access accounts from a specific source. Select t
 
 From the *[!UICONTROL Accounts]* page, you can view a list of existing dataflows associated with the account you accessed. Select the dataflow you wish to view.
 
-![accounts-page](../../images/tutorials/monitor/dataset-flows.png)
+![accounts-page](../../images/tutorials/monitor/dataflows.png)
 
  The *[!UICONTROL Dataflow activity]* screen appears. This page displays the rate of messages being consumed in the form of a graph.
 
- ![dataset-flow-activity](../../images/tutorials/monitor/dataset-flows-activity.png)
+ ![dataset-flow-activity](../../images/tutorials/monitor/dataflow-activity.png)
 
 ## Monitor dataflows
 
-Dataflows can be accessed directly from the *[!UICONTROL Catalog]* page without viewing *[!UICONTROL Accounts]*. Select *[!UICONTROL Dataset flows]* from the top header to view a list of existing dataset flows.
+Dataflows can be accessed directly from the *[!UICONTROL Catalog]* page without viewing *[!UICONTROL Accounts]*. Select *[!UICONTROL Dataflows]* from the top header to view a list of existing dataset flows.
 
-![dataset-flows](../../images/tutorials/monitor/dataset-flows-list.png)
+![catalog-dataflows](../../images/tutorials/monitor/catalog-dataflows.png)
 
-Similar to accounts, you can sort the list of dataflows using the sort icon on the top left. Select the source you wish to view and select the dataflow from the list on the right.
+A list of existing dataflows appears. On this page is a list of viewable dataflows, including information about their source, username, number of dataflows, and status. Select the funnel icon on the top left to sort.
 
-![select-dataset-flows](../../images/tutorials/monitor/dataset-flows-sort.png)
+![dataflows-list](../../images/tutorials/monitor/dataflows-list.png)
+
+The sorting panel appears. Select the source you wish to access from the scroll menu and select the dataflow from the list on the right.
+
+![sort-dataflows](../../images/tutorials/monitor/dataflows-sort.png)
 
 The *[!UICONTROL Dataflow activity]* screen appears. This page displays the rate of messages being consumed in the form of a graph.
 
-![dataset-flow-activity](../../images/tutorials/monitor/dataset-flows-activity.png)
+![dataset-flow-activity](../../images/tutorials/monitor/dataflow-activity.png)
 
-For more information on monitoring datasets and ingestion, refer to the tutorial on [monitoring streaming dataflows](../../../ingestion/quality/monitor-data-flows.md).
+For more information on monitoring dataflows and ingestion, refer to the tutorial on [monitoring streaming dataflows](../../../ingestion/quality/monitor-data-flows.md).
 
 ## Delete a dataflow
 
