@@ -36,7 +36,9 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
   
->[!NOTE] For more information on working with sandboxes in Experience Platform, see the [sandboxes overview documentation](../../sandboxes/home.md).
+>[!NOTE]
+>
+>For more information on working with sandboxes in Experience Platform, see the [sandboxes overview documentation](../../sandboxes/home.md).
 
 <!-- ## Estimates
 

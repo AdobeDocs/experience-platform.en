@@ -36,7 +36,9 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 
 A successful response returns a payload containing the details of your Docker registry including the Docker URL (`host`), username (`username`), and password (`password`).
 
->[!NOTE] 
+>[!NOTE]
+>
+>
 >Your Docker password changes whenever your `{ACCESS_TOKEN}` is updated.
 
 ```json
@@ -376,7 +378,9 @@ A successful response returns a payload containing the details of the desired En
 
 You can modify and update an existing Engine by overwriting its properties through a PUT request that includes the target Engine's ID in the request path and providing a JSON payload containing updated properties.
 
->[!NOTE] In order to ensure the success of this PUT request, it is suggested that first you perform a GET request to [retrieve the Engine by ID](#retrieve-specific). Then, modify and update the returned JSON object and apply the entirety of the modified JSON object as the payload for the PUT request.
+>[!NOTE]
+>
+>In order to ensure the success of this PUT request, it is suggested that first you perform a GET request to [retrieve the Engine by ID](#retrieve-specific). Then, modify and update the returned JSON object and apply the entirety of the modified JSON object as the payload for the PUT request.
 
 The following sample API call will update an Engine's name and description while having these properties initially:
 

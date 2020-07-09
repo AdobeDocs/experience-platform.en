@@ -9,7 +9,9 @@ topic: developer guide
 
 You can delete a Catalog object by providing its ID in the path of a DELETE request. 
 
->[!WARNING] Take extra care when deleting objects, as this cannot be undone and may produce breaking changes elsewhere in Experience Platform.
+>[!WARNING]
+>
+>Take extra care when deleting objects, as this cannot be undone and may produce breaking changes elsewhere in Experience Platform.
 
 **API format**
 
@@ -49,4 +51,6 @@ A successful response returns HTTP status 200 (OK) and an array containing the I
 ]
 ```
 
->[!NOTE] If no Catalog objects match the ID provided in your request, you may still receive an HTTP Status Code 200, but the response array will be empty.
+>[!NOTE]
+>
+>If no Catalog objects match the ID provided in your request, you may still receive an HTTP Status Code 200, but the response array will be empty.

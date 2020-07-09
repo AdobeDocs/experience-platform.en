@@ -41,7 +41,9 @@ Clicking a listed folder allows you to traverse the folder hierarchy into deeper
 
 Once the preview window populates, you can click **[!UICONTROL Next]** to upload all files within the selected folder. If you want to upload to a specific file, select that file from the listing before clicking **[!UICONTROL Next]**.
 
->[!NOTE] Supported file formats include CSV, JSON, and Parquet. JSON and Parquet files must be XDM-compliant.
+>[!NOTE]
+>
+>Supported file formats include CSV, JSON, and Parquet. JSON and Parquet files must be XDM-compliant.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-next.png)
 

@@ -41,7 +41,9 @@ The destination schema "Hotels" contains fields that describe a hotel, include i
 
 ## Create a relationship mixin
 
->[!NOTE] This step is only required if your source schema does not have a dedicated string-type field to be used as a reference to another schema. If this field is already defined in your source schema, skip to the next step of [defining a relationship field](#relationship-field).
+>[!NOTE]
+>
+>This step is only required if your source schema does not have a dedicated string-type field to be used as a reference to another schema. If this field is already defined in your source schema, skip to the next step of [defining a relationship field](#relationship-field).
 
 In order to define a relationship between two schemas, the source schema must have a dedicated field to be used as a reference to the destination schema. You can add this field to the source schema by creating a new mixin.
 

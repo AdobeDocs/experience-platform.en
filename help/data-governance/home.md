@@ -57,7 +57,9 @@ The DULE framework includes predefined data usage labels that can be used to cat
 * **Identity "I" Data Labels:** Label and categorize data that can identify or contact a specific person.
 * **Sensitive "S" Data Labels:** Label and categorize data related to sensitive data such as geographic data.
 
->[!NOTE] See the guide on [supported data usage labels](labels/reference.md) for a complete list of available labels, as well as definitions for each label type.
+>[!NOTE]
+>
+>See the guide on [supported data usage labels](labels/reference.md) for a complete list of available labels, as well as definitions for each label type.
 
 Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practice encourages labeling data as soon as it is ingested into [!DNL Experience Platform], or as soon as data becomes available in [!DNL Platform].
 
@@ -71,7 +73,9 @@ An example of a marketing action might be the desire to export a dataset to a th
 
 Once data usage labels have been applied, data stewards can create policies using the DULE Policy Service API or the [!DNL Experience Platform] user interface.
 
->[!IMPORTANT] All data usage policies (including core policies provided by Adobe) are disabled by default. In order for an individual policy to be considered for enforcement, you must manually enable that policy.
+>[!IMPORTANT]
+>
+>All data usage policies (including core policies provided by Adobe) are disabled by default. In order for an individual policy to be considered for enforcement, you must manually enable that policy.
 
 For more information on data usage policies and marketing actions, see the [policies overview](./policies/overview.md).
 
