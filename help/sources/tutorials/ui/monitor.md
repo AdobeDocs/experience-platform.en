@@ -66,11 +66,19 @@ For more information on monitoring dataflows and ingestion, refer to the tutoria
 
 ## Delete a dataflow
 
+You can delete dataflows that are no longer necessary by accessing the dataflows screen. Select the sorting funnel icon to open the list of sources. From there, select the source you wish to access from the sorting menu and select the dataflow you wish to delete from the list on the right.
 
+To delete a dataflow, select **[!UICONTROL Delete]** from the **[!UICONTROL Properties]** on the top right.
+
+![delete-dataflows](../../images/tutorials/monitor/dataflows-sort-delete.png)
+
+A final confirmation message appears. Select **[!UICONTROL Delete]** to confirm deletion.
+
+![confirm-delete](../../images/tutorials/monitor/confirm-delete.png)
 
 ## Next steps
 
-By following this tutorial, you have successfully accessed existing accounts and dataset flows from the *[!UICONTROL Sources]* workspace. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have successfully accessed existing accounts and dataflows from the *[!UICONTROL Sources]* workspace. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
 - [Real-time Customer Profile overview](../../../profile/home.md)
 - [Data Science Workspace overview](../../../data-science-workspace/home.md)
