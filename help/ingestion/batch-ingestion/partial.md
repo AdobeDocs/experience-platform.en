@@ -14,10 +14,6 @@ This document provides a tutorial for managing partial batch ingestion.
 
 In addition, the [appendix](#appendix) to this tutorial provides a reference for partial batch ingestion error types.
 
->[!IMPORTANT]
->
->This feature only exists using the API. Please contact your team in order to gain access to this feature.
-
 ## Getting started
 
 This tutorial requires a working knowledge of the various Adobe Experience Platform services involved with partial batch ingestion. Before beginning this tutorial, please review the documentation for the following services:
@@ -47,63 +43,56 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 >
 >For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
 
-## Enable a dataset for partial batch ingestion in the API
+## Enable a batch for partial batch ingestion in the API {#enable-api}
 
-<!-- >[!NOTE] This section describes enabling a dataset for partial batch ingestion using the API. For instructions on using the UI, please read the [enable a dataset for partial batch ingestion in the UI](#enable-a-dataset-for-partial-batch-ingestion-in-the-ui) step. -->
+>[!NOTE]
+>
+>This section describes enabling a batch for partial batch ingestion using the API. For instructions on using the UI, please read the [enable a batch for partial batch ingestion in the UI](#enable-ui) step.
 
-You can create a new dataset or modify an existing dataset with partial ingestion enabled.
+You can create a new batch with partial ingestion enabled.
 
-To create a new dataset, follow the steps in the [create a dataset tutorial](../../catalog/api/create-dataset.md). Once you reach the *Create a dataset* step, add the following field within the request body:
+To create a new batch, follow the steps in the [batch ingestion developer guide](./api-overview.md). Once you reach the *Create batch* step, add the following field within the request body:
 
 ```json
 {
     ...
-    "tags" : {
-        "partialBatchIngestion":["errorThresholdPercentage:5"]
-    },
+    "enableErrorDiagnostics": true,
+    "partialIngestionPercentage": 5
     ...
 }
 ```
 
 | Property | Description |
 | -------- | ----------- |
-| `errorThresholdPercentage` | The percentage of acceptable errors before the entire batch will fail. |
+| `enableErrorDiagnostics` | A flag that allows Platform to generate detailed error messages about your batch. |
+| `partialIngestionPercentage` | The percentage of acceptable errors before the entire batch will fail. So, in this example, a maximum of 5% of the batch can be errors, before it will fail. |
 
-Similarly, to modify an existing dataset, follow the steps in the [Catalog developer guide](../../catalog/api/update-object.md). 
 
-Within the dataset, you will need to add the tag described above.
-
-<!-- ## Enable a dataset for partial batch ingestion in the UI
+## Enable a batch for partial batch ingestion in the UI {#enable-ui}
 
 >[!NOTE]
 >
->This section describes enabling a dataset for partial batch ingestion using the UI. If you have already enabled a dataset for partial batch ingestion using the API, you can skip ahead to the next section.
+>This section describes enabling a batch for partial batch ingestion using the UI. If you have already enabled a batch for partial batch ingestion using the API, you can skip ahead to the next section.
 
-To enable a dataset for partial ingestion through the Platform UI, click **Datasets** in the left navigation. You can either [create a new dataset](#create-a-new-dataset-with-partial-batch-ingestion-enabled) or [modify an existing dataset](#modify-an-existing-dataset-to-enable-partial-batch-ingestion).
+To enable a batch for partial ingestion through the Platform UI, you can either create a new batch through source connections or in an existing dataset. 
 
-### Create a new dataset with partial batch ingestion enabled
+### Create a new source connection
 
-To create a new dataset, follow the steps in the [dataset user guide](../../catalog/datasets/user-guide.md). Once you reach the *Configure dataset* step, take note of the *Partial Ingestion* and *Error Diagnostics* fields.
+To create a new source connection, follow the listed steps in the [Sources overview](../../sources/home.md). Once you reach the *Dataflow detail* step, take note of the *Partial Ingestion* and *Error Diagnostics* fields.
 
-![](../images/batch-ingestion/partial-ingestion/configure-dataset-focus.png)
+![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
 The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
 
 The *Error Diagnostics* toggle only appears when the *Partial Ingestion* toggle is off. This feature allows Platform to generate detailed error messages about your ingested batches. If the *Partial Ingestion* toggle is turned on, enhanced error diagnostics are automatically enforced.
 
-![](../images/batch-ingestion/partial-ingestion/configure-dataset-partial-ingestion-focus.png)
+![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
 The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
 
-### Modify an existing dataset to enable partial batch ingestion
+### Use an existing dataset
 
-To modify an existing dataset, select the dataset you want to modify. The sidebar on the right populates with information about the dataset. 
-
-![](../images/batch-ingestion/partial-ingestion/modify-dataset-focus.png)
-
-The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
-
-The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%. -->
+To use an existing dataset, 
 
 ## Retrieve partial batch ingestion errors
 
@@ -142,6 +131,9 @@ A successful response returns HTTP status 200 with detailed information about th
     "af838510-2233-11ea-acf0-f3edfcded2d2": {
         "status": "success",
         "tags": {
+            ...
+            "acp_enableErrorDiagnostics": true,
+            "acp_partialIngestionPercent": 5
             ...
         },
         "relatedObjects": [
