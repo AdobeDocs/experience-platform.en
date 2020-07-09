@@ -76,7 +76,7 @@ spark.sql.extensions = com.adobe.platform.query.QSSparkSessionExtensions
 
 The [!DNL Spark] SDK supports two modes of reading: interactive and batch.
 
-Interactive mode creates a Java Database Connectivity (JDBC) connection to Query Service and gets results through a regular JDBC `ResultSet` that is automatically translated to a `DataFrame`. This mode works similarly to the built-in Spark method `spark.read.jdbc()`. This mode is meant only for small datasets and only requires a user token for authentication.
+Interactive mode creates a Java Database Connectivity (JDBC) connection to [!DNL Query Service] and gets results through a regular JDBC `ResultSet` that is automatically translated to a `DataFrame`. This mode works similarly to the built-in Spark method `spark.read.jdbc()`. This mode is meant only for small datasets and only requires a user token for authentication.
 
 Batch mode uses [!DNL Query Service]'s COPY command to generate Parquet result sets in a shared location. These Parquet files can then be further processed. This mode requires both a user token and a service token with the `acp.foundation.catalog.credentials` scope.
 

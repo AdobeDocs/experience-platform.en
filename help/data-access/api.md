@@ -7,7 +7,7 @@ topic: developer guide
 
 # Data Access developer guide
 
-The Data Access API supports Adobe Experience Platform by providing users with a RESTful interface focused on the discoverability and accessibility of ingested datasets within Experience Platform.
+The Data Access API supports Adobe Experience Platform by providing users with a RESTful interface focused on the discoverability and accessibility of ingested datasets within [!DNL Experience Platform].
 
 ![Data Access on Experience Platform](images/Data_Access_Experience_Platform.png)
 
@@ -196,7 +196,7 @@ When a directory is returned, it contains an array of all files within the direc
 
 ## Access the contents of a file
 
-The Data Access API can also be used to access the contents of a file. This can then be used to download the contents to an external source.
+The [!DNL Data Access] API can also be used to access the contents of a file. This can then be used to download the contents to an external source.
 
 **API format**
 
