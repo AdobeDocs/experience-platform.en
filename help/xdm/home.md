@@ -116,7 +116,7 @@ Now that you better understand the role of schemas throughout Experience Platfor
 
 To learn design principles and best practices for composing schemas to be used with Experience Platform, begin by reading the [basics of schema composition](schema/composition.md). For step-by-step instructions on how to create a schema, see the tutorials on creating a schema [using the API](tutorials/create-schema-api.md) or [using the user interface](tutorials/create-schema-ui.md).
 
-Use the following video to reinforce your understanding of XDM System in Experience Platform.
+To reinforce your understanding of XDM System in Experience Platform, watch the following video:
 
 [!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)
 
