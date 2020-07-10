@@ -68,15 +68,27 @@ For more information on monitoring dataflows and ingestion, refer to the tutoria
 
 You can delete dataflows that were incorrectly created or are no longer necessary by accessing the dataflows screen. Locate the dataflow you wish to delete using the sorting funnel icon and select the dataflow to open the **[!UICONTROL Properties]** panel.
 
-To delete a dataflow, select **[!UICONTROL Delete]** from the **[!UICONTROL Properties]** on the top right.
+To delete a dataflow, select **[!UICONTROL Delete]** from the properties on the top right.
 
 ![delete-dataflows](../../images/tutorials/monitor/dataflows-sort-delete.png)
 
-A final confirmation message appears. Select **[!UICONTROL Delete]** to confirm deletion.
+A final confirmation message appears. Select **[!UICONTROL Delete]** to confirm.
 
 ![confirm-delete](../../images/tutorials/monitor/confirm-delete.png)
 
+After a few moments, a green confirmation box appears on the bottom of the screen to confirm a successful deletion.
 
+![delete-successful](../../images/tutorials/monitor/deletion-confirmed.png)
+
+Alternatively, you can delete a dataflow from *[!UICONTROL Accounts]* screen. Locate the account you wish to access using the sorting funnel icon and select the account from the list.
+
+![accounts-select](../../images/tutorials/monitor/accounts-sort.png)
+
+The *[!UICONTROL Accounts]* page appears. Select the dataflow you intend to delete and then select **[!UICONTROL Delete]** from the properties panel to complete the process.
+
+![accounts-delete](../../images/tutorials/monitor/accounts-delete.png)
+
+Follow the confirmation steps outlined above to complete the process.
 
 ## Next steps
 
