@@ -11,7 +11,11 @@ Streaming ingestion for Adobe Experience Platform provides users a method to sen
 
 ## What can you do with streaming ingestion?
 
-Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences by generating a Real-time Customer Profile for each of your individual customers. Streaming ingestion plays a key role in building these profiles by enabling you to deliver Profile data into the Data Lake with as little latency as possible.
+Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences by generating a Real-time Customer Profile for each of your individual customers. Streaming ingestion plays a key role in building these profiles by enabling you to deliver Profile data into the Data Lake with as little latency as possible. 
+
+The following video is designed to help support your understanding of streaming ingestion, and outlines the concepts above.
+
+>[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
 ### Stream profile records and ExperienceEvents
 

@@ -35,4 +35,10 @@ See the [Sources overview](../sources/home.md) for more information.
 
 ## Next steps and additional resources
 
-This document provided a brief introduction to the different aspects of [!DNL Data Ingestion] in [!DNL Experience Platform]. Please continue to read the overview documentation for each ingestion method to familiarize yourself with their different capabilities, use cases, and best practices. For information on how [!DNL Experience Platform] tracks the metadata for ingested records, see the [Catalog Service overview](../catalog/home.md).
+This document provided a brief introduction to the different aspects of [!DNL Data Ingestion] in [!DNL Experience Platform]. Please continue to read the overview documentation for each ingestion method to familiarize yourself with their different capabilities, use cases, and best practices. You can also suppliment your learning by watching the ingestion overview video below. For information on how [!DNL Experience Platform] tracks the metadata for ingested records, see the [Catalog Service overview](../catalog/home.md).
+
+>[!WARNING]
+>
+> The term "Unified Profile" thats used in the following video is out-of-date. The terms [!DNL "Profile"] or [!DNL "Real-time Customer Profile"] are the correct terms used in the [!DNL Experience Platform] documentation. Please refer to the documentation for the latest functionality.
+
+>[!VIDEO](https://video.tv.adobe.com/v/27106?quality=12&learn=on)
