@@ -121,7 +121,6 @@ The details page for the newly created dataset appears. The final step in the pr
 
 ![](../assets/iab/dataset-enable-profile.png)
 
-
 ## Next steps
 
 By following this tutorial, you have created a [!DNL Profile]-enabled dataset that can now be used to collect customer consent data. You can now return to the IAB TCF 2.0 overview to continue to the next step of [configuring your merge policies](./overview.md#merge-policies) to include your newly created dataset in the precedence list.

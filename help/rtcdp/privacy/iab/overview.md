@@ -40,20 +40,30 @@ In addition, you should also be familiar with [destinations](../../destinations/
 
 ## Customer consent flow summary {#summary}
 
-After the system has been properly configured, the way in which [!DNL Real-time CDP] collects customer consent data can be summarized as follows:
+The following sections describe how consent data is collected and enforced after the system has been properly configured.
+
+### Consent data collection
+
+[!DNL Real-time CDP] primarily collects customer consent data through the following process:
 
 1. A customer provides their consent preferences for data collection through a dialog on your website.
 1. Your CMP detects the consent preference change, and generates IAB consent data accordingly.
-1. Using the [!DNL Experience Platform] Web SDK, the generated consent data (returned by the CMP) is sent to Adobe Experience Platform.
+1. Using the [!DNL Experience Platform Web SDK], the generated consent data (returned by the CMP) is sent to Adobe Experience Platform.
 1. The collected consent data is ingested into a [!DNL Profile]-enabled dataset whose schema contains IAB consent fields.
+
+In addition to SDK commands triggered by CMP consent-change hooks, consent data can also flow into [!DNL Experience Platform] through any customer-generated XDM data that is uploaded directly to a [!DNL Profile]-enabled dataset.
+
+Any segments shared with [!DNL Platform] by Adobe Audience Manager (through the [!DNL Audience Manager] source connector or otherwise) may also contain consent data, provided that the appropriate fields have been applied to said segments through [!DNL Experience Cloud Identity Service]. For more information on collecting consent data in [!DNL Audience Manager], see the document on the [Adobe Audience Manager plug-in for IAB TCF](https://docs.adobe.com/help/en/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html).
+
+### Downstream consent enforcement
 
 Once IAB consent data has successfully been ingested, the following processes take place in downstream [!DNL Real-time CDP] services:
 
 1. [!DNL Real-time Customer Profile] updates the stored consent data for that customer's profile.
 1. [!DNL Real-time CDP] processes customer IDs only if the vendor permission for [!DNL Real-time CDP] (565) is provided for every ID in a cluster.
-1. When exporting segments to destinations belonging to members of the TCF 2.0 vendor list, [!DNL Real-time CDP] only includes profiles if the vendor permission for the destination is provided for every ID in a cluster.
+1. When exporting segments to destinations belonging to members of the TCF 2.0 vendor list, [!DNL Real-time CDP] only includes profiles if the vendor permissions for both [!DNL Real-time CDP] (565) *and* the destination is provided for every ID in a cluster.
 
-The rest of the sections in this document provide guidance on how to configure [!DNL Real-time CDP] and your data operations to fulfill the requirements described above.
+The rest of the sections in this document provide guidance on how to configure [!DNL Real-time CDP] and your data operations to fulfill the collection and enforcement requirements described above.
 
 ## Determine how to generate customer consent data within your CMP {#consent-data}
 
@@ -66,7 +76,7 @@ This dialog must allow the customer to opt in or out of the following:
 | Consent option | Description |
 | --- | --- |
 | **Purposes** | Purposes define which ad tech purposes a brand can use a customer's data for. The following purposes must be opted into in order for [!DNL Real-time CDP] to process customer IDs: <ul><li>**Purpose 1**: Store and/or access information on a device</li><li>**Purpose 10**: Develop and improve products</li></ul> |
-| **Vendor permissions** | In addition to ad tech purposes, the dialog must also allow the customer to opt in or out of having their data used by specific vendors, including[!DNL  Real-time CDP] (565). |
+| **Vendor permissions** | In addition to ad tech purposes, the dialog must also allow the customer to opt in or out of having their data used by specific vendors, including [!DNL  Real-time CDP] (565). |
 
 ### Consent strings {#consent-strings}
 
@@ -90,7 +100,7 @@ For more information on how to work with merge policies, refer to the [merge pol
 
 >[!NOTE]
 >
->The use of the [!DNL Experience Platform] Web SDK is required in order to process consent data in Adobe Experience Platform. [!DNL Experience Cloud Identity Service] is currently not supported.
+>The use of the [!DNL Experience Platform] Web SDK is required in order to process consent data directly in Adobe Experience Platform. [!DNL Experience Cloud Identity Service] is currently not supported.
 >
 >[!DNL Experience Cloud Identity Service] is still supported for consent processing in Adobe Audience Manager, however, and compliance with TCF 2.0 only requires that the library is updated to [version 5.0](https://github.com/Adobe-Marketing-Cloud/id-service/releases).
 
@@ -212,7 +222,7 @@ TCF 2.0 also requires that the source of data must check the destination's vendo
 
 Once you have configured your TCF 2.0 implementation and have exported segments to destinations, any data that does not meet consent requirements will not be exported. However, in order to see whether the right customer profiles were filtered during the export, you must manually check the data stores on your destinations to see if consent was properly enforced.
 
-It is important to note that if multiple IDs make up a cluster and TCF 2.0 applies, the entire cluster will be excluded if even a single ID has not opted in to the correct purposes and vendor permissions.
+It is important to note that if multiple IDs make up a cluster and TCF 2.0 applies, the entire cluster will be excluded if even a single ID does not contain the correct purposes and vendor permission(s).
 
 ## Next steps
 
