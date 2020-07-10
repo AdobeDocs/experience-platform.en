@@ -7,38 +7,38 @@ topic: overview
 
 # Collect cloud storage data through source connectors and APIs
 
-Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
+[!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
-This tutorial covers the steps for retrieving data from a third-party cloud storage and bringing them in to Platform through source connectors and APIs.
+This tutorial covers the steps for retrieving data from a third-party cloud storage and bringing them in to [!DNL Platform] through source connectors and APIs.
 
 ## Getting started
 
-This tutorial requires you to have access to a third-party cloud storage through a valid connection and information about the file you wish to bring into Platform, including the file's path and structure. If you do not have this information, see the tutorial on [exploring a third party cloud storage using the Flow Service API](../explore/cloud-storage.md) before attempting this tutorial.
+This tutorial requires you to have access to a third-party cloud storage through a valid connection and information about the file you wish to bring into [!DNL Platform], including the file's path and structure. If you do not have this information, see the tutorial on [exploring a third party cloud storage using the Flow Service API](../explore/cloud-storage.md) before attempting this tutorial.
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
 -   [Experience Data Model (XDM) System](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
     -   [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
     -   [Schema Registry developer guide](../../../../xdm/api/getting-started.md): Includes important information that you need to know in order to successfully perform calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
--   [Catalog Service](../../../../catalog/home.md): Catalog is the system of record for data location and lineage within Experience Platform.
--   [Batch ingestion](../../../../ingestion/batch-ingestion/overview.md): The Batch Ingestion API allows you to ingest data into Experience Platform as batch files.
--   [Sandboxes](../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+-   [Catalog Service](../../../../catalog/home.md): Catalog is the system of record for data location and lineage within [!DNL Experience Platform].
+-   [Batch ingestion](../../../../ingestion/batch-ingestion/overview.md): The Batch Ingestion API allows you to ingest data into [!DNL Experience Platform] as batch files.
+-   [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully connect to a cloud storage using the Flow Service API.
+The following sections provide additional information that you will need to know in order to successfully connect to a cloud storage using the [!DNL Flow Service] API.
 
 ### Reading sample API calls
 
-This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the Experience Platform troubleshooting guide.
+This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
 
 ### Gather values for required headers
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 -   Authorization: Bearer `{ACCESS_TOKEN}`
 -   x-api-key: `{API_KEY}`
 -   x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in Experience Platform, including those belonging to Flow Service, are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 -   x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -48,7 +48,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ## Create an ad-hoc XDM class and schema
 
-In order to bring external data into Platform through source connectors, an ad-hoc XDM class and schema must be created for the raw source data.
+In order to bring external data into [!DNL Platform] through source connectors, an ad-hoc XDM class and schema must be created for the raw source data.
 
 To create an ad-hoc class and schema, follow the steps outlined in the [ad-hoc schema tutorial](../../../../xdm/tutorials/ad-hoc.md). When creating an ad-hoc class, all fields found in the source data must be described within the request body.
 
@@ -56,7 +56,7 @@ Continue following the steps outlined in the developer guide until you have crea
 
 ## Create a source connection {#source}
 
-With an ad-hoc XDM schema created, a source connection can now be created using a POST request to the Flow Service API. A source connection consists of a connection ID, a source data file, and a reference to the schema that describes the source data.
+With an ad-hoc XDM schema created, a source connection can now be created using a POST request to the [!DNL Flow Service] API. A source connection consists of a connection ID, a source data file, and a reference to the schema that describes the source data.
 
 To create a source connection, you must also define an enum value for the data format attribute.
 
@@ -128,11 +128,11 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 ## Create a target XDM schema {#target}
 
-In earlier steps, an ad-hoc XDM schema was created to structure the source data. In order for the source data to be used in Platform, a target schema must also be created to structure the source data according to your needs. The target schema is then used to create a Platform dataset in which the source data is contained.
+In earlier steps, an ad-hoc XDM schema was created to structure the source data. In order for the source data to be used in [!DNL Platform], a target schema must also be created to structure the source data according to your needs. The target schema is then used to create a [!DNL Platform] dataset in which the source data is contained.
 
 A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
-If you would prefer to use the user interface in Experience Platform, the [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md) provides step-by-step instructions for performing similar actions in the Schema Editor.
+If you would prefer to use the user interface in [!DNL Experience Platform], the [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md) provides step-by-step instructions for performing similar actions in the Schema Editor.
 
 **API format**
 
@@ -291,7 +291,7 @@ A successful response returns an array containing the ID of the newly created da
 
 A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection spec ID associated with data lake. This connection spec ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-You now have the unique identifiers a target schema a target dataset and the connection spec ID to data lake. Using these identifiers, you can create a target connection using the Flow Service API to specify the dataset that will contain the inbound source data.
+You now have the unique identifiers a target schema a target dataset and the connection spec ID to data lake. Using these identifiers, you can create a target connection using the [!DNL Flow Service] API to specify the dataset that will contain the inbound source data.
 
 **API format**
 
@@ -428,7 +428,7 @@ A successful response returns details of the newly created mapping including its
 
 ## Retrieve dataflow specifications {#specs}
 
-A dataflow is responsible for collecting data from sources, and bringing them into Platform. In order to create a dataflow, you must first obtain the dataflow specifications that are responsible for collecting cloud storage data.
+A dataflow is responsible for collecting data from sources, and bringing them into [!DNL Platform]. In order to create a dataflow, you must first obtain the dataflow specifications that are responsible for collecting cloud storage data.
 
 **API format**
 
@@ -448,7 +448,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the details of the dataflow spec that is responsible for bringing data from your cloud storage into Platform. The response includes a unique flow spec ID. This ID is required in the next step to create a new dataflow.
+A successful response returns the details of the dataflow spec that is responsible for bringing data from your cloud storage into [!DNL Platform]. The response includes a unique flow spec ID. This ID is required in the next step to create a new dataflow.
 
 ```json
 {
@@ -656,7 +656,7 @@ A successful response returns the ID (`id`) of the newly created dataflow.
 
 ## Next steps
 
-By following this tutorial, you have created a source connector to collect data from your cloud storage on a scheduled basis. Incoming data can now be used by downstream Platform services such as Real-time Customer Profile and Data Science Workspace. See the following documents for more details:
+By following this tutorial, you have created a source connector to collect data from your cloud storage on a scheduled basis. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
 -   [Real-time Customer Profile overview](../../../../profile/home.md)
 -   [Data Science Workspace overview](../../../../data-science-workspace/home.md)
@@ -669,12 +669,12 @@ The following section lists the different cloud storage source connectors and th
 
 | Connector name | Connection spec |
 | -------------- | --------------- |
-| Amazon S3 (S3) | `ecadc60c-7455-4d87-84dc-2a0e293d997b` |
-| Amazon Kinesis (Kinesis) | `86043421-563b-46ec-8e6c-e23184711bf6` |
-| Azure Blob (Blob) | `4c10e202-c428-4796-9208-5f1f5732b1cf` |
-| Azure Data Lake Storage Gen2  (ADLS Gen2) | `0ed90a81-07f4-4586-8190-b40eccef1c5a` |
-| Azure Event Hubs (Event Hubs) | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
-| Azure File Storage | `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
-| Google Cloud Storage | `32e8f412-cdf7-464c-9885-78184cb113fd` |
+| [!DNL Amazon S3] (S3) | `ecadc60c-7455-4d87-84dc-2a0e293d997b` |
+| [!DNL Amazon Kinesis] (Kinesis) | `86043421-563b-46ec-8e6c-e23184711bf6` |
+| [!DNL Azure Blob] (Blob) | `4c10e202-c428-4796-9208-5f1f5732b1cf` |
+| [!DNL Azure Data Lake Storage Gen2] (ADLS Gen2) | `0ed90a81-07f4-4586-8190-b40eccef1c5a` |
+| [!DNL Azure Event Hubs] (Event Hubs) | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| [!DNL Azure File Storage] | `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
+| [!DNL Google Cloud Storage] | `32e8f412-cdf7-464c-9885-78184cb113fd` |
 | HDFS | `54e221aa-d342-4707-bcff-7a4bceef0001` |
 | SFTP | `bf367b0d-3d9b-4060-b67b-0d3d9bd06094` |

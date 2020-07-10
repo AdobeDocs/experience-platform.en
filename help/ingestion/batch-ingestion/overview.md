@@ -54,7 +54,9 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+>[!NOTE]
+>
+>For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
@@ -119,7 +121,9 @@ After successfully creating a new batch for uploading, files can then be uploade
 
 You can upload files using the **Small File Upload API**. However, if your files are too large and the gateway limit is exceeded (such as extended timeouts, requests for body size exceeded, and other constrictions), you can switch over to the **Large File Upload API**. This API uploads the file in chunks, and stitches data together using the **Large File Upload Complete API** call.
 
->[!NOTE] The examples below use the [parquet](https://parquet.apache.org/documentation/latest/) file format. An example that uses the JSON file format can be found in the [batch ingestion developer guide](./api-overview.md).
+>[!NOTE]
+>
+>The examples below use the [parquet](https://parquet.apache.org/documentation/latest/) file format. An example that uses the JSON file format can be found in the [batch ingestion developer guide](./api-overview.md).
 
 ### Small file upload
 

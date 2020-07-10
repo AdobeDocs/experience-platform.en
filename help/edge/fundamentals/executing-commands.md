@@ -59,7 +59,7 @@ alloy("commandName", options)
 
 ### Response objects
 
-All promises returned from commands are resolved with a `result` object. The result object will contain data depending on the command and the user's consent. For example library info is passed as an property of the results object in the following command.
+All promises returned from commands are resolved with a `result` object. The result object will contain data depending on the command and the user's consent. For example, library info is passed as a property of the results object in the following command.
 
 ```js
 alloy("getLibraryInfo").then(function(result) {

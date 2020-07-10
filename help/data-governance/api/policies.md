@@ -7,7 +7,7 @@ topic: developer guide
 
 # Policies
 
-Data usage policies are rules your organization adopts that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Experience Platform.
+Data usage policies are rules your organization adopts that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform].
 
 The `/policies` endpoint is used for all API calls related to viewing, creating, updating, or deleting data usage policies.
 
@@ -126,7 +126,7 @@ The response includes a "count" showing the total number of policies within the 
 }
 ```
 
-## Look up specific policy
+## Look up a policy
 
 Each policy contains an `id` field that can be used to request the details of a specific policy. If the `id` of a policy is unknown, it can be found using the listing (GET) request to list all policies within a specific container (`core` or `custom`) as shown in the previous step.
 
@@ -399,7 +399,7 @@ A successful update request returns an HTTP Status 200 (OK) and the response bod
 
 A specific portion of a policy may be updated using a PATCH request. Unlike PUT requests that _rewrite_ the policy, PATCH requests update only the path specified in the request body. This is especially useful when you want to enable or disable a policy, as you need only send the specific path that you wish to update (`/status`) and its value (`ENABLE` or `DISABLE`). 
 
-The Policy Service API currently supports "add", "replace", and "remove" PATCH operations, and allows you to combine several updates together into a single call by adding each as an object within the array, as shown in the following examples.
+The [!DNL Policy Service] API currently supports "add", "replace", and "remove" PATCH operations, and allows you to combine several updates together into a single call by adding each as an object within the array, as shown in the following examples.
 
 **API format**
 

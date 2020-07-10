@@ -7,9 +7,9 @@ topic: Tutorial
 
 # Import a packaged recipe (API)
 
-This tutorial uses the [Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) to create an [Engine](../api/engines.md), also known as a Recipe in the user interface. 
+This tutorial uses the [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) to create an [Engine](../api/engines.md), also known as a Recipe in the user interface. 
 
-Before getting started, it is important to note that Adobe Experience Platform Data Science Workspace uses different terms to refer to similar elements within the API and UI. The API terms are used throughout this tutorial and the following table outlines the correlating terms:
+Before getting started, it is important to note that Adobe Experience Platform [!DNL Data Science Workspace] uses different terms to refer to similar elements within the API and UI. The API terms are used throughout this tutorial and the following table outlines the correlating terms:
 
 | UI Term | API Term |
 | ---- | ---- |
@@ -18,7 +18,7 @@ Before getting started, it is important to note that Adobe Experience Platform D
 | Training and evaluation | [Experiment](../api/experiments.md) |
 | Service | [MLService](../api/mlservices.md) |
 
-An Engine contains machine learning algorithms and logic to solve specific problems. The diagram below provides a visualization showing the API workflow in Data Science Workspace. This tutorial focuses on creating an Engine, the brain of a machine learning Model.
+An Engine contains machine learning algorithms and logic to solve specific problems. The diagram below provides a visualization showing the API workflow in [!DNL Data Science Workspace]. This tutorial focuses on creating an Engine, the brain of a machine learning Model.
 
 ![](../images/models-recipes/import-package-api/engine_hierarchy_api.png)
 
@@ -28,7 +28,7 @@ This tutorial requires a packaged Recipe file in the form of a Docker URL. Follo
  
 -   `{DOCKER_URL}`: An URL address to a Docker image of an intelligent service.
 
-This tutorial requires you to have completed the [Authentication to Adobe Experience Platform tutorial](../../tutorials/authentication.md) in order to successfully make calls to Platform APIs. Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+This tutorial requires you to have completed the [Authentication to Adobe Experience Platform tutorial](../../tutorials/authentication.md) in order to successfully make calls to [!DNL Platform] APIs. Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 -   `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.
 -   `{IMS_ORG}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.
@@ -36,16 +36,14 @@ This tutorial requires you to have completed the [Authentication to Adobe Experi
 
 ## Create an Engine
 
-Depending on the form of the packaged Recipe file to be included as a part of the API request, an Engine is created through one of two ways:
-
--   [Create an Engine with a Docker URL](#create-an-engine-with-a-docker-url)
+Engines can be created by making a POST request to the /engines endpoint. The created Engine is configured based on the form of the packaged Recipe file that must be included as part of the API request.
 
 ### Create an Engine with a Docker URL {#create-an-engine-with-a-docker-url}
 
 In order to create an Engine with a packaged Recipe file stored in a Docker container, you must provide the Docker URL to the packaged Recipe file.
 
 >[!CAUTION]
-> If you are using Python or R use the request below. If you are using PySpark or Scala use the PySpark/Scala request example located below the Python/R example.
+> If you are using [!DNL Python] or R use the request below. If you are using PySpark or Scala, use the PySpark/Scala request example located below the Python/R example.
 
 **API format**
 
@@ -81,8 +79,8 @@ curl -X POST \
 
 | Property | Description |
 | -------  | ----------- |
-| `engine.name` | The desired name for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in Data Science Workspace user interface as the Recipe's name. |
-| `engine.description` | An optional description for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in Data Science Workspace user interface as the Recipe's description. Do not remove this property, let this value be an empty string if you choose not to provide a description. |
+| `engine.name` | The desired name for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in [!DNL Data Science Workspace] user interface as the Recipe's name. |
+| `engine.description` | An optional description for the Engine. The Recipe corresponding to this Engine will inherit this value to be displayed in [!DNL Data Science Workspace] user interface as the Recipe's description. Do not remove this property, let this value be an empty string if you choose not to provide a description. |
 | `engine.type` | The execution type of the Engine. This value corresponds to the language in which the Docker image is developed in. When a Docker URL is provided to create an Engine, `type` is either `Python`, `R`, `PySpark`, `Spark` (Scala), or `Tensorflow`. |
 | `artifacts.default.image.location` | Your `{DOCKER_URL}` goes here. A complete Docker URL has the following structure: `your_docker_host.azurecr.io/docker_image_file:version` |
 | `artifacts.default.image.name` | An additional name for the Docker image file. Do not remove this property, let this value be an empty string if you choose not to provide an additional Docker image file name. |
@@ -164,7 +162,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns a payload containing the details of the newly created Engine including its unique identifier (`id`). The following example response is for a Python Engine. The `executionType` and `type` keys change based on the supplied POST.
+A successful response returns a payload containing the details of the newly created Engine including its unique identifier (`id`). The following example response is for a [!DNL Python] Engine. The `executionType` and `type` keys change based on the supplied POST.
 
 ```json
 {

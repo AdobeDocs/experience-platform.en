@@ -30,7 +30,9 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+>[!NOTE]
+>
+>For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All POST, PUT, and PATCH requests require an additional header:
 
@@ -44,11 +46,13 @@ Once you have developed, tested, and saved your segment definition, you can then
 
 If you have not yet completed the [Create a segment using the Real-time Customer Profile API](./create-a-segment.md) tutorial or created a segment definition using [Segment Builder](../ui/overview.md), please do so before proceeding with this tutorial.
 
-## Scheduled evaluation
+## Scheduled evaluation {#scheduled-evaulation}
 
 Through scheduled evaluation, your IMS Org can create a recurring schedule to automatically run export jobs.
 
->[!NOTE] Scheduled evaluation can be enabled for sandboxes with a maximum of five (5) merge policies for XDM Individual Profile. If your organization has more than five merge policies for XDM Individual Profile within a single sandbox environment, you will not be able to use scheduled evaluation.
+>[!NOTE]
+>
+>Scheduled evaluation can be enabled for sandboxes with a maximum of five (5) merge policies for XDM Individual Profile. If your organization has more than five merge policies for XDM Individual Profile within a single sandbox environment, you will not be able to use scheduled evaluation.
 
 ### Create a schedule
 

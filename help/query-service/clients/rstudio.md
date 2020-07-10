@@ -36,7 +36,9 @@ con <- dbConnect(drv,
 | `{HOST_NUMBER` and `{PORT_NUMBER}` | The host endpoint and its port for Query Service. | 
 | `{USERNAME}` and `{PASSWORD}` | The login credentials that will be used. The username takes the form of `ORG_ID@AdobeOrg`. |
 
->[!NOTE] For more information on finding your database name, host, port, and login credentials, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to Platform, click **Queries**, then click **Credentials**.
+>[!NOTE]
+>
+>For more information on finding your database name, host, port, and login credentials, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to Platform, click **Queries**, then click **Credentials**.
 
 ## Next steps
 

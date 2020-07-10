@@ -51,7 +51,7 @@ The following table outlines the different object types supported by Catalog:
 |Batch|`/batches`|Batches are units of data that consist of one or more files to be ingested as a single unit. A batch object in Catalog outlines the batch's ingestion metrics (such as the number of records processed or size on disk) and may also include links to datasets, views, and other resources that were affected by the batch operation.|
 |Connection|`/connections`|A connection is a single instance of a source connector, unique to your organization and configured using the appropriate authentication credentials for the connector type.|
 |Connector|`/connectors`|Connectors define how source connections are to gather data from other Adobe applications (such as Adobe Analytics and Adobe Audience Manager), third-party cloud storage sources (such as Azure Blob, Amazon S3, FTP servers, and SFTP servers), and third-party CRM systems (such as Microsoft Dynamics and Salesforce).|
-|Dataset|`/dataSets`|A dataset is a storage and management construct used for the collection of data (typically a table) that contains a schema (columns) and fields (rows).|
+|Dataset|`/dataSets`|A dataset is a storage and management construct used for the collection of data (typically a table) that contains a schema (columns) and fields (rows). See the [datasets overview](./datasets/overview.md) for more information.|
 |Dataset File|`/datasetFiles`|Dataset files represent blocks of data that has been saved on Platform. As records of literal files, these are where you can find the file's size, the number of records it contains, and a reference to the batch that ingested the file.|
 
 ## Next steps

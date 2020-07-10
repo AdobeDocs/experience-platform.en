@@ -7,7 +7,7 @@ topic: Tutorial
 
 # Import a packaged recipe (UI)
 
-This tutorial provides insight on how to configure and import a packaged recipe using the provided Retail Sales example. By the end of this tutorial, you will be ready to create, train, and evaluate a Model in Adobe Experience Platform Data Science Workspace.
+This tutorial provides insight on how to configure and import a packaged recipe using the provided Retail Sales example. By the end of this tutorial, you will be ready to create, train, and evaluate a Model in Adobe Experience Platform [!DNL Data Science Workspace].
 
 ## Prerequisites
 
@@ -15,7 +15,7 @@ This tutorial requires a packaged recipe in the form of a Docker image URL. See 
 
 ## UI workflow
 
-Importing a packaged recipe into Data Science Workspace requires specific recipe configurations, compiled into a single JavaScript Object Notation (JSON) file, this compilation of recipe configurations is referred to as the **configuration file**. A packaged recipe with a particular set of configurations is referred to as a **recipe instance**. One recipe can be used to create many recipe instances in Data Science Workspace.
+Importing a packaged recipe into [!DNL Data Science Workspace] requires specific recipe configurations, compiled into a single JavaScript Object Notation (JSON) file, this compilation of recipe configurations is referred to as the **configuration file**. A packaged recipe with a particular set of configurations is referred to as a **recipe instance**. One recipe can be used to create many recipe instances in [!DNL Data Science Workspace].
 
 The workflow for importing a package recipe consists of the following steps:
 - [Configure a recipe](#configure)
@@ -26,9 +26,11 @@ The workflow for importing a package recipe consists of the following steps:
 
 ### Configure a recipe {#configure}
 
-Every recipe instance in Data Science Workspace is accompanied with a set of configurations that tailor the recipe instance to suit a particular use case. Configuration files define the default training and scoring behaviors of a Model created using this recipe instance.
+Every recipe instance in [!DNL Data Science Workspace] is accompanied with a set of configurations that tailor the recipe instance to suit a particular use case. Configuration files define the default training and scoring behaviors of a Model created using this recipe instance.
 
->[!NOTE] Configuration files are recipe and case specific.
+>[!NOTE]
+>
+>Configuration files are recipe and case specific.
 
 Below is a sample configuration file showing default training and scoring behaviors for the Retail Sales recipe. 
 
@@ -109,11 +111,11 @@ Below is a sample configuration file showing default training and scoring behavi
 | `evaluation.metrics` | String | Comma separated list of evaluation metrics to be used for evaluating a Model. |
 | `ACP_DSW_SCORING_RESULTS_XDM_SCHEMA` | String | The output schema used for scoring a Model. Leave this empty when importing in UI, replace with scoring SchemaID when importing using API. |
 
-For the purpose of this tutorial, you can leave the default configuration files for Retail Sales recipe in the Data Science Workspace Reference the way they are.
+For the purpose of this tutorial, you can leave the default configuration files for Retail Sales recipe in the [!DNL Data Science Workspace] Reference the way they are.
 
-### Import Docker based recipe - Python {#python}
+### Import Docker based recipe - [!DNL Python] {#python}
 
-Start by navigating and selecting **[!UICONTROL Workflows]** located in the top-left of the Platform UI. Next, select *Import recipe* and click **[!UICONTROL Launch]**.
+Start by navigating and selecting **[!UICONTROL Workflows]** located in the top-left of the [!DNL Platform] UI. Next, select *Import recipe* and click **[!UICONTROL Launch]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -124,7 +126,7 @@ The *Configure* page for the *Import recipe* workflow appears. Enter a name and 
 >[!NOTE]
 > In the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial, a Docker URL was provided at the end of building the Retail Sales recipe using Python source files.
 
-Once you are on the *Select source* page, paste the Docker URL corresponding to the packaged recipe built using Python source files in the **[!UICONTROL Source URL]** field. Next, import the provided configuration file by dragging and dropping, or use the file system **Browser**. The provided configuration file can be found at `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Select **[!UICONTROL Python]** in the *Runtime* drop down and **[!UICONTROL Classification]** in the *Type* drop down. Once everything has been filled out, click **[!UICONTROL Next]** in the top-right corner to proceed to *Manage schemas*.
+Once you are on the *Select source* page, paste the Docker URL corresponding to the packaged recipe built using [!DNL Python] source files in the **[!UICONTROL Source URL]** field. Next, import the provided configuration file by dragging and dropping, or use the file system **Browser**. The provided configuration file can be found at `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Select **[!UICONTROL Python]** in the *Runtime* drop down and **[!UICONTROL Classification]** in the *Type* drop down. Once everything has been filled out, click **[!UICONTROL Next]** in the top-right corner to proceed to *Manage schemas*.
 
 >[!NOTE]
 > *Type* supports **[!UICONTROL Classification]** and **[!UICONTROL Regression]**. If your model does not fall under one of those types select **[!UICONTROL Custom]**.
@@ -141,11 +143,11 @@ Review the recipe, add, modify, or remove configurations as necessary. Click **[
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-Proceed to the [next steps](#next-steps) to find out how to create a Model in Data Science Workspace using the newly created Retail Sales recipe.
+Proceed to the [next steps](#next-steps) to find out how to create a Model in [!DNL Data Science Workspace] using the newly created Retail Sales recipe.
 
 ### Import Docker based recipe - R {#r}
 
- Start by navigating and selecting **[!UICONTROL Workflows]** located in the top-left of the Platform UI. Next, select *Import recipe* and click **[!UICONTROL Launch]**.
+ Start by navigating and selecting **[!UICONTROL Workflows]** located in the top-left of the [!DNL Platform] UI. Next, select *Import recipe* and click **[!UICONTROL Launch]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -173,11 +175,11 @@ Review the recipe, add, modify, or remove configurations as necessary. Click **F
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-Proceed to the [next steps](#next-steps) to find out how to create a Model in Data Science Workspace using the newly created Retail Sales recipe.
+Proceed to the [next steps](#next-steps) to find out how to create a Model in [!DNL Data Science Workspace] using the newly created Retail Sales recipe.
 
 ### Import Docker based recipe - PySpark {#pyspark}
 
- Start by navigating and selecting **[!UICONTROL Workflows]** located in the top-left of the Platform UI. Next, select *Import recipe* and click **[!UICONTROL Launch]**.
+ Start by navigating and selecting **[!UICONTROL Workflows]** located in the top-left of the [!DNL Platform] UI. Next, select *Import recipe* and click **[!UICONTROL Launch]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -205,11 +207,11 @@ Review the recipe, add, modify, or remove configurations as necessary. Click **[
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-Proceed to the [next steps](#next-steps) to find out how to create a Model in Data Science Workspace using the newly created Retail Sales recipe.
+Proceed to the [next steps](#next-steps) to find out how to create a Model in [!DNL Data Science Workspace] using the newly created Retail Sales recipe.
 
 ### Import Docker based recipe - Scala {#scala}
 
- Start by navigating and selecting **[!UICONTROL Workflows]** located in the top-left of the Platform UI. Next, select *Import recipe* and click **[!UICONTROL Launch]**.
+ Start by navigating and selecting **[!UICONTROL Workflows]** located in the top-left of the [!DNL Platform] UI. Next, select *Import recipe* and click **[!UICONTROL Launch]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -218,9 +220,9 @@ The *Configure* page for the *Import recipe* workflow appears. Enter a name and 
 ![configure workflow](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
-> In the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial, a Docker URL was provided at the end of building the Retail Sales recipe using Scala (Spark) source files.
+> In the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial, a Docker URL was provided at the end of building the Retail Sales recipe using Scala ([!DNL Spark]) source files.
 
-Once you are on the *Select source* page, paste the Docker URL corresponding to the packaged recipe built using Scala source files in the *Source URL* field. Next, import the provided configuration file by dragging and dropping, or use the file system **Browser**. The provided configuration file can be found at `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Select **[!UICONTROL Spark]** in the *Runtime* drop down. Once the Spark runtime is selected the default artifact auto populates to **[!UICONTROL Docker]**. Next, select **[!UICONTROL Regression]** from the *Type* drop down. Once everything has been filled out, click **[!UICONTROL Next]** in the top-right corner to proceed to *Manage schemas*.
+Once you are on the *Select source* page, paste the Docker URL corresponding to the packaged recipe built using Scala source files in the *Source URL* field. Next, import the provided configuration file by dragging and dropping, or use the file system **Browser**. The provided configuration file can be found at `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Select **[!UICONTROL Spark]** in the *Runtime* drop down. Once the [!DNL Spark] runtime is selected the default artifact auto populates to **[!UICONTROL Docker]**. Next, select **[!UICONTROL Regression]** from the *Type* drop down. Once everything has been filled out, click **[!UICONTROL Next]** in the top-right corner to proceed to *Manage schemas*.
 
 >[!NOTE]
 > *Type* supports **[!UICONTROL Classification]** and **[!UICONTROL Regression]**. If your model does not fall under one of those types select **[!UICONTROL Custom]**.
@@ -237,11 +239,11 @@ Review the recipe, add, modify, or remove configurations as necessary. Click **[
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-Proceed to the [next steps](#next-steps) to find out how to create a Model in Data Science Workspace using the newly created Retail Sales recipe.
+Proceed to the [next steps](#next-steps) to find out how to create a Model in [!DNL Data Science Workspace] using the newly created Retail Sales recipe.
 
 ## Next steps {#next-steps}
 
-This tutorial provided insight on configuring and importing a recipe into Data Science Workspace. You can now create, train, and evaluate a Model using the newly created recipe.
+This tutorial provided insight on configuring and importing a recipe into [!DNL Data Science Workspace]. You can now create, train, and evaluate a Model using the newly created recipe.
 
 - [Train and evaluate a Model in the UI](./train-evaluate-model-ui.md)
 - [Train and evaluate a Model using the API](./train-evaluate-model-api.md)
