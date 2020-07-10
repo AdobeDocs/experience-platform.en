@@ -7,7 +7,7 @@ topic: overview
 
 # Monitor accounts and dataflows
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for viewing existing accounts and dataflows from the *[!UICONTROL Sources]* workspace.
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for viewing existing accounts and dataflows from the *[!UICONTROL Sources]* workspace. This tutorial also provides steps for deleting dataflows from the *[!UICONTROL Sources]* workspace.
 
 ## Getting started
 
@@ -28,7 +28,7 @@ Select *[!UICONTROL Accounts]* from the top header to view existing accounts.
 
 The *[!UICONTROL Accounts]* pages appears. On this page is a list of viewable accounts, including information about their source, username, number of dataflows, and date of creation.
 
-Select the icon on the top left to launch the sort window.
+Select the funnel icon on the top left to launch the sort window.
 
 ![accounts](../../images/tutorials/monitor/accounts-list.png)
 
@@ -66,7 +66,7 @@ For more information on monitoring dataflows and ingestion, refer to the tutoria
 
 ## Delete a dataflow
 
-You can delete dataflows that are no longer necessary by accessing the dataflows screen. Select the sorting funnel icon to open the list of sources. From there, select the source you wish to access from the sorting menu and select the dataflow you wish to delete from the list on the right.
+You can delete dataflows that were incorrectly created or are no longer necessary by accessing the dataflows screen. Locate the dataflow you wish to delete using the sorting funnel icon and select the dataflow to open the **[!UICONTROL Properties]** panel.
 
 To delete a dataflow, select **[!UICONTROL Delete]** from the **[!UICONTROL Properties]** on the top right.
 
@@ -75,6 +75,8 @@ To delete a dataflow, select **[!UICONTROL Delete]** from the **[!UICONTROL Prop
 A final confirmation message appears. Select **[!UICONTROL Delete]** to confirm deletion.
 
 ![confirm-delete](../../images/tutorials/monitor/confirm-delete.png)
+
+
 
 ## Next steps
 
