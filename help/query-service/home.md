@@ -29,6 +29,12 @@ Adobe Experience Platform Data Science Workspace uses machine learning and artif
 
 Adobe Experience Platform Segmentation Service allows users to divide their customers into smaller groups that share similar traits. These segments can subsequently be evaluated to provide better analysis on your Real-time Customer Profile data. Query Service can be used to provide this analysis by running queries on this segment data within the Data Lake. Please read the Segmentation Service overview for more information about segmentation, and the Profile Query Language (PQL) guide for more information on how to analyze segments.
 
+### Looker BI use case
+
+With Adobe Experience Platform, you can ingest, store, structure, and pull all stored datasets—including behavioral, CRM, point-of-sale data, and more. Using [!DNL Experience Platform's Query Service], you can query on these datasets and answer specific questions about the business and then start generating impactful insights. The following video demonstrates the value of building dashboards in business intelligence (BI) tools using [!DNL Query Service].
+
+>[!VIDEO](https://video.tv.adobe.com/v/28981?quality=12&learn=on)
+
 ## Next steps and additional resources
 
 By reading this document, you have been introduced to Query Service and how it functions within the greater scope of Experience Platform. For more information on interacting with various endpoints within the Query Service API, please read the [Query Service developer guide](api/getting-started.md). For more information on using the interactive service within Platform, please read the [Query Service user interface guide](ui/overview.md). For a comprehensive list on connecting external clients with Query Service, please read the [Query Service clients overview](clients/overview.md).
