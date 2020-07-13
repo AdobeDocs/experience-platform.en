@@ -26,7 +26,7 @@ Computed attributes enable you to automatically compute the value of fields base
 
 Adobe Experience Platform enables real-time personalization of customer experiences by making data easily accessible on strategically located servers called "edges." The Real-time Customer Profile API provides endpoints for working with edges through components called "projections." This includes projection configurations to determine what data should be projected to each edge, as well as projection destinations to define where to route a projection. For detailed information on working with edge projections, please visit the [projection configurations and destinations endpoints guide](edge-projections.md).
 
-## Entities
+## Entities (Profile access) {#entities}
 
 Through Adobe Experience Platform you can access Real-time Customer Profile data using RESTful APIs or the user interface. To learn how to access entities, more commonly known as "profiles", using the API, follow the steps outlined in the [entities endpoint guide](entities.md). To access profiles using the Platform UI, refer to the [Profile user guide](../ui/user-guide.md).
 
