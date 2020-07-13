@@ -226,6 +226,12 @@ Additional information about the last segment evaluation can be found by clickin
 
 ![](../images/segment-builder/info-bubble.png)
 
+### Streaming segmentation video demo
+
+The following video is intended to support your understanding of streaming segmentation. It shows an example customer experience followed by a quick tour of key features in the [!DNL Platform] interface.
+
+>[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)
+
 ## DULE policy violations
 
 >[!NOTE]
@@ -236,7 +242,7 @@ Once you are done creating your segment, the segment will be analyzed by [!DNL D
 
 ![](../images/segment-builder/segment-dule-policy-violations.png)
 
-## Next steps
+## Next steps and additional resources {#next-steps}
 
 Segment Builder provides a rich workflow allowing you to isolate marketable audiences from [!DNL Real-time Customer Profile] data. After reading this guide you should now be able to:
 
@@ -246,4 +252,16 @@ Segment Builder provides a rich workflow allowing you to isolate marketable audi
 - Enable all segment definitions for scheduled segmentation.
 - Enable specified segment definitions for streaming segmentation.
   
-For step-by-step instructions on working with [!DNL Segmentation Service] using the [!DNL Segmentation Service] API, see the [creating audience segments using APIs](../tutorials/create-a-segment.md) tutorial.
+To learn more about [!DNL Segmentation Service], please continue reading the documentation and supplement your learning by watching the videos below. For step-by-step instructions on working with [!DNL Segmentation Service] using the [!DNL Segmentation Service] API, see the [creating audience segments using APIs](../tutorials/create-a-segment.md) tutorial. 
+
+>[!WARNING]
+>
+> The [!DNL Platform] UI shown in the following videos is out-of-date. Please refer to the documentation above for the latest UI screenshots and functionality.
+
+**Create a segment:**
+
+>[!VIDEO](https://video.tv.adobe.com/v/27254?quality=12&learn=on)
+
+**Create a dynamic segment:**
+
+>[!VIDEO](https://video.tv.adobe.com/v/27428?quality=12&learn=on)
