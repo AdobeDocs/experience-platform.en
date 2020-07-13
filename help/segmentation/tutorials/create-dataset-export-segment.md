@@ -26,7 +26,7 @@ To view union schemas in the UI, click **[!UICONTROL Profiles]** in the left-nav
 
 The datasets workspace within the [!DNL Experience Platform] UI allows you to view and manage all of the datasets that your IMS organization has made, as well as create new ones. 
 
-To view the datasets workspace, click **Datasets** in the left-hand navigation, then click on the *[!UICONTROL Browse]* tab. The datasets workspace contains a list of datasets, including columns showing *[!UICONTROL Name]*, *[!UICONTROL Created]* (date and time), *[!UICONTROL Source]*, *[!UICONTROL Schema]*, and *[!UICONTROL Last Batch Status]*, as well as the date and time the dataset was *[!UICONTROL Last Updated]*. Depending on the width of each column, you may be required to scroll left or right to see all columns. 
+To view the datasets workspace, click **[!UICONTROL Datasets]** in the left-hand navigation, then click on the *[!UICONTROL Browse]* tab. The datasets workspace contains a list of datasets, including columns showing *[!UICONTROL Name]*, *[!UICONTROL Created]* (date and time), *[!UICONTROL Source]*, *[!UICONTROL Schema]*, and *[!UICONTROL Last Batch Status]*, as well as the date and time the dataset was *[!UICONTROL Last Updated]*. Depending on the width of each column, you may be required to scroll left or right to see all columns. 
 
 >[!NOTE]
 >

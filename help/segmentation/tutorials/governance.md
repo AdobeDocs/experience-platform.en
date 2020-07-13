@@ -119,7 +119,7 @@ A successful response returns the details of the segment definition.
 
 ## Find the source datasets from the merge policy {#datasets}
 
-Merge policies contain information about the their source datasets, which in turn contain data usage labels. You can lookup the details of a merge policy by providing the merge policy ID in a GET request to the [!DNL Profile] API.
+Merge policies contain information about the their source datasets, which in turn contain data usage labels. You can lookup the details of a merge policy by providing the merge policy ID in a GET request to the [!DNL Profile] API. More information about merge policies can be found in the [merge policies endpoint guide](../../profile/api/merge-policies.md).
 
 **API format**
 
@@ -368,7 +368,7 @@ Updating the merge policy of a segment definition will adjust the datasets and f
 
 ### Restrict specific data fields when exporting the segment
 
-When exporting a segment to a dataset using the [!DNL Real-time Customer Profile] API, you can filter the data that is included in the export by using the `fields` parameter. Any data fields added to this parameter will be included in the export, while all other data fields will be excluded.
+When exporting a segment to a dataset using the [!DNL Segmentation] API, you can filter the data that is included in the export by using the `fields` parameter. Any data fields added to this parameter will be included in the export, while all other data fields will be excluded.
 
 Consider a segment that has data fields named "A", "B", and "C". If you wished to only export field "C", then the `fields` parameter would contain field "C" alone. By doing this, fields "A" and "B" would be excluded when exporting the segment.
  

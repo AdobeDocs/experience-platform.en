@@ -63,7 +63,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | Property | Description |
 | -------- | ----------- |
 | `predicateExpression` | The PQL expression to query the data by. |
-| `predicateType` | The predicate type for the query expression under `predicateExpression`. Currently, the only accepted value for this property is "pql/text". |
+| `predicateType` | The predicate type for the query expression under `predicateExpression`. Currently, the only accepted value for this property is `pql/text`. |
 | `predicateModel` | The name of the Experience Data Model (XDM) schema the profile data is based on. |
 
 **Response**

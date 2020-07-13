@@ -17,9 +17,9 @@ String data is included in segment definitions using logical, inclusive/exclusiv
 
 | Statement type | Examples |
 | -------------- | -------- |
-| Logical | and, or, not |
-| Inclusive/exclusive | include, must exist, exclude, must not exist |
-| Comparison | equals, does not equal, contains, starts with |
+| Logical | `and`, `or`, `not` |
+| Inclusive/exclusive | `include`, `must` `exist`, `exclude`, `must not exist` |
+| Comparison | `equals`, `does not equal`, `contains`, `starts with` |
 
 ## Date data
 
@@ -27,8 +27,8 @@ Date data allows you to assign time-based context to your segment definitions, e
 
 | Example field | Date-relevant statements | Timeline |
 | ------------- | ------------------------ | --------- |
-| person.firstPurchase | today, yesterday, this month, this year | Relevant to the day the segment was built. |
-| person.lastPurchase | in last, during, before, after, within | Relevant within any given week/month. |
+| person.firstPurchase | `today`, `yesterday`, `this month`, `this year` | Relevant to the day the segment was built. |
+| person.lastPurchase | `in last`, `during`, `before`, `after`, `within` | Relevant within any given week/month. |
 
 ## Experience Events
 
@@ -57,7 +57,7 @@ Currently, only Adobe Audience Manager is supported as an audience. Additional s
 
 In addition to the data types mentioned above, the list of supported data types also includes:
 
-- Uniform resource identifier
+- Uniform resource identifier (URI)
 - Enum
 - Number
 - Long

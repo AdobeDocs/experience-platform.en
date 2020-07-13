@@ -157,7 +157,7 @@ A successful response returns HTTP status 200 with a list of segment jobs for th
 
 ## Create a new segment job {#create}
 
-You can create a new segment job by making a POST request to the `/segment/jobs` endpoint.
+You can create a new segment job by making a POST request to the `/segment/jobs` endpoint and including in the body the ID of the segment definition from which you would like to create a new audience.
 
 **API format**
 
@@ -184,7 +184,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Property | Description |
 | -------- | ----------- |
-| `segmentId` | The ID of the segment definition that you want to create a segment job for. |
+| `segmentId` | The ID of the segment definition that you want to create a segment job for. More information about segment definitions can be found in the [segment definition endpoint guide](./segment-definitions.md. |
 
 **Response**
 
@@ -246,7 +246,7 @@ A successful response returns HTTP status 200 with details of your newly created
 | `id` | A system-generated read-only identifier for the newly created segment job. | 
 | `status` | The current status for the segment job. Since the segment job is newly created, the status will always be "NEW". |
 | `segments` | An object that contains information about the segment definitions that this segment job is running for. |
-| `segments.segment.id` | The ID of the segment definition. |
+| `segments.segment.id` | The ID of the segment definition that you provided. |
 | `segments.segment.expression` | An object that contains information about the segment definition's expression, written in PQL. |
 
 ## Retrieve a specific segment job {#get}
