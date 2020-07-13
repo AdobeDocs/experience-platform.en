@@ -15,7 +15,9 @@ The *Add User* dialog appears. Using the search field, you can lookup users to a
 
 ![add-user-autocomplete](../images/add-user-autocomplete.png)
 
->[!NOTE] If a user does not appear in the autocomplete window, enter their complete email address in the search bar. An invite will be sent to the email with instructions on setting up an Adobe ID account.
+>[!NOTE]
+>
+>If a user does not appear in the autocomplete window, enter their complete email address in the search bar. An invite will be sent to the email with instructions on setting up an Adobe ID account.
 
 Once you have selected a user, click **Save** to add them to the product profile.
 

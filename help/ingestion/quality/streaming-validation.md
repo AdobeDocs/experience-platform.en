@@ -32,7 +32,9 @@ All resources in Experience Platform, including those belonging to the Schema Re
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+>[!NOTE]
+>
+>For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
@@ -157,7 +159,9 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
 | --------- | ----------- |
 | `{JSON_PAYLOAD}` | The JSON body of a data you wish to ingest. |
 
->[!NOTE] No extra query parameter is required, as asynchronous validation is enabled by default.
+>[!NOTE]
+>
+>No extra query parameter is required, as asynchronous validation is enabled by default.
 
 **Response**
 

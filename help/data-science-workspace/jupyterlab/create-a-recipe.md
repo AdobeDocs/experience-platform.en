@@ -22,7 +22,9 @@ Creating a recipe from scratch can be done within [!DNL Data Science Workspace].
 
 The [!UICONTROL Recipe Builder] notebook allows you to run training and scoring runs inside the notebook. This gives you the flexibility to make changes to their `train()` and `score()` methods in between running experiments on the training and scoring data. Once you are happy with the outputs of the training and scoring, you can create a recipe to be used in [!DNL Data Science Workspace] using the notebook to recipe functionality built in to the Recipe Builder notebook.
 
->[!NOTE] 
+>[!NOTE]
+>
+>
 >The Recipe Builder notebook supports working with all file formats but currently the Create Recipe functionality only supports [!DNL Python].
 
 ![](../images/jupyterlab/create-recipe/recipe-builder.png)
@@ -39,7 +41,9 @@ To make edits to the recipe files, navigate to the cell in Jupyter corresponding
 
 Start making necessary changes to the cell and when finished, simply run the cell. The `%%writefile filename.py` command will write the contents of the cell to the `filename.py`. You will have to manually run the cell for each file with changes.
 
->[!NOTE] You should run the cells manually when applicable. 
+>[!NOTE]
+>
+>You should run the cells manually when applicable. 
 
 ## Get started with the Recipe Builder notebook
 
@@ -65,7 +69,9 @@ numpy
 data_access_sdk_python
 ```
 
->[!NOTE] 
+>[!NOTE]
+>
+>
 >Libraries or specific versions you add may be incompatible with the above libraries.
 
 ### Configuration files {#configuration-files}
@@ -107,7 +113,9 @@ This step uses the [pandas dataframe](https://pandas.pydata.org/pandas-docs/stab
 - [!DNL Platform SDK](#platform-sdk)
 - [External sources](#external-sources)
 
->[!NOTE] 
+>[!NOTE]
+>
+>
 >In the Recipe Builder notebook, data is loaded via the `platform_sdk` data loader.
 
 ### [!DNL Platform] SDK {#platform-sdk}
@@ -136,7 +144,9 @@ Now your data is in the dataframe object and can be analyzed and manipulated in 
 
 ### From Data Access SDK (Deprecated)
 
->[!CAUTION] 
+>[!CAUTION]
+>
+>
 > `data_access_sdk_python` is no longer recommended, please see [Convert Data Access code to Platform SDK](../authoring/platform-sdk.md) for a guide on using the `platform_sdk` data loader.
 
 Users can load data using the Data Access SDK. The library can be imported at the top of the page by including the line:
@@ -154,7 +164,9 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
                      ims_org=configProperties['ML_FRAMEWORK_IMS_TENANT_ID'])
 ```
 
->[!NOTE] 
+>[!NOTE]
+>
+>
 >As mentioned in the [Configuration File section](#configuration-files), the following configuration parameters are set for you when you access data from [!DNL Experience Platform]:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID` 
 > - `ML_FRAMEWORK_IMS_TOKEN` 
@@ -283,7 +295,9 @@ The `pipeline.py` file includes logic for training and scoring.
 
 The purpose of training is to create a model using features and labels in your training dataset. 
 
->[!NOTE]  
+>[!NOTE]
+>
+> 
 >_Features_ refer to the input variable used by the machine learning model to predict the _labels_.
 
 The `train()` function should include the training model and return the trained model. Some examples of different models can be found in the [scikit-learn user guide documentation](https://scikit-learn.org/stable/user_guide.html). 

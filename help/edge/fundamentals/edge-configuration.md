@@ -15,7 +15,9 @@ Edge configuration IDs can be created in Adobe [!DNL Launch] using the edge conf
 
 ![edge configuration tool navigation](../../assets/edge_configuration_nav.png)
 
->[!NOTE] 
+>[!NOTE]
+>
+>
 >
 >The edge configuration tool is available to customers on the allow list regardless whether they use [!DNL Launch] as a tag manager. Additionally, users require Develop permissions in [!DNL Launch]. See the [User Permissions](https://docs.adobe.com/content/help/en/launch/using/reference/admin/user-permissions.html) article in the [!DNL Launch] documentation for more details.
 
@@ -69,7 +71,9 @@ To configure Adobe Target, you must provide a client code. The other fields are 
 
 ![Adobe Target settings block](../../assets/edge_configuration_target.png)
 
->[!NOTE] 
+>[!NOTE]
+>
+>
 >
 >The Organization associated with the client code must match the organization where the configuration ID is created.
 

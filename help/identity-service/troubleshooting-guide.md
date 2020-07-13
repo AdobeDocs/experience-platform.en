@@ -113,7 +113,9 @@ If you are sending hashed PII values to Identity Service, you must use the same 
 
 The following table describes when the recommended approach for including identity data in your XDM would be identity map and when an identity field is the better method.
 
->[!NOTE] An advantage `identityMap` has is the ability to include multiple identity values for a single namespace.
+>[!NOTE]
+>
+>An advantage `identityMap` has is the ability to include multiple identity values for a single namespace.
 
 Write|XDM identity field|`identityMap`
 ---|---|---

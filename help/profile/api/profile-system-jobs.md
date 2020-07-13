@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Real-time Customer Profile API developer guide
+title: Profile system jobs - Real-time Customer Profile API
 topic: guide
 ---
 
-# Profile system jobs (Delete requests)
+# Profile system jobs endpoint (Delete requests)
 
 Adobe Experience Platform enables you to ingest data from multiple sources and build robust profiles for individual customers. Data ingested into Platform is stored in the Data Lake as well as the Real-time Customer Profile data store. Occasionally it may be necessary to delete a dataset or batch from the Profile Store in order to remove data that is no longer needed or was added in error. This requires using the Real-time Customer Profile API to create a Profile system job, also known as a "delete request", that can also be modified, monitored, or removed if required.
 
@@ -31,10 +31,10 @@ GET /system/jobs?{QUERY_PARAMETERS}
 
 |Parameter|Description|
 |---|---|
-|`start`|Offset the page of results returned, as per the create time of the request. Example: `start=4`|
-|`limit`|Limit the number of results returned. Example: `limit=10`|
-|`page`|Return a specific page of results, as per the create time of the request. Example: `page=2`|
-|`sort`|Sort results by a specific field in ascending (`asc`) or descending (`desc`) order. The sort parameter does not work when returning multiple pages of results. Example: `sort=batchId:asc`| 
+|`start`|Offset the page of results returned, as per the create time of the request. Example: *`start=4`*|
+|`limit`|Limit the number of results returned. Example: *`limit=10`*|
+|`page`|Return a specific page of results, as per the create time of the request. Example: ***`page=2`***|
+|`sort`|Sort results by a specific field in ascending (*`asc`*) or descending (**`desc`**) order. The sort parameter does not work when returning multiple pages of results. Example: `sort=batchId:asc`| 
 
 **Request**
 
@@ -84,11 +84,11 @@ The response includes a "children" array with an object for each delete request 
 
 |Property|Description|
 |---|---|
-|_page.count|The total number of requests. This response has been truncated for space.|
-|_page.next|If an additional page of results exists, view the next page of results by replacing the ID value in a [lookup request](#view-a-specific-delete-request) with the "next" value provided.|
-|jobType|The type of job being created. In this case, it will always return "DELETE".|
-|status|The status of the delete request. Possible values are "NEW", "PROCESSING", "COMPLETED", "ERROR".|
-|metrics|An object that includes the number of records that have been processed ("recordsProcessed") and the time in seconds that the request has been processing, or how long the request took to complete ("timeTakenInSec").|
+|`_page.count`|The total number of requests. This response has been truncated for space.|
+|`_page.next`|If an additional page of results exists, view the next page of results by replacing the ID value in a [lookup request](#view-a-specific-delete-request) with the `"next"` value provided.|
+|`jobType`|The type of job being created. In this case, it will always return `"DELETE"`.|
+|`status`|The status of the delete request. Possible values are `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`.|
+|`metrics`|An object that includes the number of records that have been processed (`"recordsProcessed"`) and the time in seconds that the request has been processing, or how long the request took to complete (`"timeTakenInSec"`).|
 
 ## Create a delete request {#create-a-delete-request}
 
@@ -124,11 +124,11 @@ curl -X POST \
 
 |Property|Description|
 |---|---|
-|dataSetId|**(Required)** The ID of the dataset you wish to delete.|
+|`dataSetId`|**(Required)** The ID of the dataset you wish to delete.|
 
 **Response**
 
-A successful response returns the details of the newly created delete request, including a unique, system-generated, read-only ID for the request. This can be used to look up the request and check its status. The `status` for the request at time of creation is `"NEW"` until it begins processing. The `dataSetId` in the response should match the `dataSetId` sent in the request.
+A successful response returns the details of the newly created delete request, including a unique, system-generated, read-only ID for the request. This can be used to look up the request and check its status. The **`status`** for the request at time of creation is *`"NEW"`* until it begins processing. The **`dataSetId`** in the response should match the ***`dataSetId`*** sent in the request.
 
 ```json
 {
@@ -144,15 +144,15 @@ A successful response returns the details of the newly created delete request, i
 
 |Property|Description|
 |---|---|
-|id|The unique, system-generated, read-only ID of the delete request.|
-|dataSetId|The ID of the dataset, as specified in the POST request.|
+|`id`|The unique, system-generated, read-only ID of the delete request.|
+|`dataSetId`|The ID of the dataset, as specified in the POST request.|
 
 ### Delete a batch
 
 In order to delete a batch, the batch ID must be included in the body of the POST request. Please be advised that you cannot delete batches for datasets based on record schemas. Only batches for datasets based on time series schemas may be deleted. 
 
 >[!NOTE]
-> The reason you cannot delete batches for datasets based on record schemas is because record type dataset batches overwrite previous records and therefore cannot be "undone" or deleted. The only way to remove the impact of erroneous batches for datasets based on record schemas is to reingest the batch with the correct data in order to overwrite the incorrect records. 
+> The reason you cannot delete batches for datasets based on record schemas is because record type dataset batches overwrite previous records and therefore cannot be "undone" or deleted. The only way to remove the impact of erroneous batches for datasets based on record schemas is to re-ingest the batch with the correct data in order to overwrite the incorrect records. 
 
 For more information on record and time series behavior, please review the [section on XDM data behaviors](../../xdm/home.md#data-behaviors) in the XDM System overview.
 
@@ -179,11 +179,11 @@ curl -X POST \
 
 |Property|Description|
 |---|---|
-|batchId|**(Required)** The ID of the batch you wish to delete.|
+|`batchId`|**(Required)** The ID of the batch you wish to delete.|
 
 **Response**
 
-A successful response returns the details of the newly created delete request, including a unique, system-generated, read-only ID for the request. This can be used to look up the request and check its status. The "status" for the request at time of creation is "NEW" until it begins processing. The "batchId" in the response should match the "batchId" sent in the request.
+A successful response returns the details of the newly created delete request, including a unique, system-generated, read-only ID for the request. This can be used to look up the request and check its status. The `"status"` for the request at time of creation is `"NEW"` until it begins processing. The `"batchId"` in the response should match the `"batchId"` sent in the request.
 
 ```json
 {
@@ -199,8 +199,8 @@ A successful response returns the details of the newly created delete request, i
 
 |Property|Description|
 |---|---|
-|id|The unique, system-generated, read-only ID of the delete request.|
-|batchId|The ID of the batch, as specified in the POST request.|
+|`id`|The unique, system-generated, read-only ID of the delete request.|
+|`batchId`|The ID of the batch, as specified in the POST request.|
 
 If you attempt to initiate a delete request for a Record dataset batch, you will encounter a 400-level error, similar to the following:
 
@@ -230,7 +230,7 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 
 |Parameter|Description|
 |---|---|
-|{DELETE_REQUEST_ID}|**(Required)** The ID of the delete request that you wish to view.|
+|`{DELETE_REQUEST_ID}`|**(Required)** The ID of the delete request that you wish to view.|
 
 **Request**
 
@@ -262,11 +262,11 @@ The response provides the details of the delete request, including its updated s
 
 |Properties|Description|
 |---|---|
-|jobType|The type of job being created, in this case it will always return "DELETE".|
-|status|The status of the delete request. Possible values: "NEW", "PROCESSING", "COMPLETED", "ERROR".|
-|metrics|An array that includes the number of records that have been processed ("recordsProcessed") and the time in seconds that the request has been processing, or how long the request took to complete ("timeTakenInSec").|
+|`jobType`|The type of job being created, in this case it will always return `"DELETE"`.|
+|`status`|The status of the delete request. Possible values: `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`.|
+|`metrics`|An array that includes the number of records that have been processed (`"recordsProcessed"`) and the time in seconds that the request has been processing, or how long the request took to complete (`"timeTakenInSec"`).|
 
-Once the delete request status is "COMPLETED" you can confirm that the data has been deleted by attempting to access the deleted data using the Data Access API. For instructions on how to use the Data Access API to access datasets and batches, please review the [Data Access documentation](../../data-access/home.md).
+Once the delete request status is `"COMPLETED"` you can confirm that the data has been deleted by attempting to access the deleted data using the Data Access API. For instructions on how to use the Data Access API to access datasets and batches, please review the [Data Access documentation](../../data-access/home.md).
 
 ## Remove a delete request
 

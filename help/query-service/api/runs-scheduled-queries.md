@@ -140,7 +140,9 @@ A successful response returns HTTP status 200 with a list of runs for the specif
 }
 ```
 
->[!NOTE] You can use the value of `_links.cancel` to [stop a run for a specified scheduled query](#immediately-stop-a-run-for-a-specific-scheduled-query).
+>[!NOTE]
+>
+>You can use the value of `_links.cancel` to [stop a run for a specified scheduled query](#immediately-stop-a-run-for-a-specific-scheduled-query).
 
 ### Immediately trigger a run for a specific scheduled query
 

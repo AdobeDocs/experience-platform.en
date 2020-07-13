@@ -54,14 +54,18 @@ To fetch the next set of results in a paginated response, you must make another 
 
 Before creating a new job request, you must first collect identifying information about the data subjects whose data you want to access, delete, or opt out of sale. Once you have the required data, it must be provided in the payload of a POST request to the `/jobs` endpoint.
 
->[!NOTE] Compatible Adobe Experience Cloud applications use different values for identifying data subjects. See the guide on [Privacy Service and Experience Cloud applications](../experience-cloud-apps.md) for more information on required identifiers for your application(s). For more general guidance on determining which IDs to send to Privacy Service, see the document on [identity data in privacy requests](../identity-data.md).
+>[!NOTE]
+>
+>Compatible Adobe Experience Cloud applications use different values for identifying data subjects. See the guide on [Privacy Service and Experience Cloud applications](../experience-cloud-apps.md) for more information on required identifiers for your application(s). For more general guidance on determining which IDs to send to Privacy Service, see the document on [identity data in privacy requests](../identity-data.md).
 
 The Privacy Service API supports two kinds of job requests for personal data:
 
 * [Access and/or delete](#access-delete): Access (read) or delete personal data.
 * [Opt out of sale](#opt-out): Mark personal data as not to be sold.
 
->[!IMPORTANT] While access and delete requests can be combined as a single API call, opt-out requests must be made separately.
+>[!IMPORTANT]
+>
+>While access and delete requests can be combined as a single API call, opt-out requests must be made separately.
 
 ### Create an access/delete job {#access-delete}
 
@@ -322,7 +326,9 @@ Once you have successfully submitted the job request, you can proceed to the nex
 
 You can retrieve information about a specific job, such as its current processing status, by including that job's `jobId` in the path of a GET request to the `/jobs` endpoint.
 
->[!IMPORTANT] Data for previously created jobs is only available for retrieval within 30 days of the job's completion date.
+>[!IMPORTANT]
+>
+>Data for previously created jobs is only available for retrieval within 30 days of the job's completion date.
 
 **API format**
 
@@ -441,7 +447,9 @@ The following table lists the different possible job status categories and their
 | Submitted | Job is submitted to every applicable application. |
 | Error | Something failed in the processing of the job - more specific information may be obtained by retrieving individual job details. |
 
->[!NOTE] A submitted job might remain in a processing state if it has a dependent child job that is still processing.
+>[!NOTE]
+>
+>A submitted job might remain in a processing state if it has a dependent child job that is still processing.
 
 ## Next steps
 
