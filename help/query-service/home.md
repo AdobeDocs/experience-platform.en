@@ -31,7 +31,7 @@ Adobe Experience Platform Segmentation Service allows users to divide their cust
 
 ### Looker BI use case
 
-With Adobe Experience Platform, you can ingest, store, structure, and pull all stored datasets—including behavioral, CRM, point-of-sale data, and more. Using [!DNL Experience Platform's Query Service], you can query on these datasets and answer specific questions about the business and then start generating impactful insights. The following video demonstrates the value of building dashboards in business intelligence (BI) tools using [!DNL Query Service].
+With Adobe Experience Platform, you can ingest, store, structure, and pull all stored datasets — including behavioral, CRM, and point-of-sale data. Using [!DNL Experience Platform's Query Service], you can query on these datasets and answer specific questions about the business and then start generating impactful insights. The following video demonstrates the value of building dashboards in business intelligence (BI) tools using [!DNL Query Service].
 
 >[!VIDEO](https://video.tv.adobe.com/v/28981?quality=12&learn=on)
 
@@ -39,6 +39,6 @@ With Adobe Experience Platform, you can ingest, store, structure, and pull all s
 
 By reading this document, you have been introduced to Query Service and how it functions within the greater scope of Experience Platform. For more information on interacting with various endpoints within the Query Service API, please read the [Query Service developer guide](api/getting-started.md). For more information on using the interactive service within Platform, please read the [Query Service user interface guide](ui/overview.md). For a comprehensive list on connecting external clients with Query Service, please read the [Query Service clients overview](clients/overview.md).
 
-To better prepare yourself to run queries, watch the following video. This video shares tips and best practices for running queries in the query editor interface, PSQL clients, business intelligence (BI) solutions and the HTTP API.
+To better prepare yourself to run queries, watch the following video. This video shares tips and best practices for running queries in the query editor interface, PSQL clients, business intelligence (BI) solutions, and the HTTP API.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29811?quality=12&learn=on)
