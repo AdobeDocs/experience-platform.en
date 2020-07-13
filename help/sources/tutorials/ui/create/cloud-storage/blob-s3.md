@@ -73,6 +73,6 @@ To connect an existing account, select the [!DNL Blob] or S3 account you want to
 
 ![existing](../../../../images/tutorials/create/blob/existing.png)
 
-## Next steps
+## Next steps and additional resources
 
 By following this tutorial, you have established a connection to your [!DNL Blob] or S3 account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into Platform](../../dataflow/batch/cloud-storage.md).
