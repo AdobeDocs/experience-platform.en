@@ -54,6 +54,10 @@ You customers may interact with your brand through a combination of online and o
 
 [!DNL Experience Platform] addresses this challenge through two concepts: [identity namespaces](#identity-namespaces) and [identity graphs](#identity-graphs).
 
+The following video is intended to support your understanding of identities and identity graphs. The following video covers the three capabilities of Identity Collection, Identity Graphs, and the APIs. It also describes how deterministic and probabilistic algorithms are used to construct private identity graphs, and discusses the role of private identity graphs, Adobe Experience Platform Identity Service Co-Op Graph, and third-party graphs.
+
+>[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
+
 ### Identity namespaces
 
 When your customer is interacting with your brand across multiple channels including web, mobile application, call center, or a storefront it can be difficult to understand and serve them if you cannot observe and track their activity across channels.
