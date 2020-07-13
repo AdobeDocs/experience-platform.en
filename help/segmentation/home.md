@@ -123,6 +123,10 @@ With the advanced multi-entity segmentation feature, you can create segments usi
 
 Multi-entity segmentation provides the flexibility needed to identify audiences based on data relevant to your business needs. This process can be done quickly and easily without requiring expertise in querying databases. This enables you to add key data to your segments without having to make costly changes to data streams or wait for a back-end data merge. 
 
+The following video is intended to support your understanding of multi-entity segmentation, and outlines both multi-entity segmentation and segment context (segment payload).
+
+>[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
+
 ### Use case: Price driven promotion
 
 To illustrate the value of this advanced segmentation feature, consider a data architect collaborating with a marketer. 
