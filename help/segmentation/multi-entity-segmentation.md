@@ -11,10 +11,6 @@ Multi-entity segmentation is the ability to extend Profile data with additional 
 
 To learn more about multi-entity segmentation, please continue reading the documentation and supplement your learning by watching the video below or exploring the [segmentation overview](./home.md).]
 
->[!WARNING]
->
-> The [!DNL Platform] UI shown in the following video is out-of-date. Please refer to the [!DNL Segment Builder](./ui/overview.md) documentation for the latest UI screenshots and functionality.
-
 >[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
 
 ## Getting started
