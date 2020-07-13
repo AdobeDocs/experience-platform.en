@@ -226,6 +226,12 @@ Additional information about the last segment evaluation can be found by clickin
 
 ![](../images/segment-builder/info-bubble.png)
 
+### Streaming segmentation video demo
+
+The following video is intended to support your understanding of streaming segmentation. It shows an example customer experience followed by a quick tour of key features in the [!DNL Platform] interface.
+
+>[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)
+
 ## DULE policy violations
 
 >[!NOTE]
@@ -236,7 +242,7 @@ Once you are done creating your segment, the segment will be analyzed by [!DNL D
 
 ![](../images/segment-builder/segment-dule-policy-violations.png)
 
-## Next steps and additional resources
+## Next steps and additional resources {#next-steps}
 
 Segment Builder provides a rich workflow allowing you to isolate marketable audiences from [!DNL Real-time Customer Profile] data. After reading this guide you should now be able to:
 
