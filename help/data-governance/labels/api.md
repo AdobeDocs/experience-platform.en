@@ -7,9 +7,11 @@ topic: developer guide
 
 # Manage data usage labels using APIs
 
+This document provides steps on how to manage data usage labels at the dataset- and field-level using the Dataset Service API and [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml).
+
 The Dataset Service API allows you to programmatically manage usage labels for datasets. It is part of Adobe Experience Platform's data catalog capabilities, but is separate from the Catalog Service API which manages dataset metadata.
 
-This document provides steps on how to manage data usage labels at the dataset- and field-level using the Dataset Service API.
+The DULE Policy Service API provides several endpoints that allow you to create and managed custom usage labels for your organization.
 
 ## Getting started
 
@@ -19,7 +21,7 @@ In order to make calls to the endpoints outlined in the sections below, you must
 
 ## Look up labels for a dataset {#lookup}
 
-You can look up the data usage labels that have been applied to an existing dataset by making a GET request.
+You can look up the data usage labels that have been applied to an existing dataset by making a GET request to the Dataset Service API.
 
 **API format**
 
@@ -72,7 +74,7 @@ A successful response returns the data usage labels that have been applied to th
 
 ## Apply labels to a dataset
 
-You can create a set of labels for a dataset by providing them in the payload of a POST or PUT request. Using either of these methods overwrites any existing labels and replaces them with those provided in the payload.
+You can create a set of labels for a dataset by providing them in the payload of a POST or PUT request to the Dataset Service API. Using either of these methods overwrites any existing labels and replaces them with those provided in the payload.
 
 **API format**
 
@@ -98,18 +100,18 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-  "labels": [ "C1", "C2", "C3", "I1", "I2" ],
-  "optionalLabels": [
-    {
-      "option": {
-        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/c6b1b09bc3f2ad2627c1ecc719826836",
-        "contentType": "application/vnd.adobe.xed-full+json;version=1",
-        "schemaPath": "/properties/repositoryCreatedBy"
-      },
-      "labels": [ "S1", "S2" ]
-    }
-  ]
-}'
+        "labels": [ "C1", "C2", "C3", "I1", "I2" ],
+        "optionalLabels": [
+          {
+            "option": {
+              "id": "https://ns.adobe.com/{TENANT_ID}/schemas/c6b1b09bc3f2ad2627c1ecc719826836",
+              "contentType": "application/vnd.adobe.xed-full+json;version=1",
+              "schemaPath": "/properties/repositoryCreatedBy"
+            },
+            "labels": [ "S1", "S2" ]
+          }
+        ]
+      }'
 ```
 
 | Property | Description |
@@ -139,7 +141,7 @@ A successful response returns the labels that have been added to the dataset.
 
 ## Delete labels for a dataset
 
-You can delete the labels applied to a dataset by making a DELETE request.
+You can delete the labels applied to a dataset by making a DELETE request to the Dataset Service API.
 
 **API format**
 
@@ -166,9 +168,209 @@ curl -X DELETE \
 
 A successful response HTTP status 200 (OK), indicating that the labels have been deleted. You can [look up the existing labels](#lookup) for the dataset in a separate call to confirm this.
 
+## List all custom labels
+
+You can list all custom labels created under your organization by making a GET request to the DULE Policy Service API.
+
+**API format**
+
+```http
+GET /labels/custom
+```
+
+**Request**
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/dulepolicy/labels/custom' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Response**
+
+A successful response returns a list of custom policies retrieved from the system.
+
+```json
+{
+    "_page": {
+        "count": 2
+    },
+    "_links": {
+        "page": {
+            "href": "https://platform.adobe.io:443/data/foundation/dulepolicy/labels/custom?{?limit,start,property}",
+            "templated": true
+        }
+    },
+    "children": [
+        {
+            "name": "L1",
+            "category": "Custom",
+            "friendlyName": "Banking Information",
+            "description": "Data containing banking information for a customer.",
+            "imsOrg": "{IMS_ORG}",
+            "sandboxName": "{SANDBOX_NAME}",
+            "created": 1594396718731,
+            "createdClient": "{CLIENT_ID}",
+            "createdUser": "{USER_ID}",
+            "updated": 1594396718731,
+            "updatedClient": "{CLIENT_ID}",
+            "updatedUser": "{USER_ID}",
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io:443/data/foundation/dulepolicy/labels/custom/L1"
+                }
+            }
+        },
+        {
+            "name": "L2",
+            "category": "Custom",
+            "friendlyName": "Purchase History Data",
+            "description": "Data containing information on past transactions",
+            "imsOrg": "{IMS_ORG}",
+            "sandboxName": "{SANDBOX_NAME}",
+            "created": 1594397415663,
+            "createdClient": "{CLIENT_ID}",
+            "createdUser": "{USER_ID}",
+            "updated": 1594397728708,
+            "updatedClient": "{CLIENT_ID}",
+            "updatedUser": "{USER_ID}",
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io:443/data/foundation/dulepolicy/labels/custom/L2"
+                }
+            }
+        }
+    ]
+}
+```
+
+## Look up a custom label
+
+You can look up a specific custom label by including that label's `name` property in the path of a GET request to the DULE Policy Service API.
+
+**API format**
+
+```http
+GET /labels/custom/{LABEL_NAME}
+```
+
+| Parameter | Description |
+| --- | --- |
+| `{LABEL_NAME}` | The `name` property of the custom label you want to look up. |
+
+**Request**
+
+The following request retrieves the custom label `L2`, as indicated in the path.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/dulepolicy/labels/custom/L2' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Response**
+
+A successful response returns the details of the custom label.
+
+```json
+{
+    "name": "L2",
+    "category": "Custom",
+    "friendlyName": "Purchase History Data",
+    "description": "Data containing information on past transactions",
+    "imsOrg": "{IMS_ORG}",
+    "sandboxName": "{SANDBOX_NAME}",
+    "created": 1594397415663,
+    "createdClient": "{CLIENT_ID}",
+    "createdUser": "{USER_ID}",
+    "updated": 1594397728708,
+    "updatedClient": "{CLIENT_ID}",
+    "updatedUser": "{USER_ID}",
+    "_links": {
+        "self": {
+            "href": "https://platform.adobe.io:443/data/foundation/dulepolicy/labels/custom/L2"
+        }
+    }
+}
+```
+
+## Create or update a custom label
+
+To create or update a custom label, you must make a PUT request to the DULE Policy Service API.
+
+**API format**
+
+```http
+PUT /labels/custom/{LABEL_NAME}
+```
+
+| Parameter | Description |
+| --- | --- |
+| `{LABEL_NAME}` | The `name` property of a custom label. If a custom label with this name does not exist, a new label will be created. If one does exist, that label will be updated. |
+
+**Request**
+
+The following request creates a new label, `L3`, which aims to describe data that contains information relating to customers' selected payment plans.
+
+```shell
+curl -X PUT \
+  'https://platform.adobe.io/data/foundation/dulepolicy/labels/custom/L3' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "name": "L3",
+        "category": "Custom",
+        "friendlyName": "Payment Plan",
+        "description": "Data containing information on selected payment plans."
+      }'
+```
+
+| Property | Description |
+| --- | --- |
+| `name` | A unique string identifier for the label. This value is used for lookup purposes and applying the label to datasets and fields, and thus it is recommended that it be short and concise. |
+| `category` | The category of the label. While you can create your own categories for custom labels, it is strongly recommended that you use `Custom` if you want the label to appear in the UI. |
+| `friendlyName` | A friendly name for the label, used for display purposes. |
+| `description` | (Optional) A description of the label to provide further context. |
+
+**Response**
+
+A successful response returns the details of custom label, with HTTP code 200 (OK) if an existing label was updated, or 201 (Created) if a new label was created.
+
+```json
+{
+  "name": "L3",
+  "category": "Custom",
+  "friendlyName": "Payment Plan",
+  "description": "Data containing information on selected payment plans.",
+  "imsOrg": "{IMS_ORG}",
+  "sandboxName": "{SANDBOX_NAME}",
+  "created": 1529696681413,
+  "createdClient": "{CLIENT_ID}",
+  "createdUser": "{USER_ID}",
+  "updated": 1529697651972,
+  "updatedClient": "{CLIENT_ID}",
+  "updatedUser": "{USER_ID}",
+  "_links": {
+    "self": {
+      "href": "https://platform.adobe.io:443/data/foundation/dulepolicy/labels/custom/L3"
+    }
+  }
+}
+```
+
 ## Next steps
 
-Now that you have added data usage labels at the dataset- and field-level, you can begin to ingest data into Experience Platform. To learn more, start by reading the [data ingestion documentation](../../ingestion/home.md).
+By reading this document, you have learned how to manage data usage labels using APIs.
+
+Once you have added data usage labels at the dataset- and field-level, you can begin to ingest data into Experience Platform. To learn more, start by reading the [data ingestion documentation](../../ingestion/home.md).
 
 You can also now define data usage policies based on the labels you have applied. For more information, see the [data usage policies overview](../policies/overview.md).
 
