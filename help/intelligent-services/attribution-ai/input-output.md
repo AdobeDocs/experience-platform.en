@@ -14,7 +14,7 @@ The following document outlines the different input and outputs utilized in [!DN
 >[!IMPORTANT]
 >
 > The minimum amount of data that is needed for Attribution AI to function is as follows:
-> - You need to provide at least need 3 months of data to run a good model.
+> - You need to provide at least 3 months of data to run a good model.
 > - You need at least 1000 conversions.
 
 [!DNL Attribution AI] uses [!DNL Consumer Experience Event] data to calculate algorithmic scores. For more details on [!DNL Consumer Experience Event], please refer to the [Prepare data for use in Intelligent Services documentation](../data-preparation.md).
