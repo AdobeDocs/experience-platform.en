@@ -28,10 +28,10 @@ Not all the columns in the [!DNL Consumer Experience Event] (CEE) schema are man
 | Mandatory columns | Needed for |
 | --- | --- |
 | Primary Identity Field | Touchpoint |
-| Timestamp	| Touchpoint |
-| Channel._type	| Touchpoint |
+| Timestamp | Touchpoint |
+| Channel._type | Touchpoint |
 | Channel.mediaAction | Touchpoint |
-| Channel.mediaType	| Touchpoint |
+| Channel.mediaType | Touchpoint |
 | Marketing.trackingCode | Touchpoint |
 | Marketing.campaignname | Touchpoint |
 | Marketing.campaigngroup | Touchpoint |
