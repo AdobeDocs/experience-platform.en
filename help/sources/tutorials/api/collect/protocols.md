@@ -56,6 +56,18 @@ Continue following the steps outlined in the developer guide until you have crea
 
 With an ad-hoc XDM schema created, a source connection can now be created using a POST request to the [!DNL Flow Service] API. A source connection consists of a connection ID, a source data file, and a reference to the schema that describes the source data.
 
+To create a source connection, you must also define an enum value for the data format attribute.
+
+Use the following the enum values for **file-based connectors**:
+
+| Data.format | Enum value |
+| ----------- | ---------- |
+| Delimited files | `delimited` |
+| JSON files | `json` |
+| Parquet files | `parquet` |
+
+For all **table-based connectors** use the enum value: `tabular`.
+
 **API format**
 
 ```http
@@ -77,7 +89,7 @@ curl -X POST \
         "baseConnectionId": "a5c6b647-e784-4b58-86b6-47e784ab580b",
         "description": "Protocols source connection to ingest Orders",
         "data": {
-            "format": "parquet_xdm",
+            "format": "tabular",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/9e800522521c1ed7d05d3782897f6bd78ee8c2302169bc19",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -268,17 +280,11 @@ A successful response returns an array containing the ID of the newly created da
 ]
 ```
 
-## Create a dataset base connection
-
-In order to ingest external data into [!DNL Platform], an [!DNL Experience Platform] dataset base connection must first be acquired.
-
-To create a dataset base connection, follow the steps outlined in the [dataset base connection tutorial](../create-dataset-base-connection.md).
-
-Continue following the steps outlined in the developer guide until you have created a dataset base connection. Obtain and store the unique identifier (`$id`) and proceed to use it as the connection ID in the next step to create a target connection.
-
 ## Create a target connection
 
-You now have with you the unique identifiers for a dataset base connection, a target schema, and a target dataset. You can now create a target connection using the [!DNL Flow Service] API to specify the dataset that will contain the inbound source data.
+A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection spec ID associated with data lake. This connection spec ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+
+You now have the unique identifiers a target schema a target dataset and the connection spec ID to data lake. Using these identifiers, you can create a target connection using the [!DNL Flow Service] API to specify the dataset that will contain the inbound source data.
 
 **API format**
 
@@ -297,7 +303,6 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "baseConnectionId": "a5c6b647-e784-4b58-86b6-47e784ab580b",
         "name": "Target Connection for protocols",
         "description": "Target Connection for protocols",
         "data": {
@@ -318,10 +323,9 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `baseConnectionId` | The ID of your dataset base connection. |
 | `data.schema.id` | The `$id` of the target XDM schema. |
 | `params.dataSetId` | The ID of the target dataset. |
-| `connectionSpec.id` | The connection specification ID for your protocols application. |
+| `connectionSpec.id` | The fixed connection spec ID to data lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Response**
 
@@ -571,6 +575,9 @@ The last step towards collecting data is to create a dataflow. At this point, yo
 
 A dataflow is responsible for scheduling and collecting data from a source. You can create a dataflow by performing a POST request while providing the previously mentioned values within the payload.
 
+To schedule an ingestion, you must first set the start time value to epoch time in seconds. Then, you must set the frequency value to one of the five options: `once`, `minute`, `hour`, `day`, or `week`. The interval value designates the period between two consecutive ingestions and creating a one-time ingestion does not require an interval to be set. For all other frequencies, the interval value must be set to equal or greater than `15`.
+
+
 **API format**
 
 ```http
@@ -626,13 +633,26 @@ curl -X POST \
     }'
 ```
 
+| Property | Description |
+| -------- | ----------- |
+| `flowSpec.id`| The dataflow specification ID associated with your third-party protocols source. |
+| `sourceConnectionIds`| The source connection ID associated with your third-party protocols source. |
+| `targetConnectionIds`| The target connection ID associated with your third-party protocols source. |
+| `transformations.params.deltaColum` | The designated column used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column. |
+| `transformations.params.mappingId`| The mapping ID associated with your third-party protocols source. |
+| `scheduleParams.startTime` | The start time for the dataflow in epoch time in seconds. |
+| `scheduleParams.frequency` | The selectable frequency values include: `once`, `minute`, `hour`, `day`, or `week`. |
+| `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer. Interval is not required when frequency is set as `once` and should be greater than or equal to `15` for other frequency values. |
+
+
 **Response**
 
 A successful response returns the ID `id` of the newly created dataflow.
 
 ```json
 {
-    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5",
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
 
