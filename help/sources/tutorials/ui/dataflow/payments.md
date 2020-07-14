@@ -86,13 +86,13 @@ Provide values for the schedule and click **[!UICONTROL Next]**.
 
 ![scheduling](../../../images/tutorials/dataflow/payments/scheduling.png)
 
-## Name your dataset flow
+## Name your dataflow
 
 The *[!UICONTROL Dataset flow detail]* step appears, where you must provide a name and an optional description for the dataset flow. Select **[!UICONTROL Next]** when finished.
 
 ![dataset-flow-details](../../../images/tutorials/dataflow/payments/dataset-flow-details.png)
 
-## Review your dataset flow
+## Review your dataflow
 
 The *[!UICONTROL Review]* step appears, allowing you to review your new dataflow before it is created. Details are grouped within the following categories:
 
@@ -104,9 +104,9 @@ Once you have reviewed your dataflow, click **[!UICONTROL Finish]** and allow so
 
 ![review](../../../images/tutorials/dataflow/payments/review.png)
 
-## Monitor your dataset flow
+## Monitor and delete your dataflow
 
-Once your dataset flow has been created, you can monitor the data that is being ingested through it. For more information on how to monitor your dataset flows, see the tutorial on [accounts and dataset flows](../monitor.md).
+Once your dataflow has been created, you can monitor the data that is being ingested through it. For more information on how to monitor and delete your dataflow, see the tutorial on [monitoring and deleting dataflows](../monitor.md).
 
 ## Next steps
 
