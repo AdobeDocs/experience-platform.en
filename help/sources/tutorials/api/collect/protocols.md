@@ -439,7 +439,6 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-
 **Response**
 
 A successful response returns the details of the dataflow specification that is responsible for bringing data from your protocols application into [!DNL Platform]. This ID is required in the next step to create a new dataflow.
@@ -643,7 +642,6 @@ curl -X POST \
 | `scheduleParams.startTime` | The start time for the dataflow in epoch time in seconds. |
 | `scheduleParams.frequency` | The selectable frequency values include: `once`, `minute`, `hour`, `day`, or `week`. |
 | `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer. Interval is not required when frequency is set as `once` and should be greater than or equal to `15` for other frequency values. |
-
 
 **Response**
 
