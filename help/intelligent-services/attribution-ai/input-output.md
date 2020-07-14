@@ -19,7 +19,7 @@ The following document outlines the different input and outputs utilized in [!DN
 
 [!DNL Attribution AI] uses [!DNL Consumer Experience Event] data to calculate algorithmic scores. For more details on [!DNL Consumer Experience Event], please refer to the [Prepare data for use in Intelligent Services documentation](../data-preparation.md).
 
-Not all the columns in [!DNL Consumer Experience Event] (CCE) schema are mandatory for Attribution AI. 
+Not all the columns in the [!DNL Consumer Experience Event] (CEE) schema are mandatory for Attribution AI. 
 
 >[!NOTE]
 >
@@ -37,7 +37,7 @@ Not all the columns in [!DNL Consumer Experience Event] (CCE) schema are mandato
 | Marketing.campaigngroup | Touchpoint |
 | Commerce | Conversion |
 
-The following columns are not required but it is recommended that you include them in your CCE schema if you have the information available.
+The following columns are not required but it is recommended that you include them in your CEE schema if you have the information available.
 
 | Additional recommended columns |
 | --- |
