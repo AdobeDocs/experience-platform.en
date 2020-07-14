@@ -9,7 +9,7 @@ seo-description: Activate profiles for your Facebook campaigns for audience targ
 
 ## Overview {#overview}
 
-[Google Customer Match](https://support.google.com/google-ads/answer/6379332?hl=en) lets you use your online and offline data to reach and re-engage with your customers across Search, Shopping, Gmail, YouTube, and Display.
+[Google Customer Match](https://support.google.com/google-ads/answer/6379332?hl=en) lets you use your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as: Search, Shopping, Gmail, YouTube, and Display.
 
 ![Google Customer Match destination in the Real-time CDP UI](/help/rtcdp/destinations/assets/google-customer-match-catalog.png)
 
@@ -41,11 +41,11 @@ Next, they can use their offline data including associated membership IDs and cu
 >
 >Data sent to Facebook should not include stitched identities. You are responsible for honoring this obligation and can do so by ensuring that segments selected for activation do not use a stitching option in their merge policy. Learn more about [merge policies](/help/profile/ui/merge-policies.md).
 
-### Activation Type {#activation-type}
+### Activation Type and Identities {#activation-type}
 
 **Segment Export** - you are exporting all members of a segment (audience) with the identifiers (name, phone number, etc.) used in the Google Customer Match destination.
 
-For Google Customer Match, in the activation workflow, you can use customer hashed emails or phone numbers as identifiers
+For Google Customer Match, in the activation workflow, you can use customer hashed emails or phone numbers, as well as mobile device IDs (GAID or IDFA) as identifiers
 
 ### Google Customer Match account prerequisites {#google-account-prerequisites}
 
@@ -55,6 +55,10 @@ Before you can send your audience segments to [!DNL Google Customer Match], plea
 
 
 ### Email and phone number hashing requirements {#hashing-requirements}
+
+>[!IMPORTANT]
+>
+> When using mobile device IDs as identifiers, an AppId must be provided in the activation flow. 
 
 Google requires that no personally identifiable information (PII) is sent in clear. Therefore, the audiences activated to Google Customer Match must be keyed off *hashed* email addresses or phone numbers. You can choose to hash email addresses before ingesting them into Adobe Experience Platform, or you can choose to work with email addresses in clear in Experience Platform and have our algorithm hash them on activation.
 
