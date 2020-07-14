@@ -31,6 +31,10 @@ Once a sandbox is selected, the screen refreshes with the selected sandbox now f
 
 ## Create a new sandbox
 
+Use the following video for a quick overview on how to use [!DNL Sandboxes] in [!DNL Experience Platform].
+
+>[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
+
 To create a new sandbox in the UI, click **Sandboxes** in the left-nav, then click **Create Sandbox**.
 
 ![](../images/ui/create-sandbox-button.png)
