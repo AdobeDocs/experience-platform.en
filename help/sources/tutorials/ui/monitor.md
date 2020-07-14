@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Monitor accounts and dataset flows
+title: Monitor and delete dataflows
 topic: overview
 ---
 
-# Monitor accounts and dataset flows
+# Monitor and delete dataflows
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for viewing existing accounts and dataset flows from the *[!UICONTROL Sources]* workspace.
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for viewing existing accounts and dataflows from the *[!UICONTROL Sources]* workspace. This tutorial also provides steps for deleting dataflows from the *[!UICONTROL Sources]* workspace.
 
 ## Getting started
 
@@ -20,15 +20,15 @@ This tutorial requires a working understanding of the following components of Ad
 
 ## Monitor accounts
 
-Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> and then select **[!UICONTROL Sources]** from the left navigation bar to access the *[!UICONTROL Sources]* workspace. The *[!UICONTROL Catalog]* screen displays a variety of sources for which you can create accounts dataset flows with. Each source shows the number of existing accounts and dataset flows associated to them.
+Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the *[!UICONTROL Sources]* workspace. The *[!UICONTROL Catalog]* screen displays a variety of sources for which you can create accounts and dataflows with. Each source shows the number of existing accounts and dataflows associated to them.
 
 Select *[!UICONTROL Accounts]* from the top header to view existing accounts.
 
 ![catalog](../../images/tutorials/monitor/catalog.png)
 
-The *[!UICONTROL Accounts]* pages appears. On this page is a list of viewable accounts, including information about their source, username, number of dataset flows, and date of creation.
+The *[!UICONTROL Accounts]* pages appears. On this page is a list of viewable accounts, including information about their source, username, number of dataflows, and date of creation.
 
-Select the icon on the top left to launch the sort window.
+Select the funnel icon on the top left to launch the sort window.
 
 ![accounts](../../images/tutorials/monitor/accounts-list.png)
 
@@ -36,33 +36,63 @@ The sorting panel allows you to access accounts from a specific source. Select t
 
 ![accounts-select](../../images/tutorials/monitor/accounts-sort.png)
 
-From the *[!UICONTROL Accounts]* page, you can view a list of existing dataset flows associated with the account you accessed. Select the dataset flow you wish to view.
+From the *[!UICONTROL Accounts]* page, you can view a list of existing dataflows associated with the account you accessed. Select the dataflow you wish to view.
 
-![accounts-page](../../images/tutorials/monitor/dataset-flows.png)
+![accounts-page](../../images/tutorials/monitor/dataflows.png)
 
- The *[!UICONTROL Dataset flow activity]* screen appears. This page displays the rate of messages being consumed in the form of a graph.
+ The *[!UICONTROL Dataflow activity]* screen appears. This page displays the rate of messages being consumed in the form of a graph.
 
- ![dataset-flow-activity](../../images/tutorials/monitor/dataset-flows-activity.png)
+ ![dataset-flow-activity](../../images/tutorials/monitor/dataflow-activity.png)
 
-## Monitor dataset flows
+## Monitor dataflows
 
-Dataset flows can be accessed directly from the *[!UICONTROL Catalog]* page without viewing *[!UICONTROL Accounts]*. Select *[!UICONTROL Dataset flows]* from the top header to view a list of existing dataset flows.
+Dataflows can be accessed directly from the *[!UICONTROL Catalog]* page without viewing *[!UICONTROL Accounts]*. Select *[!UICONTROL Dataflows]* from the top header to view a list of existing dataflows.
 
-![dataset-flows](../../images/tutorials/monitor/dataset-flows-list.png)
+![catalog-dataflows](../../images/tutorials/monitor/catalog-dataflows.png)
 
-Similar to accounts, you can sort the list of dataset flows using the sort icon on the top left. Select the source you wish to view and select the dataset flow from the list on the right.
+A list of existing dataflows appears. On this page is a list of viewable dataflows, including information about their source, username, number of dataflows, and status. Select the funnel icon on the top left to sort.
 
-![select-dataset-flows](../../images/tutorials/monitor/dataset-flows-sort.png)
+![dataflows-list](../../images/tutorials/monitor/dataflows-list.png)
 
-The *[!UICONTROL Dataset flow activity]* screen appears. This page displays the rate of messages being consumed in the form of a graph.
+The sorting panel appears. Select the source you wish to access from the scroll menu and select the dataflow from the list on the right.
 
-![dataset-flow-activity](../../images/tutorials/monitor/dataset-flows-activity.png)
+![sort-dataflows](../../images/tutorials/monitor/dataflows-sort.png)
 
-For more information on monitoring datasets and ingestion, refer to the tutorial on [monitoring streaming dataflows](../../../ingestion/quality/monitor-data-flows.md).
+The *[!UICONTROL Dataflow activity]* screen appears. This page displays the rate of messages being consumed in the form of a graph.
+
+![dataset-flow-activity](../../images/tutorials/monitor/dataflow-activity.png)
+
+For more information on monitoring dataflows and ingestion, refer to the tutorial on [monitoring streaming dataflows](../../../ingestion/quality/monitor-data-flows.md).
+
+## Delete a dataflow
+
+You can delete dataflows that were incorrectly created or are no longer necessary by accessing the dataflows screen. Locate the dataflow you wish to delete using the sorting funnel icon and select the dataflow to open the **[!UICONTROL Properties]** panel.
+
+To delete a dataflow, select **[!UICONTROL Delete]** from the properties on the top right.
+
+![delete-dataflows](../../images/tutorials/monitor/dataflows-sort-delete.png)
+
+A final confirmation message appears. Select **[!UICONTROL Delete]** to confirm.
+
+![confirm-delete](../../images/tutorials/monitor/confirm-delete.png)
+
+After a few moments, a green confirmation box appears on the bottom of the screen to confirm a successful deletion.
+
+![delete-successful](../../images/tutorials/monitor/deletion-confirmed.png)
+
+Alternatively, you can delete a dataflow from *[!UICONTROL Accounts]* screen. Locate the account you wish to access using the sorting funnel icon and select the account from the list.
+
+![accounts-select](../../images/tutorials/monitor/accounts-sort.png)
+
+The *[!UICONTROL Accounts]* page appears. Select the dataflow you intend to delete and then select **[!UICONTROL Delete]** from the properties panel to complete the process.
+
+![accounts-delete](../../images/tutorials/monitor/accounts-delete.png)
+
+Follow the confirmation steps outlined above to complete the process.
 
 ## Next steps
 
-By following this tutorial, you have successfully accessed existing accounts and dataset flows from the *[!UICONTROL Sources]* workspace. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have successfully accessed existing accounts and dataflows from the *[!UICONTROL Sources]* workspace. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
 - [Real-time Customer Profile overview](../../../profile/home.md)
 - [Data Science Workspace overview](../../../data-science-workspace/home.md)
