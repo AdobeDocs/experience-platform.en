@@ -77,21 +77,21 @@ The *[!UICONTROL Scheduling]* step appears, allowing you to configure an ingesti
 | Backfill | A boolean value that determines what data is initially ingested. If *Backfill* is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If *Backfill* is disabled, only the files that are loaded in between the first run of ingestion and the *Start time* will be ingested. Files loaded prior to *Start time* will not be ingested. |
 | Delta Column | An option with a filtered set of source schema fields of type, date, or time. This field is used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column. |
 
-Dataflows are designed to automatically ingest data on a scheduled basis. Select your choice of ingestion frequency and set the interval to designate between to two flow runs. The interval's value should be a non-zero integer and should be set to greater than or equal to 15.
+Dataflows are designed to automatically ingest data on a scheduled basis. Select your choice of ingestion frequency and set the interval to designate the period between two flow runs. The interval's value should be a non-zero integer and should be set to greater than or equal to 15.
 
 To set the start time for ingestion, adjust the date and time displayed in the start time box. Alternatively, you can select the calendar icon to edit the start time value. Start time must be greater than or equal to your current UTC time.
 
-Select **[!UICONTROL Load incremental data by]** to assign the delta column. This field provides a distinction beteween new and existing data.
+Select **[!UICONTROL Load incremental data by]** to assign the delta column. This field provides a distinction between new and existing data.
 
 ![](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
 
 ### Set up a one-time ingestion dataflow
 
-To set the ingestion frequency to once, select the frequency drop down arrow and select **[!UICONTROL Once]**. **[!UICONTROL Interval]** and **[!UICONTROL Backfill]** are not visible during a one-time ingestion.
+To set up one-time ingestion, select the frequency drop down arrow and select **[!UICONTROL Once]**. **[!UICONTROL Interval]** and **[!UICONTROL Backfill]** are not visible during a one-time ingestion.
 
 ![](../../../images/tutorials/dataflow/databases/schedule-once.png)
 
-Provide values for the schedule and select **[!UICONTROL Next]**.
+Once you have provided appropriate values to the schedule, select **[!UICONTROL Next]**.
 
 ## Name your dataflow
 
