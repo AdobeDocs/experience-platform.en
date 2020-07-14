@@ -11,6 +11,7 @@ user-guide-title: Intelligent Services Help
 * Attribution AI {#attribution-ai}
   * [Overview](attribution-ai/overview.md)
   * [Getting started with Attribution AI](attribution-ai/getting-started.md)
+  * [Input and Output](attribution-ai/input-output.md)
   * [User interface guide](attribution-ai/user-guide.md)
   * [Discovering insights](attribution-ai/discover-insights.md)
   * [Accessing scores](attribution-ai/download-scores.md)
