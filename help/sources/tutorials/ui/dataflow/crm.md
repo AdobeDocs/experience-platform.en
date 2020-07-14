@@ -7,7 +7,7 @@ topic: overview
 
 # Configure a dataflow for a CRM connector in the UI
 
-A dataflow is a scheduled task that retrieves and ingests data from a source to a [!DNL Platform] dataset. This tutorial provides steps to configure a new dataflow using your CRM base connector.
+A dataflow is a scheduled task that retrieves and ingests data from a source to a [!DNL Platform] dataset. This tutorial provides steps to configure a new dataflow using your CRM connector.
 
 ## Getting started
 
@@ -96,23 +96,9 @@ Once you have reviewed your dataflow, click **[!UICONTROL Finish]** and allow so
 
 ![review](../../../images/tutorials/dataflow/crm/review.png)
 
-## Monitor your dataflow
+## Monitor and delete your dataflow
 
-Once your dataflow has been created, you can monitor the data that is being ingested through it. Follow the steps below to access a dataflow's dataset monitor.
-
-Within the _Sources_ workspace, select the CRM source you wish to view under the *[!UICONTROL CRM]* category. Select *[!UICONTROL Connect Source]* to launch the authentication interface. To view an existing dataflow, select *Existing account* and select the account you wish to access.
-
-![monitor](../../../images/tutorials/dataflow/crm/monitor.png)
-
- The *[!UICONTROL Source activity]* screen appears. From here, click the name of a dataset whose activity you want to monitor.
-
- ![select-dataflow-dataset](../../../images/tutorials/dataflow/crm/select-dataflow-dataset.png)
-
- The *[!UICONTROL Dataset activity]* screen appears. This page displays the rate of messages being consumed in the form of a graph.
-
- ![dataset-activity](../../../images/tutorials/dataflow/crm/dataset-activity.png)
-
- For more information on monitoring datasets and ingestion, refer to the tutorial on [monitoring streaming dataflows](../../../../ingestion/quality/monitor-data-flows.md).
+Once your dataflow has been created, you can monitor the data that is being ingested through it. For more information on how to monitor and delete your dataflow, see the tutorial on [monitoring and deleting dataflows](../monitor.md).
 
 ## Next steps
 
