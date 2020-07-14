@@ -9,9 +9,9 @@ topic: developer guide
 
 This document provides steps on how to manage data usage labels at the dataset- and field-level using the Dataset Service API and [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml).
 
-The Dataset Service API allows you to programmatically manage usage labels for datasets. It is part of Adobe Experience Platform's data catalog capabilities, but is separate from the Catalog Service API which manages dataset metadata.
+The Dataset Service API allows you to apply and edit usage labels for datasets. It is part of Adobe Experience Platform's data catalog capabilities, but is separate from the Catalog Service API which manages dataset metadata.
 
-The DULE Policy Service API provides several endpoints that allow you to create and managed custom usage labels for your organization.
+The DULE Policy Service API provides several endpoints that allow you to create and manage data usage labels for your organization.
 
 ## Getting started
 

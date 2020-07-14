@@ -113,7 +113,7 @@ The dialog closes, and the newly created custom label appears in the list under 
 
 ![](../images/labels/label-created.png)
 
-The label can now be selected under *[!UICONTROL Custom Labels]* when editing usage labels for datasets and fields.
+The label can now be selected under *[!UICONTROL Custom Labels]* when editing usage labels for datasets and fields, or when creating data usage policies.
 
 <img src='../images/labels/add-custom-label.png' width=600/>
 
