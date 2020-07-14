@@ -78,19 +78,19 @@ The *[!UICONTROL Scheduling]* step appears, allowing you to configure an ingesti
 | Start time | A UTC timestamp for which the very first ingestion will occur. |
 | Backfill | A boolean value that determines what data is initially ingested. If *[!UICONTROL Backfill]* is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If *[!UICONTROL Backfill]* is disabled, only the files that are loaded in between the first run of ingestion and the *[!UICONTROL Start time]* will be ingested. Files loaded prior to *[!UICONTROL Start time]* will not be ingested. |
 
-Dataset flows are designed to automatically ingest data on a scheduled basis. If you wish to only ingest once through this workflow, you can do so by configuring the **[!UICONTROL Frequency]** to "Day" and applying a very large number for the **[!UICONTROL Interval]**, such as 10000 or similar.
+Dataflows are designed to automatically ingest data on a scheduled basis. If you wish to only ingest once through this workflow, you can do so by configuring the **[!UICONTROL Frequency]** to "Day" and applying a very large number for the **[!UICONTROL Interval]**, such as 10000 or similar.
 
 Provide values for the schedule and click **[!UICONTROL Next]**.
 
 ![scheduling](../../../images/tutorials/dataflow/protocols/scheduling.png)
 
-## Name your dataset flow
+## Name your dataflow
 
 The *[!UICONTROL Dataset flow detail]* step appears, where you must provide a name and an optional description for the dataset flow. Click **[!UICONTROL Next]** when finished.
 
 ![dataset-flow-details](../../../images/tutorials/dataflow/protocols/dataset-flow-details.png)
 
-## Review your dataset flow
+## Review your dataflow
 
 The *[!UICONTROL Review]* step appears, allowing you to review your new dataflow before it is created. Details are grouped within the following categories:
 
@@ -102,9 +102,9 @@ Once you have reviewed your dataflow, click **[!UICONTROL Finish]** and allow so
 
 ![review](../../../images/tutorials/dataflow/protocols/review.png)
 
-## Monitor your dataset flow
+## Monitor and delete your dataflow
 
-Once your dataset flow has been created, you can monitor the data that is being ingested through it. For more information on how to monitor your dataset flows, see the tutorial on [accounts and dataset flows](../monitor.md).
+Once your dataflow has been created, you can monitor the data that is being ingested through it. For more information on how to monitor and delete your dataflow, see the tutorial on [monitoring and deleting dataflows](../monitor.md).
 
 ## Next steps
 
