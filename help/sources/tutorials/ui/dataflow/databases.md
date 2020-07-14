@@ -101,9 +101,9 @@ Once you have reviewed your dataflow, click **[!UICONTROL Finish]** and allow so
 
 ![](../../../images/tutorials/dataflow/databases/review.png)
 
-## Monitor your dataflow
+## Monitor and delete your dataflow
 
-Once your dataflow has been created, you can monitor the data that is being ingested through it. For more information on how to monitor your dataflows, see the tutorial on [accounts and dataflows](../monitor.md).
+Once your dataflow has been created, you can monitor the data that is being ingested through it. For more information on how to monitor and delete your dataflow, see the tutorial on [monitoring and deleting dataflows](../monitor.md).
 
 ## Next steps
 
