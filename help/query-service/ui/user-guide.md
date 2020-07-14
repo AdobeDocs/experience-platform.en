@@ -109,6 +109,12 @@ After a query has completed, the results are displayed in the *Results* tab, nex
 
 ![Image](../images/queries/query-editor-overview/query-results.png)
 
+## Run queries with Query Service tutorial video
+
+The following video shows how to run queries in the Adobe Experience Platform interface and in a PSQL client. Additionally, using individual properties in an XDM object, using Adobe-defined functions, and using CREATE TABLE AS SELECT (CTAS) are demonstrated.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
+
 ## Next steps
 
 Now that you know what features are available in Query Editor and how to navigate the application, you can start authoring your own queries directly in Platform. For more information about running SQL queries against datasets in Data Lake, see the guide on [running queries][query-service-running-queries]. For sample SQL queries for working with Adobe Analytics and Adobe Target data, see the [sample queries reference][query-service-sample-queries].

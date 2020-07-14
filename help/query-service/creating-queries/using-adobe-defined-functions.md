@@ -234,3 +234,9 @@ LIMIT 10;
 
 ![Image](../images/queries/adobe-functions/create-breakdown-report.png)
 
+## Additional resources
+
+The following video shows how to run queries in the Adobe Experience Platform interface and in a PSQL client. Additionally, the video also uses examples involving individual properties in an XDM object, using Adobe-defined functions, and using CREATE TABLE AS SELECT (CTAS).
+
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
+
