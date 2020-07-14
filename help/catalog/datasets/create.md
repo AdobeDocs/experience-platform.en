@@ -35,7 +35,9 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+>[!NOTE]
+>
+>For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
@@ -203,7 +205,9 @@ curl -X POST \
 }'
 ```
 
->[!NOTE] This tutorial uses the [parquet](https://parquet.apache.org/documentation/latest/) file format for all its examples. An example that uses the JSON file format can be found in the [batch ingestion developer guide](../../ingestion/batch-ingestion/api-overview.md) 
+>[!NOTE]
+>
+>This tutorial uses the [parquet](https://parquet.apache.org/documentation/latest/) file format for all its examples. An example that uses the JSON file format can be found in the [batch ingestion developer guide](../../ingestion/batch-ingestion/api-overview.md) 
 
 **Response**
 
@@ -285,7 +289,9 @@ A successful response returns HTTP Status 201 (Created) and a response object co
 
 After successfully creating a new batch for uploading, you can now upload files to the specific dataset. It is important to remember that when you defined the dataset, you specified the file format as parquet. Therefore, the files you upload must be in that format.
 
->[!NOTE] The largest data upload file supported is 512 MB. If your data file is larger than this, it needs to be broken into chunks no larger than 512 MB, to be uploaded one at a time. You can upload each file in the same batch by repeating this step for each file, using the same batch ID. There is no limit to the number if files you can upload as part of a batch.
+>[!NOTE]
+>
+>The largest data upload file supported is 512 MB. If your data file is larger than this, it needs to be broken into chunks no larger than 512 MB, to be uploaded one at a time. You can upload each file in the same batch by repeating this step for each file, using the same batch ID. There is no limit to the number if files you can upload as part of a batch.
 
 **API format**
 
@@ -442,7 +448,9 @@ A negative response returns an object with the value of `"failed"` in its `"stat
 }
 ```
 
->[!NOTE] A recommended polling interval is two minutes.
+>[!NOTE]
+>
+>A recommended polling interval is two minutes.
 
 ## Read data from the dataset
 

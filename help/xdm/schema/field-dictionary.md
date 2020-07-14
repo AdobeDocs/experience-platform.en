@@ -16,7 +16,9 @@ The table below includes the field name (not all XDM fields are namespaced using
 
 You can use the search functionality in the Schema Editor to view details of these resources, as shown in the [Schema Editor tutorial](../tutorials/create-schema-ui.md).
 
->[!NOTE] If a field is marked "**DEPRECATED**", it means that it should no longer be used in new implementations. The field continues to be available for backwards compatibility, but will no longer be supported in future releases.
+>[!NOTE]
+>
+>If a field is marked "**DEPRECATED**", it means that it should no longer be used in new implementations. The field continues to be available for backwards compatibility, but will no longer be supported in future releases.
 
 |Field Name|Title|Description|Type|Format|XDM Type|Included In|
 |----------|----|------|--------|-----|-----------|--------------|

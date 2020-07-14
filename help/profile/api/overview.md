@@ -15,7 +15,9 @@ To view all available endpoints and CRUD operations, please refer to the [Real-t
 
 ## (Alpha) Computed attributes
 
->[!IMPORTANT] 
+>[!IMPORTANT]
+>
+>
 >Computed attribute functionality is in alpha and is not available to all users. Documentation and functionality are subject to change.
 
 Computed attributes enable you to automatically compute the value of fields based on other values, calculations, and expressions. Computed attributes operate on the profile level, meaning you can aggregate values across all records and events. Each computed attribute contains an expression, or "rule", that evaluates incoming data and stores the resulting value in a profile attribute or into an event. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. You can create, view, edit, and delete computed attributes using the `config/computedAttributes` endpoint. To learn how to use this endpoint, visit the [computed attributes endpoint guide](computed-attributes.md).
@@ -24,7 +26,7 @@ Computed attributes enable you to automatically compute the value of fields base
 
 Adobe Experience Platform enables real-time personalization of customer experiences by making data easily accessible on strategically located servers called "edges." The Real-time Customer Profile API provides endpoints for working with edges through components called "projections." This includes projection configurations to determine what data should be projected to each edge, as well as projection destinations to define where to route a projection. For detailed information on working with edge projections, please visit the [projection configurations and destinations endpoints guide](edge-projections.md).
 
-## Entities
+## Entities (Profile access) {#entities}
 
 Through Adobe Experience Platform you can access Real-time Customer Profile data using RESTful APIs or the user interface. To learn how to access entities, more commonly known as "profiles", using the API, follow the steps outlined in the [entities endpoint guide](entities.md). To access profiles using the Platform UI, refer to the [Profile user guide](../ui/user-guide.md).
 

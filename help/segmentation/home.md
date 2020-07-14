@@ -33,7 +33,9 @@ To learn how to create and use segments in the Segment Builder (the UI implement
 
 For information on building segment definitions using the API, see the tutorial on [creating audience segments using the API](./tutorials/create-a-segment.md).
 
->[!NOTE] In the event a schema is extended, all future uploads must update newly added fields accordingly. For more information on customizing Experience Data Model (XDM), visit the [Schema Editor tutorial](../xdm/tutorials/create-schema-ui.md).
+>[!NOTE]
+>
+>In the event a schema is extended, all future uploads must update newly added fields accordingly. For more information on customizing Experience Data Model (XDM), visit the [Schema Editor tutorial](../xdm/tutorials/create-schema-ui.md).
 
 ## Evaluate segments
 
@@ -63,14 +65,18 @@ Composing your segments (through either the API or Segment Builder) requires tha
 
 When creating a new segment, you are required to provide a segment name. The segment name is used to identify a particular segment amongst the collection built by Segmentation Service. Segment names should therefore be descriptive, concise, and unique.
 
->[!NOTE] When planning a segment, remember that segments can be referenced from, and combined with, any other segment. When selecting a name, consider the possibility that your segment may contain reusable portions.
+>[!NOTE]
+>
+>When planning a segment, remember that segments can be referenced from, and combined with, any other segment. When selecting a name, consider the possibility that your segment may contain reusable portions.
 
 ### Merge policies
 
 Merge policies are rules used by Profile to determine how data will be prioritized and combined into a unified view under certain conditions. 
 If a merge policy is not defined, the default Platform merge policy is used. If you would rather use a merge policy specific to your organization, you can create your own and mark it as your organization's default.
 
->[!NOTE] Estimation of audience sizes is based on the organization's default profile merge policy.
+>[!NOTE]
+>
+>Estimation of audience sizes is based on the organization's default profile merge policy.
 
 ### Other segment metadata
 
@@ -117,6 +123,10 @@ With the advanced multi-entity segmentation feature, you can create segments usi
 
 Multi-entity segmentation provides the flexibility needed to identify audiences based on data relevant to your business needs. This process can be done quickly and easily without requiring expertise in querying databases. This enables you to add key data to your segments without having to make costly changes to data streams or wait for a back-end data merge. 
 
+The following video is intended to support your understanding of multi-entity segmentation, and outlines both multi-entity segmentation and segment context (segment payload).
+
+>[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
+
 ### Use case: Price driven promotion
 
 To illustrate the value of this advanced segmentation feature, consider a data architect collaborating with a marketer. 
@@ -131,7 +141,9 @@ The data architect's resources include access to web data from customer browsing
 
 **The solution**
 
->[!NOTE] We will assume in this example that the data architect has already established an ID Namespace.
+>[!NOTE]
+>
+>We will assume in this example that the data architect has already established an ID Namespace.
 
 Using the API, the data architect relates the key from the ExperienceEvent schema with the "products" class. Doing so allows the data architect to make use of the additional fields from the "products" class as if they are native to the ExperienceEvent schema. As the final step of the configuration work, the data architect needs to bring the appropriate data into Real-time Customer Profile. This is done by enabling the "products" dataset for use with Profile. With the configuration work complete, either the data architect or the marketer can build the target segment in Segment Builder.
 

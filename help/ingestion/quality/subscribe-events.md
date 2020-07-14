@@ -17,7 +17,9 @@ To assist in monitoring the ingestion process, Experience Platform makes it poss
 
 Below is a list of available data ingestion status notifications that you can subscribe to. 
 
->[!NOTE] There is only one event topic provided for all data ingestion notifications. In order to distinguish between different statuses, the event code can be used.
+>[!NOTE]
+>
+>There is only one event topic provided for all data ingestion notifications. In order to distinguish between different statuses, the event code can be used.
 
 | Platform Service | Status | Event description | Event code |
 | ---------------- | ------ | ----------------- | ---------- |
