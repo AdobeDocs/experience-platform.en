@@ -54,6 +54,14 @@ You customers may interact with your brand through a combination of online and o
 
 [!DNL Experience Platform] addresses this challenge through two concepts: [identity namespaces](#identity-namespaces) and [identity graphs](#identity-graphs).
 
+The following video is intended to support your understanding of identities and identity graphs. The following video covers the three capabilities of Identity Collection, Identity Graphs, and the APIs. It also describes how deterministic and probabilistic algorithms are used to construct private identity graphs, and discusses the role of private identity graphs, Adobe Experience Platform Identity Service Co-Op Graph, and third-party graphs.
+
+>[!IMPORTANT]
+>
+> Probabilistic private graphs is still in development and set to release at a later date.
+
+>[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
+
 ### Identity namespaces
 
 When your customer is interacting with your brand across multiple channels including web, mobile application, call center, or a storefront it can be difficult to understand and serve them if you cannot observe and track their activity across channels.
@@ -115,6 +123,14 @@ During the streaming ingestion process, [!DNL Identity Service ]automatically ex
 ### Ingest data to [!DNL Identity Service]
 
 [!DNL Identity Service] consumes XDM compliant data sent to [!DNL Experience Platform] either by [batch ingestion](../ingestion/batch-ingestion/overview.md) or [streaming ingestion](../ingestion/streaming-ingestion/overview.md).
+
+The following video is intended to support your understanding of Identity Service. This video shows you how to label data fields as identities, ingest Identity data and then verify that the data has made it to the Adobe Experience Platform Identity Service Private Graph. 
+
+>[!WARNING]
+>
+> The [!DNL Platform] UI shown in the following video is out-of-date. Please refer to the documentation for the latest UI screenshots and functionality.
+
+>[!VIDEO](https://video.tv.adobe.com/v/28167?quality=12&learn=on)
 
 ## Data governance
 
