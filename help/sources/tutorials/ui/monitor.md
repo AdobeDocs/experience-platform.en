@@ -46,7 +46,7 @@ From the *[!UICONTROL Accounts]* page, you can view a list of existing dataflows
 
 ## Monitor dataflows
 
-Dataflows can be accessed directly from the *[!UICONTROL Catalog]* page without viewing *[!UICONTROL Accounts]*. Select *[!UICONTROL Dataflows]* from the top header to view a list of existing dataset flows.
+Dataflows can be accessed directly from the *[!UICONTROL Catalog]* page without viewing *[!UICONTROL Accounts]*. Select *[!UICONTROL Dataflows]* from the top header to view a list of existing dataflows.
 
 ![catalog-dataflows](../../images/tutorials/monitor/catalog-dataflows.png)
 
