@@ -36,4 +36,5 @@ user-guide-title:  Adobe Experience Platform Edge Network Help
 * Reference {#ref}
   * [Automatically Collected Information](reference/automatic-information.md)
   * [Retrieving Library Information](reference/retrieving-library-information.md)
+* [Release notes](release-notes.md)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
