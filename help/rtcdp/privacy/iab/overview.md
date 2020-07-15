@@ -86,9 +86,9 @@ In the TCF specification, consent strings are used to encode relevant details ab
 
 Consent strings may only be created by a CMP that is registered with the IAB TCF. For more information on how to generate consent strings using your particular CMP, refer to the [consent string formatting guide](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/IAB%20Tech%20Lab%20-%20Consent%20string%20and%20vendor%20list%20formats%20v2.md) in the IAB TCF GitHub repo.
 
-## Create a [!DNL Profile]-enabled dataset with IAB consent fields {#dataset}
+## Create datasets with IAB consent fields {#datasets}
 
-Customer consent data must be sent to a [!DNL Profile]-enabled dataset whose schema contains IAB consent fields. Refer to the tutorial on [creating datasets for capturing TCF 2.0 consent](./dataset-preparation.md) for how to create the required dataset before continuing with this guide.
+Customer consent data must be sent to a datasets whose schema contains IAB consent fields. Refer to the tutorial on [creating datasets for capturing TCF 2.0 consent](./dataset-preparation.md) for how to create the two required datasets before continuing with this guide.
 
 ## Update [!DNL Profile] merge policies to include consent data {#merge-policies}
 
@@ -107,6 +107,18 @@ For more information on how to work with merge policies, refer to the [merge pol
 Once you have configured your CMP to generate consent strings, you must integrate the [!DNL Experience Platform] Web SDK to collect those strings and send them to [!DNL Platform]. The [!DNL Platform] SDK provides two commands that can be used to send IAB consent data to Platform (explained in the subsections below), and should be used when a customer provides consent information for the first time, and anytime that consent changes thereafter.
 
 **The SDK does not interface with any CMPs out of the box**. It is up to you to determine how to integrate the SDK into your website, listen for consent changes in the CMP, and call the appropriate command. 
+
+### Create a new edge configuration
+
+In order for the SDK to send data to [!DNL Platform], you must create a new edge configuration for in [!DNL Experience Platform Launch]. Specific steps for how to create a new configuration are provided in the [SDK documentation](../../../edge/fundamentals/edge-configuration.md).
+
+After providing a unique name for the configuration, select the toggle button next to *[!UICONTROL Adobe Experience Platform]*. Next, use the following values to complete the rest of the form:
+
+| Config field | Value |
+| --- | --- |
+| [!UICONTROL Streaming inlet] | A valid streaming connection for [!DNL Experience Platform]. See the tutorial on [creating a streaming connection](../../../ingestion/tutorials/create-streaming-connection-ui.md) if you do not have an existing streaming inlet. |
+| [!UICONTROL Event dataset] | Select the [!DNL XDM ExperienceEvent] dataset created in the [previous step](#datasets). |
+| [!UICONTROL Profile dataset] | Select the [!DNL XDM Individual Profile] dataset created in the [previous step](#datasets). |
 
 ### Making consent-change commands
 
