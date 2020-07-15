@@ -12,7 +12,7 @@ Adobe Experience Platform Privacy Service provides a RESTful API and user interf
 
 This guide covers how to use the Privacy Service API. For details on how to use the UI, see the [Privacy Service UI overview](../ui/overview.md). For a comprehensive list of all available endpoints in the Privacy Service API, please see the [API reference](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html).
 
-## Getting started
+## Getting started {#getting-started}
 
 This guide requires a working understanding the following Experience Platform features:
 

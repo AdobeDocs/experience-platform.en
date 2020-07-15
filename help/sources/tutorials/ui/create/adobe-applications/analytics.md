@@ -88,7 +88,7 @@ For more information on how to label data coming from Analytics, visit the [data
 
 ![](../../../../images/tutorials/create/analytics/labels.png)
 
-## Next steps
+## Next steps and additional resources
 
 Once the connection is created, a target schema and dataset flow is automatically created to contain the incoming data. Furthermore, data back-filling occurs and ingests up to 13 months of historical data. When the initial ingestion completes, Analytics data and be used by downstream Platform services such as Real-time Customer Profile and Segmentation Service. See the following documents for more details:
 
@@ -96,3 +96,12 @@ Once the connection is created, a target schema and dataset flow is automaticall
 *   [Segmentation Service overview](../../../../../segmentation/home.md)
 *   [Data Science Workspace overview](../../../../../data-science-workspace/home.md)
 *   [Query Service overview](../../../../../query-service/home.md)
+
+The following video is intended to support your understanding of ingesting data using the Adobe Analytics Source connector:
+
+>[!WARNING]
+>
+> The [!DNL Platform] UI shown in the following video is out-of-date. Please refer to the documentation above for the latest UI screenshots and functionality.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
+
