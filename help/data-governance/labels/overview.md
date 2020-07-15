@@ -17,7 +17,9 @@ Data usage labels allow you to categorize datasets and fields according to usage
 
 Data usage labels that are applied at the dataset level are propagated to all fields within the dataset. Labels can also be applied directly to individual fields (column headers) in a dataset, without propagation.
 
-For more information on available data usage labels in [!DNL Experience Platform] and the usage policies they represent, see the guide on [supported data usage labels](reference.md).
+[!DNL Platform] provides several "core" data usage labels out-of-the-box, which cover a wide variety of common restrictions applicable to data governance. For more information on these labels and the usage policies they represent, see the guide on [core data usage labels](reference.md).
+
+In addition to the labels provided by Adobe, you can also define your own custom labels. For steps on how to do this in the UI, see the [data usage labels user guide](./user-guide.md). For steps on how to perform this using API calls, refer to the [data usage labels API guide](./api.md).
 
 ## Label inheritance for audience segments
 
@@ -27,14 +29,13 @@ In addition to inheriting dataset-level labels, segments inherit all field-level
 
 For more information on how automatic enforcement works in Real-time CDP, see the [Adobe Real-time CDP Data Governance overview](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance).
 
-<!-- (Add after DEC mapping reference is added to AAM docs to link out to)
 ### Inheritance from Adobe Audience Manager Data Export Controls
 
 Experience Platform has the ability to share segments with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager segments are translated to equivalent labels and marketing actions recognized by Experience Platform Data Governance.
 
-For a reference on how specific Data Export Controls map to data usage labels in Platform, please refer to the [Audience Manager documentation](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/data-export-controls.html).
--->
+For a reference on how specific Data Export Controls map to data usage labels in Platform, please refer to the [Audience Manager documentation](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
+
 
 ## Next steps
 
-Now that you have been introduced data usage labels, you can continue to the read the [user guide](user-guide.md) to learn how to manage labels in the [!DNL Experience Platform] UI. For steps on how to manage labels using APIs, see the appropriate section in the [Catalog Service developer guide](../../catalog/api/labels.md).
+Now that you have been introduced data usage labels, you can continue to the read the [user guide](user-guide.md) to learn how to manage labels in the [!DNL Experience Platform] UI. For steps on how to manage labels using APIs, see the [usage labels API guide](./api.md).
