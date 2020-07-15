@@ -7,17 +7,17 @@ topic: developer guide
 
 # Manage data usage labels using APIs
 
-This document provides steps on how to manage data usage labels using the Policy Service API and Dataset Service API.
+This document provides steps on how to manage data usage labels using the [!DNL Policy Service] API and [!DNL Dataset Service] API.
 
-The [Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) provides several endpoints that allow you to create and manage data usage labels for your organization.
+The [!DNL Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) provides several endpoints that allow you to create and manage data usage labels for your organization.
 
-The Dataset Service API allows you to apply and edit usage labels for datasets. It is part of Adobe Experience Platform's data catalog capabilities, but is separate from the Catalog Service API which manages dataset metadata.
+The [!DNL Dataset Service] API allows you to apply and edit usage labels for datasets. It is part of Adobe Experience Platform's data catalog capabilities, but is separate from the [!DNL Catalog Service] API which manages dataset metadata.
 
 ## Getting started
 
 Before you read this guide, follow the steps outlined in the [getting started section](../../catalog/api/getting-started.md) in the Catalog developer guide to gather the required credentials to make calls to [!DNL Platform] APIs.
 
-In order to make calls to the Dataset Service endpoints outlined in this document, you must have the unique `id` value for a specific dataset. If you do not have this value, see the guide on [listing Catalog objects](../../catalog/api/list-objects.md) to find the IDs of your existing datasets.
+In order to make calls to the [!DNL Dataset Service] endpoints outlined in this document, you must have the unique `id` value for a specific dataset. If you do not have this value, see the guide on [listing Catalog objects](../../catalog/api/list-objects.md) to find the IDs of your existing datasets.
 
 ## List all labels {#list-labels}
 
@@ -103,7 +103,7 @@ A successful response returns a list of custom labels retrieved from the system.
 
 ## Look up a label {#look-up-label}
 
-You can look up a specific label by including that label's `name` property in the path of a GET request to the Policy Service API.
+You can look up a specific label by including that label's `name` property in the path of a GET request to the [!DNL Policy Service] API.
 
 **API format**
 
@@ -157,7 +157,7 @@ A successful response returns the details of the custom label.
 
 ## Create or update a custom label {#create-update-label}
 
-To create or update a custom label, you must make a PUT request to the Policy Service API.
+To create or update a custom label, you must make a PUT request to the [!DNL Policy Service] API.
 
 **API format**
 
@@ -223,7 +223,7 @@ A successful response returns the details of custom label, with HTTP code 200 (O
 
 ## Look up labels for a dataset {#look-up-dataset-labels}
 
-You can look up the data usage labels that have been applied to an existing dataset by making a GET request to the Dataset Service API.
+You can look up the data usage labels that have been applied to an existing dataset by making a GET request to the [!DNL Dataset Service] API.
 
 **API format**
 
@@ -276,7 +276,7 @@ A successful response returns the data usage labels that have been applied to th
 
 ## Apply labels to a dataset {#apply-dataset-labels}
 
-You can create a set of labels for a dataset by providing them in the payload of a POST or PUT request to the Dataset Service API. Using either of these methods overwrites any existing labels and replaces them with those provided in the payload.
+You can create a set of labels for a dataset by providing them in the payload of a POST or PUT request to the [!DNL Dataset Service] API. Using either of these methods overwrites any existing labels and replaces them with those provided in the payload.
 
 **API format**
 
@@ -319,7 +319,7 @@ curl -X POST \
 | Property | Description |
 | --- | --- |
 | `labels` | A list of data usage labels that you want to add to the dataset. |
-| `optionalLabels` | A list of any individual fields within the dataset that you want to add labels to. Each item in this array must have the following properties: <br/><br/>`option`: An object that contains the Experience Data Model (XDM) attributes of the field. The following three properties are required:<ul><li><code>id</code>: The URI <code>$id</code> value of the schema associated with the field.</li><li><code>contentType</code>: The content type and version number of the schema. This should take the form of one of the valid <a href="../../xdm/api/look-up-resource.md">Accept headers</a> for an XDM lookup request.</li><li><code>schemaPath</code>: The path to the field within the dataset's schema.</li></ul>`labels`: A list of data usage labels that you want to add to the field. |
+| `optionalLabels` | A list of any individual fields within the dataset that you want to add labels to. Each item in this array must have the following properties: <br/><br/>`option`: An object that contains the [!DNL Experience Data Model] (XDM) attributes of the field. The following three properties are required:<ul><li><code>id</code>: The URI <code>$id</code> value of the schema associated with the field.</li><li><code>contentType</code>: The content type and version number of the schema. This should take the form of one of the valid <a href="../../xdm/api/look-up-resource.md">Accept headers</a> for an XDM lookup request.</li><li><code>schemaPath</code>: The path to the field within the dataset's schema.</li></ul>`labels`: A list of data usage labels that you want to add to the field. |
 
 **Response**
 
@@ -343,7 +343,7 @@ A successful response returns the labels that have been added to the dataset.
 
 ## Remove labels from a dataset {#remove-dataset-labels}
 
-You can remove the labels applied to a dataset by making a DELETE request to the Dataset Service API.
+You can remove the labels applied to a dataset by making a DELETE request to the [!DNL Dataset Service] API.
 
 **API format**
 
@@ -374,7 +374,7 @@ A successful response HTTP status 200 (OK), indicating that the labels have been
 
 By reading this document, you have learned how to manage data usage labels using APIs.
 
-Once you have added data usage labels at the dataset- and field-level, you can begin to ingest data into Experience Platform. To learn more, start by reading the [data ingestion documentation](../../ingestion/home.md).
+Once you have added data usage labels at the dataset- and field-level, you can begin to ingest data into [!DNL Experience Platform]. To learn more, start by reading the [data ingestion documentation](../../ingestion/home.md).
 
 You can also now define data usage policies based on the labels you have applied. For more information, see the [data usage policies overview](../policies/overview.md).
 
