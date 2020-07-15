@@ -85,7 +85,6 @@ Data Governance currently supports DULE labeling at two levels (dataset and fiel
 
 Subsequent releases will provide the following features:
 
-* Custom data usage labels: Create new labels and definitions based on your organization’s needs.
 * Policy enforcement: Use the policy framework to advise and enforce policies across different data access patterns.
 * Auditing: Monitor data access activities and identify and report on compliance issues.
 
