@@ -13,7 +13,7 @@ author: crhoades, ens25212
 Updates to existing features in Adobe Experience Platform:
 
 <!-- - [Data Governance](#governance) -->
-- [Real-time Customer Profile](#profile)
+<!-- - [Real-time Customer Profile](#profile) -->
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
 
