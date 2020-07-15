@@ -21,7 +21,7 @@ Edge configuration IDs can be created in Adobe [!DNL Launch] using the edge conf
 >
 >The edge configuration tool is available to customers on the allow list regardless whether they use [!DNL Launch] as a tag manager. Additionally, users require Develop permissions in [!DNL Launch]. See the [User Permissions](https://docs.adobe.com/content/help/en/launch/using/reference/admin/user-permissions.html) article in the [!DNL Launch] documentation for more details.
 
-You can create an edge configuration by clicking on **[UICONTROL New Edge Configuration]** in the top right area of the screen. After you provide a name and a description, you are asked for the default settings for each environment.
+You can create an edge configuration by clicking on **[!UICONTROL New Edge Configuration]** in the top right area of the screen. After you provide a name and a description, you are asked for the default settings for each environment.
 
 ### Default Environment Settings
 
