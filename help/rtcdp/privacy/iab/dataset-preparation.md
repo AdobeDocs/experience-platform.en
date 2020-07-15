@@ -23,7 +23,7 @@ This tutorial requires a working understanding of the following components of Ad
 * [Experience Data Model (XDM)](../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     * [Basics of schema composition](../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas.
     * [Create a schema in the UI](../../../xdm/tutorials/create-schema-ui.md): A tutorial covering the basics of working with the Schema Editor.
-* [Identity Service](../../../identity-service/home.md): Bridges customer identities from disparate data sources across devices and systems.
+* [Adobe Experience Platform Identity Service](../../../identity-service/home.md): Bridges customer identities from disparate data sources across devices and systems.
 * [Real-time Customer Profile](../../../profile/home.md): Leverages [!DNL Identity Service] to create detailed customer profiles from your datasets in real-time. [!DNL Real-time Customer Profile] pulls data from the Data Lake and persists customer profiles in its own separate data store.
 
 ## Consent schema structure {#structure}
@@ -66,7 +66,9 @@ While each privacy mixin varies in structure and the types of fields they contai
 
 In the Platform UI, click **[!UICONTROL Schemas]** in the left navigation to open the *[!UICONTROL Schemas] workspace*. From here, follow the steps in the sections below to create each required schema.
 
->[!NOTE] If you have existing XDM schemas that you want to use to capture consent data instead, you can edit those schemas instead of creating new ones. However, when editing existing schemas, it is important to follow the [principles of schema evolution](../../../xdm/schema/composition.md#evolution) to avoid breaking changes.
+>[!NOTE]
+>
+>If you have existing XDM schemas that you want to use to capture consent data instead, you can edit those schemas instead of creating new ones. However, when editing existing schemas, it is important to follow the [principles of schema evolution](../../../xdm/schema/composition.md#evolution) to avoid breaking changes.
 
 ### Create a record-based consent schema {#profile-schema}
 
@@ -96,6 +98,12 @@ If you are editing an existing schema that has already been enabled for use in [
 #### Enable the schema for use in [!DNL Real-time Customer Profile]
 
 In order for [!DNL Real-time CDP] to associate the consent data it receives to specific customer profiles, the consent schema must be enabled for use in [!DNL Real-time Customer Profile].
+
+>[!NOTE]
+>
+>The example schema shown in this section uses its `identityMap` field as its primary identity. If you wish to set another field as a primary identity, ensure that you are not using any field that are restricted from use by TCF 2.0, such as `email`. Consult your legal council if you are unsure which fields are restricted.
+>
+>Steps on how to set a primary identity field for a schema can be found in the [schema creation tutorial](../../../xdm/tutorials/create-schema-ui.md#identity-field). If you require further guidance on how to configure a primary identity, review the [!DNL Identity Service] documentation. In particular, the overview on [identity namespaces](../../../identity-service/namespaces.md) provides important information on different accepted identity types.
 
 To enable the schema for [!DNL Profile], click the schema's name in the left-hand rail to open the *[!UICONTROL Schema properties]* dialog in the right-hand rail. From here, click the **[!UICONTROL Profile]** toggle button.
 
