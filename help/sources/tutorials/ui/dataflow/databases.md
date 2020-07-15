@@ -73,7 +73,7 @@ The *[!UICONTROL Scheduling]* step appears, allowing you to configure an ingesti
 | --- | --- |
 | Frequency | Selectable frequencies include Minute, Hour, Day, and Week. |
 | Interval | An integer that sets the interval for the selected frequency. |
-| Start time | A UTC timestamp for which the very first ingestion will occur. |
+| Start time | A UTC timestamp for which the very first ingestion will occur. The start time value must be set in epoch time in seconds. |
 | Backfill | A boolean value that determines what data is initially ingested. If *Backfill* is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If *Backfill* is disabled, only the files that are loaded in between the first run of ingestion and the *Start time* will be ingested. Files loaded prior to *Start time* will not be ingested. |
 | Delta Column | An option with a filtered set of source schema fields of type, date, or time. This field is used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column. |
 
