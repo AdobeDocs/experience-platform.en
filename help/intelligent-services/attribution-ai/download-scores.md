@@ -216,7 +216,9 @@ Copy the `href` value for any file object in the `data` array, then proceed to t
 
 To download your file data, make a GET request to the `"href"` value you copied in the previous step [retrieving your files](#retrieving-your-files).
 
->[!NOTE] If you are making this request directly in command line, you might be prompted to add an output after your request headers. The following request example uses `--output {FILENAME.FILETYPE}`.
+>[!NOTE]
+>
+>If you are making this request directly in command line, you might be prompted to add an output after your request headers. The following request example uses `--output {FILENAME.FILETYPE}`.
 
 **API format**
 
@@ -240,7 +242,9 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
   -O 'file.parquet'
 ```
 
->[!TIP] Make sure you are in the correct directory or folder you want your file saved to before you make the GET request.
+>[!TIP]
+>
+>Make sure you are in the correct directory or folder you want your file saved to before you make the GET request.
 
 **Response**
 
@@ -254,7 +258,9 @@ This document outlined the steps required for downloading Attribution AI scores.
 
 ## Accessing scores using Snowflake
 
->[!IMPORTANT] Please contact attributionai-support@adobe.com for more details on accessing scores using SnowFlake.
+>[!IMPORTANT]
+>
+>Please contact attributionai-support@adobe.com for more details on accessing scores using SnowFlake.
 
 You can access aggregated Attribution AI scores through Snowflake. Currently, you need to email Adobe support at attributionai-support@adobe.com in order to set up and receive the credentials to your reader account for Snowflake. 
 
@@ -264,7 +270,9 @@ Once Adobe support has processed your request, you are provided a URL for the re
 - Username
 - Password
 
->[!NOTE] The reader account is for querying the data using sql clients, worksheet, and BI solutions which supports JDBC connector.
+>[!NOTE]
+>
+>The reader account is for querying the data using sql clients, worksheet, and BI solutions which supports JDBC connector.
 
 Once you have your credentials and URL, you can query the model tables, aggregated by touchpoint date, or conversion date.
 

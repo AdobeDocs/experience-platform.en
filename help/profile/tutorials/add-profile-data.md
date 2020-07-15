@@ -31,4 +31,4 @@ When uploading data to a new dataset for the first time, or as part of a process
 
 Using the Real-time Customer Profile Access API, you can retrieve batch data as it gets loaded into a dataset. If you are unable to retrieve any of the entities you expect, your dataset may not be enabled for Profile. After confirming that your dataset has been enabled, ensure that your source data format and identifiers support your expectations.
 
-For detailed instructions on how to access entities using the Real-time Customer Profile API, please refer to the [sub-guide on Entities, also known as the "Profile Access API"](../api/entities.md).
+For detailed instructions on how to access entities using the Real-time Customer Profile API, please refer to the [entities endpoint guide](../api/entities.md), also known as the "Profile Access API".

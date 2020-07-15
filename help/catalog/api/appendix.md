@@ -101,7 +101,9 @@ The following request creates a new dataset, then creates related views for that
 
 For example, if you would like to reference a value that was returned from a previous sub-request, you can create a reference in the format: `<<{REQUEST_ID}.{ATTRIBUTE_NAME}>>` (where `{REQUEST_ID}` is the user-supplied ID for the sub-request, as demonstrated below). You can reference any attribute available in the body of a previous sub-request's response object by using these templates.
 
->[!NOTE] When an executed sub-request returns only the reference to an object (as is the default for most POST and PUT requests in the Catalog API), this reference is aliased to the value `id` and can be used as  `<<{OBJECT_ID}.id>>`. 
+>[!NOTE]
+>
+>When an executed sub-request returns only the reference to an object (as is the default for most POST and PUT requests in the Catalog API), this reference is aliased to the value `id` and can be used as  `<<{OBJECT_ID}.id>>`. 
 
 ```shell
 curl -X POST \

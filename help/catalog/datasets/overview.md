@@ -37,7 +37,10 @@ Adobe Experience Platform Data Governance allows you to manage customer data in 
 
 Data usage labels can be applied to entire datasets or individual dataset fields. Labels added at the dataset level are inherited by all fields within that dataset.
 
-See the [Data Governance overview](../../data-governance/home.md) for more information on the service. For steps on how to work with usage labels in the Experience Platform UI, see the [data usage labels user guide](../../data-governance/labels/user-guide.md).
+See the [Data Governance overview](../../data-governance/home.md) for more information on the service. For steps on how to work with usage labels in [!DNL Platform], refer to the following guides:
+
+* [Manage labels in the UI](../../data-governance/labels/user-guide.md)
+* [Manage labels in the API](../../data-governance/labels/api.md)
 
 ## Datasets in downstream Platform services
 

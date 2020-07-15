@@ -49,7 +49,9 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json'
 ```
 
->[!NOTE] The Accept header `application/vnd.adobe.xed-id+json` returns only the titles, IDs, and versions of the resulting schemas.
+>[!NOTE]
+>
+>The Accept header `application/vnd.adobe.xed-id+json` returns only the titles, IDs, and versions of the resulting schemas.
 
 **Response**
 
@@ -97,7 +99,9 @@ Record the `$id` values of the two schemas you want to define a relationship bet
 
 Within the Schema Registry, relationship descriptors work similarly to foreign keys in SQL tables: a field in the source schema acts as a reference to a field of a destination schema. When defining a relationship, each schema must have a dedicated field to be used as a reference to the other schema.
 
->[!IMPORTANT] If the schemas are to be enabled for use in [Real-time Customer Profile](../../profile/home.md), the reference field for the destination schema must be its **primary identity**. This is explained in more detail later in this tutorial.
+>[!IMPORTANT]
+>
+>If the schemas are to be enabled for use in [Real-time Customer Profile](../../profile/home.md), the reference field for the destination schema must be its **primary identity**. This is explained in more detail later in this tutorial.
 
 If either schema does not have a field for this purpose, you may need to create a mixin with the new field and add it to the schema. This new field must have a `type` value of "string".
 
@@ -319,7 +323,9 @@ A successful response returns the details of the updated schema, which now inclu
 
 ## Define primary identity fields for both schemas
 
->[!NOTE] This step is only required for schemas that will be enabled for use in [Real-time Customer Profile](../../profile/home.md). If you do not want either schema to participate in a union, or if your schemas already have primary identities defined, you can skip to the next step of [creating a reference identity descriptor](#create-descriptor) for the destination schema.
+>[!NOTE]
+>
+>This step is only required for schemas that will be enabled for use in [Real-time Customer Profile](../../profile/home.md). If you do not want either schema to participate in a union, or if your schemas already have primary identities defined, you can skip to the next step of [creating a reference identity descriptor](#create-descriptor) for the destination schema.
 
 In order for schemas to be enabled for use in Real-time Customer Profile, they must have a primary identity defined. In addition, a relationship's destination schema must use its primary identity as its reference field.
 

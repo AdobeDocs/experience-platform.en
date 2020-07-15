@@ -41,18 +41,18 @@ Adobe Experience Platform Segmentation Service produces the audiences needed to 
 
 ### Profile fragments and union schemas {#profile-fragments-and-union-schemas}
 
-One of the key features of Real-time Customer Profile is the ability to unify multi-channel data. When Real-time Customer Profile is used to access an entity, it can supply you with a merged view of all profile fragments for that entity across datasets, referred to as the union view and made possible through what is known as a union schema. Real-time Customer Profile data is merged across sources when an entity or profile is accessed by its ID or exported as a segment. To learn more about accessing profiles and union views, visit the Real-time Customer Profile API developer sub-guide on [Entities, also known as "Profile Access"](api/entities.md).
+One of the key features of Real-time Customer Profile is the ability to unify multi-channel data. When Real-time Customer Profile is used to access an entity, it can supply you with a merged view of all profile fragments for that entity across datasets, referred to as the union view and made possible through what is known as a union schema. Real-time Customer Profile data is merged across sources when an entity or profile is accessed by its ID or exported as a segment. To learn more about accessing profiles and union views using the Real-time Customer Profile API, visit the [entities endpoint guide](api/entities.md).
 
 ### Merge policies
 
-When bringing data together from multiple sources and combining it in order to see a complete view of each of your individual customers, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create that unified view. Using RESTful APIs or the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. For more information on working with merge policies using APIs, please see the Real-time Customer Profile API [merge policies sub-guide](api/merge-policies.md) or the [merge policies user guide](ui/merge-policies.md) for how to work with merge policies using the Platform UI. 
+When bringing data together from multiple sources and combining it in order to see a complete view of each of your individual customers, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create that unified view. Using RESTful APIs or the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. For more information on working with merge policies using the Real-time Customer Profile API, please see the [merge policies endpoint guide](api/merge-policies.md). To work with merge policies using the Experience Platform UI, refer to the [merge policies user guide](ui/merge-policies.md). 
 
-## (Alpha) Configure computed attributes
+### (Alpha) Configure computed attributes
 
 >[!IMPORTANT]
 >The computed attribute functionality outlined in this document is in alpha. The documentation and the functionality are subject to change.
 
-Computed attributes enable you to automatically compute the value of fields based on other values, calculations, and expressions. Computed attributes operate on the profile level, meaning you can aggregate values across all records and events. Each computed attribute contains an expression, or "rule", that evaluates incoming data and stores the resulting value in a profile attribute or into an event. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, and step-by-step instructions for working with them, please see the Real-time Customer Profile API [sub-guide on Computed Attributes](api/computed-attributes.md). This guide will help you better understand the role computed attributes play within Adobe Experience Platform, and it includes sample API calls for performing basic CRUD operations using the Real-time Customer Profile API.
+Computed attributes enable you to automatically compute the value of fields based on other values, calculations, and expressions. Computed attributes operate on the profile level, meaning you can aggregate values across all records and events. Each computed attribute contains an expression, or "rule", that evaluates incoming data and stores the resulting value in a profile attribute or into an event. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, and step-by-step instructions for working with them using the Real-time Customer Profile API, please see the [computed attributes endpoint guide](api/computed-attributes.md). This guide will help you better understand the role computed attributes play within Adobe Experience Platform, and it includes sample API calls for performing basic CRUD operations.
 
 ## Real-time components
 
@@ -62,9 +62,9 @@ This section introduces the components that allow Real-time Customer Profile to 
 
 Real-time input is made possible through a process called streaming ingestion. As profile and time series data is ingested, Real-time Customer Profile automatically decides to include or exclude that data from segments through an ongoing process called streaming segmentation, before merging it with existing data and updating the union view. As a result, you can instantaneously perform computations and make decisions to deliver enhanced, individualized experiences to customers as they interact with your brand. While being ingested, the data also undergoes validation to ensure it being ingested properly and conforming to the schema upon which the dataset is based. For more information about what validation is done during ingestion, please begin by reading the [data ingestion quality overview](../ingestion/quality/overview.md).
 
-### Edge projections
+### Edge projection configurations and destinations
 
-In order to drive coordinated, consistent, and personalized experiences for your customers across multiple channels in real-time, the right data needs to be readily available and continuously updated as changes happen. Adobe Experience Platform enables this real-time access to data through the use of what are known as edges. An edge is a geographically placed server that stores data and makes it readily accessible to applications. For example, Adobe applications such as Adobe Target and Adobe Campaign use edges in order to provide personalized customer experiences in real-time. Data is routed to an edge by a projection, with a projection destination defining the edge to which data will be sent, and a projection configuration defining the specific information that will be made available on the edge. To learn more and begin working with edges and projections, refer to the Real-time Customer Profile API [Edge Projections sub-guide](api/edge-projections.md). 
+In order to drive coordinated, consistent, and personalized experiences for your customers across multiple channels in real-time, the right data needs to be readily available and continuously updated as changes happen. Adobe Experience Platform enables this real-time access to data through the use of what are known as edges. An edge is a geographically placed server that stores data and makes it readily accessible to applications. For example, Adobe applications such as Adobe Target and Adobe Campaign use edges in order to provide personalized customer experiences in real-time. Data is routed to an edge by a projection, with a projection destination defining the edge to which data will be sent, and a projection configuration defining the specific information that will be made available on the edge. To learn more and begin working with projections using the Real-time Customer Profile API, refer to the [edge projection endpoints guide](api/edge-projections.md). 
 
 ## Add data to Real-time Customer Profile
 
@@ -73,7 +73,7 @@ Platform can be configured to send your record and time-series data to Profile, 
 >[!Note]
 >Data collected through Adobe solutions, including Analytics Cloud, Marketing Cloud, and Advertising Cloud, flows into Experience Platform and is ingested into Profile.
 
-### Profile streaming ingestion metrics
+### Profile ingestion metrics
 
 Observability Insights allows you to expose key metrics in Adobe Experience Platform. In addition to Platform usage statistics and performance indicators for various Platform functionalities, there are specific Profile-related metrics that allow you to gain insight into incoming request rates, successful ingestion rates, ingested record sizes, and more. To learn more, begin by reading the [Observability Insights overview](../observability/home.md), and for a complete list of Profile metrics, see the documentation on [available metrics](../observability/metrics.md).
 
@@ -92,8 +92,45 @@ Data governance is managed at several points. These include deciding what data i
 
 Experience Platform enables your customers to send opt-out requests related to the usage and storage of their data within Real-time Customer Profile. For more information on how opt-out requests are handled, please see the documentation on [honoring opt-out requests](../segmentation/honoring-opt-outs.md).
 
+## Profile guidelines
+
+Experience Platform has a series of guidelines to follow in order to effectively use Profile.
+
+| Section | Boundary | 
+| ------- | -------- |
+| Profile union schema | A maximum of **20** datasets can contribute to the Profile union schema. |
+| Multi-entity relationships | A maximum of **5** multi-entity relationship can be created. | 
+| JSON depth for multi-entity association | The maximum JSON depth is **4**. |
+| Time series data | Time-series data is **not** permitted in Profile for non-people entities. |
+| Non-people schema relationships | Non-people schema relationships are **not** permitted. |
+| Profile fragment | The recommended maximum size of a profile fragment is **10kB**.<br><br> The absolute maximum size of a profile fragment is **1MB**. |
+| Non-person entity | The maximum total size for a single non-person entity is **200MB**. |
+| Datasets per non-person entity | A maximum of **1** dataset can be associated to a non-person entity. |
+
+<!--
+| Section | Boundary | Enforcement |
+| ------- | -------- | ----------- |
+| Profile union schema | A maximum of **20** datasets can contribute to the Profile union schema. | A message stating you've reached the maximum number of datasets appears. You must either disable or clean up other obsolete datasets in order to create a new dataset. |
+| Multi-entity relationships | A maximum of **5** multi-entity relationship can be created. | A message stating all available mappings have been used appears when the fifth relationship is mapped. An error message letting you know you have exceeded the number of available mappings appears when attempting to map a sixth relationship. | 
+| JSON depth for multi-entity association | The maximum JSON depth is **4**. | When trying to use the relationship selector with a field that is more than four levels deep, an error message appears, stating it is ineligible for multi-entity association. |
+| Time series data | Time-series data is **not** permitted in Profile for non-people entities. | A message stating that this data cannot be enabled for Profile because it is of an unsupported type appears. |
+| Non-people schema relationships | Non-people schema relationships are **not** permitted. | Relationships between two non-people schemas cannot be created. The relationships checkbox will be disabled. |
+| Profile fragment | The recommended maximum size of a profile fragment is **10kB**.<br><br> The absolute maximum size of a profile fragment is **1MB**. | If you upload a fragment that is larger than 10kB, a warning appears, stating that performance may be degraded since the fragment exceeds the recommended maximum working size.<br><br> If you upload a fragment that is larger than 1MB, ingestion will fail, and an alert letting you know that records have failed will be sent. |
+| Non-person entity | The maximum total size for a single non-person entity is **200MB**. | If you load an object as a non-person entity that is larger than 200MB, an alert will appear, stating that the entity has exceeded the maximum allowable size and will not be useable for segmentation. |
+| Datasets per non-person entity | A maximum of **1** dataset can be associated to a non-person entity. | If you try to create a second dataset that is associated to the same non-person entity, an error appears, stating that only one dataset can be active per non-person entity. |
+
+--->
+
+>[!NOTE]
+>
+>
+>A non-person entity refers to any XDM class that is **not** part of Profile.
+
 ## Next steps and additional resources
 
-To learn more about Real-time Customer Profile, please continue reading the documentation provided in this guide and supplement your learning by watching the video below or exploring other [Experience Platform video tutorials](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html).
+To learn more about Real-time Customer Profile, please continue reading the documentation and supplement your learning by watching the video below or exploring other [Experience Platform video tutorials](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html).
+
+>[!WARNING]
+>The Platform UI shown in the following video is out of date. Please refer to the [Real-time Customer Profile user guide](ui/user-guide.md) for the latest UI screenshots and functionality. 
 
 >[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12)

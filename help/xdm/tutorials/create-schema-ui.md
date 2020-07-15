@@ -23,7 +23,7 @@ This tutorial requires a working understanding of the various aspects of Adobe E
 
 This tutorial requires you to have access to Experience Platform. If you do not have access to an IMS Organization in Experience Platform, please speak to your system administrator before proceeding. 
 
-## Browse existing schemas in the Schemas workspace
+## Browse existing schemas in the Schemas workspace {#browse}
 
 The Schemas workspace within Experience Platform provides a visualization of the Schema Library, allowing you to view and manage all of the schemas available to you, as well as compose new ones. The workspace also includes the Schema Editor, the canvas on which you will compose a schema throughout this tutorial.
 
@@ -33,7 +33,7 @@ Click the filter icon next to the Search bar to use filtering capabilities for a
 
 ![View the Schema Library](../images/tutorials/create-schema/schemas_filter.png)
 
-## Create and name a schema
+## Create and name a schema {#create}
 
 To begin composing a schema, click **Create Schema** in the top right corner of the Schemas workspace. 
 
@@ -55,7 +55,7 @@ There are several important considerations to make when deciding on a name for y
 
 This tutorial composes a schema to ingest data related to the members of a loyalty program, therefore the schema is named "Loyalty Members".
 
-## Assign a class
+## Assign a class {#class}
 
 On the left-hand side of the editor is the *Composition* section. It currently contains two sub-sections: *Schema* and *Class*. 
 
@@ -77,9 +77,11 @@ The canvas reappears. The *Class* section now contains the class you selected (X
 
 The fields appear in the format "fieldName | Data Type". Steps for defining schema fields in the UI are provided later in this tutorial.
 
->[!NOTE] You can [change the class of a schema](#change-class) at any point during the initial composition process before the schema has been saved, but this should be done with extreme caution. Mixins are only compatible with certain classes, therefore changing the class will reset the canvas and any fields you have added. 
+>[!NOTE]
+>
+>You can [change the class of a schema](#change-class) at any point during the initial composition process before the schema has been saved, but this should be done with extreme caution. Mixins are only compatible with certain classes, therefore changing the class will reset the canvas and any fields you have added. 
 
-## Add a mixin
+## Add a mixin {#mixin}
 
 Now that a class has been assigned, the *Composition* section contains a third sub-section: *Mixins*. 
 
@@ -101,13 +103,15 @@ The schema canvas reappears. The *Mixins* section now lists the "Profile Person 
 
 This mixin contributes several fields under the top-level name "person" with the data type "Person". This group of fields describes information about an individual, including name, birth date, and gender. 
 
->[!NOTE] Remember that fields may use scalar types (such as string, integer, array, or date) as their data type, as well as any "data type" (a group of fields representing a common concept) in the Schema Registry. 
+>[!NOTE]
+>
+>Remember that fields may use scalar types (such as string, integer, array, or date) as their data type, as well as any "data type" (a group of fields representing a common concept) in the Schema Registry. 
 
 Notice that the "name" field has a data type of "Person Name", meaning it too describes a common concept and contains name-related sub-fields such as first name, last name, and full name.
 
 Click on different fields within the canvas to see any additional fields they contribute to the schema structure.
 
-## Add another mixin
+## Add another mixin {#mixin-2}
 
 You can now repeat the same steps to add another mixin. When you view the *Add Mixin* dialog this time, notice that the "Profile Person Details" mixin has been greyed out and the radio button next to it cannot be selected. This prevents you from accidentally duplicating mixins that you have already included in the current schema.
 
@@ -121,7 +125,7 @@ Similar to the "name" field, the fields you just added represent multi-field con
 
 ![](../images/tutorials/create-schema/personal_details_structure.png)
 
-## Define a new mixin
+## Define a new mixin {#define-mixin}
 
 The "Loyalty Members" schema is meant to capture data related to the members of a loyalty program, so it will require some specific loyalty-related fields. There are no standard mixins available that contain the necessary fields, therefore you will need to define a new mixin.
 
@@ -135,7 +139,7 @@ For this tutorial, name the new mixin "Loyalty Details".
 
 Click **Add Mixin** to return to the schema editor. "Loyalty Details" should now appear under *Mixins* on the left-side of the canvas, but there are no fields associated with it yet and therefore no new fields appear under *Structure*.
 
-## Add fields to the mixin
+## Add fields to the mixin {#mixin-fields}
 
 Now that you have created the "Loyalty Details" mixin, it is time to define the fields that the mixin will contribute to the schema.
 
@@ -174,7 +178,7 @@ Different constraint options are available depending on the data type selected. 
 
 ![](../images/tutorials/create-schema/loyaltyId_field.png)
 
-## Add more fields to mixin
+## Add more fields to mixin {#mixin-fields-2}
 
 Now that you have added the "loyaltyId" field, you can add additional fields to capture loyalty-related information such as:
 
@@ -187,7 +191,7 @@ When complete, the Loyalty object will contain fields for: Loyalty ID, Points, a
 
 ![](../images/tutorials/create-schema/loyalty_object_fields.png)
 
-## Add 'enum' field to mixin
+## Add 'enum' field to mixin {#enum}
 
 When defining fields in the Schema Editor, there are some additional options that you can apply to basic field types in order to provide further constraints on the data the field can contain. 
 
@@ -208,7 +212,7 @@ More information about available additional constraints:
 * **Enum:** Indicates that this field must contain one of the values from an enumerated list of possible values.  
 * **Identity:** Indicates that this field is an identity field. More information regarding identity fields is provided [later in this tutorial](#identity-field).
 
-## Convert a multi-field object into a data type
+## Convert a multi-field object into a data type {#datatype}
 
 After adding several loyalty-specific fields, the "loyalty" object now contains a common data structure that could be useful in other schemas. 
 
@@ -240,7 +244,9 @@ Now all data ingested into the "loyaltyId" field will be used to help identify t
 
 ![](../images/tutorials/create-schema/loyaltyId_primary_identity.png)
 
->[!NOTE] Once a schema field has been set as the primary identity, you will receive an error message if you later attempt to set another field in the schema as the primary. Each schema may contain only one primary identity field.
+>[!NOTE]
+>
+>Once a schema field has been set as the primary identity, you will receive an error message if you later attempt to set another field in the schema as the primary. Each schema may contain only one primary identity field.
 
 To learn more about working with identities, please review the [Identity Service](../../identity-service/home.md) documentation.
 
@@ -272,15 +278,29 @@ Click **Profile** and a pop-up appears, asking you to confirm that you wish to e
 
 ![](../images/tutorials/create-schema/enable_unified_profile.png)
 
->[!NOTE] Once a schema has been enabled for Real-time Customer Profile and saved, it cannot be disabled.
+>[!NOTE]
+>
+>Once a schema has been enabled for Real-time Customer Profile and saved, it cannot be disabled.
 
-## Next steps
+## Next steps and additional resources
 
 Now that you have finished composing a "Loyalty Members" schema, you can see the complete schema in the *Structure* section of the editor. Click **Save** and the schema will be saved to the Schema Library, making it accessible by the Schema Registry.
 
 Your new schema is now able to be used to ingest data into Platform. Remember that once the schema has been used to ingest data, only additive changes may be made. See the [basics of schema composition](../schema/composition.md) for more information on schema versioning.
 
 The "Loyalty Members" schema is also available to be viewed and managed using the Schema Registry API. To begin working with the API, start by reading the [Schema Registry API developer guide](../api/getting-started.md).
+
+>[!WARNING]
+>
+>The [!DNL Platform] UI shown in the following videos are out-of-date. Please refer to the documentation above for the latest UI screenshots and functionality.
+
+The following video shows how to create a simple schema in the [!DNL Platform] UI.
+
+>[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
+
+The following video is intended to reinforce your understanding of working with mixins and classes.
+
+>[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
 
 ## Appendix
 
@@ -296,13 +316,17 @@ You can then give your new class a **Display Name** (a short, descriptive, uniqu
 
 ![New Class Details](../images/tutorials/create-schema/create_new_class.png)
 
->[!NOTE] When building a schema that implements a class defined by your organization, remember that mixins are available for use only with compatible classes. Since the class you defined is new, there are no compatible mixins listed in the *Add Mixin* dialog. Instead, you will need to select **Create New Mixin** and define a mixin for use with that class. The next time you compose a schema that implements the new class, the mixin that you defined will be listed and available for use.
+>[!NOTE]
+>
+>When building a schema that implements a class defined by your organization, remember that mixins are available for use only with compatible classes. Since the class you defined is new, there are no compatible mixins listed in the *Add Mixin* dialog. Instead, you will need to select **Create New Mixin** and define a mixin for use with that class. The next time you compose a schema that implements the new class, the mixin that you defined will be listed and available for use.
 
 ### Change the class of a schema {#change-class}
 
 At any time during the initial schema composition process, before the schema is saved, you can change the class upon which the schema is based. 
 
->[!WARNING] Please exercise caution before changing the class. Mixins are only compatible with certain classes, therefore changing the class resets the canvas and removes any fields you have added to that point. 
+>[!WARNING]
+>
+>Please exercise caution before changing the class. Mixins are only compatible with certain classes, therefore changing the class resets the canvas and removes any fields you have added to that point. 
 
 To change the class, click **Assign** next to *Class* in the *Composition* section of the editor. 
 

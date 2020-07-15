@@ -7,15 +7,15 @@ user-guide-title: Real-time Customer Profile Help
 # Real-time Customer Profile {#profile}
 
 * [Profile overview](home.md)
-* Profile API {#api}
+* Profile API developer guide {#api}
+  * [Overview](api/overview.md)
   * [Getting started](api/getting-started.md)
   * [(Alpha) Computed attributes](api/computed-attributes.md)
   * [Edge projections](api/edge-projections.md)
   * [Entities (Profile access)](api/entities.md)
   * [Merge policies](api/merge-policies.md)
-  * [Profile search](api/profile-search.md)
   * [Profile system jobs (Delete requests)](api/profile-system-jobs.md)
-* Profile UI {#ui}
+* UI guides {#ui}
   * [Profile user guide](ui/user-guide.md)
   * [Merge policies user guide](ui/merge-policies.md)
 * Tutorials {#tutorials}

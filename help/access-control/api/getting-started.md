@@ -34,7 +34,9 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md).
+>[!NOTE]
+>
+>For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md).
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 

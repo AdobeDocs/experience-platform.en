@@ -5,13 +5,13 @@ description: Learn what Adobe Experience Platform Web SDK is and how it can be u
 seo-description: allow customers of the Adobe Experience Cloud to interact with the various services in the Experience Cloud.
 ---
 
-# (Beta) What is Adobe Experience Platform Web SDK
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+# What is Adobe Experience Platform Web SDK
 
 Adobe Experience Platform Web SDK is a client-side JavaScript library that allows customers of the Adobe Experience Cloud to interact with the various services in the Experience Cloud through the Adobe Experience Platform Edge Network.
+
+The following video gives an overview of the Adobe Experience Platform Web SDK and Edge Network.
+
+>[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 
 ## SDKs replaced by Adobe Experience Platform Web SDK
 
@@ -22,6 +22,22 @@ Adobe Experience Platform Web SDK replaces the following SDKs:
 * AT.js
 * DIL.js
 
-This is not just a wrapper around existing libraries. It is a complete rewrite. Its purpose is to end challenges with tags firing in the right order, inconsistency with library versioning challenges, and better dependency management. It is a new way to implement the Experience Cloud.
+This is not just a wrapper around existing libraries. It is a complete rewrite. Its purpose is to end challenges with tags having to fire in the right order, inconsistency with library versioning challenges, and better dependency management. It is a new way to implement the Experience Cloud and it is [open source](https://github.com/adobe/alloy).
 
-In addition to a new library, there is a new endpoint that streamlines the HTTP requests to Adobe solutions. Before, Visitor.js sent a blocking call to the visitor ID service, then AT.js sent a call to Adobe Target, DIL.js sent a call to Adobe Audience Manager, and finally AppMeasurement.js sent a call to Adobe Analytics. This new library and endpoint can retrieve an ID, fetch a Target experience, send data to Audience Manager, and pass the data to the Adobe Experience Platform in a single call.
+In addition to a new library, there is a new endpoint that streamlines the HTTP requests to Adobe solutions. Before, Visitor.js sent a blocking call to the visitor ID service, then AT.js sent a call to Adobe Target, DIL.js sent a call to Adobe Audience Manager, and finally AppMeasurement.js sent a call to Adobe Analytics. This new library and endpoint can retrieve an ID, fetch a [!DNL Target] experience, send data to Audience Manager, and pass the data to the Adobe Experience Platform in a single call.
+
+The following video demonstrates the Adobe Experience Platform Web SDK and Edge Network in action. The video example uses a single call to Adobe which sends data to Experience Platform, Analytics, Audience Manager and Target.
+
+>[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
+
+
+## Getting Started
+
+We highly recommend you [check out our getting started guide](getting-started/quick-start-with-launch.md) for a quick tutorial on how to get started using Adobe Launch.
+
+This product is constantly evolving and growing to support more and more use cases. To keep up with the latest, check out our [supported use-cases board](https://github.com/adobe/alloy/projects/5). We keep this up to date with the use cases we currently support and the ones we are working on to enable you to make the best decisions possible.
+
+* __Use Cases Not Yet Supported__ - These are use cases that are on our roadmap to be supported in the future.
+* __Use Cases In Progress__ - These are the use cases the team is currently working on completing for release.
+* __Supported Use Cases__ - These are the use cases that are supported and work today. 
+* __Use Cases We Won't Support__ - These are the use cases we have made a decision not to support.

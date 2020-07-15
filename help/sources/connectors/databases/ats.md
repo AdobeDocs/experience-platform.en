@@ -5,21 +5,24 @@ title: Azure Table Storage connector
 topic: overview
 ---
 
-# Azure Table Storage connector
+# (Beta) [!DNL Azure Table Storage] connector
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+>[!NOTE]
+>The [!DNL Azure Table Storage] connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
-Experience Platform provides support for ingesting data from a third-party database. Platform can connect to different types of databases such as relational, NoSQL, or data warehouses. Support for database providers include Azure Table Storage.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-The documentation below provides information on how to connect Azure Table Storage to Platform using APIs or the user interface:
+[!DNL Experience Platform] provides support for ingesting data from a third-party database. [!DNL Platform] can connect to different types of databases such as relational, NoSQL, or data warehouses. Support for database providers include [!DNL Azure Table Storage].
 
-## Connect Azure Table Storage to Platform using APIs
+The documentation below provides information on how to connect [!DNL Azure Table Storage] to [!DNL Platform] using APIs or the user interface:
+
+## Connect [!DNL Azure Table Storage] to [!DNL Platform] using APIs
 
 - [Create an Azure Table Storage connector using the Flow Service API](../../tutorials/api/create/databases/ats.md)
 - [Explore a database system using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Collect data from a database using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
-## Connect Azure Table Storage to Platform using the UI
+## Connect [!DNL Azure Table Storage] to [!DNL Platform] using the UI
 
 - [Create an Azure Table Storage source connector in the UI](../../tutorials/ui/create/databases/ats.md)
 - [Configure a dataflow for a database connector in the UI](../../tutorials/ui/dataflow/databases.md)

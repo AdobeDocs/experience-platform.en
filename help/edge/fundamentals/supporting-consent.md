@@ -5,11 +5,7 @@ description: Learn how to support consent preferences with Experience Platform W
 seo-description: Learn how to support consent preferences with Experience Platform Web SDK
 ---
 
-# (Beta) Supporting Consent
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+# Supporting Consent
 
 To respect your user's privacy, you might want to ask for the user's consent before allowing the SDK to use user-specific data for certain purposes. Currently, the SDK only allows users to opt in or out of all purposes, but in the future Adobe hopes to provide more granular control over specific purposes.
 
@@ -26,7 +22,7 @@ By default the user is opted in to all purposes. To prevent the SDK from perform
 
 ```javascript
 alloy("configure", {
-  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "imsOrgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
   "defaultConsent": { "general": "pending" }
 });
@@ -42,7 +38,13 @@ If the user opts in, execute the `setConsent` command with the `general` option 
 
 ```javascript
 alloy("setConsent", {
-  "general": "in"
+    consent: [{ 
+      standard: "Adobe",
+      version: "1.0",
+      value: { 
+        general: "in" 
+      }
+    }]
 });
 ```
 
@@ -52,7 +54,13 @@ If the user chooses to opt out, execute the `setConsent` command with the `gener
 
 ```javascript
 alloy("setConsent", {
-  "general": "out"
+    consent: [{ 
+      standard: "Adobe",
+      version: "1.0",
+      value: { 
+        general: "out" 
+      }
+    }]
 });
 ```
 

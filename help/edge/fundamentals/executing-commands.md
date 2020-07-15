@@ -5,11 +5,7 @@ description: Learn how to execute Experience Platform Web SDK commands
 seo-description: Learn how to execute Experience Platform Web SDK commands
 ---
 
-# (Beta) Executing commands
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+# Executing commands
 
 After the base code has been implemented on your webpage, you can begin executing commands with the SDK. You do not need to wait for the external file \(`alloy.js`\) to be loaded from the server before executing commands. If the SDK has not finished loading, commands are queued and processed by the SDK as soon as possible.
 
@@ -63,7 +59,7 @@ alloy("commandName", options)
 
 ### Response objects
 
-All promises returned from commands are resolved with a `result` object. The result object will contain data depending on the command and the user's consent. For example library info is passed as an property of the results object in the following command.
+All promises returned from commands are resolved with a `result` object. The result object will contain data depending on the command and the user's consent. For example, library info is passed as a property of the results object in the following command.
 
 ```js
 alloy("getLibraryInfo").then(function(result) {

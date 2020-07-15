@@ -1,60 +1,64 @@
 ---
 title: Adobe Experience Platform Release Notes
-description: Experience Platform release notes May 13, 2020
+description: The latest release notes for Experience Platform
 doc-type: release notes
-last-update: May 13, 2020
-author: crhoades, ens28527
+last-update: July 15, 2020
+author: crhoades, ens25212
 ---
 
 # Adobe Experience Platform release notes 
 
-**Release date: May 13, 2020**
+**Release date: July 15, 2020**
 
 Updates to existing features in Adobe Experience Platform:
 
-- [Data Science Workspace](#dsw)
-- [Experience Platform Web SDK and Experience Platform Edge Network](#edge)
+- [Data Governance](#governance)
+- [Real-time Customer Profile](#profile)
+- [Segmentation Service](#segmentation)
 - [Sources](#sources)
 
-## Data Science Workspace {#dsw}
+## [!DNL Data Governance] {#governance}
 
-Data Science Workspace uses machine learning and artificial intelligence to unleash insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe solutions. One of the ways Data Science Workspace accomplishes this is through the use of JupyterLab. JupyterLab is a web-based user interface for <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> and is tightly integrated into Adobe Experience Platform. It provides an interactive development environment for data scientists to work with Jupyter notebooks, code, and data.
-
-**New features**
-
-|Feature | Description|
-|--- | ---|
-| JupyterLab Launcher | The JupyterLab Launcher now includes starters for Spark 2.4 notebooks. Spark 2.3 notebook starters are now marked as deprecated and set to be removed in a subsequent release. |
-| Spark 2.4 | New Scala (Spark) and PySpark recipes now use Spark 2.4. |
-| Kernels | Scala (Spark) notebooks are now authored via the Scala kernel. PySpark notebooks are now authored via the Python Kernel. The Spark and PySpark kernel are deprecated and set to be removed in a subsequent release. |
-| Recipes | New PySpark and Spark recipes now follow the Docker workflow similar to Python and R recipes.|
-
-For more information on migrating your notebooks and recipes to use Spark 2.4, please see the [notebook migration guide](../../data-science-workspace/recipe-notebook-migration.md). For more general information on Data Science Workspace, see the [overview documentation](../../data-science-workspace/home.md).
-
-## Experience Platform Web SDK and Experience Platform Edge Network {#edge}
-
-The Experience Platform Web SDK and Experience Platform Edge Network allow users to send data to the Adobe Experience Platform and other Adobe Solutions in real-time for end-user devices and browsers. The most recent list of use cases can be found in our [public roadmap](https://github.com/adobe/alloy/projects/5) which is updated often. 
+Adobe Experience Platform Data Governance is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
 
 **New features**
 
-|Feature | Description|
-|--- | ---|
-|Support for ECID | The SDK supports ECID out of the box without any additional libraries or information to install |
-| Configuration UI | Manage your configuration ID settings with the new edge configuration UI in Launch, must be whitelisted to access |
-| Adobe Experience Platform Web SDK Mixin | A mixin for use with the Experience Platform web SDK that encompasses all the supported fields. |
-| Course Consent Controls | Gives companies controls over opt-in and opt-out of the Experience Platform Web SDK|
-| Client-side Debugging Support in the new Experience Cloud Debugger Extension | See requests from the Experience Platform web SDK as well as edge traces to see how data flows through the system. |
-| Adobe Analytics | Send data to Analytics report suites via the edge configuration. XDM is flattened into context data, supports multi-suite tagging |
-| Adobe Target | Support for Adobe Target. Including VEC, Form based composer, A/B, XT, Automated Personalization, MVT|
-| Adobe Audience Manager Support | Support for Audience Manager ID syncs, URL destinations and Cookie Destinations |
-| `synceIdnetity` | Renamed `setCustomersIds` to `syncIdentity` to make it more clear |
-| XDM Object Builder | In the launch extension you can now build XDM objects as Data Elements |
+| Feature    | Description  |
+| -----------| ---------- |
+| Automatic policy enforcement in [!DNL Real-time Customer Data Platform] | Data usage policies are now automatically enforced in [!DNL Real-time CDP] when violating actions occur, including activating segments to destinations. When a policy violation is triggered, users get real-time visibility into usage restrictions within the activation workflow, indicating what data they cannot use and why.<br><br>See the section on [enforcing data usage compliance](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance) within the overview on [!DNL Data Governance] in [!DNL Real-time CDP] for more information. |
+| Adobe Audience Manager integration | Any segments that are shared with [!DNL Audience Manager] from [!DNL Platform] inherit any applied data usage labels as [!DNL Data Export Controls], and vice versa. See the [!DNL Audience Manager] documentation for specific [mappings between usage labels and Data Export Controls](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep). |
+| Custom data usage labels | You can now create custom data usage labels using the Policy Service API or in the UI. See the [labels overview](../../data-governance/labels/overview.md) for more information. |
 
-For more information on Platform Web SDK and Edge Network, refer to the [documentation](../../edge/home.md).
+See the [Data Governance overview](../../data-governance/home.md) for more information on the service.
+
+## [!DNL Real-time Customer Profile] {#profile}
+
+Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+
+**New features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Data usage policy enforcement | In [!DNL Real-time Customer Data Platform], data usage policy violations are automatically surfaced when a violating action in the [!UICONTROL Profile] workspace is attempted. See the [release notes for Data Governance](#governance) for more information on automatic policy enforcement. | 
+
+## [!DNL Segmentation Service] {#segmentation}
+
+Adobe Experience Platform Segmentation Service provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], making them readily accessible by any Adobe application.
+
+[!DNL Segmentation Service] defines a particular subset of profiles by describing the criteria that distinguishes a marketable group of people within your customer base. Segments can be based on record data (such as demographic information) or time series events representing customer interactions with your brand.
+
+**New features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Streaming segmentation | Streaming segmentation can now qualify as a user into a segment as data lands into [!DNL Platform], thereby dramatically reducing the segment qualification time. Streaming segmentation also alleviates the need to run segmentation jobs manually. |
+| Data usage policy enforcement | In [!DNL Real-time Customer Data Platform], data usage policy violations are automatically surfaced when a violating action in the [!UICONTROL Segments] workspace is attempted. See the [release notes for Data Governance](#governance) for more information on automatic policy enforcement. |
+
+For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md)
 
 ## Sources {#sources}
 
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third party software, and your CRM system.
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third party software, and your CRM system.
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
@@ -62,11 +66,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Feature | Description |
 | ------- | ----------- |
-| Additional API and UI support for cloud storage systems | New source connectors for Azure File Storage. |
-| Additional API and UI support for databases | New source connectors for Azure Data Explorer, IBM DB2, and Oracle DB. |
-
-**Known issues**
-
-- None
+| API and UI support for deleting dataflows | Dataflows that were made with errors or have become unnecessary can now be deleted through APIs or using the UI. |
+| API and UI support for one-time ingestion | One-time ingestion for dataflows, where only the start date is provided and no future ingestion is scheduled, can now be executed through APIs or using the UI. |
 
 To learn more about sources, see the [sources overview](../../sources/home.md).

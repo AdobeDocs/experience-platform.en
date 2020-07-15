@@ -25,4 +25,4 @@ For information on how to connect to cloud storage destinations, see [Workflow t
 ## Available Cloud storage streaming destinations
 
 * [Amazon Kinesis destination](/help/rtcdp/destinations/amazon-kinesis-destination.md)
-* [Azure EventHubs destination](/help/rtcdp/destinations/azure-event-hubs-destination.md)
+* [Azure Event Hubs destination](/help/rtcdp/destinations/azure-event-hubs-destination.md)

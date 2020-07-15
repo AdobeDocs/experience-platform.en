@@ -7,7 +7,10 @@ topic: overview
 
 # Create an FTP or SFTP source connector in the UI
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a FTP or SFTP source connector using the Platform user interface.
+>[!NOTE]
+>The FTP and SFTP connectors are in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a FTP or SFTP source connector using the [!DNL Platform] user interface.
 
 ## Getting started
 
@@ -22,7 +25,7 @@ If you already have a valid FTP or SFTP connection, you may skip the remainder o
 
 ### Supported file formats
 
-Experience Platform supports the following file formats to be ingested from external sources:
+[!DNL Experience Platform] supports the following file formats to be ingested from external sources:
 
 *   Delimiter-separated values (DSV): Support for DSV formatted data files are currently limited to Comma-separated values (CSV). The value of field headers within DSV formatted files must only consist of alphanumeric characters and underscores. Support for general DSV is to be provided in the future.
 *   JavaScript Object Notation (JSON): JSON formatted data files must be XDM compliant.
@@ -30,24 +33,34 @@ Experience Platform supports the following file formats to be ingested from exte
 
 ### Gather required credentials
 
-In order to access your FTP or SFTP server on Platform, you must provide the server's **host name**, a **user name**, and a **password**. 
+In order to access your FTP or SFTP server on [!DNL Platform], you must provide the server's **host name**, a **user name**, and a **password**. 
 
-## Connect to your server
+## Connect to your FTP or SFTP server
 
-With your server's credentials ready, you can follow the steps below to create a new inbound base connection to link your FTP or SFTP server to Platform.
+Once you have gathered your required credentials, you can follow the steps below to create a new FTP or SFTP account to connect to [!DNL Platform].
 
-Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> and then select **Sources** from the left navigation bar to access the sources workspace. The *Catalog* screen displays a variety of sources for which you can create inbound base connections with, and each source shows the number of existing base connections associated to them.
+Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the *[!UICONTROL Sources]* workspace. The *[!UICONTROL Catalog]* screen displays a variety of sources for which you can create an inbound account with, and each source shows the number of existing accounts and dataflows associated with them.
 
-Under the *Cloud Storage* category, select either **FTP** or **SFTP** to expose an information bar on the right-side of your screen. The information bar provides a brief description for the selected source as well as options to view its documentation or to connect with the source. To create a new inbound base connection, click **Connect source**. 
+You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-![](../../../../images/tutorials/create/sftp/sftp_sources_catalog.png)
+Under the *[!UICONTROL Databases]* category, select **[!UICONTROL SFTP]** click **on the + icon (+)** to create a new FTP or SFTP connector.
 
-On the input form, provide the base connection with a name, an optional description, and your FTP or SFTP credentials. Lastly, click **Connect** and then allow some time for the new base connection to establish.
+![catalog](../../../../images/tutorials/create/sftp/catalog.png)
 
-![](../../../../images/tutorials/create/sftp/sftp_credentials.png)
+The *[!UICONTROL Connect to SFTP]* page appears. On this page, you can either use new credentials or existing credentials.
 
-Once a base connection with your FTP or SFTP server is established, you can continue on to the next section and configure a dataflow to bring data into Platform.
+### New account
+
+If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide the connection with a name, an optional description, and your FTP or SFTP credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new account to establish.
+
+![connect](../../../../images/tutorials/create/sftp/new.png)
+
+### Existing account
+
+To connect an existing account, select the FTP or SFTP account you want to connect with, then select **[!UICONTROL Next]** to proceed.
+
+![existing](../../../../images/tutorials/create/sftp/existing.png)
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your FTP or SFTP server. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](../../dataflow/batch/cloud-storage.md).
+By following this tutorial, you have established a connection to your FTP or SFTP account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into Platform](../../dataflow/batch/cloud-storage.md).
