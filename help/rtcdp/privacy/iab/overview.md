@@ -110,19 +110,24 @@ Once you have configured your CMP to generate consent strings, you must integrat
 
 ### Create a new edge configuration
 
-In order for the SDK to send data to [!DNL Platform], you must create a new edge configuration for in [!DNL Experience Platform Launch]. Specific steps for how to create a new configuration are provided in the [SDK documentation](../../../edge/fundamentals/edge-configuration.md).
+In order for the SDK to send data to [!DNL Experience Platform], you must first create a new edge configuration for [!DNL Platform] in [!DNL Adobe Experience Platform Launch]. Specific steps for how to create a new configuration are provided in the [SDK documentation](../../../edge/fundamentals/edge-configuration.md).
 
 After providing a unique name for the configuration, select the toggle button next to *[!UICONTROL Adobe Experience Platform]*. Next, use the following values to complete the rest of the form:
 
-| Config field | Value |
+| Edge configuration field | Value |
 | --- | --- |
-| [!UICONTROL Streaming inlet] | A valid streaming connection for [!DNL Experience Platform]. See the tutorial on [creating a streaming connection](../../../ingestion/tutorials/create-streaming-connection-ui.md) if you do not have an existing streaming inlet. |
-| [!UICONTROL Event dataset] | Select the [!DNL XDM ExperienceEvent] dataset created in the [previous step](#datasets). |
-| [!UICONTROL Profile dataset] | Select the [!DNL XDM Individual Profile] dataset created in the [previous step](#datasets). |
+| [!UICONTROL Sandbox] | The name of the [!DNL Platform] [sandbox](../../../sandboxes/home.md) that contains the required streaming connection and datasets to set up the edge configuration. |
+| [!UICONTROL Streaming Inlet] | A valid streaming connection for [!DNL Experience Platform]. See the tutorial on [creating a streaming connection](../../../ingestion/tutorials/create-streaming-connection-ui.md) if you do not have an existing streaming inlet. |
+| [!UICONTROL Event Dataset] | Select the [!DNL XDM ExperienceEvent] dataset created in the [previous step](#datasets). |
+| [!UICONTROL Profile Dataset] | Select the [!DNL XDM Individual Profile] dataset created in the [previous step](#datasets). |
+
+![](../assets/iab/edge-config.png)
+
+When finished, click **[!UICONTROL Save]** at the bottom of the screen and continue following any additional prompts to complete the configuration.
 
 ### Making consent-change commands
 
-The sections below provide examples of how each SDK command can be used in different scenarios.
+Once you have created the edge configuration described in the previous section, you can start using SDK commands to send consent data to [!DNL Platform]. The sections below provide examples of how each SDK command can be used in different scenarios.
 
 >[!NOTE]
 >
