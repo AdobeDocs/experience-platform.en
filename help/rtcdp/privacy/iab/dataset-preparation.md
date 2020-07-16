@@ -101,7 +101,7 @@ In order for [!DNL Real-time CDP] to associate the consent data it receives to s
 
 >[!NOTE]
 >
->The example schema shown in this section uses its `identityMap` field as its primary identity. If you wish to set another field as a primary identity, ensure that you are using an indirect identifier like a cookie ID, and not a directly identifiable field that is prohibited from use in interest-based advertising, such as an email address. Consult your legal council if you are unsure which fields are restricted.
+>The example schema shown in this section uses its `identityMap` field as its primary identity. If you wish to set another field as a primary identity, ensure that you are using an indirect identifier like a cookie ID, and not a directly identifiable field that is prohibited from use in interest-based advertising, such as an email address. Consult your Legal Counsel if you are unsure which fields are restricted.
 >
 >Steps on how to set a primary identity field for a schema can be found in the [schema creation tutorial](../../../xdm/tutorials/create-schema-ui.md#identity-field).
 
