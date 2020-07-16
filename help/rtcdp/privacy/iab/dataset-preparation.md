@@ -7,14 +7,14 @@ topic: privacy events
 
 # Create datasets for capturing IAB TCF 2.0 consent data
 
-In order for [!DNL Real-time Customer Data Platform] to collect customer consent data in compliance with the IAB [!DNL Transparency & Consent Framework] (TCF) 2.0, that data must be sent to datasets whose schemas contain IAB consent fields.
+In order for [!DNL Real-time Customer Data Platform] to process customer consent data in accordance with the IAB [!DNL Transparency & Consent Framework] (TCF) 2.0, that data must be sent to datasets whose schemas contain TCF 2.0 consent fields.
 
 Specifically, two datasets are required for capturing TCF 2.0 consent data:
 
 * A dataset based on the [!DNL XDM Individual Profile] class, enabled for use in [!DNL Real-time Customer Profile].
 * A dataset based on the [!DNL XDM ExperienceEvent] class.
 
-This document provides steps for setting up these two datasets to collect IAB TCF 2.0 consent data. For an overview of the full workflow to configure [!DNL Real-time CDP] for TCF 2.0 compliance, refer to the [IAB TCF 2.0 compliance overview](./overview.md).
+This document provides steps for setting up these two datasets to collect IAB TCF 2.0 consent data. For an overview of the full workflow to configure [!DNL Real-time CDP] for TCF 2.0, refer to the [IAB TCF 2.0 compliance overview](./overview.md).
 
 ## Prerequisites
 
@@ -23,12 +23,12 @@ This tutorial requires a working understanding of the following components of Ad
 * [Experience Data Model (XDM)](../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     * [Basics of schema composition](../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas.
     * [Create a schema in the UI](../../../xdm/tutorials/create-schema-ui.md): A tutorial covering the basics of working with the Schema Editor.
-* [Adobe Experience Platform Identity Service](../../../identity-service/home.md): Bridges customer identities from disparate data sources across devices and systems.
-* [Real-time Customer Profile](../../../profile/home.md): Leverages [!DNL Identity Service] to create detailed customer profiles from your datasets in real-time. [!DNL Real-time Customer Profile] pulls data from the Data Lake and persists customer profiles in its own separate data store.
+* [Adobe Experience Platform Identity Service](../../../identity-service/home.md): Allows you to bridge customer identities from your disparate data sources across devices and systems.
+* [Real-time Customer Profile](../../../profile/home.md): Leverages [!DNL Identity Service] to let you create detailed customer profiles from your datasets in real-time. [!DNL Real-time Customer Profile] pulls data from the Data Lake and persists customer profiles in its own separate data store.
 
 ## Consent schema structure {#structure}
 
-There are two XDM mixins that provide customer consent fields that are required for TCF 2.0 compliance: one for record-based data ([!DNL XDM Individual Profile]), and another for time-series-based data ([!DNL XDM ExperienceEvent]):
+There are two XDM mixins that provide customer consent fields that are required for TCF 2.0 support: one for record-based data ([!DNL XDM Individual Profile]), and another for time-series-based data ([!DNL XDM ExperienceEvent]):
 
 | Schema | Description |
 | --- | --- |
@@ -101,9 +101,9 @@ In order for [!DNL Real-time CDP] to associate the consent data it receives to s
 
 >[!NOTE]
 >
->The example schema shown in this section uses its `identityMap` field as its primary identity. If you wish to set another field as a primary identity, ensure that you are not using any field that are restricted from use by TCF 2.0, such as `email`. Consult your legal council if you are unsure which fields are restricted.
+>The example schema shown in this section uses its `identityMap` field as its primary identity. If you wish to set another field as a primary identity, ensure that you are using an indirect identifier like a cookie ID, and not a directly identifiable field that is prohibited from use in interest-based advertising, such as an email address. Consult your legal council if you are unsure which fields are restricted.
 >
->Steps on how to set a primary identity field for a schema can be found in the [schema creation tutorial](../../../xdm/tutorials/create-schema-ui.md#identity-field). If you require further guidance on how to configure a primary identity, review the [!DNL Identity Service] documentation. In particular, the overview on [identity namespaces](../../../identity-service/namespaces.md) provides important information on different accepted identity types.
+>Steps on how to set a primary identity field for a schema can be found in the [schema creation tutorial](../../../xdm/tutorials/create-schema-ui.md#identity-field).
 
 To enable the schema for [!DNL Profile], click the schema's name in the left-hand rail to open the *[!UICONTROL Schema properties]* dialog in the right-hand rail. From here, click the **[!UICONTROL Profile]** toggle button.
 
