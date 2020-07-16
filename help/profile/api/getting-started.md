@@ -5,40 +5,40 @@ title: Getting started with Real-time Customer Profile API
 topic: guide
 ---
 
-# Getting started with the Real-time Customer Profile API {#getting-started}
+# Getting started with the [!DNL Real-time Customer Profile] API {#getting-started}
 
-Using the Real-time Customer Profile API, you can perform basic CRUD operations against Profile resources, such as configuring computed attributes, accessing entities, exporting Profile data, and deleting unneeded datasets or batches.
+Using the [!DNL Real-time Customer Profile] API, you can perform basic CRUD operations against Profile resources, such as configuring computed attributes, accessing entities, exporting Profile data, and deleting unneeded datasets or batches.
 
-Using the developer guide requires a working understanding of the various Adobe Experience Platform services involved in working with Profile data. Before beginning to work with the Real-time Customer Profile API, please review the documentation for the following services:
+Using the developer guide requires a working understanding of the various Adobe Experience Platform services involved in working with [!DNL Profile] data. Before beginning to work with the [!DNL Real-time Customer Profile] API, please review the documentation for the following services:
 
-* [Real-time Customer Profile](../home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Gain a better view of your customer and their behavior by bridging identities across devices and systems.
-* [Adobe Experience Platform Segmentation Service](../../segmentation/home.md): Allows you to build audience segments from Real-time Customer Profile data.
-* [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
-* [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [!DNL Real-time Customer Profile](../home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
+* [!DNL Adobe Experience Platform Identity Service](../../identity-service/home.md): Gain a better view of your customer and their behavior by bridging identities across devices and systems.
+* [!DNL Adobe Experience Platform Segmentation Service](../../segmentation/home.md): Allows you to build audience segments from Real-time Customer Profile data.
+* [!DNL Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully make calls to Profile API endpoints.
+The following sections provide additional information that you will need to know in order to successfully make calls to [!DNL Profile] API endpoints.
 
 ## Reading sample API calls
 
-The Real-time Customer Profile API documentation provides example API calls to demonstrate how to properly format requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the Experience Platform troubleshooting guide.
+The [!DNL Real-time Customer Profile] API documentation provides example API calls to demonstrate how to properly format requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
 
 ## Required headers
 
-The API documentation also requires you to have completed the [authentication tutorial](../../tutorials/authentication.md) in order to successfully make calls to Platform endpoints. Completing the authentication tutorial provides the values for each of the required headers in Experience Platform API calls, as shown below:
+The API documentation also requires you to have completed the [authentication tutorial](../../tutorials/authentication.md) in order to successfully make calls to [!DNL Platform] endpoints. Completing the authentication tutorial provides the values for each of the required headers in [!DNL Experience Platform] API calls, as shown below:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in Experience Platform are isolated to specific virtual sandboxes. Requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. Requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All requests with a payload in the request body (such as POST, PUT, and PATCH calls) must include a `Content-Type` header. Accepted values specific to each call are provided in the call parameters.
 
 ## Next steps
 
-To begin making calls using the Real-time Customer Profile API, select one of the available endpoint guides.
+To begin making calls using the [!DNL Real-time Customer Profile] API, select one of the available endpoint guides.
