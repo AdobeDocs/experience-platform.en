@@ -85,7 +85,7 @@ The unique ID for a target account. To find this, you can navigate to [!UICONTRO
 
 Target allows customers to control permissions through the use of properties. Details can be found in the [Enterprise Permissions](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) section of the Target documentation.
 
-The property token can be found in [!UICONTROL Adobe Target] > [!UICONTROL setup] > [UICONTROL Properties]
+The property token can be found in [!UICONTROL Adobe Target] > [!UICONTROL setup] > [!UICONTROL Properties]
 
 ##### [!UICONTROL Target Environment ID]
 
