@@ -88,7 +88,9 @@ The Attribution ADFs found in Query Service allow those allocations to be define
 
 This example focuses on last-touch attribution, but Adobe also offers first-touch attribution. 
 
->[!NOTE] Other options with timeouts and event-based expiration will be available in future versions of Query Service.
+>[!NOTE]
+>
+>Other options with timeouts and event-based expiration will be available in future versions of Query Service.
 
 **Syntax:**
 
@@ -231,4 +233,10 @@ LIMIT 10;
 ```
 
 ![Image](../images/queries/adobe-functions/create-breakdown-report.png)
+
+## Additional resources
+
+The following video shows how to run queries in the Adobe Experience Platform interface and in a PSQL client. Additionally, the video also uses examples involving individual properties in an XDM object, using Adobe-defined functions, and using CREATE TABLE AS SELECT (CTAS).
+
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 

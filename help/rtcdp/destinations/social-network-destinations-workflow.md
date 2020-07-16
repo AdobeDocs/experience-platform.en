@@ -27,24 +27,7 @@ This tutorial uses Facebook as an example, but the workflow in Adobe Real-time C
 
     ![Credentials confirmed](/help/rtcdp/destinations/assets/facebook-post-connection-view.png)
 
-4. In the **[!UICONTROL Setup]** step, enter a **[!UICONTROL Name]** and a **[!UICONTROL Description]** for your activation flow and fill in the **[!UICONTROL Account ID]** of your social network ad account. Select any marketing use cases that should apply to this destination. Select **[!UICONTROL Create Destination]** after you filled in the fields above.
-
-    >[!IMPORTANT]
-    >
-    > For Facebook destinations. **[!UICONTROL Account ID]** is your Facebook Ad Account ID. You can find this ID in the Facebook Ads Manager. Prefix the ID with `act_` as shown below: 
-
-    ![Connect to social network destination - setup step](/help/rtcdp/destinations/assets/social-network-setup-step.png)
-
-5. Your destination is now created. You can select **[!UICONTROL Save & Exit]** if you want to activate segments later on or you can select **[!UICONTROL Next]** to continue the workflow and select segments to activate. In either case, see the next section, [Activate segments to social networks](#activate-segments), for the rest of the workflow.
-
-## Activate segments to social networks {#activate-segments}
-
-For instructions on how to activate segments to social networks, see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md).
-
-
-<!--
-
-// update IMPORTANT note in step 4 after marketing use cases are released for RTCDP
+4. In the **[!UICONTROL Setup]** step, enter a **[!UICONTROL Name]** and a **[!UICONTROL Description]** for your activation flow and fill in the **[!UICONTROL Account ID]** of your social network ad account. <br> Also in this step, you can select any **[!UICONTROL Marketing use case]** that should apply to this destination. Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Real-time CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](/help/data-governance/policies/overview.md#core-actions). <br> Select **[!UICONTROL Create Destination]** after you filled in the fields above.
 
     >[!IMPORTANT]
     >
@@ -52,3 +35,9 @@ For instructions on how to activate segments to social networks, see [Activate D
     > * For Facebook destinations. **[!UICONTROL Account ID]** is your Facebook Ad Account ID. You can find this ID in the Facebook Ads Manager. Prefix the ID with `act_` as shown below: 
 
     ![Connect to social network destination - setup step](/help/rtcdp/destinations/assets/social-networks-setup-step.png)
+
+5. Your destination is now created. You can select **[!UICONTROL Save & Exit]** if you want to activate segments later on or you can select **[!UICONTROL Next]** to continue the workflow and select segments to activate. In either case, see the next section, [Activate segments to social networks](#activate-segments), for the rest of the workflow.
+
+## Activate segments to social networks {#activate-segments}
+
+For instructions on how to activate segments to social networks, see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md).

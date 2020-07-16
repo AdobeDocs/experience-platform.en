@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Real-time Customer Profile API developer guide
+title: Computed attributes - Real-time Customer Profile API
 topic: guide
 ---
 
-# (Alpha) Computed attributes
+# (Alpha) Computed attributes endpoint
 
 >[!IMPORTANT]
 >The computed attribute functionality outlined in this document is currently in alpha and is not available to all users. The documentation and the functionality are subject to change.
@@ -18,9 +18,7 @@ This guide will help you to better understand computed attributes within Adobe E
 
 ## Getting started
 
-The API endpoints used in this guide are part of the Real-time Customer Profile API. Before continuing, please review the [Real-time Customer Profile developer guide](getting-started.md).
-
-In particular, the [getting started section](getting-started.md) of the Profile developer guide includes links to related topics, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform APIs.
+The API endpoint used in this guide is part of the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 ## Understanding computed attributes
 
@@ -477,7 +475,9 @@ A successful update returns HTTP Status 204 (No Content) and an empty response b
 
 It is also possible to delete a computed attribute using the API. This is done by making a DELETE request to the `/config/computedAttributes` endpoint and including the ID of the computed attribute that you wish to delete in the request path.
 
->[!Note] 
+>[!Note]
+>
+>
 >Please use caution when deleting a computed attribute as it may be in use in more than one schema and the DELETE operation cannot be undone.
 
 **API format**

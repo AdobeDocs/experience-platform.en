@@ -9,9 +9,11 @@ topic: developer guide
 
 The primary building block of a schema is a class. The class contains the minimum set of fields that must be defined in order to capture the core data of a schema. For example, if you were designing a schema for cars and trucks they would most likely use a class called Vehicle that described the basic common properties of all vehicles.
 
-There are several standard classes provided by Adobe and other Experience Platform partners, but you may also define your own classes and save them to the Schema Registry. You can then compose a schema that implements the class you created, and define mixins that are compatible with your newly defined class.
+There are several standard classes provided by Adobe and other [!DNL Experience Platform] partners, but you may also define your own classes and save them to the [!DNL Schema Registry]. You can then compose a schema that implements the class you created, and define mixins that are compatible with your newly defined class.
 
->[!NOTE] When composing a schema based on a class that you define, you will not be able to use standard mixins. Each mixin defines the classes they are compatible with in their `meta:intendedToExtend` attribute. Once you begin defining mixins that are compatible with your new class (by using the `$id` of your new class in the `meta:intendedToExtend` field of the mixin), you will be able to reuse those mixins every time you define a schema that implements the class you defined. See the sections on [creating mixins](create-mixin.md) and [creating schemas](create-schema.md) for more information.
+>[!NOTE]
+>
+>When composing a schema based on a class that you define, you will not be able to use standard mixins. Each mixin defines the classes they are compatible with in their `meta:intendedToExtend` attribute. Once you begin defining mixins that are compatible with your new class (by using the `$id` of your new class in the `meta:intendedToExtend` field of the mixin), you will be able to reuse those mixins every time you define a schema that implements the class you defined. See the sections on [creating mixins](create-mixin.md) and [creating schemas](create-schema.md) for more information.
 
 **API format**
 
@@ -74,12 +76,12 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `_{TENANT_ID}` | The `TENANT_ID` namespace for your organization. All resources created by your organization must include this property to avoid collisions with other resources in the Schema Registry. |
+| `_{TENANT_ID}` | The `TENANT_ID` namespace for your organization. All resources created by your organization must include this property to avoid collisions with other resources in the [!DNL Schema Registry]. |
 | `allOf` | A list of resources whose properties are to be inherited by the new class. One of the `$ref` objects within the array defines the behavior of the class. In this example, the class inherits "record" behavior. |
 
 **Response**
 
-A successful response returns HTTP status 201 (Created) and a payload containing the details of the newly created class including the `$id`, `meta:altId`, and `version`. These three values are read-only and are assigned by the Schema Registry.
+A successful response returns HTTP status 201 (Created) and a payload containing the details of the newly created class including the `$id`, `meta:altId`, and `version`. These three values are read-only and are assigned by the [!DNL Schema Registry].
 
 ```JSON
 {

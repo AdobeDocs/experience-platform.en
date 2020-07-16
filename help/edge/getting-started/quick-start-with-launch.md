@@ -7,36 +7,40 @@ seo-description: Quick start guide for using the Experience Platform Web SDK ext
 
 # Welcome
 
-This guide will take you through the different how to setup the Adobe Experience Platform Web SDK in Launch. To be able to use this feature you need to be whitelisted. If you would like to get on the waiting list please reach out to you CSM.
+This guide will take you through the different steps on how to set up the Adobe Experience Platform Web SDK in Adobe Launch. You need to have permissions and be on the allow list to use this feature. If you would like to get on the waiting list, please reach out to your CSM. Additionally, in order to use this feature, you need to:
 
-- Have a [1st-party domain (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) enabled. If you already have a CNAME for Analytics, you should use that one. Testing in development will work without a CNAME but you will need one before you go to production
-- Be entitled to Adobe Experience Platform Data Platform. If you have not purchased Platform we will provision you with Experience Platform Data Services Foundation for use in a limited fashion with the SDK at no extra charge.
+- Have a [1st-party domain (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) enabled. If you already have a CNAME for Adobe Analytics, you should use that one. Testing in development will work without a CNAME but you will need one before you go to production
 - Be using the latest version of the Visitor ID service
 
 ## Create an configuration ID
 
-You can create a configuration ID using the [edge configuration tool](../fundamentals/edge-configuration.md) in launch. This will allow you to enable the Edge Network to send data to the various solutions. Details for how to find each option are found in the [Edge Configuration Tool](../fundamentals/edge-configuration.md) Page.
+You can create a configuration ID by using the [edge configuration tool](../fundamentals/edge-configuration.md) in Adobe Launch. This will allow you to enable the Edge Network to send data to the various solutions. See the [Edge Configuration Tool](../fundamentals/edge-configuration.md) page for details on how to find each option.
 
 >[!NOTE]
 >
->Your organization must be whitelisted for the feature. Please contact your CSM to get put on the list for eventual whitelisting.
+>Your organization must be on the allow list for the feature. Please contact your CSM to get added to the allow list.
 
 ## Prepare a Schema
 
-The Experience Platform Edge Network takes data as XDM. XDM is a data format that lets you define schemas. The schema defines how the Edge Network expects the data to be formatted. To send data you will need to define your schema. 
+The Experience Platform Edge Network takes data as XDM. XDM is a data format that lets you define schemas. The schema defines how the Edge Network expects the data to be formatted. To send data you will need to define your schema. Make sure you complete the following:
 
-- [Create a schema](../../xdm/tutorials/create-schema-ui.md)
-- Add the Adobe Experience Platform Web SDK mixin to the schema you created
+1. [Create a schema](../../xdm/tutorials/create-schema-ui.md)
+2. Add the AEP Web SDK ExperienceEvent Mixin to the schema you created.
+3. Create a Dataset from the schema you created.
 
-## Install the SDK in Launch
+The following video is intended to support you in creating a schema, dataset, and streaming source connector for your Web SDK data.
 
-Log in to Launch and install the `AEP Web SDK` extension. As part of installing the SDK, you will be prompted to configure the extension. Enter the Config ID you requested above. The extension automatically fills in your Organization ID.
+>[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
+
+## Install the SDK in Adobe Launch
+
+Log in to Adobe Launch and install the `AEP Web SDK` extension. As part of installing the SDK, you will be prompted to configure the extension. Enter the Configuration ID you requested above. The extension automatically fills in your Organization ID.
 
 For more details on different configuration options, see [Configuring the SDK](../fundamentals/configuring-the-sdk.md).
 
 ## Create a Data Element Base on Your Schema
 
-In launch create a Data Element that references the schema by changing the extension to AEP Web SDK and setting the type to XDM Object. This will load up your schema and allow you to map data elements into different parts of the schema.
+In Adobe Launch, create a Data Element that references the schema by changing the extension to AEP Web SDK and setting the type to XDM Object. This will load up your schema and allow you to map data elements into different parts of the schema.
 
 ![Date Element In Launch](../../assets/edge_data_element.png)
 
@@ -48,7 +52,7 @@ For more details on how to track events, see [Tracking Events](../fundamentals/t
 
 ## Next Steps
 
-Once you have data flowing you can do the following. 
+Once you have data flowing you can do the following: 
 
 - [Build out your schema](https://docs.adobe.com/content/help/en/experience-platform/xdm/schema/composition.html)
 - [Learn about debugging](../fundamentals/debugging.md)

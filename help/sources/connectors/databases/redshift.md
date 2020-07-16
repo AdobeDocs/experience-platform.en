@@ -5,21 +5,24 @@ title: Amazon Redshift connector
 topic: overview
 ---
 
-# (Beta) Amazon Redshift connector
+# (Beta) [!DNL Amazon Redshift] connector
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+>[!NOTE]
+>The [!DNL Amazon Redshift] connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
-Experience Platform provides support for ingesting data from a third-party database. Platform can connect to different types of databases such as relational, NoSQL, or data warehouses. Support for database providers include Amazon Redshift.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-The documentation below provides information on how to connect Amazon Redshift to Platform using APIs or the user interface:
+[!DNL Experience Platform] provides support for ingesting data from a third-party database. [!DNL Platform] can connect to different types of databases such as relational, NoSQL, or data warehouses. Support for database providers include [!DNL Amazon Redshift].
 
-## Connect Amazon Redshift to Platform using APIs
+The documentation below provides information on how to connect [!DNL Amazon Redshift] to [!DNL Platform] using APIs or the user interface:
+
+## Connect [!DNL Amazon Redshift] to [!DNL Platform] using APIs
 
 - [Create an Amazon Redshift connector using the Flow Service API](../../tutorials/api/create/databases/redshift.md)
 - [Explore a database system using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Collecte data from a database using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
-## Connect Amazon Redshift to Platform using the UI
+## Connect [!DNL Amazon Redshift] to [!DNL Platform] using the UI
 
 - [Create an Amazon Redshift source connector in the UI](../../tutorials/ui/create/databases/redshift.md)
 - [Configure a dataflow for a database connector in the UI](../../tutorials/ui/dataflow/databases.md)
