@@ -33,9 +33,9 @@ If data has been ingested into a non-Profile dataset, you must re-ingest that da
 
 If you wish to add previously ingested data to the Profile store, follow the [dataset configuration tutorial](./tutorials/dataset-configuration.md) to create a new dataset or convert an existing dataset to be enabled for Profile, and then re-ingest the desired data into that dataset.
 
-### How can I access my Profile data?
+### How can I view my ingested Profile data?
 
-There are multiple methods of accessing Profile data, depending on whether you are using the API or UI.
+There are multiple methods of viewing Profile data, depending on whether you are using the API or UI.
 
 #### Using the API
 
