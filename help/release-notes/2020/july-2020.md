@@ -66,7 +66,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Feature | Description |
 | ------- | ----------- |
-| API and UI support for deleting dataflows | Dataflows that were made with errors or have become unnecessary can now be deleted through APIs or using the UI. |
+| UI support for deleting dataflows | Dataflows that were made with errors or have become unnecessary can now be deleted through the UI. |
 | API and UI support for one-time ingestion | One-time ingestion for dataflows, where only the start date is provided and no future ingestion is scheduled, can now be executed through APIs or using the UI. |
 
 To learn more about sources, see the [sources overview](../../sources/home.md).
