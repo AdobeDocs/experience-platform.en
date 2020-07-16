@@ -1,33 +1,33 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Real-time Customer Profile API developer guide
+title: Export jobs - Real-time Customer Profile API
 topic: guide
 ---
 
-# Export jobs
+# Export jobs endpoint
 
-Real-time Customer Profile enables you to build a single view of individual customers by bringing together data from multiple sources, including both attribute data and behavioral data. Data available within Profile can then be exported to a dataset for further processing. This document provides step-by-step instructions for creating and managing export jobs using the [Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 
+[!DNL Real-time Customer Profile] enables you to build a single view of individual customers by bringing together data from multiple sources, including both attribute data and behavioral data. Data available within [!DNL Profile] can then be exported to a dataset for further processing. For example, audience segments from [!DNL Profile] data can be exported for activation, and profile attributes can be exported for reporting.
 
-In addition to creating an export job, you can also access Profile data using the Profile Access API. Please see the [Profile Access API guide](./entities.md) for more information on these other access patterns.
+This document provides step-by-step instructions for creating and managing export jobs using the [Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
+
+In addition to creating an export job, you can also access [!DNL Profile] data using the `/entities` endpoint, also known as "[!DNL Profile Access]". See the [entities endpoint guide](./entities.md) for more information. For steps on how to access [!DNL Profile] data using the UI, refer to the [user guide](../ui/user-guide.md).
 
 ## Getting started
 
-The API endpoints used in this guide are part of the Real-time Customer Profile API. Before continuing, please review the [Real-time Customer Profile API developer guide](getting-started.md).
-
-In particular, the [getting started section](getting-started.md#getting-started) of the Profile developer guide includes links to related topics, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The API endpoints used in this guide are part of the [!DNL Real-time Customer Profile] API. Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 ## Create an export job
 
-Exporting Profile data requires first creating a dataset into which the data will be exported, then initiating a new export job. Both of these steps can be achieved using Experience Platform APIs, with the former using the Catalog Service API and the latter using the Real-time Customer Profile API. Detailed instructions for completing each step are outlined in the sections that follow.
+Exporting [!DNL Profile] data requires first creating a dataset into which the data will be exported, then initiating a new export job. Both of these steps can be achieved using Experience Platform APIs, with the former using the Catalog Service API and the latter using the Real-time Customer Profile API. Detailed instructions for completing each step are outlined in the sections that follow.
 
 ### Create a target dataset
 
-When exporting Profile data, a target dataset must first be created. It is important that the dataset be configured correctly to ensure the export is successful. 
+When exporting [!DNL Profile] data, a target dataset must first be created. It is important that the dataset be configured correctly to ensure the export is successful. 
 
-One of the key considerations is the schema upon which the dataset is based (`schemaRef.id` in the API sample request below). In order to export a segment, the dataset must be based on the XDM Individual Profile Union Schema (`https://ns.adobe.com/xdm/context/profile__union`). A union schema is a system-generated, read-only schema that aggregates the fields of schemas which share the same class. In this case, that is the XDM Individual Profile class. For more information on union view schemas, please see the [union section in the basics of schema composition guide](../../xdm/schema/composition.md#union).
+One of the key considerations is the schema upon which the dataset is based (`schemaRef.id` in the API sample request below). In order to export profile data, the dataset must be based on the [!DNL XDM Individual Profile] Union Schema (`https://ns.adobe.com/xdm/context/profile__union`). A union schema is a system-generated, read-only schema that aggregates the fields of schemas which share the same class. In this case, that is the [!DNL XDM Individual Profile] class. For more information on union view schemas, please see the [union section in the basics of schema composition guide](../../xdm/schema/composition.md#union).
 
-The steps that follow in this tutorial outline how to create a dataset that references the XDM Individual Profile Union Schema using the Catalog API. You may also use the Platform user interface to create a dataset that references the union schema. Steps for using the UI are outlined in [this UI tutorial for exporting segments](../../segmentation/tutorials/create-dataset-export-segment.md) but are applicable here as well. Once completed, you can return to this tutorial to proceed with the steps for [initiating a new export job](#initiate).
+The steps that follow in this tutorial outline how to create a dataset that references the [!DNL XDM Individual Profile] Union Schema using the [!DNL Catalog] API. You may also use the [!DNL Platform] user interface to create a dataset that references the union schema. Steps for using the UI are outlined in [this UI tutorial for exporting segments](../../segmentation/tutorials/create-dataset-export-segment.md) but are applicable here as well. Once completed, you can return to this tutorial to proceed with the steps for [initiating a new export job](#initiate).
 
 If you already have a compatible dataset and know its ID, you can proceed directly to the step for [initiating a new export job](#initiate).
 
@@ -180,14 +180,15 @@ You can return a list of all export jobs for a particular IMS Organization by pe
 
 ```http
 GET /export/jobs
-GET /export/jobs?limit={LIMIT}
-GET /export/jobs?offset={OFFSET}
+GET /export/jobs?{QUERY_PARAMETERS}
 ```
 
-| Property | Description |
+| Parameter | Description |
 | -------- | ----------- |
-| `{LIMIT}` | The number of records to be returned. |
-| `{OFFSET}` | The number of pages to offset the returned results by. |
+| `start` | Offset the page of results returned, as per the create time of the request. Example: `start=4` |
+| `limit` | Limit the number of results returned. Example: `limit=10` |
+| `page` | Return a specific page of results, as per the create time of the request. Example: `page=2` |
+| `sort` | Sort results by a specific field in ascending ( **`asc`** ) or descending ( **`desc`** ) order. The sort parameter does not work when returning multiple pages of results. Example: `sort=updateTime:asc` |
 
 **Request**
 
@@ -327,7 +328,7 @@ To view the details of a specific export job, or monitor its status as it proces
 GET /export/jobs/{EXPORT_JOB_ID}
 ```
 
-| Property | Description |
+| Parameter | Description |
 | -------- | ----------- |
 | `{EXPORT_JOB_ID}` | The `id` of the export job you want to access. |
 
@@ -404,7 +405,7 @@ Experience Platform allows you to cancel an existing export job, which may be us
 DELETE /export/jobs/{EXPORT_JOB_ID}
 ```
 
-| Property | Description |
+| Parameter | Description |
 | -------- | ----------- |
 | `{EXPORT_JOB_ID}`| The `id` of the export job you want to access. |
 
@@ -486,3 +487,5 @@ To create an export job that only contains event data (no profile attributes), t
     }
   }
 ```
+
+To create an export job that includes
