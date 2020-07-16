@@ -7,11 +7,11 @@ topic: troubleshooting
 
 # CCPA FAQ
 
-This document provides answers to frequently asked questions about the California Consumer Protection Act (CCPA) and its implementation in Adobe Experience Cloud.
+This document provides answers to frequently asked questions about the [!DNL California Consumer Protection Act] (CCPA) and its implementation in Adobe Experience Cloud.
 
 ## What is CCPA?
 
-The California Consumer Privacy Act (CCPA) is California’s new privacy law that provides its residents with new rights regarding their personal information, and imposes data protection responsibilities on certain entities who conduct business in California.
+The [!DNL California Consumer Privacy Act] (CCPA) is California’s new privacy law that provides its residents with new rights regarding their personal information, and imposes data protection responsibilities on certain entities who conduct business in California.
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ Personal information is information “that identifies, relates to, describes, i
 
 ## What types of personal information or identifiers used in Adobe Experience Cloud are subject to these new requirements?
 
-The following identifiers are commonly used in Experience Cloud applications and could be subject to CCPA requirements:
+The following identifiers are commonly used in [!DNL Experience Cloud] applications and could be subject to CCPA requirements:
 
 - Name
 - Postal address
@@ -41,9 +41,9 @@ Personal information can also include internet or other electronic network activ
 - Search history
 - Information regarding a consumer's interaction with a website, application, or advertisement
 
-Even though CCPA covers a wide set of personal information, Adobe’s standard contract terms dictate that sensitive personal information (such as SSN, driver’s license information, financial account information, and biometric data) is generally prohibited from import and use in Experience Cloud applications.  
+Even though CCPA covers a wide set of personal information, Adobe’s standard contract terms dictate that sensitive personal information (such as SSN, driver’s license information, financial account information, and biometric data) is generally prohibited from import and use in [!DNL Experience Cloud] applications.  
 
-## How do CCPA's different roles and responsibilities apply to Experience Cloud?
+## How do CCPA's different roles and responsibilities apply to [!DNL Experience Cloud]?
 
 As defined by CCPA, the following roles apply to Adobe and its customers:
 
@@ -68,7 +68,7 @@ Adobe services may be used to enable certain data sharing and transfers to third
 
 ## How can I support consumer privacy requirements under CCPA if I maintain certain types of data that are covered by the requirements?
 
-Once you have taken the necessary steps to authenticate CA consumers, Adobe Experience Platform Privacy Service allows you to submit consumer privacy requests to compatible Experience Cloud applications. See the [Privacy Service overview](../home.md) for more information. For information on how your particular Experience Cloud applications can honor privacy requests, please refer to the guide on [Privacy Service and Experience Cloud applications](../experience-cloud-apps.md).
+Once you have taken the necessary steps to authenticate CA consumers, Adobe Experience Platform [!DNL Privacy Service] allows you to submit consumer privacy requests to compatible [!DNL Experience Cloud] applications. See the [Privacy Service overview](../home.md) for more information. For information on how your particular [!DNL Experience Cloud] applications can honor privacy requests, please refer to the guide on [Privacy Service and Experience Cloud applications](../experience-cloud-apps.md).
 
 >[!NOTE]
 >
