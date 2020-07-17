@@ -23,7 +23,7 @@ For more information on using this endpoint, please read the [export jobs endpoi
 
 Previews provide a paginated list of qualifying profiles for a segment definition, allowing you to compare the results against what you expect. You can use the `/preview` endpoint to create a new preview job or look up results of a specific preview job.
 
-Estimates provide statistical information for segment definitions, such as projected audience size and confidence interval. You can use the `/estimate` endpoint to view an estimate of a segment definition. 
+Estimates provide statistical information for segment definitions, such as projected audience size, confidence interval, and error standard deviation. You can use the `/estimate` endpoint to view an estimate of a segment definition. 
 
 For more information on using these endpoints, please read the [previews and estimates endpoints guide](./previews-and-estimates.md). 
 
@@ -47,7 +47,7 @@ For more information on using this endpoint, please read the [segment jobs endpo
 
 ## Segment search
 
-Segment search is used to search and index configurable fields contained across various data sources and return them in near real-time. To begin working with segment search, see the [search endpoint guide](segment-search.md)
+Segment search is used to search fields contained across various data sources and return them in near real-time. To begin working with segment search, see the [search endpoint guide](segment-search.md)
 
 ## Next steps
 

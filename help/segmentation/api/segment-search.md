@@ -7,7 +7,7 @@ topic: guide
 
 # Segment Search endpoint guide
 
-Segment Search is used to search and index configurable fields contained across various data sources and return them in near real-time. 
+Segment Search is used to search fields contained across various data sources and return them in near real-time. 
 
 This guide provides information to help you better understand Segment Search and includes sample API calls for performing basic actions using the API.
 

@@ -21,7 +21,7 @@ You can retrieve a list of all segment definitions for your IMS Organization by 
 
 **API format**
 
-The `/segment/definitions` endpoint supports several query parameters to help filter your results. While these parameters are optional, their use is strongly recommended to help reduce expensive overhead. Making a call to this endpoint with no parameters will retrieve all export jobs available for your organization. Multiple parameters can be included, separated by ampersands (`&`). 
+The `/segment/definitions` endpoint supports several query parameters to help filter your results. While these parameters are optional, their use is strongly recommended to help reduce expensive overhead. Making a call to this endpoint with no parameters will retrieve all segment definitions available for your organization. Multiple parameters can be included, separated by ampersands (`&`). 
 
 ```http
 GET /segment/definitions

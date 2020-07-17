@@ -7,7 +7,7 @@ topic: developer guide
 
 # Previews and estimates endpoints guide
 
-As you develop your segment definition, you can use the estimate and preview tools within [!DNL Adobe Experience Platform] to view summary-level information to help ensure you are isolating the expected audience. **Previews** provide paginated lists of qualifying profiles for a segment definition, allowing you to compare the results against what you expect. **Estimates** provide statistical information on a segment definition, such as the projected audience size and confidence interval. 
+As you develop your segment definition, you can use the estimate and preview tools within [!DNL Adobe Experience Platform] to view summary-level information to help ensure you are isolating the expected audience. **Previews** provide paginated lists of qualifying profiles for a segment definition, allowing you to compare the results against what you expect. **Estimates** provide statistical information on a segment definition, such as the projected audience size, confidence interval, and error standard deviation. 
 
 ## Getting started
 
@@ -164,7 +164,7 @@ A successful response returns HTTP status 200 with detailed information about th
 
 ## Retrieve the results of a specific estimate job {#get-estimate}
 
-Once you have created a preview job, you can use its `previewId` in the path of a GET request to the `/estimate` endpoint to view statistical information about the segment definition, including projected audience size and confidence interval.
+Once you have created a preview job, you can use its `previewId` in the path of a GET request to the `/estimate` endpoint to view statistical information about the segment definition, including projected audience size, confidence interval, and error standard deviation.
 
 **API format**
 
