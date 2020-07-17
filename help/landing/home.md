@@ -15,7 +15,7 @@ Adobe Experience Platform is the most powerful, flexible, and open system on the
 
 Built on open APIs, [!DNL Experience Platform] exposes the full functionality of the system to developers, supporting the easy integration of enterprise solutions using familiar tools. [!DNL Experience Platform] also supports partners to build and integrate their own products and technologies as needed. This power and flexibility makes [!DNL Experience Platform] unique in the market. It gives partners, customers, and a community of developers a foundation on which to build innovations that drive The Experience Business: exceeding customer expectations by delivering a continually improving, fully-personalized experience drawn from a 360-degree view of the customer and their individual preferences.
 
-The following videos outlines a hypothetical experience built with Adobe Experience Platform, as seen from the perspective of a customer. See how [!DNL Experience Platform] creates a rich, relevant and real-time experience.
+The following videos outline how [!DNL Experience Platform] creates rich, relevant, real-time experiences, first from the customer perspective, then from a behind-the-scenes technical perspective.
 
 **Customer perspective:**
 
