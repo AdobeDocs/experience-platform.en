@@ -63,11 +63,9 @@ The *[!UICONTROL Select schema]* dialog appears. Select the schema you wish to a
 
 Based on your needs, you can choose to map fields directly, or use mapper functions to transform source data to derive computed or calculated values. For more information on data mapping and mapper functions, refer to the tutorial on [mapping CSV data to XDM schema fields](../../../../ingestion/tutorials/map-a-csv-file.md).
 
-The *[!UICONTROL Mapping]* screen also allows you to set *[!UICONTROL Delta column]*. When the dataflow is created, you can set any timestamp field as a basis to decide which records to ingest in scheduled incremental ingestions.
-
 Once your source data is mapped, click **[!UICONTROL Next]**.
 
-![](../../../images/tutorials/dataflow/advertising/mapping.png)
+![](../../../images/tutorials/dataflow/all-tabular/mapping-updated.png)
 
 ## Schedule ingestion runs
 

@@ -55,7 +55,7 @@ You can attach a schema field by typing a schema name in the **[!UICONTROL Selec
 
 ![](../../../images/tutorials/dataflow/databases/new-dataset.png)
 
-The *[!UICONTROL Select schema] dialog appears. Select the schema you wish to apply to the new dataset, then click **[!UICONTROL Done]**.
+The *[!UICONTROL Select schema]* dialog appears. Select the schema you wish to apply to the new dataset, then click **[!UICONTROL Done]**.
 
 ![](../../../images/tutorials/dataflow/databases/select-existing-schema.png)
 
@@ -63,7 +63,7 @@ Based on your needs, you can choose to map fields directly, or use mapper functi
 
 Once your source data is mapped, click **[!UICONTROL Next]**.
 
-![](../../../images/tutorials/dataflow/databases/mapping.png)
+![](../../../images/tutorials/dataflow/all-tabular/mapping-updated.png)
 
 ## Schedule ingestion runs
 

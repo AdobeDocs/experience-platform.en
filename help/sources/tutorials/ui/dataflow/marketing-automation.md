@@ -65,7 +65,7 @@ Based on your needs, you can choose to map fields directly, or use mapper functi
 
 Once your source data is mapped, click **[!UICONTROL Next]**.
 
-![](../../../images/tutorials/dataflow/marketing-automation/mapping.png)
+![](../../../images/tutorials/dataflow/all-tabular/mapping-updated.png)
 
 ## Schedule ingestion runs
 

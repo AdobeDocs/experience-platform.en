@@ -61,6 +61,8 @@ Based on your needs, you can choose to map fields directly, or use mapper functi
 
 Once your source data is mapped, click **[!UICONTROL Next]**.
 
+![](../../../images/tutorials/dataflow/all-tabular/mapping-updated.png)
+
 ## Schedule ingestion runs
 
 The *[!UICONTROL Scheduling]* step appears, allowing you to configure an ingestion schedule to automatically ingest the selected source data using the configured mappings. The following table outlines the different configurable fields for scheduling:
