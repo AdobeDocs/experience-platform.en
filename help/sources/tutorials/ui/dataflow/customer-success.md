@@ -73,17 +73,29 @@ The *[!UICONTROL Scheduling]* step appears, allowing you to configure an ingesti
 
 | Field | Description |
 | --- | --- |
-| Frequency | Selectable frequencies include Minute, Hour, Day, and Week. |
+| Frequency | Selectable frequencies include Once, Minute, Hour, Day, and Week. |
 | Interval | An integer that sets the interval for the selected frequency. |
-| Start time | A UTC timestamp for which the very first ingestion will occur. |
-| Backfill | A boolean value that determines what data is initially ingested. If *[!UICONTROL Backfill]* is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If *[!UICONTROL Backfill]* is disabled, only the files that are loaded in between the first run of ingestion and the *[!UICONTROL Start time]* will be ingested. Files loaded prior to *[!UICONTROL Start time]* will not be ingested. |
+| Start time | A UTC timestamp indicating when the very first ingestion is set to occur |
+| Backfill | A boolean value that determines what data is initially ingested. If *Backfill* is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If *Backfill* is disabled, only the files that are loaded in between the first run of ingestion and the *Start time* will be ingested. Files loaded prior to *Start time* will not be ingested. |
+| Delta Column | An option with a filtered set of source schema fields of type, date, or time. This field is used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column. |
 
-Dataflows are designed to automatically ingest data on a scheduled basis. If you wish to only ingest once through this workflow, you can do so by configuring the **[!UICONTROL Frequency]** to "Day" and applying a very large number for the **[!UICONTROL Interval]**, such as 10000 or similar.
+Dataflows are designed to automatically ingest data on a scheduled basis. Start by selecting the ingestion frequency. Next, set the interval to designate the period between two flow runs. The interval's value should be a non-zero integer and should be set to greater than or equal to 15.
 
-Provide values for the schedule and click **[!UICONTROL Next]**.
+To set the start time for ingestion, adjust the date and time displayed in the start time box. Alternatively, you can select the calendar icon to edit the start time value. Start time must be greater than or equal to your current UTC time.
 
-![scheduling](../../../images/tutorials/dataflow/customer-success/scheduling.png)
+Select **[!UICONTROL Load incremental data by]** to assign the delta column. This field provides a distinction between new and existing data.
 
+![](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
+
+### Set up a one-time ingestion dataflow
+
+To set up one-time ingestion, select the frequency drop down arrow and select **[!UICONTROL Once]**.
+
+>[!TIP] **[!UICONTROL Interval]** and **[!UICONTROL Backfill]** are not visible during a one-time ingestion.
+
+![](../../../images/tutorials/dataflow/databases/schedule-once.png)
+
+Once you have provided appropriate values to the schedule, select **[!UICONTROL Next]**.
 
 ## Review your dataflow
 
@@ -97,23 +109,9 @@ Once you have reviewed your dataflow, click **[!UICONTROL Finish]** and allow so
 
 ![review](../../../images/tutorials/dataflow/customer-success/review.png)
 
-## Monitor your dataflow
+## Monitor and delete your dataflow
 
-Once your dataflow has been created, you can monitor the data that is being ingested through it. Follow the steps below to access a dataflow's dataset monitor.
-
-Within the *[!UICONTROL Sources]* workspace, select the customer success source you wish to view under the *[!UICONTROL Customer Success]* category. Select *[!UICONTROL Connect Source]* to launch the authentication interface. To view an existing dataflow, select *[!UICONTROL Existing account]* and select the account you wish to access.
-
-![monitor](../../../images/tutorials/dataflow/customer-success/monitor.png)
-
- The *[!UICONTROL Source activity]* screen appears. From here, click the name of a dataset whose activity you want to monitor.
-
- ![select-dataflow-dataset](../../../images/tutorials/dataflow/customer-success/select-dataflow-dataset.png)
-
- The *[!UICONTROL Dataset activity]* screen appears. This page displays the rate of messages being consumed in the form of a graph.
-
- ![dataset-activity](../../../images/tutorials/dataflow/customer-success/dataset-activity.png)
-
- For more information on monitoring datasets and ingestion, refer to the tutorial on [monitoring streaming dataflows](../../../../ingestion/quality/monitor-data-flows.md).
+Once your dataflow has been created, you can monitor the data that is being ingested through it. For more information on how to monitor and delete your dataflow, see the tutorial on [monitoring and deleting dataflows](../monitor.md).
 
 ## Next steps
 

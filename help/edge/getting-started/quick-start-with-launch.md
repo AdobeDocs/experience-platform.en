@@ -24,8 +24,9 @@ You can create a configuration ID by using the [edge configuration tool](../fund
 
 The Experience Platform Edge Network takes data as XDM. XDM is a data format that lets you define schemas. The schema defines how the Edge Network expects the data to be formatted. To send data you will need to define your schema. Make sure you complete the following:
 
-- [Create a schema](../../xdm/tutorials/create-schema-ui.md)
-- Add the Adobe Experience Platform Web SDK mixin to the schema you created
+1. [Create a schema](../../xdm/tutorials/create-schema-ui.md)
+2. Add the AEP Web SDK ExperienceEvent Mixin to the schema you created.
+3. Create a Dataset from the schema you created.
 
 The following video is intended to support you in creating a schema, dataset, and streaming source connector for your Web SDK data.
 
