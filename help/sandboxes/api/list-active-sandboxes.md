@@ -9,7 +9,7 @@ topic: developer guide
 
 >[!NOTE]
 >
->Unlike other endpoints provided in the Sandbox API, this endpoint is available for all users, including those without Sandbox Administration access permissions.
+>Unlike other endpoints provided in the Sandbox API, this endpoint is available for all users, including those without Sandbox Administration access permissions. Also, the 'x-sandbox-name' header can be omitted (as described in the Sandboxes Overview section) as the purpose of this API call may be to learn the available names in the first place.
 
 You can list the sandboxes that are active for the current user by making a GET request to the root (`/`) endpoint.
 
@@ -23,7 +23,7 @@ GET /
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/sandbox-management \
+  https://platform.adobe.io/data/foundation/sandbox-management/ \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
