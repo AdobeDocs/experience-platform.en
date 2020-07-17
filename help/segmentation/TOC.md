@@ -7,6 +7,7 @@ user-guide-title: Adobe Experience Platform Segmentation Service Help
 # Adobe Experience Platform Segmentation Service Help {#segmentation}
 
 - [Overview](home.md)
+- [Segmentation data types](data-types.md)
 - Segmentation API {#api}
     - [Getting started](api/getting-started.md)
     - [Segment definitions](api/segment-definitions.md)
@@ -33,7 +34,6 @@ user-guide-title: Adobe Experience Platform Segmentation Service Help
 - Tutorials {#tutorials}
     - [Create a segment](tutorials/create-a-segment.md)
     - [Evaluate a segment](tutorials/evaluate-a-segment.md)
-    - [Export data](tutorials/export-data.md)
     - [Create a dataset to export data](tutorials/create-dataset-export-segment.md)
     - [Enforce data usage compliance for segments](tutorials/governance.md)
 - [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)

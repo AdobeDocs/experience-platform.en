@@ -5,42 +5,38 @@ title: Segment jobs
 topic: developer guide
 ---
 
-# Segment jobs developer guide
+# Segment jobs endpoint guide
 
-A segment job is an asynchronous process that creates a new audience segment. It references a segment definition, as well as any merge policies controlling how Real-time Customer Profile merges overlapping attributes across your profile fragments. When a segment job successfully completes, you can gather various information about the segment, such as any errors that may have occurred during processing and the ultimate size of your audience.
+A segment job is an asynchronous process that creates a new audience segment. It references a [segment definition](./segment-definitions.md), as well as any [merge policies](../../profile/api/merge-policies.md) controlling how [!DNL Real-time Customer Profile] merges overlapping attributes across your profile fragments. When a segment job successfully completes, you can gather various information about the segment, such as any errors that may have occurred during processing and the ultimate size of your audience.
 
 This guide provides information to help you better understand segment jobs and includes sample API calls for performing basic actions using the API.
 
 ## Getting started
 
-The API endpoints used in this guide are part of the Segmentation API. Before continuing, please review the [Segmentation developer guide](./getting-started.md).
+The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
 
-In particular, the [getting started section](./getting-started.md#getting-started) of the Segmentation developer guide includes links to related topics, a guide to reading the sample API calls in the document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
-
-## Retrieve a list of segment jobs
+## Retrieve a list of segment jobs {#retrieve-list}
 
 You can retrieve a list of all segment jobs for your IMS Organization by making a GET request to the `/segment/jobs` endpoint.
 
 **API format**
+
+The `/segment/jobs` endpoint supports several query parameters to help filter your results. While these parameters are optional, their use is strongly recommended to help reduce expensive overhead. Making a call to this endpoint with no parameters will retrieve all export jobs available for your organization. Multiple parameters can be included, separated by ampersands (`&`). 
 
 ```http
 GET /segment/jobs
 GET /segment/jobs?{QUERY_PARAMETERS}
 ```
 
-- `{QUERY_PARAMETERS}`: (*Optional*) Parameters added to the request path which configure the results returned in the response. Multiple parameters can be included, separated by ampersands (`&`). The available parameters are listed below.
-
 **Query parameters**
 
-The following is a list of available query parameters for listing segment jobs. All of these parameters are optional. Making a call to this endpoint with no parameters will retrieve all segment jobs available for your organization.
-
-| Parameter | Description |
-| --------- | ----------- |
-| `start` | Specifies the starting offset for the segment jobs returned. |
-| `limit` | Specifies the number of segment jobs returned per page. |
-| `status` | Filters the results based on status. The supported values are NEW, QUEUED, PROCESSING, SUCCEEDED, FAILED, CANCELLING, CANCELLED |
-| `sort` | Orders the segment jobs returned. Is written in the format `[attributeName]:[desc|asc]`. |
-| `property` | Filters segment jobs and gets exact matches for the filter given. It can be written in either of the following formats: <ul><li>`[jsonObjectPath]==[value]` - filtering on the object key</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filtering within the array</li></ul> |
+| Parameter | Description | Example |
+| --------- | ----------- | ------- |
+| `start` | Specifies the starting offset for the segment jobs returned. | `start=1` |
+| `limit` | Specifies the number of segment jobs returned per page. | `limit=20` |
+| `status` | Filters the results based on status. The supported values are NEW, QUEUED, PROCESSING, SUCCEEDED, FAILED, CANCELLING, CANCELLED | `status=NEW` |
+| `sort` | Orders the segment jobs returned. Is written in the format `[attributeName]:[desc|asc]`. | `sort=creationTime:desc` |
+| `property` | Filters segment jobs and gets exact matches for the filter given. It can be written in either of the following formats: <ul><li>`[jsonObjectPath]==[value]` - filtering on the object key</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filtering within the array</li></ul> | `property=segments~segmentId==workInUS` |
 
 **Request**
 
@@ -150,9 +146,18 @@ A successful response returns HTTP status 200 with a list of segment jobs for th
 }
 ```
 
-## Create a new segment job
+| Property | Description |
+| -------- | ----------- |
+| `id` | A system-generated read-only identifier for the segment job. | 
+| `status` | The current status for the segment job. Potential values for the status include "NEW", "PROCESSING", "CANCELLING", "CANCELLED", "FAILED", and "SUCCEEDED". |
+| `segments` | An object that contains information about the segment definitions returned within the segment job. |
+| `segments.segment.id` | The ID of the segment definition. |
+| `segments.segment.expression` | An object that contains information about the segment definition's expression, written in PQL. |
+| `metrics` | An object that contains diagnostic information about the segment job. |
 
-You can create a new segment job by making a POST request to the `/segment/jobs` endpoint.
+## Create a new segment job {#create}
+
+You can create a new segment job by making a POST request to the `/segment/jobs` endpoint and including in the body the ID of the segment definition from which you would like to create a new audience.
 
 **API format**
 
@@ -174,9 +179,12 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
   {
     "segmentId": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
   }
-]
- '
+]'
 ```
+
+| Property | Description |
+| -------- | ----------- |
+| `segmentId` | The ID of the segment definition that you want to create a segment job for. More information about segment definitions can be found in the [segment definition endpoint guide](./segment-definitions.md). |
 
 **Response**
 
@@ -233,9 +241,17 @@ A successful response returns HTTP status 200 with details of your newly created
 }
 ```
 
-## Retrieve a specific segment job
+| Property | Description |
+| -------- | ----------- |
+| `id` | A system-generated read-only identifier for the newly created segment job. | 
+| `status` | The current status for the segment job. Since the segment job is newly created, the status will always be "NEW". |
+| `segments` | An object that contains information about the segment definitions that this segment job is running for. |
+| `segments.segment.id` | The ID of the segment definition that you provided. |
+| `segments.segment.expression` | An object that contains information about the segment definition's expression, written in PQL. |
 
-You can retrieve detailed information about a specific segment job by making a GET request to the `/segment/jobs` endpoint and providing the segment job's `id` value in the request path.
+## Retrieve a specific segment job {#get}
+
+You can retrieve detailed information about a specific segment job by making a GET request to the `/segment/jobs` endpoint and providing the ID of the segment job you wish to retrieve in the request path.
 
 **API format**
 
@@ -321,9 +337,18 @@ A successful response returns HTTP status 200 with detailed information about th
 }
 ```
 
-## Bulk retrieve segment jobs
+| Property | Description |
+| -------- | ----------- |
+| `id` | A system-generated read-only identifier for the segment job. | 
+| `status` | The current status for the segment job. Potential values for the status include "NEW", "PROCESSING", "CANCELLING", "CANCELLED", "FAILED", and "SUCCEEDED". |
+| `segments` | An object that contains information about the segment definitions returned within the segment job. |
+| `segments.segment.id` | The ID of the segment definition. |
+| `segments.segment.expression` | An object that contains information about the segment definition's expression, written in PQL. |
+| `metrics` | An object that contains diagnostic information about the segment job. |
 
-You can retrieve detailed information about multiple specified segment jobs by making a POST request to the `/segment/jobs/bulk-get` endpoint and providing the  `id` values of the segment jobs in the request body.
+## Bulk retrieve segment jobs {#bulk-get}
+
+You can retrieve detailed information about multiple segment jobs by making a POST request to the `/segment/jobs/bulk-get` endpoint and providing the  `id` values of the segment jobs in the request body.
 
 **API format**
 
@@ -419,9 +444,21 @@ A successful response returns HTTP status 207 with the requested segment jobs.
 }
 ```
 
-## Cancel or delete a specific segment job
+| Property | Description |
+| -------- | ----------- |
+| `id` | A system-generated read-only identifier for the segment job. | 
+| `status` | The current status for the segment job. Potential values for the status include "NEW", "PROCESSING", "CANCELLING", "CANCELLED", "FAILED", and "SUCCEEDED". |
+| `segments` | An object that contains information about the segment definitions returned within the segment job. |
+| `segments.segment.id` | The ID of the segment definition. |
+| `segments.segment.expression` | An object that contains information about the segment definition's expression, written in PQL. |
 
-You can request to delete a specified segment job by making a DELETE request to the `/segment/jobs` endpoint and providing the segment job's `id` value in the request path.
+## Cancel or delete a specific segment job {#delete}
+
+You can delete a specific segment job by making a DELETE request to the `/segment/jobs` endpoint and providing the ID of the segment job you wish to delete in the request path.
+
+>[!NOTE]
+>
+>The API response to the delete request is immediate. However, the actual deletion of the segment job is asynchronous. In other words, there is a time difference between when the delete request to the segment job is made and when it is applied.
 
 **API format**
 
@@ -456,4 +493,4 @@ A successful response returns HTTP status 204 with the following information.
 
 ## Next steps
 
-After reading this guide you now have a better understanding of how segment jobs work. For more information on Segmentation, please read the [Segmentation overview](../home.md).
+After reading this guide you now have a better understanding of how segment jobs work.

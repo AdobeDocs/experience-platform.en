@@ -1,23 +1,21 @@
 ---
 keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;
 solution: Adobe Experience Platform
-title: Segmentation API developer guide
+title: Segment search endpoint guide
 topic: guide
 ---
 
-# Segment Search
+# Segment Search endpoint guide
 
-Segment Search is used to search and index configurable fields contained across various data sources and return them in near real-time. 
+Segment Search is used to search fields contained across various data sources and return them in near real-time. 
 
 This guide provides information to help you better understand Segment Search and includes sample API calls for performing basic actions using the API.
 
 ## Getting started
 
-The API endpoints used in this guide are part of the Segmentation API. Before continuing, please review the [Segmentation developer guide](getting-started.md).
+The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
 
-In particular, the [getting started section](getting-started.md) of the Segmentation developer guide includes links to related topics, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to the Experience Platform API.
-
-In addition to the required headers outlined in the getting started section, all requests to the Segment Search API require the following additional header:
+In addition to the required headers outlined in the getting started section, all requests to the Segment Search endpoint require the following additional header:
 
 - x-ups-search-version: "1.0"
 
@@ -216,7 +214,7 @@ A successful response returns HTTP status 200 with detailed structural informati
 
 ## Next steps
 
-After reading this guide you now have a better understanding of how Segment Search works. For more information on Segmentation, please read the [Segmentation overview](../home.md).
+After reading this guide you now have a better understanding of how Segment Search works.
 
 ## Appendix {#appendix}
 
