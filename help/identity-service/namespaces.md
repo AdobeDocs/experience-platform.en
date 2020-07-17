@@ -51,7 +51,7 @@ You can then click on one of the namespaces listed to view details.
 
 ![](./images/standard-namespace-detail.png)
 
-## Managing namespaces for your organization
+## Managing namespaces for your organization {#manage-namespaces}
 
 Depending on your organizational data and use cases, you may require custom namespaces.
 
