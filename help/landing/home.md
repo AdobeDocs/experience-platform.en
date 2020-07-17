@@ -51,7 +51,7 @@ The Adobe Experience Platform website and associated websites, such as the Adobe
 <tr>
   <td>Windows 7</td>
   <td>Google Chrome</td>
-  <td style="text-align:center">-</td>
+  <td> </td>
   <td>Firefox</td>
 </tr>
 </table>
