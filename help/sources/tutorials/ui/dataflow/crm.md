@@ -49,11 +49,13 @@ The _Select dataset_ dialog appears. Find the dataset you you wish to use, selec
 
 ### Use a new dataset
 
-To ingest data into a new dataset, select **[!UICONTROL Create new dataset]** and enter a name and description for the dataset in the fields provided. Next, click the schema icon.
+To ingest data into a new dataset, select **[!UICONTROL Create new dataset]** and enter a name and description for the dataset in the fields provided.
 
-![use-new-dataset](../../../images/tutorials/dataflow/crm/use-new-dataset.png)
+You can attach a schema field by entering a schema name in the **[!UICONTROL Select schema]** search bar. You can also select the drop down icon to see a list of existing schemas. Alternatively, you can select **[!UICONTROL Advanced search]** to access screen of existing schemas including their respective details.
 
-The _Select schema_ dialog appears. Select the schema you wish to apply to the new dataset, then click **[!UICONTROL Done]**.
+![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
+
+The *[!UICONTROL Select schema]* dialog appears. Select the schema you wish to apply to the new dataset, then click **[!UICONTROL Done]**.
 
 ![select-schema](../../../images/tutorials/dataflow/crm/select-schema.png)
 
