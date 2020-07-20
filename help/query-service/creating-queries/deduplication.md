@@ -22,7 +22,9 @@ This document outlines sub-select and full sample query examples for deduplicati
 
 In the case of duplicate ExperienceEvents, you will likely wish to ignore the entire row.
 
->[!CAUTION] Many DataSets in Experience Platform, including those produced by the Adobe Analytics Data Connector, already have ExperienceEvent-level deduplication applied. Therefore, reapplying this level of deduplication is unnecessary and will slow down your query. It is important to understand the source of your DataSets and know if deduplication at the ExperienceEvent-level has already been applied. For any DataSets that are streamed (for example, those from Adobe Target), you will need to apply ExperienceEvent-level deduplication because those data sources have 'at-least-once' semantics.
+>[!CAUTION]
+>
+>Many DataSets in Experience Platform, including those produced by the Adobe Analytics Data Connector, already have ExperienceEvent-level deduplication applied. Therefore, reapplying this level of deduplication is unnecessary and will slow down your query. It is important to understand the source of your DataSets and know if deduplication at the ExperienceEvent-level has already been applied. For any DataSets that are streamed (for example, those from Adobe Target), you will need to apply ExperienceEvent-level deduplication because those data sources have 'at-least-once' semantics.
 
 **Scope:** Global
 

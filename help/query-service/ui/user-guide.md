@@ -85,7 +85,9 @@ All queries executed from Query Editor are captured in the Log table. You can us
 
 See the [Query Service UI overview][query-service-ui] for more information. 
 
->[!NOTE] Queries that are not executed are not saved by the Log. In order for the query to be available in Query Service, it must be run or saved in Query Editor.
+>[!NOTE]
+>
+>Queries that are not executed are not saved by the Log. In order for the query to be available in Query Service, it must be run or saved in Query Editor.
 
 ## Executing queries using Query Editor
 
@@ -97,13 +99,21 @@ The console provides information on the status and operation of Query Service. T
 
 ![Image](../images/queries/query-editor-overview/console.png)
 
->[!NOTE] The console only shows errors that resulted from executing a query. It does not show query validation errors before a query is executed.
+>[!NOTE]
+>
+>The console only shows errors that resulted from executing a query. It does not show query validation errors before a query is executed.
 
 ### Query results
 
 After a query has completed, the results are displayed in the *Results* tab, next to the *Console* tab. This view shows the tabular output of your query, displaying up to 100 rows. This view allows you to verify that your query produces the expected output. To generate a dataset with your query, remove limits on rows returned, and run the query with `CREATE TABLE tablename AS SELECT` to generate a dataset with the output. See the [generating datasets tutorial][query-service-create-datasets] for instructions on how to generate a dataset from query results in Query Editor.
 
 ![Image](../images/queries/query-editor-overview/query-results.png)
+
+## Run queries with Query Service tutorial video
+
+The following video shows how to run queries in the Adobe Experience Platform interface and in a PSQL client. Additionally, using individual properties in an XDM object, using Adobe-defined functions, and using CREATE TABLE AS SELECT (CTAS) are demonstrated.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
 ## Next steps
 

@@ -9,7 +9,9 @@ topic: overview
 
 Multi-entity segmentation is the ability to extend Profile data with additional data based on products, stores, or other non-profile classes. Once connected, data from additional classes becomes available as if they were native to the Profile schema.
 
-For more information about multi-entity segmentation, please read the [segmentation overview](./home.md).
+To learn more about multi-entity segmentation, please continue reading the documentation and supplement your learning by watching the video below or exploring the [segmentation overview](./home.md).]
+
+>[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
 
 ## Getting started
 
@@ -25,14 +27,14 @@ Defining relationships with the structure of your Experience Data Model (XDM) sc
 
 This process can be done either using the Schema Registry API or the Schema Editor. For a detailed guide on using the API to define a relationship between two schemas, please read [the tutorial on defining a relationship between two schemas using the API](../xdm/tutorials/relationship-api.md). For a detailed guide on using the Schema Editor to define a relationship between two schemas, please read [the tutorial on defining a relationship between two schemas using the Schema Editor](../xdm/tutorials/relationship-ui.md).
 
-## How to use create segments that use XDM relationships
+## How to create segments that use XDM relationships
 
-Once you have defined your XDM relationships, you can use the Real-time Customer Profile APIs to build a segment.
+Once you have defined your XDM relationships, you can use the Segmentation Service API to build a segment.
 
-This process can be done either using the Real-time Customer Profile API or the Segment Builder. For a detailed guide on using the API to build a segment, please read [the tutorial on creating a segment using the Real-time Customer Profile API](./tutorials/create-a-segment.md). For a detailed guide on using the Segment Builder to build a segment, please read [the Segment Builder user guide](./ui/overview.md).
+This process can be done either using the Segmentation API or the Segment Builder user interface. For a detailed guide on using the API to build a segment, please read [the tutorial on creating a segment using the Segmentation API](./tutorials/create-a-segment.md). For a detailed guide on using the Segment Builder to build a segment, please read [the Segment Builder user guide](./ui/overview.md).
 
 ## How to evaluate and access segments for multi-entity segments
 
-After creating a segment, you can evaluate and access the segment results using the Real-time Customer Profile APIs. Evaluating a multi-entity segment is very similar to evaluating a regular segment.
+After creating a segment, you can evaluate and access the segment results using the [!DNL Segmentation Service] API. Evaluating a multi-entity segment is very similar to evaluating a regular segment.
 
-This process can only be done using the Real-time Customer Profile API. For a detailed guide on using the API to evaluate and access segments, please read [the tutorial on evaluating and accessing segments](./tutorials/evaluate-a-segment.md).
+This process can only be done using the [!DNL Segmentation Service] API. For a detailed guide on using the API to evaluate and access segments, please read the tutorial on [evaluating and accessing segments](./tutorials/evaluate-a-segment.md).

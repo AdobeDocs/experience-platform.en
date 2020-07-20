@@ -13,7 +13,9 @@ Model development and training occurs at the Experiment level, where an Experime
 
 You can create an Experiment by performing a POST request while providing a name and a valid MLInstance ID in the request payload.
 
->[!NOTE] Unlike model training in the UI, creating an Experiment through an explicit API call does not automatically create and execute a training run.
+>[!NOTE]
+>
+>Unlike model training in the UI, creating an Experiment through an explicit API call does not automatically create and execute a training run.
 
 **API Format**
 
@@ -235,7 +237,9 @@ A successful response returns a payload containing the details of the requested 
 
 You can retrieve a list of training or scoring runs belonging to a particular Experiment by performing a single GET request and providing a valid Experiment ID. To help filter results, you can specify query parameters in the request path. For a complete list of available query parameters, see the appendix section on [query parameters for asset retrieval](./appendix.md#query).
 
->[!NOTE] When combining multiple query parameters, they must be separated by ampersands (&).
+>[!NOTE]
+>
+>When combining multiple query parameters, they must be separated by ampersands (&).
 
 **API Format**
 
@@ -294,7 +298,9 @@ A successful response returns a payload containing a list of runs and each of th
 
 You can update an existing Experiment by overwriting its properties through a PUT request that includes the target Experiment's ID in the request path and providing a JSON payload containing updated properties.
 
->[!TIP] In order to ensure the success of this PUT request, it is suggested that first you perform a GET request to [retrieve the Experiment by ID](#retrieve-specific). Then, modify and update the returned JSON object and apply the entirety of the modified JSON object as the payload for the PUT request.
+>[!TIP]
+>
+>In order to ensure the success of this PUT request, it is suggested that first you perform a GET request to [retrieve the Experiment by ID](#retrieve-specific). Then, modify and update the returned JSON object and apply the entirety of the modified JSON object as the payload for the PUT request.
 
 The following sample API call updates an Experiments's name while having these properties initially:
 

@@ -5,26 +5,24 @@ title: Segmentation Service developer guide
 topic: developer guide
 ---
 
-# Segmentation Service developer guide
+# Getting started with [!DNL Segmentation Service] {#getting-started}
 
-Segmentation allows you to build segments and generate audiences in Adobe Experience Platform from your Real-time Customer Profile data.
+Adobe Experience Platform Segmentation Service allows you to build segments and generate audiences in Adobe Experience Platform from your [!DNL Real-time Customer Profile] data.
 
-## Getting started
+The developer guide requires a working understanding of the various Experience Platform services involved with using [!DNL Segmentation Service].
 
-This guide requires a working understanding of the various Adobe Experience Platform services involved with using Segmentation.
-
-- [Segmentation](../home.md): Allows you to build audience segments from Real-time Customer Profile data.
-- [Experience Data Model (XDM) System](../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-- [Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+- [!DNL Segmentation](../home.md): Allows you to build audience segments from Real-time Customer Profile data.
+- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+- [!DNL Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 - [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully use Segmentation using the API.
+The following sections provide additional information that you will need to know in order to successfully work with the [!DNL Segmentation] API.
 
-### Reading sample API calls
+## Reading sample API calls
 
-The Segmentation Service API documentation provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the Experience Platform troubleshooting guide.
+The [!DNL Segmentation Service] API documentation provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the Experience Platform troubleshooting guide.
 
-### Required headers
+## Required headers
 
 The API documentation also requires you to have completed the [authentication tutorial](../../tutorials/authentication.md) in order to successfully make calls to Platform endpoints. Completing the authentication tutorial provides the values for each of the required headers in Experience Platform API calls, as shown below:
 
@@ -32,11 +30,13 @@ The API documentation also requires you to have completed the [authentication tu
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in Experience Platform are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox in which the operation will take place:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox in which the operation will take place:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
   
->[!NOTE] For more information on working with sandboxes in Experience Platform, see the [sandboxes overview documentation](../../sandboxes/home.md).
+>[!NOTE]
+>
+>For more information on working with sandboxes in [!DNL Experience Platform], see the [sandboxes overview documentation](../../sandboxes/home.md).
 
 <!-- ## Estimates
 
@@ -86,4 +86,4 @@ Segment search is used to search and index configurable fields contained across 
 
 ## Next steps
 
-To begin making calls using the Segmentation API, select one of the sub-guides to learn how to use specific Segmentation-related endpoints. To learn more about working with segments using the Platform UI, see the [Segmentation user guide](../ui/overview.md).
+To being making calls using the [!DNL Segmentation Service] API, select one of the available endpoint guides either using the left navigation or within the [developer guide overview](./overview.md)

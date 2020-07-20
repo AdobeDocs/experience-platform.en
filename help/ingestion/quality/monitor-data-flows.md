@@ -27,7 +27,9 @@ By default, the top graph shows the rate of ingestion over the past seven days. 
 
 The bottom graph shows the rate of successfully processed streamed events by Profile over the past seven days. This date range can be adjusted to show various periods of time by clicking the highlighted button.
 
-> [!NOTE] In order for data to show up on this graph, the data must be **explicitly** enabled for Profile. To learn how to enable streaming data for Profile, read the [datasets user guide](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
+>[!NOTE]
+>
+>In order for data to show up on this graph, the data must be **explicitly** enabled for Profile. To learn how to enable streaming data for Profile, read the [datasets user guide](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-bottom-graph.png)
 

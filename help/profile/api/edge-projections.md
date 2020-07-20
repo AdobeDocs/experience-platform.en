@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Real-time Customer Profile API developer guide
+title: Edge projections - Real-time Customer Profile API
 topic: guide
 ---
 
 # Edge projection configurations and destinations endpoints
 
-In order to drive coordinated, consistent, and personalized experiences for your customers across multiple channels in real-time, the right data needs to be readily available and continuously updated as changes happen. Adobe Experience Platform enables this real-time access to data through the use of what are known as edges. An edge is a geographically placed server that stores data and makes it readily accessible to applications. For example, Adobe applications such as Adobe Target and Adobe Campaign use edges in order to provide personalized customer experiences in real-time. Data is routed to an edge by a projection, with a projection destination defining the edge to which data will be sent, and a projection configuration defining the specific information that will be made available on the edge. This guide provides detailed instructions for using the Real-time Customer Profile API to work with edge projections, including destinations and configurations.
+In order to drive coordinated, consistent, and personalized experiences for your customers across multiple channels in real-time, the right data needs to be readily available and continuously updated as changes happen. Adobe Experience Platform enables this real-time access to data through the use of what are known as edges. An edge is a geographically placed server that stores data and makes it readily accessible to applications. For example, Adobe applications such as Adobe Target and Adobe Campaign use edges in order to provide personalized customer experiences in real-time. Data is routed to an edge by a projection, with a projection destination defining the edge to which data will be sent, and a projection configuration defining the specific information that will be made available on the edge. This guide provides detailed instructions for using the [!DNL Real-time Customer Profile] API to work with edge projections, including destinations and configurations.
 
 ## Getting started
 
-The API endpoint used in this guide is part of the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The API endpoint used in this guide is part of the [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 >[!NOTE]
 >Requests that contain a payload (POST, PUT, PATCH) require a `Content-Type` header. More than one `Content-Type` is used in this document. Please pay special attention to the headers in the sample calls to ensure you are using the correct `Content-Type` for each request.
@@ -318,7 +318,7 @@ The delete request returns HTTP status 204 (No Content) and an empty response bo
 
 ## Projection configurations
 
-Projection configurations provide information regarding what data should be available on each edge. Rather than projecting a complete Experience Data Model (XDM) schema to the edge, a projection provides only specific data, or fields, from the schema. Your organization can define more than one projection configuration for each XDM schema.
+Projection configurations provide information regarding what data should be available on each edge. Rather than projecting a complete [!DNL Experience Data Model] (XDM) schema to the edge, a projection provides only specific data, or fields, from the schema. Your organization can define more than one projection configuration for each XDM schema.
 
 ### List all projection configurations
 
@@ -342,7 +342,7 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 
 **Request**
 
-The following request lists all projection configurations associated with the Experience Data Model schema class, XDM Individual Profile. For more information on XDM and its role within Platform, please begin by reading the [XDM System overview](../../xdm/home.md).
+The following request lists all projection configurations associated with the [!DNL Experience Data Model] schema class, [!DNL XDM Individual Profile]. For more information on XDM and its role within [!DNL Platform], please begin by reading the [XDM System overview](../../xdm/home.md).
 
 ```shell
 curl -X GET \

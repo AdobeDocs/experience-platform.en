@@ -5,7 +5,7 @@ title: Segment Builder UI guide
 topic: ui guide
 ---
 
-# [!UICONTROL Segment Builder] user guide
+# [!DNL Segment Builder] user guide
 
 [!DNL Adobe Experience Platform Segmentation Service] provides a RESTful API and user interface for creating segment definitions from [!DNL Real-time Customer Profile] data.
 
@@ -34,9 +34,9 @@ Clicking **[!UICONTROL Create segment]** in the top-right corner opens the Segme
 
 ![](../images/segment-builder/segment-browse.png)
 
-## [!UICONTROL Segment Builder] workspace 
+## [!DNL Segment Builder] workspace 
 
-[!UICONTROL Segment Builder] provides a rich workspace that allows you to interact with [!DNL Profile] data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. 
+[!DNL Segment Builder] provides a rich workspace that allows you to interact with [!DNL Profile] data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. 
 
 ![](../images/segment-builder/segment-builder.png)
 
@@ -44,7 +44,7 @@ Clicking **[!UICONTROL Create segment]** in the top-right corner opens the Segme
 
 The basic building blocks of segment definitions are **[!UICONTROL Attributes]** and **[!UICONTROL Events]**. In addition, the attributes and events contained in existing **[!UICONTROL Audiences]** can also be used as components for new definitions. 
 
-You can see these building blocks in the *Fields* section on the left side of the [!UICONTROL Segment Builder] workspace. *[!UICONTROL Fields]* contains a tab for each of the main building blocks: **[!UICONTROL Attributes]**, **[!UICONTROL Events]**, and **[!UICONTROL Audiences]**.
+You can see these building blocks in the *[!UICONTROL Fields]* section on the left side of the [!DNL Segment Builder] workspace. *[!UICONTROL Fields]* contains a tab for each of the main building blocks: **[!UICONTROL Attributes]**, **[!UICONTROL Events]**, and **[!UICONTROL Audiences]**.
 
 ![](../images/segment-builder/segment-fields.png)
 
@@ -62,7 +62,9 @@ In addition to being able to browse for [!DNL ExperienceEvent] elements, you can
 
 Any type of component can be searched for by typing its name in the search bar, which uses [Lucene's search syntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). The search results begin to populate as entire words are entered. For example, to build a rule based on the XDM field `ExperienceEvent.commerce.productViews`, start typing “product views” in the search field. Once the word "product" has been typed, search results begin to appear. Each result includes the object hierarchy to which it belongs. 
 
->[!NOTE] Custom schema fields defined by your organization may take up to 24 hours to appear and become available for use in building rules. 
+>[!NOTE]
+>
+>Custom schema fields defined by your organization may take up to 24 hours to appear and become available for use in building rules. 
 
 You can then easily drag and drop [!DNL ExperienceEvents] and [!UICONTROL Event Types] into your segment definition.
   
@@ -86,7 +88,7 @@ You can also search for [!UICONTROL Audiences] using the search bar, which utili
 
 ## Rule builder canvas {#rule-builder-canvas}
 
-A segment definition is a collection of rules used to describe key characteristics or behavior of a target audience. These rules are created using the *[!UICONTROL rule builder canvas]*, located in the center of [!UICONTROL Segment Builder].
+A segment definition is a collection of rules used to describe key characteristics or behavior of a target audience. These rules are created using the *[!UICONTROL rule builder canvas]*, located in the center of [!DNL Segment Builder].
 
 To add a new rule to your segment definition, drag a tile from the *[!UICONTROL Fields]* tab and drop it onto the rule builder canvas. You will then be presented with context-specific options according to the type of data being added. Available data types include: strings, dates, [!DNL ExperienceEvents], [!UICONTROL Event Types], and [!UICONTROL Audiences]. 
 
@@ -96,17 +98,19 @@ To add a new rule to your segment definition, drag a tile from the *[!UICONTROL 
 
 You can drag and drop an audience from the *[!UICONTROL Audience]* tab onto the rule builder canvas to reference audience membership in the new segment definition. This allows you to include or exclude audience membership as an attribute in the new segment rule.
 
-For [!DNL Platform] audiences created using [!UICONTROL Segment Builder], you are given the option to convert the audience into the set of rules that were used in the segment definition for that audience. This conversion makes a copy of the rule logic, that can then be modified without affecting the original segment definition. Make sure that you have saved any recent changes to your segment definition before converting it to rule logic.
+For [!DNL Platform] audiences created using [!DNL Segment Builder], you are given the option to convert the audience into the set of rules that were used in the segment definition for that audience. This conversion makes a copy of the rule logic, that can then be modified without affecting the original segment definition. Make sure that you have saved any recent changes to your segment definition before converting it to rule logic.
 
->[!NOTE] When adding an audience from an external source, only the audience membership is referenced. You cannot convert the audience to rules, and therefore the rules used to create the original audience cannot be modified in the new segment definition.
+>[!NOTE]
+>
+>When adding an audience from an external source, only the audience membership is referenced. You cannot convert the audience to rules, and therefore the rules used to create the original audience cannot be modified in the new segment definition.
 
 ![](../images/segment-builder/add-audience-to-segment.png)
 
-If any conflicts arise when convert audiences to rules, [!UICONTROL Segment Builder] will attempt to preserve the existing options to the best of its ability.  
+If any conflicts arise when convert audiences to rules, [!DNL Segment Builder] will attempt to preserve the existing options to the best of its ability.  
 
 ### Code view
 
-Alternatively, you can view a code-based version of a rule created in the [!UICONTROL Segment Builder]. Once you have created your rule within the rule builder canvas, you can select **[!UICONTROL Code view]** to see your segment as PQL.
+Alternatively, you can view a code-based version of a rule created in the [!DNL Segment Builder]. Once you have created your rule within the rule builder canvas, you can select **[!UICONTROL Code view]** to see your segment as PQL.
 
 ![](../images/segment-builder/code-view.png)
 
@@ -130,7 +134,9 @@ A child container can also be extracted and added inline to the parent container
 
 Once you click **[!UICONTROL Unwrap container]** the child container is removed and the criteria appear inline. 
 
->[!NOTE] When unwrapping containers, be careful that the logic continues to meet the desired segment definition.
+>[!NOTE]
+>
+>When unwrapping containers, be careful that the logic continues to meet the desired segment definition.
 
 ![](../images/segment-builder/unwrapped-container-inline.png)
 
@@ -154,7 +160,9 @@ As you continue to build your segment definition, you can view a paginated previ
 
 ![](../images/segment-builder/segment-properties.png)
 
->[!NOTE] Audience estimates are generated by using a sample size of that day's sample data. If there are less than 1 million entities in your profile store, the full data set is used; for between 1 and 20 million entities, 1 million entities are used; and for over 20 million entities, 5% of the total entities are used. More information about generating segment estimates can be found in the [estimate generation section](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) of the segment creation tutorial.
+>[!NOTE]
+>
+>Audience estimates are generated by using a sample size of that day's sample data. If there are less than 1 million entities in your profile store, the full data set is used; for between 1 and 20 million entities, 1 million entities are used; and for over 20 million entities, 5% of the total entities are used. More information about generating segment estimates can be found in the [estimate generation section](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) of the segment creation tutorial.
 
 ## Enable scheduled segmentation {#enable-scheduled-segmentation}
 
@@ -164,7 +172,9 @@ On-demand evaluation involves using the API to perform evaluation and build audi
 
 Enabling your segment definitions for scheduled evaluation can be done using the UI or the API. In the UI, return to the *[!UICONTROL Browse]* tab within **[!UICONTROL Segments]** and toggle on **[!UICONTROL Evaluate all segments]**. This will cause all segments to be evaluated based on the schedule set by your organization.
 
->[!NOTE] Scheduled evaluation can be enabled for sandboxes with a maximum of five (5) merge policies for [!DNL XDM Individual Profile]. If your organization has more than five merge policies for [!DNL XDM Individual Profile] within a single sandbox environment, you will not be able to use scheduled evaluation.
+>[!NOTE]
+>
+>Scheduled evaluation can be enabled for sandboxes with a maximum of five (5) merge policies for [!DNL XDM Individual Profile]. If your organization has more than five merge policies for [!DNL XDM Individual Profile] within a single sandbox environment, you will not be able to use scheduled evaluation.
 
 Schedules can currently only be created using the API. For detailed steps on creating, editing, and working with schedules using the API, please follow the tutorial for evaluating and accessing segment results, specifically the section on [scheduled evaluation using the API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
@@ -172,7 +182,9 @@ Schedules can currently only be created using the API. For detailed steps on cre
 
 ## Streaming segmentation {#streaming-segmentation}
 
->[!NOTE] In order for streaming segmentation to work, the customer will need to enable scheduled segmentation for the organization. For details on enabling scheduled segmentation, please refer to [the previous section in this user guide](#enable-scheduled-segmentation).
+>[!NOTE]
+>
+>In order for streaming segmentation to work, the customer will need to enable scheduled segmentation for the organization. For details on enabling scheduled segmentation, please refer to [the previous section in this user guide](#enable-scheduled-segmentation).
 
 A query will be automatically evaluated with streaming segmentation if it meets any of the following criteria:
 
@@ -214,15 +226,23 @@ Additional information about the last segment evaluation can be found by clickin
 
 ![](../images/segment-builder/info-bubble.png)
 
+### Streaming segmentation video demo
+
+The following video is intended to support your understanding of streaming segmentation. It shows an example customer experience followed by a quick tour of key features in the [!DNL Platform] interface.
+
+>[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)
+
 ## DULE policy violations
 
->[!NOTE] DULE policy violations only apply if you are creating a segment that has been assigned to a destination.
+>[!NOTE]
+>
+>DULE policy violations only apply if you are creating a segment that has been assigned to a destination.
 
 Once you are done creating your segment, the segment will be analyzed by [!DNL Data Governance] to ensure there are no policy violations within the segment. For details on DULE and policy violations, please refer to the [data usage label overview](../../data-governance/labels/overview.md).
 
 ![](../images/segment-builder/segment-dule-policy-violations.png)
 
-## Next steps
+## Next steps and additional resources {#next-steps}
 
 Segment Builder provides a rich workflow allowing you to isolate marketable audiences from [!DNL Real-time Customer Profile] data. After reading this guide you should now be able to:
 
@@ -232,4 +252,16 @@ Segment Builder provides a rich workflow allowing you to isolate marketable audi
 - Enable all segment definitions for scheduled segmentation.
 - Enable specified segment definitions for streaming segmentation.
   
-For step-by-step instructions on working with [!DNL Segmentation Service] using the [!DNL Segmentation Service] API, see the [creating audience segments using APIs](../tutorials/create-a-segment.md) tutorial.
+To learn more about [!DNL Segmentation Service], please continue reading the documentation and supplement your learning by watching the videos below. For step-by-step instructions on working with [!DNL Segmentation Service] using the [!DNL Segmentation Service] API, see the [creating audience segments using APIs](../tutorials/create-a-segment.md) tutorial. 
+
+>[!WARNING]
+>
+> The [!DNL Platform] UI shown in the following videos is out-of-date. Please refer to the documentation above for the latest UI screenshots and functionality.
+
+**Create a segment:**
+
+>[!VIDEO](https://video.tv.adobe.com/v/27254?quality=12&learn=on)
+
+**Create a dynamic segment:**
+
+>[!VIDEO](https://video.tv.adobe.com/v/27428?quality=12&learn=on)

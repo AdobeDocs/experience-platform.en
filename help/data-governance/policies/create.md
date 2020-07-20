@@ -7,7 +7,7 @@ topic: policies
 
 # Create a data usage policy in the API
 
-Data Usage Labeling and Enforcement (DULE) is the core mechanism of Adobe Experience Platform Data Governance. The [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) allows you to create and manage DULE policies to determine what marketing actions can be taken against data that contains certain DULE labels.
+Data Usage Labeling and Enforcement (DULE) is the core mechanism of Adobe Experience Platform [!DNL Data Governance]. The [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) allows you to create and manage DULE policies to determine what marketing actions can be taken against data that contains certain DULE labels.
 
 This document provides a step-by-step tutorial for creating a DULE policy using the [!DNL Policy Service] API. For a more comprehensive guide to the different operations available in the API, see the [Policy Service developer guide](../api/getting-started.md).
 
@@ -15,9 +15,9 @@ This document provides a step-by-step tutorial for creating a DULE policy using 
 
 This tutorial requires a working understanding of the following key concepts involved in creating and evaluating DULE policies:
 
-* [Data Governance](../home.md): The framework by which [!DNL Platform] enforces data usage compliance.
+* [!DNL Data Governance](../home.md): The framework by which [!DNL Platform] enforces data usage compliance.
 * [Data usage labels](../labels/overview.md): Data usage labels are applied to XDM data fields, specifying restrictions for how that data can be accessed.
-* [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
+* [!DNL Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 * [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the DULE [!DNL Policy Service] API, including required headers and how to read example API calls.
@@ -210,7 +210,9 @@ This expression is called a **policy expression** and is an object containing ei
 }
 ```
 
->[!NOTE] Only OR and AND operators are supported.
+>[!NOTE]
+>
+>Only OR and AND operators are supported.
 
 Once you have configured your policy expression, you can create a new DULE policy by making a POST request to the `/policies/custom` endpoint.
 
@@ -315,7 +317,9 @@ Record the URI ID of the newly created DULE policy, as it is used in the next st
 
 ## Enable the DULE policy
 
->[!NOTE] While this step is optional if you wish to leave your DULE policy in `DRAFT` status, please note that by default a policy must have its status set to `ENABLED` in order to participate in evaluation. See the tutorial on [enforcing DULE policies](../enforcement/api-enforcement.md) for information on how to make exceptions for policies in `DRAFT` status.
+>[!NOTE]
+>
+>While this step is optional if you wish to leave your DULE policy in `DRAFT` status, please note that by default a policy must have its status set to `ENABLED` in order to participate in evaluation. See the tutorial on [enforcing DULE policies](../enforcement/api-enforcement.md) for information on how to make exceptions for policies in `DRAFT` status.
 
 By default, DULE policies that have their `status` property set to `DRAFT` do not participate in evaluation. You can enable your policy for evaluation by making a PATCH request to the `/policies/custom/` endpoint and providing the unique identifier for the policy at the end of the request path.
 
