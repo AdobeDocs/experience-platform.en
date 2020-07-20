@@ -8,7 +8,7 @@ user-guide-title: Adobe Experience Platform Segmentation Service Help
 
 - [Overview](home.md)
 - [Segmentation data types](data-types.md)
-- Segmentation API {#api}
+- Segmentation API developer guide{#api}
     - [Overview](api/overview.md)
     - [Getting started](api/getting-started.md)
     - [Export jobs](api/export-jobs.md)
