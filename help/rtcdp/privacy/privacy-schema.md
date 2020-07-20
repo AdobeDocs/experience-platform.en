@@ -18,8 +18,11 @@ The following topics are covered:
   * [xdm:marketingPreferences](#xdmmarketingpreferences)
 * [Ingesting consent data using the mixin](#ingesting-consent-data-using-the-mixin)
 * [Appendix](#appendix)
+  * [Accepted values for xdm:optOutType](#accepted-values-for-xdmoptouttype)
+  * [Accepted values for xdm:basisOfProcessing](#accepted-values-for-xdmbasisofprocessing)
+  * [Accepted values for xdm:choice and xdm:optOutValue](#accepted-values-for-xdmchoice-and-xdmoptoutvalue)
+  * [Accepted values for xdm:type](#accepted-values-for-xdmtype)
   * [Full Privacy Consent schema](#full-privacy-consent-schema)
-
 ## Prerequisites
 
 This document requires a working understanding of Experience Data Model (XDM) and the use of the schemas in Experience Platform. Please review the following documentation before continuing:
@@ -141,14 +144,20 @@ The sections below cover the use of each of the major fields provided by the Pri
 
 | Property | Description |
 | --- | --- |
-| `xdm:optOutType` | The type of opt-out. Available opt-out types include: <ul><li>`general_opt_out`</li><li>`sales_sharing_opt_out`</li><li>`anonymous_analysis`</li><li>`pseudonymous_analysis`</li><li>`device_linking`</li></ul> |
-| `xdm:optOutValue` | The selected preference the customer has chosen for this particular opt-out type. Accepted opt-out values include: <ul><li>`in`</li><li>`out`</li><li>`not_provided`</li></ul>|
+| `xdm:optOutType` | The type of opt-out. See the [appendix](#accepted-values-for-xdmoptOutType) for accepted values and definitions. |
+| `xdm:optOutValue` | The selected preference the customer has chosen for this particular opt-out type. See the [appendix](#accepted-values-for-xdmchoice-and-xdmoptOutValue) for accepted values and definitions. |
 | `xdm:timestamp` | An ISO 8601 timestamp of when the opt-out preference changed, if applicable. |
-| `xdm:basisOfProcessing` | In some circumstances, customers do not have be prompted to provide consent for data processing. `xdm:basisOfProcessing` must be included in the opt-out object in these cases, indicating the reason why a consent prompt was not provided. Accepted values include: <ul><li>`consent`</li><li>`legitimate_interest`</li><li>`contract`</li><li>`vital_interest`</li><li>`compliance`</li><li>`public_interest`</li></ul>  |
+| `xdm:basisOfProcessing` | In some circumstances, customers do not have be prompted to provide consent for data processing. `xdm:basisOfProcessing` must be included in the opt-out object in these cases, indicating the reason why a consent prompt was not provided. See the [appendix](#accepted-values-for-xdmbasisOfProcessing) for accepted values and definitions.  |
 
 ### xdm:personalizationPreferences
 
 `xdm:personalizationPreferences` captures customer preferences regarding which ways their data can be used for personalization. Users can opt out of specific personalization use cases, or opt out of personalization entirely.
+
+>**IMPORTANT**:
+>
+>`xdm:personalizationPreferences` does not cover marketing use cases. For example, if a customer opts out of personalization for emails, they will not stop receiving emails. Rather, the emails they receive will be generic and not based on their profile.
+>
+>By the same example, if a customer opts out of email marketing (through `xdm:marketingPreferences`, explained in the [next section](#xdmmarketingPreferences)), then that customer will not receive any emails, even if email personalization is permitted.
 
 ```json
 "xdm:personalizationPreferences": {
@@ -176,10 +185,10 @@ The sections below cover the use of each of the major fields provided by the Pri
 | --- | --- |
 | `xdm:default` | The data provided in this object represents the customer's preferences for personalization as a whole. |
 | `xdm:details` | An array of objects, one for each specific personalization type that the customer has provided preferences for. |
-| `xdm:choice` | The customer-provided consent preference for personalization in general, or a specific personalization type, depending on whether it is provided under `xdm:default` or `xdm:details`, respectively. Accepted values include: <ul><li>`not_provided`</li><li>`pending`</li><li>`in`</li><li>`out`</li><li>`unknown`</li><li>`not_applicable`</li></ul> |
-| `xdm:type` | Objects in the `xdm:details` array must provide this field to indicate the specific personalization use the customer is providing consent data for. Available types include: <ul><li>`email`</li><li>`push_notifications`</li><li>`in_app_messages`</li><li>`sms`</li><li>`phone_calls`</li><li>`snail_mail`</li><li>`in_vehicle_messages`</li><li>`in_home_messages`</li><li>`iot`</li><li>`social_media`</li></ul> |
+| `xdm:choice` | The customer-provided consent preference for personalization in general, or a specific personalization type, depending on whether it is provided under `xdm:default` or `xdm:details`, respectively. See the [appendix](#accepted-values-for-xdmchoice-and-xdmoptOutValue) for accepted values and definitions. |
+| `xdm:type` | Objects in the `xdm:details` array must provide this field to indicate the specific personalization use the customer is providing consent data for. See the [appendix](#accepted-values-for-xdmtype) for accepted values and definitions. |
 | `xdm:timestamp` | An ISO 8601 timestamp of when the opt-out preference changed, if applicable. |
-| `xdm:basisOfProcessing` | In some circumstances, customers do not have be prompted to provide consent for personalization. `xdm:basisOfProcessing` must be included in the opt-out object in these cases, indicating the reason why a consent prompt was not provided. Accepted values include: <ul><li>`consent`</li><li>`legitimate_interest`</li><li>`contract`</li><li>`vital_interest`</li><li>`compliance`</li><li>`public_interest`</li></ul>  |
+| `xdm:basisOfProcessing` | In some circumstances, customers do not have be prompted to provide consent for personalization. `xdm:basisOfProcessing` must be included in the opt-out object in these cases, indicating the reason why a consent prompt was not provided. See the [appendix](#accepted-values-for-xdmbasisOfProcessing) for accepted values and definitions.  |
 
 
 ### xdm:marketingPreferences
@@ -224,11 +233,11 @@ The sections below cover the use of each of the major fields provided by the Pri
 | --- | --- |
 | `xdm:default` | The data provided in this object represents the customer's preferences for direct marketing as a whole. |
 | `xdm:details` | An array of objects, one for each specific marketing type that the customer has provided preferences for. |
-| `xdm:choice` | The customer-provided consent preference for marketing in general, or a specific marketing use, depending on whether it is provided under `xdm:default` or `xdm:details`, respectively. Accepted values include: <ul><li>`not_provided`</li><li>`pending`</li><li>`in`</li><li>`out`</li><li>`unknown`</li><li>`not_applicable`</li></ul> |
+| `xdm:choice` | The customer-provided consent preference for marketing in general, or a specific marketing use, depending on whether it is provided under `xdm:default` or `xdm:details`, respectively. See the [appendix](#accepted-values-for-xdmchoice-and-xdmoptOutValue) for accepted values and definitions. |
 | `xdm:subscriptions` | An object whose keys represent company-specific subscriptions, such as mailing lists or newsletters. Each subscription object should in turn contain an `xdm:choice` value for the subscription in question. |
-| `xdm:type` | Objects in the `xdm:details` array must provide this field to indicate the specific marketing use the customer is providing consent data for. Available types include: <ul><li>`email`</li><li>`push_notifications`</li><li>`in_app_messages`</li><li>`sms`</li><li>`phone_calls`</li><li>`snail_mail`</li><li>`in_vehicle_messages`</li><li>`in_home_messages`</li><li>`iot`</li><li>`social_media`</li></ul> |
+| `xdm:type` | Objects in the `xdm:details` array must provide this field to indicate the specific marketing use the customer is providing consent data for. See the [appendix](#accepted-values-for-xdmtype) for accepted values and definitions. |
 | `xdm:timestamp` | An ISO 8601 timestamp of when the opt-out preference changed, if applicable. |
-| `xdm:basisOfProcessing` | In some circumstances, customers do not have be prompted to provide consent for direct marketing. `xdm:basisOfProcessing` must be included in the opt-out object in these cases, indicating the reason why a consent prompt was not provided. Accepted values include: <ul><li>`consent`</li><li>`legitimate_interest`</li><li>`contract`</li><li>`vital_interest`</li><li>`compliance`</li><li>`public_interest`</li></ul>  |
+| `xdm:basisOfProcessing` | In some circumstances, customers do not have be prompted to provide consent for direct marketing. `xdm:basisOfProcessing` must be included in the opt-out object in these cases, indicating the reason why a consent prompt was not provided. See the [appendix](#accepted-values-for-xdmbasisOfProcessing) for accepted values and definitions. |
 
 ## Ingesting consent data using the mixin
 
@@ -244,7 +253,69 @@ Once you have created a schema containing the Privacy Consent mixin, refer to th
 
 ## Appendix
 
-The section below provides additional reference information regarding the Privacy Consent mixin.
+The sections below provide additional reference information regarding the Privacy Consent mixin.
+
+### Accepted values for xdm:optOutType
+
+The following table outlines the accepted values for `xdm:optOutType`:
+
+| Value | Description |
+| --- | --- |
+| `general_opt_out` | The data cannot be used for any purpose. This typically blocks data collection, except when the basis of processing is not "consent". |
+| `anonymous_analysis` | The data cannot be used for generic web metrics that do not require any type of used ID, such as the number of times a particular page was viewed. |
+| `device_linking` | The data from one device used by a visitor cannot be combined with data from another device used by that same visitor. Devices are linked using techniques such as a common username or email address, often via the Adobe device co-op or a private device graph. |
+| `pseudonymous_analysis` | The data cannot be used for web metrics provided by Adobe Analytics, which requires pseudonymous IDs to identify paths users take through a website (such as a fallout report), to establish sessions, and for attribution purposes. |
+| `sales_sharing_opt_out` | The data cannot be used for sales purposes, or sharing with third parties. |
+
+### Accepted values for xdm:basisOfProcessing
+
+The following table outlines the accepted values for `xdm:basisOfProcessing`:
+
+| Value | Description |
+| --- | --- |
+| `compliance` | |
+| `consent` | |
+| `contract` | |
+| `legitimate_interest` | |
+| `public_interest` | |
+| `vital_interest` | |
+
+### Accepted values for xdm:choice and xdm:optOutValue
+
+The following table outlines the accepted values for `xdm:choice` and `xdm:optOutValue`:
+
+| Value | Description |
+| --- | --- |
+| `pending` | The system has not received consent-preference information from the customer yet. Can be used for the first page of a website while consent is being obtained. It can also be used to indicate that consent is "assumed", rather than explicitly provided. |
+| `in` | The user has opted in to the consent preference. In other words, they **do** consent to the use of their data as indicated by the consent preference in question. |
+| `out` | The user has opted out of the consent preference. In other words, they **do not** consent to the use of their data as indicated by the consent preference in question. |
+| `not_applicable` | The consent preference in question does not apply to the customer. |
+| `not_provided` | The customer has not provided any consent-preference information. |
+| `unknown` | The customer's consent-preference information is unknown. |
+
+### Accepted values for xdm:type
+
+The following table outlines the accepted values for `xdm:type`:
+
+| Value | Description |
+| --- | --- |
+| `ads` | Ads that can be viewed from unrelated websites. |
+| `content` | Content appearing on your website. |
+| `customer_support` | Data related to customer support. |
+| `email` | Email messages. |
+| `iot` | Data related to the "internet of things" (IoT) |
+| `in_app_messages` | In-app messages. |
+| `in_home` | In-home messages. |
+| `in_store` | In-store messages. |
+| `in_vehicle` | In-vehicle messages. |
+| `offers` | Special offers. |
+| `phone_calls` | Data related to phone call interactions. |
+| `push_notifications` | Push notifications. |
+| `sms` | SMS messages. |
+| `social_media` | Social media content. |
+| `snail_mail` | Messages sent through conventional postal delivery. |
+| `third_party_content` | Content or articles shown on your website that are provided by an unrelated entity. |
+| `third_party_offers` | Offers or ads shown on your website advertising services from an unrelated entity. |
 
 ### Full Privacy Consent schema
 
