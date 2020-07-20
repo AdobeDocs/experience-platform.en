@@ -7,11 +7,13 @@ topic: API guide
 
 # Creating a custom namespace
 
-Using the Identity Namespace API, you can create a custom identity namespace that will be available only to your organization.
+Using the [!DNL Identity Namespace] API, you can create a custom identity namespace that will be available only to your organization.
 
 For recommendations around creating custom namespaces, see [the Identity Service FAQ documentation](../troubleshooting-guide.md).
 
->[!NOTE] Namespaces are a qualifier for identities. As such, once a namespace has been created, it cannot be deleted.
+>[!NOTE]
+>
+>Namespaces are a qualifier for identities. As such, once a namespace has been created, it cannot be deleted.
 
 **API format**
 

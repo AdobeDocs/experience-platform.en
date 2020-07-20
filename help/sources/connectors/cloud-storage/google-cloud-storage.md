@@ -7,17 +7,17 @@ topic: overview
 
 # Google Cloud Storage connector
 
-Adobe Experience Platform provides native connectivity for cloud providers like AWS, Google Cloud Platform, and Azure. You can bring your data from these systems into Platform.
+Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure], allowing you to bring your data from these systems.
 
-Cloud storage sources can bring your own data into Platform without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM parquet, or delimited. Every step of the process is integrated into the Sources workflow. Platform allows you to bring in data from Google Cloud Storage through batches.
+Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM parquet, or delimited. Every step of the process is integrated into the Sources workflow. [!DNL Platform] allows you to bring in data from [!DNL Google Cloud Storage] through batches.
 
-## Prerequisite setup for connecting your Google Cloud Storage account
+## Prerequisite setup for connecting your [!DNL Google Cloud Storage] account
 
-In order to connect to Platform, you must first enable interoperability for your Google Cloud Storage account. To access the interoperability setting, open Google Cloud Platform and select **[!UICONTROL Settings]** from the **[!UICONTROL Storage]** option in the navigation panel.
+In order to connect to [!DNL Platform], you must first enable interoperability for your [!DNL Google Cloud Storage] account. To access the interoperability setting, open [!DNL Google Cloud Platform] and select **[!UICONTROL Settings]** from the **[!UICONTROL Storage]** option in the navigation panel.
 
 ![](../../images/tutorials/create/google-cloud-storage/nav.png)
 
-The **[!UICONTROL Settings]** page appears. From here, you can see information regarding your Google project ID and details about your Google Cloud Storage account. To access interoperability settings, select **[!UICONTROL Interoperability]** from the top header.
+The **[!UICONTROL Settings]** page appears. From here, you can see information regarding your [!DNL Google] project ID and details about your [!DNL Google Cloud Storage] account. To access interoperability settings, select **[!UICONTROL Interoperability]** from the top header.
 
 ![](../../images/tutorials/create/google-cloud-storage/project-access.png)
 
@@ -27,13 +27,13 @@ To generate a new access key ID and a secret access key for your user account, s
 
 ![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
 
-You can use your newly generated access key ID and secret access key to connect your Google Cloud Storage account to Platform.
+You can use your newly generated access key ID and secret access key to connect your [!DNL Google Cloud Storage] account to [!DNL Platform].
 
-The documentation below provides information on how to connect Google Cloud Storage to Platform using APIs or the user interface:
+The documentation below provides information on how to connect [!DNL Google Cloud Storage] to [!DNL Platform] using APIs or the user interface:
 
-## Connect Google Cloud Storage to Platform
+## Connect [!DNL Google Cloud Storage] to [!DNL Platform]
 
-The documentation below provides information on how to connect Google Cloud Storage to Platform using APIs or the user interface:
+The documentation below provides information on how to connect [!DNL Google Cloud Storage] to [!DNL Platform] using APIs or the user interface:
 
 ### Using APIs
 

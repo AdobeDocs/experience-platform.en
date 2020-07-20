@@ -5,31 +5,31 @@ title: Define a relationship between two schemas using the Schema Registry API
 topic: tutorials
 ---
 
-# Define a relationship between two schemas using the Schema Registry API
+# Define a relationship between two schemas using the [!DNL Schema Registry] API
 
 
-The ability to understand the relationships between your customers and their interactions with your brand across various channels is an important part of Adobe Experience Platform. Defining these relationships within the structure of your Experience Data Model (XDM) schemas allows you to gain complex insights into your customer data.
+The ability to understand the relationships between your customers and their interactions with your brand across various channels is an important part of Adobe Experience Platform. Defining these relationships within the structure of your [!DNL Experience Data Model] (XDM) schemas allows you to gain complex insights into your customer data.
 
-This document provides a tutorial for defining a one-to-one relationship between two schemas defined by your organization using the [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). 
+This document provides a tutorial for defining a one-to-one relationship between two schemas defined by your organization using the [!DNL Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). 
 
 ## Getting started
 
-This tutorial requires a working understanding of Experience Data Model (XDM) and XDM System. Before beginning this tutorial, please review the following documentation:
+This tutorial requires a working understanding of [!DNL Experience Data Model] (XDM) and [!DNL XDM System]. Before beginning this tutorial, please review the following documentation:
 
 * [XDM System in Experience Platform](../home.md): An overview of XDM and its implementation in Experience Platform.
     * [Basics of schema composition](../schema/composition.md): An introduction of the building blocks of XDM schemas.
-* [Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [!DNL Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
+Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the [!DNL Schema Registry] API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
 
 ## Define a source and destination schema {#define-schemas}
 
 It is expected that you have already created the two schemas that will be defined in the relationship. This tutorial creates a relationship between members of an organization's current loyalty program (defined in a "Loyalty Members" schema) and their favorite hotels (defined in a "Hotels" schema).
 
-Schema relationships are represented by a **source schema** having a field that refers to another field within a **destination schema**. In the steps that follow, "Loyalty Members" will be the source schema, while "Hotels" will act as the destination schema.
+Schema relationships are represented by a **[!UICONTROL source schema]** having a field that refers to another field within a **[!UICONTROL destination schema]**. In the steps that follow, "[!UICONTROL Loyalty Members]" will be the source schema, while "[!UICONTROL Hotels]" will act as the destination schema.
 
-In order to define a relationship between two schemas, you must first acquire the `$id` values for both schemas. If you know the display names (`title`) of the schemas, you can find their `$id` values by making a GET request to the `/tenant/schemas` endpoint in the Schema Registry API.
+In order to define a relationship between two schemas, you must first acquire the `$id` values for both schemas. If you know the display names (`title`) of the schemas, you can find their `$id` values by making a GET request to the `/tenant/schemas` endpoint in the [!DNL Schema Registry] API.
 
 **API format**
 
@@ -49,7 +49,9 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json'
 ```
 
->[!NOTE] The Accept header `application/vnd.adobe.xed-id+json` returns only the titles, IDs, and versions of the resulting schemas.
+>[!NOTE]
+>
+>The Accept header `application/vnd.adobe.xed-id+json` returns only the titles, IDs, and versions of the resulting schemas.
 
 **Response**
 
@@ -95,9 +97,11 @@ Record the `$id` values of the two schemas you want to define a relationship bet
 
 ## Define reference fields for both schemas
 
-Within the Schema Registry, relationship descriptors work similarly to foreign keys in SQL tables: a field in the source schema acts as a reference to a field of a destination schema. When defining a relationship, each schema must have a dedicated field to be used as a reference to the other schema.
+Within the [!DNL Schema Registry], relationship descriptors work similarly to foreign keys in SQL tables: a field in the source schema acts as a reference to a field of a destination schema. When defining a relationship, each schema must have a dedicated field to be used as a reference to the other schema.
 
->[!IMPORTANT] If the schemas are to be enabled for use in [Real-time Customer Profile](../../profile/home.md), the reference field for the destination schema must be its **primary identity**. This is explained in more detail later in this tutorial.
+>[!IMPORTANT]
+>
+>If the schemas are to be enabled for use in [!DNL Real-time Customer Profile](../../profile/home.md), the reference field for the destination schema must be its **[!UICONTROL primary identity]**. This is explained in more detail later in this tutorial.
 
 If either schema does not have a field for this purpose, you may need to create a mixin with the new field and add it to the schema. This new field must have a `type` value of "string".
 
@@ -319,9 +323,11 @@ A successful response returns the details of the updated schema, which now inclu
 
 ## Define primary identity fields for both schemas
 
->[!NOTE] This step is only required for schemas that will be enabled for use in [Real-time Customer Profile](../../profile/home.md). If you do not want either schema to participate in a union, or if your schemas already have primary identities defined, you can skip to the next step of [creating a reference identity descriptor](#create-descriptor) for the destination schema.
+>[!NOTE]
+>
+>This step is only required for schemas that will be enabled for use in [!DNL Real-time Customer Profile](../../profile/home.md). If you do not want either schema to participate in a union, or if your schemas already have primary identities defined, you can skip to the next step of [creating a reference identity descriptor](#create-descriptor) for the destination schema.
 
-In order for schemas to be enabled for use in Real-time Customer Profile, they must have a primary identity defined. In addition, a relationship's destination schema must use its primary identity as its reference field.
+In order for schemas to be enabled for use in [!DNL Real-time Customer Profile], they must have a primary identity defined. In addition, a relationship's destination schema must use its primary identity as its reference field.
 
 For the purposes of this tutorial, the source schema already has a primary identity defined, but the destination schema does not. You can mark a schema field as a primary identity field by creating an identity descriptor. This is done by making a POST request to the `/tenant/descriptors` endpoint.
 
@@ -500,4 +506,4 @@ A successful response returns the details of the newly created relationship desc
 
 ## Next steps
 
-By following this tutorial, you have successfully created a one-to-one relationship between two schemas. For more information on working with descriptors using the Schema Registry API, see the [Schema Registry developer guide](../api/getting-started.md). For steps on how to define schema relationships in the UI, see the tutorial on [defining schema relationships using the Schema Editor](relationship-ui.md).
+By following this tutorial, you have successfully created a one-to-one relationship between two schemas. For more information on working with descriptors using the [!DNL Schema Registry] API, see the [Schema Registry developer guide](../api/getting-started.md). For steps on how to define schema relationships in the UI, see the tutorial on [defining schema relationships using the Schema Editor](relationship-ui.md).

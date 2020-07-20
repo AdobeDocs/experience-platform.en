@@ -7,11 +7,13 @@ topic: developer guide
 
 # Replace a resource
 
-The Schema Registry allows you to replace an entire resource through a PUT operation. This operation essentially re-writes the resource, therefore the request body must include all of the fields that would be required when creating a new resource using a POST request.
+The [!DNL Schema Registry] allows you to replace an entire resource through a PUT operation. This operation essentially re-writes the resource, therefore the request body must include all of the fields that would be required when creating a new resource using a POST request.
 
 This method is especially useful if you want to update a lot of information in the resource at once.
 
->[!NOTE] If you only want to update part of a resource instead of replacing it entirely, see the document on [updating a resource using a PATCH operation](update-resource.md).
+>[!NOTE]
+>
+>If you only want to update part of a resource instead of replacing it entirely, see the document on [updating a resource using a PATCH operation](update-resource.md).
 
 **API format**
 
@@ -23,7 +25,7 @@ PUT /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Parameter | Description |
 | --- | --- |
-| `{RESOURCE_TYPE}` | The type of resource to be updated from the Schema Library. Valid types are `datatypes`, `mixins`, `schemas`, and `classes`. |
+| `{RESOURCE_TYPE}` | The type of resource to be updated from the [!DNL Schema Library]. Valid types are `datatypes`, `mixins`, `schemas`, and `classes`. |
 | `{RESOURCE_ID}` | The URL-encoded `$id` URI or `meta:altId` of the resource. |
 
 **Request**

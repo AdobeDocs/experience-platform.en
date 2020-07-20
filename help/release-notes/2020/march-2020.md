@@ -27,7 +27,9 @@ Adobe Experience Platform Data Governance is a series of strategies and technolo
 
 **New features**
 
->[!NOTE] Some of the following new features are currently in beta and are not available to all users. Beta features are subject to change.
+>[!NOTE]
+>
+>Some of the following new features are currently in beta and are not available to all users. Beta features are subject to change.
 
 | Feature | Description |
 | ------- | ----------- |

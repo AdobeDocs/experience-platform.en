@@ -28,7 +28,7 @@ Customer is not built to:
 
 - Customer AI should not be used to predict dynamic pricing, or the price point at which the customer is going to make a purchase.
 - Customer AI cannot determine whether giving an offer will make the customer more likely to purchase an item. While you might decide to send discount offers based on propensity scores, it’s not necessarily the best way to convert those customers.
-- Customer AI is not a product recommendations tool. If you have thousands of SKUs, do not use Customer AI as a proxy for a real product recommendations solution like Adobe Target.
+- Customer AI is not a product recommendations tool. If you have thousands of SKUs, do not use Customer AI as a proxy for a real product recommendations solution like [!DNL Adobe Target].
 - Customer AI can’t predict which stage of the buying Journey the customer is in, for example, if they are in “awareness”, “consideration”, “purchase”, or “retention” stages.
 - Don’t use Customer AI to determine customers who are likely buy a product launching in the future. This requires certain success events to be present in the past for Customer AI to successfully train the machine learning algorithm on your data.
 
