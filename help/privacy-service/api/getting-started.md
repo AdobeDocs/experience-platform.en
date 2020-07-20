@@ -6,37 +6,37 @@ description: Use the RESTful API to manage the personal data of your data subjec
 topic: developer guide
 ---
 
-# Privacy Service developer guide
+# [!DNL Privacy Service] developer guide
 
-Adobe Experience Platform Privacy Service provides a RESTful API and user interface that allow you to manage (access and delete) the personal data of your data subjects (customers) across Adobe Experience Cloud applications. Privacy Service also provides a central audit and logging mechanism that allows you to access the status and results of jobs involving Experience Cloud applications.
+Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface that allow you to manage (access and delete) the personal data of your data subjects (customers) across Adobe Experience Cloud applications. [!DNL Privacy Service] also provides a central audit and logging mechanism that allows you to access the status and results of jobs involving [!DNL Experience Cloud] applications.
 
-This guide covers how to use the Privacy Service API. For details on how to use the UI, see the [Privacy Service UI overview](../ui/overview.md). For a comprehensive list of all available endpoints in the Privacy Service API, please see the [API reference](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html).
+This guide covers how to use the [!DNL Privacy Service] API. For details on how to use the UI, see the [Privacy Service UI overview](../ui/overview.md). For a comprehensive list of all available endpoints in the [!DNL Privacy Service] API, please see the [API reference](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html).
 
 ## Getting started {#getting-started}
 
-This guide requires a working understanding the following Experience Platform features:
+This guide requires a working understanding the following [!DNL Experience Platform] features:
 
-* [Privacy Service](../home.md): Provides a RESTful API and user interface that allow you to manage access and delete requests from your data subjects (customers) across Adobe Experience Cloud applications.
+* [!DNL Privacy Service](../home.md): Provides a RESTful API and user interface that allow you to manage access and delete requests from your data subjects (customers) across Adobe Experience Cloud applications.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to the Privacy Service API.
 
 ### Reading sample API calls
 
-This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md) in the Experience Platform troubleshooting guide.
+This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md) in the [!DNL Experience Platform] troubleshooting guide.
 
 ## Gather values for required headers
 
-In order to make calls to the Privacy Service API, you must first gather your access credentials to be used in required headers:
+In order to make calls to the [!DNL Privacy Service] API, you must first gather your access credentials to be used in required headers:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-This involves obtaining developer permissions for Experience Platform in the Adobe Admin Console, and then generating the credentials in Adobe Developer Console.
+This involves obtaining developer permissions for [!DNL Experience Platform] in the Adobe Admin Console, and then generating the credentials in Adobe Developer Console.
 
-### Gain developer access to Experience Platform
+### Gain developer access to [!DNL Experience Platform]
 
-To gain developer access to Platform, follow the beginning steps in the [Experience Platform authentication tutorial](../../tutorials/authentication.md). Once you arrive at the step "Generate access credentials in Adobe Developer Console", return to this tutorial to generate the credentials specific to Privacy Service.
+To gain developer access to [!DNL Platform], follow the beginning steps in the [Experience Platform authentication tutorial](../../tutorials/authentication.md). Once you arrive at the step "Generate access credentials in Adobe Developer Console", return to this tutorial to generate the credentials specific to [!DNL Privacy Service].
 
 ### Generate access credentials
 
@@ -70,7 +70,7 @@ The key pair is automatically generated, and a ZIP file containing a private key
 
 ![](../images/api/getting-started/key-pair-generated.png)
 
-Once the API has been added to the project, the project page reappears on the _Privacy Service API overview_ page. From here, scroll down to the _[!UICONTROL Service Account (JWT)]_ section, which provides the following access credentials that are required in all calls to the Privacy Service API:
+Once the API has been added to the project, the project page reappears on the _Privacy Service API overview_ page. From here, scroll down to the _[!UICONTROL Service Account (JWT)]_ section, which provides the following access credentials that are required in all calls to the [!DNL Privacy Service] API:
 
 * **[!UICONTROL CLIENT ID]**: The Client ID is the required `{API_KEY}` for that must be provided in the x-api-key header.
 * **[!UICONTROL ORGANIZATION ID]**: The Organization ID is the `{IMS_ORG}` value that must be used in the x-gw-ims-org-id header.
@@ -79,7 +79,7 @@ Once the API has been added to the project, the project page reappears on the _P
 
 #### Authentication for each session
 
-The final required credential you must gather is your `{ACCESS_TOKEN}`, which is used in the Authorization header. Unlike the values for `{API_KEY}` and `{IMS_ORG}`, a new token must be generated every 24 hours to continue using Platform APIs.
+The final required credential you must gather is your `{ACCESS_TOKEN}`, which is used in the Authorization header. Unlike the values for `{API_KEY}` and `{IMS_ORG}`, a new token must be generated every 24 hours to continue using [!DNL Platform] APIs.
 
 To generate a new `{ACCESS_TOKEN}`, open the previously downloaded private key and paste its contents into the text box beside _[!UICONTROL Generate access token]_ before clicking **[!UICONTROL Generate Token]**.
 
@@ -91,4 +91,4 @@ A new access token is generated, and a button to copy the token to your clipboar
 
 ## Next steps
 
-Now that you understand what headers to use, you are ready to begin making calls to the Privacy Service API. The document on [privacy jobs](privacy-jobs.md) walks through the various API calls you can make using the Privacy Service API. Each example call includes the general API format, a sample request showing required headers, and a sample response.
+Now that you understand what headers to use, you are ready to begin making calls to the [!DNL Privacy Service] API. The document on [privacy jobs](privacy-jobs.md) walks through the various API calls you can make using the [!DNL Privacy Service] API. Each example call includes the general API format, a sample request showing required headers, and a sample response.
