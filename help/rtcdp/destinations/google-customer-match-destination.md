@@ -139,19 +139,7 @@ To activate segments to Google Customer Match, follow the steps below:
     *Another ID as primary identity*: If you are using another ID, such as *Rewards ID* or *Loyalty ID*, as primary identity in your schema, you need to manually map the email address from your identity schema as a target identity in the social destination, as shown below:
 
    ![Loyalty ID as identity](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
-
 6. On the **[!UICONTROL Segment schedule]** page, you can set the start date for sending data to the destination.
-
-<!--
-
-    >[!IMPORTANT]
-    >
-    >If you select mobile device IDs (GAID or IDFA) as primary identity in the Identity mapping step, you must also provide an Application Id in this step. If you selected GAID as identity, see [Set the Application ID](https://developer.android.com/studio/build/application-id) in the Android developer documentation. IF you selected IDFA as identity, see [App ID](https://developer.android.com/studio/build/application-id) in the Apple developer documentation.
-
-    ![segment schedule page](/help/rtcdp/destinations/assets/gcm-segment-schedule.png) 
-
--->
-
 7. On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
     >[!IMPORTANT]
@@ -163,6 +151,19 @@ To activate segments to Google Customer Match, follow the steps below:
   If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
  ![confirm-selection](/help/rtcdp/destinations/assets/gcm-review.png)
+
+
+<!--
+
+Insert in Step 6 when mobile device ID activation is available
+
+    >[!IMPORTANT]
+    >
+    >If you select mobile device IDs (GAID or IDFA) as primary identity in the Identity mapping step, you must also provide an Application Id in this step. If you selected GAID as identity, see [Set the Application ID](https://developer.android.com/studio/build/application-id) in the Android developer documentation. IF you selected IDFA as identity, see [App ID](https://developer.android.com/studio/build/application-id) in the Apple developer documentation.
+
+    ![segment schedule page](/help/rtcdp/destinations/assets/gcm-segment-schedule.png) 
+
+-->
 
 ## Verify that segment activation was successful {#verify-activation}
 
