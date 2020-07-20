@@ -67,7 +67,7 @@ The domain used to interact with Adobe services. This is only used if you have a
 | -------- | ------------ | ----------------- |
 | String   | Yes          | none              |
 
-Your assigned Experience Cloud organization ID.  When configuring multiple instances within a page, you must configure a different `orgId` for each instance.
+Your assigned [!DNL Experience Cloud] organization ID.  When configuring multiple instances within a page, you must configure a different `orgId` for each instance.
 
 ## Data collection
 
@@ -127,7 +127,7 @@ For example, if you had an element on your web page with an ID of `container` wh
 | -------- | ------------ | ----------------- |
 | Boolean  | No           | `true`            |
 
-Enables Audience Manager [!UICONTROL cookie destinations], which allows the setting of cookies based on segment qualification.
+Enables [!DNL Audience Manager] [!UICONTROL cookie destinations], which allows the setting of cookies based on segment qualification.
 
 ### `urlDestinationsEnabled`
 
@@ -135,7 +135,7 @@ Enables Audience Manager [!UICONTROL cookie destinations], which allows the sett
 | -------- | ------------ | ----------------- |
 | Boolean  | No           | `true`            |
 
-Enables Audience Manager [!UICONTROL URL destinations], which allows the firing of URLs based on segment qualification.
+Enables [!DNL Audience Manager] [!UICONTROL URL destinations], which allows the firing of URLs based on segment qualification.
 
 ## Identity options
 

@@ -7,7 +7,7 @@ seo-description: Learn how to get Adobe Experience Cloud Id.
 
 # Identity - Retrieving the Experience Cloud ID
 
-The Adobe Experience Platform Web SDK leverages the [Adobe Identity Service](../../identity-service/ecid.md). This ensures that each device has a unique identifier that is persisted on the device so activity between pages can be tied together.
+The Adobe Experience Platform [!DNL Web SDK] leverages the [Adobe Identity Service](../../identity-service/ecid.md). This ensures that each device has a unique identifier that is persisted on the device so activity between pages can be tied together.
 
 ## First Party Identity
 
@@ -23,7 +23,7 @@ If you want to use this unique ID, use the `getIdentity` command. `getIdentity` 
 
 >[!NOTE]
 >
->This method is typically used with custom solutions that require reading the Experience Cloud ID. It is not used by a standard implementation.
+>This method is typically used with custom solutions that require reading the [!DNL Experience Cloud] ID. It is not used by a standard implementation.
 
 ```javascript
 alloy("getIdentity")
