@@ -29,30 +29,45 @@ Fill in with use case
 
 Fill in with use case
 
-## Destination specifics {#destination-specs}
-
-### Data governance for Google Customer Match destinations {#data-governance}
+## Data governance for Google Customer Match destinations {#data-governance}
 
 Are there any data governance callouts that we want to mention?
 
-### Activation Type and Identities {#activation-type}
+## Activation Type and Identities {#activation-type}
 
 **Segment Export** - you are exporting all members of a segment (audience) with the identifiers (name, phone number, etc.) used in the Google Customer Match destination.
 
-For Google Customer Match, in the activation workflow, you can use customer hashed emails or phone numbers, as well as mobile device IDs (GAID or IDFA) as identifiers
+**Identities** - you can use raw or hashed emails as customer IDs in Google
 
-### Google Customer Match account prerequisites {#google-account-prerequisites}
+## Google Customer Match account prerequisites {#google-account-prerequisites}
+
+### Allow list {#allowlist}
+
+>[!NOTE]
+>
+>The allow list is mandatory before setting up your first Google Ads destination in Adobe Real-time CDP. Please ensure the allow list process described below has been completed by Google before creating a destination.
+
+Before creating the Google Ads destination in Adobe Real-time CDP, you must contact Google for Adobe to be put on the list of allowed data providers, and for your account to be added to the allow list. Contact Google and provide the following information:
+
+* **Account ID** : this is Adobe's account ID with Google. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
+* **Customer ID** : this is Adobe's customer account ID with Google. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
+* Your account type: **AdWords**
+* **Google AdWords ID** : This is your ID with Google. The ID format is typically 123-456-7890.
 
 Before you can send your audience segments to [!DNL Google Customer Match], please read [Use Customer Match partners to upload your data](https://support.google.com/google-ads/answer/7361372?hl=en&ref_topic=6296507) in the Google Customer Match documentation.
 
 
-### Email and phone number hashing requirements {#hashing-requirements}
+### Email hashing requirements {#hashing-requirements}
+
+<!--
 
 >[!IMPORTANT]
 >
 > When using mobile device IDs as identifiers, an AppId must be provided in the activation flow. For more information, see step 6 in the [Activate segments](#activate-segments) section of this page.
 
-Google requires that no personally identifiable information (PII) is sent in clear. Therefore, the audiences activated to Google Customer Match must be keyed off *hashed* email addresses or phone numbers. You can choose to hash email addresses before ingesting them into Adobe Experience Platform, or you can choose to work with email addresses in clear in Experience Platform and have our algorithm hash them on activation.
+-->
+
+Google requires that no personally identifiable information (PII) is sent in clear. Therefore, the audiences activated to Google Customer Match must be keyed off *hashed* email addresses. You can choose to hash email addresses before ingesting them into Adobe Experience Platform, or you can choose to work with email addresses in clear in Experience Platform and have our algorithm hash them on activation.
 
 For more information about Google's hashing requirements and other restrictions on activation, see the following sections in Google's documentation:
 
@@ -113,7 +128,7 @@ To activate segments to Google Customer Match, follow the steps below:
 3. Select **[!UICONTROL Activate]**;
 4. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to Google Customer Match.
     ![segments-to-destination](/help/rtcdp/destinations/assets/activate-segments-google-customer-match.png)
-5.  For *social destinations*, in the **[!UICONTROL Identity mapping]** step, you can select source attributes to map as target identities in the destination. This step is either optional or mandatory, depending on which primary identity you are using in the schema. <br>&nbsp; 
+5.  In the **[!UICONTROL Identity mapping]** step, you can select source attributes to map as target identities in the destination. This step is either optional or mandatory, depending on which primary identity you are using in the schema. <br>&nbsp; 
 
    *Email address as primary identity*: If you are using email address as primary identity in your schema, you can skip the Identity mapping step, as shown below:
 
@@ -147,4 +162,4 @@ To activate segments to Google Customer Match, follow the steps below:
 
 ## Verify that segment activation was successful {#verify-activation}
 
-Check the segment numbers in Google Customer Match. If activation was successful, audiences are populated in your advertising platform.
+Check the segment numbers in Google Customer Match. If the activation was successful, audiences are populated in your advertising platform.
