@@ -11,6 +11,10 @@ topic: guide
 
 This document provides step-by-step instructions for creating and managing export jobs using the [Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
 
+>[!NOTE]
+>
+>This guide covers the use of export jobs in the [!DNL Profile API]. For information on how to manage export jobs for Adobe Experience Platform Segmentation Service, see the guide on [export jobs in the Segmentation API](../../profile/api/export-jobs.md).
+
 In addition to creating an export job, you can also access [!DNL Profile] data using the `/entities` endpoint, also known as "[!DNL Profile Access]". See the [entities endpoint guide](./entities.md) for more information. For steps on how to access [!DNL Profile] data using the UI, refer to the [user guide](../ui/user-guide.md).
 
 ## Getting started
