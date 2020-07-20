@@ -134,8 +134,9 @@ The Schema Editor canvas reappears, showing the added consent string fields.
 From here, repeat the above steps to add the following additional mixins to the schema:
 
 * [!UICONTROL IdentityMap]
-* [!UICONTROL Experience Event environment details]
-* [!UICONTROL Experience Event web details]
+* [!UICONTROL ExperienceEvent environment details]
+* [!UICONTROL ExperienceEvent web details]
+* [!UICONTROL ExperienceEvent implementation details]
 
 Once the mixins have been added, finish by clicking **[!UICONTROL Save]**.
 
