@@ -490,4 +490,4 @@ To create an export job that only contains event data (no profile attributes), t
 
 ### Exporting segments
 
-You can also use the export jobs endpoint to export audience segments instead of [!DNL Profile] data. See the tutorial on [exporting segment data](../../segmentation/tutorials/export-data.md#initiate-export-job) for examples.
+You can also use the export jobs endpoint to export audience segments instead of [!DNL Profile] data. See the guide on [export jobs in the Segmentation API](../../segmentation/api/export-jobs.md) for more information.
