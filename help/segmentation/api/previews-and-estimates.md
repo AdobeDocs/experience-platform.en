@@ -64,7 +64,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | -------- | ----------- |
 | `predicateExpression` | The PQL expression to query the data by. |
 | `predicateType` | The predicate type for the query expression under `predicateExpression`. Currently, the only accepted value for this property is `pql/text`. |
-| `predicateModel` | The name of the Experience Data Model (XDM) schema the profile data is based on. |
+| `predicateModel` | The name of the [!DNL Experience Data Model] (XDM) schema the profile data is based on. |
 
 **Response**
 
@@ -160,7 +160,7 @@ A successful response returns HTTP status 200 with detailed information about th
 
 | Property | Description | 
 | -------- | ----------- |
-| `results` | A list of entity IDs, along with their related identities. The links provided can be used to look up the specified entities, using the [Profile Access API](../../profile/api/entities.md). |
+| `results` | A list of entity IDs, along with their related identities. The links provided can be used to look up the specified entities, using the [!DNL Profile Access API](../../profile/api/entities.md). |
 
 ## Retrieve the results of a specific estimate job {#get-estimate}
 
@@ -219,4 +219,4 @@ A successful response returns HTTP status 200 with details of the estimate job.
 
 ## Next steps
 
-After reading this guide you now have a better understanding of how to work with  previews and estimates. To learn more about the other Segmentation Service API endpoints, please read the [Segmentation Service developer guide overview](./overview.md).
+After reading this guide you now have a better understanding of how to work with  previews and estimates. To learn more about the other [!DNL Segmentation Service] API endpoints, please read the [Segmentation Service developer guide overview](./overview.md).
