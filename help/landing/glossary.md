@@ -11,7 +11,7 @@ topic: getting started
 
 **Access Control:** {#access-control} Access control for [!DNL Experience Platform] links users with access permissions and sandbox environments through product profiles in Adobe Admin Console.
 
-**Access key ID:** Access key ID is a unique identifier that's associated with an Amazon S3 secret access key. The access key ID and secret access key are used together to sign AWS requests.
+**Access key ID:** Access key ID is a unique identifier that's associated with an [!DNL Amazon] S3 secret access key. The access key ID and secret access key are used together to sign AWS requests.
 
 **Action:** In [!DNL Experience Platform Launch], an action is a specific type of rule component that defines what should happen after an event occurs and conditions are evaluated and passed.
 
