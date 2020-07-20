@@ -124,12 +124,12 @@ user-guide-title: Real-Time Customer Data Platform Help
 * Privacy and data governance {#privacy}
   * [Privacy overview](privacy/privacy-overview.md)
   * [Data Governance overview](privacy/data-governance-overview.md)
-* Real-time Customer Profile {#profile}
+* Profiles {#profile}
   * [Profile overview](profile/profile-overview.md)
   * [Identities & identity namespaces](profile/identities-overview.md)
   * [Merge policies](profile/merge-policies.md)
   * [Profile viewer](profile/profile-viewer.md)
-* Segmentation {#segmentation}
+* Segments {#segmentation}
   * [Segmentation overview](segmentation/segmentation-overview.md)
   * [Segment builder guide](segmentation/segment-builder-guide.md)
 * Sources {#sources}
