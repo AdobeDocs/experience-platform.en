@@ -6,8 +6,8 @@ user-guide-title: Real-Time Customer Data Platform Help
 
 # Real-time Customer Data Platform Help {#rtcdp}
 
-* [Product overview](overview.md)
-* Real-time Customer Data Platform {#intro}
+* [Real-time CDP overview](overview.md)
+* Getting started {#intro}
   * [Getting started](get-started.md)
   * [Metrics overview](home-page-dashboards.md)
 * Administration {#admin}
@@ -135,5 +135,5 @@ user-guide-title: Real-Time Customer Data Platform Help
 * Sources {#sources}
   * [Sources overview](sources/sources-overview.md)
   * [Implement website tags with Adobe Launch](sources/launch.md)
-* [Release notes](https://www.adobe.com/go/platform-release-notes-en)
-* [Glossary](https://www.adobe.com/go/platform-glossary-en)
+* [Experience Platform Release notes](https://www.adobe.com/go/platform-release-notes-en)
+* [Experience Platform Glossary](https://www.adobe.com/go/platform-glossary-en)
