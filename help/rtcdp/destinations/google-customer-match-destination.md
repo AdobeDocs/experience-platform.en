@@ -128,7 +128,7 @@ To activate segments to Google Customer Match, follow the steps below:
 3. Select **[!UICONTROL Activate]**;
 4. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to Google Customer Match.
     ![segments-to-destination](/help/rtcdp/destinations/assets/activate-segments-google-customer-match.png)
-5.  In the **[!UICONTROL Identity mapping]** step, you can select source attributes to map as target identities in the destination. This step is either optional or mandatory, depending on which primary identity you are using in the schema. <br>&nbsp; 
+5.  In the **[!UICONTROL Identity mapping]** step, you can select attributes that are not already labeled to be included as an identity in this destination. Identities that are already labeled as primary identities in your unified schema will be included. <br>&nbsp; 
 
    *Email address as primary identity*: If you are using email address as primary identity in your schema, you can skip the Identity mapping step, as shown below:
 
@@ -140,13 +140,17 @@ To activate segments to Google Customer Match, follow the steps below:
 
    ![Loyalty ID as identity](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
 
-6. On the **[!UICONTROL Segment schedule]** page, you can see the start date for sending data to the destination.
+6. On the **[!UICONTROL Segment schedule]** page, you can set the start date for sending data to the destination.
+
+<!--
 
     >[!IMPORTANT]
     >
     >If you select mobile device IDs (GAID or IDFA) as primary identity in the Identity mapping step, you must also provide an Application Id in this step. If you selected GAID as identity, see [Set the Application ID](https://developer.android.com/studio/build/application-id) in the Android developer documentation. IF you selected IDFA as identity, see [App ID](https://developer.android.com/studio/build/application-id) in the Apple developer documentation.
 
     ![segment schedule page](/help/rtcdp/destinations/assets/gcm-segment-schedule.png) 
+
+-->
 
 7. On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
