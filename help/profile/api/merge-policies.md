@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Real-time Customer Profile API developer guide
+title: Merge policies - Real-time Customer Profile API
 topic: guide
 ---
 
-# Merge policies
+# Merge policies endpoint
 
-Adobe Experience Platform enables you to bring data together from multiple sources and combine it in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create that unified view. Using RESTful APIs or the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. This guide shows steps for working with merge policies using the API. To work with merge policies using the UI, please refer to the [merge policies user guide](../ui/merge-policies.md).
+Adobe Experience Platform enables you to bring data together from multiple sources and combine it in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view. Using RESTful APIs or the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. This guide shows steps for working with merge policies using the API. To work with merge policies using the UI, please refer to the [merge policies user guide](../ui/merge-policies.md).
 
 ## Getting started
 
-The API endpoints used in this guide are part of the Real-time Customer Profile API. Before continuing, please review the [Real-time Customer Profile API developer guide](getting-started.md). In particular, the [getting started section](getting-started.md#getting-started) of the Profile developer guide includes links to related topics, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform APIs.
+The API endpoint used in this guide is part of the [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 ## Components of merge policies {#components-of-merge-policies}
 
-Merge policies are private to your IMS Organization, allowing you to create different policies in order to merge schemas in the specific way that you need. Any API accessing Profile data requires a merge policy, though a default will be used if one is not explicitly provided. Platform provides a default merge policy, or you can create a merge policy for a specific schema and mark it as the default for your organization. Each organization can potentially have multiple merge policies per schema, however each schema can have only one default merge policy. Any merge policy set as default will be used in cases where the schema name is provided and a merge policy is required but not provided. When you set a merge policy as the default, any existing merge policy that was previously set as the default will automatically be updated to no longer be used as the default.
+Merge policies are private to your IMS Organization, allowing you to create different policies in order to merge schemas in the specific way that you need. Any API accessing [!DNL Profile] data requires a merge policy, though a default will be used if one is not explicitly provided. [!DNL Platform] provides a default merge policy, or you can create a merge policy for a specific schema and mark it as the default for your organization. Each organization can potentially have multiple merge policies per schema, however each schema can have only one default merge policy. Any merge policy set as default will be used in cases where the schema name is provided and a merge policy is required but not provided. When you set a merge policy as the default, any existing merge policy that was previously set as the default will automatically be updated to no longer be used as the default.
 
 ### Complete merge policy object
 
@@ -38,8 +38,8 @@ The complete merge policy object represents a set of preferences controlling asp
         "attributeMerge": {
             "type": "{ATTRIBUTE_MERGE_TYPE}"
         },
-        "default": {BOOLEAN},
-        "updateEpoch": {UPDATE_TIME}
+        "default": "{BOOLEAN}",
+        "updateEpoch": "{UPDATE_TIME}"
     }
 ```
 
@@ -52,7 +52,7 @@ The complete merge policy object represents a set of preferences controlling asp
 |`attributeMerge`|[Attribute merge](#attribute-merge) object indicating the manner by which the merge policy will prioritize profile attribute values in the case of data conflicts.|
 |`schema`|The [schema](#schema) object on which the merge policy can be used.|
 |`default`|Boolean value indicating if this merge policy is the default for the specified schema.|
-|`version`|Platform maintained version of merge policy. This read-only value is incremented whenever a merge policy is updated.|
+|`version`|[!DNL Platform] maintained version of merge policy. This read-only value is incremented whenever a merge policy is updated.|
 |`updateEpoch`|Date of the last update to the merge policy.|
 
 **Example merge policy**
@@ -79,7 +79,7 @@ The complete merge policy object represents a set of preferences controlling asp
 
 ### Identity graph {#identity-graph}
 
-[Adobe Experience Platform Identity Service](../../identity-service/home.md) manages the identity graphs used globally and for each organization on Experience Platform. The `identityGraph` attribute of the merge policy defines how to determine the related identities for a user.
+[Adobe Experience Platform Identity Service](../../identity-service/home.md) manages the identity graphs used globally and for each organization on [!DNL Experience Platform]. The `identityGraph` attribute of the merge policy defines how to determine the related identities for a user.
 
 **identityGraph object**
 
@@ -166,7 +166,7 @@ Where the value of `name` is the name of the XDM class upon which the schema ass
 
 ## Access merge policies {#access-merge-policies}
 
-Using the Real-time Customer Profile API, the `/config/mergePolicies` endpoint allows you perform a lookup request to view a specific merge policy by its ID, or access all of the merge policies in your IMS Organization, filtered by specific criteria. You can also use the `/config/mergePolicies/bulk-get` endpoint to retrieve multiple merge policies by their IDs. Steps for performing each of these calls are outlined in the following sections.
+Using the [!DNL Real-time Customer Profile] API, the `/config/mergePolicies` endpoint allows you perform a lookup request to view a specific merge policy by its ID, or access all of the merge policies in your IMS Organization, filtered by specific criteria. You can also use the `/config/mergePolicies/bulk-get` endpoint to retrieve multiple merge policies by their IDs. Steps for performing each of these calls are outlined in the following sections.
 
 ### Access a single merge policy by ID
 
@@ -718,7 +718,7 @@ A successful delete request returns HTTP Status 200 (OK) and an empty response b
 
 ## Next steps
 
-Now that you know how to create and configure merge policies for your IMS Organization, you can use them to create audience segments from your Real-time Customer Profile data. Please see the [Adobe Experience Platform Segmentation Service documentation](../../segmentation/home.md) to begin defining and working with segments.
+Now that you know how to create and configure merge policies for your IMS Organization, you can use them to create audience segments from your [!DNL Real-time Customer Profile] data. Please see the [Adobe Experience Platform Segmentation Service documentation](../../segmentation/home.md) to begin defining and working with segments.
 
 
 

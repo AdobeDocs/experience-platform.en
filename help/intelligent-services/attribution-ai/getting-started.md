@@ -7,10 +7,10 @@ topic: Getting started
 
 # Getting started in Attribution AI
 
- The following guides require an understanding of the various Adobe Experience Platform services involved with using Attribution AI. Before beginning the tutorials, please review the following documents:
+ The following guides require an understanding of the various [!DNL Adobe Experience Platform] services involved with using Attribution AI. Before beginning the tutorials, please review the following documents:
 
-- [Experience Data Model (XDM) System overview](../../xdm/home.md): XDM is the foundational framework that allows Adobe Experience Cloud, powered by Experience Platform, to deliver the right message to the right person, on the right channel, at exactly the right moment. The methodology on which Experience Platform is built, XDM System, operationalizes Experience Data Model schemas for use by Platform services.
-- [Basics of schema composition](../../xdm/schema/composition.md): This document provides an introduction to Experience Data Model (XDM) schemas and the building blocks, principles, and best practices for composing schemas to be used in Adobe Experience Platform.
+- [Experience Data Model (XDM) System overview](../../xdm/home.md): XDM is the foundational framework that allows [!DNL Adobe Experience Cloud], powered by Experience Platform, to deliver the right message to the right person, on the right channel, at exactly the right moment. The methodology on which Experience Platform is built, XDM System, operationalizes Experience Data Model schemas for use by Platform services.
+- [Basics of schema composition](../../xdm/schema/composition.md): This document provides an introduction to Experience Data Model (XDM) schemas and the building blocks, principles, and best practices for composing schemas to be used in [!DNL Adobe Experience Platform].
 - [Building schemas](../../xdm/tutorials/create-schema-ui.md): This tutorial covers the steps for creating a schema using the Schema Editor within Experience Platform.
 
 Attribution AI requires datasets to conform to the Consumer Experience Events (CEE) schema, which is a mixin in the [Experience Data Model](../../xdm/home.md) (XDM). Please contact Adobe support at attributionai-support@adobe.com in order to implement or make changes to this data. If media spend data is present, you can do further analysis such as incremental revenue and ROI. If customer profile data is available, you can further attribute credits to the customer profile level.
@@ -23,7 +23,9 @@ Attribution AI requires datasets to conform to the Consumer Experience Events (C
 
 ## Downloading Attribution AI scores
 
->[!NOTE] If you do not need to download raw scores, you can skip this step and proceed to the [next steps](#next-steps).
+>[!NOTE]
+>
+>If you do not need to download raw scores, you can skip this step and proceed to the [next steps](#next-steps).
 
 Downloading Attribution AI scores is done through a combination of API calls. In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
@@ -35,7 +37,9 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+>[!NOTE]
+>
+>For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 ### Reading sample API calls
 

@@ -32,11 +32,15 @@ For more information about identity namespaces in Experience Platform, see the [
 
 When creating privacy requests for the Data Lake, valid identity values (and their associated namespaces) must be provided for each individual customer in order to locate their data and process it accordingly. Therefore, all datasets that are subject to privacy requests must contain an **identity descriptor** in their associated XDM schema.
 
->[!NOTE] Any datasets based on schemas that do not support identity descriptor metadata (such as ad-hoc datasets) currently cannot be processed in privacy requests.
+>[!NOTE]
+>
+>Any datasets based on schemas that do not support identity descriptor metadata (such as ad-hoc datasets) currently cannot be processed in privacy requests.
 
 This section walks through the steps of adding an identity descriptor to an existing dataset's XDM schema. If you already have a dataset with an identity descriptor, you can skip ahead to the [next section](#nested-maps).
 
->[!IMPORTANT] When deciding which schema fields to set as identities, keep in mind the [limitations of using nested map-type fields](#nested-maps).
+>[!IMPORTANT]
+>
+>When deciding which schema fields to set as identities, keep in mind the [limitations of using nested map-type fields](#nested-maps).
 
 There are two methods of adding an identity descriptor to a dataset schema:
 
@@ -51,7 +55,9 @@ Once you have set the appropriate fields within the schema as identity fields, y
 
 ### Using the API {#identity-api}
 
->[!NOTE] This section assumes you know the unique URI ID value of your dataset's XDM schema. If you do not know this value, you can retrieve it by using the Catalog Service API. After reading the [getting started](./api/getting-started.md) section of the developer guide, follow the steps outlined in for [listing](./api/list-objects.md) or [looking up](./api/look-up-object.md) Catalog objects to find your dataset. The schema ID can be found under `schemaRef.id`
+>[!NOTE]
+>
+>This section assumes you know the unique URI ID value of your dataset's XDM schema. If you do not know this value, you can retrieve it by using the Catalog Service API. After reading the [getting started](./api/getting-started.md) section of the developer guide, follow the steps outlined in for [listing](./api/list-objects.md) or [looking up](./api/look-up-object.md) Catalog objects to find your dataset. The schema ID can be found under `schemaRef.id`
 >
 > This section includes calls to the Schema Registry API. For important information related to using the API, including knowing your `{TENANT_ID}` and the concept of containers, see the [getting started](../xdm/api/getting-started.md) section of the developer guide.
 
@@ -117,7 +123,9 @@ A successful response returns HTTP status 201 (Created) and the details of the n
 
 ## Submitting requests {#submit}
 
->[!NOTE] This section covers how to format privacy requests for the Data Lake. It is strongly recommended that you review the [Privacy Service UI](../privacy-service/ui/overview.md) or [Privacy Service API](../privacy-service/api/getting-started.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
+>[!NOTE]
+>
+>This section covers how to format privacy requests for the Data Lake. It is strongly recommended that you review the [Privacy Service UI](../privacy-service/ui/overview.md) or [Privacy Service API](../privacy-service/api/getting-started.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
 
 The following section outlines how to make privacy requests for the Data Lake using the Privacy Service UI or API.
 

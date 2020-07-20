@@ -5,9 +5,9 @@ title: Create a Google Cloud Storage source connector in the UI
 topic: overview
 ---
 
-# Create a Google Cloud Storage source connector in the UI
+# Create a [!DNL Google Cloud Storage] source connector in the UI
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a Google Cloud Storage (hereinafter referred to as "GCS") source connector using the Platform user interface.
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL Google Cloud Storage] (hereinafter referred to as "GCS") source connector using the [!DNL Platform] user interface.
 
 ## Getting started
 
@@ -22,7 +22,7 @@ If you already have a GCS base connection, you may skip the remainder of this do
 
 ### Supported file formats
 
-Experience Platform supports the following file formats to be ingested from external storages:
+[!DNL Experience Platform] supports the following file formats to be ingested from external storages:
 
 *   Delimiter-separated values (DSV): Support for DSV formatted data files is currently limited to comma-separated values. The value of field headers within DSV formatted files must only consist of alphanumeric characters and underscores. Support for general DSV files will be provided in the future.
 *   JavaScript Object Notation (JSON): JSON formatted data files must be XDM compliant.
@@ -30,24 +30,34 @@ Experience Platform supports the following file formats to be ingested from exte
 
 ### Gather required credentials
 
-In order to access your GCS data on Platform, you must provide a valid GCS **Access Key ID** and **Secret**. You can learn more about how to obtain these values by reading the <a href="https://cloud.google.com/docs/authentication/production" target="_blank">server-to-server authentication guide</a> for Google Cloud.
+In order to access your GCS data on [!DNL Platform], you must provide a valid GCS **Access Key ID** and **Secret**. You can learn more about how to obtain these values by reading the <a href="https://cloud.google.com/docs/authentication/production" target="_blank">server-to-server authentication guide</a> for [!DNL Google Cloud].
 
 ## Connect your GCS account
 
-Once you have gathered your required credentials, you can follow the steps below to create a new inbound base connection to link your GCS account to Platform.
+Once you have gathered your required credentials, you can follow the steps below to create a new GCS account to connect to [!DNL Platform].
 
-Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> and then select **Sources** from the left navigation bar to access the *Sources* workspace. The *Catalog* screen displays a variety of sources for which you can create inbound base connections with, and each source shows the number of existing base connections associated to them.
+Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the *[!UICONTROL Sources]* workspace. The *[!UICONTROL Catalog]* screen displays a variety of sources for which you can create an inbound account with, and each source shows the number of existing accounts and dataflows associated with them.
 
-Under the *Cloud Storage* category, select **Google Cloud Storage** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source view its documentation, or to connect with the source. To create a new inbound base connection, click **Connect source**. 
+You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-![](../../../../images/tutorials/create/google-cloud-storage/sources-catalog.png)
+Under the *[!UICONTROL Databases]* category, select **[!UICONTROL Google Cloud Storage]** click **on the + icon (+)** to create a new GCS connector.
 
-The _Connect to Google Cloud Storage_ dialog appears. On the input form, provide the base connection with a name, an optional description, and your GCS credentials. When finished, click **Connect** and then allow some time for the new base connection to establish.
+![catalog](../../../../images/tutorials/create/google-cloud-storage/catalog.png)
 
-![](../../../../images/tutorials/create/google-cloud-storage/gcs-credentials.png)
+The *[!UICONTROL Connect to Google Cloud Storage]* page appears. On this page, you can either use new credentials or existing credentials.
 
-Once a base connection is established, you can continue on to the next section and configure a dataflow to bring data into Platform.
+### New account
+
+If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide the connection with a name, an optional description, and your GCS credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new account to establish.
+
+![connect](../../../../images/tutorials/create/google-cloud-storage/connect.png)
+
+### Existing account
+
+To connect an existing account, select the GCS account you want to connect with, then select **[!UICONTROL Next]** to proceed.
+
+![existing](../../../../images/tutorials/create/google-cloud-storage/existing.png)
 
 ## Next steps
 
-By following this tutorial, you have established a base connection to your GCS account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](../../dataflow/batch/cloud-storage.md).
+By following this tutorial, you have established a connection to your GCS account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into Platform](../../dataflow/batch/cloud-storage.md).

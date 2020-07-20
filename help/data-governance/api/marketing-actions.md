@@ -7,7 +7,7 @@ topic: developer guide
 
 # Marketing actions
 
-A marketing action, in the context of the Adobe Experience Platform Data Governance, is an action that an Experience Platform data consumer takes, for which there is a need to check for violations of data usage policies.
+A marketing action, in the context of the Adobe Experience Platform [!DNL Data Governance], is an action that an [!DNL Experience Platform] data consumer takes, for which there is a need to check for violations of data usage policies.
 
 Working with marketing actions in the API requires you to use the `/marketingActions` endpoint.
 
@@ -135,7 +135,7 @@ The response object contains the details for the marketing action, including the
 
 ## Create or update a marketing action
 
-The Policy Service API allows you to define your own marketing actions, as well as update existing ones. Creating and updating are both done using a PUT operation to the name of the marketing action. 
+The [!DNL Policy Service] API allows you to define your own marketing actions, as well as update existing ones. Creating and updating are both done using a PUT operation to the name of the marketing action. 
 
 **API format**
 
@@ -147,7 +147,9 @@ PUT /marketingActions/custom/{marketingActionName}
 
 In the request that follows, notice that the `name` in the request payload is the same as the `{marketingActionName}` in the API call. Unlike the `id` of a policy that is read-only and system-generated, creating a marketing action requires you to provide the _intended_ name of the marketing action as you create it. 
 
->[!NOTE] Failure to supply the `{marketingActionName}` in the call will result in a 405 Error (Method Not Allowed) as you are not permitted to perform a PUT to the `/marketingActions/custom` endpoint directly. Also, if the `name` in the payload doesn't match the `{marketingActionName}` in the path, you will receive a 400 Error (Bad Request).
+>[!NOTE]
+>
+>Failure to supply the `{marketingActionName}` in the call will result in a 405 Error (Method Not Allowed) as you are not permitted to perform a PUT to the `/marketingActions/custom` endpoint directly. Also, if the `name` in the payload doesn't match the `{marketingActionName}` in the path, you will receive a 400 Error (Bad Request).
 
 ```SHELL
 curl -X PUT \
@@ -190,7 +192,9 @@ If successfully created, you will receive an HTTP Status 201 (Created) and the r
 
 It is possible to delete marketing actions by sending a DELETE request to the `{marketingActionName}` of the marketing action you wish to remove. 
 
->[!NOTE] You are not able to delete marketing actions that are referenced by exiting policies. Trying to do so will result in a 400 Error (Bad Request) along with an error message that includes the `id` (or multiple IDs) of any policy (or policies) containing a reference to the marketing action you are trying to delete.
+>[!NOTE]
+>
+>You are not able to delete marketing actions that are referenced by exiting policies. Trying to do so will result in a 400 Error (Bad Request) along with an error message that includes the `id` (or multiple IDs) of any policy (or policies) containing a reference to the marketing action you are trying to delete.
 
 **API format**
 

@@ -582,7 +582,9 @@ The value of the `property` parameter supports several different kinds of condit
 | > | Returns only objects whose property values are greater than (but not equal to) a stated amount. | `property=version>1.0.0` |
 | >= | Returns only objects whose property values are greater than (or equal to) a stated amount. | `property=version>=1.0.0` |
 
->[!NOTE] The `name` property supports the use of a wildcard `*`, either as the entire search string or as a part of it. Wildcards match empty characters, such that the search string `te*st` will match the value "test". Asterisks are escaped by doubling them (`**`). A double-asterisk in a search string represents a single asterisk as a literal string.
+>[!NOTE]
+>
+>The `name` property supports the use of a wildcard `*`, either as the entire search string or as a part of it. Wildcards match empty characters, such that the search string `te*st` will match the value "test". Asterisks are escaped by doubling them (`**`). A double-asterisk in a search string represents a single asterisk as a literal string.
 
 **Request**
 

@@ -19,7 +19,9 @@ Sandboxes are virtual partitions within a single instance of Experience Platform
 
 Non-production sandboxes allow you to test features, run experiments, and make custom configurations without impacting your production sandbox. In addition, non-production sandboxes have a reset feature that removes all customer-created resources from the sandbox. Non-production sandboxes cannot be converted to production sandboxes.
 
->[!NOTE] When a sandbox is first created, it does not contain any data. Since each sandbox maintains its own isolated data store, they must also ingest their data independently.
+>[!NOTE]
+>
+>When a sandbox is first created, it does not contain any data. Since each sandbox maintains its own isolated data store, they must also ingest their data independently.
 
 In summary, sandboxes provide the following benefits:
 
