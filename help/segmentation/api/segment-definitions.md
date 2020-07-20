@@ -5,7 +5,7 @@ title: Segment definitions
 topic: developer guide
 ---
 
-# Segment definitions endpoint guide
+# Segment definitions endpoint
 
 Adobe Experience Platform allows you to create segments that define a group of specific attributes or behaviors from a group of profiles. A segment definition is an object that encapsulates a query written in [!DNL Profile Query Language] (PQL). This object is also called a PQL predicate. PQL predicates define the rules for the segment based on conditions related to any record or time-series data you supply to [!DNL Real-time Customer Profile]. See the [PQL guide](../pql/overview.md) for more information on writing PQL queries.
 
