@@ -13,9 +13,9 @@ The following topics are covered:
 
 * [Schema example](#schema-example)
 * [Fields](#fields)
-  * [xdm:privacyOptOuts](#xdm-privacyoptouts)
-  * [xdm:personalizationPreferences](#xdm-personalizationpreferences)
-  * [xdm:marketingPreferences](#xdm-marketingpreferences)
+  * [xdm:privacyOptOuts](#xdmprivacyoptouts)
+  * [xdm:personalizationPreferences](#xdmpersonalizationpreferences)
+  * [xdm:marketingPreferences](#xdmmarketingpreferences)
 * [Ingesting consent data using the mixin](#ingesting-consent-data-using-the-mixin)
 * [Appendix](#appendix)
   * [Full Privacy Consent schema](#full-privacy-consent-schema)
@@ -237,6 +237,10 @@ In order to use the Privacy Consent mixin to ingest consent data from your custo
 See the tutorial on [creating a schema in the UI](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) for steps on how to add mixins to a schema. The Privacy Consent mixin is compatible with schemas based on the classes XDM Individual Profile or XDM ExperienceEvent.
 
 Once you have created a schema containing the Privacy Consent mixin, refer to the the section on [creating a dataset](https://docs.adobe.com/content/help/en/experience-platform/catalog/datasets/user-guide.html#create) in the dataset user guide, following the steps to create a dataset with an existing schema.
+
+>**IMPORTANT**:
+>
+>If you want to send consent data to Real-time Customer Profile, it is required that you create a Profile-enabled schema based on the XDM Individual Profile class that contains the Privacy Consent mixin. The dataset that you create based on that schema must also be enabled for Profile. Refer to the tutorials above for specific steps related to Real-time Customer Profile requirements.
 
 ## Appendix
 
