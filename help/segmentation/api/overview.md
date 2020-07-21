@@ -5,7 +5,7 @@ title: Adobe Experience Platform Segmentation Service developer guide
 topic: guide
 ---
 
-# Adobe Experience Platform Segmentation Service API developer guide
+# Adobe Experience Platform [!DNL Segmentation Service] API developer guide
 
 [!DNL Adobe Experience Platform Segmentation Service] allows you to build segments and generate audiences in [!DNL Adobe Experience Platform] from your [!DNL Real-time Customer Profile] data.
 

@@ -5,7 +5,7 @@ title: Adobe Experience Platform Segmentation Service data types
 topic: overview
 ---
 
-# Adobe Experience Platform Segmentation Service supported data types
+# Adobe Experience Platform [!DNL Segmentation Service] supported data types
 
 All XDM data types are supported within [!DNL Segmentation Service]. The rules that constitute a segment definition are contextualized by the following data types.
 
@@ -32,7 +32,7 @@ Date data allows you to assign time-based context to your segment definitions, e
 
 ## Experience Events
 
-As an Adobe Experience Platform schema, XDM ExperienceEvents record explicit and implicit customer interactions with [!DNL Platform]-integrated applications, including a snapshot of the system at the time the interaction took place. ExperienceEvents are fact records. As such, they are a data source available to you during segment definition.
+As an Adobe Experience Platform schema, [!DNL XDM ExperienceEvents] record explicit and implicit customer interactions with [!DNL Platform]-integrated applications, including a snapshot of the system at the time the interaction took place. [!DNL ExperienceEvents] are fact records. As such, they are a data source available to you during segment definition.
 
 As seen in the table below, event data is rendered using keywords which help refine event behavior and specify event attributes. 
 

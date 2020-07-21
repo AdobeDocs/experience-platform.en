@@ -5,9 +5,9 @@ title: Adobe Experience Platform Segmentation Service
 topic: overview
 ---
 
-# Adobe Experience Platform Segmentation Service overview
+# Adobe Experience Platform [!DNL Segmentation Service] overview
 
-Adobe Experience Platform Segmentation Service provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on Platform, and are readily accessible by any Adobe solution. 
+Adobe Experience Platform [!DNL Segmentation Service] provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], and are readily accessible by any Adobe solution. 
 
 This document provides an overview of [!DNL Segmentation Service] and the role it plays in Adobe Experience Platform.
 
@@ -121,7 +121,7 @@ By assigning a variable to the purchase state attribute, your dynamic segment si
  
 ## Multi-entity segmentation {#multi-entity}
 
-With the advanced multi-entity segmentation feature, you can create segments using multiple XDM classes thereby adding extensions to person schemas. As a result, Segmentation Service can access additional fields during segment definition as if they were native to the profile data store.
+With the advanced multi-entity segmentation feature, you can create segments using multiple XDM classes thereby adding extensions to person schemas. As a result, [!DNL Segmentation Service] can access additional fields during segment definition as if they were native to the profile data store.
 
 Multi-entity segmentation provides the flexibility needed to identify audiences based on data relevant to your business needs. This process can be done quickly and easily without requiring expertise in querying databases. This enables you to add key data to your segments without having to make costly changes to data streams or wait for a back-end data merge. 
 
@@ -133,7 +133,7 @@ The following video is intended to support your understanding of multi-entity se
 
 To illustrate the value of this advanced segmentation feature, consider a data architect collaborating with a marketer. 
 
-In this example, the data architect is joining data for an individual (made up of schemas with XDM Individual Profile and XDM ExperienceEvent as their base classes) to another class using a key. Once joined, the data architect or the marketer can use these new fields during segment definition as if they were native to the base class schema.
+In this example, the data architect is joining data for an individual (made up of schemas with [!DNL XDM Individual Profile] and [!DNL XDM ExperienceEvent] as their base classes) to another class using a key. Once joined, the data architect or the marketer can use these new fields during segment definition as if they were native to the base class schema.
 
 **The problem**
 
@@ -147,7 +147,7 @@ The data architect's resources include access to web data from customer browsing
 >
 >We will assume in this example that the data architect has already established an ID Namespace.
 
-Using the API, the data architect relates the key from the ExperienceEvent schema with the "products" class. Doing so allows the data architect to make use of the additional fields from the "products" class as if they are native to the ExperienceEvent schema. As the final step of the configuration work, the data architect needs to bring the appropriate data into [!DNL Real-time Customer Profile]. This is done by enabling the "products" dataset for use with [!DNL Profile]. With the configuration work complete, either the data architect or the marketer can build the target segment in [!DNL Segment Builder].
+Using the API, the data architect relates the key from the [!DNL ExperienceEvent] schema with the "products" class. Doing so allows the data architect to make use of the additional fields from the "products" class as if they are native to the [!DNL ExperienceEvent] schema. As the final step of the configuration work, the data architect needs to bring the appropriate data into [!DNL Real-time Customer Profile]. This is done by enabling the "products" dataset for use with [!DNL Profile]. With the configuration work complete, either the data architect or the marketer can build the target segment in [!DNL Segment Builder].
 
 See the [schema composition overview](../xdm/schema/composition.md#union) to learn how to define relationships across XDM classes.
 
@@ -220,6 +220,6 @@ More detailed information about these supported data types can be found in the [
 - [!DNL Segmentation] is the process of defining a subset of profiles from your profile store, allowing you to characterize behavior or attributes of a desired marketable group. [!DNL Segmentation Service] makes this process possible.
 - When planning a segment, keep in mind that a segment can be referenced from, and combined with, any other segment.
 - A segment can be built from rules based on profile data, related time series data, or both.
-- Segments can either be evaluated on-demand or continuously. When evaluated on-demand, all profile data is passed through the segment definitions at once. When evaluated continuously, data streams through segment definitions as it enters Platform.
+- Segments can either be evaluated on-demand or continuously. When evaluated on-demand, all profile data is passed through the segment definitions at once. When evaluated continuously, data streams through segment definitions as it enters [!DNL Platform].
   
 To learn how to define segments in the UI, see the [Segment Builder guide](./ui/overview.md). For information on building segment definitions using the API, see the tutorial on [creating segments using the API](./tutorials/create-a-segment.md).

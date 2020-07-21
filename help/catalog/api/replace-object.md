@@ -7,11 +7,11 @@ topic: developer guide
 
 # Replace an object
 
-You can overwrite the contents of a Catalog object using a PUT request, wherein the entire resource is replaced with the request payload.
+You can overwrite the contents of a [!DNL Catalog] object using a PUT request, wherein the entire resource is replaced with the request payload.
 
 >[!NOTE]
 >
->If you only need to update a few specific fields within a Catalog object, using a PATCH request may be more efficient.
+>If you only need to update a few specific fields within a [!DNL Catalog] object, using a PATCH request may be more efficient.
 
 **API format**
 
@@ -21,7 +21,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of Catalog object to be replaced. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be replaced. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | The identifier of the specific object you want to update. |
 
 **Request**
