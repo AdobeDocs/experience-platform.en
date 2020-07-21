@@ -47,7 +47,7 @@ As seen in the table below, event data is rendered using keywords which help ref
 
 External audiences can also be used as components of a new segment definition, adding their attribute rules to the new segment.
 
-Currently, only Adobe Audience Manager is supported as an audience, with additional sources being enabled in the future. More information about using Adobe Audience Manager audiences with Platform can be found in the [audience sharing guide within the Adobe Audience Manager documentation](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
+Currently, only Adobe Audience Manager is supported as an external audience, with additional sources being enabled in the future. More information about using Adobe Audience Manager audiences with Platform can be found in the [audience sharing guide within the Adobe Audience Manager documentation](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
 
 ### Segment sharing
 
