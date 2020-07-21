@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;
 solution: Adobe Experience Platform
-title: Segment search endpoint guide
+title: Segment search endpoint
 topic: guide
 ---
 
-# Segment Search endpoint guide
+# Segment Search endpoint
 
 Segment Search is used to search fields contained across various data sources and return them in near real-time. 
 
@@ -218,7 +218,7 @@ After reading this guide you now have a better understanding of how Segment Sear
 
 ## Appendix {#appendix}
 
-The following sections provide additional information about how search terms work. Search queries are written in the following manner: `s={FieldName}:{SearchExpression}`. So, for example, to search for a segment named AAM or Platform, you would use the following search query: `s=segmentName:AAM%20OR%20Platform`.
+The following sections provide additional information about how search terms work. Search queries are written in the following manner: `s={FieldName}:{SearchExpression}`. So, for example, to search for a segment named AAM or [!DNL Platform], you would use the following search query: `s=segmentName:AAM%20OR%20Platform`.
 
 > ![NOTE] For best practices, the search expression should be HTML encoded, like the example shown above.
 
