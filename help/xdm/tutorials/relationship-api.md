@@ -107,9 +107,9 @@ Within the [!DNL Schema Registry], relationship descriptors work similarly to fo
 >
 >Unlike the destination schema, the source schema cannot use its primary identity as a reference field.
 
-In this tutorial, the destination schema "[!DNL Hotels]" contains an `email` field that serves as the schema's primary identity, and therefore will also act as its reference field. However, the source schema "[!DNL Loyalty Members]" does not have a dedicated string field to be used as a reference, and must be given a new mixin that adds a new field to the schema: `favoriteHotel`.
+In this tutorial, the destination schema "[!DNL Hotels]" contains an `email` field that serves as the schema's primary identity, and therefore will also act as its reference field. However, the source schema "[!DNL Loyalty Members]" does not have a dedicated field to be used as a reference, and must be given a new mixin that adds a new field to the schema: `favoriteHotel`.
 
->[!NOTE] If your source schema already has a dedicated string field that you plan to use as a reference field, you can skip ahead to the step on [creating a reference descriptor](#reference-identity).
+>[!NOTE] If your source schema already has a dedicated field that you plan to use as a reference field, you can skip ahead to the step on [creating a reference descriptor](#reference-identity).
 
 ### Create a new mixin
 
