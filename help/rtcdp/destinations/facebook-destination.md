@@ -5,23 +5,23 @@ description: Activate profiles for your Facebook campaigns for audience targetin
 seo-description: Activate profiles for your Facebook campaigns for audience targeting, personalization and suppression based on hashed emails.
 ---
 
-# Facebook Destination 
+# [!DNL Facebook] Destination 
 
 ## Overview {#overview}
 
-Activate profiles for your Facebook campaigns for audience targeting, personalization and suppression based on hashed emails.
+Activate profiles for your [!DNL Facebook] campaigns for audience targeting, personalization and suppression based on hashed emails.
 
 ![Facebook destination in the Real-time CDP UI](/help/rtcdp/destinations/assets/facebook-destination.png)
 
 ## Use Cases
 
-To help you better understand how and when you should use the Facebook destination, here are two sample use cases that Adobe Real-time Customer Data Platform customers can solve by using this feature.
+To help you better understand how and when you should use the [!DNL Facebook] destination, here are two sample use cases that Adobe Real-time Customer Data Platform customers can solve by using this feature.
 
 
 ### Use Case #1
 
 
-An online retailer wants to reach existing customers through social platforms and show them personalized offers based on their previous orders. The online retailer can ingest email addresses from their own CRM to Adobe Real-time CDP, build segments from their own offline data, and send these segments to the Facebook social platform, optimizing their advertising spending.
+An online retailer wants to reach existing customers through social platforms and show them personalized offers based on their previous orders. The online retailer can ingest email addresses from their own CRM to Adobe Real-time CDP, build segments from their own offline data, and send these segments to the [!DNL Facebook] social platform, optimizing their advertising spending.
 
 
 ### Use Case #2
@@ -31,15 +31,15 @@ An airline has different customer tiers (Bronze, Silver, and Gold), and wants to
 
 To target them across social media, they can onboard the customer data from their CRM into Adobe Real-time CDP, using the email addresses as identifiers.
 
-Next, they can use their offline data including associated membership IDs and customer tiers to build new audience segments that they can target through the Facebook destination.
+Next, they can use their offline data including associated membership IDs and customer tiers to build new audience segments that they can target through the [!DNL Facebook] destination.
 
 ## Destination specifics {#destination-specs}
 
-### Data governance for Facebook destinations {#data-governance}
+### Data governance for [!DNL Facebook] destinations {#data-governance}
 
 >[!IMPORTANT]
 >
->Data sent to Facebook should not include stitched identities. You are responsible for honoring this obligation and can do so by ensuring that segments selected for activation do not use a stitching option in their merge policy. Learn more about [merge policies](/help/profile/ui/merge-policies.md).
+>Data sent to [!DNL Facebook] should not include stitched identities. You are responsible for honoring this obligation and can do so by ensuring that segments selected for activation do not use a stitching option in their merge policy. Learn more about [merge policies](/help/profile/ui/merge-policies.md).
 
 ### Activation Type {#activation-type}
 
@@ -57,7 +57,7 @@ Before you can send your audience segments to [!DNL Facebook], make sure you mee
 
 ### Email hashing requirements {#email-hashing-requirements}
 
-Facebook requires that no personally identifiable information (PII) is sent in clear. Therefore, the audiences activated to Facebook must be keyed off *hashed* email addresses. You can choose to hash email addresses before ingesting them into Adobe Experience Platform, or you can choose to work with email addresses in clear in Experience Platform and have our algorithm hash them on activation.
+[!DNL Facebook] requires that no personally identifiable information (PII) is sent in clear. Therefore, the audiences activated to [!DNL Facebook] must be keyed off *hashed* email addresses. You can choose to hash email addresses before ingesting them into Adobe Experience Platform, or you can choose to work with email addresses in clear in Experience Platform and have our algorithm hash them on activation.
 
 To learn about ingesting email addresses in Experience Platform, see the [batch ingestion overview](/help/ingestion/batch-ingestion/overview.md) and the [steaming ingestion overview](/help/ingestion/streaming-ingestion/overview.md).
 
@@ -73,16 +73,16 @@ If you select to hash the email addresses yourself, make sure to comply with the
 
 >[!IMPORTANT]
 >
->If you choose not to hash email addresses, Adobe Real-time CDP will do that for you when you activate segments to Facebook. In the [activation workflow](/help/rtcdp/destinations/activate-destinations.md#activate-data) (see step 5), select the `Email` option as shown below for *raw email addresses* and `Email_LC_SHA256` for *hashed email addresses*.
+>If you choose not to hash email addresses, Adobe Real-time CDP will do that for you when you activate segments to [!DNL Facebook]. In the [activation workflow](/help/rtcdp/destinations/activate-destinations.md#activate-data) (see step 5), select the `Email` option as shown below for *raw email addresses* and `Email_LC_SHA256` for *hashed email addresses*.
 
 
 ![Hashing on activation](/help/rtcdp/destinations/assets/identity-mapping.png)
 
 ## Connect to destination {#connect-destination}
 
-To connect to the Facebook destination, see [Social network destinations authentication workflow](/help/rtcdp/destinations/social-network-destinations-workflow.md). 
+To connect to the [!DNL Facebook] destination, see [Social network destinations authentication workflow](/help/rtcdp/destinations/social-network-destinations-workflow.md). 
 
 
-## Activate segments to Facebook {#activate-segments}
+## Activate segments to [!DNL Facebook] {#activate-segments}
 
-For instructions on how to activate segments to Facebook, see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md). 
+For instructions on how to activate segments to [!DNL Facebook], see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md). 

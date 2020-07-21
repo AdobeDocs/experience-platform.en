@@ -5,13 +5,13 @@ description: The Facebook Pixel extension is an advertising destination in Adobe
 seo-description: 
 ---
 
-# Facebook Pixel extension {#facebook-pixel-extension}
+# [!DNL Facebook Pixel] extension {#facebook-pixel-extension}
 
 ## Overview {#overview}
 
-The Facebook pixel is an analytics tool that allows you to measure the effectiveness of your advertising by understanding the actions people take on your website.
+The [!DNL Facebook Pixel] is an analytics tool that allows you to measure the effectiveness of your advertising by understanding the actions people take on your website.
 
-Facebook Pixel is an advertising extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the [Facebook Pixel website](https://developers.facebook.com/docs/facebook-pixel/).
+[!DNL Facebook Pixel] is an advertising extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the [Facebook Pixel website](https://developers.facebook.com/docs/facebook-pixel/).
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
@@ -19,13 +19,13 @@ This destination is an Experience Platform Launch extension. For more informatio
 
 ## Prerequisites {#prerequisites}
 
-This extension is available in the Destinations catalog for all customers who have purchased Adobe Real-time CDP.
+This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Adobe Real-time CDP.
 
 To use this extension, you need access to Experience Platform Launch. Experience Platform Launch is offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to Launch and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
 ## Install extension {#install-extension}
 
-To install the Facebook Pixel extension:
+To install the [!DNL Facebook Pixel] extension:
 
 1. In the [Adobe Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations > Catalog]**.
 2. Select the extension from the catalog or use the search bar.

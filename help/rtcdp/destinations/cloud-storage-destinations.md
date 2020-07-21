@@ -7,7 +7,7 @@ seo-description: Adobe Real-time CDP can deliver your segments as data files to 
 
 # Cloud storage destinations {#cloud-storage-destinations}
 
-Adobe Real-time CDP can deliver your segments as data files to your cloud storage locations. This enables you to send audiences and their profile attributes to your internal systems, via CSV or tab-delimited files for Amazon S3 and SFTP. For AWS Kinesis and Azure Event Hubs destinations, data is streamed out of Experience Platform in JSON format.
+Adobe Real-time CDP can deliver your segments as data files to your cloud storage locations. This enables you to send audiences and their profile attributes to your internal systems, via CSV or tab-delimited files for [!DNL Amazon S3] and SFTP. For [!DNL AWS Kinesis] and [!DNL Azure Event Hubs] destinations, data is streamed out of Experience Platform in JSON format.
 
 ![Adobe Cloud storage destinations](/help/rtcdp/destinations/assets/cloud-storage-destinations.png)
 
