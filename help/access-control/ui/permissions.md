@@ -21,7 +21,7 @@ The *[!UICONTROL Edit Permissions]* page provides a workspace to add and remove 
 
 ![change-permissions-category](../images/change-permissions-category.png)
 
-To add a permission, click the **plus (+)** icon next to the permission's name. Alternatively, you can click **[!UICONTROL Add all]** to add all permissions under the current category to the profile. Added permissions appear under *Included Permission Items*.
+To add a permission, click the **plus (+)** icon next to the permission's name. Alternatively, you can click **[!UICONTROL Add all]** to add all permissions under the current category to the profile. Added permissions appear under *[!UICONTROL Included Permission Items]*.
 
 ![add-permissions](../images/add-permissions.png)
 

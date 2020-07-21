@@ -46,7 +46,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] is a fully managed servi
 
 *   There is currently no accessible way in the [!DNL Service Gallery] to delete an existing Service. In the meantime, please refer to the [Sensei Machine Learning API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) to delete an existing Service through API calls.
 *   The [!DNL Service Gallery] does not have pagination support to filter a Service's training and scoring runs.
-*   When configuring scheduled training or scoring runs through the S[!DNL ervice Gallery], setting the frequency to hourly prevents the schedule from being applied.
+*   When configuring scheduled training or scoring runs through the [!DNL Service Gallery], setting the frequency to hourly prevents the schedule from being applied.
 
 For more information, visit the [Data Science Workspace Overview](../../data-science-workspace/home.md).
 

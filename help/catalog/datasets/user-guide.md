@@ -98,7 +98,7 @@ Every dataset has the ability to enrich customer profiles with its ingested data
 
 For more information on enabling a schema for [!DNL Profile], see the [Schema Editor user guide](../../xdm/tutorials/create-schema-ui.md).
 
-To enable a dataset for Profile, access its *[!UICONTROL Dataset activity]* screen and click the **[!UICONTROL Profile]** toggle within the *Properties* column. Once enabled, data that is ingested into the dataset will also be used to populate customer profiles.
+To enable a dataset for Profile, access its *[!UICONTROL Dataset activity]* screen and click the **[!UICONTROL Profile]** toggle within the *[!UICONTROL Properties]* column. Once enabled, data that is ingested into the dataset will also be used to populate customer profiles.
 
 ![](../images/datasets/user-guide/enable_dataset_profiles.png)
 

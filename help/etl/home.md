@@ -18,7 +18,7 @@ The ETL integration guide outlines general steps for creating high-performance, 
 
 This guide also includes sample API calls to use when designing an ETL connector, with links to documentation that outlines each [!DNL Experience Platform] service, and use of its API, in more detail. 
 
-A sample integration is available on [!DNL GitHub] via the [ETL Ecosystem Integration Reference Code](https://github.com/adobe/acp-data-services-etl-reference) under the Apache License Version 2.0.
+A sample integration is available on [!DNL GitHub] via the [ETL Ecosystem Integration Reference Code](https://github.com/adobe/acp-data-services-etl-reference) under the [!DNL Apache] License Version 2.0.
 
 ## Workflow
 
@@ -37,7 +37,7 @@ There are multiple Experience Platform components involved in ETL connector inte
 - **Data Discovery** - Records the metadata of ingested and transformed data in [!DNL Experience Platform].
 - **[!DNL Data Access]** - Provides users with an interface to access their data in [!DNL Experience Platform].
 - **[!DNL Data Ingestion]** – Pushes data to [!DNL Experience Platform] with [!DNL Data Ingestion] APIs.
-- **[!DNL Schema Registry]** - Defines and stores schema that describe the structure of data to be used in Experience Platform. 
+- **[!DNL Schema Registry]** - Defines and stores schema that describe the structure of data to be used in [!DNL Experience Platform]. 
 
 ## Getting started with [!DNL Experience Platform] APIs
 
@@ -752,7 +752,7 @@ When snapshot profiles are used, the ETL tool will have to pick the last batch o
 
 Batch replay and data reprocessing may be required in cases where a client discovers that for the past 'n' days, data being ETL processed has not occurred as expected or source data itself may not have been correct. 
 
-To do this, the client's data administrators will use the Platform UI to remove the batches containing corrupt data. Then, the ETL will likely need to be re-run, thus repopulating with correct data. If the source itself had corrupt data, the data engineer/administrator will need to correct the source batches and re-ingest the data (either into Adobe Experience Platform or via ETL connectors).
+To do this, the client's data administrators will use the [!DNL Platform] UI to remove the batches containing corrupt data. Then, the ETL will likely need to be re-run, thus repopulating with correct data. If the source itself had corrupt data, the data engineer/administrator will need to correct the source batches and re-ingest the data (either into Adobe Experience Platform or via ETL connectors).
 
 Based upon the type of data being generated, it will be the data engineer's choice to remove a single batch or all batches from certain datasets. Data will be removed/archived as per [!DNL Experience Platform] guidelines.
 

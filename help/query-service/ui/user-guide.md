@@ -105,7 +105,7 @@ The console provides information on the status and operation of [!DNL Query Serv
 
 ### Query results
 
-After a query has completed, the results are displayed in the *Results* tab, next to the *Console* tab. This view shows the tabular output of your query, displaying up to 100 rows. This view allows you to verify that your query produces the expected output. To generate a dataset with your query, remove limits on rows returned, and run the query with `CREATE TABLE tablename AS SELECT` to generate a dataset with the output. See the [generating datasets tutorial][query-service-create-datasets] for instructions on how to generate a dataset from query results in [!DNL Query Editor].
+After a query has completed, the results are displayed in the *[!UICONTROL Results]* tab, next to the *[!UICONTROL Console]* tab. This view shows the tabular output of your query, displaying up to 100 rows. This view allows you to verify that your query produces the expected output. To generate a dataset with your query, remove limits on rows returned, and run the query with `CREATE TABLE tablename AS SELECT` to generate a dataset with the output. See the [generating datasets tutorial][query-service-create-datasets] for instructions on how to generate a dataset from query results in [!DNL Query Editor].
 
 ![Image](../images/queries/query-editor-overview/query-results.png)
 

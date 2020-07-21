@@ -9,13 +9,13 @@ topic: guide
 
 The Adobe Experience Platform [!DNL Query Service] provides a user interface that can be used to write and execute queries, view previously executed queries, and access queries saved by users within your IMS Organization. To access the UI within [Adobe Experience Platform][platform-ui], select **[!UICONTROL Queries]** in the left navigation.
 
-## Query Editor
+## [!DNL Query Editor]
 
-The Query Editor enables you to write and execute queries without using an external client. Click **[!UICONTROL Create Query]** to open the Query Editor and create a new query. You can also access the Query Editor by selecting a query from the *[!UICONTROL Log]* or *[!UICONTROL Browse]* tabs. Selecting a previously executed or saved query will open the Query Editor and display the SQL for the selected query.
+The [!DNL Query Editor] enables you to write and execute queries without using an external client. Click **[!UICONTROL Create Query]** to open the [!DNL Query Editor] and create a new query. You can also access the [!DNL Query Editor] by selecting a query from the *[!UICONTROL Log]* or *[!UICONTROL Browse]* tabs. Selecting a previously executed or saved query will open the [!DNL Query Editor] and display the SQL for the selected query.
 
 ![Image](../images/queries/ui-overview/overview.png)
 
-Query Editor provides editing space where you can begin typing a query. As you type, the editor autocompletes SQL reserved words, tables, and field names within tables. When finished writing your query, click **[!UICONTROL Play]** to run the query. The *[!UICONTROL Console]* tab below the editor shows what [!DNL Query Service] is currently doing, indicating when a query has been returned. The *[!UICONTROL Result]* tab, next to the Console, displays query results. See the [Query Editor guide][query-editor] for more information on using the query editor.
+[!DNL Query Editor] provides editing space where you can begin typing a query. As you type, the editor autocompletes SQL reserved words, tables, and field names within tables. When finished writing your query, click the **Play** button to run the query. The *[!UICONTROL Console]* tab below the editor shows what [!DNL Query Service] is currently doing, indicating when a query has been returned. The *[!UICONTROL Result]* tab, next to the Console, displays query results. See the [Query Editor guide][query-editor] for more information on using the [!DNL Query Editor].
 
 ![Image](../images/queries/ui-overview/query-editor.png)
 
@@ -27,7 +27,7 @@ The *[!UICONTROL Browse]* tab shows queries saved by users in your organization.
 
 | Column | Description |
 | --- | --- |
-| Name | The query name created by the user. You can click on the name to open the query in the Query Editor. You can also use the search bar to search on the Name of a query. Searches are case sensitive. |
+| Name | The query name created by the user. You can click on the name to open the query in the [!DNL Query Editor]. You can also use the search bar to search on the Name of a query. Searches are case sensitive. |
 | SQL | The first few characters of the SQL query. Hovering over the code displays the full query. |
 | Modified By | The last user who modified the query. Any user in your organization with access to [!DNL Query Service] can modify queries. |
 | Last Modified | The date and time of the last modification to the query, in the browser's time zone. |
@@ -56,7 +56,7 @@ The *[!UICONTROL Credentials]* tab displays your [!DNL Postgres] credentials. Cl
 
 ## Next steps
 
-Now that you are familiar with [!DNL Query Service] user interface on [!DNL Platform], you can access [!UICONTROL Query Editor] to start creating your own query projects to share with other users in your organization. For more information on authoring and running queries in [!UICONTROL Query Editor], see the [Query Editor user guide][query-editor].
+Now that you are familiar with [!DNL Query Service] user interface on [!DNL Platform], you can access [!DNL Query Editor] to start creating your own query projects to share with other users in your organization. For more information on authoring and running queries in [!DNL Query Editor], see the [Query Editor user guide][query-editor].
 
 [platform-ui]: https://platform.adobe.com
 [query-editor]: user-guide.md

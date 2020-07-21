@@ -19,7 +19,7 @@ This tutorial requires a working understanding of the various Adobe Experience P
 
 - [!DNL Real-time Customer Profile](../profile/home.md): Provides a unified consumer profile in real-time, based on aggregated data from multiple sources.
 - [Adobe Experience Platform Segmentation Service](./home.md): Allows you to build segments from Real-time Customer Profile.
-- [!DNL Experience Data Model (XDM)](../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
+- [!DNL Experience Data Model (XDM)](../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 
 ## How to define XDM relationships
 
@@ -31,7 +31,7 @@ This process can be done either using the [!DNL Schema Registry] API or the [!DN
 
 Once you have defined your XDM relationships, you can use the [!DNL Segmentation Service] API to build a segment.
 
-This process can be done either using the Segmentation API or the Segment Builder user interface. For a detailed guide on using the API to build a segment, please read [the tutorial on creating a segment using the Segmentation API](./tutorials/create-a-segment.md). For a detailed guide on using the Segment Builder to build a segment, please read [the Segment Builder user guide](./ui/overview.md).
+This process can be done either using the [!DNL Segmentation] API or the [!DNL Segment Builder] user interface. For a detailed guide on using the API to build a segment, please read [the tutorial on creating a segment using the Segmentation API](./tutorials/create-a-segment.md). For a detailed guide on using the Segment Builder to build a segment, please read [the Segment Builder user guide](./ui/overview.md).
 
 ## How to evaluate and access segments for multi-entity segments
 

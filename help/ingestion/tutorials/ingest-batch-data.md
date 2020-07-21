@@ -91,7 +91,7 @@ Click **[!UICONTROL Enable]** and the toggle will turn blue, indicating it is on
 
 ## Add data to dataset
 
-Data can be added into a dataset in a number of different ways. You could choose to use [!DNL Data Ingestion] APIs or an ETL partner such as Unifi or Informatica. For this tutorial, data will be added to the dataset using the **[!UICONTROL Add Data]** tab within the UI.
+Data can be added into a dataset in a number of different ways. You could choose to use [!DNL Data Ingestion] APIs or an ETL partner such as [!DNL Unifi] or [!DNL Informatica]. For this tutorial, data will be added to the dataset using the **[!UICONTROL Add Data]** tab within the UI.
 
 To begin adding data to the dataset, click on the **[!UICONTROL Add Data]** tab. You can now drag and drop files or browse your computer for the files you wish to add. 
 
