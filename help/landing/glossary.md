@@ -185,6 +185,8 @@ topic: getting started
 
 **Destination Catalog:** A destination catalog is a list of available destinations in the [!DNL Real-time Customer Data Platform].
 
+**Direct Call Rules:** in [!DNL Experience Platform Launch], you can set up a [!UICONTROL direct call] [!UICONTROL rule] that executes when it is called directly from the page. If your page load or your action on your site is very simple, or if it is unique and can execute a specific set of instructions every time (set [!DNL eVar4] to X and trigger [!DNL event2] every time), then you can use a [!UICONTROL direct call] [!UICONTROL rule]. See [!DNL Launch] documentation regarding creating [!UICONTROL direct call] [!UICONTROL rules].
+
 **Display Name:** Display name is a user-friendly name of a field that is shown in the UI.
 
 **DULE:** DULE is an acronym for *Data Usage Labeling and Enforcement*. DULE is a key part of data governance and a collection of key features that allows for data usage labeling and applying data access policies for governance needs within an organization.
