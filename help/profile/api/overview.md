@@ -11,7 +11,9 @@ topic: guide
 
 The [!DNL Real-time Customer Profile] API includes multiple endpoints, outlined below. Please visit the individual endpoint guides for details and refer to the [getting started guide](getting-started.md) for important information on required headers, reading sample API calls, and more.
 
-To view all available endpoints and CRUD operations, please refer to the [Real-time Customer Profile API Reference swagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
+To view all available endpoints and CRUD operations, visit the [Real-time Customer Profile API Reference swagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
+
+For a guide to working with [!DNL Real-time Customer Profile] data in the [!DNL Experience Platform] UI, please refer to the [Profile user guide](../ui/user-guide.md).
 
 ## (Alpha) Computed attributes {#computed-attributes}
 
@@ -45,4 +47,4 @@ Data ingested into [!DNL Platform] is stored in the [!DNL Data Lake] as well as 
 
 ## Next steps {#next-steps}
 
-To begin making calls using the [!DNL Real-time Customer Profile] API, read the [getting started guide](getting-started.md) then select one of the endpoint guides to learn how to use specific [!DNL Profile]-related endpoints. To learn more about working with [!DNL Profile] data using the [!DNL Platform] UI, see the [Real-time Customer Profile user guide](../ui/user-guide.md).
+To begin making calls using the [!DNL Real-time Customer Profile] API, read the [getting started guide](getting-started.md) then select one of the endpoint guides to learn how to use specific [!DNL Profile]-related endpoints. To work with [!DNL Profile] data using the [!DNL Experience Platform] UI, please refer to the [Real-time Customer Profile user guide](../ui/user-guide.md).
