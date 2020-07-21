@@ -13,6 +13,7 @@ user-guide-title: Adobe Experience Platform Segmentation Service Help
     - [Getting started](api/getting-started.md)
     - [Export jobs](api/export-jobs.md)
     - [Previews and estimates](api/previews-and-estimates.md)
+    - [Schedules](api/schedules.md)
     - [Segment definitions](api/segment-definitions.md)
     - [Segment jobs](api/segment-jobs.md)
     - [Segment search](api/segment-search.md)
