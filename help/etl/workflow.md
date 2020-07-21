@@ -19,7 +19,7 @@ The actions illustrated below are described in the steps outlined within the [ET
 
 ![](images/image2.png)
 
-### Figure 2 - Experience Platform Connector Activated:
+### Figure 2 - [!DNL Experience Platform] Connector Activated:
 
 ![](images/image3.png)
 
@@ -27,11 +27,11 @@ The actions illustrated below are described in the steps outlined within the [ET
 
 ![](images/image4.png)
 
-### Figure 4 - New Transformation UI, selecting Experience Platform Connection:
+### Figure 4 - New Transformation UI, selecting [!DNL Experience Platform] Connection:
 
 ![](images/image5.png)
 
-### Figure 5 - Browsing for source Experience Platform Datasets:
+### Figure 5 - Browsing for source [!DNL Experience Platform] Datasets:
 
 ![](images/image6.png)
 
@@ -51,7 +51,7 @@ The actions illustrated below are described in the steps outlined within the [ET
 
 ![](images/image10.png)
 
-### Figure 10 - Defining the Experience Data Model (XDM) target Dataset:
+### Figure 10 - Defining the [!DNL Experience Data Model] (XDM) target Dataset:
 
 ![](images/image11.png)
 

@@ -7,11 +7,11 @@ topic: developer guide
 
 # Delete an object
 
-You can delete a Catalog object by providing its ID in the path of a DELETE request. 
+You can delete a [!DNL Catalog] object by providing its ID in the path of a DELETE request. 
 
 >[!WARNING]
 >
->Take extra care when deleting objects, as this cannot be undone and may produce breaking changes elsewhere in Experience Platform.
+>Take extra care when deleting objects, as this cannot be undone and may produce breaking changes elsewhere in [!DNL Experience Platform].
 
 **API format**
 
@@ -25,7 +25,7 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of Catalog object to be deleted. Valid objects are: <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be deleted. Valid objects are: <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | The identifier of the specific object you want to update. |
 
 **Request**
@@ -53,4 +53,4 @@ A successful response returns HTTP status 200 (OK) and an array containing the I
 
 >[!NOTE]
 >
->If no Catalog objects match the ID provided in your request, you may still receive an HTTP Status Code 200, but the response array will be empty.
+>If no [!DNL Catalog] objects match the ID provided in your request, you may still receive an HTTP Status Code 200, but the response array will be empty.
