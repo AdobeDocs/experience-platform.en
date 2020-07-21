@@ -7,11 +7,11 @@ topic: developer guide
 
 # List of available metrics
 
-The following tables list all of the metrics that are exposed by Observability Insights, broken down by Platform service. Each metric includes a description and accepted ID query parameter.
+The following tables list all of the metrics that are exposed by Observability Insights, broken down by [!DNL Platform] service. Each metric includes a description and accepted ID query parameter.
 
-## Data Ingestion
+## [!DNL Data Ingestion]
 
-The following table outlines metrics for Adobe Experience Platform Data Ingestion. Metrics in **bold** are streaming ingestion metrics.
+The following table outlines metrics for Adobe Experience Platform [!DNL Data Ingestion]. Metrics in **bold** are streaming ingestion metrics.
 
 | Insights metric | Description | ID query parameter |
 | ---- | ---- | ---- |
@@ -37,14 +37,14 @@ The following table outlines metrics for Adobe Experience Platform Data Ingestio
 | **timeseries.data.collection.inlet.success** | Total number of successful HTTP calls to one data inlet or to all data inlets. | Inlet ID (Optional) |
 | **timeseries.data.collection.inlet.failure** | Total number of failed HTTP calls to one data inlet or to all data inlets. | Inlet ID (Optional) |
 
-## Identity Service
+## [!DNL Identity Service]
 
-The following table outlines metrics for Adobe Experience Platform Identity Service.
+The following table outlines metrics for Adobe Experience Platform [!DNL Identity Service].
 
 | Insights metric | Description | ID query parameter |
 | ---- | ---- | ---- |
-| timeseries.identity.dataset.recordsuccess.count | Number of records written to their data source by Identity Service, for one dataset or all datasets. | Dataset ID (Optional) |
-| timeseries.identity.dataset.recordfailed.count | Number of records failed by Identity Service, for one dataset or for all datasets. | Dataset ID (Optional) |
+| timeseries.identity.dataset.recordsuccess.count | Number of records written to their data source by [!DNL Identity Service], for one dataset or all datasets. | Dataset ID (Optional) |
+| timeseries.identity.dataset.recordfailed.count | Number of records failed by [!DNL Identity Service], for one dataset or for all datasets. | Dataset ID (Optional) |
 | timeseries.identity.dataset.namespacecode.recordsuccess.count | Number of Identity records successfully ingested for a namespace. | Namespace ID (**Required**) |
 | timeseries.identity.dataset.namespacecode.recordfailed.count | Number of Identity records failed by a namespace. | Namespace ID (**Required**) |
 | timeseries.identity.dataset.namespacecode.recordskipped.count | Number of Identity records skipped by a namespace. | Namespace ID (**Required**) |
@@ -53,9 +53,9 @@ The following table outlines metrics for Adobe Experience Platform Identity Serv
 | timeseries.identity.graph.imsorg.numidgraphs.count | Number of unique graph identities stored in the identity graph for your IMS Organization. | N/A |
 | timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Number of unique identities stored in the identity graph for your IMS Organization for a particular graph strength ("unknown", "weak", or "strong"). | Graph strength (**Required**) |
 
-## Privacy Service
+## [!DNL Privacy Service]
 
-The following table outlines metrics for Adobe Experience Platform Privacy Service.
+The following table outlines metrics for Adobe Experience Platform [!DNL Privacy Service].
 
 | Insights metric | Description | ID query parameter |
 | ---- | ---- | ---- |
@@ -63,9 +63,9 @@ The following table outlines metrics for Adobe Experience Platform Privacy Servi
 | timeseries.gdpr.jobs.completedjobs.count | Total number of completed jobs from GDPR. | ENV (**Required**) |
 | timeseries.gdpr.jobs.errorjobs.count | Total number of error jobs from GDPR. | ENV (**Required**) |
 
-## Query Service
+## [!DNL Query Service]
 
-The following table outlines metrics for Adobe Experience Platform Query Service.
+The following table outlines metrics for Adobe Experience Platform [!DNL Query Service].
 
 | Insights metric | Description | ID query parameter |
 | ---- | ---- | ---- |
@@ -76,17 +76,17 @@ The following table outlines metrics for Adobe Experience Platform Query Service
 | timeseries.queryservice.query.interactivequery.count | Total number of executed interactive queries. | N/A |
 | timeseries.queryservice.query.batchfrompsqlquery.count | Total number of executed batch queries from PSQL. | N/A |
 
-## Real-time Customer Profile
+## [!DNL Real-time Customer Profile]
 
-The following table outlines metrics for Real-time Customer Profile.
+The following table outlines metrics for [!DNL Real-time Customer Profile].
 
 | Insights metric | Description | ID query parameter |
 | ---- | ---- | ---- |
-| timeseries.profiles.dataset.recordread.count | Number of records read from the data lake by Profile, for one dataset or for all datasets. | Dataset ID (Optional) |
-| timeseries.profiles.dataset.recordsuccess.count | Number of records written to their data source by Profile, for one dataset or for all datasets. | Dataset ID (Optional) |
-| timeseries.profiles.dataset.recordfailed.count | Number of records failed by Profile, for one dataset or for all datasets. | Dataset ID (Optional) |
-| timeseries.profiles.dataset.batchsuccess.count | Number of Profile batches ingested for a dataset or for all datasets. | Dataset ID (Optional) |
-| timeseries.profiles.dataset.batchfailed.count | Number of Profile batches failed for one dataset or for all datasets. | Dataset ID (Optional) |
+| timeseries.profiles.dataset.recordread.count | Number of records read from the [!DNL Data Lake] by [!DNL Profile], for one dataset or for all datasets. | Dataset ID (Optional) |
+| timeseries.profiles.dataset.recordsuccess.count | Number of records written to their data source by [!DNL Profile], for one dataset or for all datasets. | Dataset ID (Optional) |
+| timeseries.profiles.dataset.recordfailed.count | Number of records failed by [!DNL Profile], for one dataset or for all datasets. | Dataset ID (Optional) |
+| timeseries.profiles.dataset.batchsuccess.count | Number of [!DNL Profile] batches ingested for a dataset or for all datasets. | Dataset ID (Optional) |
+| timeseries.profiles.dataset.batchfailed.count | Number of [!DNL Profile] batches failed for one dataset or for all datasets. | Dataset ID (Optional) |
 | platform.ups.ingest.streaming.request.m1_rate | Incoming Request rate. | IMS Org |
 | platform.ups.ingest.streaming.access.put.success.m1_rate | Ingestion success rate. | IMS Org |
 | platform.ups.ingest.streaming.records.created.m15_rate | Rate of new records ingested for a dataset. | Dataset ID |
