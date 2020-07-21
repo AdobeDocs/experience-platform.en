@@ -83,7 +83,7 @@ If you select to hash the email addresses yourself, make sure to comply with Goo
 
 >[!IMPORTANT]
 >
->If you choose not to hash email addresses, Adobe Real-time CDP will do that for you when you activate segments to Google Customer Match. In the [activation workflow](#activate-segments) (see step 5), select the `Email` option as shown below for *raw email addresses* and `Email_LC_SHA256` for *hashed email addresses*.
+>If you choose not to hash email addresses, Adobe Real-time CDP will do that for you when you activate segments to Google Customer Match. In the [activation workflow](/help/rtcdp/destinations/google-customer-match-destination.md#activate-segments) (see step 5), select the `Email` option as shown below for *raw email addresses* and `Email_LC_SHA256` for *hashed email addresses*.
 
 
 ![Hashing on activation](/help/rtcdp/destinations/assets/identity-mapping.png)
@@ -94,7 +94,7 @@ If you select to hash the email addresses yourself, make sure to comply with Goo
 
     ![Connect to Google Customer Match destination](/help/rtcdp/destinations/assets/connect-google-customer-match.png)
 
-2. In the **Authentication** step, if you had previously set up a connection to your Google Customer Match destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to Google Customer Match. Select **[!UICONTROL Connect to destination]** to log in and connect Adobe Experience Cloud to your Google Ad account.
+2. In the **Account** step, if you had previously set up a connection to your Google Customer Match destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to Google Customer Match. Select **[!UICONTROL Connect to destination]** to log in and connect Adobe Experience Cloud to your Google Ad account.
 
     >[!NOTE]
     >
