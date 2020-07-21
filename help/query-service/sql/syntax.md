@@ -7,11 +7,11 @@ topic: syntax
 
 # SQL syntax
 
-Query Service provides the ability to use standard ANSI SQL for `SELECT` statements and other limited commands. This document shows SQL syntax supported by Query Service.
+[!DNL Query Service] provides the ability to use standard ANSI SQL for `SELECT` statements and other limited commands. This document shows SQL syntax supported by [!DNL Query Service].
 
 ## Define a SELECT query
 
-The following syntax defines a `SELECT` query supported by Query Service:
+The following syntax defines a `SELECT` query supported by [!DNL Query Service]:
 
 ```
 [ WITH with_query [, ...] ]
@@ -104,7 +104,7 @@ SELECT statement 2
 
 ## CREATE TABLE AS SELECT
 
-The following syntax defines a `CREATE TABLE AS SELECT` (CTAS) query supported by Query Service:
+The following syntax defines a `CREATE TABLE AS SELECT` (CTAS) query supported by [!DNL Query Service]:
 
 ```
 CREATE TABLE table_name [ WITH (schema='target_schema_title') ] AS (select_query)
@@ -129,7 +129,7 @@ Please note that for a given CTAS query:
 
 ## INSERT INTO
 
-The following syntax defines an `INSERT INTO` query supported by Query Service:
+The following syntax defines an `INSERT INTO` query supported by [!DNL Query Service]:
 
 ```
 INSERT INTO table_name select_query
@@ -163,7 +163,7 @@ DROP [TEMP] TABLE [IF EXISTS] [db_name.]table_name
 
 ## CREATE VIEW
 
-The following syntax defines a `CREATE VIEW` query supported by Query Service:
+The following syntax defines a `CREATE VIEW` query supported by [!DNL Query Service]:
 
 ```
 CREATE [ OR REPLACE ] VIEW view_name AS select_query
@@ -181,7 +181,7 @@ CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 
 ### DROP VIEW
 
-The following syntax defines a `DROP VIEW` query supported by Query Service:
+The following syntax defines a `DROP VIEW` query supported by [!DNL Query Service]:
 
 ```
 DROP VIEW [IF EXISTS] view_name
@@ -196,7 +196,7 @@ DROP VIEW v1
 DROP VIEW IF EXISTS v1
 ```
 
-## Spark SQL commands 
+## [!DNL Spark] SQL commands 
 
 ### SET
 
@@ -236,7 +236,7 @@ CLOSE { name }
 
 ### COMMIT
 
-No action is taken in Query Service as a response to the commit transaction statement.
+No action is taken in [!DNL Query Service] as a response to the commit transaction statement.
 
 ```
 COMMIT [ WORK | TRANSACTION ]
@@ -314,7 +314,9 @@ where option can be one of:
 - `FORMAT`: Specify the output format, which can be TEXT, XML, JSON, or YAML. Non-text output contains the same information as the text output format, but is easier for programs to parse. This parameter defaults to `TEXT`.
 - `statement`: Any `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`, or `CREATE MATERIALIZED VIEW AS` statement, whose execution plan you want to see.
 
->[!IMPORTANT] Keep in mind that the statement is actually executed when the `ANALYZE` option is used. Although `EXPLAIN` discards any output that a `SELECT` returns, other side effects of the statement happen as usual. 
+>[!IMPORTANT]
+>
+>Keep in mind that the statement is actually executed when the `ANALYZE` option is used. Although `EXPLAIN` discards any output that a `SELECT` returns, other side effects of the statement happen as usual. 
 
 #### Example
 

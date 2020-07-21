@@ -7,11 +7,11 @@ topic: developer guide
 
 # DULE [!DNL Policy Service] API developer guide
 
-Data Usage Labeling and Enforcement (DULE) is the core mechanism of Adobe Experience Platform Data Governance. The DULE Policy Service provides a RESTful API that allows you to create and manage data usage policies to determine what marketing actions can be taken against data that has been labeled with certain data usage labels.
+Data Usage Labeling and Enforcement (DULE) is the core mechanism of Adobe Experience Platform [!DNL Data Governance]. The DULE [!DNL Policy Service] provides a RESTful API that allows you to create and manage data usage policies to determine what marketing actions can be taken against data that has been labeled with certain data usage labels.
 
-This document provides instructions for performing the key operations available in the Policy Service API. If you have not yet done so, please begin by reviewing the [Data Governance overview](../home.md) to familiarize yourself with the DULE framework. For step-by-step instructions for creating and enforcing DULE policies, see the [DULE policy tutorial](../policies/create.md).
+This document provides instructions for performing the key operations available in the [!DNL Policy Service] API. If you have not yet done so, please begin by reviewing the [Data Governance overview](../home.md) to familiarize yourself with the DULE framework. For step-by-step instructions for creating and enforcing DULE policies, see the [DULE policy tutorial](../policies/create.md).
 
-This document provides an introduction to the core concepts you need to know before attempting to make calls to the Policy Service API.
+This document provides an introduction to the core concepts you need to know before attempting to make calls to the [!DNL Policy Service] API.
 
 ## Getting started with DULE [!DNL Policy Service]
 
@@ -21,11 +21,11 @@ Before beginning to work with the [!DNL Policy Service], data on [!DNL Experienc
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-* [Data Governance](../home.md): The framework by which [!DNL Experience Platform] enforces data usage compliance.
-    * [DULE labels](../labels/overview.md): Data usage labels are applied to Experience Data Model (XDM) data fields, specifying restrictions for how that data can be accessed.
-* [Experience Data Model (XDM) System](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-* [Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [!DNL Data Governance](../home.md): The framework by which [!DNL Experience Platform] enforces data usage compliance.
+    * [DULE labels](../labels/overview.md): Data usage labels are applied to [!DNL Experience Data Model] (XDM) data fields, specifying restrictions for how that data can be accessed.
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+* [!DNL Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ## Reading sample API calls
 
@@ -43,7 +43,9 @@ All resources in [!DNL Experience Platform], including those belonging to [!DNL 
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
+>[!NOTE]
+>
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 

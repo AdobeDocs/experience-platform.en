@@ -43,7 +43,9 @@ Type: ExperienceEvent
 | `b_time` | `ExperienceEvent.timeStamp` |
 | `overwrite` | `overwriteTraits` |
 
->[!NOTE] Inbound Fields are scheduled to be deprecated in a future release.
+>[!NOTE]
+>
+>Inbound Fields are scheduled to be deprecated in a future release.
 
 ## Profile data
 

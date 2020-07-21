@@ -5,7 +5,7 @@ title: Define a relationship between two schemas using the Schema Registry API
 topic: tutorials
 ---
 
-# Define a relationship between two schemas using the Schema Registry API
+# Define a relationship between two schemas using the [!DNL Schema Registry] API
 
 
 The ability to understand the relationships between your customers and their interactions with your brand across various channels is an important part of Adobe Experience Platform. Defining these relationships within the structure of your [!DNL Experience Data Model] (XDM) schemas allows you to gain complex insights into your customer data.
@@ -53,7 +53,9 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json'
 ```
 
->[!NOTE] The [!DNL Accept] header `application/vnd.adobe.xed-id+json` returns only the titles, IDs, and versions of the resulting schemas.
+>[!NOTE]
+>
+>The [!DNL Accept] header `application/vnd.adobe.xed-id+json` returns only the titles, IDs, and versions of the resulting schemas.
 
 **Response**
 
@@ -101,7 +103,9 @@ Record the `$id` values of the two schemas you want to define a relationship bet
 
 Within the [!DNL Schema Registry], relationship descriptors work similarly to foreign keys in relational database tables: a field in the source schema acts as a reference to the **primary identity** field of a destination schema. If your source schema does not have a field for this purpose, you may need to create a mixin with the new field and add it to the schema. This new field must have a `type` value of "[!DNL string]".
 
->[!IMPORTANT] Unlike the destination schema, the source schema cannot use its primary identity as a reference field.
+>[!IMPORTANT]
+>
+>Unlike the destination schema, the source schema cannot use its primary identity as a reference field.
 
 In this tutorial, the destination schema "[!DNL Hotels]" contains an `email` field that serves as the schema's primary identity, and therefore will also act as its reference field. However, the source schema "[!DNL Loyalty Members]" does not have a dedicated string field to be used as a reference, and must be given a new mixin that adds a new field to the schema: `favoriteHotel`.
 

@@ -7,7 +7,7 @@ topic: developer guide
 
 # Array, list, and set functions
 
-Profile Query Language (PQL) offers functions to make interaction with arrays, lists, and strings easier. More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
+[!DNL Profile Query Language] (PQL) offers functions to make interaction with arrays, lists, and strings easier. More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
 
 ## In
 
@@ -31,7 +31,9 @@ person.birthMonth in [3, 6, 9]
 
 The `notIn` function is used to determine if an item is not a member of an array or list.
 
->[!NOTE] The `notIn` function *also* ensures that neither value is equal to null. Therefore, the results are not an exact negation of the `in` function.
+>[!NOTE]
+>
+>The `notIn` function *also* ensures that neither value is equal to null. Therefore, the results are not an exact negation of the `in` function.
 
 **Format**
 

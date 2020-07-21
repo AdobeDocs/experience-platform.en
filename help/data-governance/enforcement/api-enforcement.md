@@ -5,11 +5,13 @@ title: Enforce data usage policies using the Policy Service API
 topic: enforcement
 ---
 
-# Enforce data usage policies using the Policy Service API
+# Enforce data usage policies using the [!DNL Policy Service] API
 
-Once you have created data usage labels for your data, and have created usage policies for marketing actions against those labels, you can use the [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) to evaluate whether a marketing action performed on a dataset or an arbitrary group of labels constitutes a policy violation. You can then set up your own internal protocols to handle policy violations based on the API response.
+Once you have created data usage labels for your data, and have created usage policies for marketing actions against those labels, you can use the [!DNL DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) to evaluate whether a marketing action performed on a dataset or an arbitrary group of labels constitutes a policy violation. You can then set up your own internal protocols to handle policy violations based on the API response.
 
->[!NOTE] By default, only policies whose status is set to `ENABLED` can participate in evaluation. To allow `DRAFT` policies to participate in evaluation, you must include the query parameter `includeDraft=true` in the request path.
+>[!NOTE]
+>
+>By default, only policies whose status is set to `ENABLED` can participate in evaluation. To allow `DRAFT` policies to participate in evaluation, you must include the query parameter `includeDraft=true` in the request path.
 
 This document provides steps on how to use the [!DNL Policy Service] API to check for policy violations in different scenarios.
 
@@ -44,7 +46,9 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 The following request tests the `exportToThirdParty` marketing action against labels `C1` and `C3`. Since the data usage policy you created earlier in this tutorial defines the `C1` label as one of the `deny` conditions in its policy expression, the marketing action should trigger a policy violation.
 
->[!NOTE] Data usage labels are case-sensitive. Policy violations only occur when the labels defined in their policy expressions are matched exactly. In this example, a `C1` label would trigger a violation, whereas a `c1` label would not.
+>[!NOTE]
+>
+>Data usage labels are case-sensitive. Policy violations only occur when the labels defined in their policy expressions are matched exactly. In this example, a `C1` label would trigger a violation, whereas a `c1` label would not.
 
 ```shell
 curl -X GET \
