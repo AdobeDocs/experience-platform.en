@@ -61,13 +61,13 @@ The [!DNL Profile Privacy] mixin contains the following fields:
 
 To view the full structure of the [!DNL Profile Privacy] mixin, please refer to the [XDM public GitHub repository](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) or preview the mixin using the Platform UI.
 
-### Profile Preferences Details
+### [!DNL Profile Preferences Details]
 
-The Profile Preferences Details mixin provides several fields that represent preferences for customer profiles (such as email format, preferred language, and time zone). One of the fields included in this mixin, OptInOut (`optInOut`), allows opt-out values to be set for individual channels. 
+The [!DNL Profile Preferences Details] mixin provides several fields that represent preferences for customer profiles (such as email format, preferred language, and time zone). One of the fields included in this mixin, OptInOut (`optInOut`), allows opt-out values to be set for individual channels. 
 
 ![](images/opt-outs/profile-preferences-details.png)
 
-The Profile Preferences Details mixin contains the following fields related to opt-outs:
+The [!DNL Profile Preferences Details] mixin contains the following fields related to opt-outs:
 
 - OptInOut (`optInOut`): An object where each key represents a valid and known URI for a communication channel and the active state of the opt-out for each channel. Each channel may have one of four possible values:
     - Not Provided (`not_provided`): An opt-out request has not been provided for this channel.

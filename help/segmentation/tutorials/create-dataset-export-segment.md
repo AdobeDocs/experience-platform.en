@@ -15,7 +15,7 @@ This tutorial is directly related to the steps outlined in the tutorial for [eva
 
 ## Getting started
 
-In order to export a segment, the dataset must be based on the XDM Individual Profile Union Schema. A union schema is a system-generated, read-only schema that aggregates the fields of all schemas that share the same class, in this case that is the XDM Individual Profile class. For more information on union view schemas, please see the [Real-time Customer Profile section of the Schema Registry developer guide](../../xdm/schema/composition.md#union).
+In order to export a segment, the dataset must be based on the [!DNL XDM Individual Profile Union Schema]. A union schema is a system-generated, read-only schema that aggregates the fields of all schemas that share the same class, in this case that is the [!DNL XDM Individual Profile] class. For more information on union view schemas, please see the [Real-time Customer Profile section of the Schema Registry developer guide](../../xdm/schema/composition.md#union).
 
 To view union schemas in the UI, click **[!UICONTROL Profiles]** in the left-navigation, then click on the **[!UICONTROL Union schema]** tab as shown below.
 
@@ -46,7 +46,7 @@ On the *[!UICONTROL Create Dataset]* screen, click **[!UICONTROL Create Dataset 
 
 ## Select XDM Individual Profile Union Schema
 
-To select the XDM Individual Profile Union Schema for use in your dataset, find the "[!UICONTROL XDM Individual Profile]" schema with a type of "[!UICONTROL Union]" on the *[!UICONTROL Select Schema]* screen.
+To select the [!DNL XDM Individual Profile Union Schema] for use in your dataset, find the "[!UICONTROL XDM Individual Profile]" schema with a type of "[!UICONTROL Union]" on the *[!UICONTROL Select Schema]* screen.
 
 Selected the radio button next to **[!UICONTROL XDM Individual Profile]**, then click **[!UICONTROL Next]** in the top-right corner.
 
@@ -77,6 +77,6 @@ Please make note of the **[!UICONTROL Dataset ID]**, as this value is required t
 
 ## Next steps
 
-Now that you have created a dataset based on the XDM Individual Profile Union Schema, you can use the **[!UICONTROL Dataset ID]** to continue the [evaluating and accessing segment results](./evaluate-a-segment.md) tutorial.
+Now that you have created a dataset based on the [!DNL XDM Individual Profile Union Schema], you can use the **[!UICONTROL Dataset ID]** to continue the [evaluating and accessing segment results](./evaluate-a-segment.md) tutorial.
 
 At this time, please return to the evaluating segment results tutorial and pick up from the [generating profiles for audience members](./evaluate-a-segment.md#generate-profiles) step of the exporting a segment workflow. 
