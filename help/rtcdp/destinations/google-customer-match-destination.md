@@ -45,16 +45,9 @@ Are there any data governance callouts that we want to mention?
 
 >[!NOTE]
 >
->The allow list is mandatory before setting up your first Google Ads destination in Adobe Real-time CDP. Please ensure the allow list process described below has been completed by Google before creating a destination.
+>It is mandatory to be added to Google's allow list before setting up your first Google Customer Match destination in Adobe Real-time CDP. Please ensure the allow list process described below has been completed by Google before creating a destination.
 
-Before creating the Google Ads destination in Adobe Real-time CDP, you must contact Google for Adobe to be put on the list of allowed data providers, and for your account to be added to the allow list. Contact Google and provide the following information:
-
-* **Account ID** : this is Adobe's account ID with Google. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
-* **Customer ID** : this is Adobe's customer account ID with Google. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
-* Your account type: **AdWords**
-* **Google AdWords ID** : This is your ID with Google. The ID format is typically 123-456-7890.
-
-Before you can send your audience segments to [!DNL Google Customer Match], please read [Use Customer Match partners to upload your data](https://support.google.com/google-ads/answer/7361372?hl=en&ref_topic=6296507) in the Google Customer Match documentation.
+Before creating the Google Customer Match destination in Adobe Real-time CDP, you must contact Google and follow the allow list instructions in [Use Customer Match partners to upload your data](https://support.google.com/google-ads/answer/7361372?hl=en&ref_topic=6296507) in the Google documentation.
 
 
 ### Email hashing requirements {#hashing-requirements}
@@ -72,9 +65,16 @@ Google requires that no personally identifiable information (PII) is sent in cle
 For more information about Google's hashing requirements and other restrictions on activation, see the following sections in Google's documentation:
 
 * [Customer Match with email address, address, or user ID](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id)
+* [Customer Match considerations](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_considerations)
+
+<!--
+
+Links to be added when activation based on phone number and device IDs becomes available.
+
 * [Customer Match with phone number](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_phone_number)
 * [Customer Match with mobile device IDs](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_mobile_device_ids)
-* [Customer Match considerations](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_considerations)
+
+-->
 
 To learn about ingesting email addresses in Experience Platform, see the [batch ingestion overview](/help/ingestion/batch-ingestion/overview.md) and the [steaming ingestion overview](/help/ingestion/streaming-ingestion/overview.md).
 
@@ -83,7 +83,7 @@ If you select to hash the email addresses yourself, make sure to comply with Goo
 
 >[!IMPORTANT]
 >
->If you choose not to hash email addresses, Adobe Real-time CDP will do that for you when you activate segments to Google Customer Match. In the [activation workflow](/help/rtcdp/destinations/activate-destinations.md#activate-data) (see step 5), select the `Email` option as shown below for *raw email addresses* and `Email_LC_SHA256` for *hashed email addresses*.
+>If you choose not to hash email addresses, Adobe Real-time CDP will do that for you when you activate segments to Google Customer Match. In the [activation workflow](#activate-segments) (see step 5), select the `Email` option as shown below for *raw email addresses* and `Email_LC_SHA256` for *hashed email addresses*.
 
 
 ![Hashing on activation](/help/rtcdp/destinations/assets/identity-mapping.png)
