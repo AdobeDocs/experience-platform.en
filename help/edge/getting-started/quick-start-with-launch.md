@@ -7,7 +7,7 @@ seo-description: Quick start guide for using the Experience Platform Web SDK ext
 
 # Welcome
 
-This guide will take you through the different steps on how to set up the Adobe Experience Platform Web SDK in Adobe Launch. You need to have permissions and be on the allow list to use this feature. If you would like to get on the waiting list, please reach out to your CSM. Additionally, in order to use this feature, you need to:
+This guide will take you through the different steps on how to set up the Adobe Experience Platform [!DNL Web SDK] in Adobe Launch. You need to have permissions and be on the allow list to use this feature. If you would like to get on the waiting list, please reach out to your CSM. Additionally, in order to use this feature, you need to:
 
 - Have a [1st-party domain (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) enabled. If you already have a CNAME for Adobe Analytics, you should use that one. Testing in development will work without a CNAME but you will need one before you go to production
 - Be using the latest version of the Visitor ID service
@@ -22,13 +22,13 @@ You can create a configuration ID by using the [edge configuration tool](../fund
 
 ## Prepare a Schema
 
-The Experience Platform Edge Network takes data as XDM. XDM is a data format that lets you define schemas. The schema defines how the Edge Network expects the data to be formatted. To send data you will need to define your schema. Make sure you complete the following:
+The [!DNL Experience Platform Edge Network] takes data as XDM. XDM is a data format that lets you define schemas. The schema defines how the [!DNL Edge Network] expects the data to be formatted. To send data you will need to define your schema. Make sure you complete the following:
 
 1. [Create a schema](../../xdm/tutorials/create-schema-ui.md)
-2. Add the AEP Web SDK ExperienceEvent Mixin to the schema you created.
+2. Add the AEP [!DNL Web SDK ExperienceEvent] Mixin to the schema you created.
 3. Create a Dataset from the schema you created.
 
-The following video is intended to support you in creating a schema, dataset, and streaming source connector for your Web SDK data.
+The following video is intended to support you in creating a schema, dataset, and streaming source connector for your [!DNL Web SDK] data.
 
 >[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
@@ -40,13 +40,13 @@ For more details on different configuration options, see [Configuring the SDK](.
 
 ## Create a Data Element Base on Your Schema
 
-In Adobe Launch, create a Data Element that references the schema by changing the extension to AEP Web SDK and setting the type to XDM Object. This will load up your schema and allow you to map data elements into different parts of the schema.
+In Adobe Launch, create a Data Element that references the schema by changing the extension to AEP [!DNL Web SDK] and setting the type to XDM Object. This will load up your schema and allow you to map data elements into different parts of the schema.
 
 ![Date Element In Launch](../../assets/edge_data_element.png)
 
 ## Send an event
 
-After the extension is installed, start sending events by adding a "sendEvent" action from the AEP Web SDK extension to a rule. Be sure to add the data element you just created to the event as the XDM data. We recommend that you send at least one event every time a page is loaded.
+After the extension is installed, start sending events by adding a "sendEvent" action from the AEP [!DNL Web SDK] extension to a rule. Be sure to add the data element you just created to the event as the XDM data. We recommend that you send at least one event every time a page is loaded.
 
 For more details on how to track events, see [Tracking Events](../fundamentals/tracking-events.md).
 
