@@ -20,13 +20,13 @@ This destination is an [!DNL Experience Platform Launch] extension. For more inf
 
 ## Prerequisites {#prerequisites}
 
-This extension is available in the Destinations catalog for all customers who have purchased Adobe Real-time CDP.
+This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Adobe Real-time CDP.
 
 To use this extension, you need access to [!DNL Experience Platform Launch]. [!DNL Experience Platform Launch] is offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to [!DNL Launch] and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
 ## Install extension {#install-extension}
 
-To install the Bing Ads Universal Event Tracking (UET) extension:
+To install the [!DNL Bing Ads Universal Event Tracking] (UET) extension:
 
 1. In the [Adobe Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations > Catalog]**.
 2. Select the extension from the catalog or use the search bar.

@@ -25,7 +25,7 @@ To use this extension, you need access to [!DNL Experience Platform Launch]. [!D
 
 ## Install extension {#install-extension}
 
-To install the Awin Advertiser Conversion Tag extension:
+To install the [!DNL Awin Advertiser Conversion Tag] extension:
 
 1. In the [Adobe Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations > Catalog]**.
 2. Select the extension from the catalog or use the search bar.

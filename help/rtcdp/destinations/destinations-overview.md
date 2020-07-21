@@ -5,11 +5,11 @@ description: Destinations are pre-built integrations with destination platforms 
 seo-description: Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Real-time Customer Data Platform. You can use Destinations in the Adobe Real-time Customer Data Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 ---
 
-# Destinations Overview {#overview}
+# [!DNL Destinations] overview {#overview}
 
 ![Destinations overview banner](/help/rtcdp/destinations/assets/destinations-overview-banner.png)
 
-**Destinations** are pre-built integrations with destination platforms that allow for the seamless activation of data from Real-time Customer Data Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+**[!DNL Destinations]** are pre-built integrations with destination platforms that allow for the seamless activation of data from Real-time Customer Data Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
 ## Destinations and Sources {#destinations-and-sources}
 
@@ -41,14 +41,14 @@ The destinations functionality in Real-time CDP works with Adobe Experience Plat
 
 For more information about access controls, see the [Access control user guide](../../access-control/ui/overview.md).
 
-## Data Governance restrictions on activating data to destinations {#data-governance}
+## [!DNL Data Governance] restrictions on activating data to destinations {#data-governance}
 
-Data governance is enforced for Real-time CDP destinations through:
+[!DNL Data governance] is enforced for Real-time CDP destinations through:
 
 * *Marketing use cases* that you can select in the create destinations workflow;
 * *Data usage policies* that restrict data containing certain usage labels from being activated to destinations with certain marketing use cases..
   
-See the Data Governance in Real-time CDP documentation for more information about [marketing use cases](/help/rtcdp/privacy/data-governance-overview.md#destinations) and [resolving data policy violations](/help/rtcdp/privacy/data-governance-overview.md#enforcement).
+See the [!DNL Data Governance] in Real-time CDP documentation for more information about [marketing use cases](/help/rtcdp/privacy/data-governance-overview.md#destinations) and [resolving data policy violations](/help/rtcdp/privacy/data-governance-overview.md#enforcement).
 
 For more information about selecting marketing use cases in the create destination workflow, see the following pages for the different destination types in Real-time CDP:
 
