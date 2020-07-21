@@ -55,7 +55,7 @@ The [!UICONTROL _Add Mixin_] dialog appears. From here, click **[!UICONTROL Crea
 
 <img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width=750><br>
 
-The canvas reappears with "[!UICONTROL Loyalty Relationship]" appearing in the _Mixins_ section. Click the mixin name, then click **[!UICONTROL Add Field]** next to the root-level "[!UICONTROL Loyalty Members]" field.
+The canvas reappears with "[!UICONTROL Favorite Hotel]" appearing in the _Mixins_ section. Click the mixin name, then click **[!UICONTROL Add Field]** next to the root-level "[!UICONTROL Loyalty Members]" field.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
@@ -67,7 +67,7 @@ When finished, click **[!UICONTROL Apply]**.
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
-The updated "[!UICONTROL loyaltyRelationship]" field appears in the canvas. Click **[!UICONTROL Save]** to finalize your changes to the schema.
+The updated "[!UICONTROL favoriteHotel]" field appears in the canvas. Click **[!UICONTROL Save]** to finalize your changes to the schema.
 
 ![](../images/tutorials/relationship/relationship-field-save.png)
 
