@@ -43,7 +43,7 @@ For more information about access controls, see the [Access control user guide](
 
 ## [!DNL Data Governance] restrictions on activating data to destinations {#data-governance}
 
-[!DNL Data governance] is enforced for Real-time CDP destinations through:
+Data governance is enforced for Real-time CDP destinations through:
 
 * *Marketing use cases* that you can select in the create destinations workflow;
 * *Data usage policies* that restrict data containing certain usage labels from being activated to destinations with certain marketing use cases..
