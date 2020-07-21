@@ -64,9 +64,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -126,9 +123,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -246,9 +240,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -308,9 +299,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       }
@@ -322,9 +310,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "invalidIMSOrg@AdobeOrg",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -384,9 +369,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -436,9 +418,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "name": "_xdm.context.experienceevent"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
