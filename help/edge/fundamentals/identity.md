@@ -5,17 +5,17 @@ description: Learn how to get Adobe Experience Cloud Id.
 seo-description: Learn how to get Adobe Experience Cloud Id.
 ---
 
-# Retrieving Experience Cloud ID
+# Identity - Retrieving the Experience Cloud ID
 
-The Adobe Experience Platform Web SDK leverages the [Adobe Identity Service](../../identity-service/ecid.md). This ensures that each device has a unique identifier that is persisted on the device so activity between pages can be tied together.
+The Adobe Experience Platform [!DNL Web SDK] leverages the [Adobe Identity Service](../../identity-service/ecid.md). This ensures that each device has a unique identifier that is persisted on the device so activity between pages can be tied together.
 
 ## First Party Identity
 
-The ID service stores the identity in a cookie in a first party domain. The ID services attempts to set the cookie using an HTTP header on the domain if that fails the ID service will fall back to setting cookies via Javascript. Adobe recommends that you setup a CNAME to ensure that your cookies will not be capped by client side ITP restrictions.
+The [!DNL Identity Service] stores the identity in a cookie in a first party domain. The [!DNL Identity Service] attempts to set the cookie using an HTTP header on the domain. If that fails, the [!DNL Identity Service] will fall back to setting cookies via Javascript. Adobe recommends that you set up a CNAME to ensure that your cookies will not be capped by client side ITP restrictions.
 
 ## 3rd Party Identity
 
-The ID services has the ability to sync an ID with a 3rd party domain (demdex.net) to enable tracking across site. When this is enabled the first request for a visitor (e.g. someone without an ECID) will be made to demdex.net. This will only be done on browsers that allow it (e.g. Chrome) and is controlled by the `thirdPartyCookiesEnabled` parameter in the configuration. If you would like to disable this feature all together set `thirdPartyCookiesEnabled` to false.
+The [!DNL Identity Service] has the ability to sync an ID with a 3rd party domain (demdex.net) to enable tracking across sites. When this is enabled the first request for a visitor (e.g. someone without an ECID) will be made to demdex.net. This will only be done on browsers that allow it (e.g. Chrome) and is controlled by the `thirdPartyCookiesEnabled` parameter in the configuration. If you would like to disable this feature all together, set `thirdPartyCookiesEnabled` to false.
 
 ## Retrieving the Visitor ID
 
@@ -23,7 +23,7 @@ If you want to use this unique ID, use the `getIdentity` command. `getIdentity` 
 
 >[!NOTE]
 >
->This method is typically used with custom solutions that require reading the Experience Cloud ID. It is not used by a standard implementation.
+>This method is typically used with custom solutions that require reading the [!DNL Experience Cloud] ID. It is not used by a standard implementation.
 
 ```javascript
 alloy("getIdentity")
@@ -38,7 +38,7 @@ alloy("getIdentity")
 
 ## Syncing Identities
 
-Additionally the Identity Service allows you to sync your own identifiers with the ECID using the `syncIdentity` command.
+Additionally, the [!DNL Identity Service] allows you to sync your own identifiers with the ECID using the `syncIdentity` command.
 
 ```javascript
 
@@ -63,7 +63,7 @@ alloy("syncIdentity",{
 | -------- | ------------ | ----------------- |
 | String   | Yes          | none              |
 
-The key for the object is the [Identity Namespace](../../identity-service/namespaces.md) Symbol. You can find this listed in the Adobe Experience Platform UI under Identities.
+The key for the object is the [Identity Namespace](../../identity-service/namespaces.md) Symbol. You can find this listed in the Adobe Experience Platform user interface under [!UICONTROL Identities].
 
 #### `id`
 
@@ -87,7 +87,7 @@ The authentication state of the ID.
 | -------- | ------------ | ----------------- |
 | Boolean  | optional     | false             |
 
-Should this identity be used as a primary fragment in the unified profile. By default the ECID is set as the primary identifier for the user.
+Determines whether this identity should be used as a primary fragment in the unified profile. By default, the ECID is set as the primary identifier for the user.
 
 #### `hashEnabled`
 
@@ -95,4 +95,4 @@ Should this identity be used as a primary fragment in the unified profile. By de
 | -------- | ------------ | ----------------- |
 | Boolean  | optional     | false             |
 
-If enabled it will hash the identity using SHA256 hashing.
+If enabled, it will hash the identity using SHA256 hashing.

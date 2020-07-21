@@ -31,6 +31,10 @@ Once a sandbox is selected, the screen refreshes with the selected sandbox now f
 
 ## Create a new sandbox
 
+Use the following video for a quick overview on how to use [!DNL Sandboxes] in [!DNL Experience Platform].
+
+>[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
+
 To create a new sandbox in the UI, click **Sandboxes** in the left-nav, then click **Create Sandbox**.
 
 ![](../images/ui/create-sandbox-button.png)
@@ -41,7 +45,9 @@ When finished, click **Create**.
 
 ![](../images/ui/create-sandbox-dialog.png)
 
->[!NOTE] Since you are restricted to creating non-production sandbox types only, the **type** option is locked at "Non-Production" and cannot be manipulated.
+>[!NOTE]
+>
+>Since you are restricted to creating non-production sandbox types only, the **type** option is locked at "Non-Production" and cannot be manipulated.
 
 Once you have finished creating the sandbox, refresh the page and the new sandbox appears in the _Sandboxes_ dashboard with a status of "Creating". New sandboxes take approximately 15 minutes to be provisioned by the system, after which their status changes to "Active".
 
@@ -49,7 +55,9 @@ Once you have finished creating the sandbox, refresh the page and the new sandbo
 
 ## Reset a sandbox
 
->[!NOTE] This functionality is only available for non-production sandboxes. Production sandboxes cannot be reset.
+>[!NOTE]
+>
+>This functionality is only available for non-production sandboxes. Production sandboxes cannot be reset.
 
 Resetting a non-production sandbox deletes all resources associated with that sandbox (schemas, datasets, and so on), while maintaining the sandbox's name and associated permissions. This "clean" sandbox continues to be available under the same name for users that have access to it.
 
@@ -67,7 +75,9 @@ A confirmation message appears and the sandbox's state changes to "Resetting". O
 
 ## Delete a sandbox
 
->[!NOTE] This functionality is only available for non-production sandboxes. Production sandboxes cannot be deleted.
+>[!NOTE]
+>
+>This functionality is only available for non-production sandboxes. Production sandboxes cannot be deleted.
 
 Deleting a non-production sandbox permanently removes all resources associated with that sandbox, including permissions.
 

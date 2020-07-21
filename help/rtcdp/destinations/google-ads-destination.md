@@ -27,15 +27,15 @@ Note the following details that are specific to Google Ads destinations:
 
 ### Existing Google Ads account
 
-Google has paused any new Google Ads integrations with third-party vendors. You must have an existing integration with Google Ads in order to be able to perform the whitelisting steps in the next section and to create a Google Ads destination in Adobe Real-time CDP.
+Google has paused any new Google Ads integrations with third-party vendors. You must have an existing integration with Google Ads in order to be able to perform the allow list steps in the next section and to create a Google Ads destination in Adobe Real-time CDP.
 
-### Whitelisting
+### Allow list
 
 >[!NOTE]
 >
->Whitelisting is mandatory before setting up your first Google Ads destination in Adobe Real-time CDP. Please ensure the whitelisting process described below has been completed by Google before creating a destination.
+>The allow list is mandatory before setting up your first Google Ads destination in Adobe Real-time CDP. Please ensure the allow list process described below has been completed by Google before creating a destination.
 
-Before creating the Google Ads destination in Adobe Real-time CDP, you must contact Google asking for Adobe to be whitelisted as a data provider and your account to be whitelisted. Contact Google and provide the following information:
+Before creating the Google Ads destination in Adobe Real-time CDP, you must contact Google for Adobe to be put on the list of allowed data providers, and for your account to be added to the allow list. Contact Google and provide the following information:
 
 * **Account ID** : this is Adobe's account ID with Google. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
 * **Customer ID** : this is Adobe's customer account ID with Google. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
@@ -47,12 +47,13 @@ Before creating the Google Ads destination in Adobe Real-time CDP, you must cont
 1. In **[!UICONTROL Connections > Destinations]**, select Google Ads, and select **[!UICONTROL Create destination]**.
     ![Connect Google Ads destination](/help/rtcdp/destinations/assets/google-2-destination.png)
 
-2. In the Create destination workflow, fill in the [!UICONTROL Basic Information] for the destination.
-    ![Basic information Google Ads](/help/rtcdp/destinations/assets/google-2-basic-information.png)
+2. In the **Setup** step of the create destination workflow, fill in the [!UICONTROL Basic Information] for the destination. <br>
+    ![Basic information Google Ads](/help/rtcdp/destinations/assets/google-2-destination-setup-step.png)
 *  **[!UICONTROL Name]**: Fill in the preferred name for this destination.
 *  **[!UICONTROL Description]**: Optional. For example, you can mention which campaign you are using this destination for.
 *  **[!UICONTROL Account Type]**: AdWords is the only available option.
 *  **[!UICONTROL Account ID]**: Fill in your account ID with Google Ads. The ID format is typically 123-456-7890. 
+*  **[!UICONTROL Marketing use case]**: Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Real-time CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](/help/data-governance/policies/overview.md#core-actions).  
 
 ## Activate segments to Google Ads
 

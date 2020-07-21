@@ -13,7 +13,7 @@ This tutorial walks through the steps to create, train, and evaluate a Model.
 
 ## Getting started
 
-In order to complete this tutorial, you must have access to Experience Platform. If you do not have access to an IMS Organization in Experience Platform, please speak to your system administrator before proceeding.
+In order to complete this tutorial, you must have access to [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
 
 This tutorial requires an existing Recipe. If you do not have a Recipe, follow the [Import a packaged Recipe in the UI](./import-packaged-recipe-ui.md) tutorial before continuing.
 
@@ -38,7 +38,7 @@ This tutorial requires an existing Recipe. If you do not have a Recipe, follow t
 1. In Adobe Experience Platform, click the **[!UICONTROL Models]** link located in the left navigation column to list all existing Models. Find and click on the name of the Model to be trained.
 ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-2. All existing training runs with their current training statuses are listed. For Models created using the Data Science Workspace user interface, a training run is automatically generated and executed using the default configurations and input training dataset.
+2. All existing training runs with their current training statuses are listed. For Models created using the [!DNL Data Science Workspace] user interface, a training run is automatically generated and executed using the default configurations and input training dataset.
 ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
 3. Create a new training run by clicking **[!UICONTROL Train]** near the top-right of the Model overview page.
@@ -73,7 +73,7 @@ This tutorial requires an existing Recipe. If you do not have a Recipe, follow t
 
 ## Next steps
 
-This tutorial walked you through creating, training, and evaluating a Model in Data Science Workspace. Once you have arrived at an optimized Model, you can use the trained Model to generate insights by following the [Score a Model in the UI](./score-model-ui.md) tutorial.
+This tutorial walked you through creating, training, and evaluating a Model in [!DNL Data Science Workspace]. Once you have arrived at an optimized Model, you can use the trained Model to generate insights by following the [Score a Model in the UI](./score-model-ui.md) tutorial.
 
 ## Reference {#reference}
 

@@ -7,7 +7,7 @@ seo-description: Learn how to track Experience Platform Web SDK events
 
 # Tracking events
 
-To send event data to the Adobe Experience Cloud, use the `sendEvent` command. The `sendEvent` command is the primary way to send data to the Experience Cloud, and to retrieve personalized content, identities, and audience destinations.
+To send event data to the Adobe Experience Cloud, use the `sendEvent` command. The `sendEvent` command is the primary way to send data to the [!DNL Experience Cloud], and to retrieve personalized content, identities, and audience destinations.
 
 Data sent to Adobe Experience Cloud falls into two categories: 
 
@@ -18,7 +18,7 @@ Data sent to Adobe Experience Cloud falls into two categories:
 
 XDM data is an object whose content and structure matches a schema you have created within Adobe Experience Platform. [Learn more about how to create a schema.](../../xdm/tutorials/create-schema-ui.md)
 
-Any XDM data you would like to be part of your analytics, personalization, audiences, or destinations should be sent using the `xdm` option.
+Any XDM data that you would like to be part of your analytics, personalization, audiences, or destinations should be sent using the `xdm` option.
 
 ```javascript
 alloy("sendEvent", {
@@ -75,7 +75,7 @@ alloy("sendEvent", {
 
 ## Using the sendBeacon API
 
-It can be tricky to send event data just before the web page user has navigated away. If the request takes too long, the browser might cancel the request. Some browsers have implemented a web standard API called `sendBeacon` to allow data to be more easily collected during this time. When using `sendBeacon`, the browser makes the web request in the global browsing context. This means the browser makes the beacon request in the background and does not hold up the page navigation. To tell Adobe Experience Platform Web SDK to use `sendBeacon`, add the option `"documentUnloading": true` to the event command.  Here is an example:
+It can be tricky to send event data just before the web page user has navigated away. If the request takes too long, the browser might cancel the request. Some browsers have implemented a web standard API called `sendBeacon` to allow data to be more easily collected during this time. When using `sendBeacon`, the browser makes the web request in the global browsing context. This means the browser makes the beacon request in the background and does not hold up the page navigation. To tell Adobe Experience Platform [!DNL Web SDK] to use `sendBeacon`, add the option `"documentUnloading": true` to the event command.  Here is an example:
 
 ```javascript
 alloy("sendEvent", {
@@ -93,7 +93,7 @@ alloy("sendEvent", {
 });
 ```
 
-Browsers have imposed limits to the amount of data that can be sent with `sendBeacon` at one time. In many browsers, the limit is 64K. If the browser rejects the event because the payload is too large, Adobe Experience Platform Web SDK falls back to using its normal transport method (for example, fetch).
+Browsers have imposed limits to the amount of data that can be sent with `sendBeacon` at one time. In many browsers, the limit is 64K. If the browser rejects the event because the payload is too large, Adobe Experience Platform [!DNL Web SDK] falls back to using its normal transport method (for example, fetch).
 
 ## Handling responses from events
 
@@ -126,7 +126,7 @@ If you want to add, remove, or modify fields from the event globally, you can co
 
 ```javascript
 alloy("configure", {
-  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
   "onBeforeEventSend": function(event) {
     // Change existing values

@@ -15,7 +15,7 @@ Attribution AI is used to attribute credits to touchpoints leading to conversion
 
 Attribution AI outputs can be segregated across various dimensions and can be utilized across different stages of the customer journey. This is accomplished without needing to translate business needs to machine learning problems, picking algorithms, training, or deploying models.
 
-Attribution AI data can be from Adobe (e.g. Analytics) or non-Adobe data sources.
+Attribution AI data can be from Adobe (e.g. [!DNL Analytics]) or non-Adobe data sources.
 
 Attribution AI supports two categories of scores, algorithmic and rule-based. Algorithmic scores include incremental and influenced scores. Rule-based scores include First touch, Last touch, Linear, U-shaped, and Time-Decay.
 
@@ -53,7 +53,7 @@ Attribution AI can be used to assist with the following example use cases:
 
 ### Additional features
 
-Attribution AI also offers integration with other Adobe solutions such as Adobe Analytics. This enables you to use these solutions to utilize the customizable algorithmic model to evaluate media performance and provide analytical insights.
+Attribution AI also offers integration with other Adobe solutions such as [!DNL Adobe Analytics]. This enables you to use these solutions to utilize the customizable algorithmic model to evaluate media performance and provide analytical insights.
   
 ## Next steps
 
