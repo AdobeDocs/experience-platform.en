@@ -5,7 +5,7 @@ title: Creating a segment using the Segment Builder
 topic: ui guide
 ---
 
-# Creating a segment using the [!UICONTROL Segment Builder]
+# [!UICONTROL Segment Builder] user guide
 
 [!DNL Adobe Experience Platform Segmentation Service] provides a RESTful API and user interface for creating segment definitions from [!DNL Real-time Customer Profile] data.
 
@@ -30,9 +30,25 @@ The evaluation method can either be streaming or batch. Streaming segments are c
 
 Batch segments have additional information displayed, showing both the last evaluation date as well as the next evaluation date for the batch.
 
+![](../images/segment-builder/segment-browse-segments.png)
+
+The right sidebar contains information about all the segments within the IMS organization, listing the total number of segments, the last evaluation date, the next evaluation date, as well as a breakdown of the segments by evaluation method.
+
+![](../images/segment-builder/segment-browse-segment-info.png)
+
+## Segment definition details
+
+To see more details about a specific segment definition, select a segment within the **[!UICONTROL Browse]** tab.
+
+The segment details page appears. On the top, there is a summary of the segment definition, including details such as the ID, a description, and the attributes. Additionally, there is information about the qualified audience size as well as destinations the segment is activated for.
+
+![](../images/segment-builder/segment-details-summary.png)
+
+## Creating a segment
+
 Clicking **[!UICONTROL Create segment]** in the top-right corner opens the Segment Builder workspace, where you can begin creating a segment definition.
 
-![](../images/segment-builder/segment-browse.png)
+![](../images/segment-builder/segment-browse-create.png)
 
 ## [!DNL Segment Builder] workspace 
 
