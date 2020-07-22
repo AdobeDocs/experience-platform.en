@@ -14,7 +14,7 @@ See the [basics of schema composition](composition.md) for more information rega
 
 The table below includes the field name (not all XDM fields are namespaced using “xdm”) along with its title and description, type, and format where required, as well as its corresponding XDM type and the resources (mixins, data types, and schemas) in which the field can be found.
 
-You can use the search functionality in the [!DNL Schema Editor] to view details of these resources, as shown in the [Schema Editor tutorial](../tutorials/create-schema-ui.md).
+You can use the search functionality in the [!DNL Schema Editor] to view details of these resources, as shown in the [Schema Editor tutorial](../tutorials/create-schema-ui.md#browse).
 
 >[!NOTE]
 >
