@@ -5,13 +5,13 @@ description: The Marketo Web Personalization extension is a personalization dest
 seo-description: The Marketo Web Personalization extension is a personalization destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
-# Marketo Web Personalization Extension {#marketo-web-personalization-extension}
+# [!DNL Marketo Web Personalization] Extension {#marketo-web-personalization-extension}
 
 ## Overview {#overview}
 
-This extension deploys the script for Marketo’s Web Personalization and ContentAI applications. Marketo Web Personalization uniquely identifies and personalizes content to web visitor characteristics, such as firmographics for anonymous visitors and a broad array of behavioral attributes within the Marketo Engagement Platform for known visitors. Marketo ContentAI contains capabilities for AI-powered recommendations and personalization for web and email campaigns that are unique for B2B customers.
+This extension deploys the script for [!DNL Marketo’s] Web Personalization and ContentAI applications. [!DNL Marketo] Web Personalization uniquely identifies and personalizes content to web visitor characteristics, such as firmographics for anonymous visitors and a broad array of behavioral attributes within the [!DNL Marketo] Engagement Platform for known visitors. [!DNL Marketo] ContentAI contains capabilities for AI-powered recommendations and personalization for web and email campaigns that are unique for B2B customers.
 
-Marketo Web Personalization is a personalization extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101232.marketo-web-personalization.html).
+[!DNL Marketo Web Personalization] is a personalization extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101232.marketo-web-personalization.html).
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
@@ -19,13 +19,13 @@ This destination is an Experience Platform Launch extension. For more informatio
 
 ## Prerequisites {#prerequisites}
 
-This extension is available in the Destinations catalog for all customers who have purchased Adobe Real-time CDP.
+This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Adobe Real-time CDP.
 
 To use this extension, you need access to Experience Platform Launch. Experience Platform Launch is offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to Launch and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
 ## Install extension {#install-extension}
 
-To install the Marketo Web Personalization extension:
+To install the [!DNL Marketo Web Personalization] extension:
 
 1. In the [Adobe Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations > Catalog]**.
 2. Select the extension from the catalog or use the search bar.
