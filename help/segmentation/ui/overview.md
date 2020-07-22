@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Creating a segment using the Segment Builder
+title: Segmentation Service user guide
 topic: ui guide
 ---
 
-# [!UICONTROL Segment Builder] user guide
+# [!UICONTROL Segmentation Service] user guide
 
 [!DNL Adobe Experience Platform Segmentation Service] provides a RESTful API and user interface for creating segment definitions from [!DNL Real-time Customer Profile] data.
 
@@ -40,9 +40,17 @@ The right sidebar contains information about all the segments within the IMS org
 
 To see more details about a specific segment definition, select a segment within the **[!UICONTROL Browse]** tab.
 
-The segment details page appears. On the top, there is a summary of the segment definition, including details such as the ID, a description, and the attributes. Additionally, there is information about the qualified audience size as well as destinations the segment is activated for.
+The segment details page appears. On the top, there is a summary of the segment definition, including details such as the ID, a description, and the attributes. Additionally, there is information about the qualified audience size as well as destinations the segment is activated for. 
+
+>[!NOTE]
+>
+> Destinations are a feature available with [!DNL Real-time Customer Data Platform]. For more information on destinations, please read the [destinations overview](../../rtcdp/destinations/destinations-overview.md). To learn how to activate a segment to a destination, please read the [guide on activating segments to a destination](../../rtcdp/destinations/activate-destinations.md)
 
 ![](../images/segment-builder/segment-details-summary.png)
+
+Underneath is a sampling of profiles that qualify for the segment, detailing information including the [!DNL Profile] ID, first name, last name, and personal email. More detailed information about each [!DNL Profile] can be seen by selecting the [!DNL Profile] ID. To learn more about a profile's details, please read the [Real-time Customer Profile user guide](../../profile/ui/user-guide.md#profile-detail).
+
+![](../images/segment-builder/segment-details-profiles.png)
 
 ## Creating a segment
 
