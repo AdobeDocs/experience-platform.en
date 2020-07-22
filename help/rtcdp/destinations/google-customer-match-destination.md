@@ -110,7 +110,7 @@ If you select to hash the email addresses yourself, make sure to comply with Goo
 
     >[!IMPORTANT]
     >
-    > For Google Customer Match destinations. **[!UICONTROL Account ID]** is your xxxxxxxxx Account ID. You can find this ID in xxxxxxxx. 
+    > For Google Customer Match destinations. **[!UICONTROL Account ID]** is your customer client ID with Google. The format of the ID is xxx-xxx-xxxx. 
 
     ![Connect Google Customer Match - authentication step](/help/rtcdp/destinations/assets/google-customer-match-authentication-step.png)
 
@@ -128,29 +128,25 @@ To activate segments to Google Customer Match, follow the steps below:
 3. Select **[!UICONTROL Activate]**;
 4. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to Google Customer Match.
     ![segments-to-destination](/help/rtcdp/destinations/assets/activate-segments-google-customer-match.png)
-5.  In the **[!UICONTROL Identity mapping]** step, you can select attributes that are not already labeled to be included as an identity in this destination. Identities that are already labeled as primary identities in your unified schema will be included. <br>&nbsp; 
-
-   *Email address as primary identity*: If you are using email address as primary identity in your schema, you can skip the Identity mapping step, as shown below:
-
-   ![Email address as identity](/help/rtcdp/destinations/assets/email-as-identity.gif)
-
-    <br>&nbsp; 
-
-    *Another ID as primary identity*: If you are using another ID, such as *Rewards ID* or *Loyalty ID*, as primary identity in your schema, you need to manually map the email address from your identity schema as a target identity in the social destination, as shown below:
-
-   ![Loyalty ID as identity](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
+5.  In the **[!UICONTROL Identity mapping]** step, select which attributes to be included as an identity in this destination. Select **[!UICONTROL Add new mapping]** and browse the schema. Your choice will depend on whether you have hashed customer emails on ingestion into Real-time CDP.
+![identity mapping initial screen](/help/rtcdp/destinations/assets/gcm-identity-mapping.png) <br>&nbsp;
+   *Raw email address as primary identity*: If you are using raw email address as primary identity in your schema, select .... as target identity, as shown below:
+   ![select raw emails identity](/help/rtcdp/destinations/assets/gcm-raw-email.gif) <br>&nbsp;
+   *Hashed email address as primary identity*: If you are using another ID, such as *Rewards ID* or *Loyalty ID*, as primary identity in your schema, you need to manually map the email address from your identity schema as a target identity in the social destination, as shown below:
+   ![select hashed emails identity](/help/rtcdp/destinations/assets/gcm-hashed-emails.gif) <br>&nbsp;
+   *Another ID as primary identity*: If you are using another ID, such as *Rewards ID* or *Loyalty ID*, as primary identity in your schema, you need to manually map the email address from your identity schema as a target identity in the social destination, as shown below:<br>&nbsp;
 6. On the **[!UICONTROL Segment schedule]** page, you can set the start date for sending data to the destination.
 7. On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
-    >[!IMPORTANT]
-    >
-    >In this step, Real-time CDP checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](/help/rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
+>[!IMPORTANT]
+>
+>In this step, Real-time CDP checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](/help/rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
  
- ![confirm-selection](/help/rtcdp/destinations/assets/data-policy-violation.png)
+![confirm-selection](/help/rtcdp/destinations/assets/data-policy-violation.png)
 
-  If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
+If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
- ![confirm-selection](/help/rtcdp/destinations/assets/gcm-review.png)
+![confirm-selection](/help/rtcdp/destinations/assets/gcm-review.png)
 
 
 <!--
@@ -167,4 +163,4 @@ Insert in Step 6 when mobile device ID activation is available
 
 ## Verify that segment activation was successful {#verify-activation}
 
-Check the segment numbers in Google Customer Match. If the activation was successful, audiences are populated in your advertising platform.
+After completing the activation flow, switch to your Google Ads account. The activated segments will now show up in your Google account and audiences are populated.
