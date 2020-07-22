@@ -27,35 +27,14 @@ The following videos outline how [!DNL Experience Platform] creates rich, releva
 
 ## Browser support
 
-The Adobe Experience Platform website and associated websites, such as the Adobe Admin Console, are all designed to work optimally in the latest versions of Google Chrome, Safari, Firefox, and Microsoft Edge. You might have trouble using certain features on older versions of browsers. 
+The Adobe Experience Platform website and associated websites, such as the Adobe Admin Console, are all designed to work optimally in the **latest versions** of Google Chrome, Safari, Firefox, and Microsoft Edge. You might have trouble using certain features on older versions of browsers. 
 
-<table>
-<tr>
-  <th>Operating system</th>
-  <th>Supported browsers</th>
-  <th></th>
-  <th></th>
-</tr>
-<tr>
-  <td>Mac OS X</td>
-  <td>Latest version of Google Chrome</td>
-  <td>Latest version of Safari</td>
-  <td>Latest version of Firefox</td>
-</tr>
-<tr>
-  <td>Windows 10</td>
-  <td>Latest version of Google Chrome</td>
-  <td>Latest version of Microsoft Edge</td>
-  <td>Latest version of Firefox</td>
-</tr>
-<tr>
-  <td>Windows 7</td>
-  <td>Latest version of Google Chrome</td>
-  <td> </td>
-  <td>Latest version of Firefox</td>
-</tr>
-</table>
-
+| Operating system | Supported browsers | | |
+|---|---|---|---|
+| Mac OS X | Google Chrome | Safari | Firefox |
+| Windows 10 | Google Chrome | Microsoft Edge | Firefox |
+| Windows 7 | Google Chrome | |  Firefox< |
+ 
 Not supported:
 
 * Internet Explorer 10
