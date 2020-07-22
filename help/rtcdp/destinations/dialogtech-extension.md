@@ -5,13 +5,13 @@ description: The DialogTech extension is an analytics destination in Adobe Real-
 seo-description: The DialogTech extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
-# DialogTech extension {#dialogtech-extension}
+# [!DNL DialogTech] extension {#dialogtech-extension}
 
 ## Overview {#overview}
 
-Include the DialogTech SourceTrak javascript snippet in Adobe Launch
+Include the [!DNL DialogTech SourceTrak] javascript snippet in Adobe Launch
 
-DialogTech is an analytics extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the [Dialogtech website](https://www.dialogtech.com/).
+[!DNL DialogTech] is an analytics extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the [Dialogtech website](https://www.dialogtech.com/).
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
@@ -25,7 +25,7 @@ To use this extension, you need access to Experience Platform Launch. Experience
 
 ## Install extension {#install-extension}
 
-To install the DialogTech extension:
+To install the [!DNL DialogTech] extension:
 
 1. In the [Adobe Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations > Catalog]**.
 2. Select the extension from the catalog or use the search bar.

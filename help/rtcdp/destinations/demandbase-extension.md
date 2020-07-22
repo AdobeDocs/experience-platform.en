@@ -5,13 +5,13 @@ description: The Demandbase extension is an analytics destination in Adobe Real-
 seo-description: The Demandbase extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
-# Demandbase extension {#demandbase-extension}
+# [!DNL Demandbase] extension {#demandbase-extension}
 
 ## Overview {#overview}
 
-Get Demandbase B2B account insights right into Adobe Analytics where you can segment traffic and behavior by Industry, Revenue and your target accounts. This account based view delivers unique insights on engagement, conversion and the source for your most valuable visitors.
+Get [!DNL Demandbase] B2B account insights right into Adobe Analytics where you can segment traffic and behavior by Industry, Revenue and your target accounts. This account based view delivers unique insights on engagement, conversion and the source for your most valuable visitors.
 
-Demandbase is an analytics extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101605.html).
+[!DNL Demandbase] is an analytics extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101605.html).
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
@@ -25,7 +25,7 @@ To use this extension, you need access to Experience Platform Launch. Experience
 
 ## Install extension {#install-extension}
 
-To install the Demandbase extension:
+To install the [!DNL Demandbase] extension:
 
 1. In the [Adobe Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations > Catalog]**.
 2. Select the extension from the catalog or use the search bar.
