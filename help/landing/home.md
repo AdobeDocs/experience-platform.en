@@ -38,23 +38,29 @@ The Adobe Experience Platform website and associated websites, such as the Adobe
 </tr>
 <tr>
   <td>Mac OS X</td>
-  <td>Google Chrome</td>
-  <td>Safari</td>
-  <td>Firefox</td>
+  <td>Latest version of Google Chrome</td>
+  <td>Latest version of Safari</td>
+  <td>Latest version of Firefox</td>
 </tr>
 <tr>
   <td>Windows 10</td>
-  <td>Google Chrome</td>
-  <td>Microsoft Edge</td>
-  <td>Firefox</td>
+  <td>Latest version of Google Chrome</td>
+  <td>Latest version of Microsoft Edge</td>
+  <td>Latest version of Firefox</td>
 </tr>
 <tr>
   <td>Windows 7</td>
-  <td>Google Chrome</td>
+  <td>Latest version of Google Chrome</td>
   <td> </td>
-  <td>Firefox</td>
+  <td>Latest version of Firefox</td>
 </tr>
 </table>
+
+Not supported:
+
+* Internet Explorer 10
+* Windows 8
+* Opera
 
 ## Language support
 
