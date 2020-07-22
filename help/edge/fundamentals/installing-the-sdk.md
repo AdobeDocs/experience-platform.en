@@ -65,6 +65,10 @@ If you've determined you need to polyfill `window.Promise`, include the followin
 
 This loads a script that ensures that `window.Promise` is a valid Promise implementation.
 
+>[!NOTE]
+>
+>If you choose to load a different Promise implementation, be sure it supports `Promise.prototype.finally`.
+
 ## Loading the JavaScript file synchronously {#loading-javascript-synchronously}
 
 As explained in the section [Adding the code](#adding-the-code), the base code you have copied and pasted into your website's HTML loads an external file with additional code. This additional code contains the core functionality of the SDK. Any command you attempt to execute while this file is loading is queued and then processed after the file is loaded. This is the most performant method of installation.
