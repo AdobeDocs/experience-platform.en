@@ -179,7 +179,8 @@ A successful response returns HTTP status 200 with detailed information about th
             "inputByteSize": 568,
             "inputFileCount": 4,
             "inputRecordCount": 519,
-            "outputRecordCount": 497
+            "outputRecordCount": 497,
+            "failedRecordCount": 0
         },
         "completed": 1576741722026,
         "created": 1576741597205,
@@ -191,6 +192,10 @@ A successful response returns HTTP status 200 with detailed information about th
     }    
 }
 ```
+
+| Property | Description |
+| -------- | ----------- |
+| `metrics.failedRecordCount` | The number of rows that were not able to be processed due to parsing, conversion, or validation. This value can be derived by subtracting the `inputRecordCount` from the `outputRecordCount`. This value will be generated on all batches regardless if `errorDiagnostics` is enabled. |
 
 If the batch has an error and has error diagnostics enabled, the status will be "success" with more information about the error provided in a downloadable error file.
 
