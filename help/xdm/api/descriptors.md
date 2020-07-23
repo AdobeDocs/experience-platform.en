@@ -17,7 +17,7 @@ This document provides example API calls for descriptors, as well as a complete 
 
 >[!NOTE]
 >
->Descriptors require unique Accept headers that replace `xed` with `xdm`, but otherwise look very similar to Accept headers used elsewhere in the Schema Registry. The proper Accept headers have been included in the sample calls below, but take extra caution to ensure the correct headers are being used.
+>Descriptors require unique Accept headers that replace `xed` with `xdm`, but otherwise look very similar to Accept headers used elsewhere in the [!DNL Schema Registry]. The proper Accept headers have been included in the sample calls below, but take extra caution to ensure the correct headers are being used.
 
 ## List descriptors
 
@@ -41,7 +41,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xdm-link+json'
 ```
 
-The response format depends on the Accept header sent in the request. Notice that the `/descriptors` endpoint uses Accept headers that are different than all other endpoints in the Schema Registry API.
+The response format depends on the Accept header sent in the request. Notice that the `/descriptors` endpoint uses Accept headers that are different than all other endpoints in the [!DNL Schema Registry] API.
 
 Descriptor Accept headers replace `xed` with `xdm`, and offer a `link` option that is unique to descriptors.
 
@@ -126,7 +126,7 @@ A successful response returns the details of the descriptor, including its `@typ
 
 ## Create descriptor
 
-The Schema Registry allows you to define several different descriptor types. Each descriptor type requires its own specific fields to be sent in the POST request. A complete list of descriptors, and the fields necessary to define them, is available in the appendix section on [defining descriptors](#defining-descriptors).
+The [!DNL Schema Registry] allows you to define several different descriptor types. Each descriptor type requires its own specific fields to be sent in the POST request. A complete list of descriptors, and the fields necessary to define them, is available in the appendix section on [defining descriptors](#defining-descriptors).
 
 **API format**
 
@@ -136,7 +136,7 @@ POST /tenant/descriptors
 
 **Request**
 
-The following request defines an identity descriptor on an "email address" field in a sample schema. This tells Experience Platform to use the email address as an identifier to help stitch together information about the individual.
+The following request defines an identity descriptor on an "email address" field in a sample schema. This tells [!DNL Experience Platform] to use the email address as an identifier to help stitch together information about the individual.
 
 ```SHELL
 curl -X POST \
@@ -160,7 +160,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns HTTP status 201 (Created) and the details of the newly created descriptor, including its `@id`. The `@id` is a read-only field assigned by the Schema Registry and used for referencing the descriptor in the API.
+A successful response returns HTTP status 201 (Created) and the details of the newly created descriptor, including its `@id`. The `@id` is a read-only field assigned by the [!DNL Schema Registry] and used for referencing the descriptor in the API.
 
 ```JSON
 {
@@ -231,7 +231,7 @@ Performing a lookup (GET) request to view the descriptor will show that the fiel
 
 ## Delete descriptor
 
-Occasionally you may need to remove a descriptor that you have defined from the Schema Registry. This is done by making a DELETE request referencing the `@id` of the descriptor you wish to remove.
+Occasionally you may need to remove a descriptor that you have defined from the [!DNL Schema Registry]. This is done by making a DELETE request referencing the `@id` of the descriptor you wish to remove.
 
 **API format**
 
@@ -260,11 +260,11 @@ curl -X DELETE \
 
 A successful response returns HTTP status 204 (No Content) and a blank body.
 
-To confirm the descriptor has been deleted, you can perform a lookup request against the descriptor `@id`. The response returns HTTP status 404 (Not Found) because the descriptor has been removed from the Schema Registry.
+To confirm the descriptor has been deleted, you can perform a lookup request against the descriptor `@id`. The response returns HTTP status 404 (Not Found) because the descriptor has been removed from the [!DNL Schema Registry].
 
 ## Appendix
 
-The following section provides additional information regarding working with descriptors in the Schema Registry API.
+The following section provides additional information regarding working with descriptors in the [!DNL Schema Registry] API.
 
 ### Defining descriptors
 
@@ -272,7 +272,7 @@ The following sections provide an overview of available descriptor types, includ
 
 #### Identity descriptor
 
-An identity descriptor signals that the "sourceProperty" of the "sourceSchema" is an Identity field as described by [Adobe Experience Platform Identity Service](../../identity-service/home.md).
+An identity descriptor signals that the "[!UICONTROL sourceProperty]" of the "[!UICONTROL sourceSchema]" is an [!DNL Identity] field as described by [Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
 ```json
 {
@@ -293,7 +293,7 @@ An identity descriptor signals that the "sourceProperty" of the "sourceSchema" i
 | `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
 | `xdm:sourceVersion` | The major version of the source schema. |
 | `xdm:sourceProperty` | The path to the specific property that will be the identity. Path should begin with a "/" and not end with one. Do not include "properties" in the path (e.g. use "/personalEmail/address" instead of "/properties/personalEmail/properties/address") |
-| `xdm:namespace` | The `id` or `code` value of the identity namespace. A list of namespaces can be found using the [Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
+| `xdm:namespace` | The `id` or `code` value of the identity namespace. A list of namespaces can be found using the [!DNL Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
 | `xdm:property` | Either `xdm:id` or `xdm:code`, depending on the `xdm:namespace` used. |
 | `xdm:isPrimary` | An optional boolean value. When true, indicates the field as the primary identity. Schemas may contain only one primary identity. |
 
@@ -329,7 +329,7 @@ Friendly name descriptors allow a user to modify the `title`, `description`, and
 | `xdm:sourceProperty` | The path to the specific property that will be the identity. Path should begin with a "/" and not end with one. Do not include "properties" in the path (e.g. use "/personalEmail/address" instead of "/properties/personalEmail/properties/address") |
 | `xdm:title` | The new title you wish to display for this field, written in Title Case. |
 | `xdm:description` | An optional description can be added along with the title. |
-| `meta:enum` | If the field indicated by `xdm:sourceProperty` is a string field, `meta:enum` determines the list of suggested values for the field in the Experience Platform UI. It is important to note that `meta:enum` does not declare an enumeration or provide any data validation for the XDM field.<br><br>This should only be used for core XDM fields defined by Adobe. If the source property is a custom field defined by your organization, you should instead edit the field's `meta:enum` property directly through a [PATCH request](./update-resource.md).  |
+| `meta:enum` | If the field indicated by `xdm:sourceProperty` is a string field, `meta:enum` determines the list of suggested values for the field in the [!DNL Experience Platform] UI. It is important to note that `meta:enum` does not declare an enumeration or provide any data validation for the XDM field.<br><br>This should only be used for core XDM fields defined by Adobe. If the source property is a custom field defined by your organization, you should instead edit the field's `meta:enum` property directly through a [PATCH request](./update-resource.md).  |
 
 #### Relationship descriptor
 
@@ -362,7 +362,7 @@ Relationship descriptors describe a relationship between two different schemas, 
 
 #### Reference identity descriptor
 
-Reference identity descriptors provide a reference context to a schema field, allowing it to be linked with the primary identity field of a destination schema. Fields must already be labeled with an identity descriptor before a reference descriptor can be applied to them.
+Reference identity descriptors provide a reference context to the primary identity of a schema field, allowing it to be referenced by fields in other schemas. Fields must already be labeled with an identity descriptor before a reference descriptor can be applied to them.
 
 ```json
 {

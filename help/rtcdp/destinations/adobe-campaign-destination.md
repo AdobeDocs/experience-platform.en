@@ -47,4 +47,4 @@ When [activating segments](/help/rtcdp/destinations/activate-destinations.md) to
 
 ## Set up data import into Adobe Campaign {#import-data-into-campaign}
 
-After connecting Real-time CDP to your Amazon S3 or SFTP storage, you must set up the data import from your storage location into Adobe Campaign. To learn how to accomplish this, see [Importing data](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html) in the Adobe Campaign Help documentation.
+After connecting Real-time CDP to your [!DNL Amazon S3] or SFTP storage, you must set up the data import from your storage location into Adobe Campaign. To learn how to accomplish this, see [Importing data](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html) in the Adobe Campaign Help documentation.

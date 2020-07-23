@@ -5,7 +5,7 @@ description: Create a real-time outbound connection to your Amazon Kinesis stora
 seo-description: Create a real-time outbound connection to your Amazon Kinesis storage to stream data from Adobe Experience Platform.
 ---
 
-# (Beta) Amazon Kinesis destination
+# (Beta) [!DNL Amazon Kinesis] destination
 
 
 >[!IMPORTANT]
@@ -14,7 +14,7 @@ seo-description: Create a real-time outbound connection to your Amazon Kinesis s
 
 ## Overview {#overview}
 
-The [!DNL Kinesis Data Streams] service by Amazon Web Services allows you to collect and process large streams of data records in real time. 
+The [!DNL Kinesis Data Streams] service by [!DNL Amazon Web Services] allows you to collect and process large streams of data records in real time. 
 
 You can create a real-time outbound connection to your [!DNL Amazon Kinesis] storage to stream data from Adobe Experience Platform. 
 
@@ -27,9 +27,9 @@ You can create a real-time outbound connection to your [!DNL Amazon Kinesis] sto
 
 ## Use Cases {#use-cases}
 
-By using streaming destinations such as Amazon Kinesis, you can easily feed high-value segmentation events and associated profile attributes into your systems of choice.
+By using streaming destinations such as [!DNL Amazon Kinesis], you can easily feed high-value segmentation events and associated profile attributes into your systems of choice.
 
-For example, a prospect downloaded a white-paper which qualifies them into a "high-propensity to convert" segment. By mapping the segment that the prospect falls in to the Amazon Kinesis destination, you would receive this event in Amazon Kinesis. There, you can employ a do-it-yourself approach and describe business logic on top of the event, as you think would work best with your enterprise IT systems.
+For example, a prospect downloaded a white-paper which qualifies them into a "high-propensity to convert" segment. By mapping the segment that the prospect falls in to the [!DNL Amazon Kinesis] destination, you would receive this event in [!DNL Amazon Kinesis]. There, you can employ a do-it-yourself approach and describe business logic on top of the event, as you think would work best with your enterprise IT systems.
 
 ## Connect destination {#connect-destination}
 
@@ -39,7 +39,7 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 
 ### In the Authentication step {#authentication-step}
 
-* **Amazon Web Services access key and secret key**: In [!DNL Amazon Web Services], generate an access key - secret access key pair to grant Adobe Real-time CDP access to your [!DNL Amazon Kinesis] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!DNL Amazon Web Services] access key and secret key**: In [!DNL Amazon Web Services], generate an access key - secret access key pair to grant Adobe Real-time CDP access to your [!DNL Amazon Kinesis] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **region**: Indicate which [!DNL Amazon Web Services] region to stream data to.
 
 ![Input fields in the account step](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
@@ -66,7 +66,7 @@ See [Activate profiles and segments to a destination](/help/rtcdp/destinations/a
 
 ## Exported data {#exported-data}
 
-Your exported Experience Platform data lands in [!DNL Amazon Kinesis] in JSON format. For example, the event below contains the email address profile attribute of an audience that has qualified for a certain segment and exited another segment. The identities for this prospect are ECID and email.
+Your exported [!DNL Experience Platform] data lands in [!DNL Amazon Kinesis] in JSON format. For example, the event below contains the email address profile attribute of an audience that has qualified for a certain segment and exited another segment. The identities for this prospect are ECID and email.
 
 ```
 {

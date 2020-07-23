@@ -19,7 +19,7 @@ In Adobe Real-time Customer Data Platform, we distinguish between two destinatio
 
 ### Connections
 
-**Profile Export** and **Segment Export** destinations in Adobe Real-time Customer Data Platform capture event data, combine it with other data sources to form the [real-time customer profile](/help/profile/home.md), apply segmentation, and export segments and qualified profiles to destinations. 
+**[!UICONTROL Profile Export]** and **[!UICONTROL Segment Export]** destinations in Adobe Real-time Customer Data Platform capture event data, combine it with other data sources to form the [real-time customer profile](/help/profile/home.md), apply segmentation, and export segments and qualified profiles to destinations. 
 
 <br>&nbsp;
 
@@ -29,7 +29,7 @@ Profile export destinations generate a file containing profiles and/or attribute
 
 #### Segment export destinations
 
-Segment export destinations send the profiles and the segments that they qualified for to destination platforms. These destinations use segment ID or user IDs. Advertising destinations such as [Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md) or [Google Ads](/help/rtcdp/destinations/google-ads-destination.md) are examples of these types of destinations.
+Segment export destinations send the profiles and the segments that they qualified for to destination platforms. These destinations use segment ID or user IDs. Advertising destinations such as [!DNL Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md) or [!DNL Google Ads](/help/rtcdp/destinations/google-ads-destination.md) are examples of these types of destinations.
 
 #### Profile export and Segment export destinations - video overview
 
