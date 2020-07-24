@@ -100,9 +100,9 @@ Dataflows are designed to automatically ingest data on a scheduled basis. Start 
 
 To set the start time for ingestion, adjust the date and time displayed in the start time box. Alternatively, you can select the calendar icon to edit the start time value. Start time must be greater than or equal to your current UTC time.
 
-Provide values for the schedule and click **Next**.
+Provide values for the schedule and select **Next**.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-interval-on.png)
 
 ### Set up a one-time ingestion dataflow
 
@@ -110,21 +110,27 @@ To set up one-time ingestion, select the frequency drop down arrow and select **
 
 >[!TIP] **[!UICONTROL Interval]** and **[!UICONTROL Backfill]** are not visible during a one-time ingestion.
 
-## Name your dataflow
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-once.png)
 
-The *[!UICONTROL Name flow]* step appears, allowing you to name and give a brief description about your new dataflow.
+Once you have provided appropriate values to the schedule, select **[!UICONTROL Next]**.
 
-Provide values for the dataflow and click **[!UICONTROL Next]**.
+## Provide dataflow details
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/name-your-dataflow.png)
+The *[!UICONTROL Dataflow detail]* step appears, allowing you to name and give a brief description about your new dataflow.
 
-### Review your dataflow
+During this process, you can also enable *[!UICONTROL Partial ingestion]* and *[!UICONTROL Error diagnostics]*. Enabling *[!UICONTROL Partial ingestion]* provides the ability to ingest data containing errors, up to a certain threshold that you can set. Enabling *[!UICONTROL Error diagnostics]* will provide details on any incorrect data that is batched separately. For more information, see the [partial batch ingestion overview](../../../../../ingestion/batch-ingestion/partial.md).
+
+Provide values for the dataflow and select **[!UICONTROL Next]**.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/dataflow-detail.png)
+
+## Review your dataflow
 
 The *[!UICONTROL Review]* step appears, allowing you to review your new dataflow before it is created. Details are grouped within the following categories:
 
-* *[!UICONTROL Source details]*: Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
-* *[!UICONTROL Target details]*: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
-* *[!UICONTROL Schedule details]*: Shows the active period, frequency, and interval of the ingestion schedule.
+* *Connection*: Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
+* *Assign dataset & map fields*: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
+* *Scheduling*: Shows the active period, frequency, and interval of the ingestion schedule.
 
 Once you have reviewed your dataflow, click **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
 
