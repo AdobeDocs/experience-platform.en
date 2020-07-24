@@ -7,7 +7,7 @@ topic: overview
 
 # Configure a dataflow for a database connector in the UI
 
-A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps to configure a new dataflow using your database base connector.
+A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps to configure a new dataflow using your database accounr.
 
 ## Getting started
 
@@ -18,11 +18,11 @@ This tutorial requires a working understanding of the following components of Ad
     -   [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 -   [Real-time Customer Profile](../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
-Additionally, this tutorial requires that you have already created a database connector. A list of tutorials for creating different database connectors in the UI can be found in the [source connectors overview](../../../home.md).
+Additionally, this tutorial requires that you have already created a database account. A list of tutorials for creating different database connectors in the UI can be found in the [source connectors overview](../../../home.md).
 
 ## Select data
 
-After creating your database connector, the *[!UICONTROL Select data]* step appears, providing an interactive interface for you to explore your database hierarchy.
+After creating your database account, the *[!UICONTROL Select data]* step appears, providing an interactive interface for you to explore your database hierarchy.
 
 - The left half of the interface is a browser, displaying your account's list of databases.
 - The right half of the interface lets you preview up to 100 rows of data.
@@ -87,17 +87,21 @@ Select **[!UICONTROL Load incremental data by]** to assign the delta column. Thi
 
 ### Set up a one-time ingestion dataflow
 
-To set up one-time ingestion, select the frequency drop down arrow and select **[!UICONTROL Once]**. 
+To set up one-time ingestion, select the frequency drop down arrow and select **[!UICONTROL Once]**.
 
 >[!TIP] **[!UICONTROL Interval]** and **[!UICONTROL Backfill]** are not visible during a one-time ingestion.
 
-![](../../../images/tutorials/dataflow/databases/schedule-once.png)
-
 Once you have provided appropriate values to the schedule, select **[!UICONTROL Next]**.
 
-## Name your dataflow
+![](../../../images/tutorials/dataflow/databases/schedule-once.png)
 
-The *[!UICONTROL dataflow detail]* step appears, where you must provide a name and an optional description for the dataflow. Select **[!UICONTROL Next]** when finished.
+## Provide dataflow details
+
+The *[!UICONTROL Dataflow detail]* step appears, allowing you to name and give a brief description about your new dataflow.
+
+During this process, you can also enable *[!UICONTROL Partial ingestion]* and *[!UICONTROL Error diagnostics]*. Enabling *[!UICONTROL Partial ingestion]* provides the ability to ingest data containing errors up to a certain threshold that you can set. Enabling *[!UICONTROL Error diagnostics]* will provide details on any incorrect data that is batched separately. For more information, see the [partial batch ingestion overview](../../../../ingestion/batch-ingestion/partial.md).
+
+Provide values for the dataflow and select **[!UICONTROL Next]**.
 
 ![](../../../images/tutorials/dataflow/databases/dataflow-detail.png)
 
