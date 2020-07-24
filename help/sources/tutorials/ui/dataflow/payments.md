@@ -91,15 +91,19 @@ To set up one-time ingestion, select the frequency drop down arrow and select **
 
 >[!TIP] **[!UICONTROL Interval]** and **[!UICONTROL Backfill]** are not visible during a one-time ingestion.
 
-![](../../../images/tutorials/dataflow/databases/schedule-once.png)
-
 Once you have provided appropriate values to the schedule, select **[!UICONTROL Next]**.
 
-## Name your dataflow
+![](../../../images/tutorials/dataflow/databases/schedule-once.png)
 
-The *[!UICONTROL Dataflow detail]* step appears, where you must provide a name and an optional description for the dataflow. Select **[!UICONTROL Next]** when finished.
+## Provide dataflow details
 
-![dataset-flow-details](../../../images/tutorials/dataflow/payments/dataset-flow-details.png)
+The *[!UICONTROL Dataflow detail]* step appears, allowing you to name and give a brief description about your new dataflow.
+
+During this process, you can also enable *[!UICONTROL Partial ingestion]* and *[!UICONTROL Error diagnostics]*. Enabling *[!UICONTROL Partial ingestion]* provides the ability to ingest data containing errors up to a certain threshold that you can set. Enabling *[!UICONTROL Error diagnostics]* will provide details on any incorrect data that is batched separately. For more information, see the [partial batch ingestion overview](../../../../ingestion/batch-ingestion/partial.md).
+
+Provide values for the dataflow and select **[!UICONTROL Next]**.
+
+![dataflow-details](../../../images/tutorials/dataflow/all-tabular/dataflow-detail.png)
 
 ## Review your dataflow
 
