@@ -7,7 +7,7 @@ topic: overview
 
 # Configure a dataflow for a CRM connector in the UI
 
-A dataflow is a scheduled task that retrieves and ingests data from a source to a [!DNL Platform] dataset. This tutorial provides steps to configure a new dataflow using your CRM connector.
+A dataflow is a scheduled task that retrieves and ingests data from a source to a [!DNL Platform] dataset. This tutorial provides steps to configure a new dataflow using your CRM account.
 
 ## Getting started
 
@@ -18,11 +18,11 @@ This tutorial requires a working understanding of the following components of Ad
     *   [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 *   [Real-time Customer Profile](../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
-Additionally, this tutorial requires that you have already created a CRM connector. A list of tutorials for creating different CRM connectors in the UI can be found in the [source connectors overview](../../../home.md).
+Additionally, this tutorial requires that you have already created a CRM account. A list of tutorials for creating different CRM connectors in the UI can be found in the [source connectors overview](../../../home.md).
 
 ## Select data
 
-After creating your CRM connector, the *Select data* step appears, providing an interactive interface for you to explore your file hierarchy.
+After creating your CRM account, the *Select data* step appears, providing an interactive interface for you to explore your file hierarchy.
 
 * The left half of the interface is a directory browser, displaying your server's files and directories.
 * The right half of the interface lets you preview up to 100 rows of data from a compatible file.
@@ -33,7 +33,7 @@ Select the directory you wish to use, then click **[!UICONTROL Next]**.
 
 ## Map data fields to an XDM schema
 
-The *Mapping* step appears, providing an interactive interface to map the source data to a [!DNL Platform] dataset.
+The *[!UICONTROL Mapping]* step appears, providing an interactive interface to map the source data to a [!DNL Platform] dataset.
 
 Choose a dataset for inbound data to be ingested into. You can either use an existing dataset or create a new dataset.
 
@@ -43,7 +43,7 @@ To ingest data into an existing dataset, select **[!UICONTROL Use existing datas
 
 ![use-existing-dataset](../../../images/tutorials/dataflow/crm/use-existing-dataset.png)
 
-The _Select dataset_ dialog appears. Find the dataset you you wish to use, select it, then click **[!UICONTROL Continue]**.
+The *[!UICONTROL Select dataset]* dialog appears. Find the dataset you you wish to use, select it, then click **[!UICONTROL Continue]**.
 
 ![select-existing-dataset](../../../images/tutorials/dataflow/crm/select-existing-dataset.png)
 
@@ -91,15 +91,19 @@ To set up one-time ingestion, select the frequency drop down arrow and select **
 
 >[!TIP] **[!UICONTROL Interval]** and **[!UICONTROL Backfill]** are not visible during a one-time ingestion.
 
-![schedule-once](../../../images/tutorials/dataflow/databases/schedule-once.png)
-
 Once you have provided appropriate values to the schedule, select **[!UICONTROL Next]**.
 
-## Name your dataflow
+![schedule-once](../../../images/tutorials/dataflow/databases/schedule-once.png)
 
-The *Name flow* step appears, where you must provide a name and an optional description for the dataflow. Click **[!UICONTROL Next]** when finished.
+## Provide dataflow details
 
-![name-dataflow](../../../images/tutorials/dataflow/crm/name-dataflow.png)
+The *[!UICONTROL Dataflow detail]* step appears, allowing you to name and give a brief description about your new dataflow.
+
+During this process, you can also enable *[!UICONTROL Partial ingestion]* and *[!UICONTROL Error diagnostics]*. Enabling *[!UICONTROL Partial ingestion]* provides the ability to ingest data containing errors up to a certain threshold that you can set. Enabling *[!UICONTROL Error diagnostics]* will provide details on any incorrect data that is batched separately. For more information, see the [partial batch ingestion overview](../../../../ingestion/batch-ingestion/partial.md).
+
+Provide values for the dataflow and select **[!UICONTROL Next]**.
+
+![dataflow-details](../../../images/tutorials/dataflow/all-tabular/dataflow-detail.png)
 
 ## Review your dataflow
 
