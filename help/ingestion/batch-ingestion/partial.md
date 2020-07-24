@@ -120,6 +120,74 @@ The *[!UICONTROL Error diagnostics]* toggle only appears when the *[!UICONTROL P
 
 The *[!UICONTROL Error threshold]* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
 
+## Downloading file-level metadata {#download-metadata}
+
+### List input files {#list-files}
+
+**Request**
+
+```shell
+curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=input_files \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Response**
+
+A successful response will return HTTP status 200(?) with JSON objects containing path objects detailing where the metadata was saved.
+
+```json
+{
+    "_page": {
+        "count": 1,
+        "limit": 100
+    },
+    "data": [
+        {
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=input_files/fileMetaData1.json"
+                }
+            },
+            "length": "1337",
+            "name": "fileMetaData1.json"
+        },
+                {
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=input_files/fileMetaData2.json"
+                }
+            },
+            "length": "1042",
+            "name": "fileMetaData2.json"
+        }
+    ]
+}
+```
+
+### Retrieve input file metadata {#retrieve-metadata}
+
+**Request**
+
+```shell
+curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=input_files/fileMetaData1.json \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Response**
+
+A successful response will return HTTP status 200(?) with JSON objects containing path objects detailing where the metadata was saved.
+
+```json
+{"path": "F1.json"}
+{"path": "etc/F2.json"}
+```
+
 ## Retrieve partial batch ingestion errors {#retrieve-errors}
 
 If batches contain failures, you will need to retrieve error information about these failures so you can re-ingest the data.
@@ -148,7 +216,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Response**
+**Response without errors**
 
 A successful response returns HTTP status 200 with detailed information about the batch's status.
 
@@ -197,7 +265,70 @@ A successful response returns HTTP status 200 with detailed information about th
 | -------- | ----------- |
 | `metrics.failedRecordCount` | The number of rows that were not able to be processed due to parsing, conversion, or validation. This value can be derived by subtracting the `inputRecordCount` from the `outputRecordCount`. This value will be generated on all batches regardless if `errorDiagnostics` is enabled. |
 
-If the batch has an error and has error diagnostics enabled, the status will be "success" with more information about the error provided in a downloadable error file.
+**Response with errors**
+
+If the batch has one or more errors and has error diagnostics enabled, the status will be "success" with more information about the errors provided both within the response and in a downloadable error file.
+
+```json
+{
+    "01E8043CY305K2MTV5ANH9G1GC": {
+        "status": "success",
+        "tags": {
+            ...
+            "acp_enableErrorDiagnostics": true,
+            "acp_partialIngestionPercent": 5
+            ...
+        },
+        "relatedObjects": [
+            {
+                "type": "dataSet",
+                "id": "5deac2648a19d218a888d2b1"
+            }
+        ],
+        "id": "01E8043CY305K2MTV5ANH9G1GC",
+        "externalId": "01E8043CY305K2MTV5ANH9G1GC",
+        "inputFormat": {
+            "format": "parquet"
+        },
+        "imsOrg": "{IMS_ORG}",
+        "started": 1576741718543,
+        "metrics": {
+            "inputByteSize": 568,
+            "inputFileCount": 4,
+            "inputRecordCount": 519,
+            "outputRecordCount": 514,
+            "failedRecordCount": 5
+        },
+        "completed": 1576741722026,
+        "created": 1576741597205,
+        "createdClient": "{API_KEY}",
+        "createdUser": "{USER_ID}",
+        "updatedUser": "{USER_ID}",
+        "updated": 1576741722644,
+        "version": "1.0.5",
+        "errors": [
+           {
+             "code": "INGEST-TBD2-400",
+             "description": "Encountered 5 errors in the data. Successfully ingested 514 rows. Please review the associated diagnostic files for more details."
+           },
+           {
+             "code": "INGEST-1401-400",
+             "description": "The row has corrupted data and cannot be read or parsed. Fix the corrupted data and try again."
+             "recordCount": 2
+           },
+           {
+             "code": "INGEST-1555-400",
+             "description": "A required field is either missing or has a value of null. Add the required field to the input row and try again."
+             "recordCount": 3
+           }
+        ]
+}
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `metrics.failedRecordCount` | The number of rows that were not able to be processed due to parsing, conversion, or validation. This value can be derived by subtracting the `inputRecordCount` from the `outputRecordCount`. This value will be generated on all batches regardless if `errorDiagnostics` is enabled. |
+| `errors.recordCount` | The number of rows that failed for the specified error code. This value is **only** generated if `errorDiagnostics` is enabled. |
 
 ## Next steps {#next-steps}
 
@@ -205,12 +336,11 @@ This tutorial covered how to create or modify a dataset to enable partial batch 
 
 ## Partial batch ingestion error types {#appendix}
 
-Partial batch ingestion has four different error types when ingesting data.
+Partial batch ingestion has three different error types when ingesting data.
 
 - [Unreadable files](#unreadable)
 - [Invalid schemas or headers](#schemas-headers)
 - [Unparsable rows](#unparsable)
-- [Invalid XDM conversion](#conversion)
 
 ### Unreadable files {#unreadable}
 
@@ -227,7 +357,7 @@ If the batch ingested has unparsable rows, the batch's errors will be stored in 
 **API format**
 
 ```http
-GET /export/batches/{BATCH_ID}/failed?path=parse_errors
+GET /export/batches/{BATCH_ID}/meta?path=row_errors
 ```
 
 | Parameter | Description |
@@ -237,7 +367,7 @@ GET /export/batches/{BATCH_ID}/failed?path=parse_errors
 **Request**
 
 ```shell
-curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed?path=parse_errors \
+curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=row_errors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -256,62 +386,5 @@ A successful response returns HTTP status 200 with details of the unparsable row
          "message":"Row is corrupted and cannot be read, please fix and resend."
     }],
     "_filename": "a1.json"
-}
-```
-
-### Invalid XDM conversion {#conversion}
-
-If the batch ingested has invalid XDM conversions, the batch's errors will be stored in a file that can be accessed by using the following endpoint.
-
-**API format**
-
-```http
-GET /export/batches/{BATCH_ID}/failed?path=conversion_errors
-```
-
-| Parameter | Description |
-| --------- | ----------- |
-| `{BATCH_ID}` | The `id` value of the batch you are retrieving error information from. |
-
-**Request**
-
-```shell
-curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed?path=conversion_errors \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Response**
-
-A successful response returns HTTP status 200 with details of the failures in XDM conversion.
-
-```json
-{
-    "col1":"v1",
-    "col2":"v2",
-    "col3":[{
-        "g1":"h1"
-    }],
-    "_errors":[{
-        "column":"col3",
-        "code":"123",
-        "message":"Cannot convert array element from Object to String"
-    }],
-    "_filename":"a1.json"
-},
-{
-    "col1":"v1",
-    "col2":"v2",
-    "col3":[{
-        "g1":"h1"
-    }],
-    "_errors":[{
-        "column":"col1",
-        "code":"100",
-        "message":"Cannot convert string to float"
-    }],
-    "_filename":"a2.json"
 }
 ```
