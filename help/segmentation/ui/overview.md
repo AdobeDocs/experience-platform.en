@@ -7,15 +7,15 @@ topic: ui guide
 
 # [!UICONTROL Segmentation Service] user guide
 
-[!DNL Adobe Experience Platform Segmentation Service] provides a RESTful API and user interface for creating segment definitions from [!DNL Real-time Customer Profile] data.
+[!DNL Adobe Experience Platform Segmentation Service] provides a user interface for creating and managing segment definitions. 
 
 ## Getting started
 
 Working with segment definitions requires an understanding of the various [!DNL Experience Platform] services involved with segmentation. Before reading this user guide, please review the documentation for the following services:
 
-- [!DNL Segmentation Service](../home.md): [!DNL Segmentation Service] allows you divide data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into smaller groups that share similar traits and will respond similarly to marketing strategies.
+- [!DNL Segmentation Service](../home.md): [!DNL Segmentation Service] allows you to divide data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into smaller groups.
 - [!DNL Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-- [!DNL Identity Service](../../identity-service/home.md): Enables [!DNL Real-time Customer Profile] by bridging identities from disparate data sources being ingested into [!DNL Platform].
+- [!DNL Adobe Experience Platform Identity Service](../../identity-service/home.md): Enables the creation of customer profiles by bridging identities from disparate data sources being ingested into [!DNL Platform].
 - [!DNL Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 
 It is also important to know two key terms that are used through this document and understand the difference between them:
@@ -44,9 +44,9 @@ The right sidebar contains information about all the segments within the IMS org
 
 ![](../images/segment-builder/segment-browse-segment-info.png)
 
-### Segment definition details
+## Segment definition details
 
-To see more details about a specific segment definition, select a segment within the **[!UICONTROL Browse]** tab.
+To see more details about a specific segment definition, select a segment's name within the **[!UICONTROL Browse]** tab.
 
 The segment details page appears. On the top, there is a summary of the segment definition, including details such as the ID, a description, and the attributes. Additionally, there is information about the qualified audience size as well as destinations the segment is activated for. 
 
@@ -55,6 +55,18 @@ The segment details page appears. On the top, there is a summary of the segment 
 > Destinations are a feature available with [!DNL Real-time Customer Data Platform]. For more information on destinations, please read the [destinations overview](../../rtcdp/destinations/destinations-overview.md). To learn how to activate a segment to a destination, please read the [guide on activating segments to a destination](../../rtcdp/destinations/activate-destinations.md)
 
 ![](../images/segment-builder/segment-details-summary.png)
+
+### Segment summary
+
+explain -> edit segment
+
+### Total audience in segment
+
+describe how this is generated
+
+### Activated destinations
+
+move note here?
 
 Underneath is a sampling of profiles that qualify for the segment, detailing information including the [!DNL Profile] ID, first name, last name, and personal email. More detailed information about each [!DNL Profile] can be seen by selecting the [!DNL Profile] ID. To learn more about a profile's details, please read the [Real-time Customer Profile user guide](../../profile/ui/user-guide.md#profile-detail).
 
