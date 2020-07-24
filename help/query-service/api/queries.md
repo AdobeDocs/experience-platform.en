@@ -9,7 +9,7 @@ topic: queries
 
 ## Sample API Calls
 
-The following sections walk through calls you can make using the `/queries` endpoint in the Query Service API. Each call includes the general API format, a sample request showing required headers, and a sample response.
+The following sections walk through calls you can make using the `/queries` endpoint in the [!DNL Query Service] API. Each call includes the general API format, a sample request showing required headers, and a sample response.
 
 ### Retrieve a list of queries
 

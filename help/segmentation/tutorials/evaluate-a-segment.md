@@ -52,7 +52,7 @@ Through scheduled evaluation, your IMS Org can create a recurring schedule to au
 
 >[!NOTE]
 >
->Scheduled evaluation can be enabled for sandboxes with a maximum of five (5) merge policies for XDM Individual Profile. If your organization has more than five merge policies for XDM Individual Profile within a single sandbox environment, you will not be able to use scheduled evaluation.
+>Scheduled evaluation can be enabled for sandboxes with a maximum of five (5) merge policies for [!DNL XDM Individual Profile]. If your organization has more than five merge policies for [!DNL XDM Individual Profile] within a single sandbox environment, you will not be able to use scheduled evaluation.
 
 ### Create a schedule
 
@@ -150,11 +150,11 @@ The following steps are required to export your audience:
 
 When exporting an audience, a target dataset must first be created. It is important that the dataset be configured correctly to ensure the export is successful. 
 
-One of the key considerations is the schema upon which the dataset is based (`schemaRef.id` in the API sample request below). In order to export a segment, the dataset must be based on the XDM Individual Profile Union Schema (`https://ns.adobe.com/xdm/context/profile__union`). A union schema is a system-generated, read-only schema that aggregates the fields of schemas which share the same class, in this case that is the XDM Individual Profile class. For more information on union view schemas, please see the [Real-time Customer Profile section of the Schema Registry developer guide](../../xdm/api/getting-started.md).
+One of the key considerations is the schema upon which the dataset is based (`schemaRef.id` in the API sample request below). In order to export a segment, the dataset must be based on the [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`). A union schema is a system-generated, read-only schema that aggregates the fields of schemas which share the same class, in this case that is the XDM Individual Profile class. For more information on union view schemas, please see the [Real-time Customer Profile section of the Schema Registry developer guide](../../xdm/api/getting-started.md).
 
 There are two ways to create the necessary dataset:
 
-- **Using APIs:** The steps that follow in this tutorial outline how to create a dataset that references the XDM Individual Profile Union Schema using the Catalog API. 
+- **Using APIs:** The steps that follow in this tutorial outline how to create a dataset that references the [!DNL XDM Individual Profile Union Schema] using the [!DNL Catalog] API. 
 - **Using the UI:** To use the [!DNL Adobe Experience Platform] user interface to create a dataset that references the union schema, follow the steps in the [UI tutorial](../ui/overview.md) and then return to this tutorial to proceed with the steps for [generating audience profiles](#generate-xdm-profiles-for-audience-members).
 
 If you already have a compatible dataset and know its ID, you can proceed directly to the step for [generating audience profiles](#generate-xdm-profiles-for-audience-members).
@@ -221,10 +221,10 @@ More detailed information about using this endpoint can be found in the [export 
 
 ## Next steps
 
-Once the export has completed successfully, your data is available within the Data Lake in [!DNL Experience Platform]. You can then use the [Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) to access the data using the `batchId` associated with the export. Depending on the size of the segment, the data may be in chunks and the batch may consist of several files.
+Once the export has completed successfully, your data is available within the [!DNL Data Lake] in [!DNL Experience Platform]. You can then use the [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) to access the data using the `batchId` associated with the export. Depending on the size of the segment, the data may be in chunks and the batch may consist of several files.
 
 For step-by-step instructions on how to use the [!DNL Data Access] API to access and download batch files, follow the [Data Access tutorial](../../data-access/tutorials/dataset-data.md).
 
-You can also access successfully exported segment data using [!DNL Adobe Experience Platform Query Service]. Using the UI or RESTful API, [!DNL Query Service] allows you to write, validate, and run queries on data within the Data Lake.
+You can also access successfully exported segment data using [!DNL Adobe Experience Platform Query Service]. Using the UI or RESTful API, [!DNL Query Service] allows you to write, validate, and run queries on data within the [!DNL Data Lake].
 
 For more information on how to query audience data, please review the documentation on [!DNL Query Service](../../query-service/home.md).

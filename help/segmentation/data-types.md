@@ -5,7 +5,7 @@ title: Adobe Experience Platform Segmentation Service data types
 topic: overview
 ---
 
-# Adobe Experience Platform Segmentation Service supported data types
+# Adobe Experience Platform [!DNL Segmentation Service] supported data types
 
 All XDM data types are supported within [!DNL Segmentation Service]. The rules that constitute a segment definition are contextualized by the following data types.
 
@@ -32,7 +32,7 @@ Date data allows you to assign time-based context to your segment definitions, e
 
 ## Experience Events
 
-As an Adobe Experience Platform schema, XDM ExperienceEvents record explicit and implicit customer interactions with [!DNL Platform]-integrated applications, including a snapshot of the system at the time the interaction took place. ExperienceEvents are fact records. As such, they are a data source available to you during segment definition.
+As an Adobe Experience Platform schema, [!DNL XDM ExperienceEvents] record explicit and implicit customer interactions with [!DNL Platform]-integrated applications, including a snapshot of the system at the time the interaction took place. [!DNL ExperienceEvents] are fact records. As such, they are a data source available to you during segment definition.
 
 As seen in the table below, event data is rendered using keywords which help refine event behavior and specify event attributes. 
 
@@ -43,15 +43,15 @@ As seen in the table below, event data is rendered using keywords which help ref
 | "Apply time rule" toggle button | Incorporates date data. |
 | Equals, does not equal, starts with, does not start with, ends with, does not end with, contains, does not contain, exists, does not exist | Incorporates string data. |
 
-## Segments
-
-Existing segment definitions can also be used as components of a new segment definition, adding their attribute and event-based rules to the new segment.
-
-## Audiences
+### Audience sharing
 
 External audiences can also be used as components of a new segment definition, adding their attribute rules to the new segment.
 
-Currently, only Adobe Audience Manager is supported as an audience. Additional sources will be enabled in the future.
+Currently, only Adobe Audience Manager is supported as an external audience, with additional sources being enabled in the future. More information about using Adobe Audience Manager audiences with Platform can be found in the [audience sharing guide within the Adobe Audience Manager documentation](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
+
+### Segment sharing
+
+Segments created in Platform can be used within other [Adobe Experience Cloud Core Services](https://docs.adobe.com/content/help/en/core-services/interface/experience-cloud.html). To enable this feature, you will need to contact your solution architect or your consultant.
 
 ## Other data types
 

@@ -362,7 +362,7 @@ Relationship descriptors describe a relationship between two different schemas, 
 
 #### Reference identity descriptor
 
-Reference identity descriptors provide a reference context to a schema field, allowing it to be linked with the primary identity field of a destination schema. Fields must already be labeled with an identity descriptor before a reference descriptor can be applied to them.
+Reference identity descriptors provide a reference context to the primary identity of a schema field, allowing it to be referenced by fields in other schemas. Fields must already be labeled with an identity descriptor before a reference descriptor can be applied to them.
 
 ```json
 {
