@@ -95,12 +95,11 @@ Once you have provided appropriate values to the schedule, select **[!UICONTROL 
 
 ![](../../../images/tutorials/dataflow/databases/schedule-once.png)
 
-
 ## Provide dataflow details
 
-The *[!UICONTROL Dataflow detail]* step appears, allowing you to name and give a brief description about your new dataflow.
+The *[!UICONTROL Dataflow detail]* step appears, allowing you to name and provide a brief description about your new dataflow.
 
-During this process, you can also enable *[!UICONTROL Partial ingestion]* and *[!UICONTROL Error diagnostics]*. Enabling *[!UICONTROL Partial ingestion]* provides the ability to ingest data containing errors up to a certain threshold that you can set. Enabling *[!UICONTROL Error diagnostics]* will provide details on any incorrect data that is batched separately. For more information, see the [partial batch ingestion overview](../../../../ingestion/batch-ingestion/partial.md).
+During this process, you can also enable *[!UICONTROL Partial ingestion]* and *[!UICONTROL Error diagnostics]*. Enabling *[!UICONTROL Partial ingestion]* provides the ability to ingest data containing errors up to a certain threshold. Once *[!UICONTROL Partial ingestion]* is enabled, drag the *[!UICONTROL Error threshold %]* dial to adjust the error threshold of the batch. Alternatively, you can manually adjust the threshold by selecting the input box. For more information, see the [partial batch ingestion overview](../../../../ingestion/batch-ingestion/partial.md).
 
 Provide values for the dataflow and select **[!UICONTROL Next]**.
 
