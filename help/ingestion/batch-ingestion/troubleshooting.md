@@ -7,7 +7,7 @@ topic: troubleshooting
 
 # Batch ingestion troubleshooting guide
 
-This documentation will help answer frequently asked questions regarding Adobe Experience Platform Batch Data Ingestion APIs. 
+This documentation will help answer frequently asked questions regarding Adobe Experience Platform [!DNL Batch Data Ingestion] APIs. 
 
 ## Batch API Calls
 
@@ -102,7 +102,7 @@ For multi-line JSON, one object can occupy multiple lines, while all the objects
 ]
 ```
 
-By default, Batch Data Ingestion uses single-line JSON.
+By default, [!DNL Batch Data Ingestion] uses single-line JSON.
 
 ### Is CSV ingestion supported?
 
@@ -164,7 +164,7 @@ A batch can, in its lifecycle, go through the following states:
 | Status | Data written to Master | Description |
 | ------ | ---------------------- | ----------- |
 | Abandoned | | The client failed to complete the batch in the expected timeframe. |
-| Aborted | | The client has explicitly called, via the Batch Data Ingestion APIs, an abort operation for the specified batch. Once a batch is in the Loaded state, the batch cannot be aborted. |
+| Aborted | | The client has explicitly called, via the [!DNL Batch Data Ingestion] APIs, an abort operation for the specified batch. Once a batch is in the Loaded state, the batch cannot be aborted. |
 | Active/Success | x | The batch has been successfully promoted from stage to master, and is now available for downstream consumption. **Note:** Active and Success are used interchangeably. |
 | Archived | | The batch has been archived into cold storage. |
 | Failed/Failure | | A terminal state that results from either bad configuration and/or bad data. An actionable error is recorded, along with the batch, to enable clients to correct and resubmit the data. **Note:** Failed and Failure are used interchangeably. |
@@ -186,7 +186,7 @@ When a batch is in "Retrying", it means that the batch's data ingestion has been
 
 ### What does it mean when a batch is "Stalled"?
 
-When a batch is in "Stalled", it means that Data Ingestion Services is experiencing difficulty ingesting the batch and all retries have been exhausted. 
+When a batch is in "Stalled", it means that [!DNL Data Ingestion Services] is experiencing difficulty ingesting the batch and all retries have been exhausted. 
 
 ### What does it mean if a batch is still "Loading"?
 
@@ -221,7 +221,7 @@ Once the errors have been corrected, the batch can be re-uploaded.
 
 ### How should batches be deleted?
 
-Instead of deleting directly from Catalog, batches should be removed using either method provided below:
+Instead of deleting directly from [!DNL Catalog], batches should be removed using either method provided below:
 
 1. If the batch is in progress, the batch should be aborted.
 2. If the batch is successfully mastered, the batch should be reverted.
@@ -232,11 +232,11 @@ The following batch-level metrics are available for batches in the Active/Succes
 
 | Metric | Description |
 | ------ | ----------- |
-| inputByteSize | The total number of bytes staged for Data Ingestion Services to process. |
-| inputRecordSize | The total number of rows staged for Data Ingestion Services to process. |
-| outputByteSize | The total number of bytes outputted by Data Ingestion Services to Data Lake. |
-| outputRecordSize | The total number of rows outputted by Data Ingestion Services to Data Lake. |
-| partitionCount | The total number of partitions written into Data Lake. |
+| inputByteSize | The total number of bytes staged for [!DNL Data Ingestion Services] to process. |
+| inputRecordSize | The total number of rows staged for [!DNL Data Ingestion Services] to process. |
+| outputByteSize | The total number of bytes outputted by [!DNL Data Ingestion Services] to [!DNL Data Lake]. |
+| outputRecordSize | The total number of rows outputted by [!DNL Data Ingestion Services] to [!DNL Data Lake]. |
+| partitionCount | The total number of partitions written into [!DNL Data Lake]. |
 
 ### Why are metrics not available on some batches?
 

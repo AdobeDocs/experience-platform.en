@@ -5,23 +5,23 @@ title: Data access overview
 topic: overview
 ---
 
-# Data Access overview
+# [!DNL Data Access] overview
 
-[!DNL Data Access] supports Adobe Experience Platform by providing users tools focused on the discoverability and accessibility of ingested datasets within Experience Platform.
+[!DNL Data Access] supports Adobe Experience Platform by providing users tools focused on the discoverability and accessibility of ingested datasets within [!DNL Experience Platform].
 
 ![Data Access on Experience Platform](images/Data_Access_Experience_Platform.png)
 
-## Data Access API
+## [!DNL Data Access] API
 
 Detailed information on using the [!DNL Data Access] API to connect with [!DNL Platform] can be found in the [Data Access developer guide](api.md).
 
-## Python SDK
+## [!DNL Python] SDK
 
 You can read and write with datasets using the [!DNL Python] SDK. More detailed information about the [!DNL Python] SDK can be found in the [Python SDK tutorial](./tutorials/python-sdk.md). 
 
-[!DNL Data Science Workspace] uses the Python SDK within Notebooks and Recipes. For more information about [!DNL Data Science Workspace], please start by reading the [Data Science Workspace overview](../data-science-workspace/home.md).
+[!DNL Data Science Workspace] uses the [!DNL Python] SDK within Notebooks and Recipes. For more information about [!DNL Data Science Workspace], please start by reading the [Data Science Workspace overview](../data-science-workspace/home.md).
 
-## Spark SDK
+## [!DNL Spark] SDK
 
 You can read and write with datasets using the [!DNL Spark] SDK. More detailed information about the [!DNL Spark] SDK can be found in the [Spark SDK tutorial](./tutorials/spark-sdk.md).
 

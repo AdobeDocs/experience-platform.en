@@ -7,7 +7,7 @@ topic: developer guide
 
 # Look up an object
 
-If you know the unique identifier for a specific Catalog object, you can perform a GET request to view that object's details. 
+If you know the unique identifier for a specific [!DNL Catalog] object, you can perform a GET request to view that object's details. 
 
 >[!NOTE]
 >
@@ -22,7 +22,7 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of Catalog object to be retrieved. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
 | `{OBJECT_ID}` | The identifier of the specific object you want to retrieve. |
 
 **Request**

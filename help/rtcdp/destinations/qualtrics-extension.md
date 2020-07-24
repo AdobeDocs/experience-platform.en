@@ -5,15 +5,15 @@ description: THe Qualtrics Website Feedback extension is a surveys destination i
 seo-description: The Qualtrics Website Feedback extension is a surveys destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
-# Qualtrics Website Feedback Extension {#qualtrics-extension}
+# [!DNL Qualtrics Website Feedback] Extension {#qualtrics-extension}
 
 ## Overview {#overview}
 
-Qualtrics Website Feedback enables you to engage your website visitors with the right message, at the right time. Whether you want to improve visitor experience with website feedback surveys or increase conversion, Qualtrics Website Feedback has got you covered.
+[!DNL Qualtrics Website Feedback] enables you to engage your website visitors with the right message, at the right time. Whether you want to improve visitor experience with website feedback surveys or increase conversion, [!DNL Qualtrics Website Feedback] has got you covered.
 
 Create and deploy highly-targeted, branded web messages within minutes using an intuitive point-and-click interface. The data and insights you gather from your website are surfaced alongside customer feedback data across all channels offering a complete view of your customer experience - all on one platform.
 
-Qualtrics Website Feedback is a survey extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101569.qualtrics-website-feedback.html).
+[!DNL Qualtrics Website Feedback] is a survey extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101569.qualtrics-website-feedback.html).
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
@@ -21,13 +21,13 @@ This destination is an Experience Platform Launch extension. For more informatio
 
 ## Prerequisites {#prerequisites}
 
-This extension is available in the Destinations catalog for all customers who have purchased Adobe Real-time CDP.
+This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Adobe Real-time CDP.
 
 To use this extension, you need access to Experience Platform Launch. Experience Platform Launch is offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to Launch and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
 ## Install extension {#install-extension}
 
-To install the Qualtrics Website Feedback extension:
+To install the [!DNL Qualtrics Website Feedback] extension:
 
 1. In the [Adobe Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations > Catalog]**.
 2. Select the extension from the catalog or use the search bar.
