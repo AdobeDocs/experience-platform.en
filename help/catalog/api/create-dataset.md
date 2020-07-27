@@ -7,11 +7,11 @@ topic: developer guide
 
 # Create a dataset
 
-In order to create a dataset using the Catalog API, you must know the `$id` value of the Experience Data Model (XDM) schema on which the dataset will be based. Once you have the schema ID, you can create a dataset by making a POST request to the `/datasets` endpoint in the Catalog API.
+In order to create a dataset using the [!DNL Catalog] API, you must know the `$id` value of the [!DNL Experience Data Model] (XDM) schema on which the dataset will be based. Once you have the schema ID, you can create a dataset by making a POST request to the `/datasets` endpoint in the [!DNL Catalog] API.
 
 >[!NOTE]
 >
->This document only covers how to create a dataset object in Catalog. For full steps on how to create, populate, and monitor a dataset, please refer to the following [tutorial](../datasets/create.md).
+>This document only covers how to create a dataset object in [!DNL Catalog]. For full steps on how to create, populate, and monitor a dataset, please refer to the following [tutorial](../datasets/create.md).
 
 **API format**
 

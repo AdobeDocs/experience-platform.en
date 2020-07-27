@@ -5,9 +5,9 @@ title: Spark SQL functions
 topic: spark sql functions
 ---
 
-# Spark SQL functions
+# [!DNL Spark] SQL functions
 
-The Spark SQL helpers provide built-in Spark SQL functions to extend SQL functionality.
+The [!DNL Spark] SQL helpers provide built-in [!DNL Spark] SQL functions to extend SQL functionality.
 
 Reference: [Spark SQL function documentation](https://spark.apache.org/docs/2.4.0/api/sql/index.html)
 

@@ -59,4 +59,4 @@ Be sure to execute the `configure` command for each instance before executing ot
 
 ## Limitations
 
-To avoid conflicts with cookies, only one instance of Adobe Experience Platform Web SDK within a page can have a particular `edgeConfigId`.  Similarly, only one instance of Adobe Experience Platform Web SDK can have a particular `orgId`.  
+To avoid conflicts with cookies, only one instance of Adobe Experience Platform [!DNL Web SDK] within a page can have a particular `edgeConfigId`.  Similarly, only one instance of Adobe Experience Platform [!DNL Web SDK] can have a particular `orgId`.  

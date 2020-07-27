@@ -11,7 +11,7 @@ topic: getting started
 
 **Access Control:** {#access-control} Access control for [!DNL Experience Platform] links users with access permissions and sandbox environments through product profiles in Adobe Admin Console.
 
-**Access key ID:** Access key ID is a unique identifier that's associated with an Amazon S3 secret access key. The access key ID and secret access key are used together to sign AWS requests.
+**Access key ID:** Access key ID is a unique identifier that's associated with an [!DNL Amazon] S3 secret access key. The access key ID and secret access key are used together to sign AWS requests.
 
 **Action:** In [!DNL Experience Platform Launch], an action is a specific type of rule component that defines what should happen after an event occurs and conditions are evaluated and passed.
 
@@ -184,6 +184,8 @@ topic: getting started
 **Destination Category:** A destination category is a grouping of [!DNL Real-time Customer Data Platform] destinations that have similar characteristics.
 
 **Destination Catalog:** A destination catalog is a list of available destinations in the [!DNL Real-time Customer Data Platform].
+
+**Direct Call Rules:** in [!DNL Experience Platform Launch], you can set up a [!UICONTROL direct call] [!UICONTROL rule] that executes when it is called directly from the page. If your page load or your action on your site is very simple, or if it is unique and can execute a specific set of instructions every time (set [!DNL eVar4] to X and trigger [!DNL event2] every time), then you can use a [!UICONTROL direct call] [!UICONTROL rule]. See [!DNL Launch] documentation regarding creating [!UICONTROL direct call] [!UICONTROL rules].
 
 **Display Name:** Display name is a user-friendly name of a field that is shown in the UI.
 

@@ -7,4 +7,4 @@ topic: developer guide
 
 # Streaming ingestion developer guide
 
-This document may not exist, due to updates with ingestion with the Flow Service API. 
+This document may not exist, due to updates with ingestion with the [!DNL Flow Service] API. 

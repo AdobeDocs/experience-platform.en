@@ -5,13 +5,13 @@ description: The Google Global Site Tag extension is an analytics destination in
 seo-description: The Google Global Site Tag extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
-# Google Global Site Tag Extension {#gtag-analytics-extension}
+# [!DNL Google Global Site Tag] Extension {#gtag-analytics-extension}
 
 ## Overview {#overview}
 
-Send data to Google Analytics, Google Ads, and the Google Marketing Platform via Google's Global Site Tag, or gtag.js. Multiple accounts per product can be configured.
+Send data to [!DNL Google Analytics], [!DNL Google Ads], and the [!DNL Google Marketing Platform] via [!DNL Google's Global Site Tag], or gtag.js. Multiple accounts per product can be configured.
 
-Google Global Site Tag is an analytics extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101437.google-global-site-tag-gtag.html).
+[!DNL Google Global Site Tag] is an analytics extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101437.google-global-site-tag-gtag.html).
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
@@ -19,13 +19,13 @@ This destination is an Experience Platform Launch extension. For more informatio
 
 ## Prerequisites {#prerequisites}
 
-This extension is available in the Destinations catalog for all customers who have purchased Adobe Real-time CDP.
+This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Adobe Real-time CDP.
 
 To use this extension, you need access to Experience Platform Launch. Experience Platform Launch is offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to Launch and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
 ## Install extension {#install-extension}
 
-To install the Google Global Site Tag extension:
+To install the [!DNL Google Global Site Tag] extension:
 
 1. In the [Adobe Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations > Catalog]**.
 2. Select the extension from the catalog or use the search bar.

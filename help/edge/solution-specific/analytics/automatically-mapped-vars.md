@@ -5,11 +5,11 @@ description: Learn Which Variables are Automatically Mapped in Analytics with Ex
 seo-description: Learn Which Variables are Automatically Mapped in Analytics with Experience Platform Web SDK
 ---
 
-# Variables Automatically Mapped in Analytics
+# Variables Automatically Mapped in [!DNL Analytics]
 
-Below is a list of variables that the Adobe Experience Platform Edge Network automatically maps into Analytics.
+Below is a list of variables that the Adobe Experience Platform [!DNL Edge Network] automatically maps into [!DNL Analytics].
 
-| XDM Field Path  | Analytics Query String / HTTP Header | Description |
+| XDM Field Path  | [!DNL Analytics Query String] / HTTP Header | Description |
 | ---------- | ------------------------- | -------- |
 | `commerce.order.purchaseID` | `pi` | AppMeasurement query parameter PURCHASEID mapping. |
 | `commerce.order.currencyCode` | `cc` | AppMeasurement query parameter CURRENCY mapping. |
