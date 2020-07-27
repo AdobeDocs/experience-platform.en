@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data access;python sdk;data access api
 solution: Experience Platform
 title: Secure Python Data Access SDK
 topic: tutorial
+description: The Secure Python Data Access SDK is a software development kit that enables reading and writing of datasets from Adobe Experience Platform.
 ---
 
 # Secure [!DNL Python] [!DNL Data Access] SDK

@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data access;spark sdk;data access api
 solution: Experience Platform
 title: Secure Spark Data Access SDK
 topic: tutorial
