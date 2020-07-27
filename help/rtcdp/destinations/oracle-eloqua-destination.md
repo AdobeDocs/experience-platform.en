@@ -46,7 +46,6 @@ When [activating segments](/help/rtcdp/destinations/activate-destinations.md) to
 
 ## Exported data {#exported-data}
 
-
 For [!DNL Oracle Eloqua] destinations, Adobe Real-time CDP creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. Expect a new file to be created in your storage location every day. The file format is:
 
 `Oracle_Eloqua_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
@@ -57,7 +56,7 @@ Oracle_Eloqua_segment12341e18-abcd-49c2-836d-123c88e76c39_20200409052200.csv
 Oracle_Eloqua_segment12341e18-abcd-49c2-836d-123c88e76c39_20200410061130.csv
 ```
 
-The presence of these files in your storage location is confirmation of successful activation. To understand how the exported files are structured, you can [download a sample .csv file](/help/rtcdp/destinations/assets/Oracle_Eloqua_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). This file includes the profile attributes `person.firstname`, `person.lastname`, `person.gender`, and `person.birthyear`.
+The presence of these files in your storage location is confirmation of successful activation. To understand how the exported files are structured, you can [download a sample .csv file](/help/rtcdp/destinations/assets/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). This sample file includes the profile attributes `person.firstname`, `person.lastname`, `person.gender`, and `person.birthyear`.
 
 ## Set up data import into [!DNL Oracle Eloqua] {#import-data-into-eloqua}
 
