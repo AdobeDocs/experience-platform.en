@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;mlinstances;sensei machine learning api
 solution: Experience Platform
 title: MLInstances
 topic: Developer guide
+description: An MLInstance is a pairing of an existing Engine with an appropriate set of configurations that defines any training parameters, scoring parameters, or hardware resource configurations.
 ---
 
 # MLInstances

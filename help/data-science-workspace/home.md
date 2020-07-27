@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;Data Science Workspace;popular topics
+keywords: Experience Platform;home;Data Science Workspace;popular topics;dsw overview;Jupyter
 solution: Experience Platform
 title: Data Science Workspace overview
 topic: overview
+description: With Data Science Workspace, data scientists can easily create intelligent services APIs - powered by machine learning. These services work with other Adobe services, including Adobe Target and Adobe Analytics Cloud, to help you automate personalized, targeted digital experiences in web, desktop, and mobile apps.
 ---
 
 # Data Science Workspace overview

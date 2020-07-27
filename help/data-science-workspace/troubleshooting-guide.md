@@ -3,6 +3,7 @@ keywords: Experience Platform;troubleshooting;Data Science Workspace;popular top
 solution: Experience Platform
 title: Data Science Workspace troubleshooting guide
 topic: Troubleshooting
+description: This document provides answers to frequently asked questions about Adobe Experience Platform Data Science Workspace.
 ---
 
 # [!DNL Data Science Workspace] troubleshooting guide
