@@ -33,6 +33,8 @@ It is often complex to create and qualify users into segments targeting cart aba
 
 ## Creating multi-entity segments
 
+Creating a multi-entity segment first requires defining relationships between schemas before using the [!DNL Segmentation] API or Segment Builder UI to build the segment definition.
+
 ### Define relationships
 
 Defining relationships within the structure of your Experience Data Model (XDM) schemas is an integral part of multi-entity segment creation. This process can be done either using the Schema Registry API or the Schema Editor. For detailed steps showing how to define a relationship between two schemas, please choose from the following tutorials:
