@@ -11,7 +11,7 @@ Data usage labels allow you to categorize data according to usage policies that 
 
 >[!NOTE]
 >
->The `/labels` endpoint is only used to retrieve, create, and update data usage labels. For steps on how to add labels to datasets and fields using APIs, refer to the [labels API guide](../labels/api.md).
+>The `/labels` endpoint is only used to retrieve, create, and update data usage labels. For steps on how to add labels to datasets and fields using API calls, refer to the guide on [managing dataset labels](../labels/api.md).
 
 ##  Getting started
 
