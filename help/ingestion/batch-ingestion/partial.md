@@ -140,7 +140,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 
 **Response**
 
-A successful response will return HTTP status 200(?) with JSON objects containing path objects detailing where the metadata was saved.
+A successful response will return HTTP status 200 with JSON objects containing path objects detailing where the metadata was saved.
 
 ```json
 {
@@ -187,7 +187,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 
 **Response**
 
-A successful response will return HTTP status 200(?) with JSON objects containing path objects detailing where the metadata was saved.
+A successful response will return HTTP status 200 with JSON objects containing path objects detailing where the metadata was saved.
 
 ```json
 {"path": "F1.json"}
