@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Monitor and delete dataflows
+title: Monitor accounts and dataflows
 topic: overview
 ---
 
-# Monitor and delete dataflows
+# Monitor accounts and dataflows
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for viewing existing accounts and dataflows from the *[!UICONTROL Sources]* workspace. This tutorial also provides steps for deleting dataflows from the *[!UICONTROL Sources]* workspace.
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for viewing existing accounts and dataflows from the *[!UICONTROL Sources]* workspace.
 
 ## Getting started
 
@@ -58,37 +58,43 @@ The sorting panel appears. Select the source you wish to access from the scroll 
 
 ![sort-dataflows](../../images/tutorials/monitor/dataflows-sort.png)
 
-The *[!UICONTROL Dataflow activity]* screen appears. This page displays the rate of messages being consumed in the form of a graph.
+The *[!UICONTROL Dataflow activity]* page contains details on number of records ingested and records failed, as well as information regarding dataflow status and processing time. Select the calendar icon above the dataflow to view a different time frames of ingestion records.
 
-![dataset-flow-activity](../../images/tutorials/monitor/dataflow-activity.png)
+![datflow-activity](../../images/tutorials/monitor/dataflows-activity.png)
+
+The calendar allows you to view different time frames of records ingested. You can select from the pre-set of options of *[!UICONTROL Last 7 days]* or *[!UICONTROL Last 30 days]*. Alternatively, you can set a custom time frame using the calendar. Select **[!UICONTROL Apply]** to continue.
+
+![flow-calendar](../../images/tutorials/monitor/flow-calendar.png)
+
+By default, the *[!UICONTROL Dataflow activity]* displays the *[!UICONTROL Properties]* panel associated with the dataflow. Select the the flow run from the list to see its associated meta data, including information about its unique run ID.
+
+Select **[!UICONTROL Dataflow run start]** to see the *[!UICONTROL Flow run overview]*.
+
+![runs](../../images/tutorials/monitor/run-metadata.png)
+
+The *[!UICONTROL Flow run overview]* screen displays metadata information regarding the dataflow including its run ID and IMS organization ID. The lower half of the *[!UICONTROL Flow run overview]* screen contains information on any errors that occur during the ingestion process, divided into three tabs: *[!UICONTROL Source errors]*, *[!UICONTROL Flow run errors]*, and *[!UICONTROL Files]*.
+
+| Tab | Description |
+| --- | ----------- |
+| Source errors | Source errors displays information on errors that occur at the source point during ingestion. |
+| Flow run errors | Flow run errors displays information on errors that occur during the flow run. |
+| Files | Files displays information on the files being ingested. |
+
+The *[Source errors]* tab contains errors and descriptions on any errors that occur at the source point during ingestion.
+
+Select **[!UICONTROL Flow run errors]** to see information on errors that occur during the flow run.
+
+![source-errors](../../images/tutorials/monitor/source-errors.png)
+
+The **[!UICONTROL Flow run errors]** tab displays the number of errors encountered during the ingestion of the source data as well as the number of successfully ingested rows. The **[!UICONTROL Flow run errors]** tab also contains the specific error code associated with the failed records and a description for the error.
+
+![flow-run-errors](../../images/tutorials/monitor/flow-run-errors.png)
+
+The **[!UICONTROL Files]** tab provides an overview of the files ingested, including the file name, their destination path, as well as the ingestion status.
+
+![files](../../images/tutorials/monitor/files.png)
 
 For more information on monitoring dataflows and ingestion, refer to the tutorial on [monitoring streaming dataflows](../../../ingestion/quality/monitor-data-flows.md).
-
-## Delete a dataflow
-
-You can delete dataflows that were incorrectly created or are no longer necessary by accessing the dataflows screen. Locate the dataflow you wish to delete using the sorting funnel icon and select the dataflow to open the **[!UICONTROL Properties]** panel.
-
-To delete a dataflow, select **[!UICONTROL Delete]** from the properties on the top right.
-
-![delete-dataflows](../../images/tutorials/monitor/dataflows-sort-delete.png)
-
-A final confirmation message appears. Select **[!UICONTROL Delete]** to confirm.
-
-![confirm-delete](../../images/tutorials/monitor/confirm-delete.png)
-
-After a few moments, a green confirmation box appears on the bottom of the screen to confirm a successful deletion.
-
-![delete-successful](../../images/tutorials/monitor/deletion-confirmed.png)
-
-Alternatively, you can delete a dataflow from *[!UICONTROL Accounts]* screen. Locate the account you wish to access using the sorting funnel icon and select the account from the list.
-
-![accounts-select](../../images/tutorials/monitor/accounts-sort.png)
-
-The *[!UICONTROL Accounts]* page appears. Select the dataflow you intend to delete and then select **[!UICONTROL Delete]** from the properties panel to complete the process.
-
-![accounts-delete](../../images/tutorials/monitor/accounts-delete.png)
-
-Follow the confirmation steps outlined above to complete the process.
 
 ## Next steps
 
