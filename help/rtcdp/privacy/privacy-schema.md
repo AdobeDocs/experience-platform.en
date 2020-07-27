@@ -147,7 +147,7 @@ The sections below cover the use of each of the major fields provided by the Pri
 | `xdm:optOutType` | The type of opt-out. See the [appendix](#accepted-values-for-xdmoptOutType) for accepted values and definitions. |
 | `xdm:optOutValue` | The selected preference the customer has chosen for this particular opt-out type. See the [appendix](#accepted-values-for-xdmchoice-and-xdmoptOutValue) for accepted values and definitions. |
 | `xdm:timestamp` | An ISO 8601 timestamp of when the opt-out preference changed, if applicable. |
-| `xdm:basisOfProcessing` | In some circumstances, customers do not have be prompted to provide consent for data processing. `xdm:basisOfProcessing` must be included in the opt-out object in these cases, indicating the reason why a consent prompt was not provided. See the [appendix](#accepted-values-for-xdmbasisOfProcessing) for accepted values and definitions.  |
+| `xdm:basisOfProcessing` | Indicates the privacy-related basis by which the data should be collected and processed. By default, this field is set to `consent`, which indicates that the data should only be processed if the user has provided consent (as reflected in `xdm:optOutType`).<br><br>In some circumstances, customers do not have be prompted to provide consent for data processing. `xdm:basisOfProcessing` must be included in the opt-out object in these cases, indicating the reason why a consent prompt was not provided. See the [appendix](#accepted-values-for-xdmbasisOfProcessing) for accepted values and definitions.  |
 
 ### xdm:personalizationPreferences
 
@@ -188,7 +188,7 @@ The sections below cover the use of each of the major fields provided by the Pri
 | `xdm:choice` | The customer-provided consent preference for personalization in general, or a specific personalization type, depending on whether it is provided under `xdm:default` or `xdm:details`, respectively. See the [appendix](#accepted-values-for-xdmchoice-and-xdmoptOutValue) for accepted values and definitions. |
 | `xdm:type` | Objects in the `xdm:details` array must provide this field to indicate the specific personalization use the customer is providing consent data for. See the [appendix](#accepted-values-for-xdmtype) for accepted values and definitions. |
 | `xdm:timestamp` | An ISO 8601 timestamp of when the opt-out preference changed, if applicable. |
-| `xdm:basisOfProcessing` | In some circumstances, customers do not have be prompted to provide consent for personalization. `xdm:basisOfProcessing` must be included in the opt-out object in these cases, indicating the reason why a consent prompt was not provided. See the [appendix](#accepted-values-for-xdmbasisOfProcessing) for accepted values and definitions.  |
+| `xdm:basisOfProcessing` | Indicates the privacy-related basis by which the data should be collected and processed. By default, this field is set to `consent`, which indicates that the data should only be processed if the user has provided consent (as reflected in `xdm:choice`).<br><br>In some circumstances, customers do not have be prompted to provide consent for personalization. `xdm:basisOfProcessing` must be included in the opt-out object in these cases, indicating the reason why a consent prompt was not provided. See the [appendix](#accepted-values-for-xdmbasisOfProcessing) for accepted values and definitions.  |
 
 
 ### xdm:marketingPreferences
@@ -273,11 +273,11 @@ The following table outlines the accepted values for `xdm:basisOfProcessing`:
 
 | Value | Description |
 | --- | --- |
-| `compliance` | The collection of data for the specified purpose is required to meet legal obligations. |
-| `consent` | The collection of data for the specified purpose is allowed, given that the user has provided explicit permission. This is the default value of `xdm:basisOfProcessing`. |
-| `contract` | The collection of data for the specified purpose is required to meet contractual obligations. |
-| `legitimate_interest` | The business need to collect and process this data for the specified purpose outweighs the potential harm it poses to the individual. A legitimate interest assessment must be performed by your business in order for the use of this value to be valid. |
-| `public_interest` | The collection of data for the specified purpose is part of a government-based research effort. |
+| `consent` **(Default)** | The collection of data for the specified purpose is allowed, given that the individual has provided explicit permission. This is the default value of `xdm:basisOfProcessing` if no other value is provided. <br><br>**IMPORTANT**: The values for `xdm:choice` and `xdm:optOutValue` are only honored when `xdm:basisOfProcessing` is set to `consent`. If any of the other values outlined in this table are used for `xdm:basisOfProcessing` instead, the individual's consent choices are ignored. |
+| `compliance` | The collection of data for the specified purpose is required to meet the legal obligations of the business. |
+| `contract` | The collection of data for the specified purpose is required to meet contractual obligations with the individual. |
+| `legitimate_interest` | The legitimate business interest to collect and process this data for the specified purpose outweighs the potential harm it poses to the individual. |
+| `public_interest` | The collection of data for the specified purpose is required to carry out a task in the public interest or in the exercise of official authority. |
 | `vital_interest` | The collection of data for the specified purpose is required to protect the vital interests of the individual. |
 
 ### Accepted values for xdm:choice and xdm:optOutValue
