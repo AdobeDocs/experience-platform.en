@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;catalog;api;replace an object
 solution: Experience Platform
 title: Replace an object
 topic: developer guide
+description: You can overwrite the contents of a Catalog object using a PUT request, wherein the entire resource is replaced with the request payload.
 ---
 
 # Replace an object

@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data usage labels;catalog service
 solution: Experience Platform
 title: Data usage labels
 topic: developer guide
+description: The Catalog Service API provides endpoints to manage data usage labels for datasets.
 ---
 
 # Data usage labels
