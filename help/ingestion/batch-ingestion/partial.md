@@ -122,7 +122,11 @@ The *[!UICONTROL Error threshold]* allows you to set the percentage of acceptabl
 
 ## Downloading file-level metadata {#download-metadata}
 
+Adobe Experience Platform allows users to download the metadata of the input files. The metadata will be retained within [!DNL Platform] for up to 30 days.
+
 ### List input files {#list-files}
+
+The following request will allow you to view a list of all the files provided in a finalized batch.
 
 **Request**
 
@@ -168,6 +172,8 @@ A successful response will return HTTP status 200(?) with JSON objects containin
 ```
 
 ### Retrieve input file metadata {#retrieve-metadata}
+
+Once you have retrieved a list of all the different input files, you can retrieve the metadata of the individual file by using the following endpoint.
 
 **Request**
 
@@ -308,7 +314,7 @@ If the batch has one or more errors and has error diagnostics enabled, the statu
         "version": "1.0.5",
         "errors": [
            {
-             "code": "INGEST-TBD2-400",
+             "code": "INGEST-1212-400",
              "description": "Encountered 5 errors in the data. Successfully ingested 514 rows. Please review the associated diagnostic files for more details."
            },
            {
@@ -329,6 +335,18 @@ If the batch has one or more errors and has error diagnostics enabled, the statu
 | -------- | ----------- |
 | `metrics.failedRecordCount` | The number of rows that were not able to be processed due to parsing, conversion, or validation. This value can be derived by subtracting the `inputRecordCount` from the `outputRecordCount`. This value will be generated on all batches regardless if `errorDiagnostics` is enabled. |
 | `errors.recordCount` | The number of rows that failed for the specified error code. This value is **only** generated if `errorDiagnostics` is enabled. |
+
+>[!NOTE]
+>
+>If error diagnostics are not available, the following error message will appear:
+> ```json
+> {
+>     "errors": [{
+>         "code": "INGEST-1211-400",
+>         "description": "Encountered errors while parsing, converting or otherwise validating the data. Please resend the data with error diagnostics enabled to collect additional information on failure types"
+>     }]
+> }
+> ```
 
 ## Next steps {#next-steps}
 
@@ -380,10 +398,10 @@ A successful response returns HTTP status 200 with details of the unparsable row
 
 ```json
 {
-    "_corrupt_record":"{missingQuotes:"v1"}",
+    "_corrupt_record": "{missingQuotes:"v1"}",
     "_errors": [{
-         "code":"1401",
-         "message":"Row is corrupted and cannot be read, please fix and resend."
+         "code": "1401",
+         "message": "Row is corrupted and cannot be read, please fix and resend."
     }],
     "_filename": "a1.json"
 }
