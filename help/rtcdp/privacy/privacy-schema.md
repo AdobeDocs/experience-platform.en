@@ -261,11 +261,11 @@ The following table outlines the accepted values for `xdm:optOutType`:
 
 | Value | Description |
 | --- | --- |
-| `general_opt_out` | The data cannot be used for any purpose. This typically blocks data collection, except when the basis of processing is not "consent". |
+| `general_opt_out` | The data cannot be used for any purpose. This typically blocks data collection, except when the basis of processing is not "consent".<br><br>When using this opt-out type, the accepted values `in` and `out` obtain the following contextual meaning:<ul><li><code>in</code>: The user <strong>has provided consent</strong> for their data to be used for general processing.</li><li><code>out</code>: The user <strong>does not consent</strong> to their data being used for general processing.</li></ul>See the table on [accepted values for xdm:optOutValue](#accepted-values-for-xdmchoice-and-xdmoptoutvalue) for more information.|
 | `anonymous_analysis` | The data cannot be used for generic web metrics that do not require any type of used ID, such as the number of times a particular page was viewed. |
 | `device_linking` | The data from one device used by a visitor cannot be combined with data from another device used by that same visitor. Devices are linked using techniques such as a common username or email address, often via the Adobe device co-op or a private device graph. |
 | `pseudonymous_analysis` | The data cannot be used for web metrics provided by Adobe Analytics, which requires pseudonymous IDs to identify paths users take through a website (such as a fallout report), to establish sessions, and for attribution purposes. |
-| `sales_sharing_opt_out` | The data cannot be used for sales purposes, or sharing with third parties. |
+| `sales_sharing_opt_out` | The data cannot be used for sales purposes, or sharing with third parties.<br><br>When using this opt-out type, the accepted values `in` and `out` obtain the following contextual meaning:<ul><li><code>in</code>: The user <strong>has provided consent</strong> for their data to be used for sales and sharing purposes.</li><li><code>out</code>: The user <strong>does not consent</strong> to their data being used for sales and sharing purposes.</li></ul>See the table on [accepted values for xdm:optOutValue](#accepted-values-for-xdmchoice-and-xdmoptoutvalue) for more information. |
 
 ### Accepted values for xdm:basisOfProcessing
 
