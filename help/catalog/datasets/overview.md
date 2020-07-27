@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;datasets;datasets overview;ingest datasets;catalog
 solution: Experience Platform
 title: Datasets overview
 topic: datasets
+description: All data that is successfully ingested into Adobe Experience Platform is persisted within the Data Lake as datasets. A dataset is a storage and management construct for a collection of data, typically a table, that contains a schema (columns) and fields (rows). This document provides a high-level overview of datasets in Experience Platform.
 ---
 
 # Datasets overview

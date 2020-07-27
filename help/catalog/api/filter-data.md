@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;filter data;catalog service;api;query
 solution: Experience Platform
 title: Filter Catalog data using query parameters
 topic: developer guide
+description: This document outlines the most common methods for filtering Catalog objects in the API. It is recommended that you reference this document while reading the Catalog developer guide to learn more about how to interact with the Catalog API.
 ---
 
 # Filter [!DNL Catalog] data using query parameters

@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;delete an object;catalog service;api
 solution: Experience Platform
 title: Delete an object
 topic: developer guide
+description: You can delete a Catalog object by providing its ID in the path of a DELETE request.
 ---
 
 # Delete an object

@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;datasets;datasets overview;ingest datasets;catalog;user guide
 solution: Experience Platform
 title: Datasets user guide
 topic: datasets
+description: This datasets user guide provides instructions on performing common actions when working with datasets within Adobe Experience Platform user interface.
 ---
 
 # Datasets user guide

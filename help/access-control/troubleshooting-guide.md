@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;troubleshooting;access control
 solution: Experience Platform
 title: Access control troubleshooting guide
 topic: troubleshooting guide
+description: This document provides answers to frequently asked questions about access control in Adobe Experience Platform.
 ---
 
 # Access control troubleshooting guide

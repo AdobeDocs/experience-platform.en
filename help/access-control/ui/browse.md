@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Browse the access control workspace
 topic: user guide
+description: This document covers the necessary steps needed to browse the access control workspace. In order to configure access control for Experience Platform through the Adobe Admin Console, you must be an administrator for an IMS Organization that has a subscription to Experience Platform.
 ---
 
 # Browse the access control workspace

@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;product profile;manage permissions
 solution: Experience Platform
 title: Manage permissions for a product profile
 topic: user guide
+description: Access control in Adobe Experience Platform allows you to manage roles and permissions for various Platform capabilities by using the Adobe Admin Console. This document serves as a guide for how to manage permissions for a product profile for Platform.
 ---
 
 # Manage permissions for a product profile
