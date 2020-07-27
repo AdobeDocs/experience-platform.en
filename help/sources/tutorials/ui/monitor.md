@@ -80,7 +80,6 @@ The *[!UICONTROL Flow run overview]* screen displays metadata information regard
 | Flow run errors | Flow run errors displays information on errors that occur during the flow run. |
 | Files | Files displays information on the files being ingested. |
 
-The *[Source errors]* tab contains errors and descriptions on any errors that occur at the source point during ingestion.
 
 Select **[!UICONTROL Flow run errors]** to see information on errors that occur during the flow run.
 
