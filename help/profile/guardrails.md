@@ -5,30 +5,30 @@ title: Experience Platform guidelines
 topic: guide
 ---
 
-# Platform guardrails for Real-time Customer Profile
+# [!DNL Platform] guardrails for [!DNL Real-time Customer Profile]
 
-Real-time Customer Profile provides centrally accessible individual profiles that allow you to target your customers with personalized cross-channel experiences based on behavioral insights and customer attributes. In order to achieve this targeting, Profile and the segmentation engine within Platform use a highly denormalized hybrid data model. The hybrid data model offers a new approach to developing customer profiles making it important for the data to be modeled correctly. While the Profile Store maintaining profile data is not a relational store, Profile permits integration with small dimension entities in order to create segments in a simplified and intuitive manner. This integration is known as multi-entity segmentation. 
+[!DNL Real-time Customer Profile] provides individual profiles that enable you to deliver personalized cross-channel experiences based on behavioral insights and customer attributes. In order to achieve this targeting, [!DNL Profile] and the segmentation engine within Adobe Experience Platform use a highly denormalized hybrid data model which offers a new approach to developing customer profiles. Use of this hybrid data model makes it extremely important that the data being collected is modeled correctly. While the [!DNL Profile] data store maintaining profile data is not a relational store, [!DNL Profile] permits integration with small dimension entities in order to create segments in a simplified and intuitive manner. This integration is known as multi-entity segmentation. 
 
-Adobe Experience Platform provides a series of guardrails to help you avoid creating data models which Real-time Customer Profile cannot support. This document outlines the best practices and constraints when using dimension entities, specifically in batch segmentation. 
+Adobe Experience Platform provides a series of guardrails to help you avoid creating data models which [!DNL Real-time Customer Profile] cannot support. This document outlines the best practices and constraints when using dimension entities, specifically in batch segmentation. 
 
 ## Getting started
 
-It is recommended that you read the following Experience Platform services documentation before attempting to build data models for use in Real-time Customer Profile. Working with data models, and the guardrails outlined in this document, require an understanding of the various Experience Platform services involved with managing Real-time Customer Profile entities: 
+It is recommended that you read the following Experience Platform services documentation before attempting to build data models for use in [!DNL Real-time Customer Profile]. Working with data models, and the guardrails outlined in this document, require an understanding of the various Experience Platform services involved with managing [!DNL Real-time Customer Profile] entities: 
 
-* [Real-time Customer Profile](home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [Adobe Experience Platform Identity Service](../identity-service/home.md): Supports the creation of a "single view of the customer" by ridging identities from disparate data sources as they are ingested into Platform.
-* [Experience Data Model (XDM)](../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
+* [[!DNL Real-time Customer Profile]](home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [Adobe Experience Platform Identity Service](../identity-service/home.md): Supports the creation of a "single view of the customer" by bridging identities from disparate data sources as they are ingested into [!DNL Platform].
+* [[!DNL Experience Data Model (XDM)]](../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
   * [Basics of schema composition](../xdm/schema/composition.md): An introduction to schemas and data modeling within Experience Platform.
-* [Segmentation Service](../segmentation/home.md): The segmentation engine within Platform used to create audience segments from your customer profiles based on customer behaviors and attributes.
+* [Adobe Experience Platform Segmentation Service](../segmentation/home.md): The segmentation engine within [!DNL Platform] used to create audience segments from your customer profiles based on customer behaviors and attributes.
   * [Multi-entity segmentation](../segmentation/multi-entity-segmentation.md): A guide to creating segments that integrate dimension entities with profile data.
 
 ## Entity types
 
-The Profile Store data model consists of two core entity types:
+The [!DNL Profile] store data model consists of two core entity types:
 
-* **Primary entity:** A primary entity, or Profile entity, merges data together to form a "single source of truth" for an individual. This unified data is represented using what is known as a "union view". A union view aggregates the fields of all schemas that implement the same class into a single union schema. The union schema for Real-time Customer Profile is a denormalized hybrid data model that acts as a container for all profile attributes and behavioral events. 
+* **Primary entity:** A primary entity, or profile entity, merges data together to form a "single source of truth" for an individual. This unified data is represented using what is known as a "union view". A union view aggregates the fields of all schemas that implement the same class into a single union schema. The union schema for [!DNL Real-time Customer Profile] is a denormalized hybrid data model that acts as a container for all profile attributes and behavioral events. 
 
-  Time-independent attributes, also known as "record data" are modeled using XDM Individual Profile, while time-series data, also known as "event data" is modeled using XDM ExperienceEvent. As record and time-series data is ingested and managed by Catalog, it triggers Real-time Customer Profile to begin ingesting data that has been enabled for its use. The more interactions and details that are ingested, the more robust individual profiles become.
+  Time-independent attributes, also known as "record data" are modeled using [!DNL XDM Individual Profile], while time-series data, also known as "event data" is modeled using [!DNL XDM ExperienceEvent]. As record and time-series data is ingested in Adobe Experience Platform, it triggers [!DNL Real-time Customer Profile] to begin ingesting data that has been enabled for its use. The more interactions and details that are ingested, the more robust individual profiles become.
 
   ![](images/guardrails/profile-entity.png) 
 
@@ -46,27 +46,31 @@ When defining your data model, it is recommended to stay within the provided gua
 
 ## Data model guardrails
 
-Adhering to the following guardrails is recommended when creating a data model for use with Real-time Customer Profile.
+Adhering to the following guardrails is recommended when creating a data model for use with [!DNL Real-time Customer Profile].
 
-### Primary entity Guardrails
+### Primary entity guardrails
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-| Number of datasets permitted to contribute to the profile union schema | 20 |  | **A maximum of 20 Profile-enabled datasets are permitted.** To enable another dataset for Profile, an existing dataset must first be removed or disabled.|
+| Number of datasets permitted to contribute to the [!DNL Profile] union schema | 20 |  | **A maximum of 20 [!DNL Profile]-enabled datasets are permitted.** To enable another dataset for [!DNL Profile], an existing dataset must first be removed or disabled.|
 | Number of multi-entity relationships permitted| 5 |  | **A maximum of 5 multi-entity relationships can be defined between primary entities and dimension entities.** Additional relationship mappings should not be made until an existing relationship is removed or disabled. | 
 | Maximum JSON depth for ID field used in multi-entity relationship| 4 | | **The maximum JSON depth for an ID field used in multi-entity relationships is 4.** This means that in a highly-nested schema, the relationship selector is disabled for fields that are nested more than 4 levels deep. |
 
-### Dimension entity Guardrails
+### Dimension entity guardrails
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-| No time-series data permitted in profile for non-people entities| 0 | | **Time-series data is not permitted in profile for non-people entities.** If a time-series dataset is associated with a non-people ID, the dataset cannot be enabled for Profile. |
-| No nested relationships permitted | 0 | | **You cannot create a relationship between two non-people schemas.** The ability to create relationships is not supported for any schemas which are not part of the Profile union schema.|
+| No time-series data permitted in profile for non-people entities| 0 | | **Time-series data is not permitted in profile for non-people entities.** If a time-series dataset is associated with a non-people ID, the dataset cannot be enabled for [!DNL Profile]. |
+| No nested relationships permitted | 0 | | **You cannot create a relationship between two non-people schemas.** The ability to create relationships is not supported for any schemas which are not part of the [!DNL Profile] union schema.|
 | Maximum JSON depth for primary ID field | 4 | | **The maximum JSON depth for the primary ID field is 4.** This means that in a highly-nested schema, you cannot select a field as a primary ID if it is nested more than 4 levels deep. A field that is on the 4th nested level can be used as a primary ID.|
 
 ## Data size guardrails
 
-The following guardrails refer to data size and are recommended to ensure data can be ingested, stored, and queried as intended. Data size will be measured as uncompressed data in JSON at time of ingestion.
+The following guardrails refer to data size and are recommended to ensure data can be ingested, stored, and queried as intended. 
+
+>[!NOTE]
+>
+>Data size will be measured as uncompressed data in JSON at time of ingestion.
 
 ### Primary entity guardrails
 
