@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance;getting started
 solution: Experience Platform
 title: DULE Policy Service API developer guide
 topic: developer guide
+description: Data Usage Labeling and Enforcement (DULE) is the core mechanism of Adobe Experience Platform Data Governance. The DULE Policy Service provides a RESTful API that allows you to create and manage data usage policies to determine what marketing actions can be taken against data that has been labeled with certain data usage labels.
 ---
 
 # DULE [!DNL Policy Service] API developer guide

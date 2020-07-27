@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data governance;data usage label;policy service;data usage labels user guide
 solution: Experience Platform
 title: Data usage labels user guide
 topic: labels
+description: This user guide covers steps for working with data usage labels (also known as DULE labels) within the Adobe Experience Platform user interface.
 ---
 
 # Data usage labels user guide

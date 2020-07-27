@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data governance;data usage policy
 solution: Experience Platform
 title: Data usage policies overview
 topic: policies
+description: In order for data usage labels to effectively support data compliance, data usage policies must be implemented. This document provides a high-level overview of data usage policies, and provides links to further documentation for working with policies in the UI or API.
 ---
 
 # Data usage policies overview
