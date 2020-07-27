@@ -7,7 +7,7 @@ seo-description: Learn how to render personalized content with Experience Platfo
 
 # Overview of Personalization Options
 
-The Adobe Experience Platform Web SDK supports querying the personalization solutions at Adobe, including Adobe Target. There are two modes for personalization: retrieving content that can be rendered automatically and content that the developer must render. The SDK also provides facilities to [manage flicker](../../edge/solution-specific/target/flicker-management.md).
+The Adobe Experience Platform [!DNL Web SDK] supports querying the personalization solutions at Adobe, including Adobe Target. There are two modes for personalization: retrieving content that can be rendered automatically and content that the developer must render. The SDK also provides facilities to [manage flicker](../../edge/solution-specific/target/flicker-management.md).
 
 ## Automatically Rendering Content
 
@@ -88,7 +88,7 @@ This will return a list of decisions as a JSON object for each decisions.
 
 >[!TIP]
 >
-> If you use Target scopes become mBoxes on the server, only they are all requests at once instead of individually. The global mbox is always sent.
+> If you use [!DNL Target] scopes become mBoxes on the server, only they are all requests at once instead of individually. The global mbox is always sent.
 
 ### Retrieve Automatic Content
 

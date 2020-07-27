@@ -29,7 +29,7 @@ See the [streaming ingestion overview](./streaming-ingestion/overview.md) for mo
 
 [!DNL Experience Platform] allows you to set up source connections to various data providers. These connections enable you to authenticate to your external data sources, set times for ingestion runs, and manage ingestion throughput. 
 
-Source connections can be configured to gather data from other Adobe applications (such as Adobe Analytics and Adobe Audience Manager), third-party cloud storage sources (such as [!DNL Azure Blob], [!DNL Amazon] S3, FTP servers, and SFTP servers), and third-party CRM systems (such as Microsoft Dynamics and Salesforce).
+Source connections can be configured to gather data from other Adobe applications (such as Adobe Analytics and Adobe Audience Manager), third-party cloud storage sources (such as [!DNL Azure Blob], [!DNL Amazon] S3, FTP servers, and SFTP servers), and third-party CRM systems (such as [!DNL Microsoft Dynamics] and [!DNL Salesforce]).
 
 See the [Sources overview](../sources/home.md) for more information.
 

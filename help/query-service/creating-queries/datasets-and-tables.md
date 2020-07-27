@@ -23,7 +23,7 @@ Open the PSQL command line and use the connection details from here: [https://pl
 
 ![](../images/clients/psql/connect-bi.png)
 
-To view the available tables on Platform with SQL, you can use either `\d` or `SHOW TABLES;`.
+To view the available tables on [!DNL Platform] with SQL, you can use either `\d` or `SHOW TABLES;`.
 
 
 `\d` displays the standard PostgreSQL view
@@ -37,7 +37,7 @@ To view the available tables on Platform with SQL, you can use either `\d` or `S
 (2 rows)
 ```
 
-`SHOW TABLES;` is a custom command that gives a more detailed view and presents the table, as well as the dataset name found in the Platform UI.
+`SHOW TABLES;` is a custom command that gives a more detailed view and presents the table, as well as the dataset name found in the [!DNL Platform] UI.
 
 ```
        name      |        dataSetId         |     dataSet    | description | resolved 

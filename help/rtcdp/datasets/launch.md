@@ -11,32 +11,32 @@ This tutorial explains how to implement your website tags to send data to Adobe 
 
 ## Prerequisites
 
-* The necessary schema and dataset are created in Platform.
-* The necessary configuration has been deployed in Experience Edge and has the matching Configuration ID and Edge domain.
-* The company CMS has already been configured to deliver a JavaScript object on each page with the data you need to send to Platform.
+* The necessary schema and dataset are created in [!DNL Platform].
+* The necessary configuration has been deployed in [!DNL Experience Edge] and has the matching Configuration ID and [!DNL Edge] domain.
+* The company CMS has already been configured to deliver a JavaScript object on each page with the data you need to send to [!DNL Platform].
 
 ## Steps
 
 This tutorial contains the following steps:
 
-1. Install the Adobe Experience Platform Web SDK extension.
-1. Create a rule to tell Launch what data to send.
+1. Install the Adobe Experience Platform [!DNL Web SDK] extension.
+1. Create a rule to tell [!DNL Launch] what data to send.
 1. Bundle the extension and rule in a library.
 
-## Install the Adobe Experience Platform Web SDK extension
+## Install the Adobe Experience Platform [!DNL Web SDK] extension
 
-First, install the Adobe Experience Platform Web SDK extension.
+First, install the Adobe Experience Platform [!DNL Web SDK] extension.
 
-1. In Launch, open the **[!UICONTROL Extensions]** tab.
+1. In [!DNL Launch], open the **[!UICONTROL Extensions]** tab.
 
     ![image](assets/launch-overview.png)
 
-1. Select the Adobe Experience Platform Web SDK extension from the Launch Extension Catalog
+1. Select the Adobe Experience Platform Web SDK extension from the [!DNL Launch] Extension [!DNL Catalog]
     The configuration screen opens.
 
     ![image](assets/launch-extension-install.png)
 
-    For more information, see [Extensions](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html) in the Launch documentation.
+    For more information, see [Extensions](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html) in the [!DNL Launch] documentation.
 
 1. Configure the extension.
 
@@ -47,17 +47,17 @@ First, install the Adobe Experience Platform Web SDK extension.
 
 1. Click **[!UICONTROL Save]** and continue to the next step.
 
-## Create a rule to tell Launch what data to send
+## Create a rule to tell [!DNL Launch] what data to send
 
-Next, create a rule to let Launch know what data you want to send to Adobe Experience Platform and when you want to send it.
+Next, create a rule to let [!DNL Launch] know what data you want to send to Adobe Experience Platform and when you want to send it.
 
-1. Under the **[!UICONTROL Rules]** tab, configure an event that will trigger on each new page of the website when the Launch library loads.
+1. Under the **[!UICONTROL Rules]** tab, configure an event that will trigger on each new page of the website when the [!DNL Launch] library loads.
 
     ![image](assets/launch-make-a-rule.png)
 
 1. Add an action.
 
-    To configure the action, tell Launch where to find your data layer. The data layer is a JavaScript object that exists on the page, which is delivered from the same CMS that renders the webpage. Provide the JavaScript path to the data object.
+    To configure the action, tell [!DNL Launch] where to find your data layer. The data layer is a JavaScript object that exists on the page, which is delivered from the same CMS that renders the webpage. Provide the JavaScript path to the data object.
 
     ![image](assets/launch-add-aep-action.png)
 
@@ -65,7 +65,7 @@ Next, create a rule to let Launch know what data you want to send to Adobe Exper
     
 1. Click **[!UICONTROL Keep Changes]**.
 
-For more information, see [Rules](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/rules.html) in the Launch documentation.
+For more information, see [Rules](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/rules.html) in the [!DNL Launch] documentation.
 
 ## Bundle the extension and rule in a library
 
@@ -77,4 +77,4 @@ After you've completed your testing, promote the library through the workflow so
 
 ![image](assets/launch-promote-library.png)
 
-For more information, see [Libraries](https://docs.adobe.com/content/help/en/launch/using/reference/publish/libraries.html) in the Launch documentation.
+For more information, see [Libraries](https://docs.adobe.com/content/help/en/launch/using/reference/publish/libraries.html) in the [!DNL Launch] documentation.

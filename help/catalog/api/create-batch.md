@@ -7,7 +7,7 @@ topic: developer guide
 
 # Create a batch
 
-In order for a dataset to ingest data, it must have a batch associated with it. Using the `id` value of an existing dataset, you can create a batch by making a POST request to the `/batches` endpoint in the Catalog API.
+In order for a dataset to ingest data, it must have a batch associated with it. Using the `id` value of an existing dataset, you can create a batch by making a POST request to the `/batches` endpoint in the [!DNL Catalog] API.
 
 **API format**
 

@@ -5,20 +5,20 @@ title: Subscribe to Privacy Events
 topic: privacy events
 ---
 
-# Subscribe to Privacy Events
+# Subscribe to [!DNL Privacy Events]
 
-Privacy Events are messages provided by Adobe Experience Platform Privacy Service, which leverage Adobe I/O Events sent to a configured webhook to facilitate efficient job request automation. They reduce or eliminate the need to poll the Privacy Service API in order to check if a job is complete or if a certain milestone within a workflow has been reached.
+[!DNL Privacy Events] are messages provided by Adobe Experience Platform [!DNL Privacy Service], which leverage Adobe I/O Events sent to a configured webhook to facilitate efficient job request automation. They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached.
 
 There are currently four types of notifications related to the privacy job request lifecycle:
 
 Type | Description
 --- | ---
-Job Complete | All Experience Cloud solutions have reported back and the overall or global status of the job has been marked as complete.
+Job Complete | All [!DNL Experience Cloud] solutions have reported back and the overall or global status of the job has been marked as complete.
 Job Error | One or more solutions have reported an error while processing the request.
 Product Complete | One of the solutions associated with this job has completed its work.
 Product Error | One of the solutions reported an error while processing the request.
 
-This document provides steps for setting up an integration for Privacy Service notifications within Adobe I/O. For a high-level overview of Privacy Service and its features, see the [Privacy Service overview](home.md).
+This document provides steps for setting up an integration for [!DNL Privacy Service] notifications within Adobe I/O. For a high-level overview of [!DNL Privacy Service] and its features, see the [Privacy Service overview](home.md).
 
 ## Getting started
 
@@ -103,11 +103,11 @@ Further down on the same screen, you are given two options for configuring how t
 
 ![](./images/privacy-events/webhook-details.png)
 
-The details page for your project reappears, with Privacy Events appearing under _[!UICONTROL Events]_ in the left navigation.
+The details page for your project reappears, with [!DNL Privacy Events] appearing under _[!UICONTROL Events]_ in the left navigation.
 
 ## View event data
 
-Once you have registered Privacy Events with your project and privacy jobs have been processed, you can view any received notifications for that registration. From the **[!UICONTROL Projects]** tab in Developer Console, select your project from the list to open the _Product overview_ page. From here, select **[!UICONTROL Privacy Events]** from the left navigation.
+Once you have registered [!DNL Privacy Events] with your project and privacy jobs have been processed, you can view any received notifications for that registration. From the **[!UICONTROL Projects]** tab in Developer Console, select your project from the list to open the _Product overview_ page. From here, select **[!UICONTROL Privacy Events]** from the left navigation.
 
 ![](./images/privacy-events/events-left-nav.png)
 

@@ -28,9 +28,9 @@ When data usage happens in your organization's service, relevant marketing actio
 
 >[!NOTE]
 >
->If you are using Real-time Customer Data Platform, you can set up marketing use cases on destinations to automate policy enforcement. See the document on [Data Governance in Real-time CDP](../../rtcdp/privacy/data-governance-overview.md) for more information.
+>If you are using [!DNL Real-time Customer Data Platform], you can set up marketing use cases on destinations to automate policy enforcement. See the document on [Data Governance in Real-time CDP](../../rtcdp/privacy/data-governance-overview.md) for more information.
 
-See the appendix to this document for a list of [available Adobe-defined marketing actions](#core-actions). You can also define your own custom marketing actions using the DULE Policy Service API or the Experience Platform user interface. More information on working with marketing actions and policies is provided in the next section.
+See the appendix to this document for a list of [available Adobe-defined marketing actions](#core-actions). You can also define your own custom marketing actions using the DULE [!DNL Policy Service] API or the [!DNL Experience Platform ]user interface. More information on working with marketing actions and policies is provided in the next section.
 
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
@@ -42,15 +42,15 @@ For a reference on how specific Data Export Controls map to marketing actions in
 
 ## Managing data usage policies {#manage}
 
-Once data usage labels have been applied, data stewards can use the DULE Policy Service API or the Experience Platform UI to manage and evaluate policies related to marketing actions being taken on data containing data usage labels. You can create and update policies, determine the status of a policy, and work with marketing actions to evaluate whether a specific action violates a data usage policy.
+Once data usage labels have been applied, data stewards can use the DULE [!DNL Policy Service] API or the [!DNL Experience Platform] UI to manage and evaluate policies related to marketing actions being taken on data containing data usage labels. You can create and update policies, determine the status of a policy, and work with marketing actions to evaluate whether a specific action violates a data usage policy.
 
 >[!IMPORTANT]
 >
 >All data usage policies (including core policies provided by Adobe) are disabled by default. In order for an individual policy to be considered for enforcement, you must manually enable that policy through the API or UI.
 
-For step-by-step instructions on working with marketing actions and data usage policies in the API, see the tutorial on [creating and evaluating data usage policies](create.md). For more information the key operations provided by the Policy Service API, see the [Policy Service developer guide](../api/getting-started.md).
+For step-by-step instructions on working with marketing actions and data usage policies in the API, see the tutorial on [creating and evaluating data usage policies](create.md). For more information the key operations provided by the [!DNL Policy Service] API, see the [Policy Service developer guide](../api/getting-started.md).
 
-For information on how to work with marketing actions and policies in the Platform UI, see the [data usage policy user guide](./user-guide.md).
+For information on how to work with marketing actions and policies in the [!DNL Platform] UI, see the [data usage policy user guide](./user-guide.md).
 
 ## Next steps
 
