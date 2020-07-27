@@ -19,8 +19,9 @@ user-guide-title: Adobe Experience Platform Data Governance Help
 * Policy enforcement {#enforcement}
   * [Policy enforcement overview](enforcement/overview.md)
   * [Enforce data usage policies using the Policy Service API](enforcement/api-enforcement.md)
-* DULE Policy Service API {#api}
+* Policy Service API developer guide {#api}
   * [Getting started](api/getting-started.md)
+  * [Labels](api/labels.md)
   * [Policies](api/policies.md)
   * [Marketing actions](api/marketing-actions.md)
   * [Evaluation](api/evaluation.md)
