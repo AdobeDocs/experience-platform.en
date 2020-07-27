@@ -9,7 +9,7 @@ seo-description:
 
 ## Overview {#overview}
 
-Load Google's `gtag.js` into your site to send event data to Google Analytics, Google Ads, and Google Marketing Platform. This extension only adds the gtag code to your site. You will need to use other Google extensions to add events and actions that will use gtag.
+Load Google's `gtag.js` into your site to send event data to [!DNL Google Analytics], Google Ads, and [!DNL Google Marketing Platform]. This extension only adds the gtag code to your site. You will need to use other Google extensions to add events and actions that will use gtag.
 
 Google gtag is an advertising extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102805.google-gtag.html).
 
@@ -19,7 +19,7 @@ This destination is an Experience Platform Launch extension. For more informatio
 
 ## Prerequisites {#prerequisites}
 
-This extension is available in the Destinations catalog for all customers who have purchased Adobe Real-time CDP.
+This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Adobe Real-time CDP.
 
 To use this extension, you need access to Experience Platform Launch. Experience Platform Launch is offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to Launch and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 

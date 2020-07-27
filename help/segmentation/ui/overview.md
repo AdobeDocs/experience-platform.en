@@ -5,7 +5,7 @@ title: Segment Builder UI guide
 topic: ui guide
 ---
 
-# [!UICONTROL Segment Builder] user guide
+# [!DNL Segment Builder] user guide
 
 [!DNL Adobe Experience Platform Segmentation Service] provides a RESTful API and user interface for creating segment definitions from [!DNL Real-time Customer Profile] data.
 
@@ -13,9 +13,9 @@ topic: ui guide
 
 Working with segment definitions requires an understanding of the various [!DNL Experience Platform] services involved with segmentation. Before reading this user guide, please review the documentation for the following services:
 
-- [!DNL Segmentation Service](../home.md): Segmentation Service allows you divide data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into smaller groups that share similar traits and will respond similarly to marketing strategies.
+- [!DNL Segmentation Service](../home.md): [!DNL Segmentation Service] allows you divide data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into smaller groups that share similar traits and will respond similarly to marketing strategies.
 - [!DNL Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-- [!DNL Identity Service](../../identity-service/home.md): Enables [!DNL Real-time Customer Profile] by bridging identities from disparate data sources being ingested into Platform.
+- [!DNL Identity Service](../../identity-service/home.md): Enables [!DNL Real-time Customer Profile] by bridging identities from disparate data sources being ingested into [!DNL Platform].
 - [!DNL Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 
 It is also important to know two key terms that are used through this document and understand the difference between them:
@@ -34,9 +34,9 @@ Clicking **[!UICONTROL Create segment]** in the top-right corner opens the Segme
 
 ![](../images/segment-builder/segment-browse.png)
 
-## [!UICONTROL Segment Builder] workspace 
+## [!DNL Segment Builder] workspace 
 
-[!UICONTROL Segment Builder] provides a rich workspace that allows you to interact with [!DNL Profile] data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. 
+[!DNL Segment Builder] provides a rich workspace that allows you to interact with [!DNL Profile] data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. 
 
 ![](../images/segment-builder/segment-builder.png)
 
@@ -44,7 +44,7 @@ Clicking **[!UICONTROL Create segment]** in the top-right corner opens the Segme
 
 The basic building blocks of segment definitions are **[!UICONTROL Attributes]** and **[!UICONTROL Events]**. In addition, the attributes and events contained in existing **[!UICONTROL Audiences]** can also be used as components for new definitions. 
 
-You can see these building blocks in the *Fields* section on the left side of the [!UICONTROL Segment Builder] workspace. *[!UICONTROL Fields]* contains a tab for each of the main building blocks: **[!UICONTROL Attributes]**, **[!UICONTROL Events]**, and **[!UICONTROL Audiences]**.
+You can see these building blocks in the *[!UICONTROL Fields]* section on the left side of the [!DNL Segment Builder] workspace. *[!UICONTROL Fields]* contains a tab for each of the main building blocks: **[!UICONTROL Attributes]**, **[!UICONTROL Events]**, and **[!UICONTROL Audiences]**.
 
 ![](../images/segment-builder/segment-fields.png)
 
@@ -56,7 +56,7 @@ The **[!UICONTROL Attributes]** tab allows you to browse [!DNL Profile] attribut
 
 ### Events
 
-The **[!UICONTROL Events]** tab allows you to create an audience based on events or actions that took place using XDM ExperienceEvent data elements. You can also find Event Types on the **[!UICONTROL Events]** tab, which are a collection of commonly used events to enable you to create your segments more quickly.
+The **[!UICONTROL Events]** tab allows you to create an audience based on events or actions that took place using [!DNL XDM ExperienceEvent] data elements. You can also find Event Types on the **[!UICONTROL Events]** tab, which are a collection of commonly used events to enable you to create your segments more quickly.
 
 In addition to being able to browse for [!DNL ExperienceEvent] elements, you can also search for Event Types. Event Types use the same coding logic as [!DNL ExperienceEvents], without requiring you to search through the [!DNL XDM ExperienceEvent] class looking for the correct event. For example, using the search bar to search "cart" returns the Event Types "[!UICONTROL AddCart]" and "[!UICONTROL RemoveCart]", which are two very commonly used cart actions when building segment definitions. 
 
@@ -88,7 +88,7 @@ You can also search for [!UICONTROL Audiences] using the search bar, which utili
 
 ## Rule builder canvas {#rule-builder-canvas}
 
-A segment definition is a collection of rules used to describe key characteristics or behavior of a target audience. These rules are created using the *[!UICONTROL rule builder canvas]*, located in the center of [!UICONTROL Segment Builder].
+A segment definition is a collection of rules used to describe key characteristics or behavior of a target audience. These rules are created using the *[!UICONTROL rule builder canvas]*, located in the center of [!DNL Segment Builder].
 
 To add a new rule to your segment definition, drag a tile from the *[!UICONTROL Fields]* tab and drop it onto the rule builder canvas. You will then be presented with context-specific options according to the type of data being added. Available data types include: strings, dates, [!DNL ExperienceEvents], [!UICONTROL Event Types], and [!UICONTROL Audiences]. 
 
@@ -98,7 +98,7 @@ To add a new rule to your segment definition, drag a tile from the *[!UICONTROL 
 
 You can drag and drop an audience from the *[!UICONTROL Audience]* tab onto the rule builder canvas to reference audience membership in the new segment definition. This allows you to include or exclude audience membership as an attribute in the new segment rule.
 
-For [!DNL Platform] audiences created using [!UICONTROL Segment Builder], you are given the option to convert the audience into the set of rules that were used in the segment definition for that audience. This conversion makes a copy of the rule logic, that can then be modified without affecting the original segment definition. Make sure that you have saved any recent changes to your segment definition before converting it to rule logic.
+For [!DNL Platform] audiences created using [!DNL Segment Builder], you are given the option to convert the audience into the set of rules that were used in the segment definition for that audience. This conversion makes a copy of the rule logic, that can then be modified without affecting the original segment definition. Make sure that you have saved any recent changes to your segment definition before converting it to rule logic.
 
 >[!NOTE]
 >
@@ -106,11 +106,11 @@ For [!DNL Platform] audiences created using [!UICONTROL Segment Builder], you ar
 
 ![](../images/segment-builder/add-audience-to-segment.png)
 
-If any conflicts arise when convert audiences to rules, [!UICONTROL Segment Builder] will attempt to preserve the existing options to the best of its ability.  
+If any conflicts arise when convert audiences to rules, [!DNL Segment Builder] will attempt to preserve the existing options to the best of its ability.  
 
 ### Code view
 
-Alternatively, you can view a code-based version of a rule created in the [!UICONTROL Segment Builder]. Once you have created your rule within the rule builder canvas, you can select **[!UICONTROL Code view]** to see your segment as PQL.
+Alternatively, you can view a code-based version of a rule created in the [!DNL Segment Builder]. Once you have created your rule within the rule builder canvas, you can select **[!UICONTROL Code view]** to see your segment as PQL.
 
 ![](../images/segment-builder/code-view.png)
 
@@ -226,6 +226,12 @@ Additional information about the last segment evaluation can be found by clickin
 
 ![](../images/segment-builder/info-bubble.png)
 
+### Streaming segmentation video demo
+
+The following video is intended to support your understanding of streaming segmentation. It shows an example customer experience followed by a quick tour of key features in the [!DNL Platform] interface.
+
+>[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)
+
 ## DULE policy violations
 
 >[!NOTE]
@@ -236,7 +242,7 @@ Once you are done creating your segment, the segment will be analyzed by [!DNL D
 
 ![](../images/segment-builder/segment-dule-policy-violations.png)
 
-## Next steps
+## Next steps and additional resources {#next-steps}
 
 Segment Builder provides a rich workflow allowing you to isolate marketable audiences from [!DNL Real-time Customer Profile] data. After reading this guide you should now be able to:
 
@@ -246,4 +252,16 @@ Segment Builder provides a rich workflow allowing you to isolate marketable audi
 - Enable all segment definitions for scheduled segmentation.
 - Enable specified segment definitions for streaming segmentation.
   
-For step-by-step instructions on working with [!DNL Segmentation Service] using the [!DNL Segmentation Service] API, see the [creating audience segments using APIs](../tutorials/create-a-segment.md) tutorial.
+To learn more about [!DNL Segmentation Service], please continue reading the documentation and supplement your learning by watching the videos below. For step-by-step instructions on working with [!DNL Segmentation Service] using the [!DNL Segmentation Service] API, see the [creating audience segments using APIs](../tutorials/create-a-segment.md) tutorial. 
+
+>[!WARNING]
+>
+> The [!DNL Platform] UI shown in the following videos is out-of-date. Please refer to the documentation above for the latest UI screenshots and functionality.
+
+**Create a segment:**
+
+>[!VIDEO](https://video.tv.adobe.com/v/27254?quality=12&learn=on)
+
+**Create a dynamic segment:**
+
+>[!VIDEO](https://video.tv.adobe.com/v/27428?quality=12&learn=on)
