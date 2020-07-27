@@ -273,12 +273,12 @@ The following table outlines the accepted values for `xdm:basisOfProcessing`:
 
 | Value | Description |
 | --- | --- |
-| `compliance` | |
-| `consent` | |
-| `contract` | |
-| `legitimate_interest` | |
-| `public_interest` | |
-| `vital_interest` | |
+| `compliance` | The collection of data for the specified purpose is required to meet legal obligations. |
+| `consent` | The collection of data for the specified purpose is allowed, given that the user has provided explicit permission. This is the default value of `xdm:basisOfProcessing`. |
+| `contract` | The collection of data for the specified purpose is required to meet contractual obligations. |
+| `legitimate_interest` | The business need to collect and process this data for the specified purpose outweighs the potential harm it poses to the individual. A legitimate interest assessment must be performed by your business in order for the use of this value to be valid. |
+| `public_interest` | The collection of data for the specified purpose is part of a government-based research effort. |
+| `vital_interest` | The collection of data for the specified purpose is required to protect the vital interests of the individual. |
 
 ### Accepted values for xdm:choice and xdm:optOutValue
 
