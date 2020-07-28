@@ -51,4 +51,4 @@ The [Dataset Service API](https://www.adobe.io/apis/experienceplatform/home/api-
 
 ## Next steps
 
-This document provided an introduction to data usage labels and how they fit within the Data Governance framework. Refer to the documentation linked to throughout this guide to lean more about how to manage labels in [!DNL Experience Platform].
+This document provided an introduction to data usage labels and their role within the Data Governance framework. Refer to the documentation linked to throughout this guide to lean more about how to manage labels in [!DNL Experience Platform].
