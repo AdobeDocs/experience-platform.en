@@ -3,6 +3,7 @@ keywords: Experience Platform;developer guide;SDK;Data Access SDK;Data Science W
 solution: Experience Platform
 title: Platform SDK guide
 topic: SDK authoring
+description: This tutorial provides you with information on converting data_access_sdk_python to the new Python platform_sdk in both Python and R.
 ---
 
 # [!DNL Platform] SDK guide
