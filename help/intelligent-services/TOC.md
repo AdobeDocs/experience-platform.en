@@ -19,7 +19,7 @@ user-guide-title: Intelligent Services Help
   * [Overview](customer-ai/overview.md)
   * [Getting started with Customer AI](customer-ai/getting-started.md)
   * [Input and Output](customer-ai/input-output.md)
-  * User interface guide {#user-guide}
+  * UI guides{#user-guide}
     * [Configure an instance](customer-ai/user-guide/configure.md)
     * [Discovering insights](customer-ai/user-guide/discover-insights.md)
     * [Create segments using Customer AI scores](customer-ai/user-guide/create-segment.md)
