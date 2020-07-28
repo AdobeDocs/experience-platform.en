@@ -168,7 +168,7 @@ A successful response HTTP status 200 (OK), indicating that the labels have been
 
 ## Next steps
 
-By reading this document, you have learned how to manage data usage labels for dataset and fields using the [!DNL Dataset Service] APIs.
+By reading this document, you have learned how to manage data usage labels for datasets and fields using the [!DNL Dataset Service] API.
 
 Once you have added data usage labels at the dataset- and field-level, you can begin to ingest data into [!DNL Experience Platform]. To learn more, start by reading the [data ingestion documentation](../../ingestion/home.md).
 
