@@ -13,7 +13,7 @@ Data usage labels allow you to categorize data according to usage policies that 
 >
 >The `/labels` endpoint is only used to retrieve, create, and update data usage labels. For steps on how to add labels to datasets and fields using API calls, refer to the guide on [managing dataset labels](../labels/dataset-api.md).
 
-##  Getting started
+## Getting started
 
 The API endpoint used in this guide is part of the [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
