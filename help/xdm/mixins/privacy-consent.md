@@ -23,6 +23,7 @@ The following topics are covered:
   * [Accepted values for xdm:choice and xdm:optOutValue](#accepted-values-for-xdmchoice-and-xdmoptoutvalue)
   * [Accepted values for xdm:type](#accepted-values-for-xdmtype)
   * [Full Privacy Consent schema](#full-privacy-consent-schema)
+
 ## Prerequisites
 
 This document requires a working understanding of Experience Data Model (XDM) and the use of the schemas in Experience Platform. Please review the following documentation before continuing:
