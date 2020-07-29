@@ -9,7 +9,7 @@ topic: queries
 
 ## Sample API Calls
 
-The following sections walk through calls you can make using the `/queries` endpoint in the Query Service API. Each call includes the general API format, a sample request showing required headers, and a sample response.
+The following sections walk through calls you can make using the `/queries` endpoint in the [!DNL Query Service] API. Each call includes the general API format, a sample request showing required headers, and a sample response.
 
 ### Retrieve a list of queries
 
@@ -189,7 +189,9 @@ A successful response returns HTTP status 202 (Accepted) with details of your ne
 }
 ```
 
->[!NOTE] You can use the value of `_links.cancel` to [cancel your created query](#cancel-a-query).
+>[!NOTE]
+>
+>You can use the value of `_links.cancel` to [cancel your created query](#cancel-a-query).
 
 ### Retrieve a query by ID
 
@@ -258,7 +260,9 @@ A successful response returns HTTP status 200 with detailed information about th
 }
 ```
 
->[!NOTE] You can use the value of `_links.cancel` to [cancel your created query](#cancel-a-query).
+>[!NOTE]
+>
+>You can use the value of `_links.cancel` to [cancel your created query](#cancel-a-query).
 
 ### Cancel a query
 

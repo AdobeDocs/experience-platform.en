@@ -5,15 +5,15 @@ description: Learn how to render personalized content with Experience Platform W
 seo-description: Learn how to render personalized content with Experience Platform Web SDK using Adobe Target
 ---
 
-# Target Overview
+# [!DNL Target] Overview
 
-The Adobe Experience Platform Web SDK can deliver and render personalized experiences managed in Adobe Target to the web channel. You can use a WYSIWYG editor, called the [Visual Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) (VEC), or a non-visual interface, the [Form-based Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html), to create, activate, and deliver your activities and personalization experiences.
+The Adobe Experience Platform [!DNL Web SDK] can deliver and render personalized experiences managed in Adobe Target to the web channel. You can use a WYSIWYG editor, called the [Visual Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) (VEC), or a non-visual interface, the [Form-based Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html), to create, activate, and deliver your activities and personalization experiences.
 
 ## Enabling Adobe Target
 
-To enable Target, you need to do the following:
+To enable [!DNL Target], you need to do the following:
 
-1. Turn on activity.id and experience.id reponse tokens in the Target UI.
+1. Turn on activity.id and experience.id reponse tokens in the [!DNL Target] UI.
 
   ![target_reponse_token](../../solution-specific/target/assets/target_response_token.png)
 
@@ -54,7 +54,7 @@ alloy
 
 ## Using the Form-Based Composer
 
-The Form-Based Experience Composer is a non-visual interface that’s useful for configuring A/B Tests, Experience Targeting, Automated Personalization, and Recommendations activities with different response types such as JSON, HTML, Image, etc. Depending on the response type or decision returned by Adobe Target, your core business logic can be executed. To retrieve decisions for your Form-Based Composer activities, send an event with all ‘decisionScopes’ you want to retrieve a decision for.
+The Form-Based Experience Composer is a non-visual interface that’s useful for configuring A/B Tests, [!DNL Experience Targeting], Automated Personalization, and Recommendations activities with different response types such as JSON, HTML, Image, etc. Depending on the response type or decision returned by Adobe Target, your core business logic can be executed. To retrieve decisions for your Form-Based Composer activities, send an event with all ‘decisionScopes’ you want to retrieve a decision for.
 
 ```javascript
 alloy
@@ -77,11 +77,11 @@ alloy
 
 ## Decision Scopes
 
-`decisionScopes` defines sections, locations, or parts of your pages where you would like to render a personalized experience. These `decisionScopes` are customizable and user-defined. For current Target customers, `decisionScopes` are also known as "mboxes." In the Target UI, `decisionScopes` appear as "locations."
+`decisionScopes` defines sections, locations, or parts of your pages where you would like to render a personalized experience. These `decisionScopes` are customizable and user-defined. For current [!DNL Target] customers, `decisionScopes` are also known as "mboxes." In the [!DNL Target] UI, `decisionScopes` appear as "locations."
 
 ## __view__ Scope
 
-AEP Web SDK provides a functionality where you can retrieve VEC actions without relying on the AEP Web SDK to render the VEC actions for you. Send an event with `__view__` defined as as a `decisionScopes`.
+AEP [!DNL Web SDK] provides a functionality where you can retrieve VEC actions without relying on the AEP [!DNL Web SDK] to render the VEC actions for you. Send an event with `__view__` defined as as a `decisionScopes`.
 
 ```javascript
 alloy("sendEvent", {
@@ -119,10 +119,10 @@ If you have Target activities with predefined audiences that use custom paramete
 
 ## Terminology
 
-__Decisions__ - In Target, these correlate to the experience that is selected from an Activity.
+__Decisions__ - In [!DNL Target], these correlate to the experience that is selected from an Activity.
 
-__Scope__ - The scope of the decision. In Target, this is the mBox. The global mBox is the `__view__` scope.
+__Scope__ - The scope of the decision. In [!DNL Target], this is the mBox. The global mBox is the `__view__` scope.
 
-__Schema__ - The schema of a decision is the type of offer in Target. 
+__Schema__ - The schema of a decision is the type of offer in [!DNL Target]. 
 
-__XDM__ - The XDM is serialized into dot notation and then put into Target as mBox parameters.
+__XDM__ - The XDM is serialized into dot notation and then put into [!DNL Target] as mBox parameters.

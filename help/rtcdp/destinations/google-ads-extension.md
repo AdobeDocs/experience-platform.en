@@ -5,13 +5,13 @@ description: The Google Ads extension is an advertising destination in Adobe Rea
 seo-description: The Google Ads extension is an advertising destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
-# Google Ads extension
+# [!DNL Google Ads] extension
 
 ## Overview {#overview}
 
-This extension tracks conversions from users that click on your Google Ads. You will need to also install the gtag.js extension and add it to your library, as Google Ads depends on it.
+This extension tracks conversions from users that click on your [!DNL Google Ads]. You will need to also install the gtag.js extension and add it to your library, as [!DNL Google Ads] depends on it.
 
-Google Ads is an advertising extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.101383.google-ads.html).
+[!DNL Google Ads] is an advertising extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.101383.google-ads.html).
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
@@ -25,7 +25,7 @@ To use this extension, you need access to Experience Platform Launch. Experience
 
 ## Install extension {#install-extension}
 
-To install the Google Ads extension:
+To install the [!DNL Google Ads] extension:
 
 1. In the [Adobe Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations > Catalog]**.
 2. Select the extension from the catalog or use the search bar.

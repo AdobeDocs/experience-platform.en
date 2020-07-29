@@ -7,7 +7,7 @@ topic: developer guide
 
 # Consent
 
-Certain regulations required explicit customer consent before their personal data can be collected. The `/consent` endpoint in the Privacy Service API allows you to process customer consent requests and integrate them into your privacy workflow.
+Certain regulations required explicit customer consent before their personal data can be collected. The `/consent` endpoint in the [!DNL Privacy Service] API allows you to process customer consent requests and integrate them into your privacy workflow.
 
 Before using this guide, please refer to the [getting started](./getting-started.md) section for information on the required authentication headers presented in the example API call below.
 
@@ -59,8 +59,10 @@ curl -X POST \
 | `nameSpace` | Each object in the `entities` array must contain one of the [standard identity namespaces](./appendix.md#standard-namespaces) recognized by the Privacy Service API. |
 | `values` | An array of values for each user, corresponding with the provided `nameSpace`. |
 
->[!NOTE] For more information on how to determine which customer identity values to send to Privacy Service, see the guide on [providing identity data](../identity-data.md).
+>[!NOTE]
+>
+>For more information on how to determine which customer identity values to send to [!DNL Privacy Service], see the guide on [providing identity data](../identity-data.md).
 
 **Response**
 
-A successful response returns HTTP status 202 (Accepted) with no payload, indicating that the request was accepted by Privacy Service and is undergoing processing.
+A successful response returns HTTP status 202 (Accepted) with no payload, indicating that the request was accepted by [!DNL Privacy Service] and is undergoing processing.

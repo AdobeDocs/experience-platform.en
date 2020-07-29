@@ -5,7 +5,7 @@ description: Create a real-time outbound connection to your Azure Event Hubs sto
 seo-description: Create a real-time outbound connection to your Azure Event Hubs storage to stream data from Experience Platform.
 ---
 
-# (Beta) Azure Event Hubs destination
+# (Beta) [!DNL Azure Event Hubs] destination
 
 >[!IMPORTANT]
 >
@@ -25,9 +25,9 @@ You can create a real-time outbound connection to your [!DNL Azure Event Hubs] s
 
 ## Use Cases {#use-cases}
 
-By using streaming destinations such as Azure Event Hubs, you can easily feed high-value segmentation events and associated profile attributes into your systems of choice.
+By using streaming destinations such as [!DNL Azure Event Hubs], you can easily feed high-value segmentation events and associated profile attributes into your systems of choice.
 
-For example, a prospect downloaded a white-paper which qualifies them into a "high-propensity to convert" segment. By mapping the segment that the prospect falls in to the Azure Event Hubs destination, you would receive this event in Azure Event Hubs. There, you can employ a do-it-yourself approach and describe business logic on top of the event, as you think would work best with your enterprise IT systems.
+For example, a prospect downloaded a white-paper which qualifies them into a "high-propensity to convert" segment. By mapping the segment that the prospect falls in to the [!DNL Azure Event Hubs] destination, you would receive this event in [!DNL Azure Event Hubs]. There, you can employ a do-it-yourself approach and describe business logic on top of the event, as you think would work best with your enterprise IT systems.
 
 ## Connect destination {#connect-destination}
 
@@ -57,7 +57,7 @@ See [Activate profiles and segments to a destination](/help/rtcdp/destinations/a
 
 ## Exported data {#exported-data}
 
-Your exported Experience Platform data lands in [!DNL Azure Event Hubs] in JSON format. For example, the event below contains the email address profile attribute of an audience that has qualified for a certain segment and exited another segment. The identities for this prospect are ECID and email.
+Your exported [!DNL Experience Platform] data lands in [!DNL Azure Event Hubs] in JSON format. For example, the event below contains the email address profile attribute of an audience that has qualified for a certain segment and exited another segment. The identities for this prospect are ECID and email.
 
 ```
 {

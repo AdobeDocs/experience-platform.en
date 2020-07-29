@@ -19,7 +19,9 @@ The next section provides steps for creating a new dataset to apply labels to. I
 
 ### Create a new dataset
 
->[!NOTE] In this example, a dataset is created using a pre-configured Experience Data Model (XDM) schema. For more information on XDM schemas, see the [XDM System overview](../../xdm/home.md) and [basics of schema composition](../../xdm/schema/composition.md).
+>[!NOTE]
+>
+>In this example, a dataset is created using a pre-configured [!DNL Experience Data Model] (XDM) schema. For more information on XDM schemas, see the [XDM System overview](../../xdm/home.md) and [basics of schema composition](../../xdm/schema/composition.md).
 
 To create a new dataset, click **[!UICONTROL Create Dataset]** in the top-right corner of the _[!UICONTROL Datasets]_ workspace.
 
@@ -90,6 +92,30 @@ You can repeat these steps to continue adding and editing field-level labels for
 ![Select multiple fields to apply field-level labels simultaneously.](../images/labels/fields_select_multiple.png)
 
 It is important to remember that inheritance moves from the top-level down only (dataset → fields), meaning that labels applied at the field level are not propagated to other fields or datasets.
+
+## Managing custom labels
+
+You can create your own custom usage labels within the *[!UICONTROL Policies]* workspace in the [!DNL Experience Platform] UI. Click **[!UICONTROL Policies]** in the left-navigation, then click **[!UICONTROL Labels]** to view a list of existing labels. From here, click **[!UICONTROL Create label]**.
+
+![](../images/labels/create-label-btn.png)
+
+The *[!UICONTROL Create label]* dialog appears. From here, provide the following information for the new label:
+
+* **[!UICONTROL Identifier]**: A unique identifier for the label. This value is used for lookup purposes and should therefore be short and concise.
+* **[!UICONTROL Name]**: A friendly display name for the label.
+* **[!UICONTROL Description]**: (Optional) A description for the label to provide further context.
+
+When finished, click **[!UICONTROL Create]**.
+
+![](../images/labels/create-label.png)
+
+The dialog closes, and the newly created custom label appears in the list under the *[!UICONTROL Labels]* tab.
+
+![](../images/labels/label-created.png)
+
+The label can now be selected under *[!UICONTROL Custom Labels]* when editing usage labels for datasets and fields, or when creating data usage policies.
+
+<img src="../images/labels/add-custom-label.png" width=600 /><br>
 
 ## Next steps
 

@@ -54,4 +54,6 @@ A successful response returns the details of the newly created sandbox, showing 
 }
 ```
 
->[!NOTE] Sandboxes take roughly 15 minutes to be provisioned by the system, after which their `state` will become "active" or "failed".
+>[!NOTE]
+>
+>Sandboxes take roughly 15 minutes to be provisioned by the system, after which their `state` will become "active" or "failed".

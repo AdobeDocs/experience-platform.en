@@ -11,7 +11,9 @@ This document provides answers to frequently asked questions about Adobe Experie
 
 ## [!DNL JupyterLab] environment is not loading in [!DNL Google Chrome]
 
->[!IMPORTANT] This issue has been resolved but could still be present in the Google Chrome 80.x browser. Please ensure your Chrome browser is up-to-date. 
+>[!IMPORTANT]
+>
+>This issue has been resolved but could still be present in the Google Chrome 80.x browser. Please ensure your Chrome browser is up-to-date. 
 
 With the [!DNL Google Chrome] browser version 80.x, all third-party cookies are blocked by default. This policy can prevent [!DNL JupyterLab] from loading within Adobe Experience Platform.
 
@@ -31,7 +33,9 @@ Lastly, toggle “Block third-party cookies” to "OFF".
 
 ![chrome advanced](./images/faq/toggle-off.png)
 
->[!NOTE] Alternatively, you could disable third-party cookies and add [*.]ds.adobe.net to the allow list.
+>[!NOTE]
+>
+>Alternatively, you could disable third-party cookies and add [*.]ds.adobe.net to the allow list.
 
 Navigate to “chrome://flags/” in your address bar. Search for and disable the flag titled *“SameSite by default cookies”* by using the dropdown menu on the right.
    
