@@ -5,13 +5,13 @@ description: THe PebblePost extension is an email destination in Adobe Real-time
 seo-description: The PebblePost extension is an email destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
-# PebblePost Extension {#pebblepost-extension}
+# [!DNL PebblePost] Extension {#pebblepost-extension}
 
 ## Overview {#overview}
 
-PebblePost's Programmatic Direct Mail® solution helps digital marketers connect online interest and intent to offline, tangible media that converts. Marketers can leverage the custom data segments they have created in Adobe to now target consumers with a relevant, longer-lasting, in-home media impression. Analyze performance in real-time based on response path activity and on-site conversions.
+[!DNL PebblePost's Programmatic Direct Mail®] solution helps digital marketers connect online interest and intent to offline, tangible media that converts. Marketers can leverage the custom data segments they have created in Adobe to now target consumers with a relevant, longer-lasting, in-home media impression. Analyze performance in real-time based on response path activity and on-site conversions.
 
-PebblePost is an email extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html).
+[!DNL PebblePost] is an email extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html).
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
@@ -19,13 +19,13 @@ This destination is an Experience Platform Launch extension. For more informatio
 
 ## Prerequisites {#prerequisites}
 
-This extension is available in the Destinations catalog for all customers who have purchased Adobe Real-time CDP.
+This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Adobe Real-time CDP.
 
 To use this extension, you need access to Experience Platform Launch. Experience Platform Launch is offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to Launch and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
 ## Install extension {#install-extension}
 
-To install the PebblePost extension:
+To install the [!DNL PebblePost] extension:
 
 1. In the [Adobe Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations > Catalog]**.
 2. Select the extension from the catalog or use the search bar.

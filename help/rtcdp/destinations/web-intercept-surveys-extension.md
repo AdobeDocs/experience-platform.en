@@ -5,13 +5,13 @@ description: THe QuestionPro Intercept Surveys extension is a survey destination
 seo-description: The QuestionPro Intercept Surveys extension is a survey destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
-# QuestionPro Intercept Surveys Extension {#questionpro-extension}
+# [!DNL QuestionPro Intercept Surveys] Extension {#questionpro-extension}
 
 ## Overview {#overview}
 
-QuestionPro Intercept Surveys is a platform for deploying surveys and collecting attitudinal data at the point of transaction or when users enter / exit your website.
+[!DNL QuestionPro Intercept Surveys] is a platform for deploying surveys and collecting attitudinal data at the point of transaction or when users enter / exit your website.
 
-QuestionPro Intercept Surveys is a survey extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.90096.questionpro-surveys.html).
+[!DNL QuestionPro Intercept Surveys] is a survey extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.90096.questionpro-surveys.html).
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
@@ -19,13 +19,13 @@ This destination is an Experience Platform Launch extension. For more informatio
 
 ## Prerequisites {#prerequisites}
 
-This extension is available in the Destinations catalog for all customers who have purchased Adobe Real-time CDP.
+This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Adobe Real-time CDP.
 
 To use this extension, you need access to Experience Platform Launch. Experience Platform Launch is offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to Launch and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
 ## Install extension {#install-extension}
 
-To install the QuestionPro Intercept Surveys extension:
+To install the [!DNL QuestionPro Intercept Surveys] extension:
 
 1. In the [Adobe Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations > Catalog]**.
 2. Select the extension from the catalog or use the search bar.

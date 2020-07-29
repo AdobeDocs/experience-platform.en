@@ -208,8 +208,10 @@ Another traditional challenge for marketers has been creating ads to retarget cu
 - Object
 - Map
 - Events
+- External audiences
+- Segments
 
-More detailed information about these supported data types can be found in the [support data types document](./data-types.md).
+More detailed information about these supported data types can be found in the [supported data types document](./data-types.md).
 
 ## Next steps
 

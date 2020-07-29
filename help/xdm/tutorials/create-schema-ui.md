@@ -266,7 +266,7 @@ The Schema Editor provides the ability to enable a schema for use with [!DNL Rea
 
 In order for a schema to be enabled for use with [!DNL Real-time Customer Profile], it must have a primary identity defined. You will receive a "Missing Primary Identity" error message if you attempt to enable a schema without first defining a primary identity.
 
-![](../images/tutorials/create-schema/missing_primary_identity.png)
+<img src="../images/tutorials/create-schema/missing_primary_identity.png" width=600 /><br>
 
 To enable the "Loyalty Members" schema for use in [!DNL Profile], begin by clicking on "Loyalty Members" in the *Structure* section of the editor. 
 

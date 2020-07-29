@@ -7,6 +7,6 @@ seo-description: A user guide describing how to use the Segmentation Service Seg
 
 # Segment Builder guide
 
-Built on top of Adobe Experience Platform, Real-time Customer Data Platform is able to make use of the full Segment Builder capabilities that are a part of Experience Platform. Within the Segment Builder's user interface, you can create new segments, access existing segments, and modify existing segments. 
+Built on top of Adobe Experience Platform, [!DNL Real-time Customer Data Platform] is able to make use of the full Segment Builder capabilities that are a part of [!DNL Experience Platform]. Within the Segment Builder's user interface, you can create new segments, access existing segments, and modify existing segments. 
 
 For a more detailed guide on the Segment Builder, please read the [Segment Builder user guide](../../segmentation/ui/overview.md).
