@@ -31,13 +31,13 @@ Before starting this tutorial, you must have the following prerequisites:
 
     ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
-    > [!NOTE] If a new Launcher tab did not automatically appear, open a new Launcher tab by clicking **[!UICONTROL File]** then select **[!UICONTROL New Launcher]**.
+    >[!NOTE] If a new Launcher tab did not automatically appear, open a new Launcher tab by clicking **[!UICONTROL File]** then select **[!UICONTROL New Launcher]**.
 
 2.  In the Launcher tab, click the **[!UICONTROL Blank]** icon in a Python 3 environment to open an empty notebook.
 
     ![](../images/jupyterlab/query/blank_notebook.png)
 
-    > [!NOTE] Python 3 is currently the only supported environment for Query Service in notebooks.
+    >[!NOTE] Python 3 is currently the only supported environment for Query Service in notebooks.
 
 3.  On the left selection rail, click the **[!UICONTROL Data]** icon and double click the **[!UICONTROL Datasets]** directory to list all datasets.
 
