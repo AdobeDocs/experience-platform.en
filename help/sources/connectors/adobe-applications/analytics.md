@@ -7,7 +7,7 @@ topic: overview
 
 # Analytics Data Connector
 
-Adobe Experience Platform allows you to ingest Adobe Analytics data through the Analytics Data Connector (ADC). ADC streams data collected by [!DNL Analytics] to [!DNL Platform] in real-time, converting SCDS-formatted [!DNL [!DNL Analytics]] data into [!DNL Experience Data Model] (XDM) fields for consumption by [!DNL Platform].
+Adobe Experience Platform allows you to ingest Adobe Analytics data through the Analytics Data Connector (ADC). ADC streams data collected by [!DNL Analytics] to [!DNL Platform] in real-time, converting SCDS-formatted [!DNL Analytics] data into [!DNL Experience Data Model] (XDM) fields for consumption by [!DNL Platform].
 
 This document provides an overview of [!DNL Analytics] and describes the use-cases for [!DNL Analytics] data.
 
@@ -48,4 +48,4 @@ For detailed information on the field mapping that occurs between [!DNL Analytic
 
 ## Primary identifiers in Analytics data
 
-Every hit from ADC contains a primary identifier that is dependant on whether an ECID or an AAID exists. If there is an ECID, the ECID is designated as the primary identifier. If there is an AAID, then the AAID is designated as the primary.
+Every hit from the Analytics data connector contains a primary identifier that is dependant on whether an ECID or an AAID exists. If there is an ECID, the ECID is designated as the primary identifier. If there is an AAID, then the AAID is designated as the primary.
