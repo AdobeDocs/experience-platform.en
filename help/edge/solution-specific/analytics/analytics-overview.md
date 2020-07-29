@@ -7,7 +7,7 @@ seo-description: Learn how to send Data to Adobe Analytics with Experience Platf
 
 # Sending Data to Adobe Analytics
 
-The Adobe Experience Platform Web SDK can send data to Adobe Analytics. This works by translating `xdm` into a format the Adobe Analytics can use.
+The Adobe Experience Platform [!DNL Web SDK] can send data to Adobe Analytics. This works by translating `xdm` into a format the Adobe Analytics can use.
 
 ## Setup
 
@@ -15,7 +15,7 @@ Adobe Analytics automatically picks up the data you are sending if you have a re
 
 ## Automatically Mapped Data
 
-The Adobe Experience Platform Edge Network automatically maps many XDM variables automatically. The complete list of automatically mapped variables is listed [here](../analytics/automatically-mapped-vars.md).
+The Adobe Experience Platform [!DNL Edge Network] automatically maps many XDM variables automatically. The complete list of automatically mapped variables is listed [here](../analytics/automatically-mapped-vars.md).
 
 ## Manually Mapped Data
 

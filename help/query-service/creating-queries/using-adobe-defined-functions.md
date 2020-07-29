@@ -9,7 +9,7 @@ topic: queries
 
 One of Adobe's big differentiators is that they understand experience data and what customers need to be able to do with that data. You can use this understanding to build helper functions that make your job easier.
 
-This document covers Adobe-defined functions (ADFs) to support three key Analytics activities:
+This document covers Adobe-defined functions (ADFs) to support three key [!DNL Analytics] activities:
 - [Sessionization](#sessionization)
 - [Attribution](#attribution)
 - [Pathing](#pathing)
@@ -84,13 +84,13 @@ Attribution is how you allocate metrics or conversions like revenue, order, or s
 
 In Adobe Analytics, attribution settings are configured using variables like eVars and are generated as data is ingested.
 
-The Attribution ADFs found in Query Service allow those allocations to be defined and generated at query time.
+The Attribution ADFs found in [!DNL Query Service] allow those allocations to be defined and generated at query time.
 
 This example focuses on last-touch attribution, but Adobe also offers first-touch attribution. 
 
 >[!NOTE]
 >
->Other options with timeouts and event-based expiration will be available in future versions of Query Service.
+>Other options with timeouts and event-based expiration will be available in future versions of [!DNL Query Service].
 
 **Syntax:**
 

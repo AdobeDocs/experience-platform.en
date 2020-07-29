@@ -5,19 +5,19 @@ title: Secure Spark Data Access SDK
 topic: tutorial
 ---
 
-# Secure Spark Data Access SDK
+# Secure [!DNL Spark Data Access] SDK
 
-The Secure Spark [!DNL Data Access] SDK is a software development kit that enables reading and writing of datasets from Adobe Experience Platform.
+The Secure [!DNL Spark] [!DNL Data Access] SDK is a software development kit that enables reading and writing of datasets from Adobe Experience Platform.
 
 ## Getting started
 
-You are required to have completed the [authentication](../../tutorials/authentication.md) tutorial in order to have access to the values to make calls to the Secure Spark [!DNL Data Access] SDK:
+You are required to have completed the [authentication](../../tutorials/authentication.md) tutorial in order to have access to the values to make calls to the Secure [!DNL Spark] [!DNL Data Access] SDK:
 
 - `{ACCESS_TOKEN}`
 - `{API_KEY}`
 - `{IMS_ORG}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. Using the Spark SDK requires the name and the ID of the sandbox the operation will take place in:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. Using the [!DNL Spark] SDK requires the name and the ID of the sandbox the operation will take place in:
 
 - `{SANDBOX_NAME}`
 - `{SANDBOX_ID}`
@@ -76,7 +76,7 @@ spark.sql.extensions = com.adobe.platform.query.QSSparkSessionExtensions
 
 The [!DNL Spark] SDK supports two modes of reading: interactive and batch.
 
-Interactive mode creates a Java Database Connectivity (JDBC) connection to [!DNL Query Service] and gets results through a regular JDBC `ResultSet` that is automatically translated to a `DataFrame`. This mode works similarly to the built-in Spark method `spark.read.jdbc()`. This mode is meant only for small datasets and only requires a user token for authentication.
+Interactive mode creates a Java Database Connectivity (JDBC) connection to [!DNL Query Service] and gets results through a regular JDBC `ResultSet` that is automatically translated to a `DataFrame`. This mode works similarly to the built-in [!DNL Spark] method `spark.read.jdbc()`. This mode is meant only for small datasets and only requires a user token for authentication.
 
 Batch mode uses [!DNL Query Service]'s COPY command to generate Parquet result sets in a shared location. These Parquet files can then be further processed. This mode requires both a user token and a service token with the `acp.foundation.catalog.credentials` scope.
 

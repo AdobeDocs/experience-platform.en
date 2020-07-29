@@ -5,25 +5,25 @@ description: The Invoca Tags extension is a voice of the customer destination in
 seo-description: 
 ---
 
-# Invoca Tags extension {#invoca-extension}
+# [!DNL Invoca Tags] extension {#invoca-extension}
 
 ## Overview {#overview}
 
-Invoca brings call data and voice insights into the digital customer journey. With Invoca’s call intelligence platform, marketers finally have analytics to measure call outcomes and tie offline conversions back to digital spend.
+[!DNL Invoca] brings call data and voice insights into the digital customer journey. With [!DNL Invoca’s] call intelligence platform, marketers finally have analytics to measure call outcomes and tie offline conversions back to digital spend.
 
-Invoca Tags is a voice of the customer extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100067.invoca.html).
+[!DNL Invoca Tags] is a voice of the customer extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100067.invoca.html).
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
 ## Prerequisites {#prerequisites}
 
-This extension is available in the Destinations catalog for all customers who have purchased Adobe Real-time CDP.
+This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Adobe Real-time CDP.
 
 To use this extension, you need access to Experience Platform Launch. Experience Platform Launch is offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to Launch and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
 ## Install extension {#install-extension}
 
-To install the Invoca Tags extension:
+To install the [!DNL Invoca Tags] extension:
 
 1. In the [Adobe Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations > Catalog]**.
 2. Select the extension from the catalog or use the search bar.

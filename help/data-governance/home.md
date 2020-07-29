@@ -79,15 +79,6 @@ Once data usage labels have been applied, data stewards can create policies usin
 
 For more information on data usage policies and marketing actions, see the [policies overview](./policies/overview.md).
 
-## Future releases
-
-[!DNL Data Governance] currently supports DULE labeling at two levels (dataset and field). [!DNL Data Governance] also supports the creation and management of data usage policies and marketing actions via the DULE [!DNL Policy Service] API.
-
-Subsequent releases will provide the following features:
-
-* Policy enforcement: Use the policy framework to advise and enforce policies across different data access patterns.
-* Auditing: Monitor data access activities and identify and report on compliance issues.
-
 ## Next steps
 
 This document provided a high-level introduction to [!DNL Data Governance] and the DULE framework. You can now continue to the [data usage labels user guide](labels/user-guide.md) and start adding usage labels to your experience data.
