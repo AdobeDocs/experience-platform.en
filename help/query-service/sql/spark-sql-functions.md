@@ -182,7 +182,7 @@ Examples:
  2
 > SELECT cardinality(NULL);
  -1
- ```
+```
 
 #### cbrt
 
@@ -529,7 +529,7 @@ Example:
 ```
 > SELECT pow(2, 3);
  8.0
- ```
+```
 
 #### power 
 
@@ -540,7 +540,7 @@ Examples:
 ```
 > SELECT power(2, 3);
  8.0
- ```
+```
 
 #### radians
 
@@ -866,7 +866,7 @@ Example:
 ```
 > SELECT 3 ^ 5;
  2
- ```
+```
 
 #### and
 
@@ -2270,7 +2270,7 @@ Examples:
  SQL
 > SELECT substring('Spark SQL', 5, 1);
  k
- ```
+```
 
 #### to_json
 
