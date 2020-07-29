@@ -486,6 +486,166 @@ In the response below, you can see that the list of `duleLabels` is now shorter,
 }
 ```
 
+## Evaluate policies in bulk
+
+The `/bulk-eval` endpoint allows you to run multiple evaluation jobs in a single API call.
+
+**API format**
+
+```http
+POST /bulk-eval
+```
+
+**Request**
+
+The payload of a bulk evaluation request should be an array of objects; one for each evaluation job to be performed. For jobs that evaluate based on datasets and fields, an `entityList` array must be provided. For jobs that evaluate based on data usage labels, a `labels` array must be provided.
+
+>[!WARNING]
+>
+>If any listed evaluation job contains both an `entityList` and a `labels` array, an error will result. If you wish to evaluate based on both datasets and labels, you must include separate evaluation jobs for each marketing action.
+
+```sh
+curl -X POST \
+  https://platform.adobe.io/data/foundation/dulepolicy/bulk-eval \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '[
+        {
+          "evalRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting/constraints",
+          "includeDraft": false,
+          "labels": [
+            "C1",
+            "C2",
+            "C3"
+          ]
+        },
+        {
+          "evalRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting/constraints",
+          "includeDraft": false,
+          "entityList": [
+            {
+              "entityType": "dataSet",
+              "entityId": "5b67f4dd9f6e710000ea9da4",
+              "entityMeta": {
+                "fields": [
+                  "address"
+                ]
+              }
+            }
+          ]
+        }
+      ]'
+```
+
+| Property | Description |
+| --- | --- |
+| `evalRef` | The URI of the marketing action to test against labels or datasets for policy violations. |
+| `includeDraft` | By default, only enabled policies participate in evaluation. If `includeDraft` is set to `true`, policies that are in `DRAFT` status will also participate. |
+| `labels` | An array of data usage labels to test the marketing action against.<br><br>**IMPORTANT**: When using this property, an `entityList` property must NOT be included in the same object. To evaluate the same marketing action using datasets and/or fields, you must include a separate object in the request payload that contains an `entityList` array. |
+| `entityList` | An array of datasets and (optionally) specific fields within those datasets to test the marketing action against.<br><br>**IMPORTANT**: When using this property, a `labels` property must NOT be included in the same object. To evaluate the same marketing action using specific data usage labels, you must include a separate object in the request payload that contains a `labels` array. |
+| `entityType` | The type of entity to test the marketing action against. Currently, only `dataSet` is supported. |
+| `entityId` | The ID of a dataset to test the marketing action against. |
+| `entityMeta` | *(Optional)* An object that contains a mandatory `fields` array, which itself lists specific fields within the dataset to test the marketing action against, rather than the entire dataset. |
+
+**Response**
+
+A successful response returns an array of evaluation results; one for each policy evaluation job sent in the request.
+
+```json
+[
+  {
+    "status": 200,
+    "body": {
+      "timestamp": 1595866566165,
+      "clientId": "{CLIENT_ID}",
+      "userId": "{USER_ID}",
+      "imsOrg": "{IMS_ORG}",
+      "sandboxName": "prod",
+      "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting",
+      "duleLabels": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "violatedPolicies": []
+    }
+  },
+  {
+    "status": 200,
+    "body": {
+      "timestamp": 1595866566165,
+      "clientId": "{CLIENT_ID}",
+      "userId": "{USER_ID}",
+      "imsOrg": "{IMS_ORG}",
+      "sandboxName": "prod",
+      "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting",
+      "duleLabels": [
+        "C1",
+        "C2"
+      ],
+      "discoveredLabels": [
+        {
+          "entityType": "dataset",
+          "entityId": "5b67f4dd9f6e710000ea9da4",
+          "dataSetLabels": {
+            "connection": {
+              "labels": [
+
+              ]
+            },
+            "dataset": {
+              "labels": [
+                "C1",
+                "C2"
+              ]
+            },
+            "fields": []
+          }
+        }
+      ],
+      "violatedPolicies": [
+        {
+          "name": "Email Policy",
+          "status": "DRAFT",
+          "marketingActionRefs": [
+            "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting"
+          ],
+          "description": "Conditions under which we won't send marketing-based email",
+          "deny": {
+            "label": "C1",
+            "operator": "AND",
+            "operands": [
+              {
+                "label": "C1"
+              },
+              {
+                "label": "C3"
+              }
+            ]
+          },
+          "id": "76131228-7654-11e8-adc0-fa7ae01bbebc",
+          "imsOrg": "{IMS_ORG}",
+          "created": 1529696681413,
+          "createdClient": "{CLIENT_ID}",
+          "createdUser": "{USER_ID}",
+          "updated": 1529697651972,
+          "updatedClient": "{CLIENT_ID}",
+          "updatedUser": "{USER_ID}",
+          "_links": {
+            "self": {
+              "href": "./76131228-7654-11e8-adc0-fa7ae01bbebc"
+            }
+          }
+        }
+      ]
+    }
+  }
+]
+```
+
 ## Policy evaluation for [!DNL Real-time Customer Profile]
 
 The [!DNL Policy Service] API can also be used to check for policy violations involving the use of [!DNL Real-time Customer Profile] segments. See the tutorial on [enforcing data usage compliance for audience segments](../../segmentation/tutorials/governance.md) for more information.
