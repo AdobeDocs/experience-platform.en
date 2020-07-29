@@ -5,7 +5,7 @@ title: Policies
 topic: developer guide
 ---
 
-# Policy evaluation
+# Policy evaluation endpoints
 
 Once marketing actions have been created and policies have been defined, you can use the [!DNL Policy Service] API to evaluate if any policies are violated by certain actions. The returned constraints take the form of a set of policies that would be violated by attempting the marketing action on the specified data containing data usage labels.
 
@@ -16,6 +16,10 @@ Evaluation requests can be made in one of three ways:
 1. Given a set of data usage labels and a marketing action, does the action violate any policies?
 1. Given one or more datasets and a marketing action, does the action violate any policies?
 1. Given one or more datasets and a subset of one or more fields within each of those datasets, does the action violate any policies?
+
+## Getting started
+
+The API endpoints used in this guide is part of the [Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 ## Evaluate policies using data usage labels and a marketing action
 
