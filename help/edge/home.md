@@ -25,6 +25,7 @@ On the server-side, a unified edge gateway and a common platform services framew
 
 * Decreases customer time to value
 * Ends the need for "point" integrations
+* Improves performance compared to the old libraries
 * Decreases costs
 * Increases the speed of innovation
 * Creates sustained competitive advantages for Adobe customers
