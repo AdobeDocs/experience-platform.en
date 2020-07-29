@@ -395,7 +395,7 @@ A successful update request returns an HTTP Status 200 (OK) and the response bod
 }
 ```
 
-## Update a portion of a policy
+## Update a portion of a policy {#update}
 
 A specific portion of a policy may be updated using a PATCH request. Unlike PUT requests that _rewrite_ the policy, PATCH requests update only the path specified in the request body. This is especially useful when you want to enable or disable a policy, as you need only send the specific path that you wish to update (`/status`) and its value (`ENABLE` or `DISABLE`). 
 
