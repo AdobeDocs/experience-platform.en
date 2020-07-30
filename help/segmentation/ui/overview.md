@@ -26,35 +26,49 @@ It is also important to know two key terms that are used through this document a
 
 In the [Experience Platform UI](http://platform.adobe.com/), click **[!UICONTROL Segments]** in the left navigation to open the *[!UICONTROL Overview]* tab. This tab provides links to documentation and videos to help you understand and begin working with segments.
 
-(Overview screenshot?)
+![](../images/ui/overview/segment-overview.png)
 
 ## Browse
 
-Select the *Browse* tab to see a list of all the segment definitions for your IMS Organization. 
+Select the *[!UICONTROL Browse]* tab to see a list of all the segment definitions for your IMS Organization. 
 
-(Image here)
+![](../images/ui/overview/segment-browse-all.png)
 
 This view lists information about the segment definition including the evaluation method, created date, and last modified date.
 
 The evaluation method can either be streaming or batch. Streaming segments are constantly evaluated as data enters the system. Batch segments are evaluated according to a set schedule. 
 
-![](../images/segment-builder/segment-browse-segments.png)
+![](../images/ui/overview/segment-browse-segments.png)
+
+On the top of the page are options to *[!UICONTROL Add all segments to schedule]* and *[!UICONTROL Create segment]*. 
+
+Toggling **[!UICONTROL Add all segments to schedule]** will enable scheduled segmentation. More information on scheduled segmentation can be found in the [scheduled segmentation section of this user guide](#scheduled-segmentation).
+
+Selecting **[!UICONTROL Create segment]** will take you to the Segment Builder. To learn more about creating segments, please read the section on [creating a segment in the user guide](#create-segment).
+
+![](../images/ui/overview/segment-browse-top.png)
 
 The right sidebar contains information about all the segments within the IMS organization, listing the total number of segments, the last evaluation date, the next evaluation date, as well as a breakdown of the segments by evaluation method.
 
-![](../images/segment-builder/segment-browse-segment-info.png)
+![](../images/ui/overview/segment-browse-segment-info.png)
+
+Selecting the segment definition's row provides a summary of the segment definition, including options to either edit or delete the segment, the qualified audience for the segment, the total audience size, in addition to the segment's name, description, evaluation method, created date, and last modified date.
+
+![](../images/ui/overview/segment-browse-details.png)
 
 ## Segment definition details {#segment-details}
 
 To see more details about a specific segment definition, select a segment's name within the **[!UICONTROL Browse]** tab.
 
-The segment details page appears. On the top, there is a summary of the segment definition, including details such as the ID, a description, and the attributes. Additionally, there is information about the qualified audience size as well as destinations the segment is activated for. 
+The segment details page appears. On the top, there is a summary of the segment definition, information about the qualified audience size, as well as destinations the segment is activated for. 
 
-![](../images/segment-builder/segment-details-summary.png)
+![](../images/ui/overview/segment-details-summary.png)
 
 ### Segment summary
 
-explain -> edit segment
+The segment summary section provides information such as the ID, name, description, and details of the attributes. 
+
+Additionally, you are given the option to edit the segment. Selecting **[!UICONTROL Edit segment]** will bring you to the [!DNL Segment Builder]. For more detailed information about using the [!DNL Segment Builder] workspace, please read the [Segment Builder user guide](./segment-builder.md).
 
 ### Total audience in segment
 
@@ -88,19 +102,19 @@ The sample size of the scan depends on the overall number of entities in your pr
 
 More detailed information about each [!DNL Profile] can be seen by selecting the [!DNL Profile] ID. To learn more about a profile's details, please read the [Real-time Customer Profile user guide](../../profile/ui/user-guide.md#profile-detail).
 
-![](../images/segment-builder/segment-details-profiles.png)
+![](../images/ui/overview/segment-details-profiles.png)
 
-## Creating a segment
+## Creating a segment {#create-segment}
 
 Clicking **[!UICONTROL Create segment]** in the top-right corner opens the Segment Builder workspace, where you can begin creating a segment definition.
 
-![](../images/segment-builder/segment-browse-create.png)
+![](../images/ui/overview/segment-browse-create.png)
 
 ### [!DNL Segment Builder] workspace 
 
 [!DNL Segment Builder] provides a rich workspace that allows you to interact with [!DNL Profile] data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. 
 
-![](../images/segment-builder/segment-builder.png)
+![](../images/ui/overview/segment-builder.png)
 
 For more detailed information about using the [!DNL Segment Builder] workspace, please read the [Segment Builder user guide](./segment-builder.md).
 
@@ -112,7 +126,7 @@ On-demand evaluation involves using the API to perform evaluation and build audi
 
 ### Enable scheduled segmentation {#enable-scheduled-segmentation}
 
-Enabling your segment definitions for scheduled evaluation can be done using the UI or the API. In the UI, return to the *[!UICONTROL Browse]* tab within **[!UICONTROL Segments]** and toggle on **[!UICONTROL Evaluate all segments]**. This will cause all segments to be evaluated based on the schedule set by your organization.
+Enabling your segment definitions for scheduled evaluation can be done using the UI or the API. In the UI, return to the *[!UICONTROL Browse]* tab within **[!UICONTROL Segments]** and toggle on **[!UICONTROL Add all segments to schedule]**. This will cause all segments to be evaluated based on the schedule set by your organization.
 
 >[!NOTE]
 >
@@ -120,7 +134,7 @@ Enabling your segment definitions for scheduled evaluation can be done using the
 
 Schedules can currently only be created using the API. For detailed steps on creating, editing, and working with schedules using the API, please follow the tutorial for evaluating and accessing segment results, specifically the section on [scheduled evaluation using the API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
-![](../images/segment-builder/scheduled-segmentation.png)
+![](../images/ui/overview/segment-browse-scheduled.png)
 
 ## Streaming segmentation {#streaming-segmentation}
 
@@ -132,19 +146,19 @@ A query will be automatically evaluated with streaming segmentation if it meets 
 
 | Query type | Details | Example |
 | ---------- | ------- | ------- |
-| Incoming hit | Any segment definition that refers to a single incoming event with no time restriction. | ![](../images/segment-builder/incoming-hit.png) |
-| Incoming hit within a relative time window | Any segment definition that refers to a single incoming event **within the last seven days**. | ![](../images/segment-builder/relative-hit-success.png) |
-| Incoming hit that refers to a profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. | ![](../images/segment-builder/profile-hit.png) |
-| Incoming hit that refers to a profile within a relative time window | Any segment definition that refers to a single incoming event and one or more profile attributes, **within the last seven days**. | ![](../images/segment-builder/profile-relative-success.png) |
-| Multiple events that refer to a profile | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. | ![](../images/segment-builder/event-history-success.png) |
+| Incoming hit | Any segment definition that refers to a single incoming event with no time restriction. | ![](../images/ui/overview/incoming-hit.png) |
+| Incoming hit within a relative time window | Any segment definition that refers to a single incoming event **within the last seven days**. | ![](../images/ui/overview/relative-hit-success.png) |
+| Incoming hit that refers to a profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. | ![](../images/ui/overview/profile-hit.png) |
+| Incoming hit that refers to a profile within a relative time window | Any segment definition that refers to a single incoming event and one or more profile attributes, **within the last seven days**. | ![](../images/ui/overview/profile-relative-success.png) |
+| Multiple events that refer to a profile | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. | ![](../images/ui/overview/event-history-success.png) |
 
 The following section lists segment definition examples that will **not** be enabled for streaming segmentation.
 
-| Query type | Details |
-| ---------- | ------- | 
-| Incoming hit within a relative time window | If the segment definition refers to an incoming event **not** within the **last seven-day period**. For example, within the **last two weeks**. | ![](../images/segment-builder/relative-hit-failure.png) |
-| Incoming hit that refers to a profile within a relative window | The following options will **not** support streaming segmentation:<ul><li>An incoming event **not** within the **last seven-day period**.</li><li>A segment definition that includes [!DNL Adobe Audience Manager (AAM)] segments or traits.</li></ul> | ![](../images/segment-builder/profile-relative-failure.png) |
-| Multiple events that refer to a profile | The following options will **not** support streaming segmentation:<ul><li>An event that does **not** occur within **the last 24 hours**.</li><li>A segment definition that includes Adobe Audience Manager (AAM) segments or traits.</li></ul> | ![](../images/segment-builder/event-history-failure.png) |
+| Query type | Details | Example |
+| ---------- | ------- | ------- |
+| Incoming hit within a relative time window | If the segment definition refers to an incoming event **not** within the **last seven-day period**. For example, within the **last two weeks**. | ![](../images/ui/overview/relative-hit-failure.png) |
+| Incoming hit that refers to a profile within a relative window | The following options will **not** support streaming segmentation:<ul><li>An incoming event **not** within the **last seven-day period**.</li><li>A segment definition that includes [!DNL Adobe Audience Manager (AAM)] segments or traits.</li></ul> | ![](../images/ui/overview/profile-relative-failure.png) |
+| Multiple events that refer to a profile | The following options will **not** support streaming segmentation:<ul><li>An event that does **not** occur within **the last 24 hours**.</li><li>A segment definition that includes Adobe Audience Manager (AAM) segments or traits.</li></ul> | ![](../images/ui/overview/event-history-failure.png) |
 | Multi-entity queries | Multi-entity queries are, as a whole, **not** supported by streaming segmentation. | |
 
 Additionally, some guidelines apply when doing streaming segmentation:
@@ -158,15 +172,15 @@ Additionally, some guidelines apply when doing streaming segmentation:
 
 After creating a streaming-enabled segment, you can view details of that segment. 
 
-![](../images/segment-builder/monitoring-streaming-segment.png)
+![](../images/ui/overview/monitoring-streaming-segment.png)
 
 Specifically, details about the *[!UICONTROL total qualified audience size]* are shown. If a job has been run within the last 24 hours, the **[!UICONTROL Total Audience Size]** from the job is shown, in addition to a line chart for the audience added. Otherwise, the **[!UICONTROL Estimated Audience Size]** is shown, in addition to a visualization trend line.
 
-![](../images/segment-builder/monitoring-streaming-segment-graph.png)
+![](../images/ui/overview/monitoring-streaming-segment-graph.png)
 
 Additional information about the last segment evaluation can be found by clicking the information bubble.
 
-![](../images/segment-builder/info-bubble.png)
+![](../images/ui/overview/info-bubble.png)
 
 For more information about segment definitions, please read the previous section on [segment definition details](#segment-details).
 
@@ -188,24 +202,6 @@ Once you are done creating your segment, the segment will be analyzed by [!DNL D
 
 ## Next steps and additional resources {#next-steps}
 
-Segment Builder provides a rich workflow allowing you to isolate marketable audiences from [!DNL Real-time Customer Profile] data. After reading this guide you should now be able to:
-
-- Create segment definitions using a combination of attributes, events, and existing audiences as building blocks.  
-- Use the rule builder canvas and containers to control the order in which segment rules are executed.
-- View estimates of your prospective audience, allowing you to adjust your segment definitions as required.
-- Enable all segment definitions for scheduled segmentation.
-- Enable specified segment definitions for streaming segmentation.
+The [!DNL Segmentation Service] UI provides a rich workflow allowing you to isolate marketable audiences from [!DNL Real-time Customer Profile] data.
   
-To learn more about [!DNL Segmentation Service], please continue reading the documentation and supplement your learning by watching the videos below. For step-by-step instructions on working with [!DNL Segmentation Service] using the [!DNL Segmentation Service] API, see the [creating audience segments using APIs](../tutorials/create-a-segment.md) tutorial. 
-
->[!WARNING]
->
-> The [!DNL Platform] UI shown in the following videos is out-of-date. Please refer to the documentation above for the latest UI screenshots and functionality.
-
-**Create a segment:**
-
->[!VIDEO](https://video.tv.adobe.com/v/27254?quality=12&learn=on)
-
-**Create a dynamic segment:**
-
->[!VIDEO](https://video.tv.adobe.com/v/27428?quality=12&learn=on)
+To learn more about [!DNL Segmentation Service], please continue reading the documentation. To learn how to use the [!DNL Segmentation Service] API, please read the [[!DNL Segmentation Service] developer guide](../api/overview.md).
