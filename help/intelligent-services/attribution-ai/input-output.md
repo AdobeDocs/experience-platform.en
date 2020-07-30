@@ -68,9 +68,9 @@ See the table below for more details about each of these attribution scores:
 | Incremental (algorithmic) | Incremental score is the amount of marginal impact directly caused by a marketing touchpoint.|
 | First Touch | Rule-based attribution score that assigns all credits to the initial touchpoint on a conversion path. |
 | Last Touch | Rule-based attribution score that assigns all credit to the touchpoint closest to the conversion. |
-| Linear | Rule-based attribution score that assigns equal credit to each touchpoint on a conversion path. | 	_tenantID.attribution_AI_Scores___Form_Submission__1681.touchpointsDetail.element.touchpoint.linear |
-| U-Shaped | Rule-based attribution score that assigns 40% of the credit to the first touchpoint and 40% of the credit to the last touchpoint, with the other touchpoints splitting the remaining 20% equally. | _tenantID.attribution_AI_Scores___Form_Submission__1681.touchpointsDetail.element.touchpoint.uShape |
-| Time Decay | Rule-based attribution score where touchpoints closer to the conversion receive more credit than touchpoints that are farther away in time from the conversion. | _tenantID.attribution_AI_Scores___Form_Submission__1681.touchpointsDetail.element.touchpoint.decayUnits |
+| Linear | Rule-based attribution score that assigns equal credit to each touchpoint on a conversion path. |
+| U-Shaped | Rule-based attribution score that assigns 40% of the credit to the first touchpoint and 40% of the credit to the last touchpoint, with the other touchpoints splitting the remaining 20% equally. |
+| Time Decay | Rule-based attribution score where touchpoints closer to the conversion receive more credit than touchpoints that are farther away in time from the conversion. |
 
 ### Raw Score reference (attribution scores)
 
