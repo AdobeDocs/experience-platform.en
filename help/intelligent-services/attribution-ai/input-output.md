@@ -51,31 +51,107 @@ The columns below are not required but it is recommended that you include them i
 > - You need to provide at least 3 months of data to run a good model.
 > - You need at least 1000 conversions.
 
-Attribution AI requires historical data for model training but the amount of data required is based on two key elements: outcome window and eligible population. 
+Attribution AI requires historical data as input for model training. The data duration required is mainly determined by two key factors: training window and look-back window. Input with shorter training windows are more sensitive to recent trends, while longer training windows help produce more stable and accurate models. It's important to model the objective with historical data that best represents your business goals.
 
-By default, Attribution AI looks for a user to have had activity in the last 120 days if no eligible population definition is provided during the application configuration. Apart from the minimum amount of [!DNL Consumer Experience Event] data that is required, Attribution AI also needs a minimum amount of conversions. Currently, Attribution AI needs a minimum of 1000 conversions.
+The [training window configuration](./user-guide.md#training-window) filters conversion events set to be included for model training based on occurrence time. Currently, the minimum training window is 1 quarter (90 days). The [lookback window](./user-guide.md#lookback-window) provides a time frame indicating how many days prior to the conversion event touchpoints related to this conversion event should be included. These two concepts together determine the amount of input data (measured by days) thats required for an application.
 
-The following examples provided use a simple formula to help you determine the minimum amount of data required. If you have more than the minimum requirement, your model is likely to provide more accurate results. If you have less than the minimum amount required, the model will fail as there is not a sufficient amount of data for model training. 
+By default, Attribution AI defines the training window as the most recent 2 quarters (6 months) and lookback window as 56 days. In other words, the model will take into consideration all of the defined conversion event(s) that have occurred in the past 2 quarters and look for all the touchpoints that have occurred within 56 days prior to the associated conversion event(s).
 
 **Formula**:
 
-Minimum length of data required = eligible population + outcome window
+Minimum length of data required = training window + lookback window
 
->[!NOTE]
-> 90 is the minimum number of days required for eligible population. If this is not provided the default is 120 days.
+>[!TIP]
+> The minimum length of data required for an application with default configurations is: 2 quarters (180 days) + 56 days = 236 days.
 
-Examples : 
+Example : 
 
-- You want to predict whether a customer is likely to purchase a watch in the next 30 days. You also want to score users who have some web activity in the last 60 days. In this case the minimum length of data required = 60 days + 30 days. The eligible population is 60 days and the outcome window is 30 days totaling 90 days.
+- You want to attribute conversion events that have happened within the last 90 days (3 months) and track all the touchpoints that have happened within 4 weeks prior the conversion event. The input data duration should span over the past 90 days + 28 days (4 weeks). The training window is 90 days and the lookback window is 28 days totaling 118 days.
 
-- You want to predict whether the user is likely to purchase a watch in the next 7 days. In this case the minimum length of data required = 120 days + 7 days. The eligible population defaults to 120 days and the outcome window is 7 days totaling 127 days.
+## Attribution AI output data
 
-- You want to predict whether the customer is likely to purchase a watch in the next 7 days. You also want to score users who have some web activity in the last 7 days. In this case the minimum length of data required = 30 days + 7 days. The eligible population requires a minimum of 30 days and the outcome window is 7 days totaling 37 days.
+Attribution AI outputs the following:
 
-Apart from the minimum data required, Attribution AI also works best with recent data. In this use case, Customer AI is doing a prediction for the future based on a user's recent behavioral data. In other words, more recent data is likely to yield a more accurate prediction.
+- [Raw granular scores](#raw-granular-scores)
+- [Aggregated Scores](#aggregated-scores)
+
+In the examples below, a sample CSV output was used for illustration purposes. Here are some of the characteristics of the sample file.
+
+- The file did not have any tokenized events.
+- The file did not have any conversion only events (it did not contain score rows with 0 as a marginal score).
+- Data characteristics:
+  - 368 total sample rows.
+  - At least 8 conversions with 3 distinct channels each.
+  - 151 conversions of conversion type `“Digital_Product_Purchase”`.
+  - 10 distinct touchpoints, EMAIL, SOCIAL_LINKEDIN, ADS_GOOGLE, SOCIAL_OTHER, ADS_OTHER, SOCIAL_TWITTER , LANDINGPAGE, SOCIAL_FB, ADS_BING, PRINT.
+  - Conversions and touchpoints range over 8 and 9 months respectively.
+  - Rows are ordered by `id`, `conversion_timestamp` and `touchpoint_timestamp`.
+
+**Example output schema:**
+
+![](./images/input-output/schema_output.gif)
+
+### Raw granular scores {#raw-granular-scores}
+
+Attribution AI outputs attribution scores in the most granular level possible so that you can slice and dice the scores by any score column. To view these scores in the UI, read the section on [viewing raw score paths](#raw-score-path), to download the scores via the API visit the [downloading scores in Attribution AI](./download-scores.md) document.
+
+>[!NOTE] 
+>
+> You are able to see any desired reporting column from the input dataset in the score output dataset only if either of the following is true:
+> - The reporting column is included in the configuration page either as part of touchpoint or conversion definition configuration.
+> - The reporting column is included in additional score dataset columns.
+
+The following table outlines the schema makeup for raw scores:
+
+| Column Name (DataType) | Nullable | Description |
+| --- | --- | --- |
+| timestamp (DateTime) | False | The time when an conversion event or observation occurred. <br> **Example:** 2020-06-09T00:01:51.000Z |
+identityMap (Map) | True | identityMap of the user similar to the CEE XDM format. |
+eventType (String) | True | The primary event type for this time-series record. <br> **Example:** "Order", "Purchase", "Visit" |
+eventMergeId (String) | True | An ID to correlate or merge multiple [!DNL Experience Events] together that are essentially the same event or should be merged. This is intended to be populated by the data producer prior to ingestion. <br> **Example:** 575525617716-0-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
+_id (String) | False | A unique identifier for the time-series event. <br> **Example:** 4461-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
+_tenantId (Object) | False | The top level object container corrisponding to your tentant ID. <br> **Example:** _atsdsnrmmsv2 |
+ your_schema_name (Object) | False | Score row with  conversion event all the touchpoint events associated with it and their metadatas. <br> **Example:** Attribution AI Scores -  Model Name__2020 |
+segmentation (String) | True | Conversion segment such as geo segmentation which the model is built against. In case of the absence of segments, segment is same as conversionName. <br> **Example:** ORDER_US |
+conversionName (String) | True | Name of the conversion that was configured during setup. <br> **Example:** Order, Lead, Visit |
+conversion (Object) | False | Conversion metadata columns. |
+dataSource (String) | True | Globally unique identification of a data source. <br> **Example:** Adobe Analytics |
+eventSource (String) | True | The source when the actual event happened. <br> **Example:** Adobe.com |
+eventType (String) | True | The primary event type for this time-series record. <br> **Example:** Order |
+geo (String) | True | The geographic location where the conversion was delivered `placeContext.geo.countryCode`. <br> **Example:** US |
+priceTotal (Double) | True | Revenue obtained through the conversion <br> **Example:** 99.9 |
+product (String) | True | The XDM identifier of the product itself. <br> **Example:** RX 1080 ti |
+productType (String) | True | The display name for the product as presented to the user for this product view. <br> **Example:** Gpus |
+quantity (Integer) | True | Quantity purchased during the conversion. <br> **Example:** 1 1080 ti |
+receivedTimestamp (DateTime) | True | Received timestamp of the conversion. <br> **Example:** 2020-06-09T00:01:51.000Z |
+skuId (String) | True | Stock keeping unit (SKU), the unique identifier for a product defined by the vendor. <br> **Example:** MJ-03-XS-Black |
+timestamp (DateTime) | True | Timestamp of the conversion. <br> **Example:** 2020-06-09T00:01:51.000Z |
+passThrough (Object) | True | Additional Score dataset Columns specified by user while configuring the model. |
+commerce_order_purchaseCity (String) | True | Additional Score dataset Column. <br> **Example:** city : San Jose |
+customerProfile (Object) | False | Identity details of the user used to build the model. |
+identity (Object) | False | Contains the details of the user used to build the model such as `id` and `namespace`. |
+id (String) | True | Identity Id of the user such as cookie id or aaid or mcid etc. <br> **Example:** 17348762725408656344688320891369597404 |
+namespace (String) | True | Identity namespace used to build the paths and thereby the model. <br> **Example:** aaid |
+touchpointsDetail (Object Array) | True | The list of touchpoint details leading to the conversion ordered by touchpoint occurrence or timestamp. |
+touchpointName (String) | True | Name of the touchpoint that was configured during setup. <br> **Example:** PAID_SEARCH_CLICK |
+scores (Object) | True | Touchpoint contribution to this conversion as score. |
 
 
-## Attribution AI algorithmic scores output data
+
+### Viewing raw score paths (UI) {#raw-score-path}
+
+You can view the path to your raw scores in the UI. Start by selecting **[!UICONTROL Schemas]** in the Platform UI then search for and select your attribution AI scores schema from within the *[!UICONTROL Browse]* tab.
+
+![Pick your schema](./images/input-output/schemas_browse.png)
+
+Next, select a field within the *[!UICONTROL Structure]* window of the UI, the *[!UICONTROL Field properties]* tab opens. Within *[!UICONTROL Field properties]* is the *[!UICONTROL Path]* field that maps to your raw scores.
+
+![Pick a Schema](./images/input-output/field_properties.png)
+
+
+### Aggregated attribution scores {#aggregated-scores}
+
+Aggregated scores can be downloaded in CSV format from the Platform UI if the date range is less than 30 days.
 
 Attribution AI supports two categories of attribution scores, algorithmic and rule-based scores.
 
@@ -97,7 +173,7 @@ See the table below for more details about each of these attribution scores:
 | U-Shaped | Rule-based attribution score that assigns 40% of the credit to the first touchpoint and 40% of the credit to the last touchpoint, with the other touchpoints splitting the remaining 20% equally. |
 | Time Decay | Rule-based attribution score where touchpoints closer to the conversion receive more credit than touchpoints that are farther away in time from the conversion. |
 
-### Raw Score reference (attribution scores)
+**Raw Score reference (attribution scores):**
 
 The table below maps the attribution scores to the raw scores. If you wish to download your raw scores, visit the [downloading scores in Attribution AI](./download-scores.md) documentation.
 
@@ -111,21 +187,9 @@ Linear | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.linear 
 U-Shaped | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.uShape |
 Time Decay | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.decayUnits |
 
-### Viewing raw score paths (UI) {#raw-score-path}
-
-You can view the path to your raw scores in the UI. Start by selecting **[!UICONTROL Schemas]** in the Platform UI then search for and select your attribution AI scores schema from within the *[!UICONTROL Browse]* tab.
-
-![Pick your schema](./images/input-output/schemas_browse.png)
-
-Next, select a field within the *[!UICONTROL Structure]* window of the UI, the *[!UICONTROL Field properties]* tab opens. Within *[!UICONTROL Field properties]* is the *[!UICONTROL Path]* field that maps to your raw scores.
-
-![Pick a Schema](./images/input-output/field_properties.png)
-
 ### Aggregated Scores
 
-Aggregated Scores can be downloaded in CSV format from the Platform UI if the date range is less than 30 days. See the table below for more details about each of these aggregate columns.
-
-![](./images/input-output/schema_output.gif)
+Aggregated scores can be downloaded in CSV format from the Platform UI if the date range is less than 30 days. See the table below for more details about each of these aggregate columns.
 
 | Column Name | Constraint | Nullable | Description |
 | --- | --- | --- | --- |
@@ -144,7 +208,7 @@ action (String) | ENUM | False | The `mediaAction` property is used to provide a
 campaign_group (String) | User defined | True | Name of the campaign group where multiple campaigns are grouped together like '50%_DISCOUNT'. <br> **Example**: COMMERCIAL |
 campaign_name (String) | User defined | True | Name of the campaign used to identify marketing campaign like '50%_DISCOUNT_USA' or '50%_DISCOUNT_ASIA'. <br> **Example**: Thanksgiving Sale |
 
-### Raw Score reference (aggregated)
+**Raw Score reference (aggregated):**
 
 The table below maps the aggregated scores to the raw scores. If you wish to download your raw scores, visit the [downloading scores in Attribution AI](./download-scores.md) documentation. To view the raw score paths from within the UI, visit the section on [viewing raw score paths](#raw-score-path) within this document.
 
