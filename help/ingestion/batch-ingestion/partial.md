@@ -55,10 +55,8 @@ To create a new batch, follow the steps in the [batch ingestion developer guide]
 
 ```json
 {
-    ...
     "enableErrorDiagnostics": true,
     "partialIngestionPercentage": 5
-    ...
 }
 ```
 
@@ -231,10 +229,8 @@ A successful response returns HTTP status 200 with detailed information about th
     "af838510-2233-11ea-acf0-f3edfcded2d2": {
         "status": "success",
         "tags": {
-            ...
             "acp_enableErrorDiagnostics": true,
             "acp_partialIngestionPercent": 5
-            ...
         },
         "relatedObjects": [
             {
@@ -273,17 +269,15 @@ A successful response returns HTTP status 200 with detailed information about th
 
 **Response with errors**
 
-If the batch has one or more errors and has error diagnostics enabled, the status will be "success" with more information about the errors provided both within the response and in a downloadable error file.
+If the batch has one or more errors and has error diagnostics enabled, the status will be `success` with more information about the errors provided both within the response and in a downloadable error file.
 
 ```json
 {
     "01E8043CY305K2MTV5ANH9G1GC": {
         "status": "success",
         "tags": {
-            ...
             "acp_enableErrorDiagnostics": true,
             "acp_partialIngestionPercent": 5
-            ...
         },
         "relatedObjects": [
             {
@@ -338,7 +332,7 @@ If the batch has one or more errors and has error diagnostics enabled, the statu
 
 >[!NOTE]
 >
->If error diagnostics are not available, the following error message will appear:
+>If error diagnostics are not available, the following error message will appear instead:
 > ```json
 > {
 >     "errors": [{
