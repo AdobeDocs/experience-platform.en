@@ -110,9 +110,9 @@ To set up one-time ingestion, select the frequency drop down arrow and select **
 
 >[!TIP] **[!UICONTROL Interval]** and **[!UICONTROL Backfill]** are not visible during a one-time ingestion.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-once.png)
-
 Once you have provided appropriate values to the schedule, select **[!UICONTROL Next]**.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-once.png)
 
 ## Provide dataflow details
 
