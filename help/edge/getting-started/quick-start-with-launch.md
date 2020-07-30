@@ -23,6 +23,9 @@ The Experience Platform Edge Network takes data as XDM. XDM is a data format tha
 
 The following video is intended to support you in creating a schema, dataset, and streaming source connector for your [!DNL Web SDK] data.
 
+
+>[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
+
 Log in to Launch and install the `AEP Web SDK` extension. When you install the SDK, you are prompted to configure the extension. Enter the Config ID you requested above. The extension automatically fills in your Organization ID.
 
 
