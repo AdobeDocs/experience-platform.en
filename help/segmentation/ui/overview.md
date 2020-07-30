@@ -198,7 +198,7 @@ The following video is intended to support your understanding of streaming segme
 
 Once you are done creating your segment, the segment will be analyzed by [!DNL Data Governance] to ensure there are no policy violations within the segment. For details on DULE and policy violations, please refer to the [data usage label overview](../../data-governance/labels/overview.md).
 
-![](../images/segment-builder/segment-dule-policy-violations.png)
+![](../images/ui/overview/segment-dule-policy-violations.png)
 
 ## Next steps and additional resources {#next-steps}
 
