@@ -12,12 +12,6 @@ The following document outlines the different input and outputs utilized in [!DN
 
 ## [!DNL Attribution AI] input data
 
->[!IMPORTANT]
->
-> The minimum amount of data that is needed for Attribution AI to function is as follows:
-> - You need to provide at least 3 months of data to run a good model.
-> - You need at least 1000 conversions.
-
 [!DNL Attribution AI] uses [!DNL Consumer Experience Event] data to calculate algorithmic scores. For more details on [!DNL Consumer Experience Event], please refer to the [Prepare data for use in Intelligent Services documentation](../data-preparation.md).
 
 Not all the columns in the [!DNL Consumer Experience Event] (CEE) schema are mandatory for Attribution AI. 
@@ -48,6 +42,37 @@ The columns below are not required but it is recommended that you include them i
 | web.webInteraction |
 | web.webPageDetails |
 | xdm:productListItems |
+
+### Historical data
+
+>[!IMPORTANT]
+>
+> The minimum amount of data that is needed for Attribution AI to function is as follows:
+> - You need to provide at least 3 months of data to run a good model.
+> - You need at least 1000 conversions.
+
+Attribution AI requires historical data for model training but the amount of data required is based on two key elements: outcome window and eligible population. 
+
+By default, Attribution AI looks for a user to have had activity in the last 120 days if no eligible population definition is provided during the application configuration. Apart from the minimum amount of [!DNL Consumer Experience Event] data that is required, Attribution AI also needs a minimum amount of conversions. Currently, Attribution AI needs a minimum of 1000 conversions.
+
+The following examples provided use a simple formula to help you determine the minimum amount of data required. If you have more than the minimum requirement, your model is likely to provide more accurate results. If you have less than the minimum amount required, the model will fail as there is not a sufficient amount of data for model training. 
+
+**Formula**:
+
+Minimum length of data required = eligible population + outcome window
+
+>[!NOTE]
+> 90 is the minimum number of days required for eligible population. If this is not provided the default is 120 days.
+
+Examples : 
+
+- You want to predict whether a customer is likely to purchase a watch in the next 30 days. You also want to score users who have some web activity in the last 60 days. In this case the minimum length of data required = 60 days + 30 days. The eligible population is 60 days and the outcome window is 30 days totaling 90 days.
+
+- You want to predict whether the user is likely to purchase a watch in the next 7 days. In this case the minimum length of data required = 120 days + 7 days. The eligible population defaults to 120 days and the outcome window is 7 days totaling 127 days.
+
+- You want to predict whether the customer is likely to purchase a watch in the next 7 days. You also want to score users who have some web activity in the last 7 days. In this case the minimum length of data required = 30 days + 7 days. The eligible population requires a minimum of 30 days and the outcome window is 7 days totaling 37 days.
+
+Apart from the minimum data required, Attribution AI also works best with recent data. In this use case, Customer AI is doing a prediction for the future based on a user's recent behavioral data. In other words, more recent data is likely to yield a more accurate prediction.
 
 
 ## Attribution AI algorithmic scores output data
