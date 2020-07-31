@@ -9,7 +9,7 @@ topic: queries
 
 ## Sample API Calls
 
-The following sections walk through calls you can make using the `/queries` endpoint in the Query Service API. Each call includes the general API format, a sample request showing required headers, and a sample response.
+The following sections walk through calls you can make using the `/queries` endpoint in the [!DNL Query Service] API. Each call includes the general API format, a sample request showing required headers, and a sample response.
 
 ### Retrieve a list of queries
 
@@ -293,10 +293,10 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
  -d '{
    "op": "cancel"  
  }'
- ```
+```
 
- | Property | Description |
- | -------- | ----------- |
+| Property | Description |
+| -------- | ----------- |
 | `op` | In order to cancel the query, you must set the op parameter with the value `cancel `. |
 
 **Response**

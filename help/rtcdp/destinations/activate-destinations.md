@@ -50,7 +50,7 @@ To activate data to destinations, you must have successfully [connected a destin
    ![Loyalty ID as identity](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
 
 
-   Select `Email_LC_SHA256` as target identity if you hashed customer email addresses on data ingestion into Adobe Experience Platform, according to Facebook [email hashing requirements](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements). <br> Select `Email` as target identity if the email addresses you are using are not hashed. Adobe Real-time CDP will hash the email addresses to comply with Facebook requirements.
+   Select `Email_LC_SHA256` as target identity if you hashed customer email addresses on data ingestion into Adobe Experience Platform, according to [!DNL Facebook] [email hashing requirements](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements). <br> Select `Email` as target identity if the email addresses you are using are not hashed. Adobe Real-time CDP will hash the email addresses to comply with [!DNL Facebook] requirements.
    
    ![identity mapping after filling in fields](/help/rtcdp/destinations/assets/identity-mapping.png)
 
@@ -106,11 +106,11 @@ Check the respective advertising destination that you are activating your data t
 
 ### Social network destinations
 
-For Facebook, a successful activation means that a Facebook custom audience would be created programmatically in [Facebook Ads Manager](https://www.facebook.com/adsmanager/manage/). Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated segments.
+For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [Facebook Ads Manager](https://www.facebook.com/adsmanager/manage/). Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated segments.
 
 >[!TIP]
 >
->The integration between Adobe Real-time CDP and Facebook supports historical audience backfills. All historical segment qualifications get sent to Facebook when you activate the segments to the destination.
+>The integration between Adobe Real-time CDP and [!DNL Facebook] supports historical audience backfills. All historical segment qualifications get sent to [!DNL Facebook] when you activate the segments to the destination.
 
 ## Disable activation {#disable-activation}
 

@@ -7,14 +7,14 @@ topic: guide
 
 # Profile system jobs endpoint (Delete requests)
 
-Adobe Experience Platform enables you to ingest data from multiple sources and build robust profiles for individual customers. Data ingested into Platform is stored in the Data Lake as well as the Real-time Customer Profile data store. Occasionally it may be necessary to delete a dataset or batch from the Profile Store in order to remove data that is no longer needed or was added in error. This requires using the Real-time Customer Profile API to create a Profile system job, also known as a "delete request", that can also be modified, monitored, or removed if required.
+Adobe Experience Platform enables you to ingest data from multiple sources and build robust profiles for individual customers. Data ingested into [!DNL Platform] is stored in the [!DNL Data Lake] as well as the [!DNL Real-time Customer Profile] data store. Occasionally it may be necessary to delete a dataset or batch from the Profile Store in order to remove data that is no longer needed or was added in error. This requires using the [!DNL Real-time Customer Profile] API to create a [!DNL Profile] system job, also known as a "[!DNL delete request]", that can also be modified, monitored, or removed if required.
 
 >[!NOTE]
->If you are trying to delete datasets or batches from the Data Lake, please visit the [Catalog Service overview](../../catalog/home.md) for instructions.
+>If you are trying to delete datasets or batches from the [!DNL Data Lake], please visit the [Catalog Service overview](../../catalog/home.md) for instructions.
 
 ## Getting started
 
-The API endpoint used in this guide is part of the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The API endpoint used in this guide is part of the [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 ## View delete requests
 
@@ -96,10 +96,10 @@ Initiating a new delete request is done through a POST request to the `/systems/
 
 ### Delete a dataset
 
-In order to delete a dataset, the dataset ID must be included in the body of the POST request. This action will delete ALL data for a given dataset. Experience Platform allows you to delete datasets based on both record and time series schemas.
+In order to delete a dataset, the dataset ID must be included in the body of the POST request. This action will delete ALL data for a given dataset. [!DNL Experience Platform] allows you to delete datasets based on both record and time series schemas.
 
 >[!CAUTION]
-> When attempting to delete a Profile-enabled dataset using the Experience Platform UI, the dataset is disabled for ingestion but will not be deleted until a delete request is created using the API. For more information, see the [appendix](#appendix) to this document.
+> When attempting to delete a [!DNL Profile]-enabled dataset using the [!DNL Experience Platform] UI, the dataset is disabled for ingestion but will not be deleted until a delete request is created using the API. For more information, see the [appendix](#appendix) to this document.
 
 **API format**
 
@@ -154,7 +154,7 @@ In order to delete a batch, the batch ID must be included in the body of the POS
 >[!NOTE]
 > The reason you cannot delete batches for datasets based on record schemas is because record type dataset batches overwrite previous records and therefore cannot be "undone" or deleted. The only way to remove the impact of erroneous batches for datasets based on record schemas is to re-ingest the batch with the correct data in order to overwrite the incorrect records. 
 
-For more information on record and time series behavior, please review the [section on XDM data behaviors](../../xdm/home.md#data-behaviors) in the XDM System overview.
+For more information on record and time series behavior, please review the [section on XDM data behaviors](../../xdm/home.md#data-behaviors) in the [!DNL XDM System] overview.
 
 **API format**
 
@@ -270,7 +270,7 @@ Once the delete request status is `"COMPLETED"` you can confirm that the data ha
 
 ## Remove a delete request
 
-Experience Platform allows you to delete a previous request, which may be useful for a number of reasons including if the delete job did not complete or became stuck in the processing stage. In order to remove a delete request, you can perform a DELETE request to the `/system/jobs` endpoint and include the ID of the delete request that you wish to remove to the request path.
+[!DNL Experience Platform] allows you to delete a previous request, which may be useful for a number of reasons including if the delete job did not complete or became stuck in the processing stage. In order to remove a delete request, you can perform a DELETE request to the `/system/jobs` endpoint and include the ID of the delete request that you wish to remove to the request path.
 
 **API format**
 
@@ -299,19 +299,19 @@ A successful delete request returns HTTP Status 200 (OK) and an empty response b
 
 ## Next Steps
 
-Now that you know the steps involved in deleting datasets and batches from the Profile Store within Experience Platform, you can safely delete data that has been added erroneously or that your organization no longer needs. Please be mindful that a delete request cannot be undone, therefore you should only delete data that you are confident you do not need now and will not need in the future.
+Now that you know the steps involved in deleting datasets and batches from the [!DNL Profile Store] within [!DNL Experience Platform], you can safely delete data that has been added erroneously or that your organization no longer needs. Please be mindful that a delete request cannot be undone, therefore you should only delete data that you are confident you do not need now and will not need in the future.
 
 ## Appendix {#appendix}
 
-The following information is supplemental to the act of deleting a dataset from the Profile store.
+The following information is supplemental to the act of deleting a dataset from the [!DNL Profile Store].
 
-### Deleting a dataset using the Experience Platform UI
+### Deleting a dataset using the [!DNL Experience Platform] UI
 
-When using the Experience Platform user interface to delete a dataset that has been enabled for Profile, a dialog opens asking, "Are you sure you want to delete this dataset from the Experience Data Lake? Use the 'profile systems jobs' API to delete this dataset from the Profile Service."
+When using the [!DNL Experience Platform] user interface to delete a dataset that has been enabled for [!DNL Profile], a dialog opens asking, "Are you sure you want to delete this dataset from the [!DNL Experience Data Lake]? Use the 'p[!DNL rofile systems jobs]' API to delete this dataset from the [!DNL Profile Service]."
 
-Clicking **Delete** in the UI disables the dataset for ingestion, but DOES NOT automatically delete the dataset in the backend. In order to permanently delete the dataset, a delete request must be created manually using the steps in this guide for [creating a delete request](#create-a-delete-request).
+Clicking **[!UICONTROL Delete]** in the UI disables the dataset for ingestion, but DOES NOT automatically delete the dataset in the backend. In order to permanently delete the dataset, a delete request must be created manually using the steps in this guide for [creating a delete request](#create-a-delete-request).
 
-The following image shows the warning when attempting to delete a Profile-enabled dataset using the UI.
+The following image shows the warning when attempting to delete a [!DNL Profile]-enabled dataset using the UI.
 
 ![](../images/delete-profile-dataset.png)
 

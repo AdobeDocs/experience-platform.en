@@ -7,7 +7,7 @@ topic: developer guide
 
 # Marketing actions
 
-A marketing action, in the context of the Adobe Experience Platform Data Governance, is an action that an [!DNL Experience Platform] data consumer takes, for which there is a need to check for violations of data usage policies.
+A marketing action, in the context of the Adobe Experience Platform [!DNL Data Governance], is an action that an [!DNL Experience Platform] data consumer takes, for which there is a need to check for violations of data usage policies.
 
 Working with marketing actions in the API requires you to use the `/marketingActions` endpoint.
 
