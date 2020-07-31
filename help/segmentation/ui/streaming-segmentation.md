@@ -17,7 +17,7 @@ Streaming segmentation on [!DNL Adobe Experience Platform] allows customers to d
 
 >[!NOTE]
 >
->In order for streaming segmentation to work, the customer will need to enable scheduled segmentation for the organization. For details on enabling scheduled segmentation, please refer to [the streaming segmentation section in the Segmentation user guide](./overview.md#scheduled-segmentation).
+>In order for streaming segmentation to work, you will need to enable scheduled segmentation for the organization. For details on enabling scheduled segmentation, please refer to [the streaming segmentation section in the Segmentation user guide](./overview.md#scheduled-segmentation).
 
 A query will be automatically evaluated with streaming segmentation if it meets any of the following criteria:
 
@@ -51,11 +51,11 @@ After creating a streaming-enabled segment, you can view details of that segment
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
-Specifically, details about the *[!UICONTROL total qualified audience size]* are shown. If a job has been run within the last 24 hours, the **[!UICONTROL Total Audience Size]** from the job is shown, in addition to a line chart for the audience added. Otherwise, the **[!UICONTROL Estimated Audience Size]** is shown, in addition to a visualization trend line.
+Specifically, details about the *[!UICONTROL total qualified audience size]* are shown. If a job has been run within the last 24 hours, the **[!UICONTROL Total qualified audience size]** from the job is shown, in addition to a line chart for the audience added. Otherwise, the **[!UICONTROL Total estimated audience size]** is shown, in addition to a visualization trend line.
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
-Additional information about the last segment evaluation can be found by clicking the information bubble.
+Additional information about the last segment evaluation can be found by selecting the information bubble.
 
 ![](../images/ui/streaming-segmentation/info-bubble.png)
 

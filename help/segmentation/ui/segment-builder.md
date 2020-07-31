@@ -41,7 +41,7 @@ You can then easily drag and drop [!DNL ExperienceEvents] and [!UICONTROL Event 
   
 ![](../images/ui/segment-builder/events-eventTypes.png)  
 
-By default, only populated schema fields from your data store are shown. This includes [!UICONTROL Event Types]. If the [!UICONTROL Event Types] list is not visible, or you are only able to select "[!UICONTROL Any]" as an [!UICONTROL Event Type], click the gear icon next to *[!UICONTROL Fields]*, then select **[!UICONTROL Show full XDM schema]** under *[!UICONTROL Available Fields]*. Click the gear icon again to return to the *[!UICONTROL Fields]* tab and you should now be able to view multiple [!UICONTROL Event Types] and schema fields, regardless of whether they contain data or not.
+By default, only populated schema fields from your data store are shown. This includes [!UICONTROL Event Types]. If the [!UICONTROL Event Types] list is not visible, or you are only able to select "[!UICONTROL Any]" as an [!UICONTROL Event Type], select the gear icon next to *[!UICONTROL Fields]*, then select **[!UICONTROL Show full XDM schema]** under *[!UICONTROL Available Fields]*. Select the gear icon again to return to the *[!UICONTROL Fields]* tab and you should now be able to view multiple [!UICONTROL Event Types] and schema fields, regardless of whether they contain data or not.
 
 ![](../images/ui/segment-builder/show-populated.png)
 
@@ -49,7 +49,7 @@ By default, only populated schema fields from your data store are shown. This in
 
 The **[!UICONTROL Audiences]** tab lists all audiences imported from external sources, such as Adobe Audience Manager, as well as audiences created within [!DNL Experience Platform].
 
-On the [!UICONTROL Audiences] tab, you can see all of the available sources as a group of folders. As you click into these folders, available sub-folders and audiences can be seen. Additionally, you can click on the folder icon (as shown in the far-right image) in order to view the folder structure (a check mark denotes the folder you are currently in) and easily navigate back through folders by clicking on the name of a folder in the tree.
+On the *[!UICONTROL Audiences]* tab, you can see all of the available sources as a group of folders. As you select the folders, available sub-folders and audiences can be seen. Additionally, you can select the folder icon (as shown in the far-right image) in order to view the folder structure (a check mark denotes the folder you are currently in) and easily navigate back through folders by selecting the name of a folder in the tree.
 
 You can hover over the &#9432; next to an audience to view information about the audience including its ID, description, and the folder hierarchy to locate the audience.
 
@@ -93,17 +93,17 @@ Code view provides a button that allows you to copy the value of the segment to 
 
 Segment rules are evaluated in the order they are listed. Containers allow control over the order of execution through the use of nested queries.
 
-Once you have added at least one tile to the rule builder canvas, you can begin to add containers. To create a new container, click the ellipses (...) in the top-right corner of the tile, then click **[!UICONTROL Add container]**. 
+Once you have added at least one tile to the rule builder canvas, you can begin to add containers. To create a new container, select the ellipses (...) in the top-right corner of the tile, then select **[!UICONTROL Add container]**. 
 
 ![](../images/ui/segment-builder/add-container.png)
 
-A new container appears as the child of the first container, but you can adjust the hierarchy by dragging and moving the containers. The default behavior of a container is to "[!UICONTROL Include]" the attribute, event, or audience provided. You can set the rule to "[!UICONTROL Exclude]" profiles that match the container criteria by clicking **[!UICONTROL Include]** in the top-left corner of the tile and selecting "[!UICONTROL Exclude]".
+A new container appears as the child of the first container, but you can adjust the hierarchy by dragging and moving the containers. The default behavior of a container is to "[!UICONTROL Include]" the attribute, event, or audience provided. You can set the rule to "[!UICONTROL Exclude]" profiles that match the container criteria by selecting **[!UICONTROL Include]** in the top-left corner of the tile and selecting "[!UICONTROL Exclude]".
 
-A child container can also be extracted and added inline to the parent container by clicking "unwrap container" on the child container. Click the ellipses (...) in the top-right corner of the child container to access this option.
+A child container can also be extracted and added inline to the parent container by selecting "unwrap container" on the child container. Select the ellipses (...) in the top-right corner of the child container to access this option.
 
 ![](../images/ui/segment-builder/include-exclude.png)
 
-Once you click **[!UICONTROL Unwrap container]** the child container is removed and the criteria appear inline. 
+Once you select **[!UICONTROL Unwrap container]** the child container is removed and the criteria appear inline. 
 
 >[!NOTE]
 >
@@ -117,7 +117,7 @@ Once you click **[!UICONTROL Unwrap container]** the child container is removed 
 
 You can select a merge policy that matches your marketing purpose for this audience or use the default merge policy provided by [!DNL Platform]. You can create multiple merge policies unique to your organization, including creating your own default merge policy. For step-by-step instructions on creating merge policies for your organization, please see the tutorial on [working with merge policies using the UI](../../profile/ui/merge-policies.md). 
 
-To select a merge policy for your segment definition, click the gear icon on the *[!UICONTROL Fields]* tab, then use the *[!UICONTROL Merge Policy] dropdown menu* to select the merge policy that you wish to use.
+To select a merge policy for your segment definition, select the gear icon on the *[!UICONTROL Fields]* tab, then use the *[!UICONTROL Merge Policy] dropdown menu* to select the merge policy that you wish to use.
 
 ![](../images/ui/segment-builder/merge-policy-selector.png)
 
