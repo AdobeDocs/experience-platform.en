@@ -85,20 +85,20 @@ Follow the steps below to edit existing activation flows in Real-time CDP:
 
 ## Verify that segment activation was successful {#verify-activation}
 
-### Email marketing destinations and cloud storage destinations
+### Email marketing destinations and cloud storage destinations {#esp-and-cloud-storage}
 
 For email marketing destinations and cloud storage destinations, Adobe Real-time CDP creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. Expect a new file to be created in your storage location every day. The file format is:
-`<destination name>id<destination id><timestamp-yyyymmddhhmmss>`
+`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 The files you would receive on three consecutive days could look like this:
 
 ```
-Salesforce_id3544_20191120110000.csv
-Salesforce_id3544_20191121123000.csv
-Salesforce_id3544_20191122124530.csv
+Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv
+Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200409052200.csv
+Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200410061130.csv
 ```
 
-The presence of these files in your storage location is confirmation of successful activation.
+The presence of these files in your storage location is confirmation of successful activation. To understand how the exported files are structured, you can [download a sample .csv file](/help/rtcdp/destinations/assets/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). This sample file includes the profile attributes `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear`, and `personalEmail.address`.
 
 ### Advertising destinations
 

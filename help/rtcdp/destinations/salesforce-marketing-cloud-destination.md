@@ -46,7 +46,11 @@ When [activating segments](/help/rtcdp/destinations/activate-destinations.md) to
 
 ## Exported data {#exported-data}
 
-For [!DNL Salesforce Marketing Cloud] destinations, Adobe Real-time CDP creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. Expect a new file to be created in your storage location every day. The file format is:
+For [!DNL Salesforce Marketing Cloud] destinations, Adobe Real-time CDP creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](/help/rtcdp/destinations/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial. 
+
+<!--
+
+Expect a new file to be created in your storage location every day. The file format is:
 
 `Salesforce_Marketing_Cloud_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
@@ -57,6 +61,8 @@ Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_202004100
 ```
 
 The presence of these files in your storage location is confirmation of successful activation. To understand how the exported files are structured, you can [download a sample .csv file](/help/rtcdp/destinations/assets/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). This sample file includes the profile attributes `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear`, and `personalEmail.address`.
+
+-->
 
 ## Set up data import into [!DNL Salesforce Marketing Cloud] {#import-data-into-salesforce}
 
