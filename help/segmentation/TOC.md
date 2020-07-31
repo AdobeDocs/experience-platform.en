@@ -20,6 +20,8 @@ user-guide-title: Adobe Experience Platform Segmentation Service Help
     - [Streaming segmentation](api/streaming-segmentation.md)
 - Segmentation UI {#ui}
     - [Overview](ui/overview.md)
+    - [Segment Builder](ui/segment-builder.md)
+    - [Streaming segmentation](ui/streaming-segmentation.md)
 - [Honoring opt-outs](honoring-opt-outs.md)
 - [Multi-entity segmentation](multi-entity-segmentation.md)
 - Profile Query Language {#pql}
