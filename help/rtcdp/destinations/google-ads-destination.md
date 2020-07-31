@@ -59,3 +59,6 @@ Before creating the [!DNL Google Ads] destination in Adobe Real-time CDP, you mu
 
 For instructions on how to activate segments to [!DNL Google Ads], see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md).
 
+## Exported data 
+
+To verify if data has been exported successfully to the [!DNL Google Ads] destination, check your [!DNL Google Ads] account. If activation was successful, audiences are populated in your account.
