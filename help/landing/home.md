@@ -31,9 +31,9 @@ The Adobe Experience Platform is designed to work optimally in the **latest vers
 
 | Operating system | Supported browsers |
 |---|---|
-| Mac OS X | Google Chrome, Safari, Firefox |
-| Windows 10 | Google Chrome, Microsoft Edge, Firefox |
-| Windows 7 | Google Chrome, Firefox |
+| **Mac OS X** | Google Chrome, Safari, Firefox |
+| **Windows 10** | Google Chrome, Microsoft Edge, Firefox |
+| **Windows 7** | Google Chrome, Firefox |
  
 These operating systems and browsers are not supported:
 
