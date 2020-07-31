@@ -61,3 +61,7 @@ Before creating the [!DNL Google Ad Manager] destination in Adobe Real-time CDP,
 ## Activate segments to [!DNL Google Ad Manager]
 
 For instructions on how to activate segments to [!DNL Google Ad Manager], see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md).
+
+## Exported data 
+
+To verify if data has been exported successfully to the [!DNL Google Ad Manager] destination, check your [!DNL Google Ad Manager] account. If activation was successful, audiences are populated in your account.

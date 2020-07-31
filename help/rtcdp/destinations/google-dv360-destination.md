@@ -59,3 +59,7 @@ Before creating the [!DNL Google Display & Video 360] destination in Adobe Real-
 ## Activate segments to [!DNL Google Display & Video 360]
 
 For instructions on how to activate segments to [!DNL Google Display & Video 360], see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md).
+
+## Exported data 
+
+To verify if data has been exported successfully to the [!DNL Google Display & Video 360] destination, check your [!DNL Google Display & Video 360] account. If activation was successful, audiences are populated in your account.
