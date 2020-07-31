@@ -167,7 +167,7 @@ Lastly, type in the country code in the *Enter Field Value* dropdown.
 
 ### Training window {#training-window}
 
-To ensure that you get the most accurate model possible, it is important to train your model with historical data that represents your business. By default, the model is trained using 2 quarters (6 months) of data. Select the dropdown to change the default. You can choose to train with one to four quarters of data (3-12 months).
+To ensure that you get the most accurate model possible, it is important to train your model with historical data that represents your business. By default, the model is trained using 2 quarters (6 months) of conversion events data. Select the dropdown to change the default. You can choose to train with one to four quarters of data (3-12 months).
 
 >[!NOTE]
 >

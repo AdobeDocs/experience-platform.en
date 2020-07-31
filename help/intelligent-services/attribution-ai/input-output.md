@@ -73,7 +73,7 @@ Example :
 Attribution AI outputs the following:
 
 - [Raw granular scores](#raw-granular-scores)
-- [Aggregated Scores](#aggregated-scores)
+- [Aggregated Scores](#aggregated-attribution-scores)
 
 In the examples below, a sample CSV output was used for illustration purposes. Here are some of the characteristics of the sample file.
 
@@ -134,8 +134,8 @@ id (String) | True | Identity Id of the user such as cookie id or aaid or mcid e
 namespace (String) | True | Identity namespace used to build the paths and thereby the model. <br> **Example:** aaid |
 touchpointsDetail (Object Array) | True | The list of touchpoint details leading to the conversion ordered by touchpoint occurrence or timestamp. |
 touchpointName (String) | True | Name of the touchpoint that was configured during setup. <br> **Example:** PAID_SEARCH_CLICK |
-scores (Object) | True | Touchpoint contribution to this conversion as score. |
-
+scores (Object) | True | Touchpoint contribution to this conversion as score. For more information on the scores produced within this object, see the [aggregated attribtuion scores](#aggregated-attribution-scores) section. |
+touchPoint (Object) | True | Touchpoint Metadata. For more information on the scores produced within this object, see the [aggregated scores](#aggregated-scores) section. |
 
 
 ### Viewing raw score paths (UI) {#raw-score-path}
@@ -149,7 +149,7 @@ Next, select a field within the *[!UICONTROL Structure]* window of the UI, the *
 ![Pick a Schema](./images/input-output/field_properties.png)
 
 
-### Aggregated attribution scores {#aggregated-scores}
+### Aggregated attribution scores {#aggregated-attribution-scores}
 
 Aggregated scores can be downloaded in CSV format from the Platform UI if the date range is less than 30 days.
 
@@ -187,7 +187,7 @@ Linear | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.linear 
 U-Shaped | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.uShape |
 Time Decay | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.decayUnits |
 
-### Aggregated Scores
+### Aggregated Scores {#aggregated-scores}
 
 Aggregated scores can be downloaded in CSV format from the Platform UI if the date range is less than 30 days. See the table below for more details about each of these aggregate columns.
 

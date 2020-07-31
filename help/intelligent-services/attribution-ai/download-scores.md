@@ -252,6 +252,8 @@ The response downloads the file you requested in in your current directory. In t
 
 ![Terminal](./images/download-scores/terminal-output.png)
 
+The scores downloaded will be in parquet format and hence either need spark-shell or parquet reader to view the scores. For raw score viewing, you can use parquet-tools https://github.com/apache/parquet-mr/tree/master/parquet-tools. They can analyze the data with spark.
+
 ## Next Steps
 
 This document outlined the steps required for downloading Attribution AI scores. You can now continue to browse the other [Intelligent Services](../home.md) and guides that are offered.
