@@ -133,7 +133,7 @@ id (String) | True | Identity ID of the user such as cookie ID or AAID or MCID e
 namespace (String) | True | Identity namespace used to build the paths and thereby the model. <br> **Example:** aaid |
 touchpointsDetail (Object Array) | True | The list of touchpoint details leading to the conversion ordered by touchpoint occurrence or timestamp. |
 touchpointName (String) | True | Name of the touchpoint that was configured during setup. <br> **Example:** PAID_SEARCH_CLICK |
-scores (Object) | True | Touchpoint contribution to this conversion as score. For more information on the scores produced within this object, see the [aggregated attribtuion scores](#aggregated-attribution-scores) section. |
+scores (Object) | True | Touchpoint contribution to this conversion as score. For more information on the scores produced within this object, see the [aggregated attribution scores](#aggregated-attribution-scores) section. |
 touchPoint (Object) | True | Touchpoint Metadata. For more information on the scores produced within this object, see the [aggregated scores](#aggregated-scores) section. |
 
 ### Viewing raw score paths (UI) {#raw-score-path}
