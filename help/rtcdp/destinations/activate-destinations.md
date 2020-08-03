@@ -15,7 +15,7 @@ To activate data to destinations, you must have successfully [connected a destin
 
 ## Activate data {#activate-data}
 
-1. In **[!UICONTROL Destinations > Browse]**, select the destination where you want to activate your segments.
+1. In **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**, select the destination where you want to activate your segments.
 2. Click the name of the destination. This takes you to the Activate flow.
     ![activate-flow](/help/rtcdp/destinations/assets/activate-flow.png)
     Note that if an activation flow already exists for a destination, you can see the segments that are currently being sent to the destination. Select **[!UICONTROL Edit activation]** in the right rail and follow the steps below to modify the activation details.
