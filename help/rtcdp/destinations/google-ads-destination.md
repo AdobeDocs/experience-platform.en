@@ -44,7 +44,7 @@ Before creating the [!DNL Google Ads] destination in Adobe Real-time CDP, you mu
 
 ## Create destination
 
-1. In **[!UICONTROL Connections > Destinations]**, select [!DNL Google Ads], and select **[!UICONTROL Create destination]**.
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL Google Ads], and select **[!UICONTROL Create destination]**.
     ![Connect Google Ads destination](/help/rtcdp/destinations/assets/google-2-destination.png)
 
 2. In the **Setup** step of the create destination workflow, fill in the [!UICONTROL Basic Information] for the destination. <br>
