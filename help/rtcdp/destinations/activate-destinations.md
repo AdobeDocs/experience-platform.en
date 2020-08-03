@@ -16,13 +16,18 @@ To activate data to destinations, you must have successfully [connected a destin
 ## Activate data {#activate-data}
 
 1. In **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**, select the destination where you want to activate your segments.
-2. Click the name of the destination. This takes you to the Activate flow.
-    ![activate-flow](/help/rtcdp/destinations/assets/activate-flow.png)
-    Note that if an activation flow already exists for a destination, you can see the segments that are currently being sent to the destination. Select **[!UICONTROL Edit activation]** in the right rail and follow the steps below to modify the activation details.
+2. Click the name of the destination. This takes you to the Activate workflow.
+    ![activate-flow](assets/activate-flow.png)
+    Note that if an activation workflow already exists for a destination, you can see the segments that are currently being sent to the destination. Select **[!UICONTROL Edit activation]** in the right rail and follow the steps below to modify the activation details.
 3. Select **[!UICONTROL Activate]**;
-4. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to the destination.
-    ![segments-to-destination](/help/rtcdp/destinations/assets/email-select-segments.png)
-5. *Conditional*. This step differs depending on the type of destination where you are activating your segments. <br> For *email marketing destinations* and *cloud storage destinations*, on the **[!UICONTROL Select Attributes]** page, select **[!UICONTROL Add new field]** and select the attributes that you want to send to the destination.
+4. **[!UICONTROL Select segments]** step <br> Applies to: All destinations <br> In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to the destination.
+    ![segments-to-destination](assets/email-select-segments.png)
+
+5. **[!UICONTROL Configure]** step <br> Applies to: Email marketing destinations and cloud storage destinations <br> This step is optional. In the **[!UICONTROL Configure]** step, you can configure the file names for each segment you are exporting. Select **[!UICONTROL Next]** to use the default file names. File length limitations??
+    ![segments-to-destination](/assets/email-select-segments.png)
+
+
+6. **[!UICONTROL Select attributes]** step <br> Applies to: email marketing destinations and cloud storage destinations <br> On the **[!UICONTROL Select Attributes]** page, select **[!UICONTROL Add new field]** and select the attributes that you want to send to the destination.
    We recommend one of the attributes to be a [unique identifier](/help/rtcdp/destinations/email-marketing-destinations.md#identity) from your union schema. For more information about mandatory attributes, see Identity in the [Email marketing destinations](/help/rtcdp/destinations/email-marketing-destinations.md#identity) article. 
    
     >[!NOTE] 
@@ -31,48 +36,49 @@ To activate data to destinations, you must have successfully [connected a destin
     >* The fields are used in the segment definition.
     >* The fields are configured as projected attributes for the target destination.
     >
-    > Consider the screenshot below. If, for example, the field `person.name.first.Name` had certain data usage labels that conflict with the destination's marketing use case, you would be shown a data usage policy violation in the review step (step 7). For more information, see [Data Governance in Real-time CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) 
+    > Consider the screenshot below. If, for example, the field `person.name.first.Name` had certain data usage labels that conflict with the destination's marketing use case, you would be shown a data usage policy violation in the review step (step 7). For more information, see [Data Governance in Real-time CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations).
 
-   ![destination-attributes](/help/rtcdp/destinations/assets/select-attributes-step.png)
+   ![destination-attributes](assets/select-attributes-step.png)
 
-    <br>&nbsp; 
 
-   For *social destinations*, in the **[!UICONTROL Identity mapping]** step, you can select source attributes to map as target identities in the destination. This step is either optional or mandatory, depending on which primary identity you are using in the schema. <br>&nbsp; 
+7. **[!UICONTROL Identity mapping]** step <br> Applies to: social destinations and Google Customer Match advertising destination <br>For *social destinations*, in the **[!UICONTROL Identity mapping]** step, you can select source attributes to map as target identities in the destination. This step is either optional or mandatory, depending on which primary identity you are using in the schema. <br>&nbsp; 
 
    *Email address as primary identity*: If you are using email address as primary identity in your schema, you can skip the Identity mapping step, as shown below:
 
-   ![Email address as identity](/help/rtcdp/destinations/assets/email-as-identity.gif)
+   ![Email address as identity](assets/email-as-identity.gif)
 
     <br>&nbsp; 
 
     *Another ID as primary identity*: If you are using another ID, such as *Rewards ID* or *Loyalty ID*, as primary identity in your schema, you need to manually map the email address from your identity schema as a target identity in the social destination, as shown below:
 
-   ![Loyalty ID as identity](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
+   ![Loyalty ID as identity](assets/rewardsid-as-identity.gif)
 
 
    Select `Email_LC_SHA256` as target identity if you hashed customer email addresses on data ingestion into Adobe Experience Platform, according to [!DNL Facebook] [email hashing requirements](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements). <br> Select `Email` as target identity if the email addresses you are using are not hashed. Adobe Real-time CDP will hash the email addresses to comply with [!DNL Facebook] requirements.
    
-   ![identity mapping after filling in fields](/help/rtcdp/destinations/assets/identity-mapping.png)
+   ![identity mapping after filling in fields](assets/identity-mapping.png)
 
-6. On the **[!UICONTROL Segment schedule]** page, you can see the start date for sending data to the destination, as well as the frequency of sending data to the destination.
+8. On the **[!UICONTROL Segment schedule]** page, you can see the start date for sending data to the destination, as well as the frequency of sending data to the destination.
+
+9.  On the **[!UICONTROL Segment schedule]** page, you can see the start date for sending data to the destination, as well as the frequency of sending data to the destination.
 
     >[!IMPORTANT]
     >
     >For social destinations, you must select the origin of your audience in this step. You can proceed to the next step only after selecting one of the options in the image below.
 
-    ![choose data origin](/help/rtcdp/destinations/assets/choose-data-origin.png) 
+    ![choose data origin](assets/choose-data-origin.png) 
 
-7. On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
+10. On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
     >[!IMPORTANT]
     >
     >In this step, Real-time CDP checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](/help/rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
  
- ![confirm-selection](/help/rtcdp/destinations/assets/data-policy-violation.png)
+ ![data policy violation](assets/data-policy-violation.png)
 
   If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination. 
 
- ![confirm-selection](/help/rtcdp/destinations/assets/confirm-selection.png)
+ ![confirm-selection](assets/confirm-selection.png)
 
 
 
@@ -98,7 +104,7 @@ Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_202004090
 Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200410061130.csv
 ```
 
-The presence of these files in your storage location is confirmation of successful activation. To understand how the exported files are structured, you can [download a sample .csv file](/help/rtcdp/destinations/assets/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). This sample file includes the profile attributes `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear`, and `personalEmail.address`.
+The presence of these files in your storage location is confirmation of successful activation. To understand how the exported files are structured, you can [download a sample .csv file](assets/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). This sample file includes the profile attributes `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear`, and `personalEmail.address`.
 
 ### Advertising destinations
 
