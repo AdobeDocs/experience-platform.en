@@ -15,7 +15,7 @@ To send segment data to [!DNL Oracle Responsys], you must first [connect to the 
 
 ## Connect destination {#connect-destination}
 
-1. In **[!UICONTROL Connections > Destinations]**, select [!DNL Oracle Responsys], then select **[!UICONTROL Connect destination]**.
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL Oracle Responsys], then select **[!UICONTROL Connect destination]**.
 
     ![Connect to Responsys](/help/rtcdp/destinations/assets/connect-oracle-responsys.png)
 

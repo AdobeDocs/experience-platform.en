@@ -15,7 +15,7 @@ To send segment data to [!DNL Oracle Eloqua], you must first [connect the destin
 
 ## Connect to destination {#connect-destination}
 
-1. In **[!UICONTROL Connections > Destinations]**, select [!DNL Oracle Eloqua], then select **[!UICONTROL Connect destination]**.
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL Oracle Eloqua], then select **[!UICONTROL Connect destination]**.
 
     ![Connect to Eloqua](/help/rtcdp/destinations/assets/connect-oracle-eloqua.png)
 
