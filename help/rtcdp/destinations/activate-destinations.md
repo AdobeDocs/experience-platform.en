@@ -15,33 +15,15 @@ To activate data to destinations, you must have successfully [connected a destin
 
 ## Activate data {#activate-data}
 
-1. In **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**, select the destination where you want to activate your segments.
-2. Click the name of the destination. This takes you to the Activate workflow.
+1. In the Adobe Real-time CDP user interface, navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**, and select the destination where you want to activate your segments.
+2. Click the name of the destination. This takes you to the activation workflow.
     ![activate-flow](assets/activate-flow.png)
-    Note that if an activation workflow already exists for a destination, you can see the segments that are currently being sent to the destination. Select **[!UICONTROL Edit activation]** in the right rail and follow the steps below to modify the activation details.
+    Note that if an activation workflow already exists for a destination, you can see the segments that are currently being activated to the destination. Select **[!UICONTROL Edit activation]** in the right rail and follow the steps below to modify the activation details.
 3. Select **[!UICONTROL Activate]**;
-4. **[!UICONTROL Select segments]** step <br> Applies to: All destinations <br> In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to the destination.
+4. **[!UICONTROL Select segments]** step <br> Applies to: All destinations <br> In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to activate to the destination.
     ![segments-to-destination](assets/email-select-segments.png)
 
-5. **[!UICONTROL Configure]** step <br> Applies to: Email marketing destinations and cloud storage destinations <br> This step is optional. In the **[!UICONTROL Configure]** step, you can configure the file names for each segment you are exporting. Select **[!UICONTROL Next]** to use the default file names. File length limitations??
-    ![segments-to-destination](/assets/email-select-segments.png)
-
-
-6. **[!UICONTROL Select attributes]** step <br> Applies to: email marketing destinations and cloud storage destinations <br> On the **[!UICONTROL Select Attributes]** page, select **[!UICONTROL Add new field]** and select the attributes that you want to send to the destination.
-   We recommend one of the attributes to be a [unique identifier](/help/rtcdp/destinations/email-marketing-destinations.md#identity) from your union schema. For more information about mandatory attributes, see Identity in the [Email marketing destinations](/help/rtcdp/destinations/email-marketing-destinations.md#identity) article. 
-   
-    >[!NOTE] 
-    > 
-    >If any data usage labels have been applied to certain fields within a dataset (rather than the entire dataset), enforcement of those field-level labels on activation occurs under the following conditions:
-    >* The fields are used in the segment definition.
-    >* The fields are configured as projected attributes for the target destination.
-    >
-    > Consider the screenshot below. If, for example, the field `person.name.first.Name` had certain data usage labels that conflict with the destination's marketing use case, you would be shown a data usage policy violation in the review step (step 7). For more information, see [Data Governance in Real-time CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations).
-
-   ![destination-attributes](assets/select-attributes-step.png)
-
-
-7. **[!UICONTROL Identity mapping]** step <br> Applies to: social destinations and Google Customer Match advertising destination <br>For *social destinations*, in the **[!UICONTROL Identity mapping]** step, you can select source attributes to map as target identities in the destination. This step is either optional or mandatory, depending on which primary identity you are using in the schema. <br>&nbsp; 
+5. **[!UICONTROL Identity mapping]** step <br> Applies to: social destinations and Google Customer Match advertising destination <br>For *social destinations*, in the **[!UICONTROL Identity mapping]** step, you can select source attributes to map as target identities in the destination. This step is either optional or mandatory, depending on which primary identity you are using in the schema. <br>&nbsp; 
 
    *Email address as primary identity*: If you are using email address as primary identity in your schema, you can skip the Identity mapping step, as shown below:
 
@@ -58,9 +40,31 @@ To activate data to destinations, you must have successfully [connected a destin
    
    ![identity mapping after filling in fields](assets/identity-mapping.png)
 
-8. On the **[!UICONTROL Segment schedule]** page, you can see the start date for sending data to the destination, as well as the frequency of sending data to the destination.
+6. **[!UICONTROL Configure]** step <br> Applies to: Email marketing destinations and cloud storage destinations <br> This step is optional. In the **[!UICONTROL Configure]** step, you can configure the file names for each segment you are exporting. For example, you could edit your exported file names to distinguish between different campaigns.  <br> Select **[!UICONTROL Next]** to use the default file names or click the pencil icon to open a modal window and edit the file names. Note that file names are limited to 255 characters.
+    ![configure file name](/assets/activation-workflow-configure-step.png)
+    
+    In the file name editor, you can select different components to add to the file name. The destination name and segment ID cannot be removed from file names. In addition to those, you can add the following:
+    **[!UICONTROL Segment name]**: You can append the segment name to the file name.
+    **[!UICONTROL Date and time]**: Select between adding a MMDDYYYY_HHMMSS or a Unix 10-digit timestamp of the time that the files are generated.
+    **[!UICONTROL Custom text]**: Add custom text to the file names.
+    Select **[!UICONTROL Apply changes]** to confirm your selection. 
 
-9.  On the **[!UICONTROL Segment schedule]** page, you can see the start date for sending data to the destination, as well as the frequency of sending data to the destination.
+    ![edit file name options](/assets/activate-workflow-configure-step-2.png)
+
+7. **[!UICONTROL Select attributes]** step <br> Applies to: email marketing destinations and cloud storage destinations <br> On the **[!UICONTROL Select Attributes]** page, select **[!UICONTROL Add new field]** and select the attributes that you want to send to the destination.
+   We recommend one of the attributes to be a [unique identifier](/help/rtcdp/destinations/email-marketing-destinations.md#identity) from your union schema. For more information about mandatory attributes, see Identity in the [Email marketing destinations](/help/rtcdp/destinations/email-marketing-destinations.md#identity) article. 
+   
+    >[!NOTE] 
+    > 
+    >If any data usage labels have been applied to certain fields within a dataset (rather than the entire dataset), enforcement of those field-level labels on activation occurs under the following conditions:
+    >* The fields are used in the segment definition.
+    >* The fields are configured as projected attributes for the target destination.
+    >
+    > Consider the screenshot below. If, for example, the field `person.name.first.Name` had certain data usage labels that conflict with the destination's marketing use case, you would be shown a data usage policy violation in the review step (step 7). For more information, see [Data Governance in Real-time CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations).
+
+   ![destination-attributes](assets/select-attributes-step.png)
+
+8.  **[!UICONTROL Segment Schedule]** (**[!UICONTROL Scheduling]**) step <br> Applies to: all destinations <br> On the **[!UICONTROL Segment schedule]** page, you can see the start date for sending data to the destination, as well as the frequency of sending data to the destination.
 
     >[!IMPORTANT]
     >
@@ -68,7 +72,7 @@ To activate data to destinations, you must have successfully [connected a destin
 
     ![choose data origin](assets/choose-data-origin.png) 
 
-10. On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
+9.  **[!UICONTROL Review]** step <br> Applies to: all destinations <br> On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
     >[!IMPORTANT]
     >
@@ -79,7 +83,6 @@ To activate data to destinations, you must have successfully [connected a destin
   If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination. 
 
  ![confirm-selection](assets/confirm-selection.png)
-
 
 
 ## Edit activation {#edit-activation}
