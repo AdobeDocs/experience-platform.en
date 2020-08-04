@@ -91,7 +91,7 @@ The following PUT request updates the existing labels for a dataset, as well as 
 
 >[!IMPORTANT]
 >
->When making PUT requests to the Dataset API, an `If-Match` header must be included that indicates the current version of the dataset. In order to prevent data collisions, the service will only update the dataset entity if the included version string matches.
+>When making PUT requests to the Dataset API, an `If-Match` header must be included that indicates the current version of the dataset. In order to prevent data collisions, the service will only update the dataset entity if the included `If-Match` string matches the `etag` header that is returned in the response.
 >
 >To find the current version of a dataset, perform a [lookup request for that dataset's labels](#look-up). The value is provided in the `etag` header returned in the response.
 
@@ -164,7 +164,7 @@ The following request removes the labels for the dataset specified in the path.
 
 >[!IMPORTANT]
 >
->When making DELETE requests to the Dataset API, an `If-Match` header must be included that indicates the current version of the dataset. In order to prevent data collisions, the service will only update the dataset entity if the included version string matches.
+>When making DELETE requests to the Dataset API, an `If-Match` header must be included that indicates the current version of the dataset. In order to prevent data collisions, the service will only update the dataset entity if the included `If-Match` string matches the `etag` header that is returned in the response.
 >
 >To find the current version of a dataset, perform a [lookup request for that dataset's labels](#look-up). The value is provided in the `etag` header returned in the response.
 
