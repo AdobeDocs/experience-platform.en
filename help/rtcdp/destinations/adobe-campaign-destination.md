@@ -15,7 +15,7 @@ To send segment data to Adobe Campaign, you must first [connect the destination]
 
 ## Connect destination {#connect-destination}
 
-1. In **[!UICONTROL Connections > Destinations]**, select Adobe Campaign, then select **[!UICONTROL Connect destination]**.
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select Adobe Campaign, then select **[!UICONTROL Connect destination]**.
 
     ![Connect to adobe campaign](/help/rtcdp/destinations/assets/connect-adobe-campaign.png)
 

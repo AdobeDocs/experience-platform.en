@@ -15,7 +15,7 @@ To send segment data to [!DNL Salesforce Marketing Cloud], you must first [conne
 
 ## Connect destination {#connect-destination}
 
-1. In **[!UICONTROL Connections > Destinations]**, select [!DNL Salesforce Marketing Cloud], then select **[!UICONTROL Connect destination]**.
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL Salesforce Marketing Cloud], then select **[!UICONTROL Connect destination]**.
 
     ![Connect to Salesforce](/help/rtcdp/destinations/assets/connect-salesforce.png)
 
