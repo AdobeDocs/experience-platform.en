@@ -87,16 +87,23 @@ PUT /datasets/{DATASET_ID}/labels
 
 **Request**
 
-The following POST request adds a series of labels to the dataset, as well as a specific field within that dataset. The fields provided in the payload are the same as would be required for a PUT request.
+The following PUT request updates the existing labels for a dataset, as well as a specific field within that dataset. The fields provided in the payload are the same as would be required for a POST request.
+
+>[!IMPORTANT]
+>
+>When making PUT requests to the Dataset API, an `If-Match` header must be included that indicates the current version of the dataset. In order to prevent data collisions, the service will only update the dataset entity if the included version number matches.
+>
+>To find the current version of a dataset, perform a [lookup request for that dataset using the Catalog API](../../catalog/api/look-up-object.md). The value is provided under the `version` property in the response body.
 
 ```shell
-curl -X POST \
+curl -X PUT \
   'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
+  -H 'If-Match: 1.0.0' \
   -d '{
         "labels": [ "C1", "C2", "C3", "I1", "I2" ],
         "optionalLabels": [
@@ -153,13 +160,22 @@ DELETE /datasets/{DATASET_ID}/labels
 
 **Request**
 
+The following request removes the labels for the dataset specified in the path.
+
+>[!IMPORTANT]
+>
+>When making DELETE requests to the Dataset API, an `If-Match` header must be included that indicates the current version of the dataset. In order to prevent data collisions, the service will only update the dataset entity if the included version number matches.
+>
+>To find the current version of a dataset, perform a [lookup request for that dataset using the Catalog API](../../catalog/api/look-up-object.md). The value is provided under the `version` property in the response body.
+
 ```shell
 curl -X DELETE \
   'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'If-Match: 1.0.0'
 ```
 
 **Response**
