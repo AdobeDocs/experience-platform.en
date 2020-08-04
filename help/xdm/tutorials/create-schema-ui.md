@@ -43,21 +43,19 @@ The *Schema Editor* appears. This is the canvas upon which you will compose your
 
 ![Schema Editor](../images/tutorials/create-schema/schema_editor.png)
 
-On the right-hand side of the editor are *[!UICONTROL Schema Properties]* where you can provide a name for the schema (using the **[!UICONTROL Display Name]** field). Once a name is entered, the canvas updates to reflect the new name of the schema.
+On the right-hand side of the editor are *[!UICONTROL Schema Properties]* where you can provide a display name and optional description for the schema. Once a name is entered, the canvas updates to reflect the new name of the schema.
 
 ![Schema Canvas](../images/tutorials/create-schema/name_schema.png)
 
 There are several important considerations to make when deciding on a name for your schema:
 
-* Schema names should be short and descriptive so that the schema can be easily found in the library later. 
+* Schema names should be short and descriptive so that the schema can be easily found later. 
 * Schema names must be unique, meaning it should also be specific enough that it will not be reused in the future. For example, if your organization had separate loyalty programs for different brands, it would be wise to name your schema "Brand A Loyalty Members" to make it easy to distinguish from other loyalty-related schemas you might define later.
-* Optionally, you can provide additional information about the schema using the **[!UICONTROL Description]** field.
+* You can also use the schema description to provide any additional contextual information regarding the schema.
 
 This tutorial composes a schema to ingest data related to the members of a loyalty program, therefore the schema is named "Loyalty Members".
 
 ## Add a mixin {#mixin}
-
-Now that a class has been assigned, the *Composition* section contains a third sub-section: *[!UICONTROL Mixins]*. 
 
 You can now begin to add fields to your schema by adding mixins. A mixin is a group of one or more fields that describe a particular concept. This tutorial uses mixins to describe the members of the loyalty program and capture key information such as name, birthday, phone number, address, and more.
 
@@ -65,25 +63,25 @@ To add a mixin, click **Add** in the *Mixins* sub-section.
 
 ![](../images/tutorials/create-schema/add_mixin_button.png)
 
-The *[!UICONTROL Add Mixin]* dialog appears. Mixins are only intended for use with specific classes, therefore the list of mixins shows only those compatible with the class you selected (in this case, the [!DNL XDM Individual Profile] class).
+The *[!UICONTROL Add Mixin]* dialog appears. Each mixin is only intended for use with a specific class, therefore the dialog only lists mixins that are compatible with the class you selected (in this case, the [!DNL XDM Individual Profile] class).
 
-Selecting the radio button next to a mixin will give you the option to **[!UICONTROL Preview Mixin Structure]**. Select the "Profile Person Details" mixin, then click **[!UICONTROL Add Mixin]**.
+Selecting a mixin from the list causes it to appear in the right-hand rail. In addition, an icon appears on the right-hand side of the selected mixin which allows you to preview the structure of the fields it provides. Select the **[!UICONTROL Profile Person Details]** mixin, then click **[!UICONTROL Add Mixin]**.
 
 ![](../images/tutorials/create-schema/add_mixin_person_details.png)
 
-The schema canvas reappears. The *[!UICONTROL Mixins]* section now lists the "[!UICONTROL Profile Person Details]" mixin and the *[!UICONTROL Structure]* section includes the fields contributed by the mixin. 
+The schema canvas reappears. The *[!UICONTROL Mixins]* section now lists the "[!UICONTROL Profile Person Details]" mixin and the *[!UICONTROL Structure]* section includes the fields contributed by the mixin. You can select the mixin's name under the *[!UICONTROL Mixins]* section to highlight the specific fields its provides within the canvas.
 
 ![](../images/tutorials/create-schema/person_details_structure.png)
 
-This mixin contributes several fields under the top-level name "person" with the data type "Person". This group of fields describes information about an individual, including name, birth date, and gender. 
+This mixin contributes several fields under the top-level name "[!UICONTROL person]" with the data type "[!UICONTROL Person]". This group of fields describes information about an individual, including name, birth date, and gender. 
 
 >[!NOTE]
 >
 >Remember that fields may use scalar types (such as string, integer, array, or date) as their data type, as well as any "data type" (a group of fields representing a common concept) in the [!DNL Schema Registry]. 
 
-Notice that the "[!UICONTROL name]" field has a data type of "[!UICONTROL Person Name]", meaning it too describes a common concept and contains name-related sub-fields such as first name, last name, and full name.
+Notice that the "[!UICONTROL name]" field has a data type of "[!UICONTROL Full name]", meaning it too describes a common concept and contains name-related sub-fields such as first name, last name, courtesy title, and suffix.
 
-Click on different fields within the canvas to see any additional fields they contribute to the schema structure.
+Select the different fields within the canvas to see any additional fields they contribute to the schema structure.
 
 ## Add another mixin {#mixin-2}
 
