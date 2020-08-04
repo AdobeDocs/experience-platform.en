@@ -71,10 +71,10 @@ The *[!UICONTROL Scheduling]* step appears, allowing you to configure an ingesti
 
 | Field | Description |
 | --- | --- |
-| Frequency | Selectable frequencies include Once, Minute, Hour, Day, and Week. |
+| Frequency | Selectable frequencies include `Once`, `Minute`, `Hour`, `Day`, and `Week`. |
 | Interval | An integer that sets the interval for the selected frequency. |
-| Start time | A UTC timestamp indicating when the very first ingestion is set to occur |
-| Backfill | A boolean value that determines what data is initially ingested. If *Backfill* is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If *Backfill* is disabled, only the files that are loaded in between the first run of ingestion and the *Start time* will be ingested. Files loaded prior to *Start time* will not be ingested. |
+| Start time | A UTC timestamp indicating when the very first ingestion is set to occur. |
+| Backfill | A boolean value that determines what data is initially ingested. If *[!UICONTROL Backfill]* is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If *Backfill* is disabled, only the files that are loaded in between the first run of ingestion and the *[!UICONTROL Start time]* will be ingested. Files loaded prior to *[!UICONTROL Start time]* will not be ingested. |
 | Delta Column | An option with a filtered set of source schema fields of type, date, or time. This field is used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column. |
 
 Dataflows are designed to automatically ingest data on a scheduled basis. Start by selecting the ingestion frequency. Next, set the interval to designate the period between two flow runs. The interval's value should be a non-zero integer and should be set to greater than or equal to 15.
@@ -110,9 +110,9 @@ Provide values for the dataflow and select **[!UICONTROL Next]**.
 
 The *[!UICONTROL Review]* step appears, allowing you to review your new dataflow before it is created. Details are grouped within the following categories:
 
-- *Connection*: Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
-- *Assign dataset & map fields*: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
-- *Scheduling*: Shows the active period, frequency, and interval of the ingestion schedule.
+- *[!UICONTROL Connection]*: Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
+- *[!UICONTROL Assign dataset & map fields]*: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
+- *[!UICONTROL Scheduling]*: Shows the active period, frequency, and interval of the ingestion schedule.
 
 Once you have reviewed your dataflow, click **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
 
