@@ -7,11 +7,9 @@ topic: tutorials
 
 # Create a schema using the [!DNL Schema Editor]
 
-The [!DNL Schema Registry] provides a user interface and RESTful API from which you can view and manage all resources in the Adobe Experience Platform [!DNL Schema Library]. The [!DNL Schema Library] contains resources made available to you by Adobe, Experience Platform partners, and vendors whose applications you use, as well as resources that you define and save to the [!DNL Schema Registry].
+The [!DNL Schema Registry] provides a user interface and RESTful API from which you can view and manage all resources within the [!DNL Schema Library] in Adobe Experience Platform. The [!DNL Schema Library] contains resources made available to you by Adobe, Experience Platform partners, and vendors whose applications you use, as well as resources that you define and save to the [!DNL Schema Registry].
 
-This tutorial covers the steps for creating a schema using the Schema Editor within [!DNL Experience Platform]. If you would prefer to compose a schema using the Schema Registry API, please begin by reading the [Schema Registry developer guide](../api/getting-started.md) before attempting the tutorial [creating a schema using the API](create-schema-api.md).
-
-This tutorial also includes steps to [define a new class](#create-new-class) that you could then use to compose a schema.
+This tutorial covers the steps for creating a schema using the Schema Editor within [!DNL Experience Platform]. The appendix to this tutorial also includes steps on how to define a new class to base your schemas on. If you prefer to compose a schema using the Schema Registry API instead, start by reading the [Schema Registry developer guide](../api/getting-started.md) before attempting the tutorial on [creating a schema using the API](create-schema-api.md).
 
 ## Getting started
 
@@ -21,29 +19,31 @@ This tutorial requires a working understanding of the various aspects of Adobe E
 * [Basics of schema composition](../schema/composition.md): An overview of XDM schemas and their building blocks, including classes, mixins, data types, and fields.
 * [!DNL Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
-This tutorial requires you to have access to [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding. 
-
 ## Browse existing schemas in the Schemas workspace {#browse}
 
-The Schemas workspace within [!DNL Experience Platform] provides a visualization of the [!DNL Schema Library], allowing you to view and manage all of the schemas available to you, as well as compose new ones. The workspace also includes the Schema Editor, the canvas on which you will compose a schema throughout this tutorial.
+The [!UICONTROL Schemas] workspace within [!DNL Experience Platform] provides a visualization of the [!DNL Schema Library], allowing you to view manage the schemas available for your organization. The workspace also includes the Schema Editor, the canvas on which you can compose a schema throughout this tutorial.
 
-After logging into [!DNL Experience Platform], click **[!UICONTROL Schemas]** in the left-hand navigation and you will be taken to the Schemas workspace. You will see a list of schemas (a representation of the [!DNL Schema Library]) where you can view, manage, and customize all schemas available to you. The list includes the name, type, class, and behavior (record or time-series) on which the schema is based, as well as the date and time the schema was last modified. 
+After logging into [!DNL Experience Platform], click **[!UICONTROL Schemas]** in the left-hand navigation to open the [!UICONTROL Schemas] workspace. The [!UICONTROL Browse] tab displays a list of schemas (a representation of the [!DNL Schema Library]) which you can can view and customize. The list includes the name, type, class, and behavior (record or time-series) on which the schema is based, as well as the date and time the schema was last modified. 
 
-Click the filter icon next to the Search bar to use filtering capabilities for all resources in the registry, including classes, mixins, and data types.
+Click the filter icon next to the search bar to use filtering capabilities for all resources in the registry, including classes, mixins, and data types. You can also filter based on whether resources are owned by Adobe or your organization, and if they have been enabled for use in [!DNL Real-time Customer Profile]. 
 
 ![View the Schema Library](../images/tutorials/create-schema/schemas_filter.png)
 
 ## Create and name a schema {#create}
 
-To begin composing a schema, click **[!UICONTROL Create Schema]** in the top right corner of the Schemas workspace. 
+To begin composing a schema, click **[!UICONTROL Create Schema]** in the top right corner of the [!UICONTROL Schemas] workspace. A dropdown menu appears, giving you the option to choose between the core classes [!UICONTROL XDM Individual Profile] and [!UICONTROL XDM ExperienceEvent], or to browse other available classes. For the purposes of this tutorial, select **[!UICONTROL XDM Individual Profile]**.
 
 ![Create Schema button](../images/tutorials/create-schema/create_schema_button.png)
 
-The *Schema Editor* appears. This is the canvas upon which you will compose your schema. When you arrive at the editor, an "Untitled Schema" in the *Structure* section of the canvas is automatically created for you to begin customizing.
+The *Schema Editor* appears. This is the canvas upon which you will compose your schema. When you arrive at the editor, an "Untitled Schema" in the *[!UICONTROL Structure]* section of the canvas is automatically created, along with the standard fields included in all schemas based on the [!UICONTROL XDM Individual Profile] class. The assigned class for the schema is listed under *[!UICONTROL Class]* in *[!UICONTROL Composition]* section.
+
+>[!NOTE]
+>
+>You can [change the class of a schema](#change-class) at any point during the initial composition process before the schema has been saved, but this should be done with extreme caution. Mixins are only compatible with certain classes, and therefore changing the class will reset the canvas and any fields you have added. 
 
 ![Schema Editor](../images/tutorials/create-schema/schema_editor.png)
 
-On the right-hand side of the editor are *Schema Properties* where you can provide a name for the schema (using the **[!UICONTROL Display Name]** field). Once a name is entered, the canvas updates to reflect the new name of the schema.
+On the right-hand side of the editor are *[!UICONTROL Schema Properties]* where you can provide a name for the schema (using the **[!UICONTROL Display Name]** field). Once a name is entered, the canvas updates to reflect the new name of the schema.
 
 ![Schema Canvas](../images/tutorials/create-schema/name_schema.png)
 
@@ -54,32 +54,6 @@ There are several important considerations to make when deciding on a name for y
 * Optionally, you can provide additional information about the schema using the **[!UICONTROL Description]** field.
 
 This tutorial composes a schema to ingest data related to the members of a loyalty program, therefore the schema is named "Loyalty Members".
-
-## Assign a class {#class}
-
-On the left-hand side of the editor is the *Composition* section. It currently contains two sub-sections: *[!UICONTROL Schema]* and *[!UICONTROL Class]*. 
-
-Now that the schema has a name, it is time to assign the class that the schema will implement. Click **[!UICONTROL Assign]** next to *[!UICONTROL Class]*.
-
-![](../images/tutorials/create-schema/assign_class_button.png)
-
-The *[!UICONTROL Assign Class]* dialog appears. This window displays a list of all available classes, including any defined by your organization (the owner being "Customer") as well as standard classes defined by Adobe. 
-
-Click on the class name to display the description of the class. You can also choose to **[!UICONTROL Preview Class Structure]** to see the fields and metadata associated with the class.
-
-This tutorial uses the [!DNL XDM Individual Profile] class. Click the radio button beside the class to select it, then click **[!UICONTROL Assign Class]**.
-
-![Assign Class Dialog](../images/tutorials/create-schema/assign_class.png)
-
-The canvas reappears. The *[!UICONTROL Class]* section now contains the class you selected ([!DNL XDM Individual Profile]) and the fields contributed by the [!DNL XDM Individual Profile] class are now visible within the *[!UICONTROL Structure]* section.
-
-![XDM Individual Profile Class Assigned](../images/tutorials/create-schema/class_assigned_structure.png)
-
-The fields appear in the format "fieldName | Data Type". Steps for defining schema fields in the UI are provided later in this tutorial.
-
->[!NOTE]
->
->You can [change the class of a schema](#change-class) at any point during the initial composition process before the schema has been saved, but this should be done with extreme caution. Mixins are only compatible with certain classes, therefore changing the class will reset the canvas and any fields you have added. 
 
 ## Add a mixin {#mixin}
 
@@ -319,6 +293,32 @@ You can then give your new class a **[!UICONTROL Display Name]** (a short, descr
 >[!NOTE]
 >
 >When building a schema that implements a class defined by your organization, remember that mixins are available for use only with compatible classes. Since the class you defined is new, there are no compatible mixins listed in the *Add Mixin* dialog. Instead, you will need to select **[!UICONTROL Create New Mixin]** and define a mixin for use with that class. The next time you compose a schema that implements the new class, the mixin that you defined will be listed and available for use.
+
+### Assign a class {#class}
+
+On the left-hand side of the editor is the *Composition* section. It currently contains two sub-sections: *[!UICONTROL Schema]* and *[!UICONTROL Class]*. 
+
+Now that the schema has a name, it is time to assign the class that the schema will implement. Click **[!UICONTROL Assign]** next to *[!UICONTROL Class]*.
+
+![](../images/tutorials/create-schema/assign_class_button.png)
+
+The *[!UICONTROL Assign Class]* dialog appears. This window displays a list of all available classes, including any defined by your organization (the owner being "Customer") as well as standard classes defined by Adobe. 
+
+Click on the class name to display the description of the class. You can also choose to **[!UICONTROL Preview Class Structure]** to see the fields and metadata associated with the class.
+
+This tutorial uses the [!DNL XDM Individual Profile] class. Click the radio button beside the class to select it, then click **[!UICONTROL Assign Class]**.
+
+![Assign Class Dialog](../images/tutorials/create-schema/assign_class.png)
+
+The canvas reappears. The *[!UICONTROL Class]* section now contains the class you selected ([!DNL XDM Individual Profile]) and the fields contributed by the [!DNL XDM Individual Profile] class are now visible within the *[!UICONTROL Structure]* section.
+
+![XDM Individual Profile Class Assigned](../images/tutorials/create-schema/class_assigned_structure.png)
+
+The fields appear in the format "fieldName | Data Type". Steps for defining schema fields in the UI are provided later in this tutorial.
+
+>[!NOTE]
+>
+>You can [change the class of a schema](#change-class) at any point during the initial composition process before the schema has been saved, but this should be done with extreme caution. Mixins are only compatible with certain classes, therefore changing the class will reset the canvas and any fields you have added. 
 
 ### Change the class of a schema {#change-class}
 
