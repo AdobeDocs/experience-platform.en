@@ -91,9 +91,9 @@ The following PUT request updates the existing labels for a dataset, as well as 
 
 >[!IMPORTANT]
 >
->When making PUT requests to the Dataset API, an `If-Match` header must be included that indicates the current version of the dataset. In order to prevent data collisions, the service will only update the dataset entity if the included version number matches.
+>When making PUT requests to the Dataset API, an `If-Match` header must be included that indicates the current version of the dataset. In order to prevent data collisions, the service will only update the dataset entity if the included version string matches.
 >
->To find the current version of a dataset, perform a [lookup request for that dataset using the Catalog API](../../catalog/api/look-up-object.md). The value is provided under the `version` property in the response body.
+>To find the current version of a dataset, perform a [lookup request for that dataset's labels](#look-up). The value is provided in the `etag` header returned in the response.
 
 ```shell
 curl -X PUT \
@@ -103,7 +103,7 @@ curl -X PUT \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
-  -H 'If-Match: 1.0.0' \
+  -H 'If-Match: 8f00d38e-0000-0200-0000-5ef4fc6d0000' \
   -d '{
         "labels": [ "C1", "C2", "C3", "I1", "I2" ],
         "optionalLabels": [
@@ -164,9 +164,9 @@ The following request removes the labels for the dataset specified in the path.
 
 >[!IMPORTANT]
 >
->When making DELETE requests to the Dataset API, an `If-Match` header must be included that indicates the current version of the dataset. In order to prevent data collisions, the service will only update the dataset entity if the included version number matches.
+>When making DELETE requests to the Dataset API, an `If-Match` header must be included that indicates the current version of the dataset. In order to prevent data collisions, the service will only update the dataset entity if the included version string matches.
 >
->To find the current version of a dataset, perform a [lookup request for that dataset using the Catalog API](../../catalog/api/look-up-object.md). The value is provided under the `version` property in the response body.
+>To find the current version of a dataset, perform a [lookup request for that dataset's labels](#look-up). The value is provided in the `etag` header returned in the response.
 
 ```shell
 curl -X DELETE \
@@ -175,7 +175,7 @@ curl -X DELETE \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'If-Match: 1.0.0'
+  -H 'If-Match: 8f00d38e-0000-0200-0000-5ef4fc6d0000'
 ```
 
 **Response**
