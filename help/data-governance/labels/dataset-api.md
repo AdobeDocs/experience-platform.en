@@ -91,9 +91,7 @@ The following PUT request updates the existing labels for a dataset, as well as 
 
 >[!IMPORTANT]
 >
->When making PUT requests to the Dataset API, an `If-Match` header must be included that indicates the current version of the dataset. In order to prevent data collisions, the service will only update the dataset entity if the included `If-Match` string matches the `etag` header that is returned in the response.
->
->To find the current version of a dataset, perform a [lookup request for that dataset's labels](#look-up). The value is provided in the `etag` header returned in the response.
+>A valid `If-Match` header must be provided when making PUT requests to the `/datasets/{DATASET_ID}/labels` endpoint. See the [appendix section](#if-match) for more information on using the required header.
 
 ```shell
 curl -X PUT \
@@ -164,9 +162,7 @@ The following request removes the labels for the dataset specified in the path.
 
 >[!IMPORTANT]
 >
->When making DELETE requests to the Dataset API, an `If-Match` header must be included that indicates the current version of the dataset. In order to prevent data collisions, the service will only update the dataset entity if the included `If-Match` string matches the `etag` header that is returned in the response.
->
->To find the current version of a dataset, perform a [lookup request for that dataset's labels](#look-up). The value is provided in the `etag` header returned in the response.
+>A valid `If-Match` header must be provided when making DELETE requests to the `/datasets/{DATASET_ID}/labels` endpoint. See the [appendix section](#if-match) for more information on using the required header.
 
 ```shell
 curl -X DELETE \
@@ -191,3 +187,17 @@ Once you have added data usage labels at the dataset- and field-level, you can b
 You can also now define data usage policies based on the labels you have applied. For more information, see the [data usage policies overview](../policies/overview.md).
 
 For more information on managing datasets in [!DNL Experience Platform], see the [datasets overview](../../catalog/datasets/overview.md).
+
+## Appendix {#appendix}
+
+The following section contains additional information about working with labels using the Dataset Service API.
+
+### [!DNL If-Match] header  {#if-match}
+
+When making API calls that update the existing labels of a dataset (PUT and DELETE), an `If-Match` header that indicates the current version of the dataset must be included. In order to prevent data collisions, the service will only update the dataset entity if the included `If-Match` string matches the `etag` header that is returned in the response.
+
+>[!NOTE]
+>
+>If no labels currently exist for the dataset in question, new labels can only be added through a POST request, which does not require an `If-Match` header. Once labels have been added to a dataset, an `etag` value is assigned which can be used to update or remove the labels at a later time.
+
+Before making a PUT or DELETE request, perform a [lookup request for that dataset's labels](#look-up). Copy the value of the `etag` header returned in the response, and then use that value in the PUT or DELETE request's `If-Match` header.
