@@ -41,7 +41,7 @@ To activate data to destinations, you must have successfully [connected a destin
    ![identity mapping after filling in fields](assets/identity-mapping.png)
 
 6. **[!UICONTROL Configure]** step <br> Applies to: Email marketing destinations and cloud storage destinations <br> This step is optional. In the **[!UICONTROL Configure]** step, you can configure the file names for each segment you are exporting. For example, you could edit your exported file names to distinguish between different campaigns.  <br> Select **[!UICONTROL Next]** to use the default file names or click the pencil icon to open a modal window and edit the file names. Note that file names are limited to 255 characters.
-    ![configure file name](/assets/activation-workflow-configure-step.png)
+    ![configure file name](assets/activation-workflow-configure-step.png)
     
     In the file name editor, you can select different components to add to the file name. The destination name and segment ID cannot be removed from file names. In addition to those, you can add the following:
     **[!UICONTROL Segment name]**: You can append the segment name to the file name.
@@ -49,7 +49,7 @@ To activate data to destinations, you must have successfully [connected a destin
     **[!UICONTROL Custom text]**: Add custom text to the file names.
     Select **[!UICONTROL Apply changes]** to confirm your selection. 
 
-    ![edit file name options](/assets/activate-workflow-configure-step-2.png)
+    ![edit file name options](assets/activate-workflow-configure-step-2.png)
 
 7. **[!UICONTROL Select attributes]** step <br> Applies to: email marketing destinations and cloud storage destinations <br> On the **[!UICONTROL Select Attributes]** page, select **[!UICONTROL Add new field]** and select the attributes that you want to send to the destination.
    We recommend one of the attributes to be a [unique identifier](/help/rtcdp/destinations/email-marketing-destinations.md#identity) from your union schema. For more information about mandatory attributes, see Identity in the [Email marketing destinations](/help/rtcdp/destinations/email-marketing-destinations.md#identity) article. 
