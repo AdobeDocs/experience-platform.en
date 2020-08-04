@@ -29,16 +29,16 @@ The following videos outline how [!DNL Experience Platform] creates rich, releva
 
 The Adobe Experience Platform is designed to work optimally in the **latest versions** of Google Chrome, Safari, Firefox, and Microsoft Edge. You might have trouble using certain features on older versions of browsers. 
 
-| Operating system | Supported browsers | | |
-|---|---|---|---|
-| Mac OS X | Google Chrome | Safari | Firefox |
-| Windows 10 | Google Chrome | Microsoft Edge | Firefox |
-| Windows 7 | Google Chrome | |  Firefox |
+| Operating system | Supported browsers |
+|---|---|
+| **Mac OS X** | Google Chrome, Safari, Firefox |
+| **Windows 10** | Google Chrome, Microsoft Edge, Firefox |
+| **Windows 7** | Google Chrome, Firefox |
  
-These browsers are not supported:
+These operating systems and browsers are not supported:
 
-* Internet Explorer 10
 * Windows 8
+* Internet Explorer 10
 * Opera
 
 ## Language support

@@ -13,14 +13,6 @@ This guide leads you through the different ways to set up the Adobe Experience P
 - Be entitled to Adobe Experience Platform.  If you have not purchased Platform, Adobe will provision you with Experience Platform Data Services Foundation for use in a limited fashion with the SDK at no extra charge.
 - Be using the latest version of the Visitor ID service.
 
-## Create a configuration ID
-
-You can create a configuration ID using the [edge configuration tool](../fundamentals/edge-configuration.md) in Adobe Launch, even if you are not using the tag management features. This allows you to enable the [!DNL Edge Network] to send data to the various solutions. Details for how to find each option are found in the [Edge Configuration Tool](../fundamentals/edge-configuration.md) Page.
-
->[!NOTE]
->
->Your organization must be on the allow list for the feature. Please contact your CSM to get put on the allow list.
-
 ## Prepare a Schema
 
 The [!DNL Experience Platform Edge Network] takes data as XDM. XDM is a data format that lets you define schemas. The schema defines how the [!DNL Edge Network] expects the data to be formatted. To send data, you need to define your schema.
@@ -31,6 +23,14 @@ The [!DNL Experience Platform Edge Network] takes data as XDM. XDM is a data for
 The following video is intended to support you in creating a schema, dataset, and streaming source connector for your [!DNL Web SDK] data.
 
 >[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
+
+## Create a configuration ID
+
+You can create a configuration ID using the [edge configuration tool](../fundamentals/edge-configuration.md) in Adobe Launch, even if you are not using the tag management features. This allows you to enable the [!DNL Edge Network] to send data to the various solutions. Details for how to find each option are found in the [Edge Configuration Tool](../fundamentals/edge-configuration.md) Page.
+
+>[!NOTE]
+>
+>Your organization must be on the allow list for the feature. Please contact your CSM to get put on the allow list.
 
 ## Install the SDK
 

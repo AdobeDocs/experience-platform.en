@@ -15,7 +15,7 @@ To activate data to destinations, you must have successfully [connected a destin
 
 ## Activate data {#activate-data}
 
-1. In **[!UICONTROL Destinations > Browse]**, select the destination where you want to activate your segments.
+1. In **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**, select the destination where you want to activate your segments.
 2. Click the name of the destination. This takes you to the Activate flow.
     ![activate-flow](/help/rtcdp/destinations/assets/activate-flow.png)
     Note that if an activation flow already exists for a destination, you can see the segments that are currently being sent to the destination. Select **[!UICONTROL Edit activation]** in the right rail and follow the steps below to modify the activation details.
@@ -85,28 +85,28 @@ Follow the steps below to edit existing activation flows in Real-time CDP:
 
 ## Verify that segment activation was successful {#verify-activation}
 
-### Email marketing destinations and cloud storage destinations
+### Email marketing destinations and cloud storage destinations {#esp-and-cloud-storage}
 
-For email marketing destinations and cloud storage destinations, Adobe Real-time CDP creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. Expect a new file to be created in your storage location every day. The file format is:
-`<destination name>id<destination id><timestamp-yyyymmddhhmmss>`
+For email marketing destinations and cloud storage destinations, Adobe Real-time CDP creates a tab-delimited `.csv` or `.txt` file in the storage location that you provided. Expect a new file to be created in your storage location every day. The file format is:
+`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv|txt`
 
 The files you would receive on three consecutive days could look like this:
 
 ```
-Salesforce_id3544_20191120110000.csv
-Salesforce_id3544_20191121123000.csv
-Salesforce_id3544_20191122124530.csv
+Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv
+Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200409052200.csv
+Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200410061130.csv
 ```
 
-The presence of these files in your storage location is confirmation of successful activation.
+The presence of these files in your storage location is confirmation of successful activation. To understand how the exported files are structured, you can [download a sample .csv file](/help/rtcdp/destinations/assets/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). This sample file includes the profile attributes `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear`, and `personalEmail.address`.
 
 ### Advertising destinations
 
-Check the respective advertising destination that you are activating your data to. If activation was successful, audiences are populated in your advertising platform.
+Check your account in the respective advertising destination that you are activating your data to. If activation was successful, audiences are populated in your advertising platform.
 
 ### Social network destinations
 
-For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [Facebook Ads Manager](https://www.facebook.com/adsmanager/manage/). Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated segments.
+For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated segments.
 
 >[!TIP]
 >
