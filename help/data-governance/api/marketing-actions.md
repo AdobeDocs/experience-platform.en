@@ -184,7 +184,7 @@ curl -X PUT \
 | Property | Description |
 | --- | --- |
 | `name` | The name of the marketing action to be created or updated. <br><br>**IMPORTANT**: This property must match the `{MARKETING_ACTION_NAME}` in the path, otherwise a 400 (Bad Request) error will occur. In other words, once a marketing action has been created, its `name` property cannot be changed. |
-| `description` | An optional description to provide further context for the marketing action.
+| `description` | An optional description to provide further context for the marketing action. |
 
 **Response**
 
