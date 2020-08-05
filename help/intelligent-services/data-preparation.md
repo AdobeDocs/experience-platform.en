@@ -42,7 +42,7 @@ Intelligent Services utilize several key fields within this schema to generate i
 
 Like all XDM schemas, the CEE mixin is extensible. In other words, additional fields can be added to the CEE mixin, and different variations can be included in multiple schemas if required.
 
-A complete example of the mixin can be found in the [public XDM repository](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md), and should be used as a reference for the key fields outlined in the section below.
+A complete example of the mixin can be found in the [public XDM repository](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). In addition, you can download the following [JSON file](https://wiki.corp.adobe.com/download/attachments/2101852085/CEE_XDM_sample_10rows.json?version=1&modificationDate=1595720357333&api=v2) for an example of how data can be structured to comply with the CEE schema. Refer to both of these examples as you learn about the key fields outlined in the section below, in order to determine how you can map your own data to the schema.
 
 ## Key fields
 
