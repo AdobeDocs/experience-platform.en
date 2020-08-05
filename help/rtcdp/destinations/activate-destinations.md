@@ -43,6 +43,10 @@ To activate data to destinations, you must have successfully [connected a destin
 6. **[!UICONTROL Configure]** step <br> Applies to: Email marketing destinations and cloud storage destinations <br> This step is optional. In the **[!UICONTROL Configure]** step, you can configure the file names for each segment you are exporting. For example, you could edit your exported file names to distinguish between different campaigns.  <br> Select **[!UICONTROL Next]** to use the default file names or click the pencil icon to open a modal window and edit the file names. Note that file names are limited to 255 characters.
     ![configure file name](assets/activation-workflow-configure-step.png)
     
+    >[!IMPORTANT] 
+    > 
+    >Selecting only the destination name and the segment ID in the file name will result in daily files overwriting files from previous days in your storage location. For email marketing destinations, where you would run an import job from your storage location into the email marketing destination, this is the recommended action.
+
     In the file name editor, you can select different components to add to the file name. The destination name and segment ID cannot be removed from file names. In addition to those, you can add the following:
     **[!UICONTROL Segment name]**: You can append the segment name to the file name.
     **[!UICONTROL Date and time]**: Select between adding a MMDDYYYY_HHMMSS or a Unix 10-digit timestamp of the time that the files are generated.
