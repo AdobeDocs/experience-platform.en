@@ -36,7 +36,7 @@ The sorting panel allows you to access accounts from a specific source. Select t
 
 ![accounts-select](../../images/tutorials/monitor/accounts-sort.png)
 
-From the *[!UICONTROL Accounts]* page, you can view a list of existing dataflows associated with the account you accessed. Select the dataflow you wish to view.
+From the *[!UICONTROL Accounts]* page, you can view a list of existing dataflows or target datasets associated with the account you accessed.
 
 ![dataflows](../../images/tutorials/monitor/dataflows.png)
 
@@ -58,17 +58,17 @@ The *[!UICONTROL Dataflow activity]* page contains details on number of records 
 
 ![datflow-activity](../../images/tutorials/monitor/dataflow-activity.png)
 
-The calendar allows you to view different time frames of records ingested. You can select from the pre-set of options of *[!UICONTROL Last 7 days]* or *[!UICONTROL Last 30 days]*. Alternatively, you can set a custom time frame using the calendar. Select **[!UICONTROL Apply]** to continue.
+The calendar allows you to view different time frames of records ingested. You can select from the pre-set of options of *[!UICONTROL Last 7 days]* or *[!UICONTROL Last 30 days]*. Alternatively, you can set a custom time frame using the calendar. Select your time frame of choice and select **[!UICONTROL Apply]** to continue.
 
 ![flow-calendar](../../images/tutorials/monitor/flow-calendar.png)
 
 By default, the *[!UICONTROL Dataflow activity]* displays the *[!UICONTROL Properties]* panel associated with the dataflow. Select the the flow run from the list to see its associated meta data, including information about its unique run ID.
 
-Select **[!UICONTROL Dataflow run start]** to see the *[!UICONTROL Flow run overview]*.
+Select **[!UICONTROL Dataflow run start]** to acces the *[!UICONTROL Dataflow run overview]*.
 
 ![runs](../../images/tutorials/monitor/run-metadata.png)
 
-The *[!UICONTROL Dataflow run overview]* screen displays information on the dataflow including its metadata, *[!UICONTROL Partial ingestion]* status, and assigned *[!UICONTROL Error threshold]*. The upper header also includes an *[!UICONTROL Error summary]*. The *[!UICONTROL Error summary]* contains the specific top-level error that shows at which step the ingestion process encountered an error.
+The *[!UICONTROL Dataflow run overview]* displays information on the dataflow including its metadata, *[!UICONTROL Partial ingestion]* status, and assigned *[!UICONTROL Error threshold]*. The upper header also includes an *[!UICONTROL Error summary]*. The *[!UICONTROL Error summary]* contains the specific top-level error that shows at which step the ingestion process encountered an error.
 
 ![dataflow-run-overview](../../images/tutorials/monitor/dataflow-run-overview.png)
 
