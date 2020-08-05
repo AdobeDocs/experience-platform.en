@@ -40,16 +40,23 @@ alloy("getIdentity")
 
 >[!NOTE]
 >
->This method has been removed in version 2.0.0; it will be replaced with a different & improved workflow in future versions. If you are using version 2.0 and would like to sync identities, you can send them directly in the `xdm` option of the `sendEvent` command, under the `identityMap` field. The only difference when using this approach is the lack of hashing. You will need to hash IDs before passing them in. Hashing will be part of the upcoming improvements.
+>The `syncIdentity` method has been removed in version 2.1.0, in addition to the hashing feature. If you are using version 2.1.0+ and would like to sync identities, you can send them directly in the `xdm` option of the `sendEvent` command, under the `identityMap` field.
+
+>[!NOTE]
+>
+>It is highly recommended to pass all available identities on every `sendEvent` command; this will unlock a range of use cases, including personalization. Now that you can pass those identities in the `sendEvent` command, they can be placed directly in your DataLayer.
+
+Syncing identities allows you to identify a device/user using multiple identities, set their authentication state and decide which identifier is considered the primary one. If no identifier has been set as `primary`, we will default the primary to be the `ECID`. 
 
 ```javascript
 alloy("sendEvent", {
   xdm: {
     "identityMap": {
-      "CustomNamespace": [
+      "ID_NAMESPACE": [ // Notice how each namespace can contain multiple identifiers.
         {
           "id": "1234",
-          "authenticatedState": "ambiguous"
+          "authenticatedState": "ambiguous",
+          "primary": true
         }
       ]
     }
@@ -57,23 +64,6 @@ alloy("sendEvent", {
 })
 ```
 
-
-Additionally the Identity Service allows you to sync your own identifiers with the ECID using the `syncIdentity` command.
-
-```javascript
-
-alloy("syncIdentity",{
-    identity:{
-      "AppNexus":{
-        "id":"123456,
-        "authenticationState":"ambiguous",
-        "primary":false,
-        "hashEnabled": true,
-      }
-    }
-})
-
-```
 
 ### Syncing Identities Options
 
