@@ -81,7 +81,7 @@ Once a value has been entered, select **[!UICONTROL Show profile]** and a single
 
 ![](../images/user-guide/profiles-display-profile.png)
 
-### Profile detail
+### Profile detail {#profile-detail}
 
 Upon selecting the **[!UICONTROL Profile ID]**, the _[!UICONTROL Detail]_ tab opens. This page displays information about the selected profile, including basic attributes, linked identities, and available contact channels. The profile information displayed has been merged together from multiple profile fragments to form a single view of the individual customer.
 
