@@ -24,7 +24,7 @@ Log in to [Adobe Experience Platform](https://platform.adobe.com) and then selec
 
 Select *[!UICONTROL Accounts]* from the top header to view existing accounts.
 
-![catalog](../../images/tutorials/monitor/catalog.png)
+![catalog](../../images/tutorials/monitor/catalog-accounts.png)
 
 The *[!UICONTROL Accounts]* pages appears. On this page is a list of viewable accounts, including information about their source, username, number of dataflows, and date of creation.
 
@@ -38,11 +38,7 @@ The sorting panel allows you to access accounts from a specific source. Select t
 
 From the *[!UICONTROL Accounts]* page, you can view a list of existing dataflows associated with the account you accessed. Select the dataflow you wish to view.
 
-![accounts-page](../../images/tutorials/monitor/dataflows.png)
-
- The *[!UICONTROL Dataflow activity]* screen appears. This page displays the rate of messages being consumed in the form of a graph.
-
- ![dataset-flow-activity](../../images/tutorials/monitor/dataflow-activity.png)
+![dataflows](../../images/tutorials/monitor/dataflows.png)
 
 ## Monitor dataflows
 
@@ -58,9 +54,9 @@ The sorting panel appears. Select the source you wish to access from the scroll 
 
 ![sort-dataflows](../../images/tutorials/monitor/dataflows-sort.png)
 
-The *[!UICONTROL Dataflow activity]* page contains details on number of records ingested and records failed, as well as information regarding dataflow status and processing time. Select the calendar icon above the dataflow to view a different time frames of ingestion records.
+The *[!UICONTROL Dataflow activity]* page contains details on number of records ingested and records failed, as well as information regarding dataflow status and processing time. Select the calendar icon above the dataflow to adjust the time frame of your ingestion records.
 
-![datflow-activity](../../images/tutorials/monitor/dataflows-activity.png)
+![datflow-activity](../../images/tutorials/monitor/dataflow-activity.png)
 
 The calendar allows you to view different time frames of records ingested. You can select from the pre-set of options of *[!UICONTROL Last 7 days]* or *[!UICONTROL Last 30 days]*. Alternatively, you can set a custom time frame using the calendar. Select **[!UICONTROL Apply]** to continue.
 
@@ -72,26 +68,23 @@ Select **[!UICONTROL Dataflow run start]** to see the *[!UICONTROL Flow run over
 
 ![runs](../../images/tutorials/monitor/run-metadata.png)
 
-The *[!UICONTROL Flow run overview]* screen displays metadata information regarding the dataflow including its run ID and IMS organization ID. The lower half of the *[!UICONTROL Flow run overview]* screen contains information on any errors that occur during the ingestion process, divided into three tabs: *[!UICONTROL Source errors]*, *[!UICONTROL Flow run errors]*, and *[!UICONTROL Files]*.
+The *[!UICONTROL Dataflow run overview]* screen displays information on the dataflow including its metadata, *[!UICONTROL Partial ingestion]* status, and assigned *[!UICONTROL Error threshold]*. The upper header also includes an *[!UICONTROL Error summary]*. The *[!UICONTROL Error summary]* contains the specific top-level error that shows at which step the ingestion process encountered an error.
 
-| Tab | Description |
-| --- | ----------- |
-| Source errors | Source errors displays information on errors that occur at the source point during ingestion. |
-| Flow run errors | Flow run errors displays information on errors that occur during the flow run. |
-| Files | Files displays information on the files being ingested. |
+![dataflow-run-overview](../../images/tutorials/monitor/dataflow-run-overview.png)
 
+The lower half of the screen contains information on *[!UICONTROL Dataflow run errors]*. From here, you can also view the files ingested, preview and download error diagnostics, or download the file manifest. 
 
-Select **[!UICONTROL Flow run errors]** to see information on errors that occur during the flow run.
+The *[!UICONTROL Dataflow run errors]* section displays the *[!UICONTROL Error code]*, the number of records failed, and information describing the error.
 
-![source-errors](../../images/tutorials/monitor/source-errors.png)
+Select **[!UICONTROL Preview error diagnostics]** to see more information on the ingestion error.
 
-The **[!UICONTROL Flow run errors]** tab displays the number of errors encountered during the ingestion of the source data as well as the number of successfully ingested rows. The **[!UICONTROL Flow run errors]** tab also contains the specific error code associated with the failed records and a description for the error.
+![Dataflow-run-errors](../../images/tutorials/monitor/dataflow-run-errors.png)
 
-![flow-run-errors](../../images/tutorials/monitor/flow-run-errors.png)
+The *[Error diagnostics preview]* panel appears. This screen displays specific information regarding the ingestion failure, including the *[!UICONTROL File name]*, *[!UICONTROL Error code]*, the name of the column in which the error occurred, and a description of the error.
 
-The **[!UICONTROL Files]** tab provides an overview of the files ingested, including the file name, their destination path, as well as the ingestion status.
+This section also includes a preview of the column that contains the error.
 
-![files](../../images/tutorials/monitor/files.png)
+![Preview-error-diagnostics](../../images/tutorials/monitor/preview-error-diagnostics.png)
 
 For more information on monitoring dataflows and ingestion, refer to the tutorial on [monitoring streaming dataflows](../../../ingestion/quality/monitor-data-flows.md).
 
