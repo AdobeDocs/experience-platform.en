@@ -11,7 +11,7 @@ seo-description: Instructions to connect to your social network ad accounts
 
 This tutorial uses [!DNL Facebook] as an example, but the workflow in Adobe Real-time Customer Data Platform will be the same for all social network destinations, once more are added to the product.
 
-1. In **[!UICONTROL Destinations > Catalog]**, scroll to the **[!UICONTROL Social]** category. Select your preferred social network destination, then select **[!UICONTROL Connect destination]**.
+1. In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scroll to the **[!UICONTROL Social]** category. Select your preferred social network destination, then select **[!UICONTROL Connect destination]**.
 
     ![Connect to social network destination](/help/rtcdp/destinations/assets/facebook-catalog-view.png)
 
