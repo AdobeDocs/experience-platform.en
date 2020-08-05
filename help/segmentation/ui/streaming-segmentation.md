@@ -51,7 +51,7 @@ After creating a streaming-enabled segment, you can view details of that segment
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
-Specifically, details about the *[!UICONTROL total qualified audience size]* are shown. If a job has been run within the last 24 hours, the **[!UICONTROL Total qualified audience size]** from the job is shown, in addition to a line chart for the audience added. Otherwise, the **[!UICONTROL Total estimated audience size]** is shown, in addition to a visualization trend line.
+Specifically, details about the **[!UICONTROL total qualified audience size]** are shown. If a job has been run within the last 24 hours, the **[!UICONTROL Total qualified audience size]** from the job is shown, in addition to a line chart for the audience added. Otherwise, the **[!UICONTROL Total estimated audience size]** is shown, in addition to a visualization trend line.
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
