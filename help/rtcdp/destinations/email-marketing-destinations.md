@@ -17,7 +17,7 @@ In the connect destination flow, described in the section below, connect to eith
 
 ## Step 1 - Connect destination {#connect-destination}
 
-1. In **[!UICONTROL Connections > Destinations]**, select the email marketing destination that you want to connect to, then select **[!UICONTROL Connect destination]**.
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select the email marketing destination that you want to connect to, then select **[!UICONTROL Connect destination]**.
 
     ![Connect to destination](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
