@@ -5,19 +5,19 @@ title: Writing queries
 topic: queries
 ---
 
-# General guidance for query execution in Query Service
+# General guidance for query execution in [!DNL Query Service]
 
-This document details important details to know when writing queries in Adobe Experience Platform Query Service.
+This document details important details to know when writing queries in Adobe Experience Platform [!DNL Query Service].
 
-For detailed information on the SQL syntax used in Query Service, please read the [SQL syntax documentation](../sql/syntax.md).
+For detailed information on the SQL syntax used in [!DNL Query Service], please read the [SQL syntax documentation](../sql/syntax.md).
 
 ## Query execution models
 
-Adobe Experience Platform Query Service has two models of query execution: interactive and non-interactive. Interactive execution is used for query development and report generation in business intelligence tools, while non-interactive is used for larger jobs and operational queries as a part of a data processing workflow.
+Adobe Experience Platform [!DNL Query Service] has two models of query execution: interactive and non-interactive. Interactive execution is used for query development and report generation in business intelligence tools, while non-interactive is used for larger jobs and operational queries as a part of a data processing workflow.
 
 ### Interactive query execution
 
-Queries can be executed interactively by submitting them through the Query Service UI or [through a connected client](../clients/overview.md). When running Query Service through a connected client, an active session runs between the client and Query Service until either the submitted query returns or times out.
+Queries can be executed interactively by submitting them through the [!DNL Query Service] UI or [through a connected client](../clients/overview.md). When running [!DNL Query Service] through a connected client, an active session runs between the client and [!DNL Query Service] until either the submitted query returns or times out.
 
 Interactive query execution has the following limitations:
 
@@ -27,13 +27,15 @@ Interactive query execution has the following limitations:
 | Maximum rows returned | 50,000 | 
 | Maximum concurrent queries | 5 |
 
->[!NOTE] To override the maximum rows limitation, include `LIMIT 0` in your query. The query timeout of 10 minutes still applies. 
+>[!NOTE]
+>
+>To override the maximum rows limitation, include `LIMIT 0` in your query. The query timeout of 10 minutes still applies. 
 
-By default, the results of interactive queries are returned to the client and are **not** persisted. In order to persist the results as a dataset in Experience Platform, the query must use the `CREATE TABLE AS SELECT` syntax.
+By default, the results of interactive queries are returned to the client and are **not** persisted. In order to persist the results as a dataset in [!DNL Experience Platform], the query must use the `CREATE TABLE AS SELECT` syntax.
 
 ### Non-interactive query execution
 
-Queries submitted through the Query Service API are run non-interactively. Non-interactive execution means that Query Service receives the API call and executes the query in the order it is received. Non-interactive queries always result in either the generation of a new dataset in Experience Platform to receive the results, or the insertion of new rows into an existing dataset. 
+Queries submitted through the [!DNL Query Service] API are run non-interactively. Non-interactive execution means that [!DNL Query Service] receives the API call and executes the query in the order it is received. Non-interactive queries always result in either the generation of a new dataset in [!DNL Experience Platform] to receive the results, or the insertion of new rows into an existing dataset. 
 
 ## Accessing a specific field within an object
 
@@ -63,7 +65,9 @@ LIMIT 1
 | -------- | ----------- |
 | `{ANALYTICS_TABLE_NAME}` | The name of your analytics table. |
 
->[!NOTE] Since each notation type returns the same results, the one you choose to use is up to your preference.
+>[!NOTE]
+>
+>Since each notation type returns the same results, the one you choose to use is up to your preference.
 
 Both of the example queries above return a flattened object, rather than a single value:
 
@@ -143,7 +147,9 @@ FROM
 )
 ```
 
->[!NOTE] Double quotes **cannot** be used with dot notation field access. 
+>[!NOTE]
+>
+>Double quotes **cannot** be used with dot notation field access. 
 
 ### Back quotes
 
@@ -176,4 +182,4 @@ Back quotes are **not** needed if you are using bracket-notation.
 
 ## Next steps
 
-By reading this document, you have been introduced to some important considerations when writing queries using Query Service. For more information on how to use the SQL syntax to write your own queries, please read the [SQL syntax documentation](../sql/syntax.md).
+By reading this document, you have been introduced to some important considerations when writing queries using [!DNL Query Service]. For more information on how to use the SQL syntax to write your own queries, please read the [SQL syntax documentation](../sql/syntax.md).

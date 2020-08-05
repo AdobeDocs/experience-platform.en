@@ -7,18 +7,18 @@ topic: tutorials
 
 # Create an ad-hoc schema
 
-In specific circumstances, it may be necessary to create an Experience Data Model (XDM) schema with fields that are namespaced for usage only by a single dataset. This is referred to as an "ad-hoc" schema. Ad-hoc schemas are used in various data ingestion workflows for Experience Platform, including ingesting CSV files and creating certain kinds of source connections.
+In specific circumstances, it may be necessary to create an [!DNL Experience Data Model] (XDM) schema with fields that are namespaced for usage only by a single dataset. This is referred to as an "ad-hoc" schema. Ad-hoc schemas are used in various data ingestion workflows for [!DNL Experience Platform], including ingesting CSV files and creating certain kinds of source connections.
 
-This document provides general steps for creating an ad-hoc schema using the [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). It is intended to be used in conjunction with other Experience Platform tutorials that require creating an ad-hoc schema as part of their workflow. Each of those documents provides detailed information on how to properly configure an ad-hoc schema for its specific use case.
+This document provides general steps for creating an ad-hoc schema using the [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). It is intended to be used in conjunction with other [!DNL Experience Platform] tutorials that require creating an ad-hoc schema as part of their workflow. Each of those documents provides detailed information on how to properly configure an ad-hoc schema for its specific use case.
 
 ## Getting started
 
-This tutorial requires a working understanding of Experience Data Model (XDM) System. Before starting this tutorial, please review the following XDM documentation:
+This tutorial requires a working understanding of [!DNL Experience Data Model] (XDM) System. Before starting this tutorial, please review the following XDM documentation:
 
-- [XDM System overview](../home.md): A high-level overview of XDM and its implementation in Experience Platform.
+- [XDM System overview](../home.md): A high-level overview of XDM and its implementation in [!DNL Experience Platform].
 - [Basics of schema composition](../schema/composition.md): An overview of the basic components of XDM schemas.
 
-Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
+Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the [!DNL Schema Registry] API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
 
 ## Create an ad-hoc class
 
@@ -34,7 +34,9 @@ POST /tenant/classes
 
 The following request creates a new XDM class, configured by the attributes supplied in the payload. By supplying a `$ref` property set to `https://ns.adobe.com/xdm/data/adhoc` in the `allOf` array, this class inherits the `adhoc` behavior. The request also defines an `_adhoc` object, which contains the custom fields for the class.
 
->[!NOTE] The custom fields defined under `_adhoc` vary depending the use case of the ad-hoc schema. Please refer to the specific workflow in the appropriate tutorial for required custom fields based on use case.
+>[!NOTE]
+>
+>The custom fields defined under `_adhoc` vary depending the use case of the ad-hoc schema. Please refer to the specific workflow in the appropriate tutorial for required custom fields based on use case.
 
 ```shell
 curl -X POST \
@@ -212,7 +214,9 @@ A successful response returns the details of the newly created schema, including
 
 ## View the full ad-hoc schema
 
->[!NOTE] This step is optional. If you do not wish to inspect the field structure of your ad-hoc schema, you can skip to the [next steps](#next-steps) section at the end of this tutorial.
+>[!NOTE]
+>
+>This step is optional. If you do not wish to inspect the field structure of your ad-hoc schema, you can skip to the [next steps](#next-steps) section at the end of this tutorial.
 
 Once the ad-hoc schema has been created, you can make a lookup (GET) request to view the schema in its expanded form. This is done by using the appropriate Accept header in the GET request, as demonstrated below.
 
@@ -228,7 +232,7 @@ GET /tenant/schemas/{SCHEMA_ID}
 
 **Request**
 
-The following request uses the Accept header `application/vnd.adobe.xed-full+json; version=1`, which returns the expanded form of the schema. Note that when retrieving a specific resource from the Schema Registry, the request's Accept header must include major version of the resource in question.
+The following request uses the Accept header `application/vnd.adobe.xed-full+json; version=1`, which returns the expanded form of the schema. Note that when retrieving a specific resource from the [!DNL Schema Registry], the request's Accept header must include major version of the resource in question.
 
 ```shell
 curl -X GET \
@@ -294,4 +298,4 @@ A successful response returns the details of the schema, including all fields ne
 
 By following this tutorial, you have successfully created a new ad-hoc schema. If you were brought to this document as part of another tutorial, you can now use the `$id` of your ad-hoc schema to complete the workflow as directed.
 
-For more information on working with the Schema Registry API, please refer to the [developer guide](../api/getting-started.md).
+For more information on working with the [!DNL Schema Registry] API, please refer to the [developer guide](../api/getting-started.md).

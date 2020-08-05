@@ -33,7 +33,7 @@ Following the above example, you can execute commands using each of the instance
 
 ```javascript
 mycustomname1("configure", {
-  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg"
 });
 
@@ -44,7 +44,7 @@ mycustomname1("sendEvent", {
 });
 
 mycustomname2("configure", {
-  "configId": "f46e981f-fd03-4bdd-a9d9-73ce4447f870",
+  "edgeConfigId": "f46e981f-fd03-4bdd-a9d9-73ce4447f870",
   "orgId": "ADB3NUMBERSANDLETTERS2@AdobeOrg"
 });
 
@@ -59,4 +59,4 @@ Be sure to execute the `configure` command for each instance before executing ot
 
 ## Limitations
 
-To avoid conflicts with cookies, only one instance of Adobe Experience Platform Web SDK within a page can have a particular `configId`.  Similarly, only one instance of Adobe Experience Platform Web SDK can have a particular `orgId`.  
+To avoid conflicts with cookies, only one instance of Adobe Experience Platform [!DNL Web SDK] within a page can have a particular `edgeConfigId`.  Similarly, only one instance of Adobe Experience Platform [!DNL Web SDK] can have a particular `orgId`.  
