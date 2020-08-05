@@ -40,18 +40,18 @@ To activate data to destinations, you must have successfully [connected a destin
    
    ![identity mapping after filling in fields](assets/identity-mapping.png)
 
-6. **[!UICONTROL Configure]** step <br> Applies to: Email marketing destinations and cloud storage destinations <br> This step is optional. In the **[!UICONTROL Configure]** step, you can configure the file names for each segment you are exporting. For example, you could edit your exported file names to distinguish between different campaigns.  <br> Select **[!UICONTROL Next]** to use the default file names or click the pencil icon to open a modal window and edit the file names. Note that file names are limited to 255 characters.
+6. **[!UICONTROL Configure]** step <br> Applies to: Email marketing destinations and cloud storage destinations <br> This step is optional. In the **[!UICONTROL Configure]** step, you can configure the file names for each segment you are exporting. The default file names consist of destination name and segment ID. For example, You could edit your exported file names to distinguish between different campaigns or to have the data export time appended to the files. <br> Select **[!UICONTROL Next]** to use the default file names or click the pencil icon to open a modal window and edit the file names. Note that file names are limited to 255 characters.
     ![configure file name](assets/activation-workflow-configure-step.png)
     
+    In the file name editor, you can select different components to add to the file name. The destination name and segment ID cannot be removed from file names. In addition to these, you can add the following: <br>
+    **[!UICONTROL Segment name]**: You can append the segment name to the file name. <br>
+    **[!UICONTROL Date and time]**: Select between adding a `MMDDYYYY_HHMMSS` format or a Unix 10-digit timestamp of the time when the files are generated. Select this option if you want dynamic file names that update with each export. <br>
+    **[!UICONTROL Custom text]**: Add custom text to the file names. <br>
+    Select **[!UICONTROL Apply changes]** to confirm your selection.  
+
     >[!IMPORTANT] 
     > 
-    >Selecting only the destination name and the segment ID in the file name will result in daily files overwriting files from previous days in your storage location. For email marketing destinations, where you would run an import job from your storage location into the email marketing destination, this is the recommended action.
-
-    In the file name editor, you can select different components to add to the file name. The destination name and segment ID cannot be removed from file names. In addition to those, you can add the following:
-    **[!UICONTROL Segment name]**: You can append the segment name to the file name.
-    **[!UICONTROL Date and time]**: Select between adding a MMDDYYYY_HHMMSS or a Unix 10-digit timestamp of the time that the files are generated.
-    **[!UICONTROL Custom text]**: Add custom text to the file names.
-    Select **[!UICONTROL Apply changes]** to confirm your selection. 
+    >If you don't select the **[!UICONTROL Date and Time]** component, the file names will be static and the new exported file will overwrite the previous file in your storage location with each export. For email marketing destinations, where you would run an import job from your storage location into the email marketing destination, this is the recommended option.
 
     ![edit file name options](assets/activate-workflow-configure-step-2.png)
 
