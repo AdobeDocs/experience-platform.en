@@ -9,7 +9,7 @@ topic: developer guide
 
 >[!NOTE]
 >
->The following document states how to use streaming segmentation using the API. For information on using streaming segmentation using the UI, please read the [Segment Builder guide](../ui/overview.md#streaming-segmentation).
+>The following document states how to use streaming segmentation using the API. For information on using streaming segmentation using the UI, please read the [streaming segmentation UI guide](../ui/streaming-segmentation.md).
 
 Streaming segmentation on [!DNL Adobe Experience Platform] allows customers to do segmentation in near real-time while focusing on data richness. With streaming segmentation, segment qualification now happens as data lands into [!DNL Platform], alleviating the need to schedule and run segmentation jobs. With this capability, most segment rules can now be evaluated as the data is passed into [!DNL Platform], meaning segment membership will be kept up-to-date without running scheduled segmentation jobs.
 
@@ -396,4 +396,4 @@ The same operation can be used to disable a schedule by replacing the "value" in
 
 Now that you have enabled both new and existing segments for streaming segmentation, and enabled scheduled segmentation to develop a baseline and perform recurring evaluations, you can begin to create segments for your organization. 
 
-To learn how to perform similar actions and work with segments using the Adobe Experience Platform user interface, please visit the [Segment Builder user guide](../ui/overview.md).
+To learn how to perform similar actions and work with segments using the Adobe Experience Platform user interface, please visit the [Segment Builder user guide](../ui/segment-builder.md).
