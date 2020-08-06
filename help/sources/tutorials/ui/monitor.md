@@ -72,6 +72,14 @@ The *[!UICONTROL Dataflow run overview]* displays information on the dataflow in
 
 ![dataflow-run-overview](../../images/tutorials/monitor/dataflow-run-overview.png)
 
+Refer to the following table for *[!UICONTROL error codes]*that can be seen in the *[!UICONTROL Error summary]*.
+
+| Error code | Error Message |
+| ---------- | ----------- |
+| `CONNECTOR-1001-500` | Error occurred at copy activity. |
+| `CONNECTOR-2001-500` | Error occurred at promotion activity. |
+| `CONNECTOR-3001-500` | Error occurred at flow activity. |
+
 The lower half of the screen contains information on *[!UICONTROL Dataflow run errors]*. From here, you can also view the files ingested, preview and download error diagnostics, or download the file manifest. 
 
 The *[!UICONTROL Dataflow run errors]* section displays the *[!UICONTROL Error code]*, the number of records failed, and information describing the error.
