@@ -15,7 +15,7 @@ This tutorial covers the steps for monitoring flow run data for completeness, er
 
 ## Getting started
 
-This tutorial requires you to have access to a valid dataflow, as well as information regarding its flow ID and run ID. If you do not have this information, follow the steps outlined in the [sources overview](../../home.md) before attempting this tutorial.
+This tutorial requires you to have access to a valid dataflow, as well as information regarding its flow ID and run ID. If you do not have this information, select your connector of choice from the [sources overview](../../home.md) and follow the steps outlined before attempting this tutorial.
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
@@ -47,3 +47,127 @@ All resources in [!DNL Experience Platform], including those belonging to [!DNL 
 All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
 
 *   Content-Type: `application/json`
+
+## Monitor flows
+
+The first step in monitoring flow runs is to retrieve a dataflow and its specifications. In order to obtain the run ID, you must already have an existing flow ID.
+
+If you do not have an existing dataflow, you can create one using any of the following source connector tutorials:
+
+* [Advertising](./collect/advertising.md)
+* [Cloud storage](./collect/cloud-storage.md)
+* [CRM](./collect/crm.md)
+* [Customer success](./collect/customer-success.md)
+* [Database](./collect/database-nosql.md)
+* [Marketing automation](./collect/marketing-automation.md)
+* [Payments](./collect/payments.md)
+* [Protocols](./collect/protocols.md)
+
+Once you have made a dataflow, perform a GET request to the [!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
+
+**API format**
+
+```http
+GET /flows/c9cef9cb-c934-4467-8ef9-cbc934546741
+```
+
+**Request**
+
+The following request retrieves the specifications for an existing dataflow.
+
+```shell
+curl -X GET \
+    'https://platform.adobe.io/data/foundation/flowservice/flows/c9cef9cb-c934-4467-8ef9-cbc934546741' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Response**
+
+A successful response returns the dataflow specifications including its unique run ID.
+
+```json
+{
+    "items": [
+        {
+            "createdAt": 1596655508487,
+            "updatedAt": 1596656113552,
+            "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
+            "updatedBy": "acp_foundation_connectors@AdobeID",
+            "createdClient": "exc_app",
+            "updatedClient": "acp_foundation_connectors",
+            "sandboxId": "1bd86660-c5da-11e9-93d4-6d5fc3a66a8e",
+            "sandboxName": "prod",
+            "id": "c9cef9cb-c934-4467-8ef9-cbc934546741",
+            "name": "Monitoring Dataflow",
+            "description": "A dataflow for testing monitoring and errors",
+            "flowSpec": {
+                "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
+                "version": "1.0"
+            },
+            "state": "enabled",
+            "version": "\"d6003e51-0000-0200-0000-5f2b09f10000\"",
+            "etag": "\"d6003e51-0000-0200-0000-5f2b09f10000\"",
+            "sourceConnectionIds": [
+                "c0e18602-f9ea-44f9-a186-02f9ea64f9ac"
+            ],
+            "targetConnectionIds": [
+                "47166b83-01c7-4b65-966b-8301c70b6562"
+            ],
+            "inheritedAttributes": {
+                "sourceConnections": [
+                    {
+                        "id": "c0e18602-f9ea-44f9-a186-02f9ea64f9ac",
+                        "connectionSpec": {
+                            "id": "ecadc60c-7455-4d87-84dc-2a0e293d997b",
+                            "version": "1.0"
+                        },
+                        "baseConnection": {
+                            "id": "660b030b-e0e0-43d4-8b03-0be0e093d45c",
+                            "connectionSpec": {
+                                "id": "ecadc60c-7455-4d87-84dc-2a0e293d997b",
+                                "version": "1.0"
+                            }
+                        }
+                    }
+                ],
+                "targetConnections": [
+                    {
+                        "id": "47166b83-01c7-4b65-966b-8301c70b6562",
+                        "connectionSpec": {
+                            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+                            "version": "1.0"
+                        }
+                    }
+                ]
+            },
+            "options": {
+                "errorDiagnosticsEnabled": true,
+                "partialIngestionPercent": 5
+            },
+            "scheduleParams": {
+                "startTime": 1596655508,
+                "frequency": "once"
+            },
+            "transformations": [
+                {
+                    "name": "Mapping",
+                    "params": {
+                        "mappingId": "5cedb1959842496ba0390ffd64d18ee5",
+                        "mappingVersion": 0
+                    }
+                }
+            ],
+            "runs": "/flows/c9cef9cb-c934-4467-8ef9-cbc934546741/runs",
+            "lastRunDetails": {
+                "id": "9830305a-985f-47d0-b030-5a985fd7d004",
+                "state": "success",
+                "startedAtUTC": 1596656058198,
+                "completedAtUTC": 1596656113306
+            }
+        }
+    ]
+}
+```
