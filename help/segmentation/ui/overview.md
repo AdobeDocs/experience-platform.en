@@ -40,7 +40,7 @@ The evaluation method can either be streaming or batch. Streaming segments are c
 
 ![](../images/ui/overview/segment-browse-segments.png)
 
-On the top of the page are options to **[!UICONTROL Add all segments to schedule]** and **[!UICONTROL Create segment]**. 
+On the top of the page are options to add all segments to a schedule and to create a new segment. 
 
 Toggling **[!UICONTROL Add all segments to schedule]** will enable scheduled segmentation. More information on scheduled segmentation can be found in the [scheduled segmentation section of this user guide](#scheduled-segmentation).
 
@@ -66,7 +66,7 @@ The segment details page appears. On the top, there is a summary of the segment 
 
 ### Segment summary
 
-The *[!UICONTROL Segment summary]* section provides information such as the ID, name, description, and details of the attributes. 
+The **[!UICONTROL Segment summary]** section provides information such as the ID, name, description, and details of the attributes. 
 
 Additionally, you are given the option to edit the segment. Selecting **[!UICONTROL Edit segment]** will bring you to the [!DNL Segment Builder]. For more detailed information about using the [!DNL Segment Builder] workspace, please read the [[!DNL Segment Builder] user guide](./segment-builder.md).
 
