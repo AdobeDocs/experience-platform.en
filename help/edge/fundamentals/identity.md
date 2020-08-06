@@ -17,6 +17,14 @@ The [!DNL Identity Service] stores the identity in a cookie in a first party dom
 
 The [!DNL Identity Service] has the ability to sync an ID with a 3rd party domain (demdex.net) to enable tracking across sites. When this is enabled the first request for a visitor (e.g. someone without an ECID) will be made to demdex.net. This will only be done on browsers that allow it (e.g. Chrome) and is controlled by the `thirdPartyCookiesEnabled` parameter in the configuration. If you would like to disable this feature all together, set `thirdPartyCookiesEnabled` to false.
 
+## ID Migration
+
+When migrating from using Visitor API, you can also migrate existing AMCV cookies. To enable ECID migration, set the `idMigrationEnabled` parameter in the configuration. The id migration is setup to enable some use cases:
+
+* When some pages of a domain are using Visitor API and other pages are using this SDK. To support this case, the SDK will read existing AMCV cookies and write a new cookie with the existing ECID. Additionally, the SDK will write AMCV cookies so that if the ECID is obtained first on a page instrumented with the AEP Web SDK, subsequent pages that are instrumented with Visitor API will have the same ECID.
+* When the AEP Web SDK is setup on a page that also has Visitor API. To support this case, if the AMCV cookie is not set, the SDK looks for the Visitor API on the page and calls it to get the ECID.
+* When the entire site is using the AEP Web SDK and does not have Visitor API, it is useful to migrate the ECIDs so that the return visitor information is retained. After the SDK is deployed with `idMigrationEnabled` for a period of time so that most of the visitor cookies are migration, the setting can be turned off.
+
 ## Retrieving the Visitor ID
 
 If you want to use this unique ID, use the `getIdentity` command. `getIdentity` returns the existing ECID for the current visitor. For first-time visitors who don't have an ECID yet, this command generates a new ECID.
