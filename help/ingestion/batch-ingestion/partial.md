@@ -313,12 +313,12 @@ If the batch has one or more errors and has error diagnostics enabled, the statu
            },
            {
              "code": "INGEST-1401-400",
-             "description": "The row has corrupted data and cannot be read or parsed. Fix the corrupted data and try again."
+             "description": "The row has corrupted data and cannot be read or parsed. Fix the corrupted data and try again.",
              "recordCount": 2
            },
            {
              "code": "INGEST-1555-400",
-             "description": "A required field is either missing or has a value of null. Add the required field to the input row and try again."
+             "description": "A required field is either missing or has a value of null. Add the required field to the input row and try again.",
              "recordCount": 3
            }
         ]
