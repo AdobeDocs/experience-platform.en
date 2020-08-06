@@ -1,4 +1,5 @@
 ---
+keywords: DoubleClick Floodlight;doubleclick floodlight extension;doubleclick;floodlight
 title: DoubleClick Floodlight (Beta) extension
 seo-title: DoubleClick Floodlight (Beta) extension
 description: The DoubleClick Floodlight (Beta) extension is an advertising destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.

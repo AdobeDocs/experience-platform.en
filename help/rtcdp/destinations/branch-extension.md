@@ -1,4 +1,5 @@
 ---
+keywords: branch;branch extension;branch destination
 title: Branch  extension
 seo-title: Branch  extension
 description: The Branch  extension is an advertising destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.

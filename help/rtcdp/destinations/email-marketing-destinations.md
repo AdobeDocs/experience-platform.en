@@ -1,4 +1,5 @@
 ---
+keywords: email;Email;e-mail;email destinations
 title: Email Marketing Destinations
 seo-title: Email Marketing Destinations
 description: Email Service Providers (ESPs) allow you to manage your email marketing activities, such as for sending promotional email campaigns.
