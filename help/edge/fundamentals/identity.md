@@ -21,9 +21,9 @@ The [!DNL Identity Service] has the ability to sync an ID with a 3rd party domai
 
 When migrating from using Visitor API, you can also migrate existing AMCV cookies. To enable ECID migration, set the `idMigrationEnabled` parameter in the configuration. The id migration is setup to enable some use cases:
 
-* When some pages of a domain are using Visitor API and other pages are using this SDK. To support this case, the SDK will read existing AMCV cookies and write a new cookie with the existing ECID. Additionally, the SDK will write AMCV cookies so that if the ECID is obtained first on a page instrumented with the AEP Web SDK, subsequent pages that are instrumented with Visitor API will have the same ECID.
-* When the AEP Web SDK is setup on a page that also has Visitor API. To support this case, if the AMCV cookie is not set, the SDK looks for the Visitor API on the page and calls it to get the ECID.
-* When the entire site is using the AEP Web SDK and does not have Visitor API, it is useful to migrate the ECIDs so that the return visitor information is retained. After the SDK is deployed with `idMigrationEnabled` for a period of time so that most of the visitor cookies are migration, the setting can be turned off.
+* When some pages of a domain are using Visitor API and other pages are using this SDK. To support this case, the SDK reads existing AMCV cookies and writes a new cookie with the existing ECID. Additionally, the SDK writes AMCV cookies so that if the ECID is obtained first on a page instrumented with the AEP Web SDK, subsequent pages that are instrumented with Visitor API have the same ECID.
+* When the AEP Web SDK is set up on a page that also has Visitor API. To support this case, if the AMCV cookie is not set, the SDK looks for the Visitor API on the page and calls it to get the ECID.
+* When the entire site is using the AEP Web SDK and does not have Visitor API, it is useful to migrate the ECIDs so that the return visitor information is retained. After the SDK is deployed with `idMigrationEnabled` for a period of time so that most of the visitor cookies are migrated, the setting can be turned off.
 
 ## Retrieving the Visitor ID
 
@@ -54,9 +54,9 @@ Additionally, the [!DNL Identity Service] allows you to sync your own identifier
 
 >[!NOTE]
 >
->It is highly recommended to pass all available identities on every `sendEvent` command; this will unlock a range of use cases, including personalization. Now that you can pass those identities in the `sendEvent` command, they can be placed directly in your DataLayer.
+>It is highly recommended to pass all available identities on every `sendEvent` command. This unlocks a range of use cases, including personalization. Now that you can pass those identities in the `sendEvent` command, they can be placed directly in your DataLayer.
 
-Syncing identities allows you to identify a device/user using multiple identities, set their authentication state and decide which identifier is considered the primary one. If no identifier has been set as `primary`, we will default the primary to be the `ECID`.
+Syncing identities allows you to identify a device/user using multiple identities, set their authentication state and decide which identifier is considered the primary one. If no identifier has been set as `primary`, the primary defaults to be the `ECID`.
 
 ```javascript
 alloy("sendEvent", {
