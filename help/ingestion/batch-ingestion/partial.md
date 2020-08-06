@@ -322,6 +322,7 @@ If the batch has one or more errors and has error diagnostics enabled, the statu
              "recordCount": 3
            }
         ]
+    }
 }
 ```
 
