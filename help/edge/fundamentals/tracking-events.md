@@ -9,7 +9,7 @@ seo-description: Learn how to track Experience Platform Web SDK events
 
 To send event data to the Adobe Experience Cloud, use the `sendEvent` command. The `sendEvent` command is the primary way to send data to the [!DNL Experience Cloud], and to retrieve personalized content, identities, and audience destinations.
 
-Data sent to Adobe Experience Cloud falls into two categories: 
+Data sent to Adobe Experience Cloud falls into two categories:
 
 * XDM data
 * Non-XDM data (currently unsupported)
@@ -87,6 +87,9 @@ alloy("sendEvent", {
 });
 ```
 
+### Adding identity information
+
+Custom identity information can also be added to the event. See [Retrieving Experience Cloud ID](./identity.md)
 
 ## Using the sendBeacon API
 
