@@ -19,7 +19,7 @@ In addition, the [appendix](#appendix) to this tutorial provides a reference for
 This tutorial requires a working knowledge of the various Adobe Experience Platform services involved with partial batch ingestion. Before beginning this tutorial, please review the documentation for the following services:
 
 - [Batch ingestion](./overview.md): The method which [!DNL Platform] ingests and stores data from data files, such as CSV and Parquet.
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
+- [[!DNL Experience Data Model] (XDM)](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to [!DNL Platform] APIs.
 
@@ -51,7 +51,7 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 
 You can create a new batch with partial ingestion enabled.
 
-To create a new batch, follow the steps in the [batch ingestion developer guide](./api-overview.md). Once you reach the *Create batch* step, add the following field within the request body:
+To create a new batch, follow the steps in the [batch ingestion developer guide](./api-overview.md). Once you reach the **[!UICONTROL Create batch]** step, add the following field within the request body:
 
 ```json
 {
@@ -76,17 +76,17 @@ To enable a batch for partial ingestion through the [!DNL Platform] UI, you can 
 
 ### Create a new source connection {#new-source}
 
-To create a new source connection, follow the listed steps in the [Sources overview](../../sources/home.md). Once you reach the *[!UICONTROL Dataflow detail]* step, take note of the *[!UICONTROL Partial ingestion]* and *[!UICONTROL Error diagnostics]* fields.
+To create a new source connection, follow the listed steps in the [Sources overview](../../sources/home.md). Once you reach the **[!UICONTROL Dataflow detail]** step, take note of the **[!UICONTROL Partial ingestion]** and **[!UICONTROL Error diagnostics]** fields.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
-The *[!UICONTROL Partial ingestion]* toggle allows you to enable or disable the use of partial batch ingestion.
+The **[!UICONTROL Partial ingestion]** toggle allows you to enable or disable the use of partial batch ingestion.
 
-The *[!UICONTROL Error diagnostics]* toggle only appears when the *[!UICONTROL Partial ingestion]* toggle is off. This feature allows [!DNL Platform] to generate detailed error messages about your ingested batches. If the *[!UICONTROL Partial ingestion]* toggle is turned on, enhanced error diagnostics are automatically enforced.
+The **[!UICONTROL Error diagnostics]** toggle only appears when the **[!UICONTROL Partial ingestion]** toggle is off. This feature allows [!DNL Platform] to generate detailed error messages about your ingested batches. If the *[!UICONTROL Partial ingestion]* toggle is turned on, enhanced error diagnostics are automatically enforced.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
-The *[!UICONTROL Error threshold]* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
+The **[!UICONTROL Error threshold]** allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
 
 ### Use an existing dataset {#existing-dataset}
 
@@ -94,29 +94,29 @@ To use an existing dataset, start by selecting a dataset. The sidebar on the rig
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
 
-The *[!UICONTROL Partial ingestion]* toggle allows you to enable or disable the use of partial batch ingestion.
+The **[!UICONTROL Partial ingestion]** toggle allows you to enable or disable the use of partial batch ingestion.
 
-The *[!UICONTROL Error diagnostics]* toggle only appears when the *[!UICONTROL Partial ingestion]* toggle is off. This feature allows [!DNL Platform] to generate detailed error messages about your ingested batches. If the *[!UICONTROL Partial ingestion]* toggle is turned on, enhanced error diagnostics are automatically enforced.
+The **[!UICONTROL Error diagnostics]** toggle only appears when the **[!UICONTROL Partial ingestion]** toggle is off. This feature allows [!DNL Platform] to generate detailed error messages about your ingested batches. If the **[!UICONTROL Partial ingestion]** toggle is turned on, enhanced error diagnostics are automatically enforced.
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
 
-The *[!UICONTROL Error threshold]* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
+The **[!UICONTROL Error threshold]** allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
 
 Now, you can upload data using the **Add data** button, and it will be ingested using partial ingestion.
 
 ### Use the "[!UICONTROL Map CSV to XDM schema]" flow {#map-flow}
 
-To use the "[!UICONTROL Map CSV to XDM schema]" flow, follow the listed steps in the [Map a CSV file tutorial](../tutorials/map-a-csv-file.md). Once you reach the *[!UICONTROL Add data]* step, take note of the *[!UICONTROL Partial ingestion]* and *[!UICONTROL Error diagnostics]* fields.
+To use the "[!UICONTROL Map CSV to XDM schema]" flow, follow the listed steps in the [Map a CSV file tutorial](../tutorials/map-a-csv-file.md). Once you reach the **[!UICONTROL Add data]** step, take note of the **[!UICONTROL Partial ingestion]** and **[!UICONTROL Error diagnostics]** fields.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
-The *[!UICONTROL Partial ingestion]* toggle allows you to enable or disable the use of partial batch ingestion.
+The **[!UICONTROL Partial ingestion]** toggle allows you to enable or disable the use of partial batch ingestion.
 
-The *[!UICONTROL Error diagnostics]* toggle only appears when the *[!UICONTROL Partial ingestion]* toggle is off. This feature allows [!DNL Platform] to generate detailed error messages about your ingested batches. If the *[!UICONTROL Partial ingestion]* toggle is turned on, enhanced error diagnostics are automatically enforced.
+The **[!UICONTROL Error diagnostics]** toggle only appears when the **[!UICONTROL Partial ingestion]** toggle is off. This feature allows [!DNL Platform] to generate detailed error messages about your ingested batches. If the **[!UICONTROL Partial ingestion]** toggle is turned on, enhanced error diagnostics are automatically enforced.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-The *[!UICONTROL Error threshold]* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
+The **[!UICONTROL Error threshold]** allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
 
 ## Downloading file-level metadata {#download-metadata}
 
