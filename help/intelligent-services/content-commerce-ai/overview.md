@@ -47,10 +47,3 @@ The overall vision of Content and Commerce AI is broken down into three steps to
 - Use content features to gain insights into customers' behaviors that drive KPI's.
 - Use content insights for improved content creation, authoring, and selection.
 
-## Getting started with Content and Commerce AI
-
-Content and Commerce AI utilizes Adobe I/O APIs. In order to make calls to Adobe I/O APIs and the I/O Console Integration, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all the Adobe I/O API calls, as shown below:
-
-- Authorization: Bearer `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
