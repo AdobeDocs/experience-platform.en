@@ -17,7 +17,9 @@ Select fields are directly mapped from Adobe Analytics to Experience Data Model 
 
 The following table includes columns that show the name of the Analytics field (*Analytics field*), the corresponding XDM field (*XDM field*) and its type (*XDM type*), as well as a description of the field (*Description*).
 
->[!NOTE] Please scroll left/right to view the full contents of the table.
+>[!NOTE]
+>
+>Please scroll left/right to view the full contents of the table.
 
 | Analytics field | XDM field | XDM type | Description |
 | --------------- | --------- | -------- | ---------- |
@@ -130,7 +132,9 @@ Select fields coming from ADC need to be transformed, requiring logic beyond a d
 
 The following table includes columns that show the name of the Analytics field (*Analytics field*), the corresponding XDM field (*XDM field*) and its type (*XDM type*), as well as a description of the field (*Description*).
 
->[!NOTE] Please scroll left/right to view the full contents of the table.
+>[!NOTE]
+>
+>Please scroll left/right to view the full contents of the table.
 
 | Analytics field | XDM field | XDM type | Description |
 | --------------- | --------- | -------- | ----------- |
@@ -188,7 +192,9 @@ To learn more about performing this transformations using Query Service, please 
 
 The following table includes columns that show the name of the Analytics field (*Analytics field*), the corresponding XDM field (*XDM field*) and its type (*XDM type*), as well as a description of the field (*Description*). 
 
->[!NOTE] Please scroll left/right to view the full contents of the table.
+>[!NOTE]
+>
+>Please scroll left/right to view the full contents of the table.
 
 | Analytics field | XDM field | XDM type | Description |
 | --------------- | --------- | -------- | ---------- |

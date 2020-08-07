@@ -23,8 +23,8 @@ If you prefer to use the user interface in Adobe's Real-time CDP to connect to a
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-*   [Experience Data Model (XDM) System](../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-*   [Catalog Service](../../catalog/home.md): Catalog is the system of record for data location and lineage within Experience Platform.
+*   [!DNL Experience Data Model (XDM) System](../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+*   [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] is the system of record for data location and lineage within Experience Platform.
 *   [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to activate data to streaming destinations in Adobe Real-time CDP.
@@ -52,7 +52,8 @@ Resources in Experience Platform can be isolated to specific virtual sandboxes. 
 
 *   x-sandbox-name: `{SANDBOX_NAME}`
 
->[!Note]
+>[!NOTE]
+>
 >For more information on sandboxes in Experience Platform, see the [sandbox overview documentation](../../sandboxes/home.md).
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
@@ -61,7 +62,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ### Swagger documentation {#swagger-docs}
 
-You can find accompanying reference documentation for all the API calls in this tutorial in Swagger. See https://platform.adobe.io/data/foundation/flowservice/swagger#/. We recommend that you use this tutorial and the Swagger documentation page in parallel.
+You can find accompanying reference documentation for all the API calls in this tutorial in Swagger. See the [Flow Service API documentation on Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). We recommend that you use this tutorial and the Swagger documentation page in parallel.
 
 ## Get the list of available streaming destinations {#get-the-list-of-available-streaming-destinations}
 
@@ -258,12 +259,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 *   `{CONNECTION_SPEC_ID}`: Use the connection spec ID you obtained in the step [Get the list of available destinations](#get-the-list-of-available-destinations).
 *   `{AUTHENTICATION_CREDENTIALS}`: fill in the name of your streaming destination, e.g.: `Amazon Kinesis authentication credentials` or `Azure Event Hubs authentication credentials`. 
-*   `{ACCESS_ID}`: *For Amazon Kinesis connections.* Your access ID for your Amazon Kinesis storage location.
-*   `{SECRET_KEY}`: *For Amazon Kinesis connections.* Your secret key for your Amazon Kinesis storage location.
-*  `{REGION}`: *For Amazon Kinesis connections.* The region in your Amazon Kinesis account where Adobe Real-time CDP will stream your data.
-*  `{SAS_KEY_NAME}`: *For Azure Event Hubs connections.* Fill in your SAS key name. Learn about authenticating to [!DNL Azure Event Hubs] with SAS keys in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
-*  `{SAS_KEY}`: *For Azure Event Hubs connections.* Fill in your SAS key. Learn about authenticating to [!DNL Azure Event Hubs] with SAS keys in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
-*  `{EVENT_HUB_NAMESPACE}`: *For Azure Event Hubs connections.* Fill in the Azure Event Hubs namespace where Adobe Real-time CDP will stream your data. For more information, see [Create an Event Hubs namespace](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) in the Microsoft documentation.
+*   `{ACCESS_ID}`: *For [!DNL Amazon Kinesis] connections.* Your access ID for your Amazon Kinesis storage location.
+*   `{SECRET_KEY}`: *For [!DNL Amazon Kinesis] connections.* Your secret key for your Amazon Kinesis storage location.
+*  `{REGION}`: *For [!DNL Amazon Kinesis] connections.* The region in your [!DNL Amazon Kinesis] account where Adobe Real-time CDP will stream your data.
+*  `{SAS_KEY_NAME}`: *For [!DNL Azure Event Hubs] connections.* Fill in your SAS key name. Learn about authenticating to [!DNL Azure Event Hubs] with SAS keys in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+*  `{SAS_KEY}`: *For [!DNL Azure Event Hubs] connections.* Fill in your SAS key. Learn about authenticating to [!DNL Azure Event Hubs] with SAS keys in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+*  `{EVENT_HUB_NAMESPACE}`: *For [!DNL Azure Event Hubs] connections.* Fill in the [!DNL Azure Event Hubs] namespace where Adobe Real-time CDP will stream your data. For more information, see [Create an Event Hubs namespace](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) in the [!DNL Microsoft] documentation.
 
 **Response**
 
@@ -307,18 +308,16 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "region": "{REGION}"
     },
     "params": { // use these values for Azure Event Hubs connections
-        "eventHubName": "{EVENT_HUB_NAME}",
-        "namespace": "EVENT_HUB_NAMESPACE"
+        "eventHubName": "{EVENT_HUB_NAME}"
     }
 }'
 ```
 
 *   `{BASE_CONNECTION_ID}`: Use the base connection ID you obtained in the step above.
 *   `{CONNECTION_SPEC_ID}`: Use the connection spec you obtained in the step [Get the list of available destinations](#get-the-list-of-available-destinations).
-*   `{NAME_OF_DATA_STREAM}`: *For Amazon Kinesis connections.* Provide the name of your existing data stream in your Amazon Kinesis account. Adobe Real-time CDP will export data to this stream.
-*   `{REGION}`: *For Amazon Kinesis connections.* The region in your Amazon Kinesis account where Adobe Real-time CDP will stream your data.
-*   `{EVENT_HUB_NAME}`: *For Azure Event Hubs connections.* Fill in the Azure Event Hub name where Adobe Real-time CDP will stream your data. For more information, see [Create an event hub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) in the Microsoft documentation.
-*   `{EVENT_HUB_NAMESPACE}`: *For Azure Event Hubs connections.* Fill in the Azure Event Hubs namespace where Adobe Real-time CDP will stream your data. For more information, see [Create an Event Hubs namespace](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) in the Microsoft documentation.
+*   `{NAME_OF_DATA_STREAM}`: *For [!DNL Amazon Kinesis] connections.* Provide the name of your existing data stream in your [!DNL Amazon Kinesis] account. Adobe Real-time CDP will export data to this stream.
+*   `{REGION}`: *For [!DNL Amazon Kinesis] connections.* The region in your Amazon Kinesis account where Adobe Real-time CDP will stream your data.
+*   `{EVENT_HUB_NAME}`: *For [!DNL Azure Event Hubs] connections.* Fill in the [!DNL Azure Event Hub] name where Adobe Real-time CDP will stream your data. For more information, see [Create an event hub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) in the [!DNL Microsoft] documentation.
 
 **Response**
 
@@ -373,7 +372,7 @@ curl -X POST \
     }
 ```
 
-*   `{FLOW_SPEC_ID}`: Use the flow for the streaming destination that you want to connect to. To get the flow spec, perform a GET operation on the `flowspecs` endpoint. See Swagger documentation here: https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. In the response, look for `upsTo` and copy the corresponding ID of the streaming destination that you want to connect to. 
+*   `{FLOW_SPEC_ID}`: The flow spec ID for profile based destinations is `71471eba-b620-49e4-90fd-23f1fa0174d8`. Use this value in the call. 
 *   `{SOURCE_CONNECTION_ID}`: Use the source connection ID you obtained in the step [Connect to your Experience Platform](#connect-to-your-experience-platform-data).
 *   `{TARGET_CONNECTION_ID}`: Use the target connection ID you obtained in the step [Connect to streaming destination](#connect-to-streaming-destination).
 
@@ -389,7 +388,7 @@ A successful response returns the ID (`id`) of the newly created dataflow and an
 ```
 
 
-## Activate data to your new destination
+## Activate data to your new destination {#activate-data}
 
 ![Destination steps overview step 5](/help/rtcdp/destinations/assets/step5-create-streaming-destination-api.png)
 
@@ -448,14 +447,26 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
                 "path": "{PROFILE_ATTRIBUTE}"
             }
         }
+    },
+        },
+        {
+        "op": "add",
+        "path": "/transformations/0/params/profileSelectors/selectors/-",
+        "value": {
+            "type": "JSON_PATH",
+            "value": {
+                "operator": "EXISTS",
+                "path": "{PROFILE_ATTRIBUTE}"
+            }
+        }
     }
 ]
 ```
 
 *   `{DATAFLOW_ID}`: Use the data flow you obtained in the previous step.
 *   `{ETAG}`: Use the etag that you obtained in the previous step.
-*   `{SEGMENT_ID}`: Provide the segment ID that you want to export to this destination. To retrieve segment IDs for the segments that you want to activate, go to https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/, select **Segmentation Service API** in the left navigation menu, and look for the `GET /segment/jobs` operation.
-*   `{PROFILE_ATTRIBUTE}`: For example, `"person.lastName"`
+*   `{SEGMENT_ID}`: Provide the segment ID that you want to export to this destination. To retrieve segment IDs for the segments that you want to activate, go to https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/, select **[!UICONTROL Segmentation Service API]** in the left navigation menu, and look for the `GET /segment/jobs` operation.
+*   `{PROFILE_ATTRIBUTE}`: For example, `personalEmail.address` or `person.lastName`
 
 **Response**
 
@@ -500,8 +511,23 @@ The returned response should include in the `transformations` parameter the segm
         "name": "GeneralTransform",
         "params": {
             "profileSelectors": {
-                "selectors": []
-            },
+                        "selectors": [
+                            {
+                                "type": "JSON_PATH",
+                                "value": {
+                                    "path": "personalEmail.address",
+                                    "operator": "EXISTS"
+                                }
+                            },
+                            {
+                                "type": "JSON_PATH",
+                                "value": {
+                                    "path": "person.lastname",
+                                    "operator": "EXISTS"
+                                }
+                            }
+                        ]
+                    },
             "segmentSelectors": {
                 "selectors": [
                     {
@@ -517,6 +543,53 @@ The returned response should include in the `transformations` parameter the segm
         }
     }
 ],
+```
+
+**Exported Data**
+
+>[!IMPORTANT]
+>
+> In addition to the profile attributes and the segments in the step [Activate data to your new destination](#activate-data), the exported data in [!DNL AWS Kinesis] and [!DNL Azure Event Hubs] will also include information about the identity map. This represents the identities of the exported profiles (for example [ECID](https://docs.adobe.com/content/help/en/id-service/using/intro/id-request.html), mobile ID, Google ID, email address, etc.). See an example below.
+
+```
+
+{
+  "person": {
+    "email": "yourstruly@adobe.con"
+  },
+  "segmentMembership": {
+    "ups": {
+      "72ddd79b-6b0a-4e97-a8d2-112ccd81bd02": {
+        "lastQualificationTime": "2020-03-03T21:24:39Z",
+        "status": "exited"
+      },
+      "7841ba61-23c1-4bb3-a495-00d695fe1e93": {
+        "lastQualificationTime": "2020-03-04T23:37:33Z",
+        "status": "existing"
+      }
+    }
+  },
+  "identityMap": {
+    "ecid": [
+      {
+        "id": "14575006536349286404619648085736425115"
+      },
+      {
+        "id": "66478888669296734530114754794777368480"
+      }
+    ],
+    "email_lc_sha256": [
+      {
+        "id": "655332b5fa2aea4498bf7a290cff017cb4"
+      },
+      {
+        "id": "66baf76ef9de8b42df8903f00e0e3dc0b7"
+      }
+    ]
+  }
+}
+
+
 ```
 
 ## Next steps

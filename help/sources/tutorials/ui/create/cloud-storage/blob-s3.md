@@ -5,9 +5,9 @@ title: Create an Azure Blob or Amazon S3 source connector in the UI
 topic: overview
 ---
 
-# Create an Azure Blob or Amazon S3 source connector in the UI
+# Create an [!DNL Azure Blob] or [!DNL Amazon] S3 source connector in the UI
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an Azure Blob (hereinafter referred to as "Blob") or Amazon S3 (hereinafter referred to as "S3") source connector using the Platform user interface.
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an [!DNL Azure Blob] (hereinafter referred to as "Blob") or [!DNL Amazon] S3 (hereinafter referred to as "S3") source connector using the [!DNL Platform] user interface.
 
 ## Getting started
 
@@ -22,7 +22,7 @@ If you already have a Blob or S3 base connection, you may skip the remainder of 
 
 ### Supported file formats
 
-Experience Platform supports the following file formats to be ingested from external storages:
+[!DNL Experience Platform] supports the following file formats to be ingested from external storages:
 
 -   Delimiter-separated values (DSV): Support for DSV formatted data files is currently limited to comma-separated values. The value of field headers within DSV formatted files must only consist of alphanumeric characters and underscores. Support for general DSV files will be provided in the future.
 -   JavaScript Object Notation (JSON): JSON formatted data files must be XDM compliant.
@@ -30,24 +30,49 @@ Experience Platform supports the following file formats to be ingested from exte
 
 ### Gather required credentials
 
-In order to access your Blob storage on Platform, you must provide a valid **Azure Storage connection string**. You can learn more about connection strings including ways to obtain them through <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string" target="_blank">this Microsoft Azure document</a>.
+In order to access your Blob storage on [!DNL Platform], you must provide a valid value for the following credential:
 
-Similarly, accessing your S3 bucket on Platform requires you to provide your **S3 Access Key** and **S3 Secret Key**. For more information, refer to <a href="https://aws.amazon.com/blogs/security/wheres-my-secret-access-key/" target="_blank">this AWS document</a>.
+| Credential | Description |
+| ---------- | ----------- |
+| `connectionString` | The connection string required to access data in your Blob storage. The Blob connection string pattern is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+
+For more information on getting started, visit [this Azure Blob document](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string).
+
+Similarly, accessing your S3 bucket on [!DNL Platform] requires you to provide your valid values for the following credentials:
+
+| Credential | Description |
+| ---------- | ----------- |
+| `s3AccessKey` | The access key ID for your S3 storage. |
+| `s3SecretKey` | The secret key ID for your S3 storage. |
+
+For more information on getting started, visit [this AWS document](https://aws.amazon.com/blogs/security/wheres-my-secret-access-key/).
 
 ## Connect your Blob or S3 account
 
-With your cloud storage's credentials ready, you can follow the steps below to create a new inbound base connection to link your Blob or S3 account to Platform.
+Once you have gathered your required credentials, you can follow the steps below to create a new Blob or S3 account to connect to [!DNL Platform].
 
-Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> and then select **Sources** from the left navigation bar to access the sources workspace. The *Catalog* screen displays a variety of sources for which you can create inbound base connections with, and each source shows the number of existing base connections associated to them.
+Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the *[!UICONTROL Sources]* workspace. The *[!UICONTROL Catalog]* screen displays a variety of sources for which you can create an inbound account with, and each source shows the number of existing accounts and dataflows associated with them.
 
-Under the *Cloud Storage* category, select either **Azure Blob Storage** or **Amazon S3** to expose an information bar on the right-side of your screen. The information bar provides a brief description for the selected source as well as options to view its documentation or to connect with the source. To create a new inbound base connection, click **Connect source**. 
+You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-![](../../../../images/tutorials/create/s3/s3_sources_catalog.png)
+Under the *[!UICONTROL Databases]* category, select **[!UICONTROL Azure Blob Storage]** or **[!UICONTROL Amazon S3]** click **on the + icon (+)** to create a new [!DNL Blob] or S3 connector.
 
-On the input form, provide the base connection with a name, an optional description, and your Blob or S3 credentials. Lastly, click **Connect** and then allow some time for the new base connection to establish.
+![catalog](../../../../images/tutorials/create/blob/catalog.png)
 
-![](../../../../images/tutorials/create/s3/s3_credentials.png)
+The *[!UICONTROL Connect to Azure Blob Storage]* page appears. On this page, you can either use new credentials or existing credentials.
 
-## Next steps
+### New account
 
-By following this tutorial, you have established a base connection to your Azure Blob or Amazon S3 account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](../../dataflow/batch/cloud-storage.md).
+If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide the connection with a name, an optional description, and your [!DNL Blob] or S3 credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new account to establish.
+
+![connect](../../../../images/tutorials/create/blob/new.png)
+
+### Existing account
+
+To connect an existing account, select the [!DNL Blob] or S3 account you want to connect with, then select **[!UICONTROL Next]** to proceed.
+
+![existing](../../../../images/tutorials/create/blob/existing.png)
+
+## Next steps and additional resources
+
+By following this tutorial, you have established a connection to your [!DNL Blob] or S3 account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into Platform](../../dataflow/batch/cloud-storage.md).

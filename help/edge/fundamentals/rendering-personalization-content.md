@@ -7,7 +7,7 @@ seo-description: Learn how to render personalized content with Experience Platfo
 
 # Overview of Personalization Options
 
-The Adobe Experience Platform Web SDK supports querying the personalization solutions at Adobe including Adobe Target. There are two modes for personalization: retrieving content that can be rendered automatically and content that the developer must render. The SDK also provides facilities to [manage flicker](../../edge/solution-specific/target/flicker-management.md).
+The Adobe Experience Platform [!DNL Web SDK] supports querying the personalization solutions at Adobe, including Adobe Target. There are two modes for personalization: retrieving content that can be rendered automatically and content that the developer must render. The SDK also provides facilities to [manage flicker](../../edge/solution-specific/target/flicker-management.md).
 
 ## Automatically Rendering Content
 
@@ -29,7 +29,7 @@ alloy("sendEvent", {
 });
 ```
 
-The rendering of personalized content is asynchronous, so there should not be any assumption around when a particular piece of content is part of the page.
+Rendering personalized content is asynchronous, so there should not be any assumption around when a particular piece of content is part of the page.
 
 ## Manually Rendering Content
 
@@ -86,10 +86,10 @@ This will return a list of decisions as a JSON object for each decisions.
 
 ```
 
-{info}
-If you use Target scopes become mBoxes on the server, only they are all requests at once instead of individually. The global mbox is always sent.
-{info}
+>[!TIP]
+>
+> If you use [!DNL Target] scopes become mBoxes on the server, only they are all requests at once instead of individually. The global mbox is always sent.
 
 ### Retrieve Automatic Content
 
-If you would like the `result.decisions` to include the automatic renderable decisions you can set `renderDecisions` to false and include the special scope `__view__`
+If you would like the `result.decisions` to include the automatic renderable decisions, you can set `renderDecisions` to false and include the special scope `__view__`.

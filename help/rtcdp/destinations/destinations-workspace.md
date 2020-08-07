@@ -27,7 +27,7 @@ For more information on destination categories and information on each destinati
 
 ## [!UICONTROL Browse] {#browse}
 
-The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection. Destinations with the **[!UICONTROL enabled]** toggle turned on set the destination to active and vice-versa. You can also view the destinations where you have data flowing by selecting **[!UICONTROL Segments > Browse]** and selecting a segment to inspect. See the table below for all the information that is provided for each destination in the Browse tab:
+The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection. Destinations with the **[!UICONTROL enabled]** toggle turned on set the destination to active and vice-versa. You can also view the destinations where you have data flowing by selecting **[!UICONTROL Segments]** > **[!UICONTROL Browse]** and selecting a segment to inspect. See the table below for all the information that is provided for each destination in the Browse tab:
 
 ![Browse Tab](/help/rtcdp/destinations/assets/browse-tab.png)
 

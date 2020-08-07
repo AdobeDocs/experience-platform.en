@@ -9,10 +9,10 @@ seo-description: Learn how to toggle Experience Platform Web SDK debugging
 
 When debugging is enabled, the SDK outputs messages to the browser console that can be helpful in debugging your implementation and understanding how the SDK is behaving. Debugging also results in a server-side synchronous validation of the data being collected against the schema you have configured.
 
-Debugging is disabled by default, but can be toggled in three different ways: 
+Debugging is disabled by default, but can be toggled on in three different ways: 
 
 * `configure` command
-* `debug` command
+* `setDebug` command
 * query string parameter
 
 ## Toggling debugging with the Configure command
@@ -21,13 +21,14 @@ When configuring the SDK using the `configure` command, enable debugging by sett
 
 ```javascript
 alloy("configure", {
-  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId":"ADB3LETTERSANDNUMBERS@AdobeOrg",
   "debugEnabled": true
 });
 ```
 
->[!Hint]
+>[!TIP]
+>
 >This enables debugging for all users of the webpage rather than only your personal browser.
 
 ## Toggling debugging with the Debug command
@@ -35,7 +36,7 @@ alloy("configure", {
 Toggle debugging with a separate `debug` command as follows:
 
 ```javascript
-alloy("debug", {
+alloy("setDebug", {
   "enabled": true
 });
 ```
@@ -54,7 +55,7 @@ Similar to the `debug` command, if you prefer not to change code on your webpage
 
 ## Priority and duration
 
-When debugging is set through the `debug` command or query string parameter, it overrides any `debug` option set in the `configure` command. In these two cases, debugging also remains toggled for the duration of the session. In other words, if you enable debugging using the debug command or query string parameter, it stays enabled until one of the following:
+When debugging is set through the `debug` command or query string parameter, it overrides any `debug` option set in the `configure` command. In these two cases, debugging also remains toggled on for the duration of the session. In other words, if you enable debugging using the debug command or query string parameter, it stays enabled until one of the following:
 
 * The end of your session 
 * You run the `debug` command 
