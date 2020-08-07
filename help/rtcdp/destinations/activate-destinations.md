@@ -25,7 +25,7 @@ To activate data to destinations, you must have successfully [connected a destin
 5. *Conditional*. This step differs depending on the type of destination where you are activating your segments. <br> For *email marketing destinations* and *cloud storage destinations*, on the **[!UICONTROL Select Attributes]** page, select **[!UICONTROL Add new field]** and select the attributes that you want to send to the destination.
    We recommend one of the attributes to be a [unique identifier](/help/rtcdp/destinations/email-marketing-destinations.md#identity) from your union schema. For more information about mandatory attributes, see Identity in the [Email marketing destinations](/help/rtcdp/destinations/email-marketing-destinations.md#identity) article. 
    
-    >[!NOTE] 
+    >[!NOTE]
     > 
     >If any data usage labels have been applied to certain fields within a dataset (rather than the entire dataset), enforcement of those field-level labels on activation occurs under the following conditions:
     >* The fields are used in the segment definition.
