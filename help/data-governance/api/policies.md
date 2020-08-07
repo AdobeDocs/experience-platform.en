@@ -363,6 +363,10 @@ A successful response returns the details of the newly created policy, including
 
 ## Update a custom policy {#update}
 
+>[!IMPORTANT]
+>
+>You can only update custom policies. If you wish to enable or disable core policies, see the section on [updating the list of enabled core policies](#update-enabled-core).
+
 You can update an existing custom policy by providing its ID in the path of a PUT request with a payload that includes the updated form of the policy in its entirety. In other words, the PUT request essentially _rewrites_ the policy.
 
 >[!NOTE]
@@ -458,6 +462,10 @@ A successful response returns the details of the updated policy.
 ```
 
 ## Update a portion of a custom policy {#patch}
+
+>[!IMPORTANT]
+>
+>You can only update custom policies. If you wish to enable or disable core policies, see the section on [updating the list of enabled core policies](#update-enabled-core).
 
 A specific portion of a policy may be updated using a PATCH request. Unlike PUT requests that rewrite the policy, PATCH requests update only the properties specified in the request body. This is especially useful when you want to enable or disable a policy, as you only need to provide the path to the appropriate property (`/status`) and its value (`ENABLED` or `DISABLED`).
 
@@ -589,6 +597,124 @@ curl -X DELETE \
 A successful response returns HTTP status 200 (OK) with a blank body. 
 
 You can confirm the deletion by attempting to look up (GET) the policy again. You should receive a 404 (Not Found) error if the policy has been successfully deleted.
+
+## Retrieve a list of enabled core policies {#list-enabled-core}
+
+By default, only enabled data usage policies participate in evaluation. You can retrieve a list of core policies that are currently enabled by your organization by making a GET request to the `/enabledCorePolicies` endpoint.
+
+**API format**
+
+```http
+GET /enabledCorePolicies
+```
+
+**Request**
+
+```sh
+curl -X GET \
+  https://platform.adobe.io/data/foundation/dulepolicy/enabledCorePolicies \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Response**
+
+A successful response returns the list of enabled core policies under a `policyIds` array.
+
+```json
+{
+  "policyIds": [
+    "corepolicy_0001",
+    "corepolicy_0002",
+    "corepolicy_0003",
+    "corepolicy_0004",
+    "corepolicy_0005",
+    "corepolicy_0006",
+    "corepolicy_0007",
+    "corepolicy_0008"
+  ],
+  "imsOrg": "{IMS_ORG}",
+  "created": 1529696681413,
+  "createdClient": "{CLIENT_ID}",
+  "createdUser": "{USER_ID}",
+  "updated": 1529697651972,
+  "updatedClient": "{CLIENT_ID}",
+  "updatedUser": "{USER_ID}",
+  "_links": {
+    "self": {
+      "href": "https://platform.adobe.io:443/data/foundation/dulepolicy/enabledCorePolicies"
+    }
+  }
+}
+```
+
+## Update the list of enabled core policies {#update-enabled-core}
+
+By default, only enabled data usage policies participate in evaluation. By making a PUT request to the `/enabledCorePolicies` endpoint, you can update the list of enabled core policies for your organization using a single call.
+
+>[!NOTE]
+>
+>Only core policies can be enabled or disabled by this endpoint. To enable or disable custom policies, see the section on [updating a portion of a policy](#patch).
+
+**API format**
+
+```http
+PUT /enabledCorePolicies
+```
+
+**Request**
+
+The following request updates the list of enabled core policies based on the IDs provided in the payload.
+
+```sh
+curl -X GET \
+  https://platform.adobe.io/data/foundation/dulepolicy/enabledCorePolicies \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "policyIds": [
+          "corepolicy_0001",
+          "corepolicy_0002",
+          "corepolicy_0007",
+          "corepolicy_0008"
+        ]
+      }'
+```
+
+| Property | Description |
+| --- | --- |
+| `policyIds` | A list of core policy IDs that are to be enabled. Any core policies that are not included are set to `DISABLED` status and will not participate in evaluation. | 
+
+**Response**
+
+A successful response returns the updated list of enabled core policies under a `policyIds` array.
+
+```json
+{
+  "policyIds": [
+    "corepolicy_0001",
+    "corepolicy_0002",
+    "corepolicy_0007",
+    "corepolicy_0008"
+  ],
+  "imsOrg": "{IMS_ORG}",
+  "created": 1529696681413,
+  "createdClient": "{CLIENT_ID}",
+  "createdUser": "{USER_ID}",
+  "updated": 1595876052649,
+  "updatedClient": "{CLIENT_ID}",
+  "updatedUser": "{USER_ID}",
+  "_links": {
+    "self": {
+      "href": "https://platform.adobe.io:443/data/foundation/dulepolicy/enabledCorePolicies"
+    }
+  }
+}
+```
 
 ## Next steps
 
