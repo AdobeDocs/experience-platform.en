@@ -17,7 +17,7 @@ By default, only enabled data usage policies participate in evaluation. The `/en
 
 The API endpoints used in this guide is part of the [Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
-## Retrieve the list of enabled core policies
+## Retrieve the list of enabled core policies {#list}
 
 You can retrieve the current list of enabled policies by making a GET request to the `/enabledCorePolicies` endpoint.
 
@@ -69,7 +69,7 @@ A successful response returns the list of enabled core policies under a `policyI
 }
 ```
 
-## Update the list of enabled core policies
+## Update the list of enabled core policies {#update}
 
 You can update the list of enabled policies by making a PUT request to the `/enabledCorePolicies` endpoint.
 

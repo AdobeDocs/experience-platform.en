@@ -15,7 +15,7 @@ You can manage marketing actions for your organization by using the `/marketingA
 
 The API endpoints used in this guide is part of the [Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
-## Retrieve a list of marketing actions
+## Retrieve a list of marketing actions {#list}
 
 You can retrieve a list of core or custom marketing actions by making a GET request to `/marketingActions/core` or `/marketingActions/custom`, respectively.
 
@@ -149,7 +149,7 @@ The response object contains the details for the marketing action, including the
 }
 ```
 
-## Create or update a custom marketing action
+## Create or update a custom marketing action {#create-update}
 
 You can create a new custom marketing action, or update an existing one, by including the marketing action's existing or intended name in the path of a PUT request. 
 
@@ -209,7 +209,7 @@ A successful response returns the details of the marketing action. If an existin
 }
 ```
 
-## Delete a custom marketing action
+## Delete a custom marketing action {#delete}
 
 You can delete a custom marketing action by including its name in the path of a DELETE request.
 

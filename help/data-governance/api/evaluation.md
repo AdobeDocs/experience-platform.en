@@ -9,36 +9,43 @@ topic: developer guide
 
 Once marketing actions have been created and policies have been defined, you can use the [!DNL Policy Service] API to evaluate if any policies are violated by certain actions. The returned constraints take the form of a set of policies that would be violated by attempting the marketing action on the specified data containing data usage labels.
 
-By default, **only policies whose status is set to "ENABLED" participate in evaluation**, however you can use the query parameter `?includeDraft=true` to include "DRAFT" policies in evaluation.
+By default, only policies whose status is set to `ENABLED` participate in evaluation. However, you can use the query parameter `?includeDraft=true` to include `DRAFT` policies in evaluation.
 
 Evaluation requests can be made in one of three ways:
 
-1. Given a set of data usage labels and a marketing action, does the action violate any policies?
-1. Given one or more datasets and a marketing action, does the action violate any policies?
-1. Given one or more datasets and a subset of one or more fields within each of those datasets, does the action violate any policies?
+1. Given a marketing action and a set of data usage labels, does the action violate any policies?
+1. Given a marketing action and one or more datasets, does the action violate any policies?
+1. Given a marketing action, one or more datasets, and a subset of one or more fields within each of those datasets, does the action violate any policies?
 
 ## Getting started
 
 The API endpoints used in this guide is part of the [Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
-## Evaluate policies using data usage labels and a marketing action
+## Evaluate for policy violations using data usage labels {#labels}
 
-Evaluating policy violations based on the presence of data usage labels requires you to specify the set of labels that would be present on the data during the request. This is done through the use of query parameters, where data usage labels are provided as a comma-separated list of values, as shown in the following example.
+You can evaluate for policy violations based on the presence of a specific set of data usage labels by specifying those labels in a `duleLabels` query parameter in a GET request.
 
 **API format**
 
 ```http
-GET /marketingActions/core/{marketingActionName}/constraints?duleLabels={value1},{value2}
-GET /marketingActions/custom/{marketingActionName}/constraints?duleLabels={value1},{value2}
+GET /marketingActions/core/{MARKETING_ACTION_NAME}/constraints?duleLabels={LABELS_LIST}
+GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LABELS_LIST}
 ```
+
+| Parameter | Description |
+| --- | --- |
+| `{MARKETING_ACTION_NAME}` | The name of the marketing action to test against a set of data usage labels. You can retrieve a list of available marketing actions by making a [GET request to the marketing actions endpoint](./marketing-actions.md#list). |
+| `{LABELS_LIST}` | A comma-separated list of data usage labels names to test the marketing action against. For example: `duleLabels=C1,C2,C3`<br><br>Note that label names are case-sensitive. Ensure that you are using the correct case when listing them in the `duleLabels` parameter. |
 
 **Request**
 
-The example request below evaluates a marketing action against the labels C1 and C3. When evaluating policies using data usage labels, please keep the following in mind:
-* **Data usage labels are case sensitive.** The request shown above returns a violated policy, whereas making the same request using lowercase labels (e.g. `"c1,c3"`, `"C1,c3"`, `"c1,C3"`) does not.
-* **Be aware of the `AND` and `OR` operators in your policy expressions.** In this example, if either label (`C1` or `C3`) had appeared alone in the request, the marketing action would not have violated this policy. It takes both labels (`C1 AND C3`) to return the violated policy. Ensure you are evaluating policies carefully and defining policy expressions with equal care.
+The example request below evaluates a marketing action against the labels C1 and C3.
 
-```SHELL
+>[!IMPORTANT]
+>
+>Be aware of the `AND` and `OR` operators in your policy expressions. In the example below, if either label (`C1` or `C3`) had appeared alone in the request, the marketing action would not have violated this policy. It takes both labels (`C1` and `C3`) to return the violated policy. Ensure you are evaluating policies carefully and defining policy expressions with equal care.
+
+```sh
 curl -X GET \
   'https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/sampleMarketingAction/constraints?duleLabels=C1,C3' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -49,7 +56,7 @@ curl -X GET \
 
 **Response**
 
-The response object includes a `duleLabels` array that should match the labels sent in the request. If performing the specified marketing action against the data usage labels violates a policy, the `violatedPolicies` array will contain the details of the policy (or policies) affected. If no policies are violated, the `violatedPolicies` array will appear empty (`[]`).
+A successful response includes a `violatedPolicies` array, which contains the details of the any policies that were violated as a result of performing the marketing action against the provided labels. If no policies are violated, the `violatedPolicies` array will be empty.
 
 ```JSON
 {
@@ -107,29 +114,33 @@ The response object includes a `duleLabels` array that should match the labels s
 }
 ```
 
-## Evaluate policies using datasets and a marketing action
+## Evaluate for policy violations using using datasets {#datasets}
 
-You can also evaluate policy violations by specifying the ID of one or more datasets from which data usage labels can be collected. This is done by performing a POST request to either the core or custom `/constraints` endpoint for a marketing action and specifying dataset IDs within the request body, as shown below.
+You can evaluate for policy violations based on a set of one or more datasets from which data usage labels can be collected. This is done by performing a POST request to the `/constraints` endpoint for a specific marketing action and providing a list of dataset IDs within the request body.
 
 **API format**
 
 ```http
-POST /marketingActions/core/{marketingActionName}/constraints
-POST /marketingActions/custom/{marketingActionName}/constraints
+POST /marketingActions/core/{MARKETING_ACTION_NAME}/constraints
+POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 ```
+
+| Parameter | Description |
+| --- | --- |
+| `{MARKETING_ACTION_NAME}` | The name of the marketing action to test against one or more datasets. You can retrieve a list of available marketing actions by making a [GET request to the marketing actions endpoint](./marketing-actions.md#list). |
 
 **Request**
 
-The request body contains an array with an object for each dataset ID. Since you are sending a request body, the "Content-Type: application/json" request header is required, as shown in the following example.
+The following request performs the `crossSiteTargeting` marketing action against a set of three datasets to evaluate for any policy violations.
 
-```SHELL
+```sh
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
   -d '[
         {
             "entityType": "dataSet",
@@ -146,13 +157,14 @@ curl -X POST \
       ]'
 ```
 
+| Property | Description |
+| --- | --- |
+| `entityType` | The type of entity whose ID is indicated in the sibling `entityId` property. Currently, the only accepted value is `dataSet`. |
+| `entityId` | The ID of a dataset to test the marketing action against. A list of datasets and their corresponding IDs can be obtained by making a GET request to the `/dataSets` endpoint in the Catalog Service API. See the guide on [listing Catalog objects](../../catalog/api/list-objects.md) for more information. |
+
 **Response**
 
-The response object includes a `duleLabels` array that contains a consolidated list of all labels found within the specified datasets. This list includes dataset- and field-level labels on all fields within the dataset.
-
-The response also includes a `discoveredLabels` array containing objects for each dataset, showing `datasetLabels` broken down into dataset- and field-level labels. Each field-level label shows the path to the specific field with that label.
-
-If the specified marketing action violates a policy involving the `duleLabels` within the datasets, the `violatedPolicies` array will contain the details of the policy (or policies) affected. If no policies are violated, the `violatedPolicies` array will appear empty (`[]`).
+A successful response includes a `violatedPolicies` array, which contains the details of the any policies that were violated as a result of performing the marketing action against the provided datasets. If no policies are violated, the `violatedPolicies` array will be empty.
 
 ```JSON
 {
@@ -323,27 +335,36 @@ If the specified marketing action violates a policy involving the `duleLabels` w
 }
 ```
 
-## Evaluate policies using datasets, fields, and a marketing action
+| Property | Description |
+| --- | --- |
+| `duleLabels` | The response object includes a `duleLabels` array that contains a consolidated list of all labels found within the specified datasets. This list includes dataset- and field-level labels on all fields within the dataset. |
+| `discoveredLabels` | The response also includes a `discoveredLabels` array containing objects for each dataset, showing `datasetLabels` broken down into dataset- and field-level labels. Each field-level label shows the path to the specific field with that label. |
 
-In addition to supplying one or more dataset IDs, a subset of fields from within each dataset may also be specified, indicating that only the data usage labels on those fields should be evaluated. Similar to the POST request involving only datasets, this request adds specific fields for each dataset to the request body.
+## Evaluate for policy violations using specific dataset fields {#fields}
+
+You can evaluate for policy violations based on a subset of fields from within one or more datasets, so that only the data usage labels applied those fields are evaluated.
 
 When evaluating policies using dataset fields, please keep the following in mind:
 
-* **Field names are case sensitive.** When providing fields, they must be written exactly as they appear in the dataset (for example, `firstName` vs `firstname`).
-* **Dataset label inheritance.** data usage labels can be applied at multiple levels and are inherited downward. If your policy evaluations are not returning the way you thought they might, be sure to check the inherited labels from datasets down to fields in addition to those applied at the field level.
+* **Field names are case sensitive**: When providing fields, they must be written exactly as they appear in the dataset (for example, `firstName` vs `firstname`).
+* **Dataset label inheritance**: Individual fields in a dataset inherit any labels that have been applied at the dataset level. If your policy evaluations are not returning as expected, be sure to check for any labels that may have been inherited from the dataset level down to fields, in addition to those applied at the field level.
 
 **API format**
 
 ```http
-POST /marketingActions/core/{marketingActionName}/constraints
-POST /marketingActions/custom/{marketingActionName}/constraints
+POST /marketingActions/core/{MARKETING_ACTION_NAME}/constraints
+POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 ```
+
+| Parameter | Description |
+| --- | --- |
+| `{MARKETING_ACTION_NAME}` | The name of the marketing action to test against a subset of dataset fields. You can retrieve a list of available marketing actions by making a [GET request to the marketing actions endpoint](./marketing-actions.md#list). |
 
 **Request**
 
-The request body contains an array with an object for each dataset ID and the subset of fields within that dataset that should be used for evaluation. Since you are sending a request body, the "Content-Type: application/json" request header is required, as shown in the following example. 
+The following request tests the marketing action `crossSiteTargeting` on a specific set of fields belonging to three datasets. The payload is similar to an [evaluation request involving only datasets](#datasets), adding specific fields for each dataset to collect labels from.
 
-```SHELL
+```sh
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -384,13 +405,17 @@ curl -X POST \
       ]'
 ```
 
+| Property | Description |
+| --- | --- |
+| `entityType` | The type of entity whose ID is indicated in the sibling `entityId` property. Currently, the only accepted value is `dataSet`. |
+| `entityId` | The ID of a dataset whose fields are to be evaluated against the marketing action. A list of datasets and their corresponding IDs can be obtained by making a GET request to the `/dataSets` endpoint in the Catalog Service API. See the guide on [listing Catalog objects](../../catalog/api/list-objects.md) for more information. |
+| `entityMeta.fields` | An array of paths to specific fields within the dataset's schema, provided in the form of JSON Pointer strings. See the section on [JSON Pointer](../../landing/api-fundamentals.md#json-pointer) in the API fundamentals guide for details on the accepted syntax for these strings. |
+
 **Response**
 
-The response object includes a `duleLabels` array that contains the consolidated list of labels found on the specified fields. Remember that this includes dataset labels as well, as they are inherited down to fields. 
+A successful response includes a `violatedPolicies` array, which contains the details of the any policies that were violated as a result of performing the marketing action against the provided dataset fields. If no policies are violated, the `violatedPolicies` array will be empty.
 
-If a policy is violated by performing the specified marketing action on the data in the provided fields, the `violatedPolicies` array will contain the details of the policy (or policies) affected. If no policies are violated, the `violatedPolicies` array will appear empty (`[]`).
-
-In the response below, you can see that the list of `duleLabels` is now shorter, as is the `discoveredLabels` for each dataset as it only includes the fields specified in the request body. You will also notice that the previously violated policy, "Targeting Ads or Content", required both `C4 AND C6` labels, so it is therefore no longer violated and the `violatedPolicies` array appears empty.
+Comparing the example response below to the [response involving only datasets](#datasets), note that the list of collected labels is shorter, as is the `discoveredLabels` for each dataset as it only includes the fields specified in the request body. In addition, the previously violated policy `Targeting Ads or Content` requires both `C4 AND C6` labels to present, and is therefore no longer violated as indicated by the empty `violatedPolicies` array.
 
 ```JSON
 {
@@ -490,7 +515,7 @@ In the response below, you can see that the list of `duleLabels` is now shorter,
 }
 ```
 
-## Evaluate policies in bulk
+## Evaluate policies in bulk {#bulk}
 
 The `/bulk-eval` endpoint allows you to run multiple evaluation jobs in a single API call.
 
@@ -506,7 +531,7 @@ The payload of a bulk evaluation request should be an array of objects; one for 
 
 >[!WARNING]
 >
->If any listed evaluation job contains both an `entityList` and a `labels` array, an error will result. If you wish to evaluate based on both datasets and labels, you must include separate evaluation jobs for each marketing action.
+>If any listed evaluation job contains both an `entityList` and a `labels` array, an error will result. If you wish to evaluate the same marketing action based on both datasets and labels, you must include separate evaluation jobs for that marketing action.
 
 ```sh
 curl -X POST \
@@ -552,7 +577,7 @@ curl -X POST \
 | `entityList` | An array of datasets and (optionally) specific fields within those datasets to test the marketing action against.<br><br>**IMPORTANT**: When using this property, a `labels` property must NOT be included in the same object. To evaluate the same marketing action using specific data usage labels, you must include a separate object in the request payload that contains a `labels` array. |
 | `entityType` | The type of entity to test the marketing action against. Currently, only `dataSet` is supported. |
 | `entityId` | The ID of a dataset to test the marketing action against. |
-| `entityMeta` | *(Optional)* An object that contains a mandatory `fields` array, which itself lists specific fields within the dataset to test the marketing action against, rather than the entire dataset. |
+| `entityMeta.fields` | *(Optional)* A list of specific fields within the dataset to test the marketing action against. |
 
 **Response**
 
