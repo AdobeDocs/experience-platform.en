@@ -7,9 +7,9 @@ topic: guide
 
 # Preview sample status endpoint (Profile preview)
 
-Adobe Experience Platform enables you to ingest customer data from multiple sources as profile fragments in order to build robust unified profiles for individual customers. As data enabled for [!DNL Real-time Customer Profile] is ingested into [!DNL Platform], it is stored within the [!DNL Profile] store. 
+Adobe Experience Platform enables you to ingest customer data from multiple sources in order to build robust unified profiles for individual customers. As data enabled for [!DNL Real-time Customer Profile] is ingested into [!DNL Platform], it is stored within the [!DNL Profile] data store. 
 
-When the ingestion of records into the Profile store increases or decreases the total count by more than 5%, a job is triggered to update the profile count. For streaming data workflows, a check is done on an hourly basis to determine if the 5% increase or decrease threshold has been met. If it has, a job is automatically triggered to update the count. For batch ingestion, within 15 minutes of successfully ingesting a batch into the Profile store, if the 5% increase or decrease threshold is met, a job is run to update the count. These metrics are available within the [!UICONTROL Profiles] section of the Experience Platform UI, as well as through the [!DNL Real-time Customer Profile] API.
+When the ingestion of records into the Profile store increases or decreases the total profile count by more than 5%, a job is triggered to update the count. For streaming data workflows, a check is done on an hourly basis to determine if the 5% increase or decrease threshold has been met. If it has, a job is automatically triggered to update the count. For batch ingestion, within 15 minutes of successfully ingesting a batch into the Profile store, if the 5% increase or decrease threshold is met, a job is run to update the count. These metrics are available within the [!UICONTROL Profiles] section of the Experience Platform UI, as well as through the [!DNL Real-time Customer Profile] API.
 
 For information on how to access profile data using the UI, please visit the [[!DNL Profile] user guide](../ui/user-guide.md).
 
@@ -17,7 +17,7 @@ For information on how to access profile data using the UI, please visit the [[!
 
 The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
-## View last sample status
+## View last sample status {#view-last-sample-status}
 
 You can perform a GET request to the `/previewsamplestatus` endpoint to view the details for the last successful sample job that was run for your IMS Organization. This includes the total number of profiles your organization has within Experience Platform, after merging together profile fragments to form a single profile for each individual customer. In other words, your organization may have multiple profile fragments related to a single customer who interacts with your brand across different channels, but these fragments would be merged together (according to the default merge policy) and would return a count of "1" profile because they are all related to the same individual.
 
@@ -62,15 +62,15 @@ The response includes the details for the last successful sample job that was ru
 
 |Property|Description|
 |---|---|
-|`numRowsToRead`|The total number of rows in the sample.|
+|`numRowsToRead`|The total number of merged profiles in the sample.|
 |`cosmosDocCount`|Total document count in Cosmos.|
-|`totalFragmentCount`||
+|`totalFragmentCount`|Total number of profile fragments in the Profile store.|
 |`lastSuccessfulBatchTimestamp`|Last successful batch ingestion timestamp.|
-|`streamingDriven`||
-|`totalRows`|Total rows in Cosmos.|
+|`streamingDriven`| *This field has been deprecated and contains no significance to the response.*|
+|`totalRows`|Total number of merged profiles.|
 |`lastBatchId`|Last batch ingestion ID.|
 |`status`|Status of last sample.|
-|`samplingRatio`||
+|`samplingRatio`|Ratio of merged profiles sampled (`numRowsToRead`) to total merged profiles (`totalRows`), expressed as a percentage in decimal format.|
 |`mergeStrategy`|Merge strategy used in last sample.|
 |`lastSampledTimestamp`|Last successful sample timestamp.|
 
@@ -86,7 +86,7 @@ GET /previewsamplestatus/report/dataset?{QUERY_PARAMETERS}
 ```
 
 |Parameter|Description|
-|`date`| Specify the date of the report to be returned. If a report does not exist for the supplied date, the most recent report from the date will be returned. If no date is specified, the most recent report will be returned. Format: YYYY-MM-DD. Example: `date=2024-12-31`|
+|`date`| Specify the date of the report to be returned. If a report does not exist for the specified date, a 404 error will be returned. If no date is specified, the most recent report will be returned. Format: YYYY-MM-DD. Example: `date=2024-12-31`|
 
 **Request**
 
@@ -103,46 +103,50 @@ curl -X GET \
 
 **Response**
 
-The response includes a `"data"` array, with individual objects containing the details for each dataset. The response shown has been truncated to show three datasets.
+The response includes a `data` array, containing a list of dataset objects. The response shown has been truncated to show three datasets. 
+
+>[!NOTE]
+>
+>If a dataset report did not exist for the date provided, HTTP Status 404 (Not Found) would be returned.
 
 ```json
 {
   "data": [
     {
       "sampleCount": 12577,
-      "name": "Luma - CRM Profiles - Dashboard",
       "samplePercentage": 0.306734,
-      "description": "Luma - CRM Profiles - Dashboard",
-      "reportTimestamp": "2020-08-01T17:57:58.697",
       "fullIDsCount": 20988,
       "fullIDsPercentage": 0.511865,
-      "createdUser": "{CREATED_USER}",
+      "name": "Luma - CRM Profiles - Dashboard",
+      "description": "Luma - CRM Profiles - Dashboard",
+      "value": "5f160106be34361915754b9c",
       "streamingIngestionEnabled": "",
-      "value": "5f160106be34361915754b9c"
+      "createdUser": "{CREATED_USER}",
+      "reportTimestamp": "2020-08-01T17:57:58.697",
     },
     {
       "sampleCount": 12938,
-      "name": "AAM Authenticated Profiles - CRMID (DPID: 421629)",
       "samplePercentage": 0.315538,
-      "description": "DO NOT DELETE. This data set contains CRMID authenticated profiles. If deleted, data associated to these profiles will no longer be accessible in Adobe Experience Platform.",
-      "reportTimestamp": "2020-08-01T17:57:58.697",
       "fullIDsCount": 21796,
       "fullIDsPercentage": 0.531571,
-      "createdUser": "{CREATED_USER}",
+      "name": "AAM Authenticated Profiles - CRMID (DPID: 421629)",
+      "description": "DO NOT DELETE. This data set contains CRMID authenticated profiles. If deleted, data associated to these profiles will no longer be accessible in Adobe Experience Platform.",
+      "value": "5dc77ec6eed47f18a796ca90",
       "streamingIngestionEnabled": "",
-      "value": "5dc77ec6eed47f18a796ca90"
+      "createdUser": "{CREATED_USER}",
+      "reportTimestamp": "2020-08-01T17:57:58.697"
     },
     {
       "sampleCount": 22725,
-      "name": "",
       "samplePercentage": 0.554228,
-      "description": "",
-      "reportTimestamp": "2020-08-01T17:57:58.697",
       "fullIDsCount": 41003,
       "fullIDsPercentage": 1.0,
-      "createdUser": "{CREATED_USER}",
+      "name": "",
+      "description": "",
+      "value": "5d0fda92274e55144d4de620",
       "streamingIngestionEnabled": "",
-      "value": "segments"
+      "createdUser": "{CREATED_USER}",
+      "reportTimestamp": "2020-08-01T17:57:58.697"
     }
   ],
   "reportTimestamp": "2020-08-01T17:57:58.697"
@@ -151,16 +155,18 @@ The response includes a `"data"` array, with individual objects containing the d
 
 |Property|Description|
 |---|---|
-|`sampleCount`|The total number of records in the dataset.|
+|`sampleCount`|The total number of sampled merged profiles with this dataset ID.|
+|`samplePercentage`|The `sampleCount` as a percentage of the total number of sampled merged profiles (the `numRowsToRead` value as returned in the [last sample status](#view-last-sample-status)), expressed in decimal format.|
+|`fullIDsCount`|The total number of merged profiles with this dataset ID.|
+|`fullIDsPercentage`|The `fullIDsCount` as a percentage of the total number of merged profiles (the `numRowsToRead` value as returned in the [last sample status](#view-last-sample-status)), expressed in decimal format.|
 |`name`|The name of the dataset, as provided during dataset creation.|
-|`samplePercentage`|The `sampleCount` as a percentage of the total number of records.|
 |`description`|The description of the dataset, as provided during dataset creation.|
-|`reportTimestamp`|The timestamp of the report. If a `date` parameter was provided during the request, the report returned is for the date provided or the nearest report available to the date provided. If no `date` parameter is provided, the most recent report is returned.|
-|`fullIDsCount`|The total number of profile fragments in the dataset.|
-|`fullIDsPercentage`|The `fullIDsCount` as a percentage of the total number of fragments.|
+|`value`|The ID of the dataset.|
+|`streamingIngestionEnabled`|Whether the dataset is enabled for streaming ingestion.|
 |`createdUser`|The user ID of the user who created the dataset.|
-|`streamingIngestionEnabled`||
-|`value`||
+|`reportTimestamp`|The timestamp of the report. If a `date` parameter was provided during the request, the report returned is for the date provided. If no `date` parameter is provided, the most recent report is returned.|
+
+
 
 ## List profile distribution by namespace
 
@@ -168,7 +174,7 @@ You can perform a GET request to the `/previewsamplestatus/report/namespace` end
 
 >[!NOTE]
 >
->The total number of profiles by namespace (adding together the values shown for each namespace) will always be higher than the profile count metric because one profile could have multiple namespaces associated with it. For example, if a customer interacts with your brand on more than one channel, multiple namespaces will be associated with that individual customer.
+>The total number of profiles by namespace (adding together the values shown for each namespace) will always be higher than the profile count metric because one profile could be associated with multiple namespaces. For example, if a customer interacts with your brand on more than one channel, multiple namespaces will be associated with that individual customer.
 
 **API format**
 
@@ -178,7 +184,7 @@ GET /previewsamplestatus/report/namespace?{QUERY_PARAMETERS}
 ```
 
 |Parameter|Description|
-|`date`| Specify the date of the report to be returned. If a report does not exist for the supplied date, the most recent report from the date will be returned. If no date is specified, the most recent report will be returned. Format: YYYY-MM-DD. Example: `date=2024-12-31`|
+|`date`| Specify the date of the report to be returned. If a report does not exist for the specified date, a 404 error will be returned. If no date is specified, the most recent report will be returned. Format: YYYY-MM-DD. Example: `date=2024-12-31`|
 
 **Request**
 
@@ -195,7 +201,7 @@ curl -X GET \
 
 **Response**
 
-The response includes a `"data"` array, with individual objects containing the details for each namespace. The response shown has been truncated to show four namespaces.
+The response includes a `data` array, with individual objects containing the details for each namespace. The response shown has been truncated to show four namespaces.
 
 ```json
 {
@@ -233,8 +239,8 @@ The response includes a `"data"` array, with individual objects containing the d
       "reportTimestamp": "2020-08-01T17:57:58.697",
       "fullIDsCount": 21936,
       "fullIDsPercentage": 0.534985,
-      "code": "crmid",
-      "value": "421629"
+      "code": "Phone",
+      "value": "7"
     }
   ],
   "reportTimestamp": "2020-08-01T17:57:58.697"
@@ -243,13 +249,13 @@ The response includes a `"data"` array, with individual objects containing the d
 
 |Property|Description|
 |---|---|
-|`sampleCount`|The total number of records in the namespace.|
-|`samplePercentage`|The `sampleCount` as a percentage of the total number of records.|
-|`reportTimestamp`|The timestamp of the report. If a `date` parameter was provided during the request, the report returned is for the date provided or the nearest report available to the date provided. If no `date` parameter is provided, the most recent report is returned.|
-|`fullIDsCount`|The total number of profile fragments in the namespace.|
-|`fullIDsPercentage`|The `fullIDsCount` as a percentage of the total number of fragments.|
-|`code`|The `code` for the namespace. This can be found when working with namespaces using the [!DNL Identity Service] API and is also referred to as the Identity Symbol in the [!DNL Experience Platform] UI.|
-|`value`|The `id` value for the namespace. This can be found when working with namespaces using the [!DNL Identity Service] API.|
+|`sampleCount`|The total number of sampled merged profiles in the namespace.|
+|`samplePercentage`|The `sampleCount` as a percentage of sampled merged profiles (the `numRowsToRead` value as returned in the [last sample status](#view-last-sample-status)), expressed in decimal format.|
+|`reportTimestamp`|The timestamp of the report. If a `date` parameter was provided during the request, the report returned is for the date provided. If no `date` parameter is provided, the most recent report is returned.|
+|`fullIDsCount`|The total number of merged profiles in the namespace.|
+|`fullIDsPercentage`|The `fullIDsCount` as a percentage of total merged profiles (the `numRowsToRead` value as returned in the [last sample status](#view-last-sample-status)), expressed in decimal format.|
+|`code`|The `code` for the namespace. This can be found when working with namespaces using the [[!DNL Identity Service] API](../../identity/api/list-namespaces.md) and is also referred to as the [!UICONTROL Identity symbol] in the [!DNL Experience Platform] UI. To learn more, visit the [identity namespace overview](../../identity/namespaces.md).|
+|`value`|The `id` value for the namespace. This can be found when working with namespaces using the [[!DNL Identity Service] API](../../identity/api/list-namespaces.md).|
 
 ## Next steps
 
