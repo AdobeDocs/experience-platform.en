@@ -56,7 +56,17 @@ To activate data to destinations, you must have successfully [connected a destin
     ![edit file name options](assets/activate-workflow-configure-step-2.png)
 
 7. **[!UICONTROL Select attributes]** step <br> Applies to: email marketing destinations and cloud storage destinations <br> On the **[!UICONTROL Select Attributes]** page, select **[!UICONTROL Add new field]** and select the attributes that you want to send to the destination.
-   We recommend one of the attributes to be a [unique identifier](/help/rtcdp/destinations/email-marketing-destinations.md#identity) from your union schema. For more information about mandatory attributes, see Identity in the [Email marketing destinations](/help/rtcdp/destinations/email-marketing-destinations.md#identity) article. 
+
+   >[!NOTE] 
+   >
+   > Adobe Real-time CDP prefills your selection with four recommended, commonly-used attributes from your schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`
+   File exports will vary as follows, depending on whether `segmentMembership.status` is selected:
+   >* If the `segmentMembership.status` field is selected, exported files include **Active** members in the initial full snapshot and **Active** and **Expired** members in subsequent incremental exports.
+   >* If the `segmentMembership.status` field is not selected, exported files include **Active** members only in the initial full snapshot and in subsequent incremental exports.
+
+   ![recommended attributes](/help/rtcdp/destinations/assets/recommended-attributes.png) 
+
+   We recommend one of the attributes you select to be a [unique identifier](/help/rtcdp/destinations/email-marketing-destinations.md#identity) from your schema. For more information about mandatory attributes, see Identity in the [Email marketing destinations](/help/rtcdp/destinations/email-marketing-destinations.md#identity) article. 
    
     >[!NOTE] 
     > 
@@ -64,7 +74,7 @@ To activate data to destinations, you must have successfully [connected a destin
     >* The fields are used in the segment definition.
     >* The fields are configured as projected attributes for the target destination.
     >
-    > Consider the screenshot below. If, for example, the field `person.name.first.Name` had certain data usage labels that conflict with the destination's marketing use case, you would be shown a data usage policy violation in the review step (step 7). For more information, see [Data Governance in Real-time CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations).
+    > Consider the screenshot below. If, for example, the field `person.name.firstName` had certain data usage labels that conflict with the destination's marketing use case, you would be shown a data usage policy violation in the review step (step 9). For more information, see [Data Governance in Real-time CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations).
 
    ![destination-attributes](assets/select-attributes-step.png)
 
