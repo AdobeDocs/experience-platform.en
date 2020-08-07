@@ -76,9 +76,9 @@ Refer to the following table for *[!UICONTROL error codes]*that can be seen in t
 
 | Error code | Error Message |
 | ---------- | ----------- |
-| `CONNECTOR-1001-500` | Error occurred at copy activity. |
-| `CONNECTOR-2001-500` | Error occurred at promotion activity. |
-| `CONNECTOR-3001-500` | Error occurred at flow activity. |
+| `CONNECTOR-1001-500` | "A problem occurred with the copy activity." |
+| `CONNECTOR-2001-500` | "There was a problem copying from the Experience Platform source to the dataset." |
+| `CONNECTOR-3001-500` | "A problem occured with the flow provider while creating batch using bulk ingest API." |
 
 The lower half of the screen contains information on *[!UICONTROL Dataflow run errors]*. From here, you can also view the files ingested, preview and download error diagnostics, or download the file manifest. 
 
