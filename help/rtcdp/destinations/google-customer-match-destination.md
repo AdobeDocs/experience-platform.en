@@ -40,6 +40,8 @@ The destinations in Adobe Real-time CDP may have certain rules and obligations f
 
 ## [!DNL Google Customer Match] account prerequisites {#google-account-prerequisites}
 
+Before setting up a Google Customer Match destination in Adobe Real-time CDP, make sure you read and adhere to Google's policy for using Customer Match, outlined in the [Google support documentation](https://support.google.com/google-ads/answer/6299717). 
+
 ### Allow list {#allowlist}
 
 >[!NOTE]
