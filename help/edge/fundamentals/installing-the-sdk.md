@@ -7,10 +7,16 @@ seo-description: Learn how to install the Experience Platform Web SDK
 
 # Installing the SDK {#installing-the-sdk}
 
-The Adobe Experience Platform [!DNL Web SDK] is available on a content delivery network (CDN) for you to use. You can reference this file or download it and host it on your own infrastructure. It is available in a minified and non-minified version. The non-minified version is helpful for debugging purposes. 
+The preferred way to use the Adobe Experience Platform Web SDK is via [Launch](http://launch.adobe.com/). Search for the `AEP Web SDK` in the extensions catalog, install then configure the extension.
 
-* Minified version: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
-* Non-minified version: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
+The AEP web SDK is also available on a CDN for you to use. You can reference this file or download it and host it on your own infrastructure. It is available in a minified and non-minified version. The non-minified version is helpful for debugging purposes.
+
+URL structure: https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js OR alloy.js for the non-minified version.
+
+For example:
+
+* Minified: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
+* Un-minified: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
 
 ## Adding the Code {#adding-the-code}
 
