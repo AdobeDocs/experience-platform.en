@@ -588,7 +588,7 @@ curl -X DELETE \
 
 A successful response returns HTTP status 200 (OK) with a blank body. 
 
-You can confirm the deletion by attempting to lookup (GET) the policy again. You should receive a 404 (Not Found) error if the policy has been successfully deleted.
+You can confirm the deletion by attempting to look up (GET) the policy again. You should receive a 404 (Not Found) error if the policy has been successfully deleted.
 
 ## Next steps
 
