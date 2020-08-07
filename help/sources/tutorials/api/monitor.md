@@ -19,12 +19,12 @@ This tutorial requires you to have access to a valid dataflow, as well as inform
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
-*   [Experience Data Model (XDM) System](../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-    *   [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-    *   [Schema Registry developer guide](../../../../xdm/api/getting-started.md): Includes important information that you need to know in order to successfully perform calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
-*   [Catalog Service](../../../../catalog/home.md): Catalog is the system of record for data location and lineage within [!DNL Experience Platform].
-*   [Batch ingestion](../../../../ingestion/batch-ingestion/overview.md): The Batch Ingestion API allows you to ingest data into [!DNL Experience Platform] as batch files.
-*   [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+*   [Experience Data Model (XDM) System](../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+    *   [Basics of schema composition](../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
+    *   [Schema Registry developer guide](../../../xdm/api/getting-started.md): Includes important information that you need to know in order to successfully perform calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
+*   [Catalog Service](../../../catalog/home.md): Catalog is the system of record for data location and lineage within [!DNL Experience Platform].
+*   [Batch ingestion](../../../ingestion/batch-ingestion/overview.md): The batch ingestion API allows you to ingest data into Experience Platform as batch files.
+*   [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully monitor flow runs using the [!DNL Flow Service] API.
 
@@ -179,7 +179,7 @@ Flow runs represent an instance of a flow execution. You can monitor runs to vie
 **API format**
 
 ```http
-GET /runs/{RUN_ID}
+GET /runs?property=flowId=={FLOW_ID}
 ```
 
 **Request**
@@ -188,7 +188,7 @@ The following request retrieves the specifications for an existing flow run.
 
 ```shell
 curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/runs/9830305a-985f-47d0-b030-5a985fd7d004' \
+    'https://platform.adobe.io/data/foundation/flowservice//runs?property=flowId==c9cef9cb-c934-4467-8ef9-cbc934546741' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -205,10 +205,10 @@ A successful response returns the run specifications including information about
         {
             "createdAt": 1596656079576,
             "updatedAt": 1596656113526,
-            "createdBy": "{CREATED_BY}",
-            "updatedBy": "{UPDATED_BY}",
-            "createdClient": "{CREATED_CLIENT}",
-            "updatedClient": "{UPDATED_CLIENT}",
+            "createdBy": "acp_foundation_connectors@AdobeID",
+            "updatedBy": "acp_foundation_connectors@AdobeID",
+            "createdClient": "acp_foundation_connectors",
+            "updatedClient": "acp_foundation_connectors",
             "sandboxId": "1bd86660-c5da-11e9-93d4-6d5fc3a66a8e",
             "sandboxName": "prod",
             "id": "9830305a-985f-47d0-b030-5a985fd7d004",
@@ -354,7 +354,8 @@ A successful response returns the run specifications including information about
                 }
             ]
         }
-    ]
+    ],
+    "_links": {}
 }
 ```
 
@@ -362,5 +363,5 @@ A successful response returns the run specifications including information about
 
 By following this tutorial, you have retrieved metrics, size, and error information on your dataflow. You can now continue to monitor your dataflow, depending on your ingestion schedule, to track its status and ingestion rates. See the following documents for more details:
 
-- [Real-time Customer Profile overview](../../../profile/home.md)
-- [Data Science Workspace overview](../../../data-science-workspace/home.md)
+* [Real-time Customer Profile overview](../../../profile/home.md)
+* [Data Science Workspace overview](../../../data-science-workspace/home.md)
