@@ -5,7 +5,7 @@ title: Monitor accounts and dataflows
 topic: overview
 ---
 
-# Monitor accounts and dataflows
+# Monitor accounts and dataflows in the UI
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for viewing existing accounts and dataflows from the *[!UICONTROL Sources]* workspace.
 
