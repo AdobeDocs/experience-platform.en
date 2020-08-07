@@ -46,9 +46,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ## Monitor flow runs
 
-The first step in monitoring flow runs is to retrieve a dataflow and its specifications. In order to obtain the run ID, you must already have an existing flow ID.
-
-If you do not have an existing dataflow, you can create one using any of the following source connector tutorials:
+Before you can start monitoring flow runs, you must already have an existing dataflow, including its unique flow ID. If you do not have an existing dataflow, you can create one using any of the following source connector tutorials:
 
 * [Advertising](./collect/advertising.md)
 * [Cloud storage](./collect/cloud-storage.md)
@@ -82,7 +80,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the flow run specifications including information about its metrics, size, and errors.
+A successful response returns the flow run specifications including information about its metrics, size, and errors, as well as the run's unique identifier (`id`).
 
 ```json
 {
