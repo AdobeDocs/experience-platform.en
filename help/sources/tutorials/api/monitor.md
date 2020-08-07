@@ -94,10 +94,10 @@ A successful response returns the dataflow specifications including its unique f
         {
             "createdAt": 1596655508487,
             "updatedAt": 1596656113552,
-            "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
-            "updatedBy": "acp_foundation_connectors@AdobeID",
-            "createdClient": "exc_app",
-            "updatedClient": "acp_foundation_connectors",
+            "createdBy": "{CREATED_BY}",
+            "updatedBy": "{UPDATED_BY}",
+            "createdClient": "{CREATED_CLIENT}",
+            "updatedClient": "{UPDATED_CLIENT}",
             "sandboxId": "1bd86660-c5da-11e9-93d4-6d5fc3a66a8e",
             "sandboxName": "prod",
             "id": "c9cef9cb-c934-4467-8ef9-cbc934546741",
@@ -205,10 +205,10 @@ A successful response returns the run specifications including information about
         {
             "createdAt": 1596656079576,
             "updatedAt": 1596656113526,
-            "createdBy": "acp_foundation_connectors@AdobeID",
-            "updatedBy": "acp_foundation_connectors@AdobeID",
-            "createdClient": "acp_foundation_connectors",
-            "updatedClient": "acp_foundation_connectors",
+            "createdBy": "{CREATED_BY}",
+            "updatedBy": "{UPDATED_BY}",
+            "createdClient": "{CREATED_CLIENT}",
+            "updatedClient": "{UPDATED_CLIENT}",
             "sandboxId": "1bd86660-c5da-11e9-93d4-6d5fc3a66a8e",
             "sandboxName": "prod",
             "id": "9830305a-985f-47d0-b030-5a985fd7d004",
@@ -357,3 +357,10 @@ A successful response returns the run specifications including information about
     ]
 }
 ```
+
+## Next steps
+
+By following this tutorial, you have retrieved metrics, size, and error information on your dataflow. You can now continue to monitor your dataflow, depending on your ingestion schedule, to track its status and ingestion rates. See the following documents for more details:
+
+- [Real-time Customer Profile overview](../../../profile/home.md)
+- [Data Science Workspace overview](../../../data-science-workspace/home.md)
