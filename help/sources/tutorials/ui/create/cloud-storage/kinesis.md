@@ -41,7 +41,7 @@ Once you have gathered your required credentials, you can follow the steps below
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the *Sources* workspace. The *Catalog* tab displays a variety of sources for which can be connected to [!DNL Platform]. Each source shows the number of existing accounts associated to them.
 
-Under the *[!UICONTROL Cloud Storage]* category, select **[!UICONTROL Amazon Kinesis]** and click **on the + icon (+)** to create a new [!DNL Kinesis] connector.
+Under the *[!UICONTROL Cloud Storage]* category, select **[!UICONTROL Amazon Kinesis]** followed by **[!UICONTROL Add data]** to create a new [!DNL Kinesis] connector.
 
 ![](../../../../images/tutorials/create/kinesis/catalog.png)
 
