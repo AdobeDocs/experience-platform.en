@@ -29,13 +29,17 @@ The sample size of the scan depends on the overall number of entities in your pr
 | 1 to 20 million | 1 million |
 | Over 20 million | 5% of total |
 
->[!NOTE] Estimates generally take 10 to 15 seconds to run, beginning with a rough estimate and refining as more records are read.
+>[!NOTE]
+>
+>Estimates generally take 10 to 15 seconds to run, beginning with a rough estimate and refining as more records are read.
 
 ## Create a new preview {#create-preview}
 
 You can create a new preview by making a POST request to the `/preview` endpoint.
 
->[!NOTE] An estimate job is automatically created when a preview job is created. These two jobs will share the same ID.
+>[!NOTE]
+>
+>An estimate job is automatically created when a preview job is created. These two jobs will share the same ID.
 
 **API format**
 
