@@ -15,7 +15,11 @@ With the [!DNL Experience Platform] user interface, you can subscribe to events 
 
 ## Getting started
 
-info on getting started
+This tutorial requires a working understanding of the following components of Adobe Experience Platform:
+
+*   [Experience Data Model (XDM) System](../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+*   [Real-time Customer Profile](../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+*   [Data Ingestion](../../../ingestion/home.md): Data Ingestion represents the multiple methods by which [!DNL Platform] ingests data from these sources, as well as how that data is persisted within the Data Lake for use by downstream [!DNL Platform] services.
 
 ## Subscribe to events
 
