@@ -5,15 +5,15 @@ description: Learn how to send Data to Adobe Audience Manager with Experience Pl
 seo-description: Learn how to send Data to Adobe Audience Manager with Experience Platform Web SDK
 ---
 
-# Audience Manager on the Experience Platform Edge Netwrok
+# [!DNL Audience Manager] on the [!DNL Experience Platform Edge Network]
 
-The Adobe Experience Platform Web SDK is integrated with Adobe Audience Manager and supports sending and receiving data from Audience Manager, Cookie & URL destinations and ID syncing.
+The Adobe Experience Platform [!DNL Web SDK] is integrated with Adobe Audience Manager and supports sending and receiving data from [!DNL Audience Manager], Cookie & URL destinations and ID syncing.
 
-## Enabling Audience Manager
+## Enabling [!DNL Audience Manager]
 
-To enable Audience Manager you will need to do the following:
+To enable [!DNL Audience Manager] you will need to do the following:
 
-- Enable Audience Manager in your [edge configuration](../../fundamentals/edge-configuration.md).
+- Enable [!DNL Audience Manager] in your [edge configuration](../../fundamentals/edge-configuration.md).
 - Enable or disable Cookie & URL destinations.
 - Specify your ID Sync Container for external partner syncs (Optional)
 
@@ -27,4 +27,4 @@ You will need to choose namespaces from the [Identity Service Namespaces](../../
 
 As an Audience Manager customer, all your existing Data Sources that use ID Type: Cross-Device will automatically have a corresponding Identity Namespace. To find the corresponding Identity Namespace for your Audience Manager Data Source, log in to the Adobe Experience Platform and navigate to the Identities section.
 
-Any new Audience Manager Data Source that uses ID Type: Cross-Device will generate a corresponding Identity Namespace. Data Source ID Types Cookie and Device Advertising ID are not currently supported. Additionally, any Identity Namespace created in Adobe Experience Platform will generate a corresponding Audience Manager Data Source but note that the syncIdentity method only supports Namespace Identity Symbols.
+Any new [!DNL Audience Manager] Data Source that uses ID Type: Cross-Device will generate a corresponding Identity Namespace. Data Source ID Types Cookie and Device Advertising ID are not currently supported. Additionally, any Identity Namespace created in Adobe Experience Platform will generate a corresponding [!DNL Audience Manager] Data Source but note that the syncIdentity method only supports Namespace Identity Symbols.

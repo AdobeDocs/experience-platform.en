@@ -5,13 +5,15 @@ title: Spark SQL functions
 topic: spark sql functions
 ---
 
-# Spark SQL functions
+# [!DNL Spark] SQL functions
 
-The Spark SQL helpers provide built-in Spark SQL functions to extend SQL functionality.
+The [!DNL Spark] SQL helpers provide built-in [!DNL Spark] SQL functions to extend SQL functionality.
 
 Reference: [Spark SQL function documentation](https://spark.apache.org/docs/2.4.0/api/sql/index.html)
 
->[!NOTE] Not all functions in the external documentation are supported. 
+>[!NOTE]
+>
+>Not all functions in the external documentation are supported. 
 
 ## Categories
 
@@ -180,7 +182,7 @@ Examples:
  2
 > SELECT cardinality(NULL);
  -1
- ```
+```
 
 #### cbrt
 
@@ -527,7 +529,7 @@ Example:
 ```
 > SELECT pow(2, 3);
  8.0
- ```
+```
 
 #### power 
 
@@ -538,7 +540,7 @@ Examples:
 ```
 > SELECT power(2, 3);
  8.0
- ```
+```
 
 #### radians
 
@@ -570,7 +572,9 @@ Examples:
  0.8446490682263027
 ```
 
->[!NOTE] This function is non-deterministic in general case. 
+>[!NOTE]
+>
+>This function is non-deterministic in general case. 
 
 #### randn
 
@@ -587,7 +591,9 @@ Examples:
  1.1164209726833079
 ```
 
->[!NOTE] This function is non-deterministic in general case. 
+>[!NOTE]
+>
+>This function is non-deterministic in general case. 
 
 #### rint
 
@@ -860,7 +866,7 @@ Example:
 ```
 > SELECT 3 ^ 5;
  2
- ```
+```
 
 #### and
 
@@ -1734,7 +1740,9 @@ Examples:
 ```
 
 Since: 1.5.0
->[!NOTE] rse logic for arrays is available since 2.4.0.
+>[!NOTE]
+>
+>rse logic for arrays is available since 2.4.0.
 
 #### shuffle
 
@@ -1750,7 +1758,9 @@ Examples:
 ```
 
 Since: 2.4.0
->[!NOTE] function is non-deterministic.
+>[!NOTE]
+>
+>function is non-deterministic.
 
 #### slice
 
@@ -2260,7 +2270,7 @@ Examples:
  SQL
 > SELECT substring('Spark SQL', 5, 1);
  k
- ```
+```
 
 #### to_json
 
@@ -2385,7 +2395,9 @@ Example:
  46707d92-02f4-4817-8116-a4c3b23e6266
 ```
 
->[!NOTE] Function is non-deterministic. 
+>[!NOTE]
+>
+>Function is non-deterministic. 
 
 ### Data evaluation 
 
@@ -2421,7 +2433,9 @@ Examples:
  [1,2,3,4,5,6]
 ```
 
->[!NOTE] `concat` logic for arrays is available since 2.4.0. 
+>[!NOTE]
+>
+>`concat` logic for arrays is available since 2.4.0. 
 
 #### concat_ws
 

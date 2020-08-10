@@ -7,7 +7,7 @@ topic: troubleshooting
 
 # GDPR FAQ
 
-This document provides answers to frequently asked questions about the General Data Protection Regulation (GDPR) and its implementation in Adobe Experience Cloud.
+This document provides answers to frequently asked questions about the [!DNL General Data Protection Regulation] (GDPR) and its implementation in Adobe Experience Cloud.
 
 Definitions for the various GDPR-related terms used in this document can be found in the [GDPR terminology](terminology.md) article.
 

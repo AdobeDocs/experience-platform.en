@@ -5,24 +5,24 @@ title: Subscribe to Privacy Events
 topic: privacy events
 ---
 
-# Subscribe to Privacy Events
+# Subscribe to [!DNL Privacy Events]
 
-Privacy Events are messages provided by Adobe Experience Platform Privacy Service, which leverage Adobe I/O Events sent to a configured webhook to facilitate efficient job request automation. They reduce or eliminate the need to poll the Privacy Service API in order to check if a job is complete or if a certain milestone within a workflow has been reached.
+[!DNL Privacy Events] are messages provided by Adobe Experience Platform [!DNL Privacy Service], which leverage Adobe I/O Events sent to a configured webhook to facilitate efficient job request automation. They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached.
 
 There are currently four types of notifications related to the privacy job request lifecycle:
 
 Type | Description
 --- | ---
-Job Complete | All Experience Cloud solutions have reported back and the overall or global status of the job has been marked as complete.
+Job Complete | All [!DNL Experience Cloud] solutions have reported back and the overall or global status of the job has been marked as complete.
 Job Error | One or more solutions have reported an error while processing the request.
 Product Complete | One of the solutions associated with this job has completed its work.
 Product Error | One of the solutions reported an error while processing the request.
 
-This document provides steps for setting up an integration for Privacy Service notifications within Adobe I/O. For a high-level overview of Privacy Service and its features, see the [Privacy Service overview](home.md).
+This document provides steps for setting up an integration for [!DNL Privacy Service] notifications within Adobe I/O. For a high-level overview of [!DNL Privacy Service] and its features, see the [Privacy Service overview](home.md).
 
 ## Getting started
 
-This tutorial uses **ngrok**, a software product which exposes local servers to the public internet through secure tunnels. Please [install ngrok](https://ngrok.com/download) before starting this tutorial in order to follow along and create a webhook to your local machine. This guide also requires you to have a GIT repository downloaded that contains a simple server written in [Node.js](https://nodejs.org/).
+This tutorial uses **ngrok**, a software product which exposes local servers to the public internet through secure tunnels. Please [install ngrok](https://ngrok.com/download) before starting this tutorial in order to follow along and create a webhook to your local machine. This guide also requires you to have a GIT repository downloaded that contains a simple [Node.js](https://nodejs.org/) server.
 
 ## Create a local server
 
@@ -53,71 +53,73 @@ These commands install all dependencies and initialize the server. If successful
 
 ## Create a webhook using ngrok
 
-Within the same directory and in a new command line window, type the following command:
+Open a new command line window an navigate to the directory where you installed ngrok earlier. From here, type the following command:
 
 ```shell
-ngrok http -bind-tls=true 3000
+./ngrok http -bind-tls=true 3000
 ```
 
 A successful output looks similar to the following:
 
 ![ngrok output](images/privacy-events/ngrok-output.png)
 
-Take note of the `Forwarding` URL (`https://e142b577.ngrok.io`), as this will be used to identify your webhook the next step.
+Take note of the `Forwarding` URL (`https://212d6cd2.ngrok.io`), as this will be used to identify your webhook the next step.
 
-## Create a new integration using Adobe I/O Console
+## Create a new project in Adobe Developer Console
 
-Sign in to [Adobe I/O Console](https://console.adobe.io) and click the **Integrations** tab. The _Integrations_ window appears. From here, click **New integration**.
+Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. Next, follow the steps outlined in the tutorial on [creating an empty project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in the Adobe Developer Console documentation.
 
-![View Integrations in Adobe I/O Console](images/privacy-events/integrations.png)
+## Add Privacy Events to the project
 
-The *Create a new integration* window appears. Select **Receive near-real time events**, then click **Continue**.
+Once you have finished creating a new project in the console, click **[!UICONTROL Add event]** on the _Project Overview_ screen.
 
-![Create new integration](images/privacy-events/new-integration.png)
+![](./images/privacy-events/add-event-button.png)
 
-The next screen provides options to create integrations with different events, products, and services available to your organization based on your subscriptions, entitlements, and permissions. For this integration, select **Privacy Service Events**, then click **Continue**.
+The _Add events_ dialog appears. Select **[!UICONTROL Experience Cloud]** to filter down the list of a available event types, then select **[!UICONTROL Privacy Service Events]** before clicking **[!UICONTROL Next]**.
 
-![Select Privacy Events](images/privacy-events/privacy-events.png)
+![](./images/privacy-events/add-privacy-events.png)
 
-The *Integration Details* form appears, requiring you to provide a name and description for the integration, as well as a public key certificate.
+The _Configure event registration_ dialog appears. Select which events you would like to receive by selecting their corresponding checkboxes. Events that you select appear under _[!UICONTROL Subscribed Events]_ in the left column. When finished, click **[!UICONTROL Next]**.
 
-![Integration details](images/privacy-events/integration-details.png)
+![](./images/privacy-events/choose-subscriptions.png)
 
-If you do not have a public certificate, you can generate one by using the following terminal command:
+The next screen prompts you to provide a public key for the event registration. You are given the option to automatically generate a key pair, or upload your own public key generated in the terminal.
 
-```shell
-openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate_pub
-```
+For the purposes of this tutorial, the first option is followed. Click the option box for **[!UICONTROL Generate a key pair]**, then click the **[!UICONTROL Generate keypair]** button in the bottom-right corner.
 
-Once you have generated a certificate, drag and drop the file into the **Public keys certificates** box, or click **Select a File** to browse your file directory and select the certificate directly.
+![](./images/privacy-events/generate-key-value.png)
 
-After adding your certificate, the *Event Registration* option appears. Click **Add Event Registration**.
+When the key pair generates, it is automatically downloaded by the browser. You must store this file yourself as it is not persisted in the Developer Console.
 
-![Add Event Registration](images/privacy-events/add-event-registration.png)
+The next screen allows you to review the details of the newly generated key pair. Click **[!UICONTROL Next]** to continue.
 
-The dialog expands to show additional controls. Here you can select your desired event types and register your webhook. Enter a name for the event registration, the webhook URL (the `Forwarding` address returned when you initially [created the webhook](#create-a-webhook-using-ngrok)), as well as a brief description. Finally, select the event types you wish to subscribe to, then click **Save**.
+![](./images/privacy-events/keypair-generated.png)
 
-![Event Registration form](images/privacy-events/event-registration-form.png)
+In the next screen, provide a name and description for the event registration. Best practice is to create a unique, easily identifiable name to help differentiate this event registration from others on the same project.
 
-Once the Event Registration form is completed, click **Create integration** and the I/O integration will be complete.
+![](./images/privacy-events/event-details.png)
 
-![Create integration](images/privacy-events/create-integration.png)
+Further down on the same screen, you are given two options for configuring how to receive events. Select **[!UICONTROL Webhook]** and provide the `Forwarding` URL for the ngrok webhook you created earlier under _[!UICONTROL Webhook URL]_. Next, select your preferred delivery style (single or batch) before clicking **[!UICONTROL Save configured events]** to complete the event registration.
+
+![](./images/privacy-events/webhook-details.png)
+
+The details page for your project reappears, with [!DNL Privacy Events] appearing under _[!UICONTROL Events]_ in the left navigation.
 
 ## View event data
 
-Once you have created your I/O integration and privacy jobs have been processed, you can view any received notifications for that integration. From the **Integrations** tab in I/O Console, navigate to your integration and click **View**.
+Once you have registered [!DNL Privacy Events] with your project and privacy jobs have been processed, you can view any received notifications for that registration. From the **[!UICONTROL Projects]** tab in Developer Console, select your project from the list to open the _Product overview_ page. From here, select **[!UICONTROL Privacy Events]** from the left navigation.
 
-![View Integration](images/privacy-events/view-integration.png)
+![](./images/privacy-events/events-left-nav.png)
 
-The details page for the integration appears. Click **Events** to view the event registrations for the integration. Locate the Privacy Events registration and click **View**.
+The _Registration Details_ tab appears, allowing you to view more information about the registration, edit its configuration, or view the actual events that were received since activating your webhook. 
 
-![View Event Registration](images/privacy-events/view-registration.png)
+![](./images/privacy-events/registration-details.png)
 
-The *Event Details* window appears, allowing you to view more information about the registration, edit its configuration, or view the actual events that were received since activating your webhook. You can view event details as well as navigate to the **Debug Tracing** option.
+Click the **[!UICONTROL Debug Tracing]** tab to view a list of received events. Click a listed event to view its details.
 
-![Debug Tracing](images/privacy-events/debug-tracing.png)
+![](images/privacy-events/debug-tracing.png)
 
-The **Payload** section provides details about the selected event, including its event type (`"com.adobe.platform.gdpr.productcomplete"`) as highlighted in the example above.
+The _[!UICONTROL Payload]_ section provides details about the selected event, including its event type (`com.adobe.platform.gdpr.productcomplete`) as highlighted in the example above.
 
 ## Next steps
 

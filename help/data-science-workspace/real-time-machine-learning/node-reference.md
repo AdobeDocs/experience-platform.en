@@ -16,7 +16,7 @@ The following guide outlines the supported node libraries for Real-time Machine 
 
 ## Discovering nodes for use in your ML pipeline
 
-Copy the following code into a Python notebook to view all the nodes that are available for use.
+Copy the following code into a [!DNL Python] notebook to view all the nodes that are available for use.
 
 ```python
 from pprint import pprint

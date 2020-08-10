@@ -15,7 +15,7 @@ For an introduction to Experience Platform Launch capabilities, see the resource
 
 ## How to find the Launch extensions in the Adobe Real-time CDP interface {#how-to-find-extensions-in-interface}
 
-To find the Launch extensions in the Adobe Real-time CDP interface, browse to **[!UICONTROL Destinations > Catalog]** and select **[!UICONTROL Extensions]** in the **[!UICONTROL Types]** filter. 
+To find the Launch extensions in the Adobe Real-time CDP interface, browse to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** and select **[!UICONTROL Extensions]** in the **[!UICONTROL Types]** filter. 
 
 ![Extensions filter in the interface](/help/rtcdp/destinations/assets/extensions-filter.png)
 

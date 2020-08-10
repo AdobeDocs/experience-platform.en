@@ -9,7 +9,7 @@ topic: scheduled queries
 
 ## Sample API calls
 
-Now that you understand what headers to use, you are ready to begin making calls to the Query Service API. The following sections walk through the various API calls you can make using the Query Service API. Each call includes the general API format, a sample request showing required headers, and a sample response.
+Now that you understand what headers to use, you are ready to begin making calls to the [!DNL Query Service] API. The following sections walk through the various API calls you can make using the [!DNL Query Service] API. Each call includes the general API format, a sample request showing required headers, and a sample response.
 
 ### Retrieve a list of scheduled queries
 
@@ -210,7 +210,9 @@ A successful response returns HTTP status 202 (Accepted) with details of your ne
 }
 ```
 
->[!NOTE] You can use the value of `_links.delete` to [delete your created scheduled query](#delete-a-specified-scheduled-query).
+>[!NOTE]
+>
+>You can use the value of `_links.delete` to [delete your created scheduled query](#delete-a-specified-scheduled-query).
 
 ### Request details of a specified scheduled query
 
@@ -291,7 +293,9 @@ A successful response returns HTTP status 200 with details of the specified sche
 }
 ```
 
->[!NOTE] You can use the value of `_links.delete` to [delete your created scheduled query](#delete-a-specified-scheduled-query).
+>[!NOTE]
+>
+>You can use the value of `_links.delete` to [delete your created scheduled query](#delete-a-specified-scheduled-query).
 
 ### Update details of a specified scheduled query
 
@@ -406,7 +410,9 @@ A successful response returns HTTP status 202 (Accepted) with the following mess
 
 You can delete a specified scheduled query by making a DELETE request to the `/schedules` endpoint and providing the ID of the scheduled query you want to delete in the request path.
 
->[!NOTE] The schedule **must** be disabled before being deleted.
+>[!NOTE]
+>
+>The schedule **must** be disabled before being deleted.
 
 **API format**
 
