@@ -19,7 +19,7 @@ To enable [!DNL Audience Manager] you will need to do the following:
 
 ## Syncing Identities
 
-The Adobe Experience Platform Web SDK supports the ability to declare customer IDs and their authentication states via the [sendEvent](../../fundamentals/identity.mdl#syncing-identities) command.
+The Adobe Experience Platform Web SDK supports the ability to declare customer IDs and their authentication states via the [sendEvent](../../fundamentals/identity.md#syncing-identities) command.
 
 You will need to choose namespaces from the [Identity Service Namespaces](../../../identity/../identity-service/namespaces.md) to indicate the context to which an identity relates, by using the values in the Identity Symbol column:
 
