@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;XDM
 solution: Experience Platform
 title: Experience Data Model (XDM) field dictionary
-topic: overview
+topic: overviewss
 ---
 
 # [!DNL Experience Data Model] (XDM) field dictionary

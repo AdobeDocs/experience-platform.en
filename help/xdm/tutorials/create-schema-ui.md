@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;schema;Schema;create schema
 solution: Experience Platform
 title: Create a schema using the Schema Editor
 topic: tutorials
+description: This tutorial covers the steps for creating a schema using the Schema Editor within Experience Platform.
 ---
 
 # Create a schema using the [!DNL Schema Editor]
