@@ -46,7 +46,7 @@ Log in to [Adobe Experience Platform](https://platform.adobe.com) and then selec
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the *[!UICONTROL Databases]* category, select **[!UICONTROL Phoenix]** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To create a new inbound connection, select **[!UICONTROL Connect source]**.
+Under the *[!UICONTROL Databases]* category, select **[!UICONTROL Phoenix]** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To create a new inbound connection, select **[!UICONTROL Add data]**.
 
 ![catalog](../../../../images/tutorials/create/phoenix/catalog.png)
 
