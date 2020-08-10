@@ -19,11 +19,11 @@ Data usage labels allow you to categorize datasets and fields according to usage
 
 ## Marketing actions
 
-Marketing actions (also called marketing use cases), in the context of the Data Governance framework, are actions that an [!DNL Experience Platform] data consumer can take, for which your organization wants to restrict data usage. For detailed information on working with marketing actions, see the [marketing actions endpoint guide](./marketing-actions.md).
+Marketing actions (also called marketing use cases), in the context of the [!DNL Data Governance] framework, are actions that an [!DNL Experience Platform] data consumer can take, for which your organization wants to restrict data usage. For detailed information on working with marketing actions, see the [marketing actions endpoint guide](./marketing-actions.md).
 
 ## Policies
 
-Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Experience Platform. A policy is defined by the following:
+Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform]. A policy is defined by the following:
 
 1. A specific marketing action
 1. The data usage label(s) that action is restricted from being performed against
@@ -32,10 +32,10 @@ To learn how to manage policies in the API, see the [policies endpoint guide](./
 
 ## Evaluation
 
-Once data usage labels have been applied to Platform datasets, and data usage policies have been defined for marketing actions against those labels, Data Governance capabilities allow you to enforce those policies and prevent data operations that constitute policy violations.
+Once data usage labels have been applied to [!DNL Platform] datasets, and data usage policies have been defined for marketing actions against those labels, Data Governance capabilities allow you to enforce those policies and prevent data operations that constitute policy violations.
 
-The Policy Service API provides endpoints that allow you to test marketing actions against datasets or arbitrary combinations of data usage labels in order to check if any policy violations occur. Based on the API response, you can then set up protocols within your experience application to appropriately enforce data usage policy compliance. See the [evaluation endpoints guide](./evaluation.md) for more information.
+The [!DNL Policy Service] API provides endpoints that allow you to test marketing actions against datasets or arbitrary combinations of data usage labels in order to check if any policy violations occur. Based on the API response, you can then set up protocols within your experience application to appropriately enforce data usage policy compliance. See the [evaluation endpoints guide](./evaluation.md) for more information.
 
 ## Next steps
 
-To begin making calls using the Policy Service API, read the [getting started guide](./getting-started.md) then select one of the endpoint guides to learn how to use specific endpoints. To work with labels and policies using the Experience Platform UI, please refer to the [labels user guide](../labels/user-guide.md) and [policies user guide](../policies/user-guide.md), respectively.
+To begin making calls using the [!DNL Policy Service] API, read the [getting started guide](./getting-started.md) then select one of the endpoint guides to learn how to use specific endpoints. To work with labels and policies using the [!DNL Experience Platform] UI, please refer to the [labels user guide](../labels/user-guide.md) and [policies user guide](../policies/user-guide.md), respectively.

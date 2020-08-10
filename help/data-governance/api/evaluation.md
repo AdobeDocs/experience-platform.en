@@ -19,11 +19,11 @@ Evaluation requests can be made in one of three ways:
 
 ## Getting started
 
-The API endpoints used in this guide is part of the [Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The API endpoints used in this guide is part of the [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 ## Evaluate for policy violations using data usage labels {#labels}
 
-You can evaluate for policy violations based on the presence of a specific set of data usage labels by specifying those labels in a `duleLabels` query parameter in a GET request.
+You can evaluate for policy violations based on the presence of a specific set of data usage labels by using the `duleLabels` query parameter in a GET request.
 
 **API format**
 
@@ -56,7 +56,7 @@ curl -X GET \
 
 **Response**
 
-A successful response includes a `violatedPolicies` array, which contains the details of the any policies that were violated as a result of performing the marketing action against the provided labels. If no policies are violated, the `violatedPolicies` array will be empty.
+A successful response includes a `violatedPolicies` array, which contains the details of the policies that were violated as a result of performing the marketing action against the provided labels. If no policies are violated, the `violatedPolicies` array will be empty.
 
 ```JSON
 {
@@ -114,7 +114,7 @@ A successful response includes a `violatedPolicies` array, which contains the de
 }
 ```
 
-## Evaluate for policy violations using using datasets {#datasets}
+## Evaluate for policy violations using datasets {#datasets}
 
 You can evaluate for policy violations based on a set of one or more datasets from which data usage labels can be collected. This is done by performing a POST request to the `/constraints` endpoint for a specific marketing action and providing a list of dataset IDs within the request body.
 
@@ -160,11 +160,11 @@ curl -X POST \
 | Property | Description |
 | --- | --- |
 | `entityType` | The type of entity whose ID is indicated in the sibling `entityId` property. Currently, the only accepted value is `dataSet`. |
-| `entityId` | The ID of a dataset to test the marketing action against. A list of datasets and their corresponding IDs can be obtained by making a GET request to the `/dataSets` endpoint in the Catalog Service API. See the guide on [listing Catalog objects](../../catalog/api/list-objects.md) for more information. |
+| `entityId` | The ID of a dataset to test the marketing action against. A list of datasets and their corresponding IDs can be obtained by making a GET request to the `/dataSets` endpoint in the [!DNL Catalog Service] API. See the guide on [listing [!DNL Catalog] objects](../../catalog/api/list-objects.md) for more information. |
 
 **Response**
 
-A successful response includes a `violatedPolicies` array, which contains the details of the any policies that were violated as a result of performing the marketing action against the provided datasets. If no policies are violated, the `violatedPolicies` array will be empty.
+A successful response includes a `violatedPolicies` array, which contains the details of the policies that were violated as a result of performing the marketing action against the provided datasets. If no policies are violated, the `violatedPolicies` array will be empty.
 
 ```JSON
 {
@@ -408,14 +408,14 @@ curl -X POST \
 | Property | Description |
 | --- | --- |
 | `entityType` | The type of entity whose ID is indicated in the sibling `entityId` property. Currently, the only accepted value is `dataSet`. |
-| `entityId` | The ID of a dataset whose fields are to be evaluated against the marketing action. A list of datasets and their corresponding IDs can be obtained by making a GET request to the `/dataSets` endpoint in the Catalog Service API. See the guide on [listing Catalog objects](../../catalog/api/list-objects.md) for more information. |
+| `entityId` | The ID of a dataset whose fields are to be evaluated against the marketing action. A list of datasets and their corresponding IDs can be obtained by making a GET request to the `/dataSets` endpoint in the [!DNL Catalog Service] API. See the guide on [listing [!DNL Catalog] objects](../../catalog/api/list-objects.md) for more information. |
 | `entityMeta.fields` | An array of paths to specific fields within the dataset's schema, provided in the form of JSON Pointer strings. See the section on [JSON Pointer](../../landing/api-fundamentals.md#json-pointer) in the API fundamentals guide for details on the accepted syntax for these strings. |
 
 **Response**
 
-A successful response includes a `violatedPolicies` array, which contains the details of the any policies that were violated as a result of performing the marketing action against the provided dataset fields. If no policies are violated, the `violatedPolicies` array will be empty.
+A successful response includes a `violatedPolicies` array, which contains the details of the policies that were violated as a result of performing the marketing action against the provided dataset fields. If no policies are violated, the `violatedPolicies` array will be empty.
 
-Comparing the example response below to the [response involving only datasets](#datasets), note that the list of collected labels is shorter, as is the `discoveredLabels` for each dataset as it only includes the fields specified in the request body. In addition, the previously violated policy `Targeting Ads or Content` requires both `C4 AND C6` labels to present, and is therefore no longer violated as indicated by the empty `violatedPolicies` array.
+Comparing the example response below to the [response involving only datasets](#datasets), note that the list of collected labels is shorter. The `discoveredLabels` for each dataset have also been reduced, as they only include the fields specified in the request body. In addition, the previously violated policy `Targeting Ads or Content` requires both `C4 AND C6` labels to present, and is therefore no longer violated as indicated by the empty `violatedPolicies` array.
 
 ```JSON
 {
@@ -577,7 +577,7 @@ curl -X POST \
 | `entityList` | An array of datasets and (optionally) specific fields within those datasets to test the marketing action against.<br><br>**IMPORTANT**: When using this property, a `labels` property must NOT be included in the same object. To evaluate the same marketing action using specific data usage labels, you must include a separate object in the request payload that contains a `labels` array. |
 | `entityType` | The type of entity to test the marketing action against. Currently, only `dataSet` is supported. |
 | `entityId` | The ID of a dataset to test the marketing action against. |
-| `entityMeta.fields` | *(Optional)* A list of specific fields within the dataset to test the marketing action against. |
+| `entityMeta.fields` | (Optional) A list of specific fields within the dataset to test the marketing action against. |
 
 **Response**
 

@@ -11,7 +11,7 @@ Data usage policies are rules that describe the kinds of marketing actions that 
 
 ## Getting started
 
-The API endpoint used in this guide is part of the [!DNL Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
+The API endpoint used in this guide is part of the [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 ## Retrieve a list of policies {#list}
 
@@ -26,7 +26,7 @@ GET /policies/custom
 
 **Request**
 
-The following request retrieves a list of custom policies defined by your organizaiton.
+The following request retrieves a list of custom policies defined by your organization.
 
 ```sh
 curl -X GET \
@@ -222,7 +222,7 @@ A successful response returns the details of the policy.
 
 ## Create a custom policy {#create-policy}
 
-In the Policy Service API, a policy is defined by the following:
+In the [!DNL Policy Service] API, a policy is defined by the following:
 
 * A reference to a specific marketing action
 * An expression describing the data usage labels that the marketing action is restricted from being performed against
@@ -596,7 +596,7 @@ curl -X DELETE \
 
 A successful response returns HTTP status 200 (OK) with a blank body. 
 
-You can confirm the deletion by attempting to look up (GET) the policy again. You should receive a 404 (Not Found) error if the policy has been successfully deleted.
+You can confirm the deletion by attempting to look up (GET) the policy again. You should receive an HTTP 404 (Not Found) error if the policy has been successfully deleted.
 
 ## Retrieve a list of enabled core policies {#list-enabled-core}
 
@@ -718,4 +718,4 @@ A successful response returns the updated list of enabled core policies under a 
 
 ## Next steps
 
-Once you have defined new policies or updated existing ones, you can use the Policy Service API to test marketing actions against specific labels or datasets and see whether your policies are raising violations as expected. See the guide on the [policy evaluation endpoints](./evaluation.md) for more information.
+Once you have defined new policies or updated existing ones, you can use the [!DNL Policy Service] API to test marketing actions against specific labels or datasets and see whether your policies are raising violations as expected. See the guide on the [policy evaluation endpoints](./evaluation.md) for more information.

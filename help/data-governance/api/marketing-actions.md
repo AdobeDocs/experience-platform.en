@@ -13,7 +13,7 @@ You can manage marketing actions for your organization by using the `/marketingA
 
 ## Getting started
 
-The API endpoints used in this guide is part of the [Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The API endpoints used in this guide are part of the [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 ## Retrieve a list of marketing actions {#list}
 
@@ -41,7 +41,7 @@ curl -X GET \
 
 **Response**
 
-The response object provides the total number of marketing actions in the container (`count`) and the `children` array contains the details for each marketing action, including its `name` and an `href`. This path (`_links.self.href`) is used to complete the `marketingActionsRefs` array when [creating a data usage policy](policies.md#create-policy).
+A successful response returns the details for each retrieved marketing action, including its `name` and `href`. The `href` value is used to identify the marketing action when [creating a data usage policy](policies.md#create-policy).
 
 ```json
 {
@@ -95,7 +95,7 @@ The response object provides the total number of marketing actions in the contai
 | --- | --- |
 | `_page.count` | The total number of marketing actions returned. |
 | `children` | An array of objects that contain the details of the retrieved marketing actions. |
-| `name` | The name of the marketing action, which acts as it's unique identifier when [looking up a specific marketing action](#lookup). |
+| `name` | The name of the marketing action, which acts as its unique identifier when [looking up a specific marketing action](#lookup). |
 | `_links.self.href` | A URI reference for the marketing action, which can be used to complete the `marketingActionsRefs` array when [creating a data usage policy](policies.md#create-policy). |
 
 ## Look up a specific marketing action {#lookup}
@@ -183,12 +183,12 @@ curl -X PUT \
 
 | Property | Description |
 | --- | --- |
-| `name` | The name of the marketing action to be created or updated. <br><br>**IMPORTANT**: This property must match the `{MARKETING_ACTION_NAME}` in the path, otherwise a 400 (Bad Request) error will occur. In other words, once a marketing action has been created, its `name` property cannot be changed. |
+| `name` | The name of the marketing action to be created or updated. <br><br>**IMPORTANT**: This property must match the `{MARKETING_ACTION_NAME}` in the path, otherwise an HTTP 400 (Bad Request) error will occur. In other words, once a marketing action has been created, its `name` property cannot be changed. |
 | `description` | An optional description to provide further context for the marketing action. |
 
 **Response**
 
-A successful response returns the details of the marketing action. If an existing marketing action was updated, the response code will be 200 (OK). If a new marketing action was created, the response code will be 201 (Created).
+A successful response returns the details of the marketing action. If an existing marketing action was updated, the response returns HTTP status 200 (OK). If a new marketing action was created, the response returns HTTP status 201 (Created).
 
 ```JSON
 {
@@ -215,7 +215,7 @@ You can delete a custom marketing action by including its name in the path of a 
 
 >[!NOTE]
 >
->Marketing actions that are referenced by exiting policies cannot be deleted. Attempting to delete one of these marketing actions will result in a 400 (Bad Request) error along with a message that includes the IDs of all policies that reference the marketing action.
+>Marketing actions that are referenced by existing policies cannot be deleted. Attempting to delete one of these marketing actions will result in an HTTP 400 (Bad Request) error along with a message that includes the IDs of all policies that reference the marketing action.
 
 **API format**
 
@@ -242,4 +242,4 @@ curl -X DELETE \
 
 A successful response returns HTTP Status 200 (OK) with a blank response body. 
 
-You can confirm the deletion by attempting to [look up the marketing action](#look-up). You should receive a 404 (Not Found) error if the marketing action has been removed from the system.
+You can confirm the deletion by attempting to [look up the marketing action](#look-up). You should receive an HTTP 404 (Not Found) error if the marketing action has been removed from the system.

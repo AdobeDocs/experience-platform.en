@@ -13,14 +13,14 @@ The [!DNL Policy Service] API allows you to create and manage various resources 
 
 Using the developer guide requires a working understanding of the the various [!DNL Experience Platform] services involved in working with Data Governance capabilities. Before beginning to work with the [!DNL Policy Service API], please review the documentation for the following services:
 
-* [!DNL Data Governance](../home.md): The framework by which [!DNL Experience Platform] enforces data usage compliance.
-* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-* [!DNL Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [[!DNL Data Governance]](../home.md): The framework by which [!DNL Experience Platform] enforces data usage compliance.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ## Reading sample API calls
 
-The Policy Service API documentation provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
+The [!DNL Policy Service] API documentation provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
 
 ## Required headers
 
