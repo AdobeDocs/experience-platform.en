@@ -37,7 +37,7 @@ To connect a webhook to your I/O Events subscription, visit [webhook.site](https
 
 ![webhook-link](./images/notifications/webhook-url.png)
 
-Once you have copied the webhook link, paste the link in the *[!UICONTROL Webhook URL]* textbox under the *[!UICONTROL How to receive events]* section of the *[!UICONTROL Configure event registration]* step in the I/O console. Select **[!UICONTROL Save configured events]** to continue.
+Once you have copied the webhook link, paste the link in the *[!UICONTROL Webhook URL]* textbox in the *[!UICONTROL Configure event registration]* step of the event subscription process. Select **[!UICONTROL Save configured events]** to continue.
 
 ![register-webhook](./images/notifications/register-webhook.png)
 
@@ -45,11 +45,13 @@ Once you have copied the webhook link, paste the link in the *[!UICONTROL Webhoo
 
 With your webhook connected and your event subscription complete, you can start receiving flow run notifications through the webhook dashboard.
 
+A notification returns information such as the number of ingestions made, file size, and a request's unique identifier. A notification also returns raw content associated with your flow run, in JSON-format. The return payload can either be classified as `sources_flow_run_success` or `sources_flow_run_failure`.
+
 ![webhook-result](./images/notifications/webhook-result.png)
 
-## Types of notifications
-
 ### Success
+
+The following JSON payload includes information that pertain to a successful flow run.
 
 ```json
 {
@@ -140,6 +142,8 @@ With your webhook connected and your event subscription complete, you can start 
 ```
 
 ### Failure
+
+The following JSON payload includes information that pertain to a failed flow run. A notification regarding a failed flow run includes information about the errors that contributed to the run's failure, including its error code and description.
 
 ```json
 [
