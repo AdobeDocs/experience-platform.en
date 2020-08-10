@@ -11,11 +11,11 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 [!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
-With the [!DNL Experience Platform] user interface, you can subscribe to events and use webhooks to receive notifications regarding the status of your flow runs. These notifications contain information about the success of your flow run or errors that contributed to a run's failure. This tutorial provides steps on how to subscribe to events, register webhooks, and receive flow run notifications containing information on the status of your dataflow.
+With the [!DNL Experience Platform] user interface, you can subscribe to events and use webhooks to receive notifications regarding the status of your flow runs. These notifications contain information about the success of your flow run or errors that contributed to a run's failure. This document provides steps on how to subscribe to events, register webhooks, and receive flow run notifications containing information on the status of your dataflow.
 
 ## Getting started
 
-This tutorial requires a working understanding of the following components of Adobe Experience Platform:
+This document requires a working understanding of the following components of Adobe Experience Platform:
 
 *   [Experience Data Model (XDM) System](../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
 *   [Real-time Customer Profile](../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
@@ -141,6 +141,8 @@ The following JSON payload includes information that pertain to a successful flo
 }
 ```
 
+A returning payload contains a set of metrics that define characteristics of a specific flow run. See the table below for more information about each metric.
+
 | Metrics | Description |
 | ------- | ----------- |
 | Duration | Captures the start and end time of the flow run. |
@@ -222,4 +224,3 @@ The following JSON payload includes information that pertain to a failed flow ru
 ```
 
 > [!NOTE] If partial ingestion is enabled during the flow creation process, a flow that contains both successful and failed ingestions will be marked as `sources_flow_run_success`. Errors will still be included as part of the return payload.
-
