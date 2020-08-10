@@ -45,7 +45,7 @@ Once you have copied the webhook link, paste the link in the *[!UICONTROL Webhoo
 
 With your webhook connected and your event subscription complete, you can start receiving flow run notifications through the webhook dashboard.
 
-A notification returns information such as the number of ingestions made, file size, and a request's unique identifier. A notification also returns raw content associated with your flow run, in JSON-format. The return payload can either be classified as `sources_flow_run_success` or `sources_flow_run_failure`.
+A notification returns information such as the number of ingestions made, file size, and a request's unique identifier. A notification also returns a payload associated with your flow run in JSON-format. The return payload can either be classified as `sources_flow_run_success` or `sources_flow_run_failure`.
 
 ![webhook-result](./images/notifications/webhook-result.png)
 
@@ -59,13 +59,13 @@ The following JSON payload includes information that pertain to a successful flo
   "event": {
     "createdAt": 1597095487394,
     "updatedAt": 1597095487358,
-    "createdBy": "acp_foundation_connectors@AdobeID",
-    "updatedBy": "acp_foundation_connectors@AdobeID",
-    "createdClient": "acp_foundation_connectors",
-    "updatedClient": "acp_foundation_connectors",
+    "createdBy": "{CREATED_BY}",
+    "updatedBy": "{UPDATED_BY}",
+    "createdClient": "{CREATED_CLIENT}",
+    "updatedClient": "{UPDATED_CLIENT}",
     "sandboxId": "7127a4f0-def8-11e9-83ce-e79494b1c2a5",
     "sandboxName": "prod",
-    "imsOrgId": "7A5147645D8926B00A494224@AdobeOrg",
+    "imsOrgId": "{IMS_ORG}",
     "id": "1699fdb1-0f20-4323-99fd-b10f2033236b",
     "flowId": "ba33133d-86f3-4513-b313-3d86f3451392",
     "providerRefId": "M-ba33133d-86f3-4513-b313-3d86f3451392-incremental-0:b4bae140-d41c-4b6c-abe9-0149be0b5899",
@@ -131,7 +131,7 @@ The following JSON payload includes information that pertain to a successful flo
     "processStartTime": 1597095487521,
     "header": {
       "_adobeio": {
-        "imsOrgId": "7A5147645D8926B00A494224@AdobeOrg",
+        "imsOrgId": "{IMS_ORG}",
         "providerMetadata": "aep_observability_catalog_events",
         "eventCode": "sources_flow_run_success"
       }
@@ -140,6 +140,13 @@ The following JSON payload includes information that pertain to a successful flo
   }
 }
 ```
+
+| Metrics | Description |
+| ------- | ----------- |
+| Duration | Captures the start and end time of the flow run. |
+| Size | Captures the volume of the data in bytes. |
+| File | Captures the file count of the data. |
+| Record | Captures the record count of the data. |
 
 ### Failure
 
@@ -151,7 +158,7 @@ The following JSON payload includes information that pertain to a failed flow ru
     "msgType": "eventNotification",
     "version": "1.0",
     "timestamp": "1591632364092",
-    "imsOrgId": "555B08345D76A68D0A495E79@AdobeOrg",
+    "imsOrgId": "{IMS_ORG}",
     "schema": {
       "name": "run-notification",  
       "version": "1.0"
@@ -213,3 +220,6 @@ The following JSON payload includes information that pertain to a failed flow ru
   }
 ]
 ```
+
+> [!NOTE] If partial ingestion is enabled during the flow creation process, a flow that contains both successful and failed ingestions will be marked as `sources_flow_run_success`. Errors will still be included as part of the return payload.
+
