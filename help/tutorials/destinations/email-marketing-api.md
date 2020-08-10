@@ -48,7 +48,8 @@ Resources in [!DNL Experience Platform] can be isolated to specific virtual sand
 
 *   x-sandbox-name: `{SANDBOX_NAME}`
 
->[!Note]
+>[!NOTE]
+>
 >For more information on sandboxes in [!DNL Experience Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
