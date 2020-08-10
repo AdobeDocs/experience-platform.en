@@ -260,7 +260,7 @@ For example, in order to define a policy that prohibits a marketing action from 
 | Property | Description |
 | --- | --- |
 | `operator` | Indicates the conditional relationship between the labels provided in the sibling `operands` array. Accepted values are: <ul><li>`OR`: The expression resolves to true if any of the labels in the `operands` array are present.</li><li>`AND`: The expression only resolves to true if all of the labels in the `operands` array are present.</li></ul>|
-| `operands` | An array of objects, with each object representing either a single label or an additional pair of `operator` and `operands` properties. The presence of the labels and/or operations in an `operands` array resolves to "true" or "false" based on the value of its sibling `operator` property. |
+| `operands` | An array of objects, with each object representing either a single label or an additional pair of `operator` and `operands` properties. The presence of the labels and/or operations in an `operands` array resolves to true or false based on the value of its sibling `operator` property. |
 | `label` | The name of a single data usage label that applies to the policy. |
 
 You can create a new custom policy by making a POST request to the `/policies/custom` endpoint. 
