@@ -11,7 +11,7 @@ topic: overview
 
 This tutorial uses the [!DNL Flow Service] API to walk you through the steps to connect [!DNL Experience Platform] to an [!DNL Azure Blob] (hereinafter referred to as "Blob") storage.
 
-If you would prefer to use the user interface in [!DNL Experience Platform], the [Azure Blob or Amazon S3 source connector UI tutorial](../../../ui/create/cloud-storage/blob-s3.md) provides step-by-step instructions for performing similar actions.
+If you would prefer to use the user interface in [!DNL Experience Platform], the [Azure Blob source connector UI tutorial](../../../ui/create/cloud-storage/blob.md) provides step-by-step instructions for performing similar actions.
 
 ## Getting started
 
