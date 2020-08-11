@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data ingestion
 solution: Experience Platform
 title: Adobe Experience Platform Data Ingestion overview
 topic: overview
+description: This document introduces the three main ways in which data is ingested into Platform, with links to their respective overview documentation for more detailed information.
 ---
 
 # Data Ingestion overview

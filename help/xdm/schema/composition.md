@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema
+keywords: Experience Platform;home;popular topics;schema;Schema;enum
 solution: Experience Platform
 title: Basics of schema composition
 topic: overview

@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;create schema;schema api
+keywords: Experience Platform;home;popular topics;schema;Schema;create schema;schema api;enum
 solution: Experience Platform
 title: Create a schema using the Schema Registry API
 topic: tutorials
