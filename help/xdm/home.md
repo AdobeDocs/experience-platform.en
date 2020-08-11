@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics;XDM
+keywords: Experience Platform;home;popular topics;XDM;XDM system;XDM individual profile;XDM ExperienceEvent;XDM Experience Event;experienceEvent;experience event;Mixins;mixins
 solution: Experience Platform
 title: Experience Data Model (XDM) System
 topic: overview
+description: Standardization and interoperability are key concepts behind Adobe Experience Platform. Experience Data Model (XDM), driven by Adobe, is an effort to standardize customer experience data and define schemas for customer experience management. 
 ---
 
 # XDM System overview
