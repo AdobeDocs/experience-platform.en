@@ -1,5 +1,6 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics; delete dataflows
+description: Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for deleting dataflows from the Sources workspace.
 solution: Experience Platform
 title: Delete dataflows
 topic: overview
@@ -33,7 +34,7 @@ A list of existing dataflows appears. On this page is a list of sortable informa
 The sorting panel appears on the left side of the screen, containing a list of available sources.
 You can select more than one source using the sorting function.
 
-Select the source you wish to access and locate the dataflow you intend to delete from the list of dataflows in the main interface. If you select multiple sources from the sorting panel, the most recently created dataflows will appear first, as the list is sorted by created date.
+Select the source you wish to access and locate the dataflow you intend to delete from the list of dataflows in the main interface. When selecting multiple sources from the sorting panel, your most recently created dataflows appear first because the list is sorted by created date.
 
 Select the *[!UICONTROL Dataflow]* you intend to delete.
 

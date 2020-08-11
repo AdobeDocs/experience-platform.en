@@ -1,5 +1,6 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics; monitor accounts; monitor dataflows
+description: Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for viewing existing accounts and dataflows from the Sources workspace.
 solution: Experience Platform
 title: Monitor accounts and dataflows
 topic: overview
@@ -64,7 +65,7 @@ The calendar allows you to view different time frames of records ingested. You c
 
 By default, the *[!UICONTROL Dataflow activity]* displays the *[!UICONTROL Properties]* panel associated with the dataflow. Select the the flow run from the list to see its associated meta data, including information about its unique run ID.
 
-Select **[!UICONTROL Dataflow run start]** to acces the *[!UICONTROL Dataflow run overview]*.
+Select **[!UICONTROL Dataflow run start]** to access the *[!UICONTROL Dataflow run overview]*.
 
 ![runs](../../images/tutorials/monitor/run-metadata.png)
 
@@ -88,11 +89,17 @@ Select **[!UICONTROL Preview error diagnostics]** to see more information on the
 
 ![Dataflow-run-errors](../../images/tutorials/monitor/dataflow-run-errors.png)
 
-The *[Error diagnostics preview]* panel appears. This screen displays specific information regarding the ingestion failure, including the *[!UICONTROL File name]*, *[!UICONTROL Error code]*, the name of the column in which the error occurred, and a description of the error.
+The *[!UICONTROL Error diagnostics preview]* panel appears. This screen displays specific information regarding the ingestion failure, including the *[!UICONTROL File name]*, *[!UICONTROL Error code]*, the name of the column in which the error occurred, and a description of the error.
 
 This section also includes a preview of the column that contains the error.
 
+> [!IMPORTANT] To enable *[!UICONTROL Error diagnostics preview]* you must activate *[!UICONTROL Partial ingestion]* and *[!UICONTROL Error diagnostics]* when configuring a dataflow. Doing so will allow the system to scan all of the records ingested during the flow run.
+
 ![Preview-error-diagnostics](../../images/tutorials/monitor/preview-error-diagnostics.png)
+
+After previewing the errors, you can select **[!UICONTROL Error diagnostics Download]** to access error diagnostics in full, as well as the file manifest. For more information on retrieving error diagnostics and downloading file manifests, see the [Partial ingestion](../../../ingestion/batch-ingestion/partial.md) document.
+
+![Preview-error-diagnostics](../../images/tutorials/monitor/download.png)
 
 For more information on monitoring dataflows and ingestion, refer to the tutorial on [monitoring streaming dataflows](../../../ingestion/quality/monitor-data-flows.md).
 
