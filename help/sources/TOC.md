@@ -180,5 +180,6 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Configure a dataflow for a payment connector](tutorials/ui/dataflow/payments.md)
       - [Configure a dataflow for a protocol connector](tutorials/ui/dataflow/protocols.md)
   - [Activate inbound data to populate customer profiles](tutorials/ui/profile.md)
-  - [Monitor accounts and dataset flows](tutorials/ui/monitor.md)
-- [Platform release notes](https://www.adobe.com/go/platform-release-notes-en) 
+  - [Monitor accounts and dataflows](tutorials/ui/monitor.md)
+  - [Delete dataflows](tutorials/ui/delete.md)
+- [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
