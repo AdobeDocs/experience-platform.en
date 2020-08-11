@@ -40,7 +40,7 @@ The destinations in Adobe Real-time CDP may have certain rules and obligations f
 
 ## [!DNL Google Customer Match] account prerequisites {#google-account-prerequisites}
 
-Before setting up a Google Customer Match destination in Adobe Real-time CDP, make sure you read and adhere to Google's policy for using Customer Match, outlined in the [Google support documentation](https://support.google.com/google-ads/answer/6299717). 
+Before setting up a [!DNL Google Customer Match] destination in Adobe Real-time CDP, make sure you read and adhere to Google's policy for using [!DNL Customer Match], outlined in the [Google support documentation](https://support.google.com/google-ads/answer/6299717). 
 
 ### Allow list {#allowlist}
 
@@ -65,8 +65,8 @@ Google requires that no personally identifiable information (PII) is sent in cle
 
 For more information about Google's hashing requirements and other restrictions on activation, see the following sections in Google's documentation:
 
-* [Customer Match with email address, address, or user ID](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id)
-* [Customer Match considerations](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_considerations)
+* [[!DNL Customer Match] with email address, address, or user ID](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id)
+* [[!DNL Customer Match] considerations](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_considerations)
 
 <!--
 
@@ -91,7 +91,7 @@ If you select to hash the email addresses yourself, make sure to comply with Goo
 
 ## Connect to destination {#connect-destination}
 
-1. In **[!UICONTROL Destinations > Catalog]**, scroll to the **[!UICONTROL Advertising]** category. Select [!DNL Google Customer Match], then select **[!UICONTROL Configure]**.
+1. In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scroll to the **[!UICONTROL Advertising]** category. Select [!DNL Google Customer Match], then select **[!UICONTROL Configure]**.
 
     ![Connect to Google Customer Match destination](/help/rtcdp/destinations/assets/connect-google-customer-match.png)
 
@@ -115,7 +115,7 @@ If you select to hash the email addresses yourself, make sure to comply with Goo
 
     ![Connect Google Customer Match - authentication step](/help/rtcdp/destinations/assets/google-customer-match-authentication-step.png)
 
-5. Your destination is now created. You can select **[!UICONTROL Save & Exit]** if you want to activate segments later on or you can select **[!UICONTROL Next]** to continue the workflow and select segments to activate. In either case, see the next section, [Activate segments to Google Customer Match](#activate-segments), for the rest of the workflow.
+5. Your destination is now created. You can select **[!UICONTROL Save & Exit]** if you want to activate segments later on or you can select **[!UICONTROL Next]** to continue the workflow and select segments to activate. In either case, see the next section, [Activate segments to [!DNL Google Customer Match]](#activate-segments), for the rest of the workflow.
 
 
 ## Activate segments to [!DNL Google Customer Match] {#activate-segments}
