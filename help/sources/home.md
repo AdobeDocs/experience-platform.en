@@ -38,8 +38,9 @@ Sources in [!DNL Experience Platform] are grouped into the following categories:
 Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM parquet, or delimited. Every step of the process is integrated into the Sources workflow using the user interface. See the following related documents for more information:
 
 - [!DNL Azure Data Lake Storage Gen2](connectors/cloud-storage/adls-gen2.md) connector
-- [!DNL Azure Blob and Amazon S3](connectors/cloud-storage/blob-s3.md) connector
+- [!DNL Azure Blob](connectors/cloud-storage/blob.md) connector
 - [!DNL Amazon Kinesis](connectors/cloud-storage/kinesis.md) connector
+- [!DNL Amazon S3](connectors/cloud-storage/s3.md) connector
 - [!DNL Apache HDFS](connectors/cloud-storage/hdfs.md) connector
 - [!DNL Azure Event Hubs](connectors/cloud-storage/eventhub.md) connector
 - [!DNL Azure File Storage](connectors/cloud-storage/azure-file-storage.md) connector
