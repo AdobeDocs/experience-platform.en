@@ -40,6 +40,7 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
       * [Google Ads extension](/help/rtcdp/destinations/google-ads-extension.md)
       * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
+      * [Google Customer Match](/help/rtcdp/destinations/google-customer-match-destination.md)
       * [Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
       * [Google gtag extension](/help/rtcdp/destinations/gtag-advertising-extension.md)
       * [LinkedIn Insight Tag extension](/help/rtcdp/destinations/linkedin-extension.md)
