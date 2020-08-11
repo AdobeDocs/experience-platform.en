@@ -12,7 +12,20 @@ author: crhoades, ens28527
 
 Updates to existing features in Adobe Experience Platform:
 
+- [!DNL Data Science Workspace](#dsw)
 - [!DNL Sources](#sources)
+
+## [!DNL Data Science Workspace] {#dsw}
+
+[!DNL Data Science Workspace] uses machine learning and artificial intelligence to unleash insights from your data. Integrated into Adobe Experience Platform, [!DNL Data Science Workspace] helps you make predictions using your content and data assets across Adobe solutions.
+
+**New features**
+
+| Feature | Description |
+| ------- | ----------- |
+| [!DNL JupyterLab] | Improved the stability of long-running [!DNL JupyterLab notebook] virtual machines. |
+
+For more information on [!DNL JupyterLab], please see the [[!DNL JupyterLab] user guide](../../data-science-workspace/jupyterlab/overview.md).
 
 ## Sources {#sources}
 
