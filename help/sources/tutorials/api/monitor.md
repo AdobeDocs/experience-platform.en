@@ -247,7 +247,4 @@ The returning payload also contains information about your flow run's `metrics` 
 
 ## Next steps
 
-By following this tutorial, you have retrieved metrics and error information on your dataflow. You can now continue to monitor your dataflow, depending on your ingestion schedule, to track its status and ingestion rates. See the following documents for more details:
-
-* [Real-time Customer Profile overview](../../../profile/home.md)
-* [Data Science Workspace overview](../../../data-science-workspace/home.md)
+By following this tutorial, you have retrieved metrics and error information on your dataflow using the [!DNL Flow Service] API. You can now continue to monitor your dataflow, depending on your ingestion schedule, to track its status and ingestion rates. For information on how to perform the same tasks using the user interface, see the tutorial on [monitoring dataflows using the user interface](../ui/monitor.md) 
