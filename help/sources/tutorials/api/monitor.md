@@ -9,13 +9,13 @@ topic: overview
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-[!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
+[!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
-This tutorial covers the steps for monitoring flow run data for completeness, errors, and metrics using the [!DNL Flow Service] API.
+This tutorial covers the steps for monitoring flow run data for completeness, errors, and metrics using the [!DNL Flow Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Getting started
 
-This tutorial requires you to have access to a valid dataflow, as well as information regarding its flow ID and run ID. If you do not have this information, select your connector of choice from the [sources overview](../../home.md) and follow the steps outlined before attempting this tutorial.
+This tutorial requires you to have access to a valid dataflow, as well as information regarding its flow ID. If you do not have this information, select your connector of choice from the [sources overview](../../home.md) and follow the steps outlined before attempting this tutorial.
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
@@ -32,38 +32,31 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
 ## Monitor flow runs
 
-Before you can start monitoring flow runs, you must already have an existing dataflow, including its unique flow ID. If you do not have an existing dataflow, you can create one using any of the following source connector tutorials:
-
-* [Advertising](./collect/advertising.md)
-* [Cloud storage](./collect/cloud-storage.md)
-* [CRM](./collect/crm.md)
-* [Customer success](./collect/customer-success.md)
-* [Database](./collect/database-nosql.md)
-* [Marketing automation](./collect/marketing-automation.md)
-* [Payments](./collect/payments.md)
-* [Protocols](./collect/protocols.md)
-
-Once you have made a dataflow, perform a GET request to the [!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
+Once you have made a dataflow, perform a GET request to the [!DNL Flow Service] API.
 
 **API format**
 
 ```http
 GET /runs?property=flowId=={FLOW_ID}
 ```
+
+| Parameter | Description |
+| --------- | ----------- |
+| Flow ID | The unique identifier associated with your dataflow. This (`id`) is generated after you create a new dataflow. |
 
 **Request**
 
@@ -80,7 +73,17 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the flow run specifications including information about its metrics, size, and errors, as well as the run's unique identifier (`id`).
+A successful response returns details regarding your flow run, including information about its creation date, source and target connections, as well as the flow run's unique identifier (`id`).
+
+The returning payload also contains information about your flow run's `metrics` and `activities`. The `metrics` item define characteristics of the data in the flow run, while `activities` pertain to how the data is transformed. See the following table for more information on the values contained within `metrics` and  `activities`.
+
+| Values | Description |
+| ------ | ----------- |
+| `Duration` | Defines the start and end time of the flow run. |
+| `Size` | Defines the volume of the data in bytes. |
+| `File` | Defines the file count of the data. |
+| `Record` | Defines the record count of the data. |
+| `Status` | Defines whether the flow run is a success or a failure.
 
 ```json
 {
@@ -244,7 +247,7 @@ A successful response returns the flow run specifications including information 
 
 ## Next steps
 
-By following this tutorial, you have retrieved metrics, size, and error information on your dataflow. You can now continue to monitor your dataflow, depending on your ingestion schedule, to track its status and ingestion rates. See the following documents for more details:
+By following this tutorial, you have retrieved metrics and error information on your dataflow. You can now continue to monitor your dataflow, depending on your ingestion schedule, to track its status and ingestion rates. See the following documents for more details:
 
 * [Real-time Customer Profile overview](../../../profile/home.md)
 * [Data Science Workspace overview](../../../data-science-workspace/home.md)
