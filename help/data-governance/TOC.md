@@ -20,6 +20,7 @@ user-guide-title: Adobe Experience Platform Data Governance Help
   * [Policy enforcement overview](enforcement/overview.md)
   * [Enforce data usage policies using the Policy Service API](enforcement/api-enforcement.md)
 * Policy Service API developer guide {#api}
+  * [Overview](api/overview.md)
   * [Getting started](api/getting-started.md)
   * [Labels](api/labels.md)
   * [Policies](api/policies.md)
