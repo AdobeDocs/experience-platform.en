@@ -8,7 +8,7 @@ author: crhoades, ens28527
 
 # Adobe Experience Platform release notes 
 
-**Release date: June 10, 2020**
+**Release date: August 12, 2020**
 
 New features in Adobe Experience Platform:
 
