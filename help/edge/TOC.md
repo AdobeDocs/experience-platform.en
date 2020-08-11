@@ -27,6 +27,7 @@ user-guide-title:  Adobe Experience Platform Web SDK Help
 * Solution Specific Considerations {#solutions}
   * Analytics {#analytics}
     * [Analytics Overview](solution-specific/analytics/analytics-overview.md)
+    * [Manually mapping variables in Analytics](solution-specific/analytics/manually-mapping-variables.md)
     * [Automatically Mapped Variables](solution-specific/analytics/automatically-mapped-vars.md)
   * Audience Manager {#aam}
     * [Audience Manager Overview](solution-specific/audience-manager/audience-manager-overview.md)
@@ -36,4 +37,5 @@ user-guide-title:  Adobe Experience Platform Web SDK Help
 * Reference {#ref}
   * [Automatically Collected Information](reference/automatic-information.md)
   * [Retrieving Library Information](reference/retrieving-library-information.md)
+* [Release notes](release-notes.md)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

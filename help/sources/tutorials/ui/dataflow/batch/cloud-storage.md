@@ -7,7 +7,7 @@ topic: overview
 
 # Configure a dataflow for a cloud storage batch connector in the UI
 
-A dataflow is a scheduled task that retrieves and ingests data from a source to a [!DNL Platform] dataset. This tutorial provides steps to configure a new dataflow using your cloud storage base connector.
+A dataflow is a scheduled task that retrieves and ingests data from a source to a [!DNL Platform] dataset. This tutorial provides steps to configure a new dataflow using your cloud storage account.
 
 ## Getting started
 
@@ -18,7 +18,7 @@ This tutorial requires a working understanding of the following components of Ad
     *   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 *   [Real-time Customer Profile](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
-Additionally, this tutorial requires that you have already created a cloud storage connector. A list of tutorials for creating different cloud storage connectors in the UI can be found in the [source connectors overview](../../../../home.md).
+Additionally, this tutorial requires that you have an established cloud storage account. A list of tutorials for creating different cloud storage accounts in the UI can be found in the [source connectors overview](../../../../home.md).
 
 ### Supported file formats
 
@@ -30,22 +30,28 @@ Additionally, this tutorial requires that you have already created a cloud stora
 
 ## Select data
 
-After creating your cloud storage connector, the *[!UICONTROL Select data]* step appears, providing an interactive interface for you to explore your cloud storage hierarchy.
+After creating your cloud storage account, the *[!UICONTROL Select data]* step appears, providing an interactive interface for you to explore your cloud storage hierarchy.
 
 * The left half of the interface is a directory browser, displaying your server's files and directories.
 * The right half of the interface lets you preview up to 100 rows of data from a compatible file.
 
-Clicking a listed folder allows you to traverse the folder hierarchy into deeper folders. Once you have a compatible file or folder selected, the **[!UICONTROL Select data format]** dropdown appears, where you can choose a format to display the data in the preview window.
+Selecting a listed folder allows you to traverse the folder hierarchy into deeper folders. Once you have a compatible file or folder selected, the **[!UICONTROL Select data format]** dropdown appears, where you can choose a format to display the data in the preview window.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
 
-Once the preview window populates, you can click **[!UICONTROL Next]** to upload all files within the selected folder. If you want to upload to a specific file, select that file from the listing before clicking **[!UICONTROL Next]**.
+Once the preview window populates, you can select **[!UICONTROL Next]** to upload all files within the selected folder. If you want to upload to a specific file, select that file from the listing before selecting **[!UICONTROL Next]**.
 
->[!NOTE]
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-preview.png)
+
+### Ingest Parquet or JSON files
+
+Supported file formats for a cloud storage account also includes JSON and Parquet. JSON and Parquet files must be XDM-compliant. To ingest JSON or Parquet files, select the appropriate file format from the directory browser and apply compatible data format from the right interface. Select **[!UICONTROL Next]** to proceed.
+
+>[!IMPORTANT]
 >
->Supported file formats include CSV, JSON, and Parquet. JSON and Parquet files must be XDM-compliant.
+>Unlike delimited file types, JSON, and Parquet formatted files are not available for preview.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-next.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-parquet.png)
 
 ## Map data fields to an XDM schema
 
@@ -55,27 +61,27 @@ Choose a dataset for inbound data to be ingested into. You can either use an exi
 
 **Use an existing dataset**
 
-To ingest data into an existing dataset, select **[!UICONTROL Use existing dataset]**, then click the dataset icon.
+To ingest data into an existing dataset, select **[!UICONTROL Existing dataset]**, then select the dataset icon.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-existing-data.png)
 
-The _Select dataset_ dialog appears. Find the dataset you you wish to use, select it, then click **[!UICONTROL Continue]**.
+The *[!UICONTROL Select dataset]* dialog appears. Find the dataset you you wish to use, select it, then click **[!UICONTROL Continue]**.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-existing-data.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-existing-dataset.png)
 
 **Use a new dataset**
 
-To ingest data into a new dataset, select **[!UICONTROL Create new dataset]** and enter a name and description for the dataset in the fields provided. Next, click the schema icon.
+To ingest data into a new dataset, select **[!UICONTROL New dataset]** and enter a name and description for the dataset in the fields provided. To add a schema, you can enter an existing schema name in the *[!UICONTROL Select schema]* dialog box. Alternatively, you can select the **[!UICONTROL Schema advanced search]** to search for an appropriate schema.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-new-schema.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-new-dataset.png)
 
-The _Select schema_ dialog appears. Select the schema you wish to apply to the new dataset, then click **[!UICONTROL Done]**.
+The *[!UICONTROL Select schema]* dialog appears. Select the schema you wish to apply to the new dataset, then select **[!UICONTROL Done]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
 Based on your needs, you can choose to map fields directly, or use mapper functions to transform source data to derive computed or calculated values. For more information on data mapping and mapper functions, refer to the tutorial on [mapping CSV data to XDM schema fields](../../../../../ingestion/tutorials/map-a-csv-file.md).
 
-Once your source data is mapped, click **[!UICONTROL Next]**.
+Once your source data is mapped, select **[!UICONTROL Next]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
@@ -85,47 +91,69 @@ The *[!UICONTROL Scheduling]* step appears, allowing you to configure an ingesti
 
 | Field | Description |
 | --- | --- |
-| Frequency | Selectable frequencies include Minute, Hour, Day, and Week. |
+| Frequency | Selectable frequencies include `Once`, `Minute`, `Hour`, `Day`, and `Week`. |
 | Interval | An integer that sets the interval for the selected frequency. |
-| Start time | A UTC timestamp for which the very first ingestion will occur. |
-| Backfill | A boolean value that determines what data is initially ingested. If *[!UICONTROL Backfill]* is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If *[!UICONTROL Backfill]* is disabled, only the files that are loaded in between the first run of ingestion and the *[!UICONTROL Start time]* will be ingested. Files loaded prior to *[!UICONTROL Start time]* will not be ingested. |
+| Start time | A UTC timestamp indicating when the very first ingestion is set to occur. |
+| Backfill | A boolean value that determines what data is initially ingested. If *[!UICONTROL Backfill]* is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If *Backfill* is disabled, only the files that are loaded in between the first run of ingestion and the *[!UICONTROL Start time]* will be ingested. Files loaded prior to *[!UICONTROL Start time]* will not be ingested. |
 
-Dataflows are designed to automatically ingest data on a scheduled basis. If you wish to only ingest once through this workflow, you can do so by configuring the **[!UICONTROL Frequency]** to "Day" and applying a very large number for the **[!UICONTROL Interval]**, such as 10000 or similar.
+Dataflows are designed to automatically ingest data on a scheduled basis. Start by selecting the ingestion frequency. Next, set the interval to designate the period between two flow runs. The interval's value should be a non-zero integer and should be set to greater than or equal to 15.
 
-Provide values for the schedule and click **Next**.
+To set the start time for ingestion, adjust the date and time displayed in the start time box. Alternatively, you can select the calendar icon to edit the start time value. Start time must be greater than or equal to the current time in UTC.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling.png)
+Provide values for the schedule and select **[!UICONTROL Next]**.
 
-## Name your dataflow
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-interval-on.png)
 
-The *[!UICONTROL Name flow]* step appears, allowing you to name and give a brief description about your new dataflow.
+### Set up a one-time ingestion dataflow
 
-Provide values for the dataflow and click **[!UICONTROL Next]**.
+To set up one-time ingestion, select the frequency drop down arrow and select **[!UICONTROL Once]**. You can continue to make edits to a dataflow set for a one-time frequency ingestion, so long as the start time remains in the future. Once the start time has passed, the one-time frequency value can no longer be edited.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/name-your-dataflow.png)
+>[!TIP]
+>
+>**[!UICONTROL Interval]** and **[!UICONTROL Backfill]** are not visible during a one-time ingestion.
 
-### Review your dataflow
+Once you have provided appropriate values to the schedule, select **[!UICONTROL Next]**.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-once.png)
+
+## Provide dataflow details
+
+The *[!UICONTROL Dataflow detail]* step appears, allowing you to name and give a brief description about your new dataflow.
+
+During this process, you can also enable *[!UICONTROL Partial ingestion]* and *[!UICONTROL Error diagnostics]*. Enabling *[!UICONTROL Partial ingestion]* provides the ability to ingest data containing errors, up to a certain threshold that you can set. Enabling *[!UICONTROL Error diagnostics]* will provide details on any incorrect data that is batched separately. For more information, see the [partial batch ingestion overview](../../../../../ingestion/batch-ingestion/partial.md).
+
+Provide values for the dataflow and select **[!UICONTROL Next]**.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/dataflow-detail.png)
+
+## Review your dataflow
 
 The *[!UICONTROL Review]* step appears, allowing you to review your new dataflow before it is created. Details are grouped within the following categories:
 
-* *[!UICONTROL Source details]*: Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
-* *[!UICONTROL Target details]*: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
-* *[!UICONTROL Schedule details]*: Shows the active period, frequency, and interval of the ingestion schedule.
+* *[!UICONTROL Connection]*: Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
+* *[!UICONTROL Assign dataset & map fields]*: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
+* *[!UICONTROL Scheduling]*: Shows the active period, frequency, and interval of the ingestion schedule.
 
 Once you have reviewed your dataflow, click **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/review.png)
 
-## Monitor your dataflow
+## Monitor and delete your dataflow
 
-Once your cloud storage dataflow has been created, you can monitor the data that is being ingested through it. For more information on monitoring datasets, see the tutorial on [monitoring streaming dataflows](../../../../../ingestion/quality/monitor-data-flows.md).
+Once your cloud storage dataflow has been created, you can monitor the data that is being ingested through it. For more information on monitoring and deleting dataflows, see the tutorial on [monitoring dataflows](../../../../../ingestion/quality/monitor-data-flows.md).
 
 ## Next steps
 
-By following this tutorial, you have successfully created a dataflow to bring in data from an external cloud storage, and gained insight on monitoring datasets. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have successfully created a dataflow to bring in data from an external cloud storage, and gained insight on monitoring datasets. To learn more about creating dataflows, you can supplement your learning by watching the video below. Additionally, incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
 *   [Real-time Customer Profile overview](../../../../../profile/home.md)
 *   [Data Science Workspace overview](../../../../../data-science-workspace/home.md)
+
+>[!WARNING]
+>
+> The [!DNL Platform] UI shown in the following video is out-of-date. Please refer to the documentation above for the latest UI screenshots and functionality.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29695?quality=12&learn=on)
 
 ## Appendix
 

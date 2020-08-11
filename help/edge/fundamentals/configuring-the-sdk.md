@@ -48,7 +48,7 @@ Indicates which context categories to collect automatically as described in [Aut
 
 Indicates whether debugging should be enabled. Setting this config to `true` enables the following features:
 
-| **Feature**            | **Function** | 
+| **Feature**            | **Function** |
 | ---------------------- | ------------------ |
 | Synchronous validation | Validates the data being collected against the schema and returns an error in the response under the following label: `collect:error OR success` |
 | Console logging        | Enables debugging messages to be displayed in the browser's JavaScript console  |
@@ -67,7 +67,7 @@ The domain used to interact with Adobe services. This is only used if you have a
 | -------- | ------------ | ----------------- |
 | String   | Yes          | none              |
 
-Your assigned Experience Cloud organization ID.  When configuring multiple instances within a page, you must configure a different `orgId` for each instance.
+Your assigned [!DNL Experience Cloud] organization ID.  When configuring multiple instances within a page, you must configure a different `orgId` for each instance.
 
 ## Data collection
 
@@ -127,7 +127,7 @@ For example, if you had an element on your web page with an ID of `container` wh
 | -------- | ------------ | ----------------- |
 | Boolean  | No           | `true`            |
 
-Enables Audience Manager [!UICONTROL cookie destinations], which allows the setting of cookies based on segment qualification.
+Enables [!DNL Audience Manager] [!UICONTROL cookie destinations], which allows the setting of cookies based on segment qualification.
 
 ### `urlDestinationsEnabled`
 
@@ -135,25 +135,17 @@ Enables Audience Manager [!UICONTROL cookie destinations], which allows the sett
 | -------- | ------------ | ----------------- |
 | Boolean  | No           | `true`            |
 
-Enables Audience Manager [!UICONTROL URL destinations], which allows the firing of URLs based on segment qualification.
+Enables [!DNL Audience Manager] [!UICONTROL URL destinations], which allows the firing of URLs based on segment qualification.
 
 ## Identity options
 
-### `idSyncContainerId`
+### `idMigrationEnabled`
 
 | **Type** | **Required** | **Default Value** |
 | -------- | ------------ | ----------------- |
-| Number   | No           | none              |
+| Boolean  | No           | true              |
 
-The container ID that specifies which ID syncs are fired. This is a non-negative integer that can be obtained from your consultant.
-
-### `idSyncEnabled`
-
-| **Type** | **Required** | **Default Value** |
-| -------- | ------------ | ----------------- |
-| Boolean  | No           | `true`            |
-
-Enables the ID sync feature, which allows the firing of URLs to synchronize the Adobe unique user ID with the unique user ID of a third-party data source.
+If true, the SDK will read and set old AMCV cookies. This helps with transitioning to using the AEP Web SDK while some parts of the site may still be using Visitor.js. Additionally, if Visitor API is defined on the page, the SDK will query Visitor API for the ECID. This enables you to dual tag pages with the AEP Web SDK and still have the same ECID.
 
 ### `thirdPartyCookiesEnabled`
 

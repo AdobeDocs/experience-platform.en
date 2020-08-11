@@ -7,14 +7,20 @@ seo-description: Learn how to install the Experience Platform Web SDK
 
 # Installing the SDK {#installing-the-sdk}
 
-The Adobe Experience Platform Web SDK is available on a content delivery network (CDN) for you to use. You can reference this file or download it and host it on your own infrastructure. It is available in a minified and non-minified version. The non-minified version is helpful for debugging purposes. 
+The preferred way to use the Adobe Experience Platform Web SDK is via [Launch](http://launch.adobe.com/). Search for the `AEP Web SDK` in the extensions catalog, install then configure the extension.
 
-* Minified version: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
-* Non-minified version: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
+The AEP web SDK is also available on a CDN for you to use. You can reference this file or download it and host it on your own infrastructure. It is available in a minified and non-minified version. The non-minified version is helpful for debugging purposes.
+
+URL structure: https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js OR alloy.js for the non-minified version.
+
+For example:
+
+* Minified: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
+* Un-minified: [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
 
 ## Adding the Code {#adding-the-code}
 
-The first step in implementing the Adobe Experience Platform Web SDK is to copy and paste the following "base code" as high as possible in the `<head>` tag of your HTML:
+The first step in implementing the Adobe Experience Platform [!DNL Web SDK] is to copy and paste the following "base code" as high as possible in the `<head>` tag of your HTML:
 
 ```markup
 <script>
@@ -47,11 +53,11 @@ This base code, in addition to creating a global function, also loads additional
 
 ## Supporting Internet Explorer {#support-internet-explore}
 
-This SDK makes use of promises, which is a method of communicating the completion of asynchronous tasks. The [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) implementation used by the SDK is natively supported by all target browsers except Internet Explorer. To use the SDK on Internet Explorer, you need to have `window.Promise` [polyfilled](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+This SDK makes use of promises, which is a method of communicating the completion of asynchronous tasks. The [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) implementation used by the SDK is natively supported by all target browsers except [!DNL Internet Explorer]. To use the SDK on [!DNL Internet Explorer], you need to have `window.Promise` [polyfilled](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
 To determine if you already have `window.Promise` polyfilled:
 
-1. Open your website in Internet Explorer.
+1. Open your website in [!DNL Internet Explorer].
 1. Open the browser's debugging console.
 1. Type `window.Promise` into the console, then press Enter. 
 
@@ -64,6 +70,10 @@ If you've determined you need to polyfill `window.Promise`, include the followin
 ```
 
 This loads a script that ensures that `window.Promise` is a valid Promise implementation.
+
+>[!NOTE]
+>
+>If you choose to load a different Promise implementation, be sure it supports `Promise.prototype.finally`.
 
 ## Loading the JavaScript file synchronously {#loading-javascript-synchronously}
 

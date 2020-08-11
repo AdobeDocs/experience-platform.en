@@ -111,7 +111,7 @@ Many PATCH operations in [!DNL Platform] APIs use [JSON Pointer](https://tools.i
 
 ## Can I use Postman to make calls to [!DNL Platform] APIs? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
-[Postman](https://www.getpostman.com/) is a useful tool for visualizing calls to RESTful APIs. This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) describes how you can set up Postman to automatically perform authentication and use it to consume [!DNL Experience Platform] APIs.
+[Postman](https://www.postman.com/) is a useful tool for visualizing calls to RESTful APIs. This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) describes how you can set up Postman to automatically perform authentication and use it to consume [!DNL Experience Platform] APIs.
 
 ## What are the system requirements for [!DNL Platform]? {#what-are-the-system-requirements-for-platform}
 
@@ -241,6 +241,6 @@ The following is a list of troubleshooting guides and API reference documentatio
 |Experience Data Model (XDM) | [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [XDM System FAQ and troubleshooting guide](../xdm/troubleshooting-guide.md)|
 |Identity Service | [Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [Identity Service troubleshooting guide](../identity-service/troubleshooting-guide.md)|
 |Query Service | [Query Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [Query Service troubleshooting guide](../query-service/troubleshooting-guide.md)|
-|Real-time Customer Profile | [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)||
+|Real-time Customer Profile | [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)| [Profile troubleshooting guide](../profile/troubleshooting.md) |
 |Sandboxes | [Sandbox API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [Sandboxes troubleshooting guide](../sandboxes/troubleshooting-guide.md)|
 | Segmentation | [Segmentation API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |

@@ -7,6 +7,9 @@ user-guide-title: Adobe Experience Platform Data Access
 # Adobe Experience Platform Data Access {#data-access}
 
 - [Data Access overview](home.md)
+- [Data Access API](api.md)
 - Tutorials {#tutorials}
   - [Access dataset data](tutorials/dataset-data.md)
+  - [Python SDK](tutorials/python-sdk.md)
+  - [Spark SDK](tutorials/spark-sdk.md)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
