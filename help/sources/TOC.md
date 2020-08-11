@@ -20,13 +20,15 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [Google AdWords connector](connectors/advertising/ads.md)
   - Cloud storage {#cloud-storage}
     - [Amazon Kinesis connector](connectors/cloud-storage/kinesis.md)
+    - [Amazon S3 connector](connectors/cloud-storage/s3.md)
     - [Apache HDFS connector](connectors/cloud-storage/hdfs.md)
     - [Azure Data Lake Storage Gen2 connector](connectors/cloud-storage/adls-gen2.md)
-    - [Azure Blob and Amazon S3 connector](connectors/cloud-storage/blob-s3.md)
+    - [Azure Blob connector](connectors/cloud-storage/blob.md)
     - [Azure Event Hubs connector](connectors/cloud-storage/eventhub.md)
     - [Azure File Storage connector](connectors/cloud-storage/azure-file-storage.md)
     - [FTP and SFTP connector](connectors/cloud-storage/ftp-sftp.md)
     - [Google Cloud Storage connector](connectors/cloud-storage/google-cloud-storage.md)
+    - [Amazon S3 and Azure Blob connector](connectors/cloud-storage/blob-s3.md)
   - CRM {#crm}
     - [Microsoft Dynamics connector](connectors/crm/ms-dynamics.md)
     - [Salesforce connector](connectors/crm/salesforce.md)
@@ -132,13 +134,15 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Google AdWords connector](tutorials/ui/create/advertising/ads.md)
     - Cloud storage {#cloud-storage}
       - [Amazon Kinesis connector](tutorials/ui/create/cloud-storage/kinesis.md)
+      - [Amazon S3 connector](tutorials/ui/create/cloud-storage/s3.md)
       - [Apache HDFS connector](tutorials/ui/create/cloud-storage/hdfs.md)
       - [Azure Data Lake Storage Gen2 connector](tutorials/ui/create/cloud-storage/adls-gen2.md)
-      - [Azure Blob and Amazon S3 connector](tutorials/ui/create/cloud-storage/blob-s3.md)
+      - [Azure Blob connector](tutorials/ui/create/cloud-storage/blob.md)
       - [Azure Event Hubs connector](tutorials/ui/create/cloud-storage/eventhub.md)
       - [Azure File Storage connector](tutorials/ui/create/cloud-storage/azure-file-storage.md)
       - [FTP and SFTP connector](tutorials/ui/create/cloud-storage/ftp-sftp.md)
       - [Google Cloud Storage connector](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+      - [Amazon S3 and Blob connector](tutorials/ui/create/cloud-storage/blob-s3.md)
     - CRM {#crm}
       - [Microsoft Dynamics connector](tutorials/ui/create/crm/dynamics.md)
       - [Salesforce connector](tutorials/ui/create/crm/salesforce.md)
