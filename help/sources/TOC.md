@@ -28,6 +28,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [Azure File Storage connector](connectors/cloud-storage/azure-file-storage.md)
     - [FTP and SFTP connector](connectors/cloud-storage/ftp-sftp.md)
     - [Google Cloud Storage connector](connectors/cloud-storage/google-cloud-storage.md)
+    - [Amazon S3 and Azure Blob connector](connectors/cloud-storage/blob-s3.md)
   - CRM {#crm}
     - [Microsoft Dynamics connector](connectors/crm/ms-dynamics.md)
     - [Salesforce connector](connectors/crm/salesforce.md)
@@ -141,6 +142,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Azure File Storage connector](tutorials/ui/create/cloud-storage/azure-file-storage.md)
       - [FTP and SFTP connector](tutorials/ui/create/cloud-storage/ftp-sftp.md)
       - [Google Cloud Storage connector](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+      - [Amazon S3 and Blob connector](tutorials/ui/create/cloud-storage/blob-s3.md)
     - CRM {#crm}
       - [Microsoft Dynamics connector](tutorials/ui/create/crm/dynamics.md)
       - [Salesforce connector](tutorials/ui/create/crm/salesforce.md)
