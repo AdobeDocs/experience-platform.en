@@ -10,39 +10,9 @@ author: crhoades, ens28527
 
 **Release date: August 12, 2020**
 
-New features in Adobe Experience Platform:
+Updates to existing features in Adobe Experience Platform:
 
-- [!DNL Access control](#access-control)
-- [!DNL Sandboxes](#sandboxes)
 - [!DNL Sources](#sources)
-
-## [!DNL Access control] {#access-control}
-
-[!DNL Experience Platform] leverages [Adobe Admin Console](https://adminconsole.adobe.com) product profiles to link users with permissions and sandboxes. Permissions control access to a variety of Platform capabilities, including data modeling, profile management, and sandbox administration.
-
-**Key features**
-
-|Feature | Description|
-|--- | ---|
-|Permissions | In the [!DNL Admin Console], the  tab within a [!DNL Platform] product profile allows you customize which [!DNL Platform] capabilities are available for the users attached to that profile. Available permission categories include: [!UICONTROL Data Modeling], [!UICONTROL Data Management], [!UICONTROL Profile Management], [!UICONTROL Identities], [!UICONTROL Data Monitoring], [!UICONTROL Sandbox Administration], [!UICONTROL Destinations], [!UICONTROL Sources].|
-|Access to sandboxes | The [!UICONTROL _Permissions_] tab within a [!DNL Platform] product profile can grant users access to specific sandboxes. See the section on [sandboxes](#sandboxes) below for more information.|
-
-For more information, please see the [access control overview](../../access-control/home.md).
-
-## [!DNL Sandboxes] {#sandboxes}
-
-[!DNL Experience Platform] is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance. In order to address this need, [!DNL Experience Platform] provides sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
-
-**Key features**
-
-|Feature | Description|
-|--- | ---|
-|Production sandbox | [!DNL Experience Platform] provides a single production sandbox, which cannot be deleted or reset.|
-|Non-production sandboxes | Multiple non-production sandboxes can be created for a single [!DNL Platform] instance, allowing you to test features, run experiments, and make custom configurations without impacting your production sandbox.|
-|Sandbox switcher | In the [!DNL Experience Platform] user interface, the sandbox switcher in the top-left corner of the screen allows you to switch between available sandboxes through a dropdown menu.|
-|`x-sandbox-name` header | All calls to [!DNL Experience Platform] APIs must now include the new `x-sandbox-name` header, whose value references the `name` attribute of the sandbox the operation will take place in.|
-
-For more information, please see the [sandboxes overview](../../sandboxes/home.md).
 
 ## Sources {#sources}
 
@@ -54,14 +24,9 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 | Feature | Description |
 | ------- | ----------- |
-| API and UI support for flow run monitoring| Users can monitor all flow runs and see a detailed view of each run, including completion status, run duration, list of files processed, errors, and metrics. |
-| API and UI support for updating accounts | Users can update the credentials, name, and description of any existing account to provide more meaningful information and correct any errors that may have been created. |
-| Support for flow run notifications | Users can subscribe to events and register webhooks to receive real-time notifications on the status, metrics, and errors regarding flow runs. |
-
-**Updated features**
-
-| Feature | Description |
-| ------- | ----------- |
-| Sources catalog| Updates to sources catalog screen to allow for easier access to primary actions of selected objects. |
+| Flow run monitoring | Users can monitor all flow runs and see a detailed view of each run, including completion status, run duration, list of files processed, errors, and metrics. See the [monitoring dataflows](../../sources/tutorials/ui/monitor.md) document for more information. |
+| Account updating | Users can update the credentials, name, and description of any existing account to provide more meaningful information and correct any errors that may have been created. |
+| Flow run notifications | Users can subscribe to events and register webhooks to receive real-time notifications on the status, metrics, and errors regarding flow runs. |
+| UI catalog improvements | Updates to sources catalog screen to allow for easier access to primary actions of selected objects. |
 
 To learn more about sources, see the [sources overview](../../sources/home.md).
