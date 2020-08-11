@@ -165,36 +165,39 @@ When complete, the Loyalty object will contain fields for: Loyalty ID, Points, a
 
 ## Add 'enum' field to mixin {#enum}
 
-When defining fields in the Schema Editor, there are some additional options that you can apply to basic field types in order to provide further constraints on the data the field can contain. 
+When defining fields in the Schema Editor, there are some additional options that you can apply to basic field types in order to provide further constraints on the data the field can contain. The use cases for these constrains are explained in the following table:
 
-An example of this would be a "Loyalty Level" field, where the value can only be one of four possible options. To add this field to the schema, click **[!UICONTROL Add Field]** beside the "[!DNL loyalty]" object and fill in the required fields under **[!UICONTROL Field Properties]**. 
+| Constraint | Description |
+| --- | --- |
+| [!UICONTROL Required] | Indicates that the field is required for data ingestion. Any data uploaded to a dataset based on this schema that does not contain this field will fail upon ingestion. |
+| [!UICONTROL Array] | Indicates that the field contains an array of values, each with the data type specified. For example, using this constraint on a field with a data type of "[!UICONTROL String]" specifies that the field will contain an array of strings. |
+| [!UICONTROL Enum] | Indicates that this field must contain one of the values from an enumerated list of possible values.   |
+| [!UICONTROL Identity] | Indicates that this field is an identity field. More information regarding identity fields is provided [later in this tutorial](#identity-field). |
+| [!UICONTROL Relationship] | While schema relationships can be inferred through the use of the union schema and [!DNL Real-time Customer Profile], this only applies to schemas that share the same class. The [!UICONTROL Relationship] constraint indicates that this field references the primary identity of a schema based on a different class, implying a relationship between the two schemas. See the tutorial on [defining a relationship] |
 
-For **[!UICONTROL Type]**, select "[!UICONTROL String]" and you will see additional checkboxes appear for **[!UICONTROL Array]**, **[!UICONTROL Enum]**, and **[!UICONTROL Identity]**. 
+For this tutorial, the [!DNL "loyalty"] object in the schema requires a new enum field that describes the "loyalty level" of a customer, where the value can only be one of four possible options. To add this field to the schema, click **[!UICONTROL Add Field]** beside the "[!DNL loyalty]" object and fill in the required fields for **[!UICONTROL Field name]** and **[!UICONTROL Display name]**. For **[!UICONTROL Type]**, select "[!UICONTROL String]".
+
+![](../images/tutorials/create-schema/loyalty-level-type.png)
+
+Additional checkboxes appear for the field after its type has been selected, including checkboxes for **[!UICONTROL Array]**, **[!UICONTROL Enum]**, and **[!UICONTROL Identity]**. 
 
 Select the **[!UICONTROL Enum]** checkbox to open the **[!UICONTROL Enum Values]** section below. Here you can input the **[!UICONTROL Value]** (in camelCase) and **[!UICONTROL Label]** (an optional, reader-friendly name in Title Case) for each acceptable loyalty level.
 
-When you have completed all field properties, click **[!UICONTROL Apply]** and the "[!DNL loyaltyLevel]" field will be added to the "[!DNL loyalty]" object.
+When you have completed all field properties, click **[!UICONTROL Apply]** to add the "[!DNL loyaltyLevel]" field to the "[!DNL loyalty]" object.
 
 ![](../images/tutorials/create-schema/loyalty_level_enum.png)
 
-Additional field constraints include the following:
-
-* **[!UICONTROL Required]:** Indicates that the field is required for data ingestion. Any data uploaded to a dataset based on this schema that does not contain this field will fail upon ingestion.
-* **[!UICONTROL Array]:** Indicates that the field contains an array of values, each with the data type specified. For example, selecting a data type of "String" and checking the "Array" checkbox means that the field will contain an array of strings.
-* **[!UICONTROL Enum]:** Indicates that this field must contain one of the values from an enumerated list of possible values.  
-* **[!UICONTROL Identity]:** Indicates that this field is an identity field. More information regarding identity fields is provided [later in this tutorial](#identity-field).
-
 ## Convert a multi-field object into a data type {#datatype}
 
-After adding several loyalty-specific fields, the "[!DNL loyalty]" object now contains a common data structure that could be useful in other schemas. If a multi-field structure is reusable, and you would like to have the flexibility to use that same data structure elsewhere, the Schema Editor makes it possible to convert that structure into a data type. 
+The "[!DNL loyalty]" object now contains several loyalty-specific fields, and represents a common data structure that could be useful in other schemas. The Schema Editor allows you to readily apply reusable multi-field objects by converting the structure of those objects into data types. 
 
 Data types allow for the consistent use of multi-field structures and provide more flexibility than a mixin because they can be used anywhere within a schema. This is done by setting the **[!UICONTROL Type]** of a field in a mixin to that of any data type defined in the registry.
 
-To convert the "[!DNL loyalty]" object to a data type, click on the "[!DNL loyalty]" field under **[!UICONTROL Structure]** and select **[!UICONTROL Convert to new data type]** on the right-hand-side of the editor under **[!UICONTROL Field Properties]**. A green popover appears confirming "[!UICONTROL Object Converted to Data Type]". 
+To convert the "[!DNL loyalty]" object to a data type, select the "[!DNL loyalty]" field under **[!UICONTROL Structure]** and click **[!UICONTROL Convert to new data type]** on the right-hand-side of the editor under **[!UICONTROL Field Properties]**. A green popover appears, confirming that the object has been successfully converted. 
 
 ![](../images/tutorials/create-schema/convert-data-type.png)
 
-Now, when you look under **[!UICONTROL Structure]**, you can see that the "[!DNL loyalty]" field has a data type of "[!DNL Loyalty]" and the fields have small lock icons beside them indicating they are no longer individual fields, but rather part of a multi-field structure.
+Now, when you look under **[!UICONTROL Structure]**, you can see that the "[!DNL loyalty]" field has a data type of "[!DNL Loyalty]" and the fields have small lock icons beside them indicating they are no longer individual fields, but rather part of a multi-field data type.
 
 ![](../images/tutorials/create-schema/loyalty_data_type.png)
 
@@ -202,65 +205,61 @@ In a future schema, you could now assign a field the **[!UICONTROL Type]** of "[
 
 ## Set a schema field as an identity field {#identity-field}
 
-Schemas are used for ingesting data into [!DNL Experience Platform], and that data is ultimately used to identify individuals and stitch together information coming from multiple sources. To help with this process, key fields can be marked as "[!UICONTROL Identity]" fields. 
+Schemas are used for ingesting data into [!DNL Experience Platform], and that data is ultimately used to identify individuals and stitch together information coming from multiple sources. To facilitate this process, key fields must be marked as "[!UICONTROL Identity]" fields within applicable schemas. 
 
-[!DNL Experience Platform] makes it easy to denote an identity field through the use of an **[!UICONTROL Identity]** checkbox in the [!DNL Schema Editor].
+[!DNL Experience Platform] makes it easy to denote an identity field through the use of an **[!UICONTROL Identity]** checkbox in the Schema Editor. However, you must determine which field is the best candidate to use as an identity, based on the nature of your data.
 
-For example, there may be thousands of members of the loyalty program belonging to the same "level", but each member of the loyalty program has a unique "loyaltyId" (which in this instance is the individual member's email address). The fact that "loyaltyId" is a unique identifier for each member makes it a good candidate for an identity field, whereas "level" is not.
+For example, there may be thousands of loyalty program members belonging to the same "loyalty level", but each member of the loyalty program has a unique "[!DNL loyaltyId]" (which in this instance is the individual member's email address). The fact that "[!DNL loyaltyId]" is a unique identifier for each member makes it a good candidate for an identity field, whereas "loyalty level" is not.
 
-In the *[!UICONTROL Structure]* section of the editor, click on the "[!DNL loyaltyId]" field that you created and you will see the **[!UICONTROL Identity]** checkbox appear under *[!UICONTROL Field Properties]*. Check the box and you will have the option to set this as the **[!UICONTROL Primary Identity]**. Check that box as well. 
+In the **[!UICONTROL Structure]** section of the editor, click on the "[!DNL loyaltyId]" field and the **[!UICONTROL Identity]** checkbox appears under **[!UICONTROL Field Properties]**. Check the box and the option to set this as the **[!UICONTROL Primary Identity]** appears. Select this box as well. 
 
-Next, you must provide an **[!UICONTROL Identity Namepsace]**. There are several pre-defined namespaces, but since the "[!DNL loyaltyId]" is the member's email address, select "Email" from the dropdown list. You can now click **[!UICONTROL Apply]** to confirm the updates to the "[!DNL loyaltyId]" field.
-
-Now all data ingested into the "[!DNL loyaltyId]" field will be used to help identify that individual and stitch together a single view of that customer.
+Next, you must provide an **[!UICONTROL Identity Namespace]** from the list of pre-defined namespaces in the dropdown. Since "[!DNL loyaltyId]" is the customer's email address, select "[!UICONTROL Email]" from the dropdown. Click **[!UICONTROL Apply]** to confirm the updates to the "[!DNL loyaltyId]" field.
 
 ![](../images/tutorials/create-schema/loyaltyId_primary_identity.png)
+
+Now all data ingested into the "[!DNL loyaltyId]" field will be used to help identify that individual and stitch together a single view of that customer.
 
 >[!NOTE]
 >
 >Once a schema field has been set as the primary identity, you will receive an error message if you later attempt to set another field in the schema as the primary. Each schema may contain only one primary identity field.
 
-To learn more about working with identities, please review the [!DNL Identity Service](../../identity-service/home.md) documentation.
-
-<!-- ## Relationship
-
-Schemas define a static view of a concept, but do not provide specific details on how data based on these schemas (datasets, etc) may relate to one another. Adobe Experience Platform allows you to describe these relationships through the **Relationship** checkbox in the schema editor. 
-
-In order to define a relationship, click on the field and check the **Relationship** checkbox on the right-side of the canvas. 
-
-![](../images/tutorials/create-schema/relationship.png)
-
-More information about relationships and other schema metadata can be found in the [Schema Registry API Developer Guide](../schema_registry_developer_guide.md). -->
+To learn more about working with identities in [!DNL Experience Platform], please review the [!DNL Identity Service](../../identity-service/home.md) documentation.
 
 ## Enable the schema for use in [!DNL Real-time Customer Profile] {#profile}
 
-The Schema Editor provides the ability to enable a schema for use with [!DNL Real-time Customer Profile](../../profile/home.md). [!DNL Profile] provides a holistic view of each individual customer by building a robust, 360&deg; profile of customer attributes as well as a timestamped account of every interaction that customer has had across any system integrated with [!DNL Experience Platform]. 
+[!DNL Real-time Customer Profile](../../profile/home.md) leverages identity data in [!DNL Experience Platform] to provide a holistic view of each individual customer. The service builds robust, 360&deg; profiles of customer attributes as well as timestamped accounts of every interaction customers have had across any system integrated with [!DNL Experience Platform]. 
 
-In order for a schema to be enabled for use with [!DNL Real-time Customer Profile], it must have a primary identity defined. You will receive a "Missing Primary Identity" error message if you attempt to enable a schema without first defining a primary identity.
+In order for a schema to be enabled for use with [!DNL Real-time Customer Profile], it must have a primary identity defined. You will receive an error message if you attempt to enable a schema without first defining a primary identity.
 
 <img src="../images/tutorials/create-schema/missing_primary_identity.png" width=600 /><br>
 
-To enable the "Loyalty Members" schema for use in [!DNL Profile], begin by clicking on "[!DNL Loyalty Members]" in the *Structure* section of the editor. 
+To enable the "Loyalty Members" schema for use in [!DNL Profile], begin by clicking on "[!DNL Loyalty Members]" in the **[!UICONTROL Structure]** section of the editor. 
 
-On the right-hand side of the editor, under *Schema Properties*, information is shown about the schema including its display name, description, and type. In addition to this information, there is a toggle button entitled **[!UICONTROL Profile]**.
+On the right-hand side of the editor, information is shown about the schema including its display name, description, and type. In addition to this information, there is a **[!UICONTROL Profile]** toggle button.
 
 ![](../images/tutorials/create-schema/profile-toggle.png)
 
-Click **[!UICONTROL Profile]** and a pop-up appears, asking you to confirm that you wish to enable the schema for [!DNL Profile]. 
+Click **[!UICONTROL Profile]** and a popover appears, asking you to confirm that you wish to enable the schema for [!DNL Profile]. 
 
 ![](../images/tutorials/create-schema/enable-profile.png)
 
->[!NOTE]
+>[!WARNING]
 >
 >Once a schema has been enabled for [!DNL Real-time Customer Profile] and saved, it cannot be disabled.
 
+Select **[!UICONTROL Enable]** to confirm your choice. You can select the **[!UICONTROL Profile]** toggle again to disable the schema if you wish, but once the schema has been saved while [!DNL Profile] is enabled, it can no longer be disabled.
+
 ## Next steps and additional resources
 
-Now that you have finished composing a "[!UICONTROL Loyalty Members]" schema, you can see the complete schema in the *Structure* section of the editor. Click **[!UICONTROL Save]** and the schema will be saved to the [!DNL Schema Library], making it accessible by the [!DNL Schema Registry].
+Now that you have finished composing a "Loyalty Members" schema, you can see the complete schema in the canvas. Click **[!UICONTROL Save]** and the schema will be saved to the [!DNL Schema Library], making it accessible by the [!DNL Schema Registry].
 
-Your new schema is now able to be used to ingest data into [!DNL Platform]. Remember that once the schema has been used to ingest data, only additive changes may be made. See the [basics of schema composition](../schema/composition.md) for more information on schema versioning.
+Your new schema can now be used to ingest data into [!DNL Platform]. Remember that once the schema has been used to ingest data, only additive changes may be made. See the [basics of schema composition](../schema/composition.md) for more information on schema versioning.
 
-The "[!UICONTROL Loyalty Members]" schema is also available to be viewed and managed using the [!DNL Schema Registry] API. To begin working with the API, start by reading the [Schema Registry API developer guide](../api/getting-started.md).
+You can now follow the tutorial on [defining a schema relationship in the UI](./relationship-ui.md) to add a new relationship field to the "Loyalty Members" schema.
+
+The "Loyalty Members" schema is also available to be viewed and managed using the [!DNL Schema Registry] API. To begin working with the API, start by reading the [Schema Registry API developer guide](../api/getting-started.md).
+
+### Video resources
 
 >[!WARNING]
 >
@@ -276,7 +275,7 @@ The following video is intended to reinforce your understanding of working with 
 
 ## Appendix
 
-The following information is supplemental to the Schema Editor Tutorial.
+The following sections provide addition information information regarding the use of the Schema Editor.
 
 ### Create a new class {#create-new-class}
 
