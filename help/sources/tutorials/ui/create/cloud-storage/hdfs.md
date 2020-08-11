@@ -39,7 +39,7 @@ Log in to [Adobe Experience Platform](https://platform.adobe.com) and then selec
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the *[!UICONTROL Cloud storage]* category, select **[!UICONTROL Apache HDFS]** click **on the + icon (+)** to create a new HDFS connector.
+Under the *[!UICONTROL Cloud storage]* category, select **[!UICONTROL Apache HDFS]** followed by **[!UICONTROL Add data]** to create a new HDFS connector.
 
 ![catalog](../../../../images/tutorials/create/hdfs/catalog.png)
 
