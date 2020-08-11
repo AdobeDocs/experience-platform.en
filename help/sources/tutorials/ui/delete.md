@@ -27,16 +27,16 @@ Select **[!UICONTROL Dataflows]** to access the *[!UICONTROL Dataflows]* page.
 
 ![dataset-flow-activity](../../images/tutorials/delete/dataflows.png)
 
-A list of existing dataflows appears. On this page is a list of sortable information regarding existing dataflows, including source, username, run status, and last run date. Select the funnel icon on the top left to sort.
+A list of existing dataflows appears. On this page is a list of sortable information for existing dataflows such as source, username, run status, and last run date. Select the **funnel icon** on the top left to sort.
 
 ![dataflows-list](../../images/tutorials/delete/dataflows-list.png)
 
 The sorting panel appears on the left side of the screen, containing a list of available sources.
 You can select more than one source using the sorting function.
 
-Select the source you wish to access and locate the dataflow you intend to delete from the list of dataflows in the main interface. When selecting multiple sources from the sorting panel, your most recently created dataflows appear first because the list is sorted by created date.
+Select the source you wish to access and locate the dataflow you intend to delete from the list of dataflows in the main interface. In the example, the source selected is **Azure Blob Storage** and the dataflow name is **Customer profiles dataflow**. When selecting multiple sources from the sorting panel, your most recently created dataflows appear first because the list is sorted by created date.
 
-Select the *[!UICONTROL Dataflow]* you intend to delete.
+Select the dataflow you intend to delete.
 
 ![dataflows-sort](../../images/tutorials/delete/dataflows-sort.png)
 

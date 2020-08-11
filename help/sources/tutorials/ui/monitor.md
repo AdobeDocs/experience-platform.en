@@ -55,15 +55,15 @@ The sorting panel appears. Select the source you wish to access from the scroll 
 
 ![sort-dataflows](../../images/tutorials/monitor/dataflows-sort.png)
 
-The *[!UICONTROL Dataflow activity]* page contains details on number of records ingested and records failed, as well as information regarding dataflow status and processing time. Select the calendar icon above the dataflow to adjust the time frame of your ingestion records.
+The *[!UICONTROL Dataflow activity]* page contains details on the number of records ingested  and records failed, as well as information regarding dataflow status and processing time. Select the calendar icon above the dataflow to adjust the time frame of your ingestion records.
 
 ![datflow-activity](../../images/tutorials/monitor/dataflow-activity.png)
 
-The calendar allows you to view different time frames of records ingested. You can select from the pre-set of options of *[!UICONTROL Last 7 days]* or *[!UICONTROL Last 30 days]*. Alternatively, you can set a custom time frame using the calendar. Select your time frame of choice and select **[!UICONTROL Apply]** to continue.
+The calendar allows you to view the different time frames for ingested records. You can choose to select one of the two pre-set options *[!UICONTROL Last 7 days]* or *[!UICONTROL Last 30 days]*. Alternatively, you can set a custom time frame using the calendar. Select your time frame of choice and select **[!UICONTROL Apply]** to continue.
 
 ![flow-calendar](../../images/tutorials/monitor/flow-calendar.png)
 
-By default, the *[!UICONTROL Dataflow activity]* displays the *[!UICONTROL Properties]* panel associated with the dataflow. Select the the flow run from the list to see its associated meta data, including information about its unique run ID.
+By default, the *[!UICONTROL Dataflow activity]* displays the *[!UICONTROL Properties]* panel associated with the dataflow. Select the flow run from the list to see its associated meta data, including information about its unique run ID.
 
 Select **[!UICONTROL Dataflow run start]** to access the *[!UICONTROL Dataflow run overview]*.
 
@@ -73,7 +73,7 @@ The *[!UICONTROL Dataflow run overview]* displays information on the dataflow in
 
 ![dataflow-run-overview](../../images/tutorials/monitor/dataflow-run-overview.png)
 
-Refer to the following table for *[!UICONTROL error codes]*that can be seen in the *[!UICONTROL Error summary]*.
+Refer to the following table for error codes that can be seen in the *[!UICONTROL Error summary]*.
 
 | Error code | Error Message |
 | ---------- | ----------- |
@@ -97,7 +97,7 @@ This section also includes a preview of the column that contains the error.
 
 ![Preview-error-diagnostics](../../images/tutorials/monitor/preview-error-diagnostics.png)
 
-After previewing the errors, you can select **[!UICONTROL Error diagnostics Download]** to access full error diagnostics and download the file manifest. See the documents on [error diagnostics](../../../ingestion/batch-ingestion/partial.md#retrieve-errors) and [downloading metadata](../../../ingestion/batch-ingestion/partial.md#download-metadata) for more information.
+After previewing the errors, you can select **[!UICONTROL Download]** from within the *[UICONTROL dataflow runs overview]* panel to access full error diagnostics and download the file manifest. See the documents on [error diagnostics](../../../ingestion/batch-ingestion/partial.md#retrieve-errors) and [downloading metadata](../../../ingestion/batch-ingestion/partial.md#download-metadata) for more information.
 
 ![Preview-error-diagnostics](../../images/tutorials/monitor/download.png)
 
