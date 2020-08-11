@@ -12,8 +12,8 @@ author: crhoades, ens28527
 
 The latest release notes for Experience Platform
 
-- [!DNL Data Science Workspace](#dsw)
-- [!DNL Sources](#sources)
+- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Sources]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
 
