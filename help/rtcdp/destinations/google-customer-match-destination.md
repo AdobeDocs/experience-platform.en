@@ -91,7 +91,7 @@ If you select to hash the email addresses yourself, make sure to comply with Goo
 
 ## Connect to destination {#connect-destination}
 
-1. In **[!UICONTROL Destinations > Catalog]**, scroll to the **[!UICONTROL Advertising]** category. Select [!DNL Google Customer Match], then select **[!UICONTROL Connect destination]**.
+1. In **[!UICONTROL Destinations > Catalog]**, scroll to the **[!UICONTROL Advertising]** category. Select [!DNL Google Customer Match], then select **[!UICONTROL Configure]**.
 
     ![Connect to Google Customer Match destination](/help/rtcdp/destinations/assets/connect-google-customer-match.png)
 
