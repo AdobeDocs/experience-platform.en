@@ -89,7 +89,9 @@ Select **[!UICONTROL Load incremental data by]** to assign the delta column. Thi
 
 To set up one-time ingestion, select the frequency drop down arrow and select **[!UICONTROL Once]**.
 
->[!TIP] **[!UICONTROL Interval]** and **[!UICONTROL Backfill]** are not visible during a one-time ingestion.
+>[!TIP]
+>
+>**[!UICONTROL Interval]** and **[!UICONTROL Backfill]** are not visible during a one-time ingestion.
 
 Once you have provided appropriate values to the schedule, select **[!UICONTROL Next]**.
 

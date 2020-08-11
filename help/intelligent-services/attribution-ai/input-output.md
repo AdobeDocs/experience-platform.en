@@ -94,7 +94,7 @@ In the examples below, a sample CSV output was used for illustration purposes. H
 
 Attribution AI outputs attribution scores in the most granular level possible so that you can slice and dice the scores by any score column. To view these scores in the UI, read the section on [viewing raw score paths](#raw-score-path). To download the scores using the API visit the [downloading scores in Attribution AI](./download-scores.md) document.
 
->[!NOTE] 
+>[!NOTE]
 >
 > You are able to see any desired reporting column from the input dataset in the score output dataset only if either of the following are true:
 > - The reporting column is included in the configuration page either as part of touchpoint or conversion definition configuration.

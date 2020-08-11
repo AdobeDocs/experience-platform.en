@@ -108,7 +108,9 @@ Provide values for the schedule and select **[!UICONTROL Next]**.
 
 To set up one-time ingestion, select the frequency drop down arrow and select **[!UICONTROL Once]**. You can continue to make edits to a dataflow set for a one-time frequency ingestion, so long as the start time remains in the future. Once the start time has passed, the one-time frequency value can no longer be edited.
 
->[!TIP] **[!UICONTROL Interval]** and **[!UICONTROL Backfill]** are not visible during a one-time ingestion.
+>[!TIP]
+>
+>**[!UICONTROL Interval]** and **[!UICONTROL Backfill]** are not visible during a one-time ingestion.
 
 Once you have provided appropriate values to the schedule, select **[!UICONTROL Next]**.
 

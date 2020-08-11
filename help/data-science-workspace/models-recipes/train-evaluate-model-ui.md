@@ -29,9 +29,12 @@ This tutorial requires an existing Recipe. If you do not have a Recipe, follow t
 ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
 4. Provide a name for the Model and review the default Model configurations. Default configurations were applied during Recipe creation, review and modify the configuration values by double-clicking the values. To provide a new set of configurations, click **[!UICONTROL Upload New Config]** and drag a JSON file containing Model configurations into the browser window. Click **[!UICONTROL Finish]** to create the Model.
-    >[!NOTE]Configurations are unique and specific to their intended Recipe, this means that configurations for the Retail Sales Recipe will not work for the Product Recommendations Recipe. See the [reference](#reference) section for a list of Retail Sales Recipe configurations.
 
-    ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
+   >[!NOTE]
+   >
+   >Configurations are unique and specific to their intended Recipe, this means that configurations for the Retail Sales Recipe will not work for the Product Recommendations Recipe. See the [reference](#reference) section for a list of Retail Sales Recipe configurations.
+
+   ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
 ## Create a training Run
 
@@ -48,9 +51,12 @@ This tutorial requires an existing Recipe. If you do not have a Recipe, follow t
 ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 5. Default configurations provided during the Model's creation are shown, change and modify these accordingly by double-clicking the values. Click **[!UICONTROL Finish]** to create and execute the training run.
-    >[!NOTE]Configurations are unique and specific to their intended Recipe, this means that configurations for the Retail Sales Recipe will not work for the Product Recommendations Recipe. See the [reference](#reference) section for a list of Retail Sales Recipe configurations.
 
-    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
+   >[!NOTE]
+   >
+   >Configurations are unique and specific to their intended Recipe, this means that configurations for the Retail Sales Recipe will not work for the Product Recommendations Recipe. See the [reference](#reference) section for a list of Retail Sales Recipe configurations.
+
+   ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 ## Evaluate the Model
 
