@@ -223,4 +223,4 @@ The following JSON payload includes information that pertain to a failed flow ru
 ]
 ```
 
-> [!NOTE] If partial ingestion is enabled during the flow creation process, a flow that contains both successful and failed ingestions will be marked as `sources_flow_run_success`. Errors will still be included as part of the return payload.
+> [!IMPORTANT] If partial ingestion is enabled during the flow creation process, a flow that contains both successful and failed ingestions will be marked as `sources_flow_run_success` only if the number of errors is below the error threshold percentage set during the flow creation process. If a successful flow run contains errors, these errors will still be included as part of the return payload.
