@@ -26,7 +26,7 @@ The Adobe Real-time CDP user interface provides a number of search and filter op
 
 ![destinations filtering and search demo](/help/rtcdp/destinations/assets/destinations-search-and-filter.gif)
 
-The destination cards contain either a [!UICONTROL Configure] or an [!UICONTROL Activate] control, and a secondary control that brings up more options. These are all described below:
+The destination cards contain either a **[!UICONTROL Configure]** or an **[!UICONTROL Activate]** control, and a secondary control that brings up more options. These are all described below:
 
 Control | Description 
 ---------|----------
@@ -38,7 +38,7 @@ Control | Description
 
 ![Controls on the destinations card](/help/rtcdp/destinations/assets/destination-card-options.png)
 
-Select a destination card in the catalog to open the right rail.  Here, you can see a description of the destination. The right rail provides the same controls described in the table above.
+Select a destination card in the catalog to open the right rail.  Here, you can see a description of the destination. The right rail provides the same controls described in the table above, as well as a description of the destination, and an indication of the destination category and type.
 
 ![Destination catalog options](/help/rtcdp/destinations/assets/destination-right-rail.png)
 
