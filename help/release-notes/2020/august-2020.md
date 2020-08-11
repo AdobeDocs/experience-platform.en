@@ -54,8 +54,14 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 | Feature | Description |
 | ------- | ----------- |
-| API and UI support for monitoring flow runs | Users can monitor flow runs for updates on status, metrics, and errors through APIs or using the UI. |
-| API and UI support for updating accounts |
-| Support for flow notifications | Users can subscribe to events and register webhooks to receive real-time notifications on the status, metrics, and errors regarding flow runs. |
+| API and UI support for flow run monitoring| Users can monitor all flow runs and see a detailed view of each run, including completion status, run duration, list of files processed, errors, and metrics. |
+| API and UI support for updating accounts | Users can update the credentials, name, and description of any existing account to provide more meaningful information and correct any errors that may have been created. |
+| Support for flow run notifications | Users can subscribe to events and register webhooks to receive real-time notifications on the status, metrics, and errors regarding flow runs. |
+
+**Updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Sources catalog| Updates to sources catalog screen to allow for easier access to primary actions of selected objects. |
 
 To learn more about sources, see the [sources overview](../../sources/home.md).
