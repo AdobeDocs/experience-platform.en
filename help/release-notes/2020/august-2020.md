@@ -23,7 +23,7 @@ Updates to existing features in Adobe Experience Platform:
 
 | Feature | Description |
 | ------- | ----------- |
-| [!DNL JupyterLab] | Improved the stability of long-running [!DNL JupyterLab notebook] virtual machines. |
+| VM improvements in [!DNL JupyterLab] | Improved the stability of long-running [!DNL JupyterLab notebook] virtual machines. |
 
 For more information on [!DNL JupyterLab], please see the [[!DNL JupyterLab] user guide](../../data-science-workspace/jupyterlab/overview.md).
 
