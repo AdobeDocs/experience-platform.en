@@ -45,6 +45,10 @@ curl -X GET \
 
 The response includes the details for the last successful sample job that was run for the IMS organization. 
 
+>[!NOTE]
+>
+>In this example response, `numRowsToRead` and `totalRows` are equal to each other. Depending on the number of profiles your organization has in Experience Platform this may be the case. However, generally these two numbers are different, with `numRowsToRead` being the smaller number because it represents the sample as a subset of the total number of profiles (`totalRows`).
+
 ```json
 {
   "numRowsToRead": "41003",
@@ -87,6 +91,7 @@ GET /previewsamplestatus/report/dataset?{QUERY_PARAMETERS}
 ```
 
 |Parameter|Description|
+|---|---|
 |`date`| Specify the date of the report to be returned. If multiple reports were run on the date, the most recent report for that date will be returned. If a report does not exist for the specified date, a 404 error will be returned. If no date is specified, the most recent report will be returned. Format: YYYY-MM-DD. Example: `date=2024-12-31`|
 
 **Request**
@@ -185,6 +190,7 @@ GET /previewsamplestatus/report/namespace?{QUERY_PARAMETERS}
 ```
 
 |Parameter|Description|
+|---|---|
 |`date`| Specify the date of the report to be returned. If multiple reports were run on the date, the most recent report for that date will be returned. If a report does not exist for the specified date, a 404 error will be returned. If no date is specified, the most recent report will be returned. Format: YYYY-MM-DD. Example: `date=2024-12-31`|
 
 **Request**
