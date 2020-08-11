@@ -83,7 +83,7 @@ The returning payload also contains information about your flow run's `metrics` 
 | `Size` | Defines the volume of the data in bytes. |
 | `File` | Defines the file count of the data. |
 | `Record` | Defines the record count of the data. |
-| `Status` | Defines whether the flow run is a success or a failure.
+| `Status` | Defines whether the flow run is a success or a failure. |
 
 ```json
 {
