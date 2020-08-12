@@ -662,7 +662,7 @@ curl -X POST \
 | -------- | ----------- |
 | `flowSpec.id` | The [flow spec ID](#specs) retrieved in the previous step. |
 | `sourceConnectionIds` | The [source connection ID](#source) retrieved in an earlier step. |
-| `targetConnectionIds` | The [target connection ID](#target) retrieved in an earlier step. |
+| `targetConnectionIds` | The [target connection ID](#target-connection) retrieved in an earlier step. |
 | `transformations.params.mappingId` | The [mapping ID](#mapping) retrieved in an earlier step.|
 | `transformations.params.deltaColum` | The designated column used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column. |
 | `transformations.params.mappingId`| The mapping ID associated with your database. |

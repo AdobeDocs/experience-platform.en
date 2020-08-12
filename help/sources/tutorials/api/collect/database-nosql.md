@@ -125,7 +125,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 }
 ```
 
-## Create a target XDM schema {#target}
+## Create a target XDM schema {#target-schema}
 
 In earlier steps, an ad-hoc XDM schema was created to structure the source data. In order for the source data to be used in [!DNL Platform], a target schema must also be created to structure the source data according to your needs. The target schema is then used to create a [!DNL Platform] dataset in which the source data is contained. This target XDM schema also extends the [!DNL XDM Individual Profile] class.
 
@@ -276,7 +276,7 @@ A successful response returns an array containing the ID of the newly created da
 ]
 ```
 
-## Create a target connection
+## Create a target connection {#target-connection}
 
 You now have the unique identifiers for a dataset base connection, a target schema, and a target dataset. Using these identifiers, you can create a target connection using the [!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API to specify the dataset that will contain the inbound source data.
 
@@ -618,7 +618,7 @@ curl -X POST \
 | -------- | ----------- |
 | `flowSpec.id` | The [flow spec ID](#specs) retrieved in the previous step. |
 | `sourceConnectionIds` | The [source connection ID](#source) retrieved in an earlier step. |
-| `targetConnectionIds` | The [target connection ID](#target) retrieved in an earlier step. |
+| `targetConnectionIds` | The [target connection ID](#target-connection) retrieved in an earlier step. |
 | `transformations.params.mappingId` | The [mapping ID](#mapping) retrieved in an earlier step.|
 | `transformations.params.deltaColum` | The designated column used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column. |
 | `transformations.params.mappingId`| The mapping ID associated with your database. |
