@@ -169,7 +169,7 @@ OneTrust.OnConsentChanged(function () {
 
       alloy("setConsent", {
         consent: [{
-          standard: "IAB",
+          standard: "IAB TCF",
           version: "2.0",
           value: tcString,
           gdprApplies
