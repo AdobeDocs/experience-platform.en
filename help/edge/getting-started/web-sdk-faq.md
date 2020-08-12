@@ -106,6 +106,10 @@ It depends. The Adobe Experience Platform Web SDK can be deployed in two differe
 
 In other words, if you decide to use the Adobe Experience Platform Web SDK for non-solution use cases, you can tag the site with `alloy.js` and move on as if it's a new solution. If you want to use it for Adobe Analytics, Target, or Audience Manager, or for application use cases, you might have to remove any of the legacy code on your page. 
 
+## Can I migrate the ECIDs when I start using Alloy so my website visitors don't start showing up as new visitors?
+
+Yes, the Adobe Experience Platform Web SDK provides an Identity Migration feature. Follow the instructions in [this document](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/identity.html#id-migration) for more details.
+
 ## How is the Web SDK different than Adobe Experience Platform Launch?
 
 * **Launch** is the device code manager. Use it to more easily deploy the code. It is free and powerful.
