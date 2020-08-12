@@ -16,10 +16,10 @@ Source connectors in Adobe Experience Platform provide the ability to ingest ext
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
--   [Experience Data Model (XDM) System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+-   [[!DNL Experience Data Model] (XDM) System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     -   [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
     -   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
--   [Real-time Customer Profile](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+-   [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 If you already have a [!DNL Kinesis] account, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/streaming/cloud-storage.md).
 
@@ -33,19 +33,19 @@ In order to authenticate your [!DNL Kinesis] source connector, you must provide 
 | `Secret access key` | The secret access key for your [!DNL Kinesis] account. |
 | `region` | The region of your AWS server. |
 
-For more information about these values, refer to [this Kinesis document](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html).
+For more information about these values, refer to [this [!DNL Kinesis] document](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html).
 
 ## Connect your [!DNL Kinesis] account
 
 Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Kinesis] account to [!DNL Platform].
 
-Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the *Sources* workspace. The *Catalog* tab displays a variety of sources for which can be connected to [!DNL Platform]. Each source shows the number of existing accounts associated to them.
+Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** tab displays a variety of sources for which can be connected to [!DNL Platform]. Each source shows the number of existing accounts associated to them.
 
-Under the *[!UICONTROL Cloud Storage]* category, select **[!UICONTROL Amazon Kinesis]** followed by **[!UICONTROL Add data]** to create a new [!DNL Kinesis] connector.
+Under the **[!UICONTROL Cloud Storage]** category, select **[!UICONTROL Amazon Kinesis]** followed by **[!UICONTROL Add data]** to create a new [!DNL Kinesis] connector.
 
 ![](../../../../images/tutorials/create/kinesis/catalog.png)
 
-The *[!UICONTROL Connect to Amazon Kinesis]* dialog appears. On this page, you can either use new credentials or existing credentials. 
+The **[!UICONTROL Connect to Amazon Kinesis]** dialog appears. On this page, you can either use new credentials or existing credentials. 
 
 ### New account
 

@@ -39,15 +39,15 @@ In order to access your FTP or SFTP server on [!DNL Platform], you must provide 
 
 Once you have gathered your required credentials, you can follow the steps below to create a new FTP or SFTP account to connect to [!DNL Platform].
 
-Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the *[!UICONTROL Sources]* workspace. The *[!UICONTROL Catalog]* screen displays a variety of sources for which you can create an inbound account with, and each source shows the number of existing accounts and dataflows associated with them.
+Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an inbound account with, and each source shows the number of existing accounts and dataflows associated with them.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the *[!UICONTROL Databases]* category, select **[!UICONTROL SFTP]** followed by **[!UICONTROL Add data]** to create a new FTP or SFTP connector.
+Under the **[!UICONTROL Databases]** category, select **[!UICONTROL SFTP]** followed by **[!UICONTROL Add data]** to create a new FTP or SFTP connector.
 
 ![catalog](../../../../images/tutorials/create/sftp/catalog.png)
 
-The *[!UICONTROL Connect to SFTP]* page appears. On this page, you can either use new credentials or existing credentials.
+The **[!UICONTROL Connect to SFTP]** page appears. On this page, you can either use new credentials or existing credentials.
 
 ### New account
 

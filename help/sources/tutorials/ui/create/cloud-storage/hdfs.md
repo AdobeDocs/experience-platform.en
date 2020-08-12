@@ -16,10 +16,10 @@ Source connectors in [!DNL Adobe Experience Platform] provide the ability to ing
 
 This tutorial requires a working understanding of the following components of [!DNL Platform]:
 
--   [Experience Data Model (XDM) System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+-   [[!DNL Experience Data Model] (XDM) System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     -   [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
     -   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
--   [Real-time Customer Profile](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+-   [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 If you already have an HDFS connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/batch/cloud-storage.md).
 
@@ -35,19 +35,19 @@ In order to authenticate your HDFS source connector, you must provide values for
 
 Once you have gathered your required credentials, you can follow the steps below to create a new HDFS account to connect to [!DNL Platform].
 
-Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the *[!UICONTROL Sources]* workspace. The *[!UICONTROL Catalog]* screen displays a variety of sources for which you can create an inbound account with, and each source shows the number of existing accounts and dataflows associated with them.
+Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an inbound account with, and each source shows the number of existing accounts and dataflows associated with them.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the *[!UICONTROL Cloud storage]* category, select **[!UICONTROL Apache HDFS]** followed by **[!UICONTROL Add data]** to create a new HDFS connector.
+Under the **[!UICONTROL Cloud storage]** category, select **[!UICONTROL Apache HDFS]** followed by **[!UICONTROL Add data]** to create a new HDFS connector.
 
 ![catalog](../../../../images/tutorials/create/hdfs/catalog.png)
 
-The *[!UICONTROL Connect to HDFS]* page appears. On this page, you can either use new credentials or existing credentials.
+The **[!UICONTROL Connect to HDFS]** page appears. On this page, you can either use new credentials or existing credentials.
 
 ### New account
 
-If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide the connection with a name, an optional description, and your File Storage credentials. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new account to establish.
+If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide the connection with a name, an optional description, and your HDFS credentials. When finished, select **[!UICONTROL Connect to source]** and then allow some time for the new account to establish.
 
 ![connect](../../../../images/tutorials/create/hdfs/new.png)
 

@@ -13,10 +13,10 @@ Source connectors in Adobe Experience Platform provide the ability to ingest ext
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-*   [Experience Data Model (XDM) System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+*   [[!DNL Experience Data Model] (XDM) System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     *   [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
     *   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-*   [Real-time Customer Profile](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+*   [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 If you already have a valid [!DNL Dynamics] account, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/crm.md).
 
@@ -28,21 +28,21 @@ If you already have a valid [!DNL Dynamics] account, you may skip the remainder 
 | `username` | The user name for your [!DNL Dynamics] user account. |
 | `password` | The password for your Dynamics account. |
 
-For more information on getting started, visit [this Dynamics document](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
+For more information on getting started, visit [this [!DNL Dynamics] document](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
 
 ## Connect your [!DNL Dynamics] account
 
 Once you have gathered your required credentials, you can follow the steps below to create a new [!DNL Dynamics] account to connect to [!DNL Platform].
 
-Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the *[!UICONTROL Sources]* workspace. The *[!UICONTROL Catalog]* screen displays a variety of sources for which you can create an inbound account with, and each source shows the number of existing accounts and dataset flows associated with them.
+Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an inbound account with, and each source shows the number of existing accounts and dataset flows associated with them.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the *[!UICONTROL Databases]* category, select **[!UICONTROL Dynamics]** followed by **[!UICONTROL Add data]** to create a new [!DNL Dynamics] connector.
+Under the **[!UICONTROL Databases]** category, select **[!UICONTROL Dynamics]** followed by **[!UICONTROL Add data]** to create a new [!DNL Dynamics] connector.
 
 ![catalog](../../../../images/tutorials/create/ms-dynamics/catalog.png)
 
-The *[!UICONTROL Connect to Dynamics]* page appears. On this page, you can either use new credentials or existing credentials.
+The **[!UICONTROL Connect to Dynamics]** page appears. On this page, you can either use new credentials or existing credentials.
 
 ### New account
 
