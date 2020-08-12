@@ -37,9 +37,9 @@ For more information about these values, refer to [this ADLS Gen2 document](http
 
 Once you have gathered your required credentials, you can follow the steps below to create a new inbound base connection to link your ADLS Gen2 account to [!DNL Platform].
 
-Log in to <a href="https://platform.adobe.com" target="_blank">Adobe [!DNL Experience Platform]</a> and then select **[!UICONTROL Sources]** from the left navigation bar to access the *[!UICONTROL Sources]* workspace. The *[!UICONTROL Catalog]* tab displays a variety of sources for which can be used to create inbound base connections. Each source shows the number of existing base connections associated to them.
+Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the *[!UICONTROL Sources]* workspace. The *[!UICONTROL Catalog]* tab displays a variety of sources for which can be used to create inbound base connections. Each source shows the number of existing base connections associated to them.
 
-Under the *[!UICONTROL Cloud Storage]* category, select **[!UICONTROL Azure Data Lake Gen2]** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source view its documentation. To create a new inbound base connection, click **[!UICONTROL Connect source]**.
+Under the *[!UICONTROL Cloud Storage]* category, select **[!UICONTROL Azure Data Lake Gen2]** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source view its documentation. To create a new inbound base connection, click **[!UICONTROL Add data]**.
 
 ![](../../../../images/tutorials/create/adls-gen2/catalog.png)
 
