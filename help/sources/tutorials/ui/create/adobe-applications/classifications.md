@@ -27,7 +27,7 @@ Under the *Adobe applications* category, select the **[!UICONTROL Adobe Analytic
 
 ![](../../../../images/tutorials/create/classifications/catalog.png)
 
-The *[!UICONTROL Analytics source add data]* step appears. Select **[!UICONTROL Classifications]** from the top header to see a list of classifications, including information about their Dimension ID, Report Suite name, and Report Suite ID.
+The *[!UICONTROL Analytics source add data]* step appears. Select **[!UICONTROL Classifications]** from the top header to see a list of classifications datasets, including information about their Dimension ID, Report Suite name, and Report Suite ID.
 
 Each page shows up to 10 different classifications you can choose from. Select **[!UICONTROL Next]** at the bottom of the page to browse for more options. The panel on the right shows the total number of classifications you selected, as well as their names. This panel also allows you to remove any classifications you may have selected by mistake or clear all selections with one action.
 
