@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;data ingestion
+keywords: Experience Platform;home;popular topics;data ingestion;data location;Data Location;Data management;data management;Lineage;lineage
 solution: Experience Platform
 title: Adobe Experience Platform Data Ingestion overview
 topic: overview
@@ -36,7 +36,7 @@ See the [Sources overview](../sources/home.md) for more information.
 
 ## Next steps and additional resources
 
-This document provided a brief introduction to the different aspects of [!DNL Data Ingestion] in [!DNL Experience Platform]. Please continue to read the overview documentation for each ingestion method to familiarize yourself with their different capabilities, use cases, and best practices. You can also suppliment your learning by watching the ingestion overview video below. For information on how [!DNL Experience Platform] tracks the metadata for ingested records, see the [Catalog Service overview](../catalog/home.md).
+This document provided a brief introduction to the different aspects of [!DNL Data Ingestion] in [!DNL Experience Platform]. Please continue to read the overview documentation for each ingestion method to familiarize yourself with their different capabilities, use cases, and best practices. You can also supplement your learning by watching the ingestion overview video below. For information on how [!DNL Experience Platform] tracks the metadata for ingested records, see the [Catalog Service overview](../catalog/home.md).
 
 >[!WARNING]
 >

@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;source connectors;source connector;sources
+keywords: Experience Platform;home;popular topics;source connectors;source connector;sources;data sources;data source
 solution: Experience Platform
 title: Adobe Experience Platform Source Connectors overview
 topic: overview

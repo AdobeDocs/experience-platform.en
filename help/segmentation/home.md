@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment service;segment;Segment
 solution: Experience Platform
 title: Adobe Experience Platform Segmentation Service
 topic: overview
