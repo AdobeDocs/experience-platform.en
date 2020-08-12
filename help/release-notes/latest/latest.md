@@ -13,6 +13,7 @@ author: crhoades, ens28527
 Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
+- [!DNL Destinations](#destinations)
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
@@ -26,6 +27,25 @@ Updates to existing features in Adobe Experience Platform:
 | VM improvements in [!DNL JupyterLab] | Improved the stability of long-running [!DNL JupyterLab notebook] virtual machines. |
 
 For more information on [!DNL JupyterLab], please see the [[!DNL JupyterLab] user guide](../../data-science-workspace/jupyterlab/overview.md).
+
+## Destinations {#destinations}
+
+In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
+
+**New destinations**
+
+New destinations are available where you can activate your Adobe Experience Platform data. See below for details:
+
+|Destination | Description|
+|--- | ---|
+|[!DNL Google Customer Match] | Google Customer Match lets you use your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as: [!DNL Search], [!DNL Shopping], Gmail, and YouTube. Visit the [[!DNL Google Customer Match] page](/help/rtcdp/destinations/google-customer-match-destination.md) in the destinations catalog for more information about the destination and how to set it up in Adobe Real-time CDP.|
+
+**New features**
+
+|Feature | Description|
+|------- | -----------|
+|Custom file name editor | Update to the data activation workflow for email marketing destinations and cloud storage destinations that allows you to edit the name of the exported files. For more information, refer to the [[!DNL Configure] step](/help/rtcdp/destinations/activate-destinations.md#configure) in the activation workflow.|
+|Recommended attributes | Update to the data activation workflow for email marketing destinations and cloud storage destinations that displays recommended attributes for you to add to the exported files. For more information, refer to the [[!DNL Select attributes] step](/help/rtcdp/destinations/activate-destinations.md#select-attributes) in the activation workflow.|
 
 ## Sources {#sources}
 
