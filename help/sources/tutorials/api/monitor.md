@@ -75,19 +75,6 @@ curl -X GET \
 
 A successful response returns details regarding your flow run, including information about its creation date, source and target connections, as well as the flow run's unique identifier (`id`).
 
-See the following table for more information on the properties seen in a returning payload.
-
-| Property | Description |
-| -------- | ----------- |
-| `items` | Contains payload of metadata associated with your specific flow run. |
-| `metrics` | Defines characteristics of the data in the flow run. |
-| `activities` | Defines how the data is transformed. |
-| `durationSummary` | Defines the start and end time of the flow run. |
-| `sizeSummary` | Defines the volume of the data in bytes. |
-| `recordSummary` | Defines the record count of the data. |
-| `fileSummary` | Defines the file count of the data. |
-| `statusSummary` | Defines whether the flow run is a success or a failure. |
-
 ```json
 {
     "items": [
@@ -247,6 +234,17 @@ See the following table for more information on the properties seen in a returni
     "_links": {}
 }
 ```
+
+| Property | Description |
+| -------- | ----------- |
+| `items` | Contains a single payload of metadata associated with your specific flow run. |
+| `metrics` | Defines characteristics of the data in the flow run. |
+| `activities` | Defines how the data is transformed. |
+| `durationSummary` | Defines the start and end time of the flow run. |
+| `sizeSummary` | Defines the volume of the data in bytes. |
+| `recordSummary` | Defines the record count of the data. |
+| `fileSummary` | Defines the file count of the data. |
+| `statusSummary` | Defines whether the flow run is a success or a failure. |
 
 ## Next steps
 
