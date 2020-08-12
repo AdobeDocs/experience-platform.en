@@ -7,30 +7,30 @@ seo-description: Quick start guide for using the Experience Platform Web SDK  to
 
 # Welcome
 
-This guide leads you through the different ways to set up the Adobe Experience Platform Web SDK. To be able to use this feature, you need to be on the allow list. If you would like to get on the waiting list, please reach out to your CSM.
+This guide leads you through the different ways to set up the Adobe Experience Platform Web SDK. To use this feature, you need to be whitelisted. If you would like to get on the waiting list, please reach out to your CSM.
 
-- Have a [1st-party domain (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) enabled. If you already have a CNAME for Analytics, you should use that one. Testing in development works without a CNAME but you need one before you go to production
-- Be entitled to Adobe Experience Platform Data Platform.  If you have not purchased Platform, we will provision you with Experience Platform Data Services Foundation for use in a limited fashion with the SDK at no extra charge.
-- Be using the latest version of the Visitor ID service
+- Have a [1st-party domain (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) enabled. If you already have a CNAME for Analytics, you should use that one. Testing in development works without a CNAME but you need one before you go to production.
+- Be entitled to Adobe Experience Platform.  If you have not purchased Platform, Adobe will provision you with Experience Platform Data Services Foundation for use in a limited fashion with the SDK at no extra charge.
+- Be using the latest version of the Visitor ID service.
 
-## Create an configuration ID
+## Prepare a Schema
 
-You can create a configuration ID using the [edge configuration tool](../fundamentals/edge-configuration.md) in Adobe Launch, even if you are not using the tag management features. This allows you to enable the Edge Network to send data to the various solutions. Details for how to find each option are found in the [Edge Configuration Tool](../fundamentals/edge-configuration.md) Page.
+The [!DNL Experience Platform Edge Network] takes data as XDM. XDM is a data format that lets you define schemas. The schema defines how the [!DNL Edge Network] expects the data to be formatted. To send data, you need to define your schema.
+
+- [Create a schema](../../xdm/tutorials/create-schema-ui.md)
+- Add the Adobe Experience Platform [!DNL Web SDK] mixin to the schema you created
+
+The following video is intended to support you in creating a schema, dataset, and streaming source connector for your [!DNL Web SDK] data.
+
+>[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
+
+## Create a configuration ID
+
+You can create a configuration ID using the [edge configuration tool](../fundamentals/edge-configuration.md) in Adobe Launch, even if you are not using the tag management features. This allows you to enable the [!DNL Edge Network] to send data to the various solutions. Details for how to find each option are found in the [Edge Configuration Tool](../fundamentals/edge-configuration.md) Page.
 
 >[!NOTE]
 >
 >Your organization must be on the allow list for the feature. Please contact your CSM to get put on the allow list.
-
-## Prepare a Schema
-
-The Experience Platform Edge Network takes data as XDM. XDM is a data format that lets you define schemas. The schema defines how the Edge Network expects the data to be formatted. To send data, you need to define your schema.
-
-- [Create a schema](../../xdm/tutorials/create-schema-ui.md)
-- Add the Adobe Experience Platform Web SDK mixin to the schema you created
-
-The following video is intended to support you in creating a schema, dataset, and streaming source connector for your Web SDK data.
-
->[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
 ## Install the SDK
 

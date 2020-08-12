@@ -5,17 +5,17 @@ description: Display & Video 360, formerly known as DoubleClick Bid Manager is a
 seo-description: Display & Video 360, formerly known as DoubleClick Bid Manager is a tool used to execute retargeting and audience targeted digital campaigns across Display, Video and Mobile inventory sources. 
 ---
 
-# Google Display & Video 360 Destination
+# [!DNL Google Display & Video 360] Destination
 
 ## Overview
 
-Display & Video 360, formerly known as DoubleClick Bid Manager, is a tool used to execute retargeting and audience targeted digital campaigns across Display, Video and Mobile inventory sources. 
+[!DNL Display & Video 360], formerly known as [!DNL DoubleClick Bid Manager], is a tool used to execute retargeting and audience targeted digital campaigns across Display, Video and Mobile inventory sources. 
 
 ## Destination specs
 
-Note the following details that are specific to Google Display & Video 360 destinations:
+Note the following details that are specific to [!DNL Google Display & Video 360] destinations:
 
-* You can send the following [identities](../../identity-service/namespaces.md) to Google Display & Video 360 destinations: **Google cookie ID, IDFA, GAID, Roku IDs, Microsoft IDs, Amazon Fire TV IDs**.
+* You can send the following [identities](../../identity-service/namespaces.md) to [!DNL Google Display & Video 360] destinations: **Google cookie ID, IDFA, GAID, Roku IDs, Microsoft IDs, Amazon Fire TV IDs**.
 * Activated audiences are created programmatically in the Google platform.
 * Adobe Real-time CDP does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand audience targeting size.
 
@@ -29,9 +29,9 @@ Note the following details that are specific to Google Display & Video 360 desti
 
 >[!NOTE]
 >
->The allow list is mandatory before setting up your first Google Display & Video 360 destination in Adobe Real-time CDP. Please ensure the allow list process described below has been completed by Google before creating a destination.
+>The allow list is mandatory before setting up your first [!DNL Google Display & Video 360] destination in Adobe Real-time CDP. Please ensure the allow list process described below has been completed by Google before creating a destination.
 
-Before creating the Google Display & Video 360 destination in Adobe Real-time CDP, you must contact Google asking for Adobe to be put on the list of allowed data providers, and for your account to be added to the allow list. Contact Google and provide the following information:
+Before creating the [!DNL Google Display & Video 360] destination in Adobe Real-time CDP, you must contact Google asking for Adobe to be put on the list of allowed data providers, and for your account to be added to the allow list. Contact Google and provide the following information:
 
 * **Account ID** : this is Adobe's account ID with Google. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
 * **Customer ID** : this is Adobe's customer account ID with Google. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
@@ -39,7 +39,7 @@ Before creating the Google Display & Video 360 destination in Adobe Real-time CD
 
 ## Create destination
 
-1. In **[!UICONTROL Connections > Destinations]**, select Google Display & Video 360, and select **[!UICONTROL Create destination]**.
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL Google Display & Video 360], and select **[!UICONTROL Create destination]**.
     ![Connect Google Display & Video 360 destination](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
 2. In the **Setup** step of the create destination workflow, fill in the [!UICONTROL Basic Information] for the destination, as well as the marketing use cases that should apply to this destination. <br>
@@ -54,8 +54,12 @@ Before creating the Google Display & Video 360 destination in Adobe Real-time CD
 
 >[!NOTE]
 >
->When setting up a Google Display & Video 360 destination please work with your Google Account Manager or Adobe representative to understand which account type you have.
+>When setting up a [!DNL Google Display & Video 360] destination please work with your [!DNL Google Account Manager] or Adobe representative to understand which account type you have.
 
-## Activate segments to Google Display & Video 360
+## Activate segments to [!DNL Google Display & Video 360]
 
-For instructions on how to activate segments to Google Display & Video 360, see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md).
+For instructions on how to activate segments to [!DNL Google Display & Video 360], see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md).
+
+## Exported data 
+
+To verify if data has been exported successfully to the [!DNL Google Display & Video 360] destination, check your [!DNL Google Display & Video 360] account. If activation was successful, audiences are populated in your account.

@@ -11,16 +11,6 @@ Adobe Experience Platform provides native connectivity for cloud providers like 
 
 Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM parquet, or delimited. Every step of the process is integrated into the Sources workflow. [!DNL Platform] allows you to bring in data from [!DNL Azure Blob] and S3 through batches.
 
-The documentation below provides information on how to connect Azure Blob and S3 to Platform using APIs or the user interface:
+For more information on the [!DNL Azure Blob] connector, please read the [[!DNL Azure Blob] connector overview](./blob.md).
 
-## Connect [!DNL Azure Blob] and S3 to [!DNL Platform] using APIs
-
-- [Create an Azure Blob connector using the Flow Service API](../../tutorials/api/create/cloud-storage/blob.md)
-- [Create an S3 connector using the Flow Service API](../../tutorials/api/create/cloud-storage/s3.md)
-- [Explore a cloud storage system using the Flow Service API](../../tutorials/api/explore/cloud-storage.md)
-- [Collect cloud storage data using the Flow Service API](../../tutorials/api/collect/cloud-storage.md)
-
-## Connect [!DNL Blob] and S3 to [!DNL Platform] using the UI
-
-- [Create an Azure Blob or Amazon S3 source connector in the UI](../../tutorials/ui/create/cloud-storage/blob-s3.md)
-- [Configure a dataflow for a cloud storage connector in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+For more information on the [!DNL Amazon S3] connector, please read the [[!DNL Amazon S3] connector overview](./s3.md).

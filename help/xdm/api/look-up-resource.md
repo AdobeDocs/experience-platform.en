@@ -18,7 +18,7 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}/{RESOURCE_ID}
 | Parameter | Description |
 | --- | --- |
 | `{CONTAINER_ID}` | The container where the resources are located ("global" or "tenant"). |
-| `{RESOURCE_TYPE}` | The type of resource to retrieve from the Schema Library. Valid types are `datatypes`, `mixins`, `schemas`, and `classes`. |
+| `{RESOURCE_TYPE}` | The type of resource to retrieve from the [!DNL Schema Library]. Valid types are `datatypes`, `mixins`, `schemas`, and `classes`. |
 | `{RESOURCE_ID}` | The URL-encoded `$id` URI or `meta:altId` of the resource. |
 
 **Request**

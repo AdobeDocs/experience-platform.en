@@ -5,9 +5,9 @@ title: Spark SQL functions
 topic: spark sql functions
 ---
 
-# Spark SQL functions
+# [!DNL Spark] SQL functions
 
-The Spark SQL helpers provide built-in Spark SQL functions to extend SQL functionality.
+The [!DNL Spark] SQL helpers provide built-in [!DNL Spark] SQL functions to extend SQL functionality.
 
 Reference: [Spark SQL function documentation](https://spark.apache.org/docs/2.4.0/api/sql/index.html)
 
@@ -182,7 +182,7 @@ Examples:
  2
 > SELECT cardinality(NULL);
  -1
- ```
+```
 
 #### cbrt
 
@@ -529,7 +529,7 @@ Example:
 ```
 > SELECT pow(2, 3);
  8.0
- ```
+```
 
 #### power 
 
@@ -540,7 +540,7 @@ Examples:
 ```
 > SELECT power(2, 3);
  8.0
- ```
+```
 
 #### radians
 
@@ -866,7 +866,7 @@ Example:
 ```
 > SELECT 3 ^ 5;
  2
- ```
+```
 
 #### and
 
@@ -2270,7 +2270,7 @@ Examples:
  SQL
 > SELECT substring('Spark SQL', 5, 1);
  k
- ```
+```
 
 #### to_json
 

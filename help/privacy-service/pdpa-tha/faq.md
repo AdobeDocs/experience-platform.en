@@ -7,7 +7,7 @@ topic: troubleshooting
 
 # PDPA (Thailand) FAQ
 
-This document provides answers to frequently asked questions about the Personal Data Protection Act of Thailand (PDPA) and its implementation in Adobe Experience Cloud.
+This document provides answers to frequently asked questions about the [!DNL Personal Data Protection Act] of Thailand (PDPA) and its implementation in Adobe Experience Cloud.
 
 Definitions for the various PDPA-related terms used in this document can be found in the [PDPA (Thailand) terminology](./terminology.md) article.
 

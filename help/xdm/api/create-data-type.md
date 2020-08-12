@@ -60,7 +60,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns HTTP status 201 (Created) and a payload containing the details of the newly created data type, including the `$id`, `meta:altId`, and `version`. These three values are read-only and are assigned by the Schema Registry.
+A successful response returns HTTP status 201 (Created) and a payload containing the details of the newly created data type, including the `$id`, `meta:altId`, and `version`. These three values are read-only and are assigned by the [!DNL Schema Registry].
 
 ```JSON
 {

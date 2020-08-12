@@ -7,7 +7,7 @@ topic: overview
 
 # Create a [!DNL Couchbase] source connector in the UI
 
-> [!NOTE]
+>[!NOTE]
 > The [!DNL Couchbase] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Source connectors in [!DNL Adobe Experience Platform] provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an [!DNL Couchbase] source connector using the [!DNL Platform] user interface.
@@ -39,7 +39,7 @@ Log in to [Adobe Experience Platform](https://platform.adobe.com) and then selec
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the *[!UICONTROL Databases]* category, select **[!UICONTROL Couchbase]** click **on the + icon (+)** to create a new [!DNL Couchbase] connector.
+Under the *[!UICONTROL Databases]* category, select **[!UICONTROL Couchbase]** followed by **[!UICONTROL Add data]** to create a new [!DNL Couchbase] connector.
 
 ![catalog](../../../../images/tutorials/create/couchbase/catalog.png)
 

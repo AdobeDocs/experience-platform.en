@@ -5,13 +5,13 @@ title: Secure Python Data Access SDK
 topic: tutorial
 ---
 
-# Secure Python [!DNL Data Access] SDK
+# Secure [!DNL Python] [!DNL Data Access] SDK
 
-The Secure Python [!DNL Data Access] SDK is a software development kit that enables reading and writing of datasets from Adobe Experience Platform.
+The Secure [!DNL Python] [!DNL Data Access] SDK is a software development kit that enables reading and writing of datasets from Adobe Experience Platform.
 
 ## Getting started
 
-You are required to have completed the [authentication](../../tutorials/authentication.md) tutorial in order to have access to the values to make calls to the Secure Python [!DNL Data Access] SDK:
+You are required to have completed the [authentication](../../tutorials/authentication.md) tutorial in order to have access to the values to make calls to the Secure [!DNL Python] [!DNL Data Access] SDK:
 
 - `{ACCESS_TOKEN}`
 - `{API_KEY}`
@@ -56,7 +56,7 @@ All the packages are outputted to `./dist` after building.
 python3 setup.py bdist_wheel --universal
 ```
 
-From the project directory, load wheel into your Python 3 environment.
+From the project directory, load wheel into your [!DNL Python] 3 environment.
 
 ```python
 pip3 install ./dist/<name_of_wheel_file>.whl
@@ -121,7 +121,9 @@ df = dataset_reader.select(['column-a']).distinct().read()
 
 The [!DNL Python] SDK supports certain operators to help filter the dataset.
 
->[!NOTE] The functions used for filtering are case sensitive.
+>[!NOTE]
+>
+>The functions used for filtering are case sensitive.
 
 ```python
 eq() = '='
@@ -141,7 +143,7 @@ df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experie
 
 ### ORDER BY clause
 
-The ORDER BY clause allows received results to be sorted by a specified column in a specific order (ascending or descending). In the Python SDK, this is done by using the `sort()` function.
+The ORDER BY clause allows received results to be sorted by a specified column in a specific order (ascending or descending). In the [!DNL Python] SDK, this is done by using the `sort()` function.
 
 An example of using the `sort()` function can be seen below:
 

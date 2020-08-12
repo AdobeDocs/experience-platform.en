@@ -6,7 +6,9 @@ user-guide-title: Adobe Experience Platform Release Notes
 
 # Adobe Experience Platform release notes {#release-notes}
 
-* [June 2020](latest/latest.md)
+* [August 2020](latest/latest.md)
+* [July 2020](2020/july-2020.md)
+* [June 2020](2020/june-2020.md)
 * [May 2020](2020/may-2020.md)
 * [April 2020](2020/april-2020.md)
 * [March 2020](2020/march-2020.md)
@@ -19,6 +21,3 @@ user-guide-title: Adobe Experience Platform Release Notes
   * [July 2019](2019/july-2019.md)
   * [June 2019](2019/june-2019.md)
   * [May 2019](2019/may-2019.md)
-  
-  
-  

@@ -7,7 +7,7 @@ topic: overview
 
 # Create a MySQL source connector in the UI
 
-> [!NOTE]
+>[!NOTE]
 > The MySQL connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a MySQL source connector using the Platform user interface.
@@ -37,9 +37,9 @@ You can learn more about connection strings and how to obtain them by reading th
 
 Once you have gathered your required credentials, you can follow the steps below to create a new inbound base connection to link your MySQL account to [!DNL Platform].
 
-Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> and then select **[!UICONTROL Sources]** from the left navigation bar to access the *[!UICONTROL Sources]* workspace. The *Catalog* screen displays a variety of sources for which you can create inbound base connections with, and each source shows the number of existing base connections associated to them.
+Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the *[!UICONTROL Sources]* workspace. The *Catalog* screen displays a variety of sources for which you can create inbound base connections with, and each source shows the number of existing base connections associated to them.
 
-Under the *[!UICONTROL Databases]* category, select **[!UICONTROL MySQL]** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To create a new inbound base connection, select **[!UICONTROL Connect source]**. 
+Under the *[!UICONTROL Databases]* category, select **[!UICONTROL MySQL]** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To create a new inbound base connection, select **[!UICONTROL Add data]**. 
 
 ![](../../../../images/tutorials/create/my-sql/catalog.png)
 

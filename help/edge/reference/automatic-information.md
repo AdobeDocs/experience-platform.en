@@ -85,6 +85,13 @@ The software development kit (SDK) identifier.  This field uses a URI to improve
 | -------------------------------------------- | ------------ |
 | `events[].xdm.implementationDetails.version` | `0.11.0`     |
 
+### Environment
+
+| **Path in Payload:**                             | **Example:** |
+| ------------------------------------------------ | ------------ |
+| `events[].xdm.implementationDetails.environment` | `browser`    |
+
+
 ## Place context (`placeContext`)
 
 Information about the location of the end user.

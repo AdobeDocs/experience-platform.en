@@ -7,7 +7,7 @@ topic: overview
 
 # Create a [!DNL Generic OData] source connector in the UI
 
-> [!NOTE]
+>[!NOTE]
 > The [!DNL Generic OData] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a Generic Open Data Protocol (hereinafter referred to as "OData") source connector using the [!DNL Platform] user interface.
@@ -37,11 +37,11 @@ For more information about getting started refer to [this OData document](https:
 
 Once you have gathered your required credentials, you can follow the steps below to create a new [!DNL OData] account to connect to [!DNL Platform].
 
-Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> and then select **[!UICONTROL Sources]** from the left navigation bar to access the *[!UICONTROL Sources]* workspace. The *[!UICONTROL Catalog]* screen displays a variety of sources for which you can create inbound account. Each source shows the number of existing accounts and dataset flows associated to them.
+Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the *[!UICONTROL Sources]* workspace. The *[!UICONTROL Catalog]* screen displays a variety of sources for which you can create inbound account. Each source shows the number of existing accounts and dataset flows associated to them.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the *[!UICONTROL Protocols]* category, select **[!UICONTROL Generic OData]** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To create a new inbound connection, select **[!UICONTROL Connect source]**.
+Under the *[!UICONTROL Protocols]* category, select **[!UICONTROL Generic OData]** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To create a new inbound connection, select **[!UICONTROL Add data]**.
 
 ![catalog](../../../../images/tutorials/create/odata/catalog.png)
 
