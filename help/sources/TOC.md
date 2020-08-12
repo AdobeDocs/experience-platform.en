@@ -124,6 +124,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [Collect protocol data](tutorials/api/collect/protocols.md)
   - [Ingest parquet data from a third-party cloud storage system](tutorials/api/cloud-storage-parquet.md)
   - [Create a dataset base connection using the Flow Service API](tutorials/api/create-dataset-base-connection.md)
+  - [Monitor dataflows using the Flow Service API](tutorials/api/monitor.md)
 - UI tutorials {#ui-tutorials}
   - Create a source connector {#create}
     - Adobe applications {#adobe-applications}

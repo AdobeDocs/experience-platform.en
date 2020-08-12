@@ -659,13 +659,15 @@ curl -X POST \
 ```
 
 | Property | Description |
-| --- | --- |
-| `flowSpec.id` | The flow spec ID retrieved in the previous step. |
-| `sourceConnectionIds` | The source connection ID retrieved in an earlier step. |
-| `targetConnectionIds` | The target connection ID retrieved in an earlier step. |
-| `transformations.params.mappingId` | The mapping ID retrieved in an earlier step.|
-| `scheduleParams.startTime` | The start time for the dataflow in epoch time in seconds. |
-| `scheduleParams.frequency` | The selectable frequency values include: `once`, `minute`, `hour`, `day`, or `week`. |
+| -------- | ----------- |
+| `flowSpec.id` | The [flow spec ID](#specs) retrieved in the previous step. |
+| `sourceConnectionIds` | The [source connection ID](#source) retrieved in an earlier step. |
+| `targetConnectionIds` | The [target connection ID](#target-connection) retrieved in an earlier step. |
+| `transformations.params.mappingId` | The [mapping ID](#mapping) retrieved in an earlier step.|
+| `transformations.params.deltaColum` | The designated column used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column. |
+| `transformations.params.mappingId`| The mapping ID associated with your database. |
+| `scheduleParams.startTime` | The start time for the dataflow in epoch time. |
+| `scheduleParams.frequency` | The frequency at which the dataflow will collect data. Acceptable values include: `once`, `minute`, `hour`, `day`, or `week`. |
 | `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer. Interval is not required when frequency is set as `once` and should be greater than or equal to `15` for other frequency values. |
 
 **Response**
@@ -679,6 +681,10 @@ A successful response returns the ID (`id`) of the newly created dataflow.
 
 }
 ```
+
+## Monitor your dataflow
+
+Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors. For more information on how to monitor dataflows, see the tutorial on [monitoring dataflows in the API ](../monitor.md)
 
 ## Next steps
 
