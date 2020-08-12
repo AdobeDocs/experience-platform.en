@@ -66,6 +66,6 @@ A dialog box appears confirming the deletion. Select **[!UICONTROL Delete]** to 
 
 By following this tutorial, you have created an Analytics Classifications Data connector that brings classifications data into [!DNL Platform]. See the following documents for more information on Adobe Analytics and classifications data:
 
-- [Analytics Data connector overview](../../../../connectors/adobe-applications/analytics.md)
-- [Create an Analytics Data connector in the UI](./analytics.md)
-- [About classifications](https://docs.adobe.com/content/help/en/analytics/components/classifications/c-classifications.html#)
+* [Analytics Data connector overview](../../../../connectors/adobe-applications/analytics.md)
+* [Create an Analytics Data connector in the UI](./analytics.md)
+* [About classifications](https://docs.adobe.com/content/help/en/analytics/components/classifications/c-classifications.html#)
