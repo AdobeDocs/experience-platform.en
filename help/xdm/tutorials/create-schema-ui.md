@@ -281,54 +281,38 @@ The following sections provide addition information information regarding the us
 
 [!DNL Experience Platform] provides the flexibility to define a schema based on a class that is unique to your organization. 
 
-Open the *[!UICONTROL Assign Class]* dialog by clicking **[!UICONTROL Assign]** in the *[!UICONTROL Class]* section of the Schema Editor. Within the dialog, select **C[!UICONTROL reate New Class]**.
+In the **[!UICONTROL Schemas]** workspace, click **[!UICONTROL Create schema]**, then select **[!UICONTROL Browse]** from the dropdown.
 
-You can then give your new class a **[!UICONTROL Display Name]** (a short, descriptive, unique, and user-friendly name for the class), a **[!UICONTROL Description]**, and a **[!UICONTROL Behavior]** ("[!UICONTROL Record]" or "[!UICONTROL Time Series]") for the data the schema will define. 
+![New Class Details](../images/tutorials/create-schema/browse-classes.png)
+
+A dialog appears that allows you select from a list of available classes. At the top of the dialog, select **[!UICONTROL Create New Class]**. You can then give your new class a **[!UICONTROL Display Name]** (a short, descriptive, unique, and user-friendly name for the class), a **[!UICONTROL Description]**, and a **[!UICONTROL Behavior]** ("[!UICONTROL Record]" or "[!UICONTROL Time Series]") for the data the schema will define. 
 
 ![New Class Details](../images/tutorials/create-schema/create_new_class.png)
 
->[!NOTE]
+>[!IMPORTANT]
 >
->When building a schema that implements a class defined by your organization, remember that mixins are available for use only with compatible classes. Since the class you defined is new, there are no compatible mixins listed in the *Add Mixin* dialog. Instead, you will need to select **[!UICONTROL Create New Mixin]** and define a mixin for use with that class. The next time you compose a schema that implements the new class, the mixin that you defined will be listed and available for use.
-
-### Assign a class {#class}
-
-On the left-hand side of the editor is the *Composition* section. It currently contains two sub-sections: *[!UICONTROL Schema]* and *[!UICONTROL Class]*. 
-
-Now that the schema has a name, it is time to assign the class that the schema will implement. Click **[!UICONTROL Assign]** next to *[!UICONTROL Class]*.
-
-![](../images/tutorials/create-schema/assign_class_button.png)
-
-The *[!UICONTROL Assign Class]* dialog appears. This window displays a list of all available classes, including any defined by your organization (the owner being "Customer") as well as standard classes defined by Adobe. 
-
-Click on the class name to display the description of the class. You can also choose to **[!UICONTROL Preview Class Structure]** to see the fields and metadata associated with the class.
-
-This tutorial uses the [!DNL XDM Individual Profile] class. Click the radio button beside the class to select it, then click **[!UICONTROL Assign Class]**.
-
-![Assign Class Dialog](../images/tutorials/create-schema/assign_class.png)
-
-The canvas reappears. The *[!UICONTROL Class]* section now contains the class you selected ([!DNL XDM Individual Profile]) and the fields contributed by the [!DNL XDM Individual Profile] class are now visible within the *[!UICONTROL Structure]* section.
-
-![XDM Individual Profile Class Assigned](../images/tutorials/create-schema/class_assigned_structure.png)
-
-The fields appear in the format "fieldName | Data Type". Steps for defining schema fields in the UI are provided later in this tutorial.
-
->[!NOTE]
->
->You can [change the class of a schema](#change-class) at any point during the initial composition process before the schema has been saved, but this should be done with extreme caution. Mixins are only compatible with certain classes, therefore changing the class will reset the canvas and any fields you have added. 
+>When building a schema that implements a class defined by your organization, remember that mixins are available for use only with compatible classes. Since the class you defined is new, there are no compatible mixins listed in the *Add Mixin* dialog. Instead, you will need to select **[!UICONTROL Create New Mixin]** and define a mixin for use with that class. The next time you compose a schema that implements the new class, the mixin that you defined will be listed and available for use. 
 
 ### Change the class of a schema {#change-class}
 
-At any time during the initial schema composition process, before the schema is saved, you can change the class upon which the schema is based. 
+You can change the class of a schema at any point during the initial composition process before the schema has been saved.
 
 >[!WARNING]
 >
->Please exercise caution before changing the class. Mixins are only compatible with certain classes, therefore changing the class resets the canvas and removes any fields you have added to that point. 
+>Reassigning the class for a schema should be done with extreme caution. Mixins are only compatible with certain classes, and therefore changing the class will reset the canvas and any fields you have added. 
 
-To change the class, click **[!UICONTROL Assign]** next to *[!UICONTROL Class]* in the *[!UICONTROL Composition]* section of the editor. 
+To reassign a class, click **[!UICONTROL Assign]** in the left-hand side of the canvas.
 
-When the *[!UICONTROL Assign Class]* dialog opens, you can choose a new class from the available list. Click **[!UICONTROL Assign Class]** and a new dialog opens asking you to confirm that you wish to assign a new class. 
+![](../images/tutorials/create-schema/assign_class_button.png)
 
-![Change Class](../images/tutorials/create-schema/assign_new_class_warning.png)
+A dialog appears that displays a list of all available classes, including any defined by your organization (the owner being "[!UICONTROL Customer]") as well as standard classes defined by Adobe. 
 
-If you confirm the class change, the canvas will be reset and all composition progress will be lost.
+Select a class from the list to display its description on the right-hand side of the dialog. You can also select **[!UICONTROL Preview Class Structure]** to see the fields and metadata associated with the class. Click **[!UICONTROL Assign class]** to continue.
+
+![Assign Class Dialog](../images/tutorials/create-schema/assign_class.png)
+
+A new dialog opens asking you to confirm that you wish to assign a new class. Click **[!UICONTROL Assign]** to confirm.
+
+![Change Class](../images/tutorials/create-schema/assign-confirm.png)
+
+After confirming the class change, the canvas will be reset and all composition progress will be lost.
