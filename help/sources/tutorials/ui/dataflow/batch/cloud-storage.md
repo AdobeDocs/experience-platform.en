@@ -108,7 +108,9 @@ Provide values for the schedule and select **[!UICONTROL Next]**.
 
 To set up one-time ingestion, select the frequency drop down arrow and select **[!UICONTROL Once]**. You can continue to make edits to a dataflow set for a one-time frequency ingestion, so long as the start time remains in the future. Once the start time has passed, the one-time frequency value can no longer be edited.
 
->[!TIP] **[!UICONTROL Interval]** and **[!UICONTROL Backfill]** are not visible during a one-time ingestion.
+>[!TIP]
+>
+>**[!UICONTROL Interval]** and **[!UICONTROL Backfill]** are not visible during a one-time ingestion.
 
 Once you have provided appropriate values to the schedule, select **[!UICONTROL Next]**.
 
@@ -136,9 +138,13 @@ Once you have reviewed your dataflow, click **[!UICONTROL Finish]** and allow so
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/review.png)
 
-## Monitor and delete your dataflow
+## Monitor your dataflow
 
-Once your cloud storage dataflow has been created, you can monitor the data that is being ingested through it. For more information on monitoring and deleting dataflows, see the tutorial on [monitoring dataflows](../../../../../ingestion/quality/monitor-data-flows.md).
+Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on ingestion rates, success, and errors. For more information on how to monitor dataflow, see the tutorial on [monitoring accounts and dataflows in the UI](../../monitor.md).
+
+## Delete your dataflow
+
+You can delete dataflows that are no longer necessary or were incorrectly created using the *[!UICONTROL Delete]* function available in the *[!UICONTROL Dataflows]* workspace. For more information on how to delete dataflows, see the tutorial on [deleting dataflows in the UI](../../delete.md).
 
 ## Next steps
 
