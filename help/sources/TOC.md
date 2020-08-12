@@ -9,7 +9,8 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
 - [Source connectors overview](home.md)
 - Available source connectors {#connectors}
   - Adobe applications {#adobe-applications}
-    - [Analytics data connector](connectors/adobe-applications/analytics.md)
+    - [Analytics Classifications Data connector](connectors/adobe-applications/classifications.md)
+    - [Analytics Data connector](connectors/adobe-applications/analytics.md)
     - [Audience Manager connector](connectors/adobe-applications/audience-manager.md)
     - [Customer attributes connector](connectors/adobe-applications/customer-attributes.md)
     - Mapping Adobe application fields {#mapping}
@@ -128,6 +129,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
 - UI tutorials {#ui-tutorials}
   - Create a source connector {#create}
     - Adobe applications {#adobe-applications}
+      - [Adobe Analytics Classifications Data connector](tutorials/ui/create/adobe-applications/classifications.md)
       - [Adobe Analytics connector](tutorials/ui/create/adobe-applications/analytics.md)
       - [Adobe Audience Manager connector](tutorials/ui/create/adobe-applications/audience-manager.md)
       - [Customer attributes connector](tutorials/ui/create/adobe-applications/customer-attributes.md)

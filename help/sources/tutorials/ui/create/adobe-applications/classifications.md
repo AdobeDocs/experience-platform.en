@@ -44,4 +44,28 @@ The *[!UICONTROL Review]* step appears, allowing you to review your selected cla
 * *[!UICONTROL Connection]*: Shows the source platform and the status of the connection.
 * *[!UICONTROL Data type]*: Shows the number of selected classifications and the status of the connections.
 
-Once you have reviewed your classifications, click **[!UICONTROL Finish]** and allow some time for the classifications data to be created.
+Once you have reviewed your classifications, click **[!UICONTROL Finish]** and allow some time for the classifications dataflow to be created.
+
+## Monitor and delete your classifications dataflow
+
+Once your classifications dataflow has been created, you can monitor the data that is being ingested through it. From the *[!UICONTROL Catalog]* screen, select **[!UICONTROL Dataflows]** to view a list of established flows associated with your Analytics account.
+
+![](../../../../images/tutorials/create/classifications/dataflows.png)
+
+The *[!UICONTROL Dataflows]* screen appears. On this page is a list of dataflows, including information about their name, source data, and dataflow run status. The *[!UICONTROL Properties]* panel contains metadata regarding your classifications dataflow, as well as options to disable or delete your classifications dataflow.
+
+Select **[!UICONTROL Delete]** to start the process.
+
+![](../../../../images/tutorials/create/classifications/delete.png)
+
+A dialog box appears confirming the deletion. Select **[!UICONTROL Delete]** to complete.
+
+![](../../../../images/tutorials/create/classifications/delete-confirm.png)
+
+## Next steps
+
+By following this tutorial, you have created an Analytics Classifications Data connector that brings classifications data into [!DNL Platform]. See the following documents for more information on Adobe Analytics and classifications data:
+
+- [Analytics Data connector overview](../../../../connectors/adobe-applications/analytics.md)
+- [Create an Analytics Data connector in the UI](./analytics.md)
+- [About classifications](https://docs.adobe.com/content/help/en/analytics/components/classifications/c-classifications.html#)
