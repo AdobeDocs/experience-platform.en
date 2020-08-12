@@ -15,7 +15,7 @@ This tutorial covers the steps for monitoring flow run data for completeness, er
 
 ## Getting started
 
-This tutorial requires you to have access to a valid dataflow, as well as information regarding its flow ID. If you do not have this information, select your connector of choice from the [sources overview](../../home.md) and follow the steps outlined before attempting this tutorial.
+This tutorial requires you to have the ID value of a valid dataflow. If you do not have a valid dataflow ID, select your connector of choice from the [sources overview](../../home.md) and follow the steps outlined before attempting this tutorial.
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
@@ -56,7 +56,7 @@ GET /runs?property=flowId=={FLOW_ID}
 
 | Parameter | Description |
 | --------- | ----------- |
-| Flow ID | The unique identifier associated with your dataflow. This (`id`) is generated after you create a new dataflow. |
+| `{FLOW_ID}` | The unique `id` value for the dataflow you want to monitor. |
 
 **Request**
 
@@ -75,15 +75,18 @@ curl -X GET \
 
 A successful response returns details regarding your flow run, including information about its creation date, source and target connections, as well as the flow run's unique identifier (`id`).
 
-The returning payload also contains information about your flow run's `metrics` and `activities`. The `metrics` item define characteristics of the data in the flow run, while `activities` pertain to how the data is transformed. See the following table for more information on the values contained within `metrics` and  `activities`.
+See the following table for more information on the properties seen in a returning payload.
 
-| Values | Description |
-| ------ | ----------- |
-| `Duration` | Defines the start and end time of the flow run. |
-| `Size` | Defines the volume of the data in bytes. |
-| `File` | Defines the file count of the data. |
-| `Record` | Defines the record count of the data. |
-| `Status` | Defines whether the flow run is a success or a failure. |
+| Property | Description |
+| -------- | ----------- |
+| `items` | Contains payload of metadata associated with your specific flow run. |
+| `metrics` | Defines characteristics of the data in the flow run. |
+| `activities` | Defines how the data is transformed. |
+| `durationSummary` | Defines the start and end time of the flow run. |
+| `sizeSummary` | Defines the volume of the data in bytes. |
+| `recordSummary` | Defines the record count of the data. |
+| `fileSummary` | Defines the file count of the data. |
+| `statusSummary` | Defines whether the flow run is a success or a failure. |
 
 ```json
 {
