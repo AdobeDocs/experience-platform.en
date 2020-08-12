@@ -163,4 +163,8 @@ Insert in Step 6 when mobile device ID activation is available
 
 ## Verify that segment activation was successful {#verify-activation}
 
-After completing the activation flow, switch to your **[!UICONTROL Google Ads]** account. The activated segments will now show up in your Google account as customer lists. Please note that depending on your segment size, some audiences will not populate unless there are over 100 active users to serve. 
+After completing the activation flow, switch to your **[!UICONTROL Google Ads]** account. The activated segments will now show up in your Google account as customer lists. Please note that depending on your segment size, some audiences will not populate unless there are over 100 active users to serve.
+
+## Additional resources {#additional-resources}
+
+* [Integrate Google Customer Match - Video tutorial](https://docs.adobe.com/content/help/en/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
