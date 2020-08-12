@@ -93,9 +93,11 @@ An example of a simple identity map would look like the following:
 }
 ```
 
-As the example above shows, each key in the `identityMap` object represents an identity namespace. The value for each key is an array of objects, representing the identity values (`id`) for the respective namespace. A boolean value for whether or not the value is a primary identity (`primary`) must also be provided for each identity value.
+As the example above shows, each key in the `identityMap` object represents an identity namespace. The value for each key is an array of objects, representing the identity values (`id`) for the respective namespace. Refer to the [!DNL Identity Service] documentation for a [list of standard identity namespaces](../../identity-service/troubleshooting-guide.md#standard-namespaces) recognized by Adobe applications. 
 
-Refer to the [!DNL Identity Service] documentation for a [list of standard identity namespaces](../../identity-service/troubleshooting-guide.md#standard-namespaces) recognized by Adobe applications.
+>[!NOTE]
+>
+>A boolean value for whether or not the value is a primary identity (`primary`) can also be provided for each identity value. Primary identities only need to be set for schemas intended to be used in [!DNL Real-time Customer Profile]. See the section on [union schemas](#union) for more information.
 
 ### Schema evolution principles {#evolution}
 
