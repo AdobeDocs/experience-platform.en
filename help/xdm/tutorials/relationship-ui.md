@@ -41,7 +41,7 @@ The source schema "[!UICONTROL Loyalty Members]" is based on the XDM [!DNL Indiv
 
 ### Hotels schema
 
-The destination schema "[!UICONTROL Hotels]" is based on a custom "[!UICONTROL Hotels]" class, and contains fields that describe a hotel. The "[!UICONTROL email]" field serves as the primary identity for the schema under the "[!UICONTROL Email]" namespace. Like "[!UICONTROL Loyalty Members]", this schema has also been enabled for [!DNL Real-time Customer Profile].
+The destination schema "[!UICONTROL Hotels]" is based on a custom "[!UICONTROL Hotels]" class, and contains fields that describe a hotel. The "[!DNL hotelID]" field serves as the primary identity for the schema under a custom "[!DNL hotelId]" namespace. Like "[!UICONTROL Loyalty Members]", this schema has also been enabled for [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/relationship/hotels.png)
 
