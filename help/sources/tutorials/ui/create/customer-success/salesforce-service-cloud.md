@@ -63,4 +63,4 @@ To connect an existing account, select the SSC account you want to connect with,
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your SSC account. You can now continue on to the next tutorial and [configure a dataflow to bring Customer Success data into Platform](../../dataflow/customer-success.md).
+By following this tutorial, you have established a connection to your SSC account. You can now continue on to the next tutorial and [configure a dataflow to bring Customer Success data into [!DNL Platform]](../../dataflow/customer-success.md).

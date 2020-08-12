@@ -63,4 +63,4 @@ To connect an existing account, select the [!DNL ServiceNow] account you want to
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL ServiceNow] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](../../dataflow/customer-success.md).
+By following this tutorial, you have established a connection to your [!DNL ServiceNow] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Platform]](../../dataflow/customer-success.md).

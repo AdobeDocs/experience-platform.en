@@ -63,4 +63,4 @@ To connect an existing account, select the [!DNL Azure File Storage] account you
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL Azure File Storage] account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into Platform](../../dataflow/batch/cloud-storage.md).
+By following this tutorial, you have established a connection to your [!DNL Azure File Storage] account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into [!DNL Platform]](../../dataflow/batch/cloud-storage.md).

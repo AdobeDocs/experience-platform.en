@@ -63,4 +63,4 @@ To connect an existing account, select the  [!DNL Google AdWords] account you wa
 
 ## Next steps
 
-By following this tutorial, you have established a base connection to your [!DNL Google AdWords] account. You can now continue on to the next tutorial and [configure a dataflow to bring advertising data into Platform](../../dataflow/advertising.md).
+By following this tutorial, you have established a base connection to your [!DNL Google AdWords] account. You can now continue on to the next tutorial and [configure a dataflow to bring advertising data into [!DNL Platform]](../../dataflow/advertising.md).
