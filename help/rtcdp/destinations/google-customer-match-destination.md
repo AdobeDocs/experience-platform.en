@@ -111,7 +111,8 @@ If you select to hash the email addresses yourself, make sure to comply with Goo
 
     >[!IMPORTANT]
     >
-    > For [!DNL Google Customer Match] destinations. **[!UICONTROL Account ID]** is your customer client ID with Google. The format of the ID is xxx-xxx-xxxx. 
+    > * The **[!UICONTROL Combine with PII]** marketing use case is selected by default for the [!DNL Google Customer Match] destination and cannot be removed. 
+    > * For [!DNL Google Customer Match] destinations. **[!UICONTROL Account ID]** is your customer client ID with Google. The format of the ID is xxx-xxx-xxxx.  
 
     ![Connect Google Customer Match - authentication step](/help/rtcdp/destinations/assets/google-customer-match-authentication-step.png)
 
