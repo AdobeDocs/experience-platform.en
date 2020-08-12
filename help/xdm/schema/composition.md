@@ -58,7 +58,7 @@ To help with this process, key fields within your schemas can be marked as ident
 
 Fields that are commonly marked as "[!UICONTROL Identity]" include: email address, phone number, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/en/id-service/using/home.html), CRM ID, or other unique ID fields. You should also consider any unique identifiers specific to your organization, as they may be good "[!UICONTROL Identity]" fields as well.
 
-It is important to think about customer identities during the schema planning phase in order to help ensure data is being brought together to build the most robust profile possible. See the [Identity Service overview](../../identity-service/home.md) to learn more about how identity information can help you deliver digital experiences to your customers.
+It is important to think about customer identities during the schema planning phase in order to help ensure data is being brought together to build the most robust profile possible. See the overview on [Adobe Experience Platform Identity Service](../../identity-service/home.md) to learn more about how identity information can help you deliver digital experiences to your customers.
 
 #### xdm:identityMap
 
@@ -94,6 +94,8 @@ An example of a simple identity map would look like the following:
 ```
 
 As the example above shows, each key in the `identityMap` object represents an identity namespace. The value for each key is an array of objects, representing the identity values (`id`) for the respective namespace. A boolean value for whether or not the value is a primary identity (`primary`) must also be provided for each identity value.
+
+Refer to the [!DNL Identity Service] documentation for a [list of standard identity namespaces](../../identity-service/troubleshooting-guide.md#standard-namespaces) recognized by Adobe applications.
 
 ### Schema evolution principles {#evolution}
 
