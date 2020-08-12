@@ -7,13 +7,13 @@ seo-description: Frequently asked questions about Adobe Experience Platform Web 
 
 # Adobe Experience Platform Web SDK Frequently Asked Questions
 
-This FAQ inclueds questions that are often asked aboutthe Adobe Web SDK/
+This FAQ includes questions that are often asked aboutthe Adobe Web SDK/
 
 ## What is Adobe Experience Platform Web SDK?
 
 Adobe Experience Platform Web SDK is a client-side JavaScript library that allows customers of the Adobe Experience Cloud to interact with the various services in the Experience Cloud.
 
-It sends data in a solution-agnostic way (XDM) to the Adobe Experience Platform Edge Network, which then maps the data to solution specific formats and destinations and sends it in real-time. 
+It sends data in a solution-agnostic way (XDM) to the Adobe Experience Platform Edge Network, which then maps the data to solution specific formats and destinations and sends it in real time. 
 
 **More information** 
 [Adobe Summit presentation](https://www.adobe.com/summit/2020/with-alloy-js-never-tag-for-an-evar-or-mbox-again.html)
@@ -78,7 +78,7 @@ Adobe Experience Platform Web SDK can also send data directly to Adobe Experienc
 
 ## Do customers need to buy Adobe Experience Platform to use the Web SDK?
 
-No. Any Adobe Digital Experience customer can use it. Totally free. 
+No. Any Adobe Digital Experience customer can use it. Totally free. You will be provisioned for Platform, but with just enough access so you can create your schemas & datasets.
 
 ## Who should use the Web SDK?
 
@@ -92,13 +92,13 @@ The Adobe Experience Platform Web SDK has been developed for the following peopl
     
 * Adobe Experience Cloud solution customers
 
-    New Adobe Analytics, Adobe Audience Mmanager, and Adobe Target customers should start with the new Web SDK and not use legacy libraries.
+    New Adobe Analytics, Adobe Audience Manager, and Adobe Target customers should start with the new Web SDK and not use legacy libraries.
 
     Existing customers who want to get the most optimized implementation possible should use the new Web SDK. 
 
 ## Do current customers have to retag their sites?
 
-It depends. The Adobe Experience Platform Web SDK can be deployed in two different styles. 
+It depends. The Adobe Experience Platform Web SDK can be deployed in two different styles. A future migration document will provide additional details.
 
 * **Just another tag:** If the site is already tagged for solutions and you can't retag, but you want to send data to the Adobe Experience Platform Edge Network for Experience Platform use cases or the upcoming Launch server-side features (see below), you can add the `alloy.js` tag to the site, where it works as "just another tag."
 
