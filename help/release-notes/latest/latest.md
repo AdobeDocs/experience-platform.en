@@ -10,7 +10,7 @@ author: crhoades, ens28527
 
 **Release date: August 12, 2020**
 
-The latest release notes for Experience Platform
+Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Sources]](#sources)
