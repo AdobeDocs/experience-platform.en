@@ -654,6 +654,11 @@ A successful response returns the ID `id` of the newly created dataflow.
 }
 ```
 
+## Monitor your dataflow
+
+Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors. For more information on how to monitor dataflow, see the tutorial on [monitoring dataflows in the API ](../monitor.md)
+
+
 ## Next steps
 
 By following this tutorial, you have created a source connector to collect data from a protocols application on a scheduled basis. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
