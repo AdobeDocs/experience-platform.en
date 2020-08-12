@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;catalog service;catalog;Catalog service
+keywords: Experience Platform;home;popular topics;catalog service;catalog;Catalog service;Catalog
 solution: Experience Platform
 title: Catalog Service developer guide
 topic: developer guide

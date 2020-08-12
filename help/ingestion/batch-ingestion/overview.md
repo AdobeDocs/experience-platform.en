@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;data ingestion
+keywords: Experience Platform;home;popular topics;data ingestion;batch;Batch
 solution: Experience Platform
 title: Adobe Experience Platform Batch Ingestion overview
 topic: overview
