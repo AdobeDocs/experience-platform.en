@@ -58,4 +58,4 @@ The link type can be one of three values:
 
 The Web SDK can automatically track all link clicks by enabling [clickCollection](../../fundamentals/configuring-the-sdk.md#clickCollectionEnabled).
 
-Download links will automatically be detected based on popular file types. The logic for how downloads are classified is configurable.
+Download links are automatically detected based on popular file types. The logic for how downloads are classified is configurable.
