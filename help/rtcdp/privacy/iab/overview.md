@@ -143,7 +143,7 @@ The `setConsent` command expects two arguments: (1) a string that indicates the 
 ```js
 alloy("setConsent", {
   consent: [{
-    standard: "IAB",
+    standard: "IAB TCF",
     version: "2.0",
     value: "CLcVDxRMWfGmWAVAHCENAXCkAKDAADnAABRgA5mdfCKZuYJez-NQm0TBMYA4oCAAGQYIAAAAAAEAIAEgAA.argAC0gAAAAAAAAAAAA",
     gdprApplies: "true"
