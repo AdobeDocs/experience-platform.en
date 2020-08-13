@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type
+keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type;datatype;Datatype
 solution: Experience Platform
 title: Create a data type
 topic: developer guide
