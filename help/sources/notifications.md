@@ -22,22 +22,22 @@ This document requires a working understanding of the following components of Ad
 
 *   [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
 *   [[!DNL Real-time Customer Profile]](../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-*   [[!DNL Data Ingestion]](../ingestion/home.md): Data Ingestion represents the multiple methods by which [!DNL Platform] ingests data from these sources, as well as how that data is persisted within the Data Lake for use by downstream [!DNL Platform] services.
+*   [Data Ingestion](../ingestion/home.md): Data Ingestion represents the multiple methods by which [!DNL Platform] ingests data from these sources, as well as how that data is persisted within the Data Lake for use by downstream [!DNL Platform] services.
 *   [[!DNL Observability]](../observability/home.md): Observability Insights is a RESTful API that allows you to expose key observability metrics in [!DNL Platform]. These metrics provide insights into [!DNL Platform] usage statistics, health-checks for [!DNL Platform] services, historical trends, and performance indicators for various [!DNL Platform] functionalities.
+
+This document also requires a working understanding of webhooks and how to connect a webhook from one application to another. See the following [documentation](https://requestbin.com/blog/working-with-webhooks/) for more information on webhooks.
 
 ## Subscribe to events
 
 The first step in receiving flow run notifications is to subscribe to events using [Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events.html).
 
-Follow the steps outlined in the [Data ingestion notifications](../ingestion/quality/subscribe-events.md) document to start subscribing to events.
+Follow the steps outlined in the [data ingestion notifications](../ingestion/quality/subscribe-events.md) document to start subscribing to events.
 
 > [!IMPORTANT] To receive flow run notifications, ensure that you select [!DNL Platform] notifications as the event provider and **[!UICONTROL Experience Platform Source's Flow Run Succeeded]** and [**!UICONTROL Experience Platform Source's Flow Run Success Failed]** as event subscriptions when subscribing through the I/O console.
 
 ## Register your webhook
 
-A webhook is a channel that allows for the real-time delivery of information from one application to another.
-
-To connect a webhook to your I/O Events subscription, visit [webhooks](https://webhook.site/) and copy the unique URL provided in the homepage.
+A webhook is a channel that allows for the real-time delivery of information from one application to another. To connect a webhook to your I/O Events subscription, visit the [webhooks](https://webhook.site/) and copy the unique URL provided in the homepage.
 
 ![webhook-link](./images/notifications/webhook-url.png)
 
@@ -230,7 +230,8 @@ The following response is an example of a failed flow run. A failed flow run inc
 ]
 ```
 
-> [!IMPORTANT] If partial ingestion is enabled during the flow creation process, a flow that contains both successful and failed ingestions will be marked as `sources_flow_run_success` only if the number of errors is below the error threshold percentage set during the flow creation process. If a successful flow run contains errors, these errors will still be included as part of the return payload.
+> [!IMPORTANT]
+> If partial ingestion is enabled during the flow creation process, a flow that contains both successful and failed ingestions will be marked as `sources_flow_run_success` only if the number of errors is below the error threshold percentage set during the flow creation process. If a successful flow run contains errors, these errors will still be included as part of the return payload.
 
 ## Next steps
 
