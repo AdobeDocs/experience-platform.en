@@ -17,6 +17,8 @@ user-guide-title: Intelligent Services Help
   * [Accessing scores](attribution-ai/download-scores.md)
 * Content and Commerce AI {#content-commerce-ai}
   * [Overview](content-commerce-ai/overview.md)
+  * [Getting started](content-commerce-ai/getting-started.md)
+  * API{#api}
 * Customer AI {#customer-ai}
   * [Overview](customer-ai/overview.md)
   * [Getting started with Customer AI](customer-ai/getting-started.md)

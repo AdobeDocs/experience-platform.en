@@ -96,7 +96,9 @@ The following parameters can be overridden in the data object:
 
 **Response**
 
-A successful response returns an array housing each colors data in an object with `feature_name` and `feature_value`. The `feature_value` key contains a color name, a percentage this color appears in relation to the image sent, and the rgb value of the color.
+A successful response returns an array housing each colors data in an object with `feature_name` and `feature_value`. The `feature_value` key contains a string with a color name, a percentage this color appears in relation to the image sent, and the rgb value of the color.
+
+In the first example object below `"feature_value": "White,0.82,239,239,239"`, means the color found was White, this color was found in 82% of the image, and the RGB value is 239,239,239.
 
 ```json
 {
@@ -138,4 +140,4 @@ A successful response returns an array housing each colors data in an object wit
 | Property | Description |
 | --- | --- |
 | `content_id` | The name of the image that was uploaded in your POST request. |
-| `feature_value` | An array that contains keys with the same property name. These keys contain a list that has the color name, a percentage this color appears in relation to the image sent in the `content_id`, and the rgb value of the color.  |
+| `feature_value` | An array that contains keys with the same property name. These keys contain a list that has the color name, a percentage this color appears in relation to the image sent in the `content_id`, and the rgb value of the color. |
