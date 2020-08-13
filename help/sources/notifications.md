@@ -11,7 +11,9 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 [!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
-With the [!DNL Experience Platform] user interface, you can subscribe to events and use webhooks to receive notifications regarding the status of your flow runs. These notifications contain information about the success of your flow run or errors that contributed to a run's failure. This document provides steps on how to subscribe to events, register webhooks, and receive flow run notifications containing information on the status of your dataflow.
+With the [!DNL Experience Platform] user interface, you can subscribe to events and use webhooks to receive notifications regarding the status of your flow runs. These notifications contain information about the success of your flow run or errors that contributed to a run's failure.
+
+This document provides steps on how to subscribe to events, register webhooks, and receive notifications containing information on the status of your flow runs.
 
 ## Getting started
 
@@ -28,7 +30,7 @@ The first step in receiving flow run notifications is to subscribe to events usi
 
 Follow the steps outlined in the [Data ingestion notifications](../ingestion/quality/subscribe-events.md) document to start subscribing to events.
 
-> [!IMPORTANT] To receiving flow run notifications, ensure that you select `aep_observability_catalog_events` when subscribing through the I/O console.
+> [!IMPORTANT] To receive flow run notifications, ensure that you select [!DNL Platform] notifications as the event provider and **[!UICONTROL Experience Platform Source's Flow Run Succeeded]** and [**!UICONTROL Experience Platform Source's Flow Run Success Failed]** as event subscriptions when subscribing through the I/O console.
 
 ## Register your webhook
 
@@ -147,7 +149,7 @@ A returning payload contains a set of metrics that define characteristics of a s
 | Property | Description |
 | -------- | ----------- |
 | `metrics` | Defines characteristics of the data in the flow run. |
-| `activities` | Defines how the data is transformed. |
+| `activities` | Defines the different steps and activities that are performed to transform the data. |
 | `durationSummary` | Defines the start and end time of the flow run. |
 | `sizeSummary` | Defines the volume of the data in bytes. |
 | `recordSummary` | Defines the record count of the data. |
