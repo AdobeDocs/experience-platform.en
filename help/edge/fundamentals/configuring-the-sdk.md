@@ -71,7 +71,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  When configuring multipl
 
 ## Data collection
 
-### `clickCollectionEnabled`
+### `clickCollectionEnabled` {#clickCollectionEnabled}
 
 | **Type** | **Required** | **Default Value** |
 | -------- | ------------ | ----------------- |
