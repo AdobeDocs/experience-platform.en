@@ -93,7 +93,7 @@ topic: getting started
 
 **Capping:** In the [!DNL Decisioning Service], capping is used in decisioning rules to define how many times an offer is presented. There are two types of caps, how many times an offer can be proposed across the combined target audience, also known as "Global Cap" and how many times an offer can be proposed to the same end user, also known as "Profile Cap".
 
-**Catalog:** In [!DNL Real-time Customer Data Platform], in sources and destinations, a catalog is gallery with available connections to Adobe applications and 3rd Party technologies.
+**Catalog:** In [!DNL Real-time Customer Data Platform], in sources and destinations, a catalog is a gallery with available connections to Adobe applications and 3rd Party technologies.
 
 **Class:** A class defines the smallest set of fields used to build a schema and is the base behavior that describes the business object.
 
@@ -203,7 +203,7 @@ topic: getting started
 
 **Delta Save Strategy:** `Delta save strategy` is an option for ingesting third-party data via a connection. The option allows the user to specify that new or changed rows of source data are ingested to [!DNL Experience Platform]. New rows are added to the end of the dataset and changed rows are updated in the dataset on [!DNL Experience Platform].
 
-**Destination:** In [!DNL Real-time Customer Data Platform] a destination is a general term for any system, such as an Adobe application, ad server, or ad network where an audience is activated and delivered.
+**Destination:** In [!DNL Real-time Customer Data Platform] a destination is a general term for any endpoint, such as an Adobe application, advertising platform, cloud storage service, or marketing service, where an audience is activated and delivered.
 
 **Destination Category:** A destination category is a grouping of [!DNL Real-time Customer Data Platform] destinations that have similar characteristics.
 
@@ -411,7 +411,7 @@ topic: getting started
 
 **Profile Export:** [!DNL Profile] export is one of the two types of destinations in [!DNL Real-time Customer Data Platform]. [!DNL Profile] export generates a file containing profiles and attributes, and uses raw PII data with email and is used to integrate with marketing and email automation platforms.
 
-**Profile FProfile Fragragment:** A profile fragment is the profile information for just one identity out of the list of identities that exist for a particular user. 
+**Profile Fragment:** A profile fragment is the profile information for just one identity out of the list of identities that exist for a particular user. 
 
 **Profile ID:** A profile ID is an auto-generated identifier associated with an identity type and represents a profile.
 
@@ -483,7 +483,7 @@ topic: getting started
 
 **Segment Evaluation Method:** Segment scheduled evaluation enables a recurring schedule for running an export job at a specific time, whereas on-demand evaluation involves creating a segment job to build the audience immediately. 
 
-**Segment Export:** Segment export is one of the two types of destinations and send the profiles that qualify and have been mapped to the destination. Uses segment and user IDs and pseudonymous data and typically integrates with social networks and other digital media target platforms.
+**Segment Export:** Segment export is one of the two types of destinations in [!DNL Real-time Customer Data Platform]. With segment export, you can send the profiles that qualify and have been mapped to the destination. Uses segment and user IDs and pseudonymous data and typically integrates with social networks and other digital media target platforms.
 
 **Segment ID:** Segment ID is an auto-generated identifier associated with a segment.
 
