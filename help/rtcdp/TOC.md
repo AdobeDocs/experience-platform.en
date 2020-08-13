@@ -121,13 +121,13 @@ user-guide-title: Real-Time Customer Data Platform Help
     * [Activate profiles and segments to a destination](destinations/activate-destinations.md)
   * Destination API tutorials {#api-tutorials}
     *  [Connect to streaming destinations (AWS Kinesis and Azure Event Hubs) and activate data](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
-    *  [Connect to email marketing destinations and activate data](/help/tutorials/destinations/email-marketing-api.md)
+    *  [Connect to email marketing destinations and activate data](https://docs.adobe.com/content/help/en/experience-platform/tutorials/destinations/email-marketing-api.html)
 * Privacy and data governance {#privacy}
   * [Privacy overview](privacy/privacy-overview.md)
   * [Data Governance overview](privacy/data-governance-overview.md)
   * IAB TCF 2.0 support {#iab}
-      * [IAB TCF 2.0 support in Real-time CDP](./privacy/iab/overview.md)
-      * [Create datasets for capturing IAB TCF 2.0 consent data](./privacy/iab/dataset-preparation.md)
+      * [IAB TCF 2.0 support in Real-time CDP](privacy/iab/overview.md)
+      * [Create datasets for capturing IAB TCF 2.0 consent data](privacy/iab/dataset-preparation.md)
 * Profiles {#profile}
   * [Profile overview](profile/profile-overview.md)
   * [Identities & identity namespaces](profile/identities-overview.md)
