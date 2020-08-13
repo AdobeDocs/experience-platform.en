@@ -217,6 +217,7 @@ The response includes a `data` array, with individual objects containing the det
       "sampleCount": 12148,
       "samplePercentage": 0.296271,
       "reportTimestamp": "2020-08-01T17:57:58.697",
+      "fullIDsFragmentCount": 13141,
       "fullIDsCount": 12631,
       "fullIDsPercentage": 0.308051,
       "code": "Email",
@@ -226,6 +227,7 @@ The response includes a `data` array, with individual objects containing the det
       "sampleCount": 6989,
       "samplePercentage": 0.170451,
       "reportTimestamp": "2020-08-01T17:57:58.697",
+      "fullIDsFragmentCount": 7543,
       "fullIDsCount": 7042,
       "fullIDsPercentage": 0.171744,
       "code": "ECID",
@@ -235,6 +237,7 @@ The response includes a `data` array, with individual objects containing the det
       "sampleCount": 888,
       "samplePercentage": 0.021657,
       "reportTimestamp": "2020-08-01T17:57:58.697",
+      "fullIDsFragmentCount": 3801,
       "fullIDsCount": 3206,
       "fullIDsPercentage": 0.078189,
       "code": "AAID",
@@ -244,6 +247,7 @@ The response includes a `data` array, with individual objects containing the det
       "sampleCount": 21809,
       "samplePercentage": 0.531888,
       "reportTimestamp": "2020-08-01T17:57:58.697",
+      "fullIDsFragmentCount": 27023,
       "fullIDsCount": 21936,
       "fullIDsPercentage": 0.534985,
       "code": "Phone",
@@ -259,6 +263,7 @@ The response includes a `data` array, with individual objects containing the det
 |`sampleCount`|The total number of sampled merged profiles in the namespace.|
 |`samplePercentage`|The `sampleCount` as a percentage of sampled merged profiles (the `numRowsToRead` value as returned in the [last sample status](#view-last-sample-status)), expressed in decimal format.|
 |`reportTimestamp`|The timestamp of the report. If a `date` parameter was provided during the request, the report returned is for the date provided. If no `date` parameter is provided, the most recent report is returned.|
+|`fullIDsFragmentCount`|The total number of profile fragments in the namespace.|
 |`fullIDsCount`|The total number of merged profiles in the namespace.|
 |`fullIDsPercentage`|The `fullIDsCount` as a percentage of total merged profiles (the `totalRows` value as returned in the [last sample status](#view-last-sample-status)), expressed in decimal format.|
 |`code`|The `code` for the namespace. This can be found when working with namespaces using the [Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md) and is also referred to as the [!UICONTROL Identity symbol] in the Experience Platform UI. To learn more, visit the [identity namespace overview](../../identity-service/namespaces.md).|
