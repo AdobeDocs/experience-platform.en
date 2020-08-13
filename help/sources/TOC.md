@@ -59,6 +59,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [PayPal connector](connectors/payments/paypal.md)
   - Protocols {#protocols}
     - [Generic OData connector](connectors/protocols/odata.md)
+- [Flow run notifications](notifications.md) {#notifications}
 - API tutorials {#api-tutorials}
   - Create a source connector {#create}
     - Advertising {#advertising}

@@ -28,13 +28,13 @@ The first step in receiving flow run notifications is to subscribe to events usi
 
 Follow the steps outlined in the [Data ingestion notifications](../ingestion/quality/subscribe-events.md) document to start subscribing to events.
 
-> [!IMPORTANT] To receiving flow run notifications, make sure that you select `aep_observability_catalog_events` when subscribing through the I/O console.
+> [!IMPORTANT] To receiving flow run notifications, ensure that you select `aep_observability_catalog_events` when subscribing through the I/O console.
 
 ## Register your webhook
 
 A webhook is a channel that allows for the real-time delivery of information from one application to another.
 
-To connect a webhook to your I/O Events subscription, visit [webhook.site](https://webhook.site/) and copy the unique URL provided in the homepage.
+To connect a webhook to your I/O Events subscription, visit [webhooks](https://webhook.site/) and copy the unique URL provided in the homepage.
 
 ![webhook-link](./images/notifications/webhook-url.png)
 
@@ -146,7 +146,6 @@ A returning payload contains a set of metrics that define characteristics of a s
 
 | Property | Description |
 | -------- | ----------- |
-| `items` | Contains a single payload of metadata associated with your specific flow run. |
 | `metrics` | Defines characteristics of the data in the flow run. |
 | `activities` | Defines how the data is transformed. |
 | `durationSummary` | Defines the start and end time of the flow run. |
