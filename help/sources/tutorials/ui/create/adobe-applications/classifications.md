@@ -43,9 +43,12 @@ Once you have selected your [!DNL Classifications] datasets, select **[!UICONTRO
 The **[!UICONTROL Review]** step appears, allowing you to review your selected [!DNL Classifications] datasets before it is created. Details are grouped within the following categories:
 
 * **[!UICONTROL Connection]**: Shows the source platform and the status of the connection.
-* **[!UICONTROL Data type]**: Shows the number of selected [!DNL Classifications] and the status of the connections.
+* **[!UICONTROL Data type]**: Shows the number of selected [!DNL Classifications].
+* **[!UICONTROL Scheduling]**: Shows the frequency of synchronization for [!DNL Classifications] data.
 
 Once you have reviewed your dataflow, click **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
+
+![](../../../../images/tutorials/create/classifications/review.png)
 
 ## Monitor and delete your classifications dataflow
 
