@@ -43,7 +43,7 @@ Log in to [Adobe Experience Platform](https://platform.adobe.com) and then selec
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the **[!UICONTROL Databases]** category, select **[!UICONTROL Azure File Storage]** followed by **[!UICONTROL Add data]** to create a new Azure File Storage connector.
+Under the **[!UICONTROL Databases]** category, select **[!UICONTROL Azure File Storage]** followed by **[!UICONTROL Add data]** to create a new [!DNL Azure File Storage] connector.
 
 ![catalog](../../../../images/tutorials/create/azure-file-storage/catalog.png)
 

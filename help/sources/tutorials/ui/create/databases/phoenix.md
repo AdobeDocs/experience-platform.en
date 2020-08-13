@@ -40,13 +40,13 @@ For more information about getting started refer to [this [!DNL Phoenix] documen
 
 ## Connect your [!DNL Phoenix] account
 
-Once you have gathered your required credentials, you can follow the steps below to create a new [!DNL Phoenix] account to connect to [!DNL Platform].
+Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Phoenix] account to connect to [!DNL Platform].
 
-Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create inbound account, and each source shows the number of existing accounts and dataset flows associated to them.
+Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with, and each source shows the number of existing accounts and dataset flows associated to them.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the **[!UICONTROL Databases]** category, select **[!UICONTROL Phoenix]** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To create a new inbound connection, select **[!UICONTROL Add data]**.
+Under the **[!UICONTROL Databases]** category, select **[!UICONTROL Phoenix]** followed by **[!UICONTROL Add data]** to create a new [!DNL Phoenix] account.
 
 ![catalog](../../../../images/tutorials/create/phoenix/catalog.png)
 
