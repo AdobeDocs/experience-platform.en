@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;create schema;enum
+keywords: Experience Platform;home;popular topics;schema;Schema;create schema;enum;XDM individual profile
 solution: Experience Platform
 title: Create a schema using the Schema Editor
 topic: tutorials

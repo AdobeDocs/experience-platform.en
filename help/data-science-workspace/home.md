@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;Data Science Workspace;popular topics;data science workspace
+keywords: Experience Platform;home;Data Science Workspace;popular topics;data science workspace;data science
 solution: Experience Platform
 title: Data Science Workspace overview
 topic: overview
