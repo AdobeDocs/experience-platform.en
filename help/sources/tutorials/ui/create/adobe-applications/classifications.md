@@ -56,11 +56,15 @@ Once your dataflow has been created, you can monitor the data that is being inge
 
 ![](../../../../images/tutorials/create/classifications/dataflows.png)
 
-The **[!UICONTROL Dataflows]** screen appears. On this page is a list of dataflows, including information about their name, source data, and dataflow run status. The **[!UICONTROL Properties]** panel contains metadata regarding your [!DNL Classifications] dataflow, as well as options to disable or delete your [!DNL Classifications] dataflow.
+The **[!UICONTROL Dataflows]** screen appears. On this page is a list of dataflows, including information about their name, source data, and dataflow run status. On the right, is the **[!UICONTROL Properties]** panel that contains metadata regarding your [!DNL Classifications] dataflow.
 
-Select **[!UICONTROL Delete]** to start the process.
+Select the **[!UICONTROL Target dataset]** you wish to access.
 
-![](../../../../images/tutorials/create/classifications/delete.png)
+![](../../../../images/tutorials/create/classifications/list-of-dataflows.png)
+
+The **[!UICONTROL Dataset activity]** page displays information about the target dataset you selected, including details about its batch status, dataset ID, and schema. Select **[!UICONTROL Delete dataset]** to delete.
+
+![](../../../../images/tutorials/create/classifications/batch-screen.png)
 
 A dialog box appears confirming the deletion. Select **[!UICONTROL Delete]** to complete.
 
