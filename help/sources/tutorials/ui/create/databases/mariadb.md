@@ -37,7 +37,7 @@ Please refer to [this [!DNL MariaDB] document](https://mariadb.com/kb/en/about-m
 
 Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Maria DB] account to [!DNL Platform].
 
-Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an inbound account with, and each source shows the number of existing accounts and dataflows associated with them.
+Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with, and each source shows the number of existing accounts and dataflows associated with them.
 
 Under the **[!UICONTROL Databases]** category, select **[!UICONTROL Maria DB]** followed by **[!UICONTROL Add data]** to create a new [!DNL Maria DB] connector.
 

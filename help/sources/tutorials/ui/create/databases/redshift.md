@@ -43,6 +43,8 @@ Once you have gathered your required credentials, you can follow the steps below
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with, and each source shows the number of existing accounts and dataflows associated with them.
 
+You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+
 Under the **[!UICONTROL Databases]** category, select **[!UICONTROL Amazon Redshift]** followed by **[!UICONTROL Add data]** to create a new [!DNL Redshift] connector.
 
 ![](../../../../images/tutorials/create/redshift/catalog.png)

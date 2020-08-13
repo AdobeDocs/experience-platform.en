@@ -7,7 +7,7 @@ topic: overview
 
 # Create an [!DNL Azure Blob] source connector in the UI
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an [!DNL Azure Blob] (hereinafter referred to as "Blob") using the [!DNL Platform] user interface.
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an [!DNL Azure Blob] (hereinafter referred to as "[!DNL Blob]") using the [!DNL Platform] user interface.
 
 ## Getting started
 
@@ -18,7 +18,7 @@ This tutorial requires a working understanding of the following components of Ad
     -   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 -   [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
-If you already have a Blob base connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/batch/cloud-storage.md).
+If you already have a [!DNL Blob] base connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/batch/cloud-storage.md).
 
 ### Supported file formats
 
@@ -30,19 +30,19 @@ If you already have a Blob base connection, you may skip the remainder of this d
 
 ### Gather required credentials
 
-In order to access your Blob storage on [!DNL Platform], you must provide a valid value for the following credential:
+In order to access your [!DNL Blob] storage on [!DNL Platform], you must provide a valid value for the following credential:
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string required to access data in your Blob storage. The Blob connection string pattern is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionString` | The connection string required to access data in your Blob storage. The [!DNL Blob] connection string pattern is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
 
-For more information on getting started, visit [this Azure Blob document](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string).
+For more information on getting started, visit [this [!DNL Azure Blob] document](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string).
 
 ## Connect your Blob account
 
-Once you have gathered your required credentials, you can follow the steps below to create a new Blob account to connect to [!DNL Platform].
+Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Blob] account to [!DNL Platform].
 
-Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an inbound account with, and each source shows the number of existing accounts and dataflows associated with them.
+Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with, and each source shows the number of existing accounts and dataflows associated with them.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 

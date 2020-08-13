@@ -7,7 +7,7 @@ topic: overview
 
 # Create an [!DNL Azure Data Lake Storage Gen2] source connector in the UI
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for authenticating an [!DNL Azure Data Lake Storage Gen2] (hereinafter referred to as "ADLS Gen2") source connector using the [!DNL Platform] user interface.
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for authenticating an [!DNL Azure Data Lake Storage Gen2] (hereinafter referred to as "[!DNL ADLS Gen2]") source connector using the [!DNL Platform] user interface.
 
 ## Getting started
 
@@ -22,22 +22,22 @@ If you already have an ADLS Gen2 base connection, you may skip the remainder of 
 
 ### Gather required credentials
 
-In order to authenticate your ADLS Gen2 source connector, you must provide values for the following connection properties:
+In order to authenticate your [!DNL ADLS Gen2] source connector, you must provide values for the following connection properties:
 
 | Credential | Description |
 | ---------- | ----------- |
-| `url` | The endpoint for ADLS Gen2. |
+| `url` | The endpoint for [!DNL ADLS Gen2]. |
 | `servicePrincipalId` | The application's client ID. |
 | `servicePrincipalKey` | The application's key. |
 | `tenant` | The tenant information that contains your application. |
 
-For more information about these values, refer to [this ADLS Gen2 document](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage).
+For more information about these values, refer to [this [!DNL ADLS Gen2] document](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage).
 
-## Connect your ADLS Gen2 account
+## Connect your [!DNL ADLS Gen2] account
 
-Once you have gathered your required credentials, you can follow the steps below to create a new ADLS Gen2 account to connect to [!DNL Platform].
+Once you have gathered your required credentials, you can follow the steps below to link your [!DNL ADLS Gen2] account to connect to [!DNL Platform].
 
-Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an inbound account with, and each source shows the number of existing accounts and dataflows associated with them.
+Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with, and each source shows the number of existing accounts and dataflows associated with them.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
@@ -49,16 +49,16 @@ The **[!UICONTROL Connect to Azure Data Lake Gen2]** dialog appears. On this pag
 
 ### New account
 
-If you are using new credentials, select **[!UICONTROL New Account]**. On the input form that appears, provide the base connection with a name, an optional description, and your ADLS Gen2 credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new base connection to establish.
+If you are using new credentials, select **[!UICONTROL New Account]**. On the input form that appears, provide the base connection with a name, an optional description, and your [!DNL ADLS Gen2] credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new base connection to establish.
 
 ![](../../../../images/tutorials/create/adls-gen2/connect.png)
 
 ### Existing account
 
-To connect an existing account, select the ADLS Gen2 account you want to connect with, then select **[!UICONTROL Next]** to proceed.
+To connect an existing account, select the [!DNL ADLS Gen2] account you want to connect with, then select **[!UICONTROL Next]** to proceed.
 
 ![](../../../../images/tutorials/create/adls-gen2/existing.png)
 
 ## Next steps
 
-By following this tutorial, you have established a base connection to your ADLS Gen2 account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into [!DNL Platform]](../../dataflow/batch/cloud-storage.md).
+By following this tutorial, you have established a base connection to your [!DNL ADLS Gen2] account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into [!DNL Platform]](../../dataflow/batch/cloud-storage.md).
