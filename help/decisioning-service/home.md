@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;offer management;Offer Management
+keywords: Experience Platform;home;popular topics;offer management;Offer Management;Journey;customer journey;journey;decision events;decision event;Decision events
 solution: Experience Platform
 title: Decisioning Service
 topic: overview
