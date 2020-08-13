@@ -17,9 +17,10 @@ With the [!DNL Experience Platform] user interface, you can subscribe to events 
 
 This document requires a working understanding of the following components of Adobe Experience Platform:
 
-*   [Experience Data Model (XDM) System](../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-*   [Real-time Customer Profile](../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-*   [Data Ingestion](../ingestion/home.md): Data Ingestion represents the multiple methods by which [!DNL Platform] ingests data from these sources, as well as how that data is persisted within the Data Lake for use by downstream [!DNL Platform] services.
+*   [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+*   [[!DNL Real-time Customer Profile]](../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+*   [[!DNL Data Ingestion]](../ingestion/home.md): Data Ingestion represents the multiple methods by which [!DNL Platform] ingests data from these sources, as well as how that data is persisted within the Data Lake for use by downstream [!DNL Platform] services.
+*   [[!DNL Observability]](../observability/home.md): Observability Insights is a RESTful API that allows you to expose key observability metrics in [!DNL Platform]. These metrics provide insights into [!DNL Platform] usage statistics, health-checks for [!DNL Platform] services, historical trends, and performance indicators for various [!DNL Platform] functionalities.
 
 ## Subscribe to events
 
@@ -37,7 +38,7 @@ To connect a webhook to your I/O Events subscription, visit [webhook.site](https
 
 ![webhook-link](./images/notifications/webhook-url.png)
 
-Once you have copied the webhook link, paste the link in the *[!UICONTROL Webhook URL]* textbox in the *[!UICONTROL Configure event registration]* step of the event subscription process. Select **[!UICONTROL Save configured events]** to continue.
+Once you have copied the webhook link, paste the link in the **[!UICONTROL Webhook URL]** textbox in the **[!UICONTROL Configure event registration]** step of the event subscription process. Select **[!UICONTROL Save configured events]** to continue.
 
 ![register-webhook](./images/notifications/register-webhook.png)
 
@@ -51,7 +52,7 @@ A notification returns information such as the number of ingestions made, file s
 
 ### Success
 
-The following JSON payload includes information that pertain to a successful flow run.
+The following following response is an example of a successful flow run.
 
 ```json
 {
@@ -143,16 +144,20 @@ The following JSON payload includes information that pertain to a successful flo
 
 A returning payload contains a set of metrics that define characteristics of a specific flow run. See the table below for more information about each metric.
 
-| Metrics | Description |
-| ------- | ----------- |
-| Duration | Captures the start and end time of the flow run. |
-| Size | Captures the volume of the data in bytes. |
-| File | Captures the file count of the data. |
-| Record | Captures the record count of the data. |
+| Property | Description |
+| -------- | ----------- |
+| `items` | Contains a single payload of metadata associated with your specific flow run. |
+| `metrics` | Defines characteristics of the data in the flow run. |
+| `activities` | Defines how the data is transformed. |
+| `durationSummary` | Defines the start and end time of the flow run. |
+| `sizeSummary` | Defines the volume of the data in bytes. |
+| `recordSummary` | Defines the record count of the data. |
+| `fileSummary` | Defines the file count of the data. |
+| `statusSummary` | Defines whether the flow run is a success or a failure. |
 
 ### Failure
 
-The following JSON payload includes information that pertain to a failed flow run. A notification regarding a failed flow run includes information about the errors that contributed to the run's failure, including its error code and description.
+The following response is an example of a failed flow run. A failed flow run includes information about the errors that contributed to the run's failure, including its error code and description.
 
 ```json
 [
@@ -224,3 +229,7 @@ The following JSON payload includes information that pertain to a failed flow ru
 ```
 
 > [!IMPORTANT] If partial ingestion is enabled during the flow creation process, a flow that contains both successful and failed ingestions will be marked as `sources_flow_run_success` only if the number of errors is below the error threshold percentage set during the flow creation process. If a successful flow run contains errors, these errors will still be included as part of the return payload.
+
+## Next steps
+
+You can now subscribe to events and create webhooks that allow you to receive real-time notifications that provide statuses on your flow runs. For more information on flow runs and sources, see the [sources overview](./home.md).
