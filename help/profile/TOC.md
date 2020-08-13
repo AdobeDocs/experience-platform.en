@@ -15,6 +15,7 @@ user-guide-title: Real-time Customer Profile Help
   * [Entities ([!DNL Profile] access)](api/entities.md)
   * [Export jobs ([!DNL Profile] export)](api/export-jobs.md)
   * [Merge policies](api/merge-policies.md)
+  * [Preview sample status ([!DNL Profile] preview)](api/preview-sample-status.md)
   * [[!DNL Profile] system jobs (Delete requests)](api/profile-system-jobs.md)
 * UI guides {#ui}
   * [[!DNL Profile] user guide](ui/user-guide.md)
