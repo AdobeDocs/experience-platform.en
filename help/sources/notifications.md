@@ -22,7 +22,7 @@ This document requires a working understanding of the following components of Ad
 
 *   [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
 *   [[!DNL Real-time Customer Profile]](../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-*   [Data Ingestion](../ingestion/home.md): Data Ingestion represents the multiple methods by which [!DNL Platform] ingests data from these sources, as well as how that data is persisted within the Data Lake for use by downstream [!DNL Platform] services.
+*   [Data ingestion](../ingestion/home.md): Data Ingestion represents the multiple methods by which [!DNL Platform] ingests data from these sources, as well as how that data is persisted within the Data Lake for use by downstream [!DNL Platform] services.
 *   [[!DNL Observability]](../observability/home.md): Observability Insights is a RESTful API that allows you to expose key observability metrics in [!DNL Platform]. These metrics provide insights into [!DNL Platform] usage statistics, health-checks for [!DNL Platform] services, historical trends, and performance indicators for various [!DNL Platform] functionalities.
 
 This document also requires a working understanding of webhooks and how to connect a webhook from one application to another. See the following [documentation](https://requestbin.com/blog/working-with-webhooks/) for more information on webhooks.
@@ -33,15 +33,18 @@ The first step in receiving flow run notifications is to subscribe to events usi
 
 Follow the steps outlined in the [data ingestion notifications](../ingestion/quality/subscribe-events.md) document to start subscribing to events.
 
-> [!IMPORTANT] To receive flow run notifications, ensure that you select [!DNL Platform] notifications as the event provider and **[!UICONTROL Experience Platform Source's Flow Run Succeeded]** and [**!UICONTROL Experience Platform Source's Flow Run Success Failed]** as event subscriptions when subscribing through the I/O console.
+> [!IMPORTANT]
+> During the subscription process, ensure that you select [!DNL Platform] notifications as the event provider and **[!UICONTROL Experience Platform Source's Flow Run Succeeded]** and [**!UICONTROL Experience Platform Source's Flow Run Success Failed]** as event subscriptions when subscribing through the I/O console.
 
 ## Register your webhook
 
-A webhook is a channel that allows for the real-time delivery of information from one application to another. To connect a webhook to your I/O Events subscription, visit the [webhooks](https://webhook.site/) and copy the unique URL provided in the homepage.
+In order to receive notifications on the status of your flow run, you must register a webhook by specifying a unique webhook URL as part of your event registration details.
+
+A webhook is a channel that allows for the real-time delivery of information from one application to another. To connect a webhook to your I/O Events subscription, visit the [webhook homepage](https://webhook.site/) and copy the unique URL provided.
 
 ![webhook-link](./images/notifications/webhook-url.png)
 
-Once you have copied the webhook link, paste the link in the **[!UICONTROL Webhook URL]** textbox in the **[!UICONTROL Configure event registration]** step of the event subscription process. Select **[!UICONTROL Save configured events]** to continue.
+Once you have copied the webhook URL, paste the URL in the **[!UICONTROL Webhook URL]** textbox in the **[!UICONTROL Configure event registration]** step of the event subscription process. Select **[!UICONTROL Save configured events]** to continue.
 
 ![register-webhook](./images/notifications/register-webhook.png)
 
