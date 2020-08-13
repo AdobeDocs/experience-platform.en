@@ -13,9 +13,9 @@ topic: Getting started
 
 [!DNL Content and Commerce AI] utilizes Adobe I/O APIs. In order to make calls to Adobe I/O APIs and the I/O Console Integration, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Note that for beta adding an API for [!DNL Content and Commerce AI] will be located under Experience Cloud once you are at the **Add API** step. See the screenshot below for an example. Completing the authentication tutorial provides the values for each of the required headers in all the Adobe I/O API calls, as shown below:
 
-- Authorization: Bearer `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
 ![adding Content and Commerce AI]()
 
@@ -29,4 +29,4 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ## Next steps {#next-steps}
 
-Once you have all your credentials ready, start by following the [[!DNL Content and Commerce AI] API guide](./api.md). 
+Once you have all your credentials ready, start by following the [[!DNL Content and Commerce AI] API guide](./api/color-extraction.md). 

@@ -18,7 +18,8 @@ user-guide-title: Intelligent Services Help
 * Content and Commerce AI {#content-commerce-ai}
   * [Overview](content-commerce-ai/overview.md)
   * [Getting started](content-commerce-ai/getting-started.md)
-  * API{#api}
+  * Sensei Content Framework API{#api}
+    * [Color extraction](content-commerce-ai/api/color-extraction.md)
 * Customer AI {#customer-ai}
   * [Overview](customer-ai/overview.md)
   * [Getting started with Customer AI](customer-ai/getting-started.md)
