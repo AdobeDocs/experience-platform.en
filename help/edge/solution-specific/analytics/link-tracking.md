@@ -7,7 +7,7 @@ seo-description: Learn how to send Link Data to Adobe Analytics with Experience 
 
 # Sending Data to Adobe Analytics
 
-Where as in the past there were different functions to distinquish between a page view and a link (e.g. `s.t(), s.tl()`. In the Web SDK there is just the `sendEvent` command. The data you send with an event will determine whether it should be a page view or a link.
+Whereas in the past there were different functions to distinquish between a page view and a link (for example, `s.t(), s.tl()`), in the Web SDK there is just the `sendEvent` command. The data you send with an event determines whether it should be a page view or a link.
 
 ## Sending a  page view
 
@@ -26,7 +26,7 @@ alloy("sendEvent", {
 });
 ```
 
-While analytics will technically record a page view even if this variable is not set it is a best practice to set this variable whenever you want to record a page view to be explicit in your data and to future proof you implementation. 
+While analytics technically records a page view even if this variable is not set, it is a best practice to set this variable whenever you want to record a page view to be explicit in your data and to futureproof you implementation. 
 
 ## Tracking Links
 
@@ -48,10 +48,14 @@ alloy("sendEvent", {
 });
 ```
 
-The link type can be one of three values: `other` which is a custom link, `download` which ia a download link (these can be tracked automatically by the library) and `exit` for an exit link.
+The link type can be one of three values: 
+
+* **`other`:** A custom link
+* **`download`:** A download link (these can be tracked automatically by the library)
+* **`exit`:** An exit link
 
 ### Automatic Link Tracking
 
-The Web SDK can automatically all link clicks by enabling [clickCollection](../../fundamentals/configuring-the-sdk.md#clickCollectionEnabled)
+The Web SDK can automatically track all link clicks by enabling [clickCollection](../../fundamentals/configuring-the-sdk.md#clickCollectionEnabled).
 
 Download links will automatically be detected based on popular file types. The logic for how downloads are classified is configurable.
