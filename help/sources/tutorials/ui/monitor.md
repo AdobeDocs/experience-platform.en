@@ -93,7 +93,9 @@ The *[!UICONTROL Error diagnostics preview]* panel appears. This screen displays
 
 This section also includes a preview of the column that contains the error.
 
-> [!IMPORTANT] To enable *[!UICONTROL Error diagnostics preview]* you must activate *[!UICONTROL Partial ingestion]* and *[!UICONTROL Error diagnostics]* when configuring a dataflow. Doing so will allow the system to scan all of the records ingested during the flow run.
+>[!IMPORTANT]
+>
+>To enable *[!UICONTROL Error diagnostics preview]* you must activate *[!UICONTROL Partial ingestion]* and *[!UICONTROL Error diagnostics]* when configuring a dataflow. Doing so will allow the system to scan all of the records ingested during the flow run.
 
 ![Preview-error-diagnostics](../../images/tutorials/monitor/preview-error-diagnostics.png)
 
