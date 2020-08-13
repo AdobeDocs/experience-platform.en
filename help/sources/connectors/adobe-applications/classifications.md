@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Classifications data connector
+title: Adobe Analytics Classifications Data connector
 topic: overview
 ---
 
-# Analytics Classifications Data Connector
+# Adobe Analytics Classifications Data Connector
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
