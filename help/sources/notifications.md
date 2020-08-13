@@ -40,7 +40,7 @@ Follow the steps outlined in the [data ingestion notifications](../ingestion/qua
 
 In order to receive notifications on the status of your flow run, you must register a webhook by specifying a unique webhook URL as part of your event registration details.
 
-A webhook is a channel that allows for the real-time delivery of information from one application to another. To connect a webhook to your I/O Events subscription, visit the [webhook homepage](https://webhook.site/) and copy the unique URL provided.
+A webhook is a channel that allows for the real-time delivery of information from one application to another. To connect a webhook to your I/O Events subscription, visit the [webhook service](https://webhook.site/) and copy the unique URL provided.
 
 ![webhook-link](./images/notifications/webhook-url.png)
 
