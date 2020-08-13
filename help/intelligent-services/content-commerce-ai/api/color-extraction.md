@@ -84,14 +84,15 @@ curl -i -X POST https://sensei-stage-ew1.adobe.io/sensei-core/v1/predict \
 | `custom` | Any custom parameters to be passed. This can be an empty object if unused. | Yes |
 | `historic-metadata` | An array that can be passed metadata. | No |
 
-**Optional input parameters**
+The following parameters can be overridden in the `data` object:
 
-The following parameters can be overridden in the data object:
+- `content-id`
 - `content`
 - `content-type`
 - `encoding`
 - `threshold`
 - `top-N`
+- `historic-metadata`
 - `custom`
 
 **Response**
