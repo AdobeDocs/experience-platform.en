@@ -42,7 +42,7 @@ Log in to [Adobe Experience Platform](https://platform.adobe.com) and then selec
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the **[!UICONTROL Databases]** category, select **[!UICONTROL Oracle DB]** followed by **[!UICONTROL Add data]** to create a new [!DNL Oracle DB] connector.
+Under the **[!UICONTROL Databases]** category, select **[!UICONTROL Oracle DB]**. If this is your first time using this connector, select **[!UICONTROL Configure]**. Otherwise, select **[!UICONTROL Add data]** to create a new [!DNL Oracle DB] connector.
 
 ![catalog](../../../../images/tutorials/create/oracle/catalog.png)
 

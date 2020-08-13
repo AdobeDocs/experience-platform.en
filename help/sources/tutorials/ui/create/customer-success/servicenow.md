@@ -43,7 +43,7 @@ Log in to [Adobe Experience Platform](https://platform.adobe.com) and then selec
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the **[!UICONTROL Customer Success]** category, select **[!UICONTROL ServiceNow]** followed by **[!UICONTROL Connect source]** to create a new [!DNL ServiceNow] connector.
+Under the **[!UICONTROL Customer Success]** category, select **[!UICONTROL ServiceNow]**. If this is your first time using this connector, select **[!UICONTROL Configure]**. Otherwise, select **[!UICONTROL Connect source]** to create a new [!DNL ServiceNow] connector.
 
 ![](../../../../images/tutorials/create/servicenow/catalog.png)
 

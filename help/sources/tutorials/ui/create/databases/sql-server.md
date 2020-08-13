@@ -41,7 +41,7 @@ Log in to [Adobe Experience Platform](https://platform.adobe.com) and then selec
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the **[!UICONTROL Databases]** category, select **[!UICONTROL Microsoft SQL Server]** followed by **[!UICONTROL Add data]** to create a new [!DNL SQL Server] connector. 
+Under the **[!UICONTROL Databases]** category, select **[!UICONTROL Microsoft SQL Server]**. If this is your first time using this connector, select **[!UICONTROL Configure]**. Otherwise, select **[!UICONTROL Add data]** to create a new [!DNL SQL Server] connector. 
 
 ![](../../../../images/tutorials/create/microsoft-sql-server/catalog.png)
 

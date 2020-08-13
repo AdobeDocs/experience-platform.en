@@ -43,7 +43,7 @@ Log in to [Adobe Experience Platform](https://platform.adobe.com) and then selec
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the **[!UICONTROL Customer Success]** category, select **[!UICONTROL Salesforce Service Cloud]** followed by **[!UICONTROL Add data]** to create a new SSC connector.
+Under the **[!UICONTROL Customer Success]** category, select **[!UICONTROL Salesforce Service Cloud]**. If this is your first time using this connector, select **[!UICONTROL Configure]**. Otherwise, select **[!UICONTROL Add data]** to create a new SSC connector.
 
 ![catalog](../../../../images/tutorials/create/ssc/catalog.png)
 

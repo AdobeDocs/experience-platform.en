@@ -39,7 +39,7 @@ Once you have gathered your required credentials, you can follow the steps below
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with, and each source shows the number of existing base connections associated to them.
 
-Under the **[!UICONTROL Databases]** category, select **[!UICONTROL MySQL]** followed by **[!UICONTROL Add data]** to create a new [!DNL MySQL] connector. 
+Under the **[!UICONTROL Databases]** category, select **[!UICONTROL MySQL]**. If this is your first time using this connector, select **[!UICONTROL Configure]**. Otherwise, select **[!UICONTROL Add data]** to create a new [!DNL MySQL] connector. 
 
 ![](../../../../images/tutorials/create/my-sql/catalog.png)
 

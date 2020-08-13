@@ -45,7 +45,7 @@ Log in to [Adobe Experience Platform](https://platform.adobe.com) and then selec
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the **[!UICONTROL Advertising]** category, select **[!UICONTROL Google AdWords]** followed by **[!UICONTROL Add data]** to create a new [!DNL Google AdWords] connector.
+Under the **[!UICONTROL Advertising]** category, select **[!UICONTROL Google AdWords]**. If this is your first time using this connector, select **[!UICONTROL Configure]**. Otherwise, select **[!UICONTROL Add data]** to create a new [!DNL Google AdWords] connector.
 
 ![catalog](../../../../images/tutorials/create/ads/catalog.png)
 
