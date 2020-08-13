@@ -139,7 +139,9 @@ curl -X POST \
 | `destination` | **(Required)** Destination information for the exported data:<ul><li>`destination.datasetId`: **(Required)** The ID of the dataset where data is to be exported.</li><li>`destination.segmentPerBatch`: *(Optional)* A Boolean value that, if not provided, defaults to `false`. A value of `false` exports all segment IDs into a single batch ID. A value of `true` exports one segment ID into one batch ID. Note that setting the value to be `true` may affect batch export performance.</li></ul> |
 | `schema.name` | **(Required)** The name of the schema associated with the dataset where data is to be exported. |
 
->[!NOTE] To export only Profile data and not include related time-series data, remove the "additionalFields" object from the request.
+>[!NOTE]
+>
+>To export only Profile data and not include related time-series data, remove the "additionalFields" object from the request.
 
 **Response**
 

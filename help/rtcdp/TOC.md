@@ -40,6 +40,7 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
       * [Google Ads extension](/help/rtcdp/destinations/google-ads-extension.md)
       * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
+      * [Google Customer Match](/help/rtcdp/destinations/google-customer-match-destination.md)
       * [Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
       * [Google gtag extension](/help/rtcdp/destinations/gtag-advertising-extension.md)
       * [LinkedIn Insight Tag extension](/help/rtcdp/destinations/linkedin-extension.md)
@@ -124,6 +125,9 @@ user-guide-title: Real-Time Customer Data Platform Help
 * Privacy and data governance {#privacy}
   * [Privacy overview](privacy/privacy-overview.md)
   * [Data Governance overview](privacy/data-governance-overview.md)
+  * IAB TCF 2.0 support {#iab}
+      * [IAB TCF 2.0 support in Real-time CDP](./privacy/iab/overview.md)
+      * [Create datasets for capturing IAB TCF 2.0 consent data](./privacy/iab/dataset-preparation.md)
 * Profiles {#profile}
   * [Profile overview](profile/profile-overview.md)
   * [Identities & identity namespaces](profile/identities-overview.md)

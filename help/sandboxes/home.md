@@ -39,11 +39,11 @@ For more information on managing roles and permissions for sandboxes, see the [a
 
 ## Sandboxes in the Experience Platform UI
 
-In the [Experience Platform user interface](https://platform.adobe.com), users can switch between the sandboxes they have access to by using the **sandbox switcher** control on the top-left of the screen.  Users with Sandbox Administration privileges also have access to the **Sandboxes** tab in the left-navigation, where they can view and manage sandboxes for their organization. For more information on how to work with sandboxes in the UI, see the [sandbox user guide](ui/overview.md).
+In the [Experience Platform user interface](https://platform.adobe.com), users can switch between the sandboxes they have access to by using the **sandbox switcher** control on the top-left of the screen.  Users with Sandbox Administration privileges also have access to the **[!UICONTROL Sandboxes]** tab in the left-navigation, where they can view and manage sandboxes for their organization. For more information on how to work with sandboxes in the UI, see the [sandbox user guide](ui/overview.md).
 
 ## Sandboxes in Experience Platform APIs
 
-When making calls to Experience Platform APIs, a sandbox name must be supplied under the header `x-sandbox-name`. For example, when making a call to the [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) to view all datasets within the Production sandbox, the sandbox's name ("prod") is provided as a header in the API request:
+When making calls to Experience Platform APIs, a sandbox name must be supplied under the header `x-sandbox-name`. For example, when making a call to the [!DNL Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) to view all datasets within the Production sandbox, the sandbox's name ("prod") is provided as a header in the API request:
 
 ```shell
 curl -X GET \

@@ -7,7 +7,7 @@ topic: overview
 
 # Create an [!DNL Azure Data Explorer] source connector in the UI
 
-> [!NOTE]
+>[!NOTE]
 > The [!DNL Azure Data Explorer] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an [!DNL Azure Data Explorer] (hereinafter referred to as "[!DNL Data Explorer]") source connector using the [!DNL Platform] user interface.
@@ -45,7 +45,7 @@ Log in to [Adobe Experience Platform](https://platform.adobe.com) and then selec
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the *[!UICONTROL Databases]* category, select **[!UICONTROL Azure Data Explorer]** and click **on the + icon (+)** to create a new Data Explorer connector.
+Under the *[!UICONTROL Databases]* category, select **[!UICONTROL Azure Data Explorer]** followed by **[!UICONTROL Add data]** to create a new Data Explorer connector.
 
 ![catalog](../../../../images/tutorials/create/data-explorer/catalog.png)
 

@@ -48,7 +48,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 
 A successful response returns HTTP status 200 with a list of schedules for the specified IMS organization as JSON. 
 
->[!NOTE] The following response has been truncated for space, and shows only the first schedule returned.
+>[!NOTE]
+>
+>The following response has been truncated for space, and shows only the first schedule returned.
 
 ```json
 {
