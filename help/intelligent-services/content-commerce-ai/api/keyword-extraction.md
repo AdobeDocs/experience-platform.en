@@ -22,7 +22,7 @@ The following table contains the recognized entities:
 
 | Type | Description |
 | --- | --- |
-| PERSON | 	People, including fictional. |
+| PERSON | People, including fictional. |
 | NORP | Nationalities or religious or political groups. |
 | GPE | Countries, cities, and states. |
 | LOC | Non-GPE locations, mountain ranges, bodies of water. |
