@@ -15,11 +15,12 @@ user-guide-title: Intelligent Services Help
   * [User interface guide](attribution-ai/user-guide.md)
   * [Discovering insights](attribution-ai/discover-insights.md)
   * [Accessing scores](attribution-ai/download-scores.md)
-* Content and Commerce AI {#content-commerce-ai}
+* Content and Commerce AI (beta) {#content-commerce-ai}
   * [Overview](content-commerce-ai/overview.md)
   * [Getting started](content-commerce-ai/getting-started.md)
   * Sensei Content Framework API{#api}
     * [Color extraction](content-commerce-ai/api/color-extraction.md)
+    * [Keyword extraction](content-commerce-ai/api/keyword-extraction.md)
 * Customer AI {#customer-ai}
   * [Overview](customer-ai/overview.md)
   * [Getting started with Customer AI](customer-ai/getting-started.md)
