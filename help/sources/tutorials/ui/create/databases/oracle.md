@@ -32,7 +32,7 @@ In order to access your [!DNL Oracle DB] account on [!DNL Platform], you must pr
 | `connectionString` | The connection string used to connect to [!DNL Oracle DB]. The [!DNL Oracle DB] connection string pattern is: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | The unique identifier needed to create a connection. The connection specification ID for [!DNL Oracle DB] is `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
-For more information about getting started refer to [this Oracle document](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199).
+For more information about getting started, refer to [this Oracle document](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199).
 
 ## Connect your [!DNL Oracle DB] account
 

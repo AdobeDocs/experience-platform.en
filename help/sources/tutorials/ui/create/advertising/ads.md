@@ -35,7 +35,7 @@ In order to access your [!DNL Google AdWords] account [!DNL Platform], you must 
 | `clientId` | The client ID of the [!DNL Google] application used to acquire the refresh token. |
 | `clientSecret` | The client secret of the [!DNL Google] application used to acquire the refresh token. |
 
-For more information about getting started, refer to this [Google AdWords document](https://developers.google.com/adwords/api/docs/guides/authentication).
+For more information about getting started, refer to this [[!DNL Google AdWords] document](https://developers.google.com/adwords/api/docs/guides/authentication).
 
 ## Connect your [!DNL Google AdWords] account
 

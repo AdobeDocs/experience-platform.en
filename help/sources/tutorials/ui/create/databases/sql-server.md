@@ -31,7 +31,7 @@ In order to connect to [!DNL SQL Server] on [!DNL Platform], you must provide th
 | ---------- | ----------- |
 | `connectionString` | The connection string associated with your [!DNL SQL Server] account. The [!DNL SQL Server] connection string pattern is: `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
 
-Please refer to [this document](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server) for more information on getting started with [!DNL SQL Server].
+For more information about getting started, refer to [this [!DNL SQL Server] document](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server).
 
 ## Connect your [!DNL SQL Server] account
 

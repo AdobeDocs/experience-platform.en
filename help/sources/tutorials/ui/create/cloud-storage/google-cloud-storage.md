@@ -30,9 +30,16 @@ If you already have a valid GCS connection, you may skip the remainder of this d
 
 ### Gather required credentials
 
-In order to access your GCS data on [!DNL Platform], you must provide a valid GCS **Access Key ID** and **Secret**. You can learn more about how to obtain these values by reading the [server-to-server authentication guide](https://cloud.google.com/docs/authentication/production) for [!DNL Google Cloud Storage].
+In order to access your GCS data on [!DNL Platform], you must provide the following values:
 
-## Connect your GCS account
+| Credential | Description |
+| ---------- | ----------- |
+| Access key ID | The access key ID of the [!DNL Google Cloud Storage] account. |
+| Secret access key | The client secret of the [!DNL Google Cloud Storage] account. |
+
+For more information about getting started, refer to [server-to-server authentication guide](https://cloud.google.com/docs/authentication/production) for [!DNL Google Cloud Storage].
+
+## Connect your [!DNL Google Cloud Storage] account
 
 Once you have gathered your required credentials, you can follow the steps below to link your GCS account to [!DNL Platform].
 

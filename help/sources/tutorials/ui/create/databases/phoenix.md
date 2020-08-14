@@ -36,7 +36,7 @@ In order to access your [!DNL Phoenix] account on [!DNL Platform], you must prov
 | `password` | The password that corresponds to the user. |
 | `enableSsl` | A toggle that specifies whether he connections to the server are encrypted using SSL. |
 
-For more information about getting started refer to [this [!DNL Phoenix] document](https://python-phoenixdb.readthedocs.io/en/latest/api.html).
+For more information about getting started, refer to [this [!DNL Phoenix] document](https://python-phoenixdb.readthedocs.io/en/latest/api.html).
 
 ## Connect your [!DNL Phoenix] account
 

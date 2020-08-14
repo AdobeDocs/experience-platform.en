@@ -35,7 +35,7 @@ The following sections provide additional information that you will need to know
 | `username` | The username used to connect to the DB2 database. |
 | `password` | The password for the user account you specified for the username. |
 
-For more information about getting started refer to [this DB2 document](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_credentials.html).
+For more information about getting started, refer to [this DB2 document](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_credentials.html).
 
 ## Connect your IBM DB2 account
 

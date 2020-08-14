@@ -33,7 +33,7 @@ In order to access your SSC account on [!DNL Platform], you must provide the fol
 | `password` | The password for the user account. |
 | `securityToken` | The security token for the user account. |
 
-For more information about getting started refer to [this [!DNL Salesforce Service Cloud] document](https://developer.salesforce.com/docs/atlas.en-us.api_iot.meta/api_iot/qs_auth_access_token.htm).
+For more information about getting started, refer to [this [!DNL Salesforce Service Cloud] document](https://developer.salesforce.com/docs/atlas.en-us.api_iot.meta/api_iot/qs_auth_access_token.htm).
 
 ## Connect your [!DNL Salesforce Service Cloud] account
 

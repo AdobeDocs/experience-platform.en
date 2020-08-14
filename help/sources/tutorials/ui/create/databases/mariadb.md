@@ -31,7 +31,7 @@ In order to access your [!DNL MariaDB] account on [!DNL Platform], you must prov
 | ---------- | ----------- |
 | `connectionString` | The connection string associated with your MariaDB authentication. The [!DNL MariaDB] connection string pattern is: `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 
-Please refer to [this [!DNL MariaDB] document](https://mariadb.com/kb/en/about-mariadb-connector-odbc/) for more information about getting started with MariaDB.
+For more information about getting started, refer to this [[!DNL MariaDB] document](https://mariadb.com/kb/en/about-mariadb-connector-odbc/).
 
 ## Connect your [!DNL Maria DB] account
 

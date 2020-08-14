@@ -35,7 +35,7 @@ In order to access your [!DNL Data Explorer] account on [!DNL Platform], you mus
 | `servicePrincipalId` | The unique service principal ID used to connect to the [!DNL Data Explorer] database. |
 | `servicePrincipalKey` | The unique service principal key used to connect to the [!DNL Data Explorer] database. |
 
-For more information about getting started refer to [this [!DNL Data Explorer] document](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad).
+For more information about getting started, refer to [this [!DNL Data Explorer] document](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad).
 
 ## Connect your [!DNL Azure Data Explorer] account
 

@@ -29,9 +29,7 @@ In order to access your [!DNL MySQL] account on [!DNL Platform], you must provid
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The [!DNL MySQL] connection string associated with your account. The [!DNL MySQL] connection string pattern is: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-
-You can learn more about connection strings and how to obtain them by reading the [[!DNL MySQL] document](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html).
+| `connectionString` | The [!DNL MySQL] connection string associated with your account. The [!DNL MySQL] connection string pattern is: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. You can learn more about connection strings and how to obtain them by reading the [[!DNL MySQL] document](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html). |
 
 ## Connect your [!DNL MySQL] account
 

@@ -28,7 +28,7 @@ If you already have a valid [!DNL Dynamics] account, you may skip the remainder 
 | `username` | The user name for your [!DNL Dynamics] user account. |
 | `password` | The password for your Dynamics account. |
 
-For more information on getting started, visit [this [!DNL Dynamics] document](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
+For more information on getting started, refer to [this [!DNL Dynamics] document](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
 
 ## Connect your [!DNL Dynamics] account
 

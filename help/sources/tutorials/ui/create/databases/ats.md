@@ -31,7 +31,7 @@ In order to access your ATS account on [!DNL Platform], you must provide the fol
 | ---------- | ----------- |
 | `connectionString` | A connection string to connect to your [!DNL Azure Table Storage] instance. The connection string to connect to ATS instance. The connection string pattern for ATS is `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
 
-For more information about getting started refer to [this [!DNL Azure Table Storage] document](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction).
+For more information about getting started, refer to [this [!DNL Azure Table Storage] document](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction).
 
 ## Connect your [!DNL Azure Table Storage] account
 

@@ -33,7 +33,7 @@ In order to access your [!DNL Hive] account on [!DNL Platform], you must provide
 | `username` | The username that you use to access the [!DNL Hive] server. |
 | `password` | The password that corresponds to the user. |
 
-For more information about getting started refer to [this [!DNL Hive] document](https://cwiki.apache.org/confluence/display/Hive/Tutorial#Tutorial-GettingStarted).
+For more information about getting started, refer to [this [!DNL Hive] document](https://cwiki.apache.org/confluence/display/Hive/Tutorial#Tutorial-GettingStarted).
 
 ## Connect your [!DNL Hive] account
 

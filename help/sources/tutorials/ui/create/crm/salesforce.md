@@ -29,7 +29,7 @@ If you already have a valid [!DNL Salesforce] account, you may skip the remainde
 | `password` | The password for the [!DNL Salesforce] user account. |
 | `securityToken` | The security token for the [!DNL Salesforce] user account. |
 
-For more information on getting started, visit [this Salesforce document](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
+For more information on getting started, refer to [this Salesforce document](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
 
 ## Connect your [!DNL Salesforce] account
 

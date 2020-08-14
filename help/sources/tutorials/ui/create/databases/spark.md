@@ -34,7 +34,7 @@ In order to access your [!DNL Spark] account on [!DNL Platform], you must provid
 | `username` | The username that you use to access the [!DNL Spark] server. |
 | `password` | The password that corresponds to the user. |
 
-For more information about getting started refer to [this Spark document](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-overview).
+For more information about getting started, refer to [this Spark document](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-overview).
 
 ## Connect your [!DNL Spark] account
 
