@@ -64,4 +64,4 @@ To connect an existing account, select the GBQ account you want to connect with,
 
 ## Next steps
 
-By following this tutorial, you have established a base connection to your GBQ account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Platform]](../../dataflow/databases.md).
+By following this tutorial, you have established a connection to your GBQ account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Platform]](../../dataflow/databases.md).

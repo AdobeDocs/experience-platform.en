@@ -142,7 +142,7 @@ The following sections provide additional information for working with source co
 
 When a dataflow is created, it immediately becomes active and ingests data according to the schedule it was given. You can disable an active dataflow at any time by following the instructions below.
 
-Within the *[!UICONTROL authentication]* screen, select the name of the base connection that's associated with the dataflow you wish to disable.
+Within the *[!UICONTROL authentication]* screen, select the name of the connection that's associated with the dataflow you wish to disable.
 
 ![](../../../images/tutorials/dataflow/marketing-automation/monitor.png)
 
