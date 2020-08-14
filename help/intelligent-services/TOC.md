@@ -21,6 +21,8 @@ user-guide-title: Intelligent Services Help
   * Sensei Content Framework API{#api}
     * [Color extraction](content-commerce-ai/api/color-extraction.md)
     * [Keyword extraction](content-commerce-ai/api/keyword-extraction.md)
+    * [Text classification](content-commerce-ai/api/text-classification.md)
+    * [Visual similarity](content-commerce-ai/api/visual-similarity.md)
 * Customer AI {#customer-ai}
   * [Overview](customer-ai/overview.md)
   * [Getting started with Customer AI](customer-ai/getting-started.md)
