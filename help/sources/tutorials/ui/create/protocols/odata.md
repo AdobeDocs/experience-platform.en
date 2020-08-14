@@ -21,7 +21,7 @@ This tutorial requires a working understanding of the following components of Ad
     *   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 *   [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
-If you already have a valid [!DNL OData] connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a protocols dataset flow](../../dataflow/protocols.md)
+If you already have a valid [!DNL OData] connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/protocols.md)
 
 ### Gather required credentials
 
@@ -61,4 +61,4 @@ To connect an existing account, select the [!DNL OData] account you want to conn
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL OData] account. You can now continue on to the next tutorial and [configure a dataset flow to bring protocols data into [!DNL Platform]](../../dataflow/protocols.md).
+By following this tutorial, you have established a connection to your [!DNL OData] account. You can now continue on to the next tutorial and [configure a dataflow to bring protocols data into [!DNL Platform]](../../dataflow/protocols.md).
