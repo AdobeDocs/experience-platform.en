@@ -3,7 +3,7 @@ keywords: Experience Platform;getting started;content ai;commerce ai;content and
 solution: Experience Platform
 title: Color extraction API endpoint
 topic: Developer guide
-description: The color extraction service when given an image can compute the histogram of pixel colors and sort them by dominant colors into buckets.
+description: The keyword extraction service when given a text document automatically extract keywords or keyphrases that best describe the subject of the document. In order to extract keywords, a combination of named entity recognition (NER) and unsupervised keyword extraction algorithms are used.
 ---
 
 # Color extraction API endpoint
