@@ -18,7 +18,7 @@ This tutorial requires a working understanding of the following components of Ad
     -   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 -   [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
-If you already have a [!DNL Blob] base connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/batch/cloud-storage.md).
+If you already have a [!DNL Blob] connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/batch/cloud-storage.md).
 
 ### Supported file formats
 
@@ -54,7 +54,7 @@ The **[!UICONTROL Connect to Azure Blob Storage]** page appears. On this page, y
 
 ### New account
 
-If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide the connection with a name, an optional description, and your [!DNL Blob] credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new account to establish.
+If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide a name, an optional description, and your [!DNL Blob] credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new connection to establish.
 
 ![connect](../../../../images/tutorials/create/blob/new.png)
 

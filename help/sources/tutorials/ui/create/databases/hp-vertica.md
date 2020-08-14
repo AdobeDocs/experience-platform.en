@@ -49,7 +49,7 @@ The **[!UICONTROL Connect to HP Vertica]** page appears. On this page, you can e
 
 ### New account
 
-If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide the connection with a name, an optional description, and your HP [!DNL Vertica] credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new account to establish.
+If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide a name, an optional description, and your HP [!DNL Vertica] credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new connection to establish.
 
 ![connect](../../../../images/tutorials/create/hp-vertica/new.png)
 

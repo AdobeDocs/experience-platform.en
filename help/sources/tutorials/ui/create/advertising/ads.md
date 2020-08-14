@@ -53,7 +53,7 @@ The **[!UICONTROL Connect to Google AdWords]** page appears. On this page, you c
 
 ### New account
 
-If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide the base connection with a name, an optional description, and your [!DNL Google AdWords] credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new base connection to establish.
+If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide a name, an optional description, and your [!DNL Google AdWords] credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new connection to establish.
 
 ![connect](../../../../images/tutorials/create/ads/connect.png)
 
@@ -65,4 +65,4 @@ To connect an existing account, select the  [!DNL Google AdWords] account you wa
 
 ## Next steps
 
-By following this tutorial, you have established a base connection to your [!DNL Google AdWords] account. You can now continue on to the next tutorial and [configure a dataflow to bring advertising data into [!DNL Platform]](../../dataflow/advertising.md).
+By following this tutorial, you have established a connection to your [!DNL Google AdWords] account. You can now continue on to the next tutorial and [configure a dataflow to bring advertising data into [!DNL Platform]](../../dataflow/advertising.md).

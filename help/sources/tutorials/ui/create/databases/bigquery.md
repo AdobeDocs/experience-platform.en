@@ -48,11 +48,11 @@ Under the **[!UICONTROL Databases]** category, select **[!UICONTROL Google Big Q
 
 ![](../../../../images/tutorials/create/google-big-query/catalog.png)
 
-The *[!UICONTROL Connect to Google Big Query]* page appears. On this page, you can either use new credentials or existing credentials.
+The **[!UICONTROL Connect to Google Big Query]** page appears. On this page, you can either use new credentials or existing credentials.
 
 ### New account
 
-If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide the base connection with a name, an optional description, and your GBQ credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new base connection to establish.
+If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide a name, an optional description, and your GBQ credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new connection to establish.
 
 ![](../../../../images/tutorials/create/google-big-query/new.png)
 

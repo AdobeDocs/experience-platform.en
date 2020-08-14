@@ -53,7 +53,7 @@ The **[!UICONTROL Connect to IBM DB2]** page appears. On this page, you can eith
 
 ### New account
 
-If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide the connection with a name, an optional description, and your DB2 credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new account to establish.
+If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide a name, an optional description, and your DB2 credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new connection to establish.
 
 ![connect](../../../../images/tutorials/create/ibm-db2/new.png)
 

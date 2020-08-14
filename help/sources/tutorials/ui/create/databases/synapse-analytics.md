@@ -21,7 +21,7 @@ This tutorial requires a working understanding of the following components of Ad
     *   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 *   [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
-If you already have a [!DNL Synapse] base connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/databases.md).
+If you already have a [!DNL Synapse] connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/databases.md).
 
 ### Gather required credentials
 
@@ -49,7 +49,7 @@ The **[!UICONTROL Connect to Azure Synapse Analytics]** page appears. On this pa
 
 ### New account
 
-If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide the base connection with a name, an optional description, and your [!DNL Synapse] credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new base connection to establish.
+If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide a name, an optional description, and your [!DNL Synapse] credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new connection to establish.
 
 ![](../../../../images/tutorials/create/azure-synapse-analytics/new.png)
 
@@ -61,4 +61,4 @@ To connect an existing account, select the [!DNL Synapse] account you want to co
 
 ## Next steps
 
-By following this tutorial, you have established a base connection to your [!DNL Synapse] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Platform]](../../dataflow/databases.md).
+By following this tutorial, you have established a connection to your [!DNL Synapse] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Platform]](../../dataflow/databases.md).
