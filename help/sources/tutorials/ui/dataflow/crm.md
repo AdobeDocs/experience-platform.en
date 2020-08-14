@@ -13,10 +13,10 @@ A dataflow is a scheduled task that retrieves and ingests data from a source to 
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-*   [Experience Data Model (XDM) System](../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+*   [[!DNL Experience Data Model] (XDM) System](../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     *   [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
     *   [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-*   [Real-time Customer Profile](../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+*   [[!DNL Real-time Customer Profile]](../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 Additionally, this tutorial requires that you have already created a CRM account. A list of tutorials for creating different CRM connectors in the UI can be found in the [source connectors overview](../../../home.md).
 
