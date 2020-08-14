@@ -70,6 +70,18 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
       }'
 ```
 
+### Why is my data not appearing on the dataset?
+
+To have your data appear in the dataset, you will need to complete the batch that was uploaded. Marking a batch as completed should only be done if you have uploaded all the files you want to upload to the batch. An example of completing a batch can be seen below:
+
+```shell
+curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-api-key : {API_KEY}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
 ### What is the difference between JSON lines (single-line JSON) and multi-line JSON?
 
 For JSON lines, there is one JSON object per line. For example:
