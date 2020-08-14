@@ -34,7 +34,7 @@ The following table contains the recognized entities:
 | LAW | Named documents made into laws. |
 | LANGUAGE | Any named language. |
 
-These results and the keywords from [!DNL YAKE] are combined then ranked according to their importance before returning them in the response.
+The OntoNotes results and the keywords from [!DNL YAKE] are combined then ranked according to their importance before returning them in the response.
 
 **API format**
 
