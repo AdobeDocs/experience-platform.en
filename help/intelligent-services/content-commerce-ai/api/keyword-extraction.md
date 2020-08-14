@@ -106,7 +106,7 @@ Simplified JSON of the input file:
 | `data` | An array that contains a JSON object with each object in the array representing a document. Any parameters passed as part of this array overrides the global parameters specified outside the `data` array. To view a list of parameters that can be overridden, see the list below for more information.  | Yes |
 | `language` | Language of input text. The default value is `en`. | No |
 | `content-type` | Used to indicate whether the input is part of the request body or a signed url for an s3 bucket. The default for this property is `inline`. | Yes |
-| `encoding` |  The Encoding format of input text. This can be `utf-8` or `utf-16`. The default for this property is `utf-8	`. | No |
+| `encoding` | The Encoding format of input text. This can be `utf-8` or `utf-16`. The default for this property is `utf-8	`. | No |
 | `threshold` | The threshold of score (0 to 1) above which the results need to be returned. Use the value 0, to return all results. The default for this property is `0`. | No |
 | `top-N` | The number of results to be returned (cannot be a negative integer). Use the value 0, to return all results. When used in conjunction with `threshold`, the number of results returned is the lesser of either limit set. The default for this property is `0`. | No |
 | `custom` | Any custom parameters to be passed. This property requires a valid JSON object to function. | No |
