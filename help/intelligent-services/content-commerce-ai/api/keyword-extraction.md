@@ -6,7 +6,7 @@ topic: Developer guide
 description: The keyword extraction service when given a text document automatically extract keywords or keyphrases that best describe the subject of the document. In order to extract keywords, a combination of named entity recognition (NER) and unsupervised keyword extraction algorithms are used.
 ---
 
-# Color extraction API endpoint
+# Keyword extraction API endpoint
 
 The keyword extraction service when given a text document automatically extract keywords or keyphrases that best describe the subject of the document. In order to extract keywords, a combination of named entity recognition (NER) and unsupervised keyword extraction algorithms are used.
 
