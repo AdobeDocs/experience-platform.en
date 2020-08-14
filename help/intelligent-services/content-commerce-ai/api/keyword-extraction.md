@@ -126,7 +126,7 @@ The following parameters can be overridden by adding values to them in the `data
 
 Available custom parameters:
 
-| Name | Description | Mandatory 
+| Name | Description | Mandatory |
 | --- | --- | --- |
 | `min-n` | The minimum number of words required in the keywords. | No |
 | `entity-types` | Types of entities to be returned. See the named entity recognition table at the beginning of this document. | No |
