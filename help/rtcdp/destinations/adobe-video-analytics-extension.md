@@ -15,7 +15,7 @@ Adobe Media Analytics for Audio and Video is an analytics extension in Adobe Rea
 
 This destination is an [!DNL Experience Platform Launch] extension. For more information about how [!DNL Launch] extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
-![Adobe Media Analytics for Audio and Video extension](/help/rtcdp/destinations/assets/adobe-analytics-extension.png)
+![Adobe Media Analytics for Audio and Video extension](/help/rtcdp/destinations/assets/adobe-video-analytics-extension.png)
 
 ## Prerequisites {#prerequisites}
 

@@ -15,7 +15,7 @@ This extension tracks conversions from users that click on your [!DNL Google Ads
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
-![Google Ads extension](/help/rtcdp/destinations/assets/google-extension-2.png)
+![Google Ads extension](/help/rtcdp/destinations/assets/google-ads-extension.png)
 
 ## Prerequisites {#prerequisites}
 

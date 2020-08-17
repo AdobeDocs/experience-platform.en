@@ -15,6 +15,7 @@ This extension installs the [!DNL JW Player] adapter to connect [!DNL JW Player]
 
 This destination is an Experience Platform Launch extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
+![JW analytics extension](assets/jw-analytics-extension.png)
 
 ## Prerequisites {#prerequisites}
 

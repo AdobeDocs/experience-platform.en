@@ -15,7 +15,7 @@ seo-description:
 
 This destination is an [!DNL Experience Platform Launch] extension. For more information about how [!DNL Launch] extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
-![Bing Ads extension](assets/bing-extension.png)
+![Bing Ads extension](assets/bing-ads-extension.png)
 
 
 ## Prerequisites {#prerequisites}
