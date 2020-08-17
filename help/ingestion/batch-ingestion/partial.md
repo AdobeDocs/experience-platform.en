@@ -365,7 +365,7 @@ If the batch ingested has an invalid schema or invalid headers, the batch's erro
 
 ### Unparsable rows {#unparsable}
 
-If the batch ingested has unparsable rows, the batch's errors will be stored in a file that can be accessed by using the endpoint outlined below.
+If the batch ingested has unparsable rows, you can view the list of files that contain errors by using the following endpoint.
 
 **API format**
 
@@ -389,15 +389,13 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 
 **Response**
 
-A successful response returns HTTP status 200 with details of the unparsable rows.
+A successful response returns HTTP status 200 with a list of the files that have errors. You can then retrieve detailed information about the errors using the [metadata retrieval endpoint](#retrieve-metadata).
 
 ```json
 {
-    "_corrupt_record": "{missingQuotes:"v1"}",
-    "_errors": [{
-         "code": "1401",
-         "message": "Row is corrupted and cannot be read, please fix and resend."
-    }],
-    "_filename": "a1.json"
+    "conversion_errors_0.json",
+    "conversion_errors_1.json",
+    "parsing_errors_0.json",
+    "parsing_errors_1.json"
 }
 ```
