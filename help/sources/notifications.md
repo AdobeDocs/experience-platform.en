@@ -32,16 +32,17 @@ In order to receive notifications on the status of your flow run, you must regis
 
 ![webhook](./images/notifications/webhook-url.png)
 
->[!IMPORTANT] During the subscription process, ensure that you select [!DNL Platform] notifications as the event provider, and select the following event subscriptions:
-
->* **[!UICONTROL Experience Platform Source's Flow Run Succeeded]**
->* **[!UICONTROL Experience Platform Source's Flow Run Failed]**
-
 ## Subscribe to events
 
 Once you have acquired a unique webhook URL, go to [Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events.html) and follow the steps outlined in the [data ingestion notifications](../ingestion/quality/subscribe-events.md) document to start subscribing to events.
 
-Paste the webhook URL in the **[!UICONTROL Webhook URL]** textbox in the **[!UICONTROL Configure event registration]** step of the event subscription process. Select **[!UICONTROL Save configured events]** to continue.
+>[!IMPORTANT]
+>During the subscription process, ensure that you select [!DNL Platform] notifications as the event provider, and select the following event subscriptions:
+
+>* **[!UICONTROL Experience Platform Source's Flow Run Succeeded]**
+>* **[!UICONTROL Experience Platform Source's Flow Run Failed]**
+
+>When prompted to provide a webhook address, use the webhook URL you acquired previously.
 
 ![register-webhook](./images/notifications/register-webhook.png)
 
@@ -315,7 +316,8 @@ The following response is an example of a failed flow run, with an error occurri
 | ---------- | ----------- |
 | `fileInfo` | A URL that leads to an overview of the files that were both successfully and unsuccessfully ingested. |
 
->[!NOTE] See the [appendix](#errors) for more information on error messages.
+>[!NOTE]
+>See the [appendix](#errors) for more information on error messages.
 
 ## Next steps
 
