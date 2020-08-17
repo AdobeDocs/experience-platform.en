@@ -11,7 +11,7 @@ seo-description: Instructions to connect to your cloud storage locations
 
 This page explains how you can connect to cloud storage locations in Adobe Real-time Customer Data Platform.
 
-1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select your preferred cloud storage destination, then select **[!UICONTROL Connect destination]**.
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select your preferred cloud storage destination, then select **[!UICONTROL Configure]**.
 
     ![Connect to cloud storage destination](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
