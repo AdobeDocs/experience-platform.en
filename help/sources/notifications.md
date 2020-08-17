@@ -69,13 +69,13 @@ The following following response is an example of a successful flow run.
   "event": {
     "createdAt": 1597213529158,
     "updatedAt": 1597213530760,
-    "createdBy": "acp_foundation_connectors@AdobeID",
-    "updatedBy": "acp_foundation_connectors@AdobeID",
-    "createdClient": "acp_foundation_connectors",
-    "updatedClient": "acp_foundation_connectors",
+    "createdBy": "{CREATED_BY}",
+    "updatedBy": "{UPDATED_BY}",
+    "createdClient": "{CREATED_CLIENT}",
+    "updatedClient": "{UPDATED_CLIENT}",
     "sandboxId": "7127a4f0-def8-11e9-83ce-e79494b1c2a5",
     "sandboxName": "prod",
-    "imsOrgId": "7A5147645D8926B00A494224@AdobeOrg",
+    "imsOrgId": "{IMS_ORG}",
     "id": "933cf9f4-cf01-4d75-bcf9-f4cf010d750a",
     "flowId": "1c6f1047-dcaf-48fe-af10-47dcaf08feaf",
     "providerRefId": "test1234",
@@ -154,7 +154,7 @@ The following following response is an example of a successful flow run.
           "outputFileCount": 10,
           "extensions": {
             "manifest": {
-              "fileInfo": "https://platform-int.adobe.io/data/foundation/export/batches/01E4TSJNM2H5M74J0XB8MFWDHK/files"
+              "fileInfo": "https://platform-int.adobe.io/data/foundation/export/batches/01E4TSJNM2H5M74J0XB8MFWDHK/meta?path=input_files"
             }
           }
         },
@@ -180,7 +180,7 @@ The following following response is an example of a successful flow run.
     "processStartTime": 1597213531213,
     "header": {
       "_adobeio": {
-        "imsOrgId": "7A5147645D8926B00A494224@AdobeOrg",
+        "imsOrgId": "{IMS_ORG}",
         "providerMetadata": "aep_observability_catalog_events",
         "eventCode": "sources_flow_run_success"
       }
@@ -200,111 +200,12 @@ A returning payload contains a set of metrics that define characteristics of a s
 | `sizeSummary` | Defines the volume of the data in bytes. |
 | `recordSummary` | Defines the record count of the data. |
 | `fileSummary` | Defines the file count of the data. |
+| `fileInfo` | The URL that leads to an overview of the successfully ingested files. |
 | `statusSummary` | Defines whether the flow run is a success or a failure. |
 
 ### Failure
 
-The following response is an example of a failed flow run, with an error occurring at the copy stage. A failed flow run includes information about the errors that contributed to the run's failure, including its error code and description.
-
-```json
-{
-  "messages": [
-    {
-      "msgType": "eventNotification",
-      "version": "1.0",
-      "timestamp": 1597435949796,
-      "imsOrgId": "4E5F3EB95C746F890A49400A@AdobeOrg",
-      "schema": {
-        "name": "run-notification",
-        "version": "1.0"
-      },
-      "provider": "FlowService",
-      "_eventNotificationMeta": {
-        "category": "Platform Notifications",
-        "type": "sources_flow_run_failed"
-      },
-      "value": {
-        "createdAt": 1597435676963,
-        "updatedAt": 1597435949760,
-        "createdBy": "acp_foundation_connectors@AdobeID",
-        "updatedBy": "acp_foundation_connectors@AdobeID",
-        "createdClient": "acp_foundation_connectors",
-        "updatedClient": "acp_foundation_connectors",
-        "sandboxId": "e49ebb00-d0fa-11e9-b164-ed6a398c8b35",
-        "sandboxName": "prod",
-        "imsOrgId": "4E5F3EB95C746F890A49400A@AdobeOrg",
-        "id": "ed8f3982-14e4-4685-8f39-8214e4468502",
-        "flowId": "df6bb78d-a5ed-48b5-abb7-8da5ed68b53e",
-        "providerRefId": "M-df6bb78d-a5ed-48b5-abb7-8da5ed68b53e-incremental-0:420eb29d-8f11-4a3a-87d9-413b67a3a953",
-        "etag": "\"0d009b00-0000-0200-0000-5f36f02d0000\"",
-        "metrics": {
-          "durationSummary": {
-            "startedAtUTC": 1597435805000,
-            "completedAtUTC": 1597435816000
-          },
-          "sizeSummary": {},
-          "recordSummary": {},
-          "statusSummary": {
-            "status": "failed",
-            "errors": [
-              {
-                "code": "CONNECTOR-1001-500",
-                "message": "Error in copying the data from Source"
-              }
-            ]
-          }
-        },
-        "activities": [
-          {
-            "id": "copyActivity",
-            "updatedAtUTC": 1597435949730,
-            "durationSummary": {
-              "startedAtUTC": 1597435805000,
-              "completedAtUTC": 1597435816000
-            },
-            "sizeSummary": {},
-            "recordSummary": {},
-            "fileSummary": {},
-            "statusSummary": {
-              "status": "failed",
-              "errors": [
-                {
-                  "code": "CONNECTOR-1001-500",
-                  "message": "Error in copying the data from Source"
-                }
-              ],
-              "extensions": {
-                "errorDetail": "Failure happened on 'Sink' side. ErrorCode=UserErrorFailedToGetAccessTokenByServicePrincipal,'Type=Microsoft.DataTransfer.Common.Shared.HybridDeliveryException,Message=Failed to get access token by using service principal. Error: invalid_client, Error Message: AADSTS7000222: The provided client secret keys are expired. Visit the Azure Portal to create new keys for your app, or consider using certificate credentials for added security: https://docs.microsoft.com/azure/active-directory/develop/active-directory-certificate-credentials\r\nTrace ID: fa8b611f-9537-40b7-ad44-0cc43fc60c00\r\nCorrelation ID: a041043d-e525-4e8b-aa8d-6856d0901cc9\r\nTimestamp: 2020-08-14 20:10:14Z Response status code does not indicate success: 401 (Unauthorized). {\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000222: The provided client secret keys are expired. Visit the Azure Portal to create new keys for your app, or consider using certificate credentials for added security: https://docs.microsoft.com/azure/active-directory/develop/active-directory-certificate-credentials\\r\\nTrace ID: fa8b611f-9537-40b7-ad44-0cc43fc60c00\\r\\nCorrelation ID: a041043d-e525-4e8b-aa8d-6856d0901cc9\\r\\nTimestamp: 2020-08-14 20:10:14Z\",\"error_codes\":[7000222],\"timestamp\":\"2020-08-14 20:10:14Z\",\"trace_id\":\"fa8b611f-9537-40b7-ad44-0cc43fc60c00\",\"correlation_id\":\"a041043d-e525-4e8b-aa8d-6856d0901cc9\",\"error_uri\":\"https://login.microsoftonline.com/error?code=7000222\"}: Unknown error .,Source=Microsoft.DataTransfer.ClientLibrary,''Type=Microsoft.IdentityModel.Clients.ActiveDirectory.AdalServiceException,Message=AADSTS7000222: The provided client secret keys are expired. Visit the Azure Portal to create new keys for your app, or consider using certificate credentials for added security: https://docs.microsoft.com/azure/active-directory/develop/active-directory-certificate-credentials\r\nTrace ID: fa8b611f-9537-40b7-ad44-0cc43fc60c00\r\nCorrelation ID: a041043d-e525-4e8b-aa8d-6856d0901cc9\r\nTimestamp: 2020-08-14 20:10:14Z,Source=Microsoft.IdentityModel.Clients.ActiveDirectory,''Type=System.Net.Http.HttpRequestException,Message=Response status code does not indicate success: 401 (Unauthorized).,Source=,''Type=Microsoft.IdentityModel.Clients.ActiveDirectory.AdalException,Message={\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000222: The provided client secret keys are expired. Visit the Azure Portal to create new keys for your app, or consider using certificate credentials for added security: https://docs.microsoft.com/azure/active-directory/develop/active-directory-certificate-credentials\\r\\nTrace ID: fa8b611f-9537-40b7-ad44-0cc43fc60c00\\r\\nCorrelation ID: a041043d-e525-4e8b-aa8d-6856d0901cc9\\r\\nTimestamp: 2020-08-14 20:10:14Z\",\"error_codes\":[7000222],\"timestamp\":\"2020-08-14 20:10:14Z\",\"trace_id\":\"fa8b611f-9537-40b7-ad44-0cc43fc60c00\",\"correlation_id\":\"a041043d-e525-4e8b-aa8d-6856d0901cc9\",\"error_uri\":\"https://login.microsoftonline.com/error?code=7000222\"}: Unknown error,Source=,'",
-                "type": "incremental",
-                "errors": [
-                  {
-                    "code": "2200",
-                    "message": "{\"error\":\"invalid_client\",\"error_description\":\"AADSTS7000222: The provided client secret keys are expired. Visit the Azure Portal to create new keys for your app, or consider using certificate credentials for added security: https://docs.microsoft.com/azure/active-directory/develop/active-directory-certificate-credentials\\r\\nTrace ID: fa8b611f-9537-40b7-ad44-0cc43fc60c00\\r\\nCorrelation ID: a041043d-e525-4e8b-aa8d-6856d0901cc9\\r\\nTimestamp: 2020-08-14 20:10:14Z\",\"error_codes\":[7000222],\"timestamp\":\"2020-08-14 20:10:14Z\",\"trace_id\":\"fa8b611f-9537-40b7-ad44-0cc43fc60c00\",\"correlation_id\":\"a041043d-e525-4e8b-aa8d-6856d0901cc9\",\"error_uri\":\"https://login.microsoftonline.com/error?code=7000222\"}: Unknown error"
-                  }
-                ]
-              }
-            },
-            "sourceInfo": [
-              {
-                "id": "125ab60b-1f0d-4966-9ab6-0b1f0df96614",
-                "type": "SourceConnection",
-                "reference": {
-                  "type": "AdfRunId",
-                  "ids": [
-                    "420eb29d-8f11-4a3a-87d9-413b67a3a953"
-                  ]
-                }
-              }
-            ]
-          }
-        ]
-      }
-    }
-  ]
-}
-```
-
-The following response is an example of a failed flow run, with an error occurring at the promotion stage.
+The following response is an example of a failed flow run, with an error occurring as the copied data is processed. Errors can also occur while data is being copied from the source. A failed flow run includes information about the errors that contributed to the run's failure, including its error code and description.
 
 ```json
 [
@@ -314,7 +215,7 @@ The following response is an example of a failed flow run, with an error occurri
         "msgType": "eventNotification",
         "version": "1.0",
         "timestamp": 1597434157622,
-        "imsOrgId": "4E5F3EB95C746F890A49400A@AdobeOrg",
+        "imsOrgId": "{IMS_ORG}",
         "schema": {
           "name": "run-notification",
           "version": "1.0"
@@ -327,13 +228,13 @@ The following response is an example of a failed flow run, with an error occurri
         "value": {
           "createdAt": 1597434147259,
           "updatedAt": 1597434157567,
-          "createdBy": "acp_foundation_connectors@AdobeID",
-          "updatedBy": "acp_foundation_connectors@AdobeID",
-          "createdClient": "acp_foundation_connectors",
-          "updatedClient": "acp_foundation_connectors",
+          "createdBy": "{CREATED_BY}",
+          "updatedBy": "{UPDATED_BY}",
+          "createdClient": "{CREATED_CLIENT}",
+          "updatedClient": "{UPDATED_CLIENT}",
           "sandboxId": "e49ebb00-d0fa-11e9-b164-ed6a398c8b35",
           "sandboxName": "prod",
-          "imsOrgId": "4E5F3EB95C746F890A49400A@AdobeOrg",
+          "imsOrgId": "{IMS_ORG}",
           "id": "d9024c32-2174-4271-824c-322174627101",
           "flowId": "cf4fce79-8822-456d-8fce-798822556dc6",
           "etag": "\"0c003dbf-0000-0200-0000-5f36e92d0000\"",
@@ -414,6 +315,12 @@ The following response is an example of a failed flow run, with an error occurri
   }
 ]
 ```
+
+| Error code | Error Message |
+| ---------- | ----------- |
+| `fileInfo` | The URL that leads to an overview of the successfully ingested files. |
+| `CONNECTOR-1001-500` | "Error in copying the data from Source." |
+| `CONNECTOR-2001-500` | "Error in processing (parsing, validation or transformation) the copied data." |
 
 ## Next steps
 
