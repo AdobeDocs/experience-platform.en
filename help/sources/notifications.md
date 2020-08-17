@@ -38,8 +38,13 @@ The first step in receiving flow run notifications is to subscribe to events usi
 
 Follow the steps outlined in the [data ingestion notifications](../ingestion/quality/subscribe-events.md) document to start subscribing to events.
 
->[!IMPORTANT]
->In order to receive notifications on the status of your flow run, you must register a webhook by specifying a unique webhook URL as part of your event registration details. A webhook is a channel that allows for the real-time delivery of information from one application to another. To connect a webhook to your [!DNL I/O Events] subscription, visit the [webhook service](https://webhook.site/) and copy the unique URL provided.
+## Register your webhook
+
+In order to receive notifications on the status of your flow run, you must register a webhook by specifying a unique webhook URL as part of your event registration details.
+
+A webhook is a channel that allows for the real-time delivery of information from one application to another. To connect a webhook to your [!DNL I/O Events] subscription, visit the [webhook service](https://webhook.site/) and copy the unique URL provided.
+
+![webhook](./images/notifications/webhook-url.png)
 
 Once you have copied the webhook URL, paste the URL in the **[!UICONTROL Webhook URL]** textbox in the **[!UICONTROL Configure event registration]** step of the event subscription process. Select **[!UICONTROL Save configured events]** to continue.
 
