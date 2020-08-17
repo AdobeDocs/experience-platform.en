@@ -44,8 +44,6 @@ Once you have acquired a unique webhook URL, go to [Adobe I/O Events](https://ww
 
 >When prompted to provide a webhook address, use the webhook URL you acquired previously.
 
-![register-webhook](./images/notifications/register-webhook.png)
-
 ## Receive flow run notifications
 
 With your webhook connected and your event subscription complete, you can start receiving flow run notifications through the webhook dashboard.
