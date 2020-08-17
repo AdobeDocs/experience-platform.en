@@ -34,7 +34,7 @@ The first step in receiving flow run notifications is to subscribe to events usi
 Follow the steps outlined in the [data ingestion notifications](../ingestion/quality/subscribe-events.md) document to start subscribing to events.
 
 > [!IMPORTANT]
-> During the subscription process, ensure that you select [!DNL Platform] notifications as the event provider and **[!UICONTROL Experience Platform Source's Flow Run Succeeded]** and [**!UICONTROL Experience Platform Source's Flow Run Success Failed]** as event subscriptions when subscribing through the I/O console.
+> During the subscription process, ensure that you select [!DNL Platform] notifications as the event provider and **[!UICONTROL Experience Platform Source's Flow Run Succeeded]** and [**!UICONTROL Experience Platform Source's Flow Run Failed]** as event subscriptions when subscribing through the I/O console.
 
 ## Register your webhook
 
