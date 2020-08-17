@@ -8,6 +8,10 @@ description: The text classification service, when given a text fragment, can cl
 
 # Text classification API endpoint
 
+>[!NOTE]
+>
+>Content and Commerce AI is in beta. The documentation is subject to change.
+
 The text classification service, when given a text fragment, can classify it into one or more labels. The classification can be single-label, multi-label, or hierarchical.
 
 Text classification uses a [FastText](https://fasttext.cc/) based model that has been trained using custom data.

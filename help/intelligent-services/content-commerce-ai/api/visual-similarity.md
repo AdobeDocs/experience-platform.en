@@ -8,6 +8,10 @@ description: The visual similarity service, when given an image, automatically f
 
 # Visual similarity API endpoint
 
+>[!NOTE]
+>
+>Content and Commerce AI is in beta. The documentation is subject to change.
+
 The visual similarity service, when given an image, automatically finds visually similar images from a catalog. 
 
 The following image was used in the example request below:

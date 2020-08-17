@@ -8,6 +8,10 @@ description: The keyword extraction service, when given a text document, automat
 
 # Keyword extraction API endpoint
 
+>[!NOTE]
+>
+>Content and Commerce AI is in beta. The documentation is subject to change.
+
 The keyword extraction service, when given a text document, automatically extracts keywords or keyphrases that best describe the subject of the document. In order to extract keywords, a combination of named entity recognition (NER) and unsupervised keyword extraction algorithms are used.
 
 **Unsupervised keyword extraction**
