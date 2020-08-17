@@ -38,10 +38,10 @@ Once you have acquired a unique webhook URL, go to [Adobe I/O Events](https://ww
 
 >[!IMPORTANT]
 >During the subscription process, ensure that you select [!DNL Platform] notifications as the event provider, and select the following event subscriptions:
-
+>
 >* **[!UICONTROL Experience Platform Source's Flow Run Succeeded]**
 >* **[!UICONTROL Experience Platform Source's Flow Run Failed]**
-
+>
 >When prompted to provide a webhook address, use the webhook URL you acquired previously.
 
 ## Receive flow run notifications
