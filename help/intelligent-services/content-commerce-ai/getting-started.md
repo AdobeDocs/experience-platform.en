@@ -17,11 +17,39 @@ topic: Getting started
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-![adding Content and Commerce AI]()
+![adding Content and Commerce AI](./images/add-api.png)
 
-## Creating a Postman environment
+## Creating a Postman environment (optional)
 
-Once you have set up your project and API within the Adobe Developer Console, you have the option to download an environment file for Postman.
+Once you have set up your project and API within the Adobe Developer Console, you have the option to download an environment file for Postman. Within your project, in the left rail under APIS select **Content and Commerce AI**. A new tab opens and within this tab is a card labeled Try it out. Click **Download for Postman** to download a JSON file used to configure your postman environment.
+
+![download for postman](./images/add-to-postman.png)
+
+Once you have downloaded the file, open up Postman and select the gear icon in the top right to open up the *manage environments* dialog. 
+
+![gear icon](./images/select-gear-icon.png)
+
+Next, click **Import** from within the *Manage environments* dialog.
+
+![import](./images/import.png)
+
+You are redirected and asked to select an environment file from your computer. This is the JSON file you downloaded. Select the file and click open to load the environment.
+
+![](./images/choose-your-file.png)
+
+![](./images/click-open.png)
+
+You are redirected back to the *Manage environments* tab with a new environment name populated. Click the environment name to edit and see the variables available in Postman. You still need to manually populate the `JWT_TOKEN` and `ACCESS_TOKEN`. These values should have been obtained while completing the [authentication tutorial](../../tutorials/authentication.md).
+
+![](./images/re-direct.png)
+
+Once complete, it should look something like the following example. Click **Update** to finish setting up your environment.
+
+![](./images/final-environment.png)
+
+You can now select your environment from the environment dropdown menu in the top-right corner and auto-populate any values saved. Simply re-edit the values at any time to update all of your API calls.
+
+![example](./images/select-environment.png)
 
 ## Reading sample API calls
 
