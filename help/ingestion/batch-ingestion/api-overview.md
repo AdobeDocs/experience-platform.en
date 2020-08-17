@@ -43,10 +43,7 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 >
 >For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
 
-Requests that contain a payload (POST, PUT, PATCH) may require an additional `Content-Type` header. The accepted values specific to each call are provided in the call parameters. The following content types are used in this guide:
-
-- Content-Type: application/json
-- Content-Type: application/octet-stream
+Requests that contain a payload (POST, PUT, PATCH) may require an additional `Content-Type` header. The accepted values specific to each call are provided in the call parameters. 
 
 ## Types
 
