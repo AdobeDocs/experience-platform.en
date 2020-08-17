@@ -55,8 +55,6 @@ A notification returns information such as the number of ingestion jobs run, fil
 >[!IMPORTANT]
 >If partial ingestion is enabled during the flow creation process, a flow that contains both successful and failed ingestions will be marked as `sources_flow_run_success` only if the number of errors is below the error threshold percentage set during the flow creation process. If a successful flow run contains errors, these errors will still be included as part of the return payload.
 
-![webhook-result](./images/notifications/webhook-result.png)
-
 ### Success
 
 A successful response returns a set of `metrics` that define characteristics of a specific flow run and `activities` that outline how data is transformed.
