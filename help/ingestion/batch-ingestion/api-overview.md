@@ -166,7 +166,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | The ID of the batch you want to upload to. |
 | `{DATASET_ID}` | The ID of the batch's reference dataset. |
-| `{FILE_NAME}` | The name of the file you want to upload. |
+| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location of where you wish to upload the file on the Adobe side. |
 
 **Request**
 
@@ -186,7 +186,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | The full path and name of the file you are trying to upload. |
+| `{FILE_PATH_AND_NAME}` | The full path and name of the file you are trying to upload. This file path is the local file path, such as `Users/sample-user/Downloads/sample.json`. |
 
 **Response**
 
@@ -301,7 +301,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | The ID of the batch you want to upload to. |
 | `{DATASET_ID}` | The ID of the batch's reference dataset. |
-| `{FILE_NAME}` | The name of the file you want to upload. |
+| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location of where you wish to upload the file on the Adobe side.  |
 
 **Request**
 
@@ -321,7 +321,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | The full path and name of the file you're trying to upload. |
+| `{FILE_PATH_AND_NAME}` | The full path and name of the file you are trying to upload. This file path is the local file path, such as `Users/sample-user/Downloads/sample.json`.|
 
 **Response**
 
@@ -474,7 +474,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | The ID of the batch you want to upload to. |
 | `{DATASET_ID}` | The ID of the batch's reference dataset. |
-| `{FILE_NAME}` | The name of the file you want to upload. |
+| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location of where you wish to upload the file on the Adobe side.  |
 
 **Request**
 
@@ -496,7 +496,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | Parameter | Description |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | In integers, the beginning and the end of the requested range. |
-| `{FILE_PATH_AND_NAME}` | The full path and name of the file you're trying to upload. |
+| `{FILE_PATH_AND_NAME}` | The full path and name of the file you are trying to upload. This file path is the local file path, such as `Users/sample-user/Downloads/sample.json`. |
 
 
 **Response**
@@ -726,7 +726,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | The ID of the batch you want to upload to. |
 | `{DATASET_ID}` | The ID of the batch's reference dataset. |
-| `{FILE_NAME}` | The name of the file you want to upload. |
+| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location of where you wish to upload the file on the Adobe side. |
 
 **Request**
 
@@ -746,7 +746,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | The full path and name of the file you're trying to upload. |
+| `{FILE_PATH_AND_NAME}` | The full path and name of the file you are trying to upload. This file path is the local file path, such as `Users/sample-user/Downloads/sample.json`.|
 
 
 **Response**
@@ -933,7 +933,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | The ID of the batch you want to upload to. |
 | `{DATASET_ID}` | The ID of the batch's reference dataset. |
-| `{FILE_NAME}` | The name of the file you want to upload. |
+| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location of where you wish to upload the file on the Adobe side. |
 
 **Request**
 
@@ -953,7 +953,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | The full path and name of the file you're trying to upload. |
+| `{FILE_PATH_AND_NAME}` | The full path and name of the file you are trying to upload. This file path is the local file path, such as `Users/sample-user/Downloads/sample.json`. |
 
 **Response**
 
