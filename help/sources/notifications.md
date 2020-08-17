@@ -10,7 +10,7 @@ topic: overview
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-[!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
+[Adobe Experience Platform Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
 With Adobe I/O Events, you can subscribe to events and use webhooks to receive notifications regarding the status of your flow runs. These notifications contain information about the success of your flow run or errors that contributed to a run's failure.
 
@@ -22,10 +22,15 @@ This document requires a working understanding of the following components of Ad
 
 *   [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
 *   [[!DNL Real-time Customer Profile]](../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-*   [Data ingestion](../ingestion/home.md): Data Ingestion represents the multiple methods by which [!DNL Platform] ingests data from these sources, as well as how that data is persisted within the Data Lake for use by downstream [!DNL Platform] services.
-*   [[!DNL Observability]](../observability/home.md): Observability Insights is a RESTful API that allows you to expose key observability metrics in [!DNL Platform]. These metrics provide insights into [!DNL Platform] usage statistics, health-checks for [!DNL Platform] services, historical trends, and performance indicators for various [!DNL Platform] functionalities.
+*   [Data ingestion](../ingestion/home.md): [!DNL Adobe Experience Platform Data Ingestion] represents the multiple methods by which [!DNL Platform] ingests data from these sources, as well as how that data is persisted within the [!DNL Data Lake] for use by downstream [!DNL Platform] services.
 
 This document also requires a working understanding of webhooks and how to connect a webhook from one application to another. See the following [documentation](https://requestbin.com/blog/working-with-webhooks/) for more information on webhooks.
+
+During the subscription process, ensure that you select [!DNL Platform] notifications as the event provider, and select the following event subscriptions:
+
+* **[!UICONTROL Experience Platform Source's Flow Run Succeeded]**
+
+* **[!UICONTROL Experience Platform Source's Flow Run Failed]**
 
 ## Subscribe to events
 
@@ -33,16 +38,8 @@ The first step in receiving flow run notifications is to subscribe to events usi
 
 Follow the steps outlined in the [data ingestion notifications](../ingestion/quality/subscribe-events.md) document to start subscribing to events.
 
-> [!IMPORTANT]
-> During the subscription process, ensure that you select [!DNL Platform] notifications as the event provider and **[!UICONTROL Experience Platform Source's Flow Run Succeeded]** and [**!UICONTROL Experience Platform Source's Flow Run Failed]** as event subscriptions when subscribing through the I/O console.
-
-## Register your webhook
-
-In order to receive notifications on the status of your flow run, you must register a webhook by specifying a unique webhook URL as part of your event registration details.
-
-A webhook is a channel that allows for the real-time delivery of information from one application to another. To connect a webhook to your I/O Events subscription, visit the [webhook service](https://webhook.site/) and copy the unique URL provided.
-
-![webhook-link](./images/notifications/webhook-url.png)
+>[!IMPORTANT]
+>In order to receive notifications on the status of your flow run, you must register a webhook by specifying a unique webhook URL as part of your event registration details. A webhook is a channel that allows for the real-time delivery of information from one application to another. To connect a webhook to your [!DNL I/O Events] subscription, visit the [webhook service](https://webhook.site/) and copy the unique URL provided.
 
 Once you have copied the webhook URL, paste the URL in the **[!UICONTROL Webhook URL]** textbox in the **[!UICONTROL Configure event registration]** step of the event subscription process. Select **[!UICONTROL Save configured events]** to continue.
 
@@ -52,16 +49,16 @@ Once you have copied the webhook URL, paste the URL in the **[!UICONTROL Webhook
 
 With your webhook connected and your event subscription complete, you can start receiving flow run notifications through the webhook dashboard.
 
-A notification returns information such as the number of ingestions made, file size, and a request's unique identifier. A notification also returns a payload associated with your flow run in JSON-format. The return payload can either be classified as `sources_flow_run_success` or `sources_flow_run_failure`.
+A notification returns information such as the number of ingestion jobs run, file size, and errors. A notification also returns a payload associated with your flow run in JSON format. The response payload can either be classified as `sources_flow_run_success` or `sources_flow_run_failure`.
 
-> [!IMPORTANT]
-> If partial ingestion is enabled during the flow creation process, a flow that contains both successful and failed ingestions will be marked as `sources_flow_run_success` only if the number of errors is below the error threshold percentage set during the flow creation process. If a successful flow run contains errors, these errors will still be included as part of the return payload.
+>[!IMPORTANT]
+>If partial ingestion is enabled during the flow creation process, a flow that contains both successful and failed ingestions will be marked as `sources_flow_run_success` only if the number of errors is below the error threshold percentage set during the flow creation process. If a successful flow run contains errors, these errors will still be included as part of the return payload.
 
 ![webhook-result](./images/notifications/webhook-result.png)
 
 ### Success
 
-The following following response is an example of a successful flow run.
+A response payload contains a set of `metrics` that define characteristics of a specific flow run and `activities` that outline how data is transformed. The following response is an example of a successful flow run.
 
 ```json
 {
@@ -190,8 +187,6 @@ The following following response is an example of a successful flow run.
 }
 ```
 
-A returning payload contains a set of metrics that define characteristics of a specific flow run. See the table below for more information about each metric.
-
 | Property | Description |
 | -------- | ----------- |
 | `metrics` | Defines characteristics of the data in the flow run. |
@@ -200,12 +195,12 @@ A returning payload contains a set of metrics that define characteristics of a s
 | `sizeSummary` | Defines the volume of the data in bytes. |
 | `recordSummary` | Defines the record count of the data. |
 | `fileSummary` | Defines the file count of the data. |
-| `fileInfo` | The URL that leads to an overview of the successfully ingested files. |
+| `fileInfo` | A URL that leads to an overview of the successfully ingested files. |
 | `statusSummary` | Defines whether the flow run is a success or a failure. |
 
 ### Failure
 
-The following response is an example of a failed flow run, with an error occurring as the copied data is processed. Errors can also occur while data is being copied from the source. A failed flow run includes information about the errors that contributed to the run's failure, including its error code and description.
+The following response is an example of a failed flow run, with an error occurring as the copied data is processed. Errors can also occur while data is being copied from the source. A failed flow run includes information about the errors that contributed to the run's failure, including its error and description.
 
 ```json
 [
@@ -316,12 +311,23 @@ The following response is an example of a failed flow run, with an error occurri
 ]
 ```
 
-| Error code | Error Message |
+| Property| Description |
 | ---------- | ----------- |
-| `fileInfo` | The URL that leads to an overview of the successfully ingested files. |
-| `CONNECTOR-1001-500` | "Error in copying the data from Source." |
-| `CONNECTOR-2001-500` | "Error in processing (parsing, validation or transformation) the copied data." |
+| `fileInfo` | A URL that leads to an overview of the files that were both successfully and unsuccessfully ingested. |
 
 ## Next steps
 
-You can now subscribe to events and create webhooks that allow you to receive real-time notifications that provide statuses on your flow runs. For more information on flow runs and sources, see the [sources overview](./home.md).
+You can now subscribe to events that allow you to receive real-time notifications on your flow run statuses. For more information on flow runs and sources, see the [sources overview](./home.md).
+
+## Appendix
+
+The following sections provide additional information for working with flow run notifications.
+
+### Understanding error messages
+
+Ingestion errors can happen when data is being copied from the source or when the copied data is being processed to [!DNL Platform]. See the table below for more information on specific errors.
+
+| Error | Description |
+| ---------- | ----------- |
+| `CONNECTOR-1001-500` | An error occurred while data is being copied from a source. |
+| `CONNECTOR-2001-500` | An error occurred while copied data is being processed to [!DNL Platform]. This error could be regarding parsing, validating, or transforming. |
