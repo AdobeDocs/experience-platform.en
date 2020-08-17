@@ -121,7 +121,7 @@ user-guide-title: Real-Time Customer Data Platform Help
     * [Activate profiles and segments to a destination](destinations/activate-destinations.md)
   * Destination API tutorials {#api-tutorials}
     *  [Connect to streaming destinations (AWS Kinesis and Azure Event Hubs) and activate data](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
-    *  [Connect to email marketing destinations and activate data](https://docs.adobe.com/content/help/en/experience-platform/tutorials/destinations/email-marketing-api.html)
+    *  [Connect to email marketing destinations and activate data](/help/rtcdp/destinations/email-marketing-api.md)
 * Privacy and data governance {#privacy}
   * [Privacy overview](privacy/privacy-overview.md)
   * [Data Governance overview](privacy/data-governance-overview.md)

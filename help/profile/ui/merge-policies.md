@@ -73,7 +73,8 @@ You can modify an existing merge policy through the *[!UICONTROL Merge policies]
 
 When the *[!UICONTROL Edit merge policy]* screen appears, you can make changes to the *[!UICONTROL Name]*, *[!UICONTROL Schema]*, *[!UICONTROL ID stitching]* type, and *[!UICONTROL Attribute merge]* type, as well as select whether or not this policy will be the *[!UICONTROL Default merge policy]* for your organization.
 
->[!Note]
+>[!NOTE]
+>
 >You cannot edit the merge policy ID, shown at the top of the edit screen. This is a read-only, system-generated ID that cannot be changed. 
 
 ![](../images/merge-policies/edit-screen.png)
