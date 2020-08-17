@@ -71,7 +71,8 @@ In order to drive coordinated, consistent, and personalized experiences for your
 
 [!DNL Platform] can be configured to send your record and time-series data to [!DNL Profile], supporting real-time streaming ingestion and batch ingestion. For more information, see the tutorial outlining how to [add data to Real-time Customer Profile](tutorials/add-profile-data.md). 
 
->[!Note]
+>[!NOTE]
+>
 >Data collected through Adobe solutions, including [!DNL Analytics Cloud], [!DNL Marketing Cloud], and [!DNL Advertising Cloud], flows into [!DNL Experience Platform] and is ingested into [!DNL Profile].
 
 ### [!DNL Profile] ingestion metrics
