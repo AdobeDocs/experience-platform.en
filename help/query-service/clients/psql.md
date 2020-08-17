@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;PSQL;psql
 solution: Experience Platform
 title: Connect with PSQL
 topic: connect
+description: PSQL is a command-line interface that comes when you install Postgres on your machine. You can install it by following these instructions. 
 ---
 
 # Connect with PSQL
