@@ -365,7 +365,7 @@ If the batch ingested has an invalid schema or invalid headers, the batch's erro
 
 ### Unparsable rows {#unparsable}
 
-If the batch ingested has unparsable rows, you can view the list of files that contain errors by using the following endpoint.
+If the batch you ingested has unparsable rows, you can use the following endpoint to view a list of files that contain errors.
 
 **API format**
 
