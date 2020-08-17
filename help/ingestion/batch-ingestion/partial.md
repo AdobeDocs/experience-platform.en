@@ -389,7 +389,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 
 **Response**
 
-A successful response returns HTTP status 200 with a list of the files that have errors. You can then retrieve detailed information about the errors using the [metadata retrieval endpoint](#retrieve-metadata).
+A successful response returns HTTP status 200 with a list of the files that have errors.
 
 ```json
 {
@@ -397,5 +397,20 @@ A successful response returns HTTP status 200 with a list of the files that have
     "conversion_errors_1.json",
     "parsing_errors_0.json",
     "parsing_errors_1.json"
+}
+```
+
+You can then retrieve detailed information about the errors using the [metadata retrieval endpoint](#retrieve-metadata).
+
+A sample response of retrieving the error file can be seen below:
+
+```json
+{
+    "_corrupt_record": "{missingQuotes: "v1"}",
+    "_errors": [{
+        "code": "1401",
+        "message": "Row is corrupted and cannot be read, please fix and resend."
+    }],
+    "_filename": "parsing_errors_0.json"
 }
 ```
