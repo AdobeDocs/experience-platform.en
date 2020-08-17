@@ -9,7 +9,7 @@ topic: guide
 
 [!DNL Real-time Customer Profile] creates a holistic view of each of your individual customers, combining data from multiple channels including online, offline, CRM, and third-party data.
 
-This document serves as a guide for interacting with [!DNL Real-time Customer Profile] in the Adobe Experience Platform user interface.
+This document serves as a guide for interacting with [!DNL Real-time Customer Profile] data in the Adobe Experience Platform user interface.
 
 ## Getting started
 
@@ -83,17 +83,17 @@ Once a value has been entered, select **[!UICONTROL Show profile]** and a single
 
 ### Profile detail {#profile-detail}
 
-Upon selecting the **[!UICONTROL Profile ID]**, the _[!UICONTROL Detail]_ tab opens. This page displays information about the selected profile, including basic attributes, linked identities, and available contact channels. The profile information displayed has been merged together from multiple profile fragments to form a single view of the individual customer.
+Upon selecting the [!UICONTROL Profile ID], the **[!UICONTROL Detail]** tab opens. The profile information displayed on the [!UICONTROL Detail] tab has been merged together from multiple profile fragments to form a single view of the individual customer. This includes customer details such as basic attributes, linked identities, and channel preferences. The default fields shown can also be changed at an organizational-level to display preferred Profile attributes. To learn more about customizing these fields, including step-by-step instructions for adding and removing attributes and resizing dashboard panels, please read the [profile detail customization guide](profile-detail.md).
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-You can view additional information related to the profile including *[!UICONTROL Attributes]*, *[!UICONTROL Events]*, and *[!UICONTROL Segments]* to which the profile is a member.
+You can view additional information related to the individual profile by selecting another of the available tabs. These tabs include [!UICONTROL Attributes], [!UICONTROL Events], and [!UICONTROL Segment membership], which shows the [!UICONTROL Segments] for which the profile is currently qualified.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## Merge policies
 
-Select the *[!UICONTROL Merge Policies]* tab to view a list of merge policies belonging to your organization. Each listed policy displays its name, whether or not it is the default merge policy, and the schema that it applies to. 
+Select the **[!UICONTROL Merge Policies]** tab to view a list of merge policies belonging to your organization. Each listed policy displays its name, whether or not it is the default merge policy, and the schema that it applies to. 
 
 For more information on merge policies, see the [Merge Policies user guide](merge-policies.md).
 
@@ -101,7 +101,7 @@ For more information on merge policies, see the [Merge Policies user guide](merg
 
 ## Union schema
 
-Select the *Union Schema* tab to view the union schemas for your [!DNL Profile Store]. A union schema is an amalgamation of all [!DNL Experience Data Model] (XDM) fields under the same class, whose schemas have been enabled for use in [!DNL Real-time Customer Profile]. Select a class in the left-hand list to view the structure of its union schema in the canvas.
+Select the **[!UICONTROL Union Schema]** tab to view the union schemas for your Profile data. A union schema is an amalgamation of all [!DNL Experience Data Model] (XDM) fields under the same class, whose schemas have been enabled for use in [!DNL Real-time Customer Profile]. Select a class in the left-hand list to view the structure of its union schema in the canvas.
 
 For example, selecting "[!DNL XDM Profile]" displays the union schema for the [!DNL XDM Individual Profile] class.
 
