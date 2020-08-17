@@ -179,7 +179,7 @@ A successful response returns a set of `metrics` that define characteristics of 
     "header": {
       "_adobeio": {
         "imsOrgId": "{IMS_ORG}",
-        "providerMetadata": "aep_observability_catalog_events",
+        "providerMetadata": "platform_notifications",
         "eventCode": "sources_flow_run_success"
       }
     },
