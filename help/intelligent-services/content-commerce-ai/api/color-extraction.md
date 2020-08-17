@@ -8,6 +8,10 @@ description: The color extraction service, when given an image, can compute the 
 
 # Color extraction API endpoint
 
+>[!NOTE]
+>
+>Content and Commerce AI is in beta. The documentation is subject to change.
+
 The color extraction service, when given an image, can compute the histogram of pixel colors and sort them by dominant colors into buckets. The colors in the image pixels are bucketed into 40 predominant colors. The colors shown are representative of the color spectrum. Next, the histogram of color values is computed among the 40 colors. The service has two variants:
 
 **Color Extraction (full image)**
