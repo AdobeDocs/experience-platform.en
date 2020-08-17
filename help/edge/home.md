@@ -1,4 +1,5 @@
 ---
+keywords: web sdk;SDK;web SDK;Launch;launch
 title: Adobe Experience Platform Web SDK help
 seo-title: Adobe Experience Platform Web SDK help
 description: Learn what Adobe Experience Platform Web SDK is and how it can be used.

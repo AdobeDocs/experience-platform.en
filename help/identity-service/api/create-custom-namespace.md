@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;namespace;Namespace;namespaces;Namespaces;identity namespace;Identity namespace;identity;Identity
 solution: Experience Platform
 title: Create a custom namespace
 topic: API guide
+description: Using the Identity Namespace API, you can create a custom identity namespace that will be available only to your organization.
 ---
 
 # Creating a custom namespace

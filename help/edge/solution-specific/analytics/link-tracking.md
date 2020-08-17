@@ -26,7 +26,7 @@ alloy("sendEvent", {
 });
 ```
 
-While analytics technically records a page view even if this variable is not set, it is a best practice to set this variable whenever you want to record a page view to be explicit in your data and to futureproof you implementation. 
+Although analytics technically records a page view even if this variable is not set, it is a best practice to set this variable whenever you want to record a page view to be explicit in your data and to futureproof you implementation. 
 
 ## Tracking Links
 
