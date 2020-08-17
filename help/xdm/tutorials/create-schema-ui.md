@@ -29,7 +29,7 @@ The [!UICONTROL Schemas] workspace in the [!DNL Platform] UI provides a visualiz
 
 After logging into [!DNL Experience Platform], select **[!UICONTROL Schemas]** in the left navigation to open the **[!UICONTROL Schemas]** workspace. The **[!UICONTROL Browse]** tab displays a list of schemas (a representation of the [!DNL Schema Library]) which you can view and customize. The list includes the name, type, class, and behavior (record or time-series) on which the schema is based, as well as the date and time the schema was last modified. 
 
-Click the filter icon next to the search bar to use filtering capabilities for all resources in the registry, including classes, mixins, and data types. You can also filter based on whether resources are owned by Adobe or your organization, and if they have been enabled for use in [!DNL Real-time Customer Profile]. 
+Select the filter icon next to the search bar to use filtering capabilities for all resources in the registry, including classes, mixins, and data types. You can also filter based on whether resources are owned by Adobe or your organization, and if they have been enabled for use in [!DNL Real-time Customer Profile]. 
 
 ![](../images/tutorials/create-schema/schemas_filter.png)
 
@@ -113,7 +113,7 @@ As with class names, the mixin name should be short and simple, describing what 
 
 For this tutorial, name the new mixin "[!UICONTROL Loyalty Details]".
 
-Click **[!UICONTROL Add Mixin]** to return to the [!DNL Schema Editor]. "[!UICONTROL Loyalty Details]" should now appear under **[!UICONTROL Mixins]** on the left-side of the canvas, but there are no fields associated with it yet and therefore no new fields appear under **[!UICONTROL Structure]**.
+Select **[!UICONTROL Add Mixin]** to return to the [!DNL Schema Editor]. "[!UICONTROL Loyalty Details]" should now appear under **[!UICONTROL Mixins]** on the left-side of the canvas, but there are no fields associated with it yet and therefore no new fields appear under **[!UICONTROL Structure]**.
 
 ## Add fields to the mixin {#mixin-fields}
 
@@ -123,7 +123,7 @@ To begin, select the mixin name in the **[!UICONTROL Mixins]** section. Once you
 
 ![](../images/tutorials/create-schema/loyalty_details_structure.png)
 
-Click **[!UICONTROL Add Field]** next to "[!DNL Loyalty Members]" to create a new node in the structure. This node (called "_tenantId" in this example) represents your IMS Organization's tenant ID, preceded by an underscore. The presence of the tenant ID indicates that the fields you are adding are contained in your organization's namespace. 
+Select **[!UICONTROL Add Field]** next to "[!DNL Loyalty Members]" to create a new node in the structure. This node (called "_tenantId" in this example) represents your IMS Organization's tenant ID, preceded by an underscore. The presence of the tenant ID indicates that the fields you are adding are contained in your organization's namespace. 
 
 In other words, the fields you are adding are unique to your organization and are going to be saved in the [!DNL Schema Registry] in a specific area accessible only to your organization. Fields you define must always be added to your tenant namespace to prevent collisions with names from other standard classes, mixins, data types, and fields.
 
@@ -135,7 +135,7 @@ Using the controls on the right-hand side of the editor, start by creating a "[!
 
 ![](../images/tutorials/create-schema/loyalty_object.png)
 
-The changes are applied and the newly created "[!DNL loyalty]" object appears. Click **[!UICONTROL Add Field]** next to the object to add additional loyalty-related fields. A "[!UICONTROL New Field]" appears and the **[!UICONTROL Field Properties]** section is visible on the right-hand side of the canvas.
+The changes are applied and the newly created "[!DNL loyalty]" object appears. Select **[!UICONTROL Add Field]** next to the object to add additional loyalty-related fields. A "[!UICONTROL New Field]" appears and the **[!UICONTROL Field Properties]** section is visible on the right-hand side of the canvas.
 
 ![](../images/tutorials/create-schema/new_field_in_loyalty_object.png)
 
@@ -217,7 +217,7 @@ For example, there may be thousands of loyalty program members belonging to the 
 
 In the **[!UICONTROL Structure]** section of the editor, select the "[!DNL loyaltyId]" field and the **[!UICONTROL Identity]** checkbox appears under **[!UICONTROL Field Properties]**. Check the box and the option to set this as the **[!UICONTROL Primary Identity]** appears. Select this box as well. 
 
-Next, you must provide an **[!UICONTROL Identity Namespace]** from the list of pre-defined namespaces in the dropdown. Since "[!DNL loyaltyId]" is the customer's email address, select "[!UICONTROL Email]" from the dropdown. Click **[!UICONTROL Apply]** to confirm the updates to the "[!DNL loyaltyId]" field.
+Next, you must provide an **[!UICONTROL Identity Namespace]** from the list of pre-defined namespaces in the dropdown. Since "[!DNL loyaltyId]" is the customer's email address, select "[!UICONTROL Email]" from the dropdown. Select **[!UICONTROL Apply]** to confirm the updates to the "[!DNL loyaltyId]" field.
 
 ![](../images/tutorials/create-schema/loyaltyId_primary_identity.png)
 
@@ -243,7 +243,7 @@ On the right-hand side of the editor, information is shown about the schema incl
 
 ![](../images/tutorials/create-schema/profile-toggle.png)
 
-Click **[!UICONTROL Profile]** and a popover appears, asking you to confirm that you wish to enable the schema for [!DNL Profile]. 
+Select **[!UICONTROL Profile]** and a popover appears, asking you to confirm that you wish to enable the schema for [!DNL Profile]. 
 
 ![](../images/tutorials/create-schema/enable-profile.png)
 
@@ -255,7 +255,7 @@ Select **[!UICONTROL Enable]** to confirm your choice. You can select the **[!UI
 
 ## Next steps and additional resources
 
-Now that you have finished composing a "Loyalty Members" schema, you can see the complete schema in the canvas. Click **[!UICONTROL Save]** and the schema will be saved to the [!DNL Schema Library], making it accessible by the [!DNL Schema Registry].
+Now that you have finished composing a "Loyalty Members" schema, you can see the complete schema in the canvas. Select **[!UICONTROL Save]** and the schema will be saved to the [!DNL Schema Library], making it accessible by the [!DNL Schema Registry].
 
 Your new schema can now be used to ingest data into [!DNL Platform]. Remember that once the schema has been used to ingest data, only additive changes may be made. See the [basics of schema composition](../schema/composition.md) for more information on schema versioning.
 
@@ -311,11 +311,11 @@ To reassign a class, select **[!UICONTROL Assign]** in the left-hand side of the
 
 A dialog appears that displays a list of all available classes, including any defined by your organization (the owner being "[!UICONTROL Customer]") as well as standard classes defined by Adobe. 
 
-Select a class from the list to display its description on the right-hand side of the dialog. You can also select **[!UICONTROL Preview Class Structure]** to see the fields and metadata associated with the class. Click **[!UICONTROL Assign class]** to continue.
+Select a class from the list to display its description on the right-hand side of the dialog. You can also select **[!UICONTROL Preview Class Structure]** to see the fields and metadata associated with the class. Select **[!UICONTROL Assign class]** to continue.
 
 ![](../images/tutorials/create-schema/assign_class.png)
 
-A new dialog opens asking you to confirm that you wish to assign a new class. Click **[!UICONTROL Assign]** to confirm.
+A new dialog opens asking you to confirm that you wish to assign a new class. Select **[!UICONTROL Assign]** to confirm.
 
 ![](../images/tutorials/create-schema/assign-confirm.png)
 
