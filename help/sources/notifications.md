@@ -22,31 +22,26 @@ This document requires a working understanding of the following components of Ad
 
 *   [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
 *   [[!DNL Real-time Customer Profile]](../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-*   [Data ingestion](../ingestion/home.md): [!DNL Adobe Experience Platform Data Ingestion] represents the multiple methods by which [!DNL Platform] ingests data from these sources, as well as how that data is persisted within the [!DNL Data Lake] for use by downstream [!DNL Platform] services.
+*   [[!DNL Adobe Experience Platform Data ingestion]](../ingestion/home.md): [!DNL Data Ingestion] represents the multiple methods by which [!DNL Platform] ingests data from these sources, as well as how that data is persisted within the [!DNL Data Lake] for use by downstream [!DNL Platform] services.
 
 This document also requires a working understanding of webhooks and how to connect a webhook from one application to another. See the following [documentation](https://requestbin.com/blog/working-with-webhooks/) for more information on webhooks.
 
-During the subscription process, ensure that you select [!DNL Platform] notifications as the event provider, and select the following event subscriptions:
-
-* **[!UICONTROL Experience Platform Source's Flow Run Succeeded]**
-
-* **[!UICONTROL Experience Platform Source's Flow Run Failed]**
-
-## Subscribe to events
-
-The first step in receiving flow run notifications is to subscribe to events using [Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events.html).
-
-Follow the steps outlined in the [data ingestion notifications](../ingestion/quality/subscribe-events.md) document to start subscribing to events.
-
 ## Register your webhook
 
-In order to receive notifications on the status of your flow run, you must register a webhook by specifying a unique webhook URL as part of your event registration details.
-
-A webhook is a channel that allows for the real-time delivery of information from one application to another. To connect a webhook to your [!DNL I/O Events] subscription, visit the [webhook service](https://webhook.site/) and copy the unique URL provided.
+In order to receive notifications on the status of your flow run, you must register a webhook by specifying a unique webhook URL as part of your event registration details. To connect a webhook to your [!DNL I/O Events] subscription, visit the [webhook service](https://webhook.site/) and copy the unique URL provided.
 
 ![webhook](./images/notifications/webhook-url.png)
 
-Once you have copied the webhook URL, paste the URL in the **[!UICONTROL Webhook URL]** textbox in the **[!UICONTROL Configure event registration]** step of the event subscription process. Select **[!UICONTROL Save configured events]** to continue.
+>[!IMPORTANT] During the subscription process, ensure that you select [!DNL Platform] notifications as the event provider, and select the following event subscriptions:
+
+>* **[!UICONTROL Experience Platform Source's Flow Run Succeeded]**
+>* **[!UICONTROL Experience Platform Source's Flow Run Failed]**
+
+## Subscribe to events
+
+Once you have acquired a unique webhook URL, go to [Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events.html) and follow the steps outlined in the [data ingestion notifications](../ingestion/quality/subscribe-events.md) document to start subscribing to events.
+
+Paste the webhook URL in the **[!UICONTROL Webhook URL]** textbox in the **[!UICONTROL Configure event registration]** step of the event subscription process. Select **[!UICONTROL Save configured events]** to continue.
 
 ![register-webhook](./images/notifications/register-webhook.png)
 
@@ -63,7 +58,7 @@ A notification returns information such as the number of ingestion jobs run, fil
 
 ### Success
 
-A response payload contains a set of `metrics` that define characteristics of a specific flow run and `activities` that outline how data is transformed. The following response is an example of a successful flow run.
+A successful response returns a set of `metrics` that define characteristics of a specific flow run and `activities` that outline how data is transformed.
 
 ```json
 {
@@ -320,15 +315,17 @@ The following response is an example of a failed flow run, with an error occurri
 | ---------- | ----------- |
 | `fileInfo` | A URL that leads to an overview of the files that were both successfully and unsuccessfully ingested. |
 
+>[!NOTE] See the [appendix](#errors) for more information on error messages.
+
 ## Next steps
 
 You can now subscribe to events that allow you to receive real-time notifications on your flow run statuses. For more information on flow runs and sources, see the [sources overview](./home.md).
 
 ## Appendix
 
-The following sections provide additional information for working with flow run notifications.
+The following sections provides additional information for working with flow run notifications.
 
-### Understanding error messages
+### Understanding error messages {#errors}
 
 Ingestion errors can happen when data is being copied from the source or when the copied data is being processed to [!DNL Platform]. See the table below for more information on specific errors.
 
