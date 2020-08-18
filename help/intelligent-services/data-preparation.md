@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;Intelligent Services;popular topics
+keywords: Experience Platform;home;Intelligent Services;popular topics;intelligent service;Intelligent service
 solution: Experience Platform
 title: Prepare data for use in Intelligent Services
 topic: Intelligent Services
+description: In order for Intelligent Services to discover insights from your marketing events data, the data must be semantically enriched and maintained in a standard structure. Intelligent Services leverage Experience Data Model (XDM) schemas in order to achieve this. Specifically, all datasets that are used in Intelligent Services] must conform to the Consumer ExperienceEvent (CEE) XDM schema. 
 ---
 
 # Prepare data for use in [!DNL Intelligent Services]

@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;query
 solution: Experience Platform
 title: Adobe Experience Platform Query Service quickstart guide
 topic: quickstart
+description: Quickstart guide for Adobe Experience Platform Query Service.
 ---
 
 # Quickstart guide
