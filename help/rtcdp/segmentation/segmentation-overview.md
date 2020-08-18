@@ -1,4 +1,5 @@
 ---
+keywords: segmentation; segmentation rtcdp;real time customer data platform segmentation
 title: Segmentation service overview
 seo-title: Segmentation service in Adobe Real-time Customer Data Platform
 description: An overview describing segmentation service.

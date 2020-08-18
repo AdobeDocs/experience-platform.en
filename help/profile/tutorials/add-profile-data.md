@@ -1,8 +1,10 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;enable profile;Enable profile
 solution: Adobe Experience Platform
 title: Add data to Real-time Customer Profile
 topic: tutorial
+description: This tutorial outlines the steps necessary to add data to Real-time Customer Profile.
+
 ---
 
 # Add data to [!DNL Real-time Customer Profile]
