@@ -18,6 +18,7 @@ user-guide-title: Intelligent Services Help
 * Content and Commerce AI (beta) {#content-commerce-ai}
   * [Overview](content-commerce-ai/overview.md)
   * [Getting started](content-commerce-ai/getting-started.md)
+  * [Adobe Experience Manager configuration](http://www.adobe.com/go/ccai-aem-configuration-en)
   * Sensei Content Framework API{#api}
     * [Color extraction](content-commerce-ai/api/color-extraction.md)
     * [Keyword extraction](content-commerce-ai/api/keyword-extraction.md)
