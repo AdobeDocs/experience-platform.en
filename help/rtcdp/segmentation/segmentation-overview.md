@@ -1,6 +1,6 @@
 ---
-keywords: rtcdp segmentation service;cdp segmentation;segmentation rtcdp
-title: Segmentation Service in Real-time Customer Data Platform
+keywords: segmentation; segmentation rtcdp;real time customer data platform segmentation
+title: Segmentation service overview
 seo-title: Segmentation service in Adobe Real-time Customer Data Platform
 description: Real-time CDP is built on top of Adobe Experience Platform and utilizes many of the Experience Platform services and functionality. Using the Segmentation Service, you can provide tailor-made marketing by dividing your customers into smaller groups with similar traits.
 ---

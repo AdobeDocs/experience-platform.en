@@ -39,7 +39,7 @@ Log in to [Adobe Experience Platform](https://platform.adobe.com) and then selec
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the *[!UICONTROL Databases]* category, select **[!UICONTROL Couchbase]** click **on the + icon (+)** to create a new [!DNL Couchbase] connector.
+Under the *[!UICONTROL Databases]* category, select **[!UICONTROL Couchbase]** followed by **[!UICONTROL Add data]** to create a new [!DNL Couchbase] connector.
 
 ![catalog](../../../../images/tutorials/create/couchbase/catalog.png)
 

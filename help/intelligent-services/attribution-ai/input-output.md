@@ -74,18 +74,6 @@ Attribution AI outputs the following:
 - [Raw granular scores](#raw-granular-scores)
 - [Aggregated Scores](#aggregated-attribution-scores)
 
-In the examples below, a sample CSV output was used for illustration purposes. Here are some of the characteristics of the sample file.
-
-- The file did not have any tokenized events.
-- The file did not have any conversion only events (it did not contain score rows with 0 as a marginal score).
-- Data characteristics:
-  - 368 total sample rows.
-  - At least 8 conversions with 3 distinct channels each.
-  - 151 conversions of conversion type `“Digital_Product_Purchase”`.
-  - 10 distinct touchpoints, EMAIL, SOCIAL_LINKEDIN, ADS_GOOGLE, SOCIAL_OTHER, ADS_OTHER, SOCIAL_TWITTER , LANDINGPAGE, SOCIAL_FB, ADS_BING, PRINT.
-  - Conversions and touchpoints range over 8 and 9 months respectively.
-  - Rows are ordered by `id`, `conversion_timestamp` and `touchpoint_timestamp`.
-
 **Example output schema:**
 
 ![](./images/input-output/schema_output.gif)
@@ -94,7 +82,7 @@ In the examples below, a sample CSV output was used for illustration purposes. H
 
 Attribution AI outputs attribution scores in the most granular level possible so that you can slice and dice the scores by any score column. To view these scores in the UI, read the section on [viewing raw score paths](#raw-score-path). To download the scores using the API visit the [downloading scores in Attribution AI](./download-scores.md) document.
 
->[!NOTE] 
+>[!NOTE]
 >
 > You are able to see any desired reporting column from the input dataset in the score output dataset only if either of the following are true:
 > - The reporting column is included in the configuration page either as part of touchpoint or conversion definition configuration.

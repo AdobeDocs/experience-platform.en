@@ -33,15 +33,15 @@ Rendering personalized content is asynchronous, so there should not be any assum
 
 ## Manually Rendering Content
 
-You can request the list of decisions to be returned as a promise on the `event` command by using `scopes`. A scope is a string the lets the personalization solution know which decision you would like.
+You can request the list of decisions to be returned as a promise on the `sendEvent` command by specifying the `decisionScopes` option. A scope is a string the lets the personalization solution know which decision you would like.
 
 ```javascript
 alloy("sendEvent",{
     xdm:{...},
-    scopes:['demo-1', 'demo-2']
+    decisionScopes:['demo-1', 'demo-2']
   }).then(function(result){
     if (result.decisions){
-      //do something with the decisions
+      // Do something with the decisions.
     }
   })
 ```
@@ -49,8 +49,6 @@ alloy("sendEvent",{
 This will return a list of decisions as a JSON object for each decisions.
 
 ```javascript
-
-
 {
   "decisions": [
     {
@@ -83,13 +81,12 @@ This will return a list of decisions as a JSON object for each decisions.
     }
   ]
 }
-
 ```
 
 >[!TIP]
 >
-> If you use [!DNL Target] scopes become mBoxes on the server, only they are all requests at once instead of individually. The global mbox is always sent.
+> If you use [!DNL Target], scopes become mBoxes on the server, only they are all requested at once instead of individually. The global mbox is always sent.
 
 ### Retrieve Automatic Content
 
-If you would like the `result.decisions` to include the automatic renderable decisions, you can set `renderDecisions` to false and include the special scope `__view__`.
+If you would like the `result.decisions` to include the automatic renderable decisions and NOT have Alloy auto render them, you can set `renderDecisions` to `false`, and include the special scope `__view__`.
