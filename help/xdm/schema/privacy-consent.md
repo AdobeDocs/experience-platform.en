@@ -15,16 +15,14 @@ This document covers the structure and intended use of the common fields provide
 
 ## Prerequisites {#prerequisites}
 
-This document requires a working understanding of [!DNL Experience Data Model] (XDM) and the use of the schemas in [!DNL Experience Platform]. Please review the following documentation before continuing:
+This document requires a working understanding of XDM and the use of the schemas in [!DNL Experience Platform]. Please review the following documentation before continuing:
 
 * [XDM System overview](http://www.adobe.com/go/xdm-home-en)
 * [Basics of schema composition](http://www.adobe.com/go/xdm-schema-best-practices-en)
 
 ## [!DNL Privacy Consent] mixin structure {#consent-mixin}
 
-The [!DNL Privacy Consent] mixin provides the common fields used to capture consent information in the [!DNL Profile Privacy] and [!DNL Event Privacy] schemas.
-
-The following JSON shows an example of the type of data the [!DNL Privacy Consent] mixin is able to process. Information on the specific use of each of these fields is provided later in this section.
+The [!DNL Privacy Consent] mixin provides several fields used to capture consent information. The following JSON shows an example of the type of data the [!DNL Privacy Consent] mixin is able to process. Information on the specific use of each of these fields is provided later in this section.
 
 >[!NOTE]
 >
@@ -229,7 +227,7 @@ The following JSON shows an example of the type of data the [!DNL Privacy Consen
 
 ## [!DNL Profile Privacy] schema structure {#profile-privacy}
 
-The [!DNL Profile Privacy] schema is compatible with the [!DNL XDM Individual Profile] class. In addition to all the fields provided by the [!DNL Privacy Consent] mixin, the schema also provides an `xdm:identityPrivacyInfo` field, which captures additional privacy information regarding the individual. This field is explained in detail later in this section.
+The [!DNL Profile Privacy] schema is compatible with the [!DNL XDM Individual Profile] class. In addition to all the fields provided by the [!DNL Privacy Consent] mixin, the schema also provides an `xdm:identityPrivacyInfo` field, which captures additional privacy information for specific identities and device IDs. This field is explained in detail later in this section.
 
 The following JSON shows an example of the type of data the [!DNL Profile Privacy] schema is able to process.
 
@@ -352,7 +350,7 @@ For example, the sample payload below specifies a customer's privacy preferences
 
 >[!NOTE]
 >
->The example below captures privacy settings for a single namespace value for demonstration purposes. If necessary, multiple namespaces can be specified, along with multiple values provided for each namespace. This allows for fully customizable privacy settings that only apply to specific user and device IDs for a particular individual.
+>The example below captures privacy settings for a single namespace value for demonstration purposes. If necessary, multiple namespaces can be specified, along with multiple values provided for each namespace. This allows for fully customizable privacy settings that only apply to specific identities and devices for a particular individual.
  
 ```json
 "xdm:identityPrivacyInfo": {
