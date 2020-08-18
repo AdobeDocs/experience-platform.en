@@ -26,7 +26,7 @@ If you already have a valid [!DNL Dynamics] account, you may skip the remainder 
 | ---------- | ----------- |
 | `serviceUri` | The service URL of your [!DNL Dynamics] instance. |
 | `username` | The user name for your [!DNL Dynamics] user account. |
-| `password` | The password for your Dynamics account. |
+| `password` | The password for your [!DNL Dynamics] account. |
 
 For more information on getting started, refer to [this [!DNL Dynamics] document](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
 
