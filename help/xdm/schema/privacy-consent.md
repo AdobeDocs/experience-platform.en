@@ -351,7 +351,7 @@ For example, the sample payload below specifies a customer's privacy preferences
 >[!NOTE]
 >
 >The example below captures privacy settings for a single namespace value for demonstration purposes. If necessary, multiple namespaces can be specified, along with multiple values provided for each namespace. This allows for fully customizable privacy settings that only apply to specific identities and devices for a particular individual.
- 
+
 ```json
 "xdm:identityPrivacyInfo": {
   "email": {
@@ -409,69 +409,69 @@ The [!DNL Event Privacy] schema is compatible with the [!DNL XDM ExperienceEvent
 
 ```json
 {
-	"xdm:consentsAndPreferences": {
-		"xdm:privacyOptOuts": [
-			{
-				"xdm:optOutType": "general_opt_out",
-				"xdm:optOutValue": "in",
-				"xdm:timestamp": "2019-01-01T15:52:25+00:00",
-				"xdm:basisOfProcessing": "legitimate_interest"
-			}
-		],
-		"xdm:personalizationPreferences": {
-			"xdm:default": {
-				"xdm:choice": "unknown",
-				"xdm:timestamp": "2019-01-01T15:52:25+00:00",
-				"xdm:basisOfProcessing": "consent"
-			},
-			"xdm:details": [
-				{
-					"xdm:type": "email",
-					"xdm:choice": "in"
-				}
-			]
-		},
-		"xdm:marketingPreferences": {
-			"xdm:default": {
-				"xdm:choice": "unknown"
-			},
-			"xdm:details": [
-				{
-					"xdm:type": "email",
-					"xdm:choice": "in",
-                    "xdm:subscriptions": {
-                       "weekly_mailer": {
-                          "xdm:choice": "out",
-                          "xdm:timestamp": "2019-02-03T15:52:25+00:00"
-                       },
-                       "daily_newsletter": {
-                          "xdm:choice": "in"
-                       }
-                    }
-				},
-				{
-					"xdm:type": "iot",
-					"xdm:choice": "out",
-					"xdm:timestamp": "2019-01-01T15:52:25+00:00",
-					"xdm:basisOfProcessing": "legitimate_interest",
-                    "xdm:subscriptions": {
-                       "out_of_milk": {
-                         "xdm:choice": "in"
-                       }
-                    }
-				}
-			]
-		}
-	},
-    "xdm:consentStrings": [
+  "xdm:consentsAndPreferences": {
+    "xdm:privacyOptOuts": [
+      {
+        "xdm:optOutType": "general_opt_out",
+        "xdm:optOutValue": "in",
+        "xdm:timestamp": "2019-01-01T15:52:25+00:00",
+        "xdm:basisOfProcessing": "legitimate_interest"
+      }
+    ],
+    "xdm:personalizationPreferences": {
+      "xdm:default": {
+        "xdm:choice": "unknown",
+        "xdm:timestamp": "2019-01-01T15:52:25+00:00",
+        "xdm:basisOfProcessing": "consent"
+      },
+      "xdm:details": [
         {
-            "xdm:consentStandard": "IAB TCF",
-            "xdm:consentStandardVersion": "2.0",
-            "xdm:consentStringValue": "BObdrPUOevsguAfDqFENCNAAAAAmeAAA.PVAfDObdrA.DqFENCAmeAENCDA",
-            "xdm:gdprApplies": true,
-            "xdm:containsPersonalData": false
+          "xdm:type": "email",
+          "xdm:choice": "in"
         }
-    ]
+      ]
+    },
+    "xdm:marketingPreferences": {
+      "xdm:default": {
+        "xdm:choice": "unknown"
+      },
+      "xdm:details": [
+        {
+          "xdm:type": "email",
+          "xdm:choice": "in",
+          "xdm:subscriptions": {
+            "weekly_mailer": {
+              "xdm:choice": "out",
+              "xdm:timestamp": "2019-02-03T15:52:25+00:00"
+            },
+            "daily_newsletter": {
+              "xdm:choice": "in"
+            }
+          }
+        },
+        {
+          "xdm:type": "iot",
+          "xdm:choice": "out",
+          "xdm:timestamp": "2019-01-01T15:52:25+00:00",
+          "xdm:basisOfProcessing": "legitimate_interest",
+          "xdm:subscriptions": {
+            "out_of_milk": {
+              "xdm:choice": "in"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "xdm:consentStrings": [
+    {
+      "xdm:consentStandard": "IAB TCF",
+      "xdm:consentStandardVersion": "2.0",
+      "xdm:consentStringValue": "BObdrPUOevsguAfDqFENCNAAAAAmeAAA.PVAfDObdrA.DqFENCAmeAENCDA",
+      "xdm:gdprApplies": true,
+      "xdm:containsPersonalData": false
+    }
+  ]
 }
 ```
 
