@@ -34,7 +34,7 @@ Control | Description
  [!UICONTROL Configure] | Allows you to create a connection to the destination.
  [!UICONTROL Activate] | Once you have established a connection to the destination, you can activate segments. 
  [!UICONTROL View account] | View the accounts you have connected for a destination.
- [!UICONTROL View dataflows] | View the data activation flows that exist for a destination
+ [!UICONTROL View dataflows] | View the data activation flows that exist for a destination.
  [!UICONTROL View documentation] | Opens a link to the documentation page for that specific destination, for more information and to help you set it up.
 
 ![Controls on the destinations card](/help/rtcdp/destinations/assets/destination-card-options.png)
