@@ -77,7 +77,6 @@ CRM systems provide data that can help build customer relationships, which in tu
 - [!DNL GreenPlum](connectors/databases/greenplum.md) connector
 - [!DNL HP Vertica](connectors/databases/hp-vertica.md) connector
 - [!DNL IBM DB2](connectors/databases/ibm-db2.md) connector
-- [!DNL MariaDB](connectors/databases/mariadb.md) connector
 - [!DNL Microsoft SQL Server](connectors/databases/sql-server.md) connector
 - [!DNL MySQL](connectors/databases/mysql.md) connector
 - [!DNL Oracle](connectors/databases/oracle.md) connector
