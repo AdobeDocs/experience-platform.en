@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;GDPR;gdpr
 solution: Experience Platform
 title: GDPR FAQ
 topic: troubleshooting
+description: This document provides answers to frequently asked questions about the General Data Protection Regulation (GDPR) and its implementation in Adobe Experience Cloud.
 ---
 
 # GDPR FAQ

@@ -11,7 +11,7 @@ This tutorial demonstrates how to use API calls to connect to your Adobe Experie
 
 This tutorial uses the Adobe Campaign destination in all examples, but the steps are identical for all email marketing destinations.
 
-![Overview - the steps to create a destination and activate segments](../images/destinations/flow-api-destinations-steps-overview.png)
+![Overview - the steps to create a destination and activate segments](/help/rtcdp/destinations/assets/flow-api-destinations-steps-overview.png)
 
 If you prefer to use the user interface in Adobe's Real-time CDP to connect a destination and activate data, see the [Connect a destination](../../rtcdp/destinations/connect-destination.md) and [Activate profiles and segments to a destination](../../rtcdp/destinations/activate-destinations.md) tutorials.
 
@@ -38,7 +38,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required and optional headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 *   Authorization: Bearer `{ACCESS_TOKEN}`
 *   x-api-key: `{API_KEY}`
@@ -78,7 +78,7 @@ You can find accompanying reference documentation for all the API calls in this 
 
 ## Get the list of available destinations {#get-the-list-of-available-destinations}
 
-![Destination steps overview step 1](../images/destinations/flow-api-destinations-step1.png)
+![Destination steps overview step 1](/help/rtcdp/destinations/assets/flow-api-destinations-step1.png)
 
 As a first step, you should decide which email marketing destination to activate data to. To begin with, perform a call to request a list of available destinations that you can connect and activate segments to. Perform the following GET request to the `connectionSpecs` endpoint to return a list of available destinations:
 
@@ -132,7 +132,7 @@ A successful response contains a list of available destinations and their unique
 
 ## Connect to your [!DNL Experience Platform] data {#connect-to-your-experience-platform-data}
 
-![Destination steps overview step 2](../images/destinations/flow-api-destinations-step2.png)
+![Destination steps overview step 2](/help/rtcdp/destinations/assets/flow-api-destinations-step2.png)
 
 Next, you must connect to your [!DNL Experience Platform] data, so you can export profile data and activate it in your preferred destination. This consists of two substeps which are described below.
 
@@ -283,7 +283,7 @@ A successful response returns the unique identifier (`id`) for the newly created
 
 ## Connect to email marketing destination {#connect-to-email-marketing-destination}
 
-![Destination steps overview step 3](../images/destinations/flow-api-destinations-step3.png)
+![Destination steps overview step 3](/help/rtcdp/destinations/assets/flow-api-destinations-step3.png)
 
 In this step, you are setting up a connection to your desired email marketing destination. This consists of two substeps which are described below. 
 
@@ -461,7 +461,7 @@ A successful response returns the unique identifier (`id`) for the newly created
 
 ## Create a dataflow
 
-![Destination steps overview step 4](../images/destinations/flow-api-destinations-step4.png)
+![Destination steps overview step 4](/help/rtcdp/destinations/assets/flow-api-destinations-step4.png)
 
 Using the IDs you obtained in the previous steps, you can now create a dataflow between your [!DNL Experience Platform] data and the destination where you will activate data to. Think of this step as constructing the pipeline, through which data will later flow, between [!DNL Experience Platform] and your desired destination.
 
@@ -533,7 +533,7 @@ A successful response returns the ID (`id`) of the newly created dataflow and an
 
 ## Activate data to your new destination
 
-![Destination steps overview step 5](../images/destinations/flow-api-destinations-step5.png)
+![Destination steps overview step 5](/help/rtcdp/destinations/assets/flow-api-destinations-step5.png)
 
 Having created all the connections and the data flow, now you can activate your profile data to the email marketing platform. In this step, you select which segments and which profile attributes you are sending to the destination and you can schedule and send data to the destination.
 
@@ -601,13 +601,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **Response**
 
-Look for a 202 OK response. No response body is returned. To validate that the request was correct, see the next step, Validate the data flow. 
+Look for a 202 OK response. No response body is returned. To validate that the request was correct, see the next step, Validate the data flow.
 
 ## Validate the data flow
 
-![Destination steps overview step 6](../images/destinations/flow-api-destinations-step6.png)
+![Destination steps overview step 6](/help/rtcdp/destinations/assets/flow-api-destinations-step6.png)
 
-As a final step in the tutorial, you should validate that the segments and profile attributes have indeed been correctly mapped to the data flow. 
+As a final step in the tutorial, you should validate that the segments and profile attributes have indeed been correctly mapped to the data flow.
 
 To validate this, perform the following GET request:
 

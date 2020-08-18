@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;query
 solution: Experience Platform
 title: Query Service developer guide
 topic: query templates
+description: This developer guide provides steps for performing various operations in the Adobe Experience Platform Query Service API.
 ---
 
 # [!DNL Query Service] developer guide

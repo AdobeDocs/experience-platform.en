@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;offer management;Offer Management
 solution: Experience Platform
 title: Offer Decisioning domain model
 topic: overview
+description: Offer decisioning is a use case of Decisioning Service within which you formalize and centrally manage the rules and predictions used for engaging customers with offers.
 ---
 
 # Offer Decisioning domain model overview

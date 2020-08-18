@@ -365,7 +365,7 @@ If the batch ingested has an invalid schema or invalid headers, the batch's erro
 
 ### Unparsable rows {#unparsable}
 
-If the batch ingested has unparsable rows, the batch's errors will be stored in a file that can be accessed by using the endpoint outlined below.
+If the batch you ingested has unparsable rows, you can use the following endpoint to view a list of files that contain errors.
 
 **API format**
 
@@ -389,15 +389,48 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 
 **Response**
 
-A successful response returns HTTP status 200 with details of the unparsable rows.
+A successful response returns HTTP status 200 with a list of the files that have errors.
 
 ```json
 {
-    "_corrupt_record": "{missingQuotes:"v1"}",
+    "data": [
+        {
+            "name": "conversion_errors_0.json",
+            "length": "1162",
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io:443/data/foundation/export/batches/01EFZ7W203PEKSAMVJC3X99VHQ/meta?path=row_errors%2Fconversion_errors_0.json"
+                }
+            }
+        },
+        {
+            "name": "parsing_errors_0.json",
+            "length": "153",
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io:443/data/foundation/export/batches/01EFZ7W203PEKSAMVJC3X99VHQ/meta?path=row_errors%2Fparsing_errors_0.json"
+                }
+            }
+        }
+    ],
+    "_page": {
+        "limit": 100,
+        "count": 2
+    }
+}
+```
+
+You can then retrieve detailed information about the errors using the [metadata retrieval endpoint](#retrieve-metadata).
+
+A sample response of retrieving the error file can be seen below:
+
+```json
+{
+    "_corrupt_record": "{missingQuotes: "v1"}",
     "_errors": [{
-         "code": "1401",
-         "message": "Row is corrupted and cannot be read, please fix and resend."
+        "code": "1401",
+        "message": "Row is corrupted and cannot be read, please fix and resend."
     }],
-    "_filename": "a1.json"
+    "_filename": "parsing_errors_0.json"
 }
 ```
