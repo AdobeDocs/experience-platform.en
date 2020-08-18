@@ -1,4 +1,5 @@
 ---
+keywords: RTCDP;CDP
 title: Real-time Customer Data Platform Overview
 seo-title: Real-time Customer Data Platform Overview
 description: Overview of Real-time Customer Data Platform

@@ -184,4 +184,5 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
   - [Activate inbound data to populate customer profiles](tutorials/ui/profile.md)
   - [Monitor accounts and dataflows](tutorials/ui/monitor.md)
   - [Delete dataflows](tutorials/ui/delete.md)
+- [Flow run notifications](notifications.md)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
