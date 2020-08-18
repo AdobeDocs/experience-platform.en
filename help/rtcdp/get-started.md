@@ -1,4 +1,5 @@
 ---
+keywords: RTCDP;rtcdp
 title: Getting started with Adobe Real-time Customer Data Platform
 seo-title: Getting started with Adobe Real-time Customer Data Platform
 description: Sample scenario for Adobe Real-time Customer Data Platform

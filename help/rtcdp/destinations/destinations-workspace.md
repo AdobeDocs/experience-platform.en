@@ -1,4 +1,5 @@
 ---
+keywords: RTCDP;rtcdp
 title: Destinations workspace
 seo-title: Destinations workspace
 description: In Adobe Real-time Customer Data Platform, select Destinations from the left navigation bar to access the destinations workspace.
