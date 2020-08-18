@@ -24,6 +24,8 @@ Sources in [!DNL Experience Platform] are grouped into the following categories:
 
 - [Adobe Audience Manager connector overview](connectors/adobe-applications/audience-manager.md)
 - [Create an Adobe Audience Manager source connector in the UI](./tutorials/ui/create/adobe-applications/audience-manager.md)
+- [Adobe Analytics Classifications Data connector overview](connectors/adobe-applications/classifications.md)
+- [Create an Adobe Analytics Classifications Data source connector in the UI](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Adobe Analytics data connector overview](connectors/adobe-applications/analytics.md)
 - [Create an Adobe Analytics source connector in the UI](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Create a Customer Attributes source connector in the UI](./tutorials/ui/create/adobe-applications/customer-attributes.md)
