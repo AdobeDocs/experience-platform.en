@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai;color extraction;Color extraction
 solution: Experience Platform
-title: Color extraction API endpoint
+title: Color extraction
 topic: Developer guide
 description: The color extraction service, when given an image, can compute the histogram of pixel colors and sort them by dominant colors into buckets.
 ---
 
-# Color extraction API endpoint
+# Color extraction service
 
 >[!NOTE]
 >
@@ -31,15 +31,19 @@ The following image was used in the example below:
 The following example request uses the color extraction (full image) method.
 
 ```http
-POST /sensei-core/v1/predict
+POST /services/v1/predict
 ```
 
 **Request**
 
 The request to extract colors (POST) must include certain input parameters. See the table below for more information on the mandatory input parameters.
 
+>[!CAUTION]
+>
+> `analyzer_id` determines which Sensei Content Framework is used. Please check that you have the proper `analyzer_id` before making your request.
+
 ```SHELL
-curl -i -X POST https://sensei-stage-ew1.adobe.io/sensei-core/v1/predict \
+curl -i -X POST https://sensei-ew1.adobe.io/services/v1/predict \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: multipart/form-data' \
   -H 'x-api-key: {API_KEY}' \
@@ -77,7 +81,7 @@ curl -i -X POST https://sensei-stage-ew1.adobe.io/sensei-core/v1/predict \
 
 | Property | Description | Mandatory |
 | --- | --- | --- |
-| `analyzer_id` | The [!DNL Sensei] service ID that your request is deployed under. | Yes |
+| `analyzer_id` | The [!DNL Sensei] service ID that your request is deployed under. This ID determines which of the Sensei Content Frameworks are used.  | Yes |
 | `application-id` | The ID of your created application. | Yes |
 | `data` | An array that contains a JSON object with each object in the array representing an image. Any parameters passed as part of this array overrides the global parameters specified outside the `data` array. To view a list of parameters that can be overridden, see the optional input parameters below.  | Yes |
 | `content-id` | The unique ID for the data element that is returned in the response. If this is not passed, an auto-generated ID is assigned. | No |

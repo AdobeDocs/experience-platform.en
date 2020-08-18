@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai;keyword extraction;Keyword extraction
 solution: Experience Platform
-title: Color extraction API endpoint
+title: Color extraction
 topic: Developer guide
 description: The keyword extraction service, when given a text document, automatically extracts keywords or keyphrases that best describe the subject of the document. In order to extract keywords, a combination of named entity recognition (NER) and unsupervised keyword extraction algorithms are used.
 ---
 
-# Keyword extraction API endpoint
+# Keyword extraction
 
 >[!NOTE]
 >
@@ -43,15 +43,19 @@ The OntoNotes results and the keywords from [!DNL YAKE] are combined then ranked
 **API format**
 
 ```http
-POST /sensei-core/v1/predict
+POST /services/v1/predict
 ```
 
 **Request**
 
 The request to extract keywords (POST) must include certain input parameters. See the table below for more information on the mandatory input parameters.
 
+>[!CAUTION]
+>
+> `analyzer_id` determines which Sensei Content Framework is used. Please check that you have the proper `analyzer_id` before making your request.
+
 ```SHELL
-curl -w'\n' -i -X POST https://sensei-stage-ew1.adobe.io/sensei-core/v1/predict \
+curl -w'\n' -i -X POST https://sensei-ew1.adobe.io/services/v1/predict \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "Content-Type: multipart/form-data" \
   -H "cache-control: no-cache,no-cache" \
@@ -106,6 +110,7 @@ Simplified JSON of the input file:
 
 | Property | Description | Mandatory |
 | --- | --- | --- |
+| `analyzer_id` | The [!DNL Sensei] service ID that your request is deployed under. This ID determines which of the Sensei Content Frameworks are used.  | Yes |
 | `application-id` | The ID of application created. | Yes |
 | `data` | An array that contains a JSON object with each object in the array representing a document. Any parameters passed as part of this array overrides the global parameters specified outside the `data` array. To view a list of parameters that can be overridden, see the list below for more information. | Yes |
 | `language` | Language of input text. The default value is `en`. | No |
