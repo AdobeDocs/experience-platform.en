@@ -1,4 +1,5 @@
 ---
+keywords: foresee;foresee extension;foresee destination
 title: Foresee extension
 seo-title: Foresee extension
 description: The Foresee extension is a survey destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.

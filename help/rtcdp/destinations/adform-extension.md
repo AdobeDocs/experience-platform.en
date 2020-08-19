@@ -1,4 +1,5 @@
 ---
+keywords: adform extension;adform
 title: Adform extension
 seo-title: Adform extension
 description: The Adform extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.

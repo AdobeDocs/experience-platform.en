@@ -1,4 +1,5 @@
 ---
+keywords: beemray,beemray extension
 title: Beemray extension
 seo-title: Beemray extension
 description: The Beemray extension is a personalization destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.

@@ -1,4 +1,5 @@
 ---
+keywords: decibel extension;decibel;decibel destination
 title: Decibel extension
 seo-title: Decibel extension
 description: The Decibel extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
