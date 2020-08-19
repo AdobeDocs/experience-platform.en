@@ -6,29 +6,27 @@ topic: Developer guide
 description: The color extraction service, when given an image, can compute the histogram of pixel colors and sort them by dominant colors into buckets.
 ---
 
-# Color extraction service
+# Color extraction
 
 >[!NOTE]
 >
->Content and Commerce AI is in beta. The documentation is subject to change.
+>[!DNL Content and Commerce AI] is in beta. The documentation is subject to change.
 
-The color extraction service, when given an image, can compute the histogram of pixel colors and sort them by dominant colors into buckets. The colors in the image pixels are bucketed into 40 predominant colors. The colors shown are representative of the color spectrum. Next, the histogram of color values is computed among the 40 colors. The service has two variants:
+The color extraction service, when given an image, can compute a histogram of pixel colors and sort them by dominant colors into buckets. The colors in the image pixels are bucketed into 40 predominant colors which are representative of the color spectrum. A histogram of color values is then computed among those 40 colors. The service has two variants:
 
-**Color Extraction (full image)**
+**Color extraction (full image)**
 
-This method extracts the color histogram across the entire image.
+This method extracts a color histogram across the entire image.
 
-**Color Extraction (with mask)**
+**Color extraction (with mask)**
 
-This method uses a deep-learning based foreground extractor to identify objects in the foreground. The deep-learning based model is trained on a catalog of e-commerce images. Once the foreground object is extracted, the histogram is computed over the dominant colors as previously described.
+This method uses a deep-learning-based foreground extractor to identify objects in the foreground. The model is trained on a catalog of e-commerce images. Once the foreground object is extracted, a histogram is computed over the dominant colors as previously described.
 
-The following image was used in the example below:
+The following image was used in the example shown in this document:
 
 ![test image](../images/test_image.jpeg)
 
 **API format**
-
-The following example request uses the color extraction (full image) method.
 
 ```http
 POST /services/v1/predict
@@ -36,11 +34,13 @@ POST /services/v1/predict
 
 **Request**
 
-The request to extract colors (POST) must include certain input parameters. See the table below for more information on the mandatory input parameters.
+The following example request uses the full-image method for color extraction.
+
+The following request extracts colors from a image based on the input parameters provided in the payload. See the table below the example payload for more information on the input parameters shown.
 
 >[!CAUTION]
 >
-> `analyzer_id` determines which Sensei Content Framework is used. Please check that you have the proper `analyzer_id` before making your request.
+>`analyzer_id` determines which [!DNL Sensei Content Framework] is used. Please check that you have the proper `analyzer_id` before making your request.
 
 ```SHELL
 curl -i -X POST https://sensei-ew1.adobe.io/services/v1/predict \
@@ -77,38 +77,29 @@ curl -i -X POST https://sensei-ew1.adobe.io/services/v1/predict \
 }'
 ```
 
-**Mandatory input parameters**
-
 | Property | Description | Mandatory |
 | --- | --- | --- |
-| `analyzer_id` | The [!DNL Sensei] service ID that your request is deployed under. This ID determines which of the Sensei Content Frameworks are used.  | Yes |
+| `analyzer_id` | The [!DNL Sensei] service ID that your request is deployed under. This ID determines which of the [!DNL Sensei Content Frameworks] are used.  | Yes |
 | `application-id` | The ID of your created application. | Yes |
-| `data` | An array that contains a JSON object with each object in the array representing an image. Any parameters passed as part of this array overrides the global parameters specified outside the `data` array. To view a list of parameters that can be overridden, see the optional input parameters below.  | Yes |
+| `data` | An array that contains JSON objects. Each object in the array represents an image. Any parameters passed as part of this array overrides the global parameters specified outside the `data` array. Any of the remaining properties outlined below in this table can be overridden from within `data`.  | Yes |
 | `content-id` | The unique ID for the data element that is returned in the response. If this is not passed, an auto-generated ID is assigned. | No |
-| `content` | In the event that the image is part of request-body, use `-F file=@<filename>` in the curl command to pass the image, leaving this parameter as an empty string. <br> If the image is a file on S3, pass the signed url. When content is part of request-body, the list of data elements should have only one object. If more than one object is passed, only the first object is processed. | Yes |
-| `content-type` | Used to indicate whether the input is part of the request body or a signed url for an S3 bucket. The default for this property is `inline`. | Yes |
-| `encoding` | The file format of the input image. Currently only JPEG and PNG images can be processed. The default for this property is `jpeg`. | Yes |
-| `threshold` | The threshold of score (0 to 1) above which the results need to be returned. Use the value 0, to return all results. The default for this property is `0`. | Yes |
-| `top-N` | The number of results to be returned (cannot be a negative integer). Use the value 0, to return all results. When used in conjunction with `threshold`, the number of results returned is the lesser of either limit set. The default for this property is `0`. | Yes |
+| `content` | The content to be analyzed by the color extraction service. In the event that the image is part of the request body, use `-F file=@<filename>` in the curl command to pass the image, leaving this parameter as an empty string. <br> If the image is a file on S3, pass the signed url. When content is part of the request body, the list of data elements should have only one object. If more than one object is passed, only the first object is processed. | Yes |
+| `content-type` | Used to indicate whether the input is part of the request body or a signed url for an S3 bucket. The default for this property is `inline`. | No |
+| `encoding` | The file format of the input image. Currently only JPEG and PNG images can be processed. The default for this property is `jpeg`. | No |
+| `threshold` | The threshold of score (0 to 1) above which the results need to be returned. Use the value `0` to return all results. The default for this property is `0`. | No |
+| `top-N` | The number of results to be returned (cannot be a negative integer). Use the value `0` to return all results. When used in conjunction with `threshold`, the number of results returned is the lesser of either limit set. The default for this property is `0`. | No |
 | `custom` | Any custom parameters to be passed. | No |
 | `historic-metadata` | An array that can be passed metadata. | No |
 
-The following parameters can be overridden by adding values to them in the `data` array:
-
-- `content-id`
-- `content`
-- `content-type`
-- `encoding`
-- `threshold`
-- `top-N`
-- `historic-metadata`
-- `custom`
-
 **Response**
 
-A successful response returns an array housing each color's data in an object with `feature_name` and `feature_value`. The `feature_value` key contains a string with a color name, a percentage this color appears in relation to the image sent, and the RGB value of the color.
+A successful response returns the details of the extracted colors. Each color is represented by a `feature_value` key, which contains the following information:
 
-In the first example object below `"feature_value": "White,0.82,239,239,239"`, means the color found was white, this color was found in 82% of the image, and the RGB value is 239,239,239.
+- A color name
+- The percentage this color appears in relation to the image
+- The RGB value of the color
+
+In the first example object below, the `feature_value` of `White,0.82,239,239,239` means the color found is white, white is found in 82% of the image, and has an RGB value of 239,239,239.
 
 ```json
 {
@@ -150,4 +141,4 @@ In the first example object below `"feature_value": "White,0.82,239,239,239"`, m
 | Property | Description |
 | --- | --- |
 | `content_id` | The name of the image that was uploaded in your POST request. |
-| `feature_value` | An array that contains keys with the same property name. These keys contain a list that has the color name, a percentage this color appears in relation to the image sent in the `content_id`, and the rgb value of the color. |
+| `feature_value` | An array whose objects contain keys with the same property name. These keys contain a string that represents the color name, a percentage this color appears in relation to the image sent in the `content_id`, and the RGB value of the color. |

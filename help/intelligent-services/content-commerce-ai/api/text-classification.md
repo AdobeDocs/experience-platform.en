@@ -24,11 +24,11 @@ POST /services/v1/predict
 
 **Request**
 
-The request to the text classification (POST) must include certain input parameters. See the table below for more information on the mandatory input parameters.
+The following request classifies text from a fragment based on the input parameters provided in the payload. See the table below the example payload for more information on the input parameters shown.
 
 >[!CAUTION]
 >
-> `analyzer_id` determines which Sensei Content Framework is used. Please check that you have the proper `analyzer_id` before making your request.
+>`analyzer_id` determines which [!DNL Sensei Content Framework] is used. Please check that you have the proper `analyzer_id` before making your request.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei-ew1.adobe.io/services/v1/predict \
@@ -57,32 +57,21 @@ curl -w'\n' -i -X POST https://sensei-ew1.adobe.io/services/v1/predict \
 
 | Property | Description | Mandatory |
 | --- | --- | --- |
-| `analyzer_id` | The [!DNL Sensei] service ID that your request is deployed under. This ID determines which of the Sensei Content Frameworks are used.  | Yes |
+| `analyzer_id` | The [!DNL Sensei] service ID that your request is deployed under. This ID determines which of the [!DNL Sensei Content Frameworks] are used.  | Yes |
 | `application-id` | The ID of application created. | Yes |
-| `data` | An array that contains a JSON object with each object in the array representing a document. Any parameters passed as part of this array overrides the global parameters specified outside the `data` array. To view a list of parameters that can be overridden, see the list below for more information. | Yes |
+| `data` | An array that contains a JSON object with each object in the array representing a document. Any parameters passed as part of this array overrides the global parameters specified outside the `data` array. Any of the remaining properties outlined below in this table can be overridden from within `data`. | Yes |
 | `language` | Language of input text. The default value is `en`. | No |
-| `content-type` | Used to indicate whether the input is part of the request body or a signed url for an S3 bucket. The default for this property is `inline`. | Yes |
+| `content-type` | Used to indicate whether the input is part of the request body or a signed url for an S3 bucket. The default for this property is `inline`. | No |
 | `encoding` | The encoding format of input text. This can be `utf-8` or `utf-16`. The default for this property is `utf-8`. | No |
-| `threshold` | The threshold of score (0 to 1) above which the results need to be returned. Use the value 0, to return all results. The default for this property is `0`. | No |
-| `top-N` | The number of results to be returned (cannot be a negative integer). Use the value 0, to return all results. When used in conjunction with `threshold`, the number of results returned is the lesser of either limit set. The default for this property is `0`. | No |
+| `threshold` | The threshold of score (0 to 1) above which the results need to be returned. Use the value `0` to return all results. The default for this property is `0`. | No |
+| `top-N` | The number of results to be returned (cannot be a negative integer). Use the value `0` to return all results. When used in conjunction with `threshold`, the number of results returned is the lesser of either limit set. The default for this property is `0`. | No |
 | `custom` | Any custom parameters to be passed. This property requires a valid JSON object to function. | No |
 | `content-id` | The unique ID for the data element thats returned in the response. If this is not passed an auto-generated ID is assigned. | No |
 | `content` | The content used by the text classification service. The content can be raw text (‘inline’ content-type). <br> If the content is a file on S3 ('s3-bucket' content-type), pass the signed url. | Yes |
 
-The following parameters can be overridden by adding values to them in the `data` array:
-
-- `content`
-- `content-id`
-- `language`
-- `content-type`
-- `encoding`
-- `threshold`
-- `top-N`
-- `custom`
-
 **Response**
 
-A successful response returns a JSON object containing classified text in the `response` array. 
+A successful response returns the classified text in a response array. 
 
 ```json
 {

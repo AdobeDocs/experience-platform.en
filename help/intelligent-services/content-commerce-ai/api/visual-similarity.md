@@ -10,11 +10,11 @@ description: The visual similarity service, when given an image, automatically f
 
 >[!NOTE]
 >
->Content and Commerce AI is in beta. The documentation is subject to change.
+>[!DNL Content and Commerce AI] is in beta. The documentation is subject to change.
 
 The visual similarity service, when given an image, automatically finds visually similar images from a catalog. 
 
-The following image was used in the example request below:
+The following image was used in the example request shown in this document:
 
 ![test image](../images/test_image.jpeg)
 
@@ -26,11 +26,11 @@ POST /services/v1/predict
 
 **Request**
 
-The request to visual similarity (POST) must include certain input parameters. See the table below for more information on the mandatory input parameters.
+The following request retrieves visually similar images from a catalog, based on the input parameters provided in the payload. See the table below the example payload for more information on the input parameters shown.
 
 >[!CAUTION]
 >
-> `analyzer_id` determines which Sensei Content Framework is used. Please check that you have the proper `analyzer_id` before making your request.
+>`analyzer_id` determines which [!DNL Sensei Content Framework] is used. Please check that you have the proper `analyzer_id` before making your request.
 
 ```SHELL
 curl -i -X POST https://sensei-ew1.adobe.io/services/v1/predict \
@@ -67,32 +67,19 @@ curl -i -X POST https://sensei-ew1.adobe.io/services/v1/predict \
 }'
 ```
 
-**Mandatory input parameters**
-
 | Property | Description | Mandatory |
 | --- | --- | --- |
-| `analyzer_id` | The [!DNL Sensei] service ID that your request is deployed under. This ID determines which of the Sensei Content Frameworks are used.  | Yes |
+| `analyzer_id` | The [!DNL Sensei] service ID that your request is deployed under. This ID determines which of the [!DNL Sensei Content Frameworks] are used.  | Yes |
 | `application-id` | The ID of your created application. | Yes |
-| `data` | An array that contains a JSON object with each object in the array representing an image. Any parameters passed as part of this array overrides the global parameters specified outside the `data` array. To view a list of parameters that can be overridden, see the optional input parameters below.  | Yes |
+| `data` | An array that contains a JSON object with each object in the array representing an image. Any parameters passed as part of this array overrides the global parameters specified outside the `data` array. Any of the remaining properties outlined below in this table can be overridden from within `data`.  | Yes |
 | `content-id` | The unique ID for the data element that is returned in the response. If this is not passed, an auto-generated ID is assigned. | No |
-| `content` | In the event that the image is part of request-body, use `-F file=@<filename>` in the curl command to pass the image, leaving this parameter as an empty string. <br> If the image is a file on S3, pass the signed url. When content is part of request-body, the list of data elements should have only one object. If more than one object is passed, only the first object is processed. | Yes |
-| `content-type` | Used to indicate whether the input is part of the request body or a signed url for an S3 bucket. The default for this property is `inline`. | Yes |
-| `encoding` | The file format of the input image. Currently only JPEG and PNG images can be processed. The default for this property is `jpeg`. | Yes |
-| `threshold` | The threshold of score (0 to 1) above which the results need to be returned. Use the value 0, to return all results. The default for this property is `0`. | Yes |
-| `top-N` | The number of results to be returned (cannot be a negative integer). Use the value 0, to return all results. When used in conjunction with `threshold`, the number of results returned is the lesser of either limit set. The default for this property is `0`. | Yes |
+| `content` | The content to be analyzed by the visual similarity service. In the event that the image is part of the request body, use `-F file=@<filename>` in the curl command to pass the image, leaving this parameter as an empty string. <br> If the image is a file on S3, pass the signed url. When content is part of the request body, the list of data elements should have only one object. If more than one object is passed, only the first object is processed. | Yes |
+| `content-type` | Used to indicate whether the input is part of the request body or a signed url for an S3 bucket. The default for this property is `inline`. | No |
+| `encoding` | The file format of the input image. Currently only JPEG and PNG images can be processed. The default for this property is `jpeg`. | No |
+| `threshold` | The threshold of score (0 to 1) above which the results need to be returned. Use the value `0` to return all results. The default for this property is `0`. | No |
+| `top-N` | The number of results to be returned (cannot be a negative integer). Use the value `0` to return all results. When used in conjunction with `threshold`, the number of results returned is the lesser of either limit set. The default for this property is `0`. | No |
 | `custom` | Any custom parameters to be passed. | No |
 | `historic-metadata` | An array that can be passed metadata. | No |
-
-The following parameters can be overridden by adding values to them in the `data` array:
-
-- `content-id`
-- `content`
-- `content-type`
-- `encoding`
-- `threshold`
-- `top-N`
-- `historic-metadata`
-- `custom`
 
 **Response**
 
