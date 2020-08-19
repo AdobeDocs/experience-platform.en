@@ -24,7 +24,7 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}?{QUERY_PARAMS}
 | --- | --- |
 | `{CONTAINER_ID}` | The container where the resources are located ("global" or "tenant"). |
 | `{RESOURCE_TYPE}` | The type of resource to retrieve from the [!DNL Schema Library]. Valid types are `classes`, `mixins`, `schemas`, `datatypes`, and `descriptors`. |
-| `{QUERY_PARAMS`} | Optional query parameters to filter results by. See the section on [query parameters](#query) for more information. |
+| `{QUERY_PARAMS}` | Optional query parameters to filter results by. See the section on [query parameters](#query) for more information. |
 
 **Request**
 

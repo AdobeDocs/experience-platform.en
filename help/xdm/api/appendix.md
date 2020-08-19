@@ -46,7 +46,7 @@ The following is a side-by-side comparison showing birthday-related fields (with
               "minimum": 1,
               "maximum": 32767
         }
-      </pre>
+  </pre>
   </td>
   <td>
   <pre class="JSON language-JSON hljs">
