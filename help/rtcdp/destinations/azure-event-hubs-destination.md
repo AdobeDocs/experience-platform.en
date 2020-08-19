@@ -1,4 +1,5 @@
 ---
+keywords: Azure event hub destination;azure event hub;azure eventhub
 title: (Beta) Azure Event Hubs destination
 seo-title: (Beta) Azure Event Hubs destination
 description: Create a real-time outbound connection to your Azure Event Hubs storage to stream data from Experience Platform.

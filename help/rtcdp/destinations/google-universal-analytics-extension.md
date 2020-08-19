@@ -1,4 +1,5 @@
 ---
+keywords: google universal analytics;Google Universal Analytics;Google universal analytics
 title: Google Universal Analytics extension
 seo-title: Google Universal Analytics extension
 description: The Google Universal Analytics extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.

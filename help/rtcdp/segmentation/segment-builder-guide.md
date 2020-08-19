@@ -1,5 +1,6 @@
 ---
-title: Segment Builder guide
+keywords: rtcdp segments;segment builder rtcdp;rtcdp segment
+title: Segment Builder guide for Real-time Customer Data Platform
 seo-title: Using the Segmentation Service Segment Builder in Real-time Customer Data Platform
 description: A guide describing how to use the Segment Builder.
 seo-description: A user guide describing how to use the Segmentation Service Segment Builder on Real-time Customer Data Platform.

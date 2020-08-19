@@ -1,4 +1,5 @@
 ---
+keywords: Marketo Munchkin;marketo munchkin;Marketo Munchkin extension;marketo munchkin extension;marketo;Marketo
 title: Marketo Munchkin extension
 seo-title: Marketo Munchkin extension
 description: The Marketo Munchkin extension is a personalization destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
