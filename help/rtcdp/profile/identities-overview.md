@@ -1,8 +1,7 @@
 ---
-title: Identities and identity namespaces
-seo-title: Adobe Experience Platform Identity Service
-description: description
-seo-description: seo description
+keywords: identities rtcdp;rtcdp identities;real-time cdp identities
+title: Identities in Real-time CDP
+description: Adobe Experience Platform Identity Service helps you to gain a better view of your customers and their behavior by bridging together identities across devices and systems.
 ---
 
 # Identities in Real-time CDP

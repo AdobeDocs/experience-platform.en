@@ -27,7 +27,7 @@ The *Source activity* screen lists all previously established connections for cu
 
 ![](../../../../images/tutorials/create/customer-attributes/source_activity.png)
 
-From the list of available customer attributes profile datasets, select the one you want to bring into Platform and click **Next**.
+From the list of available customer attributes profile datasets, select the one you want to bring into [!DNL Platform] and click **Next**.
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ The *Review* step appears, allowing you to review your new inbound connection be
 
 ## Next steps
 
-Once the connection is created, a target schema and dataset is automatically created to contain the incoming data. When the initial ingestion completes, customer attributes profile data can be used by downstream Platform services such as Real-time Customer Profile and Segmentation Service. See the following documents for more details:
+Once the connection is created, a target schema and dataset is automatically created to contain the incoming data. When the initial ingestion completes, customer attributes profile data can be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Segmentation Service]. See the following documents for more details:
 
-* [Real-time Customer Profile overview](../../../../../profile/home.md)
-* [Segmentation Service overview](../../../../../segmentation/home.md)
+* [[!DNL Real-time Customer Profile] overview](../../../../../profile/home.md)
+* [[!DNL Segmentation Service] overview](../../../../../segmentation/home.md)

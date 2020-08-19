@@ -1,4 +1,5 @@
 ---
+keywords: email;Email;e-mail;email destinations
 title: Email Marketing Destinations
 seo-title: Email Marketing Destinations
 description: Email Service Providers (ESPs) allow you to manage your email marketing activities, such as for sending promotional email campaigns.
@@ -15,9 +16,9 @@ Connecting to email marketing destinations is a three-step process. Each of the 
 
 In the connect destination flow, described in the section below, connect to either Amazon S3 or SFTP. Real-time CDP exports your segments as `.csv` or `.txt` files and delivers them to your preferred location. Schedule your data import in your email marketing platform from the storage location enabled in Real-time CDP. The process to import data varies for each partner. See the individual destinations articles for more information. 
 
-## Step 1 - Connect destination {#connect-destination}
+## Step 1 - Configure destination {#connect-destination}
 
-1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select the email marketing destination that you want to connect to, then select **[!UICONTROL Connect destination]**.
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select the email marketing destination that you want to connect to, then select **[!UICONTROL Configure]**.
 
     ![Connect to destination](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
