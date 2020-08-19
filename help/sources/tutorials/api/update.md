@@ -89,3 +89,14 @@ curl -X GET \
             "value": "new_description"
         }'
 ```
+
+**Response**
+
+A successful response returns your connection ID, including an updated etag.
+
+```json
+{
+    "id": "9f71e51d-eb8b-48d4-b1e5-1deb8b68d42b",
+    "etag": "\"ba00fb58-0000-0200-0000-5f228e770000\""
+}
+```
