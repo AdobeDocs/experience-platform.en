@@ -6,19 +6,23 @@ topic: Getting started
 description: Content and Commerce AI utilizes Adobe I/O APIs. In order to make calls to Adobe I/O APIs and the I/O Console Integration, you must first complete the authentication tutorial.
 ---
 
-# Getting started in [!DNL Content and Commerce AI]
+# Getting started with [!DNL Content and Commerce AI]
 
 >[!NOTE]
 >
 >Content and Commerce AI is in beta. The documentation is subject to change.
 
-[!DNL Content and Commerce AI] utilizes Adobe I/O APIs. In order to make calls to Adobe I/O APIs and the I/O Console Integration, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Note that for beta adding an API for [!DNL Content and Commerce AI] will be located under Experience Cloud once you are at the **Add API** step. See the screenshot below for an example. Completing the authentication tutorial provides the values for each of the required headers in all the Adobe I/O API calls, as shown below:
+[!DNL Content and Commerce AI] utilizes Adobe I/O APIs. In order to make calls to Adobe I/O APIs and the I/O Console Integration, you must first complete the [authentication tutorial](../../tutorials/authentication.md).
+
+However, when you get to the **Add API** step, the API is located under Experience Cloud instead of Adobe Experience Platform, as shown in the following screenshot: 
+
+![adding Content and Commerce AI](./images/add-api.png)
+
+ Completing the authentication tutorial provides the values for each of the required headers in all the Adobe I/O API calls, as shown below:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
-
-![adding Content and Commerce AI](./images/add-api.png)
 
 ## Creating a Postman environment (optional)
 
