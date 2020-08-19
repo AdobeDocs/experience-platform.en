@@ -48,10 +48,34 @@ The **[!UICONTROL Create merge policy]** screen appears, allowing you to provide
 * **[!UICONTROL ID stitching]**: This field defines how to determine the related identities of a customer. There are two possible values:
   * **[!UICONTROL None]**: Perform no identity stitching.
   * **[!UICONTROL Private Graph]**: Perform identity stitching based on your private identity graph.
-* **[!UICONTROL Attribute merge]**: A profile fragment is the profile information for just one identity out of the list of identities that exist for an individual customer. When the identity graph type used results in more than one identity, there is the potential for conflicting profile property values and priority must be specified. Using *Attribute merge* allows you to specify which dataset profile values to prioritize if a merge conflict occurs. There are two possible values:
-  * **[!UICONTROL Timestamp ordered]**: In case of conflict, give priority to the profile which was updated most recently. 
+* **[!UICONTROL Attribute merge]**: A profile fragment is the profile information for just one identity out of the list of identities that exist for an individual customer. When the identity graph type used results in more than one identity, there is the potential for conflicting profile property values and priority must be specified. Using [!UICONTROL Attribute merge] allows you to specify which dataset profile values to prioritize if a merge conflict occurs. There are two possible values:
+  * **[!UICONTROL Timestamp ordered]**: In case of conflict, give priority to the profile which was updated most recently. [!UICONTROL Timestamp ordered] also supports custom timestamps when merging data from multiple datasets. To learn more, see the [timestamp ordered](#timestamp-ordered) section that follows.
   * **[!UICONTROL Dataset precedence]** : Give priority to profile fragments based on the dataset from which they came. When selecting this option, you must select the related datasets and their order of priority. See the details on [dataset precedence](#dataset-precedence) below for more information.
 * **[!UICONTROL Default merge policy]**: A toggle button that allows you to select whether or not this merge policy will be the default for your organization. If the selector is toggled-on and the new policy is saved, your previous default policy is automatically updated to no longer be the default.
+
+### Timestamp ordered {#timestamp-ordered}
+
+As profile records are ingested into Experience Platform, a system timestamp is obtained at the time of ingestion and added to the record. When [!UICONTROL Timestamp ordered] is selected as the [!UICONTROL Attribute merge] type for a merge policy, profiles are merged based on the system timestamp. In other words, merging is done based on the timestamp for when the record was ingested into Platform.
+
+Occasionally there may be use cases, such as backfilling data or ensuring the correct order of events if records are ingested out of order, where it is necessary to supply a custom timestamp and have the merge policy honor the custom timestamp rather than the system timestamp.
+
+>[!NOTE]
+>
+>This capability is only available for ingestion across datasets. If the records are ingested using the same dataset, the default replacement behavior occurs.
+
+### Using custom timestamps {#custom-timestamps}
+
+In order to use a custom timestamp, the [!UICONTROL External Source System Audit Details Mixin] must be added to your Profile schema. Once added, the custom timestamp can be populated using the `lastUpdatedDate` field.
+
+When a record is ingested with the `lastUpdatedDate` field populated, Experience Platform will use that field to merge records across datasets. If `lastUpdatedDate` is not present, or not populated, Platform will continue to use the system timestamp.
+
+>[!NOTE]
+>
+>You must ensure that the `lastUpdatedDate` timestamp is populated when ingesting an update on the same record.
+
+The following screenshot displays the fields in the [!UICONTROL External Source System Audit Details Mixin]. For step-by-step instructions on working with schemas using the UI, including how to add mixins to schemas, please visit the [tutorial for creating a schema using the UI](../../xdm/tutorials/create-schema-ui.md).
+
+![](../images/merge-policies/custom-timestamp-mixin.png)
 
 ### Dataset precedence {#dataset-precedence}
 
