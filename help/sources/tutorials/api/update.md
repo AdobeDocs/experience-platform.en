@@ -43,3 +43,49 @@ All resources in [!DNL Experience Platform], including those belonging to [!DNL 
 All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
 
 * `Content-Type: application/json`
+
+## Update connection
+
+Once you have an existing connection ID, perform a PATCH request to the [!DNL Flow Service] API.
+
+**API format**
+
+```http
+PATCH /connections/{CONNECTION_ID}
+```
+
+| Parameter | Description |
+| --------- | ----------- |
+| `{CONNECTION_ID}` | The unique `id` value for the connection you want to update. |
+
+**Request**
+
+The following request provides new information to update your connection with.
+
+```shell
+curl -X GET \
+    'https://platform.adobe.io/data/foundation/flowservice/connections/9f71e51d-eb8b-48d4-b1e5-1deb8b68d42b' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+    -d '{
+            "op": "replace",
+            "path": "/auth/params",
+            "value": {
+                "username": "{{new_sf_username}}",
+                "password": "{{new_sf_password}}",
+                "securityToken": "{{new_sf_securityToken}}"
+            }
+        },
+        {
+            "op": "replace",
+            "path": "/name",
+            "value": "new_name"
+        },
+        {
+            "op": "add",
+            "path": "/description",
+            "value": "new_description"
+        }'
+```
