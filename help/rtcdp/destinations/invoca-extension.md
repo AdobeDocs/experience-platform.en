@@ -1,4 +1,5 @@
 ---
+keywords: Invoca;invoca
 title: Invoca Tags extension
 seo-title: Invoca Tags extension
 description: The Invoca Tags extension is a voice of the customer destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.

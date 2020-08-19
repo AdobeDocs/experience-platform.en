@@ -1,4 +1,5 @@
 ---
+keywords: Google Global Site Tag;gtag;google gtag;google extension;google gtag extension;GTAG
 title: Google Global Site Tag extension
 seo-title: Google Global Site Tag extension
 description: The Google Global Site Tag extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.

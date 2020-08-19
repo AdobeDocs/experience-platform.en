@@ -1,4 +1,5 @@
 ---
+keywords: kickfire;Kickfire;kickfire extension;Kickfire Extension
 title: KickFire extension
 seo-title: KickFire extension
 description: The KickFire extension is a personalization destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
