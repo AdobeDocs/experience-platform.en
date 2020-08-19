@@ -403,7 +403,7 @@ For example, the sample payload below specifies a customer's privacy preferences
 | `xdm:consentsAndPreferences` | Contains the same fields provided by the [[!DNL Privacy Consent] mixin](#consent-mixin). The privacy settings this field represents will only apply to the namespace and value that the field is provided under. In other words, multiple consent preference fields can be provided under the same `xdm:identityPrivacyInfo` field. |
 | `xdm:identityIABConsent` | Represents the user's consent preferences for the respective namespace and value in the form of a consent string, as per the IAB TCF 2.0 standard. For  detailedinformation on TCF 2.0 support in [!DNL Real-time Customer Data Platform], see the [IAB overview](../../rtcdp/privacy/iab/overview.md). |
 
-## [!DNL Event Privacy] schema structure {#profile-privacy}
+## [!DNL Event Privacy] schema structure {#event-privacy}
 
 The [!DNL Event Privacy] schema is compatible with the [!DNL XDM ExperienceEvent] class. The following JSON shows an example of the type of data the schema is able to process.
 
