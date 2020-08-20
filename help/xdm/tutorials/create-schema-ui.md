@@ -216,6 +216,12 @@ The standard data structure that schemas provide can be leveraged to identify da
 
 For example, there may be thousands of loyalty program members belonging to the same "loyalty level", but each member of the loyalty program has a unique "[!DNL loyaltyId]" (which in this instance is the individual member's email address). The fact that "[!DNL loyaltyId]" is a unique identifier for each member makes it a good candidate for an identity field, whereas "loyalty level" is not.
 
+>[!IMPORTANT]
+>
+>The steps outlined below cover how to add an identity descriptor to an existing schema field. As an alternative to defining identity fields within the structure of the schema itself, you can also use an `identityMap` field to contain identity information instead.
+>
+>If you plan on using `identityMap`, keep in mind that it will override any primary identity you add to the schema directly. See the section on `identityMap` in the [basics of schema composition guide](../schema/composition.md#identityMap) for more information. 
+
 In the **[!UICONTROL Structure]** section of the editor, select the "[!DNL loyaltyId]" field and the **[!UICONTROL Identity]** checkbox appears under **[!UICONTROL Field Properties]**. Check the box and the option to set this as the **[!UICONTROL Primary Identity]** appears. Select this box as well. 
 
 Next, you must provide an **[!UICONTROL Identity Namespace]** from the list of pre-defined namespaces in the dropdown. Since "[!DNL loyaltyId]" is the customer's email address, select "[!UICONTROL Email]" from the dropdown. Select **[!UICONTROL Apply]** to confirm the updates to the "[!DNL loyaltyId]" field.
@@ -224,7 +230,7 @@ Next, you must provide an **[!UICONTROL Identity Namespace]** from the list of p
 
 >[!NOTE]
 >
->For more information on standard namespaces and their definitions, see the [Identity Service documentation](../../identity-service/namespaces.md#standard).
+>For a list of standard namespaces and their definitions, see the [Identity Service documentation](../../identity-service/troubleshooting-guide.md#standard-namespaces).
 
 Now all data ingested into the "[!DNL loyaltyId]" field will be used to help identify that individual and stitch together a single view of that customer.
 
@@ -232,7 +238,7 @@ Now all data ingested into the "[!DNL loyaltyId]" field will be used to help ide
 >
 >Once a schema field has been set as the primary identity, you will receive an error message if you later attempt to set another field in the schema as the primary. Each schema may contain only one primary identity field.
 
-As an alternative to defining identity fields within the structure of the schema itself, you can also use an `identityMap` field to contain identity information. See the section on `identityMap` in the [basics of schema composition guide](../schema/composition.md) for more information. To learn more about working with identities in [!DNL Experience Platform] in general, please review the [!DNL Identity Service](../../identity-service/home.md) documentation.
+To learn more about working with identities in [!DNL Experience Platform], please review the [!DNL Identity Service](../../identity-service/home.md) documentation.
 
 ## Enable the schema for use in [!DNL Real-time Customer Profile] {#profile}
 
