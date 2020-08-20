@@ -3,6 +3,7 @@ title: Sending Data to Adobe Audience Manager
 seo-title: Sending Data to Adobe Audience Manager with Adobe Experience Platform Web SDK
 description: Learn how to send Data to Adobe Audience Manager with Experience Platform Web SDK
 seo-description: Learn how to send Data to Adobe Audience Manager with Experience Platform Web SDK
+keywords: audience manager;aam;identities;sync identities;namespace;
 ---
 
 # [!DNL Audience Manager] on the [!DNL Experience Platform Edge Network]
