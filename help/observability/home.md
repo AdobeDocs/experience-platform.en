@@ -138,33 +138,33 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-        "start":"2020-07-14T00:00:00.000Z",
-        "end":"2020-07-22T00:00:00.000Z",
-        "granularity":"day",
-        "metrics":[
+        "start": "2020-07-14T00:00:00.000Z",
+        "end": "2020-07-22T00:00:00.000Z",
+        "granularity": "day",
+        "metrics": [
           {
-            "name":"timeseries.ingestion.dataset.recordsuccess.count",
-            "filters":[
+            "name": "timeseries.ingestion.dataset.recordsuccess.count",
+            "filters": [
               {
-                "name":"dataSetId",
-                "value":"5edcfb2fbb642119194c7d94|5eddb21420f516191b7a8dad",
-                "groupBy":true
+                "name": "dataSetId",
+                "value": "5edcfb2fbb642119194c7d94|5eddb21420f516191b7a8dad",
+                "groupBy": true
               }
             ],
-            "aggregator":"sum",
-            "downsample":"sum"
+            "aggregator": "sum",
+            "downsample": "sum"
           },
           {
-            "name":"timeseries.ingestion.dataset.dailysize",
-            "filters":[
+            "name": "timeseries.ingestion.dataset.dailysize",
+            "filters": [
               {
-                "name":"dataSetId",
-                "value":"5eddb21420f516191b7a8dad",
-                "groupBy":false
+                "name": "dataSetId",
+                "value": "5eddb21420f516191b7a8dad",
+                "groupBy": false
               }
             ],
-            "aggregator":"sum",
-            "downsample":"sum"
+            "aggregator": "sum",
+            "downsample": "sum"
           }
         ]
       }'
@@ -177,11 +177,13 @@ curl -X POST \
 | `granularity` | Indicates the period of time to divide metric data by. For example, a value of `DAY` returns metrics for each day between the `start` and `end` date, whereas a value of `MONTH` would group metric results by month instead. |
 | `metrics` | An array of objects, one for each metric you want to retrieve. |
 | `name` | The name of a metric recognized by Observability Insights. See the [metrics reference](./metrics.md) for a full list of accepted metric names. |
-| `filters` | An optional field that allows you to filter metrics by specific datasets. The field is an array of objects (one for each filter), with each object containing the following properties: <ul><li>`name`: </li><li>`value`: </li><li>`groupBy`: </li></ul> |
+| `filters` | An optional field that allows you to filter metrics by specific datasets. The field is an array of objects (one for each filter), with each object containing the following properties: <ul><li>`name`: The type of entity to filter metrics against. Currently, only `dataSets` is supported.</li><li>`value`: The ID of one or more datasets. Multiple dataset IDs can be provided as a single string, with each ID separated by vertical bar characters (`|`).</li><li>`groupBy`: When set to true, indicates that the corresponding `value` represents multiple datasets whose metric results should be returned separately. If set to false, metric results for those datasets are grouped together.
 | `aggregator` | |
 | `downsample` | |
 
 **Response**
+
+A successful response returns the resulting datapoints for the metrics and filters specified in the request.
 
 ```json
 {
@@ -264,8 +266,12 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `dataPoints` | |
-| `dps` | |
+| `metricResponses` | An array whose objects represent each of the metrics specified in the request. Each object contains information about the filter configuration and returned metric data. |
+| `metric` | The name of one of the metrics provided in the request. |
+| `filters` | The filter configuration for the specified metric. |
+| `datapoints` | An array whose objects represent the results of the specified metric and filters. The number of objects in the array depends on the filter options provided in the request. If no filters were provided, the array will only contain a single object that represents all datasets. |
+| `groupBy` | If multiple datasets were specified in the `filter` property for a metric, and the `groupBy` option was set to true in the request, this object will contain the ID of the dataset that the corresponding `dps` property applies to.<br><br>If this object appears empty in the response, the corresponding `dps` property applies to all datasets provided in the `filters` array (or all datasets in [!DNL Platform] if no filters were provided). |
+| `dps` | The returned data for the given metric, filter, and time range. Each key in this object represents a timestamp with a corresponding value for the specified metric. The time period between each datapoint depends on the `granularity` value specified in the request. |
 
 ## Next steps
 
