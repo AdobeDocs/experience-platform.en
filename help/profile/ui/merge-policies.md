@@ -55,7 +55,7 @@ The **[!UICONTROL Create merge policy]** screen appears, allowing you to provide
 
 ### Timestamp ordered {#timestamp-ordered}
 
-As profile records are ingested into Experience Platform, a system timestamp is obtained at the time of ingestion and added to the record. When [!UICONTROL Timestamp ordered] is selected as the [!UICONTROL Attribute merge] type for a merge policy, profiles are merged based on the system timestamp. In other words, merging is done based on the timestamp for when the record was ingested into Platform.
+As Profile records are ingested into Experience Platform, a system timestamp is obtained at the time of ingestion and added to the record. When [!UICONTROL Timestamp ordered] is selected as the [!UICONTROL Attribute merge] type for a merge policy, profiles are merged based on the system timestamp. In other words, merging is done based on the timestamp for when the record was ingested into Platform.
 
 Occasionally there may be use cases, such as backfilling data or ensuring the correct order of events if records are ingested out of order, where it is necessary to supply a custom timestamp and have the merge policy honor the custom timestamp rather than the system timestamp.
 
