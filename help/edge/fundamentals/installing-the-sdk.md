@@ -3,6 +3,7 @@ title: Installing the Adobe Experience Platform Web SDK
 seo-title: Adobe Experience Platform Web SDK installing the SDK
 description: Learn how to install the Experience Platform Web SDK
 seo-description: Learn how to install the Experience Platform Web SDK
+keywords: web sdk installation;installing web sdk;internet explorer;promise;
 ---
 
 # Installing the SDK {#installing-the-sdk}
