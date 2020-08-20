@@ -1,4 +1,5 @@
 ---
+keywords: Medallia;medallia
 title: Medallia extension
 seo-title: Medallia extension
 description: THe Medallia extension is a voice of the customer destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
@@ -29,7 +30,7 @@ To install the [!DNL Medallia] extension:
 
 1. In the [Adobe Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 2. Select the extension from the catalog or use the search bar.
-3. Click on the destination to highlight it, then select **[!UICONTROL Install Extension]** in the right rail. If the **[!UICONTROL Install Extension]** control is greyed out, you are missing the **[!UICONTROL manage_properties]** permission. See [Prerequisites](#prerequisites).
+3. Click on the destination to highlight it, then select **[!UICONTROL Configure]** in the right rail. If the **[!UICONTROL Configure]** control is greyed out, you are missing the **[!UICONTROL manage_properties]** permission. See [Prerequisites](#prerequisites).
 4. In the **[!UICONTROL Select available Launch property]** window, select the Launch property in which you want to install the extension. You also have the option of creating a new property in Launch. A property is a collection of rules, data elements, configured extensions, environments, and libraries. Learn about properties in the [Properties page section](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) of the Launch documentation.
 5. The workflow takes you to Launch to complete the installation.
 

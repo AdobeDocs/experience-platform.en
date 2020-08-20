@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;decision events;decision event;Decision events
 solution: Experience Platform
 title: Experience Decisioning domain model
 topic: overview
+description: In this section, the components of Decisioning Service are explained and the ways in which those components interact are detailed. The concepts and their relationships form the *Domain* of the decisioning problem. These fundamental components come into play regardless of how you use Decisioning Service].
 ---
 
 # Experience [!DNL Decisioning] domain model

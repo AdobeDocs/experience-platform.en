@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;PQL;pql;profile query language
 solution: Experience Platform
 title: Profile Query Language (PQL) overview
 topic: developer guide
+description: This guide provides a general overview of PQL, covering formatting guidelines and providing example PQL expressions.
 ---
 
 # [!DNL Profile Query Language] (PQL) overview

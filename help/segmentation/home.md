@@ -1,8 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment service;segment;Segment;Segments;segments
 solution: Experience Platform
 title: Adobe Experience Platform Segmentation Service
 topic: overview
+description: This document provides an overview of Segmentation Service and the role it plays in Adobe Experience Platform.
+
 ---
 
 # Adobe Experience Platform [!DNL Segmentation Service] overview
