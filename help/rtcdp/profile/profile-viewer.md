@@ -1,5 +1,6 @@
 ---
-title: Profile viewer
+keywords: view profiles rtcdp;rtcdp profile view;rtcdp profiles
+title: Viewing profiles in Real-time CDP
 seo-title: View Real-time Customer Profile data on Real-time Customer Data Platform
 description: View Real-time Customer Profile data on Real-time Customer Data Platform
 seo-description: View Real-time Customer Profile data on Real-time Customer Data Platform

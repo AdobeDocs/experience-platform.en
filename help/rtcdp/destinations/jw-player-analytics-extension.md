@@ -1,4 +1,5 @@
 ---
+keywords: JW player;jw player;JW Player;jw extension;JW extension
 title: JW Player Analytics (BETA) extension
 seo-title: JW Player Analytics (BETA) extension
 description: The JW Player Analytics (BETA) extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.

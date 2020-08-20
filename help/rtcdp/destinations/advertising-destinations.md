@@ -1,4 +1,5 @@
 ---
+keywords: advertising destinations;destinations;rtcdp destinations
 title: Advertising Destinations
 seo-title: Advertising Destinations
 description: Connect your Real-time Customer Data Platform to a 3rd-party advertising platform (e.g. DSP, ad network, SSP) and share pseudonymous audiences to these platforms.

@@ -3,6 +3,7 @@ title: Executing commands
 seo-title: Executing Adobe Experience Platform Web SDK commands
 description: Learn how to execute Experience Platform Web SDK commands
 seo-description: Learn how to execute Experience Platform Web SDK commands
+keywords: Executing commands;commandName;Promises;getLibraryInfo;response objects;consent;
 ---
 
 # Executing commands

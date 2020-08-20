@@ -1,4 +1,5 @@
 ---
+keywords: Quantum Metric Extension;Quantum Metric;quantum metric;Quantum metric
 title: Quantum Metric extension
 seo-title: Quantum Metric extension
 description: THe Quantum Metric extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
