@@ -1,4 +1,5 @@
 ---
+keywords: target extension;target;target v2;target v2 extension
 title: Adobe Target v2 extension
 seo-title: Adobe Target v2 extension
 description: The Adobe Target v2 extension is a personalization destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.

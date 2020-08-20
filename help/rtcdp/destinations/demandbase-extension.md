@@ -1,4 +1,5 @@
 ---
+keywords: demandbase extension;demandbase;demandbase destination
 title: Demandbase extension
 seo-title: Demandbase extension
 description: The Demandbase extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.

@@ -1,4 +1,5 @@
 ---
+keywords: facebook pixel extensions;facebook pixel extension;facebook pixel destinations;facebook pixel
 title: Facebook Pixel extension
 seo-title: Facebook Pixel extension
 description: The Facebook Pixel extension is an advertising destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
