@@ -80,7 +80,7 @@ See the table below the example payload for more information on the input parame
 >`analyzer_id` determines which [!DNL Sensei Content Framework] is used. Please check that you have the proper `analyzer_id` before making your request.
 
 ```SHELL
-curl -w'\n' -i -X POST https://sensei-ew1.adobe.io/services/v1/predict \
+curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "Content-Type: multipart/form-data" \
   -H "cache-control: no-cache,no-cache" \

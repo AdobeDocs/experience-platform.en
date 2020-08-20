@@ -43,7 +43,7 @@ The following request extracts colors from a image based on the input parameters
 >`analyzer_id` determines which [!DNL Sensei Content Framework] is used. Please check that you have the proper `analyzer_id` before making your request.
 
 ```SHELL
-curl -i -X POST https://sensei-ew1.adobe.io/services/v1/predict \
+curl -i -X POST https://sensei.adobe.io/services/v1/predict \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: multipart/form-data' \
   -H 'x-api-key: {API_KEY}' \
