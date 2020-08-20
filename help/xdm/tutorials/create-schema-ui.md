@@ -18,7 +18,7 @@ If you prefer to compose a schema using the [!DNL Schema Registry] API instead, 
 
 ## Getting started
 
-This tutorial requires a working understanding of the various aspects of Adobe Experience Platform involved in schema creations. Before beginning this tutorial, please review the documentation for the following concepts:
+This tutorial requires a working understanding of the various aspects of Adobe Experience Platform involved in schema creation. Before beginning this tutorial, please review the documentation for the following concepts:
 
 * [!DNL Experience Data Model (XDM)](../home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
     * [Basics of schema composition](../schema/composition.md): An overview of XDM schemas and their building blocks, including classes, mixins, data types, and fields.
