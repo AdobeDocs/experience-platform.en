@@ -1,4 +1,5 @@
 ---
+keywords: email;Email;e-mail;email destinations;oracle eloqua;oracle
 title: Oracle Eloqua destination
 seo-title: Oracle Eloqua destination
 description: Oracle Eloqua is a software as a service (SaaS) platform for marketing automation offered by Oracle that aims to help B2B marketers and organizations manage marketing campaigns and sales lead generation.

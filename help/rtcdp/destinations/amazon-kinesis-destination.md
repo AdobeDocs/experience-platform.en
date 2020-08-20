@@ -1,4 +1,5 @@
 ---
+keywords: Amazon Kinesis;kinesis destination;kinesis
 title: Amazon Kinesis destination
 seo-title: Amazon Kinesis destination
 description: Create a real-time outbound connection to your Amazon Kinesis storage to stream data from Adobe Experience Platform.

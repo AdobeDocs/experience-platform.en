@@ -1,4 +1,5 @@
 ---
+keywords: analytics destinations;analytics destination
 title: Analytics Destinations
 seo-title: Analytics Destinations
 description: Analytics destinations track how visitors interact with content on your site and collect data to understand the behavior of your audience. These platforms deliver unique insights on engagement and conversion of your most valuable visitors.

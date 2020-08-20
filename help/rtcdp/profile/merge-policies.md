@@ -1,8 +1,7 @@
 ---
-title: Merge policies
-seo-title: Working with merge policies in Real-time Customer Data Platform
+keywords: merge policies rtcdp;rtcdp merge policies
+title: Merge policies in Real-time CDP
 description: Working with merge policies in Real-time Customer Data Platform
-seo-description: Working with merge policies in Real-time Customer Data Platform
 ---
 
 # Merge policies in Real-time CDP
