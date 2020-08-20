@@ -23,19 +23,19 @@ This guide requires a working understanding of the various [!DNL Experience Plat
 
 ## View merge policies
 
-Within the [!DNL Experience Platform] user interface, you can begin to work with merge policies and see a list of your organization's existing merge policies by clicking **[!UICONTROL Profile]** in the left-rail and then selecting the **[!UICONTROL Merge policies]** tab.
+Within the [!DNL Experience Platform] user interface, you can begin to work with merge policies and see a list of your organization's existing merge policies by selecting **[!UICONTROL Profiles]** in the left-rail and then selecting the **[!UICONTROL Merge policies]** tab.
 
 ![Merge policies landing page](../images/merge-policies/landing.png)
 
-Details for each merge policy available to your organization are visible on the landing page, including the *[!UICONTROL Policy Name]*, *[!UICONTROL Default Merge Policy]*, and *[!UICONTROL Schema]*. 
+Details for each merge policy available to your organization are visible on the landing page, including the [!UICONTROL Policy Name], [!UICONTROL Default merge policy], and [!UICONTROL Schema]. 
 
-To select which details are visible, or to add additional columns to the display, select the column chooser icon on the right and click on a column name to add or remove it from view.
+To select which details are visible, or to add additional columns to the display, select the column selector icon and click on a column name to add or remove it from view.
 
 ![](../images/merge-policies/adjust-view.png)
 
 ## Create a merge policy
 
-To create a new merge policy, click **[!UICONTROL Create merge policy]** near the top-right of the **[!UICONTROL Merge policies]** tab.
+To create a new merge policy, select **[!UICONTROL Create merge policy]**.
 
 ![Merge policies landing page](../images/merge-policies/create-new.png)
 
@@ -81,23 +81,23 @@ To work with custom timestamps using the API, refer to the Appendix of the [merg
 
 ### Dataset precedence {#dataset-precedence}
 
-When selecting an *[!UICONTROL Attribute merge]* value, you can select *[!UICONTROL Dataset precedence]* which allows you to give priority to profile fragments based on the dataset from which they came. 
+When selecting an [!UICONTROL Attribute merge] value, you can select [!UICONTROL Dataset precedence] which allows you to give priority to profile fragments based on the dataset from which they came. 
 
 An example use case would be if your organization had information present in one dataset that is preferred or trusted over data in another dataset. 
 
-When selecting *[!UICONTROL Dataset precedence]*, a separate panel opens requiring you to select from *[!UICONTROL Available datasets]* (or use the checkbox to select all) which datasets will be included. You can then drag and drop those datasets into the *[!UICONTROL Selected Datasets]* panel and drag them into the correct order of priority. The top dataset will be given highest priority, then second dataset will be second-highest, and so on.
+When selecting [!UICONTROL Dataset precedence], a separate panel opens requiring you to select from [!UICONTROL Available datasets] (or use the checkbox to select all) which datasets will be included. You can then drag and drop those datasets into the [!UICONTROL Selected Datasets] panel and drag them into the correct order of priority. The top dataset will be given highest priority, then second dataset will be second-highest, and so on.
 
 ![](../images/merge-policies/dataset-precedence.png)
 
-Once you have finished creating the merge policy, click **[!UICONTROL Save]** to return to the *[!UICONTROL Merge policies]* tab where your new merge policy now appears in the list of policies.
+Once you have finished creating the merge policy, select **[!UICONTROL Save]** to return to the [!UICONTROL Merge policies] tab where your new merge policy now appears in the list of policies.
 
 ## Edit a merge policy
 
-You can modify an existing merge policy through the *[!UICONTROL Merge policies]* tab by clicking on the *[!UICONTROL Policy Name]* for the merge policy you wish to edit.
+You can modify an existing merge policy through the [!UICONTROL Merge policies] tab by clicking on the [!UICONTROL Policy name]* for the merge policy you wish to edit.
 
 ![Merge policies landing page](../images/merge-policies/select-edit.png)
 
-When the *[!UICONTROL Edit merge policy]* screen appears, you can make changes to the *[!UICONTROL Name]*, *[!UICONTROL Schema]*, *[!UICONTROL ID stitching]* type, and *[!UICONTROL Attribute merge]* type, as well as select whether or not this policy will be the *[!UICONTROL Default merge policy]* for your organization.
+When the [!UICONTROL Edit merge policy] screen appears, you can make changes to the [!UICONTROL Name], [!UICONTROL Schema], [!UICONTROL ID stitching] type, and [!UICONTROL Attribute merge] type, as well as select whether or not this policy will be the [!UICONTROL Default merge policy] for your organization.
 
 >[!NOTE]
 >
@@ -105,15 +105,15 @@ When the *[!UICONTROL Edit merge policy]* screen appears, you can make changes t
 
 ![](../images/merge-policies/edit-screen.png)
 
-Once you have made the necessary changes, click **[!UICONTROL Save]** to return to the *[!UICONTROL Merge policies]* tab where the updated merge policy information is now visible.
+Once you have made the necessary changes, select **[!UICONTROL Save]** to return to the [!UICONTROL Merge policies] tab where the updated merge policy information is now visible.
 
 ![](../images/merge-policies/edited.png)
 
 ## Data governance policy violations
 
-When creating or updating a merge policy, a check is performed to determine if the merge policy violates any of the data usage policies defined by your organization. Data usage policies are part of Adobe Experience Platform [!DNL Data Governance] and are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on specific [!DNL Platform] data. For example, if a merge policy was used to create a segment that activated to a third-party destination, and your organization had a data usage policy preventing the export of specific data to third parties, you would receive a "Data governance policy violation detected" notification when attempting to save your merge policy. 
+When creating or updating a merge policy, a check is performed to determine if the merge policy violates any of the data usage policies defined by your organization. Data usage policies are part of Adobe Experience Platform [!DNL Data Governance] and are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on specific [!DNL Platform] data. For example, if a merge policy was used to create a segment that activated to a third-party destination, and your organization had a data usage policy preventing the export of specific data to third parties, you would receive a "[!UICONTROL Data governance policy violation detected]" notification when attempting to save your merge policy. 
 
-This notification includes a list of data usage policies that have been violated and allows you to view the details of the violation by selecting a policy from the list. Upon selecting a violated policy, the *Data lineage* tab provides the *Reason for violation* and the *Affected activations*, each providing more detail into how the data usage policy has been violated.
+This notification includes a list of data usage policies that have been violated and allows you to view the details of the violation by selecting a policy from the list. Upon selecting a violated policy, the [!UICONTROL Data lineage] tab provides the reason for the violation and the [!UICONTROL Affected activations], each providing more detail into how the data usage policy has been violated.
 
 To learn more about how data governance is performed within Adobe Experience Platform, please begin by reading the [Data Governance overview](../../data-governance/home.md).
 
