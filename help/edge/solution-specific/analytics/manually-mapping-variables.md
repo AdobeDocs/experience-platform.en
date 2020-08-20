@@ -3,6 +3,7 @@ title: Manually mapping variables in Analytics
 seo-title: Manually mapping variables in Analytics with Web SDK
 description: How to manurally map variables into Analytics using processing rules
 seo-description: manurally map variables into Analytics using processing rules with Web SDK
+keywords: adobe analytics;analytics;variables;mapping variables;map variables;contextData;context Data;Processing rules;rules;xdm;schema;
 ---
 
 # Manually mapping variables in Analytics
