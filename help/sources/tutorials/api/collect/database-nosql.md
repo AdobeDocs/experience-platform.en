@@ -594,7 +594,11 @@ curl -X POST \
             {
                 "name": "Copy",
                 "params": {
-                    "deltaColumn": "date-time"
+                    "deltaColumn": {
+                        "name": "updatedAt",
+                        "dateFormat": "YYYY-MM-DD",
+                        "timezone": "UTC"
+                    }
                 }
             },
             {

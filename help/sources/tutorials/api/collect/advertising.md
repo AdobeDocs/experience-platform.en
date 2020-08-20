@@ -597,6 +597,16 @@ curl -X POST \
         ],
         "transformations": [
             {
+                "name": "Copy",
+                "params": {
+                    "deltaColumn": {
+                        "name": "updatedAt",
+                        "dateFormat": "YYYY-MM-DD",
+                        "timezone": "UTC"
+                    }
+                }
+            },
+            {
             "name": "Mapping",
             "params": {
                 "mappingId": "febec6a6785e45ea9ed594422cc483d7",
