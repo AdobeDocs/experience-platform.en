@@ -17,17 +17,18 @@ Reference: [Spark SQL function documentation](https://spark.apache.org/docs/2.4.
 
 ## Categories
 
-- [Math and statistical operators and functions](#math-and-statistical-operators-and-functions)
+- [Math and statistical operators and functions](#math)
 - [Logical operators](#logical-operators)
-- [Date/time functions](#date/time-functions)
+- [Date/time functions](#datetime-functions)
 - [Aggregate functions](#aggregate-functions)
 - [Arrays](#arrays)
-- [Datatype casting functions](#datatype-casting-functions)
-- [Conversion and formatting functions](#conversion-and-formatting-functions)
+- [Datatype casting functions](#datatype-casting)
+- [Conversion and formatting functions](#conversion)
 - [Data evaluation](#data-evaluation)
 - [Current Information](#current-information)
+- [Higher order functions](#higher-order)
 
-### Math and statistical operators and functions
+### Math and statistical operators and functions {#math}
 
 #### Modulo
 
@@ -738,7 +739,7 @@ Example:
 
 `variance(expr)`: Returns the sample variance calculated from values of a group.
 
-### Logical operators
+### Logical operators {#logical-operators}
 
 #### Logical not
 
@@ -1001,7 +1002,7 @@ Example:
  true
 ```
 
-### Date/time functions
+### Date/time functions {#datetime-functions}
 
 #### add_months
 
@@ -1419,13 +1420,13 @@ Example:
 
 Since: 1.5.0
 
-### Aggregate functions
+### Aggregate functions {#aggregate-functions}
 
 #### approx_count_distinct
 
 `approx_count_distinct(expr[, relativeSD])`: Returns the estimated cardinality by HyperLogLog++. `relativeSD` defines the maximum estimation error allowed.
 
-### Arrays
+### Arrays {#arrays}
 
 #### array
 
@@ -1805,7 +1806,7 @@ Examples:
 
 Since: 2.4.0
 
-### Datatype casting functions 
+### Datatype casting functions {#datatype-casting}
 
 #### bigint
 
@@ -1890,7 +1891,7 @@ Examples:
 
 `tinyint(expr)`: Casts the value `expr` to the target data type `tinyint`.
 
-### Conversion and formatting functions 
+### Conversion and formatting functions {#conversion}
 
 #### ascii
 
@@ -2399,7 +2400,7 @@ Example:
 >
 >Function is non-deterministic. 
 
-### Data evaluation 
+### Data evaluation {#data-evaluation}
 
 #### coalesce
 
@@ -2992,7 +2993,7 @@ Example:
  cc
 ```
 
-### Current Information 
+### Current information {#current-information}
 
 #### current_database
 
@@ -3022,3 +3023,65 @@ Since: 1.5.0
 `now()`: Returns the current timestamp at the start of query evaluation.
 
 Since: 1.5.0
+
+### Higher order functions {#higher-order}
+
+#### transform
+
+`transform(array, lambdaExpression): array`
+
+Transform elements in an array using the function.
+
+If there are two arguments for the lambda function, the second argument means the index of the element.
+
+Example:
+
+```
+> SELECT transform(array(1, 2, 3), x -> x + 1);
+  [2,3,4]
+> SELECT transform(array(1, 2, 3), (x, i) -> x + i);
+  [1,3,5]
+```
+
+
+#### exists
+
+`exists(array, lambdaExpression returning Boolean): Boolean`
+
+Test whether a predicate holds for one or more elements in the array.
+
+Example:
+
+```
+> SELECT exists(array(1, 2, 3), x -> x % 2 == 0);
+  true
+```
+
+#### filter
+
+`filter(array, lambdaExpression returning Boolean): array`
+
+Filter the input array using the given predicate.
+
+Example:
+
+```
+> SELECT filter(array(1, 2, 3), x -> x % 2 == 1);
+ [1,3]
+```
+
+
+#### aggregate
+
+`aggregate(array, <initial accumulator value>, lambdaExpression to accumulate the value): array`
+
+Apply a binary operator to an initial state and all elements in the array, and reduces this to a single state. The final state is converted into the final result by applying a finish function.
+
+Example:
+
+```
+> SELECT aggregate(array(1, 2, 3), 0, (acc, x) -> acc + x);
+  6
+> SELECT aggregate(array(1, 2, 3), 0, (acc, x) -> acc + x, acc -> acc * 10);
+  60
+```

@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;filter;Filter;filter data;Filter data
 solution: Experience Platform
 title: List objects
 topic: developer guide
+description: You can retrieve a list of all available objects of a specific type through a single API call, with best practice being to include filters that limit the size of the response.
 ---
 
 # List objects
