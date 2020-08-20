@@ -1,4 +1,5 @@
 ---
+keywords: rtcdp profile;profiles rtcdp;rtcdp identities;rtcdp merge policies;real-time customer profile
 title: Real-time Customer Profile overview
 seo-title: Real-time Customer Profile in Real-time Customer Data Platform
 description: An overview of how Real-time Customer Data Platform enables you to drive coordinated, consistent, relevant experiences for your customers using Real-time Customer Profiles.

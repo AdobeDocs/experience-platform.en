@@ -39,7 +39,7 @@ GET /system/jobs?{QUERY_PARAMETERS}
 **Request**
 
 ```shell
-curl -X POST \
+curl -X GET \
   https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \

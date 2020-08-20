@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;identity namespace;Identity namespace
 solution: Experience Platform
 title: Adobe Experience Platform Identity Service troubleshooting guide
 topic: troubleshooting
+description: This document provides answers to frequently asked questions about Adobe Experience Platform Identity Service, as well as a troubleshooting guide for common errors.
 ---
 
 # Identity Service troubleshooting guide
@@ -65,7 +66,7 @@ Identity fields must be associated with an existing identity namespace when they
 
 For step-by-step instructions for defining a namespace when creating an identity descriptor using the API, please see the section on [creating a descriptor](../xdm/tutorials/create-schema-ui.md) in the Schema Registry developer guide. For marking a schema field as an identity in the UI, follow the steps in the [Schema Editor tutorial](../xdm/tutorials/create-schema-api.md).
 
-## What are the standard identity namespaces provided by Experience Platform?
+## What are the standard identity namespaces provided by Experience Platform? {#standard-namespaces}
 
 The following standard namespaces are provided for use by all organizations within Experience Platform:
 
