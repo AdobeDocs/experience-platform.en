@@ -61,7 +61,7 @@ This tutorial composes a schema to ingest data related to the members of a loyal
 
 ## Add a mixin {#mixin}
 
-You can now begin to add fields to your schema by adding mixins. A mixin is a group of one or more fields that describe a particular concept. This tutorial uses mixins to describe the members of the loyalty program and capture key information such as name, birthday, phone number, address, and more.
+You can now begin to add fields to your schema by adding mixins. A mixin is a group of one or more fields that are often used together to describe a particular concept. This tutorial uses mixins to describe the members of the loyalty program and capture key information such as name, birthday, phone number, address, and more.
 
 To add a mixin, select **[!UICONTROL Add]** in the **[!UICONTROL Mixins]** sub-section.
 
@@ -209,7 +209,7 @@ In a future schema, you could now assign a field the **[!UICONTROL Type]** of "[
 
 ## Set a schema field as an identity field {#identity-field}
 
-Schemas are used for ingesting data into [!DNL Experience Platform], and that data is ultimately used to identify individuals and stitch together information coming from multiple sources. To facilitate this process, key fields must be marked as "[!UICONTROL Identity]" fields within applicable schemas. 
+The standard data structure that schemas provide can be leveraged to identify data belonging to the same individual across multiple sources, allowing for various downstream use cases such as segmentation, reporting, data science analysis, and more. In order to stitch data based on individual identities, key fields must be marked as "[!UICONTROL Identity]" fields within applicable schemas. 
 
 [!DNL Experience Platform] makes it easy to denote an identity field through the use of an **[!UICONTROL Identity]** checkbox in the [!DNL Schema Editor]. However, you must determine which field is the best candidate to use as an identity, based on the nature of your data.
 
@@ -221,13 +221,17 @@ Next, you must provide an **[!UICONTROL Identity Namespace]** from the list of p
 
 ![](../images/tutorials/create-schema/loyaltyId_primary_identity.png)
 
+>[!NOTE]
+>
+>For more information on standard namespaces and their definitions, see the [Identity Service documentation](../../identity-service/namespaces.md#standard).
+
 Now all data ingested into the "[!DNL loyaltyId]" field will be used to help identify that individual and stitch together a single view of that customer.
 
 >[!NOTE]
 >
 >Once a schema field has been set as the primary identity, you will receive an error message if you later attempt to set another field in the schema as the primary. Each schema may contain only one primary identity field.
 
-To learn more about working with identities in [!DNL Experience Platform], please review the [!DNL Identity Service](../../identity-service/home.md) documentation.
+As an alternative to defining identity fields within the structure of the schema itself, you can also use an `identityMap` field to contain identity information. See the section on `identityMap` in the [basics of schema composition guide](../schema/composition.md) for more information. To learn more about working with identities in [!DNL Experience Platform] in general, please review the [!DNL Identity Service](../../identity-service/home.md) documentation.
 
 ## Enable the schema for use in [!DNL Real-time Customer Profile] {#profile}
 
