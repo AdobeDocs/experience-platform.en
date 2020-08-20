@@ -3,6 +3,7 @@ title: Rendering personalized content
 seo-title: Adobe Experience Platform Web SDK Rendering personalized content
 description: Learn how to render personalized content with Experience Platform Web SDK
 seo-description: Learn how to render personalized content with Experience Platform Web SDK
+keywords: personalization;renderDecisions;sendEvent;decisionScopes;result.decisions;
 ---
 
 # Overview of Personalization Options

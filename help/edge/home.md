@@ -4,6 +4,7 @@ title: Adobe Experience Platform Web SDK help
 seo-title: Adobe Experience Platform Web SDK help
 description: Learn what Adobe Experience Platform Web SDK is and how it can be used.
 seo-description: allow customers of the Adobe Experience Cloud to interact with the various services in the Experience Cloud.
+keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;
 ---
 
 # What is Adobe Experience Platform Web SDK
