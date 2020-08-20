@@ -14,17 +14,69 @@ For a complete guide to the [!UICONTROL Profiles] UI, please visit the [Profile 
 
 ## [!UICONTROL Modify dashboard] {#modify-dashboard}
 
-Resize and remove cards.
-Can edit some cards - see edit section.
+![](../images/profile-customization/profiles-modify-dashboard.png)
+
+Resize cards.
+
+![](../images/profile-customization/profiles-resize-cards.png)
+
+![](../images/profile-customization/profiles-card-resized.png)
+
 Can only remove some cards - read only
 Cannot remove or edit some cards
 
-## Edit existing cards {#edit-existing-cards}
+![](../images/profile-customization/profiles-edit-remove-resized.png)
 
-## Add new widgets {#add-new-widgets}
+Edit existing card
 
-## [!UICONTROL Add attributes] {#add-attributes}
+![](../images/profile-customization/profiles-edit-widget-basic-attributes.png)
 
-[!UICONTROL Add attributes] from [!UICONTROL Union Schema]
+Add attributes
+
+![](../images/profile-customization/profiles-edit-widget-basic-add-attributes.png)
+
+Select schema field - current fields
+
+![](../images/profile-customization/profiles-select-field-before.png)
+
+Select schema field - add fields
+
+![](../images/profile-customization/profiles-select-field-after.png)
+
+Update and save card
+
+![](../images/profile-customization/profiles-edit-widget-new-attributes.png)
+
+Card with new attributes
+
+![](../images/profile-customization/profiles-resized-card-new-attributes.png)
+
+## [!UICONTROL Add widget] {#add-widget}
+
+Modify dashboard.
+
+![](../images/profile-customization/profiles-modify-dashboard.png)
+
+Add widget.
+
+![](../images/profile-customization/profiles-add-widget.png)
+
+Edit new widget
+
+![](../images/profile-customization/profiles-edit-new-widget.png)
+
+Select fields for new widget
+
+![](../images/profile-customization/profiles-add-fields-new-widget.png)
+
+Confirm new widget fields and card title
+
+![](../images/profile-customization/profiles-edit-new-widget-with-fields.png)
+
+New card with fields
+
+![](../images/profile-customization/profiles-detail-new-widget.png)
+
+
 
 ## Next steps
