@@ -744,6 +744,8 @@ When a record is ingested with the `xdm:lastUpdatedDate` field populated, Experi
 
 For step-by-step instructions on working with schemas using the schema registry API, including how to add mixins to schemas, please visit the [tutorial for creating a schema using the API](../../xdm/tutorials/create-schema-api.md).
 
+To work with custom timestamps using the UI, refer to the section on [using custom timestamps](../ui/merge-policies.md#custom-timestamps) in the [merge policies user guide](../ui/merge-policies.md).
+
 #### External Source System Audit Details Mixin details {#mixin-details}
 
 The following example shows correctly populated fields in the External Source System Audit Details Mixin. The complete mixin JSON can also be viewed in the [public Experience Data Model (XDM) repo](https://github.com/adobe/xdm/blob/master/schemas/common/external-source-system-audit-details.schema.json) on GitHub.

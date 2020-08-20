@@ -77,6 +77,8 @@ The following screenshot displays the fields in the [!UICONTROL External Source 
 
 ![](../images/merge-policies/custom-timestamp-mixin.png)
 
+To work with custom timestamps using the API, refer to the Appendix of the [merge policies endpoint guide](../api/merge-policies.md) and then section on [using custom timestamps](../api/merge-policies.md#custom-timestamps).
+
 ### Dataset precedence {#dataset-precedence}
 
 When selecting an *[!UICONTROL Attribute merge]* value, you can select *[!UICONTROL Dataset precedence]* which allows you to give priority to profile fragments based on the dataset from which they came. 
