@@ -3,6 +3,7 @@ title: Edge Configuration
 seo-title: Edge configuration for the Experience Platform Web SDK
 description: Learn how to configure the Experience Platform Edge Network. 
 seo-description: Learn how to configure the Experience Platform Edge Network. 
+keywords: configuration;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
 ---
 
 # Configuring the Edge
