@@ -20,8 +20,8 @@ The following sections provide additional information that you will need to know
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
 - [Batch ingestion](./overview.md): Allows you to ingest data into Adobe Experience Platform as batch files.
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-- [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+- [[!DNL Experience Data Model] (XDM) System](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+- [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ### Reading sample API calls
 
@@ -31,13 +31,13 @@ This guide provides example API calls to demonstrate how to format your requests
 
 In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-- Authorization: Bearer `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
 All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -166,7 +166,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | The ID of the batch you want to upload to. |
 | `{DATASET_ID}` | The ID of the batch's reference dataset. |
-| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location of where you wish to upload the file on the Adobe side. |
+| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location where the file will be saved on the Adobe side. |
 
 **Request**
 
@@ -301,7 +301,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | The ID of the batch you want to upload to. |
 | `{DATASET_ID}` | The ID of the batch's reference dataset. |
-| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location of where you wish to upload the file on the Adobe side.  |
+| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location where the file will be saved on the Adobe side. |
 
 **Request**
 
@@ -474,7 +474,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | The ID of the batch you want to upload to. |
 | `{DATASET_ID}` | The ID of the batch's reference dataset. |
-| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location of where you wish to upload the file on the Adobe side.  |
+| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location where the file will be saved on the Adobe side. |
 
 **Request**
 
@@ -726,7 +726,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | The ID of the batch you want to upload to. |
 | `{DATASET_ID}` | The ID of the batch's reference dataset. |
-| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location of where you wish to upload the file on the Adobe side. |
+| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location where the file will be saved on the Adobe side. |
 
 **Request**
 
@@ -933,7 +933,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | The ID of the batch you want to upload to. |
 | `{DATASET_ID}` | The ID of the batch's reference dataset. |
-| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location of where you wish to upload the file on the Adobe side. |
+| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location where the file will be saved on the Adobe side. |
 
 **Request**
 
