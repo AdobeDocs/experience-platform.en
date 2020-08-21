@@ -16,7 +16,7 @@ The visual similarity service, when given an image, automatically finds visually
 
 The following image was used in the example request shown in this document:
 
-![test image](../images/test_image.jpeg)
+![test image](../images/Query_Image.jpeg)
 
 **API format**
 
@@ -30,7 +30,7 @@ The following request retrieves visually similar images from a catalog, based on
 
 >[!CAUTION]
 >
->`analyzer_id` determines which [!DNL Sensei Content Framework] is used. Please check that you have the proper `analyzer_id` before making your request.
+>`analyzer_id` determines which [!DNL Sensei Content Framework] is used. Please check that you have the proper `analyzer_id` before making your request. Contact the Content and Commerce AI beta team to receive your `analyzer_id` for this service.
 
 ```SHELL
 curl -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -69,7 +69,7 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Property | Description | Mandatory |
 | --- | --- | --- |
-| `analyzer_id` | The [!DNL Sensei] service ID that your request is deployed under. This ID determines which of the [!DNL Sensei Content Frameworks] are used.  | Yes |
+| `analyzer_id` | The [!DNL Sensei] service ID that your request is deployed under. This ID determines which of the [!DNL Sensei Content Frameworks] are used. For custom services, please contact the Content and Commerce AI team to set up a custom ID. | Yes |
 | `application-id` | The ID of your created application. | Yes |
 | `data` | An array that contains a JSON object with each object in the array representing an image. Any parameters passed as part of this array overrides the global parameters specified outside the `data` array. Any of the remaining properties outlined below in this table can be overridden from within `data`.  | Yes |
 | `content-id` | The unique ID for the data element that is returned in the response. If this is not passed, an auto-generated ID is assigned. | No |
@@ -84,6 +84,10 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 **Response**
 
 A successful response returns a `response` array that contains a `feature_value` and `feature_name` for each of the visually similar images found in the catalog.
+
+The following visually similar images were returned in the example response shown below:
+
+![similar images](../images/results.jpg)
 
 ```json
 {
@@ -149,3 +153,4 @@ A successful response returns a `response` array that contains a `feature_value`
   "error": []
 }
 ```
+
