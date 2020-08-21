@@ -724,6 +724,8 @@ Now that you know how to create and configure merge policies for your IMS Organi
 
 ## Appendix
 
+This section provides supplemental information related to working with merge policies.
+
 ### Using custom timestamps {#custom-timestamps}
 
 As Profile records are ingested into Experience Platform, a system timestamp is obtained at the time of ingestion and added to the record. When `timestampOrdered` is selected as the `attributeMerge` type for a merge policy, profiles are merged based on the system timestamp. In other words, merging is done based on the timestamp for when the record was ingested into Platform.
