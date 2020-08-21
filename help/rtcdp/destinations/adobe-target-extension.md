@@ -3,7 +3,7 @@ keywords: target extension;target
 title: Adobe Target extension
 seo-title: Adobe Target extension
 description: The Adobe Target extension is a personalization destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: 
+seo-description: The Adobe Target extension is a personalization destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # Adobe Target Extension {#adobe-target-extension}
