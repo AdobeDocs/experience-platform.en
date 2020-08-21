@@ -3,7 +3,7 @@ keywords: livefyre;livefyre extension
 title: Adobe Livefyre extension
 seo-title: Adobe Livefyre extension
 description: The Adobe Livefyre extension is a social destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: 
+seo-description: The Adobe Livefyre extension is a social destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # Adobe Livefyre extension {#adobe-livefyre-extension}
