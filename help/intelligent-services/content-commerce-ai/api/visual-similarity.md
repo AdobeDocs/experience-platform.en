@@ -16,7 +16,7 @@ The visual similarity service, when given an image, automatically finds visually
 
 The following image was used in the example request shown in this document:
 
-![test image](../images/test_image.jpeg)
+![test image](../images/Query_image.jpeg)
 
 **API format**
 
@@ -85,6 +85,10 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 A successful response returns a `response` array that contains a `feature_value` and `feature_name` for each of the visually similar images found in the catalog.
 
+The following visually similar images were returned in the example response shown below:
+
+![similar images](../images/results.jpg)
+
 ```json
 {
   "status": 200,
@@ -149,3 +153,4 @@ A successful response returns a `response` array that contains a `feature_value`
   "error": []
 }
 ```
+
