@@ -67,7 +67,7 @@ clickCollectionEnabled: false
 
 #### What tags qualify for link-tracking?{#qualifyingLinks}
 
-Automatic link tracking is done for anchor `A` and `AREA` tags. However, these tags are not considered for link tracking if they have an attached `onclick` handler.
+Automatic link tracking is done for anchor `A` and `AREA` tags. However, these tags aren't considered for link tracking if they have an attached `onclick` handler.
 
 #### How are links labeled?{#labelingLinks}
 
