@@ -44,6 +44,72 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 * `Content-Type: application/json`
 
+## Look up connection details
+
+The first step in updating your connection information is to retrieve connection details using your connection ID.
+
+**API format**
+
+```http
+GET /connections/{CONNECTION_ID}
+```
+
+| Parameter | Description |
+| --------- | ----------- |
+| `{CONNECTION_ID}` | The unique `id` value for the connection you want to retrieve. |
+
+**Request**
+
+The following request provides new information to update your connection with.
+
+```shell
+curl -X GET \
+    'https://platform.adobe.io/data/foundation/flowservice/connections/139f6a5f-a78b-4744-9f6a-5fa78bd74431' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Response**
+
+A successful response returns the current details of your connection ID.
+
+```json
+{
+    "items": [
+        {
+            "createdAt": 1597973312000,
+            "updatedAt": 1597973312000,
+            "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
+            "updatedBy": "28AF22BA5DE6B0B40A494036@AdobeID",
+            "createdClient": "exc_app",
+            "updatedClient": "exc_app",
+            "sandboxId": "6b36e130-c5d7-11e9-949c-0da8d50fcac1",
+            "sandboxName": "prod",
+            "id": "139f6a5f-a78b-4744-9f6a-5fa78bd74431",
+            "name": "E2E_SF Base_Connection",
+            "connectionSpec": {
+                "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
+                "version": "1.0"
+            },
+            "state": "enabled",
+            "auth": {
+                "specName": "Basic Authentication",
+                "params": {
+                    "securityToken": "xxxx",
+                    "password": "xxxx",
+                    "username": "acp-salesforce-02@adobe.com",
+                    "environmentUrl": "login.salesforce.com"
+                }
+            },
+            "version": "\"1400dd53-0000-0200-0000-5f3f23450000\"",
+            "etag": "\"1400dd53-0000-0200-0000-5f3f23450000\""
+        }
+    ]
+}
+```
+
 ## Update connection
 
 Once you have an existing connection ID, perform a PATCH request to the [!DNL Flow Service] API.
@@ -63,32 +129,40 @@ PATCH /connections/{CONNECTION_ID}
 The following request provides new information to update your connection with.
 
 ```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connections/9f71e51d-eb8b-48d4-b1e5-1deb8b68d42b' \
+curl -X PATCH \
+    'https://platform.adobe.io/data/foundation/flowservice/connections/139f6a5f-a78b-4744-9f6a-5fa78bd74431' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
-    -d '{
+    -d '[
+        {
             "op": "replace",
             "path": "/auth/params",
             "value": {
-                "username": "{{new_sf_username}}",
-                "password": "{{new_sf_password}}",
-                "securityToken": "{{new_sf_securityToken}}"
+                "username": "acp-salesforce-02@adobe.com",
+                "password": "ACPAutomation123",
+                "securityToken": "GRYsM22gWGnP8yMzjXH0Q0eX9"
             }
         },
         {
             "op": "replace",
             "path": "/name",
-            "value": "new_name"
+            "value": "Test salesforce connection"
         },
         {
             "op": "add",
             "path": "/description",
-            "value": "new_description"
-        }'
+            "value": "A test salesforce connection"
+        }
+    ]'
 ```
+
+| Parameter | Description |
+| --------- | ----------- |
+| `op` | operation call |
+| `path` | the path of the parameter to be updated |
+| `value` | the new values you want to use |
 
 **Response**
 
@@ -96,7 +170,73 @@ A successful response returns your connection ID, including an updated etag.
 
 ```json
 {
-    "id": "9f71e51d-eb8b-48d4-b1e5-1deb8b68d42b",
-    "etag": "\"ba00fb58-0000-0200-0000-5f228e770000\""
+    "id": "139f6a5f-a78b-4744-9f6a-5fa78bd74431",
+    "etag": "\"3600e378-0000-0200-0000-5f40212f0000\""
+}
+```
+
+## Look up updated connection details
+
+You can retrieve the same connection ID you updated to see the changes you made by making a GET request to the [!DNL Flow Service] API.
+
+**API format**
+
+```http
+GET /connections/{CONNECTION_ID}
+```
+
+| Parameter | Description |
+| --------- | ----------- |
+| `{CONNECTION_ID}` | The unique `id` value for the connection you want to retrieve. |
+
+**Request**
+
+The following request provides new information to update your connection with.
+
+```shell
+curl -X GET \
+    'https://platform.adobe.io/data/foundation/flowservice/connections/139f6a5f-a78b-4744-9f6a-5fa78bd74431' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Response**
+
+A successful response returns the updated details of your connection ID, including its new name, description, version, and etag.
+
+```json
+{
+    "items": [
+        {
+            "createdAt": 1597973312000,
+            "updatedAt": 1598038319627,
+            "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
+            "updatedBy": "28AF22BA5DE6B0B40A494036@AdobeID",
+            "createdClient": "exc_app",
+            "updatedClient": "exc_app",
+            "sandboxId": "6b36e130-c5d7-11e9-949c-0da8d50fcac1",
+            "sandboxName": "prod",
+            "id": "139f6a5f-a78b-4744-9f6a-5fa78bd74431",
+            "name": "Test salesforce connection",
+            "description": "A test salesforce connection",
+            "connectionSpec": {
+                "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
+                "version": "1.0"
+            },
+            "state": "enabled",
+            "auth": {
+                "specName": "Basic Authentication",
+                "params": {
+                    "securityToken": "xxxx",
+                    "password": "xxxx",
+                    "username": "acp-salesforce-02@adobe.com"
+                }
+            },
+            "version": "\"3600e378-0000-0200-0000-5f40212f0000\"",
+            "etag": "\"3600e378-0000-0200-0000-5f40212f0000\""
+        }
+    ]
 }
 ```
