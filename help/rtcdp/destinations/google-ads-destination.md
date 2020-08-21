@@ -1,4 +1,5 @@
 ---
+keywords: Google ads;google ads;google adwords;Google AdWords;Google Adwords
 title: Google AdsDestination
 seo-title: Google Ads Destination
 description: Google Ads, formerly known as Google AdWords, is an online advertising service that allows businesses to pay-per-click advertising across text-based searches, graphic displays, YouTube videos, and in-app mobile displays.

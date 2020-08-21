@@ -1,4 +1,5 @@
 ---
+keywords: SFTP;sftp
 title: SFTP destination
 seo-title: SFTP destination
 description: Create a live outbound connection to your SFTP Server to periodically export delimited data files from Experience Platform.

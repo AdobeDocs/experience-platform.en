@@ -2,7 +2,7 @@
 keywords: RTCDP;rtcdp
 title: Destinations workspace
 seo-title: Destinations workspace
-description: In Adobe Real-time Customer Data Platform, select Destinations from the left navigation bar to access the destinations workspace.
+description: The Destinations workspace consists of four sections, Catalog, Browse, Accounts, and System View, which are described in the sections below.
 seo-description: In Adobe Real-time Customer Data Platform, select Destinations from the left navigation bar to access the destinations workspace.
 ---
 
