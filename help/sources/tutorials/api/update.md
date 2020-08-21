@@ -1,11 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics
+description: This tutorial covers the steps for updating your connection information, including its name, description, and credentials using the Flow Service API.
 solution: Experience Platform
-title: Update connection credentials and description
+title: Update connection credentials and information
 topic: overview
 ---
 
-# Update connection credentials and description
+# Update connection credentials and information
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
@@ -73,7 +74,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the current details of your connection ID.
+A successful response returns the current details of your connection including its credentials, unique identifier (`id`), and version.
 
 ```json
 {
@@ -81,12 +82,11 @@ A successful response returns the current details of your connection ID.
         {
             "createdAt": 1597973312000,
             "updatedAt": 1597973312000,
-            "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
-            "updatedBy": "28AF22BA5DE6B0B40A494036@AdobeID",
-            "createdClient": "exc_app",
-            "updatedClient": "exc_app",
-            "sandboxId": "6b36e130-c5d7-11e9-949c-0da8d50fcac1",
-            "sandboxName": "prod",
+            "createdBy": "{CREATED_BY}",
+            "updatedBy": "{UPDATED_BY}",
+            "createdClient": "{CREATED_CLIENT}",
+            "updatedClient": "{UPDATED_CLIENT}",
+            "sandboxName": "{SANDBOX_NAME}",
             "id": "139f6a5f-a78b-4744-9f6a-5fa78bd74431",
             "name": "E2E_SF Base_Connection",
             "connectionSpec": {
@@ -97,9 +97,9 @@ A successful response returns the current details of your connection ID.
             "auth": {
                 "specName": "Basic Authentication",
                 "params": {
-                    "securityToken": "xxxx",
-                    "password": "xxxx",
-                    "username": "acp-salesforce-02@adobe.com",
+                    "securityToken": "{SECURITY_TOKEN}",
+                    "password": "{PASSWORD}",
+                    "username": "my-salesforce-account",
                     "environmentUrl": "login.salesforce.com"
                 }
             },
@@ -113,6 +113,9 @@ A successful response returns the current details of your connection ID.
 ## Update connection
 
 Once you have an existing connection ID, perform a PATCH request to the [!DNL Flow Service] API.
+
+>[!IMPORTANT]
+>A PATCH request requires the use of the `If-Match` header. The value for this header is your connection's unique version.
 
 **API format**
 
@@ -135,14 +138,15 @@ curl -X PATCH \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
+    -H 'If-Match: 1400dd53-0000-0200-0000-5f3f23450000' \
     -d '[
         {
             "op": "replace",
             "path": "/auth/params",
             "value": {
-                "username": "acp-salesforce-02@adobe.com",
-                "password": "ACPAutomation123",
-                "securityToken": "GRYsM22gWGnP8yMzjXH0Q0eX9"
+                "username": "salesforce-connector-username",
+                "password": "{NEW_PASSWORD}",
+                "securityToken": "{NEW_SECURITY_TOKEN}"
             }
         },
         {
@@ -160,9 +164,9 @@ curl -X PATCH \
 
 | Parameter | Description |
 | --------- | ----------- |
-| `op` | operation call |
-| `path` | the path of the parameter to be updated |
-| `value` | the new values you want to use |
+| `op` | The operation call used to define the action needed to update the connection. Operations include: `add`, `replace`, and `remove`. |
+| `path` | The path of the parameter to be updated. |
+| `value` | The new value you want to update your parameter with. |
 
 **Response**
 
@@ -204,7 +208,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the updated details of your connection ID, including its new name, description, version, and etag.
+A successful response returns the updated details of your connection ID, including its new name, description, and version.
 
 ```json
 {
@@ -212,12 +216,11 @@ A successful response returns the updated details of your connection ID, includi
         {
             "createdAt": 1597973312000,
             "updatedAt": 1598038319627,
-            "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
-            "updatedBy": "28AF22BA5DE6B0B40A494036@AdobeID",
-            "createdClient": "exc_app",
-            "updatedClient": "exc_app",
-            "sandboxId": "6b36e130-c5d7-11e9-949c-0da8d50fcac1",
-            "sandboxName": "prod",
+            "createdBy": "{CREATED_BY}",
+            "updatedBy": "{UPDATED_BY}",
+            "createdClient": "{CREATED_CLIENT}",
+            "updatedClient": "{UPDATED_CLIENT}",
+            "sandboxName": "{SANDBOX_NAME}",
             "id": "139f6a5f-a78b-4744-9f6a-5fa78bd74431",
             "name": "Test salesforce connection",
             "description": "A test salesforce connection",
@@ -229,9 +232,9 @@ A successful response returns the updated details of your connection ID, includi
             "auth": {
                 "specName": "Basic Authentication",
                 "params": {
-                    "securityToken": "xxxx",
-                    "password": "xxxx",
-                    "username": "acp-salesforce-02@adobe.com"
+                    "securityToken": "{NEW_SECURITY_TOKEN}",
+                    "password": "{PASSWORD}",
+                    "username": "salesforce-connector-username"
                 }
             },
             "version": "\"3600e378-0000-0200-0000-5f40212f0000\"",
@@ -240,3 +243,7 @@ A successful response returns the updated details of your connection ID, includi
     ]
 }
 ```
+
+## Next steps
+
+By following this tutorial, you have updated the credentials and information associated with your connection using the [!DNL Flow Service] API. For more information on using source connectors, see the [sources overview](../../home.md).
