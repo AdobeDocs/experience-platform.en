@@ -16,7 +16,7 @@ The visual similarity service, when given an image, automatically finds visually
 
 The following image was used in the example request shown in this document:
 
-![test image](../images/Query_image.jpeg)
+![test image](../images/Query_Image.jpeg)
 
 **API format**
 
