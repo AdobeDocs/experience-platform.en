@@ -597,6 +597,16 @@ curl -X POST \
         ],
         "transformations": [
             {
+                "name": "Copy",
+                "params": {
+                    "deltaColumn": {
+                        "name": "updatedAt",
+                        "dateFormat": "YYYY-MM-DD",
+                        "timezone": "UTC"
+                    }
+                }
+            },
+            {
             "name": "Mapping",
             "params": {
                 "mappingId": "febec6a6785e45ea9ed594422cc483d7",
@@ -618,7 +628,7 @@ curl -X POST \
 | `sourceConnectionIds` | The [source connection ID](#source) retrieved in an earlier step. |
 | `targetConnectionIds` | The [target connection ID](#target-connection) retrieved in an earlier step. |
 | `transformations.params.mappingId` | The [mapping ID](#mapping) retrieved in an earlier step.|
-| `transformations.params.deltaColum` | The designated column used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column. |
+| `transformations.params.deltaColum` | The designated column used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column. The supported date format for `deltaColumn` is `yyyy-MM-dd HH:mm:ss`. |
 | `transformations.params.mappingId`| The mapping ID associated with your database. |
 | `scheduleParams.startTime` | The start time for the dataflow in epoch time. |
 | `scheduleParams.frequency` | The frequency at which the dataflow will collect data. Acceptable values include: `once`, `minute`, `hour`, `day`, or `week`. |
