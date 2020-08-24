@@ -3,6 +3,7 @@ title: Manually mapping variables in Analytics
 seo-title: Manually mapping variables in Analytics with Web SDK
 description: How to manurally map variables into Analytics using processing rules
 seo-description: manurally map variables into Analytics using processing rules with Web SDK
+keywords: adobe analytics;analytics;variables;mapping variables;map variables;contextData;context Data;Processing rules;rules;xdm;schema;
 ---
 
 # Manually mapping variables in Analytics
@@ -56,7 +57,7 @@ For example, in the following rule, Analytics is set to populate **Internal Sear
 The following example shows how the [`event` command](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/tracking-events.html) can be used with the `xdm` option to send and retrieve data with the AEP [!DNL Web SDK]. In this example, the `event` command matches the [ExperienceEvent Commerce Details Schema](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) so that the productListItems `name` and `SKU` values are tracked:
 
 
-```
+```javascript
 alloy("event",{
   "xdm":{
     "commerce":{

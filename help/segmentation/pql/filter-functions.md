@@ -7,7 +7,7 @@ topic: developer guide
 
 # Filter functions
 
-Filter functions are used to filter data within arrays in [!DNL Profile Query Language] (PQL). More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
+Filter functions are used to filter data within arrays in [!DNL Profile Query Language] (PQL). More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Filter 
 

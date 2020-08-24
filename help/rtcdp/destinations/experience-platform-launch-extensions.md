@@ -1,4 +1,5 @@
 ---
+keywords: launch extensions;launch extension;launch destinations
 title: Experience Platform Launch Extensions
 seo-title: Experience Platform Launch Extensions
 description: Launch is the next-generation of tag management capabilities from Adobe. Launch gives customers a simple way to deploy and manage all of the analytics, marketing, and advertising tags necessary to power relevant customer experiences.
@@ -15,7 +16,7 @@ For an introduction to Experience Platform Launch capabilities, see the resource
 
 ## How to find the Launch extensions in the Adobe Real-time CDP interface {#how-to-find-extensions-in-interface}
 
-To find the Launch extensions in the Adobe Real-time CDP interface, browse to **[!UICONTROL Destinations > Catalog]** and select **[!UICONTROL Extensions]** in the **[!UICONTROL Types]** filter. 
+To find the Launch extensions in the Adobe Real-time CDP interface, browse to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** and select **[!UICONTROL Extensions]** in the **[!UICONTROL Types]** filter. 
 
 ![Extensions filter in the interface](/help/rtcdp/destinations/assets/extensions-filter.png)
 

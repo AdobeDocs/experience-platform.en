@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;ECID;ecid
 solution: Experience Platform
 title: Identity data for privacy requests
 topic: overview
+description: This document provides general guidance on how to configure your data operations and leverage Adobe technologies to effectively retrieve the appropriate identity information for customer privacy requests.
 ---
 
 # Identity data for privacy requests

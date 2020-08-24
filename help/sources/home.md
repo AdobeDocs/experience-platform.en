@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;source connectors;source connector;sources;data sources;data source;data source connection
 solution: Experience Platform
 title: Adobe Experience Platform Source Connectors overview
 topic: overview
+description: Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 ---
 
 # Source connectors overview
@@ -23,6 +24,8 @@ Sources in [!DNL Experience Platform] are grouped into the following categories:
 
 - [Adobe Audience Manager connector overview](connectors/adobe-applications/audience-manager.md)
 - [Create an Adobe Audience Manager source connector in the UI](./tutorials/ui/create/adobe-applications/audience-manager.md)
+- [Adobe Analytics Classifications Data connector overview](connectors/adobe-applications/classifications.md)
+- [Create an Adobe Analytics Classifications Data source connector in the UI](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Adobe Analytics data connector overview](connectors/adobe-applications/analytics.md)
 - [Create an Adobe Analytics source connector in the UI](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Create a Customer Attributes source connector in the UI](./tutorials/ui/create/adobe-applications/customer-attributes.md)
@@ -38,8 +41,9 @@ Sources in [!DNL Experience Platform] are grouped into the following categories:
 Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM parquet, or delimited. Every step of the process is integrated into the Sources workflow using the user interface. See the following related documents for more information:
 
 - [!DNL Azure Data Lake Storage Gen2](connectors/cloud-storage/adls-gen2.md) connector
-- [!DNL Azure Blob and Amazon S3](connectors/cloud-storage/blob-s3.md) connector
+- [!DNL Azure Blob](connectors/cloud-storage/blob.md) connector
 - [!DNL Amazon Kinesis](connectors/cloud-storage/kinesis.md) connector
+- [!DNL Amazon S3](connectors/cloud-storage/s3.md) connector
 - [!DNL Apache HDFS](connectors/cloud-storage/hdfs.md) connector
 - [!DNL Azure Event Hubs](connectors/cloud-storage/eventhub.md) connector
 - [!DNL Azure File Storage](connectors/cloud-storage/azure-file-storage.md) connector
@@ -75,7 +79,6 @@ CRM systems provide data that can help build customer relationships, which in tu
 - [!DNL GreenPlum](connectors/databases/greenplum.md) connector
 - [!DNL HP Vertica](connectors/databases/hp-vertica.md) connector
 - [!DNL IBM DB2](connectors/databases/ibm-db2.md) connector
-- [!DNL MariaDB](connectors/databases/mariadb.md) connector
 - [!DNL Microsoft SQL Server](connectors/databases/sql-server.md) connector
 - [!DNL MySQL](connectors/databases/mysql.md) connector
 - [!DNL Oracle](connectors/databases/oracle.md) connector

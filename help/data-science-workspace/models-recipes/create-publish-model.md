@@ -110,7 +110,9 @@ You can choose to wait for the training run to finish, or continue to create a n
 
     Hyperparameters cannot be learned, therefore they must be assigned before training runs occur. Adjusting Hyperparameters may change the accuracy of the Trained Model. Since optimizing a Model is an iterative process, multiple training runs may be required before a satisfactory evaluation is achieved.
 
-    >[!TIP] Set **[!UICONTROL num_recommendations]** to 10. 
+    >[!TIP]
+    >
+    >Set **[!UICONTROL num_recommendations]** to 10. 
 
     ![](../images/models-recipes/model-walkthrough/configure_hyperparameter.png)
 3.  An additional data point will appear on the Model evaluation chart once the new training run completes, this may take up to several minutes.

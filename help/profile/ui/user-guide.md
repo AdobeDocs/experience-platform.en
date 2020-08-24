@@ -1,8 +1,10 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile
 solution: Adobe Experience Platform
 title: Real-time Customer Profile user guide
 topic: guide
+description: Real-time Customer Profile creates a holistic view of each of your individual customers, combining data from multiple channels including online, offline, CRM, and third-party data. This document serves as a guide for interacting with Real-time Customer Profile in the Adobe Experience Platform user interface.
+
 ---
 
 # [!DNL Real-time Customer Profile] user guide
@@ -81,7 +83,7 @@ Once a value has been entered, select **[!UICONTROL Show profile]** and a single
 
 ![](../images/user-guide/profiles-display-profile.png)
 
-### Profile detail
+### Profile detail {#profile-detail}
 
 Upon selecting the **[!UICONTROL Profile ID]**, the _[!UICONTROL Detail]_ tab opens. This page displays information about the selected profile, including basic attributes, linked identities, and available contact channels. The profile information displayed has been merged together from multiple profile fragments to form a single view of the individual customer.
 

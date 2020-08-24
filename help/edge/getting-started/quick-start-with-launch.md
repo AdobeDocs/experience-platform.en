@@ -3,6 +3,7 @@ title: Quick start with Launch
 seo-title: Adobe Experience Platform Web SDK quick start with Launch
 description: Quick start guide for using the Experience Platform Web SDK extension to collect data
 seo-description: Quick start guide for using the Experience Platform Web SDK extension to collect data
+keywords: 1st-party domain;CNAME;schema;create schema;launch;aep web sdk extension;extension;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;
 ---
 
 # Welcome
@@ -22,6 +23,9 @@ The Experience Platform Edge Network takes data as XDM. XDM is a data format tha
 3. Create a Dataset from the schema you created.
 
 The following video is intended to support you in creating a schema, dataset, and streaming source connector for your [!DNL Web SDK] data.
+
+
+>[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
 Log in to Launch and install the `AEP Web SDK` extension. When you install the SDK, you are prompted to configure the extension. Enter the Config ID you requested above. The extension automatically fills in your Organization ID.
 

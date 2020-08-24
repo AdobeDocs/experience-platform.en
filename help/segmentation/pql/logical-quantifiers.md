@@ -7,7 +7,7 @@ topic: developer guide
 
 # Logical quantifier functions
 
-Logical quantifiers can be used to assert conditions with arrays in [!DNL Profile Query Language] (PQL). More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
+Logical quantifiers can be used to assert conditions with arrays in [!DNL Profile Query Language] (PQL). More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Exists
 

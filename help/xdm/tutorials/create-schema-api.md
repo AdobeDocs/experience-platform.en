@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;schema;Schema;create schema;schema api;enum;primary identity;primary idenity;enum datatype;schema design
 solution: Experience Platform
 title: Create a schema using the Schema Registry API
 topic: tutorials
+description: This tutorial uses the Schema Registry API to walk you through the steps to compose a schema using a standard class.
 ---
 
 # Create a schema using the [!DNL Schema Registry] API

@@ -3,6 +3,7 @@ title: Quick start using plain javascript
 seo-title: Adobe Experience Platform Web SDK quick start 
 description: Quick start guide for using the Experience Platform Web SDK to collect data
 seo-description: Quick start guide for using the Experience Platform Web SDK  to collect data
+keywords: 1st-party domain;CNAME;schema;create schema;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;install sdk;install web sdk;configure;configure web sdk;
 ---
 
 # Welcome

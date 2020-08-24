@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics
+keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;jupyterlab
 solution: Experience Platform
 title: JupyterLab user guide
 topic: Overview
+description: JupyterLab is a web-based user interface for Project Jupyter and is tightly integrated into Adobe Experience Platform. It provides an interactive development environment for data scientists to work with Jupyter notebooks, code, and data.
 ---
 
 # [!DNL JupyterLab] user guide
 
-[!DNL JupyterLab] is a web-based user interface for <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> and is tightly integrated into [!DNL Adobe Experience Platform]. It provides an interactive development environment for data scientists to work with Jupyter notebooks, code, and data.
+[!DNL JupyterLab] is a web-based user interface for [Project Jupyter](https://jupyter.org/) and is tightly integrated into Adobe Experience Platform. It provides an interactive development environment for data scientists to work with Jupyter notebooks, code, and data.
 
 This document provides an overview of [!DNL JupyterLab] and its features as well as instructions to perform common actions.
 

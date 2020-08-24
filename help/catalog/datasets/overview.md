@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data location;Data Location;Data management;data management;Lineage;lineage;data type;data types;Data types;Data type
 solution: Experience Platform
 title: Datasets overview
 topic: datasets
+description: This document provides a high-level overview of datasets in Experience Platform.
 ---
 
 # Datasets overview
@@ -40,7 +41,7 @@ Data usage labels can be applied to entire datasets or individual dataset fields
 See the [Data Governance overview](../../data-governance/home.md) for more information on the service. For steps on how to work with usage labels in [!DNL Platform], refer to the following guides:
 
 * [Manage labels in the UI](../../data-governance/labels/user-guide.md)
-* [Manage labels in the API](../../data-governance/labels/api.md)
+* [Manage dataset labels in the API](../../data-governance/labels/dataset-api.md)
 
 ## Datasets in downstream [!DNL Platform] services
 

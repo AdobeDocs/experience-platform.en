@@ -1,4 +1,5 @@
 ---
+keywords: facebook extensions;facebook extension;facebook destinations;facebook
 title: Facebook Destination
 seo-title: Facebook Destination
 description: Activate profiles for your Facebook campaigns for audience targeting, personalization and suppression based on hashed emails.
@@ -86,3 +87,11 @@ To connect to the [!DNL Facebook] destination, see [Social network destinations 
 ## Activate segments to [!DNL Facebook] {#activate-segments}
 
 For instructions on how to activate segments to [!DNL Facebook], see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md). 
+
+## Exported data {#exported-data}
+
+For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated segments.
+
+>[!TIP]
+>
+>The integration between Adobe Real-time CDP and [!DNL Facebook] supports historical audience backfills. All historical segment qualifications get sent to [!DNL Facebook] when you activate the segments to the destination.

@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;data science workspace;data science
 solution: Experience Platform
 title: Sensei Machine Learning API developer guide
 topic: Developer guide
+description: This developer guide provides steps to help you start using the Sensei Machine Learning API, and demonstrates API calls for performing CRUD operations on various Data Science Workspace resources.
 ---
 
 # [!DNL Sensei Machine Learning] API developer guide

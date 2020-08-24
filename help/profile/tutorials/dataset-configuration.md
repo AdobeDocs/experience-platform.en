@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;enable dataset
 solution: Adobe Experience Platform
 title: Configure a dataset for Profile and Identity Service using APIs
 topic: tutorial

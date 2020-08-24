@@ -3,6 +3,8 @@ title: Configuring the SDK
 seo-title: Configuring the Adobe Experience Platform Web SDK
 description: Learn how to configure the Experience Platform Web SDK
 seo-description: Learn how to configure the Experience Platform Web SDK
+keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
+
 ---
 
 # Configuring the SDK
@@ -48,7 +50,7 @@ Indicates which context categories to collect automatically as described in [Aut
 
 Indicates whether debugging should be enabled. Setting this config to `true` enables the following features:
 
-| **Feature**            | **Function** | 
+| **Feature**            | **Function** |
 | ---------------------- | ------------------ |
 | Synchronous validation | Validates the data being collected against the schema and returns an error in the response under the following label: `collect:error OR success` |
 | Console logging        | Enables debugging messages to be displayed in the browser's JavaScript console  |
@@ -71,7 +73,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  When configuring multipl
 
 ## Data collection
 
-### `clickCollectionEnabled`
+### `clickCollectionEnabled` {#clickCollectionEnabled}
 
 | **Type** | **Required** | **Default Value** |
 | -------- | ------------ | ----------------- |
@@ -139,21 +141,13 @@ Enables [!DNL Audience Manager] [!UICONTROL URL destinations], which allows the 
 
 ## Identity options
 
-### `idSyncContainerId`
+### `idMigrationEnabled`
 
 | **Type** | **Required** | **Default Value** |
 | -------- | ------------ | ----------------- |
-| Number   | No           | none              |
+| Boolean  | No           | true              |
 
-The container ID that specifies which ID syncs are fired. This is a non-negative integer that can be obtained from your consultant.
-
-### `idSyncEnabled`
-
-| **Type** | **Required** | **Default Value** |
-| -------- | ------------ | ----------------- |
-| Boolean  | No           | `true`            |
-
-Enables the ID sync feature, which allows the firing of URLs to synchronize the Adobe unique user ID with the unique user ID of a third-party data source.
+If true, the SDK will read and set old AMCV cookies. This helps with transitioning to using the AEP Web SDK while some parts of the site may still be using Visitor.js. Additionally, if Visitor API is defined on the page, the SDK will query Visitor API for the ECID. This enables you to dual tag pages with the AEP Web SDK and still have the same ECID.
 
 ### `thirdPartyCookiesEnabled`
 

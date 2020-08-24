@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;XDM graphs
 solution: Adobe Experience Platform
 title: Real-time Customer Profile overview
 topic: guide
+description: Real-time Customer Profile is a generic lookup entity store that merges data from various enterprise data assets, and then provides access to that data in the form of individual customer profiles and related time series events. This feature enables marketers to drive coordinated, consistent and relevant experiences with their audiences across multiple channels.
 ---
 
 # [!DNL Real-time Customer Profile] overview
@@ -70,7 +71,8 @@ In order to drive coordinated, consistent, and personalized experiences for your
 
 [!DNL Platform] can be configured to send your record and time-series data to [!DNL Profile], supporting real-time streaming ingestion and batch ingestion. For more information, see the tutorial outlining how to [add data to Real-time Customer Profile](tutorials/add-profile-data.md). 
 
->[!Note]
+>[!NOTE]
+>
 >Data collected through Adobe solutions, including [!DNL Analytics Cloud], [!DNL Marketing Cloud], and [!DNL Advertising Cloud], flows into [!DNL Experience Platform] and is ingested into [!DNL Profile].
 
 ### [!DNL Profile] ingestion metrics

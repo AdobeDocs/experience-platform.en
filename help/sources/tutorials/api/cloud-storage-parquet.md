@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data source connection
 solution: Experience Platform
 title: Ingest parquet data from a third-party cloud storage system using the Flow Service API
 topic: overview
+description: This tutorial uses the Flow Service API to walk you through the steps to ingest parquet data from a third-party cloud storage system.
 ---
 
 # Ingest parquet data from a third-party cloud storage system using the [!DNL Flow Service] API

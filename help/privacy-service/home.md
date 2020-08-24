@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;GDPR;gdpr;ccpa:CCPA
 solution: Experience Platform
 title: Adobe Experience Platform Privacy Service
 topic: overview

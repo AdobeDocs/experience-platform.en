@@ -1,7 +1,8 @@
 ---
+keywords: rtcdp administration overview;administration overview
 title: Administration overview
 seo-title: Real-Time CDP administration overview
-description: description
+description: This document provides an overview of the administration capabilities of Real-time Customer Data Platform, powered by Adobe Experience Platform. 
 seo-description: seo description
 ---
 

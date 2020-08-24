@@ -31,7 +31,7 @@ A Docker image allows a developer to package up an application with all the part
 
 The built Docker image is pushed to the Azure Container Registry using credentials supplied to you during the recipe creation workflow.
 
-To obtain your Azure Container Registry credentials, log into <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>. On the left navigation column, navigate to **[!UICONTROL Workflows]**. Select **[!UICONTROL Import Recipe]** followed by selecting **[!UICONTROL Launch]**. See the screen shot below for reference.
+To obtain your Azure Container Registry credentials, log into [Adobe Experience Platform](https://platform.adobe.com). On the left navigation column, navigate to **[!UICONTROL Workflows]**. Select **[!UICONTROL Import Recipe]** followed by selecting **[!UICONTROL Launch]**. See the screen shot below for reference.
 
 ![](../images/models-recipes/package-source-files/import.png)
 

@@ -456,3 +456,22 @@ where transaction_mode is one of:
     ISOLATION LEVEL { SERIALIZABLE | REPEATABLE READ | READ COMMITTED | READ UNCOMMITTED }
     READ WRITE | READ ONLY
 ```
+
+### COPY
+
+This command dumps the output of any SELECT query to a specified location. The user must have access to this location for this command to succeed.
+
+```
+COPY  query
+    TO '%scratch_space%/folder_location'
+    [  WITH FORMAT 'format_name']
+
+where 'format_name' is be one of:
+    'parquet', 'csv', 'json'
+
+'parquet' is the default format.
+```
+
+>[!NOTE]
+>
+>The complete output path will be `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`

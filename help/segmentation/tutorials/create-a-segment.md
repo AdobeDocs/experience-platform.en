@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segment;Segment;create segment
 solution: Experience Platform
 title: Create a segment
 topic: tutorial
+description: This document provides a tutorial for developing, testing, previewing, and saving a segment definition using the Adobe Experience Platform Segmentation Service API.
 ---
 
 # Create a segment 

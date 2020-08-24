@@ -3,6 +3,7 @@ title: Retrieving Experience Cloud ID
 seo-title: Adobe Experience Platform Web SDK Retrieving Experience Cloud ID
 description: Learn how to get Adobe Experience Cloud Id.
 seo-description: Learn how to get Adobe Experience Cloud Id.
+keywords: Identity;First Party Identity;Identity Service;3rd Party Identity;ID Migration;Visitor ID;third party identity;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;Syncing Identities;syncIdentity;sendEvent;identityMap;primary;ecid;Identity Namespace;namespace id;authenticationState;hashEnabled;
 ---
 
 # Identity - Retrieving the Experience Cloud ID
@@ -16,6 +17,14 @@ The [!DNL Identity Service] stores the identity in a cookie in a first party dom
 ## 3rd Party Identity
 
 The [!DNL Identity Service] has the ability to sync an ID with a 3rd party domain (demdex.net) to enable tracking across sites. When this is enabled the first request for a visitor (e.g. someone without an ECID) will be made to demdex.net. This will only be done on browsers that allow it (e.g. Chrome) and is controlled by the `thirdPartyCookiesEnabled` parameter in the configuration. If you would like to disable this feature all together, set `thirdPartyCookiesEnabled` to false.
+
+## ID Migration
+
+When migrating from using Visitor API, you can also migrate existing AMCV cookies. To enable ECID migration, set the `idMigrationEnabled` parameter in the configuration. The id migration is setup to enable some use cases:
+
+* When some pages of a domain are using Visitor API and other pages are using this SDK. To support this case, the SDK reads existing AMCV cookies and writes a new cookie with the existing ECID. Additionally, the SDK writes AMCV cookies so that if the ECID is obtained first on a page instrumented with the AEP Web SDK, subsequent pages that are instrumented with Visitor API have the same ECID.
+* When the AEP Web SDK is set up on a page that also has Visitor API. To support this case, if the AMCV cookie is not set, the SDK looks for the Visitor API on the page and calls it to get the ECID.
+* When the entire site is using the AEP Web SDK and does not have Visitor API, it is useful to migrate the ECIDs so that the return visitor information is retained. After the SDK is deployed with `idMigrationEnabled` for a period of time so that most of the visitor cookies are migrated, the setting can be turned off.
 
 ## Retrieving the Visitor ID
 
@@ -38,22 +47,34 @@ alloy("getIdentity")
 
 ## Syncing Identities
 
+>[!NOTE]
+>
+>The `syncIdentity` method has been removed in version 2.1.0, in addition to the hashing feature. If you are using version 2.1.0+ and would like to sync identities, you can send them directly in the `xdm` option of the `sendEvent` command, under the `identityMap` field.
+
 Additionally, the [!DNL Identity Service] allows you to sync your own identifiers with the ECID using the `syncIdentity` command.
 
+>[!NOTE]
+>
+>It is highly recommended to pass all available identities on every `sendEvent` command. This unlocks a range of use cases, including personalization. Now that you can pass those identities in the `sendEvent` command, they can be placed directly in your DataLayer.
+
+Syncing identities allows you to identify a device/user using multiple identities, set their authentication state and decide which identifier is considered the primary one. If no identifier has been set as `primary`, the primary defaults to be the `ECID`.
+
 ```javascript
-
-alloy("syncIdentity",{
-    identity:{
-      "AppNexus":{
-        "id":"123456,
-        "authenticationState":"ambiguous",
-        "primary":false,
-        "hashEnabled": true,
-      }
+alloy("sendEvent", {
+  xdm: {
+    "identityMap": {
+      "ID_NAMESPACE": [ // Notice how each namespace can contain multiple identifiers.
+        {
+          "id": "1234",
+          "authenticatedState": "ambiguous",
+          "primary": true
+        }
+      ]
     }
+  }
 })
-
 ```
+
 
 ### Syncing Identities Options
 
