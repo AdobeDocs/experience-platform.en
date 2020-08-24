@@ -74,18 +74,6 @@ Attribution AI outputs the following:
 - [Raw granular scores](#raw-granular-scores)
 - [Aggregated Scores](#aggregated-attribution-scores)
 
-In the examples below, a sample CSV output was used for illustration purposes. Here are some of the characteristics of the sample file.
-
-- The file did not have any tokenized events.
-- The file did not have any conversion only events (it did not contain score rows with 0 as a marginal score).
-- Data characteristics:
-  - 368 total sample rows.
-  - At least 8 conversions with 3 distinct channels each.
-  - 151 conversions of conversion type `“Digital_Product_Purchase”`.
-  - 10 distinct touchpoints, EMAIL, SOCIAL_LINKEDIN, ADS_GOOGLE, SOCIAL_OTHER, ADS_OTHER, SOCIAL_TWITTER , LANDINGPAGE, SOCIAL_FB, ADS_BING, PRINT.
-  - Conversions and touchpoints range over 8 and 9 months respectively.
-  - Rows are ordered by `id`, `conversion_timestamp` and `touchpoint_timestamp`.
-
 **Example output schema:**
 
 ![](./images/input-output/schema_output.gif)

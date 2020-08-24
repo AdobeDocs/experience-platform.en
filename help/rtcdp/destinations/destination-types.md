@@ -1,4 +1,5 @@
 ---
+keywords: destinations;destination;destination types
 title: Destinations Types and Categories
 seo-title: Destinations Types and Categories
 description: In Adobe Real-time Customer Data Platform, Profile/Segment Export destinations capture event data, combine it with other data sources, apply segmentation, and export segments and qualified profiles to destinations. Launch extensions forward raw event data to several types of destinations. 

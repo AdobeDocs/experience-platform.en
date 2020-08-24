@@ -1,4 +1,5 @@
 ---
+keywords: cloud storage destination;cloud storage
 title: Cloud storage destinations workflow
 seo-title: Cloud storage destinations workflow
 description: Instructions to connect to your cloud storage locations
@@ -11,9 +12,13 @@ seo-description: Instructions to connect to your cloud storage locations
 
 This page explains how you can connect to cloud storage locations in Adobe Real-time Customer Data Platform.
 
-1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select your preferred cloud storage destination, then select **[!UICONTROL Connect destination]**.
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select your preferred cloud storage destination, then select **[!UICONTROL Configure]**.
 
     ![Connect to cloud storage destination](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
+
+    >[!NOTE]
+    >
+    >If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](/help/rtcdp/destinations/destinations-workspace.md#catalog) section of the destination workspace documentation.   
 
 2. In the **[!UICONTROL Authentication]** step, if you had previously set up a connection to your cloud storage destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to your cloud storage destination. Fill in your account authentication credentials and select **[!UICONTROL Connect to destination]**. <br> See [Amazon S3](/help/rtcdp/destinations/amazon-s3-destination.md) destination, [!DNL Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) destination, [!DNL Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md) destination, and [SFTP](/help/rtcdp/destinations/sftp-destination.md) destination for specifics around credentials input in the **Authentication** step.
 

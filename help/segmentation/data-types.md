@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type
 solution: Experience Platform
 title: Adobe Experience Platform Segmentation Service data types
 topic: overview
+description: All XDM data types are supported within Segmentation Service. The rules that constitute a segment definition are contextualized by the following data types.
 ---
 
 # Adobe Experience Platform [!DNL Segmentation Service] supported data types

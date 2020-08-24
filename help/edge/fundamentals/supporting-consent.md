@@ -3,6 +3,7 @@ title: Supporting consent
 seo-title: Supporting Adobe Experience Platform Web SDK consent preference
 description: Learn how to support consent preferences with Experience Platform Web SDK
 seo-description: Learn how to support consent preferences with Experience Platform Web SDK
+keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 ---
 
 # Supporting Consent

@@ -1,4 +1,5 @@
 ---
+keywords: rtcdp sources;sources rtcdp;real time customer data platform sources
 title: Sources overview
 seo-title: Sources in Adobe Experience Platform
 description: This document provides an overview of Sources in Real-Time Customer Data Platform

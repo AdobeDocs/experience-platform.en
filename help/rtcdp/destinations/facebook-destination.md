@@ -1,4 +1,5 @@
 ---
+keywords: facebook extensions;facebook extension;facebook destinations;facebook
 title: Facebook Destination
 seo-title: Facebook Destination
 description: Activate profiles for your Facebook campaigns for audience targeting, personalization and suppression based on hashed emails.

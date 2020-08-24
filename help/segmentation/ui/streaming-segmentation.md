@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segment evaluation
 solution: Experience Platform
 title: Streaming segmentation
 topic: ui guide
+description: Streaming segmentation on Adobe Experience Platform allows you to do segmentation in near real-time while focusing on data richness. With streaming segmentation, segment qualification now happens as data lands into Platform, alleviating the need to schedule and run segmentation jobs. With this capability, most segment rules can now be evaluated as the data is passed into Platform, meaning segment membership will be kept up-to-date without running scheduled segmentation jobs.
 ---
 
 # Streaming segmentation
@@ -52,7 +53,9 @@ After creating a streaming-enabled segment, you can view details of that segment
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
-Specifically, details about the **[!UICONTROL total qualified audience size]** are shown. If a job has been run within the last 24 hours, the **[!UICONTROL Total qualified audience size]** from the job is shown, in addition to a line chart for the audience added. Otherwise, the **[!UICONTROL Total estimated audience size]** is shown, in addition to a visualization trend line.
+Specifically, details about the **[!UICONTROL total qualified audience size]** are shown. The **[!UICONTROL Total qualified audience size]** shows the total number of qualified audiences from the last completed segment job run. If a segment job wasn't completed within the last 24 hours, the number of audiences will be taken from an estimate instead.
+
+Underneath is a line graph that shows the number of segments that were qualified and disqualified in the last 24 hours. The dropdown can be adjusted to show the last 24 hours, last week, or last 30 days.
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 

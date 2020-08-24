@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;XDM;standard xdm fields;standard XDM fields;XDM fields;xdm fields;Standard XDM fields
 solution: Experience Platform
 title: Experience Data Model (XDM) field dictionary
-topic: overview
+topic: overviews
+description: Experience Data Model (XDM) defines a set of standard fields that can be used when composing Adobe Experience Platform schemas. Use of these fields results in consistent behavior across Platform services, as all services that consume XDM will explicitly understand the specific definitions provided by these fields.
 ---
 
 # [!DNL Experience Data Model] (XDM) field dictionary

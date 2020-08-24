@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;catalog service;catalog;Catalog service;Catalog
 solution: Experience Platform
 title: Catalog Service developer guide
 topic: developer guide
+description: This developer guide provides steps to help you start using the Catalog API. The guide then provides sample API calls for performing key operations using Catalog.
 ---
 
 # [!DNL Catalog Service] developer guide

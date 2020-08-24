@@ -125,7 +125,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 }
 ```
 
-## Create a target XDM schema {#target}
+## Create a target XDM schema {#target-schema}
 
 In earlier steps, an ad-hoc XDM schema was created to structure the source data. In order for the source data to be used in [!DNL Platform], a target schema must also be created to structure the source data according to your needs. The target schema is then used to create a [!DNL Platform] dataset in which the source data is contained. This target XDM schema also extends the XDM Individual Profile class.
 
@@ -278,7 +278,7 @@ A successful response returns an array containing the ID of the newly created da
 ]
 ```
 
-## Create a target connection
+## Create a target connection {#target-connection}
 
 A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection spec ID associated with data lake. This connection spec ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
@@ -597,7 +597,9 @@ curl -X POST \
                 "name": "Copy",
                 "params": {
                     "deltaColumn": {
-                        "name": "date-time"
+                        "name": "updatedAt",
+                        "dateFormat": "YYYY-MM-DD",
+                        "timezone": "UTC"
                     }
                 }
             },
@@ -618,6 +620,18 @@ curl -X POST \
     }'
 ```
 
+| Property | Description |
+| -------- | ----------- |
+| `flowSpec.id` | The [flow spec ID](#specs) retrieved in the previous step. |
+| `sourceConnectionIds` | The [source connection ID](#source) retrieved in an earlier step. |
+| `targetConnectionIds` | The [target connection ID](#target-connection) retrieved in an earlier step. |
+| `transformations.params.mappingId` | The [mapping ID](#mapping) retrieved in an earlier step.|
+| `transformations.params.deltaColum` | The designated column used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column. The supported date format for `deltaColumn` is `yyyy-MM-dd HH:mm:ss`. |
+| `transformations.params.mappingId`| The mapping ID associated with your database. |
+| `scheduleParams.startTime` | The start time for the dataflow in epoch time. |
+| `scheduleParams.frequency` | The frequency at which the dataflow will collect data. Acceptable values include: `once`, `minute`, `hour`, `day`, or `week`. |
+| `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer. Interval is not required when frequency is set as `once` and should be greater than or equal to `15` for other frequency values. |
+
 **Response**
 
 A successful response returns the ID `id` of the newly created dataflow.
@@ -629,15 +643,9 @@ A successful response returns the ID `id` of the newly created dataflow.
 }
 ```
 
-| Property | Description |
-| --- | --- |
-| `flowSpec.id` | The flow spec ID retrieved in the previous step. |
-| `sourceConnectionIds` | The source connection ID retrieved in an earlier step. |
-| `targetConnectionIds` | The target connection ID retrieved in an earlier step. |
-| `transformations.params.mappingId` | The mapping ID retrieved in an earlier step.|
-| `scheduleParams.startTime` | The start time for the dataflow in epoch time in seconds. |
-| `scheduleParams.frequency` | The selectable frequency values include: `once`, `minute`, `hour`, `day`, or `week`. |
-| `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer. Interval is not required when frequency is set as `once` and should be greater than or equal to `15` for other frequency values. |
+## Monitor your dataflow
+
+Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors. For more information on how to monitor dataflows, see the tutorial on [monitoring dataflows in the API ](../monitor.md)
 
 ## Next steps
 

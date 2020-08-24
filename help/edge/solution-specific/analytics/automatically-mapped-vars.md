@@ -3,6 +3,7 @@ title: Variables Automatically Mapped in Analytics
 seo-title: Variables Automatically Mapped in Analytics with Adobe Experience Platform Web SDK
 description: Learn Which Variables are Automatically Mapped in Analytics with Experience Platform Web SDK
 seo-description: Learn Which Variables are Automatically Mapped in Analytics with Experience Platform Web SDK
+keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 ---
 
 # Variables Automatically Mapped in [!DNL Analytics]

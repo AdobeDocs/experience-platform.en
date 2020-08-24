@@ -3,6 +3,7 @@ title: Executing commands
 seo-title: Executing Adobe Experience Platform Web SDK commands
 description: Learn how to execute Experience Platform Web SDK commands
 seo-description: Learn how to execute Experience Platform Web SDK commands
+keywords: Executing commands;commandName;Promises;getLibraryInfo;response objects;consent;
 ---
 
 # Executing commands
@@ -21,7 +22,7 @@ The `commandName` tells the SDK what to do, while `options` are the parameters a
 
 [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) are fundamental to how the SDK communicates with the code on your webpage. A promise is a common programming structure and is not specific to this SDK or even JavaScript. A promise acts as a proxy for a value that is not known when the promise is created. Once the value is known, the promise is "resolved" with the value. Handler functions can be associated with a promise, so that you can be notified when the promise has been resolved or when an error has occurred in the process of resolving the promise. To learn more about promises, please read [this tutorial](https://javascript.info/promise-basics) or any of the other resources on the web.
 
-## Handling success or failure
+## Handling success or failure {#handling-success-or-failure}
 
 Each time a command is executed, a promise is returned. The promise represents the eventual completion of the command. In the example below, you can use `then` and `catch` methods to determine when the command has succeeded or failed.
 

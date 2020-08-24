@@ -9,7 +9,8 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
 - [Source connectors overview](home.md)
 - Available source connectors {#connectors}
   - Adobe applications {#adobe-applications}
-    - [Analytics data connector](connectors/adobe-applications/analytics.md)
+    - [Analytics Classifications Data connector](connectors/adobe-applications/classifications.md)
+    - [Analytics Data connector](connectors/adobe-applications/analytics.md)
     - [Audience Manager connector](connectors/adobe-applications/audience-manager.md)
     - [Customer attributes connector](connectors/adobe-applications/customer-attributes.md)
     - Mapping Adobe application fields {#mapping}
@@ -20,13 +21,15 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [Google AdWords connector](connectors/advertising/ads.md)
   - Cloud storage {#cloud-storage}
     - [Amazon Kinesis connector](connectors/cloud-storage/kinesis.md)
+    - [Amazon S3 connector](connectors/cloud-storage/s3.md)
     - [Apache HDFS connector](connectors/cloud-storage/hdfs.md)
     - [Azure Data Lake Storage Gen2 connector](connectors/cloud-storage/adls-gen2.md)
-    - [Azure Blob and Amazon S3 connector](connectors/cloud-storage/blob-s3.md)
+    - [Azure Blob connector](connectors/cloud-storage/blob.md)
     - [Azure Event Hubs connector](connectors/cloud-storage/eventhub.md)
     - [Azure File Storage connector](connectors/cloud-storage/azure-file-storage.md)
     - [FTP and SFTP connector](connectors/cloud-storage/ftp-sftp.md)
     - [Google Cloud Storage connector](connectors/cloud-storage/google-cloud-storage.md)
+    - [Amazon S3 and Azure Blob connector](connectors/cloud-storage/blob-s3.md)
   - CRM {#crm}
     - [Microsoft Dynamics connector](connectors/crm/ms-dynamics.md)
     - [Salesforce connector](connectors/crm/salesforce.md)
@@ -45,7 +48,6 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [GreenPlum connector](connectors/databases/greenplum.md)
     - [HP Vertica connector](connectors/databases/hp-vertica.md)
     - [IBM DB2 connector](connectors/databases/ibm-db2.md)
-    - [MariaDB connector](connectors/databases/mariadb.md)
     - [Microsoft SQL Server connector](connectors/databases/sql-server.md)
     - [MySQL connector](connectors/databases/mysql.md)
     - [Oracle connector](connectors/databases/oracle.md)
@@ -90,7 +92,6 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [GreenPlum connector](tutorials/api/create/databases/greenplum.md)
       - [HP Vertica connector](tutorials/api/create/databases/hp-vertica.md)
       - [IBM DB2 connector](tutorials/api/create/databases/ibm-db2.md)
-      - [MariaDB connector](tutorials/api/create/databases/mariadb.md)
       - [MySQL connector](tutorials/api/create/databases/mysql.md)
       - [Oracle connector](tutorials/api/create/databases/oracle.md)
       - [Phoenix connector](tutorials/api/create/databases/phoenix.md)
@@ -122,9 +123,11 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [Collect protocol data](tutorials/api/collect/protocols.md)
   - [Ingest parquet data from a third-party cloud storage system](tutorials/api/cloud-storage-parquet.md)
   - [Create a dataset base connection using the Flow Service API](tutorials/api/create-dataset-base-connection.md)
+  - [Monitor dataflows using the Flow Service API](tutorials/api/monitor.md)
 - UI tutorials {#ui-tutorials}
   - Create a source connector {#create}
     - Adobe applications {#adobe-applications}
+      - [Adobe Analytics Classifications Data connector](tutorials/ui/create/adobe-applications/classifications.md)
       - [Adobe Analytics connector](tutorials/ui/create/adobe-applications/analytics.md)
       - [Adobe Audience Manager connector](tutorials/ui/create/adobe-applications/audience-manager.md)
       - [Customer attributes connector](tutorials/ui/create/adobe-applications/customer-attributes.md)
@@ -132,13 +135,15 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Google AdWords connector](tutorials/ui/create/advertising/ads.md)
     - Cloud storage {#cloud-storage}
       - [Amazon Kinesis connector](tutorials/ui/create/cloud-storage/kinesis.md)
+      - [Amazon S3 connector](tutorials/ui/create/cloud-storage/s3.md)
       - [Apache HDFS connector](tutorials/ui/create/cloud-storage/hdfs.md)
       - [Azure Data Lake Storage Gen2 connector](tutorials/ui/create/cloud-storage/adls-gen2.md)
-      - [Azure Blob and Amazon S3 connector](tutorials/ui/create/cloud-storage/blob-s3.md)
+      - [Azure Blob connector](tutorials/ui/create/cloud-storage/blob.md)
       - [Azure Event Hubs connector](tutorials/ui/create/cloud-storage/eventhub.md)
       - [Azure File Storage connector](tutorials/ui/create/cloud-storage/azure-file-storage.md)
       - [FTP and SFTP connector](tutorials/ui/create/cloud-storage/ftp-sftp.md)
       - [Google Cloud Storage connector](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+      - [Amazon S3 and Blob connector](tutorials/ui/create/cloud-storage/blob-s3.md)
     - CRM {#crm}
       - [Microsoft Dynamics connector](tutorials/ui/create/crm/dynamics.md)
       - [Salesforce connector](tutorials/ui/create/crm/salesforce.md)
@@ -157,7 +162,6 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [GreenPlum connector](tutorials/ui/create/databases/greenplum.md)
       - [HP Vertica connector](tutorials/ui/create/databases/hp-vertica.md)
       - [IBM DB2 connector](tutorials/ui/create/databases/ibm-db2.md)
-      - [MariaDB connector](tutorials/ui/create/databases/mariadb.md)
       - [Microsoft SQL Server connector](tutorials/ui/create/databases/sql-server.md)
       - [MySQL connector](tutorials/ui/create/databases/mysql.md)
       - [Oracle connector](tutorials/ui/create/databases/oracle.md)
@@ -180,5 +184,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [Configure a dataflow for a payment connector](tutorials/ui/dataflow/payments.md)
       - [Configure a dataflow for a protocol connector](tutorials/ui/dataflow/protocols.md)
   - [Activate inbound data to populate customer profiles](tutorials/ui/profile.md)
-  - [Monitor accounts and dataset flows](tutorials/ui/monitor.md)
-- [Platform release notes](https://www.adobe.com/go/platform-release-notes-en) 
+  - [Monitor accounts and dataflows](tutorials/ui/monitor.md)
+  - [Delete dataflows](tutorials/ui/delete.md)
+- [Flow run notifications](notifications.md)
+- [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

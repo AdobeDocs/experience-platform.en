@@ -1,7 +1,8 @@
 ---
+keywords: RTCDP;rtcdp
 title: Destinations workspace
 seo-title: Destinations workspace
-description: In Adobe Real-time Customer Data Platform, select Destinations from the left navigation bar to access the destinations workspace.
+description: The Destinations workspace consists of four sections, Catalog, Browse, Accounts, and System View, which are described in the sections below.
 seo-description: In Adobe Real-time Customer Data Platform, select Destinations from the left navigation bar to access the destinations workspace.
 ---
 
@@ -15,15 +16,34 @@ The [!UICONTROL Destinations] workspace consists of four sections, **[!UICONTROL
 
 ## [!UICONTROL Catalog] {#catalog}
 
-The **[!UICONTROL Catalog]** tab displays a list of all destinations offered by Adobe, that you can send data to. 
+The **[!UICONTROL Catalog]** tab displays a list of all destinations available in Adobe Real-time CDP, that you can send data to. 
 
-Use the search functionality on the page to locate a specific destination or filter destinations using the **[!UICONTROL Categories]** control. 
+The Adobe Real-time CDP user interface provides a number of search and filter options on the destinations catalog page:
 
-Select a destination in the catalog to open the right rail. Here, you can set up a connection to the destination (**[!UICONTROL Connect destination]**), view existing destination connections (**[!UICONTROL Browse destinations]**) or learn more detailed information about each destination by viewing the documentation (**[!UICONTROL View documentation]**).
+* Use the search functionality on the page to locate a specific destination.
+* Filter destinations using the **[!UICONTROL Categories]** control.
+* Toggle between **[!UICONTROL All destinations]** and **[!UICONTROL My destinations]**. When **[!UICONTROL All destinations]** is selected, all available Adobe Real-time CDP destinations are displayed. When **[!UICONTROL My destinations]** is selected, you can only see the destinations with which you have established a connection.
+* Select to view **[!UICONTROL Connections]** and/or **[!UICONTROL Extensions]**. To understand the difference between the two categories, see [Destination Types and Categories](/help/rtcdp/destinations/destination-types.md).
 
-![Destination catalog options](/help/rtcdp/destinations/assets/destination-ui-catalog-options.png)
+![destinations filtering and search demo](/help/rtcdp/destinations/assets/destinations-search-and-filter.gif)
 
-For more information on destination categories and information on each destination, see [Destination Catalog](/help/rtcdp/destinations/destinations-catalog.md).
+The destination cards contain either a **[!UICONTROL Configure]** or an **[!UICONTROL Activate]** control, and a secondary control that brings up more options. These are all described below:
+
+Control | Description 
+---------|----------
+ [!UICONTROL Configure] | Allows you to create a connection to the destination.
+ [!UICONTROL Activate] | Once you have established a connection to the destination, you can activate segments. 
+ [!UICONTROL View account] | View the accounts you have connected for a destination.
+ [!UICONTROL View dataflows] | View the data activation flows that exist for a destination.
+ [!UICONTROL View documentation] | Opens a link to the documentation page for that specific destination, for more information and to help you set it up.
+
+![Controls on the destinations card](/help/rtcdp/destinations/assets/destination-card-options.png)
+
+Select a destination card in the catalog to open the right rail.  Here, you can see a description of the destination. The right rail provides the same controls described in the table above, as well as a description of the destination, and an indication of the destination category and type.
+
+![Destination catalog options](/help/rtcdp/destinations/assets/destination-right-rail.png)
+
+For more information on destination categories and information on each destination, see the [Destination Catalog](/help/rtcdp/destinations/destinations-catalog.md) and [Destination Types and Categories](/help/rtcdp/destinations/destination-types.md).
 
 ## [!UICONTROL Browse] {#browse}
 

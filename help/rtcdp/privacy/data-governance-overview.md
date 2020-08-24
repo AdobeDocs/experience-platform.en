@@ -1,4 +1,5 @@
 ---
+keywords: data governance rtcdp;rtcdp data governance;real time customer data profile data governance
 title: Data Governance overview
 seo-title: Data Governance in Real-time Customer Data Platform
 description: Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. 

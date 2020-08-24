@@ -1,4 +1,5 @@
 ---
+keywords: email;Email;e-mail;email destinations
 title: Email Marketing Destinations
 seo-title: Email Marketing Destinations
 description: Email Service Providers (ESPs) allow you to manage your email marketing activities, such as for sending promotional email campaigns.
@@ -15,9 +16,9 @@ Connecting to email marketing destinations is a three-step process. Each of the 
 
 In the connect destination flow, described in the section below, connect to either Amazon S3 or SFTP. Real-time CDP exports your segments as `.csv` or `.txt` files and delivers them to your preferred location. Schedule your data import in your email marketing platform from the storage location enabled in Real-time CDP. The process to import data varies for each partner. See the individual destinations articles for more information. 
 
-## Step 1 - Connect destination {#connect-destination}
+## Step 1 - Configure destination {#connect-destination}
 
-1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select the email marketing destination that you want to connect to, then select **[!UICONTROL Connect destination]**.
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select the email marketing destination that you want to connect to, then select **[!UICONTROL Configure]**.
 
     ![Connect to destination](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
@@ -40,15 +41,21 @@ On the **[!UICONTROL Select Segments]** page, select which segments to send to t
 
 ![Select segments](/help/rtcdp/destinations/assets/email-select-segments.png)
 
-## Step 3 - Select which schema fields to use as destination attributes in your exported files {#destination-attributes}
+## Step 3 - Configure file names
+
+For information about the file name editing options, refer to the [Configure](/help/rtcdp/destinations/activate-destinations.md#configure) step in the activate destinations tutorial.
+
+## Step 4 - Select attributes - Select which schema fields to use as destination attributes in your exported files {#destination-attributes}
 
 In this step, you are selecting which fields to export to email marketing destinations.
 
-![Destination attributes](/help/rtcdp/destinations/assets/destination-attributes.png)
+![Destination attributes](/help/rtcdp/destinations/assets/recommended-attributes.png)
+
+For more information about this step, refer to the [Select attributes](/help/rtcdp/destinations/activate-destinations.md#select-attributes) step in the activate destinations tutorial.
 
 ### Identity {#identity}
 
-We recommend that you select a unique identifier from your [union schema](../../profile/home.md#profile-fragments-and-union-schemas). This is the field that your users' identities are keyed off of. Most commonly, this field is the email address, but it can also be a loyalty program ID or a phone number. See the table below for the most common unique identifiers and their XDM field in the union schema. 
+We recommend that you select a unique identifier from your [union schema](../../profile/home.md#profile-fragments-and-union-schemas). This is the field that your users' identities are keyed off of. Most commonly, this field is the email address, but it can also be a loyalty program ID or a phone number. See the table below for the most common unique identifiers and their XDM field in the schema. 
 
 Unique Identifier | XDM field in Unified Schema
 ---------|----------
@@ -68,11 +75,12 @@ Schema | XDM field
  Address City| `homeAddress.city` 
  Address State | `homeAddress.stateProvince` 
  Address Postal Code | `homeAddress.postalCode` 
- Birthday | `person.birthDayAndMonth` 
+ Birthday | `person.birthDayAndMonth`
+ Segment membership | `segmentMembership.status`
 
-## Step 3 - Import data from your storage location into the destination
+## Step 5 - Import data from your storage location into the destination
 
-See the individual email marketing destination articles to learn how to import data from your storage location into destinations:
+See the individual email marketing destination articles to learn how to import data from your storage location into destinations: 
 
 * [Adobe Campaign](/help/rtcdp/destinations/adobe-campaign-destination.md#import-data-into-campaign)
 * [Salesforce Marketing Cloud](/help/rtcdp/destinations/salesforce-marketing-cloud-destination.md#import-data-into-salesforce)
@@ -82,3 +90,8 @@ See the individual email marketing destination articles to learn how to import d
 ## Activate segments to email marketing destinations
 
 For instructions on how to activate segments to email marketing destinations, see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md).
+
+## Additional resources
+
+* [Activate data to destinations](/help/rtcdp/destinations/activate-destinations.md)
+* [Create email marketing destinations and activate data using the Flow Service API](https://docs.adobe.com/content/help/en/experience-platform/tutorials/destinations/email-marketing-api.html)

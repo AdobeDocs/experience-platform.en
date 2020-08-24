@@ -3,6 +3,8 @@ title: Configuring the SDK
 seo-title: Configuring the Adobe Experience Platform Web SDK
 description: Learn how to configure the Experience Platform Web SDK
 seo-description: Learn how to configure the Experience Platform Web SDK
+keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
+
 ---
 
 # Configuring the SDK
@@ -71,7 +73,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  When configuring multipl
 
 ## Data collection
 
-### `clickCollectionEnabled`
+### `clickCollectionEnabled` {#clickCollectionEnabled}
 
 | **Type** | **Required** | **Default Value** |
 | -------- | ------------ | ----------------- |
