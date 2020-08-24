@@ -38,7 +38,7 @@ Here is an example image showing the opt-out mixins added to a schema in the use
 
 The structure of each mixin, as well as a description of the fields they contribute to the schema, are outlined in more detail in the following sections.
 
-### [!DNL Profile Privacy]
+### [!DNL Profile Privacy] {#profile-privacy}
 
 The [!DNL Profile Privacy] mixin allows you to capture two kinds of CCPA opt-out requests from customers:
 
@@ -62,7 +62,7 @@ The [!DNL Profile Privacy] mixin contains the following fields:
 
 To view the full structure of the [!DNL Profile Privacy] mixin, please refer to the [XDM public GitHub repository](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) or preview the mixin using the Platform UI.
 
-### [!DNL Profile Preferences Details]
+### [!DNL Profile Preferences Details] {#profile-preferences-details}
 
 The [!DNL Profile Preferences Details] mixin provides several fields that represent preferences for customer profiles (such as email format, preferred language, and time zone). One of the fields included in this mixin, OptInOut (`optInOut`), allows opt-out values to be set for individual channels. 
 
