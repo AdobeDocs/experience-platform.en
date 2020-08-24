@@ -78,7 +78,7 @@ Adobe Experience Platform Web SDK can also send data directly to Adobe Experienc
 
 ## Do customers need to buy Adobe Experience Platform to use the Web SDK?
 
-No. Any Adobe Digital Experience customer can use it. Totally free. You will be provisioned for Platform, but with just enough access so you can create your schemas & datasets.
+No. Any Adobe Digital Experience customer can use it. Totally free. Any customer wanting to use the Web SDK will be given access to create schemas and datasets in the Adobe Experience Platform UI.
 
 ## Who should use the Web SDK?
 
@@ -95,6 +95,15 @@ The Adobe Experience Platform Web SDK has been developed for the following peopl
     New Adobe Analytics, Adobe Audience Manager, and Adobe Target customers should start with the new Web SDK and not use legacy libraries.
 
     Existing customers who want to get the most optimized implementation possible should use the new Web SDK. 
+
+
+## How do I get access to start using the Adobe Experience Platform Web SDK?
+
+The Web SDK is currently available to the general public and can be used to send data to Adobe Experience Cloud products. The ability to send data to third party solutions is coming in the near future. If you would like to get access to the Web SDK contact your CSM to start the request process.
+
+## What use cases are currently supported by the Web SDK?
+
+The Web SDK is quickly evolving. More use cases are being worked on. You can find the [list of use cases currently supported here.](https://github.com/adobe/alloy/projects/5)
 
 ## Do current customers have to retag their sites?
 
@@ -129,6 +138,10 @@ However:
 * Adobe Experience Platform Launch is not only the best available tag and SDK manager, it makes it very easy to deploy `alloy.js` and map data to XDM schemas. If you decide not to use Launch, you will have to manage deploying `alloy.js`, eventing, and mapping your data into XDM before sending it. This is a _much_ more difficult process than using Launch. 
 
 * It is recommended that you use Launch to deploy `alloy.js`, even if it's the only tag you use it for. 
+
+## What is XDM and do I have to use to the Web SDK?
+
+XDM is the data format used to send data to the Adobe Experience Platform and the Web SDK. The [Web SDK documentation](https://docs.adobe.com/content/help/en/experience-platform/edge/get-started/quick-start-with-launch.html#prepare-a-schema) walks you through how to easily set up a schema that you can then customize to your specific needs.
 
 ## What is "Adobe Experience Platform Launch Server Side?
 
