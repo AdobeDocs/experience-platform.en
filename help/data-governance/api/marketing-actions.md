@@ -30,7 +30,7 @@ GET /marketingActions/custom
 
 The following request retrieves a list of custom marketing actions maintained by your organization.
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -117,7 +117,7 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 The following request retrieves a custom marketing action named `combineData`.
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/combineData \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -167,7 +167,7 @@ PUT /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 The following request creates a new marketing action named `crossSiteTargeting`, provided that a marketing action of the same name does not yet exist in the system. If a `crossSiteTargeting` marketing action does exist, this call instead updates that marketing action based on the properties provided in the payload.
 
-```sh
+```shell
 curl -X PUT \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -229,7 +229,7 @@ DELETE /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 **Request**
 
-```sh
+```shell
 curl -X DELETE \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
