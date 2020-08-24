@@ -7,7 +7,7 @@ topic: developer guide
 
 # Array, list, and set functions
 
-[!DNL Profile Query Language] (PQL) offers functions to make interaction with arrays, lists, and strings easier. More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
+[!DNL Profile Query Language] (PQL) offers functions to make interaction with arrays, lists, and strings easier. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## In
 

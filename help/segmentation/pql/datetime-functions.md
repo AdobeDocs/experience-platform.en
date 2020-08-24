@@ -7,7 +7,7 @@ topic: developer guide
 
 # Date and time functions
 
-Date and time functions are used to perform date and time operations on values within [!DNL Profile Query Language] (PQL). More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
+Date and time functions are used to perform date and time operations on values within [!DNL Profile Query Language] (PQL). More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Current month
 
