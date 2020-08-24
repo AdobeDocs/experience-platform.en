@@ -99,7 +99,7 @@ This section also includes a preview of the column that contains the error.
 
 ![Preview-error-diagnostics](../../images/tutorials/monitor/preview-error-diagnostics.png)
 
-After previewing the errors, you can select **[!UICONTROL Download]** from within the **[UICONTROL dataflow runs overview]** panel to access full error diagnostics and download the file manifest. See the documents on [error diagnostics](../../../ingestion/batch-ingestion/partial.md#retrieve-errors) and [downloading metadata](../../../ingestion/batch-ingestion/partial.md#download-metadata) for more information.
+After previewing the errors, you can select **[!UICONTROL Download]** from within the **[!UICONTROL dataflow runs overview]** panel to access full error diagnostics and download the file manifest. See the documents on [error diagnostics](../../../ingestion/batch-ingestion/partial.md#retrieve-errors) and [downloading metadata](../../../ingestion/batch-ingestion/partial.md#download-metadata) for more information.
 
 ![Preview-error-diagnostics](../../images/tutorials/monitor/download.png)
 
