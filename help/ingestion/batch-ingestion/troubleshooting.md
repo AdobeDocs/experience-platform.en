@@ -51,6 +51,18 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
     }'
 ```
 
+### Why is the uploaded data not appearing in the dataset?
+
+In order for data to appear in the dataset, the batch must be marked as complete. All the files you want to ingest must be uploaded before marking the batch as complete. An example of marking a batch as complete can be seen below:
+
+```shell
+curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-api-key : {API_KEY}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
 ### How is multi-line JSON ingested?
 
 To ingest multi-line JSON, the `isMultiLineJson` flag needs to be set at the time of batch creation. An example of this can be seen below:

@@ -638,7 +638,7 @@ curl -X POST \
 | `sourceConnectionIds` | The [source connection ID](#source) retrieved in an earlier step. |
 | `targetConnectionIds` | The [target connection ID](#target-connection) retrieved in an earlier step. |
 | `transformations.params.mappingId` | The [mapping ID](#mapping) retrieved in an earlier step.|
-| `transformations.params.deltaColum` | The designated column used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column. |
+| `transformations.params.deltaColum` | The designated column used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column. The supported format for `deltaColumn` when using Generic OData is `yyyy-MM-ddTHH:mm:ssZ`. |
 | `transformations.params.mappingId`| The mapping ID associated with your database. |
 | `scheduleParams.startTime` | The start time for the dataflow in epoch time. |
 | `scheduleParams.frequency` | The frequency at which the dataflow will collect data. Acceptable values include: `once`, `minute`, `hour`, `day`, or `week`. |

@@ -3,6 +3,7 @@ title: Information automatically collected
 seo-title: Information automatically collected by Adobe Experience Platform Web SDK
 description: Description of each piece of information that The Adobe Experience Cloud SDK collects automatically
 seo-description: Description of each piece of information that The Adobe Experience Cloud SDK collects automatically
+keywords: collect information;context;configure;device;screenHeight;screen Height;screenOrientation;screen Orientation;screenWidth;screen Width;environment;viewportHeight;viewport Height;viewportWidth;viewport Width;crowserDetails;browser details;implementationDetails;implementation Details;name;version;placeContext;localTime;local Time;localTimezoneOffset;local Timezone Offset;timestamp;web;url;webPageDetails;web Page Details;webReferrer;web Referrer;landscape;portrait;
 ---
 
 # Information automatically collected

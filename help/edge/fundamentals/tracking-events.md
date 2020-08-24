@@ -3,6 +3,7 @@ title: Tracking events
 seo-title: Tracking Adobe Experience Platform Web SDK events
 description: Learn how to track Experience Platform Web SDK events
 seo-description: Learn how to track Experience Platform Web SDK events
+keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 ---
 
 # Tracking events
