@@ -225,9 +225,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 **Response**
 
-```
-Contents of the file
-```
+`Contents of the file`
 
 ## Additional code samples
 

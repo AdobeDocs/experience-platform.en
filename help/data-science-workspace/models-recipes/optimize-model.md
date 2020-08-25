@@ -88,7 +88,7 @@ The custom evaluator can be provided by extending the interface of `MLEvaluator.
 
 Once defined in the recipe, the next step is to enable it in the recipes. This is done in the [application.properties](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) file in the project's `resources` folder. Here the `evaluation.class` is set to the `Evaluator` class defined in `Evaluator.scala`
 
-```properties
+```scala
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 
