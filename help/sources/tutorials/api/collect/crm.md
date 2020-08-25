@@ -32,31 +32,23 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-*   Authorization: Bearer `{ACCESS_TOKEN}`
-*   x-api-key: `{API_KEY}`
-*   x-gw-ims-org-id: `{IMS_ORG}`
+-   `Authorization: Bearer {ACCESS_TOKEN}`
+-   `x-api-key: {API_KEY}`
+-   `x-gw-ims-org-id: {IMS_ORG}`
 
 All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-*   x-sandbox-name: `{SANDBOX_NAME}`
+-   `x-sandbox-name: {SANDBOX_NAME}`
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
 
-*   Content-Type: `application/json`
-
-## Create an ad-hoc XDM class and schema
-
-In order to bring external data into [!DNL Platform] through source connectors, an ad-hoc XDM class and schema must be created for the raw source data.
-
-To create an ad-hoc class and schema, follow the steps outlined in the [ad-hoc schema tutorial](../../../../xdm/tutorials/ad-hoc.md). When creating an ad-hoc class, all fields found in the source data must be described within the request body.
-
-Continue following the steps outlined in the developer guide until you have created an ad-hoc schema. The unique identifier (`$id`) of the ad-hoc schema is required to proceed to the next step of this tutorial.
+-   `Content-Type: application/json`
 
 ## Create a source connection {#source}
 
-With an ad-hoc XDM schema created, a source connection can now be created using a POST request to the [!DNL Flow Service] API. A source connection consists of a connection ID, a source data file, and a reference to the schema that describes the source data.
+You can create a source connection by making a POST request to the [!DNL Flow Service] API. A source connection consists of a connection ID, a path to the source data file, and a connection spec ID.
 
 To create a source connection, you must also define an enum value for the data format attribute.
 
@@ -92,10 +84,6 @@ curl -X POST \
         "description": "Source Connection for a CRM system",
         "data": {
             "format": "tabular",
-            "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/140c03de81b959db95879033945cfd4c",
-                "version": "application/vnd.adobe.xed-full-notext+json; version=1"
-            }
         },
         "params": {
             "tableName": "{TABLE_PATH}",
@@ -129,7 +117,6 @@ curl -X POST \
 | Property | Description |
 | --- | --- |
 | `baseConnectionId` | The unique connection ID of the third-party CRM system you are accessing. |
-| `data.schema.id` | The ID of the ad-hoc XDM schema. |
 | `params.path` | The path of the source file. |
 | `connectionSpec.id` | The connection spec ID associated with your specific third-party CRM system. See the [appendix](#appendix) for a list of connection spec IDs. |
 
