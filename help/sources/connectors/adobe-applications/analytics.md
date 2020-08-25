@@ -44,7 +44,9 @@ For detailed information on the field mapping that occurs between [!DNL Analytic
 | New data to Data Lake | < 45 minutes |
 | Backfill data (13 Months of Data or 10 Billion events, whichever is lower) | < 4 weeks |
 
->[!NOTE] Latency will vary depending on customer configuration, data volumes, and consumer applications. For example, if the Analytics implementation is configured with `A4T` the latency to Pipeline will increase to 5-10 minutes.
+>[!NOTE]
+>
+>Latency will vary depending on customer configuration, data volumes, and consumer applications. For example, if the Analytics implementation is configured with `A4T` the latency to Pipeline will increase to 5-10 minutes.
 
 ## Primary identifiers in Analytics data
 
