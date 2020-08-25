@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics; flow service; update connections
 description: This tutorial covers the steps for updating your connection information, including its name, description, and credentials using the Flow Service API.
 solution: Experience Platform
 title: Update connection credentials and information
@@ -47,6 +47,9 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ## Look up connection details
 
+>[!NOTE]
+>This tutorial uses the [Salesforce source connector](../../connectors/crm/salesforce.md) as an example, but the steps outlined apply to any of the [available source connectors](../../home.md).
+
 The first step in updating your connection information is to retrieve connection details using your connection ID.
 
 **API format**
@@ -61,7 +64,7 @@ GET /connections/{CONNECTION_ID}
 
 **Request**
 
-The following request provides new information to update your connection with.
+The following retrieves information regarding your connection ID.
 
 ```shell
 curl -X GET \
@@ -170,7 +173,7 @@ curl -X PATCH \
 
 **Response**
 
-A successful response returns your connection ID, including an updated etag.
+A successful response returns your connection ID and an updated etag.
 
 ```json
 {
@@ -195,7 +198,7 @@ GET /connections/{CONNECTION_ID}
 
 **Request**
 
-The following request provides new information to update your connection with.
+The following request retrieves updated information regarding your connection ID.
 
 ```shell
 curl -X GET \
