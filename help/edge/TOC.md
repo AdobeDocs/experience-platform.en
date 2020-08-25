@@ -10,6 +10,8 @@ user-guide-title:  Adobe Experience Platform Web SDK Help
 * Getting started {#get-started}
   * [Quick start with Launch](getting-started/quick-start-with-launch.md)
   * [Quick start without Launch](getting-started/quick-start-without-launch.md)
+  * [Web SDK FAQ](getting-started/web-sdk-faq.md)
+
 * Fundamentals {#fundamentals}
   * [Installing the SDK](fundamentals/installing-the-sdk.md)
   * [Executing commands](fundamentals/executing-commands.md)
