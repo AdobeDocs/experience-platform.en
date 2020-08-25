@@ -24,6 +24,8 @@ Sources in [!DNL Experience Platform] are grouped into the following categories:
 
 - [Adobe Audience Manager connector overview](connectors/adobe-applications/audience-manager.md)
 - [Create an Adobe Audience Manager source connector in the UI](./tutorials/ui/create/adobe-applications/audience-manager.md)
+- [Adobe Analytics Classifications Data connector overview](connectors/adobe-applications/classifications.md)
+- [Create an Adobe Analytics Classifications Data source connector in the UI](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Adobe Analytics data connector overview](connectors/adobe-applications/analytics.md)
 - [Create an Adobe Analytics source connector in the UI](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Create a Customer Attributes source connector in the UI](./tutorials/ui/create/adobe-applications/customer-attributes.md)
@@ -77,7 +79,6 @@ CRM systems provide data that can help build customer relationships, which in tu
 - [!DNL GreenPlum](connectors/databases/greenplum.md) connector
 - [!DNL HP Vertica](connectors/databases/hp-vertica.md) connector
 - [!DNL IBM DB2](connectors/databases/ibm-db2.md) connector
-- [!DNL MariaDB](connectors/databases/mariadb.md) connector
 - [!DNL Microsoft SQL Server](connectors/databases/sql-server.md) connector
 - [!DNL MySQL](connectors/databases/mysql.md) connector
 - [!DNL Oracle](connectors/databases/oracle.md) connector

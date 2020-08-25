@@ -3,6 +3,7 @@ title: Debugging
 seo-title: Adobe Experience Platform Web SDK debugging
 description: Learn how to toggle Experience Platform Web SDK debugging
 seo-description: Learn how to toggle Experience Platform Web SDK debugging
+keywords: debugging web sdk;debugging;configure;configure command;debug command;edgeConfigId;setDebug;debugEnabled;debug;
 ---
 
 # Debugging

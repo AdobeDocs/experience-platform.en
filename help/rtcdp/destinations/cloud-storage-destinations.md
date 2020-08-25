@@ -1,4 +1,5 @@
 ---
+keywords: cloud storage destination;cloud storage
 title: Cloud storage destinations
 seo-title: Cloud storage destinations
 description: Adobe Real-time CDP can deliver your segments as data files to your Amazon S3, AWS Kinesis, Azure Event Hubs, or SFTP cloud storage locations.

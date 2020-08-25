@@ -10,7 +10,7 @@ description: Multi-entity segmentation is the ability to extend Profile data wit
 
 Multi-entity segmentation is the ability to extend [!DNL Profile] data with additional data based on products, stores, or other non-profile classes. Once connected, data from additional classes becomes available as if they were native to the [!DNL Profile] schema.
 
-To learn more about multi-entity segmentation, please continue reading the documentation and supplement your learning by watching the video below or exploring the [segmentation overview](./home.md).]
+To learn more about multi-entity segmentation, please continue reading the documentation and supplement your learning by watching the video below or exploring the [segmentation overview](./home.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
 

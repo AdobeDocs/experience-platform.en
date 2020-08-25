@@ -3,6 +3,7 @@ title: Installing the Adobe Experience Platform Web SDK
 seo-title: Adobe Experience Platform Web SDK installing the SDK
 description: Learn how to install the Experience Platform Web SDK
 seo-description: Learn how to install the Experience Platform Web SDK
+keywords: web sdk installation;installing web sdk;internet explorer;promise;
 ---
 
 # Installing the SDK {#installing-the-sdk}
@@ -47,6 +48,7 @@ The base code creates a global function named `alloy`. Use this function to inte
 In this example, the global function is renamed `mycustomname`, instead of `alloy`.
 
 >[!IMPORTANT]
+>
 >To avoid potential problems, use a name containing at least one character that is not a digit and that doesn't conflict with the name of a property already found on `window`.
 
 This base code, in addition to creating a global function, also loads additional code contained within an external file \(`alloy.js`\) hosted on a server. By default, this code is loaded asynchronously to allow your webpage to be as performant as possible. This is the recommended implementation.

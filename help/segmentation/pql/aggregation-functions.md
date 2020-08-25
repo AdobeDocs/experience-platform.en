@@ -7,7 +7,7 @@ topic: developer guide
 
 # Aggregation functions
 
-Aggregation functions are used to group together multiple values within [!DNL Profile Query Language] (PQL) arrays to form a single summary value. More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
+Aggregation functions are used to group together multiple values within [!DNL Profile Query Language] (PQL) arrays to form a single summary value. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Count
 

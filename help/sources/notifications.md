@@ -20,9 +20,9 @@ This document provides steps on how to subscribe to events, register webhooks, a
 
 This document requires a working understanding of the following components of Adobe Experience Platform:
 
-*   [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-*   [[!DNL Real-time Customer Profile]](../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-*   [[!DNL Adobe Experience Platform Data ingestion]](../ingestion/home.md): [!DNL Data Ingestion] represents the multiple methods by which [!DNL Platform] ingests data from these sources, as well as how that data is persisted within the [!DNL Data Lake] for use by downstream [!DNL Platform] services.
+* [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+* [[!DNL Real-time Customer Profile]](../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [[!DNL Adobe Experience Platform Data ingestion]](../ingestion/home.md): [!DNL Data Ingestion] represents the multiple methods by which [!DNL Platform] ingests data from these sources, as well as how that data is persisted within the [!DNL Data Lake] for use by downstream [!DNL Platform] services.
 
 This document also requires a working understanding of webhooks and how to connect a webhook from one application to another. See the following [documentation](https://requestbin.com/blog/working-with-webhooks/) for more information on webhooks.
 

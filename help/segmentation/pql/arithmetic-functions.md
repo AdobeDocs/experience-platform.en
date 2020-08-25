@@ -7,7 +7,7 @@ topic: developer guide
 
 # Arithmetic functions
 
-Arithmetic functions are used to perform basic calculations on values in [!DNL Profile Query Language] (PQL). More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
+Arithmetic functions are used to perform basic calculations on values in [!DNL Profile Query Language] (PQL). More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Add
 
