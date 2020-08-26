@@ -8,6 +8,7 @@ topic: overview
 # Create a [!DNL Google AdWords] source connector in the UI
 
 >[!NOTE]
+>
 >The [!DNL Google AdWords] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL Google AdWords] source connector using the [!DNL Platform] user interface.
