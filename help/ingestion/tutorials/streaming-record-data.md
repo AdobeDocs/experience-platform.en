@@ -345,7 +345,7 @@ To validate the previously ingested records, you can use the [!DNL Profile Acces
 
 >[!NOTE]
 >
->If the merge policy ID is not defined and the schema.</span>name or relatedSchema</span>.name is `_xdm.context.profile`, [!DNL Profile Access] will fetch **all** related identities.
+>If the merge policy ID is not defined and the `schema.name` or `relatedSchema.name` is `_xdm.context.profile`, [!DNL Profile Access] will fetch **all** related identities.
 
 **API format**
 

@@ -108,6 +108,7 @@ curl -X GET \
 ```
 
 >[!NOTE]
+>
 >If a related graph links more than 50 identities, this service will return HTTP status 422 and the message "Too many related identities". If you receive this error, consider adding more query parameters to narrow your search.
 
 ## Access profile data by list of identities
@@ -354,6 +355,7 @@ curl -X GET \
 A successful response returns a paginated list of time series events and associated fields that were specified in the request query parameters. 
 
 >[!NOTE]
+>
 >The request specified a limit of one (`limit=1`), therefore the `count` in the response below is 1 and only one entity is returned.
 
 ```json
@@ -408,6 +410,7 @@ A successful response returns a paginated list of time series events and associa
 Results are paginated when retrieving time series events. If there are subsequent pages of results, the `_page.next` property will contain an ID. Additionally, the `_links.next.href` property provides a request URI for retrieving the next page. To retrieve the results, make another GET request to the `/access/entities` endpoint, however you must be sure to replace `/entities` with the value of the provided URI.
 
 >[!NOTE]
+>
 >Be sure that you do not accidentally repeat `/entities/` in the request path. It should only appear once like, `/access/entities?start=...`
 
 **API format**

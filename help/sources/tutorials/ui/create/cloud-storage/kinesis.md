@@ -8,6 +8,7 @@ topic: overview
 # Create an [!DNL Amazon Kinesis] source connector in the UI
 
 >[!NOTE]
+>
 >The [!DNL Amazon Kinesis] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for authenticating an [!DNL Amazon Kinesis] (hereinafter referred to as [!DNL "Kinesis"]) source connector using the [!DNL Platform] user interface.

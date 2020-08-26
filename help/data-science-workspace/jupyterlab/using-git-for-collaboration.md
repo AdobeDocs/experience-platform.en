@@ -12,6 +12,7 @@ topic: Tutorial
 ## Prerequisites
 
 >[!NOTE]
+>
 > The Git server you intend to use needs to be accessible via the internet.
 
 The [!DNL Data Science Workspace JupyterLab] environment is a hosted environment and not deployed within your corporate firewall, and therefore the Git server you connect to must be accessible from the public internet. This could be a public or private repository on [GitHub](https://github.com/) or another instance of a [!DNL Git] server that you have decided to host yourself.
@@ -29,6 +30,7 @@ Next, within *Terminal* navigate to your workspace by using the following comman
 ![cd workspace](../images/jupyterlab/tutorials/find-workspace.png)
 
 >[!TIP]
+>
 > To see a list of available git commands, issue the command: `git -help` within your Terminal.
 
 Next, clone the repository you wish to use using the `git clone` command. Clone your project using an `https://` URL rather than `ssh://`.
@@ -40,6 +42,7 @@ Next, clone the repository you wish to use using the `git clone` command. Clone 
 ![clone](../images/jupyterlab/tutorials/git-collaboration.png)
 
 >[!NOTE]
+>
 > In order to perform any write operations (`git push` for example) the following configuration commands need to be run for every new session. Also note that any push command prompts for a username and password.
 >
 >`git config --global user.email "you@example.com"`

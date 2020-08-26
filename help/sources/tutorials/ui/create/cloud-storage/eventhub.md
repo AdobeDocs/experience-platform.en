@@ -8,6 +8,7 @@ topic: overview
 # Create an [!DNL Azure Event Hubs] source connector in the UI
 
 >[!NOTE]
+>
 > The [!DNL Azure Event Hubs] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for authenticating an [!DNL Azure Event Hubs] (hereinafter referred to as "[!DNL Event Hubs]") source connector using the [!DNL Platform] user interface.
