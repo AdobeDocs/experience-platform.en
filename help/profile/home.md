@@ -51,6 +51,7 @@ When bringing data together from multiple sources and combining it in order to s
 ### (Alpha) Configure computed attributes
 
 >[!IMPORTANT]
+>
 >The computed attribute functionality outlined in this document is in alpha. The documentation and the functionality are subject to change.
 
 Computed attributes enable you to automatically compute the value of fields based on other values, calculations, and expressions. Computed attributes operate on the profile level, meaning you can aggregate values across all records and events. Each computed attribute contains an expression, or "rule", that evaluates incoming data and stores the resulting value in a profile attribute or into an event. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, and step-by-step instructions for working with them using the [!DNL Real-time Customer Profile] API, please see the [computed attributes endpoint guide](api/computed-attributes.md). This guide will help you better understand the role computed attributes play within Adobe Experience Platform, and it includes sample API calls for performing basic CRUD operations.
@@ -125,7 +126,6 @@ As it relates to accessing data, data governance plays a key role within [!DNL E
 
 >[!NOTE]
 >
->
 >A non-person entity refers to any XDM class that is **not** part of [!DNL Profile].
 
 ## Next steps and additional resources
@@ -133,6 +133,7 @@ As it relates to accessing data, data governance plays a key role within [!DNL E
 To learn more about [!DNL Real-time Customer Profile], please continue reading the documentation and supplement your learning by watching the video below or exploring other [Experience Platform video tutorials](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html).
 
 >[!WARNING]
+>
 >The [!DNL Platform] UI shown in the following video is out of date. Please refer to the [Real-time Customer Profile user guide](ui/user-guide.md) for the latest UI screenshots and functionality. 
 
 >[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12)

@@ -37,6 +37,7 @@ In order to receive notifications on the status of your flow run, you must regis
 Once you have acquired a unique webhook URL, go to [Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events.html) and follow the steps outlined in the [data ingestion notifications](../ingestion/quality/subscribe-events.md) document to start subscribing to events.
 
 >[!IMPORTANT]
+>
 >During the subscription process, ensure that you select [!DNL Platform] notifications as the event provider, and select the following event subscriptions:
 >
 >* **[!UICONTROL Experience Platform Source's Flow Run Succeeded]**
@@ -51,6 +52,7 @@ With your webhook connected and your event subscription complete, you can start 
 A notification returns information such as the number of ingestion jobs run, file size, and errors. A notification also returns a payload associated with your flow run in JSON format. The response payload can either be classified as `sources_flow_run_success` or `sources_flow_run_failure`.
 
 >[!IMPORTANT]
+>
 >If partial ingestion is enabled during the flow creation process, a flow that contains both successful and failed ingestions will be marked as `sources_flow_run_success` only if the number of errors is below the error threshold percentage set during the flow creation process. If a successful flow run contains errors, these errors will still be included as part of the return payload.
 
 ### Success
@@ -313,6 +315,7 @@ The following response is an example of a failed flow run, with an error occurri
 | `fileInfo` | A URL that leads to an overview of the files that were both successfully and unsuccessfully ingested. |
 
 >[!NOTE]
+>
 >See the [appendix](#errors) for more information on error messages.
 
 ## Next steps

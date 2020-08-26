@@ -124,13 +124,15 @@ The *Configure* page for the *Import recipe* workflow appears. Enter a name and 
 ![configure workflow](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
+>
 > In the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial, a Docker URL was provided at the end of building the Retail Sales recipe using Python source files.
 
 Once you are on the *Select source* page, paste the Docker URL corresponding to the packaged recipe built using [!DNL Python] source files in the **[!UICONTROL Source URL]** field. Next, import the provided configuration file by dragging and dropping, or use the file system **Browser**. The provided configuration file can be found at `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Select **[!UICONTROL Python]** in the *Runtime* drop down and **[!UICONTROL Classification]** in the *Type* drop down. Once everything has been filled out, click **[!UICONTROL Next]** in the top-right corner to proceed to *Manage schemas*.
 
 >[!NOTE]
+>
 > *Type* supports **[!UICONTROL Classification]** and **[!UICONTROL Regression]**. If your model does not fall under one of those types select **[!UICONTROL Custom]**.
-> 
+
 ![](../images/models-recipes/import-package-ui/recipe_source_python.png)
 
 Next, select the Retail Sales input and output schemas under the section *Manage Schemas*, they were created using the provided bootstrap script in the [create the retail sales schema and dataset](../models-recipes/create-retails-sales-dataset.md) tutorial. 
@@ -156,13 +158,15 @@ The *Configure* page for the *Import recipe* workflow appears. Enter a name and 
 ![configure workflow](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
+>
 > In the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial, a Docker URL was provided at the end of building the Retail Sales recipe using R source files.
 
 Once you are on the *Select source* page, paste the Docker URL corresponding to the packaged recipe built using R source files in the **[!UICONTROL Source URL]** field. Next, import the provided configuration file by dragging and dropping, or use the file system **Browser**. The provided configuration file can be found at `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`. Select **[!UICONTROL R]** in the *Runtime* drop down and **[!UICONTROL Classification]** in the *Type* drop down.. Once everything has been filled out, click **[!UICONTROL Next]** in the top-right corner to proceed to *Manage schemas*.
 
 >[!NOTE]
+>
 > *Type* supports **[!UICONTROL Classification]** and **[!UICONTROL Regression]**. If your model does not fall under one of those types select **[!UICONTROL Custom]**.
-> 
+
 ![](../images/models-recipes/import-package-ui/recipe_source_R.png)
 
 Next, select the Retail Sales input and output schemas under the section *Manage Schemas*, they were created using the provided bootstrap script in the [create the retail sales schema and dataset](../models-recipes/create-retails-sales-dataset.md) tutorial. 
@@ -188,11 +192,13 @@ The *Configure* page for the *Import recipe* workflow appears. Enter a name and 
 ![configure workflow](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
+>
 > In the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial, a Docker URL was provided at the end of building the Retail Sales recipe using PySpark source files.
 
 Once you are on the *Select source* page, paste the Docker URL corresponding to the packaged recipe built using PySpark source files in the **[!UICONTROL Source URL]** field. Next, import the provided configuration file by dragging and dropping, or use the file system **Browser**. The provided configuration file can be found at `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`. Select **[!UICONTROL PySpark]** in the *Runtime* drop down. Once the PySpark runtime is selected the default artifact auto populates to **[!UICONTROL Docker]**. Next, select **[!UICONTROL Classification]** in the *Type* drop down. Once everything has been filled out, click **[!UICONTROL Next]** in the top-right corner to proceed to *Manage schemas*.
 
 >[!NOTE]
+>
 > *Type* supports **[!UICONTROL Classification]** and **[!UICONTROL Regression]**. If your model does not fall under one of those types select **[!UICONTROL Custom]**.
 
 ![](../images/models-recipes/import-package-ui/pyspark-databricks.png)
@@ -220,11 +226,13 @@ The *Configure* page for the *Import recipe* workflow appears. Enter a name and 
 ![configure workflow](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
+>
 > In the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial, a Docker URL was provided at the end of building the Retail Sales recipe using Scala ([!DNL Spark]) source files.
 
 Once you are on the *Select source* page, paste the Docker URL corresponding to the packaged recipe built using Scala source files in the *Source URL* field. Next, import the provided configuration file by dragging and dropping, or use the file system **Browser**. The provided configuration file can be found at `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Select **[!UICONTROL Spark]** in the *Runtime* drop down. Once the [!DNL Spark] runtime is selected the default artifact auto populates to **[!UICONTROL Docker]**. Next, select **[!UICONTROL Regression]** from the *Type* drop down. Once everything has been filled out, click **[!UICONTROL Next]** in the top-right corner to proceed to *Manage schemas*.
 
 >[!NOTE]
+>
 > *Type* supports **[!UICONTROL Classification]** and **[!UICONTROL Regression]**. If your model does not fall under one of those types select **[!UICONTROL Custom]**.
 
 ![](../images/models-recipes/import-package-ui/scala-databricks.png)

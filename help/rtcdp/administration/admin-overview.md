@@ -21,6 +21,7 @@ Access control is administered through the [Adobe Admin Console](http://admincon
 To learn more about access control, see the [access control overview](../../access-control/home.md) in the [!DNL Experience Platform] documentation.
 
 >[!IMPORTANT]
+>
 >For a detailed guide to granting access to Real-time CDP capabilities, including enabling visibility in the UI, please follow the steps provided in the [access control user guide](../../access-control/ui/overview.md), specifically those for managing details and additional services for a product profile.
 
 ## Sandboxes
