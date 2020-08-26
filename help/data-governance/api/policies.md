@@ -28,7 +28,7 @@ GET /policies/custom
 
 The following request retrieves a list of custom policies defined by your organization.
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -156,7 +156,7 @@ GET /policies/custom/{POLICY_ID}
 
 **Request**
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6dacdf685a4913dc48937c \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -275,7 +275,7 @@ POST /policies/custom
 
 The following request creates a new policy that restricts the marketing action `exportToThirdParty` from being performed on data containing labels `C1 OR (C3 AND C7)`.
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -389,7 +389,7 @@ In this example, the conditions for exporting data to a third party have changed
 
 The following request updates the existing policy to include the new policy expression. Note that since this request essentially rewrites the policy, all of the fields must be included in the payload, even if some of their values are not being updated.
 
-```sh
+```shell
 curl -X PUT \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6dacdf685a4913dc48937c \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -583,7 +583,7 @@ DELETE /policies/custom/{POLICY_ID}
 
 **Request**
 
-```sh
+```shell
 curl -X DELETE \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6ddb56eb60ca13dbf8b9a8 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -610,7 +610,7 @@ GET /enabledCorePolicies
 
 **Request**
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/enabledCorePolicies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -668,7 +668,7 @@ PUT /enabledCorePolicies
 
 The following request updates the list of enabled core policies based on the IDs provided in the payload.
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/enabledCorePolicies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \

@@ -78,15 +78,13 @@ GET /connectionSpecs
 
 **Request** 
 
-```
-
+```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs' \
 --header 'accept: application/json' \
 --header 'x-gw-ims-org-id: {IMS_ORG}' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}'
-
 ```
 
 
@@ -130,8 +128,7 @@ POST /connections
 
 **Request**
 
-```
-
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -146,7 +143,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
                 "version": "1.0"
             }
 }'
-
 ```
 
 
@@ -172,7 +168,7 @@ POST /sourceConnections
 
 **Request**
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -227,7 +223,7 @@ POST /connections
 
 **Request**
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -286,7 +282,7 @@ POST /targetConnections
 
 **Request**
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -404,7 +400,7 @@ PATCH /flows
 
 **Request**
 
-```
+```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -488,7 +484,7 @@ GET /flows
 
 **Request**
 
-```
+```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -505,7 +501,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 The returned response should include in the `transformations` parameter the segments and profile attributes that you submitted in the previous step. A sample `transformations` parameter in the response could look like below:
 
-```
+```json
 "transformations": [
     {
         "name": "GeneralTransform",
@@ -551,8 +547,7 @@ The returned response should include in the `transformations` parameter the segm
 >
 > In addition to the profile attributes and the segments in the step [Activate data to your new destination](#activate-data), the exported data in [!DNL AWS Kinesis] and [!DNL Azure Event Hubs] will also include information about the identity map. This represents the identities of the exported profiles (for example [ECID](https://docs.adobe.com/content/help/en/id-service/using/intro/id-request.html), mobile ID, Google ID, email address, etc.). See an example below.
 
-```
-
+```json
 {
   "person": {
     "email": "yourstruly@adobe.con"
@@ -588,8 +583,6 @@ The returned response should include in the `transformations` parameter the segm
     ]
   }
 }
-
-
 ```
 
 ## Next steps

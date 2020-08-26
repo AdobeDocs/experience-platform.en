@@ -24,7 +24,7 @@ This method uses a deep-learning-based foreground extractor to identify objects 
 
 The following image was used in the example shown in this document:
 
-![test image](../images/test_image.jpeg)
+![test image](../images/QQAsset1.jpg)
 
 **API format**
 
@@ -40,7 +40,7 @@ The following request extracts colors from a image based on the input parameters
 
 >[!CAUTION]
 >
->`analyzer_id` determines which [!DNL Sensei Content Framework] is used. Please check that you have the proper `analyzer_id` before making your request.
+>`analyzer_id` determines which [!DNL Sensei Content Framework] is used. Please check that you have the proper `analyzer_id` before making your request. For color extraction service, the `analyzer_id` ID is: `Feature:image-color-histogram:Service-6fe52999293e483b8e4ae9a95f1b81a7`
 
 ```SHELL
 curl -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -79,7 +79,7 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Property | Description | Mandatory |
 | --- | --- | --- |
-| `analyzer_id` | The [!DNL Sensei] service ID that your request is deployed under. This ID determines which of the [!DNL Sensei Content Frameworks] are used.  | Yes |
+| `analyzer_id` | The [!DNL Sensei] service ID that your request is deployed under. This ID determines which of the [!DNL Sensei Content Frameworks] are used. For custom services, please contact the Content and Commerce AI team to set up a custom ID. | Yes |
 | `application-id` | The ID of your created application. | Yes |
 | `data` | An array that contains JSON objects. Each object in the array represents an image. Any parameters passed as part of this array overrides the global parameters specified outside the `data` array. Any of the remaining properties outlined below in this table can be overridden from within `data`.  | Yes |
 | `content-id` | The unique ID for the data element that is returned in the response. If this is not passed, an auto-generated ID is assigned. | No |
@@ -99,7 +99,7 @@ A successful response returns the details of the extracted colors. Each color is
 - The percentage this color appears in relation to the image
 - The RGB value of the color
 
-In the first example object below, the `feature_value` of `White,0.82,239,239,239` means the color found is white, white is found in 82% of the image, and has an RGB value of 239,239,239.
+In the first example object below, the `feature_value` of `White,0.59,251,251,243` means the color found is white, white is found in 59% of the image, and has an RGB value of 251,251,243.
 
 ```json
 {
@@ -117,15 +117,19 @@ In the first example object below, the `feature_value` of `White,0.82,239,239,23
             "feature_value": [
               {
                 "feature_name": "color_name_and_rgb",
-                "feature_value": "White,0.82,239,239,239"
+                "feature_value": "White,0.59,251,251,243"
               },
               {
-                "feature_value": "Dark_Blue,0.11,41,60,86",
+                "feature_value": "Orange,0.30,248,169,48",
                 "feature_name": "color_name_and_rgb"
               },
               {
                 "feature_name": "color_name_and_rgb",
-                "feature_value": "Royal_Blue,0.08,63,91,123"
+                "feature_value": "Mustard,0.08,251,199,77"
+              },
+              {
+                "feature_name": "color_name_and_rgb",
+                "feature_value": "Gold,0.02,250,191,55"
               }
             ],
             "feature_name": "color"

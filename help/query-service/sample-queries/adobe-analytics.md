@@ -128,7 +128,7 @@ Here are the XDM fields to access the merchandising variables in your [!DNL Anal
 
 ### eVars
 
-```
+```console
 productListItems[#]._experience.analytics.customDimensions.evars.evar#
 ```
 
@@ -136,7 +136,7 @@ Where `[#]` is an array index and `evar#` is the specific eVar variable.
 
 ### Custom events
 
-```
+```console
 productListItems[#]._experience.analytics.event1to100.event#.value
 ```
 
@@ -182,7 +182,7 @@ LIMIT 20
 
 The "No such struct field" error is encountered when you attempt to retrieve a field that doesn't existing in your current dataset. Evaluate the reason returned in the error message to identify an available field then update your query and rerun.
 
-```
+```console
 ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered. Reason: [No such struct field evar1 in eVar10, eVar13, eVar62, eVar88, eVar2;]
 ```
 
@@ -213,7 +213,7 @@ Here are the XDM fields to produce the Conversion Syntax in your [!DNL Analytics
 
 ### eVars
 
-```
+```console
 _experience.analytics.customDimensions.evars.evar#
 ```
 
@@ -221,7 +221,7 @@ Where `evar#` is the specific eVar variable.
 
 ### Product
 
-```
+```console
 productListItems[#].sku
 ```
 
