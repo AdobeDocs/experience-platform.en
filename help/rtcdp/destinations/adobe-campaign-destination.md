@@ -47,7 +47,7 @@ See [Activate profiles and segments to a destination](/help/rtcdp/destinations/a
 
 ## Destination attributes {#destination-attributes}
 
-When [activating segments](/help/rtcdp/destinations/activate-destinations.md) to the Adobe Campaign destination, we recommend that you select a unique identifier from your [union schema](../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination. For more information, see [Select which schema fields to use as destination attributes in your exported files](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) in Email Marketing Destinations. 
+When [activating segments](/help/rtcdp/destinations/activate-destinations.md) to the Adobe Campaign destination, we recommend that you select a unique identifier from your [union schema](../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination. For more information, see [Select which schema fields to use as destination attributes in your exported files](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) in email marketing destinations documentation. 
 
 ## Exported data {#exported-data}
 

@@ -2,6 +2,7 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Data Ingestion Help
+user-guide-description: Adobe Experience Platform brings data from multiple sources together in order to help marketers better understand the behavior of their customers. Adobe Experience Platform Data Ingestion represents the multiple methods by which Platform ingests data from these sources, as well as how that data is persisted within the Data Lake for use by downstream Platform services.
 ---
 
 # Adobe Experience Platform Data Ingestion {#ingestion}
