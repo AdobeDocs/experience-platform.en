@@ -40,4 +40,4 @@ user-guide-title:  Adobe Experience Platform Web SDK Help
   * [Retrieving Library Information](reference/retrieving-library-information.md)
 * [Release notes](release-notes.md)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
-* [Web SDK FAQ](getting-started/web-sdk-faq.md)
+* [Frequently asked questions](getting-started/web-sdk-faq.md)
