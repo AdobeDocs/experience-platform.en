@@ -5,7 +5,7 @@ description: Frequently asked questions about Adobe Experience Platform Web SDK
 seo-description: Frequently asked questions about Adobe Experience Platform Web SDK
 ---
 
-# Adobe Experience Platform Web SDK Frequently Asked Questions
+# Frequently asked questions
 
 This FAQ includes questions that are often asked aboutthe Adobe Web SDK/
 
