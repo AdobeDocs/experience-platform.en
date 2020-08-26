@@ -8,7 +8,7 @@ topic: guide
 
 # [!DNL Real-time Customer Profile] detail customization {#profile-detail-customization}
 
-Within the Adobe Experience Platform user interface, you can view and interact with [!DNL Real-time Customer Profile] data in the form of customer profiles. The profile information displayed in the UI has been merged together from multiple profile fragments to form a single view of each individual customer. This includes details such as basic attributes, linked identities, and channel preferences. The default fields shown in profiles can also be changed at an organizational-level to display preferred Profile attributes. This guide provides step-by-step instructions for customizing the way in which Profile data is displayed within the Platform UI.  
+Within the Adobe Experience Platform user interface, you can view and interact with [!DNL Real-time Customer Profile] data in the form of customer profiles. The profile information displayed in the UI has been merged together from multiple profile fragments to form a single view of each individual customer. This includes details such as basic attributes, linked identities, and channel preferences. The default fields shown in profiles can also be changed at an organizational-level to display preferred [!DNL Profile] attributes. This guide provides step-by-step instructions for customizing the way in which [!DNL Profile] data is displayed within the Platform UI.  
 
 For a complete guide to the [!UICONTROL Profiles] UI, please visit the [Profile user guide](user-guide.md).
 
@@ -46,7 +46,7 @@ From the [!UICONTROL Edit widget] screen, to begin adding attributes to a card s
 
 ![](../images/profile-customization/profiles-edit-widget-basic-add-attributes.png)
 
-When the [!UICONTROL Select union schema field] dialog opens, the left-side of the dialog shows the full [!UICONTROL XDM Individual Profile] union schema, with fields nested underneath. For more information on union schemas, please refer to the [union schemas section of the Profile user guide](user-guide.md#union-schema). 
+When the [!UICONTROL Select union schema field] dialog opens, the left-side of the dialog shows the full [!UICONTROL XDM Individual Profile] union schema, with fields nested underneath. For more information on union schemas, please refer to the [union schemas section of the [!DNL Profile] user guide](user-guide.md#union-schema). 
 
 The **[!UICONTROL Selected Attributes]** section on the right-side of the dialog shows the attributes that are currently included in the card that you are editing. You can remove and reorder attributes here as well. The total number of attributes selected is shown, as well as the maximum number of attributes (20) that can be added to a single card.
 
@@ -96,4 +96,4 @@ After saving, you are returned to the [!UICONTROL Detail] tab where your new car
 
 ## Next steps
 
-By following this document you should now be able to update the profile view for your organization, including adding and removing cards, editing card details and attributes, and reordering and resizing cards. To learn more about working with Profile data in the Experience Platform UI, please refer to the [Profile user guide](user-guide.md).
+By following this document you should now be able to update the profile view for your organization, including adding and removing cards, editing card details and attributes, and reordering and resizing cards. To learn more about working with [!DNL Profile] data in the Experience Platform UI, please refer to the [[!DNL Profile] user guide](user-guide.md).
