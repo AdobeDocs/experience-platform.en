@@ -20,7 +20,7 @@ This segment can now be re-stated by using the following steps.
 
 ### Refactor the segment
 
-The previous example segment, "A click event OR a view event followed by a purchase event", can be re-defined in the following manner:
+The previous example segment, "A click event OR a view event followed by a purchase event", can be redefined in the following manner:
 
 "A click event followed by a purchase event" 
 OR 
@@ -60,8 +60,8 @@ Previously, an individual event could have multiple time constraint rules attach
 
 As you can see, this segment has two constraints on the rule-level: One for "[!UICONTROL Today]" and the other for "[!UICONTROL Yesterday]".
 
-The previous segment is equivalent to the following segment - both of the event-level time constraints have been connected using an AND operator:
+The previous segment is equivalent to the following segment — both of the event-level time constraints have been connected using an AND operator. The first event-level time constraint references a click event whose name equals "Training" and is happening today, while the second event-level time constraint references a click event whose name equals "Pets" and happened yesterday.
 
 ![](../images/ui/segment-refactoring/time-constraint-1.png) ![](../images/ui/segment-refactoring/time-constraint-2.png)
 
-This refactoring of time constraints also to time constraints that are connected using an OR operator. In that case, the segment would require further redefining using the [steps for refactoring OR operators](#or-factorization) provided at the beginning of the document.
+This refactoring of time constraints also to time constraints that are connected using an OR operator. In that case, the segment would require further redefining using the [steps for refactoring OR operators](#or-factorization) provided at the beginning of this document.
