@@ -44,7 +44,7 @@ To install the SDK, copy and paste the following "base code" as high as possible
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.1.0/alloy.min.js" async></script>
 ```
 
 For more details on different options to do this, see [Installing the SDK](../fundamentals/installing-the-sdk.md).
