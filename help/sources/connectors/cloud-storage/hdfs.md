@@ -8,6 +8,7 @@ topic: overview
 # (Beta) [!DNL Apache] HDFS connector
 
 >[!NOTE]
+>
 >The Apache HDFS connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure], allowing you to bring your data from these systems. Ingested data can be formatted as JSON, parquet, or delimited. Support for cloud storage providers include [!DNL Apache] HDFS.

@@ -61,6 +61,7 @@ By default, Attribution AI defines the training window as the most recent 2 quar
 Minimum length of data required = training window + lookback window
 
 >[!TIP]
+>
 > The minimum length of data required for an application with default configurations is: 2 quarters (180 days) + 56 days = 236 days.
 
 Example : 

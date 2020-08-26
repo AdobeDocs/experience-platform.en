@@ -8,6 +8,7 @@ topic: overview
 # Create an [!DNL Azure Table Storage] source connector in the UI
 
 >[!NOTE]
+>
 >The [!DNL Azure Table Storage] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL Azure Table Storage] (hereinafter referred to as "ATS") source connector using the [!DNL Platform] user interface.

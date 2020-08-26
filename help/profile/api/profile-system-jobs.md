@@ -10,6 +10,7 @@ topic: guide
 Adobe Experience Platform enables you to ingest data from multiple sources and build robust profiles for individual customers. Data ingested into [!DNL Platform] is stored in the [!DNL Data Lake] as well as the [!DNL Real-time Customer Profile] data store. Occasionally it may be necessary to delete a dataset or batch from the Profile Store in order to remove data that is no longer needed or was added in error. This requires using the [!DNL Real-time Customer Profile] API to create a [!DNL Profile] system job, also known as a "[!DNL delete request]", that can also be modified, monitored, or removed if required.
 
 >[!NOTE]
+>
 >If you are trying to delete datasets or batches from the [!DNL Data Lake], please visit the [Catalog Service overview](../../catalog/home.md) for instructions.
 
 ## Getting started
@@ -99,6 +100,7 @@ Initiating a new delete request is done through a POST request to the `/systems/
 In order to delete a dataset, the dataset ID must be included in the body of the POST request. This action will delete ALL data for a given dataset. [!DNL Experience Platform] allows you to delete datasets based on both record and time series schemas.
 
 >[!CAUTION]
+>
 > When attempting to delete a [!DNL Profile]-enabled dataset using the [!DNL Experience Platform] UI, the dataset is disabled for ingestion but will not be deleted until a delete request is created using the API. For more information, see the [appendix](#appendix) to this document.
 
 **API format**
@@ -152,6 +154,7 @@ A successful response returns the details of the newly created delete request, i
 In order to delete a batch, the batch ID must be included in the body of the POST request. Please be advised that you cannot delete batches for datasets based on record schemas. Only batches for datasets based on time series schemas may be deleted. 
 
 >[!NOTE]
+>
 > The reason you cannot delete batches for datasets based on record schemas is because record type dataset batches overwrite previous records and therefore cannot be "undone" or deleted. The only way to remove the impact of erroneous batches for datasets based on record schemas is to re-ingest the batch with the correct data in order to overwrite the incorrect records. 
 
 For more information on record and time series behavior, please review the [section on XDM data behaviors](../../xdm/home.md#data-behaviors) in the [!DNL XDM System] overview.
