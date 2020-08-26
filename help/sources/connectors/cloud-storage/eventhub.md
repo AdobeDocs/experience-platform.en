@@ -57,15 +57,17 @@ The following is a list of constraints you must account for when naming your clo
 - Illegal URL path characters not allowed. Code points like `\uE000`, while valid in NTFS filenames, are not valid Unicode characters. In addition, some ASCII or Unicode characters, like control characters (0x00 to 0x1F, \u0081, etc.), are also not allowed. For rules governing Unicode strings in HTTP/1.1 see [RFC 2616, Section 2.2: Basic Rules](https://www.ietf.org/rfc/rfc2616.txt) and [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - The following file names are not allowed: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, dot character (.), and two dot characters (..).
 
+## Connect [!DNL Azure Event Hubs] to [!DNL Platform]
+
 The documentation below provides information on how to connect [!DNL Azure Event Hubs] to [!DNL Platform] using APIs or the user interface:
 
-## Connect [!DNL Azure Event Hubs] to [!DNL Platform] using APIs
+### Using APIs
 
 - [Create a Azure Event Hubs connector using the Flow Service API](../../tutorials/api/create/cloud-storage/eventhub.md)
 - [Explore a cloud storage system using the Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Collect cloud storage data using the Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
-## Connect [!DNL Azure Event Hubs] to [!DNL Platform] using the UI
+### Using the UI
 
 - [Create a Azure Event Hubs source connector in the UI](../../tutorials/ui/create/cloud-storage/eventhub.md)
 - [Configure a dataflow for a cloud storage connector in the UI](../../tutorials/ui/dataflow/streaming/cloud-storage.md)
