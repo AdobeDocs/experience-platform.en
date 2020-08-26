@@ -209,7 +209,7 @@ The Luma data science team has created models around propensity to buy. One mode
 
 Modify or create a segment that represents cart abandoners who appear to be in the process of buying a gift:  
 
-```
+```sql
 Profile: Category != Preferred Category 
 AND 
 Product Size != Preferred Size 

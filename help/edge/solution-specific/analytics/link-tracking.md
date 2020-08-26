@@ -18,9 +18,10 @@ You can specify a page view by setting the the `web.webPageDetails.pageViews.val
 alloy("sendEvent", {
   "xdm": {
     "web": {
-      "webPageDetailsr": {
+      "webPageDetails": {
         "pageViews": {
             "value":1
+         }
       }
     }
   }
@@ -44,6 +45,7 @@ alloy("sendEvent", {
       "name":"My Custom Link", //Name that shows up in the custom links report
       "URL":"https://myurl.com", //the URL of the link
       "type":"other", // values: other, download, exit
+      }
     }
   }
 });

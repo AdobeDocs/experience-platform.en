@@ -224,7 +224,7 @@ An existing destination can be updated by making a PUT request to the `/config/d
 
 **API format**
 
-```
+```http
 PUT /config/destinations/{DESTINATION_ID}
 ```
 
@@ -292,7 +292,7 @@ If your organization no longer requires a projection destination, it can be dele
 
 **API format**
 
-```
+```http
 DELETE /config/destinations/{DESTINATION_ID}
 ```
 

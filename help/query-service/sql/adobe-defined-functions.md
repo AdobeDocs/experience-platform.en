@@ -67,7 +67,7 @@ LIMIT 10
 
 #### Results
 
-```
+```console
                 id                |       timestamp       |      session       
 ----------------------------------+-----------------------+--------------------
  100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | (0,1,true,1)
@@ -129,7 +129,7 @@ LIMIT 10
 
 #### Results
 
-```
+```console
                 id                 |       timestamp       | trackingCode |                   first_touch                    
 -----------------------------------+-----------------------+--------------+--------------------------------------------------
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2018-12-18 07:06:12.0 | em:946426    | (Paid First,em:946426,2018-12-18 07:06:12.0,1.0)
@@ -184,7 +184,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 #### Results
 
-```
+```console
                 id                 |       timestamp       | trackingcode |                   last_touch                   
 -----------------------------------+-----------------------+--------------+-------------------------------------------------
  5D9D1DFBCEEBADF6-4097750903CE64DB | 2017-12-18 07:06:12.0 | em:946426    | (Paid Last,em:946426,2017-12-18 07:06:12.0,1.0)
@@ -240,7 +240,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 #### Results
 
-```
+```console
                 id                 |       timestamp       | trackingCode |                   first_touch                    
 -----------------------------------+-----------------------+--------------+--------------------------------------------------
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
@@ -293,7 +293,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 #### Results
 
-```
+```console
                 id                 |       timestamp       | trackingCode |                   first_touch                    
 -----------------------------------+-----------------------+--------------+--------------------------------------------------
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid First,em:1024841,2019-07-15 06:04:10.0,1.0)
@@ -347,7 +347,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 #### Results
 
-```
+```console
                 id                 |       timestamp       | trackingcode |                   last_touch                   
 -----------------------------------+-----------------------+--------------+-------------------------------------------------
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid Last,em:550984,2019-07-15 06:08:30.0,1.0)
@@ -400,7 +400,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 #### Results
 
-```
+```console
                 id                 |       timestamp       | trackingcode |                   last_touch                   
 -----------------------------------+-----------------------+--------------+-------------------------------------------------
  7J82HGSSBNELKLD4-4107750913DE65DA | 2019-07-15 06:04:10.0 | em:1024841   | (Paid Last,em:483339,2019-07-21 18:56:56.0,1.0)
@@ -454,7 +454,7 @@ ORDER BY endUserIds._experience.mcid.id, _experience.analytics.session.num, time
 
 #### Results
 
-```
+```console
                 id                 |       timestamp       |                 name                |                    previous_page                    
 -----------------------------------+-----------------------+-------------------------------------+-----------------------------------------------------
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:15:28.0 |                                     | 
@@ -505,7 +505,7 @@ LIMIT 10
 
 #### Results
 
-```
+```console
                 id                 |       timestamp       |                name                 |             previous_page             
 -----------------------------------+-----------------------+-------------------------------------+---------------------------------------
  457C3510571E5930-69AA721C4CBF9339 | 2017-11-08 17:15:28.0 |                                     | (Home)
@@ -567,7 +567,7 @@ LIMIT 10
 
 #### Results
 
-```
+```console
              page_name             | average_minutes_since_registration 
 -----------------------------------+------------------------------------
                                    |                                   
@@ -601,7 +601,7 @@ Output: Returns a negative number representing the unit of time behind the next 
 
 #### Example Query
 
-```
+```sql
 SELECT 
   page_name,
   SUM (time_between_next_match) / COUNT(page_name) as average_minutes_until_order_confirmation
@@ -625,7 +625,7 @@ LIMIT 10
 
 #### Results
 
-```
+```console
              page_name             | average_minutes_until_order_confirmation 
 -----------------------------------+------------------------------------------
  Shopping Cart|Order Confirmation  |                                      0.0
