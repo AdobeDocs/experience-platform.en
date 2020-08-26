@@ -105,6 +105,7 @@ For each score bucket, a card is generated that shows the top 10 influential fac
 Clicking the **[!UICONTROL Create Segment]** button in any of the buckets for Low, Medium, and High propensity redirects you to the segment builder.
 
 >[!NOTE]
+>
 >The **[!UICONTROL Create Segment]** button is only available if Real-time Customer Profile is enabled for the dataset. For more information on how to enable Real-time Customer Profile, visit the [Real-time Customer Profile overview](../../../rtcdp/overview.md).
 
 ![Click create segment](../images/insights/influential-factors-create-segment.png)

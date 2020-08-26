@@ -65,6 +65,7 @@ Select the **[!UICONTROL Target dataset]** you wish to access.
 The **[!UICONTROL Dataset activity]** page displays information about the target dataset you selected, including details about its batch status, dataset ID, and schema.
 
 >[!IMPORTANT]
+>
 >While deleting datasets is possible for other source connectors, it is currently not supported for Analytics Classifications Data connector. If you do delete a dataset by mistake, please contact Adobe Customer Care.
 
 ![](../../../../images/tutorials/create/classifications/dataset.png)

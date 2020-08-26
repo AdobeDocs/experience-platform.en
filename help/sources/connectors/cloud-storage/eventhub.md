@@ -8,6 +8,7 @@ topic: overview
 # (Beta) Azure Event Hubs connector
 
 >[!NOTE]
+>
 >The Azure Event Hubs connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure]. You can bring your data from these systems into [!DNL Platform].

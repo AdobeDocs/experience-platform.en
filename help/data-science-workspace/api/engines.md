@@ -38,7 +38,6 @@ A successful response returns a payload containing the details of your Docker re
 
 >[!NOTE]
 >
->
 >Your Docker password changes whenever your `{ACCESS_TOKEN}` is updated.
 
 ```json

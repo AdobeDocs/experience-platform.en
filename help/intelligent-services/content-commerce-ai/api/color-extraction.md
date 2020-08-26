@@ -40,7 +40,8 @@ The following request extracts colors from a image based on the input parameters
 
 >[!CAUTION]
 >
->`analyzer_id` determines which [!DNL Sensei Content Framework] is used. Please check that you have the proper `analyzer_id` before making your request. For color extraction service, the `analyzer_id` ID is: `Feature:image-color-histogram:Service-6fe52999293e483b8e4ae9a95f1b81a7`
+>`analyzer_id` determines which [!DNL Sensei Content Framework] is used. Please check that you have the proper `analyzer_id` before making your request. For color extraction service, the `analyzer_id` ID is:
+>`Feature:image-color-histogram:Service-6fe52999293e483b8e4ae9a95f1b81a7`
 
 ```SHELL
 curl -i -X POST https://sensei.adobe.io/services/v1/predict \
