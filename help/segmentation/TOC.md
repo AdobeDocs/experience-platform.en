@@ -8,7 +8,7 @@ user-guide-title: Adobe Experience Platform Segmentation Service Help
 
 - [Overview](home.md)
 - [Segmentation data types](data-types.md)
-- Segmentation API developer guide{#api}
+- Segmentation API developer guide {#api}
     - [Overview](api/overview.md)
     - [Getting started](api/getting-started.md)
     - [Export jobs](api/export-jobs.md)
@@ -22,6 +22,7 @@ user-guide-title: Adobe Experience Platform Segmentation Service Help
     - [Overview](ui/overview.md)
     - [Segment Builder](ui/segment-builder.md)
     - [Streaming segmentation](ui/streaming-segmentation.md)
+    - [(Breaking Change) OR and AND logical operators update](ui/segment-refactoring.md)
 - [Honoring opt-outs](honoring-opt-outs.md)
 - [Multi-entity segmentation](multi-entity-segmentation.md)
 - Profile Query Language {#pql}

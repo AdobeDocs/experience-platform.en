@@ -68,7 +68,7 @@ To add a new rule to your segment definition, drag a tile from the **[!UICONTROL
 
 >[!IMPORTANT]
 >
->The latest changes to Adobe Experience Platform update using OR and AND between events works. Please read [this document](./workarounds.md) for more information.
+>The latest changes to Adobe Experience Platform have updated the usage of the `OR` and `AND` logical operators between events. These updates may result in breaking changes for your existing segments and require you to make updates. Please read the [OR and AND logical operators update](./workarounds.md) for more information.
 
 ### Adding audiences
 
