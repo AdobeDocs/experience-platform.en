@@ -18,7 +18,7 @@ See [Cloud storage destinations workflow ](/help/rtcdp/destinations/cloud-storag
 
 For [!DNL Amazon S3] destinations, enter the following information in the create destination workflow:
 
-* **[!DNL Amazon S3] access key and [!DNL Amazon S3] secret key**: In [!DNL Amazon S3], generate an access key - secret access key pair to grant Adobe Real-time CDP access to your [!DNL Amazon S3] account.
+* **[!DNL Amazon S3] access key and [!DNL Amazon S3] secret key**: In [!DNL Amazon S3], generate an `access key - secret access key` pair to grant Adobe Real-time CDP access to your [!DNL Amazon S3] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
 >[!IMPORTANT]
 >
