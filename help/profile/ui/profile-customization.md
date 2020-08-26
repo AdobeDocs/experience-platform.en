@@ -8,17 +8,17 @@ topic: guide
 
 # [!DNL Real-time Customer Profile] detail customization {#profile-detail-customization}
 
-Within the Adobe Experience Platform user interface, you can view and interact with [!DNL Real-time Customer Profile] data in the form of customer profiles. The profile information displayed in the UI has been merged together from multiple profile fragments to form a single view of each individual customer. This includes customer details such as basic attributes, linked identities, and channel preferences. The default fields shown can also be changed at an organizational-level to display preferred Profile attributes. This guide provides step-by-step instructions for customizing the way in which Profile data is displayed within the Platform UI.  
+Within the Adobe Experience Platform user interface, you can view and interact with [!DNL Real-time Customer Profile] data in the form of customer profiles. The profile information displayed in the UI has been merged together from multiple profile fragments to form a single view of each individual customer. This includes details such as basic attributes, linked identities, and channel preferences. The default fields shown in profiles can also be changed at an organizational-level to display preferred Profile attributes. This guide provides step-by-step instructions for customizing the way in which Profile data is displayed within the Platform UI.  
 
 For a complete guide to the [!UICONTROL Profiles] UI, please visit the [Profile user guide](user-guide.md).
 
 ## Reorder and resize cards {#reorder-and-resize-cards}
 
-From the [!UICONTROL Detail] tab of the customer profile, you can select **[!UICONTROL Modify dashboard]** in order to resize and reorder existing cards or add a new card (widget) to the dashboard.
+From the [!UICONTROL Detail] tab of the customer profile, you can select **[!UICONTROL Modify dashboard]** in order to resize and reorder existing cards.
 
 ![](../images/profile-customization/profiles-modify-dashboard.png)
 
-After choosing to modify the dashboard, cards are able to be reordered by selecting the card title and dragging and dropping the cards into a new order. You can also resize a card by selecting the angle symbol in the bottom-right corner of the card (`⌟`) and dragging the card to the desired size. In this example, the **[!UICONTROL Basic attributes]** card is being resized. 
+After choosing to modify the dashboard, cards are able to be reordered by selecting the card title and dragging and dropping the cards into the desired order. You can also resize a card by selecting the angle symbol in the bottom-right corner of the card (`⌟`) and dragging the card to the desired size. In this example, the **[!UICONTROL Basic attributes]** card is being resized. 
 
 ![](../images/profile-customization/profiles-resize-cards.png)
 
@@ -28,9 +28,11 @@ The selected card adjusts to the desired size and surrounding cards are repositi
 
 ## Edit and remove cards
 
-In addition to resizing and reordering cards, you can edit the content of certain cards and remove some cards from the dashboard entirely. Not all cards can be edited or removed because they contain either read-only or required information. For example, the [!UICONTROL Channel preferences] card cannot be edited because that information is read-only and the [!UICONTROL Linked identities] card cannot be edited or deleted because that information is both read-only and a required part of the profile.
+In addition to resizing and reordering cards, you can edit the content of certain cards and remove some cards from the dashboard entirely. Select the ellipses (`...`) in the top-right corner of the card in order to edit or remove it. This opens a dropdown with options to either [!UICONTROL Edit] or [!UICONTROL Remove] the card, depending on the properties of the card selected.
 
-In order to edit or remove a card, select the ellipses (`...`) in the top-right corner of the card. This opens a dropdown with options to either [!UICONTROL Edit] or [!UICONTROL Remove] the card, depending on the properties of the card selected. Selecting [!UICONTROL Delete] removes the card from the dashboard.
+>[!NOTE]
+>
+>Not all cards can be edited or removed. This is because some cards contain read-only or required information. If a card does not have an ellipses in the top-right corner, it contains read-only AND required information and cannot be edited nor can be it removed. If a card has ellipses in the corner and selecting it shows only an option to [!UICONTROL Remove] the card, the card information is read-only and cannot be edited.
 
 ![](../images/profile-customization/profiles-edit-remove-resized.png)
 
@@ -40,7 +42,7 @@ Selecting **[!UICONTROL Edit]** in the dropdown opens the **[!UICONTROL Edit wid
 
 ## Add attributes {#add-attributes}
 
-From the [!UICONTROL Edit widget] screen, to begin adding attributes to a card simply select **[!UICONTROL Add attributes]** in the top-right corner of the card.
+From the [!UICONTROL Edit widget] screen, to begin adding attributes to a card select **[!UICONTROL Add attributes]** in the top-right corner of the card.
 
 ![](../images/profile-customization/profiles-edit-widget-basic-add-attributes.png)
 
@@ -68,7 +70,7 @@ To further customize the look of profiles within Experience Platform, you can el
 
 ![](../images/profile-customization/profiles-modify-dashboard.png)
 
-Next, select **[!UICONTROL Add widget]** which should now be visible in the top-left corner of the dashboard.
+Next, select **[!UICONTROL Add widget]** in the top-left corner of the dashboard.
 
 ![](../images/profile-customization/profiles-add-widget.png)
 
@@ -76,7 +78,7 @@ Selecting to add a new card opens the [!UICONTROL Edit widget] screen where you 
 
 ![](../images/profile-customization/profiles-edit-new-widget.png)
 
-When the [!UICONTROL Select union schema field] dialog opens, the left-side of the dialog shows the full [!UICONTROL XDM Individual Profile] union schema and the [!UICONTROL Selected Attributes] section on the right-side of the dialog shows the attributes that you select for your card. For more information on adding attributes, see the [section on adding attributes](#add-attributes) earlier in this document.
+When the [!UICONTROL Select union schema field] dialog opens, the left-side of the dialog shows the full [!UICONTROL XDM Individual Profile] union schema and the [!UICONTROL Selected Attributes] section on the right-side of the dialog shows the attributes that you select for your card. For more information on adding attributes, see the [section on adding attributes](#add-attributes) that appears earlier in this document.
 
 The total number of attributes selected is shown, as well as the maximum number of attributes (20) that can be added to a single card. You can also remove and reorder your selected attributes from this screen. Once you have added all of the attributes that you would like displayed on the card, choose [!UICONTROL Select] to return to the [!UICONTROL Edit widget] screen.
 
