@@ -17,7 +17,7 @@ Adobe Experience Platform [!DNL Data Governance] provides a user interface that 
 
 This guide requires a working understanding of the following [!DNL Experience Platform] concepts:
 
-- [!DNL Data Governance](../home.md)
+- [[!DNL Data Governance]](../home.md)
 - [Data usage policies](./overview.md)
 
 ## View data usage policies {#view-policies}

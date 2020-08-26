@@ -9,7 +9,7 @@ topic: developer guide
 
 [!DNL Access control] for [!DNL Experience Platform] is administered through the [Adobe Admin Console](https://adminconsole.adobe.com). This functionality leverages product profiles in Admin Console, which link users with permissions and sandboxes. See the [access control overview](../home.md) for more information.
 
-This developer guide provides information on how to format your requests to the [!DNL Access Control API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml), and covers the following operations:
+This developer guide provides information on how to format your requests to the [[!DNL Access Control API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml), and covers the following operations:
 
 - [List names of permissions and resource types](./permissions-and-resource-types.md)
 - [View effective policies for the current user](./effective-policies.md)
@@ -44,4 +44,4 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 ## Next steps
 
-Now that you have gathered the required credentials, you can now continue to read the rest of the developer guide. Each section provides important information regarding their endpoints and demonstrate example API calls for performing CRUD operations. Each call includes the general **API format**, a sample **request** showing required headers and properly formatted payloads, and a sample **response** for a successful call.
+Now that you have gathered the required credentials, you can now continue to read the rest of the developer guide. Each section provides important information regarding their endpoints and demonstrate example API calls for performing CRUD operations. Each call includes the general **API format**, a sample **request** showing required headers and properly formatted payloads, and a sample **response** for a successful call.""""""""""""""""""""''''''''''''''''''''''
