@@ -334,6 +334,7 @@ If the batch has one or more errors and has error diagnostics enabled, the statu
 >[!NOTE]
 >
 >If error diagnostics are not available, the following error message will appear instead:
+>
 > ```json
 > {
 >     "errors": [{

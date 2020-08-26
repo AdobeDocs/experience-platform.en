@@ -770,7 +770,7 @@ https://ns.adobe.com/experience/offer-management/eligibility-rule.
 
 Adding and deleting a rule can be accomplished with a PATCH operation as well:
 
-```
+```json
 [
   {
     "op":   "replace",

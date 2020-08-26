@@ -149,7 +149,7 @@ Pathing helps to understand how customers navigate your site. The `NEXT()` and `
 
 **Syntax:**
 
-```
+```sql
 NEXT(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])
 PREVIOUS(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])
 ```
