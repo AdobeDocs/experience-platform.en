@@ -101,9 +101,9 @@ Set this to configure a callback that is called for every event just before it i
 
 | **Type** | **Required** | **Default Value** |
 | -------- | ------------ | ----------------- |
-| Object   | No           | `{"general": "in"}`|
+| Object   | No           | `"in"`|
 
-Sets the user's default consent. This is used when there is no consent preference already saved for the user. The other valid value is `{"general": "pending"}`. When this is set, work will be queued until the user provides consent preferences. After the user's preferences have been provided, work either proceeds or is aborted based on the user's preferences. See [Supporting Consent](supporting-consent.md) for more information.
+Sets the user's default consent. This is used when there is no consent preference already saved for the user. The other valid value is `"pending"`. When this is set, work will be queued until the user provides consent preferences. After the user's preferences have been provided, work either proceeds or is aborted based on the user's preferences. See [Supporting Consent](supporting-consent.md) for more information.
 
 ## Personalization options
 

@@ -42,7 +42,7 @@ Also, there is currently no JavaScript library that sends data directly to Adobe
 
 ### With Adobe Experience Platform Web SDK
 
-The new web SDK sends data for the following solutions to a single destination (AEP Edge Network) and solves for the most common aforementioned solution use cases. 
+The new Web SDK sends data for the following solutions to a single destination (AEP Edge Network) and solves for the most common aforementioned solution use cases. 
 
 * Adobe Analytics
 * Adobe Audience Manager
