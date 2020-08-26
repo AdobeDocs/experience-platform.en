@@ -599,6 +599,7 @@ timedf.show()
 >
 >
 >In Scala, you can use `sys.env()` to declare and return a value from within `option`. This eliminates the need to define variables if you know they are only going to be used a single time. The following example takes `val userToken` from the above example and declares it in-line within `option` as an alternative:
+>
 > ```scala
 > .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
 > ```
