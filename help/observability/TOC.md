@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;popular topics
-solution: Experience Platform
-title: Observability Insights
-topic: overview
+product: experience-platform
+audience: user
+user-guide-title: Observability Insights Help
+user-guide-description: Observability Insights allows you to monitor activities on Adobe Experience Platform through the use of statistical metrics and event notifications. This document provides an overview of the various capabilities provided by the service, along with links to further documentation for details.
 ---
 
 # Observability Insights {#observability}
