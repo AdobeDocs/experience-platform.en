@@ -8,7 +8,7 @@ description: This developer guide provides steps to help you start using the Cat
 
 # [!DNL Catalog Service] developer guide
 
-[!DNL Catalog Service] is the system of record for data location and lineage within Adobe Experience Platform. [!DNL Catalog] acts as a metadata store or "catalog" where you can find information about your data within [!DNL Experience Platform], without needing to access the data itself. See the [Catalog overview](../home.md) for more information.
+[!DNL Catalog Service] is the system of record for data location and lineage within Adobe Experience Platform. [!DNL Catalog] acts as a metadata store or "catalog" where you can find information about your data within [!DNL Experience Platform], without needing to access the data itself. See the [[!DNL Catalog] overview](../home.md) for more information.
 
 This developer guide provides steps to help you start using the [!DNL Catalog] API. The guide then provides sample API calls for performing key operations using [!DNL Catalog].
 

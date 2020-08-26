@@ -18,7 +18,7 @@ In the [Experience Platform UI](https://platform.adobe.com), click **[!UICONTROL
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-The *[!UICONTROL Streaming end-to-end]* monitoring page appears. This workspace provides a graph that displays the rate of streamed events being received by [!DNL Platform], a graph that displays the rate of streamed events which were successfully processed by [!DNL Real-time Customer Profile](../../profile/home.md), as well as a detailed list of incoming data.
+The *[!UICONTROL Streaming end-to-end]* monitoring page appears. This workspace provides a graph that displays the rate of streamed events being received by [!DNL Platform], a graph that displays the rate of streamed events which were successfully processed by [[!DNL Real-time Customer Profile]](../../profile/home.md), as well as a detailed list of incoming data.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -54,7 +54,7 @@ In addition, failed records provide details on the errors that ocurred while pro
 
 ## Monitor batch end-to-end data ingestion
 
-In the [!DNL Experience Platform UI](https://platform.adobe.com), click  **[!UICONTROL Monitoring]**  on the left navigation menu. 
+In the [Experience Platform UI](https://platform.adobe.com), click  **[!UICONTROL Monitoring]**  on the left navigation menu. 
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 

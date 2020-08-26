@@ -7,7 +7,7 @@ topic: Tutorial
 
 # Publish a model as a service (API)
 
-This tutorial covers the process of publishing a model as a service using the [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
+This tutorial covers the process of publishing a model as a service using the [[!DNL Sensei Machine Learning] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
 
 ## Getting started
 
