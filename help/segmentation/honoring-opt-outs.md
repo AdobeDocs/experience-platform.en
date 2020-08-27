@@ -16,10 +16,10 @@ Once a customer has opted-out, it is important that your organization honor thos
 
 Honoring opt-out requests requires an understanding of the various [!DNL Adobe Experience Platform] services involved. Before working with opt-out requests, please review the documentation for the following services:
 
-- [!DNL Real-time Customer Profile](../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
-- [!DNL Adobe Experience Platform Segmentation Service](./home.md): Allows you to build audience segments from [!DNL Real-time Customer Profile] data.
-- [!DNL Experience Data Model (XDM)](../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
-- [!DNL Adobe Experience Platform Privacy Service](../privacy-service/home.md): Helps organizations to automate compliance with data privacy regulations involving customer data within [!DNL Platform].
+- [[!DNL Real-time Customer Profile]](../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
+- [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Allows you to build audience segments from [!DNL Real-time Customer Profile] data.
+- [[!DNL Experience Data Model (XDM)]](../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
+- [[!DNL Adobe Experience Platform Privacy Service]](../privacy-service/home.md): Helps organizations to automate compliance with data privacy regulations involving customer data within [!DNL Platform].
 
 ## Opt-out mixins
 
@@ -125,4 +125,4 @@ In some instances, such as building a segment of people who have opted out, it m
 
 For more information on segmentation, including working with segment definitions and audiences via the API and user interface, please begin by reading the [segmentation overview](./home.md).
 
-To learn more about data privacy within [!DNL Platform], including how [!DNL Privacy Service] helps to facilitate automated compliance with legal and organizational privacy regulations, please refer to the documentation on [!DNL Privacy Service](../privacy-service/home.md).
+To learn more about data privacy within [!DNL Platform], including how [!DNL Privacy Service] helps to facilitate automated compliance with legal and organizational privacy regulations, please refer to the documentation on [[!DNL Privacy Service]](../privacy-service/home.md).

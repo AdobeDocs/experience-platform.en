@@ -8,6 +8,7 @@ topic: overview
 # (Beta) Azure File Storage connector
 
 >[!NOTE]
+>
 >The Azure File Storage connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure], allowing you to bring your data from these systems.

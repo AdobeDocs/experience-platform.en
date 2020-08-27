@@ -3,6 +3,7 @@ keywords: Experience Platform;download scores;customer ai;popular topics
 solution: Experience Platform
 title: Downloading scores in Customer AI
 topic: Downloading scores
+description: Customer AI allows you to download scores in the parquet file format.
 ---
 
 # Downloading scores in Customer AI

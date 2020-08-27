@@ -3,11 +3,13 @@ keywords: Experience Platform;Tutorial;feature pipeline;Data Science Workspace;p
 solution: Adobe Experience Platform Data Science Workspace
 title: Create a feature pipeline
 topic: Tutorial
+description: Adobe Experience Platform allows you to build and create custom feature pipelines to perform feature engineering at scale through the Sensei Machine Learning Framework Runtime. This document describes the various classes found in a feature pipeline, and provides a step-by-step tutorial for creating a custom feature pipeline using the Model Authoring SDK in PySpark.
 ---
 
 # Create a feature pipeline
 
 >[!IMPORTANT]
+>
 > Feature Pipelines are currently only available via API. 
 
 Adobe Experience Platform allows you to build and create custom feature pipelines to perform feature engineering at scale through the Sensei Machine Learning Framework Runtime (hereinafter referred to as "Runtime").
@@ -385,6 +387,7 @@ scoring.dataSaver: MyDatasetSaver
 Now that you have authored your feature pipeline, you need to create a Docker image to make a call to the feature pipeline endpoints in the [!DNL Sensei Machine Learning] API. You need a Docker image URL in order to make a call to the feature pipeline endpoints.
 
 >[!TIP]
+>
 >If you do not have a Docker URL, visit the [Package source files into a recipe](../models-recipes/package-source-files-recipe.md) tutorial for a step-by-step walkthrough on creating a Docker host URL.
 
 Optionally, you can also use the following Postman collection to assist in completing the feature pipeline API workflow:
@@ -418,6 +421,7 @@ Once complete, make a GET request to `/experiments/{EXPERIMENT_ID}` to [retrieve
 ### Specify the Experiment run scoring task {#scoring}
 
 >[!NOTE]
+>
 > To complete this step you need to have at least one successful training run associated with your Experiment.
 
 After a successful training run, you need to [specify the scoring run task](../api/experiments.md#experiment-training-scoring). Make a POST to `experiments/{EXPERIMENT_ID}/runs` and in the body set the `mode` attribute to "score". This starts your scoring Experiment run.
@@ -430,4 +434,4 @@ Once the scoring has completed, your feature pipeline should be operational.
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-By reading this document, you have authored a feature pipeline using the Model Authoring SDK, created a Docker image, and used the Docker image URL to create a feature pipeline Model by using the [!DNL Sensei Machine Learning] API. You are now ready to continue transforming datasets and extracting data features at scale using the [!DNL Sensei Machine Learning API](../api/getting-started.md).
+By reading this document, you have authored a feature pipeline using the Model Authoring SDK, created a Docker image, and used the Docker image URL to create a feature pipeline Model by using the [!DNL Sensei Machine Learning] API. You are now ready to continue transforming datasets and extracting data features at scale using the [[!DNL Sensei Machine Learning API]](../api/getting-started.md).
