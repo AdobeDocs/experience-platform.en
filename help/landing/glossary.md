@@ -363,7 +363,7 @@ topic: getting started
 
 ## O
 
-**Offer:** An offer is a marketing message that may have rules associated with it that specify who is eligible to see the offer.
+**Offer:** An offer is a marketing message that may have rules associated with it, specifying who is eligible to see the offer.
 
 **Offer Decisioning:** Offer decisioning enables a marketer to manage rules and trained models of offer propositions when engaging with an end-user based on data collected across channels and applications.
 
