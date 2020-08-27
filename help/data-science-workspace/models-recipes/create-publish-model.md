@@ -36,7 +36,7 @@ Before starting this tutorial, you must have the following prerequisites:
     *   Golden Data Set postValues
     *   Golden Data Set Schema
 
-*   Download the three required [!DNL Jupyter Notebook] files from the <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">Adobe public [!DNL Git] repository</a>, these will be used to demonstrate the [!DNL JupyterLab] workflow in [!DNL Data Science Workspace].
+*   Download the three required [!DNL Jupyter Notebook] files from the [Adobe public [!DNL Git] repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs), these will be used to demonstrate the [!DNL JupyterLab] workflow in [!DNL Data Science Workspace].
 
 *   A working understanding of the following key concepts used in this tutorial:
     *   [[!DNL Experience Data Model]](../../xdm/home.md): The standardization effort led by Adobe to define standard schemas such as [!DNL Profile] and ExperienceEvent, for Customer Experience Management. 
