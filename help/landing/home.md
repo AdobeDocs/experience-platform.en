@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey
 solution: Experience Platform
 title: Adobe Experience Platform overview
 topic: getting started
+description: Adobe Experience Platform is the most powerful, flexible, and open system on the market for building and managing complete solutions that drive customer experience. Experience Platform enables organizations to centralize and standardize customer data and content from any system and apply data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
 ---
 
 # Adobe Experience Platform overview
@@ -29,11 +30,11 @@ The following videos outline how [!DNL Experience Platform] creates rich, releva
 
 The Adobe Experience Platform is designed to work optimally in the **latest versions** of Google Chrome, Safari, Firefox, and Microsoft Edge. You might have trouble using certain features on older versions of browsers. 
 
-| Operating system | Supported browsers | | |
-|---|---|---|---|
-| Mac OS X | Google Chrome | Safari | Firefox |
-| Windows 10 | Google Chrome | Microsoft Edge | Firefox |
-| Windows 7 | Google Chrome | |  Firefox |
+| Operating system | Supported browsers |
+|---|---|
+| **Mac OS X** | Google Chrome, Safari, Firefox |
+| **Windows 10** | Google Chrome, Microsoft Edge, Firefox |
+| **Windows 7** | Google Chrome, Firefox |
  
 These operating systems and browsers are not supported:
 

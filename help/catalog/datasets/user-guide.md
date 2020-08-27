@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;datasets;datasets overview;ingest datasets;catalog;user guide
+keywords: Experience Platform;home;popular topics;enable dataset;Dataset;dataset
 solution: Experience Platform
 title: Datasets user guide
 topic: datasets

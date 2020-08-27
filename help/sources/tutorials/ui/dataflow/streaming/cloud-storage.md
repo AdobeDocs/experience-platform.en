@@ -13,10 +13,10 @@ A dataflow is a scheduled task that retrieves and ingests data from a source to 
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
--   [Experience Data Model (XDM) System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+-   [[!DNL Experience Data Model] (XDM) System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     -   [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
     -   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
--   [Real-time Customer Profile](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+-   [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 Additionally, this tutorial requires that you have already created a cloud storage connector. A list of tutorials for creating different cloud storage connectors in the UI can be found in the [source connectors overview](../../../../home.md).
 
@@ -28,7 +28,7 @@ After creating your cloud storage connector, the *Select data* step appears, pro
 
 ## Map data fields to an XDM schema
 
-The *Mapping* step appears, providing an interactive interface to map the source data to a [!DNL Platform] dataset. 
+The **[!UICONTROL Mapping]** step appears, providing an interactive interface to map the source data to a [!DNL Platform] dataset. 
 
 Choose a dataset for inbound data to be ingested into. You can either use an existing dataset or create a new one.
 
@@ -38,7 +38,7 @@ To ingest data into an existing dataset, select **[!UICONTROL Use existing datas
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/use-existing-data.png)
 
-The _Select dataset_ dialog appears. Find the dataset you you wish to use, select it, then click **[!UICONTROL Continue]**.
+The **[!UICONTROL Select dataset]** dialog appears. Find the dataset you you wish to use, select it, then click **[!UICONTROL Continue]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-existing-data.png)
 
@@ -50,7 +50,7 @@ To ingest data into a new dataset, select **[!UICONTROL Create new dataset]** an
 
 ## Name your dataflow
 
-The *[!UICONTROL Dataflow detail]* step appears, allowing you to name and give a brief description about your new dataflow.
+The **[!UICONTROL Dataflow detail]** step appears, allowing you to name and give a brief description about your new dataflow.
 
 Provide values for the dataflow and click **[!UICONTROL Next]**.
 
@@ -58,10 +58,10 @@ Provide values for the dataflow and click **[!UICONTROL Next]**.
 
 ### Review your dataflow
 
-The *Review* step appears, allowing you to review your new dataflow before it is created. Details are grouped within the following categories:
+The **[!UICONTROL Review]** step appears, allowing you to review your new dataflow before it is created. Details are grouped within the following categories:
 
-- *[!UICONTROL Source details]*: Shows the source type and other relevant details about the source.
-- *[!UICONTROL Target details]*: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
+- **[!UICONTROL Source details]**: Shows the source type and other relevant details about the source.
+- **[!UICONTROL Target details]**: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
 
 Once you have reviewed your dataflow, click **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
 
@@ -75,8 +75,8 @@ Once your cloud storage dataflow has been created, you can monitor the data that
 
 By following this tutorial, you have successfully created a dataflow to bring in data from an external cloud storage, and gained insight on monitoring datasets. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
--   [Real-time Customer Profile overview](../../../../../profile/home.md)
--   [Data Science Workspace overview](../../../../../data-science-workspace/home.md)
+-   [[!DNL Real-time Customer Profile] overview](../../../../../profile/home.md)
+-   [[!DNL Data Science Workspace] overview](../../../../../data-science-workspace/home.md)
 
 ## Appendix
 
@@ -86,11 +86,11 @@ The following sections provide additional information for working with source co
 
 When a dataflow is created, it immediately becomes active and ingests data according to the schedule it was given. You can disable an active dataflow at any time by following the instructions below.
 
-Within the *[!UICONTROL Sources]* workspace, click the **[!UICONTROL Browse]** tab. Next, click the name of the base connection that's associated the active dataflow you wish to disable.
+Within the **[!UICONTROL Sources]** workspace, click the **[!UICONTROL Browse]** tab. Next, click the name of the connection that's associated the active dataflow you wish to disable.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/browse.png)
 
-The *[!UICONTROL Source activity]* page appears. Select the active dataflow from the list to open its *Properties* column on the right-hand side of the screen, which contains an **[!UICONTROL Enabled]** toggle button. Click the toggle to disable the dataflow. The same toggle can be used to re-enable a dataflow after it has been disabled.
+The **[!UICONTROL Source activity]** page appears. Select the active dataflow from the list to open its **[!UICONTROL Properties]** column on the right-hand side of the screen, which contains an **[!UICONTROL Enabled]** toggle button. Click the toggle to disable the dataflow. The same toggle can be used to re-enable a dataflow after it has been disabled.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/disable-source.png)
 

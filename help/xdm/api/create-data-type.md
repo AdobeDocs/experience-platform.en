@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type;datatype;Datatype
 solution: Experience Platform
 title: Create a data type
 topic: developer guide
+description: When there are common data structures that your organization wishes to use in multiple ways, you may wish to define a data type. Data types allow for the consistent use of multi-field structures, with more flexibility than mixins because they can be included anywhere in a schema by adding them as the 'type' of a field. 
 ---
 
 # Create a data type

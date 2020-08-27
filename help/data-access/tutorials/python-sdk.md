@@ -122,7 +122,9 @@ df = dataset_reader.select(['column-a']).distinct().read()
 
 The [!DNL Python] SDK supports certain operators to help filter the dataset.
 
->[!NOTE] The functions used for filtering are case sensitive.
+>[!NOTE]
+>
+>The functions used for filtering are case sensitive.
 
 ```python
 eq() = '='

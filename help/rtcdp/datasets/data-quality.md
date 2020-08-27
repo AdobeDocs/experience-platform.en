@@ -1,4 +1,5 @@
 ---
+keywords: data quality;rtcdp data quality
 title: Data quality on Real-time Customer Data Platform
 seo-title: Data quality on Adobe Real-time Customer Data Platform
 description: A document on data quality on Real-time Customer Data Platform

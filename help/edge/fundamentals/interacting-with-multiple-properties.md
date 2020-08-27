@@ -3,6 +3,7 @@ title: Interacting with multiple properties
 seo-title: Adobe Experience Platform Web SDK Interacting with multiple properties
 description: Learn how to interact with multiple Experience Platform Web SDK properties
 seo-description: Learn how to interact with multiple Experience Platform Web SDK properties
+keywords: multiple properties;configure;sendEvent;edgeConfigId;orgId;
 ---
 
 # Interacting with multiple properties

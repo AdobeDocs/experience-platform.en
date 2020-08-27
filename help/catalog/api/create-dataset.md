@@ -1,10 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics;create dataset;catalog service;api
+keywords: Experience Platform;home;popular topics;dataset;Dataset;create a dataset;create dataset;enable dataset
 solution: Experience Platform
 title: Create a dataset
 topic: developer guide
-description: In order to create a dataset using the  Catalog API, you must know the id value of the Experience Data Model (XDM) schema on which the dataset will be based. Once you have the schema ID, you can create a dataset by making a POST request to the /datasets endpoint in the Catalog API.
-
+description: This document covers how to create a dataset object in Catalog.
 ---
 
 # Create a dataset

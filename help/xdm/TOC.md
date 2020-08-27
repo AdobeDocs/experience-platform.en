@@ -10,6 +10,8 @@ user-guide-title: Experience Data Model (XDM) System Help
 * XDM schemas {#schema}
   * [Basics of schema composition](schema/composition.md)
   * [XDM field dictionary](schema/field-dictionary.md)
+  * Schema use cases {#use-cases}
+    * [Privacy Consent mixin](schema/privacy-consent.md)
 * Schema Registry API {#api}
   * [Getting started](api/getting-started.md)
   * [List resources](api/list-resources.md)

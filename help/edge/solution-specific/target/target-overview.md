@@ -3,6 +3,7 @@ title: Adobe Target and The Adobe Experience Platform Web SDK.
 seo-title: Adobe Experience Platform Web SDK and using Adobe Target
 description: Learn how to render personalized content with Experience Platform Web SDK using Adobe Target
 seo-description: Learn how to render personalized content with Experience Platform Web SDK using Adobe Target
+keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
 ---
 
 # [!DNL Target] Overview

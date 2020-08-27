@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;catalog service;list objects;api
+keywords: Experience Platform;home;popular topics;filter;Filter;filter data;Filter data
 solution: Experience Platform
 title: List objects
 topic: developer guide

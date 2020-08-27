@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;PSQL;psql
 solution: Experience Platform
 title: Connect with PSQL
 topic: connect
+description: PSQL is a command-line interface that comes when you install Postgres on your machine. You can install it by following these instructions. 
 ---
 
 # Connect with PSQL
@@ -60,11 +61,13 @@ Return to the [!DNL Platform] UI on the *[!UICONTROL Connect BI Tools]* page.
 Click **[!UICONTROL copy]** for *[!UICONTROL PSQL Command]*.
     
 ![Image](../images/clients/psql/connect-bi.png)
-    
->[!IMPORTANT]: If you are on a PC, use a text editor to remove the line breaks in the command string, then copy the string.
+
+>[!IMPORTANT]
+>
+>If you are on a PC, use a text editor to remove the line breaks in the command string, then copy the string.
 
 Paste the command string into a terminal or command window and press Enter.
-    
+
 You should see a result like this:
 
 ```shell

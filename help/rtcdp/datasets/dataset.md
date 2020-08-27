@@ -1,4 +1,5 @@
 ---
+keywords: datasets;rtcdp datasets
 title: Dataset overview
 seo-title: Overview of datasets in Adobe Experience Platform
 description: Overview of datasets in Adobe Experience Platform

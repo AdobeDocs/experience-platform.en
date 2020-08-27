@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics;Catalog api;getting started catalog;catalog developer guide
+keywords: Experience Platform;home;popular topics;catalog service;catalog;Catalog service;Catalog
 solution: Experience Platform
 title: Catalog Service developer guide
 topic: developer guide
-description: Catalog Service is the system of record for data location and lineage within Adobe Experience Platform. Catalog acts as a metadata store or "catalog" where you can find information about your data within Experience Platform, without needing to access the data itself. This developer guide provides steps to help you start using the Catalog API.
+description: This developer guide provides steps to help you start using the Catalog API. The guide then provides sample API calls for performing key operations using Catalog.
 ---
 
 # [!DNL Catalog Service] developer guide

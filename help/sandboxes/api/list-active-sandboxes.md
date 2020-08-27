@@ -23,7 +23,7 @@ GET /
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/sandbox-management \
+  https://platform.adobe.io/data/foundation/sandbox-management/ \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \

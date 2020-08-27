@@ -1,4 +1,5 @@
 ---
+keywords: Google ads;google ads;google adwords;Google AdWords;Google Adwords
 title: Google AdsDestination
 seo-title: Google Ads Destination
 description: Google Ads, formerly known as Google AdWords, is an online advertising service that allows businesses to pay-per-click advertising across text-based searches, graphic displays, YouTube videos, and in-app mobile displays.
@@ -42,10 +43,14 @@ Before creating the [!DNL Google Ads] destination in Adobe Real-time CDP, you mu
 * Your account type: **AdWords**
 * **Google AdWords ID** : This is your ID with [!DNL Google]. The ID format is typically 123-456-7890.
 
-## Create destination
+## Configure destination
 
-1. In **[!UICONTROL Connections > Destinations]**, select [!DNL Google Ads], and select **[!UICONTROL Create destination]**.
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL Google Ads], and select **[!UICONTROL Configure]**.
     ![Connect Google Ads destination](/help/rtcdp/destinations/assets/google-2-destination.png)
+
+    >[!NOTE]
+    >
+    >If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](/help/rtcdp/destinations/destinations-workspace.md#catalog) section of the destination workspace documentation.  
 
 2. In the **Setup** step of the create destination workflow, fill in the [!UICONTROL Basic Information] for the destination. <br>
     ![Basic information Google Ads](/help/rtcdp/destinations/assets/google-2-destination-setup-step.png)
@@ -59,3 +64,6 @@ Before creating the [!DNL Google Ads] destination in Adobe Real-time CDP, you mu
 
 For instructions on how to activate segments to [!DNL Google Ads], see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md).
 
+## Exported data 
+
+To verify if data has been exported successfully to the [!DNL Google Ads] destination, check your [!DNL Google Ads] account. If activation was successful, audiences are populated in your account.

@@ -20,7 +20,7 @@ In order to configure access control for [!DNL Experience Platform], you must ha
 
 A high-level workflow for gaining and assigning access permissions can be summarized as follows:
 
-- After subscribing to Adobe Experience Platform, an email is sent to the administrator specified in the registration form.
+- After licensing Adobe Experience Platform, or an Application/App Service that uses Experience Platform, an email is sent to the administrator specified during licensing.
 - The administrator logs in to [Adobe Admin Console](#adobe-admin-console) and selects **Adobe Experience Platform** from the list of products on the overview page.
 - The administrator can view the default [product profiles](#product-profiles) or create new customer product profiles as needed.
 - The administrator can edit the permissions and users for any existing product profiles.

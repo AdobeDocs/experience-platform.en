@@ -1,4 +1,5 @@
 ---
+keywords: Amazon Kinesis;kinesis destination;kinesis
 title: Amazon Kinesis destination
 seo-title: Amazon Kinesis destination
 description: Create a real-time outbound connection to your Amazon Kinesis storage to stream data from Adobe Experience Platform.
@@ -68,7 +69,7 @@ See [Activate profiles and segments to a destination](/help/rtcdp/destinations/a
 
 Your exported [!DNL Experience Platform] data lands in [!DNL Amazon Kinesis] in JSON format. For example, the event below contains the email address profile attribute of an audience that has qualified for a certain segment and exited another segment. The identities for this prospect are ECID and email.
 
-```
+```json
 {
   "person": {
     "email": "yourstruly@adobe.con"

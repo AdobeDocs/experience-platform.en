@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api;supported data usage labels;contract labels;identity labels;sensitive labels
 solution: Experience Platform
-title: Supported data usage labels
+title: Core data usage labels
 topic: labels
 description: This document outlines all data usage labels currently supported by Adobe Experience Platform.
 ---
 
-# Supported data usage labels
+# Core data usage labels
 
-Adobe Experience Platform includes infrastructure for data governance with Data Usage Labeling and Enforcement (DULE) at its core.  DULE features enable the application of data usage labels to datasets and fields in order to categorize data according to the type of usage policies that apply to that data.
+Data usage labels allow you to categorize datasets and fields according to usage policies that apply to that data. Adobe Experience Platform Data Governance provides several core data usage labels out-of-the-box that you can use to start categorizing your data.
 
-This document outlines all data usage labels currently supported by [!DNL Experience Platform]. More information regarding [!DNL Data Governance] and DULE can be found in the [Data Governance overview](../home.md).
+This document outlines the core data usage labels currently provided by [!DNL Experience Platform]. More information regarding [!DNL Data Governance] can be found in the [Data Governance overview](../home.md).
 
 ## Contract labels
 

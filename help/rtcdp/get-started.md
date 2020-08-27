@@ -1,4 +1,5 @@
 ---
+keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
 title: Getting started with Adobe Real-time Customer Data Platform
 seo-title: Getting started with Adobe Real-time Customer Data Platform
 description: Sample scenario for Adobe Real-time Customer Data Platform
@@ -208,7 +209,7 @@ The Luma data science team has created models around propensity to buy. One mode
 
 Modify or create a segment that represents cart abandoners who appear to be in the process of buying a gift:  
 
-```
+```sql
 Profile: Category != Preferred Category 
 AND 
 Product Size != Preferred Size 

@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Catalog;data location;catalog service
+keywords: Experience Platform;home;popular topics;catalog service;catalog;Catalog service;data location;Data Location;Data management;data management;Lineage;lineage;Catalog;enable dataset
 solution: Experience Platform
 title: Catalog Service overview
 topic: overview

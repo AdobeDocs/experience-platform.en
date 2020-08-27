@@ -252,9 +252,11 @@ The response downloads the file you requested in in your current directory. In t
 
 ![Terminal](./images/download-scores/terminal-output.png)
 
-## Next Steps
+The scores downloaded will be in parquet format and will either need a [!DNL Spark]-shell or parquet reader to view the scores. For raw score viewing, you can use [parquet tools](https://github.com/apache/parquet-mr/tree/master/parquet-tools). Parquet tools can analyze the data with [!DNL Spark].
 
-This document outlined the steps required for downloading Attribution AI scores. You can now continue to browse the other [Intelligent Services](../home.md) and guides that are offered.
+## Next steps
+
+This document outlined the steps required for downloading Attribution AI scores. For more information on the score outputs, please visit the [Attribtuion AI input and output](./input-output.md) documentation.
 
 ## Accessing scores using Snowflake
 

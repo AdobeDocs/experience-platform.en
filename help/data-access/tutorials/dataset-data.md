@@ -359,7 +359,7 @@ HEAD /files/{FILE_ID}?path={FILE_NAME}
 | Property | Description |
 | -------- | ----------- |
 | `{FILE_ID}` | The file's identifier. |
-| `{FILE_NAME`} | The file name (for example, profiles.parquet) |
+| `{FILE_NAME}` | The file name (for example, profiles.parquet) |
 
 **Request**
 
@@ -390,7 +390,7 @@ GET /files/{FILE_ID}?path={FILE_NAME}
 | Property | Description |
 | -------- | ----------- |
 | `{FILE_ID}` | The file's identifier. |
-| `{FILE_NAME`} | The file name (for example, profiles.parquet). |
+| `{FILE_NAME}` | The file name (for example, profiles.parquet). |
 
 **Request**
 

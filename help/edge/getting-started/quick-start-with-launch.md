@@ -3,6 +3,7 @@ title: Quick start with Launch
 seo-title: Adobe Experience Platform Web SDK quick start with Launch
 description: Quick start guide for using the Experience Platform Web SDK extension to collect data
 seo-description: Quick start guide for using the Experience Platform Web SDK extension to collect data
+keywords: 1st-party domain;CNAME;schema;create schema;launch;aep web sdk extension;extension;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;
 ---
 
 # Welcome
@@ -12,14 +13,6 @@ This guide leads you through the different ways to set up the Adobe Experience P
 - Have a [1st-party domain (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) enabled. If you already have a CNAME for Analytics, you should use that one. Testing in development works without a CNAME, but you need one before you go to production.
 - Be entitled to Adobe Experience Platform. If you have not purchased Platform, Adobe will provision you with Experience Platform Data Services Foundation for use in a limited fashion with the SDK at no extra charge.
 - Be using the latest version of the Visitor ID service.
-
-## Create a configuration ID
-
-You can create a configuration ID using the [edge configuration tool](../fundamentals/edge-configuration.md) in Launch. This allows you to enable the Edge Network to send data to the various solutions. Details for how to find each option are found in the [Edge Configuration Tool](../fundamentals/edge-configuration.md) Page.
-
->[!NOTE]
->
->Your organization must be whitelisted for this feature. Please contact your CSM to get put on the list for eventual whitelisting.
 
 ## Prepare a Schema
 
@@ -31,10 +24,21 @@ The Experience Platform Edge Network takes data as XDM. XDM is a data format tha
 
 The following video is intended to support you in creating a schema, dataset, and streaming source connector for your [!DNL Web SDK] data.
 
+
+>[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
+
 Log in to Launch and install the `AEP Web SDK` extension. When you install the SDK, you are prompted to configure the extension. Enter the Config ID you requested above. The extension automatically fills in your Organization ID.
 
 
 For more details on different configuration options, see [Configuring the SDK](../fundamentals/configuring-the-sdk.md).
+
+## Create a configuration ID
+
+You can create a configuration ID using the [edge configuration tool](../fundamentals/edge-configuration.md) in Launch. This allows you to enable the Edge Network to send data to the various solutions. Details for how to find each option are found in the [Edge Configuration Tool](../fundamentals/edge-configuration.md) Page.
+
+>[!NOTE]
+>
+>Your organization must be whitelisted for this feature. Please contact your CSM to get put on the list for eventual whitelisting.
 
 ## Create a Data Element Based on Your Schema
 

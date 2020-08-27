@@ -92,7 +92,9 @@ The Retail Sales schema and datasets are created automatically by using the prov
     python bootstrap.py
     ```
 
-    >[!NOTE] The script may take several minutes to complete.
+    >[!NOTE]
+    >
+    >The script may take several minutes to complete.
 
 ## Next steps
 

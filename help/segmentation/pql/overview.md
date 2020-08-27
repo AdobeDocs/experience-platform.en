@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;PQL;pql;profile query language
 solution: Experience Platform
 title: Profile Query Language (PQL) overview
 topic: developer guide
+description: This guide provides a general overview of PQL, covering formatting guidelines and providing example PQL expressions.
 ---
 
 # [!DNL Profile Query Language] (PQL) overview
@@ -73,6 +74,7 @@ The following table outlines the different categories of supported PQL functions
 | Array, list, and set | Used to interact with arrays, lists, and sets. More information about these functions can be found in the [array, list, and set functions document](./array-functions.md). |
 | Map | Used to interact with maps. More information about these functions can be found in the [map functions document](./map-functions.md). |
 | String | Used to interact with strings. More information about these functions can be found in the [string functions document](./string-functions.md). |
+| Object | Used to interact with objects. More information about these functions can be found in the [object functions document](./object-functions.md). |
 | Arithmetic | Used to perform basic arithmetic on PQL elements. More information about these functions can be found in the [arithmetic functions document](./arithmetic-functions.md) |
 | Aggregation | Used to combine results of an array into a singular result. More information about aggregation functions can be found in the [aggregation functions document](./aggregation-functions.md). |
 | Date and time | Used in conjunction with date, time, and datetime objects. More information about these functions can be found in the [date/time functions document](./datetime-functions.md). |

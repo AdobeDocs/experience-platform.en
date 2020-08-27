@@ -1,4 +1,5 @@
 ---
+keywords: metrics overview; rtcdp metrics overview
 title: Real-time Customer Data Platform Home Page and Dashboards
 seo-title: Real-time Customer Data Platform Home Page and Dashboards
 description: Dashboards, Home Page, and First-Time User Experience of Adobe Experience Platform

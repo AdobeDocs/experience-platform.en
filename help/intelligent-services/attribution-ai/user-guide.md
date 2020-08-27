@@ -75,7 +75,7 @@ If you require more than one conversion, click **Add conversion** to create a ne
 
 ![add conversion](./images/user-guide/add_conversion.png)
 
-### Define lookback window
+### Define lookback window {#lookback-window}
 
 After you have finished defining your conversion, you need to confirm your lookback window. Using the arrow keys or by clicking the default value (56), specify how many days prior to your conversion event you wish to include touchpoints from. Touchpoints are defined in the next step.
 
@@ -165,9 +165,9 @@ Lastly, type in the country code in the *Enter Field Value* dropdown.
 
 ![region](./images/user-guide/region-based.png)
 
-### Training window
+### Training window {#training-window}
 
-To ensure that you get the most accurate model possible, it is important to train your model with historical data that represents your business. By default, the model is trained using 2 quarters (6 months) of data. Select the dropdown to change the default. You can choose to train with one to four quarters of data (3-12 months).
+To ensure that you get the most accurate model possible, it is important to train your model with historical data that represents your business. By default, the model is trained using 2 quarters (6 months) of conversion events data. Select the dropdown to change the default. You can choose to train with one to four quarters of data (3-12 months).
 
 >[!NOTE]
 >
