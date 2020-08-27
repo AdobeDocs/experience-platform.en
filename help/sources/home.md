@@ -34,7 +34,7 @@ Sources in [!DNL Experience Platform] are grouped into the following categories:
 
 [!DNL Experience Platform] provides support for ingesting data from a third-party advertising system. See the following related documents for more information on specific source connectors:
 
-- [!DNL Google AdWords](connectors/advertising/ads.md) connector
+- [[!DNL Google AdWords]](connectors/advertising/ads.md) connector
 
 ### Cloud Storage
 

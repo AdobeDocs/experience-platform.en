@@ -14,9 +14,9 @@ This document provides a tutorial for working with the runtime services of [!DNL
 
 This tutorial requires a working understanding of the [!DNL Experience Platform] services involved in decisioning and determining the next best offer to present during customer experiences. Before beginning this tutorial, please review the documentation for the following:
 
-- [Decisioning Service](./../home.md): Provides the framework for adding and removing offers and creating algorithms for choosing the best to present during a customer's experience.
+- [[!DNL Decisioning Service]](./../home.md): Provides the framework for adding and removing offers and creating algorithms for choosing the best to present during a customer's experience.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
-- [[!DNL Profile Query Language] (PQL)](../../segmentation/pql/overview.md): PQL is used to define rules and filters.
+- [[!DNL Profile Query Language (PQL)]](../../segmentation/pql/overview.md): PQL is used to define rules and filters.
 - [Manage Decisioning objects and rules using APIs](./entities.md): Prior to using the Decisioning Services runtime, you will need to set up the related entities.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.

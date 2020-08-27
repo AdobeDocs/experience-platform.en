@@ -27,7 +27,7 @@ Before starting this tutorial, you must have the following prerequisites:
 
 ## Access [!DNL JupyterLab] and [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1.  In [Experience Platform](https://platform.adobe.com), navigate to **[!UICONTROL Notebooks]** from the left navigation column. Allow a moment for JupyterLab to load.
+1.  In [[!DNL Experience Platform]](https://platform.adobe.com), navigate to **[!UICONTROL Notebooks]** from the left navigation column. Allow a moment for JupyterLab to load.
 
     ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 

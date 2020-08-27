@@ -108,7 +108,7 @@ The following two sections will go over loading data and data preparation.
 
 This step uses the [pandas dataframe](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Data can be loaded from files in [!DNL Adobe Experience Platform] using either the [!DNL Platform] SDK (`platform_sdk`), or from external sources using pandas' `read_csv()` or `read_json()` functions.
 
-- [Platform SDK](#platform-sdk)
+- [[!DNL Platform SDK]](#platform-sdk)
 - [External sources](#external-sources)
 
 >[!NOTE]

@@ -51,4 +51,4 @@ Next, clone the repository you wish to use using the `git clone` command. Clone 
 
 ## Next steps
 
-After you have finished cloning your repository, you can use Git as you normally would on your local machine to collaborate with others on notebooks. For more information on what you can do within [!DNL JupyterLab], see the [[!DNL JupyterLab] user guide](./overview.md).
+After you have finished cloning your repository, you can use Git as you normally would on your local machine to collaborate with others on notebooks. For more information on what you can do within [!DNL JupyterLab], see the [[!DNL JupyterLab user guide]](./overview.md).

@@ -16,7 +16,7 @@ This guide requires a working understanding of the following components of Adobe
 
 * [Batch ingestion](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] allows you to ingest data as batch files.
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-* [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.
 

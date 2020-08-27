@@ -21,7 +21,7 @@ This tutorial requires a working understanding of the [!DNL Experience Platform]
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
 - [[!DNL Decisioning Service]](./../home.md): Explains the concepts and components used for Experience Decisioning in general and Offer decisioning in particular. Illustrates the strategies used for choosing the best option to present during a customer's experience.
-- [[!DNL Profile Query Language] (PQL)](../../segmentation/pql/overview.md): PQL is a powerful language to write expressions over XDM instances. PQL is used to define decision rules.
+- [[!DNL Profile Query Language (PQL)]](../../segmentation/pql/overview.md): PQL is a powerful language to write expressions over XDM instances. PQL is used to define decision rules.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.
 

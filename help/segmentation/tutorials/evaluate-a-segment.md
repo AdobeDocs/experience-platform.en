@@ -8,7 +8,7 @@ description: This document provides a tutorial for evaluating segments and acces
 
 # Evaluate and access segment results
 
-This document provides a tutorial for evaluating segments and accessing segment results using the [!DNL Segmentation API](../api/getting-started.md). 
+This document provides a tutorial for evaluating segments and accessing segment results using the [[!DNL Segmentation API]](../api/getting-started.md). 
 
 ## Getting started
 
@@ -222,10 +222,10 @@ More detailed information about using this endpoint can be found in the [export 
 
 ## Next steps
 
-Once the export has completed successfully, your data is available within the [!DNL Data Lake] in [!DNL Experience Platform]. You can then use the [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) to access the data using the `batchId` associated with the export. Depending on the size of the segment, the data may be in chunks and the batch may consist of several files.
+Once the export has completed successfully, your data is available within the [!DNL Data Lake] in [!DNL Experience Platform]. You can then use the [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) to access the data using the `batchId` associated with the export. Depending on the size of the segment, the data may be in chunks and the batch may consist of several files.
 
 For step-by-step instructions on how to use the [!DNL Data Access] API to access and download batch files, follow the [Data Access tutorial](../../data-access/tutorials/dataset-data.md).
 
 You can also access successfully exported segment data using [!DNL Adobe Experience Platform Query Service]. Using the UI or RESTful API, [!DNL Query Service] allows you to write, validate, and run queries on data within the [!DNL Data Lake].
 
-For more information on how to query audience data, please review the documentation on [!DNL Query Service](../../query-service/home.md).
+For more information on how to query audience data, please review the documentation on [[!DNL Query Service]](../../query-service/home.md).

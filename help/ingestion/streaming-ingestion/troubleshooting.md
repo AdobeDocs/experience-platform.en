@@ -93,4 +93,4 @@ If [!DNL Real-time Customer Profile] rejects a message, it is most likely due to
 
 There are two types of identity namespaces: default and custom. When using custom namespaces, make sure the namespace has been registered within [!DNL Identity Service]. See the [identity namespace overview](../../identity-service/namespaces.md) for more information on using default and custom namespaces.
 
-You can use the [Experience Platform UI](https://platform.adobe.com) to see more information on why a message failed ingestion. Click **[!UICONTROL Monitoring]** in the left-navigation, then view the _[!UICONTROL Streaming end-to-end]_ tab to see message batches streamed during a selected time period.
+You can use the [[!DNL Experience Platform UI]](https://platform.adobe.com) to see more information on why a message failed ingestion. Click **[!UICONTROL Monitoring]** in the left-navigation, then view the _[!UICONTROL Streaming end-to-end]_ tab to see message batches streamed during a selected time period.

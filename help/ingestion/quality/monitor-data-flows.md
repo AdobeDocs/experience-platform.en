@@ -54,7 +54,7 @@ In addition, failed records provide details on the errors that ocurred while pro
 
 ## Monitor batch end-to-end data ingestion
 
-In the [Experience Platform UI](https://platform.adobe.com), click  **[!UICONTROL Monitoring]**  on the left navigation menu. 
+In the [[!DNL Experience Platform UI]](https://platform.adobe.com), click  **[!UICONTROL Monitoring]**  on the left navigation menu. 
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 

@@ -15,14 +15,14 @@ In addition, the appendix to this tutorial provides further information regardin
 
 This tutorial requires a working understanding of the following components of [!DNL Platform]:
 
-- [[!DNL Experience Data Model] (XDM System)](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
-- [Batch ingestion](../batch-ingestion/overview.md): The method by which [!DNL Platform] ingests data from user-supplied datafiles.
+- [[!DNL Experience Data Model (XDM System)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
+- [[!DNL Batch ingestion]](../batch-ingestion/overview.md): The method by which [!DNL Platform] ingests data from user-supplied datafiles.
 
 This tutorial also requires that you have already created a dataset to ingest your CSV data into. For steps on creating a dataset in the UI, see the [data ingest tutorial](./ingest-batch-data.md).
 
 ## Choose a destination
 
-Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Workflows]** from the left navigation bar to access the *[!UICONTROL Workflows]* workspace.
+Log in to [[!DNL Adobe Experience Platform]](https://platform.adobe.com) and then select **[!UICONTROL Workflows]** from the left navigation bar to access the *[!UICONTROL Workflows]* workspace.
 
 From the **[!UICONTROL Workflows]** screen, select **[!UICONTROL Map CSV to XDM schema]** under the **[!UICONTROL Data ingestion]** section and then select **[!UICONTROL Launch]**.
 

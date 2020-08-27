@@ -433,4 +433,4 @@ Once the scoring has completed, your feature pipeline should be operational.
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-By reading this document, you have authored a feature pipeline using the Model Authoring SDK, created a Docker image, and used the Docker image URL to create a feature pipeline Model by using the [!DNL Sensei Machine Learning] API. You are now ready to continue transforming datasets and extracting data features at scale using the [[!DNL Sensei Machine Learning] API](../api/getting-started.md).
+By reading this document, you have authored a feature pipeline using the Model Authoring SDK, created a Docker image, and used the Docker image URL to create a feature pipeline Model by using the [!DNL Sensei Machine Learning] API. You are now ready to continue transforming datasets and extracting data features at scale using the [[!DNL Sensei Machine Learning API]](../api/getting-started.md).

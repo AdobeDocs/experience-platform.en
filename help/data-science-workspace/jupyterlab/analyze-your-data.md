@@ -13,7 +13,7 @@ The following concepts are introduced:
 
 - **[!DNL JupyterLab]:** [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is the next-generation web-based interface for Project Jupyter, and is tightly integrated into [!DNL Adobe Experience Platform].
 - **Batches:** Datasets are made up of batches. A batch is a set of data collected over a period of time and processed together as a single unit. New batches are created when data is added to a dataset.
-- **Data Access SDK (deprecated):** The Data Access SDK is now deprecated. Please use the [Platform SDK](../authoring/platform-sdk.md) guide.
+- **Data Access SDK (deprecated):** The Data Access SDK is now deprecated. Please use the [[!DNL Platform SDK]](../authoring/platform-sdk.md) guide.
 
 ## Explore notebooks in Data Science Workspace
 
@@ -83,7 +83,7 @@ Now, we can right click on the `Retail-Training-<your-alias>` dataset and select
 
 >[!TIP]
 >
->refer to the [Platform SDK](../authoring/platform-sdk.md) guide to convert your code.
+>refer to the [[!DNL Platform SDK]](../authoring/platform-sdk.md) guide to convert your code.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
