@@ -3,6 +3,7 @@ keywords: Experience Platform;developer guide;Data Science Workspace;popular top
 solution: Experience Platform
 title:  Real-time Machine Learning notebook user guide
 topic: Training and scoring a ML model
+description: The following guide outlines the steps needed to build a Real-time Machine Learning application in Adobe Experience Platform JupyterLab.
 ---
 
 # Real-time Machine Learning notebook user guide (Alpha)

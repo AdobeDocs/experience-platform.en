@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;JupyterLab;recipe;notebooks;Data Science Workspace;popular topics
+keywords: Experience Platform;JupyterLab;recipe;notebooks;Data Science Workspace;popular topics;create recipe
 solution: Experience Platform
 title: Create a recipe using Jupyter notebooks
 topic: Tutorial
+description: This tutorial will go over two main sections. First, you will create a machine learning model using a template within JupyterLab Notebook. Next, you will exercise the notebook to recipe workflow within JupyterLab to create a recipe within Data Science Workspace.
 ---
 
 # Create a recipe using Jupyter notebooks

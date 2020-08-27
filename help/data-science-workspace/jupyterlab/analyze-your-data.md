@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics
+keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;analyze data notebooks
 solution: Experience Platform
 title: Analyze your data using notebooks
 topic: Tutorial
+description: This tutorial focuses on how to use Jupyter notebooks, built within Data Science Workspace, to access, explore, and visualize your data.
 ---
 
 # Analyze your data using notebooks
