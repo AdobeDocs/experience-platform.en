@@ -83,7 +83,7 @@ Now, we can right click on the `Retail-Training-<your-alias>` dataset and select
 
 >[!TIP]
 >
->refer to the [[!DNL Platform SDK]](../authoring/platform-sdk.md) guide to convert your code.
+>Refer to the [[!DNL Platform SDK]](../authoring/platform-sdk.md) guide to convert your code.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
