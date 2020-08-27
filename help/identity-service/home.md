@@ -137,6 +137,6 @@ The following video is intended to support your understanding of Identity Servic
 
 Adobe Experience Platform was built with privacy in mind and includes a data governance framework to protect your customer PII data. Identity data under the "email" or "phone" namespace is encrypted by default, but in order to ensure sensitive data is encrypted before it is persisted, data usage labels can be applied to data as it is ingested or once it arrives in [!DNL Platform]. For more information, please read the [Data Governance overview](../data-governance/home.md).
 
-## Next Steps
+## Next steps
 
 Now that you understand the key concepts of [!DNL Identity Service] and its role within [!DNL Experience Platform], you can begin to learn how to work with your identity graph using the [[!DNL Identity Service API]](./api/getting-started.md).
