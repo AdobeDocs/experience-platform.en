@@ -27,9 +27,11 @@ After creating your payments account, the **[!UICONTROL Select data]** step appe
 - The left half of the interface is a directory browser, displaying your server's files and directories.
 - The right half of the interface lets you preview up to 100 rows of data from a compatible file.
 
-Select the directory you wish to use, then select **[!UICONTROL Next]**.
+You can use the **[!UICONTROL Search]** option on the top of the page to quickly identify the source data you intend to use.
 
-![add-data](../../../images/tutorials/dataflow/payments/add-data.png)
+Once you find the source data, select the directory, then click **[!UICONTROL Next]**.
+
+![select-data](../../../images/tutorials/dataflow/all-tabular/select-data.png)
 
 ## Map data fields to an XDM schema
 
