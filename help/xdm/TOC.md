@@ -10,6 +10,7 @@ user-guide-description: Experience Data Model (XDM) is a publicly documented spe
 * [XDM System overview](home.md)
 * XDM schemas {#schema}
   * [Basics of schema composition](schema/composition.md)
+  * [Best practices for data modeling](schema/best-practices.md)
   * [XDM field dictionary](schema/field-dictionary.md)
   * Schema use cases {#use-cases}
     * [Privacy Consent mixin](schema/privacy-consent.md)
