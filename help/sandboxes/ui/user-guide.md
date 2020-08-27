@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;sandbox user guide;sandbox guide
 solution: Experience Platform
 title: Sandbox user guide
 topic: user guide
+description: This document provides steps on how to perform various operations related to sandboxes in the Adobe Experience Platform user interface.
 ---
 
 # Sandbox user guide
