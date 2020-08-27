@@ -7,11 +7,13 @@ topic: developer guide
 
 # Update a resource
 
-You can modify or update resources in the tenant container using a PATCH request. The Schema Registry supports all standard JSON Patch operations, including add, remove, and replace. 
+You can modify or update resources in the tenant container using a PATCH request. The [!DNL Schema Registry] supports all standard JSON Patch operations, including add, remove, and replace. 
 
 For more information on JSON Patch, including available operations, see the official [JSON Patch documentation](http://jsonpatch.com/).
 
->[!NOTE] If you want to replace an entire resource with new values instead of updating individual fields, see the document on [replacing a resource using a PUT operation](replace-resource.md).
+>[!NOTE]
+>
+>If you want to replace an entire resource with new values instead of updating individual fields, see the document on [replacing a resource using a PUT operation](replace-resource.md).
 
 ## Add mixins to a schema
 
@@ -25,7 +27,7 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Parameter | Description |
 | --- | --- |
-| `{RESOURCE_TYPE}` | The type of resource to be updated from the Schema Library. Valid types are `datatypes`, `mixins`, `schemas`, and `classes`. |
+| `{RESOURCE_TYPE}` | The type of resource to be updated from the [!DNL Schema Library]. Valid types are `datatypes`, `mixins`, `schemas`, and `classes`. |
 | `{RESOURCE_ID}` | The URL-encoded `$id` URI or `meta:altId` of the resource. |
 
 **Request**
@@ -101,7 +103,7 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Parameter | Description |
 | --- | --- |
-| `{RESOURCE_TYPE}` | The type of resource to be updated from the Schema Library. Valid types are `datatypes`, `mixins`, `schemas`, and `classes`. |
+| `{RESOURCE_TYPE}` | The type of resource to be updated from the [!DNL Schema Library]. Valid types are `datatypes`, `mixins`, `schemas`, and `classes`. |
 | `{RESOURCE_ID}` | The URL-encoded `$id` URI or `meta:altId` of the resource. |
 
 **Request**

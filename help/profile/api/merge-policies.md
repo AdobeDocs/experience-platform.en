@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Real-time Customer Profile API developer guide
+title: Merge policies - Real-time Customer Profile API
 topic: guide
 ---
 
-# Merge policies
+# Merge policies endpoint
 
-Adobe Experience Platform enables you to bring data together from multiple sources and combine it in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create that unified view. Using RESTful APIs or the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. This guide shows steps for working with merge policies using the API. To work with merge policies using the UI, please refer to the [merge policies user guide](../ui/merge-policies.md).
+Adobe Experience Platform enables you to bring data together from multiple sources and combine it in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view. Using RESTful APIs or the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. This guide shows steps for working with merge policies using the API. To work with merge policies using the UI, please refer to the [merge policies user guide](../ui/merge-policies.md).
 
 ## Getting started
 
-The API endpoints used in this guide are part of the Real-time Customer Profile API. Before continuing, please review the [Real-time Customer Profile API developer guide](getting-started.md). In particular, the [getting started section](getting-started.md#getting-started) of the Profile developer guide includes links to related topics, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform APIs.
+The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 ## Components of merge policies {#components-of-merge-policies}
 
-Merge policies are private to your IMS Organization, allowing you to create different policies in order to merge schemas in the specific way that you need. Any API accessing Profile data requires a merge policy, though a default will be used if one is not explicitly provided. Platform provides a default merge policy, or you can create a merge policy for a specific schema and mark it as the default for your organization. Each organization can potentially have multiple merge policies per schema, however each schema can have only one default merge policy. Any merge policy set as default will be used in cases where the schema name is provided and a merge policy is required but not provided. When you set a merge policy as the default, any existing merge policy that was previously set as the default will automatically be updated to no longer be used as the default.
+Merge policies are private to your IMS Organization, allowing you to create different policies in order to merge schemas in the specific way that you need. Any API accessing [!DNL Profile] data requires a merge policy, though a default will be used if one is not explicitly provided. [!DNL Platform] provides a default merge policy, or you can create a merge policy for a specific schema and mark it as the default for your organization. Each organization can potentially have multiple merge policies per schema, however each schema can have only one default merge policy. Any merge policy set as default will be used in cases where the schema name is provided and a merge policy is required but not provided. When you set a merge policy as the default, any existing merge policy that was previously set as the default will automatically be updated to no longer be used as the default.
 
 ### Complete merge policy object
 
@@ -38,8 +38,8 @@ The complete merge policy object represents a set of preferences controlling asp
         "attributeMerge": {
             "type": "{ATTRIBUTE_MERGE_TYPE}"
         },
-        "default": {BOOLEAN},
-        "updateEpoch": {UPDATE_TIME}
+        "default": "{BOOLEAN}",
+        "updateEpoch": "{UPDATE_TIME}"
     }
 ```
 
@@ -49,10 +49,10 @@ The complete merge policy object represents a set of preferences controlling asp
 |`name`|Friendly name by which the merge policy can be identified in list views.|
 |`imsOrgId`|Organization ID to which this merge policy belongs|
 |`identityGraph`|[Identity graph](#identity-graph) object indicating the identity graph from which related identities will be obtained. Profile fragments found for all related identities will be merged.|
-|`attributeMerge`|[Attribute merge](#attribute-merge) object indicating the manner by which the merge policy will prioritize profile attribute values in the case of data conflicts.|
+|`attributeMerge`|[Attribute merge](#attribute-merge) object indicating the manner by which the merge policy will prioritize profile attributes in the case of data conflicts.|
 |`schema`|The [schema](#schema) object on which the merge policy can be used.|
 |`default`|Boolean value indicating if this merge policy is the default for the specified schema.|
-|`version`|Platform maintained version of merge policy. This read-only value is incremented whenever a merge policy is updated.|
+|`version`|[!DNL Platform] maintained version of merge policy. This read-only value is incremented whenever a merge policy is updated.|
 |`updateEpoch`|Date of the last update to the merge policy.|
 
 **Example merge policy**
@@ -79,7 +79,7 @@ The complete merge policy object represents a set of preferences controlling asp
 
 ### Identity graph {#identity-graph}
 
-[Adobe Experience Platform Identity Service](../../identity-service/home.md) manages the identity graphs used globally and for each organization on Experience Platform. The `identityGraph` attribute of the merge policy defines how to determine the related identities for a user.
+[Adobe Experience Platform Identity Service](../../identity-service/home.md) manages the identity graphs used globally and for each organization on [!DNL Experience Platform]. The `identityGraph` attribute of the merge policy defines how to determine the related identities for a user.
 
 **identityGraph object**
 
@@ -104,7 +104,7 @@ Where `{IDENTITY_GRAPH_TYPE}` is one of the following:
 
 ### Attribute merge {#attribute-merge}
 
-A profile fragment is the profile information for just one identity out of the list of identities that exist for a particular user. When the identity graph type used results in more than one identity, there is a potential for conflicting values for profile properties and priority must be specified. Using `attributeMerge`, you can specify which dataset profile values to prioritize in the event of a merge conflict.
+A profile fragment is the profile information for just one identity out of the list of identities that exist for a particular user. When the identity graph type used results in more than one identity, there is a potential for conflicting profile attributes and priority must be specified. Using `attributeMerge`, you can specify which profile attributes to prioritize in the event of a merge conflict between Key Value (record data) type datasets.
 
 **attributeMerge object**
 
@@ -116,11 +116,11 @@ A profile fragment is the profile information for just one identity out of the l
 
 Where `{ATTRIBUTE_MERGE_TYPE}` is one of the following:
 
-* **"timestampOrdered"**: (default) Give priority to the profile which was updated last in case of conflict. Using this merge type, the `data` attribute is not required.
-* **"dataSetPrecedence"** : Give priority to profile fragments based on the dataset from which they came. This could be used when information present in one dataset is preferred or trusted over data in another dataset. When using this merge type, the `order` attribute is required, as it lists the datasets in the order of priority.
-    * **"order"**: When "dataSetPrecedence" is used, an `order` array must be supplied with a list of datasets. Any datasets not included in the list will not be merged. In other words, datasets must be explicitly listed to be merged into a profile. The `order` array lists the IDs of the datasets in order of priority.
+* **`timestampOrdered`**: (default) Give priority to the profile which was updated last in case of conflict. Using this merge type, the `data` attribute is not required. `timestampOrdered` also supports custom timestamps which will take precedence when merging profile fragments within or across datasets. To learn more, see the Appendix section on [using custom timestamps](#custom-timestamps).
+* **`dataSetPrecedence`** : Give priority to profile fragments based on the dataset from which they came. This could be used when information present in one dataset is preferred or trusted over data in another dataset. When using this merge type, the `order` attribute is required, as it lists the datasets in the order of priority.
+    * **`order`**: When "dataSetPrecedence" is used, an `order` array must be supplied with a list of datasets. Any datasets not included in the list will not be merged. In other words, datasets must be explicitly listed to be merged into a profile. The `order` array lists the IDs of the datasets in order of priority.
 
-**Example attributeMerge object using dataSetPrecedence type**
+**Example attributeMerge object using `dataSetPrecedence` type**
 
 ```json
     "attributeMerge": {
@@ -134,7 +134,7 @@ Where `{ATTRIBUTE_MERGE_TYPE}` is one of the following:
     }
 ```
 
-**Example attributeMerge object using timestampOrdered type**
+**Example attributeMerge object using `timestampOrdered` type**
 
 ```json
     "attributeMerge": {
@@ -144,7 +144,7 @@ Where `{ATTRIBUTE_MERGE_TYPE}` is one of the following:
 
 ### Schema {#schema}
 
-The schema object specifies the XDM schema for which this merge policy is created.
+The schema object specifies the Experience Data Model (XDM) schema for which this merge policy is created.
 
 **`schema` object**
 
@@ -164,9 +164,11 @@ Where the value of `name` is the name of the XDM class upon which the schema ass
     }
 ```
 
+To learn more about XDM and working with schemas in Experience Platform, begin by reading the [XDM System overview](../../xdm/home.md).
+
 ## Access merge policies {#access-merge-policies}
 
-Using the Real-time Customer Profile API, the `/config/mergePolicies` endpoint allows you perform a lookup request to view a specific merge policy by its ID, or access all of the merge policies in your IMS Organization, filtered by specific criteria.
+Using the [!DNL Real-time Customer Profile] API, the `/config/mergePolicies` endpoint allows you perform a lookup request to view a specific merge policy by its ID, or access all of the merge policies in your IMS Organization, filtered by specific criteria. You can also use the `/config/mergePolicies/bulk-get` endpoint to retrieve multiple merge policies by their IDs. Steps for performing each of these calls are outlined in the following sections.
 
 ### Access a single merge policy by ID
 
@@ -213,6 +215,103 @@ A successful response returns the details of the merge policy.
     },
     "default": false,
     "updateEpoch": 1551127597
+}
+```
+
+See the [components of merge policies](#components-of-merge-policies) section at the beginning of this document for details on each of the individual elements that make up a merge policy.
+
+### Retrieve multiple merge policies by their IDs
+
+You can retrieve multiple merge policies by making a POST request to the `/config/mergePolicies/bulk-get` endpoint and including the IDs of the merge policies you wish to retrieve in the request body.
+
+**API format**
+
+```http
+POST /config/mergePolicies/bulk-get
+```
+
+**Request**
+
+The request body includes an "ids" array with individual objects containing the "id" for each merge policy for which you would like to retrieve details.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/core/ups/config/mergePolicies/bulk-get' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "ids": [
+          {
+            "id": "0bf16e61-90e9-4204-b8fa-ad250360957b"
+          },
+          {
+            "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130"
+          }
+        ]
+      }'
+```
+
+**Response**
+
+A successful response returns HTTP Status 207 (Multi-Status) and the details of the merge policies whose IDs were provided in the POST request.
+
+```json
+{ 
+    "results": { 
+        "0bf16e61-90e9-4204-b8fa-ad250360957b": {
+            "id": "0bf16e61-90e9-4204-b8fa-ad250360957b",
+            "name": "Profile Default Merge Policy",
+            "imsOrgId": "{IMS_ORG}",
+            "sandbox": {
+                "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+                "sandboxName": "prod",
+                "type": "production",
+                "default": true
+            },
+            "schema": {
+                "name": "_xdm.context.profile"
+            },
+            "version": 1,
+            "identityGraph": {
+                "type": "none"
+            },
+            "attributeMerge": {
+                "type": "timestampOrdered"
+            },
+            "default": true,
+            "updateEpoch": 1552086578
+        },
+        "42d4a596-b1c6-46c0-994e-ca5ef1f85130": {
+            "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130",
+            "name": "Dataset Precedence Merge Policy",
+            "imsOrgId": "{IMS_ORG}",
+            "sandbox": {
+                "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+                "sandboxName": "prod",
+                "type": "production",
+                "default": true
+            },
+            "schema": {
+                "name": "_xdm.context.profile"
+            },
+            "version": 1,
+            "identityGraph": {
+                "type": "pdg"
+            },
+            "attributeMerge": {
+                "type": "dataSetPrecedence",
+                "order": [
+                    "5b76f86b85d0e00000be5c8b",
+                    "5b76f8d787a6af01e2ceda18"
+                ]
+            },
+            "default": false,
+            "updateEpoch": 1576099719
+        }
+    }
 }
 ```
 
@@ -621,7 +720,44 @@ A successful delete request returns HTTP Status 200 (OK) and an empty response b
 
 ## Next steps
 
-Now that you know how to create and configure merge policies for your IMS Organization, you can use them to create audience segments from your Real-time Customer Profile data. Please see the [Adobe Experience Platform Segmentation Service documentation](../../segmentation/home.md) to begin defining and working with segments.
+Now that you know how to create and configure merge policies for your IMS Organization, you can use them to create audience segments from your [!DNL Real-time Customer Profile] data. Please see the [Adobe Experience Platform Segmentation Service documentation](../../segmentation/home.md) to begin defining and working with segments.
+
+## Appendix
+
+This section provides supplemental information related to working with merge policies.
+
+### Using custom timestamps {#custom-timestamps}
+
+As Profile records are ingested into Experience Platform, a system timestamp is obtained at the time of ingestion and added to the record. When `timestampOrdered` is selected as the `attributeMerge` type for a merge policy, profiles are merged based on the system timestamp. In other words, merging is done based on the timestamp for when the record was ingested into Platform.
+
+Occasionally there may be use cases, such as backfilling data or ensuring the correct order of events if records are ingested out of order, where it is necessary to supply a custom timestamp and have the merge policy honor the custom timestamp rather than the system timestamp.
+
+In order to use a custom timestamp, the [External Source System Audit Details Mixin](#mixin-details) must be added to your Profile schema. Once added, the custom timestamp can be populated using the `xdm:lastUpdatedDate` field. When a record is ingested with the `xdm:lastUpdatedDate` field populated, Experience Platform will use that field to merge records or profile fragments within and across datasets. If `xdm:lastUpdatedDate` is not present, or not populated, Platform will continue to use the system timestamp.
+
+>[!NOTE]
+>
+>You must ensure that the `xdm:lastUpdatedDate` timestamp is populated when sending a PATCH on the same record.
+
+For step-by-step instructions on working with schemas using the schema registry API, including how to add mixins to schemas, please visit the [tutorial for creating a schema using the API](../../xdm/tutorials/create-schema-api.md).
+
+To work with custom timestamps using the UI, refer to the section on [using custom timestamps](../ui/merge-policies.md#custom-timestamps) in the [merge policies user guide](../ui/merge-policies.md).
+
+#### External Source System Audit Details Mixin details {#mixin-details}
+
+The following example shows correctly populated fields in the External Source System Audit Details Mixin. The complete mixin JSON can also be viewed in the [public Experience Data Model (XDM) repo](https://github.com/adobe/xdm/blob/master/schemas/common/external-source-system-audit-details.schema.json) on GitHub.
+
+```json
+{
+  "xdm:createdBy": "{CREATED_BY}",
+  "xdm:createdDate": "2018-01-02T15:52:25+00:00",
+  "xdm:lastUpdatedBy": "{LAST_UPDATED_BY}",
+  "xdm:lastUpdatedDate": "2018-01-02T15:52:25+00:00",
+  "xdm:lastActivityDate": "2018-01-02T15:52:25+00:00",
+  "xdm:lastReferencedDate": "2018-01-02T15:52:25+00:00",
+  "xdm:lastViewedDate": "2018-01-02T15:52:25+00:00"
+ }
+```
+
 
 
 

@@ -1,17 +1,18 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Catalog service;catalog api;appendix
 solution: Experience Platform
 title: Catalog Service developer guide appendix
 topic: developer guide
+description: This document contains additional information to help you work with the Catalog API in Adobe Experience Platform.
 ---
 
-# Catalog Service developer guide appendix
+# [!DNL Catalog Service] developer guide appendix
 
-This document contains additional information to help you work with the Catalog API.
+This document contains additional information to help you work with the [!DNL Catalog] API.
 
 ## View interrelated objects {#view-interrelated-objects}
 
-Some Catalog objects can be interrelated with other Catalog objects. Any fields that are prefixed by `@` in response payloads denote related objects. The values for these fields take the form of a URI, which can be used in a separate GET request to retrieve the related objects they represent.
+Some [!DNL Catalog] objects can be interrelated with other [!DNL Catalog] objects. Any fields that are prefixed by `@` in response payloads denote related objects. The values for these fields take the form of a URI, which can be used in a separate GET request to retrieve the related objects they represent.
 
 The example dataset returned in the document on [looking up a specific dataset](look-up-object.md) contains a `files` field with the following URI value: `"@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"`. The contents of the `files` field can be viewed by using this URI as the path for a new GET request.
 
@@ -85,9 +86,9 @@ A successful response returns a list of related objects. In this example, a list
 
 ## Make multiple requests in a single call
 
-The root endpoint of the Catalog API allows for multiple requests to be made within a single call. The request payload contains an array of objects representing what would normally be individual requests, which are then executed in order. 
+The root endpoint of the [!DNL Catalog] API allows for multiple requests to be made within a single call. The request payload contains an array of objects representing what would normally be individual requests, which are then executed in order. 
 
-If these requests are modifications or additions to Catalog and any one of the changes fails, all changes will revert.
+If these requests are modifications or additions to [!DNL Catalog] and any one of the changes fails, all changes will revert.
 
 **API format**
 
@@ -101,7 +102,9 @@ The following request creates a new dataset, then creates related views for that
 
 For example, if you would like to reference a value that was returned from a previous sub-request, you can create a reference in the format: `<<{REQUEST_ID}.{ATTRIBUTE_NAME}>>` (where `{REQUEST_ID}` is the user-supplied ID for the sub-request, as demonstrated below). You can reference any attribute available in the body of a previous sub-request's response object by using these templates.
 
->[!NOTE] When an executed sub-request returns only the reference to an object (as is the default for most POST and PUT requests in the Catalog API), this reference is aliased to the value `id` and can be used as  `<<{OBJECT_ID}.id>>`. 
+>[!NOTE]
+>
+>When an executed sub-request returns only the reference to an object (as is the default for most POST and PUT requests in the Catalog API), this reference is aliased to the value `id` and can be used as  `<<{OBJECT_ID}.id>>`. 
 
 ```shell
 curl -X POST \
@@ -135,14 +138,14 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `id` | User-supplied ID that is attached to the response object so that you can match up requests to responses. Catalog does not store this value and simply returns it in the response for reference purposes. |
-| `resource` | The resource path relative to the root of the Catalog API. The protocol and domain should not be part of this value, and it should be prefixed with "/". <br/><br/> When using PATCH or DELETE as the sub-request's `method`, include the object ID in the resource path. Not to be confused with the user-supplied `id`, the resource path uses the ID of the Catalog object itself (for example, `resource: "/dataSets/1234567890"`). |
+| `id` | User-supplied ID that is attached to the response object so that you can match up requests to responses. [!DNL Catalog] does not store this value and simply returns it in the response for reference purposes. |
+| `resource` | The resource path relative to the root of the [!DNL Catalog] API. The protocol and domain should not be part of this value, and it should be prefixed with "/". <br/><br/> When using PATCH or DELETE as the sub-request's `method`, include the object ID in the resource path. Not to be confused with the user-supplied `id`, the resource path uses the ID of the [!DNL Catalog] object itself (for example, `resource: "/dataSets/1234567890"`). |
 | `method` | The name of the method (GET, PUT, POST, PATCH, or DELETE) related to the action taking place in the request. |
 | `body` | The JSON document that would normally be passed as the payload in a POST, PUT, or PATCH request. This property is not required for GET or DELETE requests. |
 
 **Response**
 
-A successful response returns an array of objects containing the `id` that you assigned to each request, the HTTP status code for the individual request, and the response `body`. Since the three sample requests were all to create new objects, the `body` of each object is an array containing only the ID of the newly created object, as is the standard with most successful POST responses in Catalog.
+A successful response returns an array of objects containing the `id` that you assigned to each request, the HTTP status code for the individual request, and the response `body`. Since the three sample requests were all to create new objects, the `body` of each object is an array containing only the ID of the newly created object, as is the standard with most successful POST responses in [!DNL Catalog].
 
 ```json
 [
@@ -167,7 +170,7 @@ Take care when inspecting the response to a multi-request, as you will need to v
 
 ## Additional request headers
 
-Catalog provides several header conventions to help you maintain the integrity of your data during updates.
+[!DNL Catalog] provides several header conventions to help you maintain the integrity of your data during updates.
 
 ### If-Match
 
@@ -183,6 +186,6 @@ On occasion, you may wish to validate an object without saving the information. 
 
 ## Data compaction
 
-Compaction is an Experience Platform service that merges data from small files into larger files without changing any data. For performance reasons, it is sometimes beneficial to combine a set of small files into larger files in order to provide faster access to data when being queried.
+Compaction is an [!DNL Experience Platform] service that merges data from small files into larger files without changing any data. For performance reasons, it is sometimes beneficial to combine a set of small files into larger files in order to provide faster access to data when being queried.
 
-When the files in an ingested batch have been compacted, its associated Catalog object is updated for monitoring purposes.
+When the files in an ingested batch have been compacted, its associated [!DNL Catalog] object is updated for monitoring purposes.

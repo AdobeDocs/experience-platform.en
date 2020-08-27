@@ -3,16 +3,17 @@ keywords: Experience Platform;walkthrough;Data Science Workspace;popular topics
 solution: Experience Platform
 title: Data Science Workspace walkthrough
 topic: Walkthrough
+description: This document provides a walkthrough for Adobe Experience Platform Data Science Workspace. Specifically the general workflow a data scientist would go through to solve a problem using machine learning.
 ---
 
-# Data Science Workspace walkthrough
+# [!DNL Data Science Workspace] walkthrough
 
-This document provides a walkthrough for Adobe Experience Platform Data Science Workspace. Specifically we will go over the general workflow a data scientist would go through to solve a problem using machine learning.
+This document provides a walkthrough for Adobe Experience Platform [!DNL Data Science Workspace]. Specifically we will go over the general workflow a data scientist would go through to solve a problem using machine learning.
 
 ## Prerequisites
 
 - A registered Adobe ID account
-    - The Adobe ID account must have been added to an Organization with access to Adobe Experience Platform and the Data Science Workspace
+    - The Adobe ID account must have been added to an Organization with access to Adobe Experience Platform and the [!DNL Data Science Workspace]
 
 ## Data scientist's motivation
 
@@ -22,22 +23,22 @@ A retailer faces many challenges to stay competitive in the current market. One 
 
 A data scientist's solution is to leverage the wealth of historical data a retailer has access to, to predict future trends, and to optimize pricing decisions. We will use past sales data to train our machine learning model and use the model to predict future sale trends. With this, the retailer will be able to have insights to help them when making pricing changes.
 
-In this overview, we will go over the steps a data scientist would go through to take a dataset and to create a model to predict weekly sales. We will go over the following sections in the Sample Retail Sales Notebook on Adobe Experience Platform Data Science Workspace:
+In this overview, we will go over the steps a data scientist would go through to take a dataset and to create a model to predict weekly sales. We will go over the following sections in the Sample Retail Sales Notebook on Adobe Experience Platform [!DNL Data Science Workspace]:
 
 - [Setup](#setup)
 - [Exploring Data](#exploring-data)
 - [Feature Engineering](#feature-engineering)
 - [Training and Verification](#training-and-verification)
 
-### Notebooks in Data Science Workspace
+### Notebooks in [!DNL Data Science Workspace]
 
-Firstly, we want to create a JupyterLab notebook to open the "Retail Sales" sample notebook. Following the steps done by the data scientist in the notebook will allow us to gain an understanding of a typical workflow.
+Firstly, we want to create a [!DNL JupyterLab] notebook to open the "Retail Sales" sample notebook. Following the steps done by the data scientist in the notebook will allow us to gain an understanding of a typical workflow.
 
-In the Adobe Experience Platform UI, click on the Data Science tab in the top menu to take you to the Data Science Workspace. From this page, click on the JupyterLab tab which will open the JupyterLab launcher. You should see a page similar to this.
+In the Adobe Experience Platform UI, click on the Data Science tab in the top menu to take you to the [!DNL Data Science Workspace]. From this page, click on the [!DNL JupyterLab] tab which will open the [!DNL JupyterLab] launcher. You should see a page similar to this.
 
 ![](./images/walkthrough/jupyterlab_launcher.png)
 
-In our tutorial, we will be using Python 3 in the Jupyter Notebook to show how to access and explore the data. In the Launcher page there are sample notebooks provided. We will be using the "Retail Sales" sample for Python 3.
+In our tutorial, we will be using [!DNL Python] 3 in the [!DNL Jupyter Notebook] to show how to access and explore the data. In the Launcher page there are sample notebooks provided. We will be using the "Retail Sales" sample for [!DNL Python] 3.
 
 ![](./images/walkthrough/retail_sales.png)
 
@@ -55,7 +56,7 @@ With the Retail Sales notebook opened, the first thing we do is to load the libr
 
 #### Load data
 
-After the libraries are loaded, we can start looking at the data. The following Python code uses pandas' `DataFrame` data structure and the [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) function to read the CSV hosted on Github into the pandas DataFrame:
+After the libraries are loaded, we can start looking at the data. The following [!DNL Python] code uses pandas' `DataFrame` data structure and the [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) function to read the CSV hosted on [!DNL Github] into the pandas DataFrame:
 
 ![](./images/walkthrough/read_csv.png)
 
@@ -69,7 +70,7 @@ Finally, we can take a peek at what our data looks like. We can use `df.head(n)`
 
 #### Statistical summary
 
-We can leverage Python's pandas library to get the data type of each attribute. The output of the following call will give us information about the number of entries and the data type for each of the columns:
+We can leverage [!DNL Python's] pandas library to get the data type of each attribute. The output of the following call will give us information about the number of entries and the data type for each of the columns:
 
 ```PYTHON
 df.info()

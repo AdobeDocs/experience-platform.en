@@ -7,7 +7,7 @@ topic: developer guide
 
 # Array, list, and set functions
 
-Profile Query Language (PQL) offers functions to make interaction with arrays, lists, and strings easier. More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
+[!DNL Profile Query Language] (PQL) offers functions to make interaction with arrays, lists, and strings easier. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## In
 
@@ -31,7 +31,9 @@ person.birthMonth in [3, 6, 9]
 
 The `notIn` function is used to determine if an item is not a member of an array or list.
 
->[!NOTE] The `notIn` function *also* ensures that neither value is equal to null. Therefore, the results are not an exact negation of the `in` function.
+>[!NOTE]
+>
+>The `notIn` function *also* ensures that neither value is equal to null. Therefore, the results are not an exact negation of the `in` function.
 
 **Format**
 
@@ -219,7 +221,7 @@ The following PQL query creates a new array of numbers and squares the value of 
 numbers.map(square)
 ```
 
-## First `n` in array
+## First `n` in array {#first-n}
 
 The `topN` function is used to return the first `N` items in an array, when sorted in ascending order based on the given numerical expression.
 
@@ -279,7 +281,7 @@ The `head` function is used to return the first item in the array or list.
 
 **Example**
 
-The following PQL query returns the first of the top five orders with the highest price. More information about the `topN` function can be found in the [first `n` in array](#first-n-in-array) section.
+The following PQL query returns the first of the top five orders with the highest price. More information about the `topN` function can be found in the [first `n` in array](#first-n) section.
 
 ```sql
 orders.topN(price, 5).head()

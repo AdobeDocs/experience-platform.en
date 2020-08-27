@@ -1,17 +1,18 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;decision events;decision event;Decision events
 solution: Experience Platform
 title: Experience Decisioning domain model
 topic: overview
+description: In this section, the components of Decisioning Service are explained and the ways in which those components interact are detailed. The concepts and their relationships form the *Domain* of the decisioning problem. These fundamental components come into play regardless of how you use Decisioning Service].
 ---
 
-# Experience Decisioning domain model
+# Experience [!DNL Decisioning] domain model
 
-In this section, the components of Decisioning Service are explained and the ways in which those components interact are detailed. The concepts and their relationships form the *Domain* of the decisioning problem. These fundamental components come into play regardless of how you use Decisioning Service.
+In this section, the components of [!DNL Decisioning Service] are explained and the ways in which those components interact are detailed. The concepts and their relationships form the *Domain* of the decisioning problem. These fundamental components come into play regardless of how you use [!DNL Decisioning Service].
 
 ## Decision Options
 
-An experience *decision option* is a potential experience that can be presented to a specific customer. An option is also referred to as a choice or alternative. When deciding on the next best option for a customer, Decisioning Service considers options ***d<sub>1</sub>*** to ***d<sub>N</sub>*** from amongst a finite set of options **`D`**.
+An experience *decision option* is a potential experience that can be presented to a specific customer. An option is also referred to as a choice or alternative. When deciding on the next best option for a customer, [!DNL Decisioning Service] considers options ***d<sub>1</sub>*** to ***d<sub>N</sub>*** from amongst a finite set of options **`D`**.
 
 Decisions are made by identifying the best option amongst a set of available options. One approach is to successively eliminate *decision options* ***d<sub>i</sub>*** from the set ***D*** until either only one is left and then pick a "winner" randomly from the remaining set. Another form of decision making is to rank the remaining (eligible) decision options according to their expected outcome.
 
@@ -43,9 +44,9 @@ The general decision framework is shown in the following diagram.
 
 ## Decision Activities
 
-*Decision activities* configure the algorithm and supply parameters for a specific decision strategy. The strategy parameters include the constraints applied to the options and the ranking function. All decisions are made in the context of an activity. Decisioning Service hosts many activities, and activities can be reused across channels. At any given time, the best option is evaluated based on the most current set of constraints, rules, and models.  
+*Decision activities* configure the algorithm and supply parameters for a specific decision strategy. The strategy parameters include the constraints applied to the options and the ranking function. All decisions are made in the context of an activity. [!DNL Decisioning Service] hosts many activities, and activities can be reused across channels. At any given time, the best option is evaluated based on the most current set of constraints, rules, and models.  
 
-A decision activity defines the collection of the decision options to be considered. It filters out the subset of all options that are of interest in this activity. This allows the decisioning service to manage topical categories within the catalog of all options.
+A decision activity defines the collection of the decision options to be considered. It filters out the subset of all options that are of interest in this activity. This allows the [!DNL Decisioning service] to manage topical categories within the catalog of all options.
 
 A decision activity specifies a *fallback option* should the combined constraints disqualify all other options. That means that there is always an answer to the question: What is currently the "best" option?
 
@@ -59,6 +60,6 @@ Decision context data can be divided into user profile related data, business da
 
 - *Profile entities* are used to represent end-user data, but not every profile entity represents an individual. It could be a household, a social group, or any other subject. Experience events are time-series data records attached to a profile. If there is an experience, then this data is the *subject* of this experience. 
 - On the other side, there are the  *business entities*. They can be thought of as the *objects* of the interactions. Those entities are often referenced in the experience events of profile entities. Examples of business entities are web sites and pages, stores, product details, digital content, product inventory data and so forth.
-- The last category of data in the decision context is data that was created during operation of the Decisioning Service. Every decision event falls into that category, together with the responses from customers the proposition data forms an internal data set called the *proposition-response history*.
+- The last category of data in the decision context is data that was created during operation of the [!DNL Decisioning Service]. Every decision event falls into that category, together with the responses from customers the proposition data forms an internal data set called the *proposition-response history*.
 
-There are three paths the data can take to become part of the decision context. Record and time series data can be uploaded via dataset files. This path is mainly for bulk synchronization with external systems. Record and time series data can also be streamed into Platform where the data is indexed and joined to form entities. Via the third path, context data can be passed as parameters to the decision request. This form of data is ephemeral in nature and is only relevant for the decision requested. It is not persisted as an entity and is not available for other requests.
+There are three paths the data can take to become part of the decision context. Record and time series data can be uploaded via dataset files. This path is mainly for bulk synchronization with external systems. Record and time series data can also be streamed into [!DNL Platform] where the data is indexed and joined to form entities. Via the third path, context data can be passed as parameters to the decision request. This form of data is ephemeral in nature and is only relevant for the decision requested. It is not persisted as an entity and is not available for other requests.

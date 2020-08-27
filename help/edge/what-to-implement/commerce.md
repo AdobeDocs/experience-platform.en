@@ -3,26 +3,25 @@ title: Products
 seo-title: Supporting products with Adobe Experience Platform Web SDK
 description: Learn how to How to add data if you have products or a shopping cart with Experience Platform Web SDK
 seo-description: Learn how to How to add data if you have products or a shopping cart with Experience Platform Web SDK
+keywords: products;commerce;measures;measure;order;cartAbandons;checkouts;productListAdds;productListOpens;productListRemovals;productListReopens;productListViews;productViews;purchases;saveForLaters;currencyCode;payments;paymentAmount;paymentType;transactionID;priceTotal;purchaseID;purchaseOrderNumber;
 ---
 
-# (Beta) Products
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+# Products
 
 If you have products on your site, then this is a default set of things you might want to send to enable the most capabilities from Adobe. Though this is a suggestion, it provides a very strong set of data right from the start.
 
 This document uses the [ExperienceEvent Commerce Details](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) mixin. The `commerce` mixin is broken into two parts: the `commerce` object and the `productListItems` array. The `commerce` object lets you indicate which actions are happening to the `productListItems` array.
 
->[!Tip] 
+>[!TIP]
+>
 >If you are familiar with Adobe Analytics, The `commerce` is most closely related to the `events` variable. The `productListItems` is more closely related to the `products` variable.
 
 ## Actions related to products
 
 Below is a list of `measures` available in the `commerce` object.
 
->[!Tip] 
+>[!TIP]
+>
 >A measure has two fields: `id` and `value`. Most of the time, you will use the `value` field only (for example, `'value':1`). The `id` field allows you to set a unique identifier that you can use to keep track of when the measure was sent. See the XDM documentation for [Measure](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/measure.schema.md).
 
 |**Measure**|**Recommendation**|**Description**|
@@ -41,7 +40,7 @@ Below is a list of `measures` available in the `commerce` object.
 Here is an example of how you would set these `Measures` in the SDK.
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "xdm":{
     "commerce":{
       "productViews":{
@@ -69,12 +68,12 @@ The commerce object also has a special field for collecting order details called
 Here is an example of a typical purchase in the SDK.
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
   "xdm":{
     "commerce":{
       "order":{
         "purchaseID":"123456789",
-        "currenceCode":"USD",
+        "currencyCode":"USD",
         "priceTotal":39.98,
         "payments":[
           {
@@ -97,7 +96,7 @@ alloy("event",{
         "SKU":"HT104",
         "name":"The Small Floppy Hat",
         "priceTotal":9.99,
-        "qauntity":1
+        "quantity":1
       }
     ]
   }
@@ -123,7 +122,7 @@ The product list indicates which products are related to the corresponding actio
 `productView` event
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
   "xdm":{
     "commerce":{
       "productViews":{
@@ -147,7 +146,7 @@ alloy("event",{
 `productView` event
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
   "xdm":{
     "commerce":{
       "productListAdds":{
@@ -177,7 +176,7 @@ alloy("event",{
 `checkout` event
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
   "xdm":{
     "commerce":{
       "checkouts":{
@@ -205,12 +204,12 @@ alloy("event",{
 `purchase` event
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
   "xdm":{
     "commerce":{
       "order":{
         "purchaseID":"123456789",
-        "currenceCode":"USD",
+        "currencyCode":"USD",
         "priceTotal":39.98,
         "payments":[
           {
@@ -233,7 +232,7 @@ alloy("event",{
         "SKU":"HT104",
         "name":"The Small Floppy Hat",
         "priceTotal":9.99,
-        "qauntity":1
+        "quantity":1
       }
     ]
   }

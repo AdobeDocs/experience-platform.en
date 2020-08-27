@@ -3,18 +3,50 @@ title: Variables Automatically Mapped in Analytics
 seo-title: Variables Automatically Mapped in Analytics with Adobe Experience Platform Web SDK
 description: Learn Which Variables are Automatically Mapped in Analytics with Experience Platform Web SDK
 seo-description: Learn Which Variables are Automatically Mapped in Analytics with Experience Platform Web SDK
+keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 ---
 
-# (Beta) Variables Automatically Mapped in Analytics
+# Variables Automatically Mapped in [!DNL Analytics]
 
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+Below is a list of variables that the Adobe Experience Platform [!DNL Edge Network] automatically maps into [!DNL Analytics].
 
-Below is a list of variables that the Adobe Experience Platform Edge Network automatically maps into Analytics.
-
-| XDM Field Path  | Analytics Query String / HTTP Header | Description |
+| XDM Field Path  | [!DNL Analytics Query String] / HTTP Header | Description |
 | ---------- | ------------------------- | -------- |
+| `commerce.order.purchaseID` | `pi` | AppMeasurement query parameter PURCHASEID mapping. |
+| `commerce.order.currencyCode` | `cc` | AppMeasurement query parameter CURRENCY mapping. |
+| `commerce.purchases.value` | `events` | AppMeasurement query parameter EVENT_LIST_FULL mapping with conversion COMMERCE_PURCHASE, using delimiter `,`. |
+| `commerce.productViews.value` | `events` | AppMeasurement query parameter EVENT_LIST_FULL mapping with conversion COMMERCE_PROD_VIEW, using delimiter `,`. |
+| `commerce.productListOpens.value` | `events` | AppMeasurement query parameter EVENT_LIST_FULL mapping with conversion COMMERCE_SC_OPEN, using delimiter `,`. |
+| `commerce.productListViews.value` | `events` | AppMeasurement query parameter EVENT_LIST_FULL mapping with conversion COMMERCE_SC_VIEW, using delimiter `,`. |
+| `commerce.checkouts.value` | `events` | AppMeasurement query parameter EVENT_LIST_FULL mapping with conversion COMMERCE_SC_CHECKOUT, using delimiter `,`. |
+| `commerce.productListAdds.value` | `events` | AppMeasurement query parameter EVENT_LIST_FULL mapping with conversion COMMERCE_SC_ADD, using delimiter `,`. |
+| `commerce.productListRemovals.value` | `events` | AppMeasurement query parameter EVENT_LIST_FULL mapping with conversion COMMERCE_SC_REMOVE, using delimiter `,`. |
+| `commerce.productViews.id` | `events` | `prodView` Event Serialization.  |
+| `commerce.productListOpens.id` | `events` | `scOpen` Event Serialization.  |
+| `commerce.productListViews.id` | `events` | `scView` Event Serialization.  |
+| `commerce.productListAdds.id` | `events` | `scAdd` Event Serialization.  |
+| `commerce.productListRemovals.id` | `events` | `scRemove` Event Serialization.  |
+| `commerce.checkouts.id` | `events` | `scCheckout` Event Serialization.  |
+| `device.screenHeight` | `s` | AppMeasurement query parameter Screen Resolution mapping. |
+| `device.screenWidth` | `s` | AppMeasurement query parameter Screen Resolution mapping. |
+| `productlistitems.[N].lineitemid` | `products` | AppMeasurement query parameter Products Category mapping. |
+| `productlistitems.[N].name` | `products` | AppMeasurement query parameter Products Name mapping. |
+| `productlistitems.[N].quantity` | `products` | AppMeasurement query parameter Products Quantity mapping. |
+| `productlistitems.[N].pricetotal` | `products` | AppMeasurement query parameter Products Price mapping. |
+| `media.mediaTimed.primaryAssetViewDetails.@id` | `c.a.media.vsid` | AppMeasurement context data. |
+| `media.mediaTimed.primaryAssetReference.@id` | `c.a.media.asset`   | AppMeasurement context data. |
+| `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Rating.[N].iptc4xmpExt:RatingValue` | `c.a.media.rating` | AppMeasurement context data. |
+| `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Genre` | `c.a.media.genre` | AppMeasurement context data. |
+| `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Creator.[N].iptc4xmpExt:Name` | `c.a.media.originator` | AppMeasurement context data. |
+| `media.mediaTimed.starts.value` | `c.a.media.view` | AppMeasurement context data. |
+| `media.mediaTimed.progress10.value` | `c.a.media.progress10` | AppMeasurement context data. |
+| `media.mediaTimed.firstQuartiles.value` | `c.a.media.progress25` | AppMeasurement context data. |
+| `media.mediaTimed.midpoints.value` | `c.a.media.progress50` | AppMeasurement context data. |
+| `media.mediaTimed.thirdQuartiles.value` | `c.a.media.progress75` | AppMeasurement context data. |
+| `media.mediaTimed.progress95.value` | `c.a.media.progress95` | AppMeasurement context data. |
+| `media.mediaTimed.completes.value` | `c.a.media.complete` | AppMeasurement context data. |
+| `media.mediaTimed.mediaSegmentView.value` | `c.a.media.segmentView` | AppMeasurement context data. |
+| `media.mediaTimed.dropBeforeStart.value` |  `c.a.media.view`, `c.a.media.timePlayed`, `c.a.media.play`| AppMeasurement context data. |
 | `environment.browserDetails.userAgent` | `User-Agent` | This is a HTTP Header mapping, HEADER_USER_AGENT. |
 | `environment.browserDetails.acceptLanguage` | `Accept-Language` | This is a HTTP Header mapping, HEADER_ACCEPT_LANGUAGE. |
 | `environment.browserDetails.cookiesEnabled` | `k` | AppMeasurement query parameter COOKIES mapping with conversion BOOLEAN_TO_YN. |
@@ -33,11 +65,14 @@ Below is a list of variables that the Adobe Experience Platform Edge Network aut
 | `web.webPageDetails.URL` | `g` | AppMeasurement query parameter PAGE_URL mapping. |
 | `web.webPageDetails.homePage` | `hp` | AppMeasurement query parameter HOMEPAGE mapping with conversion BOOLEAN_TO_YN. |
 | `web.webReferrer.URL` | `r` | AppMeasurement query parameter REFERRER mapping. |
+| `web.webInteraction.type` | `pe` | AppMeasurement query parameter PAGE_EVENT mapping with conversion CLICK_MAP_TYPE. |
+| `web.webInteraction.URL` | `pev1` | AppMeasurement query parameter PAGE_EVENT_VAR1 mapping. |
+| `web.webInteraction.name` | `pev2` | AppMeasurement query parameter PAGE_EVENT_VAR2 mapping. |
+| `web.webPageDetails.siteSection` | `ch` | AppMeasurement query parameter CHANNEL mapping. |
+| `web.webPageDetails.errorPage` | `pageType` | AppMeasurement query parameter PAGE_TYPE_FULL mapping with conversion ERROR_PAGE_TYPE. |
 | `application.id` | `c.a.appid` | AppMeasurement context data `c.a.appid` mapping. |
 | `application.launches.value` | `c.a.launches` | AppMeasurement context data `c.a.launches` mapping. |
 | `marketing.trackingCode` | `v0` | AppMeasurement query parameter CAMPAIGN mapping. |
-| `commerce.purchaseID` | `pi` | AppMeasurement query parameter PURCHASEID mapping. |
-| `commerce.currencyCode` | `cc` | AppMeasurement query parameter CURRENCY mapping. |
 | `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Identifier` | `a.media.name` | AppMeasurement context data `a.media.name` mapping. |
 | `media.mediaTimed.primaryAssetReference.xmpDM:duration` | `c.a.media.length` | AppMeasurement context data `c.a.media.length` mapping. |
 | `media.mediaTimed.primaryAssetViewDetails.broadcastContentType` | `c.a.contentType` | AppMeasurement context data `c.a.contentType` mapping. |
@@ -59,4 +94,5 @@ Below is a list of variables that the Adobe Experience Platform Edge Network aut
 | `media.mediaTimed.pauses.value` | `c.a.media.pauseCount` | AppMeasurement context data `c.a.media.pauseCount` mapping. |
 | `media.mediaTimed.pauseTime.value` | `c.a.media.pauseTime` | AppMeasurement context data `c.a.media.pauseTime` mapping. |
 | `media.mediaTimed.resumes.value` | `c.a.media.resume` | AppMeasurement context data `c.a.media.resume` mapping. |
-| `identitymap.ecid.[0].id` | `mid` | AppMeasurement query parameter MID mapping. |
+| `media.mediaTimed.primaryAssetReference.showType` | `c.a.media.type` | AppMeasurement context data `c.a.media.type` mapping with conversion VIDEO_SHOW_TYPE. |
+| `identityMap.ECID.[0].id` | `mid` | AppMeasurement query parameter MID mapping. |

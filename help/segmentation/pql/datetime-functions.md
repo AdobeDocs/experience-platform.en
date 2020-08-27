@@ -7,7 +7,7 @@ topic: developer guide
 
 # Date and time functions
 
-Date and time functions are used to perform date and time operations on values within Profile Query Language (PQL). More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
+Date and time functions are used to perform date and time operations on values within [!DNL Profile Query Language] (PQL). More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Current month
 
@@ -140,7 +140,9 @@ The `occurs` function can be written using any of the following formats:
 | `{DIRECTION}` | A preposition describing when to compare the date to. Can be any of the following words: `before`, `after`, `from`. |
 | `{TIME}` | Can be a timestamp literal (`today`, `now`, `yesterday`, `tomorrow`), a relative time unit (one of `this`, `last`, or `next` followed by a time unit), or a timestamp attribute. |
 
->[!NOTE] Usage of the word `on` is optional. It is there to improve readability for some combinations, such as `timestamp occurs on date(2019,12,31)`.
+>[!NOTE]
+>
+>Usage of the word `on` is optional. It is there to improve readability for some combinations, such as `timestamp occurs on date(2019,12,31)`.
 
 **Example**
 

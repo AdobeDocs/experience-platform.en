@@ -1,42 +1,47 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data lake privacy;identity namespaces;privacy;data lake
 solution: Experience Platform
 title: Privacy request processing in the Data Lake
 topic: overview
+description: Adobe Experience Platform Privacy Service processes customer requests to access, opt out of sale, or delete their personal data as delineated by legal and organizational privacy regulations. This document covers essential concepts related to processing privacy requests for customer data stored in the Data Lake.
 ---
 
-# Privacy request processing in the Data Lake
+# Privacy request processing in the [!DNL Data Lake]
 
-Adobe Experience Platform Privacy Service processes customer requests to access, opt out of sale, or delete their personal data as delineated by legal and organizational privacy regulations.
+Adobe Experience Platform [!DNL Privacy Service] processes customer requests to access, opt out of sale, or delete their personal data as delineated by legal and organizational privacy regulations.
 
-This document covers essential concepts related to processing privacy requests for customer data stored in the Data Lake.
+This document covers essential concepts related to processing privacy requests for customer data stored in the [!DNL Data Lake].
 
 ## Getting started
 
-It is recommended that you have a working understanding of the following Experience Platform services before reading this guide:
+It is recommended that you have a working understanding of the following [!DNL Experience Platform] services before reading this guide:
 
-* [Privacy Service](../privacy-service/home.md): Manages customer requests for accessing, opting out of sale, or deleting their personal data across Adobe Experience Cloud applications.
-* [Catalog Service](home.md): The system of record for data location and lineage within Experience Platform. Provides an API that can be used to update dataset metadata.
-* [Experience Data Model (XDM) System](../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-* [Identity Service](../identity-service/home.md): Solves the fundamental challenge posed by the fragmentation of customer experience data by bridging identities across devices and systems.
+* [[!DNL Privacy Service]](../privacy-service/home.md): Manages customer requests for accessing, opting out of sale, or deleting their personal data across Adobe Experience Cloud applications.
+* [[!DNL Catalog Service]](home.md): The system of record for data location and lineage within [!DNL Experience Platform]. Provides an API that can be used to update dataset metadata.
+* [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+* [[!DNL Identity Service]](../identity-service/home.md): Solves the fundamental challenge posed by the fragmentation of customer experience data by bridging identities across devices and systems.
 
 ## Understanding identity namespaces {#namespaces}
 
-Adobe Experience Platform Identity Service bridges customer identity data across systems and devices. Identity Service uses **identity namespaces** to provide context to identity values by relating them to their system of origin. A namespace can represent a generic concept such as an email address ("Email") or associate the identity with a specific application, such as an Adobe Advertising Cloud ID ("AdCloud") or Adobe Target ID ("TNTID").
+Adobe Experience Platform [!DNL Identity Service] bridges customer identity data across systems and devices. [!DNL Identity Service] uses **[!UICONTROL identity namespaces]** to provide context to identity values by relating them to their system of origin. A namespace can represent a generic concept such as an email address ("Email") or associate the identity with a specific application, such as an Adobe Advertising Cloud ID ("AdCloud") or Adobe Target ID ("TNTID").
 
-Identity Service maintains a store of globally defined (standard) and user-defined (custom) identity namespaces. Standard namespaces are available for all organizations (for example, "Email" and "ECID"), while your organization can also create custom namespaces to suit its particular needs.
+[!DNL Identity Service] maintains a store of globally defined (standard) and user-defined (custom) identity namespaces. Standard namespaces are available for all organizations (for example, "Email" and "ECID"), while your organization can also create custom namespaces to suit its particular needs.
 
-For more information about identity namespaces in Experience Platform, see the [identity namespace overview](../identity-service/namespaces.md).
+For more information about identity namespaces in [!DNL Experience Platform], see the [identity namespace overview](../identity-service/namespaces.md).
 
 ## Adding identity data to datasets
 
-When creating privacy requests for the Data Lake, valid identity values (and their associated namespaces) must be provided for each individual customer in order to locate their data and process it accordingly. Therefore, all datasets that are subject to privacy requests must contain an **identity descriptor** in their associated XDM schema.
+When creating privacy requests for the [!DNL Data Lake], valid identity values (and their associated namespaces) must be provided for each individual customer in order to locate their data and process it accordingly. Therefore, all datasets that are subject to privacy requests must contain an **[!UICONTROL identity descriptor]** in their associated XDM schema.
 
->[!NOTE] Any datasets based on schemas that do not support identity descriptor metadata (such as ad-hoc datasets) currently cannot be processed in privacy requests.
+>[!NOTE]
+>
+>Any datasets based on schemas that do not support identity descriptor metadata (such as ad-hoc datasets) currently cannot be processed in privacy requests.
 
 This section walks through the steps of adding an identity descriptor to an existing dataset's XDM schema. If you already have a dataset with an identity descriptor, you can skip ahead to the [next section](#nested-maps).
 
->[!IMPORTANT] When deciding which schema fields to set as identities, keep in mind the [limitations of using nested map-type fields](#nested-maps).
+>[!IMPORTANT]
+>
+>When deciding which schema fields to set as identities, keep in mind the [limitations of using nested map-type fields](#nested-maps).
 
 There are two methods of adding an identity descriptor to a dataset schema:
 
@@ -45,17 +50,19 @@ There are two methods of adding an identity descriptor to a dataset schema:
 
 ### Using the UI {#identity-ui}
 
-In the Experience Platform user interface, the _[!UICONTROL Schemas]_ workspace allows you to edit your existing XDM schemas. To add an identity descriptor to a schema, select the schema from the list and follow the steps for [setting a schema field as an identity field](../xdm/tutorials/create-schema-ui.md#identity-field) in the Schema Editor tutorial.
+In the [!DNL Experience Platform ]user interface, the _[!UICONTROL Schemas]_ workspace allows you to edit your existing XDM schemas. To add an identity descriptor to a schema, select the schema from the list and follow the steps for [setting a schema field as an identity field](../xdm/tutorials/create-schema-ui.md#identity-field) in the [!DNL Schema Editor] tutorial.
 
 Once you have set the appropriate fields within the schema as identity fields, you can proceed to the next section on [submitting privacy requests](#submit).
 
 ### Using the API {#identity-api}
 
->[!NOTE] This section assumes you know the unique URI ID value of your dataset's XDM schema. If you do not know this value, you can retrieve it by using the Catalog Service API. After reading the [getting started](./api/getting-started.md) section of the developer guide, follow the steps outlined in for [listing](./api/list-objects.md) or [looking up](./api/look-up-object.md) Catalog objects to find your dataset. The schema ID can be found under `schemaRef.id`
+>[!NOTE]
+>
+>This section assumes you know the unique URI ID value of your dataset's XDM schema. If you do not know this value, you can retrieve it by using the [!DNL Catalog Service] API. After reading the [getting started](./api/getting-started.md) section of the developer guide, follow the steps outlined in for [listing](./api/list-objects.md) or [looking up](./api/look-up-object.md) [!DNL Catalog] objects to find your dataset. The schema ID can be found under `schemaRef.id`
 >
 > This section includes calls to the Schema Registry API. For important information related to using the API, including knowing your `{TENANT_ID}` and the concept of containers, see the [getting started](../xdm/api/getting-started.md) section of the developer guide.
 
-You can add an identity descriptor to a dataset's XDM schema by making a POST request to the `/descriptors` endpoint in the Schema Registry API.
+You can add an identity descriptor to a dataset's XDM schema by making a POST request to the `/descriptors` endpoint in the [!DNL Schema Registry] API.
 
 **API format**
 
@@ -93,7 +100,7 @@ curl -X POST \
 | `xdm:sourceSchema` | The unique URI ID of your dataset's XDM schema. |
 | `xdm:sourceVersion` | The version of the XDM schema specified in `xdm:sourceSchema`. |
 | `xdm:sourceProperty` | The path to the schema field that the descriptor is being applied to. |
-| `xdm:namespace` | One of the [standard identity namespaces](../privacy-service/api/appendix.md#standard-namespaces) recognized by Privacy Service, or a custom namespace defined by your organization. |
+| `xdm:namespace` | One of the [standard identity namespaces](../privacy-service/api/appendix.md#standard-namespaces) recognized by [!DNL Privacy Service], or a custom namespace defined by your organization. |
 | `xdm:property` | Either "xdm:id" or "xdm:code", depending on the namespace being used under `xdm:namespace`. |
 | `xdm:isPrimary` | An optional boolean value. When true, this indicates that the field  is a primary identity. Schemas may contain only one primary identity. Defaults to false if not included. |
 
@@ -117,23 +124,25 @@ A successful response returns HTTP status 201 (Created) and the details of the n
 
 ## Submitting requests {#submit}
 
->[!NOTE] This section covers how to format privacy requests for the Data Lake. It is strongly recommended that you review the [Privacy Service UI](../privacy-service/ui/overview.md) or [Privacy Service API](../privacy-service/api/getting-started.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
+>[!NOTE]
+>
+>This section covers how to format privacy requests for the [!DNL Data Lake]. It is strongly recommended that you review the [[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) or [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
 
-The following section outlines how to make privacy requests for the Data Lake using the Privacy Service UI or API.
+The following section outlines how to make privacy requests for the [!DNL Data Lake] using the [!DNL Privacy Service] UI or API.
 
 ### Using the UI
 
-When creating job requests in the UI, be sure to select **AEP Data Lake** and/or **Profile** under _Products_ in order to process jobs for data stored in the Data Lake or Real-time Customer Profile, respectively.
+When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data Lake]** and/or **[!UICONTROL Profile]** under _[!UICONTROL Products]_ in order to process jobs for data stored in the [!DNL Data Lake] or [!DNL Real-time Customer Profile], respectively.
 
 <img src='images/privacy/product-value.png' width=450><br>
 
 ### Using the API
 
-When creating job requests in the API, any `userIDs` that are provided must use a specific `namespace` and `type` depending on the data store they apply to. IDs for the Data Lake must use "unregistered" for their `type` value, and a `namespace` value that matches one the [privacy labels](#privacy-labels) that have been added to applicable datasets.
+When creating job requests in the API, any `userIDs` that are provided must use a specific `namespace` and `type` depending on the data store they apply to. IDs for the [!DNL Data Lake] must use "unregistered" for their `type` value, and a `namespace` value that matches one the [privacy labels](#privacy-labels) that have been added to applicable datasets.
 
-In addition, the `include` array of the request payload must include the product values for the different data stores the request is being made to. When making requests to the Data Lake, the array must include the value "aepDataLake".
+In addition, the `include` array of the request payload must include the product values for the different data stores the request is being made to. When making requests to the [!DNL Data Lake], the array must include the value `aepDataLake`.
 
-The following request creates a new privacy job for the Data Lake, using the unregistered "email_label" namespace. It also includes the product value for the Data Lake in the `include` array:
+The following request creates a new privacy job for the [!DNL Data Lake], using the unregistered "email_label" namespace. It also includes the product value for the [!DNL Data Lake] in the `include` array:
 
 ```shell
 curl -X POST \
@@ -176,19 +185,19 @@ curl -X POST \
 
 ## Delete request processing
 
-When Experience Platform receives a delete request from Privacy Service, Platform sends confirmation to Privacy Service that the request has been received and affected data has been marked for deletion. The records are then removed from the Data Lake within seven days. During that seven-day window, the data is soft-deleted and is therefore not accessible by any Platform service.
+When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Service], [!DNL Platform] sends confirmation to [!DNL Privacy Service] that the request has been received and affected data has been marked for deletion. The records are then removed from the [!DNL Data Lake] within seven days. During that seven-day window, the data is soft-deleted and is therefore not accessible by any [!DNL Platform] service.
 
-In future releases, Platform will send confirmation to Privacy Service after data has been physically deleted.
+In future releases, [!DNL Platform] will send confirmation to [!DNL Privacy Service] after data has been physically deleted.
 
 ## Next steps
 
-By reading this document, you have been introduced to the important concepts involved with processing privacy requests for the Data Lake. It is recommended that you continue reading the documentation provided throughout this guide in order to deepen your understanding of how to manage identity data and create privacy jobs.
+By reading this document, you have been introduced to the important concepts involved with processing privacy requests for the [!DNL Data Lake]. It is recommended that you continue reading the documentation provided throughout this guide in order to deepen your understanding of how to manage identity data and create privacy jobs.
 
-See the document on [privacy request processing for Real-time Customer Profile](../profile/privacy.md) for steps on processing privacy requests for the Profile store.
+See the document on [privacy request processing for Real-time Customer Profile](../profile/privacy.md) for steps on processing privacy requests for the [!DNL Profile] store.
 
 ## Appendix
 
-The following section contains additional information for processing privacy requests in the Data Lake.
+The following section contains additional information for processing privacy requests in the [!DNL Data Lake].
 
 ### Labeling nested map-type fields {#nested-maps}
 

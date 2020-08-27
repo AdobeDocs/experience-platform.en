@@ -1,28 +1,31 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
 solution: Experience Platform
 title: Enforce data usage policies using the Policy Service API
 topic: enforcement
+description: Once you have created data usage labels for your data, and have created usage policies for marketing actions against those labels, you can use the DULE Policy Service API to evaluate whether a marketing action performed on a dataset or an arbitrary group of labels constitutes a policy violation. You can then set up your own internal protocols to handle policy violations based on the API response.
 ---
 
-# Enforce data usage policies using the Policy Service API
+# Enforce data usage policies using the [!DNL Policy Service] API
 
-Once you have created data usage labels for your data, and have created usage policies for marketing actions against those labels, you can use the [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) to evaluate whether a marketing action performed on a dataset or an arbitrary group of labels constitutes a policy violation. You can then set up your own internal protocols to handle policy violations based on the API response.
+Once you have created data usage labels for your data, and have created usage policies for marketing actions against those labels, you can use the [[!DNL DULE Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) to evaluate whether a marketing action performed on a dataset or an arbitrary group of labels constitutes a policy violation. You can then set up your own internal protocols to handle policy violations based on the API response.
 
->[!NOTE] By default, only policies whose status is set to `ENABLED` can participate in evaluation. To allow `DRAFT` policies to participate in evaluation, you must include the query parameter `includeDraft=true` in the request path.
+>[!NOTE]
+>
+>By default, only policies whose status is set to `ENABLED` can participate in evaluation. To allow `DRAFT` policies to participate in evaluation, you must include the query parameter `includeDraft=true` in the request path.
 
-This document provides steps on how to use the Policy Service API to check for policy violations in different scenarios.
+This document provides steps on how to use the [!DNL Policy Service] API to check for policy violations in different scenarios.
 
 ## Getting started
 
 This tutorial requires a working understanding of the following key concepts involved in enforcing DULE policies:
 
-* [Data Governance](../home.md): The framework by which Platform enforces data usage compliance.
+* [Data Governance](../home.md): The framework by which [!DNL Platform] enforces data usage compliance.
     * [Data usage labels](../labels/overview.md): Data usage labels are applied to datasets (and/or individual fields within those datasets), specifying restrictions for how that data can be used.
     * [Data usage policies](../policies/overview.md): Data usage policies are rules that describe the kinds of marketing actions that are allowed or restricted for certain sets of DULE labels.
-* [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the DULE Policy Service API, including required headers and how to read example API calls.
+Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the DULE [!DNL Policy Service] API, including required headers and how to read example API calls.
 
 ## Evaluate using DULE labels and a marketing action
 
@@ -44,7 +47,9 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 The following request tests the `exportToThirdParty` marketing action against labels `C1` and `C3`. Since the data usage policy you created earlier in this tutorial defines the `C1` label as one of the `deny` conditions in its policy expression, the marketing action should trigger a policy violation.
 
->[!NOTE] Data usage labels are case-sensitive. Policy violations only occur when the labels defined in their policy expressions are matched exactly. In this example, a `C1` label would trigger a violation, whereas a `c1` label would not.
+>[!NOTE]
+>
+>Data usage labels are case-sensitive. Policy violations only occur when the labels defined in their policy expressions are matched exactly. In this example, a `C1` label would trigger a violation, whereas a `c1` label would not.
 
 ```shell
 curl -X GET \
@@ -358,4 +363,4 @@ A successful response returns the URL for the marketing action, the DULE labels 
 
 By reading this document, you have successfully checked for policy violations when performing a marketing action on a dataset or a set of DULE labels. Using the data returned in API responses, you can set up protocols within your experience application to appropriately enforce policy violations when they occur.
 
-For steps on how to enforce data usage policies for audience segments in Real-time Customer Profile, please refer to the following [tutorial](../../segmentation/tutorials/governance.md).
+For steps on how to enforce data usage policies for audience segments in [!DNL Real-time Customer Profile], please refer to the following [tutorial](../../segmentation/tutorials/governance.md).

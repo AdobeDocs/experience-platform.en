@@ -7,9 +7,11 @@ topic: developer guide
 
 # List resources
 
-You can view a list of all Schema Registry resources of a certain type (classes, mixins, schemas, data types, or descriptors) within a container by performing a single GET request.
+You can view a list of all [!DNL Schema Registry] resources of a certain type (classes, mixins, schemas, data types, or descriptors) within a container by performing a single GET request.
 
->[!NOTE] When listing resources, the Schema Registry limits result sets to 300 items. In order to return resources beyond this limit, you must use [paging parameters](#paging). It is also recommended that you use query parameters to [filter results](#filtering) and reduce the number of resources returned.
+>[!NOTE]
+>
+>When listing resources, the [!DNL Schema Registry] limits result sets to 300 items. In order to return resources beyond this limit, you must use [paging parameters](#paging). It is also recommended that you use query parameters to [filter results](#filtering) and reduce the number of resources returned.
 
 **API format**
 
@@ -21,8 +23,8 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}?{QUERY_PARAMS}
 | Parameter | Description |
 | --- | --- |
 | `{CONTAINER_ID}` | The container where the resources are located ("global" or "tenant"). |
-| `{RESOURCE_TYPE}` | The type of resource to retrieve from the Schema Library. Valid types are `classes`, `mixins`, `schemas`, `datatypes`, and `descriptors`. |
-| `{QUERY_PARAMS`} | Optional query parameters to filter results by. See the section on [query parameters](#query) for more information. |
+| `{RESOURCE_TYPE}` | The type of resource to retrieve from the [!DNL Schema Library]. Valid types are `classes`, `mixins`, `schemas`, `datatypes`, and `descriptors`. |
+| `{QUERY_PARAMS}` | Optional query parameters to filter results by. See the section on [query parameters](#query) for more information. |
 
 **Request**
 
@@ -69,9 +71,11 @@ The request above used the `application/vnd.adobe.xed-id+json` Accept header, th
 
 ## Using query parameters {#query}
 
-The Schema Registry supports the use of query parameters to page and filter results when listing resources.
+The [!DNL Schema Registry] supports the use of query parameters to page and filter results when listing resources.
 
->[!NOTE] When combining multiple query parameters, they must be separated by ampersands (`&`).
+>[!NOTE]
+>
+>When combining multiple query parameters, they must be separated by ampersands (`&`).
 
 ### Paging {#paging}
 
@@ -79,7 +83,7 @@ The most common query parameters for paging include:
 
 | Parameter | Description |
 | --- | --- |
-| `start` | Specify where the listed results should be gin. Example: `start=2` will list results from the third returned item onward.  |
+| `start` | Specify where the listed results should begin. This value can be obtained from the `_page.next` attribute of a list response, and used to access the next page of results. If the `_page.next` value is null, then there is no additional page available.  |
 | `limit` | Limit the number of resources returned. Example: `limit=5` will return a list of five resources. |
 | `orderby` | Sort results by a specific property. Example: `orderby=title` will sort results by title in ascending order (A-Z). Adding a `-` before title (`orderby=-title`) will sort items by title in descending order (Z-A). |
 
@@ -98,4 +102,6 @@ You can filter results by using the `property` parameter, which is used to apply
 | `~` | Filters by whether the property matches a provided regular expression. | `property=title~test$` |
 | (None) | Stating only the property name returns only entries where the property exists. | `property=title` |
 
->[!TIP] You can use the `property` parameter to filter mixins by their compatible class. For example, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` returns only mixins that are compatible with the XDM Individual Profile class.
+>[!TIP]
+>
+>You can use the `property` parameter to filter mixins by their compatible class. For example, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` returns only mixins that are compatible with the [!DNL XDM Individual Profile] class.

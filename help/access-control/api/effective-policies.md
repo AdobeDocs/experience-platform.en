@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;effective policies;access control api
 solution: Experience Platform
 title: View effective policies
 topic: developer guide
+description: Access control in Adobe Experience Platform allows you to manage roles and permissions for various Platform capabilities by using the Adobe Admin Console. This document serves as a guide for how to view effective policies using the access control API for Adobe Experience Platform.
 ---
 
 # View effective policies
 
-To view effective policies for the current user, make a POST request to the `/acl/effective-policies` endpoint in the Access Control API. The permissions and resource types you want to retrieve must be provided in the request payload in the form of an array. This is demonstrated in the example API call below.
+To view effective policies for the current user, make a POST request to the `/acl/effective-policies` endpoint in the [!DNL Access Control] API. The permissions and resource types you want to retrieve must be provided in the request payload in the form of an array. This is demonstrated in the example API call below.
 
 **API format**
 
@@ -17,7 +18,7 @@ POST /acl/effective-policies
 
 **Request**
 
-The following requests retrieves information about the "Manage Datasets" permission and access to the "schemas" resource type for the current user.
+The following requests retrieves information about the "[!UICONTROL Manage Datasets]" permission and access to the "[!UICONTROL schemas]" resource type for the current user.
 
 ```shell
 curl -X POST \
@@ -33,7 +34,9 @@ curl -X POST \
   ]'
 ```
 
->[!NOTE] For a complete list of permissions and resource types that can be provided in the payload array, see the appendix section on [accepted permissions and resource types](#accepted-permissions-and-resource-types).
+>[!NOTE]
+>
+>For a complete list of permissions and resource types that can be provided in the payload array, see the appendix section on [accepted permissions and resource types](#accepted-permissions-and-resource-types).
 
 **Response**
 
@@ -56,11 +59,11 @@ A successful response returns information about the permissions and resource typ
 
 ## Next steps
 
-This document covered how to make calls to the Access Control API to return information on active permissions and related policies for resource types. For more information about access control for Experience Platform, see the [access control overview](../home.md).
+This document covered how to make calls to the [!DNL Access Control] API to return information on active permissions and related policies for resource types. For more information about access control for [!DNL Experience Platform], see the [access control overview](../home.md).
 
 ## Appendix
 
-This section provides supplemental information for using the Access Control API.
+This section provides supplemental information for using the [!DNL Access Control] API.
 
 ### Accepted permissions and resource types
 

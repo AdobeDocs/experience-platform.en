@@ -1,4 +1,5 @@
 ---
+keywords: advertising destinations;destinations;rtcdp destinations
 title: Advertising Destinations
 seo-title: Advertising Destinations
 description: Connect your Real-time Customer Data Platform to a 3rd-party advertising platform (e.g. DSP, ad network, SSP) and share pseudonymous audiences to these platforms.
@@ -7,7 +8,7 @@ seo-description: Connect your Real-time Customer Data Platform to a 3rd-party ad
 
 # Advertising destinations {#advertising-destinations}
 
-Connect your Real-time Customer Data Platform to a 3rd-party advertising platform (e.g. DSP, ad network, SSP) and share pseudonymous audiences to these platforms.
+Connect your [!DNL Real-time Customer Data Platform] to a 3rd-party advertising platform (e.g. DSP, ad network, SSP) and share pseudonymous audiences to these platforms.
 
 When connecting to an advertising destination, your audiences are sent as IDs to the destination platform, where they are mapped to an ID known by the destination platform.
 
@@ -26,6 +27,7 @@ Currently, Real-time CDP supports the advertising destinations listed below. For
 * [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
 * [Google Ads extension](/help/rtcdp/destinations/google-ads-extension.md)
 * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
+* [Google Customer Match](/help/rtcdp/destinations/google-customer-match-destination.md)
 * [Google gtag extension](/help/rtcdp/destinations/gtag-advertising-extension.md)
 * [LinkedIn Insight Tag extension](linkedin-extension.md)
 * [Pinterest Conversion Tracking extension](pinterest-extension.md)

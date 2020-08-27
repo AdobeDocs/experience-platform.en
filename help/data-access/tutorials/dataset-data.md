@@ -1,37 +1,40 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data access;data access api;query data access
 solution: Experience Platform
 title: Data access overview
 topic: tutorial
+description: This document provides a step-by-step tutorial that covers how to locate, access, and download data stored within a dataset using the Data Access API in Adobe Experience Platform. You will also be introduced to some of the unique features of the Data Access API, such as paging and partial downloads.
 ---
 
-# Query dataset data using Data Access API
+# Query dataset data using [!DNL Data Access] API
 
-This document provides a step-by-step tutorial that covers how to locate, access, and download data stored within a dataset using the Data Access API in Adobe Experience Platform. You will also be introduced to some of the unique features of the Data Access API, such as paging and partial downloads.
+This document provides a step-by-step tutorial that covers how to locate, access, and download data stored within a dataset using the [!DNL Data Access] API in Adobe Experience Platform. You will also be introduced to some of the unique features of the [!DNL Data Access] API, such as paging and partial downloads.
 
 ## Getting started
 
-This tutorial working understanding of how to create and populate a dataset. See the [dataset creation tutorial](../../catalog/datasets/create.md) for more information.
+This tutorial requires a working understanding on how to create and populate a dataset. See the [dataset creation tutorial](../../catalog/datasets/create.md) for more information.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to the Platform APIs.
 
 ### Reading sample API calls
 
-This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the Experience Platform troubleshooting guide.
+This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
 
 ### Gather values for required headers
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in Experience Platform are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+>[!NOTE]
+>
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
@@ -39,23 +42,23 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 ## Sequence diagram
 
-This tutorial follows the steps outlined in the sequence diagram below, highlighting the core functionality of the Data Access API.</br>
+This tutorial follows the steps outlined in the sequence diagram below, highlighting the core functionality of the [!DNL Data Access] API.</br>
 ![](../images/sequence_diagram.png)
 
-The Catalog API allows you to retrieve information regarding batches and files. The Data Access API allows you to access and download these files over HTTP as either full or partial downloads, depending on the size of the file.
+The [!DNL Catalog] API allows you to retrieve information regarding batches and files. The [!DNL Data Access] API allows you to access and download these files over HTTP as either full or partial downloads, depending on the size of the file.
 
 ## Locate the data
 
-Before you can begin to use the Data Access API, you need to identify the location of the data that you want to access. In the Catalog API, there are two endpoints that you can use to browse an organization's metadata and retrieve the ID of a batch or file that you want to access:
+Before you can begin to use the [!DNL Data Access] API, you need to identify the location of the data that you want to access. In the [!DNL Catalog] API, there are two endpoints that you can use to browse an organization's metadata and retrieve the ID of a batch or file that you want to access:
 
 - `GET /batches`: Returns a list of batches under your organization
 - `GET /dataSetFiles`: Returns a list of files under your organization
 
-For a comprehensive list of endpoints in the Catalog API, please refer to the [API Reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
+For a comprehensive list of endpoints in the [!DNL Catalog] API, please refer to the [API Reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
 
 ## Retrieve a list of batches under your IMS Organization
 
-Using the Catalog API, you can return a list of batches under your organization:
+Using the [!DNL Catalog] API, you can return a list of batches under your organization:
 
 **API format**
 
@@ -186,7 +189,7 @@ A full list of parameters and filters can be found in the [Catalog API reference
 
 ## Retrieve a list of all files belonging to a particular batch
 
-Now that you have the ID of the batch that you want to access, you can use the Data Access API to get a list of files belonging to that batch.
+Now that you have the ID of the batch that you want to access, you can use the [!DNL Data Access] API to get a list of files belonging to that batch.
 
 **API format**
 
@@ -243,7 +246,7 @@ The response contains a data array that lists all the files within the specified
 
 ## Access a file using a file ID
 
-Once you have a unique file ID, you can use the Data Access API to access the specific details about the file, including its name, size in bytes, and a link to download it.
+Once you have a unique file ID, you can use the [!DNL Data Access] API to access the specific details about the file, including its name, size in bytes, and a link to download it.
 
 **API format**
 
@@ -356,7 +359,7 @@ HEAD /files/{FILE_ID}?path={FILE_NAME}
 | Property | Description |
 | -------- | ----------- |
 | `{FILE_ID}` | The file's identifier. |
-| `{FILE_NAME`} | The file name (for example, profiles.parquet) |
+| `{FILE_NAME}` | The file name (for example, profiles.parquet) |
 
 **Request**
 
@@ -376,7 +379,7 @@ The response headers contain the metadata of the queried file, including:
 
 ## Access the contents of a file
 
-You can also access the contents of a file using the Data Access API.
+You can also access the contents of a file using the [!DNL Data Access] API.
 
 **API format**
 
@@ -387,7 +390,7 @@ GET /files/{FILE_ID}?path={FILE_NAME}
 | Property | Description |
 | -------- | ----------- |
 | `{FILE_ID}` | The file's identifier. |
-| `{FILE_NAME`} | The file name (for example, profiles.parquet). |
+| `{FILE_NAME}` | The file name (for example, profiles.parquet). |
 
 **Request**
 
@@ -405,7 +408,7 @@ A successful response returns the file's contents.
 
 ## Download partial contents of a file
 
-The Data Access API allows for downloading files in chunks. A range header can be specified during a `GET /files/{FILE_ID}` request to download a specific range of bytes from a file. If the range is not specified, the API will download the entire file by default.
+The [!DNL Data Access] API allows for downloading files in chunks. A range header can be specified during a `GET /files/{FILE_ID}` request to download a specific range of bytes from a file. If the range is not specified, the API will download the entire file by default.
 
 The HEAD example in the [previous section](#retrieve-the-metadata-of-a-file) gives the size of a specific file in bytes.
 
@@ -445,7 +448,7 @@ The response body includes the first 100 bytes of the file (as specified by the 
 
 ## Configure API response pagination
 
-Responses within the Data Access API are paginated. By default, the maximum number of entries per page is 100. Paging parameters can be used to modify the default behavior.
+Responses within the [!DNL Data Access] API are paginated. By default, the maximum number of entries per page is 100. Paging parameters can be used to modify the default behavior.
 
 - `limit`: You can specify the number of entries per page according to your requirements using the "limit" parameter.
 - `start`: The offset can be set by the "start" query parameter. 

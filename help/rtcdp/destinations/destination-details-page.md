@@ -1,4 +1,5 @@
 ---
+keywords: destinations;destination;destinations detail page;destinations details page
 title: Destinations Details Page
 seo-title: Destinations Details Page
 description: The details page for an individual destination provides an overview of the destination details, such as the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow. 
@@ -7,7 +8,7 @@ seo-description: The details page for an individual destination provides an over
 
 # Destination details page {#destinations-details-page}
 
-The details page for an individual destination provides an overview of the destination details, such as the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow. To view these details, go to **Destinations** > **Browse** and click the name of the destination you want to work with.
+The details page for an individual destination provides an overview of the destination details, such as the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow. To view these details, go to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** and click the name of the destination you want to work with.
 
 Core components of an individual destination are:
 
@@ -45,8 +46,8 @@ Item | Description |
  Platform | Represents the destination platform that audiences are sent to. See [Destinations Catalog](/help/rtcdp/destinations/destinations-catalog.md) for more information. |
  Description | You can edit the description of your destination flow. |
  Category | Indicates the type of destination. See [Destinations Catalog](/help/rtcdp/destinations/destinations-catalog.md) for more information. |
- Connection Type | Indicates in which form your audiences are being sent to the destination. Can be **Cookie** or **Profile-based**. |
- Frequency | Indicates how often the audiences are sent to the destination. Can be **Streaming** or **Batch**.  |
+ Connection Type | Indicates in which form your audiences are being sent to the destination. Can be **[!UICONTROL Cookie]** or **[!UICONTROL Profile-based]**. |
+ Frequency | Indicates how often the audiences are sent to the destination. Can be **[!UICONTROL Streaming]** or **[!UICONTROL Batch]**.  |
  Identity | Represents the identity namespace accepted by the destination. For example, the Identity field can be GAID, IDFA, email. For all accepted identity namespaces, see standard namespaces in the [Identity namespace overview](../../identity-service/namespaces.md).   |
  Created by | Indicates the user who created this destination flow. |
  Created | Indicates the UTC date and time when this destination flow was created. |

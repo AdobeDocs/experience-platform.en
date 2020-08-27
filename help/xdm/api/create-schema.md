@@ -7,7 +7,7 @@ topic: developer guide
 
 # Create a schema
 
-A schema can be thought of as the blueprint for the data you wish to ingest into Experience Platform. Each schema is composed of a class and zero or more mixins. In other words, you do not have to add a mixin in order to define a schema, but in most cases at least one mixin will be used. 
+A schema can be thought of as the blueprint for the data you wish to ingest into [!DNL Experience Platform]. Each schema is composed of a class and zero or more mixins. In other words, you do not have to add a mixin in order to define a schema, but in most cases at least one mixin will be used. 
 
 The schema composition process begins by assigning a class. The class defines key behavioral aspects of the data (record or time series), as well as the minimum fields that are required to describe the data that will be ingested.
 
@@ -47,7 +47,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns HTTP status 201 (Created) and a payload containing the details of the newly created schema, including the `$id`, `meta:altId`, and `version`. These values are read-only and are assigned by the Schema Registry.
+A successful response returns HTTP status 201 (Created) and a payload containing the details of the newly created schema, including the `$id`, `meta:altId`, and `version`. These values are read-only and are assigned by the [!DNL Schema Registry].
 
 ```JSON
 {

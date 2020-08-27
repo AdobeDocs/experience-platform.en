@@ -54,6 +54,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?&dataSet=
 A successful response returns a payload containing a batch ID object. In this example, the Key value to the object returned is the batch ID `01E5QSWCAASFQ054FNBKYV6TIQ`. Copy your batch ID to use in the next API call.
 
 >[!NOTE]
+>
 > The following response has had the `tags` object reformated for readability.
 
 ```json
@@ -216,7 +217,9 @@ Copy the `href` value for any file object in the `data` array, then proceed to t
 
 To download your file data, make a GET request to the `"href"` value you copied in the previous step [retrieving your files](#retrieving-your-files).
 
->[!NOTE] If you are making this request directly in command line, you might be prompted to add an output after your request headers. The following request example uses `--output {FILENAME.FILETYPE}`.
+>[!NOTE]
+>
+>If you are making this request directly in command line, you might be prompted to add an output after your request headers. The following request example uses `--output {FILENAME.FILETYPE}`.
 
 **API format**
 
@@ -240,7 +243,9 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
   -O 'file.parquet'
 ```
 
->[!TIP] Make sure you are in the correct directory or folder you want your file saved to before you make the GET request.
+>[!TIP]
+>
+>Make sure you are in the correct directory or folder you want your file saved to before you make the GET request.
 
 **Response**
 
@@ -248,13 +253,17 @@ The response downloads the file you requested in in your current directory. In t
 
 ![Terminal](./images/download-scores/terminal-output.png)
 
-## Next Steps
+The scores downloaded will be in parquet format and will either need a [!DNL Spark]-shell or parquet reader to view the scores. For raw score viewing, you can use [parquet tools](https://github.com/apache/parquet-mr/tree/master/parquet-tools). Parquet tools can analyze the data with [!DNL Spark].
 
-This document outlined the steps required for downloading Attribution AI scores. You can now continue to browse the other [Intelligent Services](../home.md) and guides that are offered.
+## Next steps
+
+This document outlined the steps required for downloading Attribution AI scores. For more information on the score outputs, please visit the [Attribtuion AI input and output](./input-output.md) documentation.
 
 ## Accessing scores using Snowflake
 
->[!IMPORTANT] Please contact attributionai-support@adobe.com for more details on accessing scores using SnowFlake.
+>[!IMPORTANT]
+>
+>Please contact attributionai-support@adobe.com for more details on accessing scores using SnowFlake.
 
 You can access aggregated Attribution AI scores through Snowflake. Currently, you need to email Adobe support at attributionai-support@adobe.com in order to set up and receive the credentials to your reader account for Snowflake. 
 
@@ -264,7 +273,9 @@ Once Adobe support has processed your request, you are provided a URL for the re
 - Username
 - Password
 
->[!NOTE] The reader account is for querying the data using sql clients, worksheet, and BI solutions which supports JDBC connector.
+>[!NOTE]
+>
+>The reader account is for querying the data using sql clients, worksheet, and BI solutions which supports JDBC connector.
 
 Once you have your credentials and URL, you can query the model tables, aggregated by touchpoint date, or conversion date.
 

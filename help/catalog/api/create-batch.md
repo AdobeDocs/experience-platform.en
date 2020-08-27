@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;create batch;catalog service;api
 solution: Experience Platform
 title: Create a dataset
 topic: developer guide
+description: In order for a dataset to ingest data, it must have a batch associated with it. Using the id value of an existing dataset, you can create a batch by making a POST request to the /batches endpoint in the Catalog API.
 ---
 
 # Create a batch
 
-In order for a dataset to ingest data, it must have a batch associated with it. Using the `id` value of an existing dataset, you can create a batch by making a POST request to the `/batches` endpoint in the Catalog API.
+In order for a dataset to ingest data, it must have a batch associated with it. Using the `id` value of an existing dataset, you can create a batch by making a POST request to the `/batches` endpoint in the [!DNL Catalog] API.
 
 **API format**
 

@@ -11,7 +11,9 @@ Adobe Experience Platform allows you to ingest Adobe Target data through the Tar
 
 The following table outlines the fields of an Experience Event schema (*XDM ExperienceEvent field*) and the corresponding Target fields they should be mapped to (*Target Request field*). Additional notes for some mappings are also provided.
 
->[!NOTE] Please scroll left/right to view the full contents of the table.
+>[!NOTE]
+>
+>Please scroll left/right to view the full contents of the table.
 
 | XDM ExperienceEvent field | Target Request field | Notes |
 | ------------------------- | -------------------- | ----- |

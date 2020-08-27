@@ -3,13 +3,10 @@ title: Interacting with multiple properties
 seo-title: Adobe Experience Platform Web SDK Interacting with multiple properties
 description: Learn how to interact with multiple Experience Platform Web SDK properties
 seo-description: Learn how to interact with multiple Experience Platform Web SDK properties
+keywords: multiple properties;configure;sendEvent;edgeConfigId;orgId;
 ---
 
-# (Beta) Interacting with multiple properties
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+# Interacting with multiple properties
 
 There are certain cases where you might want to interact with two different properties on the same page. These include:
 
@@ -37,22 +34,22 @@ Following the above example, you can execute commands using each of the instance
 
 ```javascript
 mycustomname1("configure", {
-  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg"
 });
 
-mycustomname1("event", {
+mycustomname1("sendEvent", {
   "data": {
     "key": "value"
   }
 });
 
 mycustomname2("configure", {
-  "configId": "f46e981f-fd03-4bdd-a9d9-73ce4447f870",
+  "edgeConfigId": "f46e981f-fd03-4bdd-a9d9-73ce4447f870",
   "orgId": "ADB3NUMBERSANDLETTERS2@AdobeOrg"
 });
 
-mycustomname2("event", {
+mycustomname2("sendEvent", {
   "data": {
     "key": "value"
   }
@@ -63,4 +60,4 @@ Be sure to execute the `configure` command for each instance before executing ot
 
 ## Limitations
 
-To avoid conflicts with cookies, only one instance of Adobe Experience Platform Web SDK within a page can have a particular `configId`.  Similarly, only one instance of Adobe Experience Platform Web SDK can have a particular `orgId`.  
+To avoid conflicts with cookies, only one instance of Adobe Experience Platform [!DNL Web SDK] within a page can have a particular `edgeConfigId`.  Similarly, only one instance of Adobe Experience Platform [!DNL Web SDK] can have a particular `orgId`.  

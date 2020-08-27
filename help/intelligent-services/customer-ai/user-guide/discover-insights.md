@@ -17,13 +17,15 @@ In order to utilize insights for Customer AI, you need to have a service instanc
 
 ## Service instance overview
 
-In the Adobe Experience Platform UI, click **[!UICONTROL Services]** in the left navigation. The *Services* browser appears and displays available Intelligent Services. In the container for Customer AI, click **[!UICONTROL Open]**.
+In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in the left navigation. The *Services* browser appears and displays available Intelligent Services. In the container for Customer AI, click **[!UICONTROL Open]**.
 
 ![Accessing your instance](../images/insights/navigate-to-service.png)
 
 The Customer AI service page appears. This page lists service instances of Customer AI and displays information about them, including the name of the instance, propensity type, how often the instance is run, and the status of the last update.
 
->[!NOTE] Only service instances that have completed successful scoring runs have insights.
+>[!NOTE]
+>
+>Only service instances that have completed successful scoring runs have insights.
 
 ![Create instance](../images/insights/dashboard.png)
 
@@ -44,7 +46,9 @@ To view details from within the dashboard, click on a service instance container
 
 ![right rail](../images/insights/success-run.png)
 
->[!NOTE] In the event that a scoring run fails, an error message is provided. The error message is listed under *Last run details* in the right rail which is only visible to failed runs.
+>[!NOTE]
+>
+>In the event that a scoring run fails, an error message is provided. The error message is listed under *Last run details* in the right rail which is only visible to failed runs.
 
 ![failed run message](../images/insights/failed-run.png)
 
@@ -78,7 +82,9 @@ The **[!UICONTROL More actions]** button is located in the top-right navigation 
 
 Scoring Summary displays the total number of profiles scored and categorizes them into buckets containing high, medium, and low propensity. The propensity buckets are determined based on score range, low is less than 24, medium is 25 to 74, and high is above 74. Each bucket has a color corresponding to the legend. 
 
->[!NOTE] If it is a conversion propensity score, the high scores show in green and the low scores in red. If you are predicting churn propensity this is flipped, the high scores are in red and the low scores are green. The medium bucket remains yellow regardless of what propensity type you choose.
+>[!NOTE]
+>
+>If it is a conversion propensity score, the high scores show in green and the low scores in red. If you are predicting churn propensity this is flipped, the high scores are in red and the low scores are green. The medium bucket remains yellow regardless of what propensity type you choose.
 
 ![scoring summary](../images/insights/scoring-summary.png)
 
@@ -99,6 +105,7 @@ For each score bucket, a card is generated that shows the top 10 influential fac
 Clicking the **[!UICONTROL Create Segment]** button in any of the buckets for Low, Medium, and High propensity redirects you to the segment builder.
 
 >[!NOTE]
+>
 >The **[!UICONTROL Create Segment]** button is only available if Real-time Customer Profile is enabled for the dataset. For more information on how to enable Real-time Customer Profile, visit the [Real-time Customer Profile overview](../../../rtcdp/overview.md).
 
 ![Click create segment](../images/insights/influential-factors-create-segment.png)

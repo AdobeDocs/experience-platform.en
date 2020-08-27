@@ -3,13 +3,10 @@ title: Information automatically collected
 seo-title: Information automatically collected by Adobe Experience Platform Web SDK
 description: Description of each piece of information that The Adobe Experience Cloud SDK collects automatically
 seo-description: Description of each piece of information that The Adobe Experience Cloud SDK collects automatically
+keywords: collect information;context;configure;device;screenHeight;screen Height;screenOrientation;screen Orientation;screenWidth;screen Width;environment;viewportHeight;viewport Height;viewportWidth;viewport Width;crowserDetails;browser details;implementationDetails;implementation Details;name;version;placeContext;localTime;local Time;localTimezoneOffset;local Timezone Offset;timestamp;web;url;webPageDetails;web Page Details;webReferrer;web Referrer;landscape;portrait;
 ---
 
-# (Beta) Information automatically collected
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+# Information automatically collected
 
 The Adobe Experience Cloud SDK collects a number of pieces of information automatically without any special configuration. However, this information can be disabled if needed using the `context` option in the `configure` command. [See Configuring the SDK](../fundamentals/configuring-the-sdk.md). Below is a list of those pieces of information. The name in parentheses indicates the string to use when configuring the context.
 
@@ -88,6 +85,13 @@ The software development kit (SDK) identifier.  This field uses a URI to improve
 | **Path in Payload:**                         | **Example:** |
 | -------------------------------------------- | ------------ |
 | `events[].xdm.implementationDetails.version` | `0.11.0`     |
+
+### Environment
+
+| **Path in Payload:**                             | **Example:** |
+| ------------------------------------------------ | ------------ |
+| `events[].xdm.implementationDetails.environment` | `browser`    |
+
 
 ## Place context (`placeContext`)
 

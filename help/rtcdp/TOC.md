@@ -2,12 +2,13 @@
 product: adobe experience platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform Help
+user-guide-description: Built on Adobe Experience Platform, Adobe Real-time Customer Data Platform (Real-time CDP) helps companies bring together known and anonymous data from multiple enterprise sources in order to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real time.
 ---
 
 # Real-time Customer Data Platform Help {#rtcdp}
 
-* [Product overview](overview.md)
-* Real-time Customer Data Platform {#intro}
+* [Real-time CDP overview](overview.md)
+* Getting started {#intro}
   * [Getting started](get-started.md)
   * [Metrics overview](home-page-dashboards.md)
 * Administration {#admin}
@@ -21,7 +22,7 @@ user-guide-title: Real-Time Customer Data Platform Help
   * Destinations interface  {#destinations-interface}
     * [Destinations workspace](destinations/destinations-workspace.md)
     * [Destination details page](destinations/destination-details-page.md)
-  * Destinations catalog  {#destinations-cat}
+  * Destinations catalog {#destinations-cat}
     * [Destinations catalog overview](destinations/destinations-catalog.md)
     * Adobe destinations{#adobe-destinations}
       * [Adobe destinations overview](destinations/adobe-destinations.md)
@@ -40,6 +41,7 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
       * [Google Ads extension](/help/rtcdp/destinations/google-ads-extension.md)
       * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
+      * [Google Customer Match](/help/rtcdp/destinations/google-customer-match-destination.md)
       * [Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
       * [Google gtag extension](/help/rtcdp/destinations/gtag-advertising-extension.md)
       * [LinkedIn Insight Tag extension](/help/rtcdp/destinations/linkedin-extension.md)
@@ -69,7 +71,9 @@ user-guide-title: Real-Time Customer Data Platform Help
     * Cloud storage destinations{#cloud-storage}
       * [Cloud storage destinations overview](destinations/cloud-storage-destinations.md)
       * [Workflow to create cloud storage destinations](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
+      * [Amazon Kinesis destination](/help/rtcdp/destinations/amazon-kinesis-destination.md)
       * [Amazon S3 destination](destinations/amazon-s3-destination.md)
+      * [Azure Event Hubs destination](/help/rtcdp/destinations/azure-event-hubs-destination.md)
       * [SFTP destination](destinations/sftp-destination.md)
     * Data Management Platform destinations {#dmp-destinations}
       * [Data Management Platform destinations overview](destinations/dmp-destinations.md)
@@ -113,22 +117,28 @@ user-guide-title: Real-Time Customer Data Platform Help
       * [Invoca Tags extension](/help/rtcdp/destinations/invoca-extension.md)
       * [Medallia extension](destinations/medallia-extension.md)
       * [Talk URL Inbox extension](destinations/talkurl-extension.md)
-  * Destinations tutorials {#dest-tutorials}
+  * Destinations UI tutorials {#dest-tutorials}
     * [Connect to a destination](/help/rtcdp/destinations/connect-destination.md)
     * [Activate profiles and segments to a destination](destinations/activate-destinations.md)
+  * Destination API tutorials {#api-tutorials}
+    *  [Connect to streaming destinations (AWS Kinesis and Azure Event Hubs) and activate data](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
+    *  [Connect to email marketing destinations and activate data](/help/rtcdp/destinations/email-marketing-api.md)
 * Privacy and data governance {#privacy}
   * [Privacy overview](privacy/privacy-overview.md)
   * [Data Governance overview](privacy/data-governance-overview.md)
-* Real-time Customer Profile {#profile}
+  * IAB TCF 2.0 support {#iab}
+      * [IAB TCF 2.0 support in Real-time CDP](privacy/iab/overview.md)
+      * [Create datasets for capturing IAB TCF 2.0 consent data](privacy/iab/dataset-preparation.md)
+* Profiles {#profile}
   * [Profile overview](profile/profile-overview.md)
   * [Identities & identity namespaces](profile/identities-overview.md)
   * [Merge policies](profile/merge-policies.md)
   * [Profile viewer](profile/profile-viewer.md)
-* Segmentation {#segmentation}
+* Segments {#segmentation}
   * [Segmentation overview](segmentation/segmentation-overview.md)
   * [Segment builder guide](segmentation/segment-builder-guide.md)
 * Sources {#sources}
   * [Sources overview](sources/sources-overview.md)
   * [Implement website tags with Adobe Launch](sources/launch.md)
-* [Release notes](https://www.adobe.com/go/platform-release-notes-en)
-* [Glossary](https://www.adobe.com/go/platform-glossary-en)
+* [Experience Platform Release notes](https://www.adobe.com/go/platform-release-notes-en)
+* [Experience Platform Glossary](https://www.adobe.com/go/platform-glossary-en)

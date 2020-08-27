@@ -2,6 +2,7 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Tutorials
+user-guide-description: Adobe Experience Platform is the first purpose-built customer experience management platform. With robust customer profiles, continuous intelligence, and an open and extensible architecture, it makes delivering personalized experiences at scale a reality. Get started with Platform quickly and easily by following along with step-by-step tutorials for everything from preparing your data for ingestion to advanced machine learning algorithms. 
 ---
 
 # Adobe Experience Platform tutorials {#tutorials}
@@ -12,9 +13,7 @@ user-guide-title: Adobe Experience Platform Tutorials
 * [Data governance and privacy](data-governance-privacy.md)
 * [Data Science Workspace](data-science-workspace.md)
 * [Decisioning](decisioning.md)
-* Destinations {#destinations}
-  * [Create a destination and activate data (API)](destinations/api-tutorial.md)
-  * [Email marketing destination (API)](destinations/email-marketing-api.md)
+* [Destinations](destinations-tutorials.md)
 * [Ingest data into Platform](data-ingestion.md)
 * [Profiles and Identities](configure-profile.md)
 * [Schemas and relationship descriptors](schemas.md)

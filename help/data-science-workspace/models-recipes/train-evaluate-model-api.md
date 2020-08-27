@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics
+keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics;Sensei Machine Learning API
 solution: Experience Platform
 title: Train and evaluate a model (API)
 topic: Tutorial
+description: This tutorial will show you how to create, train, and evaluate a Model using Sensei Machine Learning API calls.
 ---
 
 # Train and evaluate a model (API)
@@ -30,7 +31,9 @@ We will be consuming the APIs to create an Experiment Run for training. For this
 
 ![](../images/models-recipes/train-evaluate-api/engine_hierarchy_api.png)
 
->[!NOTE] The terms "Engine", "MLInstance", "MLService", "Experiment", and "Model" are referred to as different terms in the UI. If you're coming from the UI, the following table will map the differences.
+>[!NOTE]
+>
+>The terms "Engine", "MLInstance", "MLService", "Experiment", and "Model" are referred to as different terms in the UI. If you're coming from the UI, the following table will map the differences.
 > 
 > UI Term | API Term
 > --- | ---
@@ -113,7 +116,9 @@ curl -X POST \
 
 ```
 
->[!NOTE] In the `{JSON_PAYLOAD}`, we define parameters used for training and scoring in the `tasks` array. The `{ENGINE_ID}` is the ID of the Engine you want to use and the `tag` field is an optional parameter used to identify the Instance.
+>[!NOTE]
+>
+>In the `{JSON_PAYLOAD}`, we define parameters used for training and scoring in the `tasks` array. The `{ENGINE_ID}` is the ID of the Engine you want to use and the `tag` field is an optional parameter used to identify the Instance.
 
 The response will contain the `{INSTANCE_ID}` which represents the MLInstance that is created. Multiple model MLInstances with different configurations can be created.
 
@@ -496,7 +501,9 @@ curl -X DELETE \
 `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.  
 `{IMS_ORG}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
 
->[!NOTE] The API call will disable creation of new Experiment runs. However, it will not stop execution of already running Experiment Runs.
+>[!NOTE]
+>
+>The API call will disable creation of new Experiment runs. However, it will not stop execution of already running Experiment Runs.
 
 The following is the Response notifying that the Experiment is successfully deleted.
 

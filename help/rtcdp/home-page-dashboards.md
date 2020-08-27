@@ -1,11 +1,12 @@
 ---
+keywords: metrics overview; rtcdp metrics overview
 title: Real-time Customer Data Platform Home Page and Dashboards
 seo-title: Real-time Customer Data Platform Home Page and Dashboards
 description: Dashboards, Home Page, and First-Time User Experience of Adobe Experience Platform
 seo-description: Dashboards, Home Page, and First-Time User Experience of Adobe Experience Platform
 ---
 
-# Real-time Customer Data Platform metrics overview
+# [!DNL Real-time Customer Data Platform] metrics overview
 
 The Adobe Real-time Customer Data Platform (Real-time CDP) home page, which includes a metrics dashboard, appears when you log in to Real-time CDP.
 
@@ -36,13 +37,13 @@ Additional metrics--for example for profiles and segments--are available in othe
 
 ### Datasets
 
-The **[!UICONTROL Datasets]** counter shows the number of datasets in the system and the amount of data in Platform. This counter is updated when a dataset is created.
+The **[!UICONTROL Datasets]** counter shows the number of datasets in the system and the amount of data in [!DNL Platform]. This counter is updated when a dataset is created.
 
 For more information about datasets, see the [datasets overview](../catalog/datasets/overview.md).
 
 ### Profiles
 
-The **[!UICONTROL Profiles]** count shows the total number of people with profiles in the Real-time Customer Profile. It does not include profile fragments. This is your total addressable audience.
+The **[!UICONTROL Profiles]** count shows the total number of people with profiles in the [!DNL Real-time Customer Profile]. It does not include profile fragments. This is your total addressable audience.
 
 This count uses the default [merge policy](profile/merge-policies.md) as set in the merge policy configuration in Unified Profile. 
 

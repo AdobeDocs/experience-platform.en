@@ -3,17 +3,14 @@ title: Tracking events
 seo-title: Tracking Adobe Experience Platform Web SDK events
 description: Learn how to track Experience Platform Web SDK events
 seo-description: Learn how to track Experience Platform Web SDK events
+keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 ---
 
 # Tracking events
 
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+To send event data to the Adobe Experience Cloud, use the `sendEvent` command. The `sendEvent` command is the primary way to send data to the [!DNL Experience Cloud], and to retrieve personalized content, identities, and audience destinations.
 
-To send event data to the Adobe Experience Cloud, use the `event` command. The `event` command is the primary way to send data to the Experience Cloud, and to retrieve personalized content, identities, and audience destinations.
-
-Data sent to Adobe Experience Cloud falls into two categories: 
+Data sent to Adobe Experience Cloud falls into two categories:
 
 * XDM data
 * Non-XDM data (currently unsupported)
@@ -22,10 +19,10 @@ Data sent to Adobe Experience Cloud falls into two categories:
 
 XDM data is an object whose content and structure matches a schema you have created within Adobe Experience Platform. [Learn more about how to create a schema.](../../xdm/tutorials/create-schema-ui.md)
 
-Any XDM data you would like to be part of your analytics, personalization, audiences, or destinations should be sent using the `xdm` option.
+Any XDM data that you would like to be part of your analytics, personalization, audiences, or destinations should be sent using the `xdm` option.
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "xdm": {
     "commerce": {
       "order": {
@@ -40,6 +37,7 @@ alloy("event", {
 ```
 
 >[!NOTE]
+>
 >There is a 32 KB limit on the data that can be sent in each event in the XDM field.
 
 ### Sending non-XDM data
@@ -51,7 +49,7 @@ Currently, sending data that does not match an XDM schema is unsupported. Suppor
 In an XDM experience event, there is an `eventType` field. This holds the primary event type for the record. This can be passed in as part of the `xdm` option.
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "xdm": {
     "eventType": "commerce.purchases",
     "commerce": {
@@ -71,18 +69,36 @@ Alternatively, the `eventType` can be passed into the event command using the `t
 ```javascript
 var myXDMData = { ... };
 
-alloy("event", {
+alloy("sendEvent", {
   "xdm": myXDMData,
   "type": "commerce.purchases"
 });
 ```
 
-## Using the sendBeacon API
+### Overriding the dataset ID
 
-It can be tricky to send event data just before the web page user has navigated away. If the request takes too long, the browser might cancel the request. Some browsers have implemented a web standard API called `sendBeacon` to allow data to be more easily collected during this time. When using `sendBeacon`, the browser makes the web request in the global browsing context. This means the browser makes the beacon request in the background and does not hold up the page navigation. To tell Adobe Experience Platform Web SDK to use `sendBeacon`, add the option `"documentUnloading": true` to the event command.  Here is an example:
+In some use cases, you might want to send an event to a dataset other than the one configured in the Configuration UI. For that you need to set the `datasetId` option on the `sendEvent` command:
 
 ```javascript
-alloy("event", {
+var myXDMData = { ... };
+
+alloy("sendEvent", {
+  "xdm": myXDMData,
+  "type": "commerce.checkout",
+  "datasetId": "YOUR_DATASET_ID"
+});
+```
+
+### Adding identity information
+
+Custom identity information can also be added to the event. See [Retrieving Experience Cloud ID](./identity.md)
+
+## Using the sendBeacon API
+
+It can be tricky to send event data just before the web page user has navigated away. If the request takes too long, the browser might cancel the request. Some browsers have implemented a web standard API called `sendBeacon` to allow data to be more easily collected during this time. When using `sendBeacon`, the browser makes the web request in the global browsing context. This means the browser makes the beacon request in the background and does not hold up the page navigation. To tell Adobe Experience Platform [!DNL Web SDK] to use `sendBeacon`, add the option `"documentUnloading": true` to the event command.  Here is an example:
+
+```javascript
+alloy("sendEvent", {
   "documentUnloading": true,
   "xdm": {
     "commerce": {
@@ -97,14 +113,14 @@ alloy("event", {
 });
 ```
 
-Browsers have imposed limits to the amount of data that can be sent with `sendBeacon` at one time. In many browsers, the limit is 64K. If the browser rejects the event because the payload is too large, Adobe Experience Platform Web SDK falls back to using its normal transport method (for example, fetch).
+Browsers have imposed limits to the amount of data that can be sent with `sendBeacon` at one time. In many browsers, the limit is 64K. If the browser rejects the event because the payload is too large, Adobe Experience Platform [!DNL Web SDK] falls back to using its normal transport method (for example, fetch).
 
 ## Handling responses from events
 
 If you want to handle a response from an event, you can be notified of a success or failure as follows:
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "renderDecisions": true,
   "xdm": {
     "commerce": {
@@ -130,7 +146,7 @@ If you want to add, remove, or modify fields from the event globally, you can co
 
 ```javascript
 alloy("configure", {
-  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
   "onBeforeEventSend": function(event) {
     // Change existing values
@@ -145,7 +161,7 @@ alloy("configure", {
 
 `xdm` fields are set in this order:
 
-1. Values passed in as options to the event command `alloy("event", { xdm: ... });`
+1. Values passed in as options to the event command `alloy("sendEvent", { xdm: ... });`
 2. Automatically collected values.  (See [Automatic Information](../reference/automatic-information.md).)
 3. The changes made in the `onBeforeEventSend` callback.
 

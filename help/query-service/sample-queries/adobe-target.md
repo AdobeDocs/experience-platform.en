@@ -7,12 +7,13 @@ topic: queries
 
 # Sample queries for Adobe Target data
 
-Data from Adobe Target is transformed into Experience Event XDM schema and ingested into Experience Platform as datasets for you. There are many use cases for Query Service with this data, and the following sample queries should work with your Adobe Target datasets.
+Data from Adobe Target is transformed into Experience Event XDM schema and ingested into [!DNL Experience Platform] as datasets for you. There are many use cases for [!DNL Query Service] with this data, and the following sample queries should work with your Adobe Target datasets.
 
 >[!NOTE]
+>
 >In the following examples, you will need to edit the SQL to fill in the expected parameters for your queries based on the dataset, variables, or timeframe you are interested in evaluating. Provide parameters wherever you see `{ }` in the SQL.
 
-## Standard dataset name for Target data source on Platform: 
+## Standard dataset name for Target data source on [!DNL Platform]: 
 
 Adobe Target Experience Events (friendly name) <br>
 `adobe_target_experience_events` (name to use in query)

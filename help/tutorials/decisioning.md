@@ -5,14 +5,14 @@ title: Decisioning tutorials
 topic: tutorial
 ---
 
-# Get started with Decisioning Service
+# Get started with [!DNL Decisioning Service]
 
-Decisioning Service provides the capability to create personalized, optimized, and orchestrated experiences in applications running on Adobe Experience Platform. Using Decisioning Service, you can determine the best option from a set of available choices. These options, also called alternatives, could be offers, product recommendations, content components for a web experience, conversation scripts, and actions to take. To learn more, visit the [Decisioning Service overview](../decisioning-service/home.md).
+[!DNL Decisioning Service] provides the capability to create personalized, optimized, and orchestrated experiences in applications running on Adobe Experience Platform. Using [!DNL Decisioning Service], you can determine the best option from a set of available choices. These options, also called alternatives, could be offers, product recommendations, content components for a web experience, conversation scripts, and actions to take. To learn more, visit the [Decisioning Service overview](../decisioning-service/home.md).
 
-## Work with Decisioning Service runtime
+## Work with [!DNL Decisioning Service] runtime
 
-Learn how to work with the runtime services of Decisioning Service using Adobe Experience Platform APIs by following the [work with Decisioning Service runtime tutorial](../decisioning-service/tutorials/runtime.md).
+Learn how to work with the runtime services of [!DNL Decisioning Service] using Adobe Experience Platform APIs by following the [work with Decisioning Service runtime tutorial](../decisioning-service/tutorials/runtime.md).
 
-## Manage Decisioning Service entities
+## Manage [!DNL Decisioning Service] entities
 
-For a tutorial showing how to work with the business entities of Decisioning Service using Adobe Experience Platform APIs, visit the [manage Decisioning objects and rules tutorial](../decisioning-service/tutorials/entities.md).
+For a tutorial showing how to work with the business entities of [!DNL Decisioning Service] using Adobe Experience Platform APIs, visit the [manage Decisioning objects and rules tutorial](../decisioning-service/tutorials/entities.md).

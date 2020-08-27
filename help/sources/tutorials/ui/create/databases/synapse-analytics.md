@@ -5,55 +5,61 @@ title: Create a Azure Synapse Analytics source connector in the UI
 topic: overview
 ---
 
-# Create a Azure Synapse Analytics source connector in the UI
+# Create a [!DNL Azure Synapse Analytics] source connector in the UI
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a Azure Synapse Analytics (hereinafter referred to as "Synapse") source connector using the Platform user interface.
+>[!NOTE]
+>
+> The [!DNL Azure Synapse Analytics] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL Azure Synapse Analytics] (hereinafter referred to as "[!DNL Synapse]") source connector using the [!DNL Platform] user interface.
 
 ## Getting started
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-*   [Experience Data Model (XDM) System](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+*   [[!DNL Experience Data Model] (XDM) System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     *   [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
     *   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-*   [Real-time Customer Profile](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+*   [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
-If you already have a Synapse base connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/databases.md).
+If you already have a valid [!DNL Synapse] connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/databases.md).
 
 ### Gather required credentials
 
-In order to access your Synapse account on Platform, you must provide the following values:
+In order to access your [!DNL Synapse] account on [!DNL Platform], you must provide the following values:
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string associated with your Synapse authentication. |
+| `connectionString` | The connection string associated with your [!DNL Synapse] authentication. The [!DNL Synapse] connection string pattern is `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
 
-For more information about this value, refer to [this Synapse document](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-sql-data-warehouse).
+For more information about this value, refer to [this [!DNL Synapse] document](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-sql-data-warehouse).
 
-## Connect your Synapse account
+## Connect your [!DNL Synapse] account
 
-Once you have gathered your required credentials, you can follow the steps below to create a new inbound base connection to link your Synapse account to Platform.
+Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Synapse] account to [!DNL Platform].
 
-Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> and then select **Sources** from the left navigation bar to access the *Sources* workspace. The *Catalog* screen displays a variety of sources for which you can create inbound base connections with, and each source shows the number of existing base connections associated to them.
+Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with.
 
-Under the *Databases* category, select **Azure Synapse Analytics** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To create a new inbound base connection, select **Connect source**. 
+You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-![](../../../../images/tutorials/create/azure-synapse-analytics/sources-catalog.png)
+Under the **[!UICONTROL Databases]** category, select **[!UICONTROL Azure Synapse Analytics]**. If this is your first time using this connector, select **[!UICONTROL Configure]**. Otherwise, select **[!UICONTROL Add data]** to create a new [!DNL Synapse] connector. 
 
-The *Connect to Azure Synapse Analytics* page appears. On this page, you can either use new credentials or existing credentials.
+![](../../../../images/tutorials/create/azure-synapse-analytics/catalog.png)
+
+The **[!UICONTROL Connect to Azure Synapse Analytics]** page appears. On this page, you can either use new credentials or existing credentials.
 
 ### New account
 
-If you are using new credentials, select **New account**. On the input form that appears, provide the base connection with a name, an optional description, and your Synapse credentials. When finished, select **Connect** and then allow some time for the new base connection to establish.
+If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide a name, an optional description, and your [!DNL Synapse] credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new connection to establish.
 
-![](../../../../images/tutorials/create/azure-synapse-analytics/new-credentials.png)
+![](../../../../images/tutorials/create/azure-synapse-analytics/new.png)
 
 ### Existing account
 
-To connect an existing account, select the Synapse account you want to connect with, then select **Next** to proceed.
+To connect an existing account, select the [!DNL Synapse] account you want to connect with, then select **[!UICONTROL Next]** to proceed.
 
-![](../../../../images/tutorials/create/azure-synapse-analytics/existing-credentials.png)
+![](../../../../images/tutorials/create/azure-synapse-analytics/existing.png)
 
 ## Next steps
 
-By following this tutorial, you have established a base connection to your Synapse account. You can now continue on to the next tutorial and [configure a dataflow to bring data into Platform](../../dataflow/databases.md).
+By following this tutorial, you have established a connection to your [!DNL Synapse] account. You can now continue on to the next tutorial and [configure a dataflow to bring data into [!DNL Platform]](../../dataflow/databases.md).

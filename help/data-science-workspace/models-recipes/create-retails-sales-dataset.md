@@ -1,32 +1,33 @@
 ---
-keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes
 solution: Experience Platform
 title: Create the retail sales schema and dataset
 topic: Tutorial
+description: This tutorial provides you with the prerequisites and assets required for all other Adobe Experience Platform Data Science Workspace tutorials. Upon completion, the Retail Sales schema and datasets will be available for you and members of your IMS Organization on Experience Platform.
 ---
 
 # Create the retail sales schema and dataset
 
-This tutorial provides you with the prerequisites and assets required for all other Adobe Experience Platform Data Science Workspace tutorials. Upon completion, the Retail Sales schema and datasets will be available for you and members of your IMS Organization on Experience Platform.
+This tutorial provides you with the prerequisites and assets required for all other [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] tutorials. Upon completion, the Retail Sales schema and datasets will be available for you and members of your IMS Organization on [!DNL Experience Platform].
 
 ## Getting started
 
 Before starting this tutorial, you must have the following prerequisites:
--   Access to Adobe Experience Platform. If you do not have access to an IMS Organization in Experience Platform, please speak to your system administrator before proceeding.
--   Authorization to make Experience Platform API calls. Complete the [Authenticate and access Adobe Experience Platform APIs](../../tutorials/authentication.md) tutorial to obtain the following values in order to successful complete this tutorial:
+-   Access to [!DNL Adobe Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
+-   Authorization to make [!DNL Experience Platform] API calls. Complete the [Authenticate and access Adobe Experience Platform APIs](../../tutorials/authentication.md) tutorial to obtain the following values in order to successful complete this tutorial:
     -   Authorization: `{ACCESS_TOKEN}`
     -   x-api-key: `{API_KEY}`
     -   x-gw-ims-org-id: `{IMS_ORG}`
     -   Client secret: `{CLIENT_SECRET}`
     -   Client certificate: `{PRIVATE_KEY}`
--   Sample data and source files for the [Retail Sales Recipe](../pre-built-recipes/retail-sales.md). Download the assets required for this and other Data Science Workspace tutorials from the [Adobe public Git repository](https://github.com/adobe/experience-platform-dsw-reference/).
--   [Python >= 2.7](https://www.python.org/downloads/) and the following Python packages:
+-   Sample data and source files for the [Retail Sales Recipe](../pre-built-recipes/retail-sales.md). Download the assets required for this and other [!DNL Data Science Workspace] tutorials from the [Adobe public Git repository](https://github.com/adobe/experience-platform-dsw-reference/).
+-   [Python >= 2.7](https://www.python.org/downloads/) and the following [!DNL Python] packages:
     -   [pip](https://pypi.org/project/pip/)
     -   [PyYAML](https://pyyaml.org/)
     -   [dictor](https://pypi.org/project/dictor/)
     -   [JWT](https://pypi.org/project/jwt/)
 -   A working understanding of the following concepts used in this tutorial:
-    -   [Experience Data Model (XDM)](../../xdm/home.md)
+    -   [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)
     -   [Basics of schema composition](../../xdm/schema/field-dictionary.md)
 
 ## Create Retail Sales schema and dataset
@@ -35,7 +36,7 @@ The Retail Sales schema and datasets are created automatically by using the prov
 
 ### Configure files
 
-1.  Inside the Experience Platform tutorial resource package, navigate into the directory `bootstrap`, and open `config.yaml` using an appropriate text editor. 
+1.  Inside the [!DNL Experience Platform] tutorial resource package, navigate into the directory `bootstrap`, and open `config.yaml` using an appropriate text editor. 
 2.  Under the `Enterprise` section, input the following values:
 
     ```yaml
@@ -84,24 +85,26 @@ The Retail Sales schema and datasets are created automatically by using the prov
 
 ### Run the bootstrap script
 
-1.  Open your terminal application and navigate to the Experience Platform tutorial resource directory.
-2.  Set the `bootstrap` directory as the current working path and run the `bootstrap.py` python script by entering the following command:
+1.  Open your terminal application and navigate to the [!DNL Experience Platform] tutorial resource directory.
+2.  Set the `bootstrap` directory as the current working path and run the `bootstrap.py` [!DNL Python] script by entering the following command:
 
     ```bash
     python bootstrap.py
     ```
 
-    > [!NOTE] The script may take several minutes to complete.
+    >[!NOTE]
+    >
+    >The script may take several minutes to complete.
 
 ## Next steps
 
-Upon successful completion of the bootstrap script, the Retail Sales input and output schemas and datasets can be viewed on Experience Platform. See the [preview schema data tutorial](./preview-schema-data.md)
+Upon successful completion of the bootstrap script, the Retail Sales input and output schemas and datasets can be viewed on [!DNL Experience Platform]. See the [preview schema data tutorial](./preview-schema-data.md)
 for more information.
 
-You have also successfully ingested Retail Sales sample data into Experience Platform using the provided bootstrap script.
+You have also successfully ingested Retail Sales sample data into [!DNL Experience Platform] using the provided bootstrap script.
 
 To continue working with the ingested data:
 - [Analyze your data using Jupyter notebooks](../jupyterlab/analyze-your-data.md)
     - Use Jupyter notebooks in Data Science Workspace to access, explore, visualize, and understand your data.
 - [Package source files into a Recipe](./package-source-files-recipe.md)
-    - Follow this tutorial to learn how to bring your own Model into Data Science Workspace by packaging source files in an importable Recipe file.
+    - Follow this tutorial to learn how to bring your own Model into [!DNL Data Science Workspace] by packaging source files in an importable Recipe file.

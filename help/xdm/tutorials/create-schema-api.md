@@ -1,38 +1,39 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;schema;Schema;create schema;schema api;enum;primary identity;primary idenity;enum datatype;schema design
 solution: Experience Platform
 title: Create a schema using the Schema Registry API
 topic: tutorials
+description: This tutorial uses the Schema Registry API to walk you through the steps to compose a schema using a standard class.
 ---
 
-# Create a schema using the Schema Registry API
+# Create a schema using the [!DNL Schema Registry] API
 
-The Schema Registry is used to access the Schema Library within Adobe Experience Platform. The Schema Library contains resources made available to you by Adobe, Experience Platform partners, and vendors whose applications you use. The registry provides a user interface and RESTful API from which all available library resources are accessible.
+The [!DNL Schema Registry] is used to access the [!DNL Schema Library] within Adobe Experience Platform. The [!DNL Schema Library] contains resources made available to you by Adobe, [!DNL Experience Platform] partners, and vendors whose applications you use. The registry provides a user interface and RESTful API from which all available library resources are accessible.
 
-This tutorial uses the Schema Registry API to walk you through the steps to compose a schema using a standard class. If you would prefer to use the user interface in Experience Platform, the [Schema Editor Tutorial](create-schema-ui.md) provides step-by-step instructions for performing similar actions in the schema editor.
+This tutorial uses the [!DNL Schema Registry] API to walk you through the steps to compose a schema using a standard class. If you would prefer to use the user interface in [!DNL Experience Platform], the [Schema Editor Tutorial](create-schema-ui.md) provides step-by-step instructions for performing similar actions in the schema editor.
 
 ## Getting started
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-* [Experience Data Model (XDM) System](../home.md): The standardized framework by which Experience Platform organizes customer experience data.
+* [[!DNL Experience Data Model (XDM) System]](../home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     * [Basics of schema composition](../schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-* [Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
+Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the [!DNL Schema Registry] API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
 
 This tutorial walks through the steps of composing a Loyalty Members schema that describes data related to the members of a retail loyalty program. Before beginning, you may wish to preview the [complete Loyalty Members schema](#complete-schema) in the appendix.
 
 ## Compose a schema with a standard class
 
-A schema can be thought of as the blueprint for the data you wish to ingest into Experience Platform. Each schema is composed of a class and zero or more mixins. In other words, you do not have to add a mixin in order to define a schema, but in most cases at least one mixin is used. 
+A schema can be thought of as the blueprint for the data you wish to ingest into [!DNL Experience Platform]. Each schema is composed of a class and zero or more mixins. In other words, you do not have to add a mixin in order to define a schema, but in most cases at least one mixin is used. 
 
 ### Assign a class
 
 The schema composition process begins with the selection of a class. The class defines key behavioral aspects of the data (record vs time series), as well as the minimum fields that are required to describe the data that will be ingested.
 
-The schema you are making in this tutorial uses the XDM Individual Profile class. XDM Individual Profile is an standard class provided by Adobe for defining record behavior. More information on behavior can be found in [basics of schema composition](../schema/composition.md).
+The schema you are making in this tutorial uses the [!DNL XDM Individual Profile] class. [!DNL XDM Individual Profile] is an standard class provided by Adobe for defining record behavior. More information on behavior can be found in [basics of schema composition](../schema/composition.md).
 
 To assign a class, an API call is made to create (POST) a new schema in the tenant container. This call includes the class the schema will implement. Each schema may only implement one class.
 
@@ -44,7 +45,7 @@ POST /tenant/schemas
 
 **Request**
 
-The request must include an `allOf` attribute which references the `$id` of a class. This attribute defines the "base class" that the schema will implement. In this example, the base class is the XDM Individual Profile class. The `$id` of the XDM Individual Profile class is used as the value of the `$ref` field in the `allOf` array below.
+The request must include an `allOf` attribute which references the `$id` of a class. This attribute defines the "base class" that the schema will implement. In this example, the base class is the [!DNL XDM Individual Profile] class. The `$id` of the [!DNL XDM Individual Profile] class is used as the value of the `$ref` field in the `allOf` array below.
 
 ```SHELL
 curl -X POST \
@@ -68,7 +69,7 @@ curl -X POST \
 
 **Response**
 
-A successful request returns HTTP Response Status 201 (Created) with a response body that contains the details of the newly created schema, including the `$id`, `meta:altIt`, and `version`. These values are read-only and are assigned by the Schema Registry.
+A successful request returns HTTP Response Status 201 (Created) with a response body that contains the details of the newly created schema, including the `$id`, `meta:altIt`, and `version`. These values are read-only and are assigned by the [!DNL Schema Registry].
 
 ```JSON
 {
@@ -128,7 +129,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed+json; version=1'
 ```
 
-**Response **
+**Response**
 
 The response format depends on the Accept header sent with the request. Try experimenting with different Accept headers to see which one best meets your needs.
 
@@ -249,7 +250,9 @@ The response shows the newly added mixin in the `meta:extends` array and contain
 
 You can now add another standard mixin by repeating the steps using another mixin. 
 
->[!TIP] It is worthwhile to review all available mixins to familiarize yourself with the fields included in each. You can list (GET) all mixins available for use with a particular class by performing a request against each of the "global" and "tenant" containers, returning only those mixins where the "meta:intendedToExtend" field matches the class you're using. In this case, it is the XDM Individual Profile class, so the XDM Individual Profile `$id` is used: 
+>[!TIP]
+>
+>It is worthwhile to review all available mixins to familiarize yourself with the fields included in each. You can list (GET) all mixins available for use with a particular class by performing a request against each of the "global" and "tenant" containers, returning only those mixins where the "meta:intendedToExtend" field matches the class you're using. In this case, it is the [!DNL XDM Individual Profile] class, so the [!DNL XDM Individual Profile] `$id` is used: 
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -333,7 +336,7 @@ The Loyalty Members schema should now contain three `$ref` values in the `allOf`
 
 The Loyalty Members schema needs to capture information that is unique to the loyalty program. This information is not included in any of the standard mixins.  
 
-The Schema Registry accounts for this by allowing you to define your own mixins within the tenant container. These mixins are unique to your organization and are not visible or editable by anyone outside your IMS Org.
+The [!DNL Schema Registry] accounts for this by allowing you to define your own mixins within the tenant container. These mixins are unique to your organization and are not visible or editable by anyone outside your IMS Org.
 
 In order to create (POST) a new mixin, your request must include a `meta:intendedToExtend` field containing the `$id` for the base class(es) with which the mixin is compatible, along with the properties that the mixin will include.
 
@@ -408,7 +411,7 @@ curl -X POST\
 
 **Response**
 
-A successful request returns HTTP Response Status 201 (Created) with a response body containing the details of the newly created mixin, including the `$id`, `meta:altIt`, and `version`. These values are read-only and are assigned by the Schema Registry.
+A successful request returns HTTP Response Status 201 (Created) with a response body containing the details of the newly created mixin, including the `$id`, `meta:altIt`, and `version`. These values are read-only and are assigned by the [!DNL Schema Registry].
 
 ```JSON
 {
@@ -745,7 +748,7 @@ curl -X POST \
 
 **Response**
 
-A successful request returns HTTP Response Status 201 (Created) with a response body containing the details of the newly created data type, including the `$id`, `meta:altIt`, and `version`. These values are read-only and are assigned by the Schema Registry.
+A successful request returns HTTP Response Status 201 (Created) with a response body containing the details of the newly created data type, including the `$id`, `meta:altIt`, and `version`. These values are read-only and are assigned by the [!DNL Schema Registry].
 
 ```JSON
 {
@@ -945,9 +948,9 @@ Performing a GET request to lookup the schema now shows the reference to the dat
 
 ### Define an identity descriptor
 
-Schemas are used for ingesting data into Experience Platform. This data is ultimately used across multiple services to create a single, unified view of an individual. To help with this process, key fields can be marked as "Identity" and, upon data ingestion, the data in those fields is inserted into the "Identity Graph" for that individual. The graph data can then be accessed by [Real-time Customer Profile](../../profile/home.md) and other Experience Platform services to provide a stitched together view of each individual customer.
+Schemas are used for ingesting data into [!DNL Experience Platform]. This data is ultimately used across multiple services to create a single, unified view of an individual. To help with this process, key fields can be marked as "Identity" and, upon data ingestion, the data in those fields is inserted into the "Identity Graph" for that individual. The graph data can then be accessed by [[!DNL Real-time Customer Profile]](../../profile/home.md) and other [!DNL Experience Platform] services to provide a stitched together view of each individual customer.
 
-Fields that are commonly marked as "Identity" include: email address, phone number, [Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/en/id-service/using/home.html), CRM ID, or other unique ID fields. 
+Fields that are commonly marked as "Identity" include: email address, phone number, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/en/id-service/using/home.html), CRM ID, or other unique ID fields. 
 
 Consider any unique identifiers specific to your organization, as they may be good Identity fields as well.
 
@@ -963,7 +966,7 @@ POST /tenant/descriptors
 
 **Request**
 
-The following request defines an identity descriptor on the "loyaltyId" field. This tells Experience Platform to use the unique loyalty program member identifier (in this case, the member's email address) to help stitch together information about the individual.
+The following request defines an identity descriptor on the "loyaltyId" field. This tells [!DNL Experience Platform] to use the unique loyalty program member identifier (in this case, the member's email address) to help stitch together information about the individual.
 
 ```SHELL
 curl -X POST \
@@ -984,11 +987,13 @@ curl -X POST \
       }'
 ```
 
->[!NOTE] You can list available "xdm:namespace" values, or create new ones, using the [Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). The value for "xdm:property" can be either "xdm:code" or "xdm:id", depending on the "xdm:namespace" used.
+>[!NOTE]
+>
+>You can list available "xdm:namespace" values, or create new ones, using the [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). The value for "xdm:property" can be either "xdm:code" or "xdm:id", depending on the "xdm:namespace" used.
 
 **Response**
 
-A successful response returns HTTP Status 201 (Created) with a response body containing the details of the newly created descriptor, including its `@id`. The `@id` is a read-only field assigned by the Schema Registry and is used for referencing the descriptor in the API.
+A successful response returns HTTP Status 201 (Created) with a response body containing the details of the newly created descriptor, including its `@id`. The `@id` is a read-only field assigned by the [!DNL Schema Registry] and is used for referencing the descriptor in the API.
 
 ```JSON
 {
@@ -1004,11 +1009,11 @@ A successful response returns HTTP Status 201 (Created) with a response body con
 }
 ```
 
-## Enable schema for use in Real-time Customer Profile
+## Enable schema for use in [!DNL Real-time Customer Profile] {#profile}
 
-By adding the "union" tag to the `meta:immutableTags` attribute, you can enable the Loyalty Members schema for use by Real-time Customer Profile. 
+By adding the "union" tag to the `meta:immutableTags` attribute, you can enable the Loyalty Members schema for use by [!DNL Real-time Customer Profile]. 
 
-For more information on working with union views, see the section on [unions](../api/unions.md) in the Schema Registry developer guide. 
+For more information on working with union views, see the section on [unions](../api/unions.md) in the [!DNL Schema Registry] developer guide. 
 
 ### Add "union" tag
 
@@ -1092,9 +1097,9 @@ The response shows that the operation was performed successfully, and the schema
 
 ### List schemas in a union
 
-You have now successfully added your schema to the XDM Individual Profile union. In order to see a list of all schemas that are a part of the same union, you can perform a GET request using query parameters to filter the response. 
+You have now successfully added your schema to the [!DNL XDM Individual Profile] union. In order to see a list of all schemas that are a part of the same union, you can perform a GET request using query parameters to filter the response. 
 
-Using the `property` query parameter, you can specify that only schemas containing a `meta:immutableTags` field that have a `meta:class` equal to the `$id` of the XDM Individual Profile class are returned.
+Using the `property` query parameter, you can specify that only schemas containing a `meta:immutableTags` field that have a `meta:class` equal to the `$id` of the [!DNL XDM Individual Profile] class are returned.
 
 **API Format**
 
@@ -1104,7 +1109,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 **Request**
 
-The example request below returns all schemas that are part of the XDM Individual Profile union.
+The example request below returns all schemas that are part of the [!DNL XDM Individual Profile] union.
 
 ```SHELL
 curl -X GET \
@@ -1172,7 +1177,7 @@ The following information supplements the API tutorial.
 
 Throughout this tutorial, a schema is composed to describe the members of a retail loyalty program. 
 
-The schema implements the XDM Individual Profile class and combines multiple mixins; bringing in information about the loyalty members using the standard "Person Details" and "Personal Details" mixins, as well as through a "Loyalty Details" mixin that is defined during the tutorial.
+The schema implements the [!DNL XDM Individual Profile] class and combines multiple mixins; bringing in information about the loyalty members using the standard "Person Details" and "Personal Details" mixins, as well as through a "Loyalty Details" mixin that is defined during the tutorial.
 
 The following shows the completed Loyalty Members schema in JSON format:
 
@@ -1771,7 +1776,7 @@ The following shows the completed Loyalty Members schema in JSON format:
                         "active": "Active",
                         "incomplete": "Incomplete",
                         "pending_verification": "Pending Verification",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -1846,7 +1851,7 @@ The following shows the completed Loyalty Members schema in JSON format:
                         "active": "Active",
                         "incomplete": "Incomplete",
                         "pending_verification": "Pending Verification",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -1898,7 +1903,7 @@ The following shows the completed Loyalty Members schema in JSON format:
                     "meta:enum": {
                         "active": "Active",
                         "incomplete": "Incomplete",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -1963,7 +1968,7 @@ The following shows the completed Loyalty Members schema in JSON format:
                     "meta:enum": {
                         "active": "Active",
                         "incomplete": "Incomplete",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -2028,7 +2033,7 @@ The following shows the completed Loyalty Members schema in JSON format:
                     "meta:enum": {
                         "active": "Active",
                         "incomplete": "Incomplete",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",

@@ -3,13 +3,10 @@ title: Executing commands
 seo-title: Executing Adobe Experience Platform Web SDK commands
 description: Learn how to execute Experience Platform Web SDK commands
 seo-description: Learn how to execute Experience Platform Web SDK commands
+keywords: Executing commands;commandName;Promises;getLibraryInfo;response objects;consent;
 ---
 
-# (Beta) Executing commands
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+# Executing commands
 
 After the base code has been implemented on your webpage, you can begin executing commands with the SDK. You do not need to wait for the external file \(`alloy.js`\) to be loaded from the server before executing commands. If the SDK has not finished loading, commands are queued and processed by the SDK as soon as possible.
 
@@ -25,13 +22,13 @@ The `commandName` tells the SDK what to do, while `options` are the parameters a
 
 [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) are fundamental to how the SDK communicates with the code on your webpage. A promise is a common programming structure and is not specific to this SDK or even JavaScript. A promise acts as a proxy for a value that is not known when the promise is created. Once the value is known, the promise is "resolved" with the value. Handler functions can be associated with a promise, so that you can be notified when the promise has been resolved or when an error has occurred in the process of resolving the promise. To learn more about promises, please read [this tutorial](https://javascript.info/promise-basics) or any of the other resources on the web.
 
-## Handling success or failure
+## Handling success or failure {#handling-success-or-failure}
 
 Each time a command is executed, a promise is returned. The promise represents the eventual completion of the command. In the example below, you can use `then` and `catch` methods to determine when the command has succeeded or failed.
 
 ```javascript
 alloy("commandName", options)
-  .then(function(value) {
+  .then(function(result) {
     // The command succeeded.
     // "value" is whatever the command returned
   })
@@ -55,12 +52,22 @@ Likewise, if knowing when the command fails is not important to you, you may rem
 
 ```javascript
 alloy("commandName", options)
-  .then(function(value) {
+  .then(function(result) {
     // The command succeeded.
     // "value" will be whatever the command returned
   })
 ```
 
-## Suppressing errors
+### Response objects
 
-If the promise is rejected and you have not added a `catch` call, the error "bubbles up" and is logged in your browser's developer console, regardless of whether logging is enabled in Adobe Experience Platform Web SDK. If this is a concern for you, you can set the `suppressErrors` configuration option to `true` as outlined in [Configuring the SDK](configuring-the-sdk.md).
+All promises returned from commands are resolved with a `result` object. The result object will contain data depending on the command and the user's consent. For example, library info is passed as a property of the results object in the following command.
+
+```js
+alloy("getLibraryInfo").then(function(result) {
+  console.log(results.libraryInfo.version);
+});
+```
+
+### Consent
+
+If a user has not given their consent for a particular purpose, the promise will still be resolved; however, the response object will only contain the information that can be provided in the context of what the user has consented to.

@@ -9,7 +9,7 @@ topic: developer guide
 
 Mixins are a set of fields used to describe a particular concept, such as "address" or "profile preferences". There are numerous standard mixins available, or you can define your own when you wish to capture information that is unique to your organization. Each mixin contains a `meta:intendedToExtend` field which lists the classes the mixin is compatible with. 
 
-You may find it helpful to review all available mixins to familiarize yourself with the fields included in each. You can list (GET) all mixins compatible with a particular class by performing a request against each of the "global" and "tenant" containers, returning only those mixins where the "meta:intendedToExtend" field matches the class you're using. The examples below will return all mixins that can be used with the XDM Individual Profile class: 
+You may find it helpful to review all available mixins to familiarize yourself with the fields included in each. You can list (GET) all mixins compatible with a particular class by performing a request against each of the "global" and "tenant" containers, returning only those mixins where the "meta:intendedToExtend" field matches the class you're using. The examples below will return all mixins that can be used with the [!DNL XDM Individual Profile] class: 
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -95,7 +95,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns HTTP status 201 (Created) and a payload containing the details of the newly created mixin, including the `$id`, `meta:altId`, and `version`. These values are read-only and are assigned by the Schema Registry.
+A successful response returns HTTP status 201 (Created) and a payload containing the details of the newly created mixin, including the `$id`, `meta:altId`, and `version`. These values are read-only and are assigned by the [!DNL Schema Registry].
 
 ```JSON
 {

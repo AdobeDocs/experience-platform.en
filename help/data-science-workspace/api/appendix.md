@@ -1,17 +1,18 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;
 solution: Experience Platform
 title: Appendix
 topic: Developer guide
+description: The following sections provide reference information for various features of the Sensei Machine Learning API.
 ---
 
 # Appendix
 
-The following sections provide reference information for various features of the Sensei Machine Learning API.
+The following sections provide reference information for various features of the [!DNL Sensei Machine Learning] API.
 
 ## Query parameters for asset retrieval {#query}
 
-The Sensei Machine Learning API provides support for query parameters with retrieving assets. Available query parameters and their usages are described in the following table:
+The [!DNL Sensei Machine Learning] API provides support for query parameters with retrieving assets. Available query parameters and their usages are described in the following table:
 
 | Query parameter | Description | Default value |
 | --------------- | ----------- | ------- |
@@ -20,7 +21,9 @@ The Sensei Machine Learning API provides support for query parameters with retri
 | `orderby` | Indicates the properties to use for sorting in priority order. Include a dash (**-**) before a property name to sort in descending order, otherwise results are sorted in ascending order. | `orderby=created` |
 | `property` | Indicates the comparison expression that an object must satisfy in order to be returned. | `property=deleted==false` |
 
->[!NOTE] When combining multiple query parameters, they must be separated by ampersands (**&**).
+>[!NOTE]
+>
+>When combining multiple query parameters, they must be separated by ampersands (**&**).
 
 ## Python CPU and GPU configurations {#cpu-gpu-config}
 
@@ -59,7 +62,9 @@ The following is an example configuration that specifies using a CPU for trainin
 ]
 ```
 
->[!NOTE] The values of `cpus` and `gpus` does not signify the number of CPUs or GPUs, but rather the number of physical machines. These values are permissibly `"1"` and will throw an exception otherwise.
+>[!NOTE]
+>
+>The values of `cpus` and `gpus` does not signify the number of CPUs or GPUs, but rather the number of physical machines. These values are permissibly `"1"` and will throw an exception otherwise.
 
 ## PySpark and Spark resource configurations {#resource-config}
 

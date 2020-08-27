@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;streaming
 solution: Experience Platform
 title: Streaming ingestion validation
 topic: overview
+description: Streaming ingestion allows you to upload your data to Adobe Experience Platform using streaming endpoints in real-time. Streaming ingestion APIs support two modes of validation - synchronous and asynchronous.
 ---
 
 # Streaming ingestion validation
@@ -13,26 +14,28 @@ Streaming ingestion allows you to upload your data to Adobe Experience Platform 
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-- [Experience Data Model (XDM) System](../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-- [Streaming Ingestion](../streaming-ingestion/overview.md): One of the methods by which data can be sent to Experience Platform.
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+- [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md): One of the methods by which data can be sent to [!DNL Experience Platform].
 
 ### Reading sample API calls
 
-This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the Experience Platform troubleshooting guide.
+This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
 
 ### Gather values for required headers
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in Experience Platform, including those belonging to the Schema Registry, are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in [!DNL Experience Platform], including those belonging to the [!DNL Schema Registry], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+>[!NOTE]
+>
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
@@ -40,7 +43,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 ### Validation coverage
 
-Streaming Validation Service covers validation in the following areas:
+[!DNL Streaming Validation Service] covers validation in the following areas:
 -  Range
 -  Presence
 -  Enum
@@ -131,7 +134,7 @@ The above response lists how many schema violations were found, and what the vio
 
 ## Asynchronous validation
 
-Asynchronous validation is a method of validation that does not provide immediate feedback. Instead, the data is sent to a failed batch in Data Lake to prevent data loss. This failed data can be later retrieved for further analysis and replay. This method should be used in production. Unless otherwise requested, streaming ingestion operates in asynchronous validation mode.  
+Asynchronous validation is a method of validation that does not provide immediate feedback. Instead, the data is sent to a failed batch in [!DNL Data Lake] to prevent data loss. This failed data can be later retrieved for further analysis and replay. This method should be used in production. Unless otherwise requested, streaming ingestion operates in asynchronous validation mode.  
 
 **API format**
 
@@ -157,7 +160,9 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
 | --------- | ----------- |
 | `{JSON_PAYLOAD}` | The JSON body of a data you wish to ingest. |
 
->[!NOTE] No extra query parameter is required, as asynchronous validation is enabled by default.
+>[!NOTE]
+>
+>No extra query parameter is required, as asynchronous validation is enabled by default.
 
 **Response**
 

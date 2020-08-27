@@ -13,25 +13,27 @@ keywords: release notes;
 
 Updates to existing features in Adobe Experience Platform:
 
-* [Data Governance](#governance)
-* [Data Ingestion](#ingestion)
-* [Destinations](#destinations)
-* [Identity Service](#identity)
-* [Sources](#sources)
+* [[!DNL Data Governance]](#governance)
+* [[!DNL Data Ingestion]](#ingestion)
+* [[!DNL Destinations]](#destinations)
+* [[!DNL Identity Service]](#identity)
+* [[!DNL Sources]](#sources)
 
-## Data Governance {#governance}
+## [!DNL Data Governance] {#governance}
 
-Experience Platform allows companies to bring data from multiple enterprise systems together to better allow marketers to identify, understand, and engage customers. Experience Platform includes an end-to-end data governance infrastructure, including Data Usage Labeling and Enforcement (DULE), to ensure the proper use of data within Platform and when being shared between systems.
+[!DNL Experience Platform] allows companies to bring data from multiple enterprise systems together to better allow marketers to identify, understand, and engage customers. [!DNL Experience Platform] includes an end-to-end data governance infrastructure, including Data Usage Labeling and Enforcement (DULE), to ensure the proper use of data within [!DNL Platform] and when being shared between systems.
 
-Adobe Experience Platform Data Governance is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within Experience Platform at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
+Adobe Experience Platform [!DNL Data Governance] is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
 
 **New features**
 
->[!NOTE] Some of the following new features are currently in beta and are not available to all users. Beta features are subject to change.
+>[!NOTE]
+>
+>Some of the following new features are currently in beta and are not available to all users. Beta features are subject to change.
 
 | Feature | Description |
 | ------- | ----------- |
-| Automated enforcement of data usage policies for Real-time Customer Data Platform| Data usage policies are now enforced in the workflow of activating data to destinations. Data Governance is also embedded and enforced when making changes that affect existing activations (such as changes to dataset labels, merge policies, segment definitions, and others). |
+| Automated enforcement of data usage policies for [!DNL Real-time Customer Data Platform]| Data usage policies are now enforced in the workflow of activating data to destinations. [!DNL Data Governance] is also embedded and enforced when making changes that affect existing activations (such as changes to dataset labels, merge policies, segment definitions, and others). |
 | Data lineage for enforcement | When a data usage policy is violated in Real-time CDP, the UI displays a notification that contains data lineage information to help the user understand why the policies were violated and what they can do to resolve the violation. |
 
 
@@ -39,11 +41,11 @@ Adobe Experience Platform Data Governance is a series of strategies and technolo
 
 * None
 
-For more information about Data Governance, see the [Data Governance overview](../../data-governance/home.md).
+For more information about [!DNL Data Governance], see the [Data Governance overview](../../data-governance/home.md).
 
 ## Data Ingestion {#ingestion}
 
-Adobe Experience Platform provides a rich set of features to ingest any type and latency of data. Adobe Experience Platform Data Ingestion provides multiple alternatives for ingesting data including Batch APIs, Streaming APIs, native Adobe connectors, data integration partners, or the Adobe Experience Platform UI.
+Adobe Experience Platform provides a rich set of features to ingest any type and latency of data. Adobe Experience Platform [!DNL Data Ingestion] provides multiple alternatives for ingesting data including Batch APIs, Streaming APIs, native Adobe connectors, data integration partners, or the Adobe Experience Platform UI.
 
 **New features**
 
@@ -68,34 +70,34 @@ New destinations are available where you can activate your Adobe Experience Plat
 
 |Destination | Description|
 |--- | ---|
-|Cloud storage destinations | Adobe Real-time CDP can now deliver your segments as data files to your Amazon S3 or SFTP cloud storage locations. This enables you to send audiences and their profile attributes to your internal systems, via CSV or tab-delimited files.|
-|Advertising destinations | The Google destination card is now split into three destination cards, for the three different Google platforms currently supported in Adobe Real-time CDP: Google Ads, Google Ad Manager, Google Display & Video 360.|
+|Cloud storage destinations | Adobe Real-time CDP can now deliver your segments as data files to your [!DNL Amazon S3] or SFTP cloud storage locations. This enables you to send audiences and their profile attributes to your internal systems, via CSV or tab-delimited files.|
+|Advertising destinations | The [!DNL Google] destination card is now split into three destination cards, for the three different [!DNL Google] platforms currently supported in Adobe Real-time CDP: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display & Video 360.|
 
 To learn more, visit the [destinations overview](../../rtcdp/destinations/destinations-overview.md)
 
-## Identity Service {#identity}
+## [!DNL Identity Service] {#identity}
 
 Delivering relevant digital experiences requires having a complete understanding of your customer. This is made more difficult when your customer data is fragmented across disparate systems, causing each individual customer to appear to have multiple "identities".
 
-Adobe Experience Platform Identity Service helps you to gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real-time.
+Adobe Experience Platform [!DNL Identity Service] helps you to gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real-time.
 
 **New features**
 
 | Feature | Description |
 | ------- | ----------- |
-| Enhanced Private Graph | Private Graph functionality has been enhanced to reduce graph generation latency from a weekly batch process to a daily refreshed graph, allowing Identity Service customers to access more up-to-date identity graphs and linkages. |
+| Enhanced Private Graph | Private Graph functionality has been enhanced to reduce graph generation latency from a weekly batch process to a daily refreshed graph, allowing [!DNL Identity Service] customers to access more up-to-date identity graphs and linkages. |
 
 **Known issues**
 
 * None
 
-For more information about Identity Service, see the [Identity Service overview](../../identity-service/home.md).
+For more information about [!DNL Identity Service], see the [Identity Service overview](../../identity-service/home.md).
 
 ## Sources {#sources}
 
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
 
-Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
+[!DNL Experience Platform] provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
 **New features**
 
@@ -103,10 +105,10 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | ------- | ----------- |
 | Deprecated signals for Adobe Audience Manager connector | Signal-level data from Audience Manger will no longer be sent. Note that segment membership for Traits and Segments will still be included. As a result of this change, inbound datasets will no longer be generated. |
 | Renamed datasets | Datasets generated by Audience Manger connector will have updated names and descriptions. |
-| Enable Profile toggle in Audience Manger | Profile toggle can be enabled or disabled to promote dataset to Real-time Customer Profile. Toggle will be enabled by default.|
-| UI support for cloud storage systems | New source connector for Azure Data Lake Storage Gen2 in the UI. |
-| UI support for CRM systems | New source connector for HubSpot, Salesforce Service Cloud, and ServiceNow in the UI. |
-| UI support for database systems | New source connector for AWS Redshift, Google BigQuery, MariaDB, Microsoft SQL Server, and MySQL in the UI. |
+| Enable [!DNL Profile] toggle in Audience Manger | [!DNL Profile] toggle can be enabled or disabled to promote dataset to [!DNL Real-time Customer Profile]. Toggle will be enabled by default.|
+| UI support for cloud storage systems | New source connector for [!DNL Azure Data Lake Storage Gen2] in the UI. |
+| UI support for CRM systems | New source connector for [!DNL HubSpot], [!DNL Salesforce Service Cloud], and [!DNL ServiceNow] in the UI. |
+| UI support for database systems | New source connector for [!DNL AWS Redshift], [!DNL Google BigQuery], [!DNL MariaDB], [!DNL Microsoft SQL Server], and [!DNL MySQL] in the UI. |
 
 **Known issues**
 

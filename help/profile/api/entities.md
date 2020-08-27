@@ -1,23 +1,21 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Real-time Customer Profile API developer guide
+title: Entities - Real-time Customer Profile API
 topic: guide
 ---
 
-# Entities (Profile access)
+# Entities endpoint (Profile access)
 
-Adobe Experience Platform enables you to access Real-time Customer Profile data using RESTful APIs or the user interface. This guide outlines how to access entities, more commonly known as "profiles", using the API. For more information on accessing Profile data using the Platform UI, please refer to the [Profile user guide](../ui/user-guide.md). 
+Adobe Experience Platform enables you to access [!DNL Real-time Customer Profile] data using RESTful APIs or the user interface. This guide outlines how to access entities, more commonly known as "profiles", using the API. For more information on accessing profiles using the [!DNL Platform] UI, please refer to the [Profile user guide](../ui/user-guide.md). 
 
 ## Getting started
 
-The API endpoints used in this guide are part of the Real-time Customer Profile API. Before continuing, please review the [Real-time Customer Profile API developer guide](getting-started.md).
-
-In particular, the [getting started section](getting-started.md#getting-started) of the Profile developer guide includes links to related topics, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform APIs.
+The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 ## Access profile data by identity
 
-You can access a Profile entity by making a GET request to the `/access/entities` endpoint and providing the entity's identity as a series of query parameters. This identity consists of an ID value (`entityId`) and the identity namespace (`entityIdNS`).
+You can access a [!DNL Profile] entity by making a GET request to the `/access/entities` endpoint and providing the entity's identity as a series of query parameters. This identity consists of an ID value (`entityId`) and the identity namespace (`entityIdNS`).
 
 Query parameters provided in the request path specify which data to access. You can include multiple parameters, separated by ampersands (&). A complete list of valid parameters is provided in the [query parameters](#query-parameters) section of the appendix.
 
@@ -110,6 +108,7 @@ curl -X GET \
 ```
 
 >[!NOTE]
+>
 >If a related graph links more than 50 identities, this service will return HTTP status 422 and the message "Too many related identities". If you receive this error, consider adding more query parameters to narrow your search.
 
 ## Access profile data by list of identities
@@ -356,6 +355,7 @@ curl -X GET \
 A successful response returns a paginated list of time series events and associated fields that were specified in the request query parameters. 
 
 >[!NOTE]
+>
 >The request specified a limit of one (`limit=1`), therefore the `count` in the response below is 1 and only one entity is returned.
 
 ```json
@@ -410,6 +410,7 @@ A successful response returns a paginated list of time series events and associa
 Results are paginated when retrieving time series events. If there are subsequent pages of results, the `_page.next` property will contain an ID. Additionally, the `_links.next.href` property provides a request URI for retrieving the next page. To retrieve the results, make another GET request to the `/access/entities` endpoint, however you must be sure to replace `/entities` with the value of the provided URI.
 
 >[!NOTE]
+>
 >Be sure that you do not accidentally repeat `/entities/` in the request path. It should only appear once like, `/access/entities?start=...`
 
 **API format**
@@ -770,7 +771,7 @@ Using this payload in the request body, you can perform an additional POST reque
 
 ## Access time series events in multiple schema entities
 
-You can access multiple entities that are connected through a relationship descriptor. The following example API call assumes a relationship has already been defined between two schemas. For more information on relationship descriptors, please read the Schema Registry API developer guide [descriptors sub-guide]](../../xdm/api/descriptors.md).
+You can access multiple entities that are connected through a relationship descriptor. The following example API call assumes a relationship has already been defined between two schemas. For more information on relationship descriptors, please read the [!DNL Schema Registry] API developer guide [descriptors endpoint guide](../../xdm/api/descriptors.md).
 
 You can include query parameters in the request path in order to specify which data to access. You can include multiple parameters, separated by ampersands (&). A complete list of valid parameters is provided in the [query parameters](#query-parameters) section of the appendix.
 
@@ -881,11 +882,11 @@ Results are paginated when retrieving time series events. If there are subsequen
 
 ## Next steps
 
-By following this guide you have successfully accessed Real-time Customer Profile data fields, profiles, and time series data. To learn how to access other data resources stored in Platform, see the [Data Access overview](../../data-access/home.md).
+By following this guide you have successfully accessed [!DNL Real-time Customer Profile] data fields, profiles, and time series data. To learn how to access other data resources stored in [!DNL Platform], see the [Data Access overview](../../data-access/home.md).
 
 ## Appendix {#appendix}
 
-The following section provides supplemental information regarding accessing Profile data using the API. 
+The following section provides supplemental information regarding accessing [!DNL Profile] data using the API. 
 
 ### Query parameters {#query-parameters}
 

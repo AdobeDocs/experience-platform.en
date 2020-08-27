@@ -1,4 +1,5 @@
 ---
+keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
 title: Getting started with Adobe Real-time Customer Data Platform
 seo-title: Getting started with Adobe Real-time Customer Data Platform
 description: Sample scenario for Adobe Real-time Customer Data Platform
@@ -12,7 +13,7 @@ This getting started guide leads you through a sample implementation of Adobe Re
 This example shows the power of Adobe Real-time Customer Data Platform, powered by Adobe Experience Platform, to:
 
 * Ingest data from multiple sources
-* Merge them into a single real-time customer profile
+* Merge them into a single [!DNL real-time customer profile]
 * Deliver a consistent, relevant, and personalized experience across devices.
 
 ## Use case
@@ -60,7 +61,7 @@ When customers first visit your site, you don't know anything about them.
 
 ![image](assets/luma-site.png)
 
-As they navigate, data is captured in real-time and sent not only to a report suite in Adobe Analytics, but also sent directly to Adobe Experience Platform. As data is collected, you begin to form a single view of the consumer, based on behavioral data in Experience Platform's real-time customer profile.  
+As they navigate, data is captured in real-time and sent not only to a report suite in Adobe Analytics, but also sent directly to Adobe Experience Platform. As data is collected, you begin to form a single view of the consumer, based on behavioral data in [!DNL Experience Platform's real-time customer profile].  
 
 Many visitors to the website are probably repeat customers who have previously purchased from Luma.  It's important for Luma to personalize messaging and offerings to address both new and repeat visitors, as well as known customers.
 
@@ -70,7 +71,7 @@ For example, an unidentifed visitor navigates to the Men’s section on the Luma
 
 ![image](assets/luma-sweatshirts.png)
 
-As the customer clicks to learn more about these products, these product views are collected in Adobe Analytics and sent to Experience Platform.  
+As the customer clicks to learn more about these products, these product views are collected in Adobe Analytics and sent to [!DNL Experience Platform].  
 
 <!--![image](assets/luma-shirt-detail.png)-->
 
@@ -89,9 +90,9 @@ Two identies are merged:
 * The anonymous browsing data
 * The existing data associated with Sarah Rose's account
 
-Both identies are combined into a single profile in Experience Platform. Luma now has a unified view of this consumer.
+Both identies are combined into a single profile in [!DNL Experience Platform]. Luma now has a unified view of this consumer.
 
-Based on the browsing behavior of the anonymous visitor in the Men's section of the site, it might have been assumed that the customer was a male. Now that she’s logged in, Luma recognizes Sarah Rose. Luma uses the power of the real-time customer profile to refine the messaging delivered to her across channels.  
+Based on the browsing behavior of the anonymous visitor in the Men's section of the site, it might have been assumed that the customer was a male. Now that she’s logged in, Luma recognizes Sarah Rose. Luma uses the power of the [!DNL Real-time Customer Profile] to refine the messaging delivered to her across channels.  
 
 ## Personalizing the user experience
 
@@ -101,7 +102,7 @@ She clicks to the home page to browse some more.
 
 ![image](assets/luma-personal.png)
 
-Sarah receives a personalized home page experience that is dynamically delivered, based on her real-time customer profile in Adobe Experience Platform.  
+Sarah receives a personalized home page experience that is dynamically delivered, based on her [!DNL Real-time Customer Profile] in Adobe Experience Platform.  
 
 She sees relevant content, thanks to Adobe Sensei-powered personalization in Adobe Target, which takes into account her past purchases and affinity toward running apparel and gear. Luma also tailors the men’s catalog content toward running gear for men based on her most recent browse.
 
@@ -136,11 +137,11 @@ All this data from disparate sources is merged into a single unified customer pr
 
 ## Configuring a data source
 
-Use Real-time Customer Data Platform to bring new sources of data into platform. Real-time CDP includes a catalog of data sources that can be added to the profile in just a few clicks.  
+Use [!DNL Real-time Customer Data Platform] to bring new sources of data into platform. Real-time CDP includes a catalog of data sources that can be added to the profile in just a few clicks.  
 
 ![image](assets/luma-source-cat.png)
 
-For example, to ingest Luma’s CRM data, filter the catalog by *CRM*, and all out-of-the-box connectors containing *CRM* are listed. To add Microsoft Dynamics CRM data:
+For example, to ingest Luma’s CRM data, filter the catalog by *CRM*, and all out-of-the-box connectors containing *CRM* are listed. To add [!DNL Microsoft Dynamics CRM] data:
 
 1. Authorize the connection.
 
@@ -152,7 +153,7 @@ For example, to ingest Luma’s CRM data, filter the catalog by *CRM*, and all o
     
     For example, select **[!UICONTROL Contacts]**. A preview of the contacts data automatically loads so you can make sure everything looks as expected.
 
-    Adobe Experience platform takes a lot of the manual work out of this process by auto-mapping standard fields to the Experience Data Model (XDM) profile schema. 
+    Adobe Experience platform takes a lot of the manual work out of this process by auto-mapping standard fields to the [!DNL Experience Data Model] (XDM) profile schema. 
     
 1. Review the field mappings.
 
@@ -165,15 +166,15 @@ For example, to ingest Luma’s CRM data, filter the catalog by *CRM*, and all o
 
     ![image](assets/luma-source-sched.png)
 
-It's done. You just added Microsoft CRM as a data source into Experience Platform.
+It's done. You just added [!DNL Microsoft CRM] as a data source into [!DNL Experience Platform].
 
 ### Labeling ingested data for usage policies
 
-Luma has many internal policies that restrict the usage of certain kinds of collected information, and must also comply with legal and privacy-related concerns regarding data usage. Using Adobe Experience Platform Data Governance, predefined data usage labels can be applied to datasets (and specific fields within those datasets), allowing Luma to categorize their data according to specific usage restrictions.
+Luma has many internal policies that restrict the usage of certain kinds of collected information, and must also comply with legal and privacy-related concerns regarding data usage. Using Adobe Experience Platform [!DNL Data Governance], predefined data usage labels can be applied to datasets (and specific fields within those datasets), allowing Luma to categorize their data according to specific usage restrictions.
 
 ![](assets/governance-labels.png)
 
-Once data usage labels have been applied, Luma can then use Data Governance to create data usage policies. Data usage policies are rules that describe the kinds of actions that you are allowed to perform on data that contains certain labels. When attempting to perform an action in Real-time CDP that constitutes a policy violation, the action is prevented and an alert is given to show which policy was violated and why.
+Once data usage labels have been applied, Luma can then use [!DNL Data Governance] to create data usage policies. Data usage policies are rules that describe the kinds of actions that you are allowed to perform on data that contains certain labels. When attempting to perform an action in Real-time CDP that constitutes a policy violation, the action is prevented and an alert is given to show which policy was violated and why.
 
 ## Bringing the data together for a specific customer
 
@@ -185,16 +186,16 @@ All of the profile information Luma has about Sarah displays. This includes her 
 
 |Category|Description|
 |---|---|
-|Identities|Shows the identities that have been linked together in Platform from Sarah's interactions with Luma across channels and devices. Her ECID from the website is displayed. Her identity also includes the ECID from her mobile app, her email ID, a CRM ID from the recently added Microsoft Dynamics dataset, and a loyalty ID passed into Adobe Experience Platform from the Luma loyalty system.|  
+|Identities|Shows the identities that have been linked together in [!DNL Platform] from Sarah's interactions with Luma across channels and devices. Her ECID from the website is displayed. Her identity also includes the ECID from her mobile app, her email ID, a CRM ID from the recently added [!DNL Microsoft Dynamics] dataset, and a loyalty ID passed into Adobe Experience Platform from the Luma loyalty system.|  
 |Events|Shows all of Sarah's interaction data with the Luma brand. This includes the item she just viewed, anything she's viewed in the past, the emails she's received, her interactions with the call center, and what channel and device each of those interactions happened on.|
 
 The Real-time CDP profile reduces the Luma marketing team's workflow from weeks to minutes and unlocks possibilities for personalization based on this 360-degree customer view. The profile merges the behavioral data from when she browsed the site before she signed in, with her existing customer profile, creating a comprehensive view of Sarah. 
 
-The marketing team can use this enhanced, real-time customer profile to better personalize Sarah's experience and increase her brand loyalty with Luma.
+The marketing team can use this enhanced, [!DNL Real-time Customer Profile] to better personalize Sarah's experience and increase her brand loyalty with Luma.
 
 ## Segments
 
-The powerful Adobe Experience Platform segmentation capabilities enable marketers to combine attributes, events and existing segments, based on data captured in the real-time customer profile. 
+The powerful Adobe Experience Platform segmentation capabilities enable marketers to combine attributes, events and existing segments, based on data captured in the [!DNL Real-time Customer Profile]. 
 
 <!-- ![image](assets/luma-segments.png) -->
 
@@ -208,7 +209,7 @@ The Luma data science team has created models around propensity to buy. One mode
 
 Modify or create a segment that represents cart abandoners who appear to be in the process of buying a gift:  
 
-```
+```sql
 Profile: Category != Preferred Category 
 AND 
 Product Size != Preferred Size 
@@ -249,6 +250,7 @@ In this scenario, Luma wants to retarget this audience with personalization acro
 You can also schedule the segment to start or end at a particular time. The segment will be posted and automatically update in the configured platforms on the scheduled dates. 
 
 >[!NOTE]
+>
 >Optionally, if you click in the date field, it automatically schedules for 90 days out. 
 
 Click **[!UICONTROL Save]** to go to the next page. 
@@ -263,7 +265,7 @@ Adobe Experience Platform includes privacy and security controls to determine wh
 
 If your activity violates policy, a warning appears. This warning contains data lineage information that can help you identify why the policy was violated, and what you can do to resolve the violation.
 
-With these controls, Experience Platform helps Luma comply with regulations and market responsibly. These controls are flexible and can be modified to meet the requirements of Luma’s security and governance teams, allowing them to confidently address regional and organizational requirements for managing known and unknown customer data.
+With these controls, [!DNL Experience Platform] helps Luma comply with regulations and market responsibly. These controls are flexible and can be modified to meet the requirements of Luma’s security and governance teams, allowing them to confidently address regional and organizational requirements for managing known and unknown customer data.
 
 ### Data flow canvas
 

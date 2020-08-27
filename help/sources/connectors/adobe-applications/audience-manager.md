@@ -10,10 +10,9 @@ topic: overview
 The Adobe Audience Manager data connector streams first party data collected in Adobe Audience Manager to Adobe Experience Platform. The Audience Manager connector ingests three categories of data to Platform:
 
 - **Realtime data:** Data captured in real time on Audience Manager's data collection server. This data is used in Audience Manager to populate rule based traits and will surface in Platform in the shortest latency time.
-- **Onboarded (inbound) data:** These are the files uploaded by a user into an Amazon S3 location hosted by Audience Manager. Audience Manager uses this data to populate onboarded traits using the inbound file method and will have some latency.
 - **Profile data:** Audience Manager uses realtime and onboarded data to derive customer profiles. These profiles are used to populate identity graphs and traits on segment realizations.
 
-The Audience Manager connector maps these data categories to Experience Data Model (XDM) schema and sends them to Platform. Realtime data and Onboarded data are sent as XDM ExperienceEvent data, while Profile data is sent as XDM Individual Profiles.
+The Audience Manager connector maps these data categories to Experience Data Model (XDM) schema and sends them to Platform. Realtime data are sent as XDM ExperienceEvent data, while Profile data is sent as XDM Individual Profiles.
 
 For instructions on creating a connection with Adobe Audience Manager using the Platform UI, see the [Audience Manager connector tutorial](../../tutorials/ui/create/adobe-applications/audience-manager.md).
 
@@ -47,7 +46,7 @@ Please see documentation for [Audience Manager mapping fields](./mapping/audienc
 
 Datasets are a storage and management construct for a collection of data, typically a table, that contains schema (columns) and fields (rows) and is made available by a data connection. Audience Manager data consists of Realtime data, Inbound data, and Profile data. To locate your Audience Manager datasets, use the search function in the UI with the provided naming conventions for each type of data.
 
-While users have the ability to disable datasets, it is not recommended to disable datasets that will be used for segment membership in Profile.
+Audience Manager datasets are disabled for Profile by default and users have the ability to enable or disable datasets based on their use cases. It is not recommended to disable datasets that will be used for segment membership in Profile.
 
 | Dataset Name | Description |
 | ------------ | ----------- |
@@ -57,8 +56,6 @@ While users have the ability to disable datasets, it is not recommended to disab
 | Audience Manager Device Profile Data | Used for Audience Manager connector diagnostics. |
 | Audience Manager Authenticated Profiles | This dataset contains Audience Manager authenticated profiles. |
 | Audience Manager Authenticated Profiles Meta Data | Used for Audience Manager Connector diagnostics.  |
-| Audience Manager Inbound {Datasource ID} **(Deprecated)** | This dataset represents onboarded records in Audience Manager via the inbound file method. This data flow is deprecated and will be removed in a subsequent release. |
-| Audience Manager Inbound Meta Data **(Deprecated)** | Used for Audience Manager connector diagnostics. This data flow is deprecated and will be removed in a subsequent release. |
 
 ### Connections
 

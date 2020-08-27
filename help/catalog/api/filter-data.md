@@ -1,19 +1,20 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;filter;Filter;filter data;Filter data;date range
 solution: Experience Platform
 title: Filter Catalog data using query parameters
 topic: developer guide
+description: The Catalog Service API allows response data to be filtered through the use of request query parameters. Part of best practices for Catalog is to use filters in all API calls, as they reduce the load on the API and help to improve overall performance.
 ---
 
-# Filter Catalog data using query parameters
+# Filter [!DNL Catalog] data using query parameters
 
-The Catalog Service API allows response data to be filtered through the use of request query parameters. Part of best practices for Catalog is to use filters in all API calls, as they reduce the load on the API and help to improve overall performance.
+The [!DNL Catalog Service] API allows response data to be filtered through the use of request query parameters. Part of best practices for [!DNL Catalog] is to use filters in all API calls, as they reduce the load on the API and help to improve overall performance.
 
-This document outlines the most common methods for filtering Catalog objects in the API. It is recommended that you reference this document while reading the [Catalog developer guide](getting-started.md) to learn more about how to interact with the Catalog API. For more general information on Catalog Service, see the [Catalog overview](../home.md).
+This document outlines the most common methods for filtering [!DNL Catalog] objects in the API. It is recommended that you reference this document while reading the [Catalog developer guide](getting-started.md) to learn more about how to interact with the [!DNL Catalog] API. For more general information on [!DNL Catalog Service], see the [[!DNL Catalog] overview](../home.md).
 
 ## Limit returned objects
 
-The `limit` query parameter constrains the number of objects returned in a response. Catalog responses are automatically metered according to configured limits:
+The `limit` query parameter constrains the number of objects returned in a response. [!DNL Catalog] responses are automatically metered according to configured limits:
 
 * If a `limit` parameter is not specified, the maximum number of objects per response payload is 20.
 * For dataset queries, if `observableSchema` is requested using the `properties` query parameter, the maximum number of datasets returned is 20.
@@ -29,7 +30,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of Catalog object to be retrieved. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
 | `{LIMIT}` | An integer indicating the number of objects to return, ranging from 1 to 100. |
 
 **Request**
@@ -97,9 +98,9 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of Catalog object to be retrieved. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
 | `{PROPERTY}` | The name of an attribute to include in the response body. |
-| `{OBJECT_ID}` | The unique identifier of a specific Catalog object being retrieved. |
+| `{OBJECT_ID}` | The unique identifier of a specific [!DNL Catalog] object being retrieved. |
 
 **Request**
 
@@ -116,7 +117,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns a list of Catalog objects with only the requested properties displayed.
+A successful response returns a list of [!DNL Catalog] objects with only the requested properties displayed.
 
 ```json
 {
@@ -198,9 +199,9 @@ There are a few limitations to consider when using tags:
 * The only Catalog objects that currently support tags are datasets, batches, and connections.
 * Tag names are unique to your IMS Organization.
 * Adobe processes may leverage tags for certain behaviors. The names of these tags are prefixed with "adobe" as a standard. Therefore, you should avoid this convention when declaring tag names.
-* The following tag names are reserved for use across Experience Platform, and therefore cannot be declared as a tag name for your organization:
-  * `unifiedProfile`: This tag name is reserved for datasets to be ingested by [Real-time Customer Profile](../../profile/home.md).
-  * `unifiedIdentity`: This tag name is reserved for datasets to be ingested by [Identity Service](../../identity-service/home.md).
+* The following tag names are reserved for use across [!DNL Experience Platform], and therefore cannot be declared as a tag name for your organization:
+  * `unifiedProfile`: This tag name is reserved for datasets to be ingested by [[!DNL Real-time Customer Profile]](../../profile/home.md).
+  * `unifiedIdentity`: This tag name is reserved for datasets to be ingested by [[!DNL Identity Service]](../../identity-service/home.md).
 
 Below is an example of a dataset that contains a `tags` property. The tags within that property take the form of key-value pairs, with each tag value appearing as an array containing a single string:
 
@@ -254,7 +255,7 @@ GET /{OBJECT_TYPE}?tags={TAG_NAME}:*
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of Catalog object to be retrieved. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul>|
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul>|
 | `{TAG_NAME}` | The name of the tag to filter by. |
 | `{TAG_VALUE}` | The value of the tag to filter by. Supports wildcard characters (`*`). |
 
@@ -325,7 +326,7 @@ A successful response returns a list of datasets that contain `sampleTag` with a
 
 ## Filter by date range
 
-Some endpoints in the Catalog API have query parameters that allow for ranged queries, most often in the case of dates.
+Some endpoints in the [!DNL Catalog] API have query parameters that allow for ranged queries, most often in the case of dates.
 
 **API format**
 
@@ -352,7 +353,7 @@ curl -X GET \
 
 **Response**
 
-A successful response contains a list of Catalog objects that fall within the specified date range. Unless a limit is also specified, the response contains a maximum of 20 objects.
+A successful response contains a list of [!DNL Catalog] objects that fall within the specified date range. Unless a limit is also specified, the response contains a maximum of 20 objects.
 
 ```json
 {
@@ -420,7 +421,7 @@ curl -X GET \
 
 **Response**
 
-A successful response contains a list of Catalog objects that are sorted according to the `orderBy` parameter. Unless a limit is also specified, the response contains a maximum of 20 objects. 
+A successful response contains a list of [!DNL Catalog] objects that are sorted according to the `orderBy` parameter. Unless a limit is also specified, the response contains a maximum of 20 objects. 
 
 ```json
 {
@@ -465,7 +466,7 @@ A successful response contains a list of Catalog objects that are sorted accordi
 
 ## Filter by property
 
-Catalog provides two methods of filtering by property, which are further outlined in the sections that follow:
+[!DNL Catalog] provides two methods of filtering by property, which are further outlined in the sections that follow:
 
 * [Using simple filters](#using-simple-filters): Filter by whether a specific property matches a specific value.
 * [Using the property parameter](#using-the-property-parameter): Use conditional expressions to filter based whether a property exists, or if a property's value matches, approximates, or compares to another specified value or regular expression.
@@ -489,7 +490,7 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of Catalog object to be retrieved. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
 | `{PROPERTY_NAME}` | The name of the property whose value you want to filter by. |
 | `{VALUE}` | A property value that determines which results to include (or exclude, depending on the query). |
 
@@ -565,7 +566,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | Parameter | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of Catalog object to be retrieved. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Valid objects are: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul>|
 | `{CONDITION}` | A conditional expression that indicates which property to query for, and how its value is to be evaluated. Examples are provided below. |
 
 The value of the `property` parameter supports several different kinds of conditional expressions. The following table outlines the basic syntax for supported expressions:
@@ -582,7 +583,9 @@ The value of the `property` parameter supports several different kinds of condit
 | > | Returns only objects whose property values are greater than (but not equal to) a stated amount. | `property=version>1.0.0` |
 | >= | Returns only objects whose property values are greater than (or equal to) a stated amount. | `property=version>=1.0.0` |
 
->[!NOTE] The `name` property supports the use of a wildcard `*`, either as the entire search string or as a part of it. Wildcards match empty characters, such that the search string `te*st` will match the value "test". Asterisks are escaped by doubling them (`**`). A double-asterisk in a search string represents a single asterisk as a literal string.
+>[!NOTE]
+>
+>The `name` property supports the use of a wildcard `*`, either as the entire search string or as a part of it. Wildcards match empty characters, such that the search string `te*st` will match the value "test". Asterisks are escaped by doubling them (`**`). A double-asterisk in a search string represents a single asterisk as a literal string.
 
 **Request**
 

@@ -1,55 +1,60 @@
 ---
-keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics
+keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;query service
 solution: Experience Platform
 title: Query service in Jupyter notebook
 topic: Tutorial
+description: Adobe Experience Platform allows you to use Structured Query Language (SQL) in Data Science Workspace by integrating Query Service into JupyterLab as a standard feature. This tutorial demonstrates sample SQL queries for common use cases to explore, transform, and analyze Adobe Analytics data.
 ---
 
 # Query service in Jupyter notebook
 
-Adobe Experience Platform allows you to use Structured Query Language (SQL) in Data Science Workspace by integrating Query Service into JupyterLab as a standard feature. 
+[!DNL Adobe Experience Platform] allows you to use Structured Query Language (SQL) in [!DNL Data Science Workspace] by integrating [!DNL Query Service] into [!DNL JupyterLab] as a standard feature. 
 
-This tutorial demonstrates sample SQL queries for common use cases to explore, transform, and analyze Adobe Analytics data.
+This tutorial demonstrates sample SQL queries for common use cases to explore, transform, and analyze [!DNL Adobe Analytics] data.
 
 ## Getting started
 
 Before starting this tutorial, you must have the following prerequisites:
 
--   Access to Adobe Experience Platform. If you do not have access to an IMS Organization in Experience Platform, please speak to your system administrator before proceeding
+-   Access to [!DNL Adobe Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding
 
--   An Adobe Analytics dataset
+-   An [!DNL Adobe Analytics] dataset
 
 -   A working understanding of the following key concepts used in this tutorial:
-    -   [Experience Data Model (XDM) and XDM System](../../xdm/home.md)
-    -   [Query Service](../../query-service/home.md)
-    -   [Query Service SQL Syntax](../../query-service/sql/overview.md)
-    -   Adobe Analytics
+    -   [[!DNL Experience Data Model (XDM) and XDM System]](../../xdm/home.md)
+    -   [[!DNL Query Service]](../../query-service/home.md)
+    -   [[!DNL Query Service SQL Syntax]](../../query-service/sql/overview.md)
+    -   [Adobe Analytics]
 
-## Access JupyterLab and Query Service {#access-jupyterlab-and-query-service}
+## Access [!DNL JupyterLab] and [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1.  In [Experience Platform](https://platform.adobe.com), navigate to **[!UICONTROL Notebooks]** from the left navigation column. Allow a moment for JupyterLab to load.
+1.  In [[!DNL Experience Platform]](https://platform.adobe.com), navigate to **[!UICONTROL Notebooks]** from the left navigation column. Allow a moment for JupyterLab to load.
 
     ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
-    > [!NOTE] If a new Launcher tab did not automatically appear, open a new Launcher tab by clicking **[!UICONTROL File]** then select **[!UICONTROL New Launcher]**.
+    >[!NOTE]
+    >
+    >If a new Launcher tab did not automatically appear, open a new Launcher tab by clicking **[!UICONTROL File]** then select **[!UICONTROL New Launcher]**.
 
 2.  In the Launcher tab, click the **[!UICONTROL Blank]** icon in a Python 3 environment to open an empty notebook.
 
     ![](../images/jupyterlab/query/blank_notebook.png)
 
-    > [!NOTE] Python 3 is currently the only supported environment for Query Service in notebooks.
+    >[!NOTE]
+    >
+    >Python 3 is currently the only supported environment for Query Service in notebooks.
 
 3.  On the left selection rail, click the **[!UICONTROL Data]** icon and double click the **[!UICONTROL Datasets]** directory to list all datasets.
 
     ![](../images/jupyterlab/query/dataset.png)
 
-4.  Find an Adobe Analytics dataset to explore and right-click on the listing, click **[!UICONTROL Query Data in Notebook]** to generate SQL queries in the empty notebook. 
+4.  Find an [!DNL Adobe Analytics] dataset to explore and right-click on the listing, click **[!UICONTROL Query Data in Notebook]** to generate SQL queries in the empty notebook. 
 
-5.  Click the first generated cell containing the function `qs_connect()` and execute it by clicking the play button. This function creates a connection between your notebook instance and the Query Service.
+5.  Click the first generated cell containing the function `qs_connect()` and execute it by clicking the play button. This function creates a connection between your notebook instance and the [!DNL Query Service].
 
     ![](../images/jupyterlab/query/execute.png)
 
-6.  Copy down the Adobe Analytics dataset name from the second generated SQL query, it will be the value after `FROM`.
+6.  Copy down the [!DNL Adobe Analytics] dataset name from the second generated SQL query, it will be the value after `FROM`.
 
     ![](../images/jupyterlab/query/dataset_name.png)
 
@@ -74,18 +79,20 @@ Before starting this tutorial, you must have the following prerequisites:
     target_day = "01"
     ```
 
-    -   `target_table` : Name of your Adobe Analytics dataset.
+    -   `target_table` : Name of your [!DNL Adobe Analytics] dataset.
     -   `target_year` : Specific year for which the target data is from.
     -   `target_month` : Specific month for which the target is from.
     -   `target_day` : Specific day for which the target data is from.
 
-    >[!NOTE] You can change these values at any time. When doing so, be sure to execute the variables cell for the changes to be applied.
+    >[!NOTE]
+    >
+    >You can change these values at any time. When doing so, be sure to execute the variables cell for the changes to be applied.
 
 ## Query your data {#query-your-data}
 
 Enter the following SQL queries in individual notebook cells. Execute a query by clicking on its cell followed by clicking the **[!UICONTROL play]** button. Successful query results or error logs are displayed below the executed cell.
 
-When a notebook is inactive for an extended period of time, the connection between the notebook and Query Service may break. In such cases, restart JupyterLab by clicking the **[!UICONTROL Power]** button located at the top right corner. 
+When a notebook is inactive for an extended period of time, the connection between the notebook and [!DNL Query Service] may break. In such cases, restart [!DNL JupyterLab] by clicking the **[!UICONTROL Power]** button located at the top right corner. 
 
 ![](../images/jupyterlab/query/restart_button.png)
 
@@ -113,7 +120,7 @@ ORDER  BY Hour;
 
 In the above query, the target `_acp_year` in the `WHERE` clause is set to be the value of `target_year`. Include variables in SQL queries by containing them in curly brackets (`{}`).
 
-The first line of the query contains the optional variable `hourly_visitor`. Query results will be stored in this variable as a Pandas dataframe. Storing results in a dataframe allows you to later visualize the query results using a desired Python package. Execute the following Python code in a new cell to generate a bar graph:
+The first line of the query contains the optional variable `hourly_visitor`. Query results will be stored in this variable as a Pandas dataframe. Storing results in a dataframe allows you to later visualize the query results using a desired [!DNL Python] package. Execute the following [!DNL Python] code in a new cell to generate a bar graph:
 
 ```python
 trace = go.Bar(
@@ -203,7 +210,7 @@ GROUP BY aaid_sess_key
 ORDER BY Count DESC;
 ```
 
-Execute the following Python code to generate a histogram for the number of events per visit session:
+Execute the following [!DNL Python] code to generate a histogram for the number of events per visit session:
 
 ```python
 data = [go.Histogram(x = events_per_session['Count'])]
@@ -277,4 +284,4 @@ LIMIT  10;
 
 ## Next steps <!-- omit in toc -->
 
-This tutorial demonstrated some sample uses cases for utilizing Query Service in Jupyter notebooks. Follow the [Analyze your data using Jupyter Notebooks](./analyze-your-data.md) tutorial to see how similar operations are performed using the Data Access SDK. 
+This tutorial demonstrated some sample uses cases for utilizing [!DNL Query Service] in [!DNL Jupyter] notebooks. Follow the [Analyze your data using Jupyter Notebooks](./analyze-your-data.md) tutorial to see how similar operations are performed using the Data Access SDK. 

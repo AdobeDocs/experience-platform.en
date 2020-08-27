@@ -3,13 +3,10 @@ title: Retrieving library information
 seo-title: Retrieving library information with Adobe Experience Platform Web SDK
 description: Learn how to retrieve information about the library loaded onto the website
 seo-description: Learn how to retrieve information about the library loaded onto the website by The Adobe Experience Cloud SDK collects automatically
+keywords: library; library information;getLibraryInfo;libraryInfo;
 ---
 
-# (Beta) Retrieving library information
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+# Retrieving library information
 
 It's often helpful to access some of the details behind the library you have loaded onto your website. To do this, execute the `getLibraryInfo` command as follows:
 

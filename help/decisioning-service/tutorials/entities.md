@@ -7,7 +7,7 @@ topic: tutorial
 
 # Manage Decisioning objects and rules using APIs
 
-This document provides a tutorial for working with the business entities of Decisioning Service using Adobe Experience Platform APIs. 
+This document provides a tutorial for working with the business entities of [!DNL Decisioning Service] using Adobe Experience Platform APIs. 
 
 The tutorial has two parts:
 
@@ -17,31 +17,33 @@ The tutorial has two parts:
   
 ## Getting started
 
-This tutorial requires a working understanding of the Experience Platform services and the API conventions. The Platform repository is a service used by several other Platform services to store business objects and various types of metadata. It provides a secure and flexible way to manage and query those objects for use by several runtime services. The Decisioning Service is one of those. Before beginning this tutorial, please review the documentation for the following:
+This tutorial requires a working understanding of the [!DNL Experience Platform] services and the API conventions. The [!DNL Platform] repository is a service used by several other [!DNL Platform] services to store business objects and various types of metadata. It provides a secure and flexible way to manage and query those objects for use by several runtime services. The [!DNL Decisioning Service] is one of those. Before beginning this tutorial, please review the documentation for the following:
 
-- [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
-- [Decisioning Service](./../home.md): Explains the concepts and components used for Experience Decisioning in general and Offer decisioning in particular. Illustrates the strategies used for choosing the best option to present during a customer's experience.
-- [Profile Query Language (PQL)](../../segmentation/pql/overview.md): PQL is a powerful language to write expressions over XDM instances. PQL is used to define decision rules.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
+- [[!DNL Decisioning Service]](./../home.md): Explains the concepts and components used for Experience Decisioning in general and Offer decisioning in particular. Illustrates the strategies used for choosing the best option to present during a customer's experience.
+- [[!DNL Profile Query Language (PQL)]](../../segmentation/pql/overview.md): PQL is a powerful language to write expressions over XDM instances. PQL is used to define decision rules.
 
-The following sections provide additional information that you will need to know in order to successfully make calls to the Platform APIs.
+The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.
 
 ### Reading sample API calls
 
-This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the Experience Platform troubleshooting guide.
+This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
 
 ### Gather values for required headers
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in Experience Platform are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+>[!NOTE]
+>
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
@@ -49,7 +51,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 ## Repository API conventions
 
-Decisioning Service is controlled by a number of business objects that are related to each other. All business objects are stored in the Platform’s Business Object Repository. A key feature of this repository is that the APIs are orthogonal to the type of business object. Instead of using a POST, GET, PUT, PATCH or DELETE API that indicates the type of resource in its API endpoint, there are only 6 generic endpoints but they accept or return a parameter that indicates the type of the object when that disambiguation is needed. The schema must be registered with the repository, but beyond that the repository is usable for an open-ended set of object types.  
+[!DNL Decisioning Service] is controlled by a number of business objects that are related to each other. All business objects are stored in the [!DNL Platform’s] Business Object Repository. A key feature of this repository is that the APIs are orthogonal to the type of business object. Instead of using a POST, GET, PUT, PATCH or DELETE API that indicates the type of resource in its API endpoint, there are only 6 generic endpoints but they accept or return a parameter that indicates the type of the object when that disambiguation is needed. The schema must be registered with the repository, but beyond that the repository is usable for an open-ended set of object types.  
 
 In addition to the headers listed above, the APIs to create, read, update, delete and query repository objects have the following conventions:
 
@@ -85,7 +87,7 @@ The list of accessible containers is obtained by calling the repository root end
 
 ## Managing access to containers
 
-An administrator can group similar principals, resources, access permissions into profiles. This reduces the management burden and is supported by [Adobe’s Admin Console UI](https://adminconsole.adobe.com). You must be a product administrator for the Adobe Adobe Experience Platform and Offers in your organization to create profiles and assign users to them.
+An administrator can group similar principals, resources, and access permissions into profiles. This reduces the management burden and is supported by [Adobe’s Admin Console UI](https://adminconsole.adobe.com). You must be a product administrator for Adobe Experience Platform in your organization to create profiles and assign users to them.
 
 It is sufficient to create product profiles that match certain permissions in a one-time step and then simply add users to those profiles. Profiles act as groups that have been granted permissions and every real user or technical user in that group inherits those permissions.
  
@@ -93,9 +95,11 @@ It is sufficient to create product profiles that match certain permissions in a 
 
 When the administrator has granted access to containers for regular users or integrations those containers will show up in the so-called “Home” list of the repository. The list may be different for different users or integrations as it is a subset of all containers accessible to the caller. The list of containers can be filtered by their association to product contexts. The filter parameter is called `product` and can be repeated. If more than one product context filter is given then the union of the containers that have associations with any of the given product contexts will be returned. Note that a single container can be associated to multiple product contexts.
 
-The context for the Platform Decisioning Service containers is currently `dma_offers`.
+The context for the [!DNL Platform] [!DNL Decisioning Service] containers is currently `dma_offers`.
 
->[!NOTE] The context for Platform Decisioning Containers is soon to change to `acp`. Filtering is optional, but filters by only `dma_offers` will require edits upon a future release. To prepare for this change clients should use no filters or apply both product contexts as their filter.
+>[!NOTE]
+>
+>The context for [!DNL Platform Decisioning Containers] is soon to change to `acp`. Filtering is optional, but filters by only `dma_offers` will require edits upon a future release. To prepare for this change clients should use no filters or apply both product contexts as their filter.
 
 **Request**
 
@@ -226,7 +230,9 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
   -H 'x-request-id: {NEW_UUID}'  
 ```
 
->[!NOTE] Although `instanceId` is given as a path parameter, applications should, whenever possible, not construct the path themselves and instead follow links to instances contained in list and search operations. See sections ‎6.4.4 and ‎6.4.6 for details. 
+>[!NOTE]
+>
+>Although `instanceId` is given as a path parameter, applications should, whenever possible, not construct the path themselves and instead follow links to instances contained in list and search operations. See sections ‎6.4.4 and ‎6.4.6 for details. 
 
 **Response** 
 
@@ -319,7 +325,9 @@ The response depends on the `{schemaId}` specified. For instance for "https<span
 }
 ```
 
->[!NOTE] The result contains the instances for the given schema or the first page of this list. Note, that instances can comply to more than one schema and therefore can appear in more than one list.
+>[!NOTE]
+>
+>The result contains the instances for the given schema or the first page of this list. Note, that instances can comply to more than one schema and therefore can appear in more than one list.
 
 Page resources are transient and are read-only; they cannot be updated or deleted. The paging model provides random access to subsets of a large lists over an extended period of time without maintaining any per-client state.
 
@@ -563,7 +571,9 @@ When using the APIs with the content type `application/vnd.adobe.platform.xcore.
 }
 ```
 
->[!NOTE] For brevity reasons, in the all the JSON snippets only the instance properties are illustrated and only when it is required the envelope properties and _links section is shown. 
+>[!NOTE]
+>
+>For brevity reasons, in the all the JSON snippets only the instance properties are illustrated and only when it is required the envelope properties and _links section is shown. 
 
 ### General offer properties 
 
@@ -760,7 +770,7 @@ https://ns.adobe.com/experience/offer-management/eligibility-rule.
 
 Adding and deleting a rule can be accomplished with a PATCH operation as well:
 
-```
+```json
 [
   {
     "op":   "replace",
@@ -832,7 +842,7 @@ See [Updating and patching instances](#updating-and-patching-instances) for the 
 
 The value in the rule’s condition property contains a PQL expression. The context data is referenced via the special path expression @{schemaID}.
 
-Rules naturally align with segments in the Experience Platform and often a rule will simply reuse a segment’s intent by testing a profile’s `segmentMembership` property. The `segmentMembership` property contains the results of segments conditions that were already evaluated. This allows an organization to define their domain specific audiences once, name them and evaluate the conditions once.
+Rules naturally align with segments in the [!DNL Experience Platform] and often a rule will simply reuse a segment’s intent by testing a profile’s `segmentMembership` property. The `segmentMembership` property contains the results of segments conditions that were already evaluated. This allows an organization to define their domain specific audiences once, name them and evaluate the conditions once.
 
 ## Managing offer collections
 

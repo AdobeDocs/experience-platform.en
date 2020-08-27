@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;offer management;Offer Management
 solution: Experience Platform
 title: Offer Decisioning domain model
 topic: overview
+description: Offer decisioning is a use case of Decisioning Service within which you formalize and centrally manage the rules and predictions used for engaging customers with offers.
 ---
 
 # Offer Decisioning domain model overview
 
-Offer decisioning is a use case of Decisioning Service within which you formalize and centrally manage the rules and predictions used for engaging customers with offers. Offer decisioning is considered a type of _**content decisioning**_. In this use case, the _**decision options**_ are referred to as _**offers**_, and are characterized as such by the content attached to them. For an introduction of the object model used by the Decisioning Service, please refer to [Decisioning Service Domain Model](experience-model.md).
+Offer decisioning is a use case of [!DNL Decisioning Service] within which you formalize and centrally manage the rules and predictions used for engaging customers with offers. Offer decisioning is considered a type of _**content decisioning**_. In this use case, the _**decision options**_ are referred to as _**offers**_, and are characterized as such by the content attached to them. For an introduction of the object model used by the [!DNL Decisioning Service], please refer to [Decisioning Service Domain Model](experience-model.md).
 
 The objective is to present the end user with a "Best Offer" in any channel based on targeting criteria, cost and frequency constraints, as well as prior interactions across channels including prior Offers proposed. 
 
@@ -56,7 +57,7 @@ General offers, also called personalized offers, are the options at the center o
 
 Placements define content constraints and used with an activity to specify the place into which the next best experience is delivered. This reduces further the number of options that can be considered and is another constraint imposed by the activity. This is called the placement constraint. Only options that have content meeting a placement constraint, such as offers, will be considered. This is evaluated in the early stages of the decision strategy. When option objects change the placement constraints of each activity are reevaluated and the option may come into consideration or fall out of it for one or more activities.
 
-It is not the responsibility of the Decisioning Service to formalize the complex details of content dependencies. Instead, each client will identify the list of placements across all channels and give those placements unique identifiers and names. By referencing a particular placement, the designer asserts that the given content will fit into the placement.
+It is not the responsibility of the [!DNL Decisioning Service] to formalize the complex details of content dependencies. Instead, each client will identify the list of placements across all channels and give those placements unique identifiers and names. By referencing a particular placement, the designer asserts that the given content will fit into the placement.
 
 When content is developed the offer marketer and the content designer will simply (have to) agree on an "implied contract" that stands behind the name "Home Page Hero Image" or "Service Call Opening Script". The former may be agreed upon as an image of 600px width and 350px height and the latter may be restricting the content to text in two language variants that is no more than 50 words in three or four sentences with a semantic structure. Placement to not store all meaning of the hidden contract.
 
@@ -94,7 +95,7 @@ When a decision is requested the client can ask for propositions for multiple ac
 
 Duplication constraints are currently not written into the business object repository. Instead, de-duplication is the default strategy at runtime. A request parameter can override the default behavior to suppress de-duplication step.
 
-### Profile constraints - Eligibility rules
+### [!DNL Profile] constraints - Eligibility rules
 
 So far, the constraints discussed have been applicable regardless of whom the offer selection is made for. Experience Decisioning also supports a use case wherein personalizing propositions are based on a customer’s record and time series events. Rules are evaluated per profile, to decide if an offer qualifies or must be suppressed for that user. To do that an eligibility rule can be associated with each offer. Aside from the profile and experience events of an end user the eligibility rule will take real-time context data into account. That data is provided by the delivery service and can take the form of data that is not related to a profile such as inventory levels, weather conditions, flight schedules.
 

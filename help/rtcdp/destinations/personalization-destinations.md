@@ -1,4 +1,5 @@
 ---
+keywords: personalization;Personalization
 title: Personalization Destinations
 seo-title: Personalization Destinations
 description: Personalization platforms collect data and insights from individual behaviors. These platforms can assist marketers in navigating anonymous data, serving up offers or ads to prospects based on previous activity or as part of audience segments with similar habits.

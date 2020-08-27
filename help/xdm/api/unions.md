@@ -7,13 +7,13 @@ topic: developer guide
 
 # Unions
 
-Unions (or union views) are system-generated, read-only schemas that aggregate the fields of all schemas which share the same class (XDM ExperienceEvent or XDM Individual Profile) and are enabled for [Real-time Customer Profile](../../profile/home.md).
+Unions (or union views) are system-generated, read-only schemas that aggregate the fields of all schemas which share the same class ([!DNL XDM ExperienceEvent] or [!DNL XDM Individual Profile]) and are enabled for [[!DNL Real-time Customer Profile]](../../profile/home.md).
 
 This document covers essential concepts for working with unions in the Schema Registry API, including sample calls for various operations. For more general information about unions in XDM, see the section on unions in the [basics of schema composition](../schema/composition.md#union).
 
 ## Union mixins
 
-The Schema Registry automatically includes three mixins within the union schema: `identityMap`, `timeSeriesEvents`, and `segmentMembership`.
+The [!DNL Schema Registry] automatically includes three mixins within the union schema: `identityMap`, `timeSeriesEvents`, and `segmentMembership`.
 
 ### Identity map
 
@@ -23,7 +23,7 @@ See the [Identity Service documentation](../../identity-service/home.md) for mor
 
 ### Time-series events
 
-The `timeSeriesEvents` array is a list of time-series events that relate to the record schemas that are associated with the union. When Profile data is exported to datasets, this array is included for each record. This is useful for various use-cases, such as machine learning where models need a profile's entire behavior history in addition to its record attributes.
+The `timeSeriesEvents` array is a list of time-series events that relate to the record schemas that are associated with the union. When [!DNL Profile] data is exported to datasets, this array is included for each record. This is useful for various use-cases, such as machine learning where models need a profile's entire behavior history in addition to its record attributes.
 
 ### Segment membership map
 
@@ -35,7 +35,9 @@ See the tutorial on [creating segments using APIs](../../segmentation/tutorials/
 
 In order for a schema to be included in the merged union view, the "union" tag must be added to the `meta:immutableTags` attribute of the schema. This is done through a PATCH request to update the schema and add the `meta:immutableTags` array with a value of "union".
 
->[!NOTE] Immutable tags are tags that are intended to be set, but never removed.
+>[!NOTE]
+>
+>Immutable tags are tags that are intended to be set, but never removed.
 
 **API format**
 
@@ -45,7 +47,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Parameter | Description |
 | --- | --- |
-| `{SCHEMA_ID}` | The URL-encoded `$id` URI or `meta:altId` of the schema you want to enable for use in Profile. |
+| `{SCHEMA_ID}` | The URL-encoded `$id` URI or `meta:altId` of the schema you want to enable for use in [!DNL Profile]. |
 
 **Request**
 
@@ -108,7 +110,7 @@ A successful response returns the details of the updated schema, which now inclu
 
 ## List unions
 
-When you set the "union" tag on a schema, the Schema Registry automatically creates and maintains a union for the class upon which the schema is based. The `$id` for the union is similar to the standard `$id` of a class, with the only difference being that is appended by two underscores and the word "union" (`"__union"`).
+When you set the "union" tag on a schema, the [!DNL Schema Registry] automatically creates and maintains a union for the class upon which the schema is based. The `$id` for the union is similar to the standard `$id` of a class, with the only difference being that is appended by two underscores and the word "union" (`"__union"`).
 
 To view a list of available unions, you can perform a GET request to the `/unions` endpoint.
 
@@ -157,7 +159,9 @@ A successful response returns HTTP status 200 (OK) and a `results` array in the 
 
 You can view a specific union by performing a GET request that includes the `$id` and, depending on the Accept header, some or all of the details of the union.
 
->[!NOTE] Union lookups are available using the `/unions` and `/schemas` endpoint to enable them for use in Profile exports into a dataset. 
+>[!NOTE]
+>
+>Union lookups are available using the `/unions` and `/schemas` endpoint to enable them for use in [!DNL Profile] exports into a dataset. 
 
 **API format**
 
@@ -254,7 +258,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 **Request**
 
-The following request looks up all schemas that are part of the XDM Individual Profile class union.
+The following request looks up all schemas that are part of the [!DNL XDM Individual Profile] class union.
 
 ```SHELL
 curl -X GET \

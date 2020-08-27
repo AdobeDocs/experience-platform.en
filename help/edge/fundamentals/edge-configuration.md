@@ -3,31 +3,28 @@ title: Edge Configuration
 seo-title: Edge configuration for the Experience Platform Web SDK
 description: Learn how to configure the Experience Platform Edge Network. 
 seo-description: Learn how to configure the Experience Platform Edge Network. 
+keywords: configuration;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
 ---
 
-# (Beta) Edge Configuration
+# Configuring the Edge
 
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
-
-The configuration for the Adobe Experience Platfrom Web SDK is split between two places. The [configure command](configuring-the-sdk.md) in the SDK controls things that must be handled on the client, like the `edgeDomain`. The edge configuration handles all other configuration for the SDK. When a request is sent to the Adobe Experience Platform Edge Network, the `edgeConfigId` is used to reference the server side configuration. This allows you to update configuration without having to make code changes on your website. 
+The configuration for the Adobe Experience Platform [!DNL Web SDK] is split between two places. The [configure command](configuring-the-sdk.md) in the SDK controls things that must be handled on the client, like the `edgeDomain`. The edge configuration handles all other configuration for the SDK. When a request is sent to the Adobe Experience Platform [!DNL Edge Network], the `edgeConfigId` is used to reference the server side configuration. This allows you to update the configuration without having to make code changes on your website. 
 
 ## Creating an Edge Configuration ID
 
-Edge configuration IDs can be created in Launch using the edge configuration tool. This tool allows you to create both the edge configuration as well as environments within those configurations.
+Edge configuration IDs can be created in Adobe [!DNL Launch] using the edge configuration tool. This tool allows you to create both the edge configuration as well as environments within those configurations.
 
 ![edge configuration tool navigation](../../assets/edge_configuration_nav.png)
 
->[!NOTE] 
+>[!NOTE]
 >
->The edge configuration tool is available to whitelisted customers regardless whether they use Launch as a tag manager. Additionally, users require Develop permissions in Launch. See the [User Permissions](https://docs.adobe.com/content/help/en/launch/using/reference/admin/user-permissions.html) article in the Launch documentation for more details.
+>The edge configuration tool is available to customers on the allow list regardless whether they use [!DNL Launch] as a tag manager. Additionally, users require Develop permissions in [!DNL Launch]. See the [User Permissions](https://docs.adobe.com/content/help/en/launch/using/reference/admin/user-permissions.html) article in the [!DNL Launch] documentation for more details.
 
-You can create an edge configuration by clicking on **[UICONTROL New Edge Configuration]** in the top right area of the screen. After you provide a name and a description, you are asked for the default settings for each environment.
+You can create an edge configuration by clicking on **[!UICONTROL New Edge Configuration]** in the top right area of the screen. After you provide a name and a description, you are asked for the default settings for each environment.
 
 ### Default Environment Settings
 
-These default settings are used to create your first three environments with identical settings. These three environments are dev, stage, and prod. They match the three default environments in Launch. When you build a Launch library to a dev environment, the library automatically uses the dev environment from your configuration. You can edit settings in individual environments as much as you'd like.
+These default settings are used to create your first three environments with identical settings. These three environments are *dev*, *stage*, and *prod*. They match the three default environments in [!DNL Launch]. When you build a [!DNL Launch] library to a dev environment, the library automatically uses the dev environment from your configuration. You can edit settings in individual environments as much as you'd like.
 
 The ID used in the SDK as the `edgeConfigId` is a composite ID that specifies the configuration and the environment. If no environment is present, then the production environment is used.
 
@@ -37,7 +34,7 @@ Below are each of the settings available to an environment. Most sections can be
 
 #### [!UICONTROL Identity]
 
-The identity section is the only section that is always on. It has two available settings: ID Syncs Enabled and ID Sync Container ID.
+The identity section is the only section that is always on. It has two available settings: [!UICONTROL ID Syncs Enabled] and [!UICONTROL ID Sync Container ID].
 
 ![Identity section of the configuration UI](../../assets/edge_configuration_identity.png)
 
@@ -57,7 +54,7 @@ The settings listed here enable you to send data to the Adobe Experience Platfor
 
 ##### [!UICONTROL Sandbox]
 
-Sandboxes are locations in the Adobe Experience Platform that allow customers to isolate their data and implementations from each other. More details about how they work are located in the [Sandboxes documentation](../../sandboxes/home.md).
+Sandboxes are locations in the Adobe Experience Platform that allow customers to isolate their data and implementations from each other. For more details about how they work, see the [Sandboxes documentation](../../sandboxes/home.md).
 
 ##### [!UICONTROL Streaming Inlet]
 
@@ -73,7 +70,7 @@ To configure Adobe Target, you must provide a client code. The other fields are 
 
 ![Adobe Target settings block](../../assets/edge_configuration_target.png)
 
->[!NOTE] 
+>[!NOTE]
 >
 >The Organization associated with the client code must match the organization where the configuration ID is created.
 
@@ -83,9 +80,9 @@ The unique ID for a target account. To find this, you can navigate to [!UICONTRO
 
 ##### [!UICONTROL Property Token]
 
-Target allows customers to control permissions through the use of properties. Details can be found in the [Enterprise Permissions](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) section of the Target Documentation.
+[!DNL Target] allows customers to control permissions through the use of properties. Details can be found in the [Enterprise Permissions](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) section of the [!DNL Target] documentation.
 
-The property token can be found in [!UICONTROL Adobe Target] > [!UICONTROL setup] > [UICONTROL Properties]
+The property token can be found in [!UICONTROL Adobe Target] > [!UICONTROL setup] > [!UICONTROL Properties]
 
 ##### [!UICONTROL Target Environment ID]
 
@@ -101,11 +98,11 @@ All that is needed to send data to Adobe Audience Manager is to enable this sect
 
 ##### [!UICONTROL Cookie Destinations Enabled]
 
-Allows the SDK to share segment information via [Cookie Destinations](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) from Audience Manager.
+Allows the SDK to share segment information via [Cookie Destinations](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) from [!DNL Audience Manager].
 
 ##### [!UICONTROL URL Destinations Enabled]
 
-Allows the SDK to share segment information via [URL Destinations](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html). These are configured in Audience Manager.
+Allows the SDK to share segment information via [URL Destinations](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html). These are configured in [!DNL Audience Manager].
 
 #### Adobe Analytics
 

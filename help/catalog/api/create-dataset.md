@@ -1,15 +1,18 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;dataset;Dataset;create a dataset;create dataset;enable dataset
 solution: Experience Platform
 title: Create a dataset
 topic: developer guide
+description: This document covers how to create a dataset object in Catalog.
 ---
 
 # Create a dataset
 
-In order to create a dataset using the Catalog API, you must know the `$id` value of the Experience Data Model (XDM) schema on which the dataset will be based. Once you have the schema ID, you can create a dataset by making a POST request to the `/datasets` endpoint in the Catalog API.
+In order to create a dataset using the [!DNL Catalog] API, you must know the `$id` value of the [!DNL Experience Data Model] (XDM) schema on which the dataset will be based. Once you have the schema ID, you can create a dataset by making a POST request to the `/datasets` endpoint in the [!DNL Catalog] API.
 
->[!NOTE] This document only covers how to create a dataset object in Catalog. For full steps on how to create, populate, and monitor a dataset, please refer to the following [tutorial](../datasets/create.md).
+>[!NOTE]
+>
+>This document only covers how to create a dataset object in [!DNL Catalog]. For full steps on how to create, populate, and monitor a dataset, please refer to the following [tutorial](../datasets/create.md).
 
 **API format**
 
@@ -48,7 +51,9 @@ curl -X POST \
 | `name` | The name of the dataset to be created. |
 | `schemaRef.id` | The URI `$id` value for the XDM schema the dataset will be based on. |
 
->[!NOTE] This example uses the [parquet](https://parquet.apache.org/documentation/latest/) file format for its `containerFormat` property. An example that uses the JSON file format can be found in the [batch ingestion developer guide](../../ingestion/batch-ingestion/api-overview.md).
+>[!NOTE]
+>
+>This example uses the [parquet](https://parquet.apache.org/documentation/latest/) file format for its `containerFormat` property. An example that uses the JSON file format can be found in the [batch ingestion developer guide](../../ingestion/batch-ingestion/api-overview.md).
 
 **Response**
 

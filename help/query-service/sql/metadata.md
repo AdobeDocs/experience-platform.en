@@ -1,15 +1,18 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;PSQL;psql
 solution: Experience Platform
 title: Metadata commands
 topic: metadata
+description: A list of PSQL commands that are currently supported for querying metadata.
 ---
 
 # Metadata commands
 
 For metadata on your dataset, the following PSQL commands are currently supported for querying:
 
->[!NOTE] The commands listed below are case sensitive.
+>[!NOTE]
+>
+>The commands listed below are case sensitive.
 
 |Command | Description|
 |------- | ------------|
@@ -34,5 +37,5 @@ For metadata on your dataset, the following PSQL commands are currently supporte
 
 All of the commands that start with `\d` can be combined. For example, you can issue `\dtsn` to display a list of all tables, sequences, and schemas. `\d` by itself shows all visible tables, views, materialized views, and sequences.
 
-For additional information about the commands listed above, please refer to the documentation at [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). However, please be aware that not all the options shown in the PostgreSQL documentation are supported by Experience Platform.
+For additional information about the commands listed above, please refer to the documentation at [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). However, please be aware that not all the options shown in the PostgreSQL documentation are supported by [!DNL Experience Platform].
 

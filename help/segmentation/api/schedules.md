@@ -5,48 +5,39 @@ title: Schedules
 topic: developer guide
 ---
 
-# Schedules developer guide
+# Schedules endpoint
 
-intro
-
-- Retrieve a list of schedules
-- Create a new schedule
-- Retrieve a specific schedule
-- Update a specific schedule
-- Delete a specific schedule
+Schedules are a tool that can be used to automatically run batch segmentation jobs once a day. You can use the `/config/schedules` endpoint to retrieve a list of schedules, create a new schedule, retrieve details of a specific schedule, update a specific schedule, or delete a specific schedule. 
 
 ## Getting started
 
-The API endpoints used in this guide are part of the Segmentation API. Before continuing, please review the [Segmentation developer guide](./getting-started.md).
+The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
 
-In particular, the [getting started section](./getting-started.md#getting-started) of the Segmentation developer guide includes links to related topics, a guide to reading the sample API calls in the document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
-
-## Retrieve a list of schedules
+## Retrieve a list of schedules {#retrieve-list}
 
 You can retrieve a list of all schedules for your IMS Organization by making a GET request to the `/config/schedules` endpoint.
 
 **API format**
 
+The `/config/schedules` endpoint supports several query parameters to help filter your results. While these parameters are optional, their use is strongly recommended to help reduce expensive overhead. Making a call to this endpoint with no parameters will retrieve all schedules available for your organization. Multiple parameters can be included, separated by ampersands (`&`). 
+
 ```http
 GET /config/schedules
-GET /config/schedules?{QUERY_PARAMETERS}
+GET /config/schedules?start={START}
+GET /config/schedules?limit={LIMIT}
 ```
-
-- `{QUERY_PARAMETERS}`: (*Optional*) Parameters added to the request path which configure the results returned in the response. Multiple parameters can be included, separated by ampersands (`&`). The available parameters are listed below.
-
-**Query parameters**
-
-The following is a list of available query parameters for listing schedules. All of these parameters are optional. Making a call to this endpoint with no parameters will retrieve all schedules available for your organization.
 
 | Parameter | Description |
 | --------- | ----------- |
-| `start` | Specifies which page the offset will start from. By default, this value will be 0. |
-| `limit` | Specifies the number of schedules returned. By default, this value will be 100. |
+| `{START}` | Specifies which page the offset will start from. By default, this value will be 0. |
+| `{LIMIT}` | Specifies the number of schedules returned. By default, this value will be 100. |
 
 **Request**
 
+The following request will retrieve the last ten schedules posted within your IMS Organization.
+
 ```shell
-curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=X \
+curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
@@ -57,10 +48,14 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=X \
 
 A successful response returns HTTP status 200 with a list of schedules for the specified IMS organization as JSON. 
 
+>[!NOTE]
+>
+>The following response has been truncated for space, and shows only the first schedule returned.
+
 ```json
 {
     "_page": {
-        "totalCount": 1,
+        "totalCount": 10,
         "pageSize": 1
     },
     "children": [
@@ -90,7 +85,18 @@ A successful response returns HTTP status 200 with a list of schedules for the s
 }
 ```
 
-## Create a new schedule
+| Property | Description  |
+| -------- | ------------ |
+| `_page.totalCount` | The total number of schedules returned. |
+| `_page.pageSize` | The size of the page of schedules. |
+| `children.name` | The name of the schedule as a string. |
+| `children.type` | The type of job as a string. The two supported types are "batch_segmentation" and "export". |
+| `children.properties` | An object containing additional properties related to the schedule. |
+| `children.properties.segments` | Using `["*"]` ensures all segments are included. |
+| `children.schedule` | A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24-hour period. For more information about cron schedules, please read the [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation. In this example, "0 0 1 * *" means that this schedule will run at midnight on the first of every month. |
+| `children.state` | A string containing the schedule state. The two supported states are "active" and "inactive". By default, the state is set to "inactive". |
+
+## Create a new schedule {#create}
 
 You can create a new schedule by making a POST request to the `/config/schedules` endpoint.
 
@@ -111,27 +117,26 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
 {
-  "name": "profile-default",
-  "type": "batch_segmentation",
-  "properties": {
-    "segments": [
-      "*"
-    ]
-  },
-  "schedule": "0 0 1 * * ?",
-  "state": "inactive"
-}
- '
+    "name":"profile-default",
+    "type":"batch_segmentation",
+    "properties":{
+        "segments":[
+            "*"
+        ]
+    },
+    "schedule":"0 0 1 * * ?",
+    "state":"inactive"
+}'
 ```
 
-| Parameter | Description  |
-| --------- | ------------ |
+| Property | Description  |
+| -------- | ------------ |
 | `name` | **Required.** The name of the schedule as a string. |
-| `type` | **Required.** The type of job as a string. The two supported types are `batch_segmentation` and `export`. |
+| `type` | **Required.** The type of job as a string. The two supported types are "batch_segmentation" and "export". |
 | `properties` | **Required.** An object containing additional properties related to the schedule. |
-| `properties.segments` | **Required when `type` equals `batch_segmentation`.** Using `["*"]` ensures all segments are included. |
-| `schedule` | **Required.** A string containing the job schedule. For more information about cron schedules, please read the [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation. In this example, "0 0 1 * *" means that this schedule will run at midnight on the first of every month. |
-| `state` | *Optional.* A string containing the schedule state. The two supported states are `active` and `inactive`. By default, the state is set to `inactive`. |
+| `properties.segments` | **Required when `type` equals "batch_segmentation".** Using `["*"]` ensures all segments are included. |
+| `schedule` | *Optional.* A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24-hour period. For more information about cron schedules, please read the [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation. In this example, "0 0 1 * *" means that this schedule will run at midnight on the first of every month. <br><br>If this string is not supplied, a system-generated schedule will be automatically generated. |
+| `state` | *Optional.* A string containing the schedule state. The two supported states are "active" and "inactive". By default, the state is set to "inactive". |
 
 **Response**
 
@@ -161,9 +166,9 @@ A successful response returns HTTP status 200 with details of your newly created
 }
 ```
 
-## Retrieve a specific schedule
+## Retrieve a specific schedule {#get}
 
-You can retrieve detailed information about a specific schedule by making a GET request to the `/config/schedules` endpoint and providing the schedule's `id` value in the request path.
+You can retrieve detailed information about a specific schedule by making a GET request to the `/config/schedules` endpoint and providing the ID of the schedule you wish to retrieve in the request path.
 
 **API format**
 
@@ -171,12 +176,14 @@ You can retrieve detailed information about a specific schedule by making a GET 
 GET /config/schedules/{SCHEDULE_ID}
 ```
 
-- `{SCHEDULE_ID}`: The `id` value of the schedule you want to retrieve.
+| Parameter | Description |
+| --------- | ----------- |
+| `{SCHEDULE_ID}` | The `id` value of the schedule you want to retrieve. |
 
 **Request**
 
 ```shell
-curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/{SCHEDULE_ID}
+curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
@@ -208,17 +215,27 @@ A successful response returns HTTP status 200 with detailed information about th
     },
     "createEpoch": 1568267948,
     "updateEpoch": 1568267948
+}
 ```
 
-## Update details a specific schedule
+| Property | Description  |
+| -------- | ------------ |
+| `name` | The name of the schedule as a string. |
+| `type` | The type of job as a string. The two supported types are `batch_segmentation` and `export`. |
+| `properties` | An object containing additional properties related to the schedule. |
+| `properties.segments` | Using `["*"]` ensures all segments are included. |
+| `schedule` | A string containing the job schedule. Jobs can only be scheduled to run once a day, meaning you cannot schedule a job to run more than once during a 24 hour period. For more information about cron schedules, please read the [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation. In this example, "0 0 1 * *" means that this schedule will run at midnight on the first of every month. |
+| `state` | A string containing the schedule state. The two supported states are `active` and `inactive`. By default, the state is set to `inactive`. |
 
-You can update a specified schedule by making a PATCH request to the `/config/schedules` endpoint and providing the schedule's `id` value in the request path.
+## Update details for a specific schedule {#update}
 
-The PATCH request supports two different paths: `/state` and `/schedule`.
+You can update a specific schedule by making a PATCH request to the `/config/schedules` endpoint and providing the ID of the schedule you are trying to update in the request path.
 
-### Update schedule state
+The PATCH request allows you to update either the [state](#update-state) or the [cron schedule](#update-schedule) for an individual schedule.
 
-You can use `/state` to update the state of the schedule - ACTIVE or INACTIVE. To update the state, you will need to set the value as `active` or `inactive`.
+### Update schedule state {#update-state}
+
+You can use a JSON Patch operation to update the state of the schedule. To update the state, you declare the `path` property as `/state` and set the `value` to either `active` or `inactive`. For more information about JSON Patch, please read the [JSON Patch](http://jsonpatch.com/) documentation.
 
 **API format**
 
@@ -226,39 +243,40 @@ You can use `/state` to update the state of the schedule - ACTIVE or INACTIVE. T
 PATCH /config/schedules/{SCHEDULE_ID}
 ```
 
-- `{SCHEDULE_ID}`: The `id` value of the schedule you want to update.
+| Parameter | Description |
+| --------- | ----------- |
+| `{SCHEDULE_ID}` | The `id` value of the schedule you want to update. |
 
 **Request**
 
 ```shell
-curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/{SCHEDULE_ID} \
+curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
 [
-  {
-    "op": "add",
-    "path": "/state",
-    "value": "active"
-  }
-]
-'
+    {
+        "op": "add",
+        "path": "/state",
+        "value": "active"
+    }
+]'
 ```
 
-| Parameter | Description |
-| --------- | ----------- |
-| `path` | The path of the value you want to patch. In this case, since you are updating the schedule's state, you need to set the value of `path` to `/state`. |
-| `value` | The updated value of the `/state`. This value can either be set as `active` or `inactive` to activate or deactivate the schedule. |
+| Property | Description |
+| -------- | ----------- |
+| `path` | The path of the value you want to patch. In this case, since you are updating the schedule's state, you need to set the value of `path` to "/state". |
+| `value` | The updated value of the schedule's state. This value can either be set as "active" or "inactive" to activate or deactivate the schedule. |
 
 **Response**
 
 A successful response returns HTTP status 204 (No Content).
 
-### Update schedule cron schedule
+### Update cron schedule {#update-schedule}
 
-You can use `schedule` to update the cron schedule. For more information about cron schedules, please read the [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation.
+You can use a JSON Patch operation to update the cron schedule. To update the schedule, you declare the `path` property as `/schedule` and set the `value` to a valid cron schedule. For more information about JSON Patch, please read the [JSON Patch](http://jsonpatch.com/) documentation. For more information about cron schedules, please read the [cron expression format](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentation.
 
 **API format**
 
@@ -266,31 +284,32 @@ You can use `schedule` to update the cron schedule. For more information about c
 PATCH /config/schedules/{SCHEDULE_ID}
 ```
 
-- `{SCHEDULE_ID}`: The `id` value of the schedule you want to update.
+| Parameter | Description |
+| --------- | ----------- |
+| `{SCHEDULE_ID}` | The `id` value of the schedule you want to update. |
 
 **Request**
 
 ```shell
-curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/{SCHEDULE_ID} \
+curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
 [
-  {
-    "op": "add",
-    "path": "/schedule",
-    "value": "0 0 2 * *"
-  }
-]
-'
+    {
+        "op":"add",
+        "path":"/schedule",
+        "value":"0 0 2 * *"
+    }
+]'
 ```
 
-| Parameter | Description |
-| --------- | ----------- |
-| `path` | The path of the value you want to patch. In this case, since you are updating the schedule's cron schedule, you need to set the value of `path` to `/schedule`. |
-| `value` | The updated value of the `/state`. This value needs to be in the form of a cron schedule. In this example, the schedule will run on the second of every month. |
+| Property | Description |
+| -------- | ----------- |
+| `path` | The path of the value you want to updated. In this case, since you are updating the cron schedule, you need to set the value of `path` to `/schedule`. |
+| `value` | The updated value of the cron schedule. This value needs to be in the form of a cron schedule. In this example, the schedule will run on the second of every month. |
 
 **Response**
 
@@ -298,7 +317,7 @@ A successful response returns HTTP status 204 (No Content).
 
 ## Delete a specific schedule
 
-You can request to delete a specified schedule by making a DELETE request to the `/config/schedules` and providing the schedule's `id` value in the request path.
+You can request to delete a specific schedule by making a DELETE request to the `/config/schedules` endpoint and providing the ID of the schedule you wish to delete in the request path.
 
 **API format**
 
@@ -306,12 +325,14 @@ You can request to delete a specified schedule by making a DELETE request to the
 DELETE /config/schedules/{SCHEDULE_ID}
 ```
 
-- `{SCHEDULE_ID}`: The `id` value of the schedule you want to delete.
+| Parameter | Description |
+| --------- | ----------- |
+| `{SCHEDULE_ID}` | The `id` value of the schedule you want to delete. |
 
 **Request**
 
 ```shell
-curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/{SCHEDULE_ID} \
+curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
@@ -320,10 +341,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/{SCHEDUL
 
 **Response**
 
-A successful response returns HTTP status 204 (No Content) with the following message:
-
-```json
-(No Content) Schedule deleted successfully
-```
+A successful response returns HTTP status 204 (No Content).
 
 ## Next steps
+
+After reading this guide you now have a better understanding of how schedules work.

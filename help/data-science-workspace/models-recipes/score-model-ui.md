@@ -1,19 +1,20 @@
 ---
-keywords: Experience Platform;score a model;Data Science Workspace;popular topics
+keywords: Experience Platform;score a model;Data Science Workspace;popular topics;ui;scoring run;scoring results
 solution: Experience Platform
 title: Score a model (UI)
 topic: Tutorial
+description: Scoring in Adobe Experience Platform Data Science Workspace can be achieved by feeding input data into an existing trained Model. Scoring results are then stored and viewable in a specified output dataset as a new batch. 
 ---
 
 # Score a model (UI)
 
-Scoring in Adobe Experience Platform Data Science Workspace can be achieved by feeding input data into an existing trained Model. Scoring results are then stored and viewable in a specified output dataset as a new batch. 
+Scoring in Adobe Experience Platform [!DNL Data Science Workspace] can be achieved by feeding input data into an existing trained Model. Scoring results are then stored and viewable in a specified output dataset as a new batch. 
 
-This tutorial demonstrates the steps required to score a Model in the Data Science Workspace user interface.
+This tutorial demonstrates the steps required to score a Model in the [!DNL Data Science Workspace] user interface.
 
 ## Getting started
 
-In order to complete this tutorial, you must have access to Experience Platform. If you do not have access to an IMS Organization in Experience Platform, please speak to your system administrator before proceeding.
+In order to complete this tutorial, you must have access to [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
 
 This tutorial requires a trained Model. If you do not have a trained Model, follow the [train and evaluate a Model in the UI](./train-evaluate-model-ui.md) tutorial before continuing.
 
@@ -56,4 +57,4 @@ A scoring run will display either of the four following statuses: Pending, Compl
 
 ## Next steps
 
-This tutorial walked you through the steps to score data using a trained Model in Data Science Workspace. Follow the tutorial on [publishing a Model as a Service in the UI](./publish-model-service-ui.md) to allow users within your organization to score data by providing easy access to a machine learning Service.
+This tutorial walked you through the steps to score data using a trained Model in [!DNL Data Science Workspace]. Follow the tutorial on [publishing a Model as a Service in the UI](./publish-model-service-ui.md) to allow users within your organization to score data by providing easy access to a machine learning Service.

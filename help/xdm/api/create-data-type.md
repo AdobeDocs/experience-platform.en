@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type;datatype;Datatype
 solution: Experience Platform
 title: Create a data type
 topic: developer guide
+description: When there are common data structures that your organization wishes to use in multiple ways, you may wish to define a data type. Data types allow for the consistent use of multi-field structures, with more flexibility than mixins because they can be included anywhere in a schema by adding them as the 'type' of a field. 
 ---
 
 # Create a data type
@@ -60,7 +61,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns HTTP status 201 (Created) and a payload containing the details of the newly created data type, including the `$id`, `meta:altId`, and `version`. These three values are read-only and are assigned by the Schema Registry.
+A successful response returns HTTP status 201 (Created) and a payload containing the details of the newly created data type, including the `$id`, `meta:altId`, and `version`. These three values are read-only and are assigned by the [!DNL Schema Registry].
 
 ```JSON
 {

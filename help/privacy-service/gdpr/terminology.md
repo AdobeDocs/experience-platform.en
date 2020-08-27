@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;GDPR;gdpr
 solution: Experience Platform
 title: GDPR terminology
 topic: troubleshooting
+description: The following is a list of definitions for key terms related to the General Data Protection Regulation (GDPR).
 ---
 
 # GDPR terminology
@@ -57,7 +58,7 @@ __Filing system:__ Any specific set of personal data that is accessible accordin
 
 ## G
 
-__GDPR:__ The General Data Protection Regulation (GDPR) is a legal framework that sets guidelines for the collection and processing of personal information of individuals within the European Union (EU). The GDPR sets out the principles for data management and the rights of the individual, while also imposing fines that can be revenue based. GDPR covers all companies that deal with the data of EU citizens, so it is a critical regulation for corporate compliance officers at banks, insurers, and other financial companies. GDPR will come into effect across the EU on May 25, 2018.
+__GDPR:__ The [!DNL General Data Protection Regulation] (GDPR) is a legal framework that sets guidelines for the collection and processing of personal information of individuals within the European Union (EU). The GDPR sets out the principles for data management and the rights of the individual, while also imposing fines that can be revenue based. GDPR covers all companies that deal with the data of EU citizens, so it is a critical regulation for corporate compliance officers at banks, insurers, and other financial companies. GDPR will come into effect across the EU on May 25, 2018.
 
 __Genetic data:__ Data concerning the characteristics of an individual which are inherited or acquired which give unique information about the health or physiology of the individual.
 
@@ -67,7 +68,7 @@ __Group of undertakings:__ A controlling undertaking and its controlled undertak
 
 ## I
 
-__Identity Management Services (IMS):__ The Adobe implementation of Federated ID and OAuth 2.0 for authentication of Adobe ID users and authorization for Adobe resources. You must integrate IMS with your Adobe application or service to enable your users to log in and access Adobe services. Users can log in directly with Renga (the Adobe identity services provider), or log in through a trusted third party authentication domain (such as Google, Facebook, or a corporate/organization LDAP).
+__Identity Management Services (IMS):__ The Adobe implementation of Federated ID and OAuth 2.0 for authentication of Adobe ID users and authorization for Adobe resources. You must integrate IMS with your Adobe application or service to enable your users to log in and access Adobe services. Users can log in directly with Renga (the Adobe identity services provider), or log in through a trusted third party authentication domain (such as [!DNL Google], [!DNL Facebook], or a corporate/organization LDAP).
 
 __IMS Org ID:__ Refers to an Adobe authorization token for service-to-service authentication, which does not require user login. It is issued to an IMS client, and has no associated user. An IMS client needs a service token to authorize back-channel requests between services. (The term "system token" is occasionally used to mean service token.)
 

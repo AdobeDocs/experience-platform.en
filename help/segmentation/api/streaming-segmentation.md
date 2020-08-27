@@ -5,41 +5,45 @@ title: Streaming segmentation
 topic: developer guide
 ---
 
-# Evaluate events in real-time with streaming segmentation (Beta) 
+# Evaluate events in near real-time with streaming segmentation 
 
->[!NOTE] Streaming segmentation is a beta feature, and will be available on request.
+>[!NOTE]
+>
+>The following document states how to use streaming segmentation using the API. For information on using streaming segmentation using the UI, please read the [streaming segmentation UI guide](../ui/streaming-segmentation.md).
 
-Streaming segmentation (also known as continuous query evaluation) is the ability to instantly evaluate a customer as soon as an event comes into a particular segment group. With this capability, most segment rules can now be evaluated as the data is passed into Adobe Experience Platform, meaning segment membership will be kept up to date without running scheduled segmentation jobs.
+Streaming segmentation on [!DNL Adobe Experience Platform] allows customers to do segmentation in near real-time while focusing on data richness. With streaming segmentation, segment qualification now happens as data lands into [!DNL Platform], alleviating the need to schedule and run segmentation jobs. With this capability, most segment rules can now be evaluated as the data is passed into [!DNL Platform], meaning segment membership will be kept up-to-date without running scheduled segmentation jobs.
 
 ![](../images/api/streaming-segment-evaluation.png)
 
 ## Getting started
 
-This developer guide requires a working understanding of the various Adobe Experience Platform services involved with streaming segmentation. Before beginning this tutorial, please review the documentation for the following services:
+This developer guide requires a working understanding of the various [!DNL Adobe Experience Platform] services involved with streaming segmentation. Before beginning this tutorial, please review the documentation for the following services:
 
-- [Real-time Customer Profile](../../profile/home.md): Provides a unified consumer profile in real-time, based on aggregated data from multiple sources.
-- [Segmentation](../home.md): Provides the ability to create segments and audiences from your Real-time Customer Profile data.
-- [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified consumer profile in real-time, based on aggregated data from multiple sources.
+- [[!DNL Segmentation]](../home.md): Provides the ability to create segments and audiences from your [!DNL Real-time Customer Profile] data.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 
-The following sections provide additional information that you will need to know in order to successfully make calls to Platform APIs.
+The following sections provide additional information that you will need to know in order to successfully make calls to [!DNL Platform] APIs.
 
 ### Reading sample API calls
 
-This developer guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the Experience Platform troubleshooting guide.
+This developer guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
 
 ### Gather values for required headers
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in Experience Platform are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+>[!NOTE]
+>
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
@@ -47,22 +51,42 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 Additional headers may be required to complete specific requests. The correct headers are shown in each of the examples within this document. Please pay special attention to the sample requests in order to ensure that all required headers are included.
 
-### Streaming segmentation enabled query types
+### Streaming segmentation enabled query types {#streaming-segmentation-query-types}
 
-The following table lists the different types of segmentation queries and whether or not they support streaming segmentation.
+>[!NOTE]
+>
+>You will need to enable scheduled segmentation for the organization in order for streaming segmentation to work. Information about enabling scheduled segmentation can be found in the [enable scheduled segmentation section](#enable-scheduled-segmentation)
 
-| Query type | Sample query | Streaming segmentation supported |
-| ---------- | ------------ | --------------------------------- |
-| Simple demographic | "Give me all the people whose home address is in Canada." | Supported |
-| Time-series events | "Give me all the people who downloaded Lightroom." | Supported |
-| Demographic and time-series | "Give me all the people who live in Canada and have placed an order in the last 30 days." | Supported |
-| Absence of events | "Give me all the people who have abandoned two separate carts within two days of each other." | Supported |
-| Multi-entity | "Give me all the people whose entitlement type is 'Experienced'." | Not supported |
-| Advanced PQL functions | "Give me all the profiles which placed an order in the last week, and include the SKU and Name for all the products purchased." | Not supported |
+In order for a segment to be evaluated using streaming segmentation, the query must conform to the following guidelines.
 
-## Retrieve all streaming segmentation enabled segments
+| Query type | Details |
+| ---------- | ------- |
+| Incoming hit | Any segment definition that refers to a single incoming event with no time restriction. |
+| Incoming hit within a relative time window | Any segment definition that refers to a single incoming event **within the last seven days**. |
+| Profile only | Any segment definition that refers to only a profile attribute. |
+| Incoming hit that refers to a profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. |
+| Incoming hit that refers to a profile within a relative time window | Any segment definition that refers to a single incoming event and one or more profile attributes, **within the last seven days**. |
+| Multiple events that refer to a profile | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. |
 
-Before creating a new streaming-enabled segment or updating an existing segment to be streaming-enabled, you should ensure that you are not duplicating information by retrieving a list of all the streaming-enabled segments.
+The following section lists segment definition examples that will **not** be enabled for streaming segmentation.
+
+| Query type | Details |
+| ---------- | ------- | 
+| Incoming hit within a relative time window | If the segment definition refers to an incoming event **not** within the **last seven-day period**. For example, within the **last two weeks**. |
+| Incoming hit that refers to a profile within a relative window | The following options will **not** support streaming segmentation:<ul><li>An incoming event **not** within the **last seven-day period**.</li><li>A segment definition that includes Adobe Audience Manager (AAM) segments or traits.</li></ul> | 
+| Multiple events that refer to a profile | The following options will **not** support streaming segmentation:<ul><li>An event that does **not** occur within **the last 24 hours**.</li><li>A segment definition that includes Adobe Audience Manager (AAM) segments or traits.</li></ul> |
+| Multi-entity queries | Multi-entity queries are, as a whole, **not** supported by streaming segmentation. |
+
+Additionally, some guidelines apply when doing streaming segmentation:
+
+| Query type | Guideline |
+| ---------- | -------- |
+| Single event query | The look-back window is limited to **seven days**. |
+| Query with event history | <ul><li>The look-back window is limited to **one day**.</li><li>A strict time ordering condition **must** exist between the events.</li><li>Only simple time orderings (before and after) between the events are allowed.</li><li>The individual events **cannot** be negated. However, the entire query **can** be negated.</li></ul>|
+
+## Retrieve all segments enabled for streaming segmentation
+
+You can retrieve a list of all your segments that are enabled for streaming segmentation within your IMS Organization by making a GET request to the `/segment/definitions` endpoint.
 
 **API format**
 
@@ -81,7 +105,7 @@ curl -X GET \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME'
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Response**
@@ -175,7 +199,7 @@ A successful response returns an array of segments in your IMS Organization that
 
 ## Create a streaming-enabled segment
 
-After confirming that the segment you want to create does not already exist, you can create a new segment that is enabled for streaming segmentation.
+A segment will automatically be streaming-enabled if it matches one of the [streaming segmentation types listed above](#streaming-segmentation-query-types).
 
 **API format**
 
@@ -184,8 +208,6 @@ POST /segment/definitions
 ```
 
 **Request**
-
-The following request creates a new segment that is streaming segmentation enabled. Note that the `continuous` section is set to `enabled: true`.
 
 ```shell
 curl -X POST \
@@ -206,22 +228,13 @@ curl -X POST \
         "type": "PQL",
         "format": "pql/text",
         "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": true
-        },
-        "synchronous": {
-            "enabled": false
-        }
     }
 }'
 ```
 
->[!NOTE] This is a standard "create a segment" request, with the added parameter of the `continuous` section being set to `enabled: true`. For more information about creating a segment definition, please read the documentation on [segment creation](../tutorials/create-a-segment.md).
+>[!NOTE]
+>
+>This is a standard "create a segment" request. For more information about creating a segment definition, please read the tutorial on [creating a segment](../tutorials/create-a-segment.md).
 
 **Response**
 
@@ -265,177 +278,13 @@ A successful response returns the details of the newly created streaming-enabled
 }
 ```
 
-## Enable an existing segment for streaming segmentation
+## Enable scheduled evaluation {#enable-scheduled-segmentation}
 
-You can enable an existing segment for streaming segmentation by supplying the segment definition's ID in the path of a PATCH request. In addition, the payload of this PATCH request must include the full details of the existing segment definition, which can be accessed by making a GET request to the segment definition in question.
+Once streaming evaluation has been enabled, a baseline must be created (after which the segment will always be up-to-date). Scheduled evaluation (also known as scheduled segmentation) must first be enabled in order for the system to automatically perform baselining. With scheduled segmentation, your IMS Org can adhere to a recurring schedule to automatically run export jobs to evaluate segments.
 
-### Look up an existing segment definition
-
-To look up an existing segment definition, you must supply its ID in the path of a GET request.
-
-**API format**
-
-```http
-GET /segment/definitions/{SEGMENT_DEFINITION_ID}
-```
-
-| Parameter | Description |
-| --------- | ----------- |
-| `{SEGMENT_DEFINITION_ID}` |  The ID of the segment definition you want to look up. |
-
-**Request**
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/segment/definitions/15063cb-2da8-4851-a2e2-bf59ddd2f004\
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Response**
-
-A successful response will return details of the segment definition you requested. 
-
-```json
-{
-    "id": "15063cb-2da8-4851-a2e2-bf59ddd2f004",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "sandbox": {
-        "sandboxId": "",
-        "sandboxName": "",
-        "type": "production",
-        "default": true
-    },
-    "name": "TestStreaming1",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/json",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "mergePolicyId": "50de2f9c-990c-4b96-945f-9570337ffe6d",
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": false
-        },
-        "synchronous": {
-            "enabled": false
-        }
-    }
-}
-```
-
->[!NOTE] For the next request, you will need the full details of the segment definition that were returned in this response. Please copy the details of this response to be used in the body of the next request.
-
-### Enable the existing segment for streaming segmentation
-
-Now that you know the details of the segment you want to update, you can perform a PATCH request to update the segment to enable streaming segmentation.
-
-**API format**
-
-```http
-PATCH /segment/definitions/{SEGMENT_DEFINITION_ID}
-```
-
-**Request**
-
-The payload of the following request supplies the details of the segment definition (obtained in the [previous step](#look-up-an-existing-segment-definition)), and updates it by changing its `continuous.enabled` property to `true`.
-
-```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/core/ups/segment/definitions/15063cb-2da8-4851-a2e2-bf59ddd2f004 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG_ID}' \
-  -d '{
-    "id": "15063cb-2da8-4851-a2e2-bf59ddd2f004",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    
-    "sandbox": {
-        "sandboxId": "{SANDBOX_ID}",
-        "sandboxName": "{SANDBOX_NAME}",
-        "type": "production",
-        "default": true
-    },
-    "name": "TestStreaming1",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/json",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "mergePolicyId": "50de2f9c-990c-4b96-945f-9570337ffe6d",
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": true
-        },
-        "synchronous": {
-            "enabled": false
-        }
-    }
-}'
-```
-
-**Response**
-
-A successful response returns the details of the newly updated segment definition. 
-
-```json
-{
-    "id": "15063cb-2da8-4851-a2e2-bf59ddd2f004",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "ttlInDays": 30,
-    "imsOrgId": "4A21D36B544916100A4C98A7@AdobeOrg",
-    "sandbox": {
-        "sandboxId": "{SANDBOX_ID}",
-        "sandboxName": "{SANDBOX_NAME}",
-        "type": "production",
-        "default": true
-    },
-    "name": "TestStreaming1",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/text",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": true
-        },
-        "synchronous": {
-            "enabled": false
-        }
-    },
-    "creationTime": 1572029711000,
-    "updateEpoch": 1572029712000,
-    "updateTime": 1572029712000
-}
-
-```
-
-## Enable scheduled evaluation
-
-Once streaming evaluation has been enabled, a baseline must be created (after which the segment will always be up-to-date). This is done automatically by the system, however scheduled evaluation (also known as scheduled segmentation) must first be enabled in order for the baselining to take place. 
-
-With scheduled segmentation, your IMS Org can create a recurring schedule to automatically run export jobs to evaluate segments.
-
->[!NOTE] Scheduled evaluation can be enabled for sandboxes with a maximum of five (5) merge policies for XDM Individual Profile. If your organization has more than five merge policies for XDM Individual Profile within a single sandbox environment, you will not be able to use scheduled evaluation.
+>[!NOTE]
+>
+>Scheduled evaluation can be enabled for sandboxes with a maximum of five (5) merge policies for [!DNL XDM Individual Profile]. If your organization has more than five merge policies for [!DNL XDM Individual Profile] within a single sandbox environment, you will not be able to use scheduled evaluation.
 
 ### Create a schedule
 
@@ -548,4 +397,4 @@ The same operation can be used to disable a schedule by replacing the "value" in
 
 Now that you have enabled both new and existing segments for streaming segmentation, and enabled scheduled segmentation to develop a baseline and perform recurring evaluations, you can begin to create segments for your organization. 
 
-To learn how to perform similar actions and work with segments using the Adobe Experience Platform user interface, please visit the [Segment Builder user guide](../ui/overview.md).
+To learn how to perform similar actions and work with segments using the Adobe Experience Platform user interface, please visit the [Segment Builder user guide](../ui/segment-builder.md).

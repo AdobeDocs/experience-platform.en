@@ -5,15 +5,15 @@ title: ExperienceEvent queries
 topic: queries
 ---
 
-# ExperienceEvent queries
+# [!DNL ExperienceEvent] queries
 
-In addition to standard SQL queries, Adobe Experience Platform Query Service supports writing queries using ExperienceEvents. An ExperienceEvent is an Experience Data Model (XDM) class that represents an immutable non-aggregated snapshot of the system when a user interacts with a website or service, and can therefore be used for time-domain analysis. More information about XDM and Experience Events can be found in the XDM System overview. By combining Query Service with ExperienceEvents, you can effectively track behavioral trends amongst your users. The following document provides examples of queries involving ExperienceEvents.
+In addition to standard SQL queries, Adobe Experience Platform [!DNL Query Service] supports writing queries using [!DNL ExperienceEvents]. An [!DNL ExperienceEvent] is an [!DNL Experience Data Model] (XDM) class that represents an immutable non-aggregated snapshot of the system when a user interacts with a website or service, and can therefore be used for time-domain analysis. More information about XDM and [!DNL Experience Events] can be found in the [!DNL XDM System] overview. By combining [!DNL Query Service] with [!DNL ExperienceEvents], you can effectively track behavioral trends amongst your users. The following document provides examples of queries involving [!DNL ExperienceEvents].
 
 ## Creating a trended report of events by day over a specific date range
 
 The following example creates a trended report of events over a specified date range, grouped by date. Specifically, it sums up various analytics values as A, B, and C, and then sums up the number of times parkas has been viewed.
 
-The timestamp column found in Experience Event datasets is in UTC. The following example uses the `from_utc_timestamp()` function to transform the timestamp from UTC to EDT. It then uses the `date_format()` function to isolate the date from the rest of the timestamp.
+The timestamp column found in [!DNL Experience Event] datasets is in UTC. The following example uses the `from_utc_timestamp()` function to transform the timestamp from UTC to EDT. It then uses the `date_format()` function to isolate the date from the rest of the timestamp.
 
 ```sql
 SELECT 

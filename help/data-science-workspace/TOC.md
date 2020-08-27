@@ -2,6 +2,7 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Data Science Workspace Help
+user-guide-description: Adobe Experience Platform Data Science Workspace uses machine learning and artificial intelligence to unleash insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe applications.  
 ---
 
 # Data Science Workspace {#data-science-workspace}
@@ -14,6 +15,7 @@ user-guide-title: Adobe Experience Platform Data Science Workspace Help
   * [Analyze your data using notebooks](jupyterlab/analyze-your-data.md)
   * [Query service in Jupyter notebook](jupyterlab/query-service.md)
   * [Create a recipe using Jupyter notebooks](jupyterlab/create-a-recipe.md)
+  * [Collaborate in JupyterLab using Git](jupyterlab/using-git-for-collaboration.md)
 * Sensei Machine Learning API {#api}
   * [Getting started](api/getting-started.md)
   * [Engines](api/engines.md)
@@ -23,6 +25,11 @@ user-guide-title: Adobe Experience Platform Data Science Workspace Help
   * [MLServices](api/mlservices.md)
   * [Insights](api/insights.md)
   * [Appendix](api/appendix.md)
+* Real-time Machine Learning (Alpha) {#real-time-machine-learning}
+  * [Overview](real-time-machine-learning/home.md)
+  * [Getting started](real-time-machine-learning/getting-started.md)
+  * [RTML Authoring notebook user guide](real-time-machine-learning/rtml-authoring-notebook.md)
+  * [Node reference guide](real-time-machine-learning/node-reference.md)
 * Pre-built recipes {#pre-built-recipes}
   * [Product recommendation recipe](pre-built-recipes/product-recommendations.md)
   * [Product purchase prediction](pre-built-recipes/product-purchase-prediction.md)

@@ -9,7 +9,7 @@ topic: queries
 
 One of Adobe's big differentiators is that they understand experience data and what customers need to be able to do with that data. You can use this understanding to build helper functions that make your job easier.
 
-This document covers Adobe-defined functions (ADFs) to support three key Analytics activities:
+This document covers Adobe-defined functions (ADFs) to support three key [!DNL Analytics] activities:
 - [Sessionization](#sessionization)
 - [Attribution](#attribution)
 - [Pathing](#pathing)
@@ -84,11 +84,13 @@ Attribution is how you allocate metrics or conversions like revenue, order, or s
 
 In Adobe Analytics, attribution settings are configured using variables like eVars and are generated as data is ingested.
 
-The Attribution ADFs found in Query Service allow those allocations to be defined and generated at query time.
+The Attribution ADFs found in [!DNL Query Service] allow those allocations to be defined and generated at query time.
 
 This example focuses on last-touch attribution, but Adobe also offers first-touch attribution. 
 
->[!NOTE] Other options with timeouts and event-based expiration will be available in future versions of Query Service.
+>[!NOTE]
+>
+>Other options with timeouts and event-based expiration will be available in future versions of [!DNL Query Service].
 
 **Syntax:**
 
@@ -147,7 +149,7 @@ Pathing helps to understand how customers navigate your site. The `NEXT()` and `
 
 **Syntax:**
 
-```
+```sql
 NEXT(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])
 PREVIOUS(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])
 ```
@@ -231,4 +233,10 @@ LIMIT 10;
 ```
 
 ![Image](../images/queries/adobe-functions/create-breakdown-report.png)
+
+## Additional resources
+
+The following video shows how to run queries in the Adobe Experience Platform interface and in a PSQL client. Additionally, the video also uses examples involving individual properties in an XDM object, using Adobe-defined functions, and using CREATE TABLE AS SELECT (CTAS).
+
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 

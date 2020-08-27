@@ -3,22 +3,19 @@ title: Rendering personalized content
 seo-title: Adobe Experience Platform Web SDK Rendering personalized content
 description: Learn how to render personalized content with Experience Platform Web SDK
 seo-description: Learn how to render personalized content with Experience Platform Web SDK
+keywords: personalization;renderDecisions;sendEvent;decisionScopes;result.decisions;
 ---
 
-# (Beta) Overview of Personalization Options
+# Overview of Personalization Options
 
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
-
-The Adobe Experience Platform Web SDK supports querying the personalization solutions at Adobe including Adobe Target. There are two modes for personalization: retrieving content that can be rendered automatically and content that the developer must render. The SDK also provides facilities to [manage flicker](managing-flicker.md).
+The Adobe Experience Platform [!DNL Web SDK] supports querying the personalization solutions at Adobe, including Adobe Target. There are two modes for personalization: retrieving content that can be rendered automatically and content that the developer must render. The SDK also provides facilities to [manage flicker](../../edge/solution-specific/target/flicker-management.md).
 
 ## Automatically Rendering Content
 
 The SDK automatically renders personalized content when you send an event to the server and set `renderDecisions` to `true` as an option on the event.
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "renderDecisions": true,
   "xdm": {
     "commerce": {
@@ -33,19 +30,19 @@ alloy("event", {
 });
 ```
 
-The rendering of personalized content is asynchronous, so there should not be any assumption around when a particular piece of content is part of the page.
+Rendering personalized content is asynchronous, so there should not be any assumption around when a particular piece of content is part of the page.
 
 ## Manually Rendering Content
 
-You can request the list of decisions to be returned as a promise on the `event` command by using `scopes`. A scope is a string the lets the personalization solution know which decision you would like.
+You can request the list of decisions to be returned as a promise on the `sendEvent` command by specifying the `decisionScopes` option. A scope is a string the lets the personalization solution know which decision you would like.
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
     xdm:{...},
-    scopes:['demo-1', 'demo-2']
+    decisionScopes:['demo-1', 'demo-2']
   }).then(function(result){
     if (result.decisions){
-      //do something with the decisions
+      // Do something with the decisions.
     }
   })
 ```
@@ -53,8 +50,6 @@ alloy("event",{
 This will return a list of decisions as a JSON object for each decisions.
 
 ```javascript
-
-
 {
   "decisions": [
     {
@@ -87,13 +82,12 @@ This will return a list of decisions as a JSON object for each decisions.
     }
   ]
 }
-
 ```
 
-{info}
-If you use Target scopes become mBoxes on the server, only they are all requests at once instead of individually. The global mbox is always sent.
-{info}
+>[!TIP]
+>
+> If you use [!DNL Target], scopes become mBoxes on the server, only they are all requested at once instead of individually. The global mbox is always sent.
 
 ### Retrieve Automatic Content
 
-If you would like the `result.decisions` to include the automatic renderable decisions you can set `renderDecisions` to false and include the special scope `__view__`
+If you would like the `result.decisions` to include the automatic renderable decisions and NOT have Alloy auto render them, you can set `renderDecisions` to `false`, and include the special scope `__view__`.

@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;product recommendation recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;product recommendation recipe;Data Science Workspace;popular topics;recipes;pre build recipe
 solution: Experience Platform
 title: Product recommendation recipe
 topic: overview
+description: The Product Recommendations recipe enables you to provide personalized product recommendations that are tailored to your customer's needs and interests. With an accurate prediction model, a customer's purchase history can provide you with insight on what products they may be interested in.
 ---
 
 # Product recommendation recipe
@@ -19,7 +20,7 @@ The Product Recommendations recipe uses machine learning to analyze a customer's
 
 ## How do I get started?
 
-You can get started by following the Adobe Experience Platform Lab tutorial (see Lab link below). This tutorial will show you how to create the Product Recommendations recipe in a Jupyter Notebook by following the [notebook to recipe](../jupyterlab/create-a-recipe.md) workflow, and implementing the recipe in Experience Platform Data Science Workspace.
+You can get started by following the Adobe Experience Platform Lab tutorial (see Lab link below). This tutorial will show you how to create the Product Recommendations recipe in a Jupyter Notebook by following the [notebook to recipe](../jupyterlab/create-a-recipe.md) workflow, and implementing the recipe in [!DNL Experience Platform] [!DNL Data Science Workspace].
 
 * [Lab: Predict the Future with Data Science Workspace](https://expleague.azureedge.net/labs/L777/index.html)
 * [Lab resources](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)

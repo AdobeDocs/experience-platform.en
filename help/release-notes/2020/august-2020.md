@@ -1,0 +1,64 @@
+---
+title: Adobe Experience Platform Release Notes
+description: Experience Platform release notes August 10, 2020
+doc-type: release notes
+last-update: August 10, 2020
+author: crhoades, ens28527
+---
+
+# Adobe Experience Platform release notes 
+
+**Release date: August 12, 2020**
+
+Updates to existing features in Adobe Experience Platform:
+
+- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Destinations]](#destinations)  
+- [[!DNL Sources]](#sources)
+
+## [!DNL Data Science Workspace] {#dsw}
+
+[!DNL Data Science Workspace] uses machine learning and artificial intelligence to unleash insights from your data. Integrated into Adobe Experience Platform, [!DNL Data Science Workspace] helps you make predictions using your content and data assets across Adobe solutions.
+
+**New features**
+
+| Feature | Description |
+| ------- | ----------- |
+| VM improvements in [!DNL JupyterLab] | Improved the stability of long-running [!DNL JupyterLab notebook] virtual machines. |
+
+For more information on [!DNL JupyterLab], please see the [[!DNL JupyterLab] user guide](../../data-science-workspace/jupyterlab/overview.md).
+
+## Destinations {#destinations}
+
+In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
+
+**New destinations**
+
+New destinations are available where you can activate your Adobe Experience Platform data. See below for details:
+
+|Destination | Description|
+|--- | ---|
+|[!DNL Google Customer Match] | Google Customer Match lets you use your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as: [!DNL Search], [!DNL Shopping], Gmail, and YouTube. <br><br> Visit the [!DNL Google Customer Match] [page](/help/rtcdp/destinations/google-customer-match-destination.md) in the destinations catalog for more information about the destination and how to set it up in Adobe Real-time CDP.|
+
+**New features**
+
+|Feature | Description|
+|------- | -----------|
+|Custom file name editor | Update to the data activation workflow for email marketing destinations and cloud storage destinations that allows you to edit the name of the exported files. For more information, refer to the [ Configure step](/help/rtcdp/destinations/activate-destinations.md#configure) in the activation workflow.|
+|Recommended attributes | Update to the data activation workflow for email marketing destinations and cloud storage destinations that displays recommended attributes for you to add to the exported files. For more information, refer to the [Select attributes step](/help/rtcdp/destinations/activate-destinations.md#select-attributes) in the activation workflow.|
+
+## Sources {#sources}
+
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third party software, and your CRM system.
+
+[!DNL Experience Platform] provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
+
+**New features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Flow run monitoring | Users can monitor all flow runs and see a detailed view of each run, including completion status, run duration, list of files processed, errors, and metrics. See the [monitoring dataflows](../../sources/tutorials/ui/monitor.md) document for more information. |
+| Flow run notifications | Users can subscribe to events and register webhooks to receive real-time notifications on the status, metrics, and errors regarding flow runs. |
+| UI catalog improvements | Updates to sources catalog screen to allow for easier access to primary actions of selected objects. |
+
+To learn more about sources, see the [sources overview](../../sources/home.md).
