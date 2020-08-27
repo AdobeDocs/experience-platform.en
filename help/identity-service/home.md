@@ -139,4 +139,4 @@ Adobe Experience Platform was built with privacy in mind and includes a data gov
 
 ## Next Steps
 
-Now that you understand the key concepts of [!DNL Identity Service] and its role within [!DNL Experience Platform], you can begin to learn how to work with your identity graph using the [!DNL Identity Service API](./api/getting-started.md).
+Now that you understand the key concepts of [!DNL Identity Service] and its role within [!DNL Experience Platform], you can begin to learn how to work with your identity graph using the [[!DNL Identity Service API]](./api/getting-started.md).

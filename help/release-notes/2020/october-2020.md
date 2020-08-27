@@ -12,8 +12,8 @@ author: crhoades, ens28527
 
 New features in Adobe Experience Platform:
 
-- [!DNL Access control](#access-control)
-- [!DNL Sandboxes](#sandboxes)
+- [[!DNL Access control]](#access-control)
+- [[!DNL Sandboxes]](#sandboxes)
 
 ## [!DNL Access control] {#access-control}
 

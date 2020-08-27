@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;Data Science Workspace;popular topics
+keywords: Experience Platform;Data Science Workspace;popular topics;Recipe migration guides;Notebook migration guide
 solution: Experience Platform
 title: Recipe and notebook migration guides
 topic: Tutorial
+description: The following guides outline the steps and information required for migrating existing recipes and notebooks in Data Science Workspace.
 ---
 
 # Recipe and notebook migration guides

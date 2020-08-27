@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;JupyterLab;recipe;notebooks;Data Science Workspace;popular topics
+keywords: Experience Platform;JupyterLab;recipe;notebooks;Data Science Workspace;popular topics;create recipe
 solution: Experience Platform
 title: Create a recipe using Jupyter notebooks
 topic: Tutorial
+description: This tutorial will go over two main sections. First, you will create a machine learning model using a template within JupyterLab Notebook. Next, you will exercise the notebook to recipe workflow within JupyterLab to create a recipe within Data Science Workspace.
 ---
 
 # Create a recipe using Jupyter notebooks
@@ -108,7 +109,7 @@ The following two sections will go over loading data and data preparation.
 
 This step uses the [pandas dataframe](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Data can be loaded from files in [!DNL Adobe Experience Platform] using either the [!DNL Platform] SDK (`platform_sdk`), or from external sources using pandas' `read_csv()` or `read_json()` functions.
 
-- [!DNL Platform SDK](#platform-sdk)
+- [[!DNL Platform SDK]](#platform-sdk)
 - [External sources](#external-sources)
 
 >[!NOTE]

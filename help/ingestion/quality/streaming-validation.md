@@ -14,8 +14,8 @@ Streaming ingestion allows you to upload your data to Adobe Experience Platform 
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-- [!DNL Streaming Ingestion](../streaming-ingestion/overview.md): One of the methods by which data can be sent to [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+- [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md): One of the methods by which data can be sent to [!DNL Experience Platform].
 
 ### Reading sample API calls
 

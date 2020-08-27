@@ -3,6 +3,7 @@ keywords: Experience Platform;Tutorial;feature pipeline;Data Science Workspace;p
 solution: Adobe Experience Platform Data Science Workspace
 title: Create a feature pipeline
 topic: Tutorial
+description: Adobe Experience Platform allows you to build and create custom feature pipelines to perform feature engineering at scale through the Sensei Machine Learning Framework Runtime. This document describes the various classes found in a feature pipeline, and provides a step-by-step tutorial for creating a custom feature pipeline using the Model Authoring SDK in PySpark.
 ---
 
 # Create a feature pipeline
@@ -433,4 +434,4 @@ Once the scoring has completed, your feature pipeline should be operational.
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-By reading this document, you have authored a feature pipeline using the Model Authoring SDK, created a Docker image, and used the Docker image URL to create a feature pipeline Model by using the [!DNL Sensei Machine Learning] API. You are now ready to continue transforming datasets and extracting data features at scale using the [!DNL Sensei Machine Learning API](../api/getting-started.md).
+By reading this document, you have authored a feature pipeline using the Model Authoring SDK, created a Docker image, and used the Docker image URL to create a feature pipeline Model by using the [!DNL Sensei Machine Learning] API. You are now ready to continue transforming datasets and extracting data features at scale using the [[!DNL Sensei Machine Learning API]](../api/getting-started.md).
