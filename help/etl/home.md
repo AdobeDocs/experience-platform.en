@@ -515,7 +515,7 @@ Details on filtering batches can be found in the [Data Access tutorial](../data-
 
 ### Get files out of a batch
 
-Once you have the ID for the batch you are looking for (`{BATCH_ID}`), it is possible to retrieve a list of files belonging to a specific batch via the [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml).  Details for doing so are available in the [Data Access tutorial](../data-access/tutorials/dataset-data.md).
+Once you have the ID for the batch you are looking for (`{BATCH_ID}`), it is possible to retrieve a list of files belonging to a specific batch via the [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml).  Details for doing so are available in the [[!DNL Data Access] tutorial](../data-access/tutorials/dataset-data.md).
 
 **Request**
 
@@ -541,7 +541,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{FILE_ID}" \
   -H "x-api-key : {API_KEY}"
 ```
 
-The response may point to a single file, or a directory. Details on each can be found in the [Data Access tutorial](../data-access/tutorials/dataset-data.md).
+The response may point to a single file, or a directory. Details on each can be found in the [[!DNL Data Access] tutorial](../data-access/tutorials/dataset-data.md).
 
 ### Access file content
 
@@ -561,7 +561,7 @@ The response to this request contains the contents of the file. For more informa
 
 ### Validate records for schema compliance
 
-When data is being written, users can opt to validate data according to the validation rules defined in the XDM schema. More information on schema validation can be found in the [ETL Ecosystem Integration Reference Code on GitHub](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md#validation).
+When data is being written, users can opt to validate data according to the validation rules defined in the XDM schema. More information on schema validation can be found in the [ETL Ecosystem Integration Reference Code on [!DNL GitHub]](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md#validation).
 
 If you are using the reference implementation found on [[!DNL GitHub]](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md), you can turn on schema validation in this implementation using the system property `-DenableSchemaValidation=true`.
 
