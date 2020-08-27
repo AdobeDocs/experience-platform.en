@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;manage decisioning;decisioning objects api;manage decisioning objects
 solution: Experience Platform
 title: Manage Decisioning Service entities using APIs
 topic: tutorial
+description: This document provides a tutorial for working with the business entities of Decisioning Service using Adobe Experience Platform APIs. 
 ---
 
 # Manage Decisioning objects and rules using APIs
