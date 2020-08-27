@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;getting started;customer ai;popular topics
+keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output
 solution: Experience Platform
 title: Customer AI input and output
 topic: Getting started
+description: The following document outlines the different input and outputs utilized in Customer AI.
 ---
 
 # Customer AI input and output

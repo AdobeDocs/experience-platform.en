@@ -2,7 +2,8 @@
 keywords: Experience Platform;getting started;attribution ai;popular topics
 solution: Experience Platform
 title: Getting started in Attribution AI
-topic: Getting started  
+topic: Getting started
+description: The following guides require an understanding of the various Adobe Experience Platform services involved with using Attribution AI. Before beginning the tutorials, please review the following documents.
 ---
 
 # Getting started in Attribution AI
