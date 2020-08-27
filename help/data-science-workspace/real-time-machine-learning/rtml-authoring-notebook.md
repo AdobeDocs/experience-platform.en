@@ -9,6 +9,7 @@ description: The following guide outlines the steps needed to build a Real-time 
 # Real-time Machine Learning notebook user guide (Alpha)
 
 >[!IMPORTANT]
+>
 >Real-time Machine Learning is not available to all users yet. This feature is in alpha and still being tested. This document is subject to change.
 
 The following guide outlines the steps needed to build a Real-time Machine Learning application. Using the Adobe provided **[!UICONTROL Real-time ML]** Python notebook template, this guide covers training a model, creating a DSL, publishing DSL to Edge, and scoring the request. As you progress through implementing your Real-time Machine Learning model, it's expected that you modify the template to fit the needs of your dataset.
@@ -28,6 +29,7 @@ The [!DNL JupyterLab] launcher appears. Scroll down to *Real-Time Machine Learni
 Start by importing all the required packages for your model. Make sure any package you plan on using for node authoring is imported.
 
 >[!NOTE]
+>
 >Your list of imports might differ based on the model you wish to make. This list is going to change as new nodes are added over time. Please refer to the [node reference guide](./node-reference.md) for a complete list of available nodes.
 
 ```python
@@ -74,6 +76,7 @@ Using one of the following options, you are going to write [!DNL Python] code to
 Start by loading your training data.
 
 >[!NOTE]
+>
 >In the **Real-time ML** template, the [car insurance CSV dataset](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) is grabbed from [!DNL Github].
 
 ![Load traning data](../images/rtml/load_training.png)
@@ -110,6 +113,7 @@ Using the *[!UICONTROL Real-time ML]* template, you need to analyze, pre-process
 The *[!UICONTROL Real-time ML]* templates *Data Transformations* cell needs to be modified to work with your own dataset. Typically this involves renaming columns, data rollup, and data preparation/feature engineering. 
 
 >[!NOTE]
+>
 >The following example has been condensed for readability purposes using `[ ... ]`. Please view and expand the *Real-time ML* templates data transformations section for the complete code cell.
 
 ```python
@@ -234,6 +238,7 @@ model.generate_onnx_resources()
 ```
 
 >[!NOTE]
+>
 >Change the `model_path` string value (`model.onnx`) to change the name of your model.
 
 ```python
@@ -241,6 +246,7 @@ model_path = "model.onnx"
 ```
 
 >[!NOTE]
+>
 >The following cell is not editable or deletable and required for your Real-time Machine Learning application to work.
 
 ```python
@@ -269,12 +275,12 @@ This section outlines creating a DSL. You are going to author the nodes that inc
 
 >[!IMPORTANT]
 >
->
 >Using the ONNX node is mandatory. Without the ONNX node, the application will be unsuccessful.
 
 ### Node authoring
 
 >[!NOTE]
+>
 > You are likely to have multiple nodes based on the type of data being used. The following example outlines only a single node in the *Real-time ML* template. Please view the *Real-time ML* templates *Node Authoring* section for the complete code cell.
 
 The Pandas node below uses `"import": "map"` to import the method name as a string in the parameters, followed by inputting the parameters as a map function. The example below does this by using `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`. After you have the map in place, you have the option to set `inplace` as `True` or `False`. Set `inplace` as `True` or `False` based on whether you want to apply transformation inplace or not. By default `"inplace": False` creates a new column. Support to provide a new column name is set to be added in a subsequent release. The last line `cols` can be a single column name or a list of columns. Specify the columns on which you want to apply the transformation. In this example `leasing` is specified. For more information on the available nodes and how to use them, visit the [node reference guide](./node-reference.md).
@@ -320,6 +326,7 @@ nodes = [json_df_node,
 Next, connect the nodes with edges. Each tuple is an [!DNL Edge] connection.
 
 >[!TIP]
+>
 > As the nodes are linearly dependent on each other (each node depends on previous node's output), you can create links using a simple Python list comprehension. Please add your own connections if a node depends on multiple inputs.
 
 ```python
@@ -340,11 +347,13 @@ Once complete, an `edge` object is returned containing each of the nodes and the
 ## Publish to Edge (Hub)
 
 >[!NOTE]
+>
 >Real-time Machine Learning is temporarily deployed to and managed by the Adobe Expereince Platform Hub. For additional details, visit the overview section on [Real-time Machine Learning architecture](./home.md#architecture).
 
 Now that you have created a DSL graph, you can deploy your graph to the [!DNL Edge].
 
 >[!IMPORTANT]
+>
 >Do not publish to [!DNL Edge] often, this can overload the [!DNL Edge] nodes. Publishing the same model multiple times is not recommended.
 
 ```python
@@ -359,6 +368,7 @@ print(f'Service ID: {service_id}')
 If you do not need to update your DSL, you can skip to [scoring](#scoring).
 
 >[!NOTE]
+>
 >The following cells are only required if you wish to update an existing DSL that has been published to Edge.
 
 Your models are likely to continue to develop. Rather than creating a whole new service, it is possible to update an existing service with your new model. You can define a node you wish to update, assign it a new ID, then re-upload the new DSL to the [!DNL Edge]. 
@@ -396,6 +406,7 @@ You are returned the updated DSL.
 After publishing to [!DNL Edge], scoring is done by a POST request from a client. Typically, this can be done from a client application that needs ML scores. You can also do it from Postman. The *[!UICONTROL Real-time ML]* template uses EdgeUtils to demonstrate this process.
 
 >[!NOTE]
+>
 >A small processing time is required before scoring starts.
 
 ```python
@@ -442,6 +453,7 @@ The response returned is an array of your deployed services.
 ## Delete a deployed app or service id from the [!DNL Edge] (optional)
 
 >[!CAUTION]
+>
 >This cell is used to delete your deployed Edge application. Do not use the following cell unless you need to delete a deployed [!DNL Edge] application. 
 
 ```python

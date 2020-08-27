@@ -8,6 +8,7 @@ topic: overview
 # (Beta) FTP and SFTP connector
 
 >[!NOTE]
+>
 >The FTP and SFTP connectors are in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure], allowing you to bring your data from these systems.

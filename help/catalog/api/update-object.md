@@ -15,7 +15,7 @@ You can update part of a [!DNL Catalog] object by including its ID in the path o
 
 >[!NOTE]
 >
->PATCH operations on an object cannot modify its expandable fields, which represent interrelated objects.  Modifications to interrelated objects must be made directly.
+>PATCH operations on an object cannot modify its expandable fields, which represent interrelated objects. Modifications to interrelated objects must be made directly.
 
 ## Update using fields
 

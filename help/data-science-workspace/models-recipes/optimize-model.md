@@ -22,7 +22,7 @@ After implementing and training a model, the next step a data scientist would do
 
 Currently, the Model Insights Framework supports the following runtimes:
 - [Scala](#scala)
-- [!DNL Python/Tensorflow](#pythontensorflow)
+- [Python/Tensorflow](#pythontensorflow)
 - [R](#r)
 
 Sample code for recipes can be found in the [experience-platform-dsw-reference](https://github.com/adobe/experience-platform-dsw-reference) repository under `recipes`. Specific files from this repository will be referenced throughout this tutorial.

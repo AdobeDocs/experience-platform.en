@@ -126,7 +126,7 @@ A successful response returns HTTP status 201 (Created) and the details of the n
 
 >[!NOTE]
 >
->This section covers how to format privacy requests for the [!DNL Data Lake]. It is strongly recommended that you review the [!DNL Privacy Service UI](../privacy-service/ui/overview.md) or [!DNL Privacy Service API](../privacy-service/api/getting-started.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
+>This section covers how to format privacy requests for the [!DNL Data Lake]. It is strongly recommended that you review the [[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) or [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
 
 The following section outlines how to make privacy requests for the [!DNL Data Lake] using the [!DNL Privacy Service] UI or API.
 

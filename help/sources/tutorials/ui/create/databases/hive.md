@@ -8,6 +8,7 @@ topic: overview
 # Create an [!DNL Apache Hive] on [!DNL Azure HDInsights] source connector in the UI
 
 >[!NOTE]
+>
 > The [!DNL Apache Hive] on [!DNL Azure HDInsights] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an [!DNL Apache Hive] on [!DNL Azure HDInsights] source connector using the [!DNL Platform] user interface.
