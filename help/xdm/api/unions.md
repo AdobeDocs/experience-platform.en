@@ -7,7 +7,7 @@ topic: developer guide
 
 # Unions
 
-Unions (or union views) are system-generated, read-only schemas that aggregate the fields of all schemas which share the same class ([!DNL XDM ExperienceEvent] or [!DNL XDM Individual Profile]) and are enabled for [!DNL Real-time Customer Profile](../../profile/home.md).
+Unions (or union views) are system-generated, read-only schemas that aggregate the fields of all schemas which share the same class ([!DNL XDM ExperienceEvent] or [!DNL XDM Individual Profile]) and are enabled for [[!DNL Real-time Customer Profile]](../../profile/home.md).
 
 This document covers essential concepts for working with unions in the Schema Registry API, including sample calls for various operations. For more general information about unions in XDM, see the section on unions in the [basics of schema composition](../schema/composition.md#union).
 

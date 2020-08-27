@@ -17,10 +17,10 @@ This developer guide provides steps to help you start using the [!DNL Schema Reg
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-* [!DNL Experience Data Model (XDM) System](../home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+* [[!DNL Experience Data Model (XDM) System]](../home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     * [Basics of schema composition](../schema/composition.md): Learn about the basic building blocks of XDM schemas.
-* [!DNL Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Schema Registry] API.
 

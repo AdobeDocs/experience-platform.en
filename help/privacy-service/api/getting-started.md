@@ -16,7 +16,7 @@ This guide covers how to use the [!DNL Privacy Service] API. For details on how 
 
 This guide requires a working understanding the following [!DNL Experience Platform] features:
 
-* [!DNL Privacy Service](../home.md): Provides a RESTful API and user interface that allow you to manage access and delete requests from your data subjects (customers) across Adobe Experience Cloud applications.
+* [[!DNL Privacy Service]](../home.md): Provides a RESTful API and user interface that allow you to manage access and delete requests from your data subjects (customers) across Adobe Experience Cloud applications.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to the Privacy Service API.
 

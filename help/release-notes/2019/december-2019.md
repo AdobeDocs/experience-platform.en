@@ -14,10 +14,10 @@ author: ens71067
 
 Updates to existing features in Adobe Experience Platform:
 
-* [!DNL Segmentation Service](#segmentation)
-* [!DNL Decisioning Service](#decisioning)
-* [!DNL Sources](#sources)
-* [!DNL Experience Data Model (XDM) System](#xdm)
+* [[!DNL Segmentation Service]](#segmentation)
+* [[!DNL Decisioning Service]](#decisioning)
+* [[!DNL Sources]](#sources)
+* [[!DNL Experience Data Model (XDM) System]](#xdm)
 
 ## [!DNL Segmentation Service] {#segmentation}
 
