@@ -89,7 +89,7 @@ topic: getting started
 
 ## C
 
-**Capping:** In [!DNL Offer Decisioning], capping is used in decisioning rules to define how many times an offer is presented. There are two types of caps, how many times an offer can be proposed across the combined target audience, also known as "Global Cap" and how many times an offer can be proposed to the same end user, also known as "Profile Cap".
+**Capping:** In [!DNL Offer Decisioning], capping is used in decisioning rules to define how many times an offer is presented. There are two types of caps: how many times an offer can be proposed across the combined target audience, also known as "Global Cap," and how many times an offer can be proposed to the same end user, also known as "Profile Cap".
 
 **Catalog:** In [!DNL Real-time Customer Data Platform], in sources and destinations, a catalog is a gallery with available connections to Adobe applications and 3rd Party technologies.
 
