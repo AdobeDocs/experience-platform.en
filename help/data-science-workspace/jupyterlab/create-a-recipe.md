@@ -24,7 +24,6 @@ The [!UICONTROL Recipe Builder] notebook allows you to run training and scoring 
 
 >[!NOTE]
 >
->
 >The Recipe Builder notebook supports working with all file formats but currently the Create Recipe functionality only supports [!DNL Python].
 
 ![](../images/jupyterlab/create-recipe/recipe-builder.png)
@@ -71,7 +70,6 @@ data_access_sdk_python
 
 >[!NOTE]
 >
->
 >Libraries or specific versions you add may be incompatible with the above libraries.
 
 ### Configuration files {#configuration-files}
@@ -110,11 +108,10 @@ The following two sections will go over loading data and data preparation.
 
 This step uses the [pandas dataframe](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Data can be loaded from files in [!DNL Adobe Experience Platform] using either the [!DNL Platform] SDK (`platform_sdk`), or from external sources using pandas' `read_csv()` or `read_json()` functions.
 
-- [!DNL Platform SDK](#platform-sdk)
+- [[!DNL Platform SDK]](#platform-sdk)
 - [External sources](#external-sources)
 
 >[!NOTE]
->
 >
 >In the Recipe Builder notebook, data is loaded via the `platform_sdk` data loader.
 
@@ -146,7 +143,6 @@ Now your data is in the dataframe object and can be analyzed and manipulated in 
 
 >[!CAUTION]
 >
->
 > `data_access_sdk_python` is no longer recommended, please see [Convert Data Access code to Platform SDK](../authoring/platform-sdk.md) for a guide on using the `platform_sdk` data loader.
 
 Users can load data using the Data Access SDK. The library can be imported at the top of the page by including the line:
@@ -165,7 +161,6 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 ```
 
 >[!NOTE]
->
 >
 >As mentioned in the [Configuration File section](#configuration-files), the following configuration parameters are set for you when you access data from [!DNL Experience Platform]:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID` 
@@ -296,7 +291,6 @@ The `pipeline.py` file includes logic for training and scoring.
 The purpose of training is to create a model using features and labels in your training dataset. 
 
 >[!NOTE]
->
 > 
 >_Features_ refer to the input variable used by the machine learning model to predict the _labels_.
 

@@ -13,7 +13,7 @@ author: crhoades, ens28527
 Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
-- [!DNL Destinations](#destinations)  
+- [[!DNL Destinations]](#destinations)  
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}

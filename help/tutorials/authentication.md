@@ -40,7 +40,7 @@ Before creating integrations on Adobe I/O, your account must have developer perm
 
 **Gain developer access**
 
-Contact an [!DNL Admin Console] administrator in your Organization to add you as a developer for one of your Organization's products using the [!DNL Admin Console](https://adminconsole.adobe.com/).
+Contact an [!DNL Admin Console] administrator in your Organization to add you as a developer for one of your Organization's products using the [[!DNL Admin Console]](https://adminconsole.adobe.com/).
 
  ![](images/authentication/assign-developer.png)
 

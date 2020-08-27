@@ -15,8 +15,8 @@ This tutorial covers steps for retrieving information about a failed batch using
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-- [!DNL Data Ingestion](../home.md): The methods by which data can be sent to [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+- [[!DNL Data Ingestion]](../home.md): The methods by which data can be sent to [!DNL Experience Platform].
 
 ### Reading sample API calls
 

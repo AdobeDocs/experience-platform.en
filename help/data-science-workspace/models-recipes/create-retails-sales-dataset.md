@@ -26,7 +26,7 @@ Before starting this tutorial, you must have the following prerequisites:
     -   [dictor](https://pypi.org/project/dictor/)
     -   [JWT](https://pypi.org/project/jwt/)
 -   A working understanding of the following concepts used in this tutorial:
-    -   [!DNL Experience Data Model (XDM)](../../xdm/home.md)
+    -   [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)
     -   [Basics of schema composition](../../xdm/schema/field-dictionary.md)
 
 ## Create Retail Sales schema and dataset

@@ -250,6 +250,7 @@ In this scenario, Luma wants to retarget this audience with personalization acro
 You can also schedule the segment to start or end at a particular time. The segment will be posted and automatically update in the configured platforms on the scheduled dates. 
 
 >[!NOTE]
+>
 >Optionally, if you click in the date field, it automatically schedules for 90 days out. 
 
 Click **[!UICONTROL Save]** to go to the next page. 
