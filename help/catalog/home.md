@@ -57,4 +57,4 @@ The following table outlines the different object types supported by [!DNL Catal
 
 ## Next steps
 
-This document provided an introduction to [!DNL Catalog Service] and how it functions within the greater scope of [!DNL Experience Platform]. See the [Catalog developer guide](api/getting-started.md) for steps on interacting with the different endpoints of that [!DNL Catalog] API. It is recommended that you also refer to the guide on [filtering Catalog data](api/filter-data.md) in order to follow best practices for limiting the data returned in API responses.
+This document provided an introduction to [!DNL Catalog Service] and how it functions within the greater scope of [!DNL Experience Platform]. See the [[!DNL Catalog] developer guide](api/getting-started.md) for steps on interacting with the different endpoints of that [!DNL Catalog] API. It is recommended that you also refer to the guide on [filtering Catalog data](api/filter-data.md) in order to follow best practices for limiting the data returned in API responses.
