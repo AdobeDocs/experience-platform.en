@@ -164,7 +164,7 @@ A successful response returns HTTP status 200 with detailed information about th
 
 | Property | Description | 
 | -------- | ----------- |
-| `results` | A list of entity IDs, along with their related identities. The links provided can be used to look up the specified entities, using the [!DNL Profile Access API](../../profile/api/entities.md). |
+| `results` | A list of entity IDs, along with their related identities. The links provided can be used to look up the specified entities, using the [[!DNL Profile Access API]](../../profile/api/entities.md). |
 
 ## Retrieve the results of a specific estimate job {#get-estimate}
 

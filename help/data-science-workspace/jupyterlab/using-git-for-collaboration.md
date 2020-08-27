@@ -20,7 +20,7 @@ The [!DNL Data Science Workspace JupyterLab] environment is a hosted environment
 
 ## Connect [!DNL Git] to the [!DNL Data Science Workspace JupyterLab Notebooks] environment
 
-Start by launching [!DNL Adobe Experience Platform] and navigating to the [!DNL JupyterLabs Notebooks](https://platform.adobe.com/notebooks/jupyterLab) environment.
+Start by launching [!DNL Adobe Experience Platform] and navigating to the [[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab) environment.
 
 Within [!DNL JupyterLab], select **[!UICONTROL File]** then hover over **[!UICONTROL New]**. From the dropdown that appears, select **[!UICONTROL Terminal]**.
 
@@ -52,4 +52,4 @@ Next, clone the repository you wish to use using the `git clone` command. Clone 
 
 ## Next steps
 
-After you have finished cloning your repository, you can use Git as you normally would on your local machine to collaborate with others on notebooks. For more information on what you can do within [!DNL JupyterLab], see the [!DNL JupyterLab user guide](./overview.md).
+After you have finished cloning your repository, you can use Git as you normally would on your local machine to collaborate with others on notebooks. For more information on what you can do within [!DNL JupyterLab], see the [[!DNL JupyterLab user guide]](./overview.md).

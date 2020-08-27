@@ -39,10 +39,10 @@ Before starting this tutorial, you must have the following prerequisites:
 *   Download the three required [!DNL Jupyter Notebook] files from the <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">Adobe public [!DNL Git] repository</a>, these will be used to demonstrate the [!DNL JupyterLab] workflow in [!DNL Data Science Workspace].
 
 *   A working understanding of the following key concepts used in this tutorial:
-    *   [!DNL Experience Data Model](../../xdm/home.md): The standardization effort led by Adobe to define standard schemas such as [!DNL Profile] and ExperienceEvent, for Customer Experience Management. 
+    *   [[!DNL Experience Data Model]](../../xdm/home.md): The standardization effort led by Adobe to define standard schemas such as [!DNL Profile] and ExperienceEvent, for Customer Experience Management. 
     *   Datasets: A storage and management construct for actual data. A physical instantiated instance of an [XDM Schema](../../xdm/schema/field-dictionary.md).
     *   Batches: Datasets are made up of batches. A batch is a set of data collected over a period of time and processed together as a single unit.
-    *   [!DNL JupyterLab]: [!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is an open-source web-based interface for Project [!DNL Jupyter] and is tightly integrated into [!DNL Experience Platform].
+    *   [!DNL JupyterLab]: [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is an open-source web-based interface for Project [!DNL Jupyter] and is tightly integrated into [!DNL Experience Platform].
 
 ## Prepare your data {#prepare-your-data}
 

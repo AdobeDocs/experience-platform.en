@@ -12,14 +12,14 @@ keywords: release notes;
 **Release date: April 8, 2020**
 
 New features in Adobe Experience Platform:
-* [!DNL Intelligent Services](#intelligent)
+* [[!DNL Intelligent Services]](#intelligent)
 
 Updates to existing features:
-* [!DNL Experience Data Model (XDM)](#xdm)
-* [!DNL Data Governance](#governance)
-* [!DNL Destinations](#destinations)
-* [!DNL Privacy Service](#privacy)
-* [!DNL Sources](#sources)
+* [[!DNL Experience Data Model (XDM)]](#xdm)
+* [[!DNL Data Governance]](#governance)
+* [[!DNL Destinations]](#destinations)
+* [[!DNL Privacy Service]](#privacy)
+* [[!DNL Sources]](#sources)
 
 ## [!DNL Intelligent Services] {#intelligent}
 

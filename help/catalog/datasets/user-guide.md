@@ -15,11 +15,11 @@ This user guide provides instructions on performing common actions when working 
 This user guide requires a working understanding of the following components of Adobe Experience Platform:
 
 *   [Datasets](overview.md): The storage and management construct for data persistence in [!DNL Experience Platform].
-*   [!DNL Experience Data Model (XDM) System](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+*   [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     *   [Basics of schema composition](../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
     *   [Schema Editor](../../xdm/tutorials/create-schema-ui.md): Learn how to build your own custom XDM schemas using the [!DNL Schema Editor] within the [!DNL Platform] user interface.
-*   [!DNL Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-*   [!DNL Data Governance](../../data-governance/home.md): Ensure compliancy with regulations, restrictions, and policies regarding the usage of customer data.
+*   [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+*   [[!DNL Data Governance]](../../data-governance/home.md): Ensure compliancy with regulations, restrictions, and policies regarding the usage of customer data.
 
 ## View datasets
 

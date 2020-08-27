@@ -14,9 +14,9 @@ author: ens28527
 
 Updates to existing features in Adobe Experience Platform:
 
-* [!DNL Data Ingestion](#ingestion)
-* [!DNL Data Science Workspace](#dsw)
-* [!DNL Query Service](#query)
+* [[!DNL Data Ingestion]](#ingestion)
+* [[!DNL Data Science Workspace]](#dsw)
+* [[!DNL Query Service]](#query)
 
 ## [!DNL Data Ingestion] {#ingestion}
 
