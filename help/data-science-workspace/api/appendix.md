@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;
 solution: Experience Platform
 title: Appendix
 topic: Developer guide
+description: The following sections provide reference information for various features of the Sensei Machine Learning API.
 ---
 
 # Appendix

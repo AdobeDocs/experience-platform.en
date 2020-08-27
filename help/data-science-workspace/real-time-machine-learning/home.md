@@ -3,6 +3,7 @@ keywords: Experience Platform;developer guide;Data Science Workspace;popular top
 solution: Experience Platform
 title: Real-time Machine Learning overview
 topic: Overview
+description: Real-time Machine Learning can dramatically enhance the relevance of your digital experience content for your end-users. This is made possible by leveraging real-time inferencing and continuous learning on the Experience Edge.
 ---
 
 # Real-time Machine Learning overview (Alpha)
