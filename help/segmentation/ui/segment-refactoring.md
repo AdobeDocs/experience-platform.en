@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment builder;Segment builder
 solution: Experience Platform
-title: Segmentation Service Segment Builder breaking changes guide
+title: Segmentation Service Segment Builder changes guide
 topic: ui guide
 description: Segment Builder provides a rich workspace that allows you to interact with Profile data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. 
 ---
 
-# (Breaking Change) OR and AND logical operators update
+# OR and AND logical operators update
 
-The September 2020 release for Adobe Experience Platform has introduced two breaking changes to Adobe Experience Platform Segmentation Service. These changes affect segments made using the logical operators OR and AND in the Segment Builder UI. This guide explains how to mitigate these changes.
+The September 2020 release for Adobe Experience Platform has introduced two performance changes to Adobe Experience Platform Segmentation Service that adds new restrictions to the use of the OR and AND logical operators. These changes will affect newly created or edited segments made using the Segment Builder UI. This guide explains how to mitigate these changes.
 
 ## Factoring OR operators between events {#or-factorization}
 
@@ -16,7 +16,7 @@ Previously, segments could use an OR between events, as seen below. For example,
 
 ![](../images/ui/segment-refactoring/former-segment.png)
 
-This segment can now be re-stated by using the following steps.
+However, with this method of connecting events being deprecated, this segment will need to be restated by using the following steps.
 
 ### Refactor the segment
 
