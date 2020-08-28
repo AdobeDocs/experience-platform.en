@@ -30,6 +30,10 @@ After creating your CRM account, the *Select data* step appears, providing an in
 
 You can use the **[!UICONTROL Search]** option on the top of the page to quickly identify the source data you intend to use.
 
+>[!NOTE]
+>
+>The search source data option is available to all tabular-based source connectors excluding the Analytics, Classifications, Event Hubs, and Kinesis connectors.
+
 Once you find the source data, select the directory, then click **[!UICONTROL Next]**.
 
 ![select-data](../../../images/tutorials/dataflow/all-tabular/select-data.png)
