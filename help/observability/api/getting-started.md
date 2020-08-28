@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;date range
 solution: Experience Platform
 title: Getting started with the Observability Insights API
 topic: developer guide
-description: Observability Insights is a RESTful API that allows you to expose key observability metrics in Adobe Experience Platform. These metrics provide insights into Platform usage statistics, health-checks for Platform services, historical trends, and performance indicators for various Platform functionalities.
+description: The Observability Insights API allows you to retrieve metric data for various Adobe Experience Platform features. This document provides an introduction to the core concepts you need to know before attempting to make calls to the Observability Insights API.
 ---
 
 # Getting started with the [!DNL Observability Insights] API
@@ -12,7 +12,7 @@ The [!DNL Observability Insights] API allows you to retrieve metric data for var
 
 ## Reading sample API calls
 
-The [!DNL Observability Insights] API documentation provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on how to read example API calls in the Experience Platform troubleshooting guide.
+The [!DNL Observability Insights] API documentation provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on how to read example API calls in the [Experience Platform troubleshooting guide](../../landing/troubleshooting.md).
 
 ## Required headers
 

@@ -20,7 +20,7 @@ This document provides steps on how to subscribe to events, register webhooks, a
 
 This tutorial assumes that you have already created at least one source connection whose flow runs you want to monitor. If you have not yet configured a source connection, start by visiting the [sources overview](./home.md) to configure the source of your choice before returning to this guide.
 
-This document also requires a working understanding of webhooks and how to connect a webhook from one application to another. See the following [documentation](https://requestbin.com/blog/working-with-webhooks/) for more information on webhooks.
+This document also requires a working understanding of webhooks and how to connect a webhook from one application to another. Refer to the [[!DNL I/O Events] documentation](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) for an introduction to webhooks.
 
 ## Register a webhook for flow run notifications
 

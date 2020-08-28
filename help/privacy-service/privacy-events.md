@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Subscribe to Privacy Events
+title: Subscribe to Privacy Service Events
 topic: privacy events
 ---
 
-# Subscribe to [!DNL Privacy Events]
+# Subscribe to [!DNL Privacy Service Events]
 
-[!DNL Privacy Events] are messages provided by Adobe Experience Platform [!DNL Privacy Service], which leverage Adobe I/O Events sent to a configured webhook to facilitate efficient job request automation. They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached.
+[!DNL Privacy Service Events] are messages provided by Adobe Experience Platform [!DNL Privacy Service], which leverage Adobe I/O Events sent to a configured webhook to facilitate efficient job request automation. They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached.
 
 There are currently four types of notifications related to the privacy job request lifecycle:
 
@@ -27,19 +27,19 @@ Please review the following Privacy Service documentation before starting this t
 * [Privacy Service overview](./home.md)
 * [Privacy Service API developer guide](./api/getting-started.md)
 
-## Register a webhook to [!DNL Privacy Events]
+## Register a webhook to [!DNL Privacy Service Events]
 
-In order to receive [!DNL Privacy Events], you must use Adobe Developer Console to register a webhook to your [!DNL Privacy Service] integration.
+In order to receive [!DNL Privacy Service Events], you must use Adobe Developer Console to register a webhook to your [!DNL Privacy Service] integration.
 
 Follow the tutorial on [subscribing to [!DNL I/O Event] notifications](../observability/notifications/subscribe.md) for detailed steps on how to accomplish this. Ensure that you choose **[!UICONTROL Privacy Service Events]** as your event provider in order to access the events listed above.
 
-## Receive [!DNL Privacy Event] notifications
+## Receive [!DNL Privacy Service Event] notifications
 
 Once you have successfully registered your webhook and privacy jobs have been run, you can start receiving event notifications. These events can be viewed using the webhook itself, or by selecting the **[!UICONTROL Debug Tracing]** tab in your project's event registration overview in Adobe Developer Console.
 
 ![](images/privacy-events/debug-tracing.png)
 
-The following JSON is an example of a [!DNL Privacy Event] notification payload that would be sent to your webhook when one of the applications associated with a privacy job has completed its work:
+The following JSON is an example of a [!DNL Privacy Service Event] notification payload that would be sent to your webhook when one of the applications associated with a privacy job has completed its work:
 
 ```json
 {
@@ -68,4 +68,4 @@ The following JSON is an example of a [!DNL Privacy Event] notification payload 
 
 ## Next steps
 
-This document covered how to register Privacy Events to a configured webhook, and how to interpret notification payloads. To learn how to track privacy jobs using the user interface, see the [Privacy Service user guide](./ui/user-guide.md).
+This document covered how to register Privacy Service Events to a configured webhook, and how to interpret notification payloads. To learn how to track privacy jobs using the user interface, see the [Privacy Service user guide](./ui/user-guide.md).

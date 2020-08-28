@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;date range
 solution: Experience Platform
 title: Subscribe to Adobe I/O Event notifications
 topic: developer guide
-description: Observability Insights is a RESTful API that allows you to expose key observability metrics in Adobe Experience Platform. These metrics provide insights into Platform usage statistics, health-checks for Platform services, historical trends, and performance indicators for various Platform functionalities.
+description: This document provides steps on how to subscribe to Adobe I/O event notifications for Adobe Experience Platform services. Reference information regarding available event types is also provided, along with links to further documentation on how to interpret returned event data for each applicable [!DNL Platform] service.
 ---
 
 # Subscribe to Adobe I/O Event notifications
@@ -14,7 +14,7 @@ This document provides steps on how to subscribe to Adobe I/O event notification
 
 ## Getting started
 
-This document requires a working understanding of webhooks and how to connect a webhook from one application to another. See the following [documentation](https://requestbin.com/blog/working-with-webhooks/) for more information on webhooks.
+This document requires a working understanding of webhooks and how to connect a webhook from one application to another. Refer to the [[!DNL I/O Events] documentation](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) for an introduction to webhooks.
 
 ## Create a webhook
 
@@ -41,9 +41,9 @@ Once you have created a new project, navigate to that project's overview screen.
 A dialog appears which allows you to add an event provider to your project:
 
 * If you are subscribing to [!DNL Experience Platform] notifications, select **[!UICONTROL Platform notifications]** 
-* If you are subscribing to Adobe Experience Platform [!DNL Privacy Service] notifications, select **[!UICONTROL Privacy Service notifications]** 
+* If you are subscribing to Adobe Experience Platform [!DNL Privacy Service] notifications, select **[!UICONTROL Privacy Service Events]** 
 
-Once you have chosen one of the event providers above, select **[!UICONTROL Next]**.
+Once you have chosen an event provider, select **[!UICONTROL Next]**.
 
 ![](../images/notifications/event-provider.png)
 
@@ -71,17 +71,17 @@ The next screen allows you to review the details of the newly generated key pair
 
 ![](../images/notifications/keypair-generated.png)
 
-In the next screen, provide a name and description for the event registration. Best practice is to create a unique, easily identifiable name to help differentiate this event registration from others on the same project.
+In the next screen, provide a name and description for the event registration in the [!UICONTROL Event registration details] section. Best practice is to create a unique, easily identifiable name to help differentiate this event registration from others on the same project.
 
 ![](../images/notifications/registration-details.png)
 
-Further down on the same screen, you can optionally configure how to receive events. **[!UICONTROL Webhook]** allows you to provide a custom webhook address to receive events, whereas **[!UICONTROL Runtime action]** allows you to do the same using [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html).
+Further down on the same screen under the [!UICONTROL How to receive events] section, you can optionally configure how to receive events. **[!UICONTROL Webhook]** allows you to provide a custom webhook address to receive events, whereas **[!UICONTROL Runtime action]** allows you to do the same using [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html).
 
-This tutorial skips this optional configuration step. Once you are finished, select **[!UICONTROL Save configured events]** to complete the event registration.
+For this tutorial, select **[!UICONTROL Webhook]** and provide the URL of the webhook you created earlier. Once you are finished, select **[!UICONTROL Save configured events]** to complete the event registration.
 
 ![](../images/notifications/receive-events.png)
 
-The details page for the newly created event registration appears, where you can edit its configuration,review received events, perform debug tracing, and add new event providers.
+The details page for the newly created event registration appears, where you can edit its configuration, review received events, perform debug tracing, and add new event providers.
 
 ![](../images/notifications/registration-complete.png)
 

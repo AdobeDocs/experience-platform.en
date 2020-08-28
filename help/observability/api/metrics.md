@@ -15,7 +15,7 @@ The API endpoint used in this guide is part of the [[!DNL Observability Insights
 
 ## Retrieve observability metrics
 
-You can retrieve observability metrics by making a GET request to the `/metrics` endpoint in the Observability Insights API.
+You can retrieve observability metrics by making a GET request to the `/metrics` endpoint in the [!DNL Observability Insights] API.
 
 **API format**
 
@@ -106,7 +106,11 @@ The following section contains additional information about working with the `/m
 
 ### Available metrics {#available-metrics}
 
-The following tables list all of the metrics that are exposed by Observability Insights, broken down by [!DNL Platform] service. Each metric includes a description and accepted ID query parameter.
+The following tables list all of the metrics that are exposed by [!DNL Observability Insights], broken down by [!DNL Platform] service. Each metric includes a description and accepted ID query parameter.
+
+>[!NOTE]
+>
+>All listed ID query parameters are optional unless stated otherwise.
 
 #### [!DNL Data Ingestion] {#ingestion}
 
@@ -115,26 +119,26 @@ The following table outlines metrics for Adobe Experience Platform [!DNL Data In
 | Insights metric | Description | ID query parameter |
 | ---- | ---- | ---- |
 | timeseries.ingestion.dataset.new.count | Total number of datasets created. | N/A |
-| timeseries.ingestion.dataset.size | Cumulative size of all data ingested for one dataset for or all datasets.| Dataset ID (Optional) |
-| timeseries.ingestion.dataset.dailysize | Size of data ingested on a daily usage basis for one dataset or for all datasets. | Dataset ID (Optional) |
-| timeseries.ingestion.dataset.batchfailed.count | Number of batches failed for one dataset or for all datasets. | Dataset ID (Optional) |
-| timeseries.ingestion.dataset.batchsuccess.count | Number of batches ingested for one dataset or for all datasets. | Dataset ID (Optional) |
-| timeseries.ingestion.dataset.recordsuccess.count | Number of records ingested for one dataset or for all datasets. | Dataset ID (Optional) |
-| timeseries.data.collection.validation.total.messages.rate | Total number of messages for one dataset or for all datasets. | Dataset ID (Optional) |
-| timeseries.data.collection.validation.valid.messages.rate | Total number of valid messages for one dataset or for all datasets. | Dataset ID (Optional) |
-| timeseries.data.collection.validation.invalid.messages.rate | Total number of invalid messages for one dataset or for all datasets. | Dataset ID (Optional) |
-| timeseries.data.collection.validation.category.type.count | Total number of invalid "type" messages for one dataset or for all datasets. | Dataset ID (Optional) |
-| timeseries.data.collection.validation.category.range.count | Total number of invalid "range" messages for one dataset or for all datasets. | Dataset ID (Optional) |
-| timeseries.data.collection.validation.category.format.count | Total number of invalid "format" messages for one dataset or for all datasets. | Dataset ID (Optional) |
-| timeseries.data.collection.validation.category.pattern.count | Total number of invalid "pattern" messages for one dataset or for all datasets. | Dataset ID (Optional) |
-| timeseries.data.collection.validation.category.presence.count | Total number of invalid "presence" messages for one dataset or for all datasets. | Dataset ID (Optional) |
-| timeseries.data.collection.validation.category.enum.count | Total number of invalid "enum" messages for one dataset or for all datasets. | Dataset ID (Optional) |
-| timeseries.data.collection.validation.category.unclassified.count | Total number of invalid "unclassified" messages for one dataset or for all datasets. | Dataset ID (Optional) |
-| timeseries.data.collection.validation.category.unknown.count | Total number of invalid "unknown" messages for one dataset or for all datasets. | Dataset ID (Optional) |
-| timeseries.data.collection.inlet.total.messages.received | Total number of messages received for one data inlet or for all data inlets. | Inlet ID (Optional) |
-| timeseries.data.collection.inlet.total.messages.size.received | Total size of data received for one data inlet or for all data inlets. | Inlet ID (Optional) |
-| timeseries.data.collection.inlet.success | Total number of successful HTTP calls to one data inlet or to all data inlets. | Inlet ID (Optional) |
-| timeseries.data.collection.inlet.failure | Total number of failed HTTP calls to one data inlet or to all data inlets. | Inlet ID (Optional) |
+| timeseries.ingestion.dataset.size | Cumulative size of all data ingested for one dataset for or all datasets.| Dataset ID |
+| timeseries.ingestion.dataset.dailysize | Size of data ingested on a daily usage basis for one dataset or for all datasets. | Dataset ID |
+| timeseries.ingestion.dataset.batchfailed.count | Number of batches failed for one dataset or for all datasets. | Dataset ID |
+| timeseries.ingestion.dataset.batchsuccess.count | Number of batches ingested for one dataset or for all datasets. | Dataset ID |
+| timeseries.ingestion.dataset.recordsuccess.count | Number of records ingested for one dataset or for all datasets. | Dataset ID |
+| **timeseries.data.collection.validation.total.messages.rate** | Total number of messages for one dataset or for all datasets. | Dataset ID |
+| **timeseries.data.collection.validation.valid.messages.rate** | Total number of valid messages for one dataset or for all datasets. | Dataset ID |
+| **timeseries.data.collection.validation.invalid.messages.rate** | Total number of invalid messages for one dataset or for all datasets. | Dataset ID |
+| **timeseries.data.collection.validation.category.type.count** | Total number of invalid "type" messages for one dataset or for all datasets. | Dataset ID |
+| **timeseries.data.collection.validation.category.range.count** | Total number of invalid "range" messages for one dataset or for all datasets. | Dataset ID |
+| **timeseries.data.collection.validation.category.format.count** | Total number of invalid "format" messages for one dataset or for all datasets. | Dataset ID |
+| **timeseries.data.collection.validation.category.pattern.count** | Total number of invalid "pattern" messages for one dataset or for all datasets. | Dataset ID |
+| **timeseries.data.collection.validation.category.presence.count** | Total number of invalid "presence" messages for one dataset or for all datasets. | Dataset ID |
+| **timeseries.data.collection.validation.category.enum.count** | Total number of invalid "enum" messages for one dataset or for all datasets. | Dataset ID |
+| **timeseries.data.collection.validation.category.unclassified.count** | Total number of invalid "unclassified" messages for one dataset or for all datasets. | Dataset ID |
+| **timeseries.data.collection.validation.category.unknown.count** | Total number of invalid "unknown" messages for one dataset or for all datasets. | Dataset ID |
+| **timeseries.data.collection.inlet.total.messages.received**| Total number of messages received for one data inlet or for all data inlets. | Inlet ID |
+| **timeseries.data.collection.inlet.total.messages.size.received** | Total size of data received for one data inlet or for all data inlets. | Inlet ID |
+| **timeseries.data.collection.inlet.success** | Total number of successful HTTP calls to one data inlet or to all data inlets. | Inlet ID |
+| **timeseries.data.collection.inlet.failure** | Total number of failed HTTP calls to one data inlet or to all data inlets. | Inlet ID |
 
 #### [!DNL Identity Service] {#identity}
 
@@ -142,8 +146,8 @@ The following table outlines metrics for Adobe Experience Platform [!DNL Identit
 
 | Insights metric | Description | ID query parameter |
 | ---- | ---- | ---- |
-| timeseries.identity.dataset.recordsuccess.count | Number of records written to their data source by [!DNL Identity Service], for one dataset or all datasets. | Dataset ID (Optional) |
-| timeseries.identity.dataset.recordfailed.count | Number of records failed by [!DNL Identity Service], for one dataset or for all datasets. | Dataset ID (Optional) |
+| timeseries.identity.dataset.recordsuccess.count | Number of records written to their data source by [!DNL Identity Service], for one dataset or all datasets. | Dataset ID |
+| timeseries.identity.dataset.recordfailed.count | Number of records failed by [!DNL Identity Service], for one dataset or for all datasets. | Dataset ID |
 | timeseries.identity.dataset.namespacecode.recordsuccess.count | Number of Identity records successfully ingested for a namespace. | Namespace ID (**Required**) |
 | timeseries.identity.dataset.namespacecode.recordfailed.count | Number of Identity records failed by a namespace. | Namespace ID (**Required**) |
 | timeseries.identity.dataset.namespacecode.recordskipped.count | Number of Identity records skipped by a namespace. | Namespace ID (**Required**) |
@@ -181,17 +185,17 @@ The following table outlines metrics for [!DNL Real-time Customer Profile].
 
 | Insights metric | Description | ID query parameter |
 | ---- | ---- | ---- |
-| timeseries.profiles.dataset.recordread.count | Number of records read from the [!DNL Data Lake] by [!DNL Profile], for one dataset or for all datasets. | Dataset ID (Optional) |
-| timeseries.profiles.dataset.recordsuccess.count | Number of records written to their data source by [!DNL Profile], for one dataset or for all datasets. | Dataset ID (Optional) |
-| timeseries.profiles.dataset.recordfailed.count | Number of records failed by [!DNL Profile], for one dataset or for all datasets. | Dataset ID (Optional) |
-| timeseries.profiles.dataset.batchsuccess.count | Number of [!DNL Profile] batches ingested for a dataset or for all datasets. | Dataset ID (Optional) |
-| timeseries.profiles.dataset.batchfailed.count | Number of [!DNL Profile] batches failed for one dataset or for all datasets. | Dataset ID (Optional) |
-| platform.ups.ingest.streaming.request.m1_rate | Incoming Request rate. | IMS Org |
-| platform.ups.ingest.streaming.access.put.success.m1_rate | Ingestion success rate. | IMS Org |
-| platform.ups.ingest.streaming.records.created.m15_rate | Rate of new records ingested for a dataset. | Dataset ID |
-| platform.ups.ingest.streaming.request.error.created.outOfOrder.m1_rate | Rate of out-of-order timestamped records for create request for a dataset. | Dataset ID |
-| platform.ups.profile-commons.ingest.streaming.dataSet.record.created.timestamp | Timestamp for last create record request for a dataset.| Dataset ID |
-| platform.ups.ingest.streaming.request.error.updated.outOfOrder.m1_rate | Rate of out-of-order timestamped records for update request for a dataset. | Dataset ID |
-| platform.ups.profile-commons.ingest.streaming.dataSet.record.updated.timestamp | Timestamp for last update record request for a dataset. | Dataset ID |
-| platform.ups.ingest.streaming.record.size.m1_rate | Average record size. | IMS Org |
-| platform.ups.ingest.streaming.records.updated.m15_rate | Rate of update requests for records ingested for a dataset. | Dataset ID |
+| timeseries.profiles.dataset.recordread.count | Number of records read from the [!DNL Data Lake] by [!DNL Profile], for one dataset or for all datasets. | Dataset ID |
+| timeseries.profiles.dataset.recordsuccess.count | Number of records written to their data source by [!DNL Profile], for one dataset or for all datasets. | Dataset ID |
+| timeseries.profiles.dataset.recordfailed.count | Number of records failed by [!DNL Profile], for one dataset or for all datasets. | Dataset ID |
+| timeseries.profiles.dataset.batchsuccess.count | Number of [!DNL Profile] batches ingested for a dataset or for all datasets. | Dataset ID |
+| timeseries.profiles.dataset.batchfailed.count | Number of [!DNL Profile] batches failed for one dataset or for all datasets. | Dataset ID |
+| platform.ups.ingest.streaming.request.m1_rate | Incoming Request rate. | IMS Org (**Required**) |
+| platform.ups.ingest.streaming.access.put.success.m1_rate | Ingestion success rate. | IMS Org (**Required**) |
+| platform.ups.ingest.streaming.records.created.m15_rate | Rate of new records ingested for a dataset. | Dataset ID (**Required**) |
+| platform.ups.ingest.streaming.request.error.created.outOfOrder.m1_rate | Rate of out-of-order timestamped records for create request for a dataset. | Dataset ID (**Required**) |
+| platform.ups.profile-commons.ingest.streaming.dataSet.record.created.timestamp | Timestamp for last create record request for a dataset.| Dataset ID (**Required**) |
+| platform.ups.ingest.streaming.request.error.updated.outOfOrder.m1_rate | Rate of out-of-order timestamped records for update request for a dataset. | Dataset ID (**Required**) |
+| platform.ups.profile-commons.ingest.streaming.dataSet.record.updated.timestamp | Timestamp for last update record request for a dataset. | Dataset ID (**Required**) |
+| platform.ups.ingest.streaming.record.size.m1_rate | Average record size. | IMS Org (**Required**) |
+| platform.ups.ingest.streaming.records.updated.m15_rate | Rate of update requests for records ingested for a dataset. | Dataset ID (**Required**) |

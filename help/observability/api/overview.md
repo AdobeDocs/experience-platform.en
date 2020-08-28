@@ -8,7 +8,7 @@ description: Observability Insights is a RESTful API that allows you to expose k
 
 # [!DNL Observability Insights] API developer guide
 
-The [!DNL Observability Insights] API provides an endpoint allows you to programmatically retrieve and monitor metric data for various Adobe Experience Platform features. This endpoint is outlined below. Please visit the endpoint guide for details and refer to the [getting started guide](./getting-started.md) for important information on required headers, reading sample API calls, and more.
+The [!DNL Observability Insights] API provides an endpoint that allows you to programmatically retrieve and monitor metric data for various Adobe Experience Platform features. This endpoint is outlined below. Please visit the endpoint guide for details and refer to the [getting started guide](./getting-started.md) for important information on required headers, reading sample API calls, and more.
 
 To view all available endpoints and CRUD operations, visit the [[!DNL Observability Insights] API swagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml).
 

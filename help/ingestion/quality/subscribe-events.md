@@ -17,7 +17,7 @@ To assist in monitoring the ingestion process, [!DNL Experience Platform] makes 
 
 In order to receive data ingestion notifications, you must use Adobe Developer Console to register a webhook to your Experience Platform integration.
 
-Follow the tutorial on [subscribing to [!DNL I/O Event] notifications](../../observability/notifications/subscribe.md) for detailed steps on how to accomplish this.
+Follow the tutorial on [subscribing to [!DNL Adobe I/O Event] notifications](../../observability/notifications/subscribe.md) for detailed steps on how to accomplish this.
 
 >[!IMPORTANT]
 >
@@ -25,9 +25,9 @@ Follow the tutorial on [subscribing to [!DNL I/O Event] notifications](../../obs
 
 ## Receive data ingestion notifications
 
-Once you have successfully registered your webhook and data ingestion activities have occurred, you can start receiving event notifications. These events can be viewed using the webhook itself, or by selecting the **[!UICONTROL Debug Tracing]** tab in your project's event registration overview in Adobe Developer Console.
+Once you have successfully registered your webhook and new data has been ingested, you can start receiving event notifications. These events can be viewed using the webhook itself, or by selecting the **[!UICONTROL Debug Tracing]** tab in your project's event registration overview in Adobe Developer Console.
 
-The following JSON is an example of a [!DNL Data Ingestion] notification payload that would be sent to your webhook in the case of a failed batch ingestion event:
+The following JSON is an example of a notification payload that would be sent to your webhook in the case of a failed batch ingestion event:
 
 ```json
 {
@@ -63,11 +63,11 @@ The following JSON is an example of a [!DNL Data Ingestion] notification payload
 
 ## Next steps
 
-Once you have registered [!DNL Platform] notifications to your project, you can view received events from the project dashboard. Refer to the [Tracing Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) guide for detailed instructions on how to trace your events.
+Once you have registered [!DNL Platform] notifications to your project, you can view received events from the [!UICONTROL Project overview]. Refer to the guide on [tracing Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) for detailed instructions on how to trace your events.
 
 ## Appendix
 
-The following section contains additional information about interpreting Data Ingestion notification payloads.
+The following section contains additional information about interpreting data ingestion notification payloads.
 
 ### Available status notification events {#event-codes}
 
