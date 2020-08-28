@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics; flow service; crm; salesforce; dynamics
 solution: Experience Platform
 title: Collect CRM data through source connectors and APIs
 topic: overview
+description: This tutorial covers the steps for retrieving data from a third-party CRM and ingesting it into Platform through source connectors and the Flow Service API.
 ---
 
 # Collect CRM data through source connectors and APIs

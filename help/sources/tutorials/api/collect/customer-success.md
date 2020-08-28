@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics; flow service; customer success; service now; salesforce service cloud
 solution: Experience Platform
 title: Collect data from a customer success system through source connectors and APIs
 topic: overview
+description: This tutorial covers the steps for retrieving data from a third-party customer success system and ingesting it into Platform through source connectors and the Flow Service API.
 ---
 
 # Collect data from a customer success system through source connectors and APIs

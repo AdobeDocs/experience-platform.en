@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics; flow service; database; sql; no sql; data warehouse
 solution: Experience Platform
 title: Collect data from a third-party database through source connectors and APIs
 topic: overview
+description: This tutorial covers the steps for retrieving data from a third-party database and ingesting it into Platform through source connectors and the Flow Service API.
 ---
 
 # Collect data from a third-party database through source connectors and APIs

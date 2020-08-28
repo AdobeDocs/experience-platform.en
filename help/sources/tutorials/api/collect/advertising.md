@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics; flow service; advertising; google adwords
 solution: Experience Platform
 title: Collect advertising data through source connectors and APIs
 topic: overview
+description: This tutorial covers the steps for retrieving data from a third-party advertising application and ingesting it into Platform through source connectors and the Flow Service API.
 ---
 
 # Collect advertising data through source connectors and APIs

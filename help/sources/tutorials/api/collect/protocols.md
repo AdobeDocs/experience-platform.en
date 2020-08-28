@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics; flow service; protocol; generic odata
 solution: Experience Platform
 title: Collect protocol data through source connectors and APIs
 topic: overview
+description: This tutorial covers the steps for retrieving data from a third-party protocol provider and ingesting it into Platform through source connectors and the Flow Service API.
 ---
 
 # Collect protocol data through source connectors and APIs
