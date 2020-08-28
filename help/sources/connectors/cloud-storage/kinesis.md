@@ -71,4 +71,4 @@ The documentation below provides information on how to connect [!DNL Amazon Kine
 ### Using the UI
 
 - [Create a Amazon Kinesis source connector in the UI](../../tutorials/ui/create/cloud-storage/kinesis.md)
-- [Configure a dataflow for a cloud storage connector in the UI](../../tutorials/ui/dataflow/streaming/cloud-storage.md)
+- [Configure a dataflow for a cloud storage connector in the UI](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
