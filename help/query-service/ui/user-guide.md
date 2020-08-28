@@ -70,19 +70,19 @@ When errors are detected, you can view the specific error messages by hovering o
 
 ### Query details
 
-While you are viewing a query in [!DNL Query Editor], the *[!UICONTROL Query Details]* panel provides tools to manage the selected query.
+While you are viewing a query in [!DNL Query Editor], the **[!UICONTROL Query Details]** panel provides tools to manage the selected query.
 
 ![Image](../images/queries/query-editor-overview/query-details.png)
 
-This panel allows you to generate an output dataset directly from the UI, delete or name the displayed query, and view the SQL code in an easy to copy format on the *[!UICONTROL SQL Query]* tab. This panel also shows useful metadata such as the last time the query was modified and who modified it, if applicable. To generate a dataset, click **[!UICONTROL Output Dataset]**. The *[!UICONTROL Output Dataset]* dialog appears. Enter a name and description, then click **[!UICONTROL Run Query]**. The new dataset is displayed in the *[!UICONTROL Datasets]* tab on the [!DNL Query Service] user interface on [!DNL Platform].
+This panel allows you to generate an output dataset directly from the UI, delete or name the displayed query, and view the SQL code in an easy to copy format on the **[!UICONTROL SQL Query]* tab. This panel also shows useful metadata such as the last time the query was modified and who modified it, if applicable. To generate a dataset, click **[!UICONTROL Output Dataset]**. The *[!UICONTROL Output Dataset]* dialog appears. Enter a name and description, then click **[!UICONTROL Run Query]**. The new dataset is displayed in the *[!UICONTROL Datasets]** tab on the [!DNL Query Service] user interface on [!DNL Platform].
 
 ### Saving queries
 
-[!DNL Query Editor] provides a save function that allows you to save a query and work on it later. To save a query, click **[!UICONTROL Save]** in the top right corner of [!DNL Query Editor]. Before a query can be saved, a name must be provided for the query using the *[!UICONTROL Query Details]* panel.
+[!DNL Query Editor] provides a save function that allows you to save a query and work on it later. To save a query, click **[!UICONTROL Save]** in the top right corner of [!DNL Query Editor]. Before a query can be saved, a name must be provided for the query using the **[!UICONTROL Query Details]** panel.
 
 ### How to find previous queries
 
-All queries executed from [!DNL Query Editor] are captured in the Log table. You can use the search functionality in the *[!UICONTROL Log]* tab to find query executions. Saved queries are listed in the *[!UICONTROL Browse]* tab. 
+All queries executed from [!DNL Query Editor] are captured in the Log table. You can use the search functionality in the **[!UICONTROL Log]* tab to find query executions. Saved queries are listed in the *[!UICONTROL Browse]** tab. 
 
 See the [Query Service UI overview][query-service-ui] for more information. 
 
@@ -92,7 +92,7 @@ See the [Query Service UI overview][query-service-ui] for more information.
 
 ## Executing queries using Query Editor
 
-To run a query in [!DNL Query Editor], you can enter SQL in the editor or load a previous query from the *Log* or *[!UICONTROL Browse]* tab, and click **Play**. The status of query execution is displayed in the *[!UICONTROL Console]* tab below, and output data is shown in the *[!UICONTROL Results]* tab.
+To run a query in [!DNL Query Editor], you can enter SQL in the editor or load a previous query from the *Log* or **[!UICONTROL Browse]* tab, and click **Play**. The status of query execution is displayed in the *[!UICONTROL Console]* tab below, and output data is shown in the *[!UICONTROL Results]** tab.
 
 ### Console
 
@@ -106,7 +106,7 @@ The console provides information on the status and operation of [!DNL Query Serv
 
 ### Query results
 
-After a query has completed, the results are displayed in the *[!UICONTROL Results]* tab, next to the *[!UICONTROL Console]* tab. This view shows the tabular output of your query, displaying up to 100 rows. This view allows you to verify that your query produces the expected output. To generate a dataset with your query, remove limits on rows returned, and run the query with `CREATE TABLE tablename AS SELECT` to generate a dataset with the output. See the [generating datasets tutorial][query-service-create-datasets] for instructions on how to generate a dataset from query results in [!DNL Query Editor].
+After a query has completed, the results are displayed in the **[!UICONTROL Results]* tab, next to the *[!UICONTROL Console]** tab. This view shows the tabular output of your query, displaying up to 100 rows. This view allows you to verify that your query produces the expected output. To generate a dataset with your query, remove limits on rows returned, and run the query with `CREATE TABLE tablename AS SELECT` to generate a dataset with the output. See the [generating datasets tutorial][query-service-create-datasets] for instructions on how to generate a dataset from query results in [!DNL Query Editor].
 
 ![Image](../images/queries/query-editor-overview/query-results.png)
 

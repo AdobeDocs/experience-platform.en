@@ -68,7 +68,7 @@ If a policy violation occurs from attempting to activate a segment (or [making e
 
 ![](assets/violation-popover.png)
 
-The popover's *[!UICONTROL Details]* tab indicates the action that triggered the violation the reason why the violation occurred, and provides suggestions for how to potentially resolve the issue.
+The popover's **[!UICONTROL Details]** tab indicates the action that triggered the violation the reason why the violation occurred, and provides suggestions for how to potentially resolve the issue.
 
 Click **[!UICONTROL Data Lineage]** to track the destinations, segments, merge policies, or datasets whose data label(s) triggered the violation.
 

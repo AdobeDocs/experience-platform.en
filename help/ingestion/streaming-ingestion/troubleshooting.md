@@ -51,7 +51,7 @@ You can group multiple messages within a single request payload and stream them 
 
 All data that is sent to [!DNL Platform] (successfully or otherwise) is stored as batch files before being persisted in datasets. The processing status of batches appear within the dataset they were sent to.
 
-You can verify if data has been successfully ingested by checking dataset activity using the [Experience Platform user interface](https://platform.adobe.com). Click **[!UICONTROL Datasets]** in the left-navigation to display a list of datasets. Select the dataset you are streaming to from the displayed list to open its *[!UICONTROL Dataset activity]* page, showing all batches sent during a selected time period. For more information about using [!DNL Experience Platform] to monitor data streams, see the guide on [monitoring streaming data flows](../quality/monitor-data-flows.md).
+You can verify if data has been successfully ingested by checking dataset activity using the [Experience Platform user interface](https://platform.adobe.com). Click **[!UICONTROL Datasets]** in the left-navigation to display a list of datasets. Select the dataset you are streaming to from the displayed list to open its **[!UICONTROL Dataset activity]** page, showing all batches sent during a selected time period. For more information about using [!DNL Experience Platform] to monitor data streams, see the guide on [monitoring streaming data flows](../quality/monitor-data-flows.md).
 
 If your data failed to ingest and you want to recover it from [!DNL Platform], you can retrieve the failed batches by sending their IDs to the [!DNL Data Access API]. See the guide on [retrieving failed batches](../quality/retrieve-failed-batches.md) for more information.
 
@@ -93,4 +93,4 @@ If [!DNL Real-time Customer Profile] rejects a message, it is most likely due to
 
 There are two types of identity namespaces: default and custom. When using custom namespaces, make sure the namespace has been registered within [!DNL Identity Service]. See the [identity namespace overview](../../identity-service/namespaces.md) for more information on using default and custom namespaces.
 
-You can use the [[!DNL Experience Platform UI]](https://platform.adobe.com) to see more information on why a message failed ingestion. Click **[!UICONTROL Monitoring]** in the left-navigation, then view the _[!UICONTROL Streaming end-to-end]_ tab to see message batches streamed during a selected time period.
+You can use the [[!DNL Experience Platform UI]](https://platform.adobe.com) to see more information on why a message failed ingestion. Click **[!UICONTROL Monitoring]** in the left-navigation, then view the **[!UICONTROL Streaming end-to-end]** tab to see message batches streamed during a selected time period.

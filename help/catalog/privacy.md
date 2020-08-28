@@ -50,7 +50,7 @@ There are two methods of adding an identity descriptor to a dataset schema:
 
 ### Using the UI {#identity-ui}
 
-In the [!DNL Experience Platform ]user interface, the _[!UICONTROL Schemas]_ workspace allows you to edit your existing XDM schemas. To add an identity descriptor to a schema, select the schema from the list and follow the steps for [setting a schema field as an identity field](../xdm/tutorials/create-schema-ui.md#identity-field) in the [!DNL Schema Editor] tutorial.
+In the [!DNL Experience Platform ]user interface, the **[!UICONTROL Schemas]** workspace allows you to edit your existing XDM schemas. To add an identity descriptor to a schema, select the schema from the list and follow the steps for [setting a schema field as an identity field](../xdm/tutorials/create-schema-ui.md#identity-field) in the [!DNL Schema Editor] tutorial.
 
 Once you have set the appropriate fields within the schema as identity fields, you can proceed to the next section on [submitting privacy requests](#submit).
 
@@ -132,7 +132,7 @@ The following section outlines how to make privacy requests for the [!DNL Data L
 
 ### Using the UI
 
-When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data Lake]** and/or **[!UICONTROL Profile]** under _[!UICONTROL Products]_ in order to process jobs for data stored in the [!DNL Data Lake] or [!DNL Real-time Customer Profile], respectively.
+When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data Lake]** and/or **[!UICONTROL Profile]** under **[!UICONTROL Products]** in order to process jobs for data stored in the [!DNL Data Lake] or [!DNL Real-time Customer Profile], respectively.
 
 <img src='images/privacy/product-value.png' width=450><br>
 

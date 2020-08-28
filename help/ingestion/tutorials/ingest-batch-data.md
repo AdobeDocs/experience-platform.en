@@ -19,7 +19,7 @@ If you would prefer to ingest data using Data Ingestion APIs please begin by rea
 
 The Datasets workspace within [!DNL Experience Platform] allows you to view and manage all of the datasets that your IMS organization has made, as well as create new ones. 
 
-View the Datasets workspace by clicking **[!UICONTROL Datasets]** in the left-hand navigation. The Datasets workspace contains a list of datasets, including columns showing _[!UICONTROL Name]_, _[!UICONTROL Created]_ (date and time), _[!UICONTROL Source]_, _[!UICONTROL Schema]_, and _[!UICONTROL Last Batch Status]_, as well as the date and time the dataset was _[!UICONTROL Last Updated]_. 
+View the Datasets workspace by clicking **[!UICONTROL Datasets]** in the left-hand navigation. The Datasets workspace contains a list of datasets, including columns showing **[!UICONTROL Name]_, _[!UICONTROL Created]_ (date and time), _[!UICONTROL Source]_, _[!UICONTROL Schema]_, and _[!UICONTROL Last Batch Status]_, as well as the date and time the dataset was _[!UICONTROL Last Updated]**. 
 
 >[!NOTE]
 >
@@ -63,9 +63,9 @@ Once the dataset has a name and description, click **[!UICONTROL Finish]**.
 
 An empty dataset has now been created and you have been returned to the **[!UICONTROL Dataset Activity]** tab in the Datasets workspace. You should see the name of the dataset in the top-left corner of the workspace, along with a notification that "No batches have been added." This is to be expected since you have not added any batches to this dataset yet. 
 
-On the right-hand side of the Datasets workspace you will see the **[!UICONTROL Info]** tab containing information related to your new dataset such as _[!UICONTROL Dataset ID]_, _[!UICONTROL Name]_, _[!UICONTROL Description]_, _[!UICONTROL Table Name]_, _[!UICONTROL Schema]_, _[!UICONTROL Streaming]_, and _[!UICONTROL Source]_. The Info tab also includes information about when the dataset was _[!UICONTROL Created]_ and its _[!UICONTROL Last Modified]_ date. 
+On the right-hand side of the Datasets workspace you will see the **[!UICONTROL Info]** tab containing information related to your new dataset such as **[!UICONTROL Dataset ID]_, _[!UICONTROL Name]_, _[!UICONTROL Description]_, _[!UICONTROL Table Name]_, _[!UICONTROL Schema]_, _[!UICONTROL Streaming]_, and _[!UICONTROL Source]_. The Info tab also includes information about when the dataset was _[!UICONTROL Created]_ and its _[!UICONTROL Last Modified]** date. 
 
-Also in the Info tab is a  _[!UICONTROL Profile]_ toggle that is used for enabling your dataset for use with [!DNL Real-time Customer Profile]. Use of this toggle, and [!DNL Real-time Customer Profile], will be explained in more detail in the section that follows.
+Also in the Info tab is a  **[!UICONTROL Profile]** toggle that is used for enabling your dataset for use with [!DNL Real-time Customer Profile]. Use of this toggle, and [!DNL Real-time Customer Profile], will be explained in more detail in the section that follows.
 
 ![Dataset activity](../images/tutorials/ingest-batch-data/dataset_activity.png)
 
@@ -109,19 +109,19 @@ Once you drag and drop (or browse and select) a parquet or JSON file that you wi
 
 ## Dataset metrics
 
-After the file has finished uploading, the **[!UICONTROL Dataset Activity]** tab no longer shows that "No batches have been added." Instead, the *[!UICONTROL Dataset Activity]* tab now shows dataset metrics. All metrics will show "0" at this stage as the batch has not yet loaded.
+After the file has finished uploading, the **[!UICONTROL Dataset Activity]** tab no longer shows that "No batches have been added." Instead, the **[!UICONTROL Dataset Activity]** tab now shows dataset metrics. All metrics will show "0" at this stage as the batch has not yet loaded.
 
-At the bottom of the tab is a list showing the _[!UICONTROL Batch ID]_ of the data that was just ingested through the ["Add data to dataset"](#add-data-to-dataset) process. Also included is information related to the batch, including _[!UICONTROL Ingested]_ date, number of _[!UICONTROL Records Ingested]_, and the current batch _[!UICONTROL Status]_.
+At the bottom of the tab is a list showing the **[!UICONTROL Batch ID]_ of the data that was just ingested through the ["Add data to dataset"](#add-data-to-dataset) process. Also included is information related to the batch, including _[!UICONTROL Ingested]_ date, number of _[!UICONTROL Records Ingested]_, and the current batch _[!UICONTROL Status]**.
 
 ![Dataset metrics](../images/tutorials/ingest-batch-data/batch_loading.png)
 
 ## Batch details
 
-Click on the _[!UICONTROL Batch ID]_ to view a **[!UICONTROL Batch Overview]**, showing additional details regarding the batch. Once the batch has finished loading, the information about the batch will update to show the number of _[!UICONTROL Records Ingested]_ and the _[!UICONTROL File Size]_. The _[!UICONTROL Status]_ will also change to "Success" or "Failed". If the batch fails the _[!UICONTROL Error Code]_ section will contain details regarding any errors during ingestion.
+Click on the **[!UICONTROL Batch ID]_ to view a **[!UICONTROL Batch Overview]**, showing additional details regarding the batch. Once the batch has finished loading, the information about the batch will update to show the number of _[!UICONTROL Records Ingested]_ and the _[!UICONTROL File Size]_. The _[!UICONTROL Status]_ will also change to "Success" or "Failed". If the batch fails the _[!UICONTROL Error Code]** section will contain details regarding any errors during ingestion.
 
 For more information and frequently asked questions regarding batch ingestion, see the [Batch Ingestion troubleshooting guide](../batch-ingestion/troubleshooting.md).
 
-To return to the **[!UICONTROL Dataset Activity]** screen, click the name of the dataset (_[!UICONTROL Loyalty Details]_) in the breadcrumb.
+To return to the **[!UICONTROL Dataset Activity]** screen, click the name of the dataset (**[!UICONTROL Loyalty Details]**) in the breadcrumb.
 
 ![Batch Overview](../images/tutorials/ingest-batch-data/batch_overview.png)
 
