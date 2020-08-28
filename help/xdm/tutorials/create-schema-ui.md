@@ -36,11 +36,13 @@ Select the filter icon next to the search bar to use filtering capabilities for 
 
 ## Create and name a schema {#create}
 
-To begin composing a schema, select **[!UICONTROL Create Schema]** in the top-right corner of the **[!UICONTROL Schemas]** workspace. A dropdown menu appears, giving you the option to choose between the core classes [!UICONTROL XDM Individual Profile] and [!UICONTROL XDM ExperienceEvent], or to browse other available classes. For the purposes of this tutorial, select **[!UICONTROL XDM Individual Profile]**.
+To begin composing a schema, select **[!UICONTROL Create Schema]** in the top-right corner of the **[!UICONTROL Schemas]** workspace. A dropdown menu appears, giving you the option to choose between the core classes [!UICONTROL XDM Individual Profile] and [!UICONTROL XDM ExperienceEvent]. If these classes do not suit your purposes, you can also select **[!UICONTROL Browse]** to choose from other available classes or [create a new class](#create-new-class).
+
+For the purposes of this tutorial, select **[!UICONTROL XDM Individual Profile]**.
 
 ![](../images/tutorials/create-schema/create_schema_button.png)
 
-The [!DNL Schema Editor] appears. This is the canvas upon which you will compose your schema. When you arrive at the editor, an untitled schema is automatically created in the **[!UICONTROL Structure]** section of the canvas, along with the standard fields included in all schemas based on the [!UICONTROL XDM Individual Profile] class. The assigned class for the schema is listed under **[!UICONTROL Class]** in **[!UICONTROL Composition]** section. 
+The [!DNL Schema Editor] appears. This is the canvas upon which you will compose your schema. Since you chose a standard XDM class to base the schema on, an untitled schema is automatically created in the **[!UICONTROL Structure]** section of the canvas when you arrive in the editor, along with the standard fields included in all schemas based on that class. The assigned class for the schema is also listed under **[!UICONTROL Class]** in **[!UICONTROL Composition]** section. 
 
 ![](../images/tutorials/create-schema/schema_editor.png)
 
@@ -68,9 +70,19 @@ To add a mixin, select **[!UICONTROL Add]** in the **[!UICONTROL Mixins]** sub-s
 
 ![](../images/tutorials/create-schema/add_mixin_button.png)
 
-A new dialog appears, displaying a list of available mixins. Each mixin is only intended for use with a specific class, therefore the dialog only lists mixins that are compatible with the class you selected (in this case, the [!DNL XDM Individual Profile] class).
+A new dialog appears, displaying a list of available mixins. Each mixin is only intended for use with a specific class, therefore the dialog only lists mixins that are compatible with the class you selected (in this case, the [!DNL XDM Individual Profile] class). If you are using a standard XDM class, the list of mixins will be intelligently sorted based on usage popularity.
 
-Selecting a mixin from the list causes it to appear in the right-hand rail. In addition, an icon appears on the right-hand side of the selected mixin which allows you to preview the structure of the fields it provides. Select the **[!UICONTROL Profile Person Details]** mixin, then select **[!UICONTROL Add Mixin]**.
+Selecting a mixin from the list causes it to appear in the right-hand rail. You can select multiple mixins if desired, adding each one to the list in the right rail before confirming.
+
+In addition, an icon appears on the right-hand side of the currently selected mixin which allows you to preview the structure of the fields it provides.
+
+![](../images/tutorials/create-schema/preview-mixin-button.png)
+
+When previewing a mixin, a detailed description of the mixin's schema is provided in the right-hand rail. You can also navigate through the mixin's fields in the provided canvas. As you select different fields, the right rail updates to show details about the field in question. Select **[!UICONTROL Back]** when you are finished previewing to return to the mixin selection dialog. 
+
+![](../images/tutorials/create-schema/preview-mixin.png)
+
+For this tutorial, select the **[!UICONTROL Profile Person Details]** mixin, then select **[!UICONTROL Add Mixin]**.
 
 ![](../images/tutorials/create-schema/add_mixin_person_details.png)
 
@@ -132,11 +144,11 @@ Inside that namespaced node is a "[!UICONTROL New Field]". This is the beginning
 
 ![](../images/tutorials/create-schema/new_field_loyalty.png)
 
-Using the controls on the right-hand side of the editor, start by creating a "[!DNL loyalty]" field with type "[!UICONTROL Object]" that will be used to hold your loyalty-related fields. When finished, select **[!UICONTROL Apply]**.
+Using the controls on the right-hand side of the editor, start by creating a `loyalty` field with type "[!UICONTROL Object]" that will be used to hold your loyalty-related fields. When finished, select **[!UICONTROL Apply]**.
 
 ![](../images/tutorials/create-schema/loyalty_object.png)
 
-The changes are applied and the newly created "[!DNL loyalty]" object appears. Select **[!UICONTROL Add Field]** next to the object to add additional loyalty-related fields. A "[!UICONTROL New Field]" appears and the **[!UICONTROL Field Properties]** section is visible on the right-hand side of the canvas.
+The changes are applied and the newly created `loyalty` object appears. Select **[!UICONTROL Add Field]** next to the object to add additional loyalty-related fields. A "[!UICONTROL New Field]" appears and the **[!UICONTROL Field Properties]** section is visible on the right-hand side of the canvas.
 
 ![](../images/tutorials/create-schema/new_field_in_loyalty_object.png)
 
@@ -147,17 +159,17 @@ Each field requires the following information:
 * **[!UICONTROL Type]:** The data type of the field. This includes basic scalar types and any data types defined in the [!DNL Schema Registry]. Examples: [!UICONTROL string], [!UICONTROL integer], [!UICONTROL boolean], [!UICONTROL Person], [!UICONTROL Address], [!UICONTROL Phone Number], etc.
 * **[!UICONTROL Description]:** An optional description of the field should be included, written in sentence case, with a maximum of 200 characters.
 
-The first field for the [!DNL Loyalty] object will be a string called "[!DNL loyaltyId]". When setting the new field's type to "[!UICONTROL String]", the **[!UICONTROL Field Properties]** section becomes populated with several options for applying constraints, including **[!UICONTROL Default Value]**, **[!UICONTROL Format]**, and **[!UICONTROL Maximum Length]**.
+The first field for the [!DNL Loyalty] object will be a string called `loyaltyId`. When setting the new field's type to "[!UICONTROL String]", the **[!UICONTROL Field Properties]** section becomes populated with several options for applying constraints, including **[!UICONTROL Default Value]**, **[!UICONTROL Format]**, and **[!UICONTROL Maximum Length]**.
 
 ![](../images/tutorials/create-schema/string_constraints.png)
 
-Different constraint options are available depending on the data type selected. Since "[!DNL loyaltyId]" will be an email address, select "[!UICONTROL email]" from the **[!UICONTROL Format]** dropdown menu. Select **[!UICONTROL Apply]** to apply your changes.
+Different constraint options are available depending on the data type selected. Since `loyaltyId` will be an email address, select "[!UICONTROL email]" from the **[!UICONTROL Format]** dropdown menu. Select **[!UICONTROL Apply]** to apply your changes.
 
 ![](../images/tutorials/create-schema/loyaltyId_field.png)
 
 ## Add more fields to the mixin {#mixin-fields-2}
 
-Now that you have added the "[!DNL loyaltyId]" field, you can add additional fields to capture loyalty-related information such as:
+Now that you have added the `loyaltyId` field, you can add additional fields to capture loyalty-related information such as:
 
 * Points (integer)
 * Member-since (date)
@@ -180,7 +192,7 @@ When defining fields in the [!DNL Schema Editor], there are some additional opti
 | [!UICONTROL Identity] | Indicates that this field is an identity field. More information regarding identity fields is provided [later in this tutorial](#identity-field). |
 | [!UICONTROL Relationship] | While schema relationships can be inferred through the use of the union schema and [!DNL Real-time Customer Profile], this only applies to schemas that share the same class. The [!UICONTROL Relationship] constraint indicates that this field references the primary identity of a schema based on a different class, implying a relationship between the two schemas. See the tutorial on [defining a relationship](./relationship-ui.md) for more information. |
 
-For this tutorial, the [!DNL "loyalty"] object in the schema requires a new enum field that describes the "loyalty level" of a customer, where the value can only be one of four possible options. To add this field to the schema, select **[!UICONTROL Add Field]** beside the "[!DNL loyalty]" object and fill in the required fields for **[!UICONTROL Field name]** and **[!UICONTROL Display name]**. For **[!UICONTROL Type]**, select "[!UICONTROL String]".
+For this tutorial, the [!DNL "loyalty"] object in the schema requires a new enum field that describes the "loyalty level" of a customer, where the value can only be one of four possible options. To add this field to the schema, select **[!UICONTROL Add Field]** beside the `loyalty` object and fill in the required fields for **[!UICONTROL Field name]** and **[!UICONTROL Display name]**. For **[!UICONTROL Type]**, select "[!UICONTROL String]".
 
 ![](../images/tutorials/create-schema/loyalty-level-type.png)
 
@@ -188,21 +200,21 @@ Additional checkboxes appear for the field after its type has been selected, inc
 
 Select the **[!UICONTROL Enum]** checkbox to open the **[!UICONTROL Enum values]** section below. Here you can input the **[!UICONTROL Value]** (in camelCase) and **[!UICONTROL Label]** (an optional, reader-friendly name in Title Case) for each acceptable loyalty level.
 
-When you have completed all field properties, select **[!UICONTROL Apply]** to add the "[!DNL loyaltyLevel]" field to the "[!DNL loyalty]" object.
+When you have completed all field properties, select **[!UICONTROL Apply]** to add the "[!DNL loyaltyLevel]" field to the `loyalty` object.
 
 ![](../images/tutorials/create-schema/loyalty_level_enum.png)
 
 ## Convert a multi-field object into a data type {#datatype}
 
-The "[!DNL loyalty]" object now contains several loyalty-specific fields, and represents a common data structure that could be useful in other schemas. The [!DNL Schema Editor] allows you to readily apply reusable multi-field objects by converting the structure of those objects into data types. 
+The `loyalty` object now contains several loyalty-specific fields, and represents a common data structure that could be useful in other schemas. The [!DNL Schema Editor] allows you to readily apply reusable multi-field objects by converting the structure of those objects into data types. 
 
 Data types allow for the consistent use of multi-field structures and provide more flexibility than a mixin because they can be used anywhere within a schema. This is done by setting the field's **[!UICONTROL Type]** value to that of any data type defined in the [!DNL Schema Registry].
 
-To convert the "[!DNL loyalty]" object to a data type, select the "[!DNL loyalty]" field under **[!UICONTROL Structure]**, then select **[!UICONTROL Convert to new data type]** on the right-hand side of the editor under **[!UICONTROL Field Properties]**. A green popover appears, confirming that the object has been successfully converted. 
+To convert the `loyalty` object to a data type, select the `loyalty` field under **[!UICONTROL Structure]**, then select **[!UICONTROL Convert to new data type]** on the right-hand side of the editor under **[!UICONTROL Field Properties]**. A green popover appears, confirming that the object has been successfully converted. 
 
 ![](../images/tutorials/create-schema/convert-data-type.png)
 
-Now, when you look under **[!UICONTROL Structure]**, you can see that the "[!DNL loyalty]" field has a data type of "[!DNL Loyalty]" and the fields have small lock icons beside them, indicating they are no longer individual fields but rather part of a multi-field data type.
+Now, when you look under **[!UICONTROL Structure]**, you can see that the `loyalty` field has a data type of "[!DNL Loyalty]" and the fields have small lock icons beside them, indicating they are no longer individual fields but rather part of a multi-field data type.
 
 ![](../images/tutorials/create-schema/loyalty_data_type.png)
 
@@ -214,7 +226,7 @@ The standard data structure that schemas provide can be leveraged to identify da
 
 [!DNL Experience Platform] makes it easy to denote an identity field through the use of an **[!UICONTROL Identity]** checkbox in the [!DNL Schema Editor]. However, you must determine which field is the best candidate to use as an identity, based on the nature of your data.
 
-For example, there may be thousands of loyalty program members belonging to the same "loyalty level", but each member of the loyalty program has a unique "[!DNL loyaltyId]" (which in this instance is the individual member's email address). The fact that "[!DNL loyaltyId]" is a unique identifier for each member makes it a good candidate for an identity field, whereas "loyalty level" is not.
+For example, there may be thousands of loyalty program members belonging to the same "loyalty level", but each member of the loyalty program has a unique `loyaltyId` (which in this instance is the individual member's email address). The fact that `loyaltyId` is a unique identifier for each member makes it a good candidate for an identity field, whereas "loyalty level" is not.
 
 >[!IMPORTANT]
 >
@@ -222,9 +234,13 @@ For example, there may be thousands of loyalty program members belonging to the 
 >
 >If you plan on using `identityMap`, keep in mind that it will override any primary identity you add to the schema directly. See the section on `identityMap` in the [basics of schema composition guide](../schema/composition.md#identityMap) for more information. 
 
-In the **[!UICONTROL Structure]** section of the editor, select the "[!DNL loyaltyId]" field and the **[!UICONTROL Identity]** checkbox appears under **[!UICONTROL Field Properties]**. Check the box and the option to set this as the **[!UICONTROL Primary Identity]** appears. Select this box as well. 
+In the **[!UICONTROL Structure]** section of the editor, select the `loyaltyId` field and the **[!UICONTROL Identity]** checkbox appears under **[!UICONTROL Field Properties]**. Check the box and the option to set this as the **[!UICONTROL Primary Identity]** appears. Select this box as well. 
 
-Next, you must provide an **[!UICONTROL Identity Namespace]** from the list of pre-defined namespaces in the dropdown. Since "[!DNL loyaltyId]" is the customer's email address, select "[!UICONTROL Email]" from the dropdown. Select **[!UICONTROL Apply]** to confirm the updates to the "[!DNL loyaltyId]" field.
+>[!NOTE]
+>
+>Each schema may contain only one primary identity field. Once a schema field has been set as the primary identity, you will receive an error message if you later attempt to set another identity field in the schema as the primary.
+
+Next, you must provide an **[!UICONTROL Identity Namespace]** from the list of pre-defined namespaces in the dropdown. Since `loyaltyId` is the customer's email address, select "[!UICONTROL Email]" from the dropdown. Select **[!UICONTROL Apply]** to confirm the updates to the `loyaltyId` field.
 
 ![](../images/tutorials/create-schema/loyaltyId_primary_identity.png)
 
@@ -232,13 +248,11 @@ Next, you must provide an **[!UICONTROL Identity Namespace]** from the list of p
 >
 >For a list of standard namespaces and their definitions, see the [Identity Service documentation](../../identity-service/troubleshooting-guide.md#standard-namespaces).
 
-Now all data ingested into the "[!DNL loyaltyId]" field will be used to help identify that individual and stitch together a single view of that customer.
+After applying the change, the icon for `loyaltyId` shows a fingerprint symbol, indicating that it is now an identity field. In addition, the [!DNL Loyalty Details] mixin in the left rail lists the identity field beneath it, allowing you to easily determine which mixin in a schema supplies that schema's identity field(s).
 
->[!NOTE]
->
->Once a schema field has been set as the primary identity, you will receive an error message if you later attempt to set another field in the schema as the primary. Each schema may contain only one primary identity field.
+![](../images/tutorials/create-schema/identity-applied.png)
 
-To learn more about working with identities in [!DNL Experience Platform], please review the [[!DNL Identity Service]](../../identity-service/home.md) documentation.
+Now all data ingested into the `loyaltyId` field will be used to help identify that individual and stitch together a single view of that customer. To learn more about working with identities in [!DNL Experience Platform], please review the [[!DNL Identity Service]](../../identity-service/home.md) documentation.
 
 ## Enable the schema for use in [!DNL Real-time Customer Profile] {#profile}
 
