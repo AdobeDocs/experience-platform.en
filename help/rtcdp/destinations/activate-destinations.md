@@ -45,9 +45,9 @@ In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Sele
 
 ### **[!UICONTROL Identity mapping]** step {#identity-mapping}
 
-![Identity mapping step](/help/rtcdp/destinations/assets/identity-mapping-icon.png)
+Applies to: social destinations and Google Customer Match advertising destination
 
-Applies to: social destinations and Google Customer Match advertising destination 
+![Identity mapping step](/help/rtcdp/destinations/assets/identity-mapping-icon.png)
 
 For *social destinations*, in the **[!UICONTROL Identity mapping]** step, you can select source attributes to map as target identities in the destination. This step is either optional or mandatory, depending on which primary identity you are using in the schema. <br>&nbsp; 
 
