@@ -64,4 +64,4 @@ To connect an existing account, select the [!DNL Event Hubs] account you want to
 
 ## Next steps
 
-By following this tutorial, you have connected your [!DNL Event Hubs] account to [!DNL Platform]. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into [!DNL Platform]](../../dataflow/streaming/cloud-storage.md).
+By following this tutorial, you have connected your [!DNL Event Hubs] account to [!DNL Platform]. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into [!DNL Platform]](../../dataflow/streaming/cloud-storage-streaming.md).

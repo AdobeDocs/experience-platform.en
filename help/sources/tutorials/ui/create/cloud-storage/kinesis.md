@@ -64,4 +64,4 @@ To connect an existing account, select the [!DNL Kinesis] account you want to co
 
 ## Next steps
 
-By following this tutorial, you have connected to your [!DNL Kinesis] account to [!DNL Platform]. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into [!DNL Platform]](../../dataflow/streaming/cloud-storage.md).
+By following this tutorial, you have connected to your [!DNL Kinesis] account to [!DNL Platform]. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into [!DNL Platform]](../../dataflow/streaming/cloud-storage-streaming.md).
