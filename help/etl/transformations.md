@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;etl;ETL;etl transformations;ETL transformations
 solution: Experience Platform
 title: Sample ETL transformations
 topic: overview
+description: This article demonstrates the following example transformations that an extract, transform, load (ETL) developer can encounter.
 ---
 
 # Sample ETL Transformations 

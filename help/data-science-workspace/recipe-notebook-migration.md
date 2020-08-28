@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;Data Science Workspace;popular topics
+keywords: Experience Platform;Data Science Workspace;popular topics;Recipe migration guides;Notebook migration guide
 solution: Experience Platform
 title: Recipe and notebook migration guides
 topic: Tutorial
+description: The following guides outline the steps and information required for migrating existing recipes and notebooks in Data Science Workspace.
 ---
 
 # Recipe and notebook migration guides
@@ -801,9 +802,7 @@ The Scala ([!DNL Spark] 2.4) notebook uses the Scala kernel which requires more 
 >[!TIP]
 >
 >In Scala, you can use `sys.env()` to declare and return a value from within `option`. This eliminates the need to define variables if you know they are only going to be used a single time. The following example takes `val userToken` in the above example and declares it in-line within `option`:
-> ```scala
-> .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
-> ```
+> `.option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))`
 
 ## Write to a dataset
 

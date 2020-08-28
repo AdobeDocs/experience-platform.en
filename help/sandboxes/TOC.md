@@ -2,6 +2,7 @@
 product: experience-platform
 audience: user
 user-guide-title: Sandboxes in Adobe Experience Platform Help
+user-guide-description: Adobe Experience Platform provides sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications. Using sandboxes, you can run multiple digital experience applications in parallel and cater to the development, testing, and deployment of these applications while ensuring operational compliance.
 ---
 
 # Sandboxes {#sandbox}

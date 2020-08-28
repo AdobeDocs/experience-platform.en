@@ -8,6 +8,7 @@ topic: overview
 # Create a [!DNL Salesforce Service Cloud] source connector in the UI
 
 >[!NOTE]
+>
 >The [!DNL Salesforce Service Cloud] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL Salesforce Service Cloud] (hereinafter referred to as "SSC") source connector using the [!DNL Platform] user interface.
