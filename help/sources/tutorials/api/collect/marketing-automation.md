@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;marketing automation system;Collect marketing automation data
 solution: Experience Platform
 title: Collect marketing automation data through source connectors and APIs
 topic: overview
+description: This tutorial covers the steps for retrieving data from a marketing automation system and bringing them in to Platform through source connectors and APIs.
 ---
 
 # Collect marketing automation data through source connectors and APIs

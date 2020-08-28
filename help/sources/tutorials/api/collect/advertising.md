@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;advertising
 solution: Experience Platform
 title: Collect advertising data through source connectors and APIs
 topic: overview
+description: This tutorial covers the steps for retrieving data from a third-party advertising application and bringing them in to Platform through source connectors and APIs.
 ---
 
 # Collect advertising data through source connectors and APIs
