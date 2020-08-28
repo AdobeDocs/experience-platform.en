@@ -9,7 +9,7 @@ topic: overview
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
-This tutorial covers the steps for retrieving data from a customer success system and ingesting it into [!DNL Platform] through source connectors and APIs.
+This tutorial covers the steps for retrieving data from a third-party customer success system and ingesting it into [!DNL Platform] through source connectors and the [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
 
 ## Getting started
 
