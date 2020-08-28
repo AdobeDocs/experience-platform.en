@@ -15,6 +15,10 @@ Streaming segmentation on [!DNL Adobe Experience Platform] allows customers to d
 
 ![](../images/api/streaming-segment-evaluation.png)
 
+>[!NOTE]
+>
+>Streaming segmentation can only be used to evaluate data that is streamed into Platform. In other words, data ingested through batch ingestion will not be evaluated through streaming segmentation, and will require batch evaluation to be triggered.
+
 ## Getting started
 
 This developer guide requires a working understanding of the various [!DNL Adobe Experience Platform] services involved with streaming segmentation. Before beginning this tutorial, please review the documentation for the following services:

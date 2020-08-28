@@ -14,6 +14,10 @@ description: Streaming segmentation on Adobe Experience Platform allows you to d
 
 Streaming segmentation on [!DNL Adobe Experience Platform] allows customers to do segmentation in near real-time while focusing on data richness. With streaming segmentation, segment qualification now happens as streaming data lands into [!DNL Platform], alleviating the need to schedule and run segmentation jobs. With this capability, most segment rules can now be evaluated as the data is passed into [!DNL Platform], meaning segment membership will be kept up-to-date without running scheduled segmentation jobs.
 
+>[!NOTE]
+>
+>Streaming segmentation can only be used to evaluate data that is streamed into Platform. In other words, data ingested through batch ingestion will not be evaluated through streaming segmentation, and will require batch evaluation to be triggered.
+
 ## Streaming segmentation query types
 
 >[!NOTE]
