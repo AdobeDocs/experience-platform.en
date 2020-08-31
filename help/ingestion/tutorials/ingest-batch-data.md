@@ -97,7 +97,7 @@ To begin adding data to the dataset, click on the **[!UICONTROL Add Data]** tab.
 
 >[!NOTE]
 >
->[!DNL Platform] supports two files types for data ingestion, parquet or JSON. You may add up to five files at a time, with the maximum file size of each file being 10 GB.
+>Platform supports two files types for data ingestion, parquet or JSON. You may add up to five files at a time, with the maximum file size of each file being 10 GB.
 
 ![Add Data tab](../images/tutorials/ingest-batch-data/add_data.png)
 
@@ -141,6 +141,6 @@ To learn more about batch ingestion, please read the [Batch Ingestion overview](
 
 >[!WARNING]
 >
-> The [!DNL Platform] UI shown in the following video is out-of-date. Please refer to the documentation above for the latest UI screenshots and functionality.
+>The [!DNL Platform] UI shown in the following video is out-of-date. Please refer to the documentation above for the latest UI screenshots and functionality.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)

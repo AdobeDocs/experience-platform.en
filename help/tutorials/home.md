@@ -8,6 +8,7 @@ topic: overview
 # Adobe Experience Platform tutorials overview
 
 >[!NOTE]
+>
 >Adobe Experience Platform tutorials have recently moved. To find a tutorial, select the correct [!DNL Platform] area from the left-navigation. Please take a moment to update any existing bookmarks.
 
 Adobe Experience Platform is the first purpose-built customer experience management platform. With real-time customer profiles, continuous intelligence, and an open and extensible architecture, it makes delivering personalized experiences at scale a reality. Get started with [!DNL Platform] quickly and easily by following along with step-by-step tutorials for everything from preparing your data for ingestion to advanced machine learning algorithms. 

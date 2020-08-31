@@ -8,6 +8,7 @@ topic: overview
 # Adobe Experience Platform documentation overview
 
 >[!NOTE]
+>
 >Adobe Experience Platform documentation has recently moved. Please take a moment to review the new navigation and to update any existing bookmarks.
 
 ## Types of documentation

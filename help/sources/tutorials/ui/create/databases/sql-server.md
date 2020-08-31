@@ -8,6 +8,7 @@ topic: overview
 # Create a [!DNL Microsoft SQL Server] source connector in the UI
 
 >[!NOTE]
+>
 > The [!DNL Microsoft SQL Server] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL Microsoft SQL Server] (hereinafter referred to as "[!DNL SQL Server]") source connector using the [!DNL Platform] user interface.

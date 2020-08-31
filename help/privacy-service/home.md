@@ -70,7 +70,7 @@ Once you have determined your business' privacy needs, and decided which identit
 
 #### Using the API
 
-The [!DNL Privacy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) provides several endpoints for creating and managing privacy jobs using RESTful API calls, allowing you to programmatically approach privacy regulation compliance for your [!DNL Experience Cloud] applications. For detailed steps on how to use the API, see the [Privacy Service API developer guide](api/getting-started.md).
+The [[!DNL Privacy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) provides several endpoints for creating and managing privacy jobs using RESTful API calls, allowing you to programmatically approach privacy regulation compliance for your [!DNL Experience Cloud] applications. For detailed steps on how to use the API, see the [Privacy Service API developer guide](api/getting-started.md).
 
 #### Using the UI
 

@@ -13,10 +13,10 @@ This tutorial covers the steps for enforcing data usage compliance for [!DNL Rea
 
 This tutorial requires a working understanding of the following components of [!DNL Adobe Experience Platform]:
 
-- [!DNL Real-time Customer Profile](../../profile/home.md): [!DNL Real-time Customer Profile] is a generic lookup entity store, and is used to manage [!DNL Experience Data Model] (XDM) data within [!DNL Platform]. Profile merges data across various enterprise data assets and provides access to that data in a unified presentation.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): [!DNL Real-time Customer Profile] is a generic lookup entity store, and is used to manage [!DNL Experience Data Model] (XDM) data within [!DNL Platform]. Profile merges data across various enterprise data assets and provides access to that data in a unified presentation.
     - [Merge policies](../../profile/api/merge-policies.md): Rules used by [!DNL Real-time Customer Profile] to determine what data can be merged into a unified view under certain conditions. Merge policies can be configured for [!DNL Data Governance] purposes.
-- [!DNL Segmentation](../home.md): How [!DNL Real-time Customer Profile] divides a large group of individuals contained in the profile store into smaller groups that share similar traits and will respond similarly to marketing strategies.
-- [!DNL Data Governance](../../data-governance/home.md): [!DNL Data Governance] provides the infrastructure for data usage labeling and enforcement (DULE), using the following components:
+- [[!DNL Segmentation]](../home.md): How [!DNL Real-time Customer Profile] divides a large group of individuals contained in the profile store into smaller groups that share similar traits and will respond similarly to marketing strategies.
+- [[!DNL Data Governance]](../../data-governance/home.md): [!DNL Data Governance] provides the infrastructure for data usage labeling and enforcement (DULE), using the following components:
     - [Data usage labels](../../data-governance/labels/user-guide.md): Labels used to describe datasets and fields in terms of the level of sensitivity with which to handle their respective data.
     - [Data usage policies](../../data-governance/policies/overview.md): Configurations indicating which marketing actions are allowed on data categorized by particular data usage labels.
     - [Policy enforcement](../../data-governance/enforcement/overview.md): Allows you to enforce data usage policies and prevent data operations that constitute policy violations.
@@ -376,4 +376,4 @@ See the section on [exporting a segment](./evaluate-a-segment.md#export) in the 
 
 ## Next steps
 
-By following this tutorial, you have looked up the data usage labels associated with an audience segment and tested them for policy violations against specific marketing actions. For more information on [!DNL Data Governance] in [!DNL Experience Platform], please read the overview for [!DNL Data Governance](../../data-governance/home.md).
+By following this tutorial, you have looked up the data usage labels associated with an audience segment and tested them for policy violations against specific marketing actions. For more information on [!DNL Data Governance] in [!DNL Experience Platform], please read the overview for [[!DNL Data Governance]](../../data-governance/home.md).

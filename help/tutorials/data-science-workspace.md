@@ -54,7 +54,6 @@ To learn more, follow the [package source files into a recipe tutorial](../data-
 
 >[!NOTE]
 >
->
 >This tutorial requires you to have a [!DNL Docker] source file URL. Visit the [package source files into a recipe tutorial](../data-science-workspace/models-recipes/package-source-files-recipe.md) if you do not have a [!DNL Docker] source file URL.
 
 The import recipe tutorials provide insights on how to configure and import a packaged recipe. By the end of this tutorial, you can create, train, and evaluate a Model in Adobe Experience Platform [!DNL Data Science Workspace].
@@ -120,6 +119,7 @@ To get started, follow the [schedule a model UI tutorial](../data-science-worksp
 ## Create a feature pipeline
 
 >[!NOTE]
+>
 >Currently, feature pipelines are only available via API.
 
 Adobe Experience Platform allows you to build and create custom feature pipelines to perform feature engineering at scale through the [!DNL Sensei Machine Learning Framework Runtime].
