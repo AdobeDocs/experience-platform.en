@@ -68,7 +68,7 @@ To reset a sandbox in the UI, click **[!UICONTROL Sandboxes]** in the left-nav, 
 
 A dialog appears prompting you to confirm your choice. Click **[!UICONTROL Reset]** to continue.
 
-<img src='../images/ui/reset-are-you-sure.png' width=350><br>
+<img src="../images/ui/reset-are-you-sure.png" width=350><br>
 
 A confirmation message appears and the sandbox's state changes to "[!UICONTROL Resetting]". Once it has been provisioned by the system, its state will update to "[!UICONTROL Active]" or "[!UICONTROL Failed]".
 
@@ -88,7 +88,7 @@ Deleting a non-production sandbox permanently removes all resources associated w
 
 A dialog appears prompting you to confirm your choice. Click **[!UICONTROL Delete]** to continue.
 
-<img src='../images/ui/delete-are-you-sure.png' width=350><br>
+<img src="../images/ui/delete-are-you-sure.png" width=350><br>
 
 A confirmation message appears and the sandbox is removed from the _[!UICONTROL Sandboxes]_ workspace. 
 

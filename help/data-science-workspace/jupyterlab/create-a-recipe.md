@@ -467,6 +467,7 @@ Once the process is complete, the recipe will look something like this:
 ![](../images/jupyterlab/create-recipe/recipe_details.png)
 
 >[!CAUTION]
+>
 > - Do not delete any of the file cells
 > - Do not edit the `%%writefile` line at the top of the file cells
 > - Do not create recipes in different notebooks at the same time
