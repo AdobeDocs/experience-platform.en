@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;DB2;db2;IBM DB2;ibm db2
 solution: Experience Platform
 title: Create an IBM DB2 source connector in the UI
 topic: overview
+description: This tutorial provides steps for creating an IBM DB2 (hereinafter referred to as "DB2") source connector using the Platform user interface.
 ---
 
 

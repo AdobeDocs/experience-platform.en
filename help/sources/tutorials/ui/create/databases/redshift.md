@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Amazon Redshift;amazon redshift;Redshift;redshift
 solution: Experience Platform
 title: Create an Amazon Redshift source connector in the UI
 topic: overview
+description: This tutorial provides steps for creating a Amazon Redshift (hereinafter referred to as "Redshift") source connector using the Platform user interface.
 ---
 
 # Create an [!DNL Amazon Redshift] source connector in the UI
