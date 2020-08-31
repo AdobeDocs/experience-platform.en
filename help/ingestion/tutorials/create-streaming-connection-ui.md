@@ -23,11 +23,11 @@ After logging in to the [!DNL Experience Platform] UI, click **[!UICONTROL Sourc
 
 ![](../images/streaming-ingestion/ui/click-sources.png)
 
-On the **[!UICONTROL Sources]* page, click **[!UICONTROL HTTP API]**, then **[!UICONTROL Connect source]***. 
+On the **[!UICONTROL Sources]** page, click **[!UICONTROL HTTP API]**, then **[!UICONTROL Connect source]**. 
 
 ![](../images/streaming-ingestion/ui/click-connect-source.png)
 
-The **[!UICONTROL Connect to HTTP]* screen appears. Under *[!UICONTROL Service details]*, provide both the **[!UICONTROL name]** and a **[!UICONTROL description]*** for your new streaming connection.
+The **[!UICONTROL Connect to HTTP]** screen appears. Under **[!UICONTROL Service details]**, provide both the **[!UICONTROL name]** and a **[!UICONTROL description]** for your new streaming connection.
 
 Under **[!UICONTROL Account Authentication]**, select the following configuration properties for your streaming connection:
 

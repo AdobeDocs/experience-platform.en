@@ -8,7 +8,7 @@ description: This document covers the necessary steps needed to create a new pro
 
 # Create a new product profile
 
-To start creating a new profile, navigate to the **[!UICONTROL Product Profiles]* tab and click **[!UICONTROL New Profile]***.
+To start creating a new profile, navigate to the **[!UICONTROL Product Profiles]** tab and click **[!UICONTROL New Profile]**.
 
 ![new-profile-button](../images/new-profile-button.png)
 

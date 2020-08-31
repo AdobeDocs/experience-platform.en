@@ -44,7 +44,7 @@ Configuring scheduled training runs on a Service ensures that the machine learni
 
 Once a Service is created, you can follow the steps below to configure and apply a training schedule:
 
-1.  In Adobe Experience Platform, click the **[!UICONTROL Services]** tab located in the left navigation column to access the **[!UICONTROL Service Gallery]*. Find the Service you wish to schedule training runs on and click **[!UICONTROL Open]*** to view its *Overview* page.
+1.  In Adobe Experience Platform, click the **[!UICONTROL Services]** tab located in the left navigation column to access the **[!UICONTROL Service Gallery]**. Find the Service you wish to schedule training runs on and click **[!UICONTROL Open]** to view its *Overview* page.
 ![](../images/models-recipes/schedule/click_to_open.png)
 
 2.  The Overview page displays the Service's training information. Click the **[!UICONTROL Update Schedule]** link to configure a training schedule.

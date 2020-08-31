@@ -28,7 +28,7 @@ From the **[!UICONTROL Workflows]** screen, select **[!UICONTROL Map CSV to XDM 
 
 ![](../images/tutorials/map-a-csv-file/workflows.png)
 
-The **[!UICONTROL Map CSV to XDM schema]* workflow appears, starting on the *[!UICONTROL Destination]** step. Choose a dataset for inbound data to be ingested into. You can either use an existing dataset or create a new one.
+The **[!UICONTROL Map CSV to XDM schema]** workflow appears, starting on the **[!UICONTROL Destination]** step. Choose a dataset for inbound data to be ingested into. You can either use an existing dataset or create a new one.
 
 **Use an existing dataset**
 
@@ -42,27 +42,27 @@ To ingest your CSV data into a new dataset, select **[!UICONTROL Create new data
 
 ## Add data
 
-The **[!UICONTROL Add data]* step appears. Drag-and-drop your CSV file into the space provided, or select **[!UICONTROL Choose files]*** to manually input your CSV file.
+The **[!UICONTROL Add data]** step appears. Drag-and-drop your CSV file into the space provided, or select **[!UICONTROL Choose files]** to manually input your CSV file.
 
 ![](../images/tutorials/map-a-csv-file/add-data.png)
 
-The **[!UICONTROL Sample data]* section appears once the file is uploaded, showing the first ten rows of data. Once you have confirmed that the data has uploaded as expected, select **[!UICONTROL Next]***.
+The **[!UICONTROL Sample data]** section appears once the file is uploaded, showing the first ten rows of data. Once you have confirmed that the data has uploaded as expected, select **[!UICONTROL Next]**.
 
 ![](../images/tutorials/map-a-csv-file/sample-data.png)
 
 ## Map CSV fields to XDM schema fields
 
-The **[!UICONTROL Mapping]* step appears. The columns of the CSV file are listed under *[!UICONTROL Source Field]*, with their corresponding XDM schema fields listed under *[!UICONTROL Target Field]**. Unselected target fields are outlined in red. You can use the filter fields option to narrow down the list of source fields available.
+The **[!UICONTROL Mapping]** step appears. The columns of the CSV file are listed under **[!UICONTROL Source Field]**, with their corresponding XDM schema fields listed under **[!UICONTROL Target Field]**. Unselected target fields are outlined in red. You can use the filter fields option to narrow down the list of source fields available.
 
 To map a CSV column to an XDM field, select the schema icon next to the column's corresponding target field.
 
 ![](../images/tutorials/map-a-csv-file/mapping.png)
 
-The **[!UICONTROL Select schema field]* window appears. Here you can navigate the structure of the XDM schema and locate the field you wish to map the CSV column to. Click an XDM field to select it, then click **[!UICONTROL Select]***.
+The **[!UICONTROL Select schema field]** window appears. Here you can navigate the structure of the XDM schema and locate the field you wish to map the CSV column to. Click an XDM field to select it, then click **[!UICONTROL Select]**.
 
 ![](../images/tutorials/map-a-csv-file/select-schema-field.png)
 
-The **[!UICONTROL Mapping]* screen reappears, with the selected XDM field now appearing under *[!UICONTROL Target Field]**.
+The **[!UICONTROL Mapping]** screen reappears, with the selected XDM field now appearing under **[!UICONTROL Target Field]**.
 
 ![](../images/tutorials/map-a-csv-file/field-mapped.png)
 

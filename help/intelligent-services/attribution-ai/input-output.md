@@ -131,7 +131,7 @@ You can view the path to your raw scores in the UI. Start by selecting **[!UICON
 
 ![Pick your schema](./images/input-output/schemas_browse.png)
 
-Next, select a field within the **[!UICONTROL Structure]* window of the UI, the *[!UICONTROL Field properties]* tab opens. Within *[!UICONTROL Field properties]* is the *[!UICONTROL Path]** field that maps to your raw scores.
+Next, select a field within the **[!UICONTROL Structure]** window of the UI, the **[!UICONTROL Field properties]** tab opens. Within **[!UICONTROL Field properties]** is the **[!UICONTROL Path]** field that maps to your raw scores.
 
 ![Pick a Schema](./images/input-output/field_properties.png)
 

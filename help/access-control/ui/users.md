@@ -8,7 +8,7 @@ description: This document shows you how to manage users for a product profile i
 
 # Manage users for a product profile
 
-To assign or remove users from a product profile, open the profile's details page and navigate to the **[!UICONTROL Users]* tab. From here, click **[!UICONTROL Add User]***.
+To assign or remove users from a product profile, open the profile's details page and navigate to the **[!UICONTROL Users]** tab. From here, click **[!UICONTROL Add User]***.
 
 ![add-users-button](../images/add-users-button.png)
 

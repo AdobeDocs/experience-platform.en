@@ -13,7 +13,7 @@ After installing [!DNL Aqua Data Studio], you must first register the server. Fr
 
 ![](../images/clients/aqua-data-studio/register-server.png)
 
-The **[!UICONTROL Register Server]* dialog appears. Under the *[!UICONTROL General]* tab, select **[!UICONTROL PostgreSQL]*** from the list on the left-hand side. In the dialog that appears, provide the following details for the server settings.
+The **[!UICONTROL Register Server]** dialog appears. Under the **[!UICONTROL General]** tab, select **[!UICONTROL PostgreSQL]** from the list on the left-hand side. In the dialog that appears, provide the following details for the server settings.
 
 - **[!UICONTROL Name]**: The name of your connection.
 - **[!UICONTROL Login Name and Password]**: The login credentials that will be used. The username takes the form of `ORG_ID@AdobeOrg`.

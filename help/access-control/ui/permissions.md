@@ -8,7 +8,7 @@ description: Access control in Adobe Experience Platform allows you to manage ro
 
 # Manage permissions for a product profile
 
-Immediately after [creating a new product profile](#create-a-new-product-profile), you are prompted to configure the profile's permissions. If you are editing permissions for an existing profile, select the profile from the **[!UICONTROL Product Profiles]* tab to open the profile's details page, then click **[!UICONTROL Permissions]***.
+Immediately after [creating a new product profile](#create-a-new-product-profile), you are prompted to configure the profile's permissions. If you are editing permissions for an existing profile, select the profile from the **[!UICONTROL Product Profiles]** tab to open the profile's details page, then click **[!UICONTROL Permissions]**.
 
 ![profile-permissions](../images/profile-permissions.png)
 
@@ -18,7 +18,7 @@ Click any category on the list to open the *Edit Permissions* page.
 
 ![edit-permissions](../images/edit-permissions.png)
 
-The **[!UICONTROL Edit Permissions]* page provides a workspace to add and remove permissions from the selected product profile. The left side of the screen displays a list of permission categories. Clicking a category changes the permissions that are displayed under *[!UICONTROL Available Permissions Items]**.
+The **[!UICONTROL Edit Permissions]** page provides a workspace to add and remove permissions from the selected product profile. The left side of the screen displays a list of permission categories. Clicking a category changes the permissions that are displayed under **[!UICONTROL Available Permissions Items]**.
 
 ![change-permissions-category](../images/change-permissions-category.png)
 

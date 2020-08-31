@@ -77,7 +77,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 |Category | Permission | Description|
 |--- | --- | ---|
 |Data Ingestion | Manage Sources | Access to read, create, edit, and disable sources.|
-|Data Ingestion | View Sources | Read-only access to available sources in the **[!UICONTROL Catalog]* tab and authenticated sources in the *[!UICONTROL Browse]** tab.|
+|Data Ingestion | View Sources | Read-only access to available sources in the **[!UICONTROL Catalog]** tab and authenticated sources in the **[!UICONTROL Browse]** tab.|
 
 **Known issues**
 

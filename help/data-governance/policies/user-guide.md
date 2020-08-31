@@ -23,7 +23,7 @@ This guide requires a working understanding of the following [!DNL Experience Pl
 
 ## View data usage policies {#view-policies}
 
-In the [!DNL Experience Platform] UI, click **[!UICONTROL Policies]** to open the **[!UICONTROL Policies]* workspace. In the **[!UICONTROL Browse]*** tab, you can see a list of available policies, including their associated labels, marketing actions, and status.
+In the [!DNL Experience Platform] UI, click **[!UICONTROL Policies]** to open the **[!UICONTROL Policies]** workspace. In the **[!UICONTROL Browse]** tab, you can see a list of available policies, including their associated labels, marketing actions, and status.
 
 ![](../images/policies/browse-policies.png)
 
@@ -45,7 +45,7 @@ Next, select the data usage labels that the policy will be based on. When select
 
 ![](../images/policies/add-labels.png)
 
-The **[!UICONTROL Select marketing actions]* step appears. Choose the appropriate marketing actions from the provided list, then click **[!UICONTROL Next]*** to continue.
+The **[!UICONTROL Select marketing actions]** step appears. Choose the appropriate marketing actions from the provided list, then click **[!UICONTROL Next]** to continue.
 
 >[!NOTE]
 >
@@ -53,7 +53,7 @@ The **[!UICONTROL Select marketing actions]* step appears. Choose the appropriat
 
 ![](../images/policies/add-marketing-actions.png)
 
-The **[!UICONTROL Review]* step appears, allowing you to review the details of the new policy before creating it. Once you are satisfied, click **[!UICONTROL Finish]*** to create the policy.
+The **[!UICONTROL Review]** step appears, allowing you to review the details of the new policy before creating it. Once you are satisfied, click **[!UICONTROL Finish]** to create the policy.
 
 ![](../images/policies/policy-review.png)
 
@@ -65,7 +65,7 @@ The **[!UICONTROL Browse]** tab reappears, which now lists the newly created pol
 
 All data usage policies (including core policies provided by Adobe) are disabled by default. In order for an individual policy to be considered for enforcement, you must manually enable that policy through the API or UI.
 
-You can enable or disable policies from the **[!UICONTROL Browse]* tab in the *[!UICONTROL Policies]* workspace. Select a custom policy from the list to display its details on the right. Under *[!UICONTROL Status]**, select the toggle button to enable or disable the policy.
+You can enable or disable policies from the **[!UICONTROL Browse]** tab in the **[!UICONTROL Policies]** workspace. Select a custom policy from the list to display its details on the right. Under **[!UICONTROL Status]**, select the toggle button to enable or disable the policy.
 
 ![](../images/policies/enable-policy.png)
 
@@ -81,7 +81,7 @@ To create a new custom marketing action, click **[!UICONTROL Create marketing ac
 
 ![](../images/policies/create-marketing-action.png)
 
-The **[!UICONTROL Create marketing action]* dialog appears. Enter a name and description for the marketing action, then click **[!UICONTROL Create]***.
+The **[!UICONTROL Create marketing action]** dialog appears. Enter a name and description for the marketing action, then click **[!UICONTROL Create]**.
 
 ![](../images/policies/create-marketing-action-details.png)
 

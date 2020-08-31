@@ -69,13 +69,13 @@ The **[!UICONTROL Identity namespace]** selector opens a dialog where you can ch
 
 ![](../images/user-guide/profiles-search-filter.png)
 
-From the **[!UICONTROL Select identity namespace]* dialog, choose the namespace by which you would like to search, or use the **[!UICONTROL Search]** bar in the dialog to begin typing the name of a namespace. You can select a namespace to view additional details, and once you have found the namespace you would like to search by you can select the radio button and press **[!UICONTROL Select]*** to continue.
+From the **[!UICONTROL Select identity namespace]** dialog, choose the namespace by which you would like to search, or use the **[!UICONTROL Search]** bar in the dialog to begin typing the name of a namespace. You can select a namespace to view additional details, and once you have found the namespace you would like to search by you can select the radio button and press **[!UICONTROL Select]** to continue.
 
 ![](../images/user-guide/profiles-select-identity-namespace.png)
 
 ### Identity value
 
-After selecting an **[!UICONTROL Identity namespace]**, you return to the **[!UICONTROL Browse]* tab where you can enter an **[!UICONTROL Identity value]**. This value is specific to an individual customer profile and must be a valid entry for the namespace provided. For example, selecting the **[!UICONTROL Identity namespace]** "Email" would require an **[!UICONTROL Identity value]*** in the form of a valid email address. 
+After selecting an **[!UICONTROL Identity namespace]**, you return to the **[!UICONTROL Browse]** tab where you can enter an **[!UICONTROL Identity value]**. This value is specific to an individual customer profile and must be a valid entry for the namespace provided. For example, selecting the **[!UICONTROL Identity namespace]** "Email" would require an **[!UICONTROL Identity value]** in the form of a valid email address. 
 
 ![](../images/user-guide/profiles-show-profile.png)
 
@@ -89,7 +89,7 @@ Upon selecting the **[!UICONTROL Profile ID]**, the **[!UICONTROL Detail]** tab 
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-You can view additional information related to the profile including **[!UICONTROL Attributes]*, *[!UICONTROL Events]*, and *[!UICONTROL Segments]** to which the profile is a member.
+You can view additional information related to the profile including **[!UICONTROL Attributes]**, **[!UICONTROL Events]**, and **[!UICONTROL Segments]** to which the profile is a member.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 

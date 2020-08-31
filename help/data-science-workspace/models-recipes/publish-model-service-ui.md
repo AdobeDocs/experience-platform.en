@@ -33,7 +33,7 @@ If you prefer to publish a Model by using Sensei Machine Learning APIs, refer to
 
 ## Score using a Service {#access-a-service}
 
-1. In Adobe Experience Platform, click the **[!UICONTROL Services]** tab located in the left navigation column to access the **[!UICONTROL Service Gallery]*. Find the Service that you wish to use and click **[!UICONTROL Score]***.
+1. In Adobe Experience Platform, click the **[!UICONTROL Services]** tab located in the left navigation column to access the **[!UICONTROL Service Gallery]**. Find the Service that you wish to use and click **[!UICONTROL Score]**.
 ![](../images/models-recipes/publish-model/click_to_score.png)
 2. Select an appropriate input dataset for the scoring run, then click **[!UICONTROL Next]**.
 ![](../images/models-recipes/publish-model/6_scoring_input.png)

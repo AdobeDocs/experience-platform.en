@@ -40,7 +40,7 @@ The **[!UICONTROL Dataset activity]** screen appears. The **[!UICONTROL Properti
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/select-dataset-schema.png)
 
-The **[!UICONTROL Schema Editor]** appears, showing the structure of the schema in the center canvas. Within the canvas, select the field to be set as the primary identity. Under the **[!UICONTROL Field properties]* tab that appears, select the **[!UICONTROL Identity]** checkbox, then **[!UICONTROL Primary identity]**. Finally, select an appropriate **[!UICONTROL Identity namespace]**, then click **[!UICONTROL Apply]***.
+The **[!UICONTROL Schema Editor]** appears, showing the structure of the schema in the center canvas. Within the canvas, select the field to be set as the primary identity. Under the **[!UICONTROL Field properties]** tab that appears, select the **[!UICONTROL Identity]** checkbox, then **[!UICONTROL Primary identity]**. Finally, select an appropriate **[!UICONTROL Identity namespace]**, then click **[!UICONTROL Apply]**.
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/set-schema-identity.png)
 

@@ -102,7 +102,7 @@ Once you have provided appropriate values to the schedule, select **[!UICONTROL 
 
 The **[!UICONTROL Dataflow detail]** step appears, allowing you to name and give a brief description about your new dataflow.
 
-During this process, you can also enable **[!UICONTROL Partial ingestion]* and *[!UICONTROL Error diagnostics]*. Enabling *[!UICONTROL Partial ingestion]* provides the ability to ingest data containing errors up to a certain threshold. Once *[!UICONTROL Partial ingestion]* is enabled, drag the *[!UICONTROL Error threshold %]** dial to adjust the error threshold of the batch. Alternatively, you can manually adjust the threshold by selecting the input box. For more information, see the [partial batch ingestion overview](../../../../ingestion/batch-ingestion/partial.md).
+During this process, you can also enable **[!UICONTROL Partial ingestion]** and **[!UICONTROL Error diagnostics]**. Enabling **[!UICONTROL Partial ingestion]** provides the ability to ingest data containing errors up to a certain threshold. Once **[!UICONTROL Partial ingestion]** is enabled, drag the **[!UICONTROL Error threshold %]** dial to adjust the error threshold of the batch. Alternatively, you can manually adjust the threshold by selecting the input box. For more information, see the [partial batch ingestion overview](../../../../ingestion/batch-ingestion/partial.md).
 
 Provide values for the dataflow and select **[!UICONTROL Next]**.
 
@@ -126,7 +126,7 @@ Once your dataflow has been created, you can monitor the data that is being inge
 
 ## Delete your dataflow
 
-You can delete dataflows that are no longer necessary or were incorrectly created using the **[!UICONTROL Delete]* function available in the *[!UICONTROL Dataflows]** workspace. For more information on how to delete dataflows, see the tutorial on [deleting dataflows in the UI](../delete.md).
+You can delete dataflows that are no longer necessary or were incorrectly created using the **[!UICONTROL Delete]** function available in the **[!UICONTROL Dataflows]** workspace. For more information on how to delete dataflows, see the tutorial on [deleting dataflows in the UI](../delete.md).
 
 ## Next steps
 
@@ -153,7 +153,7 @@ Within the **[!UICONTROL authenticaton]** screen, select the name of the connect
 
 ![](../../../images/tutorials/dataflow/crm/monitor.png)
 
-The _Source activity_ page appears. Select the active dataflow from the list to open its **[!UICONTROL Properties]* column on the right-hand side of the screen, which contains an **[!UICONTROL Enabled]*** toggle button. Click the toggle to disable the dataflow. The same toggle can be used to re-enable a dataflow after it has been disabled.
+The **Source activity** page appears. Select the active dataflow from the list to open its **[!UICONTROL Properties]** column on the right-hand side of the screen, which contains an **[!UICONTROL Enabled]** toggle button. Click the toggle to disable the dataflow. The same toggle can be used to re-enable a dataflow after it has been disabled.
 
 ![disable](../../../images/tutorials/dataflow/crm/disable.png)
 

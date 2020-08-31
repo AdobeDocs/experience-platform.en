@@ -79,13 +79,13 @@ Start by loading your training data.
 >
 >In the **Real-time ML** template, the [car insurance CSV dataset](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) is grabbed from [!DNL Github].
 
-![Load traning data](../images/rtml/load_training.png)
+![Load training data](../images/rtml/load_training.png)
 
 If you wish to use a dataset from within Adobe Experience Platform, uncomment the cell below. Next, you need to replace `DATASET_ID` with the appropriate value.
 
 ![rtml dataset](../images/rtml/rtml-dataset.png)
 
-To access a dataset in your [!DNL JupyterLab] notebook, select the **Data** tab in the left-navigation of [!DNL JupyterLab]. The **[!UICONTROL Datasets]* and *[!UICONTROL Schemas]* directories appear. Select **[!UICONTROL Datasets]** and right-click, then select the **[!UICONTROL Explore Data in Notebook]*** option from the dropdown menu on the dataset you wish to use. An executable code entry appears at the bottom of the notebook. This cell has your `dataset_id`.
+To access a dataset in your [!DNL JupyterLab] notebook, select the **Data** tab in the left-navigation of [!DNL JupyterLab]. The **[!UICONTROL Datasets]** and **[!UICONTROL Schemas]** directories appear. Select **[!UICONTROL Datasets]** and right-click, then select the **[!UICONTROL Explore Data in Notebook]** option from the dropdown menu on the dataset you wish to use. An executable code entry appears at the bottom of the notebook. This cell has your `dataset_id`.
 
 ![dataset access](../images/rtml/access-dataset.png)
 

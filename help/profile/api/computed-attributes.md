@@ -63,7 +63,7 @@ Once you have located the schema, click its name to open the [!DNL Schema Editor
 
 ### Create a mixin
 
-To create a new mixin, click **[!UICONTROL Add]** next to *Mixins* in the **[!UICONTROL Composition]* section on the left-side of the editor. This opens the **[!UICONTROL Add mixin]** dialog where you can see existing mixins. Click the radio button for **[!UICONTROL Create new mixin]*** in order to define your new mixin.
+To create a new mixin, click **[!UICONTROL Add]** next to *Mixins* in the **[!UICONTROL Composition]** section on the left-side of the editor. This opens the **[!UICONTROL Add mixin]** dialog where you can see existing mixins. Click the radio button for **[!UICONTROL Create new mixin]** in order to define your new mixin.
 
 Give the mixin a name and description, and click **[!UICONTROL Add mixin]** when complete.
 
@@ -71,7 +71,7 @@ Give the mixin a name and description, and click **[!UICONTROL Add mixin]** when
 
 ### Add a computed attribute field to the schema
 
-Your new mixin should now appear in the **[!UICONTROL Mixins]* section under *[!UICONTROL Composition]*. Click on the name of the mixin and multiple **[!UICONTROL Add field]** buttons will appear in the *[!UICONTROL Structure]** section of the editor.
+Your new mixin should now appear in the **[!UICONTROL Mixins]** section under **[!UICONTROL Composition]**. Click on the name of the mixin and multiple **[!UICONTROL Add field]** buttons will appear in the *[!UICONTROL Structure]** section of the editor.
 
 Select **[!UICONTROL Add field]** next to the name of the schema in order to add a top-level field, or you can select to add the field anywhere within the schema you prefer.
 
@@ -93,7 +93,7 @@ When done, click **[!UICONTROL Apply]** and the name of the field, as well as it
 
 ### Enable schema for [!DNL Profile]
 
-Before continuing, ensure that the schema has been enabled for [!DNL Profile]. Click on the schema name in the **[!UICONTROL Structure]* section of the editor so that the *[!UICONTROL Schema Properties]* tab appears. If the **[!UICONTROL Profile]*** slider is blue, the schema has been enabled for [!DNL Profile]. 
+Before continuing, ensure that the schema has been enabled for [!DNL Profile]. Click on the schema name in the **[!UICONTROL Structure]** section of the editor so that the **[!UICONTROL Schema Properties]** tab appears. If the **[!UICONTROL Profile]** slider is blue, the schema has been enabled for [!DNL Profile]. 
 
 >[!NOTE]
 >

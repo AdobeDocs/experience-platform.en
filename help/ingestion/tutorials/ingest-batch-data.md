@@ -111,13 +111,13 @@ Once you drag and drop (or browse and select) a parquet or JSON file that you wi
 
 After the file has finished uploading, the **[!UICONTROL Dataset Activity]** tab no longer shows that "No batches have been added." Instead, the **[!UICONTROL Dataset Activity]** tab now shows dataset metrics. All metrics will show "0" at this stage as the batch has not yet loaded.
 
-At the bottom of the tab is a list showing the **[!UICONTROL Batch ID]_ of the data that was just ingested through the ["Add data to dataset"](#add-data-to-dataset) process. Also included is information related to the batch, including _[!UICONTROL Ingested]_ date, number of _[!UICONTROL Records Ingested]_, and the current batch _[!UICONTROL Status]**.
+At the bottom of the tab is a list showing the **[!UICONTROL Batch ID]** of the data that was just ingested through the ["Add data to dataset"](#add-data-to-dataset) process. Also included is information related to the batch, including **[!UICONTROL Ingested]** date, number of **[!UICONTROL Records Ingested]**, and the current batch **[!UICONTROL Status]**.
 
 ![Dataset metrics](../images/tutorials/ingest-batch-data/batch_loading.png)
 
 ## Batch details
 
-Click on the **[!UICONTROL Batch ID]_ to view a **[!UICONTROL Batch Overview]**, showing additional details regarding the batch. Once the batch has finished loading, the information about the batch will update to show the number of _[!UICONTROL Records Ingested]_ and the _[!UICONTROL File Size]_. The _[!UICONTROL Status]_ will also change to "Success" or "Failed". If the batch fails the _[!UICONTROL Error Code]** section will contain details regarding any errors during ingestion.
+Click on the **[!UICONTROL Batch ID]** to view a **[!UICONTROL Batch Overview]**, showing additional details regarding the batch. Once the batch has finished loading, the information about the batch will update to show the number of **[!UICONTROL Records Ingested]** and the **[!UICONTROL File Size]**. The **[!UICONTROL Status]** will also change to "Success" or "Failed". If the batch fails the **[!UICONTROL Error Code]** section will contain details regarding any errors during ingestion.
 
 For more information and frequently asked questions regarding batch ingestion, see the [Batch Ingestion troubleshooting guide](../batch-ingestion/troubleshooting.md).
 
