@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics; flow service; update connections
-description: This tutorial covers the steps for updating your connection information, including its name, description, and credentials using the Flow Service API.
 solution: Experience Platform
-title: Update connection credentials and information
+title: Update connection
 topic: overview
+description: This tutorial covers the steps for updating your connection information, including its name, description, and credentials using the Flow Service API.
 ---
 
-# Update connection credentials and information
+# Update connection using the Flow Service API
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
