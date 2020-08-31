@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics; analytics; classifications
+keywords: Experience Platform;home;popular topics; analytics;classifications
 description: This tutorial provides steps for creating an Adobe Analytics Classifications Data connector in the UI to bring classifications data into Adobe Experience Platform.
 solution: Experience Platform
 title: Create an Adobe Analytics Classifications Data connector in the UI
