@@ -50,7 +50,7 @@ In the [!DNL Admin Console], permissions are assigned to users through the use o
 
 ## Sandboxes and permissions
 
-[!DNL Experience Platform] provides access to one Production sandbox, and allows you to create Non-Production **sandboxes**. Non-Production sandboxes are a form of data virtualization that allow you to isolate data from other sandboxes and are typically used for development experiments, testing, or trials. A product profile's **[!UICONTROL permissions]** give the profile's users access to [!DNL Platform] features within the sandbox environments to which they've been granted access to.
+Non-Production sandboxes are a form of data virtualization that allow you to isolate data from other sandboxes and are typically used for development experiments, testing, or trials. A product profile's **[!UICONTROL permissions]** give the profile's users access to [!DNL Platform] features within the sandbox environments to which they've been granted access to. A default Experience Platform license grants you five sandboxes (one production and four non-production). You can add packs of ten non-production sandboxes up to a maximum of 75 sandboxes in total. Please contact your IMS Org Administrator or your Adobe sales representative for more details.
 
 For more information about sandboxes in [!DNL Experience Platform], please refer to the [sandboxes overview](../sandboxes/home.md).
 
