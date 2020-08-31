@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Event Hubs;azure event hubs;Event Hubs;event hubs
 solution: Experience Platform
 title: Azure Event Hubs connector
 topic: overview
+description: The documentation below provides information on how to connect Azure Event Hubs to Platform using APIs or the user interface.
 ---
 
 # (Beta) Azure Event Hubs connector

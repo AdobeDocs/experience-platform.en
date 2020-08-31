@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Google Cloud Storage;google cloud storage
 solution: Experience Platform
 title: Google Cloud Storage connector
 topic: overview
+description: The documentation below provides information on how to connect Google Cloud Storage to Platform using APIs or the user interface.
 ---
 
 # Google Cloud Storage connector
