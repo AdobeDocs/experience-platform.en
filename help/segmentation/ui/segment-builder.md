@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segment;Segment;segment builder;Segment builder
+keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;
 solution: Experience Platform
 title: Segmentation Service Segment Builder user guide
 topic: ui guide
