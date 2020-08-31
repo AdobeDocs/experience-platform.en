@@ -25,7 +25,7 @@ There are two sandbox types available in Experience Platform:
 
 Experience Platform provides a single **production sandbox**, which cannot be deleted or reset. Only one production sandbox can exist for a single Platform instance.
 
-By contrast, multiple **non-production sandboxes** can be created by sandbox administrators for a single Platform instance. Non-production sandboxes allow you to test features, run experiments, and make custom configurations without impacting your production sandbox. In addition, non-production sandboxes have a reset feature that removes all customer-created resources from the sandbox. Non-production sandboxes cannot be converted to production sandboxes.
+By contrast, multiple **non-production sandboxes** can be created by sandbox administrators for a single Platform instance. Non-production sandboxes allow you to test features, run experiments, and make custom configurations without impacting your production sandbox. In addition, non-production sandboxes have a reset feature that removes all customer-created resources from the sandbox. Non-production sandboxes cannot be converted to production sandboxes. A default Experience Platform license grants you five sandboxes (one production and four non-production). You can add packs of ten non-production sandboxes up to a maximum of 75 total sandboxes. Please contact your IMS Org Administrator or your Adobe sales representative for more details.
 
 See the [sandboxes overview](./home.md) for more information.
 
