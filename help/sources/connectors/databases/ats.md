@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Table Storage;azure table storage;ATS;ats
 solution: Experience Platform
 title: Azure Table Storage connector
 topic: overview
+description: The documentation below provides information on how to connect Azure Table Storage to Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL Azure Table Storage] connector

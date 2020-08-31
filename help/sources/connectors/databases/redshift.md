@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Amazon Redshift;Amazon redshift;redshift;Redshift
 solution: Experience Platform
 title: Amazon Redshift connector
 topic: overview
+description: The documentation below provides information on how to connect Amazon Redshift to Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL Amazon Redshift] connector

@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Data Explorer;azure data explorer
 solution: Experience Platform
 title: Azure Data Explorer connector
 topic: overview
+description: The documentation below provides information on how to connect Azure Data Explorer to Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL Azure Data Explorer] connector
