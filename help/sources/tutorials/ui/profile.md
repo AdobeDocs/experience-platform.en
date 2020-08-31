@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;activate inbound data;populate profile;populate rtcp;populated unified profile
 solution: Experience Platform
 title: Activate inbound source data to populate customer profiles
 topic: overview
+description: Inbound data from your source connector can be used towards enriching and populating your Real-time Customer Profile data.
 ---
 
 # Activate inbound source data to populate customer profiles
