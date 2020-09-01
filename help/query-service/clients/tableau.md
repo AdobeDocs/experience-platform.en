@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;tableau;Tableau;query service;Query service;connect to query service;
 solution: Experience Platform
 title: Connect with Tableau
 topic: connect

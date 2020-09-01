@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;create queries;
 solution: Experience Platform
 title: Creating queries
 topic: queries

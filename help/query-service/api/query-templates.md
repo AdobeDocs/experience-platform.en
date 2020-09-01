@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;query templates;api guide;templates;Query service;
 solution: Experience Platform
 title: Query Service developer guide
 topic: query templates

@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;datasets;tables;schemas;
 solution: Experience Platform
 title: Datasets vs tables and schemas
 topic: queries
