@@ -36,7 +36,7 @@ For reference purposes, the following sections describe the structure of each sc
 
 ### [!UICONTROL Loyalty Members] schema
 
-The source schema "[!UICONTROL Loyalty Members]" is based on the XDM [!DNL Individual Profile] class, and is the schema that was constructed in the tutorial for [creating a schema in the UI](create-schema-ui.md). It includes a "[!UICONTROL loyalty]" object under its "\_tenantId" namespace, which includes several loyalty-specific fields. One of these fields, "loyaltyId", serves as the primary identity for the schema under the "[!UICONTROL Email]" namespace. As seen under _[!UICONTROL Schema Properties]_, this schema has been enabled for use in [!DNL Real-time Customer Profile].
+The source schema "[!UICONTROL Loyalty Members]" is based on the XDM [!DNL Individual Profile] class, and is the schema that was constructed in the tutorial for [creating a schema in the UI](create-schema-ui.md). It includes a "[!UICONTROL loyalty]" object under its "\_tenantId" namespace, which includes several loyalty-specific fields. One of these fields, "loyaltyId", serves as the primary identity for the schema under the "[!UICONTROL Email]" namespace. As seen under **[!UICONTROL Schema Properties]**, this schema has been enabled for use in [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
@@ -54,19 +54,19 @@ The destination schema "[!UICONTROL Hotels]" is based on a custom "[!UICONTROL H
 
 In order to define a relationship between two schemas, the source schema must have a dedicated field to be used as a reference to the destination schema. You can add this field to the source schema by creating a new mixin.
 
-Start by clicking **[!UICONTROL Add]** in the _[!UICONTROL Mixins]_ section.
+Start by clicking **[!UICONTROL Add]** in the **[!UICONTROL Mixins]** section.
 
 ![](../images/tutorials/relationship/loyalty-add-mixin.png)
 
-The _[!UICONTROL Add Mixin]_ dialog appears. From here, click **[!UICONTROL Create New Mixin]**. In the text fields that appear, enter a display name and description for the new mixin. Click **[!UICONTROL Add Mixin]** when finished.
+The **[!UICONTROL Add Mixin]** dialog appears. From here, click **[!UICONTROL Create New Mixin]**. In the text fields that appear, enter a display name and description for the new mixin. Click **[!UICONTROL Add Mixin]** when finished.
 
 <img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width=750><br>
 
-The canvas reappears with "[!UICONTROL Loyalty Relationship]" appearing in the _[!UICONTROL Mixins]_ section. Click the mixin name, then click **[!UICONTROL Add Field]** next to the root-level "[!UICONTROL Loyalty Members]" field.
+The canvas reappears with "[!UICONTROL Loyalty Relationship]" appearing in the **[!UICONTROL Mixins]** section. Click the mixin name, then click **[!UICONTROL Add Field]** next to the root-level "[!UICONTROL Loyalty Members]" field.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
-A new field appears in the canvas under the "\_tenantId" namespace. Under _[!UICONTROL Field Properties]_, provide a field name and display name for the field, and set its type to "[!UICONTROL String]".
+A new field appears in the canvas under the "\_tenantId" namespace. Under **[!UICONTROL Field Properties]**, provide a field name and display name for the field, and set its type to "[!UICONTROL String]".
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
@@ -82,7 +82,7 @@ The updated "[!UICONTROL favoriteHotel]" field appears in the canvas. Click **[!
 
 Once your source schema has a dedicated reference field defined, you can designate it as a relationship field.
 
-Select the reference field in the canvas, then scroll down under _[!UICONTROL Field Properties]_ until the **[!UICONTROL Relationship]** checkbox appears. Select the checkbox to reveal the required parameters for configuring a relationship field.
+Select the reference field in the canvas, then scroll down under **[!UICONTROL Field Properties]** until the **[!UICONTROL Relationship]** checkbox appears. Select the checkbox to reveal the required parameters for configuring a relationship field.
 
 ![](../images/tutorials/relationship/relationship-checkbox.png)
 

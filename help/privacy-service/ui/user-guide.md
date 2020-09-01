@@ -63,7 +63,7 @@ You can filter the list by typing keywords into the search bar below the Job Req
 
 ![Job Request search options](../images/user-guide/job-search.png)
 
-To view the details of a particular job request, click the request's job ID from the list to open the *[!UICONTROL Job Details]* page.
+To view the details of a particular job request, click the request's job ID from the list to open the **[!UICONTROL Job Details]** page.
 
 ![GDPR UI Job Details](../images/user-guide/job-details.png)
 
@@ -94,7 +94,7 @@ To start using the Request builder, click **[!UICONTROL Create Request]** below 
 
 ![Click Create Request](../images/user-guide/create-request.png)
 
-The *[!UICONTROL Create Request]* dialog opens, displaying the available options for submitting a privacy job request for the currently selected regulation type.
+The **[!UICONTROL Create Request]** dialog opens, displaying the available options for submitting a privacy job request for the currently selected regulation type.
 
 <img src="../images/user-guide/request-builder.png" width=500 /><br/>
 
@@ -102,7 +102,7 @@ Select the **[!UICONTROL Job Type]** of the request ("Delete" or "Access") and o
 
 <img src="../images/user-guide/type-and-products.png" width=500 /><br/>
 
-Under *[!UICONTROL Namespace type]*, select the appropriate namespace type for the customer IDs being sent to [!DNL Privacy Service].
+Under **[!UICONTROL Namespace type]**, select the appropriate namespace type for the customer IDs being sent to [!DNL Privacy Service].
 
 <img src="../images/user-guide/namespace-type.png" width=500 /><br/>
 
@@ -128,7 +128,7 @@ Click the arrow next to **[!UICONTROL Create Request]**, below the Status Report
 
 ![Request creation options](../images/user-guide/create-options.png)
 
-The *[!UICONTROL Upload JSON]* dialog appears, providing a window for you to drag and drop your JSON file into.
+The **[!UICONTROL Upload JSON]** dialog appears, providing a window for you to drag and drop your JSON file into.
 
 <img src="../images/user-guide/upload-json.png" width=500 /><br/>
 
