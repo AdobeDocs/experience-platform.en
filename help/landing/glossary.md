@@ -211,8 +211,6 @@ topic: getting started
 
 **Display Name:** Display name is a user-friendly name of a field that is shown in the UI.
 
-**DULE:** DULE is an acronym for *Data Usage Labeling and Enforcement*. DULE is a key part of data governance and a collection of key features that allows for data usage labeling and applying data access policies for governance needs within an organization.
-
 [Back to top](#adobe-experience-platform-glossary)
 
 ## E
