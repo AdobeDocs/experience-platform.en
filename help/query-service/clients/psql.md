@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;PSQL;psql
+keywords: Experience Platform;home;popular topics;PSQL;psqlconnect to query service;Query service;query service;
 solution: Experience Platform
 title: Connect with PSQL
 topic: connect

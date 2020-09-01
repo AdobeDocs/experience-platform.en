@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;streaming segmentation;Streaming segmentation;Continuous evaluation;
 solution: Experience Platform
 title: Streaming segmentation
 topic: developer guide

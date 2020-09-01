@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Query editor;query editor
+keywords: Experience Platform;home;popular topics;Query editor;query editor;Query service;query service;
 solution: Experience Platform
 title: Query Editor user guide
 topic: query editor

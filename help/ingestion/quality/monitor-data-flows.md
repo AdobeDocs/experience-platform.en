@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;monitoring;monitor;data flows
+keywords: Experience Platform;home;popular topics;monitoring;monitor;data flows;monitor ingestion;data ingestion;Data ingestion;view records;view batches;
 solution: Experience Platform
 title: Monitoring data ingestion
 topic: overview

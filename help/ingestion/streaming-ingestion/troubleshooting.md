@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;streaming
+keywords: Experience Platform;home;popular topics;streaming;streaming ingestion;troubleshooting;streaming ingestion troubleshooting;streaming ingestion faq;faq;
 solution: Experience Platform
 title: Streaming ingestion troubleshooting
 topic: troubleshooting

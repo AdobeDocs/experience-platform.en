@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segment;Segment;create segment
+keywords: Experience Platform;home;popular topics;segment;Segment;create segment;segmentation;create a segment;Segmentation Service;
 solution: Experience Platform
 title: Create a segment
 topic: tutorial
