@@ -5,7 +5,7 @@ title: Create email marketing destinations
 topic: tutorial
 ---
 
-# Create email marketing destinations and activate data in Adobe's [!DNL Real-time Customer Data Platform]
+# Create email marketing destinations and activate data using API calls in Adobe's [!DNL Real-time Customer Data Platform]
 
 This tutorial demonstrates how to use API calls to connect to your Adobe Experience Platform data, create an [email marketing destination](../../rtcdp/destinations/email-marketing-destinations.md), create a dataflow to your new created destination, and activate data to your new created destination.
 
