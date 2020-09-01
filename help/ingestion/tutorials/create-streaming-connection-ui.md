@@ -34,7 +34,7 @@ Under **[!UICONTROL Account Authentication]**, select the following configuratio
 - **[!UICONTROL Authentication]:** Whether or not the streaming connection requires authentication. Authentication ensures that data is collected from trusted sources. It is recommended that this is turned on if dealing with Personally Identifiable Information (PII).
 - **[!UICONTROL XDM Schema Compatibility]:** Whether or not this streaming connection will be sending events which are compatible with XDM schemas. By default, this property is turned **on**.
 
-Once you have finished selecting your configuration properties, click **[!UICONTROL Connect]**. Your streaming HTTP connection is now created, and can now be viewed under the **[!UICONTROL Browse]* tab in the *[!UICONTROL Sources]** workspace.
+Once you have finished selecting your configuration properties, click **[!UICONTROL Connect]**. Your streaming HTTP connection is now created, and can now be viewed under the **[!UICONTROL Browse]** tab in the **[!UICONTROL Sources]** workspace.
 
 ![](../images/streaming-ingestion/ui/http-sources-details.png)
 

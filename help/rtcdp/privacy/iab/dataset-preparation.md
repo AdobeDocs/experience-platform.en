@@ -72,7 +72,7 @@ In the Platform UI, click **[!UICONTROL Schemas]** in the left navigation to ope
 
 ### Create a record-based consent schema {#profile-schema}
 
-From the **[!UICONTROL Browse]** tab in the **[!UICONTROL Schemas] workspace**, create a new schema based on the **[!DNL XDM Individual Profile] class**. Once you have the schema open within the Schema Editor, click **[!UICONTROL Add]** under the *[!UICONTROL Mixins]** section on the left side of the canvas.
+From the **[!UICONTROL Browse]** tab in the **[!UICONTROL Schemas] workspace**, create a new schema based on the **[!DNL XDM Individual Profile] class**. Once you have the schema open within the Schema Editor, click **[!UICONTROL Add]** under the **[!UICONTROL Mixins]** section on the left side of the canvas.
 
 ![](../assets/iab/add-mixin-profile.png)
 
