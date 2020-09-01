@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;API error codes;API error code;error code API;error codes API;API request error;API troubleshooting
 solution: Experience Platform
 title: Adobe Experience Platform FAQ and Troubleshooting Guide
 topic: getting started
@@ -239,6 +239,7 @@ The following is a list of troubleshooting guides and API reference documentatio
 |Data Science Workspace | [Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [Data Science Workspace troubleshooting guide](../data-science-workspace/troubleshooting-guide.md) |
 |Data Usage Labeling and Enforcement (DULE) | [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)||
 |Experience Data Model (XDM) | [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [XDM System FAQ and troubleshooting guide](../xdm/troubleshooting-guide.md)|
+|Flow Service (Sources and Destinations) | [Flow Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)||
 |Identity Service | [Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [Identity Service troubleshooting guide](../identity-service/troubleshooting-guide.md)|
 |Query Service | [Query Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [Query Service troubleshooting guide](../query-service/troubleshooting-guide.md)|
 |Real-time Customer Profile | [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)| [Profile troubleshooting guide](../profile/troubleshooting.md) |
