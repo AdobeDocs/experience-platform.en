@@ -1,5 +1,5 @@
 ---
-keywords: keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;API;api;
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;API;api;
 solution: Adobe Experience Platform
 title: Adobe Experience Platform Segmentation Service developer guide
 topic: guide
