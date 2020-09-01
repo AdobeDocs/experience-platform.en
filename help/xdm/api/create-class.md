@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;class;Class;classes;Classes;create
 solution: Experience Platform
 title: Create a class
+description: The primary building block of a schema is a class. The class contains the minimum set of fields that must be defined in order to capture the core data of a schema. For example, if you were designing a schema for cars and trucks they would most likely use a class called Vehicle that described the basic common properties of all vehicles.
 topic: developer guide
 ---
 

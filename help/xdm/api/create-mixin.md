@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experi
 solution: Experience Platform
 title: Create a mixin
 topic: developer guide
+description: Mixins are a set of fields used to describe a particular concept, such as "address" or "profile preferences". There are numerous standard mixins available, or you can define your own when you wish to capture information that is unique to your organization.
 ---
 
 # Create a mixin

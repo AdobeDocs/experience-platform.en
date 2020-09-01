@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;union;Union;unions;Unions;segmentMembership;timeSeriesEvents;
 solution: Experience Platform
 title: Unions
+description: Unions (or union views) are system-generated, read-only schemas that aggregate the fields of all schemas which share the same class (XDM ExperienceEvent or XDM Individual Profile) and are enabled for Real-time Customer Profile.
 topic: developer guide
 ---
 

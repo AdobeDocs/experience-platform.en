@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics;;XDM;XDM system;XDM individual profile;XDM ExperienceEvent;XDM Experience Event;experienceEvent;experience eventExperience event;XDM Experience Event;XDM ExperienceEvent;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema;troubleshooting;FAQ;faq;
 solution: Experience Platform
 title: Experience Data Model (XDM) System troubleshooting guide
+description: This document provides answers to frequently asked questions about Experience Data Model (XDM) System, as well as a troubleshooting guide for common errors.
 topic: troubleshooting
 ---
 

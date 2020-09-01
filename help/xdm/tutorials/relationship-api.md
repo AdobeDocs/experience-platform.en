@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;relationship;Relationship;relationship descriptor;Relationship descriptor;reference identity;Reference identity;
 solution: Experience Platform
 title: Define a relationship between two schemas using the Schema Registry API
+description: This document provides a tutorial for defining a one-to-one relationship between two schemas defined by your organization using the Schema Registry API.
 topic: tutorials
 ---
 
 # Define a relationship between two schemas using the [!DNL Schema Registry] API
-
 
 The ability to understand the relationships between your customers and their interactions with your brand across various channels is an important part of Adobe Experience Platform. Defining these relationships within the structure of your [!DNL Experience Data Model] (XDM) schemas allows you to gain complex insights into your customer data.
 

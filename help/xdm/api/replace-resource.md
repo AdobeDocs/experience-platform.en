@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;replace;Replace;put;PUT
 solution: Experience Platform
 title: Replace a resource
+description: The Schema Registry allows you to replace an entire resource through a PUT operation. This operation essentially re-writes the resource, therefore the request body must include all of the fields that would be required when creating a new resource using a POST request.
 topic: developer guide
 ---
 
