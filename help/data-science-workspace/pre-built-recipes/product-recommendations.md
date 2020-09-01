@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;product recommendation recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;product recommendation recipe;Data Science Workspace;popular topics;recipes;pre build recipe
 solution: Experience Platform
 title: Product recommendation recipe
 topic: overview
+description: The Product Recommendations recipe enables you to provide personalized product recommendations that are tailored to your customer's needs and interests. With an accurate prediction model, a customer's purchase history can provide you with insight on what products they may be interested in.
 ---
 
 # Product recommendation recipe

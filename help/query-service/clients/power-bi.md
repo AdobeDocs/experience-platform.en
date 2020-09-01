@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;Power BI;power bi;connect to query service;
 solution: Experience Platform
 title: Connect with Power BI
 topic: connect

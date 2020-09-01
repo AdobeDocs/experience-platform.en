@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;streaming
+keywords: Experience Platform;home;popular topics;streaming;streaming ingestion;streaming ingestion validation;validation;Streaming ingestion validation;validate;Synchronous validation;synchronous validation;Asynchronous validation;asynchronous validation;
 solution: Experience Platform
 title: Streaming ingestion validation
 topic: overview
@@ -14,8 +14,8 @@ Streaming ingestion allows you to upload your data to Adobe Experience Platform 
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-- [!DNL Streaming Ingestion](../streaming-ingestion/overview.md): One of the methods by which data can be sent to [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+- [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md): One of the methods by which data can be sent to [!DNL Experience Platform].
 
 ### Reading sample API calls
 

@@ -1,7 +1,8 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;;XDM;XDM system;XDM individual profile;XDM ExperienceEvent;XDM Experience Event;experienceEvent;experience eventExperience event;XDM Experience Event;XDM ExperienceEvent;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema;troubleshooting;FAQ;faq;
 solution: Experience Platform
 title: Experience Data Model (XDM) System troubleshooting guide
+description: This document provides answers to frequently asked questions about Experience Data Model (XDM) System, as well as a troubleshooting guide for common errors.
 topic: troubleshooting
 ---
 
@@ -35,7 +36,7 @@ For more information, see the [schema identification](api/getting-started.md#sch
 
 ### When does a schema start preventing breaking changes?
 
-Breaking changes can be made to a schema as long as it has never been used in the creation of a dataset or enabled for use in [!DNL Real-time Customer Profile](../profile/home.md). Once a schema has been used in dataset creation or enabled for use with [!DNL Real-time Customer Profile], the rules of [Schema Evolution](schema/composition.md#evolution) become strictly enforced by the system.
+Breaking changes can be made to a schema as long as it has never been used in the creation of a dataset or enabled for use in [[!DNL Real-time Customer Profile]](../profile/home.md). Once a schema has been used in dataset creation or enabled for use with [!DNL Real-time Customer Profile], the rules of [Schema Evolution](schema/composition.md#evolution) become strictly enforced by the system.
 
 ### What is the maximum size of a long field type?
 
@@ -45,7 +46,7 @@ For more information on field types, see the [Defining XDM field types](api/appe
 
 ### How do I define identities for my schema?
 
-In [!DNL Experience Platform], identities are used to identify a subject (typically an individual person) regardless of the sources of data being interpreted. They are defined in schemas by marking key fields as "Identity". Commonly used fields for identity include email address, phone number, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/en/id-service/using/home.html), CRM ID, and other unique ID fields.
+In [!DNL Experience Platform], identities are used to identify a subject (typically an individual person) regardless of the sources of data being interpreted. They are defined in schemas by marking key fields as "Identity". Commonly used fields for identity include email address, phone number, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/en/id-service/using/home.html), CRM ID, and other unique ID fields.
 
 Fields can be marked as identities using either the API or user interface.
 
@@ -69,7 +70,7 @@ Primary identities are optional, since schemas may have 0 or 1 of them. However,
 
 ### How do I enable a schema for use in [!DNL Real-time Customer Profile]?
 
-Schemas are enabled for use in [!DNL Real-time Customer Profile](../profile/home.md) through the addition of a "union" tag, located in the `meta:immutableTags` attribute of the schema. Enabling a schema for use with [!DNL Profile] can be done using the API or the user interface.
+Schemas are enabled for use in [[!DNL Real-time Customer Profile]](../profile/home.md) through the addition of a "union" tag, located in the `meta:immutableTags` attribute of the schema. Enabling a schema for use with [!DNL Profile] can be done using the API or the user interface.
 
 #### Enabling an existing schema for [!DNL Profile] using the API
 

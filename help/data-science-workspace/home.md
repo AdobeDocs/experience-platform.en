@@ -125,7 +125,7 @@ The following table outlines the effects of having this permission enabled or di
 
 | Permission | Enabled | Disabled |
 |---|---|---|
-| [!DNL Manage Data Science Workspace] | Provides access to all services in [!DNL Data Science Workspace]. | API and UI access to all services within [!DNL Data Science Workspace] are disabled. While disabled, routing to the [!DNL Data Science Workspace] *[!UICONTROL Models]* and *[!UICONTROL Services]* pages are prevented. |
+| [!DNL Manage Data Science Workspace] | Provides access to all services in [!DNL Data Science Workspace]. | API and UI access to all services within [!DNL Data Science Workspace] are disabled. While disabled, routing to the [!DNL Data Science Workspace] **[!UICONTROL Models]** and **[!UICONTROL Services]** pages are prevented. |
 
 ### Security and peace of mind
 
