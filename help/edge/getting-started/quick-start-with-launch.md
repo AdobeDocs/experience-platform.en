@@ -52,7 +52,7 @@ After the extension is installed, start sending events by adding a `sendEvent` a
 
 For more details on how to track events, see [Tracking Events](../fundamentals/tracking-events.md).
 
-## Next Steps
+## Next steps
 
 After you have data flowing, you can do the following. 
 

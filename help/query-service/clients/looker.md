@@ -35,6 +35,6 @@ After inputting your connection details, click on **[!UICONTROL Test These Setti
 
 ![](../images/clients/looker/click-test-connection.png)
 
-## Next Steps
+## Next steps
 
 Now that you've connected with [!DNL Query Service], you can use [!DNL Looker] to write queries. For more information on how to write and run queries, please read the [running queries guide](../creating-queries/creating-queries.md).

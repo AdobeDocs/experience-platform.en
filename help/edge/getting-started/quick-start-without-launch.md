@@ -86,7 +86,7 @@ alloy("sendEvent", {
 
 For more details on how to track events, see [Tracking Events](../fundamentals/tracking-events.md).
 
-## Next Steps
+## Next steps
 
 After you have data flowing, you can do the following:
 

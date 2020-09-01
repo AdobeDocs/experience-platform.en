@@ -640,6 +640,6 @@ Returns only the values of the `type` and `city` fields for each element in the 
 }
 ```
 
-## Next Steps
+## Next steps
 
 This guide has shown you the steps involved in order to configure projections and destinations, including how to properly format the `selector` parameter. You can now create new projection destinations and configurations specific to the needs of your organization.

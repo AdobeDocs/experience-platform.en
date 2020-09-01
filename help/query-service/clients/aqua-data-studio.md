@@ -32,6 +32,6 @@ Select the **[!UICONTROL Driver]** tab. Under **[!UICONTROL Parameters]**, set t
 
 After inputting your connection details, click **[!UICONTROL Test Connection]** to ensure your credentials work properly. If your connection is successful, click **[!UICONTROL Save]** to register your server. The connection appears on the *Dashboard* upon successful registration, confirming that you can now connect to the server and view its schema objects.
 
-## Next Steps
+## Next steps
 
 Now that you have connected to [!DNL Query Service], you can use the **[!UICONTROL Query Analyzer]** within [!DNL Aqua Data Studio] to execute and edit SQL statements. For more information on how to write and run queries, please read the [running queries guide](../creating-queries/creating-queries.md).
