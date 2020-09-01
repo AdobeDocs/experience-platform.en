@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;API error codes;API error code;error code API;error codes API;API request error;API troubleshooting
+keywords: Experience Platform;home;popular topics;API error codes;API error code;error code API;error codes API;API request error;API troubleshooting;API error
 solution: Experience Platform
 title: Adobe Experience Platform FAQ and Troubleshooting Guide
 topic: getting started
