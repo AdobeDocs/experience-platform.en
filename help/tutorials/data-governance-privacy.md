@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Data Governance and Privacy tutorials
 topic: tutorial
+description: Data Usage Labeling and Enforcement (DULE) is the core mechanism of Adobe Experience Platform Data Governance. DULE features enable you to apply data usage labels to datasets and fields, categorizing each according to related data usage policies.
 ---
 
 # [!DNL Data Governance] and [!DNL Privacy] Tutorials
 
-[!DNL Data Usage Labeling and Enforcement] (DULE) is the core mechanism of Adobe Experience Platform [!DNL Data Governanc]e. DULE features enable you to apply data usage labels to datasets and fields, categorizing each according to related data usage policies. Before getting started with labels, please see the [Data Governance overview](../data-governance/home.md) for a more robust introduction to the DULE framework within [!DNL Platform].
+[!DNL Data Usage Labeling and Enforcement] (DULE) is the core mechanism of Adobe Experience Platform [!DNL Data Governance]. DULE features enable you to apply data usage labels to datasets and fields, categorizing each according to related data usage policies. Before getting started with labels, please see the [Data Governance overview](../data-governance/home.md) for a more robust introduction to the DULE framework within [!DNL Platform].
 
 Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface that allow you to coordinate privacy and compliance requests across various solutions. To learn more, please begin by reading the [Privacy Service overview](../privacy-service/home.md).
 

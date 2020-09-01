@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;hubspot;Hubspot;HubSpot
 solution: Experience Platform
 title: HubSpot connector
 topic: overview
+description: The documentation below provides information on how to connect HubSpot to Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL HubSpot] connector

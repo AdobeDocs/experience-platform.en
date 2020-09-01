@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;OData;odata;Generic Open Data Protocol
 solution: Experience Platform
 title: Create a Generic OData source connector in the UI
 topic: overview
+description: This tutorial provides steps for creating a Generic Open Data Protocol (hereinafter referred to as "OData") source connector using the Platform user interface.
 ---
 
 # Create a [!DNL Generic OData] source connector in the UI

@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Adobe Analytics Classifications Data Connector
 solution: Experience Platform
 title: Adobe Analytics Classifications Data connector
 topic: overview
+description: The documentation below provides information on how to connect Analytics Classifications to Platform using the user interface
 ---
 
 # Adobe Analytics Classifications Data Connector

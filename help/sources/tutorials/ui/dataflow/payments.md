@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;payment connector
 solution: Experience Platform
 title: Configure a dataflow for a payment connector in the UI
 topic: overview
+description: A dataflow is a scheduled task that retrieves and ingests data from a source to an Adobe Experience Platform dataset. This tutorial provides steps to configure a new dataflow using your payments account.
 ---
 
 # Configure a dataflow for a payment connector in the UI

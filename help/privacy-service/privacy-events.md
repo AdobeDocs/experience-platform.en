@@ -79,7 +79,7 @@ The _Add events_ dialog appears. Select **[!UICONTROL Experience Cloud]** to fil
 
 ![](./images/privacy-events/add-privacy-events.png)
 
-The _Configure event registration_ dialog appears. Select which events you would like to receive by selecting their corresponding checkboxes. Events that you select appear under _[!UICONTROL Subscribed Events]_ in the left column. When finished, click **[!UICONTROL Next]**.
+The _Configure event registration_ dialog appears. Select which events you would like to receive by selecting their corresponding checkboxes. Events that you select appear under **[!UICONTROL Subscribed Events]** in the left column. When finished, click **[!UICONTROL Next]**.
 
 ![](./images/privacy-events/choose-subscriptions.png)
 
@@ -99,11 +99,11 @@ In the next screen, provide a name and description for the event registration. B
 
 ![](./images/privacy-events/event-details.png)
 
-Further down on the same screen, you are given two options for configuring how to receive events. Select **[!UICONTROL Webhook]** and provide the `Forwarding` URL for the ngrok webhook you created earlier under _[!UICONTROL Webhook URL]_. Next, select your preferred delivery style (single or batch) before clicking **[!UICONTROL Save configured events]** to complete the event registration.
+Further down on the same screen, you are given two options for configuring how to receive events. Select **[!UICONTROL Webhook]** and provide the `Forwarding` URL for the ngrok webhook you created earlier under **[!UICONTROL Webhook URL]**. Next, select your preferred delivery style (single or batch) before clicking **[!UICONTROL Save configured events]** to complete the event registration.
 
 ![](./images/privacy-events/webhook-details.png)
 
-The details page for your project reappears, with [!DNL Privacy Events] appearing under _[!UICONTROL Events]_ in the left navigation.
+The details page for your project reappears, with [!DNL Privacy Events] appearing under **[!UICONTROL Events]** in the left navigation.
 
 ## View event data
 
@@ -119,7 +119,7 @@ Click the **[!UICONTROL Debug Tracing]** tab to view a list of received events. 
 
 ![](images/privacy-events/debug-tracing.png)
 
-The _[!UICONTROL Payload]_ section provides details about the selected event, including its event type (`com.adobe.platform.gdpr.productcomplete`) as highlighted in the example above.
+The **[!UICONTROL Payload]** section provides details about the selected event, including its event type (`com.adobe.platform.gdpr.productcomplete`) as highlighted in the example above.
 
 ## Next steps
 

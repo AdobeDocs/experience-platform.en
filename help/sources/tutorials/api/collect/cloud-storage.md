@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; cloud storage
+keywords: Experience Platform;home;popular topics;cloud storage data
 solution: Experience Platform
 title: Collect cloud storage data through source connectors and APIs
 topic: overview
-description: This tutorial covers the steps for retrieving data from a third-party cloud storage and ingesting it into Platform through source connectors and the Flow Service API.
+description: This tutorial covers the steps for retrieving data from a third-party cloud storage and bringing them in to Platform through source connectors and APIs.
 ---
 
 # Collect cloud storage data through source connectors and APIs

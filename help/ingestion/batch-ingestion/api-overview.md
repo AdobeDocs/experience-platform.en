@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;ingestion;developer guide;api guide;upload;ingest parquet;ingest json;
 solution: Experience Platform
 title: Adobe Experience Platform Batch Ingestion developer guide
 topic: developer guide

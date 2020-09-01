@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;sandbox user guide;sandbox guide
 solution: Experience Platform
 title: Sandbox user guide
 topic: user guide
+description: This document provides steps on how to perform various operations related to sandboxes in the Adobe Experience Platform user interface.
 ---
 
 # Sandbox user guide
@@ -11,7 +12,7 @@ This document provides steps on how to perform various operations related to san
 
 ## View sandboxes
 
-In the Experience Platform UI, click **[!UICONTROL Sandboxes]** in the left-navigation to open the _[!UICONTROL Sandboxes]_ dashboard. The dashboard lists all available sandboxes for your organization, including the sandbox type (production or development) and state (active, creating, deleted, or failed).
+In the Experience Platform UI, click **[!UICONTROL Sandboxes]** in the left-navigation to open the **[!UICONTROL Sandboxes]** dashboard. The dashboard lists all available sandboxes for your organization, including the sandbox type (production or development) and state (active, creating, deleted, or failed).
 
 ![](../images/ui/sandboxes-tab.png)
 
@@ -39,7 +40,7 @@ To create a new sandbox in the UI, click **[!UICONTROL Sandboxes]** in the left-
 
 ![](../images/ui/create-sandbox-button.png)
 
-The _[!UICONTROL Create Sandbox]_ dialog appears, prompting you to provide a display title and name for the sandbox. The **display title** is meant to be human-readable and should be descriptive enough to be easily identifiable. The sandbox **[!UICONTROL Name]** is an all-lowercase identifier for use in API calls, and should therefore be unique and concise.
+The **[!UICONTROL Create Sandbox]** dialog appears, prompting you to provide a display title and name for the sandbox. The **display title** is meant to be human-readable and should be descriptive enough to be easily identifiable. The sandbox **[!UICONTROL Name]** is an all-lowercase identifier for use in API calls, and should therefore be unique and concise.
 
 When finished, click **[!UICONTROL Create]**.
 
@@ -49,7 +50,7 @@ When finished, click **[!UICONTROL Create]**.
 >
 >Since you are restricted to creating non-production sandbox types only, the **[!UICONTROL type]** option is locked at "Non-Production" and cannot be manipulated.
 
-Once you have finished creating the sandbox, refresh the page and the new sandbox appears in the _[!UICONTROL Sandboxes]_ dashboard with a status of "[!UICONTROL Creating]". New sandboxes take approximately 15 minutes to be provisioned by the system, after which their status changes to "[!UICONTROL Active]".
+Once you have finished creating the sandbox, refresh the page and the new sandbox appears in the **[!UICONTROL Sandboxes]** dashboard with a status of "[!UICONTROL Creating]". New sandboxes take approximately 15 minutes to be provisioned by the system, after which their status changes to "[!UICONTROL Active]".
 
 ![](../images/ui/sandbox-created.png)
 
@@ -89,7 +90,7 @@ A dialog appears prompting you to confirm your choice. Click **[!UICONTROL Delet
 
 <img src="../images/ui/delete-are-you-sure.png" width=350><br>
 
-A confirmation message appears and the sandbox is removed from the _[!UICONTROL Sandboxes]_ workspace. 
+A confirmation message appears and the sandbox is removed from the **[!UICONTROL Sandboxes]** workspace. 
 
 ## Next steps
 
