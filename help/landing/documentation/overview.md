@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;capability;workflow
 solution: Experience Platform
 title: Adobe Experience Platform Documentation
 topic: overview
+description: Adobe Experience Platform documentation is provided in multiple formats, including overviews, tutorials, and guides for both the user interface and API. Here is a brief description of the most common documentation types that are available for Experience Platform services.
 ---
 
 # Adobe Experience Platform documentation overview

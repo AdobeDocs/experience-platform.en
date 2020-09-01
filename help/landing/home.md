@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey
+keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;capability;region
 solution: Experience Platform
 title: Adobe Experience Platform overview
 topic: getting started
