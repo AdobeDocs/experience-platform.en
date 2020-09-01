@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure;Azure File Storage;Azure file storage
 solution: Experience Platform
 title: Create an Azure File Storage connector using the Flow Service API
 topic: overview
+description: This tutorial uses the Flow Service API to walk you through the steps to connect Azure File Storage to Experience Platform.
 ---
 
 # Create an [!DNL Azure File Storage] connector using the [!DNL Flow Service] API

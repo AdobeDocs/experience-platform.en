@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;configure dataflow;advertising connector
 solution: Experience Platform
 title: Configure a dataflow for an advertising connector in the UI
 topic: overview
+description: A dataflow is a scheduled task that retrieves and ingests data from a source to an Adobe Experience Platform dataset. This tutorial provides steps to configure a new dataflow using your advertising account.
 ---
 
 # Configure a dataflow for an advertising connector in the UI

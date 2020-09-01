@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; marketing automation; hubspot
+keywords: Experience Platform;home;popular topics;marketing automation system;Collect marketing automation data
 solution: Experience Platform
 title: Collect marketing automation data through source connectors and APIs
 topic: overview
-description: This tutorial covers the steps for retrieving data from a third-party marketing automation system and ingesting it into Platform through source connectors and the Flow Service API.
+description: This tutorial covers the steps for retrieving data from a marketing automation system and bringing them in to Platform through source connectors and APIs.
 ---
 
 # Collect marketing automation data through source connectors and APIs

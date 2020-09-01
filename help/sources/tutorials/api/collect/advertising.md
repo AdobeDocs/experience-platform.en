@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; advertising; google adwords
+keywords: Experience Platform;home;popular topics;flow service;advertising;google adwords;advertising
 solution: Experience Platform
 title: Collect advertising data through source connectors and APIs
 topic: overview

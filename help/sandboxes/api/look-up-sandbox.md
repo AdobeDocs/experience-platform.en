@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;find sandbox;look up a sandbox
 solution: Experience Platform
 title: Look up a sandbox
 topic: developer guide
+description: You can look up an individual sandbox by making a GET request that includes the sandbox's name property in the request path.
 ---
 
 # Look up a sandbox

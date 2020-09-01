@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Apache Hive;Hive;hive;Azure HDInsights;azure hdinsights;
 solution: Experience Platform
 title: Apache Hive on Azure HDInsights connector
 topic: overview
+description: The documentation below provides information on how to connect Apache Hive on Azure HDInsights to Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL Apache Hive] on [!DNL Azure HDInsights] connector

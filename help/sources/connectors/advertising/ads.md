@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Google AdWords;google adwords
 solution: Experience Platform
 title: Google AdWords connector
 topic: overview
+description: The documentation below provides information on how to connect Google AdWords to Platform using APIs or the user interface.
 ---
 
 # [!DNL Google AdWords] connector
