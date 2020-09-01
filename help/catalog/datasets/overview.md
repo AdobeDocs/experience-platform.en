@@ -34,7 +34,7 @@ See the [Data Ingestion overview](../../ingestion/home.md) for more information.
 
 ## Applying usage labels to datasets
 
-Adobe Experience Platform [!DNL Data Governance] allows you to manage customer data in order to ensure compliance with regulations, restrictions, and policies applicable to data use. Using Data Usage Labeling and Enforcement (DULE) as its core framework, [!DNL Data Governance] allows you to apply usage labels to categorize data according to the usage policies that apply to that data.
+Adobe Experience Platform [!DNL Data Governance] allows you to manage customer data in order to ensure compliance with regulations, restrictions, and policies applicable to data use. The [!DNL Data Governance] framework allows you to apply usage labels to categorize data according to the usage policies that apply to that data.
 
 Data usage labels can be applied to entire datasets or individual dataset fields. Labels added at the dataset level are inherited by all fields within that dataset.
 
