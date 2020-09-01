@@ -48,7 +48,7 @@ Once you have created a new project, navigate to that project's overview screen.
 
 ![](../images/quality/subscribe-events/add-event-button.png)
 
-The _[!UICONTROL Add events]_ dialog appears. Click **[!UICONTROL Experience Platform]** to filter the list of available options, then click **[!UICONTROL Platform notifications]** before clicking **[!UICONTROL Next]**.
+The **[!UICONTROL Add events]** dialog appears. Click **[!UICONTROL Experience Platform]** to filter the list of available options, then click **[!UICONTROL Platform notifications]** before clicking **[!UICONTROL Next]**.
 
 ![](../images/quality/subscribe-events/select-platform-events.png)
 

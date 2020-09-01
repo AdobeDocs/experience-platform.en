@@ -1,7 +1,8 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;list;List;get;GET
 solution: Experience Platform
 title: List resources
+description: You can view a list of all Schema Registry resources of a certain type (classes, mixins, schemas, data types, or descriptors) within a container by performing a single GET request.
 topic: developer guide
 ---
 
