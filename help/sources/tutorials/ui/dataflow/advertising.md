@@ -22,7 +22,7 @@ Additionally, this tutorial requires that you have already created a advertising
 
 ## Select data
 
-After creating your advertising account, the *[!UICONTROL Select data]* step appears, providing an interactive interface for you to explore your file hierarchy.
+After creating your advertising account, the **[!UICONTROL Select data]** step appears, providing an interactive interface for you to explore your file hierarchy.
 
 - The left half of the interface is a directory browser, displaying your server's files and directories.
 - The right half of the interface lets you preview up to 100 rows of data from a compatible file.
@@ -33,7 +33,7 @@ Select the directory you wish to use, then select **[!UICONTROL Next]**.
 
 ## Map data fields to an XDM schema
 
-The *[!UICONTROL Mapping]* step appears, providing an interactive interface to map the source data to a [!DNL Platform] dataset.
+The **[!UICONTROL Mapping]** step appears, providing an interactive interface to map the source data to a [!DNL Platform] dataset.
 
 Choose a dataset for inbound data to be ingested into. You can either use an existing dataset or create a new dataset.
 
@@ -43,7 +43,7 @@ To ingest data into an existing dataset, select **[!UICONTROL Use existing datas
 
 ![use-existing-dataset](../../../images/tutorials/dataflow/advertising/use-existing-target-dataset.png)
 
-The *[!UICONTROL Select dataset]* dialog appears. Find the dataset you you wish to use, select it, then click **[!UICONTROL Continue]**.
+The **[!UICONTROL Select dataset]** dialog appears. Find the dataset you you wish to use, select it, then click **[!UICONTROL Continue]**.
 
 ![select-existing-dataset](../../../images/tutorials/dataflow/advertising/select-existing-dataset.png)
 
@@ -55,7 +55,7 @@ You can attach a schema field by entering a schema name in the **[!UICONTROL Sel
 
 ![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
 
-The *[!UICONTROL Select schema]* dialog appears. Select the schema you wish to apply to the new dataset, then click **[!DNL Done]**.
+The **[!UICONTROL Select schema]** dialog appears. Select the schema you wish to apply to the new dataset, then click **[!DNL Done]**.
 
 ![select-schema](../../../images/tutorials/dataflow/advertising/select-existing-schema.png)
 
@@ -67,14 +67,14 @@ Once your source data is mapped, click **[!UICONTROL Next]**.
 
 ## Schedule ingestion runs
 
-The *[!UICONTROL Scheduling]* step appears, allowing you to configure an ingestion schedule to automatically ingest the selected source data using the configured mappings. The following table outlines the different configurable fields for scheduling:
+The **[!UICONTROL Scheduling]** step appears, allowing you to configure an ingestion schedule to automatically ingest the selected source data using the configured mappings. The following table outlines the different configurable fields for scheduling:
 
 | Field | Description |
 | --- | --- |
 | Frequency | Selectable frequencies include `Once`, `Minute`, `Hour`, `Day`, and `Week`. |
 | Interval | An integer that sets the interval for the selected frequency. |
 | Start time | A UTC timestamp indicating when the very first ingestion is set to occur. |
-| Backfill | A boolean value that determines what data is initially ingested. If *[!UICONTROL Backfill]* is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If *Backfill* is disabled, only the files that are loaded in between the first run of ingestion and the *[!UICONTROL Start time]* will be ingested. Files loaded prior to *[!UICONTROL Start time]* will not be ingested. |
+| Backfill | A boolean value that determines what data is initially ingested. If **[!UICONTROL Backfill]** is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If **[!UICONTROL Backfill]** is disabled, only the files that are loaded in between the first run of ingestion and the **[!UICONTROL Start time]** will be ingested. Files loaded prior to **[!UICONTROL Start time]** will not be ingested. |
 | Delta Column | An option with a filtered set of source schema fields of type, date, or time. This field is used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column. |
 
 Dataflows are designed to automatically ingest data on a scheduled basis. Start by selecting the ingestion frequency. Next, set the interval to designate the period between two flow runs. The interval's value should be a non-zero integer and should be set to greater than or equal to 15.

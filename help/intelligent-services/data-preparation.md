@@ -265,7 +265,7 @@ Once you have created and saved the schema, you can create a new dataset based o
 * [Create a dataset in the UI](../catalog/datasets/user-guide.md#create) (Follow the workflow for using an existing schema)
 * [Create a dataset in the API](../catalog/datasets/create.md)
 
-After the dataset is created, you can find it in the Platform UI within the *[!UICONTROL Datasets]* workspace.
+After the dataset is created, you can find it in the Platform UI within the **[!UICONTROL Datasets]** workspace.
 
 ![](images/data-preparation/dataset-location.png)
 
