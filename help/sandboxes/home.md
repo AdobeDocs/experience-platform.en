@@ -10,7 +10,7 @@ description: Sandboxes are virtual partitions within a single instance of Experi
 
 Adobe Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance.
 
-In order to address this need, Experience Platform provides **sandboxes** which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+In order to address this need, Experience Platform provides sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 This document provides a high-level overview of sandboxes in Experience Platform.
 

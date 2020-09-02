@@ -16,7 +16,7 @@ seo-description: Display & Video 360, formerly known as DoubleClick Bid Manager 
 
 Note the following details that are specific to [!DNL Google Display & Video 360] destinations:
 
-* You can send the following [identities](../../identity-service/namespaces.md) to [!DNL Google Display & Video 360] destinations: **Google cookie ID, IDFA, GAID, Roku IDs, Microsoft IDs, Amazon Fire TV IDs**.
+* You can send the following [identities](../../identity-service/namespaces.md) to [!DNL Google Display & Video 360] destinations: Google cookie ID, IDFA, GAID, Roku IDs, Microsoft IDs, and Amazon Fire TV IDs.
 * Activated audiences are created programmatically in the Google platform.
 * Adobe Real-time CDP does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand audience targeting size.
 
@@ -45,7 +45,7 @@ Before creating the [!DNL Google Display & Video 360] destination in Adobe Real-
     
     >[!NOTE]
     >
-    >If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](/help/rtcdp/destinations/destinations-workspace.md#catalog) section of the destination workspace documentation.  
+    >If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between [!UICONTROL Activate] and [!UICONTROL Configure], refer to the [Catalog](/help/rtcdp/destinations/destinations-workspace.md#catalog) section of the destination workspace documentation.  
 
 2. In the **Setup** step of the create destination workflow, fill in the [!UICONTROL Basic Information] for the destination, as well as the marketing use cases that should apply to this destination. <br>
     ![Basic information Google Display & Video 360](/help/rtcdp/destinations/assets/dv360-setup-step.png)

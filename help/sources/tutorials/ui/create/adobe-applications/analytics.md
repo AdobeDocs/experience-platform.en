@@ -20,7 +20,7 @@ This tutorial requires a working understanding of the following components of Ad
 
 ## Create a source connection with Adobe Analytics
 
-Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the sources workspace. The *Catalog* screen displays available sources to create inbound connections with, and each source shows the number of existing accounts and dataset flows associated to them.
+Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the sources workspace. The **Catalog** screen displays available sources to create inbound connections with, and each source shows the number of existing accounts and dataset flows associated to them.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
@@ -65,7 +65,7 @@ Once your dataset flow has been created, you can monitor the data that is being 
 
 ![](../../../../images/tutorials/create/analytics/catalog-dataset-flows.png)
 
-The *Dataset flows* screen appears. On this page is a pair of dataset flows, including information about their name, source data, creation time, and status.
+The **Dataset flows** screen appears. On this page is a pair of dataset flows, including information about their name, source data, creation time, and status.
 
 The connector instantiates two dataset flows. One flow represents backfill data and the other is for live data. Backfill data is not configured for Profile but is sent to the data lake for analytical and data-science use-cases.
 
@@ -75,7 +75,7 @@ Select the dataset flow you wish to view from the list.
 
 ![](../../../../images/tutorials/create/analytics/backfill.png)
 
-The *Dataset activity* page appears. This page displays the rate of messages being consumed in the form of a graph. Select *Data governance* from the top header to access the labelling fields.
+The **Dataset activity** page appears. This page displays the rate of messages being consumed in the form of a graph. Select *Data governance* from the top header to access the labelling fields.
 
 ![](../../../../images/tutorials/create/analytics/batches.png)
 
@@ -83,7 +83,7 @@ You can view a dataset flow's inherited labels from the *Data governance* screen
 
 ![](../../../../images/tutorials/create/analytics/data-gov.png)
 
-The *Edit governance labels* panel appears. This screen allows you to access and edit a dataset flow's contract, identity, and sensitive labels.
+The **Edit governance labels** panel appears. This screen allows you to access and edit a dataset flow's contract, identity, and sensitive labels.
 
 For more information on how to label data coming from Analytics, visit the [data usage labels guide](../../../../../data-governance/labels/user-guide.md).
 

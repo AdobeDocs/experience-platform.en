@@ -12,7 +12,7 @@ Standardization and interoperability are key concepts behind Adobe Experience Pl
 
 XDM is a publicly documented specification designed to improve the power of digital experiences. It provides common structures and definitions for any application to use to communicate with [!DNL Platform] services. By adhering to XDM standards, all customer experience data can be incorporated into a common representation that can deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and express customer attributes for personalization purposes.
 
-XDM is the foundational framework that allows Adobe Experience Cloud, powered by [!DNL Experience Platform], to deliver the right message to the right person, on the right channel, at exactly the right moment. The methodology on which [!DNL Experience Platform] is built, **XDM System**, operationalizes [!DNL Experience Data Model] schemas for use by [!DNL Platform] services.
+XDM is the foundational framework that allows Adobe Experience Cloud, powered by [!DNL Experience Platform], to deliver the right message to the right person, on the right channel, at exactly the right moment. The methodology on which [!DNL Experience Platform] is built, XDM System, operationalizes [!DNL Experience Data Model] schemas for use by [!DNL Platform] services.
 
 This document provides an overview of the role of XDM System within [!DNL Experience Platform].
 
@@ -37,7 +37,7 @@ Data intended for use in [!DNL Experience Platform] is grouped into two behavior
 * **Record data**: Provides information about the attributes of a subject. A subject could be an organization or an individual.
 * **Time series data**: Provides a snapshot of the system at the time an action was taken either directly or indirectly by a record subject.
 
-All XDM schemas describe data that can be categorized as record or time series. The data behavior of a schema is defined by the schema's **class**, which is assigned to a schema when it is first created. XDM classes describe the smallest number of properties a schema must contain in order to represent a particular data behavior.
+All XDM schemas describe data that can be categorized as record or time series. The data behavior of a schema is defined by the schema's class, which is assigned to a schema when it is first created. XDM classes describe the smallest number of properties a schema must contain in order to represent a particular data behavior.
 
 Although you are able to define your own classes within the [!DNL Schema Registry], it is recommended that you use the preferred classes **[!DNL XDM Individual Profile]** and **[!DNL XDM ExperienceEvent]** for record and time series data, respectively. These classes are outlined in more detail below.
 

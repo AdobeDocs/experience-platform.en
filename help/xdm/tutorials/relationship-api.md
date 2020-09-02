@@ -10,7 +10,7 @@ topic: tutorials
 
 The ability to understand the relationships between your customers and their interactions with your brand across various channels is an important part of Adobe Experience Platform. Defining these relationships within the structure of your [!DNL Experience Data Model] (XDM) schemas allows you to gain complex insights into your customer data.
 
-While schema relationships can be inferred through the use of the union schema and [!DNL Real-time Customer Profile], this only applies to schemas that share the same class. To establish a relationship between two schemas belonging to different classes, a dedicated **relationship field** must be added to a source schema, which references the identity of a destination schema.
+While schema relationships can be inferred through the use of the union schema and [!DNL Real-time Customer Profile], this only applies to schemas that share the same class. To establish a relationship between two schemas belonging to different classes, a dedicated relationship field must be added to a source schema, which references the identity of a destination schema.
 
 This document provides a tutorial for defining a one-to-one relationship between two schemas defined by your organization using the [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). 
 
@@ -103,7 +103,7 @@ Record the `$id` values of the two schemas you want to define a relationship bet
 
 ## Define a reference field for the source schema
 
-Within the [!DNL Schema Registry], relationship descriptors work similarly to foreign keys in relational database tables: a field in the source schema acts as a reference to the **primary identity** field of a destination schema. If your source schema does not have a field for this purpose, you may need to create a mixin with the new field and add it to the schema. This new field must have a `type` value of "[!DNL string]".
+Within the [!DNL Schema Registry], relationship descriptors work similarly to foreign keys in relational database tables: a field in the source schema acts as a reference to the primary identity field of a destination schema. If your source schema does not have a field for this purpose, you may need to create a mixin with the new field and add it to the schema. This new field must have a `type` value of "[!DNL string]".
 
 >[!IMPORTANT]
 >

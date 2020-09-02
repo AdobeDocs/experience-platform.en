@@ -81,17 +81,17 @@ The steps are covered in detail below.
 
 Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. Next, follow the steps outlined in the tutorial on [creating an empty project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in the Adobe Developer Console documentation.
 
-Once you have created a new project, click **[!UICONTROL Add API]** on the _Project Overview_ screen.
+Once you have created a new project, click **[!UICONTROL Add API]** on the **Project Overview** screen.
 
 ![](images/authentication/add-api-button.png)
 
-The _Add an API_ screen appears. Click the product icon for Adobe Experience Platform, then select **[!UICONTROL Experience Platform API]** before clicking **[!UICONTROL Next]**.
+The **Add an API** screen appears. Click the product icon for Adobe Experience Platform, then select **[!UICONTROL Experience Platform API]** before clicking **[!UICONTROL Next]**.
 
 ![](images/authentication/add-platform-api.png)
 
 Once you have selected [!DNL Experience Platform] as the API to be added to the project, follow the steps outlined in the tutorial on [adding an API to a project using a service account (JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) (starting from the "Configure API" step) to finish the process. 
 
-Once the API has been added to the project, the _Project overview_ page displays the following credentials that are required in all calls to [!DNL Experience Platform] APIs:
+Once the API has been added to the project, the **Project overview** page displays the following credentials that are required in all calls to [!DNL Experience Platform] APIs:
 
 * `{API_KEY}` (Client ID)
 * `{IMS_ORG}` (Organization ID)

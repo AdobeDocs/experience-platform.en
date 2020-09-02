@@ -10,7 +10,7 @@ topic: tutorials
 
 The ability to understand the relationships between your customers and their interactions with your brand across various channels is an important part of Adobe Experience Platform. Defining these relationships within the structure of your [!DNL Experience Data Model] (XDM) schemas allows you to gain complex insights into your customer data.
 
-While schema relationships can be inferred through the use of the union schema and [!DNL Real-time Customer Profile], this only applies to schemas that share the same class. To establish a relationship between two schemas belonging to different classes, a dedicated **relationship field** must be added to a source schema, which references the identity of a destination schema.
+While schema relationships can be inferred through the use of the union schema and [!DNL Real-time Customer Profile], this only applies to schemas that share the same class. To establish a relationship between two schemas belonging to different classes, a dedicated relationship field must be added to a source schema, which references the identity of a destination schema.
 
 This document provides a tutorial for defining a relationship between two schemas using the Schema Editor in the [!DNL Experience Platform] user interface. For steps on defining schema relationships using the API, see the tutorial on [defining a relationship using the Schema Registry API](relationship-api.md).
 
@@ -86,7 +86,7 @@ Select the reference field in the canvas, then scroll down under **[!UICONTROL F
 
 ![](../images/tutorials/relationship/relationship-checkbox.png)
 
-Select the dropdown for **[!UICONTROL Reference Schema]** and select the destination schema for the relationship ("[!UICONTROL Hotels]" in this example). If the destination schema is enabled for Profile, the **[!UICONTROL Reference Identity Namespace]** field is automatically set to the namespace of the destination schema's primary identity. If the schema does not have a primary identity defined, you must manually select the namespace that you plan to use from the dropdown menu. Click **[!UICONTROL Apply]** when finished.
+Select the dropdown for **[!UICONTROL Reference Schema]** and select the destination schema for the relationship ("[!UICONTROL Hotels]" in this example). If the destination schema is enabled for Profile, the [!UICONTROL Reference Identity Namespace] field is automatically set to the namespace of the destination schema's primary identity. If the schema does not have a primary identity defined, you must manually select the namespace that you plan to use from the dropdown menu. Click **[!UICONTROL Apply]** when finished.
 
 ![](../images/tutorials/relationship/reference-schema-id-namespace.png)
 

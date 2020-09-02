@@ -14,9 +14,9 @@ description: Segment Builder provides a rich workspace that allows you to intera
 
 ## Segment definition building blocks
 
-The basic building blocks of segment definitions are **[!UICONTROL Attributes]** and **[!UICONTROL Events]**. In addition, the attributes and events contained in existing **[!UICONTROL Audiences]** can also be used as components for new definitions. 
+The basic building blocks of segment definitions are [!UICONTROL Attributes] and [!UICONTROL Events]. In addition, the attributes and events contained in existing [!UICONTROL Audiences] can also be used as components for new definitions. 
 
-You can see these building blocks in the **[!UICONTROL Fields]** section on the left side of the [!DNL Segment Builder] workspace. **[!UICONTROL Fields]** contains a tab for each of the main building blocks: **[!UICONTROL Attributes]**, **[!UICONTROL Events]**, and **[!UICONTROL Audiences]**.
+You can see these building blocks in the **[!UICONTROL Fields]** section on the left side of the [!DNL Segment Builder] workspace. **[!UICONTROL Fields]** contains a tab for each of the main building blocks: [!UICONTROL Attributes], [!UICONTROL Events], and [!UICONTROL Audiences].
 
 ![](../images/ui/segment-builder/segment-fields.png)
 
@@ -126,7 +126,7 @@ To select a merge policy for your segment definition, select the gear icon on th
 
 When building a segment definition, the **[!UICONTROL Segment Properties]** section on the right-hand side of the workspace displays an estimate of the size of the resulting segment, allowing you to adjust your segment definition as needed before building the audience itself.
 
-The **[!UICONTROL Segment Properties]** section is also where you can specify important information about your segment definition, including its **[!UICONTROL Name]** and **[!UICONTROL Description]**. Segment definition names are used to identify your segment among those defined by your organization and should therefore be descriptive, concise, and unique. 
+The **[!UICONTROL Segment Properties]** section is also where you can specify important information about your segment definition, including its [!UICONTROL Name] and [!UICONTROL Description]. Segment definition names are used to identify your segment among those defined by your organization and should therefore be descriptive, concise, and unique. 
 
 As you continue to build your segment definition, you can view a paginated preview of the audience by selecting **[!UICONTROL View Profiles]**.
 

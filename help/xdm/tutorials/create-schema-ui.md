@@ -106,7 +106,7 @@ Similar to the "[!UICONTROL name]" field, the fields you just added represent mu
 
 The "[!UICONTROL Loyalty Members]" schema is meant to capture data related to the members of a loyalty program, so it will require some specific loyalty-related fields. There are no standard mixins available that contain the necessary fields, therefore you will need to define a new mixin.
 
-This time, when you open the **[!UICONTROL Add Mixin]** dialog, select **[!UICONTROL Create New Mixin]**. You will then be asked to provide a **[!UICONTROL Display Name]** and **[!UICONTROL Description]** for your mixin. 
+This time, when you open the **[!UICONTROL Add Mixin]** dialog, select **[!UICONTROL Create New Mixin]**. You will then be asked to provide a [!UICONTROL Display Name] and [!UICONTROL Description] for your mixin. 
 
 ![](../images/tutorials/create-schema/mixin_create_new.png)
 
@@ -147,7 +147,7 @@ Each field requires the following information:
 * **[!UICONTROL Type]:** The data type of the field. This includes basic scalar types and any data types defined in the [!DNL Schema Registry]. Examples: [!UICONTROL string], [!UICONTROL integer], [!UICONTROL boolean], [!UICONTROL Person], [!UICONTROL Address], [!UICONTROL Phone Number], etc.
 * **[!UICONTROL Description]:** An optional description of the field should be included, written in sentence case, with a maximum of 200 characters.
 
-The first field for the [!DNL Loyalty] object will be a string called "[!DNL loyaltyId]". When setting the new field's type to "[!UICONTROL String]", the **[!UICONTROL Field Properties]** section becomes populated with several options for applying constraints, including **[!UICONTROL Default Value]**, **[!UICONTROL Format]**, and **[!UICONTROL Maximum Length]**.
+The first field for the [!DNL Loyalty] object will be a string called "[!DNL loyaltyId]". When setting the new field's type to "[!UICONTROL String]", the **[!UICONTROL Field Properties]** section becomes populated with several options for applying constraints, including [!UICONTROL Default Value], [!UICONTROL Format], and [!UICONTROL Maximum Length].
 
 ![](../images/tutorials/create-schema/string_constraints.png)
 
@@ -180,7 +180,7 @@ When defining fields in the [!DNL Schema Editor], there are some additional opti
 | [!UICONTROL Identity] | Indicates that this field is an identity field. More information regarding identity fields is provided [later in this tutorial](#identity-field). |
 | [!UICONTROL Relationship] | While schema relationships can be inferred through the use of the union schema and [!DNL Real-time Customer Profile], this only applies to schemas that share the same class. The [!UICONTROL Relationship] constraint indicates that this field references the primary identity of a schema based on a different class, implying a relationship between the two schemas. See the tutorial on [defining a relationship](./relationship-ui.md) for more information. |
 
-For this tutorial, the [!DNL "loyalty"] object in the schema requires a new enum field that describes the "loyalty level" of a customer, where the value can only be one of four possible options. To add this field to the schema, select **[!UICONTROL Add Field]** beside the "[!DNL loyalty]" object and fill in the required fields for **[!UICONTROL Field name]** and **[!UICONTROL Display name]**. For **[!UICONTROL Type]**, select "[!UICONTROL String]".
+For this tutorial, the [!DNL "loyalty"] object in the schema requires a new enum field that describes the "loyalty level" of a customer, where the value can only be one of four possible options. To add this field to the schema, select **[!UICONTROL Add Field]** beside the "[!DNL loyalty]" object and fill in the required fields for [!UICONTROL Field name] and [!UICONTROL Display name]. For **[!UICONTROL Type]**, select "[!UICONTROL String]".
 
 ![](../images/tutorials/create-schema/loyalty-level-type.png)
 
@@ -206,7 +206,7 @@ Now, when you look under **[!UICONTROL Structure]**, you can see that the "[!DNL
 
 ![](../images/tutorials/create-schema/loyalty_data_type.png)
 
-In a future schema, you could now assign a field the **[!UICONTROL Type]** of "[!DNL Loyalty]" and it would automatically include fields for ID, loyalty level, member since, and points.
+In a future schema, you could now assign a field the [!UICONTROL Type] of "[!DNL Loyalty]" and it would automatically include fields for ID, loyalty level, member since, and points.
 
 ## Set a schema field as an identity field {#identity-field}
 
@@ -300,13 +300,13 @@ In the **[!UICONTROL Schemas]** workspace, select **[!UICONTROL Create schema]**
 
 ![](../images/tutorials/create-schema/browse-classes.png)
 
-A dialog appears that allows you select from a list of available classes. At the top of the dialog, select **[!UICONTROL Create New Class]**. You can then give your new class a **[!UICONTROL Display Name]** (a short, descriptive, unique, and user-friendly name for the class), a **[!UICONTROL Description]**, and a **[!UICONTROL Behavior]** ("[!UICONTROL Record]" or "[!UICONTROL Time Series]") for the data the schema will define. 
+A dialog appears that allows you select from a list of available classes. At the top of the dialog, select **[!UICONTROL Create New Class]**. You can then give your new class a [!UICONTROL Display Name] (a short, descriptive, unique, and user-friendly name for the class), a [!UICONTROL Description], and a [!UICONTROL Behavior] ("[!UICONTROL Record]" or "[!UICONTROL Time Series]") for the data the schema will define. 
 
 ![](../images/tutorials/create-schema/create_new_class.png)
 
 >[!IMPORTANT]
 >
->When building a schema that implements a class defined by your organization, remember that mixins are available for use only with compatible classes. Since the class you defined is new, there are no compatible mixins listed in the *Add Mixin* dialog. Instead, you will need to select **[!UICONTROL Create New Mixin]** and define a mixin for use with that class. The next time you compose a schema that implements the new class, the mixin that you defined will be listed and available for use. 
+>When building a schema that implements a class defined by your organization, remember that mixins are available for use only with compatible classes. Since the class you defined is new, there are no compatible mixins listed in the **Add Mixin** dialog. Instead, you will need to select **[!UICONTROL Create New Mixin]** and define a mixin for use with that class. The next time you compose a schema that implements the new class, the mixin that you defined will be listed and available for use. 
 
 ### Change the class of a schema {#change-class}
 
