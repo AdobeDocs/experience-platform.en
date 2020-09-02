@@ -40,79 +40,79 @@ Sources in [!DNL Experience Platform] are grouped into the following categories:
 
 Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM parquet, or delimited. Every step of the process is integrated into the Sources workflow using the user interface. See the following related documents for more information:
 
-- [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) connector
-- [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) connector
-- [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) connector
-- [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) connector
-- [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) connector
-- [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) connector
-- [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) connector
-- [[!DNL FTP and SFTP]](connectors/cloud-storage/ftp-sftp.md) connector
-- [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md) connector
+- [[!DNL Azure Data Lake Storage Gen2] connector](connectors/cloud-storage/adls-gen2.md)
+- [[!DNL Azure Blob] connector](connectors/cloud-storage/blob.md)
+- [[!DNL Amazon Kinesis] connector](connectors/cloud-storage/kinesis.md)
+- [[!DNL Amazon S3] connector](connectors/cloud-storage/s3.md)
+- [[!DNL Apache HDFS] connector](connectors/cloud-storage/hdfs.md)
+- [[!DNL Azure Event Hubs] connector](connectors/cloud-storage/eventhub.md)
+- [[!DNL Azure File Storage] connector](connectors/cloud-storage/azure-file-storage.md)
+- [[!DNL FTP and SFTP] connector](connectors/cloud-storage/ftp-sftp.md)
+- [[!DNL Google Cloud Storage] connector](connectors/cloud-storage/google-cloud-storage.md) 
 
 ### Customer Relationship Management (CRM)
 
 CRM systems provide data that can help build customer relationships, which in turn, create loyalty and drive customer retention. [!DNL Experience Platform] provides support for ingesting CRM data from [!DNL Microsoft Dynamics 365] and [!DNL Salesforce]. See the following related documents for more information:
 
-- [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) connector
-- [[!DNL Salesforce]](connectors/crm/salesforce.md) connector
+- [[!DNL Microsoft Dynamics] connector](connectors/crm/ms-dynamics.md)
+- [[!DNL Salesforce] connector](connectors/crm/salesforce.md)
 
 ### Customer Success
 
 [!DNL Experience Platform] provides support for ingesting data from a third-party customer success application. See the following related documents for more information:
 
-- [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) connector
-- [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) connector
+- [[!DNL Salesforce Service Cloud] connector](connectors/customer-success/salesforce-service-cloud.md)
+- [[!DNL ServiceNow] connector](connectors/customer-success/servicenow.md)
 
 ### Database
 
 [!DNL Experience Platform] provides support for ingesting data from a third-party database. See the following related documents for more information on specific source connectors:
 
-- [[!DNL Amazon Redshift]](connectors/databases/redshift.md) connector
-- [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) connector
-- [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) connector
-- [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) connector
-- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) connector
-- [[!DNL Azure Table Storage]](connectors/databases/ats.md) connector
-- [[!DNL Couchbase]](connectors/databases/couchbase.md) connector
-- [[!DNL Google BigQuery]](connectors/databases/bigquery.md) connector
-- [[!DNL GreenPlum]](connectors/databases/greenplum.md) connector
-- [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) connector
-- [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) connector
-- [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) connector
-- [[!DNL MySQL]](connectors/databases/mysql.md) connector
-- [[!DNL Oracle]](connectors/databases/oracle.md) connector
-- [[!DNL Phoenix]](connectors/databases/phoenix.md) connector
-- [[!DNL PostgreSQL]](connectors/databases/postgres.md) connector
+- [[!DNL Amazon Redshift] connector](connectors/databases/redshift.md)
+- [[!DNL Apache Hive on Azure HDInsights] connector](connectors/databases/hive.md)
+- [[!DNL Apache Spark on Azure HDInsights] connector](connectors/databases/spark.md)
+- [[!DNL Azure Data Explorer] connector](connectors/databases/data-explorer.md)
+- [[!DNL Azure Synapse Analytics] connector](connectors/databases/synapse-analytics.md)
+- [[!DNL Azure Table Storage] connector](connectors/databases/ats.md)
+- [[!DNL Couchbase] connector](connectors/databases/couchbase.md)
+- [[!DNL Google BigQuery] connector](connectors/databases/bigquery.md)
+- [[!DNL GreenPlum] connector](connectors/databases/greenplum.md)
+- [[!DNL HP Vertica] connector](connectors/databases/hp-vertica.md)
+- [[!DNL IBM DB2] connector](connectors/databases/ibm-db2.md)
+- [[!DNL Microsoft SQL Server] connector](connectors/databases/sql-server.md)
+- [[!DNL MySQL] connector](connectors/databases/mysql.md)
+- [[!DNL Oracle] connector](connectors/databases/oracle.md)
+- [[!DNL Phoenix] connector](connectors/databases/phoenix.md)
+- [[!DNL PostgreSQL] connector](connectors/databases/postgres.md)
 
 ### Marketing Automation
 
 [!DNL Experience Platform] provides support for ingesting data from a third-party marketing automation system. See the following related documents for more information on specific source connectors:
 
-- [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) connector
+- [[!DNL HubSpot] connector](connectors/marketing-automation/hubspot.md)
 
 ### Payments
 
 [!DNL Experience Platform] provides support for ingesting data from a third-party payments system. See the following related documents for more information on specific source connectors:
 
-- [[!DNL PayPal]](connectors/payments/paypal.md) connector
+- [[!DNL PayPal] connector](connectors/payments/paypal.md)
 
 ### Protocols
 
 [!DNL Experience Platform] provides support for ingesting data from a third-party protocols system. See the following related documents for more information on specific source connectors:
 
-- [[!DNL Generic OData]](connectors/protocols/odata.md) connector
+- [[!DNL Generic OData] connector](connectors/protocols/odata.md)
 
 ## Access control for sources in data ingestion
 
-Permissions for sources in data ingestion can be managed within the Adobe Admin Console. You can access permissions through the *[!UICONTROL Permissions]* tab in a particular product profile. From the **[!UICONTROL Edit Permissions]** panel, you can access the permissions pertaining to sources through the *[!UICONTROL data ingestion]* menu entry. The **[!UICONTROL View Sources]** permission grants read-only access to available sources in the *[!UICONTROL Catalog]* tab and authenticated sources in the *[!UICONTROL Browse]* tab, while the **[!UICONTROL Manage Sources]** permission grants full access to read, create, edit, and disable sources.
+Permissions for sources in data ingestion can be managed within the Adobe Admin Console. You can access permissions through the **[!UICONTROL Permissions]** tab in a particular product profile. From the **[!UICONTROL Edit Permissions]** panel, you can access the permissions pertaining to sources through the **[!UICONTROL data ingestion]** menu entry. The **[!UICONTROL View Sources]** permission grants read-only access to available sources in the **[!UICONTROL Catalog]** tab and authenticated sources in the **[!UICONTROL Browse]** tab, while the **[!UICONTROL Manage Sources]** permission grants full access to read, create, edit, and disable sources.
 
 The following table outlines how the UI behaves based on different combinations of these permissions:
 
 | Permission level | Description |
 | ---- | ----|
 | **[!UICONTROL View Sources]** On | Grant read-only access to sources in each source-type in the *Catalog* tab, as well as the *Browse*, *Accounts*, and *DataFlow* tabs. |
-| **[!UICONTROL Manage Sources]** On | In addition to the functions included in **[!UICONTROL View Sources]**, grants access to *[!UICONTROL Connect Source]* option in *[!UICONTROL Catalog]* and to *[!UICONTROL Select Data]* option in *[!UICONTROL Browse]*. **[!UICONTROL Manage Sources]** also allows you to enable or disable *[!UICONTROL DataFlows]* and edit their schedules. |
+| **[!UICONTROL Manage Sources]** On | In addition to the functions included in **[!UICONTROL View Sources]**, grants access to **[!UICONTROL Connect Source]** option in **[!UICONTROL Catalog]** and to **[!UICONTROL Select Data]** option in **[!UICONTROL Browse]**. **[!UICONTROL Manage Sources]** also allows you to enable or disable **[!UICONTROL DataFlows]** and edit their schedules. |
 | **[!UICONTROL View Sources]** Off and **[!UICONTROL Manage Sources]** Off | Revoke all access to sources. |
 
 For more information about the available permissions granted through the Admin Console, including those four sources, see the [access control overview](../access-control/home.md).

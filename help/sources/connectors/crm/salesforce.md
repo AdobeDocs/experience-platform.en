@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;crm schema;crm;CRM
+keywords: Experience Platform;home;popular topics;crm schema;crm;CRM;salesforce;Salesforce
 solution: Experience Platform
 title: Salesforce connector
 topic: overview

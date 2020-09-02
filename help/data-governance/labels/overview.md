@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api;data usage labels overview
 solution: Experience Platform
 title: Data usage labels overview
 topic: labels
+description: Adobe Experience Platform Data Governance enables you to apply data usage labels to datasets and fields, categorizing each according to related data usage policies. This document provides an overview of data usage labels in Experience Platform.
 ---
 
 # Data usage labels overview

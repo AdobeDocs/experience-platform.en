@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data usage compliance;enforce;enforce data usage compliance;Segmentation Service;segmentation;Segmentation;
 solution: Experience Platform
 title: Enforce data usage compliance for audience segments
 topic: tutorial
@@ -16,7 +16,7 @@ This tutorial requires a working understanding of the following components of [!
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): [!DNL Real-time Customer Profile] is a generic lookup entity store, and is used to manage [!DNL Experience Data Model] (XDM) data within [!DNL Platform]. Profile merges data across various enterprise data assets and provides access to that data in a unified presentation.
     - [Merge policies](../../profile/api/merge-policies.md): Rules used by [!DNL Real-time Customer Profile] to determine what data can be merged into a unified view under certain conditions. Merge policies can be configured for [!DNL Data Governance] purposes.
 - [[!DNL Segmentation]](../home.md): How [!DNL Real-time Customer Profile] divides a large group of individuals contained in the profile store into smaller groups that share similar traits and will respond similarly to marketing strategies.
-- [[!DNL Data Governance]](../../data-governance/home.md): [!DNL Data Governance] provides the infrastructure for data usage labeling and enforcement (DULE), using the following components:
+- [[!DNL Data Governance]](../../data-governance/home.md): [!DNL Data Governance] provides the infrastructure for data usage labeling and enforcement, using the following components:
     - [Data usage labels](../../data-governance/labels/user-guide.md): Labels used to describe datasets and fields in terms of the level of sensitivity with which to handle their respective data.
     - [Data usage policies](../../data-governance/policies/overview.md): Configurations indicating which marketing actions are allowed on data categorized by particular data usage labels.
     - [Policy enforcement](../../data-governance/enforcement/overview.md): Allows you to enforce data usage policies and prevent data operations that constitute policy violations.
@@ -180,7 +180,7 @@ A successful response returns the details of the merge policy.
 >
 > This step assumes that you have at least one active data usage policy that prevents specific marketing actions to be performed on data containing certain labels. If you do not have any applicable usage policies for the datasets being evaluated, please follow the [policy creation tutorial](../../data-governance/policies/create.md) to create one before continuing with this step.
 
-Once you have obtained the IDs of the merge policy's source datasets, you can use the [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) to evaluate those datasets against specific marketing actions in order to check for data usage policy violations.
+Once you have obtained the IDs of the merge policy's source datasets, you can use the [Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) to evaluate those datasets against specific marketing actions in order to check for data usage policy violations.
 
 To evaluate the datasets, you must provide the name of the marketing action in the path of a POST request, while providing the dataset IDs within the request body, as shown in the example below.
 

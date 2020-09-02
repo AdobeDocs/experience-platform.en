@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type;datatype;Datatype
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;datatype;Datatype;data type;Data type;create
 solution: Experience Platform
 title: Create a data type
 topic: developer guide

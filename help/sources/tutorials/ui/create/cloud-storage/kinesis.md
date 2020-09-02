@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Amazon Kinesis;amazon kinesis;Kinesis;kinesis
 solution: Experience Platform
 title: Create an Amazon Kinesis source connector in the UI
 topic: overview
+description: This tutorial provides steps for authenticating an Amazon Kinesis (hereinafter referred to as "Kinesis") source connector using the Platform user interface.
 ---
 
 # Create an [!DNL Amazon Kinesis] source connector in the UI
@@ -22,7 +23,7 @@ This tutorial requires a working understanding of the following components of Ad
     -   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 -   [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
-If you already have a valid [!DNL Kinesis] connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/streaming/cloud-storage.md).
+If you already have a valid [!DNL Kinesis] connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/streaming/cloud-storage-streaming.md).
 
 ### Gather required credentials
 
@@ -64,4 +65,4 @@ To connect an existing account, select the [!DNL Kinesis] account you want to co
 
 ## Next steps
 
-By following this tutorial, you have connected to your [!DNL Kinesis] account to [!DNL Platform]. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into [!DNL Platform]](../../dataflow/streaming/cloud-storage.md).
+By following this tutorial, you have connected to your [!DNL Kinesis] account to [!DNL Platform]. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into [!DNL Platform]](../../dataflow/streaming/cloud-storage-streaming.md).

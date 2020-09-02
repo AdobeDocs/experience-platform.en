@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;OData;odata;oData;Generic OData;generic odata
 solution: Experience Platform
 title: Generic OData connector
 topic: overview
+description: The documentation below provides information on how to connect Generic OData to Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL Generic OData] connector

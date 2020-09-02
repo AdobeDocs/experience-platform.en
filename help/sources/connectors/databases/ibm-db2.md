@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;IBM DB2;ibm db2;DB2;db2
 solution: Experience Platform
 title: IBM DB2 connector
 topic: overview
+description: The documentation below provides information on how to connect IBM DB2 to Platform using APIs or the user interface.
 ---
 
 # (Beta) IBM DB2 connector

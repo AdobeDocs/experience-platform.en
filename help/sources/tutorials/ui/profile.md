@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;activate inbound data;populate profile;populate rtcp;populated unified profile
 solution: Experience Platform
 title: Activate inbound source data to populate customer profiles
 topic: overview
+description: Inbound data from your source connector can be used towards enriching and populating your Real-time Customer Profile data.
 ---
 
 # Activate inbound source data to populate customer profiles
@@ -40,7 +41,7 @@ The **[!UICONTROL Dataset activity]** screen appears. The **[!UICONTROL Properti
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/select-dataset-schema.png)
 
-The **[!UICONTROL Schema Editor]** appears, showing the structure of the schema in the center canvas. Within the canvas, select the field to be set as the primary identity. Under the *[!UICONTROL Field properties]* tab that appears, select the **[!UICONTROL Identity]** checkbox, then **[!UICONTROL Primary identity]**. Finally, select an appropriate **[!UICONTROL Identity namespace]**, then click **[!UICONTROL Apply]**.
+The **[!UICONTROL Schema Editor]** appears, showing the structure of the schema in the center canvas. Within the canvas, select the field to be set as the primary identity. Under the **[!UICONTROL Field properties]** tab that appears, select the **[!UICONTROL Identity]** checkbox, then **[!UICONTROL Primary identity]**. Finally, select an appropriate **[!UICONTROL Identity namespace]**, then click **[!UICONTROL Apply]**.
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/set-schema-identity.png)
 

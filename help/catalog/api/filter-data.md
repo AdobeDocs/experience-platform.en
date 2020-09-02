@@ -10,7 +10,7 @@ description: The Catalog Service API allows response data to be filtered through
 
 The [!DNL Catalog Service] API allows response data to be filtered through the use of request query parameters. Part of best practices for [!DNL Catalog] is to use filters in all API calls, as they reduce the load on the API and help to improve overall performance.
 
-This document outlines the most common methods for filtering [!DNL Catalog] objects in the API. It is recommended that you reference this document while reading the [Catalog developer guide](getting-started.md) to learn more about how to interact with the [!DNL Catalog] API. For more general information on [!DNL Catalog Service], see the [Catalog overview](../home.md).
+This document outlines the most common methods for filtering [!DNL Catalog] objects in the API. It is recommended that you reference this document while reading the [Catalog developer guide](getting-started.md) to learn more about how to interact with the [!DNL Catalog] API. For more general information on [!DNL Catalog Service], see the [[!DNL Catalog] overview](../home.md).
 
 ## Limit returned objects
 

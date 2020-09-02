@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Greenplum;greenplum
 solution: Experience Platform
 title: Create a GreenPlum source connector in the UI
 topic: overview
+description: This tutorial provides steps for creating an GreenPlum source connector using the Platform user interface.
 ---
 
 # Create a [!DNL GreenPlum] source connector in the UI

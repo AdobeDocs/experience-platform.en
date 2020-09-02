@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Oracle;oracle
 solution: Experience Platform
 title: Oracle connector
 topic: overview
+description: The documentation below provides information on how to connect Oracle to Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL Oracle] connector

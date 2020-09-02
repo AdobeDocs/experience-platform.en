@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segment;Segment;segment builder;Segment builder
+keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;
 solution: Experience Platform
 title: Segmentation Service Segment Builder user guide
 topic: ui guide
@@ -128,7 +128,7 @@ To select a merge policy for your segment definition, select the gear icon on th
 
 ## Segment properties 
 
-When building a segment definition, the *[!UICONTROL Segment Properties]* section on the right-hand side of the workspace displays an estimate of the size of the resulting segment, allowing you to adjust your segment definition as needed before building the audience itself.
+When building a segment definition, the **[!UICONTROL Segment Properties]** section on the right-hand side of the workspace displays an estimate of the size of the resulting segment, allowing you to adjust your segment definition as needed before building the audience itself.
 
 The **[!UICONTROL Segment Properties]** section is also where you can specify important information about your segment definition, including its **[!UICONTROL Name]** and **[!UICONTROL Description]**. Segment definition names are used to identify your segment among those defined by your organization and should therefore be descriptive, concise, and unique. 
 

@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;hubspot;Hubspot
 solution: Experience Platform
 title: Create a HubSpot connector using the Flow Service API
 topic: overview
+description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to HubSpot.
 ---
 
 # Create a [!DNL HubSpot] connector using the [!DNL Flow Service] API

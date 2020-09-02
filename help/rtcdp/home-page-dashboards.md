@@ -12,7 +12,7 @@ The Adobe Real-time Customer Data Platform (Real-time CDP) home page, which incl
 
 The home page is only one of the places where metric cards appear. Real-time CDP provides metric cards throughout your experience. These metrics inform you about the data, profile, and segment audiences in the system. 
 
-![image](assets/home2.jpg)
+![image](assets/home.png)
 
 If there is no data in the system when you log in to Real-time CDP, the dashboard on the home page does not appear. In this case, the home page provides learning material for a first time user experience. As data is collected--in other words, as <!--sources-->datasets, profiles, segments, and destinations are created and data flows into the system--the dashboard automatically updates to display information about that data<!-- in metric cards-->. 
 
@@ -24,14 +24,14 @@ The dashboard is divided into<!-- two areas.-->:
 
 * **The leaderboard** is across the top of the dashboard. The leaderboard shows the number of datasets, profiles, segments, and destinations in the system. 
 
-    ![image](assets/home-leaderboard2.jpg)
+    ![image](assets/leaderboard.png)
 
 <!-- * **Metric cards** display beneath the leaderboard. Metric cards show additional information, such as percentages or trends. Metric cards appear as data is collected.
     ![image](assets/home-metrics.jpg)
 Some information is shown in different ways on both the leaderboard and metric cards. -->
 * **Recent items** lists the five most recent datasets, sources, segments, and destinations added to the system.
 
-    ![image](assets/home-recent.jpg)
+    ![image](assets/recent.png)
 
 Additional metrics--for example for profiles and segments--are available in other parts of Real-time Customer Data Platform.
 
