@@ -46,7 +46,7 @@ Once you have created an ERD to identify the essential entities you would like t
 | --- | --- |
 | Profile entities | Profile entities represent attributes relating to an individual person, typically a customer. Entities that fall under this category should be represented by schemas based on the [!DNL XDM Individual Profile] class. |
 | Lookup entities | Lookup entities represent concepts that can relate to an individual person, but cannot be directly used to identify the individual. Entities that fall under this category should be represented by schemas based on custom classes. |
-| Event entities | Event entities represent concepts related to actions a customer can take, system events, or any other concept where you may want to track changes over time. Entities that fall under this category should be represented by schemas based on the [!DNL XDM ExperienceEvent]. |
+| Event entities | Event entities represent concepts related to actions a customer can take, system events, or any other concept where you may want to track changes over time. Entities that fall under this category should be represented by schemas based on the [!DNL XDM ExperienceEvent] class. |
 
 The sections below provide further guidance for how to sort your entities into the above categories.
 
