@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey
+keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration
 solution: Experience Platform
 title: Adobe Experience Platform overview
 topic: getting started
@@ -127,7 +127,7 @@ One of the key benefits provided by Adobe Experience Platform is its capability 
 
 >[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)
 
-For additional information on the architecture that powers of Adobe Experience Platform, please watch the following video:
+For additional information on the architecture that powers Adobe Experience Platform, please watch the following video:
 
 >[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)
 
@@ -143,13 +143,14 @@ The following videos outline the key capabilities and use cases for [!DNL Experi
 
 >[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)
 
+## Adobe services built on top of [!DNL Experience Platform]
 
+Adobe has built several services on top of [!DNL Experience Platform]. Use the links below to navigate to the homepages of these services:
 
-
-
+* [[!DNL Customer Journey Analytics]](https://docs.adobe.com/content/help/en/analytics-platform/using/cja-landing.html) 
+* [[!DNL Journey Orchestration]](https://docs.adobe.com/content/help/en/journeys/using/journey-orchestration-home.html)
+* [[!DNL Real-time Customer Data Platform]](/help/rtcdp/overview.md)
  
-
-
 
 <!-- 
 ## What's New
