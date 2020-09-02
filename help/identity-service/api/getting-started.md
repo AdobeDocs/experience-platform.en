@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;identity service api;identity service developer guide
 solution: Experience Platform
 title: Getting started
 topic: API guide
+description: 
 ---
 
 # [!DNL Identity Service] API developer guide

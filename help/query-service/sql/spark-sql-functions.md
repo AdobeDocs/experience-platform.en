@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;spark sql;Spark sql;spark;spark sql functions;functions;
 solution: Experience Platform
 title: Spark SQL functions
 topic: spark sql functions

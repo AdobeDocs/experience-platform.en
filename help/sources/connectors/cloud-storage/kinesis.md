@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Amazon Kinesis;amazon kinesis;Kinesis;kinesis
 solution: Experience Platform
 title: Amazon Kinesis connector
 topic: overview
+description: The documentation below provides information on how to connect Amazon Kinesis to Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL Amazon Kinesis] connector

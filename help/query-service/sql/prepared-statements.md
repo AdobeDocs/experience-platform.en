@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;prepared statements;prepared;sql;
 solution: Experience Platform
 title: Prepared statements
 topic: prepared statements

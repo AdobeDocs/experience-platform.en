@@ -9,6 +9,7 @@ description: The following guides outline the steps and information required for
 # Recipe and notebook migration guides
 
 >[!NOTE]
+>
 >Notebooks and recipes using [!DNL Python]/R remain unaffected. The migration only applies to PySpark/[!DNL Spark] (2.3) recipes and notebooks.
 
 The following guides outline the steps and information required for migrating existing recipes and notebooks. 
@@ -78,6 +79,7 @@ var df = sparkSession.read.format("com.adobe.platform.query")
 ```
 
 >[!TIP]
+>
 > Interactive mode times out if queries are running longer than 10 minutes. If you are ingesting more than a few gigabytes of data, it is recommended that you switch to "batch" mode. Batch mode takes longer to start up but can handle larger sets of data.
 
 #### Write to a dataset
@@ -131,6 +133,7 @@ The Scala recipe is located in the following directory `experience-platform-dsw-
 A new file is needed in your recipe folder in order to use the docker based workflow. Copy and paste the Dockerfile from the the recipes folder located at `experience-platform-dsw-reference/recipes/scala/Dockerfile`. Optionally, you can also copy and paste the code below in a new file called `Dockerfile`. 
 
 >[!IMPORTANT]
+>
 > The example jar file shown below `ml-retail-sample-spark-*-jar-with-dependencies.jar` should be replaced with the name of your recipe's jar file.
 
 ```scala
@@ -215,6 +218,7 @@ pd = sparkSession.read.format("com.adobe.platform.query")
 ```
 
 >[!TIP]
+>
 > Interactive mode times out if queries are running longer than 10 minutes. If you are ingesting more than a few gigabytes of data, it is recommended that you switch to "batch" mode. Batch mode takes longer to start up but can handle larger sets of data.
 
 #### Write to a dataset
@@ -268,6 +272,7 @@ The PySpark recipe is located in the following directory `experience-platform-ds
 A new file is needed in your recipe folder in order to use the docker based workflow. Copy and paste the Dockerfile from the the recipes folder located at `experience-platform-dsw-reference/recipes/pyspark/Dockerfile`. Optionally, you can also copy and paste the code below and make a new file called `Dockerfile`.
 
 >[!IMPORTANT]
+>
 > The example egg file shown below `pysparkretailapp-*.egg` should be replaced with the name of your recipe's egg file.
 
 ```scala

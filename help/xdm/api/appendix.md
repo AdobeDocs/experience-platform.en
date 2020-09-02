@@ -1,7 +1,8 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;compatibility;Compatibility;compatibility mode;Compatibility mode;field type;field types;
 solution: Experience Platform
 title: Schema Registry developer appendix
+description: This document provides supplemental information related to working with the Schema Registry API.
 topic: developer guide
 ---
 

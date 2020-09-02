@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segment evaluation
+keywords: Experience Platform;home;popular topics;streaming segmentation;Segmentation;Segmentation Service;segmentation service;ui guide;
 solution: Experience Platform
 title: Streaming segmentation
 topic: ui guide

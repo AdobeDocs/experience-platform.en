@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Synapse Analytics;azure synapse analytics;Synapse;synapse
 solution: Experience Platform
 title: Azure Synapse Analytics connector
 topic: overview
+description: The documentation below provides information on how to connect Azure Synapse Analytics to Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL Azure Synapse Analytics] connector

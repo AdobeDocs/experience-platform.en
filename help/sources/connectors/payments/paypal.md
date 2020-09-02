@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Paypal;paypal;PayPal
 solution: Experience Platform
 title: PayPal connector
 topic: overview
+description: The documentation below provides information on how to connect PayPal to Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL PayPal] connector

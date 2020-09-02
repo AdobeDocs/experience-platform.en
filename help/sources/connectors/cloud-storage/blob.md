@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Blob;blob;Azure Blob;azure blob
 solution: Experience Platform
 title: Azure Blob connector
 topic: overview
+description: The documentation below provides information on how to connect Azure Blob to Platform using APIs or the user interface.
 ---
 
 # Azure Blob connector

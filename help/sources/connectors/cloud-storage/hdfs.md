@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;HDFS;hdfs;Apache HDFS;apache hdfs
 solution: Experience Platform
 title: HDFS connector
 topic: overview
+description: The documentation below provides information on how to connect Apache HDFS to Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL Apache] HDFS connector

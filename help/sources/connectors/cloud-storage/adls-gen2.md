@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Data Lake Storage Gen2;ADLS-Gen2;adls gen2;ADLS Gen2
 solution: Experience Platform
 title: Azure Data Lake Storage Gen2 connector
 topic: overview
+description: The documentation below provides information on how to connect Azure Data Lake Storage Gen2 to Platform using APIs or the user interface.
 ---
 
 # Azure Data Lake Storage Gen2 connector

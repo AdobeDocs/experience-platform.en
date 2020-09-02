@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;greenplum;Greenplum
 solution: Experience Platform
 title: Create a GreenPlum connector using the Flow Service API
 topic: overview
+description: This tutorial uses the Flow Service API to walk you through the steps to connect GreenPlum to Experience Platform.
 ---
 
 # Create a [!DNL GreenPlum] connector using the [!DNL Flow Service] API

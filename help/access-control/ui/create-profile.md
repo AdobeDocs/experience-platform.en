@@ -8,11 +8,11 @@ description: This document covers the necessary steps needed to create a new pro
 
 # Create a new product profile
 
-To start creating a new profile, navigate to the *[!UICONTROL Product Profiles]* tab and click **[!UICONTROL New Profile]**.
+To start creating a new profile, navigate to the **[!UICONTROL Product Profiles]** tab and click **[!UICONTROL New Profile]**.
 
 ![new-profile-button](../images/new-profile-button.png)
 
-The _[!UICONTROL Create New Profile]_ dialog appears, prompting you to enter a **[!UICONTROL Profile Name]** and **[!UICONTROL Description]** for the new profile. If you want the profile's display name to be different, uncheck **[!UICONTROL Same as Profile Name]** and enter the display name in the text box that appears. Under *[!UICONTROL User Notifications]*, you can toggle whether users will be notified by email when they are added or removed from the profile.
+The **[!UICONTROL Create New Profile]** dialog appears, prompting you to enter a **[!UICONTROL Profile Name]** and **[!UICONTROL Description]** for the new profile. If you want the profile's display name to be different, uncheck **[!UICONTROL Same as Profile Name]** and enter the display name in the text box that appears. Under **[!UICONTROL User Notifications]**, you can toggle whether users will be notified by email when they are added or removed from the profile.
 
 When finished, click **[!UICONTROL Next]**.
 

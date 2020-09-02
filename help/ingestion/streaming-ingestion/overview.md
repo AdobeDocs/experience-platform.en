@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;data ingestion;ingested data;streaming
+keywords: Experience Platform;home;popular topics;data ingestion;ingested data;streaming;overview;streaming ingestion;latency;streaming latency;
 solution: Experience Platform
 title: Adobe Experience Platform Streaming Ingestion overview
 topic: overview

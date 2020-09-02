@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;FTP;SFTP;ftp;sftp
 solution: Experience Platform
 title: FTP and SFTP connector
 topic: overview
+description: The documentation below provides information on how to connect an FTP or an STFP server to Platform using APIs or the user interface.
 ---
 
 # (Beta) FTP and SFTP connector
