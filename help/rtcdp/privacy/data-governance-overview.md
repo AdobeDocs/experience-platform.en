@@ -51,7 +51,7 @@ The following diagram illustrates how policy enforcement is integrated into the 
 
 ![](assets/enforcement-flow.png)
 
-When a segment is first activated, DULE [!DNL Policy Service] checks for policy violations based on the following factors:
+When a segment is first activated, [!DNL Policy Service] checks for policy violations based on the following factors:
 
 * The data usage labels applied to fields and datasets within the segment to be activated.
 * The marketing purpose of the destination. 

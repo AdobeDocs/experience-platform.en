@@ -20,6 +20,7 @@ user-guide-description: Real-time Customer Profile provides a holistic view of e
   * [[!DNL Profile] system jobs (Delete requests)](api/profile-system-jobs.md)
 * UI guides {#ui}
   * [[!DNL Profile] user guide](ui/user-guide.md)
+  * [[!DNL Profile] detail customization](ui/profile-customization.md)
   * [Merge policies user guide](ui/merge-policies.md)
 * Tutorials {#tutorials}
   * [Add data to [!DNL Profile]](tutorials/add-profile-data.md)

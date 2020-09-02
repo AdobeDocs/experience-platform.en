@@ -3,12 +3,12 @@ keywords: Experience Platform;home;popular topics;data governance;data usage lab
 solution: Experience Platform
 title: Data usage labels user guide
 topic: labels
-description: This user guide covers steps for working with data usage labels (also known as DULE labels) within the Adobe Experience Platform user interface.
+description: This user guide covers steps for working with data usage labels within the Adobe Experience Platform user interface.
 ---
 
 # Data usage labels user guide
 
-This user guide covers steps for working with data usage labels (also known as DULE labels) within the [!DNL Experience Platform] user interface. Before using the guide, please see the [Data Governance overview](../home.md) for a more robust introduction to the DULE framework.
+This user guide covers steps for working with data usage labels within the [!DNL Experience Platform] user interface. Before using the guide, please see the [[!DNL Data Governance] overview](../home.md) for a more robust introduction to the [!DNL Data Governance] framework.
 
 ## Managing data usage labels at the dataset level
 
