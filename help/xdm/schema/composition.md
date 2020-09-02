@@ -126,7 +126,7 @@ Schemas are composed using the following formula:
 
 **Class + Mixin&ast; = XDM Schema**
 
-&ast;A schema is composed of a class and _zero or more_ mixins. This means that you could compose a dataset schema without using mixins at all.
+&ast;A schema is composed of a class and zero or more mixins. This means that you could compose a dataset schema without using mixins at all.
 
 ### Class
 

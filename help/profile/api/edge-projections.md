@@ -220,7 +220,7 @@ The response object shows the details of the projection destination. The `id` at
 
 ### Update a destination
 
-An existing destination can be updated by making a PUT request to the `/config/destinations` endpoint and including the ID of the destination to be updated in the request path. This operation is essentially _rewriting_ the destination, therefore the same attributes must be provided in the body of the request as are provided when creating a new destination.
+An existing destination can be updated by making a PUT request to the `/config/destinations` endpoint and including the ID of the destination to be updated in the request path. This operation is essentially rewriting the destination, therefore the same attributes must be provided in the body of the request as are provided when creating a new destination.
 
 >[!CAUTION]
 >

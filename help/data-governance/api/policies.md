@@ -238,7 +238,7 @@ Policy expressions are provided in the form of a `deny` property within each pol
 }
 ```
 
-However, many policies specify more complex conditions regarding the presence of data usage labels. To support these use cases, you can also include boolean operations to describe your policy expressions. The policy expression object must contain _either_ a label _or_ an operator and operands, but not both. In turn, each operand is also a policy expression object.
+However, many policies specify more complex conditions regarding the presence of data usage labels. To support these use cases, you can also include boolean operations to describe your policy expressions. The policy expression object must contain either a label or an operator and operands, but not both. In turn, each operand is also a policy expression object.
 
 For example, in order to define a policy that prohibits a marketing action from being performed on data where `C1 OR (C3 AND C7)` labels are present, the policy's `deny` property would be specified as:
 
@@ -368,7 +368,7 @@ A successful response returns the details of the newly created policy, including
 >
 >You can only update custom policies. If you wish to enable or disable core policies, see the section on [updating the list of enabled core policies](#update-enabled-core).
 
-You can update an existing custom policy by providing its ID in the path of a PUT request with a payload that includes the updated form of the policy in its entirety. In other words, the PUT request essentially _rewrites_ the policy.
+You can update an existing custom policy by providing its ID in the path of a PUT request with a payload that includes the updated form of the policy in its entirety. In other words, the PUT request essentially rewrites the policy.
 
 >[!NOTE]
 >

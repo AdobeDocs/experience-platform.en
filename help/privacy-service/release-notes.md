@@ -38,7 +38,7 @@ This document contains information about new features for Adobe Experience Platf
 
 * [!DNL Privacy Service] UI enhancements:
     * Separate job tracking pages for GDPR and CCPA regulations.
-    * New _Regulation Type_ dropdown to switch between tracking data for GDPR and CCPA.
+    * New *Regulation Type* dropdown to switch between tracking data for GDPR and CCPA.
 
 ## July 25, 2019
 

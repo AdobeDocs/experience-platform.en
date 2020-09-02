@@ -80,7 +80,7 @@ alloy
 
 `decisionScopes` defines sections, locations, or parts of your pages where you would like to render a personalized experience. These `decisionScopes` are customizable and user-defined. For current [!DNL Target] customers, `decisionScopes` are also known as "mboxes." In the [!DNL Target] UI, `decisionScopes` appear as "locations."
 
-## __view__ Scope
+## \_\_view__ Scope
 
 AEP [!DNL Web SDK] provides a functionality where you can retrieve VEC actions without relying on the AEP [!DNL Web SDK] to render the VEC actions for you. Send an event with `__view__` defined as as a `decisionScopes`.
 
@@ -120,10 +120,10 @@ If you have Target activities with predefined audiences that use custom paramete
 
 ## Terminology
 
-__Decisions__ - In [!DNL Target], these correlate to the experience that is selected from an Activity.
+**Decisions** - In [!DNL Target], these correlate to the experience that is selected from an Activity.
 
-__Scope__ - The scope of the decision. In [!DNL Target], this is the mBox. The global mBox is the `__view__` scope.
+**Scope** - The scope of the decision. In [!DNL Target], this is the mBox. The global mBox is the `__view__` scope.
 
-__Schema__ - The schema of a decision is the type of offer in [!DNL Target]. 
+**Schema** - The schema of a decision is the type of offer in [!DNL Target]. 
 
-__XDM__ - The XDM is serialized into dot notation and then put into [!DNL Target] as mBox parameters.
+**XDM** - The XDM is serialized into dot notation and then put into [!DNL Target] as mBox parameters.

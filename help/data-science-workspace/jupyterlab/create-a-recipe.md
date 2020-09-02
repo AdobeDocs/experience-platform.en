@@ -293,7 +293,7 @@ The purpose of training is to create a model using features and labels in your t
 
 >[!NOTE]
 > 
->_Features_ refer to the input variable used by the machine learning model to predict the _labels_.
+>Features refer to the input variable used by the machine learning model to predict the labels.
 
 The `train()` function should include the training model and return the trained model. Some examples of different models can be found in the [scikit-learn user guide documentation](https://scikit-learn.org/stable/user_guide.html). 
 

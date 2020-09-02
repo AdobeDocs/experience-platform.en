@@ -24,7 +24,7 @@ New features in Adobe Experience Platform:
 |Feature | Description|
 |--- | ---|
 |Permissions | In the [!DNL Admin Console], the  tab within a [!DNL Platform] product profile allows you customize which [!DNL Platform] capabilities are available for the users attached to that profile. Available permission categories include: [!UICONTROL Data Modeling], [!UICONTROL Data Management], [!UICONTROL Profile Management], [!UICONTROL Identities], [!UICONTROL Data Monitoring], [!UICONTROL Sandbox Administration], [!UICONTROL Destinations], [!UICONTROL Sources].|
-|Access to sandboxes | The [!UICONTROL _Permissions_] tab within a [!DNL Platform] product profile can grant users access to specific sandboxes. See the section on [sandboxes](#sandboxes) below for more information.|
+|Access to sandboxes | The **[!UICONTROL Permissions]** tab within a [!DNL Platform] product profile can grant users access to specific sandboxes. See the section on [sandboxes](#sandboxes) below for more information.|
 
 For more information, please see the [access control overview](../../access-control/home.md).
 

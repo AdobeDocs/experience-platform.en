@@ -111,7 +111,7 @@ It depends. The Adobe Experience Platform Web SDK can be deployed in two differe
 
 * **Just another tag:** If the site is already tagged for solutions and you can't retag, but you want to send data to the Adobe Experience Platform Edge Network for Experience Platform use cases or the upcoming Launch server-side features (see below), you can add the `alloy.js` tag to the site, where it works as "just another tag."
 
-* **The one and only tag:** If you want to use the Web SDK for an Experience Cloud solution, you must use it for _all_ of the solutions on that page. For example, if your site is already tagged for Analytics and you want to use it for Target, you need to use it for both, as well as for any others in the future.  
+* **The one and only tag:** If you want to use the Web SDK for an Experience Cloud solution, you must use it for all of the solutions on that page. For example, if your site is already tagged for Analytics and you want to use it for Target, you need to use it for both, as well as for any others in the future.  
 
 In other words, if you decide to use the Adobe Experience Platform Web SDK for non-solution use cases, you can tag the site with `alloy.js` and move on as if it's a new solution. If you want to use it for Adobe Analytics, Target, or Audience Manager, or for application use cases, you might have to remove any of the legacy code on your page. 
 
@@ -135,7 +135,7 @@ However:
 
 * The Adobe Experience Platform Web SDK requires something called an Experience Edge configuration ID so the edge network can identify the stream and determine what to do with the data. This ID is created within Launch. This doesn't mean you have to use Launch to create properties or deploy the JavaScript code, but you do need to use Launch to create a configuration ID.
 
-* Adobe Experience Platform Launch is not only the best available tag and SDK manager, it makes it very easy to deploy `alloy.js` and map data to XDM schemas. If you decide not to use Launch, you will have to manage deploying `alloy.js`, eventing, and mapping your data into XDM before sending it. This is a _much_ more difficult process than using Launch. 
+* Adobe Experience Platform Launch is not only the best available tag and SDK manager, it makes it very easy to deploy `alloy.js` and map data to XDM schemas. If you decide not to use Launch, you will have to manage deploying `alloy.js`, eventing, and mapping your data into XDM before sending it. This is a much more difficult process than using Launch. 
 
 * It is recommended that you use Launch to deploy `alloy.js`, even if it's the only tag you use it for. 
 

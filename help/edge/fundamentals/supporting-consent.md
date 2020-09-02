@@ -49,7 +49,7 @@ alloy("setConsent", {
 });
 ```
 
-Because the user has now opted in, the SDK executes all previously queued commands. Future commands that depend on the user opting in will _not_ be queued and instead be promptly executed.
+Because the user has now opted in, the SDK executes all previously queued commands. Future commands that depend on the user opting in will not be queued and instead be promptly executed.
 
 If the user chooses to opt out, execute the `setConsent` command with the `general` option set to `out` as follows:
 
