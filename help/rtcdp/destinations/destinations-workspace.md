@@ -45,9 +45,31 @@ Select a destination card in the catalog to open the right rail.  Here, you can 
 
 For more information on destination categories and information on each destination, see the [Destination Catalog](/help/rtcdp/destinations/destinations-catalog.md) and [Destination Types and Categories](/help/rtcdp/destinations/destination-types.md).
 
+## [!UICONTROL Accounts] {#accounts}
+
+In the **[!UICONTROL Accounts]** tab, you can learn more about the connections that you have established with various destinations. See the table below for all the information you can get on each destination:
+
+>[!TIP]
+>
+>Use the ![Add data](/help/rtcdp/destinations/assets/add-data-symbol.png) button in the **[!UICONTROL Platform]** column to create a new destination connection for that account.
+
+![Accounts tab](/help/rtcdp/destinations/assets/accounts-tab.png)
+
+Element | Description
+---------|----------
+ [!UICONTROL Platform] | The destination for which you have set up the connection.
+ [!UICONTROL Connection Type] | Represents the connection type to your storage bucket or destination. <ul><li>For email marketing destinations: Can be S3 or FTP.</li><li>For real-time advertising destinations: Server-to-server</li><li>For Amazon S3 cloud storage destinations: Access Key </li><li>For SFTP cloud storage destinations: Basic authentication for SFTP</li></ul>
+ [!UICONTROL Username] | The username you selected in the [connect destination wizard](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination).
+ [!UICONTROL Destinations] | Represents the number of unique successful destination flows connected with basic information created for a destination.
+ [!UICONTROL Authorized] | The date when the connection to this destination was authorized.
+
 ## [!UICONTROL Browse] {#browse}
 
-The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection. Destinations with the **[!UICONTROL enabled]** toggle turned on set the destination to active and vice-versa. You can also view the destinations where you have data flowing by selecting **[!UICONTROL Segments]** > **[!UICONTROL Browse]** and selecting a segment to inspect. See the table below for all the information that is provided for each destination in the Browse tab:
+The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection. Destinations with the **[!UICONTROL Enabled]** toggle turned on set the destination to active and vice-versa. You can also view the destinations where you have data flowing by selecting **[!UICONTROL Segments]** > **[!UICONTROL Browse]** and selecting a segment to inspect. See the table below for all the information that is provided for each destination in the Browse tab:
+
+>[!TIP]
+>
+>Use the ![Add data](/help/rtcdp/destinations/assets/add-data-symbol.png) button in the **[!UICONTROL Name]** column to add or remove segments activated to that destination.
 
 ![Browse Tab](/help/rtcdp/destinations/assets/browse-tab.png)
 
@@ -66,21 +88,6 @@ Click on a destination row to bring up more information about the destination in
 ![Click destination row](/help/rtcdp/destinations/assets/click-destination-row.png)
 
 Select the destination name to see information about the segments activated to this destination. Click **[!UICONTROL Edit activation]** to modify or add to the segments that are being sent to this destination.
-
-## [!UICONTROL Accounts] {#accounts}
-
-In the **[!UICONTROL Accounts]** tab, you can learn more about the connections that you have established with various destinations. See the table below for all the information you can get on each destination:
-
-![Accounts tab](/help/rtcdp/destinations/assets/accounts-tab.png)
-
-Element | Description
----------|----------
- [!UICONTROL Platform] | The destination for which you have set up the connection.
- [!UICONTROL Connection Type] | Represents the connection type to your storage bucket or destination. <ul><li>For email marketing destinations: Can be S3 or FTP.</li><li>For real-time advertising destinations: Server-to-server</li><li>For Amazon S3 cloud storage destinations: Access Key </li><li>For SFTP cloud storage destinations: Basic authentication for SFTP</li></ul>
- [!UICONTROL Username] | The username you selected in the [connect destination wizard](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination).
- [!UICONTROL Data Flows] | Represents the number of unique successful destination flows connected with basic information created for a destination.
- [!UICONTROL Authorized] | The date when the connection to this destination was authorized.
- [!UICONTROL Status] | `Active` or `Inactive`. Indicates whether data is currently being activated to this destination. To edit the status, see [Disable activation](/help/rtcdp/destinations/activate-destinations.md#disable-activation).
  
 ## [!UICONTROL System View] {#system-view}
 
