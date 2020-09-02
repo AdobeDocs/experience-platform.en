@@ -28,11 +28,11 @@ The identity relationships that [!DNL Identity Service] defines and maintains ar
 
 ### Identities
 
-An identity is data that is unique to an entity, typically an individual person. An identity such as a login ID, ECID, or loyalty ID is referred to as a **known identity**.
+An identity is data that is unique to an entity, typically an individual person. An identity such as a login ID, ECID, or loyalty ID is referred to as a known identity.
 
 PII such as email address and phone number, serves to directly identify a customer. As a result, PII is used to match a customer's multiple identities across systems.
 
-**Unknown or anonymous identities** single out a device without identifying the actual person using it. This category includes information such as a visitor's IP address and cookie ID. While behavioral data can be gathered from a device using unknown identities, associating these identities across devices or mediums is limited until your customer supplies PII during their journey.
+Unknown or anonymous identities single out a device without identifying the actual person using it. This category includes information such as a visitor's IP address and cookie ID. While behavioral data can be gathered from a device using unknown identities, associating these identities across devices or mediums is limited until your customer supplies PII during their journey.
 
 As shown in the image below, known and anonymous identities are both important components of [identity graphs](#identity-graphs), which are discussed later in this document.
 

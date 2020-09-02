@@ -18,7 +18,7 @@ In order to utilize insights for Attribution AI, you need to have a service inst
 
 ## Service instance insights overview
 
-In the [!DNL Adobe Experience Platform] UI, click **Services** in the left navigation. The *Services* browser appears and displays available Adobe Intelligent Services. In the container for Attribution AI, click **Open**.
+In the [!DNL Adobe Experience Platform] UI, click **Services** in the left navigation. The **Services** browser appears and displays available Adobe Intelligent Services. In the container for Attribution AI, click **Open**.
 
 ![Accessing your instance](./images/insights/open_Attribution_ai.png)
 
@@ -55,11 +55,11 @@ The edit dialog box appears, allowing you to edit the description and scoring fr
 
 ### More actions {#more-actions}
 
-The *More actions* button is located in the top-right navigation next to *Edit*. Clicking **More actions** opens a dropdown that allows you to select one of the following operations:
+The **More actions** button is located in the top-right navigation next to *Edit*. Clicking **More actions** opens a dropdown that allows you to select one of the following operations:
 
 - **Delete**: Deletes the instance.
 - **Download summary data**: Downloads a CSV file containing the summary data.
-- **Access scores**: Clicking *Access scores* redirects you to the [access scores for Attribution AI tutorial](./download-scores.md).
+- **Access scores**: Clicking **Access scores** redirects you to the [access scores for Attribution AI tutorial](./download-scores.md).
 - **View run history**: A popover containing a list of all the scoring runs associated with the service instance appears.
 
 ![more actions](./images/insights/more-actions.png)
@@ -70,7 +70,7 @@ Attribution AI insights allow you to filter your data and automatically update t
 
 >[!NOTE]
 >
->By default, every filter is set to "All" except the *Attribution model* filter which is set to "Incremental and Influenced attributed conversions".
+>By default, every filter is set to "All" except the Attribution model filter which is set to "Incremental and Influenced attributed conversions".
 
 ### Conversion event
 
@@ -82,7 +82,7 @@ From within the instance, the *Conversion events* dropdown allows you to select 
 
 ### Attribution model
 
-Clicking *Attribution model* opens a dropdown with all of the different attribution models available. You can select multiple models to compare results. For more information on the different attribution models and how they work, visit the [Attribution AI](./overview.md) overview which contains a table with information on each model.
+Clicking **Attribution model** opens a dropdown with all of the different attribution models available. You can select multiple models to compare results. For more information on the different attribution models and how they work, visit the [Attribution AI](./overview.md) overview which contains a table with information on each model.
 
 ![attribution model](./images/insights/attribution-model.png)
 
@@ -128,7 +128,7 @@ The *Overview* card shows your total conversions by attribution model. The total
 
 ## Weekly trends
 
-The *Weekly trends* card breaks down your total conversion by the date range you set during the filtering process. 
+The **Weekly trends** card breaks down your total conversion by the date range you set during the filtering process. 
 
 ![trends](./images/insights/weekly-trends.png)
 
@@ -140,7 +140,7 @@ Hovering over the data line of a specific attribution model creates a popover th
 
 ## Breakdown by channel
 
-The *Breakdown by channel* card is used to determine the total number of conversions in relation to each channel. This card can be used to help make decisions on the effectiveness of each channel and the return on investment.
+The **Breakdown by channel** card is used to determine the total number of conversions in relation to each channel. This card can be used to help make decisions on the effectiveness of each channel and the return on investment.
 
 ![breakdown channel](./images/insights/channel-breakdown.png)
 
@@ -150,7 +150,7 @@ Clicking the ellipses in the top-right of the *Breakdown by channel* card opens 
 
 ## Top campaigns
 
-The *Top campaigns* card displays an overview of your campaigns and how the campaign is performing in each channel. This card can help inform your team of the effectiveness of a specific campaign for a given channel and provide insight into where to further invest.
+The **Top campaigns** card displays an overview of your campaigns and how the campaign is performing in each channel. This card can help inform your team of the effectiveness of a specific campaign for a given channel and provide insight into where to further invest.
 
 ![top campaigns](./images/insights/top-campaigns.png)
 

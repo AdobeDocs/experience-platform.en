@@ -96,7 +96,7 @@ When a notebook is inactive for an extended period of time, the connection betwe
 
 ![](../images/jupyterlab/query/restart_button.png)
 
-The notebook kernel will reset but the cells will remain, re-run **[!UICONTROL all]** the cells to continue where you had left off.
+The notebook kernel will reset but the cells will remain, re-run **all** the cells to continue where you had left off.
 
 ### Hourly visitor count {#hourly-visitor-count}
 

@@ -8,7 +8,7 @@ description: This document covers the necessary steps needed to browse the acces
 
 # Browse the access control workspace
 
-In order to configure access control for [!DNL Experience Platform] through the Adobe Admin Console, you must be an administrator for an IMS Organization that has a subscription to [!DNL Experience Platform]. While Adobe supports flexible administrator hierarchies for IMS Orgs, you must have **[!UICONTROL system administrator]**, **[!UICONTROL product administrator]**, or **[!UICONTROL product profile administrator]** privileges to configure access control. See the Adobe Help Center article on [administrative roles](https://helpx.adobe.com/enterprise/using/admin-roles.html) for more information.
+In order to configure access control for [!DNL Experience Platform] through the Adobe Admin Console, you must be an administrator for an IMS Organization that has a subscription to [!DNL Experience Platform]. While Adobe supports flexible administrator hierarchies for IMS Orgs, you must have [!UICONTROL system administrator], [!UICONTROL product administrator], or [!UICONTROL product profile administrator] privileges to configure access control. See the Adobe Help Center article on [administrative roles](https://helpx.adobe.com/enterprise/using/admin-roles.html) for more information.
 
 If you do not have admin privileges, contact your system administrator to gain access.
 

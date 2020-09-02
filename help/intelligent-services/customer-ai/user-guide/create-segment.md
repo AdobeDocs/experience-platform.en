@@ -18,7 +18,7 @@ In the Platform UI, click **[!UICONTROL Segments]** in the left navigation, and 
 
 ![](../images/user-guide/segments.png)
 
-The *Segment Builder* appears. From the left *Fields* column and under the *Attributes* tab, click the folder named **[!UICONTROL XDM Individual Profile]** and then click the folder with the namespace of your organization. The folder named **[!UICONTROL Customer AI]** contains the results of prediction runs and are named after the instance the scores belong to. Click an instance folder to access its results of the desired instance.
+The **Segment Builder** appears. From the left *Fields* column and under the **Attributes** tab, click the folder named **[!UICONTROL XDM Individual Profile]** and then click the folder with the namespace of your organization. The folder named **[!UICONTROL Customer AI]** contains the results of prediction runs and are named after the instance the scores belong to. Click an instance folder to access its results of the desired instance.
 
 ![](../images/user-guide/results.png)
 

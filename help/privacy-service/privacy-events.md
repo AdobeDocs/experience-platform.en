@@ -71,15 +71,15 @@ Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and si
 
 ## Add Privacy Events to the project
 
-Once you have finished creating a new project in the console, click **[!UICONTROL Add event]** on the _Project Overview_ screen.
+Once you have finished creating a new project in the console, click **[!UICONTROL Add event]** on the **Project Overview** screen.
 
 ![](./images/privacy-events/add-event-button.png)
 
-The _Add events_ dialog appears. Select **[!UICONTROL Experience Cloud]** to filter down the list of a available event types, then select **[!UICONTROL Privacy Service Events]** before clicking **[!UICONTROL Next]**.
+The **Add events** dialog appears. Select **[!UICONTROL Experience Cloud]** to filter down the list of a available event types, then select **[!UICONTROL Privacy Service Events]** before clicking **[!UICONTROL Next]**.
 
 ![](./images/privacy-events/add-privacy-events.png)
 
-The _Configure event registration_ dialog appears. Select which events you would like to receive by selecting their corresponding checkboxes. Events that you select appear under **[!UICONTROL Subscribed Events]** in the left column. When finished, click **[!UICONTROL Next]**.
+The **Configure event registration** dialog appears. Select which events you would like to receive by selecting their corresponding checkboxes. Events that you select appear under **[!UICONTROL Subscribed Events]** in the left column. When finished, click **[!UICONTROL Next]**.
 
 ![](./images/privacy-events/choose-subscriptions.png)
 
@@ -107,11 +107,11 @@ The details page for your project reappears, with [!DNL Privacy Events] appearin
 
 ## View event data
 
-Once you have registered [!DNL Privacy Events] with your project and privacy jobs have been processed, you can view any received notifications for that registration. From the **[!UICONTROL Projects]** tab in Developer Console, select your project from the list to open the _Product overview_ page. From here, select **[!UICONTROL Privacy Events]** from the left navigation.
+Once you have registered [!DNL Privacy Events] with your project and privacy jobs have been processed, you can view any received notifications for that registration. From the **[!UICONTROL Projects]** tab in Developer Console, select your project from the list to open the **Product overview** page. From here, select **[!UICONTROL Privacy Events]** from the left navigation.
 
 ![](./images/privacy-events/events-left-nav.png)
 
-The _Registration Details_ tab appears, allowing you to view more information about the registration, edit its configuration, or view the actual events that were received since activating your webhook. 
+The **Registration Details** tab appears, allowing you to view more information about the registration, edit its configuration, or view the actual events that were received since activating your webhook. 
 
 ![](./images/privacy-events/registration-details.png)
 

@@ -256,7 +256,7 @@ The ad-hoc schema data was pre-processed using [!DNL Query Service] Create Table
 | Size on disk (MB)       | 18.73  | 187.5  | 308   | 3000  | 6050  |
 | SDK (in seconds)        | 20.3   | 86.8   | 63    | 659   | 1315  | 
 
-**ad-hoc schema:** You should be able to read a maximum of 5 million rows (~5.6 GB data on disk) of non-XDM (ad-hoc) data in less than 14 minutes. Adding additional rows may result in errors.
+**Ad-hoc schema:** You should be able to read a maximum of 5 million rows (~5.6 GB data on disk) of non-XDM (ad-hoc) data in less than 14 minutes. Adding additional rows may result in errors.
 
 | Number of Rows          | 1K      | 10K     | 100K  | 1M    | 2M    | 3M    | 5M     |
 | ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- | ------ |
@@ -272,7 +272,7 @@ The ad-hoc schema data was pre-processed using [!DNL Query Service] Create Table
 | Size on disk (MB)       | 18.73  | 187.5  | 308   | 3000  |
 | R Kernel  (in seconds)  | 14.03  | 69.6   | 86.8  | 775   |
 
-**ad-hoc schema:** You should be able to read a maximum of 3 million rows of ad-hoc data (293MB data on disk) in around 10 minutes.
+**Ad-hoc schema:** You should be able to read a maximum of 3 million rows of ad-hoc data (293MB data on disk) in around 10 minutes.
 
 | Number of Rows          | 1K      | 10K     | 100K  | 1M    | 2M    | 3M    |
 | ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- |
@@ -289,7 +289,7 @@ The ad-hoc schema data was pre-processed using [!DNL Query Service] Create Table
 | SDK (Interactive mode)  | 33s    | 32.4s  | 55.1s | 253.5s| 489.2s| 729.6s| 1206.8s |    -    |    -     |   -    |  -     |
 | SDK (Batch mode)        | 815.8s | 492.8s |379.1s |637.4s |624.5s | 869.2s| 1104.1s | 1786s   | 5387.2s  |10624.6s| 50547s |
 
-**ad-hoc schema:** On Interactive mode you should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in less than 3 minutes. On Batch mode you should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in around 18 minutes.
+**Ad-hoc schema:** On Interactive mode you should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in less than 3 minutes. On Batch mode you should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in around 18 minutes.
 
 | Number of rows| 1K     | 10K     | 100K    | 1M    | 2M    | 3M    | 5M     | 10M    | 50M     | 100M   | 500M    | 1B    |
 |--------------|--------|---------|---------|-------|-------|-------|--------|--------|---------|--------|---------|-------|
@@ -307,7 +307,7 @@ The ad-hoc schema data was pre-processed using [!DNL Query Service] Create Table
 | SDK Interactive mode (in seconds) | 37.9s  | 22.7s  | 45.6s | 231.7s| 444.7s| 660.6s | 1100s  |     -   |    -     |   -    |  -     |
 | SDK Batch mode (in seconds) | 374.4s | 398.5s |527s   |487.9s |588.9s |829s   |939.1s   | 1441s    |5473.2s  |10118.8 |49207.6 |
 
-**ad-hoc schema:** On Interactive mode you should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in less than 3 minutes. On Batch mode you should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in around 16 minutes.
+**Ad-hoc schema:** On Interactive mode you should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in less than 3 minutes. On Batch mode you should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in around 16 minutes.
 
 | Number of rows | 1K     | 10K     | 100K    | 1M    | 2M    | 3M    | 5M      | 10M     | 50M     | 100M   | 500M    | 1B    |
 |--------------|--------|---------|---------|-------|-------|-------|---------|---------|---------|--------|---------|-------|

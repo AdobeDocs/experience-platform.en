@@ -27,7 +27,7 @@ From the tutorial you should now have the following values:
 
 ## API workflow
 
-We will be consuming the APIs to create an Experiment Run for training. For this tutorial, we will be focused on the **Engines**, **MLInstances**, and **Experiments** endpoints. The following chart outlines the relationship between the three and also introduces the idea of a Run and a Model. 
+We will be consuming the APIs to create an Experiment Run for training. For this tutorial, we will be focused on the Engines, MLInstances, and Experiments endpoints. The following chart outlines the relationship between the three and also introduces the idea of a Run and a Model. 
 
 ![](../images/models-recipes/train-evaluate-api/engine_hierarchy_api.png)
 

@@ -27,7 +27,7 @@ On the **[!UICONTROL Sources]** page, click **[!UICONTROL HTTP API]**, then **[!
 
 ![](../images/streaming-ingestion/ui/click-connect-source.png)
 
-The **[!UICONTROL Connect to HTTP]** screen appears. Under **[!UICONTROL Service details]**, provide both the **[!UICONTROL name]** and a **[!UICONTROL description]** for your new streaming connection.
+The **[!UICONTROL Connect to HTTP]** screen appears. Under **[!UICONTROL Service details]**, provide both the [!UICONTROL name] and a [!UICONTROL description] for your new streaming connection.
 
 Under **[!UICONTROL Account Authentication]**, select the following configuration properties for your streaming connection:
 
@@ -50,7 +50,7 @@ You can either [create a new dataset](#create-a-new-dataset) or [use an existing
 
 ### Create a new dataset
 
-To create a new dataset, provide the **[!UICONTROL Name]**, **[!UICONTROL Description]**, as well as the target **[!UICONTROL Schema]** for the dataset.
+To create a new dataset, provide the [!UICONTROL Name], [!UICONTROL Description], as well as the target [!UICONTROL Schema] for the dataset.
 
 ![](../images/streaming-ingestion/ui/create-new-dataset.png)
 

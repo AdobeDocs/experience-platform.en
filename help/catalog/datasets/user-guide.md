@@ -34,7 +34,7 @@ Click the name of a dataset to access its **[!UICONTROL Dataset activity]** scre
 
 ## Preview a dataset
 
-From the **[!UICONTROL Dataset activity]** screen, click **[!UICONTROL Preview dataset]** near the top-right corner of your screen to preview up to 100 rows of data. If the dataset is empty, the the preview link will be deactivated and will instead say **[!UICONTROL Preview not available]**.
+From the **[!UICONTROL Dataset activity]** screen, click **[!UICONTROL Preview dataset]** near the top-right corner of your screen to preview up to 100 rows of data. If the dataset is empty, the the preview link will be deactivated and will instead say [!UICONTROL Preview not available].
 
 ![](../images/datasets/user-guide/click_to_preview.png)
 

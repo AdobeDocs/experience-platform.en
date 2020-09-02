@@ -120,7 +120,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 After successfully creating a new batch for uploading, files can then be uploaded to a specific dataset.
 
-You can upload files using the **Small File Upload API**. However, if your files are too large and the gateway limit is exceeded (such as extended timeouts, requests for body size exceeded, and other constrictions), you can switch over to the **Large File Upload API**. This API uploads the file in chunks, and stitches data together using the **Large File Upload Complete API** call.
+You can upload files using the Small File Upload API. However, if your files are too large and the gateway limit is exceeded (such as extended timeouts, requests for body size exceeded, and other constrictions), you can switch over to the Large File Upload API. This API uploads the file in chunks, and stitches data together using the Large File Upload Complete API call.
 
 >[!NOTE]
 >
@@ -231,7 +231,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## Signal batch completion
 
-After all files have been uploaded to the batch, the batch can be signaled for completion. By doing this, the [!DNL Catalog] **DataSetFile** entries are created for the completed files and associated with the batch generated above. The [!DNL Catalog] batch is then marked as successful, which triggers downstream flows to ingest the available data.
+After all files have been uploaded to the batch, the batch can be signaled for completion. By doing this, the [!DNL Catalog] DataSetFile entries are created for the completed files and associated with the batch generated above. The [!DNL Catalog] batch is then marked as successful, which triggers downstream flows to ingest the available data.
 
 **Request**
 
@@ -382,10 +382,10 @@ The `"status"` field is what shows the current status of the batch requested. Th
 | Status | Description |
 | ------ | ----------- |
 | Abandoned | The batch has not completed in the expected timeframe. |
-| Aborted | An abort operation has **explicitly** been called (via Batch Ingest API) for the specified batch. Once the batch is in a **Loaded** state, it cannot be aborted. |
-| Active |  The batch has been successfully promoted and is available for downstream consumption. This status can be used interchangeably with **Success**. |
+| Aborted | An abort operation has **explicitly** been called (via Batch Ingest API) for the specified batch. Once the batch is in a "Loaded" state, it cannot be aborted. |
+| Active |  The batch has been successfully promoted and is available for downstream consumption. This status can be used interchangeably with "Success". |
 | Deleted | Data for the batch has been completely removed. |
-| Failed | A terminal state that results from either bad configuration and/or bad data. Data for a failed batch will **not** show up. This status can be used interchangeably with **Failure**. |
+| Failed | A terminal state that results from either bad configuration and/or bad data. Data for a failed batch will **not** show up. This status can be used interchangeably with "Failure". |
 | Inactive | The batch was successfully promoted, but has been reverted or has expired. The batch is no longer available for downstream consumption. |
 | Loaded | Data for the batch is complete and the batch is ready for promotion. |
 | Loading | Data for this batch is being uploaded and the batch is currently **not** ready to be promoted. |

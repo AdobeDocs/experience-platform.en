@@ -116,7 +116,7 @@ The **[!UICONTROL Error diagnostics]** toggle only appears when the **[!UICONTRO
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-The **[!UICONTROL Error threshold]** allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
+**[!UICONTROL Error threshold]** allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
 
 ## Downloading file-level metadata {#download-metadata}
 

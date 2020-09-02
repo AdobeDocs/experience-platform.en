@@ -15,7 +15,7 @@ This document serves as a guide for interacting with Attribution AI in the Intel
 
 ## Create an instance
 
-In the [!DNL Adobe Experience Platform] UI, click **Services** in the left navigation. The *Services* browser appears and displays available Adobe intelligent services. In the container for Attribution AI, click **Open**.
+In the [!DNL Adobe Experience Platform] UI, click **Services** in the left navigation. The **Services** browser appears and displays available Adobe intelligent services. In the container for Attribution AI, click **Open**.
 
 ![Accessing your instance](./images/user-guide/open_Attribution_ai.png)
 
@@ -29,7 +29,7 @@ Next, the setup page for Attribution AI appears, where you can provide basic inf
 
 ### Name the instance
 
-Under *Basic information*, provide a name and optional description for your service instance.
+Under **Basic information**, provide a name and optional description for your service instance.
 
 ![naming an instance](./images/user-guide/naming_instance.png)
 
@@ -61,7 +61,7 @@ Once an event is selected, a new dropdown appears to its right. The second dropd
 
 ![no dropdown](./images/user-guide/conversion_event_1.png)
 
-The *Add event* and *Add Group* buttons are used to further define your conversion. Depending on the conversion you are defining, you may need to use the *Add event* and *Add group* buttons to provide further context.
+The **Add event** and **Add Group** buttons are used to further define your conversion. Depending on the conversion you are defining, you may need to use the **Add event** and **Add group** buttons to provide further context.
 
 ![add event](./images/user-guide/add_event.png)
 
@@ -151,7 +151,7 @@ To change the time of day you want scoring to occur, click the clock icon. In th
 
 Your customers' behaviors might differ significantly by country and geographic region. For global businesses, using country-based or region-based models can increase attribution accuracy. Each region added creates a new model with that region's data.
 
-To define a new region, start by clicking **Add region**. In the container that appears, provide a name for the region. Only one value ("placeContext.geo.countryCode") populates from the *Enter Field Name* dropdown. Select this value.
+To define a new region, start by clicking **Add region**. In the container that appears, provide a name for the region. Only one value ("placeContext.geo.countryCode") populates from the **Enter Field Name** dropdown. Select this value.
 
 ![Select region att](./images/user-guide/select_region_att.png)
 
@@ -177,7 +177,7 @@ To ensure that you get the most accurate model possible, it is important to trai
 
 ![training window](./images/user-guide/training_window.png)
 
-Once you have selected your training window, click **Finish** in the top-right corner. Allow some time for the data to process. Once complete, a popover dialog appears confirming that the instance setup is complete. Click **Ok** to be redirected to the *Service instances* page where you can see your service instance.
+Once you have selected your training window, click **Finish** in the top-right corner. Allow some time for the data to process. Once complete, a popover dialog appears confirming that the instance setup is complete. Click **Ok** to be redirected to the **Service instances** page where you can see your service instance.
 
 ![setup complete](./images/user-guide/instance_setup_complete.png)
 

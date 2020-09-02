@@ -64,7 +64,7 @@ The configuration JSON file consists of key-value pairs and is intended for you 
 
 The following example demonstrates key-value pairs found within a configuration file:
 
-**configuration JSON example**
+**Configuration JSON example**
 
 ```json
 [

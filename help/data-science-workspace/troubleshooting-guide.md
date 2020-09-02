@@ -24,7 +24,7 @@ To remedy this issue use the following steps:
    
 ![chrome advanced](./images/faq/chrome-advanced.png)
 
-The *Privacy and security* section appears. Next, click on **Site settings** followed by **Cookies and site data**.
+The **Privacy and security** section appears. Next, click on **Site settings** followed by **Cookies and site data**.
    
 ![chrome advanced](./images/faq/privacy-security.png)
 
@@ -56,7 +56,7 @@ Within the Safari preferences window, select **Advanced**. Then check the *Show 
 
 ![Safari advanced](./images/faq/advanced.png)
 
-Next, from the top navigation bar select the **Develop** menu. From within the *Develop* dropdown, hover over *User Agent*. You can select the **[!DNL Chrome]** or **[!DNL Firefox]** User Agent string you would like to use.
+Next, from the top navigation bar select the **Develop** menu. From within the **Develop** dropdown, hover over **User Agent**. You can select the **[!DNL Chrome]** or **[!DNL Firefox]** User Agent string you would like to use.
 
 ![Develop menu](./images/faq/user-agent.png)
 

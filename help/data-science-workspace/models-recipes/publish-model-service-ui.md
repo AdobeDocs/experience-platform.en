@@ -41,9 +41,9 @@ If you prefer to publish a Model by using Sensei Machine Learning APIs, refer to
 ![](../images/models-recipes/publish-model/7_scoring_output.png)
 4. When a Service is created, it inherits default scoring configurations. You can review these configurations and adjust them as needed by double-clicking on the values. Once you are satisfied with the configurations, click **[!UICONTROL Finish]** to begin the scoring run.
 ![](../images/models-recipes/publish-model/8_scoring_configure.png)
-5.  On the Service's *Overview* page, details of the new scoring job and its progress is shown. Once the job completes, the **[!UICONTROL Most Recent]** scoring job will be updated.
+5.  On the Service's *Overview* page, details of the new scoring job and its progress is shown. Once the job completes, the [!UICONTROL Most Recent] scoring job will be updated.
 ![](../images/models-recipes/publish-model/score_pending.png)
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have successfully published a Model as an accessible Service, and scored data using the new Service through the **[!UICONTROL Service Gallery]**. Continue to the next tutorial to learn how you can [schedule automated training and scoring runs on a Service](./schedule-models-ui.md).
+By following this tutorial, you have successfully published a Model as an accessible Service, and scored data using the new Service through the [!UICONTROL Service Gallery]. Continue to the next tutorial to learn how you can [schedule automated training and scoring runs on a Service](./schedule-models-ui.md).

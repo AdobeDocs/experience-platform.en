@@ -228,7 +228,7 @@ In the [!DNL Policy Service] API, a policy is defined by the following:
 * A reference to a specific marketing action
 * An expression describing the data usage labels that the marketing action is restricted from being performed against
 
-To satisfy the latter requirement, policy definitions must include a boolean expression regarding the presence of data usage labels. This expression is called a **policy expression**.
+To satisfy the latter requirement, policy definitions must include a boolean expression regarding the presence of data usage labels. This expression is called a policy expression.
 
 Policy expressions are provided in the form of a `deny` property within each policy definition. An example of a simple `deny` object that only checks the presence of a single label would look like the following:
 

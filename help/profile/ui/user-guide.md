@@ -89,7 +89,7 @@ Upon selecting the **[!UICONTROL Profile ID]**, the **[!UICONTROL Detail]** tab 
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-You can view additional information related to the profile including **[!UICONTROL Attributes]**, **[!UICONTROL Events]**, and **[!UICONTROL Segments]** to which the profile is a member.
+You can view additional information related to the profile including [!UICONTROL Attributes], [!UICONTROL Events], and [!UICONTROL Segments] to which the profile is a member.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
@@ -103,7 +103,7 @@ For more information on merge policies, see the [Merge Policies user guide](merg
 
 ## Union schema
 
-Select the *Union Schema* tab to view the union schemas for your [!DNL Profile Store]. A union schema is an amalgamation of all [!DNL Experience Data Model] (XDM) fields under the same class, whose schemas have been enabled for use in [!DNL Real-time Customer Profile]. Select a class in the left-hand list to view the structure of its union schema in the canvas.
+Select the **Union Schema** tab to view the union schemas for your [!DNL Profile Store]. A union schema is an amalgamation of all [!DNL Experience Data Model] (XDM) fields under the same class, whose schemas have been enabled for use in [!DNL Real-time Customer Profile]. Select a class in the left-hand list to view the structure of its union schema in the canvas.
 
 For example, selecting "[!DNL XDM Profile]" displays the union schema for the [!DNL XDM Individual Profile] class.
 

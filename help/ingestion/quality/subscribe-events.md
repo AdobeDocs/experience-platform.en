@@ -72,7 +72,7 @@ In the next screen, provide a name and description for the event registration. B
 
 ![](../images/quality/subscribe-events/registration-details.png)
 
-Further down on the same screen, you can optionally configure how to receive events. **[!UICONTROL Webhook]** allows you to provide a custom webhook address to receive events, whereas **[!UICONTROL Runtime action]** allows you to do the same using [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html).
+Further down on the same screen, you can optionally configure how to receive events. [!UICONTROL Webhook] allows you to provide a custom webhook address to receive events, whereas [!UICONTROL Runtime action] allows you to do the same using [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html).
 
 This tutorial skips this optional configuration step. Once you are finished, click **[!UICONTROL Save configured events]** to complete the event registration.
 

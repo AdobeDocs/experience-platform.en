@@ -28,7 +28,7 @@ The resources that [!DNL Catalog Service] tracks are used by multiple [!DNL Expe
 
 [!DNL Experience Data Model] (XDM) System is the standardized framework by which [!DNL Platform] organizes customer experience data. [!DNL Experience Platform] leverages XDM schemas to describe the structure of data in a consistent and reusable way.
 
-When data is ingested into [!DNL Platform], the structure of that data is mapped to an XDM schema and stored within the [!DNL Data Lake] as part of a **dataset**. The metadata for each dataset is tracked by [!DNL Catalog Service], which includes a reference to the XDM schema that the dataset conforms to. 
+When data is ingested into [!DNL Platform], the structure of that data is mapped to an XDM schema and stored within the [!DNL Data Lake] as part of a dataset. The metadata for each dataset is tracked by [!DNL Catalog Service], which includes a reference to the XDM schema that the dataset conforms to. 
 
 For more general information about XDM System, please see the [XDM System overview](../xdm/home.md).
 
@@ -36,7 +36,7 @@ For more general information about XDM System, please see the [XDM System overvi
 
 [!DNL Experience Platform] ingests data from multiple sources and persists records as datasets within the [!DNL Data Lake]. [!DNL Catalog] tracks the metadata for these datasets, regardless of their source or method of ingestion.
 
-When using the batch ingestion method, [!DNL Catalog] also tracks additional metadata for **batch** files. Batches are units of data that consist of one or more files to be ingested as a single unit. [!DNL Catalog] tracks the metadata for these batch files, as well as the datasets they are persisted in after ingestion. Batch metadata includes information about the number of successfully ingested records, as well as any failed records and associated error messages.
+When using the batch ingestion method, [!DNL Catalog] also tracks additional metadata for batch files. Batches are units of data that consist of one or more files to be ingested as a single unit. [!DNL Catalog] tracks the metadata for these batch files, as well as the datasets they are persisted in after ingestion. Batch metadata includes information about the number of successfully ingested records, as well as any failed records and associated error messages.
 
 See the [data ingestion overview](../ingestion/home.md) for more information.
 

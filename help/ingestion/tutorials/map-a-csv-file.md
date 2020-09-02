@@ -120,7 +120,7 @@ The following section provides additional information for mapping CSV columns to
 
 Certain mapping functions can be used to compute and calculate values based on what is entered in source fields. To use a function, type it in under **[!UICONTROL Source Field]** with appropriate syntax and inputs.
 
-For example, to concatenate **city** and **country** CSV fields and assign them to the **city** XDM field, set the source field as `concat(city, ", ", county)`.
+For example, to concatenate city and country CSV fields and assign them to the city XDM field, set the source field as `concat(city, ", ", county)`.
 
 ![](../images/tutorials/map-a-csv-file/mapping-function.png)
 
