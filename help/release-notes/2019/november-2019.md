@@ -13,15 +13,15 @@ author: crhoades, ens28527
 **Release date: November 18, 2019**
 
 New features in Adobe Experience Platform:  
-* [!DNL Real-time Customer Data Platform](#rtcdp)
-* [!DNL Destinations](#destinations)
-* [!DNL Sources](#sources)
+* [[!DNL Real-time Customer Data Platform]](#rtcdp)
+* [[!DNL Destinations]](#destinations)
+* [[!DNL Sources]](#sources)
 
 Updates to existing features:
-* [!DNL Data Science Workspace](#dsw)
-* [!DNL Experience Data Model (XDM) System](#xdm)
-* [!DNL Real-time Customer Profile](#profile) 
-* [!DNL Segmentation Service](#segmentation)
+* [[!DNL Data Science Workspace]](#dsw)
+* [[!DNL Experience Data Model (XDM) System]](#xdm)
+* [[!DNL Real-time Customer Profile]](#profile) 
+* [[!DNL Segmentation Service]](#segmentation)
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 

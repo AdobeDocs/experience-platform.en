@@ -3,7 +3,7 @@ keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popula
 solution: Experience Platform
 title: JupyterLab user guide
 topic: Overview
-description: JupyterLab is a web-based user interface for Project Jupyter and is tightly integrated into Adobe Experience Platform. It provides an interactive development environment for data scientists to work with Jupyter notebooks, code, and data.
+description: JupyterLab is a web-based user interface for Project Jupyter and is tightly integrated into Adobe Experience Platform. It provides an interactive development environment for data scientists to work with Jupyter notebooks, code, and data. This document provides an overview of JupyterLab and its features as well as instructions to perform common actions.
 ---
 
 # [!DNL JupyterLab] user guide
@@ -148,8 +148,8 @@ The customized *Launcher* provides you with useful notebook templates for their 
 | --- | --- |
 | Blank | An empty notebook file. |
 | Starter | A pre-filled notebook demonstrating data exploration using sample data. |
-| Retail Sales | A pre-filled notebook featuring the <a href="https://adobe.ly/2wOgO3L" target="_blank">Retail Sales Recipe</a> using sample data. |
-| Recipe Builder | A notebook template for creating a recipe in [!DNL JupyterLab]. It is pre-filled with code and commentary that demonstrates and describes the recipe creation process. Refer to the <a href="https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en" target="_blank">notebook to recipe tutorial</a> for a detailed walkthrough. |
+| Retail Sales | A pre-filled notebook featuring the [retail sales recipe](https://adobe.ly/2wOgO3L) using sample data. |
+| Recipe Builder | A notebook template for creating a recipe in [!DNL JupyterLab]. It is pre-filled with code and commentary that demonstrates and describes the recipe creation process. Refer to the [notebook to recipe tutorial](https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en) for a detailed walkthrough. |
 | [!DNL Query Service] | A pre-filled notebook demonstrating the usage of [!DNL Query Service] directly in [!DNL JupyterLab] with provided sample workflows that analyzes data at scale. |
 | XDM Events | A pre-filled notebook demonstrating data exploration on postvalue Experience Event data, focusing on features common across the data structure. |
 | XDM Queries | A pre-filled notebook demonstrating sample business queries on Experience Event data. |
@@ -230,6 +230,7 @@ To open a new *Launcher*, click **File > New Launcher**. Alternatively, expand t
 In [!DNL JupyterLab] select the gear icon in the top-right corner to open *Notebook server configuration*. You can toggle GPU on and allocate the amount of memory you need by using the slider. The amount of memory you can allocate depends on how much your organization has provisioned. Select **[!UICONTROL Update configs]** to save.
 
 >[!NOTE]
+>
 >Only one GPU is provisioned per organization for Notebooks. If the GPU is in use, you need to wait for the user that has currently reserved the GPU to release it. This can be done by logging out or leaving the GPU in an idle state for four or more hours.
 
 ![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
@@ -418,6 +419,7 @@ dataFrame.show()
 ```
 
 >[!TIP]
+>
 >In Scala, you can use `sys.env()` to declare and return a value from within `option`.
 
 ### Using %dataset magic in PySpark 3 ([!DNL Spark] 2.4) notebooks {#magic}
@@ -446,9 +448,9 @@ A custom [!DNL Data Science Workspace] magic command for reading or writing a da
 
 ### Query data using [!DNL Query Service] in [!DNL Python]
 
-[!DNL JupyterLab] on [!DNL Platform] allows you to use SQL in a [!DNL Python] notebook to access data through <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">Adobe Experience Platform Query Service</a>. Accessing data through [!DNL Query Service] can be useful for dealing with large datasets due to its superior running times. Be advised that querying data using [!DNL Query Service] has a processing time limit of ten minutes.
+[!DNL JupyterLab] on [!DNL Platform] allows you to use SQL in a [!DNL Python] notebook to access data through [Adobe Experience Platform Query Service](https://www.adobe.com/go/query-service-home-en). Accessing data through [!DNL Query Service] can be useful for dealing with large datasets due to its superior running times. Be advised that querying data using [!DNL Query Service] has a processing time limit of ten minutes.
 
-Before you use [!DNL Query Service] in [!DNL JupyterLab], ensure you have a working understanding of the <a href="https://www.adobe.com/go/query-service-sql-syntax-en" target="_blank">[!DNL Query Service] SQL syntax</a>.
+Before you use [!DNL Query Service] in [!DNL JupyterLab], ensure you have a working understanding of the [[!DNL Query Service] SQL syntax](https://www.adobe.com/go/query-service-sql-syntax-en).
 
 Querying data using [!DNL Query Service] requires you to provide the name of the target dataset. You can generate the necessary code cells by finding the desired dataset using the **Data explorer**. Right click on the dataset listing and click **Query Data in Notebook** to generate the following two code cells in your notebook:
 
@@ -597,9 +599,7 @@ timedf.show()
 
 >[!TIP]
 >
->
 >In Scala, you can use `sys.env()` to declare and return a value from within `option`. This eliminates the need to define variables if you know they are only going to be used a single time. The following example takes `val userToken` from the above example and declares it in-line within `option` as an alternative:
->
 > ```scala
 > .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
 > ```

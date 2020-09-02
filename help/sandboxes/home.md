@@ -8,7 +8,7 @@ description: Sandboxes are virtual partitions within a single instance of Experi
 
 # Sandboxes overview
 
-Adobe Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance. 
+Adobe Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance.
 
 In order to address this need, Experience Platform provides **sandboxes** which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
@@ -18,7 +18,7 @@ This document provides a high-level overview of sandboxes in Experience Platform
 
 Sandboxes are virtual partitions within a single instance of Experience Platform, which allow for seamless integration with the development process of your digital experience applications. An Experience Platform instance supports one production sandbox and multiple non-production sandboxes, with each sandbox maintaining its own independent library of Platform resources (including schemas, datasets, profiles, and so on).  All content and actions taken within a sandbox are confined to only that sandbox and do not affect any other sandboxes.
 
-Non-production sandboxes allow you to test features, run experiments, and make custom configurations without impacting your production sandbox. In addition, non-production sandboxes have a reset feature that removes all customer-created resources from the sandbox. Non-production sandboxes cannot be converted to production sandboxes.
+Non-production sandboxes allow you to test features, run experiments, and make custom configurations without impacting your production sandbox. In addition, non-production sandboxes have a reset feature that removes all customer-created resources from the sandbox. Non-production sandboxes cannot be converted to production sandboxes. A default Experience Platform license grants you five sandboxes (one production and four non-production). You can add packs of ten non-production sandboxes up to a maximum of 75 sandboxes in total. Please contact your IMS Org Administrator or your Adobe sales representative for more details.
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ In the [Experience Platform user interface](https://platform.adobe.com), users c
 
 ## Sandboxes in Experience Platform APIs
 
-When making calls to Experience Platform APIs, a sandbox name must be supplied under the header `x-sandbox-name`. For example, when making a call to the [!DNL Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) to view all datasets within the Production sandbox, the sandbox's name ("prod") is provided as a header in the API request:
+When making calls to Experience Platform APIs, a sandbox name must be supplied under the header `x-sandbox-name`. For example, when making a call to the [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) to view all datasets within the Production sandbox, the sandbox's name ("prod") is provided as a header in the API request:
 
 ```shell
 curl -X GET \

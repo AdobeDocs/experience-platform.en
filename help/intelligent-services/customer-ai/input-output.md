@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;getting started;customer ai;popular topics
+keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output
 solution: Experience Platform
 title: Customer AI input and output
 topic: Getting started
+description: The following document outlines the different input and outputs utilized in Customer AI.
 ---
 
 # Customer AI input and output
@@ -26,6 +27,7 @@ The following examples provided use a simple formula to help you determine the m
 Minimum length of data required = eligible population + outcome window
 
 >[!NOTE]
+>
 > 30 is the minimum number of days required for eligible population. If this is not provided the default is 120 days.
 
 Examples : 
@@ -43,6 +45,7 @@ Apart from the minimum data required, Customer AI also works best with recent da
 Customer AI generates several attributes for individual profiles that are deemed eligible. There are two ways to consume the score based on what you have provisioned. If you have Real-time Customer Profile enabled for your dataset, you can consume it via Real-time Customer Profile. If you don't have Real-time Customer Profile you can download the Customer AI output dataset available on the data lake. 
 
 >[!NOTE]
+>
 >Output values are consumed by Real-time Customer Profile which can be used to create and define segments.
 
  The table below describes the various attributes found in the output of Customer AI:

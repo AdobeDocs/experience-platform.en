@@ -2,6 +2,7 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Source Connectors Help
+user-guide-description: Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 ---
 
 # Source connectors {#sources}
@@ -124,6 +125,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
   - [Ingest parquet data from a third-party cloud storage system](tutorials/api/cloud-storage-parquet.md)
   - [Create a dataset base connection using the Flow Service API](tutorials/api/create-dataset-base-connection.md)
   - [Monitor dataflows using the Flow Service API](tutorials/api/monitor.md)
+  - [Update connection information using the Flow Service API](tutorials/api/update.md)
 - UI tutorials {#ui-tutorials}
   - Create a source connector {#create}
     - Adobe applications {#adobe-applications}
@@ -176,7 +178,7 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
   - Configure a dataflow {#dataflow}
       - [Configure a dataflow for an advertising connector](tutorials/ui/dataflow/advertising.md)
       - [Configure a dataflow for a batch cloud storage connector](tutorials/ui/dataflow/batch/cloud-storage.md)
-      - [Configure a dataflow for a streaming cloud storage connector](tutorials/ui/dataflow/streaming/cloud-storage.md)
+      - [Configure a dataflow for a streaming cloud storage connector](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
       - [Configure a dataflow for a database connector](tutorials/ui/dataflow/databases.md)
       - [Configure a dataflow for a CRM connector](tutorials/ui/dataflow/crm.md)
       - [Configure a dataflow for a customer success connector](tutorials/ui/dataflow/customer-success.md)

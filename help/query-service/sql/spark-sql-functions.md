@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;spark sql;Spark sql;spark;spark sql functions;functions;
 solution: Experience Platform
 title: Spark SQL functions
 topic: spark sql functions
@@ -1739,6 +1739,7 @@ Examples:
 ```
 
 Since: 1.5.0
+
 >[!NOTE]
 >
 >rse logic for arrays is available since 2.4.0.
@@ -1757,6 +1758,7 @@ Examples:
 ```
 
 Since: 2.4.0
+
 >[!NOTE]
 >
 >function is non-deterministic.

@@ -11,9 +11,10 @@ In order to drive coordinated, consistent, and personalized experiences for your
 
 ## Getting started
 
-The API endpoint used in this guide is part of the [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
+The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 >[!NOTE]
+>
 >Requests that contain a payload (POST, PUT, PATCH) require a `Content-Type` header. More than one `Content-Type` is used in this document. Please pay special attention to the headers in the sample calls to ensure you are using the correct `Content-Type` for each request.
 
 ## Projection destinations
@@ -46,6 +47,7 @@ curl -X GET \
 The response includes a `projectionDestinations` array with the details for each destination shown as an individual object within the array. If no projections have been configured, the `projectionDestinations` array returns empty. 
 
 >[!NOTE]
+>
 >This response has been shortened for space and shows only two destinations.
 
 ```json
@@ -115,6 +117,7 @@ POST /config/destinations
 The following request creates a new edge destination. 
 
 >[!NOTE]
+>
 >The POST request to create a destination requires a specific `Content-Type` header, as shown below. Using an incorrect `Content-Type` header results in an HTTP Status 415 (Unsupported Media Type) error.
 
 ```shell
@@ -220,6 +223,7 @@ The response object shows the details of the projection destination. The `id` at
 An existing destination can be updated by making a PUT request to the `/config/destinations` endpoint and including the ID of the destination to be updated in the request path. This operation is essentially _rewriting_ the destination, therefore the same attributes must be provided in the body of the request as are provided when creating a new destination.
 
 >[!CAUTION]
+>
 >The API response to the update request is immediate, however the changes to the projections are applied asynchronously. In other words, there is a time difference between when the update to the definition of the destination is made and when it is applied.
 
 **API format**
@@ -237,6 +241,7 @@ PUT /config/destinations/{DESTINATION_ID}
 The following request updates the existing destination to include a second location (`dataCenters`).
 
 >[!IMPORTANT]
+>
 >The PUT request requires a specific `Content-Type` header, as shown below. Using an incorrect `Content-Type` header results in an HTTP Status 415 (Unsupported Media Type) error.
 
 ```shell
@@ -288,6 +293,7 @@ The response includes the updated details for the destination, including its ID 
 If your organization no longer requires a projection destination, it can be deleted by making a DELETE request to the `/config/destinations` endpoint and including the ID of the destination that you wish to delete in the request path.
 
 >[!CAUTION]
+>
 >The API response to the deletion request is immediate, however the actual changes to the data on the edges happens asynchronously. In other words, the profile data will be removed from all of the edges (the `dataCenters` specified in the projection destination) but the process will take time to complete.
 
 **API format**
@@ -338,6 +344,7 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 |`{PROJECTION_NAME}`|The name of the projection configuration you want to access.|
 
 >[!NOTE]
+>
 >`schemaName` is required when using the `name` parameter, as a projection configuration name is only unique in the context of a schema class.
 
 **Request**
@@ -422,6 +429,7 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 **Request**
 
 >[!NOTE]
+>
 >The POST request to create a configuration requires a specific `Content-Type` header, as shown below. Using an incorrect `Content-Type` header results in an HTTP Status 415 (Unsupported Media Type) error.
 
 ```shell
@@ -499,6 +507,7 @@ A selector is a comma-separated list of XDM field names. In a projection configu
     * The above example is equivalent to `addresses.type,addresses.city.country`.
 
 >[!NOTE]
+>
 >Both dot-notation and parenthetical notation are supported for referencing sub-fields. However, it is best practice to use dot-notation because it is more concise and provides a better illustration of field hierarchy.
 
 * Each field in a selector is specified relative to the root of the response.
@@ -603,6 +612,7 @@ Returns only the city field for all elements in the addresses array.
 ```
 
 >[!NOTE]
+>
 >Whenever a nested field is returned, the projection includes the enclosing parent objects. The parent fields do not include any other child fields unless they are also selected explicitly.
 
 **addresses(type,city)**

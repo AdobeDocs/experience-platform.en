@@ -23,7 +23,7 @@ This user guide requires an understanding of the various [!DNL Experience Platfo
 
 ## Overview
 
-In the [[!DNL Experience Platform] UI](http://platform.adobe.com), select **[!UICONTROL Profiles]** in the left navigation to open the **[!UICONTROL Overview]** tab. This tab provides links to documentation and videos to help you understand and begin working with Profile data within Platform.
+In the [[!DNL Experience Platform] UI](http://platform.adobe.com), select **[!UICONTROL Profiles]** in the left navigation to open the **[!UICONTROL Overview]** tab. This tab provides links to documentation and videos to help you understand and begin working with profiles.
 
 ![](../images/user-guide/profiles-overview.png)
 
@@ -59,7 +59,7 @@ Similar to the [profile count](#profile-count) metric, when the ingestion of rec
 
 ### Merge policy
 
-The **[!UICONTROL Merge policy]** selector automatically selects the default merge policy for your organization. If you do not wish to use that merge policy you can select the `X` beside the default merge policy to open the **[!UICONTROL Select merge policy]** dialog where you can choose a different merge policy. To learn more about merge policies and their role within Platform, see the [merge policies user guide](merge-policies.md).
+The **[!UICONTROL Merge policy]** selector automatically selects the default merge policy for your organization. If you do not wish to use that merge policy you can select the `X` beside the default merge policy to open the **[!UICONTROL Select merge policy]** dialog where you can choose another merge policy. To learn more about merge policies and their role within Platform, see the [merge policies user guide](merge-policies.md).
 
 ![](../images/user-guide/profiles-search-merge-policy.png)
 
@@ -69,7 +69,7 @@ The **[!UICONTROL Identity namespace]** selector opens a dialog where you can ch
 
 ![](../images/user-guide/profiles-search-filter.png)
 
-From the **[!UICONTROL Select identity namespace]** dialog, choose the namespace by which you would like to search, or use the [!UICONTROL Search] bar in the dialog to begin typing the name of a namespace. You can select a namespace to view additional details, and once you have found the namespace you would like to search by you can select the radio button and press [!UICONTROL Select] to continue.
+From the **[!UICONTROL Select identity namespace]** dialog, choose the namespace by which you would like to search, or use the search bar in the dialog to begin typing the name of a namespace. You can select a namespace to view additional details, and once you have found the namespace you would like to use you can select the radio button and press **[!UICONTROL Select]** to continue.
 
 ![](../images/user-guide/profiles-select-identity-namespace.png)
 

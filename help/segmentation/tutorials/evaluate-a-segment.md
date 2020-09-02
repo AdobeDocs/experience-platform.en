@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segment evaluation
+keywords: Experience Platform;home;popular topics;segment evaluation;Segmentation Service;segmentation;Segmentation;evaluate a segment;access segment results;evaluate and access segment;
 solution: Experience Platform
 title: Evaluate a segment
 topic: tutorial
@@ -8,15 +8,15 @@ description: This document provides a tutorial for evaluating segments and acces
 
 # Evaluate and access segment results
 
-This document provides a tutorial for evaluating segments and accessing segment results using the [!DNL Segmentation API](../api/getting-started.md). 
+This document provides a tutorial for evaluating segments and accessing segment results using the [[!DNL Segmentation API]](../api/getting-started.md). 
 
 ## Getting started
 
 This tutorial requires a working understanding of the various [!DNL Adobe Experience Platform] services involved in creating audience segments. Before beginning this tutorial, please review the documentation for the following services:
 
-- [!DNL Real-time Customer Profile](../../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
-- [!DNL Adobe Experience Platform Segmentation Service](../home.md): Allows you to build audience segments from [!DNL Real-time Customer Profile] data.
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Allows you to build audience segments from [!DNL Real-time Customer Profile] data.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ### Required headers
@@ -222,10 +222,10 @@ More detailed information about using this endpoint can be found in the [export 
 
 ## Next steps
 
-Once the export has completed successfully, your data is available within the [!DNL Data Lake] in [!DNL Experience Platform]. You can then use the [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) to access the data using the `batchId` associated with the export. Depending on the size of the segment, the data may be in chunks and the batch may consist of several files.
+Once the export has completed successfully, your data is available within the [!DNL Data Lake] in [!DNL Experience Platform]. You can then use the [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) to access the data using the `batchId` associated with the export. Depending on the size of the segment, the data may be in chunks and the batch may consist of several files.
 
 For step-by-step instructions on how to use the [!DNL Data Access] API to access and download batch files, follow the [Data Access tutorial](../../data-access/tutorials/dataset-data.md).
 
 You can also access successfully exported segment data using [!DNL Adobe Experience Platform Query Service]. Using the UI or RESTful API, [!DNL Query Service] allows you to write, validate, and run queries on data within the [!DNL Data Lake].
 
-For more information on how to query audience data, please review the documentation on [!DNL Query Service](../../query-service/home.md).
+For more information on how to query audience data, please review the documentation on [[!DNL Query Service]](../../query-service/home.md).

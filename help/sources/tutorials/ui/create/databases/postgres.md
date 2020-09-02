@@ -1,13 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;PSQL;psql;PostgreSQL
 solution: Experience Platform
 title: Create a PostgreSQL source connector in the UI
 topic: overview
+description: This tutorial provides steps for creating a PostgreSQL (hereinafter referred to as "PSQL") source connector using the Platform user interface.
 ---
 
 # Create a [!DNL PostgreSQL] source connector in the UI
 
 >[!NOTE]
+>
 > The [!DNL PostgreSQL] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL PostgreSQL] (hereinafter referred to as "PSQL") source connector using the [!DNL Platform] user interface.

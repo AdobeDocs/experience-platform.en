@@ -1,13 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Phoenix;phoenix
 solution: Experience Platform
 title: Create a Phoenix source connector in the UI
 topic: overview
+description: This tutorial provides steps for creating a Phoenix source connector using the Platform user interface.
 ---
 
 # Create a [!DNL Phoenix] source connector in the UI
 
 >[!NOTE]
+>
 > The [!DNL Phoenix] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL Phoenix] source connector using the [!DNL Platform] user interface.

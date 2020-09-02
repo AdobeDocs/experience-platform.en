@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;sql syntax;sql;
 solution: Experience Platform
 title: SQL syntax
 topic: syntax

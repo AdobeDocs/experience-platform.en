@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;scheduled queries;scheduled query;
 solution: Experience Platform
 title: Query Service developer guide
 topic: scheduled queries

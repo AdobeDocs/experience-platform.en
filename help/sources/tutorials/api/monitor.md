@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;monitor dataflows;flow service api;Flow Service
 solution: Experience Platform
 title: Monitor flows and runs
 topic: overview
+description: This tutorial covers the steps for monitoring flow run data for completeness, errors, and metrics using the Flow Service API.
 ---
 
 # Monitor dataflows using the Flow Service API
@@ -11,7 +12,7 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
-This tutorial covers the steps for monitoring flow run data for completeness, errors, and metrics using the [!DNL Flow Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+This tutorial covers the steps for monitoring flow run data for completeness, errors, and metrics using the [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Getting started
 

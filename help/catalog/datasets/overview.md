@@ -34,7 +34,7 @@ See the [Data Ingestion overview](../../ingestion/home.md) for more information.
 
 ## Applying usage labels to datasets
 
-Adobe Experience Platform [!DNL Data Governance] allows you to manage customer data in order to ensure compliance with regulations, restrictions, and policies applicable to data use. Using Data Usage Labeling and Enforcement (DULE) as its core framework, [!DNL Data Governance] allows you to apply usage labels to categorize data according to the usage policies that apply to that data.
+Adobe Experience Platform [!DNL Data Governance] allows you to manage customer data in order to ensure compliance with regulations, restrictions, and policies applicable to data use. The [!DNL Data Governance] framework allows you to apply usage labels to categorize data according to the usage policies that apply to that data.
 
 Data usage labels can be applied to entire datasets or individual dataset fields. Labels added at the dataset level are inherited by all fields within that dataset.
 
@@ -49,9 +49,9 @@ Once datasets have been used to store ingested data, those datasets are then use
 
 The following is a list of downstream services that use datasets for various operations. Please review the documentation for each service for more information.
 
-* [!DNL Data Access API](../../data-access/home.md): Allows you to access and download the contents of files stored within datasets.
+* [[!DNL Data Access API]](../../data-access/home.md): Allows you to access and download the contents of files stored within datasets.
 * [Adobe Experience Platform Identity Service](../../identity-service/home.md): Bridges identities across devices and systems, linking datasets together based on the identity fields defined by the XDM schemas they conform to.
-* [!DNL Real-time Customer Profile](../../profile/home.md): Leverages [!DNL Identity Service] to create detailed customer profiles from your datasets in real-time. [!DNL Real-time Customer Profile] pulls data from the [!DNL Data Lake] and persists customer profiles in its own separate data store.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md): Leverages [!DNL Identity Service] to create detailed customer profiles from your datasets in real-time. [!DNL Real-time Customer Profile] pulls data from the [!DNL Data Lake] and persists customer profiles in its own separate data store.
 * [Adobe Experience Platform Segmentation Service](../../segmentation/home.md): Allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These audiences can then be exported to their own datasets within the [!DNL Data Lake].
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md): Uses machine learning and artificial intelligence to uncover insights in large datasets.
 * [Adobe Experience Platform Query Service](../../query-service/home.md): Allows you to use standard SQL to query data in [!DNL Experience Platform], joining any datasets within the [!DNL Data Lake] and capturing query results as a new dataset for use in reporting, [!DNL Data Science Workspace], or [!DNL Real-time Customer Profile].

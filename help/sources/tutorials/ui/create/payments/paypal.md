@@ -1,13 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;paypal;Paypal
 solution: Experience Platform
 title: Create a PayPal source connector in the UI
 topic: overview
+description: This tutorial provides steps for creating a PayPal source connector using the Platform user interface.
 ---
 
 # Create a [!DNL PayPal] source connector in the UI
 
 >[!NOTE]
+>
 > The [!DNL PayPal] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL PayPal] source connector using the [!DNL Platform] user interface.

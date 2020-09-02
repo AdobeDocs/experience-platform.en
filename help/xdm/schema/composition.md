@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;enum;mixin;Mixin;Mixins;mixins;data type;data types;Data types;Data type;primary identity;primary idenity;XDM individual profile;XDM fields;enum datatype;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design
+keywords: Experience Platform;home;popular topics;schema;Schema;enum;mixin;Mixin;Mixins;mixins;data type;data types;Data types;Data type;primary identity;primary idenity;XDM individual profile;XDM fields;enum datatype;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design;class;Class;classes;Classes;datatype;Datatype;data type;Data type;schemas;Schemas;identityMap;identity map;Identity map;
 solution: Experience Platform
 title: Basics of schema composition
 topic: overview
@@ -55,9 +55,9 @@ Both record and time series schemas contain a map of identities (`xdm:identityMa
 
 Schemas are used for ingesting data into [!DNL Experience Platform]. This data can be used across multiple services to create a single, unified view of an individual entity. Therefore, it is important when thinking about schemas to think about customer identities and which fields can be used to identify a subject regardless of where the data may be coming from. 
 
-To help with this process, key fields within your schemas can be marked as identities. Upon data ingestion, the data in those fields is inserted into the "[!UICONTROL Identity Graph]" for that individual. The graph data can then be accessed by [!DNL Real-time Customer Profile](../../profile/home.md) and other [!DNL Experience Platform] services to provide a stitched-together view of each individual customer.
+To help with this process, key fields within your schemas can be marked as identities. Upon data ingestion, the data in those fields is inserted into the "[!UICONTROL Identity Graph]" for that individual. The graph data can then be accessed by [[!DNL Real-time Customer Profile]](../../profile/home.md) and other [!DNL Experience Platform] services to provide a stitched-together view of each individual customer.
 
-Fields that are commonly marked as "[!UICONTROL Identity]" include: email address, phone number, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/en/id-service/using/home.html), CRM ID, or other unique ID fields. You should also consider any unique identifiers specific to your organization, as they may be good "[!UICONTROL Identity]" fields as well.
+Fields that are commonly marked as "[!UICONTROL Identity]" include: email address, phone number, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/en/id-service/using/home.html), CRM ID, or other unique ID fields. You should also consider any unique identifiers specific to your organization, as they may be good "[!UICONTROL Identity]" fields as well.
 
 It is important to think about customer identities during the schema planning phase in order to help ensure data is being brought together to build the most robust profile possible. See the overview on [Adobe Experience Platform Identity Service](../../identity-service/home.md) to learn more about how identity information can help you deliver digital experiences to your customers.
 
@@ -116,7 +116,7 @@ Since maintaining backwards compatibility is crucial for schema evolution, [!DNL
 
 ### Schemas and data ingestion
 
-In order to ingest data into [!DNL Experience Platform], a dataset must first be created. Datasets are the building blocks for data transformation and tracking for [!DNL Catalog Service](../../catalog/home.md), and generally represent tables or files that contain ingested data. All datasets are based on existing XDM schemas, which provide constraints for what the ingested data should contain and how it should be structured. See the overview on [Adobe Experience Platform Data Ingestion](../../ingestion/home.md) for more information.
+In order to ingest data into [!DNL Experience Platform], a dataset must first be created. Datasets are the building blocks for data transformation and tracking for [[!DNL Catalog Service]](../../catalog/home.md), and generally represent tables or files that contain ingested data. All datasets are based on existing XDM schemas, which provide constraints for what the ingested data should contain and how it should be structured. See the overview on [Adobe Experience Platform Data Ingestion](../../ingestion/home.md) for more information.
 
 ## Building blocks of a schema
 
@@ -187,11 +187,11 @@ The valid ranges of these scalar types can be further constrained to certain pat
 
 Some data operations used by downstream services and applications enforce constraints on specific field types. Affected services include, but are not limited to:
 
-* [!DNL Real-time Customer Profile](../../profile/home.md)
-* [!DNL Identity Service](../../identity-service/home.md)
-* [!DNL Segmentation](../../segmentation/home.md)
-* [!DNL Query Service](../../query-service/home.md)
-* [!DNL Data Science Workspace](../../data-science-workspace/home.md)
+* [[!DNL Real-time Customer Profile]](../../profile/home.md)
+* [[!DNL Identity Service]](../../identity-service/home.md)
+* [[!DNL Segmentation]](../../segmentation/home.md)
+* [[!DNL Query Service]](../../query-service/home.md)
+* [[!DNL Data Science Workspace]](../../data-science-workspace/home.md)
 
 Before creating a schema for use in downstream services, please review the appropriate documentation for those services in order to better understand the field requirements and constraints for the data operations the schema is intended for.
 
