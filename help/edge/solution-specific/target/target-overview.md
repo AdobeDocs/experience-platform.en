@@ -80,7 +80,7 @@ alloy
 
 `decisionScopes` defines sections, locations, or parts of your pages where you would like to render a personalized experience. These `decisionScopes` are customizable and user-defined. For current [!DNL Target] customers, `decisionScopes` are also known as "mboxes." In the [!DNL Target] UI, `decisionScopes` appear as "locations."
 
-## `__view__` Scope
+## The `__view__` Scope
 
 AEP [!DNL Web SDK] provides a functionality where you can retrieve VEC actions without relying on the AEP [!DNL Web SDK] to render the VEC actions for you. Send an event with `__view__` defined as as a `decisionScopes`.
 
