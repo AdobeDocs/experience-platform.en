@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics
+keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;query service
 solution: Experience Platform
 title: Query service in Jupyter notebook
 topic: Tutorial
+description: Adobe Experience Platform allows you to use Structured Query Language (SQL) in Data Science Workspace by integrating Query Service into JupyterLab as a standard feature. This tutorial demonstrates sample SQL queries for common use cases to explore, transform, and analyze Adobe Analytics data.
 ---
 
 # Query service in Jupyter notebook
@@ -20,14 +21,14 @@ Before starting this tutorial, you must have the following prerequisites:
 -   An [!DNL Adobe Analytics] dataset
 
 -   A working understanding of the following key concepts used in this tutorial:
-    -   [!DNL Experience Data Model (XDM) and XDM System](../../xdm/home.md)
-    -   [!DNL Query Service](../../query-service/home.md)
-    -   [!DNL Query Service SQL Syntax](../../query-service/sql/overview.md)
+    -   [[!DNL Experience Data Model (XDM) and XDM System]](../../xdm/home.md)
+    -   [[!DNL Query Service]](../../query-service/home.md)
+    -   [[!DNL Query Service SQL Syntax]](../../query-service/sql/overview.md)
     -   [Adobe Analytics]
 
 ## Access [!DNL JupyterLab] and [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1.  In [!DNL Experience Platform](https://platform.adobe.com), navigate to **[!UICONTROL Notebooks]** from the left navigation column. Allow a moment for JupyterLab to load.
+1.  In [[!DNL Experience Platform]](https://platform.adobe.com), navigate to **[!UICONTROL Notebooks]** from the left navigation column. Allow a moment for JupyterLab to load.
 
     ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 

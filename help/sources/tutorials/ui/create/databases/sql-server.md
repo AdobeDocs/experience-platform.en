@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Microsoft SQL Server;SQL Server;sql server
 solution: Experience Platform
 title: Create a Microsoft SQL Server source connector in the UI
 topic: overview
+description: This tutorial provides steps for creating a Microsoft SQL Server (hereinafter referred to as "SQL Server") source connector using the Platform user interface.
 ---
 
 # Create a [!DNL Microsoft SQL Server] source connector in the UI

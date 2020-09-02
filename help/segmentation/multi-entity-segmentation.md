@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment service;segments;Segments
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment service;segments;Segments;multi-entity;multi-entity segmentation;multi-entity segments;
 solution: Experience Platform
 title: Multi-entity segmentation
 topic: overview
@@ -18,9 +18,9 @@ To learn more about multi-entity segmentation, please continue reading the docum
 
 This tutorial requires a working understanding of the various Adobe Experience Platform services involved in using segmentation. Before beginning this tutorial, please review the documentation for the following services:
 
-- [!DNL Real-time Customer Profile](../profile/home.md): Provides a unified consumer profile in real-time, based on aggregated data from multiple sources.
+- [[!DNL Real-time Customer Profile]](../profile/home.md): Provides a unified consumer profile in real-time, based on aggregated data from multiple sources.
 - [Adobe Experience Platform Segmentation Service](./home.md): Allows you to build segments from Real-time Customer Profile.
-- [!DNL Experience Data Model (XDM)](../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
+- [[!DNL Experience Data Model (XDM)]](../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 
 ## How to define XDM relationships
 

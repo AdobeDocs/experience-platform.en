@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Real-time Customer Profile;Identity Service;
 solution: Experience Platform
 title: Real-time Customer Profile tutorials
 topic: tutorial
+description: This document outlines the steps involved and provides links to tutorials for completing each individual workflow.
 ---
 
 # Configure [!DNL Real-time Customer Profile] and [!DNL Identity Service]

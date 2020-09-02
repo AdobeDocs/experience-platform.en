@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;SFTP;sftp;Secure File Transfer Protocol;secure file transfer protocol
 solution: Experience Platform
 title: Create an SFTP connector using the Flow Service API
 topic: overview
+description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to an SFTP (Secure File Transfer Protocol) server.
 ---
 
 # Create an SFTP connector using the [!DNL Flow Service] API

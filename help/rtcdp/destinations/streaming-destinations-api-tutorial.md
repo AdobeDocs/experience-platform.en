@@ -5,7 +5,7 @@ title: Connect to streaming destinations and activate data
 topic: tutorial
 ---
 
-# Connect to streaming destinations and activate data in Adobe's Real-time Customer Data Platform using APIs
+# Connect to streaming destinations and activate data using API calls in Adobe's Real-time Customer Data Platform
 
 >[!NOTE]
 >
@@ -23,8 +23,8 @@ If you prefer to use the user interface in Adobe's Real-time CDP to connect to a
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-*   [!DNL Experience Data Model (XDM) System](../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-*   [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] is the system of record for data location and lineage within Experience Platform.
+*   [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+*   [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] is the system of record for data location and lineage within Experience Platform.
 *   [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to activate data to streaming destinations in Adobe Real-time CDP.

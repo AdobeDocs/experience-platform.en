@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Phoenix;phoenix
 solution: Experience Platform
 title: Create a Phoenix source connector in the UI
 topic: overview
+description: This tutorial provides steps for creating a Phoenix source connector using the Platform user interface.
 ---
 
 # Create a [!DNL Phoenix] source connector in the UI

@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;HP Vertica
 solution: Experience Platform
 title: Create an HP Vertica source connector in the UI
 topic: overview
+description: This tutorial provides steps for creating an HP Vertica source connector using the Platform user interface.
 ---
 
 # Create an HP [!DNL Vertica] source connector in the UI

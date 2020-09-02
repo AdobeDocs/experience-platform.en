@@ -17,25 +17,25 @@ This document serves as a guide for interacting with [!DNL Real-time Customer Pr
 
 This user guide requires an understanding of the various [!DNL Experience Platform] services involved with managing [!DNL Real-time Customer Profiles]. Before reading this user guide, please review the documentation for the following services:
 
-* [!DNL Real-time Customer Profile](../home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [!DNL Identity Service](../../identity-service/home.md): Enables [!DNL Real-time Customer Profile] by bridging identities from disparate data sources as they are ingested into [!DNL Platform].
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
+* [[!DNL Real-time Customer Profile]](../home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [[!DNL Identity Service]](../../identity-service/home.md): Enables [!DNL Real-time Customer Profile] by bridging identities from disparate data sources as they are ingested into [!DNL Platform].
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 
 ## Overview
 
-In the [!DNL Experience Platform UI](http://platform.adobe.com), click **[!UICONTROL Profiles]** in the left navigation to open the _[!UICONTROL Overview]_ tab. This tab provides links to documentation and videos to help you understand and begin working with profiles.
+In the [[!DNL Experience Platform UI]](http://platform.adobe.com), click **[!UICONTROL Profiles]** in the left navigation to open the **[!UICONTROL Overview]** tab. This tab provides links to documentation and videos to help you understand and begin working with profiles.
 
 ![](../images/user-guide/profiles-overview.png)
 
 ## Browse
 
-Select the *[!UICONTROL Browse]* tab in order to browse profiles by identity. 
+Select the **[!UICONTROL Browse]** tab in order to browse profiles by identity. 
 
 ![](../images/user-guide/profiles-browse.png)
 
 ### Profile metrics {#profile-metrics}
 
-On the right-hand side of the *[!UICONTROL Browse]* tab are several important metrics related to your profile data, including your total [profile count](#profile-count) as well as a listing of [profiles by namespace](#profiles-by-namespace). 
+On the right-hand side of the **[!UICONTROL Browse]** tab are several important metrics related to your profile data, including your total [profile count](#profile-count) as well as a listing of [profiles by namespace](#profiles-by-namespace). 
 
 These profile metrics are evaluated using the default merge policy of your organization. For more information on working with merge policies, including how to define a default merge policy, see the [Merge Policies user guide](merge-policies.md).
 
@@ -53,13 +53,13 @@ When the ingestion of records into the [!DNL Profile Store] increases or decreas
 
 ### Profiles by namespace {#profiles-by-namespace}
 
-The *[!UICONTROL Profiles by namespace]* metric displays the total count and breakdown of namespaces across all of the merged profiles in your Profile Store. The total number of profiles by namespace (in other words, adding together the values shown for each namespace) will always be higher than the profile count metric because one profile could have multiple namespaces associated with it. For example, if a customer interacts with your brand on more than one channel, multiple namespaces will be associated with that individual customer.
+The **[!UICONTROL Profiles by namespace]** metric displays the total count and breakdown of namespaces across all of the merged profiles in your Profile Store. The total number of profiles by namespace (in other words, adding together the values shown for each namespace) will always be higher than the profile count metric because one profile could have multiple namespaces associated with it. For example, if a customer interacts with your brand on more than one channel, multiple namespaces will be associated with that individual customer.
 
 Similar to the [profile count](#profile-count) metric, when the ingestion of records into the [!DNL Profile Store] increases or decreases the count by more than 5%, a job is triggered to update the namespace metrics. For streaming data workflows, a check is done on an hourly basis to determine if the 5% increase or decrease threshold has been met. If it has, a job is automatically triggered to update the profile count. For batch ingestion, within 15 minutes of successfully ingesting a batch into the [!DNL Profile Store], if the 5% increase or decrease threshold is met, a job is run to update the metrics.
 
 ### Merge policy
 
-The **[!UICONTROL Merge policy]** selector automatically selects the default merge policy for your organization. If you do not wish to use that merge policy you can select the `X` beside the default merge policy to open a *[!UICONTROL Select merge policy]* dialog where you can choose another merge policy. To learn more about merge policies, see the [Merge Policies user guide](merge-policies.md).
+The **[!UICONTROL Merge policy]** selector automatically selects the default merge policy for your organization. If you do not wish to use that merge policy you can select the `X` beside the default merge policy to open a **[!UICONTROL Select merge policy]** dialog where you can choose another merge policy. To learn more about merge policies, see the [Merge Policies user guide](merge-policies.md).
 
 ![](../images/user-guide/profiles-search-merge-policy.png)
 
@@ -69,13 +69,13 @@ The **[!UICONTROL Identity namespace]** selector opens a dialog where you can ch
 
 ![](../images/user-guide/profiles-search-filter.png)
 
-From the *[!UICONTROL Select identity namespace]* dialog, choose the namespace by which you would like to search, or use the **[!UICONTROL Search]** bar in the dialog to begin typing the name of a namespace. You can select a namespace to view additional details, and once you have found the namespace you would like to search by you can select the radio button and press **[!UICONTROL Select]** to continue.
+From the **[!UICONTROL Select identity namespace]** dialog, choose the namespace by which you would like to search, or use the **[!UICONTROL Search]** bar in the dialog to begin typing the name of a namespace. You can select a namespace to view additional details, and once you have found the namespace you would like to search by you can select the radio button and press **[!UICONTROL Select]** to continue.
 
 ![](../images/user-guide/profiles-select-identity-namespace.png)
 
 ### Identity value
 
-After selecting an **[!UICONTROL Identity namespace]**, you return to the *[!UICONTROL Browse]* tab where you can enter an **[!UICONTROL Identity value]**. This value is specific to an individual customer profile and must be a valid entry for the namespace provided. For example, selecting the **[!UICONTROL Identity namespace]** "Email" would require an **[!UICONTROL Identity value]** in the form of a valid email address. 
+After selecting an **[!UICONTROL Identity namespace]**, you return to the **[!UICONTROL Browse]** tab where you can enter an **[!UICONTROL Identity value]**. This value is specific to an individual customer profile and must be a valid entry for the namespace provided. For example, selecting the **[!UICONTROL Identity namespace]** "Email" would require an **[!UICONTROL Identity value]** in the form of a valid email address. 
 
 ![](../images/user-guide/profiles-show-profile.png)
 
@@ -85,17 +85,17 @@ Once a value has been entered, select **[!UICONTROL Show profile]** and a single
 
 ### Profile detail {#profile-detail}
 
-Upon selecting the **[!UICONTROL Profile ID]**, the _[!UICONTROL Detail]_ tab opens. This page displays information about the selected profile, including basic attributes, linked identities, and available contact channels. The profile information displayed has been merged together from multiple profile fragments to form a single view of the individual customer.
+Upon selecting the **[!UICONTROL Profile ID]**, the **[!UICONTROL Detail]** tab opens. This page displays information about the selected profile, including basic attributes, linked identities, and available contact channels. The profile information displayed has been merged together from multiple profile fragments to form a single view of the individual customer.
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-You can view additional information related to the profile including *[!UICONTROL Attributes]*, *[!UICONTROL Events]*, and *[!UICONTROL Segments]* to which the profile is a member.
+You can view additional information related to the profile including **[!UICONTROL Attributes]**, **[!UICONTROL Events]**, and **[!UICONTROL Segments]** to which the profile is a member.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## Merge policies
 
-Select the *[!UICONTROL Merge Policies]* tab to view a list of merge policies belonging to your organization. Each listed policy displays its name, whether or not it is the default merge policy, and the schema that it applies to. 
+Select the **[!UICONTROL Merge Policies]** tab to view a list of merge policies belonging to your organization. Each listed policy displays its name, whether or not it is the default merge policy, and the schema that it applies to. 
 
 For more information on merge policies, see the [Merge Policies user guide](merge-policies.md).
 

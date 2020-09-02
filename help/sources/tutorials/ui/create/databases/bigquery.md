@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Google Big Query;google big query;GBQ;gbq
 solution: Experience Platform
 title: Create a Google Big Query source connector in the UI
 topic: overview
+description: This tutorial provides steps for creating a Google Big Query (hereinafter referred to as "GBQ") source connector using the Platform user interface.
 ---
 
 # Create a [!DNL Google Big Query] source connector in the UI

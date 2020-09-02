@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Amazon Kinesis;amazon kinesis;Kinesis;kinesis
 solution: Experience Platform
 title: Amazon Kinesis connector
 topic: overview
+description: The documentation below provides information on how to connect Amazon Kinesis to Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL Amazon Kinesis] connector
@@ -58,4 +59,4 @@ The documentation below provides information on how to connect [!DNL Amazon Kine
 ## Connect [!DNL Amazon Kinesis] to [!DNL Platform] using the UI
 
 - [Create a Amazon Kinesis source connector in the UI](../../tutorials/ui/create/cloud-storage/kinesis.md)
-- [Configure a dataflow for a cloud storage connector in the UI](../../tutorials/ui/dataflow/streaming/cloud-storage.md)
+- [Configure a dataflow for a cloud storage connector in the UI](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)

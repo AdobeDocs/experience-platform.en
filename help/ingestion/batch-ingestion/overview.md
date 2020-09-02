@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;data ingestion;batch;Batch;enable dataset
+keywords: Experience Platform;home;popular topics;data ingestion;batch;Batch;enable dataset;Batch ingestion overview;overview;batch ingestion overview;
 solution: Experience Platform
 title: Adobe Experience Platform Batch Ingestion overview
 topic: overview
@@ -28,7 +28,7 @@ The [!DNL Data Ingestion] API allows you to ingest data as batches (a unit of da
 ### [!DNL Data Ingestion] prerequisites
 
 - Data to upload must be either in Parquet or JSON formats.
-- A dataset created in the [!DNL Catalog services](../../catalog/home.md).
+- A dataset created in the [[!DNL Catalog services]](../../catalog/home.md).
 - Contents of the parquet file must match a subset of the schema of the dataset being uploaded into.
 - Have your unique Access Token after authentication.
 

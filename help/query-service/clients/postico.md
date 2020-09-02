@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Query service;query service;postico;Postico;connect to query service;
 solution: Experience Platform
 title: Connect with Postico
 topic: connect

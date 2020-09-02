@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;MariaDB;mariadb;Maria DB;maria db
 solution: Experience Platform
 title: MariaDB connector
 topic: overview
+description: The documentation below provides information on how to connect MariaDB to Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL MariaDB] connector

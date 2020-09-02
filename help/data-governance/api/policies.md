@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Policy enforcement;API-based enforcement;data governance
 solution: Experience Platform
 title: Policies
 topic: developer guide
+description: Data usage policies are rules your organization adopts that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Experience Platform. The /policies endpoint is used for all API calls related to viewing, creating, updating, or deleting data usage policies.
 ---
 
 # Policies endpoint

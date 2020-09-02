@@ -5,7 +5,7 @@ title: Create email marketing destinations
 topic: tutorial
 ---
 
-# Create email marketing destinations and activate data in Adobe's [!DNL Real-time Customer Data Platform]
+# Create email marketing destinations and activate data using API calls in Adobe's [!DNL Real-time Customer Data Platform]
 
 This tutorial demonstrates how to use API calls to connect to your Adobe Experience Platform data, create an [email marketing destination](../../rtcdp/destinations/email-marketing-destinations.md), create a dataflow to your new created destination, and activate data to your new created destination.
 
@@ -19,9 +19,9 @@ If you prefer to use the user interface in Adobe's Real-time CDP to connect a de
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-*   [!DNL Experience Data Model (XDM) System](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-*   [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] is the system of record for data location and lineage within [!DNL Experience Platform].
-*   [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+*   [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+*   [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] is the system of record for data location and lineage within [!DNL Experience Platform].
+*   [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to activate data to email marketing destinations in Adobe Real-time CDP.
 

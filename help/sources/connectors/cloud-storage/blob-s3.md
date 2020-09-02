@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Blob;Amazon S3;blob;Blob;S3;s3
 solution: Experience Platform
 title: Azure Blob and Amazon S3 connector
 topic: overview
+description: The documentation below provides information on how to connect Azure Blob and Amazon S3 to Platform using APIs or the user interface.
 ---
 
 # Azure Blob and Amazon S3 connector

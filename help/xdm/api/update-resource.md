@@ -1,7 +1,8 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;update;Update;patch;PATCH
 solution: Experience Platform
 title: Update a resource
+description: You can modify or update resources in the tenant container using a PATCH request. The Schema Registry supports all standard JSON Patch operations, including add, remove, and replace. 
 topic: developer guide
 ---
 

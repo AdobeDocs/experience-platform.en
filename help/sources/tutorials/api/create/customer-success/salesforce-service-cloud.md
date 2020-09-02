@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;ssc;SSC;Salesforce Service Cloud;salesforce service cloud
 solution: Experience Platform
 title: Create a Salesforce Service Cloud connector using the Flow Service API
 topic: overview
+description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to Salesforce Service Cloud (hereinafter referred to as "SSC").
 ---
 
 # Create a [!DNL Salesforce Service Cloud] connector using the [!DNL Flow Service] API

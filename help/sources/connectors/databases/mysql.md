@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;MySQL;mysql;My sql;My SQL
 solution: Experience Platform
 title: MySQL connector
 topic: overview
+description: The documentation below provides information on how to connect MySQL to Platform using APIs or the user interface.
 ---
 
 # (Beta) MySQL connector

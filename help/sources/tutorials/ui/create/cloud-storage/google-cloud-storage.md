@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Google Cloud Storage;google cloud storage;GCS;gcs
 solution: Experience Platform
-title: Create a Google Cloud Storage source connector in the UI
+title: Google Cloud Storage source connector (UI)
 topic: overview
+description: This tutorial provides steps for creating a Google Cloud Storage (hereinafter referred to as "GCS") source connector using the Platform user interface.
 ---
 
 # Create a [!DNL Google Cloud Storage] source connector in the UI
