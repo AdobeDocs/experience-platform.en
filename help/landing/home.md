@@ -75,7 +75,9 @@ The Adobe Experience Platform documentation is available in several languages. T
 
 [!DNL Experience Platform] documentation is provided in multiple formats for a variety of features and services. To learn more about the types of documentation that are available, as well as to read brief descriptions of each of the [!DNL Platform] services, please visit the [Experience Platform documentation overview](documentation/overview.md). Or, to begin learning more about a specific [!DNL Platform] service right away, select a guide from the alphabetical list in the left navigation.
 
-In addition to the services in the left navigation, Adobe has built other services on top of Experience Platform. You can find documentation for these services in their own documentation repositories, linked below:
+### Documentation for application services built on top of [!DNL Experience Platform]
+
+In addition to the services in the left navigation, Adobe has built other application services on top of Experience Platform. You can find documentation for these services in their own documentation repositories, linked below:
 
 * [[!DNL Customer Journey Analytics]](https://docs.adobe.com/content/help/en/analytics-platform/using/cja-landing.html) 
 * [[!DNL Journey Orchestration]](https://docs.adobe.com/content/help/en/journeys/using/journey-orchestration-home.html)
@@ -148,12 +150,7 @@ The following videos outline the key capabilities and use cases for [!DNL Experi
 
 >[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)
 
-## Adobe services built on top of [!DNL Experience Platform]
 
-Adobe has built several services on top of [!DNL Experience Platform]. Use the links below to navigate to the homepages of these services:
-
-* [[!DNL Customer Journey Analytics]](https://docs.adobe.com/content/help/en/analytics-platform/using/cja-landing.html) 
-* [[!DNL Journey Orchestration]](https://docs.adobe.com/content/help/en/journeys/using/journey-orchestration-home.html)
  
 
 <!-- 
