@@ -35,6 +35,10 @@ Select the funnel icon on the top left to launch the sort window.
 
 The sorting panel allows you to access accounts from a specific source. Select the source you wish to work with and select the account from the list on the right.
 
+>[!TIP]
+>
+> Use the ![spectrum-control](../../images/tutorials/monitor/spectrum-control.png) button in the **[!UICONTROL Name]** column to create a new source connection for the selected account
+
 ![accounts-select](../../images/tutorials/monitor/accounts-sort.png)
 
 From the **[!UICONTROL Accounts]** page, you can view a list of existing dataflows or target datasets associated with the account you accessed.
