@@ -62,7 +62,7 @@ Adhering to the following guardrails is recommended when creating a data model f
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-| No time-series data for non-[!DNL XDM Individual Profile] entities| 0 | Soft | **Time-series data is not recommended for non-[!DNL XDM Individual Profile] entities in Profile Service.** If a time-series dataset is associated with a non-[!DNL XDM Individual Profile] ID, the dataset should not be enabled for [!DNL Profile]. |
+| No time-series data permitted for non-[!DNL XDM Individual Profile] entities| 0 | Hard | **Time-series data is not permitted for non-[!DNL XDM Individual Profile] entities in Profile Service.** If a time-series dataset is associated with a non-[!DNL XDM Individual Profile] ID, the dataset should not be enabled for [!DNL Profile]. |
 | No nested relationships | 0 | Soft | **You should not create a relationship between two non-[!DNL XDM Individual Profile] schemas.** The ability to create relationships is not recommended for any schemas which are not part of the [!DNL Profile] union schema.|
 | Maximum JSON depth for primary ID field | 4 | Soft | **The recommended maximum JSON depth for the primary ID field is 4.** This means that in a highly-nested schema, you should not select a field as a primary ID if it is nested more than 4 levels deep. A field that is on the 4th nested level can be used as a primary ID.|
 
