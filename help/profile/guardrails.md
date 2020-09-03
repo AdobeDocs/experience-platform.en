@@ -56,7 +56,7 @@ Adhering to the following guardrails is recommended when creating a data model f
 | Number of multi-entity relationships recommended| 5 | Soft | **A maximum of 5 multi-entity relationships defined between primary entities and dimension entities is recommended.** Additional relationship mappings should not be made until an existing relationship is removed or disabled. | 
 | Maximum JSON depth for ID field used in multi-entity relationship| 4 | Soft | **The recommended maximum JSON depth for an ID field used in multi-entity relationships is 4.** This means that in a highly-nested schema, fields that are nested more than 4 levels deep should not be used as an ID field in a relationship.|
 |Array cardinality in a profile fragment|<=500|Soft|**The optimal array cardinality in a profile fragment (time independent data) is <=500.**|
-|Array cardinality in ExperienceEvent|<=10|Soft|**The optimal array cardinality in an ExperienceEvent (time series data) is <=10.**
+|Array cardinality in ExperienceEvent|<=10|Soft|**The optimal array cardinality in an ExperienceEvent (time series data) is <=10.**|
 
 ### Dimension entity guardrails
 
