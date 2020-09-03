@@ -6,11 +6,9 @@ topic: ui guide
 description: Segment Builder provides a rich workspace that allows you to interact with Profile data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. 
 ---
 
-# OR and AND logical operators update
+# Time constraints refactorization
 
 The September 2020 release for Adobe Experience Platform has introduced performance changes to Adobe Experience Platform Segmentation Service that add new restrictions to the use of the OR and AND logical operators. These changes will affect newly created or edited segments made using the Segment Builder UI. This guide explains how to mitigate these changes.
-
-## Time constraints refactorization
 
 Prior to the September 2020 release, all rule-level, group-level, and event-level time constraints were redundantly referring to the same timestamp. In order to clarify time constraint usage, rule-level and group-level time constraints have been removed. To accommodate this change, all time constraints must be rewritten as event-level time constraints.
 

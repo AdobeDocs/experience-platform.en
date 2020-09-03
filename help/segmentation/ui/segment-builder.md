@@ -68,7 +68,7 @@ To add a new rule to your segment definition, drag a tile from the **[!UICONTROL
 
 >[!IMPORTANT]
 >
->The latest changes to Adobe Experience Platform have updated the usage of the `OR` and `AND` logical operators between events. These updates will not affect existing segments. However, all subsequent updates to existing segments and new segment creations will be affected by these changes. Please read the [OR and AND logical operators update](./segment-refactoring.md) for more information.
+>The latest changes to Adobe Experience Platform have updated the usage of the `OR` and `AND` logical operators between events. These updates will not affect existing segments. However, all subsequent updates to existing segments and new segment creations will be affected by these changes. Please read the [time constants update](./segment-refactoring.md) for more information.
 
 ### Adding audiences
 

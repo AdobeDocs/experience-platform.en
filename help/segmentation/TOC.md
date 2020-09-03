@@ -23,7 +23,7 @@ user-guide-description: Adobe Experience Platform Segmentation Service provides 
     - [Overview](ui/overview.md)
     - [Segment Builder](ui/segment-builder.md)
     - [Streaming segmentation](ui/streaming-segmentation.md)
-    - [(Breaking Change) OR and AND logical operators update](ui/segment-refactoring.md)
+    - [Time constraints refactoring](ui/segment-refactoring.md)
 - [Honoring opt-outs](honoring-opt-outs.md)
 - [Multi-entity segmentation](multi-entity-segmentation.md)
 - Profile Query Language {#pql}
