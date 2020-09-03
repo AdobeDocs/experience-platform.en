@@ -52,17 +52,19 @@ Adhering to the following guardrails is recommended when creating a data model f
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-| Number of datasets permitted to contribute to the [!DNL Profile] union schema | 20 |  | **A maximum of 20 [!DNL Profile]-enabled datasets are permitted.** To enable another dataset for [!DNL Profile], an existing dataset must first be removed or disabled.|
-| Number of multi-entity relationships permitted| 5 |  | **A maximum of 5 multi-entity relationships can be defined between primary entities and dimension entities.** Additional relationship mappings should not be made until an existing relationship is removed or disabled. | 
-| Maximum JSON depth for ID field used in multi-entity relationship| 4 | | **The maximum JSON depth for an ID field used in multi-entity relationships is 4.** This means that in a highly-nested schema, the relationship selector is disabled for fields that are nested more than 4 levels deep. |
+| Number of datasets permitted to contribute to the [!DNL Profile] union schema | 20 | Soft | **A maximum of 20 [!DNL Profile]-enabled datasets are permitted.** To enable another dataset for [!DNL Profile], an existing dataset must first be removed or disabled.|
+| Number of multi-entity relationships permitted| 5 | Soft | **A maximum of 5 multi-entity relationships can be defined between primary entities and dimension entities.** Additional relationship mappings should not be made until an existing relationship is removed or disabled. | 
+| Maximum JSON depth for ID field used in multi-entity relationship| 4 | Soft | **The maximum JSON depth for an ID field used in multi-entity relationships is 4.** This means that in a highly-nested schema, the relationship selector is disabled for fields that are nested more than 4 levels deep.|
+|Array cardinality in a profile fragment|<=500|Soft|**The optimal array cardinality in a profile fragment (time independent data) is <=500.**|
+|Array cardinality in ExperienceEvent|<=10|Soft|**The optimal array cardinality in an ExperienceEvent (time series data) is <=10.**
 
 ### Dimension entity guardrails
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-| No time-series data permitted in profile for non-people entities| 0 | | **Time-series data is not permitted in profile for non-people entities.** If a time-series dataset is associated with a non-people ID, the dataset cannot be enabled for [!DNL Profile]. |
-| No nested relationships permitted | 0 | | **You cannot create a relationship between two non-people schemas.** The ability to create relationships is not supported for any schemas which are not part of the [!DNL Profile] union schema.|
-| Maximum JSON depth for primary ID field | 4 | | **The maximum JSON depth for the primary ID field is 4.** This means that in a highly-nested schema, you cannot select a field as a primary ID if it is nested more than 4 levels deep. A field that is on the 4th nested level can be used as a primary ID.|
+| No time-series data permitted in profile for non-people entities| 0 | Soft | **Time-series data is not permitted in profile for non-people entities.** If a time-series dataset is associated with a non-people ID, the dataset cannot be enabled for [!DNL Profile]. |
+| No nested relationships permitted | 0 | Soft | **You cannot create a relationship between two non-people schemas.** The ability to create relationships is not supported for any schemas which are not part of the [!DNL Profile] union schema.|
+| Maximum JSON depth for primary ID field | 4 | Soft | **The maximum JSON depth for the primary ID field is 4.** This means that in a highly-nested schema, you cannot select a field as a primary ID if it is nested more than 4 levels deep. A field that is on the 4th nested level can be used as a primary ID.|
 
 ## Data size guardrails
 
@@ -83,5 +85,5 @@ The following guardrails refer to data size and are recommended to ensure data c
 
 | Guardrail | Limit | Limit Type | Description|
 | --- | --- | --- | --- |
-| Maximum total size for dimension entity (total for all records in an entity) | 200MB | | **The maximum total size for all records in a non-person entity of a given type is 200MB.** Ingesting larger dimension entities will result in degraded system performance. For example, attempting to load a 10GB product catalog as a dimension entity is not recommended.|
-| Datasets per dimensional entity schema | 1 | | **A maximum of 1 dataset can be associated with each dimensional entity schema.** For example, if you create a schema for "products" and add a contributing dataset, you are unable to create a second dataset tied to the products schema.|
+| Maximum total size for dimension entity (total for all records in an entity) | 200MB | Soft | **The maximum total size for all records in a non-person entity of a given type is 200MB.** Ingesting larger dimension entities will result in degraded system performance. For example, attempting to load a 10GB product catalog as a dimension entity is not recommended.|
+| Datasets per dimensional entity schema | 1 | Soft | **A maximum of 1 dataset can be associated with each dimensional entity schema.** For example, if you create a schema for "products" and add a contributing dataset, you should not create a second dataset tied to the products schema.|
