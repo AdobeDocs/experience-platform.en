@@ -50,3 +50,8 @@ Documentation is currently available for the Adobe Experience Platform services 
 * **[!DNL Segmentation]:** Create segments based on Real-time Customer Profile data to generate audiences and power consumer experiences.
 * **[!DNL Sources] (Connections):** {#sources} Bring data into Adobe Experience Platform from a variety of sources such as Adobe applications, cloud-based storage, databases, and more.
 * **XDM (Experience Data Model)**: Driven by Adobe, XDM is an effort to standardize customer experience data and define schemas for customer experience management. XDM schemas to support the interoperability of data across [!DNL Experience Platform] components.
+
+In addition to the services in the left navigation, Adobe has built other services on top of Experience Platform. You can find documentation for these services in their own documentation repositories, linked below:
+
+* [[!DNL Customer Journey Analytics]](https://docs.adobe.com/content/help/en/analytics-platform/using/cja-landing.html) 
+* [[!DNL Journey Orchestration]](https://docs.adobe.com/content/help/en/journeys/using/journey-orchestration-home.html)
