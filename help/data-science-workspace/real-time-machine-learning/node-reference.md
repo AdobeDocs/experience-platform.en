@@ -3,6 +3,7 @@ keywords: Experience Platform;developer guide;Data Science Workspace;popular top
 solution: Experience Platform
 title: Real-time Machine Learning nodes reference guide
 topic: Nodes reference
+description: A node is the fundamental unit of which graphs are formed. Each node performs a specific task and they can be chained together using links to form a graph that represents an ML pipeline. The task performed by a node represents an operation on input data such as a transformation of data or schema, or a machine learning inference. The node outputs the transformed or inferred value to the next node(s).
 ---
 
 # Real-time Machine Learning nodes reference guide (Alpha)

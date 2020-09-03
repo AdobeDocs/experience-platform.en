@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;couchbase;Couchbase
 solution: Experience Platform
 title: Couchbase connector
 topic: overview
+description: The documentation below provides information on how to connect Couchbase to Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL Couchbase] connector

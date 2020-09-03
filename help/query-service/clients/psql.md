@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;PSQL;psql
+keywords: Experience Platform;home;popular topics;PSQL;psqlconnect to query service;Query service;query service;
 solution: Experience Platform
 title: Connect with PSQL
 topic: connect
@@ -56,9 +56,9 @@ psql (PostgreSQL) 9.5.14
 
 ## Connect PSQL and [!DNL Query Service]
 
-Return to the [!DNL Platform] UI on the *[!UICONTROL Connect BI Tools]* page. 
+Return to the [!DNL Platform] UI on the **[!UICONTROL Connect BI Tools]** page. 
 
-Click **[!UICONTROL copy]** for *[!UICONTROL PSQL Command]*.
+Click **[!UICONTROL copy]** for **[!UICONTROL PSQL Command]**.
     
 ![Image](../images/clients/psql/connect-bi.png)
 

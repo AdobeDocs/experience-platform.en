@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Google AdWords;google adwords
 solution: Experience Platform
 title: Google AdWords connector
 topic: overview
+description: The documentation below provides information on how to connect Google AdWords to Platform using APIs or the user interface.
 ---
 
 # [!DNL Google AdWords] connector
@@ -47,15 +48,17 @@ The following IP addresses must be added to an allow list prior to working with 
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
+## Connect [!DNL Google AdWords] to [!DNL Platform]
+
 The documentation below provides information on how to connect [!DNL Google AdWords] to [!DNL Platform] using APIs or the user interface:
 
-## Connect [!DNL Google AdWords] to [!DNL Platform] using APIs
+### Using APIs
 
 - [Create a Google AdWords connector using the Flow Service API](../../tutorials/api/create/advertising/ads.md)
 - [Explore a advertising system using the Flow Service API](../../tutorials/api/explore/advertising.md)
 - [Collect advertising data using the Flow Service API](../../tutorials/api/collect/advertising.md)
 
-## Connect [!DNL Google AdWords] to [!DNL Platform] using the UI
+### Using the UI
 
 - [Create a Google AdWords source connector in the UI](../../tutorials/ui/create/advertising/ads.md)
 - [Configure a dataflow for a advertising connector in the UI](../../tutorials/ui/dataflow/advertising.md)

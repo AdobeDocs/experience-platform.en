@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Data Lake Storage Gen2;azure data lake storage;Azure
 solution: Experience Platform
 title: Create an Azure Data Lake Storage Gen2 connector using the Flow Service API
 topic: overview
+description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to Azure Data Lake Storage Gen2 (hereinafter referred to as "ADLS Gen2").
 ---
 
 # Create an [!DNL Azure] Data Lake Storage Gen2 connector using the [!DNL Flow Service] API

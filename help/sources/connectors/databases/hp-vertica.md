@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;HP Vertica;hp vertica
 solution: Experience Platform
 title: HP Vertica connector
 topic: overview
+description: The documentation below provides information on how to connect HP Vertica to Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL HP Vertica] connector
