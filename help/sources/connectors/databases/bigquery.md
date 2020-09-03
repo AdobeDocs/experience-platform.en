@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;BigQuery;bigquery;Google BigQuery;google bigquery
 solution: Experience Platform
 title: Google BigQuery connector
 topic: overview
+description: The documentation below provides information on how to connect Google BigQuery to Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL Google BigQuery] connector

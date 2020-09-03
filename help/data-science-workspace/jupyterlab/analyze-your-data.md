@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics
+keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;analyze data notebooks
 solution: Experience Platform
 title: Analyze your data using notebooks
 topic: Tutorial
+description: This tutorial focuses on how to use Jupyter notebooks, built within Data Science Workspace, to access, explore, and visualize your data.
 ---
 
 # Analyze your data using notebooks
@@ -83,7 +84,7 @@ Now, we can right click on the `Retail-Training-<your-alias>` dataset and select
 
 >[!TIP]
 >
->refer to the [[!DNL Platform SDK]](../authoring/platform-sdk.md) guide to convert your code.
+>Refer to the [[!DNL Platform SDK]](../authoring/platform-sdk.md) guide to convert your code.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader

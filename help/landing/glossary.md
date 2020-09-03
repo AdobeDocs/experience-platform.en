@@ -17,7 +17,7 @@ topic: getting started
 
 **Activate:** In [!DNL Real-time Customer Data Platform], activate is the action taken by a user to map a segment or profiles to a destination such as [!DNL Oracle Eloqua], [!DNL Google], or [!DNL Salesforce Marketing Cloud].
 
-**Activity:** In the [!DNL Decisioning Service], an activity is a set of offers the marketer wants the decision engine to select the best offer from.
+**Activity:** In [!DNL Offer Decisioning], an activity is a set of offers the marketer wants the decision engine to select the best offer from.
 
 **Administrator:** One or more individuals in your organization who can configure and customize the permissions for Experience Platform. 
 
@@ -26,8 +26,6 @@ topic: getting started
 **Adobe Connectors:** Adobe Connectors are pre-configured connections created by Adobe to enable data to flow in and out of [!DNL Experience Platform]. Connectors include [!DNL Microsoft Dynamics], [!DNL Salesforce], [!DNL Amazon S3], and [!DNL Azure Blob].
 
 **Adobe Experience Platform:** Adobe Experience Platform standardizes data and content across the enterprise, powering real-time consumer profiles, enabling data science, and accelerating content velocity to drive experience personalization across the customer journey.
-
-**Adobe Experience Platform Decisioning Service** Leverages Real-time Customer Profile to determine the most likely choice a customer will make from a set of options, based on the behavioral data that Profile pulls from enabled datasets.
 
 **Adobe Experience Platform Launch:** [!DNL Launch] is a tag and SDK management ecosystem, integrated with [!DNL Experience Platform] and [!DNL Experience Cloud] applications. [!DNL Launch] provides tools to deploy, unify, and manage analytics, marketing, and advertising integrations that are necessary to power relevant customer experiences on all client devices.
 
@@ -91,7 +89,7 @@ topic: getting started
 
 ## C
 
-**Capping:** In the [!DNL Decisioning Service], capping is used in decisioning rules to define how many times an offer is presented. There are two types of caps, how many times an offer can be proposed across the combined target audience, also known as "Global Cap" and how many times an offer can be proposed to the same end user, also known as "Profile Cap".
+**Capping:** In [!DNL Offer Decisioning], capping is used in decisioning rules to define how many times an offer is presented. There are two types of caps: how many times an offer can be proposed across the combined target audience, also known as "Global Cap," and how many times an offer can be proposed to the same end user, also known as "Profile Cap".
 
 **Catalog:** In [!DNL Real-time Customer Data Platform], in sources and destinations, a catalog is a gallery with available connections to Adobe applications and 3rd Party technologies.
 
@@ -99,7 +97,7 @@ topic: getting started
 
 **Client:** A client is an external tool or application which connects to [!DNL Query Service] via postgres protocol or HTTP API.
 
-**Collection:** In the [!DNL Decisioning Service], collections are subsets of offers based on predefined conditions defined by a marketer, such as category of the offer.
+**Collection:** In [!DNL Offer Decisioning], collections are subsets of offers based on predefined conditions defined by a marketer, such as category of the offer.
 
 **Combine with PII Marketing Action** A marketing action that combines any personally identifiable information (PII) with anonymous data. Contracts for data sourced from ad networks, ad servers, and third-party data providers often include specific contractual prohibitions on the use of such data with directly identifiable data.
 
@@ -195,7 +193,7 @@ topic: getting started
 
 **Decision Event:** A decision event is used to capture observations about the outcome and context of a decision activity. The decision event captures information about how the decision made, when it was occurring, what options were proposed (chosen) and what contextual state existed that either influenced the decision or could be observed during the decision process. The decision event also captures the proposition ID, a globally unique identifier that can be used to correlate the decision to other events.
 
-**Decision Rule:** In the [!DNL Decisioning Service], a decision rule is the logic that defines and controls the what, when, where, and how an offer is presented to end-users.
+**Decision Rule:** A decision rule is the logic that defines and controls the what, when, where, and how an offer is presented to end-users.
 
 **Decisioning Service:** The [!DNL Decisioning Service] is collection of services and UI that enables marketers to create and deliver end-user personalized offer experiences across channels and applications using business logic and decision rules.
 
@@ -213,15 +211,13 @@ topic: getting started
 
 **Display Name:** Display name is a user-friendly name of a field that is shown in the UI.
 
-**DULE:** DULE is an acronym for *Data Usage Labeling and Enforcement*. DULE is a key part of data governance and a collection of key features that allows for data usage labeling and applying data access policies for governance needs within an organization.
-
 [Back to top](#adobe-experience-platform-glossary)
 
 ## E
 
-**Eligible Offer:** In the [!DNL Decisioning Service], an eligible offer meets the constraints defined upstream that can be consistently offered to a profile.
+**Eligible Offer:** An eligible offer meets the constraints defined upstream that can be consistently offered to a profile.
 
-**Eligible Rules:** In the [!DNL Decisioning Service], eligibility rules are applied to a profile related to calendar, schedule, and capping constraints.
+**Eligible Rules:** In [!DNL Offer Decisioning], eligibility rules are applied to a profile related to calendar, schedule, and capping constraints.
 
 **Email Targeting Marketing Action** A marketing action that uses data in email targeting campaigns.
 
@@ -253,7 +249,7 @@ topic: getting started
 
 ## F
 
-**Fallback Offers:** In the [!DNL Decisioning Service], A fallback offer is the default offer displayed when an end-user is not eligible for any of the offers in the collection used.
+**Fallback Offers:** A fallback offer is the default offer displayed when an end-user is not eligible for any of the offers in the collection used.
 
 **Feature Mapping:** Feature Mapping refers to the process of mapping features from data into input and target features that are required by a machine learning model.
 
@@ -365,11 +361,11 @@ topic: getting started
 
 ## O
 
-**Offer:** In the [!DNL Decisioning Service], an offer is a marketing message that may have rules associated with it that specify who is eligible to see the offer.
+**Offer:** An offer is a marketing message that may have rules associated with it, specifying who is eligible to see the offer.
 
-**Offer Decisioning:** In the [!DNL Decisioning Service], offer decisioning enables a marketer manage the rules and trained models of offer propositions when engaging with an end-user based on data collected across channels and applications.
+**Offer Decisioning:** Offer decisioning enables a marketer to manage rules and trained models of offer propositions when engaging with an end-user based on data collected across channels and applications.
 
-**Offer Library:** In the [!DNL Decisioning Service], the offer library is a central library used to manage personalized and fallback offers, decision rules and activities.
+**Offer Library:** The offer library is a central library used to manage personalized and fallback offers, decision rules, and activities.
 
 **On-site Personalization Marketing Action** A marketing action that uses data for onsite content personalization. Onsite personalization is any data that is used to make inferences about users' interests, and is used to select which content or ads are served based on those inferences.
 
@@ -387,9 +383,9 @@ topic: getting started
 
 **Parquet Files:** A parquet file is a columnar storage file format with complex nested data structures. Parquet files are required for adding data to populate a schema dataset.
 
-**Personalized Offers:** In the [!DNL Decisioning Service], a personalized offer is a customizable marketing message based on eligibility rules and constraints.
+**Personalized Offers:** A personalized offer is a customizable marketing message based on eligibility rules and constraints.
 
-**Placements:** In the [!DNL Decisioning Service], a placement is the location and or context in which an offer appears for an end-user.
+**Placements:** A placement is the location and or context in which an offer appears for an end-user.
 
 **Policies Workspace** Enables data stewards to view and manage core and custom labels for your organization. 
 
@@ -399,7 +395,7 @@ topic: getting started
 
 **Primary Key:** Primary key is a designation in a schema to uniquely identify all records.
 
-**Priority:** In the [!DNL Decisioning Service], priority is used to rank offers that meet all constraints, such as eligibility, calendar, and capping.
+**Priority:** In [!DNL Offer Decisioning], priority is used to rank offers that meet all constraints, such as eligibility, calendar, and capping.
 
 **Private Identity Graph:** Private Identity Graph is a private map of relationships between stitched and linked identities that visible by only your organization and built based on your first-party data.
 
@@ -441,7 +437,7 @@ topic: getting started
 
 **Recurrence:** A recurrence defines whether a [!DNL Query Service] query is scheduled to run only once or on a recurring basis.
 
-**Representation:** In the [!DNL Decisioning Service], a representation is information used by a channel, such as location or language to display an offer.
+**Representation:** In [!DNL Offer Decisioning], a representation is information used by a channel, such as location or language to display an offer.
 
 **Resource:** In [!DNL Experience Platform Launch], resource is a generic term that refers to options the [!DNL Launch] user can configure inside the client environment, including extensions, data elements, and rules.
 

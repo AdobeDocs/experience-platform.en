@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;experienceevent queries;experienceevent query;ExperienceEvent query;
 solution: Experience Platform
 title: ExperienceEvent queries
 topic: queries

@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;greenplum;GreenPlum
 solution: Experience Platform
 title: GreenPlum connector
 topic: overview
+description: The documentation below provides information on how to connect GreenPlum to Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL GreenPlum] connector

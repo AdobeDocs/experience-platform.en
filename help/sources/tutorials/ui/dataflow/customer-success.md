@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;configure dataflow;customer success connector
 solution: Experience Platform
 title: Configure a dataflow for a customer success connector in the UI
 topic: overview
+description: A dataflow is a scheduled task that retrieves and ingests data from a source to a [!DNL Platform] dataset. This tutorial provides steps to configure a new dataflow using your customer success account.
 ---
 
 # Configure a dataflow for a customer success connector in the UI

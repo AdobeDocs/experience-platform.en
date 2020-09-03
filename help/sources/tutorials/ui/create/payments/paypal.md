@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;paypal;Paypal
 solution: Experience Platform
 title: Create a PayPal source connector in the UI
 topic: overview
+description: This tutorial provides steps for creating a PayPal source connector using the Platform user interface.
 ---
 
 # Create a [!DNL PayPal] source connector in the UI
