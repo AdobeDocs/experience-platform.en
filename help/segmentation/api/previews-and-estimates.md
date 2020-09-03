@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;previews;estimates;previews and estimates;estimates and previews;api;API;
 solution: Experience Platform
 title: Previews and estimates endpoints
 topic: developer guide
@@ -29,13 +29,17 @@ The sample size of the scan depends on the overall number of entities in your pr
 | 1 to 20 million | 1 million |
 | Over 20 million | 5% of total |
 
->[!NOTE] Estimates generally take 10 to 15 seconds to run, beginning with a rough estimate and refining as more records are read.
+>[!NOTE]
+>
+>Estimates generally take 10 to 15 seconds to run, beginning with a rough estimate and refining as more records are read.
 
 ## Create a new preview {#create-preview}
 
 You can create a new preview by making a POST request to the `/preview` endpoint.
 
->[!NOTE] An estimate job is automatically created when a preview job is created. These two jobs will share the same ID.
+>[!NOTE]
+>
+>An estimate job is automatically created when a preview job is created. These two jobs will share the same ID.
 
 **API format**
 
@@ -160,7 +164,7 @@ A successful response returns HTTP status 200 with detailed information about th
 
 | Property | Description | 
 | -------- | ----------- |
-| `results` | A list of entity IDs, along with their related identities. The links provided can be used to look up the specified entities, using the [!DNL Profile Access API](../../profile/api/entities.md). |
+| `results` | A list of entity IDs, along with their related identities. The links provided can be used to look up the specified entities, using the [[!DNL Profile Access API]](../../profile/api/entities.md). |
 
 ## Retrieve the results of a specific estimate job {#get-estimate}
 

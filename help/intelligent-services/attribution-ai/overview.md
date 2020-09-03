@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;attribution ai;overview;popular topics
+keywords: Experience Platform;attribution ai overview;popular topics;attribution ai;Attribution ai
 solution: Experience Platform
 title: Attribution AI overview
 topic: Attribution AI
+description: Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys. Examples of touchpoints include display ad impressions, email sends, email opens and paid search clicks.
 ---
 
 # Attribution AI overview
@@ -22,24 +23,6 @@ Attribution AI supports two categories of scores, algorithmic and rule-based. Al
 The following video is designed to support your understanding of Attribution AI.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32667?learn=on&quality=12)
-
-## Attribution AI algorithmic scores
-
-Attribution AI supports two categories of attribution scores, algorithmic and rule-based scores.
-
-Attribution AI produces two different types of algorithmic scores, incremental and influenced. An influenced score is the fraction of the conversion that each marketing touchpoint is responsible for. An incremental score is the amount of marginal impact directly caused by the marketing touchpoint. The main difference between the incremental score and the influenced score is that the incremental score takes the baseline effect into account. It does not assume that a conversion is caused purely by the preceding marketing touchpoints.
-
-See the table below for more details about each of these attribution scores:
-
-| Attribution scores | Description |
-| ----- | ----------- |
-| First Touch | Rule-based attribution score that assigns all credits to the initial touchpoint on a conversion path. |
-| Last Touch | Rule-based attribution score that assigns all credit to the touchpoint closest to the conversion. |
-| Linear | Rule-based attribution score that assigns equal credit to each touchpoint on a conversion path. |
-| U-Shaped | Rule-based attribution score that assigns 40% of the credit to the first touchpoint and 40% of the credit to the last touchpoint, with the other touchpoints splitting the remaining 20% equally. |
-| Time Decay | Rule-based attribution score where touchpoints closer to the conversion receive more credit than touchpoints that are farther away in time from the conversion. |
-| Influenced (algorithmic) | Influenced score is the fraction of the conversion that each marketing touchpoint is responsible for. |
-| Incremental (algorithmic) | Incremental score is the amount of marginal impact directly caused by a marketing touchpoint.|
 
 ## Examples of business use cases
 

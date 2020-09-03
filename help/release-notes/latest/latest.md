@@ -1,60 +1,51 @@
 ---
 title: Adobe Experience Platform Release Notes
-description: The latest release notes for Experience Platform
+description: Experience Platform release notes August 10, 2020
 doc-type: release notes
-last-update: July 15, 2020
-author: crhoades, ens25212
+last-update: August 10, 2020
+author: crhoades, ens28527
 ---
 
 # Adobe Experience Platform release notes 
 
-**Release date: July 15, 2020**
+**Release date: August 12, 2020**
 
 Updates to existing features in Adobe Experience Platform:
 
-- [Data Governance](#governance)
-- [Real-time Customer Profile](#profile)
-- [Segmentation Service](#segmentation)
-- [Sources](#sources)
+- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Destinations]](#destinations)
+- [[!DNL Sources]](#sources)
 
-## [!DNL Data Governance] {#governance}
+## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform Data Governance is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
-
-**New features**
-
-| Feature    | Description  |
-| -----------| ---------- |
-| Automatic policy enforcement in [!DNL Real-time Customer Data Platform] | Data usage policies are now automatically enforced in [!DNL Real-time CDP] when violating actions occur, including activating segments to destinations. When a policy violation is triggered, users get real-time visibility into usage restrictions within the activation workflow, indicating what data they cannot use and why.<br><br>See the section on [enforcing data usage compliance](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance) within the overview on [!DNL Data Governance] in [!DNL Real-time CDP] for more information. |
-| Adobe Audience Manager integration | Any segments that are shared with [!DNL Audience Manager] from [!DNL Platform] inherit any applied data usage labels as [!DNL Data Export Controls], and vice versa. See the [!DNL Audience Manager] documentation for specific [mappings between usage labels and Data Export Controls](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep). |
-| Custom data usage labels | You can now create custom data usage labels using the Policy Service API or in the UI. See the [labels overview](../../data-governance/labels/overview.md) for more information. |
-
-See the [Data Governance overview](../../data-governance/home.md) for more information on the service.
-
-## [!DNL Real-time Customer Profile] {#profile}
-
-Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+[!DNL Data Science Workspace] uses machine learning and artificial intelligence to unleash insights from your data. Integrated into Adobe Experience Platform, [!DNL Data Science Workspace] helps you make predictions using your content and data assets across Adobe solutions.
 
 **New features**
 
 | Feature | Description |
 | ------- | ----------- |
-| Data usage policy enforcement | In [!DNL Real-time Customer Data Platform], data usage policy violations are automatically surfaced when a violating action in the [!UICONTROL Profile] workspace is attempted. See the [release notes for Data Governance](#governance) for more information on automatic policy enforcement. | 
+| VM improvements in [!DNL JupyterLab] | Improved the stability of long-running [!DNL JupyterLab notebook] virtual machines. |
 
-## [!DNL Segmentation Service] {#segmentation}
+For more information on [!DNL JupyterLab], please see the [[!DNL JupyterLab] user guide](../../data-science-workspace/jupyterlab/overview.md).
 
-Adobe Experience Platform Segmentation Service provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], making them readily accessible by any Adobe application.
+## Destinations {#destinations}
 
-[!DNL Segmentation Service] defines a particular subset of profiles by describing the criteria that distinguishes a marketable group of people within your customer base. Segments can be based on record data (such as demographic information) or time series events representing customer interactions with your brand.
+In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
+
+**New destinations**
+
+New destinations are available where you can activate your Adobe Experience Platform data. See below for details:
+
+|Destination | Description|
+|--- | ---|
+|[!DNL Google Customer Match] | Google Customer Match lets you use your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as: [!DNL Search], [!DNL Shopping], Gmail, and YouTube. <br><br> Visit the [!DNL Google Customer Match] [page](/help/rtcdp/destinations/google-customer-match-destination.md) in the destinations catalog for more information about the destination and how to set it up in Adobe Real-time CDP.|
 
 **New features**
 
-| Feature | Description |
-| ------- | ----------- |
-| Streaming segmentation | Streaming segmentation can now qualify as a user into a segment as data lands into [!DNL Platform], thereby dramatically reducing the segment qualification time. Streaming segmentation also alleviates the need to run segmentation jobs manually. |
-| Data usage policy enforcement | In [!DNL Real-time Customer Data Platform], data usage policy violations are automatically surfaced when a violating action in the [!UICONTROL Segments] workspace is attempted. See the [release notes for Data Governance](#governance) for more information on automatic policy enforcement. |
-
-For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md)
+|Feature | Description|
+|------- | -----------|
+|Custom file name editor | Update to the data activation workflow for email marketing destinations and cloud storage destinations that allows you to edit the name of the exported files. For more information, refer to the [ Configure step](/help/rtcdp/destinations/activate-destinations.md#configure) in the activation workflow.|
+|Recommended attributes | Update to the data activation workflow for email marketing destinations and cloud storage destinations that displays recommended attributes for you to add to the exported files. For more information, refer to the [Select attributes step](/help/rtcdp/destinations/activate-destinations.md#select-attributes) in the activation workflow.|
 
 ## Sources {#sources}
 
@@ -66,7 +57,8 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 | Feature | Description |
 | ------- | ----------- |
-| UI support for deleting dataflows | Dataflows that were made with errors or have become unnecessary can now be deleted through the UI. |
-| API and UI support for one-time ingestion | One-time ingestion for dataflows, where only the start date is provided and no future ingestion is scheduled, can now be executed through APIs or using the UI. |
+| Flow run monitoring | Users can monitor all flow runs and see a detailed view of each run, including completion status, run duration, list of files processed, errors, and metrics. See the [monitoring dataflows](../../sources/tutorials/ui/monitor.md) document for more information. |
+| Flow run notifications | Users can subscribe to events and register webhooks to receive real-time notifications on the status, metrics, and errors regarding flow runs. |
+| UI catalog improvements | Updates to sources catalog screen to allow for easier access to primary actions of selected objects. |
 
 To learn more about sources, see the [sources overview](../../sources/home.md).

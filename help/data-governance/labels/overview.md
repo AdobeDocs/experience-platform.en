@@ -1,15 +1,16 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api;data usage labels overview
 solution: Experience Platform
 title: Data usage labels overview
 topic: labels
+description: Adobe Experience Platform Data Governance enables you to apply data usage labels to datasets and fields, categorizing each according to related data usage policies. This document provides an overview of data usage labels in Experience Platform.
 ---
 
 # Data usage labels overview
 
-Data Usage Labeling and Enforcement (DULE) is the core mechanism of Adobe Experience Platform [!DNL Data Governance]. DULE features enable you to apply data usage labels to datasets and fields, categorizing each according to related data usage policies.
+Adobe Experience Platform [!DNL Data Governance] allows you to apply data usage labels to datasets and fields, categorizing each according to related data usage policies.
 
-This document provides an overview of data usage labels (also known as DULE labels) in [!DNL Experience Platform]. Before reading this guide, please see the [Data Governance overview](../home.md) for a more robust introduction to the DULE framework.
+This document provides an overview of data usage labels in [!DNL Experience Platform]. Before reading this guide, please see the [Data Governance overview](../home.md) for a more robust introduction to the Data Governance framework.
 
 ## Understanding data usage labels
 
@@ -19,7 +20,7 @@ Data usage labels that are applied at the dataset level are propagated to all fi
 
 [!DNL Platform] provides several "core" data usage labels out-of-the-box, which cover a wide variety of common restrictions applicable to data governance. For more information on these labels and the usage policies they represent, see the guide on [core data usage labels](reference.md).
 
-In addition to the labels provided by Adobe, you can also define your own custom labels. For steps on how to do this in the UI, see the [data usage labels user guide](./user-guide.md). For steps on how to perform this using API calls, refer to the [data usage labels API guide](./api.md).
+In addition to the labels provided by Adobe, you can also define your own custom labels for your organization. See the section on [managing labels](#manage-labels) for more information.
 
 ## Label inheritance for audience segments
 
@@ -27,7 +28,7 @@ All audience segments created by [Adobe Experience Platform Segmentation Service
 
 In addition to inheriting dataset-level labels, segments inherit all field-level labels from their associated datasets by default. Depending on how your [!DNL Platform]-based application consumes segments, you can potentially specify which fields are used, thereby preventing the segment from inheriting labels from excluded fields.
 
-For more information on how automatic enforcement works in Real-time CDP, see the [Adobe Real-time CDP Data Governance overview](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance).
+For more information on how automatic enforcement works in Real-time CDP, see the overview on [Data Governance in Real-time CDP](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance).
 
 ### Inheritance from Adobe Audience Manager Data Export Controls
 
@@ -35,7 +36,20 @@ For more information on how automatic enforcement works in Real-time CDP, see th
 
 For a reference on how specific Data Export Controls map to data usage labels in [!DNL Platform], please refer to the [Audience Manager documentation](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
 
+## Managing data usage labels in [!DNL Experience Platform] {#manage-labels}
+
+You can manage data usage labels using [!DNL Experience Platform] APIs or the user interface. Refer to the subsections below for details on each.
+
+### Using the UI
+
+The **[!UICONTROL Policies]** workspace in the [!DNL Experience Platform] UI allows you to view and manage core and custom labels for your organization. The **[!DNL Datasets]** workspace allows you to apply labels to datasets and fields. For more information, refer to the [labels user guide](user-guide.md).
+
+### Using APIs
+
+The `/labels` endpoint in the [Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) allows you to programmatically manage data usage labels, including creating custom labels. Refer to the [labels endpoint guide](../api/labels.md) for more information.
+
+The [Dataset Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) is used to manage labels for dataset and fields. See the guide on [managing dataset labels](./dataset-api.md) for more information.
 
 ## Next steps
 
-Now that you have been introduced data usage labels, you can continue to the read the [user guide](user-guide.md) to learn how to manage labels in the [!DNL Experience Platform] UI. For steps on how to manage labels using APIs, see the [usage labels API guide](./api.md).
+This document provided an introduction to data usage labels and their role within the Data Governance framework. Refer to the documentation linked to throughout this guide to lean more about how to manage labels in [!DNL Experience Platform].

@@ -2,6 +2,7 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Data Access
+user-guide-description: Data Access supports Adobe Experience Platform by providing user tools focused on the discoverability and accessibility of ingested datasets within Experience Platform.
 ---
 
 # Adobe Experience Platform Data Access {#data-access}

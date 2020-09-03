@@ -1,4 +1,5 @@
 ---
+keywords: data governance rtcdp;rtcdp data governance;real time customer data profile data governance;privacy rtcdp;rtcdp privacy
 title: Privacy in Real-time Customer Data Profile
 seo-title: Privacy in Real-time Customer Data Profile
 description: Real-time Customer Data Profile allows you to streamline the process of keeping your data operations compliant with privacy regulations.
@@ -17,8 +18,8 @@ Adobe Experience Platform [!DNL Privacy Service] allows you to streamline the pr
 
 There are two methods for submitting individual GDPR and CCPA data subject requests for accessing and deleting customer data:
 
-* Use the [!DNL Privacy Service UI](https://gdprui.cloud.adobe.io/) to create and monitor access and delete requests within a visual workspace. See the [Privacy Service UI tutorial](../../privacy-service/ui/overview.md) for step-by-step instructions.
-* Use the [!DNL Privacy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) to manage access and delete requests with RESTful API calls. See the [Privacy Service API tutorial](../../privacy-service/api/getting-started.md) for step-by-step instructions.
+* Use the [[!DNL Privacy Service UI]](https://privacyui.cloud.adobe.io/) to create and monitor access and delete requests within a visual workspace. See the [Privacy Service user guide](../../privacy-service/ui/overview.md) for step-by-step instructions.
+* Use the [[!DNL Privacy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) to manage access and delete requests with RESTful API calls. See the [Privacy Service API tutorial](../../privacy-service/api/getting-started.md) for step-by-step instructions.
 
 <!-- (Capability will not be available for November GA) 
 ## Opt-out capabilities

@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;Data Science Workspace;popular topics
+keywords: Experience Platform;home;Data Science Workspace;popular topics;data science workspace;data science
 solution: Experience Platform
 title: Data Science Workspace overview
 topic: overview
+description: This guide provides an overview of the key concepts related to Data Science Workspace.
 ---
 
 # Data Science Workspace overview
@@ -13,7 +14,7 @@ Data scientists of all skill levels will find sophisticated, easy-to-use tools t
 
 With [!DNL Data Science Workspace], data scientists can easily create intelligent services APIs - powered by machine learning. These services work with other Adobe services, including Adobe Target and Adobe Analytics Cloud, to help you automate personalized, targeted digital experiences in web, desktop, and mobile apps.
 
-This guide provides an overview the key concepts related to [!DNL Data Science Workspace].
+This guide provides an overview of the key concepts related to [!DNL Data Science Workspace].
 
 ## Introduction
 
@@ -124,7 +125,7 @@ The following table outlines the effects of having this permission enabled or di
 
 | Permission | Enabled | Disabled |
 |---|---|---|
-| [!DNL Manage Data Science Workspace] | Provides access to all services in [!DNL Data Science Workspace]. | API and UI access to all services within [!DNL Data Science Workspace] are disabled. While disabled, routing to the [!DNL Data Science Workspace] *[!UICONTROL Models]* and *[!UICONTROL Services]* pages are prevented. |
+| [!DNL Manage Data Science Workspace] | Provides access to all services in [!DNL Data Science Workspace]. | API and UI access to all services within [!DNL Data Science Workspace] are disabled. While disabled, routing to the [!DNL Data Science Workspace] **[!UICONTROL Models]** and **[!UICONTROL Services]** pages are prevented. |
 
 ### Security and peace of mind
 

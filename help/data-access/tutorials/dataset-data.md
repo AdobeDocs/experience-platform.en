@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data access;data access api;query data access
 solution: Experience Platform
 title: Data access overview
 topic: tutorial
+description: This document provides a step-by-step tutorial that covers how to locate, access, and download data stored within a dataset using the Data Access API in Adobe Experience Platform. You will also be introduced to some of the unique features of the Data Access API, such as paging and partial downloads.
 ---
 
 # Query dataset data using [!DNL Data Access] API
@@ -11,7 +12,7 @@ This document provides a step-by-step tutorial that covers how to locate, access
 
 ## Getting started
 
-This tutorial working understanding of how to create and populate a dataset. See the [dataset creation tutorial](../../catalog/datasets/create.md) for more information.
+This tutorial requires a working understanding on how to create and populate a dataset. See the [dataset creation tutorial](../../catalog/datasets/create.md) for more information.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to the Platform APIs.
 
@@ -358,7 +359,7 @@ HEAD /files/{FILE_ID}?path={FILE_NAME}
 | Property | Description |
 | -------- | ----------- |
 | `{FILE_ID}` | The file's identifier. |
-| `{FILE_NAME`} | The file name (for example, profiles.parquet) |
+| `{FILE_NAME}` | The file name (for example, profiles.parquet) |
 
 **Request**
 
@@ -389,7 +390,7 @@ GET /files/{FILE_ID}?path={FILE_NAME}
 | Property | Description |
 | -------- | ----------- |
 | `{FILE_ID}` | The file's identifier. |
-| `{FILE_NAME`} | The file name (for example, profiles.parquet). |
+| `{FILE_NAME}` | The file name (for example, profiles.parquet). |
 
 **Request**
 

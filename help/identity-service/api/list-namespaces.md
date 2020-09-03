@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;namespace list;list namespace
 solution: Experience Platform
 title: List available namespaces
 topic: API guide
+description: List all available namespaces.
 ---
 
 # List available namespaces

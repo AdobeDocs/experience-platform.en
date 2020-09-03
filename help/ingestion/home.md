@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data ingestion;data location;Data Location;Data management;data management;Lineage;lineage;batch;Batch;ingested data
 solution: Experience Platform
 title: Adobe Experience Platform Data Ingestion overview
 topic: overview
+description: This document introduces the three main ways in which data is ingested into Platform, with links to their respective overview documentation for more detailed information.
 ---
 
 # Data Ingestion overview
@@ -35,10 +36,10 @@ See the [Sources overview](../sources/home.md) for more information.
 
 ## Next steps and additional resources
 
-This document provided a brief introduction to the different aspects of [!DNL Data Ingestion] in [!DNL Experience Platform]. Please continue to read the overview documentation for each ingestion method to familiarize yourself with their different capabilities, use cases, and best practices. You can also suppliment your learning by watching the ingestion overview video below. For information on how [!DNL Experience Platform] tracks the metadata for ingested records, see the [Catalog Service overview](../catalog/home.md).
+This document provided a brief introduction to the different aspects of [!DNL Data Ingestion] in [!DNL Experience Platform]. Please continue to read the overview documentation for each ingestion method to familiarize yourself with their different capabilities, use cases, and best practices. You can also supplement your learning by watching the ingestion overview video below. For information on how [!DNL Experience Platform] tracks the metadata for ingested records, see the [Catalog Service overview](../catalog/home.md).
 
 >[!WARNING]
 >
-> The term "Unified Profile" thats used in the following video is out-of-date. The terms [!DNL "Profile"] or [!DNL "Real-time Customer Profile"] are the correct terms used in the [!DNL Experience Platform] documentation. Please refer to the documentation for the latest functionality.
+>The term "Unified Profile" thats used in the following video is out-of-date. The terms [!DNL "Profile"] or [!DNL "Real-time Customer Profile"] are the correct terms used in the [!DNL Experience Platform] documentation. Please refer to the documentation for the latest functionality.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27106?quality=12&learn=on)

@@ -1,4 +1,5 @@
 ---
+keywords: Catalog;catalog
 title: Destinations Catalog
 seo-title: Destinations Catalog
 description: The Destinations Catalog provides a list of available destinations that are ready to receive data. These destinations include Adobe solutions, advertising platforms, survey platforms, email marketing platforms, and more.

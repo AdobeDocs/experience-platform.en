@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;PSQL;psql;Query service;query service;metadata;commands;metadata commands;
 solution: Experience Platform
 title: Metadata commands
 topic: metadata
+description: A list of PSQL commands that are currently supported for querying metadata.
 ---
 
 # Metadata commands

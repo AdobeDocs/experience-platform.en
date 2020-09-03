@@ -1,4 +1,5 @@
 ---
+keywords: Azure event hub destination;azure event hub;azure eventhub
 title: (Beta) Azure Event Hubs destination
 seo-title: (Beta) Azure Event Hubs destination
 description: Create a real-time outbound connection to your Azure Event Hubs storage to stream data from Experience Platform.
@@ -59,7 +60,7 @@ See [Activate profiles and segments to a destination](/help/rtcdp/destinations/a
 
 Your exported [!DNL Experience Platform] data lands in [!DNL Azure Event Hubs] in JSON format. For example, the event below contains the email address profile attribute of an audience that has qualified for a certain segment and exited another segment. The identities for this prospect are ECID and email.
 
-```
+```json
 {
   "person": {
     "email": "yourstruly@adobe.con"

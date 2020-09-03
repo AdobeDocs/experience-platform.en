@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data ingestion notifications;notifications;subscribe events;data ingestion status events;status events;subscribe;status notifications;
 solution: Experience Platform
 title: Subscribe to data ingestion events
 topic: overview
@@ -32,7 +32,7 @@ Below is a list of available data ingestion status notifications that you can su
 
 ## Notification payload schema
 
-The data ingestion notification event schema is an [!DNL Experience Data Model] (XDM) schema containing fields and values that provide details regarding the status of the data being ingested. Please visit the public XDM [!DNL GitHub] repo in order to view the latest [notification payload schema](https://github.com/adobe/xdm/blob/master/schemas/common/notifications/ingestion.schema.json).
+The data ingestion notification event schema is an [!DNL Experience Data Model] (XDM) schema containing fields and values that provide details regarding the status of the data being ingested. Please visit the public XDM [!DNL GitHub] repo in order to view the latest [notification payload schema](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json).
 
 ## Subscribe to data ingestion status notifications
 
@@ -48,7 +48,7 @@ Once you have created a new project, navigate to that project's overview screen.
 
 ![](../images/quality/subscribe-events/add-event-button.png)
 
-The _[!UICONTROL Add events]_ dialog appears. Click **[!UICONTROL Experience Platform]** to filter the list of available options, then click **[!UICONTROL Platform notifications]** before clicking **[!UICONTROL Next]**.
+The **[!UICONTROL Add events]** dialog appears. Click **[!UICONTROL Experience Platform]** to filter the list of available options, then click **[!UICONTROL Platform notifications]** before clicking **[!UICONTROL Next]**.
 
 ![](../images/quality/subscribe-events/select-platform-events.png)
 

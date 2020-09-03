@@ -2,6 +2,7 @@
 product: experience-platform
 audience: user
 user-guide-title:  Adobe Experience Platform Web SDK Help
+user-guide-description: The Adobe Experience Platform Web SDK is a client-side JavaScript library that allows you to interact with various Adobe Experience Cloud services through the Adobe Experience Platform Edge Network.
 ---
 
 # Adobe Experience Platform Web SDK {#edge}
@@ -29,6 +30,7 @@ user-guide-title:  Adobe Experience Platform Web SDK Help
     * [Analytics Overview](solution-specific/analytics/analytics-overview.md)
     * [Manually mapping variables in Analytics](solution-specific/analytics/manually-mapping-variables.md)
     * [Automatically Mapped Variables](solution-specific/analytics/automatically-mapped-vars.md)
+    * [Sending Data to Adobe Analytics](solution-specific/analytics/link-tracking.md)
   * Audience Manager {#aam}
     * [Audience Manager Overview](solution-specific/audience-manager/audience-manager-overview.md)
   * Target {#target}
@@ -37,4 +39,6 @@ user-guide-title:  Adobe Experience Platform Web SDK Help
 * Reference {#ref}
   * [Automatically Collected Information](reference/automatic-information.md)
   * [Retrieving Library Information](reference/retrieving-library-information.md)
+* [Release notes](release-notes.md)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
+* [Frequently asked questions](getting-started/web-sdk-faq.md)

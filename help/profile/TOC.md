@@ -2,6 +2,7 @@
 product: experience-platform
 audience: user
 user-guide-title: Real-time Customer Profile Help
+user-guide-description: Real-time Customer Profile provides a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third-party data. Profile allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
 ---
 
 # [!DNL Real-time Customer Profile] {#profile}
@@ -16,9 +17,11 @@ user-guide-title: Real-time Customer Profile Help
   * [Entities ([!DNL Profile] access)](api/entities.md)
   * [Export jobs ([!DNL Profile] export)](api/export-jobs.md)
   * [Merge policies](api/merge-policies.md)
+  * [Preview sample status ([!DNL Profile] preview)](api/preview-sample-status.md)
   * [[!DNL Profile] system jobs (Delete requests)](api/profile-system-jobs.md)
 * UI guides {#ui}
   * [[!DNL Profile] user guide](ui/user-guide.md)
+  * [[!DNL Profile] detail customization](ui/profile-customization.md)
   * [Merge policies user guide](ui/merge-policies.md)
 * Tutorials {#tutorials}
   * [Add data to [!DNL Profile]](tutorials/add-profile-data.md)

@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;dsw;DSW
 solution: Experience Platform
 title: Data Science Workspace tutorials
 topic: tutorial
+description: Adobe Experience Platform Data Science Workspace uses machine learning and artificial intelligence to create insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe solutions.
 ---
 
 # [!DNL Data Science Workspace] tutorials
@@ -53,7 +54,6 @@ To learn more, follow the [package source files into a recipe tutorial](../data-
 ## Import a recipe
 
 >[!NOTE]
->
 >
 >This tutorial requires you to have a [!DNL Docker] source file URL. Visit the [package source files into a recipe tutorial](../data-science-workspace/models-recipes/package-source-files-recipe.md) if you do not have a [!DNL Docker] source file URL.
 
@@ -120,6 +120,7 @@ To get started, follow the [schedule a model UI tutorial](../data-science-worksp
 ## Create a feature pipeline
 
 >[!NOTE]
+>
 >Currently, feature pipelines are only available via API.
 
 Adobe Experience Platform allows you to build and create custom feature pipelines to perform feature engineering at scale through the [!DNL Sensei Machine Learning Framework Runtime].

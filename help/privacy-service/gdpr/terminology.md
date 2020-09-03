@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;GDPR;gdpr
 solution: Experience Platform
 title: GDPR terminology
 topic: troubleshooting
+description: The following is a list of definitions for key terms related to the General Data Protection Regulation (GDPR).
 ---
 
 # GDPR terminology

@@ -1,13 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Apache Spark;apache spark;Azure HDInsights
 solution: Experience Platform
 title: Create an Apache Spark on Azure HDInsights connector using the Flow Service API
 topic: overview
+description: This tutorial uses the Flow Service API to walk you through the steps to connect Apache Spark on Azure HDInsights (hereinafter referred to as "Spark") to Experience Platform.
 ---
 
 # Create an [!DNL Apache Spark] on [!DNL Azure] HDInsights connector using the [!DNL Flow Service] API
 
 >[!NOTE]
+>
 >The [!DNL Apache Spark] on [!DNL Azure HDInsights] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.

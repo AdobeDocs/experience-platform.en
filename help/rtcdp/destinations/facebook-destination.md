@@ -1,4 +1,5 @@
 ---
+keywords: facebook extensions;facebook extension;facebook destinations;facebook
 title: Facebook Destination
 seo-title: Facebook Destination
 description: Activate profiles for your Facebook campaigns for audience targeting, personalization and suppression based on hashed emails.
@@ -52,6 +53,7 @@ Before you can send your audience segments to [!DNL Facebook], make sure you mee
 1. Your [!DNL Facebook] user account must have the **[!DNL Manage campaigns]** permission enabled for the Ad account that you plan to use.
 2. Add the **Adobe Experience Cloud** business account as an advertising partner in your [!DNL Facebook Ad Account]. Use `business ID=206617933627973`. See [Add Partners to Your Business Manager](https://www.facebook.com/business/help/1717412048538897) in the Facebook documentation for details.
     >[!IMPORTANT]
+    >
     > When configuring the permissions for Adobe Experience Cloud, you must enable the **Manage campaigns** permission. This is required for the [!DNL Adobe Real-time CDP] integration.
 3. Read and sign the [!DNL Facebook Custom Audiences] Terms of Service. To do this, go to `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, where `accountID` is your [!DNL Facebook Ad Account ID].
 
@@ -86,3 +88,11 @@ To connect to the [!DNL Facebook] destination, see [Social network destinations 
 ## Activate segments to [!DNL Facebook] {#activate-segments}
 
 For instructions on how to activate segments to [!DNL Facebook], see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md). 
+
+## Exported data {#exported-data}
+
+For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated segments.
+
+>[!TIP]
+>
+>The integration between Adobe Real-time CDP and [!DNL Facebook] supports historical audience backfills. All historical segment qualifications get sent to [!DNL Facebook] when you activate the segments to the destination.

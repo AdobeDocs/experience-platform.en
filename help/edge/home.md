@@ -1,13 +1,40 @@
 ---
+keywords: web sdk;SDK;web SDK;Launch;launch
 title: Adobe Experience Platform Web SDK help
 seo-title: Adobe Experience Platform Web SDK help
 description: Learn what Adobe Experience Platform Web SDK is and how it can be used.
 seo-description: allow customers of the Adobe Experience Cloud to interact with the various services in the Experience Cloud.
+keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;
 ---
 
 # What is Adobe Experience Platform Web SDK
 
-Adobe Experience Platform Web SDK is a client-side JavaScript library that allows customers of the Adobe Experience Cloud to interact with the various services in the [!DNL Experience Cloud] through the Adobe [!DNL Experience Platform Edge Network].
+Adobe Experience Platform Web SDK is a client-side JavaScript library that allows customers of the Adobe Experience Cloud to interact with the various services in the [!DNL Experience Cloud] through the Adobe [!DNL Experience Platform Edge Network]. In addition to the JavaScript library, there is a [Launch extension](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) to help with your Web SDK configurations.
+
+## Experience Edge
+
+[!DNL Adobe Experience Platform Web SDK] is part of the collection that makes up Experience Edge. Experience Edge consists of three technologies:
+
+* **[!DNL Adobe Experience Platform Web SDK]:** A JavaScript SDK and [!DNL Launch] extension to dramatically simplify deploying [!DNL Adobe] technologies
+* **Adobe Experience Platform Mobile SDK:** An extension to the v5 mobile SDK to allow customers to use the new deployment methodology
+* **[!DNL Adobe Experience Platform Edge Network]:** A global distributed network of servers that enable a new methodology of deploying [!DNL Adobe] products
+
+The [!DNL Adobe Experience Edge] is a new framework for low-latency data collection, pluggable computing and rapid data activation across all addressable channels.
+
+[!DNL Adobe Experience Edge] provides a single consolidated SDK for every channel (JavaScript, Mobile, Server-side), which sends data to a common Adobe domain (`adobedc.net`) and receives a single payload back for data and experience delivery.  
+
+On the server-side, a unified edge gateway and a common platform services framework makes it easy to plug-in and deploy new capabilities into this real-time computing environment.  This architecture:
+
+* Decreases customer time to value
+* Ends the need for "point" integrations
+* Improves performance compared to the old libraries
+* Decreases costs
+* Increases the speed of innovation
+* Creates sustained competitive advantages for Adobe customers
+
+A single consolidated edge system allows customers to manage their advertising, marketing or personalization campaigns across all channels as an integrated experience.  It allows [!DNL Adobe] to deliver services with lower total cost of ownership for customers.  It also helps increase the speed of product innovation by making the real-time edge pluggable and allowing [!DNL Adobe] and its customers to more rapidly add new capabilities and customer-defined logic to that real time system. 
+
+## Video overview
 
 The following video gives an overview of the Adobe Experience Platform [!DNL Web SDK] and [!DNL Edge Network].
 
@@ -30,14 +57,13 @@ The following video demonstrates the Adobe Experience Platform [!DNL Web SDK] an
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
-
 ## Getting Started
 
 We highly recommend you [check out our getting started guide](getting-started/quick-start-with-launch.md) for a quick tutorial on how to get started using Adobe Launch.
 
 This product is constantly evolving and growing to support more and more use cases. To keep up with the latest, check out our [supported use-cases board](https://github.com/adobe/alloy/projects/5). We keep this up to date with the use cases we currently support and the ones we are working on to enable you to make the best decisions possible.
 
-* __Use Cases Not Yet Supported__ - These are use cases that are on our roadmap to be supported in the future.
-* __Use Cases In Progress__ - These are the use cases the team is currently working on completing for release.
-* __Supported Use Cases__ - These are the use cases that are supported and work today. 
-* __Use Cases We Won't Support__ - These are the use cases we have made a decision not to support.
+* **Use Cases Not Yet Supported:** These are use cases that are on our roadmap to be supported in the future.
+* **Use Cases In Progress:** These are the use cases the team is currently working on completing for release.
+* **Supported Use Cases:** These are the use cases that are supported and work today. 
+* **Use Cases We Won't Support:** These are the use cases we have made a decision not to support.

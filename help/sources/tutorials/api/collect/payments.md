@@ -1,15 +1,16 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Collect payment data;payment data
 solution: Experience Platform
 title: Collect payment data through source connectors and APIs
 topic: overview
+description: This tutorial covers the steps for retrieving data from a payments application and ingesting it into Platform through source connectors and APIs.
 ---
 
 # Collect payment data through source connectors and APIs
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
-This tutorial covers the steps for retrieving data from a payments application and ingesting it into [!DNL Platform] through source connectors and APIs.
+This tutorial covers the steps for retrieving data from a third-party payment system and ingesting it into [!DNL Platform] through source connectors and the [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
 
 ## Getting started
 
@@ -17,11 +18,11 @@ This tutorial requires you to have access to a payment system through a valid co
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
-*   [Experience Data Model (XDM) System](../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+*   [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
     *   [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
     *   [Schema Registry developer guide](../../../../xdm/api/getting-started.md): Includes important information that you need to know in order to successfully perform calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
-*   [Catalog Service](../../../../catalog/home.md): Catalog is the system of record for data location and lineage within [!DNL Experience Platform].
-*   [Batch ingestion](../../../../ingestion/batch-ingestion/overview.md): The Batch Ingestion API allows you to ingest data into [!DNL Experience Platform] as batch files.
+*   [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is the system of record for data location and lineage within [!DNL Experience Platform].
+*   [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): The Batch Ingestion API allows you to ingest data into [!DNL Experience Platform] as batch files.
 *   [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully connect to a payments application using the [!DNL Flow Service] API.
@@ -125,7 +126,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 }
 ```
 
-## Create a target XDM schema {#target}
+## Create a target XDM schema {#target-schema}
 
 In earlier steps, an ad-hoc XDM schema was created to structure the source data. In order for the source data to be used in [!DNL Platform], a target schema must also be created to structure the source data according to your needs. The target schema is then used to create a [!DNL Platform] dataset in which the source data is contained. This target XDM schema also extends the XDM [!DNL Individual Profile] class.
 
@@ -283,7 +284,7 @@ A successful response returns an array containing the ID of the newly created da
 ]
 ```
 
-## Create a target connection
+## Create a target connection {#target-connection}
 
 A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection spec ID associated with data lake. This connection spec ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
@@ -635,13 +636,15 @@ curl -X POST \
 ```
 
 | Property | Description |
-| --- | --- |
-| `flowSpec.id` | The flow spec ID retrieved in the previous step. |
-| `sourceConnectionIds` | The source connection ID retrieved in an earlier step. |
-| `targetConnectionIds` | The target connection ID retrieved in an earlier step. |
-| `transformations.params.mappingId` | The mapping ID retrieved in an earlier step.|
-| `scheduleParams.startTime` | The start time for the dataflow in epoch time in seconds. |
-| `scheduleParams.frequency` | The selectable frequency values include: `once`, `minute`, `hour`, `day`, or `week`. |
+| -------- | ----------- |
+| `flowSpec.id` | The [flow spec ID](#specs) retrieved in the previous step. |
+| `sourceConnectionIds` | The [source connection ID](#source) retrieved in an earlier step. |
+| `targetConnectionIds` | The [target connection ID](#target-connection) retrieved in an earlier step. |
+| `transformations.params.mappingId` | The [mapping ID](#mapping) retrieved in an earlier step.|
+| `transformations.params.deltaColum` | The designated column used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column. The supported date format for `deltaColumn` is `yyyy-MM-dd HH:mm:ss`. |
+| `transformations.params.mappingId`| The mapping ID associated with your database. |
+| `scheduleParams.startTime` | The start time for the dataflow in epoch time. |
+| `scheduleParams.frequency` | The frequency at which the dataflow will collect data. Acceptable values include: `once`, `minute`, `hour`, `day`, or `week`. |
 | `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer. Interval is not required when frequency is set as `once` and should be greater than or equal to `15` for other frequency values. |
 
 **Response**
@@ -654,6 +657,11 @@ A successful response returns the ID `id` of the newly created dataflow.
     "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
+
+## Monitor your dataflow
+
+Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors. For more information on how to monitor dataflows, see the tutorial on [monitoring dataflows in the API ](../monitor.md)
+
 
 ## Next steps
 

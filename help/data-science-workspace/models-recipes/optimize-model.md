@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;optimize;model;Data Science Workspace;popular topics
+keywords: Experience Platform;optimize;model;Data Science Workspace;popular topics;model insights
 solution: Experience Platform
 title: Optimize a model
 topic: Tutorial
+description: The Model Insights Framework provides the data scientist with tools in Data Science Workspace to make quick and informed choices for optimal machine learning models based on experiments.
 ---
 
 # Optimize a model using the Model Insights framework
@@ -21,7 +22,7 @@ After implementing and training a model, the next step a data scientist would do
 
 Currently, the Model Insights Framework supports the following runtimes:
 - [Scala](#scala)
-- [!DNL Python/Tensorflow](#pythontensorflow)
+- [Python/Tensorflow](#pythontensorflow)
 - [R](#r)
 
 Sample code for recipes can be found in the [experience-platform-dsw-reference](https://github.com/adobe/experience-platform-dsw-reference) repository under `recipes`. Specific files from this repository will be referenced throughout this tutorial.
@@ -88,7 +89,7 @@ The custom evaluator can be provided by extending the interface of `MLEvaluator.
 
 Once defined in the recipe, the next step is to enable it in the recipes. This is done in the [application.properties](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) file in the project's `resources` folder. Here the `evaluation.class` is set to the `Evaluator` class defined in `Evaluator.scala`
 
-```properties
+```scala
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 
