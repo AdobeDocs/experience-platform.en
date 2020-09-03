@@ -25,7 +25,7 @@ user-guide-description: Real-time Customer Profile provides a holistic view of e
   * [Merge policies user guide](ui/merge-policies.md)
 * Tutorials {#tutorials}
   * [Add data to [!DNL Profile]](tutorials/add-profile-data.md)
-  * [Configure dataset for [!DNL Profile] & [!DNL Identity service]](tutorials/dataset-configuration.md)
+  * [Configure a dataset for [!DNL Profile] & [!DNL Identity] service](tutorials/dataset-configuration.md)
   * [More tutorials](https://docs.adobe.com/content/help/en/experience-platform/tutorials/home.html)
 * [Privacy request processing](privacy.md)
 * [[!DNL Profile] troubleshooting guide](troubleshooting.md)
