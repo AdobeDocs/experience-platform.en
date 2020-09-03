@@ -31,7 +31,7 @@ For more information about identity namespaces in [!DNL Experience Platform], se
 
 ## Adding identity data to datasets
 
-When creating privacy requests for the [!DNL Data Lake], valid identity values (and their associated namespaces) must be provided for each individual customer in order to locate their data and process it accordingly. Therefore, all datasets that are subject to privacy requests must contain an [!UICONTROL identity descriptor] in their associated XDM schema.
+When creating privacy requests for the [!DNL Data Lake], valid identity values (and their associated namespaces) must be provided for each individual customer in order to locate their data and process it accordingly. Therefore, all datasets that are subject to privacy requests must contain an identity descriptor in their associated XDM schema.
 
 >[!NOTE]
 >
