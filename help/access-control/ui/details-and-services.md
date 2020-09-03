@@ -12,7 +12,7 @@ You can configure a profile's details and access to additional services from wit
 
 ![profile-settings](../images/profile-settings.png)
 
-The **[!UICONTROL Profile Settings]** menu appears, starting on the **[!UICONTROL Details]** tab. This tab allows you to input and edit your [!UICONTROL Profile Name] and [!UICONTROL Description]. You can also modify your [!UICONTROL Display Name] as well as the email notification settings for your account.
+The **[!UICONTROL Profile Settings]** menu appears, starting on the **[!UICONTROL Details]** tab. This tab allows you to input and edit your profile name and description. You can also modify your display name as well as the email notification settings for your account.
 
 ![edit-details-settings](../images/edit-details-settings.png)
 

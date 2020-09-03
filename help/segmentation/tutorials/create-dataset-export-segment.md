@@ -26,7 +26,7 @@ To view union schemas in the UI, click **[!UICONTROL Profiles]** in the left-nav
 
 The datasets workspace within the [!DNL Experience Platform] UI allows you to view and manage all of the datasets that your IMS organization has made, as well as create new ones. 
 
-To view the datasets workspace, click **[!UICONTROL Datasets]** in the left-hand navigation, then click on the **[!UICONTROL Browse]** tab. The datasets workspace contains a list of datasets, including columns showing [!UICONTROL Name], [!UICONTROL Created] (date and time), [!UICONTROL Source], [!UICONTROL Schema], and [!UICONTROL Last Batch Status], as well as the date and time the dataset was [!UICONTROL Last Updated]. Depending on the width of each column, you may be required to scroll left or right to see all columns. 
+To view the datasets workspace, click **[!UICONTROL Datasets]** in the left-hand navigation, then click on the **[!UICONTROL Browse]** tab. The datasets workspace contains a list of datasets, including columns showing name, created (date and time), source, schema, and last batch status, as well as the date and time the dataset was last updated. Depending on the width of each column, you may be required to scroll left or right to see all columns. 
 
 >[!NOTE]
 >
@@ -36,7 +36,7 @@ To view the datasets workspace, click **[!UICONTROL Datasets]** in the left-hand
 
 ## Create a dataset
 
-To create a dataset, click **[!UICONTROL Create Dataset]** in the top right corner of the [!UICONTROL Datasets] workspace. 
+To create a dataset, click **[!UICONTROL Create Dataset]** in the top right corner of the **[!UICONTROL Datasets]** workspace. 
 
 ![Click Create dataset](../images/tutorials/segment-export-dataset/dataset-click-create.png)
 
@@ -54,7 +54,7 @@ Selected the radio button next to **[!UICONTROL XDM Individual Profile]**, then 
 
 ## Configure dataset
 
-On the **[!UICONTROL Configure Dataset]** screen, you will be required to give your dataset a [!UICONTROL Name] and may also provide a [!UICONTROL Description] of the dataset. 
+On the **[!UICONTROL Configure Dataset]** screen, you will be required to give your dataset a name and may also provide a description of the dataset. 
 
 **Notes on Dataset Names:**
 - Dataset names should be short and descriptive so that the dataset can be easily found in the library later. 
@@ -67,9 +67,9 @@ Once the dataset has a name and description, click **[!UICONTROL Finish]**.
 
 ## Dataset activity
 
-An empty dataset has now been created and you have been returned to the **[!UICONTROL Dataset Activity]** tab in the [!UICONTROL Datasets] workspace. You should see the name of the dataset in the top-left corner of the workspace, along with a notification that "No batches have been added." This is to be expected since you have not added any batches to this dataset yet. 
+An empty dataset has now been created and you have been returned to the **[!UICONTROL Dataset Activity]** tab in the **[!UICONTROL Datasets]** workspace. You should see the name of the dataset in the top-left corner of the workspace, along with a notification that "No batches have been added." This is to be expected since you have not added any batches to this dataset yet. 
 
-On the right-hand side of the Datasets workspace you will see the **[!UICONTROL Info]** tab containing information related to your new dataset such as [!UICONTROL Dataset ID], [!UICONTROL Name], [!UICONTROL Description], [!UICONTROL Table Name], [!UICONTROL Schema], [!UICONTROL Streaming], and [!UICONTROL Source]. The [!UICONTROL Info] tab also includes information about when the dataset was [!UICONTROL Created] and its [!UICONTROL Last Modified] date.
+On the right-hand side of the Datasets workspace you will see the **[!UICONTROL Info]** tab containing information related to your new dataset such as dataset ID, name, description, table name, schema], streaming, and source. The **[!UICONTROL Info]** tab also includes information about when the dataset was created and its last modified date.
 
 Please make note of the **[!UICONTROL Dataset ID]**, as this value is required to complete the audience segment export workflow.
 
@@ -77,6 +77,6 @@ Please make note of the **[!UICONTROL Dataset ID]**, as this value is required t
 
 ## Next steps
 
-Now that you have created a dataset based on the [!DNL XDM Individual Profile Union Schema], you can use the [!UICONTROL Dataset ID] to continue the [evaluating and accessing segment results](./evaluate-a-segment.md) tutorial.
+Now that you have created a dataset based on the [!DNL XDM Individual Profile Union Schema], you can use the dataset ID to continue the [evaluating and accessing segment results](./evaluate-a-segment.md) tutorial.
 
 At this time, please return to the evaluating segment results tutorial and pick up from the [generating profiles for audience members](./evaluate-a-segment.md#generate-profiles) step of the exporting a segment workflow. 

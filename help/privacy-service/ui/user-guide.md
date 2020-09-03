@@ -11,7 +11,7 @@ This document provides steps for creating and managing privacy requests using th
 
 ## Browse the [!DNL Privacy Service] UI dashboard
 
-The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow you to view the status of your privacy jobs: [!UICONTROL Status Report] and [!UICONTROL Job Requests]. The dashboard also displays the current selected regulation for the displayed jobs.
+The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow you to view the status of your privacy jobs: "[!UICONTROL Status Report]" and "[!UICONTROL Job Requests]". The dashboard also displays the current selected regulation for the displayed jobs.
 
 ![UI dashboard](../images/user-guide/dashboard.png)
 
@@ -98,7 +98,7 @@ The **[!UICONTROL Create Request]** dialog opens, displaying the available optio
 
 <img src="../images/user-guide/request-builder.png" width=500 /><br/>
 
-Select the **[!UICONTROL Job Type]** of the request ("Delete" or "Access") and one or more available [!UICONTROL Products] from the list.
+Select the **[!UICONTROL Job Type]** of the request ("Delete" or "Access") and one or more available products from the list.
 
 <img src="../images/user-guide/type-and-products.png" width=500 /><br/>
 

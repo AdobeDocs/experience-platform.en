@@ -12,7 +12,7 @@ Access control for [!DNL Experience Platform] is provided through the [Adobe Adm
 
 ## Access control hierarchy and workflow
 
-In order to configure access control for [!DNL Experience Platform], you must have administrator privileges for an organization that has an [!DNL Experience Platform] product integration. The minimum role that grant or withdraw permissions is a [!UICONTROL product profile administrator]. Other administrator roles that can manage permissions are [!UICONTROL product administrators] (can manage all profiles within a product) and [!UICONTROL system administrators] (no restrictions). See the Adobe Help Center article on [administrative roles](https://helpx.adobe.com/enterprise/using/admin-roles.html) for more information.
+In order to configure access control for [!DNL Experience Platform], you must have administrator privileges for an organization that has an [!DNL Experience Platform] product integration. The minimum role that grant or withdraw permissions is a product profile administrator. Other administrator roles that can manage permissions are product administrators (can manage all profiles within a product) and system administrators (no restrictions). See the Adobe Help Center article on [administrative roles](https://helpx.adobe.com/enterprise/using/admin-roles.html) for more information.
 
 >[!NOTE]
 >
@@ -37,7 +37,7 @@ Adobe Admin Console provides a central location for managing Adobe product entit
 
 ### Product profiles
 
-In the [!DNL Admin Console], permissions are assigned to users through the use of [!UICONTROL product profiles]. Product profiles allow you to grant permissions to one or multiple users, and also contain their access to the scope of the sandboxes that are assigned to them through product profiles. Users can be assigned to one or multiple product profiles belonging to your organization.
+In the [!DNL Admin Console], permissions are assigned to users through the use of product profiles. Product profiles allow you to grant permissions to one or multiple users, and also contain their access to the scope of the sandboxes that are assigned to them through product profiles. Users can be assigned to one or multiple product profiles belonging to your organization.
 
 ### Default product profiles
 
@@ -50,7 +50,7 @@ In the [!DNL Admin Console], permissions are assigned to users through the use o
 
 ## Sandboxes and permissions
 
-Non-Production sandboxes are a form of data virtualization that allow you to isolate data from other sandboxes and are typically used for development experiments, testing, or trials. A product profile's [!UICONTROL permissions] give the profile's users access to [!DNL Platform] features within the sandbox environments to which they've been granted access to. A default Experience Platform license grants you five sandboxes (one production and four non-production). You can add packs of ten non-production sandboxes up to a maximum of 75 sandboxes in total. Please contact your IMS Org Administrator or your Adobe sales representative for more details.
+Non-Production sandboxes are a form of data virtualization that allow you to isolate data from other sandboxes and are typically used for development experiments, testing, or trials. A product profile's permissions give the profile's users access to [!DNL Platform] features within the sandbox environments to which they've been granted access to. A default Experience Platform license grants you five sandboxes (one production and four non-production). You can add packs of ten non-production sandboxes up to a maximum of 75 sandboxes in total. Please contact your IMS Org Administrator or your Adobe sales representative for more details.
 
 For more information about sandboxes in [!DNL Experience Platform], please refer to the [sandboxes overview](../sandboxes/home.md).
 

@@ -77,7 +77,7 @@ Recipes are the basis for a Model as they contain machine learning algorithms an
     ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
 2.  Locate and open the provided **[!UICONTROL Recommendations Recipe]** by clicking its name.
     ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3.  In the right-hand rail, click **[!UICONTROL Recommendations Input Schema]** to view the schema powering the recipe. The schema fields [!UICONTROL itemId] and [!UICONTROL userId] correspond to a product purchased ([!UICONTROL interactionType]) by that customer at a specific time ([!UICONTROL timestamp]). Follow the same steps to review the fields for the **[!UICONTROL Recommendations Output Schema]**.
+3.  In the right-hand rail, click **[!UICONTROL Recommendations Input Schema]** to view the schema powering the recipe. The schema fields "[!UICONTROL itemId]" and "[!UICONTROL userId]" correspond to a product purchased ([!UICONTROL interactionType]) by that customer at a specific time ([!UICONTROL timestamp]). Follow the same steps to review the fields for the **[!UICONTROL Recommendations Output Schema]**.
     ![](../images/models-recipes/model-walkthrough/preview_schemas.png)
 
 You have now reviewed the input and output schemas required by the Product Recommendations Recipe. You can now continue to the next section to find out how to create, train, and evaluate a Product Recommendations Model.
@@ -107,7 +107,7 @@ You can choose to wait for the training run to finish, or continue to create a n
 
 1.  On the **Model Overview** page, click **[!UICONTROL Train]** near the top right to create a new training run. Select the same input dataset you used when creating the Model and click **[!UICONTROL Next]**.
     ![](../images/models-recipes/model-walkthrough/training_select_dataset.png)
-2.  The **Configuration** page appears. Here you can configure the training run's [!UICONTROL num_recommendations] value, also known as a Hyperparameter. A trained and optimized Model will utilize the best-performing Hyperparameters based on the results of the training run.
+2.  The **Configuration** page appears. Here you can configure the training run's "[!UICONTROL num_recommendations]" value, also known as a Hyperparameter. A trained and optimized Model will utilize the best-performing Hyperparameters based on the results of the training run.
 
     Hyperparameters cannot be learned, therefore they must be assigned before training runs occur. Adjusting Hyperparameters may change the accuracy of the Trained Model. Since optimizing a Model is an iterative process, multiple training runs may be required before a satisfactory evaluation is achieved.
 

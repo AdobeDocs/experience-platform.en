@@ -10,7 +10,7 @@ description: Catalog Service is the system of record for data location and linea
 
 [!DNL Catalog Service] is the system of record for data location and lineage within Adobe Experience Platform. While all data that is ingested into [!DNL Experience Platform] is stored in the [!DNL Data Lake] as files and directories, [!DNL Catalog] holds the metadata and description of those files and directories for lookup and monitoring purposes. 
 
-Simply put, [!DNL Catalog] acts as a metadata store or "[!UICONTROL catalog]" where you can find information about your data within [!DNL Experience Platform]. You can use [!DNL Catalog] to answer the following questions:
+Simply put, [!DNL Catalog] acts as a metadata store or "catalog" where you can find information about your data within [!DNL Experience Platform]. You can use [!DNL Catalog] to answer the following questions:
 
 * Where is my data located?
 * At what stage of processing is this data?

@@ -129,7 +129,7 @@ For example, if you had an element on your web page with an ID of `container` wh
 | -------- | ------------ | ----------------- |
 | Boolean  | No           | `true`            |
 
-Enables [!DNL Audience Manager] [!UICONTROL cookie destinations], which allows the setting of cookies based on segment qualification.
+Enables [!DNL Audience Manager] cookie destinations, which allows the setting of cookies based on segment qualification.
 
 ### `urlDestinationsEnabled`
 
@@ -137,7 +137,7 @@ Enables [!DNL Audience Manager] [!UICONTROL cookie destinations], which allows t
 | -------- | ------------ | ----------------- |
 | Boolean  | No           | `true`            |
 
-Enables [!DNL Audience Manager] [!UICONTROL URL destinations], which allows the firing of URLs based on segment qualification.
+Enables [!DNL Audience Manager] URL destinations, which allows the firing of URLs based on segment qualification.
 
 ## Identity options
 

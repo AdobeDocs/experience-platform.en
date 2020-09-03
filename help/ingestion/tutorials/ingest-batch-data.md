@@ -19,7 +19,7 @@ If you would prefer to ingest data using Data Ingestion APIs please begin by rea
 
 The Datasets workspace within [!DNL Experience Platform] allows you to view and manage all of the datasets that your IMS organization has made, as well as create new ones. 
 
-View the Datasets workspace by clicking **[!UICONTROL Datasets]** in the left-hand navigation. The Datasets workspace contains a list of datasets, including columns showing [!UICONTROL Name], [!UICONTROL Created] (date and time), [!UICONTROL Source], [!UICONTROL Schema], and [!UICONTROL Last Batch Status], as well as the date and time the dataset was [!UICONTROL Last Updated]. 
+View the Datasets workspace by clicking **[!UICONTROL Datasets]** in the left-hand navigation. The Datasets workspace contains a list of datasets, including columns showing name, created (date and time), source, schema, and last batch status, as well as the date and time the dataset was last updated. 
 
 >[!NOTE]
 >
@@ -47,7 +47,7 @@ Once you have selected the radio button next to the schema you wish to use, clic
 
 ## Configure dataset
 
-On the **[!UICONTROL Configure Dataset]** screen, you will be required to give your dataset a [!UICONTROL Name] and may also provide a [!UICONTROL Description] of the dataset as well. 
+On the **[!UICONTROL Configure Dataset]** screen, you will be required to give your dataset a name and may also provide a description of the dataset as well. 
 
 **Notes on Dataset Names:**
 
@@ -63,7 +63,7 @@ Once the dataset has a name and description, click **[!UICONTROL Finish]**.
 
 An empty dataset has now been created and you have been returned to the **[!UICONTROL Dataset Activity]** tab in the Datasets workspace. You should see the name of the dataset in the top-left corner of the workspace, along with a notification that "No batches have been added." This is to be expected since you have not added any batches to this dataset yet. 
 
-On the right-hand side of the Datasets workspace you will see the **[!UICONTROL Info]** tab containing information related to your new dataset such as [!UICONTROL Dataset ID], [!UICONTROL Name], [!UICONTROL Description], [!UICONTROL Table Name], [!UICONTROL Schema], [!UICONTROL Streaming, and [!UICONTROL Source]. The Info tab also includes information about when the dataset was [!UICONTROL Created] and its [!UICONTROL Last Modified] date. 
+On the right-hand side of the Datasets workspace you will see the **[!UICONTROL Info]** tab containing information related to your new dataset such as dataset ID, name, description, table name, schema, streaming, and source. The Info tab also includes information about when the dataset was created and its last modified date. 
 
 Also in the Info tab is a  **[!UICONTROL Profile]** toggle that is used for enabling your dataset for use with [!DNL Real-time Customer Profile]. Use of this toggle, and [!DNL Real-time Customer Profile], will be explained in more detail in the section that follows.
 

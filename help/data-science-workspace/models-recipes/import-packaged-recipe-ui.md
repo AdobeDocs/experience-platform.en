@@ -242,7 +242,7 @@ Next, select the Retail Sales input and output schemas under the section **Manag
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-Under the **Feature Management** section, click on your tenant identification in the schema viewer to expand the Retail Sales input schema. Select the input and output features by highlighting the desired feature, and selecting either **[!UICONTROL Input Feature]** or **[!UICONTROL Target Feature]** in the right **[!UICONTROL Field Properties]** window. For the purpose of this tutorial, set [!UICONTROL weeklySales] as the  **[!UICONTROL Target Feature]** and everything else as **[!UICONTROL Input Feature]**. Click **[!UICONTROL Next]** to review your new configured recipe.
+Under the **Feature Management** section, click on your tenant identification in the schema viewer to expand the Retail Sales input schema. Select the input and output features by highlighting the desired feature, and selecting either **[!UICONTROL Input Feature]** or **[!UICONTROL Target Feature]** in the right **[!UICONTROL Field Properties]** window. For the purpose of this tutorial, set "[!UICONTROL weeklySales]" as the  **[!UICONTROL Target Feature]** and everything else as **[!UICONTROL Input Feature]**. Click **[!UICONTROL Next]** to review your new configured recipe.
 
 Review the recipe, add, modify, or remove configurations as necessary. Click **[!UICONTROL Finish]** to create the recipe.
 

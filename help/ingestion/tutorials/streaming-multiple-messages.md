@@ -36,7 +36,7 @@ After registering a streaming connection, you, as the data producer, will have a
 
 The following example shows how to send multiple messages to a specific dataset within a single HTTP request. Insert the dataset ID in the message header to have that message directly ingested into it.
 
-You can get the ID for an existing dataset using the [!DNL Platform] UI or using a listing operation in the API. The dataset ID can be found on [Experience Platform](https://platform.adobe.com) by going to the **[!UICONTROL Datasets]** tab, clicking on the dataset you want the ID for, and copying the string from the [!UICONTROL Dataset ID] field on the **[!UICONTROL Info]** tab. See the [Catalog Service overview](../../catalog/home.md) for information on how to retrieve datasets using the API.
+You can get the ID for an existing dataset using the [!DNL Platform] UI or using a listing operation in the API. The dataset ID can be found on [Experience Platform](https://platform.adobe.com) by going to the **[!UICONTROL Datasets]** tab, clicking on the dataset you want the ID for, and copying the string from the dataset ID field on the **[!UICONTROL Info]** tab. See the [Catalog Service overview](../../catalog/home.md) for information on how to retrieve datasets using the API.
 
 Instead of using an existing dataset, you can create a new dataset. Please read the [create a dataset using APIs](../../catalog/api/create-dataset.md) tutorial for more information on creating a dataset using APIs.
 

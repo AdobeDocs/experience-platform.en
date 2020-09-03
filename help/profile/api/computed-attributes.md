@@ -25,7 +25,7 @@ The API endpoint used in this guide is part of the [Real-time Customer Profile A
 
 Adobe Experience Platform enables you to easily import and merge data from multiple sources in order to generate [!DNL Real-time Customer Profiles]. Each profile contains important information related to an individual, such as their contact information, preferences, and purchase history, providing a 360-degree view of the customer. 
 
-Some of the information collected in the profile is easily understood when reading the data fields directly (for example, "first name") whereas other data requires performing multiple calculations or relying on other fields and values in order to generate the information (for example, "lifetime purchase total"). To make this data easier to understand at a glance, [!DNL Platform] allows you to create[!UICONTROL computed attributes] that automatically perform these references and calculations, returning the value in the appropriate field.
+Some of the information collected in the profile is easily understood when reading the data fields directly (for example, "first name") whereas other data requires performing multiple calculations or relying on other fields and values in order to generate the information (for example, "lifetime purchase total"). To make this data easier to understand at a glance, [!DNL Platform] allows you to create computed attributes that automatically perform these references and calculations, returning the value in the appropriate field.
 
 Computed attributes include creating an expression, or "rule", that operates on incoming data and stores the resulting value in a profile attribute or event. Expressions can be defined in multiple different ways, allowing you to specify that a rule evaluate incoming events only, an incoming event and profile data, or an incoming event, profile data, and historical events.
 
@@ -63,7 +63,7 @@ Once you have located the schema, click its name to open the [!DNL Schema Editor
 
 ### Create a mixin
 
-To create a new mixin, click **[!UICONTROL Add]** next to Mixins in the **[!UICONTROL Composition]** section on the left-side of the editor. This opens the **[!UICONTROL Add mixin]** dialog where you can see existing mixins. Click the radio button for **[!UICONTROL Create new mixin]** in order to define your new mixin.
+To create a new mixin, click **[!UICONTROL Add]** next to **[!UICONTROL Mixins]** in the **[!UICONTROL Composition]** section on the left-side of the editor. This opens the **[!UICONTROL Add mixin]** dialog where you can see existing mixins. Click the radio button for **[!UICONTROL Create new mixin]** in order to define your new mixin.
 
 Give the mixin a name and description, and click **[!UICONTROL Add mixin]** when complete.
 
@@ -71,7 +71,7 @@ Give the mixin a name and description, and click **[!UICONTROL Add mixin]** when
 
 ### Add a computed attribute field to the schema
 
-Your new mixin should now appear in the **[!UICONTROL Mixins]** section under **[!UICONTROL Composition]**. Click on the name of the mixin and multiple **[!UICONTROL Add field]** buttons will appear in the **[!UICONTROL Structure]** section of the editor.
+Your new mixin should now appear in the "[!UICONTROL Mixins]" section under "[!UICONTROL Composition]". Click on the name of the mixin and multiple **[!UICONTROL Add field]** buttons will appear in the **[!UICONTROL Structure]** section of the editor.
 
 Select **[!UICONTROL Add field]** next to the name of the schema in order to add a top-level field, or you can select to add the field anywhere within the schema you prefer.
 
