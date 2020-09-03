@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;enum;;primary identity;primary idenity;XDM individual profile;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design
+keywords: Experience Platform;home;popular topics;schema;Schema;enum;;primary identity;primary identity;XDM individual profile;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design
 solution: Experience Platform
 title: Best practices for data modeling in Adobe Experience Platform
 topic: overview
@@ -102,10 +102,23 @@ The following table outlines some common entity relationships and the categories
 
 | Relationship | Cardinality | Entity categories |
 | --- | --- | --- |
-| Customers and Cart Checkouts | One to many |
-| Customers and Loyalty Accounts | One to one | 
-| Customers and Subscriptions | One to many |
+| Customers and Cart Checkouts | One to many | A single customer may have many cart checkouts, which are events that can be tracked over time. Customers would therefore be a profile entity, while Cart Checkouts would be an event entity. |
+| Customers and Loyalty Accounts | One to one | A single customer can only have one loyalty account, and vice versa. Since the relationship is one-to-one, both Customers and Loyalty Accounts represent profile entities. |
+| Customers and Subscriptions | One to many | A single customer may have many subscriptions. Since the company is only concerned with a customer's current subscriptions, Customers is a profile entity, while Subscriptions is a lookup entity. |
 
 ## Create schemas based on your categorized entities
 
+Once you have sorted your ERD into profile, lookup, and event entities, you can create a new diagram similar to the following:
+
+![](../images/best-practices/erd-sorted.png)
+
+You can then use this diagram to convert your data model into XDM schemas. See the tutorial on [creating a schema in the UI](../tutorials/create-schema-ui.md)
+
+## Adopt an iterative modeling approach
+
 ## Next steps
+
+This document covered the general guidlines and best practices for designing your data model for Experience Platform. To summarize:
+
+* There are always multiple approaches and options for schema design.
+* Your data model should support segmentation use cases.
