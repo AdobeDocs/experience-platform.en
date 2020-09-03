@@ -51,7 +51,7 @@ In the **[!UICONTROL Accounts]** tab, you can learn more about the connections t
 
 >[!TIP]
 >
->Use the ![Add data](/help/rtcdp/destinations/assets/add-data-symbol.png) button in the **[!UICONTROL Platform]** column to create a new destination connection for that account.
+>Use the ![Add data button](/help/rtcdp/destinations/assets/add-data-symbol.png) button in the **[!UICONTROL Platform]** column to create a new destination connection for that account.
 
 ![Accounts tab](/help/rtcdp/destinations/assets/accounts-tab.png)
 
@@ -69,7 +69,7 @@ The **[!UICONTROL Browse]** tab displays the destinations with which you have es
 
 >[!TIP]
 >
->Use the ![Add data](/help/rtcdp/destinations/assets/add-data-symbol.png) button in the **[!UICONTROL Name]** column to add or remove segments activated to that destination.
+>Use the ![Add data button](/help/rtcdp/destinations/assets/add-data-symbol.png) button in the **[!UICONTROL Name]** column to add or remove segments activated to that destination.
 
 ![Browse Tab](/help/rtcdp/destinations/assets/browse-tab.png)
 
