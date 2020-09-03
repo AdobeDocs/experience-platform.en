@@ -72,7 +72,7 @@ The response includes the details for the last successful sample job that was ru
 |Property|Description|
 |---|---|
 |`numRowsToRead`|The total number of merged profiles in the sample.|
-|`sampleJobRunning`| A boolean value that returns `true` when a sample job is in progress. Provides transparency into the latency that occurs from when a batch file is uploaded to when it is actually added to the Profile store.
+|`sampleJobRunning`| A boolean value that returns `true` when a sample job is in progress. Provides transparency into the latency that occurs from when a batch file is uploaded to when it is actually added to the Profile store.|
 |`cosmosDocCount`|Total document count in Cosmos.|
 |`totalFragmentCount`|Total number of profile fragments in the Profile store.|
 |`lastSuccessfulBatchTimestamp`|Last successful batch ingestion timestamp.|
