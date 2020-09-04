@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;export;Export
 solution: Experience Platform
 title: Privacy Service user guide
 topic: UI guide

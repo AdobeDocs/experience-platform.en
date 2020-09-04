@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;IAB;IAB 2.0;
+keywords: Experience Platform;home;IAB;IAB 2.0;consent;Consent
 solution: Experience Platform
 title: IAB TCF 2.0 support in Real-time Customer Data Platform
 topic: privacy events
+description: This document provides steps for setting up the two required datasets to collect IAB TCF 2.0 consent data.
 ---
 
 # Create datasets for capturing IAB TCF 2.0 consent data

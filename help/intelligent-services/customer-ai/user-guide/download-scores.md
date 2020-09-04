@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;download scores;customer ai;popular topics
+keywords: Experience Platform;download scores;customer ai;popular topics;Export;export
 solution: Experience Platform
 title: Downloading scores in Customer AI
 topic: Downloading scores

@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;sandbox;Sandbox
+keywords: Experience Platform;home;popular topics;sandbox;Sandbox;testing;Testing
 solution: Experience Platform
 title: Sandboxes overview
 topic: overview
