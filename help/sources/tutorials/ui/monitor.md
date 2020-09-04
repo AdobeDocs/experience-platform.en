@@ -41,13 +41,19 @@ The sorting panel allows you to access accounts from a specific source. Select t
 
 ![accounts-select](../../images/tutorials/monitor/accounts-sort.png)
 
-From the **[!UICONTROL Accounts]** page, you can view a list of existing dataflows or target datasets associated with the account you accessed.
+From the **[!UICONTROL Accounts]** page, you can view a list of existing dataflows or target datasets associated with the account you accessed.Select the secondary control to bring up more options available for your selected dataflow. These options are further described below:
+
+| Control | Description |
+| ------- | ----------- |
+| [!UICONTROL Edit Schedule] | Allows you to edit the ingestion schedule of the dataflow. |
+| [!UICONTROL Disable dataflow] | Allows you to disable the selected dataflow. |
+| [!UICONTROL Delete] | Allows you to delete the selected dataflow. |
 
 ![dataflows](../../images/tutorials/monitor/dataflows.png)
 
 ## Monitor dataflows
 
-Dataflows can be accessed directly from the **[!UICONTROL Catalog]** page without viewing **[!UICONTROL Accounts]**. Select **[!UICONTROL Dataflows]** from the top header to view a list of existing dataflows.
+Dataflows can be accessed directly from the **[!UICONTROL Catalog]** page without viewing **[!UICONTROL Accounts]**. Select **[!UICONTROL Dataflows]** from the top header to view a list of dataflows.
 
 ![catalog-dataflows](../../images/tutorials/monitor/catalog-dataflows.png)
 
