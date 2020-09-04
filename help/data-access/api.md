@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;data access;python sdk;spark sdk;data access api
+keywords: Experience Platform;home;popular topics;data access;python sdk;spark sdk;data access api;export;Export
 solution: Experience Platform
 title: Data Access developer guide
 topic: developer guide
