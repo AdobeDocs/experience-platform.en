@@ -8,34 +8,48 @@ description: Multi-entity segmentation is the ability to extend Profile data wit
 
 # Multi-entity segmentation
 
-Multi-entity segmentation is the ability to extend [!DNL Profile] data with additional data based on products, stores, or other non-profile classes. Once connected, data from additional classes becomes available as if they were native to the [!DNL Profile] schema.
-
-To learn more about multi-entity segmentation, please continue reading the documentation and supplement your learning by watching the video below or exploring the [segmentation overview](./home.md).
-
->[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
+Multi-entity segmentation is an advanced feature available as part of Adobe Experience Platform [!DNL Segmentation Service]. This feature enables you to extend [!DNL Real-time Customer Profile] data with additional "non-people" data (also known as "dimension entities") that your organization may define, such as data related to products or stores. Multi-entity segmentation provides flexibility when defining audience segments based on data relevant to your unique business needs and can be performed without having expertise in querying databases. With multi-entity segmentation, you can add key data to your segments without having to make costly changes to data streams or wait for a back-end data merge.
 
 ## Getting started
 
-This tutorial requires a working understanding of the various Adobe Experience Platform services involved in using segmentation. Before beginning this tutorial, please review the documentation for the following services:
+Multi-entity segmentation requires a working understanding of the various Adobe Experience Platform services involved in segmentation. Before continuing with this guide, please review the following documentation:
 
-- [[!DNL Real-time Customer Profile]](../profile/home.md): Provides a unified consumer profile in real-time, based on aggregated data from multiple sources.
-- [Adobe Experience Platform Segmentation Service](./home.md): Allows you to build segments from Real-time Customer Profile.
-- [[!DNL Experience Data Model (XDM)]](../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
+* [!DNL Real-time Customer Profile](../profile/home.md): Provides a unified consumer profile in real-time, based on aggregated data from multiple sources.
+  * [Profile guardrails](../profile/guardrails.md): Best practices for creating data models supported by [!DNL Profile].
+* [!DNL Adobe Experience Platform Segmentation Service](./home.md): Allows you to build segments from [!DNL Real-time Customer Profile] data.
+* [!DNL Experience Data Model (XDM)](../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+  * [Basics of schema composition](../xdm/schema/composition.md#union): Learn best practices for composing schemas to be used in Experience Platform.
 
-## How to define XDM relationships
+## Use cases
 
-Defining relationships with the structure of your [!DNL Experience Data Model] (XDM) schemas is an important and integral part of segment creation. 
+To illustrate the value of multi-entity segmentation, consider three standard marketing use cases that illustrate the challenges present in most marketing applications:
 
-This process can be done either using the [!DNL Schema Registry] API or the [!DNL Schema Editor]. For a detailed guide on using the API to define a relationship between two schemas, please read [the tutorial on defining a relationship between two schemas using the API](../xdm/tutorials/relationship-api.md). For a detailed guide on using the [!DNL Schema Editor] to define a relationship between two schemas, please read [the tutorial on defining a relationship between two schemas using the Schema Editor](../xdm/tutorials/relationship-ui.md).
+### Combining online and offline purchase data
 
-## How to create segments that use XDM relationships
+A marketer building an email campaign may have attempted to build a segment for a target audience by using recent customer store purchases within the last three months. Ideally, this segment would require both the item name and the name of the store where the purchase was made. Previously, the challenge would have been capturing the store identifier from the purchase event and assigning it to an individual customer profile.
 
-Once you have defined your XDM relationships, you can use the [!DNL Segmentation Service] API to build a segment.
+### Email retargeting for cart abandonment
 
-This process can be done either using the [!DNL Segmentation] API or the [!DNL Segment Builder] user interface. For a detailed guide on using the API to build a segment, please read [the tutorial on creating a segment using the Segmentation API](./tutorials/create-a-segment.md). For a detailed guide on using the Segment Builder to build a segment, please read [the Segment Builder user guide](./ui/overview.md).
+It is often complex to create and qualify users into segments targeting cart abandonment. Knowing which products to include in a personalized retargeting campaign requires data regarding which products were abandoned by each individual. This data is tied to commerce events which were formerly challenging to monitor and extract data from.
 
-## How to evaluate and access segments for multi-entity segments
+## Creating multi-entity segments
 
-After creating a segment, you can evaluate and access the segment results using the [!DNL Segmentation Service] API. Evaluating a multi-entity segment is very similar to evaluating a regular segment.
+Creating a multi-entity segment first requires defining relationships between schemas before using the [!DNL Segmentation] API or Segment Builder UI to build the segment definition.
 
-This process can only be done using the [!DNL Segmentation Service] API. For a detailed guide on using the API to evaluate and access segments, please read the tutorial on [evaluating and accessing segments](./tutorials/evaluate-a-segment.md).
+### Define relationships
+
+Defining relationships within the structure of your Experience Data Model (XDM) schemas is an integral part of multi-entity segment creation. This process can be done either using the Schema Registry API or the Schema Editor. For detailed steps showing how to define a relationship between two schemas, please choose from the following tutorials:
+
+* [Defining a relationship between two schemas using the API](../xdm/tutorials/relationship-api.md)
+* [Defining a relationship between two schemas using the Schema Editor UI](../xdm/tutorials/relationship-ui.md)
+
+### Build a multi-entity segment
+
+Once you have defined the necessary XDM relationships, you can begin to build a multi-entity segment. This process can be done using either the Segmentation API or the Segment Builder UI. For more information, please choose from the following guides:
+
+* [Creating a segment using the Segmentation API](./tutorials/create-a-segment.md)
+* [Creating a segment using the Segment Builder UI](./ui/overview.md)
+
+## Evaluate and access multi-entity segments
+
+After creating a segment, you can evaluate and access the segment results using the Segmentation API. Evaluating a multi-entity segment is very similar to evaluating a standard segment. This process can only be done using the Segmentation API. For a detailed guide showing how to use the API to evaluate and access segments, please read the [evaluating and accessing segments](./tutorials/evaluate-a-segment.md) tutorial.
