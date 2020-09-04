@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;sql syntax;sql;ctas;CTAS
+keywords: Experience Platform;home;popular topics;query service;Query service;sql syntax;sql;ctas;CTAS;Create table as select
 solution: Experience Platform
 title: SQL syntax
 topic: syntax
