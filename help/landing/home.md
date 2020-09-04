@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey
+keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration
 solution: Experience Platform
 title: Adobe Experience Platform overview
 topic: getting started
@@ -75,6 +75,13 @@ The Adobe Experience Platform documentation is available in several languages. T
 
 [!DNL Experience Platform] documentation is provided in multiple formats for a variety of features and services. To learn more about the types of documentation that are available, as well as to read brief descriptions of each of the [!DNL Platform] services, please visit the [Experience Platform documentation overview](documentation/overview.md). Or, to begin learning more about a specific [!DNL Platform] service right away, select a guide from the alphabetical list in the left navigation.
 
+### Documentation for application services built on top of [!DNL Experience Platform]
+
+In addition to the services in the left navigation, Adobe has built other application services on top of Experience Platform. You can find documentation for these services in their own documentation repositories, linked below:
+
+* [[!DNL Customer Journey Analytics]](https://docs.adobe.com/content/help/en/analytics-platform/using/cja-landing.html) 
+* [[!DNL Journey Orchestration]](https://docs.adobe.com/content/help/en/journeys/using/journey-orchestration-home.html)
+
 >[!NOTE]
 >
 >Beginning in May, 2020, Adobe is rolling out updates to the domain and header bar to unify and improve your experience across all Experience Cloud applications. This includes a new Help menu. The new Help menu includes the following:
@@ -127,7 +134,7 @@ One of the key benefits provided by Adobe Experience Platform is its capability 
 
 >[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)
 
-For additional information on the architecture that powers of Adobe Experience Platform, please watch the following video:
+For additional information on the architecture that powers Adobe Experience Platform, please watch the following video:
 
 >[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)
 
@@ -144,12 +151,7 @@ The following videos outline the key capabilities and use cases for [!DNL Experi
 >[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)
 
 
-
-
-
  
-
-
 
 <!-- 
 ## What's New
