@@ -44,6 +44,10 @@ When defining your data model, it is recommended to stay within the provided gua
 
 * **Hard limit:** A hard limit provides an absolute maximum for the system. Going beyond a hard limit will result in breakages and errors, preventing the system from functioning as expected.
 
+>[!NOTE]
+>
+>The limits outlined in this document are constantly being improved. Please check back regularly for updates.
+
 ## Data model guardrails
 
 Adhering to the following guardrails is recommended when creating a data model for use with [!DNL Real-time Customer Profile].
@@ -85,5 +89,5 @@ The following guardrails refer to data size and are recommended to ensure data c
 
 | Guardrail | Limit | Limit Type | Description|
 | --- | --- | --- | --- |
-| Maximum total size for dimension entity (total for all records in an entity) | 200MB | Soft | **The maximum recommended total size for all records in a non-person entity of a given type is 200MB.** Ingesting larger dimension entities will result in degraded system performance. For example, attempting to load a 10GB product catalog as a dimension entity is not recommended.|
-| Datasets per dimensional entity schema | 1 | Soft | **A maximum of 1 dataset associated with each dimensional entity schema is recommended.** For example, if you create a schema for "products" and add a contributing dataset, you should not create a second dataset tied to the products schema.|
+| Maximum total size per dimensional entity | 1GB | Soft | **The maximum recommended total size for a dimension entity is 1GB.** Ingesting large dimension entities will result in degraded system performance. For example, attempting to load a 10GB product catalog as a dimension entity is not recommended.|
+| Datasets per dimensional entity schema | 5 | Soft | **A maximum of 5 datasets associated with each dimensional entity schema is recommended.** For example, if you create a schema for "products" and add five contributing datasets, you should not create a sixth dataset tied to the products schema.|
