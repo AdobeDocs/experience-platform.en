@@ -69,7 +69,7 @@ The **[!UICONTROL Browse]** tab displays the destinations with which you have es
 
 >[!TIP]
 >
->Use the ![Add data button](/help/rtcdp/destinations/assets/add-data-symbol.png) button in the **[!UICONTROL Name]** column to add or remove segments activated to that destination.
+>Use the ![Add data button](/help/rtcdp/destinations/assets/add-data-symbol.png) button in the **[!UICONTROL Name]** column to activate additional segments to that destination.
 
 ![Browse Tab](/help/rtcdp/destinations/assets/browse-tab.png)
 
