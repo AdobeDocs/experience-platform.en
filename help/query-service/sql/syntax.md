@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;sql syntax;sql;
+keywords: Experience Platform;home;popular topics;query service;Query service;sql syntax;sql;ctas;CTAS;Create table as select
 solution: Experience Platform
 title: SQL syntax
 topic: syntax
+description: This document shows SQL syntax supported by Query Service.
 ---
 
 # SQL syntax
