@@ -11,6 +11,10 @@ topic: guide
 
 Adobe Experience Platform provides a series of guardrails to help you avoid creating data models which [!DNL Real-time Customer Profile] cannot support. This document outlines the best practices and constraints when using dimension entities, specifically in batch segmentation. 
 
+>[!NOTE]
+>
+>The guardrails and limits outlined in this document are constantly being improved. Please check back regularly for updates.
+
 ## Getting started
 
 It is recommended that you read the following Experience Platform services documentation before attempting to build data models for use in [!DNL Real-time Customer Profile]. Working with data models, and the guardrails outlined in this document, require an understanding of the various Experience Platform services involved with managing [!DNL Real-time Customer Profile] entities: 
@@ -43,10 +47,6 @@ When defining your data model, it is recommended to stay within the provided gua
 * **Soft limit:** A soft limit provides a recommended maximum for optimal system performance. It is possible to go beyond a soft limit without breaking the system or receiving error messages, however going beyond a soft limit will result in performance degradation. It is recommended to stay within the soft limit to avoid decreases in overall performance.
 
 * **Hard limit:** A hard limit provides an absolute maximum for the system. Going beyond a hard limit will result in breakages and errors, preventing the system from functioning as expected.
-
->[!NOTE]
->
->The limits outlined in this document are constantly being improved. Please check back regularly for updates.
 
 ## Data model guardrails
 
