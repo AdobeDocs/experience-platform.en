@@ -36,7 +36,7 @@ To obtain your Azure Container Registry credentials, log into [Adobe Experience 
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-The **Configure** page opens. Provide an appropriate *Recipe Name*, for example, "Retail Sales recipe", and optionally provide a description or documentation URL. Once complete, click **[!UICONTROL Next]**.
+The **[!UICONTROL Configure]** page opens. Provide an appropriate **[!UICONTROL Recipe Name]**, for example, "Retail Sales recipe", and optionally provide a description or documentation URL. Once complete, click **[!UICONTROL Next]**.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
@@ -55,7 +55,7 @@ Select the appropriate *Runtime*, then choose a **[!UICONTROL Classification]** 
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
 
-Note the values for Docker Host, Username, and Password. These are used to build and push your [!DNL Docker] image in the workflows outlined below.
+Note the values for Docker host, username, and password. These are used to build and push your [!DNL Docker] image in the workflows outlined below.
 
 >[!NOTE]
 >

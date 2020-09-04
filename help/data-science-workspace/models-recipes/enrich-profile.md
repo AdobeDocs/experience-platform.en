@@ -47,7 +47,7 @@ Composing a schema begins by assigning a class. Classes define the behavioral as
 
     At this point, your schema's structure should contain some class fields and you are ready to assign mixins. A mixin is a group of one or more fields that describe a particular concept.
 
-3.  Within the **Composition** window, click **[!UICONTROL Add]** in the *Mixins* sub-section.
+3.  Within the **Composition** window, click **[!UICONTROL Add]** in the **Mixins** sub-section.
     *   To assign an existing mixin, click and highlight the desired mixin and then click **[!UICONTROL Add Mixin]**. Unlike classes, multiple mixins can be assigned to a single schema as long as it is appropriate to do so.
         ![](../images/models-recipes/enrich-rtcdp/existing_mixin.png)
 
