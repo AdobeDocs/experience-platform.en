@@ -8,20 +8,20 @@ description: This document provides a walkthrough for Adobe Experience Platform 
 
 # [!DNL Data Science Workspace] walkthrough
 
-This document provides a walkthrough for Adobe Experience Platform [!DNL Data Science Workspace]. Specifically we will go over the general workflow a data scientist would go through to solve a problem using machine learning.
+This document provides a walkthrough for Adobe Experience Platform [!DNL Data Science Workspace]. This tutorial outlines a general data scientist workflow and how they might approach and solve a problem using machine learning.
 
 ## Prerequisites
 
 - A registered Adobe ID account
-    - The Adobe ID account must have been added to an Organization with access to Adobe Experience Platform and the [!DNL Data Science Workspace]
+    - The Adobe ID account must have been added to an Organization with access to Adobe Experience Platform and [!DNL Data Science Workspace].
 
-## Data scientist's motivation
+## Retail use case
 
-A retailer faces many challenges to stay competitive in the current market. One of the retailer's main concerns is to decide on the optimal pricing of their products and to predict sale trends. With an accurate prediction model, the retailer would be able to find the relationship between demand and pricing policies and make optimized pricing decisions to maximize sales and revenue.
+A retailer faces many challenges to stay competitive in the current market. One of the retailer's main concerns is to decide on the optimal pricing of a product and to predict sale trends. With an accurate prediction model, a retailer would be able to find the relationship between demand and pricing policies and make optimized pricing decisions to maximize sales and revenue.
 
 ## Data scientist's solution
 
-A data scientist's solution is to leverage the wealth of historical data a retailer has access to, to predict future trends, and to optimize pricing decisions. We will use past sales data to train our machine learning model and use the model to predict future sale trends. With this, the retailer will be able to have insights to help them when making pricing changes.
+A data scientist's solution is to leverage the wealth of historical provided by a retailer, to predict future trends, and to optimize pricing decisions. This walkthrough uses past sales data to train a machine learning model and uses the model to predict future sale trends. With this, a retailer can generate insights to help with making the optimal pricing changes.
 
 In this overview, we will go over the steps a data scientist would go through to take a dataset and to create a model to predict weekly sales. We will go over the following sections in the Sample Retail Sales Notebook on Adobe Experience Platform [!DNL Data Science Workspace]:
 
@@ -34,13 +34,13 @@ In this overview, we will go over the steps a data scientist would go through to
 
 Firstly, we want to create a [!DNL JupyterLab] notebook to open the "Retail Sales" sample notebook. Following the steps done by the data scientist in the notebook will allow us to gain an understanding of a typical workflow.
 
-In the Adobe Experience Platform UI, click on the Data Science tab in the top menu to take you to the [!DNL Data Science Workspace]. From this page, click on the [!DNL JupyterLab] tab which will open the [!DNL JupyterLab] launcher. You should see a page similar to this.
+In the Adobe Experience Platform UI, select **[!UICONTROL Notebooks]** from within the **[!UICONTROL Data Science]** tab, to bring you to the [!UICONTROL Notebooks] overview page. From this page, select the [!DNL JupyterLab] tab to launch your [!DNL JupyterLab] environment. The default landing page for [!DNL JupyterLab] is the **[!UICONTROL Launcher]**.
+
+![](./images/walkthrough/notebooks.png)
 
 ![](./images/walkthrough/jupyterlab_launcher.png)
 
-In our tutorial, we will be using [!DNL Python] 3 in the [!DNL Jupyter Notebook] to show how to access and explore the data. In the Launcher page there are sample notebooks provided. We will be using the "Retail Sales" sample for [!DNL Python] 3.
-
-![](./images/walkthrough/retail_sales.png)
+This tutorial uses [!DNL Python] 3 in [!DNL JupyterLab Notebooks] to show how to access and explore the data. In the Launcher page there are sample notebooks provided. The **[!UICONTROL Retail Sales]** sample notebook is used in the examples provided below.
 
 ### Setup {#setup}
 
