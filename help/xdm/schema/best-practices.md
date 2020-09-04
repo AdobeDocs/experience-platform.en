@@ -48,9 +48,11 @@ Once you have created an ERD to identify the essential entities you would like t
 | Lookup entities | Lookup entities represent concepts that can relate to an individual person, but cannot be directly used to identify the individual. Entities that fall under this category should be represented by schemas based on **custom classes**. |
 | Event entities | Event entities represent concepts related to actions a customer can take, system events, or any other concept where you may want to track changes over time. Entities that fall under this category should be represented by schemas based on the **[!DNL XDM ExperienceEvent] class**. |
 
+### Considerations for entity sorting
+
 The sections below provide further guidance for how to sort your entities into the above categories.
 
-### Customer attributes
+#### Customer attributes
 
 If an entity contains any attributes related to an individual customer, it is most likely a profile entity. Examples of customer attributes include:
 
@@ -58,7 +60,7 @@ If an entity contains any attributes related to an individual customer, it is mo
 * Location information such as addresses and GPS information.
 * Contact information such as phone numbers and email addresses.
 
-### Tracking data over time
+#### Tracking data over time
 
 If you want to analyze how certain attributes within an entity change over time, it is most likely an event entity. For example, adding product items to a cart can be tracked as add-to-cart events in [!DNL Platform]:
 
@@ -69,7 +71,7 @@ If you want to analyze how certain attributes within an entity change over time,
 | 1234567 | Add | 486502 | 1 | Oct 1, 10:41 AM |
 | 1234567 | Add | 910482 | 5 | Oct 3, 2:15 PM |
 
-### Segmentation use cases
+#### Segmentation use cases
 
 When categorizing your entities, it is important to think about the audience segments you may want to build to address your particular business use cases.
 
@@ -78,13 +80,13 @@ For example, a company wants to know all of the "Gold" or "Platinum" members of 
 * "Gold" and "Platinum" represent loyalty statuses applicable to an individual customer. Since the segment logic is only concerned with the current loyalty status of customers, this data can be modeled as a profile schema. If you wished to track changes in loyalty status over time, you could also create an additional event schema for loyalty status changes.
 * Purchases are events which occur at a particular time, and the segment logic is concerned with purchase events within a specified time window. This data should therefore be modeled as an event schema.
 
-### Activation use cases
+#### Activation use cases
 
 In addition to considerations regarding segmentation use cases, you should also review the activation use cases for those segments in order to identify additional relevant attributes.
 
 For example, a company has built an audience segment based on the rule that `country = US`. Then, when activating that segment to certain downstream targets, the company wants to filter all exported profiles based on home state. Therefore, a `state` attribute should be captured in the applicable profile entity.
 
-### Aggregated values
+#### Aggregated values
 
 Based on the use case and granularity of your data, you should decide whether certain values need to be pre-aggregated before being included in a profile or event entity.
 
@@ -92,7 +94,7 @@ For example, a company wants to build a segment based on the number of cart purc
 
 Experience Platform does not currently perform automatic value aggregation, although this is planned for future releases. If you choose to use aggregated values, you must perform the calculations externally before sending the data to [!DNL Platform].
 
-### Cardinality
+#### Cardinality
 
 The cardinalities established in your ERD can also provide some clues as to how to categorize your entities. If there is a one-to-many relationship between two entities, the entity that represents the "many" will likely be an event entity. However, there are also cases where the "many" is a set of lookup entities that are provided as an array within a profile entity.
 
@@ -106,19 +108,66 @@ The following table outlines some common entity relationships and the categories
 | Customers and Loyalty Accounts | One to one | A single customer can only have one loyalty account, and vice versa. Since the relationship is one-to-one, both Customers and Loyalty Accounts represent profile entities. |
 | Customers and Subscriptions | One to many | A single customer may have many subscriptions. Since the company is only concerned with a customer's current subscriptions, Customers is a profile entity, while Subscriptions is a lookup entity. |
 
+### Pros and cons of different entity classes
+
+While the previous section provided some general guidelines for deciding how to categorize your entities, it is important to understand that there can often be pros and cons for choosing one entity category over the other. The following case study is intended to illustrate how you might consider your options in these situations.
+
+A company tracks subscriptions for their customers, where one customer can have many subscriptions. The company also wants to include subscriptions for segmentation use cases, such as finding "all users with active subscriptions".
+
+#### Approach 1: Use profile attributes
+
+The first approach would be to include an array of subscriptions as attributes within the profile entity for Customers. Objects in this array would contain fields for `category`, `status`, `planName`, `startDate`, and `endDate`.
+
+**Pros**
+
+* Segmentation is feasible for the intended use case
+* It will only preserve the latest records for a user
+
+**Cons**
+
+* Entire array has to be restated every time changes occur to any field in the array.
+* If different BU’s/source are feeding the array this will prove as a challenge as customers have tomaintain a sync and send latest updated array across all BU’s and sources.
+
+#### Approach 2: Use event entities
+
+The second approach would be to use event schemas to represent subscriptions. This entails ingesting the same subscription fields as the first approach, with addition of a subscription ID, a customer ID, and a timestamp of when the subscription event occurred.
+
+**Pros**
+
+* Segmentation is overall flexible (e.g. those who changed their state in the last x days and then did y event).
+* It didn’t require us to update the Array all at once (which is problematic if you have 30 different product/newsletter combinations sending in events at different times).
+
+**Cons**
+
+* Segmentation is a little complex for the intended use case ( we needed to be able to identifywhat the current subscription status is (i.e. the most recent event), for each user persubscription) . The segment needs to flag last event of a subscription of a user and check thestatus on it.
+
 ## Create schemas based on your categorized entities
 
-Once you have sorted your ERD into profile, lookup, and event entities, you can create a new diagram similar to the following:
+Once you have sorted your entities into profile, lookup, and event categories, you can start converting your data model into XDM schemas. For demonstration purposes, the example data model shown earlier has been sorted into appropriate categories in the following diagram:
 
 ![](../images/best-practices/erd-sorted.png)
 
-You can then use this diagram to convert your data model into XDM schemas. See the tutorial on [creating a schema in the UI](../tutorials/create-schema-ui.md)
+The category that an entity has been sorted under should determine the XDM class you base its schema on. To reiterate:
 
-## Adopt an iterative modeling approach
+* Profile entities should use the [!DNL XDM Individual Profile] class.
+* Event entities should use the [!DNL XDM ExperienceEvent] class.
+* Lookup entities should use custom XDM classes defined by your organization.
+
+>[!NOTE]
+>
+>While event entities will almost always be represented by separate schemas, entities in the profile or lookup categories may be combined together in a single XDM schema, depending on their cardinality. For example, since the Customers entity has a one-to-one relationship with the LoyaltyAccounts entity, the schema for the Customers entity could also include a `LoyaltyAccount` object to contains the appropriate loyalty fields for each customer. If the relationship is one to many, however, the entity that represents the "many" should be represented by a separate schema.
+
+See the tutorial on [creating a schema in the UI](../tutorials/create-schema-ui.md) for step-by-step instructions on how to create a schema, assign the appropriate class for the entity, and add fields to map your data to.
+
+### Adopt an iterative modeling approach
+
+The rules of schema evolution dictate that only non-destructive changes can be made to schemas once they have been implemented. In other words, once you add a field to a schema, the field cannot be removed. It is therefore essential to adopt an iterative modeling approach when you are first creating your schemas, starting with a simplified implementation which progressively gains complexity over time.
+
+If you are not sure whether a particular field is necessary to include in a schema, the best practice is to leave it out. If it is later determined that the field is necessary, it can always be added in the next iteration of the schema.
 
 ## Next steps
 
-This document covered the general guidlines and best practices for designing your data model for Experience Platform. To summarize:
+This document covered the general guidelines and best practices for designing your data model for Experience Platform. To summarize:
 
 * There are always multiple approaches and options for schema design.
 * Your data model should support segmentation use cases.
