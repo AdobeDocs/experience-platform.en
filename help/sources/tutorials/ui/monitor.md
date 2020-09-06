@@ -61,7 +61,7 @@ A list of existing dataflows appears. On this page is a list of viewable dataflo
 
 ![dataflows-list](../../images/tutorials/monitor/dataflows-list.png)
 
-The sorting panel appears. Select the source you wish to access from the scroll menu and select the dataflow from the list on the right.
+The sorting panel appears. Select the source you wish to access from the scroll menu and select the dataflow from the list on the right. You can also select the secondary control to bring up more options available for your selected dataflow.
 
 ![sort-dataflows](../../images/tutorials/monitor/dataflows-sort.png)
 
