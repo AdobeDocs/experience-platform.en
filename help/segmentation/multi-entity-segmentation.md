@@ -14,10 +14,10 @@ Multi-entity segmentation is an advanced feature available as part of Adobe Expe
 
 Multi-entity segmentation requires a working understanding of the various Adobe Experience Platform services involved in segmentation. Before continuing with this guide, please review the following documentation:
 
-* [!DNL Real-time Customer Profile](../profile/home.md): Provides a unified consumer profile in real-time, based on aggregated data from multiple sources.
+* [[!DNL Real-time Customer Profile]](../profile/home.md): Provides a unified consumer profile in real-time, based on aggregated data from multiple sources.
   * [Profile guardrails](../profile/guardrails.md): Best practices for creating data models supported by [!DNL Profile].
-* [!DNL Adobe Experience Platform Segmentation Service](./home.md): Allows you to build segments from [!DNL Real-time Customer Profile] data.
-* [!DNL Experience Data Model (XDM)](../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Allows you to build segments from [!DNL Real-time Customer Profile] data.
+* [[!DNL Experience Data Model (XDM)]](../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Basics of schema composition](../xdm/schema/composition.md#union): Learn best practices for composing schemas to be used in Experience Platform.
 
 ## Use cases
