@@ -14,8 +14,6 @@ description: The text classification service, when given a text fragment, can cl
 
 The text classification service, when given a text fragment, can classify it into one or more labels. The classification can be single-label, multi-label, or hierarchical.
 
-Text classification uses a [FastText](https://fasttext.cc/) based model that has been trained using custom data.
-
 **API format**
 
 ```http
