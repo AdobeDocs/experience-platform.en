@@ -110,27 +110,36 @@ The following table outlines some common entity relationships and the categories
 
 ### Pros and cons of different entity classes
 
-While the previous section provided some general guidelines for deciding how to categorize your entities, it is important to understand that there can often be pros and cons for choosing one entity category over the other. The following case study is intended to illustrate how you might consider your options in these situations.
+While the previous section provided some general guidelines for deciding how to categorize your entities, it is important to understand that there can often be pros and cons for choosing one entity category over the other. The following case study is intended to illustrate how you might consider your options in these situations:
 
-A company tracks subscriptions for their customers, where one customer can have many subscriptions. The company also wants to include subscriptions for segmentation use cases, such as finding "all users with active subscriptions".
+A company tracks active subscriptions for their customers, where one customer can have many subscriptions. The company also wants to include subscriptions for segmentation use cases, such as finding "all users with active subscriptions".
 
-#### Approach 1: Use profile attributes
+In this scenario, the company has two potential options for representing a customer's subscriptions in their data model:
+
+1. [Use profile attributes](#profile-approach)
+1. [Use event entities](#event-approach)
+
+#### Approach 1: Use profile attributes {#profile-approach}
 
 The first approach would be to include an array of subscriptions as attributes within the profile entity for Customers. Objects in this array would contain fields for `category`, `status`, `planName`, `startDate`, and `endDate`.
 
+![](../images/best-practices/profile-schema.png)
+
 **Pros**
 
-* Segmentation is feasible for the intended use case
-* It will only preserve the latest records for a user
+* Segmentation is feasible for the intended use case.
+* The schema will only preserve the latest subscription records for a customer.
 
 **Cons**
 
-* Entire array has to be restated every time changes occur to any field in the array.
-* If different BU’s/source are feeding the array this will prove as a challenge as customers have tomaintain a sync and send latest updated array across all BU’s and sources.
+* The entire array must be restated every time changes occur to any field in the array.
+* If different BUs and sources are feeding data into the array, it will become challenging to keep the latest updated array synced across all BUs and sources.
 
-#### Approach 2: Use event entities
+#### Approach 2: Use event entities {#event-approach}
 
 The second approach would be to use event schemas to represent subscriptions. This entails ingesting the same subscription fields as the first approach, with addition of a subscription ID, a customer ID, and a timestamp of when the subscription event occurred.
+
+![](../images/best-practices/event-schema.png)
 
 **Pros**
 
