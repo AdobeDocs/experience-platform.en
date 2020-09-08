@@ -37,7 +37,7 @@ The sorting panel allows you to access accounts from a specific source. Select t
 
 >[!TIP]
 >
-> Use the ![spectrum-control](../../images/tutorials/monitor/spectrum-control.png) button in the **[!UICONTROL Name]** column to create a new source connection for the selected account
+> Use the ![spectrum-control](../../images/tutorials/monitor/spectrum-control.png) button in the **[!UICONTROL Name]** column to create a new source dataflow for the selected account.
 
 ![accounts-select](../../images/tutorials/monitor/accounts-sort.png)
 
@@ -46,7 +46,7 @@ From the **[!UICONTROL Accounts]** page, you can view a list of existing dataflo
 | Control | Description |
 | ------- | ----------- |
 | [!UICONTROL Edit Schedule] | Allows you to edit the ingestion schedule of the dataflow. |
-| [!UICONTROL Disable dataflow] | Allows you to disable the selected dataflow. |
+| [!UICONTROL Disable dataflow] | Allows you to disable data ingestion for the selected dataflow. |
 | [!UICONTROL Delete] | Allows you to delete the selected dataflow. |
 
 ![dataflows](../../images/tutorials/monitor/dataflows.png)
@@ -85,11 +85,10 @@ The **[!UICONTROL Dataflow run overview]** displays information on the dataflow 
 
 Refer to the following table for error codes that can be seen in the **[!UICONTROL Error summary]**.
 
-| Error code | Error Message |
+| Error | Description |
 | ---------- | ----------- |
-| `CONNECTOR-1001-500` | "A problem occurred with the copy activity." |
-| `CONNECTOR-2001-500` | "There was a problem copying from the Experience Platform source to the dataset." |
-| `CONNECTOR-3001-500` | "A problem occurred with the flow provider while creating batch using bulk ingest API." |
+| `CONNECTOR-1001-500` | An error occurred while data is being copied from a source. |
+| `CONNECTOR-2001-500` | An error occurred while copied data is being processed to [!DNL Platform]. This error could be regarding parsing, validating, or transforming. |
 
 The lower half of the screen contains information on **[!UICONTROL Dataflow run errors]**. From here, you can also view the files ingested, preview and download error diagnostics, or download the file manifest.
 
