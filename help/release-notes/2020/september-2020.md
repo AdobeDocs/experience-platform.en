@@ -36,7 +36,7 @@ In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), destinatio
 
 | Feature | Description |
 | ------- | ----------- |
-| UX improvements | Users can access inline table actions for easier access to primary actions such as add data, edit scheduling, and add segments. See the [destinations workspace](../../rtcdp/destinations/destinations-workspace.md) document for more information. |
+| UX improvements | Users can access inline table actions for easier access to primary actions such as such as adding data, editing scheduling, and adding segments. See the [destinations workspace](../../rtcdp/destinations/destinations-workspace.md) document for more information. |
 
 To learn more, visit the [destinations overview](../../rtcdp/destinations/destinations-overview.md)
 
@@ -50,7 +50,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 | Feature | Description |
 | ------- | ----------- |
-| Auto mapping | [!DNL Platform] provides intelligent recommendations for auto mapping during the data ingestion workflow, based on a user-selected target schema or dataset. You maintain the flexibility to manually adjust auto-mapped rules. |
+| Auto mapping | [!DNL Platform] provides intelligent recommendations for auto mapping during the data ingestion workflow, based on a user-selected target schema or dataset. You can manually adjust flexible auto-mapping rules to suit your use cases. |
 | UX improvements | Users can access inline table actions for easier access to primary actions such as adding data, editing scheduling, and adding segments. See the [monitoring dataflows](../../sources/tutorials/ui/monitor.md) document for more information. |
 
 To learn more about sources, see the [sources overview](../../sources/home.md).
