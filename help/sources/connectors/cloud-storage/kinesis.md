@@ -48,15 +48,17 @@ The following IP addresses must be added to an allow list prior to working with 
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
+## Connect [!DNL Amazon Kinesis] to [!DNL Platform]
+
 The documentation below provides information on how to connect [!DNL Amazon Kinesis] to [!DNL Platform] using APIs or the user interface:
 
-## Connect [!DNL Amazon Kinesis] to [!DNL Platform] using APIs
+### Using APIs
 
 - [Create a Amazon Kinesis connector using the Flow Service API](../../tutorials/api/create/cloud-storage/kinesis.md)
 - [Explore a cloud storage system using the Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Collect cloud storage data using the Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
-## Connect [!DNL Amazon Kinesis] to [!DNL Platform] using the UI
+### Using the UI
 
 - [Create a Amazon Kinesis source connector in the UI](../../tutorials/ui/create/cloud-storage/kinesis.md)
 - [Configure a dataflow for a cloud storage connector in the UI](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
