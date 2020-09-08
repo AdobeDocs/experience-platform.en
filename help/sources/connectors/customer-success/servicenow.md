@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;servicenow;ServiceNow
 solution: Experience Platform
 title: ServiceNow connector
 topic: overview
+description: The documentation below provides information on how to connect ServiceNow to Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL ServiceNow] connector

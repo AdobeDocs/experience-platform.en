@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Analytics Data Connector;analytics;Analytics
 solution: Experience Platform
 title: Analytics data connector
 topic: overview
+description: This document provides an overview of Analytics and describes the use-cases for Analytics data.
 ---
 
 # Analytics Data Connector

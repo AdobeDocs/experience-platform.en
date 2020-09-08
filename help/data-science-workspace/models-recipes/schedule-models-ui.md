@@ -10,7 +10,7 @@ description: Adobe Experience Platform Data Science Workspace allows you to set 
 
 Adobe Experience Platform [!DNL Data Science Workspace] allows you to set up scheduled scoring and training runs on a machine learning Service. Automating the training and scoring process can help maintain and improve a Service's efficiency through time by keeping up with patterns within your data.
 
-This tutorial walks through the steps to configure training and scoring schedules on an existing Service through the *[!UICONTROL Service Gallery]*. It is broken into the following main sections:
+This tutorial walks through the steps to configure training and scoring schedules on an existing Service through the **[!UICONTROL Service Gallery]**. It is broken into the following main sections:
 
 -   [Configure scheduled scoring](#configure-scheduled-scoring)
 -   [Configure scheduled training](#configure-scheduled-training)
@@ -44,7 +44,7 @@ Configuring scheduled training runs on a Service ensures that the machine learni
 
 Once a Service is created, you can follow the steps below to configure and apply a training schedule:
 
-1.  In Adobe Experience Platform, click the **[!UICONTROL Services]** tab located in the left navigation column to access the *[!UICONTROL Service Gallery]*. Find the Service you wish to schedule training runs on and click **[!UICONTROL Open]** to view its *Overview* page.
+1.  In Adobe Experience Platform, click the **[!UICONTROL Services]** tab located in the left navigation column to access the **[!UICONTROL Service Gallery]**. Find the Service you wish to schedule training runs on and click **[!UICONTROL Open]** to view its *Overview* page.
 ![](../images/models-recipes/schedule/click_to_open.png)
 
 2.  The Overview page displays the Service's training information. Click the **[!UICONTROL Update Schedule]** link to configure a training schedule.

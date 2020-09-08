@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;redshift;Redshift;Amazon Redshift;amazon redshift
 solution: Experience Platform
 title: Create an Amazon Redshift connector using the Flow Service API
 topic: overview
+description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to Amazon Redshift (hereinafter referred to as "Redshift").
 ---
 
 # Create an [!DNL Amazon Redshift] connector using the [!DNL Flow Service] API

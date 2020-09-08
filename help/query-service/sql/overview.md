@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;sql;sql reference;
 solution: Experience Platform
 title: SQL reference
 topic: reference
