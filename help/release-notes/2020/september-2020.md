@@ -11,3 +11,17 @@ author: crhoades, ens28527
 **Release date: September 9, 2020**
 
 Updates to existing features in Adobe Experience Platform:
+
+* [[!DNL Observability Insights]](#observability)
+
+## [!DNL Observability Insights] {#observability}
+
+[!DNL Observability Insights] allows you to monitor activities on Adobe Experience Platform through the use of statistical metrics and event notifications.
+
+**New Features**
+
+| Feature | Description |
+| --- | --- |
+| Adobe I/O Event notifications | [!DNL Observability Insights] leverages Adobe I/O Events to create event notifications for several Experience Platform services. Notification payloads are sent to a configured webhook which you can then use to automate further downstream processes. See the [notifications overview](../../observability/notifications/overview.md) for more information. |
+
+See the [[!DNL Observability Insights] overview](../../observability/home.md) for more information on the service.
