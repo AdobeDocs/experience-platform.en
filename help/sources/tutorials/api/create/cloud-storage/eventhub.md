@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;event hub;Azure event hub;Event hub
 solution: Experience Platform
 title: Create an Azure Event Hubs connector using the Flow Service API
 topic: overview
+description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to an Azure Event Hubs account.
 ---
 
 # Create an [!DNL Azure Event Hubs] connector using the [!DNL Flow Service] API

@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
 solution: Experience Platform
 title: Microsoft Dynamics connector
 topic: overview
+description: The documentation below provides information on how to connect Microsoft Dynamics to Platform using APIs or the user interface.
 ---
 
 # Microsoft Dynamics connector

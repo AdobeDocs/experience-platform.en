@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;sandbox overview
 solution: Experience Platform
 title: Sandbox UI overview
 topic: user guide
+description: Adobe Experience Platform provides virtual sandboxes that partition a single Platform instance into separate, isolated  virtual environments. The Sandbox user interface can be found within the Experience Platform UI.
 ---
 
 # Sandbox UI overview

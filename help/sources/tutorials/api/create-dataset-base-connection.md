@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;dataset connection flow service;flow service;Flow service connection
 solution: Experience Platform
 title: Create an Experience Platform dataset base connection using the Flow Service API
 topic: overview
+description: Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 ---
 
 # Create an [!DNL Experience Platform] dataset base connection using the [!DNL Flow Service] API

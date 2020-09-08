@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; payment; paypal
+keywords: Experience Platform;home;popular topics;Collect payment data;payment data
 solution: Experience Platform
 title: Collect payment data through source connectors and APIs
 topic: overview
-description: This tutorial covers the steps for retrieving data from a third-party payment application and ingesting it into Platform through source connectors and the Flow Service API.
+description: This tutorial covers the steps for retrieving data from a payments application and ingesting it into Platform through source connectors and APIs.
 ---
 
 # Collect payment data through source connectors and APIs

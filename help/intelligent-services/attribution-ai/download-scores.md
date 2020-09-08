@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;attribution ai;access scores;popular topics;download scores;attribution ai scores
+keywords: Experience Platform;attribution ai;access scores;popular topics;download scores;attribution ai scores;export;Export
 solution: Experience Platform
 title: Accessing scores in Attribution AI
 topic: Accessing scores

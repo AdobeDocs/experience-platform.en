@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;marketing automation
 solution: Experience Platform
 title: Explore a marketing automation system using the Flow Service API
 topic: overview
+description: This tutorial uses the Flow Service API to explore marketing automation systems.
 ---
 
 # Explore a marketing automation system using the [!DNL Flow Service] API
