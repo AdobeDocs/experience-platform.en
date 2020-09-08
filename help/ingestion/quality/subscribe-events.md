@@ -61,6 +61,8 @@ The following JSON is an example of a notification payload that would be sent to
 | `event.xdm:datasetId` | The ID of the dataset to which the ingestion event applies. |
 | `event.xdm:eventCode` | A status code indicating the type of event that was triggered for the dataset. See the [appendix](#event-codes) for specific values and their definitions. |
 
+To view the full schema for event notifications, refer to the [public GitHub repository](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json).
+
 ## Next steps
 
 Once you have registered [!DNL Platform] notifications to your project, you can view received events from the [!UICONTROL Project overview]. Refer to the guide on [tracing Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) for detailed instructions on how to trace your events.
