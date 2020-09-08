@@ -139,7 +139,7 @@ The first approach would be to include an array of subscriptions as attributes w
 
 The second approach would be to use event schemas to represent subscriptions. This entails ingesting the same subscription fields as the first approach, with addition of a subscription ID, a customer ID, and a timestamp of when the subscription event occurred.
 
-![](../images/best-practices/event-schema.png)
+<img src="../images/best-practices/event-schema.png" width=800>
 
 **Pros**
 
@@ -154,7 +154,7 @@ The second approach would be to use event schemas to represent subscriptions. Th
 
 Once you have sorted your entities into profile, lookup, and event categories, you can start converting your data model into XDM schemas. For demonstration purposes, the example data model shown earlier has been sorted into appropriate categories in the following diagram:
 
-![](../images/best-practices/erd-sorted.png)
+<img src="../images/best-practices/erd-sorted.png" width=800>
 
 The category that an entity has been sorted under should determine the XDM class you base its schema on. To reiterate:
 
