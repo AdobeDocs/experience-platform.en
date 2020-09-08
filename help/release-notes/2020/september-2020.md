@@ -50,7 +50,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 | Feature | Description |
 | ------- | ----------- |
-| Auto mapping | [!DNL Platform] provides intelligent recommendation for auto mapping during the data ingestion workflow based on user-selected target schema or dataset. |
+| Auto mapping | [!DNL Platform] provides intelligent recommendation for auto mapping during the data ingestion workflow based on user-selected target schema or dataset. Users maintain the flexibility to manually adjust auto-mapped rules. |
 | UX improvements | Users can access inline table actions for easier access to primary actions such as add data, edit scheduling, and add segments. See the [monitoring dataflows](../../sources/tutorials/ui/monitor.md) document for more information. |
 
 To learn more about sources, see the [sources overview](../../sources/home.md).
