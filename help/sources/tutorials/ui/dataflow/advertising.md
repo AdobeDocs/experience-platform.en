@@ -73,7 +73,7 @@ Based on your needs, you can choose to map fields directly, or use mapper functi
 >
 >[!DNL Platform] provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust flexible auto-mapping rules to suit your use cases.
 
-Once your source data is mapped, click **[!UICONTROL Next]**.
+Once your source data is mapped, select **[!UICONTROL Next]**.
 
 ![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
 
