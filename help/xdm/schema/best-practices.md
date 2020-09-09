@@ -10,7 +10,7 @@ description: This document provides an introduction to Experience Data Model (XD
 
 [!DNL Experience Data Model] (XDM) is the core framework that standardizes customer experience data by providing common structures and definitions for use in downstream Adobe Experience Platform services. By adhering to XDM standards, all customer experience data can be incorporated into a common representation that allows you to gain valuable insights from customer actions, define customer audiences through segments, and express customer attributes for personalization purposes.
 
-Due to the fact that XDM is extremely versatile and customizable by design, it is therefore important to follow best practices for data modeling when designing your schemas. This document covers the key decisions and considerations you must make when mapping your customer experience data to XDM.
+Since XDM is extremely versatile and customizable by design, it is therefore important to follow best practices for data modeling when designing your schemas. This document covers the key decisions and considerations you must make when mapping your customer experience data to XDM.
 
 ## Getting started
 
@@ -23,12 +23,12 @@ This guide focuses exclusively on key considerations regarding schema design. It
 The recommended approach for designing your data model for use in Experience Platform can be summarized as follows:
 
 1. Understand the business use cases for your data.
-1. Identify the primary data sources that should be brought into Platform to address those use cases.
-1. Identify any secondary data sources that could also be of interest. For example, if currently only one business unit in your organization is interested in porting their data to Platform, a similar business unit might also be interested in porting similar data in the future. Considering these secondary sources helps standardize the data model across your entire organization.
+1. Identify the primary data sources that should be brought into [!DNL Platform] to address those use cases.
+1. Identify any secondary data sources that could also be of interest. For example, if currently only one business unit in your organization is interested in porting their data to [!DNL Platform], a similar business unit might also be interested in porting similar data in the future. Considering these secondary sources helps standardize the data model across your entire organization.
 1. Create a high-level entity relationship diagram (ERD) for the data sources that have been identified.
-1. Convert the high-level ERD into a Platform-centric ERD (including profiles, Experience Events, and lookup entities).
+1. Convert the high-level ERD into a [!DNL Platform]-centric ERD (including profiles, Experience Events, and lookup entities).
 
-The steps related to identifying the applicable data sources required to carry out your business use cases will vary from organization to organization. While the remainder of sections throughout this document focus on the latter steps of organizing and constructing an ERD after the data sources have been identified, the explanations of the diagram's various components may inform your decisions as to which of your data sources should be migrated to Platform.
+The steps related to identifying the applicable data sources required to carry out your business use cases will vary from organization to organization. While the remainder of sections throughout this document focus on the latter steps of organizing and constructing an ERD after the data sources have been identified, the explanations of the diagram's various components may inform your decisions as to which of your data sources should be migrated to [!DNL Platform].
 
 ## Create a high-level ERD
 
@@ -77,14 +77,14 @@ When categorizing your entities, it is important to think about the audience seg
 
 For example, a company wants to know all of the "Gold" or "Platinum" members of their loyalty program that have made more than five purchases in the last year. Based on this segment logic, the following conclusions can be made regarding how relevant entities should be represented:
 
-* "Gold" and "Platinum" represent loyalty statuses applicable to an individual customer. Since the segment logic is only concerned with the current loyalty status of customers, this data can be modeled as a profile schema. If you wished to track changes in loyalty status over time, you could also create an additional event schema for loyalty status changes.
+* "Gold" and "Platinum" represent loyalty statuses applicable to an individual customer. Since the segment logic is only concerned with the current loyalty status of customers, this data can be modeled as part of a profile schema. If you wished to track changes in loyalty status over time, you could also create an additional event schema for loyalty status changes.
 * Purchases are events which occur at a particular time, and the segment logic is concerned with purchase events within a specified time window. This data should therefore be modeled as an event schema.
 
 #### Activation use cases
 
 In addition to considerations regarding segmentation use cases, you should also review the activation use cases for those segments in order to identify additional relevant attributes.
 
-For example, a company has built an audience segment based on the rule that `country = US`. Then, when activating that segment to certain downstream targets, the company wants to filter all exported profiles based on home state. Therefore, a `state` attribute should be captured in the applicable profile entity.
+For example, a company has built an audience segment based on the rule that `country = US`. Then, when activating that segment to certain downstream targets, the company wants to filter all exported profiles based on home state. Therefore, a `state` attribute should also be captured in the applicable profile entity.
 
 #### Aggregated values
 
@@ -98,7 +98,9 @@ Experience Platform does not currently perform automatic value aggregation, alth
 
 The cardinalities established in your ERD can also provide some clues as to how to categorize your entities. If there is a one-to-many relationship between two entities, the entity that represents the "many" will likely be an event entity. However, there are also cases where the "many" is a set of lookup entities that are provided as an array within a profile entity.
 
-Since there is no universal approach to fit all use cases, it is important to consider the pros and cons of each situation when categorizing entities based on cardinality.
+>[!NOTE]
+>
+>Since there is no universal approach to fit all use cases, it is important to consider the pros and cons of each situation when categorizing entities based on cardinality. See the [next section](#pros-and-cons) for more information.
 
 The following table outlines some common entity relationships and the categories that can be derived from them:
 
@@ -108,11 +110,11 @@ The following table outlines some common entity relationships and the categories
 | Customers and Loyalty Accounts | One to one | A single customer can only have one loyalty account, and vice versa. Since the relationship is one-to-one, both Customers and Loyalty Accounts represent profile entities. |
 | Customers and Subscriptions | One to many | A single customer may have many subscriptions. Since the company is only concerned with a customer's current subscriptions, Customers is a profile entity, while Subscriptions is a lookup entity. |
 
-### Pros and cons of different entity classes
+### Pros and cons of different entity classes {#pros-and-cons}
 
-While the previous section provided some general guidelines for deciding how to categorize your entities, it is important to understand that there can often be pros and cons for choosing one entity category over the other. The following case study is intended to illustrate how you might consider your options in these situations:
+While the previous section provided some general guidelines for deciding how to categorize your entities, it is important to understand that there can often be pros and cons for choosing one entity category over another. The following case study is intended to illustrate how you might consider your options in these situations.
 
-A company tracks active subscriptions for their customers, where one customer can have many subscriptions. The company also wants to include subscriptions for segmentation use cases, such as finding "all users with active subscriptions".
+A company tracks active subscriptions for their customers, where one customer can have many subscriptions. The company also wants to include subscriptions for segmentation use cases, such as finding all users with active subscriptions.
 
 In this scenario, the company has two potential options for representing a customer's subscriptions in their data model:
 
@@ -133,28 +135,28 @@ The first approach would be to include an array of subscriptions as attributes w
 **Cons**
 
 * The entire array must be restated every time changes occur to any field in the array.
-* If different BUs and sources are feeding data into the array, it will become challenging to keep the latest updated array synced across all BUs and sources.
+* If different data sources or business units are feeding data into the array, it will become challenging to keep the latest updated array synced across all channels.
 
 #### Approach 2: Use event entities {#event-approach}
 
 The second approach would be to use event schemas to represent subscriptions. This entails ingesting the same subscription fields as the first approach, with addition of a subscription ID, a customer ID, and a timestamp of when the subscription event occurred.
 
-<img src="../images/best-practices/event-schema.png" width=800>
+<img src="../images/best-practices/event-schema.png" width=800><br>
 
 **Pros**
 
-* Segmentation is overall flexible (e.g. those who changed their state in the last x days and then did y event).
-* It didn’t require us to update the Array all at once (which is problematic if you have 30 different product/newsletter combinations sending in events at different times).
+* Segmentation rules can be more flexible (such as finding all customers those who changed their subscriptions in the last 30 days).
+* When a customer's subscription status changes, you no longer have to update a long, potentially complex array within the customer's profile attributes. This is especially useful if simultaneous changes to the customer's subscription list are occurring from multiple sources.
 
 **Cons**
 
-* Segmentation is a little complex for the intended use case ( we needed to be able to identifywhat the current subscription status is (i.e. the most recent event), for each user persubscription) . The segment needs to flag last event of a subscription of a user and check thestatus on it.
+* Segmentation becomes more complex for the original intended use case (identifying the status of customers' most recent subscriptions). The segment now needs additional logic to flag the last subscription event for a customer in order to check its status.
 
 ## Create schemas based on your categorized entities
 
 Once you have sorted your entities into profile, lookup, and event categories, you can start converting your data model into XDM schemas. For demonstration purposes, the example data model shown earlier has been sorted into appropriate categories in the following diagram:
 
-<img src="../images/best-practices/erd-sorted.png" width=800>
+<img src="../images/best-practices/erd-sorted.png" width=800><br>
 
 The category that an entity has been sorted under should determine the XDM class you base its schema on. To reiterate:
 
@@ -164,9 +166,11 @@ The category that an entity has been sorted under should determine the XDM class
 
 >[!NOTE]
 >
->While event entities will almost always be represented by separate schemas, entities in the profile or lookup categories may be combined together in a single XDM schema, depending on their cardinality. For example, since the Customers entity has a one-to-one relationship with the LoyaltyAccounts entity, the schema for the Customers entity could also include a `LoyaltyAccount` object to contains the appropriate loyalty fields for each customer. If the relationship is one to many, however, the entity that represents the "many" should be represented by a separate schema.
+>While event entities will almost always be represented by separate schemas, entities in the profile or lookup categories may be combined together in a single XDM schema, depending on their cardinality.
+>
+>For example, since the Customers entity has a one-to-one relationship with the LoyaltyAccounts entity, the schema for the Customers entity could also include a `LoyaltyAccount` object to contains the appropriate loyalty fields for each customer. If the relationship is one to many, however, the entity that represents the "many" could be represented by a separate schema or an array of profile attributes, depending on its complexity.
 
-See the tutorial on [creating a schema in the UI](../tutorials/create-schema-ui.md) for step-by-step instructions on how to create a schema, assign the appropriate class for the entity, and add fields to map your data to.
+The sections below provide general guidance on constructing schemas based on your ERD.
 
 ### Adopt an iterative modeling approach
 
@@ -174,9 +178,40 @@ The rules of schema evolution dictate that only non-destructive changes can be m
 
 If you are not sure whether a particular field is necessary to include in a schema, the best practice is to leave it out. If it is later determined that the field is necessary, it can always be added in the next iteration of the schema.
 
+### Identity fields
+
+In Experience Platform, XDM fields marked as identities are used to stitch together information about individual customers coming from multiple data sources. Although a schema can have multiple fields marked as identities, a single primary identity must be defined in order for the schema to be enabled for use in [!DNL Real-time Customer Profile]. See the section on [identity fields](./composition.md#identity) in the basics of schema composition for more detailed information on the use case of these fields.
+
+When designing your schemas, any primary keys in your relational database tables will be likely candidates for primary identities. Other examples of applicable identity fields are customer email addresses, phone numbers, account IDs, and [ECID](../../identity-service/ecid.md).
+
+### Adobe application mixins
+
+Experience Platform provides several out-of-the-box XDM mixins for capturing data related to the following Adobe applications:
+
+* Adobe Analytics
+* Adobe Audience Manager
+* Adobe Campaign
+* Adobe Target
+
+For example, the [[!UICONTROL Adobe Analytics ExperienceEvent Template Mixin]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) allows you to map [!DNL Analytics]-specific fields to your XDM schemas. Depending on the Adobe applications you are working with, you should be using these Adobe-provided mixins in your schemas.
+
+<img src="../images/best-practices/analytics-mixin.png" width=700><br>
+
+Adobe application mixins automatically assign a default primary identity through the use of the `identityMap` field, which is a system-generated, read-only object that maps standard identity values for an individual customer.
+
+For Adobe Analytics, ECID is the default primary identity. If an ECID value is not provided by a customer, the primary identity will instead default to AAID.
+
+>[!IMPORTANT]
+>
+>When using Adobe application mixins, no other fields should be marked as the primary identity. If there are additional properties that need to be marked as identities, these fields need to be assigned as secondary identities instead.
+
 ## Next steps
 
 This document covered the general guidelines and best practices for designing your data model for Experience Platform. To summarize:
 
-* There are always multiple approaches and options for schema design.
+* Use a top-down approach by sorting your data tables into profile, lookup, and event categories before constructing your schemas.
+* There are often multiple approaches and options when it comes to designing schemas for different purposes.
 * Your data model should support segmentation use cases.
+* Make your schemas as simple as possible, and only add new fields when absolutely necessary.
+
+Once you are ready, see the tutorial on [creating a schema in the UI](../tutorials/create-schema-ui.md) for step-by-step instructions on how to create a schema, assign the appropriate class for the entity, and add fields to map your data to.
