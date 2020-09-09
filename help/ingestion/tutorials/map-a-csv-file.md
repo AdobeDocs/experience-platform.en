@@ -54,6 +54,10 @@ The **[!UICONTROL Sample data]** section appears once the file is uploaded, show
 
 The **[!UICONTROL Mapping]** step appears. The columns of the CSV file are listed under **[!UICONTROL Source Field]**, with their corresponding XDM schema fields listed under **[!UICONTROL Target Field]**. Unselected target fields are outlined in red. You can use the filter fields option to narrow down the list of source fields available.
 
+>[!TIP]
+>
+>[!DNL Platform] provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust flexible auto-mapping rules to suit your use cases.
+
 To map a CSV column to an XDM field, select the schema icon next to the column's corresponding target field.
 
 ![](../images/tutorials/map-a-csv-file/mapping.png)
@@ -62,17 +66,9 @@ The **[!UICONTROL Select schema field]** window appears. Here you can navigate t
 
 ![](../images/tutorials/map-a-csv-file/select-schema-field.png)
 
-The **[!UICONTROL Mapping]** screen reappears, with the selected XDM field now appearing under **[!UICONTROL Target Field]**.
+After you complete the steps for the remaining unmapped source fields, the **[!UICONTROL Mapping]** screen reappears with the selected XDM field now appearing under **[!UICONTROL Target Field]**.
 
 ![](../images/tutorials/map-a-csv-file/field-mapped.png)
-
-If you do not wish to map a particular CSV column, you can remove the mapping by clicking the **remove icon** next to the target field. You can also remove all mappings by selecting the **[!UICONTROL Clear all mappings button]**.
-
-![](../images/tutorials/map-a-csv-file/remove-mapping.png)
-
-If you want to add a new mapping, select **[!UICONTROL Add new mapping]** at the top of the **[!UICONTROL Source Field]** list.
-
-![](../images/tutorials/map-a-csv-file/add-mapping.png)
 
 When mapping fields, you can also include functions to compute values based on input source fields. See the [mapping functions](#mapping-functions) section in the appendix for more information.
 
@@ -82,7 +78,7 @@ Calculated fields allow for values to be created based on the attributes in the 
 
 Select the **[!UICONTROL Add calculated field]** button to proceed.
 
-![](../images/tutorials/map-a-csv-file/add-calculated-field.png)
+![](../images/tutorials/map-a-csv-file/add-calculate-field.png)
 
 The **[!UICONTROL Create calculated field]** panel appears. The left dialog box contains the fields, functions, and operators supported in calculated fields. Select one of the tabs to start adding functions, fields, or operators to the expression editor.
 
