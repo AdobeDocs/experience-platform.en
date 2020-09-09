@@ -12,8 +12,21 @@ author: crhoades, ens25212
 
 Updates to existing features in Adobe Experience Platform:
 
+- [[!DNL Data Governance]](#governance)
 - [[!DNL Real-time Customer Profile]](#profile)
 - [[!DNL Segmentation Service]](#segmentation)
+
+## [!DNL Data Governance] {#governance}
+
+Adobe Experience Platform Data Governance is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
+
+**New features**
+
+| Feature | Description | 
+| ------- | ----------- |
+| Dataset labeling UI enhancements | Several new sorting and filtering controls have been added to the dataset labeling UI in order to make working with large schemas easier: <ul><li>Sort fields by alphabetic order based on the full schema path.</li><li>Perform partial searches on field path names.</li><li>Filter fields with no labels, a selected label, or a label category.</li></ul> |
+
+See the [Data Governance overview](../../data-governance/home.md) for more information on the service.
 
 ## Real-time Customer Profile {#profile}
 
@@ -24,6 +37,8 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 | Feature | Description |
 | ------- | ----------- |
 | Profile viewer | The profile viewer, in the Platform UI, has been updated to be a dashboard with full customization. The user now has the option to do the following tasks: <ul><li>Update the selected standard and customized attributes in the basic information widget.</li><li>Create, edit, and remove custom widgets</li><li>Resize and rearrange widgets</li></ul>|
+
+For more information on [!DNL Real-time Customer Profile], including tutorials and best practices for working with [!DNL Profile] data, please read the [Real-time Customer Profile overview](../../profile/home.md).
 
 ## Segmentation Service {#segmentation}
 
@@ -37,3 +52,5 @@ Adobe Experience Platform Segmentation Service provides a user interface and RES
 | ------- | ----------- |
 | Export jobs | A flag was added to allow segments to be evaluated as part of an export job. As a result, users can run both segmentation and exports in a single job. |
 | Merge policies | Multiple merge policies can be included in a single batch segmentation job. |
+
+For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md)
