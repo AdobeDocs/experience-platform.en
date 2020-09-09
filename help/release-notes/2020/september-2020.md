@@ -13,8 +13,10 @@ author: crhoades, ens25212
 Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Data Governance]](#governance)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Real-time Customer Profile]](#profile)
 - [[!DNL Segmentation Service]](#segmentation)
+- [[!DNL Sources]](#sources)
 
 ## [!DNL Data Governance] {#governance}
 
@@ -28,11 +30,21 @@ Adobe Experience Platform Data Governance is a series of strategies and technolo
 
 See the [Data Governance overview](../../data-governance/home.md) for more information on the service.
 
+## Destinations {#destinations}
+
+In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
+
+**New features**
+
+| Feature | Description |
+| ------- | ----------- |
+| UX improvements | Users can access inline table actions for easier access to primary actions such as such as adding data, editing scheduling, and adding segments. See the [destinations workspace](../../rtcdp/destinations/destinations-workspace.md) document for more information. |
+
+To learn more, visit the [destinations overview](../../rtcdp/destinations/destinations-overview.md)
+
 ## Real-time Customer Profile {#profile}
 
 Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
-
-**New features**
 
 | Feature | Description |
 | ------- | ----------- |
@@ -54,3 +66,18 @@ Adobe Experience Platform Segmentation Service provides a user interface and RES
 | Merge policies | Multiple merge policies can be included in a single batch segmentation job. |
 
 For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md)
+
+## Sources {#sources}
+
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third party software, and your CRM system.
+
+[!DNL Experience Platform] provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
+
+**New features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Auto mapping | [!DNL Platform] provides intelligent recommendations for auto mapping during the data ingestion workflow, based on a user-selected target schema or dataset. You can manually adjust flexible auto-mapping rules to suit your use cases. |
+| UX improvements | Users can access inline table actions for easier access to primary actions such as adding data, editing scheduling, and adding segments. See the [monitoring dataflows](../../sources/tutorials/ui/monitor.md) document for more information. |
+
+To learn more about sources, see the [sources overview](../../sources/home.md).
