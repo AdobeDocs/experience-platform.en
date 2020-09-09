@@ -26,7 +26,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | Parameter | Description |
 | --- | --- |
-| `{REGULATION}` | The regulation type to query for. Accepted values are `gdpr`, `ccpa`, and `pdpa_tha`. |
+| `{REGULATION}` | The regulation type to query for. Accepted values are `gdpr`, `ccpa`, `lgpd_bra`, and `pdpa_tha`. |
 | `{PAGE}` | The page of data to be displayed, using 0-based numbering. The default is `0`. |
 | `{SIZE}` | The number of results to display on each page. The default is `1` and the maximum is `100`. Exceeding the maximum causes the API to return a 400-code error. |
 
@@ -146,7 +146,7 @@ curl -X POST \
 | `expandIDs` | An optional property that, when set to `true`, represents an optimization for processing the IDs in the applications (currently only supported by [!DNL Analytics]). If omitted, this value defaults to `false`. |
 | `priority` | An optional property used by Adobe Analytics that sets the priority for processing requests. Accepted values are `normal` and `low`. If `priority` is omitted, the default behavior is `normal`. |
 | `analyticsDeleteMethod` | An optional property that specifies how Adobe Analytics should handle the personal data. Two possible values are accepted for this attribute: <ul><li>`anonymize`: All data referenced by the given collection of user IDs is made anonymous. If `analyticsDeleteMethod` is omitted, this is the default behavior.</li><li>`purge`: All data is removed completely.</li></ul> |
-| `regulation` **(Required)** | The regulation for the request. Must be one of the following three values: <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
+| `regulation` **(Required)** | The regulation for the request. Must be one of the following four values: <ul><li>`gdpr`</li><li>`ccpa`</li><li>`lgpd_bra`</li><li>`pdpa_tha`</li></ul> |
 
 **Response**
 
@@ -279,7 +279,7 @@ curl -X POST \
 | `expandIDs` | An optional property that, when set to `true`, represents an optimization for processing the IDs in the applications (currently only supported by [!DNL Analytics]). If omitted, this value defaults to `false`. |
 | `priority` | An optional property used by Adobe Analytics that sets the priority for processing requests. Accepted values are `normal` and `low`. If `priority` is omitted, the default behavior is `normal`. |
 | `analyticsDeleteMethod` | An optional property that specifies how Adobe Analytics should handle the personal data. Two possible values are accepted for this attribute: <ul><li>`anonymize`: All data referenced by the given collection of user IDs is made anonymous. If `analyticsDeleteMethod` is omitted, this is the default behavior.</li><li>`purge`: All data is removed completely.</li></ul> |
-| `regulation` **(Required)** | The regulation for the request. Must be one of the following three values: <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
+| `regulation` **(Required)** | The regulation for the request. Must be one of the following four values: <ul><li>`gdpr`</li><li>`ccpa`</li><li>`lgpd_bra`</li><li>`pdpa_tha`</li></ul> |
 
 **Response**
 
@@ -442,14 +442,14 @@ The following table lists the different possible job status categories and their
 
 | Status category | Meaning |
 | -------------- | -------- |
-| Complete | Job is complete and (if required) files are uploaded from every application. |
-| Processing | Applications have acknowledged the job and are currently processing. |
-| Submitted | Job is submitted to every applicable application. |
-| Error | Something failed in the processing of the job - more specific information may be obtained by retrieving individual job details. |
+| `complete` | Job is complete and (if required) files are uploaded from every application. |
+| `processing` | Applications have acknowledged the job and are currently processing. |
+| `submitted` | Job is submitted to every applicable application. |
+| `error` | Something failed in the processing of the job - more specific information may be obtained by retrieving individual job details. |
 
 >[!NOTE]
 >
->A submitted job might remain in a processing state if it has a dependent child job that is still processing.
+>A submitted job might remain in a `processing` state if it has a dependent child job that is still processing.
 
 ## Next steps
 
