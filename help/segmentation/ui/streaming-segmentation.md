@@ -51,7 +51,7 @@ Additionally, some guidelines apply when doing streaming segmentation:
 | Single event query | The look-back window is limited to **seven days**. |
 | Query with event history | <ul><li>The look-back window is limited to **one day**.</li><li>A strict time ordering condition **must** exist between the events.</li><li>Only simple time orderings (before and after) between the events are allowed.</li><li>The individual events **cannot** be negated. However, the entire query **can** be negated.</li></ul>|
 
-If a segment definition is modified so it no longer eligible for streaming segmentation, the segment definition will automatically switch from "Streaming" to "Batch".
+If a segment definition is modified so it no longer meets the criteria for streaming segmentation, the segment definition will automatically switch from "Streaming" to "Batch".
 
 ## Streaming segmentation segment details
 
