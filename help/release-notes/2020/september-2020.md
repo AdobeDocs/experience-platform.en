@@ -14,6 +14,7 @@ Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Data Governance]](#governance)
 - [[!DNL Destinations]](#destinations)
+- [[!DNL Observability Insights]](#observability)
 - [[!DNL Privacy Service]](#privacy)
 - [[!DNL Real-time Customer Profile]](#profile)
 - [[!DNL Segmentation Service]](#segmentation)
@@ -43,6 +44,30 @@ In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), destinatio
 
 To learn more, visit the [destinations overview](../../rtcdp/destinations/destinations-overview.md)
 
+## [!DNL Observability Insights] {#observability}
+
+[!DNL Observability Insights] allows you to monitor activities on Adobe Experience Platform through the use of statistical metrics and event notifications.
+
+**New Features**
+
+| Feature | Description |
+| --- | --- |
+| Adobe I/O Event notifications | [!DNL Observability Insights] leverages Adobe I/O Events to create event notifications for several Experience Platform services. Notification payloads are sent to a configured webhook which you can then use to automate further downstream processes. See the [notifications overview](../../observability/notifications/overview.md) for more information. |
+
+See the [[!DNL Observability Insights] overview](../../observability/home.md) for more information on the service.
+
+## [!DNL Privacy Service] {#privacy}
+
+Several legal and organizational regulations give users the right to access or delete their personal data from your data stores upon request. Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help you manage these data requests from your customers. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
+
+**New features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Support for LGPD (Brazil) | Privacy jobs can now be created under Brazil's [!DNL Lei Geral de Proteção de Dados] (LGPD) regulation. These jobs are tracked under the regulation code `lgpd_bra`. |
+
+See the [Privacy Service overview](../../privacy-service/home.md) for more information on the service.
+
 ## Real-time Customer Profile {#profile}
 
 Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
@@ -67,18 +92,6 @@ Adobe Experience Platform Segmentation Service provides a user interface and RES
 | Merge policies | Multiple merge policies can be included in a single batch segmentation job. |
 
 For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md)
-
-## [!DNL Privacy Service] {#privacy}
-
-Several legal and organizational regulations give users the right to access or delete their personal data from your data stores upon request. Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help you manage these data requests from your customers. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
-
-**New features**
-
-| Feature | Description |
-| ------- | ----------- |
-| Support for LGPD (Brazil) | Privacy jobs can now be created under Brazil's [!DNL Lei Geral de Proteção de Dados] (LGPD) regulation. These jobs are tracked under the regulation code `lgpd_bra`. |
-
-See the [Privacy Service overview](../../privacy-service/home.md) for more information on the service.
 
 ## Sources {#sources}
 
