@@ -307,7 +307,7 @@ A custom [!DNL Data Science Workspace] magic command for reading or writing a da
 | --- | --- | --- |
 | `{action}` | The type of action to perform on the dataset. Two actions are available "read" or "write". | Yes |
 | `--datasetId {id}` | Used to supply the id of the dataset to read or write. | Yes |
-| `--dataFrame {df}` | The pandas dataframe. <ul> <li> When the action is "read", {df} is the variable where results of the dataset read operation are available. </li> <li> When the action is "write", this dataframe {df} is written to the dataset. </li> </ul> | Yes |
+| `--dataFrame {df}` | The pandas dataframe. <ul><li> When the action is "read", {df} is the variable where results of the dataset read operation are available. </li><li> When the action is "write", this dataframe {df} is written to the dataset. </li></ul> | Yes |
 | `--mode` | An additional parameter that changes how data is read. Allowed parameters are "batch", and "interactive". By default the mode is set to "interactive". It is recommended to use "batch" mode when reading large amounts of data. | No |
 
 >[!TIP]
