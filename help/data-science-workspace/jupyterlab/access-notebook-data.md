@@ -513,7 +513,7 @@ timedf.show()
 
 ## Next steps
 
-This document covered the general guidelines for accessing datasets using JupyterLab notebooks. For more in depth examples on querying datasets, visit the [query service in JupyterLab notebooks](./query-service.md) documentation. For more information on how to explore your datasets, visit the [analyze your data using notebooks](./analyze-your-data.md) document.
+This document covered the general guidelines for accessing datasets using JupyterLab notebooks. For more in depth examples on querying datasets, visit the [query service in JupyterLab notebooks](./query-service.md) documentation. For more information on how to explore your datasets, visit the document on [analyzing your data using notebooks](./analyze-your-data.md).
 
 ## Optional SQL flags for [!DNL Query Service] {#optional-sql-flags-for-query-service}
 
