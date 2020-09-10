@@ -187,7 +187,7 @@ A list of filtering operators are described below:
 - `And()`: Logical AND operator
 - `Or()`: Logical OR operator
 
-The following cells filter an [!DNL ExperienceEvent] dataset to data existing exclusively between January 1, 2019 and the end of December 31, 2019.
+The following cell filters an [!DNL ExperienceEvent] dataset to data existing exclusively between January 1, 2019 and the end of December 31, 2019.
 
 ```python
 # Python
@@ -258,7 +258,7 @@ A list of filtering operators are described below:
 - `And()`: Logical AND operator
 - `Or()`: Logical OR operator
 
-The following cells filter an [!DNL ExperienceEvent] dataset to data existing exclusively between January 1, 2019 and the end of December 31, 2019.
+The following cell filters an [!DNL ExperienceEvent] dataset to data existing exclusively between January 1, 2019 and the end of December 31, 2019.
 
 ```R
 # R
@@ -307,7 +307,7 @@ With the introduction of [!DNL Spark] 2.4, `%dataset` custom magic is supplied f
 
 **Description**
 
-A custom [!DNL Data Science Workspace] magic command for reading or writing a dataset from a [!DNL Python] notebook ([!DNL Python] 3 kernel).
+A custom [!DNL Data Science Workspace] magic command for reading or writing a dataset from a [!DNL PySpark] notebook ([!DNL Python] 3 kernel).
 
 | name | description | required |
 | --- | --- | --- |
