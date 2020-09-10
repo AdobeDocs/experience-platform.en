@@ -113,3 +113,7 @@ The following table outlines key terms related to [!DNL Data Governance] and the
 The following video is intended to support your understanding of the [!DNL Data Governance] framework.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
+
+The following video provides an introduction to various [!DNL Data Governance] features in Experience Platform.
+
+>[!VIDEO](https://video.tv.adobe.com/v/36653?quality=12&enable10seconds=on&speedcontrol=on)
