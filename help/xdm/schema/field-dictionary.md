@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;XDM;standard xdm fields;standard XDM fields;XDM fields;xdm fields;Standard XDM fields
+keywords: Experience Platform;home;popular topics;schema;Schema;fields;Fields;standard fields;Standard fields;dictionary;Dictionary;map;Map
 solution: Experience Platform
 title: Experience Data Model (XDM) field dictionary
 topic: overviews

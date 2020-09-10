@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;data deduplication;deduplication;
 solution: Experience Platform
 title: Data deduplication
 topic: queries

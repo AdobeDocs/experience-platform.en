@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;database connector
 solution: Experience Platform
 title: Configure a dataflow for a database connector in the UI
 topic: overview
+description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps to configure a new dataflow using your database account.
 ---
 
 # Configure a dataflow for a database connector in the UI
 
-A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps to configure a new dataflow using your database accounr.
+A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps to configure a new dataflow using your database account.
 
 ## Getting started
 
@@ -27,9 +28,16 @@ After creating your database account, the **[!UICONTROL Select data]** step appe
 - The left half of the interface is a browser, displaying your account's list of databases.
 - The right half of the interface lets you preview up to 100 rows of data.
 
-Select the database you wish to use, then click **[!UICONTROL Next]**.
+You can use the **[!UICONTROL Search]** option on the top of the page to quickly identify the source data you intend to use.
 
-![](../../../images/tutorials/dataflow/databases/add-data.png)
+>[!NOTE]
+>
+>The search source data option is available to all tabular-based source connectors excluding the Analytics, Classifications, Event Hubs, and Kinesis connectors.
+
+Once you find the source data, select the directory, then click **[!UICONTROL Next]**.
+
+![select-data](../../../images/tutorials/dataflow/databases/select-data.png)
+
 
 ## Map data fields to an XDM schema
 

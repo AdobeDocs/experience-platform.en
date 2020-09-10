@@ -8,6 +8,7 @@ user-guide-description: Real-time Customer Profile provides a holistic view of e
 # [!DNL Real-time Customer Profile] {#profile}
 
 * [[!DNL Profile] overview](home.md)
+* [[!DNL Profile] guardrails](guardrails.md)
 * [!DNL Profile] API developer guide {#api}
   * [Overview](api/overview.md)
   * [Getting started](api/getting-started.md)
@@ -20,10 +21,11 @@ user-guide-description: Real-time Customer Profile provides a holistic view of e
   * [[!DNL Profile] system jobs (Delete requests)](api/profile-system-jobs.md)
 * UI guides {#ui}
   * [[!DNL Profile] user guide](ui/user-guide.md)
+  * [[!DNL Profile] detail customization](ui/profile-customization.md)
   * [Merge policies user guide](ui/merge-policies.md)
 * Tutorials {#tutorials}
   * [Add data to [!DNL Profile]](tutorials/add-profile-data.md)
-  * [Configure dataset for [!DNL Profile] & [!DNL Identity]](tutorials/dataset-configuration.md)
+  * [Configure a dataset for [!DNL Profile] & [!DNL Identity] service](tutorials/dataset-configuration.md)
   * [More tutorials](https://docs.adobe.com/content/help/en/experience-platform/tutorials/home.html)
 * [Privacy request processing](privacy.md)
 * [[!DNL Profile] troubleshooting guide](troubleshooting.md)

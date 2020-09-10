@@ -1,11 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Apache Cassandra;apache cassandra;cassandra;Cassandra
 solution: Experience Platform
 title: Apache Cassandra connector
 topic: overview
+description: The documentation below provides information on how to connect Apache Cassandra to Platform using APIs.
 ---
 
-# [!DNL Apache Cassandra ]connector
+# [!DNL Apache Cassandra] connector
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 

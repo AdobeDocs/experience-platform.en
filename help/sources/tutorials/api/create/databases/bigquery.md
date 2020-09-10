@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;bigquery;Google;google;Google BigQuery
 solution: Experience Platform
 title: Create a Google BigQuery connector using the Flow Service API
 topic: overview
+description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to Google BigQuery (hereinafter referred to as "BigQuery").
 ---
 
 # Create a [!DNL Google BigQuery] connector using the [!DNL Flow Service] API

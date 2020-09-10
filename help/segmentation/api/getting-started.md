@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;api;
 solution: Experience Platform
 title: Segmentation Service developer guide
 topic: developer guide

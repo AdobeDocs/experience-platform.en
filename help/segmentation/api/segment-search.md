@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;segment;Segment
+keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;segment;Segment;search;segment search;
 solution: Adobe Experience Platform
 title: Segment search endpoint
 topic: guide

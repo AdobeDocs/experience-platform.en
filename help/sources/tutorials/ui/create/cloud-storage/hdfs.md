@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Apache HDFS;HDFS;hdfs
 solution: Experience Platform
 title: Create an Apache HDFS source connector in the UI
 topic: overview
+description: This tutorial provides steps for authenticating an Apache Hadoop Distributed File System (hereinafter referred to as "HDFS") source connector using the Platform user interface.
 ---
 
 # Create an [!DNL Apache] HDFS source connector in the UI

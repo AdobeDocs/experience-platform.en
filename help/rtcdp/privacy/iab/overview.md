@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;IAB;IAB 2.0;
+keywords: Experience Platform;home;IAB;IAB 2.0;consent;Consent
 solution: Experience Platform
 title: IAB TCF 2.0 support in Real-time Customer Data Platform
 topic: privacy events
@@ -114,7 +114,7 @@ Once you have configured your CMP to generate consent strings, you must integrat
 
 In order for the SDK to send data to [!DNL Experience Platform], you must first create a new edge configuration for [!DNL Platform] in [!DNL Adobe Experience Platform Launch]. Specific steps for how to create a new configuration are provided in the [SDK documentation](../../../edge/fundamentals/edge-configuration.md).
 
-After providing a unique name for the configuration, select the toggle button next to *[!UICONTROL Adobe Experience Platform]*. Next, use the following values to complete the rest of the form:
+After providing a unique name for the configuration, select the toggle button next to **[!UICONTROL Adobe Experience Platform]**. Next, use the following values to complete the rest of the form:
 
 | Edge configuration field | Value |
 | --- | --- |

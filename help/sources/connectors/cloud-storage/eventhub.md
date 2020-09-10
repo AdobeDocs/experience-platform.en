@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Event Hubs;azure event hubs;Event Hubs;event hubs
 solution: Experience Platform
 title: Azure Event Hubs connector
 topic: overview
+description: The documentation below provides information on how to connect Azure Event Hubs to Platform using APIs or the user interface.
 ---
 
 # (Beta) Azure Event Hubs connector
@@ -47,15 +48,17 @@ The following IP addresses must be added to an allow list prior to working with 
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
+## Connect [!DNL Azure Event Hubs] to [!DNL Platform]
+
 The documentation below provides information on how to connect [!DNL Azure Event Hubs] to [!DNL Platform] using APIs or the user interface:
 
-## Connect [!DNL Azure Event Hubs] to [!DNL Platform] using APIs
+### Using APIs
 
 - [Create a Azure Event Hubs connector using the Flow Service API](../../tutorials/api/create/cloud-storage/eventhub.md)
 - [Explore a cloud storage system using the Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Collect cloud storage data using the Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
-## Connect [!DNL Azure Event Hubs] to [!DNL Platform] using the UI
+### Using the UI
 
 - [Create a Azure Event Hubs source connector in the UI](../../tutorials/ui/create/cloud-storage/eventhub.md)
 - [Configure a dataflow for a cloud storage connector in the UI](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)

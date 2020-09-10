@@ -198,7 +198,9 @@ write_tracker = dataset_writer.write(<dataFrame>, file_format='json')
 
 For longer running jobs, users may need to store intermediate steps. In instances like this, the [!DNL Python] SDK provides the user the ability to read and write to a userspace. 
 
->![NOTE] Paths to the data are **not** stored by the SDK. Users will need to store the corresponding path to its respective data.
+>[!NOTE]
+>
+>Paths to the data are **not** stored by the SDK. Users will need to store the corresponding path to its respective data.
 
 ### Write to userspace
 

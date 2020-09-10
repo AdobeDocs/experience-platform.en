@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Phoenix;phoenix
 solution: Experience Platform
 title: Phoenix connector
 topic: overview
+description: The documentation below provides information on how to connect Phoenix to Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL Phoenix] connector

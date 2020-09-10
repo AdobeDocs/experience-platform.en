@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;create schema;enum;XDM individual profile;primary identity;primary idenity;enum datatype;schema design
+keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema editor;Schema Editor;schema;Schema;schemas;Schemas;create
 solution: Experience Platform
 title: Create a schema using the Schema Editor
 topic: tutorials
@@ -118,7 +118,7 @@ Similar to the `name` field, the fields you just added represent multi-field con
 
 The "[!UICONTROL Loyalty Members]" schema is meant to capture data related to the members of a loyalty program, so it will require some specific loyalty-related fields. There are no standard mixins available that contain the necessary fields, therefore you will need to define a new mixin.
 
-This time, when you open the **[!UICONTROL Add nixin]** dialog, select **[!UICONTROL Create new mixin]**. You will then be asked to provide a **[!UICONTROL Display name]** and **[!UICONTROL Description]** for your mixin. 
+This time, when you open the **[!UICONTROL Add Mixin]** dialog, select **[!UICONTROL Create New Mixin]**. You will then be asked to provide a **[!UICONTROL Display Name]** and **[!UICONTROL Description]** for your mixin. 
 
 ![](../images/tutorials/create-schema/mixin_create_new.png)
 
