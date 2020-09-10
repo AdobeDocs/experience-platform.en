@@ -18,7 +18,7 @@ Before reading this guide, please review the [[!DNL JupyterLab] user guide](./ov
 
 >[!IMPORTANT]
 >
->For PySpark and Scala notebooks if you are receiving an error with the reason "Remote RPC client disassociated." This typically means the driver or an executor is running out of memory. Try switching to "batch" mode to resolve this error.
+>For PySpark and Scala notebooks if you are receiving an error with the reason "Remote RPC client disassociated." This typically means the driver or an executor is running out of memory. Try switching to ["batch" mode](#mode) to resolve this error.
 
 The following information defines the max amount of data that can be read, what type of data was used, and the estimated timeframe reading the data takes. 
 
@@ -28,9 +28,9 @@ The ExperienceEvent schema data used varied in size starting from one thousand (
 
 The ad-hoc schema data was pre-processed using [!DNL Query Service] Create Table as Select (CTAS). This data also varied in size starting from one thousand (1K) rows ranging up-to one billion (1B) rows.
 
-### When to use batch mode vs interactive mode
+### When to use batch mode vs interactive mode {#mode}
 
-When reading datasets with PySpark and Scala notebooks, you have the option to use interactive mode or batch mode to read the dataset. Interactive is made for fast results whereas batch mode is for large datasets and therefore batch incurs a longer fixed cost for starting up a bigger cluster.
+When reading datasets with PySpark and Scala notebooks, you have the option to use interactive mode or batch mode to read the dataset. Interactive is made for fast results whereas batch mode is for large datasets.
 
 - For PySpark and Scala notebooks, batch mode should be used when 5 million rows (~13.42GB data on disk) of XDM data or more is being read. For more information on the efficiency of each mode and ad-hoc data speeds, see the [PySpark](#pyspark-data-limits) or [Scala](#scala-data-limits) data limit tables below.
 
