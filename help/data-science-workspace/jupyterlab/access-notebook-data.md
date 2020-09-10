@@ -28,6 +28,12 @@ The ExperienceEvent schema data used varied in size starting from one thousand (
 
 The ad-hoc schema data was pre-processed using [!DNL Query Service] Create Table as Select (CTAS). This data also varied in size starting from one thousand (1K) rows ranging up-to one billion (1B) rows.
 
+### When to use batch mode vs interactive mode
+
+When reading datasets with PySpark and Scala notebooks, you have the option to use interactive mode or batch mode to read the dataset. Interactive is made for fast results whereas batch mode is for large datasets and therefore batch incurs a longer fixed cost for starting up a bigger cluster.
+
+- For PySpark and Scala notebooks, batch mode should be used when 5 million rows (~13.42GB data on disk) of XDM data or more is being read. For more information on the efficiency of each mode and ad-hoc data speeds, see the [PySpark](#pyspark-data-limits) or [Scala](#scala-data-limits) data limit tables below.
+
 ### [!DNL Python] notebook data limits
 
 **XDM ExperienceEvent schema:** You should be able to read a maximum of 2 million rows (~6.1 GB data on disk) of XDM data in less than 22 minutes. Adding additional rows may result in errors.
@@ -60,7 +66,7 @@ The ad-hoc schema data was pre-processed using [!DNL Query Service] Create Table
 | Size on disk (in MB)    | 0.082   | 0.612   | 9.0   | 91    | 188   | 293   |
 | R SDK (in sec)          | 7.7     | 4.58    | 35.9  | 233   | 470.5 | 603   |
 
-### PySpark ([!DNL Python] kernel) notebook data limits:
+### PySpark ([!DNL Python] kernel) notebook data limits: {#pyspark-data-limits}
 
 **XDM ExperienceEvent schema:** On Interactive mode you should be able to read a maximum of 5 million rows (~13.42GB data on disk) of XDM data in around 20 minutes. Interactive mode only supports up-to 5 million rows. If you wish to read larger datasets, it's suggested you switch to Batch mode. On Batch mode you should be able to read a maximum of 500 million rows (~1.31TB data on disk) of XDM data in around 14 hours.
 
@@ -78,7 +84,7 @@ The ad-hoc schema data was pre-processed using [!DNL Query Service] Create Table
 | SDK Interactive mode (in seconds) | 28.2s  | 18.6s   |20.8s    |20.9s  |23.8s  |21.7s  |24.7s   | 22s    |28.4s    |40s     |97.4s    |154.5s |
 | SDK Batch mode (in seconds) | 428.8s | 578.8s  |641.4s  |538.5s |630.9s |467.3s |411s    | 675s    |702s     |719.2s  |1022.1s  |1122.3s|
 
-### [!DNL Spark] (Scala kernel) notebook data limits:
+### [!DNL Spark] (Scala kernel) notebook data limits: {#scala-data-limits}
 
 **XDM ExperienceEvent schema:** On Interactive mode you should be able to read a maximum of 5 million rows (~13.42GB data on disk) of XDM data in around 18 minutes. Interactive mode only supports up-to 5 million rows. If you wish to read larger datasets, it's suggested you switch to Batch mode. On Batch mode you should be able to read a maximum of 500 million rows (~1.31TB data on disk) of XDM data in around 14 hours.
 
