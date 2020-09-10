@@ -392,7 +392,7 @@ Now that you have authored your feature pipeline, you need to create a Docker im
 
 Optionally, you can also use the following Postman collection to assist in completing the feature pipeline API workflow:
 
-https://www.getpostman.com/collections/c5fc0d1d5805a5ddd41a
+https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### Create a feature pipeline engine {#create-engine-api}
 
