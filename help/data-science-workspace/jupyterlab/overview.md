@@ -236,7 +236,7 @@ In [!DNL JupyterLab] select the gear icon in the top-right corner to open *Noteb
 
 ## Next steps
 
-To learn more about each of the supported notebooks and how to use them, visit the [Jupyterlab notebooks data access](./access-notebook-data.md) developer guide.
+To learn more about each of the supported notebooks and how to use them, visit the [Jupyterlab notebooks data access](./access-notebook-data.md) developer guide. This guide focuses on how to use JupyterLab notebooks to access your data including reading, writing, and querying data. The data access guide also explains the maximum amount of data that can be read by each supported notebook.
 
 ## Supported libraries {#supported-libraries}
 

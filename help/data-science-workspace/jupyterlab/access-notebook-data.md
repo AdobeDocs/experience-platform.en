@@ -5,9 +5,10 @@ title: Data access in Jupyterlab notebooks
 topic: Developer Guide
 description: This guide focuses on how to use Jupyter notebooks, built within Data Science Workspace to access your data.
 ---
+
 # Data access in Jupyterlab notebooks
 
-Each supported kernel provides built-in functionalities that allow you to read Platform data from a dataset within a notebook. However, support for paginating data is limited to [!DNL Python] and R notebooks.
+Each supported kernel provides built-in functionalities that allow you to read Platform data from a dataset within a notebook. Currently JupyterLab in Adobe Experience Platform Data Science Workspace supports notebooks for [!DNL Python], R, PySpark, and Scala. However, support for paginating data is limited to [!DNL Python] and R notebooks. This guide focuses on how to use JupyterLab notebooks to access your data.
 
 ## Getting started
 
