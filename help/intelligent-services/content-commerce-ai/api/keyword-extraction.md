@@ -14,14 +14,6 @@ description: The keyword extraction service, when given a text document, automat
 
 The keyword extraction service, when given a text document, automatically extracts keywords or keyphrases that best describe the subject of the document. In order to extract keywords, a combination of named entity recognition (NER) and unsupervised keyword extraction algorithms are used.
 
-**Unsupervised keyword extraction**
-
-For unsupervised keyword extraction, [[!DNL YAKE]](http://yake.inesctec.pt/) is used. [!DNL YAKE] is a fast and accurate unsupervised automatic keyword extraction method used to select the most important keywords from a document. The keywords [!DNL YAKE] extracts are then filtered to select only noun phrases.
-
-**Named entity recognition**
-
-For named entity recognition, [[!DNL spaCy]](https://spacy.io/)'s OntoNotes model is used. This model assigns context-specific token vectors, part-of-speech (POS) tags, dependency parsing, and named entities. The OntoNotes model is one of the core [!DNL spaCy] models. More information on the OntoNotes model can be found [here](https://spacy.io/models/en).
-
 The named entities recognized by [!DNL Content and Commerce AI] are listed in the following table:
 
 | Entity name | Description |
@@ -37,8 +29,6 @@ The named entities recognized by [!DNL Content and Commerce AI] are listed in th
 | WORK_OF_ART | Titles of books, songs, etc. |
 | LAW | Named documents made into laws. |
 | LANGUAGE | Any named language. |
-
-The results from [!DNL OntoNotes] are combined with the keywords from [!DNL YAKE], and are then returned in ranked order according to their importance.
 
 **API format**
 

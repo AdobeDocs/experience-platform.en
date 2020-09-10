@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;consent;Consent
 solution: Experience Platform
 title: CCPA FAQ
 topic: troubleshooting
+description: This document provides answers to frequently asked questions about the California Consumer Protection Act (CCPA) and its implementation in Adobe Experience Cloud.
 ---
 
 # CCPA FAQ
