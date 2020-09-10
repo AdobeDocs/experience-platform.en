@@ -98,7 +98,7 @@ The ad-hoc schema data was pre-processed using [!DNL Query Service] Create Table
 
 ## Python notebooks {#python-notebook}
 
-[!DNL Python] notebooks allow you to paginate data when accessing datasets. Sample code to read data with and without pagination is demonstrated below. For more information on the available Python notebooks, visit the [[!DNL JupyterLab] Launcher](./overview.md#launcher) section within the JupyterLab user guide.
+[!DNL Python] notebooks allow you to paginate data when accessing datasets. Sample code to read data with and without pagination is demonstrated below. For more information on the available starter Python notebooks, visit the [[!DNL JupyterLab] Launcher](./overview.md#launcher) section within the JupyterLab user guide.
 
 ### Read from a dataset in Python
 
@@ -198,7 +198,7 @@ df = dataset_reader.\
 
 ## R notebooks {#r-notebooks}
 
-R notebooks allow you to paginate data when accessing datasets. Sample code to read data with and without pagination is demonstrated below. For more information on the available R notebooks, visit the [[!DNL JupyterLab] Launcher](./overview.md#launcher) section within the JupyterLab user guide.
+R notebooks allow you to paginate data when accessing datasets. Sample code to read data with and without pagination is demonstrated below. For more information on the available starter R notebooks, visit the [[!DNL JupyterLab] Launcher](./overview.md#launcher) section within the JupyterLab user guide.
 
 ### Read from a dataset in R
 
@@ -312,7 +312,7 @@ A custom [!DNL Data Science Workspace] magic command for reading or writing a da
 
 >[!TIP]
 >
-> If you are receiving an error with the reason "Remote RPC client disassociated." This typically means the driver or an executor is running out of memory. Try switching the `--mode` to "batch". See the [notebook data limits](#notebook-data-limits) section for more information.
+>Review the PySpark tables within the [notebook data limits](#notebook-data-limits) section to determine if `mode` should be set to `interactive` or `batch`.
 
 **Examples**
 
@@ -423,7 +423,7 @@ val df1 = spark.read.format("com.adobe.platform.query")
 
 >[!TIP]
 >
->Review the section on [notebook data limits](#notebook-data-limits) to determine if `mode` should be set to `interactive` or `batch`.
+>Review the Scala tables within the [notebook data limits](#notebook-data-limits) section to determine if `mode` should be set to `interactive` or `batch`.
 
 ### Write to a dataset {#scala-write-dataset}
 
@@ -454,7 +454,7 @@ df1.write.format("com.adobe.platform.query")
 
 >[!TIP]
 >
->Review the section on [notebook data limits](#notebook-data-limits) to determine if `mode` should be set to `interactive` or `batch`.
+>Review the Scala tables within the [notebook data limits](#notebook-data-limits) section to determine if `mode` should be set to `interactive` or `batch`.
 
 ### create a local dataframe {#scala-create-dataframe}
 
@@ -513,7 +513,7 @@ timedf.show()
 
 ## Next steps
 
-This document covered the general guidelines for accessing datasets using JupyterLab notebooks. For more in depth examples on querying datasets, visit the [query service in JupyterLab notebooks](./query-service.md) documentation. For more information on how to explore your datasets, visit the document on [analyzing your data using notebooks](./analyze-your-data.md).
+This document covered the general guidelines for accessing datasets using JupyterLab notebooks. For more in depth examples on querying datasets, visit the [query service in JupyterLab notebooks](./query-service.md) documentation. For more information on how to explore and visualize your datasets, visit the document on [analyzing your data using notebooks](./analyze-your-data.md).
 
 ## Optional SQL flags for [!DNL Query Service] {#optional-sql-flags-for-query-service}
 
