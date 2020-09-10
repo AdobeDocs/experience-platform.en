@@ -6,13 +6,13 @@ topic: Developer Guide
 description: This guide focuses on how to use Jupyter notebooks, built within Data Science Workspace to access your data.
 ---
 
-# Data access in Jupyterlab notebooks
+# Data access in [!DNL Jupyterlab] notebooks
 
 Each supported kernel provides built-in functionalities that allow you to read Platform data from a dataset within a notebook. Currently JupyterLab in Adobe Experience Platform Data Science Workspace supports notebooks for [!DNL Python], R, PySpark, and Scala. However, support for paginating data is limited to [!DNL Python] and R notebooks. This guide focuses on how to use JupyterLab notebooks to access your data.
 
 ## Getting started
 
-Before reading this guide, please review the [JupyterLab user guide](./overview.md) for a high-level introduction to JupyterLab and its role within Data Science Workspace.
+Before reading this guide, please review the [[!DNL JupyterLab] user guide](./overview.md) for a high-level introduction to [!DNL JupyterLab] and its role within Data Science Workspace.
 
 ## Notebook data limits {#notebook-data-limits}
 
@@ -173,13 +173,13 @@ In order to access and filter an [!DNL ExperienceEvent] dataset in a [!DNL Pytho
 
 A list of filtering operators are described below: 
 
--   `eq()`: Equal to
--   `gt()`: Greater than
--  `ge()`: Greater than or equal to
--   `lt()`: Less than
--   `le()`: Less than or equal to
--   `And()`: Logical AND operator
--   `Or()`: Logical OR operator
+- `eq()`: Equal to
+- `gt()`: Greater than
+- `ge()`: Greater than or equal to
+- `lt()`: Less than
+- `le()`: Less than or equal to
+- `And()`: Logical AND operator
+- `Or()`: Logical OR operator
 
 The following cells filter an [!DNL ExperienceEvent] dataset to data existing exclusively between January 1, 2019 and the end of December 31, 2019.
 
@@ -244,13 +244,13 @@ In order to access and filter an [!DNL ExperienceEvent] dataset in a R notebook,
 
 A list of filtering operators are described below: 
 
--   `eq()`: Equal to
--   `gt()`: Greater than
--  `ge()`: Greater than or equal to
--   `lt()`: Less than
--   `le()`: Less than or equal to
--   `And()`: Logical AND operator
--   `Or()`: Logical OR operator
+- `eq()`: Equal to
+- `gt()`: Greater than
+- `ge()`: Greater than or equal to
+- `lt()`: Less than
+- `le()`: Less than or equal to
+- `And()`: Logical AND operator
+- `Or()`: Logical OR operator
 
 The following cells filter an [!DNL ExperienceEvent] dataset to data existing exclusively between January 1, 2019 and the end of December 31, 2019.
 
@@ -307,8 +307,8 @@ A custom [!DNL Data Science Workspace] magic command for reading or writing a da
 | --- | --- | --- |
 | `{action}` | The type of action to perform on the dataset. Two actions are available "read" or "write". | Yes |
 | `--datasetId {id}` | Used to supply the id of the dataset to read or write. | Yes |
-| `--dataFrame {df}` | The pandas dataframe. <li> When the action is "read", {df} is the variable where results of the dataset read operation are available. </li> <li> When the action is "write", this dataframe {df} is written to the dataset. </li> | Yes |
-| `--mode` | An additional parameter that changes how data is read.Allowed parameters are "batch", and "interactive". By default the mode is set to "interactive". It is recommended to use "batch" mode when reading large amounts of data. | No |
+| `--dataFrame {df}` | The pandas dataframe. <ul> <li> When the action is "read", {df} is the variable where results of the dataset read operation are available. </li> <li> When the action is "write", this dataframe {df} is written to the dataset. </li> </ul> | Yes |
+| `--mode` | An additional parameter that changes how data is read. Allowed parameters are "batch", and "interactive". By default the mode is set to "interactive". It is recommended to use "batch" mode when reading large amounts of data. | No |
 
 >[!TIP]
 >
@@ -376,7 +376,7 @@ timepd.show()
 
 ## Scala notebooks {#scala-notebook}
 
-The documentation below outlines the following concepts:
+The documentation below contains examples for the following concepts:
 
 - [Initialize sparkSession](#scala-initialize)
 - [Read a dataset](#read-scala-dataset)
