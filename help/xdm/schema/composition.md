@@ -166,7 +166,7 @@ A field is the most basic building block of a schema. Fields provide constraints
 
 * String
 * Integer
-* Number
+* Double
 * Boolean
 * Array
 * Object
