@@ -72,9 +72,9 @@ To add a mixin, select **[!UICONTROL Add]** in the **[!UICONTROL Mixins]** sub-s
 
 A new dialog appears, displaying a list of available mixins. Each mixin is only intended for use with a specific class, therefore the dialog only lists mixins that are compatible with the class you selected (in this case, the [!DNL XDM Individual Profile] class). If you are using a standard XDM class, the list of mixins will be intelligently sorted based on usage popularity.
 
-Selecting a mixin from the list causes it to appear in the right-hand rail. You can select multiple mixins if desired, adding each one to the list in the right rail before confirming.
+![](../images/tutorials/create-schema/mixin-popularity.png)
 
-In addition, an icon appears on the right-hand side of the currently selected mixin which allows you to preview the structure of the fields it provides.
+Selecting a mixin from the list causes it to appear in the right-hand rail. You can select multiple mixins if desired, adding each one to the list in the right rail before confirming. In addition, an icon appears on the right-hand side of the currently selected mixin which allows you to preview the structure of the fields it provides.
 
 ![](../images/tutorials/create-schema/preview-mixin-button.png)
 
@@ -102,15 +102,15 @@ Select the different fields within the canvas to reveal any additional fields th
 
 ## Add another mixin {#mixin-2}
 
-You can now repeat the same steps to add another mixin. When you view the **[!UICONTROL Add mixin]** dialog this time, notice that the "[!UICONTROL Profile person details]" mixin has been greyed out and the radio button next to it cannot be selected. This prevents you from accidentally duplicating mixins that you have already included in the current schema.
+You can now repeat the same steps to add another mixin. When you view the **[!UICONTROL Add mixin]** dialog this time, notice that the "[!UICONTROL Profile person details]" mixin has been greyed out and the checkbox next to it cannot be selected. This prevents you from accidentally duplicating mixins that you have already included in the current schema.
 
-You can now add the "[!DNL Profile personal details]" mixin from the dialog.
+For this tutorial, select the "[!DNL Profile personal details]" mixin from the dialog, then select **[!UICONTROL Add mixin]** to add it to the schema.
 
 ![](../images/tutorials/create-schema/add_mixin_personal_details.png)
 
 Once added, the canvas reappears. "[!UICONTROL Profile personal details]" is now listed under **[!UICONTROL Mixins]** in the **[!UICONTROL Composition]** section, and fields for home address, mobile phone, and more have been added under **[!UICONTROL Structure]**.
 
-Similar to the `name` field, the fields you just added represent multi-field concepts. For example, `homeAddress` has a data type of "[!UICONTROL Address]" and `mobilePhone` has a data type of "[!UICONTROL Phone number]". You can select each of these fields to expand them and see the additional fields included in the data type.
+Similar to the `name` field, the fields you just added represent multi-field concepts. For example, `homeAddress` has a data type of "[!UICONTROL Postal address]" and `mobilePhone` has a data type of "[!UICONTROL Phone number]". You can select each of these fields to expand them and see the additional fields included in the data type.
 
 ![](../images/tutorials/create-schema/personal_details_structure.png)
 
@@ -219,6 +219,16 @@ Now, when you look under **[!UICONTROL Structure]**, you can see that the `loyal
 ![](../images/tutorials/create-schema/loyalty_data_type.png)
 
 In a future schema, you could now assign a field the **[!UICONTROL Type]** of "[!DNL Loyalty]" and it would automatically include fields for ID, loyalty level, member since, and points.
+
+## Search and filter schema fields
+
+Your schema now contains several mixins in addition to the fields provided by its base class. When working with larger schemas, you can select the checkboxes next to mixin names in the left rail to filter the displayed fields to only those provided by the mixins you are interested in.
+
+![](../images/tutorials/create-schema/filter-by-mixin.png)
+
+If you are looking for a specific field in your schema, you can also use the search bar to filter displayed fields by name, regardless of which mixin they are provided under.
+
+![](../images/tutorials/create-schema/search.png)
 
 ## Set a schema field as an identity field {#identity-field}
 
