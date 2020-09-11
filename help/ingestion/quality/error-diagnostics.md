@@ -1,19 +1,46 @@
 ---
-keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;partial ingestion;Partial ingestion;Retrieve error;retrieve error;Partial batch ingestion;partial batch ingestion;partial;ingestion;Ingestion;
+keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;partial ingestion;Partial ingestion;Retrieve error;retrieve error;Partial batch ingestion;partial batch ingestion;partial;ingestion;Ingestion;error diagnostics;retrieve error diagnostics;get error diagnostics;get error;get errors;retrieve errors;
 solution: Experience Platform
 title: Adobe Experience Platform partial batch ingestion overview
 topic: overview
 ---
 
-# Monitoring partial batch ingestion
+# Retrieving error diagnostics
 
-Partial batch ingestion is the ability to ingest data containing errors, up to a certain threshold. With this capability, users can successfully ingest all their correct data into Adobe Experience Platform while all their incorrect data is batched separately, along with details as to why it is invalid.
+Adobe Experience Platform provides two methods for uploading and ingesting data. You can either use batch ingestion, which allows you to insert their data using various file types (such as CSVs), or streaming ingestion, which allows you to insert their data to [!DNL Platform] using streaming endpoints in real-time.
 
-This document provides a information on monitoring partial batch ingestion, managing partial batch ingestion errors, as well as a reference for partial batch ingestion types.
+This document provides a information on monitoring batch ingestion, managing partial batch ingestion errors, as well as a reference for partial batch ingestion types.
 
-## Downloading file-level metadata {#download-metadata}
+## Getting started
 
-Adobe Experience Platform allows users to download the metadata of the input files. The metadata will be retained within [!DNL Platform] for up to 30 days.
+This guide requires a working understanding of the following components of Adobe Experience Platform:
+
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+- [[!DNL Data Ingestion]](../home.md): The methods by which data can be sent to [!DNL Experience Platform].
+
+### Reading sample API calls
+
+This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
+
+### Gather values for required headers
+
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+
+- Authorization: Bearer `{ACCESS_TOKEN}`
+- x-api-key: `{API_KEY}`
+- x-gw-ims-org-id: `{IMS_ORG}`
+
+All resources in [!DNL Experience Platform], including those belonging to the [!DNL Schema Registry], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+
+- x-sandbox-name: `{SANDBOX_NAME}`
+
+>[!NOTE]
+>
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
+
+## Downloading error diagnostics {#download-diagnostics}
+
+Adobe Experience Platform allows users to download the error diagnostics of the input files. The metadata will be retained within [!DNL Platform] for up to 30 days.
 
 ### List input files {#list-files}
 
@@ -85,7 +112,7 @@ A successful response will return HTTP status 200 with JSON objects containing p
 {"path": "etc/F2.json"}
 ```
 
-## Retrieve partial batch ingestion errors {#retrieve-errors}
+## Retrieve batch ingestion errors {#retrieve-errors}
 
 If batches contain failures, you will need to retrieve error information about these failures so you can re-ingest the data.
 
@@ -326,4 +353,4 @@ A sample response of retrieving the error file can be seen below:
 
 ## Next steps {#next-steps}
 
-This tutorial covered how to monitor partial batch ingestion errors. For more information on batch ingestion, please read the [batch ingestion developer guide](./api-overview.md).
+This tutorial covered how to monitor partial batch ingestion errors. For more information on batch ingestion, please read the [batch ingestion developer guide](../batch-ingestion/api-overview.md).
