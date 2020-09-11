@@ -41,6 +41,14 @@ The sorting panel allows you to access accounts from a specific source. Select t
 
 ![accounts-select](../../images/tutorials/monitor/accounts-sort.png)
 
+Additionally, you can edit existing account information. Select the pencil icon for the account information you want to edit.
+
+![](../../images/tutorials/monitor/click-edit.png)
+
+The **[!UICONTROL Edit account details]** modal appears. From this page, you can update the details of your existing account.
+
+![](../../images/tutorials/monitor/edit-account.png)
+
 From the **[!UICONTROL Accounts]** page, you can view a list of existing dataflows or target datasets associated with the account you accessed. Select the ellipses (`...`) button to bring up more available options for your selected dataflow. These options are further described below:
 
 | Control | Description |
