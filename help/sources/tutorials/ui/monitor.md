@@ -41,11 +41,11 @@ The sorting panel allows you to access accounts from a specific source. Select t
 
 ![accounts-select](../../images/tutorials/monitor/accounts-sort.png)
 
-Additionally, you can edit existing account information. Select the pencil icon for the account information you want to edit.
+Additionally, you can edit existing account information and update your account credentials. Select the pencil icon for the account information you want to edit.
 
 ![](../../images/tutorials/monitor/click-edit.png)
 
-The **[!UICONTROL Edit account details]** modal appears. From this page, you can update the details of your existing account.
+The **[!UICONTROL Edit account details]** modal appears. From this page, you can update your existing account details and authentication credentials.
 
 ![](../../images/tutorials/monitor/edit-account.png)
 
