@@ -40,7 +40,7 @@ All resources in [!DNL Experience Platform], including those belonging to the [!
 
 ## Downloading error diagnostics {#download-diagnostics}
 
-Adobe Experience Platform allows users to download the error diagnostics of the input files. The metadata will be retained within [!DNL Platform] for up to 30 days.
+Adobe Experience Platform allows users to download the error diagnostics of the input files. The diagnostics will be retained within [!DNL Platform] for up to 30 days.
 
 ### List input files {#list-files}
 
@@ -58,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 
 **Response**
 
-A successful response will return HTTP status 200 with JSON objects containing path objects detailing where the metadata was saved.
+A successful response will return HTTP status 200 with JSON objects containing path objects detailing where the diagnostics were saved.
 
 ```json
 {
@@ -89,9 +89,9 @@ A successful response will return HTTP status 200 with JSON objects containing p
 }
 ```
 
-### Retrieve input file metadata {#retrieve-metadata}
+### Retrieve input file diagnostics {#retrieve-diagnostics}
 
-Once you have retrieved a list of all the different input files, you can retrieve the metadata of the individual file by using the following endpoint.
+Once you have retrieved a list of all the different input files, you can retrieve the diagnostics of the individual file by using the following endpoint.
 
 **Request**
 
@@ -105,7 +105,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 
 **Response**
 
-A successful response will return HTTP status 200 with JSON objects containing path objects detailing where the metadata was saved.
+A successful response will return HTTP status 200 with JSON objects containing path objects detailing where the diagnostics were saved.
 
 ```json
 {"path": "F1.json"}
@@ -336,7 +336,7 @@ A successful response returns HTTP status 200 with a list of the files that have
 }
 ```
 
-You can then retrieve detailed information about the errors using the [metadata retrieval endpoint](#retrieve-metadata).
+You can then retrieve detailed information about the errors using the [diagnostics retrieval endpoint](#retrieve-diagnostics).
 
 A sample response of retrieving the error file can be seen below:
 
