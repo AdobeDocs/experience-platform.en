@@ -1,8 +1,15 @@
+---
+keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;partial ingestion;Partial ingestion;Retrieve error;retrieve error;Partial batch ingestion;partial batch ingestion;partial;ingestion;Ingestion;
+solution: Experience Platform
+title: Adobe Experience Platform partial batch ingestion overview
+topic: overview
+---
+
 # Monitoring partial batch ingestion
 
 Partial batch ingestion is the ability to ingest data containing errors, up to a certain threshold. With this capability, users can successfully ingest all their correct data into Adobe Experience Platform while all their incorrect data is batched separately, along with details as to why it is invalid.
 
-This document provides a tutorial for monitoring partial batch ingestion and managing partial batch ingestion errors.
+This document provides a information on monitoring partial batch ingestion, managing partial batch ingestion errors, as well as a reference for partial batch ingestion types.
 
 ## Downloading file-level metadata {#download-metadata}
 
@@ -316,3 +323,7 @@ A sample response of retrieving the error file can be seen below:
     "_filename": "parsing_errors_0.json"
 }
 ```
+
+## Next steps {#next-steps}
+
+This tutorial covered how to monitor partial batch ingestion errors. For more information on batch ingestion, please read the [batch ingestion developer guide](./api-overview.md).
