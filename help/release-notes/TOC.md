@@ -2,6 +2,7 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Release Notes
+breadcrumb-title: Platform Release Notes
 user-guide-description: Monthly release notes for Adobe Experience Platform.
 ---
 
