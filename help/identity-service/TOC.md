@@ -2,6 +2,7 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Identity Service
+breadcrumb-title: Platform Identity Service Guide
 user-guide-description: Adobe Experience Platform Identity Service helps you to gain a better view of your customers and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
 ---
 
