@@ -112,7 +112,7 @@ GET /batches/{BATCH_ID}/meta?path=input_files/{FILE}
 | Property | Description |
 | -------- | ----------- |
 | `{BATCH_ID}` | The ID of the batch that you're looking up. |
-| `{FILE}` | The name of the file that you are accessing.
+| `{FILE}` | The name of the file that you are accessing. |
 
 **Request**
 
