@@ -218,12 +218,11 @@ Executing the following code will read the entire dataset. If the execution is s
 library(reticulate)
 use_python("/usr/local/bin/ipython")
 psdk <- import("platform_sdk")
-py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
-client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
+py_run_file("~/.ipython/profile_default/startup/platform_sdk_context.py")
 DatasetReader <- psdk$dataset_reader$DatasetReader
-dataset_reader <- DatasetReader(client_context, "{DATASET_ID}") 
-df <- dataset_reader$read() 
-df
+dataset_reader <- DatasetReader(py$get_platform_sdk_client_context(), dataset_id="{DATASET_ID}")
+df0 <- dataset_reader$read()
+head(df0)
 ```
 
 **With pagination:**
@@ -236,12 +235,11 @@ Executing the following code will read data from the specified dataset. Paginati
 library(reticulate)
 use_python("/usr/local/bin/ipython")
 psdk <- import("platform_sdk")
-py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
-client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
+py_run_file("~/.ipython/profile_default/startup/platform_sdk_context.py")
 
 DatasetReader <- psdk$dataset_reader$DatasetReader
-dataset_reader <- DatasetReader(client_context, "{DATASET_ID}") 
-df <- dataset_reader$limit(100L)$offset(10L)$read() 
+dataset_reader <- DatasetReader(py$get_platform_sdk_client_context(), dataset_id="{DATASET_ID}") 
+df0 <- dataset_reader$limit(100L)$offset(10L)$read()
 ```
 
 ### Filter [!DNL ExperienceEvent] data {#r-filter}
@@ -266,12 +264,13 @@ The following cell filters an [!DNL ExperienceEvent] dataset to data existing ex
 library(reticulate)
 use_python("/usr/local/bin/ipython")
 psdk <- import("platform_sdk")
-py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
-client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
+py_run_file("~/.ipython/profile_default/startup/platform_sdk_context.py")
 
+client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
 DatasetReader <- psdk$dataset_reader$DatasetReader
-dataset_reader <- DatasetReader(client_context, "{DATASET_ID}") 
-df <- dataset_reader$
+dataset_reader <- DatasetReader(py$get_platform_sdk_client_context(), dataset_id="{DATASET_ID}") 
+
+df0 <- dataset_reader$
     where(dataset_reader["timestamp"]$gt("2019-01-01 00:00:00")$
     And(dataset_reader["timestamp"]$lt("2019-12-31 23:59:59"))
 )$read()
@@ -404,28 +403,34 @@ val spark = SparkSession
 
 ### Read a dataset {#read-scala-dataset}
 
-In Scala, you can use `sys.env("PYDASDK_IMS_USER_TOKEN")` to declare and return a value, this eliminates the need to define variables such as `var userToken`. In the Scala example below, `sys.env` is used to define and return all the required values needed for reading a dataset.
+In Scala, you can import `clientContext` to get and return Platform values, this eliminates the need to define variables such as `var userToken`. In the Scala example below, `clientContext` is used to get and return all the required values needed for reading a dataset.
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
-val spark = SparkSession.builder().master("local").getOrCreate()
+import com.adobe.platform.token.ClientContext
+val spark = SparkSession.builder().master("local").config("spark.sql.warehouse.dir", "/").getOrCreate()
+
+val clientContext = ClientContext.getClientContext()
 val df1 = spark.read.format("com.adobe.platform.query")
-  .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
-  .option("ims-org", sys.env("IMS_ORG_ID"))
-  .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID"))
-  .option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN"))
+  .option("user-token", clientContext.getUserToken())
+  .option("ims-org", clientContext.getOrgId())
+  .option("api-key", clientContext.getApiKey())
+  .option("service-token", clientContext.getServiceToken())
   .option("mode", "interactive")
   .option("dataset-id", "5e68141134492718af974844")
   .load()
+
+df1.printSchema()
+df1.show(10)
 ```
 
 | element | description |
 | ------- | ----------- |
 | df1 | A variable that represents the Pandas dataframe used to read and write data. |
-| user-token | Your user token that is automatically fetched using `sys.env("PYDASDK_IMS_USER_TOKEN")`.  |
-| service-token | Your service token that is automatically fetched using `sys.env("PYDASDK_IMS_SERVICE_TOKEN")`. |
-| ims-org | Your ims-org id that is automatically fetched using `sys.env("IMS_ORG_ID")`. |
-| api-key | Your api key that is automatically fetched using `sys.env("PYDASDK_IMS_CLIENT_ID")`. |
+| user-token | Your user token that is automatically fetched using `clientContext.getUserToken()`.  |
+| service-token | Your service token that is automatically fetched using `clientContext.getServiceToken()`. |
+| ims-org | Your ims-org id that is automatically fetched using `clientContext.getOrgId()`. |
+| api-key | Your api key that is automatically fetched using `clientContext.getApiKey()`. |
 
 >[!TIP]
 >
@@ -433,18 +438,19 @@ val df1 = spark.read.format("com.adobe.platform.query")
 
 ### Write to a dataset {#scala-write-dataset}
 
-In Scala, you can use `sys.env("PYDASDK_IMS_USER_TOKEN")` to declare and return a value, this eliminates the need to define variables such as `var userToken`. In the Scala example below, `sys.env` is used to define and return all the required values needed for writing to a dataset.
+In Scala, you can import `clientContext` to get and return Platform values, this eliminates the need to define variables such as `var userToken`. In the Scala example below, `clientContext` is used to define and return all the required values needed for writing to a dataset.
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
+import com.adobe.platform.token.ClientContext
+val spark = SparkSession.builder().master("local").config("spark.sql.warehouse.dir", "/").getOrCreate()
 
-val spark = SparkSession.builder().master("local").getOrCreate()
-
+val clientContext = ClientContext.getClientContext()
 df1.write.format("com.adobe.platform.query")
-  .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
-  .option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN"))
-  .option("ims-org", sys.env("IMS_ORG_ID"))
-  .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID"))
+  .option("user-token", clientContext.getUserToken())
+  .option("service-token", clientContext.getServiceToken())
+  .option("ims-org", clientContext.getOrgId())
+  .option("api-key", clientContext.getApiKey())
   .option("mode", "interactive")
   .option("dataset-id", "5e68141134492718af974844")
   .save()
@@ -453,10 +459,10 @@ df1.write.format("com.adobe.platform.query")
 | element | description |
 | ------- | ----------- |
 | df1 | A variable that represents the Pandas dataframe used to read and write data. |
-| user-token | Your user token that is automatically fetched using `sys.env("PYDASDK_IMS_USER_TOKEN")`.  |
-| service-token | Your service token that is automatically fetched using `sys.env("PYDASDK_IMS_SERVICE_TOKEN")`. |
-| ims-org | Your ims-org id that is automatically fetched using `sys.env("IMS_ORG_ID")`. |
-| api-key | Your api key that is automatically fetched using `sys.env("PYDASDK_IMS_CLIENT_ID")`. |
+| user-token | Your user token that is automatically fetched using `clientContext.getUserToken()`.  |
+| service-token | Your service token that is automatically fetched using `clientContext.getServiceToken()`. |
+| ims-org | Your ims-org id that is automatically fetched using `clientContext.getOrgId()`. |
+| api-key | Your api key that is automatically fetched using `clientContext.getApiKey()`. |
 
 >[!TIP]
 >
