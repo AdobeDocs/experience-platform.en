@@ -2,6 +2,7 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Help
+breadcrumb-title: Experience Platform Guide
 user-guide-description: Adobe Experience Platform is the most powerful, flexible, and open system on the market for building and managing complete solutions that drive customer experience. Experience Platform enables organizations to centralize and standardize customer data and content from any system and apply data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
 ---
 
