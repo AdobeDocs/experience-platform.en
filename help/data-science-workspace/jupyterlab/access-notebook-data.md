@@ -32,7 +32,7 @@ The ad-hoc schema data was pre-processed using [!DNL Query Service] Create Table
 
 When reading datasets with PySpark and Scala notebooks, you have the option to use interactive mode or batch mode to read the dataset. Interactive is made for fast results whereas batch mode is for large datasets.
 
-- For PySpark and Scala notebooks, batch mode should be used when 5 million rows (~13.42GB data on disk) of XDM data or more is being read. For more information on the efficiency of each mode and ad-hoc data speeds, see the [PySpark](#pyspark-data-limits) or [Scala](#scala-data-limits) data limit tables below.
+- For PySpark and Scala notebooks, batch mode should be used when 5 million rows of data or more is being read. For more information on the efficiency of each mode, see the [PySpark](#pyspark-data-limits) or [Scala](#scala-data-limits) data limit tables below.
 
 ### [!DNL Python] notebook data limits
 
@@ -76,12 +76,12 @@ When reading datasets with PySpark and Scala notebooks, you have the option to u
 | SDK (Interactive mode)  | 33s    | 32.4s  | 55.1s | 253.5s| 489.2s| 729.6s| 1206.8s |    -    |    -     |   -    |  -     |
 | SDK (Batch mode)        | 815.8s | 492.8s |379.1s |637.4s |624.5s | 869.2s| 1104.1s | 1786s   | 5387.2s  |10624.6s| 50547s |
 
-**ad-hoc schema:** On Interactive mode you should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in less than 3 minutes. On Batch mode you should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in around 18 minutes.
+**ad-hoc schema:** On Interactive mode you should be able to read a maximum of 5 million rows (~5.36GB data on disk) of non-XDM data in less than 3 minutes. On Batch mode you should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in around 18 minutes.
 
 | Number of rows| 1K     | 10K     | 100K    | 1M    | 2M    | 3M    | 5M     | 10M    | 50M     | 100M   | 500M    | 1B    |
 |--------------|--------|---------|---------|-------|-------|-------|--------|--------|---------|--------|---------|-------|
 | Size On Disk | 1.12MB | 11.24MB | 109.48MB| 2.69GB| 2.14GB| 3.21GB| 5.36GB | 10.71GB| 53.58GB |107.52GB| 535.88GB| 1.05TB|
-| SDK Interactive mode (in seconds) | 28.2s  | 18.6s   |20.8s    |20.9s  |23.8s  |21.7s  |24.7s   | 22s    |28.4s    |40s     |97.4s    |154.5s |
+| SDK Interactive mode (in seconds) | 28.2s  | 18.6s   |20.8s    |20.9s  |23.8s  |21.7s  |24.7s   |  -  |  -  |  -   |  -  |  -  |
 | SDK Batch mode (in seconds) | 428.8s | 578.8s  |641.4s  |538.5s |630.9s |467.3s |411s    | 675s    |702s     |719.2s  |1022.1s  |1122.3s|
 
 ### [!DNL Spark] (Scala kernel) notebook data limits: {#scala-data-limits}
@@ -94,12 +94,12 @@ When reading datasets with PySpark and Scala notebooks, you have the option to u
 | SDK Interactive mode (in seconds) | 37.9s  | 22.7s  | 45.6s | 231.7s| 444.7s| 660.6s | 1100s  |     -   |    -     |   -    |  -     |
 | SDK Batch mode (in seconds) | 374.4s | 398.5s |527s   |487.9s |588.9s |829s   |939.1s   | 1441s    |5473.2s  |10118.8 |49207.6 |
 
-**ad-hoc schema:** On Interactive mode you should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in less than 3 minutes. On Batch mode you should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in around 16 minutes.
+**ad-hoc schema:** On Interactive mode you should be able to read a maximum of  5 million rows (~5.36GB data on disk) of non-XDM data in less than 3 minutes. On Batch mode you should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in around 16 minutes.
 
 | Number of rows | 1K     | 10K     | 100K    | 1M    | 2M    | 3M    | 5M      | 10M     | 50M     | 100M   | 500M    | 1B    |
 |--------------|--------|---------|---------|-------|-------|-------|---------|---------|---------|--------|---------|-------|
 | Size On Disk | 1.12MB | 11.24MB | 109.48MB| 2.69GB| 2.14GB| 3.21GB| 5.36GB  | 10.71GB | 53.58GB |107.52GB| 535.88GB| 1.05TB|
-| SDK Interactive mode (in seconds)   | 35.7s  | 31s     |19.5s    |25.3s  |23s    |33.2s  |25.5s    | 29.2s   |29.7s    |36.9s   |83.5s    |139s   |
+| SDK Interactive mode (in seconds)   | 35.7s  | 31s     |19.5s    |25.3s  |23s    |33.2s  |25.5s    |  -  |  -  |  -  |  -  |  -  |
 | SDK Batch mode (in seconds)   | 448.8s | 459.7s  |519s    |475.8s |599.9s |347.6s |407.8s   | 397s    |518.8s   |487.9s  |760.2s   |975.4s |
 
 ## Python notebooks {#python-notebook}
