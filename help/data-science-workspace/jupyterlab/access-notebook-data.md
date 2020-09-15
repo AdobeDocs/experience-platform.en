@@ -106,7 +106,7 @@ When reading datasets with PySpark and Scala notebooks, you have the option to u
 
 [!DNL Python] notebooks allow you to paginate data when accessing datasets. Sample code to read data with and without pagination is demonstrated below. For more information on the available starter Python notebooks, visit the [[!DNL JupyterLab] Launcher](./overview.md#launcher) section within the JupyterLab user guide.
 
-### Read from a dataset in Python
+### Read from a dataset in Python {#python-read-dataset}
 
 **Without pagination:**
 
@@ -136,13 +136,36 @@ dataset_reader = DatasetReader(client_context, "{DATASET_ID}")
 df = dataset_reader.limit(100).offset(10).read()
 ```
 
+### Write to a dataset in Python {#write-python}
+
+In order to write to a dataset in your JupyterLab notebook, select the Data tab in the left-navigation of JupyterLab. The **Datasets** and **Schemas** directories appear. Select Datasets and right-click, then select the **[!UICONTROL Write Data in Notebook]** option from the dropdown menu on the dataset you wish to use. An executable code entry appears at the bottom of your notebook. 
+
+![](../images/jupyterlab/data-access/write-dataset.png)
+
+- Use **[!UICONTROL Write Data in Notebook]** to generate a write cell with your selected dataset.
+- Use **[!UICONTROL Explore Data in Notebook]** to generate a read cell with your selected dataset.
+- use **[!UICONTROL Query Data in Notebook]** to generate a basic query cell with your selected dataset.
+
+Alternatively ,you can copy and paste the following code cell. Replace both the `{DATASET_ID}` and `{PANDA_DATAFRAME}`.
+
+```python
+from platform_sdk.models import Dataset
+from platform_sdk.dataset_writer import DatasetWriter
+
+dataset = Dataset(client_context).get_by_id("{DATASET_ID}")
+dataset_writer = DatasetWriter(client_context, dataset)
+write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
+```
+
 ### Query data using [!DNL Query Service] in [!DNL Python]
 
 [!DNL JupyterLab] on [!DNL Platform] allows you to use SQL in a [!DNL Python] notebook to access data through [Adobe Experience Platform Query Service](https://www.adobe.com/go/query-service-home-en). Accessing data through [!DNL Query Service] can be useful for dealing with large datasets due to its superior running times. Be advised that querying data using [!DNL Query Service] has a processing time limit of ten minutes.
 
 Before you use [!DNL Query Service] in [!DNL JupyterLab], ensure you have a working understanding of the [[!DNL Query Service] SQL syntax](https://www.adobe.com/go/query-service-sql-syntax-en).
 
-Querying data using [!DNL Query Service] requires you to provide the name of the target dataset. You can generate the necessary code cells by finding the desired dataset using the **[!UICONTROL Data explorer]**. Right click on the dataset listing and click **[!UICONTROL Query Data in Notebook]** to generate the following two code cells in your notebook:
+Querying data using [!DNL Query Service] requires you to provide the name of the target dataset. You can generate the necessary code cells by finding the desired dataset using the **[!UICONTROL Data explorer]**. Right click on the dataset listing and click **[!UICONTROL Query Data in Notebook]** to generate two code cells in your notebook. These two cells are outlined in more detail below.
+
+![](../images/jupyterlab/data-access/python-query-dataset.png)
 
 In order to utilize [!DNL Query Service] in [!DNL JupyterLab], you must first create a connection between your working [!DNL Python] notebook and [!DNL Query Service]. This can be achieved by executing the first generated cell.
 
@@ -210,7 +233,7 @@ R notebooks allow you to paginate data when accessing datasets. Sample code to r
 
 **Without pagination:**
 
-Executing the following code will read the entire dataset. If the execution is successful, then data will be saved as a Pandas dataframe referenced by the variable `df`.
+Executing the following code will read the entire dataset. If the execution is successful, then data will be saved as a Pandas dataframe referenced by the variable `df0`.
 
 ```R
 # R
@@ -227,7 +250,7 @@ head(df0)
 
 **With pagination:**
 
-Executing the following code will read data from the specified dataset. Pagination is achieved by limiting and offsetting data through the functions `limit()` and `offset()` respectively. Limiting data refers to the maximum number of data points to be read, while offsetting refers to the number of data points to skip prior to reading data. If the read operation executes successfully, then data will be saved as a Pandas dataframe referenced by the variable `df`.
+Executing the following code will read data from the specified dataset. Pagination is achieved by limiting and offsetting data through the functions `limit()` and `offset()` respectively. Limiting data refers to the maximum number of data points to be read, while offsetting refers to the number of data points to skip prior to reading data. If the read operation executes successfully, then data will be saved as a Pandas dataframe referenced by the variable `df0`.
 
 ```R
 # R
@@ -240,6 +263,24 @@ py_run_file("~/.ipython/profile_default/startup/platform_sdk_context.py")
 DatasetReader <- psdk$dataset_reader$DatasetReader
 dataset_reader <- DatasetReader(py$get_platform_sdk_client_context(), dataset_id="{DATASET_ID}") 
 df0 <- dataset_reader$limit(100L)$offset(10L)$read()
+```
+
+### Write to a dataset in R {#write-r}
+
+In order to write to a dataset in your JupyterLab notebook, select the Data tab in the left-navigation of JupyterLab. The **Datasets** and **Schemas** directories appear. Select Datasets and right-click, then select the **[!UICONTROL Write Data in Notebook]** option from the dropdown menu on the dataset you wish to use. An executable code entry appears at the bottom of your notebook. 
+
+![](../images/jupyterlab/data-access/r-write-dataset.png)
+
+- Use **[!UICONTROL Write Data in Notebook]** to generate a write cell with your selected dataset.
+- Use **[!UICONTROL Explore Data in Notebook]** to generate a read cell with your selected dataset.
+
+Alternatively ,you can copy and paste the following code cell.
+
+```R
+psdk <- import("platform_sdk")
+dataset <- psdk$models$Dataset(py$get_platform_sdk_client_context())$get_by_id(dataset_id="{DATASET_ID}")
+dataset_writer <- psdk$dataset_writer$DatasetWriter(py$get_platform_sdk_client_context(), dataset)
+write_tracker <- dataset_writer$write(df, file_format='json')
 ```
 
 ### Filter [!DNL ExperienceEvent] data {#r-filter}
@@ -323,6 +364,15 @@ A custom [!DNL Data Science Workspace] magic command for reading or writing a da
 
 - **Read example**: `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
 - **Write example**: `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
+
+You can auto generate the above examples in JupyterLab buy using the following method:
+
+Within your PySpark notebook select the **Datasets** directory. Next, find the dataset you wish to read or write from within the list of avaialable datasets. You can right-click, then select the **[!UICONTROL Write Data in Notebook]** or **[!UICONTROL Explore Data in Notebook]** option from the dropdown menu on the dataset you wish to use. An executable code entry appears at the bottom of your notebook.
+
+- Use **[!UICONTROL Explore Data in Notebook]** to generate a read cell.
+- Use **[!UICONTROL Write Data in Notebook]** to generate a write cell.
+
+![](../images/jupyterlab/data-access/pyspark-write-dataset.png)
 
 ### Create a local dataframe {#pyspark-create-dataframe}
 
@@ -435,6 +485,15 @@ df1.show(10)
 >[!TIP]
 >
 >Review the Scala tables within the [notebook data limits](#notebook-data-limits) section to determine if `mode` should be set to `interactive` or `batch`.
+
+You can auto generate the above example in JupyterLab buy using the following method:
+
+Within your PySpark notebook select the **Datasets** directory. Next, find the dataset you wish to read or write from within the list of avaialable datasets. You can right-click, then select the **[!UICONTROL Write Data in Notebook]** or **[!UICONTROL Explore Data in Notebook]** option from the dropdown menu on the dataset you wish to use. An executable code entry appears at the bottom of your notebook.
+
+- Use **[!UICONTROL Explore Data in Notebook]** to generate a read cell.
+- Use **[!UICONTROL Write Data in Notebook]** to generate a write cell.
+
+![](../images/jupyterlab/data-access/scala-write-dataset.png)
 
 ### Write to a dataset {#scala-write-dataset}
 
