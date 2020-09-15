@@ -68,7 +68,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **Response**
 
-A successful response will return HTTP status 200 with JSON objects containing path objects detailing where the diagnostics were saved.
+A successful response will return JSON objects detailing where the diagnostics were saved.
 
 ```json
 {
@@ -101,7 +101,7 @@ A successful response will return HTTP status 200 with JSON objects containing p
 
 ### Retrieve input file diagnostics {#retrieve-diagnostics}
 
-Once you have retrieved a list of all the different input files, you can retrieve the diagnostics of the individual file by using the following endpoint.
+Once you have retrieved a list of all the different input files, you can retrieve the diagnostics of the individual file by using the following request.
 
 **API format**
 
@@ -126,7 +126,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **Response**
 
-A successful response will return HTTP status 200 with JSON objects containing `path` objects detailing where the diagnostics were saved.
+A successful response will return JSON objects containing `path` objects detailing where the diagnostics were saved. The response will return the `path` objects in the [JSON Lines](https://jsonlines.org/) format.
 
 ```json
 {"path": "F1.json"}
@@ -163,7 +163,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/af838510-2
 
 **Response without errors**
 
-A successful response returns HTTP status 200 with detailed information about the batch's status.
+A successful response returns with detailed information about the batch's status.
 
 ```json
 {
@@ -302,7 +302,7 @@ If the batch ingested has an invalid schema or invalid headers, the batch's erro
 
 ### Unparsable rows {#unparsable}
 
-If the batch you ingested has unparsable rows, you can use the following endpoint to view a list of files that contain errors.
+If the batch you ingested has unparsable rows, you can use the following request to view a list of files that contain errors.
 
 **API format**
 
@@ -326,7 +326,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/01EFZ7W203P
 
 **Response**
 
-A successful response returns HTTP status 200 with a list of the files that have errors.
+A successful response returns a list of the files that have errors.
 
 ```json
 {
