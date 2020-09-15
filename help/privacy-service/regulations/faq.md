@@ -28,19 +28,19 @@ Personal data is any information related to a natural person or data subject tha
 
 The following identifiers are commonly used in Experience Cloud applications and could be subject to privacy regulation requirements:
 
-- Name
-- Postal address
-- Unique personal identifier
-- Online identifier
-- IP address
-- Email address
-- Account name
+* Name
+* Postal address
+* Unique personal identifier
+* Online identifier
+* IP address
+* Email address
+* Account name
 
 Personal information can also include internet or other electronic network activity information. This includes, but is not limited to:
 
-- Browsing history
-- Search history
-- Information regarding a consumer's interaction with a website, application, or advertisement
+* Browsing history
+* Search history
+* Information regarding a consumer's interaction with a website, application, or advertisement
 
 Even though privacy regulations cover a wide set of personal information, Adobe’s standard contract terms dictate that sensitive personal information (such as SSN, driver’s license information, financial account information, and biometric data) is generally prohibited from import and use in Experience Cloud applications.  
 
@@ -114,8 +114,8 @@ The following questions relate specifically to the CCPA.
 
 As defined by CCPA, the following roles apply to Adobe and its customers:
 
-- Adobe customers (the party requesting the collection and use of personal information from California residents) would be considered a **Business**.  
-- Adobe, in its role of providing the service, would be considered a **Service Provider**.    
+* Adobe customers (the party requesting the collection and use of personal information from California residents) would be considered a **Business**.  
+* Adobe, in its role of providing the service, would be considered a **Service Provider**.    
 
 As a Service Provider, Adobe collects and processes personal information on behalf of the Business and is contractually bound to use that information only for the specific purposes set out in the agreement.  
 
