@@ -488,7 +488,7 @@ df1.show(10)
 
 You can auto generate the above example in JupyterLab buy using the following method:
 
-Within your PySpark notebook select the **Datasets** directory. Next, find the dataset you wish to read or write from within the list of avaialable datasets. You can right-click, then select the **[!UICONTROL Write Data in Notebook]** or **[!UICONTROL Explore Data in Notebook]** option from the dropdown menu on the dataset you wish to use. An executable code entry appears at the bottom of your notebook.
+Within your Scala notebook select the **Datasets** directory. Next, find the dataset you wish to read or write from within the list of avaialable datasets. You can right-click, then select the **[!UICONTROL Write Data in Notebook]** or **[!UICONTROL Explore Data in Notebook]** option from the dropdown menu on the dataset you wish to use. An executable code entry appears at the bottom of your notebook.
 
 - Use **[!UICONTROL Explore Data in Notebook]** to generate a read cell.
 - Use **[!UICONTROL Write Data in Notebook]** to generate a write cell.
