@@ -126,7 +126,7 @@ Notice the diagonal of ones down the center. This shows that when comparing a va
 
 ### Feature engineering {#feature-engineering}
 
-In this section, you will be making modifications to your Retail dataset. You will perform the following operations:
+In this section, feature engineering is used to make modifications to your Retail dataset by performing the following operations:
 
 - add week and year columns
 - convert storeType to an indicator variable
@@ -135,7 +135,7 @@ In this section, you will be making modifications to your Retail dataset. You wi
 
 #### Add week and year columns
 
-The current format for date (`2010-02-05`) is hard to differentiate that the data is for every week. Because of this, you will convert the date to the week and year.
+The current format for date (`2010-02-05`) can make it hard to differentiate that the data is for every week. Because of this, you should convert the date to contain week and year.
 
 ![](./images/walkthrough/date_to_week_year.png)
 
@@ -145,11 +145,11 @@ Now the week and date are as follows:
 
 #### Convert storeType to indicator variable
 
-Next, you want to convert the storeType column to columns representing each `storeType`. There are 3 store types, (`A`, `B`, `C`), from which you are creating 3 new columns. The value set in each will be a boolean value where a '1' will be set depending on what the `storeType` was and `0` for the other 2 columns.
+Next, you want to convert the storeType column to columns representing each `storeType`. There are 3 store types, (`A`, `B`, `C`), from which you are creating 3 new columns. The value set in each is a boolean value where a '1' is set depending on what the `storeType` was and `0` for the other 2 columns.
 
 ![](./images/walkthrough/storeType.png)
 
-The current `storeType` column will be dropped.
+The current `storeType` column is dropped.
 
 #### Convert isHoliday to numeric type
 
@@ -160,11 +160,11 @@ The next modification is to change the `isHoliday` boolean to a numerical repres
 
 #### Predict weeklySales of next week
 
-Now you want to add previous and future weekly sales to each of your datasets. You are doing this by offsetting your `weeklySales`. Additionally, you are calculating the `weeklySales` difference. This is done by subtracting `weeklySales` with the previous week's `weeklySales`.
+Now you want to add previous and future weekly sales to each of your datasets. You are able to do this by offsetting your `weeklySales`. Additionally, the `weeklySales` difference is calculated. This is done by subtracting `weeklySales` with the previous week's `weeklySales`.
 
 ![](./images/walkthrough/weekly_past_future.png)
 
-Since you are offsetting the `weeklySales` data 45 datasets forwards and 45 datasets backwards to create new columns, the first and last 45 data points will have NaN values. You can remove these points from your dataset by using the `df.dropna()` function which removes all rows that have NaN values.
+Since you are offsetting the `weeklySales` data 45 datasets forwards and 45 datasets backwards to create new columns, the first and last 45 data points have NaN values. You can remove these points from your dataset by using the `df.dropna()` function which removes all rows that have NaN values.
 
 ![](./images/walkthrough/dropna.png)
 
@@ -174,7 +174,7 @@ A summary of the dataset after your modifications is shown below:
 
 ### Training and verification {#training-and-verification}
 
-Now, it is time to create some models of the data and select which model is the best performer for predicting future sales. We will evaluate the 5 following algorithms:
+Now, it is time to create some models of the data and select which model is the best performer for predicting future sales. You will evaluate the 5 following algorithms:
 
 - Linear Regression
 - Decision Tree
@@ -192,25 +192,25 @@ You now have `X_train` and `y_train` for preparing the models and `X_test` and `
 
 #### Spot check algorithms
 
-In this section, you will declare all the algorithms into an array called `model`. Next, you iterate through this array and for each algorithm, input your training data with `model.fit()` which creates a model `mdl`. Using this model, you will predict `weeklySalesAhead` with your `X_test` data.
+In this section, you declare all the algorithms into an array called `model`. Next, you iterate through this array and for each algorithm, input your training data with `model.fit()` which creates a model `mdl`. Using this model, you can predict `weeklySalesAhead` with your `X_test` data.
 
 ![](./images/walkthrough/training_scoring.png)
 
-For the scoring, you are taking the mean percentage difference between the predicted `weeklySalesAhead` with the actual values in the `y_test` data. Since you want to minimize the difference between your prediction and the actual, Gradient Boosting Regressor is the best performing model.
+For the scoring, you are taking the mean percentage difference between the predicted `weeklySalesAhead` with the actual values in the `y_test` data. Since you want to minimize the difference between your prediction and the actual outcome, Gradient Boosting Regressor is the best performing model.
 
 #### Visualize predictions
 
-Finally, we will visualize your prediction model with the actual youekly sales values. The blue line represents the actual numbers, while the green represents your prediction using Gradient Boosting. The following code generates 6 plots which represent 6 of the 45 stores in your dataset. Only `Store 1` is shown here:
+Finally, you visualize your prediction model with the actual weekly sales values. The blue line represents the actual numbers, while the green represents your prediction using Gradient Boosting. The following code generates 6 plots which represent 6 of the 45 stores in your dataset. Only `Store 1` is shown here:
 
 ![](./images/walkthrough/visualize_prediction.png)
 
-<!--TODO UI Flow> -->
+## Next steps
 
-## Conclusion
+This document covered a general data scientist workflow to solve a retail sales problem. To summarize:
 
-With this overview, you went over the workflow that a data scientist would go through to solve a retail sales problem. Specifically, you went over the following steps to reach a solution that predicts future weekly sales.
+* Load the libraries required for your workflow.
+* After the libraries are loaded, you can start looking at the data using statistical summaries, visualizations, and graphs.
+* Next, feature engineering is used to make modifications to your Retail dataset.
+* Lastly, create models of the data and select which model is the best performer for predicting future sales.
 
-- [Setup](#setup)
-- [Exploring Data](#exploring-data)
-- [Feature Engineering](#feature-engineering)
-- [Training and Verification](#training-and-verification)
+Once you are ready, start by reading the [JupyterLab user guide](./jupyterlab/overview.md) for a quick overview of notebooks in Adobe Experience Platform Data Science Workspace. Additionally, if you are interested in learning about Models and Recipes, start by reading the [retail sales schema and dataset](./models-recipes/create-retails-sales-dataset.md) tutorial. This tutorial prepares you for subsequent Data Science Workspace tutorials which can be viewed from the Data Science Workspace [tutorials page](../tutorials/data-science-workspace.md)
