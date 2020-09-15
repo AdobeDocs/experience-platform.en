@@ -106,6 +106,13 @@ When reading datasets with PySpark and Scala notebooks, you have the option to u
 
 [!DNL Python] notebooks allow you to paginate data when accessing datasets. Sample code to read data with and without pagination is demonstrated below. For more information on the available starter Python notebooks, visit the [[!DNL JupyterLab] Launcher](./overview.md#launcher) section within the JupyterLab user guide.
 
+The Python documentation below outlines the following concepts:
+
+- [Read from a dataset](#python-read-dataset)
+- [Write to a dataset](#write-python)
+- [Query data](#query-data-python)
+- [Filter ExperienceEvent data](#python-filter)
+
 ### Read from a dataset in Python {#python-read-dataset}
 
 **Without pagination:**
@@ -157,7 +164,7 @@ dataset_writer = DatasetWriter(client_context, dataset)
 write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 ```
 
-### Query data using [!DNL Query Service] in [!DNL Python]
+### Query data using [!DNL Query Service] in [!DNL Python] {#query-data-python}
 
 [!DNL JupyterLab] on [!DNL Platform] allows you to use SQL in a [!DNL Python] notebook to access data through [Adobe Experience Platform Query Service](https://www.adobe.com/go/query-service-home-en). Accessing data through [!DNL Query Service] can be useful for dealing with large datasets due to its superior running times. Be advised that querying data using [!DNL Query Service] has a processing time limit of ten minutes.
 
@@ -229,7 +236,13 @@ df = dataset_reader.\
 
 R notebooks allow you to paginate data when accessing datasets. Sample code to read data with and without pagination is demonstrated below. For more information on the available starter R notebooks, visit the [[!DNL JupyterLab] Launcher](./overview.md#launcher) section within the JupyterLab user guide.
 
-### Read from a dataset in R
+The R documentation below outlines the following concepts:
+
+- [Read from a dataset](#r-read-dataset)
+- [Write to a dataset](#write-r)
+- [Filter ExperienceEvent data](#r-filter)
+
+### Read from a dataset in R {#r-read-dataset}
 
 **Without pagination:**
 
@@ -274,7 +287,7 @@ In order to write to a dataset in your JupyterLab notebook, select the Data tab 
 - Use **[!UICONTROL Write Data in Notebook]** to generate a write cell with your selected dataset.
 - Use **[!UICONTROL Explore Data in Notebook]** to generate a read cell with your selected dataset.
 
-Alternatively ,you can copy and paste the following code cell.
+Alternatively ,you can copy and paste the following code cell:
 
 ```R
 psdk <- import("platform_sdk")
@@ -319,7 +332,7 @@ df0 <- dataset_reader$
 
 ## PySpark 3 notebooks {#pyspark-notebook}
 
-The documentation below outlines the following concepts:
+The PySpark documentation below outlines the following concepts:
 
 - [Initialize sparkSession](#spark-initialize)
 - [Read and write data](#magic)
