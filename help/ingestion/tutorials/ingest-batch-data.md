@@ -146,4 +146,3 @@ To learn more about batch ingestion, please read the [Batch Ingestion overview](
 >The [!DNL Platform] UI shown in the following video is out-of-date. Please refer to the documentation above for the latest UI screenshots and functionality.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)
-drag
