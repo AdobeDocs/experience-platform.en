@@ -282,7 +282,7 @@ If the batch has one or more errors and has error diagnostics enabled, the respo
 >        "description": "Encountered errors while parsing, converting or otherwise validating the data. Please resend the data with error diagnostics enabled to collect additional information on failure types"
 >    }]
 >}
-> ```
+>```
 
 ## Partial batch ingestion error types {#appendix}
 
