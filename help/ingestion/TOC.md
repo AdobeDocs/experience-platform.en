@@ -30,6 +30,7 @@ user-guide-description: Adobe Experience Platform brings data from multiple sour
 - Data ingestion quality and monitoring{#quality}
     - [Overview](quality/overview.md)
     - [Monitor data flows](quality/monitor-data-flows.md)
+    - [Retrieve error diagnostics](quality/error-diagnostics.md)
     - [Retrieve failed batches](quality/retrieve-failed-batches.md)
     - [Streaming ingestion validation](quality/streaming-validation.md)
     - [Subscribe to data ingestion events](quality/subscribe-events.md)
