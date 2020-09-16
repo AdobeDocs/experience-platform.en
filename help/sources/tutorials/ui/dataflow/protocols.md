@@ -70,7 +70,7 @@ Based on your needs, you can choose to map fields directly, or use mapper functi
 
 >[!TIP]
 >
->[!DNL Platform] provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust flexible auto-mapping rules to suit your use cases.
+>[!DNL Platform] provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
 
 Once your source data is mapped, select **[!UICONTROL Next]**.
 

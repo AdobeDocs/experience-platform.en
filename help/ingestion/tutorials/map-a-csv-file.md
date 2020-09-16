@@ -56,7 +56,7 @@ The **[!UICONTROL Mapping]** step appears. The columns of the CSV file are liste
 
 >[!TIP]
 >
->[!DNL Platform] provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust flexible auto-mapping rules to suit your use cases.
+>[!DNL Platform] provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
 
 To map a CSV column to an XDM field, select the schema icon next to the column's corresponding target field.
 
