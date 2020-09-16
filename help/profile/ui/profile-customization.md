@@ -96,11 +96,7 @@ After saving, you are returned to the [!UICONTROL Detail] tab where your new car
 
 ## Restore default cards
 
-If at any point you decide that you would like to remove your edits and return to the default view, you have the ability to quickly and easily restore all default cards and attributes. To do so, select **[!UICONTROL Modify dashboard]**, then select **[!UICONTROL Restore default cards]**. This will remove all customizations (including resizing) that you have made. You can then select **[!UICONTROL Save]** to save your changes, or if you do not wish to restore the default, select **[!UICONTROL Cancel]** to keep the edits that you have made.
-
->[!NOTE]
->
->Exercise caution when restoring default cards and attributes. Once the default has been restored and saved, the only way to return to your view customizations is to create them again using the steps outlined in this document.
+If at any point you decide that you would like to restore default cards that have since been removed, you have the ability to quickly and easily do so. First, select **[!UICONTROL Modify dashboard]**, then select **[!UICONTROL Restore default cards]**. Once the default cards are visible, you can select **[!UICONTROL Save]** to save your changes or select **[!UICONTROL Cancel]** if you do not wish to restore the default cards.
 
 ![](../images/profile-customization/profiles-restore-default.png)
 
