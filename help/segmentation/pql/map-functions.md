@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;map functions;map;
 solution: Experience Platform
 title: Map functions
 topic: developer guide
@@ -7,7 +7,7 @@ topic: developer guide
 
 # Map functions
 
-[!DNL Profile Query Language] (PQL) offers functions to make interaction with maps easier. More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
+[!DNL Profile Query Language] (PQL) offers functions to make interaction with maps easier. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Get
 

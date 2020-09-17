@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics; analytics; classifications
+keywords: Experience Platform;home;popular topics; analytics;classifications
 description: This tutorial provides steps for creating an Adobe Analytics Classifications Data connector in the UI to bring classifications data into Adobe Experience Platform.
 solution: Experience Platform
 title: Create an Adobe Analytics Classifications Data connector in the UI
@@ -14,7 +14,7 @@ This tutorial provides steps for creating an Adobe Analytics Classifications Dat
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-*   [[!DNL Experience Data Model (XDM) System]](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+*   [[!DNL Experience Data Model] (XDM) System](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
 *   [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 *   [[!DNL Sandboxes]](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
@@ -50,7 +50,7 @@ Once you have reviewed your dataflow, click **[!UICONTROL Finish]** and allow so
 
 ![](../../../../images/tutorials/create/classifications/review.png)
 
-## Monitor and delete your classifications dataflow
+## Monitor your classifications dataflow
 
 Once your dataflow has been created, you can monitor the data that is being ingested through it. From the **[!UICONTROL Catalog]** screen, select **[!UICONTROL Dataflows]** to view a list of established flows associated with your [!DNL Classifications] account.
 
@@ -62,13 +62,14 @@ Select the **[!UICONTROL Target dataset]** you wish to access.
 
 ![](../../../../images/tutorials/create/classifications/list-of-dataflows.png)
 
-The **[!UICONTROL Dataset activity]** page displays information about the target dataset you selected, including details about its batch status, dataset ID, and schema. Select **[!UICONTROL Delete dataset]** to delete.
+The **[!UICONTROL Dataset activity]** page displays information about the target dataset you selected, including details about its batch status, dataset ID, and schema.
 
-![](../../../../images/tutorials/create/classifications/batch-screen.png)
+>[!IMPORTANT]
+>
+>While deleting datasets is possible for other source connectors, it is currently not supported for Analytics Classifications Data connector. If you do delete a dataset by mistake, please contact Adobe Customer Care.
 
-A dialog box appears confirming the deletion. Select **[!UICONTROL Delete]** to complete.
+![](../../../../images/tutorials/create/classifications/dataset.png)
 
-![](../../../../images/tutorials/create/classifications/delete-confirm.png)
 
 ## Next steps
 

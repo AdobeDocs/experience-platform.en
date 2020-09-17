@@ -1,13 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;HP Vertica;hp vertica
 solution: Experience Platform
 title: HP Vertica connector
 topic: overview
+description: The documentation below provides information on how to connect HP Vertica to Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL HP Vertica] connector
 
 >[!NOTE]
+>
 >The [!DNL HP Vertica] connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Adobe Experience Platform provides native connectivity for database providers like [!DNL Microsoft], MySQL, and [!DNL Azure]. You can bring your data from these systems into [!DNL Platform].

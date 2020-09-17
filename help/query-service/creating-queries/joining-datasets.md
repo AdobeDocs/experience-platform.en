@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;joining datasets;joining dataset;
 solution: Experience Platform
 title: Joining datasets
 topic: queries

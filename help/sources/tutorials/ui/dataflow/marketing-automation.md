@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;marketing automation connector
 solution: Experience Platform
 title: Configure a dataflow for a marketing automation connector in the UI
 topic: overview
+description: A dataflow is a scheduled task that retrieves and ingests data from a source to a [!DNL Platform] dataset. This tutorial provides steps to configure a new dataflow using your marketing automation account.
 ---
 
 # Configure a dataflow for a marketing automation connector in the UI
@@ -27,9 +28,15 @@ After creating your marketing automation account, the *Select data* step appears
 - The left half of the interface is a directory browser, displaying your server's files and directories.
 - The right half of the interface lets you preview up to 100 rows of data from a compatible file.
 
-Select the directory you wish to use, then click **[!UICONTROL Next]**.
+You can use the **[!UICONTROL Search]** option on the top of the page to quickly identify the source data you intend to use.
 
-![select-data](../../../images/tutorials/dataflow/marketing-automation/select-data.png)
+>[!NOTE]
+>
+>The search source data option is available to all tabular-based source connectors excluding the Analytics, Classifications, Event Hubs, and Kinesis connectors.
+
+Once you find the source data, select the directory, then click **[!UICONTROL Next]**.
+
+![select-data](../../../images/tutorials/dataflow/all-tabular/select-data.png)
 
 ## Map data fields to an XDM schema
 
@@ -61,9 +68,13 @@ The **[!UICONTROL Select schema]** dialog appears. Select the schema you wish to
 
 Based on your needs, you can choose to map fields directly, or use mapper functions to transform source data to derive computed or calculated values. For more information on data mapping and mapper functions, refer to the tutorial on [mapping CSV data to XDM schema fields](../../../../ingestion/tutorials/map-a-csv-file.md).
 
-Once your source data is mapped, click **[!UICONTROL Next]**.
+>[!TIP]
+>
+>[!DNL Platform] provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
 
-![](../../../images/tutorials/dataflow/all-tabular/mapping-updated.png)
+Once your source data is mapped, select **[!UICONTROL Next]**.
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
 
 ## Schedule ingestion runs
 
@@ -101,7 +112,7 @@ Once you have provided appropriate values to the schedule, select **[!UICONTROL 
 
 The **[!UICONTROL Dataflow detail]** step appears, allowing you to name and give a brief description about your new dataflow.
 
-During this process, you can also enable **[!UICONTROL Partial ingestion]** and **[!UICONTROL Error diagnostics]**. Enabling **[!UICONTROL Partial ingestion]** provides the ability to ingest data containing errors up to a certain threshold. Once **[!UICONTROL Partial ingestion]** is enabled, drag the *[!UICONTROL Error threshold %]* dial to adjust the error threshold of the batch. Alternatively, you can manually adjust the threshold by selecting the input box. For more information, see the [partial batch ingestion overview](../../../../ingestion/batch-ingestion/partial.md).
+During this process, you can also enable **[!UICONTROL Partial ingestion]** and **[!UICONTROL Error diagnostics]**. Enabling **[!UICONTROL Partial ingestion]** provides the ability to ingest data containing errors up to a certain threshold. Once **[!UICONTROL Partial ingestion]** is enabled, drag the **[!UICONTROL Error threshold %]** dial to adjust the error threshold of the batch. Alternatively, you can manually adjust the threshold by selecting the input box. For more information, see the [partial batch ingestion overview](../../../../ingestion/batch-ingestion/partial.md).
 
 Provide values for the dataflow and select **[!UICONTROL Next]**.
 

@@ -3,6 +3,7 @@ title: Retrieving library information
 seo-title: Retrieving library information with Adobe Experience Platform Web SDK
 description: Learn how to retrieve information about the library loaded onto the website
 seo-description: Learn how to retrieve information about the library loaded onto the website by The Adobe Experience Cloud SDK collects automatically
+keywords: library; library information;getLibraryInfo;libraryInfo;
 ---
 
 # Retrieving library information

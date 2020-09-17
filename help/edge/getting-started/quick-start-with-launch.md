@@ -3,6 +3,7 @@ title: Quick start with Launch
 seo-title: Adobe Experience Platform Web SDK quick start with Launch
 description: Quick start guide for using the Experience Platform Web SDK extension to collect data
 seo-description: Quick start guide for using the Experience Platform Web SDK extension to collect data
+keywords: 1st-party domain;CNAME;schema;create schema;launch;aep web sdk extension;extension;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;
 ---
 
 # Welcome

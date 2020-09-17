@@ -1,13 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Apache Hive;Hive;hive;Azure HDInsights;azure hdinsights;
 solution: Experience Platform
 title: Apache Hive on Azure HDInsights connector
 topic: overview
+description: The documentation below provides information on how to connect Apache Hive on Azure HDInsights to Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL Apache Hive] on [!DNL Azure HDInsights] connector
 
 >[!NOTE]
+>
 >The Apache Hive on Azure HDInsights connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.

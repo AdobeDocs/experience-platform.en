@@ -1,13 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;SFTP;FTP;ftp;sftp
 solution: Experience Platform
 title: Create an FTP or SFTP source connector in the UI
 topic: overview
+description: This tutorial provides steps for creating a FTP or SFTP source connector using the Platform user interface.
 ---
 
 # Create an FTP or SFTP source connector in the UI
 
 >[!NOTE]
+>
 >The FTP and SFTP connectors are in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a FTP or SFTP source connector using the [!DNL Platform] user interface.

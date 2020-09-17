@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
 solution: Experience Platform
 title: Policies
 topic: developer guide
+description: Once marketing actions have been created and policies have been defined, you can use the Policy Service API to evaluate if any policies are violated by certain actions. The returned constraints take the form of a set of policies that would be violated by attempting the marketing action on the specified data containing data usage labels.
 ---
 
 # Policy evaluation endpoints
@@ -45,7 +46,7 @@ The example request below evaluates a marketing action against the labels C1 and
 >
 >Be aware of the `AND` and `OR` operators in your policy expressions. In the example below, if either label (`C1` or `C3`) had appeared alone in the request, the marketing action would not have violated this policy. It takes both labels (`C1` and `C3`) to return the violated policy. Ensure you are evaluating policies carefully and defining policy expressions with equal care.
 
-```sh
+```shell
 curl -X GET \
   'https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/sampleMarketingAction/constraints?duleLabels=C1,C3' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -133,7 +134,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 The following request performs the `crossSiteTargeting` marketing action against a set of three datasets to evaluate for any policy violations.
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -364,7 +365,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 The following request tests the marketing action `crossSiteTargeting` on a specific set of fields belonging to three datasets. The payload is similar to an [evaluation request involving only datasets](#datasets), adding specific fields for each dataset to collect labels from.
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -533,7 +534,7 @@ The payload of a bulk evaluation request should be an array of objects; one for 
 >
 >If any listed evaluation job contains both an `entityList` and a `labels` array, an error will result. If you wish to evaluate the same marketing action based on both datasets and labels, you must include separate evaluation jobs for that marketing action.
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/bulk-eval \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \

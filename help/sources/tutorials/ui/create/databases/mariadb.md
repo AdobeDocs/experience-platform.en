@@ -1,13 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Maria DB;maria db
 solution: Experience Platform
 title: Create a MariaDB source connector in the UI
 topic: overview
+description: This tutorial provides steps for creating a Maria DB source connector using the Platform user interface.
 ---
 
 # Create a [!DNL MariaDB] source connector in the UI
 
 >[!NOTE]
+>
 > The [!DNL MariaDB] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a Maria DB source connector using the [!DNL Platform] user interface.

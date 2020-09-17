@@ -14,10 +14,10 @@ author: ens71067
 
 Updates to existing features in Adobe Experience Platform:
 
-* [!DNL Segmentation Service](#segmentation)
-* [!DNL Decisioning Service](#decisioning)
-* [!DNL Sources](#sources)
-* [!DNL Experience Data Model (XDM) System](#xdm)
+* [[!DNL Segmentation Service]](#segmentation)
+* [[!DNL Decisioning Service]](#decisioning)
+* [[!DNL Sources]](#sources)
+* [[!DNL Experience Data Model (XDM) System]](#xdm)
 
 ## [!DNL Segmentation Service] {#segmentation}
 
@@ -30,7 +30,7 @@ Adobe Experience Platform Segmentation Service provides a user interface and RES
 |Feature | Description|
 |--- | ---|
 |Merged Audiences tab in [!DNL Segment Builder] | The [!UICONTROL _Segments_] and [!UICONTROL _Audiences_] tabs in the [!DNL Segment Builder] have been combined into a single [!UICONTROL _Audiences_] tab. This tab allows you to browse and search for existing audiences, which you can then drag and drop into the rule builder canvas to create a new segment definition. Referencing an audience can add one of the following sets of rule logic to the new segment definition: Audience membership as a rule, The full set of rule logic that defined the referenced audience.|
-|New location for the merge policy selector | The location of the merge policy selector in the [!DNL Segment Builder] has been changed. To select a merge policy for a segment definition, click the gear icon on the [!UICONTROL _Fields_] tab, then use the _[!UICONTROL Merge Policy]_ dropdown menu to select the merge policy that you wish to use.|
+|New location for the merge policy selector | The location of the merge policy selector in the [!DNL Segment Builder] has been changed. To select a merge policy for a segment definition, click the gear icon on the **[!UICONTROL Fields]** tab, then use the **[!UICONTROL Merge Policy]** dropdown menu to select the merge policy that you wish to use.|
 
 **Known issues**
 

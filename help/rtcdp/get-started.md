@@ -209,7 +209,7 @@ The Luma data science team has created models around propensity to buy. One mode
 
 Modify or create a segment that represents cart abandoners who appear to be in the process of buying a gift:  
 
-```
+```sql
 Profile: Category != Preferred Category 
 AND 
 Product Size != Preferred Size 
@@ -250,6 +250,7 @@ In this scenario, Luma wants to retarget this audience with personalization acro
 You can also schedule the segment to start or end at a particular time. The segment will be posted and automatically update in the configured platforms on the scheduled dates. 
 
 >[!NOTE]
+>
 >Optionally, if you click in the date field, it automatically schedules for 90 days out. 
 
 Click **[!UICONTROL Save]** to go to the next page. 

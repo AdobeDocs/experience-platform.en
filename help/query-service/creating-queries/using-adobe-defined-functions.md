@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;adobe defined functions;query;using adobe defined functions;
 solution: Experience Platform
 title: Adobe-defined functions
 topic: queries
@@ -149,7 +149,7 @@ Pathing helps to understand how customers navigate your site. The `NEXT()` and `
 
 **Syntax:**
 
-```
+```sql
 NEXT(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])
 PREVIOUS(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])
 ```

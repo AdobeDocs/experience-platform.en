@@ -5,7 +5,7 @@ title: Connect to streaming destinations and activate data
 topic: tutorial
 ---
 
-# Connect to streaming destinations and activate data in Adobe's Real-time Customer Data Platform using APIs
+# Connect to streaming destinations and activate data using API calls in Adobe's Real-time Customer Data Platform
 
 >[!NOTE]
 >
@@ -23,8 +23,8 @@ If you prefer to use the user interface in Adobe's Real-time CDP to connect to a
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-*   [!DNL Experience Data Model (XDM) System](../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-*   [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] is the system of record for data location and lineage within Experience Platform.
+*   [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+*   [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] is the system of record for data location and lineage within Experience Platform.
 *   [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to activate data to streaming destinations in Adobe Real-time CDP.
@@ -78,15 +78,13 @@ GET /connectionSpecs
 
 **Request** 
 
-```
-
+```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs' \
 --header 'accept: application/json' \
 --header 'x-gw-ims-org-id: {IMS_ORG}' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}'
-
 ```
 
 
@@ -130,8 +128,7 @@ POST /connections
 
 **Request**
 
-```
-
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -146,7 +143,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
                 "version": "1.0"
             }
 }'
-
 ```
 
 
@@ -172,7 +168,7 @@ POST /sourceConnections
 
 **Request**
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -227,7 +223,7 @@ POST /connections
 
 **Request**
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -286,7 +282,7 @@ POST /targetConnections
 
 **Request**
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -404,7 +400,7 @@ PATCH /flows
 
 **Request**
 
-```
+```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -465,7 +461,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 *   `{DATAFLOW_ID}`: Use the data flow you obtained in the previous step.
 *   `{ETAG}`: Use the etag that you obtained in the previous step.
-*   `{SEGMENT_ID}`: Provide the segment ID that you want to export to this destination. To retrieve segment IDs for the segments that you want to activate, go to https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/, select **[!UICONTROL Segmentation Service API]** in the left navigation menu, and look for the `GET /segment/jobs` operation.
+*   `{SEGMENT_ID}`: Provide the segment ID that you want to export to this destination. To retrieve segment IDs for the segments that you want to activate, go to **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, select **[!UICONTROL Segmentation Service API]** in the left navigation menu, and look for the `GET /segment/definitions` operation in **[!UICONTROL Segment Definitions]**.
 *   `{PROFILE_ATTRIBUTE}`: For example, `personalEmail.address` or `person.lastName`
 
 **Response**
@@ -488,7 +484,7 @@ GET /flows
 
 **Request**
 
-```
+```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -505,7 +501,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 The returned response should include in the `transformations` parameter the segments and profile attributes that you submitted in the previous step. A sample `transformations` parameter in the response could look like below:
 
-```
+```json
 "transformations": [
     {
         "name": "GeneralTransform",
@@ -551,8 +547,7 @@ The returned response should include in the `transformations` parameter the segm
 >
 > In addition to the profile attributes and the segments in the step [Activate data to your new destination](#activate-data), the exported data in [!DNL AWS Kinesis] and [!DNL Azure Event Hubs] will also include information about the identity map. This represents the identities of the exported profiles (for example [ECID](https://docs.adobe.com/content/help/en/id-service/using/intro/id-request.html), mobile ID, Google ID, email address, etc.). See an example below.
 
-```
-
+```json
 {
   "person": {
     "email": "yourstruly@adobe.con"
@@ -588,8 +583,6 @@ The returned response should include in the `transformations` parameter the segm
     ]
   }
 }
-
-
 ```
 
 ## Next steps

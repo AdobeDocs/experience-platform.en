@@ -8,15 +8,15 @@ description: Identity namespaces are a component of Identity Service that serve 
 
 # Identity namespace overview
 
-Identity namespaces are a component of [!DNL Identity Service](./home.md) that serve as indicators of the context to which an identity relates. For example, they distinguish a value of "name<span>@email.com" as an email address or "443522" as a numeric CRM ID. 
+Identity namespaces are a component of [[!DNL Identity Service]](./home.md) that serve as indicators of the context to which an identity relates. For example, they distinguish a value of "name<span>@email.com" as an email address or "443522" as a numeric CRM ID. 
 
 ## Getting started
 
 Working with identity namespaces requires an understanding of the various Adobe Experience Platform services involved. Before beginning to work with namespaces, please review the documentation for the following services:
 
-- [!DNL Real-time Customer Profile](../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
-- [!DNL Identity Service](./home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
-- [!DNL Privacy Service](../privacy-service/home.md): Identity namespaces are used to comply with General Data Protection Regulation (GDPR), where GDPR requests can be made relative to a namespace. 
+- [[!DNL Real-time Customer Profile]](../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
+- [[!DNL Identity Service]](./home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
+- [[!DNL Privacy Service]](../privacy-service/home.md): Identity namespaces are used to comply with General Data Protection Regulation (GDPR), where GDPR requests can be made relative to a namespace. 
 
 ## Understanding identity namespaces
 
@@ -42,11 +42,11 @@ The following identity types are available within [!DNL Platform]:
 | Non-people| Used for storing identifiers that need namespaces, yet are not tied to a person cluster. These identifiers are then filtered from the identity graph. Possible use cases include data related to products, organizations, stores, etc. (For example, a product SKU.) |
 | Phone | Identities of this type include PII. This is indication to [!DNL Identity Service] to handle the value sensitively.|
 
-### Standard namespaces
+### Standard namespaces {#standard}
 
 Adobe Experience Platform provides several identity namespaces that are available to all organizations. These are known as Standard namespaces and are visible using the [!DNL Identity Service] API or through the [!DNL Platform] UI.
 
-To view Standard namespaces in the UI, click **[!UICONTROL Identities]** in the left-rail and then click on the *[!UICONTROL Browse]* tab. All identity namespaces accessible to your organization will be shown, however those with "[!UICONTROL Standard]" as the "[!UICONTROL Owner]" are the Standard namespaces provided by Adobe.
+To view Standard namespaces in the UI, click **[!UICONTROL Identities]** in the left-rail and then click on the **[!UICONTROL Browse]** tab. All identity namespaces accessible to your organization will be shown, however those with "[!UICONTROL Standard]" as the "[!UICONTROL Owner]" are the Standard namespaces provided by Adobe.
 
 You can then click on one of the namespaces listed to view details.
 
@@ -64,7 +64,7 @@ Namespaces that you define are private to your organization and require a unique
 
 ![](./images/create-identity-namespace.png)
 
-Similar to Standard namespaces, you can click on a Custom namespace from the *[!UICONTROL Browse]* tab to view its details, however with a Custom namespace you can also edit its Display Name and Description from the details area.
+Similar to Standard namespaces, you can click on a Custom namespace from the **[!UICONTROL Browse]** tab to view its details, however with a Custom namespace you can also edit its Display Name and Description from the details area.
 
 >[!NOTE]
 >

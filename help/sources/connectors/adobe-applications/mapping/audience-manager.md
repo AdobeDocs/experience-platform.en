@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Audience Manager mapping;audience manager mapping
 solution: Experience Platform
 title: Audience Manager mapping field
 topic: overview
+description: The tables below contain the mappings between the fields in Adobe Audience Manager data (Realtime, Onboarded, and Profile data) and their corresponding XDM fields.
 ---
 
 # Audience Manager mapping fields

@@ -1,13 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Data Explorer;azure data explorer;data explorer;Data Explorer
 solution: Experience Platform
 title: Create an Azure Data Explorer source connector in the UI
 topic: overview
+description: This tutorial provides steps for creating an Azure Data Explorer (hereinafter referred to as "Data Explorer") source connector using the Platform user interface.
 ---
 
 # Create an [!DNL Azure Data Explorer] source connector in the UI
 
 >[!NOTE]
+>
 > The [!DNL Azure Data Explorer] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an [!DNL Azure Data Explorer] (hereinafter referred to as "[!DNL Data Explorer]") source connector using the [!DNL Platform] user interface.

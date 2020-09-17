@@ -3,7 +3,7 @@ keywords: Confirmit Digital Feedback;confirmit extension;confirmit
 title: Confirmit Digital Feedback extension
 seo-title: Confirmit Digital Feedback extension
 description: The Confirmit Digital Feedback extension is a Voice of the Customer destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: 
+seo-description: The Confirmit Digital Feedback extension is a Voice of the Customer destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Confirmit Digital Feedback] Extension

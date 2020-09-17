@@ -3,6 +3,7 @@ title: Supporting consent
 seo-title: Supporting Adobe Experience Platform Web SDK consent preference
 description: Learn how to support consent preferences with Experience Platform Web SDK
 seo-description: Learn how to support consent preferences with Experience Platform Web SDK
+keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 ---
 
 # Supporting Consent
@@ -18,13 +19,13 @@ If the user opts out of all purposes, the SDK does not perform any of these task
 
 ## Configuring Consent
 
-By default the user is opted in to all purposes. To prevent the SDK from performing the above tasks until the user opts in, pass `"defaultConsent": { "general": "pending" }` during SDK configuration as follows:
+By default the user is opted in to all purposes. To prevent the SDK from performing the above tasks until the user opts in, pass `"defaultConsent": "pending"` during SDK configuration as follows:
 
 ```javascript
 alloy("configure", {
   "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "imsOrgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "defaultConsent": { "general": "pending" }
+  "defaultConsent": "pending"
 });
 ```
 

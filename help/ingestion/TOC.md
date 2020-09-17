@@ -2,6 +2,8 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Data Ingestion Help
+breadcrumb-title: Data Ingestion Guide
+user-guide-description: Adobe Experience Platform brings data from multiple sources together in order to help marketers better understand the behavior of their customers. Adobe Experience Platform Data Ingestion represents the multiple methods by which Platform ingests data from these sources, as well as how that data is persisted within the Data Lake for use by downstream Platform services.
 ---
 
 # Adobe Experience Platform Data Ingestion {#ingestion}
@@ -28,6 +30,7 @@ user-guide-title: Adobe Experience Platform Data Ingestion Help
 - Data ingestion quality and monitoring{#quality}
     - [Overview](quality/overview.md)
     - [Monitor data flows](quality/monitor-data-flows.md)
+    - [Retrieve error diagnostics](quality/error-diagnostics.md)
     - [Retrieve failed batches](quality/retrieve-failed-batches.md)
     - [Streaming ingestion validation](quality/streaming-validation.md)
     - [Subscribe to data ingestion events](quality/subscribe-events.md)

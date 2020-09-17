@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Query service;query service;connect;connect to query service;aqua data studio;Aqua Data Studio;Looker;looker;Postico;postico;Power BI;power bi;psql;rstudio;PSQL;RStudio;Tableau;tableau;
 solution: Experience Platform
 title: Connect clients to Query Service
 topic: connect
@@ -11,10 +11,10 @@ This section explains how to connect to [!DNL Query Service] from a variety of d
 
 Instructions are provided for the following clients:
 
-- [!DNL Aqua Data Studio](./aqua-data-studio.md)
-- [!DNL Looker](./looker.md)
-- [!DNL Postico (Mac)](./postico.md)
-- [!DNL Power BI (PC)](./power-bi.md)
-- [!DNL PSQL](./psql.md)
-- [!DNL RStudio](./rstudio.md)
-- [!DNL Tableau](./tableau.md)
+- [[!DNL Aqua Data Studio]](./aqua-data-studio.md)
+- [[!DNL Looker]](./looker.md)
+- [[!DNL Postico (Mac)]](./postico.md)
+- [[!DNL Power BI (PC)]](./power-bi.md)
+- [[!DNL PSQL]](./psql.md)
+- [[!DNL RStudio]](./rstudio.md)
+- [[!DNL Tableau]](./tableau.md)

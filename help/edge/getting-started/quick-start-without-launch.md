@@ -3,6 +3,7 @@ title: Quick start using plain javascript
 seo-title: Adobe Experience Platform Web SDK quick start 
 description: Quick start guide for using the Experience Platform Web SDK to collect data
 seo-description: Quick start guide for using the Experience Platform Web SDK  to collect data
+keywords: 1st-party domain;CNAME;schema;create schema;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;install sdk;install web sdk;configure;configure web sdk;
 ---
 
 # Welcome
@@ -43,7 +44,7 @@ To install the SDK, copy and paste the following "base code" as high as possible
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.1.0/alloy.min.js" async></script>
 ```
 
 For more details on different options to do this, see [Installing the SDK](../fundamentals/installing-the-sdk.md).

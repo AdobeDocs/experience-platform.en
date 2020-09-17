@@ -3,6 +3,7 @@ keywords: Experience Platform;user guide;customer ai;popular topics;configure in
 solution: Experience Platform
 title: Configuring a Customer AI instance
 topic: Instance creation
+description: Intelligent Services provide Customer AI as a simple-to-use Adobe Sensei service that can be configured for different use cases. The following sections provide steps for configuring an instance of Customer AI.
 ---
 
 # Configuring a Customer AI instance
