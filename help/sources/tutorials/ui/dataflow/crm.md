@@ -72,9 +72,15 @@ Based on your needs, you can choose to map fields directly, or use mapper functi
 >
 >[!DNL Platform] provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
 
-Once your source data is mapped, select **[!UICONTROL Next]**.
-
 ![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+
+Select **[!UICONTROL Preview data]** to see mapping results of up to 100 rows of sample data from the selected dataset.
+
+During the preview, the identity column is prioritized as the first field, as it is the key information necessary when validating mapping results.
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
+
+Once your source data is mapped, select **[!UICONTROL Close]**.
 
 ## Schedule ingestion runs
 
@@ -85,7 +91,7 @@ The **[!UICONTROL Scheduling]** step appears, allowing you to configure an inges
 | Frequency | Selectable frequencies include `Once`, `Minute`, `Hour`, `Day`, and `Week`. |
 | Interval | An integer that sets the interval for the selected frequency. |
 | Start time | A UTC timestamp indicating when the very first ingestion is set to occur. |
-| Backfill | A boolean value that determines what data is initially ingested. If **[!UICONTROL Backfill]* is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If *Backfill* is disabled, only the files that are loaded in between the first run of ingestion and the *[!UICONTROL Start time]* will be ingested. Files loaded prior to *[!UICONTROL Start time]** will not be ingested. |
+| Backfill | A boolean value that determines what data is initially ingested. If **[!UICONTROL Backfill]** is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If **[!UICONTROL Backfill]** is disabled, only the files that are loaded in between the first run of ingestion and the **[!UICONTROL Start time]** will be ingested. Files loaded prior to **[!UICONTROL Start time]** will not be ingested. |
 | Delta Column | An option with a filtered set of source schema fields of type, date, or time. This field is used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column. |
 
 Dataflows are designed to automatically ingest data on a scheduled basis. Start by selecting the ingestion frequency. Next, set the interval to designate the period between two flow runs. The interval's value should be a non-zero integer and should be set to greater than or equal to 15.
