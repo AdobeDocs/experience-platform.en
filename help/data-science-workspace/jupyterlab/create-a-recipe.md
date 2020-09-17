@@ -27,11 +27,11 @@ The [!UICONTROL Recipe Builder] notebook allows you to run training and scoring 
 >
 >The Recipe Builder notebook supports working with all file formats but currently the Create Recipe functionality only supports [!DNL Python].
 
-![](../images/jupyterlab/create-recipe/recipe-builder.png)
+![](../images/jupyterlab/create-recipe/recipe_builder.png)
 
-When you click on the Recipe Builder notebook from the launcher, the notebook will be opened in the tab. The template used in the notebook is the Python Retail Sales Forecasting Recipe which can also be found in [this public repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
+When you click on the Recipe Builder notebook from the launcher, the notebook is be opened in the tab. The template used in the notebook is the Python Retail Sales Forecasting Recipe which can also be found in [this public repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-You will notice that in the toolbar there are three additional actions namely – **[!UICONTROL Train]**, **[!UICONTROL Score]** and **[!UICONTROL Create Recipe]**. These icons will only appear in the [!UICONTROL Recipe Builder] notebook. More information about these actions will be talked about [in the training and scoring section](#training-and-scoring) after building your Recipe in the notebook.
+You will notice that in the toolbar there are three additional actions namely – **[!UICONTROL Train]**, **[!UICONTROL Score]** and **[!UICONTROL Create Recipe]**. These icons only appear in the [!UICONTROL Recipe Builder] notebook. More information about these actions will be talked about [in the training and scoring section](#training-and-scoring) after building your Recipe in the notebook.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
