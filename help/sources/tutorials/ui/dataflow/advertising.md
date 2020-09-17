@@ -73,9 +73,15 @@ Based on your needs, you can choose to map fields directly, or use mapper functi
 >
 >[!DNL Platform] provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
 
-Once your source data is mapped, select **[!UICONTROL Next]**.
-
 ![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+
+Select **[!UICONTROL Preview data]** to see mapping results of up to 100 rows of sample data from the selected dataset.
+
+During the preview, the identity column is prioritized as the first field, as it is the key information necessary when validating mapping results.
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
+
+Once your source data is mapped, select **[!UICONTROL Close]**.
 
 ## Schedule ingestion runs
 
