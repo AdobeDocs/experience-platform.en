@@ -158,6 +158,10 @@ Remember that schemas are composed of "zero or more" mixins, so this means that 
 
 Data types are used as reference field types in classes or schemas in the same way as basic literal fields. The key difference is that data types can define multiple sub-fields. Similar to a mixin, a data type allows for the consistent use of a multi-field structure, but has more flexibility than a mixin because a data type can be included anywhere in a schema by adding it as the "data type" of a field. 
 
+>[!NOTE]
+>
+>See the [appendix](#mixins-v-datatypes) for more information on the differences between mixins and data types, and the pros and cons of using one over the other for similar use cases.
+
 [!DNL Experience Platform] provides a number of common data types as part of the [!DNL Schema Registry] to support the use of standard patterns for describing common data structures. This is explained in more detail in the [!DNL Schema Registry] tutorials, where it will become more clear as you walk through the steps to define data types.
 
 ### Field
@@ -170,6 +174,10 @@ A field is the most basic building block of a schema. Fields provide constraints
 * Boolean
 * Array
 * Object
+
+>[!TIP]
+>
+>See the [appendix](#objects-v-freeform) for information on the pros and cons of using free-form fields over object-type fields.
 
 The valid ranges of these scalar types can be further constrained to certain patterns, formats, minimums/maximums, or pre-defined values. Using these constraints, a wide range of more specific field types can be represented, including:
 
@@ -238,3 +246,86 @@ The [!DNL Schema Registry] is used to access the [!DNL Schema Library] within Ad
 To begin composing schema using the UI, follow along with the [Schema Editor tutorial](../tutorials/create-schema-ui.md) to build the "Loyalty Members" schema mentioned throughout this document.
 
 To begin using the [!DNL Schema Registry] API, start by reading the [Schema Registry API developer guide](../api/getting-started.md). After reading the developer guide, follow the steps outlined in the tutorial on [creating a schema using the Schema Registry API](../tutorials/create-schema-api.md).
+
+## Appendix
+
+The following section contains additional information regarding the principles of schema composition.
+
+### Mixins versus data types {#mixins-v-datatypes}
+
+Mixins and data types are two ways of grouping several XDM fields together to represent a common concept. While their use cases are similar, there are some important differences to keep in mind when choosing to use one or the other.
+
+The following table breaks down the key differences between mixins and data types, with the subsections below providing more information on these differences:
+
+| Mixins  | Data types |
+| --- | --- |
+| Top-level groupings | Low-level groupings |
+| Less reusable | More reusable |
+| Ad-hoc type governance | Controlled type governance |
+| Can be created in the API and UI | Can only be created in the API |
+| Can contain extra fields that might never be used | Fully customizable fields |
+
+#### Mixins
+
+The pros and cons of using mixins over data types are listed below.
+
+**Pros**:
+
+* Anyone with UI access can create and update mixins.
+* When adding a custom mixin to a schema, new fields can continue to be added to the to the mixin, even if they weren't predefined.
+
+**Cons**:
+
+* Out-of-the-box mixins cannot be edited. Using these mixins can add many fields to your schema, when out of those fields you may only use a couple. Unused fields still remain visible on your schema.
+* Mixins can be used in other schemas of the same class, but not across classes, making them less reusable than data types.
+
+#### Data types
+
+The pros and cons of using data types over mixins are listed below.
+
+**Pros**:
+
+* Data types give you more control in terms of how deeply you can nest groups of fields within your schema. While mixins can only add fields at the topmost level of the schema (under the `_tenantId` object), you can designate a single field within a mixin as a data type to nest the desired fields there instead. Data types can also be nested within other data types.
+* Data types are more reusable, as many fields can be assigned the same data type. For example, fields representing work phone, cell phone, and home phone all can be applied a “Phone Number” datatype. In addition, custom data types be used in any schema regardless of its class.
+* Custom data types give you the flexibility to create groupings with only the fields you need, when mixins can often contain fields that you may never use.
+
+**Cons**:
+
+* Once created, data types can only be updated using the API. Only users with Developer access will be able to update custom data types. Managing data types in the UI is planned for future releases.
+
+### Objects versus free-form fields {#objects-v-freeform}
+
+There are some key factors to consider when choosing objects over free-form fields when designing your schemas:
+
+| Objects | Free-form fields |
+| --- | --- |
+| Increases nesting | Less or no nesting |
+| Creates logical field groupings | Fields are placed in ad-hoc locations |
+
+#### Objects
+
+The pros and cons of using objects over free-form fields are listed below.
+
+**Pros**:
+
+* Objects are best used when you want to create a logic grouping of certain fields.
+* Objects organize the schema in a more structured manner.
+* Objects indirectly help in creating a good menu structure in the Segment Builder UI. The fields group fields in schema reflects directly in the folder structure that we see in segment builder UI.
+
+**Cons**:
+
+* Fields become more nested.
+* When using [Adobe Experience Platform Query Service](../../query-service/home.md), longer reference strings must be provided to query fields that are nested in objects.
+
+#### Free-form fields
+
+The pros and cons of using free-form fields over objects are listed below.
+
+**Pros**:
+
+* Free-form fields are created directly under the root object of the schema (`_tenantId`), increasing visibility.
+* Reference strings for free-form fields tend to be shorter when using Query Service.
+
+**Cons**:
+
+* The location of free-form fields within the schema is ad-hoc, meaning they will appear in alphabetical order within the Schema Editor. This can make schemas less structured, and similar free-form fields can end up being far separated depending on their names.
