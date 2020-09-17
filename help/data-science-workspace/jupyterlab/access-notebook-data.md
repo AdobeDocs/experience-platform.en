@@ -45,7 +45,7 @@ When reading datasets with PySpark and Scala notebooks, you have the option to u
 
 **ad-hoc schema:** You should be able to read a maximum of 5 million rows (~5.6 GB data on disk) of non-XDM (ad-hoc) data in less than 14 minutes. Adding additional rows may result in errors.
 
-| Number of Rows          | 1K      | 10K     | 100K  | 1M    | 2M    | 3M    | 5M     |
+| Number of rows          | 1K      | 10K     | 100K  | 1M    | 2M    | 3M    | 5M     |
 | ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- | ------ |
 | Size on disk (in MB)    | 1.21    | 11.72   | 115   | 1120  | 2250  | 3380  | 5630   |
 | SDK (in seconds)        | 7.27    | 9.04    | 27.3  | 180   | 346   | 487   | 819    |
@@ -54,14 +54,14 @@ When reading datasets with PySpark and Scala notebooks, you have the option to u
 
 **XDM ExperienceEvent schema:** You should be able to read a maximum of 1 million rows of XDM data (3GB data on disk) in under 13 minutes.
 
-| Number of Rows          | 1K     | 10K    | 100K  | 1M    |
+| Number of rows          | 1K     | 10K    | 100K  | 1M    |
 | ----------------------- | ------ | ------ | ----- | ----- |
 | Size on disk (MB)       | 18.73  | 187.5  | 308   | 3000  |
 | R Kernel  (in seconds)  | 14.03  | 69.6   | 86.8  | 775   |
 
 **ad-hoc schema:** You should be able to read a maximum of 3 million rows of ad-hoc data (293MB data on disk) in around 10 minutes.
 
-| Number of Rows          | 1K      | 10K     | 100K  | 1M    | 2M    | 3M    |
+| Number of rows          | 1K      | 10K     | 100K  | 1M    | 2M    | 3M    |
 | ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- |
 | Size on disk (in MB)    | 0.082   | 0.612   | 9.0   | 91    | 188   | 293   |
 | R SDK (in sec)          | 7.7     | 4.58    | 35.9  | 233   | 470.5 | 603   |
