@@ -350,7 +350,8 @@ spark = SparkSession.builder.getOrCreate()
 
 ### Using %dataset to read and write with a PySpark 3 notebook {#magic}
 
-With the introduction of [!DNL Spark] 2.4, `%dataset` custom magic is supplied for use in PySpark 3 ([!DNL Spark] 2.4) notebooks.
+With the introduction of [!DNL Spark] 2.4, `%dataset` custom magic is supplied for use in PySpark 3 ([!DNL Spark] 2.4) notebooks. For more details on magic commands available in the IPython kernel, visit the [IPython magic documentation](https://ipython.readthedocs.io/en/stable/interactive/magics.html).
+
 
 **Usage**
 
