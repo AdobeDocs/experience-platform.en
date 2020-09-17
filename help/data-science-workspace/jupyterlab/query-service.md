@@ -30,7 +30,7 @@ Before starting this tutorial, you must have the following prerequisites:
 
 1.  In [[!DNL Experience Platform]](https://platform.adobe.com), navigate to **[!UICONTROL Notebooks]** from the left navigation column. Allow a moment for JupyterLab to load.
 
-    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
+    ![](../images/jupyterlab/query/jupyterlab-launcher.png)
 
     >[!NOTE]
     >
@@ -282,6 +282,6 @@ ORDER  BY Count DESC
 LIMIT  10;
 ```
 
-## Next steps <!-- omit in toc -->
+## Next steps
 
 This tutorial demonstrated some sample uses cases for utilizing [!DNL Query Service] in [!DNL Jupyter] notebooks. Follow the [Analyze your data using Jupyter Notebooks](./analyze-your-data.md) tutorial to see how similar operations are performed using the Data Access SDK. 
