@@ -189,7 +189,7 @@ As you train your models, training runs and evaluations are generated. [!DNL Dat
 
 ![](./images/home/evaluation_metrics.png)
 
-Visit [this section](https://www.adobe.io/apis/experienceplatform/home/tutorials/data-science-workspace/dsw-tutorials/trainmodel.html) for tutorials on how to train and evaluate models in [!DNL Data Science Workspace].
+Visit either the [API](./model-recipes/train-evaluate-model-api.md) or [UI](./model-recipes/train-evaluate-model-ui.md) tutorial on how to train and evaluate models in [!DNL Data Science Workspace].
 
 ### Operationalize the model
 
@@ -199,7 +199,7 @@ A published intelligent service is configurable to automatically train itself fr
 
 ## Next steps
 
-[!DNL Data Science Workspace] helps streamline and simplify data science workflow, from data gathering to algorithms to intelligent services, for data scientists of all skill levels. With the sophisticated tools [!DNL Data Science Workspace] provides, you can significantly shorten the time from data to insights.
+[!DNL Data Science Workspace] helps streamline and simplify the data science workflow, from data gathering to algorithms to intelligent services for data scientists of all skill levels. With the sophisticated tools [!DNL Data Science Workspace] provides, you can significantly shorten the time from data to insights.
 
 More importantly, [!DNL Data Science Workspace] puts the data science and algorithmic optimization capabilities of Adobe's leading marketing platform in the hands of enterprise data scientists. For the first time, enterprises can bring proprietary algorithms to the platform, taking advantage of Adobe's powerful machine learning and AI capabilities to deliver highly personalized customer experiences at massive scale.  
 
