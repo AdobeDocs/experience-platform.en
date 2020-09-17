@@ -21,9 +21,9 @@ A retailer faces many challenges to stay competitive in the current market. One 
 
 ## Data scientist's solution
 
-A data scientist's solution is to leverage the wealth of historical information provided by a retailer, to predict future trends and to optimize pricing decisions. The following walkthrough uses past sales data to train a machine learning model and uses the model to predict future sale trends. With this, you can generate insights to help with making the optimal pricing changes.
+A data scientist's solution is to leverage the wealth of historical information provided by a retailer, to predict future trends and to optimize pricing decisions. This walkthrough uses past sales data to train a machine learning model and uses the model to predict future sale trends. With this, you can generate insights to help make optimal pricing changes.
 
-This overview mirrors the steps a data scientist would go through to take a dataset and to create a model to predict weekly sales. The tutorial below covers the following sections in the Sample Retail Sales Notebook on Adobe Experience Platform [!DNL Data Science Workspace]:
+This overview mirrors the steps a data scientist would go through to take a dataset and to create a model to predict weekly sales. This tutorial covers the following sections in the Sample Retail Sales Notebook on Adobe Experience Platform [!DNL Data Science Workspace]:
 
 - [Setup](#setup)
 - [Exploring Data](#exploring-data)
@@ -42,13 +42,14 @@ This tutorial uses [!DNL Python] 3 in [!DNL JupyterLab Notebooks] to show how to
 
 ### Setup {#setup}
 
-With the Retail Sales notebook opened, the first thing you should do is to load the libraries required for your workflow. The following list  gives a short description for each of the libraries used in the examples below:
-- **numpy** - scientific computing library that adds support for large, multi-dimensional arrays and matrices
-- **pandas** - library that offers data structures and operations used for data manipulation and analysis
-- **matplotlib.pyplot** - plotting library that provides a MATLAB-like experience when plotting 
-- **seaborn** - high-level interface data visualization library based on matplotlib
-- **sklearn** - machine learning library that features classification, regression, support vector, and cluster algorithms
-- **warnings** - library that controls warning messages  
+With the Retail Sales notebook opened, the first thing you should do is to load the libraries required for your workflow. The following list gives a short description for each of the libraries used in the examples in later steps.
+
+- **numpy**: Scientific computing library that adds support for large, multi-dimensional arrays and matrices
+- **pandas**: Library that offers data structures and operations used for data manipulation and analysis
+- **matplotlib.pyplot**: Plotting library that provides a MATLAB-like experience when plotting
+- **seaborn** : High-level interface data visualization library based on matplotlib
+- **sklearn**: Machine learning library that features classification, regression, support vector, and cluster algorithms
+- **warnings**: Library that controls warning messages
 
 ### Explore data {#exploring-data}
 
@@ -62,7 +63,7 @@ Pandas' DataFrame data structure is a two-dimensional labeled data structure. To
 
 ![](./images/walkthrough/df_shape.png)
 
-Finally, you can take a peek at what your data looks like. you can use `df.head(n)` to view the first `n` rows of the DataFrame:
+Finally, you can preview what your data looks like. You can use `df.head(n)` to view the first `n` rows of the DataFrame:
 
 ![](./images/walkthrough/df_head.png)
 
@@ -128,10 +129,10 @@ Notice the diagonal of ones down the center. This shows that when comparing a va
 
 In this section, feature engineering is used to make modifications to your Retail dataset by performing the following operations:
 
-- add week and year columns
-- convert storeType to an indicator variable
-- convert isHoliday to a numeric variable
-- predict weeklySales of next week
+- Add week and year columns
+- Convert storeType to an indicator variable
+- Convert isHoliday to a numeric variable
+- Predict weeklySales of next week
 
 #### Add week and year columns
 
@@ -157,10 +158,9 @@ The next modification is to change the `isHoliday` boolean to a numerical repres
 
 ![](./images/walkthrough/isHoliday.png)
 
-
 #### Predict weeklySales of next week
 
-Now you want to add previous and future weekly sales to each of your datasets. You are able to do this by offsetting your `weeklySales`. Additionally, the `weeklySales` difference is calculated. This is done by subtracting `weeklySales` with the previous week's `weeklySales`.
+Now you want to add previous and future weekly sales to each of your datasets. You can do this by offsetting your `weeklySales`. Additionally, the `weeklySales` difference is calculated. This is done by subtracting `weeklySales` with the previous week's `weeklySales`.
 
 ![](./images/walkthrough/weekly_past_future.png)
 
@@ -208,9 +208,9 @@ Finally, you visualize your prediction model with the actual weekly sales values
 
 This document covered a general data scientist workflow to solve a retail sales problem. To summarize:
 
-* Load the libraries required for your workflow.
-* After the libraries are loaded, you can start looking at the data using statistical summaries, visualizations, and graphs.
-* Next, feature engineering is used to make modifications to your Retail dataset.
-* Lastly, create models of the data and select which model is the best performer for predicting future sales.
+- Load the libraries required for your workflow.
+- After the libraries are loaded, you can start looking at the data using statistical summaries, visualizations, and graphs.
+- Next, feature engineering is used to make modifications to your retail dataset.
+- Lastly, create models of the data and select which model is the best performer for predicting future sales.
 
-Once you are ready, start by reading the [JupyterLab user guide](./jupyterlab/overview.md) for a quick overview of notebooks in Adobe Experience Platform Data Science Workspace. Additionally, if you are interested in learning about Models and Recipes, start by reading the [retail sales schema and dataset](./models-recipes/create-retails-sales-dataset.md) tutorial. This tutorial prepares you for subsequent Data Science Workspace tutorials which can be viewed from the Data Science Workspace [tutorials page](../tutorials/data-science-workspace.md)
+Once you are ready, start by reading the [JupyterLab user guide](./jupyterlab/overview.md) for a quick overview of notebooks in Adobe Experience Platform Data Science Workspace. Additionally, if you are interested in learning about Models and Recipes, start by reading the [retail sales schema and dataset](./models-recipes/create-retails-sales-dataset.md) tutorial. This tutorial prepares you for subsequent Data Science Workspace tutorials which can be viewed in the Data Science Workspace [tutorials page](../tutorials/data-science-workspace.md).
