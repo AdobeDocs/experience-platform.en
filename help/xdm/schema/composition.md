@@ -272,7 +272,7 @@ The pros and cons of using mixins over data types are listed below.
 **Pros**:
 
 * Anyone with UI access can create and update mixins.
-* When adding a custom mixin to a schema, new fields can continue to be added to the to the mixin, even if they weren't predefined.
+* When adding a custom mixin to a schema, new fields can continue to be added to the to the mixin, even if they were not predefined.
 
 **Cons**:
 
@@ -291,7 +291,7 @@ The pros and cons of using data types over mixins are listed below.
 
 **Cons**:
 
-* Once created, data types can only be updated using the API. Only users with Developer access will be able to update custom data types. Managing data types in the UI is planned for future releases.
+* Once created, data types can only be updated using the API. Only users with Developer access are able to update custom data types. Managing data types in the UI is planned for future releases.
 
 ### Objects versus free-form fields {#objects-v-freeform}
 
@@ -308,9 +308,9 @@ The pros and cons of using objects over free-form fields are listed below.
 
 **Pros**:
 
-* Objects are best used when you want to create a logic grouping of certain fields.
+* Objects are best used when you want to create a logical grouping of certain fields.
 * Objects organize the schema in a more structured manner.
-* Objects indirectly help in creating a good menu structure in the Segment Builder UI. The fields group fields in schema reflects directly in the folder structure that we see in segment builder UI.
+* Objects indirectly help in creating a good menu structure in the Segment Builder UI. The grouped fields within the schema are directly reflected in the folder structure provided in the Segment Builder UI.
 
 **Cons**:
 
@@ -328,4 +328,4 @@ The pros and cons of using free-form fields over objects are listed below.
 
 **Cons**:
 
-* The location of free-form fields within the schema is ad-hoc, meaning they will appear in alphabetical order within the Schema Editor. This can make schemas less structured, and similar free-form fields can end up being far separated depending on their names.
+* The location of free-form fields within the schema is ad-hoc, meaning they appear in alphabetical order within the Schema Editor. This can make schemas less structured, and similar free-form fields can end up being far separated depending on their names.
