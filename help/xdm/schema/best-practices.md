@@ -176,7 +176,7 @@ The sections below provide general guidance on constructing schemas based on you
 
 ### Adopt an iterative modeling approach
 
-The rules of schema evolution dictate that only non-destructive changes can be made to schemas once they have been implemented. In other words, once you add a field to a schema, the field cannot be removed. It is therefore essential to adopt an iterative modeling approach when you are first creating your schemas, starting with a simplified implementation which progressively gains complexity over time.
+The [rules of schema evolution](./composition.md#evolution) dictate that only non-destructive changes can be made to schemas once they have been implemented. In other words, once you add a field to a schema, the field cannot be removed. It is therefore essential to adopt an iterative modeling approach when you are first creating your schemas, starting with a simplified implementation which progressively gains complexity over time.
 
 If you are not sure whether a particular field is necessary to include in a schema, the best practice is to leave it out. If it is later determined that the field is necessary, it can always be added in the next iteration of the schema.
 
