@@ -68,7 +68,7 @@ When reading datasets with PySpark and Scala notebooks, you have the option to u
 
 ### PySpark ([!DNL Python] kernel) notebook data limits: {#pyspark-data-limits}
 
-**XDM ExperienceEvent schema:** On Interactive mode you should be able to read a maximum of 5 million rows (~13.42GB data on disk) of XDM data in around 20 minutes. Interactive mode only supports up-to 5 million rows. If you wish to read larger datasets, it's suggested you switch to Batch mode. On Batch mode you should be able to read a maximum of 500 million rows (~1.31TB data on disk) of XDM data in around 14 hours.
+**XDM ExperienceEvent schema:** On interactive mode you should be able to read a maximum of 5 million rows (~13.42GB data on disk) of XDM data in around 20 minutes. Interactive mode only supports up to 5 million rows. If you wish to read larger datasets, it's suggested you switch to batch mode. On batch mode you should be able to read a maximum of 500 million rows (~1.31TB data on disk) of XDM data in around 14 hours.
 
 | Number of rows          | 1K     | 10K    | 100K  | 1M    | 2M    | 3M    | 5M      | 10M     | 50M      | 100M   | 500M   |
 |-------------------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
@@ -86,7 +86,7 @@ When reading datasets with PySpark and Scala notebooks, you have the option to u
 
 ### [!DNL Spark] (Scala kernel) notebook data limits: {#scala-data-limits}
 
-**XDM ExperienceEvent schema:** On Interactive mode you should be able to read a maximum of 5 million rows (~13.42GB data on disk) of XDM data in around 18 minutes. Interactive mode only supports up-to 5 million rows. If you wish to read larger datasets, it's suggested you switch to Batch mode. On Batch mode you should be able to read a maximum of 500 million rows (~1.31TB data on disk) of XDM data in around 14 hours.
+**XDM ExperienceEvent schema:** On interactive mode you should be able to read a maximum of 5 million rows (~13.42GB data on disk) of XDM data in around 18 minutes. Interactive mode only supports up to 5 million rows. If you wish to read larger datasets, it's suggested you switch to batch mode. On batch mode you should be able to read a maximum of 500 million rows (~1.31TB data on disk) of XDM data in around 14 hours.
 
 | Number of rows | 1K     | 10K    | 100K  | 1M    | 2M    | 3M    | 5M      | 10M     | 50M      | 100M   | 500M   |
 |---------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
@@ -94,7 +94,7 @@ When reading datasets with PySpark and Scala notebooks, you have the option to u
 | SDK Interactive mode (in seconds) | 37.9s  | 22.7s  | 45.6s | 231.7s| 444.7s| 660.6s | 1100s  |     -   |    -     |   -    |  -     |
 | SDK Batch mode (in seconds) | 374.4s | 398.5s |527s   |487.9s |588.9s |829s   |939.1s   | 1441s    |5473.2s  |10118.8 |49207.6 |
 
-**ad-hoc schema:** On Interactive mode you should be able to read a maximum of  5 million rows (~5.36GB data on disk) of non-XDM data in less than 3 minutes. On Batch mode you should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in around 16 minutes.
+**ad-hoc schema:** On interactive mode you should be able to read a maximum of 5 million rows (~5.36GB data on disk) of non-XDM data in less than 3 minutes. On batch mode you should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in around 16 minutes.
 
 | Number of rows | 1K     | 10K     | 100K    | 1M    | 2M    | 3M    | 5M      | 10M     | 50M     | 100M   | 500M    | 1B    |
 |--------------|--------|---------|---------|-------|-------|-------|---------|---------|---------|--------|---------|-------|
@@ -145,13 +145,13 @@ df = dataset_reader.limit(100).offset(10).read()
 
 ### Write to a dataset in Python {#write-python}
 
-In order to write to a dataset in your JupyterLab notebook, select the Data tab in the left-navigation of JupyterLab. The **Datasets** and **Schemas** directories appear. Select Datasets and right-click, then select the **[!UICONTROL Write Data in Notebook]** option from the dropdown menu on the dataset you wish to use. An executable code entry appears at the bottom of your notebook. 
+In order to write to a dataset in your JupyterLab notebook, select the Data icon tab (highlighted below) in the left-navigation of JupyterLab. The **[!UICONTROL Datasets]** and **[!UICONTROL Schemas]** directories appear. Select **[!UICONTROL Datasets]** and right-click, then select the **[!UICONTROL Write Data in Notebook]** option from the dropdown menu on the dataset you wish to use. An executable code entry appears at the bottom of your notebook. 
 
 ![](../images/jupyterlab/data-access/write-dataset.png)
 
 - Use **[!UICONTROL Write Data in Notebook]** to generate a write cell with your selected dataset.
 - Use **[!UICONTROL Explore Data in Notebook]** to generate a read cell with your selected dataset.
-- use **[!UICONTROL Query Data in Notebook]** to generate a basic query cell with your selected dataset.
+- Use **[!UICONTROL Query Data in Notebook]** to generate a basic query cell with your selected dataset.
 
 Alternatively ,you can copy and paste the following code cell. Replace both the `{DATASET_ID}` and `{PANDA_DATAFRAME}`.
 
@@ -280,7 +280,7 @@ df0 <- dataset_reader$limit(100L)$offset(10L)$read()
 
 ### Write to a dataset in R {#write-r}
 
-In order to write to a dataset in your JupyterLab notebook, select the Data tab in the left-navigation of JupyterLab. The **Datasets** and **Schemas** directories appear. Select Datasets and right-click, then select the **[!UICONTROL Write Data in Notebook]** option from the dropdown menu on the dataset you wish to use. An executable code entry appears at the bottom of your notebook. 
+In order to write to a dataset in your JupyterLab notebook, select the Data icon tab (highlighted below) in the left-navigation of JupyterLab. The **[!UICONTROL Datasets]** and **[!UICONTROL Schemas]** directories appear. Select **[!UICONTROL Datasets]** and right-click, then select the **[!UICONTROL Write Data in Notebook]** option from the dropdown menu on the dataset you wish to use. An executable code entry appears at the bottom of your notebook. 
 
 ![](../images/jupyterlab/data-access/r-write-dataset.png)
 
@@ -348,7 +348,7 @@ from pyspark.sql import SparkSession
 spark = SparkSession.builder.getOrCreate()
 ```
 
-### Using %dataset magic to read and write with a PySpark 3 notebook {#magic}
+### Using %dataset to read and write with a PySpark 3 notebook {#magic}
 
 With the introduction of [!DNL Spark] 2.4, `%dataset` custom magic is supplied for use in PySpark 3 ([!DNL Spark] 2.4) notebooks.
 
@@ -362,10 +362,10 @@ With the introduction of [!DNL Spark] 2.4, `%dataset` custom magic is supplied f
 
 A custom [!DNL Data Science Workspace] magic command for reading or writing a dataset from a [!DNL PySpark] notebook ([!DNL Python] 3 kernel).
 
-| name | description | required |
+| Name | Description | Required |
 | --- | --- | --- |
 | `{action}` | The type of action to perform on the dataset. Two actions are available "read" or "write". | Yes |
-| `--datasetId {id}` | Used to supply the id of the dataset to read or write. | Yes |
+| `--datasetId {id}` | Used to supply the ID of the dataset to read or write. | Yes |
 | `--dataFrame {df}` | The pandas dataframe. <ul><li> When the action is "read", {df} is the variable where results of the dataset read operation are available. </li><li> When the action is "write", this dataframe {df} is written to the dataset. </li></ul> | Yes |
 | `--mode` | An additional parameter that changes how data is read. Allowed parameters are "batch", and "interactive". By default the mode is set to "interactive". It is recommended to use "batch" mode when reading large amounts of data. | No |
 
@@ -380,7 +380,7 @@ A custom [!DNL Data Science Workspace] magic command for reading or writing a da
 
 You can auto generate the above examples in JupyterLab buy using the following method:
 
-Within your PySpark notebook select the **Datasets** directory. Next, find the dataset you wish to read or write from within the list of avaialable datasets. You can right-click, then select the **[!UICONTROL Write Data in Notebook]** or **[!UICONTROL Explore Data in Notebook]** option from the dropdown menu on the dataset you wish to use. An executable code entry appears at the bottom of your notebook.
+Select the Data icon tab (highlighted below) in the left-navigation of JupyterLab. The **[!UICONTROL Datasets]** and **[!UICONTROL Schemas]** directories appear. Select **[!UICONTROL Datasets]** and right-click, then select the **[!UICONTROL Write Data in Notebook]** option from the dropdown menu on the dataset you wish to use. An executable code entry appears at the bottom of your notebook. 
 
 - Use **[!UICONTROL Explore Data in Notebook]** to generate a read cell.
 - Use **[!UICONTROL Write Data in Notebook]** to generate a write cell.
@@ -420,7 +420,7 @@ sample_df = df.sample(fraction)
 
 ### Filter [!DNL ExperienceEvent] data {#pyspark-filter-experienceevent}
 
-Accessing and filtering an [!DNL ExperienceEvent] dataset in a PySpark notebook requires you to provide the dataset identity (`{DATASET_ID}`), your organization's IMS identity, and the filter rules defining a specific time range. A Filtering time range is defined by using the function `spark.sql()`, where the function parameter is a SQL query string.
+Accessing and filtering an [!DNL ExperienceEvent] dataset in a PySpark notebook requires you to provide the dataset identity (`{DATASET_ID}`), your organization's IMS identity, and the filter rules defining a specific time range. A filtering time range is defined by using the function `spark.sql()`, where the function parameter is a SQL query string.
 
 The following cells filter an [!DNL ExperienceEvent] dataset to data existing exclusively between January 1, 2019 and the end of December 31, 2019.
 
@@ -487,13 +487,13 @@ df1.printSchema()
 df1.show(10)
 ```
 
-| element | description |
+| Element | Description |
 | ------- | ----------- |
 | df1 | A variable that represents the Pandas dataframe used to read and write data. |
 | user-token | Your user token that is automatically fetched using `clientContext.getUserToken()`.  |
 | service-token | Your service token that is automatically fetched using `clientContext.getServiceToken()`. |
-| ims-org | Your ims-org id that is automatically fetched using `clientContext.getOrgId()`. |
-| api-key | Your api key that is automatically fetched using `clientContext.getApiKey()`. |
+| ims-org | Your IMS Org ID that is automatically fetched using `clientContext.getOrgId()`. |
+| api-key | Your API key that is automatically fetched using `clientContext.getApiKey()`. |
 
 >[!TIP]
 >
@@ -501,8 +501,8 @@ df1.show(10)
 
 You can auto generate the above example in JupyterLab buy using the following method:
 
-Within your Scala notebook select the **Datasets** directory. Next, find the dataset you wish to read or write from within the list of avaialable datasets. You can right-click, then select the **[!UICONTROL Write Data in Notebook]** or **[!UICONTROL Explore Data in Notebook]** option from the dropdown menu on the dataset you wish to use. An executable code entry appears at the bottom of your notebook.
-
+Select the Data icon tab (highlighted below) in the left-navigation of JupyterLab. The **[!UICONTROL Datasets]** and **[!UICONTROL Schemas]** directories appear. Select **[!UICONTROL Datasets]** and right-click, then select the **[!UICONTROL Explore Data in Notebook]** option from the dropdown menu on the dataset you wish to use. An executable code entry appears at the bottom of your notebook. 
+And 
 - Use **[!UICONTROL Explore Data in Notebook]** to generate a read cell.
 - Use **[!UICONTROL Write Data in Notebook]** to generate a write cell.
 
@@ -533,8 +533,8 @@ df1.write.format("com.adobe.platform.query")
 | df1 | A variable that represents the Pandas dataframe used to read and write data. |
 | user-token | Your user token that is automatically fetched using `clientContext.getUserToken()`.  |
 | service-token | Your service token that is automatically fetched using `clientContext.getServiceToken()`. |
-| ims-org | Your ims-org id that is automatically fetched using `clientContext.getOrgId()`. |
-| api-key | Your api key that is automatically fetched using `clientContext.getApiKey()`. |
+| ims-org | Your IMS Org ID that is automatically fetched using `clientContext.getOrgId()`. |
+| api-key | Your API key that is automatically fetched using `clientContext.getApiKey()`. |
 
 >[!TIP]
 >
@@ -597,7 +597,7 @@ timedf.show()
 
 ## Next steps
 
-This document covered the general guidelines for accessing datasets using JupyterLab notebooks. For more in depth examples on querying datasets, visit the [query service in JupyterLab notebooks](./query-service.md) documentation. For more information on how to explore and visualize your datasets, visit the document on [analyzing your data using notebooks](./analyze-your-data.md).
+This document covered the general guidelines for accessing datasets using JupyterLab notebooks. For more in depth examples on querying datasets, visit the [Query Service in JupyterLab notebooks](./query-service.md) documentation. For more information on how to explore and visualize your datasets, visit the document on [analyzing your data using notebooks](./analyze-your-data.md).
 
 ## Optional SQL flags for [!DNL Query Service] {#optional-sql-flags-for-query-service}
 

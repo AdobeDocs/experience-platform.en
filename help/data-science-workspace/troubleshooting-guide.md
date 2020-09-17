@@ -108,4 +108,4 @@ For more information on [!DNL Spark] cluster resource configuration, including t
 
 ## Why am I receiving an error when trying execute certain tasks for larger datasets?
 
-If you are receiving and error with a reason such as `Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues.` This typically means the driver or an executor is running out of memory. See the JupyterLab Notebooks [data access](./jupyterlab/access-notebook-data.md) documentation for more information on data limits and how to execute tasks on large datasets. Typically this error can be solved by changing the `mode` from `interactive` to `batch`.
+If you are receiving an error with a reason such as `Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues.` This typically means the driver or an executor is running out of memory. See the JupyterLab Notebooks [data access](./jupyterlab/access-notebook-data.md) documentation for more information on data limits and how to execute tasks on large datasets. Typically this error can be solved by changing the `mode` from `interactive` to `batch`.
