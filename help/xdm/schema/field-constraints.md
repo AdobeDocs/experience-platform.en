@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;mixin;Mixin;Mixins;mixins;data type;data types;Data types;Data type;schema design;datatype;Datatype;data type;Data type;schemas;Schemas;Schema design;map;Map;
 solution: Experience Platform
-title: Field type constraints
+title: XDM field type constraints
 topic: overview
 description: A reference for XDM field type constraints, including the other serialization formats they can be mapped to and how to define your own field types in the API.
 ---
 
-# Field type constraints
+# XDM field type constraints
 
 The XDM field types you select for your schemas constrain what kinds of data those fields can contain. This document provides an overview of each core field type, including the other serialization formats they can be mapped to, and how to define your own field types in the API in order to enforce different constraints.
 
