@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Experience Data Model (XDM) System Help
 breadcrumb-title: Data Model (XDM) Guide
-user-guide-description: Create schemas to standardize your experience data and integrate it into a common representation for use in all downstream Platform services.
+user-guide-description: Use standard classes and mixins to build a robust schema-based data model, standardizing your experience data into a common representation for use in all downstream Platform services.
 ---
 
 # Experience Data Model (XDM) System {#xdm}
