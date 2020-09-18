@@ -1,7 +1,7 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform ETL
+user-guide-title: Adobe Experience Platform ETL Guide
 breadcrumb-title: ETL Guide
 user-guide-description: Learn the general steps for creating secure, high-performance connectors for ingesting data into Platform.
 ---
