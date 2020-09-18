@@ -24,7 +24,7 @@ Before starting this tutorial, you must have the following prerequisites:
     -   [[!DNL Experience Data Model (XDM) and XDM System]](../../xdm/home.md)
     -   [[!DNL Query Service]](../../query-service/home.md)
     -   [[!DNL Query Service SQL Syntax]](../../query-service/sql/overview.md)
-    -   [Adobe Analytics]
+    -   Adobe Analytics
 
 ## Access [!DNL JupyterLab] and [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
