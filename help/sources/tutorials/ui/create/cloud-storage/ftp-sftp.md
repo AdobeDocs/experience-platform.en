@@ -55,7 +55,9 @@ The **[!UICONTROL Connect to SFTP]** page appears. On this page, you can either 
 
 If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide a name, an optional description, and your FTP or SFTP credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new connection to establish.
 
-![connect](../../../../images/tutorials/create/sftp/new.png)
+![connect-password](../../../../images/tutorials/create/sftp/password.png)
+
+![connect-ssh](../../../../images/tutorials/create/sftp/ssh.png)
 
 ### Existing account
 
