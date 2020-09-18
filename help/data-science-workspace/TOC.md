@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Data Science Workspace Help
 breadcrumb-title: Data Science Workspace Guide
-user-guide-description: Use machine learning and artificial intelligence to aid in the development, training, and tuning of machine learning models and recipes with the Sensei Machine Learning API.
+user-guide-description: Use machine learning to develop, train, and score models and recipes with Adobe Sensei and JupyterLab Notebooks.
 ---
 
 # Data Science Workspace {#data-science-workspace}
