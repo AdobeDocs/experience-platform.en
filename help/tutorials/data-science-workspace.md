@@ -47,7 +47,6 @@ Currently JupyterLab in Adobe Experience Platform Data Science Workspace support
 
 to learn more, visit the [JupyterLab Notebook data access developer guide](../data-science-workspace/jupyterlab/access-notebook-data.md)
 
-
 ## Package source files for [!DNL Docker] recipe authoring
 
 A [!DNL Docker] image allows you to package up an application with all the parts it needs. This includes libraries and other dependencies all in one package. The built [!DNL Docker] image is pushed to the [!DNL Azure Container Registry] using credentials supplied to you during the recipe creation workflow. 
