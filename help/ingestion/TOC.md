@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Data Ingestion Help
 breadcrumb-title: Data Ingestion Guide
-user-guide-description: Data Ingestion, includes batch and streaming ingestion, and allows users to bring in data that will can be used by other Platform services.
+user-guide-description: Bring in your data to Platform through batch or streaming ingestion.
 ---
 
 # Adobe Experience Platform Data Ingestion {#ingestion}
