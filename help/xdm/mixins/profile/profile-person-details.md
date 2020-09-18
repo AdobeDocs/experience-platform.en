@@ -15,12 +15,10 @@ description: This document provides an overview of the XDM Individual Profile cl
 | Property | Description |
 | --- | --- |
 | `name` | An object whose sub-fields describe various elements of a person's name: <ul><li>`courtesyTitle`: An abbreviation of a person's title, honorific, or salutation (such as Mr., Miss., or Dr.).</li><li>`firstName`: The first segment of the name in the writing order most commonly accepted in the language of the name.</li><li>`fullName`: The full name of the person, in the writing order most commonly accepted in the language of the name.</li><li>`lastName`: The last segment of the name in the writing order most commonly accepted in the language of the name.</li><li>`middleName`: Middle, alternative, or additional names supplied between the first name and last name.</li><li>`suffix`: A group of letters provided after a person's name to provide additional information (such as Jr., Sr., M.D., PhD, I, II, III, and so on).</li></ul> |
-| `birthDate` | |
-| `birthDayAndMonth` | |
-| `birthYear` | |
-| `gender` | |
-| `martialStatus` | |
-| `nationality` | |
-| `taxId` | |
-
-See the section on identity maps in the [basics of schema composition](../../schema/composition.md#identityMap) for more information on their use case.
+| `birthDate` | The full date a person was born on, in the form of an ISO 8601 timestamp. |
+| `birthDayAndMonth` | The day and month a person was born, in the format MM-DD. This field should be used when the day and month of a person's birth is known, but not the year. |
+| `birthYear` | The year a person was born, including the century (such as 1989). This field should be used when only the person's age is known, not the full birth date. |
+| `gender` | The gender identity of the person. |
+| `martialStatus` | Describes a person's relationship with a significant other. |
+| `nationality` | The legal relationship between a person and their state represented using the ISO 3166-1 Alpha-2 code. |
+| `taxId` | The tax/fiscal ID of the person, such the TIN in the US or the CIF/NIF in Spain. |
