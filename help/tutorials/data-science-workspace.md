@@ -34,10 +34,19 @@ To learn more and get the required values for performing CRUD operations with th
 - Access and understand the [!DNL JupyterLab] interface.
 - Understand code cells and the available kernels within [!DNL JupyterLab].
 - Understand GPU and memory server configuration in [!DNL Python]/R.
-- Read and query [!DNL Platform] data using Notebooks.
-- Understand the Notebook data limits.
 
  To learn more, visit the [JupyterLab user guide](../data-science-workspace/jupyterlab/overview.md).
+
+## Data Access in JupyterLab Notebooks
+
+Each supported kernel provides built-in functionalities that allow you to read Platform data from a dataset within a notebook. Currently JupyterLab in Adobe Experience Platform Data Science Workspace supports notebooks for [!DNL Python], R, PySpark, and Scala. However, support for paginating data is limited to [!DNL Python] and R notebooks. This guide focuses on how to use JupyterLab notebooks to access your data.
+
+**This guide will help you:**
+- Read, Write, and query Platform data using Python, R, PySpark, or Scala Notebooks.
+- Understand the read limitations of each notebook type.
+
+to learn more, visit the [JupyterLab Notebook data access developer guide](../data-science-workspace/jupyterlab/access-notebook-data.md)
+
 
 ## Package source files for [!DNL Docker] recipe authoring
 
