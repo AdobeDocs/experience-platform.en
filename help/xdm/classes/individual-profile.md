@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual p
 solution: Experience Platform
 title: XDM Individual Profile class
 topic: overview
-description: This document provides an introduction to Experience Data Model (XDM) schemas and the building blocks, principles, and best practices for composing schemas to be used in Adobe Experience Platform.
+description: This document provides an overview of the XDM Individual Profile class.
 ---
 
 # [!DNL XDM Individual Profile] class
