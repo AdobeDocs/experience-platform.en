@@ -39,13 +39,13 @@ To learn more and get the required values for performing CRUD operations with th
 
 ## Data Access in JupyterLab Notebooks
 
-Currently JupyterLab in Adobe Experience Platform Data Science Workspace supports notebooks for [!DNL Python], R, PySpark, and Scala. Each supported kernel provides built-in functionalities that allow you to read Platform data from a dataset within a notebook. However, support for paginating data is limited to [!DNL Python] and R notebooks. This guide focuses on how to use JupyterLab notebooks to access your data.
+Currently JupyterLab in Data Science Workspace supports notebooks for [!DNL Python], R, PySpark, and Scala. Each supported kernel provides built-in functionalities that allow you to read Platform data from a dataset within a notebook. However, support for paginating data is limited to [!DNL Python] and R notebooks. This guide focuses on how to use JupyterLab notebooks to access your data.
 
 **This guide will help you:**
-- Read, Write, and query Platform data using Python, R, PySpark, or Scala Notebooks.
+- Read, write, and query Platform data using Python, R, PySpark, or Scala notebooks.
 - Understand the read limitations of each notebook type.
 
-to learn more, visit the [JupyterLab Notebook data access developer guide](../data-science-workspace/jupyterlab/access-notebook-data.md)
+To learn more, visit the [JupyterLab Notebook data access developer guide](../data-science-workspace/jupyterlab/access-notebook-data.md)
 
 ## Package source files for [!DNL Docker] recipe authoring
 
