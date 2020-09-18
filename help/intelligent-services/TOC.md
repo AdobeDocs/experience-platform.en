@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Intelligent Services Help
 breadcrumb-title: Intelligent Services Guide
-user-guide-description: Utilize Customer and Attribution AI to create segments, generate scores, and discover insights from your marketing events data.
+user-guide-description: Utilize intelligent AI services to generate scores, discover insights, and create segments from your marketing events data.
 ---
 
 # Adobe Intelligent Services {#intelligent-services}
