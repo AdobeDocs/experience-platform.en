@@ -189,7 +189,7 @@ As you train your models, training runs and evaluations are generated. [!DNL Dat
 
 ![](./images/home/evaluation_metrics.png)
 
-Visit either the [API](./model-recipes/train-evaluate-model-api.md) or [UI](./model-recipes/train-evaluate-model-ui.md) tutorial on how to train and evaluate models in [!DNL Data Science Workspace].
+Visit either the [API](./models-recipes/train-evaluate-model-api.md) or [UI](./models-recipes/train-evaluate-model-ui.md) tutorial on how to train and evaluate models in [!DNL Data Science Workspace].
 
 ### Operationalize the model
 
