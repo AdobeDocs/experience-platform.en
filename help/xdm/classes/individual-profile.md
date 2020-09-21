@@ -29,14 +29,8 @@ The [!DNL XDM Individual Profile] class itself provides several system-generated
 
 Adobe provides several standard mixins for use with the [!DNL XDM Individual Profile] class. The following is a list of the most commonly used mixins for the class:
 
-* [!UICONTROL IdentityMap]
-* [!UICONTROL Profile person details]
-* [!UICONTROL Profile personal details]
-* [!UICONTROL Profile work details]
-* [!UICONTROL Profile segmentation]
-* [!UICONTROL Profile preferences details]
-* [!UICONTROL Profile subscriptions]
-* [!UICONTROL Profile test details]
-* [!UICONTROL Profile push details]
-* [!UICONTROL Profile owing entity details]
-* [!UICONTROL Profile direct marketing]
+* [[!UICONTROL IdentityMap]](../mixins/profile/identitymap.md)
+* [[!UICONTROL Profile person details]](../mixins/profile/person-details.md)
+* [[!UICONTROL Profile personal details]](../mixins/profile/personal-details.md)
+* [[!UICONTROL Profile work details]](../mixins/profile/work-details.md)
+* [[!UICONTROL Profile segmentation]](../mixins/profile/segmentation.md)
