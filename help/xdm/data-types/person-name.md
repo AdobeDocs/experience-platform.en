@@ -24,5 +24,6 @@ In addition, the datatype provides a number of optional properties that can be u
 | `suffix` | A group of letters provided after a person's name to provide additional information (such as `Jr.`, `Sr.`, `M.D.`, `PhD`, `I`, `II`, `III`, and so on). |
 
 For more details on the person name data type, refer to the public XDM repository:
+
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/person-name.example.1.json)
 * [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/person-name.schema.json)

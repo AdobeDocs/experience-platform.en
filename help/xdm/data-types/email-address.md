@@ -23,5 +23,6 @@ description: This document provides an overview of the XDM Individual Profile cl
 
 
 For more details on the email address data type, refer to the public XDM repository:
+
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/emailaddress.example.1.json)
 * [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/emailaddress.schema.json)

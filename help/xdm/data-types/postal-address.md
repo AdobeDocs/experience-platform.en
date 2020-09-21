@@ -35,5 +35,6 @@ description: This document provides an overview of the XDM Individual Profile cl
 | `street1` - `street4` | These four fields are meant to contain primary street level information, apartment number, street number, and street name. `street2` to `street4` are optional. |
 
 For more details on the postal address data type, refer to the public XDM repository:
+
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/address.example.1.json)
 * [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/address.schema.json)
