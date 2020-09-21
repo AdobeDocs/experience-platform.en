@@ -24,7 +24,7 @@ The Data Access API supports Adobe Experience Platform by providing users with a
 - Download partial contents of a file.
 - Configure API response pagination.
 
-To get started, follow the [data access API tutorial](../data-access/tutorials/dataset-data.md).
+To get started, follow the [Data Access API tutorial](../data-access/tutorials/dataset-data.md).
 
 ## Use the Secure Python SDK to access data
 
