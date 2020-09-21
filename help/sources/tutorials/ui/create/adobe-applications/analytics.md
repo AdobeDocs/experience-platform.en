@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Analytics source connector;Analytics connector;Analytics source;analytics
 solution: Experience Platform
 title: Create an Adobe Analytics source connector in the UI
 topic: overview
+description: This tutorial provides steps for creating an Adobe Analytics source connector in the UI to bring consumer data into Adobe Experience Platform.
 ---
 
 # Create an Adobe Analytics source connector in the UI
@@ -19,17 +20,17 @@ This tutorial requires a working understanding of the following components of Ad
 
 ## Create a source connection with Adobe Analytics
 
-Log in to <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> and then select **[!UICONTROL Sources]** from the left navigation bar to access the sources workspace. The *Catalog* screen displays available sources to create inbound connections with, and each source shows the number of existing accounts and dataset flows associated to them.
+Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the sources workspace. The *Catalog* screen displays available sources to create inbound connections with, and each source shows the number of existing accounts and dataset flows associated to them.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the *Adobe applications* category, select **[!UICONTROL Adobe Analytics]** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To view existing accounts, select **[!UICONTROL Accounts]**.
+Under the **[!UICONTROL Adobe applications]** category, select **[!UICONTROL Adobe Analytics]** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To view existing accounts, select **[!UICONTROL Accounts]**.
 
 ![](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### Select data
 
-The *Adobe Analytics* step appears. Previously established dataset flows for Analytics are listed on this screen. You can create a new dataset flow by clicking **[!UICONTROL Select data]**.
+The **[!UICONTROL Adobe Analytics]** step appears. Previously established dataset flows for Analytics are listed on this screen. You can create a new dataset flow by clicking **[!UICONTROL Select data]**.
 
 >[!NOTE]
 >
@@ -45,22 +46,22 @@ From the list of available report suites, select the one you want to bring into 
 
 ### Name your dataset flow
 
-The *Dataset flow detail* step appears, where you must provide a name and an optional description for the dataset flow. Select **[UICONTROL! Next]** when finished.
+The **[!UICONTROL Dataset flow detail]** step appears, where you must provide a name and an optional description for the dataset flow. Select **[!UICONTROL Next]** when finished.
 
 ![](../../../../images/tutorials/create/analytics/dataset-flow-detail.png)
 
 ### Review your dataset flow
 
-The *Review* step appears, allowing you to review your new Analytics in-bound dataset flow before it is created. Details of the connection are grouped by categories, including:
+The **[!UICONTROL Review]** step appears, allowing you to review your new Analytics in-bound dataset flow before it is created. Details of the connection are grouped by categories, including:
 
-*   *Connection*: Shows the type of the source connection and the selected report suite.
-*   *Assign dataset & map fields*: When creating other source connectors, this container shows which dataset the source data is ingesting into, including the schema the dataset adheres to. The output schema and dataset is automatically configured for Analytics dataset flows.
+*   **[!UICONTROL Connection]**: Shows the type of the source connection and the selected report suite.
+*   **[!UICONTROL Assign dataset & map fields]**: When creating other source connectors, this container shows which dataset the source data is ingesting into, including the schema the dataset adheres to. The output schema and dataset is automatically configured for Analytics dataset flows.
 
 ![](../../../../images/tutorials/create/analytics/review.png)
 
 ### Monitor your dataset flow
 
-Once your dataset flow has been created, you can monitor the data that is being ingested through it. From the *Catalog* screen, select *Dataset flows* to view a list of established flows associated with your Analytics account.
+Once your dataset flow has been created, you can monitor the data that is being ingested through it. From the **[!UICONTROL Catalog]** screen, select **[!UICONTROL Dataset flows]** to view a list of established flows associated with your Analytics account.
 
 ![](../../../../images/tutorials/create/analytics/catalog-dataset-flows.png)
 

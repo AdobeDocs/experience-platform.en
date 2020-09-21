@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;sql syntax;sql;ctas;CTAS;Create table as select
 solution: Experience Platform
 title: SQL syntax
 topic: syntax
+description: This document shows SQL syntax supported by Query Service.
 ---
 
 # SQL syntax
@@ -13,7 +14,7 @@ topic: syntax
 
 The following syntax defines a `SELECT` query supported by [!DNL Query Service]:
 
-```
+```sql
 [ WITH with_query [, ...] ]
 SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
     [ * | expression [ [ AS ] output_name ] [, ...] ]
@@ -30,7 +31,7 @@ SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
 
 where `from_item` can be one of:
 
-```
+```sql
 table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
     [ LATERAL ] ( select ) [ AS ] alias [ ( column_alias [, ...] ) ]
     with_query_name [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
@@ -39,7 +40,7 @@ table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
 
 and `grouping_element` can be one of:
 
-```
+```sql
 ( )
     expression
     ( expression [, ...] )
@@ -50,7 +51,7 @@ and `grouping_element` can be one of:
 
 and `with_query` is:
 
-```
+```sql
  with_query_name [ ( column_name [, ...] ) ] AS ( select | values )
  
 TABLE [ ONLY ] table_name [ * ]
@@ -60,7 +61,7 @@ TABLE [ ONLY ] table_name [ * ]
 
 The key word ILIKE can be used instead of LIKE to make matches on the WHERE clause of the SELECT query case-insensitive.
 
-```
+```sql
     [ WHERE condition { LIKE | ILIKE | NOT LIKE | NOT ILIKE } pattern ]
 ```
 
@@ -73,7 +74,7 @@ The logic of LIKE and ILIKE clauses are as follows:
 
 #### Example
 
-```
+```sql
 SELECT * FROM Customers
 WHERE CustomerName ILIKE 'a%';
 ```
@@ -84,7 +85,7 @@ Returns customers with names beginning in "A" or "a".
 
 A `SELECT` query using joins has the following syntax:
 
-```
+```sql
 SELECT statement
 FROM statement
 [JOIN | INNER JOIN | LEFT JOIN | LEFT OUTER JOIN | RIGHT JOIN | RIGHT OUTER JOIN | FULL JOIN | FULL OUTER JOIN]
@@ -96,7 +97,7 @@ ON join condition
 
 The `UNION`, `INTERSECT`, and `EXCEPT` clauses are supported to combine or exclude like rows from two or more tables:
 
-```
+```sql
 SELECT statement 1
 [UNION | UNION ALL | UNION DISTINCT | INTERSECT | EXCEPT | MINUS]
 SELECT statement 2
@@ -106,7 +107,7 @@ SELECT statement 2
 
 The following syntax defines a `CREATE TABLE AS SELECT` (CTAS) query supported by [!DNL Query Service]:
 
-```
+```sql
 CREATE TABLE table_name [ WITH (schema='target_schema_title') ] AS (select_query)
 ```
 
@@ -117,7 +118,7 @@ and `select_query` is a `SELECT` statement, the syntax of which is defined above
 
 ### Example
 
-```
+```sql
 CREATE TABLE Chairs AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
 CREATE TABLE Chairs WITH (schema='target schema title') AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
 ```
@@ -131,7 +132,7 @@ Please note that for a given CTAS query:
 
 The following syntax defines an `INSERT INTO` query supported by [!DNL Query Service]:
 
-```
+```sql
 INSERT INTO table_name select_query
 ```
 
@@ -139,7 +140,7 @@ where `select_query` is a `SELECT` statement, the syntax of which is defined abo
 
 ### Example
 
-```
+```sql
 INSERT INTO Customers SELECT SupplierName, City, Country FROM OnlineCustomers;
 ```
 
@@ -152,7 +153,7 @@ Please note that for a given INSERT INTO query:
 
 Drop a table and delete the directory associated with the table from the file system if this is not an EXTERNAL table. If the table to drop does not exist, an exception occurs.
 
-```
+```sql
 DROP [TEMP] TABLE [IF EXISTS] [db_name.]table_name
 ```
 
@@ -165,7 +166,7 @@ DROP [TEMP] TABLE [IF EXISTS] [db_name.]table_name
 
 The following syntax defines a `CREATE VIEW` query supported by [!DNL Query Service]:
 
-```
+```sql
 CREATE [ OR REPLACE ] VIEW view_name AS select_query
 ```
 
@@ -174,7 +175,7 @@ and `select_query` is a `SELECT` statement, the syntax of which is defined above
 
 Example:
 
-```
+```sql
 CREATE VIEW V1 AS SELECT color, type FROM Inventory
 CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 ```
@@ -183,7 +184,7 @@ CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 
 The following syntax defines a `DROP VIEW` query supported by [!DNL Query Service]:
 
-```
+```sql
 DROP VIEW [IF EXISTS] view_name
 ```
 
@@ -191,7 +192,7 @@ Where `view_name` is the name of view to be deleted
 
 Example:
 
-```
+```sql
 DROP VIEW v1
 DROP VIEW IF EXISTS v1
 ```
@@ -202,7 +203,7 @@ DROP VIEW IF EXISTS v1
 
 Set a property, return the value of an existing property, or list all existing properties. If a value is provided for an existing property key, the old value is overridden.
 
-```
+```sql
 SET property_key [ To | =] property_value
 ```
 
@@ -214,7 +215,7 @@ To return the value for any setting, use `SHOW [setting name]`.
 
 This command is parsed and the completed command is sent back to the client. This is the same as the `START TRANSACTION` command.
 
-```
+```sql
 BEGIN [ TRANSACTION ]
 ```
 
@@ -226,7 +227,7 @@ BEGIN [ TRANSACTION ]
 
 `CLOSE` frees the resources associated with an open cursor. After the cursor is closed, no subsequent operations are allowed on it. A cursor should be closed when it is no longer needed.
 
-```
+```sql
 CLOSE { name }
 ```
 
@@ -238,7 +239,7 @@ CLOSE { name }
 
 No action is taken in [!DNL Query Service] as a response to the commit transaction statement.
 
-```
+```sql
 COMMIT [ WORK | TRANSACTION ]
 ```
 
@@ -251,7 +252,7 @@ COMMIT [ WORK | TRANSACTION ]
 
 Use `DEALLOCATE` to deallocate a previously prepared SQL statement. If you do not explicitly deallocate a prepared statement, it is deallocated when the session ends.
 
-```
+```sql
 DEALLOCATE [ PREPARE ] { name | ALL }
 ```
 
@@ -265,7 +266,7 @@ DEALLOCATE [ PREPARE ] { name | ALL }
 
 `DECLARE` allows a user to create cursors, which can be used to retrieve a small number of rows at a time out of a larger query. After the cursor is created, rows are fetched from it using `FETCH`.
 
-```
+```sql
 DECLARE name CURSOR [ WITH  HOLD ] FOR query
 ```
 
@@ -281,7 +282,7 @@ DECLARE name CURSOR [ WITH  HOLD ] FOR query
 
 If the `PREPARE` statement that created the statement specified some parameters, a compatible set of parameters must be passed to the `EXECUTE` statement, or else an error is raised. Note that prepared statements (unlike functions) are not overloaded based on the type or number of their parameters. The name of a prepared statement must be unique within a database session.
 
-```
+```sql
 EXECUTE name [ ( parameter [, ...] ) ]
 ```
 
@@ -298,7 +299,7 @@ The most critical part of the display is the estimated statement execution cost,
 
 The `ANALYZE` option causes the statement to be executed, not only planned. Then, actual run time statistics are added to the display, including the total elapsed time expended within each plan node (in milliseconds) and the total number of rows it returned. This is useful for seeing whether the planner's estimates are close to reality.
 
-```
+```sql
 EXPLAIN [ ( option [, ...] ) ] statement
 EXPLAIN [ ANALYZE ] statement
 
@@ -322,7 +323,7 @@ where option can be one of:
 
 To show the plan for a simple query on a table with a single `integer` column and 10000 rows:
 
-```
+```sql
 EXPLAIN SELECT * FROM foo;
 
                        QUERY PLAN
@@ -337,7 +338,7 @@ EXPLAIN SELECT * FROM foo;
 
 A cursor has an associated position, which is used by `FETCH`. The cursor position can be before the first row of the query result, on any particular row of the result, or after the last row of the result. When created, a cursor is positioned before the first row. After fetching some rows, the cursor is positioned on the row most recently retrieved. If `FETCH` runs off the end of the available rows then the cursor is left positioned after the last row. If there is no such row, an empty result is returned, and the cursors is left positioned before the first row or after the last row as appropriate. 
 
-```
+```sql
 FETCH num_of_rows [ IN | FROM ] cursor_name
 ```
 
@@ -356,7 +357,7 @@ Prepared statements only last for the duration of the current database session. 
 
 Prepared statements potentially have the largest performance advantage when a single session is being used to execute a large number of similar statements. The performance difference is particularly significant if the statements are complex to plan or rewrite, for example if the query involves a join of many tables or requires the application of several rules. If the statement is relatively simple to plan and rewrite but relatively expensive to execute, the performance advantage of prepared statements is less noticeable.
 
-```
+```sql
 PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 ```
 
@@ -370,7 +371,7 @@ PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 
 `ROLLBACK` rolls back the current transaction and causes all the updates made by the transaction to be discarded.
 
-```
+```sql
 ROLLBACK [ WORK ]
 ```
 
@@ -382,7 +383,7 @@ ROLLBACK [ WORK ]
 
 `SELECT INTO` creates a new table and fills it with data computed by a query. The data is not returned to the client, as it is with a normal `SELECT`. The new table's columns have the names and data types associated with the output columns of the `SELECT`.
 
-```
+```sql
 [ WITH [ RECURSIVE ] with_query [, ...] ]
 SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
     * | expression [ [ AS ] output_name ] [, ...]
@@ -410,7 +411,7 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
 
 Create a new table `films_recent` consisting of only recent entries from the table `films`:
 
-```
+```sql
 SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
 ```
 
@@ -418,7 +419,7 @@ SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
 
 `SHOW` displays the current setting of run-time parameters. These variables can be set using the `SET` statement, by editing the postgresql.conf configuration file, through the `PGOPTIONS` environmental variable (when using libpq or a libpq-based application), or through command-line flags when starting the postgres server.
 
-```
+```sql
 SHOW name
 ```
 
@@ -436,7 +437,7 @@ SHOW name
 
 Show the current setting of the parameter `DateStyle`
 
-```
+```sql
 SHOW DateStyle;
  DateStyle
 -----------
@@ -448,7 +449,7 @@ SHOW DateStyle;
 
 This command is parsed and sends the completed command back to client. This is the same as the `BEGIN` command.
 
-```
+```sql
 START TRANSACTION [ transaction_mode [, ...] ]
 
 where transaction_mode is one of:
@@ -456,3 +457,22 @@ where transaction_mode is one of:
     ISOLATION LEVEL { SERIALIZABLE | REPEATABLE READ | READ COMMITTED | READ UNCOMMITTED }
     READ WRITE | READ ONLY
 ```
+
+### COPY
+
+This command dumps the output of any SELECT query to a specified location. The user must have access to this location for this command to succeed.
+
+```sql
+COPY  query
+    TO '%scratch_space%/folder_location'
+    [  WITH FORMAT 'format_name']
+
+where 'format_name' is be one of:
+    'parquet', 'csv', 'json'
+
+'parquet' is the default format.
+```
+
+>[!NOTE]
+>
+>The complete output path will be `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`

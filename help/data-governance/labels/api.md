@@ -1,15 +1,16 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api
 solution: Experience Platform
 title: Manage data usage labels using APIs 
 topic: developer guide
+description: The Dataset Service API allows you to apply and edit usage labels for datasets. It is part of Adobe Experience Platform's data catalog capabilities, but is separate from the Catalog Service API which manages dataset metadata.
 ---
 
 # Manage data usage labels using APIs
 
 This document provides steps on how to manage data usage labels using the [!DNL Policy Service] API and [!DNL Dataset Service] API.
 
-The [!DNL Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) provides several endpoints that allow you to create and manage data usage labels for your organization.
+The [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) provides several endpoints that allow you to create and manage data usage labels for your organization.
 
 The [!DNL Dataset Service] API allows you to apply and edit usage labels for datasets. It is part of Adobe Experience Platform's data catalog capabilities, but is separate from the [!DNL Catalog Service] API which manages dataset metadata.
 

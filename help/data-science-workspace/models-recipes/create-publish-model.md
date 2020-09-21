@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;machine learning model;Data Science Workspace;popular topics
+keywords: Experience Platform;machine learning model;Data Science Workspace;popular topics;create and publish a model
 solution: Experience Platform
 title: Create and publish a machine learning model walkthrough
 topic: Tutorial
+description: Adobe Experience Platform Data Science Workspace provides the means to achieve your goal using the prebuilt Product Recommendations Recipe. Follow this tutorial to see how you can access and understand your retail data, create and optimise a machine learning Model, and generate insights in Data Science Workspace.
 ---
 
 # Create and publish a machine learning model walkthrough
@@ -35,13 +36,13 @@ Before starting this tutorial, you must have the following prerequisites:
     *   Golden Data Set postValues
     *   Golden Data Set Schema
 
-*   Download the three required [!DNL Jupyter Notebook] files from the <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">Adobe public [!DNL Git] repository</a>, these will be used to demonstrate the [!DNL JupyterLab] workflow in [!DNL Data Science Workspace].
+*   Download the three required [!DNL Jupyter Notebook] files from the [Adobe public [!DNL Git] repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs), these will be used to demonstrate the [!DNL JupyterLab] workflow in [!DNL Data Science Workspace].
 
 *   A working understanding of the following key concepts used in this tutorial:
-    *   [!DNL Experience Data Model](../../xdm/home.md): The standardization effort led by Adobe to define standard schemas such as [!DNL Profile] and ExperienceEvent, for Customer Experience Management. 
+    *   [[!DNL Experience Data Model]](../../xdm/home.md): The standardization effort led by Adobe to define standard schemas such as [!DNL Profile] and ExperienceEvent, for Customer Experience Management. 
     *   Datasets: A storage and management construct for actual data. A physical instantiated instance of an [XDM Schema](../../xdm/schema/field-dictionary.md).
     *   Batches: Datasets are made up of batches. A batch is a set of data collected over a period of time and processed together as a single unit.
-    *   [!DNL JupyterLab]: [!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is an open-source web-based interface for Project [!DNL Jupyter] and is tightly integrated into [!DNL Experience Platform].
+    *   [!DNL JupyterLab]: [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is an open-source web-based interface for Project [!DNL Jupyter] and is tightly integrated into [!DNL Experience Platform].
 
 ## Prepare your data {#prepare-your-data}
 
@@ -110,7 +111,9 @@ You can choose to wait for the training run to finish, or continue to create a n
 
     Hyperparameters cannot be learned, therefore they must be assigned before training runs occur. Adjusting Hyperparameters may change the accuracy of the Trained Model. Since optimizing a Model is an iterative process, multiple training runs may be required before a satisfactory evaluation is achieved.
 
-    >[!TIP] Set **[!UICONTROL num_recommendations]** to 10. 
+    >[!TIP]
+    >
+    >Set **[!UICONTROL num_recommendations]** to 10. 
 
     ![](../images/models-recipes/model-walkthrough/configure_hyperparameter.png)
 3.  An additional data point will appear on the Model evaluation chart once the new training run completes, this may take up to several minutes.

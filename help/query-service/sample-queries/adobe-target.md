@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;sample queries;sample query;adobe target;
 solution: Experience Platform
 title: Sample queries
 topic: queries
@@ -10,6 +10,7 @@ topic: queries
 Data from Adobe Target is transformed into Experience Event XDM schema and ingested into [!DNL Experience Platform] as datasets for you. There are many use cases for [!DNL Query Service] with this data, and the following sample queries should work with your Adobe Target datasets.
 
 >[!NOTE]
+>
 >In the following examples, you will need to edit the SQL to fill in the expected parameters for your queries based on the dataset, variables, or timeframe you are interested in evaluating. Provide parameters wherever you see `{ }` in the SQL.
 
 ## Standard dataset name for Target data source on [!DNL Platform]: 
@@ -44,10 +45,7 @@ FROM
     date_format(from_utc_timestamp(timestamp, 'America/New_York'), 'yyyy-MM-dd HH') AS Hour,
     EXPLODE(_experience.target.activities.activityID) AS ActivityID
   FROM adobe_target_experience_events
-  WHERE
-    _ACP_YEAR = {target_year} AND 
-    _ACP_MONTH = {target_month} AND 
-    _ACP_DAY = {target_day} AND 
+  WHERE TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}') AND 
     _experience.target.activities IS NOT NULL
 )
 GROUP BY Hour, ActivityID
@@ -65,9 +63,7 @@ SELECT
 FROM adobe_target_experience_events
 WHERE
   array_contains( _experience.target.activities.activityID, {Activity ID} ) AND 
-  _ACP_YEAR = {target_year} AND 
-  _ACP_MONTH = {target_month} AND 
-  _ACP_DAY = {target_day} AND 
+    TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}') AND 
   _experience.target.activities IS NOT NULL
 GROUP BY Hour, ActivityID
 ORDER BY Hour DESC
@@ -95,9 +91,7 @@ FROM
       EXPLODE(_experience.target.activities) AS Activities
     FROM adobe_target_experience_events
     WHERE 
-      _ACP_YEAR = {target_year} AND 
-      _ACP_MONTH = {target_month} AND 
-      _ACP_DAY = {target_day} AND 
+      TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}') AND 
       _experience.target.activities IS NOT NULL
   )
   WHERE Activities.activityID = {activity_id}
@@ -128,9 +122,7 @@ FROM
       EXPLODE(_experience.target.activities) AS Activities
     FROM adobe_target_experience_events
     WHERE 
-      _ACP_YEAR = {target_year} AND 
-      _ACP_MONTH = {target_month} AND 
-      _ACP_DAY = {target_day} AND 
+      TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}') AND 
       _experience.target.activities IS NOT NULL
   )
 )
@@ -155,9 +147,7 @@ FROM
     EXPLODE(_experience.target.activities) AS Activities
   FROM adobe_target_experience_events
   WHERE
-    _ACP_YEAR = {target_year} AND 
-    _ACP_MONTH = {target_month} AND 
-    _ACP_DAY = {target_day} AND 
+    TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}') AND 
     _experience.target.activities IS NOT NULL
 )
 GROUP BY Hour, Activities.activityid
@@ -197,9 +187,7 @@ FROM
         EXPLODE(_experience.target.activities) AS Activities
       FROM adobe_target_experience_events
       WHERE 
-        _ACP_YEAR = {target_year} AND
-        _ACP_MONTH = {target_month} AND 
-        _ACP_DAY = {target_day} AND 
+        TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}') AND 
         _experience.target.activities IS NOT NULL
       LIMIT 1000000
     )
@@ -221,9 +209,7 @@ SELECT
 FROM
   adobe_target_experience_events
 WHERE
-  _ACP_YEAR= {target_year} AND 
-  _ACP_MONTH= {target_month} AND 
-  _ACP_DAY= {target_day}
+  TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}')
   GROUP BY _experience.target.mboxname ORDER BY records DESC
 LIMIT 100
 ```

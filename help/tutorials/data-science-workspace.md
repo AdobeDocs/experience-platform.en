@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;dsw;DSW
 solution: Experience Platform
 title: Data Science Workspace tutorials
 topic: tutorial
+description: Adobe Experience Platform Data Science Workspace uses machine learning and artificial intelligence to create insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe solutions.
 ---
 
 # [!DNL Data Science Workspace] tutorials
@@ -33,10 +34,18 @@ To learn more and get the required values for performing CRUD operations with th
 - Access and understand the [!DNL JupyterLab] interface.
 - Understand code cells and the available kernels within [!DNL JupyterLab].
 - Understand GPU and memory server configuration in [!DNL Python]/R.
-- Read and query [!DNL Platform] data using Notebooks.
-- Understand the Notebook data limits.
 
  To learn more, visit the [JupyterLab user guide](../data-science-workspace/jupyterlab/overview.md).
+
+## Data Access in JupyterLab Notebooks
+
+Currently JupyterLab in Data Science Workspace supports notebooks for [!DNL Python], R, PySpark, and Scala. Each supported kernel provides built-in functionalities that allow you to read Platform data from a dataset within a notebook. However, support for paginating data is limited to [!DNL Python] and R notebooks. This guide focuses on how to use JupyterLab notebooks to access your data.
+
+**This guide will help you:**
+- Read, write, and query Platform data using Python, R, PySpark, or Scala notebooks.
+- Understand the read limitations of each notebook type.
+
+To learn more, visit the [JupyterLab Notebook data access developer guide](../data-science-workspace/jupyterlab/access-notebook-data.md)
 
 ## Package source files for [!DNL Docker] recipe authoring
 
@@ -53,7 +62,6 @@ To learn more, follow the [package source files into a recipe tutorial](../data-
 ## Import a recipe
 
 >[!NOTE]
->
 >
 >This tutorial requires you to have a [!DNL Docker] source file URL. Visit the [package source files into a recipe tutorial](../data-science-workspace/models-recipes/package-source-files-recipe.md) if you do not have a [!DNL Docker] source file URL.
 
@@ -120,6 +128,7 @@ To get started, follow the [schedule a model UI tutorial](../data-science-worksp
 ## Create a feature pipeline
 
 >[!NOTE]
+>
 >Currently, feature pipelines are only available via API.
 
 Adobe Experience Platform allows you to build and create custom feature pipelines to perform feature engineering at scale through the [!DNL Sensei Machine Learning Framework Runtime].

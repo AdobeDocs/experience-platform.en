@@ -1,4 +1,5 @@
 ---
+keywords: destinations;destination;destinations detail page;destinations details page
 title: Destinations Details Page
 seo-title: Destinations Details Page
 description: The details page for an individual destination provides an overview of the destination details, such as the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow. 

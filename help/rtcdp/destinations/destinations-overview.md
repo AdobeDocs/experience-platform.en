@@ -1,7 +1,8 @@
 ---
+keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;destinations;destination;rtcdp
 title: Destinations Overview
 seo-title: Destinations Overview
-description: Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Real-time Customer Data Platform. You can use Destinations in the Adobe Real-time Customer Data Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+description: Use destinations in the Adobe Experience Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 seo-description: Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Real-time Customer Data Platform. You can use Destinations in the Adobe Real-time Customer Data Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 ---
 
@@ -46,7 +47,7 @@ For more information about access controls, see the [Access control user guide](
 Data governance is enforced for Real-time CDP destinations through:
 
 * *Marketing use cases* that you can select in the create destinations workflow;
-* *Data usage policies* that restrict data containing certain usage labels from being activated to destinations with certain marketing use cases..
+* *Data usage policies* that restrict data containing certain usage labels from being activated to destinations with certain marketing use cases.
   
 See the [!DNL Data Governance] in Real-time CDP documentation for more information about [marketing use cases](/help/rtcdp/privacy/data-governance-overview.md#destinations) and [resolving data policy violations](/help/rtcdp/privacy/data-governance-overview.md#enforcement).
 
@@ -59,4 +60,4 @@ For more information about selecting marketing use cases in the create destinati
 * [Email marketing destinations](/help/rtcdp/destinations/email-marketing-destinations.md)
 * [Social network destinations](/help/rtcdp/destinations/social-network-destinations-workflow.md)
 
-For more information about data policy violations in the segment activation workflow, see step 7 in [Activate profiles and segments to a destination](/help/rtcdp/destinations/activate-destinations.md).
+For more information about data policy violations in the segment activation workflow, see the Review step in [Activate profiles and segments to a destination](/help/rtcdp/destinations/activate-destinations.md#review).

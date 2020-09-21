@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;sandbox user guide;sandbox guide
 solution: Experience Platform
 title: Sandbox user guide
 topic: user guide
+description: This document provides steps on how to perform various operations related to sandboxes in the Adobe Experience Platform user interface.
 ---
 
 # Sandbox user guide
@@ -11,7 +12,7 @@ This document provides steps on how to perform various operations related to san
 
 ## View sandboxes
 
-In the Experience Platform UI, click **Sandboxes** in the left-navigation to open the _Sandboxes_ dashboard. The dashboard lists all available sandboxes for your organization, including the sandbox type (production or development) and state (active, creating, deleted, or failed).
+In the Experience Platform UI, click **[!UICONTROL Sandboxes]** in the left-navigation to open the **[!UICONTROL Sandboxes]** dashboard. The dashboard lists all available sandboxes for your organization, including the sandbox type (production or development) and state (active, creating, deleted, or failed).
 
 ![](../images/ui/sandboxes-tab.png)
 
@@ -31,25 +32,25 @@ Once a sandbox is selected, the screen refreshes with the selected sandbox now f
 
 ## Create a new sandbox
 
-Use the following video for a quick overview on how to use [!DNL Sandboxes] in [!DNL Experience Platform].
+Use the following video for a quick overview on how to use Sandboxes in Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
-To create a new sandbox in the UI, click **Sandboxes** in the left-nav, then click **Create Sandbox**.
+To create a new sandbox in the UI, click **[!UICONTROL Sandboxes]** in the left-nav, then click **[!UICONTROL Create Sandbox]**.
 
 ![](../images/ui/create-sandbox-button.png)
 
-The _Create Sandbox_ dialog appears, prompting you to provide a display title and name for the sandbox. The **display title** is meant to be human-readable and should be descriptive enough to be easily identifiable. The sandbox **name** is an all-lowercase identifier for use in API calls, and should therefore be unique and concise.
+The **[!UICONTROL Create Sandbox]** dialog appears, prompting you to provide a display title and name for the sandbox. The **display title** is meant to be human-readable and should be descriptive enough to be easily identifiable. The sandbox **[!UICONTROL Name]** is an all-lowercase identifier for use in API calls, and should therefore be unique and concise.
 
-When finished, click **Create**.
+When finished, click **[!UICONTROL Create]**.
 
 ![](../images/ui/create-sandbox-dialog.png)
 
 >[!NOTE]
 >
->Since you are restricted to creating non-production sandbox types only, the **type** option is locked at "Non-Production" and cannot be manipulated.
+>Since you are restricted to creating non-production sandbox types only, the **[!UICONTROL type]** option is locked at "Non-Production" and cannot be manipulated.
 
-Once you have finished creating the sandbox, refresh the page and the new sandbox appears in the _Sandboxes_ dashboard with a status of "Creating". New sandboxes take approximately 15 minutes to be provisioned by the system, after which their status changes to "Active".
+Once you have finished creating the sandbox, refresh the page and the new sandbox appears in the **[!UICONTROL Sandboxes]** dashboard with a status of "[!UICONTROL Creating]". New sandboxes take approximately 15 minutes to be provisioned by the system, after which their status changes to "[!UICONTROL Active]".
 
 ![](../images/ui/sandbox-created.png)
 
@@ -61,15 +62,15 @@ Once you have finished creating the sandbox, refresh the page and the new sandbo
 
 Resetting a non-production sandbox deletes all resources associated with that sandbox (schemas, datasets, and so on), while maintaining the sandbox's name and associated permissions. This "clean" sandbox continues to be available under the same name for users that have access to it.
 
-To reset a sandbox in the UI, click **Sandboxes** in the left-nav, then click the sandbox you want to reset. In the dialog that appears on the right-hand side of the screen, click **Reset Sandbox**.
+To reset a sandbox in the UI, click **[!UICONTROL Sandboxes]** in the left-nav, then click the sandbox you want to reset. In the dialog that appears on the right-hand side of the screen, click **[!UICONTROL Reset Sandbox]**.
 
 ![](../images/ui/reset-sandbox-button.png)
 
-A dialog appears prompting you to confirm your choice. Click **Reset** to continue.
+A dialog appears prompting you to confirm your choice. Click **[!UICONTROL Reset]** to continue.
 
-<img src='../images/ui/reset-are-you-sure.png' width=350><br>
+<img src="../images/ui/reset-are-you-sure.png" width=350><br>
 
-A confirmation message appears and the sandbox's state changes to "Resetting". Once it has been provisioned by the system, its state will update to "Active" or "Failed".
+A confirmation message appears and the sandbox's state changes to "[!UICONTROL Resetting]". Once it has been provisioned by the system, its state will update to "[!UICONTROL Active]" or "[!UICONTROL Failed]".
 
 ![](../images/ui/sandbox-resetting.png)
 
@@ -81,15 +82,15 @@ A confirmation message appears and the sandbox's state changes to "Resetting". O
 
 Deleting a non-production sandbox permanently removes all resources associated with that sandbox, including permissions.
 
- To delete a sandbox in the UI, click **Sandboxes** in the left-nav, then click the sandbox you want to delete. In the dialog that appears on the right-hand side of the screen, click **Delete Sandbox**.
+ To delete a sandbox in the UI, click **[!UICONTROL Sandboxes]** in the left-nav, then click the sandbox you want to delete. In the dialog that appears on the right-hand side of the screen, click **[!UICONTROL Delete Sandbox]**.
 
 ![](../images/ui/delete-sandbox-button.png)
 
-A dialog appears prompting you to confirm your choice. Click **Delete** to continue.
+A dialog appears prompting you to confirm your choice. Click **[!UICONTROL Delete]** to continue.
 
-<img src='../images/ui/delete-are-you-sure.png' width=350><br>
+<img src="../images/ui/delete-are-you-sure.png" width=350><br>
 
-A confirmation message appears and the sandbox is removed from the _Sandboxes_ workspace. 
+A confirmation message appears and the sandbox is removed from the **[!UICONTROL Sandboxes]** workspace. 
 
 ## Next steps
 

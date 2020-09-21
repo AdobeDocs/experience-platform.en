@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;update sandbox
 solution: Experience Platform
 title: Update a sandbox
 topic: developer guide
+description: You can update one or more fields in a sandbox by making a PATCH request that includes the sandbox's name in the request path and the property to update in the request payload.
 ---
 
 # Update a sandbox

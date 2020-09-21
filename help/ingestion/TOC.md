@@ -2,6 +2,8 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Data Ingestion Help
+breadcrumb-title: Data Ingestion Guide
+user-guide-description: Bring in your data to Platform through batch or streaming ingestion.
 ---
 
 # Adobe Experience Platform Data Ingestion {#ingestion}
@@ -28,6 +30,7 @@ user-guide-title: Adobe Experience Platform Data Ingestion Help
 - Data ingestion quality and monitoring{#quality}
     - [Overview](quality/overview.md)
     - [Monitor data flows](quality/monitor-data-flows.md)
+    - [Retrieve error diagnostics](quality/error-diagnostics.md)
     - [Retrieve failed batches](quality/retrieve-failed-batches.md)
     - [Streaming ingestion validation](quality/streaming-validation.md)
     - [Subscribe to data ingestion events](quality/subscribe-events.md)

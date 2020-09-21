@@ -2,6 +2,8 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Decisioning Service
+breadcrumb-title: Decisioning Service Guide
+user-guide-description: Create personalized, optimized, and orchestrated experiences in Adobe applications by determining the best option from a set of available choices.
 ---
 
 # Adobe Experience Platform Decisioning Service {#decisioning}

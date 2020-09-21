@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;api guide;queries;query;Query service;
 solution: Experience Platform
 title: Query Service developer guide
 topic: queries
@@ -293,10 +293,10 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
  -d '{
    "op": "cancel"  
  }'
- ```
+```
 
- | Property | Description |
- | -------- | ----------- |
+| Property | Description |
+| -------- | ----------- |
 | `op` | In order to cancel the query, you must set the op parameter with the value `cancel `. |
 
 **Response**

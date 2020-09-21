@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;crm schema;crm;CRM;salesforce;Salesforce
 solution: Experience Platform
 title: Salesforce connector
 topic: overview
+description: Experience Platform provides support for ingesting data from a third-party CRM system. Support for CRM providers include Salesforce.
 ---
 
 # [!DNL Salesforce] connector

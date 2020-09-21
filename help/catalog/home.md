@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;catalog service;catalog;Catalog service;data location;Data Location;Data management;data management;Lineage;lineage;Catalog;enable dataset
 solution: Experience Platform
 title: Catalog Service overview
 topic: overview
+description: Catalog Service is the system of record for data location and lineage within Adobe Experience Platform. While all data that is ingested into Experience Platform is stored in the Data Lake as files and directories, Catalog holds the metadata and description of those files and directories for lookup and monitoring purposes.
 ---
 
 # [!DNL Catalog Service] overview
@@ -56,4 +57,4 @@ The following table outlines the different object types supported by [!DNL Catal
 
 ## Next steps
 
-This document provided an introduction to [!DNL Catalog Service] and how it functions within the greater scope of [!DNL Experience Platform]. See the [Catalog developer guide](api/getting-started.md) for steps on interacting with the different endpoints of that [!DNL Catalog] API. It is recommended that you also refer to the guide on [filtering Catalog data](api/filter-data.md) in order to follow best practices for limiting the data returned in API responses.
+This document provided an introduction to [!DNL Catalog Service] and how it functions within the greater scope of [!DNL Experience Platform]. See the [[!DNL Catalog] developer guide](api/getting-started.md) for steps on interacting with the different endpoints of that [!DNL Catalog] API. It is recommended that you also refer to the guide on [filtering Catalog data](api/filter-data.md) in order to follow best practices for limiting the data returned in API responses.

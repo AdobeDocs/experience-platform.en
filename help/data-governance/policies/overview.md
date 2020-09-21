@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;dule;DULE
 solution: Experience Platform
 title: Data usage policies overview
 topic: policies
+description: In order for data usage labels to effectively support data compliance, data usage policies must be implemented. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Experience Platform.
 ---
 
 # Data usage policies overview
@@ -24,13 +25,13 @@ An example of a marketing action might be the desire to export a dataset to a th
 >
 >Marketing actions by themselves do not restrict data usage. They must be included in enabled data usage policies in order for those actions to be evaluated for policy violations.
 
-When data usage happens in your organization's service, relevant marketing actions should be indicated so that any policy violations can be identified. You can then use the [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) to check for policy violations in your integration.
+When data usage happens in your organization's service, relevant marketing actions should be indicated so that any policy violations can be identified. You can then use the [Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) to check for policy violations in your integration.
 
 >[!NOTE]
 >
 >If you are using [!DNL Real-time Customer Data Platform], you can set up marketing use cases on destinations to automate policy enforcement. See the document on [Data Governance in Real-time CDP](../../rtcdp/privacy/data-governance-overview.md) for more information.
 
-See the appendix to this document for a list of [available Adobe-defined marketing actions](#core-actions). You can also define your own custom marketing actions using the DULE [!DNL Policy Service] API or the [!DNL Experience Platform ]user interface. More information on working with marketing actions and policies is provided in the next section.
+See the appendix to this document for a list of [available Adobe-defined marketing actions](#core-actions). You can also define your own custom marketing actions using the [!DNL Policy Service] API or the [!DNL Experience Platform ]user interface. More information on working with marketing actions and policies is provided in the next section.
 
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
@@ -42,7 +43,7 @@ For a reference on how specific Data Export Controls map to marketing actions in
 
 ## Managing data usage policies {#manage}
 
-Once data usage labels have been applied, data stewards can use the DULE [!DNL Policy Service] API or the [!DNL Experience Platform] UI to manage and evaluate policies related to marketing actions being taken on data containing data usage labels. You can create and update policies, determine the status of a policy, and work with marketing actions to evaluate whether a specific action violates a data usage policy.
+Once data usage labels have been applied, data stewards can use the [!DNL Policy Service] API or the [!DNL Experience Platform] UI to manage and evaluate policies related to marketing actions being taken on data containing data usage labels. You can create and update policies, determine the status of a policy, and work with marketing actions to evaluate whether a specific action violates a data usage policy.
 
 >[!IMPORTANT]
 >
@@ -54,7 +55,7 @@ For information on how to work with marketing actions and policies in the [!DNL 
 
 ## Next steps
 
-This document provided an introduction to data usage policies within the DULE framework. You can now continue to read the process documentation linked to throughout this guide to learn more about how to work with policies in the API and UI.
+This document provided an introduction to data usage policies within the [!DNL Data Governance] framework. You can now continue to read the process documentation linked to throughout this guide to learn more about how to work with policies in the API and UI.
 
 ## Appendix
 

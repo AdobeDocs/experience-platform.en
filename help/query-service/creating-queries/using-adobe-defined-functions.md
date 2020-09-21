@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;adobe defined functions;query;using adobe defined functions;
 solution: Experience Platform
 title: Adobe-defined functions
 topic: queries
@@ -42,7 +42,7 @@ FROM  (
         ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
         AS session
         FROM your_analytics_table
-        WHERE _ACP_YEAR = 2018
+        WHERE TIMESTAMP >= to_timestamp('2018-12-01') AND TIMESTAMP <= to_timestamp('2018-12-31')
       )
 LIMIT 100;
 ```
@@ -69,7 +69,7 @@ FROM
       AS session,
           web.webPageDetails.pageviews.value as PageViews
       FROM your_analytics_table
-      WHERE _ACP_YEAR = 2018
+      WHERE TIMESTAMP >= to_timestamp('2018-12-01') AND TIMESTAMP <= to_timestamp('2018-12-31')
     )
 GROUP BY Day 
 ORDER BY Day DESC 
@@ -113,7 +113,7 @@ SELECT
       AS LastMemberLevel,
   commerce.purchases.value as Orders
 FROM your_analytics_table 
-WHERE _ACP_YEAR=2018 AND _ACP_MONTH=4
+WHERE TIMESTAMP >= to_timestamp('2018-04-01') AND TIMESTAMP <= to_timestamp('2018-04-30')
 LIMIT 50;
 ```
 
@@ -134,7 +134,7 @@ FROM
       AS LastMemberLevel,
   commerce.purchases.value as Orders
 FROM your_analytics_table 
-WHERE _ACP_YEAR=2018 AND _ACP_MONTH=4
+WHERE TIMESTAMP >= to_timestamp('2018-04-01') AND TIMESTAMP <= to_timestamp('2018-04-30')
 )
 GROUP BY LastMemberLevel 
 ORDER BY MemberLevelOrders DESC
@@ -149,7 +149,7 @@ Pathing helps to understand how customers navigate your site. The `NEXT()` and `
 
 **Syntax:**
 
-```
+```sql
 NEXT(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])
 PREVIOUS(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])
 ```
@@ -171,7 +171,7 @@ SELECT
               ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING).value
           AS next_pagename
 FROM your_analytics_table
-WHERE _ACP_YEAR=2018 
+WHERE TIMESTAMP >= to_timestamp('2018-12-01') AND TIMESTAMP <= to_timestamp('2018-12-31') 
 LIMIT 10;
 ```
 
@@ -224,7 +224,7 @@ LIMIT 10;
                 ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) 
         AS session
       FROM your_analytics_table
-      WHERE _ACP_YEAR=2018)
+      WHERE TIMESTAMP >= to_timestamp('2018-12-01') AND TIMESTAMP <= to_timestamp('2018-12-31')
     )
   WHERE SessionPageDepth=1
   GROUP BY PageName, PageName_2, PageName_3, PageName_4, PageName_5

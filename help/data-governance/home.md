@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;DULE;dule
 solution: Experience Platform
 title: Adobe Experience Platform Data Governance
 topic: overview
+description: Adobe Experience Platform Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within Experience Platform at various levels, including cataloging, data lineage, data usage labeling, data usage policies, and controlling usage of data for marketing actions
 ---
 
 # [!DNL Data Governance] overview
@@ -35,11 +36,11 @@ Marketers are the end point of data governance. They request data from the data 
 * Marketing Specialists and Experience Designers use data to design new customer experiences. 
 
 
-## DULE framework
+## [!DNL Data Governance] framework
 
-Data Usage Labeling and Enforcement (DULE) is the core framework for [!DNL Experience Platform] [!DNL Data Governance]. DULE simplifies and streamlines the process of categorizing data and creating data usage policies. Once data labels have been applied and data usage policies are in place, marketing actions can be evaluated to ensure the correct use of data.
+The [!DNL Data Governance] framework simplifies and streamlines the process of categorizing data and creating data usage policies. Once data labels have been applied and data usage policies are in place, marketing actions can be evaluated to ensure the correct use of data.
 
-There are three key elements to the DULE framework: Labels, Policies, and Enforcement.
+There are three key elements to the [!DNL Data Governance] framework: Labels, Policies, and Enforcement.
 
 1. **Labels:** Classify data that reflects privacy-related considerations and contractual conditions to be compliant with regulations and organization policies.
 1. **Policies:** Describe what kind(s) of marketing actions are allowed or not allowed to be taken on specific data.
@@ -49,7 +50,7 @@ There are three key elements to the DULE framework: Labels, Policies, and Enforc
 
 [!DNL Data Governance] enables data stewards to apply usage labels at the dataset and field level to categorize data according to the type of policies that apply.
 
-The DULE framework includes predefined data usage labels that can be used to categorize data in three ways:
+The [!DNL Data Governance] framework includes predefined data usage labels that can be used to categorize data in three ways:
 
 ![Data Usage Label Categories](./images/overview/label-categories.png)
 
@@ -71,7 +72,7 @@ In order for data usage labels to effectively support data compliance, data usag
 
 An example of a marketing action might be the desire to export a dataset to a third-party service. If there is a policy in place saying that specific types of data, such as Personally Identifiable Information (PII), cannot be exported and an "I" label (Identity data) has been applied to the dataset, you will receive a response from the [!DNL Policy Service] telling you that a data usage policy has been violated.
 
-Once data usage labels have been applied, data stewards can create policies using the DULE [!DNL Policy Service] API or the [!DNL Experience Platform] user interface.
+Once data usage labels have been applied, data stewards can create policies using the [!DNL Policy Service] API or the [!DNL Experience Platform] user interface.
 
 >[!IMPORTANT]
 >
@@ -81,7 +82,7 @@ For more information on data usage policies and marketing actions, see the [poli
 
 ## Next steps
 
-This document provided a high-level introduction to [!DNL Data Governance] and the DULE framework. You can now continue to the [data usage labels user guide](labels/user-guide.md) and start adding usage labels to your experience data.
+This document provided a high-level introduction to [!DNL Data Governance] and the[!DNL Data Governance] framework. You can now continue to the [data usage labels user guide](labels/user-guide.md) and start adding usage labels to your experience data.
 
 ## Appendix
 
@@ -89,7 +90,7 @@ The following section provides additional information regarding [!DNL Data Gover
 
 ### [!DNL Data Governance] terminology
 
-The following table outlines key terms related to [!DNL Data Governance] and the DULE framework.
+The following table outlines key terms related to [!DNL Data Governance] and the[!DNL Data Governance] framework.
 
 |Term|Definition |
 |---|---|
@@ -99,7 +100,6 @@ The following table outlines key terms related to [!DNL Data Governance] and the
 |**Data steward**|The data steward is the person responsible for the management, oversight, and enforcement of an organization's data assets. A data steward also ensures data governance policies are safeguarded and maintained to be compliant with government regulations and organization policies.|
 |**Data usage labels**|Data usage labels provide users the ability to categorize data that reflects privacy-related considerations and contractual conditions to be compliant with regulations and corporate policies.|
 |**Dataset labels**|Labels can be added to a dataset. All fields within a dataset inherit the dataset's labels.|
-|**DULE**|DULE is an acronym for "Data Usage Labeling and Enforcement." A key part of data governance, DULE is a collection of features that allows for data usage labeling and applying data access policies for governance needs within an organization.|
 |**Field labels**|Field labels are data governance labels that are either inherited from a dataset or applied directly to a field.  Data governance labels applied to a field are not inherited up to a dataset.|
 |**Geofence**| A geofence is a virtual geographic boundary, defined by GPS or RFID technology, that enables software to trigger a response when a mobile device enters or leaves a particular area.|
 |**Identity labels**|Identity "I" labels are used to categorize data that can identify or contact a specific person.|
@@ -110,6 +110,10 @@ The following table outlines key terms related to [!DNL Data Governance] and the
 
 ## Additional resources
 
-The following video is intended to support your understanding of [!DNL Data Governance], and outlines the key aspects of the Data Usage Labeling and Enforcement (DULE) framework.
+The following video is intended to support your understanding of the [!DNL Data Governance] framework.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
+
+The following video provides an introduction to various [!DNL Data Governance] features in Experience Platform.
+
+>[!VIDEO](https://video.tv.adobe.com/v/36653?quality=12&enable10seconds=on&speedcontrol=on)
