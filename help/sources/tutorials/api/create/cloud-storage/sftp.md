@@ -61,6 +61,10 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 A connection specifies a source and contains your credentials for that source. Only one connection is required per SFTP account as it can be used to create multiple source connectors to bring in different data.
 
+### Create an SFTP connection using basic authentication
+
+To create an SFTP connection using basic authentication, make a POST request to the [!DNL Flow Service] API while providing values for your connection's `host`, `userName`, and `password`.
+
 **API format**
 
 ```http
@@ -97,6 +101,61 @@ curl -X POST \
 | `auth.params.host` | The host name of your SFTP server. |
 | `auth.params.username` | The username associated with your SFTP server. |
 | `auth.params.password` | The password associated with your SFTP server. |
+| `connectionSpec.id` | The STFP server connection specification ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
+
+**Response**
+
+A successful response returns the unique identifier (`id`) of the newly created connection. This ID is required to explore your SFTP server in the next tutorial.
+
+```json
+{
+    "id": "bf367b0d-3d9b-4060-b67b-0d3d9bd06094",
+    "etag": "\"1700cc7b-0000-0200-0000-5e3b3fba0000\""
+}
+```
+
+### Create an SFTP connection using SSH public key authentication
+
+To create an SFTP connection using SSH public key authentication, make a POST request to the [!DNL Flow Service] API while providing values for your connection's `host`, `userName`, `privateKeyContent`, and `passPhrase`.
+
+**API format**
+
+```http
+POST /connections
+```
+
+**Request**
+
+```shell
+curl -X POST \
+    'http://platform.adobe.io/data/foundation/flowservice/connections' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -d  "auth": {
+        "specName": "SSH PublicKey Authentication for sftp",
+        "params": {
+            "host": "{HOST_NAME}",
+            "userName": "{USER_NAME}",
+            "privateKeyContent": "{PRIVATE_KEY_CONTENT}",
+            "passPhrase": "{PASS_PHRASE}"
+        }
+    },
+    "connectionSpec": {
+        "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
+        "version": "1.0"
+    }
+}
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `auth.params.host` | The host name of your SFTP server. |
+| `auth.params.username` | The username associated with your SFTP server. |
+| `auth.params.privateKeyContent` | The base64 string of the private key content for the user. |
+| `auth.params.passPhrase` | The pass phrase or password to decrypt the private key. |
 | `connectionSpec.id` | The STFP server connection specification ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 **Response**
