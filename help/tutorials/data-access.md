@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;access data sources
+keywords: Experience Platform;home;popular topics;access data sources;data access;spark sdk;python sdk
 solution: Experience Platform
 title: Data Access tutorials
 topic: tutorial
