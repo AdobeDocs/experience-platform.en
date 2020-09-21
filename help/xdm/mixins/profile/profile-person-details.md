@@ -10,7 +10,7 @@ description: This document provides an overview of the XDM Individual Profile cl
 
 [!UICONTROL Profile person details] is a standard mixin for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). The mixin provides a root-level `person` object, whose sub-fields describe personal information about an individual person.
 
-<img src='../../images/mixins/profile-person-details.png' width=600 />
+<img src='../../images/mixins/profile-person-details.png' width=600 /><br />
 
 | Property | Description |
 | --- | --- |
