@@ -70,7 +70,7 @@ Alternatively, you can select **[SSH public key]** and connect your SFTP account
 | Credential | Description |
 | ---------- | ----------- |
 | Private key content | A base64 encoded SSH private key content. SSH private key should be OpenSSH format. |
-| Passphrase | Specifies the pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If PrivateKeyContent is password protected, this parameter needs to be used with the PrivateKeyContent's passphrase as value |
+| Passphrase | Specifies the pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If PrivateKeyContent is password protected, this parameter needs to be used with the PrivateKeyContent's passphrase as value. |
 
 ### Existing account
 
