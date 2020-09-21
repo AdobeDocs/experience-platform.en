@@ -21,4 +21,6 @@ description: This document provides an overview of the XDM Individual Profile cl
 | `statusReason` | A description of the current status. |
 | `validity` | A level of technical correctness of the phone number. |
 
-For an example of a populated phone number data type, refer to the [public XDM repository](https://github.com/adobe/xdm/blob/master/components/datatypes/phonenumber.example.1.json).
+For more details on the phone number data type, refer to the public XDM repository:
+* [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/phonenumber.example.1.json)
+* [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/phonenumber.schema.json)

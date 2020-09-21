@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;phoneNumber;xdm:phoneNumber;datatype;data-type;data type;
+keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;address;xdm:address;datatype;data-type;data type;
 solution: Experience Platform
 title: Postal address data type
 topic: overview
@@ -8,7 +8,7 @@ description: This document provides an overview of the XDM Individual Profile cl
 
 # [!UICONTROL Postal address] data type
 
-[!UICONTROL Postal address] is a standard XDM data type that describes the details of a phone number.
+[!UICONTROL Postal address] is a standard XDM data type that describes the details of a mailing address.
 
 <img src='../images/data-types/postal-address.png' width=450 /><br />
 
@@ -34,5 +34,6 @@ description: This document provides an overview of the XDM Individual Profile cl
 | `statusReason` | A description of the current `status`. |
 | `street1` - `street4` | These four fields are meant to contain primary street level information, apartment number, street number, and street name. `street2` to `street4` are optional. |
 
-
-For an example of a populated postal address data type, refer to the [public XDM repository](https://github.com/adobe/xdm/blob/master/components/datatypes/address.example.1.json).
+For more details on the postal address data type, refer to the public XDM repository:
+* [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/address.example.1.json)
+* [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/address.schema.json)
