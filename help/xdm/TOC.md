@@ -11,6 +11,7 @@ user-guide-description: Use standard classes and mixins to build a robust schema
 * [XDM System overview](home.md)
 * XDM schemas {#schema}
   * [Basics of schema composition](schema/composition.md)
+  * [XDM field type constraints](schema/field-constraints.md)
   * [XDM field dictionary](schema/field-dictionary.md)
   * Schema use cases {#use-cases}
     * [Privacy Consent mixin](schema/privacy-consent.md)
