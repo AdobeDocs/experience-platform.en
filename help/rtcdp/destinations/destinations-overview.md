@@ -2,7 +2,7 @@
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;destinations;destination;rtcdp
 title: Destinations Overview
 seo-title: Destinations Overview
-description: Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Real-time Customer Data Platform. You can use Destinations in the Adobe Real-time Customer Data Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+description: Use destinations in the Adobe Experience Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 seo-description: Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Real-time Customer Data Platform. You can use Destinations in the Adobe Real-time Customer Data Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 ---
 
