@@ -8,11 +8,46 @@ description: Adobe Experience Platform enables users to discover and access inge
 
 # Access Experience Platform data
 
-Adobe Experience Platform enables users to discover and access ingested datasets within [!DNL Experience Platform] using the Data Access API.
+Data Access supports Adobe Experience Platform by providing users tools focused on the discoverability and accessibility of ingested datasets within Experience Platform.
 
-## Access Data using APIs
+To learn more, begin by reading the [Data Access overview](../data-access/home.md).
 
-Learn how to locate, access, and download data stored within a dataset using the Data Access API in Adobe Experience Platform, as well as some of the unique features of the Data Access API, such as paging and partial downloads. To get started, follow the [data access API tutorial](../data-access/tutorials/dataset-data.md).
+## Query dataset data using the Data Access API
+
+The Data Access API supports Adobe Experience Platform by providing users with a RESTful interface focused on the discoverability and accessibility of ingested datasets within Experience Platform.
+
+**This tutorial will help you:**
+- Locate data within Platform.
+- Access a file using a file ID.
+- Retrieve the metadata of a file.
+- Access the contents of a file.
+- Download partial contents of a file.
+- Configure API response pagination.
+
+To get started, follow the [data access API tutorial](../data-access/tutorials/dataset-data.md).
+
+## Use the Secure Python Data Access SDK
+
+The Secure Python Data Access SDK is a software development kit that enables reading and writing of datasets from Experience Platform using Python.
+
+**This guide will help you:**
+- Setup your environment and install the correct packages.
+- Read from a dataset.
+- Write to a dataset.
+- Read and Write to a Userspace directory.
+
+To get started, view the [Python Data Access SDK documentation](../data-access/tutorials/python-sdk.md).
+
+## Use the Secure Spark Data Access SDK
+
+The Secure Spark Data Access SDK is a software development kit that enables reading and writing of datasets from Adobe Experience Platform using Spark.
+
+**This guide will help you:**
+- Setup your environment and install the correct packages.
+- Read from a dataset.
+- Write to a dataset.
+
+To get started, view the [Spark Data Access SDK documentation](../data-access/tutorials/spark-sdk.md).
 
 ## Create a dataset
 
