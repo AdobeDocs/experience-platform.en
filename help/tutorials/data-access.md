@@ -6,7 +6,7 @@ topic: tutorial
 description: Adobe Experience Platform enables users to discover and access ingested datasets within Experience Platform using the Data Access API.
 ---
 
-# Access Experience Platform data
+# Data Access tutorials
 
 Data Access supports Adobe Experience Platform by providing users tools focused on the discoverability and accessibility of ingested datasets within Experience Platform.
 
