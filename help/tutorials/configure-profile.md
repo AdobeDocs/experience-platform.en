@@ -27,14 +27,10 @@ To learn more, visit the [Real-time Customer Profile user guide](../profile/ui/u
 The Real-time Customer Profile API includes multiple endpoints. Profile allows you to consolidate disparate customer data from multiple channels, such as online, offline, CRM, and third party data, into a unified view offering an actionable, timestamped account of every customer interaction.
 
 **The following API developer guides are available:**
-- [(alpha) Computed attributes](../profile/api/computed-attributes.md) - Learn about the use cases for computed attributes as well as, how to configure, access, update, and delete a computed attribute.
-- [MLInstances (recipes)](../data-science-workspace/api/mlinstances.md) - Learn how to create an MLInstance, retrieve the information for an MLInstance, update an MLInstance, and delete an MLInstance.
-- [Experiments](../data-science-workspace/api/experiments.md) - Learn how to create an Experiment, retrieve an Experiment or Experiment runs information, update an Experiment, and delete an Experiment.
-- [Models](../data-science-workspace/api/models.md) - Learn how to register your own Model, retrieve the information for a Model, update a Model, delete a Model, create a new transcoding for a Model, and retrieve a transcoded Model's details.
-- [MLServices](../data-science-workspace/api/mlservices.md) - Learn how to create an MLService, retrieve the information for an MLService, update an MLService, and delete an MLService.
-- [Insights](../data-science-workspace/api/insights.md) - Learn how to retrieve the information for an Insight, add a new Model Insight, and retrieve a list of default metrics for algorithms.
+- [Computed attributes (alpha) ](../profile/api/computed-attributes.md) - Learn about the use cases for computed attributes as well as, how to configure, access, update, and delete a computed attribute.
 
-To learn more and get the required values for performing CRUD operations with the Sensei Machine Learning API, visit the [getting started guide](../data-science-workspace/api/getting-started.md).
+
+To learn more and get the required values for performing CRUD operations with the Real-time Customer Profile API, visit the [getting started guide](../profile/api/getting-started.md).
 
 ## Enable a schema for [!DNL Profile] and [!DNL Identity] Service
 
