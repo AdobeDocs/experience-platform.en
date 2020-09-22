@@ -63,6 +63,8 @@ You can attach a schema field by entering a schema name in the **[!UICONTROL Sel
 
 During this step, you can enable your dataset for [!DNL Real-time Customer Profile] and create a holistic view of an entity's attributes and behaviors. Data from all enabled datasets will be included in [!DNL Profile] and changes are applied when you save your dataflow.
 
+Toggle the **[!UICONTROL Profile dataset]** button to enable your target dataset for [!DNL Profile].
+
 ![create-new-dataset](../../../images/tutorials/dataflow/advertising/target-dataset.png)
 
 The **[!UICONTROL Select schema]** dialog appears. Select the schema you wish to apply to the new dataset, then click **[!DNL Done]**.
