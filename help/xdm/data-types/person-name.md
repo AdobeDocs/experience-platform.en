@@ -10,7 +10,7 @@ description: This document provides an overview of the XDM Individual Profile cl
 
 [!UICONTROL Person name] is a standard XDM data type that describes the full name of a person. As conventions for name structures differ widely across languages and cultures, names should always be modeled using this datatype.
 
-In addition, the datatype provides a number of optional properties that can be used in situations that require using only a fragment of the full name, such as creating a formal or informal greeting.
+In addition, the data type provides a number of optional properties that can be used in situations that require using only a fragment of the full name, such as creating a formal or informal greeting.
 
 <img src='../images/data-types/person-name.png' width=500 /><br />
 
