@@ -56,7 +56,7 @@ user-guide-description: Bring together known and anonymous data from multiple en
       * [Contentsquare extension](/help/rtcdp/destinations/contentsquare-extension.md)
       * [Decibel extension](/help/rtcdp/destinations/decibel-extension.md)
       * [Demandbase extension](/help/rtcdp/destinations/demandbase-extension.md)
-      * [Airship destination](/help/rtcdp/destinations/airship-destination.md)
+      * [Test destination](/help/rtcdp/destinations/test-destination.md)
       * [Dialogtech extension](/help/rtcdp/destinations/dialogtech-extension.md)
       * [Google Global Site Tag analytics extension](/help/rtcdp/destinations/gtag-analytics-extension.md)
       * [Google Universal Analytics extension](/help/rtcdp/destinations/google-universal-analytics-extension.md)
