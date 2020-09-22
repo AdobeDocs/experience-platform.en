@@ -120,19 +120,52 @@ For example, to concatenate **city** and **country** CSV fields and assign them 
 
 ![](../images/tutorials/map-a-csv-file/mapping-function.png)
 
-The following table lists all supported mapping functions, including sample expressions and their resulting outputs.
+The following tables list all supported mapping functions, including sample expressions and their resulting outputs.
 
-| Function | Description | Sample expression | Sample output |
-| -------- | ----------- | ----------------- | ------------- |
-| concat | Concatenates given strings. | concat("Hi, ", "there", "!") | `"Hi, there!"` |
-| explode | Splits the string based on a regex and returns an array of parts. | explode("Hi, there!", " ") | `["Hi,", "there"]` |
-| instr | Returns the location/index of a substring. | instr("adobe<span>.com", "com") | 6 |
-| replacestr | Replaces the search string if present in original string. | replacestr("This is a string re test", "re", "replace") | "This is a string replace test" |
-| substr| Returns a substring of a given length. | substr("This is a substring test", 7, 8) | " a subst" |
-| lower /<br>lcase | Converts a string to lowercase. | lower("HeLLo")<br>lcase("HeLLo") | "hello" |
-| upper /<br>ucase | Converts a string to uppercase. | upper("HeLLo")<br>ucase("HeLLo") | "HELLO" |
-| split | Splits an input string on a separator. | split("Hello world", " ") | `["Hello", "world"]` |
-| join | Joins a list of objects using the separator. | `join(" ", ["Hello", "world"]`) | "Hello world" |
+**String functions**
+
+| Function | Description | Parameters | Syntax | Expression | Sample output |
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+| concat | Concatenates the given strings. | <ul><li>STRING: The strings that will be concatenated.</li></ul> | concat(STRING_1, STRING_2) | concat("Hi, ", "there", "!") | `"Hi, there!"` |
+| explode | Splits the string based on a regex and returns an array of parts. Can optionally include regex to split the string. By default, the splitting resolves to ",". | <ul><li>STRING: **Required** The string that needs to be split.</li><li>REGEX: *Optional* The regular expression that can be used to split the string. | explode(STRING, REGEX) | explode("Hi, there!", " ") | `["Hi,", "there"]` |
+| instr | Returns the location/index of a substring. | <ul><li>INPUT: **Required** The string that is being searched.</li><li>SUBSTRING: **Required** The substring that is being searched for within the string.</li><li>START_POSITION: *Optional* The location of where to start looking in the string.</li><li>OCCURRENCE: *Optional* The nth occurrence to look for from the start position. By default, it is 1. </li></ul> | instr(INPUT, SUBSTRING, START_POSITION, OCCURRENCE) | instr("adobe<span>.com", "com") | 6 |
+| replacestr | Replaces the search string if present in original string. | <ul><li>INPUT: **Required** The input string.</li><li>TO_FIND: **Required** The string to look up within the input.</li><li>TO_REPLACE: **Required** The string that will replace the value within "TO_FIND".</li></ul> | replacestr(INPUT, TO_FIND, TO_REPLACE) | replacestr("This is a string re test", "re", "replace") | "This is a string replace test" |
+| substr| Returns a substring of a given length. | <ul><li>INPUT: **Required** The input string.</li><li>START_INDEX: **Required** The index of the input string where the substring starts.</li><li>LENGTH: **Required** The length of the substring.</li></ul> | substr(INPUT, START_INDEX, LENGTH) | substr("This is a substring test", 7, 8) | " a subst" |
+| lower /<br>lcase | Converts a string to lowercase. | <ul><li>INPUT: **Required** The string that will be converted to lowercase.</li></ul> | lower(INPUT) | lower("HeLLo")<br>lcase("HeLLo") | "hello" |
+| upper /<br>ucase | Converts a string to uppercase. | <ul><li>INPUT: **Required** The string that will be converted to uppercase.</li></ul> | upper(INPUT) | upper("HeLLo")<br>ucase("HeLLo") | "HELLO" |
+| split | Splits an input string on a separator. | <ul><li>INPUT: **Required** The input string that is going to be split.</li><li>SEPARATOR: **Required** The string that is used to split the input. | split(INPUT, SEPARATOR) | split("Hello world", " ") | `["Hello", "world"]` |
+| join | Joins a list of objects using the separator. | <ul><li>SEPARATOR: **Required** The string that will be used to join the objects.</li><li>OBJECTS: **Required** An array of strings that will be joined.</li></ul> | join(SEPARATOR, [OBJECTS]) | `join(" ", ["Hello", "world"]`) | "Hello world" |
+| lpad | Pads the left side of a string with the other given string. | <ul><li>INPUT: **Required** The string that is going to be padded out. This string can be null.</li><li>COUNT: **Required** The size of the string to be padded out.</li><li>PADDING: **Required** The string to pad the input with. If null or empty, it will be treated as a single space.</li></ul> | lpad(INPUT, COUNT, PADDING) | lpad("bat", 8, "yz") | "yzyzybat" | 
+| rpad | Pads the right side of a string with the other given string. | <ul><li>INPUT: **Required** The string that is going to be padded out. This string can be null.</li><li>COUNT: **Required** The size of the string to be padded out.</li><li>PADDING: **Required** The string to pad the input with. If null or empty, it will be treated as a single space.</li></ul> | rpad(INPUT, COUNT, PADDING) | rpad("bat", 8, "yz") | "batyzyzy" | 
+| left | Gets the first "n" characters of the given string. | <ul><li>STRING: **Required** The string you are getting the first "n" characters for.</li><li>COUNT: **Required**The "n" characters you want to get from the string.</li></ul> | left(STRING, COUNT) | left("abcde", 2) | "ab" |
+| right | Gets the last "n" characters of the given string. | <ul><li>STRING: **Required** The string you are getting the last "n" characters for.</li><li>COUNT: **Required**The "n" characters you want to get from the string.</li></ul> | right(STRING, COUNT) | right("abcde", 2) | "de" |
+| ltrim | Removes the whitespace from the beginning of the string. | <ul><li>STRING: **Required** The string you want to remove the whitespace from.</li></ul> | ltrim(STRING) | ltrim(" hello") | "hello" |
+| rtrim | Removes the whitespace from the end of the string. | <ul><li>STRING: **Required** The string you want to remove the whitespace from.</li></ul> | rtrim(STRING) | rtrim("hello ") | "hello" |
+| trim | Removes the whitespace from the beginning and the end of the string. | <ul><li>STRING: **Required** The string you want to remove the whitespace from.</li></ul> | trim(STRING) | trim(" hello ") | "hello" |
+| equals | Compares two strings to confirm if they are equal. This function is case sensitive. | <ul><li>STRING1: **Required** The first string you want to compare.</li><li>STRING2: **Required** The second string you want to compare.</li></ul> | STRING1.equals(STRING2) | "string1".equals("STRING1) | false |
+| equalsIgnoreCase | Compares two strings to confirm if they are equal. This function is **not** case sensitive. | <ul><li>STRING1: **Required** The first string you want to compare.</li><li>STRING2: **Required** The second string you want to compare.</li></ul> | STRING1.equalsIgnoreCase(STRING2) | "string1".equalsIgnoreCase("STRING1) | true |
+
+**Hashing functions**
+
+| Function | Description | Parameters | Syntax | Expression | Sample output |
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+| sha1 | Takes an input and produces a hash value using Secure Hash Algorithm 1 (SHA-1). | <ul><li>INPUT: **Required** The plain text to be hashed.</li><li>CHARSET: *Optional* The name of the character set. Possible values include UTF-8, UTF-16, ISO-8859-1, and US-ASCII. | sha1(INPUT, CHARSET) | sha1("my text", "UTF-8") | c3599c11e47719df18a2448690840c5dfcce3c80 |
+| sha256 | Takes an input and produces a hash value using Secure Hash Algorithm 256 (SHA-256). | <ul><li>INPUT: **Required** The plain text to be hashed.</li><li>CHARSET: *Optional* The name of the character set. Possible values include UTF-8, UTF-16, ISO-8859-1, and US-ASCII. | sha256(INPUT, CHARSET) | sha256("my text", "UTF-8") | 7330d2b39ca35eaf4cb95fc846c21ee6a39af698154a83a586ee270a0d372104 |
+| sha512 | Takes an input and produces a hash value using Secure Hash Algorithm 512 (SHA-512). | <ul><li>INPUT: **Required** The plain text to be hashed.</li><li>CHARSET: *Optional* The name of the character set. Possible values include UTF-8, UTF-16, ISO-8859-1, and US-ASCII. | sha512(INPUT, CHARSET) | sha512("my text", "UTF-8") | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef708bf11b4232bb21d2a8704ada2cdcd7b367dd0788a89a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
+| md5 | Takes an input and produces a hash value using MD5. | <ul><li>INPUT: **Required** The plain text to be hashed.</li><li>CHARSET: *Optional* The name of the character set. Possible values include UTF-8, UTF-16, ISO-8859-1, and US-ASCII. | md5(INPUT, CHARSET) | md5("my text", "UTF-8") | d3b96ce8c9fb4e9bd0198d03ba6852c7 |
+| crc32 | Takes an input uses a cyclic redundancy check (CRC) algorithm to produce a 32-bit cyclic code. | <ul><li>INPUT: **Required** The plain text to be hashed.</li><li>CHARSET: *Optional* The name of the character set. Possible values include UTF-8, UTF-16, ISO-8859-1, and US-ASCII. | crc32(INPUT, CHARSET) | crc32("my text", "UTF-8") | 8df92e80 |
+
+**URL functions**
+
+| Function | Description | Parameters | Syntax | Expression | Sample output |
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+| get_url_protocol | Returns the protocol from the given URL. If the input is invalid, it returns null. | <ul><li>URL: **Required** The URL from which the protocol needs to be extracted.</li></ul> | get_url_protocol(URL) | get_url_protocol("https://platform.adobe.com/home") | https |
+| get_url_host | Returns the host of the given URL. If the input is invalid, it returns null. | <ul><li>URL: **Required** The URL from which the host needs to be extracted.</li></ul> | get_url_host(URL) | get_url_host("https://platform.adobe.com/home") | platform.adobe.com |
+| get_url_port | Returns the port of the given URL. If the input is invalid, it returns null. | <ul><li>URL: **Required** The URL from which the port needs to be extracted.</li></ul> | get_url_port(URL) | get_url_port("sftp://example.com//home/joe/employee.csv") | 22 |
+| get_url_path | Returns the path of the given URL. By default, the full path is returned. | <ul><li>URL: **Required** The URL from which the path needs to be extracted.</li><li>FULL_PATH: *Optional* A boolean value that determines if the full path is returned. If set to false, only the end of the path is returned. | get_url_path(URL, FULL_PATH) | get_url_path("sftp://example.com//home/joe/employee.csv") | "//home/joe/employee.csv" |
+
+| Function | Description | Parameters | Syntax | Expression | Sample output |
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | coalesce | Returns the first non-null object in a given list. | coalesce(null, null, null, "first", null, "second") | "first" |
 | decode | Given a key and a list of key value pairs flattened as an array, the function returns the value if key is found or return a default value if present in the array. | decode("k2", "k1", "v1", "k2", "v2", "default") | "v2" |
 | iif | Evaluates a given boolean expression and returns the specified value based on the result. | iif("s".equalsIgnoreCase("S"), "True", "False") | "True" |
