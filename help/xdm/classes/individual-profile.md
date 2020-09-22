@@ -14,7 +14,7 @@ Profiles can range from anonymous behavioral signals (such as browser cookies), 
 
 The [!DNL XDM Individual Profile] class itself provides several system-generated values that are automatically populated when data is ingested, whereas all other fields must be added through the use of [compatible mixins](#mixins):
 
-![](../images/classes/individual-profile/structure.png)
+![](../images/classes/individual-profile.png)
 
 | Property | Description |
 | --- | --- |
