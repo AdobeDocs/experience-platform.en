@@ -30,8 +30,8 @@ Adobe provides several standard mixins for use with the [!DNL XDM ExperienceEven
 
 * [!UICONTROL Adobe Target ExperienceEvent Template Mixin]
 * [!UICONTROL Adobe Analytics ExperienceEvent Template Mixin]
-* [!UICONTROL ExperienceEvent EndUserIDs]
-* [!UICONTROL ExperienceEvent environment details]
+* [[!UICONTROL ExperienceEvent EndUserIDs]](../mixins/event/enduserids.md)
+* [[!UICONTROL ExperienceEvent environment details]](../mixins/event/environment-details.md)
 * [!UICONTROL ExperienceEvent web details]
 
 ## Appendix
