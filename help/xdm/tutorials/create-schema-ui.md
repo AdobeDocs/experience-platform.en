@@ -230,6 +230,10 @@ If you are looking for a specific field in your schema, you can also use the sea
 
 ![](../images/tutorials/create-schema/search.png)
 
+>[!IMPORTANT]
+>
+>The search function takes any selected mixin filters into account when displaying matching fields. If a search query is not displaying the results you expect, you may need to double-check that you are not filtering out any relevant mixins.
+
 ## Set a schema field as an identity field {#identity-field}
 
 The standard data structure that schemas provide can be leveraged to identify data belonging to the same individual across multiple sources, allowing for various downstream use cases such as segmentation, reporting, data science analysis, and more. In order to stitch data based on individual identities, key fields must be marked as [!UICONTROL Identity] fields within applicable schemas. 
