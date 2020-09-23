@@ -14,9 +14,9 @@ description: This document provides an overview of the XDM Individual Profile cl
 
 | Property | Data type | Description |
 | --- | --- | --- |
-| `POIinteraction` | POI interaction | Describes details about the point of interest (POI) interaction. |
-| `activePOIs` | Point of interest details (Array) | Describes the POIs that caused the event. |
-| `geo` | Geo | Describes the geographic location where the experience was delivered. |
+| `POIinteraction` | [[!UICONTROL Point of interest interaction]](./poi-interaction.md) | Describes details about the point of interest (POI) interaction. |
+| `activePOIs` | Array of [[!UICONTROL Point of interest details]](./poi-details.md) | Describes the POIs that caused the event. |
+| `geo` | [[!UICONTROL Geo]](./geo.md) | Describes the geographic location where the experience was delivered. |
 | `localTime` | DateTime | A timestamp in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, indicating the local time using with a stated time zone offset. The formatting pattern is `yyyy-MM-dd'T'HH:mm:ssXXX` (for example, `2001-07-04T12:08:56-07:00`). |
 | `localTimezoneOffset` | Integer | The current local timezone offset in minutes from UTC for the `localTime` value. This should include the current DST offset if applicable. |
 
