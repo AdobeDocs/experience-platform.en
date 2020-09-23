@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;third-party database;third par
 solution: Experience Platform
 title: Collect data from a third-party database through source connectors and APIs
 topic: overview
+type: Tutorial
 description: This tutorial covers the steps for retrieving data from a third-party database and ingesting it into Platform through source connectors and APIs.
 ---
 

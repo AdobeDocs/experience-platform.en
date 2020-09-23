@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;dsw;DSW
 solution: Experience Platform
 title: Data Science Workspace tutorials
 topic: tutorial
+type: Tutorial
 description: Adobe Experience Platform Data Science Workspace uses machine learning and artificial intelligence to create insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe solutions.
 ---
 

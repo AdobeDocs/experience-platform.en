@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Microsoft Dynamics;microsoft d
 solution: Experience Platform
 title: Create a Microsoft Dynamics connector using the Flow Service API
 topic: overview
+type: Tutorial
 description: This tutorial uses the Flow Service API to walk you through the steps to connect Platform to a Microsoft Dynamics (hereinafter referred to as "Dynamics") account for collecting CRM data.
 ---
 

@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Vertica;vertica
 solution: Experience Platform
 title: Create an HP Vertica connector using the Flow Service API
 topic: overview
+type: Tutorial
 description: This tutorial uses the Flow Service API to walk you through the steps to connect HP Vertica to Experience Platform.
 
 ---

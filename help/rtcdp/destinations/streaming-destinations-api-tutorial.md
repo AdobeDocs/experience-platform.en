@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics; API tutorials; streaming dest
 solution: Experience Platform
 title: Connect to streaming destinations and activate data
 topic: tutorial
+type: Tutorial
 ---
 
 # Connect to streaming destinations and activate data using API calls in Adobe's Real-time Customer Data Platform

@@ -4,6 +4,7 @@ description: Source connectors in Adobe Experience Platform provide the ability 
 solution: Experience Platform
 title: Monitor accounts and dataflows
 topic: overview
+type: Tutorial
 ---
 
 # Monitor accounts and dataflows in the UI
