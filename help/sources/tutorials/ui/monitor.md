@@ -65,7 +65,18 @@ Dataflows can be accessed directly from the **[!UICONTROL Catalog]** page withou
 
 ![catalog-dataflows](../../images/tutorials/monitor/catalog-dataflows.png)
 
-A list of existing dataflows appears. On this page is a list of viewable dataflows, including information about their source, username, number of dataflows, and status. Select the funnel icon on the top left to sort.
+A list of existing dataflows appears. On this page is a list of viewable dataflows, including information about their source, username, number of dataflows, and status.
+
+See the following table for more information on statuses:
+
+| Status | Description |
+| ------ | ----------- |
+| Enabled | The `Enabled` status indicates that a dataflow is active and is ingesting data according to the schedule it was provided. |
+| Disabled | The `Disabled` status indicates that a dataflow is inactive and is not ingesting any data. |
+| Processing | The `Processing` status indicates that a dataflow is not yet active. This status is often encountered immediately after a new dataflow is created. |
+| Error | The `Error` status indicates that the activation process of a dataflow has been disrupted. |
+
+ Select the funnel icon on the top left to sort.
 
 ![dataflows-list](../../images/tutorials/monitor/dataflows-list.png)
 
