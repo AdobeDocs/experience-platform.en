@@ -182,11 +182,13 @@ The following tables list all supported mapping functions, including sample expr
 | zone_date_to_utc | Converts a date in any timezone to a date in UTC. | <ul><li>DATE: **Required** The date that you are trying to convert.</li></ul> | zone_date_to_utc(DATE) | `zone_date_to_utc(2019-10-17T11:55:12.000000999-07:00[America/Los_Angeles])` | `2019-10-17T18:55:12.000000999Z[UTC]` |
 | zone_date_to_zone | Converts a date from one timezone to another timezone. | <ul><li>DATE: **Required** The date that you are trying to convert.</li><li>ZONE: **Required** The timezone that you are trying to convert the date to.</li></ul> | zone_date_to_zone(DATE, ZONE) | `zone_date_to_utc(2019-10-17T11:55:12.000000999-07:00[America/Los_Angeles], "Europe/Paris")` | `2019-10-17T20:55:12.000000999+02:00[Europe/Paris]` |
 
+**Hierarchies - Arrays**
+
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | coalesce | Returns the first non-null object in a given list. | coalesce(null, null, null, "first", null, "second") | "first" |
-| first | Retrieves the first given argument. | first("1", "2", "3") | "1" |
-| last | Retrieves the last given argument. | last("1", "2", "3") | "3" |
+| first | Retrieves the first element of the given array. | first("1", "2", "3") | "1" |
+| last | Retrieves the last element of the given array. | last("1", "2", "3") | "3" |
 
 **Logical operators**
 
