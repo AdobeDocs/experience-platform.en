@@ -10,11 +10,11 @@ description: This document provides a step-by-step tutorial to enrich Real-time 
 
 Adobe Experience Platform [!DNL Data Science Workspace] provides the tools and resources to create, evaluate, and utilize machine learning models to generate data predictions and insights. When machine learning insights are ingested into a [!DNL Profile]-enabled dataset, that same data is also ingested as [!DNL Profile] records which can then be segmented into subsets of related elements by using [!DNL Experience Platform Segmentation Service].
 
-This document provides a links to tutorials that enable you to enrich [!DNL Real-time Customer Profile] with machine learning insights.
+This document provides a links to tutorials that enable you to enrich [!DNL Real-time Customer Profile] with your machine learning insights.
 
 ## Getting started
 
-In order to enrich [!DNL Real-time Customer Profile] with machine learning insights, you are required to have a working understanding of the various aspects of Experience Platform involved in ingesting [!DNL Profile] data and creating segments. Before beginning this tutorial, please review the documentation for the following services:
+In order to complete the tutorials below, you are required to have a working understanding of the various aspects of Experience Platform involved in ingesting [!DNL Profile] data and creating segments. Before beginning this tutorial, please review the documentation for the following services:
 
 - [[!DNL Real-time Customer Profile]](../../rtcdp/overview.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 - [[!DNL Identity Service]](../../identity-service/home.md): Enables [!DNL Real-time Customer Profile] by bridging identities from disparate data sources being ingested into Platform.
@@ -29,21 +29,23 @@ In addition to the above-mentioned documents, it is highly recommended that you 
 
 The first step towards enriching [!DNL Real-time Customer Profile] with scoring insights is knowing what real-world object (such as a person) your data defines. Having an understanding of your data enables you to describe and design a structure to add meaning, much like designing a relational database.
 
-Composing a schema begins by assigning a class. Classes define the behavioral aspects of the data the schema will contain (record or time-series). Use the following documentation to [create a schema using the Schema Editor](../../xdm/tutorials/create-schema-ui.md). Note that before you can enable a dataset for [!DNL Profile], you need to configure the dataset's schema to have a primary identity field and then enable the schema for [!DNL Profile].
+Composing a schema begins by assigning a class. Classes define the behavioral aspects of the data the schema will contain (record or time-series). Use the following documentation to [create a schema using the Schema Editor](../../xdm/tutorials/create-schema-ui.md). Note that before you can enable a dataset for [!DNL Profile], you need to configure the dataset's schema to have a primary identity field and then enable the schema for [!DNL Profile]. When data is ingested into a [!DNL Profile]-enabled dataset, that same data is also ingested as [!DNL Profile] records. 
 
-When data is ingested into a [!DNL Profile]-enabled dataset, that same data is also ingested as [!DNL Profile] records. Once your schema and dataset is prepared, generate and ingest data into the dataset by performing scoring runs using an appropriate model.
+If you prefer to compose a schema using the [!DNL Schema Registry] API instead, start by reading the [[!DNL Schema Registry] developer guide](../api/getting-started.md) before attempting the tutorial on [creating a schema using the API](create-schema-api.md).
+
+Once your schema and dataset is prepared, generate and ingest scoring data to the dataset by performing scoring runs using an appropriate model.
 
 ## Create segments using the Segment Builder {#create-segments-using-the-segment-builder}
 
-After you have generated and ingested insights to your [!DNL Profile]-enabled dataset, you can manage that data by identifying subsets of related elements using the [!DNL Segment Builder]. 
+After you have generated and ingested your scoring data insights to your [!DNL Profile]-enabled dataset, you can manage that data by identifying subsets of related elements using the [!DNL Segment Builder]. 
 
-The [!DNL Segment Builder] provides a rich workspace that allows you to interact with [!DNL Profile] data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. Using the [Segment Builder user guide](../../segmentation/ui/segment-builder.md) you will learn how to:
+The [!DNL Segment Builder] provides a rich workspace that allows you to interact with [!DNL Profile] data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. Use the [Segment Builder user guide](../../segmentation/ui/segment-builder.md) to learn more about:
 
-- Create segment definitions using a combination of attributes, events, and existing audiences as building blocks.  
-- Use the rule builder canvas and containers to control the order in which segment rules are executed.
-- View estimates of your prospective audience, allowing you to adjust your segment definitions as required.
-- Enable all segment definitions for scheduled segmentation.
-- Enable specified segment definitions for streaming segmentation.
+- Creating segment definitions using a combination of attributes, events, and existing audiences as building blocks.  
+- Using the rule builder canvas and containers to control the order in which segment rules are executed.
+- Viewing estimates of your prospective audience, allowing you to adjust your segment definitions as required.
+- Enabling all segment definitions for scheduled segmentation.
+- Enabling specified segment definitions for streaming segmentation.
 
 ## Next steps {#next-steps}
 
