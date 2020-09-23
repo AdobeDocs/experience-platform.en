@@ -29,11 +29,11 @@ For more information about identity namespaces in [!DNL Experience Platform], se
 
 ## Submitting requests {#submit}
 
->[!NOTE]
->
->This section covers how to create privacy requests for the [!DNL Profile] data store. It is strongly recommended that you review the [Privacy Service API](../privacy-service/api/getting-started.md) or [Privacy Service UI](../privacy-service/ui/overview.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
+The sections below outline how to make privacy requests for [!DNL Real-time Customer Profile] and the [!DNL Data Lake] using the [!DNL Privacy Service] API or UI. Before reading these sections, it is strongly recommended that you review the [Privacy Service API](../privacy-service/api/getting-started.md) or [Privacy Service UI](../privacy-service/ui/overview.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
 
-The following section outlines how to make privacy requests for [!DNL Real-time Customer Profile] and the [!DNL Data Lake] using the [!DNL Privacy Service] API or UI.
+>[!IMPORTANT]
+>
+>Privacy Service is only able to process [!DNL Profile] data using a merge policy that does not perform identity stitching. If you are using the UI to confirm whether your privacy requests are being processed, ensure that you are using a no-stich policy rather than the default private graph option.
 
 ### Using the API
 
@@ -42,7 +42,7 @@ When creating job requests in the API, any `userIDs` that are provided must use 
 
 In addition, the `include` array of the request payload must include the product values for the different data stores the request is being made to. When making requests to the [!DNL Data Lake], the array must include the value "ProfileService".
 
-The following request creates a new privacy job for both [!DNL Real-time Customer Profile], using the standard "Email" identity namespace. It also includes the product value for [!DNL Profile] in the `include` array:
+The following request creates a new privacy job for [!DNL Real-time Customer Profile], using the standard `Email` identity namespace. It also includes the product value for [!DNL Profile] (`ProfileService`) in the `include` array:
 
 ```shell
 curl -X POST \
@@ -76,7 +76,7 @@ curl -X POST \
         ]
       }
     ],
-    "include": ["ProfileService", "aepDataLake"],
+    "include": ["ProfileService"],
     "expandIds": false,
     "priority": "normal",
     "analyticsDeleteMethod": "anonymize",
