@@ -147,14 +147,14 @@ A successful response returns HTTP status 200 with detailed information about th
         },
         "XID_ADOBE-MARKETING-CLOUD-ID-3": {
             "_href": "https://platform.adobe.io/data/core/ups/models/profile/XID_ADOBE-MARKETING-CLOUD-ID-1000"
-        },
-        "state": "RESULT_READY",
-        "links": {
-            "_self": "https://platform.adobe.io/data/core/ups/preview?expression=<expr-1>&limit=1000",
-            "next": "",
-            "prev": ""
         }
     }],
+    "state": "RESULT_READY",
+    "links": {
+        "_self": "https://platform.adobe.io/data/core/ups/preview?expression=<expr-1>&limit=1000",
+        "next": "",
+        "prev": ""
+    },
     "page": {
         "offset": 0,
         "size": 3
