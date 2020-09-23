@@ -55,11 +55,11 @@ The **[!UICONTROL Connect to SFTP]** page appears. On this page, you can either 
 
 If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide a name, an optional description, and your credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new connection to establish.
 
-The SFTP connector provides you different authentication types for access. Under *[!UICONTROL Account authentication]* Select **[!UICONTROL Password]** to use a password-based credential.
+The SFTP connector provides you different authentication types for access. Under **[!UICONTROL Account authentication]** select **[!UICONTROL Password]** to use a password-based credential.
 
 ![connect-password](../../../../images/tutorials/create/sftp/password.png)
 
-Alternatively, you can select **[SSH public key]** and connect your SFTP account using a *[!UICONTROL Private key content]* and *[!UICONTROL Passphrase]* combination.
+Alternatively, you can select **[SSH public key]** and connect your SFTP account using a combination of **[!UICONTROL Private key content]** and **[!UICONTROL Passphrase]**.
 
 >[!IMPORTANT]
 >
@@ -69,7 +69,7 @@ Alternatively, you can select **[SSH public key]** and connect your SFTP account
 
 | Credential | Description |
 | ---------- | ----------- |
-| Private key content | A base64 encoded SSH private key content. SSH private key should be OpenSSH format. |
+| Private key content | A Base64 encoded SSH private key content. The SSH private key should should be OpenSSH format. |
 | Passphrase | Specifies the pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If PrivateKeyContent is password protected, this parameter needs to be used with the PrivateKeyContent's passphrase as value. |
 
 ### Existing account
