@@ -60,7 +60,11 @@ To ingest data into a new dataset, select **[!UICONTROL Create new dataset]** an
 
 You can attach a schema field by entering a schema name in the **[!UICONTROL Select schema]** search bar. You can also select the drop down icon to see a list of existing schemas. Alternatively, you can select **[!UICONTROL Advanced search]** to access screen of existing schemas including their respective details.
 
-![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
+During this step, you can enable your dataset for [!DNL Real-time Customer Profile] and create a holistic view of an entity's attributes and behaviors. Data from all enabled datasets will be included in [!DNL Profile] and changes are applied when you save your dataflow.
+
+Toggle the **[!UICONTROL Profile dataset]** button to enable your target dataset for [!DNL Profile].
+
+![create-new-dataset](../../../images/tutorials/dataflow/marketing-automation/new-dataset.png)
 
 The **[!UICONTROL Select schema]** dialog appears. Select the schema you wish to apply to the new dataset, then click **[!UICONTROL Done]**.
 
@@ -72,9 +76,15 @@ Based on your needs, you can choose to map fields directly, or use mapper functi
 >
 >[!DNL Platform] provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
 
-Once your source data is mapped, select **[!UICONTROL Next]**.
-
 ![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+
+Select **[!UICONTROL Preview data]** to see mapping results of up to 100 rows of sample data from the selected dataset.
+
+During the preview, the identity column is prioritized as the first field, as it is the key information necessary when validating mapping results.
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
+
+Once your source data is mapped, select **[!UICONTROL Close]**.
 
 ## Schedule ingestion runs
 
