@@ -37,9 +37,9 @@ Once your schema and dataset is prepared, generate and ingest scoring data to th
 
 ## Create segments using the Segment Builder {#create-segments-using-the-segment-builder}
 
-After you have generated and ingested your scoring data insights to your [!DNL Profile]-enabled dataset, you can manage that data by identifying subsets of related elements using the [!DNL Segment Builder]. 
+After you have generated and ingested your scoring data insights to your [!DNL Profile]-enabled dataset. You can manage that data by identifying subsets of related elements using the [!DNL Segment Builder]. 
 
-The [!DNL Segment Builder] provides a rich workspace that allows you to interact with [!DNL Profile] data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. Follow the [Segment Builder user guide](../../segmentation/ui/segment-builder.md) to learn more about:
+The [!DNL Segment Builder] provides a rich workspace that allows you to interact with [!DNL Profile] data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. Follow the [Segment Builder user guide](../../segmentation/ui/segment-builder.md) to learn about:
 
 - Creating segment definitions using a combination of attributes, events, and existing audiences as building blocks.  
 - Using the rule builder canvas and containers to control the order in which segment rules are executed.
