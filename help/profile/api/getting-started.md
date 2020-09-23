@@ -1,6 +1,5 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-solution: Adobe Experience Platform
 title: Getting started with Real-time Customer Profile API
 topic: guide
 ---

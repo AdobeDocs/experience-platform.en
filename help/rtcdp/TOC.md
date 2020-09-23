@@ -2,7 +2,7 @@
 product: adobe experience platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform Guide
-user-guide-description: Built on Adobe Experience Platform, Adobe Real-time Customer Data Platform (Real-time CDP) helps companies bring together known and anonymous data from multiple enterprise sources in order to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real time.
+user-guide-description: Bring together known and anonymous data from multiple enterprise sources to create customer profiles, create audience segments from those profiles, and activate those segments to third-party destinations.
 ---
 
 # Real-time Customer Data Platform Help {#rtcdp}
