@@ -96,5 +96,5 @@ To learn more about customizing profile data, visit the [Profile customization d
 
 Once you have configured [!DNL Real-time Customer Profile] for your organization, you can begin adding data to individual customer profiles and creating audience segments based on specific customer attributes. To get started, see the following tutorials:
 
-* [Add data to Real-time Customer Profile](../profile/tutorials/add-profile-data.md)  
-* [Create a segment](../segmentation/tutorials/create-a-segment.md)
+- [Add data to Real-time Customer Profile](../profile/tutorials/add-profile-data.md)  
+- [Create a segment](../segmentation/tutorials/create-a-segment.md)
