@@ -163,24 +163,53 @@ The following tables list all supported mapping functions, including sample expr
 | get_url_host | Returns the host of the given URL. If the input is invalid, it returns null. | <ul><li>URL: **Required** The URL from which the host needs to be extracted.</li></ul> | get_url_host(URL) | get_url_host("https://platform.adobe.com/home") | platform.adobe.com |
 | get_url_port | Returns the port of the given URL. If the input is invalid, it returns null. | <ul><li>URL: **Required** The URL from which the port needs to be extracted.</li></ul> | get_url_port(URL) | get_url_port("sftp://example.com//home/joe/employee.csv") | 22 |
 | get_url_path | Returns the path of the given URL. By default, the full path is returned. | <ul><li>URL: **Required** The URL from which the path needs to be extracted.</li><li>FULL_PATH: *Optional* A boolean value that determines if the full path is returned. If set to false, only the end of the path is returned. | get_url_path(URL, FULL_PATH) | get_url_path("sftp://example.com//home/joe/employee.csv") | "//home/joe/employee.csv" |
+| get_url_query_str | Returns the query string of a given URL as a map. | 
+
+**Date and time functions**
+
+| Function | Description | Parameters | Syntax | Expression | Sample output |
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+| now | Retrieves the current time. | | now() | now() | `2020-09-23T10:10:24.556-07:00[America/Los_Angeles]` |
+| timestamp | Retrieves the current Unix time. | | timestamp() | timestamp() | 1571850624571 |
+| format | Formats the input date according to a specified format. | <ul><li>DATE: **Required** The input date, as a ZonedDateTime object, that you want to format.</li><li>FORMAT: **Required** The format that you want the date to be changed to.</li></ul> | format(DATE, FORMAT)  | format(2019-10-23T11:24:00+00:00, "yyyy-MM-dd HH:mm:ss") | "2019-10-23 11:24:35" |
+| dformat | Converts a timestamp to a date string according to a specified format. | <ul><li>TIMESTAMP: **Required** The timestamp you want to format. This is written in milliseconds.</li><li>FORMAT: **Required** The format that you want the timestamp to be changed to.</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875, "dd-MMM-yyyy hh:mm") | "23-Oct-2019 11:24" |
+| date | Converts a date string into a ZonedDateTime object (ISO 8601 format). | <ul><li>DATE: **Required** The string that represents the date.</li><li>FORMAT: **Required** The string representing the format of the date.</li><li>DEFAULT_DATE: **Required** The default date returned, if the date provided is null.</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date("23-Oct-2019 11:24", "yyyy/MM/dd", now()) | "2019-10-23T11:24:00+00:00" |
+| date | Converts a date string into a ZonedDateTime object (ISO 8601 format). | <ul><li>DATE: **Required** The string that represents the date.</li><li>FORMAT: **Required** The string representing the format of the date.</li></ul> | date(DATE, FORMAT) | date("23-Oct-2019 11:24") | "2019-10-23T11:24:00+00:00" |
+| date | Converts a date string into a ZonedDateTime object (ISO 8601 format). | <ul><li>DATE: **Required** The string that represents the date.</li></ul> | date(DATE) | date("23-Oct-2019 11:24", "yyyy/MM/dd") | "2019-10-23T11:24:00+00:00" |
+| date_part | Retrieves the parts of the date. The following component values are supported: <br><br>"year"<br>"yyyy"<br>"yy"<br><br>"quarter"<br>"qq"<br>"q"<br><br>"month"<br>"mm"<br>"m"<br><br>"dayofyear"<br>"dy"<br>"y"<br><br>"day"<br>"dd"<br>"d"<br><br>"week"<br>"ww"<br>"w"<br><br>"weekday"<br>"dw"<br>"w"<br><br>"hour"<br>"hh"<br>"hh24"<br>"hh12"<br><br>"minute"<br>"mi"<br>"n"<br><br>"second"<br>"ss"<br>"s"<br><br>"millisecond"<br>"ms" | <ul><li>COMPONENT: **Required** A string representing the part of the date. </li><li>DATE: **Required** The date, in a standard format.</li></ul> | date_part(COMPONENT, DATE) | date_part("MM", date("2019-10-17 11:55:12")) | 10 |
+| set_date_part | Replaces a component in a given date. The following components are accepted: <br><br>"year"<br>"yyyy"<br>"yy"<br><br>"month"<br>"mm"<br>"m"<br><br>"day"<br>"dd"<br>"d"<br><br>"hour"<br>"hh"<br><br>"minute"<br>"mi"<br>"n"<br><br>"second"<br>"ss"<br>"s" | <ul><li>COMPONENT: **Required** A string representing the part of the date. </li><li>VALUE: **Required** The value to set for the component for a given date.</li><li>DATE: **Required** The date, in a standard format.</li></ul> | set_date_part(COMPONENT, VALUE, DATE) | set_date_part("m", 4, date("2016-11-09T11:44:44.797") | "2016-04-09T11:44:44.797" |
+| make_date_time | Creates a date from parts. This function can also be induced using make_timestamp. | <ul><li>YEAR: **Required** The year, written in four digits.</li><li>MONTH: **Required** The month. The allowed values are 1 to 12.</li><li>DAY: **Required** The day. The allowed values are 1 to 31.</li><li>HOUR: **Required** The hour. The allowed values are 0 to 23.</li><li>MINUTE: **Required** The minute. The allowed values are 0 to 59.</li><li>NANOSECOND: **Required** The nanosecond values. The allowed values are 0 to 999999999.</li><li>TIMEZONE: **Required** The timezone for the date time.</li></ul> | make_date_time(YEAR, MONTH, DAY, HOUR, MINUTE, SECOND, NANOSECOND, TIMEZONE) |make_date_time(2019, 10, 17, 11, 55, 12, 999, "America/Los_Angeles") | `2019-10-17T11:55:12.0​00000999-07:00[America/Los_Angeles]` |
+| zone_date_to_utc | Converts a date in any timezone to a date in UTC. | <ul><li>DATE: **Required** The date that you are trying to convert.</li></ul> | zone_date_to_utc(DATE) | `zone_date_to_utc(2019-10-17T11:55:12.000000999-07:00[America/Los_Angeles])` | `2019-10-17T18:55:12.000000999Z[UTC]` |
+| zone_date_to_zone | Converts a date from one timezone to another timezone. | <ul><li>DATE: **Required** The date that you are trying to convert.</li><li>ZONE: **Required** The timezone that you are trying to convert the date to.</li></ul> | zone_date_to_zone(DATE, ZONE) | `zone_date_to_utc(2019-10-17T11:55:12.000000999-07:00[America/Los_Angeles], "Europe/Paris")` | `2019-10-17T20:55:12.000000999+02:00[Europe/Paris]` |
 
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | coalesce | Returns the first non-null object in a given list. | coalesce(null, null, null, "first", null, "second") | "first" |
-| decode | Given a key and a list of key value pairs flattened as an array, the function returns the value if key is found or return a default value if present in the array. | decode("k2", "k1", "v1", "k2", "v2", "default") | "v2" |
-| iif | Evaluates a given boolean expression and returns the specified value based on the result. | iif("s".equalsIgnoreCase("S"), "True", "False") | "True" |
-| min | Returns the minimum of the given arguments. Uses natural ordering. | min(3, 1, 4) | 1 |
-| max | Returns the maximum of the given arguments. Uses natural ordering. | max(3, 1, 4) | 4 |
 | first | Retrieves the first given argument. | first("1", "2", "3") | "1" |
 | last | Retrieves the last given argument. | last("1", "2", "3") | "3" |
+
+**Logical operators**
+
+| Function | Description | Parameters | Syntax | Expression | Sample output |
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+| decode | Given a key and a list of key value pairs flattened as an array, the function returns the value if key is found or return a default value if present in the array. | <ul><li>KEY: **Required** The key to be matched.</li><li>OPTIONS: **Required** A flattened array of key/value pairs. Optionally, a default value can be put at the end.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, "ca", "California", "pa", "Pennsylvania", "N/A") | If the stateCode given is "ca", "California".<br>If the stateCode given is "pa", "Pennsylvania".<br>If the stateCode doesn't match the following, "N/A". |
+| iif | Evaluates a given boolean expression and returns the specified value based on the result. | <ul><li>BOOLEAN_EXPRESSION: **Required** The boolean expression that is being evaluated.</li><li>TRUE_VALUE: **Required** The value that is returned if the expression evaluates to true.</li><li>FALSE_VALUE: **Required** The value that is returned if the expression evaluates to false.</li></ul> | iif(BOOLEAN_EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif("s".equalsIgnoreCase("S"), "True", "False") | "True" |
+
+**Aggregation**
+
+| Function | Description | Parameters | Syntax | Expression | Sample output |
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+| min | Returns the minimum of the given arguments. Uses natural ordering. | <ul><li>OPTIONS: **Required** One or more objects that can be compared to each other.</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
+| max | Returns the maximum of the given arguments. Uses natural ordering. | <ul><li>OPTIONS: **Required** One or more objects that can be compared to each other.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
+
+**Type conversions**
+
+| Function | Description | Parameters | Syntax | Expression | Sample output |
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+| to_bigint | Converts a string to a BigInteger. | <ul><li>STRING: **Required** The string that is to be converted to a BigInteger.</li></ul> | to_bigint(STRING) | to_bigint("1000000.34") | 1000000.34 |
+| to_decimal | Converts a string to a Double. | <ul><li>STRING: **Required** The string that is to be converted to a Double.</li></ul> | to_decimal(STRING) | to_decimal("20.5") | 20.5 |
+| to_float | Converts a string to a Float. | <ul><li>STRING: **Required** The string that is to be converted to a Float.</li></ul> | to_float(STRING) | to_float("12.3456") | 12.34566 |
+| to_integer | Converts a string to an Integer. | <ul><li>STRING: **Required** The string that is to be converted to a Integer.</li></ul> | to_integer(STRING) | to_integer("12") | 12 |
+
 | uuid /<br>guid | Generates a pseudo-random ID. | uuid()<br>guid() | {UNIQUE_ID} |
-| now | Retrieves the current time. | now() | `2019-10-23T10:10:24.556-07:00[America/Los_Angeles]` |
-| timestamp | Retrieves the current Unix time. | timestamp() | 1571850624571 |
-| format | Formats the input date according to a specified format. | format({DATE}, "yyyy-MM-dd HH:mm:ss") | "2019-10-23 11:24:35" |
-| dformat | Converts a timestamp to a date string according to a specified format. | dformat(1571829875, "dd-MMM-yyyy hh:mm") | "23-Oct-2019 11:24" |
-| date | Converts a date string into a ZonedDateTime object (ISO 8601 format). | date("23-Oct-2019 11:24") | "2019-10-23T11:24:00+00:00" |
-| date_part | Retrieves the parts of the date. The following component values are supported: <br><br>"year"<br>"yyyy"<br>"yy"<br><br>"quarter"<br>"qq"<br>"q"<br><br>"month"<br>"mm"<br>"m"<br><br>"dayofyear"<br>"dy"<br>"y"<br><br>"day"<br>"dd"<br>"d"<br><br>"week"<br>"ww"<br>"w"<br><br>"weekday"<br>"dw"<br>"w"<br><br>"hour"<br>"hh"<br>"hh24"<br>"hh12"<br><br>"minute"<br>"mi"<br>"n"<br><br>"second"<br>"ss"<br>"s"<br><br>"millisecond"<br>"ms" | date_part(date("2019-10-17 11:55:12"), "MM") | 10 |
-| set_date_part | Replaces a component in a given date. The following components are accepted: <br><br>"year"<br>"yyyy"<br>"yy"<br><br>"month"<br>"mm"<br>"m"<br><br>"day"<br>"dd"<br>"d"<br><br>"hour"<br>"hh"<br><br>"minute"<br>"mi"<br>"n"<br><br>"second"<br>"ss"<br>"s" | set_date_part("m", 4, date("2016-11-09T11:44:44.797") | "2016-04-09T11:44:44.797" |
-| make_date_time /<br>make_timestamp | Creates a date from parts. | make_date_time(2019, 10, 17, 11, 55, 12, 999, "America/Los_Angeles") | `2019-10-17T11:55:12.0​00000999-07:00[America/Los_Angeles]` |
-| current_timestamp | Returns the current timestamp. | current_timestamp() | 1571850624571 |
-| current_date | Returns the current date without a time component. | current_date() | "18-Nov-2019" |
+
