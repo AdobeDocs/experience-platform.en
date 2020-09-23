@@ -68,9 +68,19 @@ The **[!UICONTROL Select schema]** dialog appears. Select the schema you wish to
 
 Based on your needs, you can choose to map fields directly, or use mapper functions to transform source data to derive computed or calculated values. For more information on data mapping and mapper functions, refer to the tutorial on [mapping CSV data to XDM schema fields](../../../../ingestion/tutorials/map-a-csv-file.md).
 
-Once your source data is mapped, click **[!UICONTROL Next]**.
+>[!TIP]
+>
+>[!DNL Platform] provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
 
-![](../../../images/tutorials/dataflow/all-tabular/mapping-updated.png)
+![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+
+Select **[!UICONTROL Preview data]** to see mapping results of up to 100 rows of sample data from the selected dataset.
+
+During the preview, the identity column is prioritized as the first field, as it is the key information necessary when validating mapping results.
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
+
+Once your source data is mapped, select **[!UICONTROL Close]**.
 
 ## Schedule ingestion runs
 

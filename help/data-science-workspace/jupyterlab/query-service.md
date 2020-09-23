@@ -24,13 +24,13 @@ Before starting this tutorial, you must have the following prerequisites:
     -   [[!DNL Experience Data Model (XDM) and XDM System]](../../xdm/home.md)
     -   [[!DNL Query Service]](../../query-service/home.md)
     -   [[!DNL Query Service SQL Syntax]](../../query-service/sql/overview.md)
-    -   [Adobe Analytics]
+    -   Adobe Analytics
 
 ## Access [!DNL JupyterLab] and [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
 1.  In [[!DNL Experience Platform]](https://platform.adobe.com), navigate to **[!UICONTROL Notebooks]** from the left navigation column. Allow a moment for JupyterLab to load.
 
-    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
+    ![](../images/jupyterlab/query/jupyterlab-launcher.png)
 
     >[!NOTE]
     >
@@ -111,14 +111,12 @@ SELECT Substring(timestamp, 1, 10)                               AS Day,
        Count(DISTINCT concat(enduserids._experience.aaid.id, 
                              _experience.analytics.session.num)) AS Visit_Count 
 FROM   {target_table}
-WHERE _acp_year = {target_year} 
-      AND _acp_month = {target_month}  
-      AND _acp_day = {target_day}
+WHERE TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}')
 GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-In the above query, the target `_acp_year` in the `WHERE` clause is set to be the value of `target_year`. Include variables in SQL queries by containing them in curly brackets (`{}`).
+In the above query, the timestamp in the `WHERE` clause is set to be the value of `target_year`. Include variables in SQL queries by containing them in curly brackets (`{}`).
 
 The first line of the query contains the optional variable `hourly_visitor`. Query results will be stored in this variable as a Pandas dataframe. Storing results in a dataframe allows you to later visualize the query results using a desired [!DNL Python] package. Execute the following [!DNL Python] code in a new cell to generate a bar graph:
 
@@ -153,9 +151,7 @@ SELECT Substring(timestamp, 1, 10)                        AS Day,
                     _experience.analytics.session.num,
                     _experience.analytics.session.depth)) AS Count 
 FROM   {target_table}
-WHERE  _acp_year = {target_year} 
-       AND _acp_month = {target_month}  
-       AND _acp_day = {target_day}
+WHERE TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}')
 GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
@@ -203,9 +199,7 @@ SELECT concat(enduserids._experience.aaid.id,
               _experience.analytics.session.num) AS aaid_sess_key, 
        Count(timestamp)                          AS Count 
 FROM   {target_table}
-WHERE  _acp_year = {target_year} 
-       AND _acp_month = {target_month}  
-       AND _acp_day = {target_day}
+WHERE TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}')
 GROUP BY aaid_sess_key
 ORDER BY Count DESC;
 ```
@@ -236,9 +230,7 @@ The following query returns the ten most popular pages for a specified date:
 SELECT web.webpagedetails.name                 AS Page_Name, 
        Sum(web.webpagedetails.pageviews.value) AS Page_Views 
 FROM   {target_table}
-WHERE  _acp_year = {target_year}
-       AND _acp_month = {target_month}
-       AND _acp_day = {target_day}
+WHERE TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}')
 GROUP  BY web.webpagedetails.name 
 ORDER  BY page_views DESC 
 LIMIT  10;
@@ -255,9 +247,7 @@ The following query returns the ten most active users for a specified date:
 SELECT enduserids._experience.aaid.id AS aaid, 
        Count(timestamp)               AS Count
 FROM   {target_table}
-WHERE  _acp_year = {target_year}
-       AND _acp_month = {target_month}
-       AND _acp_day = {target_day}
+WHERE TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}')
 GROUP  BY aaid
 ORDER  BY Count DESC
 LIMIT  10;
@@ -274,14 +264,12 @@ The following query returns the ten cities that are generating a majority of use
 SELECT concat(placeContext.geo.stateProvince, ' - ', placeContext.geo.city) AS state_city, 
        Count(timestamp)                                                     AS Count
 FROM   {target_table}
-WHERE  _acp_year = {target_year}
-       AND _acp_month = {target_month}
-       AND _acp_day = {target_day}
+WHERE TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}')
 GROUP  BY state_city
 ORDER  BY Count DESC
 LIMIT  10;
 ```
 
-## Next steps <!-- omit in toc -->
+## Next steps
 
 This tutorial demonstrated some sample uses cases for utilizing [!DNL Query Service] in [!DNL Jupyter] notebooks. Follow the [Analyze your data using Jupyter Notebooks](./analyze-your-data.md) tutorial to see how similar operations are performed using the Data Access SDK. 
