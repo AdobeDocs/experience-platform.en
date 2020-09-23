@@ -49,4 +49,6 @@ The [!DNL Segment Builder] provides a rich workspace that allows you to interact
 
 ## Next steps {#next-steps}
 
-To learn more about segments and the Segment Builder, refer to the [Segmentation service overview](../../segmentation/home.md).
+To learn more about segments and the [!DNL Segment Builder], read the [Segmentation service overview](../../segmentation/home.md).
+
+To learn more about [!DNL Real-time Customer Profile], read the [Real-time Customer Profile Overview](../../profile/home.md)
