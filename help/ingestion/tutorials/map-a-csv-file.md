@@ -163,7 +163,7 @@ The following tables list all supported mapping functions, including sample expr
 | get_url_host | Returns the host of the given URL. If the input is invalid, it returns null. | <ul><li>URL: **Required** The URL from which the host needs to be extracted.</li></ul> | get_url_host(URL) | get_url_host("https://platform.adobe.com/home") | platform.adobe.com |
 | get_url_port | Returns the port of the given URL. If the input is invalid, it returns null. | <ul><li>URL: **Required** The URL from which the port needs to be extracted.</li></ul> | get_url_port(URL) | get_url_port("sftp://example.com//home/joe/employee.csv") | 22 |
 | get_url_path | Returns the path of the given URL. By default, the full path is returned. | <ul><li>URL: **Required** The URL from which the path needs to be extracted.</li><li>FULL_PATH: *Optional* A boolean value that determines if the full path is returned. If set to false, only the end of the path is returned. | get_url_path(URL, FULL_PATH) | get_url_path("sftp://example.com//home/joe/employee.csv") | "//home/joe/employee.csv" |
-| get_url_query_str | Returns the query string of a given URL as a map. | 
+| get_url_query_str | Returns the query string of a given URL. | <ul><li>URL: **Required** The URL that you are trying to get the query string from.</li><li>ANCHOR: **Required** Determines what will be done with the anchor in the query string. Can be one of three values: "retain", "remove", or "append".<br><br>If the value is "retain", the anchor will be attached to the returned value.<br>If the value is "remove", the anchor will be removed from the returned value.<br>If the value is "append", the anchor will be returned as a separate value.</li></ul> | get_url_query_str(URL, ANCHOR) | get_url_query_str("foo://example.com:8042/over/there?name=ferret#nose", "retain")<br>get_url_query_str("foo://example.com:8042/over/there?name=ferret#nose", "remove")<br>get_url_query_str("foo://example.com:8042/over/there?name=ferret#nose", "append") | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 
 **Date and time functions**
 
@@ -182,13 +182,25 @@ The following tables list all supported mapping functions, including sample expr
 | zone_date_to_utc | Converts a date in any timezone to a date in UTC. | <ul><li>DATE: **Required** The date that you are trying to convert.</li></ul> | zone_date_to_utc(DATE) | `zone_date_to_utc(2019-10-17T11:55:12.000000999-07:00[America/Los_Angeles])` | `2019-10-17T18:55:12.000000999Z[UTC]` |
 | zone_date_to_zone | Converts a date from one timezone to another timezone. | <ul><li>DATE: **Required** The date that you are trying to convert.</li><li>ZONE: **Required** The timezone that you are trying to convert the date to.</li></ul> | zone_date_to_zone(DATE, ZONE) | `zone_date_to_utc(2019-10-17T11:55:12.000000999-07:00[America/Los_Angeles], "Europe/Paris")` | `2019-10-17T20:55:12.000000999+02:00[Europe/Paris]` |
 
+**Hierarchies - Objects**
+
+| Function | Description | Parameters | Syntax | Expression | Sample output |
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+| size_of | Returns the size of the input. | <ul><li>INPUT: **Required** The object that you're trying to find the size of.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
+| is_empty | Checks whether or not an object is empty. | <ul><li>INPUT: **Required** The object that you're trying to check is empty.</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
+| arrays_to_object | Creates a list of objects. | <ul><li>INPUT: **Required** A grouping of key and array pairs.</li></ul> | arrays_to_object(INPUT) | need sample | need sample |
+| to_object | Creates an object based on the flat key/value pairs given. | <ul><li>INPUT: **Required** A flat list of key/value pairs.</li></ul> | to_object(INPUT) | to_object("firstName", "John", "lastName", "Doe") | `{"firstName": "John", "lastName": "Doe"}` |
+| str_to_object | Creates an object from the input string. | <ul><li>STRING: **Required** The string that is being parsed to create an object.</li><li>VALUE_DELIMITER: *Optional* The delimiter that separates a field from the value. The default delimiter is `:`.</li><li>FIELD_DELIMITER: *Optional* The delimiter that separates field value pairs. The default delimiter is `,`.</li></ul> | str_to_object(STRING, VALUE_DELIMITER, FIELD_DELIMITER) | str_to_object("firstName - John | lastName - | phone - 123 456 7890", "-", "|") | `{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}` |
+| is_set | Checks if the object exists within the source data. | <ul><li>INPUT: **Required** The path to be checked if it exists within the source data.</li></ul> | is_set(INPUT) | is_set("evars.evar.field1") | true |
+
 **Hierarchies - Arrays**
 
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| coalesce | Returns the first non-null object in a given list. | coalesce(null, null, null, "first", null, "second") | "first" |
-| first | Retrieves the first element of the given array. | first("1", "2", "3") | "1" |
-| last | Retrieves the last element of the given array. | last("1", "2", "3") | "3" |
+| coalesce | Returns the first non-null object in a given array. | <ul><li>INPUT: **Required** The array you want to find the first non-null object of.</li></ul> | coalesce(INPUT) | coalesce(null, null, null, "first", null, "second") | "first" |
+| first | Retrieves the first element of the given array. | <ul><li>INPUT: **Required** The array you want to find the first element of.</li></ul> | first(INPUT) |  first("1", "2", "3") | "1" |
+| last | Retrieves the last element of the given array. | <ul><li>INPUT: **Required** The array you want to find the last element of.</li></ul> | last(INPUT) |  last("1", "2", "3") | "3" |
+| to_array | Takes a list of inputs and converts it to an array. | <ul><li>INCLUDE_NULLS: **Required** A boolean value to indicate whether or not to include nulls in the response array.</li><li>VALUES: **Required** The elements that are to be converted to an array.</li></ul> | to_array(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 
 **Logical operators**
 
@@ -213,5 +225,27 @@ The following tables list all supported mapping functions, including sample expr
 | to_float | Converts a string to a Float. | <ul><li>STRING: **Required** The string that is to be converted to a Float.</li></ul> | to_float(STRING) | to_float("12.3456") | 12.34566 |
 | to_integer | Converts a string to an Integer. | <ul><li>STRING: **Required** The string that is to be converted to a Integer.</li></ul> | to_integer(STRING) | to_integer("12") | 12 |
 
-| uuid /<br>guid | Generates a pseudo-random ID. | uuid()<br>guid() | {UNIQUE_ID} |
+**JSON functions**
 
+| Function | Description | Parameters | Syntax | Expression | Sample output |
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+| json_to_object | Deserialize JSON content from the given string. | <ul><li>STRING: **Required** The JSON string to be deserialized.</li></ul> | json_to_object(STRING) | json_to_object({"info":{"firstName":"John","lastName" : "Doe"}}) | An object representing the JSON. |
+
+**Special operations**
+
+| Function | Description | Parameters | Syntax | Expression | Sample output |
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+| uuid /<br>guid | Generates a pseudo-random ID. | | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
+
+**User agent functions**
+
+| Function | Description | Parameters | Syntax | Expression | Sample output |
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+| ua_os_name | Extracts the operating system name from the user agent string. | <ul><li>USER_AGENT: **Required** The user agent string.</li></ul> | ua_os_name(USER_AGENT) | ua_os_name("Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3") | iOS |
+| ua_os_version_major | Extracts the operating system's major version from the user agent string. | <ul><li>USER_AGENT: **Required** The user agent string.</li></ul> | ua_os_version_major(USER_AGENT) | ua_os_version_major("Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3") | iOS 5 |
+| ua_os_version | Extracts the operating system's version from the user agent string. | <ul><li>USER_AGENT: **Required** The user agent string.</li></ul> | ua_os_version(USER_AGENT) | ua_os_version("Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3") | 5.1.1 |
+| ua_os_name_version | Extracts the operating system's name and version from the user agent string. | <ul><li>USER_AGENT: **Required** The user agent string.</li></ul> | ua_os_name_version(USER_AGENT) | ua_os_name_version("Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3") | iOS 5.1.1 |
+| ua_agent_version | Extracts the agent version from the user agent string. | <ul><li>USER_AGENT: **Required** The user agent string.</li></ul> | ua_agent_version(USER_AGENT) | ua_agent_version("Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3") | 5.1 |
+| ua_agent_version_major | Extracts the agent name and major version from the user agent string. | <ul><li>USER_AGENT: **Required** The user agent string.</li></ul> | ua_agent_version_major(USER_AGENT) | ua_agent_version_major("Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3") | Safari 5 |
+| ua_agent_name | Extracts the agent name from the user agent string. | <ul><li>USER_AGENT: **Required** The user agent string.</li></ul> | ua_agent_name(USER_AGENT) | ua_agent_name("Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3") | Safari |
+| ua_device_class| Extracts the device class from the user agent string. | <ul><li>USER_AGENT: **Required** The user agent string.</li></ul> | ua_device_class(USER_AGENT) | ua_device_class("Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3") | Phone |
