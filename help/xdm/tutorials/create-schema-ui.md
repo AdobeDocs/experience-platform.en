@@ -137,7 +137,7 @@ To begin, select the mixin name in the **[!UICONTROL Mixins]** section. Once you
 
 ![](../images/tutorials/create-schema/loyalty_details_structure.png)
 
-Select **[!UICONTROL Add field]** next to "[!DNL Loyalty Members]" to create a new node in the structure. This node (called "_tenantId" in this example) represents your IMS Organization's tenant ID, preceded by an underscore. The presence of the tenant ID indicates that the fields you are adding are contained in your organization's namespace. 
+Select **[!UICONTROL Add field]** next to "[!DNL Loyalty Members]" to create a new node in the structure. This node (called `_tenantId` in this example) represents your IMS Organization's tenant ID, preceded by an underscore. The presence of the tenant ID indicates that the fields you are adding are contained in your organization's namespace. 
 
 In other words, the fields you are adding are unique to your organization and are going to be saved in the [!DNL Schema Registry] in a specific area accessible only to your organization. Fields you define must always be added to your tenant namespace to prevent collisions with names from other standard classes, mixins, data types, and fields.
 
@@ -230,6 +230,10 @@ Your schema now contains several mixins in addition to the fields provided by it
 If you are looking for a specific field in your schema, you can also use the search bar to filter displayed fields by name, regardless of which mixin they are provided under.
 
 ![](../images/tutorials/create-schema/search.png)
+
+>[!IMPORTANT]
+>
+>The search function takes any selected mixin filters into account when displaying matching fields. If a search query is not displaying the results you expect, you may need to double-check that you are not filtering out any relevant mixins.
 
 ## Set a schema field as an identity field {#identity-field}
 
