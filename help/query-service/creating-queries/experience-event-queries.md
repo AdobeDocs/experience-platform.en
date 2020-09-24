@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;query service;Query service;ex
 solution: Experience Platform
 title: ExperienceEvent queries
 topic: queries
+type: Tutorial
 ---
 
 # [!DNL ExperienceEvent] queries

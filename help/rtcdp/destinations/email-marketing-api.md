@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Create email marketing destinations
 topic: tutorial
+type: Tutorial
 ---
 
 # Create email marketing destinations and activate data using API calls in Adobe's [!DNL Real-time Customer Data Platform]
