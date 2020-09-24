@@ -15,7 +15,7 @@ This guide uses the `__tcfapi` interface for accessing the consent information. 
 >
 >These examples assume that by the time the code is run, `window.__tcfapi` is defined on the page. CMPs may provide a hook where you could run these functions when the `__tcfapi` object is ready.
 
-## Enabling consent
+## Enabling default consent
 
 If you want to treat all unknown users the same, you can set the default consent to "pending." This queues Experience Events until consent preferences are received.
 
