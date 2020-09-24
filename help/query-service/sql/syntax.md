@@ -113,7 +113,7 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 
 where,
  `target_schema_title` is the title of XDM schema. Use this clause only if you wish to use an existing XDM schema for the new dataset created by CTAS query
- `rowvalidation` specifies if the user wants row level validation of every new batches ingested for the new dataset created. Default value is 'false'
+ `rowvalidation` specifies if the user wants row level validation of every new batches ingested for the new dataset created. Default value is 'true'
 
 and `select_query` is a `SELECT` statement, the syntax of which is defined above in this document.
 
