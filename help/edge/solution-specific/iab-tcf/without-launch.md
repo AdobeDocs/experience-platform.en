@@ -5,22 +5,27 @@ description: Learn how to set up IAB TCF 2.0 consent with the Adobe Experience P
 seo-description: Learn how to set up IAB TCF 2.0 consent with the Adobe Experience Platform Web SDK
 ---
 
-# Supporting IAB TCF 2.0 without Experience Platform Launch
+# Using IAB TCF 2.0 without Experience Platform Launch and the AEP Web SDK extension
 
-This guide shows how to integrate IAB TCF 2.0 with the Adobe Experience Platform Web SDK without using Experience Platform Launch. For an overview of integrating with IAB TCF 2.0, read the [overview](./overview.md). For a guide on how to integrate with Experience Platform Launch, read the [IAB TCF guide for Experience Platform Launch](./with-launch.md). 
+This guide shows how to integrate IAB TCF 2.0 with the Adobe Experience Platform Web SDK without using Experience Platform Launch. For an overview of integrating with IAB TCF 2.0, read the [overview](./overview.md). For a guide on how to integrate with Experience Platform Launch, read the [IAB TCF 2.0 guide for Experience Platform Launch](./with-launch.md). 
 
-This guide uses the `__tcfapi` interface for accessing the consent information. It might be easier for you to integrate directly with your CMP. The information in this guide might be useful because the CMPs generally provide similar functionality to the TCF API.
+This guide uses the `__tcfapi` interface for accessing the consent information. It might be easier for you to integrate directly with your cloud management provider (CMP). The information in this guide might be useful because the CMPs generally provide similar functionality to the TCF API.
 
 >[!NOTE]
 >
 >These examples assume that by the time the code is run, `window.__tcfapi` is defined on the page. CMPs may provide a hook where you could run these functions when the `__tcfapi` object is ready.
+
 ## Enabling consent
 
-If you want to treat all unknown users the same, you can set the default consent to "pending." This queues experience events until consent and preferences are received. See [Configuring the SDK](../../fundamentals/configuring-the-sdk.md) for a sample on how to do this.
+If you want to treat all unknown users the same, you can set the default consent to "pending." This queues Experience Events until consent preferences are received.
+
+For more information on default consent, refer to the [default consent section](../fundamentals/configuring-the-sdk.md#default-consent) in the SDK configuration documentation.
 
 ### Setting the default consent based on `gdprApplies`
 
-Some CMPs provide the ability to determine whether GDPR applies to the user. If you want to assume consent for those users where GDPR doesn't apply, you can use the `gdprApplies` flag in the TCF API call. The following example shows one way to do this:
+Some CMPs provide the ability to determine whether General Data Protection Regulation (GDPR) applies to the customer. If you want to assume consent for those customers where GDPR does not apply, you can use the `gdprApplies` flag in the TCF API call. 
+
+The following example shows one way to do this:
 
 ```javascript
 var alloyConfiguration = { ... };
@@ -36,10 +41,13 @@ In this example, the `configure` command is called after the `tcData` is obtaine
 
 >[!NOTE]
 >
->When default consent is set to `in`, the `setConsent` command can still be used to record the user's consent and preferences.
-## SetConsent
+>When default consent is set to `in`, the `setConsent` command can still be used to record your customers consent preferences.
 
-The IAB TCF 2.0 API provides an event for when the consent is updated by the user. This occurs when the user initially sets their preferences and when the user updates their preferences. The following example shows one way to do this:
+## Using the setConsent event
+
+The IAB TCF 2.0 API provides an event for when the consent is updated by the customer. This occurs when the customer initially sets their preferences and when the customer updates their preferences. 
+
+The following example shows one way to do this:
 
 ```javascript
 const identityMap = { ... };
@@ -60,11 +68,11 @@ window.__tcfapi('addEventListener', 2, function (tcData, success) {
 });
 ```
 
-This code block listens for the `useractioncomplete` event and then sets the consent, passing the consent string and the `gdprApplies` flag. If you have custom identities for the user, be sure to fill in the `identityMap` variable. Refer to the guide on [Supporting Consent](../../fundamentals/supporting-consent.md) for more information on calling `setConsent`.
+This code block listens for the `useractioncomplete` event and then sets the consent, passing the consent string and the `gdprApplies` flag. If you have custom identities for your customers, be sure to fill in the `identityMap` variable. Refer to the guide on [supporting consent](../../fundamentals/supporting-consent.md) for more information on calling `setConsent`.
 
-## Including consent information in SendEvent
+## Including consent information in sendEvent
 
-Finally, there is a place within XDM to store the consent and preference information on the experience events. There are two ways to add this information to every event.
+Within XDM, you can store consent preference information from Experience Events. There are two ways to add this information to every event.
 
 First, you can provide the relevant XDM on every `sendEvent` call. The following example shows one way to do this:
 
@@ -83,6 +91,6 @@ window.__tcfapi('getTCData', 2, function (tcData, success) {
 });
 ```
 
-This example gets the consent information for the TCF API, and then sends an event with the consent information added to the XDM. See the [Tracking Events](../../fundamentals/tracking-events.md) guide to understand what should be in the `sendEvent` command options.
+This example gets the consent information for the TCF API, and then sends an event with the consent information added to the XDM. See the [tracking events](../../fundamentals/tracking-events.md) guide to understand what should be in the `sendEvent` command options.
 
-The other way to add the consent information to every request is with the `onBeforeEventSend` callback. Read the section on [Modifying Events Globally](../../fundamentals/tracking-events.md#modifying-events-globally) for more information on how to do this.
+The other way to add the consent information to every request is with the `onBeforeEventSend` callback. Read the section on [modifying events globally](../../fundamentals/tracking-events.md#modifying-events-globally) from within the tracking events documentation for more information on how to do this.

@@ -6,7 +6,7 @@ seo-description: Quick start guide for using the Experience Platform Web SDK  to
 keywords: 1st-party domain;CNAME;schema;create schema;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;install sdk;install web sdk;configure;configure web sdk;
 ---
 
-# Welcome
+# Adobe Experience Platform Web SDK JavaScript quick start guide
 
 This guide leads you through the different ways to set up the Adobe Experience Platform Web SDK. To use this feature, you need to be whitelisted. If you would like to get on the waiting list, please reach out to your CSM.
 
