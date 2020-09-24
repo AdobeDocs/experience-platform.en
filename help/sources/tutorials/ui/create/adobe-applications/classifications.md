@@ -18,6 +18,8 @@ This tutorial requires a working understanding of the following components of Ad
 *   [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 *   [[!DNL Sandboxes]](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
+To use the Analytics Classifications Data Connector, your data must be migrated to the new classifications infrastructure of Adobe Analytics. For more information, please contact your CSM.
+
 ## Select your classifications
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the sources workspace. The **[!UICONTROL Catalog]** screen displays available sources to create inbound connections with. Each source card shows an option to either configure a new account or add data to an existing account.
