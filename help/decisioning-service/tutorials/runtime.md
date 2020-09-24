@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;decision events;decision event
 solution: Experience Platform
 title: Work with Decisioning Service runtime using APIs
 topic: tutorial
+type: Tutorial
 description: This document provides a tutorial for working with the runtime services of Decisioning Service using Adobe Experience Platform APIs. 
 ---
 

@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;access data sources
 solution: Experience Platform
 title: Data Access tutorials
 topic: tutorial
+type: Tutorial
 description: Adobe Experience Platform enables users to discover and access ingested datasets within Experience Platform using the Data Access API.
 ---
 

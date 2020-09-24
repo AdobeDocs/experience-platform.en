@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;segment evaluation;Segmentatio
 solution: Experience Platform
 title: Evaluate a segment
 topic: tutorial
+type: Tutorial
 description: This document provides a tutorial for evaluating segments and accessing segment results using the Segmentation API.
 ---
 

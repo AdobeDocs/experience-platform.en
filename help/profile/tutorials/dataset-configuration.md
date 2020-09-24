@@ -2,6 +2,7 @@
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;enable dataset
 title: Configure a dataset for Profile and Identity Service using APIs
 topic: tutorial
+type: Tutorial
 ---
 
 # Configure a dataset for [!DNL Profile] and [!DNL Identity Service] using APIs

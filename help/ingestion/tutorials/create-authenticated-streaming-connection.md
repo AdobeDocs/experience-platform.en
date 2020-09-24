@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;authenticated streaming connec
 solution: Experience Platform
 title: Create an authenticated streaming connection
 topic: tutorial
+type: Tutorial
 ---
 
 # Creating an authenticated streaming connection

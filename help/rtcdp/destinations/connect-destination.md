@@ -2,6 +2,7 @@
 keywords: connect destination;destination connect;how to connect destination
 title: Connect to a Destination in Adobe Real-time Customer Data Platform
 seo-title: Connect to a Destination in Adobe Real-time Customer Data Platform
+type: Tutorial
 description: This tutorial lists the steps to connect a destination in Adobe Real-time Customer Data Platform
 ---
 
