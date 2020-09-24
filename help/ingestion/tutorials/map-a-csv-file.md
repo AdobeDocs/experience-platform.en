@@ -112,6 +112,35 @@ By following this tutorial, you have successfully mapped a flat CSV file to an X
 
 The following section provides additional information for mapping CSV columns to XDM fields.
 
+### Supported date functions
+
+When string fields from incoming data are mapped to date fields in XDM, the date format must be explicitly mentioned. When not specified, Platform will attempt to convert the input data by matching it to the following formats. Once a matching format is found, it wil stop evaluating any subsequent formats.
+
+```console
+"yyyy-MM-dd HH:mm:ssZ",
+"yyyy-MM-dd HH:mm:ss.SSSZ",
+"yyyy-MM-dd HH:mm:ss.SSS",
+"yyyy-MM-dd'T'HH:mm:ss.SSSX",
+"yyyy-MM-dd'T'HH:mm:ss'Z'",
+"yyyy-MM-dd",
+"yyyy/MM/dd",
+"yyyy.MM.dd",
+"yyyy-MMM-dd",
+"yyyyMMdd",
+"MM-dd-yyyy",
+"MMddyyyy",
+"M/dd/yyyy",
+"dd.M.yyyy",
+"M/dd/yyyy hh:mm:ss a",
+"dd.M.yyyy hh:mm:ss a",
+"dd.MMM.yyyy",
+"dd-MMM-yyyy"
+```
+
+>[!IMPORTANT]
+>
+> Platform will try to convert strings to dates as best as possible. However, these conversions can lead to undesirable results. For example, the string value "11112020" 
+
 ### Mapping functions
 
 Certain mapping functions can be used to compute and calculate values based on what is entered in source fields. To use a function, type it in under **[!UICONTROL Source Field]** with appropriate syntax and inputs.
