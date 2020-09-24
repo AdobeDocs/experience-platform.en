@@ -3,12 +3,12 @@ keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schem
 solution: Experience Platform
 title: Geo circle data type
 topic: overview
-description: This document provides an overview of the XDM Individual Profile class.
+description: This document provides an overview of the Geo Circle XDM data type.
 ---
 
 # [!UICONTROL Geo circle] data type
 
-[!UICONTROL Geo circle] is a standard XDM data type that describes circular region of a particular radius centered on a GeoCoordinate. This data type is based on the public spec documented on [schema.org](http://schema.org/GeoCircle).
+[!UICONTROL Geo circle] is a standard XDM data type that describes circular geographic region, given a particular radius centered on a specific set of coordinates. This data type is based on the public specification documented on [schema.org](http://schema.org/GeoCircle).
 
 <img src='../images/data-types/geo-circle.png' width=400 /><br />
 

@@ -3,12 +3,12 @@ keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schem
 solution: Experience Platform
 title: Environment data type
 topic: overview
-description: This document provides an overview of the XDM Individual Profile class.
+description: This document provides an overview of the Environment XDM data type.
 ---
 
 # [!UICONTROL Environment] data type
 
-[!UICONTROL Environment] is a standard XDM data type that describes the surrounding context of an observed event, specifically detailing transitory information such as network and software versions.
+[!UICONTROL Environment] is a standard XDM data type that describes the surrounding environment of an observed event, specifically detailing transitory information such as network and software versions.
 
 >[!IMPORTANT]
 >
@@ -25,7 +25,7 @@ description: This document provides an overview of the XDM Individual Profile cl
 | `colorDepth` | Integer | The number of bits used for each color component of a single pixel. |
 | `connectionType` | String | The internet connection type. Accepted values include: <ul><li>`dialup`</li><li>`isdn`</li><li>`bisdn`</li><li>`dsl`</li><li>`cable`</li><li>`wireless_wifi`</li><li>`mobile`</li><li>`mobile_edge`</li><li>`mobile_2g`</li><li>`mobile_3g`</li><li>`mobile_lte`</li><li>`t1`</li><li>`t3`</li><li>`oc3`</li><li>`lan`</li><li>`modem`</li></ul> |
 | `domain` | String | The domain of the user's ISP. |
-| `ipV4` | String | The numerical label assigned to a device participating in a computer network that uses the Internet Protocol for communication (38-bit). |
+| `ipV4` | String | The numerical label assigned to a device participating in a computer network that uses the Internet Protocol for communication (32-bit). |
 | `ipV6` | String | The numerical label assigned to a device participating in a computer network that uses the Internet Protocol for communication (128-bit).  |
 | `operatingSystem` | String | The name of the operating system used when the observation was made. The attribute should not contain any version information such as `10.5.3`, but instead contain "edition" designations such as `Ultimate` or `Professional`. |
 | `operatingSystemVendor` | String | The name of the operating system vendor used when the observation was made. |

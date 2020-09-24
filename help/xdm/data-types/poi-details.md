@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schem
 solution: Experience Platform
 title: Point of interest details data type
 topic: overview
-description: This document provides an overview of the XDM Individual Profile class.
+description: This document provides an overview of the Point Of Interest Details XDM data type.
 ---
 
 # [!UICONTROL Point of interest details] data type

@@ -3,18 +3,18 @@ keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schem
 solution: Experience Platform
 title: Place context data type
 topic: overview
-description: This document provides an overview of the XDM Individual Profile class.
+description: This document provides an overview of the Place Context XDM data type.
 ---
 
 # [!UICONTROL Place context] data type
 
-[!UICONTROL Place context] is a standard XDM data type that describes location-related details of an observed event, including point-of-interest information and geographical coordinates.
+[!UICONTROL Place context] is a standard XDM data type that describes the location of an observed event, including point-of-interest information and geographical coordinates.
 
 <img src='../images/data-types/place-context.png' width=500 /><br />
 
 | Property | Data type | Description |
 | --- | --- | --- |
-| `POIinteraction` | [[!UICONTROL Point of interest interaction]](./poi-interaction.md) | Describes details about the point of interest (POI) interaction. |
+| `POIinteraction` | [[!UICONTROL Point of interest interaction]](./poi-interaction.md) | Describes details about the point-of-interest (POI) interaction. |
 | `activePOIs` | Array of [[!UICONTROL Point of interest details]](./poi-details.md) | Describes the POIs that caused the event. |
 | `geo` | [[!UICONTROL Geo]](./geo.md) | Describes the geographic location where the experience was delivered. |
 | `localTime` | DateTime | A timestamp in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, indicating the local time using with a stated time zone offset. The formatting pattern is `yyyy-MM-dd'T'HH:mm:ssXXX` (for example, `2001-07-04T12:08:56-07:00`). |

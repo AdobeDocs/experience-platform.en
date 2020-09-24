@@ -3,12 +3,12 @@ keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schem
 solution: Experience Platform
 title: Geo interaction details data type
 topic: overview
-description: This document provides an overview of the XDM Individual Profile class.
+description: This document provides an overview of the Geo Interaction Details XDM data type.
 ---
 
 # [!UICONTROL Geo interaction details] data type
 
-[!UICONTROL Geo interaction details] is a standard XDM data type that describes the geo details relating to the current state of inclusion in a geo-defined area.
+[!UICONTROL Geo interaction details] is a standard XDM data type that describes the current state of inclusion in a geographically defined area.
 
 <img src='../images/data-types/geo-interaction-details.png' width=400 /><br />
 

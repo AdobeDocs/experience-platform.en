@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schem
 solution: Experience Platform
 title: Identity data type
 topic: overview
-description: This document provides an overview of the XDM Individual Profile class.
+description: This document provides an overview of the Identity XDM data type.
 ---
 
 # [!UICONTROL Identity] data type

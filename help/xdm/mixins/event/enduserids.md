@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEv
 solution: Experience Platform
 title: ExperienceEvent EndUserIDs mixin
 topic: overview
-description: This document provides an overview of the XDM Individual Profile class.
+description: This document provides an overview of the ExperienceEvent EndUserIDs mixin.
 ---
 
 # [!UICONTROL ExperienceEvent EndUserIDs] mixin

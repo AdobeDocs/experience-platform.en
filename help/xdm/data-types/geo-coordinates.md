@@ -3,12 +3,12 @@ keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schem
 solution: Experience Platform
 title: Geo Coordinates data type
 topic: overview
-description: This document provides an overview of the XDM Individual Profile class.
+description: This document provides an overview of the Geo Coordinates XDM data type.
 ---
 
 # [!UICONTROL Geo Coordinates] data type
 
-[!UICONTROL Geo Coordinates] is a standard XDM data type that describes the geographic coordinates of a place. This data type is based on the public spec documented on [schema.org](https://schema.org/GeoCoordinates).
+[!UICONTROL Geo Coordinates] is a standard XDM data type that describes the geographic coordinates of a place. This data type is based on the public specification documented on [schema.org](https://schema.org/GeoCoordinates).
 
 <img src='../images/data-types/geo-coordinates.png' width=400 /><br />
 

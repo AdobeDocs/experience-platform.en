@@ -3,12 +3,12 @@ keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schem
 solution: Experience Platform
 title: Geo data type
 topic: overview
-description: This document provides an overview of the XDM Individual Profile class.
+description: This document provides an overview of the Geo XDM data type.
 ---
 
 # [!UICONTROL Geo] data type
 
-[!UICONTROL Geo] is a standard XDM data type that describes the geographic-related data where an event was observed.
+[!UICONTROL Geo] is a standard XDM data type that describes the geographic area where an event was observed.
 
 <img src='../images/data-types/geo.png' width=400 /><br />
 

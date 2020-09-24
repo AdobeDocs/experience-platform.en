@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;beacon;interaction details;datatype;data-type;data type;
+keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;geo;geo shape;datatype;data-type;data type;
 solution: Experience Platform
 title: Geo shape data type
 topic: overview
-description: This document provides an overview of the XDM Individual Profile class.
+description: This document provides an overview of the Geo Shape XDM data type.
 ---
 
 # [!UICONTROL Geo shape] data type
 
-[!UICONTROL Geo shape] is a standard XDM data type that describes the shape of a geographic area. This data type is based on the public spec documented on [schema.org](https://schema.org/GeoShape).
+[!UICONTROL Geo shape] is a standard XDM data type that describes the shape of a geographic area. This data type is based on the public specification documented on [schema.org](https://schema.org/GeoShape).
 
 <img src='../images/data-types/geo-shape.png' width=500 /><br />
 
 | Property | Data type | Description |
 | --- | --- | --- |
-| `_schema.box` | Array of [[!UICONTROL Geo Coordinates]](./geo-coordinates.md) | Describes a geo area enclosed by a rectangle formed by two coordinates. The first coordinate is the lower corner and the second coordinate is the upper corner of a rectangle. |
+| `_schema.box` | Array of [[!UICONTROL Geo Coordinates]](./geo-coordinates.md) | Describes a geographical area enclosed by a rectangle formed by two coordinates. The first coordinate is the lower corner of the rectangle, and the second coordinate is the upper corner. |
 | `_schema.circle` | Array of [[!UICONTROL Geo Coordinates]](./geo-coordinates.md) | Describes a circular region with a specific radius centered on a geographic coordinate. |
 | `_schema.polygon` | [[!UICONTROL Geo Circle]](./geo-circle.md) | A series of four or more coordinates where the first and final coordinates are identical. |
 | `_schema.description` | String | A description of what the shape is defining. |
