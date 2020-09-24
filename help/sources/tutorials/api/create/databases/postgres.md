@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;PostgreSQL;postgresql;PSQL;psq
 solution: Experience Platform
 title: Create a PostgreSQL connector using the Flow Service API
 topic: overview
+type: Tutorial
 description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to PostgreSQL (hereinafter referred to as "PSQL").
 ---
 

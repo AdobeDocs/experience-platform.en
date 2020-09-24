@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics; API tutorials; streaming dest
 solution: Experience Platform
 title: Connect to streaming destinations and activate data
 topic: tutorial
+type: Tutorial
 ---
 
 # Connect to streaming destinations and activate data using API calls in Adobe's Real-time Customer Data Platform
@@ -291,7 +292,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --data-raw '{
     "name": "Amazon Kinesis/ Azure Event Hubs target connection",
     "description": "Connection to Amazon Kinesis/ Azure Event Hubs",
-    "baseConnection": "{BASE_CONNECTION_ID}",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
     "connectionSpec": {
         "id": "{CONNECTION_SPEC_ID}",
         "version": "1.0"

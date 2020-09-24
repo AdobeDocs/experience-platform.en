@@ -3,7 +3,8 @@ keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;;experien
 solution: Experience Platform
 title: Define a relationship between two schemas using the Schema Schema Editor
 description: This document provides a tutorial for defining a relationship between two schemas using the Schema Editor in the Experience Platform user interface.
-topic: tutorials
+topic: tutorial
+type: Tutorials
 ---
 
 # Define a relationship between two schemas using the [!DNL Schema Editor]

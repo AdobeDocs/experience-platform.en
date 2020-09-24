@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Generic OData;generic odata
 solution: Experience Platform
 title: Create a Generic OData connector using the Flow Service API
 topic: overview
+type: Tutorial
 description: This tutorial uses the Flow Service API to walk you through the steps to connect Generic OData to Experience Platform.
 ---
 

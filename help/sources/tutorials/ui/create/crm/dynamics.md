@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Microsoft Dynamics;microsoft d
 solution: Experience Platform
 title: Create a Microsoft Dynamics source connector in the UI
 topic: overview
+type: Tutorial
 description: This tutorial provides steps for creating a Microsoft Dynamics (hereinafter referred to as "Dynamics") source connector using the Platform user interface.
 ---
 

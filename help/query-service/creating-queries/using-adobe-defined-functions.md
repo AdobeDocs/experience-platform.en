@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;query service;Query service;ad
 solution: Experience Platform
 title: Adobe-defined functions
 topic: queries
+type: Tutorial
 ---
 
 # Using Adobe-defined functions
