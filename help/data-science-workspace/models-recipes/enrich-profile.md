@@ -31,7 +31,7 @@ The first step towards enriching [!DNL Real-time Customer Profile] with scoring 
 
 Composing a schema begins by assigning a class. Classes define the behavioral aspects of the data the schema will contain (record or time-series). Use the following documentation to [create a schema using the Schema Editor](../../xdm/tutorials/create-schema-ui.md). Note that before you can enable a dataset for [!DNL Profile], you need to configure the dataset's schema to have a primary identity field and then enable the schema for [!DNL Profile]. When data is ingested into a [!DNL Profile]-enabled dataset, that same data is also ingested as [!DNL Profile] records. 
 
-If you prefer to compose a schema using the [!DNL Schema Registry] API instead, start by reading the [[!DNL Schema Registry] developer guide](../api/getting-started.md) before attempting the tutorial on [creating a schema using the API](create-schema-api.md).
+If you prefer to compose a schema using the [!DNL Schema Registry] API instead, start by reading the [[!DNL Schema Registry] developer guide](../../xdm/api/getting-started.md) before attempting the tutorial on [creating a schema using the API](../../xdm/tutorials/create-schema-api.md).
 
 Once your schema and dataset is prepared, generate and ingest scoring data to the dataset by performing scoring runs using an appropriate model.
 
