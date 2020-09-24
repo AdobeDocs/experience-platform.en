@@ -1,6 +1,5 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile
-solution: Adobe Experience Platform
 title: Real-time Customer Profile API developer guide
 topic: guide
 description: The Real-time Customer Profile API includes multiple endpoints, outlined below.
