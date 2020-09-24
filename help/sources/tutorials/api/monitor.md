@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;monitor dataflows;flow service
 solution: Experience Platform
 title: Monitor flows and runs
 topic: overview
+type: Tutorial
 description: This tutorial covers the steps for monitoring flow run data for completeness, errors, and metrics using the Flow Service API.
 ---
 

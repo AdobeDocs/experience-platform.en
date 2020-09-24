@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Azure Synapse Analytics;Synaps
 solution: Experience Platform
 title: Create a Azure Synapse Analytics source connector in the UI
 topic: overview
+type: Tutorial
 description: This tutorial provides steps for creating a Azure Synapse Analytics (hereinafter referred to as "Synapse") source connector using the Platform user interface.
 ---
 
