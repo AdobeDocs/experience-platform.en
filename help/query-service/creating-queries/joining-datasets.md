@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;query service;Query service;jo
 solution: Experience Platform
 title: Joining datasets
 topic: queries
+type: Tutorial
 ---
 
 # Joining datasets

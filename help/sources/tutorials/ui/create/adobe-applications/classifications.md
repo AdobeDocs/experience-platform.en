@@ -4,6 +4,7 @@ description: This tutorial provides steps for creating an Adobe Analytics Classi
 solution: Experience Platform
 title: Create an Adobe Analytics Classifications Data connector in the UI
 topic: overview
+type: Tutorial
 ---
 
 # Create an Adobe Analytics Classifications Data connector in the UI

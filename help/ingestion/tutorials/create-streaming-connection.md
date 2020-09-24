@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;streaming connection;create st
 solution: Experience Platform
 title: Create a streaming connection using the API
 topic: tutorial
+type: Tutorial
 ---
 
 # Creating a streaming connection using the API

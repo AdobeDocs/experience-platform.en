@@ -2,7 +2,8 @@
 keywords: Experience Platform;publish a model;Data Science Workspace;popular topics;score a service
 solution: Experience Platform
 title: Publish a model as a service (UI)
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: Adobe Experience Platform Data Science Workspace allows you to publish your trained and evaluated Model as a Service, enabling users within your IMS Organization to score data without the need for creating their own Models.
 ---
 

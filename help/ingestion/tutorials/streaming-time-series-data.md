@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;
 solution: Experience Platform
 title: Streaming time series data
 topic: tutorial
+type: Tutorial
 ---
 
 # Stream time series data to Adobe Experience Platform

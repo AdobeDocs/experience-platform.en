@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Maria DB;maria db
 solution: Experience Platform
 title: Create a MariaDB source connector in the UI
 topic: overview
+type: Tutorial
 description: This tutorial provides steps for creating a Maria DB source connector using the Platform user interface.
 ---
 
