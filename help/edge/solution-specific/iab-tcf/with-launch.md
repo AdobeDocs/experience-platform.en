@@ -51,10 +51,10 @@ This custom code does two things:
 
 * Triggers the rule when the consent preferences have changed. The "Set Consent" action should be used whenever consent preferences have changed. Add a "Set Consent" action in the extension and fill out the form as follows:
 
-  * Standard: "IAB TCF"
-  * Version: "2.0"
-  * Value: "%IAB TCF Consent String%"
-  * GDPR Applies: "%IAB TCF Consent GDPR%"
+* Standard: "IAB TCF"
+* Version: "2.0"
+* Value: "%IAB TCF Consent String%"
+* GDPR Applies: "%IAB TCF Consent GDPR%"
 
 ![IAB Set Consent Action](../../../assets/iab_set_consent_action.png)
 
@@ -72,10 +72,10 @@ The consent string should be included in the XDM ExperienceEvent. To do this, us
 
 1. Expand the **[!UICONTROL consentString]** heading, and expand the first item, then fill in the following values:
 
-  * `consentStandard`: IAB TCF
-  * `consentStandardVersion`: 2.0
-  * `consentStringValue`: %IAB TCF Consent String%
-  * `gdprApplies`: %IAB TCF Consent GDPR%
+* `consentStandard`: IAB TCF
+* `consentStandardVersion`: 2.0
+* `consentStringValue`: %IAB TCF Consent String%
+* `gdprApplies`: %IAB TCF Consent GDPR%
 
 >[!IMPORTANT]
 >
