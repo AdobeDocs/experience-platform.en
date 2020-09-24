@@ -12,7 +12,10 @@ seo-description: Activate profiles for your Facebook campaigns for audience targ
 
 Activate profiles for your [!DNL Facebook] campaigns for audience targeting, personalization and suppression based on hashed emails.
 
+You can use this destination for audience targeting across the entire [!DNL Facebook] family of apps, such as [!DNL Instagram] or [!DNL Messenger].
+
 ![Facebook destination in the Real-time CDP UI](/help/rtcdp/destinations/assets/facebook-destination.png)
+
 
 ## Use Cases
 
