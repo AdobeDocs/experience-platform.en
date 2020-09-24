@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Azure Table Storage;azure tabl
 solution: Experience Platform
 title: Create an Azure Table Storage source connector in the UI
 topic: overview
+type: Tutorial
 description: his tutorial provides steps for creating a Azure Table Storage (hereinafter referred to as "ATS") source connector using the Platform user interface.
 ---
 

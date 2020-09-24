@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;query service;Query service;da
 solution: Experience Platform
 title: Datasets vs tables and schemas
 topic: queries
+type: Tutorial
 ---
 
 # Datasets vs tables and schemas

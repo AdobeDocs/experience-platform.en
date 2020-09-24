@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;ingestion;ingest batch data;tu
 solution: Experience Platform
 title: Ingest data into Adobe Experience Platform
 topic: tutorial
+type: Tutorial
 ---
 
 # Ingest data into Adobe Experience Platform
