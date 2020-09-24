@@ -16,7 +16,7 @@ This guide leads you through the different ways to set up the Adobe Experience P
 
 ## Prepare a Schema
 
-The Experience Platform Edge Network takes data as XDM. XDM is a data format that lets you define schemas. The schema defines how the Edge Network expects the data to be formatted. To send data, you must define your schema. 
+The Experience Platform Edge Network takes data as XDM. XDM is a data format that lets you define schemas. The schema defines how the Edge Network expects the data to be formatted. To send data, you must define your schema.
 
 1. [Create a schema](../../xdm/tutorials/create-schema-ui.md)
 2. Add the AEP [!DNL Web SDK ExperienceEvent] Mixin to the schema you created.
@@ -54,11 +54,12 @@ For more details on how to track events, see [Tracking Events](../fundamentals/t
 
 ## Next Steps
 
-After you have data flowing, you can do the following. 
+After you have data flowing, you can do the following.
 
 - [Build out your schema](https://docs.adobe.com/content/help/en/experience-platform/xdm/schema/composition.html)
 - [Learn about debugging](../fundamentals/debugging.md)
 - Learn how to [personalize the experience](../fundamentals/rendering-personalization-content.md)
+- Integrate the [IAB Transparency & Consent Framework 2.0](../solution-specific/iab-tcf/with-launch.md) in Adobe Experience Platform Launch.
 - Learn about how to send data to multiple solutions
   - [Adobe Analytics](../solution-specific/analytics/analytics-overview.md)
   - [Adobe Audience Manager](../solution-specific/audience-manager/audience-manager-overview.md)
