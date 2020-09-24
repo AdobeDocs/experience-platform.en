@@ -28,7 +28,7 @@ Refer to the [IAB TCF 2.0 compliance overview](../../rtcdp/privacy/overview.md) 
 
 ## Audience Manager integration
 
-Adobe Audience Manager (AAM) also has support for IAB TCF 2.0 which enables customers to evaluate, honor, and forward user privacy choices to downstream partners. For more information, read the documentation on [Sending Data to Audience Manager](../audience-manager/audience-manager-overview.md). 
+Adobe Audience Manager (AAM) also has support for IAB TCF 2.0 which enables you to evaluate, honor, and forward customer privacy choices to downstream partners. For more information, read the documentation on [Sending Data to Audience Manager](../audience-manager/audience-manager-overview.md).
 
 >[!TIP]
 >
@@ -36,7 +36,9 @@ Adobe Audience Manager (AAM) also has support for IAB TCF 2.0 which enables cust
 
 ## Experience Events and Adobe Analytics integration
 
-Whereas the Real-time CDP profile and Audience Manager's audiences keep track of the user's current consent and preferences, experience events can hold the user's consent and preferences that were active when the event was collected. Please refer to the [Analytics overview](../analytics/analytics-overview.md) documentation for information on how to convert an XDM Experience Event to an Analytics hit. To collect consent information on events, the following is required:
+Whereas the Real-time CDP profile and Audience Manager's audiences keep track of a customers current consent preferences, Experience Events can hold the customers consent preferences that were active when the event was collected. Please refer to the [Analytics overview](../analytics/analytics-overview.md) documentation for information on how to convert an XDM Experience Event to an Analytics hit. 
+
+To collect consent information on events, the following is required:
 
 - A dataset based on the [!DNL XDM Experience Event] class, with the [!DNL Experience Event] privacy mixin.
 - An edge configuration set up with the [!DNL XDM Experience Event] dataset above.
@@ -51,11 +53,9 @@ The following sections below describe the main integration points between the IA
 
 ### Default consent
 
-Sets the user's default consent. This is used when there is no consent preference already saved for the user.
+Default consent is used when there is no consent preference already saved for a customer. This means the default consent options can control the behavior of the AEP Web SDK and change based on a customers region.
 
-Default consent is used when there is no consent preference already saved for a user. This means the default consent options can control the behavior of the AEP Web SDK and behave differently based on a user's region.
-
-For example, if a user is not within the jurisdiction of General Data Protection Regulation (GDPR), the default consent could be set to "in," but inside the jurisdiction of GDPR, the default consent could be set to "pending." Your cloud management platform (CMP) may detect the user's region and provide the flag `gdprApplies` to the IAB TCF 2.0. This flag can be used to change or set the default consent.
+For example, if you have a customer that is not within the jurisdiction of General Data Protection Regulation (GDPR), the default consent could be set to "in," but inside the jurisdiction of GDPR, the default consent could be set to "pending." Your cloud management platform (CMP) may detect the customers region and provide the flag `gdprApplies` to the IAB TCF 2.0. This flag can be used to set the default consent.
 
 For more information on default consent, refer to the [default consent section](../fundamentals/configuring-the-sdk.md#default-consent) in the SDK configuration documentation.
 

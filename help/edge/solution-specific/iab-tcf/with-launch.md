@@ -26,7 +26,7 @@ To call the `setConsent` action when your customers consent preferences have cha
 Use the following code sample for your new event:
 
 ```javascript
-// Wait for window.__tcfapi to be defined, then trigger when the user has completed their consent and preferences.
+// Wait for window.__tcfapi to be defined, then trigger when the customer has completed their consent and preferences.
 function addEventListener() {
   if (window.__tcfapi) {
     window.__tcfapi("addEventListener", 2, function (tcData, success) {
