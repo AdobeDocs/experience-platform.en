@@ -5,7 +5,7 @@ description: Learn how to set up IAB TCF 2.0 consent with the Adobe Experience P
 seo-description: Learn how to set up IAB TCF 2.0 consent with the Adobe Experience Platform Web SDK
 ---
 
-# Using IAB TCF 2.0 without Experience Platform Launch and the AEP Web SDK extension
+# Using IAB TCF 2.0 with the Adobe Experience Platform Web SDK extension
 
 This guide shows how to integrate IAB TCF 2.0 with the Adobe Experience Platform Web SDK without using Experience Platform Launch. For an overview of integrating with IAB TCF 2.0, read the [overview](./overview.md). For a guide on how to integrate with Experience Platform Launch, read the [IAB TCF 2.0 guide for Experience Platform Launch](./with-launch.md). 
 
