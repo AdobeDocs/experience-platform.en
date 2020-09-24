@@ -2,7 +2,6 @@
 keywords: destinations;experience cloud solutions
 title: Adobe Destinations
 seo-title: Adobe Destinations
-type: Tutorial
 description: Manage your customer experience by connecting your data in Adobe Real-time CDP to other Adobe Experience Cloud solutions for ad targeting, personalization, marketing automation and more
 seo-description: Manage your customer experience by connecting your data in Adobe Real-time CDP to other Adobe Experience Cloud solutions for ad targeting, personalization, marketing automation and more
 ---
