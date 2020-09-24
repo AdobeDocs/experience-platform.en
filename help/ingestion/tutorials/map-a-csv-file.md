@@ -150,7 +150,8 @@ The following table shows which pattern letters are defined for format strings. 
 | G | The era | Text | AD; Anno Domini; A |
 | u | The year | Year | 2004; 04 |
 | Y | The year of the era | Year | 2004; 04 |
-
+| D | Day of the year | Number | 189 |
+| M | Month of the year | Month |
 
 ### Mapping functions
 
