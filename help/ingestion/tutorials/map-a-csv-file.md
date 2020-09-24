@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv f
 solution: Experience Platform
 title: Map a CSV file to an XDM schema
 topic: tutorial
+type: Tutorial
 ---
 
 # Map a CSV file to an XDM schema

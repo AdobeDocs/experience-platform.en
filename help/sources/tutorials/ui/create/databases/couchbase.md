@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Couchbase;couchbase
 solution: Experience Platform
 title: Create a Couchbase source connector in the UI
 topic: overview
+type: Tutorial
 description: This tutorial provides steps for creating an Couchbase source connector using the Platform user interface.
 ---
 

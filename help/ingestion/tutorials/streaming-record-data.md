@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;
 solution: Experience Platform
 title: Streaming record data
 topic: tutorial
+type: Tutorial
 ---
 
 # Stream record data to Adobe Experience Platform

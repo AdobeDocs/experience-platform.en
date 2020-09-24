@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;protocol connector
 solution: Experience Platform
 title: Configure a dataflow for a protocol connector in the UI
 topic: overview
+type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to an Adobe Experience Platform dataset. This tutorial provides steps to configure a new dataflow using your protocols account.
 ---
 

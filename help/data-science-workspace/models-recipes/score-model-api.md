@@ -2,7 +2,8 @@
 keywords: Experience Platform;Score a model;Data Science Workspace;popular topics;sensei machine learning api
 solution: Experience Platform
 title: Score a model (API)
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: This tutorial will show you how to leverage the Sensei Machine Learning APIs to create an Experiment and an Experiment Run.
 ---
 
