@@ -74,7 +74,11 @@ The **[!UICONTROL Select dataset]** dialog appears. Find the dataset you you wis
 
 To ingest data into a new dataset, select **[!UICONTROL New dataset]** and enter a name and description for the dataset in the fields provided. To add a schema, you can enter an existing schema name in the **[!UICONTROL Select schema]** dialog box. Alternatively, you can select the **[!UICONTROL Schema advanced search]** to search for an appropriate schema.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-new-dataset.png)
+During this step, you can enable your dataset for [!DNL Real-time Customer Profile] and create a holistic view of an entity's attributes and behaviors. Data from all enabled datasets will be included in [!DNL Profile] and changes are applied when you save your dataflow.
+
+Toggle the **[!UICONTROL Profile dataset]** button to enable your target dataset for [!DNL Profile].
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/new-dataset.png)
 
 The **[!UICONTROL Select schema]** dialog appears. Select the schema you wish to apply to the new dataset, then select **[!UICONTROL Done]**.
 
