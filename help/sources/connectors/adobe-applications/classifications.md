@@ -12,7 +12,7 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 [!DNL Experience Platform] provides support for ingesting Analytics Classifications data into Adobe Experience Platform.
 
-Classifications allow for Analytics variable data to be categorized and displayed in different ways when reports are generated. To use the Analytics Classifications Data Connector, your data must be migrated to the new classifications infrastructure of Adobe Analytics. For more information, please contact your CSM.
+Classifications allow for Analytics variable data to be categorized and displayed in different ways when reports are generated. The Analytics Classifications Data Connector requires your data to have been migrated to the new Classifications infrastructure of the Adobe Analytics prior to use. To confirm the status of your data, please contact your CSM.
 
 The documentation below provides information on how to connect Analytics Classifications to Platform using the user interface:
 

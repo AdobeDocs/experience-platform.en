@@ -18,7 +18,7 @@ This tutorial requires a working understanding of the following components of Ad
 *   [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 *   [[!DNL Sandboxes]](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-To use the Analytics Classifications Data Connector, your data must be migrated to the new classifications infrastructure of Adobe Analytics. For more information, please contact your CSM.
+Classifications allow for Analytics variable data to be categorized and displayed in different ways when reports are generated. The Analytics Classifications Data Connector requires your data to have been migrated to the new Classifications infrastructure of the Adobe Analytics prior to use. To confirm the status of your data, please contact your CSM.
 
 ## Select your classifications
 
