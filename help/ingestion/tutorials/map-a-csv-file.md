@@ -139,7 +139,18 @@ When string fields from incoming data are mapped to date fields in XDM, the date
 
 >[!IMPORTANT]
 >
-> Platform will try to convert strings to dates as best as possible. However, these conversions can lead to undesirable results. For example, the string value "11112020" 
+> Platform will try to convert strings to dates as best as possible. However, these conversions can lead to undesirable results. For example, the string value "11112020" matches the pattern "MMddyyyy", 
+
+### Date/time format strings
+
+The following table shows which pattern letters are defined for format strings. Please note that the letters are case sensitive.
+
+| Symbol | Meaning | Presentation | Example |
+| ------ | ------- | ------------ | ------- |
+| G | The era | Text | AD; Anno Domini; A |
+| u | The year | Year | 2004; 04 |
+| Y | The year of the era | Year | 2004; 04 |
+
 
 ### Mapping functions
 
