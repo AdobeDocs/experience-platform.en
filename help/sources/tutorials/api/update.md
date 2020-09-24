@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics; flow service; update connecti
 solution: Experience Platform
 title: Update connection information using the Flow Service API
 topic: overview
+type: Tutorial
 description: This tutorial covers the steps for updating your connection information, including its name, description, and credentials using the Flow Service API.
 ---
 

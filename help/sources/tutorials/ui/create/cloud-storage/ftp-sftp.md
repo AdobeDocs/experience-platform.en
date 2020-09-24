@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;SFTP;FTP;ftp;sftp
 solution: Experience Platform
 title: Create an FTP or SFTP source connector in the UI
 topic: overview
+type: Tutorial
 description: This tutorial provides steps for creating a FTP or SFTP source connector using the Platform user interface.
 ---
 
