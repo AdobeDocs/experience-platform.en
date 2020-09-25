@@ -140,7 +140,7 @@ When string fields from incoming data are mapped to date fields in XDM, the date
 
 >[!IMPORTANT]
 >
-> Platform will try to convert strings to dates as best as possible. However, these conversions can lead to undesirable results. For example, the string value "11112020" matches the pattern "MMddyyyy", 
+> Platform will try to convert strings to dates as best as possible. However, these conversions can lead to undesirable results. For example, the string value "12112020" matches the pattern "MMddyyyy", but the user may have intended for the date to be read with the pattern "ddMMyyyy". As a result, users should explicitly mention the date format for strings.
 
 ### Date/time format strings
 
@@ -149,10 +149,34 @@ The following table shows which pattern letters are defined for format strings. 
 | Symbol | Meaning | Presentation | Example |
 | ------ | ------- | ------------ | ------- |
 | G | The era | Text | AD; Anno Domini; A |
-| u | The year | Year | 2004; 04 |
-| Y | The year of the era | Year | 2004; 04 |
+| Y | Year, based on the ISO Week | Number | 1996; 96 |
+| y | The year | Number | 2004; 04 |
+| M/L | Month of the year | Number/Text | 7; 07; Jul; July; J |
+| w | Week in the year | Number | 27 |
+| W | Week of the month | Number | 3 |
 | D | Day of the year | Number | 189 |
-| M | Month of the year | Month |
+| d | Day of the month | Number | 10 |
+| F | Day of the week in a month | Number | 2 |
+| E | Name of the day of the week | Text | Tuesday; Tue |
+| u | Day of the week, as a number. 1 represents Monday, ..., 7 represents Sunday | Number | 1 |
+| a | AM/PM marker | Text | PM |
+| H | Hour in day (0-23) | Number | 0 |
+| k | Hour in day (1-24) | Number | 24 |
+| K | Hour in AM/PM (0-11) | Number | 0 |
+| h | Hour in AM/PM (1-12) | Number | 12 | 
+| m | Minute in the hour | Number | 38 | 
+| s | Second in the minute | Number | 44 | 
+| S | Millisecond | Number | 245 |
+| z | Time zone | General time zone | Pacific Standard Time; PST; GMT-08:00 |
+| Z | Time zone | RFC 822 time zone | -0800 |
+| X | Time zone | ISO 8601 time zone | -08; -0800; -08:00 |
+| V | Time zone ID | Text | America/Los_Angeles |
+| O | Time zone offset | Text | GMT+8 |
+| Q/q | Quarter of the year | Number/Text | 3; 03; Q3; 3rd quarter |
+
+**Example**
+
+The expression date(orderDate, 'YYYY-MM-DD') will convert the orderDate the string into a date time with the value "2020-12-31".
 
 ### Mapping functions
 
