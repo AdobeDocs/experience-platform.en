@@ -1,5 +1,5 @@
 ---
-keywords: facebook extensions;facebook extension;facebook destinations;facebook
+keywords: facebook extensions;facebook extension;facebook destinations;facebook;instagram;messenger;facebook messenger
 title: Facebook Destination
 seo-title: Facebook Destination
 description: Activate profiles for your Facebook campaigns for audience targeting, personalization and suppression based on hashed emails.
@@ -12,7 +12,7 @@ seo-description: Activate profiles for your Facebook campaigns for audience targ
 
 Activate profiles for your [!DNL Facebook] campaigns for audience targeting, personalization and suppression based on hashed emails.
 
-You can use this destination for audience targeting across the entire [!DNL Facebook] family of apps, such as [!DNL Instagram] or [!DNL Messenger].
+You can use this destination for audience targeting across [!DNL Facebook’s] family of apps that are supported by [!DNL Custom Audiences], including [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] and [!DNL Messenger]. Selection of the app that you want to run campaign against is indicated at the placement level in [!DNL Facebook Ads Manager].
 
 ![Facebook destination in the Real-time CDP UI](/help/rtcdp/destinations/assets/facebook-destination.png)
 
