@@ -2,7 +2,8 @@
 keywords: Experience Platform;preview schema data;Data Science Workspace;popular topics
 solution: Experience Platform
 title: Preview schemas and datasets
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: The following document outlines previewing schemas and datasets on Adobe Experience Platform.
 ---
 

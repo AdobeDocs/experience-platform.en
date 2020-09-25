@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Salesforce Service Cloud;sales
 solution: Experience Platform
 title: Create a Salesforce Service Cloud source connector in the UI
 topic: overview
+type: Tutorial
 description: This tutorial provides steps for creating a Salesforce Service Cloud (hereinafter referred to as "SSC") source connector using the Platform user interface.
 ---
 

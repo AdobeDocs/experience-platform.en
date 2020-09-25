@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Phoenix;phoenix
 solution: Experience Platform
 title: Create a Phoenix connector using the Flow Service API
 topic: overview
+type: Tutorial
 description: This tutorial uses the Flow Service API to walk you through the steps to connect a Phoenix database to Experience Platform.
 ---
 

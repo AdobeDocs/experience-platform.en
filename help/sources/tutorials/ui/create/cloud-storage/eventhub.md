@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Azure Event Hubs;Event Hubs;az
 solution: Experience Platform
 title: Create an Azure Event Hubs source connector in the UI
 topic: overview
+type: Tutorial
 description: This tutorial provides steps for authenticating an Azure Event Hubs (hereinafter referred to as "Event Hubs") source connector using the Platform user interface.
 ---
 
