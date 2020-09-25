@@ -9,11 +9,42 @@ user-guide-description: Experience Data Model (XDM) is a publicly documented spe
 # Experience Data Model (XDM) System {#xdm}
 
 * [XDM System overview](home.md)
-* XDM schemas {#schema}
+* Schemas {#schema}
   * [Basics of schema composition](schema/composition.md)
   * [XDM field dictionary](schema/field-dictionary.md)
   * Schema use cases {#use-cases}
     * [Privacy Consent mixin](schema/privacy-consent.md)
+* Classes {#classes}
+  * [XDM Individual Profile](./classes/individual-profile.md)
+  * [XDM ExperienceEvent](./classes/experienceevent.md)
+* Mixins {#mixins}
+  * Profile mixins {#profile}
+    * [IdentityMap](./mixins/profile/identitymap.md)
+    * [Profile person details](./mixins/profile/person-details.md)
+    * [Profile personal details](./mixins/profile/personal-details.md)
+    * [Profile segmentation](./mixins/profile/segmentation.md)
+    * [Profile work details](./mixins/profile/work-details.md)
+  * Event mixins {#event}
+    * [ExperienceEvent EndUserIDs](./mixins/event/enduserids.md)
+    * [ExperienceEvent environment details](./mixins/event/environment-details.md)
+* Data types {#data-types}
+    * [Beacon interaction details](./data-types/beacon-interaction-details.md)
+    * [Browser details](./data-types/browser-details.md)
+    * [Device](./data-types/device.md)
+    * [Email address](./data-types/email-address.md)
+    * [Environment](./data-types/environment.md)
+    * [Geo](./data-types/geo.md)
+    * [Geo circle](./data-types/geo-circle.md)
+    * [Geo coordinates](./data-types/geo-coordinates.md)
+    * [Geo interaction details](./data-types/geo-interaction-details.md)
+    * [Geo shape](./data-types/geo-shape.md)
+    * [Identity](./data-types/identity.md)
+    * [Person name](./data-types/person-name.md)
+    * [Person number](./data-types/person-number.md)
+    * [Person context](./data-types/person-context.md)
+    * [POI details](./data-types/poi-details.md)
+    * [POI interaction](./data-types/poi-interaction.md)
+    * [Postal address](./data-types/postal-address.md)
 * Schema Registry API {#api}
   * [Getting started](api/getting-started.md)
   * [List resources](api/list-resources.md)
