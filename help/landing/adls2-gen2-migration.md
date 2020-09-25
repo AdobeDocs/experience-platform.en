@@ -6,13 +6,13 @@ Adobe Experience Platform is migrating to Gen2 Data Lake. This is a new generati
 
 While Adobe is migrating the Data Lake from Gen1 to Gen 2, users will be able to **read** from the Data Lake, but all capabilities that **write** into the Data Lake will be impacted. Below is a list of impacted capabilities:
 
-- Sources: Data coming in form the sources and various data ingestion workflows will be delayed. Users will see their data once the migration is complete.
+- Sources: Data coming in from the sources and various data ingestion workflows will be delayed. Users will see their data once the migration is complete.
 - Query Service: Users can perform queries but will not be able to write the output of the query into a dataset.
-- Real-time Customer Profile: If data is streamed into Profile store, there will be no latency observed. In other cases, the data would be available only after the migration. Profile exports won't be available during the migration.
-- Data Science Workspace: Data Science Workspace capability will be impacted during the migration.
+- Real-time Customer Profile: Data ingested to the Profile store through batch ingestion will not be available during the migration. Additionally, Profile exports won't be available during the migration.
+- Data Science Workspace: Writes from Data Science Workspace will fail.
 - Segmentation Service: Audiences derived from batch segmentation cannot be activated during the migration.
 - Customer Journey Analytics: Customer Journey Analytics reports data may be out of date and will not refresh during the migration, as batches are not being ingested into Data Lake.
 
 ## Communication to Platform users
 
-Adobe field team will be contacting System Administrators to discuss the impact of the migration in detail and to confirm the migration dates and times for specific IMS Organizations. 
+Adobe will be contacting System Administrators to discuss the impact of the migration in detail and to confirm the migration dates and times for specific IMS Organizations. 
