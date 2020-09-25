@@ -61,7 +61,9 @@ The following is a list of constraints you must account for when naming your clo
 
 ## Connect FTP and SFTP to [!DNL Platform]
 
-> [!IMPORTANT]: Users are required to disable Keyboard Interactive Authentication in the SFTP server configuration prior to connecting. Disabling the setting will allow passwords to be entered manually, as opposed to inputting through a service or a program. See the [Component Pro document](https://doc.componentpro.com/ComponentPro-Sftp/authenticating-with-a-keyboard-interactive-authentication) for more information on Keyboard Interactive Authentication.
+>[!IMPORTANT]
+>
+>Users are required to disable Keyboard Interactive Authentication in the SFTP server configuration prior to connecting. Disabling the setting will allow passwords to be entered manually, as opposed to inputting through a service or a program. See the [Component Pro document](https://doc.componentpro.com/ComponentPro-Sftp/authenticating-with-a-keyboard-interactive-authentication) for more information on Keyboard Interactive Authentication.
 
 The documentation below provides information on how to connect an FTP or an SFTP server to [!DNL Platform] using APIs or the user interface:
 
