@@ -21,7 +21,7 @@ description: This document provides an overview of the Geo XDM data type.
 | `dmaID` | Integer | The Nielsen media research designated market area. |
 | `msaID` | Integer | The metropolitan statistical area in the United States where the observation occurred. |
 | `postalCode` | String | The postal code of the location. Postal codes are not available for all countries. In some countries, this will only contain part of the postal code. |
-| `stateProvince` | String | The state, or province portion of the observation. The format follows the [ISO 3166-2 (country and subdivision)](http://www.unece.org/cefact/locode/subdivisions.html">http://www.unece.org/cefact/locode/subdivisions.html) standard. |
+| `stateProvince` | String | The state, or province portion of the observation. The format follows the [ISO 3166-2 (country and subdivision)](http://www.unece.org/cefact/locode/subdivisions.html) standard. |
 
 For more details on the mixin, refer to the public XDM repository:
 

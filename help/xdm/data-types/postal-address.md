@@ -29,7 +29,7 @@ description: This document provides an overview of the Postal Address XDM data t
 | `region` | The region, county, or district portion of the address. |
 | `repositoryCreatedBy` | The ID of the user who created the record. |
 | `repositoryLastModifiedBy` |  The ID of the user who last modified the record. |
-| `stateProvince` | The state, or province portion of the observation. The format follows the [ISO 3166-2 (country and subdivision)](http://www.unece.org/cefact/locode/subdivisions.html">http://www.unece.org/cefact/locode/subdivisions.html) standard. |
+| `stateProvince` | The state, or province portion of the observation. The format follows the [ISO 3166-2 (country and subdivision)](http://www.unece.org/cefact/locode/subdivisions.html) standard. |
 | `status` | Indicates whether the address can be currently used. |
 | `statusReason` | A description of the current `status`. |
 | `street1` - `street4` | These four fields are meant to contain primary street level information, apartment number, street number, and street name. `street2` to `street4` are optional. |

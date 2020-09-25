@@ -1606,7 +1606,7 @@ The following shows the completed Loyalty Members schema in JSON format:
                 "stateProvince": {
                     "title": "State or province",
                     "type": "string",
-                    "description": "The state, or province portion of the observation. The format follows the [ISO 3166-2 (country and subdivision)][http://www.unece.org/cefact/locode/subdivisions.html] standard.",
+                    "description": "The state, or province portion of the observation. The format follows the ISO 3166-2 (country and subdivision) standard.",
                     "examples": [
                         "US-CA",
                         "DE-BB",
