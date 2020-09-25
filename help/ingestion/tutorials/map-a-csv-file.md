@@ -186,6 +186,18 @@ For example, to concatenate **city** and **country** CSV fields and assign them 
 
 ![](../images/tutorials/map-a-csv-file/mapping-function.png)
 
+**Field names**
+
+A field name can be any legal identifier - an unlimited-length sequence of Unicode letters and digits, beginning with a letter, the dollar sign (`$`), or the underscore character (`_`). Variable names are also case sensitive.
+
+If a field name does not follow this convention, the field name must be wrapped with `${}`. So, for example, if the field name is "First Name", then the name must be wrapped like `${First Name}`.
+
+Additionally, field names **cannot** be any of the following keywords:
+
+```console
+new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return
+```
+
 The following tables list all supported mapping functions, including sample expressions and their resulting outputs.
 
 **String functions**
