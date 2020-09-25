@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;query service;Query service;wr
 solution: Experience Platform
 title: Writing queries
 topic: queries
+type: Tutorial
 ---
 
 # General guidance for query execution in [!DNL Query Service]

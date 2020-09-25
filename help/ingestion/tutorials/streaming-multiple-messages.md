@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;
 solution: Experience Platform
 title: Streaming multiple messages in a single HTTP request
 topic: tutorial
+type: Tutorial
 ---
 
 # Sending multiple messages in a single HTTP request
