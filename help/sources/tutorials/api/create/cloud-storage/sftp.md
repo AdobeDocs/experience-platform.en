@@ -37,7 +37,7 @@ In order for [!DNL Flow Service] to connect to SFTP, you must provide values for
 | `host` | The name or IP address associated with your SFTP server. |
 | `username` | The username with access to your SFTP server. |
 | `password` | The password for your SFTP server. |
-| `privateKeyContent` | The Base64 encoded SSH private key content. SSH private key should be OpenSSH format. |
+| `privateKeyContent` | The Base64 encoded SSH private key content. The SSH private key OpenSSH (RSA/DSA) format. |
 | `passPhrase` | The pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If PrivateKeyContent is password protected, this parameter needs to be used with the PrivateKeyContent's passphrase as value. |
 
 ### Reading sample API calls
@@ -157,7 +157,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.host` | The host name of your SFTP server. |
 | `auth.params.username` | The username associated with your SFTP server. |
-| `auth.params.privateKeyContent` | The base64 encoded SSH private key content. SSH private key should be OpenSSH format. |
+| `auth.params.privateKeyContent` | The base64 encoded SSH private key content. The SSH private key OpenSSH (RSA/DSA) format. |
 | `auth.params.passPhrase` | The pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If PrivateKeyContent is password protected, this parameter needs to be used with the PrivateKeyContent's passphrase as value. |
 | `connectionSpec.id` | The SFTP server connection specification ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
