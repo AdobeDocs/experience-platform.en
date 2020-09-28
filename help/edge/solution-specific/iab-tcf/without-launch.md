@@ -25,7 +25,7 @@ Additionally, this guide requires you to have a working understanding of the Ado
 
 If you want to treat all unknown users the same, you can set the default consent to "pending." This queues Experience Events until consent preferences are received.
 
-For more information on default consent, refer to the [default consent section](../fundamentals/configuring-the-sdk.md#default-consent) in the SDK configuration documentation.
+For more information on default consent, refer to the [default consent section](../../fundamentals/configuring-the-sdk.md#default-consent) in the SDK configuration documentation.
 
 ### Setting the default consent based on `gdprApplies`
 

@@ -25,7 +25,7 @@ Within the extension configuration, there is a setting for default consent. This
 >
 >Currently, there is no way to set this dynamically through the Experience Platform Launch extension.
 
-For more information on default consent, refer to the [default consent section](../fundamentals/configuring-the-sdk.md#default-consent) in the SDK configuration documentation.
+For more information on default consent, refer to the [default consent section](../../fundamentals/configuring-the-sdk.md#default-consent) in the SDK configuration documentation.
 
 ## Updating Profile with consent information {#consent-code-1}
 

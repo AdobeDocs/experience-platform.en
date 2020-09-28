@@ -12,14 +12,14 @@ The Adobe Experience Platform Web SDK (AEP Web SDK) has support for the Interact
 
 Additionally, the following guides are available to assist in learning how to integrate IAB TCF 2.0 with and without Adobe Experience Platform Launch.
 
-- [With Adobe Experience Platform Launch](./iab-tcf-with-launch.md)
-- [Without Adobe Experience Platform Launch](./iab-tcf-without-launch.md)
+- [With Adobe Experience Platform Launch](./with-launch.md)
+- [Without Adobe Experience Platform Launch](./without-launch.md)
 
 ## Getting started
 
 In order to implement the AEP Web SDK with IAB TCF 2.0, it is required that you have a working understanding of the Experience Data Model (XDM) and Experience Events. Before you start, please review the following document:
 
-- [Experience Data Model (XDM) System overview](../../xdm/home.md): Standardization and interoperability are key concepts behind Adobe Experience Platform. [!DNL Experience Data Model] (XDM), driven by Adobe, is an effort to standardize customer experience data and define schemas for customer experience management.
+- [Experience Data Model (XDM) System overview](../../../xdm/home.md): Standardization and interoperability are key concepts behind Adobe Experience Platform. [!DNL Experience Data Model] (XDM), driven by Adobe, is an effort to standardize customer experience data and define schemas for customer experience management.
 
 ## Real-time Customer Data Platform integration
 
@@ -28,9 +28,9 @@ Built on Adobe Experience Platform, Adobe Real-time Customer Data Platform (Real
 - A dataset based on the [!DNL XDM Individual Profile] class, enabled for use in [!DNL Real-time Customer Profile], with the Profile privacy mixin.
 - An edge configuration setup with Real-time CDP, and the profile dataset mentioned above.
 
-Please refer to the tutorial on [creating datasets for capturing TCF 2.0 consent](../../rtcdp/privacy/dataset-preparation.md) for how to create the required dataset. 
+Please refer to the tutorial on [creating datasets for capturing TCF 2.0 consent](../../../rtcdp/privacy/dataset-preparation.md) for how to create the required dataset. 
 
-Refer to the [IAB TCF 2.0 compliance overview](../../rtcdp/privacy/overview.md) for instructions on creating the edge configuration.
+Refer to the [IAB TCF 2.0 compliance overview](../../../rtcdp/privacy/overview.md) for instructions on creating the edge configuration.
 
 ## Audience Manager integration
 
@@ -65,7 +65,7 @@ Default consent is used when there is no consent preference already saved for a 
 
 For example, if you have a customer that is not within the jurisdiction of General Data Protection Regulation (GDPR), the default consent could be set to "in," but inside the jurisdiction of GDPR, the default consent could be set to "pending." Your cloud management platform (CMP) may detect the customers region and provide the flag `gdprApplies` to the IAB TCF 2.0. This flag can be used to set the default consent.
 
-For more information on default consent, refer to the [default consent section](../fundamentals/configuring-the-sdk.md#default-consent) in the SDK configuration documentation.
+For more information on default consent, refer to the [default consent section](../../fundamentals/configuring-the-sdk.md#default-consent) in the SDK configuration documentation.
 
 ### Setting consent when it changes
 
@@ -78,14 +78,14 @@ Similar to Audience Manager's IAB TCF 2.0 integration, Experience Edge gives con
 - **Special Purpose 1:** Ensure security, prevent fraud, and debug. (Per IAB TCF regulations, this is always consented to)
 - **Adobe Vendor Permission:** Consent for Adobe (Vendor 565)
 
-For more information on the `setConsent` command, read the documentation on [Supporting Consent](../fundamentals/supporting-consent.md).
+For more information on the `setConsent` command, read the documentation on [Supporting Consent](../../fundamentals/supporting-consent.md).
 
 ### Adding Consent to Experience Events
 
 AEP Web SDK has a `sendEvent` command that collects an Experience Event. If you are integrating with Experience Events or Adobe Analytics and would like the consent preferences on every Experience Event, you should add the consent information to every `sendEvent` command.
 
-For more information on the `sendEvent` command, read the documentation on [tracking events](../fundamentals/tracking-events.md).
+For more information on the `sendEvent` command, read the documentation on [tracking events](../../fundamentals/tracking-events.md).
 
 ## Next steps
 
-Now that you have a basic understanding of the IAB Transparency & Consent Framework 2.0, please refer to either of the guides on using IAB TCF 2.0 [with Adobe Experience Platform Launch](./iab-tcf-with-launch.md) or [without Adobe Experience Platform Launch](./iab-tcf-without-launch.md).
+Now that you have a basic understanding of the IAB Transparency & Consent Framework 2.0, please refer to either of the guides on using IAB TCF 2.0 [with Adobe Experience Platform Launch](./with-launch.md) or [without Adobe Experience Platform Launch](./without-launch.md).
