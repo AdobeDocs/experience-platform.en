@@ -18,6 +18,8 @@ user-guide-description: Bring in your data to Platform through batch or streamin
     - [Batch ingestion API](batch-ingestion/api-overview.md)
     - [Partial batch ingestion](batch-ingestion/partial.md)
     - [Troubleshooting](batch-ingestion/troubleshooting.md)
+- Mapper {#mapper}
+    - [Mapping functions]()
 - Tutorials {#tutorials}
     - [Map a CSV file to XDM](tutorials/map-a-csv-file.md)
     - [Ingest batch data using the UI](tutorials/ingest-batch-data.md)
