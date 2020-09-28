@@ -10,10 +10,16 @@ keywords: consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixi
 
 The Adobe Experience Platform Web SDK (AEP Web SDK) has support for the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0). This guide shows the requirements for supporting IAB TCF 2.0 through the AEP Web SDK integrating with Real-time Customer Data Platform, Audience Manager, Experience Events, Analytics, and Experience Edge.
 
-Additionally, the following guides are available to assist with learning how to integrate IAB TCF 2.0 with and without Adobe Experience Platform Launch.
+Additionally, the following guides are available to assist in learning how to integrate IAB TCF 2.0 with and without Adobe Experience Platform Launch.
 
 - [With Adobe Experience Platform Launch](./iab-tcf-with-launch.md)
 - [Without Adobe Experience Platform Launch](./iab-tcf-without-launch.md)
+
+## Getting started
+
+In order to implement the AEP Web SDK with IAB TCF 2.0, it is required that you have a working understanding of the Experience Data Model (XDM) and Experience Events. Before you start, please review the following document:
+
+- [Experience Data Model (XDM) System overview](../../xdm/home.md): Standardization and interoperability are key concepts behind Adobe Experience Platform. [!DNL Experience Data Model] (XDM), driven by Adobe, is an effort to standardize customer experience data and define schemas for customer experience management.
 
 ## Real-time Customer Data Platform integration
 
@@ -36,12 +42,14 @@ Adobe Audience Manager (AAM) also has support for IAB TCF 2.0 which enables you 
 
 ## Experience Events and Adobe Analytics integration
 
-Whereas the Real-time CDP profile and Audience Manager's audiences keep track of a customers current consent preferences, Experience Events can hold the customers consent preferences that were active when the event was collected. Please refer to the [Analytics overview](../analytics/analytics-overview.md) documentation for information on how to convert an XDM Experience Event to an Analytics hit. 
+Whereas the Real-time CDP and Audience Manager's audiences keep track of a customers current consent preferences, Experience Events can hold a customers consent preferences that were active when the event was collected.
 
 To collect consent information on events, the following is required:
 
 - A dataset based on the [!DNL XDM Experience Event] class, with the [!DNL Experience Event] privacy mixin.
 - An edge configuration set up with the [!DNL XDM Experience Event] dataset above.
+
+For more information on how to convert an XDM Experience Event to an Analytics hit, start by reading the [Analytics overview](../analytics/analytics-overview.md) documentation.
 
 ## AEP Web SDK integration
 
@@ -49,7 +57,7 @@ The following sections below describe the main integration points between the IA
 
 >[!NOTE]
 >
->Even without Real-time CDP or Audience Manager set up, you can still integrate IAB TCF 2.0 with the Web SDK. The consent preferences can be used to control the collection of Experience Events and the setting of an identity cookie.
+>Even without Real-time CDP or Audience Manager set up, you can still integrate IAB TCF 2.0 with the Web SDK. The consent preferences can be used to control the collection of Experience Events and setting an identity cookie.
 
 ### Default consent
 

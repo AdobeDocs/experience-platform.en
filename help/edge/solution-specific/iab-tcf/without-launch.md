@@ -7,13 +7,19 @@ seo-description: Learn how to set up IAB TCF 2.0 consent with the Adobe Experien
 
 # Using IAB TCF 2.0 with the Adobe Experience Platform Web SDK extension
 
-This guide shows how to integrate IAB TCF 2.0 with the Adobe Experience Platform Web SDK without using Experience Platform Launch. For an overview of integrating with IAB TCF 2.0, read the [overview](./overview.md). For a guide on how to integrate with Experience Platform Launch, read the [IAB TCF 2.0 guide for Experience Platform Launch](./with-launch.md). 
+This guide shows how to integrate the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0) with the Adobe Experience Platform Web SDK without using Experience Platform Launch. For an overview of integrating with IAB TCF 2.0, read the [overview](./overview.md). For a guide on how to integrate with Experience Platform Launch, read the [IAB TCF 2.0 guide for Experience Platform Launch](./with-launch.md). 
 
-This guide uses the `__tcfapi` interface for accessing the consent information. It might be easier for you to integrate directly with your cloud management provider (CMP). The information in this guide might be useful because the CMPs generally provide similar functionality to the TCF API.
+## Getting started
+
+This guide uses the `__tcfapi` interface for accessing the consent information. It might be easier for you to integrate directly with your cloud management provider (CMP). However, the information in this guide might still be useful because the CMPs generally provide similar functionality to the TCF API.
 
 >[!NOTE]
 >
 >These examples assume that by the time the code is run, `window.__tcfapi` is defined on the page. CMPs may provide a hook where you could run these functions when the `__tcfapi` object is ready.
+
+In order to utilized IAB TCF 2.0 with Experience Platform Launch and the AEP Web SDK extension, you need to have an XDM schema available. If you have not set either of these up, start by viewing the [Adobe Experience Platform Web SDK JavaScript quick start guide](../../getting-started/quick-start-without-launch.md) before proceeding.
+
+Additionally, this guide requires you to have a working understanding of the Adobe Experience Platform Web SDK. For a quick refresher, please read the [Adobe Experience Platform Web SDK overview](../../home.md) and the [Frequently asked questions](../../getting-started/web-sdk-faq.md) documentation.
 
 ## Enabling default consent
 
@@ -72,9 +78,9 @@ This code block listens for the `useractioncomplete` event and then sets the con
 
 ## Including consent information in sendEvent
 
-Within XDM, you can store consent preference information from Experience Events. There are two ways to add this information to every event.
+Within XDM schemas, you can store consent preference information from Experience Events. There are two ways to add this information to every event.
 
-First, you can provide the relevant XDM on every `sendEvent` call. The following example shows one way to do this:
+First, you can provide the relevant XDM schema on every `sendEvent` call. The following example shows one way to do this:
 
 ```javascript
 var sendEventOptions = { ... };
@@ -91,6 +97,10 @@ window.__tcfapi('getTCData', 2, function (tcData, success) {
 });
 ```
 
-This example gets the consent information for the TCF API, and then sends an event with the consent information added to the XDM. See the [tracking events](../../fundamentals/tracking-events.md) guide to understand what should be in the `sendEvent` command options.
+This example gets the consent information for the TCF API, and then sends an event with the consent information added to the XDM schema. See the [tracking events](../../fundamentals/tracking-events.md) guide to understand what should be in the `sendEvent` command options.
 
 The other way to add the consent information to every request is with the `onBeforeEventSend` callback. Read the section on [modifying events globally](../../fundamentals/tracking-events.md#modifying-events-globally) from within the tracking events documentation for more information on how to do this.
+
+## Next steps
+
+Now that you have learned how to use IAB TCF 2.0 with the Adobe Experience Platform Web SDK extension, you also choose to integrate with other Adobe solutions such as Adobe Analytics or Real-time Customer Data platform. See the [IAB Transparency & Consent Framework 2.0 overview](./overview.md) for more information.

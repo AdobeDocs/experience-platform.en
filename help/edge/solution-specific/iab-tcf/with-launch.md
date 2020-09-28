@@ -7,7 +7,15 @@ seo-description: Learn how to set up IAB TCF 2.0 consent with Adobe Launch and A
 
 # Using IAB TCF 2.0 with Experience Platform Launch and the AEP Web SDK extension
 
-The Adobe Experience Platform Web Software Development Kit (Adobe Experience Platform Web SDK) supports the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0). This guide shows you how to set up an Adobe Experience Platform Launch property to send IAB TCF 2.0 consent information to Adobe using the AEP Web SDK Launch extension. Please refer to [Using IAB TCF 2.0 without Experience Platform Launch](./without-launch.md) for the guide on using IAB TCF 2.0 without Experience Platform Launch.
+The Adobe Experience Platform Web Software Development Kit (Adobe Experience Platform Web SDK) supports the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0). This guide shows you how to set up an Adobe Experience Platform Launch property for sending IAB TCF 2.0 consent information to Adobe using the AEP Web SDK Launch extension.
+
+If you do not wish to use Experience Platform Launch, please refer to the guide on [using IAB TCF 2.0 without Experience Platform Launch](./without-launch.md).
+
+## Getting started
+
+In order to utilized IAB TCF 2.0 with Experience Platform Launch and the AEP Web SDK extension, you need to have an XDM schema and dataset available. If you have not set either of these up, start by viewing the [Adobe Experience Platform Web SDK Launch quick start guide](../../getting-started/quick-start-with-launch.md) before proceeding.
+
+Additionally, this guide requires you to have a working understanding of the Adobe Experience Platform Web SDK. For a quick refresher, please read the [Adobe Experience Platform Web SDK overview](../../home.md) and the [Frequently asked questions](../../getting-started/web-sdk-faq.md) documentation.
 
 ## Setting default consent
 
@@ -112,3 +120,7 @@ Add a "Send Event" action from the Adobe Experience Platform Web SDK extension. 
 ## Sending other events with IAB TCF 2.0 consent information
 
 When events are triggered after the initial Experience Event, the two data elements are still defined and can be used to send the IAB consent information. Use the same XDM data element to send future events. The IAB TCF 2.0 information is included.
+
+## Next steps
+
+Now that you have learned how to use IAB TCF 2.0 with the Adobe Experience Platform Web SDK extension, you also choose to integrate with other Adobe solutions such as Adobe Analytics or Real-time Customer Data platform. See the [IAB Transparency & Consent Framework 2.0 overview](./overview.md) for more information.
