@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Azure File Storage;Azure File 
 solution: Experience Platform
 title: Create an Azure File Storage source connector in the UI
 topic: overview
+type: Tutorial
 description: This tutorial provides steps for authenticating an Azure File Storage source connector using the Platform user interface.
 ---
 

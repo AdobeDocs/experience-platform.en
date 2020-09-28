@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;destinations tutorial
 solution: Experience Platform
 title: Create a destination and activate data using APIs
 topic: tutorial
+type: Tutorial
 description: Learn to create different types of destinations and activate data.
 ---
 
