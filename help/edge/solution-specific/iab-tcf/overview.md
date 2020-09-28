@@ -28,9 +28,9 @@ Built on Adobe Experience Platform, Adobe Real-time Customer Data Platform (Real
 - A dataset based on the [!DNL XDM Individual Profile] class, enabled for use in [!DNL Real-time Customer Profile], with the Profile privacy mixin.
 - An edge configuration setup with Real-time CDP, and the profile dataset mentioned above.
 
-Please refer to the tutorial on [creating datasets for capturing TCF 2.0 consent](../../../rtcdp/privacy/dataset-preparation.md) for how to create the required dataset. 
+Please refer to the tutorial on [creating datasets for capturing TCF 2.0 consent](../../../rtcdp/privacy/lab/dataset-preparation.md) for how to create the required dataset. 
 
-Refer to the [IAB TCF 2.0 compliance overview](../../../rtcdp/privacy/overview.md) for instructions on creating the edge configuration.
+Refer to the [IAB TCF 2.0 compliance overview](../../../rtcdp/privacy/privacy-overview.md) for instructions on creating the edge configuration.
 
 ## Audience Manager integration
 
