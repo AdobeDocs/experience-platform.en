@@ -68,11 +68,11 @@ This custom code does two things:
 
 >[!IMPORTANT]
 >
->You cannot choose these data elements using the data element selector because they were created through custom code. You must type in the data element name with the percent signs. This code updates your customers profile with their new consent preferences whenever they change. Additionally, the server returns a cookie value, which could prevent the Adobe Experience Platform Web SDK from recording Experience Events.
+>You cannot choose these data elements using the data element selector because they were created through custom code. You must type in the data element name with the percent signs. This code updates your customer's profile with their new consent preferences whenever they change. Additionally, the server returns a cookie value, which could prevent the Adobe Experience Platform Web SDK from recording Experience Events.
 
 ## Creating an XDM data element for Experience Events
 
-The consent string should be included in the XDM ExperienceEvent. To do this, use the XDM Object data element. Start by creating a new XDM Object data element, or alternatively, use one you already created for sending events. If you have added the Experience Event Privacy mixin to your schema, you should have a `consentStrings` key in the XDM object.
+The consent string should be included in the XDM Experience Event. To do this, use the XDM Object data element. Start by creating a new XDM Object data element, or alternatively, use one you already created for sending events. If you have added the Experience Event Privacy mixin to your schema, you should have a `consentStrings` key in the XDM object.
 
 1. Select **[!UICONTROL consentStrings]**.
 

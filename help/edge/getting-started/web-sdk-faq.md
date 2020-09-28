@@ -7,7 +7,7 @@ seo-description: Frequently asked questions about Adobe Experience Platform Web 
 
 # Frequently asked questions
 
-This FAQ includes questions that are often asked about the Adobe Web SDK/
+This FAQ includes questions that are often asked about the Adobe Web SDK.
 
 ## What is Adobe Experience Platform Web SDK?
 
@@ -99,7 +99,7 @@ The Adobe Experience Platform Web SDK has been developed for the following peopl
 
 ## How do I get access to start using the Adobe Experience Platform Web SDK?
 
-The Web SDK is currently available to the general public and can be used to send data to Adobe Experience Cloud products. The ability to send data to third party solutions is coming in the near future. If you would like to get access to the Web SDK contact your CSM to start the request process.
+The Web SDK is currently available to the general public and can be used to send data to Adobe Experience Cloud products. The ability to send data to third party solutions is coming in the near future. If you would like to get access to the Web SDK contact your Certified software manager (CSM) to start the request process.
 
 ## What use cases are currently supported by the Web SDK?
 

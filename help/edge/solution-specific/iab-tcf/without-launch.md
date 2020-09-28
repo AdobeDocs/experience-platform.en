@@ -23,13 +23,13 @@ Additionally, this guide requires you to have a working understanding of the Ado
 
 ## Enabling default consent
 
-If you want to treat all unknown users the same, you can set the default consent to "pending." This queues Experience Events until consent preferences are received.
+If you want to treat all unknown users the same, you can set the default consent to "pending". This queues Experience Events until consent preferences are received.
 
-For more information on default consent, refer to the [default consent section](../../fundamentals/configuring-the-sdk.md#default-consent) in the SDK configuration documentation.
+For more information on default consent, refer to the [default consent section](../../fundamentals/configuring-the-sdk.md#default-consent) in the Platform Web SDK configuration documentation.
 
 ### Setting the default consent based on `gdprApplies`
 
-Some CMPs provide the ability to determine whether General Data Protection Regulation (GDPR) applies to the customer. If you want to assume consent for those customers where GDPR does not apply, you can use the `gdprApplies` flag in the TCF API call. 
+Some CMPs provide the ability to determine whether General Data Protection Regulation (GDPR) applies to the customer. If you want to assume consent for customers where GDPR does not apply, you can use the `gdprApplies` flag in the TCF API call. 
 
 The following example shows one way to do this:
 

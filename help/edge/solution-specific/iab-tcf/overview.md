@@ -42,7 +42,7 @@ Adobe Audience Manager (AAM) also has support for IAB TCF 2.0 which enables you 
 
 ## Experience Events and Adobe Analytics integration
 
-Whereas the Real-time CDP and Audience Manager's audiences keep track of a customers current consent preferences, Experience Events can hold a customers consent preferences that were active when the event was collected.
+Whereas the Real-time CDP and Audience Manager's audiences keep track of a customer's current consent preferences, Experience Events can hold a customers consent preferences that were active when the event was collected.
 
 To collect consent information on events, the following is required:
 
@@ -61,15 +61,15 @@ The following sections below describe the main integration points between the IA
 
 ### Default consent
 
-Default consent is used when there is no consent preference already saved for a customer. This means the default consent options can control the behavior of the AEP Web SDK and change based on a customers region.
+Default consent is used when there is no consent preference already saved for a customer. This means the default consent options can control the behavior of the AEP Web SDK and change based on a customer's region.
 
-For example, if you have a customer that is not within the jurisdiction of General Data Protection Regulation (GDPR), the default consent could be set to "in," but inside the jurisdiction of GDPR, the default consent could be set to "pending." Your cloud management platform (CMP) may detect the customers region and provide the flag `gdprApplies` to the IAB TCF 2.0. This flag can be used to set the default consent.
+For example, if you have a customer that is not within the jurisdiction of General Data Protection Regulation (GDPR), the default consent could be set to "in," but inside the jurisdiction of GDPR, the default consent could be set to "pending." Your cloud management platform (CMP) may detect the customer's region and provide the flag `gdprApplies` to the IAB TCF 2.0. This flag can be used to set the default consent.
 
 For more information on default consent, refer to the [default consent section](../../fundamentals/configuring-the-sdk.md#default-consent) in the SDK configuration documentation.
 
 ### Setting consent when it changes
 
-The AEP Web SDK has a `setConsent` command, which communicates your customers consent preferences to all the Adobe services using IAB TCF 2.0. If you are integrating with Real-time CDP, this updates the your customers profile. If you are integrating with Audience Manager, this updates your customers information. Calling this also sets a cookie with an all-or-nothing consent preference that controls whether future Experience Events are allowed to be sent. It is intended that this action is called whenever consent changes. On future page loads, the Experience Edge consent cookie will be read to determine whether Experience Events can be sent, and whether an identity cookie can be set.
+The AEP Web SDK has a `setConsent` command, which communicates your customer's consent preferences to all the Adobe services using IAB TCF 2.0. If you are integrating with Real-time CDP, this updates your customer's profile. If you are integrating with Audience Manager, this updates your customer's information. Calling this also sets a cookie with an all-or-nothing consent preference that controls whether future Experience Events are allowed to be sent. It is intended that this action is called whenever consent changes. On future page loads, the Experience Edge consent cookie will be read to determine whether Experience Events can be sent, and whether an identity cookie can be set.
 
 Similar to Audience Manager's IAB TCF 2.0 integration, Experience Edge gives consent when a customer has provided their explicit consent to the following purposes:
 

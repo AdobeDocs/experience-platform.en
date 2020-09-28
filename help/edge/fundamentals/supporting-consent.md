@@ -90,7 +90,7 @@ alloy("setConsent", {
 });
 ```
 
-When the consent is set in this way, Real-time Customer Profile is updated with the consent information. For this to work, the profile XDM schema needs to contain the [Profile Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/context/profile-privacy.schema.md). When sending events, the IAB consent information needs to be added manually to the event xdm object. The SDK does not automatically include the consent information in the events. To send the consent information in events, the [Experience Event Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/context/experienceevent-privacy.schema.md) needs to be added to the experience event schema.
+When the consent is set in this way, Real-time Customer Profile is updated with the consent information. For this to work, the profile XDM schema needs to contain the [Profile Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/context/profile-privacy.schema.md). When sending events, the IAB consent information needs to be added manually to the event XDM object. The SDK does not automatically include the consent information in the events. To send the consent information in events, the [Experience Event Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/context/experienceevent-privacy.schema.md) needs to be added to the Experience Event schema.
 
 ## Sending both standards in one request
 
