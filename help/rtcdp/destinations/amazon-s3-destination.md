@@ -12,6 +12,12 @@ seo-description: Create a live outbound connection to your Amazon Web Services (
 
 Create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 storage to periodically export tab-delimited or CSV data files from Adobe Experience Platform into your own S3 buckets.
 
+## Export Type {#export-type}
+
+**Profile Export** - you are exporting all members of a segment, together with the desired fields from the profile schema (for example: email address, phone number, last name).
+
+![Amazon S3 profile-based export type](/help/rtcdp/destinations/assets/aws-export-type.png)
+
 ## Connect destination {#connect-destination}
 
 See [Cloud storage destinations workflow ](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)for instructions on how to connect to your cloud storage destinations, including [!DNL Amazon S3]. 

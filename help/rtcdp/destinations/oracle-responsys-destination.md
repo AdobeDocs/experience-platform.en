@@ -14,6 +14,10 @@ seo-description: Responsys is an enterprise email marketing tool for cross-chann
 
 To send segment data to [!DNL Oracle Responsys], you must first [connect to the destination](#connect-destination) in Adobe Real-time Customer Data Platform, and then [set up a data import](#import-data-into-responsys) from your storage location into [!DNL Oracle Responsys].
 
+## Export Type {#export-type}
+
+**Profile Export** - you are exporting all members of a segment, together with the desired fields from the profile schema (for example: email address, phone number, last name).
+
 ## Connect destination {#connect-destination}
 
 1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL Oracle Responsys], then select **[!UICONTROL Connect destination]**.

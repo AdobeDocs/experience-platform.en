@@ -12,7 +12,11 @@ seo-description: Create a live outbound connection to your SFTP Server to period
 
 Create a live outbound connection to your SFTP Server to periodically export delimited data files from Experience Platform.
 
-To export data, complete the following steps:
+## Export Type {#export-type}
+
+**Profile Export** - you are exporting all members of a segment, together with the desired fields from the profile schema (for example: email address, phone number, last name).
+
+![SFTP profile-based export type](/help/rtcdp/destinations/assets/sftp-export-type.png)
 
 ## Connect destination {#connect-destination}
 
