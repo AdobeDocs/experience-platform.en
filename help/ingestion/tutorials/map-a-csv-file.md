@@ -118,5 +118,3 @@ To learn more about mapping columns to XDM fields, read the guide on [using Data
 ## Next steps
 
 By following this tutorial, you have successfully mapped a flat CSV file to an XDM schema and ingested it into [!DNL Platform]. This data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile]. See the overview for [[!DNL Real-time Customer Profile]](../../profile/home.md) for more information.
-
-
