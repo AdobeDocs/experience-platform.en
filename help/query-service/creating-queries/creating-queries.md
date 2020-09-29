@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;query service;Query service;cr
 solution: Experience Platform
 title: Creating queries
 topic: queries
+type: Tutorial
 ---
 
 # Creating queries

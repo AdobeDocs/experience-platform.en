@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Real-time Customer Profile;Ide
 solution: Experience Platform
 title: Real-time Customer Profile tutorials
 topic: tutorial
+type: Tutorial
 description: This document outlines the steps involved and provides links to tutorials for completing each individual workflow.
 ---
 
