@@ -34,7 +34,7 @@ The Real-time Customer Profile API includes multiple endpoints. Profile allows y
 - [Export jobs (Profile export)](../profile/api/export-jobs.md) - Learn how to create, view, monitor, and cancel export jobs.
 - [Merge policies](../profile/api/merge-policies.md) - Learn about the components of merge policies as well as how to access, create, update, and delete a merge policy.
 - [Preview sample status (Profile preview)](../profile/api/preview-sample-status.md) - Learn how to view your last sample status, list profile distribution by dataset, and list profile distribution by namespace.
-- [Profile system jobs (Delete requests)](../profile/api/profile-system-job.md) - Learn how to view, create, and remove a delete request for a dataset or batch in the Profile Store.
+- [Profile system jobs (Delete requests)](../profile/api/profile-system-jobs.md) - Learn how to view, create, and remove a delete request for a dataset or batch in the Profile Store.
 
 To learn more and get the required values for performing CRUD operations with the Real-time Customer Profile API, visit the [getting started guide](../profile/api/getting-started.md).
 
