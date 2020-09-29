@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Enrich Real-time Customer Profile with machine learning insights
 topic: tutorial
 type: Tutorial
-description: This document provides a step-by-step tutorial to enrich Real-time Customer Profile with machine learning insights, steps are broken into the following sections, create an output schema/dataset, configure an output schema/dataset, and create segments using the Segment Builder.
+description: This document provides a step-by-step tutorial to enrich Real-time Customer Profile with machine-learning insights.
 ---
 
-# Enrich [!DNL Real-time Customer Profile] with machine learning insights
+# Enrich [!DNL Real-time Customer Profile] with machine-learning insights
 
 Adobe Experience Platform [!DNL Data Science Workspace] provides the tools and resources to create, evaluate, and utilize machine learning models to generate data predictions and insights. When machine learning insights are ingested into a [!DNL Profile]-enabled dataset, that same data is also ingested as [!DNL Profile] records which can then be segmented into subsets of related elements by using [!DNL Experience Platform Segmentation Service].
 
-This document provides a links to tutorials that enable you to enrich [!DNL Real-time Customer Profile] with your machine learning insights.
+This document provides links to tutorials that enable you to enrich [!DNL Real-time Customer Profile] with your machine-learning insights.
 
 ## Getting started
 
@@ -30,11 +30,11 @@ In addition to the above-mentioned documents, it is highly recommended that you 
 
 The first step towards enriching [!DNL Real-time Customer Profile] with scoring insights is knowing what real-world object (such as a person) your data defines. Having an understanding of your data enables you to describe and design a structure to add meaning, much like designing a relational database.
 
-Composing a schema begins by assigning a class. Classes define the behavioral aspects of the data the schema will contain (record or time-series). Use the following documentation to [create a schema using the Schema Editor](../../xdm/tutorials/create-schema-ui.md). Note that before you can enable a dataset for [!DNL Profile], you need to configure the dataset's schema to have a primary identity field and then enable the schema for [!DNL Profile]. When data is ingested into a [!DNL Profile]-enabled dataset, that same data is also ingested as [!DNL Profile] records. 
+Composing a schema begins by assigning a class. Classes define the behavioral aspects of the data the schema will contain (record or time-series). To start making your own schemas, follow the steps in the tutorial on [creating a schema using the Schema Editor](../../xdm/tutorials/create-schema-ui.md). Note that before you can enable a dataset for [!DNL Profile], you need to configure the dataset's schema to have a primary identity field and then enable the schema for [!DNL Profile]. When data is ingested into a [!DNL Profile]-enabled dataset, that same data is also ingested as [!DNL Profile] records. 
 
 If you prefer to compose a schema using the [!DNL Schema Registry] API instead, start by reading the [[!DNL Schema Registry] developer guide](../../xdm/api/getting-started.md) before attempting the tutorial on [creating a schema using the API](../../xdm/tutorials/create-schema-api.md).
 
-Once your schema and dataset is prepared, generate and ingest scoring data to the dataset by performing scoring runs using an appropriate model.
+Once your schema and dataset are prepared, you can generate and ingest scoring data to the dataset by performing scoring runs using an appropriate model.
 
 ## Create segments using the Segment Builder {#create-segments-using-the-segment-builder}
 
@@ -50,6 +50,6 @@ The [!DNL Segment Builder] provides a rich workspace that allows you to interact
 
 ## Next steps {#next-steps}
 
-To learn more about segments and the [!DNL Segment Builder], read the [Segmentation service overview](../../segmentation/home.md).
+To learn more about segments and the [!DNL Segment Builder], read the [Segmentation Service overview](../../segmentation/home.md).
 
-To learn more about [!DNL Real-time Customer Profile], read the [Real-time Customer Profile Overview](../../profile/home.md)
+To learn more about [!DNL Real-time Customer Profile], read the [Real-time Customer Profile overview](../../profile/home.md)
