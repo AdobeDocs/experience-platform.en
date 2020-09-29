@@ -105,10 +105,18 @@ The mapping screen reappears with your newly created source field. Apply the app
 
 Once your CSV file is mapped and created, you can monitor the data that is being ingested through it. For more information on monitoring dataflows, see the tutorial on [monitoring streaming dataflows](../../ingestion/quality/monitor-data-flows.md).
 
+## Using mapping functions
+
+To use a function, type it in under **[!UICONTROL Source Field]** with appropriate syntax and inputs.
+
+For example, to concatenate **city** and **country** CSV fields and assign them to the **city** XDM field, set the source field as `concat(city, ", ", county)`.
+
+![](../images/tutorials/map-a-csv-file/mapping-function.png)
+
+To learn more about mapping columns to XDM fields, read the guide on [using Data Prep (Mapper) functions](../../data-prep/functions.md).
+
 ## Next steps
 
 By following this tutorial, you have successfully mapped a flat CSV file to an XDM schema and ingested it into [!DNL Platform]. This data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile]. See the overview for [[!DNL Real-time Customer Profile]](../../profile/home.md) for more information.
-
-To learn more about mapping columns to XDM fields, read the guide on [using Data Prep (Mapper) functions](../../data-prep/functions.md).
 
 
