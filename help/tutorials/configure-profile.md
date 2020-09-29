@@ -25,7 +25,7 @@ To learn more, visit the [Real-time Customer Profile user guide](../profile/ui/u
 
 ## Real-time Customer Profile API
 
-The Real-time Customer Profile API includes multiple endpoints. Profile allows you to consolidate disparate customer data from multiple channels, such as online, offline, CRM, and third party data, into a unified view offering an actionable, timestamped account of every customer interaction.
+The Real-time Customer Profile API includes multiple endpoints. Profile allows you to consolidate disparate customer data from multiple channels, such as online, offline, CRM, and third party data, into a unified view offering an actionable, timestamped account of every customer interaction. Please read the [Real-time Customer Profile API overview](../profile/api/overview.md) for more information on each of the available endpoints and their use cases.
 
 **The following API developer guides are available:**
 - [Computed attributes (alpha) ](../profile/api/computed-attributes.md) - Learn about the use cases for computed attributes as well as, how to configure, access, update, and delete a computed attribute.
