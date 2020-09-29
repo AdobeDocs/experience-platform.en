@@ -29,7 +29,12 @@ The Real-time Customer Profile API includes multiple endpoints. Profile allows y
 
 **The following API developer guides are available:**
 - [Computed attributes (alpha) ](../profile/api/computed-attributes.md) - Learn about the use cases for computed attributes as well as, how to configure, access, update, and delete a computed attribute.
-
+- [Edge projections](../profile/api/edge-projections.md) - Learn how to create, view, update, delete, and list projection destinations. Additionally this document contains information on listing and creating projection configurations and provides examples for using Selectors.
+- [Entities (Profile access)](../profile/api/entities.md) - Learn how to access profile data by identity or a list of identities. Additionally, learn how to access time series events for multiple profiles using identities, a single profile by identity, and access multiple schema entities.
+- [Export jobs (Profile export)](../profile/api/export-jobs.md) - Learn how to create, view, monitor, and cancel export jobs.
+- [Merge policies](../profile/api/merge-policies.md) - Learn about the components of merge policies as well as how to access, create, update, and delete a merge policy.
+- [Preview sample status (Profile preview)](../profile/api/preview-sample-status.md) - Learn how to view your last sample status, list profile distribution by dataset, and list profile distribution by namespace.
+- [Profile system jobs (Delete requests)](../profile/api/profile-system-job.md) - Learn how to view, create, and remove a delete request for a dataset or batch in the Profile Store.
 
 To learn more and get the required values for performing CRUD operations with the Real-time Customer Profile API, visit the [getting started guide](../profile/api/getting-started.md).
 
