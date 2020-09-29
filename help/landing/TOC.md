@@ -41,5 +41,6 @@ user-guide-description: Centralize and standardize customer data and content and
 * [Release notes](https://docs.adobe.com/content/help/en/experience-platform/release-notes/latest.html)
 * [Glossary](glossary.md)
 * [Troubleshooting guide](troubleshooting.md)
+* [ADLS Gen2 Migration](adls2-gen2-migration.md)
 * [API fundamentals](api-fundamentals.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)

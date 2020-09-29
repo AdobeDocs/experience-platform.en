@@ -2,8 +2,9 @@
 keywords: Experience Platform;machine learning model;Data Science Workspace;Real-time Customer Profile;popular topics;machine learning insights
 solution: Experience Platform
 title: Enrich Real-time Customer Profile with machine learning insights
-topic: Tutorial
-description: This document provides a step-by-step tutorial to enrich Real-time Customer Profile with machine learning insights.
+topic: tutorial
+type: Tutorial
+description: This document provides a step-by-step tutorial to enrich Real-time Customer Profile with machine learning insights, steps are broken into the following sections, create an output schema/dataset, configure an output schema/dataset, and create segments using the Segment Builder.
 ---
 
 # Enrich [!DNL Real-time Customer Profile] with machine learning insights
