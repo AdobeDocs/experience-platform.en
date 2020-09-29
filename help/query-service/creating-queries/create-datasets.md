@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;query service;Query service;ge
 solution: Experience Platform
 title: Generate datasets from query results
 topic: queries
+type: Tutorial
 ---
 
 # Generate datasets from query results

@@ -2,6 +2,7 @@
 keywords: cloud storage destination;cloud storage
 title: Cloud storage destinations workflow
 seo-title: Cloud storage destinations workflow
+type: Tutorial
 description: Instructions to connect to your cloud storage locations
 seo-description: Instructions to connect to your cloud storage locations
 ---

@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Azure Data Lake Storage Gen2;A
 solution: Experience Platform
 title: Create an Azure Data Lake Storage Gen2 source connector in the UI
 topic: overview
+type: Tutorial
 description: This tutorial provides steps for authenticating an Azure Data Lake Storage Gen2 (hereinafter referred to as "ADLS Gen2") source connector using the Platform user interface.
 ---
 

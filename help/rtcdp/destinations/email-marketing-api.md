@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Create email marketing destinations
 topic: tutorial
+type: Tutorial
 ---
 
 # Create email marketing destinations and activate data using API calls in Adobe's [!DNL Real-time Customer Data Platform]
@@ -419,7 +420,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --data-raw '{
     "name": "TargetConnection for Adobe Campaign",
     "description": "Connection to Adobe Campaign",
-    "baseConnection": "{BASE_CONNECTION_ID}",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
     "connectionSpec": {
         "id": "{CONNECTION_SPEC_ID}",
         "version": "1.0"
