@@ -32,6 +32,10 @@ By using streaming destinations such as [!DNL Amazon Kinesis], you can easily fe
 
 For example, a prospect downloaded a white-paper which qualifies them into a "high-propensity to convert" segment. By mapping the segment that the prospect falls in to the [!DNL Amazon Kinesis] destination, you would receive this event in [!DNL Amazon Kinesis]. There, you can employ a do-it-yourself approach and describe business logic on top of the event, as you think would work best with your enterprise IT systems.
 
+## Export Type {#export-type}
+
+**Profile Export** - you are exporting all members of a segment, together with the desired fields from the profile schema (for example: email address, phone number, last name).
+
 ## Connect destination {#connect-destination}
 
 See [Cloud storage destinations workflow ](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)for instructions on how to connect to your cloud storage destinations, including those supported by [!DNL Amazon]. 
