@@ -3,9 +3,8 @@ keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv f
 solution: Experience Platform
 title: Mapping functions
 topic: overview
-description: This document introduces the three main ways in which data is ingested into Platform, with links to their respective overview documentation for more detailed information.
+description: This document introduces the mapping functions used with Experience Platform Data Prep.
 ---
-
 
 # Mapping functions
 
