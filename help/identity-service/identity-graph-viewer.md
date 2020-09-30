@@ -41,3 +41,7 @@ Select an identity to updated the highlighted item on the **[!UICONTROL Identity
 Select **[!UICONTROL Data source]** from the header to see more information on regarding the batch. Alternatively, you can select any of the links that connect identities together to see their corresponding batch IDs.
 
 ![](./images/identity-graph-viewer/identity-graph-view.png)
+
+The **[!UICONTROL Data source]** screen displays a list of batch IDs linked to the identities within the identity graph.
+
+![](./images/identity-graph-viewer/select-edge.png)
