@@ -1,14 +1,14 @@
 ---
 keywords: streaming;
-title: Custom HTTP Destination
-seo-title: Custom HTTP Destination
-description: 
-seo-description:
+title: The Custom HTTP destination is an Adobe Real-Time Customer Data Platform streaming destination that helps you send profile data to third-party HTTP endpoints.
+seo-title: The Custom HTTP destination is an Adobe Real-Time Customer Data Platform streaming destination that helps you send profile data to third-party HTTP endpoints.
+description: The Custom HTTP destination is an Adobe Real-Time Customer Data Platform streaming destination that helps you send profile data to third-party HTTP endpoints.
+seo-description: The Custom HTTP destination is an Adobe Real-Time Customer Data Platform streaming destination that helps you send profile data to third-party HTTP endpoints.
 ---
 
 # Custom HTTP Destination (Beta)
 
-## Overview
+## Overview {#overview}
 
 The [!DNL Custom HTTP] destination is an [!DNL Adobe Real-Time Customer Data Platform] streaming destination that helps you send profile data to third-party [!DNL HTTP] endpoints.
 
