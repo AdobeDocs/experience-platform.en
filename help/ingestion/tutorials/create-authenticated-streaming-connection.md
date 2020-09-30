@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Create an authenticated streaming connection
 topic: tutorial
 type: Tutorial
+description: Authenticated Data Collection allows Adobe Experience Platform services, such as Real-time Customer Profile and Identity, to differentiate between records coming from trusted sources and un-trusted sources.
 ---
 
 # Creating an authenticated streaming connection

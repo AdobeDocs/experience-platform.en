@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Ingest data into Adobe Experience Platform
 topic: tutorial
 type: Tutorial
+description: Adobe Experience Platform allows you to easily import data as batch files in the form of parquet files or data that conforms to a known Experience Data Model (XDM) schema.
 ---
 
 # Ingest data into Adobe Experience Platform

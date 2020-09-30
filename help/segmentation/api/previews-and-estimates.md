@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Previews and estimates endpoints
 topic: developer guide
+description: As you develop your segment definition, you can use the estimate and preview tools within Adobe Experience Platform to view summary-level information to help ensure you are isolating the expected audience.
 ---
 
 # Previews and estimates endpoints

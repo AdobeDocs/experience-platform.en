@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Query service;query service;co
 solution: Experience Platform
 title: Connect clients to Query Service
 topic: connect
+description: This document explains how to connect to Query Service from a variety of desktop client applications, and how to verify those connections.
 ---
 
 # Connect clients to [!DNL Query Service]
