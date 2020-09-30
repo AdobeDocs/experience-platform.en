@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv f
 solution: Experience Platform
 title: Mapping functions
 topic: overview
-description: This document introduces the mapping functions used with Experience Platform Data Prep.
+description: This document introduces the mapping functions used with Data Prep.
 ---
 
 # Mapping functions
@@ -16,7 +16,7 @@ A field name can be any legal identifier - an unlimited-length sequence of Unico
 
 If a field name does not follow this convention, the field name must be wrapped with `${}`. So, for example, if the field name is "First Name" or "First.Name", then the name must be wrapped like `${First Name}` or `${First.Name}` respectively.
 
-Additionally, field names named **any** of the following reserved keywords must be wrapped with `${}`:
+Additionally, field names is **any** of the following reserved keywords, it must be wrapped with `${}`:
 
 ```console
 new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return

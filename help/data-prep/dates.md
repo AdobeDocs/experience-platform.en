@@ -3,16 +3,16 @@ keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv f
 solution: Experience Platform
 title: Date functions
 topic: overview
-description: This document introduces the date functions used with Experience Platform Data Prep.
+description: This document introduces the date functions used with Data Prep.
 ---
 
 # Date functions
 
-Adobe Experience Platform Data Prep supports date functions, both as strings and as datetime objects.
+Data Prep supports date functions, both as strings and as datetime objects.
 
 ## Date function conversions
 
-When string fields from incoming data are mapped to date fields in XDM, the date format should be explicitly mentioned. If not explicitly mentioned, Data Prep will attempt to convert the input data by matching it to the following formats. Once a matching format is found, it wil stop evaluating any subsequent formats.
+When string fields from incoming data are mapped to date fields in schemas using Experience Data Model (XDM), the date format should be explicitly mentioned. If not explicitly mentioned, Data Prep will attempt to convert the input data by matching it to the following formats. Once a matching format is found, it wil stop evaluating any subsequent formats.
 
 ```console
 "yyyy-MM-dd HH:mm:ssZ",
