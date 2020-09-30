@@ -34,7 +34,7 @@ For example, a prospect downloaded a white-paper which qualifies them into a "hi
 
 ## Export Type {#export-type}
 
-**Profile Export** - you are exporting all members of a segment, together with the desired fields from the profile schema (for example: email address, phone number, last name).
+**Profile Export** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [destination activation workflow](/help/rtcdp/destinations/activate-destinations.md#select-attributes).
 
 ## Connect destination {#connect-destination}
 

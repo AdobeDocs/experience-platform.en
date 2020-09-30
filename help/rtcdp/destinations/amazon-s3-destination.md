@@ -14,7 +14,7 @@ Create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 st
 
 ## Export Type {#export-type}
 
-**Profile Export** - you are exporting all members of a segment, together with the desired fields from the profile schema (for example: email address, phone number, last name).
+**Profile Export** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [destination activation workflow](/help/rtcdp/destinations/activate-destinations.md#select-attributes).
 
 ![Amazon S3 profile-based export type](/help/rtcdp/destinations/assets/aws-export-type.png)
 
@@ -32,7 +32,7 @@ For [!DNL Amazon S3] destinations, enter the following information in the create
 
 ## Exported data {#exported-data}
 
-For [!DNL Amazon S3] destinations, Adobe Real-time CDP creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](/help/rtcdp/destinations/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial. 
+For [!DNL Amazon S3] destinations, Adobe Real-time CDP creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](/help/rtcdp/destinations/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial.
 
 <!--
 
