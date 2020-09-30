@@ -15,15 +15,15 @@ This guide uses the `__tcfapi` interface for accessing the consent information. 
 
 >[!NOTE]
 >
->These examples assume that by the time the code is run, `window.__tcfapi` is defined on the page. CMPs may provide a hook where you could run these functions when the `__tcfapi` object is ready.
+>These examples assume that by the time the code is run, `window.__tcfapi` is defined on the page. CMPs can provide a hook where you could run these functions when the `__tcfapi` object is ready.
 
-In order to utilized IAB TCF 2.0 with Experience Platform Launch and the AEP Web SDK extension, you need to have an XDM schema available. If you have not set either of these up, start by viewing the [Adobe Experience Platform Web SDK JavaScript quick start guide](../../getting-started/quick-start-without-launch.md) before proceeding.
+To use IAB TCF 2.0 with Experience Platform Launch and the AEP Web SDK extension, you need to have an XDM schema available. If you have not set either of these up, start by viewing the [Adobe Experience Platform Web SDK JavaScript quick start guide](../../getting-started/quick-start-without-launch.md) before proceeding.
 
 Additionally, this guide requires you to have a working understanding of the Adobe Experience Platform Web SDK. For a quick refresher, please read the [Adobe Experience Platform Web SDK overview](../../home.md) and the [Frequently asked questions](../../getting-started/web-sdk-faq.md) documentation.
 
 ## Enabling default consent
 
-If you want to treat all unknown users the same, you can set the default consent to "pending". This queues Experience Events until consent preferences are received.
+If you want to treat all unknown users the same, you can set the default consent to "pending." This queues Experience Events until consent preferences are received.
 
 For more information on default consent, refer to the [default consent section](../../fundamentals/configuring-the-sdk.md#default-consent) in the Platform Web SDK configuration documentation.
 
