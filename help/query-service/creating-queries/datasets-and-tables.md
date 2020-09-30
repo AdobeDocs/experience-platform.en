@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Datasets vs tables and schemas
 topic: queries
 type: Tutorial
+description: This document contains information on viewing your datasets within the dataset schema structure and using PostgreSQL commands.
 ---
 
 # Datasets vs tables and schemas

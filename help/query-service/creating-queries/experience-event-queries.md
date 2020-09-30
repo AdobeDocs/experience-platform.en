@@ -4,6 +4,7 @@ solution: Experience Platform
 title: ExperienceEvent queries
 topic: queries
 type: Tutorial
+description: The following document provides examples of queries involving ExperienceEvents.
 ---
 
 # [!DNL ExperienceEvent] queries
