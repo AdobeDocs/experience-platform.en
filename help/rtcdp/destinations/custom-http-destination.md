@@ -43,7 +43,7 @@ To send profile data to custom [!DNL HTTP] endpoints, you must first connect to 
     
     ![HTTP authentication](assets/authentication-http-connection.png)
 
-6. Select a marketing use case for this destination. This information is required per the [Data Governance](rtcdp/privacy/data-governance-overview.md) regulations.
+6. Select a marketing use case for this destination. This information is required per the [Data Governance](../privacy/data-governance-overview.md) regulations.
 7. Click **[!UICONTROL Create destination]**.
 
 ## Activate Segments
@@ -52,5 +52,5 @@ See [Activate profiles and segments to a destination](/help/rtcdp/destinations/a
 
 ## Destination Attributes
 
-When [activating segments](/help/rtcdp/destinations/activate-destinations.md) to a [!DNL custom HTTP] destination, we recommend that you select a unique identifier from your [union schema](../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination.
+When [activating segments](activate-destinations.md) to a [!DNL custom HTTP] destination, we recommend that you select a unique identifier from your [union schema](../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination.
 
