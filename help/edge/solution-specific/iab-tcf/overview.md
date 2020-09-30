@@ -26,7 +26,7 @@ In order to implement the AEP Web SDK with IAB TCF 2.0, it is required that you 
 Built on Adobe Experience Platform, Adobe Real-time Customer Data Platform (Real-time CDP) helps you bring together known and anonymous data from multiple enterprise sources. This allows you to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real time. To send consent data to Real-time CDP through the AEP Web SDK, the following is required:
 
 - A dataset based on the [!DNL XDM Individual Profile] class, enabled for use in [!DNL Real-time Customer Profile], with the Profile privacy mixin.
-- An edge configuration setup with Real-time CDP, and the profile dataset mentioned above.
+- An edge configuration set up with Real-time CDP, and the profile dataset mentioned above.
 
 Please refer to the tutorial on [creating datasets for capturing TCF 2.0 consent](../../../rtcdp/privacy/iab/dataset-preparation.md) for how to create the required dataset. 
 
@@ -34,7 +34,7 @@ Refer to the [IAB TCF 2.0 compliance overview](../../../rtcdp/privacy/privacy-ov
 
 ## Audience Manager integration
 
-Adobe Audience Manager (AAM) also has support for IAB TCF 2.0 which enables you to evaluate, honor, and forward customer privacy choices to downstream partners. For more information, read the documentation on [Sending Data to Audience Manager](../audience-manager/audience-manager-overview.md).
+Adobe Audience Manager (AAM) includes support for IAB TCF 2.0, which enables you to evaluate, honor, and forward customer privacy choices to downstream partners. For more information, read the documentation on [Sending Data to Audience Manager](../audience-manager/audience-manager-overview.md).
 
 >[!TIP]
 >
@@ -42,7 +42,7 @@ Adobe Audience Manager (AAM) also has support for IAB TCF 2.0 which enables you 
 
 ## Experience Events and Adobe Analytics integration
 
-Whereas the Real-time CDP and Audience Manager's audiences keep track of a customer's current consent preferences, Experience Events can hold a customers consent preferences that were active when the event was collected.
+Whereas the Real-time CDP and Audience Manager's audiences keep track of a customer's current consent preferences, Experience Events can hold a customer's consent preferences that were active when the event was collected.
 
 To collect consent information on events, the following is required:
 
@@ -53,7 +53,7 @@ For more information on how to convert an XDM Experience Event to an Analytics h
 
 ## AEP Web SDK integration
 
-The following sections below describe the main integration points between the IAB TCF 2.0 and the AEP Web SDK.
+The sections below describe the main integration points between the IAB TCF 2.0 and the AEP Web SDK.
 
 >[!NOTE]
 >
@@ -63,7 +63,7 @@ The following sections below describe the main integration points between the IA
 
 Default consent is used when there is no consent preference already saved for a customer. This means the default consent options can control the behavior of the AEP Web SDK and change based on a customer's region.
 
-For example, if you have a customer that is not within the jurisdiction of General Data Protection Regulation (GDPR), the default consent could be set to "in," but inside the jurisdiction of GDPR, the default consent could be set to "pending." Your cloud management platform (CMP) may detect the customer's region and provide the flag `gdprApplies` to the IAB TCF 2.0. This flag can be used to set the default consent.
+For example, if you have a customer that is not within the jurisdiction of General Data Protection Regulation (GDPR), the default consent could be set to "in," but inside the jurisdiction of GDPR, the default consent could be set to "pending." Your cloud management platform (CMP) might detect the customer's region and provide the flag `gdprApplies` to the IAB TCF 2.0. This flag can be used to set the default consent.
 
 For more information on default consent, refer to the [default consent section](../../fundamentals/configuring-the-sdk.md#default-consent) in the SDK configuration documentation.
 
