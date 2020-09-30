@@ -32,10 +32,10 @@ To get started, follow the [Data Access API tutorial](../data-access/tutorials/d
 The Secure Python Data Access SDK is a software development kit that enables reading and writing of datasets from Experience Platform using Python.
 
 **This guide will help you:**
-- Setup your environment and install the correct packages.
+- Set up your environment and install the correct packages.
 - Read from a dataset.
 - Write to a dataset.
-- Read and Write to a Userspace directory.
+- Read and write to a userspace directory.
 
 To get started, view the [Python Data Access SDK documentation](../data-access/tutorials/python-sdk.md).
 
@@ -44,7 +44,7 @@ To get started, view the [Python Data Access SDK documentation](../data-access/t
 The Secure Spark Data Access SDK is a software development kit that enables reading and writing of datasets from Adobe Experience Platform using Spark.
 
 **This guide will help you:**
-- Setup your environment and install the correct packages.
+- Set up your environment and install the correct packages.
 - Read from a dataset.
 - Write to a dataset.
 
