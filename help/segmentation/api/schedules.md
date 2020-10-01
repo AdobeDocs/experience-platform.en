@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Schedules
 topic: developer guide
+description: Schedules are a tool that can be used to automatically run batch segmentation jobs once a day.
 ---
 
 # Schedules endpoint
