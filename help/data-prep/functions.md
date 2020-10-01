@@ -30,6 +30,10 @@ The following tables list all supported mapping functions, including sample expr
 
 ### String functions
 
+>[!NOTE]
+>
+>Please scroll left/right to view the full contents of the table.
+
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | concat | Concatenates the given strings. | <ul><li>STRING: The strings that will be concatenated.</li></ul> | concat(STRING_1, STRING_2) | concat("Hi, ", "there", "!") | `"Hi, there!"` |
@@ -53,15 +57,23 @@ The following tables list all supported mapping functions, including sample expr
 
 ### Hashing functions
 
+>[!NOTE]
+>
+>Please scroll left/right to view the full contents of the table.
+
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| sha1 | Takes an input and produces a hash value using Secure Hash Algorithm 1 (SHA-1). | <ul><li>INPUT: **Required** The plain text to be hashed.</li><li>CHARSET: *Optional* The name of the character set. Possible values include UTF-8, UTF-16, ISO-8859-1, and US-ASCII.</li></ul> | sha1(INPUT, CHARSET) | sha1("my text", "UTF-8") | c3599c11e47719df18a2448690840c5dfcce3c80 |
-| sha256 | Takes an input and produces a hash value using Secure Hash Algorithm 256 (SHA-256). | <ul><li>INPUT: **Required** The plain text to be hashed.</li><li>CHARSET: *Optional* The name of the character set. Possible values include UTF-8, UTF-16, ISO-8859-1, and US-ASCII.</li></ul> | sha256(INPUT, CHARSET) | sha256("my text", "UTF-8") | 7330d2b39ca35eaf4cb95fc846c21ee6a39af698154a83a586ee270a0d372104 |
-| sha512 | Takes an input and produces a hash value using Secure Hash Algorithm 512 (SHA-512). | <ul><li>INPUT: **Required** The plain text to be hashed.</li><li>CHARSET: *Optional* The name of the character set. Possible values include UTF-8, UTF-16, ISO-8859-1, and US-ASCII.</li></ul> | sha512(INPUT, CHARSET) | sha512("my text", "UTF-8") | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef708bf11b4232bb21d2a8704ada2cdcd7b367dd0788a89a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
-| md5 | Takes an input and produces a hash value using MD5. | <ul><li>INPUT: **Required** The plain text to be hashed.</li><li>CHARSET: *Optional* The name of the character set. Possible values include UTF-8, UTF-16, ISO-8859-1, and US-ASCII. </li></ul>| md5(INPUT, CHARSET) | md5("my text", "UTF-8") | d3b96ce8c9fb4e9bd0198d03ba6852c7 |
+| sha1 | Takes an input and produces a hash value using Secure Hash Algorithm 1 (SHA-1). | <ul><li>INPUT: **Required** The plain text to be hashed.</li><li>CHARSET: *Optional* The name of the character set. Possible values include UTF-8, UTF-16, ISO-8859-1, and US-ASCII.</li></ul> | sha1(INPUT, CHARSET) | sha1("my text", "UTF-8") | c3599c11e47719df18a24​48690840c5dfcce3c80 |
+| sha256 | Takes an input and produces a hash value using Secure Hash Algorithm 256 (SHA-256). | <ul><li>INPUT: **Required** The plain text to be hashed.</li><li>CHARSET: *Optional* The name of the character set. Possible values include UTF-8, UTF-16, ISO-8859-1, and US-ASCII.</li></ul> | sha256(INPUT, CHARSET) | sha256("my text", "UTF-8") | 7330d2b39ca35eaf4cb95fc846c21​ee6a39af698154a83a586ee270a0d372104 |
+| sha512 | Takes an input and produces a hash value using Secure Hash Algorithm 512 (SHA-512). | <ul><li>INPUT: **Required** The plain text to be hashed.</li><li>CHARSET: *Optional* The name of the character set. Possible values include UTF-8, UTF-16, ISO-8859-1, and US-ASCII.</li></ul> | sha512(INPUT, CHARSET) | sha512("my text", "UTF-8") | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef​708bf11b4232bb21d2a8704ada2cdcd7b367dd0788a89​a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
+| md5 | Takes an input and produces a hash value using MD5. | <ul><li>INPUT: **Required** The plain text to be hashed.</li><li>CHARSET: *Optional* The name of the character set. Possible values include UTF-8, UTF-16, ISO-8859-1, and US-ASCII. </li></ul>| md5(INPUT, CHARSET) | md5("my text", "UTF-8") | d3b96ce8c9fb4​e9bd0198d03ba6852c7 |
 | crc32 | Takes an input uses a cyclic redundancy check (CRC) algorithm to produce a 32-bit cyclic code. | <ul><li>INPUT: **Required** The plain text to be hashed.</li><li>CHARSET: *Optional* The name of the character set. Possible values include UTF-8, UTF-16, ISO-8859-1, and US-ASCII.</li></ul> | crc32(INPUT, CHARSET) | crc32("my text", "UTF-8") | 8df92e80 |
 
 ### URL functions
+
+>[!NOTE]
+>
+>Please scroll left/right to view the full contents of the table.
 
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -72,6 +84,10 @@ The following tables list all supported mapping functions, including sample expr
 | get_url_query_str | Returns the query string of a given URL. | <ul><li>URL: **Required** The URL that you are trying to get the query string from.</li><li>ANCHOR: **Required** Determines what will be done with the anchor in the query string. Can be one of three values: "retain", "remove", or "append".<br><br>If the value is "retain", the anchor will be attached to the returned value.<br>If the value is "remove", the anchor will be removed from the returned value.<br>If the value is "append", the anchor will be returned as a separate value.</li></ul> | get_url_query_str(URL, ANCHOR) | get_url_query_str("foo://example.com:8042/over/there?name=ferret#nose", "retain")<br>get_url_query_str("foo://example.com:8042/over/there?name=ferret#nose", "remove")<br>get_url_query_str("foo://example.com:8042/over/there?name=ferret#nose", "append") | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 
 ### Date and time functions
+
+>[!NOTE]
+>
+>Please scroll left/right to view the full contents of the table.
 
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -90,6 +106,10 @@ The following tables list all supported mapping functions, including sample expr
 
 ### Hierarchies - Objects
 
+>[!NOTE]
+>
+>Please scroll left/right to view the full contents of the table.
+
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | size_of | Returns the size of the input. | <ul><li>INPUT: **Required** The object that you're trying to find the size of.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
@@ -101,6 +121,10 @@ The following tables list all supported mapping functions, including sample expr
 
 ### Hierarchies - Arrays
 
+>[!NOTE]
+>
+>Please scroll left/right to view the full contents of the table.
+
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | coalesce | Returns the first non-null object in a given array. | <ul><li>INPUT: **Required** The array you want to find the first non-null object of.</li></ul> | coalesce(INPUT) | coalesce(null, null, null, "first", null, "second") | "first" |
@@ -110,12 +134,20 @@ The following tables list all supported mapping functions, including sample expr
 
 ### Logical operators
 
+>[!NOTE]
+>
+>Please scroll left/right to view the full contents of the table.
+
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | decode | Given a key and a list of key value pairs flattened as an array, the function returns the value if key is found or return a default value if present in the array. | <ul><li>KEY: **Required** The key to be matched.</li><li>OPTIONS: **Required** A flattened array of key/value pairs. Optionally, a default value can be put at the end.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, "ca", "California", "pa", "Pennsylvania", "N/A") | If the stateCode given is "ca", "California".<br>If the stateCode given is "pa", "Pennsylvania".<br>If the stateCode doesn't match the following, "N/A". |
 | iif | Evaluates a given boolean expression and returns the specified value based on the result. | <ul><li>BOOLEAN_EXPRESSION: **Required** The boolean expression that is being evaluated.</li><li>TRUE_VALUE: **Required** The value that is returned if the expression evaluates to true.</li><li>FALSE_VALUE: **Required** The value that is returned if the expression evaluates to false.</li></ul> | iif(BOOLEAN_EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif("s".equalsIgnoreCase("S"), "True", "False") | "True" |
 
-### Aggregation 
+### Aggregation
+
+>[!NOTE]
+>
+>Please scroll left/right to view the full contents of the table.
 
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -123,6 +155,10 @@ The following tables list all supported mapping functions, including sample expr
 | max | Returns the maximum of the given arguments. Uses natural ordering. | <ul><li>OPTIONS: **Required** One or more objects that can be compared to each other.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
 ### Type conversions
+
+>[!NOTE]
+>
+>Please scroll left/right to view the full contents of the table.
 
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -133,17 +169,29 @@ The following tables list all supported mapping functions, including sample expr
 
 ### JSON functions
 
+>[!NOTE]
+>
+>Please scroll left/right to view the full contents of the table.
+
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | json_to_object | Deserialize JSON content from the given string. | <ul><li>STRING: **Required** The JSON string to be deserialized.</li></ul> | json_to_object(STRING) | json_to_object({"info":{"firstName":"John","lastName" : "Doe"}}) | An object representing the JSON. |
 
 ### Special operations
 
+>[!NOTE]
+>
+>Please scroll left/right to view the full contents of the table.
+
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | Generates a pseudo-random ID. | | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 
 ### User agent functions
+
+>[!NOTE]
+>
+>Please scroll left/right to view the full contents of the table.
 
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
