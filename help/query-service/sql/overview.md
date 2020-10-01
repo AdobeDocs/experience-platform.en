@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;query service;Query service;sq
 solution: Experience Platform
 title: SQL reference
 topic: reference
+description: Query Service provides the ability to use standard ANSI SQL for SELECT statements and other limited commands.
 ---
 
 # SQL reference
