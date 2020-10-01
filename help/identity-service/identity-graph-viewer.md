@@ -36,7 +36,7 @@ Once you have selected a namespace, enter its corresponding value in the **[!UIC
 
 ![](./images/identity-graph-viewer/identity-value.png)
 
-The identity graph viewer appears. On the left side of the screen is a force-directed identity graph displaying all of the identities linked to the namespace you selected and how they are stitched together. You can hover over an identity to see information about its value. This information is also displayed in a tabled list in the center of the screen.
+The identity graph viewer appears. On the left side of the screen is a force-directed graph displaying all of the identities linked to the namespace you selected and how they are stitched together. You can hover over an identity to see information about its value. This information is also displayed in a tabled list in the center of the screen.
 
 Select an identity to update the highlighted row on the **[!UICONTROL Identity types]** table and to update the information provided on the right rail, which includes an identity's **[!UICONTROL Value]**, **[!UICONTROL Batch Id]**, and its **[!UICONTROL Last updated]** date.
 
