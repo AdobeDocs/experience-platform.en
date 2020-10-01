@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;data access;python sdk;data access api
+keywords: Experience Platform;home;popular topics;data access;python sdk;data access api;read python;write python
 solution: Experience Platform
 title: Accessing Python data
 topic: tutorial
