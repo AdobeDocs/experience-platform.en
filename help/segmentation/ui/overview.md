@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Segmentation Service;segmentat
 solution: Experience Platform
 title: Segmentation Service user guide
 topic: ui guide
+description: Adobe Experience Platform Segmentation Service provides a user interface for creating and managing segment definitions.
 ---
 
 # [!UICONTROL Segmentation Service] user guide

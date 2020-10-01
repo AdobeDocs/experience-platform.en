@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Adobe-defined functions
 topic: queries
 type: Tutorial
+description: This document covers Adobe-defined functions (ADFs) to support three key Analytics activities sessionization, attribution, and pathing.
 ---
 
 # Using Adobe-defined functions
