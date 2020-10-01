@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;query service;Query service;Po
 solution: Experience Platform
 title: Connect with Power BI
 topic: connect
+description: This document walks through the steps for connecting Power BI with Adobe Experience Platform Query Service.
 ---
 
 # Connect with [!DNL Power BI] (PC)

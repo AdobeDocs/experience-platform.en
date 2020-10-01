@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Aggregation functions
 topic: developer guide
+description: Aggregation functions are used to group together multiple values within Profile Query Language (PQL) arrays to form a single summary value. 
 ---
 
 # Aggregation functions
