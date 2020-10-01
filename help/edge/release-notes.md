@@ -8,6 +8,11 @@ keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release not
 
 # Release Notes
 
+## Version 2.2.0
+
+* Bug Fix: The Opt-in object was blocking Alloy from making calls when `idMigrationEnabled` is `true`.
+* Bug Fix: Make Alloy aware of requests that should return personalization offers to prevent a flickering issue.
+
 ## Version 2.1.0
 
 * Remove the `syncIdentity` command and support passing those IDs in the `sendEvent` command.

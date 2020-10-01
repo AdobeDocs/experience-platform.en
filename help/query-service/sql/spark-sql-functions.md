@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;query service;Query service;sp
 solution: Experience Platform
 title: Spark SQL functions
 topic: spark sql functions
+description: This documentation contains information on Spark SQL helpers which provide built-in Spark SQL functions to extend SQL functionality.
 ---
 
 # [!DNL Spark] SQL functions

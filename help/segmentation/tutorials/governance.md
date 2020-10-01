@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Enforce data usage compliance for audience segments
 topic: tutorial
 type: Tutorial
+description: This tutorial covers the steps for enforcing data usage compliance for Real-time Customer Profile audience segments using APIs.
 ---
 
 # Enforce data usage compliance for an audience segment using APIs

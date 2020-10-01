@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Comparison functions
 topic: developer guide
+description: Comparison functions are used to compare between different expressions and values, returning "true" or "false" accordingly.
 ---
 
 # Comparison functions

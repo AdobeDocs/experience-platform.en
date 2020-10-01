@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Data quality;quality;Quality;S
 solution: Experience Platform
 title: Data ingestion quality
 topic: overview
+description: The following document provides a summary of the supported checks and validation behaviors for batch and streaming ingestion in Adobe Experience Platform.
 ---
 
 # Data quality in Adobe Experience Platform

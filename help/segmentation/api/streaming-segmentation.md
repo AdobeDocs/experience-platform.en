@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Streaming segmentation
 topic: developer guide
+description: This document contains examples on how to use streaming segmentation with the Streaming Segmentation API.
 ---
 
 # Evaluate events in near real-time with streaming segmentation 
