@@ -7,35 +7,32 @@ type: Tutorial
 description: The Secure Spark Data Access SDK is a software development kit that enables reading and writing of datasets from Adobe Experience Platform.
 ---
 
-# Secure [!DNL Spark Data Access] SDK
+# Accessing Spark data
 
-The Secure [!DNL Spark] [!DNL Data Access] SDK is a software development kit that enables reading and writing of datasets from Adobe Experience Platform.
+The following document contains examples on how to access data using Spark for use in Data Science Workspace recipe and model creation. For information on accessing data using JupyterLab notebooks, visit the [JupyterLab notebooks data access](../jupyterlab/access-notebook-data.md) documentation.
 
 ## Getting started
 
-You are required to have completed the [authentication](../../tutorials/authentication.md) tutorial in order to have access to the values to make calls to the Secure [!DNL Spark] [!DNL Data Access] SDK:
+You are required to have completed the [authentication](../../tutorials/authentication.md) tutorial in order to have access to the values for reading and writing to datasets:
 
 - `{ACCESS_TOKEN}`
 - `{API_KEY}`
 - `{IMS_ORG}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. Using the [!DNL Spark] SDK requires the name and the ID of the sandbox the operation will take place in:
+All resources in Adobe Experience Platform are isolated to specific virtual sandboxes. To read and write to data from Experience Platform, you are required to provide the name and the ID of the sandbox the operation will take place in:
 
 - `{SANDBOX_NAME}`
 - `{SANDBOX_ID}`
 
-For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
-
-## Environment setup
-
-The [!DNL Spark] SDK expects you to provide credentials in environment variables or Data Source options.
+For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 | Variable | Value |
-| -------- | ----- | 
-| `SERVICE_TOKEN` | Your service authorization token. |
-| `SERVICE_API_KEY` | Your service API key. This generally is the same as your IMS Client ID. |
-| `ORG_ID` | Your `{IMS_ORG}` ID value. |
+| -------- | ----- |
+| `IMS_ORG` | Your `{IMS_ORG}` ID. |
+| `SERVICE_API_KEY` | Your `{API_KEY}` value. |
 | `USER_TOKEN` | Your `{ACCESS_TOKEN}` value. |
+| `SANDBOX_ID` | The `{SANDBOX_ID}` value of your sandbox. |
+| `SANDBOX_NAME` | The `{SANDBOX_NAME}` value of your sandbox. |
 
 Other configuration parameters include:
 
@@ -50,16 +47,16 @@ Alternatively, aside from `ENVIRONMENT_NAME`, you can set any of the above envir
 val df = spark.read
     .format("com.adobe.platform.query")
     .option(QSOption.userToken, userToken) // same as env var USER_TOKEN
-    .option(QSOption.imsOrg, "69A7534C5808063C0A494234@AdobeOrg") // same as env var ORG_ID
+    .option(QSOption.imsOrg, "69A7534C5808063C0A494234@AdobeOrg") // same as env var IMS_ORG
     .option(QSOption.apiKey, "acp_foundation_queryService") // same as env var SERVICE_API_KEY
     .option("mode", "interactive")
     .option("query", "SELECT * FROM csv10000row_xcm_001 LIMIT 10")
     .load()
 ```
 
-## Installation
+## SparkSession
 
-Using the [!DNL Spark] SDK requires performance optimizations that need to be added to the `SparkSession`. You can apply them by using one of the following methods:
+Using [!DNL Spark] requires performance optimizations that need to be added to the `SparkSession`. You can apply them by using one of the following methods:
 
 Apply it directly to the current SparkSession:
 
@@ -68,7 +65,7 @@ import com.adobe.platform.query.QSOptimizations
 QSOptimizations.apply(spark)
 ```
 
-Set the following conf before, or on SparkSession creation:
+Set the following configuration before, or on SparkSession creation:
 
 ```scala
 spark.sql.extensions = com.adobe.platform.query.QSSparkSessionExtensions
@@ -76,11 +73,11 @@ spark.sql.extensions = com.adobe.platform.query.QSSparkSessionExtensions
 
 ## Reading a dataset
 
-The [!DNL Spark] SDK supports two modes of reading: interactive and batch.
+While using Spark you have access to two modes of reading: interactive and batch.
 
-Interactive mode creates a Java Database Connectivity (JDBC) connection to [!DNL Query Service] and gets results through a regular JDBC `ResultSet` that is automatically translated to a `DataFrame`. This mode works similarly to the built-in [!DNL Spark] method `spark.read.jdbc()`. This mode is meant only for small datasets and only requires a user token for authentication.
+Interactive mode creates a Java Database Connectivity (JDBC) connection to [!DNL Query Service] and gets results through a regular JDBC `ResultSet` that is automatically translated to a `DataFrame`. This mode works similarly to the built-in [!DNL Spark] method `spark.read.jdbc()`. This mode is meant only for small datasets. If your dataset exceeds 5 million rows, it is suggested you swap to batch mode.
 
-Batch mode uses [!DNL Query Service]'s COPY command to generate Parquet result sets in a shared location. These Parquet files can then be further processed. This mode requires both a user token and a service token with the `acp.foundation.catalog.credentials` scope.
+Batch mode uses [!DNL Query Service]'s COPY command to generate Parquet result sets in a shared location. These Parquet files can then be further processed.
 
 An example of reading a dataset in interactive mode can be seen below:
 
@@ -103,7 +100,6 @@ Similarly, an example of reading a dataset in batch mode can be seen below:
 val df = spark.read
       .format("com.adobe.platform.query")
       .option("user-token", {USER_TOKEN})
-      .option("service-token", {SERVICE_TOKEN})
       .option("ims-org", {IMS_ORG})
       .option("api-key", {SERVICE_API_KEY})
       .option("mode", "batch")
@@ -159,7 +155,7 @@ df = df.sort($"column1", $"column2".desc)
 
 ### LIMIT clause
 
-The LIMIT clause allows users to limit the number of records received from the dataset.
+The LIMIT clause allows you to limit the number of records received from the dataset.
 
 An example of using the `limit()` function can be seen below:
 
@@ -169,7 +165,7 @@ df = df.limit(100)
 
 ## Writing to a dataset
 
-The [!DNL Spark] SDK supports writing datasets. Users will first need to retrieve a previous dataset to write to a new dataset.
+[!DNL Spark] supports writing to datasets. To do this you need to retrieve a previous dataset first then write to a new dataset.
 
 ```scala
 val df = spark.read
@@ -184,7 +180,6 @@ val df = spark.read
     df.write
       .format("com.adobe.platform.query")
       .option("user-token", {USER_TOKEN})
-      .option("service-token", {SERVICE_TOKEN})
       .option("ims-org", "{IMS_ORG_ID})
       .option("api-key", "{API_KEY}")
       .option("create-dataset", "{DATASET_ID}")
