@@ -32,7 +32,7 @@ The named entities recognized by [!DNL Content and Commerce AI] are listed in th
 
 >[!NOTE]
 >
->If you plan on processing PDFs, skip to the instructions for [PDF keyword extraction](#pdf-extraction) within this document. Additionally, support for additional file types such as docx, ppt, xml, and more is set to be released at a later date.
+>If you plan on processing PDFs, skip to the instructions for [PDF keyword extraction](#pdf-extraction) within this document. Also, support for additional file types such as docx, ppt, xml, and more is set to be released at a later date.
 
 **API format**
 
