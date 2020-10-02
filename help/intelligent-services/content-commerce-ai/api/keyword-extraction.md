@@ -30,6 +30,10 @@ The named entities recognized by [!DNL Content and Commerce AI] are listed in th
 | LAW | Named documents made into laws. |
 | LANGUAGE | Any named language. |
 
+>[!NOTE]
+>
+>If you plan on processing PDFs, skip to the instructions for [PDF keyword extraction](#pdf-extraction) within this document. Additionally, support for additional file types such as docx, ppt, xml, and more is set to be released at a later date.
+
 **API format**
 
 ```http
@@ -67,7 +71,7 @@ See the table below the example payload for more information on the input parame
 
 >[!CAUTION]
 >
->`analyzer_id` determines which [!DNL Sensei Content Framework] is used. Please check that you have the proper `analyzer_id` before making your request. For keyword extraction service, the `analyzer_id` ID is:
+>`analyzer_id` determines which [!DNL Sensei Content Framework] is used. Please check that you have the proper `analyzer_id` before making your request. For PDF keyword extraction, the `analyzer_id` ID is:
 >`Feature:cintel-ner:Service-1a35aefb0f0f4dc0a3b5262370ebc709`
 
 ```SHELL
@@ -216,6 +220,139 @@ A successful response returns a JSON object containing extracted keywords in the
   "error": []
 }
 ```
+
+## PDF keyword extraction {#pdf-extraction}
+
+Keyword extraction service supports PDFs, however, you need to use a new AnalyzerID for PDF files and change the document type to PDF. See the example below for more information.
+
+**API format**
+
+```http
+POST /services/v1/predict
+```
+
+**Request**
+
+The following request extracts keywords from a PDF document based on the input parameters provided in the payload.
+
+>[!CAUTION]
+>
+>`analyzer_id` determines which [!DNL Sensei Content Framework] is used. Please check that you have the proper `analyzer_id` before making your request. For keyword extraction service, the `analyzer_id` ID is:
+>`Feature:cintel-ner:Service-7a87cb57461345c280b62470920bcdc5`
+
+```SHELL
+curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
+  -H "Authorization: Bearer {ACCESS_TOKEN}" \
+  -H "Content-Type: multipart/form-data" \
+  -H "cache-control: no-cache,no-cache" \
+  -H "x-api-key: {API_KEY}" \
+  -F file=@TestPDF.pdf \
+  -F 'contentAnalyzerRequests={
+    "enable_diagnostics":"true",
+    "requests":[{
+    "analyzer_id": "Feature:cintel-ner:Service-7a87cb57461345c280b62470920bcdc5",
+    "parameters": {
+      "application-id": "1234",
+      "content-type": "file",
+      "encoding": "pdf",
+      "threshold": "0.01",
+      "top-N": "0",
+      "custom": {},
+      "data": [{
+        "content-id": "abc123",
+        "content": "file",
+        }]
+      }
+    }]
+  }'
+```
+
+| Property | Description | Mandatory |
+| --- | --- | --- |
+| `analyzer_id` | The [!DNL Sensei] service ID that your request is deployed under. This ID determines which of the [!DNL Sensei Content Frameworks] are used. For custom services, please contact the Content and Commerce AI team to set up a custom ID. | Yes |
+| `application-id` | The ID of application created. | Yes |
+| `data` | An array that contains a JSON object with each object in the array representing a document. Any parameters passed as part of this array overrides the global parameters specified outside the `data` array. Any of the remaining properties outlined below in this table can be overridden from within `data`. | Yes |
+| `language` | Language of input. The default value is `en` (english). | No |
+| `content-type` | Used to indicate the inputs content type. This should be set to `file`. | Yes |
+| `encoding` | The encoding format of the input. This should be set to `pdf`. More encoding types are set to be supported at a later date. | Yes |
+| `threshold` | The threshold of score (0 to 1) above which the results need to be returned. Use the value `0` to return all results. The default for this property is `0`. | No |
+| `top-N` | The number of results to be returned (cannot be a negative integer). Use the value `0` to return all results. When used in conjunction with `threshold`, the number of results returned is the lesser of either limit set. The default for this property is `0`. | No |
+| `custom` | Any custom parameters to be passed. This property requires a valid JSON object to function. See the [appendix](#appendix) for more information on the custom parameters. | No |
+| `content-id` | The unique ID for the data element thats returned in the response. If this is not passed an auto-generated ID is assigned. | No |
+| `content` | This should be set to `file`. | Yes |
+
+**Response**
+
+A successful response returns a JSON object containing extracted keywords in the `response` array. 
+
+```json
+{
+  "statusCode": 200,
+  "body": {
+    "type": "JSON",
+    "matchType": "strict",
+    "json": {
+      "status": 200,
+      "content_id": "161hw2.pdf",
+      "cas_responses": [
+        {
+          "status": 200,
+          "analyzer_id": "Feature:cintel-ner:Service-7a87cb57461345c280b62470920bcdc5",
+          "content_id": "161hw2.pdf",
+          "result": {
+            "response_type": "feature",
+            "response": [
+              {
+                "feature_value": [
+                  {
+                    "feature_name": "status",
+                    "feature_value": "success"
+                  },
+                  {
+                    "feature_value": [
+                      {
+                        "feature_name": "delbick",
+                        "feature_value": [
+                          {
+                            "feature_name": "score",
+                            "feature_value": 0.03673855028832046
+                          },
+                          {
+                            "feature_name": "type",
+                            "feature_value": "KEYWORD"
+                          }
+                        ]
+                      },
+                      {
+                        "feature_name": "Ci",
+                        "feature_value": [
+                          {
+                            "feature_name": "score",
+                            "feature_value": 0
+                          },
+                          {
+                            "feature_name": "type",
+                            "feature_value": "PERSON"
+                          }
+                        ]
+                      }
+                    ],
+                    "feature_name": "labels"
+                  }
+                ],
+                "feature_name": "abc123"
+              }
+            ]
+          }
+        }
+      ],
+      "error": []
+    }
+  }
+}
+```
+
+For more information on using PDF extraction such as how to set up, deploy, integrate with AEM cloud service, and a sample. Visit the [CCAI PDF extraction worker github repository](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-ccai-pdfextract).
 
 ## Appendix {#appendix}
 
