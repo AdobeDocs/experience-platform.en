@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;mapping fields;mapping functions;
 solution: Experience Platform
-title: Mapping functions
+title: Data Prep functions
 topic: overview
 description: This document introduces the mapping functions used with Data Prep.
 ---
 
-# Mapping functions
+# Data Prep functions
 
-Mapping functions can be used to compute and calculate values based on what is entered in source fields.
+Data Prep functions can be used to compute and calculate values based on what is entered in source fields.
 
 ## Fields
 
