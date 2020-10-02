@@ -150,3 +150,7 @@ client_context = get_client_context(config_properties)
 user_helper = UserSpaceHelper(client_context)
 my_df = user_helper.read(path=<path_to_directory>, ref_dataset_id=<ref_dataset_id>)
 ```
+
+## Next steps
+
+Adobe Experience Platform Data Science Workspace provides a recipe sample that uses the above code samples to read and write data. If you want to learn more about how to use Python for accessing your data, please review the [Data Science Workspace Python GitHub Repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail).

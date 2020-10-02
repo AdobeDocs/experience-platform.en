@@ -148,7 +148,7 @@ df = df.limit(100)
 
 ## Writing to a dataset
 
-[!DNL Spark] supports writing to datasets.
+Using your `configProperties` mapping, you can write to a dataset in Experience Platform using `QSOption`. 
 
 ```scala
 
@@ -167,3 +167,8 @@ val sandboxName: String = sparkSession.sparkContext.getConf.get("sandboxName", "
       .option(QSOption.sandboxName, sandboxName)
       .save()
 ```
+
+
+## Next steps
+
+Adobe Experience Platform Data Science Workspace provides a Scala (Spark) recipe sample that uses the above code samples to read and write data. If you want to learn more about how to use Spark for accessing your data, please review the [Data Science Workspace Scala GitHub Repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/scala).
