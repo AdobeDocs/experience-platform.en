@@ -10,7 +10,7 @@ description: An identity graph is a map of relationships between different ident
 
 An identity graph is a map of relationships between different identity namespaces, providing you with a visual representation of how your customer interacts with your brand across different channels. All customer identity graphs are collectively managed and updated by [!DNL Identity Service] in near real-time, in response to customer activity.
 
-Through the identity graph viewer, you can better view and understand what identities are stitched together and how they are stitched together. The force-directed nature of the identity graph allows you to drag different parts of the graph for a better understanding how identities are connected. This allows for a more efficient means to debug as well as increased transparency.
+Through the identity graph viewer, you can better view and understand what identities are stitched together and how they are stitched together. The force-directed nature of the identity graph allows you to drag different parts of the graph for a better understanding of how identities are connected. This allows for a more efficient means to debug as well as increased transparency with how information is being utilized.
 
 ## Getting started
 
@@ -48,6 +48,10 @@ The **[!UICONTROL Data source]** screen displays a list of batch IDs linked to t
 
 ![](./images/identity-graph-viewer/select-edge.png)
 
-Identity graphs with larger clusters of identities are also accessible through the identity graph viewer.
+Identity graphs with larger clusters of identities are also accessible through the identity graph viewer. The maximum number of identities that can be displayed through the identity graph viewer is 100.
+
+>[!IMPORTANT]
+>
+>An identity graph requires a minimum of two linked identities to be generated.
 
 ![](./images/identity-graph-viewer/large-cluster.png)
