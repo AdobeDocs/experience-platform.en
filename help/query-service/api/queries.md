@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;query service;api guide;querie
 solution: Experience Platform
 title: Query Service developer guide
 topic: queries
+description: The following sections walk through calls you can make using the /queries endpoint in the Query Service API.
 ---
 
 # Queries

@@ -4,11 +4,12 @@ solution: Experience Platform
 title: Create an authenticated streaming connection
 topic: tutorial
 type: Tutorial
+description: Authenticated Data Collection allows Adobe Experience Platform services, such as Real-time Customer Profile and Identity, to differentiate between records coming from trusted sources and untrusted sources.
 ---
 
 # Creating an authenticated streaming connection
 
-Authenticated Data Collection allows Adobe Experience Platform services, such as [!DNL Real-time Customer Profile] and [!DNL Identity], to differentiate between records coming from trusted sources and un-trusted sources. Clients that want to send Personally Identifiable Information (PII) can do so by sending access tokens as part of the POST request.
+Authenticated Data Collection allows Adobe Experience Platform services, such as [!DNL Real-time Customer Profile] and [!DNL Identity], to differentiate between records coming from trusted sources and untrusted sources. Clients that want to send Personally Identifiable Information (PII) can do so by sending access tokens as part of the POST request.
 
 ## Getting started
 
