@@ -6,9 +6,9 @@ seo-description: Quick start guide for using the Experience Platform Web SDK ext
 keywords: 1st-party domain;CNAME;schema;create schema;launch;aep web sdk extension;extension;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;
 ---
 
-# Welcome
+# Adobe Experience Platform Web SDK Launch quick start guide
 
-This guide leads you through the different ways to set up the Adobe Experience Platform Web SDK in Launch. To use this feature you need to be whitelisted. If you would like to get on the waiting list please reach out to your CSM.
+This guide leads you through the different ways to set up the Adobe Experience Platform Web SDK in Launch. To use this feature you need to be on the allowlist. If you would like to get on the waiting list please reach out to your Certified software manager (CSM).
 
 - Have a [1st-party domain (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) enabled. If you already have a CNAME for Analytics, you should use that one. Testing in development works without a CNAME, but you need one before you go to production.
 - Be entitled to Adobe Experience Platform. If you have not purchased Platform, Adobe will provision you with Experience Platform Data Services Foundation for use in a limited fashion with the SDK at no extra charge.
@@ -16,7 +16,7 @@ This guide leads you through the different ways to set up the Adobe Experience P
 
 ## Prepare a Schema
 
-The Experience Platform Edge Network takes data as XDM. XDM is a data format that lets you define schemas. The schema defines how the Edge Network expects the data to be formatted. To send data, you must define your schema. 
+The Experience Platform Edge Network uses the Experience Data Model (XDM). XDM is a data format that lets you define schemas. The schema defines how the Edge Network expects the data to be formatted. To send data, you must define your schema.
 
 1. [Create a schema](../../xdm/tutorials/create-schema-ui.md)
 2. Add the AEP [!DNL Web SDK ExperienceEvent] Mixin to the schema you created.
@@ -38,7 +38,7 @@ You can create a configuration ID using the [edge configuration tool](../fundame
 
 >[!NOTE]
 >
->Your organization must be whitelisted for this feature. Please contact your CSM to get put on the list for eventual whitelisting.
+>Your organization must be on the allowlist for this feature. Please contact your Certified software manager (CSM) to get put on the allowlist.
 
 ## Create a Data Element Based on Your Schema
 
@@ -52,13 +52,14 @@ After the extension is installed, start sending events by adding a `sendEvent` a
 
 For more details on how to track events, see [Tracking Events](../fundamentals/tracking-events.md).
 
-## Next Steps
+## Next steps
 
-After you have data flowing, you can do the following. 
+After you have data flowing, you can do the following.
 
 - [Build out your schema](https://docs.adobe.com/content/help/en/experience-platform/xdm/schema/composition.html)
 - [Learn about debugging](../fundamentals/debugging.md)
 - Learn how to [personalize the experience](../fundamentals/rendering-personalization-content.md)
+- Integrate the [IAB Transparency & Consent Framework 2.0](../solution-specific/iab-tcf/with-launch.md) in Adobe Experience Platform Launch.
 - Learn about how to send data to multiple solutions
   - [Adobe Analytics](../solution-specific/analytics/analytics-overview.md)
   - [Adobe Audience Manager](../solution-specific/audience-manager/audience-manager-overview.md)

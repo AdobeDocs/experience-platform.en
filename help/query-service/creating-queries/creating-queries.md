@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Creating queries
 topic: queries
 type: Tutorial
+description: This document links to the core documentation used in creating and understanding queries in Adobe Experience Platform.
 ---
 
 # Creating queries
