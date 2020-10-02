@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;home;popular topics;data access;spark sdk;data access api;spark recipe;read spark;write spark
 solution: Experience Platform
-title: Accessing Spark data
+title: Accessing data using Spark
 topic: tutorial
 type: Tutorial
-description: The following document contains examples on how to access data using Spark for use in Data Science Workspace recipe and model creation.
+description: The following document contains examples on how to access data using Spark for use in Data Science Workspace.
 ---
 
-# Accessing Spark data
+# Accessing data using Spark
 
-The following document contains examples on how to access data using Spark for use in Data Science Workspace recipe and model creation. For information on accessing data using JupyterLab notebooks, visit the [JupyterLab notebooks data access](../jupyterlab/access-notebook-data.md) documentation.
+The following document contains examples on how to access data using Spark for use in Data Science Workspace. For information on accessing data using JupyterLab notebooks, visit the [JupyterLab notebooks data access](../jupyterlab/access-notebook-data.md) documentation.
 
 ## Getting Started
 
