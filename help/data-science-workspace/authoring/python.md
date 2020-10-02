@@ -11,46 +11,21 @@ description: The following document contains examples on how to access data in P
 
 The following document contains examples on how to access data using Python for use in Data Science Workspace recipe and model creation. For information on accessing data using JupyterLab notebooks, visit the [JupyterLab notebooks data access](../jupyterlab/access-notebook-data.md) documentation.
 
-## Getting started
-
-You are required to have completed the [authentication](../../tutorials/authentication.md) tutorial in order to have access to the values for reading and writing to datasets:
-
-- `{ACCESS_TOKEN}`
-- `{API_KEY}`
-- `{IMS_ORG}`
-
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. To read and write to data from Platform, you are required to provide the name and the ID of the sandbox the operation will take place in:
-
-- `{SANDBOX_NAME}`
-- `{SANDBOX_ID}`
-
-For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
-
-Additionally, your authentication credentials can be added as environment variables.
-
-| Variable | Value |
-| -------- | ----- |
-| `ORG_ID` | Your `{IMS_ORG}` ID. |
-| `API_KEY` | Your `{API_KEY}` value. |
-| `USER_TOKEN` | Your `{ACCESS_TOKEN}` value. |
-| `SANDBOX_ID` | The `{SANDBOX_ID}` value of your sandbox. |
-| `SANDBOX_NAME` | The `{SANDBOX_NAME}` value of your sandbox. |
-
 ## Reading a dataset
 
 After setting the environment variables and completing installation, your dataset can now be read into the pandas dataframe.
 
 ```python
-from platform_sdk.client_context import ClientContext
+import pandas as pd
+from .utils import get_client_context
 from platform_sdk.dataset_reader import DatasetReader
 
-client_context = ClientContext(api_key={API_KEY},
-                               org_id={ORG_ID},
-                               user_token={USER_TOKEN},
-                               sandbox_id={SANDBOX_ID},
-                               sandbox_name={SANDBOX_NAME})
+def load(config_properties):
 
-dataset_reader = DatasetReader(client_context, {DATASET_ID})
+client_context = get_client_context(config_properties)
+
+dataset_reader = DatasetReader(client_context, config_properties['DATASET_ID'])
+
 df = dataset_reader.read()
 ```
 
@@ -63,11 +38,7 @@ df = dataset_reader.select(['column-a','column-b']).read()
 ### Get partitioning information:
 
 ```python
-client_context = ClientContext(api_key={API_KEY},
-                               org_id={ORG_ID},
-                               user_token={USER_TOKEN},
-                               sandbox_id={SANDBOX_ID},
-                               sandbox_name={SANDBOX_NAME})
+client_context = get_client_context(config_properties)
 
 dataset = Dataset(client_context).get_by_id({DATASET_ID})
 partitions = dataset.get_partitions_info()
@@ -144,11 +115,7 @@ To write to a dataset, you need to supply the pandas dataframe to your dataset.
 ### Writing the pandas dataframe
 
 ```python
-client_context = ClientContext(api_key={API_KEY},
-                               org_id={ORG_ID},
-                               user_token={USER_TOKEN},
-                               sandbox_id={SANDBOX_ID},
-                               sandbox_name={SANDBOX_NAME})
+client_context = get_client_context(config_properties)
 
 # To fetch existing dataset
 dataset = Dataset(client_context).get_by_id({DATASET_ID})
@@ -169,11 +136,7 @@ For longer running jobs, you may need to store intermediate steps. In instances 
 ### Write to userspace
 
 ```python
-client_context = ClientContext(api_key={API_KEY},
-                               org_id={ORG_ID},
-                               user_token={USER_TOKEN},
-                               sandbox_id={SANDBOX_ID},
-                               sandbox_name={SANDBOX_NAME})
+client_context = get_client_context(config_properties)
                                
 user_helper = UserSpaceHelper(client_context)
 user_helper.write(data_frame=<data_frame>, path=<path_to_directory>, ref_dataset_id=<ref_dataset_id>)
@@ -182,11 +145,7 @@ user_helper.write(data_frame=<data_frame>, path=<path_to_directory>, ref_dataset
 ### Read from userspace
 
 ```python
-client_context = ClientContext(api_key={API_KEY},
-                               org_id={ORG_ID},
-                               user_token={USER_TOKEN},
-                               sandbox_id={SANDBOX_ID},
-                               sandbox_name={SANDBOX_NAME})
+client_context = get_client_context(config_properties)
                                
 user_helper = UserSpaceHelper(client_context)
 my_df = user_helper.read(path=<path_to_directory>, ref_dataset_id=<ref_dataset_id>)

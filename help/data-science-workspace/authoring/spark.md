@@ -11,64 +11,28 @@ description: The following document contains examples on how to access data usin
 
 The following document contains examples on how to access data using Spark for use in Data Science Workspace recipe and model creation. For information on accessing data using JupyterLab notebooks, visit the [JupyterLab notebooks data access](../jupyterlab/access-notebook-data.md) documentation.
 
-## Getting started
+## Getting Started
 
-You are required to have completed the [authentication](../../tutorials/authentication.md) tutorial in order to have access to the values for reading and writing to datasets:
-
-- `{ACCESS_TOKEN}`
-- `{API_KEY}`
-- `{IMS_ORG}`
-
-All resources in Adobe Experience Platform are isolated to specific virtual sandboxes. To read and write to data from Experience Platform, you are required to provide the name and the ID of the sandbox the operation will take place in:
-
-- `{SANDBOX_NAME}`
-- `{SANDBOX_ID}`
-
-For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
-
-| Variable | Value |
-| -------- | ----- |
-| `IMS_ORG` | Your `{IMS_ORG}` ID. |
-| `SERVICE_API_KEY` | Your `{API_KEY}` value. |
-| `USER_TOKEN` | Your `{ACCESS_TOKEN}` value. |
-| `SANDBOX_ID` | The `{SANDBOX_ID}` value of your sandbox. |
-| `SANDBOX_NAME` | The `{SANDBOX_NAME}` value of your sandbox. |
-
-Other configuration parameters include:
-
-| Variable | Value |
-| -------- | ----- |
-| `ENVIRONMENT_NAME` | The environment you are trying to connect to. It can be one of "dev", "stage", or "prod". |
-| `SANDBOX_NAME` | The name of the sandbox you are connecting to. |
-
-Alternatively, aside from `ENVIRONMENT_NAME`, you can set any of the above environment variables within `QSOption`, as seen in the example below:
+Using [!DNL Spark] requires performance optimizations that need to be added to the `SparkSession`. You can apply them by using the following method:
 
 ```scala
-val df = spark.read
-    .format("com.adobe.platform.query")
-    .option(QSOption.userToken, userToken) // same as env var USER_TOKEN
-    .option(QSOption.imsOrg, "69A7534C5808063C0A494234@AdobeOrg") // same as env var IMS_ORG
-    .option(QSOption.apiKey, "acp_foundation_queryService") // same as env var SERVICE_API_KEY
-    .option("mode", "interactive")
-    .option("query", "SELECT * FROM csv10000row_xcm_001 LIMIT 10")
-    .load()
-```
+import com.adobe.platform.ml.config.ConfigProperties
+import com.adobe.platform.query.QSOption
+import org.apache.spark.sql.{DataFrame, SparkSession}
 
-## SparkSession
+Class Helper {
 
-Using [!DNL Spark] requires performance optimizations that need to be added to the `SparkSession`. You can apply them by using one of the following methods:
+ /**
+   *
+   * @param configProperties - Configuration Properties map
+   * @param sparkSession     - SparkSession
+   * @return                 - DataFrame which is loaded for training
+   */
 
-Apply it directly to the current SparkSession:
-
-```scala
-import com.adobe.platform.query.QSOptimizations
-QSOptimizations.apply(spark)
-```
-
-Set the following configuration before, or on SparkSession creation:
-
-```scala
-spark.sql.extensions = com.adobe.platform.query.QSSparkSessionExtensions
+   def load_dataset(configProperties: ConfigProperties, sparkSession: SparkSession, taskId: String): DataFrame = {
+         // Read the configs and load the dataset
+   }
+}
 ```
 
 ## Reading a dataset
@@ -82,31 +46,44 @@ Batch mode uses [!DNL Query Service]'s COPY command to generate Parquet result s
 An example of reading a dataset in interactive mode can be seen below:
 
 ```scala
-val df = spark.read
-      .format("com.adobe.platform.query")
-      .option("user-token", {USER_TOKEN})
-      .option("ims-org", {IMS_ORG})
-      .option("api-key", {SERVICE_API_KEY})
-      .option("mode", "interactive")
-      .option("dataset-id", {DATASET_ID})
-      .option("sandbox-name", {SANDBOX_NAME})
+  // Read the configs
+    val serviceToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ML_TOKEN", "").toString
+    val userToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_TOKEN", "").toString
+    val orgId: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ORG_ID", "").toString
+    val apiKey: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_CLIENT_ID", "").toString
+    val sandboxName: String = sparkSession.sparkContext.getConf.get("sandboxName", "").toString
+
+ val dataSetId: String = configProperties.get(taskId).getOrElse("")
+
+    // Load the dataset
+    var df = sparkSession.read.format(PLATFORM_SDK_PQS_PACKAGE)
+      .option(QSOption.userToken, userToken)
+      .option(QSOption.serviceToken, serviceToken)
+      .option(QSOption.imsOrg, orgId)
+      .option(QSOption.apiKey, apiKey)
+      .option(QSOption.mode, "interactive")
+      .option(QSOption.datasetId, dataSetId)
+      .option(QSOption.sandboxName, sandboxName)
       .load()
-df.show()
+    df.show()
+    df
+  }
 ```
 
 Similarly, an example of reading a dataset in batch mode can be seen below:
 
 ```scala
-val df = spark.read
-      .format("com.adobe.platform.query")
-      .option("user-token", {USER_TOKEN})
-      .option("ims-org", {IMS_ORG})
-      .option("api-key", {SERVICE_API_KEY})
-      .option("mode", "batch")
-      .option("dataset-id", {DATASET_ID})
-      .option("sandbox-name", {SANDBOX_NAME})
+val df = sparkSession.read.format(PLATFORM_SDK_PQS_PACKAGE)
+      .option(QSOption.userToken, userToken)
+      .option(QSOption.serviceToken, serviceToken)
+      .option(QSOption.imsOrg, orgId)
+      .option(QSOption.apiKey, apiKey)
+      .option(QSOption.mode, "batch")
+      .option(QSOption.datasetId, dataSetId)
+      .option(QSOption.sandboxName, sandboxName)
       .load()
-df.show()
+    df.show()
+    df
 ```
 
 ### SELECT columns from the dataset
@@ -165,23 +142,22 @@ df = df.limit(100)
 
 ## Writing to a dataset
 
-[!DNL Spark] supports writing to datasets. To do this you need to retrieve a previous dataset first then write to a new dataset.
+[!DNL Spark] supports writing to datasets.
 
 ```scala
-val df = spark.read
-      .format("com.adobe.platform.query")
-      .option("user-token", userToken)
-      .option("ims-org", "{IMS_ORG}")
-      .option("api-key", "{API_KEY}")
-      .option("mode", "interactive")
-      .option("dataset-id", "{DATASET_ID}")
-      .load()
 
-    df.write
-      .format("com.adobe.platform.query")
-      .option("user-token", {USER_TOKEN})
-      .option("ims-org", "{IMS_ORG_ID})
-      .option("api-key", "{API_KEY}")
-      .option("create-dataset", "{DATASET_ID}")
+val serviceToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ML_TOKEN", "").toString
+val userToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_TOKEN", "").toString
+val orgId: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ORG_ID", "").toString
+val apiKey: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_CLIENT_ID", "").toString
+val sandboxName: String = sparkSession.sparkContext.getConf.get("sandboxName", "").toString 
+
+    df.write.format(PLATFORM_SDK_PQS_PACKAGE)
+      .option(QSOption.userToken, userToken)
+      .option(QSOption.serviceToken, serviceToken)
+      .option(QSOption.imsOrg, orgId)
+      .option(QSOption.apiKey, apiKey)
+      .option(QSOption.datasetId, scoringResultsDataSetId)
+      .option(QSOption.sandboxName, sandboxName)
       .save()
 ```
