@@ -24,17 +24,17 @@ Working with the identity graph viewer requires an understanding of the various 
 
 To use the identity graph viewer in the UI, select **[!UICONTROL Identities]** in the left-rail and then select the **[!UICONTROL Identity graph]** tab. From the **[!UICONTROL Identity Namespace]** screen, click the **[!UICONTROL Select identity namespace]** icon to search for the namespace you intend to use.
 
-![](./images/identity-graph-viewer/identity-namespace.png)
+![namespace-screen](./images/identity-graph-viewer/identity-namespace.png)
 
 The **[!UICONTROL Select identity namespace]** panel appears. This screen contains a list of namespaces at your disposal, including information about a namespace's **[!UICONTROL Display name]**, **[!UICONTROL Identity symbol]**, **[!UICONTROL Owner]**, **[!UICONTROL Last updated]** date, and **[!UICONTROL Description]**.
 
 Select the namespace you intend to use and click **[!UICONTROL Select]** to proceed.
 
-![](./images/identity-graph-viewer/select-identity-namespace.png)
+![select-identity-namespace](./images/identity-graph-viewer/select-identity-namespace.png)
 
 Once you have selected a namespace, enter its corresponding value in the **[!UICONTROL Identity value]** text box and select **[!UICONTROL View]**.
 
-![](./images/identity-graph-viewer/identity-value.png)
+![add-identity-value](./images/identity-graph-viewer/identity-value.png)
 
 The identity graph viewer appears. On the left side of the screen is a force-directed graph displaying all of the identities linked to the namespace you selected and how they are stitched together. You can hover over an identity to see information about its value. This information is also displayed in a tabled list in the center of the screen.
 
@@ -42,11 +42,11 @@ Select an identity to update the highlighted row on the **[!UICONTROL Identity t
 
 Select **[!UICONTROL Data source]** from the header to see more information regarding the batch. Alternatively, you can select any of the links that connect identities together to see their corresponding batch IDs.
 
-![](./images/identity-graph-viewer/identity-graph-view.png)
+![identity-graph](./images/identity-graph-viewer/identity-graph-view.png)
 
 The **[!UICONTROL Data source]** screen displays a list of batch IDs linked to the identities within the identity graph. The right rail of the **[!UICONTROL Data source]** screen contains more information regarding the batch ID, including details about its dataset and schema. Select a batch ID to see a more comprehensive overview of that particular batch.
 
-![](./images/identity-graph-viewer/select-edge.png)
+![select-links](./images/identity-graph-viewer/select-edge.png)
 
 Identity graphs with larger clusters of identities are also accessible through the identity graph viewer. The maximum number of identities that can be displayed through the identity graph viewer is 100.
 
@@ -54,4 +54,4 @@ Identity graphs with larger clusters of identities are also accessible through t
 >
 >An identity graph requires a minimum of two linked identities to be generated.
 
-![](./images/identity-graph-viewer/large-cluster.png)
+![large-cluster](./images/identity-graph-viewer/large-cluster.png)
