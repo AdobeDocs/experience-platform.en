@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Map functions
 topic: developer guide
+description: Profile Query Language (PQL) offers functions to make interaction with maps easier.
 ---
 
 # Map functions

@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Help
 breadcrumb-title: Experience Platform Guide
-user-guide-description: Centralize and standardize customer data and content and apply data science and machine learning to improve the design and delivery of rich, personalized experiences.
+user-guide-description: Learn how Experience Platform makes it possible to deliver personalized experiences to your customers in real-time.
 ---
 
 # Adobe Experience Platform {#landing}
@@ -17,6 +17,7 @@ user-guide-description: Centralize and standardize customer data and content and
   * [Catalog and Datasets](https://docs.adobe.com/content/help/en/experience-platform/catalog/home.html)
   * [Data Access](https://docs.adobe.com/content/help/en/experience-platform/data-access/home.html)
   * [Data Governance](https://docs.adobe.com/content/help/en/experience-platform/data-governance/home.html)
+  * [Data Prep](https://docs.adobe.com/content/help/en/experience-platform/data-prep/home.html)
   * [Data Ingestion](https://docs.adobe.com/content/help/en/experience-platform/ingestion/home.html)
   * [Data Science Workspace](https://docs.adobe.com/content/help/en/experience-platform/data-science-workspace/home.html)
   * [Debugger](https://docs.adobe.com/content/help/en/debugger/using/experience-cloud-debugger.html)
