@@ -13,7 +13,7 @@ The following document contains examples on how to access data using Spark for u
 
 ## Getting Started
 
-Using [!DNL Spark] requires performance optimizations that need to be added to the `SparkSession`. You can apply them by using the following method:
+Using [!DNL Spark] requires performance optimizations that need to be added to the `SparkSession`. Additionally, you can also setup `configProperties` for later to read and write to datasets.
 
 ```scala
 import com.adobe.platform.ml.config.ConfigProperties
@@ -30,7 +30,13 @@ Class Helper {
    */
 
    def load_dataset(configProperties: ConfigProperties, sparkSession: SparkSession, taskId: String): DataFrame = {
-         // Read the configs and load the dataset
+            // Read the configs
+            val serviceToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ML_TOKEN", "").toString
+            val userToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_TOKEN", "").toString
+            val orgId: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ORG_ID", "").toString
+            val apiKey: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_CLIENT_ID", "").toString
+            val sandboxName: String = sparkSession.sparkContext.getConf.get("sandboxName", "").toString
+
    }
 }
 ```
