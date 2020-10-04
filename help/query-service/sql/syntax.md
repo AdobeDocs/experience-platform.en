@@ -481,7 +481,9 @@ where 'format_name' is be one of:
 >
 
 ### ALTER
-This command helps in adding or dropping primary key, foreign key constraint to the table.
+
+This command helps in adding or dropping primary or foreign key constraints to the table.
+
 ```sql
 Alter TABLE table_name ADD ( column_name Primary key Namespace 'namespace')
 
@@ -493,13 +495,12 @@ Alter TABLE table_name DROP ( column_name Foreign key)
 ```
 
 >[!NOTE]
->1. The table schema should be unique, i.e. it should not be shared among multiple tables.
->
->2. Namespace is mandatory
+>The table schema should be unique and not shared among multiple tables. Additionally, the namespace is mandatory.
 >
 
 ### SHOW PRIMARY KEYS
-This command list down all the primary keys constraints for the given database.
+
+This command lists all the primary key constraints for the given database
 
 ```sql
 SHOW PRIMARY KEYS
@@ -511,7 +512,8 @@ SHOW PRIMARY KEYS
 
 
 ### SHOW FOREIGN KEYS
-This command list down all the foreign keys constraints for the given database.
+
+This command lists all the foreign key constraints for the given database.
 
 ```sql
 SHOW FOREIGN KEYS
