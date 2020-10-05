@@ -24,6 +24,10 @@ Note the following details that are specific to [!DNL Google Display & Video 360
 >
 >If you are looking to create your first destination with Google Display & Video 360 and have not enabled the [ID sync functionality](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up Google integrations in Audience Manager, the ID syncs you had set up carry over to Adobe Real-time CDP.
 
+### Export Type {#export-type}
+
+**Segment Export** - you are exporting all members of a segment (audience) to the Google destination.
+
 ## Prerequisites
 
 ### Allow list
