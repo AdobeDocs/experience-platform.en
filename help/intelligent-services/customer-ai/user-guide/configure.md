@@ -40,11 +40,12 @@ Provide the required values and then click **[!UICONTROL Next]**.
 
 ### Define a goal {#define-a-goal}
 
-The *Define goal* step appears and it provides an interactive environment for you to visually define a goal. A goal is composed of one or more events, where each event's occurrence is based on the condition it holds. The objective of a Customer AI instance is to determine the likeliness of achieving its goal within a given time frame.
+The *Define goal* step appears and it provides an interactive environment for you to visually define a goal. A goal is composed of one or more events, where each event's occurrence is based on the condition it holds. The objective of a Customer AI instance is to determine the likeliness of achieving its goal within a given time frame. While defining your goal you have the option to select **[!UICONTROL Will occur]** or **[!UICONTROL Will not occur]** as indicated in the example below. Selecting **[!UICONTROL Will occur]** means that the event conditions defined need to be met, whereas selecting **[!UICONTROL Will not occur]** means any conditions outside the ones you define are tracked.
 
 Click **[!UICONTROL Enter Field Name]** and select a field from the dropdown list. Click the second input and select a clause for the event's condition, then provide target value to complete the event. Additional events can be configured by clicking **[!UICONTROL Add event]**. Lastly, complete the goal by applying a prediction time frame in number of days, then click **[!UICONTROL Next]**.
 
 ![](../images/user-guide/goal.png)
+
 
 ### Configure a schedule *(optional)* {#configure-a-schedule}
 
