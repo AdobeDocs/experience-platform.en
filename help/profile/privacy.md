@@ -39,15 +39,15 @@ The sections below outline how to make privacy requests for [!DNL Real-time Cust
 
 ### Using the API
 
-When creating job requests in the API, any `userIDs` that are provided must use a specific `namespace` and `type` depending on the data store they apply to. IDs for the [!DNL Profile] store must use either "standard" or "custom" for their `type` value, and a valid [identity namespace](#namespaces) recognized by [!DNL Identity Service] for their `namespace` value.
+When creating job requests in the API, any IDs provided within `userIDs` must use a specific `namespace` and `type`. A valid [identity namespace](#namespaces) recognized by [!DNL Identity Service] must be provided for the `namespace` value, while the `type` must be either `standard` or `unregistered` (for standard and custom namespaces, respectively).
 
 >[!NOTE]
 >
->You may need to provide more than one ID for each customer, depending on the identity graph and how profile fragments are stored in Platform. See the next section [profile fragments](#fragments) for more information.
+>You may need to provide more than one ID for each customer, depending on the identity graph and how your profile fragments are distributed in Platform datasets. See the next section [profile fragments](#fragments) for more information.
 
 In addition, the `include` array of the request payload must include the product values for the different data stores the request is being made to. When making requests to the [!DNL Data Lake], the array must include the value "ProfileService".
 
-The following request creates a new privacy job for [!DNL Real-time Customer Profile], using the standard `Email` identity namespace. It also includes the product value for [!DNL Profile] (`ProfileService`) in the `include` array:
+The following request creates a new privacy job for a single customer's data in the [!DNL Profile] store. Two identity values are provided for the customer in the `userIDs` array; one using the standard `Email` identity namespace, and the other using a custom `Customer_ID` namespace. It also includes the product value for [!DNL Profile] (`ProfileService`) in the `include` array:
 
 ```shell
 curl -X POST \
@@ -75,8 +75,8 @@ curl -X POST \
             "type": "standard"
           },
           {
-            "namespace": "email_label",
-            "value": "ajones@acme.com",
+            "namespace": "Customer_ID",
+            "value": "12345678",
             "type": "unregistered"
           }
         ]
@@ -108,9 +108,9 @@ For example, consider a situation where you are storing customer attribute data 
 | Dataset 2 | `email_id` | `firstName`, `lastName` |
 | Dataset 3 | `email_id` | `mlScore` |
 
-One of the datasets uses `customer_id` as its primary identifier, whereas the other two use `email_id`. If you were to send a privacy request (access or delete) using only `email_id` as the user ID value, only the `firstName`, `lastName`, and `mlScore` attributes would be processed, where `address` would not be affected.
+One of the datasets uses `customer_id` as its primary identifier, whereas the other two use `email_id`. If you were to send a privacy request (access or delete) using only `email_id` as the user ID value, only the `firstName`, `lastName`, and `mlScore` attributes would be processed, while `address` would not be affected.
 
-To ensure that your privacy requests process all relevant customer attributes, you must provide the primary identity values for all applicable datasets where those attributes may be stored (up to a maximum of nine IDs per customer).
+To ensure that your privacy requests process all relevant customer attributes, you must provide the primary identity values for all applicable datasets where those attributes may be stored (up to a maximum of nine IDs per customer). See the section on identity fields in the [basics of schema composition](../xdm/schema/composition.md#identity) for more information on fields that are commonly marked as identities.
 
 >[!NOTE]
 >
@@ -118,7 +118,7 @@ To ensure that your privacy requests process all relevant customer attributes, y
 
 ## Delete request processing
 
-When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Service], [!DNL Platform] sends confirmation to [!DNL Privacy Service] that the request has been received and affected data has been marked for deletion. The records are then removed from the [!DNL Data Lake] or [!DNL Profile] store within seven days. During that seven-day window, the data is soft-deleted and is therefore not accessible by any [!DNL Platform] service.
+When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Service], [!DNL Platform] sends confirmation to [!DNL Privacy Service] that the request has been received and affected data has been marked for deletion. The records are then removed from the [!DNL Data Lake] or [!DNL Profile] store once the privacy job has completed. While the delete job is still processing, the data is soft-deleted and is therefore not accessible by any [!DNL Platform] service. Refer to the [[!DNL Privacy Service] documentation](../privacy-service/home.md#monitor) for more information on tracking job statuses.
 
 >[!IMPORTANT]
 >
