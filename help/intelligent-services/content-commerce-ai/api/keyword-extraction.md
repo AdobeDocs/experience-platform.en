@@ -108,7 +108,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 | Property | Description | Mandatory |
 | --- | --- | --- |
 | `analyzer_id` | The [!DNL Sensei] service ID that your request is deployed under. This ID determines which of the [!DNL Sensei Content Frameworks] are used. For custom services, please contact the Content and Commerce AI team to set up a custom ID. | Yes |
-| `application-id` | The ID of the application created. | Yes |
+| `application-id` | The ID of the created application. | Yes |
 | `data` | An array that contains a JSON object with each object in the array representing a document. Any parameters passed as part of this array overrides the global parameters specified outside the `data` array. Any of the remaining properties outlined below in this table can be overridden from within `data`. | Yes |
 | `language` | Language of input text. The default value is `en`. | No |
 | `content-type` | Used to indicate whether the input is part of the request body or a signed url for an S3 bucket. The default for this property is `inline`. | Yes |
@@ -270,7 +270,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 | Property | Description | Mandatory |
 | --- | --- | --- |
 | `analyzer_id` | The [!DNL Sensei] service ID that your request is deployed under. This ID determines which of the [!DNL Sensei Content Frameworks] are used. For custom services, please contact the Content and Commerce AI team to set up a custom ID. | Yes |
-| `application-id` | The ID of application created. | Yes |
+| `application-id` | The ID of the created application. | Yes |
 | `data` | An array that contains a JSON object with each object in the array representing a document. Any parameters passed as part of this array overrides the global parameters specified outside the `data` array. Any of the remaining properties outlined below in this table can be overridden from within `data`. | Yes |
 | `language` | Language of input. The default value is `en` (english). | No |
 | `content-type` | Used to indicate the inputs content type. This should be set to `file`. | Yes |
@@ -278,7 +278,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 | `threshold` | The threshold of score (0 to 1) above which the results need to be returned. Use the value `0` to return all results. The default for this property is `0`. | No |
 | `top-N` | The number of results to be returned (cannot be a negative integer). Use the value `0` to return all results. When used in conjunction with `threshold`, the number of results returned is the lesser of either limit set. The default for this property is `0`. | No |
 | `custom` | Any custom parameters to be passed. This property requires a valid JSON object to function. See the [appendix](#appendix) for more information on the custom parameters. | No |
-| `content-id` | The unique ID for the data element thats returned in the response. If this is not passed an auto-generated ID is assigned. | No |
+| `content-id` | The unique ID for the data element thats returned in the response. If this is not passed, an auto-generated ID is assigned. | No |
 | `content` | This should be set to `file`. | Yes |
 
 **Response**
