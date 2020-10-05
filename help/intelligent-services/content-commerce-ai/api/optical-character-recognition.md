@@ -81,7 +81,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 **Response**
 
-A successful response returns the text that was detected in the `feature_value` array.
+A successful response returns the text that was detected in the `feature_value` array. The text is read and returned top down from left to right. This means that if "I love Adobe" was detected, you will receive "I", "LOVE", and "Adobe" all in their own object under `feature_name`.
 
 ```json
 {
