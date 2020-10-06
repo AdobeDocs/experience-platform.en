@@ -89,6 +89,14 @@ The [!DNL Privacy Consent] data type provides several fields used to capture con
 }
 ```
 
+## xdm:choices {#choices}
+
+`xdm:choices` contains three root-level fields that describe a customer's consent preferences:
+
+* [xdm:consents](#consents)
+* [xdm:personalizationPreferences](#personalizationPreferences)
+* [xdm:marketingPreferences](#marketingPreferences)
+
 ### xdm:consents {#consents}
 
 The `xdm:consents` object captures general privacy consent settings selected by the customer. Each sub-field represents a specific data processing use case and the preferences the customer has selected for that use case.
@@ -308,9 +316,9 @@ The `xdm:consents` object captures general privacy consent settings selected by 
 | `xdm:source` | A string that indicates which feature, product, or method the customer used to provide their consent information. Common examples include customer management platforms (CMPs) and opt-out links sent via email. |
 | `xdm:reason` | When a user opts out of a marketing use case, this string field represents the reason why the user opted out. |
 
-### xdm:choicesMetadata
+## xdm:choicesMetadata
 
-Separate from `xdm:choices`, `xdm:choicesMetadata` captures general metadata about the customer's consent preferences whenever they were last updated.
+`xdm:choicesMetadata` captures general metadata about the customer's consent preferences whenever they were last updated.
 
 ```json
 "xdm:choicesMetadata": {
