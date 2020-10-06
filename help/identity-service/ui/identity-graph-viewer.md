@@ -16,25 +16,25 @@ Through the identity graph viewer, you can better view and understand what ident
 
 Working with the identity graph viewer requires an understanding of the various Adobe Experience Platform services involved. Before beginning to work with the identity graph viewer, please review the documentation for the following services:
 
-- [[!DNL Real-time Customer Profile]](../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
-- [[!DNL Identity Service]](./home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
-- [[!DNL Privacy Service]](../privacy-service/home.md): Identity namespaces are used to comply with General Data Protection Regulation (GDPR), where GDPR requests can be made relative to a namespace.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
+- [[!DNL Identity Service]](../home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
+- [[!DNL Privacy Service]](../../privacy-service/home.md): Identity namespaces are used to comply with General Data Protection Regulation (GDPR), where GDPR requests can be made relative to a namespace.
 
 ## Access the identity graph viewer
 
 To use the identity graph viewer in the UI, select **[!UICONTROL Identities]** in the left-rail and then select the **[!UICONTROL Identity graph]** tab. From the **[!UICONTROL Identity Namespace]** screen, click the **[!UICONTROL Select identity namespace]** icon to search for the namespace you intend to use.
 
-![namespace-screen](./images/identity-graph-viewer/identity-namespace.png)
+![namespace-screen](../images/identity-graph-viewer/identity-namespace.png)
 
 The **[!UICONTROL Select identity namespace]** panel appears. This screen contains a list of namespaces at your disposal, including information about a namespace's **[!UICONTROL Display name]**, **[!UICONTROL Identity symbol]**, **[!UICONTROL Owner]**, **[!UICONTROL Last updated]** date, and **[!UICONTROL Description]**.
 
 Select the namespace you intend to use and click **[!UICONTROL Select]** to proceed.
 
-![select-identity-namespace](./images/identity-graph-viewer/select-identity-namespace.png)
+![select-identity-namespace](../images/identity-graph-viewer/select-identity-namespace.png)
 
 Once you have selected a namespace, enter its corresponding value in the **[!UICONTROL Identity value]** text box and select **[!UICONTROL View]**.
 
-![add-identity-value](./images/identity-graph-viewer/identity-value.png)
+![add-identity-value](../images/identity-graph-viewer/identity-value.png)
 
 The identity graph viewer appears. On the left side of the screen is a force-directed graph displaying all of the identities linked to the namespace you selected and how they are stitched together. You can hover over an identity to see information about its value. This information is also displayed in a tabled list in the center of the screen.
 
@@ -42,16 +42,18 @@ Select an identity to update the highlighted row on the **[!UICONTROL Identity t
 
 Select **[!UICONTROL Data source]** from the header to see more information regarding the batch. Alternatively, you can select any of the links that connect identities together to see their corresponding batch IDs.
 
-![identity-graph](./images/identity-graph-viewer/graph-view.png)
+![identity-graph](../images/identity-graph-viewer/graph-view.png)
 
 The **[!UICONTROL Data source]** screen displays a list of batch IDs linked to the identities within the identity graph. The right rail of the **[!UICONTROL Data source]** screen contains more information regarding the batch ID, including details about its dataset and schema. Select a batch ID to see a more comprehensive overview of that particular batch.
 
-![select-links](./images/identity-graph-viewer/select-edge.png)
+![select-links](../images/identity-graph-viewer/select-edge.png)
 
-Identity graphs with larger clusters of identities are also accessible through the identity graph viewer. The maximum number of identities that can be displayed through the identity graph viewer is 100.
+Identity graphs with larger clusters of identities are also accessible through the identity graph viewer. The maximum number of linked identities that can be displayed through the identity graph viewer is 150.
 
 >[!IMPORTANT]
 >
 >An identity graph requires a minimum of two linked identities to be generated.
 
-![large-cluster](./images/identity-graph-viewer/large-cluster.png)
+![large-cluster](../images/identity-graph-viewer/large-cluster.png)
+
+## Next steps
