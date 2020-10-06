@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;query service;Query service;pr
 solution: Experience Platform
 title: Prepared statements
 topic: prepared statements
+description: In SQL, prepared statements are used to template similar queries or updates. Adobe Experience Platform Query Service supports prepared statements by using a parameterized query.
 ---
 
 # Prepared statements

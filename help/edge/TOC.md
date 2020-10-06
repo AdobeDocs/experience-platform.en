@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title:  Adobe Experience Platform Web SDK Help
 breadcrumb-title: Web SDK Guide
-user-guide-description: Interact with Adobe Experience Cloud services through the Adobe Experience Platform Edge Network.
+user-guide-description: Interact with Experience Cloud services through the Edge Network.
 ---
 
 # Adobe Experience Platform Web SDK {#edge}
@@ -34,6 +34,10 @@ user-guide-description: Interact with Adobe Experience Cloud services through th
     * [Sending Data to Adobe Analytics](solution-specific/analytics/link-tracking.md)
   * Audience Manager {#aam}
     * [Audience Manager Overview](solution-specific/audience-manager/audience-manager-overview.md)
+  * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
+    * [Overview](solution-specific/iab-tcf/overview.md)
+    * [Integrate with Launch](solution-specific/iab-tcf/with-launch.md)
+    * [Integrate without Launch](solution-specific/iab-tcf/without-launch.md)
   * Target {#target}
     * [Target overview](solution-specific/target/target-overview.md)
     * [Flicker management](solution-specific/target/flicker-management.md)

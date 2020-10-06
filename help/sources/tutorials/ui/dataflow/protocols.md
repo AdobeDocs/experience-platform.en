@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;protocol connector
 solution: Experience Platform
 title: Configure a dataflow for a protocol connector in the UI
 topic: overview
+type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to an Adobe Experience Platform dataset. This tutorial provides steps to configure a new dataflow using your protocols account.
 ---
 
@@ -60,7 +61,11 @@ To ingest data into a new dataset, select **[!UICONTROL Create new dataset]** an
 
 You can attach a schema field by entering a schema name in the **[!UICONTROL Select schema]** search bar. You can also select the drop down icon to see a list of existing schemas. Alternatively, you can select **[!UICONTROL Advanced search]** to access screen of existing schemas including their respective details.
 
-![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
+During this step, you can enable your dataset for [!DNL Real-time Customer Profile] and create a holistic view of an entity's attributes and behaviors. Data from all enabled datasets will be included in [!DNL Profile] and changes are applied when you save your dataflow.
+
+Toggle the **[!UICONTROL Profile dataset]** button to enable your target dataset for [!DNL Profile].
+
+![create-new-dataset](../../../images/tutorials/dataflow/protocols/new-dataset.png)
 
 The **[!UICONTROL Select schema]** dialog appears. Select the schema you wish to apply to the new dataset, then click **[!UICONTROL Done]**.
 

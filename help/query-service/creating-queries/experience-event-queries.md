@@ -3,6 +3,8 @@ keywords: Experience Platform;home;popular topics;query service;Query service;ex
 solution: Experience Platform
 title: ExperienceEvent queries
 topic: queries
+type: Tutorial
+description: The following document provides examples of queries involving ExperienceEvents.
 ---
 
 # [!DNL ExperienceEvent] queries
