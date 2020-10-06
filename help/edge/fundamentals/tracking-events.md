@@ -64,7 +64,7 @@ alloy("sendEvent", {
 dataLayer.commerce = null;
 ```
 
-In this example, we cloned our data layer by serializing it to JSON, then deserializing it. We then passed the cloned result into the `sendEvent` command. By doing so, we ensure that the `sendEvent` command has a snapshot of our data layer as it existed when the `sendEvent` command was executed so that later modifications to the original data layer object will not be reflected in the data sent to the server. If you are using an event-driven data layer, cloning your data is likely already handled automatically. For example, if you are using the [Adobe Client Data Layer](https://github.com/adobe/adobe-client-data-layer/wiki), the `getState()` method provides a computed, cloned snapshot of all prior changes.
+In this example, we cloned our data layer by serializing it to JSON, then deserializing it. We then passed the cloned result into the `sendEvent` command. By doing so, we ensure that the `sendEvent` command has a snapshot of our data layer as it existed when the `sendEvent` command was executed so that later modifications to the original data layer object will not be reflected in the data sent to the server. If you are using an event-driven data layer, cloning your data is likely already handled automatically. For example, if you are using the [Adobe Client Data Layer](https://github.com/adobe/adobe-client-data-layer/wiki), the `getState()` method provides a computed, cloned snapshot of all prior changes. This is also handled for you automatically if you are using the AEP Web SDK Launch extension.
 
 >[!NOTE]
 >
