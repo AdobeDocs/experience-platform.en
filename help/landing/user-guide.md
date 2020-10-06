@@ -8,7 +8,9 @@ description: Adobe Experience Platform
 
 # Adobe Experience Platform user guide
 
-add intro here
+Adobe Experience Platform is the most powerful, flexible, and open system on the market for building and managing complete solutions that drive customer experience. [!DNL Experience Platform] enables organizations to centralize and standardize customer data and content from any system and apply data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
+
+This guide provides an introduction to using the Platform user interface, explaining what the various components are used for.
 
 ## Top navigation bar
 
@@ -46,45 +48,51 @@ The navigation bar on the left lists all the different sections supported in the
 
 The **Workflow** section shows a list of workflows for ingesting data from various sources to Platform.
 
-blurb about Workflow
+![](images/user-guide/workflows.png)
+
+The **[!UICONTROL Map CSV to XDM schema]** workflow lets you upload and convert a CSV file to an XDM schema format. More information about this workflow can be found in the [Map a CSV file to an XDM schema tutorial](../ingestion/tutorials/map-a-csv-file.md).
+
+The **[!UICONTROL Create dataset from schema]** workflow lets you create a new dataset from a registered XDM schema. More information about this workflow can be found in the [datasets user guide](../catalog/datasets/user-guide.md#schema).
+
+The **[!UICONTROL Create dataset from CSV]** workflow lets you create a new dataset by uploading a CSV file. More information about this workflow can be found in the [datasets user guide](../catalog/datasets/user-guide.md#csv). 
 
 ### Connections
 
-The **Sources** section lets you create, update, and delete source connections, allowing you to ingest data from external sources into Platform. More information about Sources can be found in the [sources overview](../sources/home.md).
+The **[!UICONTROL Sources]** section lets you create, update, and delete source connections, allowing you to ingest data from external sources into Platform. More information about Sources can be found in the [sources overview](../sources/home.md).
 
-The **Destinations** section lets you create, update, and delete destinations, allowing you to export data from Platform to many external destinations. More information about Destinations can be found in the [destinations overview](../rtcdp/destinations/destinations-overview.md).
+The **[!UICONTROL Destinations]** section lets you create, update, and delete destinations, allowing you to export data from Platform to many external destinations. More information about Destinations can be found in the [destinations overview](../rtcdp/destinations/destinations-overview.md).
 
 ### Customers
 
-The **Profiles** section lets you browse profiles, view profile metrics, create and manage merge policies, and view union schemas. To learn more about using the Profiles section, please read the [profile user guide](../profile/ui/user-guide.md). More information about Real-time Customer Profile can be found in the [Real-time Customer Profile overview](../profile/home.md).
+The **[!UICONTROL Profiles]** section lets you browse profiles, view profile metrics, create and manage merge policies, and view union schemas. To learn more about using the Profiles section, please read the [profile user guide](../profile/ui/user-guide.md). More information about Real-time Customer Profile can be found in the [Real-time Customer Profile overview](../profile/home.md).
 
-The **Segments** section lets you create and manage segment definitions. To learn more about using the Segments section, please read the [segmentation user guide](../segmentation/ui/overview.md). More information about Segmentation Service can be found in the [Segmentation Service overview](../segmentation/home.md).
+The **[!UICONTROL Segments]** section lets you create and manage segment definitions. To learn more about using the Segments section, please read the [segmentation user guide](../segmentation/ui/overview.md). More information about Segmentation Service can be found in the [Segmentation Service overview](../segmentation/home.md).
 
-The **Identities** section lets you create and manage identity namespaces. More information about the Identities section, including information about identity namespaces and how to use identities in the Platform UI, can be found in the [identity namespace overview](../identity-service/namespaces.md).
+The **[!UICONTROL Identities]** section lets you create and manage identity namespaces. More information about the Identities section, including information about identity namespaces and how to use identities in the Platform UI, can be found in the [identity namespace overview](../identity-service/namespaces.md).
 
 ### Privacy
 
-The **Policies** section lets you create and manage data usage policies. To learn more about using the Policies section, please read the [data usage policies user guide](../data-governance/policies/user-guide.md). More information about data usage policies can be found in the [data usage policies overview](../data-governance/policies/overview.md).
+The **[!UICONTROL Policies]** section lets you create and manage data usage policies. To learn more about using the Policies section, please read the [data usage policies user guide](../data-governance/policies/user-guide.md). More information about data usage policies can be found in the [data usage policies overview](../data-governance/policies/overview.md).
 
-The **Requests** section lets you create and manage privacy requests. **Note:** You must be allowlisted in order to have access to the Privacy Service UI. To learn more about using the Requests section, please read the [Privacy Service user guide](../privacy-service/ui/user-guide.md). More information about Privacy Service can be found in the [Privacy Service overview](../privacy-service/home.md). 
+The **[!UICONTROL Requests]** section lets you create and manage privacy requests. **Note:** You must be allowlisted in order to have access to the Privacy Service UI. To learn more about using the Requests section, please read the [Privacy Service user guide](../privacy-service/ui/user-guide.md). More information about Privacy Service can be found in the [Privacy Service overview](../privacy-service/home.md). 
 
 ### Data Science
 
-The **Notebooks** section INFO. To learn more about using the Notebooks section, please read the [JupyterLab user guide](../data-science-workspace/jupyterlab/overview.md). More information about Data Science Workspace can be found in the [Data Science Workspace overview](../data-science-workspace/home.md)
+The **[!UICONTROL Notebooks]** section provides access to JupyterLab, an interactive development environment that lets you explore, analyze, and model your data. To learn more about using the Notebooks section, please read the [JupyterLab user guide](../data-science-workspace/jupyterlab/overview.md). More information about Data Science Workspace can be found in the [Data Science Workspace overview](../data-science-workspace/home.md)
 
-The **Models** section INFO. More information about the Models section can be found in the [Train and evaluate a model tutorial](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
+The **[!UICONTROL Models]** section lets you leverage machine learning and artificial intelligence to create, develope, train, and tune models to make predictions. More information about the Models section can be found in the [Train and evaluate a model tutorial](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
 
-The **Services** section INFO. More information about the Services section can be found in the [Publishing a Model as a Service tutorial](../data-science-workspace/models-recipes/publish-model-service-ui.md).
+The **[!UICONTROL Services]** section lets you manage your published models for scheduled training and scoring or leverage Adobe's Intelligent Services — a set of AI services that deliver real-time, personalized customer experiences. More information about the Services section can be found in the [Publishing a Model as a Service tutorial](../data-science-workspace/models-recipes/publish-model-service-ui.md).
 
 ### Data management
 
-The **Schemas** section lets you create and manage schemas. To learn more about how to use the Schemas section, please read the [Create a schema tutorial](../xdm/tutorials/create-schema-ui.md). More information about Experience Data Model (XDM) can be found in the [XDM overview](../xdm/home.md).
+The **[!UICONTROL Schemas]** section lets you create and manage schemas. To learn more about how to use the Schemas section, please read the [Create a schema tutorial](../xdm/tutorials/create-schema-ui.md). More information about Experience Data Model (XDM) can be found in the [XDM overview](../xdm/home.md).
 
-The **Datasets** section lets you create and manage datasets. More information about the Datasets section can be found in the [datasets user guide](../catalog/datasets/user-guide.md).
+The **[!UICONTROL Datasets]** section lets you create and manage datasets. More information about the Datasets section can be found in the [datasets user guide](../catalog/datasets/user-guide.md).
 
-The **Queries** section lets you create and manage queries, logs SQL queries made by Query Service, as well as shows your Postgres credentials. More information about the Queries section can be found in the [Query Service user guide](../query-service/ui/overview.md).
+The **[!UICONTROL Queries]** section lets you create and manage queries, logs SQL queries made by Query Service, as well as shows your Postgres credentials. More information about the Queries section can be found in the [Query Service user guide](../query-service/ui/overview.md).
 
-The **Monitoring** section lets you monitor batch and streaming ingestion. More information about the Monitoring section can be found in the [monitoring data ingestion user guide](../ingestion/quality/monitor-data-flows.md).
+The **[!UICONTROL Monitoring]** section lets you monitor batch and streaming ingestion. More information about the Monitoring section can be found in the [monitoring data ingestion user guide](../ingestion/quality/monitor-data-flows.md).
 
 ## Metrics dashboard
 
@@ -92,13 +100,13 @@ The metrics dashboard provides cards that gives you information about datasets, 
 
 ![](images/user-guide/homepage-dashboard.png)
 
-The **Datasets** section shows the number of datasets within your IMS Organization in Platform. This counter is updated when a new dataset is created. More information about datasets can be found in the [datasets overview](../catalog/datasets/overview.md).
+The **[!UICONTROL Datasets]** section shows the number of datasets within your IMS Organization in Platform. This counter is updated when a new dataset is created. More information about datasets can be found in the [datasets overview](../catalog/datasets/overview.md).
 
-The **Profiles** section shows the total number of people with profiles within your IMS Organization in Platform, excluding profile fragments. This total number of people represents the total addressable audience, and is updated once every 24 hours. More information about profiles can be found in the [Real-time Customer Profile overview](../profile/home.md).
+The **[!UICONTROL Profiles]** section shows the total number of people with profiles within your IMS Organization in Platform, excluding profile fragments. This total number of people represents the total addressable audience, and is updated once every 24 hours. More information about profiles can be found in the [Real-time Customer Profile overview](../profile/home.md).
 
-The **Segments** section shows the total number of segments created within your IMS Organization in Platform. This number is updated when a new segment is created. More information about segments can be found in the [Segmentation Service overview](../segmentation/home.md).
+The **[!UICONTROL Segments]** section shows the total number of segments created within your IMS Organization in Platform. This number is updated when a new segment is created. More information about segments can be found in the [Segmentation Service overview](../segmentation/home.md).
 
-The **Destinations** section shows the total number of destinations created for the organization. This number is updated when a new destination is created. More information about destinations can be found in the [Destinations overview](../rtcdp/destinations/destinations-overview.md).
+The **[!UICONTROL Destinations]** section shows the total number of destinations created for the organization. This number is updated when a new destination is created. More information about destinations can be found in the [Destinations overview](../rtcdp/destinations/destinations-overview.md).
 
 ## Recent data
 
@@ -106,19 +114,20 @@ The recent data dashboard provides information about recently created datasets, 
 
 ![](images/user-guide/homepage-recent.png)
 
-The **Recent datasets** section lists the five most recently created datasets within the IMS Organization. This list is updated every time a new dataset is created. You can select a dataset from the list to view more information about the specified dataset or select **View all** to see a list of all the created datasets. More information about datasets can be found in the [datasets overview](../catalog/datasets/overview.md).
+The **[!UICONTROL Recent datasets]** section lists the five most recently created datasets within the IMS Organization. This list is updated every time a new dataset is created. You can select a dataset from the list to view more information about the specified dataset or select **[!UICONTROL View all]** to see a list of all the created datasets. More information about datasets can be found in the [datasets overview](../catalog/datasets/overview.md).
 
-The **Recent sources** section lists the five most recently created source connectors within the IMS Organization. This list is updated every time a new source connector is created. You can select a source connection from the list to view more information about the specified connector or select **View all** to see a list of all the created source connections. More information about Sources can be found in the [Sources overview](../sources/home.md).
+The **[!UICONTROL Recent sources]** section lists the five most recently created source connectors within the IMS Organization. This list is updated every time a new source connector is created. You can select a source connection from the list to view more information about the specified connector or select **[!UICONTROL View all]** to see a list of all the created source connections. More information about Sources can be found in the [Sources overview](../sources/home.md).
 
-The **Recent segments** section lists the five most recently created segment definitions within the IMS Organization. This list is updated every time a new segment definition is created. You can select a segment definition from the list to view more information about the specified segment definition or select **View al** to see a list of all the created segment definitions. More information about segments can be found in the [Segmentation Service overview](../segmentation/home.md).
+The **[!UICONTROL Recent segments]** section lists the five most recently created segment definitions within the IMS Organization. This list is updated every time a new segment definition is created. You can select a segment definition from the list to view more information about the specified segment definition or select **[!UICONTROL View all]** to see a list of all the created segment definitions. More information about segments can be found in the [Segmentation Service overview](../segmentation/home.md).
 
-The **Recent destinations** section lists the five most recently created destinations within the IMS Organization. This list is updated every time a new destination is created. You can select a destination from the list to view more information about the specified destination or select **View all** to see a list of all the created destinations. More information about Destinations can be found in the [Destinations overview](../rtcdp/destinations/destinations-overview.md).
+The **[!UICONTROL Recent destinations]** section lists the five most recently created destinations within the IMS Organization. This list is updated every time a new destination is created. You can select a destination from the list to view more information about the specified destination or select **[!UICONTROL View all]** to see a list of all the created destinations. More information about Destinations can be found in the [Destinations overview](../rtcdp/destinations/destinations-overview.md).
 
 ## Recommended learning
 
-The **Recommended learning** section provides links to useful documentation to get started with Adobe Experience Platform.
+The **[!UICONTROL Recommended learning]** section provides links to useful documentation to get started with Adobe Experience Platform.
 
 ![](images/user-guide/homepage-recommended.png)
 
 ## Next steps
 
+By reading this guide, you now know how to navigate and effectively use the Platform UI. For more information on getting started with the Platform APIs, please read the [API fundamentals guide](./api-fundamentals.md).
