@@ -12,6 +12,4 @@ user-guide-description: Discover and access ingested datasets within Platform.
 - [Data Access API](api.md)
 - Tutorials {#tutorials}
   - [Access dataset data](tutorials/dataset-data.md)
-  - [Python SDK](tutorials/python-sdk.md)
-  - [Spark SDK](tutorials/spark-sdk.md)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
