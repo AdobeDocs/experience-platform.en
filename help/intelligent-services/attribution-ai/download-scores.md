@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;attribution ai;access scores;popular topics
+keywords: Experience Platform;attribution ai;access scores;popular topics;download scores;attribution ai scores;export;Export
 solution: Experience Platform
 title: Accessing scores in Attribution AI
 topic: Accessing scores
+description: This document serves as a guide for downloading scores for Attribution AI.
 ---
 
 # Downloading scores in Attribution AI
@@ -54,6 +55,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?&dataSet=
 A successful response returns a payload containing a batch ID object. In this example, the Key value to the object returned is the batch ID `01E5QSWCAASFQ054FNBKYV6TIQ`. Copy your batch ID to use in the next API call.
 
 >[!NOTE]
+>
 > The following response has had the `tags` object reformated for readability.
 
 ```json

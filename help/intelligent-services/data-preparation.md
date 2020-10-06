@@ -231,7 +231,7 @@ This field contains information related to marketing activities that are active 
 
 For complete information regarding each of the required sub-fields for `xdm:productListItems`, please refer to the [marketing sechma](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) spec.
 
-## Mapping and ingesting data (#mapping)
+## Mapping and ingesting data {#mapping}
 
 Once you have determined whether your marketing events data can be mapped to the CEE schema, the next step is to determine which data you to bring into [!DNL Intelligent Services]. All historical data used in [!DNL Intelligent Services] must fall within the minimum time window of four months of data, plus the number of days intended as a lookback period.
 
@@ -265,7 +265,7 @@ Once you have created and saved the schema, you can create a new dataset based o
 * [Create a dataset in the UI](../catalog/datasets/user-guide.md#create) (Follow the workflow for using an existing schema)
 * [Create a dataset in the API](../catalog/datasets/create.md)
 
-After the dataset is created, you can find it in the Platform UI within the *[!UICONTROL Datasets]* workspace.
+After the dataset is created, you can find it in the Platform UI within the **[!UICONTROL Datasets]** workspace.
 
 ![](images/data-preparation/dataset-location.png)
 

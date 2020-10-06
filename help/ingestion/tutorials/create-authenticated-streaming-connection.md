@@ -1,13 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;authenticated streaming connection;streaming connection;create streaming connection;create authenticated streaming connection;streaming ingestion;ingestion;
 solution: Experience Platform
 title: Create an authenticated streaming connection
 topic: tutorial
+type: Tutorial
+description: Authenticated Data Collection allows Adobe Experience Platform services, such as Real-time Customer Profile and Identity, to differentiate between records coming from trusted sources and untrusted sources.
 ---
 
 # Creating an authenticated streaming connection
 
-Authenticated Data Collection allows Adobe Experience Platform services, such as [!DNL Real-time Customer Profile] and [!DNL Identity], to differentiate between records coming from trusted sources and un-trusted sources. Clients that want to send Personally Identifiable Information (PII) can do so by sending access tokens as part of the POST request.
+Authenticated Data Collection allows Adobe Experience Platform services, such as [!DNL Real-time Customer Profile] and [!DNL Identity], to differentiate between records coming from trusted sources and untrusted sources. Clients that want to send Personally Identifiable Information (PII) can do so by sending access tokens as part of the POST request.
 
 ## Getting started
 
@@ -17,8 +19,8 @@ After registering a streaming connection, you, as the data producer, will have a
 
 This tutorial also requires a working knowledge of various Adobe Experience Platform services. Before beginning this tutorial, please review the documentation for the following services:
 
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes experience data.
-- [!DNL Real-time Customer Profile](../../profile/home.md): Provides a unified, consumer profile in real-time based on aggregated data from multiple sources.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes experience data.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, consumer profile in real-time based on aggregated data from multiple sources.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to streaming ingestion APIs.
 

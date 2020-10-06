@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;api;
 solution: Experience Platform
 title: Segmentation Service developer guide
 topic: developer guide
+description: The following documentation provides additional information that you need to know in order to successfully work with the Segmentation API.
 ---
 
 # Getting started with [!DNL Segmentation Service] {#getting-started}
@@ -11,9 +12,9 @@ Adobe Experience Platform [!DNL Segmentation Service] allows you to build segmen
 
 The developer guide requires a working understanding of the various [!DNL Experience Platform] services involved with using [!DNL Segmentation Service].
 
-- [!DNL Segmentation](../home.md): Allows you to build audience segments from [!DNL Real-time Customer Profile] data.
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-- [!DNL Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+- [[!DNL Segmentation]](../home.md): Allows you to build audience segments from [!DNL Real-time Customer Profile] data.
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully work with the [!DNL Segmentation] API.

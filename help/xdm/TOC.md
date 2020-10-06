@@ -2,6 +2,8 @@
 product: experience-platform
 audience: user
 user-guide-title: Experience Data Model (XDM) System Help
+breadcrumb-title: Data Model (XDM) Guide
+user-guide-description: Use Experience Data Model (XDM) classes and mixins to standardize experience data.
 ---
 
 # Experience Data Model (XDM) System {#xdm}
@@ -9,6 +11,7 @@ user-guide-title: Experience Data Model (XDM) System Help
 * [XDM System overview](home.md)
 * XDM schemas {#schema}
   * [Basics of schema composition](schema/composition.md)
+  * [XDM field type constraints](schema/field-constraints.md)
   * [XDM field dictionary](schema/field-dictionary.md)
   * Schema use cases {#use-cases}
     * [Privacy Consent mixin](schema/privacy-consent.md)

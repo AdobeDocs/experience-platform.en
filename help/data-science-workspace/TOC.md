@@ -2,6 +2,8 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Data Science Workspace Help
+breadcrumb-title: Data Science Workspace Guide
+user-guide-description: Use machine learning to develop, train, and score models and recipes with Adobe Sensei and JupyterLab Notebooks.
 ---
 
 # Data Science Workspace {#data-science-workspace}
@@ -10,9 +12,10 @@ user-guide-title: Adobe Experience Platform Data Science Workspace Help
 * [Data Science Workspace walkthrough](walkthrough.md)
 * JupyterLab notebooks {#jupyterlab}
   * [JupyterLab user guide](jupyterlab/overview.md)
-  * [Analyze your data using notebooks](jupyterlab/analyze-your-data.md)
-  * [Query service in Jupyter notebook](jupyterlab/query-service.md)
-  * [Create a recipe using Jupyter notebooks](jupyterlab/create-a-recipe.md)
+  * [Data access](jupyterlab/access-notebook-data.md)
+  * [Analyze your data](jupyterlab/analyze-your-data.md)
+  * [Query service](jupyterlab/query-service.md)
+  * [Create a recipe](jupyterlab/create-a-recipe.md)
   * [Collaborate in JupyterLab using Git](jupyterlab/using-git-for-collaboration.md)
 * Sensei Machine Learning API {#api}
   * [Getting started](api/getting-started.md)
@@ -52,7 +55,6 @@ user-guide-title: Adobe Experience Platform Data Science Workspace Help
   * [Publish a model as a service (UI)](models-recipes/publish-model-service-ui.md)
   * [Publish a model as a service (API)](models-recipes/publish-model-service-api.md)
   * [Schedule automated training and scoring on a service (UI)](models-recipes/schedule-models-ui.md)
-* [Recipe and notebook migration guides](recipe-notebook-migration.md) 
 * [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

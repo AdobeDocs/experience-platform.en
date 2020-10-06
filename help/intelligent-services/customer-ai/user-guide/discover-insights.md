@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;insights; customer ai;popular topics
+keywords: Experience Platform;insights;customer ai;popular topics
 solution: Experience Platform
 title: Discovering insights with Customer AI
 topic: Discovering insights
+description: Customer AI, as part of Intelligent Services provides marketers with the power to leverage Adobe Sensei to anticipate what your customers next action is going to be. Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale. This is accomplished without having to transform the business needs to a machine learning problem, picking an algorithm, training, or deployment.
 ---
 
 # Discovering insights with Customer AI
@@ -105,6 +106,7 @@ For each score bucket, a card is generated that shows the top 10 influential fac
 Clicking the **[!UICONTROL Create Segment]** button in any of the buckets for Low, Medium, and High propensity redirects you to the segment builder.
 
 >[!NOTE]
+>
 >The **[!UICONTROL Create Segment]** button is only available if Real-time Customer Profile is enabled for the dataset. For more information on how to enable Real-time Customer Profile, visit the [Real-time Customer Profile overview](../../../rtcdp/overview.md).
 
 ![Click create segment](../images/insights/influential-factors-create-segment.png)
@@ -113,7 +115,9 @@ Clicking the **[!UICONTROL Create Segment]** button in any of the buckets for Lo
 
 The segment builder is used to define a segment. When selecting **[!UICONTROL Create Segment]** from the Insights page, Customer AI automatically adds the selected buckets information to the segment. To finish creating your segment, simply fill in the *Name* and *Description* containers located in the right rail of the segment builder user interface. After you have given the segment a name and description, click **[!UICONTROL Save]** in the top-right.
 
->![NOTE] Since the propensity scores are written to the individual profile, they are available in the Segment builder like any other profile attributes. When you navigate to the segment builder to create new segments you can see all the various propensity scores under your namespace Customer AI.
+>[!NOTE]
+>
+>Since the propensity scores are written to the individual profile, they are available in the Segment builder like any other profile attributes. When you navigate to the segment builder to create new segments you can see all the various propensity scores under your namespace Customer AI.
 
 ![Segment fill in](../images/insights/segment-saving.png)
 

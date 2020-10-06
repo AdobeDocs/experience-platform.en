@@ -1,4 +1,5 @@
 ---
+keywords: Azure event hub destination;azure event hub;azure eventhub
 title: (Beta) Azure Event Hubs destination
 seo-title: (Beta) Azure Event Hubs destination
 description: Create a real-time outbound connection to your Azure Event Hubs storage to stream data from Experience Platform.
@@ -28,6 +29,10 @@ You can create a real-time outbound connection to your [!DNL Azure Event Hubs] s
 By using streaming destinations such as [!DNL Azure Event Hubs], you can easily feed high-value segmentation events and associated profile attributes into your systems of choice.
 
 For example, a prospect downloaded a white-paper which qualifies them into a "high-propensity to convert" segment. By mapping the segment that the prospect falls in to the [!DNL Azure Event Hubs] destination, you would receive this event in [!DNL Azure Event Hubs]. There, you can employ a do-it-yourself approach and describe business logic on top of the event, as you think would work best with your enterprise IT systems.
+
+## Export Type {#export-type}
+
+**Profile Export** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [destination activation workflow](/help/rtcdp/destinations/activate-destinations.md#select-attributes).\
 
 ## Connect destination {#connect-destination}
 
@@ -59,7 +64,7 @@ See [Activate profiles and segments to a destination](/help/rtcdp/destinations/a
 
 Your exported [!DNL Experience Platform] data lands in [!DNL Azure Event Hubs] in JSON format. For example, the event below contains the email address profile attribute of an audience that has qualified for a certain segment and exited another segment. The identities for this prospect are ECID and email.
 
-```
+```json
 {
   "person": {
     "email": "yourstruly@adobe.con"

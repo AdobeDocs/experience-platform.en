@@ -1,4 +1,5 @@
 ---
+keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Google Ad Manager;Google ad manager
 title: Google Ad Manager Destination
 seo-title: Google Ad Manager Destination
 description: Google Ad Manager, formerly known as DoubleClick for Publishers or DoubleClick AdX, is an ad serving platform from Google that gives publishers the means to manage the display of advertisements on their websites, through video and in mobile apps. 
@@ -23,6 +24,10 @@ Note the following details that are specific to [!DNL Google Ad Manager] destina
 >
 >If you are looking to create your first destination with [!DNL Google Ad Manager] and have not enabled the [ID sync functionality](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up [!DNL Google] integrations in Audience Manager, the ID syncs you had set up carry over to Adobe Real-time CDP.
 
+### Export Type {#export-type}
+
+**Segment Export** - you are exporting all members of a segment (audience) to the Google destination.
+
 ## Prerequisites
 
 ### Allow list
@@ -39,10 +44,14 @@ Before creating the [!DNL Google Ad Manager] destination in Adobe Real-time CDP,
 * **Audience Link ID** : this is your account with [!DNL Google Ad Manager]
 * Your account type. **DFP by Google** or **AdX buyer**.
 
-## Create destination
+## Configure destination
 
-1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL Google Ad Manager], and select **[!UICONTROL Create destination]**.
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL Google Ad Manager], and select **[!UICONTROL Configure]**.
     ![Connect Google Ad Manager destination](/help/rtcdp/destinations/assets/google-1-destination.png)
+
+    >[!NOTE]
+    >
+    >If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](/help/rtcdp/destinations/destinations-workspace.md#catalog) section of the destination workspace documentation.  
 
 2. In the **Setup** step of the create destination workflow, fill in the [!UICONTROL Basic Information] for the destination. <br>
     ![Basic information Google Ad Manager](/help/rtcdp/destinations/assets/google-1-destination-setup-step.png)

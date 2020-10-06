@@ -1,8 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;streaming connection;create streaming connection;ui guide;tutorial;create a streaming connection;streaming ingestion;ingestion;
 solution: Experience Platform
 title: Create a streaming connection using the UI
 topic: tutorial
+type: Tutorial
+description: This UI guide will help you create a streaming connection using Adobe Experience Platform.
 ---
 
 # Create a streaming connection using the UI
@@ -19,30 +21,30 @@ Please note that in order to complete this guide, you will need access to Adobe 
 
 ## Create a streaming connection
 
-After logging in to the [!DNL Experience Platform] UI, click **[!UICONTROL Sources]** to open the *[!UICONTROL Catalog]* tab. This page displays the available source types as individual cards, with each card containing a bubble that displays the number of data flows that have been created from streaming connections to datasets. 
+After logging in to the [!DNL Experience Platform] UI, click **[!UICONTROL Sources]** to open the **[!UICONTROL Catalog]** tab. This page displays the available source types as individual cards, with each card containing a bubble that displays the number of data flows that have been created from streaming connections to datasets. 
 
 ![](../images/streaming-ingestion/ui/click-sources.png)
 
-On the *[!UICONTROL Sources]* page, click **[!UICONTROL HTTP API]**, then **[!UICONTROL Connect source]**. 
+On the **[!UICONTROL Sources]** page, click **[!UICONTROL HTTP API]**, then **[!UICONTROL Connect source]**. 
 
 ![](../images/streaming-ingestion/ui/click-connect-source.png)
 
-The *[!UICONTROL Connect to HTTP]* screen appears. Under *[!UICONTROL Service details]*, provide both the **[!UICONTROL name]** and a **[!UICONTROL description]** for your new streaming connection.
+The **[!UICONTROL Connect to HTTP]** screen appears. Under **[!UICONTROL Service details]**, provide both the **[!UICONTROL name]** and a **[!UICONTROL description]** for your new streaming connection.
 
-Under *[!UICONTROL Account Authentication]*, select the following configuration properties for your streaming connection:
+Under **[!UICONTROL Account Authentication]**, select the following configuration properties for your streaming connection:
 
 - **[!UICONTROL Authentication]:** Whether or not the streaming connection requires authentication. Authentication ensures that data is collected from trusted sources. It is recommended that this is turned on if dealing with Personally Identifiable Information (PII).
 - **[!UICONTROL XDM Schema Compatibility]:** Whether or not this streaming connection will be sending events which are compatible with XDM schemas. By default, this property is turned **on**.
 
-Once you have finished selecting your configuration properties, click **[!UICONTROL Connect]**. Your streaming HTTP connection is now created, and can now be viewed under the *[!UICONTROL Browse]* tab in the *[!UICONTROL Sources]* workspace.
+Once you have finished selecting your configuration properties, click **[!UICONTROL Connect]**. Your streaming HTTP connection is now created, and can now be viewed under the **[!UICONTROL Browse]** tab in the **[!UICONTROL Sources]** workspace.
 
 ![](../images/streaming-ingestion/ui/http-sources-details.png)
 
-From the *[!UICONTROL Browse]* tab, you can click on your newly created Streaming HTTP Connection and view the details of that connection.
+From the **[!UICONTROL Browse]** tab, you can click on your newly created Streaming HTTP Connection and view the details of that connection.
 
 ![](../images/streaming-ingestion/ui/browse-sources.png)
 
-By clicking on the hyperlink of the connection name, you can select data to be displayed by configuring which dataset is connected, by clicking *[!UICONTROL Select data]*.
+By clicking on the hyperlink of the connection name, you can select data to be displayed by configuring which dataset is connected, by clicking **[!UICONTROL Select data]**.
 
 ![](../images/streaming-ingestion/ui/select-data.png)
 

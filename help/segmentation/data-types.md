@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type
+keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type;Segmentation data types;Segmentation;segmentation;Segmentation Service;Segmentation service data types;
 solution: Experience Platform
 title: Adobe Experience Platform Segmentation Service data types
 topic: overview

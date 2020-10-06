@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Microsoft SQL;microsoft sql;SQL;sql
 solution: Experience Platform
 title: SQL Server connector
 topic: overview
+description: The documentation below provides information on how to connect Microsoft SQL Server to Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL Microsoft] SQL Server connector

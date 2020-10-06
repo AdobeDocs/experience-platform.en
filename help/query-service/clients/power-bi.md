@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;Power BI;power bi;connect to query service;
 solution: Experience Platform
 title: Connect with Power BI
 topic: connect
+description: This document walks through the steps for connecting Power BI with Adobe Experience Platform Query Service.
 ---
 
 # Connect with [!DNL Power BI] (PC)
@@ -47,7 +48,7 @@ After performing those preparatory steps, you can connect [!DNL Power BI] to [!D
 SELECT web.webPageDetails.name AS Page_Name, 
 SUM(web.webPageDetails.pageviews.value) AS Page_Views 
 FROM _TABLE_ 
-WHERE _ACP_YEAR=2018 AND _ACP_MONTH=11 AND _ACP_DAY=20 
+WHERE TIMESTAMP >= to_timestamp('2018-11-20')
 GROUP BY web.webPageDetails.name 
 ORDER BY SUM(web.webPageDetails.pageviews.value) DESC 
 LIMIT 10

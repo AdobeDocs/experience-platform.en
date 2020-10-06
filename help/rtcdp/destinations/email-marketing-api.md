@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Create email marketing destinations
 topic: tutorial
+type: Tutorial
 ---
 
-# Create email marketing destinations and activate data in Adobe's [!DNL Real-time Customer Data Platform]
+# Create email marketing destinations and activate data using API calls in Adobe's [!DNL Real-time Customer Data Platform]
 
 This tutorial demonstrates how to use API calls to connect to your Adobe Experience Platform data, create an [email marketing destination](../../rtcdp/destinations/email-marketing-destinations.md), create a dataflow to your new created destination, and activate data to your new created destination.
 
@@ -19,9 +20,9 @@ If you prefer to use the user interface in Adobe's Real-time CDP to connect a de
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-*   [!DNL Experience Data Model (XDM) System](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-*   [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] is the system of record for data location and lineage within [!DNL Experience Platform].
-*   [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+*   [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+*   [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] is the system of record for data location and lineage within [!DNL Experience Platform].
+*   [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to activate data to email marketing destinations in Adobe Real-time CDP.
 
@@ -105,15 +106,13 @@ curl -X GET \
 
 -->
 
-```
-
+```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs' \
 --header 'accept: application/json' \
 --header 'x-gw-ims-org-id: {IMS_ORG}' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}'
-
 ```
 
 
@@ -174,8 +173,7 @@ curl -X POST \
 
 -->
 
-```
-
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -190,7 +188,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
                 "version": "1.0"
             }
 }'
-
 ```
 
 
@@ -244,7 +241,7 @@ curl -X POST \
 
 -->
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -331,7 +328,7 @@ curl -X POST \
 
 -->
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -414,7 +411,7 @@ curl -X POST \
 
 -->
 
-```
+```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -423,7 +420,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --data-raw '{
     "name": "TargetConnection for Adobe Campaign",
     "description": "Connection to Adobe Campaign",
-    "baseConnection": "{BASE_CONNECTION_ID}",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
     "connectionSpec": {
         "id": "{CONNECTION_SPEC_ID}",
         "version": "1.0"
@@ -547,7 +544,7 @@ PATCH /flows
 
 **Request**
 
-```
+```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -596,7 +593,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 *   `{DATAFLOW_ID}`: Use the data flow you obtained in the previous step.
 *   `{ETAG}`: Use the etag that you obtained in the previous step.
-*   `{SEGMENT_ID}`: Provide the segment ID that you want to export to this destination. To retrieve segment IDs for the segments that you want to activate, go to https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/ and look for the `GET /segment/jobs` operation.
+*   `{SEGMENT_ID}`: Provide the segment ID that you want to export to this destination. To retrieve segment IDs for the segments that you want to activate, go to **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, select **[!UICONTROL Segmentation Service API]** in the left navigation menu, and look for the `GET /segment/definitions` operation in **[!UICONTROL Segment Definitions]**.
 *   `{PROFILE_ATTRIBUTE}`: For example, `"person.lastName"`
 
 **Response**
@@ -619,7 +616,7 @@ GET /flows
 
 **Request**
 
-```
+```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
@@ -636,7 +633,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 The returned response should include in the `transformations` parameter the segments and profile attributes that you submitted in the previous step. A sample `transformations` parameter in the response could look like below:
 
-```
+```json
 "transformations": [
     {
         "name": "GeneralTransform",

@@ -1,8 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Authenticate;access
 solution: Experience Platform
 title: Authenticate and Access Experience Platform APIs
 topic: tutorial
+type: Tutorial
+description: This document provides a step-by-step tutorial for gaining access to an Adobe Experience Platform developer account in order to make calls to Experience Platform APIs. 
 ---
 
 # Authenticate and access [!DNL Experience Platform] APIs
@@ -40,7 +42,7 @@ Before creating integrations on Adobe I/O, your account must have developer perm
 
 **Gain developer access**
 
-Contact an [!DNL Admin Console] administrator in your Organization to add you as a developer for one of your Organization's products using the [!DNL Admin Console](https://adminconsole.adobe.com/).
+Contact an [!DNL Admin Console] administrator in your Organization to add you as a developer for one of your Organization's products using the [[!DNL Admin Console]](https://adminconsole.adobe.com/).
 
  ![](images/authentication/assign-developer.png)
 
@@ -148,7 +150,7 @@ If your response is similar to the one shown below, then your credentials are va
 
 ## Use Postman for JWT authentication and API calls
 
-[Postman](https://www.getpostman.com/) is a popular tool to work with RESTful APIs. This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) describes how you can set up postman to automatically perform JWT authentication and use it to consume Adobe Experience Platform APIs.
+[Postman](https://www.postman.com/) is a popular tool to work with RESTful APIs. This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) describes how you can set up postman to automatically perform JWT authentication and use it to consume Adobe Experience Platform APIs.
 
 ## Next steps
 

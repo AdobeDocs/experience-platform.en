@@ -1,8 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;datasets;tables;schemas;
 solution: Experience Platform
 title: Datasets vs tables and schemas
 topic: queries
+type: Tutorial
+description: This document contains information on viewing your datasets within the dataset schema structure and using PostgreSQL commands.
 ---
 
 # Datasets vs tables and schemas
@@ -28,7 +30,7 @@ To view the available tables on [!DNL Platform] with SQL, you can use either `\d
 
 `\d` displays the standard PostgreSQL view
 
-```
+```sql
              List of relations
  Schema |       Name      | Type  |  Owner   
 --------+-----------------+-------+----------
@@ -39,7 +41,7 @@ To view the available tables on [!DNL Platform] with SQL, you can use either `\d
 
 `SHOW TABLES;` is a custom command that gives a more detailed view and presents the table, as well as the dataset name found in the [!DNL Platform] UI.
 
-```
+```sql
        name      |        dataSetId         |     dataSet    | description | resolved 
 -----------------+--------------------------+----------------+-------------+----------
  luma_midvalues  | 5bac030c29bb8d12fa992e58 | Luma midValues |             | false
@@ -55,7 +57,7 @@ To view the root schema of a table use the `\d table_name` command.
 
 `\d luma_midvalues`
 
-```
+```sql
                          Table "public.luma_midvalues"
       Column       |             Type            | Collation | Nullable | Default 
 -------------------+-----------------------------+-----------+----------+---------
@@ -80,7 +82,7 @@ To go further into the schema, use underscores (`_`) to declare the column in th
 
 `\d luma_midvalues_web`
 
-```
+```sql
                  Composite type "public.luma_midvalues_web"
      Column     |               Type                | Collation | Nullable | Default 
 ----------------+-----------------------------------+-----------+----------+---------

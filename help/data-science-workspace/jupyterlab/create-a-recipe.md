@@ -1,8 +1,10 @@
 ---
-keywords: Experience Platform;JupyterLab;recipe;notebooks;Data Science Workspace;popular topics
+keywords: Experience Platform;JupyterLab;recipe;notebooks;Data Science Workspace;popular topics;create recipe
 solution: Experience Platform
 title: Create a recipe using Jupyter notebooks
-topic: Tutorial
+topic: tutorial
+type: Tutorial
+description: This tutorial will go over two main sections. First, you will create a machine learning model using a template within JupyterLab Notebook. Next, you will exercise the notebook to recipe workflow within JupyterLab to create a recipe within Data Science Workspace.
 ---
 
 # Create a recipe using Jupyter notebooks
@@ -24,14 +26,13 @@ The [!UICONTROL Recipe Builder] notebook allows you to run training and scoring 
 
 >[!NOTE]
 >
->
 >The Recipe Builder notebook supports working with all file formats but currently the Create Recipe functionality only supports [!DNL Python].
 
-![](../images/jupyterlab/create-recipe/recipe-builder.png)
+![](../images/jupyterlab/create-recipe/recipe_builder.png)
 
-When you click on the Recipe Builder notebook from the launcher, the notebook will be opened in the tab. The template used in the notebook is the Python Retail Sales Forecasting Recipe which can also be found in [this public repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
+When you click on the Recipe Builder notebook from the launcher, the notebook is be opened in the tab. The template used in the notebook is the Python Retail Sales Forecasting Recipe which can also be found in [this public repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-You will notice that in the toolbar there are three additional actions namely – **[!UICONTROL Train]**, **[!UICONTROL Score]** and **[!UICONTROL Create Recipe]**. These icons will only appear in the [!UICONTROL Recipe Builder] notebook. More information about these actions will be talked about [in the training and scoring section](#training-and-scoring) after building your Recipe in the notebook.
+You will notice that in the toolbar there are three additional actions namely – **[!UICONTROL Train]**, **[!UICONTROL Score]**, and **[!UICONTROL Create Recipe]**. These icons only appear in the [!UICONTROL Recipe Builder] notebook. More information about these actions will be talked about [in the training and scoring section](#training-and-scoring) after building your Recipe in the notebook.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -71,7 +72,6 @@ data_access_sdk_python
 
 >[!NOTE]
 >
->
 >Libraries or specific versions you add may be incompatible with the above libraries.
 
 ### Configuration files {#configuration-files}
@@ -110,11 +110,10 @@ The following two sections will go over loading data and data preparation.
 
 This step uses the [pandas dataframe](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Data can be loaded from files in [!DNL Adobe Experience Platform] using either the [!DNL Platform] SDK (`platform_sdk`), or from external sources using pandas' `read_csv()` or `read_json()` functions.
 
-- [!DNL Platform SDK](#platform-sdk)
+- [[!DNL Platform SDK]](#platform-sdk)
 - [External sources](#external-sources)
 
 >[!NOTE]
->
 >
 >In the Recipe Builder notebook, data is loaded via the `platform_sdk` data loader.
 
@@ -146,7 +145,6 @@ Now your data is in the dataframe object and can be analyzed and manipulated in 
 
 >[!CAUTION]
 >
->
 > `data_access_sdk_python` is no longer recommended, please see [Convert Data Access code to Platform SDK](../authoring/platform-sdk.md) for a guide on using the `platform_sdk` data loader.
 
 Users can load data using the Data Access SDK. The library can be imported at the top of the page by including the line:
@@ -165,7 +163,6 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 ```
 
 >[!NOTE]
->
 >
 >As mentioned in the [Configuration File section](#configuration-files), the following configuration parameters are set for you when you access data from [!DNL Experience Platform]:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID` 
@@ -296,7 +293,6 @@ The `pipeline.py` file includes logic for training and scoring.
 The purpose of training is to create a model using features and labels in your training dataset. 
 
 >[!NOTE]
->
 > 
 >_Features_ refer to the input variable used by the machine learning model to predict the _labels_.
 
@@ -472,6 +468,7 @@ Once the process is complete, the recipe will look something like this:
 ![](../images/jupyterlab/create-recipe/recipe_details.png)
 
 >[!CAUTION]
+>
 > - Do not delete any of the file cells
 > - Do not edit the `%%writefile` line at the top of the file cells
 > - Do not create recipes in different notebooks at the same time

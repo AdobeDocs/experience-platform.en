@@ -1,8 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;streaming connection;create streaming connection;api guide;tutorial;create a streaming connection;streaming ingestion;ingestion;
 solution: Experience Platform
 title: Create a streaming connection using the API
 topic: tutorial
+type: Tutorial
+description: This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs.
 ---
 
 # Creating a streaming connection using the API
@@ -17,8 +19,8 @@ After registering a streaming connection, you, as the data producer, will have a
 
 This tutorial also requires a working knowledge of various Adobe Experience Platform services. Before beginning this tutorial, please review the documentation for the following services:
 
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes experience data.
-- [!DNL Real-time Customer Profile](../../profile/home.md): Provides a unified, consumer profile in real-time based on aggregated data from multiple sources.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes experience data.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, consumer profile in real-time based on aggregated data from multiple sources.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to streaming ingestion APIs.
 

@@ -3,11 +3,12 @@ title: Quick start using plain javascript
 seo-title: Adobe Experience Platform Web SDK quick start 
 description: Quick start guide for using the Experience Platform Web SDK to collect data
 seo-description: Quick start guide for using the Experience Platform Web SDK  to collect data
+keywords: 1st-party domain;CNAME;schema;create schema;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;install sdk;install web sdk;configure;configure web sdk;
 ---
 
-# Welcome
+# Adobe Experience Platform Web SDK JavaScript quick start guide
 
-This guide leads you through the different ways to set up the Adobe Experience Platform Web SDK. To use this feature, you need to be whitelisted. If you would like to get on the waiting list, please reach out to your CSM.
+This guide leads you through the different ways to set up the Adobe Experience Platform Web SDK. To use this feature, you need to be on the allowlist. If you would like to get on the waiting list, please reach out to your Certified software manager (CSM).
 
 - Have a [1st-party domain (CNAME)](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html) enabled. If you already have a CNAME for Analytics, you should use that one. Testing in development works without a CNAME but you need one before you go to production.
 - Be entitled to Adobe Experience Platform.  If you have not purchased Platform, Adobe will provision you with Experience Platform Data Services Foundation for use in a limited fashion with the SDK at no extra charge.
@@ -43,7 +44,7 @@ To install the SDK, copy and paste the following "base code" as high as possible
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.1.0/alloy.min.js" async></script>
 ```
 
 For more details on different options to do this, see [Installing the SDK](../fundamentals/installing-the-sdk.md).

@@ -1,4 +1,5 @@
 ---
+keywords: Amazon Kinesis;kinesis destination;kinesis
 title: Amazon Kinesis destination
 seo-title: Amazon Kinesis destination
 description: Create a real-time outbound connection to your Amazon Kinesis storage to stream data from Adobe Experience Platform.
@@ -31,6 +32,10 @@ By using streaming destinations such as [!DNL Amazon Kinesis], you can easily fe
 
 For example, a prospect downloaded a white-paper which qualifies them into a "high-propensity to convert" segment. By mapping the segment that the prospect falls in to the [!DNL Amazon Kinesis] destination, you would receive this event in [!DNL Amazon Kinesis]. There, you can employ a do-it-yourself approach and describe business logic on top of the event, as you think would work best with your enterprise IT systems.
 
+## Export Type {#export-type}
+
+**Profile Export** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [destination activation workflow](/help/rtcdp/destinations/activate-destinations.md#select-attributes).
+
 ## Connect destination {#connect-destination}
 
 See [Cloud storage destinations workflow ](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)for instructions on how to connect to your cloud storage destinations, including those supported by [!DNL Amazon]. 
@@ -39,7 +44,7 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 
 ### In the Authentication step {#authentication-step}
 
-* **[!DNL Amazon Web Services] access key and secret key**: In [!DNL Amazon Web Services], generate an access key - secret access key pair to grant Adobe Real-time CDP access to your [!DNL Amazon Kinesis] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!DNL Amazon Web Services] access key and secret key**: In [!DNL Amazon Web Services], generate an `access key - secret access key` pair to grant Adobe Real-time CDP access to your [!DNL Amazon Kinesis] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **region**: Indicate which [!DNL Amazon Web Services] region to stream data to.
 
 ![Input fields in the account step](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
@@ -68,7 +73,7 @@ See [Activate profiles and segments to a destination](/help/rtcdp/destinations/a
 
 Your exported [!DNL Experience Platform] data lands in [!DNL Amazon Kinesis] in JSON format. For example, the event below contains the email address profile attribute of an audience that has qualified for a certain segment and exited another segment. The identities for this prospect are ECID and email.
 
-```
+```json
 {
   "person": {
     "email": "yourstruly@adobe.con"

@@ -18,31 +18,22 @@ This document provides steps on how to subscribe to events, register webhooks, a
 
 ## Getting started
 
-This document requires a working understanding of the following components of Adobe Experience Platform:
+This tutorial assumes that you have already created at least one source connection whose flow runs you want to monitor. If you have not yet configured a source connection, start by visiting the [sources overview](./home.md) to configure the source of your choice before returning to this guide.
 
-*   [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-*   [[!DNL Real-time Customer Profile]](../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-*   [[!DNL Adobe Experience Platform Data ingestion]](../ingestion/home.md): [!DNL Data Ingestion] represents the multiple methods by which [!DNL Platform] ingests data from these sources, as well as how that data is persisted within the [!DNL Data Lake] for use by downstream [!DNL Platform] services.
+This document also requires a working understanding of webhooks and how to connect a webhook from one application to another. Refer to the [[!DNL I/O Events] documentation](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) for an introduction to webhooks.
 
-This document also requires a working understanding of webhooks and how to connect a webhook from one application to another. See the following [documentation](https://requestbin.com/blog/working-with-webhooks/) for more information on webhooks.
+## Register a webhook for flow run notifications
 
-## Register your webhook
+In order to receive flow run notifications, you must use Adobe Developer Console to register a webhook to your [!DNL Experience Platform] integration.
 
-In order to receive notifications on the status of your flow run, you must register a webhook by specifying a unique webhook URL as part of your event registration details. To connect a webhook to your [!DNL I/O Events] subscription, visit the [webhook service](https://webhook.site/) and copy the unique URL provided.
-
-![webhook](./images/notifications/webhook-url.png)
-
-## Subscribe to events
-
-Once you have acquired a unique webhook URL, go to [Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events.html) and follow the steps outlined in the [data ingestion notifications](../ingestion/quality/subscribe-events.md) document to start subscribing to events.
+Follow the tutorial on [subscribing to [!DNL I/O Event] notifications](../observability/notifications/subscribe.md) for detailed steps on how to accomplish this.
 
 >[!IMPORTANT]
->During the subscription process, ensure that you select [!DNL Platform] notifications as the event provider, and select the following event subscriptions:
+>
+>During the subscription process, ensure that you select **[!UICONTROL Platform notifications]** as the event provider, and select the following event subscriptions:
 >
 >* **[!UICONTROL Experience Platform Source's Flow Run Succeeded]**
 >* **[!UICONTROL Experience Platform Source's Flow Run Failed]**
->
->When prompted to provide a webhook address, use the webhook URL you acquired previously.
 
 ## Receive flow run notifications
 
@@ -51,6 +42,7 @@ With your webhook connected and your event subscription complete, you can start 
 A notification returns information such as the number of ingestion jobs run, file size, and errors. A notification also returns a payload associated with your flow run in JSON format. The response payload can either be classified as `sources_flow_run_success` or `sources_flow_run_failure`.
 
 >[!IMPORTANT]
+>
 >If partial ingestion is enabled during the flow creation process, a flow that contains both successful and failed ingestions will be marked as `sources_flow_run_success` only if the number of errors is below the error threshold percentage set during the flow creation process. If a successful flow run contains errors, these errors will still be included as part of the return payload.
 
 ### Success
@@ -313,6 +305,7 @@ The following response is an example of a failed flow run, with an error occurri
 | `fileInfo` | A URL that leads to an overview of the files that were both successfully and unsuccessfully ingested. |
 
 >[!NOTE]
+>
 >See the [appendix](#errors) for more information on error messages.
 
 ## Next steps

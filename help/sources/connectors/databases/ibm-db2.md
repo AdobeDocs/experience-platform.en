@@ -1,13 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;IBM DB2;ibm db2;DB2;db2
 solution: Experience Platform
 title: IBM DB2 connector
 topic: overview
+description: The documentation below provides information on how to connect IBM DB2 to Platform using APIs or the user interface.
 ---
 
 # (Beta) IBM DB2 connector
 
 >[!NOTE]
+>
 >The IBM DB2 connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Adobe Experience Platform provides native connectivity for database providers like [!DNL Microsoft], MySQL, and [!DNL Azure]. You can bring your data from these systems into [!DNL Platform].

@@ -1,14 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics;segment;Segment;create segment
+keywords: Experience Platform;home;popular topics;segment;Segment;create segment;segmentation;create a segment;Segmentation Service;
 solution: Experience Platform
 title: Create a segment
 topic: tutorial
+type: Tutorial
 description: This document provides a tutorial for developing, testing, previewing, and saving a segment definition using the Adobe Experience Platform Segmentation Service API.
 ---
 
 # Create a segment 
 
-This document provides a tutorial for developing, testing, previewing, and saving a segment definition using the [DNL Adobe Experience Platform Segmentation Service API](../api/getting-started.md). 
+This document provides a tutorial for developing, testing, previewing, and saving a segment definition using the [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md). 
 
 For information on how to build segments using the user interface, please see the [Segment Builder guide](../ui/overview.md).
 
@@ -16,9 +17,9 @@ For information on how to build segments using the user interface, please see th
 
 This tutorial requires a working understanding of the various [!DNL Adobe Experience Platform] services involved in creating audience segments. Before beginning this tutorial, please review the documentation for the following services:
 
-- [!DNL Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-- [!DNL Adobe Experience Platform Segmentation Service](../home.md): Allows you to build audience segments from Real-time Customer Profile data.
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Allows you to build audience segments from Real-time Customer Profile data.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.
 

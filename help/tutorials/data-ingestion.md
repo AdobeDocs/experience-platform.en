@@ -3,6 +3,9 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Data Ingestion tutorials
 topic: tutorial
+type: Tutorial
+description: Data Ingestion includes batch ingestion, streaming ingestion, and ingestion using source connectors.
+
 ---
 
 # Ingest data into [!DNL Experience Platform]

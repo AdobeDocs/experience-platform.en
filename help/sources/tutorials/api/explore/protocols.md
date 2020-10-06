@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;protocol
 solution: Experience Platform
 title: Explore a protocol system using the Flow Service API
 topic: overview
+description: This tutorial uses the Flow Service API to explore protocols applications.
 ---
 
 # Explore a protocol system using the [!DNL Flow Service] API

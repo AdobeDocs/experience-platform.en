@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;catalog;object lookup;api
 solution: Experience Platform
 title: Look up an object
 topic: developer guide
+description: If you know the unique identifier for a specific Catalog object, you can perform a GET request to view that object's details. 
 ---
 
 # Look up an object

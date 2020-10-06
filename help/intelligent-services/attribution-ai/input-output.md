@@ -61,6 +61,7 @@ By default, Attribution AI defines the training window as the most recent 2 quar
 Minimum length of data required = training window + lookback window
 
 >[!TIP]
+>
 > The minimum length of data required for an application with default configurations is: 2 quarters (180 days) + 56 days = 236 days.
 
 Example : 
@@ -126,11 +127,11 @@ touchPoint (Object) | True | Touchpoint Metadata. For more information on the sc
 
 ### Viewing raw score paths (UI) {#raw-score-path}
 
-You can view the path to your raw scores in the UI. Start by selecting **[!UICONTROL Schemas]** in the Platform UI then search for and select your attribution AI scores schema from within the *[!UICONTROL Browse]* tab.
+You can view the path to your raw scores in the UI. Start by selecting **[!UICONTROL Schemas]** in the Platform UI then search for and select your attribution AI scores schema from within the **[!UICONTROL Browse]** tab.
 
 ![Pick your schema](./images/input-output/schemas_browse.png)
 
-Next, select a field within the *[!UICONTROL Structure]* window of the UI, the *[!UICONTROL Field properties]* tab opens. Within *[!UICONTROL Field properties]* is the *[!UICONTROL Path]* field that maps to your raw scores.
+Next, select a field within the **[!UICONTROL Structure]** window of the UI, the **[!UICONTROL Field properties]** tab opens. Within **[!UICONTROL Field properties]** is the **[!UICONTROL Path]** field that maps to your raw scores.
 
 ![Pick a Schema](./images/input-output/field_properties.png)
 

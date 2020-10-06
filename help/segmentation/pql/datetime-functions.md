@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;date and time functions;datetime functions;datetime;date;time;
 solution: Experience Platform
 title: Date and time functions
 topic: developer guide
+description: Date and time functions are used to perform date and time operations on values within Profile Query Language (PQL).
 ---
 
 # Date and time functions
 
-Date and time functions are used to perform date and time operations on values within [!DNL Profile Query Language] (PQL). More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
+Date and time functions are used to perform date and time operations on values within [!DNL Profile Query Language] (PQL). More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Current month
 

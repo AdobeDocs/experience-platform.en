@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;aggregation functions;aggregation;
 solution: Experience Platform
 title: Aggregation functions
 topic: developer guide
+description: Aggregation functions are used to group together multiple values within Profile Query Language (PQL) arrays to form a single summary value. 
 ---
 
 # Aggregation functions
 
-Aggregation functions are used to group together multiple values within [!DNL Profile Query Language] (PQL) arrays to form a single summary value. More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
+Aggregation functions are used to group together multiple values within [!DNL Profile Query Language] (PQL) arrays to form a single summary value. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Count
 

@@ -2,6 +2,8 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Source Connectors Help
+breadcrumb-title: Source Connectors Guide
+user-guide-description: Ingest data from a variety of sources or structure, label, and enhance already ingested data.
 ---
 
 # Source connectors {#sources}
@@ -9,7 +11,8 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
 - [Source connectors overview](home.md)
 - Available source connectors {#connectors}
   - Adobe applications {#adobe-applications}
-    - [Analytics data connector](connectors/adobe-applications/analytics.md)
+    - [Analytics Classifications Data connector](connectors/adobe-applications/classifications.md)
+    - [Analytics Data connector](connectors/adobe-applications/analytics.md)
     - [Audience Manager connector](connectors/adobe-applications/audience-manager.md)
     - [Customer attributes connector](connectors/adobe-applications/customer-attributes.md)
     - Mapping Adobe application fields {#mapping}
@@ -47,7 +50,6 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - [GreenPlum connector](connectors/databases/greenplum.md)
     - [HP Vertica connector](connectors/databases/hp-vertica.md)
     - [IBM DB2 connector](connectors/databases/ibm-db2.md)
-    - [MariaDB connector](connectors/databases/mariadb.md)
     - [Microsoft SQL Server connector](connectors/databases/sql-server.md)
     - [MySQL connector](connectors/databases/mysql.md)
     - [Oracle connector](connectors/databases/oracle.md)
@@ -92,7 +94,6 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [GreenPlum connector](tutorials/api/create/databases/greenplum.md)
       - [HP Vertica connector](tutorials/api/create/databases/hp-vertica.md)
       - [IBM DB2 connector](tutorials/api/create/databases/ibm-db2.md)
-      - [MariaDB connector](tutorials/api/create/databases/mariadb.md)
       - [MySQL connector](tutorials/api/create/databases/mysql.md)
       - [Oracle connector](tutorials/api/create/databases/oracle.md)
       - [Phoenix connector](tutorials/api/create/databases/phoenix.md)
@@ -125,9 +126,11 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
   - [Ingest parquet data from a third-party cloud storage system](tutorials/api/cloud-storage-parquet.md)
   - [Create a dataset base connection using the Flow Service API](tutorials/api/create-dataset-base-connection.md)
   - [Monitor dataflows using the Flow Service API](tutorials/api/monitor.md)
+  - [Update connection information using the Flow Service API](tutorials/api/update.md)
 - UI tutorials {#ui-tutorials}
   - Create a source connector {#create}
     - Adobe applications {#adobe-applications}
+      - [Adobe Analytics Classifications Data connector](tutorials/ui/create/adobe-applications/classifications.md)
       - [Adobe Analytics connector](tutorials/ui/create/adobe-applications/analytics.md)
       - [Adobe Audience Manager connector](tutorials/ui/create/adobe-applications/audience-manager.md)
       - [Customer attributes connector](tutorials/ui/create/adobe-applications/customer-attributes.md)
@@ -162,7 +165,6 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
       - [GreenPlum connector](tutorials/ui/create/databases/greenplum.md)
       - [HP Vertica connector](tutorials/ui/create/databases/hp-vertica.md)
       - [IBM DB2 connector](tutorials/ui/create/databases/ibm-db2.md)
-      - [MariaDB connector](tutorials/ui/create/databases/mariadb.md)
       - [Microsoft SQL Server connector](tutorials/ui/create/databases/sql-server.md)
       - [MySQL connector](tutorials/ui/create/databases/mysql.md)
       - [Oracle connector](tutorials/ui/create/databases/oracle.md)
@@ -175,15 +177,15 @@ user-guide-title: Adobe Experience Platform Source Connectors Help
     - Protocols {#protocols}
       - [Generic OData connector](tutorials/ui/create/protocols/odata.md)
   - Configure a dataflow {#dataflow}
-      - [Configure a dataflow for an advertising connector](tutorials/ui/dataflow/advertising.md)
-      - [Configure a dataflow for a batch cloud storage connector](tutorials/ui/dataflow/batch/cloud-storage.md)
-      - [Configure a dataflow for a streaming cloud storage connector](tutorials/ui/dataflow/streaming/cloud-storage.md)
-      - [Configure a dataflow for a database connector](tutorials/ui/dataflow/databases.md)
-      - [Configure a dataflow for a CRM connector](tutorials/ui/dataflow/crm.md)
-      - [Configure a dataflow for a customer success connector](tutorials/ui/dataflow/customer-success.md)
-      - [Configure a dataflow for a marketing automation connector](tutorials/ui/dataflow/marketing-automation.md)
-      - [Configure a dataflow for a payment connector](tutorials/ui/dataflow/payments.md)
-      - [Configure a dataflow for a protocol connector](tutorials/ui/dataflow/protocols.md)
+    - [Configure a dataflow for an advertising connector](tutorials/ui/dataflow/advertising.md)
+    - [Configure a dataflow for a batch cloud storage connector](tutorials/ui/dataflow/batch/cloud-storage.md)
+    - [Configure a dataflow for a streaming cloud storage connector](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+    - [Configure a dataflow for a database connector](tutorials/ui/dataflow/databases.md)
+    - [Configure a dataflow for a CRM connector](tutorials/ui/dataflow/crm.md)
+    - [Configure a dataflow for a customer success connector](tutorials/ui/dataflow/customer-success.md)
+    - [Configure a dataflow for a marketing automation connector](tutorials/ui/dataflow/marketing-automation.md)
+    - [Configure a dataflow for a payment connector](tutorials/ui/dataflow/payments.md)
+    - [Configure a dataflow for a protocol connector](tutorials/ui/dataflow/protocols.md)
   - [Activate inbound data to populate customer profiles](tutorials/ui/profile.md)
   - [Monitor accounts and dataflows](tutorials/ui/monitor.md)
   - [Delete dataflows](tutorials/ui/delete.md)

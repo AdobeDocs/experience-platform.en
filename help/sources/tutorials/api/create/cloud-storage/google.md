@@ -1,8 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Google Cloud Storage;google cloud storage;google;Google
 solution: Experience Platform
 title: Create a Google Cloud Storage connector using the Flow Service API
 topic: overview
+type: Tutorial
+description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to a Google Cloud Storage account.
 ---
 
 # Create a [!DNL Google Cloud Storage] connector using the [!DNL Flow Service] API

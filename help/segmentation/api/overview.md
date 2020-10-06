@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-solution: Adobe Experience Platform
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;API;api;
 title: Adobe Experience Platform Segmentation Service developer guide
 topic: guide
+description: This overview document provides high-level introductions to each of the Segmentation Service API endpoints, and links to the associated endpoint guides for details.
 ---
 
 # Adobe Experience Platform [!DNL Segmentation Service] API developer guide

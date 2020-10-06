@@ -1,15 +1,17 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Collect payment data;payment data
 solution: Experience Platform
 title: Collect payment data through source connectors and APIs
 topic: overview
+type: Tutorial
+description: This tutorial covers the steps for retrieving data from a payments application and ingesting it into Platform through source connectors and APIs.
 ---
 
 # Collect payment data through source connectors and APIs
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
-This tutorial covers the steps for retrieving data from a payments application and ingesting it into [!DNL Platform] through source connectors and APIs.
+This tutorial covers the steps for retrieving data from a third-party payment system and ingesting it into [!DNL Platform] through source connectors and the [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
 
 ## Getting started
 
@@ -17,11 +19,11 @@ This tutorial requires you to have access to a payment system through a valid co
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
-*   [Experience Data Model (XDM) System](../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+*   [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
     *   [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
     *   [Schema Registry developer guide](../../../../xdm/api/getting-started.md): Includes important information that you need to know in order to successfully perform calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
-*   [Catalog Service](../../../../catalog/home.md): Catalog is the system of record for data location and lineage within [!DNL Experience Platform].
-*   [Batch ingestion](../../../../ingestion/batch-ingestion/overview.md): The Batch Ingestion API allows you to ingest data into [!DNL Experience Platform] as batch files.
+*   [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is the system of record for data location and lineage within [!DNL Experience Platform].
+*   [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): The Batch Ingestion API allows you to ingest data into [!DNL Experience Platform] as batch files.
 *   [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully connect to a payments application using the [!DNL Flow Service] API.
@@ -640,7 +642,7 @@ curl -X POST \
 | `sourceConnectionIds` | The [source connection ID](#source) retrieved in an earlier step. |
 | `targetConnectionIds` | The [target connection ID](#target-connection) retrieved in an earlier step. |
 | `transformations.params.mappingId` | The [mapping ID](#mapping) retrieved in an earlier step.|
-| `transformations.params.deltaColum` | The designated column used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column. |
+| `transformations.params.deltaColum` | The designated column used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column. The supported date format for `deltaColumn` is `yyyy-MM-dd HH:mm:ss`. |
 | `transformations.params.mappingId`| The mapping ID associated with your database. |
 | `scheduleParams.startTime` | The start time for the dataflow in epoch time. |
 | `scheduleParams.frequency` | The frequency at which the dataflow will collect data. Acceptable values include: `once`, `minute`, `hour`, `day`, or `week`. |

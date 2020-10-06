@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;enable dataset;Dataset;dataset
 solution: Experience Platform
 title: Datasets user guide
 topic: datasets
+description: This datasets user guide provides instructions on performing common actions when working with datasets within Adobe Experience Platform user interface.
 ---
 
 # Datasets user guide
@@ -14,26 +15,26 @@ This user guide provides instructions on performing common actions when working 
 This user guide requires a working understanding of the following components of Adobe Experience Platform:
 
 *   [Datasets](overview.md): The storage and management construct for data persistence in [!DNL Experience Platform].
-*   [!DNL Experience Data Model (XDM) System](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+*   [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     *   [Basics of schema composition](../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
     *   [Schema Editor](../../xdm/tutorials/create-schema-ui.md): Learn how to build your own custom XDM schemas using the [!DNL Schema Editor] within the [!DNL Platform] user interface.
-*   [!DNL Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-*   [!DNL Data Governance](../../data-governance/home.md): Ensure compliancy with regulations, restrictions, and policies regarding the usage of customer data.
+*   [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+*   [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Ensure compliancy with regulations, restrictions, and policies regarding the usage of customer data.
 
 ## View datasets
 
-In the [!DNL Experience Platform] UI, click **[!UICONTROL Datasets]** in the left-navigation to open the *[!UICONTROL Datasets]* dashboard. The dashboard lists all available datasets for your organization. Details are displayed for each listed dataset, including its name, the schema the dataset adheres to, and status of the most recent ingestion run.
+In the [!DNL Experience Platform] UI, click **[!UICONTROL Datasets]** in the left-navigation to open the **[!UICONTROL Datasets]** dashboard. The dashboard lists all available datasets for your organization. Details are displayed for each listed dataset, including its name, the schema the dataset adheres to, and status of the most recent ingestion run.
 
 ![](../images/datasets/user-guide/browse_datasets.png)
 
-Click the name of a dataset to access its *[!UICONTROL Dataset activity]* screen and see details of the dataset you selected. The activity tab includes a graph visualizing the rate of messages being consumed as well as a list of successful and failed batches.
+Click the name of a dataset to access its **[!UICONTROL Dataset activity]** screen and see details of the dataset you selected. The activity tab includes a graph visualizing the rate of messages being consumed as well as a list of successful and failed batches.
 
 ![](../images/datasets/user-guide/dataset_activity_1.png)
 ![](../images/datasets/user-guide/dataset_activity_2.png)
 
 ## Preview a dataset
 
-From the *[!UICONTROL Dataset activity]* screen, click **[!UICONTROL Preview dataset]** near the top-right corner of your screen to preview up to 100 rows of data. If the dataset is empty, the the preview link will be deactivated and will instead say **[!UICONTROL Preview not available]**.
+From the **[!UICONTROL Dataset activity]** screen, click **[!UICONTROL Preview dataset]** near the top-right corner of your screen to preview up to 100 rows of data. If the dataset is empty, the the preview link will be deactivated and will instead say **[!UICONTROL Preview not available]**.
 
 ![](../images/datasets/user-guide/click_to_preview.png)
 
@@ -48,7 +49,7 @@ For more robust methods to access your data, [!DNL Experience Platform] provides
 
 ## Create a dataset {#create}
 
-To create a new dataset, start by clicking **[!UICONTROL Create dataset]** in the *[!UICONTROL Datasets]* dashboard.
+To create a new dataset, start by clicking **[!UICONTROL Create dataset]** in the **[!UICONTROL Datasets]** dashboard.
 
 ![](../images/datasets/user-guide/click_to_create.png)
 
@@ -59,29 +60,29 @@ In the next screen, you are presented with the following two options for creatin
 
 ### Create a dataset with an existing schema
 
-In the *[!UICONTROL Create dataset]* screen, click **[!UICONTROL Create dataset from schema]** to create a new empty dataset.
+In the **[!UICONTROL Create dataset]** screen, click **[!UICONTROL Create dataset from schema]** to create a new empty dataset.
 
 ![](../images/datasets/user-guide/create_dataset_schema.png)
 
-The *[!UICONTROL Select schema]* step appears. Browse the schema listing and select the schema that the dataset will adhere to before clicking **[!UICONTROL Next]**.
+The **[!UICONTROL Select schema]** step appears. Browse the schema listing and select the schema that the dataset will adhere to before clicking **[!UICONTROL Next]**.
 
 ![](../images/datasets/user-guide/select_schema.png)
 
-The *[!UICONTROL Configure dataset]* step appears. Provide the dataset with a name and optional description, then click **[!UICONTROL Finish]** to create the dataset.
+The **[!UICONTROL Configure dataset]** step appears. Provide the dataset with a name and optional description, then click **[!UICONTROL Finish]** to create the dataset.
 
 ![](../images/datasets/user-guide/configure_dataset_schema.png)
 
 ### Create a dataset with a CSV file
 
-When a dataset is created using a CSV file, an ad hoc schema is created to provide the dataset with a structure that matches the provided CSV file. In the *[!UICONTROL Create dataset]* screen, click the box saying **[!UICONTROL Create dataset from CSV file]**.
+When a dataset is created using a CSV file, an ad hoc schema is created to provide the dataset with a structure that matches the provided CSV file. In the **[!UICONTROL Create dataset]** screen, click the box saying **[!UICONTROL Create dataset from CSV file]**.
 
 ![](../images/datasets/user-guide/create_dataset_csv.png)
 
-The *[!UICONTROL Configure]* step appears. Provide the dataset with a name and optional description, then click **[!UICONTROL Next]**.
+The **[!UICONTROL Configure]** step appears. Provide the dataset with a name and optional description, then click **[!UICONTROL Next]**.
 
 ![](../images/datasets/user-guide/configure_dataset_csv.png)
 
-The *[!UICONTROL Add data]* step appears. Upload the CSV file by either dragging and dropping it onto the center of your screen, or click **[!UICONTROL Browse]** to explore your file directory. The file can be up to ten gigabytes in size. Once the CSV file is uploaded, click **[!UICONTROL Save]** to create the dataset.
+The **[!UICONTROL Add data]** step appears. Upload the CSV file by either dragging and dropping it onto the center of your screen, or click **[!UICONTROL Browse]** to explore your file directory. The file can be up to ten gigabytes in size. Once the CSV file is uploaded, click **[!UICONTROL Save]** to create the dataset.
 
 >[!NOTE]
 >
@@ -98,7 +99,7 @@ Every dataset has the ability to enrich customer profiles with its ingested data
 
 For more information on enabling a schema for [!DNL Profile], see the [Schema Editor user guide](../../xdm/tutorials/create-schema-ui.md).
 
-To enable a dataset for Profile, access its *[!UICONTROL Dataset activity]* screen and click the **[!UICONTROL Profile]** toggle within the *[!UICONTROL Properties]* column. Once enabled, data that is ingested into the dataset will also be used to populate customer profiles.
+To enable a dataset for Profile, access its **[!UICONTROL Dataset activity]** screen and click the **[!UICONTROL Profile]** toggle within the **[!UICONTROL Properties]** column. Once enabled, data that is ingested into the dataset will also be used to populate customer profiles.
 
 ![](../images/datasets/user-guide/enable_dataset_profiles.png)
 
@@ -106,11 +107,11 @@ If a dataset already contains data and is then enabled for [!DNL Profile], the e
 
 ## Manage and enforce data governance on a dataset
 
-Data Usage Labeling and Enforcement (DULE) is the core data governance mechanism for [!DNL Experience Platform]. DULE labels allow you to categorize datasets and fields according to usage policies that apply to that data. See the [Data Governance overview](../../data-governance/home.md) to learn more about labels, or refer to the [data usage labels user guide](../../data-governance/labels/overview.md) for instructions on how to apply labels to datasets.
+Data usage labels allow you to categorize datasets and fields according to usage policies that apply to that data. See the [Data Governance overview](../../data-governance/home.md) to learn more about labels, or refer to the [data usage labels user guide](../../data-governance/labels/overview.md) for instructions on how to apply labels to datasets.
 
 ## Delete a dataset
 
-You can delete a dataset by first accessing its *[!UICONTROL Dataset activity]* screen. Then, click **[!UICONTROL Delete dataset]** to delete it. 
+You can delete a dataset by first accessing its **[!UICONTROL Dataset activity]** screen. Then, click **[!UICONTROL Delete dataset]** to delete it. 
 
 >[!NOTE]
 >
@@ -128,11 +129,11 @@ If a dataset is enabled for [!DNL Profile], deleting it through the UI disables 
 
 ## Monitor data ingestion
 
-In the [!DNL Experience Platform] UI, click **[!UICONTROL Monitoring]** in the left-navigation. The *[!UICONTROL Monitoring]* dashboard lets you view the statuses of inbound data from either batch or streaming ingestion. To view the statuses of individual batches, click either *[!UICONTROL Batch end-to-end]* or *[!UICONTROL Streaming end-to-end]*. The dashboards lists all batch or streaming ingestion runs, including those that are successful, failed, or still in progress. Each listing provides details of the batch, including the batch ID, the name of the target dataset, and the number of records ingested. If the target dataset is enabled for [!DNL Profile], the number of ingested identity and profile records is also displayed.
+In the [!DNL Experience Platform] UI, click **[!UICONTROL Monitoring]** in the left-navigation. The **[!UICONTROL Monitoring]** dashboard lets you view the statuses of inbound data from either batch or streaming ingestion. To view the statuses of individual batches, click either **[!UICONTROL Batch end-to-end]** or **[!UICONTROL Streaming end-to-end]**. The dashboards lists all batch or streaming ingestion runs, including those that are successful, failed, or still in progress. Each listing provides details of the batch, including the batch ID, the name of the target dataset, and the number of records ingested. If the target dataset is enabled for [!DNL Profile], the number of ingested identity and profile records is also displayed.
 
 ![](../images/datasets/user-guide/batch_listing.png)
 
-You can click on an individual **[!UICONTROL Batch ID]** to access the *[!UICONTROL Batch overview]* dashboard and see details for the batch, including error logs should the batch fail to ingest.
+You can click on an individual **[!UICONTROL Batch ID]** to access the **[!UICONTROL Batch overview]** dashboard and see details for the batch, including error logs should the batch fail to ingest.
 
 ![](../images/datasets/user-guide/batch_overview.png)
 

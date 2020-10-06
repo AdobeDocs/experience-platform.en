@@ -1,4 +1,5 @@
 ---
+keywords: email;Email;e-mail;email destinations;oracle eloqua;oracle
 title: Oracle Eloqua destination
 seo-title: Oracle Eloqua destination
 description: Oracle Eloqua is a software as a service (SaaS) platform for marketing automation offered by Oracle that aims to help B2B marketers and organizations manage marketing campaigns and sales lead generation.
@@ -9,9 +10,13 @@ seo-description: Oracle Eloqua is a software as a service (SaaS) platform for ma
 
 ## Overview
 
-[Eloqua](https://www.oracle.com/marketingcloud/products/marketing-automation/) is a software as a service (SaaS) platform for marketing automation offered by [!DNL Oracle] that aims to help B2B marketers and organizations manage marketing campaigns and sales lead generation.
+[Eloqua](https://www.oracle.com/marketingcloud/products/marketing-automation/) is a software as a service (SaaS) platform for marketing automation offered by [!DNL Oracle] that aims to help B2B marketers and organizations manage marketing campaigns and sales lead generation. 
 
 To send segment data to [!DNL Oracle Eloqua], you must first [connect the destination](#connect-destination) in Adobe Real-time Customer Data Platform, and then [set up a data import](#import-data-into-eloqua) from your storage location into [!DNL Oracle Eloqua].
+
+## Export Type {#export-type}
+
+**Profile Export** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [destination activation workflow](/help/rtcdp/destinations/activate-destinations.md#select-attributes).
 
 ## Connect to destination {#connect-destination}
 

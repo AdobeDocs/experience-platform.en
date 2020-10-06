@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;payment
 solution: Experience Platform
 title: Explore a payment system using the Flow Service API
 topic: overview
+description: This tutorial uses the Flow Service API to explore payment applications.
 ---
 
 # Explore a payment system using the [!DNL Flow Service] API

@@ -1,4 +1,5 @@
 ---
+keywords: SFTP;sftp
 title: SFTP destination
 seo-title: SFTP destination
 description: Create a live outbound connection to your SFTP Server to periodically export delimited data files from Experience Platform.
@@ -11,7 +12,11 @@ seo-description: Create a live outbound connection to your SFTP Server to period
 
 Create a live outbound connection to your SFTP Server to periodically export delimited data files from Experience Platform.
 
-To export data, complete the following steps:
+## Export Type {#export-type}
+
+**Profile Export** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [destination activation workflow](/help/rtcdp/destinations/activate-destinations.md#select-attributes).
+
+![SFTP profile-based export type](/help/rtcdp/destinations/assets/sftp-export-type.png)
 
 ## Connect destination {#connect-destination}
 

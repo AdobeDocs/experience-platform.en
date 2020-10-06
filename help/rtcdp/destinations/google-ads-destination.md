@@ -1,4 +1,5 @@
 ---
+keywords: Google ads;google ads;google adwords;Google AdWords;Google Adwords
 title: Google AdsDestination
 seo-title: Google Ads Destination
 description: Google Ads, formerly known as Google AdWords, is an online advertising service that allows businesses to pay-per-click advertising across text-based searches, graphic displays, YouTube videos, and in-app mobile displays.
@@ -23,6 +24,10 @@ Note the following details that are specific to [!DNL Google Ads] destinations:
 >
 >If you are looking to create your first destination with [!DNL Google Ads] and have not enabled the [ID sync functionality](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up Google integrations in Audience Manager, the ID syncs you had set up carry over to Adobe Real-time CDP.
 
+### Export Type {#export-type}
+
+**Segment Export** - you are exporting all members of a segment (audience) to the Google destination.
+
 ## Prerequisites
 
 ### Existing [!DNL Google Ads] account
@@ -42,10 +47,14 @@ Before creating the [!DNL Google Ads] destination in Adobe Real-time CDP, you mu
 * Your account type: **AdWords**
 * **Google AdWords ID** : This is your ID with [!DNL Google]. The ID format is typically 123-456-7890.
 
-## Create destination
+## Configure destination
 
-1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL Google Ads], and select **[!UICONTROL Create destination]**.
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL Google Ads], and select **[!UICONTROL Configure]**.
     ![Connect Google Ads destination](/help/rtcdp/destinations/assets/google-2-destination.png)
+
+    >[!NOTE]
+    >
+    >If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](/help/rtcdp/destinations/destinations-workspace.md#catalog) section of the destination workspace documentation.  
 
 2. In the **Setup** step of the create destination workflow, fill in the [!UICONTROL Basic Information] for the destination. <br>
     ![Basic information Google Ads](/help/rtcdp/destinations/assets/google-2-destination-setup-step.png)

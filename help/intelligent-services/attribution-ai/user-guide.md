@@ -1,8 +1,10 @@
 ---
-keywords: Experience Platform;user guide;attribution ai;popular topics
+keywords: Experience Platform;user guide;attribution ai;popular topics;region
 solution: Experience Platform
 title: Attribution AI user guide
 topic: User guide 
+description: This document serves as a guide for interacting with Attribution AI in the Intelligent Services user interface.
+
 ---
 
 # Attribution AI user guide

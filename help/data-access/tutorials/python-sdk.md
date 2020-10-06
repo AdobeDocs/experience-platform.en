@@ -1,8 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data access;python sdk;data access api
 solution: Experience Platform
 title: Secure Python Data Access SDK
 topic: tutorial
+type: Tutorial
+description: The Secure Python Data Access SDK is a software development kit that enables reading and writing of datasets from Adobe Experience Platform.
 ---
 
 # Secure [!DNL Python] [!DNL Data Access] SDK
@@ -197,7 +199,9 @@ write_tracker = dataset_writer.write(<dataFrame>, file_format='json')
 
 For longer running jobs, users may need to store intermediate steps. In instances like this, the [!DNL Python] SDK provides the user the ability to read and write to a userspace. 
 
->![NOTE] Paths to the data are **not** stored by the SDK. Users will need to store the corresponding path to its respective data.
+>[!NOTE]
+>
+>Paths to the data are **not** stored by the SDK. Users will need to store the corresponding path to its respective data.
 
 ### Write to userspace
 

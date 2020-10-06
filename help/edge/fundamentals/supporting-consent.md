@@ -3,6 +3,7 @@ title: Supporting consent
 seo-title: Supporting Adobe Experience Platform Web SDK consent preference
 description: Learn how to support consent preferences with Experience Platform Web SDK
 seo-description: Learn how to support consent preferences with Experience Platform Web SDK
+keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 ---
 
 # Supporting Consent
@@ -18,13 +19,13 @@ If the user opts out of all purposes, the SDK does not perform any of these task
 
 ## Configuring Consent
 
-By default the user is opted in to all purposes. To prevent the SDK from performing the above tasks until the user opts in, pass `"defaultConsent": { "general": "pending" }` during SDK configuration as follows:
+By default the user is opted in to all purposes. To prevent the SDK from performing the above tasks until the user opts in, pass `"defaultConsent": "pending"` during SDK configuration as follows:
 
 ```javascript
 alloy("configure", {
   "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "imsOrgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "defaultConsent": { "general": "pending" }
+  "defaultConsent": "pending"
 });
 ```
 
@@ -89,7 +90,7 @@ alloy("setConsent", {
 });
 ```
 
-When the consent is set in this way, the Unified Profile is updated with the consent information. For this to work, the profile XDM schema needs to contain the [Profile Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/context/profile-privacy.schema.md). When sending events, the IAB consent information needs to be added manually to the event xdm object. The SDK does not automatically include the consent information in the events. To send the consent information in events, the [Experience Event Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/context/experienceevent-privacy.schema.md) needs to be added to the experience event schema.
+When the consent is set in this way, Real-time Customer Profile is updated with the consent information. For this to work, the profile XDM schema needs to contain the [Profile Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/context/profile-privacy.schema.md). When sending events, the IAB consent information needs to be added manually to the event XDM object. The SDK does not automatically include the consent information in the events. To send the consent information in events, the [Experience Event Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/context/experienceevent-privacy.schema.md) needs to be added to the Experience Event schema.
 
 ## Sending both standards in one request
 

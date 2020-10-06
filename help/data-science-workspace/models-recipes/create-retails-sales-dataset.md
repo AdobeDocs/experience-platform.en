@@ -1,8 +1,10 @@
 ---
-keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes
 solution: Experience Platform
 title: Create the retail sales schema and dataset
-topic: Tutorial
+topic: tutorial
+type: Tutorial
+description: This tutorial provides you with the prerequisites and assets required for all other Adobe Experience Platform Data Science Workspace tutorials. Upon completion, the Retail Sales schema and datasets will be available for you and members of your IMS Organization on Experience Platform.
 ---
 
 # Create the retail sales schema and dataset
@@ -26,7 +28,7 @@ Before starting this tutorial, you must have the following prerequisites:
     -   [dictor](https://pypi.org/project/dictor/)
     -   [JWT](https://pypi.org/project/jwt/)
 -   A working understanding of the following concepts used in this tutorial:
-    -   [!DNL Experience Data Model (XDM)](../../xdm/home.md)
+    -   [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)
     -   [Basics of schema composition](../../xdm/schema/field-dictionary.md)
 
 ## Create Retail Sales schema and dataset

@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;sample queries;sample query;
 solution: Experience Platform
 title: Sample queries
 topic: queries
+description: This documentation provides links to Adobe Analytics and Target sample queries.
 ---
 
 # Sample queries

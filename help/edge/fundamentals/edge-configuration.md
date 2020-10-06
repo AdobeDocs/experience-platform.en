@@ -3,6 +3,7 @@ title: Edge Configuration
 seo-title: Edge configuration for the Experience Platform Web SDK
 description: Learn how to configure the Experience Platform Edge Network. 
 seo-description: Learn how to configure the Experience Platform Edge Network. 
+keywords: configuration;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
 ---
 
 # Configuring the Edge
@@ -16,8 +17,6 @@ Edge configuration IDs can be created in Adobe [!DNL Launch] using the edge conf
 ![edge configuration tool navigation](../../assets/edge_configuration_nav.png)
 
 >[!NOTE]
->
->
 >
 >The edge configuration tool is available to customers on the allow list regardless whether they use [!DNL Launch] as a tag manager. Additionally, users require Develop permissions in [!DNL Launch]. See the [User Permissions](https://docs.adobe.com/content/help/en/launch/using/reference/admin/user-permissions.html) article in the [!DNL Launch] documentation for more details.
 
@@ -72,8 +71,6 @@ To configure Adobe Target, you must provide a client code. The other fields are 
 ![Adobe Target settings block](../../assets/edge_configuration_target.png)
 
 >[!NOTE]
->
->
 >
 >The Organization associated with the client code must match the organization where the configuration ID is created.
 

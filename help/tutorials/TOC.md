@@ -2,6 +2,9 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Tutorials
+breadcrumb-title: Platform Tutorials
+user-guide-description: Get started with Platform quickly and easily by following along with step-by-step tutorials, covering everything from preparing your data for ingestion to working with advanced machine learning algorithms.
+type: Tutorials
 ---
 
 # Adobe Experience Platform tutorials {#tutorials}

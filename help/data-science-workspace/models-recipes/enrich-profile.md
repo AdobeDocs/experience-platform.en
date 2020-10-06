@@ -1,8 +1,10 @@
 ---
-keywords: Experience Platform;machine learning model;Data Science Workspace;Real-time Customer Profile;popular topics
+keywords: Experience Platform;machine learning model;Data Science Workspace;Real-time Customer Profile;popular topics;machine learning insights
 solution: Experience Platform
 title: Enrich Real-time Customer Profile with machine learning insights
-topic: Tutorial
+topic: tutorial
+type: Tutorial
+description: This document provides a step-by-step tutorial to enrich Real-time Customer Profile with machine learning insights, steps are broken into the following sections, create an output schema/dataset, configure an output schema/dataset, and create segments using the Segment Builder.
 ---
 
 # Enrich [!DNL Real-time Customer Profile] with machine learning insights
@@ -19,9 +21,9 @@ This document provides a step-by-step tutorial to enrich [!DNL Real-time Custome
 
 This tutorial requires a working understanding of the various aspects of [!DNL Adobe Experience Platform] involved in ingesting [!DNL Profile] data and creating segments. Before beginning this tutorial, please review the documentation for the following services:
 
-*   [!DNL Real-time Customer Profile](../../rtcdp/overview.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-*   [!DNL Identity Service](../../identity-service/home.md): Enables [!DNL Real-time Customer Profile] by bridging identities from disparate data sources being ingested into Platform.
-*   [!DNL Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
+*   [[!DNL Real-time Customer Profile]](../../rtcdp/overview.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+*   [[!DNL Identity Service]](../../identity-service/home.md): Enables [!DNL Real-time Customer Profile] by bridging identities from disparate data sources being ingested into Platform.
+*   [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
 
 In addition to the above-mentioned documents, it is highly recommended that you also review the following guides on schemas and the Schema Editor:
 

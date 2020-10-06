@@ -1,8 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;retrieve failed batches;failed batches;batch ingestion;Batch ingestion;Failed batches;Get failed batches;get failed batches;Download failed batches;download failed batches;
 solution: Experience Platform
 title: Retrieve failed batches
-topic: overview
+topic: tutorial
+type: Tutorial
+description: This tutorial covers steps for retrieving information about a failed batch using Data Ingestion APIs.
 ---
 
 # Retrieving failed batches using the API
@@ -15,8 +17,8 @@ This tutorial covers steps for retrieving information about a failed batch using
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-- [!DNL Data Ingestion](../home.md): The methods by which data can be sent to [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+- [[!DNL Data Ingestion]](../home.md): The methods by which data can be sent to [!DNL Experience Platform].
 
 ### Reading sample API calls
 

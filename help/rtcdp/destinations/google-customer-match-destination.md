@@ -1,4 +1,5 @@
 ---
+keywords: google customer match;Google customer match;Google Customer Match
 title: Google Customer Match Destination
 seo-title: Google Customer Match Destination
 description: Google Customer Match lets you use your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as Search, Shopping, Gmail, and YouTube.
@@ -32,7 +33,7 @@ To promote the release, they upload email addresses from their CRM database into
 
 The destinations in Adobe Real-time CDP may have certain rules and obligations for data sent to, or received from, the destination platform. You are responsible for understanding the limitations and obligations of your data and how you use that data in Adobe Experience Platform and the destination platform. Adobe Experience Platform provides data governance tools to help you manage some of those data usage obligations. [Learn more](/help/data-governance/labels/overview.md) about data governance tools and policies.
 
-## Activation Type and Identities {#activation-type}
+## Export Type and Identities {#export-type}
 
 **Segment Export** - you are exporting all members of a segment (audience) with the identifiers (name, phone number, etc.) used in the [!DNL Google Customer Match] destination.
 
@@ -94,6 +95,10 @@ If you select to hash the email addresses yourself, make sure to comply with Goo
 1. In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scroll to the **[!UICONTROL Advertising]** category. Select [!DNL Google Customer Match], then select **[!UICONTROL Configure]**.
 
     ![Connect to Google Customer Match destination](/help/rtcdp/destinations/assets/connect-google-customer-match.png)
+
+    >[!NOTE]
+    >
+    >If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](/help/rtcdp/destinations/destinations-workspace.md#catalog) section of the destination workspace documentation.  
 
 2. In the **Account** step, if you had previously set up a connection to your [!DNL Google Customer Match] destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to [!DNL Google Customer Match]. Select **[!UICONTROL Connect to destination]** to log in and connect Adobe Experience Cloud to your [!DNL Google Ad] account.
 

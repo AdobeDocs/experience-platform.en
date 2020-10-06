@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;XDM;XDM system;XDM individual profile;XDM ExperienceEvent;XDM Experience Event;experienceEvent;experience event;Mixins;mixins;mixin;Mixin;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet
+keywords: Experience Platform;home;popular topics;XDM;XDM system;XDM individual profile;XDM ExperienceEvent;XDM Experience Event;experienceEvent;experience event;Mixins;mixins;mixin;Mixin;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema library;Schema Library;schema;record data;time series;time-series
 solution: Experience Platform
 title: Experience Data Model (XDM) System
 topic: overview
@@ -49,7 +49,7 @@ Less-identified profiles may consist only of anonymous behavioral signals like b
 
 As a consumer profile continues to grow, it becomes a robust repository of an individual's personal information, identification information, contact details, and communication preferences.
 
-### [!DNL XDM ExperienceEvent]
+### [!DNL XDM ExperienceEvent] {#xdm-experience-event}
 
 XDM ExperienceEvent is a time-series-based class used to capture the state of the system when an event (or set of events) occurred, including the point in time and identity of the subject involved. Experience Events are fact records of what occurred, thus they are immutable and represent what happened without aggregation or interpretation. They are critical for time-domain analytics as they can be used to analyze changes that occur in a given window of time, and to compare between multiple windows of time to track trends.
 
