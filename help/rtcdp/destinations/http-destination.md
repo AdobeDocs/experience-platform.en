@@ -63,7 +63,7 @@ See [Activate profiles and segments to a destination](activate-destinations.md#s
 
 ## Destination Attributes
 
-During the [[!UICONTROL Select attributes]](/rtcdp/destinations/dest-tutorials/activate-destinations.md#select-attributes) step, when [activating segments](activate-destinations.md) to an [!DNL HTTP] destination, we recommend that you select a unique identifier from your [union schema](../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination.
+During the [[!UICONTROL Select attributes]](activate-destinations.md#select-attributes) step, when [activating segments](activate-destinations.md) to an [!DNL HTTP] destination, we recommend that you select a unique identifier from your [union schema](../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination.
 
 ## Exported data {#exported-data}
 
