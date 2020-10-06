@@ -59,7 +59,7 @@ To send profile data to [!DNL HTTP] endpoints, you must first connect to the des
 
 ## Activate Segments
 
-See [Activate profiles and segments to a destination](/help/rtcdp/destinations/activate-destinations.md) for information about the segment activation workflow.
+See [Activate profiles and segments to a destination](/rtcdp/destinations/activate-destinations.md#select-attributes) for information about the segment activation workflow.
 
 ## Destination Attributes
 
