@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform FAQ and Troubleshooting Guide
 description: This document provides answers to frequently asked questions about Adobe Experience Platform, as well as a high-level troubleshooting guide for common errors that may be encountered in any Experience Platform API.
 topic: getting started
+user-guide-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
 ---
 
 # [!DNL Platform] FAQ and troubleshooting guide
