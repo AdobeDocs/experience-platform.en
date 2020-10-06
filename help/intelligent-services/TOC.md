@@ -25,6 +25,7 @@ user-guide-description: Utilize intelligent AI services to generate scores, disc
     * [Keyword extraction](content-commerce-ai/api/keyword-extraction.md)
     * [Text classification](content-commerce-ai/api/text-classification.md)
     * [Visual similarity](content-commerce-ai/api/visual-similarity.md)
+    * [Text presence and optical character recognition](content-commerce-api/optical-character-recognition.md)
 * Customer AI {#customer-ai}
   * [Overview](customer-ai/overview.md)
   * [Getting started with Customer AI](customer-ai/getting-started.md)
