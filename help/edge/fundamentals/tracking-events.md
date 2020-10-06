@@ -37,6 +37,35 @@ alloy("sendEvent", {
 });
 ```
 
+Some time may pass between when the `sendEvent` command is executed and when the data is sent to the server (for example, if the Web SDK library has not fully loaded or consent has not yet been received). If you intend to modify any part of the `xdm` object after executing the `sendEvent` command, we highly recommend cloning the `xdm` object _before_ executing the `sendEvent` command. For example:
+
+```javascript
+var clone = function(value) {
+  return JSON.parse(JSON.stringify(value));
+};
+
+var dataLayer = {
+  "commerce": {
+    "order": {
+      "purchaseID": "a8g784hjq1mnp3",
+      "purchaseOrderNumber": "VAU3123",
+      "currencyCode": "USD",
+      "priceTotal": 999.98
+    }
+  }
+};
+
+alloy("sendEvent", {
+  "xdm": clone(dataLayer)
+});
+
+// This change will not be reflected in the data sent to the 
+// server for the prior sendEvent command.
+dataLayer.commerce = null;
+```
+
+In this example, we cloned our data layer by serializing it to JSON, then deserializing it. We then passed the cloned result into the `sendEvent` command. By doing so, we ensure that the `sendEvent` command has a snapshot of our data layer as it existed when the `sendEvent` command was executed so that later modifications to the original data layer object will not be reflected in the data sent to the server. If you are using an event-driven data layer, cloning your data is likely already handled automatically. For example, if you are using the [Adobe Client Data Layer](https://github.com/adobe/adobe-client-data-layer/wiki), the `getState()` method provides a computed, cloned snapshot of all prior changes.
+
 >[!NOTE]
 >
 >There is a 32 KB limit on the data that can be sent in each event in the XDM field.
