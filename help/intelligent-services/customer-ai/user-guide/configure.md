@@ -22,18 +22,20 @@ The **Customer AI** UI appears and displays all your service instances.
 
 - You can find a **[!UICONTROL Total profiles scored]** metric located in the bottom-right side of the **[!UICONTROL Create instance]** container. This metric tracks the total number of profiles scored by Customer AI for the current calendar year including all sandbox environments and any deleted service instances. 
 
+![](../images/user-guide/total-profiles.png)
+
 Service instances can be edited, cloned, and deleted by using the controls on the right-hand side of the UI. To display these controls, select an instance from your existing **[!UICONTROL Service instances]**. The controls contain the following:
 
 - **[!UICONTROL Edit]**: Selecting **[!UICONTROL Edit]** allows you to modify an existing service instance. You can edit the name, description and scoring frequency of the instance.
 - **[!UICONTROL Clone]**: Selecting Clone copies the currently selected service instance set up. You can then modify the workflow to make minor tweaks and rename it as a new instance.
 - **[!UICONTROL Delete]**: You can Delete a service instance including any historical runs.
 - **[!UICONTROL Data source]**: A link to the dataset being used by this instance.
-- **[!UICONTROL Last run details]**: This is only displayed when a run fails. Any information on why the run failed is displayed here.
+- **[!UICONTROL Last run details]**: This is only displayed when a run fails. Information on why the run failed such as error codes are displayed here.
 - **[!UICONTROL Score definition]**: A quick overview of the goal you configured for this instance.
 
 ![](../images/user-guide/service-instance-panel.png)
 
-To begin the create instance workflow, select **[!UICONTROL Create instance]**.
+To begin, select **[!UICONTROL Create instance]**.
 
 ![](../images/user-guide/dashboard.png)
 
