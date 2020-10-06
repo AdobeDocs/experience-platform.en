@@ -11,6 +11,7 @@ author: crhoades, ens28527
 **Release date: October 2020**
 
 - [Data Prep](#data-prep)
+- [Sources](#sources)
 
 ## Data Prep {#data-prep}
 
@@ -24,3 +25,18 @@ Data Prep allows data engineers to map, transform, and validate data to and from
 | `get_values` function | The `get_values` function allows you to get the values from the input map for any given key. |
 
 For more information, please read the [Data Prep overview](../../data-prep/home.md).
+
+## Sources {#sources}
+
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third party software, and your CRM system.
+
+[!DNL Experience Platform] provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
+
+**New features**
+
+| Feature | Description |
+| ------- | ----------- |
+| SSH authentication support for SFTP | You can connect your SFTP account to [!DNL Platform] using RSA/DSA Open SSH keys. See the [SFTP overview](../../sources/connectors/cloud-storage/ftp-sftp.md) for more information. |
+| UX improvements  | You can enable your dataset for [!DNL Profile] during the data ingestion workflow. See the [cloud storage dataflow workflow](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) tutorial for more information. |
+
+To learn more about sources, see the [sources overview](../../sources/home.md).
