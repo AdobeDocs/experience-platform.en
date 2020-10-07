@@ -57,7 +57,7 @@ Provide the required values and then select **[!UICONTROL Next]**.
 
 ### Define a goal {#define-a-goal}
 
-The *Define goal* step appears and it provides an interactive environment for you to visually define a goal. A goal is composed of one or more events, where each event's occurrence is based on the condition it holds. The objective of a Customer AI instance is to determine the likeliness of achieving its goal within a given time frame.
+The **[!UICONTROL Define goal]** step appears and it provides an interactive environment for you to visually define a goal. A goal is composed of one or more events, where each event's occurrence is based on the condition it holds. The objective of a Customer AI instance is to determine the likeliness of achieving its goal within a given time frame.
 
 While defining your goal you have the option to select **[!UICONTROL Will occur]** or **[!UICONTROL Will not occur]**. Selecting **[!UICONTROL Will occur]** means that the event conditions you define need to be met for a customers event data to be included in the insights UI. For example, if you wanted all the customers who purchased a specific item by following an email link. You can select **[!UICONTROL Will occur]** followed by defining your goal.
 
@@ -71,7 +71,7 @@ To create a goal, select **[!UICONTROL Enter Field Name]** and select a field fr
 
 ### Configure a schedule *(optional)* {#configure-a-schedule}
 
-The *advanced* step appears. This optional step allows you to configure a schedule to automate prediction runs, define prediction exclusions to filter certain events, or select **[!UICONTROL Finish]** if nothing is needed. 
+The **[!UICONTROL advanced]** step appears. This optional step allows you to configure a schedule to automate prediction runs, define prediction exclusions to filter certain events, or select **[!UICONTROL Finish]** if nothing is needed. 
 
 Setup a scoring schedule by configuring the *Scoring Frequency*. Automated prediction runs can be scheduled to run on either a weekly or a monthly basis.
 
