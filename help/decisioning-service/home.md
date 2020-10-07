@@ -42,7 +42,7 @@ Alternatively or additionally, a strategy could be based on outcomes collected f
 
 ### Decision strategy
 
-Decision strategies are configured via objects called _activities_. Each decision strategy is essentially an algorithm or a function that takes N options {o1, o2, …oN} as input and produces an ordered list of options (o1, o2,…oK) whereby the first option in the list is considered the best one according to an optimization criteria, the second option in the result list is then considered the second best option and so forth.
+Decision strategies are configured via objects called activities. Each decision strategy is essentially an algorithm or a function that takes N options {o1, o2, …oN} as input and produces an ordered list of options (o1, o2,…oK) whereby the first option in the list is considered the best one according to an optimization criteria, the second option in the result list is then considered the second best option and so forth.
 
 At any given time during a customer's journey, the best option for a given activity is re-evaluated based on the most current set of context variables, rules, and constraints. Context variables include the records stored in [!DNL Real Time Customer Profile]. A central record entity is a customer’s profile, but other entities like operational business data are equally available to the activity.
 

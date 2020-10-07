@@ -36,7 +36,7 @@ If you already have a valid FTP or SFTP connection, you may skip the remainder o
 
 ### Gather required credentials
 
-In order to access your FTP or SFTP server on [!DNL Platform], you must provide the server's **host name**, a **user name**, and a **password**. 
+In order to access your FTP or SFTP server on [!DNL Platform], you must provide the server's host name, a username, and a password. 
 
 ## Connect to your FTP or SFTP server
 
