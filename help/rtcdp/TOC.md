@@ -27,6 +27,7 @@ user-guide-description: Bring together known and anonymous data from multiple en
     * Adobe destinations{#adobe-destinations}
       * [Adobe destinations overview](destinations/adobe-destinations.md)
       * [Adobe Campaign](destinations/adobe-campaign-destination.md)
+      * [Experience Platform segment sharing (opens Audience Manager documentation)](https://docs.adobe.com/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
     * Advertising destinations{#advertising-destinations}
       * [Advertising destinations overview](destinations/advertising-destinations.md)
       * [Adobe Advertising Cloud extension](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
