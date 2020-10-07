@@ -16,7 +16,7 @@ To enable [!DNL Target], you need to do the following:
 
 1. Turn on activity.id and experience.id reponse tokens in the [!DNL Target] UI.
 
-  ![target_reponse_token](../../solution-specific/target/assets/target_response_token.png)
+  ![target_reponse_token](./assets/target_response_token.png)
 
 1. Enable target in your [edge configuration](../../fundamentals/edge-configuration.md) with the appropriate client code.
 1. Add the `renderDecisions` option to your events.
@@ -24,7 +24,7 @@ To enable [!DNL Target], you need to do the following:
 Then, optionally, you can also:
 
 * Add `decisionScopes` to your events to retrieve specific activities (useful for activities created with the form-based composer).
-* Add the [prehiding snippet](../../solution-specific/target/flicker-management.md) to hide only certain portions of the page.
+* Add the [prehiding snippet](../manage-flicker.md) to hide only certain portions of the page.
 
 ## Using the Adobe Target VEC
 

@@ -10,6 +10,8 @@ keywords: configuration;edge;edge configuration id;Environment Settings;edgeConf
 
 The configuration for the Adobe Experience Platform [!DNL Web SDK] is split between two places. The [configure command](configuring-the-sdk.md) in the SDK controls things that must be handled on the client, like the `edgeDomain`. The edge configuration handles all other configuration for the SDK. When a request is sent to the Adobe Experience Platform [!DNL Edge Network], the `edgeConfigId` is used to reference the server side configuration. This allows you to update the configuration without having to make code changes on your website. 
 
+Your organization must be on the allowlist for this feature. Please contact your Certified software manager (CSM) to get put on the allowlist.
+
 ## Creating an Edge Configuration ID
 
 Edge configuration IDs can be created in Adobe [!DNL Launch] using the edge configuration tool. This tool allows you to create both the edge configuration as well as environments within those configurations.

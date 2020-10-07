@@ -69,7 +69,7 @@ alloy("setConsent", {
 >
 >After a user has opted out, the SDK will not allow you to set the users consent to `in`.
 
-Because the user chose to opt out, promises that were returned from previously queued commands are rejected. Future commands that depend on the user opting in will return promises that are similarly rejected. For more information on handling or suppressing errors, please refer to [Executing Commands](executing-commands.md).
+Because the user chose to opt out, promises that were returned from previously queued commands are rejected. Future commands that depend on the user opting in will return promises that are similarly rejected. For more information on handling or suppressing errors, please refer to [Executing Commands](../fundamentals/executing-commands.md).
 
 >[!NOTE]
 >
@@ -119,5 +119,5 @@ After you have communicated user preferences to the SDK using the `setConsent` c
 
 ## Sync'ing Identities while Setting the Consent
 
-When the default consent is pending, the "setConsent" may be the first request that goes out and establishes identity. Because of this, it may be important to sync identities on the first request. The identity map can be added to "setConsent" command just like on the "sendEvent" command. See [Retrieving Experience Cloud ID](./identity.md)
+When the default consent is pending, the "setConsent" may be the first request that goes out and establishes identity. Because of this, it may be important to sync identities on the first request. The identity map can be added to "setConsent" command just like on the "sendEvent" command. See [Retrieving Experience Cloud ID](../identity/overview.md)
 
