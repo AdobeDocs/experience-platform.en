@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Boolean functions
 topic: developer guide
+description: Boolean functions are used to perform boolean logic on different elements in Profile Query Language (PQL).
 ---
 
 # Boolean functions

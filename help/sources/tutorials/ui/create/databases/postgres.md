@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;PSQL;psql;PostgreSQL
 solution: Experience Platform
 title: Create a PostgreSQL source connector in the UI
 topic: overview
+type: Tutorial
 description: This tutorial provides steps for creating a PostgreSQL (hereinafter referred to as "PSQL") source connector using the Platform user interface.
 ---
 

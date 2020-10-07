@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Azure Blob;azure blob;Azure bl
 solution: Experience Platform
 title: Create an Azure Blob source connector in the UI
 topic: overview
+type: Tutorial
 description: This tutorial provides steps for creating an Azure Blob (hereinafter referred to as "Blob") using the Platform user interface.
 ---
 

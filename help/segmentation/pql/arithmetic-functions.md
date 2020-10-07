@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Arithmetic functions
 topic: developer guide
+description: Arithmetic functions are used to perform basic calculations on values in Profile Query Language (PQL).
 ---
 
 # Arithmetic functions

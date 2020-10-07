@@ -22,7 +22,7 @@ PQL queries have the following signature:
 
 The input parameter can be a simple primitive, such as a boolean or a string, or a more complex type, such as an object, array, or map.
 
-There are **three** different ways to refer to input parameters within the body of a PQL expression:
+There are three different ways to refer to input parameters within the body of a PQL expression:
 
 ### Implicit reference to the first parameter
 
