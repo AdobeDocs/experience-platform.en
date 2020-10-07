@@ -43,13 +43,13 @@ The instance creation workflow appears, starting on the **Setup** step.
 
 Below is important information on values that you must provide the instance with:
 
-*   The instance's name is be used in all places where Customer AI scores are displayed. Hence, names should describe what the prediction scores represent, for example, "Likelihood to cancel magazine subscription".
+-   The instance's name is be used in all places where Customer AI scores are displayed. Hence, names should describe what the prediction scores represent, for example, "Likelihood to cancel magazine subscription".
 
-*   The propensity type determines the intent of the score and metric polarity. You can either choose **[!UICONTROL Churn]** or **[!UICONTROL Conversion]**. Please see the note under [scoring summary](./discover-insights.md#scoring-summary) in the discovering insights document for more information on how the propensity type affects your instance.
+-   The propensity type determines the intent of the score and metric polarity. You can either choose **[!UICONTROL Churn]** or **[!UICONTROL Conversion]**. Please see the note under [scoring summary](./discover-insights.md#scoring-summary) in the discovering insights document for more information on how the propensity type affects your instance.
 
-*   Data source is where the data is located. Dataset is the input dataset which is used to predict scores. By design, Customer AI uses Consumer Experience Event data to calculate propensity scores. When selecting a dataset from the dropdown selector, only ones that are compatible with Customer AI are listed.
+-   Data source is where the data is located. Dataset is the input dataset which is used to predict scores. By design, Customer AI uses Consumer Experience Event data to calculate propensity scores. When selecting a dataset from the dropdown selector, only ones that are compatible with Customer AI are listed.
 
-*   By default, propensity scores are generated for all profiles unless an eligible population is specified. You can specify an eligible population by defining conditions to include or exclude profiles based on events.
+-   By default, propensity scores are generated for all profiles unless an eligible population is specified. You can specify an eligible population by defining conditions to include or exclude profiles based on events.
 
 Provide the required values and then select **[!UICONTROL Next]**.
 
