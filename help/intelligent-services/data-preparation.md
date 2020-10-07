@@ -269,13 +269,13 @@ After the dataset is created, you can find it in the Platform UI within the **[!
 
 ![](images/data-preparation/dataset-location.png)
 
-#### Add a primary identity namespace tag to the dataset
+#### Add identity fields or a namespace to the dataset
 
 >[!NOTE]
 >
 >Future releases of [!DNL Intelligent Services] will integrate [Adobe Experience Platform Identity Service](../identity-service/home.md) into their customer identification capabilities. As such, the steps outlined below are subject to change.
 
-If you are bringing in data from [!DNL Adobe Audience Manager], [!DNL Adobe Analytics], or another external source, then you must add a `primaryIdentityNameSpace` tag to the dataset. This can be done by making a PATCH request to the Catalog Service API.
+If you are bringing in data from [!DNL Adobe Audience Manager], [!DNL Adobe Analytics], or another external source, then you have the option to set a schema field as an identity field or add a `primaryIdentityNameSpace` tag to the dataset. To set a schema field as an identity field, view the section on setting identity fields within the [UI tutorial](../xdm/tutorials/create-schema-ui.md#identity-field) for creating a schema using the Schema Editor or alternatively the [API tutorial](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor). If you wish to add a `primaryIdentityNameSpace`, this can be done by making a PATCH request to the Catalog Service API which is demonstrated in the examples below.
 
 If you are ingesting data from a local CSV file, you can skip ahead to the next section on [mapping and ingesting data](#ingest).
 

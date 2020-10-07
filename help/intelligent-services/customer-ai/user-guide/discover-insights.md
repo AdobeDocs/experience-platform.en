@@ -101,7 +101,11 @@ For each score bucket, a card is generated that shows the top 10 influential fac
 
 ![Influential factors](../images/insights/influential-factors.png)
 
-### Influential factors insights
+### Influential factor drilldowns
+
+Hovering over any of the top influential factors further breaks down the data. You are provided an overview as to why certain profiles belong to an influential factor.
+
+![drilldown screenshot](../images/insights/drilldown.png)
 
 ### Create a segment
 
