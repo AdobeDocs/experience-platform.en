@@ -71,7 +71,7 @@ To create a goal, select **[!UICONTROL Enter Field Name]** and select a field fr
 
 ### Configure a schedule *(optional)* {#configure-a-schedule}
 
-The **[!UICONTROL advanced]** step appears. This optional step allows you to configure a schedule to automate prediction runs, define prediction exclusions to filter certain events, or select **[!UICONTROL Finish]** if nothing is needed. 
+The **[!UICONTROL Advanced]** step appears. This optional step allows you to configure a schedule to automate prediction runs, define prediction exclusions to filter certain events, or select **[!UICONTROL Finish]** if nothing is needed. 
 
 Setup a scoring schedule by configuring the *Scoring Frequency*. Automated prediction runs can be scheduled to run on either a weekly or a monthly basis.
 
