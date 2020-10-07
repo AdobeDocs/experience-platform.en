@@ -1,12 +1,12 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Help
-breadcrumb-title: Experience Platform Guide
+user-guide-title: Adobe Experience Platform Overview
+breadcrumb-title: Experience Platform overview
 user-guide-description: Learn how Experience Platform makes it possible to deliver personalized experiences to your customers in real-time.
 ---
 
-# Adobe Experience Platform {#landing}
+# Adobe Experience Platform overview {#landing}
 
 * [Platform overview](home.md)
 * [Platform overview (Video)](get-started.md)
