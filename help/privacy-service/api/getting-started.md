@@ -70,7 +70,7 @@ The key pair is automatically generated, and a ZIP file containing a private key
 
 ![](../images/api/getting-started/key-pair-generated.png)
 
-Once the API has been added to the project, the project page reappears on the _Privacy Service API overview_ page. From here, scroll down to the **[!UICONTROL Service Account (JWT)]** section, which provides the following access credentials that are required in all calls to the [!DNL Privacy Service] API:
+Once the API has been added to the project, the project page reappears on the **Privacy Service API overview** page. From here, scroll down to the **[!UICONTROL Service Account (JWT)]** section, which provides the following access credentials that are required in all calls to the [!DNL Privacy Service] API:
 
 * **[!UICONTROL CLIENT ID]**: The Client ID is the required `{API_KEY}` for that must be provided in the x-api-key header.
 * **[!UICONTROL ORGANIZATION ID]**: The Organization ID is the `{IMS_ORG}` value that must be used in the x-gw-ims-org-id header.
