@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: String functions
 topic: developer guide
+description: Profile Query Language (PQL) offers functions to make interaction with strings simpler.
 ---
 
 # String functions

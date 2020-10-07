@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Date and time functions
 topic: developer guide
+description: Date and time functions are used to perform date and time operations on values within Profile Query Language (PQL).
 ---
 
 # Date and time functions

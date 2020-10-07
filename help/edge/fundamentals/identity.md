@@ -84,7 +84,7 @@ alloy("sendEvent", {
 | -------- | ------------ | ----------------- |
 | String   | Yes          | none              |
 
-The key for the object is the [Identity Namespace](../../identity-service/namespaces.md) Symbol. You can find this listed in the Adobe Experience Platform user interface under [!UICONTROL Identities].
+The key for the object is the [Identity Namespace](../../identity-service/namespaces.md) Symbol. You can find this listed in the Adobe Experience Platform user interface under "[!UICONTROL Identities]".
 
 #### `id`
 

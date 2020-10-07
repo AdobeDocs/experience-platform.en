@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;query service;Query service;Aq
 solution: Experience Platform
 title: Connect with Aqua Data Studio
 topic: connect
+description: This document walks through the steps for connecting Aqua Data Studio with Adobe Experience Platform Query Service.
 ---
 
 # Connect with [!DNL Aqua Data Studio]
@@ -30,7 +31,7 @@ Select the **[!UICONTROL Driver]** tab. Under **[!UICONTROL Parameters]**, set t
 
 ![](../images/clients/aqua-data-studio/register-server-driver-tab.png)
 
-After inputting your connection details, click **[!UICONTROL Test Connection]** to ensure your credentials work properly. If your connection is successful, click **[!UICONTROL Save]** to register your server. The connection appears on the *Dashboard* upon successful registration, confirming that you can now connect to the server and view its schema objects.
+After inputting your connection details, click **[!UICONTROL Test Connection]** to ensure your credentials work properly. If your connection is successful, click **[!UICONTROL Save]** to register your server. The connection appears on the **Dashboard** upon successful registration, confirming that you can now connect to the server and view its schema objects.
 
 ## Next steps
 
