@@ -12,7 +12,7 @@ keywords: merge;event data;eventMergeId;createEventMergeId;sendEvent;mergeId;mer
 >
 >This feature is still in development. Not all solutions will be able to merge event data as described on this page. 
 
-Sometimes, not all data is available when an event occurs. You might want to capture the data you _do_ have so it isn't lost if, for example, the user closes the browser. On the other hand, you might also include any data that will become available later.
+Sometimes, not all data is available when an event occurs. You might want to capture the data you do have so it isn't lost if, for example, the user closes the browser. On the other hand, you might also include any data that will become available later.
 
 In such cases, you can merge data with prior events by passing `eventMergeId` as an option to `event` commands as follows:
 

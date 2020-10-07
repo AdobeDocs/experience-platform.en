@@ -50,7 +50,7 @@ New legal and organizational regulations are giving users the right to access or
 |New API endpoints | Base path for the [!DNL Privacy Service] API has been updated from `/data/privacy/gdpr` to `/data/core/privacy/jobs`.|
 |New required `regulation` property | When creating new jobs in the [!DNL Privacy Service] API, a `regulation` property must be supplied in the request payload to indicate which regulation to track the job under. Accepted values are `gdpr` and `ccpa`.|
 |Support for [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] now accepts access/delete requests from Adobe [!DNL Primetime Authentication], using `primetimeAuthentication` as its product value.|
-|Privacy Service UI enhancements | Separate job tracking pages for GDPR and CCPA regulations. New _Regulation Type_ dropdown to switch between tracking data for GDPR and CCPA.|
+|Privacy Service UI enhancements | Separate job tracking pages for GDPR and CCPA regulations. New **Regulation Type **dropdown to switch between tracking data for GDPR and CCPA.|
 
 **Known issues**
 
@@ -100,7 +100,7 @@ In [Adobe Real-time CDP](../../rtcdp/overview.md), destinations are pre-built in
 |Category | Permission | Description|
 |--- | --- | ---|
 |Destinations | Manage Destinations | Access to read, create, edit, and disable destinations.|
-|Destinations | View Destinations | Read-only access to available destinations in the [!UICONTROL _Catalog_] tab and authenticated destinations in the _Browse_ tab.|
+|Destinations | View Destinations | Read-only access to available destinations in the **[!UICONTROL Catalog]** tab and authenticated destinations in the **Browse** tab.|
 |Destinations | Activate Destinations | Ability to activate data to destinations. This permission requires either "Manage Destinations" or "View Destinations" to be added to the product profile.|
 
 **Known issues**
