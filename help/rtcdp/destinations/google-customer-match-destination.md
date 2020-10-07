@@ -33,7 +33,7 @@ To promote the release, they upload email addresses from their CRM database into
 
 The destinations in Adobe Real-time CDP may have certain rules and obligations for data sent to, or received from, the destination platform. You are responsible for understanding the limitations and obligations of your data and how you use that data in Adobe Experience Platform and the destination platform. Adobe Experience Platform provides data governance tools to help you manage some of those data usage obligations. [Learn more](/help/data-governance/labels/overview.md) about data governance tools and policies.
 
-## Activation Type and Identities {#activation-type}
+## Export Type and Identities {#export-type}
 
 **Segment Export** - you are exporting all members of a segment (audience) with the identifiers (name, phone number, etc.) used in the [!DNL Google Customer Match] destination.
 

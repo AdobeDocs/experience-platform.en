@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Azure;azure blob;blob;Blob
 solution: Experience Platform
 title: Create an Azure Blob connector using the Flow Service API
 topic: overview
+type: Tutorial
 description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to an Azure Blob (hereinafter referred to as "Blob") storage.
 ---
 

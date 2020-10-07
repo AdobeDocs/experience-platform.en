@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;customer attributes
 solution: Experience Platform
 title: Create a customer attributes source connector in the UI
 topic: overview
+type: Tutorial
 description: This tutorial provides steps for creating a source connector in the UI for collecting customer attributes profile data into Adobe Experience Platform.
 ---
 

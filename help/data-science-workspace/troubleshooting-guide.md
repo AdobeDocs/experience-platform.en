@@ -105,3 +105,7 @@ You can configure resources by adding the following block to the first cell of y
 ```
 
 For more information on [!DNL Spark] cluster resource configuration, including the complete list of configurable properties, see the [JupyterLab User Guide](./jupyterlab/overview.md#kernels).
+
+## Why am I receiving an error when trying execute certain tasks for larger datasets?
+
+If you are receiving an error with a reason such as `Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues.` This typically means the driver or an executor is running out of memory. See the JupyterLab Notebooks [data access](./jupyterlab/access-notebook-data.md) documentation for more information on data limits and how to execute tasks on large datasets. Typically this error can be solved by changing the `mode` from `interactive` to `batch`.

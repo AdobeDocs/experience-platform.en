@@ -17,11 +17,12 @@ The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow 
 
 ### Regulation Type
 
-[!DNL Privacy Service] supports job requests for three regulation types: 
+[!DNL Privacy Service] supports job requests for four regulation types: 
 
-* The European Union's [!DNL General Data Protection Regulation] (GDPR)
-* The [!DNL California Consumer Privacy Act] (CCPA)
-* Thailand's [!DNL Personal Data Protection Act] (PDPA_THA)
+* The European Union's [!DNL General Data Protection Regulation] ([!UICONTROL GDPR])
+* The [!DNL California Consumer Privacy Act] ([!UICONTROL CCPA])
+* Brazil's [!DNL Lei Geral de Proteção de Dados] ([!UICONTROL LGPD_BRA])
+* Thailand's [!DNL Personal Data Protection Act] ([!UICONTROL PDPA_THA])
 
 Jobs for each regulation type are tracked separately. To switch between regulation types, click the **[!UICONTROL Regulation Type]** dropdown menu and select the desired regulation from the list.
 
@@ -49,7 +50,7 @@ To view further details about a given data point, click the data point in questi
 
 >[!NOTE]
 >
->When a filter has been applied to the Job Requests widget, you can remove the filter by clicking the **[!UICONTROL X]** on the filter pill. Job Requests then return to the default tracking list.
+>When a filter has been applied to the Job Requests widget, you can remove the filter by clicking the **X** on the filter pill. Job Requests then return to the default tracking list.
 
 ### Job Requests
 

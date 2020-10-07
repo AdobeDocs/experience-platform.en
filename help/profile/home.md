@@ -1,6 +1,5 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;XDM graphs
-solution: Adobe Experience Platform
 title: Real-time Customer Profile overview
 topic: guide
 description: Real-time Customer Profile is a generic lookup entity store that merges data from various enterprise data assets, and then provides access to that data in the form of individual customer profiles and related time series events. This feature enables marketers to drive coordinated, consistent and relevant experiences with their audiences across multiple channels.
@@ -83,7 +82,7 @@ In order to drive coordinated, consistent, and personalized experiences for your
 
 ### [!DNL Profile] ingestion metrics
 
-Observability Insights allows you to expose key metrics in Adobe Experience Platform. In addition to [!DNL Platform] usage statistics and performance indicators for various [!DNL Platform] functionalities, there are specific [!DNL Profile]-related metrics that allow you to gain insight into incoming request rates, successful ingestion rates, ingested record sizes, and more. To learn more, begin by reading the [Observability Insights overview](../observability/home.md), and for a complete list of [!DNL Profile] metrics, see the documentation on [available metrics](../observability/metrics.md).
+Observability Insights allows you to expose key metrics in Adobe Experience Platform. In addition to [!DNL Platform] usage statistics and performance indicators for various [!DNL Platform] functionalities, there are specific [!DNL Profile]-related metrics that allow you to gain insight into incoming request rates, successful ingestion rates, ingested record sizes, and more. To learn more, begin by reading the [Observability Insights API overview](../observability/api/overview.md), and for a complete list of [!DNL Profile] metrics, see the documentation on [available metrics](../observability/api/metrics.md#available-metrics).
 
 ## [!DNL Data governance] and [!DNL Privacy]
 

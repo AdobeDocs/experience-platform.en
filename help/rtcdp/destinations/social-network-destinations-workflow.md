@@ -1,6 +1,7 @@
 ---
 keywords: Facebook;facebook;Social network;Social Network;social network authentication;Social network authentication
 title: Social Network Destinations Workflow
+type: Tutorial
 seo-title: Social Network Destinations Workflow
 description: Instructions to connect to your social network ad accounts
 seo-description: Instructions to connect to your social network ad accounts

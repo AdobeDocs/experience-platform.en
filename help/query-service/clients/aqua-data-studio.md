@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;query service;Query service;Aq
 solution: Experience Platform
 title: Connect with Aqua Data Studio
 topic: connect
+description: This document walks through the steps for connecting Aqua Data Studio with Adobe Experience Platform Query Service.
 ---
 
 # Connect with [!DNL Aqua Data Studio]
@@ -17,7 +18,7 @@ The **[!UICONTROL Register Server]** dialog appears. Under the **[!UICONTROL Gen
 
 - **[!UICONTROL Name]**: The name of your connection.
 - **[!UICONTROL Login Name and Password]**: The login credentials that will be used. The username takes the form of `ORG_ID@AdobeOrg`.
-- **[!UICONTROL Host and Port]**: The host endpoint and its port for [!DNL Query Service]. 
+- **[!UICONTROL Host and Port]**: The host endpoint and its port for [!DNL Query Service]. You must use port 80 to connect with [!DNL Query Service].
 - **[!UICONTROL Database]:** The database that will be used.
 
 >[!NOTE]

@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Amazon S3;Azure Blob
 solution: Experience Platform
 title: Create an Azure Blob or Amazon S3 source connector in the UI
 topic: overview
+type: Tutorial
 description: Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. 
 ---
 

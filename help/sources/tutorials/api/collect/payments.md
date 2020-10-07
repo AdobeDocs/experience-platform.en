@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Collect payment data;payment d
 solution: Experience Platform
 title: Collect payment data through source connectors and APIs
 topic: overview
+type: Tutorial
 description: This tutorial covers the steps for retrieving data from a payments application and ingesting it into Platform through source connectors and APIs.
 ---
 

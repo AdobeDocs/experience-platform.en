@@ -14,10 +14,10 @@ Multi-entity segmentation is an advanced feature available as part of Adobe Expe
 
 Multi-entity segmentation requires a working understanding of the various Adobe Experience Platform services involved in segmentation. Before continuing with this guide, please review the following documentation:
 
-* [!DNL Real-time Customer Profile](../profile/home.md): Provides a unified consumer profile in real-time, based on aggregated data from multiple sources.
+* [[!DNL Real-time Customer Profile]](../profile/home.md): Provides a unified consumer profile in real-time, based on aggregated data from multiple sources.
   * [Profile guardrails](../profile/guardrails.md): Best practices for creating data models supported by [!DNL Profile].
-* [!DNL Adobe Experience Platform Segmentation Service](./home.md): Allows you to build segments from [!DNL Real-time Customer Profile] data.
-* [!DNL Experience Data Model (XDM)](../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Allows you to build segments from [!DNL Real-time Customer Profile] data.
+* [[!DNL Experience Data Model (XDM)]](../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Basics of schema composition](../xdm/schema/composition.md#union): Learn best practices for composing schemas to be used in Experience Platform.
 
 ## Use cases
@@ -38,14 +38,16 @@ Creating a multi-entity segment first requires defining relationships between sc
 
 ### Define relationships
 
-Defining relationships within the structure of your Experience Data Model (XDM) schemas is an integral part of multi-entity segment creation. This process can be done either using the Schema Registry API or the Schema Editor. For detailed steps showing how to define a relationship between two schemas, please choose from the following tutorials:
+Defining relationships within the structure of your Experience Data Model (XDM) schemas is an integral part of multi-entity segment creation. For relationships, the field in the destination needs to be marked as the primary identity of that schema. An identity can only be marked on strings and cannot be marked on arrays. Additionally, relationships do not necessarily need to be one-to-one, as you can connect profiles and experience events to multiple destinations. 
+
+Defining relationships can be done either using the Schema Registry API or the Schema Editor. For detailed steps showing how to define a relationship between two schemas, please choose from the following tutorials:
 
 * [Defining a relationship between two schemas using the API](../xdm/tutorials/relationship-api.md)
 * [Defining a relationship between two schemas using the Schema Editor UI](../xdm/tutorials/relationship-ui.md)
 
 ### Build a multi-entity segment
 
-Once you have defined the necessary XDM relationships, you can begin to build a multi-entity segment. This process can be done using either the Segmentation API or the Segment Builder UI. For more information, please choose from the following guides:
+Once you have defined the necessary XDM relationships, you can begin to build a multi-entity segment. This can be done using either the Segmentation API or the Segment Builder UI. For more information, please choose from the following guides:
 
 * [Creating a segment using the Segmentation API](./tutorials/create-a-segment.md)
 * [Creating a segment using the Segment Builder UI](./ui/overview.md)

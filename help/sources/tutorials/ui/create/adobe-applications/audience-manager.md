@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Audience manager source connec
 solution: Experience Platform
 title: Create an Adobe Audience Manager source connector in the UI
 topic: overview
+type: Tutorial
 description: This tutorial walks you through the steps to create a source connectors for Adobe Audience Manager to bring in Consumer Experience Event data into Platform using the user interface.
 ---
 

@@ -51,7 +51,7 @@ All XDM schemas describe data that can be categorized as record or time series. 
 
 Both record and time series schemas contain a map of identities (`xdm:identityMap`). This field contains the identity representation of a subject, drawn from fields marked as "Identity" as described in the next section.
 
-### [!UICONTROL Identity]
+### [!UICONTROL Identity] {#identity}
 
 Schemas are used for ingesting data into [!DNL Experience Platform]. This data can be used across multiple services to create a single, unified view of an individual entity. Therefore, it is important when thinking about schemas to think about customer identities and which fields can be used to identify a subject regardless of where the data may be coming from. 
 
@@ -166,7 +166,7 @@ A field is the most basic building block of a schema. Fields provide constraints
 
 * String
 * Integer
-* Number
+* Double
 * Boolean
 * Array
 * Object

@@ -4,6 +4,7 @@ description: Source connectors in Adobe Experience Platform provide the ability 
 solution: Experience Platform
 title: Monitor accounts and dataflows
 topic: overview
+type: Tutorial
 ---
 
 # Monitor accounts and dataflows in the UI
@@ -35,23 +36,52 @@ Select the funnel icon on the top left to launch the sort window.
 
 The sorting panel allows you to access accounts from a specific source. Select the source you wish to work with and select the account from the list on the right.
 
+>[!TIP]
+>
+> Use the ![spectrum-control](../../images/tutorials/monitor/spectrum-control.png) button in the **[!UICONTROL Name]** column to create a new source dataflow for the selected account.
+
 ![accounts-select](../../images/tutorials/monitor/accounts-sort.png)
 
-From the **[!UICONTROL Accounts]** page, you can view a list of existing dataflows or target datasets associated with the account you accessed.
+Additionally, you can edit existing account information and update your account credentials. Select the pencil icon for the account information you want to edit.
+
+![](../../images/tutorials/monitor/click-edit.png)
+
+The **[!UICONTROL Edit account details]** modal appears. From this page, you can update your existing account details and authentication credentials.
+
+![](../../images/tutorials/monitor/edit-account.png)
+
+From the **[!UICONTROL Accounts]** page, you can view a list of existing dataflows or target datasets associated with the account you accessed. Select the ellipses (`...`) button to bring up more available options for your selected dataflow. These options are further described below:
+
+| Control | Description |
+| ------- | ----------- |
+| [!UICONTROL Edit schedule] | Allows you to edit the ingestion schedule of the dataflow. |
+| [!UICONTROL Disable dataflow] | Allows you to disable data ingestion for the selected dataflow. |
+| [!UICONTROL Delete] | Allows you to delete the selected dataflow. |
 
 ![dataflows](../../images/tutorials/monitor/dataflows.png)
 
 ## Monitor dataflows
 
-Dataflows can be accessed directly from the **[!UICONTROL Catalog]** page without viewing **[!UICONTROL Accounts]**. Select **[!UICONTROL Dataflows]** from the top header to view a list of existing dataflows.
+Dataflows can be accessed directly from the **[!UICONTROL Catalog]** page without viewing **[!UICONTROL Accounts]**. Select **[!UICONTROL Dataflows]** from the top header to view a list of dataflows.
 
 ![catalog-dataflows](../../images/tutorials/monitor/catalog-dataflows.png)
 
-A list of existing dataflows appears. On this page is a list of viewable dataflows, including information about their source, username, number of dataflows, and status. Select the funnel icon on the top left to sort.
+A list of existing dataflows appears. On this page is a list of viewable dataflows, including information about their source, username, number of dataflows, and status.
+
+See the following table for more information on statuses:
+
+| Status | Description |
+| ------ | ----------- |
+| Enabled | The `Enabled` status indicates that a dataflow is active and is ingesting data according to the schedule it was provided. |
+| Disabled | The `Disabled` status indicates that a dataflow is inactive and is not ingesting any data. |
+| Processing | The `Processing` status indicates that a dataflow is not yet active. This status is often encountered immediately after a new dataflow is created. |
+| Error | The `Error` status indicates that the activation process of a dataflow has been disrupted. |
+
+ Select the funnel icon on the top left to sort.
 
 ![dataflows-list](../../images/tutorials/monitor/dataflows-list.png)
 
-The sorting panel appears. Select the source you wish to access from the scroll menu and select the dataflow from the list on the right.
+The sorting panel appears. Select the source you wish to access from the scroll menu and select the dataflow from the list on the right. You can also select the ellipses (`...`) button to bring up more available options for your selected dataflow.
 
 ![sort-dataflows](../../images/tutorials/monitor/dataflows-sort.png)
 
@@ -73,13 +103,12 @@ The **[!UICONTROL Dataflow run overview]** displays information on the dataflow 
 
 ![dataflow-run-overview](../../images/tutorials/monitor/dataflow-run-overview.png)
 
-Refer to the following table for error codes that can be seen in the **[!UICONTROL Error summary]**.
+Refer to the following table for errors that can be seen in the **[!UICONTROL Error summary]**.
 
-| Error code | Error Message |
+| Error | Description |
 | ---------- | ----------- |
-| `CONNECTOR-1001-500` | "A problem occurred with the copy activity." |
-| `CONNECTOR-2001-500` | "There was a problem copying from the Experience Platform source to the dataset." |
-| `CONNECTOR-3001-500` | "A problem occurred with the flow provider while creating batch using bulk ingest API." |
+| `CONNECTOR-1001-500` | An error occurred while data is being copied from a source. |
+| `CONNECTOR-2001-500` | An error occurred while copied data is being processed to [!DNL Platform]. This error could be regarding parsing, validating, or transforming. |
 
 The lower half of the screen contains information on **[!UICONTROL Dataflow run errors]**. From here, you can also view the files ingested, preview and download error diagnostics, or download the file manifest.
 

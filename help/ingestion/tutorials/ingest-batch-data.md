@@ -3,6 +3,8 @@ keywords: Experience Platform;home;popular topics;ingestion;ingest batch data;tu
 solution: Experience Platform
 title: Ingest data into Adobe Experience Platform
 topic: tutorial
+type: Tutorial
+description: Adobe Experience Platform allows you to easily import data as batch files in the form of parquet files or data that conforms to a known Experience Data Model (XDM) schema.
 ---
 
 # Ingest data into Adobe Experience Platform
@@ -25,17 +27,19 @@ View the Datasets workspace by clicking **[!UICONTROL Datasets]** in the left-ha
 >
 >Click on the filter icon next to the Search bar to use filtering capabilities to view only those datasets enabled for [!DNL Profile].
 
-![View all datasets](../images/tutorials/ingest-batch-data/datasets_workspace.png)
+![View all datasets](../images/tutorials/ingest-batch-data/datasets-overview.png)
 
 ## Create a dataset
 
 To create a dataset, click **[!UICONTROL Create Dataset]** in the top right corner of the Datasets workspace. 
 
+![](../images/tutorials/ingest-batch-data/click-create-datasets.png)
+
 On the **[!UICONTROL Create Dataset]** screen, select whether you would like to "[!UICONTROL Create Dataset from Schema]" or "[!UICONTROL Create Dataset from CSV File]". 
 
 For this tutorial, a schema will be used to create the dataset. Click **[!UICONTROL Create Dataset from Schema]** to continue.
 
-![Select data source](../images/tutorials/ingest-batch-data/create_dataset.png)
+![Select data source](../images/tutorials/ingest-batch-data/create-dataset.png)
 
 ## Select dataset schema
 
@@ -43,7 +47,7 @@ On the **[!UICONTROL Select Schema]** screen, choose a schema by clicking the ra
 
 Once you have selected the radio button next to the schema you wish to use, click **[!UICONTROL Next]**.
 
-![Select schema](../images/tutorials/ingest-batch-data/select_schema.png)
+![Select schema](../images/tutorials/ingest-batch-data/select-schema.png)
 
 ## Configure dataset
 
@@ -57,7 +61,7 @@ On the **[!UICONTROL Configure Dataset]** screen, you will be required to give y
 
 Once the dataset has a name and description, click **[!UICONTROL Finish]**.
 
-![Configure dataset](../images/tutorials/ingest-batch-data/configure_dataset.png)
+![Configure dataset](../images/tutorials/ingest-batch-data/configure-dataset.png)
 
 ## Dataset activity
 
@@ -67,7 +71,7 @@ On the right-hand side of the Datasets workspace you will see the **[!UICONTROL 
 
 Also in the Info tab is a  **[!UICONTROL Profile]** toggle that is used for enabling your dataset for use with [!DNL Real-time Customer Profile]. Use of this toggle, and [!DNL Real-time Customer Profile], will be explained in more detail in the section that follows.
 
-![Dataset activity](../images/tutorials/ingest-batch-data/dataset_activity.png)
+![Dataset activity](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
 ## Enable dataset for [!DNL Real-time Customer Profile]
 
@@ -79,15 +83,15 @@ To learn more about [!DNL Real-time Customer Profile] and working with identitie
 
 To enable the dataset for [!DNL Real-time Customer Profile], click the **[!UICONTROL Profile]** toggle in the **[!UICONTROL Info]** tab. 
 
-![Profile toggle](../images/tutorials/ingest-batch-data/enable_dataset_unified_profile.png)
+![Profile toggle](../images/tutorials/ingest-batch-data/dataset-profile-toggle.png)
 
 A dialog will appear asking you to confirm that you want to enable the dataset for [!DNL Real-time Customer Profile].
 
-![Enable Profile dialog](../images/tutorials/ingest-batch-data/confirm_dataset_enable.png)
+![Enable Profile dialog](../images/tutorials/ingest-batch-data/enable-dataset-for-profile.png)
 
 Click **[!UICONTROL Enable]** and the toggle will turn blue, indicating it is on.
 
-![Enabled for Profile](../images/tutorials/ingest-batch-data/dataset_enabled.png)
+![Enabled for Profile](../images/tutorials/ingest-batch-data/profile-enabled-dataset.png)
 
 ## Add data to dataset
 
@@ -99,13 +103,13 @@ To begin adding data to the dataset, click on the **[!UICONTROL Add Data]** tab.
 >
 >Platform supports two files types for data ingestion, parquet or JSON. You may add up to five files at a time, with the maximum file size of each file being 10 GB.
 
-![Add Data tab](../images/tutorials/ingest-batch-data/add_data.png)
+![Add Data tab](../images/tutorials/ingest-batch-data/drag-and-drop.png)
 
 ## Upload a file
 
 Once you drag and drop (or browse and select) a parquet or JSON file that you wish to upload, [!DNL Platform] will immediately begin to process the file and an **[!UICONTROL Uploading]** dialog will appear on the **[!UICONTROL Add Data]** tab showing the progress of your file upload.
 
-![Uploading dialog](../images/tutorials/ingest-batch-data/uploading.png)
+![Uploading dialog](../images/tutorials/ingest-batch-data/uploading-file.png)
 
 ## Dataset metrics
 
@@ -113,7 +117,7 @@ After the file has finished uploading, the **[!UICONTROL Dataset Activity]** tab
 
 At the bottom of the tab is a list showing the **[!UICONTROL Batch ID]** of the data that was just ingested through the ["Add data to dataset"](#add-data-to-dataset) process. Also included is information related to the batch, including ingested date, number of records ingested, and the current batch status.
 
-![Dataset metrics](../images/tutorials/ingest-batch-data/batch_loading.png)
+![Dataset metrics](../images/tutorials/ingest-batch-data/batch-id.png)
 
 ## Batch details
 
@@ -123,7 +127,7 @@ For more information and frequently asked questions regarding batch ingestion, s
 
 To return to the **[!UICONTROL Dataset Activity]** screen, click the name of the dataset (**[!UICONTROL Loyalty Details]**) in the breadcrumb.
 
-![Batch Overview](../images/tutorials/ingest-batch-data/batch_overview.png)
+![Batch Overview](../images/tutorials/ingest-batch-data/batch-details.png)
 
 ## Preview dataset
 
@@ -131,7 +135,7 @@ Once the dataset is ready, an option to **[!UICONTROL Preview Dataset]** appears
 
 Click **[!UICONTROL Preview Dataset]** to open a dialog showing sample data from within the dataset. If the dataset was created using a schema, details for the dataset schema will appear on the left-side of the preview. You can expand the schema using the arrows to see the schema structure. Each column header in the preview data represents a field in the dataset.
 
-![Dataset details](../images/tutorials/ingest-batch-data/dataset_details.png)
+![Dataset details](../images/tutorials/ingest-batch-data/dataset-preview.png)
 
 ## Next steps and additional resources
 

@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Query service;query service;Lo
 solution: Experience Platform
 title: Connect with Looker
 topic: connect
+description: This document walks through the steps for connecting Looker with Adobe Experience Platform Query Service.
 ---
 
 # Connect with [!DNL Looker]
