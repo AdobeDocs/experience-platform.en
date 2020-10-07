@@ -61,7 +61,7 @@ The *Define goal* step appears and it provides an interactive environment for yo
 
 While defining your goal you have the option to select **[!UICONTROL Will occur]** or **[!UICONTROL Will not occur]**. Selecting **[!UICONTROL Will occur]** means that the event conditions you define need to be met for a customers event data to be included in the insights UI. For example, if you wanted all the customers who purchased a specific item by following an email link. You can select **[!UICONTROL Will occur]** followed by defining your goal.
 
-Selecting **[!UICONTROL Will not occur]** means any conditions outside the one you define are captured. This option should be used in churn cases to specify non-events. For example, you can have a use case looking at customers were sent a promotion but did not redirect from it.
+Selecting **[!UICONTROL Will not occur]** means any conditions outside the one you define are captured. This option should be used in churn cases to specify non-events. For example, you can have a use case looking at loyal customers were sent a promotion but did not redirect from it.
 
 ![](../images/user-guide/occur.png)
 

@@ -101,6 +101,8 @@ For each score bucket, a card is generated that shows the top 10 influential fac
 
 ![Influential factors](../images/insights/influential-factors.png)
 
+### Influential factors insights
+
 ### Create a segment
 
 Clicking the **[!UICONTROL Create Segment]** button in any of the buckets for Low, Medium, and High propensity redirects you to the segment builder.
