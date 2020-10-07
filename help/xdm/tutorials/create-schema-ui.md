@@ -329,21 +329,13 @@ In the **[!UICONTROL Schemas]** workspace, select **[!UICONTROL Create schema]**
 
 ![](../images/tutorials/create-schema/browse-classes.png)
 
-<<<<<<< HEAD
-A dialog appears that allows you select from a list of available classes. At the top of the dialog, select **[!UICONTROL Create New Class]**. You can then give your new class a display name (a short, descriptive, unique, and user-friendly name for the class), a description, and a behavior ("Record" or "Time Series") for the data the schema will define. 
-=======
-A dialog appears that allows you select from a list of available classes. At the top of the dialog, select **[!UICONTROL Create new class]**. You can then give your new class a **[!UICONTROL Display name]** (a short, descriptive, unique, and user-friendly name for the class), a **[!UICONTROL Description]**, and a **[!UICONTROL Behavior]** ("[!UICONTROL Record]" or "[!UICONTROL Time Series]") for the data the schema will define. 
->>>>>>> master
+A dialog appears that allows you select from a list of available classes. At the top of the dialog, select **[!UICONTROL Create new class]**. You can then give your new class a display name (a short, descriptive, unique, and user-friendly name for the class), a description, and a behavior ("[!UICONTROL Record]" or "[!UICONTROL Time Series]") for the data the schema will define. 
 
 ![](../images/tutorials/create-schema/create_new_class.png)
 
 >[!IMPORTANT]
 >
-<<<<<<< HEAD
->When building a schema that implements a class defined by your organization, remember that mixins are available for use only with compatible classes. Since the class you defined is new, there are no compatible mixins listed in the **Add Mixin** dialog. Instead, you will need to select **[!UICONTROL Create New Mixin]** and define a mixin for use with that class. The next time you compose a schema that implements the new class, the mixin that you defined will be listed and available for use. 
-=======
 >When building a schema that implements a class defined by your organization, remember that mixins are available for use only with compatible classes. Since the class you defined is new, there are no compatible mixins listed in the **[!UICONTROL Add mixin]** dialog. Instead, you will need to select **[!UICONTROL Create new mixin]** and define a mixin for use with that class. The next time you compose a schema that implements the new class, the mixin that you defined will be listed and available for use. 
->>>>>>> master
 
 ### Change the class of a schema {#change-class}
 
