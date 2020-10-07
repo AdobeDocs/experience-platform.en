@@ -26,7 +26,7 @@ To use the identity graph viewer in the UI, select **[!UICONTROL Identities]** i
 
 ![namespace-screen](../images/identity-graph-viewer/identity-namespace.png)
 
-The **[!UICONTROL Select identity namespace]** panel appears. This screen contains a list of namespaces at your disposal, including information about a namespace's **[!UICONTROL Display name]**, **[!UICONTROL Identity symbol]**, **[!UICONTROL Owner]**, **[!UICONTROL Last updated]** date, and **[!UICONTROL Description]**.
+The **[!UICONTROL Select identity namespace]** panel appears. This screen contains a list of namespaces at your disposal, including information about a namespace's **[!UICONTROL Display name]**, **[!UICONTROL Identity symbol]**, **[!UICONTROL Owner]**, **[!UICONTROL Last updated]** date, and **[!UICONTROL Description]**. You can use any of the namespaces provided, so long as you have a valid identity value connected to it.
 
 Select the namespace you intend to use and click **[!UICONTROL Select]** to proceed.
 
@@ -36,7 +36,7 @@ Once you have selected a namespace, enter its corresponding value in the **[!UIC
 
 ![add-identity-value](../images/identity-graph-viewer/identity-value.png)
 
-The identity graph viewer appears. On the left side of the screen is a force-directed graph displaying all of the identities linked to the namespace you selected and how they are stitched together. You can hover over an identity to see information about its value. This information is also displayed in a tabled list in the center of the screen.
+The identity graph viewer appears. On the left side of the screen is a force-directed graph displaying all of the identities stitched within the graph that contains the namespace you selected. You can select and identity node to see its namespace and its corresponding ID value. Alternatively, you can hover over an identity to see information about its ID value. The graph output is also displayed as a tabled list in the center of the screen.
 
 Select an identity to update the highlighted row on the **[!UICONTROL Identity types]** table and to update the information provided on the right rail, which includes an identity's **[!UICONTROL Value]**, **[!UICONTROL Batch Id]**, and its **[!UICONTROL Last updated]** date.
 
@@ -44,7 +44,9 @@ Select **[!UICONTROL Data source]** from the header to see more information rega
 
 ![identity-graph](../images/identity-graph-viewer/graph-view.png)
 
-The **[!UICONTROL Data source]** screen displays a list of batch IDs linked to the identities within the identity graph. The right rail of the **[!UICONTROL Data source]** screen contains more information regarding the batch ID, including details about its dataset and schema. Select a batch ID to see a more comprehensive overview of that particular batch.
+The **[!UICONTROL Data source]** screen displays a list of batch IDs linked to the identities within the identity graph, as well as information about its source schema and a timestamp on its last ingestion.
+
+The right rail of the **[!UICONTROL Data source]** screen contains more information regarding the batch ID, including details about its dataset and schema. Select a batch ID to see a more comprehensive overview of that particular batch.
 
 ![select-links](../images/identity-graph-viewer/select-edge.png)
 
@@ -57,3 +59,5 @@ Identity graphs with larger clusters of identities are also accessible through t
 ![large-cluster](../images/identity-graph-viewer/large-cluster.png)
 
 ## Next steps
+
+By reading this document, you have learned how to access the identity graph viewer and view how identities are stitched together. For more information, please refer to the [Identity Service overview](../home.md)
