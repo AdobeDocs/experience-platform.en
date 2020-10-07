@@ -150,9 +150,6 @@ The following videos outline the key capabilities and use cases for [!DNL Experi
 
 >[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)
 
-
- 
-
 <!-- 
 ## What's New
 

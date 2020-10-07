@@ -46,8 +46,8 @@ Item | Description |
  Platform | Represents the destination platform that audiences are sent to. See [Destinations Catalog](/help/rtcdp/destinations/destinations-catalog.md) for more information. |
  Description | You can edit the description of your destination flow. |
  Category | Indicates the type of destination. See [Destinations Catalog](/help/rtcdp/destinations/destinations-catalog.md) for more information. |
- Connection Type | Indicates in which form your audiences are being sent to the destination. Can be **[!UICONTROL Cookie]** or **[!UICONTROL Profile-based]**. |
- Frequency | Indicates how often the audiences are sent to the destination. Can be **[!UICONTROL Streaming]** or **[!UICONTROL Batch]**.  |
+ Connection Type | Indicates in which form your audiences are being sent to the destination. Can be [!UICONTROL Cookie] or [!UICONTROL Profile-based]. |
+ Frequency | Indicates how often the audiences are sent to the destination. Can be [!UICONTROL Streaming] or [!UICONTROL Batch].  |
  Identity | Represents the identity namespace accepted by the destination. For example, the Identity field can be GAID, IDFA, email. For all accepted identity namespaces, see standard namespaces in the [Identity namespace overview](../../identity-service/namespaces.md).   |
  Created by | Indicates the user who created this destination flow. |
  Created | Indicates the UTC date and time when this destination flow was created. |
