@@ -1,22 +1,28 @@
 ---
 keywords: streaming;
-title: The HTTP destination is an Adobe Real-Time Customer Data Platform streaming destination that helps you send profile data to third-party HTTP endpoints.
-seo-title: The HTTP destination is an Adobe Real-Time Customer Data Platform streaming destination that helps you send profile data to third-party HTTP endpoints.
-description: The HTTP destination is an Adobe Real-Time Customer Data Platform streaming destination that helps you send profile data to third-party HTTP endpoints.
-seo-description: The HTTP destination is an Adobe Real-Time Customer Data Platform streaming destination that helps you send profile data to third-party HTTP endpoints.
+title: The HTTP destination is an Adobe Real-Time Customer Data Platform destination that helps you send profile data to third-party HTTP endpoints.
+seo-title: The HTTP destination is an Adobe Real-Time Customer Data Platform  destination that helps you send profile data to third-party HTTP endpoints.
+description: The HTTP destination is an Adobe Real-Time Customer Data Platform  destination that helps you send profile data to third-party HTTP endpoints.
+seo-description: The HTTP destination is an Adobe Real-Time Customer Data Platform  destination that helps you send profile data to third-party HTTP endpoints.
 ---
 
-# (Beta) [!DNL HTTP] Destination 
+# (Alpha) [!DNL HTTP] Destination 
 
 >[!IMPORTANT]
 >
->The [!DNL HTTP] destination in Adobe Real-time CDP is currently in beta. The documentation and the functionality are subject to change.
+>The [!DNL HTTP] destination in Adobe Real-time CDP is currently in alpha. The documentation and the functionality are subject to change.
 
 ## Overview {#overview}
 
 The [!DNL HTTP] destination is an [!DNL Adobe Real-Time Customer Data Platform] streaming destination that helps you send profile data to third-party [!DNL HTTP] endpoints.
 
 To send profile data to [!DNL HTTP] endpoints, you must first connect to the destination in the [!DNL Adobe Real-Time Customer Data Platform](#connect-destination).
+
+## Use Cases {#use-cases}
+
+The [!DNL HTTP] destination is targeted towards customers who need to export XDM profile data and audience segments to generic [!DNL HTTP] endpoints.
+
+[!DNL HTTP] endpoints can be either customers' own systems  or third-party solutions.
 
 ## Connect to Destination {#connect-destination}
 
