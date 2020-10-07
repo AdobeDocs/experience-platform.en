@@ -105,6 +105,8 @@ user-guide-description: Bring together known and anonymous data from multiple en
       * [Social network destinations authentication flow](/help/rtcdp/destinations/social-network-destinations-workflow.md)
       * [Adobe Livefyre extension](/help/rtcdp/destinations/adobe-livefyre-extension.md)
       * [Facebook destination](/help/rtcdp/destinations/facebook-destination.md)
+    * Streaming destinations {#streaming-destinations}
+      * [HTTP destination](/help/rtcdp/destinations/http-destination.md)
     * Survey destinations {#survey-destinations}
       * [Survey destinations overview](/help/rtcdp/destinations/survey-destinations.md)
       * [Foresee extension](/help/rtcdp/destinations/foresee-extension.md)
