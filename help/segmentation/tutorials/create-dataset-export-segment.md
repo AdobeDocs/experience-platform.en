@@ -71,7 +71,7 @@ Once the dataset has a name and description, click **[!UICONTROL Finish]**.
 
 An empty dataset has now been created and you have been returned to the **[!UICONTROL Dataset Activity]** tab in the **[!UICONTROL Datasets]** workspace. You should see the name of the dataset in the top-left corner of the workspace, along with a notification that "No batches have been added." This is to be expected since you have not added any batches to this dataset yet. 
 
-On the right-hand side of the Datasets workspace you will see the **[!UICONTROL Info]** tab containing information related to your new dataset such as dataset ID, name, description, table name, schema], streaming, and source. The **[!UICONTROL Info]** tab also includes information about when the dataset was created and its last modified date.
+On the right-hand side of the Datasets workspace you will see the **[!UICONTROL Info]** tab containing information related to your new dataset such as dataset ID, name, description, table name, schema, streaming, and source. The **[!UICONTROL Info]** tab also includes information about when the dataset was created and its last modified date.
 
 Please make note of the **[!UICONTROL Dataset ID]**, as this value is required to complete the audience segment export workflow.
 
