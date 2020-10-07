@@ -24,6 +24,7 @@ user-guide-description: Bring together known and anonymous data from multiple en
     * [Destination details page](destinations/destination-details-page.md)
   * Destinations catalog {#destinations-cat}
     * [Destinations catalog overview](destinations/destinations-catalog.md)
+    * [HTTP destination](/help/rtcdp/destinations/http-destination.md)
     * Adobe destinations{#adobe-destinations}
       * [Adobe destinations overview](destinations/adobe-destinations.md)
       * [Adobe Campaign](destinations/adobe-campaign-destination.md)
@@ -105,8 +106,6 @@ user-guide-description: Bring together known and anonymous data from multiple en
       * [Social network destinations authentication flow](/help/rtcdp/destinations/social-network-destinations-workflow.md)
       * [Adobe Livefyre extension](/help/rtcdp/destinations/adobe-livefyre-extension.md)
       * [Facebook destination](/help/rtcdp/destinations/facebook-destination.md)
-    * Streaming destinations {#streaming-destinations}
-      * [HTTP destination](/help/rtcdp/destinations/http-destination.md)
     * Survey destinations {#survey-destinations}
       * [Survey destinations overview](/help/rtcdp/destinations/survey-destinations.md)
       * [Foresee extension](/help/rtcdp/destinations/foresee-extension.md)
