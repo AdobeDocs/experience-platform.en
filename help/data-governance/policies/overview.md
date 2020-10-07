@@ -14,7 +14,7 @@ This document provides a high-level overview of data usage policies, and provide
 
 ## Marketing actions {#marketing-actions}
 
-**Marketing actions**, (also called **marketing use cases**) in the context of the data governance framework, are actions that an [!DNL Experience Platform] data consumer can take, for which your organization wants to restrict data usage. As such, a data usage policy is defined by the following:
+Marketing actions, (also called marketing use cases) in the context of the data governance framework, are actions that an [!DNL Experience Platform] data consumer can take, for which your organization wants to restrict data usage. As such, a data usage policy is defined by the following:
 
 1. A specific marketing action
 2. The data usage label(s) that action is restricted from being performed against

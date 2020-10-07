@@ -91,7 +91,7 @@ Scoring Summary displays the total number of profiles scored and categorizes the
 
 ## Distribution of Scores
 
-The *Distribution of Scores* card gives you a visual summary of the population based on the score. The colors that you see in the *Distribution of Scores* card represent the type of propensity score generated. 
+The **[!UICONTROL Distribution of Scores]** card gives you a visual summary of the population based on the score. The colors that you see in the *Distribution of Scores* card represent the type of propensity score generated. 
 
 ![distribution of scores](../images/insights/distribution-of-scores.png)
 
@@ -127,7 +127,7 @@ The segment builder is used to define a segment. When selecting **[!UICONTROL Cr
 
 ![Segment fill in](../images/insights/segment-saving.png)
 
- To view your new segment in the Platform UI, click **[!UICONTROL Segments]** in the left navigation. The *Browse* page appears and displays all available segments. 
+ To view your new segment in the Platform UI, click **[!UICONTROL Segments]** in the left navigation. The **[!UICONTROL Browse]** page appears and displays all available segments. 
 
  ![All your Segments](../images/insights/Segments-dashboard.png)
 

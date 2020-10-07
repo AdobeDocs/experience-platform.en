@@ -34,7 +34,7 @@ Below are each of the settings available to an environment. Most sections can be
 
 #### [!UICONTROL Identity]
 
-The identity section is the only section that is always on. It has two available settings: [!UICONTROL ID Syncs Enabled] and [!UICONTROL ID Sync Container ID].
+The identity section is the only section that is always on. It has two available settings: "[!UICONTROL ID Syncs Enabled]" and "[!UICONTROL ID Sync Container ID]".
 
 ![Identity section of the configuration UI](../../assets/edge_configuration_identity.png)
 
@@ -58,7 +58,7 @@ Sandboxes are locations in the Adobe Experience Platform that allow customers to
 
 ##### [!UICONTROL Streaming Inlet]
 
-A streaming inlet is an HTTP source in the Adobe Experience Platform. These are created under the [!UICONTROL Sources] tab in the Adobe Experience Platform as an HTTP API.
+A streaming inlet is an HTTP source in the Adobe Experience Platform. These are created under the "[!UICONTROL Sources]" tab in the Adobe Experience Platform as an HTTP API.
 
 ##### [!UICONTROL Event Dataset]
 
@@ -88,7 +88,7 @@ The property token can be found in [!UICONTROL Adobe Target] > [!UICONTROL setup
 
 [Environments](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) in Adobe Target help you manage your implementation through all stages of development. This setting specifies which environment you are going to use with each environment.
 
-Adobe recommends setting this differently for each of your `dev`, `stage`, and `prod` edge configuration environments to keep things simple. However, if you already have [!UICONTROL Adobe Target environments] defined, you can use those.
+Adobe recommends setting this differently for each of your `dev`, `stage`, and `prod` edge configuration environments to keep things simple. However, if you already have Adobe Target environments defined, you can use those.
 
 #### Adobe Audience Manager
 

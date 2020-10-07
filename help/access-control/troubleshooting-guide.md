@@ -10,7 +10,7 @@ description: This document provides answers to frequently asked questions about 
 
 This document provides answers to frequently asked questions about access control in Adobe Experience Platform. For questions and troubleshooting related to other [!DNL Platform] services, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
-[!DNL Experience Platform] leverages product profiles in the [Adobe Admin Console](http://adminconsole.adobe.com) to provide role-based **access control**, linking users with permissions and sandboxes.  See the [access control overview](home.md) for more information.
+[!DNL Experience Platform] leverages product profiles in the [Adobe Admin Console](http://adminconsole.adobe.com) to provide role-based access control, linking users with permissions and sandboxes.  See the [access control overview](home.md) for more information.
 
 ## Where can I find my current access permissions?
 
