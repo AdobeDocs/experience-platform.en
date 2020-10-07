@@ -87,7 +87,7 @@ For more details, see the section on [looking up a job by its ID](api/privacy-jo
 
 ### Using the UI
 
-On the [!DNL Privacy Service] UI dashboard, find the job you want to download from the **Job Requests** widget. Click the ID of the job to open the _Job Details_ page. From here, click **Download** in the top-right corner to download the ZIP file. See the [Privacy Service user guide](ui/user-guide.md) for more detailed steps.
+On the [!DNL Privacy Service] UI dashboard, find the job you want to download from the **Job Requests** widget. Click the ID of the job to open the Job Details page. From here, click **Download** in the top-right corner to download the ZIP file. See the [Privacy Service user guide](ui/user-guide.md) for more detailed steps.
 
 ## Common error messages
 

@@ -14,7 +14,7 @@ Create a live outbound connection to your SFTP Server to periodically export del
 
 ## Export Type {#export-type}
 
-**Profile Export** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [destination activation workflow](/help/rtcdp/destinations/activate-destinations.md#select-attributes).
+**Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [destination activation workflow](/help/rtcdp/destinations/activate-destinations.md#select-attributes).
 
 ![SFTP profile-based export type](/help/rtcdp/destinations/assets/sftp-export-type.png)
 

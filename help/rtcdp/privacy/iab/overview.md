@@ -82,7 +82,7 @@ This dialog must allow the customer to opt in or out of the following:
 
 ### Consent strings {#consent-strings}
 
-Regardless of the method you use to collect the data, the goal is to generate a string value based on the consent options chosen by the customer, called a **consent string**.
+Regardless of the method you use to collect the data, the goal is to generate a string value based on the consent options chosen by the customer, called a consent string.
 
 In the TCF specification, consent strings are used to encode relevant details about a customer's consent settings, in terms of specific marketing purposes as defined by policies and vendors. [!DNL Real-time CDP] utilizes these strings to store the consent settings for each customer, and therefore a new consent string must be generated each time those settings change.
 

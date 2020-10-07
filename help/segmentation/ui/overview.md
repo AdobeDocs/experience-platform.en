@@ -6,7 +6,7 @@ topic: ui guide
 description: Adobe Experience Platform Segmentation Service provides a user interface for creating and managing segment definitions.
 ---
 
-# [!UICONTROL Segmentation Service] user guide
+# Segmentation Service user guide
 
 [!DNL Adobe Experience Platform Segmentation Service] provides a user interface for creating and managing segment definitions. 
 
