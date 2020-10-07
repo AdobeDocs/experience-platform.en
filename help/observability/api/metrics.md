@@ -361,3 +361,46 @@ The following table outlines metrics for [!DNL Real-time Customer Profile].
 | platform.ups.profile-commons.ingest.streaming.dataSet.record.updated.timestamp | Timestamp for last update record request for a dataset. | Dataset ID (**Required**) |
 | platform.ups.ingest.streaming.record.size.m1_rate | Average record size. | IMS Org (**Required**) |
 | platform.ups.ingest.streaming.records.updated.m15_rate | Rate of update requests for records ingested for a dataset. | Dataset ID (**Required**) |
+
+### Error messages
+
+Responses from the `/metrics` endpoint may return error messages under certain conditions. These error messages are returned in the following format:
+
+```json
+{
+    "type": "http://ns.adobe.com/aep/errors/INSGHT-1000-400",
+    "title": "Bad Request - Start date cannot be after end date.",
+    "status": 400,
+    "report": {
+        "tenantInfo": {
+            "sandboxName": "prod",
+            "sandboxId": "49f58060-5d47-34rd-aawf-a5384333ff12",
+            "imsOrgId": "{IMS_ORG}"
+        },
+        "additionalContext": null
+    },
+    "error-chain": [
+        {
+            "serviceId": "INSGHT",
+            "errorCode": "INSGHT-1000-400",
+            "invokingServiceId": "INSGHT",
+            "unixTimeStampMs": 1602095177129
+        }
+    ]
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `title` | A string containing the error message and the potential reason why it may have occurred. |
+| `report` | Contains contextual information about the error, including the sandbox and IMS Org being used in the operation that triggered it. |
+
+The following table lists the different error codes that can be returned by the API:
+
+| Error code | Title | Description |
+| --- | --- | --- |
+| `INSGHT-1000-400` | Bad request payload | Something was wrong with the request payload. Ensure that you match the payload formatting exactly as shown [above](#v2). Any of the possible reasons can trigger this error:<ul><li>Missing required fields such as `aggregator`</li><li>Invalid metrics</li><li>The request contains an invalid aggregator</li><li>A start date takes place after an end date</li></ul> |
+| `INSGHT-1001-400` | Metrics query failed | There was an error when attempting to query the metrics database, due to a bad request or the query itself being unparsable. Ensure that your request is properly formatted before trying again. |
+| `INSGHT-1001-500` | Metrics query failed | There was an error when attempting to query the metrics database, due to a server error. Try the request again, and if the problem persists, contact Adobe support. |
+| `INSGHT-1002-500` | Service error | The request could not be processed due to an internal error. Try the request again, and if the problem persists, contact Adobe support. |
+| `INSGHT-1003-401` | Sandbox validation error | The request could not be processed due to a sandbox validation error. Ensure that the sandbox name you provided in the `x-sandbox-name` header represents a valid, enabled sandbox for your IMS Organization before trying the request again. |
