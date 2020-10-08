@@ -52,7 +52,7 @@ The **[!UICONTROL Workflows]** section shows a list of workflows for ingesting d
 
 ![](images/user-guide/workflows.png)
 
-With the [!UICONTROL Workflows] section, the following workflows are available:
+Within the [!UICONTROL Workflows] section, the following workflows are available:
 
 - The **[!UICONTROL Map CSV to XDM schema]** workflow lets you upload and convert a CSV file to an XDM schema format. More information about this workflow can be found in the [mapping a CSV file to an XDM schema tutorial](../ingestion/tutorials/map-a-csv-file.md).
 - The **[!UICONTROL Create dataset from schema]** workflow lets you create a new dataset from a registered XDM schema. More information about this workflow can be found in the [datasets user guide](../catalog/datasets/user-guide.md#schema).
