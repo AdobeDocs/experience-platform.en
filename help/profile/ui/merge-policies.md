@@ -84,7 +84,7 @@ When selecting an **[!UICONTROL Attribute merge]** value, you can select **[!UIC
 
 An example use case would be if your organization had information present in one dataset that is preferred or trusted over data in another dataset. 
 
-When selecting **[!UICONTROL Dataset precedence]**, a separate panel opens requiring you to select from **[!UICONTROL Available datasets]** which datasets will be included (or use the checkbox to select all). You can then drag and drop those datasets into the [**!UICONTROL Selected Datasets]** panel and drag them into the correct order of priority. The top dataset will be given highest priority, the second dataset will be second-highest, and so on.
+When selecting **[!UICONTROL Dataset precedence]**, a separate panel opens requiring you to select from **[!UICONTROL Available datasets]** which datasets will be included (or use the checkbox to select all). You can then drag and drop those datasets into the **[!UICONTROL Selected Datasets]** panel and drag them into the correct order of priority. The top dataset will be given highest priority, the second dataset will be second-highest, and so on.
 
 ![](../images/merge-policies/dataset-precedence.png)
 
