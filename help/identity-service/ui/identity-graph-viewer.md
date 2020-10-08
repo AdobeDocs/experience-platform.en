@@ -3,40 +3,38 @@ keywords: Experience Platform;home;popular topics;identity graph viewer;Identity
 solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: tutorial
-description: An identity graph is a map of relationships between different identity namespaces, providing you with a visual representation of how your customer interacts with your brand across different channels.
+description: An identity graph is a map of relationships between different identity namespaces for a particular customer, providing you with a visual representation of how your customer interacts with your brand across different channels.
 ---
 
 # Identity graph viewer
 
-An identity graph is a map of relationships between different identity namespaces, providing you with a visual representation of how your customer interacts with your brand across different channels. All customer identity graphs are collectively managed and updated by [!DNL Identity Service] in near real-time, in response to customer activity.
+An identity graph is a map of relationships between different identity namespaces for a particular customer, providing you with a visual representation of how your customer interacts with your brand across different channels. All customer identity graphs are collectively managed and updated by Adobe Experience Platform Identity Service] in near real-time, in response to customer activity.
 
-Through the identity graph viewer, you can better view and understand what identities are stitched together and how they are stitched together. The force-directed nature of the identity graph allows you to drag different parts of the graph for a better understanding of how identities are connected. This allows for a more efficient means to debug as well as increased transparency with how information is being utilized.
+The identity graph viewer in the Platform user interface allows you to visualize and better understand what customer identities are stitched together, and in what ways. The viewer allows you to drag and interact with different parts of the graph, allowing you to examine complex identity relationships, debug more efficiently, and benefit from increased transparency with how information is being utilized.
 
 ## Getting started
 
 Working with the identity graph viewer requires an understanding of the various Adobe Experience Platform services involved. Before beginning to work with the identity graph viewer, please review the documentation for the following services:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
 - [[!DNL Identity Service]](../home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
-- [[!DNL Privacy Service]](../../privacy-service/home.md): Identity namespaces are used to comply with General Data Protection Regulation (GDPR), where GDPR requests can be made relative to a namespace.
 
 ## Access the identity graph viewer
 
-To use the identity graph viewer in the UI, select **[!UICONTROL Identities]** in the left-rail and then select the **[!UICONTROL Identity graph]** tab. From the **[!UICONTROL Identity Namespace]** screen, click the **[!UICONTROL Select identity namespace]** icon to search for the namespace you intend to use.
+To use the identity graph viewer in the UI, select **[!UICONTROL Identities]** in the left navigation and then select the **[!UICONTROL Identity graph]** tab. From the **[!UICONTROL Identity Namespace]** screen, click the **[!UICONTROL Select identity namespace]** icon to search for the namespace you intend to use.
 
 ![namespace-screen](../images/identity-graph-viewer/identity-namespace.png)
 
-The **[!UICONTROL Select identity namespace]** panel appears. This screen contains a list of namespaces at your disposal, including information about a namespace's **[!UICONTROL Display name]**, **[!UICONTROL Identity symbol]**, **[!UICONTROL Owner]**, **[!UICONTROL Last updated]** date, and **[!UICONTROL Description]**. You can use any of the namespaces provided, so long as you have a valid identity value connected to it.
+The **[!UICONTROL Select identity namespace]** panel appears. This screen contains a list of namespaces available to your organization, including information about a namespace's **[!UICONTROL Display name]**, **[!UICONTROL Identity symbol]**, **[!UICONTROL Owner]**, **[!UICONTROL Last updated]** date, and **[!UICONTROL Description]**. You can use any of the namespaces provided as long as you have a valid identity value connected to them.
 
 Select the namespace you intend to use and click **[!UICONTROL Select]** to proceed.
 
 ![select-identity-namespace](../images/identity-graph-viewer/select-identity-namespace.png)
 
-Once you have selected a namespace, enter its corresponding value in the **[!UICONTROL Identity value]** text box and select **[!UICONTROL View]**.
+Once you have selected a namespace, enter its corresponding value for a particular customer in the **[!UICONTROL Identity value]** text box and select **[!UICONTROL View]**.
 
 ![add-identity-value](../images/identity-graph-viewer/identity-value.png)
 
-The identity graph viewer appears. On the left side of the screen is a force-directed graph displaying all of the identities stitched within the graph that contains the namespace you selected. You can select and identity node to see its namespace and its corresponding ID value. Alternatively, you can hover over an identity to see information about its ID value. The graph output is also displayed as a tabled list in the center of the screen.
+The identity graph viewer appears. On the left side of the screen is the identity graph displaying all the identities that represent a particular customer, sorted by namespace. Each identity node consists of a namespace and its corresponding ID value. You can select and hold any identity to drag and interact with the graph. Alternatively, you can hover over an identity to see information about its ID value. The graph output is also displayed as a tabled list in the center of the screen.
 
 Select an identity to update the highlighted row on the **[!UICONTROL Identity types]** table and to update the information provided on the right rail, which includes an identity's **[!UICONTROL Value]**, **[!UICONTROL Batch Id]**, and its **[!UICONTROL Last updated]** date.
 
