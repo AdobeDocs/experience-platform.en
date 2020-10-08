@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;
+keywords: Experience Platform;home;popular topics;Adobe Experience Platform;user guide;ui guide;platform ui guide;introduction to platform;dashboard;
 solution: Experience Platform
-title: Adobe Experience Platform user guide
+title: Adobe Experience Platform UI guide
 topic: ui guide
 description: Adobe Experience Platform 
 ---
 
-# Adobe Experience Platform user guide
+# Adobe Experience Platform UI guide
 
 Adobe Experience Platform is the most powerful, flexible, and open system on the market for building and managing complete solutions that drive customer experience. [!DNL Experience Platform] enables organizations to centralize and standardize customer data and content from any system and apply data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
 
