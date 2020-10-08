@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics;identity service api;identity service developer guide
+keywords: Experience Platform;home;popular topics;identity service api;identity service developer guide;region
 solution: Experience Platform
 title: Getting started
 topic: API guide
-description: 
+description: Adobe Experience Platform Identity Service manages the cross-device, cross-channel, and near real-time identification of your customers in what is known as an identity graph within Adobe Experience Platform. 
 ---
 
 # [!DNL Identity Service] API developer guide
@@ -81,4 +81,4 @@ The examples in this document do not cover the complete functionality of the [!D
 
 ## Next steps
 
-Now that you have gathered the required credentials, you can now continue to read the rest of the developer guide. Each section provides important information regarding their endpoints and demonstrate example API calls for performing CRUD operations. Each call includes the general **API format**, a sample **request** showing required headers and properly formatted payloads, and a sample **response** for a successful call.
+Now that you have gathered the required credentials, you can now continue to read the rest of the developer guide. Each section provides important information regarding their endpoints and demonstrate example API calls for performing CRUD operations. Each call includes the general API format, a sample request showing required headers and properly formatted payloads, and a sample response for a successful call.

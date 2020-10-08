@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Collect payment data;payment d
 solution: Experience Platform
 title: Collect payment data through source connectors and APIs
 topic: overview
+type: Tutorial
 description: This tutorial covers the steps for retrieving data from a payments application and ingesting it into Platform through source connectors and APIs.
 ---
 
@@ -61,7 +62,7 @@ With an ad-hoc XDM schema created, a source connection can now be created using 
 
 To create a source connection, you must also define an enum value for the data format attribute.
 
-Use the following the enum values for **file-based connectors**:
+Use the following the enum values for file-based connectors:
 
 | Data.format | Enum value |
 | ----------- | ---------- |
@@ -69,7 +70,7 @@ Use the following the enum values for **file-based connectors**:
 | JSON files | `json` |
 | Parquet files | `parquet` |
 
-For all **table-based connectors** use the enum value: `tabular`.
+For all table-based connectors use the enum value: `tabular`.
 
 **API format**
 

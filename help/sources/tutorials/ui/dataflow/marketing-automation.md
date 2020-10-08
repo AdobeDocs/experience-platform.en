@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;marketing automation connector
 solution: Experience Platform
 title: Configure a dataflow for a marketing automation connector in the UI
 topic: overview
+type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to a [!DNL Platform] dataset. This tutorial provides steps to configure a new dataflow using your marketing automation account.
 ---
 
@@ -28,9 +29,15 @@ After creating your marketing automation account, the *Select data* step appears
 - The left half of the interface is a directory browser, displaying your server's files and directories.
 - The right half of the interface lets you preview up to 100 rows of data from a compatible file.
 
-Select the directory you wish to use, then click **[!UICONTROL Next]**.
+You can use the **[!UICONTROL Search]** option on the top of the page to quickly identify the source data you intend to use.
 
-![select-data](../../../images/tutorials/dataflow/marketing-automation/select-data.png)
+>[!NOTE]
+>
+>The search source data option is available to all tabular-based source connectors excluding the Analytics, Classifications, Event Hubs, and Kinesis connectors.
+
+Once you find the source data, select the directory, then click **[!UICONTROL Next]**.
+
+![select-data](../../../images/tutorials/dataflow/all-tabular/select-data.png)
 
 ## Map data fields to an XDM schema
 
@@ -54,7 +61,11 @@ To ingest data into a new dataset, select **[!UICONTROL Create new dataset]** an
 
 You can attach a schema field by entering a schema name in the **[!UICONTROL Select schema]** search bar. You can also select the drop down icon to see a list of existing schemas. Alternatively, you can select **[!UICONTROL Advanced search]** to access screen of existing schemas including their respective details.
 
-![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
+During this step, you can enable your dataset for [!DNL Real-time Customer Profile] and create a holistic view of an entity's attributes and behaviors. Data from all enabled datasets will be included in [!DNL Profile] and changes are applied when you save your dataflow.
+
+Toggle the **[!UICONTROL Profile dataset]** button to enable your target dataset for [!DNL Profile].
+
+![create-new-dataset](../../../images/tutorials/dataflow/marketing-automation/new-dataset.png)
 
 The **[!UICONTROL Select schema]** dialog appears. Select the schema you wish to apply to the new dataset, then click **[!UICONTROL Done]**.
 
@@ -62,9 +73,19 @@ The **[!UICONTROL Select schema]** dialog appears. Select the schema you wish to
 
 Based on your needs, you can choose to map fields directly, or use mapper functions to transform source data to derive computed or calculated values. For more information on data mapping and mapper functions, refer to the tutorial on [mapping CSV data to XDM schema fields](../../../../ingestion/tutorials/map-a-csv-file.md).
 
-Once your source data is mapped, click **[!UICONTROL Next]**.
+>[!TIP]
+>
+>[!DNL Platform] provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
 
-![](../../../images/tutorials/dataflow/all-tabular/mapping-updated.png)
+![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+
+Select **[!UICONTROL Preview data]** to see mapping results of up to 100 rows of sample data from the selected dataset.
+
+During the preview, the identity column is prioritized as the first field, as it is the key information necessary when validating mapping results.
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
+
+Once your source data is mapped, select **[!UICONTROL Close]**.
 
 ## Schedule ingestion runs
 
@@ -75,7 +96,7 @@ The **[!UICONTROL Scheduling]** step appears, allowing you to configure an inges
 | Frequency | Selectable frequencies include `Once`, `Minute`, `Hour`, `Day`, and `Week`. |
 | Interval | An integer that sets the interval for the selected frequency. |
 | Start time | A UTC timestamp indicating when the very first ingestion is set to occur. |
-| Backfill | A boolean value that determines what data is initially ingested. If **[!UICONTROL Backfill]** is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If **[!UICONTROL Backfill]** is disabled, only the files that are loaded in between the first run of ingestion and the **[!UICONTROL Start time]** will be ingested. Files loaded prior to **[!UICONTROL Start time]** will not be ingested. |
+| Backfill | A boolean value that determines what data is initially ingested. If **[!UICONTROL Backfill]** is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If **[!UICONTROL Backfill]** is disabled, only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to start time will not be ingested. |
 | Delta Column | An option with a filtered set of source schema fields of type, date, or time. This field is used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column. |
 
 Dataflows are designed to automatically ingest data on a scheduled basis. Start by selecting the ingestion frequency. Next, set the interval to designate the period between two flow runs. The interval's value should be a non-zero integer and should be set to greater than or equal to 15.

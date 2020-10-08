@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
+keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance;testing
 solution: Experience Platform
 title: Enforce data usage policies using the Policy Service API
 topic: enforcement
+type: Tutorial
 description: Once you have created data usage labels for your data, and have created usage policies for marketing actions against those labels, you can use the Policy Service API to evaluate whether a marketing action performed on a dataset or an arbitrary group of labels constitutes a policy violation. You can then set up your own internal protocols to handle policy violations based on the API response.
 ---
 

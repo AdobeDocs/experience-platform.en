@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Adobe Experience Platform Source Connectors
 topic: overview
+description: Source connections enable you to authenticate your storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 ---
 
 # Source connectors

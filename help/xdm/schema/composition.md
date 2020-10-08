@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;enum;mixin;Mixin;Mixins;mixins;data type;data types;Data types;Data type;primary identity;primary idenity;XDM individual profile;XDM fields;enum datatype;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design;class;Class;classes;Classes;datatype;Datatype;data type;Data type;schemas;Schemas;identityMap;identity map;Identity map;
+keywords: Experience Platform;home;popular topics;schema;Schema;enum;mixin;Mixin;Mixins;mixins;data type;data types;Data types;Data type;primary identity;primary idenity;XDM individual profile;XDM fields;enum datatype;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design;class;Class;classes;Classes;datatype;Datatype;data type;Data type;schemas;Schemas;identityMap;identity map;Identity map;Schema design;map;Map;union schema;union
 solution: Experience Platform
 title: Basics of schema composition
 topic: overview
@@ -47,11 +47,11 @@ Data intended for use in [!DNL Experience Platform] is grouped into two behavior
 * **Record data**: Provides information about the attributes of a subject. A subject could be an organization or an individual.
 * **Time series data**: Provides a snapshot of the system at the time an action was taken either directly or indirectly by a record subject.
 
-All XDM schemas describe data that can be categorized as record or time series. The data behavior of a schema is defined by the schema's **class**, which is assigned to a schema when it is first created. XDM classes are described in further detail later in this document.
+All XDM schemas describe data that can be categorized as record or time series. The data behavior of a schema is defined by the schema's class, which is assigned to a schema when it is first created. XDM classes are described in further detail later in this document.
 
 Both record and time series schemas contain a map of identities (`xdm:identityMap`). This field contains the identity representation of a subject, drawn from fields marked as "Identity" as described in the next section.
 
-### [!UICONTROL Identity]
+### [!UICONTROL Identity] {#identity}
 
 Schemas are used for ingesting data into [!DNL Experience Platform]. This data can be used across multiple services to create a single, unified view of an individual entity. Therefore, it is important when thinking about schemas to think about customer identities and which fields can be used to identify a subject regardless of where the data may be coming from. 
 
@@ -126,7 +126,7 @@ Schemas are composed using the following formula:
 
 **Class + Mixin&ast; = XDM Schema**
 
-&ast;A schema is composed of a class and _zero or more_ mixins. This means that you could compose a dataset schema without using mixins at all.
+&ast;A schema is composed of a class and zero or more mixins. This means that you could compose a dataset schema without using mixins at all.
 
 ### Class
 
@@ -166,7 +166,7 @@ A field is the most basic building block of a schema. Fields provide constraints
 
 * String
 * Integer
-* Number
+* Double
 * Boolean
 * Array
 * Object

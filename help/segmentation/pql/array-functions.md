@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Array, list, and set functions
 topic: developer guide
+description: Profile Query Language (PQL) offers functions to make interaction with arrays, lists, and strings easier.
 ---
 
 # Array, list, and set functions

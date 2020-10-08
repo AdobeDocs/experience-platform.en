@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;export;Export
 solution: Experience Platform
 title: Privacy Service user guide
 topic: UI guide
@@ -11,17 +11,18 @@ This document provides steps for creating and managing privacy requests using th
 
 ## Browse the [!DNL Privacy Service] UI dashboard
 
-The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow you to view the status of your privacy jobs: **[!UICONTROL Status Report]** and **[!UICONTROL Job Requests]**. The dashboard also displays the current selected regulation for the displayed jobs.
+The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow you to view the status of your privacy jobs: "[!UICONTROL Status Report]" and "[!UICONTROL Job Requests]". The dashboard also displays the current selected regulation for the displayed jobs.
 
 ![UI dashboard](../images/user-guide/dashboard.png)
 
 ### Regulation Type
 
-[!DNL Privacy Service] supports job requests for three regulation types: 
+[!DNL Privacy Service] supports job requests for four regulation types: 
 
-* The European Union's [!DNL General Data Protection Regulation] (GDPR)
-* The [!DNL California Consumer Privacy Act] (CCPA)
-* Thailand's [!DNL Personal Data Protection Act] (PDPA_THA)
+* The European Union's [!DNL General Data Protection Regulation] ([!UICONTROL GDPR])
+* The [!DNL California Consumer Privacy Act] ([!UICONTROL CCPA])
+* Brazil's [!DNL Lei Geral de Proteção de Dados] ([!UICONTROL LGPD_BRA])
+* Thailand's [!DNL Personal Data Protection Act] ([!UICONTROL PDPA_THA])
 
 Jobs for each regulation type are tracked separately. To switch between regulation types, click the **[!UICONTROL Regulation Type]** dropdown menu and select the desired regulation from the list.
 
@@ -49,7 +50,7 @@ To view further details about a given data point, click the data point in questi
 
 >[!NOTE]
 >
->When a filter has been applied to the Job Requests widget, you can remove the filter by clicking the **[!UICONTROL X]** on the filter pill. Job Requests then return to the default tracking list.
+>When a filter has been applied to the Job Requests widget, you can remove the filter by clicking the **X** on the filter pill. Job Requests then return to the default tracking list.
 
 ### Job Requests
 
@@ -98,7 +99,7 @@ The **[!UICONTROL Create Request]** dialog opens, displaying the available optio
 
 <img src="../images/user-guide/request-builder.png" width=500 /><br/>
 
-Select the **[!UICONTROL Job Type]** of the request ("Delete" or "Access") and one or more available **[!UICONTROL Products]** from the list.
+Select the **[!UICONTROL Job Type]** of the request ("Delete" or "Access") and one or more available products from the list.
 
 <img src="../images/user-guide/type-and-products.png" width=500 /><br/>
 
@@ -106,11 +107,11 @@ Under **[!UICONTROL Namespace type]**, select the appropriate namespace type for
 
 <img src="../images/user-guide/namespace-type.png" width=500 /><br/>
 
-When using the _standard_ namespace type, select a namespace from the drop-down menu (email, ECID, or AAID), then type the ID values in the textbox to the right, pressing **\<enter>** for each ID to add it to the list.
+When using the standard namespace type, select a namespace from the drop-down menu (email, ECID, or AAID), then type the ID values in the textbox to the right, pressing **\<enter>** for each ID to add it to the list.
 
 <img src="../images/user-guide/standard-namespace.png" width=500 /><br/>
 
-When using the _custom_ namespace type, you must manually type in the namespace before providing the ID values below.
+When using the custom namespace type, you must manually type in the namespace before providing the ID values below.
 
 <img src="../images/user-guide/custom-namespace.png" width=500 /><br/>
 
@@ -140,7 +141,7 @@ If you do not have a JSON file to upload, click **[!UICONTROL Download Adobe-GDP
 
 Locate the JSON file on your computer, and drag it into the dialog window. If the upload is successful, the file name appears in the dialog. You can continue to add more JSON files as necessary by dragging and dropping them into the dialog.
 
-When finished, click **[!UICONTROL Create]**. The dialog disappears, and the new job (or jobs) are listed in the _Job Requests_ widget along with their current processing status.
+When finished, click **[!UICONTROL Create]**. The dialog disappears, and the new job (or jobs) are listed in the Job Requests widget along with their current processing status.
 
 ### Next steps
 

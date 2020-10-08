@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;third-party database;third par
 solution: Experience Platform
 title: Collect data from a third-party database through source connectors and APIs
 topic: overview
+type: Tutorial
 description: This tutorial covers the steps for retrieving data from a third-party database and ingesting it into Platform through source connectors and APIs.
 ---
 
@@ -53,7 +54,7 @@ You can create a source connection by making a POST request to the [!DNL Flow Se
 
 To create a source connection, you must also define an enum value for the data format attribute.
 
-Use the following the enum values for **file-based connectors**:
+Use the following the enum values for file-based connectors:
 
 | Data.format | Enum value |
 | ----------- | ---------- |
@@ -61,7 +62,7 @@ Use the following the enum values for **file-based connectors**:
 | JSON files | `json` |
 | Parquet files | `parquet` |
 
-For all **table-based connectors** use the enum value: `tabular`.
+For all table-based connectors use the enum value: `tabular`.
 
 **API format**
 

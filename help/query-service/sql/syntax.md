@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;sql syntax;sql;
+keywords: Experience Platform;home;popular topics;query service;Query service;sql syntax;sql;ctas;CTAS;Create table as select
 solution: Experience Platform
 title: SQL syntax
 topic: syntax
+description: This document shows SQL syntax supported by Query Service.
 ---
 
 # SQL syntax
@@ -107,10 +108,12 @@ SELECT statement 2
 The following syntax defines a `CREATE TABLE AS SELECT` (CTAS) query supported by [!DNL Query Service]:
 
 ```sql
-CREATE TABLE table_name [ WITH (schema='target_schema_title') ] AS (select_query)
+CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
 ```
 
-where `target_schema_title` is the title of XDM schema. Use this clause only if you wish to use an existing XDM schema for the new dataset created by CTAS query.
+where,
+ `target_schema_title` is the title of XDM schema. Use this clause only if you wish to use an existing XDM schema for the new dataset created by CTAS query
+ `rowvalidation` specifies if the user wants row level validation of every new batches ingested for the new dataset created. Default value is 'false'
 
 and `select_query` is a `SELECT` statement, the syntax of which is defined above in this document.
 

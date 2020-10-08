@@ -8,9 +8,9 @@ description: Segment Builder provides a rich workspace that allows you to intera
 
 # Time constraints refactorization
 
-The September 2020 release for Adobe Experience Platform has introduced performance changes to Adobe Experience Platform Segmentation Service that add new restrictions to the use of the OR and AND logical operators. These changes will affect newly created or edited segments made using the Segment Builder UI. This guide explains how to mitigate these changes.
+The October 2020 release for Adobe Experience Platform has introduced performance changes to Adobe Experience Platform Segmentation Service that add new restrictions to the use of the OR and AND logical operators. These changes will affect newly created or edited segments made using the Segment Builder UI. This guide explains how to mitigate these changes.
 
-Prior to the September 2020 release, all rule-level, group-level, and event-level time constraints were redundantly referring to the same timestamp. In order to clarify time constraint usage, rule-level and group-level time constraints have been removed. To accommodate this change, all time constraints must be rewritten as event-level time constraints.
+Prior to the October 2020 release, all rule-level, group-level, and event-level time constraints were redundantly referring to the same timestamp. In order to clarify time constraint usage, rule-level and group-level time constraints have been removed. To accommodate this change, all time constraints must be rewritten as event-level time constraints.
 
 Previously, an individual event could have multiple time constraint rules attached to it. 
 

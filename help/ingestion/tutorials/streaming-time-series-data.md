@@ -3,6 +3,8 @@ keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;
 solution: Experience Platform
 title: Streaming time series data
 topic: tutorial
+type: Tutorial
+description: This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs.
 ---
 
 # Stream time series data to Adobe Experience Platform
@@ -208,11 +210,12 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 >[!NOTE]
 >
->​ ​**Identity Namespace Codes**
+>​**Identity Namespace Codes**
 >
 > Please ensure that the codes are valid - the example above uses "email" which is a standard identity namespace. Other commonly used standard identity namespaces can be found within the [Identity Service FAQ](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform).
 >
 > If you would like to create a custom namespace, follow the steps outlined in the [identity namespace overview](../../identity-service/home.md).
+
 **Response**
 
 A successful response returns HTTP status 201 with information on the newly created primary identity namespace for the schema.

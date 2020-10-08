@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Microsoft SQL;microsoft sql;sq
 solution: Experience Platform
 title: Create a SQL Server connector using the Flow Service API
 topic: overview
+type: Tutorial
 description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to a Microsoft SQL Server (hereinafter referred to as "SQL Server").
 ---
 
