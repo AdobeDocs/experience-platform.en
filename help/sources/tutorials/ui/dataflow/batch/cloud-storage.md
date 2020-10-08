@@ -32,12 +32,12 @@ Additionally, this tutorial requires that you have an established cloud storage 
 
 ## Select data
 
-After creating your cloud storage account, the **[!UICONTROL Select data]** step appears, providing an interactive interface for you to explore your cloud storage hierarchy.
+After creating your cloud storage account, the **[!UICONTROL Select data]** step appears, providing an interactive interface for you to explore your cloud storage hierarchy. 
 
 * The left half of the interface is a directory browser, displaying your server's files and directories.
 * The right half of the interface lets you preview up to 100 rows of data from a compatible file.
 
-Selecting a listed folder allows you to traverse the folder hierarchy into deeper folders. Once you have a compatible file or folder selected, the **[!UICONTROL Select data format]** dropdown appears, where you can choose a format to display the data in the preview window.
+Selecting a listed folder allows you to traverse the folder hierarchy into deeper folders. Once you have a compatible file or folder selected, the **[!UICONTROL Select data format]** dropdown appears, where you can choose a format to display the data in the preview window. Supported file formats for a cloud storage account also includes JSON and Parquet. JSON and Parquet files must be XDM-compliant.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
 
@@ -51,7 +51,7 @@ Supported file formats for a cloud storage account also includes JSON and Parque
 
 >[!IMPORTANT]
 >
->Unlike delimited file types, JSON, and Parquet formatted files are not available for preview.
+>Unlike delimited file types, Parquet formatted files are not available for preview.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-parquet.png)
 
