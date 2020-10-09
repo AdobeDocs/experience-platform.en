@@ -20,7 +20,7 @@ The Platform UI is designed to work optimally in the **latest versions** of Goog
 | **Windows 10** | Google Chrome, Microsoft Edge, Firefox |
 | **Windows 7** | Google Chrome, Firefox |
  
-These operating systems and browsers are not supported:
+The following operating systems and browsers are not supported:
 
 * Windows 8
 * Internet Explorer 10
@@ -35,12 +35,16 @@ The Platform UI is currently available in the following languages:
 * German
 * Japanese
 
-Your default UI language is determined by the region specified in your user profile. To change your language:
+### Change default language
+
+Your default UI language is determined by the region specified in your user profile. 
+
+To change your language:
+
+1. Select the current language in the footer of the [!DNL Experience Platform] user interface.
+2. In your profile settings, click **[!UICONTROL Change Region]**.
+3. Select your region. 
 
 >[!NOTE]
 >
-> Selecting a region determines the language and content on Adobe.com.
-
-1. Click the current language in the footer of the [!DNL Experience Platform] interface.
-2. In your profile settings, click **[!UICONTROL Change Region]**.
-3. Select your region. 
+> Selecting a region also sets the language for content on Adobe.com.
