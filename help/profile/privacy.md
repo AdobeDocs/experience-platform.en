@@ -36,6 +36,8 @@ The sections below outline how to make privacy requests for [!DNL Real-time Cust
 >Privacy Service is only able to process [!DNL Profile] data using a merge policy that does not perform identity stitching. If you are using the UI to confirm whether your privacy requests are being processed, ensure that you are using a policy with "[!DNL None]" as its [!UICONTROL ID stitching] type. In other words, you cannot use a merge policy where [!UICONTROL ID stitching] is set to "[!UICONTROL Private graph]".
 >
 >![](./images/privacy/no-id-stitch.png)
+>
+>It is also important to note that the amount of time a privacy request can take to complete cannot be guaranteed. If changes occur in your [!DNL Profile] data while a request is still processing, whether or not those records are processed also cannot be guaranteed.
 
 ### Using the API
 
