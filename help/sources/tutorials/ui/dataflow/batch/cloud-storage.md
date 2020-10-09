@@ -37,7 +37,7 @@ After creating your cloud storage account, the **[!UICONTROL Select data]** step
 * The left half of the interface is a directory browser, displaying your server's files and directories.
 * The right half of the interface lets you preview up to 100 rows of data from a compatible file.
 
-Selecting a listed folder allows you to traverse the folder hierarchy into deeper folders. Once you have a compatible file or folder selected, the **[!UICONTROL Select data format]** dropdown appears, where you can choose a format to display the data in the preview window. Supported file formats for a cloud storage account also includes JSON and Parquet. JSON and Parquet files must be XDM-compliant.
+Selecting a listed folder allows you to traverse the folder hierarchy into deeper folders. Once you have a compatible file or folder selected, the **[!UICONTROL Select data format]** dropdown appears, where you can choose a format to display the data in the preview window.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
 
@@ -47,11 +47,15 @@ Once the preview window populates, you can select **[!UICONTROL Next]** to uploa
 
 ### Ingest Parquet or JSON files
 
-Supported file formats for a cloud storage account also includes JSON and Parquet. JSON and Parquet files must be XDM-compliant. To ingest JSON or Parquet files, select the appropriate file format from the directory browser and apply compatible data format from the right interface. Select **[!UICONTROL Next]** to proceed.
+Supported file formats for a cloud storage account also includes JSON and Parquet. JSON and Parquet files must be XDM-compliant. To ingest JSON or Parquet files, select the appropriate file format from the directory browser and apply compatible data format from the right interface. 
+
+For JSON files, a preview will appear. 
+
+Select **[!UICONTROL Next]** to proceed.
 
 >[!IMPORTANT]
 >
->Unlike delimited file types, Parquet formatted files are not available for preview.
+>Unlike delimited and JSON file types, Parquet formatted files are not available for preview.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-parquet.png)
 
