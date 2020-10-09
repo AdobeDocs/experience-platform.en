@@ -8,9 +8,15 @@ description: Adobe Experience Platform
 
 # Adobe Experience Platform UI guide
 
-Adobe Experience Platform is the most powerful, flexible, and open system on the market for building and managing complete solutions that drive customer experience. [!DNL Experience Platform] enables organizations to centralize and standardize customer data and content from any system and apply data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
+This guide serves an introduction to using the Adobe Experience Platform user interface (UI), explaining what the various components are used for and providing links to further documentation for more information.
 
-This guide serves an introduction to using the Platform user interface, explaining what the various components are used for, and provides links to further documentation for more information.
+To learn more about Adobe Experience Platform, please read the [Experience Platform overview](./home.md).
+
+## Homepage
+
+After logging into Adobe Experience Platform, you will access the homepage.
+
+![](images/user-guide/homepage.png)
 
 ## Top navigation bar
 
@@ -28,35 +34,31 @@ Selecting the switcher opens a dropdown menu of IMS Organizations you have acces
 
 ![](./images/user-guide/homepage-ims-org-switcher.png)
 
-The next item on the right side is the **app switcher**, represented by the ![](./images/user-guide/app-switcher-icon.png) icon. When you select this icon, you can switch between Experience Platform, Assets, Exchange, and Launch.
+The next item on the right side is the **application switcher**, represented by the ![application switcher](./images/user-guide/app-switcher-icon.png) icon. When you select this icon, you can switch between Experience Platform, Assets, Exchange, and Launch.
 
-To the right of the app switcher is the **help menu**, which is represented by the ![](./images/user-guide/help-icon.png) icon. When you select this icon, a popover menu appears, containing several help and support resources. The **[!UICONTROL Help]** tab shows a list of relevant documentation for the page you're currently on. The **[!UICONTROL Support]** tab allows you to create a support ticket with the Adobe support team. The **[!UICONTROL Feedback]** tab allows you to submit feedback about Platform to Adobe.
+To the right of the application switcher is the **help and support menu**, which is represented by the ![question mark](./images/user-guide/help-icon.png) icon. When you select this icon, a popover menu appears, containing several help and support resources. The **[!UICONTROL Help]** tab shows a list of relevant documentation for the page you're currently on. The **[!UICONTROL Support]** tab allows you to create a support ticket with the Adobe support team. The **[!UICONTROL Feedback]** tab allows you to submit feedback about Platform to Adobe.
 
 ![](images/user-guide/homepage-help-clicked.png)
 
-After the help menu is the **notifications section**, which is represented by the ![](images/user-guide/notification-icon.png) icon. The **[!UICONTROL Notifications]** tab shows important information about the product and other relevant updates, while the **[!UICONTROL Announcements]** tab shows notifications about service maintenance.
+After the help and support menu is the **notifications section**, which is represented by the ![bell](images/user-guide/notification-icon.png) icon. The **[!UICONTROL Notifications]** tab shows important information about the product and other relevant updates, while the **[!UICONTROL Announcements]** tab shows notifications about service maintenance.
 
-The final item on the top navigation bar is the **user profile**, which is represented by the ![](images/user-guide/profile-icon.png) icon. Select this icon to edit your preferences or sign out.
+The final item on the top navigation bar is the **user settings**, which is represented by the ![user settings](images/user-guide/profile-icon.png) icon. Select this icon to edit your preferences or sign out.
 
-Running along the bottom of the top navigation bar is the sandbox bar. This bar shows which sandbox you are currently using for Platform. More information about sandboxes can be found in the [sandboxes overview](../sandboxes/home.md).
+Immediately below the top navigation bar is the sandbox bar. This bar shows which sandbox you are currently using for Platform. More information about sandboxes can be found in the [sandboxes overview](../sandboxes/home.md).
 
-## Left navigation bar
+## Left navigation
 
 The navigation bar on the left side of the screen lists all the different services supported in the Platform UI.
 
 ![](images/user-guide/homepage-left.png)
 
+>[!IMPORTANT]
+>
+>Some of the sections on the left navigation bar may not appear or be grayed out. This is because you do not have access to those features. If you believe you should have access to these sections, please contact your system administrator.
+
 The **[!UICONTROL Home]** section lets you return to the Platform UI homepage.
 
-The **[!UICONTROL Workflows]** section shows a list of workflows for ingesting data from various sources into Platform.
-
-![](images/user-guide/workflows.png)
-
-Within the [!UICONTROL Workflows] section, the following workflows are available:
-
-- The **[!UICONTROL Map CSV to XDM schema]** workflow lets you upload and convert a CSV file to an XDM schema format. More information about this workflow can be found in the [mapping a CSV file to an XDM schema tutorial](../ingestion/tutorials/map-a-csv-file.md).
-- The **[!UICONTROL Create dataset from schema]** workflow lets you create a new dataset from a registered XDM schema. More information about this workflow can be found in the [datasets user guide](../catalog/datasets/user-guide.md#schema).
-- The **[!UICONTROL Create dataset from CSV]** workflow lets you create a new dataset by uploading a CSV file. More information about this workflow can be found in the [datasets user guide](../catalog/datasets/user-guide.md#csv). 
+The **[!UICONTROL Workflows]** section shows a list of multi-step workflows for performing operations within Platform. 
 
 ### [!UICONTROL Connections]
 
