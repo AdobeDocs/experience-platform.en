@@ -8,13 +8,13 @@ description: Adobe Experience Platform
 
 # Adobe Experience Platform UI guide
 
-This guide serves an introduction to using the Adobe Experience Platform user interface (UI), explaining what the various components are used for and providing links to further documentation for more information.
+This guide serves as an introduction to using the Adobe Experience Platform user interface (UI), explaining what the various components are used for and providing links to further documentation for more information.
 
 To learn more about Adobe Experience Platform, please read the [Experience Platform overview](./home.md).
 
 ## Home screen
 
-After logging into Adobe Experience Platform, you will access the homepage, which is comprised of the metrics dashboard, recent data, and recommended learning sections.
+After logging into Adobe Experience Platform, you will arrive on the [!UICONTROL Home] page, which is comprised of the metrics dashboard, recent data, and recommended learning sections.
 
 ![](images/user-guide/homepage.png)
 
@@ -56,9 +56,11 @@ The **[!UICONTROL Recommended learning]** section provides links to useful docum
 
 The top navigation bar in the Platform UI displays the IMS Organization you are currently signed into, and provides several important controls.
 
+On the left side of the navigation bar is the Adobe Experience Platform logo. Selecting this will bring you back to the Platform UI home screen.
+
 ![](./images/user-guide/homepage-top-nav-bar.png)
 
-On the left side of the navigation bar is the Adobe Experience Platform logo. Selecting this will bring you back to the Platform UI home screen.
+### IMS Organization switcher
 
 The first item on the right side of the navigation bar is the **IMS Organization switcher**. 
 
@@ -68,15 +70,25 @@ Selecting the switcher opens a dropdown menu of IMS Organizations you have acces
 
 ![](./images/user-guide/homepage-ims-org-switcher.png)
 
+### Switch applications
+
 The next item on the right side is the **application switcher**, represented by the ![application switcher](./images/user-guide/app-switcher-icon.png) icon. When you select this icon, you can switch between Experience Platform, Assets, Exchange, and Launch.
 
-To the right of the application switcher is the **help and support menu**, which is represented by the ![question mark](./images/user-guide/help-icon.png) icon. When you select this icon, a popover menu appears, containing several help and support resources. The **[!UICONTROL Help]** tab shows a list of relevant documentation for the page you're currently on. The **[!UICONTROL Support]** tab allows you to create a support ticket with the Adobe support team. The **[!UICONTROL Feedback]** tab allows you to submit feedback about Platform to Adobe.
+### Help
+
+To the right of the application switcher is the **help and support menu**, which is represented by the ![question mark/help](./images/user-guide/help-icon.png) icon. When you select this icon, a popover menu appears, containing several help and support resources. The **[!UICONTROL Help]** tab shows a list of relevant documentation for the page you're currently on. The **[!UICONTROL Support]** tab allows you to create a support ticket with the Adobe support team. The **[!UICONTROL Feedback]** tab allows you to submit feedback about Platform to Adobe.
 
 ![](images/user-guide/homepage-help-clicked.png)
 
-After the help and support menu is the **notifications section**, which is represented by the ![bell](images/user-guide/notification-icon.png) icon. The **[!UICONTROL Notifications]** tab shows important information about the product and other relevant updates, while the **[!UICONTROL Announcements]** tab shows notifications about service maintenance.
+### Notifications and announcements
 
-The final item on the top navigation bar is the **user settings**, which is represented by the ![user settings](images/user-guide/profile-icon.png) icon. Select this icon to edit your preferences or sign out.
+After the help and support menu is the **notifications section**, which is represented by the ![bell/Notifications and Announcements](images/user-guide/notification-icon.png) icon. The **[!UICONTROL Notifications]** tab shows important information about the product and other relevant updates, while the **[!UICONTROL Announcements]** tab shows notifications about service maintenance.
+
+### User profile
+
+The final item on the top navigation bar is the **user settings**, which is represented by the ![user settings/User Profile](images/user-guide/profile-icon.png) icon. Select this icon to edit your preferences or sign out.
+
+### Sandboxes
 
 Immediately below the top navigation bar is the sandbox bar. This bar shows which sandbox you are currently using for Platform. More information about sandboxes can be found in the [sandboxes overview](../sandboxes/home.md).
 
@@ -84,11 +96,11 @@ Immediately below the top navigation bar is the sandbox bar. This bar shows whic
 
 The navigation on the left side of the screen lists all the different services supported in the Platform UI.
 
-![](images/user-guide/homepage-left.png)
-
 >[!IMPORTANT]
 >
 >Some of the sections on the left navigation bar may not appear or be grayed out. This is because you do not have access to those features. If you believe you should have access to these sections, please contact your system administrator.
+
+![](images/user-guide/homepage-left.png)
 
 The **[!UICONTROL Home]** section lets you return to the Platform UI homepage.
 

@@ -10,7 +10,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
 
 * [Experience Platform overview](home.md)
 * [Getting started](get-started.md)
-* [Experience Platform user guide](./user-guide.md)
+* [Experience Platform user guide](./ui-guide.md)
 * Experience Platform documentation {#documentation}
   * [Documentation overview](documentation/overview.md)
   * [Access control](https://docs.adobe.com/content/help/en/experience-platform/access-control/home.html)
