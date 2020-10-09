@@ -36,21 +36,25 @@ Once you have selected a namespace, enter its corresponding value for a particul
 
 The identity graph viewer appears. On the left side of the screen is the identity graph displaying all the identities that represent a particular customer, sorted by namespace. Each identity node consists of a namespace and its corresponding ID value. You can select and hold any identity to drag and interact with the graph. Alternatively, you can hover over an identity to see information about its ID value. The graph output is also displayed as a tabled list in the center of the screen.
 
+![identity-graph](../images/identity-graph-viewer/graph-view.png)
+
 Select an identity to update the highlighted row on the **[!UICONTROL Identity types]** table and to update the information provided on the right rail, which includes an identity's **[!UICONTROL Value]**, **[!UICONTROL Batch Id]**, and its **[!UICONTROL Last updated]** date.
+
+![select-identity](../images/identity-graph-viewer/select-identity.png)
 
 Select **[!UICONTROL Data source]** from the header to see more information regarding the batch. Alternatively, you can select any of the links that connect identities together to see their corresponding batch IDs.
 
-![identity-graph](../images/identity-graph-viewer/graph-view.png)
+![data-source](../images/identity-graph-viewer/data-source.png)
 
 The **[!UICONTROL Data source]** screen displays a list of batch IDs linked to the identities within the identity graph, as well as information about its source schema and a timestamp on its last ingestion.
 
-The right rail of the **[!UICONTROL Data source]** screen contains more information regarding the batch ID, including details about its dataset and schema. Select a batch ID to see a more comprehensive overview of that particular batch.
+Select one of the listed batches to see more information on the right rail, including details about its dataset and schema. Select a batch ID to see a more comprehensive overview of that particular batch.
 
 ![select-links](../images/identity-graph-viewer/select-edge.png)
 
-Identity graphs with larger clusters of identities are also accessible through the identity graph viewer. The maximum number of linked identities that can be displayed through the identity graph viewer is 150.
+Identity graphs with larger clusters of identities are also accessible through the identity graph viewer, displaying up to 150 linked identities.
 
->[!IMPORTANT]
+>[!NOTE]
 >
 >An identity graph requires a minimum of two linked identities to be generated.
 
@@ -58,4 +62,4 @@ Identity graphs with larger clusters of identities are also accessible through t
 
 ## Next steps
 
-By reading this document, you have learned how to access the identity graph viewer and view how identities are stitched together. For more information, please refer to the [Identity Service overview](../home.md)
+By reading this document, you have learned how to explore your customers' identity graphs in the Platform UI. For more information on identities in Platform, please refer to the [Identity Service overview](../home.md)
