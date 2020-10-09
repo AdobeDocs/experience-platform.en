@@ -12,11 +12,45 @@ This guide serves an introduction to using the Adobe Experience Platform user in
 
 To learn more about Adobe Experience Platform, please read the [Experience Platform overview](./home.md).
 
-## Homepage
+## Home screen
 
-After logging into Adobe Experience Platform, you will access the homepage.
+After logging into Adobe Experience Platform, you will access the homepage, which is comprised of the metrics dashboard, recent data, and recommended learning sections.
 
 ![](images/user-guide/homepage.png)
+
+### Metrics dashboard
+
+The metrics dashboard provides cards that gives you information about datasets, profiles, segments, and destinations within your organization.
+
+![](images/user-guide/homepage-dashboard.png)
+
+The **[!UICONTROL Datasets]** section shows the number of datasets within your IMS Organization. This number is updated when a new dataset is created. More information about datasets can be found in the [datasets overview](../catalog/datasets/overview.md).
+
+The **[!UICONTROL Profiles]** section shows the total number of people with profiles within your IMS Organization, excluding profile fragments. This total number of people represents the total addressable audience, and is updated once every 24 hours. More information about profiles can be found in the [Real-time Customer Profile overview](../profile/home.md).
+
+The **[!UICONTROL Segments]** section shows the total number of segments created within your IMS Organization. This number is updated when a new segment is created. More information about segments can be found in the [Segmentation Service overview](../segmentation/home.md).
+
+The **[!UICONTROL Destinations]** section shows the total number of destinations created for the IMS Organization. This number is updated when a new destination is created. More information about destinations can be found in the [destinations overview](../rtcdp/destinations/destinations-overview.md).
+
+### Recent data
+
+The recent data dashboard provides information about recently created datasets, sources, segments, and destinations.
+
+![](images/user-guide/homepage-recent.png)
+
+The **[!UICONTROL Recent datasets]** section lists the five most recently created datasets within your IMS Organization. This list is updated every time a new dataset is created. You can select a dataset from the list to view more information about the specified dataset or select **[!UICONTROL View all]** to see a list of all created datasets. More information about datasets can be found in the [datasets overview](../catalog/datasets/overview.md).
+
+The **[!UICONTROL Recent sources]** section lists the five most recently created source connectors within your IMS Organization. This list is updated every time a new source connector is created. You can select a source connection from the list to view more information about the specified connector or select **[!UICONTROL View all]** to see a list of all created source connections. More information about sources can be found in the [sources overview](../sources/home.md).
+
+The **[!UICONTROL Recent segments]** section lists the five most recently created segment definitions within your IMS Organization. This list is updated every time a new segment definition is created. You can select a segment definition from the list to view more information about the specified segment definition or select **[!UICONTROL View all]** to see a list of all created segment definitions. More information about segments can be found in the [Segmentation Service overview](../segmentation/home.md).
+
+The **[!UICONTROL Recent destinations]** section lists the five most recently created destinations within your IMS Organization. This list is updated every time a new destination is created. You can select a destination from the list to view more information about the specified destination or select **[!UICONTROL View all]** to see a list of all created destinations. More information about destinations can be found in the [destinations overview](../rtcdp/destinations/destinations-overview.md).
+
+### Recommended learning
+
+The **[!UICONTROL Recommended learning]** section provides links to useful documentation to get started with Adobe Experience Platform.
+
+![](images/user-guide/homepage-recommended.png)
 
 ## Top navigation bar
 
@@ -46,9 +80,9 @@ The final item on the top navigation bar is the **user settings**, which is repr
 
 Immediately below the top navigation bar is the sandbox bar. This bar shows which sandbox you are currently using for Platform. More information about sandboxes can be found in the [sandboxes overview](../sandboxes/home.md).
 
-## Left navigation
+## Left navigation {#left-nav}
 
-The navigation bar on the left side of the screen lists all the different services supported in the Platform UI.
+The navigation on the left side of the screen lists all the different services supported in the Platform UI.
 
 ![](images/user-guide/homepage-left.png)
 
@@ -98,40 +132,6 @@ The **[!UICONTROL Queries]** section lets you create and manage queries, logs SQ
 
 The **[!UICONTROL Monitoring]** section lets you monitor batch and streaming ingestion. More information about the Monitoring section can be found in the [monitoring data ingestion user guide](../ingestion/quality/monitor-data-flows.md).
 
-## Metrics dashboard
-
-The metrics dashboard provides cards that gives you information about datasets, profiles, segments, and destinations within your organization.
-
-![](images/user-guide/homepage-dashboard.png)
-
-The **[!UICONTROL Datasets]** section shows the number of datasets within your IMS Organization. This number is updated when a new dataset is created. More information about datasets can be found in the [datasets overview](../catalog/datasets/overview.md).
-
-The **[!UICONTROL Profiles]** section shows the total number of people with profiles within your IMS Organization, excluding profile fragments. This total number of people represents the total addressable audience, and is updated once every 24 hours. More information about profiles can be found in the [Real-time Customer Profile overview](../profile/home.md).
-
-The **[!UICONTROL Segments]** section shows the total number of segments created within your IMS Organization. This number is updated when a new segment is created. More information about segments can be found in the [Segmentation Service overview](../segmentation/home.md).
-
-The **[!UICONTROL Destinations]** section shows the total number of destinations created for the IMS Organization. This number is updated when a new destination is created. More information about destinations can be found in the [destinations overview](../rtcdp/destinations/destinations-overview.md).
-
-## Recent data
-
-The recent data dashboard provides information about recently created datasets, sources, segments, and destinations.
-
-![](images/user-guide/homepage-recent.png)
-
-The **[!UICONTROL Recent datasets]** section lists the five most recently created datasets within your IMS Organization. This list is updated every time a new dataset is created. You can select a dataset from the list to view more information about the specified dataset or select **[!UICONTROL View all]** to see a list of all created datasets. More information about datasets can be found in the [datasets overview](../catalog/datasets/overview.md).
-
-The **[!UICONTROL Recent sources]** section lists the five most recently created source connectors within your IMS Organization. This list is updated every time a new source connector is created. You can select a source connection from the list to view more information about the specified connector or select **[!UICONTROL View all]** to see a list of all created source connections. More information about sources can be found in the [sources overview](../sources/home.md).
-
-The **[!UICONTROL Recent segments]** section lists the five most recently created segment definitions within your IMS Organization. This list is updated every time a new segment definition is created. You can select a segment definition from the list to view more information about the specified segment definition or select **[!UICONTROL View all]** to see a list of all created segment definitions. More information about segments can be found in the [Segmentation Service overview](../segmentation/home.md).
-
-The **[!UICONTROL Recent destinations]** section lists the five most recently created destinations within your IMS Organization. This list is updated every time a new destination is created. You can select a destination from the list to view more information about the specified destination or select **[!UICONTROL View all]** to see a list of all created destinations. More information about destinations can be found in the [destinations overview](../rtcdp/destinations/destinations-overview.md).
-
-## Recommended learning
-
-The **[!UICONTROL Recommended learning]** section provides links to useful documentation to get started with Adobe Experience Platform.
-
-![](images/user-guide/homepage-recommended.png)
-
 ## Next steps
 
-By reading this guide, you now have been introduced to the home page and major navigational elements of the Platform UI. It is highly recommended that you read the user guides linked in previous sections for more thorough information about working with Platform services in the user interface.
+By reading this guide, you now have been introduced to the home page and major navigational elements of the Platform UI. For more detailed information about working in the user interface, please refer to the documentation for each individual Platform service. Links to this documentation are provided in the [left navigation](#left-nav) section found earlier in this document.
