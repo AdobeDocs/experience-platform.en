@@ -66,6 +66,10 @@ To add a new rule to your segment definition, drag a tile from the **[!UICONTROL
 
 ![](../images/ui/segment-builder/rule-builder-canvas.png)
 
+>[!IMPORTANT]
+>
+>The latest changes to Adobe Experience Platform have updated the usage of the `OR` and `AND` logical operators between events. These updates will not affect existing segments. However, all subsequent updates to existing segments and new segment creations will be affected by these changes. Please read the [time constants update](./segment-refactoring.md) for more information.
+
 ### Adding audiences
 
 You can drag and drop an audience from the **[!UICONTROL Audience]** tab onto the rule builder canvas to reference audience membership in the new segment definition. This allows you to include or exclude audience membership as an attribute in the new segment rule.
