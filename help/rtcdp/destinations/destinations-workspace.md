@@ -10,7 +10,7 @@ seo-description: In Adobe Real-time Customer Data Platform, select Destinations 
 
 In Adobe Real-time Customer Data Platform, select **[!UICONTROL Destinations]** from the left navigation bar to access the [!UICONTROL Destinations] workspace.
 
-The [!UICONTROL Destinations] workspace consists of four sections, **[!UICONTROL Catalog]**, **[!UICONTROL Browse]**, **[!UICONTROL Accounts]**, and **[!UICONTROL System View]**, which are described in the sections below.
+The [!UICONTROL Destinations] workspace consists of four sections, [!UICONTROL Catalog], [!UICONTROL Browse], [!UICONTROL Accounts], and [!UICONTROL System View], which are described in the sections below.
 
 ![Destinations-overview](/help/rtcdp/destinations/assets/destinations-overview.png)
 
@@ -21,8 +21,8 @@ The **[!UICONTROL Catalog]** tab displays a list of all destinations available i
 The Adobe Real-time CDP user interface provides a number of search and filter options on the destinations catalog page:
 
 * Use the search functionality on the page to locate a specific destination.
-* Filter destinations using the **[!UICONTROL Categories]** control.
-* Toggle between **[!UICONTROL All destinations]** and **[!UICONTROL My destinations]**. When **[!UICONTROL All destinations]** is selected, all available Adobe Real-time CDP destinations are displayed. When **[!UICONTROL My destinations]** is selected, you can only see the destinations with which you have established a connection.
+* Filter destinations using the [!UICONTROL Categories] control.
+* Toggle between [!UICONTROL All destinations] and [!UICONTROL My destinations]. When **[!UICONTROL All destinations]** is selected, all available Adobe Real-time CDP destinations are displayed. When **[!UICONTROL My destinations]** is selected, you can only see the destinations with which you have established a connection.
 * Select to view **[!UICONTROL Connections]** and/or **[!UICONTROL Extensions]**. To understand the difference between the two categories, see [Destination Types and Categories](/help/rtcdp/destinations/destination-types.md).
 
 ![destinations filtering and search demo](/help/rtcdp/destinations/assets/destinations-search-and-filter.gif)

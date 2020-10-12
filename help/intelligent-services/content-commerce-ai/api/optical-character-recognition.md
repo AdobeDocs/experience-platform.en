@@ -1,9 +1,9 @@
 ---
-keywords: text classification;Text classification
+keywords: OCR;text presence;optical character recognition
 solution: Experience Platform
-title: Text classification API endpoint
+title: Optical Character Recognition
 topic: Developer guide
-description: The text classification service, when given a text fragment, can classify it into one or more labels. The classification can be single-label, multi-label, or hierarchical.
+description: The Text Presence / Optical Character Recognition (OCR) service, when given an image, can indicate if text is present in the image. If text is present, OCR can return the text
 ---
 
 # Text Presence and Optical Character Recognition
