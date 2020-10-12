@@ -8,17 +8,17 @@ user-guide-description: Interact with Experience Cloud services through the Edge
 
 # Adobe Experience Platform Web SDK {#edge}
 
-* [Web SDK overview](home.md)
+* [Web SDK Overview](home.md)
 * Fundamentals {#fundamentals}
   * [Prerequisite](fundamentals/prerequisite.md)
-  * [Configuring the Edge](fundamentals/edge-configuration.md)
-  * [Installing the SDK](fundamentals/installing-the-sdk.md)
-  * [Configuring the SDK](fundamentals/configuring-the-sdk.md)
-  * [Executing commands](fundamentals/executing-commands.md)
-  * [Tracking events](fundamentals/tracking-events.md)
+  * [Configuring The Edge](fundamentals/edge-configuration.md)
+  * [Installing The SDK](fundamentals/installing-the-sdk.md)
+  * [Configuring The SDK](fundamentals/configuring-the-sdk.md)
+  * [Executing Commands](fundamentals/executing-commands.md)
+  * [Tracking Events](fundamentals/tracking-events.md)
   * [Debugging](fundamentals/debugging.md)
-  * [Merging event data](fundamentals/merging-event-data.md)
-  * [Interacting with multiple properties](fundamentals/interacting-with-multiple-properties.md)
+  * [Merging Event Data](fundamentals/merging-event-data.md)
+  * [Interacting With Multiple Properties](fundamentals/interacting-with-multiple-properties.md)
 * Identity {#identity}
   * [Overview](identity/overview.md)
 * Data Collection {#data-collection}
@@ -26,19 +26,19 @@ user-guide-description: Interact with Experience Cloud services through the Edge
   * [Collect Commerce & Products data](data-collection/collect-commerce-data.md)
   * Adobe Analytics {#adobe-analytics}
     * [Analytics Overview](data-collection/adobe-analytics/analytics-overview.md)
-    * [Manually mapping variables in Adobe Analytics](data-collection/adobe-analytics/manually-mapping-variables.md)
+    * [Manually Mapping Variables in Adobe Analytics](data-collection/adobe-analytics/manually-mapping-variables.md)
     * [Automatically Mapped Variables](data-collection/adobe-analytics/automatically-mapped-vars.md)
     * [Sending Data to Adobe Analytics](data-collection/adobe-analytics/link-tracking.md)
 * Personalization {#personalization}
-  * [Rendering personalized content](personalization/rendering-personalization-content.md)
-  * [Manage flicker](personalization/manage-flicker.md)
+  * [Rendering Personalized Content](personalization/rendering-personalization-content.md)
+  * [Manage Flicker](personalization/manage-flicker.md)
   * Adobe Target {#adobe-target}
-    * [Target overview](personalization/adobe-target/target-overview.md)
+    * [Target Overview](personalization/adobe-target/target-overview.md)
 * Consent {#consent}
-  * [Supporting consent](consent/supporting-consent.md)
+  * [Supporting Consent](consent/supporting-consent.md)
   * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
     * [Overview](consent/iab-tcf/overview.md)
-    * [Integrate with Launch](consent/iab-tcf/with-launch.md)
-    * [Integrate without Launch](consent/iab-tcf/without-launch.md)
+    * [Integrate With Launch](consent/iab-tcf/with-launch.md)
+    * [Integrate Without Launch](consent/iab-tcf/without-launch.md)
 * [Release notes](release-notes.md)
-* [Frequently asked questions](web-sdk-faq.md)
+* [Frequently Asked Questions](web-sdk-faq.md)
