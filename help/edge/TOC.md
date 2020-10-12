@@ -40,7 +40,5 @@ user-guide-description: Interact with Experience Cloud services through the Edge
     * [Overview](consent/iab-tcf/overview.md)
     * [Integrate with Launch](consent/iab-tcf/with-launch.md)
     * [Integrate without Launch](consent/iab-tcf/without-launch.md)
-* What to Implement {#implement}
-  * [Products](what-to-implement/commerce.md)
 * [Release notes](release-notes.md)
 * [Frequently asked questions](web-sdk-faq.md)
