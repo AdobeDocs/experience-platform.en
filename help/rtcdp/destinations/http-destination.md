@@ -16,7 +16,7 @@ seo-description: The HTTP destination is an Adobe Real-Time Customer Data Platfo
 
 The [!DNL HTTP] destination is an [!DNL Adobe Real-Time Customer Data Platform] streaming destination that helps you send profile data to third-party [!DNL HTTP] endpoints.
 
-To send profile data to [!DNL HTTP] endpoints, you must first connect to the destination in the [!DNL Adobe Real-Time Customer Data Platform](#connect-destination).
+To send profile data to [!DNL HTTP] endpoints, you must first connect to the destination in the [[!DNL Adobe Real-Time Customer Data Platform]](#connect-destination).
 
 ## Use Cases {#use-cases}
 
@@ -26,14 +26,15 @@ The [!DNL HTTP] destination is targeted towards customers who need to export XDM
 
 ## Connect to Destination {#connect-destination}
 
-1.  In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL  HTTP API], and select **[!UICONTROL Configure]**.
+1.  In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL HTTP API], and select **[!UICONTROL Configure]**.
 
     ![Activate HTTP Destination](assets/activate-http-destination.png)
     
     >[!NOTE]
     >
     >If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](../destinations/destinations-workspace.md#catalog) section of the destination workspace documentation.
-        ![Activate HTTP Destination](assets/connect-http-destination.png)
+    >
+    >![Activate HTTP Destination](assets/connect-http-destination.png)
 
 2. In the [!UICONTROL Account] step, you need to define the HTTP endpoint connection details. Select **[!UICONTROL New account]** and enter the connection details for the HTTP endpoint that you want to connect to.
    * **[!UICONTROL httpEndpoint]**: the complete [!DNL URL] of the HTTP endpoint that you want to send the profile data to.
