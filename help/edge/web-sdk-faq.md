@@ -111,7 +111,7 @@ It depends. The Adobe Experience Platform Web SDK can be deployed in two differe
 
 * **Just another tag:** If the site is already tagged for solutions and you can't retag, but you want to send data to the Adobe Experience Platform Edge Network for Experience Platform use cases or the upcoming Launch server-side features (see below), you can add the `alloy.js` tag to the site, where it works as "just another tag."
 
-* **The one and only tag:** If you want to use the Web SDK for an Experience Cloud solution, you must use it for _all_ of the solutions on that page. For example, if your site is already tagged for Analytics and you want to use it for Target, you need to use it for both, as well as for any others in the future.  
+* **The one and only tag:** If you want to use the Web SDK for an Experience Cloud solution, you must use it for _all_ of the solutions on that page. For example, if your site is already tagged for Adobe Analytics and you want to use it for Target, you need to use it for both, as well as for any others in the future.  
 
 In other words, if you decide to use the Adobe Experience Platform Web SDK for non-solution use cases, you can tag the site with `alloy.js` and move on as if it's a new solution. If you want to use it for Adobe Analytics, Target, or Audience Manager, or for application use cases, you might have to remove any of the legacy code on your page. 
 

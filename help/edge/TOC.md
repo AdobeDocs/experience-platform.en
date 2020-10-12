@@ -24,16 +24,16 @@ user-guide-description: Interact with Experience Cloud services through the Edge
 * Data Collection {#data-collection}
   * [Automatically Collected Information](data-collection/automatic-information.md)
   * [Collect Commerce & Products data](data-collection/collect-commerce-data.md)
-  * Migration {#migration}
-    * [Analytics Overview](data-collection/migration/analytics-overview.md)
-    * [Manually mapping variables in Analytics](data-collection/migration/manually-mapping-variables.md)
-    * [Automatically Mapped Variables](data-collection/migration/automatically-mapped-vars.md)
-    * [Sending Data to Adobe Analytics](data-collection/migration/link-tracking.md)
+  * Adobe Analytics {#adobe-analytics}
+    * [Analytics Overview](data-collection/adobe-analytics/analytics-overview.md)
+    * [Manually mapping variables in Adobe Analytics](data-collection/adobe-analytics/manually-mapping-variables.md)
+    * [Automatically Mapped Variables](data-collection/adobe-analytics/automatically-mapped-vars.md)
+    * [Sending Data to Adobe Analytics](data-collection/adobe-analytics/link-tracking.md)
 * Personalization {#personalization}
   * [Rendering personalized content](personalization/rendering-personalization-content.md)
   * [Manage flicker](personalization/manage-flicker.md)
-  * Target {#target}
-    * [Target overview](personalization/target/target-overview.md)
+  * Adobe Target {#adobe-target}
+    * [Target overview](personalization/adobe-target/target-overview.md)
 * Consent {#consent}
   * [Supporting consent](consent/supporting-consent.md)
   * IAB Transparency and Consent Framework 2.0 {#iab-tcf}

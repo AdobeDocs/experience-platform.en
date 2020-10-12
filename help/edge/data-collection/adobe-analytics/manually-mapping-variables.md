@@ -1,12 +1,12 @@
 ---
-title: Manually mapping variables in Analytics
-seo-title: Manually mapping variables in Analytics with Web SDK
-description: How to manurally map variables into Analytics using processing rules
-seo-description: manurally map variables into Analytics using processing rules with Web SDK
+title: Manually mapping variables in Adobe Analytics
+seo-title: Manually mapping variables in Adobe Analytics with Web SDK
+description: How to manurally map variables into Adobe Analytics using processing rules
+seo-description: manurally map variables into Adobe Analytics using processing rules with Web SDK
 keywords: adobe analytics;analytics;variables;mapping variables;map variables;contextData;context Data;Processing rules;rules;xdm;schema;
 ---
 
-# Manually mapping variables in Analytics
+# Manually mapping variables in Adobe Analytics
 
 The Adobe Experience Platform (AEP) [!DNL Web SDK] can map certain variables automatically but custom variables must be manually mapped.
 
@@ -45,7 +45,7 @@ To be used by [!DNL Analytics], XDM data is flattened using dot notation and mad
 
 All data collected by the edge network can be accessed via [processing rules](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html). In [!DNL Analytics], you can use processing rules to incorporate context data into [!DNL Analytics] variables. 
 
-For example, in the following rule, Analytics is set to populate **Internal Search terms (eVar2)** with the data associated with **a.x_atag.search.term(Context Data)**.
+For example, in the following rule, Adobe Analytics is set to populate **Internal Search terms (eVar2)** with the data associated with **a.x_atag.search.term(Context Data)**.
 
   ![](assets/examplerule.png)
 
