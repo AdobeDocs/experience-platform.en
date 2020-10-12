@@ -188,7 +188,7 @@ Record the URI ID of the newly created marketing action, as it will be used in t
 
 Creating a new policy requires you to provide the URI ID of a marketing action with an expression of the usage labels that prohibit that marketing action. 
 
-This expression is called a **policy expression** and is an object containing either (A) a label, or (B) an operator and operands, but not both. In turn, each operand is also a policy expression object. For example, a policy regarding the export of data to a third party might be prohibited if `C1 OR (C3 AND C7)` labels are present. This expression would be specified as:
+This expression is called a policy expression and is an object containing either (A) a label, or (B) an operator and operands, but not both. In turn, each operand is also a policy expression object. For example, a policy regarding the export of data to a third party might be prohibited if `C1 OR (C3 AND C7)` labels are present. This expression would be specified as:
 
 ```json
 "deny": {

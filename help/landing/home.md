@@ -69,7 +69,7 @@ Your default user interface language is determined by the region specified in yo
 
 The Adobe Experience Platform documentation is available in several languages. To change language, click the language dropdown and select the desired language.
 
-![image](assets/lang.jpg)
+![image](images/overview/lang.jpg)
 
 ## [!DNL Experience Platform] documentation
 
@@ -149,9 +149,6 @@ The following videos outline the key capabilities and use cases for [!DNL Experi
 **Use cases:**
 
 >[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)
-
-
- 
 
 <!-- 
 ## What's New

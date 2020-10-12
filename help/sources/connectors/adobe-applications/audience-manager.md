@@ -60,7 +60,7 @@ Audience Manager datasets are disabled for Profile by default and users have the
 
 ### Connections
 
-Adobe Audience Manager creates one connection in Catalog: **Audience Manager Connection**. Catalog is the system of the records for data location and lineage within Adobe Experience Platform. A connection is a Catalog object that is a customer-specific instance of Connectors. Please see the [Catalog Service overview](../../../catalog/home.md) for more information on Catalog, connections, and connectors.
+Adobe Audience Manager creates one connection in Catalog: Audience Manager Connection. Catalog is the system of the records for data location and lineage within Adobe Experience Platform. A connection is a Catalog object that is a customer-specific instance of Connectors. Please see the [Catalog Service overview](../../../catalog/home.md) for more information on Catalog, connections, and connectors.
 
 ## What is the expected latency for Audience Manager Data on Platform?
 
