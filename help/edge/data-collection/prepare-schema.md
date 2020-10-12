@@ -1,8 +1,8 @@
 ---
 title: Prepare your XDM Schema
 seo-title: Prepare your XDM Schema
-description: A guide to help you build your XDM Schema in the Adobe Experience Platform
-seo-description: A guide to help you build your XDM Schema in the Adobe Experience Platform
+description: A guide to help you build your XDM Schema in Adobe Experience Platform
+seo-description: A guide to help you build your XDM Schema in Adobe Experience Platform
 keywords: XDM;schema;create schema;
 ---
 

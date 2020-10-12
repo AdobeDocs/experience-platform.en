@@ -8,7 +8,7 @@ keywords: audience manager;aam;identities;sync identities;namespace;
 
 ## Syncing Identities
 
-The Adobe Experience Platform Web SDK supports the ability to declare customer IDs and their authentication states via the [sendEvent](./overview.md#syncing-identities) command.
+Adobe Experience Platform Web SDK supports the ability to declare customer IDs and their authentication states via the [sendEvent](./overview.md#syncing-identities) command.
 
 Choose your namespaces from the [Identity Service Namespaces](../../identity/../identity-service/namespaces.md) to indicate the context to which an identity relates, by using the values in the Identity Symbol column:
 

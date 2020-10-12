@@ -117,7 +117,7 @@ alloy("setConsent", {
 
 After you have communicated user preferences to the SDK using the `setConsent` command, the SDK persists the user's preferences to a cookie. The next time the user loads your website in the browser, the SDK will retrieve and use these persisted preferences to determine whether or not events can be sent to Adobe. There is no need to execute the `setConsent` command again, except to communicate a change in the user's preferences, which you may do at any time.
 
-## Sync'ing Identities while Setting the Consent
+## Syncing Identities While Setting Consent
 
 When the default consent is pending, the "setConsent" may be the first request that goes out and establishes identity. Because of this, it may be important to sync identities on the first request. The identity map can be added to "setConsent" command just like on the "sendEvent" command. See [Retrieving Experience Cloud ID](../identity/overview.md)
 
