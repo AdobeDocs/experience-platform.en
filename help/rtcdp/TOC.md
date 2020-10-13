@@ -24,7 +24,7 @@ user-guide-description: Bring together known and anonymous data from multiple en
     * [Destination details page](destinations/destination-details-page.md)
   * Destinations catalog {#destinations-cat}
     * [Destinations catalog overview](destinations/destinations-catalog.md)
-    * [HTTP destination](/help/rtcdp/destinations/http-destination.md)
+    * [ (Alpha) HTTP destination](/help/rtcdp/destinations/http-destination.md)
     * Adobe destinations{#adobe-destinations}
       * [Adobe destinations overview](destinations/adobe-destinations.md)
       * [Adobe Campaign](destinations/adobe-campaign-destination.md)
