@@ -78,25 +78,28 @@ POST /connections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/connections' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
-    -d  "auth": {
-        "specName": "Basic Authentication for sftp",
-        "params": {
-            "host": "{HOST_NAME}",
-            "userName": "{USER_NAME}",
-            "password": "{PASSWORD}"
+    -d  '{
+        "name": "SFTP connector",
+        "description": "SFTP connector",
+        "auth": {
+            "specName": "Basic Authentication for sftp",
+            "params": {
+                "host": "{HOST}",
+                "userName": "{USERNAME}",
+                "password": "{PASSWORD}"
+            }
+        },
+        "connectionSpec": {
+            "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
+            "version": "1.0"
         }
-    },
-    "connectionSpec": {
-        "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
-        "version": "1.0"
-    }
-}
+    }'
 ```
 
 | Property | Description |
@@ -131,26 +134,28 @@ POST /connections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/connections' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
-    -d  "auth": {
-        "specName": "SSH PublicKey Authentication for sftp",
-        "params": {
-            "host": "{HOST_NAME}",
-            "userName": "{USER_NAME}",
-            "privateKeyContent": "{PRIVATE_KEY_CONTENT}",
-            "passPhrase": "{PASS_PHRASE}"
+    -d '{
+        "name": "SFTP connector with SSH",
+        "description": "SFTP connector with SSH",
+        "auth": {
+            "specName": "SSH PublicKey Authentication for sftp",
+            "params": {
+                "host": "{HOST}",
+                "privateKeyContent": "{PRIVATE_KEY_CONTENT}",
+                "passPhrase": "{PASS_PHRASE}"
+            }
+        },
+        "connectionSpec": {
+            "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
+            "version": "1.0"
         }
-    },
-    "connectionSpec": {
-        "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
-        "version": "1.0"
-    }
-}
+    }'
 ```
 
 | Property | Description |
