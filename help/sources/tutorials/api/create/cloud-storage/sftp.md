@@ -85,8 +85,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d  '{
-        "name": "SFTP connector",
-        "description": "SFTP connector",
+        "name": "SFTP connector with password",
+        "description": "SFTP connector password",
         "auth": {
             "specName": "Basic Authentication for sftp",
             "params": {
@@ -141,14 +141,15 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "SFTP connector with SSH",
-        "description": "SFTP connector with SSH",
+        "name": "SFTP connector with SSH authentication",
+        "description": "SFTP connector with SSH authentication",
         "auth": {
             "specName": "SSH PublicKey Authentication for sftp",
             "params": {
                 "host": "{HOST}",
+                "userName": "{USERNAME}",
                 "privateKeyContent": "{PRIVATE_KEY_CONTENT}",
-                "passPhrase": "{PASS_PHRASE}"
+                "passPhrase": "{PASSPHRASE}"
             }
         },
         "connectionSpec": {
