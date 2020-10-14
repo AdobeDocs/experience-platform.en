@@ -20,14 +20,14 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
 * Experience Platform UI {#platform-ui}
   * [Browser and language support](browser-language-support.md)
   * [Platform UI guide](ui-guide.md)
-  * [Platform UI tour (Video)](video/platform-ui)
+  * [Platform UI tour (Video)](video/platform-ui.md)
 * Experience Platform APIs {#platform-apis}
   * [API fundamentals](api-fundamentals.md)
   * [Authenticate to Experience Platform APIs](https://docs.adobe.com/content/help/en/platform-learn/tutorials/platform-api-authentication.html)
   * [Platform API reference documents](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)
 * Platform documentation {#documentation}
   * [Documentation overview](documentation/overview.md)
-    * [Language support](documentation/language-support.md)
+  * [Language support](documentation/language-support.md)
   * [Access control](https://docs.adobe.com/content/help/en/experience-platform/access-control/home.html)
   * [Auditor](https://docs.adobe.com/content/help/en/auditor/using/overview.html)
   * [Catalog and Datasets](https://docs.adobe.com/content/help/en/experience-platform/catalog/home.html)
