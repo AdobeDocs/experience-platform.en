@@ -54,7 +54,7 @@ The **[!UICONTROL Create merge policy]** screen appears, allowing you to provide
 
 ### Timestamp ordered {#timestamp-ordered}
 
-As Profile records are ingested into Experience Platform, a system timestamp is obtained at the time of ingestion and added to the record. When **[!UICONTROL Timestamp ordered]** is selected as the "[!UICONTROL Attribute merge]" type for a merge policy, profiles are merged based on the system timestamp. In other words, merging is done based on the timestamp for when the record was ingested into Platform.
+As Profile records are ingested into Experience Platform, a system timestamp is obtained at the time of ingestion and added to the record. When **[!UICONTROL Timestamp ordered]** is selected as the **[!UICONTROL Attribute merge]** type for a merge policy, profiles are merged based on the system timestamp. In other words, merging is done based on the timestamp for when the record was ingested into Platform.
 
 Occasionally there may be use cases where it is necessary to supply a custom timestamp and have the merge policy honor the custom timestamp rather than the system timestamp. Examples of this include backfilling data or ensuring the correct order of events if records are ingested out of order.
 
@@ -84,7 +84,7 @@ When selecting an **[!UICONTROL Attribute merge]** value, you can select **[!UIC
 
 An example use case would be if your organization had information present in one dataset that is preferred or trusted over data in another dataset. 
 
-When selecting **[!UICONTROL Dataset precedence]**, a separate panel opens requiring you to select from **[!UICONTROL Available datasets]** which datasets will be included (or use the checkbox to select all). You can then drag and drop those datasets into the [**!UICONTROL Selected Datasets]** panel and drag them into the correct order of priority. The top dataset will be given highest priority, the second dataset will be second-highest, and so on.
+When selecting **[!UICONTROL Dataset precedence]**, a separate panel opens requiring you to select from **[!UICONTROL Available datasets]** which datasets will be included (or use the checkbox to select all). You can then drag and drop those datasets into the **[!UICONTROL Selected Datasets]** panel and drag them into the correct order of priority. The top dataset will be given highest priority, the second dataset will be second-highest, and so on.
 
 ![](../images/merge-policies/dataset-precedence.png)
 
@@ -112,7 +112,7 @@ Once you have made the necessary changes, select **[!UICONTROL Save]** to return
 
 When creating or updating a merge policy, a check is performed to determine if the merge policy violates any of the data usage policies defined by your organization. Data usage policies are part of Adobe Experience Platform [!DNL Data Governance] and are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on specific [!DNL Platform] data. For example, if a merge policy was used to create a segment that activated to a third-party destination, and your organization had a data usage policy preventing the export of specific data to third parties, you would receive a "[!UICONTROL Data governance policy violation detected]" notification when attempting to save your merge policy. 
 
-This notification includes a list of data usage policies that have been violated and allows you to view the details of the violation by selecting a policy from the list. Upon selecting a violated policy, the **[!UICONTROL Data lineage]** tab provides the reason for the violation and the affected activations], each providing more detail into how the data usage policy has been violated.
+This notification includes a list of data usage policies that have been violated and allows you to view the details of the violation by selecting a policy from the list. Upon selecting a violated policy, the **[!UICONTROL Data lineage]** tab provides the reason for the violation and the affected activations, each providing more detail into how the data usage policy has been violated.
 
 To learn more about how data governance is performed within Adobe Experience Platform, please begin by reading the [Data Governance overview](../../data-governance/home.md).
 
