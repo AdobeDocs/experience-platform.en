@@ -276,7 +276,7 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 Ingesting record data to a streaming connection can be done either with or without the source name.
 
-The following example shows a record missing the source name. If a record is missing the source name, it will add the source ID from the streaming connection definition.
+The example request below ingests a record with a missing source name to Platform. If a record is missing the source name, it will add the source ID from the streaming connection definition.
 
 >[!NOTE]
 >
@@ -323,7 +323,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 }'
 ```
 
-If you want to include the source name, the following example shows how you would include it.
+If you want to include a source name, the following example shows how you would include it.
 
 ```json
     "header": {
