@@ -19,7 +19,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
   * [Roles and project phases (Video)](/help/intro-to-platform/roles-and-project-phases.md)
 * Experience Platform UI {#platform-ui}
   * [Browser and language support (NEW-DOC)](browser-language-support.md)
-  * [Platform UI guide (NEW-DOC)]()
+  * [Platform UI guide]()
   * [Tour the Platform UI (Video)](/help/intro-to-platform/interface-tour.md)
 * Experience Platform APIs {#platform-apis}
   * [API fundamentals](api-fundamentals.md)
