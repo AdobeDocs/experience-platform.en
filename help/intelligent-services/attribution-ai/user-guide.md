@@ -19,7 +19,27 @@ In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in t
 
 ![Accessing your instance](./images/user-guide/open_Attribution_ai.png)
 
-The Attribution AI service page appears. This page lists service instances of Attribution AI and displays information about them, including the name of the instance, conversion events, how often the instance is run, and the status of the last update. Click **Create instance** to begin.
+The Attribution AI service page appears. This page lists service instances of Attribution AI and displays information about them, including the name of the instance, conversion events, how often the instance is run, and the status of the last update.
+
+You can find a **[!UICONTROL Total conversion events scored]** metric located in the bottom-right side of the **[!UICONTROL Create instance]** container. This metric tracks the total number of conversion events scored by Attribution AI for the current calendar year including all sandbox environments and any deleted service instances.
+
+![](../images/user-guide/total-profiles.png)
+
+Service instances can be edited, cloned, and deleted by using the controls on the right-hand side of the UI. To display these controls, select an instance from your existing **[!UICONTROL Service instances]**. The controls contain the following information:
+
+- **[!UICONTROL Edit]**: Selecting **[!UICONTROL Edit]** allows you to modify an existing service instance. You can edit the name, description, status, and scoring frequency of the instance.
+- **[!UICONTROL Clone]**: Selecting **[!UICONTROL Clone]** copies the selected service instance. You can then modify the workflow to make minor tweaks and rename it as a new instance.
+- **[!UICONTROL Delete]**: You can Delete a service instance including any historical runs.
+- **[!UICONTROL Data source]**: A link to the dataset being used by this instance.
+- **[!UICONTROL Last run details]**: This is only displayed when a run fails. Information on why the run failed such as error codes are displayed here.
+- **[!UICONTROL Conversion events]**: A quick overview of the conversion events configured for this instance.
+- **[!UICONTROL Lookback window]**: The time frame you defined indicating how many days prior to the conversion event touchpoints are included.
+- **[!UICONTROL Touchpoints]**: A list of all the touchpoints you defined while creating this instance.
+
+
+![](../images/user-guide/service-instance-panel.png)
+
+Click **[!UICONTROL Create instance]** to begin.
 
 ![Create instance](./images/user-guide/landing_page.png)
 
