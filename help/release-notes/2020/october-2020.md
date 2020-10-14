@@ -49,7 +49,7 @@ Adobe Experience Platform Segmentation Service provides a user interface and RES
 
 | Feature | Description |
 | ------- | ----------- |
-| Streaming segmentation limit removal | The seven day for the lookback period has been removed. |
+| Streaming segmentation limit removal | The seven-day limit for the lookback period has been removed. |
 
 For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md)
 
