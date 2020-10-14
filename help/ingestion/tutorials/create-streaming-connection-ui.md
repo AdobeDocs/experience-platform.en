@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Create a streaming connection using the UI
 topic: tutorial
 type: Tutorial
+description: This UI guide will help you create a streaming connection using Adobe Experience Platform.
 ---
 
 # Create a streaming connection using the UI

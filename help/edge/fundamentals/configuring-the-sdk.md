@@ -97,7 +97,7 @@ Set this to configure a callback that is called for every event just before it i
 
 ## Privacy options
 
-### `defaultConsent`
+### `defaultConsent` {#default-consent}
 
 | **Type** | **Required** | **Default Value** |
 | -------- | ------------ | ----------------- |

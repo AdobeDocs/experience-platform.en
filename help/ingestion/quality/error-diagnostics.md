@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestio
 solution: Experience Platform
 title: Adobe Experience Platform partial batch ingestion overview
 topic: overview
+description: This document provides information on monitoring batch ingestion, managing partial batch ingestion errors, as well as a reference for partial batch ingestion types.
 ---
 
 # Retrieving error diagnostics

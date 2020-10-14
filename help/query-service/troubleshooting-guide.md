@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;query service;Query service;tr
 solution: Experience Platform
 title: Adobe Experience Platform Query Service troubleshooting guide
 topic: troubleshooting
+description: This document contains information on common error codes you encounter and the possible causes.
 ---
 
 # Errors and troubleshooting
