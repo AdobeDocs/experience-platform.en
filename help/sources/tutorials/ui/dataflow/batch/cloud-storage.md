@@ -49,7 +49,7 @@ Once the preview window populates, you can select **[!UICONTROL Next]** to uploa
 
 Supported file formats for a cloud storage account also includes JSON and Parquet. JSON and Parquet files must be XDM-compliant. To ingest JSON or Parquet files, select the appropriate file format from the directory browser and apply compatible data format from the right interface. 
 
-If the data format is in JSON, a preview will appear, showing information about the data within the file. On the preview screen, you can select whether the JSON is XDM compliant by using the **[!UICONTROL XDM compliant]** dropdown.
+If the data format is in JSON, a preview will appear, showing information about the data within the file. On the preview screen, you can select whether the JSON is XDM compliant by using the **[!UICONTROL XDM compliant]** dropdown. 
 
 Select **[!UICONTROL Next]** to proceed.
 
@@ -63,7 +63,7 @@ Select **[!UICONTROL Next]** to proceed.
 
 ## Map data fields to an XDM schema
 
-The **[!UICONTROL Mapping]** step appears, providing an interactive interface to map the source data to a [!DNL Platform] dataset. Source files formatted in JSON or Parquet must be XDM-compliant and do not require you to manually configure the mapping. CSV files, conversely, require you to explicitly configure the mapping, but allow you to pick which source data fields to map.
+The **[!UICONTROL Mapping]** step appears, providing an interactive interface to map the source data to a [!DNL Platform] dataset. Source files formatted in Parquet must be XDM compliant and do not require you to manually configure the mapping, while CSV files require you to explicitly configure the mapping, but allow you to pick which source data fields to map. JSON files, if marked as XDM complaint, does not require manual configuration. However, if it is not marked as XDM compliant, it will require you to explicitly configure the mapping.
 
 Choose a dataset for inbound data to be ingested into. You can either use an existing dataset or create a new one.
 
