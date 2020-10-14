@@ -8,7 +8,7 @@ author: crhoades, ens28527
 
 # Adobe Experience Platform release notes 
 
-**Release date: October 2020**
+**Release date: October 14, 2020**
 
 - [Data Prep](#data-prep)
 - [Real-time Customer Profile](#profile)
