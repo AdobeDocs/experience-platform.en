@@ -18,7 +18,7 @@ Built on open APIs, [!DNL Experience Platform] exposes the full functionality of
 
 ## [!DNL Experience Platform] documentation
 
-[!DNL Experience Platform] documentation is provided in multiple formats for a variety of features and services. To learn more about the types of documentation that are available, please visit the [Platform documentation types overview](documentation/overview.md). To begin learning more about a specific [!DNL Platform] service right away, select a guide from the [Adobe Experience Platform Documentation landing page](https://experienceleague.corp.adobe.com/docs/experience-platform.html?lang=en).
+[!DNL Experience Platform] documentation is provided in multiple formats for a variety of features and services. To learn more about the types of documentation that are available, please visit the [Platform documentation overview](documentation/overview.md). To begin learning more about a specific [!DNL Platform] service right away, select a guide from the left navigation.
 
 ### Documentation for application services built on [!DNL Experience Platform]
 
@@ -30,7 +30,7 @@ Adobe has built application services on top of Experience Platform. You can find
 
 ## [!DNL Experience Platform] tutorials
 
-Get started with [!DNL Platform] quickly and easily by following along with step-by-step tutorials for everything from preparing your data for ingestion to advanced machine learning algorithms. These tutorials have been designed to supplement the information found within the [!DNL Experience Platform] documentation, so for best results keep the documentation on-hand while completing the tutorials. Visit the [Experience Platform tutorials](https://experienceleague.corp.adobe.com/docs/platform-learn/tutorials/overview.html?lang=en) to get started.
+Get started with [!DNL Platform] quickly and easily by following along with step-by-step tutorials for everything from preparing your data for ingestion to advanced machine learning algorithms. These tutorials have been designed to supplement the information found within the [!DNL Experience Platform] documentation, so for best results keep the documentation on-hand while completing the tutorials. Visit the [Experience Platform tutorials](https://docs.adobe.com/content/help/en/experience-platform/tutorials/home.html) to get started.
 
 ## Reference documents and resources
 
