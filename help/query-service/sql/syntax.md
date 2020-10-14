@@ -500,7 +500,7 @@ Alter TABLE table_name DROP ( column_name Foreign key)
 
 ### SHOW PRIMARY KEYS
 
-This command lists all the primary key constraints for the given database
+This command lists all the primary key constraints for the given database.
 
 ```sql
 SHOW PRIMARY KEYS
