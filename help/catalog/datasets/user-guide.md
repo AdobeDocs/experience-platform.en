@@ -55,10 +55,10 @@ To create a new dataset, start by clicking **[!UICONTROL Create dataset]** in th
 
 In the next screen, you are presented with the following two options for creating a new dataset:
 
-*   [Create dataset from schema](#create-a-dataset-with-an-existing-schema)
-*   [Create dataset from CSV file](#create-a-dataset-with-a-csv-file)
+*   [Create dataset from schema](#schema)
+*   [Create dataset from CSV file](#csv)
 
-### Create a dataset with an existing schema
+### Create a dataset with an existing schema {#schema}
 
 In the **[!UICONTROL Create dataset]** screen, click **[!UICONTROL Create dataset from schema]** to create a new empty dataset.
 
@@ -72,7 +72,7 @@ The **[!UICONTROL Configure dataset]** step appears. Provide the dataset with a 
 
 ![](../images/datasets/user-guide/configure_dataset_schema.png)
 
-### Create a dataset with a CSV file
+### Create a dataset with a CSV file {#csv}
 
 When a dataset is created using a CSV file, an ad hoc schema is created to provide the dataset with a structure that matches the provided CSV file. In the **[!UICONTROL Create dataset]** screen, click the box saying **[!UICONTROL Create dataset from CSV file]**.
 
