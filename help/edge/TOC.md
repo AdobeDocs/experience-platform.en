@@ -23,12 +23,13 @@ user-guide-description: Interact with Experience Cloud services through the Edge
   * [Overview](identity/overview.md)
 * Data Collection {#data-collection}
   * [Automatically Collected Information](data-collection/automatic-information.md)
+  * [Track Links](data-collection/track-links.md)
   * [Collect Commerce & Products data](data-collection/collect-commerce-data.md)
   * Adobe Analytics {#adobe-analytics}
     * [Analytics Overview](data-collection/adobe-analytics/analytics-overview.md)
     * [Manually Mapping Variables in Adobe Analytics](data-collection/adobe-analytics/manually-mapping-variables.md)
     * [Automatically Mapped Variables](data-collection/adobe-analytics/automatically-mapped-vars.md)
-    * [Sending Data to Adobe Analytics](data-collection/adobe-analytics/link-tracking.md)
+    * [Sending Data to Adobe Analytics](data-collection/adobe-analytics/sending-data-to-analytics.md)
 * Personalization {#personalization}
   * [Rendering Personalized Content](personalization/rendering-personalization-content.md)
   * [Manage Flicker](personalization/manage-flicker.md)
