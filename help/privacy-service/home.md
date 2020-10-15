@@ -69,7 +69,7 @@ Once you have determined your business' privacy needs, and decided which identit
 >
 >As you follow along with the API or UI guides, please refer to the document on [Privacy Service and Experience Cloud applications](./experience-cloud-apps.md) for further documentation on how to format privacy requests for your particular [!DNL Experience Cloud] application(s).
 >
->It is also important to note that once privacy requests have been submitted and are in a processing state, each Adobe application processes the requests on a different basis. Due to these differences, the amount of time a request can take to complete cannot be guaranteed. If changes occur in the data for a particular application while a request is still processing, whether or not those records are processed also cannot be guaranteed.
+>It is also important to note that privacy requests are processed asynchronously across Experience Cloud applications. Once a request is received by Privacy Service, each application can take anywhere from minutes to weeks to complete the request. The amount of time it takes to complete each request is specific to the application you are working with, and the amount of data that needs to be processed.
 
 #### Using the API
 
