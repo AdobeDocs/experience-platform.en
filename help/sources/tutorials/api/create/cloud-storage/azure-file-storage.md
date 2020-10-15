@@ -73,7 +73,6 @@ POST /connections
 
 The following request creates a new [!DNL Azure File Storage] connection, configured by the properties provided in the payload:
 
-
 ```shell
 curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \
