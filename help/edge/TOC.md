@@ -39,7 +39,7 @@ user-guide-description: Interact with Experience Cloud services through the Edge
   * [Supporting Consent](consent/supporting-consent.md)
   * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
     * [Overview](consent/iab-tcf/overview.md)
-    * [Integrate With Launch](consent/iab-tcf/with-launch.md)
-    * [Integrate Without Launch](consent/iab-tcf/without-launch.md)
+    * [Integrate With Adobe Experience Platform Launch](consent/iab-tcf/with-launch.md)
+    * [Integrate Without Adobe Experience Platform Launch](consent/iab-tcf/without-launch.md)
 * [Release notes](release-notes.md)
 * [Frequently Asked Questions](web-sdk-faq.md)
