@@ -8,13 +8,13 @@ keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;edge;Visito
 
 # What is Adobe Experience Platform Web SDK
 
-Adobe Experience Platform Web SDK is a client-side JavaScript library that allows customers of the Adobe Experience Cloud to interact with the various services in the [!DNL Experience Cloud] through the Adobe [!DNL Experience Platform Edge Network]. In addition to the JavaScript library, there is a [Launch extension](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) to help with your Web SDK configurations.
+Adobe Experience Platform Web SDK is a client-side JavaScript library that allows customers of the Adobe Experience Cloud to interact with the various services in the [!DNL Experience Cloud] through the Adobe [!DNL Experience Platform Edge Network]. In addition to the JavaScript library, there is an [Experience Platform Launch extension](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) to help with your Web SDK configurations.
 
 ## Experience Edge
 
 [!DNL Adobe Experience Platform Web SDK] is part of the collection that makes up Experience Edge. Experience Edge consists of three technologies:
 
-* **[!DNL Adobe Experience Platform Web SDK]:** A JavaScript SDK and [!DNL Launch] extension to dramatically simplify deploying [!DNL Adobe] technologies
+* **[!DNL Adobe Experience Platform Web SDK]:** A JavaScript SDK and [!DNL Experience Platform Launch] extension to dramatically simplify deploying [!DNL Adobe] technologies
 * **Adobe Experience Platform Mobile SDK:** An extension to the v5 mobile SDK to allow customers to use the new deployment methodology
 * **[!DNL Adobe Experience Platform Edge Network]:** A global distributed network of servers that enable a new methodology of deploying [!DNL Adobe] products
 
@@ -56,9 +56,9 @@ The following video demonstrates the Adobe Experience Platform [!DNL Web SDK] an
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
-## Getting Started
+## Getting started
 
-We highly recommend you [check out our getting started guide](getting-started/quick-start-with-launch.md) for a quick tutorial on how to get started using Adobe Launch.
+It is highly recommended that you [check out the getting started guide](consent/iab-tcf/with-launch.md) for a quick tutorial on how to get started using Adobe Experience Platform Launch.
 
 This product is constantly evolving and growing to support more and more use cases. To keep up with the latest, check out our [supported use-cases board](https://github.com/adobe/alloy/projects/5). We keep this up to date with the use cases we currently support and the ones we are working on to enable you to make the best decisions possible.
 
