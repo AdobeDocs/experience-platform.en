@@ -6,7 +6,7 @@ seo-description: Learn how to send Link Data to Adobe Analytics with Experience 
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 ---
 
-# Sending Data to Adobe Analytics
+# Sending data to Adobe Analytics
 
 Whereas in the past there were different functions to distinguish between a page view and a link (for example, `s.t(), s.tl()`), in the Web SDK there is just the `sendEvent` command. The data you send with an event determines whether it should be a page view or a link. [Learn more about tracking links](../track-links.md)
 
@@ -28,4 +28,4 @@ alloy("sendEvent", {
 });
 ```
 
-Although analytics technically records a page view even if this variable is not set, it is a best practice to set this variable whenever you want to record a page view to be explicit in your data and to future proof your implementation. 
+Although Analytics technically records a page view even if this variable is not set, it is a best practice to set this variable whenever you want to record a page view to be explicit in your data and to future proof your implementation. 
