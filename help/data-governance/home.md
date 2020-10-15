@@ -14,7 +14,7 @@ Adobe Experience Platform [!DNL Data Governance] allows you to manage customer d
 
 ## Data governance roles
 
-As a concept, data governance is neither automatic, nor does it occur in a vacuum. What began as a role for one individual, typically recognized as a **data steward**, has grown considerably as the data governance ecosystem has expanded. Today, data governance requires continual management and monitoring in order to be successful and relies on data stewards having tools with which data can be properly labeled, usage policies can be created, and compliance with those policies can be enforced.
+As a concept, data governance is neither automatic, nor does it occur in a vacuum. What began as a role for one individual, typically recognized as a data steward, has grown considerably as the data governance ecosystem has expanded. Today, data governance requires continual management and monitoring in order to be successful and relies on data stewards having tools with which data can be properly labeled, usage policies can be created, and compliance with those policies can be enforced.
 
 While data governance should be the responsibility of every individual in the organization, here are some of the essential roles within the data governance cycle:
 

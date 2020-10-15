@@ -93,7 +93,7 @@ Using the [Identity Service API](https://www.adobe.io/apis/experienceplatform/ho
 
 ## What are composite identities and XIDs?
 
-Identities are referenced in API calls either by their composite identity or XID. A **composite identity** is a representation of an identity that contains an ID value and a namespace. An **XID** is a single-value identifier that represents the same construct as a composite identity (an ID and a namespace), and is automatically assigned to new identities when persisted by Identity Service. See the [Identity Service API overview](./home.md) for more information.
+Identities are referenced in API calls either by their composite identity or XID. A composite identity is a representation of an identity that contains an ID value and a namespace. An XID is a single-value identifier that represents the same construct as a composite identity (an ID and a namespace), and is automatically assigned to new identities when persisted by Identity Service. See the [Identity Service API overview](./home.md) for more information.
 
 ## How does Identity Service handle personally identifiable information (PII)?
 

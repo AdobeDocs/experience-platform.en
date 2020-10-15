@@ -42,11 +42,11 @@ Before creating the [!DNL Google Ad Manager] destination in Adobe Real-time CDP,
 * **Customer ID** : this is Adobe's customer account ID with [!DNL Google]. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
 * **Network ID** : this is your account with [!DNL Google Ad Manager]
 * **Audience Link ID** : this is your account with [!DNL Google Ad Manager]
-* Your account type. **DFP by Google** or **AdX buyer**.
+* Your account type. DFP by Google or AdX buyer.
 
 ## Configure destination
 
-1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL Google Ad Manager], and select **[!UICONTROL Configure]**.
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select **[!DNL Google Ad Manager]**, and select **[!UICONTROL Configure]**.
     ![Connect Google Ad Manager destination](/help/rtcdp/destinations/assets/google-1-destination.png)
 
     >[!NOTE]
