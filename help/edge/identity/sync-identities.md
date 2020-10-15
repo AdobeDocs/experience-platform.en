@@ -6,7 +6,7 @@ seo-description: Learn how to sync identities with Adobe Audience Manager with E
 keywords: audience manager;aam;identities;sync identities;namespace;
 ---
 
-## Syncing Identities
+# Syncing identities
 
 Adobe Experience Platform Web SDK supports the ability to declare customer IDs and their authentication states via the [sendEvent](./overview.md#syncing-identities) command.
 
