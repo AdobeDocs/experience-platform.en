@@ -50,7 +50,7 @@ For example, in the following rule, Adobe Analytics is set to populate **Interna
   ![](assets/examplerule.png)
 
 
-## XDM Schema
+## XDM schema
 
 [!DNL Experience Platform] uses schemas to describe the structure of data in a consistent and reusable way. By defining data consistently across systems, it becomes easier to retain meaning and, therefore, gain value from data. [!DNL Analytics] context data works with the structure defined by the schema. 
 

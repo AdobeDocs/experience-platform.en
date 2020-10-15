@@ -76,7 +76,7 @@ In an XDM experience event, there is an optional `eventType` field. This holds t
 | delivery.feedback | Feedback events for a delivery. Example feedback events for an email delivery |
 
 
-These event types will be shown in a dropdown if using the Launch extension or you can always pass them in without Launch. They can be passed in as part of the `xdm` option.
+These event types will be shown in a dropdown if using the Adobe Experience Platform Launch extension or you can always pass them in without Experience Platform Launch. They can be passed in as part of the `xdm` option.
 
 
 ```javascript

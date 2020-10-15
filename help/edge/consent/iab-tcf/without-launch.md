@@ -1,5 +1,5 @@
 ---
-title: Using IAB TCF 2.0 without Launch
+title: Using IAB TCF 2.0 without Experience Platform Launch
 seo-title: Setting up IAB TCF 2.0 consent with the Adobe Experience Platform Web SDK
 description: Learn how to set up IAB TCF 2.0 consent with the Adobe Experience Platform Web SDK
 seo-description: Learn how to set up IAB TCF 2.0 consent with the Adobe Experience Platform Web SDK

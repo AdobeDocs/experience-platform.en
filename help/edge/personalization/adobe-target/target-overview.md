@@ -120,10 +120,10 @@ If you have Target activities with predefined audiences that use custom paramete
 
 ## Terminology
 
-__Decisions__ - In [!DNL Target], these correlate to the experience that is selected from an Activity.
+__Decisions:__ In [!DNL Target], these correlate to the experience that is selected from an Activity.
 
-__Scope__ - The scope of the decision. In [!DNL Target], this is the mBox. The global mBox is the `__view__` scope.
+__Schema:__ The schema of a decision is the type of offer in [!DNL Target]. 
 
-__Schema__ - The schema of a decision is the type of offer in [!DNL Target]. 
+__Scope:__ The scope of the decision. In [!DNL Target], this is the mBox. The global mBox is the `__view__` scope.
 
-__XDM__ - The XDM is serialized into dot notation and then put into [!DNL Target] as mBox parameters.
+__XDM:__ The XDM is serialized into dot notation and then put into [!DNL Target] as mBox parameters.

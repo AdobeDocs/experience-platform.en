@@ -6,7 +6,7 @@ seo-description: Learn Which Variables are Automatically Mapped in Adobe Analyti
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 ---
 
-# Variables Automatically Mapped in [!DNL Analytics]
+# Variables automatically mapped in [!DNL Analytics]
 
 Below is a list of variables that the Adobe Experience Platform [!DNL Edge Network] automatically maps into [!DNL Analytics].
 

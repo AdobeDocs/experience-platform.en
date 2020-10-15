@@ -19,7 +19,7 @@ The following video is intended to support you in creating a schema, dataset, an
 
 >[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
-Log in to Adobe Experience platform Launch and install the AEP Web SDK extension. When you install the SDK, you are prompted to configure the extension. Enter the Config ID you requested above. The extension automatically fills in your Organization ID.
+Log in to Adobe Experience Platform Launch and install the AEP Web SDK extension. When you install the SDK, you are prompted to configure the extension. Enter the Config ID you requested above. The extension automatically fills in your Organization ID.
 
 For more details on different configuration options, see [Configuring the SDK](../fundamentals/configuring-the-sdk.md).
 

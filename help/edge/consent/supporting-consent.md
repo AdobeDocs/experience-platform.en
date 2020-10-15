@@ -6,7 +6,7 @@ seo-description: Learn how to support consent preferences with Experience Platfo
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 ---
 
-# Supporting Consent
+# Supporting consent
 
 To respect your user's privacy, you might want to ask for the user's consent before allowing the SDK to use user-specific data for certain purposes. Currently, the SDK only allows users to opt in or out of all purposes, but in the future Adobe hopes to provide more granular control over specific purposes.
 
@@ -17,7 +17,7 @@ If the user opts in to all purposes, the SDK is allowed to perform the following
 
 If the user opts out of all purposes, the SDK does not perform any of these tasks.
 
-## Configuring Consent
+## Configuring consent
 
 By default the user is opted in to all purposes. To prevent the SDK from performing the above tasks until the user opts in, pass `"defaultConsent": "pending"` during SDK configuration as follows:
 
@@ -75,7 +75,7 @@ Because the user chose to opt out, promises that were returned from previously q
 >
 >Currently, the SDK supports only the `general` purpose. Although we plan to build out a more robust set of purposes or categories that will correspond to the different Adobe capabilities and product offerings, the current implementation is an all or nothing approach to opt-in.  This only applies to the Adobe Experience Platform [!DNL Web SDK] and NOT other Adobe JavaScript libraries.
 
-## Communicating consent preferences via the IAB TCF Standard
+## Communicating consent preferences via the IAB TCF standard
 
 The SDK supports recording a user's consent preferences provided through the Interactive Advertising Bureau Europe (IAB) Transparency and Consent Framework (TCF) standard. The consent string can be set through the same `setConsent` command as above like this:
 
