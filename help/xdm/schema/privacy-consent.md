@@ -125,12 +125,14 @@ The `xdm:consents` object captures the general consent settings selected by the 
   "xdm:sellData": {
     "xdm:choice": "yes",
     "xdm:timestamp": "2019-01-01T15:52:25+00:00",
-    "xdm:basisOfProcessing": "consent"
+    "xdm:basisOfProcessing": "consent",
+    "xdm:source": "OurApp"
   },
   "xdm:shareData": {
     "xdm:choice": "yes",
     "xdm:timestamp": "2019-01-01T15:52:25+00:00",
-    "xdm:basisOfProcessing": "consent"
+    "xdm:basisOfProcessing": "consent",
+    "xdm:source": "OurApp"
   },
   "xdm:deviceLinking": {
     "xdm:basisOfProcessing": "vital_interest"
@@ -151,6 +153,7 @@ The `xdm:consents` object captures the general consent settings selected by the 
 | `xdm:choice` | The customer-provided permission for the specified use case. See the [appendix](#choice-values) for accepted values and definitions. |
 | `xdm:timestamp` | An ISO 8601 timestamp of when the consent setting changed, if applicable. If the timestamp value is the same as the one provided in the `xdm:choicesMetadata` section, then this field does not need to be included. |
 | `xdm:basisOfProcessing` | Indicates the privacy-related basis by which the data should be collected and processed. By default, this field is set to `consent`, which indicates that the data should only be processed if the customer has provided consent (as reflected in `xdm:choice`).<br><br>In some circumstances, customers do not have be prompted to provide consent for personalization. `xdm:basisOfProcessing` must be included in the applicable consent option in these cases, indicating the reason why a consent prompt was not provided. When any value other than `consent` is provided for this field, the value of `xdm:choice` is ignored. See the [appendix](#basisOfProcessing-values) for accepted values and definitions.<br><br>Note that if this field is ever set to a value other than `consent`, the only way to switch it back is to explicitly provide this field as `consent`. In other words, you cannot simply specify a new `xdm:choice` and leave `xdm:basisOfProcessing` blank, as `xdm:basisOfProcessing` will retain its previous value. |
+| `xdm:source` | A string that indicates which feature, product, or method the customer used to provide their consent information. Common examples include customer management platforms (CMPs) and opt-out links sent via email. Note that for any individual consent or preference, if its source value is identical to that of the `xdm:source` field under `xdm:choicesMetadata`, then this field does not to be set for that consent or preference. | 
 
 ### xdm:personalizationPreferences {#personalizationPreferences}
 
