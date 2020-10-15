@@ -8,7 +8,7 @@ description: Adobe Experience Platform
 
 # Adobe Experience Platform workflows UI guide
 
-The **[!UICONTROL Workflows]** section within the Adobe Experience Platform user interface, shows a list of multi-step workflows for performing operations within Platform. These workflows cover areas including data ingestion and data science.
+The **[!UICONTROL Workflows]** section within the Adobe Experience Platform user interface shows a list of multi-step workflows for performing operations within Platform. These workflows cover areas including data ingestion and data science.
 
 ![workflows](./images/workflows/workflows.png)
 
