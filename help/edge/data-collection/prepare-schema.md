@@ -6,7 +6,7 @@ seo-description: A guide to help you build your XDM Schema in Adobe Experience P
 keywords: XDM;schema;create schema;
 ---
 
-## Prepare a Schema
+# Prepare a schema
 
 The Experience Platform Edge Network uses the Experience Data Model (XDM). XDM is a data format that lets you define schemas. The schema defines how the Edge Network expects the data to be formatted. To send data, you must define your schema.
 
@@ -19,7 +19,7 @@ The following video is intended to support you in creating a schema, dataset, an
 
 >[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
-Log in to Launch and install the `AEP Web SDK` extension. When you install the SDK, you are prompted to configure the extension. Enter the Config ID you requested above. The extension automatically fills in your Organization ID.
+Log in to Adobe Experience platform Launch and install the AEP Web SDK extension. When you install the SDK, you are prompted to configure the extension. Enter the Config ID you requested above. The extension automatically fills in your Organization ID.
 
 For more details on different configuration options, see [Configuring the SDK](../fundamentals/configuring-the-sdk.md).
 
