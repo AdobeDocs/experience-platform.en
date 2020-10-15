@@ -108,7 +108,7 @@ Allows the SDK to share segment information via [URL Destinations](https://docs.
 
 #### Adobe Analytics
 
-Controls whether data is sent to Adobe Analytics. Additional details are in the [Analytics Overview](../solution-specific/analytics/analytics-overview.md).
+Controls whether data is sent to Adobe Analytics. Additional details are in the [Analytics Overview](../data-collection/adobe-analytics/analytics-overview.md).
 
 ![Adobe Analytics Settings Block](../../assets/edge_configuration_aa.png)
 

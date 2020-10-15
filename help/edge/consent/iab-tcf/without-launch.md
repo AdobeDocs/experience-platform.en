@@ -17,9 +17,9 @@ This guide uses the `__tcfapi` interface for accessing the consent information. 
 >
 >These examples assume that by the time the code is run, `window.__tcfapi` is defined on the page. CMPs can provide a hook where you could run these functions when the `__tcfapi` object is ready.
 
-To use IAB TCF 2.0 with Experience Platform Launch and the AEP Web SDK extension, you need to have an XDM schema available. If you have not set either of these up, start by viewing the [Adobe Experience Platform Web SDK JavaScript quick start guide](../../getting-started/quick-start-without-launch.md) before proceeding.
+To use IAB TCF 2.0 with Experience Platform Launch and the AEP Web SDK extension, you need to have an XDM schema available. If you have not set either of these up, start by viewing this page before proceeding.
 
-Additionally, this guide requires you to have a working understanding of the Adobe Experience Platform Web SDK. For a quick refresher, please read the [Adobe Experience Platform Web SDK overview](../../home.md) and the [Frequently asked questions](../../getting-started/web-sdk-faq.md) documentation.
+Additionally, this guide requires you to have a working understanding of the Adobe Experience Platform Web SDK. For a quick refresher, please read the [Adobe Experience Platform Web SDK overview](../../home.md) and the [Frequently asked questions](../../web-sdk-faq.md) documentation.
 
 ## Enabling default consent
 
@@ -74,7 +74,7 @@ window.__tcfapi('addEventListener', 2, function (tcData, success) {
 });
 ```
 
-This code block listens for the `useractioncomplete` event and then sets the consent, passing the consent string and the `gdprApplies` flag. If you have custom identities for your customers, be sure to fill in the `identityMap` variable. Refer to the guide on [supporting consent](../../fundamentals/supporting-consent.md) for more information on calling `setConsent`.
+This code block listens for the `useractioncomplete` event and then sets the consent, passing the consent string and the `gdprApplies` flag. If you have custom identities for your customers, be sure to fill in the `identityMap` variable. Refer to the guide on [supporting consent](../../consent/supporting-consent.md) for more information on calling `setConsent`.
 
 ## Including consent information in sendEvent
 

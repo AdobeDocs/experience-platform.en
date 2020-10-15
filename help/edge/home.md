@@ -58,7 +58,7 @@ The following video demonstrates the Adobe Experience Platform [!DNL Web SDK] an
 
 ## Getting started
 
-We highly recommend you [check out our getting started guide](getting-started/quick-start-with-launch.md) for a quick tutorial on how to get started using Adobe Experience Platform Launch.
+It is highly recommended that you [check out the getting started guide](consent/iab-tcf/with-launch.md) for a quick tutorial on how to get started using Adobe Experience Platform Launch.
 
 This product is constantly evolving and growing to support more and more use cases. To keep up with the latest, check out our [supported use-cases board](https://github.com/adobe/alloy/projects/5). We keep this up to date with the use cases we currently support and the ones we are working on to enable you to make the best decisions possible.
 

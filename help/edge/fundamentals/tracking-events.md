@@ -198,7 +198,7 @@ alloy("configure", {
 `xdm` fields are set in this order:
 
 1. Values passed in as options to the event command `alloy("sendEvent", { xdm: ... });`
-2. Automatically collected values.  (See [Automatic Information](../reference/automatic-information.md).)
+2. Automatically collected values.  (See [Automatic Information](../data-collection/automatic-information.md).)
 3. The changes made in the `onBeforeEventSend` callback.
 
 If the `onBeforeEventSend` callback throws an exception, the event is still sent; however, none of the changes that were made inside the callback are applied to the final event.

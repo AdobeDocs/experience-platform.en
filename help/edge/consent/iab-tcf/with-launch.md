@@ -13,9 +13,9 @@ If you do not wish to use Experience Platform Launch, please refer to the guide 
 
 ## Getting started
 
-In order to use IAB TCF 2.0 with Experience Platform Launch and the AEP Web SDK extension, you need to have an XDM schema and dataset available. If you have not set either of these up, start by viewing the [Adobe Experience Platform Web SDK Launch quick start guide](../../getting-started/quick-start-with-launch.md) before proceeding.
+In order to use IAB TCF 2.0 with Experience Platform Launch and the AEP Web SDK extension, you need to have an XDM schema and dataset available. If you have not set either of these up, start by viewing this Adobe Experience Platform Web SDK Launch quick start guide before proceeding.
 
-Additionally, this guide requires you to have a working understanding of the Adobe Experience Platform Web SDK. For a quick refresher, please read the [Adobe Experience Platform Web SDK overview](../../home.md) and the [Frequently asked questions](../../getting-started/web-sdk-faq.md) documentation.
+Additionally, this guide requires you to have a working understanding of the Adobe Experience Platform Web SDK. For a quick refresher, please read the [Adobe Experience Platform Web SDK overview](../../home.md) and the [Frequently asked questions](../../web-sdk-faq.md) documentation.
 
 ## Setting default consent
 
