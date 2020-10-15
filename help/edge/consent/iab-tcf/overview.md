@@ -8,7 +8,7 @@ keywords: consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixi
 
 # IAB Transparency & Consent Framework 2.0 overview
 
-The Adobe Experience Platform Web SDK (AEP Web SDK) has support for the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0). This guide shows the requirements for supporting IAB TCF 2.0 through the AEP Web SDK integrating with Real-time Customer Data Platform, Audience Manager, Experience Events, Analytics, and Experience Edge.
+The Adobe Experience Platform Web SDK (AEP Web SDK) has support for the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0). This guide shows the requirements for supporting IAB TCF 2.0 through the AEP Web SDK integrating with Real-time Customer Data Platform, Audience Manager, Experience Events, Adobe Analytics, and Experience Edge.
 
 Additionally, the following guides are available to assist in learning how to integrate IAB TCF 2.0 with and without Adobe Experience Platform Launch.
 
@@ -34,7 +34,7 @@ Refer to the [IAB TCF 2.0 compliance overview](../../../rtcdp/privacy/privacy-ov
 
 ## Audience Manager integration
 
-Adobe Audience Manager (AAM) includes support for IAB TCF 2.0, which enables you to evaluate, honor, and forward customer privacy choices to downstream partners. For more information, read the documentation on [Sending Data to Audience Manager](../audience-manager/audience-manager-overview.md).
+Adobe Audience Manager (AAM) includes support for IAB TCF 2.0, which enables you to evaluate, honor, and forward customer privacy choices to downstream partners. <!--For more information, read the documentation on [Sending Data to Audience Manager](../audience-manager/audience-manager-overview.md).-->
 
 >[!TIP]
 >
@@ -49,7 +49,7 @@ To collect consent information on events, the following is required:
 - A dataset based on the [!DNL XDM Experience Event] class, with the [!DNL Experience Event] privacy mixin.
 - An edge configuration set up with the [!DNL XDM Experience Event] dataset above.
 
-For more information on how to convert an XDM Experience Event to an Analytics hit, start by reading the [Analytics overview](../analytics/analytics-overview.md) documentation.
+For more information on how to convert an XDM Experience Event to an Analytics hit, start by reading the [Analytics overview](../../data-collection/adobe-analytics/analytics-overview.md) documentation.
 
 ## AEP Web SDK integration
 
@@ -78,7 +78,7 @@ Similar to Audience Manager's IAB TCF 2.0 integration, Experience Edge gives con
 - **Special Purpose 1:** Ensure security, prevent fraud, and debug. (Per IAB TCF regulations, this is always consented to)
 - **Adobe Vendor Permission:** Consent for Adobe (Vendor 565)
 
-For more information on the `setConsent` command, read the documentation on [Supporting Consent](../../fundamentals/supporting-consent.md).
+For more information on the `setConsent` command, read the documentation on [Supporting Consent](../../consent/supporting-consent.md).
 
 ### Adding Consent to Experience Events
 

@@ -6,11 +6,11 @@ seo-description: Learn how to render personalized content with Experience Platfo
 keywords: personalization;renderDecisions;sendEvent;decisionScopes;result.decisions;
 ---
 
-# Overview of Personalization Options
+# Overview of personalization options
 
-The Adobe Experience Platform [!DNL Web SDK] supports querying the personalization solutions at Adobe, including Adobe Target. There are two modes for personalization: retrieving content that can be rendered automatically and content that the developer must render. The SDK also provides facilities to [manage flicker](../../edge/solution-specific/target/flicker-management.md).
+The Adobe Experience Platform [!DNL Web SDK] supports querying the personalization solutions at Adobe, including Adobe Target. There are two modes for personalization: retrieving content that can be rendered automatically and content that the developer must render. The SDK also provides facilities to [manage flicker](../personalization/manage-flicker.md).
 
-## Automatically Rendering Content
+## Automatically rendering content
 
 The SDK automatically renders personalized content when you send an event to the server and set `renderDecisions` to `true` as an option on the event.
 
@@ -32,7 +32,7 @@ alloy("sendEvent", {
 
 Rendering personalized content is asynchronous, so there should not be any assumption around when a particular piece of content is part of the page.
 
-## Manually Rendering Content
+## Manually rendering content
 
 You can request the list of decisions to be returned as a promise on the `sendEvent` command by specifying the `decisionScopes` option. A scope is a string the lets the personalization solution know which decision you would like.
 
@@ -88,6 +88,6 @@ This will return a list of decisions as a JSON object for each decisions.
 >
 > If you use [!DNL Target], scopes become mBoxes on the server, only they are all requested at once instead of individually. The global mbox is always sent.
 
-### Retrieve Automatic Content
+### Retrieve automatic content
 
 If you would like the `result.decisions` to include the automatic renderable decisions and NOT have Alloy auto render them, you can set `renderDecisions` to `false`, and include the special scope `__view__`.

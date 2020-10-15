@@ -1,12 +1,12 @@
 ---
-title: Managing Flicker for Personalized Experiences
+title: Manage Flicker for Personalized Experiences
 seo-title: Adobe Experience Platform Web SDK managing flicker
 description: Learn how to manage flicker on user experiences
 seo-description: Learn how to manage flicker with the Experience Platform Web SDK properties
 keywords: target;flicker;prehidingStyle;asynchronously;asynchronous;
 ---
 
-# Managing flicker
+# Manage flicker
 
 When trying to render personalization content, the SDK has to ensure there is no flicker. Flicker, also called FOOC (Flash of Original Content), is when an original content is briefly displayed before the alternative appears during testing/personalization. The SDK tries to apply CSS styles to elements of the page to ensure those elements are hidden until the personalization content is rendered successfully.
 

@@ -40,7 +40,7 @@ Your assigned configuration ID, which links the SDK to the appropriate accounts 
 | ---------------- | ------------ | -------------------------------------------------- |
 | Array of Strings | No           | `["web", "device", "environment", "placeContext"]` |
 
-Indicates which context categories to collect automatically as described in [Automatic Information](../reference/automatic-information.md).  If this configuration is not specified, all of the categories are used by default.
+Indicates which context categories to collect automatically as described in [Automatic Information](../data-collection/automatic-information.md).  If this configuration is not specified, all of the categories are used by default.
 
 ### `debugEnabled`
 
@@ -103,7 +103,7 @@ Set this to configure a callback that is called for every event just before it i
 | -------- | ------------ | ----------------- |
 | Object   | No           | `"in"`|
 
-Sets the user's default consent. This is used when there is no consent preference already saved for the user. The other valid value is `"pending"`. When this is set, work will be queued until the user provides consent preferences. After the user's preferences have been provided, work either proceeds or is aborted based on the user's preferences. See [Supporting Consent](supporting-consent.md) for more information.
+Sets the user's default consent. This is used when there is no consent preference already saved for the user. The other valid value is `"pending"`. When this is set, work will be queued until the user provides consent preferences. After the user's preferences have been provided, work either proceeds or is aborted based on the user's preferences. See [Supporting Consent](../consent/supporting-consent.md) for more information.
 
 ## Personalization options
 
