@@ -49,7 +49,7 @@ To collect consent information on events, the following is required:
 - A dataset based on the [!DNL XDM Experience Event] class, with the [!DNL Experience Event] privacy mixin.
 - An edge configuration set up with the [!DNL XDM Experience Event] dataset above.
 
-For more information on how to convert an XDM Experience Event to an Analytics hit, start by reading the [Analytics overview](../analytics/analytics-overview.md) documentation.
+For more information on how to convert an XDM Experience Event to an Analytics hit, start by reading the [Analytics overview](../../data-collection/adobe-analytics/analytics-overview.md) documentation.
 
 ## AEP Web SDK integration
 
