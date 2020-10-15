@@ -93,6 +93,8 @@ The **[!UICONTROL Select schema]** dialog appears. Select the schema you wish to
 
 Based on your needs, you can choose to map fields directly, or use mapper functions to transform source data to derive computed or calculated values. For more information on data mapping and mapper functions, refer to the tutorial on [mapping CSV data to XDM schema fields](../../../../../ingestion/tutorials/map-a-csv-file.md).
 
+For JSON files, in addition to directly mapping fields to other fields, you can directly map objects to other objects and arrays to other arrays. 
+
 >[!TIP]
 >
 >[!DNL Platform] provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
