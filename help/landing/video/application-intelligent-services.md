@@ -12,7 +12,7 @@ thumbnail: 32554.jpg
 
 # Application and Intelligent Services built on Experience Platform
 
-This video provides an overview of the Application Services and Intelligent Services built on top of Experience Platform:
+This video provides an overview of the Application and Intelligent Services built on top of Experience Platform:
 
 * Attribution AI
 * Customer AI

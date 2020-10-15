@@ -30,21 +30,21 @@ Adobe has built application services on top of Experience Platform. You can find
 
 ## [!DNL Experience Platform] tutorials
 
-Get started with [!DNL Platform] quickly and easily by following along with step-by-step tutorials for everything from preparing your data for ingestion to advanced machine learning algorithms. These tutorials have been designed to supplement the information found within the [!DNL Experience Platform] documentation, so for best results keep the documentation on-hand while completing the tutorials. Visit the [Experience Platform tutorials](https://docs.adobe.com/content/help/en/experience-platform/tutorials/home.html) to get started.
+You can get started with [!DNL Platform] quickly and easily by following along with step-by-step tutorials covering everything from preparing your data for ingestion to advanced machine-learning algorithms. These tutorials have been designed to supplement the information found within the [!DNL Experience Platform] documentation, so for best results keep the documentation on-hand while completing the tutorials. Visit the [Experience Platform tutorials](https://docs.adobe.com/content/help/en/experience-platform/tutorials/home.html) to get started.
 
 ## Reference documents and resources
 
-* [**API fundamentals**](api-fundamentals.md)<br/>
+* [**API fundamentals**](api-fundamentals.md)  
 Learn the basics of working with [!DNL Platform] APIs.
 
-* [**API reference**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>
-Discover [!DNL Experience Platform] APIs, including headers, parameters, sample requests, and responses. *These documents are hosted on Adobe I/O.*
+* [**API reference**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)  
+Discover [!DNL Experience Platform] APIs, including headers, parameters, sample requests, and responses.<br/>*These documents are hosted on Adobe I/O.*
 
-* [**Glossary**](glossary.md)<br/>
+* [**Glossary**](glossary.md)  
 Review Adobe Experience Platform terminology.
 
-* [**Release notes**](../release-notes/latest/latest.md)<br/>
+* [**Release notes**](../release-notes/latest/latest.md)  
 Find information about the most recent [!DNL Experience Platform] release and review past releases.
 
-* [**Troubleshooting guide**](troubleshooting.md)<br/>
+* [**Troubleshooting guide**](troubleshooting.md)  
 Find resolutions to common errors and answers to frequently asked questions.
