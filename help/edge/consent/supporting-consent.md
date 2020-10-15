@@ -77,7 +77,7 @@ Because the user chose to opt out, promises that were returned from previously q
 
 ## Communicating consent preferences via the IAB TCF Standard
 
-The SDK supports recording a user's consent preferences provided through the Interactive Advertising Bureau Europe (IAB) Transparency and Consent Framework (TCF) standard. The consent string can be set through the same setConsent command as above like this:
+The SDK supports recording a user's consent preferences provided through the Interactive Advertising Bureau Europe (IAB) Transparency and Consent Framework (TCF) standard. The consent string can be set through the same `setConsent` command as above like this:
 
 ```javascript
 alloy("setConsent", {
@@ -113,11 +113,11 @@ alloy("setConsent", {
 });
 ```
 
-## Persistence of Consent Preferences
+## Persistence of consent preferences
 
 After you have communicated user preferences to the SDK using the `setConsent` command, the SDK persists the user's preferences to a cookie. The next time the user loads your website in the browser, the SDK will retrieve and use these persisted preferences to determine whether or not events can be sent to Adobe. There is no need to execute the `setConsent` command again, except to communicate a change in the user's preferences, which you may do at any time.
 
-## Syncing Identities While Setting Consent
+## Syncing identities while setting consent
 
-When the default consent is pending, the "setConsent" may be the first request that goes out and establishes identity. Because of this, it may be important to sync identities on the first request. The identity map can be added to "setConsent" command just like on the "sendEvent" command. See [Retrieving Experience Cloud ID](../identity/overview.md)
+When the default consent is pending, the `setConsent` may be the first request that goes out and establishes identity. Because of this, it may be important to sync identities on the first request. The identity map can be added to `setConsent` command just like on the `sendEvent` command. See [Retrieving Experience Cloud ID](../identity/overview.md)
 
