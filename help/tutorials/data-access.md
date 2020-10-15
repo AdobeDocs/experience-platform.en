@@ -26,26 +26,3 @@ The Data Access API supports Adobe Experience Platform by providing users with a
 - Configure API response pagination.
 
 To get started, follow the [Data Access API tutorial](../data-access/tutorials/dataset-data.md).
-
-## Use the Secure Python SDK to access data
-
-The Secure Python Data Access SDK is a software development kit that enables reading and writing of datasets from Experience Platform using Python.
-
-**This guide will help you:**
-- Set up your environment and install the correct packages.
-- Read from a dataset.
-- Write to a dataset.
-- Read and write to a userspace directory.
-
-To get started, view the [Python Data Access SDK documentation](../data-access/tutorials/python-sdk.md).
-
-## Use the Secure Spark SDK to access data
-
-The Secure Spark Data Access SDK is a software development kit that enables reading and writing of datasets from Adobe Experience Platform using Spark.
-
-**This guide will help you:**
-- Set up your environment and install the correct packages.
-- Read from a dataset.
-- Write to a dataset.
-
-To get started, view the [Spark Data Access SDK documentation](../data-access/tutorials/spark-sdk.md).

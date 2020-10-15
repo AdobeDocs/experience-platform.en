@@ -89,7 +89,7 @@ The **[!UICONTROL Dataflow activity]** page contains details on the number of re
 
 ![datflow-activity](../../images/tutorials/monitor/dataflow-activity.png)
 
-The calendar allows you to view the different time frames for ingested records. You can choose to select one of the two pre-set options **[!UICONTROL Last 7 days]** or **[!UICONTROL Last 30 days]**. Alternatively, you can set a custom time frame using the calendar. Select your time frame of choice and select **[!UICONTROL Apply]** to continue.
+The calendar allows you to view the different time frames for ingested records. You can choose to select one of the two pre-set options "[!UICONTROL Last 7 days]" or "[!UICONTROL Last 30 days]". Alternatively, you can set a custom time frame using the calendar. Select your time frame of choice and select **[!UICONTROL Apply]** to continue.
 
 ![flow-calendar](../../images/tutorials/monitor/flow-calendar.png)
 
@@ -99,7 +99,7 @@ Select **[!UICONTROL Dataflow run start]** to access the **[!UICONTROL Dataflow 
 
 ![runs](../../images/tutorials/monitor/run-metadata.png)
 
-The **[!UICONTROL Dataflow run overview]** displays information on the dataflow including its metadata, **[!UICONTROL Partial ingestion]** status, and assigned **[!UICONTROL Error threshold]**. The upper header also includes an **[!UICONTROL Error summary]**. The **[!UICONTROL Error summary]** contains the specific top-level error that shows at which step the ingestion process encountered an error.
+The **[!UICONTROL Dataflow run overview]** displays information on the dataflow including its metadata, partial ingestion status, and assigned error threshold. The upper header also includes an error summary. The **[!UICONTROL Error summary]** contains the specific top-level error that shows at which step the ingestion process encountered an error.
 
 ![dataflow-run-overview](../../images/tutorials/monitor/dataflow-run-overview.png)
 
@@ -112,13 +112,13 @@ Refer to the following table for errors that can be seen in the **[!UICONTROL Er
 
 The lower half of the screen contains information on **[!UICONTROL Dataflow run errors]**. From here, you can also view the files ingested, preview and download error diagnostics, or download the file manifest.
 
-The **[!UICONTROL Dataflow run errors]** section displays the **[!UICONTROL Error code]**, the number of records failed, and information describing the error.
+The **[!UICONTROL Dataflow run errors]** section displays the error code, the number of records failed, and information describing the error.
 
 Select **[!UICONTROL Preview error diagnostics]** to see more information on the ingestion error.
 
 ![Dataflow-run-errors](../../images/tutorials/monitor/dataflow-run-errors.png)
 
-The **[!UICONTROL Error diagnostics preview]** panel appears. This screen displays specific information regarding the ingestion failure, including the **[!UICONTROL File name]**, **[!UICONTROL Error code]**, the name of the column in which the error occurred, and a description of the error.
+The **[!UICONTROL Error diagnostics preview]** panel appears. This screen displays specific information regarding the ingestion failure, including the file name, error code, the name of the column in which the error occurred, and a description of the error.
 
 This section also includes a preview of the column that contains the error.
 

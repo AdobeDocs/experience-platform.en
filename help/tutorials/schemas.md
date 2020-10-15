@@ -23,7 +23,7 @@ The ability to understand the relationships between your customers and their int
 
 In specific circumstances, it may be necessary to create an [!DNL Experience Data Model] (XDM) schema with fields that are namespaced for usage only by a single dataset. This is referred to as an "ad-hoc" schema. Ad-hoc schemas are used in various [data ingestion](../ingestion/home.md) workflows for [!DNL Experience Platform], including ingesting CSV files and creating certain kinds of [source connections](../sources/home.md). Creating an ad-hoc schema is done using the Schema Registry API and is intended to be used in conjunction with other [!DNL Experience Platform] tutorials that require creating an ad-hoc schema as part of their workflow. To begin creating an ad-hoc schema, see the tutorial for [creating an ad-hoc schema using the API](../xdm/tutorials/ad-hoc.md).
 
-## Next Steps
+## Next steps
 
 Once you have defined schemas for your organization, you can begin creating datasets into which data can be ingested. To get started, see the following documentation:
 

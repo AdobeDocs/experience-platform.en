@@ -135,11 +135,9 @@ A successful response returns the connection specifications for [!DNL Dynamics],
 }
 ```
 
-## Create a base connection
+## Create a connection for the API
 
-A base connection specifies a source and contains your credentials for that source. Only one base connection is required per [!DNL Dynamics] account as it can be used to create multiple source connectors to bring in different data.
-
-Perform the following POST request to create a base connection.
+A connection for the API specifies a sources and contains your credentials for that source. Only one connection for the API is required per [!DNL Dynamics] account as it can be used to create multiple source connectors to bring in different data.
 
 **API format**
 
@@ -151,7 +149,7 @@ POST /connections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/connections' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -195,4 +193,4 @@ A successful response contains the base connection's unique identifier (`id`). T
 
 ## Next steps
 
-By following this tutorial, you have created a base connection for your [!DNL Dynamics] account using APIs and a unique ID was obtained as part of the response body. You can use this base connection ID in the next tutorial as you learn how to [explore CRM systems using the Flow Service API](../../explore/crm.md).
+By following this tutorial, you have created a connection for your [!DNL Dynamics] account using APIs and a unique ID was obtained as part of the response body. You can use this connection ID in the next tutorial as you learn how to [explore CRM systems using the Flow Service API](../../explore/crm.md).

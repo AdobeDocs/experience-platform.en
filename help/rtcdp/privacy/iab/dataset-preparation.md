@@ -65,7 +65,7 @@ While each privacy mixin varies in structure and the types of fields they contai
 
 ## Create customer consent schemas {#create-schemas}
 
-In the Platform UI, click **[!UICONTROL Schemas]** in the left navigation to open the *[!UICONTROL Schemas] workspace*. From here, follow the steps in the sections below to create each required schema.
+In the Platform UI, click **[!UICONTROL Schemas]** in the left navigation to open the **[!UICONTROL Schemas]** workspace. From here, follow the steps in the sections below to create each required schema.
 
 >[!NOTE]
 >
@@ -73,7 +73,7 @@ In the Platform UI, click **[!UICONTROL Schemas]** in the left navigation to ope
 
 ### Create a record-based consent schema {#profile-schema}
 
-From the **[!UICONTROL Browse]** tab in the **[!UICONTROL Schemas] workspace**, create a new schema based on the **[!DNL XDM Individual Profile] class**. Once you have the schema open within the Schema Editor, click **[!UICONTROL Add]** under the **[!UICONTROL Mixins]** section on the left side of the canvas.
+From the **[!UICONTROL Browse]** tab in the **[!UICONTROL Schemas] workspace**, create a new schema based on the [!DNL XDM Individual Profile] class. Once you have the schema open within the Schema Editor, click **[!UICONTROL Add]** under the **[!UICONTROL Mixins]** section on the left side of the canvas.
 
 ![](../assets/iab/add-mixin-profile.png)
 
@@ -120,7 +120,7 @@ Finally, click **[!UICONTROL Save]** to confirm your changes.
 
 ### Create a time-series-based consent schema {#event-schema}
 
-From the **[!UICONTROL Browse]** tab in the **[!UICONTROL Schemas] workspace**, create a new schema based on the **[!DNL XDM ExperienceEvent] class**. Once you have the schema open within the Schema Editor, click **[!UICONTROL Add]** under the **[!UICONTROL Mixins]** section on the left side of the canvas.
+From the **[!UICONTROL Browse]** tab in the **[!UICONTROL Schemas]** workspace, create a new schema based on the [!DNL XDM ExperienceEvent] class. Once you have the schema open within the Schema Editor, click **[!UICONTROL Add]** under the **[!UICONTROL Mixins]** section on the left side of the canvas.
 
 ![](../assets/iab/add-mixin-event.png)
 

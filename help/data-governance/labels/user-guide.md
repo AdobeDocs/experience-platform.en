@@ -12,7 +12,7 @@ This user guide covers steps for working with data usage labels within the [!DNL
 
 ## Managing data usage labels at the dataset level
 
-In order to manage data usage labels at the dataset level, you must select an existing dataset or create a new one. After logging into Adobe Experience Platform, select **[!UICONTROL Datasets]** on the left-navigation to open the _Datasets_ workspace. This page lists all created datasets belonging to your organization, along with useful details related to each dataset. 
+In order to manage data usage labels at the dataset level, you must select an existing dataset or create a new one. After logging into Adobe Experience Platform, select **[!UICONTROL Datasets]** on the left-navigation to open the **[!UICONTROL Datasets]** workspace. This page lists all created datasets belonging to your organization, along with useful details related to each dataset. 
 
 ![Dataset Tab within Data Workspace](../images/labels/datasets.png)
 
@@ -36,7 +36,7 @@ The **[!UICONTROL Select Schema]** screen appears, which lists all available sch
 
 ![Select Dataset Schema](../images/labels/dataset_schema.png)
 
-The **[!UICONTROL Configure Dataset]** screen appears. Provide a **name** (required) and **description** (optional, but recommended) for your new dataset, then click **[!UICONTROL Finish]**.
+The **[!UICONTROL Configure Dataset]** screen appears. Provide a name (required) and description (optional, but recommended) for your new dataset, then click **[!UICONTROL Finish]**.
 
 ![Configure Dataset with Name and Description](../images/labels/dataset_configure.png)
 
