@@ -34,7 +34,7 @@ Refer to the [IAB TCF 2.0 compliance overview](../../../rtcdp/privacy/privacy-ov
 
 ## Audience Manager integration
 
-Adobe Audience Manager (AAM) includes support for IAB TCF 2.0, which enables you to evaluate, honor, and forward customer privacy choices to downstream partners. For more information, read the documentation on [Sending Data to Audience Manager](../audience-manager/audience-manager-overview.md).
+Adobe Audience Manager (AAM) includes support for IAB TCF 2.0, which enables you to evaluate, honor, and forward customer privacy choices to downstream partners. <!--For more information, read the documentation on [Sending Data to Audience Manager](../audience-manager/audience-manager-overview.md).-->
 
 >[!TIP]
 >
@@ -78,7 +78,7 @@ Similar to Audience Manager's IAB TCF 2.0 integration, Experience Edge gives con
 - **Special Purpose 1:** Ensure security, prevent fraud, and debug. (Per IAB TCF regulations, this is always consented to)
 - **Adobe Vendor Permission:** Consent for Adobe (Vendor 565)
 
-For more information on the `setConsent` command, read the documentation on [Supporting Consent](../../fundamentals/supporting-consent.md).
+For more information on the `setConsent` command, read the documentation on [Supporting Consent](../../consent/supporting-consent.md).
 
 ### Adding Consent to Experience Events
 
