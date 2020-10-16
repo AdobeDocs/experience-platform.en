@@ -47,7 +47,7 @@ Once the preview window populates, you can select **[!UICONTROL Next]** to uploa
 
 ### Ingest Parquet or JSON files
 
-Supported file formats for a cloud storage account also includes JSON and Parquet. JSON and Parquet files must be XDM-compliant. To ingest JSON or Parquet files, select the appropriate file format from the directory browser and apply compatible data format from the right interface. 
+Supported file formats for a cloud storage account also includes JSON and Parquet. Parquet files must be XDM-compliant, while JSON files do not need to be XDM-complaint. To ingest JSON or Parquet files, select the appropriate file format from the directory browser and apply compatible data format from the right interface. 
 
 If the data format is in JSON, a preview will appear, showing information about the data within the file. On the preview screen, you can select whether the JSON is XDM compliant by using the **[!UICONTROL XDM compliant]** dropdown. 
 
