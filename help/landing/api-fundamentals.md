@@ -15,25 +15,43 @@ JSON Pointer is a standardized string syntax ([RFC 6901](https://tools.ietf.org/
 
 ### Example JSON schema object
 
+The following JSON represents a simplified XDM schema, whose fields can be referenced using JSON Pointer strings.
+
 ```json
 {
-    "type": "object",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/20af3f1d4b175f27ba59529d1b51a0c79fc25df454117c80",
+    "meta:altId": "_{TENANT_ID}.schemas.20af3f1d4b175f27ba59529d1b51a0c79fc25df454117c80",
+    "meta:resourceType": "schemas",
+    "version": "1.0",
     "title": "Loyalty Member Details",
-    "meta:intendedToExtend": [
-        "https://ns.adobe.com/xdm/context/profile"
-    ],
-    "description": "Loyalty Program Mixin.",
-    "definitions": {
-        "loyalty": {
+    "type": "object",
+    "description": "Details about loyalty program members.",
+    "properties": {
+        "_{TENANT_ID}": {
+            "type": "object",
             "properties": {
-                "_{TENANT_ID}": {
-                    "type": "object",
+                "loyalty": {
+                    "title": "Loyalty",
+                    "description": "Loyalty object containing loyalty-specific fields.",
                     "properties": {
                         "loyaltyId": {
-                            "title": "Loyalty Identifier",
+                            "title": "Loyalty ID",
+                            "description": "Unique loyalty program member ID. Should be in the format of an email address.",
                             "type": "string",
-                            "description": "Loyalty Identifier.",
                             "meta:xdmType": "string"
+                        },
+                        "memberSince": {
+                            "title": "Member Since",
+                            "description": "Date person joined loyalty program.",
+                            "type": "string",
+                            "format": "date",
+                            "meta:xdmType": "date"
+                        },
+                        "points": {
+                            "title": "Points",
+                            "description": "Accumulated loyalty points",
+                            "type": "integer",
+                            "meta:xdmType": "int"
                         },
                         "loyaltyLevel": {
                             "title": "Loyalty Level",
@@ -54,10 +72,11 @@ JSON Pointer is a standardized string syntax ([RFC 6901](https://tools.ietf.org/
                             "meta:xdmType": "string"
                         }
                     },
-                    "meta:xdmType": "object"
+                    "type": "object",
+                    "meta:xdmType": "object",
+                    "meta:referencedFrom": "https://ns.adobe.com/{TENANT_ID}/datatypes/78570e371092c032260714dd8bfd6d44"
                 }
             },
-            "type": "object",
             "meta:xdmType": "object"
         }
     }
@@ -69,9 +88,9 @@ JSON Pointer is a standardized string syntax ([RFC 6901](https://tools.ietf.org/
 |JSON Pointer | Resolves to|
 |--- | ---|
 |`"/title"` | "Loyalty Member Details"|
-|`"/definitions/loyalty"` | (Returns the contents of the `loyalty` object)|
-|`"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]`|
-|`"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"`|
+|`"/properties/_{TENANT_ID}/properties/loyalty"` | (Returns the contents of the `loyalty` object)|
+|`"/properties/_{TENANT_ID}/properties/loyalty/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]`|
+|`"/properties/_{TENANT_ID}/properties/loyalty/properties/loyaltyLevel/enum/0"` | `"platinum"`|
 
 >[!NOTE]
 >
