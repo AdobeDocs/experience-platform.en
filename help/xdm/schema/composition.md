@@ -36,6 +36,8 @@ Standardization is a key concept behind [!DNL Experience Platform]. XDM, driven 
 
 The infrastructure on which [!DNL Experience Platform] is built, known as [!DNL XDM System], facilitates schema-based workflows and includes the [!DNL Schema Registry], [!DNL Schema Editor], schema metadata, and service consumption patterns. See the [XDM System overview](../home.md) for more information.
 
+There are several key benefits to building and utilizing schemas in [!DNL Experience Platform]. First, schemas allows for better data governance and data minimization, which is especially important with privacy regulations. Second, building schemas with Adobe's standard components allows for out-of-the-box insights and use of AI/ML services with minimal customizations. Last, schemas provide infrastructure for data sharing insights and efficient orchestration.
+
 ## Planning your schema
 
 The first step in building a schema is to determine the concept, or real-world object, that you are trying to capture within the schema. Once you identify the concept you are trying to describe, you can begin planning your schema by thinking about things like the type of data, potential identity fields, and how the schema may evolve in the future.
@@ -128,25 +130,19 @@ Schemas are composed using the following formula:
 
 &ast;A schema is composed of a class and _zero or more_ mixins. This means that you could compose a dataset schema without using mixins at all.
 
-### Class
+### Class {#class}
 
 Composing a schema begins by assigning a class. Classes define the behavioral aspects of the data the schema will contain (record or time-series). In addition to this, classes describe the smallest number of common properties that all schemas based on that class would need to include and provide a way for multiple compatible datasets to be merged. 
 
-A class also determines which mixins will be eligible for use in the schema. This is discussed in more detail in the [mixin](#mixin) section that follows. 
-
-There are standard classes provided with every integration of [!DNL Experience Platform], known as "Industry" classes. Industry classes are generally accepted industry standards that apply to a broad set of use cases. Examples of Industry classes include the [!DNL XDM Individual Profile] and [!DNL XDM ExperienceEvent] classes provided by Adobe. 
-
-[!DNL Experience Platform] also allows for "Vendor" classes, which are classes defined by [!DNL Experience Platform] partners and made available to all customers who use that vendor service or application within [!DNL Platform]. 
-
-There are also classes used to describe more specific use cases for individual organizations within [!DNL Platform], called "Customer" classes. Customer classes are defined by an organization when there are no Industry or Vendor classes available to describe a unique use case. 
-
-For example, a schema representing members of a Loyalty program describes record data about an individual and therefore can be based on the [!DNL XDM Individual Profile] class, a standard Industry class defined by Adobe.
+A class also determines which mixins will be eligible for use in the schema. This is discussed in more detail in the next section. 
 
 ### Mixin {#mixin}
 
 A mixin is a reusable component that defines one or more fields that implement certain functions such as personal details, hotel preferences, or address. Mixins are intended to be included as part of a schema that implements a compatible class. 
 
 Mixins define which class(es) they are compatible with based on the behavior of the data they represent (record or time series). This means that not all mixins are available for use with all classes.
+
+[!DNL Experience Platform] includes many standard Adobe mixins while also allowing vendors to define mixins for their users, and individual users to define mixins for their own specific concepts.
 
 Mixins have the same scope and definition as classes: there are Industry mixins, Vendor mixins, and Customer mixins that are defined by individual organizations using [!DNL Platform]. [!DNL Experience Platform] includes many standard Industry mixins while also allowing vendors to define mixins for their users, and individual users to define mixins for their own specific concepts. 
 
@@ -250,48 +246,6 @@ To begin using the [!DNL Schema Registry] API, start by reading the [Schema Regi
 ## Appendix
 
 The following section contains additional information regarding the principles of schema composition.
-
-### Mixins versus data types {#mixins-v-datatypes}
-
-Mixins and data types are two ways of grouping several XDM fields together to represent a common concept. While their use cases are similar, there are some important differences to keep in mind when choosing to use one or the other.
-
-The following table breaks down the key differences between mixins and data types, with the subsections below providing more information on these differences:
-
-| Mixins  | Data types |
-| --- | --- |
-| Top-level groupings | Low-level groupings |
-| Less reusable | More reusable |
-| Ad-hoc type governance | Controlled type governance |
-| Can be created in the API and UI | Can only be created in the API |
-| Can contain extra fields that might never be used | Fully customizable fields |
-
-#### Mixins
-
-The pros and cons of using mixins over data types are listed below.
-
-**Pros**:
-
-* Anyone with UI access can create and update mixins.
-* When adding a custom mixin to a schema, new fields can continue to be added to the to the mixin, even if they were not predefined.
-
-**Cons**:
-
-* Out-of-the-box mixins cannot be edited. Using these mixins can add many fields to your schema, when out of those fields you may only use a couple. Unused fields still remain visible on your schema.
-* Mixins can be used in other schemas of the same class, but not across classes, making them less reusable than data types.
-
-#### Data types
-
-The pros and cons of using data types over mixins are listed below.
-
-**Pros**:
-
-* Data types give you more control in terms of how deeply you can nest groups of fields within your schema. While mixins can only add fields at the topmost level of the schema (under the `_tenantId` object), you can designate a single field within a mixin as a data type to nest the desired fields there instead. Data types can also be nested within other data types.
-* Data types are more reusable, as many fields can be assigned the same data type. For example, fields representing work phone, cell phone, and home phone all can be applied a “Phone Number” datatype. In addition, custom data types be used in any schema regardless of its class.
-* Custom data types give you the flexibility to create groupings with only the fields you need, when mixins can often contain fields that you may never use.
-
-**Cons**:
-
-* Once created, data types can only be updated using the API. Only users with Developer access are able to update custom data types. Managing data types in the UI is planned for future releases.
 
 ### Objects versus free-form fields {#objects-v-freeform}
 
