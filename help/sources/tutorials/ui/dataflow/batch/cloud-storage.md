@@ -91,15 +91,21 @@ The **[!UICONTROL Select schema]** dialog appears. Select the schema you wish to
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
-Based on your needs, you can choose to map fields directly, or use mapper functions to transform source data to derive computed or calculated values. For more information on data mapping and mapper functions, refer to the tutorial on [mapping CSV data to XDM schema fields](../../../../../ingestion/tutorials/map-a-csv-file.md).
+Based on your needs, you can choose to map fields directly, or use mapper functions to transform source data to derive computed or calculated values. For more information on data mapping and mapper functions, refer to the tutorial on [mapping CSV data to XDM schema fields](../../../../../ingestion/tutorials/map-a-csv-file.md). 
 
-For JSON files, in addition to directly mapping fields to other fields, you can directly map objects to other objects and arrays to other arrays. 
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
+
+For JSON files, in addition to directly mapping fields to other fields, you can directly map objects to other objects and arrays to other arrays.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/source-field-json.png)
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/target-field-json.png)
+
+Please note that you cannot map across different types. For example, you cannot map an object to an array, or a field to an object.
 
 >[!TIP]
 >
 >[!DNL Platform] provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
 Select **[!UICONTROL Preview data]** to see mapping results of up to 100 rows of sample data from the selected dataset.
 
