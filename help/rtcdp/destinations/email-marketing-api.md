@@ -203,7 +203,7 @@ A successful response contains the base connection's unique identifier (`id`). S
 }
 ```
 
-### Connect to your [!DNL Experience Platform] data
+### Connect to your [!DNL Experience Platform] data {#connect-to-platform-data}
 
 **API format**
 
