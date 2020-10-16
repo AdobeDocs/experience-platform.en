@@ -159,7 +159,7 @@ A successful response contains the base connection's unique identifier (`id`). S
 }
 ```
 
-### Connect to your Experience Platform data
+### Connect to your Experience Platform data {#connect-to-platform-data}
 
 **API format**
 
