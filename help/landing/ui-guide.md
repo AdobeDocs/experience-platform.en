@@ -104,7 +104,7 @@ The navigation on the left side of the screen lists all the different services s
 
 The **[!UICONTROL Home]** section lets you return to the Platform UI homepage.
 
-The **[!UICONTROL Workflows]** section shows a list of multi-step workflows for performing operations within Platform. 
+The **[!UICONTROL Workflows]** section shows a list of multi-step workflows for performing operations within Platform. More information about workflows can be found in the [workflows overview](./workflows.md).
 
 ### [!UICONTROL Connections]
 
