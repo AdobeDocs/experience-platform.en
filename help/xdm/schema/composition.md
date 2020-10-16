@@ -144,8 +144,6 @@ Mixins define which class(es) they are compatible with based on the behavior of 
 
 [!DNL Experience Platform] includes many standard Adobe mixins while also allowing vendors to define mixins for their users, and individual users to define mixins for their own specific concepts.
 
-Mixins have the same scope and definition as classes: there are Industry mixins, Vendor mixins, and Customer mixins that are defined by individual organizations using [!DNL Platform]. [!DNL Experience Platform] includes many standard Industry mixins while also allowing vendors to define mixins for their users, and individual users to define mixins for their own specific concepts. 
-
 For example, to capture details such as "[!UICONTROL First Name]" and "[!UICONTROL Home Address]" for your "[!UICONTROL Loyalty Members]" schema, you would be able to use standard mixins that define those common concepts. However, concepts that are specific to less-common use cases (such as "[!UICONTROL Loyalty Program Level]") often do not have a pre-defined mixin. In this case, you must define your own mixin to capture this information.
 
 Remember that schemas are composed of "zero or more" mixins, so this means that you could compose a valid schema without using any mixins at all.
