@@ -37,7 +37,7 @@ You can get started with [!DNL Platform] quickly and easily by following along w
 * [**API fundamentals**](api-fundamentals.md)  
 Learn the basics of working with [!DNL Platform] APIs.
 
-* [**API reference**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)  
+* [**API reference documents**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)  
 Discover [!DNL Experience Platform] APIs, including headers, parameters, sample requests, and responses.<br/>*These documents are hosted on Adobe I/O.*
 
 * [**Glossary**](glossary.md)  

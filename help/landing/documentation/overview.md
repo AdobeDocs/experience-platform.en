@@ -24,7 +24,7 @@ Adobe Experience Platform documentation is provided in multiple formats, includi
 
 * **Tutorial:** A tutorial is a step-by-step guide through the UI, API, or a mix of both, that leads to a specific outcome. Unlike a developer guide, an API tutorial may only focus on one or two endpoints and is not an exhaustive API resource. Similarly, UI tutorials may focus only on specific steps, not the complete user interface available for that service. Tutorials are often part of a larger workflow and feature "next steps" that describe which tutorials you may want to try next.
 
-* **User guide:** A user guide outlines actions available in the [!DNL Platform] UI for a specific service. These documents contain screenshots and steps focused on interacting with Platform through the user interface. Similar to a developer guide, the user guide outlines all available actions and options including "gotchas" to avoid. This is the most detailed resource for working with the UI.
+* **UI guide:** A UI guide outlines actions available in the [!DNL Platform] user interface for a specific service. These documents contain screenshots and steps focused on interacting with Platform through the UI. Similar to a developer guide, the UI guide outlines all available actions and options including "gotchas" to avoid. This is the most detailed resource for working with the UI.
 
 ## Documentation language support
 
@@ -56,6 +56,6 @@ Documentation is currently available for the Adobe Experience Platform services 
 * **[!DNL Query Service]:** Use SQL queries to retrieve data from Adobe Experience Platform, such as Adobe solution data, customer 1st party data, or any other Platform data.
 * **[!DNL Real-time Customer Data Platform]:** Real-time CDP combines multiple enterprise data sources to create unified profiles in real time that can be used to provide one-to-one personalized customer experiences across all channels and devices.
 * **[!DNL Sandboxes]:** Sandboxes partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* **Schemas**: Driven by Adobe, Experience Data Model (XDM) is an effort to standardize customer experience data and define schemas for customer experience management. XDM schemas support the interoperability of data across [!DNL Experience Platform] components.
 * **[!DNL Segmentation]:** Create segments based on Real-time Customer Profile data to generate audiences and power consumer experiences.
 * **[!DNL Sources] (Connections):** {#sources} Bring data into Adobe Experience Platform from a variety of sources such as Adobe applications, cloud-based storage, databases, and more.
-* **Schemas**: Driven by Adobe, Experience Data Model (XDM) is an effort to standardize customer experience data and define schemas for customer experience management. XDM schemas support the interoperability of data across [!DNL Experience Platform] components.
