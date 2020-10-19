@@ -22,7 +22,7 @@ In addition to describing the structure of data, schemas apply constraints and e
 
 When working with relational databases, best practices involve normalizing data, or taking an entity and dividing it into discrete pieces that are then displayed across multiple tables. In order to read the data as a whole or update the entity, read and write operations must be made across many individual tables using JOIN.
 
-Through the use of embedded objects, XDM schemas can directly represent complex data and store it in self-contained documents with hierarchical structure. One of the main benefits to this structure is that it allows you to query the data without having to reconstruct the entity by expensive joins to multiple denormalized tables.
+Through the use of embedded objects, XDM schemas can directly represent complex data and store it in self-contained documents with a hierarchical structure. One of the main benefits to this structure is that it allows you to query the data without having to reconstruct the entity by expensive joins to multiple denormalized tables. There are no hard restrictions to how many levels your schema hierarchy can be.
 
 ### Schemas and big data
 
@@ -134,7 +134,9 @@ Schemas are composed using the following formula:
 
 Composing a schema begins by assigning a class. Classes define the behavioral aspects of the data the schema will contain (record or time-series). In addition to this, classes describe the smallest number of common properties that all schemas based on that class would need to include and provide a way for multiple compatible datasets to be merged. 
 
-A class also determines which mixins will be eligible for use in the schema. This is discussed in more detail in the next section. 
+A schema's class determines which mixins will be eligible for use in that schema. This is discussed in more detail in the [next section](#mixin). 
+
+Adobe provides two standard ("core") XDM classes: [!DNL XDM Individual Profile] and [!DNL XDM ExperienceEvent]. In addition these core classes, you can also create your own custom classes to describe more specific use cases for your organization. Custom classes are defined by an organization when there are no Adobe-defined core classes available to describe a unique use case.
 
 ### Mixin {#mixin}
 
@@ -147,6 +149,8 @@ Mixins define which class(es) they are compatible with based on the behavior of 
 For example, to capture details such as "[!UICONTROL First Name]" and "[!UICONTROL Home Address]" for your "[!UICONTROL Loyalty Members]" schema, you would be able to use standard mixins that define those common concepts. However, concepts that are specific to less-common use cases (such as "[!UICONTROL Loyalty Program Level]") often do not have a pre-defined mixin. In this case, you must define your own mixin to capture this information.
 
 Remember that schemas are composed of "zero or more" mixins, so this means that you could compose a valid schema without using any mixins at all.
+
+For a list of all current standard mixins, refer to the [official XDM repository](https://github.com/adobe/xdm/tree/master/components/mixins).
 
 ### Data type {#data-type}
 
