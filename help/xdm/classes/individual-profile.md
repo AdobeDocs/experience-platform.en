@@ -19,7 +19,7 @@ The [!DNL XDM Individual Profile] class itself provides several system-generated
 | Property | Description |
 | --- | --- |
 | `_repo` | An object containing the following [!UICONTROL DateTime] fields: <ul><li>`createDate`: The date and time when the resource was created in the data store, such as when data was first ingested.</li><li>`modifyDate`: The date and time when the resource was last modified.</li></ul> |
-| `_id` | A unique string identifier for the record, used for lookup purposes in the API. |
+| `_id` |  A unique, system-generated string identifier for the record. This field is used to track the uniqueness of an individual record, prevent duplication of data, and to look up that record in downstream services. Since this field is system-generated, it should not be supplied an explicit value during data ingestion.<br><br>It is important to distinguish that this field **does not** represent an identity related to an individual person, but rather the record of data itself. Identity data relating to a person should be relegated to [identity fields](../schema/composition.md#identity) instead. |
 | `createdByBatchID` | The ID of the ingested batch that caused the record to be created. |
 | `modifiedByBatchID` | The ID of the last ingested batch that caused the record to be updated. |
 | `repositoryCreatedBy` | The ID of the user who created the record. |

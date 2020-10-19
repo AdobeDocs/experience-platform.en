@@ -18,7 +18,7 @@ The [!DNL XDM ExperienceEvent] class itself provides several time-series-related
 
 | Property | Description |
 | --- | --- |
-| `_id` | A unique, system-generated string identifier for the record, used for lookup purposes in the API. |
+| `_id` | A unique, system-generated string identifier for the event. This field is used to track the uniqueness of an individual event, prevent duplication of data, and to look up that event in downstream services. Since this field is system-generated, it should not be supplied an explicit value during data ingestion.<br><br>It is important to distinguish that this field **does not** represent an identity related to an individual person, but rather the record of data itself. Identity data relating to a person should be relegated to [identity fields](../schema/composition.md#identity) instead. |
 | `eventMergeId` | The ID of the ingested batch that caused the record to be created. This field is automatically populated by the system upon data ingestion. |
 | `eventType` | A string that indicates the primary event type for the record. Accepted values and their definitions are provided in the [appendix section](#eventType). |
 | `identityMap` | A map field that contains a set of namespaced identities for the individual the event applies to. This field is automatically updated by the system as identity data is ingested. In order to properly utilize this field for [Real-time Customer Profile](../../profile/home.md), do not attempt to manually update the field's contents in your data operations.<br /><br />See the section on identity maps in the [basics of schema composition](../schema/composition.md#identityMap) for more information on their use case. |
