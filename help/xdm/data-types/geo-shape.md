@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;geo;geo shape;datatype;data-type;data type;
 solution: Experience Platform
-title: Geo shape data type
+title: Geo Shape data type
 topic: overview
 description: This document provides an overview of the Geo Shape XDM data type.
 ---
 
-# [!UICONTROL Geo shape] data type
+# [!UICONTROL Geo Shape] data type
 
-[!UICONTROL Geo shape] is a standard XDM data type that describes the shape of a geographic area. This data type is based on the public specification documented on [schema.org](https://schema.org/GeoShape).
+[!UICONTROL Geo Shape] is a standard XDM data type that describes the shape of a geographic area. This data type is based on the public specification documented on [schema.org](https://schema.org/GeoShape).
 
 <img src='../images/data-types/geo-shape.png' width=500 /><br />
 

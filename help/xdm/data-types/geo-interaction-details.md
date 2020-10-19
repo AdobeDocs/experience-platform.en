@@ -14,7 +14,7 @@ description: This document provides an overview of the Geo Interaction Details X
 
 | Property | Data type | Description |
 | --- | --- | --- |
-| `geoShape` | [[!UICONTROL Geo shape]](./geo-shape.md) | Describes the geo shape of the area being interacted with. This field can describe a box, a circle, or a polygon. |
+| `geoShape` | [[!UICONTROL Geo Shape]](./geo-shape.md) | Describes the geo shape of the area being interacted with. This field can describe a box, a circle, or a polygon. |
 | `deviceGeoAccuracy` | Double | The accuracy of the geo measuring device or mechanism, measured in meters. |
 | `distanceToCenter` | Double | The distance to the center of geo in the case of a geo circle, measured in meters. |
 

@@ -14,7 +14,7 @@ description: This document provides an overview of the Point Of Interest Details
 
 | Property | Data type | Description |
 | --- | --- | --- |
-| `beaconInteractionDetails` | [[!UICONTROL Beacon interaction details]](./beacon-interaction-details.md) | Describes the beacon details active for the POI interaction. |
+| `beaconInteractionDetails` | [[!UICONTROL Beacon]](./beacon.md) | Describes the beacon details active for the POI interaction. |
 | `geoInteractionDetails` | [[!UICONTROL Geo interaction details]](./geo-interaction-details.md) | Describes the geo details active for the POI interaction. |
 | `category` | String | A general category assigned for organizing the POIs by the administrator of POI definitions. |
 | `distanceToPOICenter` | Double | The estimated distance from the POI center in meters. |
