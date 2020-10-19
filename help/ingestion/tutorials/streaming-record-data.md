@@ -3,6 +3,8 @@ keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;
 solution: Experience Platform
 title: Streaming record data
 topic: tutorial
+type: Tutorial
+description: This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs.
 ---
 
 # Stream record data to Adobe Experience Platform
@@ -272,6 +274,10 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 **Request**
 
+Ingesting record data to a streaming connection can be done either with or without the source name.
+
+The example request below ingests a record with a missing source name to Platform. If a record is missing the source name, it will add the source ID from the streaming connection definition.
+
 >[!NOTE]
 >
 >The following API call does **not** require any authentication headers.
@@ -315,6 +321,22 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
         }
     }
 }'
+```
+
+If you want to include a source name, the following example shows how you would include it.
+
+```json
+    "header": {
+        "schemaRef": {
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+        },
+        "imsOrgId": "{IMS_ORG}",
+        "datasetId": "{DATASET_ID}",
+        "source": {
+            "name": "Sample source name"
+        }
+    }
 ```
 
 **Response**

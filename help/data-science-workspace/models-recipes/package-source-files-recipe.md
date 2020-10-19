@@ -2,7 +2,8 @@
 keywords: Experience Platform;package source files;Data Science Workspace;popular topics;Docker;docker image
 solution: Experience Platform
 title: Package source files into a recipe
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: This tutorial provides instructions on how you can package the provided Retail Sales sample source files into an archive file, which can be used to create a recipe in Adobe Experience Platform Data Science Workspace by following the recipe import workflow either in the UI or using the API.
 ---
 
@@ -36,7 +37,7 @@ To obtain your Azure Container Registry credentials, log into [Adobe Experience 
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-The *Configure* page opens. Provide an appropriate *Recipe Name*, for example, "Retail Sales recipe", and optionally provide a description or documentation URL. Once complete, click **[!UICONTROL Next]**.
+The **[!UICONTROL Configure]** page opens. Provide an appropriate **[!UICONTROL Recipe Name]**, for example, "Retail Sales recipe", and optionally provide a description or documentation URL. Once complete, click **[!UICONTROL Next]**.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
@@ -55,7 +56,7 @@ Select the appropriate *Runtime*, then choose a **[!UICONTROL Classification]** 
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
 
-Note the values for *Docker Host*, *Username*, and *Password*. These are used to build and push your [!DNL Docker] image in the workflows outlined below.
+Note the values for Docker host, username, and password. These are used to build and push your [!DNL Docker] image in the workflows outlined below.
 
 >[!NOTE]
 >

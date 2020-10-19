@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Export jobs endpoint
 topic: developer guide
+description: Export jobs are asynchronous processes that are used to persist audience segment members to datasets. You can use the /export/jobs endpoint in the Adobe Experience Platform Segmentation API, which allows you to programmatically retrieve, create, and cancel export jobs.
 ---
 
 # Export jobs endpoint

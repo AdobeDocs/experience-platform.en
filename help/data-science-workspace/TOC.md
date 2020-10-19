@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Data Science Workspace Help
 breadcrumb-title: Data Science Workspace Guide
-user-guide-description: Adobe Experience Platform Data Science Workspace uses machine learning and artificial intelligence to unleash insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe applications.  
+user-guide-description: Use machine learning to develop, train, and score models and recipes with Adobe Sensei and JupyterLab Notebooks.
 ---
 
 # Data Science Workspace {#data-science-workspace}
@@ -39,6 +39,8 @@ user-guide-description: Adobe Experience Platform Data Science Workspace uses ma
   * [Model Authoring SDK](authoring/sdk.md)
   * [Create a Feature Pipeline](authoring/feature-pipeline.md)
   * [Platform SDK guide (Python)](authoring/platform-sdk.md)
+  * [Python data access](authoring/python.md)
+  * [Spark data access](authoring/spark.md)
 * Model and recipe tutorials {#models-recipes}
   * [Create and publish a machine learning model walkthrough](models-recipes/create-publish-model.md)
   * [Create the Retail Sales schema and dataset](models-recipes/create-retails-sales-dataset.md)

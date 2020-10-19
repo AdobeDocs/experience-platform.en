@@ -4,6 +4,7 @@ description: Source connectors in Adobe Experience Platform provide the ability 
 solution: Experience Platform
 title: Delete dataflows
 topic: overview
+type: Tutorial
 ---
 
 # Delete dataflows
