@@ -10,7 +10,7 @@ description: This document provides an overview of the XDM ExperienceEvent class
 
 [!DNL XDM ExperienceEvent] is a standard XDM class which allows you to create a timestamped snapshot of the system when a specific event occurs or a certain set of conditions have been reached.
 
-An Experience Event is a fact record of what occurred, including the point in time and identity of the individual involved. Events can be either explicit (directly observable human actions) or implicit (raised without a direct human action) and are recorded without aggregation or interpretation.
+An Experience Event is a fact record of what occurred, including the point in time and identity of the individual involved. Events can be either explicit (directly observable human actions) or implicit (raised without a direct human action) and are recorded without aggregation or interpretation. For more high-level information on the use of this class in the Platform ecosystem, refer to the [XDM overview](../home.md#data-behaviors).
 
 The [!DNL XDM ExperienceEvent] class itself provides several time-series-related fields to a schema. The values of some of these fields are automatically populated when data is ingested:
 

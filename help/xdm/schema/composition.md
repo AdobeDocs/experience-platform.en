@@ -231,7 +231,12 @@ All datafiles that are ingested into [!DNL Experience Platform] must conform to 
 
 ## Next steps
 
-Now that you understand the basics of schema composition, you are ready to begin building schemas using the [!DNL Schema Registry].
+Now that you understand the basics of schema composition, you are ready to begin exploring and building schemas using the [!DNL Schema Registry].
+
+To review the structure of the two core XDM classes and their commonly used compatible mixins, see the following reference documentation:
+
+* [[!DNL XDM Individual Profile]](../classes/individual-profile.md)
+* [[!DNL XDM ExperienceEvent]](../classes/experienceevent.md)
 
 The [!DNL Schema Registry] is used to access the [!DNL Schema Library] within Adobe Experience Platform, and provides a user interface and RESTful API from which all available library resources are accessible. The [!DNL Schema Library] contains Industry resources defined by Adobe, Vendor resources defined by [!DNL Experience Platform] partners, and classes, mixins, data types, and schemas that have been composed by members of your organization.
 
