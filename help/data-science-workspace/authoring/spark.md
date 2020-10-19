@@ -31,7 +31,6 @@ Class Helper {
 
    def load_dataset(configProperties: ConfigProperties, sparkSession: SparkSession, taskId: String): DataFrame = {
             // Read the configs
-            val serviceToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ML_TOKEN", "").toString
             val userToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_TOKEN", "").toString
             val orgId: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ORG_ID", "").toString
             val apiKey: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_CLIENT_ID", "").toString
@@ -53,7 +52,6 @@ An example of reading a dataset in interactive mode can be seen below:
 
 ```scala
   // Read the configs
-    val serviceToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ML_TOKEN", "").toString
     val userToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_TOKEN", "").toString
     val orgId: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ORG_ID", "").toString
     val apiKey: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_CLIENT_ID", "").toString
@@ -64,7 +62,6 @@ An example of reading a dataset in interactive mode can be seen below:
     // Load the dataset
     var df = sparkSession.read.format(PLATFORM_SDK_PQS_PACKAGE)
       .option(QSOption.userToken, userToken)
-      .option(QSOption.serviceToken, serviceToken)
       .option(QSOption.imsOrg, orgId)
       .option(QSOption.apiKey, apiKey)
       .option(QSOption.mode, "interactive")
@@ -81,7 +78,6 @@ Similarly, an example of reading a dataset in batch mode can be seen below:
 ```scala
 val df = sparkSession.read.format(PLATFORM_SDK_PQS_PACKAGE)
       .option(QSOption.userToken, userToken)
-      .option(QSOption.serviceToken, serviceToken)
       .option(QSOption.imsOrg, orgId)
       .option(QSOption.apiKey, apiKey)
       .option(QSOption.mode, "batch")
@@ -152,7 +148,6 @@ Using your `configProperties` mapping, you can write to a dataset in Experience 
 
 ```scala
 
-val serviceToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ML_TOKEN", "").toString
 val userToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_TOKEN", "").toString
 val orgId: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ORG_ID", "").toString
 val apiKey: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_CLIENT_ID", "").toString
@@ -160,7 +155,6 @@ val sandboxName: String = sparkSession.sparkContext.getConf.get("sandboxName", "
 
     df.write.format(PLATFORM_SDK_PQS_PACKAGE)
       .option(QSOption.userToken, userToken)
-      .option(QSOption.serviceToken, serviceToken)
       .option(QSOption.imsOrg, orgId)
       .option(QSOption.apiKey, apiKey)
       .option(QSOption.datasetId, scoringResultsDataSetId)
