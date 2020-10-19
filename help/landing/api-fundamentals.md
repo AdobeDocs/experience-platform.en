@@ -15,82 +15,74 @@ JSON Pointer is a standardized string syntax ([RFC 6901](https://tools.ietf.org/
 
 ### Example JSON schema object
 
-The following JSON represents a simplified XDM schema, whose fields can be referenced using JSON Pointer strings.
+The following JSON represents a simplified XDM schema whose fields can be referenced using JSON Pointer strings. Note that all fields that have been added using custom mixins (such as `loyaltyLevel`) are namespaced under a `_{TENANT_ID}` object, whereas fields that have been added using core mixins (such as `fullName`) are not.
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/20af3f1d4b175f27ba59529d1b51a0c79fc25df454117c80",
-    "meta:altId": "_{TENANT_ID}.schemas.20af3f1d4b175f27ba59529d1b51a0c79fc25df454117c80",
-    "meta:resourceType": "schemas",
-    "version": "1.0",
-    "title": "Loyalty Member Details",
-    "type": "object",
-    "description": "Details about loyalty program members.",
-    "properties": {
-        "_{TENANT_ID}": {
-            "type": "object",
-            "properties": {
-                "loyalty": {
-                    "title": "Loyalty",
-                    "description": "Loyalty object containing loyalty-specific fields.",
-                    "properties": {
-                        "loyaltyId": {
-                            "title": "Loyalty ID",
-                            "description": "Unique loyalty program member ID. Should be in the format of an email address.",
-                            "type": "string",
-                            "meta:xdmType": "string"
-                        },
-                        "memberSince": {
-                            "title": "Member Since",
-                            "description": "Date person joined loyalty program.",
-                            "type": "string",
-                            "format": "date",
-                            "meta:xdmType": "date"
-                        },
-                        "points": {
-                            "title": "Points",
-                            "description": "Accumulated loyalty points",
-                            "type": "integer",
-                            "meta:xdmType": "int"
-                        },
-                        "loyaltyLevel": {
-                            "title": "Loyalty Level",
-                            "description": "The current loyalty program level to which the individual member belongs.",
-                            "type": "string",
-                            "enum": [
-                                "platinum",
-                                "gold",
-                                "silver",
-                                "bronze"
-                            ],
-                            "meta:enum": {
-                                "platinum": "Platinum",
-                                "gold": "Gold",
-                                "silver": "Silver",
-                                "bronze": "Bronze"
-                            },
-                            "meta:xdmType": "string"
-                        }
-                    },
-                    "type": "object",
-                    "meta:xdmType": "object",
-                    "meta:referencedFrom": "https://ns.adobe.com/{TENANT_ID}/datatypes/78570e371092c032260714dd8bfd6d44"
-                }
-            },
-            "meta:xdmType": "object"
+  "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/85a4bdaa168b01bf44384e049fbd3d2e9b2ffaca440d35b9",
+  "meta:altId": "_{TENANT_ID}.schemas.85a4bdaa168b01bf44384e049fbd3d2e9b2ffaca440d35b9",
+  "meta:resourceType": "schemas",
+  "version": "1.0",
+  "title": "Example schema",
+  "type": "object",
+  "description": "This is an example schema.",
+  "properties": {
+    "_{TENANT_ID}": {
+      "type": "object",
+      "properties": {
+        "loyaltyLevel": {
+          "title": "Loyalty Level",
+          "description": "",
+          "type": "string",
+          "isRequired": false,
+          "enum": [
+            "platinum",
+            "gold",
+            "silver",
+            "bronze"
+          ]
         }
+      }
+    },
+    "person": {
+      "title": "Person",
+      "description": "An individual actor, contact, or owner.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "Full name",
+          "description": "The person's full name.",
+          "type": "object",
+          "properties": {
+            "fullName": {
+              "title": "Full name",
+              "type": "string",
+              "description": "The full name of the person, in writing order most commonly accepted in the language of the name.",
+            },
+            "suffix": {
+              "title": "Suffix",
+              "type": "string",
+              "description": "A group of letters provided after a person's name to provide additional information. The `suffix` is used at the end of someones name. For example Jr., Sr., M.D., PhD, I, II, III, etc.",
+            }
+          },
+          "meta:referencedFrom": "https://ns.adobe.com/xdm/context/person-name",
+          "meta:xdmField": "xdm:name"
+        }
+      }
     }
+  }
 }
 ```
 
 ### Example JSON Pointers based on schema object
 
-|JSON Pointer | Resolves to|
-|--- | ---|
-|`"/title"` | "Loyalty Member Details"|
-|`"/properties/_{TENANT_ID}/properties/loyalty"` | (Returns the contents of the `loyalty` object)|
-|`"/properties/_{TENANT_ID}/properties/loyalty/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]`|
-|`"/properties/_{TENANT_ID}/properties/loyalty/properties/loyaltyLevel/enum/0"` | `"platinum"`|
+| JSON Pointer | Resolves to |
+| --- | --- |
+| `"/title"` | `"Example schema"` |
+|  `"/properties/person/properties/name/properties/fullName"` | (Returns a reference to the `fullName` field, provided by a core mixin.) |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (Returns a reference to the `loyaltyLevel` field, provided by a custom mixin.) |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
 >[!NOTE]
 >
