@@ -38,66 +38,64 @@ The following JSON shows an example of the type of data the [!DNL Consents & Pre
 ```json
 {
   "xdm:consentsAndPreferences": {  
-    {
-      "xdm:choices": {
-        "xdm:consents": {
-          "xdm:dataCollection": {
-            "xdm:choice": "yes",
-            "xdm:timestamp": "2019-01-01T15:52:25+00:00",
-            "xdm:basisOfProcessing": "consent"
-          },
-          "xdm:sellData": {
-            "xdm:choice": "yes",
-            "xdm:timestamp": "2019-01-01T15:52:25+00:00",
-            "xdm:basisOfProcessing": "consent"
-          },
-          "xdm:shareData": {
-            "xdm:choice": "yes",
-            "xdm:timestamp": "2019-01-01T15:52:25+00:00",
-            "xdm:basisOfProcessing": "consent"
-          },
-          "xdm:deviceLinking": {
-            "xdm:basisOfProcessing": "vital_interest"
-          },
-          "xdm:pseudonymousAnalysis": {
-            "xdm:choice": "no"
-          }
+    "xdm:choices": {
+      "xdm:consents": {
+        "xdm:dataCollection": {
+          "xdm:choice": "yes",
+          "xdm:timestamp": "2019-01-01T15:52:25+00:00",
+          "xdm:basisOfProcessing": "consent"
         },
-        "xdm:personalizationPreferences": {
-          "xdm:anyPersonalization": {
-            "xdm:choice": "yes",
-            "xdm:timestamp": "2019-01-01T15:52:25+00:00",
-            "xdm:basisOfProcessing": "consent",
-            "xdm:source": "OurApp"
-          }
+        "xdm:sellData": {
+          "xdm:choice": "yes",
+          "xdm:timestamp": "2019-01-01T15:52:25+00:00",
+          "xdm:basisOfProcessing": "consent"
         },
-        "xdm:marketingPreferences": {
-          "xdm:preferredChannel": "email",
-          "xdm:anyMarketing": {
-            "xdm:choice": "unknown"
-          },
-          "xdm:iotMessages": {
-            "xdm:choice": "yes",
-            "xdm:timestamp": "2019-01-01T15:52:25+00:00",
-            "xdm:basisOfProcessing": "legitimate_interest"
-          },
-          "xdm:pushNotifications": {
-            "xdm:choice": "yes",
-            "xdm:source": "OurApp"
-          },
-          "xdm:email": {
-            "xdm:choice": "no",
-            "xdm:reason": "Too Frequent"
-          }
+        "xdm:shareData": {
+          "xdm:choice": "yes",
+          "xdm:timestamp": "2019-01-01T15:52:25+00:00",
+          "xdm:basisOfProcessing": "consent"
+        },
+        "xdm:deviceLinking": {
+          "xdm:basisOfProcessing": "vital_interest"
+        },
+        "xdm:pseudonymousAnalysis": {
+          "xdm:choice": "no"
         }
       },
-      "xdm:choicesMetadata": {
-        "xdm:version": "1.0.0",
-        "xdm:timestamp": "2019-01-01T15:52:25+00:00",
-        "xdm:userCountryRegionCode": "US",
-        "xdm:countryRegionSource": "ip",
-        "xdm:source": "CJM"
+      "xdm:personalizationPreferences": {
+        "xdm:anyPersonalization": {
+          "xdm:choice": "yes",
+          "xdm:timestamp": "2019-01-01T15:52:25+00:00",
+          "xdm:basisOfProcessing": "consent",
+          "xdm:source": "OurApp"
+        }
+      },
+      "xdm:marketingPreferences": {
+        "xdm:preferredChannel": "email",
+        "xdm:anyMarketing": {
+          "xdm:choice": "unknown"
+        },
+        "xdm:iotMessages": {
+          "xdm:choice": "yes",
+          "xdm:timestamp": "2019-01-01T15:52:25+00:00",
+          "xdm:basisOfProcessing": "legitimate_interest"
+        },
+        "xdm:pushNotifications": {
+          "xdm:choice": "yes",
+          "xdm:source": "OurApp"
+        },
+        "xdm:email": {
+          "xdm:choice": "no",
+          "xdm:reason": "Too Frequent"
+        }
       }
+    },
+    "xdm:choicesMetadata": {
+      "xdm:version": "1.0.0",
+      "xdm:timestamp": "2019-01-01T15:52:25+00:00",
+      "xdm:userCountryRegionCode": "US",
+      "xdm:countryRegionSource": "ip",
+      "xdm:source": "CJM"
     }
   }
 }
