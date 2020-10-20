@@ -68,3 +68,20 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 | UX improvements  | You can enable your dataset for [!DNL Profile] during the data ingestion process. See the [cloud storage dataflow workflow](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) tutorial for more information. |
 
 To learn more about sources, see the [sources overview](../../sources/home.md).
+
+## Time to Value
+
+Adobe Experience Platform fully enables Marketing Operations teams to build a 360-degree view of their customers without requiring extensive, long-standing data engineering expertise. The goal is to provide an accelerated experience to hybrid-role marketing collaboration teams.  
+
+"Time to Value" cuts across personas. It lets you complete Data Engineer tasks in an efficient and accelerated manor with transparency of data activity, so that Real-time Profile is available sooner and in a more robust state.   It lets the Marketer use a robust and complete customer profile for segmentation and activation.
+
+### Highlights
+
+**Schema:** Upgrades usability and workflow, and provides out-of-box insights, standardization, and transparency of key fields of schema compositions and union schema data lineage.
+
+**Data Ingestion and Collection:** With auto-mapping, mapping preview, and usability upgrade, this is addressing the need to bring in data from any platform or source for use in profile, downstream segmentation, and activation. The system has the efficiency and intelligence to make this process easier to use, even for people outside of IT.
+
+
+**Profile Configuration:** Marketer-friendly profile viewer with customization helps you understand the composition of a profile for use in segmentation, planning, and activation cases. The consolidated workflow hydrates the profile in a controlled and efficient fashion by providing a step-wise workflow for merge policy.
+
+**Monitoring:** Ensures transparency of data flow and gives insight about the health of data traffic into the system from source connectors, providing more self-service and faster actionability for troubleshooting situations. 
