@@ -14,7 +14,7 @@ description: This document provides an overview of the Point Of Interest Interac
 
 | Property | Data type | Description |
 | --- | --- | --- |
-| `poiDetail` | [!UICONTROL Point of interest details](./poi-details.md) | Describes the details of the POI that caused the event. |
+| `poiDetail` | [[!UICONTROL Point of interest details]](./poi-details.md) | Describes the details of the POI that caused the event. |
 | `poiEntries` | Object | Describes the number of times a person has entered the POI. Contains two properties: <ul><li>`id`: A unique identifier for the measure.</li><li>`value`: The quantifiable value of the measure.</li></ul> |
 | `poiExits` | Object | Describes the number of times a person has exited the POI. Contains two properties: <ul><li>`id`: A unique identifier for the measure.</li><li>`value`: The quantifiable value of the measure.</li></ul> |
 
