@@ -14,4 +14,9 @@ thumbnail: 32792.jpg
 
 This video provides a quick tour of the Adobe Experience Platform user interface (UI), including showing you how to navigate to Experience Platform from Experience Cloud, interact with the homepage, switch sandboxes, and how to use various navigation elements within the UI.
 
+>[!NOTE]
+>
+>The Experience Platform user interface is frequently updated and may have changed since the recording of this video.
+
+
 >[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)
