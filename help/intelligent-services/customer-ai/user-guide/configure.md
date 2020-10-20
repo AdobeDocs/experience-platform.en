@@ -35,7 +35,7 @@ Service instances can be edited, cloned, and deleted by using the controls on th
 
 ![](../images/user-guide/service-instance-panel.png)
 
-To begin, select **[!UICONTROL Create instance]**.
+To create a new instance, select **[!UICONTROL Create instance]**.
 
 ![](../images/user-guide/dashboard.png)
 
@@ -57,17 +57,17 @@ Provide the required values and then select **[!UICONTROL Next]**.
 
 ### Define a goal {#define-a-goal}
 
-The **[!UICONTROL Define goal]** step appears and it provides an interactive environment for you to visually define a goal. A goal is composed of one or more events, where each event's occurrence is based on the condition it holds. The objective of a Customer AI instance is to determine the likeliness of achieving its goal within a given time frame.
-
-While defining your goal you have the option to select **[!UICONTROL Will occur]** or **[!UICONTROL Will not occur]**. Selecting **[!UICONTROL Will occur]** means that the event conditions you define need to be met for a customers event data to be included in the insights UI. For example, if you wanted all the customers who purchased a specific item by following an email link. You can select **[!UICONTROL Will occur]** followed by defining your goal.
-
-Selecting **[!UICONTROL Will not occur]** means any conditions outside the one you define are captured. This option should be used in churn cases to specify non-events. For example, you can have a use case looking at loyal customers were sent a promotion but did not redirect from it.
-
-![](../images/user-guide/occur.png)
+The **[!UICONTROL Define goal]** step appears and it provides an interactive environment for you to visually define a prediction goal. A goal is composed of one or more events, where each event's occurrence is based on the condition it holds. The objective of a Customer AI instance is to determine the likeliness of achieving its goal within a given time frame.
 
 To create a goal, select **[!UICONTROL Enter Field Name]** and select a field from the dropdown list. Select the second input and select a clause for the event's condition, then provide target value to complete the event. Additional events can be configured by selecting **[!UICONTROL Add event]**. Lastly, complete the goal by applying a prediction time frame in number of days, then select **[!UICONTROL Next]**.
 
 ![](../images/user-guide/goal.png)
+
+While defining your goal you have the option to select **[!UICONTROL Will occur]** or **[!UICONTROL Will not occur]**. Selecting **[!UICONTROL Will occur]** means that the event conditions you define need to be met for a customers event data to be included in the insights UI. For example, if you wanted all the customers who purchased a specific item by following an email link. You can select **[!UICONTROL Will occur]** followed by defining your goal.
+
+![](../images/user-guide/occur.png)
+
+Selecting **[!UICONTROL Will not occur]** means any conditions outside the one you define are captured. This option should be used in churn cases to specify non-events. For example, you can have a use case looking at loyal customers were sent a promotion but did not redirect from it.
 
 ### Configure a schedule *(optional)* {#configure-a-schedule}
 
