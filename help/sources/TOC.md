@@ -190,4 +190,5 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
   - [Monitor accounts and dataflows](tutorials/ui/monitor.md)
   - [Delete dataflows](tutorials/ui/delete.md)
 - [Flow run notifications](notifications.md)
+- [IP address allow list](ip-address-allow-list.md)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
