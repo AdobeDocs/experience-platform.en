@@ -51,10 +51,12 @@ Sources supports a wide variety of datetime formats while ingesting data. More i
 
 ### How do I format arrays in CSV, JSON, and Parquet files?
 
-JSON and Parquet files natively support arrays. For flat structures, such as CSVs, arrays are not supported. However, strings with multiple values can be broken up into an array, using data prep functions such as explode and join. More information about these data prep functions can be found in the [data prep functions guide](../data-prep/functions.md#string-functions)
+JSON and Parquet files natively support arrays. For flat structures, such as CSVs, arrays are not supported. However, strings with multiple values can be broken up into an array, using data prep functions such as explode and join. More information about these data prep functions can be found in the [data prep functions guide](../data-prep/functions.md#string)
 
 ### What sources support partial ingestion?
 
 All batch ingestion sources support partial ingestion. However, streaming ingestion sources do not support partial ingestion.
 
 ### When should I use partial ingestion?
+
+(Text here)
