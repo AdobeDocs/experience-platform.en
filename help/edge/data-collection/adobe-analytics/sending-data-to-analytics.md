@@ -8,7 +8,7 @@ keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageVi
 
 # Sending data to Adobe Analytics
 
-Whereas in the past there were different functions to distinguish between a page view and a link (for example, `s.t(), s.tl()`), in the Web SDK there is just the `sendEvent` command. The data you send with an event determines whether it should be a page view or a link. [Learn more about tracking links](../track-links.md)
+Whereas in the past there were different functions to distinguish between a page view and a link (for example, `s.t(), s.tl()`), in the Web SDK there is just the `sendEvent` command. The data you send with an event determines whether it should be a page view or a link. [Learn more about tracking links.](../track-links.md)
 
 ## Sending a page view
 

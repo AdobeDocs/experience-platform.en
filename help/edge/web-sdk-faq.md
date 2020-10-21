@@ -139,16 +139,9 @@ However:
 
 * It is recommended that you use Experience Platform Launch to deploy `alloy.js`, even if it's the only tag you use it for. 
 
-## What is XDM and do I have to use to the Web SDK?
-
-XDM is the data format used to send data to the Adobe Experience Platform and the Web SDK. The [Web SDK documentation](https://docs.adobe.com/content/help/en/experience-platform/edge/get-started/quick-start-with-launch.html#prepare-a-schema) walks you through how to easily set up a schema that you can then customize to your specific needs.
-
 ## What is "Adobe Experience Platform Launch Server Side?
 
 Later in 2020, Experience Platform Launch will release server-side forwarding features. If you use our SDKs and send XDM to the Experience Edge, these new features will allow you to install new server-side extensions and map that data to anything--and send it anywhere--from our edge network. Think of it as “data collection as a service.”  This will be available for a cost, as well as being bundled as part of the Adobe Experience Platform. 
-
-**More information** 
-[Adobe Summit presentation](https://adobe.bluejeans.com/playback/s/9LhauPOnRSUTYg6RMHAw4oJekhYfOQgdBLlNekVJdWevYktpxqX2IYyl5fz2Wxh9)
 
 ## What is a CNAME or First Party Domain and why does it matter?
 
