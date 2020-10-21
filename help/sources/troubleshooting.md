@@ -8,7 +8,7 @@ description: This document provides answers to frequently asked questions about 
 
 # Sources troubleshooting guide
 
-This document provides answers to frequently asked questions about sources on Adobe Experience Platform. For questions and troubleshooting related to other [!DNL Platform] services, including those that are encountered across all [!DNL Platform] APIs, please refer to the [Experience Platform troubleshooting guide](../../landing/troubleshooting.md).
+This document provides answers to frequently asked questions about sources on Adobe Experience Platform. For questions and troubleshooting related to other [!DNL Platform] services, including those that are encountered across all [!DNL Platform] APIs, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
 ## Frequently asked questions
 
