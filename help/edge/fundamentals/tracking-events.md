@@ -124,7 +124,7 @@ alloy("sendEvent", {
 
 ### Adding identity information
 
-Custom identity information can also be added to the event. See [Retrieving Experience Cloud ID.](../identity/overview.md)
+Custom identity information can also be added to the event. See [Retrieving Experience Cloud ID](../identity/overview.md).
 
 ## Using the sendBeacon API
 
