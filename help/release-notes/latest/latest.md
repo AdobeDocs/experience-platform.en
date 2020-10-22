@@ -71,38 +71,38 @@ To learn more about sources, see the [sources overview](../../sources/home.md).
 
 ## Time to Value
 
-Adobe Experience Platform fully enables Marketing Operations teams to build a 360-degree view of their customers without requiring extensive, long-standing data engineering expertise. The goal is to accelerating teams and value through data velocity.  
+Adobe Experience Platform fully enables Marketing Operations teams to build a 360-degree view of their customers without requiring extensive data engineering expertise. The goal is to accelerate teams and value through data velocity.  
 
-"Time to Value" cuts across personas. It lets you complete Data Engineer tasks in an efficient and accelerated manor with transparency of data activity, so that Real-time Profile is available sooner and in a more robust state.   It lets the Marketer use a robust and complete customer profile for segmentation and activation.
+"Time to Value" cuts across personas. Data Engineers can complete tasks in an efficient and accelerated manner with data activity transparency, so that a robust, scalable real-time customer profile is available sooner. Marketers can then use the complete, robust customer profile for segmentation and activation.
 
 ### Feature highlights
 
 #### Schema
 
-Upgrades usability and workflow, and provides out-of-box insights, standardization, and transparency of key fields of schema compositions and union schema data lineage.
+Upgrades usability and workflow, and provides out-of-box insights, standardization, and transparency of key fields within schema compositions. Exposes data lineage for the combination of individual data models represented as the “union schema," providing insight into the structure and ingredients to Real-time Customer Profile.
 
 - Schema workflow upgrade
-    - Get shortcuts to the most common type of XDM schemas, with automated settings in the schema editor and mixin recommendations based on your objectives  
+    - Use shortcuts for the most common type of XDM schemas, with automated settings in the schema editor and mixin recommendations based on your objectives  
     - Increase workflow efficiency with multiple mixin selection and preview capability 
     - Provide transparency on key attributes of schema composition, including identity, relationship, and required and deprecated fields 
 - Union Schema Data Lineage and Key Attributes Transparency 
 
 #### Data Ingestion and Collection
 
-With auto-mapping, mapping preview, and usability upgrade, this is addressing the need to bring in data from any platform or source for use in profile, downstream segmentation, and activation. The system has the efficiency and intelligence to make this process easier to use, even for people outside of IT.
+The auto-mapping, mapping preview, and usability upgrade bring in data from any platform or source for use in profile, downstream segmentation, and activation. The system has the efficiency and intelligence to make this process easier to use, even for people outside of IT.
 
 - Easier access to data sources with catalog page card and data table inline action pattern upgrade 
 - Calculated field/expression for data ingestion 
-- Data mapping recommendations 
+- Data mapping recommendations speed the ingestion process 
 - Mapping preview and validations 
 
 #### Profile Configuration
 
 Marketer-friendly profile viewer with customization helps you understand the composition of a profile for use in segmentation, planning, and activation cases. The consolidated workflow hydrates the profile in a controlled and efficient fashion by providing a step-wise workflow for merge policy.
 
-- View each individual profile in an enhanced profile viewer that displays a dashboard with full customization, enabling grouped cross-channel data based on marketer's business goals 
-- Edit standard and customized attributes in the Basic Information widget 
-- Customize widgets with one or multiple attributes from the unified profile, using the union schema selector 
+- View each individual profile in an enhanced profile viewer that displays a dashboard with full customization, enabling grouped cross-channel data based on marketer's business goals. 
+- Edit standard and customized attributes in the Basic Information widget, according to business need. 
+- Customize widgets with attributes from the real-time customer profile, using the union schema selector. The union schema is derived from the underlying data models used within profile data ingestion.
  
 
 #### Monitoring
