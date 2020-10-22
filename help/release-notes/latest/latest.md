@@ -75,31 +75,38 @@ Adobe Experience Platform fully enables Marketing Operations teams to build a 36
 
 "Time to Value" cuts across personas. It lets you complete Data Engineer tasks in an efficient and accelerated manor with transparency of data activity, so that Real-time Profile is available sooner and in a more robust state.   It lets the Marketer use a robust and complete customer profile for segmentation and activation.
 
-### Highlights
+### Feature highlights
 
-**Schema:** Upgrades usability and workflow, and provides out-of-box insights, standardization, and transparency of key fields of schema compositions and union schema data lineage.
+#### Schema
 
-- Get shortcuts to the most common type of XDM schemas, with automated settings in the schema editor and mixin recommendations based on your objectives  
-- Provide mixin discoverability upgrade with each data field search 
-- Increase workflow efficiency with multiple mixin selection and preview capability 
-- Provide transparency on key attributes of schema composition, including identity, relationship, and required and deprecated fields 
+Upgrades usability and workflow, and provides out-of-box insights, standardization, and transparency of key fields of schema compositions and union schema data lineage.
 
-**Data Ingestion and Collection:** With auto-mapping, mapping preview, and usability upgrade, this is addressing the need to bring in data from any platform or source for use in profile, downstream segmentation, and activation. The system has the efficiency and intelligence to make this process easier to use, even for people outside of IT.
+- Schema workflow upgrade
+    - Get shortcuts to the most common type of XDM schemas, with automated settings in the schema editor and mixin recommendations based on your objectives  
+    - Increase workflow efficiency with multiple mixin selection and preview capability 
+    - Provide transparency on key attributes of schema composition, including identity, relationship, and required and deprecated fields 
+- Union Schema Data Lineage and Key Attributes Transparency 
+
+#### Data Ingestion and Collection
+
+With auto-mapping, mapping preview, and usability upgrade, this is addressing the need to bring in data from any platform or source for use in profile, downstream segmentation, and activation. The system has the efficiency and intelligence to make this process easier to use, even for people outside of IT.
 
 - Easier access to data sources with catalog page card and data table inline action pattern upgrade 
 - Calculated field/expression for data ingestion 
-- Hierarchical data preview and mapping 
 - Data mapping recommendations 
 - Mapping preview and validations 
 
-**Profile Configuration:** Marketer-friendly profile viewer with customization helps you understand the composition of a profile for use in segmentation, planning, and activation cases. The consolidated workflow hydrates the profile in a controlled and efficient fashion by providing a step-wise workflow for merge policy.
+#### Profile Configuration
+
+Marketer-friendly profile viewer with customization helps you understand the composition of a profile for use in segmentation, planning, and activation cases. The consolidated workflow hydrates the profile in a controlled and efficient fashion by providing a step-wise workflow for merge policy.
 
 - View each individual profile in an enhanced profile viewer that displays a dashboard with full customization, enabling grouped cross-channel data based on marketer's business goals 
 - Edit standard and customized attributes in the Basic Information widget 
 - Customize widgets with one or multiple attributes from the unified profile, using the union schema selector 
-- Edit or remove customized widgets
-- Resize and rearrange card widgets in the profile viewer 
+ 
 
-**Monitoring:** Ensures transparency of data flow and gives insight about the health of data traffic into the system from source connectors, providing more self-service and faster actionability for troubleshooting situations. 
+#### Monitoring
+
+Ensures transparency of data flow and gives insight about the health of data traffic into the system from source connectors, providing more self-service and faster actionability for troubleshooting situations. 
 
 - Monitor all flow runs and see a detailed view of each run, including completion status, run duration, list of files processed, errors, and actionable diagnostics
