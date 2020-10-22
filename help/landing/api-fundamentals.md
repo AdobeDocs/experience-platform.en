@@ -15,7 +15,7 @@ JSON Pointer is a standardized string syntax ([RFC 6901](https://tools.ietf.org/
 
 ### Example JSON schema object
 
-The following JSON represents a simplified XDM schema whose fields can be referenced using JSON Pointer strings. Note that all fields that have been added using custom mixins (such as `loyaltyLevel`) are namespaced under `_{TENANT_ID}`, whereas fields that have been added using core mixins (such as `fullName`) are not.
+The following JSON represents a simplified XDM schema whose fields can be referenced using JSON Pointer strings. Note that all fields that have been added using custom mixins (such as `loyaltyLevel`) are namespaced under a `_{TENANT_ID}` object, whereas fields that have been added using core mixins (such as `fullName`) are not.
 
 ```json
 {
