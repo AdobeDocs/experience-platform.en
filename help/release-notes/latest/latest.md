@@ -71,7 +71,7 @@ To learn more about sources, see the [sources overview](../../sources/home.md).
 
 ## Time to Value
 
-Adobe Experience Platform fully enables Marketing Operations teams to build a 360-degree view of their customers without requiring extensive, long-standing data engineering expertise. The goal is to provide an accelerated experience to hybrid-role marketing collaboration teams.  
+Adobe Experience Platform fully enables Marketing Operations teams to build a 360-degree view of their customers without requiring extensive, long-standing data engineering expertise. The goal is to accelerating teams and value through data velocity.  
 
 "Time to Value" cuts across personas. It lets you complete Data Engineer tasks in an efficient and accelerated manor with transparency of data activity, so that Real-time Profile is available sooner and in a more robust state.   It lets the Marketer use a robust and complete customer profile for segmentation and activation.
 
