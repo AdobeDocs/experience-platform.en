@@ -25,11 +25,21 @@ Schemas can be created for multiple use cases, referencing the same class but co
 
 Working with union schemas requires a deep understanding of XDM schemas. For more information, please begin by reading the [basics of schema composition](../../xdm/schema/composition.md).
 
-## Exploring union schemas
+## View union schemas
 
-To navigate to union schemas within the Platform UI, select **[!UICONTROL Profiles]** from the left navigation, then select the **[!UICONTROL Union Schema]** tab. The [!UICONTROL Union Schema] tab opens displaying the union schema for the currently selected class. 
+To navigate to union schemas within the Platform UI, select **[!UICONTROL Profiles]** from the left navigation, then select the **[!UICONTROL Union Schema]** tab. The [!UICONTROL Union Schema] tab opens to display the union schema for the currently selected class. 
 
 ![](../images/union-schema/union-schema-landing.png)
+
+## Select a class
+
+To display the union schema for a specific XDM class, select the class from the **[!UICONTROL Class]** dropdown. Due to the fact that not all classes have union schemas, only classes with union schemas (meaning classes with schemas that have been enabled for Profile) are available in the dropdown. 
+
+After a class has been selected, the schema that is displayed updates to reflect the union schema for the selected class. For example, you can select **[!UICONTROL XDM Individual Profile]** to view the union schema for that class.
+
+![](../images/union-schema/union-schema-class.png)
+
+## Explore union schemas
 
 You can explore the union schema by scrolling up and down to view the complete schema structure and by selecting a right angle bracket (`>`) to expand nested fields.
 
@@ -39,21 +49,15 @@ Select any field to view its details, including display name, data type, descrip
 
 ![](../images/union-schema/union-schema-explore-field.png)
 
-Selecting the name of a contributing schema reveals the names of datasets related to that schema. Each dataset name appears as a link. Selecting a dataset name opens the activity tab for that dataset in a new window.
+Selecting the name of a contributing schema reveals the names of datasets related to that schema which are ingesting data into the selected field. Each dataset name appears as a link. Selecting a dataset name opens the activity tab for that dataset in a new window.
 
 For more information on datasets, including viewing dataset activity and previewing dataset data in the UI, please visit the [datasets UI guide](../../catalog/datasets/user-guide.md).
 
 ![](../images/union-schema/union-schema-field-datasets.png)
 
-## Select a class
-
-To display the union schema for a specific XDM class, select the class from the **[!UICONTROL Class]** dropdown. Due to the fact that not all classes have union schemas, only classes with union schemas (meaning classes with schemas that have been enabled for Profile) are available in the dropdown. After a class has been selected, the schema that is displayed updates to reflect the union schema for the selected class. 
-
-![](../images/union-schema/union-schema-class.png)
-
 ## View contributing schemas
 
-You can also view which specific schemas are contributing to the union schema. This can be done by selecting **[!UICONTROL All contributing schemas]** to expand the list of schemas. Depending on the class you have selected and the number of schemas that your organization has created within Platform, this could be a short list containing a single schema or a long list containing many schemas.
+You can also view which specific schemas are contributing to the union schema by selecting **[!UICONTROL All contributing schemas]** to expand the list of schemas. Depending on the class you have selected and the number of schemas that your organization has created within Platform, this could be a short list containing a single schema or a long list containing many schemas.
 
 ![](../images/union-schema/union-schema-contributing-schemas.png)
 
@@ -69,7 +73,7 @@ Through the UI you can view a list of identities that are included in the union 
 
 Selecting an individual identity from the list causes the displayed schema to automatically update as needed to display the identity field. This could include expanding multiple fields if the identity field is nested.
 
-The identity field is highlighted within the union schema and the details of the identity are displayed on the right-hand side of the screen. The details include a list of contributing schemas containing the identity field and you can drill down to find links to the datasets based on that schema.  
+The identity field is highlighted within the union schema and the details of the identity are displayed on the right-hand side of the screen. The details include a list of contributing schemas containing the identity field and you can drill down to find links to the datasets related to that schema which are ingesting data into the selected identity field.  
 
 ![](../images/union-schema/union-schema-select-identity.png)
 
