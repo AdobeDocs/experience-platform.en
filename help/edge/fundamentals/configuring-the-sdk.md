@@ -79,7 +79,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  When configuring multipl
 | -------- | ------------ | ----------------- |
 | Boolean  | No           | `true`            |
 
-Indicates whether data associated with link clicks should be automatically collected. For clicks that qualify as link clicks, the following [Web Interaction](https://github.com/adobe/xdm/blob/master/docs/reference/context/webinteraction.schema.md) data is collected:
+Indicates whether data associated with link clicks should be automatically collected. For clicks that qualify as link clicks, the following [Web Interaction](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/webinteraction.schema.md) data is collected:
 
 | **Property** |    **Description**                  |
 | ------------ | ----------------------------------- |
