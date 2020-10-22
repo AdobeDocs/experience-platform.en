@@ -43,7 +43,7 @@ Selecting the name of a contributing schema reveals the names of datasets relate
 
 For more information on datasets, including viewing dataset activity and previewing dataset data in the UI, please visit the [datasets UI guide](../../catalog/datasets/user-guide.md).
 
-![](../images/union-schema/union-field-datasets.png)
+![](../images/union-schema/union-schema-field-datasets.png)
 
 ## Select a class
 
