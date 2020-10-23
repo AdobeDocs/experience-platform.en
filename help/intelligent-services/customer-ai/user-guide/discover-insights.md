@@ -119,7 +119,7 @@ Hovering over any of the top influential factors further breaks down the data. Y
 
 ![drilldown screenshot](../images/insights/drilldown.png)
 
-Additionally, using drilldowns you are able to compare a distribution factor if it occurs in two or more propensity buckets and make more specific segments. The following example illustrates first use case:
+Additionally, using drilldowns you are able to compare a distribution factor if it occurs in two or more propensity buckets and make more specific segments. The following example illustrates the first use case:
 
 ![](../images/insights/drilldown-compare.png)
 
