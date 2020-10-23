@@ -48,6 +48,10 @@ Additionally, you can edit existing account information and update your account 
 
 The **[!UICONTROL Edit account details]** modal appears. From this page, you can update your existing account details and authentication credentials.
 
+>[!NOTE]
+>
+> Editing account details is available on all batch source connectors.
+
 ![](../../images/tutorials/monitor/edit-account.png)
 
 From the **[!UICONTROL Accounts]** page, you can view a list of existing dataflows or target datasets associated with the account you accessed. Select the ellipses (`...`) button to bring up more available options for your selected dataflow. These options are further described below:
