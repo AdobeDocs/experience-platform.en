@@ -41,7 +41,7 @@ All XDM schemas describe data that can be categorized as record or time series. 
 
 Although you are able to define your own classes within the [!DNL Schema Registry], it is recommended that you use the preferred classes **[!DNL XDM Individual Profile]** and **[!DNL XDM ExperienceEvent]** for record and time series data, respectively. These classes are outlined in more detail below.
 
-### [!DNL XDM Individual Profile] (#xdm-individual-profile)
+### [!DNL XDM Individual Profile] {#xdm-individual-profile}
 
 [!DNL XDM Individual Profile] is a record-based class that forms a singular representation of the attributes of both identified and partially-identified subjects. Profiles that are highly identified may be used for personal communications or targeted engagements, and can contain detailed personal information such as name, gender, date of birth, location, and contact information including phone numbers and email addresses. 
 
