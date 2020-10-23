@@ -28,11 +28,11 @@ If you are noticing that all your recent flow runs are failing, your credentials
 
 ### Which file types are supported?
 
-Currently, delimited CSV files, JSON, and Parquet are supported.
+Currently, delimited CSV files, JSON, and Parquet are the supported file types.
 
 ### What are the constraints on file names and sizes?
 
-The following is a list of constraints you must account for when naming files for sources.
+The following is a list of constraints you must account for files in sources.
 
 - Directory and file component names cannot exceed 255 characters.
 - Directory and file names cannot end with a forward slash (`/`). If provided, it will be automatically removed.
@@ -40,6 +40,9 @@ The following is a list of constraints you must account for when naming files fo
 - The following characters are not allowed: `" \ / : | < > * ?`.
 - Illegal URL path characters not allowed. Code points like `\uE000`, while valid in NTFS filenames, are not valid Unicode characters. In addition, some ASCII or Unicode characters, like control characters (0x00 to 0x1F, \u0081, etc.), are also not allowed. For rules governing Unicode strings in HTTP/1.1 see [RFC 2616, Section 2.2: Basic Rules](https://www.ietf.org/rfc/rfc2616.txt) and [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - The following file names are not allowed: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, dot character (.), and two dot characters (..).
+- The maximum number of files per batch is 1500, with a maximum batch size being 100 GB.
+- The maximum number of properties or fields per row is 10,000.
+- The maximum number of batches that can be sent per user, per minute is 138.
 
 ### What data types are supported?
 
@@ -59,4 +62,8 @@ All batch ingestion sources support partial ingestion. However, streaming ingest
 
 ### When should I use partial ingestion?
 
-(Text here)
+Partial ingestion should be used when you when you only want to ingest all valid data, and fail rows that do not pass validation. Alternatively, you can use partial ingestion if you do **not** have constraints such as having the entire file being ingested into Platform. 
+
+### What is the typical partial ingestion error threshold?
+
+There is no "typical error threshold" for partial ingestion. Instead, this value can vary from use case to use case. By default, the error threshold is set to 5%.
