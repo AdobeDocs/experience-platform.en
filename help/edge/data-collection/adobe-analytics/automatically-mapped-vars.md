@@ -11,7 +11,7 @@ keywords: adobe analytics;variables;analytics;automatic map;automatically mapped
 Below is a list of variables that the Adobe Experience Platform [!DNL Edge Network] automatically maps into [!DNL Analytics].
 
 | XDM Field Path  | [!DNL Analytics Query String] / HTTP Header | Description |
-| ---------- | ------------------------- | -------- |
+| ---------- | ------------------------- | ----------------------------------------- |
 | `commerce.order.purchaseID` | `pi` | AppMeasurement query parameter PURCHASEID mapping. |
 | `commerce.order.currencyCode` | `cc` | AppMeasurement query parameter CURRENCY mapping. |
 | `commerce.purchases.value` | `events` | AppMeasurement query parameter EVENT_LIST_FULL mapping with conversion COMMERCE_PURCHASE, using delimiter `,`. |
