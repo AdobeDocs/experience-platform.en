@@ -19,13 +19,13 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
   * [Roles and project phases (Video)](video/roles-project-phases.md)
 * Experience Platform UI {#platform-ui}
   * [Platform UI guide](ui-guide.md)
-  * [Platform workflows guide](workflows.md)
   * [Platform UI tour (Video)](video/platform-ui.md)
+  * [Workflows UI guide](workflows.md)
   * [Browser and language support](browser-language-support.md)
 * Experience Platform APIs {#platform-apis}
   * [API fundamentals](api-fundamentals.md)
+  * [API reference documents](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)
   * [Authenticate to Experience Platform APIs](https://docs.adobe.com/content/help/en/platform-learn/tutorials/platform-api-authentication.html)
-  * [Platform API reference documents](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)
 * Platform documentation {#documentation}
   * [Documentation overview](documentation/overview.md)
   * [Access control](https://docs.adobe.com/content/help/en/experience-platform/access-control/home.html)
@@ -49,8 +49,8 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
   * [Query Service](https://docs.adobe.com/content/help/en/experience-platform/query/home.html)
   * [Real-time Customer Data Platform](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)
   * [Sandboxes](https://docs.adobe.com/content/help/en/experience-platform/sandbox/home.html)
+  * [Schemas (XDM)](https://docs.adobe.com/content/help/en/experience-platform/xdm/home.html)
   * [Segmentation](https://docs.adobe.com/content/help/en/experience-platform/segmentation/home.html)
-  * [Schemas](https://docs.adobe.com/content/help/en/experience-platform/xdm/home.html)
   * [Sources (Connectors)](https://docs.adobe.com/content/help/en/experience-platform/sources/home.html)
   * [Web SDK](https://docs.adobe.com/content/help/en/experience-platform/edge/home.html)
 * Platform in the Adobe ecosystem {#ecosystem}
