@@ -63,11 +63,33 @@ To create a goal, select **[!UICONTROL Enter Field Name]** and select a field fr
 
 ![](../images/user-guide/goal.png)
 
-While defining your goal you have the option to select **[!UICONTROL Will occur]** or **[!UICONTROL Will not occur]**. Selecting **[!UICONTROL Will occur]** means that the event conditions you define need to be met for a customers event data to be included in the insights UI. For example, if you wanted all the customers who purchased a specific item by following an email link. You can select **[!UICONTROL Will occur]** followed by defining your goal.
+#### Will occur and will not occur
 
-![](../images/user-guide/occur.png)
+While defining your goal you have the option to select **[!UICONTROL Will occur]** or **[!UICONTROL Will not occur]**. Selecting **[!UICONTROL Will occur]** means that the event conditions you define need to be met for a customers event data to be included in the insights UI. 
 
-Selecting **[!UICONTROL Will not occur]** means any conditions outside the one you define are captured. This option should be used in churn cases to specify non-events. For example, you can have a use case looking at loyal customers were sent a promotion but did not redirect from it.
+For example, if you would like to set up an app to predict whether a customer will make a purchase, you can select **[!UICONTROL Will occur]** followed by **[!UICONTROL All of]** and then enter **commerce.purchases.id** and **exists** as the operator.
+
+![will occur](../images/user-guide/occur.png)
+
+However, there may be cases when you are interested in predicting whether some event will not happen in a certain timeframe. To configure a goal with this option, select **[!UICONTROL Will not occur]** from the top-level dropdown.
+
+For example, if you are interested in predicting which customers become less engaged and do not visit your account log-in page in the next month. Select **[!UICONTROL Will not occur]** followed by **[!UICONTROL All of]** and then enter **web.webInteraction.URL** and **[!UICONTROL equals]** as the operator with **account-login** as the value.
+
+![will not occur](../images/user-guide/not-occur.png)
+
+#### All of and Any of
+
+In some cases, you may want to predict whether a combination of events will occur and in other cases, you may want to predict the occurrence of any event from a pre-defined set. In order to predict whether a customer will have a combination of events, select the **[!UICONTROL All of]** option from the second-level drop-down in the **Define Goal** page.
+
+For example, you may want to predict whether a customer purchases a particular product. This prediction goal is defined by 2 conditions: a `commerce.order.purchaseID` **exists** and the `productListItems.SKU` **equals** some specific value.
+
+![All of example](../images/user-guide/all-of.png)
+
+In order to predict whether a customer will have any event from a given set, we can use the **[!UICONTROL Any of]** option.
+
+For example, you may want to predict whether a customer visits a certain URL or a web page with a particular name. This prediction goal is defined by 2 conditions: `web.webPageDetails.URL` **starts with** a particular value and `web.webPageDetails.name` **starts with** a particular value.
+
+![Any of example](../images/user-guide/any-of.png)
 
 ### Configure a schedule *(optional)* {#configure-a-schedule}
 
