@@ -1,7 +1,7 @@
 ---
 keywords: advertising; bing; 
 title: Microsoft Bing Destination
-seo-title: The Microsoft Bing destination is an Adobe Real-Time Customer Data Platform destination that helps you send profile data to Microsoft Display Advertising.
+seo-title: The Microsoft Bing destination helps you send profile data to Microsoft Display Advertising.
 description: Microsoft Bing Ads execute retargeting and audience targeted digital campaigns across Microsoft Display Advertising.
 seo-description: Microsoft Bing Ads execute retargeting and audience targeted digital campaigns across Microsoft Display Advertising.
 ---
@@ -10,11 +10,16 @@ seo-description: Microsoft Bing Ads execute retargeting and audience targeted di
 
 ## Overview {#overview}
 
-The [!DNL Microsoft Bing] destination is an Adobe Real-Time Customer Data Platform destination that helps you send profile data to [!DNL Microsoft Display Advertising].
+The [!DNL Microsoft Bing] destination helps you send profile data to [!DNL Microsoft Display Advertising].
 
-To send profile data to [!DNL Microsoft Bing], you must first connect to the destination in the [[!DNL Adobe Real-Time Customer Data Platform]](#connect-destination).
+To send profile data to [!DNL Microsoft Bing], you must first connect to the destination.
 
 ## Use Cases {#use-cases}
+
+
+## Export Type {#export-type}
+
+**[!DNL Segment Export]** - you are exporting all members of a segment (audience) to the [!DNL Microsoft Bing] destination.
 
 ## Connect to Destination {#connect-destination}
 
@@ -32,7 +37,7 @@ To send profile data to [!DNL Microsoft Bing], you must first connect to the des
    *  **[!UICONTROL Name]**: enter a name by which you will recognize this destination in the future.
    *  **[!UICONTROL Description]**: enter a description that will help you identify this destination in the future.
    *  **[!UICONTROL Account ID]**: enter your [!DNL Bing Ads] [!UICONTROL Account ID].
-   *  **[!UICONTROL Marketing use case]**: Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Real-time CDP](../privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](../../data-governance/policies/overview.md#core-actions).
+   *  **[!UICONTROL Marketing use case]**: Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Adobe Experience Platform](../privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](../../data-governance/policies/overview.md#core-actions).
 
     ![Microsoft Bing Destination Authentication](assets/bing-destination-authentication.png)
     
