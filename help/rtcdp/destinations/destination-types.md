@@ -18,7 +18,7 @@ In Adobe Real-time Customer Data Platform, we distinguish between two destinatio
 
 <br>&nbsp;
 
-### Connections
+### Connections {#connections}
 
 **[!UICONTROL Profile Export]** and **[!UICONTROL Segment Export]** destinations in Adobe Real-time Customer Data Platform capture event data, combine it with other data sources to form the [real-time customer profile](/help/profile/home.md), apply segmentation, and export segments and qualified profiles to destinations. 
 
@@ -40,7 +40,7 @@ The video below runs you through the particularities of the two types of destina
 
 <br>&nbsp;
 
-### Extensions
+### Extensions {#extensions}
 
 Adobe Real-time CDP leverages the power and flexibility of Experience Platform Launch to include Launch extensions in the Adobe Real-time CDP interface. 
 

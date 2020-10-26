@@ -10,31 +10,33 @@ keywords: configuration;edge;edge configuration id;Environment Settings;edgeConf
 
 The configuration for the Adobe Experience Platform [!DNL Web SDK] is split between two places. The [configure command](configuring-the-sdk.md) in the SDK controls things that must be handled on the client, like the `edgeDomain`. The edge configuration handles all other configuration for the SDK. When a request is sent to the Adobe Experience Platform [!DNL Edge Network], the `edgeConfigId` is used to reference the server side configuration. This allows you to update the configuration without having to make code changes on your website. 
 
+Your organization must be provisioned for this feature. Please contact your Certified software manager (CSM) to get put on the allowlist.
+
 ## Creating an Edge Configuration ID
 
-Edge configuration IDs can be created in Adobe [!DNL Launch] using the edge configuration tool. This tool allows you to create both the edge configuration as well as environments within those configurations.
+Edge configuration IDs can be created in Adobe [!DNL Experience Platform Launch] using the edge configuration tool. This tool allows you to create both the edge configuration as well as environments within those configurations.
 
 ![edge configuration tool navigation](../../assets/edge_configuration_nav.png)
 
 >[!NOTE]
 >
->The edge configuration tool is available to customers on the allow list regardless whether they use [!DNL Launch] as a tag manager. Additionally, users require Develop permissions in [!DNL Launch]. See the [User Permissions](https://docs.adobe.com/content/help/en/launch/using/reference/admin/user-permissions.html) article in the [!DNL Launch] documentation for more details.
+>The edge configuration tool is available to customers on the allow list regardless whether they use [!DNL Experience Platform Launch] as a tag manager. Additionally, users require Develop permissions in [!DNL Experience Platform Launch]. See the [User Permissions](https://docs.adobe.com/content/help/en/launch/using/reference/admin/user-permissions.html) article in the [!DNL Experience Platform Launch] documentation for more details.
 
 You can create an edge configuration by clicking on **[!UICONTROL New Edge Configuration]** in the top right area of the screen. After you provide a name and a description, you are asked for the default settings for each environment.
 
-### Default Environment Settings
+### Default environment settings
 
-These default settings are used to create your first three environments with identical settings. These three environments are *dev*, *stage*, and *prod*. They match the three default environments in [!DNL Launch]. When you build a [!DNL Launch] library to a dev environment, the library automatically uses the dev environment from your configuration. You can edit settings in individual environments as much as you'd like.
+These default settings are used to create your first three environments with identical settings. These three environments are *dev*, *stage*, and *prod*. They match the three default environments in [!DNL Experience Platform Launch]. When you build a [!DNL Experience Platform Launch] library to a dev environment, the library automatically uses the dev environment from your configuration. You can edit settings in individual environments as much as you'd like.
 
 The ID used in the SDK as the `edgeConfigId` is a composite ID that specifies the configuration and the environment. If no environment is present, then the production environment is used.
 
-### Environment Settings
+### Environment settings
 
 Below are each of the settings available to an environment. Most sections can be enabled or disabled. When disabled, your settings are saved but are not active.
 
 #### [!UICONTROL Identity]
 
-The identity section is the only section that is always on. It has two available settings: [!UICONTROL ID Syncs Enabled] and [!UICONTROL ID Sync Container ID].
+The identity section is the only section that is always on. It has two available settings: "[!UICONTROL ID Syncs Enabled]" and "[!UICONTROL ID Sync Container ID]".
 
 ![Identity section of the configuration UI](../../assets/edge_configuration_identity.png)
 
@@ -58,7 +60,7 @@ Sandboxes are locations in the Adobe Experience Platform that allow customers to
 
 ##### [!UICONTROL Streaming Inlet]
 
-A streaming inlet is an HTTP source in the Adobe Experience Platform. These are created under the [!UICONTROL Sources] tab in the Adobe Experience Platform as an HTTP API.
+A streaming inlet is an HTTP source in the Adobe Experience Platform. These are created under the "[!UICONTROL Sources]" tab in the Adobe Experience Platform as an HTTP API.
 
 ##### [!UICONTROL Event Dataset]
 
@@ -88,7 +90,7 @@ The property token can be found in [!UICONTROL Adobe Target] > [!UICONTROL setup
 
 [Environments](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) in Adobe Target help you manage your implementation through all stages of development. This setting specifies which environment you are going to use with each environment.
 
-Adobe recommends setting this differently for each of your `dev`, `stage`, and `prod` edge configuration environments to keep things simple. However, if you already have [!UICONTROL Adobe Target environments] defined, you can use those.
+Adobe recommends setting this differently for each of your `dev`, `stage`, and `prod` edge configuration environments to keep things simple. However, if you already have Adobe Target environments defined, you can use those.
 
 #### Adobe Audience Manager
 
@@ -106,7 +108,7 @@ Allows the SDK to share segment information via [URL Destinations](https://docs.
 
 #### Adobe Analytics
 
-Controls whether data is sent to Adobe Analytics. Additional details are in the [Analytics Overview](../solution-specific/analytics/analytics-overview.md).
+Controls whether data is sent to Adobe Analytics. Additional details are in the [Analytics Overview](../data-collection/adobe-analytics/analytics-overview.md).
 
 ![Adobe Analytics Settings Block](../../assets/edge_configuration_aa.png)
 

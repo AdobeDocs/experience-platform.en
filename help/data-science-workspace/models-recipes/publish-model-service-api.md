@@ -2,7 +2,8 @@
 keywords: Experience Platform;publish a model;Data Science Workspace;popular topics;sensei machine learning api
 solution: Experience Platform
 title: Publish a model as a service (API)
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: This tutorial covers the process of publishing a model as a service using the Sensei Machine Learning API.
 ---
 

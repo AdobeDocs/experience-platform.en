@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Amazon Kinesis;amazon kinesis;
 solution: Experience Platform
 title: Create an Amazon Kinesis source connector in the UI
 topic: overview
+type: Tutorial
 description: This tutorial provides steps for authenticating an Amazon Kinesis (hereinafter referred to as "Kinesis") source connector using the Platform user interface.
 ---
 

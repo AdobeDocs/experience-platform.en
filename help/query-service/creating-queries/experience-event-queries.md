@@ -3,6 +3,8 @@ keywords: Experience Platform;home;popular topics;query service;Query service;ex
 solution: Experience Platform
 title: ExperienceEvent queries
 topic: queries
+type: Tutorial
+description: The following document provides examples of queries involving ExperienceEvents.
 ---
 
 # [!DNL ExperienceEvent] queries
@@ -29,7 +31,7 @@ SUM(
     ELSE 0 
     END) as viewedParkas
 FROM your_analytics_table 
-WHERE _ACP_YEAR = 2019 AND _ACP_MONTH = 3 
+WHERE TIMESTAMP >= to_timestamp('2019-03-01') AND TIMESTAMP <= to_timestamp('2019-03-31')
 GROUP BY Day 
 ORDER BY Day ASC, pageViews DESC;
 ```

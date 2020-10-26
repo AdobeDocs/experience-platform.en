@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Segment definitions
 topic: developer guide
+description: This guide provides information to help you better understand segment definitions and includes sample API calls for performing basic actions using the API.
 ---
 
 # Segment definitions endpoint

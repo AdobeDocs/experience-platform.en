@@ -16,7 +16,7 @@ The following guide outlines the steps needed to build a Real-time Machine Learn
 
 ## Create a Real-time Machine Learning notebook
 
-In the Adobe Experience Platform UI, select **[!UICONTROL Notebooks]** from within *Data Science*. Next, select **[!UICONTROL JupyterLab]** and allow some time for the environment to load.
+In the Adobe Experience Platform UI, select **[!UICONTROL Notebooks]** from within **Data Science**. Next, select **[!UICONTROL JupyterLab]** and allow some time for the environment to load.
 
 ![open JupyterLab](../images/rtml/open-jupyterlab.png)
 
@@ -108,9 +108,9 @@ config_properties = {
 
 Using the **[!UICONTROL Real-time ML]** template, you need to analyze, pre-process, train, and evaluate your ML model. This is done by applying data transformations and building a training pipeline.
 
-**Data tranformations**
+**Data transformations**
 
-The **[!UICONTROL Real-time ML]** templates *Data Transformations* cell needs to be modified to work with your own dataset. Typically this involves renaming columns, data rollup, and data preparation/feature engineering. 
+The **[!UICONTROL Real-time ML]** templates **Data Transformations** cell needs to be modified to work with your own dataset. Typically this involves renaming columns, data rollup, and data preparation/feature engineering. 
 
 >[!NOTE]
 >
@@ -348,7 +348,7 @@ Once complete, an `edge` object is returned containing each of the nodes and the
 
 >[!NOTE]
 >
->Real-time Machine Learning is temporarily deployed to and managed by the Adobe Expereince Platform Hub. For additional details, visit the overview section on [Real-time Machine Learning architecture](./home.md#architecture).
+>Real-time Machine Learning is temporarily deployed to and managed by the Adobe Experience Platform Hub. For additional details, visit the overview section on [Real-time Machine Learning architecture](./home.md#architecture).
 
 Now that you have created a DSL graph, you can deploy your graph to the [!DNL Edge].
 
