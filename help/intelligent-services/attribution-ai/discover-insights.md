@@ -68,10 +68,6 @@ The **[!UICONTROL More actions]** button is located in the top-right navigation 
 
 Attribution AI insights allow you to filter your data and automatically update the UI visuals based on your selected filters.
 
->[!NOTE]
->
->By default, every filter is set to "All" except the "[!UICONTROL Attribution Model]" filter which is set to "Incremental and Influenced attributed conversions".
-
 ### Conversion event
 
 When you create a new instance in Attribution AI, one of the required fields is "Conversion events". Conversion events are Business objectives that identify the impact of marketing activities, such as, e-commerce orders, in-store purchases, and website visits.
@@ -86,20 +82,6 @@ Clicking **[!UICONTROL Attribution Model]** opens a dropdown with all of the dif
 
 ![attribution model](./images/insights/attribution-model.png)
 
-### Product
-
-The **[!UICONTROL Product]** filter allows you to select from any products that were initially ingested in the creation of your instance. Click the dropdown and use the search feature to quickly select all of the products you wish to compare.
-
-![products filter](./images/insights/product-filter.png)
-
-### Geography
-
-The **[!UICONTROL Geography]** filter populates country codes based on region-based models. Depending on your data this filter may or may not be present.
-
->[!NOTE]
->
->Country codes are two characters long. A complete list can be found here [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
-
 ### Region
 
 >[!NOTE]
@@ -108,15 +90,18 @@ The **[!UICONTROL Geography]** filter populates country codes based on region-ba
 
 This filter allows you select any regions you set up in the instance creation process.
 
-### Channel
+### Add filters
 
-Clicking the **[!UICONTROL Channel]** filter reveals a dropdown containing all of your available marketing channels. You can select multiple channels to compare them. 
+You can add additional filters by selecting the **filter** icon to open the **[!UICONTROL Add filters]** popover. The **[!UICONTROL Add filters]** popover allows you to filter by Channel, Geography, Media type, and Product. Only the applicable filters for a service instance are populated by the popover. For example, if you did not provide geographical data or a media type, those filter attributes are not going to be available for your instance.
 
-![Channel](./images/insights/channel.png)
+- **Channel:** You can select the channel attribute to filter any of your available marketing channels. You can select multiple channels to compare them.
+- **Geography:** Selecting the geography attribute allows you to filter country codes based on region-based models. Depending on your data this filter may or may not be present. Country codes are two characters long. A complete list can be found here [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
+- **Media type:** Selecting the Media type attribute allows you to filter any of your defined media types.
+- **Product:** Selecting the product attribute allows you to filter from any products that were initially ingested in the creation of your instance.
 
 ### Date Range
 
-Click the calendar icon to open the date range popover. The beginning and end conversion event dates determine the amount of data populated in the UI. You can choose to narrow or broaden the date range in order to focus or expand the amount of data populated. 
+Click the calendar icon to open the date range popover. The beginning and end conversion event dates determine the amount of data populated in the UI. You can choose to narrow or broaden the date range in order to focus or expand the amount of data populated.
 
 ![date range](./images/insights/display-date-range.png)
 
