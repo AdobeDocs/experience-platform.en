@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;insights;customer ai;popular topics
+keywords: Experience Platform;insights;customer ai;popular topics;customer ai insights
 solution: Experience Platform
 title: Discovering insights with Customer AI
 topic: Discovering insights
-description: Customer AI, as part of Intelligent Services provides marketers with the power to leverage Adobe Sensei to anticipate what your customers next action is going to be. Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale. This is accomplished without having to transform the business needs to a machine learning problem, picking an algorithm, training, or deployment.
+description: This document serves as a guide for interacting with service instance insights in the Intelligent Services Customer AI user interface.
 ---
 
 # Discovering insights with Customer AI
@@ -41,15 +41,15 @@ Next, the insights page for that service instance appears, where you are provide
 
 ### Service instance details
 
-There are two ways to view service instance details. The first is from the dashboard and the second from within the service instance. 
+There are two ways to view service instance details: from the dashboard or within the service instance. 
 
-To view an overview of a service instances details from within the dashboard, select a service instance container avoiding the hyperlink that is attached to the name. This opens a right rail that provides additional details. The controls contain the following:
+To view an overview of the service instance details within the dashboard, select a service instance container, avoiding the hyperlink that is attached to the name. This opens a right rail that provides additional details. The controls contain the following:
 
-- **[!UICONTROL Edit]**: Selecting **[!UICONTROL Edit]** allows you to modify an existing service instance. You can edit the name, description and scoring frequency of the instance.
-- **[!UICONTROL Clone]**: Selecting Clone copies the currently selected service instance set up. You can then modify the workflow to make minor tweaks and rename it as a new instance.
-- **[!UICONTROL Delete]**: You can Delete a service instance including any historical runs.
-- **[!UICONTROL Data source]**: A link to the dataset being used by this instance.
-- **[!UICONTROL Run Frequency]**: The current date and time when your scoring run takes place.
+- **[!UICONTROL Edit]**: Selecting **[!UICONTROL Edit]** allows you to modify an existing service instance. You can edit the name, description, and scoring frequency of the instance.
+- **[!UICONTROL Clone]**: Selecting **[!UICONTROL Clone]** copies the currently selected service instance set up. You can then modify the workflow to make minor tweaks and rename it as a new instance.
+- **[!UICONTROL Delete]**: You can delete a service instance, including any historical runs.
+- **[!UICONTROL Data source]**: A link to the dataset used by this instance.
+- **[!UICONTROL Run Frequency]**: How often a scoring run takes place and when.
 - **[!UICONTROL Score definition]**: A quick overview of the goal you configured for this instance.
 
 ![](../images/user-guide/service-instance-panel.png)
@@ -72,7 +72,7 @@ To edit an instance, click **[!UICONTROL Edit]** in the top-right navigation.
 
 ![click the edit button](../images/insights/edit-button.png)
 
-The edit dialog box appears, allowing you to edit the **Name**, **Description**, **Status**, and **Scoring Frequency** of the instance. To confirm your changes and close the dialog, select **[!UICONTROL Save]** in the bottom-right corner.
+The edit dialog box appears, allowing you to edit the name, description, status, and scoring frequency of the instance. To confirm your changes and close the dialog, select **[!UICONTROL Save]** in the bottom-right corner.
 
 ![edit popover](../images/insights/edit-instance.png)
 
@@ -82,7 +82,7 @@ The **[!UICONTROL More actions]** button is located in the top-right navigation 
 
 - **[!UICONTROL Clone]**: Selecting **[!UICONTROL Clone]** copies the service instance set up. You can then modify the workflow to make minor tweaks and rename it as a new instance.
 - **[!UICONTROL Delete]**: Deletes the instance.
-- **[!UICONTROL Access scores]**: Selecting **Access scores** opens a dialog providing a link to the [downloading scores for Customer AI](./download-scores.md) tutorial, the dialog also provides the dataset id required for making API calls.
+- **[!UICONTROL Access scores]**: Selecting **[!UICONTROL Access scores]** opens a dialog providing a link to the [downloading scores for Customer AI](./download-scores.md) tutorial, the dialog also provides the dataset id required for making API calls.
 - **[!UICONTROL View run history]**: A dialog containing a list of all the scoring runs associated with the service instance appears.
 
 ![more actions](../images/insights/more-actions.png)
@@ -97,13 +97,13 @@ Scoring summary displays the total number of profiles scored and categorizes the
 
 ![scoring summary](../images/insights/scoring-summary.png)
 
-You can hover over any color on the ring to view additional information such as a percentage and total number of profiles belonging to a bucket.
+You can hover over any color on the ring to view additional information, such as a percentage and total number of profiles belonging to a bucket.
 
 ![](../images/insights/scoring-ring.png)
 
 ## Distribution of Scores
 
-The **[!UICONTROL Distribution of Scores]** card gives you a visual summary of the population based on the score. The colors that you see in the *Distribution of Scores* card represent the type of propensity score generated. Hovering over any of the scoring distributions provides the exact count belonging to that distribution.
+The **[!UICONTROL Distribution of Scores]** card gives you a visual summary of the population based on the score. The colors that you see in the [!UICONTROL Distribution of Scores] card represent the type of propensity score generated. Hovering over any of the scoring distributions provides the exact count belonging to that distribution.
 
 ![distribution of scores](../images/insights/distribution-of-scores.png)
 
@@ -119,15 +119,15 @@ Hovering over any of the top influential factors further breaks down the data. Y
 
 ![drilldown screenshot](../images/insights/drilldown.png)
 
-Additionally, using drilldowns you are able to compare a distribution factor if it occurs in two or more propensity buckets and make more specific segments. The following example illustrates the first use case:
+Additionally, using drilldowns, you are able to compare a distribution factor if it occurs in two or more propensity buckets and create more specific segments with these values. The following example illustrates the first use case:
 
 ![](../images/insights/drilldown-compare.png)
 
-You can see that profiles with low propensity to convert are less likely to have made a visit to the adobe.com webpages recently. The "Days since last webVisit" factor has only 8% coverage compared to 26% in medium propensity profiles. Using these numbers you can compare the distribution within each bucket for the factor. This information can be used to infer that the recency in webvisit is not as influential in the low propensity bucket as it is in medium propensity bucket.
+You can see that profiles with low propensity to convert are less likely to have made a recent visit to the adobe.com webpages. The "Days since last webVisit" factor has only 8% coverage compared to 26% in medium propensity profiles. Using these numbers, you can compare the distribution within each bucket for the factor. This information can be used to infer that the recency in webvisit is not as influential in the low propensity bucket, as it is in medium propensity bucket.
 
 ### Create a segment
 
-Clicking the **[!UICONTROL Create Segment]** button in any of the buckets for Low, Medium, and High propensity redirects you to the segment builder.
+Selecting the **[!UICONTROL Create Segment]** button in any of the buckets for low, medium, and high propensity redirects you to the segment builder.
 
 >[!NOTE]
 >
