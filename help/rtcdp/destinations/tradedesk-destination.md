@@ -10,13 +10,17 @@ seo-description: The Trade Desk is a self-service platform for ad buyers to exec
 
 ## Overview {#overview}
 
-[!DNL The Trade Desk] destination is an [!DNL Adobe Real-Time Customer Data Platform] advertising destination that helps you send profile data to [!DNL The Trade Desk].
+[!DNL The Trade Desk] destination helps you send profile data to [!DNL The Trade Desk].
 
 [!DNL The Trade Desk] is a self-service platform for ad buyers to execute retargeting and audience targeted digital campaigns across display, video and mobile inventory sources.
 
-To send profile data to [!DNL The Trade Desk], you must first connect to the destination in the [[!DNL Adobe Real-Time Customer Data Platform]](#connect-destination).
+To send profile data to [!DNL The Trade Desk], you must first connect to the destination.
 
 ## Use Cases {#use-cases}
+
+## Export Type {#export-type}
+
+**[!DNL Segment Export]** - you are exporting all members of a segment (audience) to the destination.
 
 
 ## Connect to Destination {#connect-destination}
@@ -37,7 +41,7 @@ To send profile data to [!DNL The Trade Desk], you must first connect to the des
    * **[!UICONTROL Account ID]**: enter your [!DNL Trade Desk] [!UICONTROL Account ID].
    * **[!UICONTROL Client Secret]**: the [!DNL clientSecret] parameter used in the [!DNL OAuth2] client credentials.
    * **[!UICONTROL Server Location]**: ask your Trade Desk representative which regional server you should use.
-   * **[!UICONTROL Marketing use case]**: Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Real-time CDP](../privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](../../data-governance/policies/overview.md#core-actions). 
+   * **[!UICONTROL Marketing use case]**: Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Adobe Experience Platform](../privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](../../data-governance/policies/overview.md#core-actions). 
 
     ![The Trade Desk Authentication Step](assets/tradedesk-destination-authentication.png)
 
