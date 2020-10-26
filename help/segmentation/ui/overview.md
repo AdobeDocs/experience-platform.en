@@ -1,11 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;
+keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;realized;existing;exiting;
 solution: Experience Platform
 title: Segmentation Service user guide
 topic: ui guide
+description: Adobe Experience Platform Segmentation Service provides a user interface for creating and managing segment definitions.
 ---
 
-# [!UICONTROL Segmentation Service] user guide
+# Segmentation Service user guide
 
 [!DNL Adobe Experience Platform Segmentation Service] provides a user interface for creating and managing segment definitions. 
 

@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Streaming multiple messages in a single HTTP request
 topic: tutorial
 type: Tutorial
+description: This document provides a tutorial for sending multiple messages to Adobe Experience Platform within a single HTTP request using streaming ingestion.
 ---
 
 # Sending multiple messages in a single HTTP request
@@ -37,7 +38,7 @@ After registering a streaming connection, you, as the data producer, will have a
 
 The following example shows how to send multiple messages to a specific dataset within a single HTTP request. Insert the dataset ID in the message header to have that message directly ingested into it.
 
-You can get the ID for an existing dataset using the [!DNL Platform] UI or using a listing operation in the API. The dataset ID can be found on [Experience Platform](https://platform.adobe.com) by going to the **[!UICONTROL Datasets]** tab, clicking on the dataset you want the ID for, and copying the string from the **[!UICONTROL Dataset ID]** field on the **[!UICONTROL Info]** tab. See the [Catalog Service overview](../../catalog/home.md) for information on how to retrieve datasets using the API.
+You can get the ID for an existing dataset using the [!DNL Platform] UI or using a listing operation in the API. The dataset ID can be found on [Experience Platform](https://platform.adobe.com) by going to the **[!UICONTROL Datasets]** tab, clicking on the dataset you want the ID for, and copying the string from the dataset ID field on the **[!UICONTROL Info]** tab. See the [Catalog Service overview](../../catalog/home.md) for information on how to retrieve datasets using the API.
 
 Instead of using an existing dataset, you can create a new dataset. Please read the [create a dataset using APIs](../../catalog/api/create-dataset.md) tutorial for more information on creating a dataset using APIs.
 
@@ -535,7 +536,7 @@ The following table shows status codes returned by successful and failed respons
 
 | Status code | Description |
 | :---: | --- |
-| 207  | Although '207' is used as the overall response status code, the recipient needs to consult the contents of the multistatus response body for further information about the success or failure of the method execution. The response code is used in success, partial success, and also in failure situations. |
+| 207  | Although '207' is used as the overall response status code, the recipient needs to consult the contents of the multi-status response body for further information about the success or failure of the method execution. The response code is used in success, partial success, and also in failure situations. |
 | 400 | There was a problem with the request. See the response body for a more specific error message (For example, Message payload was missing required fields, or Message was unknown xdm format). |
 | 401  | Unauthorized: request missing valid authorization header. This is only returned for inlets that have authentication enabled. |
 | 403  | Unauthorized:  Provided authorization token is invalid or expired. This is only returned for inlets that have authentication enabled. |

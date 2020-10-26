@@ -478,3 +478,48 @@ where 'format_name' is be one of:
 >[!NOTE]
 >
 >The complete output path will be `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
+>
+
+### ALTER
+
+This command helps in adding or dropping primary or foreign key constraints to the table.
+
+```sql
+Alter TABLE table_name ADD ( column_name Primary key Namespace 'namespace')
+
+Alter TABLE table_name ADD ( column_name Foreign key references referenced_table_name Namespace 'namespace')
+
+Alter TABLE table_name DROP ( column_name Primary key)
+
+Alter TABLE table_name DROP ( column_name Foreign key)
+```
+
+>[!NOTE]
+>The table schema should be unique and not shared among multiple tables. Additionally, the namespace is mandatory.
+>
+
+### SHOW PRIMARY KEYS
+
+This command lists all the primary key constraints for the given database.
+
+```sql
+SHOW PRIMARY KEYS
+    tableName | columnName    | datatype | namespace
+------------------+----------------------+----------+-----------
+ table_name_1 | column_name1  | text     | "ECID"
+ table_name_2 | column_name2  | text     | "AAID"
+```
+
+
+### SHOW FOREIGN KEYS
+
+This command lists all the foreign key constraints for the given database.
+
+```sql
+SHOW FOREIGN KEYS
+    tableName   |     columnName      | datatype | referencedTableName | referencedColumnName | namespace 
+------------------+---------------------+----------+---------------------+----------------------+-----------
+ table_name_1   | column_name1        | text     | table_name_3        | column_name3         |  "ECID"
+ table_name_2   | column_name2        | text     | table_name_4        | column_name4         |  "AAID"
+
+```

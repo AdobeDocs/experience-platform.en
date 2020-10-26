@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Miscellaneous functions
 topic: developer guide
+description: The following function is a miscellaneous function for Profile Query Language (PQL).
 ---
 
 # Miscellaneous functions

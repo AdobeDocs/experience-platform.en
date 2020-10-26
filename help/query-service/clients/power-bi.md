@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;query service;Query service;Po
 solution: Experience Platform
 title: Connect with Power BI
 topic: connect
+description: This document walks through the steps for connecting Power BI with Adobe Experience Platform Query Service.
 ---
 
 # Connect with [!DNL Power BI] (PC)
@@ -53,7 +54,7 @@ ORDER BY SUM(web.webPageDetails.pageviews.value) DESC
 LIMIT 10
 ``` 
 
-- Select either **[!UICONTROL DirectQuery]** or **[!UICONTROL Import]** mode. In **[!UICONTROL Import]** mode, data will be imported in [!DNL Power BI]. In **[!UICONTROL DirectQuery]** mode, all the queries will be sent to [!DNL Query Service] for execution.
+- Select either "[!UICONTROL DirectQuery]" or "[!UICONTROL Import]" mode. In [!UICONTROL DirectQuery] mode, all the queries will be sent to [!DNL Query Service] for execution. In [!UICONTROL Import] mode, data will be imported in [!DNL Power BI]. 
 
 - Click **[!UICONTROL OK]**. Now, [!DNL Power BI] connects to the [!DNL Query Service] and produces a preview if there are no errors. There is a known issue with the Preview rendering numeric columns. Proceed to the next step.
 

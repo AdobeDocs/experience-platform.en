@@ -36,10 +36,10 @@ The first step towards enriching [!DNL Real-time Customer Profile] with scoring 
 
 Composing a schema begins by assigning a class. Classes define the behavioral aspects of the data the schema will contain (record or time-series). This section provides basic instructions to create a schema using the schema builder. For a more in-depth tutorial, refer to the tutorial on [creating a schema using the Schema Editor](../../xdm/tutorials/create-schema-ui.md).
 
-1.  On Adobe Experience Platform, click the **[!UICONTROL Schema]** tab to access the schema browser. Click **[!UICONTROL Create Schema]** access the *Schema Editor*, where you can interactively build and create schemas.
+1.  On Adobe Experience Platform, click the **[!UICONTROL Schema]** tab to access the schema browser. Click **[!UICONTROL Create Schema]** access the **Schema Editor**, where you can interactively build and create schemas.
     ![](../images/models-recipes/enrich-rtcdp/schema_browser.png)
 
-2.  Within the *Composition* window, click **[!UICONTROL Assign]** to browse your available classes.
+2.  Within the **Composition** window, click **[!UICONTROL Assign]** to browse your available classes.
     *   To assign an existing class, click and highlight the desired class and then click **[!UICONTROL Assign Class]**.
         ![](../images/models-recipes/enrich-rtcdp/existing_class.png)
 
@@ -48,7 +48,7 @@ Composing a schema begins by assigning a class. Classes define the behavioral as
 
     At this point, your schema's structure should contain some class fields and you are ready to assign mixins. A mixin is a group of one or more fields that describe a particular concept.
 
-3.  Within the *Composition* window, click **[!UICONTROL Add]** in the *Mixins* sub-section.
+3.  Within the **Composition** window, click **[!UICONTROL Add]** in the **Mixins** sub-section.
     *   To assign an existing mixin, click and highlight the desired mixin and then click **[!UICONTROL Add Mixin]**. Unlike classes, multiple mixins can be assigned to a single schema as long as it is appropriate to do so.
         ![](../images/models-recipes/enrich-rtcdp/existing_mixin.png)
 

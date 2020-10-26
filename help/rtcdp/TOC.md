@@ -1,7 +1,7 @@
 ---
 product: adobe experience platform
 audience: user
-user-guide-title: Real-Time Customer Data Platform Guide
+user-guide-title: Real-time Customer Data Platform Guide
 user-guide-description: Bring together known and anonymous data from multiple enterprise sources to create customer profiles, create audience segments from those profiles, and activate those segments to third-party destinations.
 ---
 
@@ -19,14 +19,16 @@ user-guide-description: Bring together known and anonymous data from multiple en
 * Destinations {#destinations}
   * [Destinations overview](destinations/destinations-overview.md)
   * [Destination types and categories](/help/rtcdp/destinations/destination-types.md)
-  * Destinations interface  {#destinations-interface}
+  * Destinations interface {#destinations-interface}
     * [Destinations workspace](destinations/destinations-workspace.md)
     * [Destination details page](destinations/destination-details-page.md)
   * Destinations catalog {#destinations-cat}
     * [Destinations catalog overview](destinations/destinations-catalog.md)
+    * [ (Alpha) HTTP destination](/help/rtcdp/destinations/http-destination.md)
     * Adobe destinations{#adobe-destinations}
       * [Adobe destinations overview](destinations/adobe-destinations.md)
       * [Adobe Campaign](destinations/adobe-campaign-destination.md)
+      * [Experience Platform segment sharing (opens Audience Manager documentation)](https://docs.adobe.com/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
     * Advertising destinations{#advertising-destinations}
       * [Advertising destinations overview](destinations/advertising-destinations.md)
       * [Adobe Advertising Cloud extension](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
@@ -121,14 +123,14 @@ user-guide-description: Bring together known and anonymous data from multiple en
     * [Connect to a destination](/help/rtcdp/destinations/connect-destination.md)
     * [Activate profiles and segments to a destination](destinations/activate-destinations.md)
   * Destinations API tutorials {#api-tutorials}
-    *  [Connect to streaming destinations (AWS Kinesis and Azure Event Hubs) and activate data](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
-    *  [Connect to email marketing destinations and activate data](/help/rtcdp/destinations/email-marketing-api.md)
+    * [Connect to streaming destinations (AWS Kinesis and Azure Event Hubs) and activate data](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
+    * [Connect to email marketing destinations and activate data](/help/rtcdp/destinations/email-marketing-api.md)
 * Privacy and data governance {#privacy}
   * [Privacy overview](privacy/privacy-overview.md)
   * [Data Governance overview](privacy/data-governance-overview.md)
   * IAB TCF 2.0 support {#iab}
-      * [IAB TCF 2.0 support in Real-time CDP](privacy/iab/overview.md)
-      * [Create datasets for capturing IAB TCF 2.0 consent data](privacy/iab/dataset-preparation.md)
+    * [IAB TCF 2.0 support in Real-time CDP](privacy/iab/overview.md)
+    * [Create datasets for capturing IAB TCF 2.0 consent data](privacy/iab/dataset-preparation.md)
 * Profiles {#profile}
   * [Profile overview](profile/profile-overview.md)
   * [Identities & identity namespaces](profile/identities-overview.md)
