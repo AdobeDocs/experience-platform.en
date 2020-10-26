@@ -163,7 +163,13 @@ curl -X POST \
     },
     {
       "entityType": "dataSet",
-      "entityId": "5cc1fb685410ef14b748c55f"
+      "entityId": "5cc1fb685410ef14b748c55f",
+      "entityMeta": {
+          "fields": [
+              "/properties/personalEmail/properties/address",
+              "/properties/person/properties/name/properties/fullName"
+          ]
+      }
     }
   ]'
 ```
@@ -172,6 +178,7 @@ curl -X POST \
 | --- | --- |
 | `entityType` | Each item in the payload array must indicate the type of entity being defined. For this use case, the value will always be "dataSet". |
 | `entityId` | Each item in the payload array must provide the unique ID for a dataset. |
+| `entityMeta.fields` | (Optional) An array of [JSON Pointer](../../landing/api-fundamentals.md#json-pointer) strings, referencing specific fields in the dataset's schema. If this array is included, only the fields contained in the array participate in evaluation. Any schema fields that are not included in the array will not participate in evaluation.<br><br>If this field is not included, all fields within the dataset schema will be included in evaluation. |
 
 **Response**
 
@@ -297,13 +304,13 @@ A successful response returns the URL for the marketing action, the usage labels
                         "labels": [
                             "C5"
                         ],
-                        "path": "/properties/createdByBatchID"
+                        "path": "/properties/personalEmail/properties/address",
                     },
                     {
                         "labels": [
                             "C5"
                         ],
-                        "path": "/properties/faxPhone"
+                        "path": "/properties/person/properties/name/properties/fullName"
                     }
                 ]
             }
