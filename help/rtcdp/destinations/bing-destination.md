@@ -30,9 +30,9 @@ To send profile data to [!DNL Microsoft Bing], you must first connect to the des
 
 2. In the [!UICONTROL Authentication] step, you must enter the destination connection details:
   *  **[!UICONTROL Name]**: enter a name by which you will recognize this destination in the future.
-   *  **[!UICONTROL Description]**: enter a description that will help you identify this destination in the future.
-   *  **[!UICONTROL Account ID]**: enter your [!DNL Bing Ads] [!UICONTROL Account ID].
-   *  **[!UICONTROL Marketing use case]**: Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Real-time CDP](../privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](../../data-governance/policies/overview.md#core-actions).
+  *  **[!UICONTROL Description]**: enter a description that will help you identify this destination in the future.
+  *  **[!UICONTROL Account ID]**: enter your [!DNL Bing Ads] [!UICONTROL Account ID].
+  *  **[!UICONTROL Marketing use case]**: Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Real-time CDP](../privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](../../data-governance/policies/overview.md#core-actions).
 
     ![Microsoft Bing Destination Authentication](assets/bing-destination-authentication.png)
     
