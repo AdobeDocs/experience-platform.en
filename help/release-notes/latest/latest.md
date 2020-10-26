@@ -14,6 +14,7 @@ author: crhoades, ens25212
 - [Real-time Customer Profile](#profile)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
+- [Time to Value](#time-to-value)
 
 ## Data Prep {#data-prep}
 
@@ -69,7 +70,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 To learn more about sources, see the [sources overview](../../sources/home.md).
 
-## Time to Value
+## Time to Value {#time-to-value}
 
 Adobe Experience Platform fully enables Marketing Operations teams to build a 360-degree view of their customers without requiring extensive data engineering expertise. The goal is to accelerate teams and value through data velocity.  
 
