@@ -10,7 +10,7 @@ description: Access control in Adobe Experience Platform allows you to manage ro
 
 You can list the names of all permissions and resource types by making a GET request to the `/acl/reference` endpoint. These names can then be used in API calls to [view effective policies](./effective-policies.md) for the current user.
 
-A **permission** is a policy that is managed through the Adobe Admin Console, and maps to zero or more resource-type policies. A **resource type** is a policy that enables read, write, and/or delete capabilities for a specific type of [!DNL Platform] resource (such as datasets or schemas).
+A permission is a policy that is managed through the Adobe Admin Console, and maps to zero or more resource-type policies. A resource type is a policy that enables read, write, and/or delete capabilities for a specific type of [!DNL Platform] resource (such as datasets or schemas).
 
 **API format**
 

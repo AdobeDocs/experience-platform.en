@@ -21,6 +21,7 @@ XDM data is an object whose content and structure matches a schema you have crea
 
 Any XDM data that you would like to be part of your analytics, personalization, audiences, or destinations should be sent using the `xdm` option.
 
+
 ```javascript
 alloy("sendEvent", {
   "xdm": {
@@ -46,7 +47,37 @@ Currently, sending data that does not match an XDM schema is unsupported. Suppor
 
 ### Setting `eventType`
 
-In an XDM experience event, there is an `eventType` field. This holds the primary event type for the record. This can be passed in as part of the `xdm` option.
+In an XDM experience event, there is an optional `eventType` field. This holds the primary event type for the record. Setting an event type can help you differentiate between the different events you will be sending in. XDM provides several predefined event types that you can use or you always create your own custom event types for your use cases. Below is a list of all the predefined event types provided by XDM. [Read more in the XDM public repo](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values).
+
+
+| **Event Type:**               | **Definition:** |
+| ---------------------------------- | ------------ |
+| advertising.completes           | Indicates if a timed media asset was watched to completion - this does not necessarily mean the viewer watched the whole video; viewer could have skipped ahead        |
+| advertising.timePlayed           | Describes the amount of time spent by a user on a specific timed media asset|
+| advertising.federated            | Indicates if an experience event was created through data federation (data sharing between customers |
+| advertising.clicks | Click(s) actions on an advertisement |
+| advertising.conversions | A customer pre-defined action(s) which triggers an event for performance evaluation |
+| advertising.firstQuartiles | A digital video ad has played through 25% of its duration at normal speed |
+| advertising.impressions | Impression(s) of an advertisement to an end-user with the potential of being viewed |
+| advertising.midpoints | A digital video ad has played through 50% of its duration at normal speed | 
+| advertising.starts | A digital video ad has started playing |
+| advertising.thirdQuartiles | A digital video ad has played through 75% of its duration at normal speed |
+| web.webpagedetails.pageViews | View(s) of a webpage has occurred |
+| web.webinteraction.linkClicks | Click of a web-link has occurred | 
+| commerce.checkouts | An action during a checkout process of a product list, there can be more than one checkout event if there are multiple steps in a checkout process. If there are multiple steps the event time information and referenced page or experience is used to identify the step individual events represent in order | 
+| commerce.productListAdds | Addition of a product to the product list. Example a product is added to a shopping cart |
+| commerce.productListOpens | Initializations of a new product list. Example a shopping cart is created | 
+| commerce.productListRemovals | Removal(s) of a product entry from a product list. Example a product is removed from a shopping cart |
+| commerce.productListReopens | A product list that was no longer accessible(abandoned) has been re-activated by the user. Example via a re-marketing activity |
+| commerce.productListViews | View(s) of a product-list has occurred |
+| commerce.productViews | View(s) of a product have occurred | 
+| commerce.purchases | An order has been accepted. Purchase is the only required action in a commerce conversion. Purchase must have a product list referenced | 
+| commerce.saveForLaters | Product list is saved for future use. Example a product wish list |
+| delivery.feedback | Feedback events for a delivery. Example feedback events for an email delivery |
+
+
+These event types will be shown in a dropdown if using the Adobe Experience Platform Launch extension or you can always pass them in without Experience Platform Launch. They can be passed in as part of the `xdm` option.
+
 
 ```javascript
 alloy("sendEvent", {
@@ -66,6 +97,7 @@ alloy("sendEvent", {
 
 Alternatively, the `eventType` can be passed into the event command using the `type` option. Behind the scenes, this is added to the XDM data. Having the `type` as an option allows you to more easily set the `eventType` without having to modify the XDM payload.
 
+
 ```javascript
 var myXDMData = { ... };
 
@@ -79,6 +111,7 @@ alloy("sendEvent", {
 
 In some use cases, you might want to send an event to a dataset other than the one configured in the Configuration UI. For that you need to set the `datasetId` option on the `sendEvent` command:
 
+
 ```javascript
 var myXDMData = { ... };
 
@@ -91,11 +124,12 @@ alloy("sendEvent", {
 
 ### Adding identity information
 
-Custom identity information can also be added to the event. See [Retrieving Experience Cloud ID](./identity.md)
+Custom identity information can also be added to the event. See [Retrieving Experience Cloud ID](../identity/overview.md).
 
 ## Using the sendBeacon API
 
 It can be tricky to send event data just before the web page user has navigated away. If the request takes too long, the browser might cancel the request. Some browsers have implemented a web standard API called `sendBeacon` to allow data to be more easily collected during this time. When using `sendBeacon`, the browser makes the web request in the global browsing context. This means the browser makes the beacon request in the background and does not hold up the page navigation. To tell Adobe Experience Platform [!DNL Web SDK] to use `sendBeacon`, add the option `"documentUnloading": true` to the event command.  Here is an example:
+
 
 ```javascript
 alloy("sendEvent", {
@@ -118,6 +152,7 @@ Browsers have imposed limits to the amount of data that can be sent with `sendBe
 ## Handling responses from events
 
 If you want to handle a response from an event, you can be notified of a success or failure as follows:
+
 
 ```javascript
 alloy("sendEvent", {
@@ -144,6 +179,7 @@ alloy("sendEvent", {
 
 If you want to add, remove, or modify fields from the event globally, you can configure an `onBeforeEventSend` callback.  This callback is called every time an event is sent.  This callback is passed in an event object with an `xdm` field.  Modify `event.xdm` to change the data that is sent in the event.
 
+
 ```javascript
 alloy("configure", {
   "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
@@ -162,7 +198,7 @@ alloy("configure", {
 `xdm` fields are set in this order:
 
 1. Values passed in as options to the event command `alloy("sendEvent", { xdm: ... });`
-2. Automatically collected values.  (See [Automatic Information](../reference/automatic-information.md).)
+2. Automatically collected values.  (See [Automatic Information](../data-collection/automatic-information.md).)
 3. The changes made in the `onBeforeEventSend` callback.
 
 If the `onBeforeEventSend` callback throws an exception, the event is still sent; however, none of the changes that were made inside the callback are applied to the final event.

@@ -2,7 +2,8 @@
 keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics;Sensei Machine Learning API
 solution: Experience Platform
 title: Train and evaluate a model (API)
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: This tutorial will show you how to create, train, and evaluate a Model using Sensei Machine Learning API calls.
 ---
 
@@ -27,7 +28,7 @@ From the tutorial you should now have the following values:
 
 ## API workflow
 
-We will be consuming the APIs to create an Experiment Run for training. For this tutorial, we will be focused on the **Engines**, **MLInstances**, and **Experiments** endpoints. The following chart outlines the relationship between the three and also introduces the idea of a Run and a Model. 
+We will be consuming the APIs to create an Experiment Run for training. For this tutorial, we will be focused on the Engines, MLInstances, and Experiments endpoints. The following chart outlines the relationship between the three and also introduces the idea of a Run and a Model. 
 
 ![](../images/models-recipes/train-evaluate-api/engine_hierarchy_api.png)
 

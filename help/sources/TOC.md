@@ -2,7 +2,8 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Source Connectors Help
-user-guide-description: Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+breadcrumb-title: Source Connectors Guide
+user-guide-description: Ingest data from a variety of sources or structure, label, and enhance already ingested data.
 ---
 
 # Source connectors {#sources}
@@ -176,15 +177,15 @@ user-guide-description: Adobe Experience Platform allows data to be ingested fro
     - Protocols {#protocols}
       - [Generic OData connector](tutorials/ui/create/protocols/odata.md)
   - Configure a dataflow {#dataflow}
-      - [Configure a dataflow for an advertising connector](tutorials/ui/dataflow/advertising.md)
-      - [Configure a dataflow for a batch cloud storage connector](tutorials/ui/dataflow/batch/cloud-storage.md)
-      - [Configure a dataflow for a streaming cloud storage connector](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
-      - [Configure a dataflow for a database connector](tutorials/ui/dataflow/databases.md)
-      - [Configure a dataflow for a CRM connector](tutorials/ui/dataflow/crm.md)
-      - [Configure a dataflow for a customer success connector](tutorials/ui/dataflow/customer-success.md)
-      - [Configure a dataflow for a marketing automation connector](tutorials/ui/dataflow/marketing-automation.md)
-      - [Configure a dataflow for a payment connector](tutorials/ui/dataflow/payments.md)
-      - [Configure a dataflow for a protocol connector](tutorials/ui/dataflow/protocols.md)
+    - [Configure a dataflow for an advertising connector](tutorials/ui/dataflow/advertising.md)
+    - [Configure a dataflow for a batch cloud storage connector](tutorials/ui/dataflow/batch/cloud-storage.md)
+    - [Configure a dataflow for a streaming cloud storage connector](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+    - [Configure a dataflow for a database connector](tutorials/ui/dataflow/databases.md)
+    - [Configure a dataflow for a CRM connector](tutorials/ui/dataflow/crm.md)
+    - [Configure a dataflow for a customer success connector](tutorials/ui/dataflow/customer-success.md)
+    - [Configure a dataflow for a marketing automation connector](tutorials/ui/dataflow/marketing-automation.md)
+    - [Configure a dataflow for a payment connector](tutorials/ui/dataflow/payments.md)
+    - [Configure a dataflow for a protocol connector](tutorials/ui/dataflow/protocols.md)
   - [Activate inbound data to populate customer profiles](tutorials/ui/profile.md)
   - [Monitor accounts and dataflows](tutorials/ui/monitor.md)
   - [Delete dataflows](tutorials/ui/delete.md)

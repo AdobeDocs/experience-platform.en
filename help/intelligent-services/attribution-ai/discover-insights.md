@@ -18,7 +18,7 @@ In order to utilize insights for Attribution AI, you need to have a service inst
 
 ## Service instance insights overview
 
-In the [!DNL Adobe Experience Platform] UI, click **Services** in the left navigation. The *Services* browser appears and displays available Adobe Intelligent Services. In the container for Attribution AI, click **Open**.
+In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in the left navigation. The **[!UICONTROL Services]** browser appears and displays available Adobe Intelligent Services. In the container for Attribution AI, click **[!UICONTROL Open]**.
 
 ![Accessing your instance](./images/insights/open_Attribution_ai.png)
 
@@ -36,7 +36,7 @@ Next, the insights page for that service instance appears, where you are provide
 
 ### Service instance details
 
-To view additional details for a service instance, click **Show more** in the top-right.
+To view additional details for a service instance, click **[!UICONTROL Show more]** in the top-right.
 
 ![show more](./images/insights/show-more.png)
 
@@ -46,20 +46,20 @@ A detailed list appears. For more information on any of the properties listed, p
 
 ### Edit an instance
 
-To edit an instance, click *Edit* in the top-right navigation.
+To edit an instance, click **[!UICONTROL Edit]** in the top-right navigation.
 ![click the edit button](./images/insights/edit-button.png)
 
-The edit dialog box appears, allowing you to edit the description and scoring frequency of the instance. To confirm your changes and close the dialog, click *Edit* in the bottom-right corner.
+The edit dialog box appears, allowing you to edit the description and scoring frequency of the instance. To confirm your changes and close the dialog, click **[!UICONTROL Edit]** in the bottom-right corner.
 
 ![edit popover](./images/insights/edit-popover.png)
 
 ### More actions {#more-actions}
 
-The *More actions* button is located in the top-right navigation next to *Edit*. Clicking **More actions** opens a dropdown that allows you to select one of the following operations:
+The **[!UICONTROL More actions]** button is located in the top-right navigation next to *Edit*. Clicking **[!UICONTROL More actions]** opens a dropdown that allows you to select one of the following operations:
 
 - **Delete**: Deletes the instance.
 - **Download summary data**: Downloads a CSV file containing the summary data.
-- **Access scores**: Clicking *Access scores* redirects you to the [access scores for Attribution AI tutorial](./download-scores.md).
+- **Access scores**: Clicking **Access scores** redirects you to the [access scores for Attribution AI tutorial](./download-scores.md).
 - **View run history**: A popover containing a list of all the scoring runs associated with the service instance appears.
 
 ![more actions](./images/insights/more-actions.png)
@@ -70,31 +70,31 @@ Attribution AI insights allow you to filter your data and automatically update t
 
 >[!NOTE]
 >
->By default, every filter is set to "All" except the *Attribution model* filter which is set to "Incremental and Influenced attributed conversions".
+>By default, every filter is set to "All" except the "[!UICONTROL Attribution Model]" filter which is set to "Incremental and Influenced attributed conversions".
 
 ### Conversion event
 
 When you create a new instance in Attribution AI, one of the required fields is "Conversion events". Conversion events are Business objectives that identify the impact of marketing activities, such as, e-commerce orders, in-store purchases, and website visits.
 
-From within the instance, the *Conversion events* dropdown allows you to select any of the events defined for your instance in order to filter your data. Selecting specific events changes the UI visualizations to only populate conversions belonging to those events.
+From within the instance, the **[!UICONTROL Conversion events]** dropdown allows you to select any of the events defined for your instance in order to filter your data. Selecting specific events changes the UI visualizations to only populate conversions belonging to those events.
 
 ![conversion event](./images/insights/conversion-event.png)
 
 ### Attribution model
 
-Clicking *Attribution model* opens a dropdown with all of the different attribution models available. You can select multiple models to compare results. For more information on the different attribution models and how they work, visit the [Attribution AI](./overview.md) overview which contains a table with information on each model.
+Clicking **[!UICONTROL Attribution Model]** opens a dropdown with all of the different attribution models available. You can select multiple models to compare results. For more information on the different attribution models and how they work, visit the [Attribution AI](./overview.md) overview which contains a table with information on each model.
 
 ![attribution model](./images/insights/attribution-model.png)
 
 ### Product
 
-The *Product* filter allows you to select from any products that were initially ingested in the creation of your instance. Click the dropdown and use the search feature to quickly select all of the products you wish to compare.
+The **[!UICONTROL Product]** filter allows you to select from any products that were initially ingested in the creation of your instance. Click the dropdown and use the search feature to quickly select all of the products you wish to compare.
 
 ![products filter](./images/insights/product-filter.png)
 
 ### Geography
 
-The *Geography* filter populates country codes based on region-based models. Depending on your data this filter may or may not be present.
+The **[!UICONTROL Geography]** filter populates country codes based on region-based models. Depending on your data this filter may or may not be present.
 
 >[!NOTE]
 >
@@ -110,7 +110,7 @@ This filter allows you select any regions you set up in the instance creation pr
 
 ### Channel
 
-Clicking the *Channel* filter reveals a dropdown containing all of your available marketing channels. You can select multiple channels to compare them. 
+Clicking the **[!UICONTROL Channel]** filter reveals a dropdown containing all of your available marketing channels. You can select multiple channels to compare them. 
 
 ![Channel](./images/insights/channel.png)
 
@@ -122,13 +122,13 @@ Click the calendar icon to open the date range popover. The beginning and end co
 
 ## Overview of your data
 
-The *Overview* card shows your total conversions by attribution model. The total number changes based on how specific you make your search using the filters outlined previously in this document. Selecting more models adds additional circles to the Overview, each with its own color corresponding to the legend.
+The **[!UICONTROL Overview]** card shows your total conversions by attribution model. The total number changes based on how specific you make your search using the filters outlined previously in this document. Selecting more models adds additional circles to the Overview, each with its own color corresponding to the legend.
 
 ![overview](./images/insights/Overview.png)
 
 ## Weekly trends
 
-The *Weekly trends* card breaks down your total conversion by the date range you set during the filtering process. 
+The **[!UICONTROL Weekly trends]** card breaks down your total conversion by the date range you set during the filtering process. 
 
 ![trends](./images/insights/weekly-trends.png)
 
@@ -140,17 +140,17 @@ Hovering over the data line of a specific attribution model creates a popover th
 
 ## Breakdown by channel
 
-The *Breakdown by channel* card is used to determine the total number of conversions in relation to each channel. This card can be used to help make decisions on the effectiveness of each channel and the return on investment.
+The **[!UICONTROL Breakdown by channel]** card is used to determine the total number of conversions in relation to each channel. This card can be used to help make decisions on the effectiveness of each channel and the return on investment.
 
 ![breakdown channel](./images/insights/channel-breakdown.png)
 
-Clicking the ellipses in the top-right of the *Breakdown by channel* card opens a drop down allowing you to populate data based on touchpoints.
+Clicking the ellipses in the top-right of the **[!UICONTROL Breakdown by channel]** card opens a drop down allowing you to populate data based on touchpoints.
 
 ![touchpoints](./images/insights/breakdown-by-touchpoints.png)
 
 ## Top campaigns
 
-The *Top campaigns* card displays an overview of your campaigns and how the campaign is performing in each channel. This card can help inform your team of the effectiveness of a specific campaign for a given channel and provide insight into where to further invest.
+The **[!UICONTROL Top campaigns]** card displays an overview of your campaigns and how the campaign is performing in each channel. This card can help inform your team of the effectiveness of a specific campaign for a given channel and provide insight into where to further invest.
 
 ![top campaigns](./images/insights/top-campaigns.png)
 

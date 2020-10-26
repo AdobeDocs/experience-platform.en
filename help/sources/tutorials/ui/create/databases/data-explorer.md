@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Azure Data Explorer;azure data
 solution: Experience Platform
 title: Create an Azure Data Explorer source connector in the UI
 topic: overview
+type: Tutorial
 description: This tutorial provides steps for creating an Azure Data Explorer (hereinafter referred to as "Data Explorer") source connector using the Platform user interface.
 ---
 

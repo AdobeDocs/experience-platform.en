@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Create email marketing destinations
 topic: tutorial
+type: Tutorial
 ---
 
 # Create email marketing destinations and activate data using API calls in Adobe's [!DNL Real-time Customer Data Platform]
@@ -177,7 +178,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {IMS_ORG}' \
---header 'x-sandbox-name: {SANDBOX_NAME} \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
             "name": "Base connection to Experience Platform",
@@ -202,7 +203,7 @@ A successful response contains the base connection's unique identifier (`id`). S
 }
 ```
 
-### Connect to your [!DNL Experience Platform] data
+### Connect to your [!DNL Experience Platform] data {#connect-to-platform-data}
 
 **API format**
 
@@ -419,7 +420,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --data-raw '{
     "name": "TargetConnection for Adobe Campaign",
     "description": "Connection to Adobe Campaign",
-    "baseConnection": "{BASE_CONNECTION_ID}",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
     "connectionSpec": {
         "id": "{CONNECTION_SPEC_ID}",
         "version": "1.0"
@@ -592,7 +593,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 *   `{DATAFLOW_ID}`: Use the data flow you obtained in the previous step.
 *   `{ETAG}`: Use the etag that you obtained in the previous step.
-*   `{SEGMENT_ID}`: Provide the segment ID that you want to export to this destination. To retrieve segment IDs for the segments that you want to activate, go to https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/ and look for the `GET /segment/jobs` operation.
+*   `{SEGMENT_ID}`: Provide the segment ID that you want to export to this destination. To retrieve segment IDs for the segments that you want to activate, go to **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, select **[!UICONTROL Segmentation Service API]** in the left navigation menu, and look for the `GET /segment/definitions` operation in **[!UICONTROL Segment Definitions]**.
 *   `{PROFILE_ATTRIBUTE}`: For example, `"person.lastName"`
 
 **Response**

@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Segmentation Service developer guide
 topic: developer guide
+description: The following documentation provides additional information that you need to know in order to successfully work with the Segmentation API.
 ---
 
 # Getting started with [!DNL Segmentation Service] {#getting-started}

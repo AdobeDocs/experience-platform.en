@@ -23,9 +23,9 @@ There are two sandbox types available in Experience Platform:
 * Production sandbox
 * Non-production sandbox
 
-Experience Platform provides a single **production sandbox**, which cannot be deleted or reset. Only one production sandbox can exist for a single Platform instance.
+Experience Platform provides a single production sandbox, which cannot be deleted or reset. Only one production sandbox can exist for a single Platform instance.
 
-By contrast, multiple **non-production sandboxes** can be created by sandbox administrators for a single Platform instance. Non-production sandboxes allow you to test features, run experiments, and make custom configurations without impacting your production sandbox. In addition, non-production sandboxes have a reset feature that removes all customer-created resources from the sandbox. Non-production sandboxes cannot be converted to production sandboxes. A default Experience Platform license grants you five sandboxes (one production and four non-production). You can add packs of ten non-production sandboxes up to a maximum of 75 total sandboxes. Please contact your IMS Org Administrator or your Adobe sales representative for more details.
+By contrast, multiple non-production sandboxes can be created by sandbox administrators for a single Platform instance. Non-production sandboxes allow you to test features, run experiments, and make custom configurations without impacting your production sandbox. In addition, non-production sandboxes have a reset feature that removes all customer-created resources from the sandbox. Non-production sandboxes cannot be converted to production sandboxes. A default Experience Platform license grants you five sandboxes (one production and four non-production). You can add packs of ten non-production sandboxes up to a maximum of 75 total sandboxes. Please contact your IMS Org Administrator or your Adobe sales representative for more details.
 
 See the [sandboxes overview](./home.md) for more information.
 
@@ -43,7 +43,7 @@ Experience Platform currently allows up to 15 non-production sandboxes to be act
 
 ## I just created a sandbox. How do I set permissions for the users who will be working with this sandbox?
 
-The Adobe Admin Console links users to sandboxes and permissions through the use of **product profiles**. After creating a new sandbox, navigate to the _Permissions_ tab of the product profile you wish to grant access to, then click **Sandboxes**. From here, you can add or remove access to the new sandbox in the same manner as other permissions.
+The Adobe Admin Console links users to sandboxes and permissions through the use of product profiles. After creating a new sandbox, navigate to the **Permissions** tab of the product profile you wish to grant access to, then click **Sandboxes**. From here, you can add or remove access to the new sandbox in the same manner as other permissions.
 
 If you wish to add unique permissions to users of a particular sandbox, you may need to create a new product profile with the appropriate sandboxes and permissions applied, and assign those users to that profile.
 
