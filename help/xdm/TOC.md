@@ -28,6 +28,7 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
   * Event mixins {#event}
     * [ExperienceEvent EndUserIDs](./mixins/event/enduserids.md)
     * [ExperienceEvent environment details](./mixins/event/environment-details.md)
+  * [Mixin name updates](./mixins/name-updates.md)
 * Data types {#data-types}
     * [Beacon](./data-types/beacon.md)
     * [Browser details](./data-types/browser-details.md)
