@@ -9,7 +9,7 @@ type: Tutorial
 
 # Delete dataflows
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for deleting dataflows from the [!UICONTROL Sources] workspace.
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for deleting dataflows from the **[!UICONTROL Sources]** workspace.
 
 ## Getting started
 

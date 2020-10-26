@@ -143,3 +143,9 @@ curl -X DELETE \
 A successful response returns HTTP status 204 (No Content) and a blank body.
 
 You can confirm the deletion by attempting a lookup (GET) request to the connection.
+
+## Next steps
+
+By following this tutorial, you have successfully used the [!DNL Flow Service] API to delete existing accounts.
+
+For steps on how to perform these operations using the user interface, please refer to the tutorial on [deleting accounts in the UI](../../tutorials/ui/delete-accounts.md)
