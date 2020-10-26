@@ -16,8 +16,6 @@ The following table outlines the existing mixins that are being updated, along w
 | --- | --- |
 | [!UICONTROL Consumer ExperienceEvent mixin] | [!UICONTROL Content Consumption Details] |
 | [!UICONTROL Experience event privacy mixin] | [!UICONTROL Privacy Details] |
-| [!UICONTROL ExperienceEvent EndUserIDs] | [!UICONTROL End User ID Details] |
-| [!UICONTROL ExperienceEvent Segment Membership Details] | [!UICONTROL Segment Membership Details] |
 | [!UICONTROL ExperienceEvent application details] | [!UICONTROL Application Details] |
 | [!UICONTROL ExperienceEvent channel details] | [!UICONTROL Channel Details] |
 | [!UICONTROL ExperienceEvent commerce details] | [!UICONTROL Commerce Details] |
@@ -26,9 +24,11 @@ The following table outlines the existing mixins that are being updated, along w
 | [!UICONTROL ExperienceEvent details for media] | [!UICONTROL Media Interaction Details] |
 | [!UICONTROL ExperienceEvent details for search] | [!UICONTROL Search Details] |
 | [!UICONTROL ExperienceEvent direct marketing details] | [!UICONTROL Direct Marketing Details] |
+| [!UICONTROL ExperienceEvent EndUserIDs] | [!UICONTROL End User ID Details] |
 | [!UICONTROL ExperienceEvent environment details] | [!UICONTROL Environment Details] |
 | [!UICONTROL ExperienceEvent implementation details] | [!UICONTROL Implementation Details] |
 | [!UICONTROL ExperienceEvent profile stitch details] | [!UICONTROL Profile Stitch] |
+| [!UICONTROL ExperienceEvent Segment Membership Details] | [!UICONTROL Segment Membership Details] |
 | [!UICONTROL ExperienceEvent technical details] | [!UICONTROL Technical Details] |
 | [!UICONTROL ExperienceEvent web details] | [!UICONTROL Web Details] |
 | [!UICONTROL Profile direct marketing] | [!UICONTROL Direct Marketing Contact Details] |
