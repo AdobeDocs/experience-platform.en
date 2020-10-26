@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;query service;run scheduled qu
 solution: Experience Platform
 title: Query Service developer guide
 topic: runs for scheduled queries
+description: The following sections walks through the various API calls you can make for running scheduled queries with the Query Service API.
 ---
 
 # Runs for scheduled queries

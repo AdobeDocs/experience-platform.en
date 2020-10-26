@@ -8,7 +8,7 @@ description: In order for Intelligent Services to discover insights from your ma
 
 # Prepare data for use in [!DNL Intelligent Services]
 
-In order for [!DNL Intelligent Services] to discover insights from your marketing events data, the data must be semantically enriched and maintained in a standard structure. [!DNL Intelligent Services] leverage [!DNL Experience Data Model] (XDM) schemas in order to achieve this. Specifically, all datasets that are used in [!DNL Intelligent Services] must conform to the **Consumer ExperienceEvent (CEE)** XDM schema. 
+In order for [!DNL Intelligent Services] to discover insights from your marketing events data, the data must be semantically enriched and maintained in a standard structure. [!DNL Intelligent Services] leverage [!DNL Experience Data Model] (XDM) schemas in order to achieve this. Specifically, all datasets that are used in [!DNL Intelligent Services] must conform to the Consumer ExperienceEvent (CEE) XDM schema. 
 
 This document provides general guidance on mapping your marketing events data from multiple channels to this schema, outlining information on important fields within the schema to help you determine how to effectively map your data to its structure.
 
@@ -231,7 +231,7 @@ This field contains information related to marketing activities that are active 
 
 For complete information regarding each of the required sub-fields for `xdm:productListItems`, please refer to the [marketing sechma](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) spec.
 
-## Mapping and ingesting data (#mapping)
+## Mapping and ingesting data {#mapping}
 
 Once you have determined whether your marketing events data can be mapped to the CEE schema, the next step is to determine which data you to bring into [!DNL Intelligent Services]. All historical data used in [!DNL Intelligent Services] must fall within the minimum time window of four months of data, plus the number of days intended as a lookback period.
 

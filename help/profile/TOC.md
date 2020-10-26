@@ -2,7 +2,7 @@
 product: experience-platform
 audience: user
 user-guide-title: Real-time Customer Profile Guide
-user-guide-description: Real-time Customer Profile provides a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third-party data. Profile allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+user-guide-description: Merge customer data to create a unified view of customer interactions across channels.
 ---
 
 # [!DNL Real-time Customer Profile] {#profile}

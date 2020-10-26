@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Decisioning tutorials
 topic: tutorial
+type: Tutorial
 description: Decisioning Service provides the capability to create personalized, optimized, and orchestrated experiences in applications running on Adobe Experience Platform. Using Decisioning Service, you can determine the best option from a set of available choices.
 ---
 

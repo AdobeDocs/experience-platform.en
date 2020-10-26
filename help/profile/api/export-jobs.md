@@ -1,6 +1,5 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-solution: Adobe Experience Platform
 title: Export jobs - Real-time Customer Profile API
 topic: guide
 ---
@@ -430,7 +429,7 @@ curl -X POST \
 
 A successful delete request returns HTTP Status 204 (No Content) and an empty response body, indicating the cancel operation was successful. 
 
-## Next Steps
+## Next steps
 
 Once the export has completed successfully, your data is available within the Data Lake in Experience Platform. You can then use the [Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) to access the data using the `batchId` associated with the export. Depending on the size of the export, the data may be in chunks and the batch may consist of several files.
 

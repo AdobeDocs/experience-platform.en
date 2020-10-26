@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;dataflow;Dataflow
 solution: Experience Platform
 title: Configure a dataflow for a cloud storage batch connector in the UI
 topic: overview
+type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps to configure a new dataflow using your cloud storage account.
 ---
 
@@ -74,7 +75,11 @@ The **[!UICONTROL Select dataset]** dialog appears. Find the dataset you you wis
 
 To ingest data into a new dataset, select **[!UICONTROL New dataset]** and enter a name and description for the dataset in the fields provided. To add a schema, you can enter an existing schema name in the **[!UICONTROL Select schema]** dialog box. Alternatively, you can select the **[!UICONTROL Schema advanced search]** to search for an appropriate schema.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-new-dataset.png)
+During this step, you can enable your dataset for [!DNL Real-time Customer Profile] and create a holistic view of an entity's attributes and behaviors. Data from all enabled datasets will be included in [!DNL Profile] and changes are applied when you save your dataflow.
+
+Toggle the **[!UICONTROL Profile dataset]** button to enable your target dataset for [!DNL Profile].
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/new-dataset.png)
 
 The **[!UICONTROL Select schema]** dialog appears. Select the schema you wish to apply to the new dataset, then select **[!UICONTROL Done]**.
 
@@ -86,9 +91,15 @@ Based on your needs, you can choose to map fields directly, or use mapper functi
 >
 >[!DNL Platform] provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
 
-Once your source data is mapped, select **[!UICONTROL Next]**.
-
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
+
+Select **[!UICONTROL Preview data]** to see mapping results of up to 100 rows of sample data from the selected dataset.
+
+During the preview, the identity column is prioritized as the first field, as it is the key information necessary when validating mapping results.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping-preview.png)
+
+Once your source data is mapped, select **[!UICONTROL Close]**.
 
 ## Schedule ingestion runs
 
@@ -99,7 +110,7 @@ The **[!UICONTROL Scheduling]** step appears, allowing you to configure an inges
 | Frequency | Selectable frequencies include `Once`, `Minute`, `Hour`, `Day`, and `Week`. |
 | Interval | An integer that sets the interval for the selected frequency. |
 | Start time | A UTC timestamp indicating when the very first ingestion is set to occur. |
-| Backfill | A boolean value that determines what data is initially ingested. If **[!UICONTROL Backfill]** is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If **[!UICONTROL Backfill]** is disabled, only the files that are loaded in between the first run of ingestion and the **[!UICONTROL Start time]** will be ingested. Files loaded prior to **[!UICONTROL Start time]** will not be ingested. |
+| Backfill | A boolean value that determines what data is initially ingested. If **[!UICONTROL Backfill]** is enabled, all current files in the specified path will be ingested during the first scheduled ingestion. If **[!UICONTROL Backfill]** is disabled, only the files that are loaded in between the first run of ingestion and the start time will be ingested. Files loaded prior to start time will not be ingested. |
 
 Dataflows are designed to automatically ingest data on a scheduled basis. Start by selecting the ingestion frequency. Next, set the interval to designate the period between two flow runs. The interval's value should be a non-zero integer and should be set to greater than or equal to 15.
 

@@ -49,11 +49,11 @@ Data intended for use in [!DNL Experience Platform] is grouped into two behavior
 * **Record data**: Provides information about the attributes of a subject. A subject could be an organization or an individual.
 * **Time series data**: Provides a snapshot of the system at the time an action was taken either directly or indirectly by a record subject.
 
-All XDM schemas describe data that can be categorized as record or time series. The data behavior of a schema is defined by the schema's **class**, which is assigned to a schema when it is first created. XDM classes are described in further detail later in this document.
+All XDM schemas describe data that can be categorized as record or time series. The data behavior of a schema is defined by the schema's class, which is assigned to a schema when it is first created. XDM classes are described in further detail later in this document.
 
 Both record and time series schemas contain a map of identities (`xdm:identityMap`). This field contains the identity representation of a subject, drawn from fields marked as "Identity" as described in the next section.
 
-### [!UICONTROL Identity]
+### [!UICONTROL Identity] {#identity}
 
 Schemas are used for ingesting data into [!DNL Experience Platform]. This data can be used across multiple services to create a single, unified view of an individual entity. Therefore, it is important when thinking about schemas to think about customer identities and which fields can be used to identify a subject regardless of where the data may be coming from. 
 
@@ -128,7 +128,7 @@ Schemas are composed using the following formula:
 
 **Class + Mixin&ast; = XDM Schema**
 
-&ast;A schema is composed of a class and _zero or more_ mixins. This means that you could compose a dataset schema without using mixins at all.
+&ast;A schema is composed of a class and zero or more mixins. This means that you could compose a dataset schema without using mixins at all.
 
 ### Class {#class}
 
@@ -237,7 +237,12 @@ All datafiles that are ingested into [!DNL Experience Platform] must conform to 
 
 ## Next steps
 
-Now that you understand the basics of schema composition, you are ready to begin building schemas using the [!DNL Schema Registry].
+Now that you understand the basics of schema composition, you are ready to begin exploring and building schemas using the [!DNL Schema Registry].
+
+To review the structure of the two core XDM classes and their commonly used compatible mixins, see the following reference documentation:
+
+* [[!DNL XDM Individual Profile]](../classes/individual-profile.md)
+* [[!DNL XDM ExperienceEvent]](../classes/experienceevent.md)
 
 The [!DNL Schema Registry] is used to access the [!DNL Schema Library] within Adobe Experience Platform, and provides a user interface and RESTful API from which all available library resources are accessible. The [!DNL Schema Library] contains Industry resources defined by Adobe, Vendor resources defined by [!DNL Experience Platform] partners, and classes, mixins, data types, and schemas that have been composed by members of your organization.
 

@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestio
 solution: Experience Platform
 title: Adobe Experience Platform partial batch ingestion overview
 topic: overview
+description: This document provides information on monitoring batch ingestion, managing partial batch ingestion errors, as well as a reference for partial batch ingestion types.
 ---
 
 # Retrieving error diagnostics
@@ -284,7 +285,15 @@ If the batch has one or more errors and has error diagnostics enabled, the respo
 >}
 >```
 
-## Partial batch ingestion error types {#appendix}
+## Next steps {#next-steps}
+
+This tutorial covered how to monitor partial batch ingestion errors. For more information on batch ingestion, please read the [batch ingestion developer guide](../batch-ingestion/api-overview.md).
+
+## Appendix {#appendix}
+
+This section provides supplemental information about ingestion error types.
+
+### Partial batch ingestion error types {#partial-ingestion-types}
 
 Partial batch ingestion has three different error types when ingesting data:
 
@@ -371,7 +380,3 @@ A sample response of retrieving the error file can be seen below:
     "_filename": "parsing_errors_0.json"
 }
 ```
-
-## Next steps {#next-steps}
-
-This tutorial covered how to monitor partial batch ingestion errors. For more information on batch ingestion, please read the [batch ingestion developer guide](../batch-ingestion/api-overview.md).

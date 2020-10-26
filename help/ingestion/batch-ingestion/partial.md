@@ -1,8 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;partial ingestion;Partial ingestion;Retrieve error;retrieve error;Partial batch ingestion;partial batch ingestion;partial;ingestion;Ingestion;
 solution: Experience Platform
-title: Adobe Experience Platform partial batch ingestion overview
+title: Partial batch ingestion overview
 topic: overview
+description: This document provides a tutorial for managing partial batch ingestion.
 ---
 
 # Partial batch ingestion
@@ -113,7 +114,7 @@ The **[!UICONTROL Error diagnostics]** toggle only appears when the **[!UICONTRO
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-The **[!UICONTROL Error threshold]** allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
+**[!UICONTROL Error threshold]** allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
 
 ## Next steps {#next-steps}
 

@@ -16,13 +16,17 @@ seo-description: Google Ads, formerly known as Google AdWords, is an online adve
 
 Note the following details that are specific to [!DNL Google Ads] destinations:
 
-* You can send the following [identities](../../identity-service/namespaces.md) to [!DNL Google Ads] destinations: **Google cookie ID, IDFA, GAID, Roku IDs, Microsoft IDs, Amazon Fire TV IDs**.
+* You can send the following [identities](../../identity-service/namespaces.md) to [!DNL Google Ads] destinations: Google cookie ID, IDFA, GAID, Roku IDs, Microsoft IDs, and Amazon Fire TV IDs.
 * Activated audiences are created programmatically in the [!DNL Google] platform.
 * Adobe Real-time CDP does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand audience targeting size.
 
 >[!IMPORTANT]
 >
 >If you are looking to create your first destination with [!DNL Google Ads] and have not enabled the [ID sync functionality](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up Google integrations in Audience Manager, the ID syncs you had set up carry over to Adobe Real-time CDP.
+
+### Export Type {#export-type}
+
+**Segment Export** - you are exporting all members of a segment (audience) to the Google destination.
 
 ## Prerequisites
 

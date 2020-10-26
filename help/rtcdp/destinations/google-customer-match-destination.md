@@ -33,7 +33,7 @@ To promote the release, they upload email addresses from their CRM database into
 
 The destinations in Adobe Real-time CDP may have certain rules and obligations for data sent to, or received from, the destination platform. You are responsible for understanding the limitations and obligations of your data and how you use that data in Adobe Experience Platform and the destination platform. Adobe Experience Platform provides data governance tools to help you manage some of those data usage obligations. [Learn more](/help/data-governance/labels/overview.md) about data governance tools and policies.
 
-## Activation Type and Identities {#activation-type}
+## Export Type and Identities {#export-type}
 
 **Segment Export** - you are exporting all members of a segment (audience) with the identifiers (name, phone number, etc.) used in the [!DNL Google Customer Match] destination.
 
@@ -112,7 +112,7 @@ If you select to hash the email addresses yourself, make sure to comply with Goo
 
     ![Credentials confirmed](/help/rtcdp/destinations/assets/google-customer-match-connection-success.png)
 
-4. In the **[!UICONTROL Authentication]** step, enter a **[!UICONTROL Name]** and a **[!UICONTROL Description]** for your activation flow and fill your Google the **[!UICONTROL Account ID]**. <br> Also in this step, you can select any **[!UICONTROL Marketing use case]** that should apply to this destination. Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Real-time CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](/help/data-governance/policies/overview.md#core-actions). <br> Select **[!UICONTROL Create Destination]** after you filled in the fields above.
+4. In the **[!UICONTROL Authentication]** step, enter a [!UICONTROL Name] and a [!UICONTROL Description] for your activation flow and fill your Google the [!UICONTROL Account ID]. <br> Also in this step, you can select any **[!UICONTROL Marketing use case]** that should apply to this destination. Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Real-time CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](/help/data-governance/policies/overview.md#core-actions). <br> Select **[!UICONTROL Create Destination]** after you filled in the fields above.
 
     >[!IMPORTANT]
     >

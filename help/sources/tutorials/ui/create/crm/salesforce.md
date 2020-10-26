@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Salesforce;salesforce
 solution: Experience Platform
 title: Create a Salesforce source connector in the UI
 topic: overview
+type: Tutorial
 description: This tutorial provides steps for creating a Salesforce source connector using the Platform user interface.
 ---
 

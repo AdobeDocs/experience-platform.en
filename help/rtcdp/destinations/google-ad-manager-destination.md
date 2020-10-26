@@ -24,6 +24,10 @@ Note the following details that are specific to [!DNL Google Ad Manager] destina
 >
 >If you are looking to create your first destination with [!DNL Google Ad Manager] and have not enabled the [ID sync functionality](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up [!DNL Google] integrations in Audience Manager, the ID syncs you had set up carry over to Adobe Real-time CDP.
 
+### Export Type {#export-type}
+
+**Segment Export** - you are exporting all members of a segment (audience) to the Google destination.
+
 ## Prerequisites
 
 ### Allow list
@@ -38,11 +42,11 @@ Before creating the [!DNL Google Ad Manager] destination in Adobe Real-time CDP,
 * **Customer ID** : this is Adobe's customer account ID with [!DNL Google]. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
 * **Network ID** : this is your account with [!DNL Google Ad Manager]
 * **Audience Link ID** : this is your account with [!DNL Google Ad Manager]
-* Your account type. **DFP by Google** or **AdX buyer**.
+* Your account type. DFP by Google or AdX buyer.
 
 ## Configure destination
 
-1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL Google Ad Manager], and select **[!UICONTROL Configure]**.
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select **[!DNL Google Ad Manager]**, and select **[!UICONTROL Configure]**.
     ![Connect Google Ad Manager destination](/help/rtcdp/destinations/assets/google-1-destination.png)
 
     >[!NOTE]
