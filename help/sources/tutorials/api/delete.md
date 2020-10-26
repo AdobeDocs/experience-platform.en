@@ -15,7 +15,7 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 This tutorial covers the steps for deleting using the [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
-# Getting started
+## Getting started
 
 This tutorial requires you to have a valid connection ID. If you do not have a valid connection ID, select your connector of choice from the [sources overview](../../home.md) and follow the steps outlined before attempting this tutorial.
 
