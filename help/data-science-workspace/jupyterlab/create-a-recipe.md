@@ -60,7 +60,7 @@ Now that you know the basics for the [!DNL JupyterLab] notebook environment, you
 
 ### Requirements file {#requirements-file}
 
-The requirements file is used to declare additional libraries you wish to use in the recipe. You can specify the version number if there is a dependency. To look for additional libraries, visit [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually). The list of main libraries already in use include:
+The requirements file is used to declare additional libraries you wish to use in the recipe. You can specify the version number if there is a dependency. To look for additional libraries, visit [anaconda.org](https://anaconda.org). To learn how to format the requirements file, visit [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually). The list of main libraries already in use include:
 
 ```JSON
 python=3.6.7
