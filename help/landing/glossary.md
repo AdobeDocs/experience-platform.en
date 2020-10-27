@@ -191,12 +191,6 @@ topic: getting started
 
 **Dataset Output:** Dataset output provides a mechanism for determining what the *Create Table as Select* option will be used for a particular [!DNL Query Service] run.
 
-**Decision Event:** A decision event is used to capture observations about the outcome and context of a decision activity. The decision event captures information about how the decision made, when it was occurring, what options were proposed (chosen) and what contextual state existed that either influenced the decision or could be observed during the decision process. The decision event also captures the proposition ID, a globally unique identifier that can be used to correlate the decision to other events.
-
-**Decision Rule:** A decision rule is the logic that defines and controls the what, when, where, and how an offer is presented to end-users.
-
-**Decisioning Service:** The [!DNL Decisioning Service] is collection of services and UI that enables marketers to create and deliver end-user personalized offer experiences across channels and applications using business logic and decision rules.
-
 **Delta Column:** In [!DNL Real-time Customer Data Platform], delta column enables source data field selection for a timestamp for incremental ingestion
 
 **Delta Save Strategy:** `Delta save strategy` is an option for ingesting third-party data via a connection. The option allows the user to specify that new or changed rows of source data are ingested to [!DNL Experience Platform]. New rows are added to the end of the dataset and changed rows are updated in the dataset on [!DNL Experience Platform].
@@ -363,7 +357,7 @@ topic: getting started
 
 **Offer:** An offer is a marketing message that may have rules associated with it, specifying who is eligible to see the offer.
 
-**Offer Decisioning:** Offer decisioning enables a marketer to manage rules and trained models of offer propositions when engaging with an end-user based on data collected across channels and applications.
+**[!DNL Offer Decisioning]:** [!DNL Offer Decisioning] enables a marketer to manage rules and trained models of offer propositions when engaging with an end-user based on data collected across channels and applications.
 
 **Offer Library:** The offer library is a central library used to manage personalized and fallback offers, decision rules, and activities.
 
