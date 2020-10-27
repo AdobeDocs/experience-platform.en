@@ -98,10 +98,10 @@ You can add additional filters by selecting the **filter** icon to open the **[!
 
 ![filter popover](./images/insights/filter-popover.png)
 
-- **Channel:** Selecting the channel attribute allows you to filter any of your available marketing channels. You can select multiple channels to compare them.
-- **Geography:** Selecting the geography attribute allows you to filter country codes based on region-based models. Depending on your data this filter may or may not be present. Country codes are two characters long. A complete list can be found here [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
-- **Media type:** Selecting the Media type attribute allows you to filter any of your defined media types.
-- **Product:** Selecting the product attribute allows you to filter from any products that were initially ingested in the creation of your instance.
+- **[!UICONTROL Channel]:** Selecting the channel attribute allows you to filter any of your available marketing channels. You can select multiple channels to compare them.
+- **[!UICONTROL Geography]:** Selecting the geography attribute allows you to filter country codes based on region-based models. Depending on your data this filter may or may not be present. Country codes are two characters long. A complete list can be found here [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
+- **[!UICONTROL Media type]:** Selecting the media type attribute allows you to filter any of your defined media types.
+- **[!UICONTROL Product]:** Selecting the product attribute allows you to filter from any products that were initially ingested in the creation of your instance.
 
 ### Date Range
 
@@ -143,11 +143,23 @@ The **[!UICONTROL Top campaigns]** card displays an overview of your campaigns a
 
 Selecting the **[!UICONTROL User paths]** tab loads the **[!UICONTROL Breakdown by touchpoint position]** and **[!UICONTROL Most common user paths achieving conversion]** graphs.
 
-The **[!UICONTROL Breakdown by touchpoint position]** is a breakdown of attributed conversions by position of the touchpoint and touchpoint across all the conversion paths. This graph helps compare if a touchpoint contributes better at a position than that of remaining positions and other touchpoints at any position.
+The **[!UICONTROL Breakdown by touchpoint position]** graph is a breakdown of attributed conversions by position of the touchpoint compared across all the conversion paths. This graph helps you understand what touchpoints are more effective in different stages of the conversion path. The stages are starter, player, and closer.
+
+- **Starter:** Indicates the touchpoint was the first touch in a conversion path.
+- **Player:** Indicates the touchpoint was not the first or the last touch leading to a conversion.
+- **Closer:** Indicates the touchpoint was the last touch before a conversion.
 
 >![NOTE]
 >
 > The sum of percentage contribution for an attribution model across all touchpoints and positions would be equal to 100.
+
+![user-path breakdown touchpoint](./images/insights/user-paths.png)
+
+## Most common user paths achieving conversion
+
+The **[!UICONTROL Most common user paths achieving conversion]** graph shows marginal and influenced scores on the most frequent paths in a certain region. This graph allows you to visualize what touchpoints contribute to conversions, and what the attribution score is for each touchpoint. You can use this information to view the most frequent paths in a certain region, and see if any patterns emerge between the different sets of touchpoints.
+
+![Most common user paths](./images/insights/touchpoint-paths.png)
 
 ## Next steps
 
