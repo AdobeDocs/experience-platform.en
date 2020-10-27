@@ -10,7 +10,7 @@ description: A list of recent XDM mixin name changes.
 
 The names of several Experience Data Model (XDM) mixins have changed. Since the field structure of these mixins remains the same, the name changes alone should not affect any existing schemas that employ these mixins. In order to look up and use these mixins in the Adobe Experience Platform user interface, however, their new names must be used.
 
-The following table outlines the existing mixins that are being updated, along with their corresponding new names:
+The following table outlines the existing mixins that have been updated, along with their corresponding new names:
 
 | Previous name | Updated name |
 | --- | --- |
