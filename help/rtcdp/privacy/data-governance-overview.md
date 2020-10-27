@@ -63,9 +63,9 @@ When a segment is first activated, [!DNL Policy Service] checks for policy viola
 
 ### Data lineage {#lineage}
 
-In Real-time CDP, usage policies are enforced based on data lineage. In general terms, data lineage refers to the origin of a set of data, and what happens to it (or where it moves) over time. In the context of Data Governance, data lineage provides an audit trail that indicates where and why a policy violation occurred.
+In Real-time CDP, data lineage plays a key role in how policies are enforced. In general terms, data lineage refers to the origin of a set of data, and what happens to it (or where it moves) over time. In the context of Data Governance, data lineage provides an audit trail that indicates where and why a policy violation occurred.
 
-In Real-time CDP, policy enforcement is concerned with the following data lineage:
+In Real-time CDP, policy enforcement is concerned with the following lineage:
 
 1. Data is ingested into Real-time CDP and stored in **datasets**.
 1. Customer profiles are identified from those datasets and constructed through **merge policies**.
@@ -76,7 +76,7 @@ Each stage in the above timeline represents an entity that may contribute to a p
 
 | Data lineage stage | Role in policy enforcement |
 | --- | --- |
-| Dataset | Datasets contain data usage labels (applied at the dataset or field level) that define which use cases the entire dataset or specific fields can be used for. If a dataset or field is used for a purpose that a policy restricts, a violation will occur. |
+| Dataset | Datasets contain data usage labels (applied at the dataset or field level) that define which use cases the entire dataset or specific fields can be used for. If a dataset or field containing certain labels is used for a purpose that a policy restricts, a violation will occur. |
 | Merge policy | Merge policies define which datasets take precedence when constructing customer profiles. If your merge policies are configured so that datasets with restricted labels are activated to a destination, a policy violation will occur. See the guide on [merge policies](../../profile/ui/merge-policies.md) for more information. |
 | Segment | Segment rules define which attributes should be included from customer profiles. Depending on which fields a segment definition includes, the segment will inherit any applied usage labels for those fields. Activating a segment whose inherited labels are restricted for the target destination's marketing use case will result in a policy violation. |
 | Destination | When setting up a destination, a marketing action (sometimes called a marketing use case) can be defined. This use case correlates to a marketing action as defined in a data usage policy. In other words, the marketing use case you define for a destination determines which data usage policies are applicable to that destination. |
@@ -85,15 +85,19 @@ When policy violations occur, the resulting messages that appear in the UI provi
 
 ### Policy violation messages {#enforcement}
 
-If a policy violation occurs from attempting to activate a segment (or [making edits to an already activated segment](#policy-enforcement-for-activated-segments)) the action is prevented and a popover appears indicating that one or more policies have been violated. Select a policy violation in the popover's left column to display details for that violation.
+If a policy violation occurs from attempting to activate a segment (or [making edits to an already activated segment](#policy-enforcement-for-activated-segments)) the action is prevented and a popover appears indicating that one or more policies have been violated. Once a violation has triggered, the **[!UICONTROL Save]** button is disabled for the entity you are modifying until the appropriate components are updated to comply with data usage policies.
 
-<!-- ![](assets/violation-popover.png) -->
+Select a policy violation in the popover's left column to display details for that violation.
+
+![](assets/governance/violation-policy-select.png)
 
 The violation message provides a summary of the policy that was violated, including the conditions the policy is configured to check for, the specific action that triggered the violation, and a list of possible resolutions for the issue.
 
-A data lineage graph is displayed below the violation summary, allowing you to visualize which datasets, merge policies, segments, and destinations were involved in the policy violation.
+![](assets/governance/violation-summary.png)
 
-The entity that you are currently changing is highlighted in the graph, indicating which point in the flow is causing the violation to occur.
+A data lineage graph is displayed below the violation summary, allowing you to visualize which datasets, merge policies, segments, and destinations were involved in the policy violation. The entity that you are currently changing is highlighted in the graph, indicating which point in the flow is causing the violation to occur.
+
+![](assets/governance/data-lineage.png)
 
 To inspect an entity within the lineage graph, select the entity's name.
 
@@ -101,9 +105,7 @@ You can also use the **[!UICONTROL Filter]** icon to filter the displayed entiti
 
 Select **[!UICONTROL List view]** to display the data lineage as a list. To switch back to the visual graph, select **[!UICONTROL Path view]**.
 
-<!-- ![](assets/data-lineage.png) -->
-
-Once a violation has triggered, the **[!UICONTROL Save]** button is disabled for the entity you are modifying until the appropriate components are updated to comply with data usage policies.
+![](assets/governance/list-view.png)
 
 ### Policy enforcement for activated segments {#policy-enforcement-for-activated-segments}
 
