@@ -161,6 +161,26 @@ The **[!UICONTROL Most common user paths achieving conversion]** graph shows mar
 
 ![Most common user paths](./images/insights/Touchpoint-paths.png)
 
+## Touchpoint effectiveness
+
+Selecting the **[!UICONTROL Touchpoint Effectiveness]** tab loads the **[!UICONTROL Touchpoint effectiveness]** card. This card uses Attribution AI's distribution of data to display information for each touchpoint. The data for this table is only generated for specific periods of time as indicated by the **[!UICONTROL As of]** date in the top-right of the card.
+
+![touchpoint effectiveness select](./images/insights/Touchpoint-effectiveness.png)
+
+You can use the **[!UICONTROL Touchpoint effectiveness]** card information to understand how a touchpoint contributes to a conversion. You an also see how effective each touchpoint is with the following performance metrics:
+
+**Paths touched**: This metric displays a percentage of paths achieving/not achieving conversion for the touchpoint. You will see higher attributed conversions if the ratio of paths (percentage) achieving conversion to paths not achieving conversion is high.
+
+![Paths touched metric](./images/insights/Touchpoint-metrics.png)
+
+**Efficiency measure**: This metric displays stars on a scale of one to five. The scale indicates the relative importance of a touchpoint towards making a conversion.
+
+>[!NOTE]
+>
+>Higher touchpoint volume does not guarantee higher efficiency measure.
+
+**Total volume**: The aggregate number of times a touchpoint was touched by a user. This is inclusive of touchpoints that appear on a path achieving conversion as well as paths not resulting in a conversion.
+
 ## Next steps
 
 Once you have finished filtering the data and are able to display the appropriate information, you have the option to access the scores. For an in-depth guide on how to access your scores, visit the [access scores in Attribution AI](./download-scores.md) tutorial. Additionally, you can also download your summary data as indicated in [more actions](#more-actions). Selecting "Download summary data" downloads the summary data aggregated by dates.
