@@ -99,7 +99,7 @@ A data lineage graph is displayed below the violation summary, allowing you to v
 
 ![](assets/governance/data-lineage.png)
 
-You can also use the **[!UICONTROL Filter]** icon to filter the displayed entities by category. At least two categories must be selected in order for data to be displayed.
+You can also use the **[!UICONTROL Filter]** icon (![](./assets/governance/filter.png)) to filter the displayed entities by category. At least two categories must be selected in order for data to be displayed.
 
 ![](assets/governance/lineage-filter.png)
 
