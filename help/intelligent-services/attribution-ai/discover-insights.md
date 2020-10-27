@@ -159,7 +159,7 @@ The **[!UICONTROL Breakdown by touchpoint position]** graph is a breakdown of at
 
 The **[!UICONTROL Most common user paths achieving conversion]** graph shows marginal and influenced scores on the most frequent paths in a certain region. This graph allows you to visualize what touchpoints contribute to conversions, and what the attribution score is for each touchpoint. You can use this information to view the most frequent paths in a certain region, and see if any patterns emerge between the different sets of touchpoints.
 
-![Most common user paths](./images/insights/touchpoint-paths.png)
+![Most common user paths](./images/insights/Touchpoint-paths.png)
 
 ## Next steps
 
