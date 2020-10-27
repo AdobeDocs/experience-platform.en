@@ -1,5 +1,6 @@
 ---
 product: experience-platform
+solution: Experience Platform, Data Collection
 audience: user
 user-guide-title: Adobe Experience Platform Web SDK Help
 breadcrumb-title: Web SDK Guide
