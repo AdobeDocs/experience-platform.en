@@ -2,8 +2,8 @@
 keywords: advertising; bing; 
 title: Microsoft Bing Destination
 seo-title: The Microsoft Bing destination helps you send profile data to Microsoft Display Advertising.
-description: Microsoft Bing Ads execute retargeting and audience targeted digital campaigns across Microsoft Display Advertising.
-seo-description: Microsoft Bing Ads execute retargeting and audience targeted digital campaigns across Microsoft Display Advertising.
+description: With the Microsoft Bing destination, you can execute retargeting and audience targeted digital campaigns across Microsoft Display Advertising.
+seo-description: With the Microsoft Bing destination, you can execute retargeting and audience targeted digital campaigns across Microsoft Display Advertising.
 ---
 
 # [!DNL Microsoft Bing] Destination 
@@ -15,7 +15,6 @@ The [!DNL Microsoft Bing] destination helps you send profile data to [!DNL Micro
 To send profile data to [!DNL Microsoft Bing], you must first connect to the destination.
 
 ## Use Cases {#use-cases}
-
 
 ## Export Type {#export-type}
 
@@ -41,9 +40,9 @@ To send profile data to [!DNL Microsoft Bing], you must first connect to the des
 
     ![Microsoft Bing Destination Authentication](assets/bing-destination-authentication.png)
     
-1. Click **[!UICONTROL Create destination]**.
+2. Click **[!UICONTROL Create destination]**. Your destination is now created. You can click [!UICONTROL Save & Exit] if you want to activate segments later on, or you can click [!UICONTROL Next] to continue the workflow and select segments to activate. In either case, see the next section, [Activate Segments](#activate-segments), for the rest of the workflow.
 
-## Activate Segments
+## Activate Segments {#activate-segments}
 
 See [Activate profiles and segments to a destination](activate-destinations.md#select-attributes) for information about the segment activation workflow.
 
