@@ -45,9 +45,9 @@ To send profile data to [!DNL The Trade Desk], you must first connect to the des
 
     ![The Trade Desk Authentication Step](assets/tradedesk-destination-authentication.png)
 
-3. Click **[!UICONTROL Create destination]**.
+3. Click **[!UICONTROL Create destination]**. Your destination is now created. You can click [!UICONTROL Save & Exit] if you want to activate segments later, or you can select [!UICONTROL Next] to continue the workflow and select segments to activate. In either case, see the next section, [Activate Segments](#activate-segments), for the rest of the workflow.
 
-## Activate Segments
+## Activate Segments {#activate-segments}
 
 See [Activate profiles and segments to a destination](activate-destinations.md#select-attributes) for information about the segment activation workflow.
 
