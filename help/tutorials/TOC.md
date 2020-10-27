@@ -14,7 +14,6 @@ type: Tutorials
 * [Access Platform data](data-access.md)
 * [Data governance and privacy](data-governance-privacy.md)
 * [Data Science Workspace](data-science-workspace.md)
-* [Decisioning](decisioning.md)
 * [Destinations](destinations-tutorials.md)
 * [Ingest data into Platform](data-ingestion.md)
 * [Profiles and Identities](configure-profile.md)
