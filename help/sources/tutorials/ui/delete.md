@@ -57,7 +57,6 @@ After a few moments, a green confirmation box appears on the bottom of the scree
 
 ## Next steps
 
-By following this tutorial, you have successfully accessed existing accounts and dataflows from the **[!UICONTROL Sources]** workspace. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have successfully used the **[!UICONTROL Sources]** workspace to delete existing dataflows.
 
-- [[!DNL Real-time Customer Profile] overview](../../../profile/home.md)
-- [[!DNL Data Science Workspace] overview](../../../data-science-workspace/home.md)
+For steps on how to perform these operations programmatically using the [!DNL Flow Service] API, please refer to the tutorial on [deleting connections using the Flow Service API](../../tutorials/api/delete.md)
