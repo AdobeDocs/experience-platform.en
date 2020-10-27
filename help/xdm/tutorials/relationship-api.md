@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Define a relationship between two schemas using the Schema Registry API
 description: This document provides a tutorial for defining a one-to-one relationship between two schemas defined by your organization using the Schema Registry API.
 topic: tutorial
-type: Tutorials
+type: Tutorial
 ---
 
 # Define a relationship between two schemas using the [!DNL Schema Registry] API
