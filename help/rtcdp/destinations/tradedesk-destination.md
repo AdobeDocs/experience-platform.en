@@ -22,7 +22,6 @@ To send profile data to [!DNL The Trade Desk], you must first connect to the des
 
 **[!DNL Segment Export]** - you are exporting all members of a segment (audience) to the destination.
 
-
 ## Connect to Destination {#connect-destination}
 
 1.  In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL The Trade Desk], and select **[!UICONTROL Configure]**.
