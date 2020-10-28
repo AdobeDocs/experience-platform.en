@@ -130,6 +130,10 @@ A successful response returns HTTP status 201 (Created) and the details of the n
 
 The following section outlines how to make privacy requests for the [!DNL Data Lake] using the [!DNL Privacy Service] UI or API.
 
+>[!IMPORTANT]
+>
+>The amount of time a privacy request can take to complete cannot be guaranteed. If changes occur within the Data Lake while a request is still processing, whether or not those records are processed also cannot be guaranteed.
+
 ### Using the UI
 
 When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data Lake]** and/or **[!UICONTROL Profile]** under **[!UICONTROL Products]** in order to process jobs for data stored in the [!DNL Data Lake] or [!DNL Real-time Customer Profile], respectively.
