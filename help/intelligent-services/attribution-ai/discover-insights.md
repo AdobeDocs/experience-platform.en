@@ -55,7 +55,7 @@ The edit dialog box appears, allowing you to edit the name, description, and sco
 
 ### More actions {#more-actions}
 
-The **[!UICONTROL More actions]** button is located in the top-right navigation next to *Edit*. Selecting **[!UICONTROL More actions]** opens a dropdown that allows you to select one of the following operations:
+The **[!UICONTROL More actions]** button is located in the top-right navigation next to **[!UICONTROL Edit]**. Selecting **[!UICONTROL More actions]** opens a dropdown that allows you to select one of the following operations:
 
 - **[!UICONTROL Clone]**: Clones the instance.
 - **[!UICONTROL Delete]**: Deletes the instance.
@@ -100,7 +100,7 @@ You can add additional filters by selecting the **filter** icon to open the **[!
 ![filter popover](./images/insights/filter-popover.png)
 
 - **[!UICONTROL Channel]:** Selecting the channel attribute allows you to filter any of your available marketing channels. You can select multiple channels to compare them.
-- **[!UICONTROL Geography]:** Selecting the geography attribute allows you to filter country codes based on region-based models. Depending on your data this filter may or may not be present. Country codes are two characters long. A complete list can be found here [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
+- **[!UICONTROL Geography]:** Selecting the geography attribute allows you to filter country codes based on region-based models. Depending on your data, this filter may or may not be present. Country codes are two characters long. See the complete country code list [here](https://datahub.io/core/country-list).
 - **[!UICONTROL Media type]:** Selecting the media type attribute allows you to filter any of your defined media types.
 - **[!UICONTROL Product]:** Selecting the product attribute allows you to filter from any products that were initially ingested in the creation of your instance.
 
@@ -130,7 +130,7 @@ Hovering over the data line of a specific attribution model creates a popover th
 
 The **[!UICONTROL Breakdown by channel]** card is used to determine the total number of conversions in relation to each channel. This card can be used to help make decisions on the effectiveness of each channel and the return on investment.
 
-Selecting the ellipses in the top-right of the **[!UICONTROL Breakdown by channel]** card opens a drop down allowing you to populate data based on touchpoints.
+Selecting the ellipses in the top-right of the **[!UICONTROL Breakdown by channel]** card opens a dropdown allowing you to populate data based on touchpoints.
 
 ![breakdown channel](./images/insights/channel-breakdown.png)
 
@@ -152,13 +152,13 @@ The **[!UICONTROL Breakdown by touchpoint position]** graph is a breakdown of at
 
 >![NOTE]
 >
-> The sum of percentage contribution for an attribution model across all touchpoints and positions would be equal to 100.
+> The sum of percentage contribution for an attribution model across all touchpoints and positions should be equal to 100.
 
 ![user-path breakdown touchpoint](./images/insights/user-paths.png)
 
 ## Most common user paths achieving conversion
 
-The **[!UICONTROL Most common user paths achieving conversion]** graph shows marginal and influenced scores on the most frequent paths in a certain region. This graph allows you to visualize what touchpoints contribute to conversions, and what the attribution score is for each touchpoint. You can use this information to view the most frequent paths in a certain region, and see if any patterns emerge between the different sets of touchpoints.
+The **[!UICONTROL Most common user paths achieving conversion]** graph shows marginal and influenced scores on the most frequent paths in a certain region. This graph allows you to visualize what touchpoints contribute to conversions and what the attribution score is for each touchpoint. You can use this information to view the most frequent paths in a certain region and see if any patterns emerge between the different sets of touchpoints.
 
 ![Most common user paths](./images/insights/Touchpoint-paths.png)
 

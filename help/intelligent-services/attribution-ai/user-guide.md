@@ -29,7 +29,7 @@ Service instances can be edited, cloned, and deleted by using the controls on th
 
 - **[!UICONTROL Edit]**: Selecting **[!UICONTROL Edit]** allows you to modify an existing service instance. You can edit the name, description, status, and scoring frequency of the instance.
 - **[!UICONTROL Clone]**: Selecting **[!UICONTROL Clone]** copies the selected service instance. You can then modify the workflow to make minor tweaks and rename it as a new instance.
-- **[!UICONTROL Delete]**: You can Delete a service instance including any historical runs.
+- **[!UICONTROL Delete]**: You can delete a service instance including any historical runs.
 - **[!UICONTROL Data source]**: A link to the dataset being used by this instance.
 - **[!UICONTROL Last run details]**: This is only displayed when a run fails. Information on why the run failed such as error codes are displayed here.
 
