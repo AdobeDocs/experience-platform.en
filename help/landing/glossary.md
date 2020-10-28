@@ -423,7 +423,7 @@ topic: getting started
 
 **Real-time Customer Data Platform:** Adobe's [!DNL Real-time Customer Data Platform] brings together known and unknown customer data to create trusted customer profiles with simplified integration, intelligent segmentation, and real-time activation across the digital customer journey.
 
-**Real-time Customer Profile (Profile):**{#rtcp} Not to be confused with a [profile](#profile), [!DNL Real-time Customer Profile] is a centralized profile for targeted and personalized experience management and provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+**Real-time Customer Profile:**{#rtcp} Not to be confused with a generic [profile](#profile), [!DNL Real-time Customer Profile], often referred to as "Profile", is a generic lookup entity store that merges data from various enterprise data assets, and then provides access to that data in the form of individual customer profiles and related time series events. This feature enables marketers to drive coordinated, consistent and relevant experiences with their audiences across multiple channels.
 
 **Recipe:** A recipe is Adobe's term for a model specification and is a top-level container representing a specific machine learning, AI algorithm or ensemble of algorithms, processing logic, and configuration required to build and execute a trained model and hence help solve specific business problems.
 
