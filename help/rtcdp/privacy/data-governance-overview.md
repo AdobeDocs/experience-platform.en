@@ -70,7 +70,7 @@ In the context of [!DNL Data Governance], lineage enables data usage labels to p
 In Real-time CDP, policy enforcement is concerned with the following lineage:
 
 1. Data is ingested into Real-time CDP and stored in **datasets**.
-1. Customer profiles are identified and constructed from those datasets, with dataset precedence determined by **merge policies**.
+1. Customer profiles are identified and constructed from those datasets by merging data fragments according to the **merge policy**.
 1. Groups of profiles are divided into **segments** based on common attributes.
 1. Segments are activated to downstream **destinations**.
 
@@ -79,7 +79,7 @@ Each stage in the above timeline represents an entity that may contribute to a p
 | Data lineage stage | Role in policy enforcement |
 | --- | --- |
 | Dataset | Datasets contain data usage labels (applied at the dataset or field level) that define which use cases the entire dataset or specific fields can be used for. Policy violations will occur if a dataset or field containing certain labels is used for a purpose that a policy restricts. |
-| Merge policy | Merge policies define which datasets take precedence when constructing customer profiles. Policy violations will occur if your merge policies are configured so that datasets with restricted labels are activated to a destination. See the guide on [merge policies](../../profile/ui/merge-policies.md) for more information. |
+| Merge policy | Merge policies are the rules that Platform uses to determine how data will be prioritized when merging together fragments from multiple datasets. Policy violations will occur if your merge policies are configured so that datasets with restricted labels are activated to a destination. See the guide on [merge policies](../../profile/ui/merge-policies.md) for more information. |
 | Segment | Segment rules define which attributes should be included from customer profiles. Depending on which fields a segment definition includes, the segment will inherit any applied usage labels for those fields. Policy violations will occur if you activate a segment whose inherited labels are restricted by the target destination's applicable policies, based on its marketing use case. |
 | Destination | When setting up a destination, a marketing action (sometimes called a marketing use case) can be defined. This use case correlates to a marketing action as defined in a data usage policy. In other words, the marketing use case you define for a destination determines which data usage policies are applicable to that destination. Policy violations will occur if you activate a segment whose usage labels are restricted by the target destination's applicable policies. |
 
