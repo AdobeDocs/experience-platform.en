@@ -14,7 +14,6 @@ The following table outlines the existing mixins that have been updated, along w
 
 | Previous name | Updated name |
 | --- | --- |
-| [!UICONTROL Consumer ExperienceEvent mixin] | [!UICONTROL Content Consumption Details] |
 | [!UICONTROL Experience event privacy mixin] | [!UICONTROL Privacy Details] |
 | [!UICONTROL ExperienceEvent application details] | [!UICONTROL Application Details] |
 | [!UICONTROL ExperienceEvent channel details] | [!UICONTROL Channel Details] |
@@ -37,7 +36,7 @@ The following table outlines the existing mixins that have been updated, along w
 | [!UICONTROL Profile Phones] | [!UICONTROL Phone Number Details] |
 | [!UICONTROL Profile preferences details] | [!UICONTROL Preference Details] |
 | [!UICONTROL Profile privacy] | [!UICONTROL Privacy Details] |
-| [!UICONTROL Profile push details] | [!UICONTROL Push Notification Details] |
+| [!UICONTROL Profile push details] | [!UICONTROL Push Notification Token Details] |
 | [!UICONTROL Profile segmentation] | [!UICONTROL Segment Membership Details] |
 | [!UICONTROL Profile subscriptions] | [!UICONTROL Subscription Details] |
 | [!UICONTROL Profile work details] | [!UICONTROL Work Contact Details] |
