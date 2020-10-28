@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Define a relationship between two schemas using the Schema Schema Editor
 description: This document provides a tutorial for defining a relationship between two schemas using the Schema Editor in the Experience Platform user interface.
 topic: tutorial
-type: Tutorials
+type: Tutorial
 ---
 
 # Define a relationship between two schemas using the [!DNL Schema Editor]
