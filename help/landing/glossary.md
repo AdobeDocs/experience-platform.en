@@ -11,9 +11,9 @@ topic: getting started
 
 **Access control:** {#access-control} Access control for [!DNL Experience Platform] links users with access permissions and sandbox environments through product profiles in Adobe Admin Console.
 
-**Access key ID:** Access key ID is a unique identifier that's associated with an [!DNL Amazon] S3 secret access key. The access key ID and secret access key are used together to sign AWS requests.
+**Access key ID:** An access key ID is a unique identifier that's associated with an [!DNL Amazon] S3 secret access key. The access key ID and secret access key are used together to sign AWS requests.
 
-**Action:** In [!DNL Experience Platform Launch], an action is a specific type of rule component that defines what should happen after an event occurs and conditions are evaluated and passed.
+**Action:** In [!DNL Adobe Experience Platform Launch], an action is a specific type of rule component that defines what should happen after an event occurs and conditions are evaluated and passed.
 
 **Activate:** In [!DNL Real-time Customer Data Platform], activate is the action taken by a user to map a segment or profiles to a destination such as [!DNL Oracle Eloqua], [!DNL Google], or [!DNL Salesforce Marketing Cloud].
 
@@ -71,17 +71,17 @@ topic: getting started
 
 **Backfill:** In [!DNL Real-time Customer Data Platform], in scheduled source connections, backfill enables ingestion of historical data.
 
-**Backfill period:** `Backfill period` is an option to set the length of time for ingesting third-party historical data via a connection. Selecting a backfill period of forever will ingest the entire history of the source data to [!DNL Experience Platform].
+**Backfill period:** The `Backfill period` is an option to set the length of time for ingesting third-party historical data via a connection. Selecting a backfill period of forever will ingest the entire history of the source data to [!DNL Experience Platform].
 
-**Batch:** Batch is a set of data collected over a period of time and processed together as a single unit.
+**Batch:** A batch is a set of data collected over a period of time and processed together as a single unit.
 
-**Batch ID:** Batch ID is an Adobe-generated identifier for a batch of data.
+**Batch ID:** A batch ID is an Adobe-generated identifier for a batch of data.
 
 **Batch ingestion:** Batch ingestion allows users to ingest petabytes of data and make it available within enterprise systems. With the latest technologies, users can now ingest any schema XDM and non-XDM into [!DNL Experience Platform].
 
 **Batch segmentation:** Batch segmentation is an alternative to an ongoing data selection process and moves all profile data at once through segment definitions to produce corresponding audiences. Once created, this segment is saved and stored so it can be exported for use.
 
-**Build:** In [!DNL Experience Platform Launch], a build is a deployed library. The build is a file or set of files that contain all the configurations and code needed to execute the business logic contained inside of that library.
+**Build:** In [!DNL Adobe Experience Platform Launch], a build is a deployed library. The build is a file or set of files that contain all the configurations and code needed to execute the business logic contained inside of that library.
 
 **Business intelligence tools:** Business intelligence, also known as "BI" tools are primarily integrated with the [!DNL Experience Platform Query Service]. BI tools are types of application software that collect and process large amounts of unstructured data from internal and external systems.
 
@@ -101,7 +101,7 @@ topic: getting started
 
 **Combine with PII marketing action** A marketing action that combines any personally identifiable information (PII) with anonymous data. Contracts for data sourced from ad networks, ad servers, and third-party data providers often include specific contractual prohibitions on the use of such data with directly identifiable data.
 
-**Command-line interface:** Command-line interface is a command line tool used to connect to [!DNL Query Service] for raw query execution.
+**Command-line interface:** A command-line interface is a command line tool used to connect to [!DNL Query Service] for raw query execution.
 
 **Composition**: A composition is a grouping of components that form together to make up the schema.
 
@@ -109,31 +109,31 @@ topic: getting started
 
 **Connector:** Adobe Experience Platform Source connectors help users easily ingest data from multiple sources, allowing the structuring, labeling and enhancement of data using [!DNL Experience Platform Services]. Data can be ingested from a variety of sources such as cloud-based storage, third party software, and CRM systems.
 
-**Condition:** In [!DNL Experience Platform Launch], a condition is a rule component that evaluates a logical statement that must return `true` or `false`. All conditions must evaluate to `true` and all exception conditions must evaluate to `false` before any actions on the rule are executed.
+**Condition:** In [!DNL Adobe Experience Platform Launch], a condition is a rule component that evaluates a logical statement that must return `true` or `false`. All conditions must evaluate to `true` and all exception conditions must evaluate to `false` before any actions on the rule are executed.
 
 **Console:** In [!DNL Query Service], the console provides information on the status and operation of a Query. The console displays the connection status to [!DNL Query Service], query operations being executed, and any error messages that result from those queries.
 
 **Contract data "C" labels:** Contract `C` labels are used to categorize data that has contractual obligations or is related to a customer's data governance policies.
 
-**C1 contract label:** `C1` contract data governance label specifies data can only be exported from Adobe Experience Cloud in an aggregated form without including individual or device identifiers. For example, data that originated from social networks.
+**C1 contract label:** A `C1` contract data usage label specifies data can only be exported from Adobe Experience Cloud in an aggregated form without including individual or device identifiers. For example, data that originated from social networks.
 
-**C2 contract label:** `C2` contract data governance label specifies data that cannot be exported to a third-party. Some data providers have terms in their contracts that prohibit the export of data from where it was originally collected.  For example, social networks contracts often restrict the transfer of data you receive from them. C2 is more restrictive than C1, which only requires aggregation and anonymous data.
+**C2 contract label:** A `C2` contract data usage label specifies data that cannot be exported to a third-party. Some data providers have terms in their contracts that prohibit the export of data from where it was originally collected.  For example, social networks contracts often restrict the transfer of data you receive from them. C2 is more restrictive than C1, which only requires aggregation and anonymous data.
 
-**C3 contract label:** `C3` contract data governance label specifies data that cannot be combined or otherwise used with directly identifiable information. Some data providers have terms in their contracts that prohibit the combination or use of that data with directly identifiable information.  For example, contracts for data sourced from ad networks, ad servers, and third-party data providers often include specific contractual prohibitions on the use of directly identifiable data.
+**C3 contract label:** A `C3` contract data usage label specifies data that cannot be combined or otherwise used with directly identifiable information. Some data providers have terms in their contracts that prohibit the combination or use of that data with directly identifiable information.  For example, contracts for data sourced from ad networks, ad servers, and third-party data providers often include specific contractual prohibitions on the use of directly identifiable data.
 
-**C4 contract label:** `C4` contract data governance label specifies data cannot be used for targeting any ads or content, either on-site or cross-site. C4 is the most restrictive label as it encompasses C5, C6, and C7 labels.
+**C4 contract label:** A `C4` contract data usage label specifies data cannot be used for targeting any ads or content, either on-site or cross-site. C4 is the most restrictive label as it encompasses C5, C6, and C7 labels.
 
-**C5 contract label:** `C5` contract data governance label specifies data cannot be used for interest-based, cross-site targeting of content or ads. Interest-based targeting, or personalization, occurs if the following three conditions are met:  The data collected on-site is used to make inferences about a user's interest, is used in another context, such as on another site or app and is used to select which content or ads are served based on those inferences.
+**C5 contract label:** A `C5` contract data usage label specifies data cannot be used for interest-based, cross-site targeting of content or ads. Interest-based targeting, or personalization, occurs if the following three conditions are met:  The data collected on-site is used to make inferences about a user's interest, is used in another context, such as on another site or app and is used to select which content or ads are served based on those inferences.
 
-**C6 contract label:** `C6` contract data governance label specifies data cannot be used for on-site ad targeting. Data cannot be used for on-site ad targeting, including the selection and delivery of advertisements on your organization’s websites or apps or to measure the delivery and effectiveness of such advertisements.  This includes using previously collected on-site data about the users’ interest to select ads, process data about what advertisements were shown, when and where they were shown, and whether the users took any action related to the advertisement, such as clicking an ad or making a purchase.
+**C6 contract label:** A `C6` contract data usage label specifies data cannot be used for on-site ad targeting. Data cannot be used for on-site ad targeting, including the selection and delivery of advertisements on your organization’s websites or apps or to measure the delivery and effectiveness of such advertisements.  This includes using previously collected on-site data about the users’ interest to select ads, process data about what advertisements were shown, when and where they were shown, and whether the users took any action related to the advertisement, such as clicking an ad or making a purchase.
 
-**C7 contract label:** `C7` contract data governance label specifies data cannot be used for on-site targeting of content.  Data cannot be used for on-site content targeting, including the selection and delivery of content on your organization’s websites or apps or to measure the delivery and effectiveness of such content.  This includes previously collected information about users’ interest to select content, processing data about what content was shown, how often or how long it was shown, when and where it was shown, and whether the uses took any actions related to the content, including for example clicking on content.
+**C7 contract label:** A `C7` contract data usage label specifies data cannot be used for on-site targeting of content.  Data cannot be used for on-site content targeting, including the selection and delivery of content on your organization’s websites or apps or to measure the delivery and effectiveness of such content.  This includes previously collected information about users’ interest to select content, processing data about what content was shown, how often or how long it was shown, when and where it was shown, and whether the uses took any actions related to the content, including for example clicking on content.
 
-**C8 contract label:** `C8` contract data governance label specifies data cannot be used for measurement of your organization’s websites or apps. Data cannot be used to measure, understand, and report on users’ usage of your organization’s sites or apps. This does not include interest-based targeting, which is the collection of information about your use of this service to subsequently personalize content and/or advertising in other contexts.
+**C8 contract label:** A `C8` contract data usage label specifies data cannot be used for measurement of your organization’s websites or apps. Data cannot be used to measure, understand, and report on users’ usage of your organization’s sites or apps. This does not include interest-based targeting, which is the collection of information about your use of this service to subsequently personalize content and/or advertising in other contexts.
 
-**C9 contract label:** `C9` contract data governance label specifies data cannot be used in Data Science workflows. Some contracts include explicit prohibitions on data used for data science.  Sometimes these are phrased in terms that prohibit the use of data for artificial intelligence (AI), machine-learning (ML), or modeling.
+**C9 contract label:** A `C9` contract data usage label specifies data cannot be used in Data Science workflows. Some contracts include explicit prohibitions on data used for data science.  Sometimes these are phrased in terms that prohibit the use of data for artificial intelligence (AI), machine-learning (ML), or modeling.
 
-**C10 contract label:** `C10` contract data governance label specifies data data cannot be used for stitched identity activation. Some data usage policies restrict the use of stitched identity data for personalization. The C10 label is automatically applied to segments if their merge policies use the "private graph" option.
+**C10 contract label:** A `C10` contract data usage label specifies data data cannot be used for stitched identity activation. Some data usage policies restrict the use of stitched identity data for personalization. The C10 label is automatically applied to segments if their merge policies use the "private graph" option.
 
 **Created Date column:** Selecting a `Created Date` column is an option when specifying third-party data via a connection. When the append save strategy is selected and the dataset contains a multiple dates related schema, the user must choose from the available date/time schema to specify a `Created Date` key column. `Created Date` option is not available when the overwrite save strategy is selected.
 
@@ -153,11 +153,11 @@ topic: getting started
 
 ## D
 
-**Data dictionary:** In [!DNL Experience Platform Launch], a data dictionary is a set of data elements defined within a property.
+**Data dictionary:** In [!DNL Adobe Experience Platform Launch], a data dictionary is a set of data elements defined within a property.
 
-**Data element:** In [!DNL Experience Platform Launch], a data element is a pointer used within rules and extensions to point to a specific piece of data that exists on the client device.
+**Data element:** In [!DNL Adobe Experience Platform Launch], a data element is a pointer used within rules and extensions to point to a specific piece of data that exists on the client device.
 
-**Data layer:** In [!DNL Experience Platform Launch], a data layer is a data structure that exists on the client device that contains metadata about the context in which a page or screen is viewed.
+**Data layer:** In [!DNL Adobe Experience Platform Launch], a data layer is a data structure that exists on the client device that contains metadata about the context in which a page or screen is viewed.
 
 **Data mapping:** Data mapping is the process of mapping source data fields to destination related target fields.
 
@@ -181,7 +181,7 @@ topic: getting started
 
 **Dataflow:** In [!DNL Real-time Customer Data Platform], a dataflow is a virtual pipeline of data that flows into [!DNL Platform] from a source and out to destinations. 
 
-**Dataflow run:** Dataflow run is a dataflow that lands in Experience Platform based on a user specified schedule.
+**Dataflow run:** A dataflow run is a dataflow that lands in Experience Platform based on a user specified schedule.
 
 **Dataset:** A dataset is a storage and management construct for a collection of data, typically a table, that contains schema (columns) and fields (rows).
 
@@ -191,7 +191,7 @@ topic: getting started
 
 **Delta column:** In [!DNL Real-time Customer Data Platform], delta column enables source data field selection for a timestamp for incremental ingestion
 
-**Delta save strategy:** `Delta save strategy` is an option for ingesting third-party data via a connection. The option allows the user to specify that new or changed rows of source data are ingested to [!DNL Experience Platform]. New rows are added to the end of the dataset and changed rows are updated in the dataset on [!DNL Experience Platform].
+**Delta save strategy:** The `Delta save strategy` is an option for ingesting third-party data via a connection. The option allows the user to specify that new or changed rows of source data are ingested to [!DNL Experience Platform]. New rows are added to the end of the dataset and changed rows are updated in the dataset on [!DNL Experience Platform].
 
 **Destination:** In [!DNL Real-time Customer Data Platform] a destination is a general term for any endpoint, such as an Adobe application, advertising platform, cloud storage service, or marketing service, where an audience is activated and delivered.
 
@@ -199,9 +199,9 @@ topic: getting started
 
 **Destination catalog:** A destination catalog is a list of available destinations in the [!DNL Real-time Customer Data Platform].
 
-**Direct call rules:** in [!DNL Experience Platform Launch], you can set up a direct call rule that executes when it is called directly from the page. If your page load or your action on your site is very simple, or if it is unique and can execute a specific set of instructions every time (set [!DNL eVar4] to X and trigger [!DNL event2] every time), then you can use a direct call rule. See [!DNL Launch] documentation regarding creating direct call rules.
+**Direct call rules:** In [!DNL Adobe Experience Platform Launch], you can set up a direct call rule that executes when it is called directly from the page. If your page load or your action on your site is very simple, or if it is unique and can execute a specific set of instructions every time (set [!DNL eVar4] to X and trigger [!DNL event2] every time), then you can use a direct call rule. See [!DNL Launch] documentation regarding creating direct call rules.
 
-**Display name:** Display name is a user-friendly name of a field that is shown in the UI.
+**Display name:** The display name is a user-friendly name of a field that is shown in the UI.
 
 [Back to top](#adobe-experience-platform-glossary)
 
@@ -213,15 +213,15 @@ topic: getting started
 
 **Email targeting marketing action** A marketing action that uses data in email targeting campaigns.
 
-**Embed code:** In [!DNL Experience Platform Launch], the embed code is a script tag placed within the HTML on a site or environment. The embed code instructs the browser where to retrieve the build.
+**Embed code:** In [!DNL Adobe Experience Platform Launch], the embed code is a script tag placed within the HTML on a site or environment. The embed code instructs the browser where to retrieve the build.
 
-**Enumeration:** An enum is a list of values that represent the valid data for a field.
+**Enumeration:** An enumeration (enum) is a list of values that represent the valid data for a field.
 
-**Environment:** In [!DNL Experience Platform Launch], an environment is a set of deployment instructions that specifies the host delivery and file format of a build. A library must be paired with an environment before it can be built.
+**Environment:** In [!DNL Adobe Experience Platform Launch], an environment is a set of deployment instructions that specifies the host delivery and file format of a build. A library must be paired with an environment before it can be built.
 
 **Error diagnostics:** Error diagnostics enables the generation of detailed error messages for ingested batches. The Error threshold enables the configuration of the percentage of acceptable errors before the entire batch will fail.
 
-**Event** In [!DNL Experience Platform Launch], an event is a specific type of rule component, a trigger that occurs on a client device to begin the execution of a rule.
+**Event** In [!DNL Adobe Experience Platform Launch], an event is a specific type of rule component, a trigger that occurs on a client device to begin the execution of a rule.
 
 **Events:** Events are the behavior data associated with a profile.
 
@@ -231,11 +231,11 @@ topic: getting started
 
 **Experiments:** Experiments is the process of applying a trained model to a small portion of the live production data to validate its performance. This is different from a trained model that is tested against a holdout test dataset. This is also different from the concept of an Experiment in some ML frameworks where it actually means a sample modeling project.
 
-**ExperienceEvent:** ExperienceEvent is an [!DNL Experience Platform] standard schema that captures observations, including the point in time and identity of the subject involved. Experience Events are fact records of what occurred, representing what happened without aggregation or interpretation.
+**ExperienceEvent:** An ExperienceEvent is an [!DNL Experience Platform] standard schema that captures observations, including the point in time and identity of the subject involved. Experience Events are fact records of what occurred, representing what happened without aggregation or interpretation.
 
-**Extension:** In [!DNL Experience Platform Launch], an extension is a package of functionality added to a [!DNL Platform Launch] property.  An extension is usually focused around a particular marketing or analytics solution and provides the tools needed to deploy that technology into a client environment.
+**Extension:** In [!DNL Adobe Experience Platform Launch], an extension is a package of functionality added to a [!DNL Platform Launch] property.  An extension is usually focused around a particular marketing or analytics solution and provides the tools needed to deploy that technology into a client environment.
 
-**Extension package:** In [!DNL Experience Platform Launch], an extension package is a .zip file created and uploaded by an extension developer that provides everything necessary for [!DNL Platform Launch] users to install the extension inside their property.  An extension package contains a manifest specifying information about the extension, HTML, and JavaScript needed for end-users to configure the behavior of the [!DNL Platform Launch] extension and the executable JavaScript delivered to the client environment, if required.
+**Extension package:** In [!DNL Adobe Experience Platform Launch], an extension package is a .zip file created and uploaded by an extension developer that provides everything necessary for [!DNL Platform Launch] users to install the extension inside their property.  An extension package contains a manifest specifying information about the extension, HTML, and JavaScript needed for end-users to configure the behavior of the [!DNL Platform Launch] extension and the executable JavaScript delivered to the client environment, if required.
 
 [Back to top](#adobe-experience-platform-glossary)
 
@@ -261,13 +261,13 @@ topic: getting started
 
 **GDPR (General Data Protection Regulation):** The General Data Protection Regulation (GDPR) is a legal framework that sets guidelines for the collection and processing of personal information of individuals within the European Union (EU). The GDPR sets out the principles for data management and the rights of the individual and covers all companies that deal with the data of EU citizens.
 
-**GDPR data label:** GDPR governance label is used to define the fields that may contain personal identifiers for use in GDPR access and/or delete requests.
+**GDPR data usage label:** GDPR data usage label is used to define the fields that may contain personal identifiers for use in GDPR access and/or delete requests.
 
 [Back to top](#adobe-experience-platform-glossary)
 
 ## H
 
-**Host:** In [!DNL Experience Platform Launch], a host specifies the location, domain, and user credentials necessary for [!DNL Platform Launch] to deliver a build.
+**Host:** In [!DNL Adobe Experience Platform Launch], a host specifies the location, domain, and user credentials necessary for [!DNL Platform Launch] to deliver a build.
 
 [Back to top](#adobe-experience-platform-glossary)
 
@@ -285,17 +285,17 @@ topic: getting started
 
 **Identity stitching:** Identity stitching is the process of identifying data fragments and stitching them together to form a complete record of a profile.
 
-**Identity symbol:** Identity symbol is an abbreviation of an identity namespace that can be used as a reference in APIs.
+**Identity symbol:** An identity symbol is an abbreviation of an identity namespace that can be used as a reference in APIs.
 
 **Identity value:** Identity value is data associated with an assigned identity in the schema. When matching record data across profile fragments both the identity value and the namespace must match. 
 
-**I1 data label:** The `I1` data label is used to classify directly identifiable data that can identify or contact a specific person rather than a device.
+**I1 data usage label:** The `I1` data usage label is used to classify directly identifiable data that can identify or contact a specific person rather than a device.
 
-**I2 data label:** The `I2` data label is used to classify indirectly identifiable data that can be used in combination with any other data to identify or contact a specific person.
+**I2 data usage label:** The `I2` data usage label is used to classify indirectly identifiable data that can be used in combination with any other data to identify or contact a specific person.
 
 **Ingestion:** Ingestion is the process of adding data from a source to [!DNL Experience Platform]. Data can be ingested to [!DNL Experience Platform] in a number of ways including streamed, batched, or added via connector.
 
-**Ingestion schedule:** Ingestion schedule provides time-based options when ingesting from a source to [!DNL Experience Platform].
+**Ingestion schedule:** An ingestion schedule provides time-based options when ingesting from a source to [!DNL Experience Platform].
 
 **Input feature:** Input feature is specified in feature mapping and is used by a machine learning model to make predictions.
 
@@ -317,7 +317,7 @@ topic: getting started
 
 ## L
 
-**Library:** In [!DNL Experience Platform Launch], a library is a set of business logic that contains instructions for how the [!DNL Platform Launch] library should behave on the client device.
+**Library:** In [!DNL Adobe Experience Platform Launch], a library is a set of business logic that contains instructions for how the [!DNL Platform Launch] library should behave on the client device.
 
 [Back to top](#adobe-experience-platform-glossary)
 
@@ -339,7 +339,7 @@ topic: getting started
 
 **Modified Date column:** Selecting a `Modified Date` column is an option when specifying third-party data via a connection. When the `Delta` save strategy is selected and the dataset contains multiple date related schema, the user must choose from the available date/time type schema to specify modified date key column. `Modified Date` option is not available when the `Overwrite` save strategy is selected.
 
-**Module:** In [!DNL Experience Platform Launch], a module is a snippet of executable JavaScript provided by an extension, which performs actions in a client environment without the need for the [!DNL Platform Launch] user to create a rule.
+**Module:** In [!DNL Adobe Experience Platform Launch], a module is a snippet of executable JavaScript provided by an extension, which performs actions in a client environment without the need for the [!DNL Platform Launch] user to create a rule.
 
 [Back to top](#adobe-experience-platform-glossary)
 
@@ -365,7 +365,7 @@ topic: getting started
 
 **Organization:** An Organization is the name used to identify a company or a specific group within a company across Adobe products. Administrators can configure and manage access and permissions of features to users of an Organization. 
 
-**Overwrite save strategy:** `Overwrite` save strategy is an option for ingesting third-party data via a connection, where the user specifies if ingested data will be overwritten on a specified schedule. [!DNL Experience Platform] will ingest the specified dataset from the 3rd party source and overwrite the dataset on [!DNL Experience Platform].
+**Overwrite save strategy:** The `Overwrite` save strategy is an option for ingesting third-party data via a connection, where the user specifies if ingested data will be overwritten on a specified schedule. [!DNL Experience Platform] will ingest the specified dataset from the 3rd party source and overwrite the dataset on [!DNL Experience Platform].
 
 [Back to top](#adobe-experience-platform-glossary)
 
@@ -385,7 +385,7 @@ topic: getting started
 
 **Policy enforcement** Enables enforcement of data usage policies with applied marketing actions to prevent data operations that constitute policy violations within an organization.
 
-**Primary key:** Primary key is a designation in a schema to uniquely identify all records.
+**Primary key:** A primary key is a designation in a schema to uniquely identify all records.
 
 **Priority:** In [!DNL Offer Decisioning], priority is used to rank offers that meet all constraints, such as eligibility, calendar, and capping.
 
@@ -395,7 +395,9 @@ topic: getting started
 
 **Production sandbox:** A production sandbox of isolating virtual data on Platform that can't be reset or deleted.
 
-**Profile (Real-time Customer Profile):** [!DNL Profile] is a centralized profile for targeted and personalized experience management and provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+**Profile:** {#profile} Not to be confused with [Real-time Customer Profile](#rtcp), a profile is the output of [!DNL Identity Service] and [!DNL Real-time Customer Profile] data, taking ingested profile data with identity fields and constructing a representation of a person.
+
+**Profile data:** Profile data is data ingested under the XDM Individual Profile class. This data typically describes customer attributes, as opposed to event data.
 
 **Profile export:** [!DNL Profile] export is one of the two types of destinations in [!DNL Real-time Customer Data Platform]. [!DNL Profile] export generates a file containing profiles and attributes, and uses raw PII data with email and is used to integrate with marketing and email automation platforms.
 
@@ -403,7 +405,7 @@ topic: getting started
 
 **Profile ID:** A profile ID is an auto-generated identifier associated with an identity type and represents a profile.
 
-**Property:** In [!DNL Experience Platform Launch], a property is a container for everything needed to deploy a set of tags.
+**Property:** In [!DNL Adobe Experience Platform Launch], a property is a container for everything needed to deploy a set of tags.
 
 [Back to top](#adobe-experience-platform-glossary)
 
@@ -421,7 +423,7 @@ topic: getting started
 
 **Real-time Customer Data Platform:** Adobe's [!DNL Real-time Customer Data Platform] brings together known and unknown customer data to create trusted customer profiles with simplified integration, intelligent segmentation, and real-time activation across the digital customer journey.
 
-**Real-time Customer Profile (Profile):** [!DNL Real-time Customer Profile] is a centralized profile for targeted and personalized experience management and provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+**Real-time Customer Profile (Profile):**{#rtcp} Not to be confused with a [profile](#profile), [!DNL Real-time Customer Profile] is a centralized profile for targeted and personalized experience management and provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 **Recipe:** A recipe is Adobe's term for a model specification and is a top-level container representing a specific machine learning, AI algorithm or ensemble of algorithms, processing logic, and configuration required to build and execute a trained model and hence help solve specific business problems.
 
@@ -431,13 +433,13 @@ topic: getting started
 
 **Representation:** In [!DNL Offer Decisioning], a representation is information used by a channel, such as location or language to display an offer.
 
-**Resource:** In [!DNL Experience Platform Launch], resource is a generic term that refers to options the [!DNL Platform Launch] user can configure inside the client environment, including extensions, data elements, and rules.
+**Resource:** In [!DNL Adobe Experience Platform Launch], a resource is a generic term that refers to options the [!DNL Platform Launch] user can configure inside the client environment, including extensions, data elements, and rules.
 
 **Role-based access control:** Role-based access control enables admins to assign access and permissions to users of [!DNL Experience Platform]. Permissions include the ability to view and/or use [!DNL Experience Platform] features, such as creating sandboxes, defining schemas, and managing datasets.
 
-**Rule:** In [!DNL Experience Platform Launch], a rule is a collection of rule components defining a specific set of events, conditions, and actions that should be grouped logically.
+**Rule:** In [!DNL Adobe Experience Platform Launch], a rule is a collection of rule components defining a specific set of events, conditions, and actions that should be grouped logically.
 
-**Rule component:** In [!DNL Experience Platform Launch], rule components are the events, conditions, and actions that make up a rule.
+**Rule component:** In [!DNL Adobe Experience Platform Launch], rule components are the events, conditions, and actions that make up a rule.
 
 **Runtime:** Runtime specifies a runtime environment for a machine learning recipe. [!DNL Python], R, [!DNL Spark], PySpark, and Tensorflow runtimes enable input of a URL to a docker image for a recipe source.
 
@@ -453,13 +455,13 @@ topic: getting started
 
 **Sandbox switcher:** The sandbox switcher control in [!DNL Experience Platform] allows users to navigate between sandboxes they have access to. Switching a sandbox will change all content and may alter feature access based on permissions.
 
-**Schedule:** Schedule is a user-defined specification on frequency or cadence of data ingestion from a third-party data source to Adobe [!DNL Experience Platform].
+**Schedule:** A schedule is a user-defined specification on frequency or cadence of data ingestion from a third-party data source to Adobe [!DNL Experience Platform].
 
 **Scoring:** Scoring is the process of generating insights from data using a trained model.
 
-**Schema:** Schema is comprised of a class and optional mixin and is used to create datasets and data streams. A schema includes behavioral attributes, timestamp, identity, attribute definitions, and relationships.
+**Schema:** A schema is comprised of a class and optional mixin and is used to create datasets and data streams. A schema includes behavioral attributes, timestamp, identity, attribute definitions, and relationships.
 
-**Schema descriptor:** Schema descriptor is an additional schema related metadata that describes behavior that can be used by [!DNL Experience Platform] to understand intended schema behavior such as the relationship between two schemas.
+**Schema descriptor:** A schema descriptor is an additional schema related metadata that describes behavior that can be used by [!DNL Experience Platform] to understand intended schema behavior such as the relationship between two schemas.
 
 **Secret access key:** A secret access key is an [!DNL Amazon] S3 key that is used in conjunction with the access key ID to sign AWS requests.
 
@@ -467,13 +469,13 @@ topic: getting started
 
 **Segment Builder:** [!DNL Segment Builder] is the visual development environment used to build segment definitions and serves as a common component of all applications using [!DNL Segmentation Service] on [!DNL Experience Platform].
 
-**Segment definition:** Segment definition is the rule set used to describe key characteristics or behavior of a target audience. Once conceptualized, the rules outlined in a segment definition are used to determine qualifying audience members for a segment.
+**Segment definition:** A segment definition is the rule set used to describe key characteristics or behavior of a target audience. Once conceptualized, the rules outlined in a segment definition are used to determine qualifying audience members for a segment.
 
-**Segment evaluation method:** Segment scheduled evaluation enables a recurring schedule for running an export job at a specific time, whereas on-demand evaluation involves creating a segment job to build the audience immediately. 
+**Segment evaluation method:** A segment scheduled evaluation enables a recurring schedule for running an export job at a specific time, whereas on-demand evaluation involves creating a segment job to build the audience immediately. 
 
 **Segment export:** Segment export is one of the two types of destinations in [!DNL Real-time Customer Data Platform]. With segment export, you can send the profiles that qualify and have been mapped to the destination. Uses segment and user IDs and pseudonymous data and typically integrates with social networks and other digital media target platforms.
 
-**Segment ID:** Segment ID is an auto-generated identifier associated with a segment.
+**Segment ID:** A segment ID is an auto-generated identifier associated with a segment.
 
 **Segment membership:** Segment membership displays which segment a profile is currently part of.
 
@@ -485,15 +487,15 @@ topic: getting started
 
 **Sensei ML Framework:** Sensei ML Framework is a unified machine learning framework across Adobe that leverages data on [!DNL Experience Platform] to empower data scientists in the development of machine learning driven intelligence services in a faster, scalable, and reusable manner.
 
-**Sensitive data labels:** Sensitive “S” labels are used to categorize data deemed sensitive, such as different types of behavioral or geographic data that you want marked as sensitive.
+**Sensitive labels:** Sensitive “S” labels are used to categorize data deemed sensitive, such as different types of behavioral or geographic data that you want marked as sensitive.
 
 **Services:** A powerful framework to operationalize AI and ML services by leveraging Adobe Intelligent Services. Services deliver real-time, personalized customer experiences or operationalize custom intelligent services.
 
 **Single identity personalization marketing action** A marketing action that uses data for onsite content personalization. Onsite personalization is any data that is used to make inferences about users' interests, and is used to select which content or ads are served based on those inferences.
 
-**S1 data label:** `S1` data label is used to classify data specifying latitude and longitude that can be used to determine the precise location of a device.
+**S1 data usage label:** An `S1` data usage label is used to classify data specifying latitude and longitude that can be used to determine the precise location of a device.
 
-**S2 data label:** `S2` data label is used to classify data that can be used to determine a broadly defined geo-fence area.
+**S2 data usage label:** An `S2` data usage label is used to classify data that can be used to determine a broadly defined geo-fence area.
 
 **Source:** Source is a general term for any input connector in the [!DNL Real-time Customer Data Platform].
 
@@ -515,7 +517,7 @@ topic: getting started
 
 **Streaming segmentation:** Streaming segmentation is an ongoing data selection process that updates segments in response to user activity. Once a segment has been built and saved, the segment definition is applied against incoming data to [!DNL Real-time Customer Profile]. Segment additions and removals are processed regularly, ensuring your target audience remains relevant.
 
-**Symbol:** Symbol is an abbreviation of an identity namespace that can be used as a reference in APIs.
+**Symbol:** A symbol is an abbreviation of an identity namespace that can be used as a reference in APIs.
 
 **System View:** System View is a visual representation of source datasets that flow through [!DNL Real-time Customer Profile] to destinations. 
 
@@ -535,7 +537,7 @@ topic: getting started
 
 ## U
 
-**Union schema:** Union schema is a consolidation of schemas that have been enabled for [!DNL Real-time Customer Profile].
+**Union schema:** A union schema is a consolidation of schemas that have been enabled for [!DNL Real-time Customer Profile].
 
 [Back to top](#adobe-experience-platform-glossary)
 
