@@ -22,4 +22,4 @@ See the tutorial on [policy enforcement](api-enforcement.md) for steps on how to
 
 Certain applications that are built on top of [!DNL Experience Platform] (such as [!DNL Real-time Customer Data Platform]) provide automatic enforcement for data usage policies. Each application maintains its own method of surfacing policy violations and providing steps for resolving issues.
 
-Automatic policy enforcement in Real-time CDP leverages data lineage and audit trails when surfacing policy violations. Please refer to the [Real-time CDP Data Governance overview](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance) for more information.
+Automatic policy enforcement in Real-time CDP leverages data lineage, data classification, and policy management capabilities to evaluate and surface policy violations. Please refer to the [Real-time CDP Data Governance overview](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance) for more information.

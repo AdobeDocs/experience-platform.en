@@ -48,7 +48,7 @@ Once data is labeled and usage policies are defined, you can enforce data usage 
 
 The following diagram illustrates how policy enforcement is integrated into the data flow of segment activation:
 
-![](assets/enforcement-flow.png)
+<img src="assets/governance/enforcement-flow.png" width=650>
 
 When a segment is first activated, [!DNL Policy Service] checks for policy violations based on the following factors:
 
@@ -63,12 +63,14 @@ When a segment is first activated, [!DNL Policy Service] checks for policy viola
 
 ### Data lineage {#lineage}
 
-In Real-time CDP, data lineage plays a key role in how policies are enforced. In general terms, data lineage refers to the origin of a set of data, and what happens to it (or where it moves) over time. In the context of [!DNL Data Governance], data lineage provides an audit trail that indicates where and why a policy violation occurred.
+In Real-time CDP, data lineage plays a key role in how policies are enforced. In general terms, data lineage refers to the origin of a set of data, and what happens to it (or where it moves) over time.
+
+In the context of [!DNL Data Governance], lineage enables data usage labels to propagate from datasets to downstream services that consume their data, such as Real-time Customer Profile and destinations. This allows policies to be evaluated and enforced at several key points in the data's journey through Platform, and provides context to data consumers as to why a policy violation occurred.
 
 In Real-time CDP, policy enforcement is concerned with the following lineage:
 
 1. Data is ingested into Real-time CDP and stored in **datasets**.
-1. Customer profiles are identified from those datasets and constructed through **merge policies**.
+1. Customer profiles are identified and constructed from those datasets, with dataset precedence determined by **merge policies**.
 1. Groups of profiles are divided into **segments** based on common attributes.
 1. Segments are activated to downstream **destinations**.
 
