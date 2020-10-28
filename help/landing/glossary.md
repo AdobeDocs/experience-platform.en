@@ -161,9 +161,7 @@ topic: getting started
 
 **Data mapping:** Data mapping is the process of mapping source data fields to destination related target fields.
 
-**Data governance:** [!DNL Data governance] encompasses the strategies and technologies used to ensure data is in compliance with regulations and organization policies with respect to data usage.
-
-**Data governance labels:** [!DNL Data governance] labels provide users the ability to classify data that reflects privacy-related considerations and contractual conditions to be compliant with regulations and corporate policies. [!DNL Data governance] labels added to a dataset are inherited down or applied to all fields within that dataset. [!DNL Data governance] labels can also be applied directly to fields.
+**Data governance:** Data governance encompasses the strategies and technologies used to ensure data is in compliance with regulations and organization policies with respect to data usage.
 
 **Data integration partners:** Data integration partners simplify and automate the loading and transformation of massive volumes of data from over 200 sources to [!DNL Experience Platform] without writing code.
 
@@ -179,7 +177,7 @@ topic: getting started
 
 **Data type:** Data type is a reusable object with properties in a hierarchical representation.
 
-**Data usage labels:** Data usage labels provide users the ability to categorize data that reflects privacy-related considerations and contractual conditions to be compliant with regulations and corporate policies.
+**Data usage labels:** Data usage labels provide users the ability to categorize data that reflects privacy-related considerations and contractual conditions to be compliant with regulations and corporate policies. Data usage labels added to a dataset are inherited down or applied to all fields within that dataset. Data usage labels can also be applied directly to fields.
 
 **Dataflow:** In [!DNL Real-time Customer Data Platform], a dataflow is a virtual pipeline of data that flows into [!DNL Platform] from a source and out to destinations. 
 
@@ -277,7 +275,7 @@ topic: getting started
 
 **Identity:** Identity is an identifier such as a cookie ID, device ID, or email ID that uniquely represents an end customer.
 
-**Identity "I" data labels:** `Identity I` labels are used to categorize data that can identify or contact a specific person.
+**Identity "I" labels:** `Identity I` data usage labels are used to categorize data that can identify or contact a specific person.
 
 **Identity graph:** Identity graph is a map of relationships between stitched and linked identities, that updates near real-time with customer activity.
 
@@ -397,7 +395,7 @@ topic: getting started
 
 **Production sandbox:** A production sandbox of isolating virtual data on Platform that can't be reset or deleted.
 
-**Profile:** [!DNL Profile] is an [!DNL Experience Platform] standard data model used to define attributes of consumers. A profile can also be an aggregate of event data and attributes related to a person and or device.
+**Profile (Real-time Customer Profile):** [!DNL Profile] is a centralized profile for targeted and personalized experience management and provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 **Profile export:** [!DNL Profile] export is one of the two types of destinations in [!DNL Real-time Customer Data Platform]. [!DNL Profile] export generates a file containing profiles and attributes, and uses raw PII data with email and is used to integrate with marketing and email automation platforms.
 
@@ -423,7 +421,7 @@ topic: getting started
 
 **Real-time Customer Data Platform:** Adobe's [!DNL Real-time Customer Data Platform] brings together known and unknown customer data to create trusted customer profiles with simplified integration, intelligent segmentation, and real-time activation across the digital customer journey.
 
-**Real-time Customer Profile:** [!DNL Real-time Customer Profile] is a centralized profile for targeted and personalized experience management and provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+**Real-time Customer Profile (Profile):** [!DNL Real-time Customer Profile] is a centralized profile for targeted and personalized experience management and provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 **Recipe:** A recipe is Adobe's term for a model specification and is a top-level container representing a specific machine learning, AI algorithm or ensemble of algorithms, processing logic, and configuration required to build and execute a trained model and hence help solve specific business problems.
 
