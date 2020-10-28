@@ -57,10 +57,11 @@ The edit dialog box appears, allowing you to edit the name, description, and sco
 
 The **[!UICONTROL More actions]** button is located in the top-right navigation next to *Edit*. Selecting **[!UICONTROL More actions]** opens a dropdown that allows you to select one of the following operations:
 
-- **Delete**: Deletes the instance.
-- **Download summary data**: Downloads a CSV file containing the summary data.
-- **Access scores**: Selecting **Access scores** redirects you to the [access scores for Attribution AI tutorial](./download-scores.md).
-- **View run history**: A popover containing a list of all the scoring runs associated with the service instance appears.
+- **[!UICONTROL Clone]**: Clones the instance.
+- **[!UICONTROL Delete]**: Deletes the instance.
+- **[!UICONTROL Download summary data]**: Downloads a CSV file containing the summary data.
+- **[!UICONTROL Access scores]**: Selecting **[!UICONTROL Access scores]** redirects you to the [access scores for Attribution AI tutorial](./download-scores.md).
+- **[!UICONTROL View run history]**: A popover containing a list of all the scoring runs associated with the service instance appears.
 
 ![more actions](./images/insights/more-actions.png)
 

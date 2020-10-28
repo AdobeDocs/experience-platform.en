@@ -21,7 +21,7 @@ In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in t
 
 The Attribution AI service page appears. This page lists service instances of Attribution AI and displays information about them, including the name of the instance, conversion events, how often the instance is run, and the status of the last update.
 
-You can find a **[!UICONTROL Total conversion events scored]** metric located in the bottom-right side of the **[!UICONTROL Create instance]** container. This metric tracks the total number of conversion events scored by Attribution AI for the current calendar year including all sandbox environments and any deleted service instances.
+You can find the **[!UICONTROL Total conversion events scored]** metric located in the bottom-right side of the **[!UICONTROL Create instance]** container. This metric tracks the total number of conversion events scored by Attribution AI for the current calendar year including all sandbox environments and any deleted service instances.
 
 ![](./images/user-guide/total_conversions.png)
 
@@ -149,7 +149,7 @@ Once you have finished defining all necessary touchpoints, scroll up and click *
 
 ## Advanced training and scoring setup
 
-The final page in Attribution AI is the *Advanced* page used for setting up training and scoring.
+The final page in Attribution AI is the **[!UICONTROL Advanced]** page used for setting up training and scoring.
 
 ![new page advanced](./images/user-guide/advanced_settings.png)
 
@@ -168,6 +168,12 @@ To change the time of day you want scoring to occur, click the clock icon. In th
 >It can take up to 24 hours for each scoring process to complete.
 
 ![clock icon](./images/user-guide/time_of_day.png)
+
+### Additional score dataset columns (optional)
+
+By default, a score dataset is created for each service instance in a standard schema. You can choose to add additional columns based on your Conversion Event and Touchpoint configurations to the score dataset output. Start by selecting columns from your input dataset, you can then drag and drop them to change the order by holding down the left mouse button over the hamburger icon.
+
+![score dataset column addition](./images/user-guide/Add-score-dataset.png)
 
 ### Region-based modeling (optional) {#region-based-modeling-optional}
 
