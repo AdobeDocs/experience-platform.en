@@ -168,7 +168,7 @@ Selecting the **[!UICONTROL Touchpoint Effectiveness]** tab loads the **[!UICONT
 
 ![touchpoint effectiveness select](./images/insights/Touchpoint-effectiveness.png)
 
-You can use the **[!UICONTROL Touchpoint effectiveness]** card information to understand how a touchpoint contributes to a conversion. You an also see how effective each touchpoint is with the following performance metrics:
+You can use the **[!UICONTROL Touchpoint effectiveness]** card information to understand how a touchpoint contributes to a conversion. You can also see how effective each touchpoint is with the following performance metrics:
 
 **Paths touched**: This metric displays a percentage of paths achieving/not achieving conversion for the touchpoint. You will see higher attributed conversions if the ratio of paths (percentage) achieving conversion to paths not achieving conversion is high.
 
