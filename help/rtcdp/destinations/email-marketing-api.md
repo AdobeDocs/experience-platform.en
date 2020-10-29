@@ -337,7 +337,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --data-raw '{
     "name": "S3 Connection for Adobe Campaign",
-    "description": "your company's holiday campaign",
+    "description": "summer advertising campaign",
     "connectionSpec": {
         "id": "{_CONNECTION_SPEC_ID}",
         "version": "1.0"
