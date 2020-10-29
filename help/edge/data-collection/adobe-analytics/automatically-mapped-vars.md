@@ -21,11 +21,12 @@ Below is a list of variables that the Adobe Experience Platform [!DNL Edge Netwo
 | `commerce.checkouts.value` | `events` | AppMeasurement query parameter EVENT_LIST_FULL mapping with conversion COMMERCE_SC_CHECKOUT, using delimiter `,`. |
 | `commerce.productListAdds.value` | `events` | AppMeasurement query parameter EVENT_LIST_FULL mapping with conversion COMMERCE_SC_ADD, using delimiter `,`. |
 | `commerce.productListRemovals.value` | `events` | AppMeasurement query parameter EVENT_LIST_FULL mapping with conversion COMMERCE_SC_REMOVE, using delimiter `,`. |
-| `commerce.productViews.id` | `events` | `prodView` Event Serialization.  |
-| `commerce.productListOpens.id` | `events` | `scOpen` Event Serialization.  |
-| `commerce.productListViews.id` | `events` | `scView` Event Serialization.  |
-| `commerce.productListAdds.id` | `events` | `scAdd` Event Serialization.  |
-| `commerce.productListRemovals.id` | `events` | `scRemove` Event Serialization.  |
+| `commerce.productViews.id` | `events` | (Optional) `prodView` event serialization. If this field is excluded (i.e. for unserialized events), the system generates and assigns its own ID value to the entity. |
+| `commerce.productListOpens.id` | `events` | (Optional) `scOpen` event serialization. If this field is excluded (i.e. for unserialized events), the system generates and assigns its own ID value to the entity. |
+| `commerce.productListViews.id` | `events` | (Optional) `scView` event serialization. If this field is excluded (i.e. for unserialized events), the system generates and assigns its own ID value to the entity. |
+| `commerce.productListAdds.id` | `events` | (Optional) `scAdd` event serialization. If this field is excluded (i.e. for unserialized events), the system generates and assigns its own ID value to the entity. |
+| `commerce.productListRemovals.id` | `events` | (Optional) `scRemove` event serialization. If this field is excluded (i.e. for unserialized events), the system generates and assigns its own ID value to the entity. |
+| `commerce.checkouts.id` | `events` | (Optional) `scCheckout` event serialization. If this field is excluded (i.e. for unserialized events), the system generates and assigns its own ID value to the entity. |
 | `commerce.checkouts.id` | `events` | `scCheckout` Event Serialization.  |
 | `device.screenHeight` | `s` | AppMeasurement query parameter Screen Resolution mapping. |
 | `device.screenWidth` | `s` | AppMeasurement query parameter Screen Resolution mapping. |
