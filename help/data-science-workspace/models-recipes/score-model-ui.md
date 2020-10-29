@@ -2,7 +2,8 @@
 keywords: Experience Platform;score a model;Data Science Workspace;popular topics;ui;scoring run;scoring results
 solution: Experience Platform
 title: Score a model (UI)
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: Scoring in Adobe Experience Platform Data Science Workspace can be achieved by feeding input data into an existing trained Model. Scoring results are then stored and viewable in a specified output dataset as a new batch. 
 ---
 
@@ -24,7 +25,7 @@ A scoring run is created using optimized configurations from a previously comple
 
 1. Find the most optimal training run to use its configurations for scoring. Open the desired Training run by clicking on its name.
 
-2. From the Training Run **[!UICONTROL Evaluation]** tab, click on the **[!UICONTROL Score]** button on the top right of the screen. This will initiate a new *Run Scoring* workflow.
+2. From the Training Run **[!UICONTROL Evaluation]** tab, click on the **[!UICONTROL Score]** button on the top right of the screen. This will initiate a new **Run Scoring** workflow.
 ![](../images/models-recipes/score/training_run_overview.png)
 
 3. Select the input scoring dataset and click **[!UICONTROL Next]**.

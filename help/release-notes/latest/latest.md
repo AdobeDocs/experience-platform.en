@@ -1,72 +1,33 @@
 ---
 title: Adobe Experience Platform Release Notes
-description: Experience Platform release notes September 9, 2020
+description: Experience Platform release notes October 14, 2020
 doc-type: release notes
-last-update: September 8, 2020
+last-update: October 13, 2020
 author: crhoades, ens25212
 ---
 
 # Adobe Experience Platform release notes 
 
-**Release date: September 9, 2020**
+**Release date: October 14, 2020**
 
-Updates to existing features in Adobe Experience Platform:
+- [Data Prep](#data-prep)
+- [Real-time Customer Profile](#profile)
+- [Segmentation Service](#segmentation)
+- [Sources](#sources)
+- [Time to Value](#time-to-value)
 
-- [[!DNL Data Governance]](#governance)
-- [[!DNL Destinations]](#destinations)
-- [[!DNL Observability Insights]](#observability)
-- [[!DNL Privacy Service]](#privacy)
-- [[!DNL Real-time Customer Profile]](#profile)
-- [[!DNL Segmentation Service]](#segmentation)
-- [[!DNL Sources]](#sources)
+## Data Prep {#data-prep}
 
-## [!DNL Data Governance] {#governance}
+Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 
-Adobe Experience Platform Data Governance is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
-
-**New features**
-
-| Feature | Description | 
-| ------- | ----------- |
-| Dataset labeling UI enhancements | Several new sorting and filtering controls have been added to the dataset labeling UI in order to make working with large schemas easier: <ul><li>Sort fields by alphabetic order based on the full schema path.</li><li>Perform partial searches on field path names.</li><li>Filter fields with no labels, a selected label, or a label category.</li></ul> |
-
-See the [Data Governance overview](../../data-governance/home.md) for more information on the service.
-
-## Destinations {#destinations}
-
-In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
-
-**New features**
+**Key features**
 
 | Feature | Description |
 | ------- | ----------- |
-| UX improvements | Users can access inline table actions for easier access to primary actions such as such as adding data, editing scheduling, and adding segments. See the [destinations workspace](../../rtcdp/destinations/destinations-workspace.md) document for more information. |
+| `is_set` function | The `is_set` function allows you to check the presence of an attribute within the source data. `is_set` can be used in combination with `is_empty` to check both the presence of the attribute and the presence of the value within the attribute. |
+| `get_values` function | The `get_values` function allows you to get the values from the input map for any given key. |
 
-To learn more, visit the [destinations overview](../../rtcdp/destinations/destinations-overview.md)
-
-## [!DNL Observability Insights] {#observability}
-
-[!DNL Observability Insights] allows you to monitor activities on Adobe Experience Platform through the use of statistical metrics and event notifications.
-
-**New Features**
-
-| Feature | Description |
-| --- | --- |
-| Adobe I/O Event notifications | [!DNL Observability Insights] leverages Adobe I/O Events to create event notifications for several Experience Platform services. Notification payloads are sent to a configured webhook which you can then use to automate further downstream processes. See the [notifications overview](../../observability/notifications/overview.md) for more information. |
-
-See the [[!DNL Observability Insights] overview](../../observability/home.md) for more information on the service.
-
-## [!DNL Privacy Service] {#privacy}
-
-Several legal and organizational regulations give users the right to access or delete their personal data from your data stores upon request. Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help you manage these data requests from your customers. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
-
-**New features**
-
-| Feature | Description |
-| ------- | ----------- |
-| Support for LGPD (Brazil) | Privacy jobs can now be created under Brazil's [!DNL Lei Geral de Proteção de Dados] (LGPD) regulation. These jobs are tracked under the regulation code `lgpd_bra`. |
-
-See the [Privacy Service overview](../../privacy-service/home.md) for more information on the service.
+For more information, please read the [Data Prep overview](../../data-prep/home.md).
 
 ## Real-time Customer Profile {#profile}
 
@@ -74,7 +35,8 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 
 | Feature | Description |
 | ------- | ----------- |
-| Profile viewer | The profile viewer, in the Platform UI, has been updated to be a dashboard with full customization. The user now has the option to do the following tasks: <ul><li>Update the selected standard and customized attributes in the basic information widget.</li><li>Create, edit, and remove custom widgets</li><li>Resize and rearrange widgets</li></ul>|
+| Profile preview API additions | The Profile preview API (`/previewsamplestatus`) now includes the ability to view a breakdown of total profile fragments across your IMS Organization, as well as to view the distribution of profile fragments across identity namespaces. |
+| Union schema view updates | In the Experience Platform UI, users can more easily find information regarding all schemas and datasets contributing to the union schema, as well as surface key attributes such as identity and relationship fields. These updates improve the ability to troubleshoot and validate that profiles are correctly configured, identities are correctly stitched, and data has been successfully ingested. |
 
 For more information on [!DNL Real-time Customer Profile], including tutorials and best practices for working with [!DNL Profile] data, please read the [Real-time Customer Profile overview](../../profile/home.md).
 
@@ -88,8 +50,7 @@ Adobe Experience Platform Segmentation Service provides a user interface and RES
 
 | Feature | Description |
 | ------- | ----------- |
-| Export jobs | A flag was added to allow segments to be evaluated as part of an export job. As a result, users can run both segmentation and exports in a single job. |
-| Merge policies | Multiple merge policies can be included in a single batch segmentation job. |
+| Streaming segmentation limit removal | The seven-day limit for the lookback period has been removed. |
 
 For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md)
 
@@ -103,7 +64,50 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 | Feature | Description |
 | ------- | ----------- |
-| Auto mapping | [!DNL Platform] provides intelligent recommendations for auto mapping during the data ingestion workflow, based on a user-selected target schema or dataset. You can manually adjust flexible auto-mapping rules to suit your use cases. |
-| UX improvements | Users can access inline table actions for easier access to primary actions such as adding data, editing scheduling, and adding segments. See the [monitoring dataflows](../../sources/tutorials/ui/monitor.md) document for more information. |
+| Hierarchical mapping | You can preview a hierarchical source file, such as JSON or Parquet, during the data ingestion process. |
+| SSH authentication support for SFTP | You can connect your SFTP account to [!DNL Platform] using RSA/DSA Open SSH keys. See the [SFTP overview](../../sources/connectors/cloud-storage/ftp-sftp.md) for more information. |
+| UX improvements  | You can enable your dataset for [!DNL Profile] during the data ingestion process. See the [cloud storage dataflow workflow](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) tutorial for more information. |
 
 To learn more about sources, see the [sources overview](../../sources/home.md).
+
+## Time to Value {#time-to-value}
+
+Adobe Experience Platform fully enables Marketing Operations teams to build a 360-degree view of their customers without requiring extensive data engineering expertise. The goal is to accelerate teams and value through data velocity.  
+
+"Time to Value" cuts across personas. Data Engineers can complete tasks in an efficient and accelerated manner with data activity transparency, so that a robust, scalable real-time customer profile is available sooner. Marketers can then use the complete, robust customer profile for segmentation and activation.
+
+### Feature highlights
+
+#### Schema
+
+Upgrades usability and workflow, and provides out-of-box insights, standardization, and transparency of key fields within schema compositions. Exposes data lineage for the combination of individual data models represented as the “union schema," providing insight into the structure and ingredients to Real-time Customer Profile.
+
+- Schema workflow upgrade
+    - Use shortcuts for the most common type of XDM schemas, with automated settings in the schema editor and mixin recommendations based on your objectives  
+    - Increase workflow efficiency with multiple mixin selection and preview capability 
+    - Provide transparency on key attributes of schema composition, including identity, relationship, and required and deprecated fields 
+- Union Schema Data Lineage and Key Attributes Transparency 
+
+#### Data Ingestion and Collection
+
+The auto-mapping, mapping preview, and usability upgrade bring in data from any platform or source for use in profile, downstream segmentation, and activation. The system has the efficiency and intelligence to make this process easier to use, even for people outside of IT.
+
+- Easier access to data sources with catalog page card and data table inline action pattern upgrade 
+- Calculated field/expression for data ingestion 
+- Data mapping recommendations speed the ingestion process 
+- Mapping preview and validations 
+
+#### Profile Configuration
+
+Marketer-friendly profile viewer with customization helps you understand the composition of a profile for use in segmentation, planning, and activation cases. The consolidated workflow hydrates the profile in a controlled and efficient fashion by providing a step-wise workflow for merge policy.
+
+- View each individual profile in an enhanced profile viewer that displays a dashboard with full customization, enabling grouped cross-channel data based on marketer's business goals. 
+- Edit standard and customized attributes in the Basic Information widget, according to business need. 
+- Customize widgets with attributes from the real-time customer profile, using the union schema selector. The union schema is derived from the underlying data models used within profile data ingestion.
+ 
+
+#### Monitoring
+
+Ensures transparency of data flow and gives insight about the health of data traffic into the system from source connectors, providing more self-service and faster actionability for troubleshooting situations. 
+
+- Monitor all flow runs and see a detailed view of each run, including completion status, run duration, list of files processed, errors, and actionable diagnostics

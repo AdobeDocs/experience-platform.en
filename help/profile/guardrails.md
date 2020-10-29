@@ -1,6 +1,5 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-solution: Adobe Experience Platform
 title: Experience Platform guidelines
 topic: guide
 ---
@@ -89,5 +88,5 @@ The following guardrails refer to data size and are recommended to ensure data c
 
 | Guardrail | Limit | Limit Type | Description|
 | --- | --- | --- | --- |
-| Maximum total size per dimensional entity | 1GB | Soft | **The maximum recommended total size for a dimension entity is 1GB.** Ingesting large dimension entities will result in degraded system performance. For example, attempting to load a 10GB product catalog as a dimension entity is not recommended.|
+| Maximum total size for all dimensional entities | 5GB | Soft | **The maximum recommended total size for all dimensional entities is 5GB.** Ingesting large dimension entities will result in degraded system performance. For example, attempting to load a 10GB product catalog as a dimension entity is not recommended.|
 | Datasets per dimensional entity schema | 5 | Soft | **A maximum of 5 datasets associated with each dimensional entity schema is recommended.** For example, if you create a schema for "products" and add five contributing datasets, you should not create a sixth dataset tied to the products schema.|

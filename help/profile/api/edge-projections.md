@@ -1,6 +1,5 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-solution: Adobe Experience Platform
 title: Edge projections - Real-time Customer Profile API
 topic: guide
 ---
@@ -220,7 +219,7 @@ The response object shows the details of the projection destination. The `id` at
 
 ### Update a destination
 
-An existing destination can be updated by making a PUT request to the `/config/destinations` endpoint and including the ID of the destination to be updated in the request path. This operation is essentially _rewriting_ the destination, therefore the same attributes must be provided in the body of the request as are provided when creating a new destination.
+An existing destination can be updated by making a PUT request to the `/config/destinations` endpoint and including the ID of the destination to be updated in the request path. This operation is essentially rewriting the destination, therefore the same attributes must be provided in the body of the request as are provided when creating a new destination.
 
 >[!CAUTION]
 >
@@ -640,6 +639,6 @@ Returns only the values of the `type` and `city` fields for each element in the 
 }
 ```
 
-## Next Steps
+## Next steps
 
 This guide has shown you the steps involved in order to configure projections and destinations, including how to properly format the `selector` parameter. You can now create new projection destinations and configurations specific to the needs of your organization.

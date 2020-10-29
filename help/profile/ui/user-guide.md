@@ -1,6 +1,5 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile;Union schema;UNION PROFILE;union profile
-solution: Adobe Experience Platform
 title: Real-time Customer Profile user guide
 topic: guide
 description: Real-time Customer Profile creates a holistic view of each of your individual customers, combining data from multiple channels including online, offline, CRM, and third-party data. This document serves as a guide for interacting with Real-time Customer Profile in the Adobe Experience Platform user interface.
@@ -35,11 +34,11 @@ Select the **[!UICONTROL Browse]** tab in order to browse profiles by identity.
 
 ### Profile metrics {#profile-metrics}
 
-On the right-hand side of the [!UICONTROL Browse] tab are several important metrics related to your profile data, including your total [profile count](#profile-count) as well as a listing of [profiles by namespace](#profiles-by-namespace). 
+On the right-hand side of the **[!UICONTROL Browse]** tab are several important metrics related to your profile data, including your total [profile count](#profile-count) as well as a listing of [profiles by namespace](#profiles-by-namespace). 
 
 These profile metrics are evaluated using the default merge policy of your organization. For more information on working with merge policies, including how to define a default merge policy, see the [Merge Policies user guide](merge-policies.md).
 
-In addition to these metrics, the profile metrics section also provides a [!UICONTROL Last updated] date and time, showing when the metrics were last evaluated.
+In addition to these metrics, the profile metrics section also provides a last updated date and time, showing when the metrics were last evaluated.
 
 ![](../images/user-guide/profiles-profile-metrics.png)
 
@@ -75,7 +74,7 @@ From the **[!UICONTROL Select identity namespace]** dialog, choose the namespace
 
 ### Identity value
 
-After selecting an [!UICONTROL Identity namespace], you return to the [!UICONTROL Browse] tab where you can enter an **[!UICONTROL Identity value]**. This value is specific to an individual customer profile and must be a valid entry for the namespace provided. For example, selecting the [!UICONTROL Identity namespace] "Email" would require an [!UICONTROL Identity value] in the form of a valid email address. 
+After selecting an identity namespace, you return to the **[!UICONTROL Browse]** tab where you can enter an **[!UICONTROL Identity value]**. This value is specific to an individual customer profile and must be a valid entry for the namespace provided. For example, selecting the identity namespace "Email" would require an identity value in the form of a valid email address. 
 
 ![](../images/user-guide/profiles-show-profile.png)
 
@@ -85,17 +84,17 @@ Once a value has been entered, select **[!UICONTROL Show profile]** and a single
 
 ### Profile detail {#profile-detail}
 
-Upon selecting the [!UICONTROL Profile ID], the **[!UICONTROL Detail]** tab opens. The profile information displayed on the [!UICONTROL Detail] tab has been merged together from multiple profile fragments to form a single view of the individual customer. This includes customer details such as basic attributes, linked identities, and channel preferences. The default fields shown can also be changed at an organizational-level to display preferred Profile attributes. To learn more about customizing these fields, including step-by-step instructions for adding and removing attributes and resizing dashboard panels, please read the [profile detail customization guide](profile-customization.md).
+Upon selecting the **[!UICONTROL Profile ID]**, the **[!UICONTROL Detail]** tab opens. The profile information displayed on the **[!UICONTROL Detail]** tab has been merged together from multiple profile fragments to form a single view of the individual customer. This includes customer details such as basic attributes, linked identities, and channel preferences. The default fields shown can also be changed at an organizational-level to display preferred Profile attributes. To learn more about customizing these fields, including step-by-step instructions for adding and removing attributes and resizing dashboard panels, please read the [profile detail customization guide](profile-customization.md).
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-You can view additional information related to the individual profile by selecting another of the available tabs. These tabs include [!UICONTROL Attributes], [!UICONTROL Events], and [!UICONTROL Segment membership], which shows the [!UICONTROL Segments] for which the profile is currently qualified.
+You can view additional information related to the individual profile by selecting another of the available tabs. These tabs include attributes, events, and segment membership, which shows the segments for which the profile is currently qualified.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## Merge policies
 
-From the main [!UICONTROL Profiles] menu, select the **[!UICONTROL Merge Policies]** tab to view a list of merge policies belonging to your organization. Each listed policy displays its name, whether or not it is the default merge policy, and the schema that it applies to. 
+From the main **[!UICONTROL Profiles]** menu, select the **[!UICONTROL Merge Policies]** tab to view a list of merge policies belonging to your organization. Each listed policy displays its name, whether or not it is the default merge policy, and the schema that it applies to. 
 
 For more information on merge policies, see the [merge policies user guide](merge-policies.md).
 
@@ -103,7 +102,7 @@ For more information on merge policies, see the [merge policies user guide](merg
 
 ## Union schema {#union-schema}
 
-From the main [!UICONTROL Profiles] menu, select the **[!UICONTROL Union Schema]** tab to view the union schemas for your Profile data. A union schema is an amalgamation of all [!DNL Experience Data Model] (XDM) fields under the same class, whose schemas have been enabled for use in [!DNL Real-time Customer Profile]. By selecting a class from the [!UICONTROL Class] list on the left-hand side, you can view the structure of its schema in the canvas. For example, selecting "[!DNL XDM Profile]" displays the union schema for the [!DNL XDM Individual Profile] class.
+From the main **[!UICONTROL Profiles]** menu, select the **[!UICONTROL Union Schema]** tab to view the union schemas for your Profile data. A union schema is an amalgamation of all [!DNL Experience Data Model] (XDM) fields under the same class, whose schemas have been enabled for use in [!DNL Real-time Customer Profile]. By selecting a class from the "[!UICONTROL Class]" list on the left-hand side, you can view the structure of its schema in the canvas. For example, selecting "[!DNL XDM Profile]" displays the union schema for the [!DNL XDM Individual Profile] class.
 
 For more information on union schemas and their role within Adobe Experience Platform, see the section on union schemas in the [schema composition guide](../../xdm/schema/composition.md).
 

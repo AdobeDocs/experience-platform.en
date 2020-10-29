@@ -2,7 +2,8 @@
 keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;analyze data notebooks
 solution: Experience Platform
 title: Analyze your data using notebooks
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: This tutorial focuses on how to use Jupyter notebooks, built within Data Science Workspace, to access, explore, and visualize your data.
 ---
 
@@ -34,7 +35,7 @@ By default, Tensorflow recipe work in a GPU cluster and Python runs within a CPU
 
 In the [!DNL Adobe Experience Platform] UI, click on the Data Science tab in the top menu to take you to the Data Science Workspace. From this page, click on the [!DNL JupyterLab] tab which will open the [!DNL JupyterLab] launcher. You should see a page similar to this.
 
-![](../images/jupyterlab/analyze-data/jupyterlab_launcher.png)
+![](../images/jupyterlab/analyze-data/jupyterlab-launcher.png)
 
 In our tutorial, we will be using [!DNL Python] 3 in the Jupyter Notebook to show how to access and explore the data. In the Launcher page, there are sample notebooks provided. We will be using the Retail Sales recipe for [!DNL Python] 3.
 

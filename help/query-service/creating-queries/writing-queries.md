@@ -3,6 +3,8 @@ keywords: Experience Platform;home;popular topics;query service;Query service;wr
 solution: Experience Platform
 title: Writing queries
 topic: queries
+type: Tutorial
+description: This document details important details to know when writing queries in Adobe Experience Platform Query Service.
 ---
 
 # General guidance for query execution in [!DNL Query Service]
