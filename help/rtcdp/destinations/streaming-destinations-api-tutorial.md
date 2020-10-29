@@ -134,7 +134,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {IMS_ORG}' \
---header 'x-sandbox-name: {SANDBOX_NAME} \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
             "name": "Base connection to Experience Platform",
@@ -159,7 +159,7 @@ A successful response contains the base connection's unique identifier (`id`). S
 }
 ```
 
-### Connect to your Experience Platform data
+### Connect to your Experience Platform data {#connect-to-platform-data}
 
 **API format**
 
@@ -224,6 +224,10 @@ POST /connections
 
 **Request**
 
+>[!IMPORTANT]
+>
+>The example below includes code comments prefixed with `//`. These comments highlight where different values must be used for different streaming destinations. Please remove the comments before using the snippet.
+
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -233,7 +237,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --data-raw '{
     "name": "Connection for Amazon Kinesis/ Azure Event Hubs",
-    "description": "your company's holiday campaign",
+    "description": "summer advertising campaign",
     "connectionSpec": {
         "id": "{_CONNECTION_SPEC_ID}",
         "version": "1.0"
@@ -282,6 +286,10 @@ POST /targetConnections
 ```
 
 **Request**
+
+>[!IMPORTANT]
+>
+>The example below includes code comments prefixed with `//`. These comments highlight where different values must be used for different streaming destinations. Please remove the comments before using the snippet.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
