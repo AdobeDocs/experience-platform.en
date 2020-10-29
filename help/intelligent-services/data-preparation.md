@@ -269,81 +269,15 @@ After the dataset is created, you can find it in the Platform UI within the **[!
 
 ![](images/data-preparation/dataset-location.png)
 
-#### Add a primary identity namespace tag to the dataset
+#### Add identity fields to the dataset
 
 >[!NOTE]
 >
 >Future releases of [!DNL Intelligent Services] will integrate [Adobe Experience Platform Identity Service](../identity-service/home.md) into their customer identification capabilities. As such, the steps outlined below are subject to change.
 
-If you are bringing in data from [!DNL Adobe Audience Manager], [!DNL Adobe Analytics], or another external source, then you must add a `primaryIdentityNameSpace` tag to the dataset. This can be done by making a PATCH request to the Catalog Service API.
+If you are bringing in data from [!DNL Adobe Audience Manager], [!DNL Adobe Analytics], or another external source, then you have the option to set a schema field as an identity field. To set a schema field as an identity field, view the section on setting identity fields within the [UI tutorial](../xdm/tutorials/create-schema-ui.md#identity-field) for creating a schema using the Schema Editor or alternatively the [API tutorial](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor).
 
 If you are ingesting data from a local CSV file, you can skip ahead to the next section on [mapping and ingesting data](#ingest).
-
-Before following along with the example API call below, see the [getting started section](../catalog/api/getting-started.md) in the Catalog developer guide for important information regarding required headers.
-
-**API format**
-
-```http
-PATCH /dataSets/{DATASET_ID}
-```
-
-| Parameter | Description |
-| --- | --- |
-| `{DATASET_ID}` | The ID of the dataset you created previously. |
-
-**Request**
-
-Depending on which source you are ingesting data from, you must provide appropriate `primaryIdentityNamespace` and `sourceConnectorId` tag values in the request payload.
-
-The following request adds the appropriate tag values for Audience Manager:
-
-```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-        "tags": {
-          "primaryIdentityNameSpace": ["mcid"],
-          "sourceConnectorId": ["audiencemanager"],
-        }
-      }'
-```
-
-The following request adds the appropriate tag values for Analytics:
-
-```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-        "tags": {
-          "primaryIdentityNameSpace": ["aaid"],
-          "sourceConnectorId": ["analytics"],
-        }
-      }'
-```
-
->[!NOTE]
->
->For more information on working with identity namespaces in Platform, see the [identity namespace overview](../identity-service/namespaces.md).
-
-**Response**
-
-A successful response returns an array containing ID of the updated dataset. This ID should match the one sent in the PATCH request.
-
-```json
-[
-    "@/dataSets/5ba9452f7de80400007fc52a"
-]
-```
 
 #### Map and ingest data {#ingest}
 
