@@ -142,7 +142,7 @@ The **[!UICONTROL Top campaigns]** card displays an overview of your campaigns a
 
 ## Breakdown by touchpoint position
 
-Selecting the **[!UICONTROL User paths]** tab loads the **[!UICONTROL Breakdown by touchpoint position]** and **[!UICONTROL Most common user paths achieving conversion]** graphs.
+Selecting the **[!UICONTROL Path Analysis]** tab loads the **[!UICONTROL Breakdown by touchpoint position]** and **[!UICONTROL Top conversion paths]** graphs.
 
 The **[!UICONTROL Breakdown by touchpoint position]** graph is a breakdown of attributed conversions by position of the touchpoint compared across all the conversion paths. This graph helps you understand what touchpoints are more effective in different stages of the conversion path. The stages are starter, player, and closer.
 
@@ -156,9 +156,9 @@ The **[!UICONTROL Breakdown by touchpoint position]** graph is a breakdown of at
 
 ![user-path breakdown touchpoint](./images/insights/user-paths.png)
 
-## Most common user paths achieving conversion
+## Top conversion paths
 
-The **[!UICONTROL Most common user paths achieving conversion]** graph shows marginal and influenced scores on the most frequent paths in a certain region. This graph allows you to visualize what touchpoints contribute to conversions and what the attribution score is for each touchpoint. You can use this information to view the most frequent paths in a certain region and see if any patterns emerge between the different sets of touchpoints.
+The **[!UICONTROL Top conversion paths]** graph shows the influenced and algorithmic scores on the top conversion paths in the selected regions. This graph allows you to visualize what touchpoints contribute to conversions and what the attribution score is for each touchpoint. You can use this information to view the most frequent paths in a certain region and see if any patterns emerge between the different sets of touchpoints.
 
 ![Most common user paths](./images/insights/Touchpoint-paths.png)
 
