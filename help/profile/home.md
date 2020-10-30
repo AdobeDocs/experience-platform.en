@@ -9,28 +9,33 @@ description: Real-time Customer Profile is a generic lookup entity store that me
 
 Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction. This overview will help you understand the role and use of [!DNL Real-time Customer Profile] in [!DNL Experience Platform].
 
-
 ## [!DNL Profile] in Experience Platform
 
 The relationship between Real-time Customer Profile and other services within Experience Platform is highlighted in the following diagram:
 
 ![Adobe Experience Platform services.](images/profile-overview/profile-in-platform.png) 
 
-## Profile data
+### Profile data store
 
-[!DNL Real-time Customer Profile] is a generic lookup entity store that merges data from various enterprise data assets, and then provides access to that data in the form of individual customer profiles and related time series events. This feature enables marketers to drive coordinated, consistent and relevant experiences with their audiences across multiple channels.
+Although [!DNL Real-time Customer Profile] processes ingested data and uses Adobe Experience Platform [!DNL Identity Service] to merge related data through identity mapping, it maintains its own data in the [!DNL Profile] store. In other words, the [!DNL Profile] store is separate from [!DNL Catalog] data ([!DNL Data Lake]) and [!DNL Identity Service] data (identity graph).
 
 ### Profile guardrails
 
 Experience Platform provides a series of guardrails to help you avoid creating [Experience Data Model (XDM) schemas](../xdm/home.md) which Real-time Customer Profile cannot support. This includes soft limits that will result in performance degradation, as well has hard limits that will result in errors and system breakages. For more information, including a list of guidelines and example use cases, please read the [Profile guardrails](guardrails.md) documentation.
 
-### Profile store
+## Understanding profiles
 
-Although [!DNL Real-time Customer Profile] processes ingested data and uses Adobe Experience Platform [!DNL Identity Service] to merge related data through identity mapping, it maintains its own data in the [!DNL Profile] store. In other words, the [!DNL Profile] store is separate from [!DNL Catalog] data ([!DNL Data Lake]) and [!DNL Identity Service] data (identity graph).
+[!DNL Real-time Customer Profile] merges data from various enterprise systems and then provides access to that data in the form of customer profiles with related time series events. This feature enables marketers to drive coordinated, consistent and relevant experiences with their audiences across multiple channels. The following sections highlight some of the core concepts that you must understand in order to effectively build and maintain profiles within Platform.
+
+### Profile fragments vs merged profiles
+
+Each individual customer profile is composed of multiple profile fragments that have been merged to form a single view of that customer. For example, if a customer interacts with your brand across several channels, your organization will have multiple profile fragments related to that single customer appearing in multiple datasets. When these fragments are ingested into Platform, they are merged together in order to create a single profile for that customer. 
+
+When the data from multiple sources conflicts (for example one fragment lists the customer as "single" while the other lists the customer as "married") the [merge policy](#merge-policies) determines which information to prioritize and include in the profile for the individual. Therefore, the total number of profile fragments within Platform is likely to always be higher than the total number of merged profiles, as each profile is composed of multiple fragments.
 
 ### Record data
 
-A profile is a representation of a subject, an organization or an individual, also referred to as record data. For example, the profile of a product may include a SKU and description, whereas the profile of a person contains information like first name, last name, and email address. Using [!DNL Experience Platform], you can customize profiles to use types of data relevant to your business. The standard [!DNL Experience Data Model] (XDM) [!DNL Individual Profile] class is the preferred class upon which to build a schema when describing customer record data, and supplies the data integral to many interactions between Platform services. For more information on working with schemas in [!DNL Experience Platform], please begin by reading the [XDM System overview](../xdm/home.md).
+A profile is a representation of a subject, an organization or an individual, composed of many attributes (also known as record data). For example, the profile of a product may include a SKU and description, whereas the profile of a person contains information like first name, last name, and email address. Using [!DNL Experience Platform], you can customize profiles to use specific data relevant to your business. The standard [!DNL Experience Data Model] (XDM) class, [!DNL XDM Individual Profile], is the preferred class upon which to build a schema when describing customer record data, and supplies the data integral to many interactions between Platform services. For more information on working with schemas in [!DNL Experience Platform], please begin by reading the [XDM System overview](../xdm/home.md).
 
 ### Time series events
 
@@ -38,19 +43,19 @@ Time series data provides a snapshot of the system at the time an action was tak
 
 ### Identities
 
-Every business wants to communicate with their customers in a way that feels personal. However, one of the challenges of delivering relevant digital experiences to customers is understanding how to tie their disconnected data together, which is often spread across different digital channels such as tablets, mobile phones and laptops. [!DNL Identity Service] allows you to piece together the complete picture of your customer by linking identities from multiple channels, creating an identity graph for each customer, allowing you to better understand them. Visit the [Identity Service overview](../identity-service/home.md) for more information.
+Every business wants to communicate with their customers in a way that feels personal. However, one of the challenges of delivering relevant digital experiences to customers is understanding how to tie their disconnected data together, which is often spread across different digital channels such as tablets, mobile phones and laptops. [!DNL Identity Service] allows you to piece together the complete picture of your customer by linking identities from multiple channels and creating an identity graph for each customer. Visit the [Identity Service overview](../identity-service/home.md) for more information.
+
+### Merge policies
+
+When bringing data fragments together from multiple sources and combining them in order to see a complete view of each of your individual customers, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be used to create the customer profile. When there is conflicting data from multiple datasets, the merge policy will determine how that data should be treated and which value should be used. Using RESTful APIs or the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. For more information on working with merge policies using the [!DNL Real-time Customer Profile] API, please see the [merge policies endpoint guide](api/merge-policies.md). To work with merge policies using the [!DNL Experience Platform] UI, refer to the [merge policies user guide](ui/merge-policies.md). 
+
+### Union schemas {#profile-fragments-and-union-schemas}
+
+One of the key features of [!DNL Real-time Customer Profile] is the ability to unify multi-channel data. When [!DNL Real-time Customer Profile] is used to access an entity, it can supply you with a merged view of all profile fragments for that entity across datasets, referred to as the union view and made possible through what is known as a union schema. [!DNL Real-time Customer Profile] data is merged across sources when an entity or profile is accessed by its ID or exported as a segment. To learn more about accessing profiles and union views using the [!DNL Real-time Customer Profile] API, visit the [entities endpoint guide](api/entities.md).
 
 ### Segmentation
 
 Adobe Experience Platform [!DNL Segmentation Service] produces the audiences needed to power experiences for your individual customers. When an audience segment is created, the ID of that segment is added to the list of segment memberships for all qualifying profiles. Segment rules are built and applied to [!DNL Real-time Customer Profile] data using RESTful APIs and the Segment Builder user interface. To learn more about segmentation, please begin by reading the [Segmentation Service overview](../segmentation/home.md). 
-
-### Profile fragments and union schemas {#profile-fragments-and-union-schemas}
-
-One of the key features of [!DNL Real-time Customer Profile] is the ability to unify multi-channel data. When [!DNL Real-time Customer Profile] is used to access an entity, it can supply you with a merged view of all profile fragments for that entity across datasets, referred to as the union view and made possible through what is known as a union schema. [!DNL Real-time Customer Profile] data is merged across sources when an entity or profile is accessed by its ID or exported as a segment. To learn more about accessing profiles and union views using the [!DNL Real-time Customer Profile] API, visit the [entities endpoint guide](api/entities.md).
-
-### Merge policies
-
-When bringing data together from multiple sources and combining it in order to see a complete view of each of your individual customers, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view. Using RESTful APIs or the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. For more information on working with merge policies using the [!DNL Real-time Customer Profile] API, please see the [merge policies endpoint guide](api/merge-policies.md). To work with merge policies using the [!DNL Experience Platform] UI, refer to the [merge policies user guide](ui/merge-policies.md). 
 
 ### (Alpha) Configure computed attributes
 
@@ -74,7 +79,7 @@ In order to drive coordinated, consistent, and personalized experiences for your
 
 ## Ingest data into [!DNL Profile]
 
-[!DNL Platform] can be configured to send your record and time-series data to [!DNL Profile], supporting real-time streaming ingestion and batch ingestion. For more information, see the tutorial outlining how to [add data to Real-time Customer Profile](tutorials/add-profile-data.md). 
+[!DNL Platform] can be configured to send record and time-series data to [!DNL Profile], supporting real-time streaming ingestion and batch ingestion. For more information, see the tutorial outlining how to [add data to Real-time Customer Profile](tutorials/add-profile-data.md). 
 
 >[!NOTE]
 >
@@ -101,10 +106,10 @@ As it relates to accessing data, data governance plays a key role within [!DNL E
 
 ## Next steps and additional resources
 
-To learn more about [!DNL Real-time Customer Profile], please continue reading the documentation and supplement your learning by watching the video below or exploring other [Experience Platform video tutorials](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html).
+To learn more about working with [!DNL Real-time Customer Profile], please read the [Profile UI guide](ui/user-guide.md) or [API developer guide](api/overview.md).
 
 >[!WARNING]
 >
->The [!DNL Platform] UI shown in the following video is out of date. Please refer to the [Real-time Customer Profile user guide](ui/user-guide.md) for the latest UI screenshots and functionality. 
+>The Experience Platform user interface is frequently updated and may have changed since the recording of this video. Please refer to the [Real-time Customer Profile user guide](ui/user-guide.md) for the latest UI screenshots and functionality. 
 
 >[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12)
