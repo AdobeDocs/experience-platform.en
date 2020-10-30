@@ -14,19 +14,19 @@ Below is a list of variables that the Adobe Experience Platform [!DNL Edge Netwo
 | ---------- | ------------------------- | ----------------------------------------- |
 | `application.id` | `c.a.appid` | AppMeasurement context data `c.a.appid` mapping. |
 | `application.launches.value` | `c.a.launches` | AppMeasurement context data `c.a.launches` mapping. |
-| `commerce.checkouts.id` | `events` | `scCheckout` Event Serialization.  |
+| `commerce.checkouts.id` | `events` | `scCheckout` event serialization. If this field is excluded (i.e. for unserialized events), the system generates and assigns its own ID value to the entity. |
 | `commerce.checkouts.value` | `events` | AppMeasurement query parameter EVENT_LIST_FULL mapping with conversion COMMERCE_SC_CHECKOUT, using delimiter `,`. |
 | `commerce.order.currencyCode` | `cc` | AppMeasurement query parameter CURRENCY mapping. |
 | `commerce.order.purchaseID` | `pi` | AppMeasurement query parameter PURCHASEID mapping. |
-| `commerce.productListAdds.id` | `events` | `scAdd` Event Serialization.  |
+| `commerce.productListAdds.id` | `events` | `scAdd` event serialization. If this field is excluded (i.e. for unserialized events), the system generates and assigns its own ID value to the entity. |
 | `commerce.productListAdds.value` | `events` | AppMeasurement query parameter EVENT_LIST_FULL mapping with conversion COMMERCE_SC_ADD, using delimiter `,`. |
-| `commerce.productListOpens.id` | `events` | `scOpen` Event Serialization.  |
+| `commerce.productListOpens.id` | `events` | `scOpen` event serialization. If this field is excluded (i.e. for unserialized events), the system generates and assigns its own ID value to the entity. |
 | `commerce.productListOpens.value` | `events` | AppMeasurement query parameter EVENT_LIST_FULL mapping with conversion COMMERCE_SC_OPEN, using delimiter `,`. |
-| `commerce.productListRemovals.id` | `events` | `scRemove` Event Serialization.  |
+| `commerce.productListRemovals.id` | `events` | `scRemove` event serialization. If this field is excluded (i.e. for unserialized events), the system generates and assigns its own ID value to the entity. |
 | `commerce.productListRemovals.value` | `events` | AppMeasurement query parameter EVENT_LIST_FULL mapping with conversion COMMERCE_SC_REMOVE, using delimiter `,`. |
-| `commerce.productListViews.id` | `events` | `scView` Event Serialization.  |
+| `commerce.productListViews.id` | `events` | `scView` event serialization. If this field is excluded (i.e. for unserialized events), the system generates and assigns its own ID value to the entity. |
 | `commerce.productListViews.value` | `events` | AppMeasurement query parameter EVENT_LIST_FULL mapping with conversion COMMERCE_SC_VIEW, using delimiter `,`. |
-| `commerce.productViews.id` | `events` | `prodView` Event Serialization.  |
+| `commerce.productViews.id` | `events` | `prodView` event serialization. If this field is excluded (i.e. for unserialized events), the system generates and assigns its own ID value to the entity. |
 | `commerce.productViews.value` | `events` | AppMeasurement query parameter EVENT_LIST_FULL mapping with conversion COMMERCE_PROD_VIEW, using delimiter `,`. |
 | `commerce.purchases.value` | `events` | AppMeasurement query parameter EVENT_LIST_FULL mapping with conversion COMMERCE_PURCHASE, using delimiter `,`. |
 | `device.colorDepth` | `c` | AppMeasurement query parameter C_COLOR mapping. |
