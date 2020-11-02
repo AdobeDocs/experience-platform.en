@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;insights;customer ai;popular topics
+keywords: Experience Platform;insights;customer ai;popular topics;customer ai insights
 solution: Experience Platform
 title: Discovering insights with Customer AI
 topic: Discovering insights
-description: Customer AI, as part of Intelligent Services provides marketers with the power to leverage Adobe Sensei to anticipate what your customers next action is going to be. Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale. This is accomplished without having to transform the business needs to a machine learning problem, picking an algorithm, training, or deployment.
+description: This document serves as a guide for interacting with service instance insights in the Intelligent Services Customer AI user interface.
 ---
 
 # Discovering insights with Customer AI
@@ -41,15 +41,22 @@ Next, the insights page for that service instance appears, where you are provide
 
 ### Service instance details
 
-There are two ways to view service instance details, the first is from the dashboard and the second from within the service instance. 
+There are two ways to view service instance details: from the dashboard or within the service instance. 
 
-To view details from within the dashboard, click on a service instance container avoiding the hyperlink that is attached to the name. This opens a right rail that provides additional details such as the description, scoring frequency, the prediction goal, and eligible population. Additionally, you can choose to edit and delete the instance by clicking **[!UICONTROL Edit]** or **[!UICONTROL Delete]**.
+To view an overview of the service instance details within the dashboard, select a service instance container, avoiding the hyperlink that is attached to the name. This opens a right rail that provides additional details. The controls contain the following:
 
-![right rail](../images/insights/success-run.png)
+- **[!UICONTROL Edit]**: Selecting **[!UICONTROL Edit]** allows you to modify an existing service instance. You can edit the name, description, and scoring frequency of the instance.
+- **[!UICONTROL Clone]**: Selecting **[!UICONTROL Clone]** copies the currently selected service instance set up. You can then modify the workflow to make minor tweaks and rename it as a new instance.
+- **[!UICONTROL Delete]**: You can delete a service instance, including any historical runs.
+- **[!UICONTROL Data source]**: A link to the dataset used by this instance.
+- **[!UICONTROL Run Frequency]**: How often a scoring run takes place and when.
+- **[!UICONTROL Score definition]**: A quick overview of the goal you configured for this instance.
+
+![](../images/user-guide/service-instance-panel.png)
 
 >[!NOTE]
 >
->In the event that a scoring run fails, an error message is provided. The error message is listed under *Last run details* in the right rail which is only visible to failed runs.
+>In the event that a scoring run fails, an error message is provided. The error message is listed under **Last run details** in the right rail which is only visible to failed runs.
 
 ![failed run message](../images/insights/failed-run.png)
 
@@ -65,7 +72,7 @@ To edit an instance, click **[!UICONTROL Edit]** in the top-right navigation.
 
 ![click the edit button](../images/insights/edit-button.png)
 
-The edit dialog box appears, allowing you to edit the *Description* and *Scoring Frequency* of the instance. To confirm your changes and close the dialog, click **[!UICONTROL Edit]** in the bottom-right corner.
+The edit dialog box appears, allowing you to edit the name, description, status, and scoring frequency of the instance. To confirm your changes and close the dialog, select **[!UICONTROL Save]** in the bottom-right corner.
 
 ![edit popover](../images/insights/edit-instance.png)
 
@@ -73,15 +80,16 @@ The edit dialog box appears, allowing you to edit the *Description* and *Scoring
 
 The **[!UICONTROL More actions]** button is located in the top-right navigation next to **[!UICONTROL Edit]**. Clicking **[!UICONTROL More actions]** opens a dropdown that allows you to select one of the following operations:
 
+- **[!UICONTROL Clone]**: Selecting **[!UICONTROL Clone]** copies the service instance set up. You can then modify the workflow to make minor tweaks and rename it as a new instance.
 - **[!UICONTROL Delete]**: Deletes the instance.
-- **[!UICONTROL Access scores]**: Clicking *Access scores* opens a dialog providing a link to the [downloading scores for Customer AI](./download-scores.md) tutorial, the dialog also provides the dataset id required for making API calls.
+- **[!UICONTROL Access scores]**: Selecting **[!UICONTROL Access scores]** opens a dialog providing a link to the [downloading scores for Customer AI](./download-scores.md) tutorial, the dialog also provides the dataset id required for making API calls.
 - **[!UICONTROL View run history]**: A dialog containing a list of all the scoring runs associated with the service instance appears.
 
 ![more actions](../images/insights/more-actions.png)
 
-## Scoring Summary {#scoring-summary}
+## Scoring summary {#scoring-summary}
 
-Scoring Summary displays the total number of profiles scored and categorizes them into buckets containing high, medium, and low propensity. The propensity buckets are determined based on score range, low is less than 24, medium is 25 to 74, and high is above 74. Each bucket has a color corresponding to the legend. 
+Scoring summary displays the total number of profiles scored and categorizes them into buckets containing high, medium, and low propensity. The propensity buckets are determined based on score range, low is less than 24, medium is 25 to 74, and high is above 74. Each bucket has a color corresponding to the legend. 
 
 >[!NOTE]
 >
@@ -89,9 +97,13 @@ Scoring Summary displays the total number of profiles scored and categorizes the
 
 ![scoring summary](../images/insights/scoring-summary.png)
 
+You can hover over any color on the ring to view additional information, such as a percentage and total number of profiles belonging to a bucket.
+
+![](../images/insights/scoring-ring.png)
+
 ## Distribution of Scores
 
-The **[!UICONTROL Distribution of Scores]** card gives you a visual summary of the population based on the score. The colors that you see in the *Distribution of Scores* card represent the type of propensity score generated. 
+The **[!UICONTROL Distribution of Scores]** card gives you a visual summary of the population based on the score. The colors that you see in the [!UICONTROL Distribution of Scores] card represent the type of propensity score generated. Hovering over any of the scoring distributions provides the exact count belonging to that distribution.
 
 ![distribution of scores](../images/insights/distribution-of-scores.png)
 
@@ -101,9 +113,21 @@ For each score bucket, a card is generated that shows the top 10 influential fac
 
 ![Influential factors](../images/insights/influential-factors.png)
 
+### Influential factor drilldowns
+
+Hovering over any of the top influential factors further breaks down the data. You are provided an overview as to why certain profiles belong to a propensity bucket. Depending on the factor, you may be given number, categorical, or boolean values. The example below displays categorical values by region.
+
+![drilldown screenshot](../images/insights/drilldown.png)
+
+Additionally, using drilldowns, you are able to compare a distribution factor if it occurs in two or more propensity buckets and create more specific segments with these values. The following example illustrates the first use case:
+
+![](../images/insights/drilldown-compare.png)
+
+You can see that profiles with low propensity to convert are less likely to have made a recent visit to the adobe.com webpages. The "Days since last webVisit" factor has only 8% coverage compared to 26% in medium propensity profiles. Using these numbers, you can compare the distribution within each bucket for the factor. This information can be used to infer that the recency in webvisit is not as influential in the low propensity bucket, as it is in medium propensity bucket.
+
 ### Create a segment
 
-Clicking the **[!UICONTROL Create Segment]** button in any of the buckets for Low, Medium, and High propensity redirects you to the segment builder.
+Selecting the **[!UICONTROL Create Segment]** button in any of the buckets for low, medium, and high propensity redirects you to the segment builder.
 
 >[!NOTE]
 >
