@@ -52,7 +52,7 @@ You can create a source connection by making a POST request to the [!DNL Flow Se
 
 To create a source connection, you must also define an enum value for the data format attribute.
 
-Use the following the enum values for **file-based connectors**:
+Use the following the enum values for file-based connectors:
 
 | Data.format | Enum value |
 | ----------- | ---------- |
@@ -60,7 +60,7 @@ Use the following the enum values for **file-based connectors**:
 | JSON files | `json` |
 | Parquet files | `parquet` |
 
-For all **table-based connectors** use the enum value: `tabular`.
+For all table-based connectors use the enum value: `tabular`.
 
 **API format**
 
