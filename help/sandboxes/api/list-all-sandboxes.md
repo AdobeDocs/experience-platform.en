@@ -13,14 +13,18 @@ To list all sandboxes belonging to your IMS Organization (active or otherwise), 
 **API format**
 
 ```http
-GET /sandboxes
+GET /sandboxes?{QUERY_PARAMS}
 ```
+
+| Parameter | Description |
+| --------- | ----------- |
+| `{QUERY_PARAMS}` | Optional query parameters to filter results by. See the section on [query parameters](#query) for more information. |
 
 **Request**
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes?&limit=4&offset=1 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -98,3 +102,16 @@ A successful response returns a list of sandboxes belonging to your organization
 | `type` | The sandbox type, either "development" or "production". |
 | `isDefault` | A boolean property indicating whether this sandbox is the default sandbox for the organization. Typically this is the production sandbox. |
 | `eTag` | An identifier for a specific version of the sandbox. Used for version control and caching efficiency, this value is updated each time a change is made to the sandbox. |
+
+## Using query parameters {#query}
+
+The [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) API supports the use of query parameters to page and filter results when listing sandboxes.
+
+>[!NOTE]
+>
+>The `limit` and `offset` query parameters have to be specified together. If you specify only one, the API will return an error. If you specify none, default limit is 50 and offset is 0.
+
+| Parameter | Description |
+| --------- | ----------- |
+| `limit` | The maximum number of records returned in a query. |
+| `offeset` | The offset of where to start from in the response i.e. offset of the first record to return. |
