@@ -138,8 +138,8 @@ On the **[!UICONTROL Select Attributes]** page, select **[!UICONTROL Add new fie
 > Adobe Real-time CDP prefills your selection with four recommended, commonly-used attributes from your schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 > 
 File exports will vary as follows, depending on whether `segmentMembership.status` is selected:
-* If the `segmentMembership.status` field is selected, exported files include **Active** members in the initial full snapshot and **Active** and **Expired** members in subsequent incremental exports.
-* If the `segmentMembership.status` field is not selected, exported files include only **Active** members in the initial full snapshot and in subsequent incremental exports.
+- If the `segmentMembership.status` field is selected, exported files include **Active** members in the initial full snapshot and **Active** and **Expired** members in subsequent incremental exports.
+- If the `segmentMembership.status` field is not selected, exported files include only **Active** members in the initial full snapshot and in subsequent incremental exports.
 
 ![recommended attributes](/help/rtcdp/destinations/assets/recommended-attributes.png) 
 
@@ -150,8 +150,8 @@ It is recommended that one of the attributes is a [unique identifier](/help/rtcd
 >[!NOTE] 
 > 
 >If any data usage labels have been applied to certain fields within a dataset (rather than the entire dataset), enforcement of those field-level labels on activation occurs under the following conditions:
->* The fields are used in the segment definition.
->* The fields are configured as projected attributes for the target destination.
+>- The fields are used in the segment definition.
+>- The fields are configured as projected attributes for the target destination.
 >
 > Consider the screenshot below. If, for example, the field `person.name.firstName` had certain data usage labels that conflict with the destination's marketing use case, you would be shown a data usage policy violation in the review step (step 9). For more information, see [Data Governance in Real-time CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations).
 
