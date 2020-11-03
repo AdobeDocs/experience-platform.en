@@ -81,10 +81,10 @@ Schema | XDM field
 
 See the individual email marketing destination articles to learn how to import data from your storage location into destinations: 
 
-* [Adobe Campaign](/help/rtcdp/destinations/adobe-campaign-destination.md#import-data-into-campaign)
-* [Salesforce Marketing Cloud](/help/rtcdp/destinations/salesforce-marketing-cloud-destination.md#import-data-into-salesforce)
-* [Oracle Eloqua](/help/rtcdp/destinations/oracle-eloqua-destination.md#import-data-into-eloqua)
-* [Oracle Responsys](/help/rtcdp/destinations/oracle-responsys-destination.md#import-data-into-responsys)
+- [Adobe Campaign](/help/rtcdp/destinations/adobe-campaign-destination.md#import-data-into-campaign)
+- [Salesforce Marketing Cloud](/help/rtcdp/destinations/salesforce-marketing-cloud-destination.md#import-data-into-salesforce)
+- [Oracle Eloqua](/help/rtcdp/destinations/oracle-eloqua-destination.md#import-data-into-eloqua)
+- [Oracle Responsys](/help/rtcdp/destinations/oracle-responsys-destination.md#import-data-into-responsys)
 
 ## Activate segments to email marketing destinations
 
@@ -92,5 +92,5 @@ For instructions on how to activate segments to email marketing destinations, se
 
 ## Additional resources
 
-* [Activate data to destinations](/help/rtcdp/destinations/activate-destinations.md)
-* [Create email marketing destinations and activate data using the Flow Service API](https://docs.adobe.com/content/help/en/experience-platform/tutorials/destinations/email-marketing-api.html)
+- [Activate data to destinations](/help/rtcdp/destinations/activate-destinations.md)
+- [Create email marketing destinations and activate data using the Flow Service API](https://docs.adobe.com/content/help/en/experience-platform/tutorials/destinations/email-marketing-api.html)

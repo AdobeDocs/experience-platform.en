@@ -23,12 +23,16 @@ The steps in the activate workflow vary slightly between destination types. The 
 
 Applies to: All destinations
 
-1. In the Adobe Real-time CDP user interface, navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**, and select the destination where you want to activate your segments.
+In the Adobe Real-time CDP user interface, navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**, and select the destination where you want to activate your segments.
 ![browse to destination](assets/oracle-eloqua-connect.png)
-2. Click the name of the destination. This takes you to the activation workflow.
-    ![activate-flow](assets/activate-flow.png)
-    Note that if an activation workflow already exists for a destination, you can see the segments that are currently being activated to the destination. Select **[!UICONTROL Edit activation]** in the right rail and follow the steps below to modify the activation details.
-3. Select **[!UICONTROL Activate]**.
+
+Afterward, click the name of the destination. This takes you to the activation workflow.
+
+![activate-flow](assets/activate-flow.png)
+
+Note that if an activation workflow already exists for a destination, you can see the segments that are currently being activated to the destination. Select **[!UICONTROL Edit activation]** in the right rail and follow the steps below to modify the activation details.
+
+Once you have selected which destination, select **[!UICONTROL Activate]**.
 
 <br>&nbsp;
 
@@ -79,9 +83,9 @@ In the **[!UICONTROL Configure]** step, you can configure the schedule and the f
 
 To add a schedule for the segment, select the **[!UICONTROL Create schedule]** button. A pop over appears, showing options to create the segment schedule. 
 
-* File export: You have the option to either **[!UICONTROL Export full files]** or **[!UICONTROL Export incremental files]**. Exporting a full file publishes a complete snapshot of all the profiles that qualify for that segment. Exporting an incremental file publishes the delta of profiles that qualify for that segment since the last export. 
-* Frequency: If **Export full files** is selected, you have the option to export **Once** or **Daily**. If **Export incremental files** is selected, you only have the option to export **Daily**. Exporting a file **Once** exports the file one time. Exporting a file **Daily** exports the file every day from the start date to the end date at 12:00 PM UTC. 
-* Date: If **Once** is selected, you can select the date for the one time export. If **Daily** is selected, you can select the start and end dates for the exports.
+- File export: You have the option to either **[!UICONTROL Export full files]** or **[!UICONTROL Export incremental files]**. Exporting a full file publishes a complete snapshot of all the profiles that qualify for that segment. Exporting an incremental file publishes the delta of profiles that qualify for that segment since the last export. 
+- Frequency: If **Export full files** is selected, you have the option to export **Once** or **Daily**. If **Export incremental files** is selected, you only have the option to export **Daily**. Exporting a file **Once** exports the file one time. Exporting a file **Daily** exports the file every day from the start date to the end date at 12:00 PM UTC. 
+- Date: If **Once** is selected, you can select the date for the one time export. If **Daily** is selected, you can select the start and end dates for the exports.
 
 The default file names consist of destination name, segment ID, and a date and time indicator. For example, you can edit your exported file names to distinguish between different campaigns or to have the data export time appended to the files.
 
@@ -91,9 +95,9 @@ Select **[!UICONTROL Next]** to use the default file names or click the pencil i
 
 In the file name editor, you can select different components to add to the file name. The destination name and segment ID cannot be removed from file names. In addition to these, you can add the following:
 
-* **[!UICONTROL Segment name]**: You can append the segment name to the file name.
-* **[!UICONTROL Date and time]**: Select between adding a `MMDDYYYY_HHMMSS` format or a Unix 10-digit timestamp of the time when the files are generated. Select one of these options if you would like your files to have a dynamic file name generated with each incremental export.
-* **[!UICONTROL Custom text]**: Add custom text to the file names.
+- **[!UICONTROL Segment name]**: You can append the segment name to the file name.
+- **[!UICONTROL Date and time]**: Select between adding a `MMDDYYYY_HHMMSS` format or a Unix 10-digit timestamp of the time when the files are generated. Select one of these options if you would like your files to have a dynamic file name generated with each incremental export.
+- **[!UICONTROL Custom text]**: Add custom text to the file names.
 
 Select **[!UICONTROL Apply changes]** to confirm your selection. 
 
