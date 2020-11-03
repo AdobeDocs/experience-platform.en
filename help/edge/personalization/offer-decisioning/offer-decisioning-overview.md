@@ -43,7 +43,7 @@ It is important to understand the following terminology when working with Offer 
 
 **Edge Configuration:** For more information, please read the [edge configuration](../../fundamentals/edge-configuration.md) documentation.
 
-**Container:** [WIP]
+**Container:** A container is an isolation mechanism to keep different concerns apart. The container ID is the first path element for all repository APIs. All decisioning objects reside within a container.
 
 **Identity**: For more information, please read this documentation outlining how [Platform Web SDK leverages Identity Service](../../identity/overview.md).
 
