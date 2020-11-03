@@ -24,7 +24,7 @@ The following table outlines the different functions provided by the library:
 | Function | Description |
 | --- | --- |
 | `retrieveIdentities` | Returns an array of matching identities (`validIds`) that were retrieved from [!DNL Privacy Service], as well as an array of identities that were not found (`failedIds`). |
-| `removeIdentities` | Removes each matching (valid) identity from the browser. Returns an array of matching identities (`validIds`), with each identity containing a `isDeleteClientSide` boolean which indicates whether this ID has been deleted. |
+| `removeIdentities` | Removes each matching (valid) identity from the browser. Returns an array of matching identities (`validIds`), with each identity containing a `isDeletedClientSide` boolean which indicates whether this ID has been deleted. |
 | `retrieveThenRemoveIdentities` | Retrieves an array of matching identities (`validIds`), and then removes those identities from the browser. While this function is similar to `removeIdentities`, it is best used when the Adobe solution you are using requires an access request before deletion is possible (such as when a unique identifier must be retrieved before providing it in a delete request). |
 
 >[!NOTE]
