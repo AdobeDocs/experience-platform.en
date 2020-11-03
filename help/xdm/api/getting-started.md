@@ -1,59 +1,53 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
 solution: Experience Platform
-title: Schema Registry API developer guide
-description: The Schema Registry is used to access the Schema Library within Adobe Experience Platform, providing a user interface and RESTful API from which all available library resources are accessible. Using the Schema Registry API, you can perform basic CRUD operations in order to view and manage all schemas and related resources available to you within Adobe Experience Platform.
+title: Getting started with the Schema Registry API
+description: Get started with the Schema Registry API
 topic: developer guide
 ---
 
-# [!DNL Schema Registry] API developer guide
+# Getting started with the [!DNL Schema Registry] API
 
-The [!DNL Schema Registry] is used to access the Schema Library within Adobe Experience Platform, providing a user interface and RESTful API from which all available library resources are accessible.
-
-Using the Schema Registry API, you can perform basic CRUD operations in order to view and manage all schemas and related resources available to you within Adobe Experience Platform. This includes those defined by Adobe, [!DNL Experience Platform] partners, and vendors whose applications you use. You can also use API calls to create new schemas and resources for your organization, as well as view and edit resources that you have already defined.
-
-This developer guide provides steps to help you start using the [!DNL Schema Registry] API. The guide then provides sample API calls for performing key operations using the [!DNL Schema Registry].
+The [!DNL Schema Registry] API allows you to create and manage various Experience Data Model (XDM) resources. This document provides an introduction to the core concepts you need to know before attempting to make calls to the [!DNL Schema Registry] API.
 
 ## Prerequisites
 
-This guide requires a working understanding of the following components of Adobe Experience Platform:
+Using the developer guide requires a working understanding of the following components of Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     * [Basics of schema composition](../schema/composition.md): Learn about the basic building blocks of XDM schemas.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Schema Registry] API.
-
 ## Reading sample API calls
 
-This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
+The [!DNL Schema Registry] API documentation provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the Experience Platform troubleshooting guide.
 
 ## Gather values for required headers
 
 In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 All resources in [!DNL Experience Platform], including those belonging to the [!DNL Schema Registry], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
 >For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
 
-All lookup (GET) requests to the [!DNL Schema Registry] require an additional Accept header, whose value determines the format of information returned by the API. See the [Accept header](#accept) section below for more details.
+All lookup (GET) requests to the [!DNL Schema Registry] require an additional `Accept` header, whose value determines the format of information returned by the API. See the [Accept header](#accept) section below for more details.
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
-* Content-Type: application/json
+* `Content-Type: application/json`
 
 ## Know your TENANT_ID {#know-your-tenant_id}
 
-Throughout this guide you will see references to a `TENANT_ID`. This ID is used to ensure that resources you create are namespaced properly and contained within your IMS Organization. If you do not know your ID, you can access it by performing the following GET request:
+Throughout the API guides you will see references to a `TENANT_ID`. This ID is used to ensure that resources you create are namespaced properly and contained within your IMS Organization. If you do not know your ID, you can access it by performing the following GET request:
 
 **API format**
 
@@ -151,17 +145,15 @@ A successful response returns information regarding your organization's use of t
  }
 ```
 
-* `tenantId`: The `TENANT_ID` value for your IMS Organization.
-
 ## Understand the `CONTAINER_ID` {#container}
 
-Calls to the [!DNL Schema Registry] API require the use of a `CONTAINER_ID`. There are two containers against which API calls can be made: the global container and the tenant container.
+Calls to the [!DNL Schema Registry] API require the use of a `CONTAINER_ID`. There are two containers against which API calls can be made: the `global` container and the `tenant` container.
 
 ### Global container
 
-The global container holds all standard Adobe and [!DNL Experience Platform] partner provided classes, mixins, data types, and schemas. You may only perform list and lookup (GET) requests against the global container.
+The `global` container holds all standard Adobe and [!DNL Experience Platform] partner provided classes, mixins, data types, and schemas. You may only perform list and lookup (GET) requests against the `global` container.
 
-An example of a call that uses the global container would look like the following:
+An example of a call that uses the `global` container would look like the following:
 
 ```http
 GET /global/classes
@@ -169,35 +161,38 @@ GET /global/classes
 
 ### Tenant container
 
-Not to be confused with your unique `TENANT_ID`, the tenant container holds all classes, mixins, data types, schemas, and descriptors defined by an IMS Organization. These are unique to each organization, meaning they are not visible or manageable by other IMS Orgs. You may perform all CRUD operations (GET, POST, PUT, PATCH, DELETE) against resources that you create in the tenant container.
+Not to be confused with your unique `TENANT_ID`, the `tenant` container holds all classes, mixins, data types, schemas, and descriptors defined by an IMS Organization. These are unique to each organization, meaning they are not visible or manageable by other IMS Orgs. You may perform all CRUD operations (GET, POST, PUT, PATCH, DELETE) against resources that you create in the `tenant` container.
 
-An example of a call that uses the tenant container would look like the following:
+An example of a call that uses the `tenant` container would look like the following:
 
 ```http
 POST /tenant/mixins
 ```
 
-When you create a class, mixin, schema or data type in the tenant container, it is saved to the [!DNL Schema Registry] and assigned an `$id` URI that includes your `TENANT_ID`. This `$id` is used throughout the API to reference specific resources. Examples of `$id` values are provided in the next section.
+When you create a class, mixin, schema or data type in the `tenant` container, it is saved to the [!DNL Schema Registry] and assigned an `$id` URI that includes your `TENANT_ID`. This `$id` is used throughout the API to reference specific resources. Examples of `$id` values are provided in the next section.
 
-## Schema identification {#schema-identification}
+## Resource identification {#schema-identification}
 
-Schemas are identified with an `$id` attribute in the form of a URI, such as: 
+XDM resources are identified with an `$id` attribute in the form of a URI, such as the following examples: 
+
 * `https://ns.adobe.com/xdm/context/profile` 
 * `https://ns.adobe.com/{TENANT_ID}/schemas/7442343-abs2343-21232421` 
 
 To make the URI more REST-friendly, schemas also have a dot-notation encoding of the URI in a property called `meta:altId`:
+
 * `_xdm.context.profile`
 * `_{TENANT_ID}.schemas.7442343-abs2343-21232421`
 
-Calls to the Schema Registry API will support either the URL-encoded `$id` URI or the `meta:altId` (dot-notation format). Best practice is to use the URL-encoded `$id` URI when making a REST call to the API, like so:
+Calls to the [!DNL Schema Registry] API will support either the URL-encoded `$id` URI or the `meta:altId` (dot-notation format). Best practice is to use the URL-encoded `$id` URI when making a REST call to the API, like so:
+
 * `https%3A%2F%2Fns.adobe.com%2Fxdm%2Fcontext%2Fprofile`
 * `https%3A%2F%2Fns.adobe.com%2F{TENANT_ID}%2Fschemas%2F7442343-abs2343-21232421`
 
 ## Accept header {#accept}
 
-When performing list and lookup (GET) operations in the [!DNL Schema Registry] API, an Accept header is required to determine the format of the data returned by the API. When looking up specific resources, a version number must also be included in the Accept header.
+When performing list and lookup (GET) operations in the [!DNL Schema Registry] API, an `Accept` header is required to determine the format of the data returned by the API. When looking up specific resources, a version number must also be included in the `Accept` header.
 
-The following table lists compatible Accept header values, including those with version numbers, along with descriptions of what the API will return when they are used.
+The following table lists compatible `Accept` header values, including those with version numbers, along with descriptions of what the API will return when they are used.
 
 | Accept | Description |
 | ------- | ------------ |
@@ -244,8 +239,8 @@ The following sample field illustrates a properly formatted XDM field, with furt
     * The field type may also be defined using any data type in the registry. See the section on [creating a data type](create-data-type.md) in this guide for more information. 
 * The `description` explains the field and pertinent information regarding field data. It should be written in full sentences with clear language so that anyone accessing the schema can understand the intention of the field.
 
-See the [appendix](appendix.md) for more information how to define field types in the API.
+See the document on [field constraints](../schema/field-constraints.md) for more information on how to define different field types in the API.
 
 ## Next steps
 
-This document covered the prerequisite knowledge required to make calls to the [!DNL Schema Registry] API, including required authentication credentials. You can now proceed to the sample calls provided in this developer guide and follow along with their instructions. For a full step-by-step walkthrough on how to make a schema in the API, please refer to the following [tutorial](../tutorials/create-schema-api.md). 
+To begin making calls using the [!DNL Schema Registry API], select one of the available endpoint guides.

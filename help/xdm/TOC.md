@@ -49,6 +49,7 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
     * [POI interaction](./data-types/poi-interaction.md)
     * [Postal address](./data-types/postal-address.md)
 * Schema Registry API {#api}
+  * [Overview](api/overview.md)
   * [Getting started](api/getting-started.md)
   * [List resources](api/list-resources.md)
   * [Look up a resource](api/look-up-resource.md)
