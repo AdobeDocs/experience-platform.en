@@ -22,6 +22,8 @@ The Adobe Experience Platform [!DNL Web SDK] can deliver and render personalized
 ​
 ## Terminology
 
+It is important to understand the following terminology when working with Offer Decisioning. For more information and to view additional terms, please visit the [Offer Decisioning glossary](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html?lang=en#get-started).
+
 **Decision Scopes:** For Offer Decisioning, these are the Base64 encoded strings of JSON containing the activity and placement IDs you want the offer decisioning service to use to propose offers.
 
 *Decision scope JSON:*
@@ -42,8 +44,6 @@ The Adobe Experience Platform [!DNL Web SDK] can deliver and render personalized
 **Edge Configuration:** For more information, please read the [edge configuration](../../fundamentals/edge-configuration.md) documentation.
 
 **Container:** [WIP]
-
-**Offer Repository Glossary:** [WIP]
 
 **Identity**: For more information, please read this documentation outlining how [Platform Web SDK leverages Identity Service](../../identity/overview.md).
 
