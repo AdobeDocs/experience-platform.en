@@ -52,8 +52,6 @@ Adobe Experience Platform [!DNL Decisioning Service] provides the ability to pro
 
 * None.
 
-See the [Decisioning Service overview](../../decisioning-service/home.md) for a full introduction to the service.
-
 ## [!DNL Sources] {#sources}
 
 Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe Solutions, cloud-based storage, third party software, and your CRM system.
