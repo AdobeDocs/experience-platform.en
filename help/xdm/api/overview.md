@@ -18,7 +18,7 @@ To view all available endpoints and CRUD operations, visit the [Schema Registry 
 
 ## Schemas
 
-XDM schemas represent and validate the structure and format of data ingested into Platform. A schema is composed of a class and zero or more mixins. You can create, view, edit, and delete schemas using the `/schemas` endpoint. To learn how to use this endpoint, see the [schemas endpoint guide].
+XDM schemas represent and validate the structure and format of data ingested into Platform. A schema is composed of a class and zero or more mixins. You can create, view, edit, and delete schemas using the `/schemas` endpoint. To learn how to use this endpoint, see the [schemas endpoint guide](./schemas.md).
 
 For a step-by-step guide on how to create a complete schema in the Schema Registry API, including creating and adding mixins and data types, see the [API schema creation tutorial](../tutorials/create-schema-api.md).
 

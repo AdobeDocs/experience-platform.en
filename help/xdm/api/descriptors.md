@@ -51,6 +51,7 @@ Descriptor Accept headers replace `xed` with `xdm`, and offer a `link` option th
 | `application/vnd.adobe.xdm-id+json` | Returns an array of descriptor IDs |
 | `application/vnd.adobe.xdm-link+json` | Returns an array of descriptor API paths |
 | `application/vnd.adobe.xdm+json` | Returns an array of expanded descriptor objects |
+| `application/vnd.adobe.xdm-v2+json` |	This Accept header must be used in order to utilize paging capabilities. |
 
 **Response**
 
