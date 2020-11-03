@@ -75,7 +75,15 @@ Applies to: Email marketing destinations and cloud storage destinations
 
 ![Configure step](/help/rtcdp/destinations/assets/configure-icon.png)
 
-This step is optional. In the **[!UICONTROL Configure]** step, you can configure the file names for each segment you are exporting. The default file names consist of destination name, segment ID, and a date and time indicator. For example, you can edit your exported file names to distinguish between different campaigns or to have the data export time appended to the files.
+In the **[!UICONTROL Configure]** step, you can configure the schedule and the file names for each segment you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional.
+
+To add a schedule for the segment, select the **[!UICONTROL Create schedule]** button. A pop over appears, showing options to create the segment schedule. 
+
+* File export: You have the option to either **[!UICONTROL Export full files]** or **[!UICONTROL Export incremental files]**. Exporting a full file publishes a complete snapshot of all the profiles that qualify for that segment. Exporting an incremental file publishes the delta of profiles that qualify for that segment since the last export. 
+* Frequency: If **Export full files** is selected, you have the option to export **Once** or **Daily**. If **Export incremental files** is selected, you only have the option to export **Daily**. Exporting a file **Once** exports the file one time. Exporting a file **Daily** exports the file every day from the start date to the end date at 12:00 PM UTC. 
+* Date: If **Once** is selected, you can select the date for the one time export. If **Daily** is selected, you can select the start and end dates for the exports.
+
+The default file names consist of destination name, segment ID, and a date and time indicator. For example, you can edit your exported file names to distinguish between different campaigns or to have the data export time appended to the files.
 
 Select **[!UICONTROL Next]** to use the default file names or click the pencil icon to open a modal window and edit the file names. Note that file names are limited to 255 characters.
 
@@ -113,22 +121,11 @@ On the **[!UICONTROL Segment schedule]** page, you can set the start date for se
 
 <br>&nbsp;
 
-### **[!UICONTROL Scheduling]** step {#scheduling}
-
-Applies to: email marketing destinations and cloud storage destinations
-
-![segment schedule step](assets/scheduling-icon.png)
-
-On the **[!UICONTROL Scheduling]** page, you can see the start date for sending data to the destination as well as the frequency of sending data to the destination. These values cannot be edited.
-
-<br>&nbsp;
-
 ### **[!UICONTROL Select attributes]** step {#select-attributes}
 
 Applies to: email marketing destinations and cloud storage destinations
 
 ![select attributes step](/help/rtcdp/destinations/assets/select-attributes-icon.png)
-
 
 On the **[!UICONTROL Select Attributes]** page, select **[!UICONTROL Add new field]** and select the attributes that you want to send to the destination.
 
@@ -142,8 +139,9 @@ File exports will vary as follows, depending on whether `segmentMembership.statu
 
 ![recommended attributes](/help/rtcdp/destinations/assets/recommended-attributes.png) 
 
+Additionally, you can mark different attributes as **[!UICONTROL Mandatory]**. Marking an attribute as mandatory makes it so the exported segment must contain that attribute. As a result, it can be used as an additionally form of filtering.
 
-We recommend one of the attributes to be a [unique identifier](/help/rtcdp/destinations/email-marketing-destinations.md#identity) from your schema. For more information about mandatory attributes, see Identity in the [Email marketing destinations](/help/rtcdp/destinations/email-marketing-destinations.md#identity) article. 
+It is recommended that one of the attributes is a [unique identifier](/help/rtcdp/destinations/email-marketing-destinations.md#identity) from your schema. For more information about mandatory attributes, see Identity in the [Email marketing destinations](/help/rtcdp/destinations/email-marketing-destinations.md#identity) article. 
    
 >[!NOTE] 
 > 
