@@ -24,7 +24,7 @@ To remedy this issue use the following steps:
    
 ![chrome advanced](./images/faq/chrome-advanced.png)
 
-The *Privacy and security* section appears. Next, click on **Site settings** followed by **Cookies and site data**.
+The **Privacy and security** section appears. Next, click on **Site settings** followed by **Cookies and site data**.
    
 ![chrome advanced](./images/faq/privacy-security.png)
 
@@ -56,7 +56,7 @@ Within the Safari preferences window, select **Advanced**. Then check the *Show 
 
 ![Safari advanced](./images/faq/advanced.png)
 
-Next, from the top navigation bar select the **Develop** menu. From within the *Develop* dropdown, hover over *User Agent*. You can select the **[!DNL Chrome]** or **[!DNL Firefox]** User Agent string you would like to use.
+Next, from the top navigation bar select the **Develop** menu. From within the **Develop** dropdown, hover over **User Agent**. You can select the **[!DNL Chrome]** or **[!DNL Firefox]** User Agent string you would like to use.
 
 ![Develop menu](./images/faq/user-agent.png)
 
@@ -105,3 +105,7 @@ You can configure resources by adding the following block to the first cell of y
 ```
 
 For more information on [!DNL Spark] cluster resource configuration, including the complete list of configurable properties, see the [JupyterLab User Guide](./jupyterlab/overview.md#kernels).
+
+## Why am I receiving an error when trying execute certain tasks for larger datasets?
+
+If you are receiving an error with a reason such as `Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues.` This typically means the driver or an executor is running out of memory. See the JupyterLab Notebooks [data access](./jupyterlab/access-notebook-data.md) documentation for more information on data limits and how to execute tasks on large datasets. Typically this error can be solved by changing the `mode` from `interactive` to `batch`.

@@ -1,9 +1,10 @@
 ---
 product: experience-platform
+solution: Experience Platform, Intelligent Services
 audience: user
 user-guide-title: Intelligent Services Help
 breadcrumb-title: Intelligent Services Guide
-user-guide-description: Intelligent Services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company's needs using business-level configurations without the need for data science expertise. Additionally, marketing practitioners can activate predictions in Adobe Experience Cloud, Adobe Experience Platform, and third-party applications.
+user-guide-description: Utilize intelligent AI services to generate scores, discover insights, and create segments from your marketing events data.
 ---
 
 # Adobe Intelligent Services {#intelligent-services}
@@ -25,6 +26,7 @@ user-guide-description: Intelligent Services empower marketing analysts and prac
     * [Keyword extraction](content-commerce-ai/api/keyword-extraction.md)
     * [Text classification](content-commerce-ai/api/text-classification.md)
     * [Visual similarity](content-commerce-ai/api/visual-similarity.md)
+    * [Text presence and optical character recognition](content-commerce-ai/api/optical-character-recognition.md)
 * Customer AI {#customer-ai}
   * [Overview](customer-ai/overview.md)
   * [Getting started with Customer AI](customer-ai/getting-started.md)

@@ -155,7 +155,7 @@ A successful response returns information regarding your organization's use of t
 
 ## Understand the `CONTAINER_ID` {#container}
 
-Calls to the [!DNL Schema Registry] API require the use of a `CONTAINER_ID`. There are two containers against which API calls can be made: the **global container** and the **tenant container**.
+Calls to the [!DNL Schema Registry] API require the use of a `CONTAINER_ID`. There are two containers against which API calls can be made: the global container and the tenant container.
 
 ### Global container
 

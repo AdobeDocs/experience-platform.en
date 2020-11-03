@@ -4,6 +4,7 @@ description: Source connectors in Adobe Experience Platform provide the ability 
 solution: Experience Platform
 title: Monitor accounts and dataflows
 topic: overview
+type: Tutorial
 ---
 
 # Monitor accounts and dataflows in the UI
@@ -47,6 +48,10 @@ Additionally, you can edit existing account information and update your account 
 
 The **[!UICONTROL Edit account details]** modal appears. From this page, you can update your existing account details and authentication credentials.
 
+>[!NOTE]
+>
+> Editing account details is available on all batch source connectors.
+
 ![](../../images/tutorials/monitor/edit-account.png)
 
 From the **[!UICONTROL Accounts]** page, you can view a list of existing dataflows or target datasets associated with the account you accessed. Select the ellipses (`...`) button to bring up more available options for your selected dataflow. These options are further described below:
@@ -65,7 +70,18 @@ Dataflows can be accessed directly from the **[!UICONTROL Catalog]** page withou
 
 ![catalog-dataflows](../../images/tutorials/monitor/catalog-dataflows.png)
 
-A list of existing dataflows appears. On this page is a list of viewable dataflows, including information about their source, username, number of dataflows, and status. Select the funnel icon on the top left to sort.
+A list of existing dataflows appears. On this page is a list of viewable dataflows, including information about their source, username, number of dataflows, and status.
+
+See the following table for more information on statuses:
+
+| Status | Description |
+| ------ | ----------- |
+| Enabled | The `Enabled` status indicates that a dataflow is active and is ingesting data according to the schedule it was provided. |
+| Disabled | The `Disabled` status indicates that a dataflow is inactive and is not ingesting any data. |
+| Processing | The `Processing` status indicates that a dataflow is not yet active. This status is often encountered immediately after a new dataflow is created. |
+| Error | The `Error` status indicates that the activation process of a dataflow has been disrupted. |
+
+ Select the funnel icon on the top left to sort.
 
 ![dataflows-list](../../images/tutorials/monitor/dataflows-list.png)
 
@@ -77,7 +93,7 @@ The **[!UICONTROL Dataflow activity]** page contains details on the number of re
 
 ![datflow-activity](../../images/tutorials/monitor/dataflow-activity.png)
 
-The calendar allows you to view the different time frames for ingested records. You can choose to select one of the two pre-set options **[!UICONTROL Last 7 days]** or **[!UICONTROL Last 30 days]**. Alternatively, you can set a custom time frame using the calendar. Select your time frame of choice and select **[!UICONTROL Apply]** to continue.
+The calendar allows you to view the different time frames for ingested records. You can choose to select one of the two pre-set options "[!UICONTROL Last 7 days]" or "[!UICONTROL Last 30 days]". Alternatively, you can set a custom time frame using the calendar. Select your time frame of choice and select **[!UICONTROL Apply]** to continue.
 
 ![flow-calendar](../../images/tutorials/monitor/flow-calendar.png)
 
@@ -87,7 +103,7 @@ Select **[!UICONTROL Dataflow run start]** to access the **[!UICONTROL Dataflow 
 
 ![runs](../../images/tutorials/monitor/run-metadata.png)
 
-The **[!UICONTROL Dataflow run overview]** displays information on the dataflow including its metadata, **[!UICONTROL Partial ingestion]** status, and assigned **[!UICONTROL Error threshold]**. The upper header also includes an **[!UICONTROL Error summary]**. The **[!UICONTROL Error summary]** contains the specific top-level error that shows at which step the ingestion process encountered an error.
+The **[!UICONTROL Dataflow run overview]** displays information on the dataflow including its metadata, partial ingestion status, and assigned error threshold. The upper header also includes an error summary. The **[!UICONTROL Error summary]** contains the specific top-level error that shows at which step the ingestion process encountered an error.
 
 ![dataflow-run-overview](../../images/tutorials/monitor/dataflow-run-overview.png)
 
@@ -100,13 +116,13 @@ Refer to the following table for errors that can be seen in the **[!UICONTROL Er
 
 The lower half of the screen contains information on **[!UICONTROL Dataflow run errors]**. From here, you can also view the files ingested, preview and download error diagnostics, or download the file manifest.
 
-The **[!UICONTROL Dataflow run errors]** section displays the **[!UICONTROL Error code]**, the number of records failed, and information describing the error.
+The **[!UICONTROL Dataflow run errors]** section displays the error code, the number of records failed, and information describing the error.
 
 Select **[!UICONTROL Preview error diagnostics]** to see more information on the ingestion error.
 
 ![Dataflow-run-errors](../../images/tutorials/monitor/dataflow-run-errors.png)
 
-The **[!UICONTROL Error diagnostics preview]** panel appears. This screen displays specific information regarding the ingestion failure, including the **[!UICONTROL File name]**, **[!UICONTROL Error code]**, the name of the column in which the error occurred, and a description of the error.
+The **[!UICONTROL Error diagnostics preview]** panel appears. This screen displays specific information regarding the ingestion failure, including the file name, error code, the name of the column in which the error occurred, and a description of the error.
 
 This section also includes a preview of the column that contains the error.
 

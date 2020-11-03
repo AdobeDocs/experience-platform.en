@@ -22,7 +22,7 @@ In addition to describing the structure of data, schemas apply constraints and e
 
 When working with relational databases, best practices involve normalizing data, or taking an entity and dividing it into discrete pieces that are then displayed across multiple tables. In order to read the data as a whole or update the entity, read and write operations must be made across many individual tables using JOIN.
 
-Through the use of embedded objects, XDM schemas can directly represent complex data and store it in self-contained documents with hierarchical structure. One of the main benefits to this structure is that it allows you to query the data without having to reconstruct the entity by expensive joins to multiple denormalized tables.
+Through the use of embedded objects, XDM schemas can directly represent complex data and store it in self-contained documents with a hierarchical structure. One of the main benefits to this structure is that it allows you to query the data without having to reconstruct the entity by expensive joins to multiple denormalized tables. There are no hard restrictions to how many levels your schema hierarchy can be.
 
 ### Schemas and big data
 
@@ -36,6 +36,8 @@ Standardization is a key concept behind [!DNL Experience Platform]. XDM, driven 
 
 The infrastructure on which [!DNL Experience Platform] is built, known as [!DNL XDM System], facilitates schema-based workflows and includes the [!DNL Schema Registry], [!DNL Schema Editor], schema metadata, and service consumption patterns. See the [XDM System overview](../home.md) for more information.
 
+There are several key benefits to building and utilizing schemas in [!DNL Experience Platform]. First, schemas allows for better data governance and data minimization, which is especially important with privacy regulations. Second, building schemas with Adobe's standard components allows for out-of-the-box insights and use of AI/ML services with minimal customizations. Last, schemas provide infrastructure for data sharing insights and efficient orchestration.
+
 ## Planning your schema
 
 The first step in building a schema is to determine the concept, or real-world object, that you are trying to capture within the schema. Once you identify the concept you are trying to describe, you can begin planning your schema by thinking about things like the type of data, potential identity fields, and how the schema may evolve in the future.
@@ -47,11 +49,11 @@ Data intended for use in [!DNL Experience Platform] is grouped into two behavior
 * **Record data**: Provides information about the attributes of a subject. A subject could be an organization or an individual.
 * **Time series data**: Provides a snapshot of the system at the time an action was taken either directly or indirectly by a record subject.
 
-All XDM schemas describe data that can be categorized as record or time series. The data behavior of a schema is defined by the schema's **class**, which is assigned to a schema when it is first created. XDM classes are described in further detail later in this document.
+All XDM schemas describe data that can be categorized as record or time series. The data behavior of a schema is defined by the schema's class, which is assigned to a schema when it is first created. XDM classes are described in further detail later in this document.
 
 Both record and time series schemas contain a map of identities (`xdm:identityMap`). This field contains the identity representation of a subject, drawn from fields marked as "Identity" as described in the next section.
 
-### [!UICONTROL Identity]
+### [!UICONTROL Identity] {#identity}
 
 Schemas are used for ingesting data into [!DNL Experience Platform]. This data can be used across multiple services to create a single, unified view of an individual entity. Therefore, it is important when thinking about schemas to think about customer identities and which fields can be used to identify a subject regardless of where the data may be coming from. 
 
@@ -126,21 +128,15 @@ Schemas are composed using the following formula:
 
 **Class + Mixin&ast; = XDM Schema**
 
-&ast;A schema is composed of a class and _zero or more_ mixins. This means that you could compose a dataset schema without using mixins at all.
+&ast;A schema is composed of a class and zero or more mixins. This means that you could compose a dataset schema without using mixins at all.
 
-### Class
+### Class {#class}
 
 Composing a schema begins by assigning a class. Classes define the behavioral aspects of the data the schema will contain (record or time-series). In addition to this, classes describe the smallest number of common properties that all schemas based on that class would need to include and provide a way for multiple compatible datasets to be merged. 
 
-A class also determines which mixins will be eligible for use in the schema. This is discussed in more detail in the [mixin](#mixin) section that follows. 
+A schema's class determines which mixins will be eligible for use in that schema. This is discussed in more detail in the [next section](#mixin). 
 
-There are standard classes provided with every integration of [!DNL Experience Platform], known as "Industry" classes. Industry classes are generally accepted industry standards that apply to a broad set of use cases. Examples of Industry classes include the [!DNL XDM Individual Profile] and [!DNL XDM ExperienceEvent] classes provided by Adobe. 
-
-[!DNL Experience Platform] also allows for "Vendor" classes, which are classes defined by [!DNL Experience Platform] partners and made available to all customers who use that vendor service or application within [!DNL Platform]. 
-
-There are also classes used to describe more specific use cases for individual organizations within [!DNL Platform], called "Customer" classes. Customer classes are defined by an organization when there are no Industry or Vendor classes available to describe a unique use case. 
-
-For example, a schema representing members of a Loyalty program describes record data about an individual and therefore can be based on the [!DNL XDM Individual Profile] class, a standard Industry class defined by Adobe.
+Adobe provides two standard ("core") XDM classes: [!DNL XDM Individual Profile] and [!DNL XDM ExperienceEvent]. In addition these core classes, you can also create your own custom classes to describe more specific use cases for your organization. Custom classes are defined by an organization when there are no Adobe-defined core classes available to describe a unique use case.
 
 ### Mixin {#mixin}
 
@@ -148,15 +144,21 @@ A mixin is a reusable component that defines one or more fields that implement c
 
 Mixins define which class(es) they are compatible with based on the behavior of the data they represent (record or time series). This means that not all mixins are available for use with all classes.
 
-Mixins have the same scope and definition as classes: there are Industry mixins, Vendor mixins, and Customer mixins that are defined by individual organizations using [!DNL Platform]. [!DNL Experience Platform] includes many standard Industry mixins while also allowing vendors to define mixins for their users, and individual users to define mixins for their own specific concepts. 
+[!DNL Experience Platform] includes many standard Adobe mixins while also allowing vendors to define mixins for their users, and individual users to define mixins for their own specific concepts.
 
 For example, to capture details such as "[!UICONTROL First Name]" and "[!UICONTROL Home Address]" for your "[!UICONTROL Loyalty Members]" schema, you would be able to use standard mixins that define those common concepts. However, concepts that are specific to less-common use cases (such as "[!UICONTROL Loyalty Program Level]") often do not have a pre-defined mixin. In this case, you must define your own mixin to capture this information.
 
 Remember that schemas are composed of "zero or more" mixins, so this means that you could compose a valid schema without using any mixins at all.
 
+For a list of all current standard mixins, refer to the [official XDM repository](https://github.com/adobe/xdm/tree/master/components/mixins).
+
 ### Data type {#data-type}
 
 Data types are used as reference field types in classes or schemas in the same way as basic literal fields. The key difference is that data types can define multiple sub-fields. Similar to a mixin, a data type allows for the consistent use of a multi-field structure, but has more flexibility than a mixin because a data type can be included anywhere in a schema by adding it as the "data type" of a field. 
+
+>[!NOTE]
+>
+>See the [appendix](#mixins-v-datatypes) for more information on the differences between mixins and data types, and the pros and cons of using one over the other for similar use cases.
 
 [!DNL Experience Platform] provides a number of common data types as part of the [!DNL Schema Registry] to support the use of standard patterns for describing common data structures. This is explained in more detail in the [!DNL Schema Registry] tutorials, where it will become more clear as you walk through the steps to define data types.
 
@@ -170,6 +172,10 @@ A field is the most basic building block of a schema. Fields provide constraints
 * Boolean
 * Array
 * Object
+
+>[!TIP]
+>
+>See the [appendix](#objects-v-freeform) for information on the pros and cons of using free-form fields over object-type fields.
 
 The valid ranges of these scalar types can be further constrained to certain patterns, formats, minimums/maximums, or pre-defined values. Using these constraints, a wide range of more specific field types can be represented, including:
 
@@ -231,10 +237,56 @@ All datafiles that are ingested into [!DNL Experience Platform] must conform to 
 
 ## Next steps
 
-Now that you understand the basics of schema composition, you are ready to begin building schemas using the [!DNL Schema Registry].
+Now that you understand the basics of schema composition, you are ready to begin exploring and building schemas using the [!DNL Schema Registry].
+
+To review the structure of the two core XDM classes and their commonly used compatible mixins, see the following reference documentation:
+
+* [[!DNL XDM Individual Profile]](../classes/individual-profile.md)
+* [[!DNL XDM ExperienceEvent]](../classes/experienceevent.md)
 
 The [!DNL Schema Registry] is used to access the [!DNL Schema Library] within Adobe Experience Platform, and provides a user interface and RESTful API from which all available library resources are accessible. The [!DNL Schema Library] contains Industry resources defined by Adobe, Vendor resources defined by [!DNL Experience Platform] partners, and classes, mixins, data types, and schemas that have been composed by members of your organization.
 
 To begin composing schema using the UI, follow along with the [Schema Editor tutorial](../tutorials/create-schema-ui.md) to build the "Loyalty Members" schema mentioned throughout this document.
 
 To begin using the [!DNL Schema Registry] API, start by reading the [Schema Registry API developer guide](../api/getting-started.md). After reading the developer guide, follow the steps outlined in the tutorial on [creating a schema using the Schema Registry API](../tutorials/create-schema-api.md).
+
+## Appendix
+
+The following section contains additional information regarding the principles of schema composition.
+
+### Objects versus free-form fields {#objects-v-freeform}
+
+There are some key factors to consider when choosing objects over free-form fields when designing your schemas:
+
+| Objects | Free-form fields |
+| --- | --- |
+| Increases nesting | Less or no nesting |
+| Creates logical field groupings | Fields are placed in ad-hoc locations |
+
+#### Objects
+
+The pros and cons of using objects over free-form fields are listed below.
+
+**Pros**:
+
+* Objects are best used when you want to create a logical grouping of certain fields.
+* Objects organize the schema in a more structured manner.
+* Objects indirectly help in creating a good menu structure in the Segment Builder UI. The grouped fields within the schema are directly reflected in the folder structure provided in the Segment Builder UI.
+
+**Cons**:
+
+* Fields become more nested.
+* When using [Adobe Experience Platform Query Service](../../query-service/home.md), longer reference strings must be provided to query fields that are nested in objects.
+
+#### Free-form fields
+
+The pros and cons of using free-form fields over objects are listed below.
+
+**Pros**:
+
+* Free-form fields are created directly under the root object of the schema (`_tenantId`), increasing visibility.
+* Reference strings for free-form fields tend to be shorter when using Query Service.
+
+**Cons**:
+
+* The location of free-form fields within the schema is ad-hoc, meaning they appear in alphabetical order within the Schema Editor. This can make schemas less structured, and similar free-form fields can end up being far separated depending on their names.
