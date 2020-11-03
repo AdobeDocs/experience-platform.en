@@ -13,13 +13,13 @@ keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;personalized of
 >The use of Offer Decisioning in Adobe Experience Platform Web SDK is currently available in early access to select users. This functionality is not available to all IMS organizations.
 
 The Adobe Experience Platform [!DNL Web SDK] can deliver and render personalized offers that are managed in Offer Decisioning. You can create your offers and other related objects using the Offer Decisioning user interface (UI) or APIs.
-​
+
 ## Pre-Requisites
 
 * IMS organization is enabled for edge decisioning
 * Offers, Activities created
 * Edge config is published
-​
+
 ## Terminology
 
 It is important to understand the following terminology when working with Offer Decisioning. For more information and to view additional terms, please visit the [Offer Decisioning glossary](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html?lang=en#get-started).
