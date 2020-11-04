@@ -130,10 +130,10 @@ To enable Offer Decisioning, you will need to perform the following steps:
           "scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==",
           "items": [
             {
-              "id": "xcore:personalized-offer:1111111111111111",
+              "id": "xcore:personalized-offer:124cc332095cfa74",
               "schema": "https://ns.adobe.com/experience/offer-management/content-component-html",
               "data": {
-                "id": "xcore:personalized-offer:1111111111111111",
+                "id": "xcore:personalized-offer:124cc332095cfa74",
                 "format": "text/html",
                 "language": [
                   "en-US"
@@ -158,9 +158,9 @@ To enable Offer Decisioning, you will need to perform the following steps:
 |Property | Description | Example |
 |---|---|---|
 | `scope`| The decision scope that resulted in the proposed offers. | `"scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="` |
-| `items.id`| The ID of the proposed offer.| `"id": "xcore:personalized-offer:1111111111111111"`|
+| `items.id`| The ID of the proposed offer.| `"id": "xcore:personalized-offer:124cc332095cfa74"`|
 | `schema`| The schema of the content associated with the proposed offer.| `"schema": "https://ns.adobe.com/experience/offer-management/content-component-html"`|
-| `data.id`| The ID of the proposed offer.|`"id": "xcore:personalized-offer:1111111111111111"`|
+| `data.id`| The ID of the proposed offer.|`"id": "xcore:personalized-offer:124cc332095cfa74"`|
 | `format`| The format of the content associated with the proposed offer. | `"format": "text/html"`|
 | `language`| An array of languages associated with the content from the proposed offer. | `"language": [ "en-US" ]`|
 | `content` | Text content associated with the proposed offer in the format of a string. | `"content": "<p style="color:red;">20% Off on shipping</p>"`|
@@ -216,10 +216,10 @@ To enable Offer Decisioning, you will need to perform the following steps:
           "scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==",
           "items": [
             {
-              "id": "xcore:personalized-offer:1111111111111111",
+              "id": "xcore:personalized-offer:124cc332095cfa74",
               "schema": "https://ns.adobe.com/experience/offer-management/content-component-html",
               "data": {
-                "id": "xcore:personalized-offer:1111111111111111",
+                "id": "xcore:personalized-offer:124cc332095cfa74",
                 "format": "text/html",
                 "language": [
                   "en-US"
@@ -240,10 +240,10 @@ To enable Offer Decisioning, you will need to perform the following steps:
           "scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIyMjA4YjNhODc0MDU1OCIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMjIwNDUyOTUxNGEyYzAifQ==",
           "items": [
             {
-              "id": "xcore:personalized-offer:2222222222222222",
+              "id": "xcore:personalized-offer:235fe313094cdb75",
               "schema": "https://ns.adobe.com/experience/offer-management/content-component-text",
               "data": {
-                "id": "xcore:personalized-offer:2222222222222222",
+                "id": "xcore:personalized-offer:235fe313094cdb75",
                 "format": "text/text",
                 "language": [
                   "en-US"
@@ -264,10 +264,10 @@ To enable Offer Decisioning, you will need to perform the following steps:
           "scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIyYzkxMzg1Mjc2MDE4YyIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMzMxZjU2MTYyYWEyZjcifQ==",
           "items": [
             {
-              "id": "xcore:personalized-offer:3333333333333333",
+              "id": "xcore:personalized-offer:312de312095cda65",
               "schema": "https://ns.adobe.com/experience/offer-management/content-component-imagelink",
               "data": {
-                "id": "xcore:personalized-offer:3333333333333333",
+                "id": "xcore:personalized-offer:312de312095cda65",
                 "format": "image/png",
                 "language": [
                   "en-US"
@@ -288,9 +288,9 @@ To enable Offer Decisioning, you will need to perform the following steps:
 |Property | Description | Example |
 |---|---|---|
 | `scope`| The decision scope that resulted in the proposed offers. | `"scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="` |
-| `items.id`| The ID of the proposed offer.| `"id": "xcore:personalized-offer:1111111111111111"`|
+| `items.id`| The ID of the proposed offer.| `"id": "xcore:personalized-offer:124cc332095cfa74"`|
 | `schema`| The schema of the content associated with the proposed offer.| `"schema": "https://ns.adobe.com/experience/offer-management/content-component-html"`|
-| `data.id`| The ID of the proposed offer.|`"id": "xcore:personalized-offer:1111111111111111"`|
+| `data.id`| The ID of the proposed offer.|`"id": "xcore:personalized-offer:124cc332095cfa74"`|
 | `format`| The format of the content associated with the proposed offer. | `"format": "text/html"`|
 | `language`| An array of languages associated with the content from the proposed offer. | `"language": [ "en-US" ]`|
 | `content` | Text content associated with the proposed offer in the format of a string. | `"content": "<p style="color:red;">20% Off on shipping</p>"`|
