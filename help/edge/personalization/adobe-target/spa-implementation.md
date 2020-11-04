@@ -71,7 +71,8 @@ XDM Views can be leveraged in Adobe Target to empower marketers to run A/B and X
         } 
       } 
     });
-    ``` 
+    ```
+ 
 >[!NOTE] 
 >
 >On the first `sendEvent()` call, all XDM Views that should be rendered to the end-user will be fetched and cached. Subsequent `sendEvent()` calls with XDM Views passed in will be read from the cache and rendered without a server call. 
@@ -121,8 +122,8 @@ history.listen(onViewChange);
 // react router v3 
 
 <Router history={hashHistory} onUpdate={onViewChange} > 
+
 ```
- 
 
 ### Example 2: Personalized products
 
@@ -131,7 +132,6 @@ The marketing team want to personalize the second row of products by changing th
 ![](assets/use-case-2.png)
 
 ```javascript
-
 function onViewChange(viewName) { 
 
   alloy("sendEvent",  { 
@@ -161,7 +161,6 @@ class Products extends Component {
   } 
 
 } 
-
 ```
 
 ### Example 3: A/B test delivery preferences
@@ -173,7 +172,6 @@ The marketing team want to run an A/B test to see whether changing the color of 
 To personalize content on the site depending on which delivery preference is selected, a View can be created for each delivery preference. When **Normal Delivery** is selected, the View can be named "checkout-normal". If **Express Delivery** is selected, the View can be named "checkout-express". 
 
 ```javascript
-
 function onViewChange(viewName) { 
 
   alloy("sendEvent",  { 
