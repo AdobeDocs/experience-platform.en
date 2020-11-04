@@ -36,6 +36,7 @@ user-guide-description: Interact with Experience Cloud services through the Edge
   * [Manage flicker](personalization/manage-flicker.md)
   * Adobe Target {#adobe-target}
     * [Target overview](personalization/adobe-target/target-overview.md)
+    * [Single Page Application implementation](personalization/adobe-target/spa-implementation.md)
 * Consent {#consent}
   * [Supporting consent](consent/supporting-consent.md)
   * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
