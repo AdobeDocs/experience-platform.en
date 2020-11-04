@@ -30,16 +30,16 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 
 | Parameter | Description |
 | --- | --- |
-| `{CONTAINER_ID}` | The container you want to retrieve schemas from: `global` or `tenant`. |
+| `{CONTAINER_ID}` | The container that houses the schemas you want to retrieve: `global` for Adobe-created schemas or `tenant` for schemas owned by your organization. |
 | `{QUERY_PARAMS}` | Optional query parameters to filter results by. See the [appendix document](./appendix.md#query) for a list of available parameters. |
 
 **Request**
 
-The following request retrieves a list of schemas from the `tenant` container, using a `limit` query parameter to limit the results to 30 schemas.
+The following request retrieves a list of schemas from the `tenant` container, using an `orderby` query parameter to sort the results by their `title` attribute.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas?limit=30 \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas?orderby=title \
   -H 'Accept: application/vnd.adobe.xed-id+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -73,7 +73,18 @@ The request above used the `application/vnd.adobe.xed-id+json` Accept header, th
       "version": "1.0",
       "title": "Loyalty Members"
     }
-  ]
+  ],
+  "_page": {
+        "orderby": "title",
+        "next": null,
+        "count": 2
+    },
+    "_links": {
+        "next": null,
+        "global_schemas": {
+            "href": "https://platform.adobe.io/data/foundation/schemaregistry/global/schemas"
+        }
+    }
 }
 ```
 
@@ -89,7 +100,7 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 
 | Parameter | Description |
 | --- | --- |
-| `{CONTAINER_ID}` | The container you want to retrieve the schema from: `global` or `tenant`. |
+| `{CONTAINER_ID}` | The container that houses the schema you want to retrieve: `global` for an Adobe-created schema or `tenant` for a schema owned by your organization. |
 | `{SCHEMA_ID}` | The `meta:altId` or URL-encoded `$id` of the schema you want to look up. |
 
 **Request**
@@ -99,7 +110,7 @@ The following request retrieves a schema specified by its `meta:altId` value in 
 ```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas/_{TENANT_ID}.schemas.f579a0b5f992c69458ea408ec36571f7da9de15901bab116 \
-  -H 'Accept: application/vnd.adobe.xed-id+json' \
+  -H 'Accept: application/vnd.adobe.xed+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -273,7 +284,7 @@ PUT /tenant/schemas/{SCHEMA_ID}
 The following request replaces an existing schema, changing its `title`, `description`, and `allOf` attributes.
 
 ```SHELL
-curl -X POST \
+curl -X PUT \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas/_{TENANT_ID}.schemas.d5cc04eb8d50190001287e4c869ebe67 \
   -H 'Authorization: Bearer {ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
@@ -422,7 +433,7 @@ DELETE /tenant/schemas/{SCHEMA_ID}
 
 | Parameter | Description |
 | --- | --- |
-| `{SCHEMA_ID}` | The URL-encoded `$id` URI or `meta:altId` of the schema you want to update. |
+| `{SCHEMA_ID}` | The URL-encoded `$id` URI or `meta:altId` of the schema you want to delete. |
 
 **Request**
 

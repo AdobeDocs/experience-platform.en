@@ -24,7 +24,7 @@ For a step-by-step guide on how to create a complete schema in the Schema Regist
 
 ## Classes
 
-Classes define the behavioral aspects of the data that a schema will contain (record or time series). In addition, a class determines the base structure of common properties that all schemas based on that class must contain. A schema's class determines which mixins are eligible for use in that schema. See the [classes endpoint guide] for details on working with classes in the API.
+Classes define the behavioral aspects of the data that a schema will contain (record or time series). In addition, a class determines the base structure of common properties that all schemas based on that class must contain. A schema's class determines which mixins are eligible for use in that schema. See the [classes endpoint guide](./classes.md) for details on working with classes in the API.
 
 ## Mixins
 
