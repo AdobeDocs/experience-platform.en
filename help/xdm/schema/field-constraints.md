@@ -33,7 +33,7 @@ The table below describes the mapping between each XDM type (`meta:xdmType`) and
 |date-time|type:string<br>format:date-time<br>(RFC 3339, section 5.6)|INT64/TIMESTAMP_MILLIS|TimestampType|java.util.Date|java.util.Date|System.DateTime|String|timestamp|Integer<br>(unix millis)|int64<br>(unix millis) |
 |map|object|MAP annotated group<br><br><<span>key_type</span>> MUST be STRING<br><br><<span>value_type</span>> type of map values|MapType<br><br>"keyType" MUST be StringType<br><br>"valueType" is type of map values.|java.util.Map|Map|---|object|object|map|map<<span>key_type, value_type</span>> |
 
-## Defining XDM field types in the API
+## Defining XDM field types in the API {#define-fields}
 
 XDM schemas are defined using [JSON Schema](https://json-schema.org/) standards and basic field types, with additional constraints for field names which are enforced by [!DNL Experience Platform]. The [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) allows you to define additional field types through the use of formats and optional constraints. XDM field types are exposed by the field-level attribute, `meta:xdmType`.
 

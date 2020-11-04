@@ -532,14 +532,14 @@ curl -X PATCH \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'content-type: application/json' \
   -d '[
-        { "op": "add", "path": "/description", "value":  "Base class for properties operated by a company."},
-        { "op": "add", "path": "/definitions/property/properties/_{TENANT_ID}/properties/property/properties/propertyId/title", "value": "Unique Property ID string" }
+        { "op": "replace", "path": "/description", "value":  "Base class for properties operated by a company."},
+        { "op": "replace", "path": "/definitions/property/properties/_{TENANT_ID}/properties/property/properties/propertyId/title", "value": "Unique Property ID string" }
       ]'
 ```
 
 **Response**
 
-The response shows that both operations were performed successfully. The mixin `$id` has been added to the `meta:extends` array and a reference (`$ref`) to the mixin `$id` now appears in the `allOf` array.
+The response shows that both operations were performed successfully. The `description` has been updated, along with the `title` of the `propertyId` field.
 
 ```JSON
 {
@@ -632,4 +632,4 @@ curl -X DELETE \
 
 A successful response returns HTTP status 204 (No Content) and a blank body.
 
-You can confirm the deletion by attempting a lookup (GET) request to the class. You will need to include an Accept header in the request, but should receive an HTTP status 404 (Not Found) because the class has been removed from the Schema Registry.
+You can confirm the deletion by attempting a [lookup (GET) request](#lookup) for the class. You will need to include an Accept header in the request, but should receive an HTTP status 404 (Not Found) because the class has been removed from the Schema Registry.
