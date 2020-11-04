@@ -94,15 +94,15 @@ You can view additional information related to the individual profile by selecti
 
 From the main **[!UICONTROL Profiles]** menu, select the **[!UICONTROL Merge Policies]** tab to view a list of merge policies belonging to your organization. Each listed policy displays its name, whether or not it is the default merge policy, and the schema that it applies to. 
 
-For more information on merge policies, see the [merge policies user guide](merge-policies.md).
+For more information on merge policies, see the [merge policies UI guide](merge-policies.md).
 
 ![](../images/user-guide/profiles-merge-policies.png)
 
 ## Union schema {#union-schema}
 
-From the main **[!UICONTROL Profiles]** menu, select the **[!UICONTROL Union Schema]** tab to view the union schemas for your Profile data. A union schema is an amalgamation of all [!DNL Experience Data Model] (XDM) fields under the same class, whose schemas have been enabled for use in [!DNL Real-time Customer Profile]. By selecting a class from the "[!UICONTROL Class]" list on the left-hand side, you can view the structure of its schema in the canvas. For example, selecting "[!DNL XDM Profile]" displays the union schema for the [!DNL XDM Individual Profile] class.
+From the main **[!UICONTROL Profiles]** menu, select the **[!UICONTROL Union Schema]** tab to view the union schemas for your ingested data. A union schema is an amalgamation of all [!DNL Experience Data Model] (XDM) fields under the same class, whose schemas have been enabled for use in [!DNL Real-time Customer Profile]. 
 
-For more information on union schemas and their role within Adobe Experience Platform, see the section on union schemas in the [schema composition guide](../../xdm/schema/composition.md).
+For more information on union schemas, see the [union schema UI guide](union-schema.md).
 
 ![](../images/user-guide/profiles-union-schema.png)
 

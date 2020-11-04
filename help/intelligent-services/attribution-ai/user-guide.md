@@ -19,7 +19,29 @@ In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in t
 
 ![Accessing your instance](./images/user-guide/open_Attribution_ai.png)
 
-The Attribution AI service page appears. This page lists service instances of Attribution AI and displays information about them, including the name of the instance, conversion events, how often the instance is run, and the status of the last update. Click **Create instance** to begin.
+The Attribution AI service page appears. This page lists service instances of Attribution AI and displays information about them, including the name of the instance, conversion events, how often the instance is run, and the status of the last update.
+
+You can find the **[!UICONTROL Total conversion events scored]** metric located in the bottom-right side of the **[!UICONTROL Create instance]** container. This metric tracks the total number of conversion events scored by Attribution AI for the current calendar year including all sandbox environments and any deleted service instances.
+
+![](./images/user-guide/total_conversions.png)
+
+Service instances can be edited, cloned, and deleted by using the controls on the right-hand side of the UI. To display these controls, select an instance from your existing **[!UICONTROL Service instances]**. The controls contain the following information:
+
+- **[!UICONTROL Edit]**: Selecting **[!UICONTROL Edit]** allows you to modify an existing service instance. You can edit the name, description, status, and scoring frequency of the instance.
+- **[!UICONTROL Clone]**: Selecting **[!UICONTROL Clone]** copies the selected service instance. You can then modify the workflow to make minor tweaks and rename it as a new instance.
+- **[!UICONTROL Delete]**: You can delete a service instance including any historical runs.
+- **[!UICONTROL Data source]**: A link to the dataset being used by this instance.
+- **[!UICONTROL Last run details]**: This is only displayed when a run fails. Information on why the run failed such as error codes are displayed here.
+
+![](./images/user-guide/side_panel.png)
+
+- **[!UICONTROL Conversion events]**: A quick overview of the conversion events configured for this instance.
+- **[!UICONTROL Lookback window]**: The time frame you defined indicating how many days prior to the conversion event touchpoints are included.
+- **[!UICONTROL Touchpoints]**: A list of all the touchpoints you defined while creating this instance.
+
+![](./images/user-guide/side_panel_2.png)
+
+Select **[!UICONTROL Create instance]** to begin.
 
 ![Create instance](./images/user-guide/landing_page.png)
 
@@ -127,7 +149,7 @@ Once you have finished defining all necessary touchpoints, scroll up and click *
 
 ## Advanced training and scoring setup
 
-The final page in Attribution AI is the *Advanced* page used for setting up training and scoring.
+The final page in Attribution AI is the **[!UICONTROL Advanced]** page used for setting up training and scoring.
 
 ![new page advanced](./images/user-guide/advanced_settings.png)
 
@@ -146,6 +168,12 @@ To change the time of day you want scoring to occur, click the clock icon. In th
 >It can take up to 24 hours for each scoring process to complete.
 
 ![clock icon](./images/user-guide/time_of_day.png)
+
+### Additional score dataset columns (optional)
+
+By default, a score dataset is created for each service instance in a standard schema. You can choose to add additional columns based on your Conversion Event and Touchpoint configurations to the score dataset output. Start by selecting columns from your input dataset, you can then drag and drop them to change the order by holding down the left mouse button over the hamburger icon.
+
+![score dataset column addition](./images/user-guide/Add-score-dataset.png)
 
 ### Region-based modeling (optional) {#region-based-modeling-optional}
 
@@ -183,7 +211,7 @@ Once you have selected your training window, click **[!UICONTROL Finish]** in th
 
 ## Next steps
 
-By following this tutorial, you have successfully created a service instance in Attribution AI. Once the instance has finished scoring (allow up to 24 hours), you are ready to [discover Attribution AI insights](./discover-insights.md). Additionally, if you wish to download your scoring results, visit the [downloading raw scores](./download-scores.md) documentation.
+By following this tutorial, you have successfully created a service instance in Attribution AI. Once the instance has finished scoring (allow up to 24 hours), you are ready to [discover Attribution AI insights](./discover-insights.md). Additionally, if you wish to download your scoring results, visit the [downloading scores](./download-scores.md) documentation.
 
 ## Additional resources
 
