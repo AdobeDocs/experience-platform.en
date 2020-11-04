@@ -49,10 +49,10 @@ curl -X GET \
 
 The response format depends on the `Accept` header sent in the request. The following `Accept` headers are available for listing data types:
 
-| `Accept` header |	Description |
+| `Accept` header | Description |
 | --- | --- |
-| `application/vnd.adobe.xed-id+json` |	Returns a short summary of each resource. This is the recommended header for listing resources. (Limit: 300) |
-| `application/vnd.adobe.xed+json` |	Returns full JSON data type for each resource, with original `$ref` and `allOf` included. (Limit: 300) |
+| `application/vnd.adobe.xed-id+json` | Returns a short summary of each resource. This is the recommended header for listing resources. (Limit: 300) |
+| `application/vnd.adobe.xed+json` | Returns full JSON data type for each resource, with original `$ref` and `allOf` included. (Limit: 300) |
 
 **Response**
 
