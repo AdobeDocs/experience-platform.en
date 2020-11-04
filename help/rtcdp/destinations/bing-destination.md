@@ -14,11 +14,25 @@ The [!DNL Microsoft Bing] destination helps you send profile data to [!DNL Micro
 
 To send profile data to [!DNL Microsoft Bing], you must first connect to the destination.
 
+## Destination Specs {#destination-specs}
+
+Note the following details that are specific to the Microsoft Bing destination:
+
+* You can send the following [identities](../../identity-service/namespaces.md) to [!DNL Microsoft Bing] destinations: [!DNL Microsoft ID].
+
 ## Use Cases {#use-cases}
+
+As a marketer, I want to be able to use segments built off of [!DNL Microsoft Advertising IDs] to target users via display advertising across [!DNL Microsoft Advertising] channels.
 
 ## Export Type {#export-type}
 
 **[!DNL Segment Export]** - you are exporting all members of a segment (audience) to the [!DNL Microsoft Bing] destination.
+
+## Prerequisites {#prerequisites}
+
+When configuring the destination you will asked to provide the following information:
+
+* [!UICONTROL Account ID]: this is your [!DNL Bing Ads CID], in integer format.
 
 ## Connect to Destination {#connect-destination}
 
@@ -35,12 +49,12 @@ To send profile data to [!DNL Microsoft Bing], you must first connect to the des
 1. In the [!UICONTROL Authentication] step, you must enter the destination connection details:
    *  **[!UICONTROL Name]**: enter a name by which you will recognize this destination in the future.
    *  **[!UICONTROL Description]**: enter a description that will help you identify this destination in the future.
-   *  **[!UICONTROL Account ID]**: enter your [!DNL Bing Ads] [!UICONTROL Account ID].
+   *  **[!UICONTROL Account ID]**: enter your [!DNL Bing Ads CID].
    *  **[!UICONTROL Marketing use case]**: Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Adobe Experience Platform](../privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](../../data-governance/policies/overview.md#core-actions).
 
     ![Microsoft Bing Destination Authentication](assets/bing-destination-authentication.png)
     
-1. Click **[!UICONTROL Create destination]**. Your destination is now created. You can click [!UICONTROL Save & Exit] if you want to activate segments later on, or you can click [!UICONTROL Next] to continue the workflow and select segments to activate. In either case, see the next section, [Activate Segments](#activate-segments), for the rest of the workflow.
+2. Click **[!UICONTROL Create destination]**. Your destination is now created. You can click [!UICONTROL Save & Exit] if you want to activate segments later on, or you can click [!UICONTROL Next] to continue the workflow and select segments to activate. In either case, see the next section, [Activate Segments](#activate-segments), for the rest of the workflow.
 
 ## Activate Segments {#activate-segments}
 
