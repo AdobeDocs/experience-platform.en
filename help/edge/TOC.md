@@ -37,6 +37,8 @@ user-guide-description: Interact with Experience Cloud services through the Edge
   * Adobe Target {#adobe-target}
     * [Target overview](personalization/adobe-target/target-overview.md)
     * [Single Page Application implementation](personalization/adobe-target/spa-implementation.md)
+  * Offer Decisioning {#offer-decisioning}
+    * [Offer Decisioning overview](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Consent {#consent}
   * [Supporting consent](consent/supporting-consent.md)
   * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
