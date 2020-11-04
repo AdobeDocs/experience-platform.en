@@ -24,7 +24,7 @@ The following table outlines the different functions provided by the library:
 | Function | Description |
 | --- | --- |
 | `retrieveIdentities` | Returns an array of matching identities (`validIds`) that were retrieved from [!DNL Privacy Service], as well as an array of identities that were not found (`failedIds`). |
-| `removeIdentities` | Removes each matching (valid) identity from the browser. Returns an array of matching identities (`validIds`), with each identity containing a `isDeleteClientSide` boolean which indicates whether this ID has been deleted. |
+| `removeIdentities` | Removes each matching (valid) identity from the browser. Returns an array of matching identities (`validIds`), with each identity containing a `isDeletedClientSide` boolean which indicates whether this ID has been deleted. |
 | `retrieveThenRemoveIdentities` | Retrieves an array of matching identities (`validIds`), and then removes those identities from the browser. While this function is similar to `removeIdentities`, it is best used when the Adobe solution you are using requires an access request before deletion is possible (such as when a unique identifier must be retrieved before providing it in a delete request). |
 
 >[!NOTE]
@@ -40,7 +40,7 @@ To start using the [!DNL Privacy JS Library], you must install it onto your mach
 
 * Install using npm by running the following command: `npm install @adobe/adobe-privacy`
 * Use the Adobe Launch Extension under the name `AdobePrivacy`
-* Download from [https://github.com/Adobe-Marketing-Cloud/adobe-privacy](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
+* Download from the [Experience Cloud GitHub repository](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
 ## Instantiate the [!DNL Privacy JS Library]
 
@@ -49,7 +49,6 @@ All apps that utilize the [!DNL Privacy JS Library] must instantiate a new `Adob
 ```js
 var adobePrivacy = new AdobePrivacy({
     imsOrgID: "{IMS_ORG}",
-    key: "{DATA_SUBJECT_ID}",
     reportSuite: "{REPORT_SUITE_ID}",
     trackingServer: "{SERVER_URL}",
     clientCode: "{TARGET_CLIENT_CODE}"
