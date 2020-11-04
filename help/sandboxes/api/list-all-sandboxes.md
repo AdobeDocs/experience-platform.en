@@ -90,7 +90,25 @@ A successful response returns a list of sandboxes belonging to your organization
             "createdBy": "{USER_ID}",
             "modifiedBy": "{USER_ID}"
         }
-    ]
+    ],
+    "_page": {
+        "limit": 4,
+        "count": 4
+    },
+    "_links": {
+        "next": {
+            "href": "https://platform.adobe.io:443/data/foundation/sandbox-management/sandboxes/?limit={limit}&offset={offset}",
+            "templated": true
+        },
+        "prev": {
+            "href": "https://platform.adobe.io:443/data/foundation/sandbox-management/sandboxes?offset=0&limit=1",
+            "templated": null
+        },
+        "page": {
+            "href": "https://platform-int.adobe.io:443/data/foundation/sandbox-management/sandboxes?offset=1&limit=1",
+            "templated": null
+        }
+    }
 }
 ```
 
