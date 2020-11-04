@@ -213,7 +213,7 @@ This document covered the general guidelines and best practices for designing yo
 
 * Use a top-down approach by sorting your data tables into profile, lookup, and event categories before constructing your schemas.
 * There are often multiple approaches and options when it comes to designing schemas for different purposes.
-* Your data model should support segmentation use cases.
+* Your data model should support your business use cases such as segmentation or customer journey analysis.
 * Make your schemas as simple as possible, and only add new fields when absolutely necessary.
 
 Once you are ready, see the tutorial on [creating a schema in the UI](../tutorials/create-schema-ui.md) for step-by-step instructions on how to create a schema, assign the appropriate class for the entity, and add fields to map your data to.
