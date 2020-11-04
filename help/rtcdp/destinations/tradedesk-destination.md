@@ -16,7 +16,15 @@ seo-description: The Trade Desk is a self-service platform for ad buyers to exec
 
 To send profile data to [!DNL The Trade Desk], you must first connect to the destination.
 
+## Destination Specs {#destination-specs}
+
+Note the following details that are specific to the Microsoft Bing destination:
+
+* You can send the following [identities](../../identity-service/namespaces.md) to [!DNL The Trade Desk] destinations: [!DNL The Trade Desk ID], [!DNL IDFA], [!DNL GAID].
+
 ## Use Cases {#use-cases}
+
+As a marketer, I want to be able to use segments built off of [!DNL Trade Desk IDs] or device IDs to create retargeting or audience targeted digital campaigns.
 
 ## Export Type {#export-type}
 
