@@ -115,4 +115,4 @@ The [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-refer
 | Parameter | Description |
 | --------- | ----------- |
 | `limit` | The maximum number of records returned in a query. |
-| `offeset` | The offset of where to start from in the response i.e. offset of the first record to return. |
+| `offset` | The offset of where to start from in the response i.e. offset of the first record to return. |
