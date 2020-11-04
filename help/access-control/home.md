@@ -81,7 +81,11 @@ The following table outlines the available permissions for [!DNL Experience Plat
 | [!DNL Data Management] | [!UICONTROL Data Monitoring] | Read-only access to monitoring datasets and streams. |
 | [!DNL Profile Management] | [!UICONTROL Manage Profiles] | Access to read, create, edit, and delete datasets that are used for customer profiles. Read-only access to available profiles. |
 | [!DNL Profile Management] | [!UICONTROL View Profiles] | Read-only access to available profiles. |
+| [!DNL Profile Management] | [!UICONTROL Manage Segments] | Access to read, create, edit, and delete segments. |
+| [!DNL Profile Management] | [!UICONTROL View Segments] | Read-only access to available segments. |
+
 | [!DNL Profile Management] | [!UICONTROL Export Audience for Segment] | Ability to export an evaluated audience segment to a dataset. |
+| [!DNL Profile Management] | [!UICONTROL Evaluate a Segment to an Audience] | Ability to evaluate a segment to an audience. |
 | [!DNL Identities] | [!UICONTROL Manage Identity Namespaces] | Access to read, create, edit, and delete identity namespaces. |
 | [!DNL Identities] | [!UICONTROL View Identity Namespaces] | Read-only access for identity namespaces. |
 | [!DNL Sandbox Administration] | [!UICONTROL Manage Sandboxes] | Access to read, create, edit, and delete sandboxes. |
