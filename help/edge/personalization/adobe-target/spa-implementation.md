@@ -229,7 +229,7 @@ The Modifications panel captures the actions created for a particular View. All 
 
 ### Actions 
 
-Clicking an action highlights the element on the site where this action will be applied. Each VEC action created under a View has the following icons: **Information**, **Edit**, **Clone**, **Move**, and **Delete**. 
+Clicking an action highlights the element on the site where this action will be applied. Each VEC action created under a View has the following icons: **Information**, **Edit**, **Clone**, **Move**, and **Delete**. These icons are explained in more detail in the table that follows.
 
 ![](assets/action-icons.png) 
 
