@@ -47,16 +47,16 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-The response format depends on the Accept header sent in the request. The following Accept headers are available for listing mixins:
+The response format depends on the `Accept` header sent in the request. The following `Accept` headers are available for listing mixins:
 
-| Accept header |	Description |
+| `Accept` header |	Description |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` |	Returns a short summary of each resource. This is the recommended header for listing resources. (Limit: 300) |
 | `application/vnd.adobe.xed+json` |	Returns full JSON mixin for each resource, with original `$ref` and `allOf` included. (Limit: 300) |
 
 **Response**
 
-The request above used the `application/vnd.adobe.xed-id+json` Accept header, therefore the response includes only the `title`, `$id`, `meta:altId`, and `version` attributes for each mixin. Using the other Accept header returns all attributes of each mixin. Select the appropriate Accept header depending on the information you require in your response.
+The request above used the `application/vnd.adobe.xed-id+json` `Accept` header, therefore the response includes only the `title`, `$id`, `meta:altId`, and `version` attributes for each mixin. Using the other `Accept` header returns all attributes of each mixin. Select the appropriate `Accept` header depending on the information you require in your response.
 
 ```json
 {
@@ -129,9 +129,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-The response format depends on the Accept header sent in the request. All lookup requests require a `version` be included in the Accept header. The following Accept headers are available:
+The response format depends on the `Accept` header sent in the request. All lookup requests require a `version` be included in the `Accept` header. The following `Accept` headers are available:
 
-| Accept | Description |
+| `Accept` header | Description |
 | ------- | ------------ |
 | `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Raw with `$ref` and `allOf`, has titles and descriptions. |
 | `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` and `allOf` resolved, has titles and descriptions. |
@@ -141,7 +141,7 @@ The response format depends on the Accept header sent in the request. All lookup
 
 **Response**
 
-A successful response returns the details of the mixin. The fields that are returned depend on the Accept header sent in the request. Experiment with different Accept headers to compare the responses and determine which header is best for your use case.
+A successful response returns the details of the mixin. The fields that are returned depend on the `Accept` header sent in the request. Experiment with different `Accept` headers to compare the responses and determine which header is best for your use case.
 
 ```json
 {
@@ -393,7 +393,7 @@ PUT /tenant/mixins/{MIXIN_ID}
 
 **Request**
 
-The following request re-writes an existing mixin, adding a new `propertyCity` field.
+The following request re-writes an existing mixin, adding a new `propertyCountry` field.
 
 ```SHELL
 curl -X PUT \
@@ -726,4 +726,4 @@ curl -X DELETE \
 
 A successful response returns HTTP status 204 (No Content) and a blank body.
 
-You can confirm the deletion by attempting a [lookup (GET) request](#lookup) to the mixin. You will need to include an Accept header in the request, but should receive an HTTP status 404 (Not Found) because the mixin has been removed from the Schema Registry.
+You can confirm the deletion by attempting a [lookup (GET) request](#lookup) to the mixin. You will need to include an `Accept` header in the request, but should receive an HTTP status 404 (Not Found) because the mixin has been removed from the Schema Registry.

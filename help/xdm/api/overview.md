@@ -32,7 +32,7 @@ Mixins are reuseable components which define one or more fields that represent a
 
 ## Data types
 
-Data types are used as reference-type fields in classes or mixins in the same way as basic literal fields, with the key difference being that data types can define multiple sub-fields. While similar to mixins in that they allow for the consistent use of a multi-field structure, data types are more flexible because they can be included anywhere in the schema structure whereas mixins can only be added at the root level. See the [data types endpoint guide] for more information on working with data types in the API.
+Data types are used as reference-type fields in classes or mixins in the same way as basic literal fields, with the key difference being that data types can define multiple sub-fields. While similar to mixins in that they allow for the consistent use of a multi-field structure, data types are more flexible because they can be included anywhere in the schema structure whereas mixins can only be added at the root level. See the [data types endpoint guide](./data-types.md) for more information on working with data types in the API.
 
 ## Descriptors
 
