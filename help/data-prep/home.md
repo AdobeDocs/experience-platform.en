@@ -28,6 +28,8 @@ To learn more about the different mapping functions, please read the [mapping fu
 
 A set of mappings that transform one schema to another are collectively known as a mapping set. A single mapping set is created as part of each data flow. A mapping set is an integral part of the data flows and is created, edited, and monitored as part of the data flows.
 
+To learn more about mapping sets, please read the [mapping set guide](./mapping-set.md).
+
 ## Next steps
 
 This document covered the basics on Data Prep in Adobe Experience Platform. To learn more about different mapping functions, please read the [mapping functions guide](./functions.md). To learn more about the different datetime strings, please read the [date strings guide](./dates.md).
