@@ -24,32 +24,38 @@ The Adobe Experience Platform [!DNL Web SDK] can deliver and render personalized
 
 It is important to understand the following terminology when working with Offer Decisioning. For more information and to view additional terms, please visit the [Offer Decisioning glossary](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html?lang=en#get-started).
 
-**Decision Scopes:** For Offer Decisioning, these are the Base64 encoded strings of JSON containing the activity and placement IDs you want the offer decisioning service to use to propose offers.
+* **Container:** A container is an isolation mechanism to keep different concerns apart. The container ID is the first path element for all repository APIs. All decisioning objects reside within a container.
 
-*Decision scope JSON:*
+* **Decision Scopes:** For Offer Decisioning, these are the Base64 encoded strings of JSON containing the activity and placement IDs you want the offer decisioning service to use to propose offers.
 
-```json
-{
-  "activityId":"xcore:offer-activity:11cfb1fa93381aca",
-  "placementId":"xcore:offer-placement:1175009612b0100c"
-}
-```
+    *Decision scope JSON:*
 
-*Decision scope Base64 encoded string:*
+    ```json
+    {
+      "activityId":"xcore:offer-activity:11cfb1fa93381aca",
+      "placementId":"xcore:offer-placement:1175009612b0100c"
+    }
+    ```
 
-```json
-"eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
-```
+    *Decision scope Base64 encoded string:*
+
+    ```json
+    "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
+    ```
+
+    >[!TIP]
+    >
+    >You can copy the decision scope value from the **Activity Overview** page in the UI.
+
+    ![](assets/decision-scope-copy.png)
 
 **Edge Configuration:** For more information, please read the [edge configuration](../../fundamentals/edge-configuration.md) documentation.
-
-**Container:** A container is an isolation mechanism to keep different concerns apart. The container ID is the first path element for all repository APIs. All decisioning objects reside within a container.
 
 **Identity**: For more information, please read this documentation outlining how [Platform Web SDK leverages Identity Service](../../identity/overview.md).
 
 ## Enabling Offer Decisioning
 
-To enable Offer Decisioning, you will need to perform the following steps:
+To enable Offer Decisioning, you need to perform the following steps:
 
 1. Enabled Adobe Experience Platform in your [edge configuration](../../fundamentals/edge-configuration.md) and check the "Offer Decisioning" box
 ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
@@ -163,7 +169,7 @@ To enable Offer Decisioning, you will need to perform the following steps:
 | `data.id`| The ID of the proposed offer.|`"id": "xcore:personalized-offer:124cc332095cfa74"`|
 | `format`| The format of the content associated with the proposed offer. | `"format": "text/html"`|
 | `language`| An array of languages associated with the content from the proposed offer. | `"language": [ "en-US" ]`|
-| `content` | Text content associated with the proposed offer in the format of a string. | `"content": "<p style="color:red;">20% Off on shipping</p>"`|
+| `content` | Content associated with the proposed offer in the format of a string. | `"content": "<p style="color:red;">20% Off on shipping</p>"`|
 | `deliveryUrl`| Image content associated with the proposed offer in the format of a URL. | `"deliveryURL": "https://image.jpeg"`|
 | `characteristics` | Characteristics associated with the proposed offer in the format of a JSON object. | `"characteristics": { "foo": "bar", "foo1": "bar1" }`|
 
@@ -293,6 +299,6 @@ To enable Offer Decisioning, you will need to perform the following steps:
 | `data.id`| The ID of the proposed offer.|`"id": "xcore:personalized-offer:124cc332095cfa74"`|
 | `format`| The format of the content associated with the proposed offer. | `"format": "text/html"`|
 | `language`| An array of languages associated with the content from the proposed offer. | `"language": [ "en-US" ]`|
-| `content` | Text content associated with the proposed offer in the format of a string. | `"content": "<p style="color:red;">20% Off on shipping</p>"`|
+| `content` | Content associated with the proposed offer in the format of a string. | `"content": "<p style="color:red;">20% Off on shipping</p>"`|
 | `deliveryUrl`| Image content associated with the proposed offer in the format of a URL. | `"deliveryURL": "https://image.jpeg"`|
 | `characteristics` | Characteristics associated with the proposed offer in the format of a JSON object. | `"characteristics": { "foo": "bar", "foo1": "bar1" }`|
