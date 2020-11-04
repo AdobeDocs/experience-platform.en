@@ -28,7 +28,7 @@ Here are some benefits to using the Adobe Experience Platform Web SDK for your S
 
 The Adobe Target VEC for SPAs takes advantage of a new concept called Views: a logical group of visual elements that together make up an SPA experience. A single page application can, therefore, be considered as transitioning through Views, instead of URLs, based on user interactions. A View can typically represent a whole site or grouped visual elements within a site. 
 
-To further explain what Views are, the following example uses a [hypothetical online e-commerce site](https://target.enablementadobe.com/react/demo/#/) implemented in React to explore example Views.  
+To further explain what Views are, the following example uses a hypothetical online e-commerce site implemented in React to explore example Views.  
 
 After navigating to the home site, a hero image promotes an Easter sale as well as the newest products available on the site. In this case, a View could be defined for the entire home screen. This View could simply be called "home".
 
