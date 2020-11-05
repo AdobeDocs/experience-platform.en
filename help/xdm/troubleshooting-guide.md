@@ -42,7 +42,7 @@ Breaking changes can be made to a schema as long as it has never been used in th
 
 A long field type is an integer with a maximum size of 53(+1) bits, giving it a potential range between -9007199254740992 and 9007199254740992. This is due to a limitation of how JavaScript implementations of JSON represent long integers.
 
-For more information on field types, see the document on [XDM field type constraints](./field-constraints.md).
+For more information on field types, see the document on [XDM field type constraints](./schema/field-constraints.md).
 
 ### How do I define identities for my schema?
 
