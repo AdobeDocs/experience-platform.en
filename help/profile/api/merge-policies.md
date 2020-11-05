@@ -55,7 +55,7 @@ The complete merge policy object represents a set of preferences controlling asp
 |`imsOrgId`|Organization ID to which this merge policy belongs|
 |`identityGraph`|[Identity graph](#identity-graph) object indicating the identity graph from which related identities will be obtained. Profile fragments found for all related identities will be merged.|
 |`attributeMerge`|[Attribute merge](#attribute-merge) object indicating the manner by which the merge policy will prioritize profile attributes in the case of data conflicts.|
-|`schema`|The [schema](#schema) object on which the merge policy can be used.|
+|`schema.name`|The [`schema`](#schema) object `name` field contains the XDM schema class on which the merge policy can be used.|
 |`default`|Boolean value indicating if this merge policy is the default for the specified schema.|
 |`version`|[!DNL Platform] maintained version of merge policy. This read-only value is incremented whenever a merge policy is updated.|
 |`updateEpoch`|Date of the last update to the merge policy.|
@@ -149,7 +149,7 @@ Where `{ATTRIBUTE_MERGE_TYPE}` is one of the following:
 
 ### Schema {#schema}
 
-The schema object specifies the Experience Data Model (XDM) schema for which this merge policy is created.
+The schema object specifies the Experience Data Model (XDM) schema class for which this merge policy is created.
 
 **`schema` object**
 
@@ -725,7 +725,7 @@ A successful delete request returns HTTP Status 200 (OK) and an empty response b
 
 ## Next steps
 
-Now that you know how to create and configure merge policies for your IMS Organization, you can use them to create audience segments from your [!DNL Real-time Customer Profile] data. Please see the [Adobe Experience Platform Segmentation Service documentation](../../segmentation/home.md) to begin defining and working with segments.
+Now that you know how to create and configure merge policies for your organization, you can use them to adjust the view of customer profiles within Platform and to create audience segments from your [!DNL Real-time Customer Profile] data. Please see the [Adobe Experience Platform Segmentation Service documentation](../../segmentation/home.md) to begin defining and working with segments.
 
 ## Appendix
 
