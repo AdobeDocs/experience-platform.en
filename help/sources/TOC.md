@@ -127,6 +127,7 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
   - [Create a dataset base connection using the Flow Service API](tutorials/api/create-dataset-base-connection.md)
   - [Monitor dataflows using the Flow Service API](tutorials/api/monitor.md)
   - [Update connection information using the Flow Service API](tutorials/api/update.md)
+  - [Delete connections using the Flow Service API](tutorials/api/delete.md)
 - UI tutorials {#ui-tutorials}
   - Create a source connector {#create}
     - Adobe applications {#adobe-applications}
@@ -188,6 +189,7 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
     - [Configure a dataflow for a protocol connector](tutorials/ui/dataflow/protocols.md)
   - [Activate inbound data to populate customer profiles](tutorials/ui/profile.md)
   - [Monitor accounts and dataflows](tutorials/ui/monitor.md)
+  - [Delete accounts](tutorials/ui/delete-accounts.md)
   - [Delete dataflows](tutorials/ui/delete.md)
 - [Flow run notifications](notifications.md)
 - [IP address allow list](ip-address-allow-list.md)

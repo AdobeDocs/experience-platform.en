@@ -18,7 +18,7 @@ Customer AI uses Consumer Experience Event data to calculate propensity scores. 
 
 Customer AI requires historical data for model training but the amount of data required is based on two key elements: outcome window and eligible population. 
 
-By default, Customer AI looks for a user to have had activity in the last 120 days if no eligible population definition is provided during the application configuration. Apart from the minimum amount of Consumer Experience Event data that is required, Customer AI also needs a minimum amount of success events based on a predicted goal definition. Currently, Customer AI needs a minimum of 500 success events.
+By default, Customer AI looks for a user to have had activity in the last 120 days if no eligible population definition is provided during the application configuration. Additionally, Customer AI requires a minimum of 500 qualifying and 500 non-qualifying events (1000 total) of historical data based on a predicted goal definition.
 
 The following examples provided use a simple formula to help you determine the minimum amount of data required. If you have more than the minimum requirement, your model is likely to provide more accurate results. If you have less than the minimum amount required, the model will fail as there is not a sufficient amount of data for model training. 
 
