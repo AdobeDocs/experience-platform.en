@@ -20,7 +20,7 @@ The following is a list of answers to frequently asked questions about XDM Syste
 
 You can add fields to a schema by using a mixin. Each mixin is compatible with one or more classes, allowing the mixin to be used in any schema that implements one of those compatible classes. While Adobe Experience Platform provides several industry mixins with their own pre-defined fields, you can add your own fields to a schema by creating new mixins using the API or the user interface.
 
-For details on creating new mixins in the API, see the [create a mixin](api/create-mixin.md) document in the [!DNL Schema Registry] API developer guide. If you are using the UI, see the [Schema Editor tutorial](./tutorials/create-schema-ui.md).
+For details on creating new mixins in the [!DNL Schema Registry] API, see the [mixin endpoint guide](api/mixins.md#create). If you are using the UI, see the [Schema Editor tutorial](./tutorials/create-schema-ui.md).
 
 ### What are the best uses for mixins vs data types?
 
@@ -42,7 +42,7 @@ Breaking changes can be made to a schema as long as it has never been used in th
 
 A long field type is an integer with a maximum size of 53(+1) bits, giving it a potential range between -9007199254740992 and 9007199254740992. This is due to a limitation of how JavaScript implementations of JSON represent long integers.
 
-For more information on field types, see the [Defining XDM field types](api/appendix.md#field-types) section in the [!DNL Schema Registry] API developer guide.
+For more information on field types, see the document on [XDM field type constraints](./field-constraints.md).
 
 ### How do I define identities for my schema?
 
@@ -142,7 +142,7 @@ This error message displays when you attempt to create a resource with a title t
 }
 ```
 
-This error message displays when you attempt to create a new mixin with improperly namespaced fields. Mixins that are defined by your IMS organization must namespace their fields with a `TENANT_ID` in order to avoid conflicts with other industry and vendor resources. Detailed examples of proper data structures for mixins can be found in the document on [creating a mixin](api/create-mixin.md) section in the [!DNL Schema Registry] API developer guide.
+This error message displays when you attempt to create a new mixin with improperly namespaced fields. Mixins that are defined by your IMS organization must namespace their fields with a `TENANT_ID` in order to avoid conflicts with other industry and vendor resources. Detailed examples of proper data structures for mixins can be found in the [mixins endpoint guide](./api/mixins.md#create).
 
 
 ### [!DNL Real-time Customer Profile] errors

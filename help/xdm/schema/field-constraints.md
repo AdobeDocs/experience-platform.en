@@ -43,7 +43,7 @@ XDM schemas are defined using [JSON Schema](https://json-schema.org/) standards 
 
 The following table outlines the appropriate formatting to define scalar field types and more specific field types using optional properties. More information regarding optional properties and type-specific keywords is available through the [JSON Schema documentation](https://json-schema.org/understanding-json-schema/reference/type.html).
 
-To begin, find the desired field type and use the sample code provided to build your API request for [creating a mixin](../api/create-mixin.md) or [creating a data type](../api/create-data-type.md).
+To begin, find the desired field type and use the sample code provided to build your API request for [creating a mixin](../api/mixins.md#create) or [creating a data type](../api/data-types.md#create).
 
 <table>
   <tr>

@@ -20,7 +20,7 @@ The `/descriptors` endpoint in the [!DNL Schema Registry] API allows you to prog
 
 The endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
-## List descriptors {#list}
+## Retrieve a list of descriptors {#list}
 
 You can list all descriptors that have been defined by your organization by making a GET request to `/tenant/descriptors`.
 
@@ -184,7 +184,7 @@ A successful response returns HTTP status 201 (Created) and the details of the n
 }
 ```
 
-## Update a descriptor
+## Update a descriptor {#put}
 
 You can update a descriptor by including its `@id` in the path of a PUT request.
 
@@ -239,7 +239,7 @@ A successful response returns HTTP status 201 (Created) and the `@id` of the upd
 
 Performing a [lookup (GET) request](#lookup) to view the descriptor will show that the fields have now been updated to reflect the changes sent in the PUT request.
 
-## Delete descriptor
+## Delete a descriptor {#delete}
 
 Occasionally you may need to remove a descriptor that you have defined from the [!DNL Schema Registry]. This is done by making a DELETE request referencing the `@id` of the descriptor you wish to remove.
 
@@ -274,7 +274,7 @@ To confirm the descriptor has been deleted, you can perform a [lookup request](#
 
 The following section provides additional information regarding working with descriptors in the [!DNL Schema Registry] API.
 
-### Defining descriptors
+### Defining descriptors {#defining-descriptors}
 
 The following sections provide an overview of available descriptor types, including the required fields for defining a descriptor of each type.
 
@@ -337,7 +337,7 @@ Friendly name descriptors allow a user to modify the `title`, `description`, and
 | `xdm:sourceProperty` | The path to the specific property that will be the identity. Path should begin with a "/" and not end with one. Do not include "properties" in the path (e.g. use "/personalEmail/address" instead of "/properties/personalEmail/properties/address") |
 | `xdm:title` | The new title you wish to display for this field, written in Title Case. |
 | `xdm:description` | An optional description can be added along with the title. |
-| `meta:enum` | If the field indicated by `xdm:sourceProperty` is a string field, `meta:enum` determines the list of suggested values for the field in the [!DNL Experience Platform] UI. It is important to note that `meta:enum` does not declare an enumeration or provide any data validation for the XDM field.<br><br>This should only be used for core XDM fields defined by Adobe. If the source property is a custom field defined by your organization, you should instead edit the field's `meta:enum` property directly through a [PATCH request](./update-resource.md).  |
+| `meta:enum` | If the field indicated by `xdm:sourceProperty` is a string field, `meta:enum` determines the list of suggested values for the field in the [!DNL Experience Platform] UI. It is important to note that `meta:enum` does not declare an enumeration or provide any data validation for the XDM field.<br><br>This should only be used for core XDM fields defined by Adobe. If the source property is a custom field defined by your organization, you should instead edit the field's `meta:enum` property directly through a PATCH request to the field's parent resource.  |
 
 #### Relationship descriptor
 

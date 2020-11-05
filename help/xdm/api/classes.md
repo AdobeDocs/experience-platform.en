@@ -230,7 +230,7 @@ You can define a custom class under the `tenant` container by making a POST requ
 
 >[!NOTE]
 >
->When composing a schema based on a class that you define, you will not be able to use standard mixins. Each mixin defines the classes they are compatible with in their `meta:intendedToExtend` attribute. Once you begin defining mixins that are compatible with your new class (by using the `$id` of your new class in the `meta:intendedToExtend` field of the mixin), you will be able to reuse those mixins every time you define a schema that implements the class you defined. See the sections on [creating mixins](create-mixin.md) and [creating schemas](create-schema.md) for more information.
+>When composing a schema based on a class that you define, you will not be able to use standard mixins. Each mixin defines the classes they are compatible with in their `meta:intendedToExtend` attribute. Once you begin defining mixins that are compatible with your new class (by using the `$id` of your new class in the `meta:intendedToExtend` field of the mixin), you will be able to reuse those mixins every time you define a schema that implements the class you defined. See the sections on [creating mixins](./mixins.md#create) and [creating schemas](./schemas.md#create) in their respective endpoint guides for more information.
 
 **API format**
 
