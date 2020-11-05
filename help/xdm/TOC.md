@@ -11,6 +11,7 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
 * [XDM System overview](home.md)
 * Schemas {#schema}
   * [Basics of schema composition](schema/composition.md)
+  * [Best practices for data modeling](schema/best-practices.md)
   * [XDM field type constraints](schema/field-constraints.md)
   * [XDM field dictionary](schema/field-dictionary.md)
   * Schema use cases {#use-cases}

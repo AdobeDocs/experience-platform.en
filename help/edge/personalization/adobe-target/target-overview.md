@@ -14,10 +14,6 @@ The Adobe Experience Platform [!DNL Web SDK] can deliver and render personalized
 
 To enable [!DNL Target], you need to do the following:
 
-1. Turn on activity.id and experience.id reponse tokens in the [!DNL Target] UI.
-
-  ![target_reponse_token](./assets/target_response_token.png)
-
 1. Enable target in your [edge configuration](../../fundamentals/edge-configuration.md) with the appropriate client code.
 1. Add the `renderDecisions` option to your events.
 
