@@ -53,7 +53,7 @@ In the **[!UICONTROL Accounts]** tab, you can learn more about the connections t
 >
 >Use the ![Add data button](/help/rtcdp/destinations/assets/add-data-symbol.png) button in the **[!UICONTROL Platform]** column to create a new destination connection for that account.
 
-![Accounts tab](./assets/accounts-tab.png)
+![Accounts tab](./assets/workspace/edit-account-destinations.png)
 
 Element | Description
 ---------|----------
@@ -63,15 +63,17 @@ Element | Description
 [!UICONTROL Destinations] | Represents the number of unique successful destination flows connected with basic information created for a destination.
 [!UICONTROL Authorized] | The date when the connection to this destination was authorized.
 
-Additionally, you can edit your account information. Select the ![Edit account button]() in the **[!UICONTROL Platform]** column to edit the account's information.
+Additionally, you can edit your account information. Select the ![Edit account button](./assets/workspace/pencil-icon.png) in the **[!UICONTROL Platform]** column to edit the account's information.
 
 For accounts that are of the connection type OAuth2, you can select **[!UICONTROL Reconnect OAuth]** to edit your account access.
 
-![Oauth image]()
+![Oauth image](./assets/workspace/reconnect-oauth.png)
 
 For accounts that are of the connection type Access Key or ConnectionString, you can edit your account authentication information.
 
-![Account information image]()
+![Account information image](./assets/workspace/edit-account-details.png)
+
+Once you are finished editing your account details, select **[!UICONTROL Save]** to complete the update.
 
 ## [!UICONTROL Browse] {#browse}
 
