@@ -68,7 +68,7 @@ If you create a new merge policy and set it as the default, the previous default
 
 >[!WARNING]
 >
->Changing the default merge policy will affect all segments and profile views that are based on the default merge policy.
+>Profile count and segments with an existing associated default merge policy may be affected. Any segment that has a default merge policy applied will be updated to the new default merge policy.
 
 ## View merge policies {#view-merge-policies}
 
@@ -99,7 +99,8 @@ The first step in the workflow allows you to configure your merge policy by prov
 * **[!UICONTROL ID stitching]**: This field defines how to determine the related identities of a customer. There are two possible values:
   * **[!UICONTROL None]**: Perform no identity stitching.
   * **[!UICONTROL Private Graph]**: Perform identity stitching based on your private identity graph.
-* **[!UICONTROL Default merge policy]**: A toggle button that allows you to select whether or not this merge policy will be the default for your organization. If the selector is toggled-on and the new policy is saved, your previous default policy is automatically updated to no longer be the default. See the section on [default merge policies](#default-merge-policy) to learn more.
+* **[!UICONTROL Default merge policy]**: A toggle button that allows you to select whether or not this merge policy will be the default for your organization. If the selector is toggled-on, a warning appears asking you to confirm that you wish to change your organization's default merge policy. See the section on [default merge policies](#default-merge-policy) to learn more.
+    ![](../images/merge-policies/create-make-default.png)
 
 Once the required fields have been completed, you are able to select **[!UICONTROL Next]** to continue with the workflow.
 
