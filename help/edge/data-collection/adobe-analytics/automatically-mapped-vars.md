@@ -84,9 +84,8 @@ Below is a list of variables that the Adobe Experience Platform [!DNL Edge Netwo
 | `placeContext.geo.postalCode` | `zip` | AppMeasurement query parameter ZIP mapping. |
 | `placeContext.geo.stateProvince` | `state` | AppMeasurement query parameter STATE mapping. |
 | `productlistitems.[N]._[NAME_SPACE].*` | `products` |  AppMeasurement query parameter Products Merchandise Events / Evars mapping. |
-| `productlistitems.[N].lineitemid` | `products` | AppMeasurement query parameter Products Category mapping. |
 | `productlistitems.[N].name` | `products` | AppMeasurement query parameter Products Name mapping. |
-| `productlistitems.[N].pricetotal` | `products` | AppMeasurement query parameter Products Price mapping. |
+| `productlistitems.[N].priceTotal` | `products` | AppMeasurement query parameter Products Price mapping. |
 | `productlistitems.[N].quantity` | `products` | AppMeasurement query parameter Products Quantity mapping. |
 | `web.webInteraction.URL` | `pev1` | AppMeasurement query parameter PAGE_EVENT_VAR1 mapping. |
 | `web.webInteraction.name` | `pev2` | AppMeasurement query parameter PAGE_EVENT_VAR2 mapping. |
