@@ -31,11 +31,11 @@ The destination cards contain either a **[!UICONTROL Configure]** or an **[!UICO
 
 Control | Description 
 ---------|----------
- [!UICONTROL Configure] | Allows you to create a connection to the destination.
- [!UICONTROL Activate] | Once you have established a connection to the destination, you can activate segments. 
- [!UICONTROL View account] | View the accounts you have connected for a destination.
- [!UICONTROL View dataflows] | View the data activation flows that exist for a destination.
- [!UICONTROL View documentation] | Opens a link to the documentation page for that specific destination, for more information and to help you set it up.
+[!UICONTROL Configure] | Allows you to create a connection to the destination.
+[!UICONTROL Activate] | Once you have established a connection to the destination, you can activate segments. 
+[!UICONTROL View account] | View the accounts you have connected for a destination.
+[!UICONTROL View dataflows] | View the data activation flows that exist for a destination.
+[!UICONTROL View documentation] | Opens a link to the documentation page for that specific destination, for more information and to help you set it up.
 
 ![Controls on the destinations card](/help/rtcdp/destinations/assets/destination-card-options.png)
 
@@ -53,15 +53,25 @@ In the **[!UICONTROL Accounts]** tab, you can learn more about the connections t
 >
 >Use the ![Add data button](/help/rtcdp/destinations/assets/add-data-symbol.png) button in the **[!UICONTROL Platform]** column to create a new destination connection for that account.
 
-![Accounts tab](/help/rtcdp/destinations/assets/accounts-tab.png)
+![Accounts tab](./assets/accounts-tab.png)
 
 Element | Description
 ---------|----------
- [!UICONTROL Platform] | The destination for which you have set up the connection.
- [!UICONTROL Connection Type] | Represents the connection type to your storage bucket or destination. <ul><li>For email marketing destinations: Can be S3 or FTP.</li><li>For real-time advertising destinations: Server-to-server</li><li>For Amazon S3 cloud storage destinations: Access Key </li><li>For SFTP cloud storage destinations: Basic authentication for SFTP</li></ul>
- [!UICONTROL Username] | The username you selected in the [connect destination wizard](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination).
- [!UICONTROL Destinations] | Represents the number of unique successful destination flows connected with basic information created for a destination.
- [!UICONTROL Authorized] | The date when the connection to this destination was authorized.
+[!UICONTROL Platform] | The destination for which you have set up the connection.
+[!UICONTROL Connection Type] | Represents the connection type to your storage bucket or destination. <ul><li>For email marketing destinations: Can be S3 or FTP.</li><li>For real-time advertising destinations: Server-to-server</li><li>For Amazon S3 cloud storage destinations: Access Key </li><li>For SFTP cloud storage destinations: Basic authentication for SFTP</li></ul>
+[!UICONTROL Username] | The username you selected in the [connect destination wizard](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination).
+[!UICONTROL Destinations] | Represents the number of unique successful destination flows connected with basic information created for a destination.
+[!UICONTROL Authorized] | The date when the connection to this destination was authorized.
+
+Additionally, you can edit your account information. Select the ![Edit account button]() in the **[!UICONTROL Platform]** column to edit the account's information.
+
+For accounts that are of the connection type OAuth2, you can select **[!UICONTROL Reconnect OAuth]** to edit your account access.
+
+![Oauth image]()
+
+For accounts that are of the connection type Access Key or ConnectionString, you can edit your account authentication information.
+
+![Account information image]()
 
 ## [!UICONTROL Browse] {#browse}
 
