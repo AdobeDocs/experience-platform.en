@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create
 solution: Experience Platform
 title: Create a schema
-description: A schema can be thought of as the blueprint for the data you wish to ingest into Experience Platform. Each schema is composed of a class and zero or more mixins. In other words, you do not have to add a mixin in order to define a schema, but in most cases at least one mixin will be used. 
+description: The /schemas endpoint in the Schema Registry API allows you to programmatically manage XDM schemas within your experience application.
 topic: developer guide
 ---
 
@@ -16,7 +16,7 @@ The API endpoint used in this guide is part of the [[!DNL Schema Registry] API](
 
 ## Retrieve a list of schemas {#list}
 
-You can list all schemas under the `global` or `tenant` container by making a GET request to `/global/schemas` and `/tenant/schemas`, respectively.
+You can list all schemas under the `global` or `tenant` container by making a GET request to `/global/schemas` or `/tenant/schemas`, respectively.
 
 >[!NOTE]
 >
@@ -56,7 +56,7 @@ The response format depends on the `Accept` header sent in the request. The foll
 
 **Response**
 
-The request above used the `application/vnd.adobe.xed-id+json` `Accept` header, therefore the response includes only the `title`, `$id`, `meta:altId`, and `version` attributes for each schema. Using the other `Accept` header returns all attributes of each schema. Select the appropriate `Accept` header depending on the information you require in your response.
+The request above used the `application/vnd.adobe.xed-id+json` `Accept` header, therefore the response includes only the `title`, `$id`, `meta:altId`, and `version` attributes for each schema. Using the other `Accept` header (`application/vnd.adobe.xed+json`) returns all attributes of each schema. Select the appropriate `Accept` header depending on the information you require in your response.
 
 ```json
 {
@@ -186,7 +186,7 @@ The schema composition process begins by assigning a class. The class defines ke
 
 >[!NOTE]
 >
->The example call below is only a basic example of how to create a schema-type resource in the API. For complete steps on how to create a schema in the API, including how to assign fields using mixins and data types, see the [schema creation tutorial](../tutorials/create-schema-api.md).
+>The example call below is only a baseline example of how to create a schema in the API, with the minimal composition requirements of a class and no mixins. For complete steps on how to create a schema in the API, including how to assign fields using mixins and data types, see the [schema creation tutorial](../tutorials/create-schema-api.md).
 
 **API format**
 
@@ -220,7 +220,7 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `allOf.$ref` | The `$id` value of the class the new schema will implement. |
+| `allOf` | An array of objects, with each object referring to a class or mixin whose fields the schema implements. Each object contains a single property (`$ref`) whose value represents the `$id` of the class or mixin the new schema will implement. One class must be provided, with zero or more additional mixins. In the above example, the single object in the `allOf` array is the schema's class. |
 
 **Response**
 
@@ -260,6 +260,8 @@ A successful response returns HTTP status 201 (Created) and a payload containing
 ```
 
 Performing a GET request to [list all schemas](#list) in the tenant container would now include the new schema. You can perform a [lookup (GET) request](#lookup) using the URL-encoded `$id` URI to view the new schema directly.
+
+To add additional fields to a schema, you can perform a [PATCH operation](#patch) to add mixins to the schema's `allOf` and `meta:extends` arrays.
 
 ## Update a schema {#put}
 
@@ -386,11 +388,6 @@ curl -X PATCH\
           "value":  {
             "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
           }
-        },
-        {
-          "op": "add",
-          "path": "/meta:immutableTags",
-          "value": ["union"]
         }
       ]'
 ```

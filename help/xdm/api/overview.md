@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
 solution: Experience Platform
 title: Schema Registry API developer guide
-description: The Schema Registry is used to access the Schema Library within Adobe Experience Platform, providing a user interface and RESTful API from which all available library resources are accessible. Using the Schema Registry API, you can perform basic CRUD operations in order to view and manage all schemas and related resources available to you within Adobe Experience Platform.
+description: The Schema Registry API allows you to programmatically manage all schemas and related XDM resources available to you within Experience Platform. 
 topic: developer guide
 ---
 
@@ -40,7 +40,7 @@ Descriptors are sets of metadata that are assigned specific fields within a sche
 
 ## Unions
 
-While Platform allows you to compose schemas for particular use cases, it also allows you to compose a "union" of schemas belonging to a specific class. A union schema aggregates the fields of all schemas that share the same class into a single representation. By enabling a schema for use with [Real-time Customer Profile](../../profile/home.md), that schema becomes included in the union for its class type. As such, union schemas cannot be edited directly, and can only be affected by including or excluding schemas for use in Profile.
+While Platform allows you to compose schemas for particular use cases, it also allows you to compose a "union" of schemas belonging to a specific class. A union schema aggregates the fields of all schemas that share the same class into a single representation. By enabling a schema for use with [Real-time Customer Profile](../../profile/home.md), that schema becomes included in the union for its particular class. As such, union schemas cannot be edited directly, and can only be affected by including or excluding schemas for use in Profile.
 
 To learn how to view unions in the Schema Registry API, see the [unions endpoint guide](./unions.md).
 

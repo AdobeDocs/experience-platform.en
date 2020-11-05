@@ -2,8 +2,7 @@
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;data type registry;Schema Registry;data type;Data type;data types;Data types;create
 solution: Experience Platform
 title: Create a data type
-description: A data type can be thought of as the blueprint for the data you wish to ingest into Experience Platform. Each data type is composed of a data type and zero or more data types. In other words, you do not have to add a data type in order to define a data type, but in most cases at least one data type will be used. 
-topic: developer guide
+description: The /datatypes endpoint in the Schema Registry API allows you to programmatically manage XDM data types within your experience application.
 ---
 
 # Data types endpoint
@@ -12,11 +11,11 @@ Data types are used as reference-type fields in classes or mixins in the same wa
 
 ## Getting started
 
-The API endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mixin-registry.yaml). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mixin-registry.yaml). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 ## Retrieve a list of data types {#list}
 
-You can list all data types under the `global` or `tenant` container by making a GET request to `/global/datatypes` and `/tenant/datatypes`, respectively.
+You can list all data types under the `global` or `tenant` container by making a GET request to `/global/datatypes` or `/tenant/datatypes`, respectively.
 
 >[!NOTE]
 >
@@ -56,7 +55,7 @@ The response format depends on the `Accept` header sent in the request. The foll
 
 **Response**
 
-The request above used the `application/vnd.adobe.xed-id+json` `Accept` header, therefore the response includes only the `title`, `$id`, `meta:altId`, and `version` attributes for each data type. Using the other `Accept` header returns all attributes of each data type. Select the appropriate `Accept` header depending on the information you require in your response.
+The request above used the `application/vnd.adobe.xed-id+json` `Accept` header, therefore the response includes only the `title`, `$id`, `meta:altId`, and `version` attributes for each data type. Using the other `Accept` header (`application/vnd.adobe.xed+json`) returns all attributes of each data type. Select the appropriate `Accept` header depending on the information you require in your response.
 
 ```json
 {

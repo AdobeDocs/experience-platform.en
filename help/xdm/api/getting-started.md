@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
 solution: Experience Platform
 title: Getting started with the Schema Registry API
-description: Get started with the Schema Registry API
+description: This document provides an introduction to the core concepts you need to know before attempting to make calls to the Schema Registry API.
 topic: developer guide
 ---
 
@@ -206,7 +206,7 @@ The following table lists compatible `Accept` header values, including those wit
 
 >[!NOTE]
 >
->If supplying the `major` version only (e.g. 1, 2, 3), the registry will return the latest `minor` version (e.g. .1, .2, .3) automatically.
+>If supplying the major version only (e.g. 1, 2, 3), the registry will return the latest minor version (e.g. .1, .2, .3) automatically.
 
 ## XDM field constraints and best practices
 
@@ -236,11 +236,11 @@ The following sample field illustrates a properly formatted XDM field, with furt
 * The field requires a `type`.  
     * Defining certain types may require an optional `format`.  
     * Where a specific formatting of data is required, `examples` can be added as an array.
-    * The field type may also be defined using any data type in the registry. See the section on [creating a data type](create-data-type.md) in this guide for more information. 
+    * The field type may also be defined using any data type in the registry. See the section on [creating a data type](./data-types.md#create) in the data types endpoint guide for more information. 
 * The `description` explains the field and pertinent information regarding field data. It should be written in full sentences with clear language so that anyone accessing the schema can understand the intention of the field.
 
 See the document on [field constraints](../schema/field-constraints.md) for more information on how to define different field types in the API.
 
 ## Next steps
 
-To begin making calls using the [!DNL Schema Registry API], select one of the available endpoint guides.
+To begin making calls using the [!DNL Schema Registry] API, select one of the available endpoint guides.

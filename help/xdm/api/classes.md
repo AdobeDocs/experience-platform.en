@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;class registry;Schema Registry;class;Class;classes;Classes;create
 solution: Experience Platform
 title: Create a class
-description: A class can be thought of as the blueprint for the data you wish to ingest into Experience Platform. Each class is composed of a class and zero or more mixins. In other words, you do not have to add a mixin in order to define a class, but in most cases at least one mixin will be used. 
+description: The /classes endpoint in the Schema Registry API allows you to programmatically manage XDM classes within your experience application.
 topic: developer guide
 ---
 
@@ -12,11 +12,11 @@ Classes define the behavioral aspects of the data that a schema will contain (re
 
 ## Getting started
 
-The API endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 ## Retrieve a list of classes {#list}
 
-You can list all classes under the `global` or `tenant` container by making a GET request to `/global/classes` and `/tenant/classes`, respectively.
+You can list all classes under the `global` or `tenant` container by making a GET request to `/global/classes` or `/tenant/classes`, respectively.
 
 >[!NOTE]
 >
@@ -56,7 +56,7 @@ The response format depends on the `Accept` header sent in the request. The foll
 
 **Response**
 
-The request above used the `application/vnd.adobe.xed-id+json` `Accept` header, therefore the response includes only the `title`, `$id`, `meta:altId`, and `version` attributes for each class. Using the other `Accept` header returns all attributes of each class. Select the appropriate `Accept` header depending on the information you require in your response.
+The request above used the `application/vnd.adobe.xed-id+json` `Accept` header, therefore the response includes only the `title`, `$id`, `meta:altId`, and `version` attributes for each class. Using the other `Accept` header (`application/vnd.adobe.xed+json`) returns all attributes of each class. Select the appropriate `Accept` header depending on the information you require in your response.
 
 ```json
 {

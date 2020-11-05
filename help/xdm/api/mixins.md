@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;mixin registry;Schema Registry;mixin;Mixin;mixins;Mixins;create
 solution: Experience Platform
 title: Create a mixin
-description: A mixin can be thought of as the blueprint for the data you wish to ingest into Experience Platform. Each mixin is composed of a mixin and zero or more mixins. In other words, you do not have to add a mixin in order to define a mixin, but in most cases at least one mixin will be used. 
+description: The /mixins endpoint in the Schema Registry API allows you to programmatically manage XDM mixins within your experience application.
 topic: developer guide
 ---
 
@@ -12,11 +12,11 @@ Mixins are reuseable components which define one or more fields that represent a
 
 ## Getting started
 
-The API endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mixin-registry.yaml). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mixin-registry.yaml). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 ## Retrieve a list of mixins {#list}
 
-You can list all mixins under the `global` or `tenant` container by making a GET request to `/global/mixins` and `/tenant/mixins`, respectively.
+You can list all mixins under the `global` or `tenant` container by making a GET request to `/global/mixins` or `/tenant/mixins`, respectively.
 
 >[!NOTE]
 >
@@ -56,7 +56,7 @@ The response format depends on the `Accept` header sent in the request. The foll
 
 **Response**
 
-The request above used the `application/vnd.adobe.xed-id+json` `Accept` header, therefore the response includes only the `title`, `$id`, `meta:altId`, and `version` attributes for each mixin. Using the other `Accept` header returns all attributes of each mixin. Select the appropriate `Accept` header depending on the information you require in your response.
+The request above used the `application/vnd.adobe.xed-id+json` `Accept` header, therefore the response includes only the `title`, `$id`, `meta:altId`, and `version` attributes for each mixin. Using the other `Accept` header (`application/vnd.adobe.xed+json`) returns all attributes of each mixin. Select the appropriate `Accept` header depending on the information you require in your response.
 
 ```json
 {
