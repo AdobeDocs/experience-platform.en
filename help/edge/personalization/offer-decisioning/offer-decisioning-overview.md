@@ -49,9 +49,9 @@ It is important to understand the following terminology when working with Offer 
 
     ![](assets/decision-scope-copy.png)
 
-**Edge Configuration:** For more information, please read the [edge configuration](../../fundamentals/edge-configuration.md) documentation.
+* **Edge Configuration:** For more information, please read the [edge configuration](../../fundamentals/edge-configuration.md) documentation.
 
-**Identity**: For more information, please read this documentation outlining how [Platform Web SDK leverages Identity Service](../../identity/overview.md).
+* **Identity**: For more information, please read this documentation outlining how [Platform Web SDK leverages Identity Service](../../identity/overview.md).
 
 ## Enabling Offer Decisioning
 
