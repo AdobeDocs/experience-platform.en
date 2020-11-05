@@ -171,7 +171,7 @@ POST /tenant/mixins
 
 When you create a class, mixin, schema or data type in the `tenant` container, it is saved to the [!DNL Schema Registry] and assigned an `$id` URI that includes your `TENANT_ID`. This `$id` is used throughout the API to reference specific resources. Examples of `$id` values are provided in the next section.
 
-## Resource identification {#schema-identification}
+## Resource identification {#resource-identification}
 
 XDM resources are identified with an `$id` attribute in the form of a URI, such as the following examples: 
 

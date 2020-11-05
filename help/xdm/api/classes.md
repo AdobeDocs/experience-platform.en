@@ -6,7 +6,7 @@ description: A class can be thought of as the blueprint for the data you wish to
 topic: developer guide
 ---
 
-# Classes endpoint guide
+# Classes endpoint
 
 Classes define the behavioral aspects of the data that a schema will contain (record or time series). In addition, a class determines the base structure of common properties that all schemas based on that class must contain, as well as which mixins are eligible for use in those schemas. The `/classes` endpoint in the [!DNL Schema Registry] API allows you to programmatically manage classes within your experience application.
 

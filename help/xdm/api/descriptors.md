@@ -6,7 +6,7 @@ description: Schemas define a static view of data entities, but do not provide s
 topic: developer guide
 ---
 
-# Descriptors
+# Descriptors endpoint
 
 Schemas define a static view of data entities, but do not provide specific details on how data based on these schemas (datasets, for example) may relate to one another. Adobe Experience Platform allows you to describe these relationships and other interpretive metadata about a schema using descriptors. 
 

@@ -6,7 +6,7 @@ description: A data type can be thought of as the blueprint for the data you wis
 topic: developer guide
 ---
 
-# Data types endpoint guide
+# Data types endpoint
 
 Data types are used as reference-type fields in classes or mixins in the same way as basic literal fields, with the key difference being that data types can define multiple sub-fields. While similar to mixins in that they allow for the consistent use of a multi-field structure, data types are more flexible because they can be included anywhere in the schema structure whereas mixins can only be added at the root level. The `/datatypes` endpoint in the [!DNL Schema Registry] API allows you to programmatically manage data types within your experience application.
 

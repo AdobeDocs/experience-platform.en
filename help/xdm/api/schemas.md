@@ -6,7 +6,7 @@ description: A schema can be thought of as the blueprint for the data you wish t
 topic: developer guide
 ---
 
-# Schemas endpoint guide
+# Schemas endpoint
 
 A schema can be thought of as the blueprint for the data you wish to ingest into Adobe Experience Platform. Each schema is composed of a class and zero or more mixins. The `/schemas` endpoint in the [!DNL Schema Registry] API allows you to programmatically manage schemas within your experience application.
 
@@ -362,7 +362,7 @@ PATCH /tenant/schema/{SCHEMA_ID}
 
 **Request**
 
-The example request below adds a new mixin to a schema by adding that mixin's `$id` value to both the `meta:extends` and `allOf` arrays.
+The example request below adds a new mixin to a schema by adding that mixin's `$id` value to both the `meta:extends` and `allOf` arrays. 
 
 The request body takes the form of an array, with each listed object representing a specific change to an individual field. Each object includes the operation to be performed (`op`), which field the operation should be performed on (`path`), and what information should be included in that operation (`value`).
 
@@ -375,8 +375,23 @@ curl -X PATCH\
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'content-type: application/json' \
   -d '[
-        { "op": "add", "path": "/meta:extends/-", "value":  "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"},
-        { "op": "add", "path": "/allOf/-", "value":  {"$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"}}
+        { 
+          "op": "add",
+          "path": "/meta:extends/-",
+          "value":  "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+        },
+        {
+          "op": "add",
+          "path": "/allOf/-",
+          "value":  {
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+          }
+        },
+        {
+          "op": "add",
+          "path": "/meta:immutableTags",
+          "value": ["union"]
+        }
       ]'
 ```
 
@@ -420,6 +435,91 @@ The response shows that both operations were performed successfully. The mixin `
     }
 }
 ```
+
+## Enable a schema for use in Real-time Customer Profile {#union}
+
+In order for a schema to participate in [Real-time Customer Profile](../../profile/home.md), you must add a `union` tag to the schema's `meta:immutableTags` array. You can accomplish this by making a PATCH request for the schema in question.
+
+>[!IMPORTANT]
+>
+>Immutable tags are tags that are intended to be set, but never removed.
+
+**API format**
+
+```http
+PATCH /tenant/schema/{SCHEMA_ID} 
+```
+
+| Parameter | Description |
+| --- | --- |
+| `{SCHEMA_ID}` | The URL-encoded `$id` URI or `meta:altId` of the schema you want to enable. |
+
+**Request**
+
+The example request below adds a `meta:immutableTags` array to an existing schema, giving the array a single string value of `union` to enable it for use in Profile.
+
+```SHELL
+curl -X PATCH\
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas/_{TENANT_ID}.schemas.d5cc04eb8d50190001287e4c869ebe67 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'content-type: application/json' \
+  -d '[
+        {
+          "op": "add",
+          "path": "/meta:immutableTags",
+          "value": ["union"]
+        }
+      ]'
+```
+
+**Response**
+
+A successful response returns the details of the updated schema, showing that the `meta:immutableTags` array has been added.
+
+```JSON
+{
+    "title": "Property Information",
+    "description": "Property-related information.",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590"
+        },
+        {
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+        }
+    ],
+    "meta:class": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
+    "meta:abstract": false,
+    "meta:extensible": false,
+    "meta:extends": [
+        "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
+        "https://ns.adobe.com/xdm/data/record",
+        "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+    ],
+    "meta:containerId": "tenant",
+    "imsOrg": "{IMS_ORG}",
+    "meta:altId": "_{TENANT_ID}.schemas.d5cc04eb8d50190001287e4c869ebe67",
+    "meta:xdmType": "object",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/d5cc04eb8d50190001287e4c869ebe67",
+    "version": "1.1",
+    "meta:resourceType": "schemas",
+    "meta:registryMetadata": {
+        "repo:createDate": 1552088461236,
+        "repo:lastModifiedDate": 1552088649634,
+        "xdm:createdClientId": "{CREATED_CLIENT}",
+        "xdm:repositoryCreatedBy": "{CREATED_BY}"
+    },
+    "meta:immutableTags": [
+      "union"
+    ]
+}
+```
+
+You can now view the union for this schema's class to confirm that the schema's fields are represented. See the [unions endpoint guide](./unions.md) for more information.
 
 ## Delete a schema {#delete}
 

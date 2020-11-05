@@ -32,7 +32,7 @@ For details on creating new mixins in the API, see the [create a mixin](api/crea
 
 All [!DNL Schema Registry] resources (schemas, mixins, data types, classes) have a URI that acts as an unique ID for reference and lookup purposes. When viewing a schema in the API, it can be found in the top-level `$id` and `meta:altId` attributes.
 
-For more information, see the [schema identification](api/getting-started.md#schema-identification) section in the [!DNL Schema Registry] API developer guide.
+For more information, see the [resource identification](api/getting-started.md#resource-identification) section in the [!DNL Schema Registry] API developer guide.
 
 ### When does a schema start preventing breaking changes?
 
@@ -113,7 +113,7 @@ The following is a list of error messages that you may encounter when working wi
 
 This error displays when the system could not find a particular resource. The resource may have been deleted, or the path in the API call is invalid. Ensure that you have entered a valid path for your API call before trying again. You may want to check that you have entered the correct ID for the resource, and that the path is properly namespaced with the appropriate container (global or tenant).
 
-For more information on constructing lookup paths in the API, see the [container](./api/getting-started.md#container) and [schema identification](api/getting-started.md#schema-identification) sections in the [!DNL Schema Registry] developer guide.
+For more information on constructing lookup paths in the API, see the [container](./api/getting-started.md#container) and [resource identification](api/getting-started.md#resource-identification) sections in the [!DNL Schema Registry] developer guide.
 
 ### Title must be unique
 
