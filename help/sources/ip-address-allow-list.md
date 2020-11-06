@@ -8,7 +8,7 @@ topic: overview
 
 # IP address allow list
 
-The following IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources.
+You can define network access controls through your network firewall. The allow list of IP addresses ranges allows you to create such security rules. By specifying the appropriate source IP range, you can allow traffic for the data transfer service. The following IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources.
 
 ## East US region
 
