@@ -46,7 +46,6 @@ Note the following details that are specific to the Braze destination:
 1. Click [!UICONTROL Next].
 
 1.  In the [!UICONTROL Authentication] step, you need to enter the [!DNL Braze] connection details:
-   
    * **[!UICONTROL Name]**: enter a name by which you will recognize this destination in the future.
    * **[!UICONTROL Description]**: enter a description that will help you identify this destination in the future.
    * **[!UICONTROL Endpoint Instance]**: ask your [!DNL Braze] representative which endpoint instance you should use.
