@@ -21,6 +21,27 @@ With Real-time Customer Data Platform, you can:
 * Generate actionable insights and scale audiences with AI and machine learning powered by Adobe Sensei and built for marketers.
 * Deliver personalized experiences in realtime across all channels and destinations.
 
+## Customer AI
+
+Customer AI, included with Real-time Customer Data Platform, provides you with the power to generate customer predictions at the individual level with explanations.
+
+With the help of influential factors, Customer AI can tell you what a customer is likely to do and why. Additionally, you can benefit from Customer AI predictions and insights to personalize customer experiences by serving the most appropriate offers and messaging.
+
+Customer AI can assist with:
+
+- Providing high accuracy customer propensity models for stronger segmentation and targeting.
+- Understanding the influential factors and likelihood behind certain customer behaviors.
+- Providing customizable options for your company’s unique use cases and data.
+- Enhancing Real-time Customer Profile with customer propensity scores such as churn and conversion.
+- Enhancing customer profiles with influential factors for propensity scores.
+- Creating segments of customers based on influential factors and propensity scores.
+
+Customer AI is located in the **[!UICONTROL Services]** tab under **[!UICONTROL Adobe services]**.
+
+![Customer AI location](./assets/overview/rtcdp-customer-ai.png)
+
+To learn more about Customer AI, please visit the [Customer AI overview](../intelligent-services/customer-ai/overview.md).
+
 ## Additional information
 
 To learn more about Adobe Experience Platform, begin by reading the [Experience Platform overview](../landing/home.md).
