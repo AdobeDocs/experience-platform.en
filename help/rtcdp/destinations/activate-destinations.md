@@ -40,7 +40,7 @@ Once you have selected which destination, select **[!UICONTROL Activate]**.
 
 Applies to: All destinations
 
-![Select segments step](/help/rtcdp/destinations/assets/select-segments-icon.png)
+![Select segments step](./assets/select-segments-icon.png)
 
 
 In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select one or more segments to activate to the destination. Press **[!UICONTROL Next]** to proceed to the next step.
@@ -52,7 +52,7 @@ In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Sele
 
 Applies to: social destinations and Google Customer Match advertising destination
 
-![Identity mapping step](/help/rtcdp/destinations/assets/identity-mapping-icon.png)
+![Identity mapping step](./assets/identity-mapping-icon.png)
 
 For *social destinations*, in the **[!UICONTROL Identity mapping]** step, you can select source attributes to map as target identities in the destination. This step is either optional or mandatory, depending on which primary identity you are using in the schema. <br>&nbsp; 
 
@@ -77,21 +77,27 @@ Select `Email_LC_SHA256` as target identity if you hashed customer email address
 
 Applies to: Email marketing destinations and cloud storage destinations
 
-![Configure step](/help/rtcdp/destinations/assets/configure-icon.png)
+![Configure step](./assets/configure-icon.png)
 
 In the **[!UICONTROL Configure]** step, you can configure the schedule and the file names for each segment you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional.
 
-To add a schedule for the segment, select the **[!UICONTROL Create schedule]** button. A pop over appears, showing options to create the segment schedule. 
+To add a schedule for the segment, select the **[!UICONTROL Create schedule]** button. 
 
-- File export: You have the option to either **[!UICONTROL Export full files]** or **[!UICONTROL Export incremental files]**. Exporting a full file publishes a complete snapshot of all the profiles that qualify for that segment. Exporting an incremental file publishes the delta of profiles that qualify for that segment since the last export. 
-- Frequency: If **Export full files** is selected, you have the option to export **Once** or **Daily**. If **Export incremental files** is selected, you only have the option to export **Daily**. Exporting a file **Once** exports the file one time. Exporting a file **Daily** exports the file every day from the start date to the end date at 12:00 PM UTC. 
-- Date: If **Once** is selected, you can select the date for the one time export. If **Daily** is selected, you can select the start and end dates for the exports.
+![](./assets/activate-destinations/configure-destination-schedule.png)
+
+A pop over appears, showing options to create the segment schedule. 
+
+- **File export**: You have the option to either **[!UICONTROL Export full files]** or **[!UICONTROL Export incremental files]**. Exporting a full file publishes a complete snapshot of all the profiles that qualify for that segment. Exporting an incremental file publishes the delta of profiles that qualify for that segment since the last export. 
+- **Frequency**: If **Export full files** is selected, you have the option to export **Once** or **Daily**. If **Export incremental files** is selected, you only have the option to export **Daily**. Exporting a file **Once** exports the file one time. Exporting a file **Daily** exports the file every day from the start date to the end date at 12:00 PM UTC. 
+- **Date**: If **Once** is selected, you can select the date for the one time export. If **Daily** is selected, you can select the start and end dates for the exports.
+
+![](./assets/activate-destinations/export-full-file.png)
 
 The default file names consist of destination name, segment ID, and a date and time indicator. For example, you can edit your exported file names to distinguish between different campaigns or to have the data export time appended to the files.
 
-Select **[!UICONTROL Next]** to use the default file names or click the pencil icon to open a modal window and edit the file names. Note that file names are limited to 255 characters.
+Select the click the pencil icon to open a modal window and edit the file names. Note that file names are limited to 255 characters.
 
-![configure file name](assets/activation-workflow-configure-step.png)
+![configure file name](./assets/activate-destinations/configure-name.png)
 
 In the file name editor, you can select different components to add to the file name. The destination name and segment ID cannot be removed from file names. In addition to these, you can add the following:
 
@@ -105,7 +111,9 @@ Select **[!UICONTROL Apply changes]** to confirm your selection.
 > 
 >If you don't select the **[!UICONTROL Date and Time]** component, the file names will be static and the new exported file will overwrite the previous file in your storage location with each export. When running a recurring import job from a storage location into an email marketing platform, this is the recommended option.
 
-![edit file name options](assets/activate-workflow-configure-step-2.png)
+![edit file name options](./assets/activate-destinations/edit-file-name.png)
+
+Once you have finishing configuring all your segments, select **[!UICONTROL Next]** to continue.
 
 <br>&nbsp;
 
@@ -113,7 +121,7 @@ Select **[!UICONTROL Apply changes]** to confirm your selection.
 
 Applies to: advertising destinations, social destinations
 
-![segment schedule step](/help/rtcdp/destinations/assets/segment-schedule-icon.png)
+![segment schedule step](./assets/segment-schedule-icon.png)
 
 On the **[!UICONTROL Segment schedule]** page, you can set the start date for sending data to the destination, as well as the frequency of sending data to the destination.
 
@@ -129,7 +137,7 @@ On the **[!UICONTROL Segment schedule]** page, you can set the start date for se
 
 Applies to: email marketing destinations and cloud storage destinations
 
-![select attributes step](/help/rtcdp/destinations/assets/select-attributes-icon.png)
+![select attributes step](./assets/select-attributes-icon.png)
 
 On the **[!UICONTROL Select Attributes]** page, select **[!UICONTROL Add new field]** and select the attributes that you want to send to the destination.
 
@@ -141,7 +149,7 @@ File exports will vary as follows, depending on whether `segmentMembership.statu
 - If the `segmentMembership.status` field is selected, exported files include **Active** members in the initial full snapshot and **Active** and **Expired** members in subsequent incremental exports.
 - If the `segmentMembership.status` field is not selected, exported files include only **Active** members in the initial full snapshot and in subsequent incremental exports.
 
-![recommended attributes](/help/rtcdp/destinations/assets/recommended-attributes.png) 
+![recommended attributes](./assets/recommended-attributes.png) 
 
 Additionally, you can mark different attributes as **[!UICONTROL Mandatory]**. Marking an attribute as mandatory makes it so the exported segment must contain that attribute. As a result, it can be used as an additionally form of filtering.
 
@@ -163,7 +171,7 @@ It is recommended that one of the attributes is a [unique identifier](/help/rtcd
 
 Applies to: all destinations 
 
-![review step](/help/rtcdp/destinations/assets/review-icon.png)
+![review step](./assets/review-icon.png)
 
 On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
