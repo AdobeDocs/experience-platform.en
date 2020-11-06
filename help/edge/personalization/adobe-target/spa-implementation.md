@@ -217,7 +217,7 @@ When you have finished defining your XDM Views and implemented `sendEvent()` w
 
 >[!NOTE]
 >
->To use the Visual Experience Composer for your SPA, you must install and activate either the [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) or [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extension. 
+>To use the VEC for your SPA, you must install and activate either the [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) or [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extension. 
 
 ### Modifications Panel 
 
