@@ -29,7 +29,7 @@ Each profile fragment contains information for just one identity out of the tota
 There are two possible merge methods available for merge policies. Each of these methods are summarized below with additional details provided in the sections that follow:
 
 * **[!UICONTROL Timestamp ordered]:** In the event of a conflict, priority is given to the profile fragment which was updated most recently. 
-  * **Custom timestamps:** [!UICONTROL Timestamp ordered] also supports custom timestamps which take priority over system timestamps when merging data within the same dataset (multiple identities) or across datasets. To learn more, see the [timestamp ordered](#timestamp-ordered) section that follows.
+    * **Custom timestamps:** [!UICONTROL Timestamp ordered] also supports custom timestamps which take priority over system timestamps when merging data within the same dataset (multiple identities) or across datasets. To learn more, see the [timestamp ordered](#timestamp-ordered) section that follows.
 * **[!UICONTROL Dataset precedence]:** In the event of a conflict, give priority to profile fragments based on the dataset from which they came. When selecting this option, you must choose the related datasets and their order of priority.
 
 ### Timestamp ordered {#timestamp-ordered}
@@ -97,8 +97,8 @@ The first step in the workflow allows you to configure your merge policy by prov
 * **[!UICONTROL Name]**: The name of your merge policy should be descriptive yet concise.
 * **[!UICONTROL Schema class]**: The XDM schema class associated with the merge policy. This specifies the schema class for which this merge policy is created. Organizations can create multiple merge policies per schema class. Currently only the [!UICONTROL XDM Individual Profile] class is available in the UI.
 * **[!UICONTROL ID stitching]**: This field defines how to determine the related identities of a customer. There are two possible values:
-  * **[!UICONTROL None]**: Perform no identity stitching.
-  * **[!UICONTROL Private Graph]**: Perform identity stitching based on your private identity graph.
+    * **[!UICONTROL None]**: Perform no identity stitching.
+    * **[!UICONTROL Private Graph]**: Perform identity stitching based on your private identity graph.
 * **[!UICONTROL Default merge policy]**: A toggle button that allows you to select whether or not this merge policy will be the default for your organization. If the selector is toggled-on, a warning appears asking you to confirm that you wish to change your organization's default merge policy. See the section on [default merge policies](#default-merge-policy) to learn more.
     ![](../images/merge-policies/create-make-default.png)
 
