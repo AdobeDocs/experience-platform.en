@@ -14,6 +14,7 @@ New features in Adobe Experience Platform:
 
 - [[!DNL Access control]](#access-control)
 - [[!DNL Sandboxes]](#sandboxes)
+- [[!DNL Sources]](#sources)
 
 ## [!DNL Access control] {#access-control}
 
@@ -42,3 +43,18 @@ For more information, please see the [access control overview](../../access-cont
 |`x-sandbox-name` header | All calls to [!DNL Experience Platform] APIs must now include the new `x-sandbox-name` header, whose value references the `name` attribute of the sandbox the operation will take place in.|
 
 For more information, please see the [sandboxes overview](../../sandboxes/home.md).
+
+# [!DNL Sources] {#sources}
+
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third party software, and your CRM system.
+
+[!DNL Experience Platform] provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
+
+**New features**
+
+| Feature | Description |
+| ------- | ----------- |
+| API support for deleting connections | Existing connections that were made with errors or have become unnecessary can be deleted using the [!DNL Flow Service] API. See the tutorial on [deleting connections](../../sources/tutorials/api/delete.md) for more information. |
+| UI support for deleting accounts |  Accounts that were made with errors or have become unnecessary can now be deleted through the UI. See the tutorial on [deleting accounts](../../sources/tutorials/ui/delete-accounts.md) for more information. |
+ 
+To learn more about sources, see the [sources overview](../../sources/home.md).
