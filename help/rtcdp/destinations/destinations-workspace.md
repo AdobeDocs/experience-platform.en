@@ -65,11 +65,11 @@ Element | Description
 
 Additionally, you can edit your account information. Select the ![Edit account button](./assets/workspace/pencil-icon.png) in the **[!UICONTROL Platform]** column to edit the account's information.
 
-For accounts that are of the connection type OAuth2, you can select **[!UICONTROL Reconnect OAuth]** to edit your account access.
+For accounts that are of the `OAuth2` connection type, you can select **[!UICONTROL Reconnect OAuth]** to renew your account credentials.
 
 ![Oauth image](./assets/workspace/reconnect-oauth.png)
 
-For accounts that are of the connection type Access Key or ConnectionString, you can edit your account authentication information.
+For accounts that are of the `Access Key` or `ConnectionString` connection type, you can edit your account authentication information.
 
 ![Account information image](./assets/workspace/edit-account-details.png)
 
