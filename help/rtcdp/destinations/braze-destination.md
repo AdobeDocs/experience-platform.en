@@ -26,7 +26,7 @@ Note the following details that are specific to the Braze destination:
 
 ## Export Type {#export-type}
 
-**[!DNL Segment Export]** - you are exporting all members of a segment (audience) to the destination.
+**[!DNL Profile-based]** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name) and/or identities, according to your field mapping.
 
 ## Connect to Destination {#connect-destination}
 
@@ -40,12 +40,13 @@ Note the following details that are specific to the Braze destination:
     >
     >![Activate Braze Destination](assets/braze-destination-activate.png)
 
-2. In the [!UICONTROL Account] step, you need to provide your [!UICONTROL Braze] account token. Enter the token and click [!UICONTROL Connect to destination].
+1. In the [!UICONTROL Account] step, you need to provide your [!UICONTROL Braze] account token. Enter the token and click [!UICONTROL Connect to destination].
    ![Braze Destination Account Step](assets/braze-destination-account.png)
 
-3. Click [!UICONTROL Next].
+1. Click [!UICONTROL Next].
 
-4.  In the [!UICONTROL Authentication] step, you need to enter the [!DNL Braze] connection details:
+1.  In the [!UICONTROL Authentication] step, you need to enter the [!DNL Braze] connection details:
+   
    * **[!UICONTROL Name]**: enter a name by which you will recognize this destination in the future.
    * **[!UICONTROL Description]**: enter a description that will help you identify this destination in the future.
    * **[!UICONTROL Endpoint Instance]**: ask your [!DNL Braze] representative which endpoint instance you should use.
@@ -53,7 +54,7 @@ Note the following details that are specific to the Braze destination:
   
     ![Braze Authentication Step](assets/braze-destination-authentication.png)
 
-5. Click **[!UICONTROL Create destination]**. Your destination is now created. You can click [!UICONTROL Save & Exit] if you want to activate segments later, or you can select [!UICONTROL Next] to continue the workflow and select segments to activate. In either case, see the next section, [Activate Segments](#activate-segments), for the rest of the workflow.
+1. Click **[!UICONTROL Create destination]**. Your destination is now created. You can click [!UICONTROL Save & Exit] if you want to activate segments later, or you can select [!UICONTROL Next] to continue the workflow and select segments to activate. In either case, see the next section, [Activate Segments](#activate-segments), for the rest of the workflow.
 
 ## Activate Segments {#activate-segments}
 
@@ -71,11 +72,11 @@ To correctly map your XDM fields to the [!DNL Braze] destination fields, follow 
    
    ![Braze Destination Add Mapping](assets/braze-destination-mapping.png)
 
-2. In the [!UICONTROL Source Field] section, click the arrow button next to the empty field.
+1. In the [!UICONTROL Source Field] section, click the arrow button next to the empty field.
    
     ![Braze Destination Source Mapping](assets/braze-destination-mapping-source.png)
 
-3. In the [!UICONTROL Select source field] window, you can choose between two categories of XDM fields:
+1. In the [!UICONTROL Select source field] window, you can choose between two categories of XDM fields:
    * [!UICONTROL Select attributes]: use this option to map a specific field from your XDM schema to a [!DNL Braze] attribute.
 
         ![Braze Destination Mapping Source Attribute](assets/braze-destination-mapping-attributes.png)
@@ -86,11 +87,11 @@ To correctly map your XDM fields to the [!DNL Braze] destination fields, follow 
 
     Choose your source field, then click [!UICONTROL Select].
 
-4. In the [!UICONTROL Target Field] section, click the mapping icon to the right of the field.
+1. In the [!UICONTROL Target Field] section, click the mapping icon to the right of the field.
    
    ![Braze Destination Target Mapping](assets/braze-destination-mapping-target.png)
 
-5. In the [!UICONTROL Select target field] window, you can choose between three categories of target fields:
+1. In the [!UICONTROL Select target field] window, you can choose between three categories of target fields:
    * [!UICONTROL Select attributes]: use this option to map your XDM attributes to standard [!DNL Braze] attributes.
    * [!UICONTROL Select identity namespace]: use this option to map Platform identity namespaces to [!DNL Braze] identity namespaces.
    * [!UICONTROL Select custom attributes]: use this option to map XDM attributes to custom [!DNL Braze] attributes that you defined in your [!DNL Braze] account.
@@ -99,11 +100,11 @@ To correctly map your XDM fields to the [!DNL Braze] destination fields, follow 
 
     Choose your target field, then click [!UICONTROL Select].
 
-6. That's it! You should now see your field mapping in the list.
+1. That's it! You should now see your field mapping in the list.
    
    ![Braze Destination Mapping Complete](assets/braze-destination-mapping-complete.png)
    
-7. To add more mappings, repeat steps 1 through 6.
+1. To add more mappings, repeat steps 1 through 6.
 
 ### Example 1: Mapping XDM Attributes to Custom Braze Attributes {#mapping-example}
 
