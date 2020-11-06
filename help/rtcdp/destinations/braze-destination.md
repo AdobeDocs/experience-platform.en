@@ -45,13 +45,14 @@ Note the following details that are specific to the Braze destination:
 
 1. Click [!UICONTROL Next].
 
-1.  In the [!UICONTROL Authentication] step, you need to enter the [!DNL Braze] connection details:
+1. In the [!UICONTROL Authentication] step, you need to enter the [!DNL Braze] connection details:
+
    * **[!UICONTROL Name]**: enter a name by which you will recognize this destination in the future.
    * **[!UICONTROL Description]**: enter a description that will help you identify this destination in the future.
    * **[!UICONTROL Endpoint Instance]**: ask your [!DNL Braze] representative which endpoint instance you should use.
    * **[!UICONTROL Marketing use case]**: marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Adobe Experience Platform](../privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](../../data-governance/policies/overview.md#core-actions). 
   
-    ![Braze Authentication Step](assets/braze-destination-authentication.png)
+   ![Braze Authentication Step](assets/braze-destination-authentication.png)
 
 1. Click **[!UICONTROL Create destination]**. Your destination is now created. You can click [!UICONTROL Save & Exit] if you want to activate segments later, or you can select [!UICONTROL Next] to continue the workflow and select segments to activate. In either case, see the next section, [Activate Segments](#activate-segments), for the rest of the workflow.
 
