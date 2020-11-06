@@ -76,7 +76,7 @@ Within the [!DNL Experience Platform] UI, you can begin working with merge polic
 
 ![Merge policies landing page](../images/merge-policies/landing.png)
 
-To select which details are visible, or to add additional columns to the display, select **[!UICONTROL Configure columns** and click on a column name to add or remove it from view.
+To select which details are visible, or to add additional columns to the display, select **[!UICONTROL Configure columns]** and click on a column name to add or remove it from view.
 
 ![](../images/merge-policies/adjust-view.png)
 
