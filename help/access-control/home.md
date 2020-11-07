@@ -100,7 +100,7 @@ The following table outlines the available permissions for [!DNL Experience Plat
 | [!DNL Data Ingestion] | [!UICONTROL Manage Sources] | Access to read, create, edit, and disable sources. |
 | [!DNL Data Ingestion] | [!UICONTROL View Sources] | Read-only access to available sources in the **[!UICONTROL Catalog]** tab and authenticated sources in the **[!UICONTROL Browse]** tab. |
 | [!DNL Data Science Workspace] | [!UICONTROL Manage Data Science Workspace] | Access to read, create, edit, and delete in [!DNL Data Science Workspace]. |
-| [!DNL Data Governance] | [!UICONTROL Manage Usage Labels] | Access to read, create, edit, and delete usage labels. |
+| [!DNL Data Governance] | [!UICONTROL Apply Data Usage Labels] | Access to read, create, and delete usage labels. |
 | [!DNL Data Governance] | [!UICONTROL Manage Data Usage Policies] | Access to read, create, edit, and delete data usage policies. |
 | [!DNL Data Governance] | [!UICONTROL View Data Usage Policies] | Read-only access for data usage policies belonging to your organization. |
 | [!DNL Query Service] | [!UICONTROL Manage Queries] | Access to read, create, edit, and delete structured SQL queries for Platform data. |
