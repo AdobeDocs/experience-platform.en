@@ -115,7 +115,7 @@ You can delete a dataset by first accessing its **[!UICONTROL Dataset activity]*
 
 >[!NOTE]
 >
->Datasets created and utilized by Adobe applications and services (such as Adobe Analytics, Adobe Audience Manager, or [!DNL Decisioning Service]) cannot be deleted.
+>Datasets created and utilized by Adobe applications and services (such as Adobe Analytics, Adobe Audience Manager, or [!DNL Offer Decisioning]) cannot be deleted.
 
 ![](../images/datasets/user-guide/delete_dataset.png)
 
