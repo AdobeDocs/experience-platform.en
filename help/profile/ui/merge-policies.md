@@ -19,8 +19,8 @@ If you would prefer to work with merge policies using the [!DNL Real-time Custom
 This guide requires a working understanding of several important [!DNL Experience Platform] features. Before following this guide, or using Platform APIs, please review the documentation for the following services:
 
 * [[!DNL Real-time Customer Profile]](../home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [[!DNL Identity Service]](../../identity-service/home.md): Enables [!DNL Real-time Customer Profile] by bridging identities from disparate data sources being ingested into [!DNL Platform].
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Enables Real-time Customer Profile by bridging identities from disparate data sources being ingested into [!DNL Platform].
+* [[!DNL Experience Data Model] (XDM)](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 
 ## Merge methods {#merge-methods}
 
@@ -57,6 +57,15 @@ To work with custom timestamps using the API, refer to the Appendix of the [merg
 When **[!UICONTROL Dataset precedence]** is selected as the merge method for a merge policy, you are able to give priority to profile fragments based on the dataset from which they came. An example use case would be if your organization had information present in one dataset that is preferred or trusted over data in another dataset. 
 
 In order to create a merge policy using **[!UICONTROL Dataset precedence]**, you must select the Profile and Experience Event datasets and can manually order the Profile datasets for precedence. Once the datasets have been selected and ordered, the top dataset will be given highest priority, the second dataset will be second-highest, and so on.
+
+## ID stitching {#id-stitching}
+
+Identity stitching is the process of identifying data fragments and combining them together to form a complete profile record. To help illustrate the different stitching behaviors, consider a single customer who interacts with a brand using two different email addresses.
+
+* **[!UICONTROL None]:** When this option is selected, IDs will not be stitched together. When segmentation occurs, identities that may belong to the same person will not be stitched together and segmentation will only consider the attributes attached to each individual ID when determining if a customer qualifies for segment membership. This could result in a single customer having multiple profiles and each profile could qualify for different segments, resulting in multiple marketing messages being sent to the same customer.
+* **[!UICONTROL Private graph]:** When the private graph is selected, multiple identities related to the same individual are stitched together. This results in the customer having a single profile and allows segmentation to consider multiple attributes from multiple related identities when determining segment qualification. In this scenario, the customer is likely to have a single profile, qualify for one segment based on the combination of attributes across identities, and receive only one marketing message.
+
+To learn more about identities and their role in generating profiles and segments, please begin by reading the [Identity Service overview]((../../identity-service/home.md)).
 
 ## Default merge policy {#default-merge-policy}
 
@@ -96,10 +105,10 @@ The first step in the workflow allows you to configure your merge policy by prov
 
 * **[!UICONTROL Name]**: The name of your merge policy should be descriptive yet concise.
 * **[!UICONTROL Schema class]**: The XDM schema class associated with the merge policy. This specifies the schema class for which this merge policy is created. Organizations can create multiple merge policies per schema class. Currently only the [!UICONTROL XDM Individual Profile] class is available in the UI.
-* **[!UICONTROL ID stitching]**: This field defines how to determine the related identities of a customer. There are two possible values:
+* **[!UICONTROL ID stitching]**: This field defines how to determine the related identities of a customer. See the section on [ID stitching](#id-stitching) earlier in this guide to learn more. There are two possible values:
     * **[!UICONTROL None]**: Perform no identity stitching.
     * **[!UICONTROL Private Graph]**: Perform identity stitching based on your private identity graph.
-* **[!UICONTROL Default merge policy]**: A toggle button that allows you to select whether or not this merge policy will be the default for your organization. If the selector is toggled-on, a warning appears asking you to confirm that you wish to change your organization's default merge policy. See the section on [default merge policies](#default-merge-policy) to learn more.
+* **[!UICONTROL Default merge policy]**: A toggle button that allows you to select whether or not this merge policy will be the default for your organization. If the selector is toggled-on, a warning appears asking you to confirm that you wish to change your organization's default merge policy. See the section on [default merge policies](#default-merge-policy) earlier in this guide to learn more.
     ![](../images/merge-policies/create-make-default.png)
 
 Once the required fields have been completed, you are able to select **[!UICONTROL Next]** to continue with the workflow.
