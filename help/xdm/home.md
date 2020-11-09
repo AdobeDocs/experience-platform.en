@@ -103,14 +103,6 @@ With [!DNL Data Science Workspace], data scientists can easily create intelligen
 
 For more information on using [!DNL Experience Platform] data to power insights, see the [Data Science Workspace overview](../data-science-workspace/home.md).
 
-### [!DNL Decisioning Service]
-
-[!DNL Decisioning Service] provides the capability to configure personalized offer decisioning in [!DNL Platform]-integrated applications. Offers could be product recommendations, content components for a web experience, conversation scripts, and actions to take.
-
-[!DNL Decisioning Service] leverages [!DNL Real-time Customer Profile] data, and is therefore only compatible with datasets based on schemas implementing the [!DNL XDM Individual Profile] or [!DNL XDM ExperienceEvent] class.
-
-See the [Decisioning Service overview](../decisioning-service/home.md) for more information.
-
 ## Next steps and additional resources
 
 Now that you better understand the role of schemas throughout [!DNL Experience Platform], you are ready to start composing your own. To continue supplementing your learning, start by reading the suggested documentation and watch the video below.
