@@ -65,7 +65,7 @@ Identity stitching is the process of identifying data fragments and combining th
 * **[!UICONTROL None]:** When this option is selected, IDs will not be stitched together. When segmentation occurs, identities that may belong to the same person will not be stitched together and segmentation will only consider the attributes attached to each individual ID when determining if a customer qualifies for segment membership. This could result in a single customer having multiple profiles and each profile could qualify for different segments, resulting in multiple marketing messages being sent to the same customer.
 * **[!UICONTROL Private graph]:** When the private graph is selected, multiple identities related to the same individual are stitched together. This results in the customer having a single profile and allows segmentation to consider multiple attributes from multiple related identities when determining segment qualification. In this scenario, the customer is likely to have a single profile, qualify for one segment based on the combination of attributes across identities, and receive only one marketing message.
 
-To learn more about identities and their role in generating profiles and segments, please begin by reading the [Identity Service overview]((../../identity-service/home.md)).
+To learn more about identities and their role in generating profiles and segments, please begin by reading the [Identity Service overview](../../identity-service/home.md).
 
 ## Default merge policy {#default-merge-policy}
 
