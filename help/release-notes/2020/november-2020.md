@@ -54,7 +54,8 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 | Feature | Description |
 | ------- | ----------- |
-| API support for deleting connections | Existing connections that were made with errors or have become unnecessary can be deleted using the [!DNL Flow Service] API. See the tutorial on [deleting connections](../../sources/tutorials/api/delete.md) for more information. |
-| UI support for deleting accounts |  Accounts that were made with errors or have become unnecessary can now be deleted through the UI. See the tutorial on [deleting accounts](../../sources/tutorials/ui/delete-accounts.md) for more information. |
+| API support for deleting connections | Existing batch and streaming connections that were made with errors or have become unnecessary can be deleted using the [!DNL Flow Service] API. See the tutorial on [deleting connections](../../sources/tutorials/api/delete.md) for more information. |
+| UI support for deleting accounts |  Batch and streaming accounts that were made with errors or have become unnecessary can now be deleted through the UI. See the tutorial on [deleting accounts](../../sources/tutorials/ui/delete-accounts.md) for more information. |
+| API and UI support for eCommerce systems | New source connector for [!DNL Shopify]. |
  
 To learn more about sources, see the [sources overview](../../sources/home.md).
