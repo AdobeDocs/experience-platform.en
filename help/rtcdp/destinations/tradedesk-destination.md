@@ -43,16 +43,17 @@ As a marketer, I want to be able to use segments built off of [!DNL Trade Desk I
     >![Activate The Trade Desk Destination](assets/tradedesk-destination-activate.png)
 
 1. In the [!UICONTROL Authentication] step, you need to enter [!DNL The Trade Desk] connection details:
+
    * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
    * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
    * **[!UICONTROL Account ID]**: Your [!DNL Trade Desk] [!UICONTROL Account ID].
-   * **[!UICONTROL Client Secret]**: The [!DNL clientSecret] parameter used in the [!DNL OAuth2] client credentials.
+   * **[!UICONTROL Client Secret]**: The `clientSecret` parameter used in the [!DNL OAuth2] client credentials.
    * **[!UICONTROL Server Location]**: Ask your [!DNL The Trade Desk] representative which regional server you should use.
    * **[!UICONTROL Marketing use case]**: Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Adobe Experience Platform](../privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](../../data-governance/policies/overview.md#core-actions). 
 
     ![The Trade Desk Authentication Step](assets/tradedesk-destination-authentication.png)
 
-1. Click **[!UICONTROL Create destination]**. Your destination is now created. You can click [!UICONTROL Save & Exit] if you want to activate segments later, or you can select [!UICONTROL Next] to continue the workflow and select segments to activate. In either case, see the next section, [Activate Segments](#activate-segments), for the rest of the workflow.
+2. Click **[!UICONTROL Create destination]**. Your destination is now created. You can click [!UICONTROL Save & Exit] if you want to activate segments later, or you can select [!UICONTROL Next] to continue the workflow and select segments to activate. In either case, see the next section, [Activate Segments](#activate-segments), for the rest of the workflow.
 
 ## Activate segments {#activate-segments}
 
