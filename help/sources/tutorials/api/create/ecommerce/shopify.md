@@ -117,4 +117,4 @@ A successful response returns details of the newly created connection, including
 
 ## Next steps
 
-By following this tutorial, you have created a [!DNL Shopify] connection using the [!DNL Flow Service] API and have obtained the connection's unique ID value. You can use this ID in the next tutorial as you learn how to [explore eCommerce systems using the Flow Service API](../../explore/ecommerce.md).
+By following this tutorial, you have created a [!DNL Shopify] connection using the [!DNL Flow Service] API and have obtained the connection's unique ID value. You can use this ID in the next tutorial as you learn how to [explore eCommerce connections using the Flow Service API](../../explore/ecommerce.md).
