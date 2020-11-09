@@ -24,7 +24,7 @@ Then, optionally, you can also:
 
 ## Using the Adobe Target VEC
 
-With the SDK, you can use the VEC normally with one exception: you need the [target VEC helper extension](https://docs.adobe.com/content/help/en/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) installed and active.
+In order to use the VEC with a Platform Web SDK implementation, you need to install and activate either the [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) or [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extension.
 
 ## Auto-render VEC Activities
 
