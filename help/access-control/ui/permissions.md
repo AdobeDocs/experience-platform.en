@@ -14,15 +14,15 @@ Immediately after [creating a new product profile](#create-a-new-product-profile
 
 Permissions are divided into categories and listed on this page. The list displays the category name, the number of permissions it contains (and how many are active), and its description.
 
-Click any category on the list to open the *Edit Permissions* page.
+Select any category on the list to open the **[!UICONTROL Edit Permissions]** page.
 
 ![edit-permissions](../images/edit-permissions.png)
 
-The **[!UICONTROL Edit Permissions]** page provides a workspace to add and remove permissions from the selected product profile. The left side of the screen displays a list of permission categories. Clicking a category changes the permissions that are displayed under **[!UICONTROL Available Permissions Items]**.
+The **[!UICONTROL Edit Permissions]** page provides a workspace to add and remove permissions from the selected product profile. The left side of the screen displays a list of permission categories. Selecting a category changes the permissions that are displayed under **[!UICONTROL Available Permissions Items]**.
 
 ![change-permissions-category](../images/change-permissions-category.png)
 
-To add a permission, click the **plus (+)** icon next to the permission's name. Alternatively, you can click **[!UICONTROL Add all]** to add all permissions under the current category to the profile. Added permissions appear under **[!UICONTROL Included Permission Items]**.
+To add a permission, select the **plus (+)** icon next to the permission's name. Alternatively, you can select **[!UICONTROL Add all]** to add all permissions under the current category to the profile. Added permissions appear under **[!UICONTROL Included Permission Items]**.
 
 ![add-permissions](../images/add-permissions.png)
 
@@ -30,9 +30,9 @@ To add a permission, click the **plus (+)** icon next to the permission's name. 
 >
 >The **[!UICONTROL Included Permissions Items]** list only displays added permissions from the currently selected category.
 
-To remove a permission, click the **X** icon next to the permission's name, or select **[!UICONTROL Remove all]** to remove all permissions under the current category. Removed permissions reappear under **[!UICONTROL Available Permission Items]**.
+To remove a permission, select the **X** icon next to the permission's name, or select **[!UICONTROL Remove all]** to remove all permissions under the current category. Removed permissions reappear under **[!UICONTROL Available Permission Items]**.
 
-Continue going through the available categories and adding any desired permissions. When finished, click **[!UICONTROL Save]**.
+Continue going through the available categories and adding any desired permissions. When finished, select **[!UICONTROL Save]**.
 
 ![permissions-finish](../images/permissions-finish.png)
 
