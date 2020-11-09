@@ -32,7 +32,7 @@ Additionally, this tutorial requires that you have an established cloud storage 
 
 ## Select data
 
-After creating your cloud storage account, the **[!UICONTROL Select data]** step appears, providing an interactive interface for you to explore your cloud storage hierarchy.
+After creating your cloud storage account, the **[!UICONTROL Select data]** step appears, providing an interactive interface for you to explore your cloud storage hierarchy. 
 
 * The left half of the interface is a directory browser, displaying your server's files and directories.
 * The right half of the interface lets you preview up to 100 rows of data from a compatible file.
@@ -47,17 +47,23 @@ Once the preview window populates, you can select **[!UICONTROL Next]** to uploa
 
 ### Ingest Parquet or JSON files
 
-Supported file formats for a cloud storage account also includes JSON and Parquet. JSON and Parquet files must be XDM-compliant. To ingest JSON or Parquet files, select the appropriate file format from the directory browser and apply compatible data format from the right interface. Select **[!UICONTROL Next]** to proceed.
+Cloud storage accounts also support JSON and Parquet files. Parquet files must be XDM-compliant, while JSON files do not need to be XDM-complaint. To ingest JSON or Parquet files, select the appropriate file format from the directory browser and apply compatible data format from the right interface. 
+
+If the data format is in JSON, a preview will appear, showing information about the data within the file. On the preview screen, you can select whether the JSON is XDM compliant by using the **[!UICONTROL XDM compliant]** dropdown. 
+
+Select **[!UICONTROL Next]** to proceed.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/json-preview.png)
 
 >[!IMPORTANT]
 >
->Unlike delimited file types, JSON, and Parquet formatted files are not available for preview.
+>Unlike delimited and JSON file types, Parquet formatted files are not available for preview.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-parquet.png)
 
 ## Map data fields to an XDM schema
 
-The **[!UICONTROL Mapping]** step appears, providing an interactive interface to map the source data to a [!DNL Platform] dataset. Source files formatted in JSON or Parquet must be XDM-compliant and do not require you to manually configure the mapping. CSV files, conversely, require you to explicitly configure the mapping, but allow you to pick which source data fields to map.
+The **[!UICONTROL Mapping]** step appears, providing an interactive interface to map the source data to a [!DNL Platform] dataset. Source files formatted in Parquet must be XDM compliant and do not require you to manually configure the mapping, while CSV files require you to explicitly configure the mapping, but allow you to pick which source data fields to map. JSON files, if marked as XDM complaint, does not require manual configuration. However, if it is not marked as XDM compliant, it will require you to explicitly configure the mapping.
 
 Choose a dataset for inbound data to be ingested into. You can either use an existing dataset or create a new one.
 
@@ -85,13 +91,21 @@ The **[!UICONTROL Select schema]** dialog appears. Select the schema you wish to
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
-Based on your needs, you can choose to map fields directly, or use mapper functions to transform source data to derive computed or calculated values. For more information on data mapping and mapper functions, refer to the tutorial on [mapping CSV data to XDM schema fields](../../../../../ingestion/tutorials/map-a-csv-file.md).
+Based on your needs, you can choose to map fields directly, or use mapper functions to transform source data to derive computed or calculated values. For more information on data mapping and mapper functions, refer to the tutorial on [mapping CSV data to XDM schema fields](../../../../../ingestion/tutorials/map-a-csv-file.md). 
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
+
+For JSON files, in addition to directly mapping fields to other fields, you can directly map objects to other objects and arrays to other arrays.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/source-field-json.png)
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/target-field-json.png)
+
+Please note that you cannot map across different types. For example, you cannot map an object to an array, or a field to an object.
 
 >[!TIP]
 >
 >[!DNL Platform] provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
 Select **[!UICONTROL Preview data]** to see mapping results of up to 100 rows of sample data from the selected dataset.
 

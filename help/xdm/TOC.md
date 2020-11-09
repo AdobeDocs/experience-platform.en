@@ -11,6 +11,7 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
 * [XDM System overview](home.md)
 * Schemas {#schema}
   * [Basics of schema composition](schema/composition.md)
+  * [Best practices for data modeling](schema/best-practices.md)
   * [XDM field type constraints](schema/field-constraints.md)
   * [XDM field dictionary](schema/field-dictionary.md)
   * Schema use cases {#use-cases}
@@ -21,13 +22,14 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
 * Mixins {#mixins}
   * Profile mixins {#profile}
     * [IdentityMap](./mixins/profile/identitymap.md)
-    * [Profile person details](./mixins/profile/person-details.md)
-    * [Profile personal details](./mixins/profile/personal-details.md)
-    * [Profile segmentation](./mixins/profile/segmentation.md)
-    * [Profile work details](./mixins/profile/work-details.md)
+    * [Demographic Details](./mixins/profile/person-details.md)
+    * [Personal Contact Details](./mixins/profile/personal-details.md)
+    * [Segment Membership Details](./mixins/profile/segmentation.md)
+    * [Work Contact Details](./mixins/profile/work-details.md)
   * Event mixins {#event}
-    * [ExperienceEvent EndUserIDs](./mixins/event/enduserids.md)
-    * [ExperienceEvent environment details](./mixins/event/environment-details.md)
+    * [End User ID Details](./mixins/event/enduserids.md)
+    * [Environment Details](./mixins/event/environment-details.md)
+  * [Mixin name updates](./mixins/name-updates.md)
 * Data types {#data-types}
     * [Beacon](./data-types/beacon.md)
     * [Browser details](./data-types/browser-details.md)
