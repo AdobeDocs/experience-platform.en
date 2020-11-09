@@ -12,9 +12,21 @@ This document provides steps on how to perform various operations related to san
 
 ## View sandboxes
 
-In the Experience Platform UI, click **[!UICONTROL Sandboxes]** in the left-navigation to open the **[!UICONTROL Sandboxes]** dashboard. The dashboard lists all available sandboxes for your organization, including the sandbox type (production or development) and state (active, creating, deleted, or failed).
+In the Experience Platform UI, select **[!UICONTROL Sandboxes]** in the left-navigation to open the **[!UICONTROL Sandboxes]** homepage.
 
-![](../images/ui/sandboxes-tab.png)
+![](../images/ui/sandboxes-home.png)
+
+Select the **sandbox switcher** at the top-left of the screen to see a list of active sandboxes available to you.
+
+![](../images/ui/sandboxes-search.png)
+
+To filter through the list of sandboxes, type name of the specific sandbox that you want to access in the **[!UICONTROL Search sandbox]** menu.
+
+>[!NOTE]
+>
+>You can add packs of ten non-production sandboxes up to a maximum of 75 sandboxes in total.
+
+![](../images/ui/type-in-sandbox.png)
 
 ## Switch between sandboxes
 
