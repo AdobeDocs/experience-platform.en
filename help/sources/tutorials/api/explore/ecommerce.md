@@ -94,15 +94,15 @@ A successful response returns an array of tables from your eCommerce system. Fin
     },
     {
         "type": "table",
-        "name": "Shopify.Abandoned_Checkout_Note_Attributes",
-        "path": "Shopify.Abandoned_Checkout_Note_Attributes",
+        "name": "Shopify.Blogs",
+        "path": "Shopify.Blogs",
         "canPreview": true,
         "canFetchSchema": true
     },
     {
         "type": "table",
-        "name": "Shopify.Blogs",
-        "path": "Shopify.Blogs",
+        "name": "Shopify.Orders",
+        "path": "Shopify.Orders",
         "canPreview": true,
         "canFetchSchema": true
     }
