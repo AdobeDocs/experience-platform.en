@@ -24,20 +24,19 @@ This guide requires a working understanding of the following components of Adobe
 *   [[!DNL Sources]](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
 *   [[!DNL Sandboxes]](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully connect to Shopify using the [!DNL Flow Service] API.
+The following sections provide additional information that you will need to know in order to successfully connect to [!DNL Shopify] using the [!DNL Flow Service] API.
 
 ### Gather required credentials
 
-In order for [!DNL Flow Service] to connect with Shopify, you must provide values for the following connection properties:
+In order for [!DNL Flow Service] to connect with [!DNL Shopify], you must provide values for the following connection properties:
 
 | Credential | Description |
 | ---------- | ----------- |
-| `host` | The end point of Shopify server. |
-| `accessToken` | The access token for the user account. |
+| `host` | The end point of your [!DNL Shopify] server. |
+| `accessToken` | The access token for your [!DNL Shopify] user account. |
 | `connectionSpec` | The unique identifier needed to create a connection. The connection specification ID for [!DNL Shopify] is: `4f63aa36-bd48-4e33-bb83-49fbcd11c708` |
 
 For more information about getting started refer to this [Shopify authentication document](https://shopify.dev/concepts/about-apis/authentication).
-
 
 ### Reading sample API calls
 
