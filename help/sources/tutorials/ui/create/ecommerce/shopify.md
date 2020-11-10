@@ -45,7 +45,7 @@ Log in to [Adobe Experience Platform](https://platform.adobe.com) and then selec
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the **[!UICONTROL Marketing automation]** category, select **[!UICONTROL Shopify]**. If this is your first time using this connector, select **[!UICONTROL Configure]**. Otherwise, select **[!UICONTROL Add data]** to create a new [!DNL Shopify] connector.
+Under the **[!UICONTROL eCommerce]** category, select **[!UICONTROL Shopify]**. If this is your first time using this connector, select **[!UICONTROL Configure]**. Otherwise, select **[!UICONTROL Add data]** to create a new [!DNL Shopify] connector.
 
 ![catalog](../../../../images/tutorials/create/shopify/catalog.png)
 
@@ -55,7 +55,7 @@ The **[!UICONTROL Connect to Shopify]** page appears. On this page, you can eith
 
 If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide a name, an optional description, and your [!DNL Shopify] credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new connection to establish.
 
-![connect](../../../../images/tutorials/create/shopify/connect.png)
+![connect](../../../../images/tutorials/create/shopify/new.png)
 
 ### Existing account
 
@@ -65,4 +65,4 @@ To connect an existing account, select the [!DNL Shopify] account you want to co
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL Shopify] account. You can now continue on to the next tutorial and [configure a dataflow to bring marketing automation system data into [!DNL Platform]](../../dataflow/marketing-automation.md).
+By following this tutorial, you have established a connection to your [!DNL Shopify] account. You can now continue on to the next tutorial and [configure a dataflow to bring eCommerce data into [!DNL Platform]](../../dataflow/marketing-automation.md).
