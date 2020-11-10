@@ -22,10 +22,10 @@ New features in Adobe Experience Platform:
 
 **Key features**
 
-|Feature | Description|
-|--- | ---|
-|Permissions | In the [!DNL Admin Console], the  tab within a [!DNL Platform] product profile allows you customize which [!DNL Platform] capabilities are available for the users attached to that profile. Available permission categories include: [!UICONTROL Data Modeling], [!UICONTROL Data Management], [!UICONTROL Profile Management], [!UICONTROL Identities], [!UICONTROL Data Monitoring], [!UICONTROL Sandbox Administration], [!UICONTROL Destinations], [!UICONTROL Sources].|
-|Access to sandboxes | The **[!UICONTROL Permissions]** tab within a [!DNL Platform] product profile can grant users access to specific sandboxes. See the section on [sandboxes](#sandboxes) below for more information.|
+| Feature | Description |
+| ------- | ----------- |
+| Permissions | In the [!DNL Admin Console], the  tab within a [!DNL Platform] product profile allows you customize which [!DNL Platform] capabilities are available for the users attached to that profile. Available permission categories include: **[!UICONTROL Data Modeling]**, **[!UICONTROL Data Management]**, **[!UICONTROL Profile Management]**, **[!UICONTROL Identity Management]**, **[!UICONTROL Data Monitoring]**, **[!UICONTROL Sandbox Administration]**, **[!UICONTROL Destinations]**, **[!UICONTROL Data Ingestion]**, **[!UICONTROL Data Science Workspace]**, **[!UICONTROL Query Service]**, and **[!UICONTROL Data Governance]**.  |
+| Access to sandboxes | The **[!UICONTROL Permissions]** tab within a [!DNL Platform] product profile can grant users access to specific sandboxes. See the section on [sandboxes](#sandboxes) below for more information. |
 
 For more information, please see the [access control overview](../../access-control/home.md).
 
@@ -35,12 +35,12 @@ For more information, please see the [access control overview](../../access-cont
 
 **Key features**
 
-|Feature | Description|
-|--- | ---|
-|Production sandbox | [!DNL Experience Platform] provides a single production sandbox, which cannot be deleted or reset.|
-|Non-production sandboxes | Multiple non-production sandboxes can be created for a single [!DNL Platform] instance, allowing you to test features, run experiments, and make custom configurations without impacting your production sandbox.|
-|Sandbox switcher | In the [!DNL Experience Platform] user interface, the sandbox switcher in the top-left corner of the screen allows you to switch between available sandboxes through a dropdown menu.|
-|`x-sandbox-name` header | All calls to [!DNL Experience Platform] APIs must now include the new `x-sandbox-name` header, whose value references the `name` attribute of the sandbox the operation will take place in.|
+| Feature | Description |
+| ------- | ----------- |
+| Production sandbox | [!DNL Experience Platform] provides a single production sandbox, which cannot be deleted or reset. The total number of available sandboxes, production and non-production, is determined by the license acquired. |
+| Non-production sandboxes | Multiple non-production sandboxes can be created for a single [!DNL Platform] instance, allowing you to test features, run experiments, and make custom configurations without impacting your production sandbox. |
+| Sandbox switcher | In the [!DNL Experience Platform] user interface, the sandbox switcher in the top-left corner of the screen allows you to switch between available sandboxes through a dropdown menu. The sandbox switcher also provides a search function that allows you to filter through available sandboxes. |
+| `x-sandbox-name` header | All calls to [!DNL Experience Platform] APIs must now include the new `x-sandbox-name` header, whose value references the `name` attribute of the sandbox the operation will take place in. |
 
 For more information, please see the [sandboxes overview](../../sandboxes/home.md).
 
@@ -59,6 +59,6 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 | API and UI support for eCommerce systems | New source connector for [!DNL Shopify]. |
 | API support for mapping in streaming sources | You can now use APIs to perform mapping functions with streaming sources. |
 | Sandbox support for Adobe Audience Manager connector | The Audience Manager connector is now sandbox aware. Users can enable the connector to route Audience Manager datasets to the sandbox of their choosing (including non-production sandboxes). The configuration is limited to one sandbox per IMS Org. |
-| Support for custom delimiters in delimited files for cloud storage connectors | You can now ingest flat files in any format by specifying the column delimiter. You can use any single column delimeter such as a tab, comma, pipe, semicolons, or hash. The value defaults to a comma if unprovided. |
+| Support for custom delimiters for cloud storage sources | You can now collect non-CSV delimited files using cloud storage sources. You can use any single column delimiter such as a tab, comma, pipe, semicolon, or hash to collect flat files in any format. The value defaults to a comma if unprovided. |
 
 To learn more about sources, see the [sources overview](../../sources/home.md).
