@@ -485,13 +485,15 @@ where 'format_name' is be one of:
 This command helps in adding or dropping primary or foreign key constraints to the table.
 
 ```sql
-Alter TABLE table_name ADD ( column_name Primary key Namespace 'namespace')
+Alter TABLE table_name ADD CONSTRAINT Primary key ( column_name )
 
-Alter TABLE table_name ADD ( column_name Foreign key references referenced_table_name Namespace 'namespace')
+Alter TABLE table_name ADD CONSTRAINT Foreign key ( column_name ) references referenced_table_name ( primary_column_name )
 
-Alter TABLE table_name DROP ( column_name Primary key)
+Alter TABLE table_name ADD CONSTRAINT Foreign key ( column_name ) references referenced_table_name Namespace 'namespace'
 
-Alter TABLE table_name DROP ( column_name Foreign key)
+Alter TABLE table_name DROP CONSTRAINT Primary key ( column_name )
+
+Alter TABLE table_name DROP CONSTRAINT  Foreign key ( column_name )
 ```
 
 >[!NOTE]
