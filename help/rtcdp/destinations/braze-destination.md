@@ -27,8 +27,7 @@ Note the following details that are specific to the Braze destination:
 ## Export Type {#export-type}
 
 **[!DNL Profile-based]** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name) and/or identities, according to your field mapping.
-
-Segments are exported to [!DNL Braze] destinations as attributes.
+[!DNL Adobe Experience Platform] segments are exported to [!DNL Braze] under the `AdobeExperiencePlatformSegments` attribute.
 
 
 ## Connect to Destination {#connect-destination}
