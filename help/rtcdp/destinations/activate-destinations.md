@@ -71,19 +71,7 @@ Applies to: Email marketing destinations and cloud storage destinations
 
 ![Configure step](./assets/configure-icon.png)
 
-In the **[!UICONTROL Configure]** step, you can configure the schedule and the file names for each segment you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional.
-
-To add a schedule for the segment, select **[!UICONTROL Create schedule]**. 
-
-![](./assets/activate-destinations/configure-destination-schedule.png)
-
-A popover appears, showing options to create the segment schedule. 
-
-- **File export**: You have the option to either export either full files or incremental files. Exporting a full file publishes a complete snapshot of all the profiles that qualify for that segment. Exporting an incremental file publishes the delta of profiles that qualify for that segment since the last export. 
-- **Frequency**: If **[!UICONTROL Export full files]** is selected, you have the option to export **[!UICONTROL Once]** or **[!UICONTROL Daily]**. If **[!UICONTROL Export incremental files]** is selected, you only have the option to export **[!UICONTROL Daily]**. Exporting a file **[!UICONTROL Once]** exports the file one time. Exporting a file **[!UICONTROL Daily]** exports the file every day from the start date to the end date at 12:00 AM UTC (7:00 PM EST) if full files is selected and 12:00 PM UTC (7:00 AM EST) if incremental files is selected. 
-- **Date**: If **[!UICONTROL Once]** is selected, you can select the date for the one time export. If **[!UICONTROL Daily]** is selected, you can select the start and end dates for the exports.
-
-![](./assets/activate-destinations/export-full-file.png)
+In the **[!UICONTROL Configure]** step, you can configure the file names for each segment you are exporting. Configuring the file name is optional.
 
 The default file names consist of destination name, segment ID, and a date and time indicator. For example, you can edit your exported file names to distinguish between different campaigns or to have the data export time appended to the files.
 
@@ -103,7 +91,7 @@ Select **[!UICONTROL Apply changes]** to confirm your selection.
 > 
 >If you don't select the **[!UICONTROL Date and Time]** component, the file names will be static and the new exported file will overwrite the previous file in your storage location with each export. When running a recurring import job from a storage location into an email marketing platform, this is the recommended option.
 
-![edit file name options](./assets/activate-destinations/edit-file-name.png)
+![edit file name options](./assets/activate-workflow-configure-step-2.png)
 
 Once you have finishing configuring all your segments, select **[!UICONTROL Next]** to continue.
 
@@ -119,7 +107,15 @@ On the **[!UICONTROL Segment schedule]** page, you can set the start date for se
 >
 >For social destinations, you must select the origin of your audience in this step. You can proceed to the next step only after selecting one of the options in the image below.
 
-![choose data origin](assets/choose-data-origin.png) 
+![choose data origin](./assets/choose-data-origin.png) 
+
+### **[!UICONTROL Scheduling]** step {#scheduling}
+
+Applies to: email marketing destinations and cloud storage destinations	
+
+![segment schedule step](./assets/scheduling-icon.png)	
+
+On the **[!UICONTROL Scheduling]** page, you can see the start date for sending data to the destination as well as the frequency of sending data to the destination. These values cannot be edited.
 
 ### **[!UICONTROL Select attributes]** step {#select-attributes}
 
