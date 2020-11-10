@@ -57,7 +57,8 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 | API and UI support for updating connections | You can now update the names, descriptions, and credentials of existing batch connections using the [!DNL Flow Service] API and the UI. For more information, see the tutorial on [updating connections using the Flow Service API](../../sources/tutorials/api/update.md) and [editing account details using the UI](../../sources/tutorials/ui/monitor.md). |
 | API  and UI support for deleting connections | Batch connections that contain errors or have become unnecessary can now be deleted using the [!DNL Flow Service] API and the UI. For more information, see the tutorial on [deleting connections using the Flow Service API](../../sources/tutorials/api/delete.md) and [deleting accounts using the UI](../../sources/tutorials/ui/delete-accounts.md). |
 | API and UI support for eCommerce systems | New source connector for [!DNL Shopify]. |
-| API support for mapping in streaming sources | You can now use APIs to perform mapping functions with streaming sources. | 
+| API support for mapping in streaming sources | You can now use APIs to perform mapping functions with streaming sources. |
+| Sandbox support for Adobe Audience Manager connector | The Audience Manager connector is now sandbox aware. Users can enable the connector to route Audience Manager datasets to the sandbox of their choosing (including non-production sandboxes). The configuration is limited to one sandbox per IMS Org. |
 | Support for custom delimiters in delimited files for cloud storage connectors | You can now ingest flat files in any format by specifying the column delimiter. You can use any single column delimeter such as a tab, comma, pipe, semicolons, or hash. The value defaults to a comma if unprovided. |
 
 To learn more about sources, see the [sources overview](../../sources/home.md).
