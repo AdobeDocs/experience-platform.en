@@ -113,7 +113,7 @@ To correctly map your XDM fields to the [!DNL Braze] destination fields, follow 
 
 ### Example {#mapping-example}
 
-Let's say your XDM profile schema and your Braze instance contain the following attributes and identities:
+Let's say your [!DNL XDM] profile schema and your [!DNL Braze] instance contain the following attributes and identities:
 
 ||[!DNL XDM] Profile Schema|[!DNL Braze] Instance|
 |---|---|---|
