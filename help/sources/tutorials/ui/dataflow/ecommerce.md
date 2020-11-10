@@ -9,7 +9,7 @@ description: A dataflow is a scheduled task that retrieves and ingests data from
 
 # Configure a dataflow for an eCommerce connector in the UI
 
-A dataflow is a scheduled task that retrieves and ingests data from a source to a [!DNL Platform] dataset. This tutorial provides steps to configure a new dataflow using your eCommerce account.
+A dataflow is a scheduled task that retrieves and ingests data from a source to a [!DNL Platform] dataset. This tutorial provides steps to configure a new dataflow using your **[!UICONTROL eCommerce]** account.
 
 ## Getting started
 
@@ -20,11 +20,11 @@ This tutorial requires a working understanding of the following components of Ad
     -   [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 -   [[!DNL Real-time Customer Profile]](../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
-Additionally, this tutorial requires that you have already created an eCommerce account. A list of tutorials for creating different eCommerce connectors in the UI can be found in the [source connectors overview](../../../home.md).
+Additionally, this tutorial requires that you have already created an **[!UICONTROL eCommerce]** account. A list of tutorials for creating different **[!UICONTROL eCommerce]** connectors in the UI can be found in the [source connectors overview](../../../home.md).
 
 ## Select data
 
-After creating your eCommerce account, the **[!UICONTROL Select data]** step appears, providing an interactive interface for you to explore your file hierarchy.
+After creating your **[!UICONTROL eCommerce]** account, the **[!UICONTROL Select data]** step appears, providing an interactive interface for you to explore your file hierarchy.
 
 - The left half of the interface is a directory browser, displaying your server's files and directories.
 - The right half of the interface lets you preview up to 100 rows of data from a compatible file.
@@ -151,7 +151,7 @@ You can delete dataflows that are no longer necessary or were incorrectly create
 
 ## Next steps
 
-By following this tutorial, you have successfully created a dataflow to bring in eCommerce data and gained insight on monitoring datasets. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have successfully created a dataflow to bring in **[!UICONTROL eCommerce]** data and gained insight on monitoring datasets. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
 -   [[!DNL Real-time Customer Profile] overview](../../../../profile/home.md)
 -   [[!DNL Data Science Workspace] overview](../../../../data-science-workspace/home.md)
