@@ -54,11 +54,10 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 | Feature | Description |
 | ------- | ----------- |
-| API support for updating connections | You can now update the names, descriptions, and credentials of existing batch or streaming connections using the [!DNL Flow Service] API. See the tutorial on [updating connections](../../sources/tutorials/api/update.md) for more information. |
-| API support for deleting connections | Batch or streaming connections that contain errors or have become unnecessary can now be deleted using the [!DNL Flow Service] API. See the tutorial on [deleting connections](../../sources/tutorials/api/delete.md) for more information. |
-| UI support for deleting accounts |  Accounts that were made with errors or have become unnecessary can now be deleted through the UI. See the tutorial on [deleting accounts](../../sources/tutorials/ui/delete-accounts.md) for more information. |
+| API and UI support for updating connections | You can now update the names, descriptions, and credentials of existing batch connections using the [!DNL Flow Service] API and the UI. For more information, see the tutorial on [updating connections using the Flow Service API](../../sources/tutorials/api/update.md) and [editing account details using the UI](../../sources/tutorials/ui/monitor.md). |
+| API  and UI support for deleting connections | Batch connections that contain errors or have become unnecessary can now be deleted using the [!DNL Flow Service] API and the UI. For more information, see the tutorial on [deleting connections using the Flow Service API](../../sources/tutorials/api/delete.md) and [deleting accounts using the UI](../../sources/tutorials/ui/delete-accounts.md). |
 | API and UI support for eCommerce systems | New source connector for [!DNL Shopify]. |
-| API support for flow run monitoring for streaming connectors | You can now monitor all flow runs and see a detailed view of each run, including completion status, run duration, list of files processed, errors, and metrics, using the [!DNL Flow Service API]. |
-| Support for custom delimiters in delimited files in cloud storage Connectors | You can now ingest flat files in any format by specifying the column delimiter. You can use any single column delimeter such as a tab, comma, pipe, semicolons, or hash. The value defaults to a comma if unprovided. |
- 
+| API support for mapping in streaming sources | You can now use APIs to perform mapping functions with streaming sources. | 
+| Support for custom delimiters in delimited files for cloud storage connectors | You can now ingest flat files in any format by specifying the column delimiter. You can use any single column delimeter such as a tab, comma, pipe, semicolons, or hash. The value defaults to a comma if unprovided. |
+
 To learn more about sources, see the [sources overview](../../sources/home.md).
