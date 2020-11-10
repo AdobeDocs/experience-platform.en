@@ -65,4 +65,4 @@ To connect an existing account, select the [!DNL Shopify] account you want to co
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL Shopify] account. You can now continue on to the next tutorial and [configure a dataflow to bring eCommerce data into [!DNL Platform]](../../dataflow/marketing-automation.md).
+By following this tutorial, you have established a connection to your [!DNL Shopify] account. You can now continue on to the next tutorial and [configure a dataflow to bring eCommerce data into [!DNL Platform]](../../dataflow/ecommerce.md).
