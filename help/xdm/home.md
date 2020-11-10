@@ -41,7 +41,7 @@ All XDM schemas describe data that can be categorized as record or time series. 
 
 Although you are able to define your own classes within the [!DNL Schema Registry], it is recommended that you use the preferred classes **[!DNL XDM Individual Profile]** and **[!DNL XDM ExperienceEvent]** for record and time series data, respectively. These classes are outlined in more detail below.
 
-### [!DNL XDM Individual Profile]
+### [!DNL XDM Individual Profile] {#xdm-individual-profile}
 
 [!DNL XDM Individual Profile] is a record-based class that forms a singular representation of the attributes of both identified and partially-identified subjects. Profiles that are highly identified may be used for personal communications or targeted engagements, and can contain detailed personal information such as name, gender, date of birth, location, and contact information including phone numbers and email addresses. 
 
@@ -102,14 +102,6 @@ Adobe Experience Platform [!DNL Data Science Workspace] uses machine learning an
 With [!DNL Data Science Workspace], data scientists can easily create intelligent services APIs powered by machine learning. These services work with other Adobe solutions, including Adobe Target and Adobe Analytics Cloud, to help you automate personalized, targeted digital experiences.
 
 For more information on using [!DNL Experience Platform] data to power insights, see the [Data Science Workspace overview](../data-science-workspace/home.md).
-
-### [!DNL Decisioning Service]
-
-[!DNL Decisioning Service] provides the capability to configure personalized offer decisioning in [!DNL Platform]-integrated applications. Offers could be product recommendations, content components for a web experience, conversation scripts, and actions to take.
-
-[!DNL Decisioning Service] leverages [!DNL Real-time Customer Profile] data, and is therefore only compatible with datasets based on schemas implementing the [!DNL XDM Individual Profile] or [!DNL XDM ExperienceEvent] class.
-
-See the [Decisioning Service overview](../decisioning-service/home.md) for more information.
 
 ## Next steps and additional resources
 
