@@ -46,7 +46,7 @@ To create a new sandbox in the UI, select the **[!UICONTROL Create Sandbox]** bu
 
 ![](../images/ui/create-sandbox.png)
 
-The **[!UICONTROL Create Sandbox]** dialog appears, prompting you to provide a display title and name for the sandbox. The **display title** is meant to be human-readable and should be descriptive enough to be easily identifiable. The sandbox **[!UICONTROL Name]** is an all-lowercase identifier for use in API calls, and should therefore be unique and concise. The sandbox **[!UICONTROL Name]** must consist only of alpha-numeric characters and hyphens **(-)**, it must begin with a letter, and has a maximum of 256 characters.
+The **[!UICONTROL Create Sandbox]** dialog appears, prompting you to provide a display title and name for the sandbox. The **display title** is meant to be human-readable and should be descriptive enough to be easily identifiable. The sandbox **[!UICONTROL Name]** is an all-lowercase identifier for use in API calls, and should therefore be unique and concise. The sandbox **[!UICONTROL Name]** must consist only of alphanumeric characters and hyphens **(-)**, it must begin with a letter, and has a maximum of 256 characters.
 
 When finished, select **[!UICONTROL Create]**.
 
