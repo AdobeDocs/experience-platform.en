@@ -13,6 +13,7 @@ author: crhoades, ens28527
 New features in Adobe Experience Platform:
 
 - [[!DNL Access control]](#access-control)
+- [[!DNL Offer Decisioning]](#offer-decisioning)
 - [[!DNL Sandboxes]](#sandboxes)
 - [[!DNL Sources]](#sources)
 
@@ -28,6 +29,17 @@ New features in Adobe Experience Platform:
 | Access to sandboxes | The **[!UICONTROL Permissions]** tab within a [!DNL Platform] product profile can grant users access to specific sandboxes. See the section on [sandboxes](#sandboxes) below for more information. |
 
 For more information, please see the [access control overview](../../access-control/home.md).
+
+## [!DNL Offer Decisioning] {#offer-decisioning}
+
+[!DNL Offer Decisioning] is an Application Service integrated with [!DNL Experience Platform]. It allows you to leverage [!DNL Platform] to deliver the best offer and experience to your customers across all touch points at the right time.
+
+| Feature | Description |
+| ------- | ----------- |
+| Centralized offer library | The interface where you create and manage the different elements that compose your offers, and define their rules and constraints. |
+| Offer Decision Engine | The Offer Decision Engine leverages [!DNL Platform] data and [!DNL Real-time Customer Profiles], along with the Offer Library, in order to select the right time, customers and channels to which offers will be delivered. |
+
+For more information, please see the [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=en) documentation.
 
 ## [!DNL Sandboxes] {#sandboxes}
 
