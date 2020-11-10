@@ -11,11 +11,11 @@ description: This tutorial covers the steps for retrieving data from a third-par
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
-This tutorial covers the steps for retrieving data from a third-party eCommerce system and ingesting it into [!DNL Platform] through source connectors and the [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
+This tutorial covers the steps for retrieving data from a third-party **[!UICONTROL eCommerce]** system and ingesting it into [!DNL Platform] through source connectors and the [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
 
 ## Getting started
 
-This tutorial requires you to have access to an eCommerce system through a valid connection, as well as information about the file you wish to bring into [!DNL Platform] (including the file's path and structure). If you do not have this information, see the tutorial on [exploring an eCommerce system using the Flow Service API](../explore/ecommerce.md) before attempting this tutorial.
+This tutorial requires you to have access to an **[!UICONTROL eCommerce]** system through a valid connection, as well as information about the file you wish to bring into [!DNL Platform] (including the file's path and structure). If you do not have this information, see the tutorial on [exploring an eCommerce system using the Flow Service API](../explore/ecommerce.md) before attempting this tutorial.
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
@@ -26,7 +26,7 @@ This tutorial also requires you to have a working understanding of the following
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): The Batch Ingestion API allows you to ingest data into [!DNL Experience Platform] as batch files.
 * [[!DNL Sandboxes]](../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully connect to an eCommerce system using the [!DNL Flow Service] API.
+The following sections provide additional information that you will need to know in order to successfully connect to an **[!UICONTROL eCommerce]** system using the [!DNL Flow Service] API.
 
 ### Reading sample API calls
 
@@ -58,9 +58,9 @@ Use the following the enum values for file-based connectors:
 
 | Data format | Enum value |
 | ----------- | ---------- |
-| delimited | `delimited` |
-| json | `json` |
-| parquet | `parquet` |
+| Delimited | `delimited` |
+| JSON | `json` |
+| Parquet | `parquet` |
 
 For all table-based connectors, set the value to `tabular`.
 
@@ -109,9 +109,9 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `baseConnectionId`| The connection ID of your eCommerce source. |
+| `baseConnectionId`| The connection ID of your **[!UICONTROL eCommerce]** source. |
 | `params.path`| The path of the source file. |
-| `connectionSpec.id`| The connection specification ID of your eCommerce source. |
+| `connectionSpec.id`| The connection specification ID of your **[!UICONTROL eCommerce]** source. |
 
 **Response**
 
@@ -401,7 +401,7 @@ A successful response returns details of the newly created mapping including its
 
 ## Look up dataflow specifications {#specs}
 
-A dataflow is responsible for collecting data from sources and bringing them into [!DNL Platform]. In order to create a dataflow, you must first obtain the dataflow specifications by performing a GET request to the [!DNL Flow Service] API. Dataflow specifications are responsible for collecting data from an an eCommerce source.
+A dataflow is responsible for collecting data from sources and bringing them into [!DNL Platform]. In order to create a dataflow, you must first obtain the dataflow specifications by performing a GET request to the [!DNL Flow Service] API. Dataflow specifications are responsible for collecting data from an an **[!UICONTROL eCommerce]** source.
 
 **API format**
 
@@ -421,7 +421,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the details of the dataflow specification that is responsible for bringing data from your eCommerce source into [!DNL Platform]. This ID is required in the next step to create a new dataflow.
+A successful response returns the details of the dataflow specification that is responsible for bringing data from your **[!UICONTROL eCommerce]** source into [!DNL Platform]. This ID is required in the next step to create a new dataflow.
 
 ```json
 {
@@ -606,7 +606,7 @@ curl -X POST \
 | `sourceConnectionIds` | The [source connection ID](#source) retrieved in an earlier step. |
 | `targetConnectionIds` | The [target connection ID](#target-connection) retrieved in an earlier step. |
 | `transformations.params.mappingId` | The [mapping ID](#mapping) retrieved in an earlier step.|
-| `transformations.params.mappingId`| The mapping ID associated with your eCommerce source. |
+| `transformations.params.mappingId`| The mapping ID associated with your **[!UICONTROL eCommerce]** source. |
 | `scheduleParams.startTime` | The start time for the dataflow in epoch time. |
 | `scheduleParams.frequency` | The `frequency` at which the dataflow will collect data. Acceptable values include: `once`, `minute`, `hour`, `day`, or `week`. |
 | `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer. An interval is not required when `frequency` is set as `once` and should be greater than or equal to `15` for other `frequency` values. |
@@ -628,7 +628,7 @@ Once your dataflow has been created, you can monitor the data that is being inge
 
 ## Next steps
 
-By following this tutorial, you have created a source connector to collect data eCommerce on a scheduled basis. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have created a source connector to collect data **[!UICONTROL eCommerce]** on a scheduled basis. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
 *   [Real-time Customer Profile overview](../../../../profile/home.md)
 *   [Data Science Workspace overview](../../../../data-science-workspace/home.md)

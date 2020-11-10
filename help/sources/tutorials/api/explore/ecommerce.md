@@ -10,7 +10,7 @@ description: This tutorial uses the Flow Service API to explore eCommerce connec
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
-This tutorial uses the [!DNL Flow Service] API to explore a third party eCommerce connection.
+This tutorial uses the [!DNL Flow Service] API to explore a third party **[!UICONTROL eCommerce]** connection.
 
 ## Getting started
 
@@ -19,11 +19,11 @@ This guide requires a working understanding of the following components of Adobe
 *   [[!DNL Sources]](../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
 *   [[!DNL Sandboxes]](../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully connect to an eCommerce connection using the [!DNL Flow Service] API.
+The following sections provide additional information that you will need to know in order to successfully connect to an **[!UICONTROL eCommerce]** connection using the [!DNL Flow Service] API.
 
 ### Obtain a connection ID
 
-In order to explore your eCommerce connection using [!DNL Platform] APIs, you must possess a valid connection ID. If you do not already have a connection for the eCommerce connection you wish to work with, you can create one through the following tutorial:
+In order to explore your **[!UICONTROL eCommerce]**connection using [!DNL Platform] APIs, you must possess a valid connection ID. If you do not already have a connection for the **[!UICONTROL eCommerce]**connection you wish to work with, you can create one through the following tutorial:
 
 * [Shopify](../create/ecommerce/shopify.md)
 
@@ -49,7 +49,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ## Explore your data tables
 
-Using your eCommerce connection ID, you can explore your data tables by performing GET requests. Use the following call to find the path of the table you wish to inspect or ingest into [!DNL Platform].
+Using your **[!UICONTROL eCommerce]** connection ID, you can explore your data tables by performing GET requests. Use the following call to find the path of the table you wish to inspect or ingest into [!DNL Platform].
 
 **API format**
 
@@ -59,7 +59,7 @@ GET /connections/{CONNECTION_ID}/explore?objectType=root
 
 | Parameter | Description |
 | --- | --- |
-| `{CONNECTION_ID}` | Your eCommerce connection ID. |
+| `{CONNECTION_ID}` | Your **[!UICONTROL eCommerce]** connection ID. |
 
 **Request**
 
@@ -74,7 +74,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns an array of tables from your eCommerce connection. Find the table you wish to bring into [!DNL Platform] and take note of its `path` property, as you are required to provide it in the next step to inspect its structure.
+A successful response returns an array of tables from your **[!UICONTROL eCommerce]** connection. Find the table you wish to bring into [!DNL Platform] and take note of its `path` property, as you are required to provide it in the next step to inspect its structure.
 
 ```json
 [
@@ -111,7 +111,7 @@ A successful response returns an array of tables from your eCommerce connection.
 
 ## Inspect the structure of a table
 
-To inspect the structure of a table from your eCommerce connection, perform a GET request while specifying the path of a table within an `object` query parameter.
+To inspect the structure of a table from your **[!UICONTROL eCommerce]** connection, perform a GET request while specifying the path of a table within an `object` query parameter.
 
 **API format**
 
@@ -121,8 +121,8 @@ GET /connections/{CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | The connection ID of your eCommerce connection. |
-| `{TABLE_PATH}` | The path of a table within your eCommerce connection. |
+| `{CONNECTION_ID}` | The connection ID of your **[!UICONTROL eCommerce]** connection. |
+| `{TABLE_PATH}` | The path of a table within your **[!UICONTROL eCommerce]** connection. |
 
 **Request**
 
@@ -152,35 +152,7 @@ A successful response returns the structure of the specified table. Details rega
                 }
             },
             {
-                "name": "Handle",
-                "type": "string",
-                "xdm": {
-                    "type": "string"
-                }
-            },
-            {
                 "name": "Title",
-                "type": "string",
-                "xdm": {
-                    "type": "string"
-                }
-            },
-            {
-                "name": "Commentable",
-                "type": "string",
-                "xdm": {
-                    "type": "string"
-                }
-            },
-            {
-                "name": "Feedburner",
-                "type": "string",
-                "xdm": {
-                    "type": "string"
-                }
-            },
-            {
-                "name": "Feedburner_Location",
                 "type": "string",
                 "xdm": {
                     "type": "string"
@@ -193,22 +165,6 @@ A successful response returns the structure of the specified table. Details rega
                 "xdm": {
                     "type": "string",
                     "format": "date-time"
-                }
-            },
-            {
-                "name": "Updated_At",
-                "type": "string",
-                "meta:xdmType": "date-time",
-                "xdm": {
-                    "type": "string",
-                    "format": "date-time"
-                }
-            },
-            {
-                "name": "Template_Suffix",
-                "type": "string",
-                "xdm": {
-                    "type": "string"
                 }
             },
             {
@@ -235,4 +191,4 @@ A successful response returns the structure of the specified table. Details rega
 
 ## Next steps
 
-By following this tutorial, you have explored your eCommerce connection, found the path of the table you wish to ingest into [!DNL Platform], and obtained information regarding its structure. You can use this information in the next tutorial to [collect eCommerce data and bring it into Platform](../collect/ecommerce.md).
+By following this tutorial, you have explored your **[!UICONTROL eCommerce]** connection, found the path of the table you wish to ingest into [!DNL Platform], and obtained information regarding its structure. You can use this information in the next tutorial to [collect eCommerce data and bring it into Platform](../collect/ecommerce.md).
