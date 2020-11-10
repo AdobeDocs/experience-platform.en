@@ -259,7 +259,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 *   `{CONNECTION_SPEC_ID}`: Use the connection spec ID you obtained in the step [Get the list of available destinations](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md#get-the-list-of-available-destinations).
-*   `{AUTHENTICATION_CREDENTIALS}`: fill in the name of your streaming destination, e.g.: `Amazon Kinesis authentication credentials` or `Azure Event Hubs authentication credentials`. 
+*   `{AUTHENTICATION_CREDENTIALS}`: fill in the name of your streaming destination: `Aws Kinesis authentication credentials` or `Azure EventHub authentication credentials`. 
 *   `{ACCESS_ID}`: *For [!DNL Amazon Kinesis] connections.* Your access ID for your Amazon Kinesis storage location.
 *   `{SECRET_KEY}`: *For [!DNL Amazon Kinesis] connections.* Your secret key for your Amazon Kinesis storage location.
 *  `{REGION}`: *For [!DNL Amazon Kinesis] connections.* The region in your [!DNL Amazon Kinesis] account where Adobe Real-time CDP will stream your data.
@@ -443,29 +443,6 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
         "name": "Name of the segment that you are activating",
         "description": "Description of the segment that you are activating",
         "id": "{SEGMENT_ID}"
-      }
-    }
-  },
-  {
-    "op": "add",
-    "path": "/transformations/0/params/segmentSelectors/selectors/-",
-    "value": {
-      "type": "PLATFORM_SEGMENT",
-      "value": {
-        "name": "Name of the segment that you are activating",
-        "description": "Description of the segment that you are activating",
-        "id": "{SEGMENT_ID}"
-      }
-    }
-  },
-  {
-    "op": "add",
-    "path": "/transformations/0/params/profileSelectors/selectors/-",
-    "value": {
-      "type": "JSON_PATH",
-      "value": {
-        "operator": "EXISTS",
-        "path": "{PROFILE_ATTRIBUTE}"
       }
     }
   },
