@@ -103,13 +103,28 @@ To activate segments to *Airship Attributes*, follow the steps below:
     Note that if an activation flow already exists for a destination, you can see the segments that are currently being sent to the destination. Select **[!UICONTROL Edit activation]** in the right rail and follow the steps below to modify the activation details.
 3. Select **[!UICONTROL Activate]**;
 4. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to *Airship Attributes*.
-    ![segments-to-destination](/help/rtcdp/destinations/assets/airshiptags3-select-segments.png)
+    ![segments-to-destination](/help/rtcdp/destinations/assets/airship3-select-segments-to-export.png)
 5.  In the **[!UICONTROL Mapping]** step, select which attributes and identities from the [XDM](https://docs.adobe.com/content/help/en/experience-platform/xdm/home.html) schema to map to the destination schema. Select **[!UICONTROL Add new mapping]** to browse your schema and map them to the corresponding target identity.
 ![identity mapping initial screen](/help/rtcdp/destinations/assets/gcm-identity-mapping.png)
-   Airship tags can be set either on a channel, which represents device instance, e.g., iPhone, or a named user, which maps all of a user's devices to a common identifier such as a customer ID. If you have plain text (unhashed) email addresses as primary identity in your schema, select the email field in your **[!UICONTROL Source Attributes]** and map to the Airship named user in the right column under **[!UICONTROL Target Identities]**, as shown below.
+   Airship attributes can be set either on a channel, which represents device instance, e.g., iPhone, or a named user, which maps all of a user's devices to a common identifier such as a customer ID. If you have plain text (unhashed) email addresses as primary identity in your schema, select the email field in your **[!UICONTROL Source Attributes]** and map to the Airship named user in the right column under **[!UICONTROL Target Identities]**, as shown below.
    ![Named User Mapping](/help/rtcdp/destinations/assets/airshiptags7-mappingoption2.png)
-   For identifiers that should be mapped to a channel, i.e., a device, map to the appropriate channel based on the source. In the following screen shots, we will map a Google Advertising ID to an Airship Android channel. ![Connect to Airship Attributes](/help/rtcdp/destinations/assets/airshiptags4-select-source-identity.png) ![Connect to Airship Attributes](/help/rtcdp/destinations/assets/airshiptags5-select-target-identity.png) ![Channel Mapping](/help/rtcdp/destinations/assets/airshiptags6-mappingoption1.png)
+   For identifiers that should be mapped to a channel, i.e., a device, map to the appropriate channel based on the source. In the following screen shots, we will map an IDFA to an Airship iOS channel.
 
+Select source field:
+: ![Connect to Airship Attributes](/help/rtcdp/destinations/assets/airship5-select-source-identity.png)
+
+Select target field:
+: ![Connect to Airship Attributes](/help/rtcdp/destinations/assets/airship6-select-target-identity.png)
+
+
+Select source attribute:
+: ![Select source field](/help/rtcdp/destinations/assets/airship7-select-source-attributes.png)
+
+Select target attribute:
+: ![Select target field](/help/rtcdp/destinations/assets/airship8-select-target-attribute.png)
+
+Verify mapping:
+: ![Channel mapping](/help/rtcdp/destinations/assets/airship9-mapping-final.png)
 
 6. On the **[!UICONTROL Segment schedule]** page, you can set the start date for sending data to the destination.
 7. On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
@@ -123,13 +138,5 @@ To activate segments to *Airship Attributes*, follow the steps below:
 If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
 ![confirm-selection](/help/rtcdp/destinations/assets/gcm-review.png)
-
-
-
-
-
-
-
-
 
 
