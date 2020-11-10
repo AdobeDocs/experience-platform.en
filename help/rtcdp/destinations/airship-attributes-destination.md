@@ -33,12 +33,11 @@ Before you can send your audience segments to Airship, you must:
 > [!TIP]
 > Create an Airship account via [this signup link](https://go.airship.eu/accounts/register/plan/starter/) if you have not already.
 
-### Tag groups
+### Enable attributes
 
-The concept of Adobe *Segments* is similar to [Attributes](https://docs.airship.com/guides/audience/attributes/) in Airship, with slight differences in implementation. This integration maps the status of a user's [membership in an Adobe segment](https://experienceleague.adobe.com/docs/experience-platform/xdm/mixins/profile/segmentation.html?lang=en#mixins) to the presence or non-presence of an Airship tag. For example, in an Adobe segment where the `xdm:status` changes `realized`,
-the tag is added to the Airship channel or named user this profile is mapped to. If the `xdm:status` changes to `exited`, the tag is removed.
+Adobe profile attributes are similar to Airship attributes and can be easily mapped to one another in the Experience Platform using the mapping tool that we will demonstrate below.
 
-To enable this integration, create a *tag group* in Airship named `ADOBEEXPERIENCEPLATFORMSEGMENTS`.
+Airship projects have several predefined and default attributes. If you have a custom attribute, you must define it in Airship first. See [Set Up and Manage Attributes](https://docs.airship.com/tutorials/audience/attributes/) for details.
 
 See [Manage Tag Groups](https://docs.airship.com/tutorials/manage-project/messaging/tag-groups) for instructions on creating the tag group.
 
@@ -48,8 +47,6 @@ See [Manage Tag Groups](https://docs.airship.com/tutorials/manage-project/messag
 1. Click *Create Token*.
 1. Provide a user-friendly name for your token, e.g., "Adobe Attributes Destination", and select "All Access" for the role.
 1. Click *Create Token* and save the details as confidential.
-
-
 
 
 ## Use Cases
@@ -108,7 +105,16 @@ To activate segments to *Airship Attributes*, follow the steps below:
 ![identity mapping initial screen](/help/rtcdp/destinations/assets/gcm-identity-mapping.png)
    Airship attributes can be set either on a channel, which represents device instance, e.g., iPhone, or a named user, which maps all of a user's devices to a common identifier such as a customer ID. If you have plain text (unhashed) email addresses as primary identity in your schema, select the email field in your **[!UICONTROL Source Attributes]** and map to the Airship named user in the right column under **[!UICONTROL Target Identities]**, as shown below.
    ![Named User Mapping](/help/rtcdp/destinations/assets/airshiptags7-mappingoption2.png)
-   For identifiers that should be mapped to a channel, i.e., a device, map to the appropriate channel based on the source. In the following screen shots, we will map an IDFA to an Airship iOS channel.
+   For identifiers that should be mapped to a channel, i.e., a device, map to the appropriate channel based on the source. In the following screen shots, we will create two mappings:
+
+    * IDFA to an Airship iOS channel
+    * Adobe `fullName` attribute to Airship "Full Name" attribute
+
+>[!NOTE]
+>
+>Use the user-friendly name that appears in the Airship dashboard when selecting the target field for you attribute mapping.
+
+#### Map identity
 
 Select source field:
 : ![Connect to Airship Attributes](/help/rtcdp/destinations/assets/airship5-select-source-identity.png)
@@ -116,6 +122,7 @@ Select source field:
 Select target field:
 : ![Connect to Airship Attributes](/help/rtcdp/destinations/assets/airship6-select-target-identity.png)
 
+#### Map attribute
 
 Select source attribute:
 : ![Select source field](/help/rtcdp/destinations/assets/airship7-select-source-attributes.png)
