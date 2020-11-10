@@ -20,7 +20,7 @@ To send profile data to [!DNL Braze], you must first connect to the destination.
 
 Note the following details that are specific to the Braze destination:
 
-* You can send any [identity](../../identity-service/namespaces.md) to the [!DNL Braze] destination, as long as you map it to the [!DNL Braze] `external_id`.
+* You can send any [identity](../../identity-service/namespaces.md) to the [!DNL Braze] destination, as long as you map it to the [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation).
 * [!DNL Adobe Experience Platform] segments are exported to [!DNL Braze] under the `AdobeExperiencePlatformSegments` attribute.
 
 ## Use Cases {#use-cases}
