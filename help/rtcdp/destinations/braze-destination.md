@@ -122,11 +122,11 @@ Let's say your XDM profile schema and your Braze instance contain the following 
 
 The correct mapping would look like this:
 
-![Braze Destination Mapping Example 1](assets/braze-destination-mapping-example.png)
+![Braze Destination Mapping Example](assets/braze-destination-mapping-example.png)
 
 ## Exported data {#exported-data}
 
-To verify if data has been exported successfully to the !DNL Braze] destination, check your [!DNL Braze] account. [!DNL Adobe Experience Platform] segments are exported to [!DNL Braze] under the `AdobeExperiencePlatformSegments` attribute.
+To verify if data has been exported successfully to the [!DNL Braze] destination, check your [!DNL Braze] account. [!DNL Adobe Experience Platform] segments are exported to [!DNL Braze] under the `AdobeExperiencePlatformSegments` attribute.
 
 ## Data Usage and Governance {#data-usage-governance}
 
