@@ -23,6 +23,7 @@ Note the following details that are specific to the Braze destination:
 
 ## Use Cases {#use-cases}
 
+As a marketer, I want to target users in a mobile engagement destination, with segments built in [!DNL Adobe Experience Platform]. Additionally, I want to deliver personalized experiences to them, based on attributes from their [!DNL Adobe Experience Platform] unified profiles, as soon as segments and profiles are updated in [!DNL Adobe Experience Platform].
 
 ## Export Type {#export-type}
 
@@ -115,7 +116,7 @@ Let's say your XDM profile schema and your Braze instance contain the following 
 ||[!DNL XDM] Profile Schema|[!DNL Braze] Instance|
 |---|---|---|
 |Attributes|<ul><li><code>person.name.firstName</code></li><li><code>person.name.lastName</code></li><li><code>mobilePhone.number</code></li></ul>|<ul><li><code>FirstName</code></li><li><code>LastName</code></li><li><code>PhoneNumber</code></li></ul>|
-|Identities|<ul><li><code>Email</code></li><li><code>Google Ad ID (GAID)</code></li><li><code>Apple ID For Advertisers (IDFA)</code></li></ul>|<ul><li><code>Customer_Email</code></li><li><code>Android_Users</code></li><li><code>iOS_Users</code></li></ul>|
+|Identities|<ul><li><code>Email</code></li><li><code>Google Ad ID (GAID)</code></li><li><code>Apple ID For Advertisers (IDFA)</code></li></ul>|<ul><li><code>external_id</code></li></ul>|
 
 The correct mapping would look like this:
 
