@@ -28,6 +28,9 @@ Note the following details that are specific to the Braze destination:
 
 **[!DNL Profile-based]** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name) and/or identities, according to your field mapping.
 
+Segments are exported to [!DNL Braze] destinations as attributes.
+
+
 ## Connect to Destination {#connect-destination}
 
 1.  In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL Braze], and select **[!UICONTROL Configure]**.
@@ -91,9 +94,10 @@ To correctly map your XDM fields to the [!DNL Braze] destination fields, follow 
    ![Braze Destination Target Mapping](assets/braze-destination-mapping-target.png)
 
 1. In the [!UICONTROL Select target field] window, you can choose between three categories of target fields:
-   * [!UICONTROL Select attributes]: use this option to map your XDM attributes to standard [!DNL Braze] attributes.
-   * [!UICONTROL Select identity namespace]: use this option to map Platform identity namespaces to [!DNL Braze] identity namespaces.
-   * [!UICONTROL Select custom attributes]: use this option to map XDM attributes to custom [!DNL Braze] attributes that you defined in your [!DNL Braze] account.
+   * [!UICONTROL Select attributes]: Use this option to map your [!DNL XDM] attributes to standard [!DNL Braze] attributes.
+   * [!UICONTROL Select identity namespace]: Use this option to map [!DNL Platform] identity namespaces to [!DNL Braze] identity namespaces.
+   * [!UICONTROL Select custom attributes]: Use this option to map [!DNL XDM] attributes to custom [!DNL Braze] attributes that you defined in your [!DNL Braze] account.
+     * You can also use this option to rename existing [!DNL XDM] attributes into [!DNL Braze]. For instance, mapping a `lastName` XDM attribute to a custom `Last_Name` attribute in [!DNL Braze], will create the `Last_Name` attribute in [!DNL Braze], if it doesn't already exist, and map the `lastName` XDM attribute to it.
   
     ![Braze Destination Target Mapping Fields](assets/braze-destination-mapping-target-fields.png)
 
@@ -105,45 +109,24 @@ To correctly map your XDM fields to the [!DNL Braze] destination fields, follow 
    
 1. To add more mappings, repeat steps 1 through 6.
 
-### Example 1: Mapping XDM Attributes to Custom Braze Attributes {#mapping-example}
+### Example {#mapping-example}
 
-Let's say your XDM profile schema contains the following source fields:
+Let's say your XDM profile schema and your Braze instance contain the following attributes and identities:
 
-* `person.name.firstName`
-* `person.name.lastName`
-* `mobilePhone.number`
+||[!DNL XDM] Profile Schema|[!DNL Braze] Instance|
+|---|---|---|
+|Attributes|<ul><li><code>person.name.firstName</code></li><li><code>person.name.lastName</code></li><li><code>mobilePhone.number</code></li></ul>|<ul><li><code>FirstName</code></li><li><code>LastName</code></li><li><code>PhoneNumber</code></li></ul>|
+|Identities|<ul><li><code>Email</code></li><li><code>Google Ad ID (GAID)</code></li><li><code>Apple ID For Advertisers (IDFA)</code></li></ul>|<ul><li><code>Customer_Email</code></li><li><code>Android_Users</code></li><li><code>iOS_Users</code></li></ul>|
 
-At the same time, you defined the following custom attributes in your [!DNL Braze] instance:
+The correct mapping would look like this:
 
-* `FirstName`
-* `LastName`
-* `PhoneNumber`
-
-To correctly map the fields:
-
-* At step 3 in the workflow above you would use the [!UICONTROL Select attributes] option to navigate your schema choose your source fields.
-* At step 5 in the workflow above you would use either:
-  * The [!UICONTROL Select attributes] option to choose the standard Braze attributes to map your source fields to.
-  * The [!UICONTROL Select custom attributes] option to choose the custom Braze attributes (that you defined in your Braze account) to map your source fields to.
-
-The final mapping would look like this:
-
-![Braze Destination Mapping Example 1](assets/braze-destination-mapping-example1.png)
-
-
-### Example 2: Mapping Platform Identity Namespaces to Braze Namespaces {#mapping-example}
-
-Let's say your [!DNL Platform] account contains an `Email` namespace, and your [!DNL Braze] account contains an `external_id` namespace.
-
-To correctly map the namespaces:
-
-* At step 3 in the workflow above you would use the [!UICONTROL Select identity namespace] option to choose your `Email` namespace.
-* At step 5 in the workflow above you would use the [!UICONTROL Select identity namespace] to choose your `external_id` namespace.
-
-The final mapping would look like this:
-
-![Braze Destination Mapping Example 2](assets/braze-destination-mapping-example2.png)
+![Braze Destination Mapping Example 1](assets/braze-destination-mapping-example.png)
 
 ## Exported data {#exported-data}
 
-To verify if data has been exported successfully to [!DNL Braze] destination, check your [!DNL Braze] account. If activation was successful, audiences are populated in your account. 
+To verify if data has been exported successfully to the !DNL Braze] destination, check your [!DNL Braze] account. [!DNL Adobe Experience Platform] segments are exported to [!DNL Braze] under the `AdobeExperiencePlatformSegments` attribute.
+
+## Data Usage and Governance {#data-usage-governance}
+
+All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, see [Data Governance in Real-time CDP](/rtcdp/privacy/data-governance-overview.md).
+
