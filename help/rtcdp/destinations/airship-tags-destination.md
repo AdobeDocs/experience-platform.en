@@ -40,6 +40,11 @@ the tag is added to the Airship channel or named user this profile is mapped to.
 
 To enable this integration, create a *tag group* in Airship named `ADOBEEXPERIENCEPLATFORMSEGMENTS`.
 
+>[!IMPORTANT]
+>
+>When creating your new tag group **Do not check** the radio button that says "Allow these tags to be set only from your server." Doing so will make the Adobe tags integration fail.
+
+I think we should add a note here about the security setting for the tag group. If they check the Allow these tags to be set only from your server option it requires the master secret for tag changes in the tag group. We have this problem with other partners and it's a pain to change for the customer if they turn that on.
 See [Manage Tag Groups](https://docs.airship.com/tutorials/manage-project/messaging/tag-groups) for instructions on creating the tag group.
 
 ### Bearer token
