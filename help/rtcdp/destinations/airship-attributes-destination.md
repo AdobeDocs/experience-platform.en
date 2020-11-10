@@ -133,8 +133,9 @@ Select target attribute:
 Verify mapping:
 : ![Channel mapping](/help/rtcdp/destinations/assets/airship9-mapping-final.png)
 
-6. On the **[!UICONTROL Segment schedule]** page, you can set the start date for sending data to the destination.
-7. On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
+6. On the **[!UICONTROL Segment schedule]** page, scheduling is currently disabled. Click **[!UICONTROL Next]** to continue to the review step. ![Scheduling currently disabled](/help/rtcdp/destinations/assets/airship10-scheduling-step-is-disabled-for-now.png)
+
+1. On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
 >[!IMPORTANT]
 >
@@ -144,6 +145,4 @@ Verify mapping:
 
 If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
-![confirm-selection](/help/rtcdp/destinations/assets/gcm-review.png)
-
-
+![review](/help/rtcdp/destinations/assets/airship11-review-step.png)
