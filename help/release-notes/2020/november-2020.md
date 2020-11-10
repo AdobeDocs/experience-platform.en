@@ -71,7 +71,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 | API and UI support for eCommerce systems | New source connector for [!DNL Shopify]. |
 | API support for mapping in streaming sources | You can now use APIs to perform mapping functions with streaming sources. |
 | API support for custom delimiters for cloud storage sources | You can now collect non-CSV delimited files using cloud storage sources. You can use any single column delimiter such as a tab, comma, pipe, semicolon, or hash to collect flat files in any format. The value defaults to a comma if unprovided. |
-| UX improvements | File-based ingestion is now accessible through the sources catalog.
+| UX improvements | File-based ingestion is now accessible through the sources catalog. |
 | Sandbox support for Adobe Audience Manager connector | The Audience Manager connector is now sandbox aware. Users can enable the connector to route Audience Manager datasets to the sandbox of their choosing (including non-production sandboxes). The configuration is limited to one sandbox per IMS Org. |
 
 To learn more about sources, see the [sources overview](../../sources/home.md).
