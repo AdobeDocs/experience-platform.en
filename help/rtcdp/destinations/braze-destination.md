@@ -1,9 +1,9 @@
 ---
-keywords: mobile; braze;
+keywords: mobile; braze; messaging;
 title: Braze Destination
 seo-title: Braze Destination
-description: Braze
-seo-description: Braze
+description: Braze is a comprehensive customer engagement platform that powers relevant and memorable experiences between customers and the brands they love.
+seo-description: Braze is a comprehensive customer engagement platform that powers relevant and memorable experiences between customers and the brands they love.
 ---
 
 # [!DNL Braze] Destination 
@@ -12,6 +12,7 @@ seo-description: Braze
 
 The [!DNL Braze] destination helps you send profile data to [!DNL Braze].
 
+[!DNL Braze] is a comprehensive customer engagement platform that powers relevant and memorable experiences between customers and the brands they love.
 
 To send profile data to [!DNL Braze], you must first connect to the destination.
 
@@ -19,7 +20,8 @@ To send profile data to [!DNL Braze], you must first connect to the destination.
 
 Note the following details that are specific to the Braze destination:
 
-* You can send the following [identities](../../identity-service/namespaces.md) to the [!DNL Braze] destination: .
+* You can send any [identity](../../identity-service/namespaces.md) to the [!DNL Braze] destination, as long as you map it to the [!DNL Braze] `external_id`.
+* [!DNL Adobe Experience Platform] segments are exported to [!DNL Braze] under the `AdobeExperiencePlatformSegments` attribute.
 
 ## Use Cases {#use-cases}
 
