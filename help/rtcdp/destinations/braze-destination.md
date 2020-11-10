@@ -18,14 +18,14 @@ To send profile data to [!DNL Braze], you must first connect to the destination.
 
 ## Destination Specs {#destination-specs}
 
-Note the following details that are specific to the Braze destination:
+Note the following details that are specific to the [!DNL Braze] destination:
 
 * You can send any [identity](../../identity-service/namespaces.md) to the [!DNL Braze] destination, as long as you map it to the [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation).
 * [!DNL Adobe Experience Platform] segments are exported to [!DNL Braze] under the `AdobeExperiencePlatformSegments` attribute.
 
 ## Use Cases {#use-cases}
 
-As a marketer, I want to target users in a mobile engagement destination, with segments built in [!DNL Adobe Experience Platform]. Additionally, I want to deliver personalized experiences to them, based on attributes from their [!DNL Adobe Experience Platform] unified profiles, as soon as segments and profiles are updated in [!DNL Adobe Experience Platform].
+As a marketer, I want to target users in a mobile engagement destination, with segments built in [!DNL Adobe Experience Platform]. Additionally, I want to deliver personalized experiences to them, based on attributes from their [!DNL Adobe Experience Platform] profiles, as soon as segments and profiles are updated in [!DNL Adobe Experience Platform].
 
 ## Export Type {#export-type}
 
@@ -45,10 +45,10 @@ As a marketer, I want to target users in a mobile engagement destination, with s
     >
     >![Activate Braze Destination](assets/braze-destination-activate.png)
 
-1. In the [!UICONTROL Account] step, you need to provide your [!UICONTROL Braze] account token. This is your [!DNL Braze] [!DNL API] key. You can find detailed instructions on how to obtain your [!DNL API] key here: [REST API Key Overview](https://www.braze.com/docs/api/api_key/). Enter the token and click [!UICONTROL Connect to destination]. 
+1. In the [!UICONTROL Account] step, you need to provide your [!DNL Braze] account token. This is your [!DNL Braze] [!DNL API] key. You can find detailed instructions on how to obtain your [!DNL API] key here: [REST API Key Overview](https://www.braze.com/docs/api/api_key/). Enter the token and click **[!UICONTROL Connect to destination]**. 
    ![Braze Destination Account Step](assets/braze-destination-account.png)
 
-1. Click [!UICONTROL Next].
+1. Click **[!UICONTROL Next]**.
 
 1. In the [!UICONTROL Authentication] step, you need to enter the [!DNL Braze] connection details:
    * **[!UICONTROL Name]**: enter a name by which you will recognize this destination in the future.
@@ -58,7 +58,7 @@ As a marketer, I want to target users in a mobile engagement destination, with s
   
    ![Braze Authentication Step](assets/braze-destination-authentication.png)
 
-1. Click **[!UICONTROL Create destination]**. Your destination is now created. You can click [!UICONTROL Save & Exit] if you want to activate segments later, or you can select [!UICONTROL Next] to continue the workflow and select segments to activate. In either case, see the next section, [Activate Segments](#activate-segments), for the rest of the workflow.
+1. Click **[!UICONTROL Create destination]**. Your destination is now created. You can click **[!UICONTROL Save & Exit]** if you want to activate segments later, or you can select **[!UICONTROL Next]** to continue the workflow and select segments to activate. In either case, see the next section, [Activate Segments](#activate-segments), for the rest of the workflow.
 
 ## Activate Segments {#activate-segments}
 
@@ -72,7 +72,7 @@ Mapping consists of creating a link between your XDM schema fields in your Adobe
 
 To correctly map your XDM fields to the [!DNL Braze] destination fields, follow these steps:
 
-1. In the [!UICONTROL Mapping] step, click [!UICONTROL Add new mapping].
+1. In the [!UICONTROL Mapping] step, click **[!UICONTROL Add new mapping]**.
    
    ![Braze Destination Add Mapping](assets/braze-destination-mapping.png)
 
@@ -85,11 +85,11 @@ To correctly map your XDM fields to the [!DNL Braze] destination fields, follow 
 
         ![Braze Destination Mapping Source Attribute](assets/braze-destination-mapping-attributes.png)
 
-   * [!UICONTROL Select identity namespace]: use this option to map an entire Platform identity namespace to a [!DNL Braze] namespace.
+   * [!UICONTROL Select identity namespace]: use this option to map a [!DNL Platform] identity namespace to a [!DNL Braze] namespace.
 
         ![Braze Destination Mapping Source Namespace](assets/braze-destination-mapping-namespaces.png)
 
-    Choose your source field, then click [!UICONTROL Select].
+    Choose your source field, then click **[!UICONTROL Select]**.
 
 1. In the [!UICONTROL Target Field] section, click the mapping icon to the right of the field.
    
@@ -103,7 +103,7 @@ To correctly map your XDM fields to the [!DNL Braze] destination fields, follow 
   
     ![Braze Destination Target Mapping Fields](assets/braze-destination-mapping-target-fields.png)
 
-    Choose your target field, then click [!UICONTROL Select].
+    Choose your target field, then click **[!UICONTROL Select]**.
 
 1. That's it! You should now see your field mapping in the list.
    
