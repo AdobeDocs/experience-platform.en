@@ -96,10 +96,10 @@ To correctly map your XDM fields to the [!DNL Braze] destination fields, follow 
    ![Braze Destination Target Mapping](assets/braze-destination-mapping-target.png)
 
 1. In the [!UICONTROL Select target field] window, you can choose between three categories of target fields:
-   * [!UICONTROL Select attributes]: Use this option to map your [!DNL XDM] attributes to standard [!DNL Braze] attributes.
+   * [!UICONTROL Select attributes]: Use this option to map your XDM attributes to standard [!DNL Braze] attributes.
    * [!UICONTROL Select identity namespace]: Use this option to map [!DNL Platform] identity namespaces to [!DNL Braze] identity namespaces.
-   * [!UICONTROL Select custom attributes]: Use this option to map [!DNL XDM] attributes to custom [!DNL Braze] attributes that you defined in your [!DNL Braze] account.
-     * You can also use this option to rename existing [!DNL XDM] attributes into [!DNL Braze]. For instance, mapping a `lastName` XDM attribute to a custom `Last_Name` attribute in [!DNL Braze], will create the `Last_Name` attribute in [!DNL Braze], if it doesn't already exist, and map the `lastName` XDM attribute to it.
+   * [!UICONTROL Select custom attributes]: Use this option to map XDM attributes to custom [!DNL Braze] attributes that you defined in your [!DNL Braze] account.
+     * You can also use this option to rename existing XDM attributes into [!DNL Braze]. For instance, mapping a `lastName` XDM attribute to a custom `Last_Name` attribute in [!DNL Braze], will create the `Last_Name` attribute in [!DNL Braze], if it doesn't already exist, and map the `lastName` XDM attribute to it.
   
     ![Braze Destination Target Mapping Fields](assets/braze-destination-mapping-target-fields.png)
 
@@ -113,9 +113,9 @@ To correctly map your XDM fields to the [!DNL Braze] destination fields, follow 
 
 ### Example {#mapping-example}
 
-Let's say your [!DNL XDM] profile schema and your [!DNL Braze] instance contain the following attributes and identities:
+Let's say your XDM profile schema and your [!DNL Braze] instance contain the following attributes and identities:
 
-||[!DNL XDM] Profile Schema|[!DNL Braze] Instance|
+||XDM Profile Schema|[!DNL Braze] Instance|
 |---|---|---|
 |Attributes|<ul><li><code>person.name.firstName</code></li><li><code>person.name.lastName</code></li><li><code>mobilePhone.number</code></li></ul>|<ul><li><code>FirstName</code></li><li><code>LastName</code></li><li><code>PhoneNumber</code></li></ul>|
 |Identities|<ul><li><code>Email</code></li><li><code>Google Ad ID (GAID)</code></li><li><code>Apple ID For Advertisers (IDFA)</code></li></ul>|<ul><li><code>external_id</code></li></ul>|
