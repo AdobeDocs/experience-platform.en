@@ -35,17 +35,17 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-*   `Authorization: Bearer {ACCESS_TOKEN}`
-*   `x-api-key: {API_KEY}`
-*   `x-gw-ims-org-id: {IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-*   `x-sandbox-name: {SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
 
-*   `Content-Type: application/json`
+* `Content-Type: application/json`
 
 ## Explore your data tables
 
@@ -111,7 +111,7 @@ A successful response returns an array of tables from your eCommerce connection.
 
 ## Inspect the structure of a table
 
-To inspect the structure of a table from your eCommerce connection, perform a GET request while specifying the path of a table as a query parameter.
+To inspect the structure of a table from your eCommerce connection, perform a GET request while specifying the path of a table within an `object` query parameter.
 
 **API format**
 
@@ -235,4 +235,4 @@ A successful response returns the structure of the specified table. Details rega
 
 ## Next steps
 
-By following this tutorial, you have explored your eCommerce connection, found the path of the table you wish to ingest into [!DNL Platform], and obtained information regarding its structure. You can use this information in the next tutorial to [collect eCommerece data and bring it into Platform](../collect/ecommerce.md).
+By following this tutorial, you have explored your eCommerce connection, found the path of the table you wish to ingest into [!DNL Platform], and obtained information regarding its structure. You can use this information in the next tutorial to [collect eCommerce data and bring it into Platform](../collect/ecommerce.md).

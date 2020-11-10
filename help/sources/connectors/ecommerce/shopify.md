@@ -10,11 +10,11 @@ description: The documentation below provides information on how to connect Shop
 
 >[!NOTE]
 >
->The [!DNL Shopify] connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+>The [!DNL Shopify] connector is in beta. See the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labeled connectors.
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-[!DNL Experience Platform ]provides support for ingesting data from a third-party eCommerce provider. Support for eCommerce providers include [!DNL Shopify].
+[!DNL Experience Platform] provides support for ingesting data from a third-party **[!UICONTROL eCommerce]** provider. Support for **[!UICONTROL eCommerce]** providers include [!DNL Shopify].
 
 The documentation below provides information on how to connect [!DNL Shopify] to [!DNL Platform] using APIs or the user interface:
 
