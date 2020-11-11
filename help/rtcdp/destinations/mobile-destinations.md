@@ -10,7 +10,7 @@ seo-description: Insert use case for mobile destinations
 
 Insert a description for mobile destinations
 
-Adobe Real-time Customer Data Platform currently supports the following mobile destinations:
+[!DNL Adobe Experience Platform] currently supports the following mobile destinations:
 
 * Airship - insert link to Airship documentation page
-* Braze - insert link to Braze documentation page
+* [Braze](braze-destination.md)
