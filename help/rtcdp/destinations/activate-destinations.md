@@ -103,7 +103,7 @@ Select **[!UICONTROL Apply changes]** to confirm your selection.
 > 
 >If you don't select the **[!UICONTROL Date and Time]** component, the file names will be static and the new exported file will overwrite the previous file in your storage location with each export. When running a recurring import job from a storage location into an email marketing platform, this is the recommended option.
 
-![edit file name options](./assets/activate-destinations/edit-file-name.png)
+![edit file name options](./assets/activate-workflow-configure-step-2.png)
 
 Once you have finishing configuring all your segments, select **[!UICONTROL Next]** to continue.
 
@@ -119,7 +119,15 @@ On the **[!UICONTROL Segment schedule]** page, you can set the start date for se
 >
 >For social destinations, you must select the origin of your audience in this step. You can proceed to the next step only after selecting one of the options in the image below.
 
-![choose data origin](assets/choose-data-origin.png) 
+![choose data origin](./assets/choose-data-origin.png) 
+
+### **[!UICONTROL Scheduling]** step {#scheduling}
+
+Applies to: email marketing destinations and cloud storage destinations
+
+![segment schedule step](./assets/scheduling-icon.png)
+
+On the **[!UICONTROL Scheduling]** page, you can see the start date for sending data to the destination as well as the frequency of sending data to the destination. These values cannot be edited.
 
 ### **[!UICONTROL Select attributes]** step {#select-attributes}
 
