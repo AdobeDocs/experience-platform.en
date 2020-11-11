@@ -190,13 +190,17 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 [!DNL Experience Platform] provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
+**New sources**
+| Feature | Description |
+| ------- | ----------- |
+| [!DNL Shopify] | You can now connect [!DNL Shopify] to [!DNL Experience Platform] using the [!DNL Flow Service] API or the UI. |
+
 **Key features**
 
 | Feature | Description |
 | ------- | ----------- |
 | Update connection information | You can now update the names, descriptions, and credentials of existing batch connections using the [!DNL Flow Service] API and the UI. For more information, see the tutorial on [updating connections using the Flow Service API](../../sources/tutorials/api/update.md) and [editing account details using the UI](../../sources/tutorials/ui/monitor.md). |
 | Delete connections | Batch connections that contain errors or have become unnecessary can now be deleted using the [!DNL Flow Service] API and the UI. For more information, see the tutorial on [deleting connections using the Flow Service API](../../sources/tutorials/api/delete.md) and [deleting accounts using the UI](../../sources/tutorials/ui/delete-accounts.md). |
-| API and UI support for eCommerce systems | New source connector for [!DNL Shopify]. |
 | API support for mapping in streaming sources | You can now use APIs to perform mapping functions with streaming sources. |
 | API support for custom delimiters for cloud storage sources | You can now collect non-CSV delimited files using cloud storage sources. You can use any single column delimiter such as a tab, comma, pipe, semicolon, or hash to collect flat files in any format. The value defaults to a comma if unprovided. |
 | UX improvements | File-based ingestion is now accessible through the sources catalog. |
