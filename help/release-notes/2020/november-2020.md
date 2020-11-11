@@ -13,7 +13,10 @@ author: crhoades, ens28527
 New features in Adobe Experience Platform:
 
 - [[!DNL Access control]](#access-control)
+- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Intelligent Services]](#intelligent-services)
 - [[!DNL Offer Decisioning]](#offer-decisioning)
+- [[!DNL Real-time Customer Profile]](#profile)
 - [[!DNL Sandboxes]](#sandboxes)
 - [[!DNL Sources]](#sources)
 
@@ -30,6 +33,64 @@ New features in Adobe Experience Platform:
 
 For more information, please see the [access control overview](../../access-control/home.md).
 
+## Data Science Workspace {#dsw}
+
+Data Science Workspace uses machine learning and artificial intelligence to create insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe solutions. One of the ways Data Science Workspace accomplishes this is through the use of [!DNL JupyterLab]. [!DNL JupyterLab] is a web-based user interface for [[!DNL Project Jupyter]](https://jupyter.org/) and is tightly integrated into Adobe Experience Platform. It provides an interactive development environment for data scientists to work with [!DNL Jupyter] notebooks, code, and data.
+
+**Key features**
+
+| Feature | Description |
+| ------- | ----------- |
+| [!DNL JupyterLab] Recipe Builder template | Notebook to recipe requirements usage and versions updated. [!DNL Python] ML Runtime base image has been updated to use [!DNL Python] 3.6.7 and a [!DNL Conda] environment exclusively. |
+
+For more information, please read the document on [creating a recipe using Jupyter notebooks](../../data-science-workspace/jupyterlab/create-a-recipe.md).
+
+## Intelligent Services {#intelligent-services}
+
+Intelligent Services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company's needs using business-level configurations without the need for data science expertise.
+
+| Feature | Description |
+| ------- | ----------- |
+| Consumer Experience Events (CEE) dataset | Creating a CEE dataset now supports adding identity fields to the dataset with the Schema Editor. Attribution AI and Customer AI use the primary identity for combining events. |
+
+For more information, please read the section on [adding identity fields to a dataset](../../intelligent-services/data-preparation.md#add-identity-fields-to-the-dataset) in the Intelligent Services data preparation guide.
+
+### Attribution AI
+
+Attribution AI, as part of Intelligent Services is a multi-channel, algorithmic attribution service that calculates the influence and incremental impact of customer interactions against specified outcomes.
+
+**Key features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Data source link | The link to the original dataset source can be viewed and navigated to from the right rail of a selected service instance. |
+| Edit instance name | You can now modify the name of an existing Attribution AI instance. |
+| Clone instance | Copies the currently selected service instance setup and allows for modifications. |
+| Modify instance configuration parameters | You can now modify the configuration of an existing Attribution AI instance if it hasn't started scoring yet. |
+| One off scoring | You can now trigger ad-hoc model scoring in your Attribution AI instances. |
+| Pass through columns | You can now configure additional columns that will be added to the raw output score files to add additional dimensions to BI tool views. |
+| Instance activation and de-activation | You can now activate and de-activate the scheduled model training and scoring of your Attribution AI instances. |
+| Entitlement tracking | You can find the total amount of Attribution insights consumed by your account in the create instance container. |
+| Touchpoint breakdown by position | A new insights graph that provides an analysis of touchpoints by conversion path positions. |
+| Top conversion paths | A new insights graph located in the Path Analysis tab. The graph contains a list of the top five conversion paths showing the sequence of marketing channel touchpoints that led to the most conversions. |
+| Touchpoint effectiveness | Provides in-depth insights of the three most important variables that your model measures touchpoint effectiveness by. The variables are ratio of positive and negative paths touched, touchpoint efficiency, and touchpoint volume. |
+
+### Customer AI
+
+Customer AI, as part of Intelligent Services provides marketers with the power to generate customer predictions at the individual level with explanations. With the help of influential factors, Customer AI can tell you what a customer is likely to do and why. Additionally, marketers can benefit from Customer AI predictions and insights to personalize customer experiences by serving the most appropriate offers and messaging.
+
+**Key features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Data source link | The link to the original dataset source can be viewed and navigated to from the right rail of a selected service instance. |
+| Edit instance name | You can modify the name of an existing Customer AI instance. |
+| Modify instance configuration parameters | You can now modify the configuration of an existing Customer AI instance if it hasn't started a scoring yet. |
+| Clone instance | Copies the currently selected service instance setup and allows for modifications. |
+| Entitlement tracking | You can find the total amount of profiles scored by Customer AI for your account in the create instance container. |
+| Prediction goal | The flexibility in creating a prediction goal has been increased with new options to predict whether something "will occur" or "will not occur". Additionally, the options to predict whether "all of" the events happen or "any of" the events happen when multiple events are used has been added. |
+| Influential factor drilldown | Propensity top influential factor buckets now contain drill downs. Drill downs are a deeper level summary of values for each of the top influential factors within a propensity bucket. |
+
 ## [!DNL Offer Decisioning] {#offer-decisioning}
 
 [!DNL Offer Decisioning] is an Application Service integrated with [!DNL Experience Platform]. It allows you to leverage [!DNL Platform] to deliver the best offer and experience to your customers across all touch points at the right time.
@@ -40,6 +101,17 @@ For more information, please see the [access control overview](../../access-cont
 | Offer Decision Engine | The Offer Decision Engine leverages [!DNL Platform] data and [!DNL Real-time Customer Profiles], along with the Offer Library, in order to select the right time, customers and channels to which offers will be delivered. |
 
 For more information, please see the [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=en) documentation.
+
+## Real-time Customer Profile {#profile}
+
+Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+
+| Feature | Description |
+| ------- | ----------- |
+| Updated merge policies workflow | Platform has upgraded the merge policy configuration to a new stepwise workflow. This workflow enables users to bring together data fragments from multiple Profile datasets and set priority for how data is merged across those datasets in order to create a comprehensive view of each individual. Users can merge selected XDM Individual Profile datasets by selecting the appropriate merge method (Timestamp ordered or Dataset precedence) and appending ExperienceEvent datasets to the Profile datasets.|
+| Union schema view | In the Experience Platform UI, users can more easily find information regarding all schemas and datasets contributing to the union schema, as well as surface key attributes such as identity and relationship fields. These updates improve the ability to troubleshoot and validate that profiles are correctly configured, identities are correctly stitched, and data has been successfully ingested. |
+
+For more information on Real-time Customer Profile, including tutorials and best practices for working with [!DNL Profile] data, please read the [Real-time Customer Profile overview](../../profile/home.md).
 
 ## [!DNL Sandboxes] {#sandboxes}
 
