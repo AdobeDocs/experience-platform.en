@@ -35,7 +35,7 @@ Before you can send your audience segments to Airship, you must:
 
 ### Tag groups
 
-The concept of Adobe *Segments* is similar to [Tags](https://docs.airship.com/guides/audience/tags/) in Airship, with slight differences in implementation. This integration maps the status of a user's [membership in an Adobe segment](https://experienceleague.adobe.com/docs/experience-platform/xdm/mixins/profile/segmentation.html?lang=en#mixins) to the presence or non-presence of an Airship tag. For example, in an Adobe segment where the `xdm:status` changes `realized`,
+The concept of Adobe *Segments* is similar to [Tags](https://docs.airship.com/guides/audience/tags/) in Airship, with slight differences in implementation. This integration maps the status of a user's [membership in an Adobe segment](https://experienceleague.adobe.com/docs/experience-platform/xdm/mixins/profile/segmentation.html?lang=en#mixins) to the presence or non-presence of an Airship tag. For example, in an Adobe segment where the `xdm:status` changes to `realized`,
 the tag is added to the Airship channel or named user this profile is mapped to. If the `xdm:status` changes to `exited`, the tag is removed.
 
 To enable this integration, create a *tag group* in Airship named `ADOBEEXPERIENCEPLATFORMSEGMENTS`.
@@ -44,7 +44,6 @@ To enable this integration, create a *tag group* in Airship named `ADOBEEXPERIEN
 >
 >When creating your new tag group **Do not check** the radio button that says "Allow these tags to be set only from your server." Doing so will make the Adobe tags integration fail.
 
-I think we should add a note here about the security setting for the tag group. If they check the Allow these tags to be set only from your server option it requires the master secret for tag changes in the tag group. We have this problem with other partners and it's a pain to change for the customer if they turn that on.
 See [Manage Tag Groups](https://docs.airship.com/tutorials/manage-project/messaging/tag-groups) for instructions on creating the tag group.
 
 ### Bearer token

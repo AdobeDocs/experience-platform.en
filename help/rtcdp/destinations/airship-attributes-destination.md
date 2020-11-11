@@ -39,8 +39,6 @@ Adobe profile attributes are similar to Airship attributes and can be easily map
 
 Airship projects have several predefined and default attributes. If you have a custom attribute, you must define it in Airship first. See [Set Up and Manage Attributes](https://docs.airship.com/tutorials/audience/attributes/) for details.
 
-See [Manage Tag Groups](https://docs.airship.com/tutorials/manage-project/messaging/tag-groups) for instructions on creating the tag group.
-
 ### Bearer token
 
 1. Go to *Settings » APIs & Integrations* in the [Airship dashboard](https://go.airship.com) and select *Tokens* in the left-hand menu.
@@ -52,7 +50,6 @@ See [Manage Tag Groups](https://docs.airship.com/tutorials/manage-project/messag
 ## Use Cases
 
 To help you better understand how and when you should use the *Airship Attributes* destination, here are sample use cases that Adobe Real-time Customer Data Platform customers can solve by using this destination.
-
 
 ### Use Case #1
 
