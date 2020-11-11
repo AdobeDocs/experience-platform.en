@@ -49,6 +49,8 @@ For more information, please read the document on [creating a recipe using Jupyt
 
 Intelligent Services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company's needs using business-level configurations without the need for data science expertise.
 
+**Key features**
+
 | Feature | Description |
 | ------- | ----------- |
 | Consumer Experience Events (CEE) dataset | Creating a CEE dataset now supports adding identity fields to the dataset with the Schema Editor. Attribution AI and Customer AI use the primary identity for combining events. |
@@ -95,6 +97,8 @@ Customer AI, as part of Intelligent Services provides marketers with the power t
 
 [!DNL Offer Decisioning] is an Application Service integrated with [!DNL Experience Platform]. It allows you to leverage [!DNL Platform] to deliver the best offer and experience to your customers across all touch points at the right time.
 
+**Key features**
+
 | Feature | Description |
 | ------- | ----------- |
 | Centralized offer library | The interface where you create and manage the different elements that compose your offers, and define their rules and constraints. |
@@ -105,6 +109,8 @@ For more information, please see the [[!DNL Offer Decisioning]](https://experien
 ## Real-time Customer Profile {#profile}
 
 Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+
+**Key features**
 
 | Feature | Description |
 | ------- | ----------- |
@@ -134,7 +140,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 [!DNL Experience Platform] provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
-**New features**
+**Key features**
 
 | Feature | Description |
 | ------- | ----------- |
