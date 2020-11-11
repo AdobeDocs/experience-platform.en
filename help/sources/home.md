@@ -85,6 +85,12 @@ CRM systems provide data that can help build customer relationships, which in tu
 - [[!DNL Phoenix] connector](connectors/databases/phoenix.md)
 - [[!DNL PostgreSQL] connector](connectors/databases/postgres.md)
 
+### eCommerce
+
+[!DNL Experience Platform] provides support for ingesting data from a third-party eCommerce system. See the following related documents for more information on specific source connectors:
+
+- [[!DNL Shopify]](connectors/ecommerce/shopify.md)
+
 ### Marketing Automation
 
 [!DNL Experience Platform] provides support for ingesting data from a third-party marketing automation system. See the following related documents for more information on specific source connectors:
