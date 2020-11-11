@@ -12,13 +12,22 @@ author: crhoades, ens28527
 
 New features in Adobe Experience Platform:
 
+- [Adobe Experience Platform Data Lake migration](#migration)
 - [[!DNL Access control]](#access-control)
+- [[!DNL Data Prep]](#data-prep)
 - [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Destinations] Service](#destinations)
 - [[!DNL Intelligent Services]](#intelligent-services)
 - [[!DNL Offer Decisioning]](#offer-decisioning)
 - [[!DNL Real-time Customer Profile]](#profile)
 - [[!DNL Sandboxes]](#sandboxes)
 - [[!DNL Sources]](#sources)
+
+## Adobe Experience Platform Data Lake migration {#migration}
+
+While Adobe is migrating the Data Lake from Gen1 to Gen2, users will be able to read from the Data Lake, but all capabilities that write into the Data Lake will be impacted. Adobe will be contacting System Administrators to discuss the impact of the migration in detail and to confirm the migration dates and times for specific IMS Organizations. 
+
+For more information, please read the [Data Lake migration guide](../../landing/adls2-gen2-migration.md).
 
 ## [!DNL Access control] {#access-control}
 
@@ -33,6 +42,19 @@ New features in Adobe Experience Platform:
 
 For more information, please see the [access control overview](../../access-control/home.md).
 
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
+
+**New features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Iterative operations | [!DNL Data Prep] Mapper now supports performing iterative operations on a hierarchy. |
+| Mapper function | [!DNL Data Prep] Mapper now has the ability to **not** copy an attribute from the source to the target XDM. |
+
+For more information, please see the [[!DNL Data Prep] overview](../../data-prep/home.md).
+
 ## Data Science Workspace {#dsw}
 
 Data Science Workspace uses machine learning and artificial intelligence to create insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe solutions. One of the ways Data Science Workspace accomplishes this is through the use of [!DNL JupyterLab]. [!DNL JupyterLab] is a web-based user interface for [[!DNL Project Jupyter]](https://jupyter.org/) and is tightly integrated into Adobe Experience Platform. It provides an interactive development environment for data scientists to work with [!DNL Jupyter] notebooks, code, and data.
@@ -44,6 +66,30 @@ Data Science Workspace uses machine learning and artificial intelligence to crea
 | [!DNL JupyterLab] Recipe Builder template | Notebook to recipe requirements usage and versions updated. [!DNL Python] ML Runtime base image has been updated to use [!DNL Python] 3.6.7 and a [!DNL Conda] environment exclusively. |
 
 For more information, please read the document on [creating a recipe using Jupyter notebooks](../../data-science-workspace/jupyterlab/create-a-recipe.md).
+
+## [!DNL Destinations] Service {#destinations}
+
+In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
+
+**New destinations**
+
+| Destination | Description |
+| ----------- | ----------- |
+| Microsoft Bing | The Microsoft Bing destination helps you execute retargeting and audience targeted digital campaigns across Microsoft Display Advertising. |
+| The Trade Desk | The Trade Desk is a self-service platform for ad buyers to execute retargeting and audience targeted digital campaigns across display, video, and mobile inventory sources. |
+
+<!-- | Braze | Braze is a comprehensive customer engagement platform that power relevant and memorable experiences between customers and the brands they love. |  -->
+
+**New features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Mandatory fields | Users can mark fields as mandatory, ensuring that only fields that contain the mandatory field are exported. |
+
+<!-- | File scheduling | For both email based and cloud storage destinations, users can create a one-time export or create daily snapshots. |
+| File encryption | For file based destinations, users can now add encryption to their exported files. | -->
+
+For more information, please see the [Destinations overview](../../rtcdp/destinations/destinations-overview.md).
 
 ## Intelligent Services {#intelligent-services}
 
