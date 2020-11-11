@@ -325,7 +325,7 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | The `$id` of the target XDM schema. |
 | `params.dataSetId` | The ID of the target dataset. |
-| `connectionSpec.id` | The connection spec ID of used to connect to the Data Lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | The connection spec ID used to connect to the Data Lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Response**
 
@@ -401,7 +401,7 @@ A successful response returns details of the newly created mapping including its
 
 ## Look up dataflow specifications {#specs}
 
-A dataflow is responsible for collecting data from sources and bringing them into [!DNL Platform]. In order to create a dataflow, you must first obtain the dataflow specifications by performing a GET request to the [!DNL Flow Service] API. Dataflow specifications are responsible for collecting data from an an **[!UICONTROL eCommerce]** source.
+A dataflow is responsible for collecting data from sources and bringing them into [!DNL Platform]. In order to create a dataflow, you must first obtain the dataflow specifications by performing a GET request to the [!DNL Flow Service] API. Dataflow specifications are responsible for collecting data from an **[!UICONTROL eCommerce]** source.
 
 **API format**
 

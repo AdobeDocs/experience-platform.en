@@ -23,7 +23,7 @@ The following sections provide additional information that you will need to know
 
 ### Obtain a connection ID
 
-In order to explore your **[!UICONTROL eCommerce]**connection using [!DNL Platform] APIs, you must possess a valid connection ID. If you do not already have a connection for the **[!UICONTROL eCommerce]**connection you wish to work with, you can create one through the following tutorial:
+In order to explore your **[!UICONTROL eCommerce]** connection using [!DNL Platform] APIs, you must possess a valid connection ID. If you do not already have a connection for the **[!UICONTROL eCommerce]** connection you wish to work with, you can create one through the following tutorial:
 
 * [Shopify](../create/ecommerce/shopify.md)
 
