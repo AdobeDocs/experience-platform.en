@@ -111,9 +111,9 @@ On the **[!UICONTROL Segment schedule]** page, you can set the start date for se
 
 ### **[!UICONTROL Scheduling]** step {#scheduling}
 
-Applies to: email marketing destinations and cloud storage destinations	
+Applies to: email marketing destinations and cloud storage destinations
 
-![segment schedule step](./assets/scheduling-icon.png)	
+![segment schedule step](./assets/scheduling-icon.png)
 
 On the **[!UICONTROL Scheduling]** page, you can see the start date for sending data to the destination as well as the frequency of sending data to the destination. These values cannot be edited.
 
