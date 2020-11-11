@@ -77,6 +77,8 @@ Attribution AI, as part of Intelligent Services is a multi-channel, algorithmic 
 | Top conversion paths | A new insights graph located in the Path Analysis tab. The graph contains a list of the top five conversion paths showing the sequence of marketing channel touchpoints that led to the most conversions. |
 | Touchpoint effectiveness | Provides in-depth insights of the three most important variables that your model measures touchpoint effectiveness by. The variables are ratio of positive and negative paths touched, touchpoint efficiency, and touchpoint volume. |
 
+For more information, please read the [Attribution AI overview](../../intelligent-services/attribution-ai/overview.md).
+
 ### Customer AI
 
 Customer AI, as part of Intelligent Services provides marketers with the power to generate customer predictions at the individual level with explanations. With the help of influential factors, Customer AI can tell you what a customer is likely to do and why. Additionally, marketers can benefit from Customer AI predictions and insights to personalize customer experiences by serving the most appropriate offers and messaging.
@@ -92,6 +94,8 @@ Customer AI, as part of Intelligent Services provides marketers with the power t
 | Entitlement tracking | You can find the total amount of profiles scored by Customer AI for your account in the create instance container. |
 | Prediction goal | The flexibility in creating a prediction goal has been increased with new options to predict whether something "will occur" or "will not occur". Additionally, the options to predict whether "all of" the events happen or "any of" the events happen when multiple events are used has been added. |
 | Influential factor drilldown | Propensity top influential factor buckets now contain drill downs. Drill downs are a deeper level summary of values for each of the top influential factors within a propensity bucket. |
+
+For more information, please read the [Customer AI overview](../../intelligent-services/customer-ai/overview.md).
 
 ## [!DNL Offer Decisioning] {#offer-decisioning}
 
