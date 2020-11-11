@@ -16,7 +16,7 @@ If you would prefer to work with merge policies using the [!DNL Real-time Custom
 
 ## Getting started
 
-This guide requires a working understanding of several important [!DNL Experience Platform] features. Before following this guide, or using Platform APIs, please review the documentation for the following services:
+This guide requires a working understanding of several important [!DNL Experience Platform] features. Before following this guide, or using Profile APIs, please review the documentation for the following services:
 
 * [[!DNL Real-time Customer Profile]](../home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Adobe Experience Platform Identity Service](../../identity-service/home.md): Enables Real-time Customer Profile by bridging identities from disparate data sources being ingested into [!DNL Platform].
@@ -29,16 +29,16 @@ Each profile fragment contains information for just one identity out of the tota
 There are two possible merge methods available for merge policies. Each of these methods are summarized below with additional details provided in the sections that follow:
 
 * **[!UICONTROL Timestamp ordered]:** In the event of a conflict, priority is given to the profile fragment which was updated most recently. 
-    * **Custom timestamps:** [!UICONTROL Timestamp ordered] also supports custom timestamps which take priority over system timestamps when merging data within the same dataset (multiple identities) or across datasets. To learn more, see the [timestamp ordered](#timestamp-ordered) section that follows.
+    * **Custom timestamps:** [!UICONTROL Timestamp ordered] also supports custom timestamps which take priority over system timestamps when merging data within the same dataset (multiple identities) or across datasets. To learn more, see the section on [using custom timestamps](#custom-timestamps).
 * **[!UICONTROL Dataset precedence]:** In the event of a conflict, give priority to profile fragments based on the dataset from which they came. When selecting this option, you must choose the related datasets and their order of priority.
 
 ### Timestamp ordered {#timestamp-ordered}
 
 As profile records are ingested into Experience Platform, a system timestamp is obtained at the time of ingestion and added to the record. When **[!UICONTROL Timestamp ordered]** is selected as the merge method for a merge policy, profiles are merged based on the system timestamp. In other words, merging is done based on the timestamp for when the record was ingested into Platform.
 
-Occasionally there may be use cases where it is necessary to supply a custom timestamp and have the merge policy honor the custom timestamp rather than the system timestamp. Examples of this include backfilling data or ensuring the correct order of events if records are ingested out of order.
-
 #### Using custom timestamps {#custom-timestamps}
+
+Occasionally there may be use cases where it is necessary to supply a custom timestamp and have the merge policy honor the custom timestamp rather than the system timestamp. Examples of this include backfilling data or ensuring the correct order of events if records are ingested out of order.
 
 In order to use a custom timestamp, the **[!UICONTROL External Source System Audit Details Mixin]** must be added to your Profile schema. Once added, the custom timestamp can be populated using the `lastUpdatedDate` field. When a record is ingested with the `lastUpdatedDate` field populated, Experience Platform will use that field to merge records across datasets. If `lastUpdatedDate` is not present, or not populated, Platform will continue to use the system timestamp.
 
@@ -50,17 +50,17 @@ The following screenshot displays the fields in the [!UICONTROL External Source 
 
 ![](../images/merge-policies/custom-timestamp-mixin.png)
 
-To work with custom timestamps using the API, refer to the Appendix of the [merge policies endpoint guide](../api/merge-policies.md) and the section on [using custom timestamps](../api/merge-policies.md#custom-timestamps).
+To work with custom timestamps using the API, refer to the [merge policies endpoint guide section on using custom timestamps](../api/merge-policies.md#custom-timestamps).
 
 ### Dataset precedence {#dataset-precedence}
 
 When **[!UICONTROL Dataset precedence]** is selected as the merge method for a merge policy, you are able to give priority to profile fragments based on the dataset from which they came. An example use case would be if your organization had information present in one dataset that is preferred or trusted over data in another dataset. 
 
-In order to create a merge policy using **[!UICONTROL Dataset precedence]**, you must select the Profile and Experience Event datasets and can manually order the Profile datasets for precedence. Once the datasets have been selected and ordered, the top dataset will be given highest priority, the second dataset will be second-highest, and so on.
+In order to create a merge policy using **[!UICONTROL Dataset precedence]**, you must select the Profile and ExperienceEvent datasets that are included and then you can manually order the Profile datasets for precedence. Once the datasets have been selected and ordered, the top dataset will be given highest priority, the second dataset will be second-highest, and so on.
 
-## ID stitching {#id-stitching}
+## [!UICONTROL ID stitching] {#id-stitching}
 
-Identity stitching is the process of identifying data fragments and combining them together to form a complete profile record. To help illustrate the different stitching behaviors, consider a single customer who interacts with a brand using two different email addresses.
+Identity stitching ([!UICONTROL ID stitching]) is the process of identifying data fragments and combining them together to form a complete profile record. To help illustrate the different stitching behaviors, consider a single customer who interacts with a brand using two different email addresses.
 
 * **[!UICONTROL None]:** When this option is selected, IDs will not be stitched together. When segmentation occurs, identities that may belong to the same person will not be stitched together and segmentation will only consider the attributes attached to each individual ID when determining if a customer qualifies for segment membership. This could result in a single customer having multiple profiles and each profile could qualify for different segments, resulting in multiple marketing messages being sent to the same customer.
 * **[!UICONTROL Private graph]:** When the private graph is selected, multiple identities related to the same individual are stitched together. This results in the customer having a single profile and allows segmentation to consider multiple attributes from multiple related identities when determining segment qualification. In this scenario, the customer is likely to have a single profile, qualify for one segment based on the combination of attributes across identities, and receive only one marketing message.
@@ -77,7 +77,7 @@ If you create a new merge policy and set it as the default, the previous default
 
 >[!WARNING]
 >
->Profile count and segments with an existing associated default merge policy may be affected. Any segment that has a default merge policy applied will be updated to the new default merge policy.
+>Profile counts and segments with an existing associated default merge policy may be affected. Any segment that has a default merge policy applied will be updated to the new default merge policy.
 
 ## View merge policies {#view-merge-policies}
 
@@ -108,10 +108,10 @@ The first step in the workflow allows you to configure your merge policy by prov
 * **[!UICONTROL ID stitching]**: This field defines how to determine the related identities of a customer. See the section on [ID stitching](#id-stitching) earlier in this guide to learn more. There are two possible values:
     * **[!UICONTROL None]**: Perform no identity stitching.
     * **[!UICONTROL Private Graph]**: Perform identity stitching based on your private identity graph.
-* **[!UICONTROL Default merge policy]**: A toggle button that allows you to select whether or not this merge policy will be the default for your organization. If the selector is toggled-on, a warning appears asking you to confirm that you wish to change your organization's default merge policy. See the section on [default merge policies](#default-merge-policy) earlier in this guide to learn more.
+* **[!UICONTROL Default merge policy]**: A toggle button that allows you to select whether or not this merge policy will be the default for your organization. If the selector is toggled on, a warning appears asking you to confirm that you wish to change your organization's default merge policy. See the section on [default merge policies](#default-merge-policy) earlier in this guide to learn more.
     ![](../images/merge-policies/create-make-default.png)
 
-Once the required fields have been completed, you are able to select **[!UICONTROL Next]** to continue with the workflow.
+Once the required fields have been completed, you can select **[!UICONTROL Next]** to continue with the workflow.
 
 ![A complete Configure screen with the Next button highlighted.](../images/merge-policies/create-complete.png)
 
@@ -159,13 +159,13 @@ Please ensure that you review your merge policy carefully before selecting **[!U
 
 #### Timestamp ordered {#timestamp-ordered-review}
 
-If you selected **[!UICONTROL Timestamp ordered]** as the merge method for your merge policy, the lists of Profile and ExperienceEvent datasets include all Profile and ExperienceEvent datasets that have been created by your organization, respectively.
+If you selected **[!UICONTROL Timestamp ordered]** as the merge method for your merge policy, the list of Profile datasets includes all of the datasets that have been created by your organization related to the schema class, in order of timestamp. The list of ExperienceEvent datasets includes all datasets that your organization has created for the chosen schema class and will be appended to the Profile datasets.
 
 ![](../images/merge-policies/timestamp-review.png)
 
 #### Dataset precedence {#dataset-precedence-review}
 
-If you selected **[!UICONTROL Dataset precedence]** as the merge method for your merge policy, the lists of Profile and ExperienceEvent datasets include only the Profile and ExperienceEvent datasets that you selected during the creation workflow, respectively. The order of the Profile datasets should match the precedence that you specified during creation. If it does not, use the [!UICONTROL Back] button to return to the previous workflow steps and adjust the priority.
+If you selected **[!UICONTROL Dataset precedence]** as the merge method for your merge policy, the lists of Profile and ExperienceEvent datasets include only the Profile and ExperienceEvent datasets that you selected during the creation workflow, respectively. The order of the Profile datasets should match the precedence that you specified during creation. If it doesn't, use the [!UICONTROL Back] button to return to the previous workflow steps and adjust the priority.
 
 ![](../images/merge-policies/dataset-precedence-review.png)
 
@@ -177,11 +177,11 @@ After completing the workflow to create a new merge policy, you are returned to 
 
 ## Edit a merge policy
 
-You can modify an existing merge policy created for the [!DNL XDM Individual Profile] class through the [!UICONTROL Merge Policies] tab by selecting the **[!UICONTROL Policy name]** for the merge policy you wish to edit.
+From the [!UICONTROL Merge Policies] tab, you can modify an existing merge policy created for the [!DNL XDM Individual Profile] class by selecting the **[!UICONTROL Policy name]** for the merge policy you wish to edit.
 
 ![Merge policies landing page](../images/merge-policies/select-edit.png)
 
-When the **[!UICONTROL Edit merge policy]** screen appears, you can make changes to the name and ID stitching type, as well as change whether or not this policy is the default merge policy for your organization. 
+When the **[!UICONTROL Edit merge policy]** screen appears, you can make changes to the name and [!UICONTROL ID stitching], as well as change whether or not this policy is the default merge policy for your organization. 
 
 Select **[!UICONTROL Next]** to continue through the merge policy workflow to update the merge method and datasets included in the merge policy.
 

@@ -20,9 +20,9 @@ The API endpoint used in this guide is part of the [[!DNL Real-time Customer Pro
 
 ## Components of merge policies {#components-of-merge-policies}
 
-Merge policies are private to your IMS Organization, allowing you to create different policies in order to merge schemas in the specific way that you need. Any API accessing [!DNL Profile] data requires a merge policy, though a default will be used if one is not explicitly provided. [!DNL Platform] provides a default merge policy, or you can create a merge policy for a specific Experience Data Model (XDM) schema class and mark it as the default for your organization. 
+Merge policies are private to your IMS Organization, allowing you to create different policies to merge schemas in the specific ways that you need. Any API accessing [!DNL Profile] data requires a merge policy, though a default will be used if one is not explicitly provided. [!DNL Platform] provides organizations with a default merge policy, or you can create a merge policy for a specific Experience Data Model (XDM) schema class and mark it as the default for your organization. 
 
-Each organization can potentially have multiple merge policies per schema class, however each class can have only one default merge policy. Any merge policy set as default will be used in cases where the name of the schema class is provided and a merge policy is required but not provided. 
+While each organization can potentially have multiple merge policies per schema class, each class can have only one default merge policy. Any merge policy set as default will be used in cases where the name of the schema class is provided and a merge policy is required but not provided. 
 
 >[!NOTE]
 >
@@ -61,7 +61,7 @@ The complete merge policy object represents a set of preferences controlling asp
 |`imsOrgId`|Organization ID to which this merge policy belongs|
 |`identityGraph`|[Identity graph](#identity-graph) object indicating the identity graph from which related identities will be obtained. Profile fragments found for all related identities will be merged.|
 |`attributeMerge`|[Attribute merge](#attribute-merge) object indicating the manner by which the merge policy will prioritize profile attributes in the case of data conflicts.|
-|`schema.name`|The [`schema`](#schema) object `name` field contains the XDM schema class to which the merge policy relates. For more information on schemas and classes, please read the [XDM schema documentation](../../xdm/home.md).|
+|`schema.name`|Part of the [`schema`](#schema) object, the `name` field contains the XDM schema class to which the merge policy relates. For more information on schemas and classes, please read the [XDM documentation](../../xdm/home.md).|
 |`default`|Boolean value indicating if this merge policy is the default for the specified schema.|
 |`version`|[!DNL Platform] maintained version of merge policy. This read-only value is incremented whenever a merge policy is updated.|
 |`updateEpoch`|Date of the last update to the merge policy.|
