@@ -196,7 +196,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 **New sources**
 | Feature | Description |
 | ------- | ----------- |
-| [!DNL Shopify] | You can now connect [!DNL Shopify] to [!DNL Experience Platform] using the [!DNL Flow Service] API or the UI. |
+| [!DNL Shopify] | You can now connect [!DNL Shopify] to [!DNL Experience Platform] using the [!DNL Flow Service] API or the UI. See the [Shopify connector overview](../../sources/connectors/ecommerce/shopify.md) for more information. |
 
 **Key features**
 
