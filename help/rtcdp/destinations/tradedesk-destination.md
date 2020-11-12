@@ -59,6 +59,11 @@ As a marketer, I want to be able to use segments built off of [!DNL Trade Desk I
 
 See [Activate profiles and segments to a destination](activate-destinations.md#select-attributes) for information about the segment activation workflow.
 
+During the [Segment schedule](activate-destinations.md#segment-schedule) step, you must manually map your segments to their corresponding ID in the destination.
+
+![Segment Mapping ID](assets/segment-mapping-id.png)
+
+
 ## Exported data {#exported-data}
 
 To verify if data has been exported successfully to [!DNL The Trade Desk] destination, check your [!DNL The Trade Desk] account. If activation was successful, audiences are populated in your account. 
