@@ -14,7 +14,7 @@ seo-description: Seamlessly pass Adobe Audience Data to Airship as Audience Attr
 
 Airship is the leading Customer Engagement Platform, helping you deliver meaningful, personalized omnichannel messaging to your users at every stage of the customer lifecycle.
 
-This integration passes Adobe segment data into Airship as [Attributes](https://docs.airship.com/guides/audience/attributes/) for targeting or triggering.
+This integration passes Adobe profile data into Airship as [Attributes](https://docs.airship.com/guides/audience/attributes/) for targeting or triggering.
 
 To learn more about Airship, see the [Airship Docs](https://docs.airship.com).
 
