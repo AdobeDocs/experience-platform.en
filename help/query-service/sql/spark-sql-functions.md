@@ -2807,7 +2807,7 @@ The `start` and `stop` expressions must resolve to the same type. If `start` and
 Arguments:
 - `start`: An expression. The start of the range.
 - `stop`: An expression. The end the range (inclusive).
-- `step`: An optional expression. The step of the range. By default `step` is 1 if `start` is less than or equal to `stop`, otherwise -1. For the temporal sequences it's 1 day and -1 day respectively. If `start` is greater than `stop`, the `step` must be negative, and vice versa.
+- `step`: An optional expression. The step of the range. By default `step` is '1' if `start` is less than or equal to `stop`, otherwise '-1'. For the temporal sequences it's '1' day and '-1' day respectively. If `start` is greater than `stop`, the `step` must be negative, and vice versa.
 
 Examples:
 
@@ -2816,7 +2816,7 @@ Examples:
  [1,2,3,4,5]
 > SELECT sequence(5, 1);
  [5,4,3,2,1]
-> SELECT sequence(to_date('2018-01-01'), to_date('2018-03-01'), interval 1 month);
+> SELECT sequence(to_date('2018-01-01'), to_date('2018-03-01'), interval '1' month);
  [2018-01-01,2018-02-01,2018-03-01]
 ```
 
