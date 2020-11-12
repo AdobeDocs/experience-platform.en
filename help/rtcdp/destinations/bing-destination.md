@@ -61,6 +61,10 @@ When configuring the destination you will asked to provide the following informa
 
 See [Activate profiles and segments to a destination](activate-destinations.md#select-attributes) for information about the segment activation workflow.
 
+During the [Segment schedule](activate-destinations.md#segment-schedule) step, you must manually map your segments to their corresponding ID in the destination.
+
+![Segment Mapping ID](assets/segment-mapping-id.png)
+
 ## Exported data {#exported-data}
 
 To verify if data has been exported successfully to the [!DNL Microsoft Bing] destination, check your [!DNL Microsoft Bing Ads] account. If activation was successful, audiences are populated in your account. 
