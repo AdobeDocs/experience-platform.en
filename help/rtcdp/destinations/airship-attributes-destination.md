@@ -68,7 +68,7 @@ Leverage Attributes set by Adobe to further enrich Airship profiles and combine 
     >
     >If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](/help/rtcdp/destinations/destinations-workspace.md#catalog) section of the destination workspace documentation.
 
-    ![Connect to Airship Attributes](/help/rtcdp/destinations/assets/yourdestination1.png)
+    ![Connect to Airship Attributes](/help/rtcdp/destinations/assets/airship-attributes-in-catalog.png)
 
 2. In the **Account** step, if you had previously set up a connection to your *Airship Attributes* destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to *Airship Attributes*. Select **[!UICONTROL Connect to destination]** to connect Adobe Experience Cloud to your *Airship* project using the bearer token that you generated from the Airship dashboard.
 
@@ -92,13 +92,13 @@ Leverage Attributes set by Adobe to further enrich Airship profiles and combine 
 To activate segments to *Airship Attributes*, follow the steps below:
 
 1. In **[!UICONTROL Destinations > Browse]**, select the *Airship Attributes* destination where you want to activate your segments.
+    ![activate-flow](/help/rtcdp/destinations/assets/airship-attributes-activate1.png)
 2. Click the name of the destination. This takes you to the Activate flow.
-    ![activate-flow](/help/rtcdp/destinations/assets/yourdestination3.png)
-    Note that if an activation flow already exists for a destination, you can see the segments that are currently being sent to the destination. Select **[!UICONTROL Edit activation]** in the right rail and follow the steps below to modify the activation details.
-3. Select **[!UICONTROL Activate]**;
-4. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to *Airship Attributes*.
+    Note that if an activation flow already exists for a destination, you can see the segments that are currently being sent to the destination. Select **[!UICONTROL Edit activation]** in the right rail and follow the steps below to modify the activation details. ![activate-flow](/help/rtcdp/destinations/assets/airship-attributes-activate2.png)
+1. Select **[!UICONTROL Activate]**;
+1. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to *Airship Attributes*.
     ![segments-to-destination](/help/rtcdp/destinations/assets/airship3-select-segments-to-export.png)
-5.  In the **[!UICONTROL Mapping]** step, select which attributes and identities from the [XDM](https://docs.adobe.com/content/help/en/experience-platform/xdm/home.html) schema to map to the destination schema. Select **[!UICONTROL Add new mapping]** to browse your schema and map them to the corresponding target identity.
+1.  In the **[!UICONTROL Mapping]** step, select which attributes and identities from the [XDM](https://docs.adobe.com/content/help/en/experience-platform/xdm/home.html) schema to map to the destination schema. Select **[!UICONTROL Add new mapping]** to browse your schema and map them to the corresponding target identity.
 ![identity mapping initial screen](/help/rtcdp/destinations/assets/gcm-identity-mapping.png)
    Airship attributes can be set either on a channel, which represents device instance, e.g., iPhone, or a named user, which maps all of a user's devices to a common identifier such as a customer ID. If you have plain text (unhashed) email addresses as primary identity in your schema, select the email field in your **[!UICONTROL Source Attributes]** and map to the Airship named user in the right column under **[!UICONTROL Target Identities]**, as shown below.
    ![Named User Mapping](/help/rtcdp/destinations/assets/airshiptags7-mappingoption2.png)
