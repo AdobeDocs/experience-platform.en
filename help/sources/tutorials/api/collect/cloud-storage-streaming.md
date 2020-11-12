@@ -17,17 +17,17 @@ This tutorial covers the steps for retrieving data from a streaming source conne
 
 This tutorial requires you to have a valid connection ID for a streaming connector. If you do not have this information, see the following tutorials on create a streaming source connection before attempting this tutorial:
 
-- [!DNL Amazon Kinesis](../create/cloud-storage/kinesis.md)
-- [!DNL Azure Event Hubs](../create/cloud-storage/eventhub.md)
+- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
+- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
--   [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-    -   [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-    -   [Schema Registry developer guide](../../../../xdm/api/getting-started.md): Includes important information that you need to know in order to successfully perform calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
--   [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is the system of record for data location and lineage within [!DNL Experience Platform].
--   [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): Streaming ingestion for [!DNL Platform] provides users a method to send data from client and server-side devices to [!DNL Experience Platform] in real-time..
--   [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+    - [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
+    - [Schema Registry developer guide](../../../../xdm/api/getting-started.md): Includes important information that you need to know in order to successfully perform calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
+- [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is the system of record for data location and lineage within [!DNL Experience Platform].
+- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): Streaming ingestion for [!DNL Platform] provides users a method to send data from client and server-side devices to [!DNL Experience Platform] in real-time..
+- [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 The following sections provide additional information that you will need to know in order to successfully connect to a cloud storage using the [!DNL Flow Service] API.
 
 ### Reading sample API calls
@@ -450,5 +450,5 @@ Once your dataflow has been created, you can monitor the data that is being inge
 
 By following this tutorial, you have created a source connector to collect data from your cloud storage on a scheduled basis. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
--   [Real-time Customer Profile overview](../../../../profile/home.md)
--   [Data Science Workspace overview](../../../../data-science-workspace/home.md)
+- [Real-time Customer Profile overview](../../../../profile/home.md)
+- [Data Science Workspace overview](../../../../data-science-workspace/home.md)
