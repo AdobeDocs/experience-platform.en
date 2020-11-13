@@ -11,7 +11,6 @@ seo-description: Seamlessly pass Adobe Audience Data to Airship as Audience Attr
 >[!IMPORTANT]
 >
 >The [!DNL Airship Attributes] destination in Adobe Experience Platform is currently in beta. The documentation and the functionality are subject to change.
-
 ## Overview
 
 [!DNL Airship] is the leading Customer Engagement Platform, helping you deliver meaningful, personalized omnichannel messaging to your users at every stage of the customer lifecycle.
@@ -24,7 +23,6 @@ To learn more about [!DNL Airship], see the [Airship Docs](https://docs.airship.
 >[!TIP]
 >
 >This documentation page was created by the [!DNL Airship] team. For any inquiries or update requests, please contact them directly at [support.airship.com](https://support.airship.com/).
-
 ## Prerequisites
 
 Before you can send your audience segments to [!DNL Airship], you must:
@@ -34,7 +32,6 @@ Before you can send your audience segments to [!DNL Airship], you must:
 
 > [!TIP]
 > Create an [!DNL Airship] account via [this signup link](https://go.airship.eu/accounts/register/plan/starter/) if you have not already.
-
 ### Enable attributes
 
 Adobe Experience Platform profile attributes are similar to [!DNL Airship] attributes and can be easily mapped to one another in Platform using the mapping tool demonstrated further below on this page.
@@ -68,7 +65,6 @@ Leverage Attributes from Adobe Experience Platform to further enrich [!DNL Airsh
     >[!NOTE]
     >
     >If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](/help/rtcdp/destinations/destinations-workspace.md#catalog) section of the destination workspace documentation.
-
     ![Connect to Airship Attributes](/help/rtcdp/destinations/assets/airship-attributes-in-catalog.png)
 
 2. In the **Account** step, if you had previously set up a connection to your [!DNL Airship Attributes] destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to [!DNL Airship Attributes]. Select **[!UICONTROL Connect to destination]** to connect Adobe Experience Platform to your [!DNL Airship] project using the bearer token that you generated from the [!DNL Airship] dashboard.
@@ -76,7 +72,6 @@ Leverage Attributes from Adobe Experience Platform to further enrich [!DNL Airsh
     >[!NOTE]
     >
     >Adobe Experience Platform supports credentials validation in the authentication process and displays an error message if you input incorrect credentials to your [!DNL Airship] account. This ensures that you don't complete the workflow with incorrect credentials.
-
     ![Connect to Airship Attributes](/help/rtcdp/destinations/assets/airship1-connect-to-airship.png)
 
 3. Once your credentials are confirmed and Adobe Experience Platform is connected to your [!DNL Airship] project, you can select **[!UICONTROL Next]** to proceed to the **[!UICONTROL Setup]** step.
@@ -99,37 +94,33 @@ To activate segments to [!DNL Airship Attributes], follow the steps below:
 1. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to [!DNL Airship Attributes].
     ![segments-to-destination](/help/rtcdp/destinations/assets/airship3-select-segments-to-export.png)
 1.  In the **[!UICONTROL Mapping]** step, select which attributes and identities from the [XDM](https://docs.adobe.com/content/help/en/experience-platform/xdm/home.html) schema to map to the destination schema. Select **[!UICONTROL Add new mapping]** to browse your schema and map them to the corresponding target identity.
-![identity mapping initial screen](/help/rtcdp/destinations/assets/gcm-identity-mapping.png)
-   [!DNL Airship] attributes can be set either on a channel, which represents device instance, e.g., iPhone, or a named user, which maps all of a user's devices to a common identifier such as a customer ID. If you have plain text (unhashed) email addresses as primary identity in your schema, select the email field in your **[!UICONTROL Source Attributes]** and map to the [!DNL Airship] named user in the right column under **[!UICONTROL Target Identities]**, as shown below.
-   ![Named User Mapping](/help/rtcdp/destinations/assets/airshiptags7-mappingoption2.png)
-   For identifiers that should be mapped to a channel, i.e., a device, map to the appropriate channel based on the source. The following images show how two mappings are created:
+    ![identity mapping initial screen](/help/rtcdp/destinations/assets/gcm-identity-mapping.png)
+    [!DNL Airship] attributes can be set either on a channel, which represents device instance, e.g., iPhone, or a named user, which maps all of a user's devices to a common identifier such as a customer ID. If you have plain text (unhashed) email addresses as primary identity in your schema, select the email field in your **[!UICONTROL Source Attributes]** and map to the [!DNL Airship] named user in the right column under **[!UICONTROL Target Identities]**, as shown below.
+    ![Named User Mapping](/help/rtcdp/destinations/assets/airshiptags7-mappingoption2.png)
+    For identifiers that should be mapped to a channel, i.e., a device, map to the appropriate channel based on the source. The following images show how two mappings are created:
 
-    * IDFA to an [!DNL Airship] iOS channel
+    * IDFA iOS Advertising ID to an [!DNL Airship] iOS channel
     * Adobe `fullName` attribute to [!DNL Airship] "Full Name" attribute
 
->[!NOTE]
->
->Use the user-friendly name that appears in the [!DNL Airship] dashboard when selecting the target field for your attribute mapping.
-
-#### Map identity
-
-Select source field:
-: ![Connect to Airship Attributes](/help/rtcdp/destinations/assets/airship5-select-source-identity.png)
-
-Select target field:
-: ![Connect to Airship Attributes](/help/rtcdp/destinations/assets/airship6-select-target-identity.png)
-
-#### Map attribute
-
-Select source attribute:
-: ![Select source field](/help/rtcdp/destinations/assets/airship7-select-source-attributes.png)
-
-Select target attribute:
-: ![Select target field](/help/rtcdp/destinations/assets/airship8-select-target-attribute.png)
-
-Verify mapping:
-: ![Channel mapping](/help/rtcdp/destinations/assets/airship9-mapping-final.png)
-
+    >[!NOTE]
+    >
+    >Use the user-friendly name that appears in the [!DNL Airship] dashboard when selecting the target field for your attribute mapping.
+   
+    **Map identity**
+    Select source field:
+    ![Connect to Airship Attributes](/help/rtcdp/destinations/assets/airship5-select-source-identity.png)
+    Select target field:
+    ![Connect to Airship Attributes](/help/rtcdp/destinations/assets/airship6-select-target-identity.png)
+   
+    **Map attribute**
+   
+    Select source attribute:
+    ![Select source field](/help/rtcdp/destinations/assets/airship7-select-source-attributes.png)
+    Select target attribute:
+    ![Select target field](/help/rtcdp/destinations/assets/airship8-select-target-attribute.png)
+    Verify mapping:
+    ![Channel mapping](/help/rtcdp/destinations/assets/airship9-mapping-final.png)
+   
 1. On the **[!UICONTROL Segment schedule]** page, scheduling is currently disabled. Click **[!UICONTROL Next]** to continue to the review step. ![Scheduling currently disabled](/help/rtcdp/destinations/assets/airship10-scheduling-step-is-disabled-for-now.png)
 
 1. On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
@@ -137,7 +128,6 @@ Verify mapping:
 >[!IMPORTANT]
 >
 >In this step, Adobe Experience Platform checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](/help/rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
-
 ![confirm-selection](/help/rtcdp/destinations/assets/data-policy-violation.png)
 
 If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
