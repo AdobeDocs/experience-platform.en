@@ -3,12 +3,16 @@ keywords: Experience Platform;home;popular topics;identity graph viewer;Identity
 solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: tutorial
-description: An identity graph is a map of relationships between different identity namespaces for a particular customer, providing you with a visual representation of how your customer interacts with your brand across different channels.
+description: An identity graph is a map of relationships between different identities for a particular customer, providing you with a visual representation of how your customer interacts with your brand across different channels.
 ---
 
-# Identity graph viewer
+# (Beta) Identity graph viewer
 
-An identity graph is a map of relationships between different identity namespaces for a particular customer, providing you with a visual representation of how your customer interacts with your brand across different channels. All customer identity graphs are collectively managed and updated by Adobe Experience Platform Identity Service] in near real-time, in response to customer activity.
+>[!NOTE]
+>
+>The identity graph viewer is currently in beta. Its features are subject to change.
+
+An identity graph is a map of relationships between different identities for a particular customer, providing you with a visual representation of how your customer interacts with your brand across different channels. All customer identity graphs are collectively managed and updated by Adobe Experience Platform Identity Service in near real-time, in response to customer activity.
 
 The identity graph viewer in the Platform user interface allows you to visualize and better understand what customer identities are stitched together, and in what ways. The viewer allows you to drag and interact with different parts of the graph, allowing you to examine complex identity relationships, debug more efficiently, and benefit from increased transparency with how information is being utilized.
 
@@ -17,6 +21,12 @@ The identity graph viewer in the Platform user interface allows you to visualize
 Working with the identity graph viewer requires an understanding of the various Adobe Experience Platform services involved. Before beginning to work with the identity graph viewer, please review the documentation for the following services:
 
 - [[!DNL Identity Service]](../home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
+
+### Terminology
+
+- **Identity (node):** An identity or a node is data unique to an entity, typically a person. An identity is comprised of a namespace and identity value.
+- **Link (edge):** A link or an edge represents the connection between identities
+- **Graph (cluster):** A graph or a cluster is a group of identities and links that represent a person.
 
 ## Access the identity graph viewer
 
@@ -36,6 +46,8 @@ Once you have selected a namespace, enter its corresponding value for a particul
 
 The identity graph viewer appears. On the left side of the screen is the identity graph displaying all the identities that represent a particular customer, sorted by namespace. Each identity node consists of a namespace and its corresponding ID value. You can select and hold any identity to drag and interact with the graph. Alternatively, you can hover over an identity to see information about its ID value. The graph output is also displayed as a tabled list in the center of the screen.
 
+identities linked to the namespace you selected and the identity value you entered
+
 ![identity-graph](../images/identity-graph-viewer/graph-view.png)
 
 Select an identity to update the highlighted row on the **[!UICONTROL Identity types]** table and to update the information provided on the right rail, which includes an identity's **[!UICONTROL Value]**, **[!UICONTROL Batch Id]**, and its **[!UICONTROL Last updated]** date.
@@ -52,7 +64,7 @@ Select one of the listed batches to see more information on the right rail, incl
 
 ![select-links](../images/identity-graph-viewer/select-edge.png)
 
-Identity graphs with larger clusters of identities are also accessible through the identity graph viewer, displaying up to 150 linked identities.
+Identity graphs with larger clusters of identities are also accessible through the identity graph viewer, displaying up to 400 linked identities.
 
 >[!NOTE]
 >
