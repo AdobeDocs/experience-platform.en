@@ -48,18 +48,30 @@ As a marketer, I want to be able to use segments built off of [!DNL Trade Desk I
    * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
    * **[!UICONTROL Account ID]**: Your [!DNL Trade Desk] [!UICONTROL Account ID].
    * **[!UICONTROL Client Secret]**: The `clientSecret` parameter used in the [!DNL OAuth2] client credentials.
-   * **[!UICONTROL Server Location]**: Ask your [!DNL The Trade Desk] representative which regional server you should use.
+   * **[!UICONTROL Server Location]**: Ask your [!DNL The Trade Desk] representative which regional server you should use. These are the available regional servers you can choose from:
+     
+     * **[!UICONTROL Europe]**
+     * **[!UICONTROL Singapore]**
+     * **[!UICONTROL Tokyo]**
+     * **[!UICONTROL North America East]**
+     * **[!UICONTROL North America West]**
+     * **[!UICONTROL Latin America]**
+   
    * **[!UICONTROL Marketing use case]**: Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Adobe Experience Platform](../privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](../../data-governance/policies/overview.md#core-actions). 
 
     ![The Trade Desk Authentication Step](assets/tradedesk-destination-authentication.png)
 
-1. Click **[!UICONTROL Create destination]**. Your destination is now created. You can click [!UICONTROL Save & Exit] if you want to activate segments later, or you can select [!UICONTROL Next] to continue the workflow and select segments to activate. In either case, see the next section, [Activate Segments](#activate-segments), for the rest of the workflow.
+2. Click **[!UICONTROL Create destination]**. Your destination is now created. You can click [!UICONTROL Save & Exit] if you want to activate segments later, or you can select [!UICONTROL Next] to continue the workflow and select segments to activate. In either case, see the next section, [Activate Segments](#activate-segments), for the rest of the workflow.
 
 ## Activate segments {#activate-segments}
 
 See [Activate profiles and segments to a destination](activate-destinations.md#select-attributes) for information about the segment activation workflow.
 
-During the [Segment schedule](activate-destinations.md#segment-schedule) step, you must manually map your segments to their corresponding ID in the destination.
+During the [Segment schedule](activate-destinations.md#segment-schedule) step, you must manually map your segments to their corresponding ID or friendly name in the destination.
+
+When mapping segments, we recommend you use the [!DNL Platform] segment name or a shorter form of it, for ease of use. However, the segment ID or name in your destination does not need to match the one in your [!DNL Platform] account. Any value you insert in the mapping field will be reflected in [!DNL The Trade Desk] account.
+
+If you are using multiple device mappings (cookie IDs, [!DNL IDFA], [!DNL GAID]), make sure to use the same mapping value for all three mappings. [!DNL The Trade Desk] will aggregate all of them into a single segment, with a device-level breakdown.
 
 ![Segment Mapping ID](assets/segment-mapping-id.png)
 
