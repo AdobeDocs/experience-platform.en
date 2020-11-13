@@ -2,7 +2,7 @@
 keywords: advertising; the trade desk;
 title: The Trade Desk Destination
 seo-title: The Trade Desk Destination
-description: The Trade Desk is a self-service platform for ad buyers to execute retargeting and audience targeted digital campaigns across display, video and mobile inventory sources.
+description: The Trade Desk is a self-service platform for ad buyers to execute retargeting and audience targeted digital campaigns across display, video and mobile inventory sources. 
 seo-description: The Trade Desk is a self-service platform for ad buyers to execute retargeting and audience targeted digital campaigns across display, video and mobile inventory sources.
 ---
 
