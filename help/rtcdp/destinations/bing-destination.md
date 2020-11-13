@@ -61,7 +61,9 @@ When configuring the destination you will asked to provide the following informa
 
 See [Activate profiles and segments to a destination](activate-destinations.md#select-attributes) for information about the segment activation workflow.
 
-During the [Segment schedule](activate-destinations.md#segment-schedule) step, you must manually map your segments to their corresponding ID in the destination.
+During the [Segment schedule](activate-destinations.md#segment-schedule) step, you must manually map your segments to their corresponding ID or friendly name in the destination.
+
+When mapping segments, we recommend you use the [!DNL Platform] segment name or a shorter form of it, for ease of use. However, the segment ID or name in your destination does not need to match the one in your [!DNL Platform] account. Any value you insert in the mapping field will be reflected by the destination.
 
 ![Segment Mapping ID](assets/segment-mapping-id.png)
 
