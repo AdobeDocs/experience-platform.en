@@ -23,7 +23,6 @@ To understand the difference between connections and extensions, see [Connection
 * [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
 * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
 * [Google Customer Match](/help/rtcdp/destinations/google-customer-match-destination.md)
-* [The Trade Desk](/help/rtcdp/destinations/tradedesk-destination.md)
 
 
 ## Extensions

@@ -26,7 +26,7 @@ Note the following details that are specific to [!DNL Google Ad Manager] destina
 
 ### Export Type {#export-type}
 
-**[!DNL Segment Export]** - you are exporting all members of a segment (audience) to the Google destination.
+**Segment Export** - you are exporting all members of a segment (audience) to the Google destination.
 
 ## Prerequisites
 
