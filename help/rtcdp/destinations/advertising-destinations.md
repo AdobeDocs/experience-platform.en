@@ -27,6 +27,7 @@ To understand the difference between connections and extensions, see [Connection
 
 
 
+
 ## Extensions
 
 To understand the difference between connections and extensions, see [Extensions](/help/rtcdp/destinations/destination-types.md#extensions) in the Destination Types and Categories page.
