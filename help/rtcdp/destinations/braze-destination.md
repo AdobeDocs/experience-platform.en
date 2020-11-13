@@ -6,7 +6,11 @@ description: Braze is a comprehensive customer engagement platform that powers r
 seo-description: Braze is a comprehensive customer engagement platform that powers relevant and memorable experiences between customers and the brands they love.
 ---
 
-# [!DNL Braze] destination 
+# (Beta) [!DNL Braze] destination
+
+>[!IMPORTANT]
+>
+>The Braze destination in Adobe Experience Platform is currently in Beta. The documentation and the functionality are subject to change.
 
 ## Overview {#overview}
 
