@@ -11,6 +11,10 @@ The [!DNL Privacy/Marketing Preferences (Consent)] data type (hereinafter referr
 
 This document covers the structure and intended use of the fields provided by the [!DNL Consents & Preferences] data type.
 
+>[!IMPORTANT]
+>
+>The [!DNL Consents & Preferences] data type is designed to cover a range of consent and preference management use cases. As a result, this document describes the use of the data type's fields in general terms, and only makes suggestions as to how you should interpret the use of these fields. Please consult with your privacy legal team to align the data type's structure with how your organization interprets and presents these consent and preference choices to your customers.
+
 ## Prerequisites {#prerequisites}
 
 This document requires a working understanding of XDM and the use of the schemas in [!DNL Experience Platform]. Please review the following documentation before continuing:
@@ -26,7 +30,7 @@ A consent is an option that allows a customer to specify how their data may be u
 
 A preference is an option that allows the customer to specify how different aspects of their experience with a brand should be handled. These fall within two categories:
 
-* **Personalization preferences**: Preferences regarding the analysis of past interactions with the brand to identify the customer's interests or create more personalized experiences.
+* **Personalization preferences**: Preferences regarding how the brand should personalize experiences delivered to a customer.
 * **Marketing preferences**: Preferences regarding whether a brand is allowed to contact a customer through various channels.
 
 The following JSON shows an example of the type of data that the [!DNL Consents & Preferences] data type can process. Information on the specific use of each of these fields is provided in the sections that follow.
@@ -158,9 +162,9 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
 
 >[!IMPORTANT]
 >
->`xdm:personalize` does not cover marketing use cases. For example, if a customer opts out of personalization for all channels, they will not stop receiving communications through those channels. Rather, the messages they receive will be generic and not based on their profile.
+>`xdm:personalize` does not cover marketing use cases. For example, if a customer opts out of personalization for all channels, they should not stop receiving communications through those channels. Rather, the messages they receive should be generic and not based on their profile.
 >
->By the same example, if a customer opts out of direct marketing for all channels (through `xdm:marketing`, explained in the [next section](#marketing)), then that customer will not receive any messages, even if personalization is permitted.
+>By the same example, if a customer opts out of direct marketing for all channels (through `xdm:marketing`, explained in the [next section](#marketing)), then that customer should not receive any messages, even if personalization is permitted.
 
 ```json
 "xdm:personalize": {
@@ -175,7 +179,7 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
 
 | Property | Description |
 | --- | --- |
-| `xdm:any` | Represents the customer's preferences for personalization as a whole. The consent preference provided in this field is considered the default preference for any personalization use case, unless overridden by additional sub-fields provided under `xdm:personalize`.<br><br>If the value is set to `n`, then all more specific personalization settings are ignored. If the value is set to `y`, then all finer-grained personalization options will also be treated as `y`, unless explicitly set to `n`. If the value is unset, then the values for each personalization option will be honored as specified. |
+| `xdm:any` | Represents the customer's preferences for personalization as a whole. The consent preference provided in this field is considered the default preference for any personalization use case, unless overridden by additional sub-fields provided under `xdm:personalize`.<br><br>If the value is set to `n`, then all more specific personalization settings should be ignored. If the value is set to `y`, then all finer-grained personalization options should also be treated as `y`, unless explicitly set to `n`. If the value is unset, then the values for each personalization option should be honored as specified. |
 | `xdm:content` | Represents the customer's preferences for personalized content on your website or application. |
 | `xdm:v` | The customer-provided personalization preference for the specified use case. In cases where the customer does not have to be prompted to provide consent, the value of this field should indicate the basis on which personalization should take place. See the [appendix](#choice-values) for accepted values and definitions. |
 
@@ -208,13 +212,13 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
 | Property | Description |
 | --- | --- |
 | `xdm:preferred` | Indicates the customer's preferred channel for receiving communications. See the [appendix](#preferred-values) for accepted values. |
-| `xdm:any` |  Represents the customer's preferences for direct marketing as a whole. The consent preference provided in this field is considered the "default" preference for any marketing channel, unless overridden by additional sub-fields provided under `xdm:marketing`.<br><br>If the `xdm:v` value for this field is set to `n`, then all more specific marketing settings are ignored, making it easy for a customer to opt out of all contact with your brand. If the value is set to `y`, then all finer-grained marketing options will also be treated as `y`, unless explicitly set to `n`. If the value is unset, then the values for each marketing option will be honored as specified.<br><br>This field correlates with the `xdm:any` field in [personalization preferences](#personalize). This field is duplicated because a customer may opt out of personalization for all applicable channels, but still want to receive generic messages or interactions. If a customer selects `n` for this value in `xdm:marketing`, then its equivalent field in `xdm:personalize` becomes irrelevant. |
+| `xdm:any` |  Represents the customer's preferences for direct marketing as a whole. The consent preference provided in this field is considered the "default" preference for any marketing channel, unless overridden by additional sub-fields provided under `xdm:marketing`.<br><br>If the `xdm:v` value for this field is set to `n`, then all more specific marketing settings should be ignored, making it easy for a customer to opt out of all contact with your brand. If the value is set to `y`, then all finer-grained marketing options should also be treated as `y`, unless explicitly set to `n`. If the value is unset, then the values for each marketing option should be honored as specified.<br><br>This field correlates with the `xdm:any` field in [personalization preferences](#personalize). This field is duplicated because a customer may opt out of personalization for all applicable channels, but still want to receive generic messages or interactions. If a customer selects `n` for this value in `xdm:marketing`, then its equivalent field in `xdm:personalize` becomes irrelevant. |
 | `xdm:email` | Indicates whether the customer agrees to receive email messages. | 
 | `xdm:push` | Indicates whether the customer permits receiving push notifications. | 
 | `xdm:sms` | Indicates whether the customer agrees to receive text messages. | 
 | `xdm:v` | The customer-provided preference for the specified use case. In cases where the customer does not have to be prompted to provide consent, the value of this field should indicate the basis on which the marketing use case should take place. See the [appendix](#choice-values) for accepted values and definitions. |
 | `xdm:t` | An ISO 8601 timestamp of when the marketing preference changed, if applicable. Note that if the timestamp for any individual preference is the same as the one provided under `xdm:metadata`, then this field does not to be set for that preference. |
-| `xdm:source` | A string that indicates which feature, product, or method the customer used to provide their consent information. Common examples include customer management platforms (CMPs) and opt-out links sent via email. Note that for any individual marketing preference, if its source value is identical to that of the `xdm:source` field under `xdm:metadata`, then this field does not to be set for that consent or preference. |
+| `xdm:source` | A string that indicates which feature, product, or method the customer used to provide their consent information. Common examples include CMPs and opt-out links sent via email. Note that for any individual marketing preference, if its source value is identical to that of the `xdm:source` field under `xdm:metadata`, then this field does not to be set for that consent or preference. |
 | `xdm:reason` | When a customer opts out of a marketing use case, this string field represents the reason why the customer opted out. |
 
 ## xdm:metadata
