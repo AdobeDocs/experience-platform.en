@@ -50,7 +50,6 @@ user-guide-description: Bring together known and anonymous data from multiple en
       * [LinkedIn Insight Tag extension](/help/rtcdp/destinations/linkedin-extension.md)
       * [Microsoft Bing](/help/rtcdp/destinations/bing-destination.md)
       * [Pinterest Conversion Tracking extension](destinations/pinterest-extension.md)
-      * [The Trade Desk](/help/rtcdp/destinations/tradedesk-destination.md)
       * [Twitter Universal Website Tag extension](destinations/twitter-uwt-extension.md)
     * Analytics destinations {#analytics-destinations}
       * [Analytics destinations overview](destinations/analytics-destinations.md)

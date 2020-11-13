@@ -24,7 +24,6 @@ To understand the difference between connections and extensions, see [Connection
 * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
 * [Google Customer Match](/help/rtcdp/destinations/google-customer-match-destination.md)
 * [Microsoft Bing](/help/rtcdp/destinations/bing-destination.md)
-* [The Trade Desk](/help/rtcdp/destinations/tradedesk-destination.md)
 
 
 
