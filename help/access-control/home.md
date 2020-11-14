@@ -45,7 +45,7 @@ In the [!DNL Admin Console], permissions are assigned to users through the use o
 
 | Product profile | Sandbox access | Permissions |
 | --- | --- | --- |
-| Default Production all access | Production | All permissions applicable to [!DNL Experience Platform], except for Sandbox Administration permissions. |
+| Default production all access | Production | All permissions applicable to [!DNL Experience Platform], except for Sandbox Administration permissions. |
 | Sandbox Administrators | N/A | Provides access only to Sandbox Administration permissions. |
 
 ## Sandboxes and permissions
