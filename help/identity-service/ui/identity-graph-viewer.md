@@ -42,17 +42,29 @@ Select the namespace you intend to use and click **[!UICONTROL Select]** to proc
 
 Once you have selected a namespace, enter its corresponding value for a particular customer in the **[!UICONTROL Identity value]** text box and select **[!UICONTROL View]**.
 
-![add-identity-value](../images/identity-graph-viewer/identity-value.png)
+![add-identity-value](../images/identity-graph-viewer/identity-value-filled.png)
 
 The identity graph viewer appears. On the left side of the screen is the identity graph displaying all the identities that represent a particular customer, sorted by namespace. Each identity node consists of a namespace and its corresponding ID value. You can select and hold any identity to drag and interact with the graph. Alternatively, you can hover over an identity to see information about its ID value. The graph output is also displayed as a tabled list in the center of the screen.
 
 identities linked to the namespace you selected and the identity value you entered
 
-![identity-graph](../images/identity-graph-viewer/graph-view.png)
+![identity-graph](../images/identity-graph-viewer/graph-viewer.png)
 
-Select an identity to update the highlighted row on the **[!UICONTROL Identity types]** table and to update the information provided on the right rail, which includes an identity's **[!UICONTROL Value]**, **[!UICONTROL Batch Id]**, and its **[!UICONTROL Last updated]** date.
+Select an identity to update the highlighted row on the **[!UICONTROL Identities]** table and to update the information provided on the right rail, which includes an identity's **[!UICONTROL Value]**, **[!UICONTROL Batch ID]**, and its **[!UICONTROL Last updated]** date.
 
 ![select-identity](../images/identity-graph-viewer/select-identity.png)
+
+Isolate results of the graph viewer using the filter option... select view modal and select the namespace from the dropdown menu...
+
+![filter-by-namespace](../images/identity-graph-viewer/filter-namespace.png)
+
+The graph viewer returns with a focus on the namespace you selected
+
+![filtered](../images/identity-graph-viewer/filtered.png)
+
+You can also use the magnify option to gain a clearer look at the identities, select (+) button to zoom in or the (-) button to zoom out.
+
+![zoom](../images/identity-graph-viewer/zoom.png)
 
 Select **[!UICONTROL Data source]** from the header to see more information regarding the batch. Alternatively, you can select any of the links that connect identities together to see their corresponding batch IDs.
 
