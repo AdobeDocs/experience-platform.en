@@ -44,9 +44,12 @@ Once you have selected a namespace, enter its corresponding value for a particul
 
 ![add-identity-value](../images/identity-graph-viewer/identity-value-filled.png)
 
-The identity graph viewer appears. On the left side of the screen is the identity graph displaying all the identities that represent a particular customer, sorted by namespace. Each identity node consists of a namespace and its corresponding ID value. You can select and hold any identity to drag and interact with the graph. Alternatively, you can hover over an identity to see information about its ID value. The graph output is also displayed as a tabled list in the center of the screen.
+The identity graph viewer appears. On the left side of the screen is the identity graph displaying all the identities linked to the namespace you selected and the identity value you entered. Each identity node consists of a namespace and its corresponding ID value. You can select and hold any identity to drag and interact with the graph. Alternatively, you can hover over an identity to see information about its ID value. The graph output is also displayed as a tabled list in the center of the screen.
 
-identities linked to the namespace you selected and the identity value you entered
+>[!IMPORTANT]
+>
+>An identity graph requires a minimum of two linked identities to generate, as well as a valid namespace and ID pair. The maximum number of identities that the graph viewer can display is 400.
+
 
 ![identity-graph](../images/identity-graph-viewer/graph-viewer.png)
 
@@ -54,33 +57,31 @@ Select an identity to update the highlighted row on the **[!UICONTROL Identities
 
 ![select-identity](../images/identity-graph-viewer/select-identity.png)
 
-Isolate results of the graph viewer using the filter option... select view modal and select the namespace from the dropdown menu...
+You can filter through a graph and isolate a specific namespace using the sort option on top of the **[!UICONTROL Identities]** table. From the dropdown menu, select the namespace you want to highlight.
 
 ![filter-by-namespace](../images/identity-graph-viewer/filter-namespace.png)
 
-The graph viewer returns with a focus on the namespace you selected
+The graph viewer returns, highlighting the namespace you selected. The filter option also updates the **[!UICONTROL Identities]** table to return information only for the namespace you selected.
 
 ![filtered](../images/identity-graph-viewer/filtered.png)
 
-You can also use the magnify option to gain a clearer look at the identities, select (+) button to zoom in or the (-) button to zoom out.
+The top right of the graph viewer box contains options for magnification. Select the **(+)** icon to zoom into the graph or the **(-)** icon to zoom out.
 
 ![zoom](../images/identity-graph-viewer/zoom.png)
 
-Select **[!UICONTROL Data source]** from the header to see more information regarding the batch. Alternatively, you can select any of the links that connect identities together to see their corresponding batch IDs.
+You can view more information on batches by selecting the **[!UICONTROL Data source]** from the header. The **[!UICONTROL Data source]** table displays a list of **[!UICONTROL Batch IDs]** associated with graph, as well as its **[!UICONTROL Linked IDs]**, source schema, and date of ingestion.
 
-![data-source](../images/identity-graph-viewer/data-source.png)
+![data-source](../images/identity-graph-viewer/data-source-table.png)
 
-The **[!UICONTROL Data source]** screen displays a list of batch IDs linked to the identities within the identity graph, as well as information about its source schema and a timestamp on its last ingestion.
-
-Select one of the listed batches to see more information on the right rail, including details about its dataset and schema. Select a batch ID to see a more comprehensive overview of that particular batch.
+You can select any of the links within an identity graph to see how two batches are connected.
 
 ![select-links](../images/identity-graph-viewer/select-edge.png)
 
-Identity graphs with larger clusters of identities are also accessible through the identity graph viewer, displaying up to 400 linked identities.
+Alternatively, you can select an entire cluster of identities for a clearer look at the relationship between multiple batches.
 
->[!NOTE]
->
->An identity graph requires a minimum of two linked identities to be generated.
+![select-links](../images/identity-graph-viewer/select-batch.png)
+
+Identity graphs with larger clusters of identities are also accessible through the identity graph viewer.
 
 ![large-cluster](../images/identity-graph-viewer/large-cluster.png)
 
