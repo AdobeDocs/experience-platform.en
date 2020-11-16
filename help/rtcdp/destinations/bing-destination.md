@@ -43,8 +43,8 @@ When configuring the destination you will asked to provide the following informa
     >[!NOTE]
     >
     >If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](../destinations/destinations-workspace.md#catalog) section of the destination workspace documentation.
-    
-    ![Activate Microsoft Bing Destination](assets/bing-destination-activate.png)
+    >
+    >![Activate Microsoft Bing Destination](assets/bing-destination-activate.png)
 
 1. In the [!UICONTROL Authentication] step, you must enter the destination connection details:
    
