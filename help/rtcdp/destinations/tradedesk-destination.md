@@ -39,8 +39,8 @@ As a marketer, I want to be able to use segments built off of [!DNL Trade Desk I
     >[!NOTE]
     >
     >If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](../destinations/destinations-workspace.md#catalog) section of the destination workspace documentation.
-    
-        ![Activate The Trade Desk Destination](assets/tradedesk-destination-activate.png)
+    >
+    >![Activate The Trade Desk Destination](assets/tradedesk-destination-activate.png)
 
 2. In the [!UICONTROL Authentication] step, you need to enter [!DNL The Trade Desk] connection details:
 
