@@ -60,10 +60,21 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
       "xdm:any": {
         "xdm:v": "u"
       },
-      "xdm:email": {
+      "xdm:push": {
         "xdm:v": "n",
         "xdm:reason": "Too Frequent",
         "xdm:t": "2019-01-01T15:52:25+00:00"
+      }
+    },
+    "xdm:idSpecific": {
+      "email": {
+        "jdoe@example.com": {
+          "xdm:marketing": {
+            "xdm:email": {
+              "xdm:v": "n"
+            }
+          }
+        }
       }
     }
   },
@@ -195,16 +206,13 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
   },
   "xdm:email": {
     "xdm:v": "n",
-    "xdm:source": "OurApp",
     "xdm:reason": "Too Frequent"
   },
   "xdm:push": {
-    "xdm:v": "y",
-    "xdm:source": "CMP"
+    "xdm:v": "y"
   },
   "xdm:sms": {
-    "xdm:v": "y",
-    "xdm:source": "CMP"
+    "xdm:v": "y"
   }
 }
 ```
@@ -218,8 +226,36 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
 | `xdm:sms` | Indicates whether the customer agrees to receive text messages. | 
 | `xdm:v` | The customer-provided preference for the specified use case. In cases where the customer does not have to be prompted to provide consent, the value of this field should indicate the basis on which the marketing use case should take place. See the [appendix](#choice-values) for accepted values and definitions. |
 | `xdm:t` | An ISO 8601 timestamp of when the marketing preference changed, if applicable. Note that if the timestamp for any individual preference is the same as the one provided under `xdm:metadata`, then this field does not to be set for that preference. |
-| `xdm:source` | A string that indicates which feature, product, or method the customer used to provide their consent information. Common examples include CMPs and opt-out links sent via email. Note that for any individual marketing preference, if its source value is identical to that of the `xdm:source` field under `xdm:metadata`, then this field does not to be set for that consent or preference. |
 | `xdm:reason` | When a customer opts out of a marketing use case, this string field represents the reason why the customer opted out. |
+
+### xdm:idSpecific
+
+`xdm:idSpecific` can be used when a particular consent or preference does not universally apply to a customer, but is restricted to a single device or ID. For example, a customer can opt out of receiving emails to one address, while potentially allowing emails on another.
+
+>[!IMPORTANT]
+>
+>Channel-level consents and preferences (i.e. those provided under `xdm:consents` outside of `xdm:idSpecific`) apply to IDs within that channel. Therefore, all channel-level consents and preferences directly effect whether equivalent ID- or device-specific settings are honored:
+>
+>* If the customer has opted out at the channel level, then any equivalent consents or preferences in `xdm:idSpecific` are ignored.
+>* If the channel-level consent or preference is not set, or the customer has opted in, then the equivalent consents or preferences in `xdm:idSpecific` are honored.
+
+Each key in the `xdm:idSpecific` object represents a specific identity namespace recognized by Adobe Experience Platform Identity Service. For more information on identity namespaces, see the [identity namespace overview](../../identity-service/namespaces.md) in the Identity Service documentation.
+
+In turn, the keys for each namespace object represent identity values for that namespace which the customer has set preferences for. Each identity value can contain a complete set of consents and preferences, formatted in the same way as the channel-level fields.
+
+```json
+"xdm:idSpecific": {
+  "email": {
+    "jdoe@example.com": {
+      "xdm:marketing": {
+        "xdm:email": {
+          "xdm:v": "n"
+        }
+      }
+    }
+  }
+}
+```
 
 ## xdm:metadata
 
