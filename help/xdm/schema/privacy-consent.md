@@ -39,31 +39,31 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
 {
   "xdm:consents": {
     "xdm:collect": {
-      "xdm:v": "y",
+      "xdm:val": "y",
     },
     "xdm:adID": {
-      "xdm:v": "VI"
+      "xdm:val": "VI"
     },
     "xdm:share": {
-      "xdm:v": "y",
+      "xdm:val": "y",
     },
     "xdm:personalize": {
       "xdm:any": {
-        "xdm:v": "y",
+        "xdm:val": "y",
       },
       "xdm:content": {
-        "xdm:v": "y"
+        "xdm:val": "y"
       }
     },
     "xdm:marketing": {
       "xdm:preferred": "email",
       "xdm:any": {
-        "xdm:v": "u"
+        "xdm:val": "u"
       },
       "xdm:push": {
-        "xdm:v": "n",
+        "xdm:val": "n",
         "xdm:reason": "Too Frequent",
-        "xdm:t": "2019-01-01T15:52:25+00:00"
+        "xdm:time": "2019-01-01T15:52:25+00:00"
       }
     },
     "xdm:idSpecific": {
@@ -71,7 +71,7 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
         "jdoe@example.com": {
           "xdm:marketing": {
             "xdm:email": {
-              "xdm:v": "n"
+              "xdm:val": "n"
             }
           }
         }
@@ -79,7 +79,7 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
     }
   },
   "xdm:metadata": {
-    "xdm:t": "2019-01-01T15:52:25+00:00"
+    "xdm:time": "2019-01-01T15:52:25+00:00"
   }
 }
 ```
@@ -95,31 +95,31 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
 ```json
 "xdm:consents": {
   "xdm:collect": {
-    "xdm:v": "y",
+    "xdm:val": "y",
   },
   "xdm:adID": {
-    "xdm:v": "VI"
+    "xdm:val": "VI"
   },
   "xdm:share": {
-    "xdm:v": "y",
+    "xdm:val": "y",
   },
   "xdm:personalize": {
     "xdm:any": {
-      "xdm:v": "y",
+      "xdm:val": "y",
     },
     "xdm:content": {
-      "xdm:v": "y"
+      "xdm:val": "y"
     }
   },
   "xdm:marketing": {
     "xdm:preferred": "email",
     "xdm:any": {
-      "xdm:v": "u"
+      "xdm:val": "u"
     },
     "xdm:email": {
-      "xdm:v": "n",
+      "xdm:val": "n",
       "xdm:reason": "Too Frequent",
-      "xdm:t": "2019-01-01T15:52:25+00:00"
+      "xdm:time": "2019-01-01T15:52:25+00:00"
     }
   }
 }
@@ -131,13 +131,13 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
 
 ```json
 "xdm:collect" : {
-  "xdm:v": "y"
+  "xdm:val": "y"
 }
 ```
 
 | Property | Description |
 | --- | --- |
-| `xdm:v` | The customer-provided consent choice for this use case. See the [appendix](#choice-values) for accepted values and definitions. |
+| `xdm:val` | The customer-provided consent choice for this use case. See the [appendix](#choice-values) for accepted values and definitions. |
 
 ### xdm:adID
 
@@ -145,13 +145,13 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
 
 ```json
 "xdm:adID" : {
-  "xdm:v": "y"
+  "xdm:val": "y"
 }
 ```
 
 | Property | Description |
 | --- | --- |
-| `xdm:v` | The customer-provided consent choice for this use case. See the [appendix](#choice-values) for accepted values and definitions. |
+| `xdm:val` | The customer-provided consent choice for this use case. See the [appendix](#choice-values) for accepted values and definitions. |
 
 ### xdm:share
 
@@ -159,13 +159,13 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
 
 ```json
 "xdm:share" : {
-  "xdm:v": "y"
+  "xdm:val": "y"
 }
 ```
 
 | Property | Description |
 | --- | --- |
-| `xdm:v` | The customer-provided consent choice for this use case. See the [appendix](#choice-values) for accepted values and definitions. |
+| `xdm:val` | The customer-provided consent choice for this use case. See the [appendix](#choice-values) for accepted values and definitions. |
 
 ### xdm:personalize {#personalize}
 
@@ -180,10 +180,10 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
 ```json
 "xdm:personalize": {
   "xdm:any": {
-    "xdm:v": "n"
+    "xdm:val": "n"
   },
   "xdm:content": {
-    "xdm:v": "y",
+    "xdm:val": "y",
   }
 }
 ```
@@ -192,7 +192,7 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
 | --- | --- |
 | `xdm:any` | Represents the customer's preferences for personalization as a whole. The consent preference provided in this field is considered the default preference for any personalization use case, unless overridden by additional sub-fields provided under `xdm:personalize`.<br><br>If the value is set to `n`, then all more specific personalization settings should be ignored. If the value is set to `y`, then all finer-grained personalization options should also be treated as `y`, unless explicitly set to `n`. If the value is unset, then the values for each personalization option should be honored as specified. |
 | `xdm:content` | Represents the customer's preferences for personalized content on your website or application. |
-| `xdm:v` | The customer-provided personalization preference for the specified use case. In cases where the customer does not have to be prompted to provide consent, the value of this field should indicate the basis on which personalization should take place. See the [appendix](#choice-values) for accepted values and definitions. |
+| `xdm:val` | The customer-provided personalization preference for the specified use case. In cases where the customer does not have to be prompted to provide consent, the value of this field should indicate the basis on which personalization should take place. See the [appendix](#choice-values) for accepted values and definitions. |
 
 ### xdm:marketing {#marketing}
 
@@ -202,17 +202,17 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
 "xdm:marketing": {
   "xdm:preferred": "email",
   "xdm:any": {
-    "xdm:v": "u"
+    "xdm:val": "u"
   },
   "xdm:email": {
-    "xdm:v": "n",
+    "xdm:val": "n",
     "xdm:reason": "Too Frequent"
   },
   "xdm:push": {
-    "xdm:v": "y"
+    "xdm:val": "y"
   },
   "xdm:sms": {
-    "xdm:v": "y"
+    "xdm:val": "y"
   }
 }
 ```
@@ -220,12 +220,12 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
 | Property | Description |
 | --- | --- |
 | `xdm:preferred` | Indicates the customer's preferred channel for receiving communications. See the [appendix](#preferred-values) for accepted values. |
-| `xdm:any` |  Represents the customer's preferences for direct marketing as a whole. The consent preference provided in this field is considered the "default" preference for any marketing channel, unless overridden by additional sub-fields provided under `xdm:marketing`.<br><br>If the `xdm:v` value for this field is set to `n`, then all more specific marketing settings should be ignored, making it easy for a customer to opt out of all contact with your brand. If the value is set to `y`, then all finer-grained marketing options should also be treated as `y`, unless explicitly set to `n`. If the value is unset, then the values for each marketing option should be honored as specified.<br><br>This field correlates with the `xdm:any` field in [personalization preferences](#personalize). This field is duplicated because a customer may opt out of personalization for all applicable channels, but still want to receive generic messages or interactions. If a customer selects `n` for this value in `xdm:marketing`, then its equivalent field in `xdm:personalize` becomes irrelevant. |
+| `xdm:any` |  Represents the customer's preferences for direct marketing as a whole. The consent preference provided in this field is considered the "default" preference for any marketing channel, unless overridden by additional sub-fields provided under `xdm:marketing`.<br><br>If the `xdm:val` value for this field is set to `n`, then all more specific marketing settings should be ignored, making it easy for a customer to opt out of all contact with your brand. If the value is set to `y`, then all finer-grained marketing options should also be treated as `y`, unless explicitly set to `n`. If the value is unset, then the values for each marketing option should be honored as specified.<br><br>This field correlates with the `xdm:any` field in [personalization preferences](#personalize). This field is duplicated because a customer may opt out of personalization for all applicable channels, but still want to receive generic messages or interactions. If a customer selects `n` for this value in `xdm:marketing`, then its equivalent field in `xdm:personalize` becomes irrelevant. |
 | `xdm:email` | Indicates whether the customer agrees to receive email messages. | 
 | `xdm:push` | Indicates whether the customer permits receiving push notifications. | 
 | `xdm:sms` | Indicates whether the customer agrees to receive text messages. | 
-| `xdm:v` | The customer-provided preference for the specified use case. In cases where the customer does not have to be prompted to provide consent, the value of this field should indicate the basis on which the marketing use case should take place. See the [appendix](#choice-values) for accepted values and definitions. |
-| `xdm:t` | An ISO 8601 timestamp of when the marketing preference changed, if applicable. Note that if the timestamp for any individual preference is the same as the one provided under `xdm:metadata`, then this field does not to be set for that preference. |
+| `xdm:val` | The customer-provided preference for the specified use case. In cases where the customer does not have to be prompted to provide consent, the value of this field should indicate the basis on which the marketing use case should take place. See the [appendix](#choice-values) for accepted values and definitions. |
+| `xdm:time` | An ISO 8601 timestamp of when the marketing preference changed, if applicable. Note that if the timestamp for any individual preference is the same as the one provided under `xdm:metadata`, then this field does not to be set for that preference. |
 | `xdm:reason` | When a customer opts out of a marketing use case, this string field represents the reason why the customer opted out. |
 
 ### xdm:idSpecific
@@ -239,9 +239,9 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
 >* If the customer has opted out at the channel level, then any equivalent consents or preferences in `xdm:idSpecific` are ignored.
 >* If the channel-level consent or preference is not set, or the customer has opted in, then the equivalent consents or preferences in `xdm:idSpecific` are honored.
 
-Each key in the `xdm:idSpecific` object represents a specific identity namespace recognized by Adobe Experience Platform Identity Service. For more information on identity namespaces, see the [identity namespace overview](../../identity-service/namespaces.md) in the Identity Service documentation.
+Each key in the `xdm:idSpecific` object represents a specific identity namespace recognized by Adobe Experience Platform Identity Service. While you can define your own custom namespaces to categorize different identifiers, it is recommended that you use one of the standard namespaces provided by Identity Service to reduce storage sizes for Real-time Customer Profile. For more information on identity namespaces, see the [identity namespace overview](../../identity-service/namespaces.md) in the Identity Service documentation.
 
-In turn, the keys for each namespace object represent identity values for that namespace which the customer has set preferences for. Each identity value can contain a complete set of consents and preferences, formatted in the same way as the channel-level fields.
+The keys for each namespace object represent the unique identity values that the customer has set preferences for. Each identity value can contain a complete set of consents and preferences, formatted in the same way as `xdm:consents`.
 
 ```json
 "xdm:idSpecific": {
@@ -249,7 +249,7 @@ In turn, the keys for each namespace object represent identity values for that n
     "jdoe@example.com": {
       "xdm:marketing": {
         "xdm:email": {
-          "xdm:v": "n"
+          "xdm:val": "n"
         }
       }
     }
@@ -263,13 +263,13 @@ In turn, the keys for each namespace object represent identity values for that n
 
 ```json
 "xdm:metadata": {
-  "xdm:t": "2019-01-01T15:52:25+00:00",
+  "xdm:time": "2019-01-01T15:52:25+00:00",
 }
 ```
 
 | Property | Description |
 | --- | --- |
-| `xdm:t` | A timestamp for the last time any of the customer's consents and preferences were updated. This field can be used instead of applying timestamps to individual preferences in order to reduce load and complexity. Providing an `xdm:t` value under an individual preference overrides the `xdm:metadata` timestamp for that particular preference. |
+| `xdm:time` | A timestamp for the last time any of the customer's consents and preferences were updated. This field can be used instead of applying timestamps to individual preferences in order to reduce load and complexity. Providing an `xdm:time` value under an individual preference overrides the `xdm:metadata` timestamp for that particular preference. |
 
 ## Ingesting data using the data type {#ingest}
 
@@ -291,9 +291,9 @@ When a customer changes their consents or preferences on your website, these cha
 
 The sections below provide additional reference information regarding the [!DNL Consents & Preferences] data type.
 
-### Accepted values for xdm:v {#choice-values}
+### Accepted values for xdm:val {#choice-values}
 
-The following table outlines the accepted values for `xdm:v`:
+The following table outlines the accepted values for `xdm:val`:
 
 | Value | Title|  Description |
 | --- | --- | --- |
