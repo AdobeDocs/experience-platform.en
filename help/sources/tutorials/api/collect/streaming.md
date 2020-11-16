@@ -356,7 +356,7 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "version": 0,
-        "xdmSchema": "_aepstreamingservicesint.schemas.e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
+        "xdmSchema": "_{TENANT_ID}.schemas.e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
         "xdmVersion": "1.0",
         "mappings": [
             {

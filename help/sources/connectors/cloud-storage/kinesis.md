@@ -28,7 +28,7 @@ The documentation below provides information on how to connect [!DNL Amazon Kine
 
 - [Create a Amazon Kinesis connector using the Flow Service API](../../tutorials/api/create/cloud-storage/kinesis.md)
 - [Explore a cloud storage system using the Flow Service API](../../tutorials/api/explore/cloud-storage.md)
-- [Collect cloud storage data using the Flow Service API](../../tutorials/api/collect/cloud-storage.md)
+- [Collect streaming data using the Flow Service API](../../tutorials/api/collect/streaming.md)
 
 ### Using the UI
 
