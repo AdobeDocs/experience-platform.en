@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;cloud storage data;streaming data;streaming
 solution: Experience Platform
-title: Collect streaming data from a cloud storage through source connectors and APIs
+title: Collect streaming data through source connectors and APIs
 topic: overview
 type: Tutorial
-description: This tutorial covers the steps for retrieving streaming data from a third-party cloud storage and bringing them in to Platform through source connectors and APIs.
+description: This tutorial covers the steps for retrieving streaming data and bringing them in to Platform through source connectors and APIs.
 ---
 
-# Collect streaming data from a cloud storage through source connectors and APIs
+# Collect streaming data through source connectors and APIs
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
@@ -19,6 +19,7 @@ This tutorial requires you to have a valid connection ID for a streaming connect
 
 - [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
 - [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
+- [[!DNL HTTP API]](../../../../ingestion/tutorials/create-streaming-connection.md)
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
@@ -28,7 +29,8 @@ This tutorial also requires you to have a working understanding of the following
 - [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is the system of record for data location and lineage within [!DNL Experience Platform].
 - [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): Streaming ingestion for [!DNL Platform] provides users a method to send data from client and server-side devices to [!DNL Experience Platform] in real-time..
 - [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
-The following sections provide additional information that you will need to know in order to successfully connect to a cloud storage using the [!DNL Flow Service] API.
+
+The following sections provide additional information that you will need to know in order to successfully collect streaming data using the [!DNL Flow Service] API.
 
 ### Reading sample API calls
 
@@ -114,6 +116,116 @@ A successful response returns the unique identifier (`id`) of the newly created 
 }
 ```
 
+## Create a target XDM schema {#target-schema}
+
+In order for the source data to be used in [!DNL Platform], a target schema must be created to structure the source data according to your needs. The target schema is then used to create a [!DNL Platform] dataset in which the source data is contained. This target XDM schema also extends the XDM [!DNL Individual Profile] class.
+
+A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+
+**API format**
+
+```http
+POST /tenant/schemas
+```
+
+**Request**
+
+The following example request creates an XDM schema that extends the XDM [!DNL Individual Profile] class.
+
+```shell
+curl -X POST \
+    'https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "type": "object",
+        "title": "Sample schema for a streaming connector",
+        "description": "Sample schema for a streaming connector",
+        "allOf": [
+            {
+                "$ref": "https://ns.adobe.com/xdm/context/profile"
+            },
+            {
+                "$ref": "https://ns.adobe.com/xdm/context/profile-person-details"
+            },
+            {
+                "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
+            }
+        ],
+        "meta:containerId": "tenant",
+        "meta:resourceType": "schemas",
+        "meta:xdmType": "object",
+        "meta:class": "https://ns.adobe.com/xdm/context/profile"
+    }'
+```
+
+**Response**
+
+A successful response returns details of the newly created schema including its unique identifier (`$id`). This ID is required in later steps to create a target dataset, mapping, and dataflow.
+
+```json
+{
+    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
+    "meta:altId": "_{TENANT_ID}.schemas.e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
+    "meta:resourceType": "schemas",
+    "version": "1.0",
+    "title": "Test shopify demo",
+    "type": "object",
+    "description": "",
+    "allOf": [
+        {
+            "$ref": "https://ns.adobe.com/xdm/context/profile",
+            "type": "object",
+            "meta:xdmType": "object"
+        },
+        {
+            "$ref": "https://ns.adobe.com/xdm/context/profile-person-details",
+            "type": "object",
+            "meta:xdmType": "object"
+        },
+        {
+            "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details",
+            "type": "object",
+            "meta:xdmType": "object"
+        }
+    ],
+    "refs": [
+        "https://ns.adobe.com/xdm/context/profile-person-details",
+        "https://ns.adobe.com/xdm/context/profile-personal-details",
+        "https://ns.adobe.com/xdm/context/profile"
+    ],
+    "imsOrg": "{IMS_ORG}",
+    "meta:extensible": false,
+    "meta:abstract": false,
+    "meta:extends": [
+        "https://ns.adobe.com/xdm/context/profile-person-details",
+        "https://ns.adobe.com/xdm/context/profile-personal-details",
+        "https://ns.adobe.com/xdm/common/auditable",
+        "https://ns.adobe.com/xdm/data/record",
+        "https://ns.adobe.com/xdm/context/profile"
+    ],
+    "meta:xdmType": "object",
+    "meta:registryMetadata": {
+        "repo:createdDate": 1604960074752,
+        "repo:lastModifiedDate": 1604960074752,
+        "xdm:createdClientId": "{CREATED_CLIENT_ID}",
+        "xdm:lastModifiedClientId": "{MODIFIED_CLIENT_ID}",
+        "xdm:createdUserId": "{CREATED_USER_ID}",
+        "xdm:lastModifiedUserId": "{MODIFIED_USER_ID}",
+        "eTag": "8522a151effd974429518ed90c3eaf6efc9bf6ffb6644087a85c6d4455dcd045",
+        "meta:globalLibVersion": "1.16.1"
+    },
+    "meta:class": "https://ns.adobe.com/xdm/context/profile",
+    "meta:containerId": "tenant",
+    "meta:sandboxId": "{SANDBOX_ID}",
+    "meta:sandboxType": "production",
+    "meta:tenantNamespace": "_{TENANT_ID}"
+}
+```
+
 ## Create a target dataset
 
 A target dataset can be created by performing a POST request to the [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), providing the ID of the target schema within the payload.
@@ -136,7 +248,7 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "schemaRef": {
-            "id": "https://ns.adobe.com/aepstreamingservicesint/schemas/e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.1"
         },
         "fileDescription": {
@@ -375,7 +487,7 @@ A successful response returns the details of the dataflow specification that is 
 
 ## Create a dataflow
 
-The last step towards collecting cloud storage data is to create a dataflow. By now, you have the following required values prepared:
+The last step towards collecting streaming data is to create a dataflow. By now, you have the following required values prepared:
 
 - [Source connection ID](#source)
 - [Target connection ID](#target)
@@ -442,13 +554,9 @@ A successful response returns the ID (`id`) of the newly created dataflow.
 }
 ```
 
-## Monitor your dataflow
-
-Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors. For more information on how to monitor dataflows, see the tutorial on [monitoring dataflows in the API](../monitor.md)
-
 ## Next steps
 
-By following this tutorial, you have created a source connector to collect data from your cloud storage on a scheduled basis. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have created a dataflow to collect streaming data from your streaming connector . Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
 - [Real-time Customer Profile overview](../../../../profile/home.md)
 - [Data Science Workspace overview](../../../../data-science-workspace/home.md)
