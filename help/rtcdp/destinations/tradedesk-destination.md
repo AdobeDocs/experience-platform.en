@@ -39,10 +39,10 @@ As a marketer, I want to be able to use segments built off of [!DNL Trade Desk I
     >[!NOTE]
     >
     >If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](../destinations/destinations-workspace.md#catalog) section of the destination workspace documentation.
-    >
-    >![Activate The Trade Desk Destination](assets/tradedesk-destination-activate.png)
+    
+        ![Activate The Trade Desk Destination](assets/tradedesk-destination-activate.png)
 
-1. In the [!UICONTROL Authentication] step, you need to enter [!DNL The Trade Desk] connection details:
+2. In the [!UICONTROL Authentication] step, you need to enter [!DNL The Trade Desk] connection details:
 
    * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
    * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -61,13 +61,13 @@ As a marketer, I want to be able to use segments built off of [!DNL Trade Desk I
 
     ![The Trade Desk Authentication Step](assets/tradedesk-destination-authentication.png)
 
-1. Click **[!UICONTROL Create destination]**. Your destination is now created. You can click [!UICONTROL Save & Exit] if you want to activate segments later, or you can select [!UICONTROL Next] to continue the workflow and select segments to activate. In either case, see the next section, [Activate Segments](#activate-segments), for the rest of the workflow.
+3. Click **[!UICONTROL Create destination]**. Your destination is now created. You can click [!UICONTROL Save & Exit] if you want to activate segments later, or you can select [!UICONTROL Next] to continue the workflow and select segments to activate. In either case, see the next section, [Activate Segments](#activate-segments), for the rest of the workflow.
 
 ## Activate segments {#activate-segments}
 
 See [Activate profiles and segments to a destination](activate-destinations.md#select-attributes) for information about the segment activation workflow.
 
-During the [Segment schedule](activate-destinations.md#segment-schedule) step, you must manually map your segments to their corresponding ID or friendly name in the destination.
+In the [Segment schedule](activate-destinations.md#segment-schedule) step, you must manually map your segments to their corresponding ID or friendly name in the destination.
 
 When mapping segments, we recommend you use the [!DNL Platform] segment name or a shorter form of it, for ease of use. However, the segment ID or name in your destination does not need to match the one in your [!DNL Platform] account. Any value you insert in the mapping field will be reflected by the destination.
 
