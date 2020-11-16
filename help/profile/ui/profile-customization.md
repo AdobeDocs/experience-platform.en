@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;user interface;UI;customization;profile details;details
 title: Profile detail customization
 description: This guide provides step-by-step instructions for customizing the way in which Real-time Customer Profile data is displayed within the Adobe Experience Platform UI. 
 topic: guide
