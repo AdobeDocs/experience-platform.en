@@ -38,13 +38,27 @@ The following identity types are available within [!DNL Platform]:
 | Cross-Device | This indicates that [!DNL Identity Service] should consider this to be a strong people identifier and hence preserve it forever. Examples include a login ID, CRM ID, loyalty ID etc. |
 | Device| Includes IDFA, GAID & other IOT IDs. These can be shared by people in households.|
 | Email| Identities of this type include personally identifiable information (PII). This is an indication to [!DNL Identity Service] to handle the value sensitively.|
-| Mobile| Identities of this type include PII. This is an indication to [!DNL Identity Service] to handle the value sensitively.|
 | Non-people| Used for storing identifiers that need namespaces, yet are not tied to a person cluster. These identifiers are then filtered from the identity graph. Possible use cases include data related to products, organizations, stores, etc. (For example, a product SKU.) |
 | Phone | Identities of this type include PII. This is indication to [!DNL Identity Service] to handle the value sensitively.|
 
 ### Standard namespaces {#standard}
 
 Adobe Experience Platform provides several identity namespaces that are available to all organizations. These are known as Standard namespaces and are visible using the [!DNL Identity Service] API or through the [!DNL Platform] UI.
+
+The following standard namespaces are provided for use by all organizations within Experience Platform:
+
+| Display Name | ID | Code | Description |
+| ------------ | --- | --- | ----------- |
+| CORE | 0 | CORE | legacy name: "Adobe AudienceManager" |
+| ECID | 4 | ECID | alias: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID" |
+| Email | 6 | Email | |
+| Email (SHA256, lowercased) | 11 | Emails | Standard namespace for pre-hashed email. Values provided in this namespace are converted to lowercase before hashing with SHA-256. |
+| Phone | 7 | Phone | |
+| Windows AID | 8 | WAID | |
+| AdCloud | 411 | AdCloud | alias: Ad Cloud |
+| Adobe Target | 9 | TNTID | Target ID |
+| Google Ad ID | 20914 | GAID | GAID |
+| Apple IDFA | 20915 | IDFA | ID for Advertisers |
 
 To view Standard namespaces in the UI, click **[!UICONTROL Identities]** in the left-rail and then click on the **[!UICONTROL Browse]** tab. All identity namespaces accessible to your organization will be shown, however those with "[!UICONTROL Standard]" as the "[!UICONTROL Owner]" are the Standard namespaces provided by Adobe.
 
