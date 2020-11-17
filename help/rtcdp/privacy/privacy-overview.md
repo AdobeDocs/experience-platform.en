@@ -24,7 +24,7 @@ See the document on [honoring opt-out requests](../../segmentation/honoring-opt-
 
 ## IAB TCF 2.0 support
 
-[!DNL Real-time CDP] is part of the registered [vendor list](https://iabeurope.eu/vendor-list-tcf-v2-0/) for the [!DNL Transparency & Consent Framework] (TCF), as outlined by the [!DNL Interactive Advertising Bureau] (IAB). In compliance with TCF 2.0 requirements, [!DNL Real-time CDP] allows you to collect detailed customer consent data and integrate it into your stored customer profiles. This consent data can then be factored into whether certain profiles are included in exported audience segments, depending on their use case.
+[!DNL Real-time CDP] is part of the registered [vendor list](https://iabeurope.eu/vendor-list-tcf-v2-0/) for the [!DNL Transparency & Consent Framework (TCF)], as outlined by the [!DNL Interactive Advertising Bureau] (IAB). In compliance with TCF 2.0 requirements, [!DNL Real-time CDP] allows you to collect detailed customer consent data and integrate it into your stored customer profiles. This consent data can then be factored into whether certain profiles are included in exported audience segments, depending on their use case.
 
 See the overview on [IAB TCF 2.0 support in [!DNL Real-time CDP]](./iab/overview.md) for more information.
 

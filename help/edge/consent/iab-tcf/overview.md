@@ -19,7 +19,7 @@ Additionally, the following guides are available to assist in learning how to in
 
 In order to implement the AEP Web SDK with IAB TCF 2.0, it is required that you have a working understanding of the Experience Data Model (XDM) and Experience Events. Before you start, please review the following document:
 
-- [Experience Data Model (XDM) System overview](../../../xdm/home.md): Standardization and interoperability are key concepts behind Adobe Experience Platform. [!DNL Experience Data Model] (XDM), driven by Adobe, is an effort to standardize customer experience data and define schemas for customer experience management.
+- [Experience Data Model (XDM) System overview](../../../xdm/home.md): Standardization and interoperability are key concepts behind Adobe Experience Platform. [!DNL Experience Data Model (XDM)], driven by Adobe, is an effort to standardize customer experience data and define schemas for customer experience management.
 
 ## Real-time Customer Data Platform integration
 

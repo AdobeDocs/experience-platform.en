@@ -17,7 +17,7 @@ This document provides a tutorial for managing partial batch ingestion.
 This tutorial requires a working knowledge of the various Adobe Experience Platform services involved with partial batch ingestion. Before beginning this tutorial, please review the documentation for the following services:
 
 - [Batch ingestion](./overview.md): The method which [!DNL Platform] ingests and stores data from data files, such as CSV and Parquet.
-- [[!DNL Experience Data Model] (XDM)](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to [!DNL Platform] APIs.
 
