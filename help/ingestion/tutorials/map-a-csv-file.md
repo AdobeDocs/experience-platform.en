@@ -76,7 +76,7 @@ The **[!UICONTROL Map source to target field]** popover appears. From here, you 
 
 ![](../images/tutorials/map-a-csv-file/manual-mapping.png)
 
-If you want to remove one of the mappings, select the minus icon.
+If you want to remove one of the mappings, hover over that mapping, then select the minus icon.
 
 ### Add calculated field
 
