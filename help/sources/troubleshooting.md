@@ -62,7 +62,7 @@ All batch ingestion sources support partial ingestion. However, streaming ingest
 
 ### When should I use partial ingestion?
 
-Partial ingestion should be used when you when you only want to ingest all valid data, and fail rows that do not pass validation. Alternatively, you can use partial ingestion if you do **not** have constraints such as having the entire file being ingested into Platform. 
+Partial ingestion should be used if you do **not** have constraints, such as having the entire file being ingested into Platform. Alternatively, partial ingestion should be used if you do not mind ingesting data that may contain errors within it.
 
 ### What is the typical partial ingestion error threshold?
 
