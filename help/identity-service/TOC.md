@@ -20,7 +20,7 @@ user-guide-description: Bridge customer identities across devices and systems to
   - [Create a custom namespace](api/create-custom-namespace.md)
   - [List the native ID for an identity](api/list-native-id.md)
 - Identity Service UI {#ui}
-  - [Identity graph viewer](ui/identity-graph-viewer)
+  - [Identity graph viewer](ui/identity-graph-viewer.md)
 - [ECID overview](ecid.md)
 - [Troubleshooting guide](troubleshooting-guide.md)
 - [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)
