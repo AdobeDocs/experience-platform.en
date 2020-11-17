@@ -25,7 +25,7 @@ Working with the identity graph viewer requires an understanding of the various 
 ### Terminology
 
 - **Identity (node):** An identity or a node is data unique to an entity, typically a person. An identity is comprised of a namespace and identity value.
-- **Link (edge):** A link or an edge represents the connection between identities
+- **Link (edge):** A link or an edge represents the connection between identities.
 - **Graph (cluster):** A graph or a cluster is a group of identities and links that represent a person.
 
 ## Access the identity graph viewer
@@ -72,7 +72,7 @@ You can view more information on batches by selecting the **[!UICONTROL Data sou
 
 ![data-source](../images/identity-graph-viewer/data-source-table.png)
 
-You can select any of the links within an identity graph to see how two identifiers are connected.
+You can select any of the links within an identity graph to see all the source batches that contributed to the link.
 
 ![select-links](../images/identity-graph-viewer/select-edge.png)
 
@@ -88,7 +88,7 @@ Identity graphs with larger clusters of identities are also accessible through t
 
 The graph viewer returns an error if the following prerequisites are not met:
 
-- The identity value does not match the namespace selected.
+- The identity value does not exist in the selected namespace.
 - The graph has fewer than two identities.
 - The graph exceeds the maximum of 400 identities.
 
