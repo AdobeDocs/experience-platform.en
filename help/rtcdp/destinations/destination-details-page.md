@@ -8,17 +8,21 @@ seo-description: The details page for an individual destination provides an over
 
 # Destination details page
 
-The details page for an individual destination provides an overview of the destination's attributes and activities. These details include the destination's name and ID, metrics for activated profiles, a history of dataflow runs, controls to activate or disable the destination, and more.
+In the Adobe Experience Platform user interface, you can view and monitor the attributes and activities of batch destinations. These details include the destination's name and ID, segments mapped to the destination, and controls to edit the activation and enable/disable the data flow.
 
 >[!NOTE]
 >
->The destinations details page is part of the [!UICONTROL Destinations] workspace in the Adobe Experience Platform user interface. See the [[!UICONTROL Destinations] workspace overview](./destinations-workspace.md) for more information.
+>The destinations details page is part of the [!UICONTROL Destinations] workspace in the Platform UI. See the [[!UICONTROL Destinations] workspace overview](./destinations-workspace.md) for more information.
 
-In the **[!UICONTROL Destinations]** workspace within the Platform UI, navigate to the **[!UICONTROL Browse]** tab and select the name of the destination that you want to view.
+In the **[!UICONTROL Destinations]** workspace within the Platform UI, navigate to the **[!UICONTROL Browse]** tab and select the name of a batch destination that you want to view.
 
 ![](./assets/details-page/select-destination.png)
 
-The details page for the destination appears, showing its available controls and monitoring widgets.
+>[!NOTE]
+>
+>Details pages for streaming destinations are not currently available. The names of streaming destinations are therefore not selectable from the [!UICONTROL Browse] tab.
+
+The details page for the destination appears, showing its available controls and monitoring dashboard.
 
 ![](./assets/details-page/details.png)
 
@@ -59,7 +63,9 @@ The [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs. T
 
 >[!IMPORTANT]
 >
->Skipped [!DNL Profile] records do not indicate failures or errors. A profile may be skipped if it contains data usage labels that are restricted by the destination, or the profile does not contain the appropriate customer consent information to be activated to the destination.
+>Skipped [!DNL Profile] records do not indicate failures or errors. A profile may be skipped for activation based on profile exits or missing attributes in the dataflow run. 
+>
+>However, a profile may still be excluded from activation if it contains data usage labels that are restricted by the destination, or the profile does not contain the appropriate customer consent information for activation.
 >
 >For more information on data usage labels and how they can restrict profiles from being activated, see the overview on [data governance in Real-time CDP](../privacy/data-governance-overview.md). For more information on supporting customer consent frameworks in the activation workflow, see the overview on [IAB TCF 2.0 support in Real-time CDP](../privacy/iab/overview.md).
 
