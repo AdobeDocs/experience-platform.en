@@ -58,7 +58,7 @@ The following standard namespaces are provided for use by all organizations with
 | AdCloud | 411 | AdCloud | alias: Ad Cloud |
 | Adobe Target | 9 | TNTID | Target ID |
 | Google Ad ID | 20914 | GAID | GAID |
-| Apple IDFA | 20915 | IDFA | ID for Advertisers |
+| Apple IDFA (ID for Advertisers) | 20915 | IDFA | ID for Advertisers |
 
 To view Standard namespaces in the UI, click **[!UICONTROL Identities]** in the left-rail and then click on the **[!UICONTROL Browse]** tab. All identity namespaces accessible to your organization will be shown, however those with "[!UICONTROL Standard]" as the "[!UICONTROL Owner]" are the Standard namespaces provided by Adobe.
 
