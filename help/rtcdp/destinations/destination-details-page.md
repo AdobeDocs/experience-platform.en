@@ -10,17 +10,17 @@ seo-description: The details page for an individual destination provides an over
 
 The details page for an individual destination provides an overview of the destination's attributes and activities. These details include the destination's name and ID, metrics for activated profiles, a history of dataflow runs, controls to activate or disable the destination, and more.
 
-In the **[!UICONTROL Destinations]** workspace in the Adobe Experience Platform user interface, navigate to the **[!UICONTROL Browse]** tab and select the name of the destination whose details you want to view.
+>[!NOTE]
+>
+>The destinations details page is part of the [!UICONTROL Destinations] workspace in the Adobe Experience Platform user interface. See the [[!UICONTROL Destinations] workspace overview](./destinations-workspace.md) for more information.
+
+In the **[!UICONTROL Destinations]** workspace within the Platform UI, navigate to the **[!UICONTROL Browse]** tab and select the name of the destination that you want to view.
 
 ![](./assets/details-page/select-destination.png)
 
 The details page for the destination appears, showing its available controls and monitoring widgets.
 
 ![](./assets/details-page/details.png)
-
-Use the **Enable/Disable** toggle to start and pause the data export to a destination.
-
-![](./assets/details-page/enable-disable.png)
 
 ## Right rail
 
@@ -33,21 +33,29 @@ The following table covers the controls and details provided by the right rail:
 | Right-rail item | Description |
 | --- | --- |
 | [!UICONTROL Activate] | Select this control to edit which segments are mapped to the destination. See the guide on [activating segments to a destination](/help/rtcdp/destinations/activate-destinations.md) for more information. |
-| [!UICONTROL Destination name] | The name of the destination. This field can be edited. |
-| [!UICONTROL Description] | An optional description for the destination. This field can be edited. |
+| [!UICONTROL Destination name] | This field can be edited in order to update the destination's name. |
+| [!UICONTROL Description] |  This field can be edited in order to update or add an optional description to the destination. |
 | [!UICONTROL Destination] | Represents the destination platform that audiences are sent to. See the [destinations catalog](./destinations-catalog.md) for more information. |
 | [!UICONTROL Status] | Indicates whether the destination is enabled or disabled. |
 | [!UICONTROL Marketing actions] | Indicates the marketing actions (use cases) that apply for this destination for data-governance purposes. |
 | [!UICONTROL Category] | Indicates the destination type. See the [destinations catalog](./destinations-catalog.md) for more information. |
-| [!UICONTROL Connection type] | Indicates the form by which your audiences are being sent to the destination. Possible values include "[!UICONTROL Cookie]" or "[!UICONTROL Profile-based]". |
-| [!UICONTROL Frequency] | Indicates how often the audiences are sent to the destination. Can be "[!UICONTROL Streaming]" or "[!UICONTROL Batch]".  |
-| [!UICONTROL Identity] | Represents the identity namespace accepted by the destination, such as GAID, IDFA, or email. For more information on accepted identity namespaces, see the [identity namespace overview](../../identity-service/namespaces.md). |
+| [!UICONTROL Connection type] | Indicates the form by which your audiences are being sent to the destination. Possible values include "[!UICONTROL Cookie]" and "[!UICONTROL Profile-based]". |
+| [!UICONTROL Frequency] | Indicates how often the audiences are sent to the destination. Possible values include "[!UICONTROL Streaming]" and "[!UICONTROL Batch]".  |
+| [!UICONTROL Identity] | Represents the identity namespace accepted by the destination, such as `GAID`, `IDFA`, or `email`. For more information on accepted identity namespaces, see the [identity namespace overview](../../identity-service/namespaces.md). |
 | [!UICONTROL Created by] | Indicates the user who created this destination. |
-| [!UICONTROL Created] | Indicates the UTC date and time when this destination was created. |
+| [!UICONTROL Created] | Indicates the UTC datetime when this destination was created. |
+
+## Enable/Disable toggle
+
+You can use the **Enable/Disable** toggle to start and pause all data exports to the destination.
+
+![](./assets/details-page/enable-disable.png)
 
 ## [!UICONTROL Dataflow runs]
 
-The [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs. Totals for the number of activated and skipped Real-time Customer Profile records are displayed, as well as a table showing individual runs and their particular metrics.
+The [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs. Totals for the number of activated and skipped Real-time Customer Profile records are displayed, as well as a list of individual runs and their particular metrics.
+
+![](./assets/details-page/dataflow-runs.png)
 
 >[!IMPORTANT]
 >
@@ -55,9 +63,7 @@ The [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs. T
 >
 >For more information on data usage labels and how they can restrict profiles from being activated, see the overview on [data governance in Real-time CDP](../privacy/data-governance-overview.md). For more information on supporting customer consent frameworks in the activation workflow, see the overview on [IAB TCF 2.0 support in Real-time CDP](../privacy/iab/overview.md).
 
-![](./assets/details-page/dataflow-runs.png)
-
-To view the details of a particular dataflow run, select the run's start time from the list. The details page for a dataflow run contains additional information such as the size of data processed, and provides a list of any errors that occurred during the run.
+To view the details of a particular dataflow run, select the run's start time from the list. The details page for a dataflow run contains additional information such as the size of data processed and a list of any errors that occurred.
 
 ![](./assets/details-page/dataflow.png)
 
