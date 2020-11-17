@@ -66,23 +66,6 @@ Identity fields must be associated with an existing identity namespace when they
 
 For step-by-step instructions for defining a namespace when creating an identity descriptor using the API, please see the section on [creating a descriptor](../xdm/tutorials/create-schema-ui.md) in the Schema Registry developer guide. For marking a schema field as an identity in the UI, follow the steps in the [Schema Editor tutorial](../xdm/tutorials/create-schema-api.md).
 
-## What are the standard identity namespaces provided by Experience Platform? {#standard-namespaces}
-
-The following standard namespaces are provided for use by all organizations within Experience Platform:
-
-| Display Name | ID | Code | Description |
-| ------------ | --- | --- | ----------- |
-| CORE | 0 | CORE | legacy name: "Adobe AudienceManager" |
-| ECID | 4 | ECID | alias: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID" |
-| Email | 6 | Email | |
-| Email (SHA256, lowercased) | 11 | Emails | Standard namespace for pre-hashed email. Values provided in this namespace are converted to lowercase before hashing with SHA-256. |
-| Phone | 7 | Phone | |
-| Windows AID | 8 | WAID | |
-| AdCloud | 411 | AdCloud | alias: Ad Cloud |
-| Adobe Target | 9 | TNTID | Target ID |
-| Google Ad ID | 20914 | GAID | GAID |
-| Apple IDFA | 20915 | IDFA | ID for Advertisers |
-
 ## Where can I find the list of identity namespaces available for my organization?
 
 Using the [Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml), you can list all available identity namespaces for your organization by making a GET request to the `/idnamespace/identities` endpoint. See the section on [listing available namespaces](./api/list-namespaces.md) in the Identity Service API overview for more information.
