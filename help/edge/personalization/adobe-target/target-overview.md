@@ -14,10 +14,6 @@ The Adobe Experience Platform [!DNL Web SDK] can deliver and render personalized
 
 To enable [!DNL Target], you need to do the following:
 
-1. Turn on activity.id and experience.id reponse tokens in the [!DNL Target] UI.
-
-  ![target_reponse_token](./assets/target_response_token.png)
-
 1. Enable target in your [edge configuration](../../fundamentals/edge-configuration.md) with the appropriate client code.
 1. Add the `renderDecisions` option to your events.
 
@@ -28,7 +24,7 @@ Then, optionally, you can also:
 
 ## Using the Adobe Target VEC
 
-With the SDK, you can use the VEC normally with one exception: you need the [target VEC helper extension](https://docs.adobe.com/content/help/en/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) installed and active.
+In order to use the VEC with a Platform Web SDK implementation, you need to install and activate either the [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) or [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extension.
 
 ## Auto-render VEC Activities
 

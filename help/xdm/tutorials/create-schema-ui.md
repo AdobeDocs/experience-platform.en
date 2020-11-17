@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;;experien
 solution: Experience Platform
 title: Create a schema using the Schema Editor
 topic: tutorial
-type: Tutorials
+type: Tutorial
 description: This tutorial covers the steps for creating a schema using the Schema Editor within Experience Platform.
 ---
 

@@ -1,0 +1,443 @@
+[
+    {
+       "_id": "00",
+       "endUserIDs": {
+          "_experience": {
+             "aaid": {
+                "id": "11ea-8e40",
+                "namespace": {
+                   "code": "aaid"
+                }
+             }
+          }
+       },
+       "timestamp": "2020-03-21T00:52:54.000Z",
+       "receivedTimestamp": "2020-03-21T00:52:54.000Z",
+       "eventType": "web - pageview",
+       "channel": {
+          "_id": "0",
+          "_type": "https://ns.adobe.com/xdm/channel-types/email",
+          "mediaType": "PAID",
+          "mediaAction": "CLICK"
+       },
+       "marketing": {
+          "campaignGroup": "001",
+          "campaignName": "customer acquisition event1",
+          "trackingCode": "8dbg76ws1"
+       },
+       "commerce": {},
+       "productListItems": [
+          {
+             "_id": "01",
+             "SKU": "pd100",
+             "name": "Polarized Sunglasses"
+          }
+       ],
+       "web": {
+          "webPageDetails": {
+             "name": "product details",
+             "pageViews": {
+                "value": 1
+             }
+          }
+       }
+    },
+    {
+       "_id": "01",
+       "endUserIDs": {
+          "_experience": {
+             "aaid": {
+                "id": "11ea-8e40",
+                "namespace": {
+                   "code": "aaid"
+                }
+             }
+          }
+       },
+       "timestamp": "2020-03-21T00:55:45.000Z",
+       "receivedTimestamp": "2020-03-21T00:55:45.000Z",
+       "eventType": "web - pageview",
+       "channel": {
+          "_id": "1"
+       },
+       "marketing": {},
+       "commerce": {
+          "order": {
+             "purchaseID": "order-01",
+             "priceTotal": 8.99
+          }
+       },
+       "productListItems": [
+          {
+             "_id": "01",
+             "SKU": "pd100",
+             "name": "Polarized Sunglasses",
+             "quantity": 1,
+             "priceTotal": 8.99
+          }
+       ],
+       "web": {
+          "webPageDetails": {
+             "name": "purchase: thank you",
+             "pageViews": {
+                "value": 1
+             }
+          }
+       }
+    },
+    {
+       "_id": "02",
+       "endUserIDs": {
+          "_experience": {
+             "aaid": {
+                "id": "11ea-8e41",
+                "namespace": {
+                   "code": "aaid"
+                }
+             }
+          }
+       },
+       "timestamp": "2020-03-21T01:55:32.000Z",
+       "receivedTimestamp": "2020-03-21T01:55:32.000Z",
+       "eventType": "web - pageview",
+       "channel": {
+          "_id": "1",
+          "_type": "https://ns.adobe.com/xdm/channel-types/display",
+          "mediaType": "PAID",
+          "mediaAction": "CLICK"
+       },
+       "marketing": {
+          "campaignGroup": "002",
+          "campaignName": "customer acquisition event2",
+          "trackingCode": "8dbg45us2"
+       },
+       "commerce": {},
+       "productListItems": [
+          {
+             "_id": "02",
+             "SKU": "pd200",
+             "name": "Mouse"
+          }
+       ],
+       "web": {
+          "webPageDetails": {
+             "name": "product details",
+             "pageViews": {
+                "value": 1
+             }
+          }
+       }
+    },
+    {
+       "_id": "03",
+       "endUserIDs": {
+          "_experience": {
+             "aaid": {
+                "id": "11ea-8e41",
+                "namespace": {
+                   "code": "aaid"
+                }
+             }
+          }
+       },
+       "timestamp": "2020-03-21T10:23:35.000Z",
+       "receivedTimestamp": "2020-03-21T10:23:35.000Z",
+       "eventType": "web - pageview",
+       "channel": {
+          "_id": "2"
+       },
+       "marketing": {},
+       "commerce": {
+          "order": {
+             "purchaseID": "order-02",
+             "priceTotal": 99.59
+          }
+       },
+       "productListItems": [
+          {
+             "_id": "02",
+             "SKU": "pd200",
+             "name": "Mouse",
+             "quantity": 1,
+             "priceTotal": 99.59
+          }
+       ],
+       "web": {
+          "webPageDetails": {
+             "name": "purchase: thank you",
+             "pageViews": {
+                "value": 1
+             }
+          }
+       }
+    },
+    {
+       "_id": "04",
+       "endUserIDs": {
+          "_experience": {
+             "aaid": {
+                "id": "11ea-8e42",
+                "namespace": {
+                   "code": "aaid"
+                }
+             }
+          }
+       },
+       "timestamp": "2020-03-23T02:20:12.000Z",
+       "receivedTimestamp": "2020-03-23T02:20:12.000Z",
+       "eventType": "web - pageview",
+       "channel": {
+          "_id": "3",
+          "_type": "https://ns.adobe.com/xdm/channel-types/email",
+          "mediaType": "PAID",
+          "mediaAction": "OPEN"
+       },
+       "marketing": {
+          "campaignGroup": "003",
+          "campaignName": "customer acquisition event3",
+          "trackingCode": "8dbg45ud3"
+       },
+       "commerce": {},
+       "productListItems": [
+          {
+             "_id": "03",
+             "SKU": "pd305",
+             "name": "Cooker"
+          }
+       ],
+       "web": {
+          "webPageDetails": {
+             "name": "product details:",
+             "pageViews": {
+                "value": 2
+             }
+          }
+       }
+    },
+    {
+       "_id": "05",
+       "endUserIDs": {
+          "_experience": {
+             "aaid": {
+                "id": "11ea-8e42",
+                "namespace": {
+                   "code": "aaid"
+                }
+             }
+          }
+       },
+       "timestamp": "2020-03-21T21:51:30.000Z",
+       "receivedTimestamp": "2020-03-21T21:51:30.000Z",
+       "eventType": "web - pageview",
+       "channel": {
+          "_id": "3"
+       },
+       "marketing": {},
+       "commerce": {
+          "order": {
+             "purchaseID": "order-03",
+             "priceTotal": 108.99
+          }
+       },
+       "productListItems": [
+          {
+             "_id": "03",
+             "SKU": "pd305",
+             "name": "Cooker",
+             "quantity": 1,
+             "priceTotal": 108.99
+          }
+       ],
+       "web": {
+          "webPageDetails": {
+             "name": "purchase: thank you",
+             "pageViews": {
+                "value": 1
+             }
+          }
+       }
+    },
+    {
+       "_id": "06",
+       "endUserIDs": {
+          "_experience": {
+             "aaid": {
+                "id": "11ea-8e43",
+                "namespace": {
+                   "code": "aaid"
+                }
+             }
+          }
+       },
+       "timestamp": "2020-03-11T07:27:32.000Z",
+       "receivedTimestamp": "2020-03-11T07:27:32.000Z",
+       "eventType": "web - pageview",
+       "channel": {
+          "_id": "4",
+          "_type": "https://ns.adobe.com/xdm/channel-types/email",
+          "mediaType": "PAID",
+          "mediaAction": "CLICK"
+       },
+       "marketing": {
+          "campaignGroup": "004",
+          "campaignName": "promo",
+          "trackingCode": "3dfkjg74"
+       },
+       "commerce": {},
+       "productListItems": [
+          {
+             "_id": "04",
+             "SKU": "pd110",
+             "name": "Keyboard"
+          }
+       ],
+       "web": {
+          "webPageDetails": {
+             "name": "product details",
+             "pageViews": {
+                "value": 1
+             }
+          }
+       }
+    },
+    {
+       "_id": "07",
+       "endUserIDs": {
+          "_experience": {
+             "aaid": {
+                "id": "11ea-8e43",
+                "namespace": {
+                   "code": "aaid"
+                }
+             }
+          }
+       },
+       "timestamp": "2020-03-11T09:52:12.000Z",
+       "receivedTimestamp": "2020-03-11T09:52:12.000Z",
+       "eventType": "web - pageview",
+       "channel": {
+          "_id": "4"
+       },
+       "marketing": {},
+       "commerce": {
+          "order": {
+             "purchaseID": "order-04",
+             "priceTotal": 92
+          }
+       },
+       "productListItems": [
+          {
+             "_id": "04",
+             "SKU": "pd110",
+             "name": "Keyboard",
+             "quantity": 1,
+             "priceTotal": 92
+          }
+       ],
+       "web": {
+          "webPageDetails": {
+             "name": "purchase: thank you",
+             "pageViews": {
+                "value": 1
+             }
+          }
+       }
+    },
+    {
+       "_id": "08",
+       "endUserIDs": {
+          "_experience": {
+             "aaid": {
+                "id": "11ea-8e44",
+                "namespace": {
+                   "code": "aaid"
+                }
+             }
+          }
+       },
+       "timestamp": "2020-03-15T10:37:19.000Z",
+       "receivedTimestamp": "2020-03-15T10:37:19.000Z",
+       "eventType": "web - pageview",
+       "channel": {
+          "_id": "5",
+          "_type": "https://ns.adobe.com/xdm/channel-types/social",
+          "mediaType": "PAID",
+          "mediaAction": "CLICK"
+       },
+       "marketing": {
+          "campaignGroup": "seo",
+          "campaignName": "promo",
+          "trackingCode": "em103kg"
+       },
+       "commerce": {},
+       "productListItems": [
+          {
+             "_id": "05",
+             "SKU": "pd350",
+             "name": "Earphones"
+          }
+       ],
+       "web": {
+          "webPageDetails": {
+             "name": "product details",
+             "pageViews": {
+                "value": 1
+             }
+          }
+       }
+    },
+    {
+       "_id": "09",
+       "endUserIDs": {
+          "_experience": {
+             "aaid": {
+                "id": "11ea-8e45",
+                "namespace": {
+                   "code": "aaid"
+                }
+             }
+          }
+       },
+       "timestamp": "2020-03-19T18:22:13.000Z",
+       "receivedTimestamp": "2020-03-19T18:22:13.000Z",
+       "eventType": "web - pageview",
+       "channel": {
+          "_id": "6"
+       },
+       "marketing": {},
+       "commerce": {
+          "order": {
+             "purchaseID": "order-05",
+             "priceTotal": 420.99
+          }
+       },
+       "productListItems": [
+          {
+             "_id": "05",
+             "SKU": "pd350",
+             "name": "Earphones",
+             "quantity": 1,
+             "priceTotal": 328.99
+          },
+          {
+             "_id": "04",
+             "SKU": "pd110",
+             "name": "Keyboard",
+             "quantity": 1,
+             "priceTotal": 92
+          }
+       ],
+       "web": {
+          "webPageDetails": {
+             "name": "purchase: thank you",
+             "pageViews": {
+                "value": 1
+             }
+          },
+          "webReferrer": {
+             "URL": "www.shopping.com/product350",
+             "type": "external"
+          }
+       }
+    }
+ ]
