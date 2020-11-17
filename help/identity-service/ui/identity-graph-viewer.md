@@ -48,8 +48,7 @@ The identity graph viewer appears. On the left side of the screen is the identit
 
 >[!IMPORTANT]
 >
->An identity graph requires a minimum of two linked identities to generate, as well as a valid namespace and ID pair. The maximum number of identities that the graph viewer can display is 400.
-
+>An identity graph requires a minimum of two linked identities to generate, as well as a valid namespace and ID pair. The maximum number of identities that the graph viewer can display is 400. See the [appendix](#appendix) section below for more information.
 
 ![identity-graph](../images/identity-graph-viewer/graph-viewer.png)
 
@@ -84,6 +83,16 @@ Alternatively, you can select one batch to see all the links that this batch con
 Identity graphs with larger clusters of identities are also accessible through the identity graph viewer.
 
 ![large-cluster](../images/identity-graph-viewer/large-cluster.png)
+
+## Appendix
+
+The graph viewer returns an error if the following prerequisites are not met:
+
+- The identity value does not match the namespace selected.
+- The graph has fewer than two identities.
+- The graph exceeds the maximum of 400 identities.
+
+![large-cluster](../images/identity-graph-viewer/error-screen.png)
 
 ## Next steps
 
