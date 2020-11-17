@@ -73,11 +73,11 @@ You can view more information on batches by selecting the **[!UICONTROL Data sou
 
 ![data-source](../images/identity-graph-viewer/data-source-table.png)
 
-You can select any of the links within an identity graph to see how two batches are connected.
+You can select any of the links within an identity graph to see how two identifiers are connected.
 
 ![select-links](../images/identity-graph-viewer/select-edge.png)
 
-Alternatively, you can select an entire cluster of identities for a clearer look at the relationship between multiple batches.
+Alternatively, you can select one batch to see all the links that this batch contributed to.
 
 ![select-links](../images/identity-graph-viewer/select-batch.png)
 
