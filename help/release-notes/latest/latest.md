@@ -115,6 +115,7 @@ In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), destinatio
 
 | Feature | Description |
 | ------- | ----------- |
+| Destination details UX updates | Real-time CDP's destination workflow now includes inline monitoring so you can see which batch activations were successful. This feature will enable users to resolve issues directly in the workflow for batch destinations via alerts and a monitoring dashboard to track errors in the processing pipeline.  |
 | Mandatory fields | Users can mark fields as mandatory, ensuring that only fields that contain the mandatory field are exported. |
 
 <!-- | File scheduling | For both email based and cloud storage destinations, users can create a one-time export or create daily snapshots. |
