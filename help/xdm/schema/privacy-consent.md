@@ -141,7 +141,7 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
 
 ### xdm:adID
 
-`xdm:adID` represents the customer's consent for whether an advertiser ID (IDFA or AAID) can be used to link the customer across apps on this device.
+`xdm:adID` represents the customer's consent for whether an advertiser ID (IDFA or GAID) can be used to link the customer across apps on this device.
 
 ```json
 "xdm:adID" : {
