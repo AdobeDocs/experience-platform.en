@@ -32,8 +32,9 @@ Before you can send your audience segments to [!DNL Airship], you must:
 * Enable attributes in your [!DNL Airship] project.
 * Generate a bearer token for authentication.
 
-> [!TIP]
-> Create an [!DNL Airship] account via [this signup link](https://go.airship.eu/accounts/register/plan/starter/) if you have not already.
+>[!TIP]
+>
+>Create an [!DNL Airship] account via [this signup link](https://go.airship.eu/accounts/register/plan/starter/) if you have not already.
 
 ### Enable attributes {#enable-attributes}
 
