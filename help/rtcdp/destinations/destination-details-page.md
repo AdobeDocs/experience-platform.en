@@ -8,7 +8,7 @@ seo-description: The details page for an individual destination provides an over
 
 # Destination details page
 
-In the Adobe Experience Platform user interface, you can view and monitor the attributes and activities of batch destinations. These details include the destination's name and ID, controls to activate or disable the destinations, and more. Details for batch destinations also include metrics for activated profile records and a history of dataflow runs.
+In the Adobe Experience Platform user interface, you can view and monitor the attributes and activities of your destinations. These details include the destination's name and ID, controls to activate or disable the destinations, and more. Details for batch destinations also include metrics for activated profile records and a history of dataflow runs.
 
 >[!NOTE]
 >
@@ -17,10 +17,6 @@ In the Adobe Experience Platform user interface, you can view and monitor the at
 In the **[!UICONTROL Destinations]** workspace within the Platform UI, navigate to the **[!UICONTROL Browse]** tab and select the name of a batch destination that you want to view.
 
 ![](./assets/details-page/select-destination.png)
-
->[!NOTE]
->
->Details pages for streaming destinations are not currently available. The names of streaming destinations are therefore not selectable from the [!UICONTROL Browse] tab.
 
 The details page for the destination appears, showing its available controls. If you are viewing the details of a batch destination, a monitoring dashboard also appears.
 
