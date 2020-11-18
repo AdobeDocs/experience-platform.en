@@ -69,6 +69,7 @@ Leverage Attributes from Adobe Experience Platform to further enrich [!DNL Airsh
     >[!NOTE]
     >
     >If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](/help/rtcdp/destinations/destinations-workspace.md#catalog) section of the destination workspace documentation.
+    
     ![Connect to Airship Attributes](/help/rtcdp/destinations/assets/airship-attributes-in-catalog.png)
 
 2. In the **Account** step, if you had previously set up a connection to your [!DNL Airship Attributes] destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to [!DNL Airship Attributes]. Select **[!UICONTROL Connect to destination]** to connect Adobe Experience Platform to your [!DNL Airship] project using the bearer token that you generated from the [!DNL Airship] dashboard.
@@ -76,6 +77,7 @@ Leverage Attributes from Adobe Experience Platform to further enrich [!DNL Airsh
     >[!NOTE]
     >
     >Adobe Experience Platform supports credentials validation in the authentication process and displays an error message if you input incorrect credentials to your [!DNL Airship] account. This ensures that you don't complete the workflow with incorrect credentials.
+    
     ![Connect to Airship Attributes](/help/rtcdp/destinations/assets/airship1-connect-to-airship.png)
 
 3. Once your credentials are confirmed and Adobe Experience Platform is connected to your [!DNL Airship] project, you can select **[!UICONTROL Next]** to proceed to the **[!UICONTROL Setup]** step.
@@ -132,6 +134,7 @@ To activate segments to [!DNL Airship Attributes], follow the steps below:
 >[!IMPORTANT]
 >
 >In this step, Adobe Experience Platform checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](/help/rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
+    
 ![confirm-selection](/help/rtcdp/destinations/assets/data-policy-violation.png)
 
 If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
