@@ -1,12 +1,12 @@
 ---
 keywords: airship attributes;airship destination
-title: Airship Attributes Destination
-seo-title: Airship Attributes Destination
+title: Airship Attributes destination
+seo-title: Airship Attributes destination
 description: Seamlessly pass Adobe Audience Data to Airship as Audience Attributes for targeting within Airship.
 seo-description: Seamlessly pass Adobe Audience Data to Airship as Audience Attributes for targeting within Airship.
 ---
 
-# (Beta) [!DNL Airship Attributes] Destination {#airship-attributes-destination}
+# (Beta) [!DNL Airship Attributes] destination {#airship-attributes-destination}
 
 >[!IMPORTANT]
 >
@@ -50,19 +50,19 @@ Adobe Experience Platform profile attributes are similar to [!DNL Airship] attri
 1. Click **[!UICONTROL Create Token]** and save the details as confidential.
 
 
-## Use Cases {#use-cases}
+## Use cases {#use-cases}
 
 To help you better understand how and when you should use the [!DNL Airship Attributes] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
-### Use Case #1
+### Use case #1
 
 Leverage profile data collected within Adobe Experience Platform for personalization of the message and rich content within any of [!DNL Airship]'s channels. For example, leverage [!DNL Experience Platform] profile data to set location attributes within [!DNL Airship]. This will enable a hotel brand to display an image for the nearest hotel location for each user.
 
-### Use Case #2
+### Use case #2
 
 Leverage Attributes from Adobe Experience Platform to further enrich [!DNL Airship] profiles and combine it with SDK or [!DNL Airship] predictive data. For example, a retailer can create a segment with loyalty status and location data (attributes from Platform) and [!DNL Airship] predicted to churn data to send highly targeted messages to users in the gold loyalty status who live in Las Vegas, NV, and have a high probability of churning.
 
-## Connect to [!DNL Airship] Attributes {#connect-airship-attributes}
+## Connect to [!DNL Airship Attributes] {#connect-airship-attributes}
 
 1. In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scroll to the **[!UICONTROL Mobile Engagement]** category. Select **[!DNL Airship Attributes]**, then select **[!UICONTROL Configure]**.
 

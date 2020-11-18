@@ -1,12 +1,12 @@
 ---
 keywords: airship tags;airship destination
 title: Airship Tags Destination
-seo-title: Airship Tags Destination
+seo-title: Airship Tags destination
 description: Seamlessly pass Adobe Audience Data to Airship as Audience Tags for targeting within Airship.
 seo-description: Seamlessly pass Adobe Audience Data to Airship as Audience Tags for targeting within Airship.
 ---
 
-# (Beta) [!DNL Airship Tags] Destination {#airship-tags-destination}
+# (Beta) [!DNL Airship Tags] destination {#airship-tags-destination}
 
 >[!IMPORTANT]
 >
@@ -56,15 +56,15 @@ See [Manage Tag Groups](https://docs.airship.com/tutorials/manage-project/messag
 1. Click **[!UICONTROL Create Token]** and save the details as confidential.
 
 
-## Use Cases
+## Use cases
 
 To help you better understand how and when you should use the [!DNL Airship Tags] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
-### Use Case #1
+### Use case #1
 
 Retailers or entertainment platforms can create user profiles on their loyalty customers, and pass those segments into [!DNL Airship] for message targeting on mobile campaigns.
 
-### Use Case #2
+### Use case #2
 
 Trigger one-to-one messages in real time when users fall into or out of specific segments within Adobe Experience Platform.
 

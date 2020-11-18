@@ -1,7 +1,7 @@
 ---
 keywords: mobile; braze; messaging;
-title: Braze Destination
-seo-title: Braze Destination
+title: Braze destination
+seo-title: Braze destination
 description: Braze is a comprehensive customer engagement platform that powers relevant and memorable experiences between customers and the brands they love.
 seo-description: Braze is a comprehensive customer engagement platform that powers relevant and memorable experiences between customers and the brands they love.
 ---
@@ -50,6 +50,7 @@ As a marketer, I want to target users in a mobile engagement destination, with s
     >![Activate Braze Destination](assets/braze-destination-activate.png)
 
 1. In the [!UICONTROL Account] step, you need to provide your [!DNL Braze] account token. This is your [!DNL Braze] [!DNL API] key. You can find detailed instructions on how to obtain your [!DNL API] key here: [REST API Key Overview](https://www.braze.com/docs/api/api_key/). Enter the token and click **[!UICONTROL Connect to destination]**. 
+
    ![Braze Destination Account Step](assets/braze-destination-account.png)
 
 1. Click **[!UICONTROL Next]**.
