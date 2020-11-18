@@ -1,9 +1,9 @@
 ---
 keywords: streaming;
-title: The HTTP destination is an Adobe Real-Time Customer Data Platform destination that helps you send profile data to third-party HTTP endpoints.
-seo-title: The HTTP destination is an Adobe Real-Time Customer Data Platform  destination that helps you send profile data to third-party HTTP endpoints.
-description: The HTTP destination is an Adobe Real-Time Customer Data Platform  destination that helps you send profile data to third-party HTTP endpoints.
-seo-description: The HTTP destination is an Adobe Real-Time Customer Data Platform  destination that helps you send profile data to third-party HTTP endpoints.
+title: The HTTP destination is an Real-time Customer Data Platform destination that helps you send profile data to third-party HTTP endpoints.
+seo-title: The HTTP destination is an Real-time Customer Data Platform  destination that helps you send profile data to third-party HTTP endpoints.
+description: The HTTP destination is an Real-time Customer Data Platform  destination that helps you send profile data to third-party HTTP endpoints.
+seo-description: The HTTP destination is an Real-time Customer Data Platform  destination that helps you send profile data to third-party HTTP endpoints.
 ---
 
 # (Alpha) [!DNL HTTP] Destination 
@@ -14,9 +14,9 @@ seo-description: The HTTP destination is an Adobe Real-Time Customer Data Platfo
 
 ## Overview {#overview}
 
-The [!DNL HTTP] destination is an [!DNL Adobe Real-Time Customer Data Platform] streaming destination that helps you send profile data to third-party [!DNL HTTP] endpoints.
+The [!DNL HTTP] destination is an [!DNL Real-time Customer Data Platform] streaming destination that helps you send profile data to third-party [!DNL HTTP] endpoints.
 
-To send profile data to [!DNL HTTP] endpoints, you must first connect to the destination in the [[!DNL Adobe Real-Time Customer Data Platform]](#connect-destination).
+To send profile data to [!DNL HTTP] endpoints, you must first connect to the destination in the [[!DNL Real-time Customer Data Platform]](#connect-destination).
 
 ## Use Cases {#use-cases}
 

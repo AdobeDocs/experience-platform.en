@@ -2,8 +2,8 @@
 keywords: Talk URL Inbox;talk url inbox;Talk URL inbox;talk URL inbox;talk url;Talk URL;Talk url
 title: Talk URL Inbox extension
 seo-title: Talk URL Inbox
-description: The Talk URL Inbox extension is a voice of the customer destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Talk URL Inbox extension is a voice of the customer destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Talk URL Inbox extension is a voice of the customer destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The Talk URL Inbox extension is a voice of the customer destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Talk URL Inbox] Extension {#talk-url-extension}
@@ -12,7 +12,7 @@ seo-description: The Talk URL Inbox extension is a voice of the customer destina
 
 Receive voice messages from your web page visitors. Includes hosted UI and cloud-based machine learning to transcribe your voice messages into text insights instantly.
 
-[!DNL Talk URL Inbox] is a voice of the customer extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100583.html).
+[!DNL Talk URL Inbox] is a voice of the customer extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100583.html).
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 

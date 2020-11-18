@@ -2,8 +2,8 @@
 keywords: Marketo;marketo;Marketo extension;marketo extension
 title: Marketo extension
 seo-title: Marketo extension
-description: The Marketo extension is an email destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Marketo extension is an email destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Marketo extension is an email destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The Marketo extension is an email destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Marketo] Extension {#marketo-extension}
@@ -12,7 +12,7 @@ seo-description: The Marketo extension is an email destination in Adobe Real-tim
 
 [!DNL Marketo's] powerful marketing automation software helps marketers master the art & science of digital marketing to engage customers and prospects.
 
-[!DNL Marketo] is an email extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the [extension page on Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101071.marketo-for-adobe-launch.html).
+[!DNL Marketo] is an email extension in Real-time Customer Data Platform. For more information about the extension functionality, see the [extension page on Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101071.marketo-for-adobe-launch.html).
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 

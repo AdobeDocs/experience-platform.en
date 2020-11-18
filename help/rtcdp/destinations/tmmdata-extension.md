@@ -2,8 +2,8 @@
 keywords: TMMData;tmm data;tmmdata;TMM data
 title: TMMData extension
 seo-title: TMMData extension
-description: THe TMMData extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The TMMData extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: THe TMMData extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The TMMData extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL TMMData] Extension {#tmmdata-extension}
@@ -12,7 +12,7 @@ seo-description: The TMMData extension is an analytics destination in Adobe Real
 
 [!DNL TMMData's] Foundation platform for Adobe Marketing Cloud provides marketing teams with the tools to access and blend all their critical data sources - including internal/external and online/off-line data - for confident, comprehensive cross-channel analysis, with automated campaign setup and direct imports to Adobe and other analytics and BI tools.
 
-[!DNL TMMData] is an analytics extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](hhttps://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
+[!DNL TMMData] is an analytics extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](hhttps://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 

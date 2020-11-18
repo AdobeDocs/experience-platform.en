@@ -100,7 +100,7 @@ For more information, please read the document on [creating a recipe using Jupyt
 
 ## [!DNL Destinations] Service {#destinations}
 
-In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
+In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
 **New destinations**
 

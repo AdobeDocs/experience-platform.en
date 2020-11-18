@@ -2,8 +2,8 @@
 keywords: Medallia;medallia
 title: Medallia extension
 seo-title: Medallia extension
-description: THe Medallia extension is a voice of the customer destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Medallia extension is a voice of the customer destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: THe Medallia extension is a voice of the customer destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The Medallia extension is a voice of the customer destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Medallia] Extension {#medallia-extension}
@@ -12,7 +12,7 @@ seo-description: The Medallia extension is a voice of the customer destination i
 
 Deploy [!DNL Medallia] quickly and seamlessly on your web properties. The extension also allows you to detect survey events, capture customer feedback in real-time through Data elements, use it in rules to personalize your customer's experience and share data with Adobe Analytics.
 
-[!DNL Medallia] is a voice of the customer extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html).
+[!DNL Medallia] is a voice of the customer extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html).
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 

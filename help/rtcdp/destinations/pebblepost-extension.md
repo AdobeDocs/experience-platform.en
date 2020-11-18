@@ -2,8 +2,8 @@
 keywords: PebblePost;pebblepost;PebblePost Programmatic Direct Mail;pebblepost programmatic direct mail
 title: PebblePost extension
 seo-title: PebblePost extension
-description: THe PebblePost extension is an email destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The PebblePost extension is an email destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: THe PebblePost extension is an email destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The PebblePost extension is an email destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL PebblePost] Extension {#pebblepost-extension}
@@ -12,7 +12,7 @@ seo-description: The PebblePost extension is an email destination in Adobe Real-
 
 [!DNL PebblePost's Programmatic Direct Mail®] solution helps digital marketers connect online interest and intent to offline, tangible media that converts. Marketers can leverage the custom data segments they have created in Adobe to now target consumers with a relevant, longer-lasting, in-home media impression. Analyze performance in real-time based on response path activity and on-site conversions.
 
-[!DNL PebblePost] is an email extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html).
+[!DNL PebblePost] is an email extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html).
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 

@@ -2,8 +2,8 @@
 keywords: twitter;Twitter;twitter universal website tag;Twitter universal website tag;Twitter UWT Tag;Twitter uwt;twitter uwt
 title: Twitter Universal Website Tag extension
 seo-title: Twitter Universal Website Tag extension
-description: THe Twitter Universal Website Tag extension is an advertising destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Twitter Universal Website Tag extension is an advertising destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: THe Twitter Universal Website Tag extension is an advertising destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The Twitter Universal Website Tag extension is an advertising destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Twitter Universal Website Tag] Extension {#twitter-uwt-extension}
@@ -12,7 +12,7 @@ seo-description: The Twitter Universal Website Tag extension is an advertising d
 
 [!DNL Twitter Universal Website Tag] provides actions to send beacons to Twitter UWT Tag.
 
-[!DNL Twitter Universal Website Tag] is an advertising extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see [Advanced Conversion Tracking](https://business.twitter.com/en/solutions/twitter-ads/website-clicks/advanced-conversion-tracking.html).
+[!DNL Twitter Universal Website Tag] is an advertising extension in Real-time Customer Data Platform. For more information about the extension functionality, see [Advanced Conversion Tracking](https://business.twitter.com/en/solutions/twitter-ads/website-clicks/advanced-conversion-tracking.html).
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
