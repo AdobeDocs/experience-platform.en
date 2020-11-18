@@ -72,15 +72,19 @@ Select a namespace to see more specific information on the right-rail.
 
 Depending on your organizational data and use cases, you may require custom namespaces.
 
-These are visible in the UI as those namespaces with "[!UICONTROL Custom]" as the "[!UICONTROL Owner]". Custom namespaces can be created using the [!DNL Identity Service] API or through the user interface.
+These are visible in the UI as those namespaces with **[!UICONTROL Custom]** as the **[!UICONTROL Owner]**. Custom namespaces can be created using the [!DNL Identity Service] API or through the UI.
 
-To create a custom namespace using the UI, click **[!UICONTROL Create identity namespace]**, then complete the dialog and click **[!UICONTROL Create]**.
+To create a custom namespace using the UI, select the **[!UICONTROL Create identity namespace]** button on the top-right of the **[!UICONTROL Identity Namespace]** page
+
+![](./images/create.png)
+
+The **[!UICONTROL Create identity namespace]** dialog box appears. Provide a unique **[!UICONTROL Display name]** and a unique **[!UICONTROL Identity symbol]** and then select the identity type you would like to create. You can also add an optional description to provide further information on the namespace. When finished, select **[!UICONTROL Create]**.
 
 Namespaces that you define are private to your organization and require a unique "[!UICONTROL Identity Symbol]" (or "code" if you are using the API) in order to be created successfully.
 
 ![](./images/create-namespace.png)
 
-Similar to Standard namespaces, you can click on a Custom namespace from the **[!UICONTROL Browse]** tab to view its details, however with a Custom namespace you can also edit its Display Name and Description from the details area.
+Similar to standard namespaces, you can click on a custom namespace from the **[!UICONTROL Browse]** tab to view its details, however with a custom namespace you can also edit its display name and description from the details area.
 
 >[!NOTE]
 >
