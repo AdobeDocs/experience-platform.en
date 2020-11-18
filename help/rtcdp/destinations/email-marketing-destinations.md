@@ -29,6 +29,8 @@ In the **[!UICONTROL Authentication]** step, if you had previously set up a conn
 - For **SFTP with Password** connections, you must provide Domain, Port, Username, and Password for your SFTP server.
 - For **SFTP with SSH Key** connections, you must provide Domain, Port, Username, and SSH Key for your SFTP server.
 
+Optionally, you can attach your RSA-formatted public key to add encryption to your exported files under the **[!UICONTROL Key]** section. Note that this public key **must** be written as a Base64 encoded string.
+
 In the **[!UICONTROL Setup]** step, enter a name and a description for your new destination, as well as the file format for the exported files.
 
 If you selected Amazon S3 as storage option in the previous step, insert the bucket name and the folder path in your cloud storage destination where the files will be delivered. For the SFTP storage option, insert the folder path where the files will be delivered. 
