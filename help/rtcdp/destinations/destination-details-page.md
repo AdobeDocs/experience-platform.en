@@ -53,15 +53,18 @@ You can use the **[!UICONTROL Enabled]/[!UICONTROL Disabled]** toggle to start a
 
 ## [!UICONTROL Dataflow runs]
 
-The [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs to batch destinations. Totals for the number of activated and skipped profile records are displayed, as well as a list of individual runs and their particular metrics.
+The [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs to batch destinations. A list of individual runs and their particular metrics is displayed, along with the following totals for profile records:
+
+* **[!UICONTROL Profile records activated]**: The total count of profile records that were created or updated for activation.
+* **[!UICONTROL Profile records skipped]**:  The total count of profile records that are skipped for activation based on profile exits or missing attributes.
 
 ![](./assets/details-page/dataflow-runs.png)
 
->[!IMPORTANT]
+>[!NOTE]
 >
->Skipped [!DNL Profile] records do not indicate failures or errors. A profile may be skipped for activation based on profile exits or missing attributes in the dataflow run. 
+>Dataflow runs are generated based on the destination dataflow's schedule frequency.
 
-To view the details of a particular dataflow run, select the run's start time from the list. The details page for a dataflow run contains additional information such as the size of data processed and a list of any errors that occurred.
+To view the details of a particular dataflow run, select the run's start time from the list. The details page for a dataflow run contains additional information such as the size of data processed and a list of any errors that occurred with details for error diagnostics.
 
 ![](./assets/details-page/dataflow.png)
 
