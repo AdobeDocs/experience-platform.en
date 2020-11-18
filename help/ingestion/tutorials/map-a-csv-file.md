@@ -54,25 +54,29 @@ The **[!UICONTROL Sample data]** section appears once the file is uploaded, show
 
 ## Map CSV fields to XDM schema fields
 
-The **[!UICONTROL Mapping]** step appears. The columns of the CSV file are listed under **[!UICONTROL Source Field]**, with their corresponding XDM schema fields listed under **[!UICONTROL Target Field]**. Unselected target fields are outlined in red. You can use the filter fields option to narrow down the list of source fields available.
+The **[!UICONTROL Mapping]** step appears. The columns of the CSV file are listed under **[!UICONTROL Source Field]**, with their corresponding XDM schema fields listed under **[!UICONTROL Target Field]**. 
 
->[!TIP]
->
->[!DNL Platform] provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
+[!DNL Platform] automatically provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
 
-To map a CSV column to an XDM field, select the schema icon next to the column's corresponding target field.
+![](../images/tutorials/map-a-csv-file/mapping-with-suggestions.png)
 
-![](../images/tutorials/map-a-csv-file/mapping.png)
+To accept all the auto-generating mapping values, select the checkbox labelled "[!UICONTROL Accept all target fields]".
 
-The **[!UICONTROL Select schema field]** window appears. Here you can navigate the structure of the XDM schema and locate the field you wish to map the CSV column to. Click an XDM field to select it, then click **[!UICONTROL Select]**.
+![](../images/tutorials/map-a-csv-file/filled-mapping-with-suggestions.png)
 
-![](../images/tutorials/map-a-csv-file/select-schema-field.png)
+Sometimes, more than one recommendation is available for the source schema. When this happens, the mapping card displays the most prominent recommendation, followed by a blue circle that contains the number of additional recommendations available. Selecting the light bulb icon will show a list of the additional recommendations. You can choose one of the alternate recommendations by selecting the checkbox next to the recommendation you want to map to instead.
 
-After you complete the steps for the remaining unmapped source fields, the **[!UICONTROL Mapping]** screen reappears with the selected XDM field now appearing under **[!UICONTROL Target Field]**.
+![](../images/tutorials/map-a-csv-file/multiple-recommendations.png)
 
-![](../images/tutorials/map-a-csv-file/field-mapped.png)
+Alternatively, you can choose to manually map your source schema to your target schema. Hover over the source schema you want to map, then select the plus icon. 
 
-When mapping fields, you can also include functions to compute values based on input source fields. See the [mapping functions](#mapping-functions) section in the appendix for more information.
+![](../images/tutorials/map-a-csv-file/mapping-with-suggestions-and-buttons.png)
+
+The **[!UICONTROL Map source to target field]** popover appears. From here, you can select which field you want to be mapped, followed by **[!UICONTROL Save]** to add your new mapping.
+
+![](../images/tutorials/map-a-csv-file/manual-mapping.png)
+
+If you want to remove one of the mappings, hover over that mapping, then select the minus icon.
 
 ### Add calculated field
 
@@ -80,7 +84,7 @@ Calculated fields allow for values to be created based on the attributes in the 
 
 Select the **[!UICONTROL Add calculated field]** button to proceed.
 
-![](../images/tutorials/map-a-csv-file/add-calculate-field.png)
+![](../images/tutorials/map-a-csv-file/add-calculated-field.png)
 
 The **[!UICONTROL Create calculated field]** panel appears. The left dialog box contains the fields, functions, and operators supported in calculated fields. Select one of the tabs to start adding functions, fields, or operators to the expression editor.
 
@@ -89,32 +93,22 @@ The **[!UICONTROL Create calculated field]** panel appears. The left dialog box 
 | Tab | Description |
 | --------- | ----------- |
 | Fields | The fields tab lists fields and attributes available in the source schema. |
-| Functions | The functions tab lists the functions available to transform the data. |
+| Functions | The functions tab lists the functions available to transform the data. To learn more about the functions you can use within calculated fields, please read the guide on [using Data Prep (Mapper) functions](../../data-prep/functions.md). |
 | Operators | The operators tab lists the operators that are available to transform the data. |
 
 You can manually add fields, functions, and operators using the expression editor at the center. Select the editor to start creating an expression.
 
-![](../images/tutorials/map-a-csv-file/expression-editor.png)
+![](../images/tutorials/map-a-csv-file/create-calculated-field.png)
 
 Select **[!UICONTROL Save]** to proceed.
 
 The mapping screen reappears with your newly created source field. Apply the appropriate corresponding target field and select **[!UICONTROL Finish]** to complete the mapping.
 
-![](../images/tutorials/map-a-csv-file/new-field.png)
+![](../images/tutorials/map-a-csv-file/new-calculated-field.png)
 
 ## Monitor your dataflow
 
 Once your CSV file is mapped and created, you can monitor the data that is being ingested through it. For more information on monitoring dataflows, see the tutorial on [monitoring streaming dataflows](../../ingestion/quality/monitor-data-flows.md).
-
-## Using mapping functions
-
-To use a function, type it in under **[!UICONTROL Source Field]** with appropriate syntax and inputs.
-
-For example, to concatenate city and country CSV fields and assign them to the city XDM field, set the source field as `concat(city, ", ", county)`.
-
-![](../images/tutorials/map-a-csv-file/mapping-function.png)
-
-To learn more about mapping columns to XDM fields, read the guide on [using Data Prep (Mapper) functions](../../data-prep/functions.md).
 
 ## Next steps
 

@@ -48,7 +48,9 @@ user-guide-description: Bring together known and anonymous data from multiple en
       * [Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
       * [Google gtag extension](/help/rtcdp/destinations/gtag-advertising-extension.md)
       * [LinkedIn Insight Tag extension](/help/rtcdp/destinations/linkedin-extension.md)
+      * [Microsoft Bing](/help/rtcdp/destinations/bing-destination.md)
       * [Pinterest Conversion Tracking extension](destinations/pinterest-extension.md)
+      * [The Trade Desk destination](/help/rtcdp/destinations/tradedesk-destination.md)
       * [Twitter Universal Website Tag extension](destinations/twitter-uwt-extension.md)
     * Analytics destinations {#analytics-destinations}
       * [Analytics destinations overview](destinations/analytics-destinations.md)
