@@ -2,7 +2,7 @@
 keywords: Medallia;medallia
 title: Medallia extension
 seo-title: Medallia extension
-description: THe Medallia extension is a voice of the customer destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Medallia extension is a voice of the customer destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 seo-description: The Medallia extension is a voice of the customer destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 

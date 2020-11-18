@@ -2,7 +2,7 @@
 keywords: Yext Conversion Trackin;Yext;yext;yext conversion tracking
 title: Yext Conversion Tracking extension
 seo-title: Yext Conversion Tracking extension
-description: THe Yext Conversion Tracking extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Yext Conversion Tracking extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 seo-description: The Yext Conversion Tracking extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 

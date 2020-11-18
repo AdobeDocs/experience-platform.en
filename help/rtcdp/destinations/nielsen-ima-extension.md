@@ -2,7 +2,7 @@
 keywords: Nielsen IMA Handler;nielsen ima handler;nielsen ima;Nielsen ima;Nielsen IMA
 title: Nielsen IMA Handler extension
 seo-title: Nielsen IMA Handler extension
-description: THe Nielsen IMA Handler extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Nielsen IMA Handler extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 seo-description: The Nielsen IMA Handler extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 

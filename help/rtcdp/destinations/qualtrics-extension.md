@@ -2,7 +2,7 @@
 keywords: Qualtrics;qualtrics;Qualtrics Website Feedback;qualtrics website feedback;Qualtricks website feedback
 title: Qualtrics Website Feedback extension
 seo-title: Qualtrics Website Feedback extension
-description: THe Qualtrics Website Feedback extension is a surveys destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Qualtrics Website Feedback extension is a surveys destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 seo-description: The Qualtrics Website Feedback extension is a surveys destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 

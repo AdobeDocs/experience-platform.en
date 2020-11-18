@@ -1,9 +1,9 @@
 ---
 keywords: streaming;
-title: The HTTP destination is an Real-time Customer Data Platform destination that helps you send profile data to third-party HTTP endpoints.
-seo-title: The HTTP destination is an Real-time Customer Data Platform  destination that helps you send profile data to third-party HTTP endpoints.
-description: The HTTP destination is an Real-time Customer Data Platform  destination that helps you send profile data to third-party HTTP endpoints.
-seo-description: The HTTP destination is an Real-time Customer Data Platform  destination that helps you send profile data to third-party HTTP endpoints.
+title: The HTTP destination is a Real-time Customer Data Platform destination that helps you send profile data to third-party HTTP endpoints.
+seo-title: The HTTP destination is a Real-time Customer Data Platform  destination that helps you send profile data to third-party HTTP endpoints.
+description: The HTTP destination is a Real-time Customer Data Platform  destination that helps you send profile data to third-party HTTP endpoints.
+seo-description: The HTTP destination is a Real-time Customer Data Platform  destination that helps you send profile data to third-party HTTP endpoints.
 ---
 
 # (Alpha) [!DNL HTTP] Destination 

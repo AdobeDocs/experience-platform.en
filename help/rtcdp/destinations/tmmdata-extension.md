@@ -2,7 +2,7 @@
 keywords: TMMData;tmm data;tmmdata;TMM data
 title: TMMData extension
 seo-title: TMMData extension
-description: THe TMMData extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The TMMData extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 seo-description: The TMMData extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 

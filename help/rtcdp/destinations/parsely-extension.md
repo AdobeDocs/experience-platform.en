@@ -2,7 +2,7 @@
 keywords: Parse. ly;parsely;Parsely;parse.ly;Parse.ly
 title: Parse.ly Analytics extension
 seo-title: Parse.ly Analytics extension
-description: THe Parse.ly Analytics extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Parse.ly Analytics extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 seo-description: The Parse.ly Analytics extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 

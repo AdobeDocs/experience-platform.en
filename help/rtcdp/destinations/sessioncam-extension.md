@@ -2,7 +2,7 @@
 keywords: SessionCam;session cam;sessioncam
 title: SessionCam extension
 seo-title: SessionCam extension
-description: THe SessionCam extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The SessionCam extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 seo-description: The SessionCam extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 

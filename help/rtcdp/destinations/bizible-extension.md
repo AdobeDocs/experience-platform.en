@@ -2,7 +2,7 @@
 keywords: bizible;bizible extension;bizible destination
 title: Bizible extension
 seo-title: Bizible extension
-description: THe Bizible extension is an email destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Bizible extension is an email destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 seo-description: The Bizible extension is an email destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
