@@ -34,14 +34,14 @@ The following identity types are available within [!DNL Platform]:
 
 | Identity type | Description |
 | --- | --- |
-| Cookie | These identities are critical for expansion and constitute the majority of the identity graph. However, by nature they decay fast and lose their value over time. Deletion of cookies is handled specially in the identity graph. |
-| Cross-Device | This indicates that [!DNL Identity Service] should consider this to be a strong people identifier and hence preserve it forever. Examples include a login ID, CRM ID, loyalty ID etc. |
-| Device| Includes IDFA, GAID & other IOT IDs. These can be shared by people in households.|
+| Cookie ID | Cookie IDs identify web browsers. These identities are critical for expansion and constitute the majority of the identity graph. However, by nature they decay fast and lose their value over time. |
+| Cross-Device ID | Cross-device IDs identify an individual and usually tie other IDs together. Examples include a login ID, CRM ID, and loyalty ID. This is an indication to [!DNL Identity Service] to handle the value sensitively. |
+| Device ID | Device IDs identify hardware devices, such as IDFA (iPhone and iPad), GAID (Android), and RIDA (Roku), and can be shared by multiple people in households.|
 | Email| Identities of this type include personally identifiable information (PII). This is an indication to [!DNL Identity Service] to handle the value sensitively.|
-| Non-people| Used for storing identifiers that need namespaces, yet are not tied to a person cluster. These identifiers are then filtered from the identity graph. Possible use cases include data related to products, organizations, stores, etc. (For example, a product SKU.) |
-| Phone | Identities of this type include PII. This is indication to [!DNL Identity Service] to handle the value sensitively.|
+| Non-people identifier | Non-people IDs are used for storing identifiers that require namespaces but are not connected to a person cluster. For example, a product SKU, data related to products, organizations, or stores. |
+| Phone number | Identities of this type include PII. This is indication to [!DNL Identity Service] to handle the value sensitively. |
 
-### Standard namespaces {#standard}
+### Standard namespaces
 
 Adobe Experience Platform provides several identity namespaces that are available to all organizations. These are known as Standard namespaces and are visible using the [!DNL Identity Service] API or through the [!DNL Platform] UI.
 
@@ -52,7 +52,7 @@ The following standard namespaces are provided for use by all organizations with
 | CORE | 0 | CORE | legacy name: "Adobe AudienceManager" |
 | ECID | 4 | ECID | alias: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID" |
 | Email | 6 | Email | |
-| Email (SHA256, lowercased) | 11 | Emails | Standard namespace for pre-hashed email. Values provided in this namespace are converted to lowercase before hashing with SHA-256. |
+| Emails (SHA256, lowercased) | 11 | Email_LC_SHA256 | Standard namespace for pre-hashed email. Values provided in this namespace are converted to lowercase before hashing with SHA-256. |
 | Phone | 7 | Phone | |
 | Windows AID | 8 | WAID | |
 | AdCloud | 411 | AdCloud | alias: Ad Cloud |
