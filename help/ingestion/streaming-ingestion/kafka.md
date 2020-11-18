@@ -15,4 +15,4 @@ The stream connector is a sink (one-way) connector, delivering data from [!DNL K
 - Authenticated collection of data
 - Batching messages to reduce network calls and increase throughput
 
-For more information on the [!DNL Kafka] connector, including instructions on how to set up the connector, please read the [getting started guide](https://github.com/adobe/experience-platform-streaming-connect). For a more detailed workflow, please read the [developer guide](https://github.com/adobe/experience-platform-streaming-connect/blob/master/DEVELOPER_GUIDE.md).
+For more information on the [!DNL Kafka] connector, including instructions on how to set up the connector, please read the [getting started guide](https://github.com/adobe/experience-platform-streaming-connect). For a more detailed workflow, please read the [developer guide](https://www.adobe.com/go/kafka-connector-developer-guide).
