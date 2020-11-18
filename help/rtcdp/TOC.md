@@ -96,8 +96,10 @@ user-guide-description: Bring together known and anonymous data from multiple en
     * Experience Platform Launch extensions{#launch-extensions}
       * [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md)  
     * Mobile engagement destinations {#mobile}
-      * [Mobile engagement overview](destinations/mobile-destinations.md)
-      * [Braze destination](destinations/braze-destination.md)
+      * [Mobile engagement destinations overview](destinations/mobile-destinations.md)
+      * [Airship Attributes](destinations/airship-attributes-destination.md)
+      * [Airship Tags](destinations/airship-tags-destination.md)
+      * [Braze](destinations/braze-destination.md)
     * Personalization destinations {#personalization-destinations}
       * [Personalization destinations overview](/help/rtcdp/destinations/personalization-destinations.md)
       * [Adobe Target extension](/help/rtcdp/destinations/adobe-target-extension.md)
