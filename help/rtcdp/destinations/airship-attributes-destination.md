@@ -11,7 +11,8 @@ seo-description: Seamlessly pass Adobe Audience Data to Airship as Audience Attr
 >[!IMPORTANT]
 >
 >The [!DNL Airship Attributes] destination in Adobe Experience Platform is currently in beta. The documentation and the functionality are subject to change.
-## Overview
+
+## Overview {#overview}
 
 [!DNL Airship] is the leading Customer Engagement Platform, helping you deliver meaningful, personalized omnichannel messaging to your users at every stage of the customer lifecycle.
 
@@ -23,7 +24,8 @@ To learn more about [!DNL Airship], see the [Airship Docs](https://docs.airship.
 >[!TIP]
 >
 >This documentation page was created by the [!DNL Airship] team. For any inquiries or update requests, please contact them directly at [support.airship.com](https://support.airship.com/).
-## Prerequisites
+
+## Prerequisites {#prerequisites}
 
 Before you can send your audience segments to [!DNL Airship], you must:
 
@@ -32,13 +34,14 @@ Before you can send your audience segments to [!DNL Airship], you must:
 
 > [!TIP]
 > Create an [!DNL Airship] account via [this signup link](https://go.airship.eu/accounts/register/plan/starter/) if you have not already.
-### Enable attributes
+
+### Enable attributes {#enable-attributes}
 
 Adobe Experience Platform profile attributes are similar to [!DNL Airship] attributes and can be easily mapped to one another in Platform using the mapping tool demonstrated further below on this page.
 
 [!DNL Airship] projects have several predefined and default attributes. If you have a custom attribute, you must define it in [!DNL Airship] first. See [Set Up and Manage Attributes](https://docs.airship.com/tutorials/audience/attributes/) for details.
 
-### Bearer token
+### Bearer token {#bearer-token}
 
 1. Go to **[!UICONTROL Settings]** » **[!UICONTROL APIs & Integrations]** in the [Airship dashboard](https://go.airship.com) and select **[!UICONTROL Tokens]** in the left-hand menu.
 1. Click **[!UICONTROL Create Token]**.
@@ -46,7 +49,7 @@ Adobe Experience Platform profile attributes are similar to [!DNL Airship] attri
 1. Click **[!UICONTROL Create Token]** and save the details as confidential.
 
 
-## Use Cases
+## Use Cases {#use-cases}
 
 To help you better understand how and when you should use the [!DNL Airship Attributes] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
