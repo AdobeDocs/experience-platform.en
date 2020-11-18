@@ -60,11 +60,13 @@ The following standard namespaces are provided for use by all organizations with
 | Google Ad ID | 20914 | GAID | GAID |
 | Apple IDFA (ID for Advertisers) | 20915 | IDFA | ID for Advertisers |
 
-To view Standard namespaces in the UI, click **[!UICONTROL Identities]** in the left-rail and then click on the **[!UICONTROL Browse]** tab. All identity namespaces accessible to your organization will be shown, however those with "[!UICONTROL Standard]" as the "[!UICONTROL Owner]" are the Standard namespaces provided by Adobe.
+To view Standard namespaces in the UI, select **[!UICONTROL Identities]** in the left-rail and then select the **[!UICONTROL Browse]** tab. All identity namespaces accessible to your organization will be shown, however those with "[!UICONTROL Standard]" as the "[!UICONTROL Owner]" are the Standard namespaces provided by Adobe.
 
-You can then click on one of the namespaces listed to view details.
+To view standard namespaces in the UI, select **[!UICONTROL Identities]** in the left-rail and then select the **[!UICONTROL Browse]** tab. A list of standard identity namespaces accessible to your organization appears on the screen. You can sort the list alphabetically by their **[!UICONTROL Display name]**, **[!UICONTROL Identity symbol]**, or **[!UICONTROL Owner]**. Alternatively, you can sort the list chronologically by their most recent update date.
 
-![](./images/standard-namespace-detail.png)
+Select a namespace to see more specific information on the right-rail.
+
+![](./images/browse-namespaces.png)
 
 ## Managing namespaces for your organization
 
@@ -76,7 +78,7 @@ To create a custom namespace using the UI, click **[!UICONTROL Create identity n
 
 Namespaces that you define are private to your organization and require a unique "[!UICONTROL Identity Symbol]" (or "code" if you are using the API) in order to be created successfully.
 
-![](./images/create-identity-namespace.png)
+![](./images/create-namespace.png)
 
 Similar to Standard namespaces, you can click on a Custom namespace from the **[!UICONTROL Browse]** tab to view its details, however with a Custom namespace you can also edit its Display Name and Description from the details area.
 
