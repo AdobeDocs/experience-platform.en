@@ -35,17 +35,17 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
--   `Authorization: Bearer {ACCESS_TOKEN}`
--   `x-api-key: {API_KEY}`
--   `x-gw-ims-org-id: {IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
 All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
--   `x-sandbox-name: {SANDBOX_NAME}`
+- `x-sandbox-name: {SANDBOX_NAME}`
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
 
--   `Content-Type: application/json`
+- `Content-Type: application/json`
 
 ## Create a source connection {#source}
 
@@ -81,13 +81,14 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "Cloud storage source connector",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "connectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
         "description": "Cloud storage source connector",
         "data": {
-            "format": "delimited"
+            "format": "delimited",
+            "columnDelimiter": "\t"
         },
         "params": {
-            "path": "/demo/data7.csv",
+            "path": "/ingestion-demos/leads/tsv_data/*.tsv",
             "recursive": "true"
         },
             "connectionSpec": {
@@ -99,7 +100,9 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `baseConnectionId` | The unique connection ID of the third-party cloud storage system you are accessing. |
+| `connectionId` | The unique connection ID of the third-party cloud storage system you are accessing. |
+| `data.format` | An enum value that defines the data format attribute. |
+| `data.columnDelimiter` | NEED DESCRIPTION AND LIST OF POSSIBLE VALUES FOR THIS |
 | `params.path` | The path of the source file you are accessing. |
 | `connectionSpec.id` | The connection spec ID associated with your specific third-party cloud storage system. See the [appendix](#appendix) for a list of connection spec IDs. |
 
@@ -272,9 +275,9 @@ A successful response returns an array containing the ID of the newly created da
 
 ## Create a target connection {#target-connection}
 
-A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection spec ID associated with data lake. This connection spec ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection spec ID associated to the Data Lake. This connection spec ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-You now have the unique identifiers a target schema a target dataset and the connection spec ID to data lake. Using these identifiers, you can create a target connection using the [!DNL Flow Service] API to specify the dataset that will contain the inbound source data.
+You now have the unique identifiers a target schema a target dataset and the connection spec ID to the Data Lake. Using these identifiers, you can create a target connection using the [!DNL Flow Service] API to specify the dataset that will contain the inbound source data.
 
 **API format**
 
@@ -315,7 +318,7 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | The `$id` of the target XDM schema. |
 | `params.dataSetId` | The ID of the target dataset. |
-| `connectionSpec.id` | The fixed connection spec ID to data lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | The fixed connection spec ID to the Data Lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Response**
 
@@ -396,8 +399,8 @@ A successful response returns details of the newly created mapping including its
     "version": 0,
     "createdDate": 1597784069368,
     "modifiedDate": 1597784069368,
-    "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
-    "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}"
 }
 ```
 
@@ -554,10 +557,10 @@ A successful response returns the details of the dataflow spec that is responsib
 
 The last step towards collecting cloud storage data is to create a dataflow. By now, you have the following required values prepared:
 
--   [Source connection ID](#source)
--   [Target connection ID](#target)
--   [Mapping ID](#mapping)
--   [Dataflow specification ID](#specs)
+- [Source connection ID](#source)
+- [Target connection ID](#target)
+- [Mapping ID](#mapping)
+- [Dataflow specification ID](#specs)
 
 A dataflow is responsible for scheduling and collecting data from a source. You can create a dataflow by performing a POST request while providing the previously mentioned values within the payload.
 
@@ -637,8 +640,8 @@ Once your dataflow has been created, you can monitor the data that is being inge
 
 By following this tutorial, you have created a source connector to collect data from your cloud storage on a scheduled basis. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
--   [Real-time Customer Profile overview](../../../../profile/home.md)
--   [Data Science Workspace overview](../../../../data-science-workspace/home.md)
+- [Real-time Customer Profile overview](../../../../profile/home.md)
+- [Data Science Workspace overview](../../../../data-science-workspace/home.md)
 
 ## Appendix {#appendix}
 
