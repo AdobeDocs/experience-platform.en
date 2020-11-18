@@ -95,6 +95,9 @@ user-guide-description: Bring together known and anonymous data from multiple en
       * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
     * Experience Platform Launch extensions{#launch-extensions}
       * [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md)  
+    * Mobile destinations {#mobile}
+      * [Mobile destinations overview](destinations/mobile-destinations.md)
+      * [Braze destination](destinations/braze-destination.md)
     * Personalization destinations {#personalization-destinations}
       * [Personalization destinations overview](/help/rtcdp/destinations/personalization-destinations.md)
       * [Adobe Target extension](/help/rtcdp/destinations/adobe-target-extension.md)
