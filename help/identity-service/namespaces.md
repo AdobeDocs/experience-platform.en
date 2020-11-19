@@ -43,24 +43,24 @@ The following identity types are available within [!DNL Platform]:
 
 ### Standard namespaces
 
-Adobe Experience Platform provides several identity namespaces that are available to all organizations. These are known as Standard namespaces and are visible using the [!DNL Identity Service] API or through the [!DNL Platform] UI.
+Adobe Experience Platform provides several identity namespaces that are available to all organizations. These are known as standard namespaces and are visible using the [!DNL Identity Service] API or through the [!DNL Platform] UI.
 
 The following standard namespaces are provided for use by all organizations within Experience Platform:
 
-| Display Name | ID | Code | Description |
+| Display Name | ID | Code | Notes |
 | ------------ | --- | --- | ----------- |
 | CORE | 0 | CORE | legacy name: "Adobe AudienceManager" |
 | ECID | 4 | ECID | alias: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID" |
 | Email | 6 | Email | |
-| Emails (SHA256, lowercased) | 11 | Email_LC_SHA256 | Standard namespace for pre-hashed email. Values provided in this namespace are converted to lowercase before hashing with SHA-256. |
+| Emails (SHA256, lowercased) | 11 | Email_LC_SHA256 | Standard namespace for pre-hashed email. Values provided in this namespace are converted to lowercase before hashing with SHA-256.Leading and trailing spaces need to be trimmed before an email address is normalized. You won't be able to change this setting later. |
 | Phone | 7 | Phone | |
 | Windows AID | 8 | WAID | |
 | AdCloud | 411 | AdCloud | alias: Ad Cloud |
-| Adobe Target | 9 | TNTID | Target ID |
+| TNTID| 9 | TNTID | Adobe Target (TNTID) |
 | Google Ad ID | 20914 | GAID | GAID |
 | Apple IDFA (ID for Advertisers) | 20915 | IDFA | ID for Advertisers |
 
-To view Standard namespaces in the UI, select **[!UICONTROL Identities]** in the left-rail and then select the **[!UICONTROL Browse]** tab. All identity namespaces accessible to your organization will be shown, however those with "[!UICONTROL Standard]" as the "[!UICONTROL Owner]" are the Standard namespaces provided by Adobe.
+To view standard namespaces in the UI, select **[!UICONTROL Identities]** in the left-rail and then select the **[!UICONTROL Browse]** tab. All identity namespaces accessible to your organization will be shown, however those with "[!UICONTROL Standard]" as the "[!UICONTROL Owner]" are the Standard namespaces provided by Adobe.
 
 To view standard namespaces in the UI, select **[!UICONTROL Identities]** in the left-rail and then select the **[!UICONTROL Browse]** tab. A list of standard identity namespaces accessible to your organization appears on the screen. You can sort the list alphabetically by their **[!UICONTROL Display name]**, **[!UICONTROL Identity symbol]**, or **[!UICONTROL Owner]**. Alternatively, you can sort the list chronologically by their most recent update date.
 
