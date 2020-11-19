@@ -1,5 +1,5 @@
 ---
-title: Adobe Target and The Adobe Experience Platform Web SDK. 
+title: Adobe Target and Adobe Experience Platform Web SDK. 
 seo-title: Adobe Experience Platform Web SDK and using Adobe Target
 description: Learn how to render personalized content with Experience Platform Web SDK using Adobe Target
 seo-description: Learn how to render personalized content with Experience Platform Web SDK using Adobe Target
@@ -18,7 +18,7 @@ Modern web applications, such as Single Page Applications, have instead adopted 
 
 ## Benefits of Platform Web SDK for SPAs
 
-Here are some benefits to using the Adobe Experience Platform Web SDK for your Single Page Applications: 
+Here are some benefits to using Adobe Experience Platform Web SDK for your Single Page Applications: 
 
 * Ability to cache all offers on page-load to reduce multiple server calls to a single server call. 
 * Tremendously improve the user experience on your site because offers are shown immediately via the cache without lag time introduced by traditional server calls. 
@@ -61,15 +61,15 @@ XDM Views can be leveraged in Adobe Target to empower marketers to run A/B and X
 3. After defining the XDM Views, in order to deliver AB or XT VEC activities, implement the `sendEvent()` function with `renderDecisions` set to `true` and the corresponding XDM View in your Single Page Application. The XDM View must be passed in `xdm.web.webPageDetails.viewName`. This step allows marketers to leverage the Visual Experience Composer to launch A/B and XT tests for those XDM.  
 
     ```javascript
-    alloy("sendEvent",  { 
-      "renderDecisions": true, 
-      "xdm": { 
-        "web": { 
-          "webPageDetails": { 
-             "viewName":"home" 
-          }      
+    alloy("sendEvent", { 
+      "renderDecisions": true, 
+      "xdm": { 
+        "web": { 
+          "webPageDetails": { 
+          "viewName":"home" 
+          }
         } 
-      } 
+      } 
     });
     ```
  
@@ -89,7 +89,7 @@ The marketing team want to run A/B tests on the entire home page.
 
 To run A/B tests on the whole home site, `sendEvent()` must be invoked with the XDM `viewName` set to `home`: 
 
-```javascript
+```jsx
 function onViewChange() { 
   
   var viewName = window.location.hash; // or use window.location.pathName if router works on path and not hash 
@@ -102,14 +102,15 @@ function onViewChange() {
     viewName = viewName.substr(1); 
   }
    
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
       "web": { 
         "webPageDetails": { 
           "viewName":"home" 
         } 
       } 
+    }
   }); 
 } 
 
@@ -122,7 +123,6 @@ history.listen(onViewChange);
 // react router v3 
 
 <Router history={hashHistory} onUpdate={onViewChange} > 
-
 ```
 
 ### Example 2: Personalized products
@@ -131,18 +131,18 @@ The marketing team want to personalize the second row of products by changing th
 
 ![](assets/use-case-2.png)
 
-```javascript
+```jsx
 function onViewChange(viewName) { 
 
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
-       "web": { 
+      "web": { 
         "webPageDetails": { 
           "viewName": viewName
         }
       } 
-    } 
+    } 
   }); 
 } 
 
@@ -171,17 +171,16 @@ The marketing team want to run an A/B test to see whether changing the color of 
 
 To personalize content on the site depending on which delivery preference is selected, a View can be created for each delivery preference. When **Normal Delivery** is selected, the View can be named "checkout-normal". If **Express Delivery** is selected, the View can be named "checkout-express". 
 
-```javascript
+```jsx
 function onViewChange(viewName) { 
-
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
       "web": { 
         "webPageDetails": { 
-          "viewName": viewName   
+          "viewName": viewName 
         }
-      }
+      }
     }
   }); 
 } 
@@ -213,7 +212,7 @@ class Checkout extends Component {
 
 ## Using the Visual Experience Composer for a SPA 
 
-When you have finished defining your XDM Views and implemented `sendEvent()` with those XDM Views passed in, the VEC will be able to detect these Views and allow users to create actions and modifications for A/B or XT activities. 
+When you have finished defining your XDM Views and implemented `sendEvent()` with those XDM Views passed in, the VEC will be able to detect these Views and allow users to create actions and modifications for A/B or XT activities. 
 
 >[!NOTE]
 >
