@@ -102,7 +102,7 @@ curl -X POST \
 | --- | --- |
 | `connectionId` | The unique connection ID of the third-party cloud storage system you are accessing. |
 | `data.format` | An enum value that defines the data format attribute. |
-| `data.columnDelimiter` | NEED DESCRIPTION AND LIST OF POSSIBLE VALUES FOR THIS |
+| `data.columnDelimiter` | You can use a single column delimiter to collect flat files in any format. Available delimiters include tabs, commas, pipes, and semicolons. The value defaults to a comma if unprovided. This property is only required when ingesting non-CSV delimited files. |
 | `params.path` | The path of the source file you are accessing. |
 | `connectionSpec.id` | The connection spec ID associated with your specific third-party cloud storage system. See the [appendix](#appendix) for a list of connection spec IDs. |
 
