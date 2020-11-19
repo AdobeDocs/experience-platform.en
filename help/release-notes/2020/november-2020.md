@@ -106,7 +106,7 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are
 
 | Destination | Description |
 | ----------- | ----------- |
-| Braze | Braze is a comprehensive customer engagement platform that power relevant and memorable experiences between customers and the brands they love. |
+| Braze | Braze is a comprehensive customer engagement platform that powers relevant and memorable experiences between customers and the brands they love. |
 | Microsoft Bing | The Microsoft Bing destination helps you execute retargeting and audience targeted digital campaigns across Microsoft Display Advertising. |
 | The Trade Desk | The Trade Desk is a self-service platform for ad buyers to execute retargeting and audience targeted digital campaigns across display, video, and mobile inventory sources. |
 
@@ -115,8 +115,8 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are
 | Feature | Description |
 | ------- | ----------- |
 | Destination details UX updates | Real-time CDP's destination workflow now includes inline monitoring so you can see which batch activations were successful. This feature will enable users to resolve issues directly in the workflow for batch destinations via alerts and a monitoring dashboard to track errors in the processing pipeline.  |
-| File encryption | For file based destinations, users can now add encryption to their exported files. |
-| File scheduling | For both email based and cloud storage destinations, users can create a one-time export or create daily snapshots. |
+| File encryption | For file-based destinations, users can now add encryption to their exported files. |
+| File scheduling | For both email-based and cloud storage destinations, users can create a one-time export or create daily snapshots. |
 | Mandatory fields | Users can mark fields as mandatory, ensuring that only fields that contain the mandatory field are exported. |
 
 For more information, please see the [Destinations overview](../../rtcdp/destinations/destinations-overview.md).
