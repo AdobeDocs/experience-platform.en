@@ -2,8 +2,8 @@
 keywords: QuestionPro Intercept Surveys;questionpro intercept surveys;QuestionPro;questionpro
 title: QuestionPro Intercept Surveys extension
 seo-title: QuestionPro Intercept Surveys extension
-description: THe QuestionPro Intercept Surveys extension is a survey destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The QuestionPro Intercept Surveys extension is a survey destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The QuestionPro Intercept Surveys extension is a survey destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The QuestionPro Intercept Surveys extension is a survey destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL QuestionPro Intercept Surveys] Extension {#questionpro-extension}
@@ -12,7 +12,7 @@ seo-description: The QuestionPro Intercept Surveys extension is a survey destina
 
 [!DNL QuestionPro Intercept Surveys] is a platform for deploying surveys and collecting attitudinal data at the point of transaction or when users enter / exit your website.
 
-[!DNL QuestionPro Intercept Surveys] is a survey extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.90096.questionpro-surveys.html).
+[!DNL QuestionPro Intercept Surveys] is a survey extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.90096.questionpro-surveys.html).
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 

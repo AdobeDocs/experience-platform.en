@@ -1,8 +1,8 @@
 ---
 title: Offer Decisioning Overview
 seo-title: Offer Decisioning and Adobe Experience Platform Web SDK
-description: The Adobe Experience Platform Web SDK can deliver and render personalized offers managed in Offer Decisioning. You can create your offers and other related objects using the Offer Decisioning UI or API.
-seo-description: The Adobe Experience Platform Web SDK can deliver and render personalized offers managed in Offer Decisioning. You can create your offers and other related objects using the Offer Decisioning UI or API.
+description: Adobe Experience Platform Web SDK can deliver and render personalized offers managed in Offer Decisioning. You can create your offers and other related objects using the Offer Decisioning UI or API.
+seo-description: Adobe Experience Platform Web SDK can deliver and render personalized offers managed in Offer Decisioning. You can create your offers and other related objects using the Offer Decisioning UI or API.
 keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;personalized offers;deliver offers;offer delivery;offer personalization;
 ---
 
@@ -12,9 +12,9 @@ keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;personalized of
 >
 >The use of Offer Decisioning in Adobe Experience Platform Web SDK is currently available in early access to select users. This functionality is not available to all IMS organizations.
 
-The Adobe Experience Platform [!DNL Web SDK] can deliver and render personalized offers that are managed in Offer Decisioning. You can create your offers and other related objects using the Offer Decisioning user interface (UI) or APIs.
+Adobe Experience Platform [!DNL Web SDK] can deliver and render personalized offers that are managed in Offer Decisioning. You can create your offers and other related objects using the Offer Decisioning user interface (UI) or APIs.
 
-## Pre-Requisites
+## Prerequisites
 
 * IMS organization is enabled for edge decisioning
 * Offers, Activities created
@@ -22,7 +22,7 @@ The Adobe Experience Platform [!DNL Web SDK] can deliver and render personalized
 
 ## Terminology
 
-It is important to understand the following terminology when working with Offer Decisioning. For more information and to view additional terms, please visit the [Offer Decisioning glossary](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html?lang=en#get-started).
+It is important to understand the following terminology when working with Offer Decisioning. For more information and to view additional terms, please visit the [Offer Decisioning glossary](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
 
 * **Container:** A container is an isolation mechanism to keep different concerns apart. The container ID is the first path element for all repository APIs. All decisioning objects reside within a container.
 
@@ -75,7 +75,7 @@ To enable Offer Decisioning, you need to perform the following steps:
     * Platform Launch installed SDK
         1. [Create a Platform Launch property](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html)
         2. [Add the Platform Launch Embed Code](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-        3. Install and configure the Adobe Experience Platform Web SDK extension with the Edge Configuration you just created by selecting the configuration from the "Edge Configuration" drop down. Useful documentation on [extensions](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
+        3. Install and configure the AEP Web SDK extension with the Edge Configuration you just created by selecting the configuration from the "Edge Configuration" drop down. Useful documentation on [extensions](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
         ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
         ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
         4. Create the necessary [Data Elements](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/data-elements.html). At the bare minimum, you will need to create a Platform Web SDK Identity Map and a Platform Web SDK XDM Object data element.
@@ -230,7 +230,7 @@ To enable Offer Decisioning, you need to perform the following steps:
                 "language": [
                   "en-US"
                 ],
-                "content": "<p style="color:red;">20% Off on shipping</p>",
+                "content": "<p style=\"color:red;\">20% Off on shipping</p>",
                 "characteristics": {
                   "foo": "bar",
                   "foo1": "bar1"

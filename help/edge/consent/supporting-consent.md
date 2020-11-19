@@ -73,7 +73,7 @@ Because the user chose to opt out, promises that were returned from previously q
 
 >[!NOTE]
 >
->Currently, the SDK supports only the `general` purpose. Although we plan to build out a more robust set of purposes or categories that will correspond to the different Adobe capabilities and product offerings, the current implementation is an all or nothing approach to opt-in.  This only applies to the Adobe Experience Platform [!DNL Web SDK] and NOT other Adobe JavaScript libraries.
+>Currently, the SDK supports only the `general` purpose. Although we plan to build out a more robust set of purposes or categories that will correspond to the different Adobe capabilities and product offerings, the current implementation is an all or nothing approach to opt-in.  This only applies to Adobe Experience Platform [!DNL Web SDK] and NOT other Adobe JavaScript libraries.
 
 ## Communicating consent preferences via the IAB TCF standard
 
