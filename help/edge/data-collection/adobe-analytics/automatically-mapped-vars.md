@@ -8,7 +8,7 @@ keywords: adobe analytics;variables;analytics;automatic map;automatically mapped
 
 # Variables automatically mapped in [!DNL Analytics]
 
-Below is a list of variables that the Adobe Experience Platform [!DNL Edge Network] automatically maps into [!DNL Analytics].
+Below is a list of variables that Adobe Experience Platform Edge Network automatically maps into [!DNL Analytics].
 
 | XDM Field Path  | [!DNL Analytics Query String] / HTTP Header | Description |
 | ---------- | ------------------------- | ----------------------------------------- |
