@@ -20,7 +20,7 @@ Working with identity namespaces requires an understanding of the various Adobe 
 
 ## Understanding identity namespaces
 
-A fully qualified identity includes an ID value and a namespace. When matching record data across profile fragments, as when [!DNL Real-time Customer Profile] merges profile data, both the identity value and the namespace must match. 
+A fully qualified identity includes an ID value and a namespace. When matching record data across profile fragments, as when [!DNL Real-time Customer Profile] merges profile data, both the identity value and the namespace must match.
 
 For example, two profile fragments may contain different primary IDs but they share the same value for the "Email" namespace, therefore Platform is able to see that these fragments are actually the same individual and bring the data together in the identity graph for the individual.
 
@@ -43,48 +43,34 @@ The following identity types are available within [!DNL Platform]:
 
 ### Standard namespaces
 
-Adobe Experience Platform provides several identity namespaces that are available to all organizations. These are known as standard namespaces and are visible using the [!DNL Identity Service] API or through the [!DNL Platform] UI.
+[!DNL Experience Platform] provides several identity namespaces that are available to all organizations. These are known as standard namespaces and are visible using the [!DNL Identity Service] API or through the [!DNL Platform] UI.
 
-The following standard namespaces are provided for use by all organizations within Experience Platform:
+The following standard namespaces are provided for use by all organizations within [!DNL Experience Platform]:
 
 | Display name | Notes |
 | ------------ | ----------- |
+| AdCloud | Adobe AdCloud - ID Syncing Partner |
+| Apple IDFA (ID for Advertisers | Apple ID for Advertisers. See the following document on [interest-based ads](https://support.apple.com/en-us/HT202074) for more information. |
 | CORE | legacy name: "Adobe AudienceManager" |
 | ECID | alias: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID" |
-| AdCloud | alias: Ad Cloud |
-| Emails (SHA256, lowercased) | Standard namespace for pre-hashed email. Values provided in this namespace are converted to lowercase before hashing with SHA-256. Leading and trailing spaces need to be trimmed before an email address is normalized. You won't be able to change this setting later. |
-| Phone |
-| Google Ad ID |
-| Apple IDFA (ID for Advertisers | ID for Advertisers |
 | Email |
-| Windows AID |
-| TNTID | Adobe Target (TNTID) |
+| Emails (SHA256, lowercased) | Standard namespace for pre-hashed email. Values provided in this namespace are converted to lowercase before hashing with SHA-256. Leading and trailing spaces need to be trimmed before an email address is normalized. You won't be able to change this setting later. |
+| Google Ad ID |
 | Google Click ID |
-| Phone (SHA256_E.64) |
-| Phone (256) |
 | Phone |
+| Phone (E.164) | Namespace for raw phone numbers in E.164 format. The plus `(+)` sign is required. 
+| Phone (SHA256_E.164) | Phone numbers need to be hashed using SHA256 without any dashes. Hash should be completed by customers on raw phone numbers in E.164 format.  |
+| Phone (SHA256) | Before hashing, you must remove symbols, letters, and any leading zeroes. You must also add the country code as a prefix. Note that some destinations may have different phone number formatting requirements.  |
+| TNTID | Adobe Target (TNTID) |
+| Windows AID |
 
-To view standard namespaces in the UI, select **[!UICONTROL Identities]** in the left-rail and then select the **[!UICONTROL Browse]** tab. All identity namespaces accessible to your organization will be shown, however those with "[!UICONTROL Standard]" as the "[!UICONTROL Owner]" are the Standard namespaces provided by Adobe.
+To view standard namespaces in the UI, select **[!UICONTROL Identities]** in the left-rail and then select the **[!UICONTROL Browse]** tab. All identity namespaces accessible to your organization will be shown, however those with **[!UICONTROL Standard]** as the **[!UICONTROL Owner]** are the Standard namespaces provided by Adobe.
 
 To view standard namespaces in the UI, select **[!UICONTROL Identities]** in the left-rail and then select the **[!UICONTROL Browse]** tab. A list of standard identity namespaces accessible to your organization appears on the screen. You can sort the list alphabetically by their **[!UICONTROL Display name]**, **[!UICONTROL Identity symbol]**, or **[!UICONTROL Owner]**. Alternatively, you can sort the list chronologically by their most recent update date.
 
 Select a namespace to see more specific information on the right-rail.
 
 ![](./images/browse-namespaces.png)
-
-### Integration namespaces
-
-| Display name | Description |
-| ------------ | ----------- |
-| AAMSegment |
-| AAMTrait |
-| AEPSegments |
-| Media Math |
-| AppNexus |
-| Google |
-| Microsoft Bing |
-| Trade Desk |
-
 
 ## Managing namespaces for your organization
 
