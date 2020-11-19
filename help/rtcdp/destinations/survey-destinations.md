@@ -10,7 +10,7 @@ seo-description: Surveys platforms detect survey events, capture customer feedba
 
 Surveys platforms detect survey events, capture customer feedback in real-time through data elements, and share data with Adobe Real-time CDP.
 
-Currently, Adobe Real-time Customer Data Platform supports the survey destinations listed below. For information on how to connect to these destinations, see the individual links:
+Currently, Real-time Customer Data Platform supports the survey destinations listed below. For information on how to connect to these destinations, see the individual links:
 
 * [Foresee extension](/help/rtcdp/destinations/foresee-extension.md)
 * [InMoment extension](/help/rtcdp/destinations/inmoment-extension.md)

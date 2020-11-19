@@ -2,8 +2,8 @@
 keywords: beemray,beemray extension
 title: Beemray extension
 seo-title: Beemray extension
-description: The Beemray extension is a personalization destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Beemray extension is a personalization destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Beemray extension is a personalization destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The Beemray extension is a personalization destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Beemray] extension {#beemray-extension}
@@ -12,7 +12,7 @@ seo-description: The Beemray extension is a personalization destination in Adobe
 
 [!DNL Beemray] helps you accelerate your product with situational context. Enabling you to gain insights, build new experiences, drive interactions, and engage in moments that really matter. Beemray automates contextual intelligence using machine learning. Beemray connects to the Adobe Experience Cloud and the rest of your tech partners. Everything takes place in real-time. This extension installs [!DNL Beemray] SDK on your site.
 
-Beemray is a personalization extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
+Beemray is a personalization extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
 
 This destination is an [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 

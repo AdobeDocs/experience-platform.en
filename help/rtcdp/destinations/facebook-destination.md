@@ -19,7 +19,7 @@ You can use this destination for audience targeting across [!DNL Facebook’s] f
 
 ## Use Cases
 
-To help you better understand how and when you should use the [!DNL Facebook] destination, here are two sample use cases that Adobe Real-time Customer Data Platform customers can solve by using this feature.
+To help you better understand how and when you should use the [!DNL Facebook] destination, here are two sample use cases that Real-time Customer Data Platform customers can solve by using this feature.
 
 
 ### Use Case #1

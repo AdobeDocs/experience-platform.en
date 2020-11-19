@@ -2,8 +2,8 @@
 keywords: DoubleClick Floodlight;doubleclick floodlight extension;doubleclick;floodlight
 title: DoubleClick Floodlight (Beta) extension
 seo-title: DoubleClick Floodlight (Beta) extension
-description: The DoubleClick Floodlight (Beta) extension is an advertising destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The DoubleClick Floodlight (Beta) extension is an advertising destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The DoubleClick Floodlight (Beta) extension is an advertising destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The DoubleClick Floodlight (Beta) extension is an advertising destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL DoubleClick Floodlight] (Beta) extension
@@ -12,7 +12,7 @@ seo-description: The DoubleClick Floodlight (Beta) extension is an advertising d
 
 This extension allows for quick and easy deployment of [!DNL DoubleClick Floodlight] tags using the traditional floodlight format (not Global Site Tag). Note: This extension is in beta.
 
-[!DNL DoubleClick Floodlight] (Beta) is an advertising extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the [!DNL Google] support documentation for [DoubleClick Floodlight](https://support.google.com/dcm/answer/2823388?hl=en).
+[!DNL DoubleClick Floodlight] (Beta) is an advertising extension in Real-time Customer Data Platform. For more information about the extension functionality, see the [!DNL Google] support documentation for [DoubleClick Floodlight](https://support.google.com/dcm/answer/2823388?hl=en).
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
