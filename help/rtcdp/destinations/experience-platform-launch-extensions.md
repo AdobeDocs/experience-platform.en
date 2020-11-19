@@ -24,7 +24,7 @@ To find the Platform Launch extensions in the Adobe Real-time CDP interface, bro
 
 Platform Launch extensions forward raw event data to several types of destinations. Think of extensions as an **Event Forwarding** type of destination. This is a simpler type of integration with destination platforms, which only forwards raw event data. Examples of those are the [Gainsight personalization extension](/help/rtcdp/destinations/gainsight-extension.md) or the [Confirmit Voice of the Customer extension](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md).
 
-**Profile/Segment Export** destinations in Adobe Real-time Customer Data Platform capture event data, combine it with other data sources, apply segmentation, and export segments and qualified profiles to destinations. Examples of those are the [Amazon S3 cloud storage destination](/help/rtcdp/destinations/amazon-s3-destination.md) or the [Google Display & Video 360 advertising destination](/help/rtcdp/destinations/google-dv360-destination.md).
+**Profile/Segment Export** destinations in Real-time Customer Data Platform capture event data, combine it with other data sources, apply segmentation, and export segments and qualified profiles to destinations. Examples of those are the [Amazon S3 cloud storage destination](/help/rtcdp/destinations/amazon-s3-destination.md) or the [Google Display & Video 360 advertising destination](/help/rtcdp/destinations/google-dv360-destination.md).
 
 ![Experience Platform Launch extensions compared to other destinations](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 

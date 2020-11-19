@@ -2,8 +2,8 @@
 keywords: Awin Advertiser Conversion Tag extension;conversion tag;Awin;awin;AWIN
 title: Awin Advertiser Conversion Tag extension
 seo-title: Awin Advertiser Conversion Tag extension
-description: The Awin Advertiser Conversion Tag extension is an advertising destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Awin Advertiser Conversion Tag extension is an advertising destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Awin Advertiser Conversion Tag extension is an advertising destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The Awin Advertiser Conversion Tag extension is an advertising destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # Awin Advertiser Conversion Tag extension {#awin-conversiontag-extension}
@@ -12,7 +12,7 @@ seo-description: The Awin Advertiser Conversion Tag extension is an advertising 
 
 The Conversion Tag is the declaration of the AWIN.Tracking.Sale JavaScript object, which is done on the confirmation page to instruct the Mastertag that a conversion has taken place. It will then subsequently perform the necessary tracking requests.
 
-Awin Advertiser Conversion Tag is an advertising extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103240.awin-conversion-tag.html).
+Awin Advertiser Conversion Tag is an advertising extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103240.awin-conversion-tag.html).
 
 This destination is an [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
