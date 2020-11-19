@@ -22,7 +22,7 @@ Working with identity namespaces requires an understanding of the various Adobe 
 
 A fully qualified identity includes an ID value and a namespace. When matching record data across profile fragments, as when [!DNL Real-time Customer Profile] merges profile data, both the identity value and the namespace must match.
 
-For example, two profile fragments may contain different primary IDs but they share the same value for the "Email" namespace, therefore Platform is able to see that these fragments are actually the same individual and bring the data together in the identity graph for the individual.
+For example, two profile fragments may contain different primary IDs but they share the same value for the "Email" namespace, therefore [!DNL Platform] is able to see that these fragments are actually the same individual and bring the data together in the identity graph for the individual.
 
 ![](images/identity-service-stitching.png)
 
@@ -45,6 +45,8 @@ The following identity types are available within [!DNL Platform]:
 
 [!DNL Experience Platform] provides several identity namespaces that are available to all organizations. These are known as standard namespaces and are visible using the [!DNL Identity Service] API or through the [!DNL Platform] UI.
 
+[!DNL Experience Platform] also provides namespaces for integration purposes. These namespaces are hidden by default.
+
 The following standard namespaces are provided for use by all organizations within [!DNL Experience Platform]:
 
 | Display name | Notes |
@@ -62,12 +64,10 @@ The following standard namespaces are provided for use by all organizations with
 | Google Click ID |
 | Phone |
 | Phone (E.164) | Namespace for raw phone numbers in E.164 format. The plus `(+)` sign is required. |
-| Phone (SHA256_E.164) | Phone numbers need to be hashed using SHA256 without any dashes. Hash should be completed by customers on raw phone numbers in E.164 format.  |
+| Phone (SHA256_E.164) | Phone numbers need to be hashed using SHA256 without any dashes and under the E.164 format.  |
 | Phone (SHA256) | Before hashing, you must remove symbols, letters, and any leading zeroes. You must also add the country code as a prefix. Note that some areas may have a different phone number formatting requirements.  |
 | TNTID | Adobe Target (TNTID) |
 | Windows AID |
-
-To view standard namespaces in the UI, select **[!UICONTROL Identities]** in the left-rail and then select the **[!UICONTROL Browse]** tab. All identity namespaces accessible to your organization will be shown, however those with **[!UICONTROL Standard]** as the **[!UICONTROL Owner]** are the Standard namespaces provided by Adobe.
 
 To view standard namespaces in the UI, select **[!UICONTROL Identities]** in the left-rail and then select the **[!UICONTROL Browse]** tab. A list of standard identity namespaces accessible to your organization appears on the screen. You can sort the list alphabetically by their **[!UICONTROL Display name]**, **[!UICONTROL Identity symbol]**, or **[!UICONTROL Owner]**. Alternatively, you can sort the list chronologically by their most recent update date.
 
@@ -77,9 +77,7 @@ Select a namespace to see more specific information on the right-rail.
 
 ## Managing namespaces for your organization
 
-Depending on your organizational data and use cases, you may require custom namespaces.
-
-These are visible in the UI as those namespaces with **[!UICONTROL Custom]** as the **[!UICONTROL Owner]**. Custom namespaces can be created using the [!DNL Identity Service] API or through the UI.
+Depending on your organizational data and use cases, you may require custom namespaces. Custom namespaces can be created using the [!DNL Identity Service] API or through the UI.
 
 To create a custom namespace using the UI, select the **[!UICONTROL Create identity namespace]** button on the top-right of the **[!UICONTROL Identity Namespace]** page
 
@@ -87,7 +85,7 @@ To create a custom namespace using the UI, select the **[!UICONTROL Create ident
 
 The **[!UICONTROL Create identity namespace]** dialog box appears. Provide a unique **[!UICONTROL Display name]** and a unique **[!UICONTROL Identity symbol]** and then select the identity type you would like to create. You can also add an optional description to provide further information on the namespace. When finished, select **[!UICONTROL Create]**.
 
-Namespaces that you define are private to your organization and require a unique "[!UICONTROL Identity Symbol]" (or "code" if you are using the API) in order to be created successfully.
+Namespaces that you define are private to your organization and require a unique **[!UICONTROL Identity Symbol]** in order to be created successfully.
 
 ![](./images/create-namespace.png)
 
@@ -95,7 +93,7 @@ Similar to standard namespaces, you can click on a custom namespace from the **[
 
 >[!NOTE]
 >
->Once a namespace has been created, it cannot be deleted and its "Identity Symbol" (or "code" in the API) and "Type" cannot be changed.
+>Once a namespace has been created, it cannot be deleted and its "Identity Symbol" and "Type" cannot be changed.
 
 ## Namespaces in identity data
 
