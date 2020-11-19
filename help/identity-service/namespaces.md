@@ -47,18 +47,22 @@ Adobe Experience Platform provides several identity namespaces that are availabl
 
 The following standard namespaces are provided for use by all organizations within Experience Platform:
 
-| Display Name | ID | Code | Notes |
-| ------------ | --- | --- | ----------- |
-| CORE | 0 | CORE | legacy name: "Adobe AudienceManager" |
-| ECID | 4 | ECID | alias: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID" |
-| Email | 6 | Email | |
-| Emails (SHA256, lowercased) | 11 | Email_LC_SHA256 | Standard namespace for pre-hashed email. Values provided in this namespace are converted to lowercase before hashing with SHA-256.Leading and trailing spaces need to be trimmed before an email address is normalized. You won't be able to change this setting later. |
-| Phone | 7 | Phone | |
-| Windows AID | 8 | WAID | |
-| AdCloud | 411 | AdCloud | alias: Ad Cloud |
-| TNTID| 9 | TNTID | Adobe Target (TNTID) |
-| Google Ad ID | 20914 | GAID | GAID |
-| Apple IDFA (ID for Advertisers) | 20915 | IDFA | ID for Advertisers |
+| Display name | Notes |
+| ------------ | ----------- |
+| CORE | legacy name: "Adobe AudienceManager" |
+| ECID | alias: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID" |
+| AdCloud | alias: Ad Cloud |
+| Emails (SHA256, lowercased) | Standard namespace for pre-hashed email. Values provided in this namespace are converted to lowercase before hashing with SHA-256. Leading and trailing spaces need to be trimmed before an email address is normalized. You won't be able to change this setting later. |
+| Phone |
+| Google Ad ID |
+| Apple IDFA (ID for Advertisers | ID for Advertisers |
+| Email |
+| Windows AID |
+| TNTID | Adobe Target (TNTID) |
+| Google Click ID |
+| Phone (SHA256_E.64) |
+| Phone (256) |
+| Phone |
 
 To view standard namespaces in the UI, select **[!UICONTROL Identities]** in the left-rail and then select the **[!UICONTROL Browse]** tab. All identity namespaces accessible to your organization will be shown, however those with "[!UICONTROL Standard]" as the "[!UICONTROL Owner]" are the Standard namespaces provided by Adobe.
 
@@ -67,6 +71,20 @@ To view standard namespaces in the UI, select **[!UICONTROL Identities]** in the
 Select a namespace to see more specific information on the right-rail.
 
 ![](./images/browse-namespaces.png)
+
+### Integration namespaces
+
+| Display name | Description |
+| ------------ | ----------- |
+| AAMSegment |
+| AAMTrait |
+| AEPSegments |
+| Media Math |
+| AppNexus |
+| Google |
+| Microsoft Bing |
+| Trade Desk |
+
 
 ## Managing namespaces for your organization
 
