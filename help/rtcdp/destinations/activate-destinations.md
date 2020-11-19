@@ -71,7 +71,19 @@ Applies to: Email marketing destinations and cloud storage destinations
 
 ![Configure step](./assets/configure-icon.png)
 
-In the **[!UICONTROL Configure]** step, you can configure the file names for each segment you are exporting. Configuring the file name is optional.
+In the **[!UICONTROL Configure]** step, you can configure the schedule and the file names for each segment you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional.
+
+To add a schedule for the segment, select **[!UICONTROL Create schedule]**. 
+
+![](./assets/activate-destinations/configure-destination-schedule.png)
+
+A popover appears, showing options to create the segment schedule.  
+
+- **File export**: You have the option to either export either full files or incremental files. Exporting a full file publishes a complete snapshot of all the profiles that qualify for that segment. Exporting an incremental file publishes the delta of profiles that qualify for that segment since the last export. 
+- **Frequency**: If **[!UICONTROL Export full files]** is selected, you have the option to export **[!UICONTROL Once]** or **[!UICONTROL Daily]**. If **[!UICONTROL Export incremental files]** is selected, you only have the option to export **[!UICONTROL Daily]**. Exporting a file **[!UICONTROL Once]** exports the file one time. Exporting a file **[!UICONTROL Daily]** exports the file every day from the start date to the end date at 12:00 AM UTC (7:00 PM EST) if full files is selected and 12:00 PM UTC (7:00 AM EST) if incremental files is selected. 
+- **Date**: If **[!UICONTROL Once]** is selected, you can select the date for the one time export. If **[!UICONTROL Daily]** is selected, you can select the start and end dates for the exports.
+
+![](./assets/activate-destinations/export-full-file.png)
 
 The default file names consist of destination name, segment ID, and a date and time indicator. For example, you can edit your exported file names to distinguish between different campaigns or to have the data export time appended to the files.
 

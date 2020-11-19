@@ -2,8 +2,8 @@
 keywords: D&B Visitor Intelligence;D&B;visitor intelligence extension
 title: D&B Visitor Intelligence extension
 seo-title: D&B Visitor Intelligence extension
-description: The D&B Visitor Intelligence extension is a personalization destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The D&B Visitor Intelligence extension is a personalization destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The D&B Visitor Intelligence extension is a personalization destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The D&B Visitor Intelligence extension is a personalization destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL D&B Visitor Intelligence] extension {#dnb-extension}
@@ -12,7 +12,7 @@ seo-description: The D&B Visitor Intelligence extension is a personalization des
 
 Analyze your unknown visitors and convert them into leads.
 
-[!DNL D&B Visitor Intelligence] is a personalization extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the [D&B website](https://www.dnb.com/).
+[!DNL D&B Visitor Intelligence] is a personalization extension in Real-time Customer Data Platform. For more information about the extension functionality, see the [D&B website](https://www.dnb.com/).
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 

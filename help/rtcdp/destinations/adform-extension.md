@@ -2,8 +2,8 @@
 keywords: adform extension;adform
 title: Adform extension
 seo-title: Adform extension
-description: The Adform extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Adform extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Adform extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The Adform extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # Adform extension {#adform-extension}
@@ -12,7 +12,7 @@ seo-description: The Adform extension is an analytics destination in Adobe Real-
 
 The Adform Website Tracking extension enables advertisers to implement Adform Tracking Points effortlessly across their sites using the [!DNL Experience Platform Launch] platform.
 
-[!DNL Adform] is an analytics extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103195.adform-website-tracking.html)
+[!DNL Adform] is an analytics extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103195.adform-website-tracking.html)
 
 This destination is an [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 

@@ -2,8 +2,8 @@
 keywords: Marketo Munchkin;marketo munchkin;Marketo Munchkin extension;marketo munchkin extension;marketo;Marketo
 title: Marketo Munchkin extension
 seo-title: Marketo Munchkin extension
-description: The Marketo Munchkin extension is a personalization destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Marketo Munchkin extension is a personalization destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Marketo Munchkin extension is a personalization destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The Marketo Munchkin extension is a personalization destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Marketo Munchkin] Extension {#marketo-munchkin-extension}
@@ -14,7 +14,7 @@ From lead management to account-based marketing, [!DNL Marketo Engagement Platfo
 
 [!DNL Marketo’s Munchkin] JavaScript allows for tracking of end-user page visits and clicks to your [!DNL Marketo] landing pages and external web pages.
 
-[!DNL Marketo Munchkin] is an email extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101054.marketo-munchkin.html).
+[!DNL Marketo Munchkin] is an email extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101054.marketo-munchkin.html).
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
