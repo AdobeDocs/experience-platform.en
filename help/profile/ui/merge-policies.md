@@ -16,7 +16,7 @@ If you would prefer to work with merge policies using the [!DNL Real-time Custom
 
 ## Getting started
 
-This guide requires a working understanding of several important [!DNL Experience Platform] features. Before following this guide, or using Profile APIs, please review the documentation for the following services:
+This guide requires a working understanding of several important [!DNL Experience Platform] features. Before following this guide or using Profile APIs, please review the documentation for the following services:
 
 * [Real-time Customer Profile](../home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Adobe Experience Platform Identity Service](../../identity-service/home.md): Enables Real-time Customer Profile by bridging identities from disparate data sources being ingested into [!DNL Platform].
