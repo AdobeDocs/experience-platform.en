@@ -72,9 +72,9 @@ Adobe Experience Platform Web SDK can also send data directly to Adobe Experienc
 
 **Time-to-value:** Adobe has worked hard (and will continue) to make it as easy as possible to deploy the Web SDK via Experience Platform Launch and map client-side data to XDM.  After that work is done, all other Adobe solutions and Adobe Experience Platform services can be turned on or off server-side. For example, if you are using this for Adobe Analytics and you want to turn on Target or Experience Platform, you can simply flip a toggle on the Experience Edge configuration and light up those use cases. 
 
-## What is `alloy.js`?
+## What is Alloy?
 
-`Alloy.js` is the file name for Adobe Experience Platform Web SDK. Adobe Experience Platform Web SDK is the official name, but many developers refer to it as "alloy."
+Alloy is the code name for Adobe Experience Platform Web SDK. It is used within the SDK's source code and filename, though Adobe Experience Platform Web SDK is the official name.
 
 ## Do customers need to buy Adobe Experience Platform to use the Web SDK?
 

@@ -51,7 +51,7 @@ In this example, the `configure` command is called after the `tcData` is obtaine
 
 ## Using the setConsent event
 
-The IAB TCF 2.0 API provides an event for when the consent is updated by the customer. This occurs when the customer initially sets their preferences and when the customer updates their preferences. 
+IAB TCF 2.0 API provides an event for when the consent is updated by the customer. This occurs when the customer initially sets their preferences and when the customer updates their preferences. 
 
 The following example shows one way to do this:
 

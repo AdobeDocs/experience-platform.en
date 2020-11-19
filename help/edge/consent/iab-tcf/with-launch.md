@@ -119,7 +119,7 @@ Add a "Send Event" action from the AEP Web SDK extension. Within the XDM field, 
 
 ## Sending other events with IAB TCF 2.0 consent information
 
-When events are triggered after the initial Experience Event, the two data elements are still defined and can be used to send the IAB consent information. Use the same XDM data element to send future events. The IAB TCF 2.0 information is included.
+When events are triggered after the initial Experience Event, the two data elements are still defined and can be used to send the IAB consent information. Use the same XDM data element to send future events. IAB TCF 2.0 information is included.
 
 ## Next steps
 

@@ -53,7 +53,7 @@ For more information on how to convert an XDM Experience Event to an Analytics h
 
 ## Adobe Experience Platform Web SDK integration
 
-The sections below describe the main integration points between the IAB TCF 2.0 and Adobe Experience Platform Web SDK.
+The sections below describe the main integration points between IAB TCF 2.0 and Adobe Experience Platform Web SDK.
 
 >[!NOTE]
 >
@@ -63,7 +63,7 @@ The sections below describe the main integration points between the IAB TCF 2.0 
 
 Default consent is used when there is no consent preference already saved for a customer. This means the default consent options can control the behavior of Adobe Experience Platform Web SDK and change based on a customer's region.
 
-For example, if you have a customer that is not within the jurisdiction of General Data Protection Regulation (GDPR), the default consent could be set to `in`, but inside the jurisdiction of GDPR, the default consent could be set to `pending`. Your cloud management platform (CMP) might detect the customer's region and provide the flag `gdprApplies` to the IAB TCF 2.0. This flag can be used to set the default consent.
+For example, if you have a customer that is not within the jurisdiction of General Data Protection Regulation (GDPR), the default consent could be set to `in`, but inside the jurisdiction of GDPR, the default consent could be set to `pending`. Your cloud management platform (CMP) might detect the customer's region and provide the flag `gdprApplies` to IAB TCF 2.0. This flag can be used to set the default consent.
 
 For more information on default consent, refer to the [default consent section](../../fundamentals/configuring-the-sdk.md#default-consent) in the SDK configuration documentation.
 

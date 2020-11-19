@@ -8,7 +8,7 @@ keywords: Identity;First Party Identity;Identity Service;3rd Party Identity;ID M
 
 # Identity - Retrieving the Experience Cloud ID
 
-The Adobe Experience Platform Web SDK leverages the [Adobe Identity Service](../../identity-service/ecid.md). This ensures that each device has a unique identifier that is persisted on the device so activity between pages can be tied together.
+Adobe Experience Platform Web SDK leverages [Adobe Identity Service](../../identity-service/ecid.md). This ensures that each device has a unique identifier that is persisted on the device so activity between pages can be tied together.
 
 ## First party identity
 
