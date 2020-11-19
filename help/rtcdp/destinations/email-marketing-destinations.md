@@ -9,7 +9,7 @@ seo-description: Email Service Providers (ESPs) allow you to manage your email m
 
 # Email marketing destinations {#email-marketing-destinations}
 
-Email Service Providers (ESPs) enable you to manage your email marketing activities, such as sending promotional email campaigns. Adobe Real-time Customer Data Platform integrates with ESPs by allowing you to activate segments to email marketing destinations.
+Email Service Providers (ESPs) enable you to manage your email marketing activities, such as sending promotional email campaigns. Real-time Customer Data Platform integrates with ESPs by allowing you to activate segments to email marketing destinations.
 
 To send segments to email marketing destinations for your campaigns, Adobe Real-time CDP must first connect to the destination.
 
@@ -47,7 +47,7 @@ On the **[!UICONTROL Select Segments]** page, select which segments to send to t
 
 ## Configure file names
 
-For information about the file name editing options, refer to the [Configure](/help/rtcdp/destinations/activate-destinations.md#configure) step in the activate destinations tutorial.
+For information about the segment schedule and file name editing options, refer to the [Configure](/help/rtcdp/destinations/activate-destinations.md#configure) step in the activate destinations tutorial.
 
 ## Select attributes - Select which schema fields to use as destination attributes in your exported files {#destination-attributes}
 

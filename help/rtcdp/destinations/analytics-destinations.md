@@ -10,7 +10,7 @@ seo-description: Analytics destinations track how visitors interact with content
 
 Analytics destinations track how visitors interact with content on your site and collect data to understand the behavior of your audience. These platforms deliver unique insights on engagement and conversion of your most valuable visitors.
 
-Currently, Adobe Real-time Customer Data Platform supports the analytics destinations listed below. For information on how to connect to these destinations, see the individual links:
+Currently, Real-time Customer Data Platform supports the analytics destinations listed below. For information on how to connect to these destinations, see the individual links:
 
 * [Adform Website Tracking extension](/help/rtcdp/destinations/adform-extension.md)
 * [Adobe Analytics extension](/help/rtcdp/destinations/adobe-analytics-extension.md)
