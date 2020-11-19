@@ -14,7 +14,7 @@ In the Adobe Experience Platform user interface, you can view and monitor the at
 >
 >The destinations details page is part of the [!UICONTROL Destinations] workspace in the Platform UI. See the [[!UICONTROL Destinations] workspace overview](./destinations-workspace.md) for more information.
 
-In the **[!UICONTROL Destinations]** workspace within the Platform UI, navigate to the **[!UICONTROL Browse]** tab and select the name of a batch destination that you want to view.
+In the **[!UICONTROL Destinations]** workspace within the Platform UI, navigate to the **[!UICONTROL Browse]** tab and select the name of a destination that you want to view.
 
 ![](./assets/details-page/select-destination.png)
 
