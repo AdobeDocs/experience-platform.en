@@ -2,8 +2,8 @@
 keywords: demandbase extension;demandbase;demandbase destination
 title: Demandbase extension
 seo-title: Demandbase extension
-description: The Demandbase extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Demandbase extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Demandbase extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The Demandbase extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Demandbase] extension {#demandbase-extension}
@@ -12,7 +12,7 @@ seo-description: The Demandbase extension is an analytics destination in Adobe R
 
 Get [!DNL Demandbase] B2B account insights right into Adobe Analytics where you can segment traffic and behavior by Industry, Revenue and your target accounts. This account based view delivers unique insights on engagement, conversion and the source for your most valuable visitors.
 
-[!DNL Demandbase] is an analytics extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101605.html).
+[!DNL Demandbase] is an analytics extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101605.html).
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 

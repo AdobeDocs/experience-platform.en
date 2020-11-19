@@ -2,8 +2,8 @@
 keywords: livefyre;livefyre extension
 title: Adobe Livefyre extension
 seo-title: Adobe Livefyre extension
-description: The Adobe Livefyre extension is a social destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Adobe Livefyre extension is a social destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Adobe Livefyre extension is a social destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The Adobe Livefyre extension is a social destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # Adobe Livefyre extension {#adobe-livefyre-extension}
@@ -12,7 +12,7 @@ seo-description: The Adobe Livefyre extension is a social destination in Adobe R
 
 Adobe Livefyre enables you to discover, organize, and publish a constant flow of user generated content onto your website to create authentic and highly personalized experiences.
 
-Adobe Livefyre is a social extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100464.html).
+Adobe Livefyre is a social extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100464.html).
 
 This destination is an [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 

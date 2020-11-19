@@ -2,8 +2,8 @@
 keywords: foresee;foresee extension;foresee destination
 title: Gainsight extension
 seo-title: Gainsight extension
-description: The Gainsight extension is a personalization destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Gainsight extension is a personalization destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Gainsight extension is a personalization destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The Gainsight extension is a personalization destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Gainsight] extension {#gainsight-extension}
@@ -12,7 +12,7 @@ seo-description: The Gainsight extension is a personalization destination in Ado
 
 [!DNL Gainsight] empowers product owners with the tools to deeply understand user behavior, drive product adoption, and collect user feedback.
 
-[!DNL Gainsight] is a personalization extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.103343.html).
+[!DNL Gainsight] is a personalization extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.103343.html).
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 

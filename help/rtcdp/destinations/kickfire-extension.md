@@ -2,8 +2,8 @@
 keywords: kickfire;Kickfire;kickfire extension;Kickfire Extension
 title: KickFire extension
 seo-title: KickFire extension
-description: The KickFire extension is a personalization destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The KickFire extension is a personalization destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The KickFire extension is a personalization destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The KickFire extension is a personalization destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL KickFire] extension {#kickfire-extension}
@@ -12,7 +12,7 @@ seo-description: The KickFire extension is a personalization destination in Adob
 
 [!DNL KickFire's] IP address intelligence & B2B firmographic data allows you to translate IP addresses to companies, identify anonymous web visitors, and integrate account data into your technology stack – all based on a company's IP address.
 
-[!DNL KickFire] is a personalization extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see [Kickfire website](https://www.kickfire.com/).
+[!DNL KickFire] is a personalization extension in Real-time Customer Data Platform. For more information about the extension functionality, see [Kickfire website](https://www.kickfire.com/).
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
