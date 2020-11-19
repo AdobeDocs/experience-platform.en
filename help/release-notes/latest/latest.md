@@ -100,25 +100,23 @@ For more information, please read the document on [creating a recipe using Jupyt
 
 ## [!DNL Destinations] Service {#destinations}
 
-In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
+In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
 **New destinations**
 
 | Destination | Description |
 | ----------- | ----------- |
+| Braze | Braze is a comprehensive customer engagement platform that power relevant and memorable experiences between customers and the brands they love. |
 | Microsoft Bing | The Microsoft Bing destination helps you execute retargeting and audience targeted digital campaigns across Microsoft Display Advertising. |
 | The Trade Desk | The Trade Desk is a self-service platform for ad buyers to execute retargeting and audience targeted digital campaigns across display, video, and mobile inventory sources. |
-
-<!-- | Braze | Braze is a comprehensive customer engagement platform that power relevant and memorable experiences between customers and the brands they love. |  -->
 
 **New features**
 
 | Feature | Description |
 | ------- | ----------- |
+| File encryption | For file based destinations, users can now add encryption to their exported files. |
+| File scheduling | For both email based and cloud storage destinations, users can create a one-time export or create daily snapshots. |
 | Mandatory fields | Users can mark fields as mandatory, ensuring that only fields that contain the mandatory field are exported. |
-
-<!-- | File scheduling | For both email based and cloud storage destinations, users can create a one-time export or create daily snapshots. |
-| File encryption | For file based destinations, users can now add encryption to their exported files. | -->
 
 For more information, please see the [Destinations overview](../../rtcdp/destinations/destinations-overview.md).
 
@@ -194,6 +192,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 [!DNL Experience Platform] provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
 **New sources**
+
 | Feature | Description |
 | ------- | ----------- |
 | [!DNL Shopify] | You can now connect [!DNL Shopify] to [!DNL Experience Platform] using the [!DNL Flow Service] API or the UI. See the [Shopify connector overview](../../sources/connectors/ecommerce/shopify.md) for more information. |
