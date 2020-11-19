@@ -905,5 +905,5 @@ The following parameters are used in the path for GET requests to the `/access/e
 |`startTime`|Specify the start time to filter time-series objects (in milliseconds).|`startTime=1539838505`|
 |`endTime`|Specify the end time to filter time-series objects (in milliseconds).|`endTime=1539838510`|
 |`limit`|Numeric value specifying the maximum number of objects to return. Default: 1000|`limit=100`|
-|`property`|Filters by the property value. Supports the following evaluators: =, !=, <, <=, >, >=. Can only be used with experience events, with a maximum of three properties being supported.|`property=webPageDetails.isHomepage=true&localTime<="2020-07-20"`|
+|`property`|Filters by the property value. Supports the following evaluators: =, !=, <, <=, >, >=. Can only be used with experience events, with a maximum of three properties being supported.|`property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"`|
 |`withCA`|Feature flag for enabling computed attributes for lookup. Default: false|`withCA=true`|
