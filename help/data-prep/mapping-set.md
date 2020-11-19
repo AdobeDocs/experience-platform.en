@@ -342,3 +342,156 @@ When mapping an expression that you want to resolve, use the `EXPRESSION` source
     }
 }
 ```
+
+## Destination
+
+The destination is the location where the value extracted from the source will be inserted.
+
+### Field at the root level
+
+When you want to place the value from the source at the root level, follow the example below:
+
+**Sample JSON file:**
+
+```json
+{
+    "name": "John Smith",
+    "email": "js@example.com"
+}
+```
+
+**Sample mapping set:**
+
+```json
+{
+    "source": "name",
+    "destination": "name",
+    "sourceType": "text/x.schema-path"
+}
+```
+
+**Transformed data:**
+
+```json
+{
+    "name": "John Smith"
+}
+```
+
+### Nested field
+
+When
+
+**Sample JSON file:**
+
+```json
+{
+    "customerInfo": {
+        "name": "John Smith",
+        "email": "js@example.com"
+    }
+}
+```
+
+**Sample mapping set:**
+
+```json
+{
+    "source": "customerInfo.name",
+    "destination": "pi.name",
+    "sourceType": "text/x.schema-path"
+}
+```
+
+**Transformed data:**
+
+```json
+{
+    "pi": {
+        "name": "John Smith"
+    }
+}
+```
+
+### Field within an index in an array
+
+When
+
+**Sample JSON file:**
+
+```json
+{
+    "customerInfo": {
+        "name": "John Smith",
+        "email": "js@example.com"
+    }
+}
+```
+
+**Sample mapping set:**
+
+```json
+{
+    "source": "customerInfo.name",
+    "destination": "piList[0]",
+    "sourceType": "text/x.schema-path"
+}
+```
+
+**Transformed data:**
+
+```json
+{
+    "piList": ["John Smith"]
+}
+```
+
+### Iterative array operation
+
+When
+
+```json
+{
+    "customerInfo": {
+        "emails": [
+            {
+                "name": "John Smith",
+                "email": "js@example.com"
+            },
+            {
+                "name": "Jane Smith",
+                "email": "jane@example.com"
+            }
+        ]
+    }
+}
+```
+
+**Sample mapping set:**
+
+```json
+{
+    "source": "customerInfo.emails[*].name",
+    "destination": "pi[*].names",
+    "sourceType": "text/x.schema-path"
+}
+```
+
+**Transformed data:**
+
+```json
+{
+    "pi": [
+        {
+            "names": {
+                "name": "John Smith"
+            } 
+        },
+        {
+            "names": {
+                "name": "Jane Smith"
+            }
+        }
+    ]
+}
+```
