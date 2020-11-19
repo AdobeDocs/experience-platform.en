@@ -63,6 +63,10 @@ Use the following the enum values for file-based connectors:
 
 For all table-based connectors use the enum value: `tabular`.
 
+>[!NOTE]
+>
+>You can ingest any flat or delimited file with a cloud storage source connector by specifying a column delimiter as a data property. When ingesting flat or delimited files, you must precede your delimiter of choice with a `\`.
+
 **API format**
 
 ```http
@@ -102,7 +106,7 @@ curl -X POST \
 | --- | --- |
 | `connectionId` | The unique connection ID of the third-party cloud storage system you are accessing. |
 | `data.format` | An enum value that defines the data format attribute. |
-| `data.columnDelimiter` | You can use a single column delimiter to collect flat files in any format. Available delimiters include tabs, commas, pipes, and semicolons. The value defaults to a comma if unprovided. This property is only required when ingesting non-CSV delimited files. |
+| `data.columnDelimiter` | You can use any single column delimiter to collect flat files in any format. The value defaults to a comma if unprovided. This property is only required when ingesting non-CSV delimited files. |
 | `params.path` | The path of the source file you are accessing. |
 | `connectionSpec.id` | The connection spec ID associated with your specific third-party cloud storage system. See the [appendix](#appendix) for a list of connection spec IDs. |
 
