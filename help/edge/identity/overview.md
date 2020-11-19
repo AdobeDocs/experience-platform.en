@@ -8,7 +8,7 @@ keywords: Identity;First Party Identity;Identity Service;3rd Party Identity;ID M
 
 # Identity - Retrieving the Experience Cloud ID
 
-The Adobe Experience Platform [!DNL Web SDK] leverages the [Adobe Identity Service](../../identity-service/ecid.md). This ensures that each device has a unique identifier that is persisted on the device so activity between pages can be tied together.
+Adobe Experience Platform Web SDK leverages [Adobe Identity Service](../../identity-service/ecid.md). This ensures that each device has a unique identifier that is persisted on the device so activity between pages can be tied together.
 
 ## First party identity
 
@@ -20,11 +20,11 @@ The [!DNL Identity Service] has the ability to sync an ID with a 3rd party domai
 
 ## ID migration
 
-When migrating from using Visitor API, you can also migrate existing AMCV cookies. To enable ECID migration, set the `idMigrationEnabled` parameter in the configuration. The id migration is setup to enable some use cases:
+When migrating from using Visitor API, you can also migrate existing AMCV cookies. To enable ECID migration, set the `idMigrationEnabled` parameter in the configuration. ID migration enables the following use cases:
 
-* When some pages of a domain are using Visitor API and other pages are using this SDK. To support this case, the SDK reads existing AMCV cookies and writes a new cookie with the existing ECID. Additionally, the SDK writes AMCV cookies so that if the ECID is obtained first on a page instrumented with the AEP Web SDK, subsequent pages that are instrumented with Visitor API have the same ECID.
-* When the AEP Web SDK is set up on a page that also has Visitor API. To support this case, if the AMCV cookie is not set, the SDK looks for the Visitor API on the page and calls it to get the ECID.
-* When the entire site is using the AEP Web SDK and does not have Visitor API, it is useful to migrate the ECIDs so that the return visitor information is retained. After the SDK is deployed with `idMigrationEnabled` for a period of time so that most of the visitor cookies are migrated, the setting can be turned off.
+* When some pages of a domain are using Visitor API and other pages are using this SDK. To support this case, the SDK reads existing AMCV cookies and writes a new cookie with the existing ECID. Additionally, the SDK writes AMCV cookies so that if the ECID is obtained first on a page instrumented with the SDK, subsequent pages that are instrumented with Visitor API have the same ECID.
+* When Adobe Experience Platform Web SDK is set up on a page that also has Visitor API. To support this case, if the AMCV cookie is not set, the SDK looks for Visitor API on the page and calls it to get the ECID.
+* When the entire site is using Adobe Experience Platform Web SDK and does not have Visitor API, it is useful to migrate the ECIDs so that the return visitor information is retained. After the SDK is deployed with `idMigrationEnabled` for a period of time so that most of the visitor cookies are migrated, the setting can be turned off.
 
 ## Retrieving the Visitor ID
 
@@ -36,13 +36,14 @@ If you want to use this unique ID, use the `getIdentity` command. `getIdentity` 
 
 ```javascript
 alloy("getIdentity")
-  .then(function(result.identity.ECID) {
-    // This function will get called with Adobe Experience Cloud Id when the command promise is resolved
+  .then(function(result) {
+    // The command succeeded.
+    console.log(result.identity.ECID);
   })
   .catch(function(error) {
     // The command failed.
-    // "error" will be an error object with additional information
-  })
+    // "error" will be an error object with additional information.
+  });
 ```
 
 ## Syncing identities
@@ -72,21 +73,14 @@ alloy("sendEvent", {
       ]
     }
   }
-})
+});
 ```
 
+Each property within `identityMap` represents identities belonging to a particular [identity namespace](../../identity-service/namespaces.md). The property name should be the identity namespace symbol, which you can find listed in the Adobe Experience Platform user interface under "[!UICONTROL Identities]". The property value should be an array of identities pertaining to that identity namespace.
 
-### Syncing identities options
+Each identity object in the identities array is structured as follows: 
 
-#### Identity namespace symbol
-
-| **Type** | **Required** | **Default Value** |
-| -------- | ------------ | ----------------- |
-| String   | Yes          | none              |
-
-The key for the object is the [Identity Namespace](../../identity-service/namespaces.md) Symbol. You can find this listed in the Adobe Experience Platform user interface under "[!UICONTROL Identities]".
-
-#### `id`
+### `id`
 
 | **Type** | **Required** | **Default Value** |
 | -------- | ------------ | ----------------- |
@@ -94,7 +88,7 @@ The key for the object is the [Identity Namespace](../../identity-service/namesp
 
 This is the ID that you want to sync for the given namespace.
 
-#### `authenticationState`
+### `authenticationState`
 
 | **Type** | **Required** | **Default Value** | **Possible Values** |
 | -------- | ------------ | ----------------- | ------------------------------------ |
@@ -102,18 +96,10 @@ This is the ID that you want to sync for the given namespace.
 
 The authentication state of the ID.
 
-#### `primary`
+### `primary`
 
 | **Type** | **Required** | **Default Value** |
 | -------- | ------------ | ----------------- |
 | Boolean  | optional     | false             |
 
 Determines whether this identity should be used as a primary fragment in the unified profile. By default, the ECID is set as the primary identifier for the user.
-
-#### `hashEnabled`
-
-| **Type** | **Required** | **Default Value** |
-| -------- | ------------ | ----------------- |
-| Boolean  | optional     | false             |
-
-If enabled, it will hash the identity using SHA256 hashing.
