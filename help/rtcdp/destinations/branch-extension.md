@@ -2,8 +2,8 @@
 keywords: branch;branch extension;branch destination
 title: Branch  extension
 seo-title: Branch  extension
-description: The Branch  extension is an advertising destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Branch extension is an advertising destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Branch extension is an advertising destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The Branch extension is an advertising destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Branch] extension {#branch-extension}
@@ -12,7 +12,7 @@ seo-description: The Branch extension is an advertising destination in Adobe Rea
 
 Branch provides powerful links and solutions that help you acquire, engage, and measure across all devices, channels, and platforms.
 
-Branch is an advertising extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the [features page](https://branch.io/features/) on the Branch website.
+Branch is an advertising extension in Real-time Customer Data Platform. For more information about the extension functionality, see the [features page](https://branch.io/features/) on the Branch website.
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 

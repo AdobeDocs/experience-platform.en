@@ -1,9 +1,9 @@
 ---
 keywords: data quality;rtcdp data quality
 title: Data quality on Real-time Customer Data Platform
-seo-title: Data quality on Adobe Real-time Customer Data Platform
+seo-title: Data quality on Real-time Customer Data Platform
 description: A document on data quality on Real-time Customer Data Platform
-seo-description: A document describing how data quality works through batch and data ingestion on Adobe Real-time Customer Data Platform
+seo-description: A document describing how data quality works through batch and data ingestion on Real-time Customer Data Platform
 ---
 
 # Data quality on [!DNL Real-time Customer Data Platform]

@@ -2,8 +2,8 @@
 keywords: Parse. ly;parsely;Parsely;parse.ly;Parse.ly
 title: Parse.ly Analytics extension
 seo-title: Parse.ly Analytics extension
-description: THe Parse.ly Analytics extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Parse.ly Analytics extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Parse.ly Analytics extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The Parse.ly Analytics extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Parse.ly Analytics] Extension {#parsely-analytics-extension}
@@ -12,7 +12,7 @@ seo-description: The Parse.ly Analytics extension is an analytics destination in
 
 [!DNL Parse.ly Analytics] helps 2,500+ companies use data to understand their online audience. This extension installs a JavaScript snippet, which tracks how visitors interact with content on your site.
 
-Parse.ly is an analytics extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see [Parse.ly Analytics](https://www.parse.ly/).
+Parse.ly is an analytics extension in Real-time Customer Data Platform. For more information about the extension functionality, see [Parse.ly Analytics](https://www.parse.ly/).
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
