@@ -2,8 +2,8 @@
 keywords: Flashtalking OneTag extensions;Flashtalking OneTag extension;Flashtalking OneTag destinations;Flashtalking OneTag;flashtalking onetag
 title: Flashtalking OneTag extension
 seo-title: Flashtalking OneTag extension
-description: The Flashtalking OneTag extension is an advertising destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Flashtalking OneTag extension is an advertising destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Flashtalking OneTag extension is an advertising destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The Flashtalking OneTag extension is an advertising destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Flashtalking OneTag] extension {#flashtalking-extension}
@@ -12,7 +12,7 @@ seo-description: The Flashtalking OneTag extension is an advertising destination
 
 The [!DNL Flashtalking OneTag] extension for Experience Platform Launch makes it easy to attribute site actions to display, video, and mobile ad activity. Deploy the [!DNL Flashtalking OneTag] to your web properties using Launch.
 
-[!DNL Flashtalking OneTag] is an advertising extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101392.flashtalking-onetag.html).
+[!DNL Flashtalking OneTag] is an advertising extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101392.flashtalking-onetag.html).
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 

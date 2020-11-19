@@ -16,7 +16,7 @@ seo-description: Google Customer Match lets you use your online and offline data
 
 ## Use Cases
 
-To help you better understand how and when you should use the [!DNL Google Customer Match] destination, here are sample use cases that Adobe Real-time Customer Data Platform customers can solve by using this feature.
+To help you better understand how and when you should use the [!DNL Google Customer Match] destination, here are sample use cases that Real-time Customer Data Platform customers can solve by using this feature.
 
 
 ### Use Case #1

@@ -23,7 +23,7 @@ In order to implement the AEP Web SDK with IAB TCF 2.0, it is required that you 
 
 ## Real-time Customer Data Platform integration
 
-Built on Adobe Experience Platform, Adobe Real-time Customer Data Platform (Real-time CDP) helps you bring together known and anonymous data from multiple enterprise sources. This allows you to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real time. To send consent data to Real-time CDP through the AEP Web SDK, the following is required:
+Built on Adobe Experience Platform, Real-time Customer Data Platform (Real-time CDP) helps you bring together known and anonymous data from multiple enterprise sources. This allows you to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real time. To send consent data to Real-time CDP through the AEP Web SDK, the following is required:
 
 - A dataset based on the [!DNL XDM Individual Profile] class, enabled for use in [!DNL Real-time Customer Profile], with the Profile privacy mixin.
 - An edge configuration set up with Real-time CDP, and the profile dataset mentioned above.
