@@ -25,7 +25,7 @@ An example of a mapping set can be seen below:
     "inputSchema" : {
         "id": "a167ff2947ff447ebd8bcf7ef6756232",
         "version": 0
-    }
+    },
     "mappings": [
         {
             "sourceType": "ATTRIBUTE",
@@ -254,7 +254,7 @@ You can iteratively loop through arrays and map them to a target by using the `A
 ```json
 {
     "source": "customerInfo.emails[*].name",
-    "destination": "pi.names",
+    "destination": "pi[*].names",
     "sourceType": "text/x.schema-path"
 }
 ```
@@ -263,11 +263,18 @@ You can iteratively loop through arrays and map them to a target by using the `A
 
 ```json
 {
-    "pi": {
-        "names": {
-            
+    "pi": [
+        {
+            "names": {
+                "name": "John Smith"
+            } 
+        },
+        {
+            "names": {
+                "name": "Jane Smith"
+            }
         }
-    }
+    ]
 }
 ```
 
