@@ -58,9 +58,9 @@ The following standard namespaces are provided for use by all organizations with
 | Google Ad ID |
 | Google Click ID |
 | Phone |
-| Phone (E.164) | Namespace for raw phone numbers in E.164 format. The plus `(+)` sign is required. 
+| Phone (E.164) | Namespace for raw phone numbers in E.164 format. The plus `(+)` sign is required. |
 | Phone (SHA256_E.164) | Phone numbers need to be hashed using SHA256 without any dashes. Hash should be completed by customers on raw phone numbers in E.164 format.  |
-| Phone (SHA256) | Before hashing, you must remove symbols, letters, and any leading zeroes. You must also add the country code as a prefix. Note that some destinations may have different phone number formatting requirements.  |
+| Phone (SHA256) | Before hashing, you must remove symbols, letters, and any leading zeroes. You must also add the country code as a prefix. Note that some areas may have a different phone number formatting requirements.  |
 | TNTID | Adobe Target (TNTID) |
 | Windows AID |
 
