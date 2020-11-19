@@ -50,11 +50,14 @@ The following standard namespaces are provided for use by all organizations with
 | Display name | Notes |
 | ------------ | ----------- |
 | AdCloud | Adobe AdCloud - ID Syncing Partner |
+| Adobe Analytics | Adobe Analytics (Legacy ID) |
 | Apple IDFA (ID for Advertisers | Apple ID for Advertisers. See the following document on [interest-based ads](https://support.apple.com/en-us/HT202074) for more information. |
+| Apple Push Notification service | Identities collected via Apple for Push notification Service. |
 | CORE | legacy name: "Adobe AudienceManager" |
 | ECID | alias: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID" |
 | Email |
 | Emails (SHA256, lowercased) | Standard namespace for pre-hashed email. Values provided in this namespace are converted to lowercase before hashing with SHA-256. Leading and trailing spaces need to be trimmed before an email address is normalized. You won't be able to change this setting later. |
+| Firebase Cloud Messaging | Identities collected via Google for Push notification Service. |
 | Google Ad ID |
 | Google Click ID |
 | Phone |
