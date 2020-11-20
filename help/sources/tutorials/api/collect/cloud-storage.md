@@ -55,17 +55,17 @@ To create a source connection, you must also define an enum value for the data f
 
 Use the following the enum values for file-based connectors:
 
-| Data.format | Enum value |
+| Data format | Enum value |
 | ----------- | ---------- |
-| Delimited files | `delimited` |
-| JSON files | `json` |
-| Parquet files | `parquet` |
+| Delimited | `delimited` |
+| JSON | `json` |
+| Parquet | `parquet` |
 
-For all table-based connectors use the enum value: `tabular`.
+For all table-based connectors, set the value to `tabular`.
 
 >[!NOTE]
 >
->You can ingest any flat or delimited file with a cloud storage source connector by specifying a column delimiter as a data property.
+>You can ingest CSV and TSV files with a cloud storage source connector by specifying a column delimiter as a data property. Any single character value is a permissible column delimiter. If unprovided, a comma `(,)` is used as the default value.
 
 **API format**
 
@@ -106,7 +106,7 @@ curl -X POST \
 | --- | --- |
 | `connectionId` | The unique connection ID of the third-party cloud storage system you are accessing. |
 | `data.format` | An enum value that defines the data format attribute. |
-| `data.columnDelimiter` | You can use any single column delimiter to collect flat files in any format. This property is only required when ingesting non-CSV delimited files. |
+| `data.columnDelimiter` | You can use any single character column delimiter to collect flat files. This property is only required when ingesting CSV or TSV files. |
 | `params.path` | The path of the source file you are accessing. |
 | `connectionSpec.id` | The connection spec ID associated with your specific third-party cloud storage system. See the [appendix](#appendix) for a list of connection spec IDs. |
 
