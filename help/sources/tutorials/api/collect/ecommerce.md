@@ -7,7 +7,7 @@ type: Tutorial
 description: This tutorial covers the steps for retrieving data from a third-party eCommerce system and ingesting it into Platform through source connectors and APIs.
 ---
 
-# Collect ecommerce data through source connectors and APIs
+# Collect eCommerce data through source connectors and APIs
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
