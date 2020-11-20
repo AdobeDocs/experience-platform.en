@@ -172,9 +172,9 @@ A successful response returns details of the newly created schema including its 
     "meta:altId": "_{TENANT_ID}.schemas.e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
     "meta:resourceType": "schemas",
     "version": "1.0",
-    "title": "Test shopify demo",
+    "title": "Sample schema for a streaming connector",
     "type": "object",
-    "description": "",
+    "description": "Sample schema for a streaming connector",
     "allOf": [
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile",
@@ -255,14 +255,14 @@ curl -X POST \
             "format": "parquet"
         },
         "tags": {
-            "unifiedIdentity": [
+            "identity": [
             "enabled:true"
             ],
-            "unifiedProfile": [
+            "profile": [
             "enabled:true"
             ]
         },
-        "name": "E2E_RAW_DATA_TO_PLATFORM_DATASET"
+        "name": "Test streaming dataset"
     }'
 ```
 
@@ -303,8 +303,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Raw Data to Platform Target connection",
-        "description": "Raw Data to Platform Target connection",
+        "name": "Streaming target connection",
+        "description": "Streaming target connection",
         "connectionSpec": {
             "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
             "version": "1.0"
@@ -512,8 +512,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "hgtest",
-        "description": "hgtest",
+        "name": "Streaming dataflow",
+        "description": "Streaming dataflow",
         "flowSpec": {
             "id": "c1a19761-d2c7-4702-b9fa-fe91f0613e81",
             "version": "1.0"
