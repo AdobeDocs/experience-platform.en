@@ -66,7 +66,7 @@ Use the following the enum values for file-based connectors:
 | JSON | `json` |
 | Parquet | `parquet` |
 
-For all table-based connectors use the enum value: `tabular`.
+For all table-based connectors, set the value to `tabular`.
 
 **API format**
 
