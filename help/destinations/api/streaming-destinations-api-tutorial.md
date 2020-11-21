@@ -12,13 +12,13 @@ type: Tutorial
 >
 >The [!DNL Amazon Kinesis] and [!DNL Azure Event Hubs] destinations in Adobe Real-time CDP are currently in beta. The documentation and the functionality are subject to change.
 
-This tutorial demonstrates how to use API calls to connect to your Adobe Experience Platform data, create a connection to a streaming cloud storage destination ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) or [Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), create a dataflow to your new created destination, and activate data to your new created destination.
+This tutorial demonstrates how to use API calls to connect to your Adobe Experience Platform data, create a connection to a streaming cloud storage destination ([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) or [Azure Event Hubs](../catalog/cloud-storage/azure-event-hubs.md)), create a dataflow to your new created destination, and activate data to your new created destination.
 
 This tutorial uses the [!DNL Amazon Kinesis] destination in all examples, but the steps are identical for [!DNL Azure Event Hubs].
 
-![Overview - the steps to create a streaming destination and activate segments](/help/rtcdp/destinations/assets/flow-prelim.png)
+![Overview - the steps to create a streaming destination and activate segments](../assets/api/streaming-destination/overview.png)
 
-If you prefer to use the user interface in Adobe's Real-time CDP to connect to a destination and activate data, see the [Connect a destination](../../rtcdp/destinations/connect-destination.md) and [Activate profiles and segments to a destination](../../rtcdp/destinations/activate-destinations.md) tutorials.
+If you prefer to use the user interface in Adobe's Real-time CDP to connect to a destination and activate data, see the [Connect a destination](../ui/connect-destination.md) and [Activate profiles and segments to a destination](../ui/activate-destinations.md) tutorials.
 
 ## Get started
 
@@ -43,7 +43,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required and optional headers {#gather-values}
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial](/help/tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 *   Authorization: Bearer `{ACCESS_TOKEN}`
 *   x-api-key: `{API_KEY}`
@@ -67,7 +67,7 @@ You can find accompanying reference documentation for all the API calls in this 
 
 ## Get the list of available streaming destinations {#get-the-list-of-available-streaming-destinations}
 
-![Destination steps overview step 1](/help/rtcdp/destinations/assets/step1-create-streaming-destination-api.png)
+![Destination steps overview step 1](../assets/api/streaming-destination/step1.png)
 
 As a first step, you should decide which streaming destination to activate data to. To begin with, perform a call to request a list of available destinations that you can connect and activate segments to. Perform the following GET request to the `connectionSpecs` endpoint to return a list of available destinations:
 
@@ -111,7 +111,7 @@ A successful response contains a list of available destinations and their unique
 
 ## Connect to your Experience Platform data {#connect-to-your-experience-platform-data}
 
-![Destination steps overview step 2](/help/rtcdp/destinations/assets/step2-create-streaming-destination-api.png)
+![Destination steps overview step 2](../assets/api/streaming-destination/step2.png)
 
 Next, you must connect to your Experience Platform data, so you can export profile data and activate it in your preferred destination. This consists of two substeps which are described below.
 
@@ -207,7 +207,7 @@ A successful response returns the unique identifier (`id`) for the newly created
 
 ## Connect to streaming destination {#connect-to-streaming-destination}
 
-![Destination steps overview step 3](/help/rtcdp/destinations/assets/step3-create-streaming-destination-api.png)
+![Destination steps overview step 3](../assets/api/streaming-destination/step3.png)
 
 In this step, you are setting up a connection to your desired streaming destination. This consists of two substeps which are described below.
 
@@ -258,7 +258,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-*   `{CONNECTION_SPEC_ID}`: Use the connection spec ID you obtained in the step [Get the list of available destinations](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md#get-the-list-of-available-destinations).
+*   `{CONNECTION_SPEC_ID}`: Use the connection spec ID you obtained in the step [Get the list of available destinations](#get-the-list-of-available-destinations).
 *   `{AUTHENTICATION_CREDENTIALS}`: fill in the name of your streaming destination: `Aws Kinesis authentication credentials` or `Azure EventHub authentication credentials`. 
 *   `{ACCESS_ID}`: *For [!DNL Amazon Kinesis] connections.* Your access ID for your Amazon Kinesis storage location.
 *   `{SECRET_KEY}`: *For [!DNL Amazon Kinesis] connections.* Your secret key for your Amazon Kinesis storage location.
@@ -319,7 +319,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 *   `{BASE_CONNECTION_ID}`: Use the base connection ID you obtained in the step above.
-*   `{CONNECTION_SPEC_ID}`: Use the connection spec you obtained in the step [Get the list of available destinations](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md#get-the-list-of-available-destinations).
+*   `{CONNECTION_SPEC_ID}`: Use the connection spec you obtained in the step [Get the list of available destinations](#get-the-list-of-available-destinations).
 *   `{NAME_OF_DATA_STREAM}`: *For [!DNL Amazon Kinesis] connections.* Provide the name of your existing data stream in your [!DNL Amazon Kinesis] account. Adobe Real-time CDP will export data to this stream.
 *   `{REGION}`: *For [!DNL Amazon Kinesis] connections.* The region in your Amazon Kinesis account where Adobe Real-time CDP will stream your data.
 *   `{EVENT_HUB_NAME}`: *For [!DNL Azure Event Hubs] connections.* Fill in the [!DNL Azure Event Hub] name where Adobe Real-time CDP will stream your data. For more information, see [Create an event hub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) in the [!DNL Microsoft] documentation.
@@ -336,7 +336,7 @@ A successful response returns the unique identifier (`id`) for the newly created
 
 ## Create a data flow
 
-![Destination steps overview step 4](/help/rtcdp/destinations/assets/step4-create-streaming-destination-api.png)
+![Destination steps overview step 4](../assets/api/streaming-destination/step4.png)
 
 Using the IDs you obtained in the previous steps, you can now create a dataflow between your Experience Platform data and the destination where you will activate data to. Think of this step as constructing the pipeline, through which data will later flow, between Experience Platform and your desired destination.
 
@@ -411,7 +411,7 @@ A successful response returns the ID (`id`) of the newly created dataflow and an
 
 ## Activate data to your new destination {#activate-data}
 
-![Destination steps overview step 5](/help/rtcdp/destinations/assets/step5-create-streaming-destination-api.png)
+![Destination steps overview step 5](../assets/api/streaming-destination/step5.png)
 
 Having created all the connections and the data flow, now you can activate your profile data to the streaming platform. In this step, you select which segments and which profile attributes you are sending to the destination and you can schedule and send data to the destination.
 
@@ -471,7 +471,7 @@ Look for a 202 OK response. No response body is returned. To validate that the r
 
 ## Validate the data flow
 
-![Destination steps overview step 6](/help/rtcdp/destinations/assets/step6-create-streaming-destination-api.png)
+![Destination steps overview step 6](../assets/api/streaming-destination/step6.png)
 
 As a final step in the tutorial, you should validate that the segments and profile attributes have indeed been correctly mapped to the data flow.
 
@@ -590,5 +590,5 @@ The returned response should include in the `transformations` parameter the segm
 
 By following this tutorial, you have successfully connected Real-time CDP to one of your preferred streaming destinations and set up a data flow to the respective destination. Outgoing data can now be used in the destination for customer analytics or any other data operations you may wish to perform. See the following pages for more details:
 
-*   [Destinations overview](../../rtcdp/destinations/destinations-overview.md)
-*   [Destinations Catalog overview](../../rtcdp/destinations/destinations-catalog.md)
+*   [Destinations overview](../home.md)
+*   [Destinations Catalog overview](../catalog/destinations-catalog.md)
