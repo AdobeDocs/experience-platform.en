@@ -135,6 +135,7 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
   - [Monitor dataflows using the Flow Service API](tutorials/api/monitor.md)
   - [Update connection information using the Flow Service API](tutorials/api/update.md)
   - [Delete connections using the Flow Service API](tutorials/api/delete.md)
+  - [Delete dataflows using the Flow Service API](tutorials/api/delete-dataflows.md)
 - UI tutorials {#ui-tutorials}
   - Create a source connector {#create}
     - Adobe applications {#adobe-applications}
