@@ -19,6 +19,8 @@ Using the developer guide requires a working understanding of the following comp
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
+XDM uses JSON Schema formatting to describe and validate the structure of ingested customer experience data. It is therefore strongly recommended that you review the [official JSON Schema documentation](https://json-schema.org/) for a better understanding of this underlying technology.
+
 ## Reading sample API calls
 
 The [!DNL Schema Registry] API documentation provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the Experience Platform troubleshooting guide.
@@ -37,7 +39,7 @@ All resources in [!DNL Experience Platform], including those belonging to the [!
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
+>For more information on sandboxes in [!DNL Platform], see the [sandbox documentation](../../sandboxes/home.md). 
 
 All lookup (GET) requests to the [!DNL Schema Registry] require an additional `Accept` header, whose value determines the format of information returned by the API. See the [Accept header](#accept) section below for more details.
 

@@ -8,7 +8,16 @@ topic: developer guide
 
 # Classes endpoint
 
-Classes define the behavioral aspects of the data that a schema will contain (record or time series). In addition, a class determines the base structure of common properties that all schemas based on that class must contain, as well as which mixins are eligible for use in those schemas. The `/classes` endpoint in the [!DNL Schema Registry] API allows you to programmatically manage classes within your experience application.
+All Experience Data Model (XDM) schemas must be based on a class. A class determines the base structure of common properties that all schemas based on that class must contain, as well as which mixins are eligible for use in those schemas. In addition, a schema's class determines the behavioral aspects of the data that a schema will contain, of which there are two types:
+
+* **[!UICONTROL Record]**: Provides information about the attributes of a subject. A subject could be an organization or an individual.
+* **[!UICONTROL Time-series]**: Provides a snapshot of the system at the time an action was taken either directly or indirectly by a record subject.
+
+>[!NOTE]
+>
+>For more information classes on data behaviors in terms of how they affect schema composition, refer to the [basics of schema composition](../schema/composition.md).
+
+The `/classes` endpoint in the [!DNL Schema Registry] API allows you to programmatically manage classes within your experience application.
 
 ## Getting started
 
@@ -228,9 +237,11 @@ A successful response returns the details of the class. The fields that are retu
 
 You can define a custom class under the `tenant` container by making a POST request.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->When composing a schema based on a class that you define, you will not be able to use standard mixins. Each mixin defines the classes they are compatible with in their `meta:intendedToExtend` attribute. Once you begin defining mixins that are compatible with your new class (by using the `$id` of your new class in the `meta:intendedToExtend` field of the mixin), you will be able to reuse those mixins every time you define a schema that implements the class you defined. See the sections on [creating mixins](./mixins.md#create) and [creating schemas](./schemas.md#create) in their respective endpoint guides for more information.
+>When composing a schema based on a custom class that you define, you will not be able to use standard mixins. Each mixin defines the classes they are compatible with in their `meta:intendedToExtend` attribute. Once you begin defining mixins that are compatible with your new class (by using the `$id` of your new class in the `meta:intendedToExtend` field of the mixin), you will be able to reuse those mixins every time you define a schema that implements the class you defined. See the sections on [creating mixins](./mixins.md#create) and [creating schemas](./schemas.md#create) in their respective endpoint guides for more information.
+>
+>If you are planning to use schemas based on custom classes in Real-time Customer Profile, it is also important to keep in mind that union schemas are only constructed based on schemas that share the same class. If you want to include a custom-class schema in the union for another class like [!UICONTROL XDM Individual Profile] or [!UICONTROL XDM ExperienceEvent], you must establish a relationship with another schema that employs that class. See the tutorial on [establishing a relationship between two schemas in the API](../tutorials/relationship-api.md) for more information.
 
 **API format**
 
