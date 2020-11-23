@@ -173,4 +173,4 @@ After completing the activation flow, switch to your **[!UICONTROL Google Ads]**
 
 ## Additional resources {#additional-resources}
 
-* [Integrate Google Customer Match - Video tutorial](https://docs.adobe.com/content/help/en/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
+* [Integrate Google Customer Match - Video tutorial](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)

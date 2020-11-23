@@ -98,4 +98,4 @@ For instructions on how to activate segments to email marketing destinations, se
 ## Additional resources
 
 - [Activate data to destinations](/help/rtcdp/destinations/activate-destinations.md)
-- [Create email marketing destinations and activate data using the Flow Service API](https://docs.adobe.com/content/help/en/experience-platform/tutorials/destinations/email-marketing-api.html)
+- [Create email marketing destinations and activate data using the Flow Service API](../../api/email-marketing-api.md)

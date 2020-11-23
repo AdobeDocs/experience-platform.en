@@ -36,4 +36,4 @@ To understand the difference between connections and extensions, see [Extensions
 
 Use the Experience Platform segment sharing capability to share your Experience Platform segments to additional Adobe destinations. Refer the page below for more information (opens in the Audience Manager documentation portal):
 
-* [Experience Platform segment sharing with Adobe Audience Manager, Adobe Advertising Cloud, and Adobe Target through the Core Services integration](https://docs.adobe.com/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+* [Experience Platform segment sharing with Adobe Audience Manager, Adobe Advertising Cloud, and Adobe Target through the Core Services integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)

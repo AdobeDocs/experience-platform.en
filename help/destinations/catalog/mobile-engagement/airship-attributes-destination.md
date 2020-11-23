@@ -99,7 +99,7 @@ To activate segments to [!DNL Airship Attributes], follow the steps below:
 1. Select **[!UICONTROL Activate]**;
 1. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to [!DNL Airship Attributes].
     ![segments-to-destination](/help/rtcdp/destinations/assets/airship3-select-segments-to-export.png)
-1.  In the **[!UICONTROL Mapping]** step, select which attributes and identities from the [XDM](https://docs.adobe.com/content/help/en/experience-platform/xdm/home.html) schema to map to the destination schema. Select **[!UICONTROL Add new mapping]** to browse your schema and map them to the corresponding target identity.
+1.  In the **[!UICONTROL Mapping]** step, select which attributes and identities from the [XDM](../../../xdm/home.md) schema to map to the destination schema. Select **[!UICONTROL Add new mapping]** to browse your schema and map them to the corresponding target identity.
     ![identity mapping initial screen](/help/rtcdp/destinations/assets/gcm-identity-mapping.png)
     [!DNL Airship] attributes can be set either on a channel, which represents device instance, e.g., iPhone, or a named user, which maps all of a user's devices to a common identifier such as a customer ID. If you have plain text (unhashed) email addresses as primary identity in your schema, select the email field in your **[!UICONTROL Source Attributes]** and map to the [!DNL Airship] named user in the right column under **[!UICONTROL Target Identities]**, as shown below.
     ![Named User Mapping](/help/rtcdp/destinations/assets/airshiptags7-mappingoption2.png)
