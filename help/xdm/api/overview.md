@@ -14,7 +14,11 @@ The Schema Registry API provides several endpoints that allow you to programmati
 
 These endpoints are outlined below. Please visit the individual endpoint guides for details and refer to the [getting started guide](./getting-started.md) for important information on required headers, reading sample API calls, and more.
 
-To view all available endpoints and CRUD operations, visit the [Schema Registry API swagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+>[!IMPORTANT]
+>
+>XDM uses JSON Schema formatting to describe and validate the structure of ingested customer experience data. Before working with the Schema Registry API, it is strongly recommened that you review the [official JSON Schema documentation](https://json-schema.org/) for a better understanding of this underlying technology.
+
+To view all available endpoints and CRUD operations, visit the [Schema Registry API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
 ## Schemas
 
@@ -43,6 +47,24 @@ Descriptors are sets of metadata that are assigned specific fields within a sche
 While Platform allows you to compose schemas for particular use cases, it also allows you to compose a "union" of schemas belonging to a specific class. A union schema aggregates the fields of all schemas that share the same class into a single representation. By enabling a schema for use with [Real-time Customer Profile](../../profile/home.md), that schema becomes included in the union for its particular class. As such, union schemas cannot be edited directly, and can only be affected by including or excluding schemas for use in Profile.
 
 To learn how to view unions in the Schema Registry API, see the [unions endpoint guide](./unions.md).
+
+## Export/Import
+
+The Schema Registry API allows you to transfer and share XDM resources between sandboxes and IMS Organizations. For any schema, mixin, or data type, you can generate an export payload containing the structure of the resource and any dependent resources. This payload can then be used to import the resource into a destination sandbox and IMS Org.
+
+See the [Schema Registry API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) for more information on the use of this endpoint.
+
+## Sample data
+
+You can generate sample data for any specified schema within the Schema Library. The response object returned can then be used as a source of data ingestion.
+
+See the [Schema Registry API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) for more information on the use of this endpoint.
+
+## Audit log
+
+The Schema Registry maintains a log of all the changes that have occurred to a resource (class, mixin, data type, or schema) between different updates. You can retrieve the log for a particular resource by providing its `$id` or `meta:altId` in the path of a GET request to this endpoint.
+
+See the [Schema Registry API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) for more information on the use of this endpoint.
 
 ## Next steps
 
