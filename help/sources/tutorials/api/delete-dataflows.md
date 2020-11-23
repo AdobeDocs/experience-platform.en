@@ -69,7 +69,7 @@ curl -X DELETE \
 
 **Response**
 
-The API will return an HTTP 404 (Not Found) error, indicating that the dataflow has been deleted. You can confirm the deletion by attempting a lookup (GET) request to the connection.
+A successful response returns HTTP status 204 (No Content) and a blank body. You can confirm the deletion by attempting a lookup (GET) request to the dataflow. The API will return an HTTP 404 (Not Found) error, indicating that the dataflow has been deleted.
 
 ## Next steps
 
