@@ -21,17 +21,17 @@ To help you better understand how and when you should use the [!DNL Google Custo
 
 ### Use Case #1
 
-An athletic apparel brand wants to reach existing customers through [!DNL Google Search] and [!DNL Google Shopping] to personalize offers and items based on their past purchases and browsing history. The apparel brand can ingest email addresses from their own CRM to Adobe Real-time CDP, build segments from their own offline data, and send these segments to [!DNL Google Customer Match] to be used across [!DNL Search] and [!DNL Shopping], optimizing their advertising spending.  
+An athletic apparel brand wants to reach existing customers through [!DNL Google Search] and [!DNL Google Shopping] to personalize offers and items based on their past purchases and browsing history. The apparel brand can ingest email addresses from their own CRM to Real-time CDP, build segments from their own offline data, and send these segments to [!DNL Google Customer Match] to be used across [!DNL Search] and [!DNL Shopping], optimizing their advertising spending.  
 
 ### Use Case #2
 
 A prominent technology company has just released a new phone. In an effort to promote this new phone model, they are looking to drive awareness of the new features and functionality of the phone to customers who own previous models of their phones. 
 
-To promote the release, they upload email addresses from their CRM database into Adobe Real-time CDP, using the email addresses as identifiers. Segments are created based on customers who own older phone models and sent to [!DNL Google Customer Match] so that they can target current customers, customers who own older phone models, as well as similar customers on [!DNL YouTube]. 
+To promote the release, they upload email addresses from their CRM database into Real-time CDP, using the email addresses as identifiers. Segments are created based on customers who own older phone models and sent to [!DNL Google Customer Match] so that they can target current customers, customers who own older phone models, as well as similar customers on [!DNL YouTube]. 
 
 ## Data governance for [!DNL Google Customer Match] destinations {#data-governance}
 
-The destinations in Adobe Real-time CDP may have certain rules and obligations for data sent to, or received from, the destination platform. You are responsible for understanding the limitations and obligations of your data and how you use that data in Adobe Experience Platform and the destination platform. Adobe Experience Platform provides data governance tools to help you manage some of those data usage obligations. [Learn more](/help/data-governance/labels/overview.md) about data governance tools and policies.
+The destinations in Real-time CDP may have certain rules and obligations for data sent to, or received from, the destination platform. You are responsible for understanding the limitations and obligations of your data and how you use that data in Adobe Experience Platform and the destination platform. Adobe Experience Platform provides data governance tools to help you manage some of those data usage obligations. [Learn more](/help/data-governance/labels/overview.md) about data governance tools and policies.
 
 ## Export Type and Identities {#export-type}
 
@@ -41,15 +41,15 @@ The destinations in Adobe Real-time CDP may have certain rules and obligations f
 
 ## [!DNL Google Customer Match] account prerequisites {#google-account-prerequisites}
 
-Before setting up a [!DNL Google Customer Match] destination in Adobe Real-time CDP, make sure you read and adhere to Google's policy for using [!DNL Customer Match], outlined in the [Google support documentation](https://support.google.com/google-ads/answer/6299717). 
+Before setting up a [!DNL Google Customer Match] destination in Real-time CDP, make sure you read and adhere to Google's policy for using [!DNL Customer Match], outlined in the [Google support documentation](https://support.google.com/google-ads/answer/6299717). 
 
 ### Allow list {#allowlist}
 
 >[!NOTE]
 >
->It is mandatory to be added to Google's allow list before setting up your first [!DNL Google Customer Match] destination in Adobe Real-time CDP. Please ensure the allow list process described below has been completed by Google before creating a destination.
+>It is mandatory to be added to Google's allow list before setting up your first [!DNL Google Customer Match] destination in Real-time CDP. Please ensure the allow list process described below has been completed by Google before creating a destination.
 
-Before creating the [!DNL Google Customer Match] destination in Adobe Real-time CDP, you must contact Google and follow the allow list instructions in [Use Customer Match partners to upload your data](https://support.google.com/google-ads/answer/7361372?hl=en&ref_topic=6296507) in the Google documentation.
+Before creating the [!DNL Google Customer Match] destination in Real-time CDP, you must contact Google and follow the allow list instructions in [Use Customer Match partners to upload your data](https://support.google.com/google-ads/answer/7361372?hl=en&ref_topic=6296507) in the Google documentation.
 
 
 ### Email hashing requirements {#hashing-requirements}
@@ -85,7 +85,7 @@ If you select to hash the email addresses yourself, make sure to comply with Goo
 
 >[!IMPORTANT]
 >
->If you choose not to hash email addresses, Adobe Real-time CDP will do that for you when you activate segments to [!DNL Google Customer Match]. In the [activation workflow](/help/rtcdp/destinations/google-customer-match-destination.md#activate-segments) (see step 5), select the `Email` option as shown below for *plain text email addresses* and `Email_LC_SHA256` for *hashed email addresses*.
+>If you choose not to hash email addresses, Real-time CDP will do that for you when you activate segments to [!DNL Google Customer Match]. In the [activation workflow](/help/rtcdp/destinations/google-customer-match-destination.md#activate-segments) (see step 5), select the `Email` option as shown below for *plain text email addresses* and `Email_LC_SHA256` for *hashed email addresses*.
 
 
 ![Hashing on activation](/help/rtcdp/destinations/assets/identity-mapping.png)
@@ -104,7 +104,7 @@ If you select to hash the email addresses yourself, make sure to comply with Goo
 
     >[!NOTE]
     >
-    >Adobe Real-time CDP supports credentials validation in the authentication process and displays an error message if you input incorrect credentials to your [!DNL Google Ad] account. This ensures that you don't complete the workflow with incorrect credentials.
+    >Real-time CDP supports credentials validation in the authentication process and displays an error message if you input incorrect credentials to your [!DNL Google Ad] account. This ensures that you don't complete the workflow with incorrect credentials.
 
     ![Connect to Google Customer Match destination - authentication step](/help/rtcdp/destinations/assets/google-customer-match-pre-connect-view.png)
 

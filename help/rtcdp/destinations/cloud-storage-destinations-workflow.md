@@ -25,7 +25,7 @@ This page explains how you can connect to cloud storage locations in Real-time C
 
     >[!NOTE]
     >
-    >Adobe Real-time CDP supports credentials validation in the authentication process and displays an error message if you input incorrect credentials to your cloud storage location. This ensures that you don't complete the workflow with incorrect credentials.
+    >Real-time CDP supports credentials validation in the authentication process and displays an error message if you input incorrect credentials to your cloud storage location. This ensures that you don't complete the workflow with incorrect credentials.
 
     ![Connect to cloud storage destination - authentication step](./assets/csdw/destination-account.png)
 
@@ -39,11 +39,11 @@ Also in this step, you can select any **[!UICONTROL Marketing use case]** that s
 
    ![Connect to SFTP cloud storage destination - authentication step](./assets/sftp-destinations-setup-step.png)
 
-   For [!DNL Amazon Kinesis] destinations, provide the name of your existing data stream in your [!DNL Amazon Kinesis] account. Adobe Real-time CDP will export data to this stream. Select **[!UICONTROL Create Destination]** after you filled in the fields above.
+   For [!DNL Amazon Kinesis] destinations, provide the name of your existing data stream in your [!DNL Amazon Kinesis] account. Real-time CDP will export data to this stream. Select **[!UICONTROL Create Destination]** after you filled in the fields above.
 
    ![Connect to Kinesis cloud storage destination - authentication step](./assets/kinesis-destinations-setup-step.png)
 
-   For [!DNL Azure Event Hubs] destinations, provide the name of your existing data stream in your [!DNL Amazon Kinesis] account. Adobe Real-time CDP will export data to this stream. Select **[!UICONTROL Create Destination]** after you filled in the fields above.
+   For [!DNL Azure Event Hubs] destinations, provide the name of your existing data stream in your [!DNL Amazon Kinesis] account. Real-time CDP will export data to this stream. Select **[!UICONTROL Create Destination]** after you filled in the fields above.
 
    ![Connect to Kinesis cloud storage destination - authentication step](./assets/eventhubs-destinations-setup-step.png)   
 

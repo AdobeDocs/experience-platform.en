@@ -25,7 +25,7 @@ This tutorial uses [!DNL Facebook] as an example, but the workflow in Real-time 
 
     >[!NOTE]
     >
-    >Adobe Real-time CDP supports credentials validation in the authentication process and displays an error message if you input incorrect credentials to your social network account ID. This ensures that you don't complete the workflow with incorrect credentials.
+    >Real-time CDP supports credentials validation in the authentication process and displays an error message if you input incorrect credentials to your social network account ID. This ensures that you don't complete the workflow with incorrect credentials.
 
     ![Connect to social network destination - authentication step](/help/rtcdp/destinations/assets/facebook-pre-connect-view.png)
 

@@ -39,7 +39,7 @@ New destinations are available where you can activate your Adobe Experience Plat
 
 |Destination | Description|
 |--- | ---|
-|[!DNL Google Customer Match] | Google Customer Match lets you use your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as: [!DNL Search], [!DNL Shopping], Gmail, and YouTube. <br><br> Visit the [!DNL Google Customer Match] [page](/help/rtcdp/destinations/google-customer-match-destination.md) in the destinations catalog for more information about the destination and how to set it up in Adobe Real-time CDP.|
+|[!DNL Google Customer Match] | Google Customer Match lets you use your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as: [!DNL Search], [!DNL Shopping], Gmail, and YouTube. <br><br> Visit the [!DNL Google Customer Match] [page](/help/rtcdp/destinations/google-customer-match-destination.md) in the destinations catalog for more information about the destination and how to set it up in Real-time CDP.|
 
 **New features**
 

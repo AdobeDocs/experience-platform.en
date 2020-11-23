@@ -10,7 +10,7 @@ seo-description: Personalization platforms collect data and insights from indivi
 
 Personalization platforms collect data and insights from individual behaviors. These platforms can assist marketers in navigating anonymous data, serving up offers or ads to prospects based on previous activity or as part of audience segments with similar habits.
 
-Currently, Adobe Real-time CDP supports the personalization destinations listed below. For information on how to connect to these destinations, see the individual links:
+Currently, Real-time CDP supports the personalization destinations listed below. For information on how to connect to these destinations, see the individual links:
 
 * [Adobe Target extension](/help/rtcdp/destinations/adobe-target-extension.md)
 * [Adobe Target v2 extension](/help/rtcdp/destinations/adobe-target-v2-extension.md)

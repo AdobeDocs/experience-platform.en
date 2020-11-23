@@ -12,7 +12,7 @@ seo-description: Salesforce Marketing Cloud is a digital marketing suite formerl
 
 [[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/email-marketing/) is a digital marketing suite formerly known as ExactTarget that allows you to build and customize journeys for visitors and customers to personalize their experience.
 
-To send segment data to [!DNL Salesforce Marketing Cloud], you must first [connect the destination](#connect-destination) in Adobe Real-time CDP, and then [set up a data import](#import-data-into-salesforce) from your storage location into [!DNL Salesforce Marketing Cloud].
+To send segment data to [!DNL Salesforce Marketing Cloud], you must first [connect the destination](#connect-destination) in Real-time CDP, and then [set up a data import](#import-data-into-salesforce) from your storage location into [!DNL Salesforce Marketing Cloud].
 
 ## Export Type {#export-type}
 
@@ -51,7 +51,7 @@ When [activating segments](/help/rtcdp/destinations/activate-destinations.md) to
 
 ## Exported data {#exported-data}
 
-For [!DNL Salesforce Marketing Cloud] destinations, Adobe Real-time CDP creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](/help/rtcdp/destinations/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial. 
+For [!DNL Salesforce Marketing Cloud] destinations, Real-time CDP creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](/help/rtcdp/destinations/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial. 
 
 <!--
 

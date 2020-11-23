@@ -42,7 +42,7 @@ The video below runs you through the particularities of the two types of destina
 
 ### Extensions {#extensions}
 
-Adobe Real-time CDP leverages the power and flexibility of Adobe Experience Platform Launch to include Platform Launch extensions in the Adobe Real-time CDP interface. 
+Real-time CDP leverages the power and flexibility of Adobe Experience Platform Launch to include Platform Launch extensions in the Real-time CDP interface. 
 
 >[!TIP]
 >

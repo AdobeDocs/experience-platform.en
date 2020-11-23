@@ -87,12 +87,12 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are
 
 **New destinations**
 
-Adobe Real-time CDP now supports data activation to over fifty [!DNL Experience Cloud Launch] extensions, enabling analytics, personalization, and other use cases. See below for details:
+Real-time CDP now supports data activation to over fifty [!DNL Experience Cloud Launch] extensions, enabling analytics, personalization, and other use cases. See below for details:
 
 |Documentation | Description|
 |--- | ---|
-|[Destination types and categories](/help/rtcdp/destinations/destination-types.md) | This article explains the difference between connections and extensions in the Adobe Real-time CDP interface and recommends when to use each of these destinations.|
-|[Experience Platform Launch extensions](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | This page explains what [!DNL Launch] extensions are, lists use cases for using them, and links to documentation for each [!DNL Launch] extension in Adobe Real-time CDP.|
+|[Destination types and categories](/help/rtcdp/destinations/destination-types.md) | This article explains the difference between connections and extensions in the Real-time CDP interface and recommends when to use each of these destinations.|
+|[Experience Platform Launch extensions](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | This page explains what [!DNL Launch] extensions are, lists use cases for using them, and links to documentation for each [!DNL Launch] extension in Real-time CDP.|
 
 For more information, please see the [Destinations overview](/help/rtcdp/destinations/destinations-overview.md).
 

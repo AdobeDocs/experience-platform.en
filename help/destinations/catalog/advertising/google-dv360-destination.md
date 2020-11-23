@@ -18,11 +18,11 @@ Note the following details that are specific to [!DNL Google Display & Video 360
 
 * You can send the following [identities](../../identity-service/namespaces.md) to [!DNL Google Display & Video 360] destinations: Google cookie ID, IDFA, GAID, Roku IDs, Microsoft IDs, and Amazon Fire TV IDs.
 * Activated audiences are created programmatically in the Google platform.
-* Adobe Real-time CDP does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand audience targeting size.
+* Real-time CDP does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand audience targeting size.
 
 >[!IMPORTANT]
 >
->If you are looking to create your first destination with Google Display & Video 360 and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up Google integrations in Audience Manager, the ID syncs you had set up carry over to Adobe Real-time CDP.
+>If you are looking to create your first destination with Google Display & Video 360 and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up Google integrations in Audience Manager, the ID syncs you had set up carry over to Real-time CDP.
 
 ### Export Type {#export-type}
 
@@ -34,9 +34,9 @@ Note the following details that are specific to [!DNL Google Display & Video 360
 
 >[!NOTE]
 >
->The allow list is mandatory before setting up your first [!DNL Google Display & Video 360] destination in Adobe Real-time CDP. Please ensure the allow list process described below has been completed by Google before creating a destination.
+>The allow list is mandatory before setting up your first [!DNL Google Display & Video 360] destination in Real-time CDP. Please ensure the allow list process described below has been completed by Google before creating a destination.
 
-Before creating the [!DNL Google Display & Video 360] destination in Adobe Real-time CDP, you must contact Google asking for Adobe to be put on the list of allowed data providers, and for your account to be added to the allow list. Contact Google and provide the following information:
+Before creating the [!DNL Google Display & Video 360] destination in Real-time CDP, you must contact Google asking for Adobe to be put on the list of allowed data providers, and for your account to be added to the allow list. Contact Google and provide the following information:
 
 * **Account ID** : this is Adobe's account ID with Google. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
 * **Customer ID** : this is Adobe's customer account ID with Google. Contact Adobe Customer Care or your Adobe representative to obtain this ID.

@@ -14,9 +14,9 @@ For an introduction to Experience Platform Launch capabilities, see the resource
 *  Adobe Experience Platform Launch [documentation](https://experienceleague.adobe.com/docs/launch/using/overview.html)
 *  Adobe Experience Platform Launch [quick start videos](https://experienceleague.adobe.com/docs/launch/using/intro/get-started/videos.html?). Start with [Introduction to Adobe Experience Platform Launch](https://www.youtube.com/embed/rwqqkG1SERU) and [Publishing process overview](https://helpx.adobe.com/analytics/how-to/adobe-launch-publishing-process.html), then move on to the next concepts. 
 
-## How to find the Platform Launch extensions in the Adobe Real-time CDP interface {#how-to-find-extensions-in-interface}
+## How to find the Platform Launch extensions in the Real-time CDP interface {#how-to-find-extensions-in-interface}
 
-To find the Platform Launch extensions in the Adobe Real-time CDP interface, browse to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** and select **[!UICONTROL Extensions]** in the **[!UICONTROL Types]** filter. 
+To find the Platform Launch extensions in the Real-time CDP interface, browse to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** and select **[!UICONTROL Extensions]** in the **[!UICONTROL Types]** filter. 
 
 ![Extensions filter in the interface](/help/rtcdp/destinations/assets/extensions-filter.png)
 
@@ -49,7 +49,7 @@ Platform Launch extensions enable you to satisfy various customer use cases. Som
 
 ## Extension categories {#extension-categories}
 
-Platform Launch extensions can fall under the following categories in Adobe Real-time CDP:
+Platform Launch extensions can fall under the following categories in Real-time CDP:
 
 * [Advertising](/help/rtcdp/destinations/advertising-destinations.md)
 * [Analytics](/help/rtcdp/destinations/analytics-destinations.md)

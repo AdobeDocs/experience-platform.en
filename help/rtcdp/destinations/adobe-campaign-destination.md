@@ -55,7 +55,7 @@ When [activating segments](/help/rtcdp/destinations/activate-destinations.md) to
 
 ## Exported data {#exported-data}
 
-For [!DNL Adobe Campaign] destinations, Adobe Real-time CDP creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](/help/rtcdp/destinations/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial. 
+For [!DNL Adobe Campaign] destinations, Real-time CDP creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](/help/rtcdp/destinations/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial. 
 
 <!--
 

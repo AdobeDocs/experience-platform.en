@@ -10,7 +10,7 @@ seo-description: The HTTP destination is a Real-time Customer Data Platform  des
 
 >[!IMPORTANT]
 >
->The [!DNL HTTP] destination in Adobe Real-time CDP is currently in alpha. The documentation and the functionality are subject to change.
+>The [!DNL HTTP] destination in Real-time CDP is currently in alpha. The documentation and the functionality are subject to change.
 
 ## Overview {#overview}
 
