@@ -110,9 +110,7 @@ A successful response returns an array of files and folders found within the que
 
 To inspect the structure of data file from your cloud storage, perform a GET request while providing the file's path and type as a query parameter.
 
->[!NOTE]
->
->You can ingest CSV and TSV files with a cloud storage source connector by specifying a column delimiter as a query parameter. Any single character value is a permissible column delimiter. If unprovided, a comma `(,)` is used as the default value.
+You can inspect the structure of a CSV or TSV file by specifying a custom delimiter as a query perimeter. Any single character value is a permissible column delimiter. If unprovided, a comma `(,)` is used as the default value.
 
 **API format**
 
@@ -127,7 +125,7 @@ GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&file
 | `{CONNECTION_ID}` | The connection ID of your cloud storage source connector. |
 | `{FILE_PATH}` | The path to the file you want to inspect. |
 | `{FILE_TYPE}` | The type of the file. Supported file types include:<ul><li><code>DELIMITED</code>: Delimiter-separated value. DSV files must be comma-separated.</li><li><code>JSON</code>: JavaScript Object Notation. JSON files must be XDM compliant</li><li><code>PARQUET</code>: Apache Parquet. Parquet files must be XDM compliant.</li></ul> |
-| `columnDelimiter` | You can use any single value character to specify a custom column delimiter when ingesting CSV or TSV files. The default value is a comma `(,)`. |
+| `columnDelimiter` | The single character value you specified as a column delimiter to inspect CSV or TSV files. If the parameter is unprovided, the value defaults to a comma `(,)`. |
 
 **Request**
 
