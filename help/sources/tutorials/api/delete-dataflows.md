@@ -9,10 +9,6 @@ description: This tutorial covers the steps for deleting a dataflow using the Fl
 
 # Delete a dataflow using the Flow Service API
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others. See the [sources overview](../../home.md) for a comprehensive list of available sources.
-
-[!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
-
 This tutorial covers the steps for deleting dataflows made with both batch and streaming sources using the [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Getting started
@@ -73,12 +69,10 @@ curl -X DELETE \
 
 **Response**
 
-A successful response returns HTTP status 204 (No Content) and a blank body.
-
-You can confirm the deletion by attempting a lookup (GET) request to the connection.
+The API will return an HTTP 404 (Not Found) error, indicating that the dataflow has been deleted. You can confirm the deletion by attempting a lookup (GET) request to the connection.
 
 ## Next steps
 
-By following this tutorial, you have successfully used the [!DNL Flow Service] API to delete existing dataflows.
+By following this tutorial, you have successfully used the [!DNL Flow Service] API to to delete an existing dataflow.
 
 For steps on how to perform these operations using the user interface, please refer to the tutorial on [deleting dataflows in the UI](../../tutorials/ui/delete.md)
