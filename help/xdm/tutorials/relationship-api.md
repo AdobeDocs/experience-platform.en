@@ -332,7 +332,7 @@ A successful response returns the details of the updated schema, which now inclu
 
 ## Create a reference identity descriptor {#reference-identity}
 
-Schema fields must have a reference identity descriptor applied to them if they are being used as a reference from other schemas in a relationship. Since the `favoriteHotel` field in "[!DNL Loyalty Members]" will refer to the `hotelId` field in "[!DNL Hotels]", `favoriteHotel` must be given a reference identity descriptor.
+Schema fields must have a reference identity descriptor applied to them if they are being used as a reference from other schemas in a relationship. Since the `favoriteHotel` field in "[!DNL Loyalty Members]" will refer to the `hotelId` field in "[!DNL Hotels]", `hotelId` must be given a reference identity descriptor.
 
 Create a reference descriptor for the destination schema by making a POST request to the `/tenant/descriptors` endpoint.
 

@@ -21,14 +21,10 @@ user-guide-description: Manage customer data requests to comply with legal priva
   * [Privacy Service UI overview](ui/overview.md)
   * [Privacy Service user guide](ui/user-guide.md)
 * [Subscribe to Privacy Events](privacy-events.md)
-* GDPR guides {#gdpr}
-  * [GDPR FAQ](gdpr/faq.md)
-  * [GDPR terminology](gdpr/terminology.md)
-* CCPA guides {#ccpa}
-  * [CCPA FAQ](ccpa/faq.md)
-* PDPA (Thailand) guides {#pdpa-tha}
-  * [PDPA (Thailand) FAQ](./pdpa-tha/faq.md)
-  * [PDPA (Thailand) terminology](./pdpa-tha/terminology.md)
+* Privacy regulation guides {#regulations}
+  * [Overview](regulations/overview.md)
+  * [FAQ](regulations/faq.md)
+  * [Terminology](regulations/terminology.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml)
 * [Release notes](release-notes.md)

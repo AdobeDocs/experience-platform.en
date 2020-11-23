@@ -2,8 +2,8 @@
 keywords: LinkedIn;linkedin;Linkedin;LinkedIn Insight Tag;insight tag;Insight Tag
 title: LinkedIn Insight Tag extension
 seo-title: LinkedIn Insight Tag extension
-description: The LinkedIn Insight Tag extension is an advertising destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The LinkedIn Insight Tag extension is an advertising destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The LinkedIn Insight Tag extension is an advertising destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The LinkedIn Insight Tag extension is an advertising destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL LinkedIn Insight Tag] Extension {#linkedin-insights-extension}
@@ -12,7 +12,7 @@ seo-description: The LinkedIn Insight Tag extension is an advertising destinatio
 
 Install the [!DNL LinkedIn Insight Tag] to use conversion tracking, retargeting and website demographics features.
 
-[!DNL LinkedIn Insight Tag] is an advertising extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see [LinkedIn Insight Tag](https://business.linkedin.com/marketing-solutions/insight-tag).
+[!DNL LinkedIn Insight Tag] is an advertising extension in Real-time Customer Data Platform. For more information about the extension functionality, see [LinkedIn Insight Tag](https://business.linkedin.com/marketing-solutions/insight-tag).
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 

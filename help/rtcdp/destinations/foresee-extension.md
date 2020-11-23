@@ -2,8 +2,8 @@
 keywords: foresee;foresee extension;foresee destination
 title: Foresee extension
 seo-title: Foresee extension
-description: The Foresee extension is a survey destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Foresee extension is a survey destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Foresee extension is a survey destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The Foresee extension is a survey destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Foresee] extension {#foresee-extension}
@@ -12,7 +12,7 @@ seo-description: The Foresee extension is a survey destination in Adobe Real-tim
 
 Configure [!DNL ForeSee] product deployments using Experience Platform Launch.
 
-[!DNL Foresee] is a survey extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100164.html).
+[!DNL Foresee] is a survey extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100164.html).
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 

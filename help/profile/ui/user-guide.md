@@ -1,24 +1,22 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile;Union schema;UNION PROFILE;union profile
-title: Real-time Customer Profile user guide
+title: Real-time Customer Profile UI guide
 topic: guide
 description: Real-time Customer Profile creates a holistic view of each of your individual customers, combining data from multiple channels including online, offline, CRM, and third-party data. This document serves as a guide for interacting with Real-time Customer Profile in the Adobe Experience Platform user interface.
 
 ---
 
-# [!DNL Real-time Customer Profile] user guide
+# [!DNL Real-time Customer Profile] UI guide
 
-[!DNL Real-time Customer Profile] creates a holistic view of each of your individual customers, combining data from multiple channels including online, offline, CRM, and third-party data.
-
-This document serves as a guide for interacting with [!DNL Real-time Customer Profile] data in the Adobe Experience Platform user interface.
+[!DNL Real-time Customer Profile] creates a holistic view of each of your individual customers, combining data from multiple channels including online, offline, CRM, and third-party data. This document serves as a guide for interacting with [!DNL Real-time Customer Profile] data in the Adobe Experience Platform user interface (UI).
 
 ## Getting started
 
-This user guide requires an understanding of the various [!DNL Experience Platform] services involved with managing [!DNL Real-time Customer Profiles]. Before reading this user guide, please review the documentation for the following services:
+This UI guide requires an understanding of the various [!DNL Experience Platform] services involved with managing [!DNL Real-time Customer Profiles]. Before reading this guide, or working in the UI, please review the documentation for the following services:
 
 * [[!DNL Real-time Customer Profile]](../home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [[!DNL Identity Service]](../../identity-service/home.md): Enables [!DNL Real-time Customer Profile] by bridging identities from disparate data sources as they are ingested into [!DNL Platform].
-* [[!DNL Experience Data Model] (XDM)](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 
 ## Overview
 
@@ -58,7 +56,7 @@ Similar to the [profile count](#profile-count) metric, when the ingestion of rec
 
 ### Merge policy
 
-The **[!UICONTROL Merge policy]** selector automatically selects the default merge policy for your organization. If you do not wish to use that merge policy you can select the `X` beside the default merge policy to open the **[!UICONTROL Select merge policy]** dialog where you can choose another merge policy. To learn more about merge policies and their role within Platform, see the [merge policies user guide](merge-policies.md).
+The **[!UICONTROL Merge policy]** selector automatically selects the default merge policy for your organization. If you do not wish to use that merge policy you can select the `X` beside the default merge policy to open the **[!UICONTROL Select merge policy]** dialog where you can choose another merge policy. To learn more about merge policies and their role within Platform, see the [merge policies UI guide](merge-policies.md).
 
 ![](../images/user-guide/profiles-search-merge-policy.png)
 
@@ -94,17 +92,17 @@ You can view additional information related to the individual profile by selecti
 
 ## Merge policies
 
-From the main **[!UICONTROL Profiles]** menu, select the **[!UICONTROL Merge Policies]** tab to view a list of merge policies belonging to your organization. Each listed policy displays its name, whether or not it is the default merge policy, and the schema that it applies to. 
+From the main **[!UICONTROL Profiles]** menu, select the **[!UICONTROL Merge Policies]** tab to view a list of merge policies belonging to your organization. Each listed policy displays its name, whether or not it is the default merge policy, and the schema class that it applies to. 
 
-For more information on merge policies, see the [merge policies user guide](merge-policies.md).
+For more information on merge policies, see the [merge policies UI guide](merge-policies.md).
 
 ![](../images/user-guide/profiles-merge-policies.png)
 
 ## Union schema {#union-schema}
 
-From the main **[!UICONTROL Profiles]** menu, select the **[!UICONTROL Union Schema]** tab to view the union schemas for your Profile data. A union schema is an amalgamation of all [!DNL Experience Data Model] (XDM) fields under the same class, whose schemas have been enabled for use in [!DNL Real-time Customer Profile]. By selecting a class from the "[!UICONTROL Class]" list on the left-hand side, you can view the structure of its schema in the canvas. For example, selecting "[!DNL XDM Profile]" displays the union schema for the [!DNL XDM Individual Profile] class.
+From the main **[!UICONTROL Profiles]** menu, select the **[!UICONTROL Union Schema]** tab to view the union schemas for your ingested data. A union schema is an amalgamation of all [!DNL Experience Data Model] (XDM) fields under the same class, whose schemas have been enabled for use in [!DNL Real-time Customer Profile]. 
 
-For more information on union schemas and their role within Adobe Experience Platform, see the section on union schemas in the [schema composition guide](../../xdm/schema/composition.md).
+For more information on union schemas, see the [union schema UI guide](union-schema.md).
 
 ![](../images/user-guide/profiles-union-schema.png)
 
