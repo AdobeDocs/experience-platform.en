@@ -131,10 +131,11 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
     - [Collect protocol data](tutorials/api/collect/protocols.md)
     - [Collect streaming data](tutorials/api/collect/streaming.md)
   - [Ingest parquet data from a third-party cloud storage system](tutorials/api/cloud-storage-parquet.md)
-  - [Create a dataset base connection using the Flow Service API](tutorials/api/create-dataset-base-connection.md)
-  - [Monitor dataflows using the Flow Service API](tutorials/api/monitor.md)
-  - [Update connection information using the Flow Service API](tutorials/api/update.md)
-  - [Delete connections using the Flow Service API](tutorials/api/delete.md)
+  - [Create a dataset connection](tutorials/api/create-dataset-base-connection.md)
+  - [Monitor dataflows](tutorials/api/monitor.md)
+  - [Update connections](tutorials/api/update.md)
+  - [Delete connections](tutorials/api/delete.md)
+  - [Delete dataflows](tutorials/api/delete-dataflows.md)
 - UI tutorials {#ui-tutorials}
   - Create a source connector {#create}
     - Adobe applications {#adobe-applications}
