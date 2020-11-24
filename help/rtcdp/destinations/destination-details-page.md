@@ -32,7 +32,7 @@ The following table covers the controls and details provided by the right rail:
 
 | Right-rail item | Description |
 | --- | --- |
-| [!UICONTROL Activate] | Select this control to edit which segments are mapped to the destination. See the guide on [activating segments to a destination](/help/rtcdp/destinations/activate-destinations.md) for more information. |
+| [!UICONTROL Activate] | Select this control to edit which segments are mapped to the destination. See the guide on [activating segments to a destination](../../ui/activate-destinations.md) for more information. |
 | [!UICONTROL Destination name] | This field can be edited in order to update the destination's name. |
 | [!UICONTROL Description] |  This field can be edited in order to update or add an optional description to the destination. |
 | [!UICONTROL Destination] | Represents the destination platform that audiences are sent to. See the [destinations catalog](./destinations-catalog.md) for more information. |

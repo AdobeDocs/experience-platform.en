@@ -157,7 +157,7 @@ It is recommended that one of the attributes is a [unique identifier](/help/rtcd
 >- The fields are used in the segment definition.
 >- The fields are configured as projected attributes for the target destination.
 >
-> For example, if the field `person.name.firstName` has certain data usage labels that conflict with the destination's marketing use case, you would be shown a data usage policy violation in the review step. For more information, see [Data Governance in Real-time CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations).
+> For example, if the field `person.name.firstName` has certain data usage labels that conflict with the destination's marketing use case, you would be shown a data usage policy violation in the review step. For more information, see [Data Governance in Real-time CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 ### **[!UICONTROL Review]** step {#review}
 
@@ -169,7 +169,7 @@ On the **[!UICONTROL Review]** page, you can see a summary of your selection. Se
 
 >[!IMPORTANT]
 >
->In this step, Real-time CDP checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](/help/rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
+>In this step, Real-time CDP checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](../../../rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
  
 ![data policy violation](assets/data-policy-violation.png)
 

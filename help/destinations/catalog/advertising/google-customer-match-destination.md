@@ -12,12 +12,11 @@ seo-description: Google Customer Match lets you use your online and offline data
 
 [Google Customer Match](https://support.google.com/google-ads/answer/6379332?hl=en) lets you use your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as: [!DNL Search], [!DNL Shopping], [!DNL Gmail], and [!DNL YouTube].
 
-![Google Customer Match destination in the Real-time CDP UI](/help/rtcdp/destinations/assets/google-customer-match-catalog.png)
+![Google Customer Match destination in the Real-time CDP UI](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
 ## Use Cases
 
 To help you better understand how and when you should use the [!DNL Google Customer Match] destination, here are sample use cases that Real-time Customer Data Platform customers can solve by using this feature.
-
 
 ### Use Case #1
 
@@ -31,7 +30,7 @@ To promote the release, they upload email addresses from their CRM database into
 
 ## Data governance for [!DNL Google Customer Match] destinations {#data-governance}
 
-The destinations in Real-time CDP may have certain rules and obligations for data sent to, or received from, the destination platform. You are responsible for understanding the limitations and obligations of your data and how you use that data in Adobe Experience Platform and the destination platform. Adobe Experience Platform provides data governance tools to help you manage some of those data usage obligations. [Learn more](/help/data-governance/labels/overview.md) about data governance tools and policies.
+The destinations in Real-time CDP may have certain rules and obligations for data sent to, or received from, the destination platform. You are responsible for understanding the limitations and obligations of your data and how you use that data in Adobe Experience Platform and the destination platform. Adobe Experience Platform provides data governance tools to help you manage some of those data usage obligations. [Learn more](../../..//data-governance/labels/overview.md) about data governance tools and policies.
 
 ## Export Type and Identities {#export-type}
 
@@ -78,27 +77,27 @@ Links to be added when activation based on phone number and device IDs becomes a
 
 -->
 
-To learn about ingesting email addresses in Experience Platform, see the [batch ingestion overview](/help/ingestion/batch-ingestion/overview.md) and the [steaming ingestion overview](/help/ingestion/streaming-ingestion/overview.md).
+To learn about ingesting email addresses in Experience Platform, see the [batch ingestion overview](../../../ingestion/batch-ingestion/overview.md) and the [steaming ingestion overview](../../../ingestion/streaming-ingestion/overview.md).
 
 If you select to hash the email addresses yourself, make sure to comply with Google's requirements, outlined in the links above.
 
 
 >[!IMPORTANT]
 >
->If you choose not to hash email addresses, Real-time CDP will do that for you when you activate segments to [!DNL Google Customer Match]. In the [activation workflow](/help/rtcdp/destinations/google-customer-match-destination.md#activate-segments) (see step 5), select the `Email` option as shown below for *plain text email addresses* and `Email_LC_SHA256` for *hashed email addresses*.
+>If you choose not to hash email addresses, Real-time CDP will do that for you when you activate segments to [!DNL Google Customer Match]. In the [activation workflow](#activate-segments) (see step 5), select the `Email` option as shown below for *plain text email addresses* and `Email_LC_SHA256` for *hashed email addresses*.
 
 
-![Hashing on activation](/help/rtcdp/destinations/assets/identity-mapping.png)
+![Hashing on activation](../../assets/catalog/advertising/google-customer-match/identity-mapping.png)
 
 ## Connect to destination {#connect-destination}
 
 1. In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scroll to the **[!UICONTROL Advertising]** category. Select [!DNL Google Customer Match], then select **[!UICONTROL Configure]**.
 
-    ![Connect to Google Customer Match destination](/help/rtcdp/destinations/assets/connect-google-customer-match.png)
+    ![Connect to Google Customer Match destination](../../assets/catalog/advertising/google-customer-match/connect.png)
 
     >[!NOTE]
     >
-    >If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](/help/rtcdp/destinations/destinations-workspace.md#catalog) section of the destination workspace documentation.  
+    >If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](../../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.  
 
 2. In the **Account** step, if you had previously set up a connection to your [!DNL Google Customer Match] destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to [!DNL Google Customer Match]. Select **[!UICONTROL Connect to destination]** to log in and connect Adobe Experience Cloud to your [!DNL Google Ad] account.
 
@@ -106,20 +105,20 @@ If you select to hash the email addresses yourself, make sure to comply with Goo
     >
     >Real-time CDP supports credentials validation in the authentication process and displays an error message if you input incorrect credentials to your [!DNL Google Ad] account. This ensures that you don't complete the workflow with incorrect credentials.
 
-    ![Connect to Google Customer Match destination - authentication step](/help/rtcdp/destinations/assets/google-customer-match-pre-connect-view.png)
+    ![Connect to Google Customer Match destination - authentication step](../../assets/catalog/advertising/google-customer-match/connection.png)
 
 3. Once your credentials are confirmed and Adobe Experience Cloud is connected to your Google account, you can select **[!UICONTROL Next]** to proceed to the **[!UICONTROL Setup]** step.
 
-    ![Credentials confirmed](/help/rtcdp/destinations/assets/google-customer-match-connection-success.png)
+    ![Credentials confirmed](../../assets/catalog/advertising/google-customer-match/connection-success.png)
 
-4. In the **[!UICONTROL Authentication]** step, enter a [!UICONTROL Name] and a [!UICONTROL Description] for your activation flow and fill your Google the [!UICONTROL Account ID]. <br> Also in this step, you can select any **[!UICONTROL Marketing use case]** that should apply to this destination. Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Real-time CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](/help/data-governance/policies/overview.md#core-actions). <br> Select **[!UICONTROL Create Destination]** after you filled in the fields above.
+4. In the **[!UICONTROL Authentication]** step, enter a [!UICONTROL Name] and a [!UICONTROL Description] for your activation flow and fill your Google the [!UICONTROL Account ID]. <br> Also in this step, you can select any **[!UICONTROL Marketing use case]** that should apply to this destination. Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Real-time CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](../../../data-governance/policies/overview.md#core-actions). <br> Select **[!UICONTROL Create Destination]** after you filled in the fields above.
 
     >[!IMPORTANT]
     >
     > * The **[!UICONTROL Combine with PII]** marketing use case is selected by default for the [!DNL Google Customer Match] destination and cannot be removed. 
     > * For [!DNL Google Customer Match] destinations. **[!UICONTROL Account ID]** is your customer client ID with Google. The format of the ID is xxx-xxx-xxxx.  
 
-    ![Connect Google Customer Match - authentication step](/help/rtcdp/destinations/assets/google-customer-match-authentication-step.png)
+    ![Connect Google Customer Match - authentication step](../../assets/catalog/advertising/google-customer-match/authentication.png)
 
 5. Your destination is now created. You can select **[!UICONTROL Save & Exit]** if you want to activate segments later on or you can select **[!UICONTROL Next]** to continue the workflow and select segments to activate. In either case, see the next section, [Activate segments to [!DNL Google Customer Match]](#activate-segments), for the rest of the workflow.
 
@@ -130,29 +129,29 @@ To activate segments to [!DNL Google Customer Match], follow the steps below:
 
 1. In **[!UICONTROL Destinations > Browse]**, select the [!DNL Google Customer Match] destination where you want to activate your segments.
 2. Click the name of the destination. This takes you to the Activate flow.
-    ![activate-flow](/help/rtcdp/destinations/assets/google-customer-match-activate-flow.png)
+    ![activate-flow](../../assets/catalog/advertising/google-customer-match/activate-flow.png)
     Note that if an activation flow already exists for a destination, you can see the segments that are currently being sent to the destination. Select **[!UICONTROL Edit activation]** in the right rail and follow the steps below to modify the activation details.
 3. Select **[!UICONTROL Activate]**;
 4. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to [!DNL Google Customer Match].
-    ![segments-to-destination](/help/rtcdp/destinations/assets/activate-segments-google-customer-match.png)
+    ![segments-to-destination](../../assets/catalog/advertising/google-customer-match/activate-segments.png)
 5.  In the **[!UICONTROL Identity mapping]** step, select which attributes to be included as an identity in this destination. Select **[!UICONTROL Add new mapping]** and browse your schema, select email and/or hashed email, and map them to the corresponding target identity 
-![identity mapping initial screen](/help/rtcdp/destinations/assets/gcm-identity-mapping.png) <br>&nbsp;
+![identity mapping initial screen](../../assets/catalog/advertising/google-customer-match/identity-mapping.png) <br>&nbsp;
    *Plain text email address as primary identity*: If you have plain text (unhashed) email addresses as primary identity in your schema, select the email field in your **[!UICONTROL Source Attributes]** and map to the Email field in the right column under **[!UICONTROL Target Identities]**, as shown below:
-   ![select plain text emails identity](/help/rtcdp/destinations/assets/gcm-raw-email.gif) <br>&nbsp;
+   ![select plain text emails identity](../../assets/catalog/advertising/google-customer-match/raw-email.gif) <br>&nbsp;
    *Hashed email address as primary identity*: If you have hashed email addresses as primary identity in your schema, select the hashed email field in your **[!UICONTROL Source Attributes]** and map to the Email_LC_SHA256 field in the right column under **[!UICONTROL Target Identities]**, as shown below:
-   ![select hashed emails identity](/help/rtcdp/destinations/assets/gcm-hashed-emails.gif) <br>&nbsp;
+   ![select hashed emails identity](../../assets/catalog/advertising/google-customer-match/hashed-emails.gif) <br>&nbsp;
 6. On the **[!UICONTROL Segment schedule]** page, you can set the start date for sending data to the destination.
 7. On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
 >[!IMPORTANT]
 >
->In this step, Real-time CDP checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](/help/rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
+>In this step, Real-time CDP checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](../../../rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
  
-![confirm-selection](/help/rtcdp/destinations/assets/data-policy-violation.png)
+![confirm-selection](../../assets/common/data-policy-violation.png)
 
 If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
-![confirm-selection](/help/rtcdp/destinations/assets/gcm-review.png)
+![confirm-selection](../../assets/catalog/advertising/google-customer-match/review.png)
 
 
 <!--

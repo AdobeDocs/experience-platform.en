@@ -16,34 +16,34 @@ Currently, Real-time CDP supports the advertising destinations listed below. For
 
 ## Connections
 
-To understand the difference between connections and extensions, see [Connections](/help/rtcdp/destinations/destination-types.md#connections) in the Destination Types and Categories page.
+To understand the difference between connections and extensions, see [Connections](../../destination-types.md#connections) in the Destination Types and Categories page.
 
 
-* [Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
-* [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
-* [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
-* [Google Customer Match](/help/rtcdp/destinations/google-customer-match-destination.md)
-* [Microsoft Bing](/help/rtcdp/destinations/bing-destination.md)
-* [The Trade Desk destination](/help/rtcdp/destinations/tradedesk-destination.md)
+* [Google Display & Video 360](./google-dv360-destination.md)
+* [Google Ads](./google-ads-destination.md)
+* [Google Ad Manager](./google-ad-manager-destination.md)
+* [Google Customer Match](./google-customer-match-destination.md)
+* [Microsoft Bing](./bing-destination.md)
+* [The Trade Desk destination](./tradedesk-destination.md)
 
 
 
 
 ## Extensions
 
-To understand the difference between connections and extensions, see [Extensions](/help/rtcdp/destinations/destination-types.md#extensions) in the Destination Types and Categories page.
+To understand the difference between connections and extensions, see [Extensions](../../destination-types.md#extensions) in the Destination Types and Categories page.
 
-* [Adobe Advertising Cloud extension](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
-* [Awin Advertising Conversion Tag extension](/help/rtcdp/destinations/awin-conversiontag-extension.md)
-* [Awin Advertising Mastertag extension](/help/rtcdp/destinations/awin-mastertag-extension.md)
-* [Beemray extension](beemray-extension.md)
-* [Bing Ads Universal Event Tracking extension](/help/rtcdp/destinations/bing-ads-extension.md)
-* [Branch extension](/help/rtcdp/destinations/branch-extension.md)
-* [DoubleClick Floodlight extension](/help/rtcdp/destinations/doubleclick-floodlight-extension.md)
-* [Facebook Pixel extension](/help/rtcdp/destinations/facebook-pixel-extension.md)
-* [Flashtalking OneTag extension](/help/rtcdp/destinations/flashtalking-extension.md)
-* [Google Ads extension](/help/rtcdp/destinations/google-ads-extension.md)
-* [Google gtag extension](/help/rtcdp/destinations/gtag-advertising-extension.md)
-* [LinkedIn Insight Tag extension](linkedin-extension.md)
-* [Pinterest Conversion Tracking extension](pinterest-extension.md)
-* [Twitter Universal Website Tag extension](twitter-uwt-extension.md)
+* [Adobe Advertising Cloud extension](./adobe-advertising-cloud-extension.md)
+* [Awin Advertising Conversion Tag extension](./awin-conversiontag-extension.md)
+* [Awin Advertising Mastertag extension](./awin-mastertag-extension.md)
+* [Beemray extension](./beemray-extension.md)
+* [Bing Ads Universal Event Tracking extension](./bing-ads-extension.md)
+* [Branch extension](./branch-extension.md)
+* [DoubleClick Floodlight extension](./doubleclick-floodlight-extension.md)
+* [Facebook Pixel extension](./facebook-pixel-extension.md)
+* [Flashtalking OneTag extension](./flashtalking-extension.md)
+* [Google Ads extension](./google-ads-extension.md)
+* [Google gtag extension](./gtag-advertising-extension.md)
+* [LinkedIn Insight Tag extension](./linkedin-extension.md)
+* [Pinterest Conversion Tracking extension](./pinterest-extension.md)
+* [Twitter Universal Website Tag extension](./twitter-uwt-extension.md)

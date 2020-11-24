@@ -14,7 +14,7 @@ This extension implements the [!DNL Experience Cloud] ID Service, which identifi
 
 [!DNL Experience Cloud] ID Service is a personalization extension in Real-time Customer Data Platform. For more information about the extension functionality, see the [Experience Cloud ID Service extension page](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html) in [!DNL Experience Platform Launch] documentation.
 
-This destination is an [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
+This destination is an [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Real-time CDP, see [Experience Platform Launch extensions overview](../launch-extensions/experience-platform-launch-extensions.md).
 
 ![Adobe ECID extension](/help/rtcdp/destinations/assets/adobe-ecid-extension.png)
 

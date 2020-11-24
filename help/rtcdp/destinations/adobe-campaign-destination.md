@@ -43,15 +43,15 @@ To send segment data to Adobe Campaign, you must first [connect the destination]
 
     ![Campaign basic information](/help/rtcdp/destinations/assets/adobe-campaign-basic-information.png)
 
-1. Click **[!UICONTROL Create]** after filling in the fields above. Your destination is now connected and you can [activate segments](/help/rtcdp/destinations/activate-destinations.md) to the destination.
+1. Click **[!UICONTROL Create]** after filling in the fields above. Your destination is now connected and you can [activate segments](../../ui/activate-destinations.md) to the destination.
 
 ## Activate segments {#activate-segments}
 
-See [Activate profiles and segments to a destination](/help/rtcdp/destinations/activate-destinations.md) for information about the segment activation workflow.
+See [Activate profiles and segments to a destination](../../ui/activate-destinations.md) for information about the segment activation workflow.
 
 ## Destination attributes {#destination-attributes}
 
-When [activating segments](/help/rtcdp/destinations/activate-destinations.md) to the Adobe Campaign destination, we recommend that you select a unique identifier from your [union schema](../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination. For more information, see [Select which schema fields to use as destination attributes in your exported files](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) in email marketing destinations documentation. 
+When [activating segments](../../ui/activate-destinations.md) to the Adobe Campaign destination, we recommend that you select a unique identifier from your [union schema](../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination. For more information, see [Select which schema fields to use as destination attributes in your exported files](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes) in email marketing destinations documentation. 
 
 ## Exported data {#exported-data}
 

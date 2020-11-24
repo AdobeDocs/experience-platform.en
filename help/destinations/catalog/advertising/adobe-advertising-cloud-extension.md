@@ -14,9 +14,9 @@ This is the [!DNL Advertising Cloud] extension for implementing [!DNL Advertisin
 
 Adobe Advertising Cloud is an advertising extension in Real-time Customer Data Platform.
 
-This destination is an [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
+This destination is an [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Real-time CDP, see [Experience Platform Launch extensions overview](../launch-extensions/experience-platform-launch-extensions.md).
 
-![Adobe Advertising Cloud extension](/help/rtcdp/destinations/assets/adobe-advertising-cloud-extension.png)
+![Adobe Advertising Cloud extension](../../assets/catalog/advertising/adobe-advertising-cloud/catalog.png)
 
 ## Prerequisites {#prerequisites}
 

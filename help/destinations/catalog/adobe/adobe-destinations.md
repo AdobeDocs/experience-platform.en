@@ -12,25 +12,25 @@ Manage your customer experience by connecting your data in Real-time CDP to othe
 
 ## Connections
 
-To understand the difference between connections and extensions, see [Connections](/help/rtcdp/destinations/destination-types.md#connections) in the Destination Types and Categories page.
+To understand the difference between connections and extensions, see [Connections](../../destination-types.md#connections) in the Destination Types and Categories page.
 
-* [Adobe Campaign](/help/rtcdp/destinations/adobe-campaign-destination.md)
+* [Adobe Campaign](../email-marketing/adobe-campaign-destination.md)
 
 ## Extensions
 
-To understand the difference between connections and extensions, see [Extensions](/help/rtcdp/destinations/destination-types.md#extensions) in the Destination Types and Categories page.
+To understand the difference between connections and extensions, see [Extensions](../../destination-types.md#extensions) in the Destination Types and Categories page.
 
-* [Adobe Advertising Cloud extension](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
-* [Adobe Analytics extension](/help/rtcdp/destinations/adobe-analytics-extension.md)
-* [Adobe Livefyre extension](/help/rtcdp/destinations/adobe-livefyre-extension.md)
-* [Adobe Media Analytics for Audio and Video extension](/help/rtcdp/destinations/adobe-video-analytics-extension.md)
-* [Adobe Target extension](/help/rtcdp/destinations/adobe-target-extension.md)
-* [Adobe Target v2 extension](/help/rtcdp/destinations/adobe-target-v2-extension.md)
-* [Audience Manager DIL extension](/help/rtcdp/destinations/aam-dil-extension.md)
-* [Experience Cloud ID Service extension](/help/rtcdp/destinations/adobe-ecid-extension.md)
-* [Marketo extension](/help/rtcdp/destinations/marketo-extension.md)
-* [Marketo Munchkin extension](/help/rtcdp/destinations/marketo-munchkin-extension.md)
-* [Marketo Web Personalization extension](/help/rtcdp/destinations/marketo-web-personalization-extension.md)
+* [Adobe Advertising Cloud extension](../advertising/adobe-advertising-cloud-extension.md)
+* [Adobe Analytics extension](../analytics/adobe-analytics-extension.md)
+* [Adobe Livefyre extension](../social/adobe-livefyre-extension.md)
+* [Adobe Media Analytics for Audio and Video extension](../analytics/adobe-video-analytics-extension.md)
+* [Adobe Target extension](../personalization/adobe-target-extension.md)
+* [Adobe Target v2 extension](../personalization/adobe-target-v2-extension.md)
+* [Audience Manager DIL extension](../data-management/aam-dil-extension.md)
+* [Experience Cloud ID Service extension](../personalization/adobe-ecid-extension.md)
+* [Marketo extension](../email/marketo-extension.md)
+* [Marketo Munchkin extension](../email/marketo-munchkin-extension.md)
+* [Marketo Web Personalization extension](../personalization/marketo-web-personalization-extension.md)
 
 ## Experience Platform segment sharing
 

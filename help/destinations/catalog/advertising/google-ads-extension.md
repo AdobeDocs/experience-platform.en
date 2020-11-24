@@ -14,9 +14,9 @@ This extension tracks conversions from users that click on your [!DNL Google Ads
 
 [!DNL Google Ads] is an advertising extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.101383.google-ads.html).
 
-This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
+This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/experience-platform-launch-extensions.md).
 
-![Google Ads extension](/help/rtcdp/destinations/assets/google-ads-extension.png)
+![Google Ads extension](../../assets/catalog/advertising/google-ads-extension/catalog.png)
 
 ## Prerequisites {#prerequisites}
 

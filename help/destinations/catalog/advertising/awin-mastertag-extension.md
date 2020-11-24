@@ -14,9 +14,9 @@ The [!DNL MasterTag] is a JavaScript library containing all functions required f
 
 [!DNL Awin Advertiser Mastertag] is an advertising extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103176.awin-advertiser-mastertag.html).
 
-This destination is an [!DNL Experience Platform Launch] extension. For more information about how Launch extensions work in Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
+This destination is an [!DNL Experience Platform Launch] extension. For more information about how Launch extensions work in Real-time CDP, see [Experience Platform Launch extensions overview](../launch-extensions/experience-platform-launch-extensions.md).
 
-![Awin Advertiser Mastertag extension in the UI](/help/rtcdp/destinations/assets/awin-mastertag-extension.png)
+![Awin Advertiser Mastertag extension in the UI](../../assets/catalog/advertising/awin-mastertag/catalog.png)
 
 ## Prerequisites {#prerequisites}
 

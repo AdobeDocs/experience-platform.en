@@ -14,9 +14,9 @@ Load Google's `gtag.js` into your site to send event data to [!DNL Google Analyt
 
 Google gtag is an advertising extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102805.google-gtag.html).
 
-This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
+This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/experience-platform-launch-extensions.md).
 
-![Google gtag extension](/help/rtcdp/destinations/assets/gtag-advertising-extension.png)
+![Google gtag extension](../../assets/catalog/advertising/gtag-advertising/catalog.png)
 
 ## Prerequisites {#prerequisites}
 

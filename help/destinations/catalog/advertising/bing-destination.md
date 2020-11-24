@@ -18,7 +18,7 @@ To send profile data to [!DNL Microsoft Bing], you must first connect to the des
 
 Note the following details that are specific to the [!DNL Microsoft Bing] destination:
 
-* You can send the following [identities](../../identity-service/namespaces.md) to [!DNL Microsoft Bing] destinations: [!DNL Microsoft ID].
+* You can send the following [identities](../../../identity-service/namespaces.md) to [!DNL Microsoft Bing] destinations: [!DNL Microsoft ID].
 
 ## Use cases {#use-cases}
 
@@ -38,30 +38,30 @@ When configuring the destination you will asked to provide the following informa
 
 1.  In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL Microsoft Bing], and select **[!UICONTROL Configure]**.
 
-    ![Configure Microsoft Bing Destination](assets/bing-destination-configure.png)
+    ![Configure Microsoft Bing Destination](../../assets/catalog/advertising/bing/configure.png)
 
     >[!NOTE]
     >
-    >If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](../destinations/destinations-workspace.md#catalog) section of the destination workspace documentation.
+    >If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](../../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.
     >
-    >![Activate Microsoft Bing Destination](assets/bing-destination-activate.png)
+    >![Activate Microsoft Bing Destination](../../assets/catalog/advertising/bing/activate.png)
 
-1. In the [!UICONTROL Authentication] step, you must enter the destination connection details:
+2. In the [!UICONTROL Authentication] step, you must enter the destination connection details:
    
    *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
    *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
    *  **[!UICONTROL Account ID]**: Your [!DNL Bing Ads CID].
-   *  **[!UICONTROL Marketing use case]**: Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Adobe Experience Platform](../privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](../../data-governance/policies/overview.md#core-actions).
+   *  **[!UICONTROL Marketing use case]**: Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Adobe Experience Platform](../../../rtcdp/privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](../../../data-governance/policies/overview.md#core-actions).
 
-    ![Microsoft Bing Destination Authentication](assets/bing-destination-authentication.png)
+    ![Microsoft Bing Destination Authentication](../../assets/catalog/advertising/bing/authentication.png)
     
-1. Click **[!UICONTROL Create destination]**. Your destination is now created. You can click [!UICONTROL Save & Exit] if you want to activate segments later on, or you can click [!UICONTROL Next] to continue the workflow and select segments to activate. In either case, see the next section, [Activate Segments](#activate-segments), for the rest of the workflow.
+3. Click **[!UICONTROL Create destination]**. Your destination is now created. You can click [!UICONTROL Save & Exit] if you want to activate segments later on, or you can click [!UICONTROL Next] to continue the workflow and select segments to activate. In either case, see the next section, [Activate Segments](#activate-segments), for the rest of the workflow.
 
 ## Activate segments {#activate-segments}
 
-See [Activate profiles and segments to a destination](activate-destinations.md#select-attributes) for information about the segment activation workflow.
+See [Activate profiles and segments to a destination](../../ui/activate-destinations.md#select-attributes) for information about the segment activation workflow.
 
-In the [Segment schedule](activate-destinations.md#segment-schedule) step, you must manually map your segments to their corresponding ID or friendly name in the destination.
+In the [Segment schedule](../../ui/activate-destinations.md#segment-schedule) step, you must manually map your segments to their corresponding ID or friendly name in the destination.
 
 When mapping segments, we recommend you use the [!DNL Platform] segment name or a shorter form of it, for ease of use. However, the segment ID or name in your destination does not need to match the one in your [!DNL Platform] account. Any value you insert in the mapping field will be reflected by the destination.
 

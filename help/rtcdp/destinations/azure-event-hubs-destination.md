@@ -57,7 +57,7 @@ For [!DNL Azure Event Hubs] destinations, enter the following information in the
 
 ## Activate segments {#activate-segments}
 
-See [Activate profiles and segments to a destination](/help/rtcdp/destinations/activate-destinations.md) for information about the segment activation workflow.
+See [Activate profiles and segments to a destination](../../ui/activate-destinations.md) for information about the segment activation workflow.
 
 
 ## Exported data {#exported-data}

@@ -94,7 +94,7 @@ user-guide-description: Bring together known and anonymous data from multiple en
       * [PebblePost extension](destinations/pebblepost-extension.md)
       * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
     * Experience Platform Launch extensions{#launch-extensions}
-      * [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md)  
+      * [Experience Platform Launch extensions overview](../launch-extensions/experience-platform-launch-extensions.md)  
     * Mobile engagement destinations {#mobile-engagement-destinations}
       * [Mobile engagement destinations overview](destinations/mobile-destinations.md)
       * [Airship Attributes](destinations/airship-attributes-destination.md)

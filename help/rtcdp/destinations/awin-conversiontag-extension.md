@@ -14,7 +14,7 @@ The Conversion Tag is the declaration of the AWIN.Tracking.Sale JavaScript objec
 
 Awin Advertiser Conversion Tag is an advertising extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103240.awin-conversion-tag.html).
 
-This destination is an [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
+This destination is an [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Real-time CDP, see [Experience Platform Launch extensions overview](../launch-extensions/experience-platform-launch-extensions.md).
 
 ![Awin Advertiser Conversiontag extension in the UI](/help/rtcdp/destinations/assets/awin-conversiontag-extension.png)
 

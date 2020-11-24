@@ -90,7 +90,7 @@ To connect to the [!DNL Facebook] destination, see [Social network destinations 
 
 ## Activate segments to [!DNL Facebook] {#activate-segments}
 
-For instructions on how to activate segments to [!DNL Facebook], see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md). 
+For instructions on how to activate segments to [!DNL Facebook], see [Activate Data to Destinations](../../ui/activate-destinations.md). 
 
 ## Exported data {#exported-data}
 
