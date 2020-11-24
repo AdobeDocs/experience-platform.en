@@ -100,25 +100,24 @@ For more information, please read the document on [creating a recipe using Jupyt
 
 ## [!DNL Destinations] Service {#destinations}
 
-In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
+In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
 **New destinations**
 
 | Destination | Description |
 | ----------- | ----------- |
+| Braze | Braze is a comprehensive customer engagement platform that powers relevant and memorable experiences between customers and the brands they love. |
 | Microsoft Bing | The Microsoft Bing destination helps you execute retargeting and audience targeted digital campaigns across Microsoft Display Advertising. |
 | The Trade Desk | The Trade Desk is a self-service platform for ad buyers to execute retargeting and audience targeted digital campaigns across display, video, and mobile inventory sources. |
-
-<!-- | Braze | Braze is a comprehensive customer engagement platform that power relevant and memorable experiences between customers and the brands they love. |  -->
 
 **New features**
 
 | Feature | Description |
 | ------- | ----------- |
+| Destination details UX updates | Real-time CDP's destination workflow now includes inline monitoring so you can see which batch activations were successful. This feature will enable users to resolve issues directly in the workflow for batch destinations via alerts and a monitoring dashboard to track errors in the processing pipeline.  |
+| File encryption | For file-based destinations, users can now add encryption to their exported files. |
+| File scheduling | For both email-based and cloud storage destinations, users can create a one-time export or create daily snapshots. |
 | Mandatory fields | Users can mark fields as mandatory, ensuring that only fields that contain the mandatory field are exported. |
-
-<!-- | File scheduling | For both email based and cloud storage destinations, users can create a one-time export or create daily snapshots. |
-| File encryption | For file based destinations, users can now add encryption to their exported files. | -->
 
 For more information, please see the [Destinations overview](../../rtcdp/destinations/destinations-overview.md).
 
@@ -194,6 +193,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 [!DNL Experience Platform] provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
 **New sources**
+
 | Feature | Description |
 | ------- | ----------- |
 | [!DNL Shopify] | You can now connect [!DNL Shopify] to [!DNL Experience Platform] using the [!DNL Flow Service] API or the UI. See the [Shopify connector overview](../../sources/connectors/ecommerce/shopify.md) for more information. |
@@ -206,7 +206,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 | Delete connections | Batch connections that contain errors or have become unnecessary can now be deleted using the [!DNL Flow Service] API and the UI. For more information, see the tutorial on [deleting connections using the Flow Service API](../../sources/tutorials/api/delete.md) and [deleting accounts using the UI](../../sources/tutorials/ui/delete-accounts.md). |
 | Hierarchical mapping | You can preview a hierarchical source file, such as JSON or Parquet, during the data ingestion process. See the the tutorial on [configuring a dataflow for cloud storage connectors in the UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) for more information. |
 | API support for mapping in streaming sources | You can now use APIs to perform mapping functions with streaming sources. |
-| API support for custom delimiters for cloud storage sources | You can now collect non-CSV delimited files using cloud storage sources. You can use any single column delimiter such as a tab, comma, pipe, semicolon, or hash to collect flat files in any format. The value defaults to a comma if unprovided. |
+| API support for custom delimiters for cloud storage sources | You can now collect non-CSV delimited files using cloud storage sources. You can use any single column delimiter such as a tab, comma, pipe, semicolon, or hash to collect flat files in any format. |
 | Sandbox support for Adobe Audience Manager connector | The Audience Manager connector is now sandbox aware. Users can enable the connector to route Audience Manager datasets to the sandbox of their choosing (including non-production sandboxes). The configuration is limited to one sandbox per IMS Org. |
 | UX improvements | File-based ingestion is now accessible through the sources catalog. |
 

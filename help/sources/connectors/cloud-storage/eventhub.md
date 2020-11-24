@@ -27,8 +27,7 @@ The documentation below provides information on how to connect [!DNL Azure Event
 ### Using APIs
 
 - [Create a Azure Event Hubs connector using the Flow Service API](../../tutorials/api/create/cloud-storage/eventhub.md)
-- [Explore a cloud storage system using the Flow Service API](../../tutorials/api/explore/cloud-storage.md)
-- [Collect cloud storage data using the Flow Service API](../../tutorials/api/collect/cloud-storage.md)
+- [Collect streaming data using the Flow Service API](../../tutorials/api/collect/streaming.md)
 
 ### Using the UI
 

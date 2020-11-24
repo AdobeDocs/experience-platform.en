@@ -2,8 +2,8 @@
 keywords: Confirmit Digital Feedback;confirmit extension;confirmit
 title: Confirmit Digital Feedback extension
 seo-title: Confirmit Digital Feedback extension
-description: The Confirmit Digital Feedback extension is a Voice of the Customer destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Confirmit Digital Feedback extension is a Voice of the Customer destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Confirmit Digital Feedback extension is a Voice of the Customer destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The Confirmit Digital Feedback extension is a Voice of the Customer destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Confirmit Digital Feedback] Extension
@@ -19,7 +19,7 @@ seo-description: The Confirmit Digital Feedback extension is a Voice of the Cust
 * Overall customer satisfaction
 * And much more
 
-[!DNL Confirmit] Digital Feedback is a Voice of the Customer extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html).
+[!DNL Confirmit] Digital Feedback is a Voice of the Customer extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html).
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
