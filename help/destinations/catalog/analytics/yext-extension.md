@@ -16,7 +16,7 @@ The [!DNL Yext Conversion Tracking] Extension allows you to measure conversions 
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/experience-platform-launch-extensions.md).
 
-![Yext Conversion Tracking Extension](assets/yext-extension.png)
+![Yext Conversion Tracking Extension](../../assets/catalog/analytics/yext/catalog.png)
 
 ## Prerequisites {#prerequisites}
 

@@ -16,7 +16,7 @@ Include the [!DNL DialogTech SourceTrak] javascript snippet in Adobe Launch
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/experience-platform-launch-extensions.md).
 
-![DialogTech extension](assets/dialogtech-extension.png)
+![DialogTech extension](../../assets/catalog/analytics/dialogtech/catalog.png)
 
 ## Prerequisites {#prerequisites}
 

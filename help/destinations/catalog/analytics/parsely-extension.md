@@ -16,7 +16,7 @@ Parse.ly is an analytics extension in Real-time Customer Data Platform. For more
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/experience-platform-launch-extensions.md).
 
-![Parse.ly Analytics Extension](assets/parsely-extension.png)
+![Parse.ly Analytics Extension](../../assets/catalog/analytics/parsely/catalog.png)
 
 ## Prerequisites {#prerequisites}
 

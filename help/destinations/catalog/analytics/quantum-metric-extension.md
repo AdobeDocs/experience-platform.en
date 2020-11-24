@@ -16,7 +16,7 @@ seo-description: The Quantum Metric extension is an analytics destination in Rea
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/experience-platform-launch-extensions.md).
 
-![Quantum Metric Extension](assets/quantum-metric-extension.png)
+![Quantum Metric Extension](../../assets/catalog/analytics/quantum-metric/catalog.png)
 
 ## Prerequisites {#prerequisites}
 

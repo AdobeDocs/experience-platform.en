@@ -16,7 +16,7 @@ Send data to [!DNL Google Analytics], [!DNL Google Ads], and the [!DNL Google Ma
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/experience-platform-launch-extensions.md).
 
-![Google Global Site Tag extension](/help/rtcdp/destinations/assets/gtag-analytics-extension.png)
+![Google Global Site Tag extension](../../assets/catalog/analytics/gtag-analytics/catalog.png)
 
 ## Prerequisites {#prerequisites}
 

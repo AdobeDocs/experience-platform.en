@@ -20,7 +20,7 @@ DTVR: This accounts for linear TV viewing occurring on desktop and mobile device
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/experience-platform-launch-extensions.md).
 
-![Nielsen BSDK Extension](assets/nielsen-bsdk-extension.png)
+![Nielsen BSDK Extension](../../assets/catalog/analytics/nielsen-bsdk/catalog.png)
 
 ## Prerequisites {#prerequisites}
 

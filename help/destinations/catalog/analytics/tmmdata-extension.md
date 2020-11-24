@@ -16,7 +16,7 @@ seo-description: The TMMData extension is an analytics destination in Real-time 
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/experience-platform-launch-extensions.md).
 
-![TMMData Extension](assets/tmmdata-extension.png)
+![TMMData Extension](../../assets/catalog/analytics/tmmdata/catalog.png)
 
 ## Prerequisites {#prerequisites}
 

@@ -16,8 +16,7 @@ seo-description: The Clicktale extension is an analytics destination in Real-tim
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/experience-platform-launch-extensions.md).
 
-![Clicktale extension](assets/clicktale-extension.png)
-
+![Clicktale extension](../../assets/catalog/analytics/clicktale/catalog.png)
 
 ## Prerequisites {#prerequisites}
 

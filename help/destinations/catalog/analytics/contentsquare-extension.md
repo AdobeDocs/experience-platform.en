@@ -16,7 +16,7 @@ Visualize in-page behaviors, see WHY customers abandon and HOW you can improve. 
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/experience-platform-launch-extensions.md).
 
-![Contentsquare extension](assets/contentsquare-extension.png)
+![Contentsquare extension](../../assets/catalog/analytics/contentsquare/catalog.png)
 
 
 ## Prerequisites {#prerequisites}

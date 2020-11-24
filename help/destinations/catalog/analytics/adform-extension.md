@@ -16,7 +16,7 @@ The Adform Website Tracking extension enables advertisers to implement Adform Tr
 
 This destination is an [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Real-time CDP, see [Experience Platform Launch extensions overview](../launch-extensions/experience-platform-launch-extensions.md).
 
-![Adform extension](/help/rtcdp/destinations/assets/adform-extension.png)
+![Adform extension](../../assets/catalog/analytics/adform/catalog.png)
 
 ## Prerequisites {#prerequisites}
 

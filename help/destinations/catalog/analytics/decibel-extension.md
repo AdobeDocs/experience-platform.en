@@ -16,8 +16,7 @@ Quickly and seamlessly deploy [!DNL Decibel] on your web properties. Additional 
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/experience-platform-launch-extensions.md).
 
-![Decibel extension](assets/decibel-extension.png)
-
+![Decibel extension](../../assets/catalog/analytics/decibel/catalog.png)
 
 ## Prerequisites {#prerequisites}
 

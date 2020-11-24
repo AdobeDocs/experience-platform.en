@@ -16,7 +16,7 @@ This extension installs the [!DNL JW Player] adapter to connect [!DNL JW Player]
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/experience-platform-launch-extensions.md).
 
-![JW analytics extension](assets/jw-analytics-extension.png)
+![JW analytics extension](../../assets/catalog/analytics/jw-analytics/catalog.png)
 
 ## Prerequisites {#prerequisites}
 
@@ -37,7 +37,6 @@ To install the [!DNL JW Player Analytics] (BETA) extension:
 For information about the extension configuration options, see the [JW Player Analytics (BETA) extension page](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html) in Adobe Exchange.
 
 You can also install the extension directly in the [Adobe Experience Platform Launch interface](https://launch.adobe.com/). See [Add a new extension](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html?lang=en#add-a-new-extension) in the Platform Launch documentation.
-
 
 ## How to use the extension {#how-to-use}
 

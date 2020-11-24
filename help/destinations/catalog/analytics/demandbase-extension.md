@@ -16,7 +16,7 @@ Get [!DNL Demandbase] B2B account insights right into Adobe Analytics where you 
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/experience-platform-launch-extensions.md).
 
-![Demandbase extension](assets/demandbase-extension.png)
+![Demandbase extension](../../assets/catalog/analytics/demandbase/catalog.png)
 
 ## Prerequisites {#prerequisites}
 
