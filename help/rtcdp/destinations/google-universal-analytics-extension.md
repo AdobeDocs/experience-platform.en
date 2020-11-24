@@ -2,8 +2,8 @@
 keywords: google universal analytics;Google Universal Analytics;Google universal analytics
 title: Google Universal Analytics extension
 seo-title: Google Universal Analytics extension
-description: The Google Universal Analytics extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Google Universal Analytics extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Google Universal Analytics extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The Google Universal Analytics extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Google Universal Analytics] extension {#google-universal-analytics-extension}
@@ -12,7 +12,7 @@ seo-description: The Google Universal Analytics extension is an analytics destin
 
 [!DNL Google Universal Analytics] lets you measure your advertising ROI, as well as track your Flash, video, and social networking sites and applications.
 
-[!DNL Google Universal Analytics] is an analytics extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102829.google-universal-analytics.html).
+[!DNL Google Universal Analytics] is an analytics extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102829.google-universal-analytics.html).
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 

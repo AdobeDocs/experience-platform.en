@@ -2,8 +2,8 @@
 keywords: Awin Advertiser mastertag extension;mastertag tag;Awin;awin;AWIN
 title: Awin Advertiser Mastertag extension
 seo-title: Awin Advertiser Mastertag extension
-description: The Awin Advertiser Mastertag extension is an advertising destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Awin Advertiser Mastertag extension is an advertising destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Awin Advertiser Mastertag extension is an advertising destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The Awin Advertiser Mastertag extension is an advertising destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Awin Advertiser Mastertag] extension {#awin-mastertag-extension}
@@ -12,7 +12,7 @@ seo-description: The Awin Advertiser Mastertag extension is an advertising desti
 
 The [!DNL MasterTag] is a JavaScript library containing all functions required for Awin tracking solution and should be unconditionally appended to every page on the site, including the confirmation page, but excluding any page that displays or processes payment information.
 
-[!DNL Awin Advertiser Mastertag] is an advertising extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103176.awin-advertiser-mastertag.html).
+[!DNL Awin Advertiser Mastertag] is an advertising extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103176.awin-advertiser-mastertag.html).
 
 This destination is an [!DNL Experience Platform Launch] extension. For more information about how Launch extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 

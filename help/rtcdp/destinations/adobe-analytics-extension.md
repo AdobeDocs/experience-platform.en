@@ -2,8 +2,8 @@
 keywords: Analytics extension;analytics extension;destination analytics
 title: Adobe Analytics extension
 seo-title: Adobe Analytics extension
-description: The Adobe Analytics extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Adobe Analytics extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Adobe Analytics extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The Adobe Analytics extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # Adobe Analytics extension {#adobe-analytics-extension}
@@ -12,7 +12,7 @@ seo-description: The Adobe Analytics extension is an analytics destination in Ad
 
 Adobe Analytics is an industry-leading solution that empowers you to understand your customers as people and steer your business with customer intelligence. 
 
-Adobe Analytics is an analytics extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100156.html).
+Adobe Analytics is an analytics extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100156.html).
 
 This destination is an [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 

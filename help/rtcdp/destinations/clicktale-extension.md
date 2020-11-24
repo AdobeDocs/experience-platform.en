@@ -2,8 +2,8 @@
 keywords: clicktale;clicktale extension;clicktale destination
 title: Clicktale extension
 seo-title: Clicktale extension
-description: The Clicktale extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Clicktale extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Clicktale extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The Clicktale extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Clicktale] extension {#clicktale-extension}
@@ -12,7 +12,7 @@ seo-description: The Clicktale extension is an analytics destination in Adobe Re
 
 [!DNL Clicktale's] integration with Experience Platform Launch allows for deployment of [!DNL Clicktale] code and the ability to map data elements within Launch, using [!DNL Clicktale's] Visual Editor.
 
-[!DNL Clicktale] is an analytics extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100082.html).
+[!DNL Clicktale] is an analytics extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100082.html).
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 

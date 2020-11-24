@@ -2,8 +2,8 @@
 Keywords: ECID;ecid
 title: Experience Cloud ID Service extension
 seo-title: Experience Cloud ID Service extension
-description: The Experience Cloud ID Service extension is a personalization destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Experience Cloud ID Service extension is a personalization destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Experience Cloud ID Service extension is a personalization destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The Experience Cloud ID Service extension is a personalization destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Experience Cloud] ID Service extension {#adobe-ecid-extension}
@@ -12,7 +12,7 @@ seo-description: The Experience Cloud ID Service extension is a personalization 
 
 This extension implements the [!DNL Experience Cloud] ID Service, which identifies visitors across all [!DNL Experience Cloud] solutions.
 
-[!DNL Experience Cloud] ID Service is a personalization extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the [Experience Cloud ID Service extension page](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html) in [!DNL Experience Platform Launch] documentation.
+[!DNL Experience Cloud] ID Service is a personalization extension in Real-time Customer Data Platform. For more information about the extension functionality, see the [Experience Cloud ID Service extension page](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html) in [!DNL Experience Platform Launch] documentation.
 
 This destination is an [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 

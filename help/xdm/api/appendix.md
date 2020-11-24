@@ -10,6 +10,43 @@ topic: developer guide
 
 This document provides supplemental information related to working with the [!DNL Schema Registry] API.
 
+## Using query parameters {#query}
+
+The [!DNL Schema Registry] supports the use of query parameters to page and filter results when listing resources.
+
+>[!NOTE]
+>
+>When combining multiple query parameters, they must be separated by ampersands (`&`).
+
+### Paging {#paging}
+
+The most common query parameters for paging include:
+
+| Parameter | Description |
+| --- | --- |
+| `start` | Specify where the listed results should begin. This value can be obtained from the `_page.next` attribute of a list response, and used to access the next page of results. If the `_page.next` value is null, then there is no additional page available.  |
+| `limit` | Limit the number of resources returned. Example: `limit=5` will return a list of five resources. |
+| `orderby` | Sort results by a specific property. Example: `orderby=title` will sort results by title in ascending order (A-Z). Adding a `-` before the parameter value (`orderby=-title`) will sort items by title in descending order (Z-A). |
+
+### Filtering {#filtering}
+
+You can filter results by using the `property` parameter, which is used to apply a specific operator against a given JSON property within the retrieved resources. Supported operators include:
+
+| Operator | Description | Example |
+| --- | --- | --- |
+| `==` | Filters by whether the property equals the provided value. | `property=title==test` |
+| `!=` | Filters by whether the property does not equal the provided value. | `property=title!=test` |
+| `<` | Filters by whether the property is less than the provided value. | `property=version<5` |
+| `>` | Filters by whether the property is greater than the provided value. | `property=version>5` |
+| `<=` | Filters by whether the property is less than or equal to the provided value. | `property=version<=5` |
+| `>=` | Filters by whether the property is greater than or equal to the provided value. | `property=version>=5` |
+| `~` | Filters by whether the property matches a provided regular expression. | `property=title~test$` |
+| (None) | Stating only the property name returns only entries where the property exists. | `property=title` |
+
+>[!TIP]
+>
+>You can use the `property` parameter to filter mixins by their compatible class. For example, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` returns only mixins that are compatible with the [!DNL XDM Individual Profile] class.
+
 ## Compatibility Mode
 
 [!DNL Experience Data Model] (XDM) is a publicly documented specification, driven by Adobe to improve the interoperability, expressiveness, and power of digital experiences. Adobe maintains the source code and formal XDM definitions in an [open source project on GitHub](https://github.com/adobe/xdm/). These definitions are written in XDM Standard Notation, using JSON-LD (JavaScript Object Notation for Linked Data) and JSON Schema as the grammar for defining XDM schemas.
