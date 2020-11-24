@@ -8,9 +8,7 @@ description: This tutorial uses the Flow Service API to explore a third party cl
 
 # Explore a cloud storage system using the [!DNL Flow Service] API
 
-[!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
-
-This tutorial uses the [!DNL Flow Service] API to explore a third party cloud storage system.
+This tutorial uses the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) to explore a third party cloud storage system.
 
 ## Getting started
 
