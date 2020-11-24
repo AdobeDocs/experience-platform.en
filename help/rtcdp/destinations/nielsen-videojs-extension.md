@@ -2,8 +2,8 @@
 keywords: Nielsen VideoJS Player Handler;nielsen video js player;nielsen videojs player;Nielsen;nielsen;Nielsen videojs player;Nielsen Digital SDK;nielsen digital sdk
 title: Nielsen VideoJS Player Handler extension
 seo-title: Nielsen VideoJS Player Handler extension
-description: THe Nielsen VideoJS Player Handler extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Nielsen VideoJS Player Handler extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Nielsen VideoJS Player Handler extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The Nielsen VideoJS Player Handler extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Nielsen VideoJS Player Handler] Extension {#nielsen-vjs-extension}
@@ -16,7 +16,7 @@ DCR: A measurement solution that provides daily measurement of non-linear digita
 
 DTVR: This accounts for linear TV viewing occurring on desktop and mobile devices for participating programming sources. This is the first solution to receive accreditation from the MRC for its contribution to TV audience measurement for programming viewed on computers and mobile devices.
 
-[!DNL Nielsen VideoJS Player Handler] is an analytics extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101361.nielsen-digital-sdk-extension.html).
+[!DNL Nielsen VideoJS Player Handler] is an analytics extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101361.nielsen-digital-sdk-extension.html).
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 

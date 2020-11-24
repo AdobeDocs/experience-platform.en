@@ -2,8 +2,8 @@
 keywords: Yext Conversion Trackin;Yext;yext;yext conversion tracking
 title: Yext Conversion Tracking extension
 seo-title: Yext Conversion Tracking extension
-description: THe Yext Conversion Tracking extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Yext Conversion Tracking extension is an analytics destination in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Yext Conversion Tracking extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The Yext Conversion Tracking extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Yext Conversion Tracking] Extension {#yext-extension}
@@ -12,7 +12,7 @@ seo-description: The Yext Conversion Tracking extension is an analytics destinat
 
 The [!DNL Yext Conversion Tracking] Extension allows you to measure conversions that can be attributed to your use of Yext products.
 
-[!DNL Yext Conversion Tracking] is an analytics extension in Adobe Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103174.yext-conversion-tracking.html).
+[!DNL Yext Conversion Tracking] is an analytics extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103174.yext-conversion-tracking.html).
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 

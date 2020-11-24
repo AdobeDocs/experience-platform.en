@@ -88,7 +88,7 @@ The following JSON represents a simplified XDM schema whose fields can be refere
 >
 >When dealing with the `xdm:sourceProperty` and `xdm:destinationProperty` attributes of [!DNL Experience Data Model] (XDM) descriptors, any `properties` keys must be **excluded** from the JSON Pointer string. See the [!DNL Schema Registry] API developer guide sub-guide on [descriptors](../xdm/api/descriptors.md) for more information.
 
-## JSON Patch
+## JSON Patch {#json-patch}
 
 There are many PATCH operations for [!DNL Platform] APIs that accept JSON Patch objects for their request payloads. JSON Patch is a standardized format ([RFC 6902](https://tools.ietf.org/html/rfc6902)) for describing changes to a JSON document. It allows you to define partial updates to JSON without needing to send the entire document in a request body.
 

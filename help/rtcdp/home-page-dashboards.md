@@ -8,7 +8,7 @@ seo-description: Dashboards, Home Page, and First-Time User Experience of Adobe 
 
 # [!DNL Real-time Customer Data Platform] metrics overview
 
-The Adobe Real-time Customer Data Platform (Real-time CDP) home page, which includes a metrics dashboard, appears when you log in to Real-time CDP.
+The Real-time Customer Data Platform (Real-time CDP) home page, which includes a metrics dashboard, appears when you log in to Real-time CDP.
 
 The home page is only one of the places where metric cards appear. Real-time CDP provides metric cards throughout your experience. These metrics inform you about the data, profile, and segment audiences in the system. 
 
