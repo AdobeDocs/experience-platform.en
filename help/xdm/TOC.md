@@ -57,6 +57,7 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
   * [Data types](api/data-types.md)
   * [Descriptors](api/descriptors.md)
   * [Unions](api/unions.md)
+  * [Export/Import](api/export-import.md)
   * [Ad-hoc schemas](api/ad-hoc.md)
   * [Appendix](api/appendix.md)
 * Tutorials {#tutorials}
