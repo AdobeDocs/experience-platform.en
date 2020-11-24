@@ -18,7 +18,7 @@ The export/import endpoints are part of the remote procedure calls (RPCs) that a
 
 ## Retrieve an export payload for a resource {#export}
 
-For any existing schema, mixin, or data type in the Schema Library, you can generate an export payload by making a GET request to the `/rpc/export` endpoint, providing the ID of the resource in the path.
+For any existing schema, mixin, or data type in the Schema Library, you can generate an export payload by making a GET request to the `/export` endpoint, providing the ID of the resource in the path.
 
 **API format**
 
@@ -190,7 +190,7 @@ Note that all instances of the resource's tenant ID are replaced with `<XDM_TENA
 
 ## Import a resource {#import}
 
-Once you have [generated an export payload](#export) for an XDM resource, you can use that payload in a POST request to the `/rpc/import` endpoint to import that resource into a target IMS Org and sandbox.
+Once you have [generated an export payload](#export) for an XDM resource, you can use that payload in a POST request to the `/import` endpoint to import that resource into a target IMS Org and sandbox.
 
 **API format**
 
