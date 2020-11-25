@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;export;import;rpc;
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;export;import;rpc;
 solution: Experience Platform
 title: Export/Import endpoint guide
 description: The /export and /import endpoints in the Schema Registry API allow you to share XDM resources between IMS Organizations and sandboxes.
