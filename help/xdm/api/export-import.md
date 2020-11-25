@@ -126,7 +126,7 @@ Note that all instances of the resource's tenant ID are replaced with `<XDM_TENA
         "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
         "meta:resourceType": "mixins",
         "version": "1.0",
-        "title": "Profile Restaurant",
+        "title": "Restaurant",
         "type": "object",
         "description": "",
         "definitions": {
@@ -285,7 +285,7 @@ curl -X POST \
           "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
           "meta:resourceType": "mixins",
           "version": "1.0",
-          "title": "Profile Restaurant",
+          "title": "Restaurant",
           "type": "object",
           "description": "",
           "definitions": {
@@ -443,7 +443,7 @@ A successful response returns a list of the imported resources, with the appropr
         "meta:altId": "_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
         "meta:resourceType": "mixins",
         "version": "1.0",
-        "title": "Profile Restaurant",
+        "title": "Restaurant",
         "type": "object",
         "description": "",
         "definitions": {
