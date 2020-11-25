@@ -20,32 +20,32 @@ To send segment data to Adobe Campaign, you must first [connect the destination]
 
 ## Connect destination {#connect-destination}
 
-1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select Adobe Campaign, then select **[!UICONTROL Connect destination]**.
+In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select Adobe Campaign, then select **[!UICONTROL Connect destination]**.
 
-    ![Connect to adobe campaign](./assets/adobe-campaign/catalog.png)
+![Connect to adobe campaign](./assets/adobe-campaign/catalog.png)
 
-1. In the Connect destination workflow, select the **[!UICONTROL Connection type]** for your storage location. For Adobe Campaign, you can select between **[!UICONTROL Amazon S3]**, **[!UICONTROL SFTP with Password]** and **[!UICONTROL SFTP with SSH Key]**. Fill in the information below, depending on your connection type, then select **[!UICONTROL Connect]**.
+In the Connect destination workflow, select the **[!UICONTROL Connection type]** for your storage location. For Adobe Campaign, you can select between **[!UICONTROL Amazon S3]**, **[!UICONTROL SFTP with Password]** and **[!UICONTROL SFTP with SSH Key]**. Fill in the information below, depending on your connection type, then select **[!UICONTROL Connect]**.
 
-    ![Set up Campaign wizard](./assets/adobe-campaign/connection-type.png)
+![Set up Campaign wizard](./assets/adobe-campaign/connection-type.png)
 
-    For **[!UICONTROL Amazon S3]** connections, you must provide your Access Key ID and Secret Access Key. 
-    For **[!UICONTROL SFTP with Password]** connections, you must provide Domain, Port, Username, and Password.
-    For **[!UICONTROL SFTP with SSH Key]** connections, you must provide Domain, Port, Username, and SSH Key.
+- For **[!UICONTROL Amazon S3]** connections, you must provide your Access Key ID and Secret Access Key. 
+- For **[!UICONTROL SFTP with Password]** connections, you must provide Domain, Port, Username, and Password.
+- For **[!UICONTROL SFTP with SSH Key]** connections, you must provide Domain, Port, Username, and SSH Key.
 
-    Optionally, you can attach your RSA-formatted public key to add encryption with PGP/GPG to your exported files under the **[!UICONTROL Key]** section. Note that this public key **must** be written as a Base64 encoded string. 
+Optionally, you can attach your RSA-formatted public key to add encryption with PGP/GPG to your exported files under the **[!UICONTROL Key]** section. Note that this public key **must** be written as a Base64 encoded string. 
 
-    ![Fill in Campaign information](./assets/adobe-campaign/account-info.png)
+![Fill in Campaign information](./assets/adobe-campaign/account-info.png)
 
-2. In **[!UICONTROL Basic Information]**, fill in the relevant information for your destination, as shown below:
-   * **[!UICONTROL Name]**: Pick a relevant name for your destination.
-   * **[!UICONTROL Description]**: Enter a description for your destination.
-   * **[!UICONTROL Bucket Name]**: *For S3 connections*. Enter the location of your S3 bucket where Real-time CDP will deposit your export data as CSV or tab-delimited files. 
-   * **[!UICONTROL Folder Path]**: Provide the path in your storage location where Real-time CDP will deposit your export data as CSV or tab-delimited files.
-   * **[!UICONTROL File Format]**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location. 
+In **[!UICONTROL Basic Information]**, fill in the relevant information for your destination, as shown below:
+   - **[!UICONTROL Name]**: Pick a relevant name for your destination.
+   - **[!UICONTROL Description]**: Enter a description for your destination.
+   - **[!UICONTROL Bucket Name]**: *For S3 connections*. Enter the location of your S3 bucket where Real-time CDP will deposit your export data as CSV or tab-delimited files. 
+   - **[!UICONTROL Folder Path]**: Provide the path in your storage location where Real-time CDP will deposit your export data as CSV or tab-delimited files.
+   - **[!UICONTROL File Format]**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location. 
 
-    ![Campaign basic information](./assets/adobe-campaign/basic-information.png)
+![Campaign basic information](./assets/adobe-campaign/basic-information.png)
 
-3. Click **[!UICONTROL Create]** after filling in the fields above. Your destination is now connected and you can [activate segments](./activate-destinations.md) to the destination.
+Click **[!UICONTROL Create]** after filling in the fields above. Your destination is now connected and you can [activate segments](./activate-destinations.md) to the destination.
 
 ## Activate segments {#activate-segments}
 
@@ -79,8 +79,7 @@ The presence of these files in your storage location is confirmation of successf
 
 >[!IMPORTANT]
 >
->* Please keep in mind the SFTP storage limits, database storage limits, and active profile limits as per your Adobe Campaign contract while performing this integration.
->* You need to schedule, import, and map your exported segment(s) in Adobe Campaign using [!DNL Campaign] workflows. Refer to [Setting up a recurring import](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html#setting-up-a-recurring-import) in Adobe Campaign documentation.
-
+>- Please keep in mind the SFTP storage limits, database storage limits, and active profile limits as per your Adobe Campaign contract while performing this integration.
+>- You need to schedule, import, and map your exported segment(s) in Adobe Campaign using [!DNL Campaign] workflows. Refer to [Setting up a recurring import](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html#setting-up-a-recurring-import) in Adobe Campaign documentation.
 
 After connecting Real-time CDP to your [!DNL Amazon S3] or SFTP storage, you must set up the data import from your storage location into Adobe Campaign. To learn how to accomplish this, refer to [Importing data](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html) in the Adobe Campaign documentation.
