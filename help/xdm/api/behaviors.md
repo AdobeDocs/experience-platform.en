@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;behavior;Behavior;behaviors;Behaviors;create
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;behavior;behaviour;behaviors;behaviours;
 solution: Experience Platform
 title: Behaviors endpoint guide
 description: The /behaviors endpoint in the Schema Registry API allows you to retrieve all available behaviors in the global container.
@@ -17,7 +17,7 @@ In Experience Data Model (XDM), behaviors define the nature of data that a schem
 >
 >There are some use cases in Platform that require the use of schema that does not employ either of the above behaviors. For these cases, a third "ad-hoc" behavior is available. See the tutorial on [creating an ad-hoc schema](../tutorials/ad-hoc.md) for more information.
 >
->For more general information on data behaviors in terms of how they affect schema composition, refer to the [basics of schema composition](../schema/composition.md).
+>For more general information on data behaviors in terms of how they affect schema composition, refer to the guide on the [basics of schema composition](../schema/composition.md).
 
 The `/behaviors` endpoint in the [!DNL Schema Registry] API allows you to view available behaviors in the `global` container.
 
