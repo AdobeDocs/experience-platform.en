@@ -52,6 +52,7 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
   * [Overview](api/overview.md)
   * [Getting started](api/getting-started.md)
   * [Schemas](api/schemas.md)
+  * [Behaviors](api/behaviors.md)
   * [Classes](api/classes.md)
   * [Mixins](api/mixins.md)
   * [Data types](api/data-types.md)
