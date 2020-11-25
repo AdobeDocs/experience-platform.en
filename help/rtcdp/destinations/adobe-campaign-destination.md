@@ -41,7 +41,7 @@ In **[!UICONTROL Basic Information]**, fill in the relevant information for your
    - **[!UICONTROL Description]**: Enter a description for your destination.
    - **[!UICONTROL Bucket Name]**: *For S3 connections*. Enter the location of your S3 bucket where Real-time CDP will deposit your export data as CSV or tab-delimited files. 
    - **[!UICONTROL Folder Path]**: Provide the path in your storage location where Real-time CDP will deposit your export data as CSV or tab-delimited files.
-   - **[!UICONTROL File Format]**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location. 
+   - **[!UICONTROL File Format]**: **CSV** or **Tab Delimited**. Select which file format to export to your storage location. 
 
 ![Campaign basic information](./assets/adobe-campaign/basic-information.png)
 
