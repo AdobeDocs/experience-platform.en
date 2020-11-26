@@ -10,13 +10,13 @@ seo-description: The Marketo extension is an email destination in Real-time Cust
 
 ## Overview {#overview}
 
-[!DNL Marketo's] powerful marketing automation software helps marketers master the art & science of digital marketing to engage customers and prospects.
+[!DNL Marketo]'s powerful marketing automation software helps marketers master the art & science of digital marketing to engage customers and prospects.
 
 [!DNL Marketo] is an email extension in Real-time Customer Data Platform. For more information about the extension functionality, see the [extension page on Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101071.marketo-for-adobe-launch.html).
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/experience-platform-launch-extensions.md).
 
-![Marketo Extension](assets/marketo-extension.png)
+![Marketo Extension](../../assets/catalog/email/marketo/catalog.png)
 
 ## Prerequisites {#prerequisites}
 

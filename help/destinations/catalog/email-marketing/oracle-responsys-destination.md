@@ -16,7 +16,7 @@ To send segment data to [!DNL Oracle Responsys], you must first [connect to the 
 
 ## Export Type {#export-type}
 
-**Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [destination activation workflow](/help/rtcdp/destinations/activate-destinations.md#select-attributes).
+**Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [destination activation workflow](../../ui/activate-destinations.md#select-attributes).
 
 ## Connect destination {#connect-destination}
 
@@ -51,7 +51,7 @@ When [activating segments](../../ui/activate-destinations.md) to the [!DNL Oracl
 
 ## Exported data {#exported-data}
 
-For [!DNL Oracle Responsys] destinations, Real-time CDP creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](/help/rtcdp/destinations/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial. 
+For [!DNL Oracle Responsys] destinations, Real-time CDP creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](../../ui/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial. 
 
 <!--
 

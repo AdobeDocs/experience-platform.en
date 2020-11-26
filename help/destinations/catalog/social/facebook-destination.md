@@ -78,7 +78,7 @@ If you select to hash the email addresses yourself, make sure to comply with the
 
 >[!IMPORTANT]
 >
->If you choose not to hash email addresses, Real-time CDP will do that for you when you activate segments to [!DNL Facebook]. In the [activation workflow](/help/rtcdp/destinations/activate-destinations.md#activate-data) (see step 5), select the `Email` option as shown below for *raw email addresses* and `Email_LC_SHA256` for *hashed email addresses*.
+>If you choose not to hash email addresses, Real-time CDP will do that for you when you activate segments to [!DNL Facebook]. In the [activation workflow](../../ui/activate-destinations.md#activate-data) (see step 5), select the `Email` option as shown below for *raw email addresses* and `Email_LC_SHA256` for *hashed email addresses*.
 
 
 ![Hashing on activation](/help/rtcdp/destinations/assets/identity-mapping.png)

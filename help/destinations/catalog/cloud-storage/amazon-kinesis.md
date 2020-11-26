@@ -20,10 +20,10 @@ The [!DNL Kinesis Data Streams] service by [!DNL Amazon Web Services] allows you
 You can create a real-time outbound connection to your [!DNL Amazon Kinesis] storage to stream data from Adobe Experience Platform. 
 
 * For more information about [!DNL Amazon Kinesis], see the [Amazon documentation](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
-* To connect to [!DNL Amazon Kinesis] using API calls, see the [Streaming destinations API tutorial](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md).
+* To connect to [!DNL Amazon Kinesis] using API calls, see the [Streaming destinations API tutorial](../../api/streaming-destinations.md).
 * To connect to [!DNL Amazon Kinesis] using the Real-time CDP user interface, see the sections below.
 
-![Amazon Kinesis in the UI](/help/rtcdp/destinations/assets/aws-kinesis-destination.png)
+![Amazon Kinesis in the UI](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
 
 
 ## Use Cases {#use-cases}
@@ -34,11 +34,11 @@ For example, a prospect downloaded a white-paper which qualifies them into a "hi
 
 ## Export Type {#export-type}
 
-**Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [destination activation workflow](/help/rtcdp/destinations/activate-destinations.md#select-attributes).
+**Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [destination activation workflow](../../ui/activate-destinations.md#select-attributes).
 
 ## Connect destination {#connect-destination}
 
-See [Cloud storage destinations workflow ](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)for instructions on how to connect to your cloud storage destinations, including those supported by [!DNL Amazon]. 
+See [Cloud storage destinations workflow ](./workflow.md)for instructions on how to connect to your cloud storage destinations, including those supported by [!DNL Amazon]. 
 
 For [!DNL Amazon Kinesis] destinations, enter the following information in the create destination workflow:
 
@@ -47,7 +47,7 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 * **[!DNL Amazon Web Services] access key and secret key**: In [!DNL Amazon Web Services], generate an `access key - secret access key` pair to grant Real-time CDP access to your [!DNL Amazon Kinesis] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **region**: Indicate which [!DNL Amazon Web Services] region to stream data to.
 
-![Input fields in the account step](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
+![Input fields in the account step](../../assets/catalog/cloud-storage/amazon-kinesis/account.png)
 
 ### In the Setup step {#setup-step}
 
@@ -55,7 +55,7 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 * **Description**: Provide a description for your connection to [!DNL Amazon Kinesis].
 * **stream**: Provide the name of an existing data stream in your [!DNL Amazon Kinesis] account. Real-time CDP will export data to this stream.
 
-![Input fields in the authentication step](/help/rtcdp/destinations/assets/aws-kinesis-setup-step.png)
+![Input fields in the authentication step](../../assets/catalog/cloud-storage/amazon-kinesis/setup.png)
 
 <!--
 
@@ -116,6 +116,6 @@ Your exported [!DNL Experience Platform] data lands in [!DNL Amazon Kinesis] in 
 
 >[!MORELIKETHIS]
 >
->* [Connect to Amazon Kinesis and activate data using API calls](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
->* [Azure Event Hubs destination](/help/rtcdp/destinations/azure-event-hubs-destination.md)
->* [Destination types and categories](/help/rtcdp/destinations/destination-types.md) 
+>* [Connect to Amazon Kinesis and activate data using API calls](../../api/streaming-destinations.md)
+>* [Azure Event Hubs destination](./azure-event-hubs.md)
+>* [Destination types and categories](../../destination-types.md) 

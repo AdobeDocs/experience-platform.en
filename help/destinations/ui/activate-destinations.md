@@ -191,7 +191,7 @@ Follow the steps below to edit existing activation flows in Real-time CDP:
 For email marketing destinations and cloud storage destinations, Real-time CDP creates a tab-delimited `.csv` or `.txt` file in the storage location that you provided. Expect a new file to be created in your storage location every day. The default file format is:
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv|txt`
 
-Note that you can edit the file format. For more information, go to the [Configure](/help/rtcdp/destinations/activate-destinations.md#configure) step for cloud storage destinations and email marketing destinations. 
+Note that you can edit the file format. For more information, go to the [Configure](../../ui/activate-destinations.md#configure) step for cloud storage destinations and email marketing destinations. 
 
 With the default file format, the files you would receive on three consecutive days could look like this:
 

@@ -10,9 +10,9 @@ seo-description: Real-time CDP can deliver your segments as data files to your A
 
 Real-time CDP can deliver your segments as data files to your cloud storage locations. This enables you to send audiences and their profile attributes to your internal systems, via CSV or tab-delimited files for [!DNL Amazon S3] and SFTP. For [!DNL AWS Kinesis] and [!DNL Azure Event Hubs] destinations, data is streamed out of Experience Platform in JSON format.
 
-![Adobe Cloud storage destinations](/help/rtcdp/destinations/assets/cloud-storage-destinations.png)
+![Adobe Cloud storage destinations](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
-For information on how to connect to cloud storage destinations, see [Workflow to create cloud storage destinations](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md).
+For information on how to connect to cloud storage destinations, see [Workflow to create cloud storage destinations](./workflow.md).
 
 ## Data export type
 
@@ -20,10 +20,10 @@ For information on how to connect to cloud storage destinations, see [Workflow t
 
 ## Available Cloud storage destinations
 
-* [Amazon S3 destination](/help/rtcdp/destinations/amazon-s3-destination.md)
-* [SFTP destination](/help/rtcdp/destinations/sftp-destination.md)
+* [Amazon S3 destination](./amazon-s3.md)
+* [SFTP destination](./sftp.md)
 
 ## Available Cloud storage streaming destinations
 
-* [Amazon Kinesis destination](/help/rtcdp/destinations/amazon-kinesis-destination.md)
-* [Azure Event Hubs destination](/help/rtcdp/destinations/azure-event-hubs-destination.md)
+* [Amazon Kinesis destination](./amazon-kinesis.md)
+* [Azure Event Hubs destination](.azure-event-hubs.md)

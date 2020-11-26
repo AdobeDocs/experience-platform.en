@@ -47,7 +47,7 @@ On the **[!UICONTROL Select Segments]** page, select which segments to send to t
 
 ## Configure file names
 
-For information about the segment schedule and file name editing options, refer to the [Configure](/help/rtcdp/destinations/activate-destinations.md#configure) step in the activate destinations tutorial.
+For information about the segment schedule and file name editing options, refer to the [Configure](../../ui/activate-destinations.md#configure) step in the activate destinations tutorial.
 
 ## Select attributes - Select which schema fields to use as destination attributes in your exported files {#destination-attributes}
 
@@ -55,7 +55,7 @@ In this step, you are selecting which fields to export to email marketing destin
 
 ![Destination attributes](/help/rtcdp/destinations/assets/recommended-attributes.png)
 
-For more information about this step, refer to the [Select attributes](/help/rtcdp/destinations/activate-destinations.md#select-attributes) step in the activate destinations tutorial.
+For more information about this step, refer to the [Select attributes](../../ui/activate-destinations.md#select-attributes) step in the activate destinations tutorial.
 
 ### Identity {#identity}
 

@@ -19,10 +19,10 @@ seo-description: Create a real-time outbound connection to your Azure Event Hubs
 You can create a real-time outbound connection to your [!DNL Azure Event Hubs] storage to stream data from Adobe Experience Platform.
 
 * For more information about [!DNL Azure Event Hubs], see the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about).
-* To connect to [!DNL Azure Event Hubs] using API calls, see the [Streaming destinations API tutorial](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md).
+* To connect to [!DNL Azure Event Hubs] using API calls, see the [Streaming destinations API tutorial](../../api/streaming-destinations.md).
 * To connect to [!DNL Azure Event Hubs] using the Real-time CDP user interface, see the sections below.
 
-![AWS Kinesis in the UI](/help/rtcdp/destinations/assets/azure-event-hubs-destination.png)
+![AWS Kinesis in the UI](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
 
 ## Use Cases {#use-cases}
 
@@ -32,11 +32,11 @@ For example, a prospect downloaded a white-paper which qualifies them into a "hi
 
 ## Export Type {#export-type}
 
-**Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [destination activation workflow](/help/rtcdp/destinations/activate-destinations.md#select-attributes).\
+**Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [destination activation workflow](../../ui/activate-destinations.md#select-attributes).
 
 ## Connect destination {#connect-destination}
 
-See [Cloud storage destinations workflow ](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)for instructions on how to connect to your cloud storage destinations, including [!DNL Azure Event Hubs]. 
+See [Cloud storage destinations workflow ](./workflow.md)for instructions on how to connect to your cloud storage destinations, including [!DNL Azure Event Hubs]. 
 
 For [!DNL Azure Event Hubs] destinations, enter the following information in the create destination workflow:
 
@@ -45,7 +45,7 @@ For [!DNL Azure Event Hubs] destinations, enter the following information in the
 * **[!UICONTROL SAS Key Name]** and **[!UICONTROL SAS Key]**: Fill in your SAS key name and key. Learn about authenticating to [!DNL Azure Event Hubs] with SAS keys in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * **[!UICONTROL Namespace]**: Fill in your [!DNL Azure Event Hubs] namespace. Learn about [!DNL Azure Event Hubs] namespaces in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 
-![Input required in the authentication step](/help/rtcdp/destinations/assets/event-hubs-authentication.png)
+![Input required in the authentication step](../../assets/catalog/cloud-storage/event-hubs/authentication.png)
 
 ### In the Setup step {#setup-step}
 
@@ -53,7 +53,7 @@ For [!DNL Azure Event Hubs] destinations, enter the following information in the
 * **[!UICONTROL Description]**: Provide a description of the connection.  Examples: "Premium tier customers", "Males interested in kitesurfing".
 * **[!UICONTROL eventHubName]**: Provide a name for the stream to your [!DNL Azure Event Hubs] destination.
 
-![Data required in the setup step](/help/rtcdp/destinations/assets/event-hubs-setup-step.png)
+![Data required in the setup step](../../assets/catalog/cloud-storage/event-hubs/setup.png)
 
 ## Activate segments {#activate-segments}
 
@@ -106,6 +106,6 @@ Your exported [!DNL Experience Platform] data lands in [!DNL Azure Event Hubs] i
 
 >[!MORELIKETHIS]
 >
->* [Connect to Azure Event Hubs and activate data using API calls](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
->* [AWS Kinesis destination](/help/rtcdp/destinations/amazon-kinesis-destination.md)
->* [Destination types and categories](/help/rtcdp/destinations/destination-types.md) 
+>* [Connect to Azure Event Hubs and activate data using API calls](../../api/streaming-destinations.md)
+>* [AWS Kinesis destination](./amazon-kinesis.md)
+>* [Destination types and categories](../../destination-types.md) 

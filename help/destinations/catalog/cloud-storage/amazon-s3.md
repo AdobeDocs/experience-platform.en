@@ -14,13 +14,13 @@ Create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 st
 
 ## Export Type {#export-type}
 
-**Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [destination activation workflow](/help/rtcdp/destinations/activate-destinations.md#select-attributes).
+**Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [destination activation workflow](../../ui/activate-destinations.md#select-attributes).
 
-![Amazon S3 profile-based export type](/help/rtcdp/destinations/assets/aws-export-type.png)
+![Amazon S3 profile-based export type](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 
 ## Connect destination {#connect-destination}
 
-See [Cloud storage destinations workflow ](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)for instructions on how to connect to your cloud storage destinations, including [!DNL Amazon S3]. 
+See [Cloud storage destinations workflow ](./workflow.md) for instructions on how to connect to your cloud storage destinations, including [!DNL Amazon S3]. 
 
 For [!DNL Amazon S3] destinations, enter the following information in the create destination workflow:
 
@@ -32,7 +32,7 @@ For [!DNL Amazon S3] destinations, enter the following information in the create
 
 ## Exported data {#exported-data}
 
-For [!DNL Amazon S3] destinations, Real-time CDP creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](/help/rtcdp/destinations/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial.
+For [!DNL Amazon S3] destinations, Real-time CDP creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](../../ui/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial.
 
 <!--
 

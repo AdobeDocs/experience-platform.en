@@ -93,7 +93,7 @@ Element | Description
  [!UICONTROL Username] | The account credentials you selected for the destination flow.
  [!UICONTROL Segments] | The number of segments that are being activated to this destination.
  [!UICONTROL Created] | The date and UTC time when the activation flow to the destination was created.
- [!UICONTROL Status] | `Active` or `Inactive`. Indicates whether data is currently being activated to this destination. To edit the status, see [Disable activation](/help/rtcdp/destinations/activate-destinations.md#disable-activation).
+ [!UICONTROL Status] | `Active` or `Inactive`. Indicates whether data is currently being activated to this destination. To edit the status, see [Disable activation](../../ui/activate-destinations.md#disable-activation).
 
 Click on a destination row to bring up more information about the destination in the right rail.
 

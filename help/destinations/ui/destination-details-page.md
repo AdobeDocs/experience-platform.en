@@ -16,17 +16,17 @@ In the Adobe Experience Platform user interface, you can view and monitor the at
 
 In the **[!UICONTROL Destinations]** workspace within the Platform UI, navigate to the **[!UICONTROL Browse]** tab and select the name of a destination that you want to view.
 
-![](./assets/details-page/select-destination.png)
+![](../assets/ui/details-page/select-destination.png)
 
 The details page for the destination appears, showing its available controls. If you are viewing the details of a batch destination, a monitoring dashboard also appears.
 
-![](./assets/details-page/details.png)
+![](../assets/ui/details-page/details.png)
 
 ## Right rail
 
 The right rail displays the basic information about the destination.
 
-![](./assets/details-page/right-rail.png)
+![](../assets/ui/details-page/right-rail.png)
 
 The following table covers the controls and details provided by the right rail:
 
@@ -49,7 +49,7 @@ The following table covers the controls and details provided by the right rail:
 
 You can use the **[!UICONTROL Enabled]/[!UICONTROL Disabled]** toggle to start and pause all data exports to the destination.
 
-![](./assets/details-page/enable-disable.png)
+![](../assets/ui/details-page/enable-disable.png)
 
 ## [!UICONTROL Dataflow runs]
 
@@ -58,7 +58,7 @@ The [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs to
 * **[!UICONTROL Profile records activated]**: The total count of profile records that were created or updated for activation.
 * **[!UICONTROL Profile records skipped]**:  The total count of profile records that are skipped for activation based on profile exits or missing attributes.
 
-![](./assets/details-page/dataflow-runs.png)
+![](../assets/ui/details-page/dataflow-runs.png)
 
 >[!NOTE]
 >
@@ -66,13 +66,13 @@ The [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs to
 
 To view the details of a particular dataflow run, select the run's start time from the list. The details page for a dataflow run contains additional information such as the size of data processed and a list of any errors that occurred with details for error diagnostics.
 
-![](./assets/details-page/dataflow.png)
+![](../assets/ui/details-page/dataflow.png)
 
 ## [!UICONTROL Segments]
 
 The [!UICONTROL Segments] tab displays a list of segments that have been mapped to the destination, including their start date and end date (if applicable). To view the details about a particular segment, select its name from the list.
 
-![](./assets/details-page/segments.png)
+![](../assets/ui/details-page/segments.png)
 
 >[!NOTE]
 >

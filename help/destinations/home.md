@@ -60,4 +60,4 @@ For more information about selecting marketing use cases in the create destinati
 * [Email marketing destinations](/help/rtcdp/destinations/email-marketing-destinations.md)
 * [Social network destinations](/help/rtcdp/destinations/social-network-destinations-workflow.md)
 
-For more information about data policy violations in the segment activation workflow, see the Review step in [Activate profiles and segments to a destination](/help/rtcdp/destinations/activate-destinations.md#review).
+For more information about data policy violations in the segment activation workflow, see the Review step in [Activate profiles and segments to a destination](../../ui/activate-destinations.md#review).
