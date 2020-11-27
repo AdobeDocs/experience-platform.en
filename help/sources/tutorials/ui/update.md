@@ -22,6 +22,34 @@ This tutorial requires a working understanding of the following components of Ad
 
 ## Update accounts
 
-Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create connections with.
+Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. Select **[!UICONTROL Accounts]** from the top header to view existing accounts.
 
-Select **[!UICONTROL Accounts]** from the top header to view existing accounts.
+![catalog](../../images/tutorials/update/catalog.png)
+
+The **[!UICONTROL Accounts]** pages appears. On this page is a list of viewable accounts, including information about their source, username, number of dataflows, and date of creation.
+
+Select the funnel icon on the top left to launch the sort panel
+
+![accounts-list](../../images/tutorials/update/accounts-list.png)
+
+The sort panel provides a list of all sources. You can select more than one source from the list to access a filtered selection of accounts associated with different sources.
+
+Select the source you wish to work with to see a list of its existing accounts. Once you have identified the account you want to update. Select the ellipses (`...`) beside the account name.
+
+![accounts-sort](../../images/tutorials/update/accounts-sort.png)
+
+A dropdown menu appears, providing you with options to **[!UICONTROL Add data]**, **[!UICONTROL Edit details]**, and **[!UICONTROL Delete]**. Select **[!UICONTROL Edit details]** from the menu to update your account.
+
+![update](../../images/tutorials/update/update.png)
+
+The **[!UICONTROL Edit account details]** dialog box allows you to update an account's name, description, and authentication credentials. Once you have provided new values for the information you would like to update, select **[!UICONTROL Save]**.
+
+![edit-account-details](../../images/tutorials/update/edit-account-details.png)
+
+After a few moments, a green confirmation box appears on the bottom of the screen to confirm a successful update.
+
+## Next steps
+
+By following this tutorial, you have successfully used the **[!UICONTROL Sources]** workspace to update account information.
+
+For steps on how to perform these operations programmatically using the [!DNL Flow Service] API, please refer to the tutorial on [updating connection information using the Flow Service API](../../tutorials/api/update.md).
