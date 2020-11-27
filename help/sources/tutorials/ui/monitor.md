@@ -66,7 +66,7 @@ From the **[!UICONTROL Accounts]** page, you can view a list of existing dataflo
 
 ## Monitor dataflows
 
-Dataflows can be accessed directly from the **[!UICONTROL Catalog]** page without viewing **[!UICONTROL Accounts]**. Select **[!UICONTROL Dataflows]** from the top header to view a list of dataflows.
+Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. Select **[!UICONTROL Dataflows]** from the top header to view existing dataflows.
 
 ![catalog-dataflows](../../images/tutorials/monitor/catalog-dataflows.png)
 
