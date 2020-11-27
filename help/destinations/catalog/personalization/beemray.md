@@ -16,7 +16,7 @@ Beemray is a personalization extension in Real-time Customer Data Platform. For 
 
 This destination is an [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Real-time CDP, see [Experience Platform Launch extensions overview](../launch-extensions/overview.md.md).
 
-![Beemray extension](assets/beemray-extension.png)
+![Beemray extension](../../assets/catalog/personalization/beemray/catalog.png)
 
 ## Prerequisites {#prerequisites}
 
@@ -28,11 +28,15 @@ To use this extension, you need access to [!DNL Adobe Experience Platform Launch
 
 To install the [!DNL Beemray] extension:
 
-1. In the [Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
-2. Select the extension from the catalog or use the search bar.
-3. Click on the destination to highlight it, then select **[!UICONTROL Configure]** in the right rail. If the **[!UICONTROL Configure]** control is greyed out, you are missing the **[!UICONTROL manage_properties]** permission. See [Prerequisites](#prerequisites).
-4. In the **[!UICONTROL Select available Platform Launch property]** window, select the [!DNL Platform Launch] property in which you want to install the extension. You also have the option of creating a new property in [!DNL Platform Launch]. A property is a collection of rules, data elements, configured extensions, environments, and libraries. Learn about properties in the [Properties page section](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page) of the [!DNL Launch] documentation.
-5. The workflow takes you to [!DNL Platform Launch] to complete the installation. 
+In the [Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+
+Select the extension from the catalog or use the search bar.
+
+Click on the destination to highlight it, then select **[!UICONTROL Configure]** in the right rail. If the **[!UICONTROL Configure]** control is greyed out, you are missing the **[!UICONTROL manage_properties]** permission. See [Prerequisites](#prerequisites).
+
+In the **[!UICONTROL Select available Platform Launch property]** window, select the [!DNL Platform Launch] property in which you want to install the extension. You also have the option of creating a new property in [!DNL Platform Launch]. A property is a collection of rules, data elements, configured extensions, environments, and libraries. Learn about properties in the [Properties page section](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page) of the [!DNL Launch] documentation.
+
+The workflow takes you to [!DNL Platform Launch] to complete the installation. 
 
 For information about the extension configuration options and installation support, see the [Beemray page on Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
 
