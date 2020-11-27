@@ -49,15 +49,18 @@ Before creating the [!DNL Google Ads] destination in Real-time CDP, you must con
 
 ## Configure destination
 
-1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL Google Ads], and select **[!UICONTROL Configure]**.
-    ![Connect Google Ads destination](../../assets/catalog/advertising/google-ads-destination/catalog.png)
+In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL Google Ads], and select **[!UICONTROL Configure]**.
 
-    >[!NOTE]
-    >
-    >If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](../../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.  
+![Connect Google Ads destination](../../assets/catalog/advertising/google-ads-destination/catalog.png)
 
-2. In the **Setup** step of the create destination workflow, fill in the [!UICONTROL Basic Information] for the destination. <br>
-    ![Basic information Google Ads](../../assets/catalog/advertising/google-ads-destination/setup.png)
+>[!NOTE]
+>
+>If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](../../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.  
+
+In the **Setup** step of the create destination workflow, fill in the [!UICONTROL Basic Information] for the destination. 
+
+![Basic information Google Ads](../../assets/catalog/advertising/google-ads-destination/setup.png)
+
 *  **[!UICONTROL Name]**: Fill in the preferred name for this destination.
 *  **[!UICONTROL Description]**: Optional. For example, you can mention which campaign you are using this destination for.
 *  **[!UICONTROL Account Type]**: AdWords is the only available option.
