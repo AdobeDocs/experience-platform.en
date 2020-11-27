@@ -92,7 +92,9 @@ In the **Account** step, if you had previously set up a connection to your [!DNL
 
 Once your credentials are confirmed and Adobe Experience Platform is connected to your [!DNL Airship] project, you can select **[!UICONTROL Next]** to proceed to the **[!UICONTROL Setup]** step.
 
-In the **[!UICONTROL Authentication]** step, enter a **[!UICONTROL Name]** and a **[!UICONTROL Description]** for your activation flow. <br> Also in this step, you can select either US or EU data center, depending on which [!DNL Airship] data center applies to this destination. Finally, select one or more marketing use cases for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own. For more information about marketing use cases, see the [Data Governance in Real-time CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](../../../data-governance/policies/overview.md#core-actions). 
+In the **[!UICONTROL Authentication]** step, enter a **[!UICONTROL Name]** and a **[!UICONTROL Description]** for your activation flow. 
+
+Also in this step, you can select either US or EU data center, depending on which [!DNL Airship] data center applies to this destination. Finally, select one or more marketing use cases for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own. For more information about marketing use cases, see the [Data Governance in Real-time CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](../../../data-governance/policies/overview.md#core-actions). 
 
 Select **[!UICONTROL Create Destination]** after you have filled in the fields above.
 

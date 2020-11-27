@@ -16,13 +16,9 @@ In Real-time Customer Data Platform, we distinguish between two destination type
 
 ![Types of destinations](/help/rtcdp/destinations/assets/types-of-destinations.png)
 
-<br>&nbsp;
-
 ### Connections {#connections}
 
 **[!UICONTROL Profile Export]** and **[!UICONTROL Segment Export]** destinations in Real-time Customer Data Platform capture event data, combine it with other data sources to form the [real-time customer profile](/help/profile/home.md), apply segmentation, and export segments and qualified profiles to destinations. 
-
-<br>&nbsp;
 
 #### Profile export destinations
 
@@ -38,8 +34,6 @@ The video below runs you through the particularities of the two types of destina
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
-<br>&nbsp;
-
 ### Extensions {#extensions}
 
 Real-time CDP leverages the power and flexibility of Adobe Experience Platform Launch to include Platform Launch extensions in the Real-time CDP interface. 
@@ -52,8 +46,6 @@ Platform Launch extensions forward raw event data to several types of destinatio
 
 ![Experience Platform Launch extensions compared to other destinations](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
-<br>&nbsp;
-
 ### When to use connections and extensions
 
 As a marketer, you could use a combination of connections and extensions to address your use cases.
@@ -61,8 +53,6 @@ As a marketer, you could use a combination of connections and extensions to addr
 Connections are useful when it’s necessary to leverage a complete centralized customer profile or a customer segment for activation. For example, use connections if you are joining behavioral data from an analytics system with uploaded CRM data to qualify a user for a given segment before delivering a personalized message to that user.
 
 Extensions are helpful when event data is used to trigger an action, or to conduct segmentation in an external environment. For example, if behavioral data needs to be forwarded to an external system without being joined to other data sources on file for a given user.
-
-<br>&nbsp;
 
 ## Destination categories
 
